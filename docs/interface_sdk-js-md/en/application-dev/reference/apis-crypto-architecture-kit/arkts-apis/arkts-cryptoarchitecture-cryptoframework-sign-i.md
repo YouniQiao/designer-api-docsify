@@ -1,12 +1,8 @@
 # Sign
 
-Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createSign). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode) . <br>The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization. <br>The signing mode is determined by **createSign()**, and the key is set by **init()**. <br>If a small amount of data is to be signed, you can directly call **sign()** to pass in the data for signing after **init()**. <br>If a large amount of data is to be signed, you can use **update()** to pass in the data by segment, and then use **sign()** to sign the entire data. <br>When **update()** is used, the **sign()** API supports only **DataBlob** in versions earlier than API version 10 and starts to support **null** since API version 10. After all the data is passed in by using **update()**, call **sign()** to sign the data. <br>If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, the **update()** operation is not supported. If **update()** is called in this case, the error code **ERR_CRYPTO_OPERATION** will be returned.
+Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode) . <br>The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization. <br>The signing mode is determined by **createSign()**, and the key is set by **init()**. <br>If a small amount of data is to be signed, you can directly call **sign()** to pass in the data for signing after **init()**. <br>If a large amount of data is to be signed, you can use **update()** to pass in the data by segment, and then use **sign()** to sign the entire data. <br>When **update()** is used, the **sign()** API supports only **DataBlob** in versions earlier than API version 10 and starts to support **null** since API version 10. After all the data is passed in by using **update()**, call **sign()** to sign the data. <br>If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, the **update()** operation is not supported. If **update()** is called in this case, the error code **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface Sign--><!--Device-cryptoFramework-interface Sign-End-->
 
@@ -29,10 +25,6 @@ getSignSpec(itemType: SignSpecItem): string | int
 Obtains signing specifications. Currently, only RSA is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +56,7 @@ Obtains signing specifications. Currently, only RSA is supported.
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -86,10 +78,6 @@ init(priKey: PriKey, callback: AsyncCallback<void>): void
 Initializes the **Sign** object using a private key. This API uses an asynchronous callback to return the result. **init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional. <br>The **Sign** instance does not support repeated use of **init**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -125,10 +113,6 @@ init(priKey: PriKey): Promise<void>
 Initializes the **Sign** object using a private key. This API uses a promise to return the result. **init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional. <br>The **Sign** instance does not support repeated use of **init**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -170,10 +154,6 @@ Initializes the **Sign** instance with a private key. This API returns the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Sign-initSync(priKey: PriKey): void--><!--Device-Sign-initSync(priKey: PriKey): void-End-->
@@ -202,13 +182,9 @@ Initializes the **Sign** instance with a private key. This API returns the resul
 setSignSpec(itemType: SignSpecItem, itemValue: int): void
 ```
 
-Sets signing specifications. You can use this API to set signing parameters that cannot be set by [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createSign). <br>Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing parameters can be set.
+Sets signing specifications. You can use this API to set signing parameters that cannot be set by [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign). <br>Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing parameters can be set.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -235,7 +211,7 @@ Sets signing specifications. You can use this API to set signing parameters that
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -256,10 +232,6 @@ setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void
 Sets the specified parameter for the Sign instance. <br>Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -298,10 +270,6 @@ Sets the specified parameter for the Sign instance. <br>Currently, only PSS_SALT
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -334,13 +302,9 @@ Sets the specified parameter for the Sign instance. <br>Currently, only PSS_SALT
 setSignSpec(itemType: SignSpecItem, itemValue: boolean): void
 ```
 
-Sets the specified parameter for the Sign instance. <br>Currently, only ML_DSA_DETERMINISTIC and ML_DSA_MU in ML-DSA are supported. For ML_DSA_CONTEXT parameter, use [setSignSpec()](#setSignSpec).
+Sets the specified parameter for the Sign instance. <br>Currently, only ML_DSA_DETERMINISTIC and ML_DSA_MU in ML-DSA are supported. For ML_DSA_CONTEXT parameter, use [setSignSpec()](#setsignspec).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -374,10 +338,6 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 Signs the data, including data added via the update interface. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -414,10 +374,6 @@ Signs data. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Sign-sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void--><!--Device-Sign-sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void-End-->
@@ -452,10 +408,6 @@ sign(data: DataBlob): Promise<DataBlob>
 Signs the data, including data added via the update interface. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -497,10 +449,6 @@ Signs data. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Sign-sign(data: DataBlob | null): Promise<DataBlob>--><!--Device-Sign-sign(data: DataBlob | null): Promise<DataBlob>-End-->
@@ -537,13 +485,9 @@ Signs data. This API uses a promise to return the result.
 signSync(data: DataBlob | null): DataBlob
 ```
 
-Signs the data. This API returns the result synchronously. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, sign. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Signs the data. This API returns the result synchronously. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [sign](#sign). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -579,13 +523,9 @@ Signs the data. This API returns the result synchronously. <br><br>**NOTE：**<b
 update(data: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-Updates data to be signed. This API uses an asynchronous callback to return the result. <br>This API can be called only after the Sign instance is initialized by using [init](#init) or [initSync](#initSync). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call sign after > [init](#init)), depending on the data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > > For details about the sample code for calling **update()** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported. > If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+Updates data to be signed. This API uses an asynchronous callback to return the result. <br>This API can be called only after the [Sign](#sign) instance is initialized by using [init](#init) or [initSync](#initsync). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call [sign](#sign) after > [init](#init)), depending on the data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > > For details about the sample code for calling **update()** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported. > If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -618,13 +558,9 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 update(data: DataBlob): Promise<void>
 ```
 
-Updates data to be signed. This API uses a promise to return the result. <br>Before using this API, you must initialize the Sign instance by using [init()](#init). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call > sign after > [init](#init)), depending on the > data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > For details about the sample code for calling **update()** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported. > If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+Updates data to be signed. This API uses a promise to return the result. <br>Before using this API, you must initialize the [Sign](#sign) instance by using [init()](#init). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call > [sign](#sign) after > [init](#init)), depending on the > data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > For details about the sample code for calling **update()** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported. > If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -662,13 +598,9 @@ Updates data to be signed. This API uses a promise to return the result. <br>Bef
 updateSync(data: DataBlob): void
 ```
 
-Updates data to be signed. This API returns the result synchronously. <br>This API can be called only after the Sign instance is initialized by using [initSync()](#initSync). > **NOTE：**> > You can call **updateSync** multiple times or do not use **updateSync** (call > [signSync](#signSync) after [initSync](#initSync)), > depending on the data volume. > > The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is > a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment. > This prevents too much memory from being requested at a time. > > For details about the sample code for calling **updateSync** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **updateSync**. If **OnlySign** is specified, use **signSync** to pass in > data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not > supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Updates data to be signed. This API returns the result synchronously. <br>This API can be called only after the [Sign](#sign) instance is initialized by using [initSync()](#initsync). > **NOTE：**> > You can call **updateSync** multiple times or do not use **updateSync** (call > [signSync](#signsync) after [initSync](#initsync)), > depending on the data volume. > > The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is > a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment. > This prevents too much memory from being requested at a time. > > For details about the sample code for calling **updateSync** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **updateSync**. If **OnlySign** is specified, use **signSync** to pass in > data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not > supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -703,10 +635,6 @@ Indicates the algorithm name of the Sign instance.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

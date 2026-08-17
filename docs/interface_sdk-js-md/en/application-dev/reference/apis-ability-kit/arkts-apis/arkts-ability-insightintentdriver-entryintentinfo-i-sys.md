@@ -4,10 +4,6 @@ Describes the parameters supported by the @InsightIntentForm decorator, such as 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntentDriver-interface EntryIntentInfo--><!--Device-insightIntentDriver-interface EntryIntentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -32,10 +28,6 @@ Ability name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EntryIntentInfo-readonly abilityName: string--><!--Device-EntryIntentInfo-readonly abilityName: string-End-->
@@ -55,10 +47,6 @@ Intent execution mode. that is, execution mode supported when the bound ability 
 **Type:** insightIntent.ExecuteMode[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

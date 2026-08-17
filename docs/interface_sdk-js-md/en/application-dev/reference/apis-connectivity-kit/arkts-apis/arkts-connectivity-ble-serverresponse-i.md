@@ -4,10 +4,6 @@ Describes the parameters of a response send by the server to a specified read or
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ble-interface ServerResponse--><!--Device-ble-interface ServerResponse-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ Indicates the address of the client to which to send the response
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -53,10 +45,6 @@ Indicates the byte offset of the start position for reading or writing operation
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,10 +66,6 @@ Indicates the status of the read or write request, set this parameter to '0' in 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -102,10 +86,6 @@ The Id of the write request
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -125,10 +105,6 @@ Indicates the value to be sent
 **Type:** ArrayBuffer
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

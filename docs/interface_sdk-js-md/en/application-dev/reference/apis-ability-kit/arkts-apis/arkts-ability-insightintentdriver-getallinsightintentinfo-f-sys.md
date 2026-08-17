@@ -16,10 +16,6 @@ Obtains the information about all intents on the current device. This API uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
@@ -34,7 +30,7 @@ Obtains the information about all intents on the current device. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| intentFlags | int | Yes | Flag of the intent information ( [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo-(System-API))). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md#GetInsightIntentFlag-(System-API)). |
+| intentFlags | int | Yes | Flag of the intent information ( [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#insightintentinfo-system-api)). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md#getinsightintentflag-system-api). |
 
 **Return value:**
 

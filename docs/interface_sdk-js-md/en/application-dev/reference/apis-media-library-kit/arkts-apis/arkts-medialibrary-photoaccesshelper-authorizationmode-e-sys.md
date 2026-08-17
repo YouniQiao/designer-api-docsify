@@ -4,10 +4,6 @@ Enumerates the authorization modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum AuthorizationMode--><!--Device-photoAccessHelper-enum AuthorizationMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -23,10 +19,6 @@ SHORT_TIME_AUTHORIZATION = 0
 Temporary authorization.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthorizationMode-SHORT_TIME_AUTHORIZATION = 0--><!--Device-AuthorizationMode-SHORT_TIME_AUTHORIZATION = 0-End-->
 

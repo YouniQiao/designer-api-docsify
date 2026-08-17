@@ -10,10 +10,6 @@ Define local device network id for audio.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-const LOCAL_NETWORK_ID: string--><!--Device-audio-const LOCAL_NETWORK_ID: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device

@@ -4,11 +4,9 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
-**替代接口：** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#GYROSCOPE)
+**替代接口：** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#gyroscope)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -28,11 +26,9 @@ fail?: (data: string, code: number) => void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -53,8 +49,6 @@ interval: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 8
 
@@ -80,11 +74,9 @@ success: (data: GyroscopeResponse) => void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **需要权限：** ohos.permission.GYROSCOPE
 

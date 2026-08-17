@@ -16,10 +16,6 @@ Unsubscribe Wi-Fi hotspot state change events. All callback functions will be de
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function offHotspotStateChange(callback?: Callback<int>): void--><!--Device-wifiManager-function offHotspotStateChange(callback?: Callback<int>): void-End-->

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-reminderAgentManager-interface WantAgent--><!--Device-reminderAgentManager-interface WantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -23,10 +19,6 @@ abilityName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WantAgent-abilityName: string--><!--Device-WantAgent-abilityName: string-End-->
 
@@ -44,10 +36,6 @@ The description of the WantParams object in an Want
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WantAgent-parameters?: RecordData--><!--Device-WantAgent-parameters?: RecordData-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -64,10 +52,6 @@ pkgName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WantAgent-pkgName: string--><!--Device-WantAgent-pkgName: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -83,10 +67,6 @@ uri?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WantAgent-uri?: string--><!--Device-WantAgent-uri?: string-End-->
 

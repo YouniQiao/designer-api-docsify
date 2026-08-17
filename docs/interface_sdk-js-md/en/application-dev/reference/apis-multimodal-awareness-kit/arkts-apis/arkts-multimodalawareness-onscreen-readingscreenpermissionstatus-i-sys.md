@@ -4,10 +4,6 @@ Returns the status of the permission for reading screen information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-onScreen-export interface ReadingScreenPermissionStatus--><!--Device-onScreen-export interface ReadingScreenPermissionStatus-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -32,10 +28,6 @@ If the screen information cannot be read, the corresponding status code will be 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReadingScreenPermissionStatus-readingCode?: int--><!--Device-ReadingScreenPermissionStatus-readingCode?: int-End-->
@@ -55,10 +47,6 @@ Whether screen reading is allowed. **0**: no; **1**: yes.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

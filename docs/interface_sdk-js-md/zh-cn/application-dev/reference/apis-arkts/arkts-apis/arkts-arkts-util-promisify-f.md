@@ -10,10 +10,6 @@ function promisify(original: (err: Object, value: Object) => void): Function
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function--><!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function-End-->
@@ -32,7 +28,7 @@ function promisify(original: (err: Object, value: Object) => void): Function
 | --- | --- |
 | Function | 返回一个Promise函数，该Promise在原始回调函数成功执行时resolve为回调的value值，在原始回调函数执行出错时reject为错误对象。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

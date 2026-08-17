@@ -4,10 +4,6 @@ UIExtensionContentSession is the UI operation class for the UIExtensionAbility. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class UIExtensionContentSession--><!--Device-unnamed-declare class UIExtensionContentSession-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -28,10 +24,6 @@ Obtains the window proxy of this UIExtensionAbility.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionContentSession-getUIExtensionWindowProxy(): uiExtension.WindowProxy--><!--Device-UIExtensionContentSession-getUIExtensionWindowProxy(): uiExtension.WindowProxy-End-->
@@ -50,7 +42,7 @@ Obtains the window proxy of this UIExtensionAbility.
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -96,13 +88,9 @@ struct Extension {
 loadContent(path: string, storage?: LocalStorage): void
 ```
 
-Loads a page for the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a page in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate) lifecycle of the UIExtensionAbility.
+Loads a page for the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a page in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate) lifecycle of the UIExtensionAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,7 +112,7 @@ Loads a page for the [UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
@@ -156,13 +144,9 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 loadContentByName(name: string, storage?: LocalStorage): void
 ```
 
-Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a named route page in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate) lifecycle of the UIExtensionAbility.
+Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a named route page in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate) lifecycle of the UIExtensionAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -183,7 +167,7 @@ Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a [UIEx
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 Implementation of the UIExtensionAbility:
 
@@ -251,10 +235,6 @@ Enables or disables the window privacy mode of the host application. A window in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PRIVACY_WINDOW
 
 **Model restriction:** This API can be used only in the stage model.
@@ -282,7 +262,7 @@ Enables or disables the window privacy mode of the host application. A window in
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
@@ -323,10 +303,6 @@ Enables or disables the window privacy mode of the host application. A window in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PRIVACY_WINDOW
 
 **Model restriction:** This API can be used only in the stage model.
@@ -349,7 +325,7 @@ Enables or disables the window privacy mode of the host application. A window in
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
@@ -391,10 +367,6 @@ Implicitly starts a given type of UIExtensionAbility. This API uses an asynchron
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void-End-->
@@ -407,7 +379,7 @@ Implicitly starts a given type of UIExtensionAbility. This API uses an asynchron
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
 | wantParam | Record&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
-| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Execution result of starting the UIExtensionAbility. |
+| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Execution result of starting the UIExtensionAbility. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -422,7 +394,7 @@ Implicitly starts a given type of UIExtensionAbility. This API uses an asynchron
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released.<br>**Applicable version:** 11 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
@@ -469,10 +441,6 @@ Starts the UIAbility or UIExtensionAbility by type. If the caller application is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void-End-->
@@ -485,7 +453,7 @@ Starts the UIAbility or UIExtensionAbility by type. If the caller application is
 | --- | --- | --- | --- |
 | type | string | Yes | The type of target ability. |
 | wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
-| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Indicates the abilityStartCallback. |
+| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Indicates the abilityStartCallback. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of startAbility. |
 
 **Error codes:**
@@ -505,10 +473,6 @@ Implicitly starts a given type of UIExtensionAbility. This API uses a promise to
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback): Promise<void>--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback): Promise<void>-End-->
@@ -521,7 +485,7 @@ Implicitly starts a given type of UIExtensionAbility. This API uses a promise to
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
 | wantParam | Record&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
-| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Execution result of starting the UIExtensionAbility. |
+| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Execution result of starting the UIExtensionAbility. |
 
 **Return value:**
 
@@ -541,7 +505,7 @@ Implicitly starts a given type of UIExtensionAbility. This API uses a promise to
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released.<br>**Applicable version:** 11 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
@@ -588,10 +552,6 @@ Starts the UIAbility or UIExtensionAbility by type. If the caller application is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback): Promise<void>--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback): Promise<void>-End-->
@@ -604,7 +564,7 @@ Starts the UIAbility or UIExtensionAbility by type. If the caller application is
 | --- | --- | --- | --- |
 | type | string | Yes | The type of target ability. |
 | wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
-| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Indicates the abilityStartCallback. |
+| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Indicates the abilityStartCallback. |
 
 **Return value:**
 
@@ -628,10 +588,6 @@ Destroys this UIExtensionAbility and closes the corresponding window of the host
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionContentSession-terminateSelf(callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-terminateSelf(callback: AsyncCallback<void>): void-End-->
@@ -650,7 +606,7 @@ Destroys this UIExtensionAbility and closes the corresponding window of the host
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
@@ -694,10 +650,6 @@ Destroys this UIExtensionAbility and closes the corresponding window of the host
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionContentSession-terminateSelf(): Promise<void>--><!--Device-UIExtensionContentSession-terminateSelf(): Promise<void>-End-->
@@ -710,7 +662,7 @@ Destroys this UIExtensionAbility and closes the corresponding window of the host
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
@@ -754,10 +706,6 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void-End-->
@@ -777,7 +725,7 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIExtensionContentSession, common } from '@kit.AbilityKit';
@@ -831,10 +779,6 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult): Promise<void>--><!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult): Promise<void>-End-->
@@ -859,7 +803,7 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIExtensionContentSession, common } from '@kit.AbilityKit';

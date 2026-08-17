@@ -4,10 +4,6 @@ Defines a type for memory optimization strategy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum LazyForEachMemOptStrategy--><!--Device-unnamed-declare enum LazyForEachMemOptStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ DEFAULT = 0
 No memory optimization.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ ENABLE_AUTO_CACHE_OPTIMIZATION = 1 << 0
 LazyForEach handles the memory optimization.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

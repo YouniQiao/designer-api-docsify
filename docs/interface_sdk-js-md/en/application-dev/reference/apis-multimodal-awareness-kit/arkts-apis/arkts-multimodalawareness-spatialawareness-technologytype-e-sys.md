@@ -4,10 +4,6 @@ Enum for distance measurement technology types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-spatialAwareness-export enum TechnologyType--><!--Device-spatialAwareness-export enum TechnologyType-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -23,10 +19,6 @@ BLE_RSSI = 0
 indicates Bluetooth Low Energy (BLE) technology
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ indicates Wi-Fi technology
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TechnologyType-WIFI_RSSI = 1--><!--Device-TechnologyType-WIFI_RSSI = 1-End-->
@@ -67,10 +55,6 @@ ULTRASOUND = 2
 indicates ultrasound technology
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ indicates NearLink technology
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TechnologyType-NEAR_LINK = 3--><!--Device-TechnologyType-NEAR_LINK = 3-End-->
@@ -111,10 +91,6 @@ WIFI_BLE_RSSI = 4
 indicates Wi-Fi and Bluetooth technology
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

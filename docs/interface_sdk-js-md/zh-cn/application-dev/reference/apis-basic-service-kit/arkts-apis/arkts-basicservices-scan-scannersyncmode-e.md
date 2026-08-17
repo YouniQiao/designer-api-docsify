@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-scan-enum ScannerSyncMode--><!--Device-scan-enum ScannerSyncMode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -22,10 +18,6 @@ UPDATE_STR = 'update'
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ScannerSyncMode-UPDATE_STR = 'update'--><!--Device-ScannerSyncMode-UPDATE_STR = 'update'-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -39,10 +31,6 @@ DELETE_STR = 'delete'
 删除码，表示扫描仪掉线。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ScannerSyncMode-DELETE_STR = 'delete'--><!--Device-ScannerSyncMode-DELETE_STR = 'delete'-End-->
 

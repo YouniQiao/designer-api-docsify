@@ -4,10 +4,6 @@ Represents chinese calendar time element for the ChineseCalendar object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export interface ChineseCalendarTime--><!--Device-i18n-export interface ChineseCalendarTime-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -30,10 +26,6 @@ The cyclical year of date. If you need to convert between the chinese calendar a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -53,10 +45,6 @@ Date of the chinese calendar time.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,10 +66,6 @@ The gregorian year of date. If you need to convert between the chinese calendar 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -101,10 +85,6 @@ Hour of the chinese calendar time.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,10 +106,6 @@ Determines whether the input month is a leap month.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -149,10 +125,6 @@ Minute of the chinese calendar time.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,10 +146,6 @@ Month of the chinese calendar time. Note: The month starts from 0. For example, 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -197,10 +165,6 @@ Second of the chinese calendar time.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

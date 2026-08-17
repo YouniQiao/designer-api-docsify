@@ -16,10 +16,6 @@ Shows a full-screen ad. > **NOTE：**> > 1. To ensure that ads can be displayed 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-advertising-function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void--><!--Device-advertising-function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void-End-->
@@ -42,7 +38,7 @@ Shows a full-screen ad. > **NOTE：**> > 1. To ensure that ads can be displayed 
 | [21800004](../errorcode-ads.md#21800004-ad-display-failure) | Failed to display the ad. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
-## Examples
+**Examples**
 
 For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
 

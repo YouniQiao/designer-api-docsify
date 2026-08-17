@@ -4,8 +4,6 @@ Provides APIs to manage data in a KV store, for example, adding or deleting data
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** SingleKVStore
@@ -24,8 +22,6 @@ Commits the transaction in this KV store. This API uses an asynchronous callback
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** commit
@@ -40,7 +36,7 @@ Commits the transaction in this KV store. This API uses an asynchronous callback
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -67,8 +63,6 @@ Commits the transaction in this KV store. This API uses a promise to return the 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** commit
@@ -83,7 +77,7 @@ Commits the transaction in this KV store. This API uses a promise to return the 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -108,8 +102,6 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** delete
@@ -122,10 +114,10 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -161,8 +153,6 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** delete
@@ -175,7 +165,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
 
 **Return value:**
 
@@ -183,7 +173,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -215,8 +205,6 @@ Deletes KV pairs in batches from this KV store. This API uses an asynchronous ca
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** deleteBatch
@@ -232,7 +220,7 @@ Deletes KV pairs in batches from this KV store. This API uses an asynchronous ca
 | keys | string[] | Yes | KV pairs to delete in batches. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -273,8 +261,6 @@ Deletes KV pairs in batches from this KV store. This API uses a promise to retur
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** deleteBatch
@@ -295,7 +281,7 @@ Deletes KV pairs in batches from this KV store. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -340,8 +326,6 @@ Sets data sync, which can be enabled or disabled. This API uses an asynchronous 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** enableSync
@@ -357,7 +341,7 @@ Sets data sync, which can be enabled or disabled. This API uses an asynchronous 
 | enabled | boolean | Yes | Whether to enable data sync. The value **true** means to enable data sync, and **false** means the opposite. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -384,8 +368,6 @@ Sets data sync, which can be enabled or disabled. This API uses a promise to ret
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** enableSync
@@ -406,7 +388,7 @@ Sets data sync, which can be enabled or disabled. This API uses a promise to ret
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -431,8 +413,6 @@ Unsubscribes from data changes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** off
@@ -448,7 +428,7 @@ Unsubscribes from data changes.
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
 | listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -479,8 +459,6 @@ Unsubscribes from sync completion events.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** off
@@ -496,7 +474,7 @@ Unsubscribes from sync completion events.
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
 | syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -527,8 +505,6 @@ Subscribes to data changes of the specified type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** on
@@ -545,7 +521,7 @@ Subscribes to data changes of the specified type.
 | type | SubscribeType | Yes | Type of data change. |
 | listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -564,8 +540,6 @@ Subscribes to sync completion events.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** on
@@ -581,7 +555,7 @@ Subscribes to sync completion events.
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
 | syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -600,8 +574,6 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** put
@@ -614,11 +586,11 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -647,8 +619,6 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** put
@@ -661,8 +631,8 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
 
 **Return value:**
 
@@ -670,7 +640,7 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -697,8 +667,6 @@ Inserts KV pairs in batches to this KV store. This API uses an asynchronous call
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** putBatch
@@ -714,7 +682,7 @@ Inserts KV pairs in batches to this KV store. This API uses an asynchronous call
 | entries | Entry[] | Yes | KV pairs to insert in batches. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -755,8 +723,6 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** putBatch
@@ -777,7 +743,7 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -821,8 +787,6 @@ Rolls back the transaction in this KV store. This API uses an asynchronous callb
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** rollback
@@ -837,7 +801,7 @@ Rolls back the transaction in this KV store. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -864,8 +828,6 @@ Rolls back the transaction in this KV store. This API uses a promise to return t
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** rollback
@@ -880,7 +842,7 @@ Rolls back the transaction in this KV store. This API uses a promise to return t
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -905,8 +867,6 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** setSyncRange
@@ -923,7 +883,7 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 | remoteSupportLabels | string[] | Yes | Sync labels set for remote devices. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -948,8 +908,6 @@ Sets the data sync range. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** setSyncRange
@@ -971,7 +929,7 @@ Sets the data sync range. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -998,8 +956,6 @@ Starts the transaction in this KV store. This API uses an asynchronous callback 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** startTransaction
@@ -1014,7 +970,7 @@ Starts the transaction in this KV store. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -1061,8 +1017,6 @@ Starts the transaction in this KV store. This API uses a promise to return the r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** startTransaction
@@ -1077,7 +1031,7 @@ Starts the transaction in this KV store. This API uses a promise to return the r
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;

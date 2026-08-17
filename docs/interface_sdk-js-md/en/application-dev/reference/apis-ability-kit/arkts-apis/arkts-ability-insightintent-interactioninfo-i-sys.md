@@ -4,10 +4,6 @@ Defines the interaction information returned after the current intent execution 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntent-interface InteractionInfo--><!--Device-insightIntent-interface InteractionInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -31,10 +27,6 @@ Information of the interaction UI to be displayed after the current intent execu
 **Type:** [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

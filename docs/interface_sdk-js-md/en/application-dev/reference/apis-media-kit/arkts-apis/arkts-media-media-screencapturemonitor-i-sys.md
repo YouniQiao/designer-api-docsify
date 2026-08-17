@@ -4,10 +4,6 @@ A class that provides APIs to query and monitor the system screen recorder statu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface ScreenCaptureMonitor--><!--Device-media-interface ScreenCaptureMonitor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -29,10 +25,6 @@ offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void
 Unsubscribes from state change events of the system screen recorder. This event is triggered when the state of the system screen recorder changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void-End-->
 
@@ -62,10 +54,6 @@ Unsubscribes from state change events of the system screen recorder.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-ScreenCaptureMonitor-off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -85,7 +73,7 @@ Unsubscribes from state change events of the system screen recorder.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 screenCaptureMonitor.off('systemScreenRecorder');
@@ -100,10 +88,6 @@ onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void
 Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported, you can determine whether the system screen recorder is working. This event is triggered when the state of the system screen recorder changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void-End-->
 
@@ -133,10 +117,6 @@ Subscribes to state change events of the system screen recorder. From the Screen
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-ScreenCaptureMonitor-on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -156,7 +136,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // This event is reported when the state of the system screen recorder changes.
@@ -177,10 +157,6 @@ Whether the system screen recorder is working.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScreenCaptureMonitor-readonly isSystemScreenRecorderWorking: boolean--><!--Device-ScreenCaptureMonitor-readonly isSystemScreenRecorderWorking: boolean-End-->
 

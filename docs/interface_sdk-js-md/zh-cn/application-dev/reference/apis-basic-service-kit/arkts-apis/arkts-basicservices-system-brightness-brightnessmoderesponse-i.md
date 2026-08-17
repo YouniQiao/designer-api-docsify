@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 7
 
 <!--Device-unnamed-export interface BrightnessModeResponse--><!--Device-unnamed-export interface BrightnessModeResponse-End-->
@@ -23,8 +21,6 @@ mode: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 7
 

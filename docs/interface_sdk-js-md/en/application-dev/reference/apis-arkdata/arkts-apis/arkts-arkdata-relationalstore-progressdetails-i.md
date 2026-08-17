@@ -4,10 +4,6 @@ Describes detail of the cloud sync {@code Progress}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-interface ProgressDetails--><!--Device-relationalStore-interface ProgressDetails-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -30,10 +26,6 @@ Describes the code of data sync progress.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ProgressDetails-code: ProgressCode--><!--Device-ProgressDetails-code: ProgressCode-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -50,10 +42,6 @@ Statistics of each table. The key indicates the table name, and the value indica
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ProgressDetails-details: Record<string, TableDetails>--><!--Device-ProgressDetails-details: Record<string, TableDetails>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -69,10 +57,6 @@ Indicates the code message.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,10 +75,6 @@ Describes the status of data sync progress.
 **Type:** Progress
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ProgressDetails-schedule: Progress--><!--Device-ProgressDetails-schedule: Progress-End-->
 

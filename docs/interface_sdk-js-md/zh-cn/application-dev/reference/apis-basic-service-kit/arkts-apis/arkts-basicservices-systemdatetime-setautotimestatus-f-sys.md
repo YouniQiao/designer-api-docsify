@@ -10,10 +10,6 @@ function setAutoTimeStatus(status: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_TIME
 
 <!--Device-systemDateTime-function setAutoTimeStatus(status: boolean): Promise<void>--><!--Device-systemDateTime-function setAutoTimeStatus(status: boolean): Promise<void>-End-->
@@ -43,7 +39,7 @@ function setAutoTimeStatus(status: boolean): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

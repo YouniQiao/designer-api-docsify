@@ -10,10 +10,6 @@ Unregister event callback for the information change of print extension.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function offExtInfoChange(callback?: Callback<boolean>): void--><!--Device-print-function offExtInfoChange(callback?: Callback<boolean>): void-End-->
@@ -26,7 +22,7 @@ Unregister event callback for the information change of print extension.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | The callback function for state change of printer. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | The callback function for state change of printer. |
 
 **错误码：**
 

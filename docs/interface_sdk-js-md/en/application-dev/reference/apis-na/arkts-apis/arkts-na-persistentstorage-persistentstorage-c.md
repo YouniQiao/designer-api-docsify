@@ -4,9 +4,7 @@ Defines the PersistentStorage interface.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class PersistentStorage--><!--Device-unnamed-export declare class PersistentStorage-End-->
 
@@ -22,9 +20,7 @@ Reverse of @see persistProp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,9 +44,7 @@ Inform persisted AppStorage property names
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,9 +68,7 @@ Add property 'key' to AppStorage properties whose current value will be persiste
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,9 +101,7 @@ Persist given AppStorage properties with given names. If a property does not exi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

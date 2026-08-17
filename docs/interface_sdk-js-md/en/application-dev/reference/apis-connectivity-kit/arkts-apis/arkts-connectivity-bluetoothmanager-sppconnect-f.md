@@ -16,11 +16,9 @@ Connects to a remote device over the socket. On API 10 and above, the permission
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppConnect)
+**Substitutes:** [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppconnect)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -35,7 +33,7 @@ Connects to a remote device over the socket. On API 10 and above, the permission
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | device | string | Yes | The address of the remote device to connect. |
-| option | SppOption | Yes | Indicates the connect parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md#SppOption). |
+| option | SppOption | Yes | Indicates the connect parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md#sppoption). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
 
 **Error codes:**
@@ -50,7 +48,7 @@ Connects to a remote device over the socket. On API 10 and above, the permission
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

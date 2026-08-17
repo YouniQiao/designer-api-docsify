@@ -2,15 +2,13 @@
 
 Worker类包含所有Worker功能。
 
-**继承/实现关系：** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md#EventTarget)
+**继承/实现关系：** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md#eventtarget)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [ThreadWorker](arkts-arkts-worker-threadworker-c.md#ThreadWorker)
+**替代接口：** [ThreadWorker](arkts-arkts-worker-threadworker-c.md#threadworker)
 
 <!--Device-worker-class Worker--><!--Device-worker-class Worker-End-->
 
@@ -25,8 +23,6 @@ constructor(scriptURL: string, options?: WorkerOptions)
 创建一个worker实例。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -43,7 +39,7 @@ constructor(scriptURL: string, options?: WorkerOptions)
 | scriptURL | string | 是 | scriptURL worker执行的脚本URL。 |
 | options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | 否 | 可为worker设置的选项。 |
 
-## 示例
+**示例**
 
 此处以在Stage模型的entry模块Index.ets文件中加载Worker线程文件为例，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
 
@@ -65,8 +61,6 @@ off(type: string, listener?: EventListener): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** off
@@ -82,7 +76,7 @@ off(type: string, listener?: EventListener): void
 | type | string | 是 | 需要移除的事件类型。 |
 | listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 否 | listener 要移除的事件监听的回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // Index.ets
@@ -103,8 +97,6 @@ on(type: string, listener: EventListener): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** on
@@ -120,7 +112,7 @@ on(type: string, listener: EventListener): void
 | type | string | 是 | type 向Worker添加一个事件监听。 |
 | listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // Index.ets
@@ -142,8 +134,6 @@ once(type: string, listener: EventListener): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** once
@@ -159,7 +149,7 @@ once(type: string, listener: EventListener): void
 | type | string | 是 | 监听的事件类型。 |
 | listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // Index.ets
@@ -181,8 +171,6 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** postMessage
@@ -198,7 +186,7 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 | message | Object | 是 | 发送至Worker的数据。 |
 | transfer | ArrayBuffer[] | 是 | transfer 可转移的ArrayBuffer实例对象。 transferList数组不可包含null。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // Index.ets
@@ -220,8 +208,6 @@ postMessage(message: Object, options?: PostMessageOptions): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** postMessage
@@ -237,7 +223,7 @@ postMessage(message: Object, options?: PostMessageOptions): void
 | message | Object | 是 | 发送至Worker的数据。 |
 | options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 可为postMessage设置的选项。 transferList数组不可包含null。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // Index.ets
@@ -261,8 +247,6 @@ terminate(): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** terminate
@@ -271,7 +255,7 @@ terminate(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 示例
+**示例**
 
 ```TypeScript
 // Index.ets
@@ -293,8 +277,6 @@ onerror?: (err: ErrorEvent) => void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** onerror
@@ -314,8 +296,6 @@ onexit?: (code: number) => void
 **类型：** (code: number) =&gt; void
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -337,8 +317,6 @@ onmessage?: (event: MessageEvent) => void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** onmessage
@@ -358,8 +336,6 @@ onmessageerror?: (event: MessageEvent) => void
 **类型：** (event: MessageEvent) =&gt; void
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 

@@ -16,10 +16,6 @@ Creates an **IndexUtil** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-i18n-export function getInstance(locale?:string): IndexUtil--><!--Device-i18n-export function getInstance(locale?:string): IndexUtil-End-->
@@ -36,9 +32,9 @@ Creates an **IndexUtil** object.
 
 | Type | Description |
 | --- | --- |
-| [IndexUtil](../../apis-na/arkts-apis/arkts-na-i18n-indexutil-c.md) | IndexUtil** object created based on the specified locale ID. |
+| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | IndexUtil** object created based on the specified locale ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

@@ -1,12 +1,8 @@
 # PdfLoadResult
 
-Enumerates the PDF page loading results.
+Defines the PDF page loading results, which identify various states and error types during PDF file loading and help developers diagnose errors and provide user prompts when PDF display fails.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum PdfLoadResult--><!--Device-unnamed-declare enum PdfLoadResult-End-->
 
@@ -22,10 +18,6 @@ The PDF file is successfully loaded.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-PdfLoadResult-LOAD_SUCCESS = 0--><!--Device-PdfLoadResult-LOAD_SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -36,13 +28,9 @@ The PDF file is successfully loaded.
 PARSE_ERROR_FILE = 1
 ```
 
-The PDF file fails to be loaded.
+Failed to load the PDF file.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-PdfLoadResult-PARSE_ERROR_FILE = 1--><!--Device-PdfLoadResult-PARSE_ERROR_FILE = 1-End-->
 
@@ -58,10 +46,6 @@ The PDF file format is not supported.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-PdfLoadResult-PARSE_ERROR_FORMAT = 2--><!--Device-PdfLoadResult-PARSE_ERROR_FORMAT = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -76,10 +60,6 @@ The PDF file password is incorrect.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-PdfLoadResult-PARSE_ERROR_PASSWORD = 3--><!--Device-PdfLoadResult-PARSE_ERROR_PASSWORD = 3-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -90,13 +70,9 @@ The PDF file password is incorrect.
 PARSE_ERROR_HANDLER = 4
 ```
 
-The PDF file fails to be processed.
+Failed to process the PDF file.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-PdfLoadResult-PARSE_ERROR_HANDLER = 4--><!--Device-PdfLoadResult-PARSE_ERROR_HANDLER = 4-End-->
 

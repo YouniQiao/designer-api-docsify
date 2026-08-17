@@ -1,12 +1,8 @@
 # InsightIntentContext
 
-The module provides the context for intent execution. It is used as a property in both the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor) and [base class decorated with @InsightIntentEntry](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md#InsightIntentEntryExecutor) , offering essential capabilities for intent implementation, for example, starting [UIAbility components](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) within the same application.
+The module provides the context for intent execution. It is used as a property in both the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#insightintentexecutor) and [base class decorated with @InsightIntentEntry](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md#insightintententryexecutor) , offering essential capabilities for intent implementation, for example, starting [UIAbility components](arkts-ability-app-ability-uiability-uiability-c.md#uiability) within the same application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class InsightIntentContext--><!--Device-unnamed-declare class InsightIntentContext-End-->
 
@@ -24,13 +20,9 @@ import { InsightIntentContext } from 'InsightIntentContext';
 setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 ```
 
-Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_ABILITY_FOREGROUND](arkts-ability-insightintent-executemode-e.md#ExecuteMode).
+Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_ABILITY_FOREGROUND](arkts-ability-insightintent-executemode-e.md#executemode).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,7 +44,7 @@ Sets the return mode of the intent execution result. This API is applicable to i
 | --- | --- |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIAbility foreground insight intent execute mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
@@ -101,13 +93,9 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 ```
 
-Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_EXTENSION_ABILITY](arkts-ability-insightintent-executemode-e.md#ExecuteMode).
+Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_EXTENSION_ABILITY](arkts-ability-insightintent-executemode-e.md#executemode).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,7 +117,7 @@ Sets the return mode of the intent execution result. This API is applicable to i
 | --- | --- |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIExtensionAbility insight intent execute mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
@@ -181,10 +169,6 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -220,7 +204,7 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
@@ -269,10 +253,6 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -313,7 +293,7 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
@@ -353,15 +333,11 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: int
 ```
 
-Unique ID of an intent instance. Its execution result can be returned through [insightIntentProvider.sendExecuteResult] [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendExecuteResult) and [insightIntentProvider.sendIntentResult] [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendIntentResult).
+Unique ID of an intent instance. Its execution result can be returned through [insightIntentProvider.sendExecuteResult] [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) and [insightIntentProvider.sendIntentResult] [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult).
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

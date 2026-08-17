@@ -4,10 +4,6 @@ Describes the codec information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-a2dp-interface CodecInfo--><!--Device-a2dp-interface CodecInfo-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ codec bit rate.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-CodecInfo-codecBitRate?: CodecBitRate--><!--Device-CodecInfo-codecBitRate?: CodecBitRate-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -49,10 +41,6 @@ codec bits per sample.
 **Type:** [CodecBitsPerSample](arkts-connectivity-a2dp-codecbitspersample-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CodecInfo-codecBitsPerSample: CodecBitsPerSample--><!--Device-CodecInfo-codecBitsPerSample: CodecBitsPerSample-End-->
 
@@ -70,10 +58,6 @@ codec channel mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CodecInfo-codecChannelMode: CodecChannelMode--><!--Device-CodecInfo-codecChannelMode: CodecChannelMode-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -89,10 +73,6 @@ codec frame length.
 **Type:** [CodecFrameLength](arkts-connectivity-a2dp-codecframelength-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-CodecInfo-codecFrameLength?: CodecFrameLength--><!--Device-CodecInfo-codecFrameLength?: CodecFrameLength-End-->
 
@@ -110,10 +90,6 @@ codec sample rate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CodecInfo-codecSampleRate: CodecSampleRate--><!--Device-CodecInfo-codecSampleRate: CodecSampleRate-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -129,10 +105,6 @@ codec type
 **Type:** [CodecType](arkts-connectivity-a2dp-codectype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CodecInfo-codecType: CodecType--><!--Device-CodecInfo-codecType: CodecType-End-->
 

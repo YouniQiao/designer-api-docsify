@@ -8,11 +8,9 @@ Enumerates the authentication types.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md#UserAuthType)
+**Substitutes:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md#userauthtype)
 
 <!--Device-userAuth-type AuthType = 'ALL' | 'FACE_ONLY'--><!--Device-userAuth-type AuthType = 'ALL' | 'FACE_ONLY'-End-->
 

@@ -4,10 +4,6 @@ Role of the button.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum ButtonRole--><!--Device-unnamed-declare enum ButtonRole-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ NORMAL = 0
 Normal button.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +37,6 @@ ERROR = 1
 Warning button.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,8 @@
 # WebHttpCookieSameSitePolicy
 
-Indicates whether to restrict cookies so that only requests sent back to the same site that created them can carry them.
+Enumerates the policies for sending cookies in cross-site requests.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum WebHttpCookieSameSitePolicy--><!--Device-webview-enum WebHttpCookieSameSitePolicy-End-->
 
@@ -18,13 +14,9 @@ Indicates whether to restrict cookies so that only requests sent back to the sam
 NONE = 0
 ```
 
-Cookies marked as Secure are allowed to be carried in cross-site requests.
+Cookies can be carried in cross-site requests, but the **secure** attribute must be set.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookieSameSitePolicy-NONE = 0--><!--Device-WebHttpCookieSameSitePolicy-NONE = 0-End-->
 
@@ -36,13 +28,9 @@ Cookies marked as Secure are allowed to be carried in cross-site requests.
 LAX = 1
 ```
 
-Allow specific cross-site requests to carry cookies.
+Cookies can be carried in specific cross-site requests, such as navigation scenarios of some GET requests.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookieSameSitePolicy-LAX = 1--><!--Device-WebHttpCookieSameSitePolicy-LAX = 1-End-->
 
@@ -54,13 +42,9 @@ Allow specific cross-site requests to carry cookies.
 STRICT = 2
 ```
 
-Prohibit cross-site requests from carrying cookies.
+Cookies cannot be carried in cross-site requests.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookieSameSitePolicy-STRICT = 2--><!--Device-WebHttpCookieSameSitePolicy-STRICT = 2-End-->
 

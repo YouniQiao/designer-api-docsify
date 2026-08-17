@@ -12,13 +12,9 @@ import { adminManager } from 'adminManager';
 function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEvent>): void
 ```
 
-Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs. Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md#ManagedEvent) event.
+Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs. Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md#managedevent) event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_SUBSCRIBE_MANAGED_EVENT
 
@@ -33,7 +29,7 @@ Subscribes to system management events. After the call is successful, the device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| managedEvents | Array&lt;[ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)&gt; | Yes | Array of system management events to be subscribed to. Each element in the array is a value from the [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md#ManagedEvent) enumeration. Multiple event types can be subscribed to, such as application installation/uninstallation/start/stop events, system update events, and more. |
+| managedEvents | Array&lt;[ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)&gt; | Yes | Array of system management events to be subscribed to. Each element in the array is a value from the [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md#managedevent) enumeration. Multiple event types can be subscribed to, such as application installation/uninstallation/start/stop events, system update events, and more. |
 
 **Error codes:**
 
@@ -45,7 +41,7 @@ Subscribes to system management events. After the call is successful, the device
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

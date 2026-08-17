@@ -4,10 +4,6 @@ Provides callbacks for IDM.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface IIdmCallback--><!--Device-osAccount-interface IIdmCallback-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -32,10 +28,6 @@ Called to acquire IDM information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IIdmCallback-onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void--><!--Device-IIdmCallback-onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -53,10 +45,6 @@ Called to return the result code and request result information.
 **Type:** (result: int, extraInfo: RequestResult) =&gt; void
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IIdmCallback-onResult: (result: int, extraInfo: RequestResult) => void--><!--Device-IIdmCallback-onResult: (result: int, extraInfo: RequestResult) => void-End-->
 

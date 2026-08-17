@@ -1,12 +1,8 @@
 # PasteDataRecord
 
-Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records. After creating a PasteDataRecord, it is not supported to modify the value of the default data type of the PasteDataRecord. The correct value for the default data type should be specified when creating the PasteDataRecord. If you need to refresh the attribute value of the PasteDataRecord, please use [addEntry](#addEntry).
+Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records. After creating a PasteDataRecord, it is not supported to modify the value of the default data type of the PasteDataRecord. The correct value for the default data type should be specified when creating the PasteDataRecord. If you need to refresh the attribute value of the PasteDataRecord, please use [addEntry](#addentry).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-pasteboard-interface PasteDataRecord--><!--Device-pasteboard-interface PasteDataRecord-End-->
 
@@ -24,13 +20,9 @@ import { pasteboard } from 'pasteboard';
 addEntry(type: string, value: ValueType): void
 ```
 
-Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the [getData](#getData) API to read the corresponding data.
+Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the [getData](#getdata) API to read the corresponding data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PasteDataRecord-addEntry(type: string, value: ValueType): void--><!--Device-PasteDataRecord-addEntry(type: string, value: ValueType): void-End-->
 
@@ -40,7 +32,7 @@ Adds PasteData of an extra type to **PasteDataRecord**. The type added using thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in [Constants](arkts-pasteboard.md#Constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
+| type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in [Constants](arkts-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
 | value | ValueType | Yes | Content of extra data. |
 
 **Error codes:**
@@ -49,7 +41,7 @@ Adds PasteData of an extra type to **PasteDataRecord**. The type added using thi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
@@ -68,11 +60,9 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [toPlainText](#toPlainText)()
+**Substitutes:** [toPlainText](#toplaintext)()
 
 <!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void--><!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void-End-->
 
@@ -90,7 +80,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -115,11 +105,9 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [toPlainText](#toPlainText)()
+**Substitutes:** [toPlainText](#toplaintext)()
 
 <!--Device-PasteDataRecord-convertToText(): Promise<string>--><!--Device-PasteDataRecord-convertToText(): Promise<string>-End-->
 
@@ -131,7 +119,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the text obtained from the conversion. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -153,10 +141,6 @@ getData(type: string): Promise<ValueType>
 Obtains data of the specified type from **PasteDataRecord**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PasteDataRecord-getData(type: string): Promise<ValueType>--><!--Device-PasteDataRecord-getData(type: string): Promise<ValueType>-End-->
 
@@ -180,7 +164,7 @@ Obtains data of the specified type from **PasteDataRecord**.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -213,10 +197,6 @@ Obtains the intersection of the input types and the types of the PasteData.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PasteDataRecord-getValidTypes(types: Array<string>): Array<string>--><!--Device-PasteDataRecord-getValidTypes(types: Array<string>): Array<string>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -239,7 +219,7 @@ Obtains the intersection of the input types and the types of the PasteData.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
@@ -265,10 +245,6 @@ Forcibly converts HTML, plain, and URI content in a **PasteDataRecord** to the p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteDataRecord-toPlainText(): string--><!--Device-PasteDataRecord-toPlainText(): string-End-->
@@ -281,7 +257,7 @@ Forcibly converts HTML, plain, and URI content in a **PasteDataRecord** to the p
 | --- | --- |
 | string | Plain text. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_HTML, '<html>hello</html>');
@@ -301,10 +277,6 @@ Content of custom data. Modifications to this attribute are ineffective.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteDataRecord-data: Record<string, ArrayBuffer>--><!--Device-PasteDataRecord-data: Record<string, ArrayBuffer>-End-->
@@ -317,15 +289,11 @@ Content of custom data. Modifications to this attribute are ineffective.
 htmlText: string
 ```
 
-HTML content, must conform to standard HTML format. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addEntry).
+HTML content, must conform to standard HTML format. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -345,10 +313,6 @@ Default type of PasteDataRecord. Modifications to this attribute are ineffective
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteDataRecord-mimeType: string--><!--Device-PasteDataRecord-mimeType: string-End-->
@@ -361,15 +325,11 @@ Default type of PasteDataRecord. Modifications to this attribute are ineffective
 pixelMap: image.PixelMap
 ```
 
-PixelMap content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addEntry).
+PixelMap content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
 
 **Type:** image.PixelMap
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -383,15 +343,11 @@ PixelMap content. Modifications to this attribute are ineffective. To refresh th
 plainText: string
 ```
 
-Plain text. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addEntry).
+Plain text. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -405,15 +361,11 @@ Plain text. Modifications to this attribute are ineffective. To refresh the attr
 uri: string
 ```
 
-URI content, must conform to standard URI format. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addEntry).
+URI content, must conform to standard URI format. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -427,15 +379,11 @@ URI content, must conform to standard URI format. Modifications to this attribut
 want: Want
 ```
 
-Want content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addEntry).
+Want content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

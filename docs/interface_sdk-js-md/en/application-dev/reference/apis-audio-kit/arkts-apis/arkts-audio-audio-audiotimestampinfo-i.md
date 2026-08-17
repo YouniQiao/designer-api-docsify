@@ -4,10 +4,6 @@ Describes the information about the audio stream timestamp and the current data 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioTimestampInfo--><!--Device-audio-interface AudioTimestampInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -30,10 +26,6 @@ Position of the current data frame for playback or recording.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioTimestampInfo-readonly framePos: long--><!--Device-AudioTimestampInfo-readonly framePos: long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -49,10 +41,6 @@ Timestamp corresponding to the current data frame position during playback or re
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioTimestampInfo-readonly timestamp: long--><!--Device-AudioTimestampInfo-readonly timestamp: long-End-->
 

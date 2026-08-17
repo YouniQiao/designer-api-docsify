@@ -10,10 +10,6 @@ function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<Exemp
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
 <!--Device-deviceStandby-function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<ExemptedAppInfo>>): void--><!--Device-deviceStandby-function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<ExemptedAppInfo>>): void-End-->
@@ -26,8 +22,8 @@ function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<Exemp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceTypes | int | 是 | 资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#ResourceType（系统接口）)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md)&gt;&gt; | 是 | 豁免应用信息。 |
+| resourceTypes | int | 是 | 资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#resourcetype系统接口)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md)&gt;&gt; | 是 | 豁免应用信息。 |
 
 **错误码：**
 
@@ -42,7 +38,7 @@ function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<Exemp
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) | Caller information verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -72,10 +68,6 @@ function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
 <!--Device-deviceStandby-function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>--><!--Device-deviceStandby-function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>-End-->
@@ -88,7 +80,7 @@ function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceTypes | int | 是 | 资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#ResourceType（系统接口）)。 |
+| resourceTypes | int | 是 | 资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#resourcetype系统接口)。 |
 
 **返回值：**
 
@@ -109,7 +101,7 @@ function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) | Caller information verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

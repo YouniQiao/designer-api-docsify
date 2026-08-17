@@ -4,9 +4,7 @@ Describes the Position of arc button.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum ArcButtonPosition--><!--Device-unnamed-export declare enum ArcButtonPosition-End-->
 
@@ -22,9 +20,7 @@ The top edge button is located above the circular screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ArcButtonPosition-TOP_EDGE = 0--><!--Device-ArcButtonPosition-TOP_EDGE = 0-End-->
 
@@ -40,9 +36,7 @@ The bottom edge button is located below the circular screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ArcButtonPosition-BOTTOM_EDGE = 1--><!--Device-ArcButtonPosition-BOTTOM_EDGE = 1-End-->
 

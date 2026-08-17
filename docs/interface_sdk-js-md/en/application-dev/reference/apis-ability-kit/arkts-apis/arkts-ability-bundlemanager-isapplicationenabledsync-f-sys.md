@@ -16,10 +16,6 @@ Checks whether an application is enabled. This API returns the result synchronou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-function isApplicationEnabledSync(bundleName: string): boolean--><!--Device-bundleManager-function isApplicationEnabledSync(bundleName: string): boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -46,7 +42,7 @@ Checks whether an application is enabled. This API returns the result synchronou
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

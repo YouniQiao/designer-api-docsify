@@ -4,10 +4,6 @@ Represents a style object for the label text and font.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface LabelStyle--><!--Device-unnamed-declare interface LabelStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Font of the label text. When the tab is a subtab, the default font is in 16.0 fp
 **Type:** Font
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ How the adaptive height is determined for the label text. By default, the **maxL
 **Type:** TextHeightAdaptivePolicy
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Maximum font size of the label text. It cannot be set in percentage. For the set
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -97,10 +81,6 @@ Maximum number of lines in the label text. If this attribute is specified, the t
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,10 +104,6 @@ Minimum font size of the label text. It cannot be set in percentage. For the set
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -147,10 +123,6 @@ Display mode when the label text is too long. By default, an ellipsis (...) is u
 **Type:** TextOverflow
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,10 +146,6 @@ Font color of the label text when it is selected. Default value: **#FF007DFF**
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -199,10 +167,6 @@ Font color of the label text when it is not selected. Default value: **#99182431
 **Default:** #99182431
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Enumerates the authentication result codes. They include all success codes and e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-userAuth-enum UserAuthResultCode--><!--Device-userAuth-enum UserAuthResultCode-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -21,10 +17,6 @@ SUCCESS = 12500000
 The operation is successful. It indicates that the user authentication is successful and the authentication token is valid. The application can use the returned token to perform subsequent security operations.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ The authentication fails. It indicates that the user characteristics do not matc
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthResultCode-FAIL = 12500001--><!--Device-UserAuthResultCode-FAIL = 12500001-End-->
@@ -61,10 +49,6 @@ GENERAL_ERROR = 12500002
 A general operation error occurred. It indicates that an unknown error occurs during authentication. It is recommended that the user be prompted to try again later or contact the system administrator.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +66,6 @@ The authentication is canceled. It indicates that the user or the system cancels
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthResultCode-CANCELED = 12500003--><!--Device-UserAuthResultCode-CANCELED = 12500003-End-->
@@ -101,10 +81,6 @@ TIMEOUT = 12500004
 The authentication has timed out. It indicates that the user does not complete the authentication interaction within the specified time (for example, the user does not enter the password in time or does not look at the camera). You are advised to prompt the user to try again and pay attention to the operation time limit.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,10 +98,6 @@ The authentication type is not supported. It indicates that the current device d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthResultCode-TYPE_NOT_SUPPORT = 12500005--><!--Device-UserAuthResultCode-TYPE_NOT_SUPPORT = 12500005-End-->
@@ -141,10 +113,6 @@ TRUST_LEVEL_NOT_SUPPORT = 12500006
 The authentication trust level is not supported. It indicates that the specified authentication trust level is higher than the highest level supported by the current authentication type. You are advised to lower the authentication trust level or use a more secure authentication type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,10 +130,6 @@ The system is busy. It indicates that the authentication service is busy process
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthResultCode-BUSY = 12500007--><!--Device-UserAuthResultCode-BUSY = 12500007-End-->
@@ -182,10 +146,6 @@ Parameter verification failed. It indicates that the input parameter does not me
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UserAuthResultCode-INVALID_PARAMETERS = 12500008--><!--Device-UserAuthResultCode-INVALID_PARAMETERS = 12500008-End-->
@@ -198,13 +158,9 @@ Parameter verification failed. It indicates that the input parameter does not me
 LOCKED = 12500009
 ```
 
-The authentication executor is locked. It indicates that the authenticator is locked due to consecutive authentication failures. The user can continue the authentication only after waiting for unlocking or using the PIN. You can call [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md#getAuthLockState) to query the lock status.
+The authentication executor is locked. It indicates that the authenticator is locked due to consecutive authentication failures. The user can continue the authentication only after waiting for unlocking or using the PIN. You can call [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md#getauthlockstate) to query the lock status.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -222,10 +178,6 @@ The user has not enrolled the specified system identity authentication credentia
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthResultCode-NOT_ENROLLED = 12500010--><!--Device-UserAuthResultCode-NOT_ENROLLED = 12500010-End-->
@@ -242,10 +194,6 @@ The user cancels the system authentication and selects a custom authentication o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthResultCode-CANCELED_FROM_WIDGET = 12500011--><!--Device-UserAuthResultCode-CANCELED_FROM_WIDGET = 12500011-End-->
@@ -261,10 +209,6 @@ PIN_EXPIRED = 12500013
 The PIN has expired. It indicates that the system PIN has expired. For example, the enterprise policy requires that the PIN be changed periodically. In this case, the user needs to change the PIN before using the authentication function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

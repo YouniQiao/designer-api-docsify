@@ -16,10 +16,6 @@ Obtains the serial port device list, including the device name and port number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]--><!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -30,7 +26,7 @@ Obtains the serial port device list, including the device name and port number.
 | --- | --- |
 | [Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;SerialPort&gt;[] | Serial port information list. |
 
-## Examples
+**Examples**
 
 The following sample code shows the basic process for calling the getPortList API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 

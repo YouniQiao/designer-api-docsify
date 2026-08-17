@@ -4,10 +4,6 @@ Swiper在主轴上的尺寸大小模式枚举。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare enum SwiperDisplayMode--><!--Device-unnamed-declare enum SwiperDisplayMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -22,11 +18,9 @@ Swiper滑动一页的宽度为Swiper组件自身的宽度。 **说明：**从API
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
-**替代接口：** [STRETCH](#STRETCH)
+**替代接口：** [STRETCH](#stretch)
 
 **卡片能力：** 从API版本7开始，该接口支持在ArkTS卡片中使用。
 
@@ -42,11 +36,9 @@ AutoLinear
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
-**替代接口：** [AUTO_LINEAR](#AUTO_LINEAR)
+**替代接口：** [AUTO_LINEAR](#autolinear)
 
 **卡片能力：** 从API版本7开始，该接口支持在ArkTS卡片中使用。
 
@@ -63,10 +55,6 @@ STRETCH
 Carousel map extension.
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,8 +73,6 @@ AUTO_LINEAR
 ```
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 12
 

@@ -4,10 +4,6 @@ Enumerates the usage of a credential.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-certificateManager-export enum CertificatePurpose--><!--Device-certificateManager-export enum CertificatePurpose-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
@@ -21,10 +17,6 @@ PURPOSE_DEFAULT = 0
 Default usage, which is used for credential signing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CertificatePurpose-PURPOSE_DEFAULT = 0--><!--Device-CertificatePurpose-PURPOSE_DEFAULT = 0-End-->
 
@@ -40,10 +32,6 @@ Query of all credentials.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CertificatePurpose-PURPOSE_ALL = 1--><!--Device-CertificatePurpose-PURPOSE_ALL = 1-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
@@ -58,10 +46,6 @@ Credential signing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CertificatePurpose-PURPOSE_SIGN = 2--><!--Device-CertificatePurpose-PURPOSE_SIGN = 2-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
@@ -75,10 +59,6 @@ PURPOSE_ENCRYPT = 3
 Credential encryption.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CertificatePurpose-PURPOSE_ENCRYPT = 3--><!--Device-CertificatePurpose-PURPOSE_ENCRYPT = 3-End-->
 

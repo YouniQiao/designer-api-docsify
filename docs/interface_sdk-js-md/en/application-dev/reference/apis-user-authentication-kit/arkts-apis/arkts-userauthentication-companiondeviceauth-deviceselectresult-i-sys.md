@@ -4,10 +4,6 @@ Returns the result of companion device selection. It is used to return the devic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-companionDeviceAuth-interface DeviceSelectResult--><!--Device-companionDeviceAuth-interface DeviceSelectResult-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -32,10 +28,6 @@ Device information list. It contains the device service identifier information s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceSelectResult-deviceKeys: DeviceKey[]--><!--Device-DeviceSelectResult-deviceKeys: DeviceKey[]-End-->
@@ -55,10 +47,6 @@ Device selection context. It carries extension information in JSON format and ca
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

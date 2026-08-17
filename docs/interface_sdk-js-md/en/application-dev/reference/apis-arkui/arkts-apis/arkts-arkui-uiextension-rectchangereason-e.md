@@ -4,10 +4,6 @@ Enumerates the reasons for changes in the rectangle (position and size) of the c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiExtension-enum RectChangeReason--><!--Device-uiExtension-enum RectChangeReason-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ HOST_WINDOW_RECT_CHANGE = 0x0001
 The rectangle of the host window containing the component changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

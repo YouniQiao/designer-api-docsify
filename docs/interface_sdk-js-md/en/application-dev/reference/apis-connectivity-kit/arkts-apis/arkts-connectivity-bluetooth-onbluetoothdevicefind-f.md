@@ -16,8 +16,6 @@ Subscribe the event reported when a remote Bluetooth device is discovered.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** bluetoothDeviceFind
@@ -35,7 +33,7 @@ Subscribe the event reported when a remote Bluetooth device is discovered.
 | type | 'bluetoothDeviceFind' | Yes | Type of the discovering event to listen for. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to listen for the discovering event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function onReceiveEvent(data : Array<string>) { // data is an array of Bluetooth device addresses.

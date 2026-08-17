@@ -4,10 +4,6 @@ Describes the window information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface WindowInfo--><!--Device-window-interface WindowInfo-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -32,10 +28,6 @@ Indicates the ID of the display where the window is located.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowInfo-displayId?: int--><!--Device-WindowInfo-displayId?: int-End-->
@@ -54,10 +46,6 @@ Window size in the global coordinate system. In extended screen scenarios, the t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowInfo-globalDisplayRect?: Rect--><!--Device-WindowInfo-globalDisplayRect?: Rect-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -73,10 +61,6 @@ Indicates the actual display size and position of the window.
 **Type:** Rect
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

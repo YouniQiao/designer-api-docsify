@@ -4,10 +4,6 @@ The dialogRequest module provides APIs related to modal dialog box processing, i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace dialogRequest--><!--Device-unnamed-declare namespace dialogRequest-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -24,8 +20,8 @@ import { dialogRequest } from 'dialogRequest';
 
 | Name | Description |
 | --- | --- |
-| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getRequestCallback) | Obtains the request callback from Want. > **NOTE：**> > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request callback can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. |
-| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getRequestInfo) | > **NOTE：**> > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. Obtains the request information from Want. |
+| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getrequestcallback) | Obtains the request callback from Want. > **NOTE：**> > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request callback can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getrequestinfo) | > **NOTE：**> > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. Obtains the request information from Want. |
 
 ### Interfaces
 

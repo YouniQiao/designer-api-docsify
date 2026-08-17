@@ -16,10 +16,6 @@ Updates the agent-powered reminder with the specified ID. This API uses a promis
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
 <!--Device-reminderAgentManager-function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<void>--><!--Device-reminderAgentManager-function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<void>-End-->
@@ -30,7 +26,7 @@ Updates the agent-powered reminder with the specified ID. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | int | Yes | ID of the agent-powered reminder to be updated. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) API is called. |
+| reminderId | int | Yes | ID of the agent-powered reminder to be updated. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) API is called. |
 | reminderReq | ReminderRequest | Yes | Request instance used to set detailed information such as the reminder type and ringing duration. |
 
 **Return value:**
@@ -47,7 +43,7 @@ Updates the agent-powered reminder with the specified ID. This API uses a promis
 | [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
 | [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';

@@ -4,10 +4,6 @@ Describes the settings for advertising.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-advertising-interface AdvertisingSettings--><!--Device-advertising-interface AdvertisingSettings-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -30,10 +26,6 @@ Indicates the advertising interval. The minimum number of slots is 160, and the 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AdvertisingSettings-interval?: int--><!--Device-AdvertisingSettings-interval?: int-End-->
@@ -52,10 +44,6 @@ Indicates whether the advertising is connectable. Default value: true.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AdvertisingSettings-isConnectable?: boolean--><!--Device-AdvertisingSettings-isConnectable?: boolean-End-->
@@ -73,10 +61,6 @@ Indicates the advertising power mode. Default value: ADV_TX_POWER_LOW.
 **Type:** [TxPowerMode](arkts-connectivity-advertising-txpowermode-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

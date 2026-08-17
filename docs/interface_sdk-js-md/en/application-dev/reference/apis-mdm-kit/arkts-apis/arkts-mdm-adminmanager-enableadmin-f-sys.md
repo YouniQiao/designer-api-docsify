@@ -16,10 +16,6 @@ Enables a device administrator application. The super device administrator appli
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
 **Model restriction:** This API can be used only in the stage model.
@@ -50,7 +46,7 @@ Enables a device administrator application. The super device administrator appli
 | [9200007](../errorcode-enterpriseDeviceManager.md#9200007-system-ability-error) | The system ability works abnormally. |
 | [9200003](../errorcode-enterpriseDeviceManager.md#9200003-invalid-administrator-ability-component) | The administrator ability component is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
@@ -87,10 +83,6 @@ Enables a device administrator application for a user (specified by **userId**).
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
 **Model restriction:** This API can be used only in the stage model.
@@ -122,7 +114,7 @@ Enables a device administrator application for a user (specified by **userId**).
 | [9200007](../errorcode-enterpriseDeviceManager.md#9200007-system-ability-error) | The system ability works abnormally. |
 | [9200003](../errorcode-enterpriseDeviceManager.md#9200003-invalid-administrator-ability-component) | The administrator ability component is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
@@ -158,10 +150,6 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 Enables the device administrator application for the current or specified user. The super device administrator application can be enabled only for the first user (u100). This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -199,7 +187,7 @@ Enables the device administrator application for the current or specified user. 
 | [9200007](../errorcode-enterpriseDeviceManager.md#9200007-system-ability-error) | The system ability works abnormally. |
 | [9200003](../errorcode-enterpriseDeviceManager.md#9200003-invalid-administrator-ability-component) | The administrator ability component is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

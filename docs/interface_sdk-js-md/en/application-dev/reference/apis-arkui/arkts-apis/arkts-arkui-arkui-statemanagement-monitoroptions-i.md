@@ -1,12 +1,8 @@
 # MonitorOptions
 
-Defines the optional parameters for [addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addMonitor), which are used to configure the callback type and whether to enable the wildcard capability.
+Defines the optional parameters for [addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor), which are used to configure the callback type and whether to enable the wildcard capability.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MonitorOptions--><!--Device-unnamed-export interface MonitorOptions-End-->
 
@@ -54,10 +50,6 @@ Whether to enable the wildcard capability for this **addMonitor**. **true** to e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -79,10 +71,6 @@ Whether the current callback is a synchronous callback. **true**: The current ca
 **Default:** false
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

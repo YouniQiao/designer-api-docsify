@@ -16,10 +16,6 @@ Obtains data of the uncalibrated gyroscope sensor once.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GYROSCOPE
 
 <!--Device-sensor-function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void-End-->

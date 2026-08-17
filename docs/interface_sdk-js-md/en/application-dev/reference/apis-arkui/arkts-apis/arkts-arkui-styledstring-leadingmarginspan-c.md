@@ -4,9 +4,7 @@ Defines LeadingMarginSpan.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 <!--Device-unnamed-export declare abstract class LeadingMarginSpan--><!--Device-unnamed-export declare abstract class LeadingMarginSpan-End-->
 
@@ -22,9 +20,7 @@ Get the amount by which to adjust the leading margin.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,9 +44,7 @@ Draw the leading margin span.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

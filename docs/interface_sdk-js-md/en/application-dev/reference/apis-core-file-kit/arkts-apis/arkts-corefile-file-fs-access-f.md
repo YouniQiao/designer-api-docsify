@@ -30,10 +30,6 @@ Checks whether the file or directory exists or has the operation permission. Thi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function access(path: string, mode?: AccessModeType): Promise<boolean>--><!--Device-unnamed-declare function access(path: string, mode?: AccessModeType): Promise<boolean>-End-->
@@ -81,10 +77,6 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<boolean>): void--><!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<boolean>): void-End-->
@@ -125,10 +117,6 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result. If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>--><!--Device-unnamed-declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>-End-->
 

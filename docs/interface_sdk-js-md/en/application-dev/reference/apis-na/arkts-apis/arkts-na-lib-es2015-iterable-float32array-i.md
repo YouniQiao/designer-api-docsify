@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Float32Array--><!--Device-unnamed-interface Float32Array-End-->
 
 ## [Symbol.iterator]
@@ -15,10 +11,6 @@
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float32Array-[Symbol.iterator](): IterableIterator<number>--><!--Device-Float32Array-[Symbol.iterator](): IterableIterator<number>-End-->
 
@@ -38,10 +30,6 @@ Returns an array of key, value pairs for every entry in the array
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float32Array-entries(): IterableIterator<[number, number]>--><!--Device-Float32Array-entries(): IterableIterator<[number, number]>-End-->
 
 **Return value:**
@@ -60,10 +48,6 @@ Returns an list of keys in the array
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float32Array-keys(): IterableIterator<number>--><!--Device-Float32Array-keys(): IterableIterator<number>-End-->
 
 **Return value:**
@@ -81,10 +65,6 @@ values(): IterableIterator<number>
 Returns an list of values in the array
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float32Array-values(): IterableIterator<number>--><!--Device-Float32Array-values(): IterableIterator<number>-End-->
 

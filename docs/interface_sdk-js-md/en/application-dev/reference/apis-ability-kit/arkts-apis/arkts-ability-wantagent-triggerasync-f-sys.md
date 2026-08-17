@@ -16,10 +16,6 @@ Asynchronously triggers a predefined operation encration encapsulated in a Wanta
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-wantAgent-function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Context): Promise<CompleteData>--><!--Device-wantAgent-function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Context): Promise<CompleteData>-End-->
@@ -52,7 +48,7 @@ Asynchronously triggers a predefined operation encration encapsulated in a Wanta
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [16000153](../errorcode-ability.md#16000153-wantagent-object-is-canceled) | The WantAgent has been canceled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';

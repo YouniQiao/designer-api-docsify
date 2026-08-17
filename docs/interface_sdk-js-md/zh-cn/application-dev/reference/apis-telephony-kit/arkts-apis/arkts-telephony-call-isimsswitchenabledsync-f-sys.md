@@ -10,10 +10,6 @@ function isImsSwitchEnabledSync(slotId: int): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-call-function isImsSwitchEnabledSync(slotId: int): boolean--><!--Device-call-function isImsSwitchEnabledSync(slotId: int): boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -43,7 +39,7 @@ function isImsSwitchEnabledSync(slotId: int): boolean
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let slotId: number = 0;

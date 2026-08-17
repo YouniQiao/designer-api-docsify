@@ -16,10 +16,6 @@ Preload callUI.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function preloadCallUI(): Promise<boolean>--><!--Device-call-function preloadCallUI(): Promise<boolean>-End-->

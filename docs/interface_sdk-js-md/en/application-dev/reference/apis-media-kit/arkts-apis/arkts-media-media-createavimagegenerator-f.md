@@ -16,10 +16,6 @@ Creates an AVImageGenerator instance. This API uses a promise to return the resu
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator>--><!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
@@ -36,7 +32,7 @@ Creates an AVImageGenerator instance. This API uses a promise to return the resu
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,10 +61,6 @@ Creates an **AVImageGenerator** instance. This API uses a promise to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator | undefined>--><!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
@@ -96,10 +88,6 @@ Creates an AVImageGenerator instance. This API uses an asynchronous callback to 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void--><!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
@@ -116,7 +104,7 @@ Creates an AVImageGenerator instance. This API uses an asynchronous callback to 
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -142,10 +130,6 @@ function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator | undef
 Creates an **AVImageGenerator** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator | undefined>): void--><!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator | undefined>): void-End-->
 

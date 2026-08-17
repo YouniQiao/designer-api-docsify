@@ -4,11 +4,9 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [SlotType](arkts-notification-notificationmanager-slottype-e.md#SlotType)
+**替代接口：** [SlotType](arkts-notification-notificationmanager-slottype-e.md#slottype)
 
 <!--Device-notification-export enum SlotType--><!--Device-notification-export enum SlotType-End-->
 
@@ -24,11 +22,9 @@ UNKNOWN_TYPE = 0
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [UNKNOWN_TYPE](arkts-notification-notificationmanager-slottype-e.md#UNKNOWN_TYPE)
+**替代接口：** [UNKNOWN_TYPE](arkts-notification-notificationmanager-slottype-e.md#unknowntype)
 
 <!--Device-SlotType-UNKNOWN_TYPE = 0--><!--Device-SlotType-UNKNOWN_TYPE = 0-End-->
 
@@ -44,11 +40,9 @@ SOCIAL_COMMUNICATION = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#SOCIAL_COMMUNICATION)
+**替代接口：** [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#socialcommunication)
 
 <!--Device-SlotType-SOCIAL_COMMUNICATION = 1--><!--Device-SlotType-SOCIAL_COMMUNICATION = 1-End-->
 
@@ -64,11 +58,9 @@ SERVICE_INFORMATION = 2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [SERVICE_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#SERVICE_INFORMATION)
+**替代接口：** [SERVICE_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#serviceinformation)
 
 <!--Device-SlotType-SERVICE_INFORMATION = 2--><!--Device-SlotType-SERVICE_INFORMATION = 2-End-->
 
@@ -84,11 +76,9 @@ CONTENT_INFORMATION = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [CONTENT_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#CONTENT_INFORMATION)
+**替代接口：** [CONTENT_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#contentinformation)
 
 <!--Device-SlotType-CONTENT_INFORMATION = 3--><!--Device-SlotType-CONTENT_INFORMATION = 3-End-->
 
@@ -104,11 +94,9 @@ OTHER_TYPES = 0xFFFF
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [OTHER_TYPES](arkts-notification-notificationmanager-slottype-e.md#OTHER_TYPES)
+**替代接口：** [OTHER_TYPES](arkts-notification-notificationmanager-slottype-e.md#othertypes)
 
 <!--Device-SlotType-OTHER_TYPES = 0xFFFF--><!--Device-SlotType-OTHER_TYPES = 0xFFFF-End-->
 

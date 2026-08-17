@@ -4,10 +4,6 @@ The play list information definition.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface AVQueueInfo--><!--Device-avSession-interface AVQueueInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -32,10 +28,6 @@ The id of play list
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVQueueInfo-avQueueId: string--><!--Device-AVQueueInfo-avQueueId: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -53,10 +45,6 @@ The artwork of play list, can be a PixelMap or a URI formatted string,
 **Type:** image.PixelMap \| string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVQueueInfo-avQueueImage: image.PixelMap | string--><!--Device-AVQueueInfo-avQueueImage: image.PixelMap | string-End-->
 
@@ -76,10 +64,6 @@ The name of play list
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVQueueInfo-avQueueName: string--><!--Device-AVQueueInfo-avQueueName: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -98,10 +82,6 @@ The bundle name of application which current play list belongs to.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVQueueInfo-bundleName: string--><!--Device-AVQueueInfo-bundleName: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -119,10 +99,6 @@ The time when the user last played the playlist. The time format can be system, 
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVQueueInfo-lastPlayedTime?: long--><!--Device-AVQueueInfo-lastPlayedTime?: long-End-->
 

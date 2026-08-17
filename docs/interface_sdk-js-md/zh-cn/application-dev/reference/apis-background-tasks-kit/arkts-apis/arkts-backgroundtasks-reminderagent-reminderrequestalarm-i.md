@@ -2,15 +2,13 @@
 
 闹钟实例对象，用于设置提醒的时间。
 
-**继承/实现关系：** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#ReminderRequest)
+**继承/实现关系：** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#reminderrequest)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#ReminderRequestAlarm)
+**替代接口：** [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#reminderrequestalarm)
 
 <!--Device-reminderAgent-interface ReminderRequestAlarm--><!--Device-reminderAgent-interface ReminderRequestAlarm-End-->
 
@@ -27,8 +25,6 @@ daysOfWeek?: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -50,8 +46,6 @@ hour: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** hour
@@ -71,8 +65,6 @@ minute: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 

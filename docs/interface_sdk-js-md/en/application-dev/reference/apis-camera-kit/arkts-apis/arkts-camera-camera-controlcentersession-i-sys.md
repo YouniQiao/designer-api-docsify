@@ -2,13 +2,9 @@
 
 Control center session object.
 
-**Inheritance/Implementation:** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty-(System-API)), [Aperture](arkts-camera-camera-aperture-i-sys.md#Aperture-(System-API)), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect-(System-API))
+**Inheritance/Implementation:** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md#beauty-system-api), [Aperture](arkts-camera-camera-aperture-i-sys.md#aperture-system-api), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#coloreffect-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface ControlCenterSession--><!--Device-camera-interface ControlCenterSession-End-->
 
@@ -31,10 +27,6 @@ enableAutoFraming(enabled: boolean): void
 Enable auto-framing effect.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-ControlCenterSession-enableAutoFraming(enabled: boolean): void--><!--Device-ControlCenterSession-enableAutoFraming(enabled: boolean): void-End-->
 
@@ -66,10 +58,6 @@ Gets the status of auto-framing effect.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-ControlCenterSession-getAutoFramingStatus(): boolean--><!--Device-ControlCenterSession-getAutoFramingStatus(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -97,10 +85,6 @@ getControlCenterHeight(): double
 Gets the control center height.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,10 +115,6 @@ getCurrentDevice(): CameraDevice
 Gets the current camera device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,10 +147,6 @@ Checks whether auto-framing is supported.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-ControlCenterSession-isAutoFramingSupported(): boolean--><!--Device-ControlCenterSession-isAutoFramingSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -199,10 +175,6 @@ Release control center session object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ControlCenterSession-release(): Promise<void>--><!--Device-ControlCenterSession-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -230,10 +202,6 @@ usedAsPosition(position: CameraPosition): void
 Sets the camera to be used as a camera at the specified position.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

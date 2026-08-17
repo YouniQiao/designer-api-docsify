@@ -4,10 +4,6 @@ Provides methods for managing device standby, including the methods for querying
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace deviceStandby--><!--Device-unnamed-declare namespace deviceStandby-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
@@ -25,10 +21,10 @@ import { deviceStandby } from 'deviceStandby';
 
 | Name | Description |
 | --- | --- |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getExemptedApps) | Returns the information about the specified exempted application. |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getExemptedApps-(System-API)) | Returns the information about the specified exempted application. |
-| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md#releaseExemptionResource) | Releases exemption resources. |
-| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md#requestExemptionResource) | Requests exemption resources. |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps) | Returns the information about the specified exempted application. |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps-system-api) | Returns the information about the specified exempted application. |
+| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md#releaseexemptionresource) | Releases exemption resources. |
+| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md#requestexemptionresource) | Requests exemption resources. |
 <!--DelEnd-->
 
 <!--Del-->

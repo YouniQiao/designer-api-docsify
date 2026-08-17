@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-camera-interface CameraDevice--><!--Device-camera-interface CameraDevice-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ Car设备摄像头位置。
 **类型：** [AutomotiveCameraPosition](arkts-camera-camera-automotivecameraposition-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,10 +40,6 @@ readonly cameraId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CameraDevice-readonly cameraId: string--><!--Device-CameraDevice-readonly cameraId: string-End-->
@@ -69,10 +57,6 @@ readonly cameraOrientation: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -92,10 +76,6 @@ readonly cameraPosition: CameraPosition
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CameraDevice-readonly cameraPosition: CameraPosition--><!--Device-CameraDevice-readonly cameraPosition: CameraPosition-End-->
@@ -113,10 +93,6 @@ readonly cameraType: CameraType
 **类型：** [CameraType](arkts-camera-camera-cameratype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -136,10 +112,6 @@ readonly connectionType: ConnectionType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CameraDevice-readonly connectionType: ConnectionType--><!--Device-CameraDevice-readonly connectionType: ConnectionType-End-->
@@ -157,10 +129,6 @@ readonly constituentCameraDevices?: Array<CameraDevice>
 **类型：** Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -182,10 +150,6 @@ readonly isLogicalCamera?: boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -205,10 +169,6 @@ readonly lensDistortion?: Array<double>
 **类型：** Array&lt;double&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -230,10 +190,6 @@ readonly lensFocalLength?: double
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -253,10 +209,6 @@ readonly lensIntrinsicCalibration?: Array<double>
 **类型：** Array&lt;double&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -278,10 +230,6 @@ readonly minimumFocusDistance?: double
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -301,10 +249,6 @@ readonly sensorColorFilterArrangement?: SensorColorFilterArrangement
 **类型：** [SensorColorFilterArrangement](arkts-camera-camera-sensorcolorfilterarrangement-e.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -326,10 +270,6 @@ readonly sensorPhysicalSize?: Array<double>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -349,10 +289,6 @@ readonly sensorPixelArraySize?: Array<int>
 **类型：** Array&lt;int&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

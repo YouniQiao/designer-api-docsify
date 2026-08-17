@@ -4,9 +4,7 @@ TabContent info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-uiObserver-export interface TabContentInfo--><!--Device-uiObserver-export interface TabContentInfo-End-->
 
@@ -24,9 +22,7 @@ Tabs id.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,9 +42,7 @@ The index of TabContent in Tabs. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,9 +62,7 @@ The last focus index of TabContent in Tabs. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,13 +78,11 @@ state: TabContentState
 
 The state of TabContent.
 
-**Type:** [TabContentState](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-tabcontentstate-e.md)
+**Type:** [TabContentState](arkts-na-uiobserver-tabcontentstate-e.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,9 +102,7 @@ TabContent id.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,9 +122,7 @@ TabContent uniqueId. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,9 +142,7 @@ Tabs uniqueId. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

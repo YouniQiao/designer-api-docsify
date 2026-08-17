@@ -4,10 +4,6 @@ Set configures of a watermark to AVRecorder. The position starts at top left cor
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface WatermarkConfig--><!--Device-media-interface WatermarkConfig-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -32,10 +28,6 @@ Offset of the watermark to the left line of pixel.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WatermarkConfig-left: int--><!--Device-WatermarkConfig-left: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -53,10 +45,6 @@ Offset of the watermark to the top line of pixel.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WatermarkConfig-top: int--><!--Device-WatermarkConfig-top: int-End-->
 

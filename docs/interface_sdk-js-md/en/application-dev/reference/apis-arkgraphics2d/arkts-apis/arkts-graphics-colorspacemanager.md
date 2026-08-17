@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace colorSpaceManager--><!--Device-unnamed-declare namespace colorSpaceManager-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core

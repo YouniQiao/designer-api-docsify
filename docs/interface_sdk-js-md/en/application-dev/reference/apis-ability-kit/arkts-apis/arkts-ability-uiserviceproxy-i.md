@@ -4,10 +4,6 @@ UIServiceProxy functions as a proxy to send data from the UIServiceExtensionAbil
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default interface UIServiceProxy--><!--Device-unnamed-export default interface UIServiceProxy-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -21,10 +17,6 @@ sendData(data: Record<string, Object>): void
 Sends data to the UIServiceExtensionAbility server. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,7 +39,7 @@ Sends data to the UIServiceExtensionAbility server. > **NOTE：**> > For details
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common, Want } from '@kit.AbilityKit';
@@ -143,10 +135,6 @@ sendData(data: Record<string, RecordData>): void
 Sends data to the UIServiceExtensionAbility server. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,11 +10,9 @@ Obtains the bundle name of a WantAgent.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getBundleName)
+**Substitutes:** [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -29,7 +27,7 @@ Obtains the bundle name of a WantAgent.
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | whose bundle name to obtain. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | A callback method to obtain the package name of the WantAgent instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -94,11 +92,9 @@ Obtains the bundle name of a WantAgent.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getBundleName)
+**Substitutes:** [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,7 +114,7 @@ Obtains the bundle name of a WantAgent.
 | --- | --- |
 | Promise&lt;string&gt; | Returns the bundle name of the { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

@@ -4,10 +4,6 @@ Enumerates the baud rates.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-serialManager-enum BaudRates--><!--Device-serialManager-enum BaudRates-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -21,10 +17,6 @@ BAUDRATE_50 = 50
 The baud rate is 50 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_50 = 50--><!--Device-BaudRates-BAUDRATE_50 = 50-End-->
 
@@ -40,10 +32,6 @@ The baud rate is 75 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_75 = 75--><!--Device-BaudRates-BAUDRATE_75 = 75-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -57,10 +45,6 @@ BAUDRATE_110 = 110
 The baud rate is 110 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_110 = 110--><!--Device-BaudRates-BAUDRATE_110 = 110-End-->
 
@@ -76,10 +60,6 @@ The baud rate is 134 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_134 = 134--><!--Device-BaudRates-BAUDRATE_134 = 134-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -93,10 +73,6 @@ BAUDRATE_150 = 150
 The baud rate is 150 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_150 = 150--><!--Device-BaudRates-BAUDRATE_150 = 150-End-->
 
@@ -112,10 +88,6 @@ The baud rate is 200 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_200 = 200--><!--Device-BaudRates-BAUDRATE_200 = 200-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -129,10 +101,6 @@ BAUDRATE_300 = 300
 The baud rate is 300 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_300 = 300--><!--Device-BaudRates-BAUDRATE_300 = 300-End-->
 
@@ -148,10 +116,6 @@ The baud rate is 600 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_600 = 600--><!--Device-BaudRates-BAUDRATE_600 = 600-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -165,10 +129,6 @@ BAUDRATE_1200 = 1200
 The baud rate is 1200 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_1200 = 1200--><!--Device-BaudRates-BAUDRATE_1200 = 1200-End-->
 
@@ -184,10 +144,6 @@ The baud rate is 1800 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_1800 = 1800--><!--Device-BaudRates-BAUDRATE_1800 = 1800-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -201,10 +157,6 @@ BAUDRATE_2400 = 2400
 The baud rate is 2400 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_2400 = 2400--><!--Device-BaudRates-BAUDRATE_2400 = 2400-End-->
 
@@ -220,10 +172,6 @@ The baud rate is 4800 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_4800 = 4800--><!--Device-BaudRates-BAUDRATE_4800 = 4800-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -237,10 +185,6 @@ BAUDRATE_9600 = 9600
 The baud rate is 9600 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_9600 = 9600--><!--Device-BaudRates-BAUDRATE_9600 = 9600-End-->
 
@@ -256,10 +200,6 @@ The baud rate is 19200 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_19200 = 19200--><!--Device-BaudRates-BAUDRATE_19200 = 19200-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -273,10 +213,6 @@ BAUDRATE_38400 = 38400
 The baud rate is 38400 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_38400 = 38400--><!--Device-BaudRates-BAUDRATE_38400 = 38400-End-->
 
@@ -292,10 +228,6 @@ The baud rate is 57600 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_57600 = 57600--><!--Device-BaudRates-BAUDRATE_57600 = 57600-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -309,10 +241,6 @@ BAUDRATE_115200 = 115200
 The baud rate is 115200 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_115200 = 115200--><!--Device-BaudRates-BAUDRATE_115200 = 115200-End-->
 
@@ -328,10 +256,6 @@ The baud rate is 230400 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_230400 = 230400--><!--Device-BaudRates-BAUDRATE_230400 = 230400-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -345,10 +269,6 @@ BAUDRATE_460800 = 460800
 The baud rate is 460800 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_460800 = 460800--><!--Device-BaudRates-BAUDRATE_460800 = 460800-End-->
 
@@ -364,10 +284,6 @@ The baud rate is 500000 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_500000 = 500000--><!--Device-BaudRates-BAUDRATE_500000 = 500000-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -381,10 +297,6 @@ BAUDRATE_576000 = 576000
 The baud rate is 576000 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_576000 = 576000--><!--Device-BaudRates-BAUDRATE_576000 = 576000-End-->
 
@@ -400,10 +312,6 @@ The baud rate is 921600 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_921600 = 921600--><!--Device-BaudRates-BAUDRATE_921600 = 921600-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -417,10 +325,6 @@ BAUDRATE_1000000 = 1000000
 The baud rate is 1000000 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_1000000 = 1000000--><!--Device-BaudRates-BAUDRATE_1000000 = 1000000-End-->
 
@@ -436,10 +340,6 @@ The baud rate is 1152000 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_1152000 = 1152000--><!--Device-BaudRates-BAUDRATE_1152000 = 1152000-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -453,10 +353,6 @@ BAUDRATE_1500000 = 1500000
 The baud rate is 1500000 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_1500000 = 1500000--><!--Device-BaudRates-BAUDRATE_1500000 = 1500000-End-->
 
@@ -472,10 +368,6 @@ The baud rate is 2000000 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_2000000 = 2000000--><!--Device-BaudRates-BAUDRATE_2000000 = 2000000-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -489,10 +381,6 @@ BAUDRATE_2500000 = 2500000
 The baud rate is 2500000 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_2500000 = 2500000--><!--Device-BaudRates-BAUDRATE_2500000 = 2500000-End-->
 
@@ -508,10 +396,6 @@ The baud rate is 3000000 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_3000000 = 3000000--><!--Device-BaudRates-BAUDRATE_3000000 = 3000000-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -526,10 +410,6 @@ The baud rate is 3500000 bit/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BaudRates-BAUDRATE_3500000 = 3500000--><!--Device-BaudRates-BAUDRATE_3500000 = 3500000-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -543,10 +423,6 @@ BAUDRATE_4000000 = 4000000
 The baud rate is 4000000 bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BaudRates-BAUDRATE_4000000 = 4000000--><!--Device-BaudRates-BAUDRATE_4000000 = 4000000-End-->
 

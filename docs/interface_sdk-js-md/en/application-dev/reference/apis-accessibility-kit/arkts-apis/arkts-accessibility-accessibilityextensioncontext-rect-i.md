@@ -4,10 +4,6 @@ Defines a rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Rect--><!--Device-unnamed-export interface Rect-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,10 +19,6 @@ Height of the rectangle, in pixels.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Rect-height: int--><!--Device-Rect-height: int-End-->
 
@@ -44,10 +36,6 @@ Left boundary of the rectangle, in pixels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Rect-left: int--><!--Device-Rect-left: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -64,10 +52,6 @@ Top boundary of the rectangle, in pixels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Rect-top: int--><!--Device-Rect-top: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -83,10 +67,6 @@ Width of the rectangle, in pixels.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Rect-width: int--><!--Device-Rect-width: int-End-->
 

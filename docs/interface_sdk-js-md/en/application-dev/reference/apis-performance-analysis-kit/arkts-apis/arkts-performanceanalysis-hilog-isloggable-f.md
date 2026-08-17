@@ -16,10 +16,6 @@ Checks whether logs are printable based on the specified service domain, log tag
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-hilog-function isLoggable(domain: int, tag: string, level: LogLevel): boolean--><!--Device-hilog-function isLoggable(domain: int, tag: string, level: LogLevel): boolean-End-->
@@ -40,7 +36,7 @@ Checks whether logs are printable based on the specified service domain, log tag
 | --- | --- |
 | boolean | Returns **true** logs are printable based on the specified service domain, log tag, and log level; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 hilog.isLoggable(0x0001, "testTag", hilog.LogLevel.INFO);

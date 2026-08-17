@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface SharedArrayBuffer--><!--Device-unnamed-interface SharedArrayBuffer-End-->
 
 ## slice
@@ -17,10 +13,6 @@ slice(begin: number, end?: number): SharedArrayBuffer
 Returns a section of an SharedArrayBuffer.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-SharedArrayBuffer-slice(begin: number, end?: number): SharedArrayBuffer--><!--Device-SharedArrayBuffer-slice(begin: number, end?: number): SharedArrayBuffer-End-->
 
@@ -47,10 +39,6 @@ readonly [Symbol.species]: SharedArrayBuffer
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-SharedArrayBuffer-readonly [Symbol.species]: SharedArrayBuffer--><!--Device-SharedArrayBuffer-readonly [Symbol.species]: SharedArrayBuffer-End-->
 
 ## [Symbol.toStringTag]
@@ -62,10 +50,6 @@ readonly [Symbol.toStringTag]: "SharedArrayBuffer"
 **Type:** "SharedArrayBuffer"
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-SharedArrayBuffer-readonly [Symbol.toStringTag]: "SharedArrayBuffer"--><!--Device-SharedArrayBuffer-readonly [Symbol.toStringTag]: "SharedArrayBuffer"-End-->
 
@@ -80,10 +64,6 @@ Read-only. The length of the ArrayBuffer (in bytes).
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-SharedArrayBuffer-readonly byteLength: number--><!--Device-SharedArrayBuffer-readonly byteLength: number-End-->
 

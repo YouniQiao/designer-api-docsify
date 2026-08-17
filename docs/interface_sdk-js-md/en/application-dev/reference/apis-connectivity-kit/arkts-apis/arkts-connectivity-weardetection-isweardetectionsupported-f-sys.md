@@ -16,10 +16,6 @@ Checks whether the device supports wear detection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 <!--Device-wearDetection-function isWearDetectionSupported(deviceId: string, callback: AsyncCallback<boolean>): void--><!--Device-wearDetection-function isWearDetectionSupported(deviceId: string, callback: AsyncCallback<boolean>): void-End-->
@@ -47,7 +43,7 @@ Checks whether the device supports wear detection.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -69,10 +65,6 @@ function isWearDetectionSupported(deviceId: string): Promise<boolean>
 Checks whether the device supports wear detection.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -106,7 +98,7 @@ Checks whether the device supports wear detection.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

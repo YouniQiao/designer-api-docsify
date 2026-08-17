@@ -10,10 +10,6 @@ function clearUpApplicationData(bundleName: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 
 <!--Device-appManager-function clearUpApplicationData(bundleName: string): Promise<void>--><!--Device-appManager-function clearUpApplicationData(bundleName: string): Promise<void>-End-->
@@ -43,7 +39,7 @@ function clearUpApplicationData(bundleName: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -76,10 +72,6 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 
 <!--Device-appManager-function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-appManager-function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void>): void-End-->
@@ -93,7 +85,7 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -104,7 +96,7 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

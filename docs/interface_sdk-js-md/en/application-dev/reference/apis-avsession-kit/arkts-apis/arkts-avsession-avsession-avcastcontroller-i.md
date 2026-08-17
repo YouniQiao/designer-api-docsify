@@ -4,10 +4,6 @@ AVCastController definition used to implement a remote control when a cast is co
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface AVCastController--><!--Device-avSession-interface AVCastController-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -27,10 +23,6 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 Get the playback status of the current player
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void--><!--Device-AVCastController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void-End-->
 
@@ -57,10 +49,6 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 Get the playback status of the current player
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,10 +78,6 @@ Get the current playing item
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-getCurrentItem(callback: AsyncCallback<AVQueueItem>): void--><!--Device-AVCastController-getCurrentItem(callback: AsyncCallback<AVQueueItem>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -119,10 +103,6 @@ getCurrentItem(): Promise<AVQueueItem>
 Get the current playing item
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -151,10 +131,6 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 Get recommended resolution of remote player based on each decoder.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -190,10 +166,6 @@ Get supported decoders of remote player.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastController-getSupportedDecoders(): Promise<Array<DecoderType>>--><!--Device-AVCastController-getSupportedDecoders(): Promise<Array<DecoderType>>-End-->
@@ -221,10 +193,6 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 Get supported hdr capabilities of remote player.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -254,10 +222,6 @@ Get supported speed of remote player.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastController-getSupportedPlaySpeeds(): Promise<Array<double>>--><!--Device-AVCastController-getSupportedPlaySpeeds(): Promise<Array<double>>-End-->
@@ -286,10 +250,6 @@ Get commands supported by the current cast controller
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -315,10 +275,6 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 Get commands supported by the current cast controller
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-getValidCommands(): Promise<Array<AVCastControlCommandType>>--><!--Device-AVCastController-getValidCommands(): Promise<Array<AVCastControlCommandType>>-End-->
 
@@ -346,10 +302,6 @@ Unregister listeners for cast control audio renderer error events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offCastControlAudioRendererError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlAudioRendererError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -369,10 +321,6 @@ offCastControlDecodingError(callback?: ErrorCallback): void
 Unregister listeners for cast control decoding error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-offCastControlDecodingError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlDecodingError(callback?: ErrorCallback): void-End-->
 
@@ -394,10 +342,6 @@ Unregister listeners for cast control drm error events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offCastControlDrmError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlDrmError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -417,10 +361,6 @@ offCastControlGenericError(callback?: ErrorCallback): void
 Unregister listeners for cast control generic error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-offCastControlGenericError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlGenericError(callback?: ErrorCallback): void-End-->
 
@@ -442,10 +382,6 @@ Unregister listeners for cast control input/output error events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offCastControlIoError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlIoError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -466,10 +402,6 @@ Unregister listeners for cast control parsing error events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offCastControlParsingError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlParsingError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -489,10 +421,6 @@ offCustomDataChange(callback?: Callback<Record<string, Object>>): void
 Unregister listener for custom data sent from remote device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVCastController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
 
@@ -520,10 +448,6 @@ Unregister endOfStream state callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offEndOfStream(callback?: NoParamCallback): void--><!--Device-AVCastController-offEndOfStream(callback?: NoParamCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -549,10 +473,6 @@ offError(): void
 Unregister listens for playback error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-offError(): void--><!--Device-AVCastController-offError(): void-End-->
 
@@ -580,10 +500,6 @@ Unregister listener for drm key request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offKeyRequest(callback?: KeyRequestCallback): void--><!--Device-AVCastController-offKeyRequest(callback?: KeyRequestCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -610,10 +526,6 @@ Unregister listener for current media item playback events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offMediaItemChange(): void--><!--Device-AVCastController-offMediaItemChange(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -633,10 +545,6 @@ offPlayNext(): void
 Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-offPlayNext(): void--><!--Device-AVCastController-offPlayNext(): void-End-->
 
@@ -658,10 +566,6 @@ Unregister playback command callback sent by remote side or media center. When c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offPlayPrevious(): void--><!--Device-AVCastController-offPlayPrevious(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -682,10 +586,6 @@ Unregister playback state changed callback
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVCastController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -694,7 +594,7 @@ Unregister playback state changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
 
 **Error codes:**
 
@@ -711,10 +611,6 @@ offRequestPlay(callback?: Callback<AVQueueItem>): void
 Unregister requested playback command callback sent by remote side or media center.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-offRequestPlay(callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-offRequestPlay(callback?: Callback<AVQueueItem>): void-End-->
 
@@ -742,10 +638,6 @@ Unregister listens for playback events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offSeekDone(): void--><!--Device-AVCastController-offSeekDone(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -765,10 +657,6 @@ offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): voi
 Unregister the valid commands of the casted session changed callback
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void-End-->
 
@@ -797,10 +685,6 @@ Unregister listener for video size change event, used at remote side.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-offVideoSizeChange(): void--><!--Device-AVCastController-offVideoSizeChange(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -820,10 +704,6 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 Unregister listeners for cast control audio renderer error events.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -854,10 +734,6 @@ Unregister listeners for cast control decoding error events.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void-End-->
@@ -886,10 +762,6 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 Unregister listeners for cast control drm error events.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -920,10 +792,6 @@ Unregister listeners for cast control generic error events.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void-End-->
@@ -952,10 +820,6 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 Unregister listeners for cast control input/output error events.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -986,10 +850,6 @@ Unregister listeners for cast control parsing error events.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void-End-->
@@ -1018,10 +878,6 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 Unregister listener for custom data sent from remote device.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1052,10 +908,6 @@ Unregister endOfStream state callback.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1083,10 +935,6 @@ off(type: 'error'): void
 Unregister listens for playback error events.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1123,10 +971,6 @@ Unregister listener for drm key request.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastController-off(type: 'keyRequest', callback?: KeyRequestCallback): void--><!--Device-AVCastController-off(type: 'keyRequest', callback?: KeyRequestCallback): void-End-->
@@ -1157,10 +1001,6 @@ Unregister listener for current media item playback events.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastController-off(type: 'mediaItemChange'): void--><!--Device-AVCastController-off(type: 'mediaItemChange'): void-End-->
@@ -1189,10 +1029,6 @@ off(type: 'playNext'): void
 Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1223,10 +1059,6 @@ Unregister playback command callback sent by remote side or media center. When c
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastController-off(type: 'playPrevious'): void--><!--Device-AVCastController-off(type: 'playPrevious'): void-End-->
@@ -1256,10 +1088,6 @@ Unregister playback state changed callback
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void--><!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void-End-->
@@ -1271,7 +1099,7 @@ Unregister playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
 
 **Error codes:**
 
@@ -1289,10 +1117,6 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 Unregister requested playback command callback sent by remote side or media center.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void-End-->
 
@@ -1321,10 +1145,6 @@ off(type: 'seekDone'): void
 Unregister listens for playback events.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1355,10 +1175,6 @@ Unregister the valid commands of the casted session changed callback
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1388,10 +1204,6 @@ Unregister listener for video size change event, used at remote side.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-off(type: 'videoSizeChange'): void--><!--Device-AVCastController-off(type: 'videoSizeChange'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1409,7 +1221,7 @@ Unregister listener for video size change event, used at remote side.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 aVCastController.off('videoSizeChange');
@@ -1424,10 +1236,6 @@ onCastControlAudioRendererError(callback: ErrorCallback): void
 Register listeners for cast control audio renderer error error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-onCastControlAudioRendererError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlAudioRendererError(callback: ErrorCallback): void-End-->
 
@@ -1456,10 +1264,6 @@ onCastControlDecodingError(callback: ErrorCallback): void
 Register listeners for cast control decoding error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-onCastControlDecodingError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlDecodingError(callback: ErrorCallback): void-End-->
 
@@ -1491,10 +1295,6 @@ onCastControlDrmError(callback: ErrorCallback): void
 Register listeners for cast control drm error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-onCastControlDrmError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlDrmError(callback: ErrorCallback): void-End-->
 
@@ -1530,10 +1330,6 @@ onCastControlGenericError(callback: ErrorCallback): void
 Register listeners for cast control generic error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-onCastControlGenericError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlGenericError(callback: ErrorCallback): void-End-->
 
@@ -1573,10 +1369,6 @@ onCastControlIoError(callback: ErrorCallback): void
 Register listeners for cast control input/output error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-onCastControlIoError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlIoError(callback: ErrorCallback): void-End-->
 
@@ -1620,10 +1412,6 @@ Register listeners for cast control parsing error events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-onCastControlParsingError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlParsingError(callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1654,10 +1442,6 @@ Register listener for custom data sent from remote device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1684,10 +1468,6 @@ Register endOfStream state callback. Application needs update the new media reso
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-onEndOfStream(callback: NoParamCallback): void--><!--Device-AVCastController-onEndOfStream(callback: NoParamCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1713,10 +1493,6 @@ onError(callback: ErrorCallback): void
 Register listeners for playback error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-onError(callback: ErrorCallback): void--><!--Device-AVCastController-onError(callback: ErrorCallback): void-End-->
 
@@ -1750,10 +1526,6 @@ Register listener for drm key request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-onKeyRequest(callback: KeyRequestCallback): void--><!--Device-AVCastController-onKeyRequest(callback: KeyRequestCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1779,10 +1551,6 @@ onMediaItemChange(callback: Callback<AVQueueItem>): void
 Register listener for current media item playback events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-onMediaItemChange(callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-onMediaItemChange(callback: Callback<AVQueueItem>): void-End-->
 
@@ -1810,10 +1578,6 @@ Register playback command callback sent by remote side or media center. Applicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-onPlayNext(callback: NoParamCallback): void--><!--Device-AVCastController-onPlayNext(callback: NoParamCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1839,10 +1603,6 @@ onPlayPrevious(callback: NoParamCallback): void
 Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-onPlayPrevious(callback: NoParamCallback): void--><!--Device-AVCastController-onPlayPrevious(callback: NoParamCallback): void-End-->
 
@@ -1870,10 +1630,6 @@ Register playback state changed callback
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVCastController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1882,8 +1638,8 @@ Register playback state changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+| filter | Array&lt;string&gt; | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) that you cared about |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
 
 **Error codes:**
 
@@ -1901,10 +1657,6 @@ Registers a callback to be invoked whenever the playback state changes
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVCastController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1913,7 +1665,7 @@ Registers a callback to be invoked whenever the playback state changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
 
 **Error codes:**
 
@@ -1930,10 +1682,6 @@ onRequestPlay(callback: Callback<AVQueueItem>): void
 Register requested playback command callback sent by remote side or media center. The AVQueueItem may include the requested assetId, starting position and other configurations.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-onRequestPlay(callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-onRequestPlay(callback: Callback<AVQueueItem>): void-End-->
 
@@ -1961,10 +1709,6 @@ Register listens for playback events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-onSeekDone(callback: Callback<int>): void--><!--Device-AVCastController-onSeekDone(callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1990,10 +1734,6 @@ onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void
 Register the valid commands of the casted session changed callback
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void-End-->
 
@@ -2022,10 +1762,6 @@ Register listener for video size change event, used at remote side.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-onVideoSizeChange(callback: VideoSizeEvent): void--><!--Device-AVCastController-onVideoSizeChange(callback: VideoSizeEvent): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -2051,10 +1787,6 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 Register listeners for cast control audio renderer error error events.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -2087,10 +1819,6 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 Register listeners for cast control decoding error events.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -2126,10 +1854,6 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 Register listeners for cast control drm error events.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -2169,10 +1893,6 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 Register listeners for cast control generic error events.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -2216,10 +1936,6 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 Register listeners for cast control input/output error events.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -2267,10 +1983,6 @@ Register listeners for cast control parsing error events.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void-End-->
@@ -2305,10 +2017,6 @@ Register listener for custom data sent from remote device.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
@@ -2338,10 +2046,6 @@ Register endOfStream state callback. Application needs update the new media reso
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -2369,10 +2073,6 @@ on(type: 'error', callback: ErrorCallback): void
 Register listeners for playback error events.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2410,10 +2110,6 @@ Register listener for drm key request.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void--><!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void-End-->
@@ -2443,10 +2139,6 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 Register listener for current media item playback events.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2478,10 +2170,6 @@ Register playback command callback sent by remote side or media center. Applicat
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void-End-->
@@ -2511,10 +2199,6 @@ on(type: 'playPrevious', callback: Callback<void>): void
 Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2546,10 +2230,6 @@ Register playback state changed callback
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void--><!--Device-AVCastController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void-End-->
@@ -2561,8 +2241,8 @@ Register playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) that you cared about |
-| callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) that you cared about |
+| callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
 
 **Error codes:**
 
@@ -2580,10 +2260,6 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 Register requested playback command callback sent by remote side or media center. The AVQueueItem may include the requested assetId, starting position and other configurations.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-on(type: 'requestPlay', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'requestPlay', callback: Callback<AVQueueItem>): void-End-->
 
@@ -2612,10 +2288,6 @@ on(type: 'seekDone', callback: Callback<int>): void
 Register listens for playback events.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2647,10 +2319,6 @@ Register the valid commands of the casted session changed callback
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -2680,10 +2348,6 @@ Register listener for video size change event, used at remote side.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void--><!--Device-AVCastController-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -2702,7 +2366,7 @@ Register listener for video size change event, used at remote side.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 aVCastController.on('videoSizeChange', (width: number, height: number) => {
@@ -2720,10 +2384,6 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 Load the current item and mediaUri can be null, this is needed for sink media information displaying
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-prepare(item: AVQueueItem, callback: AsyncCallback<void>): void--><!--Device-AVCastController-prepare(item: AVQueueItem, callback: AsyncCallback<void>): void-End-->
 
@@ -2753,10 +2413,6 @@ prepare(item: AVQueueItem): Promise<void>
 Load the current item and mediaUri can be null, this is needed for sink media information displaying
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2794,10 +2450,6 @@ Process the response corresponding to the media key request obtained by the appl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastController-processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>--><!--Device-AVCastController-processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>-End-->
@@ -2834,10 +2486,6 @@ Destroy the controller
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-release(callback: AsyncCallback<void>): void--><!--Device-AVCastController-release(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -2863,10 +2511,6 @@ release(): Promise<void>
 Destroy the controller
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2895,10 +2539,6 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 Send control commands to remote player
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void--><!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void-End-->
 
@@ -2929,10 +2569,6 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 Send control commands to remote player
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2971,10 +2607,6 @@ Sends custom data to a remote device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastController-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVCastController-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
@@ -3009,10 +2641,6 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-start(item: AVQueueItem, callback: AsyncCallback<void>): void--><!--Device-AVCastController-start(item: AVQueueItem, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -3041,10 +2669,6 @@ start(item: AVQueueItem): Promise<void>
 Play the current item, should contain mediaUri otherwise the playback will fail.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

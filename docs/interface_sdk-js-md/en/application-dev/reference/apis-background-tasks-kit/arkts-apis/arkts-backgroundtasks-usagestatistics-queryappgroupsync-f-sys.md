@@ -16,10 +16,6 @@ Queries the app group of the calling application. The priority defined in a prio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
 <!--Device-usageStatistics-function queryAppGroupSync(): int--><!--Device-usageStatistics-function queryAppGroupSync(): int-End-->
@@ -49,7 +45,7 @@ Queries the app group of the calling application. The priority defined in a prio
 | [10000005](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000005-application-not-installed) | Application is not installed. |
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let priorityGroup: number = usageStatistics.queryAppGroupSync();
@@ -65,10 +61,6 @@ function queryAppGroupSync(bundleName: string): int
 Queries the usage priority group by bundleName. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -106,7 +98,7 @@ Queries the usage priority group by bundleName. The priority defined in a priori
 | [10000005](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000005-application-not-installed) | Application is not installed. |
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let priorityGroup: number = usageStatistics.queryAppGroupSync("com.ohos.camera");

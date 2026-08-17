@@ -4,10 +4,6 @@ Provides the state change information of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-floatView-interface FloatViewStateChangeInfo--><!--Device-floatView-interface FloatViewStateChangeInfo-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ State of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewStateChangeInfo-state: FloatViewState--><!--Device-FloatViewStateChangeInfo-state: FloatViewState-End-->
@@ -51,10 +43,6 @@ Reason why the float view stops. This parameter is valid only when **state** is 
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

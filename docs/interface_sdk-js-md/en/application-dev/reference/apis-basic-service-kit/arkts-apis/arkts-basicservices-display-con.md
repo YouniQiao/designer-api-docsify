@@ -10,8 +10,6 @@ Indicates the scaling factor for the animation duration. &lt;p&gt;This affects t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-display-const ANIMATOR_DURATION_SCALE: string--><!--Device-display-const ANIMATOR_DURATION_SCALE: string-End-->
@@ -28,10 +26,6 @@ Specifies whether automatic screen brightness adjustment is enabled. &lt;p&gt;If
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-const AUTO_SCREEN_BRIGHTNESS: string--><!--Device-display-const AUTO_SCREEN_BRIGHTNESS: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -46,10 +40,6 @@ Indicates the value of {@code AUTO_SCREEN_BRIGHTNESS} when automatic screen brig
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-const AUTO_SCREEN_BRIGHTNESS_MODE: int--><!--Device-display-const AUTO_SCREEN_BRIGHTNESS_MODE: int-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -63,8 +53,6 @@ const DEFAULT_SCREEN_ROTATION: string
 Indicates the screen rotation when no other policy is available. &lt;p&gt;This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following values are available: &lt;ul&gt; &lt;li&gt;{@code 0} - The screen rotates 0 degrees. &lt;li&gt;{@code 1} - The screen rotates 90 degrees. &lt;li&gt;{@code 2} - The screen rotates 180 degrees. &lt;li&gt;{@code 3} - The screen rotates 270 degrees. &lt;/ul&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 
@@ -82,8 +70,6 @@ Specifies whether display color inversion is enabled. &lt;p&gt;If the value is {
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-display-const DISPLAY_INVERSION_STATUS: string--><!--Device-display-const DISPLAY_INVERSION_STATUS: string-End-->
@@ -100,10 +86,6 @@ Indicates the scaling factor of fonts, which is a float number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-const FONT_SCALE: string--><!--Device-display-const FONT_SCALE: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -117,10 +99,6 @@ const MANUAL_SCREEN_BRIGHTNESS_MODE: int
 Indicates the value of {@code AUTO_SCREEN_BRIGHTNESS} when manual screen brightness adjustment is used.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-display-const MANUAL_SCREEN_BRIGHTNESS_MODE: int--><!--Device-display-const MANUAL_SCREEN_BRIGHTNESS_MODE: int-End-->
 
@@ -136,10 +114,6 @@ Indicates the screen brightness. The value ranges from 0 to 255.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-const SCREEN_BRIGHTNESS_STATUS: string--><!--Device-display-const SCREEN_BRIGHTNESS_STATUS: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -154,10 +128,6 @@ Indicates the duration that the device waits before going to sleep after a perio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-const SCREEN_OFF_TIMEOUT: string--><!--Device-display-const SCREEN_OFF_TIMEOUT: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -171,8 +141,6 @@ const TRANSITION_ANIMATION_SCALE: string
 Indicates the scaling factor for transition animations. If the value is {@code 0}, transition animations are disabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 
@@ -189,8 +157,6 @@ const WINDOW_ANIMATION_SCALE: string
 Indicates the scaling factor for normal window animations. If the value is {@code 0}, window animations are disabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 

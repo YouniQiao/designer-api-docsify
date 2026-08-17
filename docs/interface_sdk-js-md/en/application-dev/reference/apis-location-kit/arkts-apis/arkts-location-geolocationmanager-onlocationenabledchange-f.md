@@ -16,10 +16,6 @@ Subscribe location switch changed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-function onLocationEnabledChange(callback: Callback<boolean>): void--><!--Device-geoLocationManager-function onLocationEnabledChange(callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Core

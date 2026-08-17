@@ -12,10 +12,6 @@ Creates a **Canvas** component. The maximum allowed size cannot exceed 10000 px 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -39,10 +35,6 @@ Canvas(context: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptio
 Creates a **Canvas** component. You can specify a **CanvasRenderingContext2D** or **DrawingRenderingContext** object, along with AI image analysis options.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,10 +60,6 @@ Canvas(params: CanvasParams)
 Creates a **Canvas** component that does not cache commands using **CanvasParams**. The maximum allowed size cannot exceed 10000 px × 10000 px. If the size exceeds this limit, the **Canvas** component will fail to be created. > **NOTE：**> > * The **Canvas** component created using this API will return a DrawingRenderingContext > object in the input parameter of the onReady callback, which can be used for drawing on the > **Canvas** component. > > * The **Canvas** component created using this API will not respond to drawing commands > when it is not visible. > > * Scenarios where the component is not visible mainly include: the page containing the > component moves to the background, the component slides outside the window, or the > visibility > attribute is set to hidden. This does not include scenarios where the component is obscured > by other components or windows.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

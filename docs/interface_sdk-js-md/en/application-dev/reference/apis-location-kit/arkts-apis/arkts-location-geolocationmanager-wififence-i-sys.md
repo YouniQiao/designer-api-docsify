@@ -4,10 +4,6 @@ Indicates Wi-Fi fence information.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface WifiFence--><!--Device-geoLocationManager-export interface WifiFence-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -32,10 +28,6 @@ Indicates Wi-Fi fingerprint type.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiFence-type: WifiFingerprintType--><!--Device-WifiFence-type: WifiFingerprintType-End-->
@@ -55,10 +47,6 @@ Indicates Wi-Fi features.
 **Type:** Array&lt;[WirelessSignalFeature](arkts-location-geolocationmanager-wirelesssignalfeature-i-sys.md)&gt;
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

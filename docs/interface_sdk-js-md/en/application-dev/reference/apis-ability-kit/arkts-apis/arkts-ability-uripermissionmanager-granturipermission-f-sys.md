@@ -17,13 +17,9 @@ function grantUriPermission(
   ): void
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
 
@@ -55,7 +51,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uriPermissionManager, wantConstant } from '@kit.AbilityKit';
@@ -93,13 +89,9 @@ function grantUriPermission(
   ): void
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
 
@@ -139,13 +131,9 @@ Grants the URI permission to an application. If the call is successful, the appl
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
 
@@ -182,7 +170,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uriPermissionManager, wantConstant } from '@kit.AbilityKit';
@@ -215,13 +203,9 @@ uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_U
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<void>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
 
@@ -264,13 +248,9 @@ Grants the URI permission to an application. If the call is successful, the appl
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: int): Promise<void>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - This API can be used to grant URI access permission to a cloned application. You need to specify the > application bundle name and index of the cloned application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - This API can be used to grant URI access permission to a cloned application. You need to specify the > application bundle name and index of the cloned application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
 
@@ -309,7 +289,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';

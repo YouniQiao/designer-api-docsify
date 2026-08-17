@@ -16,10 +16,6 @@ Subscribes to data of the pedometer sensor. The step counter sensor's data repor
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 <!--Device-sensor-function on(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>, options?: Options): void-End-->

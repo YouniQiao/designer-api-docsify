@@ -4,9 +4,7 @@ Provides the number formatting capability, supporting automatic unit conversion 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export class AdvancedMeasureFormat--><!--Device-i18n-export class AdvancedMeasureFormat-End-->
 
@@ -22,9 +20,7 @@ A constructor used to create an AdvancedMeasureFormat object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,7 +35,7 @@ A constructor used to create an AdvancedMeasureFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | numberFormat | Intl.NumberFormat | Yes | Indicates the number format object that used to format number. |
-| options | [AdvancedMeasureFormatOptions](arkts-na-i18n-advancedmeasureformatoptions-i.md) | No |  |
+| options | [AdvancedMeasureFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-advancedmeasureformatoptions-i.md) | No |  |
 
 ## format
 
@@ -51,9 +47,7 @@ Formats a number by appropriate measure for usage scenarios. For instance, when 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

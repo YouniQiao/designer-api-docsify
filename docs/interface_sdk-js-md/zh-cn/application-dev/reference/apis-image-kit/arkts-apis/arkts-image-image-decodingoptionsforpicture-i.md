@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-image-interface DecodingOptionsForPicture--><!--Device-image-interface DecodingOptionsForPicture-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
@@ -24,10 +20,6 @@ desiredAuxiliaryPictures: Array<AuxiliaryPictureType>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DecodingOptionsForPicture-desiredAuxiliaryPictures: Array<AuxiliaryPictureType>--><!--Device-DecodingOptionsForPicture-desiredAuxiliaryPictures: Array<AuxiliaryPictureType>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
@@ -43,10 +35,6 @@ desiredPixelFormat?: PixelMapFormat
 **类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,10 +53,6 @@ desiredSizeForMainPixelMap?: Size
 **类型：** Size
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

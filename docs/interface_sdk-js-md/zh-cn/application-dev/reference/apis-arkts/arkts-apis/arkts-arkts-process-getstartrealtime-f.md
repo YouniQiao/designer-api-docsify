@@ -10,10 +10,6 @@ function getStartRealtime(): number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-process-function getStartRealtime(): number--><!--Device-process-function getStartRealtime(): number-End-->
@@ -26,7 +22,7 @@ function getStartRealtime(): number
 | --- | --- |
 | number | 返回经过的实时时间。单位：毫秒。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let realtime = process.getStartRealtime();

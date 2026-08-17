@@ -4,10 +4,6 @@ Enumerates the flags of asset source.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-export enum AssetSourceType--><!--Device-photoAccessHelper-export enum AssetSourceType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -23,10 +19,6 @@ MEDIA = 0
 Asset from media.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +37,6 @@ FILE_MANAGER = 1
 Asset from filemanager.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

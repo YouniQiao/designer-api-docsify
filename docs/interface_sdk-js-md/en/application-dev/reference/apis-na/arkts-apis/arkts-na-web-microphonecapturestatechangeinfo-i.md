@@ -4,9 +4,7 @@ Defines the microphone capture state change info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface MicrophoneCaptureStateChangeInfo--><!--Device-unnamed-export declare interface MicrophoneCaptureStateChangeInfo-End-->
 
@@ -24,9 +22,7 @@ the new microphone capture state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-MicrophoneCaptureStateChangeInfo-newState: MicrophoneCaptureState--><!--Device-MicrophoneCaptureStateChangeInfo-newState: MicrophoneCaptureState-End-->
 
@@ -44,9 +40,7 @@ The original microphone capture state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-MicrophoneCaptureStateChangeInfo-originalState: MicrophoneCaptureState--><!--Device-MicrophoneCaptureStateChangeInfo-originalState: MicrophoneCaptureState-End-->
 

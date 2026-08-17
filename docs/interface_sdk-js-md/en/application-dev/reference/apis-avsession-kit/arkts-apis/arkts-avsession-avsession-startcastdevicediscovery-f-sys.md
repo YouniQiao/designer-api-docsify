@@ -16,10 +16,6 @@ Start device discovery.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-function startCastDeviceDiscovery(callback: AsyncCallback<void>): void--><!--Device-avSession-function startCastDeviceDiscovery(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -38,7 +34,7 @@ Start device discovery.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,10 +59,6 @@ Start device discovery.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): void--><!--Device-avSession-function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -87,7 +79,7 @@ Start device discovery.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -113,10 +105,6 @@ Start device discovery.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Promise<void>--><!--Device-avSession-function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -127,7 +115,7 @@ Start device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | int | No | device filter when discovering, can be an union of [ProtocolType](arkts-avsession-avsession-protocoltype-e.md#ProtocolType)<br>**Since:** 12 |
+| filter | int | No | device filter when discovering, can be an union of [ProtocolType](arkts-avsession-avsession-protocoltype-e.md#protocoltype)<br>**Since:** 12 |
 | drmSchemes | Array&lt;string&gt; | No | filter drm-enabled devices which are represented by uuid. It is effective when protocol type is TYPE_CAST_PLUS_STREAM.<br>**Since:** 12 |
 
 **Return value:**
@@ -143,7 +131,7 @@ Start device discovery.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

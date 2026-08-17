@@ -1,12 +1,8 @@
 # WebDownloadManager
 
-You can trigger download manually through this interface, or resume failed or canceled downloads.
+WebDownloadManager is a static management class for download tasks of the Web component in the ArkWeb framework. It manages all file download processes triggered by the Web component. Developers can use this class to set a download delegate to receive download progress callbacks and resume failed download tasks. All methods of this class are static methods and take effect globally within the entire app. WebDownloadManager works together with [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md#webdownloaddelegate) and [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md#webdownloaditem): WebDownloadManager is responsible for lifecycle management and delegate setting of download tasks, WebDownloadDelegate reports download progress and status change events to the app layer, and WebDownloadItem represents a single download task entity, supporting operations such as pause, resume, and cancel.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class WebDownloadManager--><!--Device-webview-class WebDownloadManager-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 static resumeDownload(webDownloadItem: WebDownloadItem): void
 ```
 
-Resume the canceled or failed download.
+Resumes a failed download task. You need to obtain the deserialized object through the [WebDownloadItem.deserialize](arkts-arkweb-webview-webdownloaditem-c.md#deserialize) method. This applies only to previously failed download tasks. > **NOTE：**> > - Before calling this API, if the Web component has not been created and the initializeWebEngine method has not > been executed to complete web kernel initialization, you must call the initializeWebEngine method for > initialization first. Otherwise, calling this API is invalid. > > - You must call [setDownloadDelegate](#setdownloaddelegate) to set the download > delegate first. Otherwise, error code 17100018 will be thrown.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +34,7 @@ Resume the canceled or failed download.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| webDownloadItem | [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | Yes | Download that need to be resume. |
+| webDownloadItem | [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | Yes | Download task restored from serialized data. |
 
 **Error codes:**
 
@@ -56,13 +48,9 @@ Resume the canceled or failed download.
 static setDownloadDelegate(delegate: WebDownloadDelegate): void
 ```
 
-Set a delegate used to receive the progress of the download triggered from WebDownloadManager.
+Sets the delegate used to receive download progress triggered by WebDownloadManager. > **NOTE：**> > - Before calling this API, if the Web component has not been created and the > [initializeWebEngine](arkts-arkweb-webview-webviewcontroller-c.md#initializewebengine) method has not been executed, you > must call this method to initialize the web kernel first. Otherwise, calling this API is invalid.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,5 +62,5 @@ Set a delegate used to receive the progress of the download triggered from WebDo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) | Yes | Delegate used for download triggered from WebDownloadManager. |
+| delegate | [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) | Yes | Delegate used to receive the download progress. |
 

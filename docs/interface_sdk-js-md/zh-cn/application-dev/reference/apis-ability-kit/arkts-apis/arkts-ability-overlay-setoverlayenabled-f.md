@@ -10,10 +10,6 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: Asyn
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
@@ -24,7 +20,7 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: Asyn
 | --- | --- | --- | --- |
 | moduleName | string | 是 | overlay特征module的名称。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，当设置指定module的overlay禁用使能状态成功时，err为 undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当设置指定module的overlay禁用使能状态成功时，err为 undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -34,7 +30,7 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: Asyn
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module name is not found. |
 | [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) | The specified module is not an overlay module. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
@@ -69,10 +65,6 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>--><!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
@@ -98,7 +90,7 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module name is not found. |
 | [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) | The specified module is not an overlay module. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

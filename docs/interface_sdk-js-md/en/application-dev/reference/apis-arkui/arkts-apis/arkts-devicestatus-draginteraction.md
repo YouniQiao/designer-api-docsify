@@ -4,10 +4,6 @@ The **dragInteraction** module provides the APIs to enable and disable listening
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace dragInteraction--><!--Device-unnamed-declare namespace dragInteraction-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
@@ -27,11 +23,11 @@ import { dragInteraction } from 'dragInteraction';
 
 | Name | Description |
 | --- | --- |
-| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md#getDataSummary) | Obtains the data summary of all dragged objects. |
-| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md#offDragStateChange) | Disables listening for dragging state change events. |
-| [off_drag](arkts-arkui-draginteraction-offdrag-f-sys.md#off_drag) | Disables listening for dragging status changes. |
-| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md#onDragStateChange) | Listens for dragging state change events. |
-| [on_drag](arkts-arkui-draginteraction-ondrag-f-sys.md#on_drag) | Enables listening for dragging status changes. |
+| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md#getdatasummary) | Obtains the data summary of all dragged objects. |
+| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md#offdragstatechange) | Disables listening for dragging state change events. |
+| [off_drag](arkts-arkui-draginteraction-offdrag-f-sys.md#offdrag) | Disables listening for dragging status changes. |
+| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md#ondragstatechange) | Listens for dragging state change events. |
+| [on_drag](arkts-arkui-draginteraction-ondrag-f-sys.md#ondrag) | Enables listening for dragging status changes. |
 <!--DelEnd-->
 
 <!--Del-->

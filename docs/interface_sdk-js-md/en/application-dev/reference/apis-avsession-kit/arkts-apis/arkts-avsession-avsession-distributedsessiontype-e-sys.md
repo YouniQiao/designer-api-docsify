@@ -4,10 +4,6 @@ Define different distributed session type
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-enum DistributedSessionType--><!--Device-avSession-enum DistributedSessionType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
@@ -23,10 +19,6 @@ TYPE_SESSION_REMOTE = 0
 Remote session sensed from remote device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedSessionType-TYPE_SESSION_REMOTE = 0--><!--Device-DistributedSessionType-TYPE_SESSION_REMOTE = 0-End-->
 
@@ -44,10 +36,6 @@ Migrated session from remote device to this device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedSessionType-TYPE_SESSION_MIGRATE_IN = 1--><!--Device-DistributedSessionType-TYPE_SESSION_MIGRATE_IN = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
@@ -63,10 +51,6 @@ TYPE_SESSION_MIGRATE_OUT = 2
 Migrated session from this device to remote device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedSessionType-TYPE_SESSION_MIGRATE_OUT = 2--><!--Device-DistributedSessionType-TYPE_SESSION_MIGRATE_OUT = 2-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-screen-interface VirtualScreenOption--><!--Device-screen-interface VirtualScreenOption-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -25,10 +21,6 @@ density: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VirtualScreenOption-density: double--><!--Device-VirtualScreenOption-density: double-End-->
 
@@ -48,10 +40,6 @@ height: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VirtualScreenOption-height: long--><!--Device-VirtualScreenOption-height: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -69,10 +57,6 @@ name: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VirtualScreenOption-name: string--><!--Device-VirtualScreenOption-name: string-End-->
 
@@ -92,10 +76,6 @@ supportsFocus?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VirtualScreenOption-supportsFocus?: boolean--><!--Device-VirtualScreenOption-supportsFocus?: boolean-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -114,10 +94,6 @@ surfaceId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VirtualScreenOption-surfaceId: string--><!--Device-VirtualScreenOption-surfaceId: string-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -135,10 +111,6 @@ userId?: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -159,10 +131,6 @@ width: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VirtualScreenOption-width: long--><!--Device-VirtualScreenOption-width: long-End-->
 

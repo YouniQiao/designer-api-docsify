@@ -12,13 +12,9 @@ import { connection } from 'connection';
 function getAppNet(callback: AsyncCallback<NetHandle>): void
 ```
 
-Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).
+Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-connection-function getAppNet(callback: AsyncCallback<NetHandle>): void--><!--Device-connection-function getAppNet(callback: AsyncCallback<NetHandle>): void-End-->
 
@@ -28,7 +24,7 @@ Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes | Returns the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to the process; returns {@code null} if no [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) is bound to the process.For details, see [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes | Returns the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound to the process; returns {@code null} if no [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) is bound to the process.For details, see [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
 
 **Error codes:**
 
@@ -38,7 +34,7 @@ Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -60,13 +56,9 @@ connection.getAppNet((error: BusinessError, data: connection.NetHandle) => {
 function getAppNet(): Promise<NetHandle>
 ```
 
-Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).
+Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-connection-function getAppNet(): Promise<NetHandle>--><!--Device-connection-function getAppNet(): Promise<NetHandle>-End-->
 
@@ -85,7 +77,7 @@ Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

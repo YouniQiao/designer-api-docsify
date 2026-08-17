@@ -4,10 +4,6 @@ Describes the geographical location.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-interface LocationOptions--><!--Device-sensor-interface LocationOptions-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -30,10 +26,6 @@ Altitude, in m.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocationOptions-altitude: double--><!--Device-LocationOptions-altitude: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -50,10 +42,6 @@ Latitude, in degrees.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocationOptions-latitude: double--><!--Device-LocationOptions-latitude: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -69,10 +57,6 @@ Longitude, in degrees.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LocationOptions-longitude: double--><!--Device-LocationOptions-longitude: double-End-->
 

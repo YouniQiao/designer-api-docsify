@@ -1,12 +1,8 @@
 # WebDownloadErrorCode
 
-Defines the error code for download.
+Enumerates the download task error codes.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum WebDownloadErrorCode--><!--Device-webview-enum WebDownloadErrorCode-End-->
 
@@ -22,10 +18,6 @@ Unknown error.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-ERROR_UNKNOWN = 0--><!--Device-WebDownloadErrorCode-ERROR_UNKNOWN = 0-End-->
@@ -38,13 +30,9 @@ Unknown error.
 FILE_FAILED = 1
 ```
 
-Generic file operation failure.
+Failed to operate the file.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ Generic file operation failure.
 FILE_ACCESS_DENIED = 2
 ```
 
-The file cannot be accessed due to certain restrictions.
+No permission to access the file.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +62,9 @@ The file cannot be accessed due to certain restrictions.
 FILE_NO_SPACE = 3
 ```
 
-There is not enough disk space.
+The disk space is insufficient.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -102,10 +82,6 @@ The file name is too long.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_NAME_TOO_LONG = 5--><!--Device-WebDownloadErrorCode-FILE_NAME_TOO_LONG = 5-End-->
@@ -122,10 +98,6 @@ The file is too large.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_TOO_LARGE = 6--><!--Device-WebDownloadErrorCode-FILE_TOO_LARGE = 6-End-->
@@ -138,13 +110,9 @@ The file is too large.
 FILE_TRANSIENT_ERROR = 10
 ```
 
-Some temporary problems occurred, such as not enough memory, files in use, and too many files open at the same time.
+Some temporary issues occur, such as insufficient memory, files in use, and too many files open at the same time.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -158,13 +126,9 @@ Some temporary problems occurred, such as not enough memory, files in use, and t
 FILE_BLOCKED = 11
 ```
 
-The file is blocked from accessing because of some local policy.
+Access to the file is blocked due to certain local policies.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -178,13 +142,9 @@ The file is blocked from accessing because of some local policy.
 FILE_TOO_SHORT = 13
 ```
 
-When trying to resume the download, Found that the file is not long enough, maybe the file no longer exists.
+The file to resume downloading is not long enough. It may not exist.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,10 +162,6 @@ Hash mismatch.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_HASH_MISMATCH = 14--><!--Device-WebDownloadErrorCode-FILE_HASH_MISMATCH = 14-End-->
@@ -222,10 +178,6 @@ The file already exists.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_SAME_AS_SOURCE = 15--><!--Device-WebDownloadErrorCode-FILE_SAME_AS_SOURCE = 15-End-->
@@ -238,13 +190,9 @@ The file already exists.
 NETWORK_FAILED = 20
 ```
 
-Generic network error.
+Common network error.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -258,13 +206,9 @@ Generic network error.
 NETWORK_TIMEOUT = 21
 ```
 
-The network operation timed out.
+Network connection timeout.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -278,13 +222,9 @@ The network operation timed out.
 NETWORK_DISCONNECTED = 22
 ```
 
-The network was disconnected.
+Network disconnected.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -298,13 +238,9 @@ The network was disconnected.
 NETWORK_SERVER_DOWN = 23
 ```
 
-Server down.
+The server is shut down.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -318,13 +254,9 @@ Server down.
 NETWORK_INVALID_REQUEST = 24
 ```
 
-Invalid network requests，may redirect to unsupported scheme or an invalid URL.
+Invalid network request. The request may be redirected to an unsupported scheme or an invalid URL.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -338,13 +270,9 @@ Invalid network requests，may redirect to unsupported scheme or an invalid URL.
 SERVER_FAILED = 30
 ```
 
-The server returned a generic error.
+The server returns a general error.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -358,13 +286,9 @@ The server returned a generic error.
 SERVER_NO_RANGE = 31
 ```
 
-The server does not support range requests.
+The server does not support the range request.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -382,10 +306,6 @@ The server does not have the requested data.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_BAD_CONTENT = 33--><!--Device-WebDownloadErrorCode-SERVER_BAD_CONTENT = 33-End-->
@@ -398,13 +318,9 @@ The server does not have the requested data.
 SERVER_UNAUTHORIZED = 34
 ```
 
-The server does not allow the file to be downloaded.
+The file cannot be downloaded from the server.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -418,13 +334,9 @@ The server does not allow the file to be downloaded.
 SERVER_CERT_PROBLEM = 35
 ```
 
-Server certificate error.
+The server certificate is incorrect.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -438,13 +350,9 @@ Server certificate error.
 SERVER_FORBIDDEN = 36
 ```
 
-Server access forbidden.
+The access to the server is forbidden.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -458,13 +366,9 @@ Server access forbidden.
 SERVER_UNREACHABLE = 37
 ```
 
-Server unreachable.
+The server cannot be accessed.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -478,13 +382,9 @@ Server unreachable.
 SERVER_CONTENT_LENGTH_MISMATCH = 38
 ```
 
-The received data does not match content-length.
+The received data does not match the content length.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -498,13 +398,9 @@ The received data does not match content-length.
 SERVER_CROSS_ORIGIN_REDIRECT = 39
 ```
 
-An unexpected cross-origin redirect happened.
+An unexpected cross-site redirection occurs.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -518,13 +414,9 @@ An unexpected cross-origin redirect happened.
 USER_CANCELED = 40
 ```
 
-User cancel.
+The user cancels the download.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -538,13 +430,9 @@ User cancel.
 USER_SHUTDOWN = 41
 ```
 
-User shut down the application.
+The user closes the application.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -558,13 +446,9 @@ User shut down the application.
 CRASH = 50
 ```
 
-Application crash.
+The application crashes.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

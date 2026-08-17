@@ -10,11 +10,9 @@ Clears all unlocked missions. This API uses an asynchronous callback to return t
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearAllMissions-(System-API))
+**Substitutes:** [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearallmissions-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -30,7 +28,7 @@ Clears all unlocked missions. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If all the unlocked missions are cleared, **err** is **undefined**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager'
@@ -59,11 +57,9 @@ Clears all unlocked missions. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearAllMissions-(System-API))
+**Substitutes:** [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearallmissions-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -79,7 +75,7 @@ Clears all unlocked missions. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

@@ -4,10 +4,6 @@ Enumerates the status codes returned when data is obtained from the UDMF.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unifiedDataChannel-enum ListenerStatus--><!--Device-unifiedDataChannel-enum ListenerStatus-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -21,10 +17,6 @@ FINISHED = 0
 The task is completed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ The task is being processed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -65,10 +53,6 @@ CANCELED = 2
 The task is canceled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,10 +72,6 @@ An internal error occurs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -106,13 +86,9 @@ An internal error occurs.
 INVALID_PARAMETERS = 201
 ```
 
-[GetDataParams](arkts-arkdata-unifieddatachannel-getdataparams-i.md#GetDataParams) contains invalid parameters.
+[GetDataParams](arkts-arkdata-unifieddatachannel-getdataparams-i.md#getdataparams) contains invalid parameters.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,10 +108,6 @@ No data is obtained.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -154,10 +126,6 @@ Failed to sync data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -175,10 +143,6 @@ COPY_FILE_FAILED = 204
 Failed to copy data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

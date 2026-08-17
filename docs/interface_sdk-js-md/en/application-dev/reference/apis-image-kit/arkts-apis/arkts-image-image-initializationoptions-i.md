@@ -4,10 +4,6 @@ Defines PixelMap initialization options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface InitializationOptions--><!--Device-image-interface InitializationOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ Alpha type. The default value is **IMAGE_ALPHA_TYPE_PREMUL**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -53,10 +45,6 @@ Whether the image pixels are editable. **true** if editable, **false** otherwise
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,10 +66,6 @@ Pixel format of the generated PixelMap. The default value is **RGBA_8888**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -101,10 +85,6 @@ Scale mode. The default value is **0**.
 **Type:** [ScaleMode](arkts-image-image-scalemode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -126,10 +106,6 @@ Image size.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -149,10 +125,6 @@ Pixel format of the passed-in buffer data. The default value is **BGRA_8888**.
 **Type:** PixelMapFormat
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InitializationOptions-srcPixelFormat?: PixelMapFormat--><!--Device-InitializationOptions-srcPixelFormat?: PixelMapFormat-End-->
 

@@ -376,7 +376,7 @@ This API provides data loading parameters to the system instead of directly prov
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DragEvent_GetUdmfData()
 
@@ -865,7 +865,7 @@ Obtains the ID of the screen where this drag event occurs. This API is not suppo
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DragEvent_GetDragSource()
 
@@ -891,7 +891,7 @@ Obtains the bundle name of the drag source application. The caller must provide 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DragEvent_IsRemote()
 
@@ -916,7 +916,7 @@ Checks whether the current drag operation is a cross-device drag.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DragEvent_StartDataLoading()
 
@@ -1161,7 +1161,7 @@ Sets a custom drag preview for the specified component.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the component node. |
-| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)* preview | Custom drag preview, which is a pixel map. |
+| [OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* preview | Custom drag preview, which is a pixel map. |
 
 **Returns**:
 
@@ -1488,7 +1488,7 @@ Sets the drag previews for a drag action. Only pixel map objects are supported.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_DragAction](capi-arkui-nativemodule-arkui-dragaction.md)* dragAction | Pointer to the target drag action object. |
-| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)* pixelmapArray[] | Indicates the array of the drag previews to set, which must be pixel maps. |
+| [OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmapArray[] | Indicates the array of the drag previews to set, which must be pixel maps. |
 | int32_t size | Number of drag previews. |
 
 **Returns**:
@@ -1595,7 +1595,7 @@ This API provides data loading parameters to the system instead of directly prov
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DragAction_SetDragPreviewOption()
 
@@ -1885,6 +1885,6 @@ Sets whether the drop-disallowed badge can be displayed.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.<br>      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 

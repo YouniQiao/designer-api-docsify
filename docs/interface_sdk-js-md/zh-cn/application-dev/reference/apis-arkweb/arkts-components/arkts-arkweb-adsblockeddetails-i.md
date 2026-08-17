@@ -1,12 +1,8 @@
 # AdsBlockedDetails
 
-Defines the ads block details.
+发生广告拦截时，广告资源信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface AdsBlockedDetails--><!--Device-unnamed-declare interface AdsBlockedDetails-End-->
 
@@ -23,10 +19,6 @@ adsBlocked: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ url: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

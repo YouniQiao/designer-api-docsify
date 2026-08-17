@@ -16,10 +16,6 @@ Indicates the initialization of signature and signature verification using crede
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void--><!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void-End-->
@@ -42,9 +38,9 @@ Indicates the initialization of signature and signature verification using crede
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
-| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user. Please call [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openAuthorizeDialog) method to request user authorization for the certificate or credential.<br>**Applicable version:** 12 and later |
+| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user. Please call [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) method to request user authorization for the certificate or credential.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -79,10 +75,6 @@ Initializes the signing or signature verification operation using the specified 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>--><!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>-End-->
@@ -112,7 +104,7 @@ Initializes the signing or signature verification operation using the specified 
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

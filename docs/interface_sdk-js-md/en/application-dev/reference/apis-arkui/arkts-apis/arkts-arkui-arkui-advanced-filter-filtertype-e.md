@@ -4,10 +4,6 @@ Declare FilterType
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum FilterType--><!--Device-unnamed-export declare enum FilterType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ MULTI_LINE_FILTER = 0
 The multi_line_filter type.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ LIST_FILTER = 1
 The list_filter type.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,10 +14,6 @@ Sets a timer after which a function will be executed.
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-export declare function setTimeout(  handler: Function,  delay?: number,  ...arguments: any[]): number--><!--Device-unnamed-export declare function setTimeout(  handler: Function,  delay?: number,  ...arguments: any[]): number-End-->

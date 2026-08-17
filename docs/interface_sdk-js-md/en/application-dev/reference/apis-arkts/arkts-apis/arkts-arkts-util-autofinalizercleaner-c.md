@@ -4,10 +4,6 @@ A cleaner for releasing resources managed by developers through a developer-defi
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-util-class AutoFinalizerCleaner--><!--Device-util-class AutoFinalizerCleaner-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ static register<T>(obj: AutoFinalizer<T>, heldValue: T): void
 Register objects that release resources managed by developers.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

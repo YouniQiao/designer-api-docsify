@@ -16,11 +16,9 @@ Obtains the Wi-Fi hotspot configuration.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getHotspotConfig](arkts-connectivity-wifimanager-gethotspotconfig-f-sys.md#getHotspotConfig-(System-API))
+**Substitutes:** [getHotspotConfig](arkts-connectivity-wifimanager-gethotspotconfig-f-sys.md#gethotspotconfig-system-api)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
@@ -36,7 +34,7 @@ Obtains the Wi-Fi hotspot configuration.
 | --- | --- |
 | HotspotConfig | Returns the configuration of an existing or enabled Wi-Fi hotspot. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

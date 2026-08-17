@@ -4,10 +4,6 @@ Defines the file name filtering interface used by listFileExt().
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface FileFilter--><!--Device-unnamed-export interface FileFilter-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -41,10 +37,6 @@ filter(name: string): boolean
 Filtering function, which determines whether the specified file name should be included in the file list. Note: This function is frequently invoked. Avoid time-consuming operations, such as file I/O and network requests.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

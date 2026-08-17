@@ -1,12 +1,8 @@
 # AuxiliaryPictureType
 
-Enumerates the auxiliary pictures types. Auxiliary pictures do not directly participate in image display, and not all images contain auxiliary pictures. Before obtaining and using a specific auxiliary picture, call [getAuxiliaryPicture](arkts-image-image-picture-i.md#getAuxiliaryPicture) in Picture to obtain the auxiliary picture.
+Enumerates the auxiliary pictures types. Auxiliary pictures do not directly participate in image display, and not all images contain auxiliary pictures. Before obtaining and using a specific auxiliary picture, call [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture) in Picture to obtain the auxiliary picture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-enum AuxiliaryPictureType--><!--Device-image-enum AuxiliaryPictureType-End-->
 
@@ -18,13 +14,9 @@ Enumerates the auxiliary pictures types. Auxiliary pictures do not directly part
 GAINMAP = 1
 ```
 
-Gain map. It is used to generate HDR images more accurately. HDR synthesis usually involves using the SDR main image, gain map, and [HDR metadata](arkts-image-image-pixelmap-i.md#getMetadata) to calculate the luminance mapping.
+Gain map. It is used to generate HDR images more accurately. HDR synthesis usually involves using the SDR main image, gain map, and [HDR metadata](arkts-image-image-pixelmap-i.md#getmetadata) to calculate the luminance mapping.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuxiliaryPictureType-GAINMAP = 1--><!--Device-AuxiliaryPictureType-GAINMAP = 1-End-->
 
@@ -40,10 +32,6 @@ Depth map. It is used to store the distance between each pixel and the camera, a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuxiliaryPictureType-DEPTH_MAP = 2--><!--Device-AuxiliaryPictureType-DEPTH_MAP = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -57,10 +45,6 @@ UNREFOCUS_MAP = 3
 Unrefocus map. It is used to store the pixel content that is not refocused during capture. It is useful for post-processing effects such as portrait blurring, allowing users to select focus areas freely.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuxiliaryPictureType-UNREFOCUS_MAP = 3--><!--Device-AuxiliaryPictureType-UNREFOCUS_MAP = 3-End-->
 
@@ -76,10 +60,6 @@ Linear map. It records lighting, color, or other visual elements linearly, provi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuxiliaryPictureType-LINEAR_MAP = 4--><!--Device-AuxiliaryPictureType-LINEAR_MAP = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -94,10 +74,6 @@ Fragment map. It records areas of the original image obscured by watermarks. The
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuxiliaryPictureType-FRAGMENT_MAP = 5--><!--Device-AuxiliaryPictureType-FRAGMENT_MAP = 5-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -111,10 +87,6 @@ LHDR_GAINMAP = 10
 LHDR gain map.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

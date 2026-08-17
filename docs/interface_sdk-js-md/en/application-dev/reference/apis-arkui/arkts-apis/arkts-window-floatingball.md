@@ -4,10 +4,6 @@ This module provides essential functionalities for floating balls. It lets you c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace floatingBall--><!--Device-unnamed-declare namespace floatingBall-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -25,7 +21,7 @@ import { floatingBall } from 'floatingBall';
 | Name | Description |
 | --- | --- |
 | [create](arkts-arkui-floatingball-create-f.md#create) | Creates a floating ball controller. This API uses a promise to return the result. |
-| [isFloatingBallEnabled](arkts-arkui-floatingball-isfloatingballenabled-f.md#isFloatingBallEnabled) | Checks whether the device supports floating balls. |
+| [isFloatingBallEnabled](arkts-arkui-floatingball-isfloatingballenabled-f.md#isfloatingballenabled) | Checks whether the device supports floating balls. |
 
 ### Interfaces
 

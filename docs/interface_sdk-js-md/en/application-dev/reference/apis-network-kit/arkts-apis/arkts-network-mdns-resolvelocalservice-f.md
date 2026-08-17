@@ -17,10 +17,6 @@ Resolves an mDNS service.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void-End-->
@@ -32,7 +28,7 @@ Resolves an mDNS service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the context of application or capability. |
-| serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | Yes | Information about the mDNS service. [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md#LocalServiceInfo) |
+| serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | Yes | Information about the mDNS service. [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md#localserviceinfo) |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback of resolveLocalService. |
 
 **Error codes:**
@@ -46,7 +42,7 @@ Resolves an mDNS service.
 | [2204006](../errorcode-net-mdns.md#2204006-service-resolution-timeout) | Request timeout. |
 | [2204010](../errorcode-net-mdns.md#2204010-message-sending-failure) | Failed to send the message. |
 
-## Examples
+**Examples**
 
 Stage model:
 
@@ -85,10 +81,6 @@ Resolves an mDNS service.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise<LocalServiceInfo>--><!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise<LocalServiceInfo>-End-->
@@ -100,7 +92,7 @@ Resolves an mDNS service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the context of application or capability. |
-| serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | Yes | Information about the mDNS service. [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md#LocalServiceInfo) |
+| serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | Yes | Information about the mDNS service. [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md#localserviceinfo) |
 
 **Return value:**
 
@@ -119,7 +111,7 @@ Resolves an mDNS service.
 | [2204006](../errorcode-net-mdns.md#2204006-service-resolution-timeout) | Request timeout. |
 | [2204010](../errorcode-net-mdns.md#2204010-message-sending-failure) | Failed to send the message. |
 
-## Examples
+**Examples**
 
 Stage model:
 

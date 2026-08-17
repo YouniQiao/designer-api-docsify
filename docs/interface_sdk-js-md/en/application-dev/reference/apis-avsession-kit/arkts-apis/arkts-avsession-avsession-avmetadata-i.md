@@ -4,10 +4,6 @@ The metadata of the current media.Used to set the properties of the current medi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface AVMetadata--><!--Device-avSession-interface AVMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -30,10 +26,6 @@ The album of this media
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVMetadata-album?: string--><!--Device-AVMetadata-album?: string-End-->
@@ -51,10 +43,6 @@ The artist of this media
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Unique ID used to represent this media.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVMetadata-assetId: string--><!--Device-AVMetadata-assetId: string-End-->
@@ -95,10 +79,6 @@ The author of this media
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,10 +98,6 @@ The id of play list which current media belongs to, it should be an unique ident
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVMetadata-avQueueId?: string--><!--Device-AVMetadata-avQueueId?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -137,10 +113,6 @@ The artwork of play list as a PixelMap or an uri formatted String,
 **Type:** image.PixelMap \| string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVMetadata-avQueueImage?: image.PixelMap | string--><!--Device-AVMetadata-avQueueImage?: image.PixelMap | string-End-->
 
@@ -158,10 +130,6 @@ The name of play list which current media belongs to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVMetadata-avQueueName?: string--><!--Device-AVMetadata-avQueueName?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -177,10 +145,6 @@ The image of the bundle icon as a PixelMap, no need to be set by application.
 **Type:** image.PixelMap
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVMetadata-readonly bundleIcon?: image.PixelMap--><!--Device-AVMetadata-readonly bundleIcon?: image.PixelMap-End-->
 
@@ -198,10 +162,6 @@ The composer of this media
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVMetadata-composer?: string--><!--Device-AVMetadata-composer?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -217,10 +177,6 @@ The description of the media, used for display
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -240,10 +196,6 @@ The display tags supported by application to be displayed on media center
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVMetadata-displayTags?: int--><!--Device-AVMetadata-displayTags?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -259,10 +211,6 @@ The drm schemes supported by this session which are represented by uuid.
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVMetadata-drmSchemes?: Array<string>--><!--Device-AVMetadata-drmSchemes?: Array<string>-End-->
 
@@ -280,10 +228,6 @@ The duration of this media, used to automatically calculate playback position, d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVMetadata-duration?: long--><!--Device-AVMetadata-duration?: long-End-->
@@ -296,15 +240,11 @@ The duration of this media, used to automatically calculate playback position, d
 fastForwardSkipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing fast forward operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#SECONDS_15). The system will use this value for fastforward skip intervals instead of [skipIntervals](#skipIntervals). If not set, the fast forward skip intervals still use [skipIntervals](#skipIntervals). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#SkipIntervals)
+The supported skipIntervals when doing fast forward operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#seconds15). The system will use this value for fastforward skip intervals instead of [skipIntervals](#skipintervals). If not set, the fast forward skip intervals still use [skipIntervals](#skipintervals). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#skipintervals)
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -318,15 +258,11 @@ The supported skipIntervals when doing fast forward operation, the default is [S
 filter?: int
 ```
 
-The protocols supported by this session, if not set, the default is [TYPE_CAST_PLUS_STREAM](arkts-avsession-avsession-protocoltype-e.md#TYPE_CAST_PLUS_STREAM). See [ProtocolType](arkts-avsession-avsession-protocoltype-e.md#ProtocolType)
+The protocols supported by this session, if not set, the default is [TYPE_CAST_PLUS_STREAM](arkts-avsession-avsession-protocoltype-e.md#typecastplusstream). See [ProtocolType](arkts-avsession-avsession-protocoltype-e.md#protocoltype)
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -346,10 +282,6 @@ The lyric of the media, it should be in standard lyric format
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVMetadata-lyric?: string--><!--Device-AVMetadata-lyric?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -365,10 +297,6 @@ The image of the media as a PixelMap or an uri formatted String, used to display
 **Type:** image.PixelMap \| string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -388,10 +316,6 @@ The next playable media id. Used to tell the controller if there is a next playa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVMetadata-nextAssetId?: string--><!--Device-AVMetadata-nextAssetId?: string-End-->
@@ -409,10 +333,6 @@ The previous playable media id. Used to tell the controller if there is a previo
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -432,10 +352,6 @@ The publishDate of the media
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVMetadata-publishDate?: Date--><!--Device-AVMetadata-publishDate?: Date-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -446,15 +362,11 @@ The publishDate of the media
 rewindSkipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing rewind operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#SECONDS_15). The system will use this value for rewind skip intervals instead of [skipIntervals](#skipIntervals). If not set, the rewind skip intervals still use [skipIntervals](#skipIntervals). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#SkipIntervals)
+The supported skipIntervals when doing rewind operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#seconds15). The system will use this value for rewind skip intervals instead of [skipIntervals](#skipintervals). If not set, the rewind skip intervals still use [skipIntervals](#skipintervals). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#skipintervals)
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -474,10 +386,6 @@ The single lyric text of the media, not including time prefix
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVMetadata-singleLyricText?: string--><!--Device-AVMetadata-singleLyricText?: string-End-->
@@ -490,15 +398,11 @@ The single lyric text of the media, not including time prefix
 skipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing fast forward and rewind operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#SECONDS_15). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#SkipIntervals)
+The supported skipIntervals when doing fast forward and rewind operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#seconds15). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#skipintervals)
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVMetadata-skipIntervals?: SkipIntervals--><!--Device-AVMetadata-skipIntervals?: SkipIntervals-End-->
 
@@ -515,10 +419,6 @@ The subtitle of the media, used for display
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -538,10 +438,6 @@ The title of this media, for display in media center.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVMetadata-title?: string--><!--Device-AVMetadata-title?: string-End-->
@@ -559,10 +455,6 @@ The writer of this media
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

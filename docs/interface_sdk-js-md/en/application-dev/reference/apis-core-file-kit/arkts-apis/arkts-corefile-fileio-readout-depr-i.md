@@ -4,8 +4,6 @@ Obtains the file read result. This class applies only to the **read()** method.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-declare interface ReadOut--><!--Device-unnamed-declare interface ReadOut-End-->
@@ -23,8 +21,6 @@ Buffer for storing the data read.
 **Type:** ArrayBuffer
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ Length of the data read, in bytes.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-ReadOut-bytesRead: number--><!--Device-ReadOut-bytesRead: number-End-->
@@ -63,8 +57,6 @@ Position of the buffer to which the data will be read relative to the start addr
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

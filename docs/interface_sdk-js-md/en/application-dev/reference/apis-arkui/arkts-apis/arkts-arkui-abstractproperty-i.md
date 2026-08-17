@@ -1,12 +1,8 @@
-# AbstractProperty
+# AbstractProperty(System API)
 
 Provides a reference to properties stored in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface AbstractProperty--><!--Device-unnamed-declare interface AbstractProperty-End-->
 
@@ -22,10 +18,6 @@ Reads data of the referenced property from [AppStorage](../../../ui/state-manage
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AbstractProperty-get(): T--><!--Device-AbstractProperty-get(): T-End-->
@@ -38,7 +30,7 @@ Reads data of the referenced property from [AppStorage](../../../ui/state-manage
 | --- | --- |
 | T | Data of the referenced property in AppStorage or LocalStorage. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 AppStorage.setOrCreate('PropA', 47);
@@ -56,10 +48,6 @@ Reads the property name of the referenced property from [AppStorage](../../../ui
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AbstractProperty-info(): string--><!--Device-AbstractProperty-info(): string-End-->
@@ -72,7 +60,7 @@ Reads the property name of the referenced property from [AppStorage](../../../ui
 | --- | --- |
 | string | Property name of the referenced property in AppStorage or LocalStorage. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 AppStorage.setOrCreate('PropA', 47);
@@ -90,10 +78,6 @@ Updates the data of the referenced property in [AppStorage](../../../ui/state-ma
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AbstractProperty-set(newValue: T): void--><!--Device-AbstractProperty-set(newValue: T): void-End-->
@@ -106,7 +90,7 @@ Updates the data of the referenced property in [AppStorage](../../../ui/state-ma
 | --- | --- | --- | --- |
 | newValue | T | Yes | New data to update. The value can be **null** or **undefined**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 AppStorage.setOrCreate('PropA', 47);

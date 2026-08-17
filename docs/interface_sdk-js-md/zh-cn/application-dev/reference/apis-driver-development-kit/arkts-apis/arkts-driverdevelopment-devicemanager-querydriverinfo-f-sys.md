@@ -10,10 +10,6 @@ function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
 <!--Device-deviceManager-function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>--><!--Device-deviceManager-function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>-End-->
@@ -43,7 +39,7 @@ function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application cannot call a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

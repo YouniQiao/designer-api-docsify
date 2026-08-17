@@ -16,10 +16,6 @@ Obtains the information of all installed printer extensions. This API uses an as
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExtensionInfo>>): void--><!--Device-print-function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExtensionInfo>>): void-End-->
@@ -41,7 +37,7 @@ Obtains the information of all installed printer extensions. This API uses an as
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -67,10 +63,6 @@ Obtains the information of all installed printer extensions. This API uses a pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>--><!--Device-print-function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>-End-->
@@ -92,7 +84,7 @@ Obtains the information of all installed printer extensions. This API uses a pro
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

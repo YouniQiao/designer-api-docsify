@@ -16,10 +16,6 @@ Obtains the type of the SIM card inserted in a specified slot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-function getCardTypeSync(slotId: int): CardType--><!--Device-sim-function getCardTypeSync(slotId: int): CardType-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -36,7 +32,7 @@ Obtains the type of the SIM card inserted in a specified slot.
 | --- | --- |
 | CardType | Returns the SIM card type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

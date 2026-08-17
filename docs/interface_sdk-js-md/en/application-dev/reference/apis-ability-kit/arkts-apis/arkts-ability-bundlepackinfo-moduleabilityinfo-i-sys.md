@@ -4,10 +4,6 @@ ModuleAbilityInfo: the ability info of a module.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ModuleAbilityInfo--><!--Device-unnamed-export interface ModuleAbilityInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -25,10 +21,6 @@ Whether the ability can be invoked by other applications. **true** if it can be 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ModuleAbilityInfo-readonly exported: boolean--><!--Device-ModuleAbilityInfo-readonly exported: boolean-End-->
 
@@ -48,10 +40,6 @@ Widget information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ModuleAbilityInfo-readonly forms: Array<AbilityFormInfo>--><!--Device-ModuleAbilityInfo-readonly forms: Array<AbilityFormInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -70,10 +58,6 @@ Name of the ability displayed to users. The value is a resource index to names i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ModuleAbilityInfo-readonly label: string--><!--Device-ModuleAbilityInfo-readonly label: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -91,10 +75,6 @@ Name of the ability. The name must be unique in the bundle.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ModuleAbilityInfo-readonly name: string--><!--Device-ModuleAbilityInfo-readonly name: string-End-->
 

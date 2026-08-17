@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-class UserAuth--><!--Device-osAccount-class UserAuth-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -28,10 +24,6 @@ auth(
 认证当前用户。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -83,7 +75,7 @@ auth(
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The credential is incorrect. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -147,10 +139,6 @@ auth(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      options: AuthOptions,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      options: AuthOptions,      callback: IUserAuthCallback    ): Uint8Array-End-->
@@ -203,7 +191,7 @@ auth(
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The credential is incorrect. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -273,10 +261,6 @@ authUser(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-authUser(      userId: int,      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-authUser(      userId: int,      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array-End-->
@@ -329,7 +313,7 @@ authUser(
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The credential is incorrect. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -389,10 +373,6 @@ cancelAuth(contextID: Uint8Array): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void--><!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void-End-->
@@ -417,7 +397,7 @@ cancelAuth(contextID: Uint8Array): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -475,10 +455,6 @@ constructor()
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -491,7 +467,7 @@ constructor()
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let userAuth = new osAccount.UserAuth();
@@ -506,10 +482,6 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int
 获取指定认证类型和认证可信等级的认证能力的可用状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -543,7 +515,7 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300117](../../apis-basic-services-kit/errorcode-account.md#12300117-pin码过期) | PIN is expired. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -591,10 +563,6 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void--><!--Device-UserAuth-getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void-End-->
@@ -608,7 +576,7 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | 是 | 请求信息，包括认证类型和属性类型列表。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | 是 | 回调函数。如果获取成功，err为null，data为执行器属性信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | 是 | 回调函数。如果获取成功，err为null，data为执行器属性信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -621,7 +589,7 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -693,10 +661,6 @@ getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>--><!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>-End-->
@@ -728,7 +692,7 @@ getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -797,10 +761,6 @@ getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>--><!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>-End-->
@@ -833,7 +793,7 @@ getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -925,10 +885,6 @@ getVersion(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UserAuth-getVersion(): int--><!--Device-UserAuth-getVersion(): int-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -947,7 +903,7 @@ getVersion(): int
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -981,10 +937,6 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-prepareRemoteAuth(remoteNetworkId: string): Promise<void>--><!--Device-UserAuth-prepareRemoteAuth(remoteNetworkId: string): Promise<void>-End-->
@@ -1017,7 +969,7 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1082,10 +1034,6 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void--><!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void-End-->
@@ -1099,7 +1047,7 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | 是 | 请求信息，包括认证类型和要设置的密钥值。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -1111,7 +1059,7 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1175,10 +1123,6 @@ setProperty(request: SetPropertyRequest): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>--><!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>-End-->
@@ -1209,7 +1153,7 @@ setProperty(request: SetPropertyRequest): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

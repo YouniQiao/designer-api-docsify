@@ -4,8 +4,6 @@ Defines configuration for capturing played audio.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 12
 
 **Substitutes:** OH_AVScreenCapture in native interface.
@@ -31,8 +29,6 @@ Options for filtering the played audio streams to be recorded.
 **Type:** [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 12
 

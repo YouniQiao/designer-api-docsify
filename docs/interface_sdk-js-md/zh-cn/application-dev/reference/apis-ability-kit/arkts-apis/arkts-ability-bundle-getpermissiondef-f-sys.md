@@ -10,8 +10,6 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** null
@@ -29,7 +27,7 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissionName | string | 是 | 需要查询的权限的名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回定义的权限信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回定义的权限信息。 |
 
 
 ## getPermissionDef
@@ -41,8 +39,6 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 按权限名称获取权限的详细信息，使用promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-screenshot-interface Size--><!--Device-screenshot-interface Size-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -26,10 +22,6 @@ height: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Size-height: long--><!--Device-Size-height: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -47,10 +39,6 @@ width: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Size-width: long--><!--Device-Size-width: long-End-->
 

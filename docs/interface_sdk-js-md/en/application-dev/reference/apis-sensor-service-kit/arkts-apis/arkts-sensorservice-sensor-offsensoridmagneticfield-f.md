@@ -16,10 +16,6 @@ Unsubscribes from data of the magnetic field sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -47,10 +43,6 @@ function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, c
 Unsubscribes from data of the magnetic field sensor.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, callback?: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, callback?: Callback<MagneticFieldResponse>): void-End-->
 

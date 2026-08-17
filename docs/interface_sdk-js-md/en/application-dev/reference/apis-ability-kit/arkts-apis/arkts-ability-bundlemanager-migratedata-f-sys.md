@@ -16,10 +16,6 @@ Migrates files from the source path to the destination path. This API uses a pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MIGRATE_DATA
 
 <!--Device-bundleManager-function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>--><!--Device-bundleManager-function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>-End-->
@@ -55,7 +51,7 @@ Migrates files from the source path to the destination path. This API uses a pro
 | [17700080](../errorcode-bundle.md#17700080-invalid-source-paths) | The source paths are invalid. |
 | [17700081](../errorcode-bundle.md#17700081-invalid-destination-path) | The destination path is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -10,9 +10,7 @@ Obtains a SimpleNumberFormat object based on the specified skeleton.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -31,7 +29,7 @@ Obtains a SimpleNumberFormat object based on the specified skeleton.
 
 | Type | Description |
 | --- | --- |
-| [SimpleNumberFormat](arkts-na-i18n-simplenumberformat-c.md) | SimpleNumberFormat object. |
+| [SimpleNumberFormat](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat object. |
 
 **Error codes:**
 

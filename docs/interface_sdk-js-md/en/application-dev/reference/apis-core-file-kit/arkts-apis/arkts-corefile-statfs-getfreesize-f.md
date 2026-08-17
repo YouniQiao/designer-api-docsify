@@ -16,10 +16,6 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-statfs-function getFreeSize(path: string): Promise<long>--><!--Device-statfs-function getFreeSize(path: string): Promise<long>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -54,7 +50,7 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -80,10 +76,6 @@ function getFreeSize(path: string, callback: AsyncCallback<long>): void
 Obtains the free size of the specified file system, in bytes. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-statfs-function getFreeSize(path: string, callback: AsyncCallback<long>): void--><!--Device-statfs-function getFreeSize(path: string, callback: AsyncCallback<long>): void-End-->
 
@@ -114,7 +106,7 @@ Obtains the free size of the specified file system, in bytes. This API uses an a
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

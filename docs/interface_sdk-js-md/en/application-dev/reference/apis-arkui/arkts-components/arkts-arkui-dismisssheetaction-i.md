@@ -4,10 +4,6 @@ Component sheet dismiss
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface DismissSheetAction--><!--Device-unnamed-declare interface DismissSheetAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Defines sheet dismiss function
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Dismiss reason type.
 **Type:** [DismissReason](arkts-arkui-dismissreason-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

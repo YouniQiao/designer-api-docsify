@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Number--><!--Device-unnamed-interface Number-End-->
 
 ## toLocaleString
@@ -17,10 +13,6 @@ toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOption
 Converts a number to a string by using the current or specified locale.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Number-toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string--><!--Device-Number-toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string-End-->
 

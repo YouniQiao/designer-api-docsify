@@ -16,15 +16,11 @@ Clears the trace ID. This API returns the result synchronously. Clears the HiTra
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiTraceChain-function clearId(): void--><!--Device-hiTraceChain-function clearId(): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Before the service starts, try to clear the trace ID.

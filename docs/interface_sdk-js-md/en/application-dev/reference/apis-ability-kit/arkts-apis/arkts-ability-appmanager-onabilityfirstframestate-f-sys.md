@@ -16,10 +16,6 @@ Registers an observer to listen for the complete of the first frame rendering of
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
 <!--Device-appManager-function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string): void--><!--Device-appManager-function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string): void-End-->
@@ -45,7 +41,7 @@ Registers an observer to listen for the complete of the first frame rendering of
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

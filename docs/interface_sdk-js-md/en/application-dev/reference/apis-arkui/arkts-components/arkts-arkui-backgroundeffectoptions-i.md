@@ -4,10 +4,6 @@ Defines the options of BackgroundEffect
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface BackgroundEffectOptions--><!--Device-unnamed-declare interface BackgroundEffectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Adaptive color mode used for the background blur effect. Default value: **DEFAUL
 **Default:** AdaptiveColor.DEFAULT
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Grayscale blur.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -77,10 +65,6 @@ Brightness. <br>Value range: [0, +∞). <br>Default value: **1** Recommended val
 **Default:** 1
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,10 +88,6 @@ Color.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -129,10 +109,6 @@ Background color when the blur effect does not take effect. This parameter must 
 **Default:** Color.Transparent
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,10 +132,6 @@ Blur activation policy.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -179,10 +151,6 @@ Blur radius. Value range: [0, +∞). Default value: **0**.
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -205,10 +173,6 @@ Saturation. Value range: [0, +∞). Recommended value range: [0, 50].
 **Default:** 1
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

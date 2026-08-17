@@ -4,10 +4,6 @@ Enumerates the user authentication modes.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-huks-export enum HuksUserAuthMode--><!--Device-huks-export enum HuksUserAuthMode-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -21,10 +17,6 @@ HUKS_USER_AUTH_MODE_LOCAL = 0
 Local authentication.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,10 +33,6 @@ HUKS_USER_AUTH_MODE_COAUTH = 1
 Cross-device collaborative authentication.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -16,10 +16,6 @@ Obtains the original size of a compressed file. This API uses a promise to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-zlib-function getOriginalSize(compressedFile: string): Promise<long>--><!--Device-zlib-function getOriginalSize(compressedFile: string): Promise<long>-End-->
@@ -46,7 +42,7 @@ Obtains the original size of a compressed file. This API uses a promise to retur
 | [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
 | [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.

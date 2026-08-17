@@ -4,6 +4,8 @@
 
 Defines the key agreement interfaces.
 
+**Include**: <CryptoArchitectureKit/crypto_key_agreement.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

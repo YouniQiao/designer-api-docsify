@@ -4,6 +4,8 @@
 
 Defines the random number generator interfaces.
 
+**Include**: <CryptoArchitectureKit/crypto_rand.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

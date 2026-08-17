@@ -4,13 +4,9 @@
 declare type Value = boolean | number | Uint8Array
 ```
 
-Represents the value of each attribute in [AssetMap](arkts-assetstore-asset-assetmap-t.md#AssetMap).
+Represents the value of each attribute in [AssetMap](arkts-assetstore-asset-assetmap-t.md#assetmap).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

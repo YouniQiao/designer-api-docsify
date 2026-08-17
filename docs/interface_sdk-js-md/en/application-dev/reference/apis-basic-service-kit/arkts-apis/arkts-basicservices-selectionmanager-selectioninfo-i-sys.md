@@ -4,10 +4,6 @@ Defines the information of a word selection event.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-selectionManager-interface SelectionInfo--><!--Device-selectionManager-interface SelectionInfo-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
@@ -32,10 +28,6 @@ Bundle name of the application where words are selected.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectionInfo-bundleName: string--><!--Device-SelectionInfo-bundleName: string-End-->
@@ -55,10 +47,6 @@ ID of the screen where the window with selected words is located.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ X-coordinate of the screen where the word selection ends, in px.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectionInfo-endDisplayX: int--><!--Device-SelectionInfo-endDisplayX: int-End-->
@@ -103,10 +87,6 @@ Y-coordinate of the screen where the word selection ends, in px.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ X-coordinate of the window where the word selection ends, in px.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectionInfo-endWindowX: int--><!--Device-SelectionInfo-endWindowX: int-End-->
@@ -151,10 +127,6 @@ Y-coordinate of the window where the word selection ends, in px.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +150,6 @@ Word selection types.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectionInfo-selectionType: SelectionType--><!--Device-SelectionInfo-selectionType: SelectionType-End-->
@@ -201,10 +169,6 @@ X-coordinate of the screen where the word selection starts, in px.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,10 +190,6 @@ Y-coordinate of the screen where the word selection starts, in px.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectionInfo-startDisplayY: int--><!--Device-SelectionInfo-startDisplayY: int-End-->
@@ -249,10 +209,6 @@ X-coordinate of the window where the word selection starts, in px.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -274,10 +230,6 @@ Y-coordinate of the window where the word selection starts, in px.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectionInfo-startWindowY: int--><!--Device-SelectionInfo-startWindowY: int-End-->
@@ -297,10 +249,6 @@ ID of the window where words are selected.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

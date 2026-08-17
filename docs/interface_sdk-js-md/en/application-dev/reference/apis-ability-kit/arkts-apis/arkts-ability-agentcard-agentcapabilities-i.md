@@ -4,10 +4,6 @@ Defines optional capabilities supported by an agent.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AgentCapabilities--><!--Device-unnamed-export interface AgentCapabilities-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -23,10 +19,6 @@ Indicates if the agent supports providing an extended agent card when authentica
 **Type:** boolean
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ The protocol extension supported by the agent.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -71,10 +59,6 @@ Indicates if the agent supports sending push notifications for asynchronous task
 **Type:** boolean
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,10 +80,6 @@ If the Agent exposes task state change history.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -119,10 +99,6 @@ Indicates if the agent supports streaming responses.
 **Type:** boolean
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,10 +10,6 @@ function startAVPlayback(bundleName: string, assetId: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string): Promise<void>--><!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string): Promise<void>-End-->
@@ -44,7 +40,7 @@ function startAVPlayback(bundleName: string, assetId: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -64,10 +60,6 @@ function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo)
 携带启动参数的冷启动应用播放接口
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 

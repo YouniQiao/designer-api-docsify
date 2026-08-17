@@ -4,10 +4,6 @@ Enum for connection strategy of the profile
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-baseProfile-export enum ConnectionStrategy--><!--Device-baseProfile-export enum ConnectionStrategy-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -23,10 +19,6 @@ CONNECTION_STRATEGY_UNSUPPORTED = 0
 The value of connection strategy unsupported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ The value of connection strategy allowed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionStrategy-CONNECTION_STRATEGY_ALLOWED = 1--><!--Device-ConnectionStrategy-CONNECTION_STRATEGY_ALLOWED = 1-End-->
@@ -67,10 +55,6 @@ CONNECTION_STRATEGY_FORBIDDEN = 2
 The value of connection strategy forbidden.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

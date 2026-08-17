@@ -1,14 +1,10 @@
 # LightResponse
 
-Describes the ambient light sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
+Describes the ambient light sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
 
-**Inheritance/Implementation:** LightResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**Inheritance/Implementation:** LightResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-interface LightResponse--><!--Device-sensor-interface LightResponse-End-->
 
@@ -32,10 +28,6 @@ Color temperature, in Kelvin. This parameter is optional. If this parameter is n
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LightResponse-colorTemperature?: double--><!--Device-LightResponse-colorTemperature?: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -52,10 +44,6 @@ Infrared luminance, in cd/m?. This parameter is optional. If this parameter is n
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LightResponse-infraredLuminance?: double--><!--Device-LightResponse-infraredLuminance?: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -71,10 +59,6 @@ Illumination, in lux.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LightResponse-intensity: double--><!--Device-LightResponse-intensity: double-End-->
 

@@ -1,12 +1,8 @@
-# AsyncCallback
+# AsyncCallback(Public Callback Information)
 
-Defines a common callback that carries an error parameter and asynchronous return value. It is used to return error information or success data when an asynchronous operation is complete. The error parameter is of the [BusinessError](arkts-basicservices-base-businesserror-i.md#BusinessError) type. The type of the asynchronous return value is defined by the developer.
+Defines a common callback that carries an error parameter and asynchronous return value. It is used to return error information or success data when an asynchronous operation is complete. The error parameter is of the [BusinessError](arkts-basicservices-base-businesserror-i.md#businesserror) type. The type of the asynchronous return value is defined by the developer.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AsyncCallback--><!--Device-unnamed-export interface AsyncCallback-End-->
 
@@ -28,10 +24,6 @@ import { ErrorCallback } from 'ErrorCallback';
 ```
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

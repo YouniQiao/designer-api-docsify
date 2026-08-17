@@ -10,10 +10,6 @@ function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-wantAgent-function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void--><!--Device-wantAgent-function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void-End-->
@@ -25,7 +21,7 @@ function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 获取一个WantAgent的OperationType信息的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 获取一个WantAgent的OperationType信息的回调方法。 |
 
 **错误码：**
 
@@ -36,7 +32,7 @@ function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void
 | [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantAgent object. |
 | [16000015](../errorcode-ability.md#16000015-服务超时) | Service timeout. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -184,10 +180,6 @@ function getOperationType(agent: WantAgent): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-wantAgent-function getOperationType(agent: WantAgent): Promise<int>--><!--Device-wantAgent-function getOperationType(agent: WantAgent): Promise<int>-End-->
@@ -215,7 +207,7 @@ function getOperationType(agent: WantAgent): Promise<int>
 | [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantAgent object. |
 | [16000015](../errorcode-ability.md#16000015-服务超时) | Service timeout. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -16,10 +16,6 @@ Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-connection-function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void--><!--Device-connection-function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void-End-->
@@ -30,7 +26,7 @@ Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle). |
+| netHandle | NetHandle | Yes | Indicates the handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setAppNet. |
 
 **Error codes:**
@@ -43,7 +39,7 @@ Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the 
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -76,10 +72,6 @@ Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-connection-function setAppNet(netHandle: NetHandle): Promise<void>--><!--Device-connection-function setAppNet(netHandle: NetHandle): Promise<void>-End-->
@@ -90,7 +82,7 @@ Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle). |
+| netHandle | NetHandle | Yes | Indicates the handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
 
 **Return value:**
 
@@ -108,7 +100,7 @@ Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the 
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

@@ -1,4 +1,4 @@
-# ArgumentsUnderapplicationError
+# ArgumentsUnderapplicationError(Defines the commonly used Errors for ArkTS)
 
 Represents the error that is thrown when there is a wrong unsafe call to Function
 
@@ -6,9 +6,7 @@ Represents the error that is thrown when there is a wrong unsafe call to Functio
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class ArgumentsUnderapplicationError--><!--Device-unnamed-export class ArgumentsUnderapplicationError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new ArgumentsUnderapplicationError instance with provided message a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

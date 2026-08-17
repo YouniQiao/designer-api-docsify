@@ -4,8 +4,6 @@ Enumerates the tip codes used during the fingerprint authentication process.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
 <!--Device-userAuth-enum FingerprintTips--><!--Device-userAuth-enum FingerprintTips-End-->
@@ -21,8 +19,6 @@ FINGERPRINT_AUTH_TIP_GOOD = 0
 The obtained fingerprint image is in good condition.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 11
 
@@ -40,8 +36,6 @@ Large fingerprint image noise is detected due to suspicious or detected dirt on 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
 <!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_DIRTY = 1--><!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_DIRTY = 1-End-->
@@ -57,8 +51,6 @@ FINGERPRINT_AUTH_TIP_INSUFFICIENT = 2
 The noise of the fingerprint image is too large to be processed.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 11
 
@@ -76,8 +68,6 @@ Incomplete fingerprint image is detected.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
 <!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_PARTIAL = 3--><!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_PARTIAL = 3-End-->
@@ -94,8 +84,6 @@ The fingerprint image is incomplete due to fast movement.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
 <!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_TOO_FAST = 4--><!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_TOO_FAST = 4-End-->
@@ -111,8 +99,6 @@ FINGERPRINT_AUTH_TIP_TOO_SLOW = 5
 Failed to obtain the fingerprint image because the finger seldom moves.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 11
 

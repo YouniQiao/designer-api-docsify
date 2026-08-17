@@ -4,10 +4,6 @@ The RunningAppClone module defines the information of an application clone in th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface RunningAppClone--><!--Device-unnamed-export interface RunningAppClone-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -25,10 +21,6 @@ Index of an application clone.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RunningAppClone-appCloneIndex: int--><!--Device-RunningAppClone-appCloneIndex: int-End-->
 
@@ -48,10 +40,6 @@ Process ID set of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RunningAppClone-pids: Array<int>--><!--Device-RunningAppClone-pids: Array<int>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -69,10 +57,6 @@ UID of the application.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RunningAppClone-uid: int--><!--Device-RunningAppClone-uid: int-End-->
 

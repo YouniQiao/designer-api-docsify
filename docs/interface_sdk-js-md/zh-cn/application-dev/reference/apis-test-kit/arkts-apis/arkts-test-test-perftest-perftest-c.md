@@ -4,10 +4,6 @@ PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class PerfTest--><!--Device-unnamed-declare class PerfTest-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
@@ -21,10 +17,6 @@ static create(strategy: PerfTestStrategy): PerfTest
 静态方法，构造一个PerfTest对象，并返回该对象。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -53,7 +45,7 @@ static create(strategy: PerfTestStrategy): PerfTest
 | [32400003](../errorcode-perftest.md#32400003-参数校验失败) | Parameter verification failed. |
 | [32400001](../errorcode-perftest.md#32400001-初始化失败) | Initialization failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
@@ -92,10 +84,6 @@ destroy(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTest-destroy(): void--><!--Device-PerfTest-destroy(): void-End-->
@@ -109,7 +97,7 @@ destroy(): void
 | [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) | The API does not support concurrent calls. |
 | [32400002](../errorcode-perftest.md#32400002-内部错误) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
@@ -143,10 +131,6 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult--><!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult-End-->
@@ -174,7 +158,7 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 | [32400002](../errorcode-perftest.md#32400002-内部错误) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 | [32400003](../errorcode-perftest.md#32400003-参数校验失败) | Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
@@ -208,10 +192,6 @@ run(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTest-run(): Promise<void>--><!--Device-PerfTest-run(): Promise<void>-End-->
@@ -233,7 +213,7 @@ run(): Promise<void>
 | [32400005](../errorcode-perftest.md#32400005-采集性能数据失败) | Failed to collect metric data. |
 | [32400002](../errorcode-perftest.md#32400002-内部错误) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';

@@ -16,11 +16,9 @@ Starts the VM profiling method. **startProfiling(filename: string)** and **stopP
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md#startJsCpuProfiling)
+**Substitutes:** [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md#startjscpuprofiling)
 
 <!--Device-hidebug-function startProfiling(filename: string): void--><!--Device-hidebug-function startProfiling(filename: string): void-End-->
 
@@ -32,7 +30,7 @@ Starts the VM profiling method. **startProfiling(filename: string)** and **stopP
 | --- | --- | --- | --- |
 | filename | string | Yes | Custom file name of the sampling data. The .json file is generated in the **files** directory of the application based on the specified file name. The maximum length of a string is 128. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

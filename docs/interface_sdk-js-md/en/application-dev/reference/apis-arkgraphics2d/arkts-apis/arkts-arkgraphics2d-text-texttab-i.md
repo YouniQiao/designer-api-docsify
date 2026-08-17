@@ -4,10 +4,6 @@ Implements a paragraph-style text tab, which stores the alignment mode and posit
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface TextTab--><!--Device-text-interface TextTab-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -24,15 +20,11 @@ import { text } from 'text';
 alignment: TextAlign
 ```
 
-Text alignment method after the tab character in a paragraph. It supports the LEFT (left alignment), RIGHT (right alignment), and CENTER (center alignment) alignment methods of [TextAlign](arkts-arkgraphics2d-text-textalign-e.md#TextAlign). Unlisted enum values are treated as left alignment, with left alignment as the default.
+Text alignment method after the tab character in a paragraph. It supports the LEFT (left alignment), RIGHT (right alignment), and CENTER (center alignment) alignment methods of [TextAlign](arkts-arkgraphics2d-text-textalign-e.md#textalign). Unlisted enum values are treated as left alignment, with left alignment as the default.
 
 **Type:** TextAlign
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -51,10 +43,6 @@ Alignment position of the text following the tab character. The value is a float
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -4,10 +4,6 @@ Manifest file information in incremental data. FileManifestData is useful when d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backup-interface FileManifestData--><!--Device-backup-interface FileManifestData-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -31,10 +27,6 @@ A file descriptor for the manifest file that holds the data
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FileManifestData-manifestFd: int--><!--Device-FileManifestData-manifestFd: int-End-->
 

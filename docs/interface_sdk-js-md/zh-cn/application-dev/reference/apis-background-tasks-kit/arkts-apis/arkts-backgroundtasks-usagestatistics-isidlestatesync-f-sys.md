@@ -10,10 +10,6 @@ function isIdleStateSync(bundleName: string): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
 <!--Device-usageStatistics-function isIdleStateSync(bundleName: string): boolean--><!--Device-usageStatistics-function isIdleStateSync(bundleName: string): boolean-End-->
@@ -48,7 +44,7 @@ function isIdleStateSync(bundleName: string): boolean
 | [10000004](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { usageStatistics } from '@kit.BackgroundTasksKit';

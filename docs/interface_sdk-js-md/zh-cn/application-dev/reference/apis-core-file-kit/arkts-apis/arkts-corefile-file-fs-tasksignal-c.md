@@ -4,10 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export class TaskSignal--><!--Device-unnamed-export class TaskSignal-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -22,10 +18,6 @@ cancel(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-TaskSignal-cancel(): void--><!--Device-TaskSignal-cancel(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -38,7 +30,7 @@ cancel(): void
 | 13900010 | Try again |
 | 13900043 | No task can be canceled. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -129,8 +121,6 @@ onCancel(): Promise<string>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
 **废弃版本：** 24
 
 <!--Device-TaskSignal-onCancel(): Promise<string>--><!--Device-TaskSignal-onCancel(): Promise<string>-End-->
@@ -151,7 +141,7 @@ onCancel(): Promise<string>
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { TaskSignal } from '@kit.CoreFileKit';

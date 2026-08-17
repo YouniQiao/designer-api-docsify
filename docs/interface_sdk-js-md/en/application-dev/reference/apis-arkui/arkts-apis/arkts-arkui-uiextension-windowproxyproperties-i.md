@@ -4,10 +4,6 @@ Provides information about a component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiExtension-interface WindowProxyProperties--><!--Device-uiExtension-interface WindowProxyProperties-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,10 +25,6 @@ Position and size of the component (**EmbeddedComponent** or **UIExtensionCompon
 **Type:** window.Rect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

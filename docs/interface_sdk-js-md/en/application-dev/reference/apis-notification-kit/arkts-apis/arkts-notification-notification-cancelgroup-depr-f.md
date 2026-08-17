@@ -10,11 +10,9 @@ Cancels notifications under a notification group of this application. This API u
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelGroup)
+**Substitutes:** [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelgroup)
 
 <!--Device-notification-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notification-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -24,7 +22,7 @@ Cancels notifications under a notification group of this application. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification) when the notification is published. |
+| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification) when the notification is published. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
@@ -38,11 +36,9 @@ Cancels notifications under a notification group of this application. This API u
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelGroup)
+**Substitutes:** [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelgroup)
 
 <!--Device-notification-function cancelGroup(groupName: string): Promise<void>--><!--Device-notification-function cancelGroup(groupName: string): Promise<void>-End-->
 

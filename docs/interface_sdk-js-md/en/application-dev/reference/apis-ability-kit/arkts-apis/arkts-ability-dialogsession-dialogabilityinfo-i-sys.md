@@ -4,10 +4,6 @@ Provides DialogAbility information, including the bundle name, module name, and 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dialogSession-export interface DialogAbilityInfo--><!--Device-dialogSession-export interface DialogAbilityInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -32,10 +28,6 @@ ID of the ability icon.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogAbilityInfo-abilityIconId: int--><!--Device-DialogAbilityInfo-abilityIconId: int-End-->
@@ -55,10 +47,6 @@ ID of the ability label.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Ability name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogAbilityInfo-abilityName: string--><!--Device-DialogAbilityInfo-abilityName: string-End-->
@@ -103,10 +87,6 @@ Index of the application clone.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ ID of the bundle icon.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogAbilityInfo-bundleIconId: int--><!--Device-DialogAbilityInfo-bundleIconId: int-End-->
@@ -151,10 +127,6 @@ ID of the bundle label.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +148,6 @@ Bundle name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogAbilityInfo-bundleName: string--><!--Device-DialogAbilityInfo-bundleName: string-End-->
@@ -199,10 +167,6 @@ Installation directory of the application.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,10 +188,6 @@ Installation source of the application. The options are as follows: - **pre-inst
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogAbilityInfo-installSource?: string--><!--Device-DialogAbilityInfo-installSource?: string-End-->
@@ -247,10 +207,6 @@ Module name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,10 +228,6 @@ Multi-app mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogAbilityInfo-multiAppMode: MultiAppMode--><!--Device-DialogAbilityInfo-multiAppMode: MultiAppMode-End-->
@@ -295,10 +247,6 @@ Whether the ability is visible. **true** if visible, **false** otherwise.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,9 +4,7 @@ Defines the snapshot info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-interface SnapshotInfo--><!--Device-webview-interface SnapshotInfo-End-->
 
@@ -24,9 +22,7 @@ Id of the snapshot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SnapshotInfo-id?: string--><!--Device-SnapshotInfo-id?: string-End-->
 
@@ -44,9 +40,7 @@ Size for web rendering. The maximum size is 16000 px × 16000 px. The length uni
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SnapshotInfo-size?: SizeOptions--><!--Device-SnapshotInfo-size?: SizeOptions-End-->
 

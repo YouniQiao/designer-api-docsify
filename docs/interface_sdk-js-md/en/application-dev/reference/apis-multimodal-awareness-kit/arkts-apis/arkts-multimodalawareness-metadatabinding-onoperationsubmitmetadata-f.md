@@ -16,10 +16,6 @@ Subscribes to a system event to obtain the encoded metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-metadataBinding-function onOperationSubmitMetadata(bundleName: string, callback: Callback<int>): void--><!--Device-metadataBinding-function onOperationSubmitMetadata(bundleName: string, callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding

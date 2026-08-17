@@ -4,10 +4,6 @@ Control margin status of ExceptionPromptV2.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum MarginTypeV2--><!--Device-unnamed-export declare enum MarginTypeV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ DEFAULT_MARGIN = 0
 Default margin of MarginTypeV2, Margin 1: references ohos_id_card_margin_start, margin 2: references ohos_id_card_margin_end.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ FIT_MARGIN = 1
 Margins can be adapted of MarginTypeV2, wider than the default margin. Margin 1: references ohos_id_max_padding_start, margin 2: references ohos_id_max_padding_end.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,8 @@
 # LaunchReason
 
-Enumerates the ability launch reasons. You can use it together with the value of **launchParam.launchReason** in [onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) of the UIAbility to complete different operations.
+Enumerates the ability launch reasons. You can use it together with the value of **launchParam.launchReason** in [onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) of the UIAbility to complete different operations.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AbilityConstant-export enum LaunchReason--><!--Device-AbilityConstant-export enum LaunchReason-End-->
 
@@ -22,10 +18,6 @@ Unknown reason.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -40,13 +32,9 @@ Unknown reason.
 START_ABILITY = 1
 ```
 
-The ability is started by calling [startAbility](arkts-ability-uiabilitycontext-c.md#startAbility) .
+The ability is started by calling [startAbility](arkts-ability-uiabilitycontext-c.md#startability) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,13 +50,9 @@ The ability is started by calling [startAbility](arkts-ability-uiabilitycontext-
 CALL = 2
 ```
 
-The ability is started by calling [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startAbilityByCall).
+The ability is started by calling [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,10 +72,6 @@ The ability is started by means of cross-device migration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -109,10 +89,6 @@ APP_RECOVERY = 4
 The ability is automatically started when the application is restored from a fault.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,10 +108,6 @@ The ability is started by means of atomic service sharing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -154,10 +126,6 @@ The ability is automatically started upon system boot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LaunchReason-AUTO_STARTUP = 8--><!--Device-LaunchReason-AUTO_STARTUP = 8-End-->
@@ -173,10 +141,6 @@ INSIGHT_INTENT = 9
 The ability is started by the InsightIntent framework..
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,10 +160,6 @@ The ability is started in advance during cross-device migration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -217,10 +177,6 @@ PRELOAD = 11
 The ability is started through preloading.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

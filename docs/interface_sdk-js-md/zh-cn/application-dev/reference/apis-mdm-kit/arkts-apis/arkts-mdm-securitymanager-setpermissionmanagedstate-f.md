@@ -15,10 +15,6 @@ function setPermissionManagedState(
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -46,7 +42,7 @@ function setPermissionManagedState(
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -65,7 +61,8 @@ let appInstanceTemp: securityManager.ApplicationInstance = {
 };
 let permissionsTemp: Array<string> = ['ohos.permission.CAMERA', 'ohos.permission.LOCATION'];
 try {
-  securityManager.setPermissionManagedState(wantTemp, appInstanceTemp, permissionsTemp, securityManager.PermissionManagedState.GRANTED);
+  securityManager.setPermissionManagedState(wantTemp, appInstanceTemp, permissionsTemp,
+    securityManager.PermissionManagedState.GRANTED);
   console.info('Succeeded in setting permission managed state.');
 } catch (err) {
   console.error(`Failed to set permission managed state.  Code: ${err.code}, message: ${err.message}`);

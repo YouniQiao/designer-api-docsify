@@ -4,10 +4,6 @@ Enumerates the KV store security levels. > **NOTE：**> > For the scenarios invo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedKVStore-enum SecurityLevel--><!--Device-distributedKVStore-enum SecurityLevel-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -21,10 +17,6 @@ S1
 S1: means the db is in the low security level There are some low impact when the data is leaked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ S2: means the db is in the middle security level There are some major impact whe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityLevel-S2--><!--Device-SecurityLevel-S2-End-->
@@ -62,10 +50,6 @@ S3: means the db is in the high security level There are some severity impact wh
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityLevel-S3--><!--Device-SecurityLevel-S3-End-->
@@ -81,10 +65,6 @@ S4
 S4: means the db is in the critical security level There are some critical impact when the data is leaked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,13 +4,9 @@
 type OnNavigationEntryCommittedCallback = (loadCommittedDetails: LoadCommittedDetails) => void
 ```
 
-The callback of load committed.
+Defines a callback invoked when a navigation entry is submitted.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -22,5 +18,5 @@ The callback of load committed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loadCommittedDetails | [LoadCommittedDetails](arkts-arkweb-loadcommitteddetails-i.md) | Yes | callback information of onNavigationEntryCommitted. |
+| loadCommittedDetails | [LoadCommittedDetails](arkts-arkweb-loadcommitteddetails-i.md) | Yes | Detailed information about the web page that has been submitted for redirection. |
 

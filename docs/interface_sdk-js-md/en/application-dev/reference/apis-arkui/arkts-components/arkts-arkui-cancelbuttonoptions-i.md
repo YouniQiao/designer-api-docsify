@@ -4,10 +4,6 @@ Defines the CancelButton options.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface CancelButtonOptions--><!--Device-unnamed-interface CancelButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Icon of the Cancel button on the right.
 **Type:** [IconOptions](arkts-arkui-iconoptions-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Display state of the Cancel button on the right.
 **Type:** [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,8 +16,6 @@ Queries state data of all bundles within a specified period identified by the st
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
@@ -36,7 +34,7 @@ Queries state data of all bundles within a specified period identified by the st
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | Yes | the state data of all bundles. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -65,8 +63,6 @@ Queries state data of all bundles within a specified period identified by the st
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
@@ -90,7 +86,7 @@ Queries state data of all bundles within a specified period identified by the st
 | --- | --- |
 | Promise&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | the state data of all bundles. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

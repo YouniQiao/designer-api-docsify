@@ -2,15 +2,13 @@
 
 The Worker class contains all Worker functions.
 
-**Inheritance/Implementation:** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md#EventTarget)
+**Inheritance/Implementation:** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md#eventtarget)
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ThreadWorker](arkts-arkts-worker-threadworker-c.md#ThreadWorker)
+**Substitutes:** [ThreadWorker](arkts-arkts-worker-threadworker-c.md#threadworker)
 
 <!--Device-worker-class Worker--><!--Device-worker-class Worker-End-->
 
@@ -45,8 +43,6 @@ Creates a worker instance
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** constructor
@@ -62,7 +58,7 @@ Creates a worker instance
 | scriptURL | string | Yes | scriptURL URL of the script to be executed by the worker |
 | options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | No | Options that can be set for the worker |
 
-## Examples
+**Examples**
 
 The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
 
@@ -84,8 +80,6 @@ Removes an event listener to the worker.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** off
@@ -101,7 +95,7 @@ Removes an event listener to the worker.
 | type | string | Yes | Type of the event for which the event listener is removed. |
 | listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No | listener Callback of the event listener to remove. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -122,8 +116,6 @@ Adds an event listener to the worker.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** on
@@ -139,7 +131,7 @@ Adds an event listener to the worker.
 | type | string | Yes | type Adds an event listener to the worker. |
 | listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | listener Callback to invoke when an event of the specified type occurs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -161,8 +153,6 @@ Adds an event listener to the worker and removes the event listener automaticall
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** once
@@ -178,7 +168,7 @@ Adds an event listener to the worker and removes the event listener automaticall
 | type | string | Yes | Type of the event to listen for |
 | listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | listener Callback to invoke when an event of the specified type occurs |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -200,8 +190,6 @@ Sends a message to the worker thread. The data is transferred using the structur
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** postMessage
@@ -217,7 +205,7 @@ Sends a message to the worker thread. The data is transferred using the structur
 | message | Object | Yes | Data to be sent to the worker |
 | transfer | ArrayBuffer[] | Yes | transfer ArrayBuffer instance that can be transferred. The transferList array cannot contain null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -239,8 +227,6 @@ Sends a message to the worker thread. The data is transferred using the structur
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** postMessage
@@ -256,7 +242,7 @@ Sends a message to the worker thread. The data is transferred using the structur
 | message | Object | Yes | Data to be sent to the worker |
 | options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | Option can be set for postmessage. The transferList array cannot contain null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -280,8 +266,6 @@ Terminates the worker thread to stop the worker from receiving messages
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** terminate
@@ -290,7 +274,7 @@ Terminates the worker thread to stop the worker from receiving messages
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -312,8 +296,6 @@ The onerror attribute of the worker specifies the event handler to be called whe
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** onerror
@@ -333,8 +315,6 @@ Called when the Worker thread exits. The event handler is executed in the host t
 **Type:** (code: number) =&gt; void
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -356,8 +336,6 @@ The onmessage attribute of the worker specifies the event handler to be called t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** onmessage
@@ -377,8 +355,6 @@ The onmessage attribute of the worker specifies the event handler when the worke
 **Type:** (event: MessageEvent) =&gt; void
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

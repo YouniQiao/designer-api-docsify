@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface AsyncIterable--><!--Device-unnamed-interface AsyncIterable-End-->
 
 ## [Symbol.asyncIterator]
@@ -15,10 +11,6 @@
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-AsyncIterable-[Symbol.asyncIterator](): AsyncIterator<T>--><!--Device-AsyncIterable-[Symbol.asyncIterator](): AsyncIterator<T>-End-->
 

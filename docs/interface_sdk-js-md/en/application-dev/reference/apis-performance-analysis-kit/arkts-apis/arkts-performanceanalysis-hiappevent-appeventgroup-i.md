@@ -1,12 +1,8 @@
 # AppEventGroup
 
-Defines parameters of the event group returned by the subscription. This API can be used to obtain detail information about an event group, which is often used in the **onReceive** callback of [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#Watcher).
+Defines parameters of the event group returned by the subscription. This API can be used to obtain detail information about an event group, which is often used in the **onReceive** callback of [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#watcher).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hiAppEvent-interface AppEventGroup--><!--Device-hiAppEvent-interface AppEventGroup-End-->
 
@@ -30,10 +26,6 @@ Event object group.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AppEventGroup-appEventInfos: Array<AppEventInfo>--><!--Device-AppEventGroup-appEventInfos: Array<AppEventInfo>-End-->
@@ -51,10 +43,6 @@ Event name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

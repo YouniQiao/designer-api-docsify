@@ -1,14 +1,12 @@
 # HitTestType
 
-Enumerates the test result types of the click event.
+Enumerates the test result types of the click event. > **NOTE：**> > Supported since API version 9 and deprecated since API version 21. You are advised to use > [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#webhittesttype) instead.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 21
 
-**Substitutes:** [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#WebHitTestType)
+**Substitutes:** [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#webhittesttype)
 
 <!--Device-unnamed-declare enum HitTestType--><!--Device-unnamed-declare enum HitTestType-End-->
 
@@ -24,11 +22,9 @@ Editable area.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 21
 
-**Substitutes:** [EditText](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#EditText)
+**Substitutes:** [EditText](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#edittext)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,11 +42,9 @@ Email address.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 21
 
-**Substitutes:** [Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#Email)
+**Substitutes:** [Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#email)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,11 +62,9 @@ Hyperlink whose **src** is **http**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 21
 
-**Substitutes:** [HttpAnchor](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#HttpAnchor)
+**Substitutes:** [HttpAnchor](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#httpanchor)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,11 +82,9 @@ Image with a hyperlink, where **src** is **http**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 21
 
-**Substitutes:** [HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#HttpAnchorImg)
+**Substitutes:** [HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#httpanchorimg)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -112,11 +102,9 @@ HTML::img tag.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 21
 
-**Substitutes:** [Img](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#Img)
+**Substitutes:** [Img](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#img)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -134,11 +122,9 @@ Geographical address.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 21
 
-**Substitutes:** [Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#Map)
+**Substitutes:** [Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#map)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -156,11 +142,9 @@ Phone number.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 21
 
-**Substitutes:** [Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#Phone)
+**Substitutes:** [Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#phone)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -178,11 +162,9 @@ Unknown content.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 21
 
-**Substitutes:** [Unknown](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#Unknown)
+**Substitutes:** [Unknown](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#unknown)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

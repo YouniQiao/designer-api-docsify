@@ -4,11 +4,9 @@ Represents a screen hopping message notification.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#CooperateState-(System-API))
+**Substitutes:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperatestate-system-api)
 
 <!--Device-cooperate-enum CooperateMsg--><!--Device-cooperate-enum CooperateMsg-End-->
 
@@ -26,11 +24,9 @@ The preparation for screen hopping is finished.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_PREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_PREPARE)
+**Substitutes:** [COOPERATE_PREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateprepare)
 
 <!--Device-CooperateMsg-COOPERATE_PREPARE = 0--><!--Device-CooperateMsg-COOPERATE_PREPARE = 0-End-->
 
@@ -48,11 +44,9 @@ The preparation for screen hopping is cancelled.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_UNPREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_UNPREPARE)
+**Substitutes:** [COOPERATE_UNPREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateunprepare)
 
 <!--Device-CooperateMsg-COOPERATE_UNPREPARE = 1--><!--Device-CooperateMsg-COOPERATE_UNPREPARE = 1-End-->
 
@@ -70,11 +64,9 @@ Screen hopping starts.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_ACTIVATE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_ACTIVATE)
+**Substitutes:** [COOPERATE_ACTIVATE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateactivate)
 
 <!--Device-CooperateMsg-COOPERATE_ACTIVATE = 2--><!--Device-CooperateMsg-COOPERATE_ACTIVATE = 2-End-->
 
@@ -92,11 +84,9 @@ Starting screen hopping succeeds.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_ACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_ACTIVATE_SUCCESS)
+**Substitutes:** [COOPERATE_ACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateactivatesuccess)
 
 <!--Device-CooperateMsg-COOPERATE_ACTIVATE_SUCCESS = 3--><!--Device-CooperateMsg-COOPERATE_ACTIVATE_SUCCESS = 3-End-->
 
@@ -114,11 +104,9 @@ Starting screen hopping fails.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_ACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_ACTIVATE_FAILURE)
+**Substitutes:** [COOPERATE_ACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateactivatefailure)
 
 <!--Device-CooperateMsg-COOPERATE_ACTIVATE_FAIL = 4--><!--Device-CooperateMsg-COOPERATE_ACTIVATE_FAIL = 4-End-->
 
@@ -136,11 +124,9 @@ Stopping screen hopping succeeds.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_DEACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_DEACTIVATE_SUCCESS)
+**Substitutes:** [COOPERATE_DEACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperatedeactivatesuccess)
 
 <!--Device-CooperateMsg-COOPERATE_DEACTIVATE_SUCCESS = 5--><!--Device-CooperateMsg-COOPERATE_DEACTIVATE_SUCCESS = 5-End-->
 
@@ -158,11 +144,9 @@ Stopping screen hopping fails.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_DEACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_DEACTIVATE_FAILURE)
+**Substitutes:** [COOPERATE_DEACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperatedeactivatefailure)
 
 <!--Device-CooperateMsg-COOPERATE_DEACTIVATE_FAIL = 6--><!--Device-CooperateMsg-COOPERATE_DEACTIVATE_FAIL = 6-End-->
 
@@ -180,11 +164,9 @@ The screen hopping session is disconnected.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_SESSION_DISCONNECTED](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_SESSION_DISCONNECTED)
+**Substitutes:** [COOPERATE_SESSION_DISCONNECTED](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperatesessiondisconnected)
 
 <!--Device-CooperateMsg-COOPERATE_SESSION_DISCONNECTED = 7--><!--Device-CooperateMsg-COOPERATE_SESSION_DISCONNECTED = 7-End-->
 

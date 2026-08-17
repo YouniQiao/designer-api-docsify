@@ -12,15 +12,13 @@ import { usb } from 'usb';
 function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number
 ```
 
-Claims a USB interface. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and USB interfaces, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter.
+Claims a USB interface. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list and USB interfaces, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface)
+**Substitutes:** [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface)
 
 <!--Device-usb-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number--><!--Device-usb-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number-End-->
 
@@ -40,7 +38,7 @@ Claims a USB interface. Before you do this, call [usb.getDevices](arkts-basicser
 | --- | --- |
 | number | Returns **0** if the USB interface is successfully claimed; returns an error code otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ret = usb.claimInterface(devicepipe, interfaces);

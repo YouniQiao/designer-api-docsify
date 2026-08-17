@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-photoAccessHelper-interface PhotoCreationSource--><!--Device-photoAccessHelper-interface PhotoCreationSource-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -25,10 +21,6 @@ appId?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PhotoCreationSource-appId?: string--><!--Device-PhotoCreationSource-appId?: string-End-->
 
@@ -48,10 +40,6 @@ appName?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PhotoCreationSource-appName?: string--><!--Device-PhotoCreationSource-appName?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -70,10 +58,6 @@ bundleName?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PhotoCreationSource-bundleName?: string--><!--Device-PhotoCreationSource-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -91,10 +75,6 @@ tokenId?: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PhotoCreationSource-tokenId?: long--><!--Device-PhotoCreationSource-tokenId?: long-End-->
 

@@ -10,10 +10,6 @@ function setControlledAppLists(appLists: Array<string>, userId?: number): Promis
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.DLP_POLICY_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -46,13 +42,13 @@ function setControlledAppLists(appLists: Array<string>, userId?: number): Promis
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [19100024](../errorcode-dlp.md#19100024-个人空间用户不支持设置受控应用) | The specified userId belongs to a personal space user and cannot be managed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let appList: Array<string> = ["appId1", "appId2"];
+let appList: Array<string> = ['appId1', 'appId2'];
 let userId: number = 100;
 dlpPermission.setControlledAppLists(appList, userId).then(() => {
   console.info("Successfully set controlled appLists.");

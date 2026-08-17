@@ -16,10 +16,6 @@ Unregisters a system callback for the device connection phase.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-avSession-function offDeviceStateChanged(callback?: Callback<DeviceState>): void--><!--Device-avSession-function offDeviceStateChanged(callback?: Callback<DeviceState>): void-End-->

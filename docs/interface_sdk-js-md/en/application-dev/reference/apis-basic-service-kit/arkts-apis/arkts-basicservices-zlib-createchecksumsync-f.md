@@ -16,10 +16,6 @@ Creates this checksum object. A checksum instance is returned upon a success.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-zlib-function createChecksumSync(): Checksum--><!--Device-zlib-function createChecksumSync(): Checksum-End-->
@@ -32,7 +28,7 @@ Creates this checksum object. A checksum instance is returned upon a success.
 | --- | --- |
 | [Checksum](arkts-basicservices-zlib-checksum-i.md) | Checksum object instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

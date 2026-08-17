@@ -4,10 +4,6 @@ Declare TreeControllerV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class TreeControllerV2--><!--Device-unnamed-export declare class TreeControllerV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -33,10 +29,6 @@ Initialize the interface of the tree view. This interface is used to generate Li
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -49,13 +41,13 @@ Initialize the interface of the tree view. This interface is used to generate Li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nodeParam | [NodeParamV2](arkts-arkui-arkui-advanced-treeviewv2-nodeparamv2-i.md) | No | Configuration information of the newly added node. |
+| nodeParam | [NodeParamV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-nodeparamv2-i.md) | No | Configuration information of the newly added node. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md) | ListTreeNode Tree view component proxy class. |
+| [TreeControllerV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-treecontrollerv2-c.md) | ListTreeNode Tree view component proxy class. |
 
 ## buildDone
 
@@ -66,10 +58,6 @@ buildDone(): void
 After the initialization is complete by calling the addNode interface, call this interface to complete initialization. This interface must be called when you finish initializing the ListTreeViewV2 by addNode.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,10 +77,6 @@ Modify the node name. Register an ON_ITEM_MODIFY callback to obtain the ID, pare
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -110,10 +94,6 @@ refreshNode(parentId: number, parentSubTitle: ResourceStr, currentSubtitle: Reso
 This interface is called when a secondaryTitle needs to be updated
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,10 +120,6 @@ removeNode(): void
 Delete a node. Register an ON_ITEM_DELETE callback through the ListTreeListenerV2 mechanism to obtain the IDs of all deleted nodes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

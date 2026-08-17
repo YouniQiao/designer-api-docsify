@@ -10,10 +10,6 @@ function setEthernetConfig(admin: Want, networkInterface: string, config: Interf
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -40,7 +36,7 @@ function setEthernetConfig(admin: Want, networkInterface: string, config: Interf
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 | [9201010](../errorcode-enterpriseDeviceManager.md#9201010-以太网网络接口配置失败) | Ethernet configuration failed. Ethernet device not connected. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -49,7 +45,7 @@ import { networkManager } from '@kit.MDMKit';
 let wantTemp: Want = {
   // 需根据实际情况进行替换
   bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility',
+  abilityName: 'EnterpriseAdminAbility'
 };
 let config: networkManager.InterfaceConfig = {
   // 需根据实际情况进行替换

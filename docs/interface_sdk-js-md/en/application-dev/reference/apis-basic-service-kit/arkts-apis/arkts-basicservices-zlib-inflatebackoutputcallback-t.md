@@ -8,10 +8,6 @@ The output data provided by the user is written into the callback function. When
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-zlib-type InflateBackOutputCallback = (outDesc: RecordData, buf: ArrayBuffer, length: int) => int--><!--Device-zlib-type InflateBackOutputCallback = (outDesc: RecordData, buf: ArrayBuffer, length: int) => int-End-->

@@ -16,10 +16,6 @@ Triggers a notification for cross-device operations, such as tap-to-redirect and
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationSubscribe-function distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise<void>--><!--Device-notificationSubscribe-function distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise<void>-End-->
@@ -51,7 +47,7 @@ Triggers a notification for cross-device operations, such as tap-to-redirect and
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 | [1600021](../errorcode-notification.md#1600021-crossdevice-communication-timeout) | Distributed operation timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

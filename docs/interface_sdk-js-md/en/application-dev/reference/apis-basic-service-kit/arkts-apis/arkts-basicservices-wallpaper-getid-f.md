@@ -16,8 +16,6 @@ Obtains the ID of the wallpaper of the specified type. Returns an integer greate
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-wallpaper-function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void--><!--Device-wallpaper-function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void-End-->
@@ -31,7 +29,7 @@ Obtains the ID of the wallpaper of the specified type. Returns an integer greate
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of getId. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,8 +54,6 @@ Obtains the ID of the wallpaper of the specified type. Returns an integer greate
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-wallpaper-function getId(wallpaperType: WallpaperType): Promise<number>--><!--Device-wallpaper-function getId(wallpaperType: WallpaperType): Promise<number>-End-->
@@ -76,7 +72,7 @@ Obtains the ID of the wallpaper of the specified type. Returns an integer greate
 | --- | --- |
 | Promise&lt;number&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

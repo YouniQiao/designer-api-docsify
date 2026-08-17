@@ -1,12 +1,8 @@
 # DepthProfile (System API)
 
-Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md#Profile).
+Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md#profile).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface DepthProfile--><!--Device-camera-interface DepthProfile-End-->
 
@@ -32,10 +28,6 @@ Accuracy of the depth data, which can be either relative accuracy or absolute ac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DepthProfile-readonly dataAccuracy: DepthDataAccuracy--><!--Device-DepthProfile-readonly dataAccuracy: DepthDataAccuracy-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -54,10 +46,6 @@ Camera output format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DepthProfile-readonly format: CameraFormat--><!--Device-DepthProfile-readonly format: CameraFormat-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -75,10 +63,6 @@ Depth data resolution.
 **Type:** Size
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DepthProfile-readonly size: Size--><!--Device-DepthProfile-readonly size: Size-End-->
 

@@ -10,10 +10,6 @@ function getAllBundleInfo(bundleFlags: int, callback: AsyncCallback<Array<Bundle
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
 <!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, callback: AsyncCallback<Array<BundleInfo>>): void--><!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, callback: AsyncCallback<Array<BundleInfo>>): void-End-->
@@ -27,7 +23,7 @@ function getAllBundleInfo(bundleFlags: int, callback: AsyncCallback<Array<Bundle
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，当获取成功时，err为 undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;BundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当获取成功时，err为 undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -37,7 +33,7 @@ function getAllBundleInfo(bundleFlags: int, callback: AsyncCallback<Array<Bundle
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -71,10 +67,6 @@ function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
 <!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback<Array<BundleInfo>>): void--><!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback<Array<BundleInfo>>): void-End-->
@@ -88,8 +80,8 @@ function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息。 |
-| userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，当获取成功时，err为 undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
+| userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;BundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当获取成功时，err为 undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -100,7 +92,7 @@ function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -135,10 +127,6 @@ function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleI
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
 <!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>--><!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>-End-->
@@ -152,7 +140,7 @@ function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息。 |
-| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取，默认值：调用方所在用户，取值范围：大于等于0。 |
+| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **返回值：**
 
@@ -169,7 +157,7 @@ function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleI
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

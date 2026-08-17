@@ -4,9 +4,7 @@ Defines the triggered callback when the Web page refreshes accessed history.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnRefreshAccessedHistoryEvent--><!--Device-unnamed-export declare interface OnRefreshAccessedHistoryEvent-End-->
 
@@ -24,9 +22,7 @@ Whether is triggered by main frame.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnRefreshAccessedHistoryEvent-isMainFrame?: boolean--><!--Device-OnRefreshAccessedHistoryEvent-isMainFrame?: boolean-End-->
 
@@ -44,9 +40,7 @@ If true, the page is being reloaded, otherwise, means that the page is newly loa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnRefreshAccessedHistoryEvent-isRefreshed: boolean--><!--Device-OnRefreshAccessedHistoryEvent-isRefreshed: boolean-End-->
 
@@ -64,9 +58,7 @@ URL of the visit.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnRefreshAccessedHistoryEvent-url: string--><!--Device-OnRefreshAccessedHistoryEvent-url: string-End-->
 

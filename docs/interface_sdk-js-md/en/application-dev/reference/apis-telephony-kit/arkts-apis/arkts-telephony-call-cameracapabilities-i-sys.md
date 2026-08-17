@@ -4,10 +4,6 @@ Defines the local image resolution in a video call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface CameraCapabilities--><!--Device-call-export interface CameraCapabilities-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -32,10 +28,6 @@ Call ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CameraCapabilities-callId: int--><!--Device-CameraCapabilities-callId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -54,10 +46,6 @@ Height of the local image, in pixels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CameraCapabilities-height: int--><!--Device-CameraCapabilities-height: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -75,10 +63,6 @@ Width of the local image, in pixels.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CameraCapabilities-width: int--><!--Device-CameraCapabilities-width: int-End-->
 

@@ -4,11 +4,9 @@ Want is a carrier for information transfer between objects (application componen
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Want/Want](arkts-ability-app-ability-want-want-c.md#Want)
+**Substitutes:** [Want/Want](arkts-ability-app-ability-want-want-c.md#want)
 
 <!--Device-unnamed-export default class Want--><!--Device-unnamed-export default class Want-End-->
 
@@ -26,11 +24,9 @@ Name of the ability. If both **bundleName** and **abilityName** are specified in
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [abilityName](arkts-ability-app-ability-want-want-c.md#abilityName)
+**Substitutes:** [abilityName](arkts-ability-app-ability-want-want-c.md#abilityname)
 
 <!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
@@ -42,13 +38,11 @@ Name of the ability. If both **bundleName** and **abilityName** are specified in
 action?: string
 ```
 
-Action to take, such as viewing and sharing application details. In implicit Want, you can define this property and use it together with **uri** or **parameters** to specify the operation to be performed on the data. For details, see [action](arkts-ability-wantconstant-action-depr-e.md#Action). For details about the definition and matching rules of implicit Want, see [Matching Rules of Explicit Want and Implicit Want](../../../application-models/explicit-implicit-want-mappings.md) .
+Action to take, such as viewing and sharing application details. In implicit Want, you can define this property and use it together with **uri** or **parameters** to specify the operation to be performed on the data. For details, see [action](arkts-ability-wantconstant-action-depr-e.md#action). For details about the definition and matching rules of implicit Want, see [Matching Rules of Explicit Want and Implicit Want](../../../application-models/explicit-implicit-want-mappings.md) .
 
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -70,11 +64,9 @@ Bundle name.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [bundleName](arkts-ability-app-ability-want-want-c.md#bundleName)
+**Substitutes:** [bundleName](arkts-ability-app-ability-want-want-c.md#bundlename)
 
 <!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
@@ -92,11 +84,9 @@ ID of the device running the ability. If this field is unspecified, the local de
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](arkts-ability-app-ability-want-want-c.md#deviceId)
+**Substitutes:** [deviceId](arkts-ability-app-ability-want-want-c.md#deviceid)
 
 <!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
@@ -108,13 +98,11 @@ ID of the device running the ability. If this field is unspecified, the local de
 entities?: Array<string>
 ```
 
-Additional category information (such as browser and video player) of the ability. It is a supplement to the **action** field for implicit Want. and is used to filter ability types. For details, see [entity](arkts-ability-wantconstant-entity-depr-e.md#Entity).
+Additional category information (such as browser and video player) of the ability. It is a supplement to the **action** field for implicit Want. and is used to filter ability types. For details, see [entity](arkts-ability-wantconstant-entity-depr-e.md#entity).
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -130,13 +118,11 @@ Additional category information (such as browser and video player) of the abilit
 flags?: number
 ```
 
-How the Want object will be handled. By default, numbers are passed in. For details, see [flags](arkts-ability-wantconstant-flags-depr-e.md#Flags).
+How the Want object will be handled. By default, numbers are passed in. For details, see [flags](arkts-ability-wantconstant-flags-depr-e.md#flags).
 
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -158,8 +144,6 @@ Want parameters in the form of custom key-value (KV) pairs. By default, the foll
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [parameters](arkts-ability-app-ability-want-want-c.md#parameters)
@@ -180,8 +164,6 @@ MIME type, that is, the type of the file to open, for example, **'text/xml'** an
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [type](arkts-ability-app-ability-want-want-c.md#type)
@@ -201,8 +183,6 @@ URI information to match. If **Uri** is specified in a Want object, the Want obj
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

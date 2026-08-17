@@ -16,10 +16,6 @@ Register to monitor the installation status
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
 <!--Device-bundleMonitor-function on(type: BundleChangedEvent, callback: Callback<BundleChangedInfo>): void--><!--Device-bundleMonitor-function on(type: BundleChangedEvent, callback: Callback<BundleChangedInfo>): void-End-->
@@ -43,7 +39,7 @@ Register to monitor the installation status
 | [201](../../errorcode-universal.md#201-permission-denied) | Verify permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleMonitor } from '@kit.AbilityKit';

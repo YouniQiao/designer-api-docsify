@@ -1,12 +1,8 @@
 # Rect
 
-Describes a rectangle. The coordinate system for the returned detection points is based on the landscape device orientation, with the charging port on the right. In this coordinate system, the top-left corner is (0, 0), and the bottom-right corner is (1, 1). Here, **topLeftX** and **topLeftY** represent the coordinates of the top-left corner of the rectangle, whereas **width** and **height** represent the width and height of the rectangle, respectively. When cropping or selecting a face region based on specific requirements, the x and y coordinates of the rectangle must be multiplied by the width and height of the actual camera preview output stream to obtain the cropped face region. The width and height of the actual preview stream refer to the resolution of the camera output stream. For details, see **size** in [profile](arkts-camera-camera-profile-i.md#Profile). For details about how to obtain the preview stream data, see [Dual-Channel Preview (ArkTS)](../../../media/camera/camera-dual-channel-preview.md).
+Describes a rectangle. The coordinate system for the returned detection points is based on the landscape device orientation, with the charging port on the right. In this coordinate system, the top-left corner is (0, 0), and the bottom-right corner is (1, 1). Here, **topLeftX** and **topLeftY** represent the coordinates of the top-left corner of the rectangle, whereas **width** and **height** represent the width and height of the rectangle, respectively. When cropping or selecting a face region based on specific requirements, the x and y coordinates of the rectangle must be multiplied by the width and height of the actual camera preview output stream to obtain the cropped face region. The width and height of the actual preview stream refer to the resolution of the camera output stream. For details, see **size** in [profile](arkts-camera-camera-profile-i.md#profile). For details about how to obtain the preview stream data, see [Dual-Channel Preview (ArkTS)](../../../media/camera/camera-dual-channel-preview.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface Rect--><!--Device-camera-interface Rect-End-->
 
@@ -30,10 +26,6 @@ Height of the rectangle, in the range of [0, 1].
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-Rect-height: double--><!--Device-Rect-height: double-End-->
@@ -51,10 +43,6 @@ X coordinate of the top-left corner of the rectangle, in the range of [0, 1].
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -74,10 +62,6 @@ Y coordinate of the top-left corner of the rectangle, in the range of [0, 1].
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-Rect-topLeftY: double--><!--Device-Rect-topLeftY: double-End-->
@@ -95,10 +79,6 @@ Width of the rectangle, in the range of [0, 1].
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

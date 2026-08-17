@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-interface PrinterPreferences--><!--Device-print-interface PrinterPreferences-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -24,10 +20,6 @@ borderless?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterPreferences-borderless?: boolean--><!--Device-PrinterPreferences-borderless?: boolean-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -43,10 +35,6 @@ defaultCollate?: boolean
 **类型：** boolean
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,10 +54,6 @@ defaultColorMode?: PrintColorMode
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrinterPreferences-defaultColorMode?: PrintColorMode--><!--Device-PrinterPreferences-defaultColorMode?: PrintColorMode-End-->
@@ -88,10 +72,6 @@ defaultDuplexMode?: PrintDuplexMode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterPreferences-defaultDuplexMode?: PrintDuplexMode--><!--Device-PrinterPreferences-defaultDuplexMode?: PrintDuplexMode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -107,10 +87,6 @@ defaultMediaType?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterPreferences-defaultMediaType?: string--><!--Device-PrinterPreferences-defaultMediaType?: string-End-->
 
@@ -128,10 +104,6 @@ defaultOrientation?: PrintOrientationMode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterPreferences-defaultOrientation?: PrintOrientationMode--><!--Device-PrinterPreferences-defaultOrientation?: PrintOrientationMode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -147,10 +119,6 @@ defaultPageSizeId?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterPreferences-defaultPageSizeId?: string--><!--Device-PrinterPreferences-defaultPageSizeId?: string-End-->
 
@@ -168,10 +136,6 @@ defaultPrintQuality?: PrintQuality
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterPreferences-defaultPrintQuality?: PrintQuality--><!--Device-PrinterPreferences-defaultPrintQuality?: PrintQuality-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -187,10 +151,6 @@ defaultReverse?: boolean
 **类型：** boolean
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -209,10 +169,6 @@ options?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterPreferences-options?: string--><!--Device-PrinterPreferences-options?: string-End-->
 

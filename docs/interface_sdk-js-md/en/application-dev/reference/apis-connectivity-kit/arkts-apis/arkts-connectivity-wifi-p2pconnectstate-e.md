@@ -4,11 +4,9 @@ P2P connection status.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md#P2pConnectState)
+**Substitutes:** [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md#p2pconnectstate)
 
 <!--Device-wifi-enum P2pConnectState--><!--Device-wifi-enum P2pConnectState-End-->
 
@@ -24,11 +22,9 @@ p2p is disconnected.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DISCONNECTED](arkts-connectivity-wifimanager-p2pconnectstate-e.md#DISCONNECTED)
+**Substitutes:** [DISCONNECTED](arkts-connectivity-wifimanager-p2pconnectstate-e.md#disconnected)
 
 <!--Device-P2pConnectState-DISCONNECTED = 0--><!--Device-P2pConnectState-DISCONNECTED = 0-End-->
 
@@ -44,11 +40,9 @@ p2p is connected.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [CONNECTED](arkts-connectivity-wifimanager-p2pconnectstate-e.md#CONNECTED)
+**Substitutes:** [CONNECTED](arkts-connectivity-wifimanager-p2pconnectstate-e.md#connected)
 
 <!--Device-P2pConnectState-CONNECTED = 1--><!--Device-P2pConnectState-CONNECTED = 1-End-->
 

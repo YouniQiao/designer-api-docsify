@@ -30,10 +30,6 @@ Obtains an extended attribute of a file or directory. This API uses a promise to
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function getxattr(path: string, key: string): Promise<string>--><!--Device-unnamed-declare function getxattr(path: string, key: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

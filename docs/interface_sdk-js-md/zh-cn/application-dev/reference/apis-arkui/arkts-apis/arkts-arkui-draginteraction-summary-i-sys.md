@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-dragInteraction-interface Summary--><!--Device-dragInteraction-interface Summary-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
@@ -26,10 +22,6 @@ dataSize: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Summary-dataSize: int--><!--Device-Summary-dataSize: int-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
@@ -47,10 +39,6 @@ dataType: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Summary-dataType: string--><!--Device-Summary-dataType: string-End-->
 

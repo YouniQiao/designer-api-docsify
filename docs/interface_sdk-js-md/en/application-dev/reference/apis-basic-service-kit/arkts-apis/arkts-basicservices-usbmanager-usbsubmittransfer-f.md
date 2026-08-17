@@ -12,13 +12,9 @@ import { usbManager } from 'usbManager';
 function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 ```
 
-Requests a USB data transfer. > **NOTE：**> > This API uses an asynchronous callback to return the result. > > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface) > API to claim a communication interface.
+Requests a USB data transfer. > **NOTE：**> > This API uses an asynchronous callback to return the result. > > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface) > API to claim a communication interface.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-usbManager-function usbSubmitTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbSubmitTransfer(transfer: UsbDataTransferParams): void-End-->
 
@@ -41,7 +37,7 @@ Requests a USB data transfer. > **NOTE：**> > This API uses an asynchronous cal
 | [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
 | [14400007](../../apis-basic-services-kit/errorcode-usb.md#14400007-resource-busy) | Resource busy. Possible causes:  <br>1. The transfer has already been submitted.  <br>2. The interface is claimed by another program or driver. |
 
-## Examples
+**Examples**
 
 The following sample code shows the basic process for calling the usbSubmitTransfer API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols to ensure correct data transfer and device compatibility.
 

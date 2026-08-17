@@ -4,10 +4,6 @@ Enumerates data role types.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-usbManager-export enum DataRoleType--><!--Device-usbManager-export enum DataRoleType-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -23,10 +19,6 @@ NONE = 0
 没有功能。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DataRoleType-NONE = 0--><!--Device-DataRoleType-NONE = 0-End-->
 
@@ -44,10 +36,6 @@ Host mode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DataRoleType-HOST = 1--><!--Device-DataRoleType-HOST = 1-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -63,10 +51,6 @@ DEVICE = 2
 Device mode
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DataRoleType-DEVICE = 2--><!--Device-DataRoleType-DEVICE = 2-End-->
 

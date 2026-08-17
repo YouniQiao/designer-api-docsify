@@ -1,12 +1,8 @@
 # VibratorEvent
 
-振动事件。用于[VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md#VibratorPattern)的events数组中定义具体的振动事件。
+振动事件。用于[VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md#vibratorpattern)的events数组中定义具体的振动事件。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-vibrator-interface VibratorEvent--><!--Device-vibrator-interface VibratorEvent-End-->
 
@@ -24,10 +20,6 @@ duration?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VibratorEvent-duration?: int--><!--Device-VibratorEvent-duration?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
@@ -43,10 +35,6 @@ eventType: VibratorEventType
 **类型：** [VibratorEventType](arkts-sensorservice-vibrator-vibratoreventtype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VibratorEvent-eventType: VibratorEventType--><!--Device-VibratorEvent-eventType: VibratorEventType-End-->
 
@@ -64,10 +52,6 @@ frequency?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VibratorEvent-frequency?: int--><!--Device-VibratorEvent-frequency?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
@@ -83,10 +67,6 @@ index?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VibratorEvent-index?: int--><!--Device-VibratorEvent-index?: int-End-->
 
@@ -104,10 +84,6 @@ intensity?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VibratorEvent-intensity?: int--><!--Device-VibratorEvent-intensity?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
@@ -124,10 +100,6 @@ points?: Array<VibratorCurvePoint>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VibratorEvent-points?: Array<VibratorCurvePoint>--><!--Device-VibratorEvent-points?: Array<VibratorCurvePoint>-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
@@ -143,10 +115,6 @@ time: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VibratorEvent-time: int--><!--Device-VibratorEvent-time: int-End-->
 

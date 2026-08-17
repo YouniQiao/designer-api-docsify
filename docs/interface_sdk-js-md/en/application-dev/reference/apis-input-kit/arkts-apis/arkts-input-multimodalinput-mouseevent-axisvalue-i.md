@@ -4,10 +4,6 @@ Defines the mouse axis type and axis value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare interface AxisValue--><!--Device-unnamed-export declare interface AxisValue-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -35,10 +31,6 @@ Mouse axis type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AxisValue-axis: Axis--><!--Device-AxisValue-axis: Axis-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -54,10 +46,6 @@ Mouse axis value.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AxisValue-value: int--><!--Device-AxisValue-value: int-End-->
 

@@ -4,10 +4,6 @@ Define the device connection state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-enum ConnectionState--><!--Device-avSession-enum ConnectionState-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -21,10 +17,6 @@ STATE_CONNECTING = 0
 A connection state indicating the device is in the process of connecting.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ A connection state indicating the device is connected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ConnectionState-STATE_CONNECTED = 1--><!--Device-ConnectionState-STATE_CONNECTED = 1-End-->
@@ -61,10 +49,6 @@ STATE_DISCONNECTED = 6
 The default connection state indicating the device is disconnected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

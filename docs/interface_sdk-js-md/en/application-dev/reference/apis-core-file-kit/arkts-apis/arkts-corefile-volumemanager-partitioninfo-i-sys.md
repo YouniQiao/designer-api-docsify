@@ -4,10 +4,6 @@ Partition information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-volumeManager-export interface PartitionInfo--><!--Device-volumeManager-export interface PartitionInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -32,10 +28,6 @@ Disk ID.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartitionInfo-diskId: string--><!--Device-PartitionInfo-diskId: string-End-->
@@ -55,10 +47,6 @@ End sector of the partition.
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ File system type. Common file systems are **ext4**, **vfat**, **exfat**, **NTFS*
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartitionInfo-fsType: string--><!--Device-PartitionInfo-fsType: string-End-->
@@ -103,10 +87,6 @@ Partition number.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Partition total size. <br>Unit: Byte.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartitionInfo-sizeBytes: long--><!--Device-PartitionInfo-sizeBytes: long-End-->
@@ -151,10 +127,6 @@ Start sector of the partition.
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

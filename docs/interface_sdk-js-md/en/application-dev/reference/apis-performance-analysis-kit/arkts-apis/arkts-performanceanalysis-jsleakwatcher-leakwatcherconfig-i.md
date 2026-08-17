@@ -4,10 +4,6 @@ Defines the **LeakWatcherConfig** object, which contains multiple configurable p
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-jsLeakWatcher-interface LeakWatcherConfig--><!--Device-jsLeakWatcher-interface LeakWatcherConfig-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -30,10 +26,6 @@ Threshold for the number of leak objects in a background application. Dump is tr
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-LeakWatcherConfig-bgLeakCountThreshold?: int--><!--Device-LeakWatcherConfig-bgLeakCountThreshold?: int-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -49,10 +41,6 @@ Interval between each round of leak detection, in milliseconds. The default valu
 **Type:** int
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 <!--Device-LeakWatcherConfig-checkInterval?: int--><!--Device-LeakWatcherConfig-checkInterval?: int-End-->
 
@@ -70,10 +58,6 @@ Delay interval for executing dump. This parameter ensures that GC can be schedul
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-LeakWatcherConfig-dumpHeapWaitTimeMs?: int--><!--Device-LeakWatcherConfig-dumpHeapWaitTimeMs?: int-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -89,10 +73,6 @@ Class name of the object to be excluded from monitoring. This parameter applies 
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 <!--Device-LeakWatcherConfig-exclusionList?: Array<string>--><!--Device-LeakWatcherConfig-exclusionList?: Array<string>-End-->
 
@@ -110,10 +90,6 @@ Threshold for the number of leaked objects in a foreground application. Dump is 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-LeakWatcherConfig-fgLeakCountThreshold?: int--><!--Device-LeakWatcherConfig-fgLeakCountThreshold?: int-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -129,10 +105,6 @@ Maximum number of dump files that can be saved. To prevent the disk space from b
 **Type:** int
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 <!--Device-LeakWatcherConfig-maxStoredHeapDumps?: int--><!--Device-LeakWatcherConfig-maxStoredHeapDumps?: int-End-->
 
@@ -150,10 +122,6 @@ Type of the monitored object. By default, all component types are monitored.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-LeakWatcherConfig-monitorObjectTypes: MonitorObjectType--><!--Device-LeakWatcherConfig-monitorObjectTypes: MonitorObjectType-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -169,10 +137,6 @@ List of IDs of monitored objects. This parameter applies only to custom componen
 **Type:** Array&lt;int&gt;
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 <!--Device-LeakWatcherConfig-objectUniqueIDs?: Array<int>--><!--Device-LeakWatcherConfig-objectUniqueIDs?: Array<int>-End-->
 

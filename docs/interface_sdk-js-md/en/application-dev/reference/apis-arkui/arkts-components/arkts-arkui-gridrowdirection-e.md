@@ -4,10 +4,6 @@ Grid element arrangement direction. > **NOTE：**> > - Grid elements can be arra
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum GridRowDirection--><!--Device-unnamed-declare enum GridRowDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ Row
 Grid elements are arranged in the row direction.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,10 +35,6 @@ RowReverse
 Grid elements are arranged in the reverse row direction.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

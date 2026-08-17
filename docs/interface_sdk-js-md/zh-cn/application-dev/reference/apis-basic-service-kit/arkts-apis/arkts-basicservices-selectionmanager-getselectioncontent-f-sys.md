@@ -6,13 +6,9 @@
 function getSelectionContent(): Promise<string>
 ```
 
-获取选中文本的内容。使用Promise异步回调。需在 [on('selectionCompleted')](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md#on_selectionCompleted) 回调中调用，且仅在划词完成事件触发后有效。
+获取选中文本的内容。使用Promise异步回调。需在 [on('selectionCompleted')](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md#onselectioncompleted) 回调中调用，且仅在划词完成事件触发后有效。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-selectionManager-function getSelectionContent(): Promise<string>--><!--Device-selectionManager-function getSelectionContent(): Promise<string>-End-->
 
@@ -37,7 +33,7 @@ function getSelectionContent(): Promise<string>
 | [33600007](../../apis-basic-services-kit/errorcode-selection.md#33600007-划词内容长度超出范围) | The length of selected content is out of range. |
 | [33600008](../../apis-basic-services-kit/errorcode-selection.md#33600008-获取选中内容超时) | Getting the selected content times out. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

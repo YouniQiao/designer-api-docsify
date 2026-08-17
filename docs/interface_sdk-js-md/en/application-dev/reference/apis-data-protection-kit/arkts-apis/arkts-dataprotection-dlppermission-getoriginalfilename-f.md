@@ -16,10 +16,6 @@ Obtains the original name of a DLP file. This API returns the result synchronous
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-dlpPermission-function getOriginalFileName(fileName: string): string--><!--Device-dlpPermission-function getOriginalFileName(fileName: string): string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -44,7 +40,7 @@ Obtains the original name of a DLP file. This API returns the result synchronous
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

@@ -4,10 +4,6 @@ Describes the scale parameters.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-matrix4-interface ScaleOption--><!--Device-matrix4-interface ScaleOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,10 +26,6 @@ X-coordinate of the center point. Unit: px Default value: X-coordinate of the co
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScaleOption-centerX?: number--><!--Device-ScaleOption-centerX?: number-End-->
@@ -51,10 +43,6 @@ Y-coordinate of the center point. Unit: px Default value: Y-coordinate of the co
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Scaling multiple along the x-axis. x > 1: The image is scaled up along the x-axi
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScaleOption-x?: number--><!--Device-ScaleOption-x?: number-End-->
@@ -96,10 +80,6 @@ Scaling multiple along the y-axis. y > 1: The image is scaled up along the y-axi
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScaleOption-y?: number--><!--Device-ScaleOption-y?: number-End-->
@@ -117,10 +97,6 @@ Scaling multiple along the z-axis. z > 1: The image is scaled up along the z-axi
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

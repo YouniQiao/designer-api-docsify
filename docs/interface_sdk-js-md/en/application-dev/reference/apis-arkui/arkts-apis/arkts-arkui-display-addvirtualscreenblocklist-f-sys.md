@@ -16,10 +16,6 @@ Adds windows to the list of windows that are not allowed to be displayed during 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-function addVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>--><!--Device-display-function addVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -47,7 +43,7 @@ Adds windows to the list of windows that are not allowed to be displayed during 
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,12 +1,8 @@
 # CalendarManager
 
-Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getCalendarManager) to obtain a **CalendarManager** object first.
+Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager) to obtain a **CalendarManager** object first.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-calendarManager-export interface CalendarManager--><!--Device-calendarManager-export interface CalendarManager-End-->
 
@@ -27,10 +23,6 @@ createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>
 Creates a Calendar object based on the calendar account information. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
@@ -61,7 +53,7 @@ Creates a Calendar object based on the calendar account information. This API us
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -91,10 +83,6 @@ Creates a Calendar object based on the calendar account information. This API us
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.WRITE_CALENDAR
@@ -119,7 +107,7 @@ Creates a Calendar object based on the calendar account information. This API us
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -154,10 +142,6 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.WRITE_CALENDAR
@@ -187,7 +171,7 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -224,10 +208,6 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.WRITE_CALENDAR
@@ -252,7 +232,7 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -293,10 +273,6 @@ Edits an event on the event creation page, with no event ID specified in **Event
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CalendarManager-editEvent(event: Event): Promise<number>--><!--Device-CalendarManager-editEvent(event: Event): Promise<number>-End-->
@@ -315,7 +291,7 @@ Edits an event on the event creation page, with no event ID specified in **Event
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the event creation fails, no value is returned; if the value is less than **0**, the event creation is canceled; if the value is greater than **0** , the event creation is successful. The return value cannot be **0 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -345,10 +321,6 @@ Obtains the created and default Calendar objects of the current application. Thi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.READ_CALENDAR
@@ -372,7 +344,7 @@ Obtains the created and default Calendar objects of the current application. Thi
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -399,10 +371,6 @@ Obtains the created and default Calendar objects of the current application. Thi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.READ_CALENDAR
@@ -426,7 +394,7 @@ Obtains the created and default Calendar objects of the current application. Thi
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -454,10 +422,6 @@ getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>
 Obtains the default or specified Calendar object. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
@@ -491,7 +455,7 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -515,10 +479,6 @@ getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>)
 Obtains a specified Calendar object. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
@@ -547,7 +507,7 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -583,10 +543,6 @@ Obtains the default Calendar object, which is created when the data storage runs
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.READ_CALENDAR
@@ -612,7 +568,7 @@ Obtains the default Calendar object, which is created when the data storage runs
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

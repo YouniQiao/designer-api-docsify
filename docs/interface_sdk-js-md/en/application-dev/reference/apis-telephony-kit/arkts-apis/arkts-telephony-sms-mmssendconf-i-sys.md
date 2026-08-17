@@ -4,10 +4,6 @@ Defines the MMS message sending configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-export interface MmsSendConf--><!--Device-sms-export interface MmsSendConf-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -32,10 +28,6 @@ Message ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MmsSendConf-messageId?: string--><!--Device-MmsSendConf-messageId?: string-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -53,10 +45,6 @@ Response status.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MmsSendConf-responseState: int--><!--Device-MmsSendConf-responseState: int-End-->
 
@@ -76,10 +64,6 @@ Transaction ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MmsSendConf-transactionId: string--><!--Device-MmsSendConf-transactionId: string-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -97,10 +81,6 @@ Version.
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MmsSendConf-version: MmsVersionType--><!--Device-MmsSendConf-version: MmsVersionType-End-->
 

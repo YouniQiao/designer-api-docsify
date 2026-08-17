@@ -6,9 +6,7 @@ Define the EffectComponentAttribute.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface EffectComponentAttribute--><!--Device-unnamed-export declare interface EffectComponentAttribute-End-->
 
@@ -25,9 +23,7 @@ attributeModifier(modifier: AttributeModifier<EffectComponentAttribute>
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-EffectComponentAttribute-attributeModifier(modifier: AttributeModifier<EffectComponentAttribute>        | AttributeModifier<CommonMethod> | undefined): this--><!--Device-EffectComponentAttribute-attributeModifier(modifier: AttributeModifier<EffectComponentAttribute>        | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -51,9 +47,7 @@ setEffectComponentOptions(options?: EffectComponentOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-EffectComponentAttribute-setEffectComponentOptions(options?: EffectComponentOptions): this--><!--Device-EffectComponentAttribute-setEffectComponentOptions(options?: EffectComponentOptions): this-End-->
 

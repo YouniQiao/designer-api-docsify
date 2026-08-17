@@ -4,10 +4,6 @@ Represents the Quality of Service (QoS) settings for a bluetooth hid device appl
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-hid-interface HidDeviceQos--><!--Device-hid-interface HidDeviceQos-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ L2CAP delay variation, default = -1.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HidDeviceQos-delayVariation?: int--><!--Device-HidDeviceQos-delayVariation?: int-End-->
@@ -51,10 +43,6 @@ L2CAP latency, default = -1.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ L2CAP peak bandwidth, default = 0.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HidDeviceQos-peakBandwidth?: int--><!--Device-HidDeviceQos-peakBandwidth?: int-End-->
@@ -95,10 +79,6 @@ L2CAP service type, default = SERVICE_BEST_EFFORT.
 **Type:** ServiceType
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ L2CAP token bucket size, default = 0.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HidDeviceQos-tokenBucketSize?: int--><!--Device-HidDeviceQos-tokenBucketSize?: int-End-->
@@ -139,10 +115,6 @@ L2CAP tokenRate, means transmission rate, default = 0.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

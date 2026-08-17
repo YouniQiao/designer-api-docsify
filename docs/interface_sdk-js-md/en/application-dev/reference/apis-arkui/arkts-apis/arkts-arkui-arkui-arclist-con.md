@@ -12,10 +12,6 @@ The **ArcList** component is a circular layout container that displays a series 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-unnamed-export declare const ArcList: ArcListInterface--><!--Device-unnamed-export declare const ArcList: ArcListInterface-End-->
@@ -31,10 +27,6 @@ export declare const ArcListInstance: ArcListAttribute
 Defines ArcList Component instance.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -54,10 +46,6 @@ The **ArcListItem** component is used to display individual child components in 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-unnamed-export declare const ArcListItem: ArcListItemInterface--><!--Device-unnamed-export declare const ArcListItem: ArcListItemInterface-End-->
@@ -73,10 +61,6 @@ export declare const ArcListItemInstance: ArcListItemAttribute
 Defines ArcListItem Component instance.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

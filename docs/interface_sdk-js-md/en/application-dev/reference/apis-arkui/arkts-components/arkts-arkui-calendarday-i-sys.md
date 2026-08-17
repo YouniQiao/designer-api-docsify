@@ -4,8 +4,6 @@ Provides a monthly view component to display information such as date, shift bre
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 <!--Device-unnamed-interface CalendarDay--><!--Device-unnamed-interface CalendarDay-End-->
@@ -25,8 +23,6 @@ Gregorian calendar day.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 
@@ -50,8 +46,6 @@ Day.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -73,8 +67,6 @@ Indicates the off-duty flag information. The options are work and off.By default
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 
@@ -98,8 +90,6 @@ Indicates whether to display has Schedule. The week sequence is one, two, three,
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -121,8 +111,6 @@ Indicates the sequence number of the 7 x 7 (7 x 6) grid layout on a calendar pag
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 
@@ -146,8 +134,6 @@ Indicates whether the default value is Lunar calendar.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -169,8 +155,6 @@ Lunar day.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 
@@ -194,8 +178,6 @@ Lunar moon. The week sequence is one, two, three, four, five, six.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -217,8 +199,6 @@ Display Lunar Date.The week sequence is one, two, three, four, five, six.
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 
@@ -242,8 +222,6 @@ Gregorian calendar month.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -265,8 +243,6 @@ Gregorian calendar year.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 

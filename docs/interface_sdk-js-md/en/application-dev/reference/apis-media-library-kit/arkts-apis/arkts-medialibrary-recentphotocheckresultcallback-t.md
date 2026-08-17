@@ -8,10 +8,6 @@ Called to return the query result of the recent image or video.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-export type RecentPhotoCheckResultCallback = (recentPhotoExists: boolean) => void--><!--Device-unnamed-export type RecentPhotoCheckResultCallback = (recentPhotoExists: boolean) => void-End-->

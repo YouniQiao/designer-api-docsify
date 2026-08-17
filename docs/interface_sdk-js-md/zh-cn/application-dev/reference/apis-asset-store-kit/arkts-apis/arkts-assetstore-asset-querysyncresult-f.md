@@ -10,10 +10,6 @@ function querySyncResult(query: AssetMap): Promise<SyncResult>
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>--><!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -43,7 +39,7 @@ function querySyncResult(query: AssetMap): Promise<SyncResult>
 | [24000018](../errorcode-asset.md#24000018-参数校验失败) | Parameter verification failed. |
 | [24000001](../errorcode-asset.md#24000001-关键资产服务不可用) | The ASSET service is unavailable. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

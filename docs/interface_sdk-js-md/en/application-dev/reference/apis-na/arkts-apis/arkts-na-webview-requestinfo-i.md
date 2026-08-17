@@ -4,9 +4,7 @@ Defines the Web's request info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-interface RequestInfo--><!--Device-webview-interface RequestInfo-End-->
 
@@ -24,9 +22,7 @@ Gets the form data of the request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-RequestInfo-formData: string--><!--Device-RequestInfo-formData: string-End-->
 
@@ -44,9 +40,7 @@ Gets the method of the request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-RequestInfo-method: string--><!--Device-RequestInfo-method: string-End-->
 
@@ -64,9 +58,7 @@ Gets the url of the request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-RequestInfo-url: string--><!--Device-RequestInfo-url: string-End-->
 

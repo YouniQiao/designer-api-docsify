@@ -8,10 +8,6 @@ Callback function for transition controller
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare type TransitionControllerCallback = (context: window.TransitionContext) => void--><!--Device-unnamed-declare type TransitionControllerCallback = (context: window.TransitionContext) => void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

@@ -4,10 +4,6 @@ Animator options.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AnimatorOptions--><!--Device-unnamed-export interface AnimatorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,15 +22,11 @@ import { SimpleAnimatorOptions } from 'SimpleAnimatorOptions';
 begin: number
 ```
 
-Start point of the animation interpolation. Note: This setting affects the input parameter value of the [onFrame](../arkts-components/arkts-arkui-imageframeinfo-i.md#ImageFrameInfo) callback. Default value: **0**
+Start point of the animation interpolation. Note: This setting affects the input parameter value of the [onFrame](../arkts-components/arkts-arkui-imageframeinfo-i.md#imageframeinfo) callback. Default value: **0**
 
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,10 +46,6 @@ Animation delay duration, in milliseconds. Value **0** means that there is no de
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AnimatorOptions-delay: number--><!--Device-AnimatorOptions-delay: number-End-->
@@ -75,10 +63,6 @@ Animation playback mode. **'normal'**: plays the animation in forward loop mode.
 **Type:** "normal" \| "reverse" \| "alternate" \| "alternate-reverse"
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,10 +82,6 @@ Duration for playing the animation, in milliseconds. Value range: [0, +∞). Def
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AnimatorOptions-duration: number--><!--Device-AnimatorOptions-duration: number-End-->
@@ -120,10 +100,6 @@ Animation interpolation curve. If the provided string is invalid, **"ease"** is 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AnimatorOptions-easing: string--><!--Device-AnimatorOptions-easing: string-End-->
@@ -136,15 +112,11 @@ Animation interpolation curve. If the provided string is invalid, **"ease"** is 
 end: number
 ```
 
-End point of animation interpolation. Note: This setting affects the input parameter value of the [onFrame](../arkts-components/arkts-arkui-imageframeinfo-i.md#ImageFrameInfo) callback. Default value: **1**
+End point of animation interpolation. Note: This setting affects the input parameter value of the [onFrame](../arkts-components/arkts-arkui-imageframeinfo-i.md#imageframeinfo) callback. Default value: **1**
 
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -158,15 +130,11 @@ End point of animation interpolation. Note: This setting affects the input param
 fill: "none" | "forwards" | "backwards" | "both"
 ```
 
-State of the animated target after the animation is executed. **'none'**: No style is applied to the target before or after the animation is executed. **'forwards'**: The target keeps the state at the end of the animation (defined in the last key frame) after the animation is executed. **'backwards'**: During the delay period specified in [AnimatorOptions](#AnimatorOptions), the animation uses the value defined in the first keyframe. When **direction** in [AnimatorOptions](#AnimatorOptions) is **'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in [AnimatorOptions](#AnimatorOptions) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to** keyframe value. **'both'**: The animation follows the **'forwards'** and **'backwards'** rules.
+State of the animated target after the animation is executed. **'none'**: No style is applied to the target before or after the animation is executed. **'forwards'**: The target keeps the state at the end of the animation (defined in the last key frame) after the animation is executed. **'backwards'**: During the delay period specified in [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md#animatoroptions), the animation uses the value defined in the first keyframe. When **direction** in [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md#animatoroptions) is **'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md#animatoroptions) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to** keyframe value. **'both'**: The animation follows the **'forwards'** and **'backwards'** rules.
 
 **Type:** "none" \| "forwards" \| "backwards" \| "both"
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -185,10 +153,6 @@ Number of times that the animation is played. The value **0** means the animatio
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

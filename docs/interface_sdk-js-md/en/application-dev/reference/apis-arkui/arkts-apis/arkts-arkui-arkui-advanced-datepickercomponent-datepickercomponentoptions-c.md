@@ -4,10 +4,6 @@ DatePickerComponentOptions defines options for the date time picker component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class DatePickerComponentOptions--><!--Device-unnamed-export declare class DatePickerComponentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -31,13 +27,9 @@ dateOptions?: DateOptions
 
 Date options.
 
-**Type:** [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)
+**Type:** [DateOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-dateoptions-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,15 +47,11 @@ displayMode?: DisplayMode
 
 Display mode of the picker. Default value: DisplayMode.DATE
 
-**Type:** [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
+**Type:** [DisplayMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-displaymode-e.md)
 
 **Default:** DisplayMode.DATE
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,13 +69,9 @@ timeOptions?: TimeOptions
 
 Time options.
 
-**Type:** [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)
+**Type:** [TimeOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-timeoptions-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

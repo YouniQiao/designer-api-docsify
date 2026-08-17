@@ -4,10 +4,6 @@ Describes the keyboard visual style configuration.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface KeyboardAppearanceConfig--><!--Device-unnamed-declare interface KeyboardAppearanceConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Keyboard fluid lighting effect. Default value: **KeyboardFluidLightMode.NONE**
 **Type:** [KeyboardFluidLightMode](arkts-arkui-keyboardfluidlightmode-e-sys.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Keyboard gradient effect. Default value: **KeyboardGradientMode.NONE**
 **Type:** [KeyboardGradientMode](arkts-arkui-keyboardgradientmode-e-sys.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

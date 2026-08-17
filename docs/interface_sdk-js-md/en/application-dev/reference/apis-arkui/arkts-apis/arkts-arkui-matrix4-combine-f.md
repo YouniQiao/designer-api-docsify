@@ -16,8 +16,6 @@ Combines the effects of two matrices to generate a new matrix object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [combine](arkts-arkui-matrix4-matrix4transit-i.md#combine)

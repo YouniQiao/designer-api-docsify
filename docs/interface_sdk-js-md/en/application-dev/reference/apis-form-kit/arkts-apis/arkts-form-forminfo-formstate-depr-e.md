@@ -4,11 +4,9 @@ Enumerates the widget states.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FormState](arkts-form-forminfo-formstate-e.md#FormState)
+**Substitutes:** [FormState](arkts-form-forminfo-formstate-e.md#formstate)
 
 <!--Device-formInfo-enum FormState--><!--Device-formInfo-enum FormState-End-->
 
@@ -24,11 +22,9 @@ Unknown state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UNKNOWN](arkts-form-forminfo-formstate-e.md#UNKNOWN)
+**Substitutes:** [UNKNOWN](arkts-form-forminfo-formstate-e.md#unknown)
 
 <!--Device-FormState-UNKNOWN = -1--><!--Device-FormState-UNKNOWN = -1-End-->
 
@@ -44,11 +40,9 @@ Default state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DEFAULT](arkts-form-forminfo-formstate-e.md#DEFAULT)
+**Substitutes:** [DEFAULT](arkts-form-forminfo-formstate-e.md#default)
 
 <!--Device-FormState-DEFAULT = 0--><!--Device-FormState-DEFAULT = 0-End-->
 
@@ -64,11 +58,9 @@ Ready state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [READY](arkts-form-forminfo-formstate-e.md#READY)
+**Substitutes:** [READY](arkts-form-forminfo-formstate-e.md#ready)
 
 <!--Device-FormState-READY = 1--><!--Device-FormState-READY = 1-End-->
 

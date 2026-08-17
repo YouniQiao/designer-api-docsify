@@ -1,12 +1,8 @@
 # DataResubmissionHandler
 
-Defines the onDataResubmission callback, related to onDataResubmission method.
+Implements the **DataResubmissionHandler** object for resubmitting or canceling the web form data.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class DataResubmissionHandler--><!--Device-unnamed-declare class DataResubmissionHandler-End-->
 
@@ -18,13 +14,9 @@ Defines the onDataResubmission callback, related to onDataResubmission method.
 cancel(): void
 ```
 
-Do not resend related form data.
+Cancels the resending of web form data.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ Do not resend related form data.
 constructor()
 ```
 
-Constructor.
+Constructs a **DataResubmissionHandler** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ Constructor.
 resend(): void
 ```
 
-Resend related form data.
+Resends the web form data.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

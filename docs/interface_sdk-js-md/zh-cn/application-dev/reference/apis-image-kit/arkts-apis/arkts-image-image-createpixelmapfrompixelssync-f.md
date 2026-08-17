@@ -10,10 +10,6 @@ Creates a PixelMap from existing pixel data. The pixel data will be copied and c
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -46,7 +42,7 @@ Creates a PixelMap from existing pixel data. The pixel data will be copied and c
 | [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the pixel data buffer does not match InitializationOptions.size. |
 | [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

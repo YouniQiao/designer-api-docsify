@@ -4,10 +4,6 @@ Provides optional attributes for the search area.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface SearchParams--><!--Device-unnamed-export interface SearchParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -36,10 +32,6 @@ Style of the cancel button on the right. Default value: **{style: CancelButtonSt
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-cancelIcon?: IconOptions--><!--Device-SearchParams-cancelIcon?: IconOptions-End-->
@@ -57,10 +49,6 @@ Pointer style. Default value: **{width: '1.5vp', color: '#007DFF'}**.
 **Type:** CaretStyle
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -80,10 +68,6 @@ Background color of a component. Default value: **\$r('sys.color.ohos_id_color_t
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-componentBackgroundColor?: ResourceColor--><!--Device-SearchParams-componentBackgroundColor?: ResourceColor-End-->
@@ -101,10 +85,6 @@ Whether the input text can be copied. Default value: **CopyOptions.LocalDevice**
 **Type:** CopyOptions
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -124,10 +104,6 @@ Text decorative line options. Default value: **{type: TextDecorationType.None, c
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-decoration?: TextDecorationOptions--><!--Device-SearchParams-decoration?: TextDecorationOptions-End-->
@@ -145,10 +121,6 @@ Extended options of the custom context menu on selection, including the text con
 **Type:** EditMenuOptions
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -168,10 +140,6 @@ Whether to enable haptic feedback. The value **true** means to enable haptic fee
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-enableHapticFeedback?: boolean--><!--Device-SearchParams-enableHapticFeedback?: boolean-End-->
@@ -189,10 +157,6 @@ Whether to automatically open the soft keyboard when the **Search** component ga
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -212,10 +176,6 @@ Whether to enable preview text. The value **true** means to enable preview text.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-enablePreviewText?: boolean--><!--Device-SearchParams-enablePreviewText?: boolean-End-->
@@ -233,10 +193,6 @@ Type of the Enter key. Default value: **EnterKeyType.Search**.
 **Type:** EnterKeyType
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -256,10 +212,6 @@ Font color of the input text. Default value: **\$r('sys.color.ohos_id_color_text
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-fontColor?: ResourceColor--><!--Device-SearchParams-fontColor?: ResourceColor-End-->
@@ -277,10 +229,6 @@ Font feature, for example, monospaced digits. Format: normal | &lt;feature-tag-v
 **Type:** ResourceStr
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -300,10 +248,6 @@ Whether to hide the system text selection menu. **true**: The system text select
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-hideSelectionMenu?: boolean--><!--Device-SearchParams-hideSelectionMenu?: boolean-End-->
@@ -321,10 +265,6 @@ Regular expression for input filtering. Only inputs that comply with the regular
 **Type:** [InputFilterParams](arkts-arkui-atomicservice-atomicservicesearch-inputfilterparams-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -344,10 +284,6 @@ Letter spacing. A positive value causes characters to spread farther apart, and 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-letterSpacing?: number | string | Resource--><!--Device-SearchParams-letterSpacing?: number | string | Resource-End-->
@@ -365,10 +301,6 @@ Maximum font size. For the setting to take effect, this attribute must be used t
 **Type:** number \| string \| Resource
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -388,10 +320,6 @@ Maximum number of characters in the text input. By default, there is no maximum 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-maxLength?: number--><!--Device-SearchParams-maxLength?: number-End-->
@@ -409,10 +337,6 @@ Minimum font size. For the setting to take effect, this attribute must be used t
 **Type:** number \| string \| Resource
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -432,10 +356,6 @@ Callback triggered when the content in the text box changes. Default value: **un
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-onChange?: EditableTextOnChangeCallback--><!--Device-SearchParams-onChange?: EditableTextOnChangeCallback-End-->
@@ -453,10 +373,6 @@ Callback triggered when the text content is scrolled. Default value: **undefined
 **Type:** [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -476,10 +392,6 @@ Callback triggered when a copy operation is performed. Default value: **undefine
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-onCopy?: Callback<string>--><!--Device-SearchParams-onCopy?: Callback<string>-End-->
@@ -497,10 +409,6 @@ Callback triggered when a cut operation is performed. Default value: **undefined
 **Type:** Callback&lt;string&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -520,10 +428,6 @@ Callback triggered when text is deleted. Default value: **undefined**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-onDidDelete?: Callback<DeleteValue>--><!--Device-SearchParams-onDidDelete?: Callback<DeleteValue>-End-->
@@ -541,10 +445,6 @@ Callback triggered when text is inserted. Default value: **undefined**.
 **Type:** Callback&lt;InsertValue&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -564,10 +464,6 @@ Callback triggered when the input status changes. If a cursor is displayed, that
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-onEditChange?: Callback<boolean>--><!--Device-SearchParams-onEditChange?: Callback<boolean>-End-->
@@ -585,10 +481,6 @@ Callback triggered when a paste operation is performed. Default value: **undefin
 **Type:** [OnPasteCallback](arkts-arkui-onpastecallback-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -608,10 +500,6 @@ Callback triggered when users click the search icon or the search button, or tou
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-onSubmit?: Callback<string> | SearchSubmitCallback--><!--Device-SearchParams-onSubmit?: Callback<string> | SearchSubmitCallback-End-->
@@ -629,10 +517,6 @@ Callback triggered when the position of the text selection changes or when the c
 **Type:** [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -652,10 +536,6 @@ Callback triggered when text is about to be deleted. **true**: Delete the text. 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-onWillDelete?: Callback<DeleteValue, boolean>--><!--Device-SearchParams-onWillDelete?: Callback<DeleteValue, boolean>-End-->
@@ -673,10 +553,6 @@ Callback triggered when text is about to be inserted. **true**: Insert the input
 **Type:** Callback&lt;InsertValue, boolean&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -696,10 +572,6 @@ Placeholder text color. Default value: **\$r('sys.color.ohos_id_color_text_secon
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-placeholderColor?: ResourceColor--><!--Device-SearchParams-placeholderColor?: ResourceColor-End-->
@@ -717,10 +589,6 @@ Placeholder text style, including the font size, font weight, font family, and f
 **Type:** Font
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -740,10 +608,6 @@ Background color of the pressed component. Default value: **\$r('sys.color.ohos_
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-pressedBackgroundColor?: ResourceColor--><!--Device-SearchParams-pressedBackgroundColor?: ResourceColor-End-->
@@ -762,10 +626,6 @@ Search button located next to the search text box. Clicking the search button tr
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-searchButton?: SearchButtonParams--><!--Device-SearchParams-searchButton?: SearchButtonParams-End-->
@@ -780,13 +640,9 @@ searchIcon?: IconOptions | SymbolGlyphModifier
 
 Style of the search icon on the left. Default value in light mode: **{size: '16vp', color: '#99182431', src:' '}**. Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
 
-**Type:** IconOptions \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** IconOptions \| SymbolGlyphModifier
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -806,10 +662,6 @@ Search key used to find a unique **search** component. Default value: **undefine
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-searchKey?: ResourceStr--><!--Device-SearchParams-searchKey?: ResourceStr-End-->
@@ -827,10 +679,6 @@ Background color of the selected text. By default, a 20% opacity is applied.
 **Type:** ResourceColor
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -850,10 +698,6 @@ Text alignment mode in the search text box. Default value: **TextAlign.Start**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-textAlign?: TextAlign--><!--Device-SearchParams-textAlign?: TextAlign-End-->
@@ -871,10 +715,6 @@ Style of the text entered in the search box, including the font size, font width
 **Type:** Font
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -894,10 +734,6 @@ Indent of the first line text. Default value: **0**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SearchParams-textIndent?: Dimension--><!--Device-SearchParams-textIndent?: Dimension-End-->
@@ -915,10 +751,6 @@ Text box type. Default value: **SearchType.Normal**.
 **Type:** SearchType
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

@@ -4,10 +4,6 @@ Enumerates the effect types supported by the camera controller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum ControlCenterEffectType--><!--Device-camera-enum ControlCenterEffectType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -21,10 +17,6 @@ BEAUTY = 0
 Beauty effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ Portrait blur effect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ControlCenterEffectType-PORTRAIT = 1--><!--Device-ControlCenterEffectType-PORTRAIT = 1-End-->
@@ -62,10 +50,6 @@ Auto focus.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-ControlCenterEffectType-AUTO_FRAMING = 2--><!--Device-ControlCenterEffectType-AUTO_FRAMING = 2-End-->
@@ -81,10 +65,6 @@ COLOR_EFFECT = 3
 Color effect
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

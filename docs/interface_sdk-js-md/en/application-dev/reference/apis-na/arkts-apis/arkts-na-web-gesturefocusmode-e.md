@@ -4,9 +4,7 @@ Enum type supplied to gestureFocusMode for setting the web gesture focus mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum GestureFocusMode--><!--Device-unnamed-export declare enum GestureFocusMode-End-->
 
@@ -22,9 +20,7 @@ Any action on a web component, such as tapping, long-pressing, scrolling, zoomin
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-GestureFocusMode-DEFAULT = 0--><!--Device-GestureFocusMode-DEFAULT = 0-End-->
 
@@ -40,9 +36,7 @@ Tap and long-press gestures will cause the web component to acquire focus after 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-GestureFocusMode-GESTURE_TAP_AND_LONG_PRESS = 1--><!--Device-GestureFocusMode-GESTURE_TAP_AND_LONG_PRESS = 1-End-->
 

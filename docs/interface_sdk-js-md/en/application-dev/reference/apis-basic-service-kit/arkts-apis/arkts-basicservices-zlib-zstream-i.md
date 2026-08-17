@@ -4,10 +4,6 @@ Process all the information required for compression and decompression.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-zlib-interface ZStream--><!--Device-zlib-interface ZStream-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -30,10 +26,6 @@ Adler-32 or CRC-32 value of uncompressed data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-adler?: long--><!--Device-ZStream-adler?: long-End-->
@@ -51,10 +43,6 @@ Number of bytes available for **nextIn**.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -74,10 +62,6 @@ Number of remaining bytes available for **nextOut**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-availableOut?: int--><!--Device-ZStream-availableOut?: int-End-->
@@ -95,10 +79,6 @@ Binary or text of **deflate**, or decoding state of **inflate**.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -118,10 +98,6 @@ Input bytes to be compressed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-nextIn?: ArrayBuffer--><!--Device-ZStream-nextIn?: ArrayBuffer-End-->
@@ -139,10 +115,6 @@ Output bytes after compression.
 **Type:** ArrayBuffer
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -162,10 +134,6 @@ Total number of input bytes read so far.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZStream-totalIn?: long--><!--Device-ZStream-totalIn?: long-End-->
@@ -183,10 +151,6 @@ Total number of output bytes.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -4,11 +4,9 @@ Enumerates the widget parameters.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FormParam](arkts-form-forminfo-formparam-e.md#FormParam)
+**Substitutes:** [FormParam](arkts-form-forminfo-formparam-e.md#formparam)
 
 <!--Device-formInfo-enum FormParam--><!--Device-formInfo-enum FormParam-End-->
 
@@ -24,11 +22,9 @@ Widget ID. This is a system API.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IDENTITY_KEY](arkts-form-forminfo-formparam-e.md#IDENTITY_KEY)
+**Substitutes:** [IDENTITY_KEY](arkts-form-forminfo-formparam-e.md#identitykey)
 
 <!--Device-FormParam-IDENTITY_KEY = 'ohos.extra.param.key.form_identity'--><!--Device-FormParam-IDENTITY_KEY = 'ohos.extra.param.key.form_identity'-End-->
 

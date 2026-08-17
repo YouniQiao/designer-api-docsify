@@ -1,12 +1,8 @@
 # UserAgentFormFactor
 
-The form factors for User-Agent metadata.
+用户设备形态。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-webview-enum UserAgentFormFactor--><!--Device-webview-enum UserAgentFormFactor-End-->
 
@@ -18,13 +14,9 @@ The form factors for User-Agent metadata.
 AUTOMOTIVE = 'Automotive'
 ```
 
-Form factor option: Automotive.
+车机，字符串类型。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,13 +30,9 @@ Form factor option: Automotive.
 DESKTOP = 'Desktop'
 ```
 
-Form factor option: Desktop.
+PC，字符串类型。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,13 +46,9 @@ Form factor option: Desktop.
 MOBILE = 'Mobile'
 ```
 
-Form factor option: Mobile.
+手机，字符串类型。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,13 +62,9 @@ Form factor option: Mobile.
 EINK = 'EInk'
 ```
 
-Form factor option: EInk.
+墨水屏，字符串类型。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,13 +78,9 @@ Form factor option: EInk.
 TABLET = 'Tablet'
 ```
 
-Form factor option: Tablet.
+平板，字符串类型。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -118,13 +94,9 @@ Form factor option: Tablet.
 WATCH = 'Watch'
 ```
 
-Form factor option: Watch.
+手表，字符串类型。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,13 +110,9 @@ Form factor option: Watch.
 XR = 'XR'
 ```
 
-Form factor option: XR.
+VR+AR设备，字符串类型。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

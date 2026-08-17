@@ -16,10 +16,6 @@ Get firewall policy by userId.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
 <!--Device-netFirewall-function getNetFirewallPolicy(userId: number): Promise<NetFirewallPolicy>--><!--Device-netFirewall-function getNetFirewallPolicy(userId: number): Promise<NetFirewallPolicy>-End-->
@@ -49,7 +45,7 @@ Get firewall policy by userId.
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { netFirewall } from '@kit.NetworkKit';

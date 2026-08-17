@@ -10,10 +10,6 @@ function createSpan(): HiTraceId
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hiTraceChain-function createSpan(): HiTraceId--><!--Device-hiTraceChain-function createSpan(): HiTraceId-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
@@ -24,7 +20,7 @@ function createSpan(): HiTraceId
 | --- | --- |
 | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId实例。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 开始跟踪，跟踪标志是DEFAULT。

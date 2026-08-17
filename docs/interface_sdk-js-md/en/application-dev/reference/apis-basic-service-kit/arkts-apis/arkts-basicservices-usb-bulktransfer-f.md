@@ -17,15 +17,13 @@ function bulkTransfer(
   ): Promise<number>
 ```
 
-Performs bulk transfer. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and endpoints, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) to claim the USB interface.
+Performs bulk transfer. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list and endpoints, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface) to claim the USB interface.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md#bulkTransfer)
+**Substitutes:** [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md#bulktransfer)
 
 <!--Device-usb-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: number  ): Promise<number>--><!--Device-usb-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: number  ): Promise<number>-End-->
 
@@ -46,7 +44,7 @@ Performs bulk transfer. Before you do this, call [usb.getDevices](arkts-basicser
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the result, which is the size of the transmitted or received data block if the transfer is successful, or **-1** if an exception has occurred. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Call usb.getDevices to obtain a data set. Then, obtain a USB device and its access permission.

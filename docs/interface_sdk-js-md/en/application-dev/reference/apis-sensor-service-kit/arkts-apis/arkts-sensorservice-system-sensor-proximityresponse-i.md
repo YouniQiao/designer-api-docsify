@@ -4,11 +4,9 @@ Callback invoked when the proximity sensor data changes.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md#ProximityResponse)
+**Substitutes:** [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md#proximityresponse)
 
 <!--Device-unnamed-export interface ProximityResponse--><!--Device-unnamed-export interface ProximityResponse-End-->
 
@@ -51,8 +49,6 @@ Distance between a visible object and the device screen.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 

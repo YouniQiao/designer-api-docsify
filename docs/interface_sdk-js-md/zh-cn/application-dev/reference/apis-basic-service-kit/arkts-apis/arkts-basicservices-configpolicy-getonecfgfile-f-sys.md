@@ -10,10 +10,6 @@ function getOneCfgFile(relPath: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-configPolicy-function getOneCfgFile(relPath: string, callback: AsyncCallback<string>): void--><!--Device-configPolicy-function getOneCfgFile(relPath: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
@@ -25,7 +21,7 @@ function getOneCfgFile(relPath: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
 
 **错误码：**
 
@@ -44,10 +40,6 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, callback: Async
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, callback: AsyncCallback<string>): void--><!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
@@ -60,7 +52,7 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, callback: Async
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | 是 | 跟随模式。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
 
 **错误码：**
 
@@ -79,10 +71,6 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, extra: string, 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<string>): void--><!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
@@ -95,8 +83,8 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, extra: string, 
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | 是 | 跟随模式。 |
-| extra | string | 是 | 用户自定义跟随规则，仅在followMode为 [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#USER_DEFINED)时有效。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
+| extra | string | 是 | 用户自定义跟随规则，仅在followMode为 [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#userdefined)时有效。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取配置文件路径成功，err为undefined， data为获取到的优先级最高的配置文件路径；否则err为错误对象。 |
 
 **错误码：**
 
@@ -114,10 +102,6 @@ function getOneCfgFile(relPath: string): Promise<string>
 获取指定文件名优先级最高的配置文件路径。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-configPolicy-function getOneCfgFile(relPath: string): Promise<string>--><!--Device-configPolicy-function getOneCfgFile(relPath: string): Promise<string>-End-->
 
@@ -154,10 +138,6 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, extra?: string)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, extra?: string): Promise<string>--><!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, extra?: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
@@ -170,7 +150,7 @@ function getOneCfgFile(relPath: string, followMode: FollowXMode, extra?: string)
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | 是 | 跟随模式。 |
-| extra | string | 否 | 用户自定义跟随规则，仅在followMode为 [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#USER_DEFINED)时有效。 |
+| extra | string | 否 | 用户自定义跟随规则，仅在followMode为 [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#userdefined)时有效。 |
 
 **返回值：**
 

@@ -2,13 +2,9 @@
 
 Defines the mouse event.
 
-**Inheritance/Implementation:** MouseEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
+**Inheritance/Implementation:** MouseEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#inputevent)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface MouseEvent--><!--Device-unnamed-export declare interface MouseEvent-End-->
 
@@ -37,10 +33,6 @@ Enumerates mouse event types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-action: Action--><!--Device-MouseEvent-action: Action-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -56,10 +48,6 @@ Whether altKey is being pressed. The value **true** indicates that the key is pr
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-altKey: boolean--><!--Device-MouseEvent-altKey: boolean-End-->
 
@@ -77,10 +65,6 @@ Defines the mouse axis type and axis value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-axes: AxisValue[]--><!--Device-MouseEvent-axes: AxisValue[]-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -96,10 +80,6 @@ Enumerates mouse buttons.
 **Type:** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-button: Button--><!--Device-MouseEvent-button: Button-End-->
 
@@ -117,10 +97,6 @@ Whether capsLock is enabled. The value **true** indicates that capsLock is enabl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-capsLock: boolean--><!--Device-MouseEvent-capsLock: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -136,10 +112,6 @@ Whether ctrlKey is being pressed. The value **true** indicates that the key is p
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-ctrlKey: boolean--><!--Device-MouseEvent-ctrlKey: boolean-End-->
 
@@ -157,10 +129,6 @@ Whether fnKey is being pressed. The value **true** indicates that the key is pre
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-fnKey: boolean--><!--Device-MouseEvent-fnKey: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -171,15 +139,11 @@ Whether fnKey is being pressed. The value **true** indicates that the key is pre
 globalX?: int
 ```
 
-X coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md#MouseEventData-(System-API)) is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
+X coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md#mouseeventdata-system-api) is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-globalX?: int--><!--Device-MouseEvent-globalX?: int-End-->
 
@@ -191,15 +155,11 @@ X coordinate of the mouse event in the global coordinate system with the upper l
 globalY?: int
 ```
 
-Y coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md#MouseEventData-(System-API)) is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
+Y coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md#mouseeventdata-system-api) is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-globalY?: int--><!--Device-MouseEvent-globalY?: int-End-->
 
@@ -217,10 +177,6 @@ Whether logoKey is being pressed. The value **true** indicates that the key is p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-logoKey: boolean--><!--Device-MouseEvent-logoKey: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -236,10 +192,6 @@ Whether numLock is enabled. The value **true** indicates that numLock is enabled
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-numLock: boolean--><!--Device-MouseEvent-numLock: boolean-End-->
 
@@ -257,10 +209,6 @@ Button being pressed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-pressedButtons: Button[]--><!--Device-MouseEvent-pressedButtons: Button[]-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -276,10 +224,6 @@ List of pressed keys.
 **Type:** [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-pressedKeys: KeyCode[]--><!--Device-MouseEvent-pressedKeys: KeyCode[]-End-->
 
@@ -297,10 +241,6 @@ X coordinate offset of the current mouse event relative to the previous event, i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-rawDeltaX: int--><!--Device-MouseEvent-rawDeltaX: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -316,10 +256,6 @@ Y coordinate offset of the current mouse event relative to the previous event, i
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-rawDeltaY: int--><!--Device-MouseEvent-rawDeltaY: int-End-->
 
@@ -337,10 +273,6 @@ X coordinate of the mouse event in the relative coordinate system with the upper
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-screenX: int--><!--Device-MouseEvent-screenX: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -356,10 +288,6 @@ Y coordinate of the mouse event in the relative coordinate system with the upper
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-screenY: int--><!--Device-MouseEvent-screenY: int-End-->
 
@@ -377,10 +305,6 @@ Whether scrollLock is enabled. The value **true** indicates that scrollLock is e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-scrollLock: boolean--><!--Device-MouseEvent-scrollLock: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -396,10 +320,6 @@ Whether shiftKey is being pressed. The value **true** indicates that the key is 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-shiftKey: boolean--><!--Device-MouseEvent-shiftKey: boolean-End-->
 
@@ -417,10 +337,6 @@ Tool type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-toolType: ToolType--><!--Device-MouseEvent-toolType: ToolType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -437,10 +353,6 @@ X coordinate in the relative coordinate system with the upper left corner of the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MouseEvent-windowX: int--><!--Device-MouseEvent-windowX: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -456,10 +368,6 @@ Y coordinate in the relative coordinate system with the upper left corner of the
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MouseEvent-windowY: int--><!--Device-MouseEvent-windowY: int-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface AnimationController--><!--Device-unnamed-export interface AnimationController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ getStatus(): AnimationStatus
 获取当前动图播放的状态。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +32,7 @@ getStatus(): AnimationStatus
 | --- | --- |
 | AnimationStatus | 动图的播放状态。包含4种状态：初始态、播放态、暂停态、停止态。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
@@ -93,10 +85,6 @@ pause(): void
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -105,7 +93,7 @@ pause(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
@@ -142,10 +130,6 @@ resume(): void
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -154,7 +138,7 @@ resume(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
@@ -191,10 +175,6 @@ start(): void
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -203,7 +183,7 @@ start(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
@@ -240,10 +220,6 @@ stop(): void
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -252,7 +228,7 @@ stop(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';

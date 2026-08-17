@@ -16,10 +16,6 @@ Enables or disables the Hyper Snap performance optimization for the application.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-hyperSnapManager-function setHyperSnapEnabled(enableFlag : boolean): void--><!--Device-hyperSnapManager-function setHyperSnapEnabled(enableFlag : boolean): void-End-->

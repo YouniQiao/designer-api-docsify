@@ -4,10 +4,6 @@ Describes the audio and video recording parameters. The **audioSourceType** and 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface AVRecorderConfig--><!--Device-media-interface AVRecorderConfig-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -30,10 +26,6 @@ Type of the audio source to record. This parameter is mandatory for audio record
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVRecorderConfig-audioSourceType?: AudioSourceType--><!--Device-AVRecorderConfig-audioSourceType?: AudioSourceType-End-->
@@ -52,10 +44,6 @@ Mode for creating the file, which is used together with on('photoAssetAvailable'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVRecorderConfig-fileGenerationMode?: FileGenerationMode--><!--Device-AVRecorderConfig-fileGenerationMode?: FileGenerationMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -71,8 +59,6 @@ Geographical location of the recorded video. By default, the geographical locati
 **Type:** Location
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 12
 
@@ -94,10 +80,6 @@ Maximum recording duration, in seconds. The value range is [1, 2^31-1]. If an in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVRecorderConfig-maxDuration?: int--><!--Device-AVRecorderConfig-maxDuration?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -114,10 +96,6 @@ Metadata. For details, see @AVMetadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVRecorderConfig-metadata?: AVMetadata--><!--Device-AVRecorderConfig-metadata?: AVMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -133,10 +111,6 @@ Recording profile. This parameter is mandatory.<br>**Atomic service API**: This 
 **Type:** [AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -156,11 +130,9 @@ Rotation angle of the recorded video, in degrees. The value can be 0 (default), 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [videoOrientation](arkts-media-media-avmetadata-i.md#videoOrientation)
+**Substitutes:** [videoOrientation](arkts-media-media-avmetadata-i.md#videoorientation)
 
 <!--Device-AVRecorderConfig-rotation?: number--><!--Device-AVRecorderConfig-rotation?: number-End-->
 
@@ -177,10 +149,6 @@ Recording output URL: fd://xx (fd number).<br>This parameter is mandatory.<br>**
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -199,10 +167,6 @@ Type of the video source to record. This parameter is mandatory for video record
 **Type:** [VideoSourceType](arkts-media-media-videosourcetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVRecorderConfig-videoSourceType?: VideoSourceType--><!--Device-AVRecorderConfig-videoSourceType?: VideoSourceType-End-->
 

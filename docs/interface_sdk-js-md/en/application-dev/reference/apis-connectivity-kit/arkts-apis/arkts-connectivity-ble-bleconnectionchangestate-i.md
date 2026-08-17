@@ -4,10 +4,6 @@ Describes the Gatt profile connection state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ble-interface BLEConnectionChangeState--><!--Device-ble-interface BLEConnectionChangeState-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ Indicates the peer device address
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -53,10 +45,6 @@ Reason of the disconnection of the gatt connection.
 **Type:** [GattDisconnectReason](arkts-connectivity-ble-gattdisconnectreason-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,10 +66,6 @@ Reason message of the disconnection of the gatt connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -101,10 +85,6 @@ Connection state of the Gatt profile
 **Type:** ProfileConnectionState
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

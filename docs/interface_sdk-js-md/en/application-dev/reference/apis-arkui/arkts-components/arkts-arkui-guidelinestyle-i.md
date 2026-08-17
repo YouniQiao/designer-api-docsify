@@ -4,10 +4,6 @@ Defines the ID, direction, and position of a guideline.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface GuideLineStyle--><!--Device-unnamed-declare interface GuideLineStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Direction of the guideline. A guideline in the vertical direction can only be us
 **Type:** Axis
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ ID of the guideline, which must be unique and cannot be the same as the name of 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -71,10 +59,6 @@ Position of the guideline. If no value is specified or an invalid value (for exa
 **Type:** [GuideLinePosition](arkts-arkui-guidelineposition-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

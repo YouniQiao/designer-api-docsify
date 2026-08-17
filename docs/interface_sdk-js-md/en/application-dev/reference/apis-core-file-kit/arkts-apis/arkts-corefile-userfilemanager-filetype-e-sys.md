@@ -4,11 +4,9 @@ Enumerates media file types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PhotoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#PhotoType)
+**Substitutes:** [PhotoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#phototype)
 
 <!--Device-userFileManager-enum FileType--><!--Device-userFileManager-enum FileType-End-->
 
@@ -26,11 +24,9 @@ Image.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [IMAGE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#IMAGE)
+**Substitutes:** [IMAGE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#image)
 
 <!--Device-FileType-IMAGE = 1--><!--Device-FileType-IMAGE = 1-End-->
 
@@ -48,11 +44,9 @@ Video.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#VIDEO)
+**Substitutes:** [VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#video)
 
 <!--Device-FileType-VIDEO--><!--Device-FileType-VIDEO-End-->
 
@@ -70,11 +64,9 @@ Audio.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-FileType-AUDIO--><!--Device-FileType-AUDIO-End-->
 

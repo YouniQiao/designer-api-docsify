@@ -16,10 +16,6 @@ Set firewall policy by userId. &lt;p&gt;Enables or disables the firewall functio
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
 
 <!--Device-netFirewall-function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promise<void>--><!--Device-netFirewall-function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promise<void>-End-->
@@ -50,7 +46,7 @@ Set firewall policy by userId. &lt;p&gt;Enables or disables the firewall functio
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { netFirewall } from '@kit.NetworkKit';

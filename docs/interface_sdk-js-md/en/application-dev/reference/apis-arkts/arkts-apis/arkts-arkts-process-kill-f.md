@@ -16,8 +16,6 @@ Sends a signal to a specified process to terminate it.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [kill](arkts-arkts-process-processmanager-c.md#kill)
@@ -39,7 +37,7 @@ Sends a signal to a specified process to terminate it.
 | --- | --- |
 | boolean | If the signal is sent successfully, **true** is returned. Other, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pres = process.pid;

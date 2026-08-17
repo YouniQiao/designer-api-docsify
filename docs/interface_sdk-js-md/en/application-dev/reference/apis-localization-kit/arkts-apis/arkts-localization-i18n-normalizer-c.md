@@ -4,10 +4,6 @@ Provides the text normalization capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class Normalizer--><!--Device-i18n-export class Normalizer-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Obtains a **Normalizer** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Normalizer-static getInstance(mode: NormalizerMode): Normalizer--><!--Device-Normalizer-static getInstance(mode: NormalizerMode): Normalizer-End-->
@@ -42,13 +34,13 @@ Obtains a **Normalizer** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NormalizerMode](../../apis-na/arkts-apis/arkts-na-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
+| mode | [NormalizerMode](arkts-localization-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Normalizer](../../apis-na/arkts-apis/arkts-na-i18n-normalizer-c.md) | Normalizer** object for text normalization. |
+| [Normalizer](arkts-localization-i18n-normalizer-c.md) | Normalizer** object for text normalization. |
 
 **Error codes:**
 
@@ -56,7 +48,7 @@ Obtains a **Normalizer** object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -79,10 +71,6 @@ normalize(text: string): string
 Normalizes input strings.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -108,7 +96,7 @@ Normalizes input strings.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

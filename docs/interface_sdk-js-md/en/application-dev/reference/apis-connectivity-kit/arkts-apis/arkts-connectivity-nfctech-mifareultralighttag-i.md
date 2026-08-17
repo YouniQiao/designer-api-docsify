@@ -6,10 +6,6 @@ Provides methods for accessing MifareUltralight tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface MifareUltralightTag--><!--Device-unnamed-export interface MifareUltralightTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -23,10 +19,6 @@ getType(): tag.MifareUltralightType
 Gets the type of the MifareUltralight tag.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -49,10 +41,6 @@ readMultiplePages(pageIndex: int): Promise<int[]>
 Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -83,7 +71,7 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -123,10 +111,6 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -151,7 +135,7 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -193,10 +177,6 @@ Writes a page, total 4 bytes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -227,7 +207,7 @@ Writes a page, total 4 bytes.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -268,10 +248,6 @@ Writes a page, total 4 bytes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -297,7 +273,7 @@ Writes a page, total 4 bytes.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';

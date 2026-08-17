@@ -4,10 +4,6 @@ Declares group type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usageStatistics-export enum GroupType--><!--Device-usageStatistics-export enum GroupType-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
@@ -23,10 +19,6 @@ ALIVE_GROUP = 10
 Indicates the alive group.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GroupType-ALIVE_GROUP = 10--><!--Device-GroupType-ALIVE_GROUP = 10-End-->
 
@@ -44,10 +36,6 @@ Indicates the daily group.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GroupType-DAILY_GROUP = 20--><!--Device-GroupType-DAILY_GROUP = 20-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
@@ -63,10 +51,6 @@ FIXED_GROUP = 30
 Indicates the fixed group.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GroupType-FIXED_GROUP = 30--><!--Device-GroupType-FIXED_GROUP = 30-End-->
 
@@ -84,10 +68,6 @@ Indicates the rare group.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GroupType-RARE_GROUP = 40--><!--Device-GroupType-RARE_GROUP = 40-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
@@ -104,10 +84,6 @@ Indicates the limit group.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GroupType-LIMITED_GROUP = 50--><!--Device-GroupType-LIMITED_GROUP = 50-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
@@ -123,10 +99,6 @@ NEVER_GROUP = 60
 Indicates the never group.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GroupType-NEVER_GROUP = 60--><!--Device-GroupType-NEVER_GROUP = 60-End-->
 

@@ -16,10 +16,6 @@ Marks the start of a user scene. Call this API when the scene begins.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-performanceMonitor-function begin(scene: string, startInputType: ActionType, note?: string): void--><!--Device-performanceMonitor-function begin(scene: string, startInputType: ActionType, note?: string): void-End-->
@@ -36,7 +32,7 @@ Marks the start of a user scene. Call this API when the scene begins.
 | startInputType | ActionType | Yes | Trigger mode of the user scene. |
 | note | string | No | Remarks for the user scene. The string length is unlimited, but it is recommended that you keep it within 255 characters. This field is optional. If provided, the performance metrics report will include the remark information; if not provided, there is no impact. |
 
-## Examples
+**Examples**
 
 Start point of the user scene where the user taps an icon to launch an application, triggered by a release event (LAST_UP).
 

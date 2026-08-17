@@ -4,10 +4,6 @@ Enumerates text normalization modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export enum NormalizerMode--><!--Device-i18n-export enum NormalizerMode-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -21,10 +17,6 @@ NFC = 1
 Normalization form C, characters are decomposed and then re-composed by canonical equivalence
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Normalization form D, characters are decomposed by canonical equivalence
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NormalizerMode-NFD = 2--><!--Device-NormalizerMode-NFD = 2-End-->
@@ -62,10 +50,6 @@ Normalization form KC, characters are decomposed by compatibility, then re-compo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NormalizerMode-NFKC = 3--><!--Device-NormalizerMode-NFKC = 3-End-->
@@ -81,10 +65,6 @@ NFKD = 4
 Normalization form KD, characters are decomposed by compatibility
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

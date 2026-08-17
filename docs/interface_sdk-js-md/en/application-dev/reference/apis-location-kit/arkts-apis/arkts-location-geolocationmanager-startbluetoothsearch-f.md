@@ -17,10 +17,6 @@ Starts Bluetooth scanning and matches the device ID list in the input parameter 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
 **Model restriction:** This API can be used only in the stage model.

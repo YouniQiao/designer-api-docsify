@@ -16,10 +16,6 @@ Obtains the CPU time (in milliseconds) from the time the process starts to the c
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-process-function getPastCpuTime(): number--><!--Device-process-function getPastCpuTime(): number-End-->
@@ -32,7 +28,7 @@ Obtains the CPU time (in milliseconds) from the time the process starts to the c
 | --- | --- |
 | number | CPU time obtained, in milliseconds. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let result = process.getPastCpuTime();

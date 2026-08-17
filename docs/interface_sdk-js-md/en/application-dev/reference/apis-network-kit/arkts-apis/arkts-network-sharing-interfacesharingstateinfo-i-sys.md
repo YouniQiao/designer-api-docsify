@@ -4,10 +4,6 @@ The interface is used to notify listeners of changes in shared interface status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sharing-export interface InterfaceSharingStateInfo--><!--Device-sharing-export interface InterfaceSharingStateInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
@@ -32,10 +28,6 @@ The specified network interface name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InterfaceSharingStateInfo-iface: string--><!--Device-InterfaceSharingStateInfo-iface: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
@@ -54,10 +46,6 @@ Network card sharing status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InterfaceSharingStateInfo-state: SharingIfaceState--><!--Device-InterfaceSharingStateInfo-state: SharingIfaceState-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
@@ -75,10 +63,6 @@ Enumerates the network sharing types of an NIC.
 **Type:** [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InterfaceSharingStateInfo-type: SharingIfaceType--><!--Device-InterfaceSharingStateInfo-type: SharingIfaceType-End-->
 

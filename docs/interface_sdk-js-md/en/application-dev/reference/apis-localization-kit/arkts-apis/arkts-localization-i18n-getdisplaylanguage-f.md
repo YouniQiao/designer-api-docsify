@@ -16,11 +16,9 @@ Obtains the localized script for the specified language.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDisplayLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getDisplayLanguage)
+**Substitutes:** [getDisplayLanguage](arkts-localization-i18n-system-c.md#getdisplaylanguage)
 
 <!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string-End-->
 
@@ -40,7 +38,7 @@ Obtains the localized script for the specified language.
 | --- | --- |
 | string | Localized script for the specified language. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

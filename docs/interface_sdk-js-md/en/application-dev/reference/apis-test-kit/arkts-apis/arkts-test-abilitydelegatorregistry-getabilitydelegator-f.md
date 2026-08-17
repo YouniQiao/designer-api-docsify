@@ -12,13 +12,9 @@ import { abilityDelegatorRegistry } from 'abilityDelegatorRegistry';
 function getAbilityDelegator(): AbilityDelegator
 ```
 
-Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#AbilityDelegator) object.
+Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#abilitydelegator) object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +28,7 @@ Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-ab
 | --- | --- |
 | AbilityDelegator | [AbilityDelegator]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';

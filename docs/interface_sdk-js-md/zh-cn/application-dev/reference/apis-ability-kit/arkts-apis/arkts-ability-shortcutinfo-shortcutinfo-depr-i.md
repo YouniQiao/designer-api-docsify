@@ -1,14 +1,12 @@
 # ShortcutInfo
 
-> **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutInfo](#ShortcutInfo)替代。
+> **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutInfo](#shortcutinfo)替代。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [ShortcutInfo](#ShortcutInfo)
+**替代接口：** [ShortcutInfo](#shortcutinfo)
 
 <!--Device-unnamed-export interface ShortcutInfo--><!--Device-unnamed-export interface ShortcutInfo-End-->
 
@@ -25,8 +23,6 @@ readonly bundleName: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -48,8 +44,6 @@ readonly disableMessage: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-ShortcutInfo-readonly disableMessage: string--><!--Device-ShortcutInfo-readonly disableMessage: string-End-->
@@ -67,8 +61,6 @@ readonly hostAbility: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -90,8 +82,6 @@ readonly icon: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** icon
@@ -112,8 +102,6 @@ readonly iconId: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** iconId
@@ -133,8 +121,6 @@ readonly id: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -158,8 +144,6 @@ readonly isEnabled?: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** visible
@@ -181,8 +165,6 @@ readonly isHomeShortcut?: boolean
 **默认值：** false
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -206,8 +188,6 @@ readonly isStatic?: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** sourceType
@@ -227,8 +207,6 @@ readonly label: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -250,8 +228,6 @@ readonly labelId: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** labelId
@@ -271,8 +247,6 @@ readonly wants: Array<ShortcutWant>
 **类型：** Array&lt;[ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md)&gt;
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 

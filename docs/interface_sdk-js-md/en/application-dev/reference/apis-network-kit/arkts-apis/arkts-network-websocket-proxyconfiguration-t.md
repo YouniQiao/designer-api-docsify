@@ -8,10 +8,6 @@ HTTP proxy configuration. system: means that use system proxy configuration. no-
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-webSocket-export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy--><!--Device-webSocket-export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy-End-->
 
 **System capability:** SystemCapability.Communication.NetStack

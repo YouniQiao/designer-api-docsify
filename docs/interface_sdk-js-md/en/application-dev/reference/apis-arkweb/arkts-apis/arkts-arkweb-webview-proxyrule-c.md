@@ -1,12 +1,8 @@
 # ProxyRule
 
-The ProxyRule used by insertProxyRule.
+ProxyRule is a class for read-only proxy rule information in the ArkWeb framework, obtained through the [getProxyRules](arkts-arkweb-webview-proxyconfig-c.md#getproxyrules) method. When a developer configures proxy rules through ProxyConfig, the configured rule list can be obtained through getProxyRules, with each rule corresponding to a ProxyRule object used to query the detailed information of the rule. ProxyRule provides two methods: getSchemeFilter is used to obtain the protocol filter corresponding to the proxy rule (such as MATCH_ALL_SCHEMES, MATCH_HTTP, MATCH_HTTPS, etc.), and getUrl is used to obtain the proxy server URL information specified in the proxy rule. The ProxyRule object is read-only, created by the system when configuring proxy rules, and the app can only query its content but cannot modify it.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class ProxyRule--><!--Device-webview-class ProxyRule-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 getSchemeFilter(): ProxySchemeFilter
 ```
 
-Returns the scheme filter used for this rule.
+Obtains the **ProxySchemeFilter** information in the proxy rule.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,7 +34,7 @@ Returns the scheme filter used for this rule.
 
 | Type | Description |
 | --- | --- |
-| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | The scheme filter used for this rule. |
+| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | ProxySchemeFilter** in the proxy rule. |
 
 ## getUrl
 
@@ -50,13 +42,9 @@ Returns the scheme filter used for this rule.
 getUrl(): string
 ```
 
-Returns the proxy URL.
+Obtains the URL specified in the proxy rule.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -68,5 +56,5 @@ Returns the proxy URL.
 
 | Type | Description |
 | --- | --- |
-| string | The proxy URL. |
+| string | URL information of the proxy in the proxy rule. |
 

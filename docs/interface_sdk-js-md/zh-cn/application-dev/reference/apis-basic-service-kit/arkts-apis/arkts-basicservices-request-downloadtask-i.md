@@ -1,12 +1,8 @@
 # DownloadTask
 
-下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过 [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)获取，callback形式通过 [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile) 获取。
+下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过 [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取，callback形式通过 [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) 获取。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-request-interface DownloadTask--><!--Device-request-interface DownloadTask-End-->
 
@@ -22,10 +18,6 @@ delete(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void-End-->
@@ -36,7 +28,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
 
 **错误码：**
 
@@ -44,7 +36,7 @@ delete(callback: AsyncCallback<boolean>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -110,10 +102,6 @@ delete(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-delete(): Promise<boolean>--><!--Device-DownloadTask-delete(): Promise<boolean>-End-->
@@ -132,7 +120,7 @@ delete(): Promise<boolean>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -192,10 +180,6 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void--><!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void-End-->
@@ -206,7 +190,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务操作成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务操作成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -214,7 +198,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -280,10 +264,6 @@ getTaskInfo(): Promise<DownloadInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>--><!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>-End-->
@@ -302,7 +282,7 @@ getTaskInfo(): Promise<DownloadInfo>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -364,10 +344,6 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void--><!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void-End-->
@@ -378,7 +354,7 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务MimeType成功，err为undefined，data为获取到的下载任务的MimeType的对象；否则为错误对 象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务MimeType成功，err为undefined，data为获取到的下载任务的MimeType的对象；否则为错误对 象。 |
 
 **错误码：**
 
@@ -386,7 +362,7 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -452,10 +428,6 @@ getTaskMimeType(): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-getTaskMimeType(): Promise<string>--><!--Device-DownloadTask-getTaskMimeType(): Promise<string>-End-->
@@ -474,7 +446,7 @@ getTaskMimeType(): Promise<string>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -536,10 +508,6 @@ Called when the current download session complete.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void--><!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -550,7 +518,7 @@ Called when the current download session complete.
 | --- | --- | --- | --- |
 | callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | 否 | The callback function for the download complete event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -618,10 +586,6 @@ Called when the current download session fails.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void--><!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -632,7 +596,7 @@ Called when the current download session fails.
 | --- | --- | --- | --- |
 | callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | 否 | The callback function for the download fail event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -674,10 +638,6 @@ Called when the current download session pause.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void--><!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -688,7 +648,7 @@ Called when the current download session pause.
 | --- | --- | --- | --- |
 | callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | 否 | The callback function for the download pause event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -756,10 +716,6 @@ Called when the current download session is in process.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void--><!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -770,7 +726,7 @@ Called when the current download session is in process.
 | --- | --- | --- | --- |
 | callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | 否 | The callback function for the download progress event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -812,10 +768,6 @@ Called when the current download session remove.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void--><!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -826,7 +778,7 @@ Called when the current download session remove.
 | --- | --- | --- | --- |
 | callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | 否 | The callback function for the download remove event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -894,10 +846,6 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -915,7 +863,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -983,10 +931,6 @@ off(type: 'fail', callback?: (err: int) => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void--><!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1004,7 +948,7 @@ off(type: 'fail', callback?: (err: int) => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1046,10 +990,6 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1067,7 +1007,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1135,10 +1075,6 @@ off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void):
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1156,7 +1092,7 @@ off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void):
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1198,10 +1134,6 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1219,7 +1151,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1287,10 +1219,6 @@ Called when the current download session complete.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void--><!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1301,7 +1229,7 @@ Called when the current download session complete.
 | --- | --- | --- | --- |
 | callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | 是 | The callback function for the download complete event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1345,10 +1273,6 @@ Called when the current download session fails.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void--><!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1359,7 +1283,7 @@ Called when the current download session fails.
 | --- | --- | --- | --- |
 | callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | 是 | The callback function for the download fail event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1393,10 +1317,6 @@ Called when the current download session pause.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void--><!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1407,7 +1327,7 @@ Called when the current download session pause.
 | --- | --- | --- | --- |
 | callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | 是 | The callback function for the download pause event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1451,10 +1371,6 @@ Called when the current download session is in process.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void--><!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1465,7 +1381,7 @@ Called when the current download session is in process.
 | --- | --- | --- | --- |
 | callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | 是 | The callback function for the download progress event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1499,10 +1415,6 @@ Called when the current download session remove.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void--><!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1513,7 +1425,7 @@ Called when the current download session remove.
 | --- | --- | --- | --- |
 | callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | 是 | The callback function for the download remove event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1557,10 +1469,6 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1578,7 +1486,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1622,10 +1530,6 @@ on(type: 'fail', callback: (err: int) => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void--><!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1643,7 +1547,7 @@ on(type: 'fail', callback: (err: int) => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1677,10 +1581,6 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1698,7 +1598,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1742,10 +1642,6 @@ on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): v
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1763,7 +1659,7 @@ on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): v
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1797,10 +1693,6 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -1818,7 +1710,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1862,8 +1754,6 @@ pause(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [suspend](#suspend)(callback: AsyncCallback&lt;boolean&gt;)
@@ -1878,7 +1768,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当暂停下载任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当暂停下载任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1886,7 +1776,7 @@ pause(callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 downloadTask.pause((err: BusinessError) => {
@@ -1907,8 +1797,6 @@ pause(): Promise<void>
 暂停下载正在运行中的任务，使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](#suspend)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -1932,7 +1820,7 @@ pause(): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 downloadTask.pause().then(() => {    
@@ -1948,15 +1836,13 @@ downloadTask.pause().then(() => {
 query(callback: AsyncCallback<DownloadInfo>): void
 ```
 
-查询下载任务，返回下载任务的信息，使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [getTaskInfo](#getTaskInfo)替代。
+查询下载任务，返回下载任务的信息，使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [getTaskInfo](#gettaskinfo)替代。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [getTaskInfo](#getTaskInfo)(callback: AsyncCallback&lt;DownloadInfo&gt;)
+**替代接口：** [getTaskInfo](#gettaskinfo)(callback: AsyncCallback&lt;DownloadInfo&gt;)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1968,7 +1854,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DownloadInfo&gt; | 是 | 回调函数。当查询下载任务成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -1976,7 +1862,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
@@ -1994,15 +1880,13 @@ downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
 query(): Promise<DownloadInfo>
 ```
 
-查询下载任务，返回下载任务的信息，使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](#getTaskInfo)替代。
+查询下载任务，返回下载任务的信息，使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](#gettaskinfo)替代。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [getTaskInfo](#getTaskInfo)()
+**替代接口：** [getTaskInfo](#gettaskinfo)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -2022,7 +1906,7 @@ query(): Promise<DownloadInfo>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 downloadTask.query().then((downloadInfo) => {    
@@ -2038,15 +1922,13 @@ downloadTask.query().then((downloadInfo) => {
 queryMimeType(callback: AsyncCallback<string>): void
 ```
 
-查询下载的任务的MimeType，使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [getTaskMimeType](#getTaskMimeType)替代。
+查询下载的任务的MimeType，使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [getTaskMimeType](#gettaskmimetype)替代。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [getTaskMimeType](#getTaskMimeType)(callback: AsyncCallback&lt;string&gt;)
+**替代接口：** [getTaskMimeType](#gettaskmimetype)(callback: AsyncCallback&lt;string&gt;)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -2058,7 +1940,7 @@ queryMimeType(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务的MimeType成功，err为undefined，data为获取到的任务的MimeType对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当查询下载任务的MimeType成功，err为undefined，data为获取到的任务的MimeType对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -2066,7 +1948,7 @@ queryMimeType(callback: AsyncCallback<string>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 downloadTask.queryMimeType((err: BusinessError, data: string)=>{
@@ -2084,15 +1966,13 @@ downloadTask.queryMimeType((err: BusinessError, data: string)=>{
 queryMimeType(): Promise<string>
 ```
 
-查询下载任务的MimeType，使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](#getTaskMimeType)替代。
+查询下载任务的MimeType，使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](#gettaskmimetype)替代。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [getTaskMimeType](#getTaskMimeType)()
+**替代接口：** [getTaskMimeType](#gettaskmimetype)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -2112,7 +1992,7 @@ queryMimeType(): Promise<string>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 downloadTask.queryMimeType().then((data: string) => {    
@@ -2132,8 +2012,6 @@ remove(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [delete](arkts-basicservices-request-uploadtask-i.md#delete)(callback: AsyncCallback&lt;boolean&gt;)
@@ -2148,7 +2026,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
 
 **错误码：**
 
@@ -2156,7 +2034,7 @@ remove(callback: AsyncCallback<boolean>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 downloadTask.remove((err, result)=>{
@@ -2177,8 +2055,6 @@ remove(): Promise<boolean>
 移除下载的任务，使用Promise异步回调。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -2202,7 +2078,7 @@ remove(): Promise<boolean>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 downloadTask.remove().then((result) => {
@@ -2222,10 +2098,6 @@ restore(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void-End-->
@@ -2236,7 +2108,7 @@ restore(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示重新启动已暂停的下载任务成功；返回false表示重新启动下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示重新启动已暂停的下载任务成功；返回false表示重新启动下载任务失败。 |
 
 **错误码：**
 
@@ -2244,7 +2116,7 @@ restore(callback: AsyncCallback<boolean>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2310,10 +2182,6 @@ restore(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-restore(): Promise<boolean>--><!--Device-DownloadTask-restore(): Promise<boolean>-End-->
@@ -2332,7 +2200,7 @@ restore(): Promise<boolean>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2394,8 +2262,6 @@ resume(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [restore](#restore)(callback: AsyncCallback&lt;boolean&gt;)
@@ -2410,7 +2276,7 @@ resume(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当重新启动已暂停的下载任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当重新启动已暂停的下载任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2418,7 +2284,7 @@ resume(callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 downloadTask.resume((err: BusinessError) => {
@@ -2439,8 +2305,6 @@ resume(): Promise<void>
 重新启动被暂停的下载任务，使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](#restore)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -2464,7 +2328,7 @@ resume(): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 downloadTask.resume().then(() => {
@@ -2484,10 +2348,6 @@ suspend(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void-End-->
@@ -2498,7 +2358,7 @@ suspend(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示暂停下载任务成功；返回false表示暂停下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示暂停下载任务成功；返回false表示暂停下载任务失败。 |
 
 **错误码：**
 
@@ -2506,7 +2366,7 @@ suspend(callback: AsyncCallback<boolean>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2572,10 +2432,6 @@ suspend(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-suspend(): Promise<boolean>--><!--Device-DownloadTask-suspend(): Promise<boolean>-End-->
@@ -2594,7 +2450,7 @@ suspend(): Promise<boolean>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

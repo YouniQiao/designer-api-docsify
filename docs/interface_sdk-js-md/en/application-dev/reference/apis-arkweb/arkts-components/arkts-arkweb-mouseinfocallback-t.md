@@ -4,13 +4,9 @@
 type MouseInfoCallback = (event: NativeEmbedMouseInfo) => void
 ```
 
-Defines a callback triggered when a same-layer tag is clicked using the mouse or touchpad.
+This callback is triggered when a same-layer tag is clicked using the mouse or touchpad.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-type MouseInfoCallback = (event: NativeEmbedMouseInfo) => void--><!--Device-unnamed-type MouseInfoCallback = (event: NativeEmbedMouseInfo) => void-End-->
 
@@ -20,5 +16,5 @@ Defines a callback triggered when a same-layer tag is clicked using the mouse or
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [NativeEmbedMouseInfo](arkts-arkweb-nativeembedmouseinfo-i.md) | Yes | Detailed information about clicking or touching and holding a same-layer tag using the mouse or touchpad. |
+| event | [NativeEmbedMouseInfo](arkts-arkweb-nativeembedmouseinfo-i.md) | Yes | Detailed information about the mouse or touchpad click or long press on the same-layer tag. |
 

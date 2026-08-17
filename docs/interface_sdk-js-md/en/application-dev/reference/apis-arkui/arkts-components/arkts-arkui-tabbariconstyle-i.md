@@ -4,10 +4,6 @@ Represents a label icon style object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface TabBarIconStyle--><!--Device-unnamed-declare interface TabBarIconStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Color of the label icon when it is selected. Default value: **#FF007DFF** **NOTE
 **Default:** #FF007DFF
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,10 +43,6 @@ Color of the label icon when it is not selected. Default value: **#33182431** **
 **Default:** #33182431
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

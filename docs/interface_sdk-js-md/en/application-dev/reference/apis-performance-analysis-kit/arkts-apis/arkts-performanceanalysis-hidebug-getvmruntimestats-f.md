@@ -16,10 +16,6 @@ Obtains the system GC statistics.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getVMRuntimeStats(): GcStats--><!--Device-hidebug-function getVMRuntimeStats(): GcStats-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ Obtains the system GC statistics.
 | --- | --- |
 | [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | System GC statistics. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

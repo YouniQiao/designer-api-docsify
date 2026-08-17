@@ -4,10 +4,6 @@ Describes the display rotation of the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum DisplayRotation--><!--Device-unnamed-declare enum DisplayRotation-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -21,10 +17,6 @@ ROTATION_0 = 0
 The device display is not rotated and is in its original vertical orientation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ The device display rotates 90° clockwise and is in landscape orientation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DisplayRotation-ROTATION_90 = 1--><!--Device-DisplayRotation-ROTATION_90 = 1-End-->
@@ -62,10 +50,6 @@ The device display rotates 180° clockwise and is in reverse vertical orientatio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DisplayRotation-ROTATION_180 = 2--><!--Device-DisplayRotation-ROTATION_180 = 2-End-->
@@ -81,10 +65,6 @@ ROTATION_270 = 3
 The device display rotates 270° clockwise and is in reverse landscape orientation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

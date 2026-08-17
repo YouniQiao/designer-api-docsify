@@ -4,10 +4,6 @@ Describes a font feature.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface FontFeature--><!--Device-text-interface FontFeature-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Keyword identifier in the font feature key-value pair, such as 'liga' (standard 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontFeature-name: string--><!--Device-FontFeature-name: string-End-->
@@ -51,10 +43,6 @@ Value in the font feature key-value pair.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

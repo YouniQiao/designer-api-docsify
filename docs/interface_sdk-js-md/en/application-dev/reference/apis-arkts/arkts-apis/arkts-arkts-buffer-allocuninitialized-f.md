@@ -16,10 +16,6 @@ Creates a **Buffer** object of the specified size, without initializing it. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function allocUninitialized(size: int): Buffer--><!--Device-buffer-function allocUninitialized(size: int): Buffer-End-->
@@ -38,7 +34,7 @@ Creates a **Buffer** object of the specified size, without initializing it. This
 | --- | --- |
 | [Buffer](arkts-arkts-buffer-buffer-c.md) | Uninitialized **Buffer** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer, JSON } from '@kit.ArkTS';

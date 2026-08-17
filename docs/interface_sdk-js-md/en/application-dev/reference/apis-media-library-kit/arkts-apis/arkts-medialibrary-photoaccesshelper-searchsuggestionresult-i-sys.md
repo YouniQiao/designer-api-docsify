@@ -4,10 +4,6 @@ Search suggestion result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface SearchSuggestionResult--><!--Device-photoAccessHelper-interface SearchSuggestionResult-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -32,10 +28,6 @@ Number of photos in the scenario where a recommendation word is searched. The va
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchSuggestionResult-count: int--><!--Device-SearchSuggestionResult-count: int-End-->
@@ -56,10 +48,6 @@ Search Suggestion Type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchSuggestionResult-type: SearchSuggestionType--><!--Device-SearchSuggestionResult-type: SearchSuggestionType-End-->
@@ -79,10 +67,6 @@ Search suggestion
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Defines the title settings for the subheader.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class SubHeaderV2Title--><!--Device-unnamed-export declare class SubHeaderV2Title-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -33,10 +29,6 @@ constructor(options: SubHeaderV2TitleOptions)
 A constructor used to create a **SubHeaderV2Title** object.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,10 +57,6 @@ Set the id of the title.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -89,10 +77,6 @@ The first line text of content area.
 **Type:** ResourceStr
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,10 +99,6 @@ Text modifier for primary title.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -139,10 +119,6 @@ The secondary line text of content area.
 **Type:** ResourceStr
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,10 +141,6 @@ Text modifier for secondary title.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -189,10 +161,6 @@ Customized content to be read in the title. Default value: **undefined** If the 
 **Type:** ResourceStr
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

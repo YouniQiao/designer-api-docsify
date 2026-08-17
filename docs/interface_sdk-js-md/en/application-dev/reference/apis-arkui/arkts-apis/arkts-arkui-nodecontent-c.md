@@ -6,10 +6,6 @@
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export class NodeContent--><!--Device-unnamed-export class NodeContent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ addFrameNode(node: FrameNode): void
 Adds a FrameNode to this **NodeContent** object.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,10 +50,6 @@ A constructor used to create a **NodeContent** object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -70,7 +58,7 @@ A constructor used to create a **NodeContent** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { nativeNode } from 'libNativeNode.so'; // Developer-implemented .so file.
@@ -104,10 +92,6 @@ Removes a FrameNode from this **NodeContent** object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -122,7 +106,7 @@ Removes a FrameNode from this **NodeContent** object.
 | --- | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to remove. |
 
-## Examples
+**Examples**
 
 This example shows how to add or remove a FrameNode in the NodeContent object.
 

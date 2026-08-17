@@ -10,10 +10,6 @@ Sets a digital crown events listener for current page, only be supported on the 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-export declare function setMonitorForCrownEvents(handler: Function): void--><!--Device-unnamed-export declare function setMonitorForCrownEvents(handler: Function): void-End-->

@@ -4,10 +4,6 @@ custom 802.1x result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-eap-enum CustomResult--><!--Device-eap-enum CustomResult-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -21,10 +17,6 @@ RESULT_FAIL
 custom authentication finished and fail
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CustomResult-RESULT_FAIL--><!--Device-CustomResult-RESULT_FAIL-End-->
 
@@ -40,10 +32,6 @@ custom authentication success for current step, go to next step
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CustomResult-RESULT_NEXT--><!--Device-CustomResult-RESULT_NEXT-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -57,10 +45,6 @@ RESULT_FINISH
 custom authentication finished and success
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CustomResult-RESULT_FINISH--><!--Device-CustomResult-RESULT_FINISH-End-->
 

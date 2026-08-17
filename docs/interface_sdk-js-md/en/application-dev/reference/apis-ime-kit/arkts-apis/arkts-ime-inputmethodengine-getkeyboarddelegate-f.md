@@ -12,13 +12,9 @@ import { inputMethodEngine } from 'inputMethodEngine';
 function getKeyboardDelegate(): KeyboardDelegate
 ```
 
-Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md#KeyboardDelegate) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
+Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md#keyboarddelegate) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate-End-->
 
@@ -30,7 +26,7 @@ Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md#K
 | --- | --- |
 | [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | KeyboardDelegate** instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let KeyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.getKeyboardDelegate();
@@ -46,10 +42,6 @@ function getKeyboardDelegate(): KeyboardDelegate | null
 Get KeyboardDelegate object to subscribe key event or events about editor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate | null--><!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate | null-End-->
 

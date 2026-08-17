@@ -16,8 +16,6 @@ Subscribe the event reported when the Bluetooth state changes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** stateChange
@@ -35,7 +33,7 @@ Subscribe the event reported when the Bluetooth state changes.
 | type | 'stateChange' | Yes | Type of the Bluetooth state changes event to listen for. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | Yes | Callback used to listen for the Bluetooth state event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function onReceiveEvent(data : bluetooth.BluetoothState) {

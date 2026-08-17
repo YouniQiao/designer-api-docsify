@@ -4,10 +4,6 @@ Enumerates the exposure metering modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum ExposureMeteringMode--><!--Device-camera-enum ExposureMeteringMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ MATRIX = 0
 Matrix metering mode. A wide area of the screen is selected, which is ideal for shooting natural landscapes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -46,10 +38,6 @@ Center-weighted metering mode. Metering is performed on the entire image, with t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-ExposureMeteringMode-CENTER = 1--><!--Device-ExposureMeteringMode-CENTER = 1-End-->
@@ -68,10 +56,6 @@ Spot metering mode. Metering is performed around 2.5% of the metering points, fo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-ExposureMeteringMode-SPOT = 2--><!--Device-ExposureMeteringMode-SPOT = 2-End-->
@@ -89,10 +73,6 @@ CENTER_HIGHLIGHT_WEIGHTED = 3
 Center-weighted and highlight metering mode. This mode focuses on the highlight area near the center of the screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,9 +4,7 @@ ArcScrollBar的构造函数参数。 > **说明：** > > ArcScrollBar与可滚�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare interface ArcScrollBarOptions--><!--Device-unnamed-export declare interface ArcScrollBarOptions-End-->
 
@@ -24,9 +22,7 @@ scroller: Scroller
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ArcScrollBarOptions-scroller: Scroller--><!--Device-ArcScrollBarOptions-scroller: Scroller-End-->
 
@@ -44,9 +40,7 @@ state?: BarState
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ArcScrollBarOptions-state?: BarState--><!--Device-ArcScrollBarOptions-state?: BarState-End-->
 

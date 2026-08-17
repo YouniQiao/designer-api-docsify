@@ -4,10 +4,6 @@ Provides the widget information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface FormInfo--><!--Device-unnamed-declare interface FormInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Ability name of the widget.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-FormInfo-ability: string--><!--Device-FormInfo-ability: string-End-->
 
@@ -48,10 +40,6 @@ Bundle name of the widget.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FormInfo-bundle: string--><!--Device-FormInfo-bundle: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -69,10 +57,6 @@ Dimensions of the widget. The 2 x 2, 4 x 4, 4 x 2, and more options are availabl
 **Type:** [FormDimension](arkts-arkui-formdimension-e-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-FormInfo-dimension?: FormDimension--><!--Device-FormInfo-dimension?: FormDimension-End-->
 
@@ -92,10 +76,6 @@ Whether the widget is exempt from app lock. **true**: The widget is exempt from 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-FormInfo-exemptAppLock?: boolean--><!--Device-FormInfo-exemptAppLock?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -113,10 +93,6 @@ Widget ID. Set this parameter to **0** for a new widget. **NOTE：**Different wi
 **Type:** number \| string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-FormInfo-id: number | string--><!--Device-FormInfo-id: number | string-End-->
 
@@ -136,10 +112,6 @@ Module name of the widget.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FormInfo-module: string--><!--Device-FormInfo-module: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -157,10 +129,6 @@ Widget name.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-FormInfo-name: string--><!--Device-FormInfo-name: string-End-->
 
@@ -180,10 +148,6 @@ Widget rendering mode. Default value: **FULL_COLOR**. The options are as follows
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FormInfo-renderingMode?: FormRenderingMode--><!--Device-FormInfo-renderingMode?: FormRenderingMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -201,10 +165,6 @@ The shape of the form.
 **Type:** [FormShape](arkts-arkui-formshape-e-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-FormInfo-shape?: FormShape--><!--Device-FormInfo-shape?: FormShape-End-->
 
@@ -224,10 +184,6 @@ Whether the widget is a temporary widget. **true**: The widget is a temporary wi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FormInfo-temporary?: boolean--><!--Device-FormInfo-temporary?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -245,10 +201,6 @@ The want of the form.
 **Type:** import('../api/@ohos.app.ability.Want').default
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-FormInfo-want?: import('../api/@ohos.app.ability.Want').default--><!--Device-FormInfo-want?: import('../api/@ohos.app.ability.Want').default-End-->
 

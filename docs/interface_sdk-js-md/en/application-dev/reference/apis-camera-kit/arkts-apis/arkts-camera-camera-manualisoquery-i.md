@@ -4,10 +4,6 @@ Provides APIs to check whether a camera device supports manual ISO setting and o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface ManualIsoQuery--><!--Device-camera-interface ManualIsoQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -29,10 +25,6 @@ getSupportedIsoRange(): int[]
 Get a array of supported standard ISO sensitivity values, as defined in ISO 12232:2006.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

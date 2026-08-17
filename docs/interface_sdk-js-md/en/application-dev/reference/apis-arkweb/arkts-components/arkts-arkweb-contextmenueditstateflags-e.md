@@ -1,12 +1,8 @@
 # ContextMenuEditStateFlags
 
-Enumerates the context menu edit state flags. This enum can be used in bitwise OR mode. For example, to support **CAN_CUT**, **CAN_COPY**, and **CAN_SELECT_ALL** at the same time, use **CAN_CUT | CAN_COPY | CAN_SELECT_ALL**.
+Enumerates the context menu edit state flags. This enum can be used in bitwise OR mode. For example, to support **CAN_CUT**, **CAN_COPY**, and **CAN_SELECT_ALL** at the same time, use **CAN_CUT | CAN_COPY | CAN_SELECT_ALL** or **11**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum ContextMenuEditStateFlags--><!--Device-unnamed-declare enum ContextMenuEditStateFlags-End-->
 
@@ -21,10 +17,6 @@ NONE = 0
 Editing is not allowed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Cutting is supported.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ContextMenuEditStateFlags-CAN_CUT = 1 << 0--><!--Device-ContextMenuEditStateFlags-CAN_CUT = 1 << 0-End-->
@@ -61,10 +49,6 @@ CAN_COPY = 1 << 1
 Copying is supported.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ Pasting is supported.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ContextMenuEditStateFlags-CAN_PASTE = 1 << 2--><!--Device-ContextMenuEditStateFlags-CAN_PASTE = 1 << 2-End-->
@@ -101,10 +81,6 @@ CAN_SELECT_ALL = 1 << 3
 Selecting all is supported.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

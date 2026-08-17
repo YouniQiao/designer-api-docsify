@@ -16,8 +16,6 @@ Terminates this process. Exercise caution when using this API. After this API is
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [exit](arkts-arkts-process-processmanager-c.md#exit)
@@ -32,7 +30,7 @@ Terminates this process. Exercise caution when using this API. After this API is
 | --- | --- | --- | --- |
 | code | number | Yes | Exit code of the process. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 process.exit(0);

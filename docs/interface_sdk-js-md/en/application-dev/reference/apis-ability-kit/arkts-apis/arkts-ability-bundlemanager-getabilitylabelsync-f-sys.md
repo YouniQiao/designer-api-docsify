@@ -16,10 +16,6 @@ Obtains the ability label based on the given bundle name, module name, and abili
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
 <!--Device-bundleManager-function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string--><!--Device-bundleManager-function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string-End-->
@@ -56,7 +52,7 @@ Obtains the ability label based on the given bundle name, module name, and abili
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ Enumerates power role types.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-usbManager-export enum PowerRoleType--><!--Device-usbManager-export enum PowerRoleType-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -23,10 +19,6 @@ NONE = 0
 没有功能。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PowerRoleType-NONE = 0--><!--Device-PowerRoleType-NONE = 0-End-->
 
@@ -44,10 +36,6 @@ External power supply
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PowerRoleType-SOURCE = 1--><!--Device-PowerRoleType-SOURCE = 1-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -63,10 +51,6 @@ SINK = 2
 Internal power supply
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PowerRoleType-SINK = 2--><!--Device-PowerRoleType-SINK = 2-End-->
 

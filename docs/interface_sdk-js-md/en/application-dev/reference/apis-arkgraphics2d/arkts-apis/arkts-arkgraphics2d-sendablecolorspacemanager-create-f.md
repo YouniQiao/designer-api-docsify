@@ -16,10 +16,6 @@ Creates a criterion color space management instance that is sendable.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -43,7 +39,7 @@ Creates a criterion color space management instance that is sendable.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
 | [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { colorSpaceManager, sendableColorSpaceManager } from '@kit.ArkGraphics2D';
@@ -61,10 +57,6 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 Creates a custom color space object that is sendable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager-End-->
 
@@ -90,7 +82,7 @@ Creates a custom color space object that is sendable.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
 | [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { colorSpaceManager, sendableColorSpaceManager } from '@kit.ArkGraphics2D';

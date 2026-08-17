@@ -4,10 +4,6 @@ Implements a serial queue, in which all tasks are executed in sequence.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-taskpool-class SequenceRunner--><!--Device-taskpool-class SequenceRunner-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ A constructor used to create a **SequenceRunner** instance.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SequenceRunner-constructor(priority?: Priority)--><!--Device-SequenceRunner-constructor(priority?: Priority)-End-->
@@ -44,7 +36,7 @@ A constructor used to create a **SequenceRunner** instance.
 | --- | --- | --- | --- |
 | priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
@@ -60,10 +52,6 @@ A constructor used to create a **SequenceRunner** instance. This instance repres
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SequenceRunner-constructor(name: string, priority?: Priority)--><!--Device-SequenceRunner-constructor(name: string, priority?: Priority)-End-->
@@ -77,7 +65,7 @@ A constructor used to create a **SequenceRunner** instance. This instance repres
 | name | string | Yes | Name of a serial queue. |
 | priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
@@ -92,10 +80,6 @@ execute(task: Task): Promise<Object>
 Adds a task to the serial queue for execution. Before using this API, you must create a **SequenceRunner** instance. Tasks in another task group, serial queue, or asynchronous queue, dependent tasks, and tasks that have been executed cannot be added to the serial queue. This API uses a promise to return the result. > **NOTE：**> > - Tasks that depend others cannot be added to the serial queue. > > - The failure or cancellation of a task does not affect the execution of subsequent tasks in the serial queue.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -125,7 +109,7 @@ Adds a task to the serial queue for execution. Before using this API, you must c
 | [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent

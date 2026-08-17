@@ -10,10 +10,6 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void--><!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -38,7 +34,7 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + '/test.txt';

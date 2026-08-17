@@ -4,10 +4,6 @@ Interface for defining time base metadata
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface AVTimedMetaData--><!--Device-media-interface AVTimedMetaData-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -30,10 +26,6 @@ The classification label of the time base metadata.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVTimedMetaData-classify?: string--><!--Device-AVTimedMetaData-classify?: string-End-->
@@ -51,10 +43,6 @@ Key-value pair set corresponding to time primitive information
 **Type:** Record&lt;string, object&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Duration of the time primitive information The value should be an integer. <br>U
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVTimedMetaData-duration: int--><!--Device-AVTimedMetaData-duration: int-End-->
@@ -96,10 +80,6 @@ Defines the unique token of the time base metadata, The tag must be unique in ot
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVTimedMetaData-id?: string--><!--Device-AVTimedMetaData-id?: string-End-->
@@ -117,10 +97,6 @@ Defines the offset value of the time primitive information relative to the start
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

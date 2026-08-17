@@ -13,10 +13,6 @@ function runCmd(
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-process-function runCmd(    command: string,    options?: ConditionType  ): ChildProcess--><!--Device-process-function runCmd(    command: string,    options?: ConditionType  ): ChildProcess-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

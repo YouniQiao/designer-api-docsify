@@ -4,8 +4,6 @@ Defines subscription information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-deviceManager-interface SubscribeInfo--><!--Device-deviceManager-interface SubscribeInfo-End-->
@@ -32,8 +30,6 @@ Discovery capability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-SubscribeInfo-capability: SubscribeCap--><!--Device-SubscribeInfo-capability: SubscribeCap-End-->
@@ -53,8 +49,6 @@ Frequency of device discovery.
 **Type:** [ExchangeFreq](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -76,8 +70,6 @@ Whether the account is the same as the current account. The value **true** indic
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-SubscribeInfo-isSameAccount: boolean--><!--Device-SubscribeInfo-isSameAccount: boolean-End-->
@@ -97,8 +89,6 @@ Whether to wake up the device. The value **true** means to wake up the device an
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -120,8 +110,6 @@ Medium used for device discovery.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-SubscribeInfo-medium: ExchangeMedium--><!--Device-SubscribeInfo-medium: ExchangeMedium-End-->
@@ -142,8 +130,6 @@ Device discovery mode.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-SubscribeInfo-mode: DiscoverMode--><!--Device-SubscribeInfo-mode: DiscoverMode-End-->
@@ -163,8 +149,6 @@ Subscription ID, used to identify a device discovery period. The value ranges fr
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 

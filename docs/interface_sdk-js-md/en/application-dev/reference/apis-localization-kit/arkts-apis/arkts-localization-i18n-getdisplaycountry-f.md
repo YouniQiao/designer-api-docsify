@@ -16,11 +16,9 @@ Obtains the localized name of the specified country/region.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDisplayCountry](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getDisplayCountry)
+**Substitutes:** [getDisplayCountry](arkts-localization-i18n-system-c.md#getdisplaycountry)
 
 <!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string-End-->
 
@@ -40,7 +38,7 @@ Obtains the localized name of the specified country/region.
 | --- | --- |
 | string | Localized script for the specified country. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

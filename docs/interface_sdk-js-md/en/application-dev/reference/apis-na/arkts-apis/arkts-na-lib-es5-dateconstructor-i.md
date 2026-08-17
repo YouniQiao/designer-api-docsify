@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface DateConstructor--><!--Device-unnamed-interface DateConstructor-End-->
 
 ## UTC
@@ -17,10 +13,6 @@ UTC(year: number, monthIndex: number, date?: number, hours?: number, minutes?: n
 Returns the number of milliseconds between midnight, January 1, 1970 Universal Coordinated Time (UTC) (or GMT) and the specified date.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DateConstructor-UTC(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number): number--><!--Device-DateConstructor-UTC(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number): number-End-->
 
@@ -50,10 +42,6 @@ new(): Date
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DateConstructor-new(): Date--><!--Device-DateConstructor-new(): Date-End-->
 
 **Return value:**
@@ -69,10 +57,6 @@ new(value: number | string): Date
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DateConstructor-new(value: number | string): Date--><!--Device-DateConstructor-new(value: number | string): Date-End-->
 
@@ -97,10 +81,6 @@ new(year: number, monthIndex: number, date?: number, hours?: number, minutes?: n
 Creates a new Date.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DateConstructor-new(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number): Date--><!--Device-DateConstructor-new(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number): Date-End-->
 
@@ -130,10 +110,6 @@ Creates a new Date.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DateConstructor-(): string--><!--Device-DateConstructor-(): string-End-->
 
 **Return value:**
@@ -152,10 +128,6 @@ Returns the number of milliseconds elapsed since midnight, January 1, 1970 Unive
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DateConstructor-now(): number--><!--Device-DateConstructor-now(): number-End-->
 
 **Return value:**
@@ -173,10 +145,6 @@ parse(s: string): number
 Parses a string containing a date, and returns the number of milliseconds between that date and midnight, January 1, 1970.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DateConstructor-parse(s: string): number--><!--Device-DateConstructor-parse(s: string): number-End-->
 
@@ -201,10 +169,6 @@ readonly prototype: Date
 **Type:** Date
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DateConstructor-readonly prototype: Date--><!--Device-DateConstructor-readonly prototype: Date-End-->
 

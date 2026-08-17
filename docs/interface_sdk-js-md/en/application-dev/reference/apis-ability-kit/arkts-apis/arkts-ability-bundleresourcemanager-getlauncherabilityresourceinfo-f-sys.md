@@ -16,10 +16,6 @@ Obtains the bundle information of the entry ability of an application based on t
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_RESOURCES
 
 <!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int): Array<LauncherAbilityResourceInfo>--><!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int): Array<LauncherAbilityResourceInfo>-End-->
@@ -33,7 +29,7 @@ Obtains the bundle information of the entry ability of an application based on t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| resourceFlags | int | No | Type of the resource information to obtain. The default value is **[ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag-(System-API)).GET_RESOURCE_INFO_ALL**. |
+| resourceFlags | int | No | Type of the resource information to obtain. The default value is **[ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#resourceflag-system-api).GET_RESOURCE_INFO_ALL**. |
 
 **Return value:**
 
@@ -61,10 +57,6 @@ Obtains the launcher ability resource information of an application based on the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_RESOURCES
 
 <!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): Array<LauncherAbilityResourceInfo>--><!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): Array<LauncherAbilityResourceInfo>-End-->
@@ -78,7 +70,7 @@ Obtains the launcher ability resource information of an application based on the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| resourceFlags | int | No | Type of the resource information to obtain. The default value is **[ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag-(System-API)).GET_RESOURCE_INFO_ALL**. |
+| resourceFlags | int | No | Type of the resource information to obtain. The default value is **[ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#resourceflag-system-api).GET_RESOURCE_INFO_ALL**. |
 | appIndex | int | No | Index of the application clone. The default value is **0**. |
 
 **Return value:**

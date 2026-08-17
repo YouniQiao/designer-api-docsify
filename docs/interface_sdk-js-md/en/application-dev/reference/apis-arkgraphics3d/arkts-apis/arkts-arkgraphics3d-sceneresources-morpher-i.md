@@ -4,10 +4,6 @@ Defines the deformation of 3D models by adjusting the weights of different defor
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Morpher--><!--Device-unnamed-export interface Morpher-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -23,10 +19,6 @@ Used to store the names and weights of deformation targets. The weight value is 
 **Type:** Record&lt;string, double&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Morpher-readonly targets: Record<string, double>--><!--Device-Morpher-readonly targets: Record<string, double>-End-->
 

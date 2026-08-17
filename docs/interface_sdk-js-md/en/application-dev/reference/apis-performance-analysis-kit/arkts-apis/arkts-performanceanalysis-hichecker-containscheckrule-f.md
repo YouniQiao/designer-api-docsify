@@ -16,10 +16,6 @@ Checks whether the specified rule exists in the collection of added rules. If th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hichecker-function containsCheckRule(rule: bigint) : boolean--><!--Device-hichecker-function containsCheckRule(rule: bigint) : boolean-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -42,7 +38,7 @@ Checks whether the specified rule exists in the collection of added rules. If th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | the parameter check failed, only one bigint type parameter is needed |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

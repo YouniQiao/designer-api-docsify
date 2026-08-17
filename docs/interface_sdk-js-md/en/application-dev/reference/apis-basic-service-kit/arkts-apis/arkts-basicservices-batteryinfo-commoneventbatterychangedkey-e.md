@@ -4,9 +4,7 @@ Enumerates keys for querying the additional information about the **COMMON_EVENT
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-batteryInfo-export enum CommonEventBatteryChangedKey--><!--Device-batteryInfo-export enum CommonEventBatteryChangedKey-End-->
 
@@ -22,9 +20,7 @@ Remaining battery level in percentage.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_SOC = 'soc'--><!--Device-CommonEventBatteryChangedKey-EXTRA_SOC = 'soc'-End-->
 
@@ -40,9 +36,7 @@ Battery charging status of the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_CHARGE_STATE = 'chargeState'--><!--Device-CommonEventBatteryChangedKey-EXTRA_CHARGE_STATE = 'chargeState'-End-->
 
@@ -58,9 +52,7 @@ Battery health status of the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_HEALTH_STATE = 'healthState'--><!--Device-CommonEventBatteryChangedKey-EXTRA_HEALTH_STATE = 'healthState'-End-->
 
@@ -76,9 +68,7 @@ Type of the charger connected to the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_PLUGGED_TYPE = 'pluggedType'--><!--Device-CommonEventBatteryChangedKey-EXTRA_PLUGGED_TYPE = 'pluggedType'-End-->
 
@@ -94,9 +84,7 @@ Battery voltage of the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_VOLTAGE = 'voltage'--><!--Device-CommonEventBatteryChangedKey-EXTRA_VOLTAGE = 'voltage'-End-->
 
@@ -112,9 +100,7 @@ Battery technology of the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_TECHNOLOGY = 'technology'--><!--Device-CommonEventBatteryChangedKey-EXTRA_TECHNOLOGY = 'technology'-End-->
 
@@ -130,9 +116,7 @@ Battery temperature of the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_TEMPERATURE = 'temperature'--><!--Device-CommonEventBatteryChangedKey-EXTRA_TEMPERATURE = 'temperature'-End-->
 
@@ -148,9 +132,7 @@ Whether the battery is supported by the device or installed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_PRESENT = 'present'--><!--Device-CommonEventBatteryChangedKey-EXTRA_PRESENT = 'present'-End-->
 
@@ -166,9 +148,7 @@ Battery level of the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_CAPACITY_LEVEL = 'capacityLevel'--><!--Device-CommonEventBatteryChangedKey-EXTRA_CAPACITY_LEVEL = 'capacityLevel'-End-->
 

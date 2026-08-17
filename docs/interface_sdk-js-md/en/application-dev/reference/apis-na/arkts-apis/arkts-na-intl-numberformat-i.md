@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Intl-interface NumberFormat--><!--Device-Intl-interface NumberFormat-End-->
 
 ## format
@@ -15,10 +11,6 @@ format(value: number): string
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NumberFormat-format(value: number): string--><!--Device-NumberFormat-format(value: number): string-End-->
 
@@ -41,10 +33,6 @@ resolvedOptions(): ResolvedNumberFormatOptions
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NumberFormat-resolvedOptions(): ResolvedNumberFormatOptions--><!--Device-NumberFormat-resolvedOptions(): ResolvedNumberFormatOptions-End-->
 

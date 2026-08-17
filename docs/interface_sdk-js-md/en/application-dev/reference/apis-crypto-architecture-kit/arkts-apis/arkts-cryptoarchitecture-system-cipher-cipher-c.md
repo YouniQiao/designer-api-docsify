@@ -4,8 +4,6 @@ Defines the cipher functions.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** Cipher
@@ -32,8 +30,6 @@ Encrypts or decrypts data using AES.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** Cipher
@@ -57,8 +53,6 @@ static rsa(options: CipherRsaOptions): void
 Encrypts or decrypts data using RSA.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

@@ -10,10 +10,6 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-uiEffect-function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender--><!--Device-uiEffect-function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender-End-->
@@ -34,7 +30,7 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 | --- | --- |
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | 返回提亮效果的BrightnessBlender混合器。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

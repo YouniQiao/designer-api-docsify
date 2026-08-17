@@ -10,10 +10,6 @@ function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<A
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
 <!--Device-cloudSyncManager-function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<Array<LocalFilePresentStatus>>--><!--Device-cloudSyncManager-function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<Array<LocalFilePresentStatus>>-End-->
@@ -45,7 +41,7 @@ function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<A
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

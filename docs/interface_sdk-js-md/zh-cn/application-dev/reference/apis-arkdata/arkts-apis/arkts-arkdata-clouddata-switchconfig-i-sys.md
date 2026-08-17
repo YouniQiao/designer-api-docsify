@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudData-interface SwitchConfig--><!--Device-cloudData-interface SwitchConfig-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -25,10 +21,6 @@ dbInfo: Record<string, DBSwitchInfo>
 **类型：** Record&lt;string, [DBSwitchInfo](arkts-arkdata-clouddata-dbswitchinfo-i-sys.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SwitchConfig-dbInfo: Record<string, DBSwitchInfo>--><!--Device-SwitchConfig-dbInfo: Record<string, DBSwitchInfo>-End-->
 

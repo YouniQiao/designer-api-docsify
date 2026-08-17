@@ -4,10 +4,6 @@ The class of insight intent entry executor.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class InsightIntentEntryExecutor--><!--Device-unnamed-declare class InsightIntentEntryExecutor-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -27,10 +23,6 @@ onExecute(): Promise<insightIntent.IntentResult<T>>
 Called when insight intent execute.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,10 +50,6 @@ The insight intent context.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -81,10 +69,6 @@ The insight intent execute mode.
 **Type:** insightIntent.ExecuteMode
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,10 +90,6 @@ The UIExtension content session.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -129,10 +109,6 @@ The window stage.
 **Type:** window.WindowStage
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

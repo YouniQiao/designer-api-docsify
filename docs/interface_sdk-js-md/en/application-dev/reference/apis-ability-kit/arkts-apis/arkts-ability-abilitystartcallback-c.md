@@ -4,10 +4,6 @@ The module describes the callback invoked to return the UIExtensionAbility start
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class AbilityStartCallback--><!--Device-unnamed-export default class AbilityStartCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -21,10 +17,6 @@ onError(code: int, name: string, message: string): void
 Called when the UIExtensionAbility fails to start.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Called when the UIExtensionAbility is terminated.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -68,7 +56,7 @@ Called when the UIExtensionAbility is terminated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Result returned when [terminateSelfWithResult](arkts-ability-uiextensioncontext-c.md#terminateSelfWithResult) is called to terminate the UIExtensionAbility. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Result returned when [terminateSelfWithResult](arkts-ability-uiextensioncontext-c.md#terminateselfwithresult) is called to terminate the UIExtensionAbility. |
 
 ## completionHandler
 
@@ -81,10 +69,6 @@ Callback invoked when the ability of a specified type is started.
 **Type:** [CompletionHandlerForAbilityStartCallback](arkts-ability-app-ability-completionhandlerforabilitystartcallback-completionhandlerforabilitystartcallback-c.md)
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

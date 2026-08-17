@@ -16,10 +16,6 @@ Checks whether the current device can send and receive SMS messages. This API wo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-function hasSmsCapability(): boolean--><!--Device-sms-function hasSmsCapability(): boolean-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms

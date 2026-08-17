@@ -1,12 +1,8 @@
 # PopupCommonOptions
 
-Configures the parameters of a popup. You can use the [getPromptAction()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object, and then call the attributes of **options** when [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openPopup) or [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatePopup) is called.
+Configures the parameters of a popup. You can use the [getPromptAction()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object, and then call the attributes of **options** when [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup) or [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) is called.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface PopupCommonOptions--><!--Device-unnamed-declare interface PopupCommonOptions-End-->
 
@@ -25,10 +21,6 @@ Arrow height. Default value: **8** Unit: vp **NOTE：**Percentage values are not
 **Default:** 8.0_vp.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Offset of the popup arrow relative to the popup. When the arrow is at the top or
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -73,10 +61,6 @@ Position of the tooltip arrow relative to its parent component. Available positi
 **Type:** ArrowPointPosition
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,10 +84,6 @@ Arrow thickness. If the arrow thickness exceeds the length of the edge minus twi
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -125,10 +105,6 @@ Whether to automatically dismiss the popup when there is a page operation. The v
 **Default:** true
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,10 +128,6 @@ Whether the popup covers the pointing component during avoidance. Default value:
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -178,10 +150,6 @@ Background blur style of the popup. Default value: **BlurStyle.COMPONENT_ULTRA_T
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -201,10 +169,6 @@ Defines the popup's background blur style with options
 **Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,10 +190,6 @@ Defines the popup's background effect with options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -250,10 +210,6 @@ Linear gradient color of the inner outline of the popup. **NOTE：**1. If **bord
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -273,10 +229,6 @@ Width of the inner outline of the popup. Default value: **1** Unit: vp **NOTE：
 **Type:** Dimension
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -300,10 +252,6 @@ Define the popup theme color mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -325,10 +273,6 @@ Whether to display the arrow. The value **true** means to display the arrow, and
 **Default:** true
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -352,10 +296,6 @@ Whether the popup responds when the device is in hover mode (semi-folded state),
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -370,17 +310,13 @@ Whether the popup responds when the device is in hover mode (semi-folded state),
 focusable?: boolean
 ```
 
-Whether the popup obtains focus when displayed. **true**: The popup can obtain the focus; **false**: The popup cannot obtain the focus. Default value: **false** **NOTE：**[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatePopup) cannot be used for update.
+Whether the popup obtains focus when displayed. **true**: The popup can obtain the focus; **false**: The popup cannot obtain the focus. Default value: **false** **NOTE：**[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -404,10 +340,6 @@ Whether the popup aligns with the transformed position of the target when the ta
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -428,10 +360,6 @@ Defines the display level of the popup.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -451,10 +379,6 @@ Whether to apply a mask with the specified color to the popup. The value **false
 **Type:** boolean \| [PopupMaskType](arkts-arkui-popupmasktype-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -478,10 +402,6 @@ Offset of the popup relative to the display position specified by **placement**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -496,15 +416,11 @@ Offset of the popup relative to the display position specified by **placement**.
 onStateChange?: PopupStateChangeCallback
 ```
 
-Represents the callback invoked when the popup state changes. **NOTE：**[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatePopup) cannot be used for update.
+Represents the callback invoked when the popup state changes. **NOTE：**[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
 
 **Type:** [PopupStateChangeCallback](arkts-arkui-popupstatechangecallback-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -520,15 +436,11 @@ Represents the callback invoked when the popup state changes. **NOTE：**[update
 onWillDismiss?: boolean | Callback<DismissPopupAction>
 ```
 
-Interactive dismissal behavior. The default value is **true**, meaning that the popup responds to clicks, swipes ( left or right), and the back button. 1. For the boolean type, if this parameter is set to **false**, the popup ignores clicks, swipes, back button, route navigation, and **Esc** key events, and can only be dismissed by setting the **show** parameter to **false**; if this parameter is set to **true**, the popup responds to dismissal events. 2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. For swipes, back button, route navigation, and the **Esc** key, the value of **reason** returned in the callback function is **PRESS_BACK**. For clicks, the value is **TOUCH_OUTSIDE**. **NOTE：**1. No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback. 2. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatePopup) cannot be used for update.
+Interactive dismissal behavior. The default value is **true**, meaning that the popup responds to clicks, swipes ( left or right), and the back button. 1. For the boolean type, if this parameter is set to **false**, the popup ignores clicks, swipes, back button, route navigation, and **Esc** key events, and can only be dismissed by setting the **show** parameter to **false**; if this parameter is set to **true**, the popup responds to dismissal events. 2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. For swipes, back button, route navigation, and the **Esc** key, the value of **reason** returned in the callback function is **PRESS_BACK**. For clicks, the value is **TOUCH_OUTSIDE**. **NOTE：**1. No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback. 2. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
 
 **Type:** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -550,10 +462,6 @@ Linear gradient color of the outer outline of the popup. **NOTE：**1. If **outl
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -573,10 +481,6 @@ Width of the outer outline of the popup. Default value: **1** Unit: vp **NOTE：
 **Type:** Dimension
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -600,10 +504,6 @@ Preferred position of the popup. If the set position is insufficient for holding
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -618,15 +518,11 @@ Preferred position of the popup. If the set position is insufficient for holding
 popupColor?: ResourceColor
 ```
 
-Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#BlurStyle)
+Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#blurstyle)
 
 **Type:** ResourceColor
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -650,10 +546,6 @@ Rounded corner radius of the popup. Default value: **20** Unit: vp
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -676,10 +568,6 @@ Popup shadow. Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -694,17 +582,13 @@ Popup shadow. Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 showInSubWindow?: boolean
 ```
 
-Whether to show the popup in a subwindow. The value **true** means to show the popup in a subwindow, and **false** means to show the popup in the main window. Default value: **false** **NOTE：**[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatePopup) cannot be used for update.
+Whether to show the popup in a subwindow. The value **true** means to show the popup in a subwindow, and **false** means to show the popup in the main window. Default value: **false** **NOTE：**[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -726,10 +610,6 @@ Set system-styled materials for popup. Different materials have different effect
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -750,10 +630,6 @@ Spacing between the popup and the host node. Percentage values are not supported
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -768,15 +644,11 @@ Spacing between the popup and the host node. Percentage values are not supported
 transition?: TransitionEffect
 ```
 
-Transition animations for the entrance and exit of the popup. **NOTE：**1. If this parameter is not set, the default effect is used. 2. Touching the back button during the entrance animation interrupts it and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined. 3. Touching the back button during the exit animation does not affect the animation playback; the back button is unresponsive. 4. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatePopup) cannot be used for update.
+Transition animations for the entrance and exit of the popup. **NOTE：**1. If this parameter is not set, the default effect is used. 2. Touching the back button during the entrance animation interrupts it and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined. 3. Touching the back button during the exit animation does not affect the animation playback; the back button is unresponsive. 4. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
 
 **Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -797,10 +669,6 @@ Width of the popup.
 **Type:** Dimension
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

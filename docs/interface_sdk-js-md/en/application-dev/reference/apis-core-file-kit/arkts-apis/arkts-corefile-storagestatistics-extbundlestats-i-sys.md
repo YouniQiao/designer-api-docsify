@@ -4,10 +4,6 @@ Details the space usage of system applications or system services.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-storageStatistics-export interface ExtBundleStats--><!--Device-storageStatistics-export interface ExtBundleStats-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
@@ -32,10 +28,6 @@ System application bundle name or system service name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExtBundleStats-businessName: string--><!--Device-ExtBundleStats-businessName: string-End-->
@@ -56,10 +48,6 @@ Whether the space occupied by system applications or system services needs to be
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExtBundleStats-flag: boolean--><!--Device-ExtBundleStats-flag: boolean-End-->
@@ -79,10 +67,6 @@ The business size. <br>Unit: Byte.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

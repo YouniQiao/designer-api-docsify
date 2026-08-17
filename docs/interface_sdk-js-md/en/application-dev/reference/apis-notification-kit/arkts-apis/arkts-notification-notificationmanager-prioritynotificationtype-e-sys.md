@@ -4,10 +4,6 @@ Describes the priority type of a notification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export enum PriorityNotificationType--><!--Device-notificationManager-export enum PriorityNotificationType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -21,10 +17,6 @@ PAYMENT_DUE = 'PAYMENT_DUE'
 Payment and repayment.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PriorityNotificationType-PAYMENT_DUE = 'PAYMENT_DUE'--><!--Device-PriorityNotificationType-PAYMENT_DUE = 'PAYMENT_DUE'-End-->
 
@@ -42,10 +34,6 @@ Account balance reminder.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PriorityNotificationType-TRANSACTION_ALERT = 'TRANSACTION_ALERT'--><!--Device-PriorityNotificationType-TRANSACTION_ALERT = 'TRANSACTION_ALERT'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -61,10 +49,6 @@ EXPRESS_PROGRESS = 'EXPRESS_PROGRESS'
 Express progress.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PriorityNotificationType-EXPRESS_PROGRESS = 'EXPRESS_PROGRESS'--><!--Device-PriorityNotificationType-EXPRESS_PROGRESS = 'EXPRESS_PROGRESS'-End-->
 
@@ -82,10 +66,6 @@ Missed call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PriorityNotificationType-MISS_CALL = 'MISS_CALL'--><!--Device-PriorityNotificationType-MISS_CALL = 'MISS_CALL'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -101,10 +81,6 @@ TRAVEL_ALERT = 'TRAVEL_ALERT'
 Abnormal traveling.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PriorityNotificationType-TRAVEL_ALERT = 'TRAVEL_ALERT'--><!--Device-PriorityNotificationType-TRAVEL_ALERT = 'TRAVEL_ALERT'-End-->
 
@@ -122,10 +98,6 @@ Account security.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PriorityNotificationType-ACCOUNT_ALERT = 'ACCOUNT_ALERT'--><!--Device-PriorityNotificationType-ACCOUNT_ALERT = 'ACCOUNT_ALERT'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -141,10 +113,6 @@ APPOINTMENT_REMINDER = 'APPOINTMENT_REMINDER'
 Appointment reminder.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PriorityNotificationType-APPOINTMENT_REMINDER = 'APPOINTMENT_REMINDER'--><!--Device-PriorityNotificationType-APPOINTMENT_REMINDER = 'APPOINTMENT_REMINDER'-End-->
 
@@ -162,10 +130,6 @@ Traffic violation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PriorityNotificationType-TRAFFIC_NOTICE = 'TRAFFIC_NOTICE'--><!--Device-PriorityNotificationType-TRAFFIC_NOTICE = 'TRAFFIC_NOTICE'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -181,10 +145,6 @@ KEY_PROGRESS = 'KEY_PROGRESS'
 Key progress.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PriorityNotificationType-KEY_PROGRESS = 'KEY_PROGRESS'--><!--Device-PriorityNotificationType-KEY_PROGRESS = 'KEY_PROGRESS'-End-->
 
@@ -202,10 +162,6 @@ Important common event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PriorityNotificationType-PUBLIC_EVENT = 'PUBLIC_EVENT'--><!--Device-PriorityNotificationType-PUBLIC_EVENT = 'PUBLIC_EVENT'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -222,10 +178,6 @@ IoT warning.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PriorityNotificationType-IOT_WARNING = 'IOT_WARNING'--><!--Device-PriorityNotificationType-IOT_WARNING = 'IOT_WARNING'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -241,10 +193,6 @@ CUSTOM_KEYWORD = 'CUSTOM_KEYWORD'
 Custom keyword.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PriorityNotificationType-CUSTOM_KEYWORD = 'CUSTOM_KEYWORD'--><!--Device-PriorityNotificationType-CUSTOM_KEYWORD = 'CUSTOM_KEYWORD'-End-->
 

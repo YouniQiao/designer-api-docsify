@@ -1,14 +1,10 @@
 # RotationRecognizer
 
-旋转手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer)。
+旋转手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)。
 
-**继承/实现关系：** RotationRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer)
+**继承/实现关系：** RotationRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class RotationRecognizer--><!--Device-unnamed-declare class RotationRecognizer-End-->
 
@@ -23,10 +19,6 @@ getAngle(): number
 返回预设旋转手势识别器触发旋转手势最小改变度数阈值。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

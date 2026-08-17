@@ -2,13 +2,9 @@
 
 Base class for smart gesture handling with a target node.
 
-**Inheritance/Implementation:** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#BaseGestureHandlingProposal)
+**Inheritance/Implementation:** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#basegesturehandlingproposal)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export abstract class TargetedGestureProposal--><!--Device-unnamed-export abstract class TargetedGestureProposal-End-->
 
@@ -49,6 +45,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## node
@@ -62,10 +60,6 @@ Target node that handles the current smart gesture.
 **Type:** FrameNode
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

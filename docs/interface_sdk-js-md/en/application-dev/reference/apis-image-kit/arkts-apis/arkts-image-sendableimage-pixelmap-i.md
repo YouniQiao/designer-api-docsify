@@ -2,13 +2,9 @@
 
 Sendable PixelMap instance.
 
-**Inheritance/Implementation:** PixelMap extends [ISendable](arkts-image-sendableimage-isendable-t.md#ISendable)
+**Inheritance/Implementation:** PixelMap extends [ISendable](arkts-image-sendableimage-isendable-t.md#isendable)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-sendableImage-interface PixelMap--><!--Device-sendableImage-interface PixelMap-End-->
 
@@ -29,10 +25,6 @@ applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<
 Apply color space of pixelmap, the pixels will be changed by input color space. This method uses a promise to return the result. This method is used to change color space of PixelMap. Pixel data will be changed by calling this method. If you want to set the colorspace property of PixelMap only, use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>-End-->
 
@@ -59,7 +51,7 @@ Apply color space of pixelmap, the pixels will be changed by input color space. 
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
 | [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -87,10 +79,6 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-createAlphaPixelmap(): Promise<PixelMap>--><!--Device-PixelMap-createAlphaPixelmap(): Promise<PixelMap>-End-->
@@ -103,7 +91,7 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 | --- | --- |
 | Promise&lt;PixelMap&gt; | A Promise instance used to return the new image pixelmap. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -130,10 +118,6 @@ Obtains new pixelmap with alpha information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap--><!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap-End-->
@@ -153,7 +137,7 @@ Obtains new pixelmap with alpha information.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -174,10 +158,6 @@ Crop the image. This method uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-crop(region: image.Region): Promise<void>--><!--Device-PixelMap-crop(region: image.Region): Promise<void>-End-->
@@ -196,7 +176,7 @@ Crop the image. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -226,10 +206,6 @@ Crop the image.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-cropSync(region: image.Region): void--><!--Device-PixelMap-cropSync(region: image.Region): void-End-->
@@ -249,7 +225,7 @@ Crop the image.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -273,10 +249,6 @@ Image flipping. This method uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-flip(horizontal: boolean, vertical: boolean): Promise<void>--><!--Device-PixelMap-flip(horizontal: boolean, vertical: boolean): Promise<void>-End-->
@@ -296,7 +268,7 @@ Image flipping. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -326,10 +298,6 @@ Image flipping.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void--><!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void-End-->
@@ -350,7 +318,7 @@ Image flipping.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -374,10 +342,6 @@ Obtains the number of bytes in each line of the image pixelmap.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-getBytesNumberPerRow(): number--><!--Device-PixelMap-getBytesNumberPerRow(): number-End-->
@@ -390,7 +354,7 @@ Obtains the number of bytes in each line of the image pixelmap.
 | --- | --- |
 | number | Number of bytes in each line. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -410,10 +374,6 @@ Get color space of pixelmap.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager--><!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -432,7 +392,7 @@ Get color space of pixelmap.
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | If the image data abnormal. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | If the image data unsupport. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -454,10 +414,6 @@ Obtains the density of the image pixelmap.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-getDensity(): number--><!--Device-PixelMap-getDensity(): number-End-->
@@ -470,7 +426,7 @@ Obtains the density of the image pixelmap.
 | --- | --- |
 | number | The number of density, in ppi. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -490,10 +446,6 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-getImageInfo(): Promise<image.ImageInfo>--><!--Device-PixelMap-getImageInfo(): Promise<image.ImageInfo>-End-->
@@ -506,7 +458,7 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 | --- | --- |
 | Promise&lt;image.ImageInfo&gt; | A Promise instance used to return the image pixelmap information. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -536,10 +488,6 @@ Get image information from image source.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-getImageInfoSync(): image.ImageInfo--><!--Device-PixelMap-getImageInfoSync(): image.ImageInfo-End-->
@@ -558,7 +506,7 @@ Get image information from image source.
 | --- | --- |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -581,10 +529,6 @@ Obtains the total number of bytes of the image pixelmap.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-getPixelBytesNumber(): number--><!--Device-PixelMap-getPixelBytesNumber(): number-End-->
@@ -597,7 +541,7 @@ Obtains the total number of bytes of the image pixelmap.
 | --- | --- |
 | number | Total number of bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -617,10 +561,6 @@ Marshalling PixelMap and write into MessageSequence.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void--><!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -638,7 +578,7 @@ Marshalling PixelMap and write into MessageSequence.
 | [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -707,10 +647,6 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-opacity(rate: number): Promise<void>--><!--Device-PixelMap-opacity(rate: number): Promise<void>-End-->
@@ -729,7 +665,7 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -757,10 +693,6 @@ Set the transparent rate of pixelmap.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-opacitySync(rate: number): void--><!--Device-PixelMap-opacitySync(rate: number): void-End-->
@@ -780,7 +712,7 @@ Set the transparent rate of pixelmap.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -803,10 +735,6 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-readPixels(area: image.PositionArea): Promise<void>--><!--Device-PixelMap-readPixels(area: image.PositionArea): Promise<void>-End-->
@@ -825,7 +753,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -859,10 +787,6 @@ Reads image pixelmap data in an area.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-readPixelsSync(area: image.PositionArea): void--><!--Device-PixelMap-readPixelsSync(area: image.PositionArea): void-End-->
@@ -882,7 +806,7 @@ Reads image pixelmap data in an area.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -911,10 +835,6 @@ Reads image pixelmap data and writes the data to an ArrayBuffer. This method use
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-readPixelsToBuffer(dst: ArrayBuffer): Promise<void>--><!--Device-PixelMap-readPixelsToBuffer(dst: ArrayBuffer): Promise<void>-End-->
@@ -933,7 +853,7 @@ Reads image pixelmap data and writes the data to an ArrayBuffer. This method use
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -961,10 +881,6 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void--><!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void-End-->
@@ -984,7 +900,7 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1008,10 +924,6 @@ Releases this PixelMap object. This method uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-release(): Promise<void>--><!--Device-PixelMap-release(): Promise<void>-End-->
@@ -1024,7 +936,7 @@ Releases this PixelMap object. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the instance release result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1051,10 +963,6 @@ Image rotation. This method uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-rotate(angle: number): Promise<void>--><!--Device-PixelMap-rotate(angle: number): Promise<void>-End-->
@@ -1073,7 +981,7 @@ Image rotation. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1101,10 +1009,6 @@ Image rotation.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-rotateSync(angle: number): void--><!--Device-PixelMap-rotateSync(angle: number): void-End-->
@@ -1124,7 +1028,7 @@ Image rotation.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1147,10 +1051,6 @@ Image zoom in width and height. This method uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-scale(x: number, y: number): Promise<void>--><!--Device-PixelMap-scale(x: number, y: number): Promise<void>-End-->
@@ -1170,7 +1070,7 @@ Image zoom in width and height. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1200,10 +1100,6 @@ Image zoom in width and height.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-scaleSync(x: number, y: number): void--><!--Device-PixelMap-scaleSync(x: number, y: number): void-End-->
@@ -1224,7 +1120,7 @@ Image zoom in width and height.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1248,10 +1144,6 @@ Set color space of pixelmap. This method is only used to set the colorspace prop
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void--><!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1269,7 +1161,7 @@ Set color space of pixelmap. This method is only used to set the colorspace prop
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | If the operation invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1294,10 +1186,6 @@ Image position transformation. This method uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-translate(x: number, y: number): Promise<void>--><!--Device-PixelMap-translate(x: number, y: number): Promise<void>-End-->
@@ -1317,7 +1205,7 @@ Image position transformation. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1346,10 +1234,6 @@ Image position transformation.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-translateSync(x: number, y: number): void--><!--Device-PixelMap-translateSync(x: number, y: number): void-End-->
@@ -1370,7 +1254,7 @@ Image position transformation.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1393,10 +1277,6 @@ unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>
 Creates a PixelMap object based on MessageSequence parameter.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>--><!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>-End-->
 
@@ -1422,7 +1302,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1491,10 +1371,6 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>--><!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>-End-->
@@ -1513,7 +1389,7 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1545,10 +1421,6 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void--><!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void-End-->
@@ -1568,7 +1440,7 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1596,10 +1468,6 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-writePixels(area: image.PositionArea): Promise<void>--><!--Device-PixelMap-writePixels(area: image.PositionArea): Promise<void>-End-->
@@ -1618,7 +1486,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 | --- | --- |
 | Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1656,10 +1524,6 @@ Writes image pixelmap data to the specified area.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-writePixelsSync(area: image.PositionArea): void--><!--Device-PixelMap-writePixelsSync(area: image.PositionArea): void-End-->
@@ -1679,7 +1543,7 @@ Writes image pixelmap data to the specified area.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -1714,10 +1578,6 @@ Whether the image pixelmap can be edited.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PixelMap-readonly isEditable: boolean--><!--Device-PixelMap-readonly isEditable: boolean-End-->
@@ -1735,10 +1595,6 @@ Is it stride Alignment
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-PixelMap-readonly isStrideAlignment: boolean--><!--Device-PixelMap-readonly isStrideAlignment: boolean-End-->
 

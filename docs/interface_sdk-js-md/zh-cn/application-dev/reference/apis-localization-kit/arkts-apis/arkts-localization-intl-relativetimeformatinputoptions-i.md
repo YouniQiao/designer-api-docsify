@@ -1,10 +1,8 @@
-# RelativeTimeFormatInputOptions
+# RelativeTimeFormatInputOptions(国际化-Intl)
 
 创建相对时间格式化对象时可设置的配置项。 从API version 9开始，RelativeTimeFormatInputOptions中的属性改为可选。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 20
 
@@ -25,8 +23,6 @@ localeMatcher?: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 20
 
@@ -50,8 +46,6 @@ numeric?: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.RelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#numeric)
@@ -73,8 +67,6 @@ style?: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 20
 

@@ -10,11 +10,9 @@ declare function opendir(path: string): Promise<Dir>
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
-**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-unnamed-declare function opendir(path: string): Promise<Dir>--><!--Device-unnamed-declare function opendir(path: string): Promise<Dir>-End-->
 
@@ -43,11 +41,9 @@ declare function opendir(path: string, callback: AsyncCallback<Dir>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
-**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-unnamed-declare function opendir(path: string, callback: AsyncCallback<Dir>): void--><!--Device-unnamed-declare function opendir(path: string, callback: AsyncCallback<Dir>): void-End-->
 
@@ -58,5 +54,5 @@ declare function opendir(path: string, callback: AsyncCallback<Dir>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 待打开文件目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Dir](arkts-corefile-fileio-dir-depr-i.md)&gt; | 是 | 异步打开文件目录之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Dir](arkts-corefile-fileio-dir-depr-i.md)&gt; | 是 | 异步打开文件目录之后的回调。 |
 

@@ -1,12 +1,8 @@
 # WebKeyboardAppearanceMode
 
-Enum type supplied to keyboardAppearance for setting the web keyboard appearance mode.
+Defines the input method immersive mode in the WebView, which controls the display style of the soft keyboard and helps developers provide a consistent visual experience based on the app theme and user preferences. It supports the default appearance, system-following, light immersive, and dark immersive styles.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum WebKeyboardAppearanceMode--><!--Device-unnamed-declare enum WebKeyboardAppearanceMode-End-->
 
@@ -18,13 +14,9 @@ Enum type supplied to keyboardAppearance for setting the web keyboard appearance
 NONE_IMMERSIVE = 0
 ```
 
-Default skin mode, no immersive style.
+Default appearance mode, without immersive style.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +30,9 @@ Default skin mode, no immersive style.
 IMMERSIVE = 1
 ```
 
-No immersive style.
+Immersive mode, following the system.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,10 +50,6 @@ Light immersive style.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebKeyboardAppearanceMode-LIGHT_IMMERSIVE = 2--><!--Device-WebKeyboardAppearanceMode-LIGHT_IMMERSIVE = 2-End-->
@@ -81,10 +65,6 @@ DARK_IMMERSIVE = 3
 Dark immersive style.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

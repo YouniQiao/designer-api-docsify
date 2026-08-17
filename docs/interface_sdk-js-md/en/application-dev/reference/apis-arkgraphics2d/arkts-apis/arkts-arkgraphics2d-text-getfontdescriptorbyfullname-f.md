@@ -16,10 +16,6 @@ Obtains the font descriptor based on the font name and type. This API uses a pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-text-function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>--><!--Device-text-function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>-End-->
@@ -30,7 +26,7 @@ Obtains the font descriptor based on the font name and type. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullName | string | Yes | Font name. It is obtained with [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getSystemFontFullNamesByType) called. |
+| fullName | string | Yes | Font name. It is obtained with [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) called. |
 | fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | Font type. |
 
 **Return value:**
@@ -45,7 +41,7 @@ Obtains the font descriptor based on the font name and type. This API uses a pro
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'

@@ -6,10 +6,6 @@ Provides methods for accessing NdefFormatable tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NdefFormatableTag--><!--Device-unnamed-export interface NdefFormatableTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -23,10 +19,6 @@ format(message: NdefMessage): Promise<void>
 Formats a tag as NDEF tag, writes NDEF message into the NDEF Tag.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -67,10 +59,6 @@ Formats a tag as NDEF tag, writes NDEF message into the NDEF Tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -104,10 +92,6 @@ formatReadOnly(message: NdefMessage): Promise<void>
 Formats a tag as NDEF tag, writes NDEF message into the NDEF Tag, then sets the tag readonly.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -147,10 +131,6 @@ formatReadOnly(message: NdefMessage, callback: AsyncCallback<void>): void
 Formats a tag as NDEF tag, writes NDEF message into the NDEF Tag, then sets the tag readonly.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 

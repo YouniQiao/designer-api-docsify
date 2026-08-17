@@ -1,12 +1,8 @@
 # IntelligentTrackingPreventionDetails
 
-Defines the Intelligent Tracking Prevention details.
+Provides detailed information about intelligent tracking prevention, including the website domain and tracker domain. It is suitable for scenarios where monitoring ad blocking behavior is required, improving privacy protection transparency and controllability.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface IntelligentTrackingPreventionDetails--><!--Device-unnamed-declare interface IntelligentTrackingPreventionDetails-End-->
 
@@ -18,15 +14,11 @@ Defines the Intelligent Tracking Prevention details.
 host: string
 ```
 
-The host of website url.
+Host name.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ The host of website url.
 trackerHost: string
 ```
 
-The host of tracker url.
+Host name of the tracker.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -8,11 +8,9 @@ Describes the video playback state. You can obtain the state through the **state
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AVPlayerState](arkts-media-media-avplayerstate-t.md#AVPlayerState)
+**Substitutes:** [AVPlayerState](arkts-media-media-avplayerstate-t.md#avplayerstate)
 
 <!--Device-media-type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'--><!--Device-media-type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'-End-->
 

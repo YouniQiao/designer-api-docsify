@@ -16,10 +16,6 @@ Subscribe to hall sensor data once, {@code SensorId.HALL}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onceHallChange(callback: Callback<HallResponse>): void--><!--Device-sensor-function onceHallChange(callback: Callback<HallResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

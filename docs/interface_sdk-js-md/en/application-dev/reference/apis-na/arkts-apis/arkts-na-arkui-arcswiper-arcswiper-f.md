@@ -14,9 +14,7 @@ Defines ArcSwiper Component
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +26,7 @@ Defines ArcSwiper Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [ArcSwiperController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | No | ArcSwiper constructor options |
+| controller | [ArcSwiperController](arkts-na-arkui-arcswiper-arcswipercontroller-c.md) | No | ArcSwiper constructor options |
 | content_ | CustomBuilder | No | container |
 
 **Return value:**
@@ -52,9 +50,7 @@ Defines ArcSwiper Component
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

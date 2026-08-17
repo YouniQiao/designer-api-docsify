@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-userAuth-interface WidgetParam--><!--Device-userAuth-interface WidgetParam-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -23,10 +19,6 @@ appWindow?: window.Window
 **类型：** window.Window
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,10 +43,6 @@ windowMode?: WindowModeType
 **默认值：** WindowModeType.DIALOG_BOX
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WidgetParam-windowMode?: WindowModeType--><!--Device-WidgetParam-windowMode?: WindowModeType-End-->
 

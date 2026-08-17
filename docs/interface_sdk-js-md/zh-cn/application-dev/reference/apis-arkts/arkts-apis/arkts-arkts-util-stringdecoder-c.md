@@ -4,10 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-util-class StringDecoder--><!--Device-util-class StringDecoder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -22,10 +18,6 @@ constructor(encoding?: string)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StringDecoder-constructor(encoding?: string)--><!--Device-StringDecoder-constructor(encoding?: string)-End-->
@@ -38,7 +30,7 @@ constructor(encoding?: string)
 | --- | --- | --- | --- |
 | encoding | string | 否 | 输入数据的编码类型。默认值为 **utf-8**。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let decoder = new util.StringDecoder();
@@ -53,10 +45,6 @@ end(chunk?: string | Uint8Array): string
 结束解码过程，并将内部缓存中存储的任何剩余输入作为字符串返回。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -76,7 +64,7 @@ end(chunk?: string | Uint8Array): string
 | --- | --- |
 | string | 解码后的字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let decoder = new util.StringDecoder('utf-8');
@@ -99,10 +87,6 @@ write(chunk: string | Uint8Array): string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StringDecoder-write(chunk: string | Uint8Array): string--><!--Device-StringDecoder-write(chunk: string | Uint8Array): string-End-->
@@ -121,7 +105,7 @@ write(chunk: string | Uint8Array): string
 | --- | --- |
 | string | 解码后的字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let decoder = new util.StringDecoder('utf-8');

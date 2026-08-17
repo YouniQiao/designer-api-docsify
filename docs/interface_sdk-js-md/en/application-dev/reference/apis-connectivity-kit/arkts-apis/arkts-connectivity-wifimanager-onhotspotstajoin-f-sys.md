@@ -16,10 +16,6 @@ Subscribe Wi-Fi hotspot sta join events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
 <!--Device-wifiManager-function onHotspotStaJoin(callback: Callback<StationInfo>): void--><!--Device-wifiManager-function onHotspotStaJoin(callback: Callback<StationInfo>): void-End-->

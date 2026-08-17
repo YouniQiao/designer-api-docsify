@@ -4,10 +4,6 @@ Defines the request for publishing a reminder.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-interface ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequest-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -30,10 +26,6 @@ Action button displayed on the reminder notification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-actionButton?: Array<ActionButton>--><!--Device-ReminderRequest-actionButton?: Array<ActionButton>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -44,15 +36,11 @@ Action button displayed on the reminder notification.
 autoDeletedTime?: long
 ```
 
-Time when the notification is automatically cleared. The data format is timestamp, in milliseconds. For details, please refer to [NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autoDeletedTime)
+Time when the notification is automatically cleared. The data format is timestamp, in milliseconds. For details, please refer to [NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autodeletedtime)
 
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequest-autoDeletedTime?: long--><!--Device-ReminderRequest-autoDeletedTime?: long-End-->
 
@@ -70,10 +58,6 @@ Reminder content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-content?: string--><!--Device-ReminderRequest-content?: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -89,10 +73,6 @@ Resource ID of the reminder content, which can be obtained through \$r(*resource
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequest-contentResourceId?: int--><!--Device-ReminderRequest-contentResourceId?: int-End-->
 
@@ -110,10 +90,6 @@ URI of the custom prompt tone. The prompt tone file must be stored in the **reso
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-customRingUri?: string--><!--Device-ReminderRequest-customRingUri?: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -129,10 +105,6 @@ Content to be displayed after the reminder expires.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequest-expiredContent?: string--><!--Device-ReminderRequest-expiredContent?: string-End-->
 
@@ -150,10 +122,6 @@ Resource ID of the content to be displayed after the reminder expires, which can
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-expiredContentResourceId?: int--><!--Device-ReminderRequest-expiredContentResourceId?: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -169,10 +137,6 @@ Time zone type. The default value is **TimeZoneType.DEFAULT**.
 **Type:** [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,10 +156,6 @@ Group ID used for the reminder. If "Don't ask again" or similar information is s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-groupId?: string--><!--Device-ReminderRequest-groupId?: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -211,10 +171,6 @@ Information about the ability that is started automatically and displayed in ful
 **Type:** MaxScreenWantAgent
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent--><!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent-End-->
 
@@ -232,10 +188,6 @@ Notification ID used by the reminder. You must pass in a notification ID. If the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-notificationId?: int--><!--Device-ReminderRequest-notificationId?: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -251,10 +203,6 @@ Notification request message. This parameter is left empty by default.
 **Type:** [NotificationRequestProxy](arkts-backgroundtasks-reminderagentmanager-notificationrequestproxy-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -274,10 +222,6 @@ Type of the reminder.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-reminderType: ReminderType--><!--Device-ReminderRequest-reminderType: ReminderType-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -294,10 +238,6 @@ Audio channel of the custom prompt tone. The default channel is the alarm channe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-ringChannel?: RingChannel--><!--Device-ReminderRequest-ringChannel?: RingChannel-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -308,15 +248,11 @@ Audio channel of the custom prompt tone. The default channel is the alarm channe
 ringDuration?: long
 ```
 
-Ringing duration. The value ranges from 0 to1800, in seconds. The default value is **1**. If the value is **0**, the system notification tone is used. If the value is greater than 0 and [ReminderRequest.customRingUri](#ReminderRequest) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](#ReminderRequest). Otherwise, the custom notification tone of the agent-powered reminder is used. The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
+Ringing duration. The value ranges from 0 to1800, in seconds. The default value is **1**. If the value is **0**, the system notification tone is used. If the value is greater than 0 and [ReminderRequest.customRingUri](#reminderrequest) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](#reminderrequest). Otherwise, the custom notification tone of the agent-powered reminder is used. The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
 
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequest-ringDuration?: long--><!--Device-ReminderRequest-ringDuration?: long-End-->
 
@@ -334,10 +270,6 @@ Type of the slot used by the reminder.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-slotType?: notification.SlotType--><!--Device-ReminderRequest-slotType?: notification.SlotType-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -353,10 +285,6 @@ Content to be displayed when the reminder is snoozing. (It is not applicable to 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequest-snoozeContent?: string--><!--Device-ReminderRequest-snoozeContent?: string-End-->
 
@@ -374,10 +302,6 @@ Resource ID of the content to be displayed when the reminder is snoozing, which 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-snoozeContentResourceId?: int--><!--Device-ReminderRequest-snoozeContentResourceId?: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -393,10 +317,6 @@ Type of the slot used by the snoozed reminder. (It is not applicable to countdow
 **Type:** notification.SlotType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequest-snoozeSlotType?: notification.SlotType--><!--Device-ReminderRequest-snoozeSlotType?: notification.SlotType-End-->
 
@@ -414,10 +334,6 @@ Number of reminder snooze times. The default value is **0**. (It is not applicab
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-snoozeTimes?: int--><!--Device-ReminderRequest-snoozeTimes?: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -428,15 +344,11 @@ Number of reminder snooze times. The default value is **0**. (It is not applicab
 tapDismissed?: boolean
 ```
 
-Whether the reminder is automatically cleared. The default value is **true**. For details, see [NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapDismissed) - **true** (default): The reminder is automatically cleared after the notification or button is tapped. - **false**: The reminder is retained after the notification or button is tapped.
+Whether the reminder is automatically cleared. The default value is **true**. For details, see [NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapdismissed) - **true** (default): The reminder is automatically cleared after the notification or button is tapped. - **false**: The reminder is retained after the notification or button is tapped.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequest-tapDismissed?: boolean--><!--Device-ReminderRequest-tapDismissed?: boolean-End-->
 
@@ -454,10 +366,6 @@ Reminder snooze interval, in seconds. The minimum value is 30s. (It is not appli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-timeInterval?: long--><!--Device-ReminderRequest-timeInterval?: long-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -473,10 +381,6 @@ Reminder title.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequest-title?: string--><!--Device-ReminderRequest-title?: string-End-->
 
@@ -494,10 +398,6 @@ Resource ID of the reminder title, which can be obtained through \$r(*resource-n
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequest-titleResourceId?: int--><!--Device-ReminderRequest-titleResourceId?: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -513,10 +413,6 @@ Information about the ability that is redirected to when the reminder is clicked
 **Type:** WantAgent
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequest-wantAgent?: WantAgent--><!--Device-ReminderRequest-wantAgent?: WantAgent-End-->
 

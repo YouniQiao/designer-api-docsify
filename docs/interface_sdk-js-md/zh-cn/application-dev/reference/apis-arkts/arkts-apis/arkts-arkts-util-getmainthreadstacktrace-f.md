@@ -10,10 +10,6 @@ function getMainThreadStackTrace(): string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-util-function getMainThreadStackTrace(): string--><!--Device-util-function getMainThreadStackTrace(): string-End-->
@@ -26,7 +22,7 @@ function getMainThreadStackTrace(): string
 | --- | --- |
 | string | 主线程的栈追踪信息。若主线程未处于执行 JavaScript 代码状态，则返回空字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let stack = util.getMainThreadStackTrace();

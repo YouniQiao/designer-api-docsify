@@ -16,10 +16,6 @@ Queries whether there is any reusable identity authentication result. This API i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-userAuth-function queryReusableAuthResult(authParam: AuthParam): Uint8Array--><!--Device-userAuth-function queryReusableAuthResult(authParam: AuthParam): Uint8Array-End-->
@@ -50,7 +46,7 @@ Queries whether there is any reusable identity authentication result. This API i
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 | [12500017](../errorcode-useriam.md#12500017-authentication-result-reuse-failed) | Failed to reuse authentication result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

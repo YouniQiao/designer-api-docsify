@@ -1,12 +1,8 @@
-# MatchResult
+# MatchResult(Identify sensitive file)
 
 Displays the identification result of sensitive content.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-identifySensitiveContent-export interface MatchResult--><!--Device-identifySensitiveContent-export interface MatchResult-End-->
 
@@ -30,10 +26,6 @@ Matched sensitive content segment, that is, the text content matched by keyword 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-MatchResult-readonly matchContent: string--><!--Device-MatchResult-readonly matchContent: string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -50,10 +42,6 @@ Total number of matched items.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-MatchResult-readonly matchNumber: number--><!--Device-MatchResult-readonly matchNumber: number-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -69,10 +57,6 @@ Label of an identification policy, which corresponds to sensitiveLabel in the in
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-MatchResult-readonly sensitiveLabel: string--><!--Device-MatchResult-readonly sensitiveLabel: string-End-->
 

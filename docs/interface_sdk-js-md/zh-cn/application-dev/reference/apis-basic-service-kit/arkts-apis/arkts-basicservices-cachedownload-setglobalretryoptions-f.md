@@ -10,10 +10,6 @@ Sets retry options for all tasks. Used when task-specific retry configuration is
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-cacheDownload-function setGlobalRetryOptions(options?: RetryOptions): void--><!--Device-cacheDownload-function setGlobalRetryOptions(options?: RetryOptions): void-End-->
@@ -26,7 +22,7 @@ Sets retry options for all tasks. Used when task-specific retry configuration is
 | --- | --- | --- | --- |
 | options | [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md) | 否 | Task retry configurations. <br>Default value: Refer to the default value of RetryOptions. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

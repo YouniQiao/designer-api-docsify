@@ -16,8 +16,6 @@ Subscribe BLE scan result. On API 10 and above, the permission required by this 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** BLEDeviceFind
@@ -46,7 +44,7 @@ Subscribe BLE scan result. On API 10 and above, the permission required by this 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

@@ -4,9 +4,7 @@ Defines the load committed details.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface LoadCommittedDetails--><!--Device-unnamed-export declare interface LoadCommittedDetails-End-->
 
@@ -24,9 +22,7 @@ True if the committed entry has replaced the existing one. Note that in case of 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LoadCommittedDetails-didReplaceEntry: boolean--><!--Device-LoadCommittedDetails-didReplaceEntry: boolean-End-->
 
@@ -44,9 +40,7 @@ Check whether the request is for getting the main frame.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LoadCommittedDetails-isMainFrame: boolean--><!--Device-LoadCommittedDetails-isMainFrame: boolean-End-->
 
@@ -64,9 +58,7 @@ Whether the navigation happened without changing document. Examples of same docu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LoadCommittedDetails-isSameDocument: boolean--><!--Device-LoadCommittedDetails-isSameDocument: boolean-End-->
 
@@ -84,9 +76,7 @@ The type of the navigation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LoadCommittedDetails-navigationType: WebNavigationType--><!--Device-LoadCommittedDetails-navigationType: WebNavigationType-End-->
 
@@ -104,9 +94,7 @@ The url to navigate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LoadCommittedDetails-url: string--><!--Device-LoadCommittedDetails-url: string-End-->
 

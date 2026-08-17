@@ -4,10 +4,6 @@ Slide-in and slide-out effects for page transitions.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum SlideEffect--><!--Device-unnamed-declare enum SlideEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ Left
 When set to Enter, slides in from the left. When set to Exit, slides out to the left.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ When set to Enter, slides in from the right. When set to Exit, slides out to the
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SlideEffect-Right--><!--Device-SlideEffect-Right-End-->
@@ -61,10 +49,6 @@ Top
 When set to Enter, slides in from the top. When set to Exit, slides out to the top.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ When set to Enter, slides in from the bottom. When set to Exit, slides out to th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SlideEffect-Bottom--><!--Device-SlideEffect-Bottom-End-->
@@ -101,10 +81,6 @@ START = 5
 Left-to-right scripts: When set to Enter, slides in from the left; when set to Exit, slides out to the left. Right- to-left scripts: When set to Enter, slides in from the right; when set to Exit, slides out to the right.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -123,10 +99,6 @@ END = 6
 Left-to-right scripts: When set to Enter, slides in from the right; when set to Exit, slides out to the right. Right-to-left scripts: When set to Enter, slides in from the left; when set to Exit, slides out to the left.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

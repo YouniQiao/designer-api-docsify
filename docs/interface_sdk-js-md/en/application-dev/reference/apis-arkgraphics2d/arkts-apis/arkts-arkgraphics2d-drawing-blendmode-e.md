@@ -4,10 +4,6 @@ Enumerates the blend modes. A blend mode combines two colors (source color and d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-enum BlendMode--><!--Device-drawing-enum BlendMode-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ CLEAR = 0
 r = 0, sets the destination pixels to fully transparent.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-CLEAR = 0--><!--Device-BlendMode-CLEAR = 0-End-->
 
@@ -40,10 +32,6 @@ r = s (all channels of the result equal those of the source), replaces the desti
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-SRC = 1--><!--Device-BlendMode-SRC = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -57,10 +45,6 @@ DST = 2
 r = d (all channels of the result equal those of the destination), keeps the destination pixels unchanged.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-DST = 2--><!--Device-BlendMode-DST = 2-End-->
 
@@ -76,10 +60,6 @@ r = s + (1 - sa) * d, draws the source pixels over the destination pixels, consi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-SRC_OVER = 3--><!--Device-BlendMode-SRC_OVER = 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -93,10 +73,6 @@ DST_OVER = 4
 r = d + (1 - da) * s, draws the destination pixels over the source pixels, considering the destination's transparency.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-DST_OVER = 4--><!--Device-BlendMode-DST_OVER = 4-End-->
 
@@ -112,10 +88,6 @@ r = s * da, retains only the intersection of the source pixels with the opaque p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-SRC_IN = 5--><!--Device-BlendMode-SRC_IN = 5-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -129,10 +101,6 @@ DST_IN = 6
 r = d * sa, retains only the intersection of the destination pixels with the opaque parts of the source.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-DST_IN = 6--><!--Device-BlendMode-DST_IN = 6-End-->
 
@@ -148,10 +116,6 @@ r = s * (1 - da), retains the parts of the source pixels that do not overlap wit
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-SRC_OUT = 7--><!--Device-BlendMode-SRC_OUT = 7-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -165,10 +129,6 @@ DST_OUT = 8
 r = d * (1 - sa), retains the parts of the destination pixels that do not overlap with the source.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-DST_OUT = 8--><!--Device-BlendMode-DST_OUT = 8-End-->
 
@@ -184,10 +144,6 @@ r = s * da + d * (1 - sa), covers the destination pixels with the source pixels,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-SRC_ATOP = 9--><!--Device-BlendMode-SRC_ATOP = 9-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -201,10 +157,6 @@ DST_ATOP = 10
 r = d * sa + s * (1 - da), covers the source pixels with the destination pixels, showing the destination only in the opaque parts of the source.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-DST_ATOP = 10--><!--Device-BlendMode-DST_ATOP = 10-End-->
 
@@ -220,10 +172,6 @@ r = s * (1 - da) + d * (1 - sa), shows only the non-overlapping parts of the sou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-XOR = 11--><!--Device-BlendMode-XOR = 11-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -237,10 +185,6 @@ PLUS = 12
 r = min(s + d, 1), adds the color values of the source and destination pixels.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-PLUS = 12--><!--Device-BlendMode-PLUS = 12-End-->
 
@@ -256,10 +200,6 @@ r = s * d, multiplies the color values of the source and destination pixels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-MODULATE = 13--><!--Device-BlendMode-MODULATE = 13-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -273,10 +213,6 @@ SCREEN = 14
 r = s + d - s * d, inverts the color values of the source and destination pixels, multiplies them, and then inverts the result, typically producing a brighter outcome.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-SCREEN = 14--><!--Device-BlendMode-SCREEN = 14-End-->
 
@@ -292,10 +228,6 @@ Selectively applies **MULTIPLY** or **SCREEN** based on the brightness of the de
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-OVERLAY = 15--><!--Device-BlendMode-OVERLAY = 15-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -309,10 +241,6 @@ DARKEN = 16
 rc = s + d - max(s * da, d * sa), ra = s + (1 - sa) * d, takes the darker color values between the source and destination pixels.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-DARKEN = 16--><!--Device-BlendMode-DARKEN = 16-End-->
 
@@ -328,10 +256,6 @@ rc = s + d - min(s * da, d * sa), ra = s + (1 - sa) * d, takes the lighter color
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-LIGHTEN = 17--><!--Device-BlendMode-LIGHTEN = 17-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -345,10 +269,6 @@ COLOR_DODGE = 18
 Brightens the destination pixels by reducing contrast to reflect the source pixels.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-COLOR_DODGE = 18--><!--Device-BlendMode-COLOR_DODGE = 18-End-->
 
@@ -364,10 +284,6 @@ Darkens the destination pixels by increasing contrast to reflect the source pixe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-COLOR_BURN = 19--><!--Device-BlendMode-COLOR_BURN = 19-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -381,10 +297,6 @@ HARD_LIGHT = 20
 Selectively applies **MULTIPLY** or **SCREEN** based on the brightness of the source pixels.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-HARD_LIGHT = 20--><!--Device-BlendMode-HARD_LIGHT = 20-End-->
 
@@ -400,10 +312,6 @@ Softly brightens or darkens the destination pixels based on the brightness of th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-SOFT_LIGHT = 21--><!--Device-BlendMode-SOFT_LIGHT = 21-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -417,10 +325,6 @@ DIFFERENCE = 22
 rc = s + d - 2 * (min(s * da, d * sa)), ra = s + (1 - sa) * d, calculates the difference between the color values of the source and destination pixels.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-DIFFERENCE = 22--><!--Device-BlendMode-DIFFERENCE = 22-End-->
 
@@ -436,10 +340,6 @@ rc = s + d - two(s * d), ra = s + (1 - sa) * d, similar to **DIFFERENCE** but wi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-EXCLUSION = 23--><!--Device-BlendMode-EXCLUSION = 23-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -453,10 +353,6 @@ MULTIPLY = 24
 r = s * (1 - da) + d * (1 - sa) + s * d, multiplies the color values of the source and destination pixels, typically resulting in a darker outcome.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-MULTIPLY = 24--><!--Device-BlendMode-MULTIPLY = 24-End-->
 
@@ -472,10 +368,6 @@ Uses the hue of the source pixels and the saturation and brightness of the desti
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-HUE = 25--><!--Device-BlendMode-HUE = 25-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -489,10 +381,6 @@ SATURATION = 26
 Uses the saturation of the source pixels and the hue and brightness of the destination pixels.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-SATURATION = 26--><!--Device-BlendMode-SATURATION = 26-End-->
 
@@ -508,10 +396,6 @@ Uses the hue and saturation of the source pixels and the brightness of the desti
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlendMode-COLOR = 27--><!--Device-BlendMode-COLOR = 27-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -525,10 +409,6 @@ LUMINOSITY = 28
 Uses the brightness of the source pixels and the hue and saturation of the destination pixels.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlendMode-LUMINOSITY = 28--><!--Device-BlendMode-LUMINOSITY = 28-End-->
 

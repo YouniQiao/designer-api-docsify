@@ -16,10 +16,6 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: int, callback: AsyncCallback<void>): void--><!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: int, callback: AsyncCallback<void>): void-End-->
@@ -47,7 +43,7 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formProvider } from '@kit.FormKit';
@@ -77,10 +73,6 @@ function setFormNextRefreshTime(formId: string, minute: int): Promise<void>
 Sets the next refresh time for a widget. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -114,7 +106,7 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formProvider } from '@kit.FormKit';

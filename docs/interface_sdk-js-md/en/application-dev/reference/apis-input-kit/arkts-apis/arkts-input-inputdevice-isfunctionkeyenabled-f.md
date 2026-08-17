@@ -16,10 +16,6 @@ Checks whether the specified function key (for example, **CapsLock**) is enabled
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputDevice-function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>--><!--Device-inputDevice-function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -43,7 +39,7 @@ Checks whether the specified function key (for example, **CapsLock**) is enabled
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) | There is currently no keyboard device connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';

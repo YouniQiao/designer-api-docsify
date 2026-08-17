@@ -4,10 +4,6 @@ The module defines the task listener used in [App Startup](../../../application-
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class StartupListener--><!--Device-unnamed-declare class StartupListener-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
@@ -28,10 +24,6 @@ Called when all startup tasks complete.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void--><!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void-End-->
@@ -44,7 +36,7 @@ Called when all startup tasks complete.
 | --- | --- | --- | --- |
 | error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | Yes | Indicates the error during execution. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { StartupConfig, StartupConfigEntry, StartupListener } from '@kit.AbilityKit';
@@ -86,10 +78,6 @@ Called when all startup tasks complete.
 **Type:** [OnCompletedFn](arkts-ability-oncompletedfn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

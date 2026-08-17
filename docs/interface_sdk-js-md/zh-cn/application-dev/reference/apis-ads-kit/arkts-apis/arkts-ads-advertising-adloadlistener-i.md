@@ -4,10 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-advertising-export interface AdLoadListener--><!--Device-advertising-export interface AdLoadListener-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -22,10 +18,6 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void--><!--Device-AdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void-End-->
@@ -39,7 +31,7 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 | errorCode | number | 是 | 广告请求失败的错误码。 |
 | errorMsg | string | 是 | 广告请求失败的错误信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';
@@ -65,10 +57,6 @@ onAdLoadSuccess(ads: Array<Advertisement>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AdLoadListener-onAdLoadSuccess(ads: Array<Advertisement>): void--><!--Device-AdLoadListener-onAdLoadSuccess(ads: Array<Advertisement>): void-End-->
@@ -81,7 +69,7 @@ onAdLoadSuccess(ads: Array<Advertisement>): void
 | --- | --- | --- | --- |
 | ads | Array&lt;Advertisement&gt; | 是 | 广告数据。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

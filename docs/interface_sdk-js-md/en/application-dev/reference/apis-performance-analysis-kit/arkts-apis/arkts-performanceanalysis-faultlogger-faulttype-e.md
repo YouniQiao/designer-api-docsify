@@ -4,8 +4,6 @@ Enumerates the fault types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
 **Substitutes:** [event](arkts-performanceanalysis-hiappevent-event-n.md#event)
@@ -24,8 +22,6 @@ No specific fault type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
 <!--Device-FaultType-NO_SPECIFIC = 0--><!--Device-FaultType-NO_SPECIFIC = 0-End-->
@@ -41,8 +37,6 @@ CPP_CRASH = 2
 Native program crash.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 18
 
@@ -60,8 +54,6 @@ JS program crash.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
 <!--Device-FaultType-JS_CRASH = 3--><!--Device-FaultType-JS_CRASH = 3-End-->
@@ -77,8 +69,6 @@ APP_FREEZE = 4
 Application freezing.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 18
 

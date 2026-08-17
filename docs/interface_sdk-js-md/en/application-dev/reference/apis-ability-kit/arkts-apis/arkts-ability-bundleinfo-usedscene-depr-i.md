@@ -1,14 +1,12 @@
 # UsedScene
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [UsedScene](#UsedScene) instead. Describes the application scenario and timing for using the permission.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [UsedScene](#usedscene) instead. Describes the application scenario and timing for using the permission.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UsedScene](#UsedScene)
+**Substitutes:** [UsedScene](#usedscene)
 
 <!--Device-unnamed-export interface UsedScene--><!--Device-unnamed-export interface UsedScene-End-->
 
@@ -27,8 +25,6 @@ Abilities that use the permission.
 **Default:** Indicates the abilities that need the permission
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -51,8 +47,6 @@ Time when the permission is used.
 **Default:** Indicates the time when the permission is used
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

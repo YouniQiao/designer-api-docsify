@@ -10,10 +10,6 @@ function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-freeInstall-function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void--><!--Device-freeInstall-function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void-End-->
@@ -26,7 +22,7 @@ function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DispatchInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)。当函数调用成功，err为undefined，data 为获取到的[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md#DispatchInfo（系统接口）)信息。否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DispatchInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)。当函数调用成功，err为undefined，data 为获取到的[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md#dispatchinfo系统接口)信息。否则为错误对象。 |
 
 **错误码：**
 
@@ -36,7 +32,7 @@ function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { freeInstall } from '@kit.AbilityKit';
@@ -65,10 +61,6 @@ function getDispatchInfo(): Promise<DispatchInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-freeInstall-function getDispatchInfo(): Promise<DispatchInfo>--><!--Device-freeInstall-function getDispatchInfo(): Promise<DispatchInfo>-End-->
@@ -91,7 +83,7 @@ function getDispatchInfo(): Promise<DispatchInfo>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

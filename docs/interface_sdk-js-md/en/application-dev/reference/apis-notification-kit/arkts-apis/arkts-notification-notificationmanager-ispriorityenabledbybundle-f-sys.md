@@ -16,10 +16,6 @@ Checks whether the priority notification for a specified application is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function isPriorityEnabledByBundle(bundle: BundleOption): Promise<PriorityEnableStatus>--><!--Device-notificationManager-function isPriorityEnabledByBundle(bundle: BundleOption): Promise<PriorityEnableStatus>-End-->
@@ -51,7 +47,7 @@ Checks whether the priority notification for a specified application is enabled.
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

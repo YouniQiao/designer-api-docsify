@@ -1,12 +1,8 @@
 # OnConsoleEvent
 
-Defines the triggered function when the web page receives a JavaScript console message.
+Represents the callback invoked to notify the host application of a JavaScript console message.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnConsoleEvent--><!--Device-unnamed-declare interface OnConsoleEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered function when the web page receives a JavaScript console m
 message: ConsoleMessage
 ```
 
-Console message information of the event.
+Console message.
 
 **Type:** [ConsoleMessage](arkts-arkweb-consolemessage-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

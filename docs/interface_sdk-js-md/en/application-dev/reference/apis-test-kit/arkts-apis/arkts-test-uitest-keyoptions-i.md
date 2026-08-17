@@ -4,10 +4,6 @@ Represents the options for key operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface KeyOptions--><!--Device-unnamed-declare interface KeyOptions-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -58,10 +54,6 @@ The first keyCode to press during the operation. If not set, no key event will b
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-KeyOptions-key1?: int--><!--Device-KeyOptions-key1?: int-End-->
@@ -79,10 +71,6 @@ The second KeyCode to press during the operation. If not set, no key event will 
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

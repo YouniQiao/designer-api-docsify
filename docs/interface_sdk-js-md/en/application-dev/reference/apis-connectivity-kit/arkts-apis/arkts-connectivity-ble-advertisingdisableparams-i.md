@@ -4,10 +4,6 @@ Parameter for dynamically disable advertising.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ble-interface AdvertisingDisableParams--><!--Device-ble-interface AdvertisingDisableParams-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -29,10 +25,6 @@ Indicates the ID of current advertising.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

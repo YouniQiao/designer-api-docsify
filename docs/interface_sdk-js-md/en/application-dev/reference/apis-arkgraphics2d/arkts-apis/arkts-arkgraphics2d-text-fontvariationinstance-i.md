@@ -4,10 +4,6 @@ Font variable instance information, which stores preset variable font style info
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface FontVariationInstance--><!--Device-text-interface FontVariationInstance-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Array of font variations.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariationInstance-coordinates: Array<FontVariation>--><!--Device-FontVariationInstance-coordinates: Array<FontVariation>-End-->
@@ -52,10 +44,6 @@ Localized name of the font variable instance, which can be empty.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariationInstance-localName: string--><!--Device-FontVariationInstance-localName: string-End-->
@@ -73,10 +61,6 @@ English name of the font variable instance.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

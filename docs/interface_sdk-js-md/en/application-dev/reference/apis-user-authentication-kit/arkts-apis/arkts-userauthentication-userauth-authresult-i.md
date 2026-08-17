@@ -4,11 +4,9 @@ Represents the authentication result object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md#AuthResultInfo)
+**Substitutes:** [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md#authresultinfo)
 
 <!--Device-userAuth-interface AuthResult--><!--Device-userAuth-interface AuthResult-End-->
 
@@ -32,11 +30,9 @@ Time for which the authentication operation is frozen. The unit is milliseconds.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [lockoutDuration](arkts-userauthentication-userauth-authresultinfo-i.md#lockoutDuration)
+**Substitutes:** [lockoutDuration](arkts-userauthentication-userauth-authresultinfo-i.md#lockoutduration)
 
 <!--Device-AuthResult-freezingTime?: number--><!--Device-AuthResult-freezingTime?: number-End-->
 
@@ -54,11 +50,9 @@ Number of remaining authentication operations.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [remainAttempts](arkts-userauthentication-userauth-authresultinfo-i.md#remainAttempts)
+**Substitutes:** [remainAttempts](arkts-userauthentication-userauth-authresultinfo-i.md#remainattempts)
 
 <!--Device-AuthResult-remainTimes?: number--><!--Device-AuthResult-remainTimes?: number-End-->
 
@@ -75,8 +69,6 @@ Authentication token information.
 **Type:** Uint8Array
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

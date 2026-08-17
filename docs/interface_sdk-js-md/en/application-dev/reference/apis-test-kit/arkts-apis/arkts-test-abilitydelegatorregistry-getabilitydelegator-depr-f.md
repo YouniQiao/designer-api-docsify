@@ -10,11 +10,9 @@ Obtains the **AbilityDelegator** object of the application.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getAbilityDelegator)
+**Substitutes:** [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator)
 
 <!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator--><!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator-End-->
 
@@ -26,7 +24,7 @@ Obtains the **AbilityDelegator** object of the application.
 | --- | --- |
 | [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) | [AbilityDelegator]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import AbilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';

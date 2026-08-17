@@ -4,10 +4,6 @@ This module provides basic capabilities for managing system sound effects, inclu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace systemSoundManager--><!--Device-unnamed-declare namespace systemSoundManager-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -26,15 +22,15 @@ import { systemSoundManager } from 'systemSoundManager';
 
 | Name | Description |
 | --- | --- |
-| [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createSystemSoundPlayer) | Creates a SystemSoundPlayer instance. This function uses a promise to return the result. This player can be used to play some system sounds for media or camera actions. |
+| [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createsystemsoundplayer) | Creates a SystemSoundPlayer instance. This function uses a promise to return the result. This player can be used to play some system sounds for media or camera actions. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md#createCustomizedToneAttrs) | Create customized tone attributes. |
-| [getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f-sys.md#getSystemSoundManager) | Gets system sound manager for all type sound. |
+| [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md#createcustomizedtoneattrs) | Create customized tone attributes. |
+| [getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f-sys.md#getsystemsoundmanager) | Gets system sound manager for all type sound. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -93,11 +89,11 @@ import { systemSoundManager } from 'systemSoundManager';
 
 | Name | Description |
 | --- | --- |
-| [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#TONE_CATEGORY_ALARM) | Define the alarm tone category. |
-| [TONE_CATEGORY_CONTACTS](arkts-audio-systemsoundmanager-con-sys.md#TONE_CATEGORY_CONTACTS) | Define the contact tone category. |
-| [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#TONE_CATEGORY_NOTIFICATION) | Define the notification tone category. |
-| [TONE_CATEGORY_NOTIFICATION_APP](arkts-audio-systemsoundmanager-con-sys.md#TONE_CATEGORY_NOTIFICATION_APP) | Define the app notification tone category. |
-| [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#TONE_CATEGORY_RINGTONE) | Define the ringtone category. |
-| [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#TONE_CATEGORY_TEXT_MESSAGE) | Define the text message tone category. |
+| [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#tonecategoryalarm) | Define the alarm tone category. |
+| [TONE_CATEGORY_CONTACTS](arkts-audio-systemsoundmanager-con-sys.md#tonecategorycontacts) | Define the contact tone category. |
+| [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#tonecategorynotification) | Define the notification tone category. |
+| [TONE_CATEGORY_NOTIFICATION_APP](arkts-audio-systemsoundmanager-con-sys.md#tonecategorynotificationapp) | Define the app notification tone category. |
+| [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#tonecategoryringtone) | Define the ringtone category. |
+| [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#tonecategorytextmessage) | Define the text message tone category. |
 <!--DelEnd-->
 

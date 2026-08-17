@@ -10,8 +10,6 @@ Opens a file. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [open](arkts-corefile-file-fs-open-f.md#open)
@@ -45,8 +43,6 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [open](arkts-corefile-file-fs-open-f.md#open)
@@ -72,8 +68,6 @@ declare function open(path: string, flags: number, callback: AsyncCallback<numbe
 Opens a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -101,8 +95,6 @@ declare function open(path: string, flags: number, mode: number, callback: Async
 Opens a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

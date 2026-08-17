@@ -16,8 +16,6 @@ Subscribe the event reported when a remote Bluetooth device is bonded. On API 10
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** bondStateChange
@@ -35,7 +33,7 @@ Subscribe the event reported when a remote Bluetooth device is bonded. On API 10
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | Yes | Type of the bond state event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | Yes | Callback used to listen for the bond state event, [BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md#BondStateParam). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | Yes | Callback used to listen for the bond state event, [BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md#bondstateparam). |
 
 **Error codes:**
 
@@ -46,7 +44,7 @@ Subscribe the event reported when a remote Bluetooth device is bonded. On API 10
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

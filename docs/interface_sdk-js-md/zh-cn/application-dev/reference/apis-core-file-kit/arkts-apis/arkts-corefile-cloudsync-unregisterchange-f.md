@@ -10,10 +10,6 @@ function unregisterChange(uri: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudSync-function unregisterChange(uri: string): void--><!--Device-cloudSync-function unregisterChange(uri: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -34,7 +30,7 @@ function unregisterChange(uri: string): void
 | 14000002 | Invalid uri. |
 | 13900012 | Permission denied |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

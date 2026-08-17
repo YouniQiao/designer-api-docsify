@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-inputMethodEngine-interface ImmersiveEffect--><!--Device-inputMethodEngine-interface ImmersiveEffect-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -23,10 +19,6 @@ fluidLightMode?: FluidLightMode
 **类型：** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ImmersiveEffect-fluidLightMode?: FluidLightMode--><!--Device-ImmersiveEffect-fluidLightMode?: FluidLightMode-End-->
 

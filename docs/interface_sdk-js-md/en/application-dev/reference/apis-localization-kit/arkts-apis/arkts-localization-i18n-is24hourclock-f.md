@@ -16,11 +16,9 @@ Checks whether the 24-hour clock is used.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [is24HourClock](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#is24HourClock)
+**Substitutes:** [is24HourClock](arkts-localization-i18n-system-c.md#is24hourclock)
 
 <!--Device-i18n-export function is24HourClock(): boolean--><!--Device-i18n-export function is24HourClock(): boolean-End-->
 
@@ -32,7 +30,7 @@ Checks whether the 24-hour clock is used.
 | --- | --- |
 | boolean | true** if the 24-hour clock is used, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

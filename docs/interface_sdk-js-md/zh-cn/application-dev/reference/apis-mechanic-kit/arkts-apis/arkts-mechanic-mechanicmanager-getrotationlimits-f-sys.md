@@ -10,10 +10,6 @@ Obtains the maximum rotation angles relative to the reference point for the spec
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-mechanicManager-function getRotationLimits(mechId: int): RotationLimits--><!--Device-mechanicManager-function getRotationLimits(mechId: int): RotationLimits-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -40,7 +36,7 @@ Obtains the maximum rotation angles relative to the reference point for the spec
 | [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
 | [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
 
-## 示例
+**示例**
 
 ```TypeScript
 console.info('Query rotation limit information');

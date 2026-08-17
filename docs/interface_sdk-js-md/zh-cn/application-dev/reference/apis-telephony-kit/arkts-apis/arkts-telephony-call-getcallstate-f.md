@@ -10,10 +10,6 @@ function getCallState(callback: AsyncCallback<CallState>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void--><!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -22,9 +18,9 @@ function getCallState(callback: AsyncCallback<CallState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallState&gt; | 是 | 回调函数，异步返回获取到的通话状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;CallState&gt; | 是 | 回调函数，异步返回获取到的通话状态。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -49,10 +45,6 @@ function getCallState(): Promise<CallState>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-call-function getCallState(): Promise<CallState>--><!--Device-call-function getCallState(): Promise<CallState>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -63,7 +55,7 @@ function getCallState(): Promise<CallState>
 | --- | --- |
 | Promise&lt;CallState&gt; | 以Promise形式异步返回获取到的通话状态。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

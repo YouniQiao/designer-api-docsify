@@ -4,10 +4,6 @@ Enumerates the task states. After a task is created and **execute()** is called,
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-taskpool-enum State--><!--Device-taskpool-enum State-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -21,10 +17,6 @@ WAITING = 1
 The task is waiting.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ The task is running.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-RUNNING = 2--><!--Device-State-RUNNING = 2-End-->
@@ -61,10 +49,6 @@ CANCELED = 3
 The task is canceled.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

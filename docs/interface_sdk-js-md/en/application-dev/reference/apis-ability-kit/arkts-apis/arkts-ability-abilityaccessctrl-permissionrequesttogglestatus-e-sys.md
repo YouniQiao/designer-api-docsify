@@ -4,10 +4,6 @@ Enumerates the permission toggle states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityAccessCtrl-export enum PermissionRequestToggleStatus--><!--Device-abilityAccessCtrl-export enum PermissionRequestToggleStatus-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -20,13 +16,9 @@ Enumerates the permission toggle states.
 CLOSED = 0
 ```
 
-Indicates that the dialog box for the specified permission is disabled. When an app calls APIs such as [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionsFromUser) to request this permission, no permission dialog box will be displayed.
+Indicates that the dialog box for the specified permission is disabled. When an app calls APIs such as [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) to request this permission, no permission dialog box will be displayed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PermissionRequestToggleStatus-CLOSED = 0--><!--Device-PermissionRequestToggleStatus-CLOSED = 0-End-->
 
@@ -40,13 +32,9 @@ Indicates that the dialog box for the specified permission is disabled. When an 
 OPEN = 1
 ```
 
-Indicates that the dialog box for the specified permission is enabled. When an app calls APIs such as [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionsFromUser) to request this permission, a permission dialog box will be displayed normally.
+Indicates that the dialog box for the specified permission is enabled. When an app calls APIs such as [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) to request this permission, a permission dialog box will be displayed normally.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PermissionRequestToggleStatus-OPEN = 1--><!--Device-PermissionRequestToggleStatus-OPEN = 1-End-->
 

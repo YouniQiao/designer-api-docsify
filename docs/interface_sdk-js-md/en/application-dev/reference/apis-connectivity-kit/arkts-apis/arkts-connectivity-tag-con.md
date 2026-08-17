@@ -10,10 +10,6 @@ Indicates an ISO_DEP tag. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -31,10 +27,6 @@ const MIFARE_CLASSIC: int
 Indicates an MIFARE CLASSIC tag. The value should be an integer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,10 +46,6 @@ Indicates an MIFARE ULTRALIGHT tag. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -75,10 +63,6 @@ const NDEF: int
 Indicates an NDEF tag. The value should be an integer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ Indicates an NDEF Formatable tag. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -119,10 +99,6 @@ const NFC_A: int
 Indicates an NFC-A tag. The value should be an integer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,10 +118,6 @@ Indicates an NFC-B tag. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -163,10 +135,6 @@ const NFC_BARCODE: int
 Indicates an NfcBarcode tag. The value should be an integer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,10 +154,6 @@ Indicates an NFC-F tag. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -207,10 +171,6 @@ const NFC_V: int
 Indicates an NFC-V tag. The value should be an integer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,10 +190,6 @@ RTD type TEXT, see NFC Record Type Definition (RTD) Specification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-tag-const RTD_TEXT: int[]--><!--Device-tag-const RTD_TEXT: int[]-End-->
@@ -250,10 +206,6 @@ RTD type URI, see NFC Record Type Definition (RTD) Specification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-tag-const RTD_URI: int[]--><!--Device-tag-const RTD_URI: int[]-End-->
@@ -269,10 +221,6 @@ const SKIP_NDEF: int
 Skip NDEF when app is reading a card in the foreground. The value range is all integers.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Indicates CELL fence information.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface CellFence--><!--Device-geoLocationManager-export interface CellFence-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -31,10 +27,6 @@ Indicates CELL information array.
 **Type:** Array&lt;[CellInfo](arkts-location-geolocationmanager-cellinfo-i-sys.md)&gt;
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

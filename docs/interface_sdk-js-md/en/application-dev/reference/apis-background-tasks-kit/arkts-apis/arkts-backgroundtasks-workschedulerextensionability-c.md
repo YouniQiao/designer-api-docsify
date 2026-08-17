@@ -1,12 +1,8 @@
 # WorkSchedulerExtensionAbility
 
-Provides callbacks to be invoked when the scheduling conditions are met or the scheduling ends, for example, [onWorkStart()](#onWorkStart) or [onWorkStop()](#onWorkStop) in WorkSchedulerExtensionAbility.
+Provides callbacks to be invoked when the scheduling conditions are met or the scheduling ends, for example, [onWorkStart()](#onworkstart) or [onWorkStop()](#onworkstop) in WorkSchedulerExtensionAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WorkSchedulerExtensionAbility--><!--Device-unnamed-declare class WorkSchedulerExtensionAbility-End-->
 
@@ -28,10 +24,6 @@ Called when the system starts scheduling the deferred task.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WorkSchedulerExtensionAbility-onWorkStart(work: workScheduler.WorkInfo): void--><!--Device-WorkSchedulerExtensionAbility-onWorkStart(work: workScheduler.WorkInfo): void-End-->
@@ -44,7 +36,7 @@ Called when the system starts scheduling the deferred task.
 | --- | --- | --- | --- |
 | work | workScheduler.WorkInfo | Yes | Deferred task that starts. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { workScheduler } from '@kit.BackgroundTasksKit';
@@ -64,13 +56,9 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
 onWorkStop(work: workScheduler.WorkInfo): void
 ```
 
-Called when the system stops scheduling the deferred task. This callback is triggered when the deferred task times out for 2 minutes or the [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md#stopWork) API is called to cancel the task.
+Called when the system stops scheduling the deferred task. This callback is triggered when the deferred task times out for 2 minutes or the [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md#stopwork) API is called to cancel the task.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,7 +72,7 @@ Called when the system stops scheduling the deferred task. This callback is trig
 | --- | --- | --- | --- |
 | work | workScheduler.WorkInfo | Yes | Deferred task that stops. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { workScheduler } from '@kit.BackgroundTasksKit';
@@ -109,10 +97,6 @@ Context of the WorkSchedulerExtensionAbility. This context inherits from Extensi
 **Type:** [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

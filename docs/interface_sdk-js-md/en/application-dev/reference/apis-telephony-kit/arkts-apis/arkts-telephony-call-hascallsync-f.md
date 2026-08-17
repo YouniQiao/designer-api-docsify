@@ -16,10 +16,6 @@ Checks whether a call is in progress.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-function hasCallSync(): boolean--><!--Device-call-function hasCallSync(): boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -30,7 +26,7 @@ Checks whether a call is in progress.
 | --- | --- |
 | boolean | Promise used to return the result. The value **true** indicates that a call is in progress, and the value **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hasCall: boolean = call.hasCallSync();

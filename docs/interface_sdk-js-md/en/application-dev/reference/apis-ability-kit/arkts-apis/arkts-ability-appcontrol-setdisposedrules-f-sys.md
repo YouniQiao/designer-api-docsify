@@ -16,10 +16,6 @@ Sets disposed rules in batches for an application or an application clone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
 <!--Device-appControl-function setDisposedRules(disposedRuleConfigurations: Array<DisposedRuleConfiguration>): void--><!--Device-appControl-function setDisposedRules(disposedRuleConfigurations: Array<DisposedRuleConfiguration>): void-End-->
@@ -44,7 +40,7 @@ Sets disposed rules in batches for an application or an application clone.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

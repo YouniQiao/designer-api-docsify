@@ -4,10 +4,6 @@ Describes the criteria for filtering scanning results can be set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ble-interface ScanFilter--><!--Device-ble-interface ScanFilter-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -29,10 +25,6 @@ Identity Resolving Key of BLE peripheral device. [irk](#irk) needs to be used wi
 **Type:** Uint8Array
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

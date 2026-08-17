@@ -4,10 +4,6 @@ Defines the options of the **Video** component.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface VideoOptions--><!--Device-unnamed-declare interface VideoOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Video controller to control the video playback status.
 **Type:** [VideoController](arkts-arkui-videocontroller-c.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,10 +37,6 @@ controllerAsync of video.
 **Type:** [VideoControllerAsync](arkts-arkui-videocontrollerasync-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,10 +58,6 @@ Video playback speed. > **NOTE：**> > The value of the number type can only be 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VideoOptions-currentProgressRate?: number | string | PlaybackSpeed--><!--Device-VideoOptions-currentProgressRate?: number | string | PlaybackSpeed-End-->
@@ -91,10 +75,6 @@ AI image analysis options. You can configure the analysis type or bind an analyz
 **Type:** ImageAIOptions
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,10 +96,6 @@ Display options for the first frame of the video.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -140,10 +116,6 @@ Path of the preview image displayed before the video playback starts. By default
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VideoOptions-previewUri?: string | PixelMap | Resource--><!--Device-VideoOptions-previewUri?: string | PixelMap | Resource-End-->
@@ -161,10 +133,6 @@ Video source, which can be either a local or a network video. The Resource type 
 **Type:** string \| Resource
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

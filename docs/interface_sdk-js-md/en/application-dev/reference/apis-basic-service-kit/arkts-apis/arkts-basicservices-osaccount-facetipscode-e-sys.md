@@ -4,10 +4,6 @@ Enumerates the tip codes for facial authentication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-enum FaceTipsCode--><!--Device-osAccount-enum FaceTipsCode-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ FACE_AUTH_TIP_TOO_BRIGHT = 1
 The obtained face image is too bright.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_BRIGHT = 1--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_BRIGHT = 1-End-->
 
@@ -44,10 +36,6 @@ The obtained face image is too dark.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_DARK = 2--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_DARK = 2-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -63,10 +51,6 @@ FACE_AUTH_TIP_TOO_CLOSE = 3
 The face is too close to the device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_CLOSE = 3--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_CLOSE = 3-End-->
 
@@ -84,10 +68,6 @@ The face is too far away from the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_FAR = 4--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_FAR = 4-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -103,10 +83,6 @@ FACE_AUTH_TIP_TOO_HIGH = 5
 Only the upper part of the face is captured because the device is angled too high.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_HIGH = 5--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_HIGH = 5-End-->
 
@@ -124,10 +100,6 @@ Only the lower part of the face is captured because the device is angled too low
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_LOW = 6--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_LOW = 6-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -143,10 +115,6 @@ FACE_AUTH_TIP_TOO_RIGHT = 7
 Only the right part of the face is captured because the device is angled too much to the right.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_RIGHT = 7--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_RIGHT = 7-End-->
 
@@ -164,10 +132,6 @@ Only the left part of the face is captured because the device is angled too much
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_LEFT = 8--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_LEFT = 8-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -183,10 +147,6 @@ FACE_AUTH_TIP_TOO_MUCH_MOTION = 9
 The face moves too fast during facial information collection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_MUCH_MOTION = 9--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_MUCH_MOTION = 9-End-->
 
@@ -204,10 +164,6 @@ The face is not facing the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_POOR_GAZE = 10--><!--Device-FaceTipsCode-FACE_AUTH_TIP_POOR_GAZE = 10-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -223,10 +179,6 @@ FACE_AUTH_TIP_NOT_DETECTED = 11
 No face is detected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_NOT_DETECTED = 11--><!--Device-FaceTipsCode-FACE_AUTH_TIP_NOT_DETECTED = 11-End-->
 

@@ -16,11 +16,9 @@ Checks whether this device supports a specified feature.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md#isFeatureSupported)
+**Substitutes:** [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md#isfeaturesupported)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -40,7 +38,7 @@ Checks whether this device supports a specified feature.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

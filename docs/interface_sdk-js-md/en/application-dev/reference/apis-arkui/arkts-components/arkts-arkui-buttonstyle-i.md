@@ -4,10 +4,6 @@ Describes the style of the sidebar control button.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ButtonStyle--><!--Device-unnamed-declare interface ButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Height of the sidebar control button. Default value: API version 9 and earlier v
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ Icons of the sidebar control button. If the resource fails to be obtained or thi
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ButtonStyle-icons?: ButtonIconOptions--><!--Device-ButtonStyle-icons?: ButtonIconOptions-End-->
@@ -67,10 +55,6 @@ Spacing between the sidebar control button and the left of the container. Defaul
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,10 +74,6 @@ Spacing between the sidebar control button and the top of the container. Default
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ButtonStyle-top?: number--><!--Device-ButtonStyle-top?: number-End-->
@@ -111,10 +91,6 @@ Width of the sidebar control button. Default value: API version 9 and earlier ve
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

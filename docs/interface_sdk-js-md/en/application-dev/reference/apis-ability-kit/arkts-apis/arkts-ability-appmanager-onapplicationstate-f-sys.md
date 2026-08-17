@@ -16,10 +16,6 @@ Registers an application state observer, which allows you to filter for specific
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
 <!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver, filter: AppStateFilter): int--><!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver, filter: AppStateFilter): int-End-->
@@ -50,7 +46,7 @@ Registers an application state observer, which allows you to filter for specific
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

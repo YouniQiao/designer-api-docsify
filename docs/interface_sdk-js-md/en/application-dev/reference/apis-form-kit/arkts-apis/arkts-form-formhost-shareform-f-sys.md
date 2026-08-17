@@ -16,10 +16,6 @@ Shares a specified widget with a remote device. This API uses an asynchronous ca
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-formHost-function shareForm(formId: string, deviceId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function shareForm(formId: string, deviceId: string, callback: AsyncCallback<void>): void-End-->
@@ -58,10 +54,6 @@ function shareForm(formId: string, deviceId: string): Promise<void>
 Shares a specified widget with a remote device. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.DISTRIBUTED_DATASYNC
 

@@ -16,8 +16,6 @@ Request enable location
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
@@ -32,7 +30,7 @@ Request enable location
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch status. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -57,8 +55,6 @@ Request enable location
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
@@ -73,7 +69,7 @@ Request enable location
 | --- | --- |
 | Promise&lt;boolean&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

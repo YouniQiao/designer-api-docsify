@@ -16,10 +16,6 @@ Cancels Listening to the event of get live form status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formHost-function offGetLiveFormStatus(callback?: formInfo.GetLiveFormStatusCallback): void--><!--Device-formHost-function offGetLiveFormStatus(callback?: formInfo.GetLiveFormStatusCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.Form

@@ -2,13 +2,9 @@
 
 The definition of the tab page content.
 
-**Inheritance/Implementation:** MediaTabContent extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
+**Inheritance/Implementation:** MediaTabContent extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-avMusicTemplate-interface MediaTabContent--><!--Device-avMusicTemplate-interface MediaTabContent-End-->
 
@@ -32,10 +28,6 @@ Compilations content of the tab page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaTabContent-compilations: Compilation[]--><!--Device-MediaTabContent-compilations: Compilation[]-End-->
@@ -53,10 +45,6 @@ Tab id corresponding to the content.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

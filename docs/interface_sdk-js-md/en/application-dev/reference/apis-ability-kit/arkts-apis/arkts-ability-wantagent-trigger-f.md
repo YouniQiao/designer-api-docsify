@@ -16,10 +16,6 @@ Proactively triggers a WantAgent object. This API uses an asynchronous callback 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCallback<CompleteData>): void--><!--Device-wantAgent-function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCallback<CompleteData>): void-End-->
@@ -31,7 +27,7 @@ Proactively triggers a WantAgent object. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Target WantAgent object. |
-| triggerInfo | TriggerInfo | Yes | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md#TriggerInfo) object. |
+| triggerInfo | TriggerInfo | Yes | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md#triggerinfo) object. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CompleteData&gt; | No | Callback used to return the result. |
 
 **Error codes:**
@@ -40,7 +36,7 @@ Proactively triggers a WantAgent object. This API uses an asynchronous callback 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';

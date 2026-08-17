@@ -4,10 +4,6 @@ Provides the capability of integrating advertising services with vendors.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class AdsServiceExtensionAbility--><!--Device-unnamed-export default class AdsServiceExtensionAbility-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -30,10 +26,6 @@ Called when the media application starts to load an ad. The device vendor needs 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AdsServiceExtensionAbility-onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions, respCallback: RespCallback)--><!--Device-AdsServiceExtensionAbility-onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions, respCallback: RespCallback)-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -48,7 +40,7 @@ Called when the media application starts to load an ad. The device vendor needs 
 | adOptions | advertising.AdOptions | Yes | Ad configuration options. |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes | Ad request callback. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';
@@ -74,10 +66,6 @@ Called when the media application starts to load multiple ads. The device vendor
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AdsServiceExtensionAbility-onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions,     respCallback: RespCallback)--><!--Device-AdsServiceExtensionAbility-onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions,     respCallback: RespCallback)-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -92,7 +80,7 @@ Called when the media application starts to load multiple ads. The device vendor
 | adOptions | advertising.AdOptions | Yes | Ad configuration options. |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes | Ad request callback. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';

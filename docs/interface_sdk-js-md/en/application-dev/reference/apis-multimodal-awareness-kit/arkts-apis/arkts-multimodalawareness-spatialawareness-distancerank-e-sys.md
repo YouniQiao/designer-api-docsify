@@ -4,10 +4,6 @@ Enum for distance rank.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-spatialAwareness-export enum DistanceRank--><!--Device-spatialAwareness-export enum DistanceRank-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -23,10 +19,6 @@ RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'
 indicates ultra-short range
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ indicates short range
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistanceRank-RANK_SHORT_RANGE = 'rankShort'--><!--Device-DistanceRank-RANK_SHORT_RANGE = 'rankShort'-End-->
@@ -68,10 +56,6 @@ indicates medium-short range
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistanceRank-RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'--><!--Device-DistanceRank-RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'-End-->
@@ -89,10 +73,6 @@ RANK_MEDIUM_RANGE = 'rankMedium'
 indicates medium range
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

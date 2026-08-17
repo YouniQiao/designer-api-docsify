@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-serial-interface SerialPortInfo--><!--Device-serial-interface SerialPortInfo-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
@@ -23,10 +19,6 @@ USB虚拟串口设备的制造商名称。
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ portName: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SerialPortInfo-portName: string--><!--Device-SerialPortInfo-portName: string-End-->
@@ -68,10 +56,6 @@ USB虚拟串口设备的productId
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SerialPortInfo-productId?: int--><!--Device-SerialPortInfo-productId?: int-End-->
@@ -89,10 +73,6 @@ USB虚拟串口的vendorId
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

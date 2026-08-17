@@ -10,11 +10,9 @@ function createPlainTextRecord(text: string): PasteDataRecord
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createRecord)(mimeType: string, value: ValueType)
+**替代接口：** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createPlainTextRecord(text: string): PasteDataRecord--><!--Device-pasteboard-function createPlainTextRecord(text: string): PasteDataRecord-End-->
 
@@ -32,7 +30,7 @@ function createPlainTextRecord(text: string): PasteDataRecord
 | --- | --- |
 | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的纯文本内容条目。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let record: pasteboard.PasteDataRecord = pasteboard.createPlainTextRecord('hello');

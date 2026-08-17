@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-enum PrintErrorCode--><!--Device-print-enum PrintErrorCode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -21,10 +17,6 @@ E_PRINT_NONE = 0
 表示没有错误。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintErrorCode-E_PRINT_NONE = 0--><!--Device-PrintErrorCode-E_PRINT_NONE = 0-End-->
 
@@ -40,10 +32,6 @@ E_PRINT_NO_PERMISSION = 201
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintErrorCode-E_PRINT_NO_PERMISSION = 201--><!--Device-PrintErrorCode-E_PRINT_NO_PERMISSION = 201-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -57,10 +45,6 @@ E_PRINT_INVALID_PARAMETER = 401
 表示无效的参数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintErrorCode-E_PRINT_INVALID_PARAMETER = 401--><!--Device-PrintErrorCode-E_PRINT_INVALID_PARAMETER = 401-End-->
 
@@ -76,10 +60,6 @@ E_PRINT_GENERIC_FAILURE = 13100001
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintErrorCode-E_PRINT_GENERIC_FAILURE = 13100001--><!--Device-PrintErrorCode-E_PRINT_GENERIC_FAILURE = 13100001-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -93,10 +73,6 @@ E_PRINT_RPC_FAILURE = 13100002
 表示RPC失败。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintErrorCode-E_PRINT_RPC_FAILURE = 13100002--><!--Device-PrintErrorCode-E_PRINT_RPC_FAILURE = 13100002-End-->
 
@@ -112,10 +88,6 @@ E_PRINT_SERVER_FAILURE = 13100003
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintErrorCode-E_PRINT_SERVER_FAILURE = 13100003--><!--Device-PrintErrorCode-E_PRINT_SERVER_FAILURE = 13100003-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -129,10 +101,6 @@ E_PRINT_INVALID_EXTENSION = 13100004
 表示打印扩展无效。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintErrorCode-E_PRINT_INVALID_EXTENSION = 13100004--><!--Device-PrintErrorCode-E_PRINT_INVALID_EXTENSION = 13100004-End-->
 
@@ -148,10 +116,6 @@ E_PRINT_INVALID_PRINTER = 13100005
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintErrorCode-E_PRINT_INVALID_PRINTER = 13100005--><!--Device-PrintErrorCode-E_PRINT_INVALID_PRINTER = 13100005-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -165,10 +129,6 @@ E_PRINT_INVALID_PRINT_JOB = 13100006
 表示打印任务无效。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintErrorCode-E_PRINT_INVALID_PRINT_JOB = 13100006--><!--Device-PrintErrorCode-E_PRINT_INVALID_PRINT_JOB = 13100006-End-->
 
@@ -184,10 +144,6 @@ E_PRINT_FILE_IO = 13100007
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintErrorCode-E_PRINT_FILE_IO = 13100007--><!--Device-PrintErrorCode-E_PRINT_FILE_IO = 13100007-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -202,10 +158,6 @@ E_PRINT_TOO_MANY_FILES = 13100010
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintErrorCode-E_PRINT_TOO_MANY_FILES = 13100010--><!--Device-PrintErrorCode-E_PRINT_TOO_MANY_FILES = 13100010-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -219,10 +171,6 @@ E_PRINT_SMB_LOGIN_LOCKOUT = 13100012
 表示当前SMB协议共享打印机账号因多次登录失败而被锁定。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -240,10 +188,6 @@ E_PRINT_SMB_CONNECTION_FAILURE = 13100013
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintErrorCode-E_PRINT_SMB_CONNECTION_FAILURE = 13100013--><!--Device-PrintErrorCode-E_PRINT_SMB_CONNECTION_FAILURE = 13100013-End-->
@@ -259,10 +203,6 @@ E_PRINT_SMB_INVALID_CREDENTIALS = 13100014
 表示SMB协议共享打印机账号/密码错误。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

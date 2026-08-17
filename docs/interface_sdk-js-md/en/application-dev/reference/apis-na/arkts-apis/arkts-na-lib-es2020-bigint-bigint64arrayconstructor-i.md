@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface BigInt64ArrayConstructor--><!--Device-unnamed-interface BigInt64ArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new(length?: number): BigInt64Array
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-BigInt64ArrayConstructor-new(length?: number): BigInt64Array--><!--Device-BigInt64ArrayConstructor-new(length?: number): BigInt64Array-End-->
 
@@ -42,10 +34,6 @@ new(array: Iterable<bigint>): BigInt64Array
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-BigInt64ArrayConstructor-new(array: Iterable<bigint>): BigInt64Array--><!--Device-BigInt64ArrayConstructor-new(array: Iterable<bigint>): BigInt64Array-End-->
 
 **Parameters:**
@@ -67,10 +55,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigInt64Arra
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-BigInt64ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigInt64Array--><!--Device-BigInt64ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigInt64Array-End-->
 
@@ -98,10 +82,6 @@ Creates an array from an array-like or iterable object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-BigInt64ArrayConstructor-from(arrayLike: ArrayLike<bigint>): BigInt64Array--><!--Device-BigInt64ArrayConstructor-from(arrayLike: ArrayLike<bigint>): BigInt64Array-End-->
 
 **Parameters:**
@@ -123,10 +103,6 @@ from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: a
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-BigInt64ArrayConstructor-from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): BigInt64Array--><!--Device-BigInt64ArrayConstructor-from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): BigInt64Array-End-->
 
@@ -154,10 +130,6 @@ Returns a new array from a set of elements.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-BigInt64ArrayConstructor-of(...items: bigint[]): BigInt64Array--><!--Device-BigInt64ArrayConstructor-of(...items: bigint[]): BigInt64Array-End-->
 
 **Parameters:**
@@ -184,10 +156,6 @@ The size in bytes of each element in the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-BigInt64ArrayConstructor-readonly BYTES_PER_ELEMENT: number--><!--Device-BigInt64ArrayConstructor-readonly BYTES_PER_ELEMENT: number-End-->
 
 ## prototype
@@ -199,10 +167,6 @@ readonly prototype: BigInt64Array
 **Type:** [BigInt64Array](arkts-na-lib-es2020-bigint-bigint64array-i.md)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-BigInt64ArrayConstructor-readonly prototype: BigInt64Array--><!--Device-BigInt64ArrayConstructor-readonly prototype: BigInt64Array-End-->
 

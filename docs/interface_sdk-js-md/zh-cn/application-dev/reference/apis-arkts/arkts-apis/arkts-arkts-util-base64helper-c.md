@@ -4,10 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-util-class Base64Helper--><!--Device-util-class Base64Helper-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -22,17 +18,13 @@ constructor()
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Base64Helper-constructor()--><!--Device-Base64Helper-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 示例
+**示例**
 
 ```TypeScript
 let base64 = new util.Base64Helper();
@@ -47,10 +39,6 @@ decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>
 将输入内容解码为 Uint8Array 对象。该接口使用 promise 返回结果。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -71,7 +59,7 @@ decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | 用于返回获取到的 Uint8Array 对象的 promise。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let base64Helper = new util.Base64Helper();
@@ -94,10 +82,6 @@ decodeSync(src: Uint8Array | string, options?: Type): Uint8Array
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Base64Helper-decodeSync(src: Uint8Array | string, options?: Type): Uint8Array--><!--Device-Base64Helper-decodeSync(src: Uint8Array | string, options?: Type): Uint8Array-End-->
@@ -117,7 +101,7 @@ decodeSync(src: Uint8Array | string, options?: Type): Uint8Array
 | --- | --- |
 | Uint8Array | 获取到的 Uint8Array 对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let base64Helper = new util.Base64Helper();
@@ -139,10 +123,6 @@ encode(src: Uint8Array, options?: Type): Promise<Uint8Array>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Base64Helper-encode(src: Uint8Array, options?: Type): Promise<Uint8Array>--><!--Device-Base64Helper-encode(src: Uint8Array, options?: Type): Promise<Uint8Array>-End-->
@@ -162,7 +142,7 @@ encode(src: Uint8Array, options?: Type): Promise<Uint8Array>
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | 用于返回获取到的 Uint8Array 对象的 promise。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let base64Helper = new util.Base64Helper();
@@ -183,10 +163,6 @@ encodeSync(src: Uint8Array, options?: Type): Uint8Array
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Base64Helper-encodeSync(src: Uint8Array, options?: Type): Uint8Array--><!--Device-Base64Helper-encodeSync(src: Uint8Array, options?: Type): Uint8Array-End-->
@@ -206,7 +182,7 @@ encodeSync(src: Uint8Array, options?: Type): Uint8Array
 | --- | --- |
 | Uint8Array | 获取到的 Uint8Array 对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let base64Helper = new util.Base64Helper();
@@ -225,10 +201,6 @@ encodeToString(src: Uint8Array, options?: Type): Promise<string>
 将输入内容编码为字符串。该接口使用 promise 返回结果。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -249,7 +221,7 @@ encodeToString(src: Uint8Array, options?: Type): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | 用于返回获取到的字符串的 promise。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let base64Helper = new util.Base64Helper();
@@ -275,10 +247,6 @@ encodeToStringSync(src: Uint8Array, options?: Type): string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string--><!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string-End-->
@@ -298,7 +266,7 @@ encodeToStringSync(src: Uint8Array, options?: Type): string
 | --- | --- |
 | string | 获取到的字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // MIME编码

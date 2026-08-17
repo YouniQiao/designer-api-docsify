@@ -4,10 +4,6 @@ The **metadataBinding** module provides metadata binding–specific functions su
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace metadataBinding--><!--Device-unnamed-declare namespace metadataBinding-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
@@ -24,19 +20,19 @@ import { metadataBinding } from 'metadataBinding';
 
 | Name | Description |
 | --- | --- |
-| [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md#offOperationSubmitMetadata) | Unsubscribes from system events that are used to obtain the encoded metadata. |
-| off_operationSubmitMetadata | Unsubscribes from system events that are used to obtain the encoded metadata. The respective callback will be unregistered. |
-| [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md#onOperationSubmitMetadata) | Subscribes to a system event to obtain the encoded metadata. |
-| on_operationSubmitMetadata | Subscribes to a system event to obtain the encoded metadata. The application needs to register a callback to return the encoded metadata when the registered system event occurs. |
-| [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md#submitMetadata) | Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to transfer the metadata to the system application or service that calls the encoding API. |
+| [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md#offoperationsubmitmetadata) | Unsubscribes from system events that are used to obtain the encoded metadata. |
+| [off_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md#offoperationsubmitmetadata) | Unsubscribes from system events that are used to obtain the encoded metadata. The respective callback will be unregistered. |
+| [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md#onoperationsubmitmetadata) | Subscribes to a system event to obtain the encoded metadata. |
+| [on_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md#onoperationsubmitmetadata) | Subscribes to a system event to obtain the encoded metadata. The application needs to register a callback to return the encoded metadata when the registered system event occurs. |
+| [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md#submitmetadata) | Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to transfer the metadata to the system application or service that calls the encoding API. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [decodeImage](arkts-multimodalawareness-metadatabinding-decodeimage-f-sys.md#decodeImage) | Decodes the information carried in the image. This API uses a promise to return the result. |
-| [encodeImage](arkts-multimodalawareness-metadatabinding-encodeimage-f-sys.md#encodeImage) | Encodes metadata into an image. This API uses a promise to return the result. |
-| [notifyMetadataBindingEvent](arkts-multimodalawareness-metadatabinding-notifymetadatabindingevent-f-sys.md#notifyMetadataBindingEvent) | Transfers metadata to the application or service that calls the encoding API. This API uses a promise to return the result. |
+| [decodeImage](arkts-multimodalawareness-metadatabinding-decodeimage-f-sys.md#decodeimage) | Decodes the information carried in the image. This API uses a promise to return the result. |
+| [encodeImage](arkts-multimodalawareness-metadatabinding-encodeimage-f-sys.md#encodeimage) | Encodes metadata into an image. This API uses a promise to return the result. |
+| [notifyMetadataBindingEvent](arkts-multimodalawareness-metadatabinding-notifymetadatabindingevent-f-sys.md#notifymetadatabindingevent) | Transfers metadata to the application or service that calls the encoding API. This API uses a promise to return the result. |
 <!--DelEnd-->
 

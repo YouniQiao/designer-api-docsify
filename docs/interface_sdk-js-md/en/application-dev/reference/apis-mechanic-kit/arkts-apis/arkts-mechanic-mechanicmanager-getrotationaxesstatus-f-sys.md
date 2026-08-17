@@ -16,10 +16,6 @@ Obtains the status of the rotation axes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-function getRotationAxesStatus(mechId: int): RotationAxesStatus--><!--Device-mechanicManager-function getRotationAxesStatus(mechId: int): RotationAxesStatus-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -46,7 +42,7 @@ Obtains the status of the rotation axes.
 | [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 console.info('Query the rotation axis status');

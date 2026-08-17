@@ -8,10 +8,6 @@ Defines the package configuration information in the **pack.info** file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-freeInstall-export type PackageConfig = _PackageConfig--><!--Device-freeInstall-export type PackageConfig = _PackageConfig-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall

@@ -1,12 +1,8 @@
-# ActionSheetOptions
+# ActionSheetOptions(ActionSheet)
 
 Provides **ActionSheet** configuration options.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface ActionSheetOptions--><!--Device-unnamed-interface ActionSheetOptions-End-->
 
@@ -25,10 +21,6 @@ Sets the distortion animation Mode of the dialog.
 **Default:** DistortionMode.DISTORTION_AUTO
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,10 +43,6 @@ Sets the edgeLight animation Mode of the dialog.
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

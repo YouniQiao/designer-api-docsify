@@ -16,10 +16,6 @@ Creates a image PixelMap from sendable image PixelMap.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendableImage-function convertToPixelMap(pixelmap: PixelMap): image.PixelMap--><!--Device-sendableImage-function convertToPixelMap(pixelmap: PixelMap): image.PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -43,7 +39,7 @@ Creates a image PixelMap from sendable image PixelMap.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the image parameter invalid. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

@@ -4,10 +4,6 @@ Provides page information, which includes: * Basic page information, such as pag
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-onScreen-export interface AwarenessItem--><!--Device-onScreen-export interface AwarenessItem-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -31,10 +27,6 @@ Entity information of the awareness result, including the content, links, screen
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

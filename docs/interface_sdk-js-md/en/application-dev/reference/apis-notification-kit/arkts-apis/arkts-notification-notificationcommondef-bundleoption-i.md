@@ -1,12 +1,8 @@
-# BundleOption
+# BundleOption(Some common definitions)
 
 Describes the **BundleOption** information, that is, the bundle information of an application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BundleOption--><!--Device-unnamed-export interface BundleOption-End-->
 
@@ -24,10 +20,6 @@ Bundle name of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleOption-bundle: string--><!--Device-BundleOption-bundle: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -43,10 +35,6 @@ UID of the application, which is obtained from ApplicationInfo. The default valu
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundleOption-uid?: int--><!--Device-BundleOption-uid?: int-End-->
 

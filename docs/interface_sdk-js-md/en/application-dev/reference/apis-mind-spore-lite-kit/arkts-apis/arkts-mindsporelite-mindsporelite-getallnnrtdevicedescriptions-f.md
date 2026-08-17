@@ -16,10 +16,6 @@ Obtain the all device descriptions in NNRT.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-mindSporeLite-function getAllNNRTDeviceDescriptions() : NNRTDeviceDescription[]--><!--Device-mindSporeLite-function getAllNNRTDeviceDescriptions() : NNRTDeviceDescription[]-End-->
@@ -32,7 +28,7 @@ Obtain the all device descriptions in NNRT.
 | --- | --- |
 | [NNRTDeviceDescription](arkts-mindsporelite-mindsporelite-nnrtdevicedescription-i.md)[] | the array of NNRTDeviceDescription |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();

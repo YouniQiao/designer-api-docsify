@@ -4,10 +4,6 @@ Describes the radio access technology.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export enum RadioTechnology--><!--Device-radio-export enum RadioTechnology-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -21,10 +17,6 @@ RADIO_TECHNOLOGY_UNKNOWN = 0
 Indicates unknown radio access technology (RAT).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_UNKNOWN = 0--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_UNKNOWN = 0-End-->
 
@@ -40,10 +32,6 @@ Indicates that RAT is global system for mobile communications (GSM), including G
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_GSM = 1--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_GSM = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -57,10 +45,6 @@ RADIO_TECHNOLOGY_1XRTT = 2
 Indicates that RAT is code division multiple access (CDMA), including Interim Standard 95 (IS95) and Single-Carrier Radio Transmission Technology (1xRTT).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_1XRTT = 2--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_1XRTT = 2-End-->
 
@@ -76,10 +60,6 @@ Indicates that RAT is wideband code division multiple address (WCDMA).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_WCDMA = 3--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_WCDMA = 3-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -93,10 +73,6 @@ RADIO_TECHNOLOGY_HSPA = 4
 Indicates that RAT is high-speed packet access (HSPA), including HSPA, high-speed downlink packet access (HSDPA), and high-speed uplink packet access (HSUPA).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_HSPA = 4--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_HSPA = 4-End-->
 
@@ -112,10 +88,6 @@ Indicates that RAT is evolved high-speed packet access (HSPA+), including HSPA+ 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_HSPAP = 5--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_HSPAP = 5-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -129,10 +101,6 @@ RADIO_TECHNOLOGY_TD_SCDMA = 6
 Indicates that RAT is time division-synchronous code division multiple access (TD-SCDMA).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_TD_SCDMA = 6--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_TD_SCDMA = 6-End-->
 
@@ -148,10 +116,6 @@ Indicates that RAT is evolution data only (EVDO), including EVDO Rev.0, EVDO Rev
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_EVDO = 7--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_EVDO = 7-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -165,10 +129,6 @@ RADIO_TECHNOLOGY_EHRPD = 8
 Indicates that RAT is evolved high rate packet data (EHRPD).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_EHRPD = 8--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_EHRPD = 8-End-->
 
@@ -184,10 +144,6 @@ Indicates that RAT is long term evolution (LTE).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_LTE = 9--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_LTE = 9-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -201,10 +157,6 @@ RADIO_TECHNOLOGY_LTE_CA = 10
 Indicates that RAT is LTE carrier aggregation (LTE-CA).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_LTE_CA = 10--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_LTE_CA = 10-End-->
 
@@ -220,10 +172,6 @@ Indicates that RAT is interworking WLAN (I-WLAN).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_IWLAN = 11--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_IWLAN = 11-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -237,10 +185,6 @@ RADIO_TECHNOLOGY_NR = 12
 Indicates that RAT is 5G new radio (NR).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RadioTechnology-RADIO_TECHNOLOGY_NR = 12--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_NR = 12-End-->
 

@@ -16,10 +16,6 @@ The screen lock app sends the event to the screen lock service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
 <!--Device-screenLock-function sendScreenLockEvent(event: String, parameter: int, callback: AsyncCallback<boolean>): void--><!--Device-screenLock-function sendScreenLockEvent(event: String, parameter: int, callback: AsyncCallback<boolean>): void-End-->
@@ -45,7 +41,7 @@ The screen lock app sends the event to the screen lock service.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 | [13200002](../../apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | the screenlock management service is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,10 +65,6 @@ function sendScreenLockEvent(event: String, parameter: int): Promise<boolean>
 The screen lock app sends the event to the screen lock service.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
@@ -104,7 +96,7 @@ The screen lock app sends the event to the screen lock service.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 | [13200002](../../apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | the screenlock management service is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

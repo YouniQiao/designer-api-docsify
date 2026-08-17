@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface PromiseRejectedResult--><!--Device-unnamed-interface PromiseRejectedResult-End-->
 
 ## reason
@@ -18,10 +14,6 @@ reason: any
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-PromiseRejectedResult-reason: any--><!--Device-PromiseRejectedResult-reason: any-End-->
 
 ## status
@@ -33,10 +25,6 @@ status: "rejected"
 **Type:** "rejected"
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-PromiseRejectedResult-status: "rejected"--><!--Device-PromiseRejectedResult-status: "rejected"-End-->
 

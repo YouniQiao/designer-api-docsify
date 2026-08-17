@@ -1,12 +1,8 @@
 # AppStateData
 
-The module defines the application state information. Once an application state change listener is registered using [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState), the system triggers the onForegroundApplicationChanged callback of ApplicationStateObserver to deliver notifications whenever the state of an application, process, or ability changes.
+The module defines the application state information. Once an application state change listener is registered using [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate), the system triggers the onForegroundApplicationChanged callback of ApplicationStateObserver to deliver notifications whenever the state of an application, process, or ability changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class AppStateData--><!--Device-unnamed-declare class AppStateData-End-->
 
@@ -24,10 +20,6 @@ Bundle name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AppStateData-bundleName: string--><!--Device-AppStateData-bundleName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -43,10 +35,6 @@ Whether the application is in floating window mode. **true**: The application is
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AppStateData-isFloatingWindowMode: boolean--><!--Device-AppStateData-isFloatingWindowMode: boolean-End-->
 
@@ -64,10 +52,6 @@ Whether the application is in split-screen mode. **true**: The application is in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AppStateData-isSplitScreenMode: boolean--><!--Device-AppStateData-isSplitScreenMode: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -84,10 +68,6 @@ Application state. **0**: The application is being initialized. **1**: The appli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AppStateData-state: int--><!--Device-AppStateData-state: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -103,10 +83,6 @@ UID of the application.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AppStateData-uid: int--><!--Device-AppStateData-uid: int-End-->
 

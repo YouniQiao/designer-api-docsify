@@ -4,10 +4,6 @@ The module defines process information. You can use getProcessInfo to obtain inf
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ProcessInfo--><!--Device-unnamed-export interface ProcessInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -24,10 +20,6 @@ The id of the current process
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ProcessInfo-pid: int--><!--Device-ProcessInfo-pid: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -43,10 +35,6 @@ The name of the current process
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ProcessInfo-processName: string--><!--Device-ProcessInfo-processName: string-End-->
 

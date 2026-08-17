@@ -4,9 +4,7 @@ Provide a number formatting interface which could format number to StyleString.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export class StyledNumberFormat--><!--Device-i18n-export class StyledNumberFormat-End-->
 
@@ -22,9 +20,7 @@ A constructor used to create a StyledNumberFormat object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -36,8 +32,8 @@ A constructor used to create a StyledNumberFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](arkts-na-i18n-simplenumberformat-c.md) | Yes | Indicates the number format object that used to format number. |
-| options | [StyledNumberFormatOptions](arkts-na-i18n-stylednumberformatoptions-i.md) | No | Indicates the options used to format the number. |
+| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simplenumberformat-c.md) | Yes | Indicates the number format object that used to format number. |
+| options | [StyledNumberFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-stylednumberformatoptions-i.md) | No | Indicates the options used to format the number. |
 
 ## format
 
@@ -49,9 +45,7 @@ Formats a number as a rich text object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

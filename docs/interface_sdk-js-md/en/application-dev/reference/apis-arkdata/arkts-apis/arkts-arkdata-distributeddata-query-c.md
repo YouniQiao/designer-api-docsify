@@ -4,8 +4,6 @@ Provides APIs to create a **Query** object, which defines different data query c
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** Query
@@ -24,8 +22,6 @@ Creates a **Query** object with the AND condition.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** and
@@ -40,7 +36,7 @@ Creates a **Query** object with the AND condition.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -65,8 +61,6 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** beginGroup
@@ -81,7 +75,7 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -106,8 +100,6 @@ Defines a constructor used to create a **Query** instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** constructor
@@ -122,11 +114,9 @@ Defines a constructor used to create a **Query** instance.
 deviceId(deviceId: string): Query
 ```
 
-Creates a **Query** object with the device ID as the key prefix. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Creates a **Query** object with the device ID as the key prefix. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -148,7 +138,7 @@ Creates a **Query** object with the device ID as the key prefix. > **NOTE：**> 
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -170,8 +160,6 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** endGroup
@@ -186,7 +174,7 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -211,8 +199,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** equalTo
@@ -234,7 +220,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -257,8 +243,6 @@ Obtains the query statement of the **Query** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** getSqlLike
@@ -273,7 +257,7 @@ Obtains the query statement of the **Query** object.
 | --- | --- |
 | string | Query statement obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -294,8 +278,6 @@ greaterThan(field: string, value: number | string | boolean): Query
 Creates a **Query** object to search for the records with the specified field that are greater than the given value.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -318,7 +300,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -341,8 +323,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** greaterThanOrEqualTo
@@ -364,7 +344,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -387,8 +367,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** inNumber
@@ -410,7 +388,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -433,8 +411,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** inString
@@ -456,7 +432,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -479,8 +455,6 @@ Creates a **Query** object to search for the records whose value is not **null**
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** isNotNull
@@ -501,7 +475,7 @@ Creates a **Query** object to search for the records whose value is not **null**
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -524,8 +498,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** isNull
@@ -546,7 +518,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -569,8 +541,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** lessThan
@@ -592,7 +562,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -615,8 +585,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** lessThanOrEqualTo
@@ -638,7 +606,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -661,8 +629,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** like
@@ -684,7 +650,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -707,8 +673,6 @@ Creates a **Query** object to specify the number of records in the query result 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** limit
@@ -730,7 +694,7 @@ Creates a **Query** object to specify the number of records in the query result 
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let total = 10;
@@ -756,8 +720,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** notEqualTo
@@ -779,7 +741,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -802,8 +764,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** notInNumber
@@ -825,7 +785,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -848,8 +808,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** notInString
@@ -871,7 +829,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -894,8 +852,6 @@ Creates a **Query** object with the OR condition.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** or
@@ -910,7 +866,7 @@ Creates a **Query** object with the OR condition.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -935,8 +891,6 @@ Creates a **Query** object to sort the query results in ascending order.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** orderByAsc
@@ -957,7 +911,7 @@ Creates a **Query** object to sort the query results in ascending order.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -981,8 +935,6 @@ Creates a **Query** object to sort the query results in descending order.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** orderByDesc
@@ -1003,7 +955,7 @@ Creates a **Query** object to sort the query results in descending order.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1027,8 +979,6 @@ Creates a **Query** object with a specified key prefix.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** prefixKey
@@ -1049,7 +999,7 @@ Creates a **Query** object with a specified key prefix.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1073,8 +1023,6 @@ Resets the **Query** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** reset
@@ -1089,7 +1037,7 @@ Resets the **Query** object.
 | --- | --- |
 | Query | Query** object reset. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1114,8 +1062,6 @@ Creates a **Query** object with an index preferentially used for query.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** setSuggestIndex
@@ -1136,7 +1082,7 @@ Creates a **Query** object with an index preferentially used for query.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1160,8 +1106,6 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** unlike
@@ -1183,7 +1127,7 @@ Creates a **Query** object to search for the records with the specified field th
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

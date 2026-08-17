@@ -1,12 +1,10 @@
 # CredentialType
 
-Enum type supplied to [CredentialType](#CredentialType) when ClientAuthenticationHandler#confirm being called.
+Enum type supplied to [CredentialType](#credentialtype) when ClientAuthenticationHandler#confirm being called.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare enum CredentialType--><!--Device-unnamed-export declare enum CredentialType-End-->
 
@@ -22,9 +20,7 @@ User credential.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-CredentialType-CREDENTIAL_USER = 2--><!--Device-CredentialType-CREDENTIAL_USER = 2-End-->
 
@@ -40,9 +36,7 @@ Application-specific credential.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-CredentialType-CREDENTIAL_APP = 3--><!--Device-CredentialType-CREDENTIAL_APP = 3-End-->
 
@@ -58,9 +52,7 @@ Hardware security key credential.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-CredentialType-CREDENTIAL_UKEY = 4--><!--Device-CredentialType-CREDENTIAL_UKEY = 4-End-->
 

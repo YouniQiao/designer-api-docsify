@@ -4,10 +4,6 @@ Represents the completion of an asynchronous operation
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Promise--><!--Device-unnamed-interface Promise-End-->
 
 ## catch
@@ -19,10 +15,6 @@ catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TRes
 Attaches a callback for only the rejection of the Promise.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Promise-catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): Promise<T | TResult>--><!--Device-Promise-catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): Promise<T | TResult>-End-->
 
@@ -47,10 +39,6 @@ then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | Pro
 Attaches callbacks for the resolution and/or rejection of the Promise.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Promise-then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): Promise<TResult1 | TResult2>--><!--Device-Promise-then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): Promise<TResult1 | TResult2>-End-->
 

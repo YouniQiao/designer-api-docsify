@@ -4,10 +4,6 @@ Validity period in the configuration file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Validity--><!--Device-unnamed-export interface Validity-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -26,10 +22,6 @@ End time of the validity period of the configuration file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Validity-readonly notAfter: long--><!--Device-Validity-readonly notAfter: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -47,10 +39,6 @@ Start time of the validity period of the configuration file.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Validity-readonly notBefore: long--><!--Device-Validity-readonly notBefore: long-End-->
 

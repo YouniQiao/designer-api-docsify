@@ -4,10 +4,6 @@ This module provides APIs for creating and managing sendable color space objects
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace sendableColorSpaceManager--><!--Device-unnamed-declare namespace sendableColorSpaceManager-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core

@@ -16,8 +16,6 @@ Subscribe the event of a pairing request from a remote Bluetooth device. On API 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** pinRequired
@@ -46,7 +44,7 @@ Subscribe the event of a pairing request from a remote Bluetooth device. On API 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

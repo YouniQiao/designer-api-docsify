@@ -12,13 +12,9 @@ import { huks } from 'huks';
 function initSession(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksSessionHandle>): void
 ```
 
-Initializes a session for a key operation. This API uses an asynchronous callback to return the result. The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together. > **NOTE：**> > Initializing a session for SE security level keys defined in > [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel) requires the ohos.permission.ACCESS_SE_KEY permission.
+Initializes a session for a key operation. This API uses an asynchronous callback to return the result. The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together. > **NOTE：**> > Initializing a session for SE security level keys defined in > [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -65,13 +61,9 @@ Initializes a session for a key operation. This API uses an asynchronous callbac
 function initSession(keyAlias: string, options: HuksOptions): Promise<HuksSessionHandle>
 ```
 
-Initializes a session for a key operation. This API uses a promise to return the result. The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together. > **NOTE：**> > Initializing a session for SE security level keys defined in > [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel) requires the ohos.permission.ACCESS_SE_KEY permission.
+Initializes a session for a key operation. This API uses a promise to return the result. The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together. > **NOTE：**> > Initializing a session for SE security level keys defined in > [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

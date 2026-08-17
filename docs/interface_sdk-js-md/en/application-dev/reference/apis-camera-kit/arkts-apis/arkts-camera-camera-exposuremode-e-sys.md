@@ -4,10 +4,6 @@ Enumerates the exposure modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum ExposureMode--><!--Device-camera-enum ExposureMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -18,13 +14,9 @@ Enumerates the exposure modes.
 EXPOSURE_MODE_MANUAL = 3
 ```
 
-Manual exposure. The exposure duration can be set. In this mode, you can set the exposure duration by calling [ManualExposure.setExposureDuration](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md#setExposureDuration).
+Manual exposure. The exposure duration can be set. In this mode, you can set the exposure duration by calling [ManualExposure.setExposureDuration](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md#setexposureduration).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

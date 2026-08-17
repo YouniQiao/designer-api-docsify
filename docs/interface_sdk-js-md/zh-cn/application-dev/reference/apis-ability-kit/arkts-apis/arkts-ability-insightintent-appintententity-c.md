@@ -2,13 +2,9 @@
 
 定义AppIntentEntity。
 
-**继承/实现关系：** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md#IntentEntity)
+**继承/实现关系：** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md#intententity)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-insightIntent-abstract class AppIntentEntity--><!--Device-insightIntent-abstract class AppIntentEntity-End-->
 
@@ -23,10 +19,6 @@ abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 在查询实体执行时调用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,7 +40,7 @@ abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 | --- | --- |
 | Promise&lt;Array&lt;T&gt;&gt; | Returns an array of subclasses of the AppIntentEntity class, support promise. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -272,10 +264,6 @@ displayName: string
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

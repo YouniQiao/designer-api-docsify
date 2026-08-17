@@ -16,10 +16,6 @@ Obtains the widget information provided by a specified application on the device
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-formHost-function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo.FormInfo>>): void--><!--Device-formHost-function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo.FormInfo>>): void-End-->
@@ -62,10 +58,6 @@ Obtains the widget information provided by a specified application on the device
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-formHost-function getFormsInfo(    bundleName: string,    moduleName: string,    callback: AsyncCallback<Array<formInfo.FormInfo>>  ): void--><!--Device-formHost-function getFormsInfo(    bundleName: string,    moduleName: string,    callback: AsyncCallback<Array<formInfo.FormInfo>>  ): void-End-->
@@ -104,10 +96,6 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -152,10 +140,6 @@ function getFormsInfo(filter: formInfo.FormInfoFilter): Promise<Array<formInfo.F
 Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

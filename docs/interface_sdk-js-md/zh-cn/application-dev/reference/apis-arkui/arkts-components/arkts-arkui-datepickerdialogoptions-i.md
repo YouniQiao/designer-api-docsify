@@ -1,14 +1,10 @@
 # DatePickerDialogOptions
 
-日期选择器弹窗选项。 继承自[DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions)。
+日期选择器弹窗选项。 继承自[DatePickerOptions](arkts-arkui-datepickeroptions-i.md#datepickeroptions)。
 
-**继承/实现关系：** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions)
+**继承/实现关系：** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#datepickeroptions)
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface DatePickerDialogOptions--><!--Device-unnamed-declare interface DatePickerDialogOptions-End-->
 
@@ -25,10 +21,6 @@ acceptButtonStyle?: PickerDialogButtonStyle
 **类型：** PickerDialogButtonStyle
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,10 +44,6 @@ alignment?: DialogAlignment
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -78,10 +66,6 @@ backgroundBlurStyle?: BlurStyle
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -101,10 +85,6 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 **类型：** BackgroundBlurStyleOptions
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,10 +108,6 @@ backgroundColor?: ResourceColor
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -151,10 +127,6 @@ backgroundEffect?: BackgroundEffectOptions
 **类型：** BackgroundEffectOptions
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -178,10 +150,6 @@ canLoop?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -201,10 +169,6 @@ cancelButtonStyle?: PickerDialogButtonStyle
 **类型：** PickerDialogButtonStyle
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -228,10 +192,6 @@ dateTimeOptions?: DateTimeOptions
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -253,10 +213,6 @@ disappearTextStyle?: PickerTextStyle
 **默认值：** { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } [since 11]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -280,10 +236,6 @@ enableHapticFeedback?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -305,10 +257,6 @@ enableHoverMode?: boolean
 **默认值：** false - meaning not to enable the hover mode.
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -332,10 +280,6 @@ hoverModeArea?: HoverModeAreaType
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -358,10 +302,6 @@ lunar?: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DatePickerDialogOptions-lunar?: boolean--><!--Device-DatePickerDialogOptions-lunar?: boolean-End-->
@@ -381,10 +321,6 @@ lunarSwitch?: boolean
 **默认值：** false [since 11]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -408,10 +344,6 @@ lunarSwitchStyle?: LunarSwitchStyle
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -433,10 +365,6 @@ maskRect?: Rectangle
 **默认值：** { x: 0, y: 0, width: '100%', height: '100%' } [since 11]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -460,10 +388,6 @@ offset?: Offset
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -484,11 +408,9 @@ onAccept?: (value: DatePickerResult) => void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 10
 
-**替代接口：** [onDateAccept](../../apis-na/arkts-apis/arkts-na-datepicker-datepickerdialogoptions-i.md#onDateAccept)
+**替代接口：** [onDateAccept](../../apis-na/arkts-apis/arkts-na-datepicker-datepickerdialogoptions-i.md#ondateaccept)
 
 <!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void-End-->
 
@@ -505,10 +427,6 @@ onCancel?: VoidCallback
 **类型：** VoidCallback
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -528,11 +446,9 @@ onChange?: (value: DatePickerResult) => void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 10
 
-**替代接口：** [onDateChange](../../apis-na/arkts-apis/arkts-na-datepicker-datepickerdialogoptions-i.md#onDateChange)
+**替代接口：** [onDateChange](../../apis-na/arkts-apis/arkts-na-datepicker-datepickerdialogoptions-i.md#ondatechange)
 
 <!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void-End-->
 
@@ -549,10 +465,6 @@ onDateAccept?: Callback<Date>
 **类型：** Callback&lt;Date&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -574,10 +486,6 @@ onDateChange?: Callback<Date>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -597,10 +505,6 @@ onDidAppear?: VoidCallback
 **类型：** VoidCallback
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -622,10 +526,6 @@ onDidDisappear?: VoidCallback
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -646,10 +546,6 @@ onWillAppear?: VoidCallback
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -669,10 +565,6 @@ onWillDisappear?: VoidCallback
 **类型：** VoidCallback
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -696,10 +588,6 @@ selectedTextStyle?: PickerTextStyle
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -719,10 +607,6 @@ shadow?: ShadowOptions | ShadowStyle
 **类型：** ShadowOptions \| ShadowStyle
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -746,10 +630,6 @@ showTime?: boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -769,10 +649,6 @@ systemMaterial?: SystemUiMaterial
 **类型：** SystemUiMaterial
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -796,10 +672,6 @@ textStyle?: PickerTextStyle
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -821,10 +693,6 @@ useMilitaryTime?: boolean
 **默认值：** false [since 11]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

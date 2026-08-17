@@ -4,10 +4,6 @@ Storage usage information of the application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-interface BundleStorageStats--><!--Device-bundleManager-interface BundleStorageStats-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,10 +26,6 @@ Size of the application installation files, in bytes. Application installation f
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleStorageStats-appSize: number--><!--Device-BundleStorageStats-appSize: number-End-->
@@ -52,10 +44,6 @@ Bundle name of the application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleStorageStats-bundleName: string--><!--Device-BundleStorageStats-bundleName: string-End-->
@@ -73,10 +61,6 @@ Size of the local data, distributed data, and database data of the application, 
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

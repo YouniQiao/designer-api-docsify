@@ -4,10 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface UICommonEvent--><!--Device-unnamed-declare interface UICommonEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,13 +14,9 @@
 setOnAppear(callback: Callback<void> | undefined): void
 ```
 
-设置[onAppear](arkts-arkui-commonmethod-c.md#onAppear)挂载显示事件的回调。
+设置[onAppear](arkts-arkui-commonmethod-c.md#onappear)挂载显示事件的回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,13 +38,9 @@ setOnAppear(callback: Callback<void> | undefined): void
 setOnBlur(callback: Callback<void> | undefined): void
 ```
 
-设置[onBlur](arkts-arkui-commonmethod-c.md#onBlur)失焦事件的回调。
+设置[onBlur](arkts-arkui-commonmethod-c.md#onblur)失焦事件的回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,10 +66,6 @@ setOnClick(callback: Callback<ClickEvent> | undefined): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -102,13 +86,9 @@ setOnClick(callback: Callback<ClickEvent> | undefined): void
 setOnDisappear(callback: Callback<void> | undefined): void
 ```
 
-设置[onDisAppear](arkts-arkui-commonmethod-c.md#onDisAppear)卸载消失事件的回调。
+设置[onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear)卸载消失事件的回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,13 +110,9 @@ setOnDisappear(callback: Callback<void> | undefined): void
 setOnFocus(callback: Callback<void> | undefined): void
 ```
 
-设置[onFocus](arkts-arkui-commonmethod-c.md#onFocus)获焦事件的回调。
+设置[onFocus](arkts-arkui-commonmethod-c.md#onfocus)获焦事件的回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,13 +134,9 @@ setOnFocus(callback: Callback<void> | undefined): void
 setOnHover(callback: HoverCallback | undefined): void
 ```
 
-设置[onHover](arkts-arkui-commonmethod-c.md#onHover)悬浮事件的回调。
+设置[onHover](arkts-arkui-commonmethod-c.md#onhover)悬浮事件的回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -190,10 +162,6 @@ setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -214,13 +182,9 @@ setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 setOnMouse(callback: Callback<MouseEvent> | undefined): void
 ```
 
-设置[onMouse](arkts-arkui-commonmethod-c.md#onMouse)鼠标事件的回调。
+设置[onMouse](arkts-arkui-commonmethod-c.md#onmouse)鼠标事件的回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -242,13 +206,9 @@ setOnMouse(callback: Callback<MouseEvent> | undefined): void
 setOnSizeChange(callback: SizeChangeCallback | undefined): void
 ```
 
-设置[onSizeChange](arkts-arkui-commonmethod-c.md#onSizeChange)组件区域变化事件的回调。
+设置[onSizeChange](arkts-arkui-commonmethod-c.md#onsizechange)组件区域变化事件的回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -274,10 +234,6 @@ setOnTouch(callback: Callback<TouchEvent> | undefined): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -298,13 +254,9 @@ setOnTouch(callback: Callback<TouchEvent> | undefined): void
 setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): void
 ```
 
-设置限制回调间隔的 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onVisibleAreaChange) 可见区域变化事件的回调。
+设置限制回调间隔的 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) 可见区域变化事件的回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

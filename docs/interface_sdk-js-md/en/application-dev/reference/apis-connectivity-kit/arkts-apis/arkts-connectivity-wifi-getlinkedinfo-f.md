@@ -16,11 +16,9 @@ Obtains information about a Wi-Fi connection.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getLinkedInfo)
+**Substitutes:** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getlinkedinfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -45,11 +43,9 @@ Obtains information about a Wi-Fi connection.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getLinkedInfo)
+**Substitutes:** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getlinkedinfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -63,7 +59,7 @@ Obtains information about a Wi-Fi connection.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | Yes |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

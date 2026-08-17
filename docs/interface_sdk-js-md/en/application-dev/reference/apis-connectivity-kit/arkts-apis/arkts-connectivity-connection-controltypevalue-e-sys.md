@@ -4,10 +4,6 @@ Describes the control type value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-enum ControlTypeValue--><!--Device-connection-enum ControlTypeValue-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -23,10 +19,6 @@ DISABLE = 0
 Indicates the action of disable.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Indicates the action of enable.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ControlTypeValue-ENABLE = 1--><!--Device-ControlTypeValue-ENABLE = 1-End-->
@@ -67,10 +55,6 @@ QUERY = 2
 Indicates the action of query.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

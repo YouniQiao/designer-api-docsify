@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-distributedAccount-interface DistributedInfo--><!--Device-distributedAccount-interface DistributedInfo-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ avatar?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DistributedInfo-avatar?: string--><!--Device-DistributedInfo-avatar?: string-End-->
 
@@ -44,10 +36,6 @@ event: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DistributedInfo-event: string--><!--Device-DistributedInfo-event: string-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -63,10 +51,6 @@ id: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DistributedInfo-id: string--><!--Device-DistributedInfo-id: string-End-->
 
@@ -84,10 +68,6 @@ name: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DistributedInfo-name: string--><!--Device-DistributedInfo-name: string-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -103,10 +83,6 @@ nickname?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DistributedInfo-nickname?: string--><!--Device-DistributedInfo-nickname?: string-End-->
 
@@ -124,10 +100,6 @@ scalableData?: Record<string, RecordData>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DistributedInfo-scalableData?: Record<string, RecordData>--><!--Device-DistributedInfo-scalableData?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -143,10 +115,6 @@ readonly status?: DistributedAccountStatus
 **类型：** [DistributedAccountStatus](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DistributedInfo-readonly status?: DistributedAccountStatus--><!--Device-DistributedInfo-readonly status?: DistributedAccountStatus-End-->
 

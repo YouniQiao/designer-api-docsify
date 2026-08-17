@@ -16,10 +16,6 @@ Obtains the credentials for installing the application. This API uses a promise 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function getPrivateCertificates(): Promise<CMResult>--><!--Device-certificateManager-function getPrivateCertificates(): Promise<CMResult>-End-->
@@ -39,7 +35,7 @@ Obtains the credentials for installing the application. This API uses a promise 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

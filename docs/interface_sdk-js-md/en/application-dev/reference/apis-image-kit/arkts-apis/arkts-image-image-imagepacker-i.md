@@ -1,12 +1,8 @@
 # ImagePacker
 
-The **ImagePacker** class provides APIs to compress and encode images. Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md#createImagePacker) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
+The **ImagePacker** class provides APIs to compress and encode images. Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md#createimagepacker) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-interface ImagePacker--><!--Device-image-interface ImagePacker-End-->
 
@@ -27,10 +23,6 @@ packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptions
 Compresses or packs an image into a file and uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,10 +60,6 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImagePacker-packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: PackingOptionsForTiff): Promise<void>--><!--Device-ImagePacker-packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: PackingOptionsForTiff): Promise<void>-End-->
@@ -108,10 +96,6 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -156,10 +140,6 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>-End-->
@@ -203,10 +183,6 @@ Encodes multiple PixelMap objects into GIF data. This API uses a promise to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImagePacker-packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -240,10 +216,6 @@ packToFile(source: ImageSource, fd: int, options: PackingOption, callback: Async
 Encodes the image source into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void--><!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void-End-->
 
@@ -281,10 +253,6 @@ packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>
 Encodes the image source into a file based on the specified encoding parameters. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>-End-->
 
@@ -328,10 +296,6 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void--><!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -368,10 +332,6 @@ packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result. > **NOTE：**> > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap > object is released in advance. You need to check the code and ensure that the PixelMap object is released after > this API is called.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>-End-->
 
@@ -415,10 +375,6 @@ Encodes the Picture into a file based on the specified encoding parameters. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImagePacker-packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -453,10 +409,6 @@ packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, optio
 Encodes multiple PixelMaps into a GIF file. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>--><!--Device-ImagePacker-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>-End-->
 
@@ -493,11 +445,9 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 13
 
-**Substitutes:** [packToData](#packToData)
+**Substitutes:** [packToData](#packtodata)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -523,11 +473,9 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 13
 
-**Substitutes:** [packToData](#packToData)
+**Substitutes:** [packToData](#packtodata)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -558,11 +506,9 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 13
 
-**Substitutes:** [packToData](#packToData)
+**Substitutes:** [packToData](#packtodata)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -588,11 +534,9 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 13
 
-**Substitutes:** [packToData](#packToData)
+**Substitutes:** [packToData](#packtodata)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -622,10 +566,6 @@ packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
 Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImagePacker-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -661,10 +601,6 @@ Releases this ImagePacker instance. This API uses an asynchronous callback to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImagePacker-release(callback: AsyncCallback<void>): void--><!--Device-ImagePacker-release(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -684,10 +620,6 @@ release(): Promise<void>
 Releases this ImagePacker instance. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImagePacker-release(): Promise<void>--><!--Device-ImagePacker-release(): Promise<void>-End-->
 
@@ -710,10 +642,6 @@ Supported formats for image encoding, including jpeg, webp, png, heic&lt;sup&gt;
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImagePacker-readonly supportedFormats: Array<string>--><!--Device-ImagePacker-readonly supportedFormats: Array<string>-End-->
 

@@ -4,8 +4,6 @@ Enumerates the device authentication types.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 <!--Device-deviceManager-enum AuthForm--><!--Device-deviceManager-enum AuthForm-End-->
@@ -23,8 +21,6 @@ INVALID_TYPE = -1
 No authentication.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 
@@ -44,8 +40,6 @@ Point-to-point authentication for devices without accounts.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 <!--Device-AuthForm-PEER_TO_PEER = 0--><!--Device-AuthForm-PEER_TO_PEER = 0-End-->
@@ -64,8 +58,6 @@ Authentication for devices using the same account.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 <!--Device-AuthForm-IDENTICAL_ACCOUNT = 1--><!--Device-AuthForm-IDENTICAL_ACCOUNT = 1-End-->
@@ -83,8 +75,6 @@ ACROSS_ACCOUNT = 2
 Authentication for devices using different accounts.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 

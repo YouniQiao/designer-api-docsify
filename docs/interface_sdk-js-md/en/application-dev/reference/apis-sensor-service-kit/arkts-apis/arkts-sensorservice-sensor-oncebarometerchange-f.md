@@ -16,10 +16,6 @@ Subscribe to barometer sensor data once, {@code SensorId.BAROMETER}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onceBarometerChange(callback: Callback<BarometerResponse>): void--><!--Device-sensor-function onceBarometerChange(callback: Callback<BarometerResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

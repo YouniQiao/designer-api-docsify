@@ -2,13 +2,11 @@
 
 Component content cover options
 
-**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-na-common-bindoptions-i.md#BindOptions)
+**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-na-common-bindoptions-i.md#bindoptions)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface ContentCoverOptions--><!--Device-unnamed-export declare interface ContentCoverOptions-End-->
 
@@ -28,9 +26,7 @@ Set contentCover content adapts to safeArea.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,9 +48,7 @@ Defines transition type
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,9 +68,7 @@ Callback function when the content cover interactive dismiss
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,9 +88,7 @@ Defines transition effect param
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

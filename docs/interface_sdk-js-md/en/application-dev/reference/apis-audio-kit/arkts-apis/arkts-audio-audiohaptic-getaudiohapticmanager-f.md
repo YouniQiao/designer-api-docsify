@@ -12,13 +12,9 @@ import { audioHaptic } from 'audioHaptic';
 function getAudioHapticManager(): AudioHapticManager
 ```
 
-Obtains an [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md#AudioHapticManager) instance. This object is singleton in one process.
+Obtains an [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md#audiohapticmanager) instance. This object is singleton in one process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audioHaptic-function getAudioHapticManager(): AudioHapticManager--><!--Device-audioHaptic-function getAudioHapticManager(): AudioHapticManager-End-->
 
@@ -30,7 +26,7 @@ Obtains an [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md#
 | --- | --- |
 | [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | AudioHapticManager instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let audioHapticManagerInstance: audioHaptic.AudioHapticManager = audioHaptic.getAudioHapticManager();

@@ -4,10 +4,6 @@ Provides calendar management capabilities, such as calendar name retrieval and d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class Calendar--><!--Device-i18n-export class Calendar-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Performs addition or subtraction on the calendar attributes of this **Calendar**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-add(field: string, amount: int): void--><!--Device-Calendar-add(field: string, amount: int): void-End-->
@@ -42,7 +34,7 @@ Performs addition or subtraction on the calendar attributes of this **Calendar**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Calendar attribute. The value can be any of the following: **year**, **month**, **week_of_year**, **week_of_month**, **date**, **day_of_year**, **day_of_week**, **day_of_week_in_month**, **hour**, **hour_of_day**, **minute**, **second**, **millisecond**. For details about the values, see [get](../../apis-na/arkts-apis/arkts-na-i18n-calendar-c.md#get). |
+| field | string | Yes | Calendar attribute. The value can be any of the following: **year**, **month**, **week_of_year**, **week_of_month**, **date**, **day_of_year**, **day_of_week**, **day_of_week_in_month**, **hour**, **hour_of_day**, **minute**, **second**, **millisecond**. For details about the values, see [get](#get). |
 | amount | int | Yes | Addition or subtraction amount. |
 
 **Error codes:**
@@ -52,7 +44,7 @@ Performs addition or subtraction on the calendar attributes of this **Calendar**
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -79,10 +71,6 @@ Compares the current date of this **Calendar** object with the specified date fo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-compareDays(date: Date): int--><!--Device-Calendar-compareDays(date: Date): int-End-->
@@ -107,7 +95,7 @@ Compares the current date of this **Calendar** object with the specified date fo
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -134,10 +122,6 @@ Obtains the values of the calendar attributes in this **Calendar** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-get(field: string): int--><!--Device-Calendar-get(field: string): int-End-->
@@ -156,7 +140,7 @@ Obtains the values of the calendar attributes in this **Calendar** object.
 | --- | --- |
 | int | Value of the calendar attribute. For example, if the year of the internal date of the current **Calendar** object is 1990, **get('year')** returns **1990**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -176,10 +160,6 @@ Obtains calendar display name in the specified language.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-getDisplayName(locale: string): string--><!--Device-Calendar-getDisplayName(locale: string): string-End-->
@@ -198,7 +178,7 @@ Obtains calendar display name in the specified language.
 | --- | --- |
 | string | Calendar display name in the specified language. For example, **buddhist** is displayed as **Buddhist Calendar** if the locale is **en-US**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -217,10 +197,6 @@ Obtains the first day of a week for this **Calendar** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-getFirstDayOfWeek(): int--><!--Device-Calendar-getFirstDayOfWeek(): int-End-->
@@ -233,7 +209,7 @@ Obtains the first day of a week for this **Calendar** object.
 | --- | --- |
 | int | First day of a week. The value **1** indicates Sunday, and the value **7** indicates Saturday. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -252,10 +228,6 @@ Obtains the minimum number of days in the first week for this **Calendar** objec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-getMinimalDaysInFirstWeek(): int--><!--Device-Calendar-getMinimalDaysInFirstWeek(): int-End-->
@@ -268,7 +240,7 @@ Obtains the minimum number of days in the first week for this **Calendar** objec
 | --- | --- |
 | int | Minimum number of days in the first week of a year. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -287,10 +259,6 @@ Obtains the timestamp of this **Calendar** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-getTimeInMillis(): long--><!--Device-Calendar-getTimeInMillis(): long-End-->
@@ -303,7 +271,7 @@ Obtains the timestamp of this **Calendar** object.
 | --- | --- |
 | long | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unix epoch. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -323,10 +291,6 @@ Obtains the time zone ID of this **Calendar** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-getTimeZone(): string--><!--Device-Calendar-getTimeZone(): string-End-->
@@ -339,7 +303,7 @@ Obtains the time zone ID of this **Calendar** object.
 | --- | --- |
 | string | Time zone ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -359,10 +323,6 @@ Checks whether a given date is a weekend in this **Calendar** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-isWeekend(date?: Date): boolean--><!--Device-Calendar-isWeekend(date?: Date): boolean-End-->
@@ -381,7 +341,7 @@ Checks whether a given date is a weekend in this **Calendar** object.
 | --- | --- |
 | boolean | The value **true** indicates that the specified date is a weekend, and the value **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -403,10 +363,6 @@ Sets the year, month, day, hour, minute, and second for this **Calendar** object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): void--><!--Device-Calendar-set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): void-End-->
@@ -424,7 +380,7 @@ Sets the year, month, day, hour, minute, and second for this **Calendar** object
 | minute | int | No | Minute to set. The default value is the current system time. |
 | second | int | No | Second to set. The default value is the current system time. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -443,10 +399,6 @@ Sets the first day of a week for this **Calendar** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-setFirstDayOfWeek(value: int): void--><!--Device-Calendar-setFirstDayOfWeek(value: int): void-End-->
@@ -459,7 +411,7 @@ Sets the first day of a week for this **Calendar** object.
 | --- | --- | --- | --- |
 | value | int | Yes | Start day of a week. The value **1** indicates Sunday, and the value **7** indicates Saturday. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -479,10 +431,6 @@ Sets the minimum number of days in the first week for this **Calendar** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-setMinimalDaysInFirstWeek(value: int): void--><!--Device-Calendar-setMinimalDaysInFirstWeek(value: int): void-End-->
@@ -495,7 +443,7 @@ Sets the minimum number of days in the first week for this **Calendar** object.
 | --- | --- | --- | --- |
 | value | int | Yes | Minimum number of days in the first week of a year. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -515,10 +463,6 @@ Sets the date and time for a **Calendar** object based on the input **Date** obj
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-setTime(date: Date): void--><!--Device-Calendar-setTime(date: Date): void-End-->
@@ -531,7 +475,7 @@ Sets the date and time for a **Calendar** object based on the input **Date** obj
 | --- | --- | --- | --- |
 | date | Date | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -551,10 +495,6 @@ Sets the date and time for a **Calendar** object based on the input timestamp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-setTime(time: double): void--><!--Device-Calendar-setTime(time: double): void-End-->
@@ -567,7 +507,7 @@ Sets the date and time for a **Calendar** object based on the input timestamp.
 | --- | --- | --- | --- |
 | time | double | Yes | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unix epoch. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -586,10 +526,6 @@ Sets the time zone of this **Calendar** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Calendar-setTimeZone(timezone: string): void--><!--Device-Calendar-setTimeZone(timezone: string): void-End-->
@@ -602,7 +538,7 @@ Sets the time zone of this **Calendar** object.
 | --- | --- | --- | --- |
 | timezone | string | Yes | Valid time zone ID, for example, Asia/Shanghai. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

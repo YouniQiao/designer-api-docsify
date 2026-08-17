@@ -4,10 +4,6 @@ Provides APIs for managing the **Highlights** album, which is an automatically g
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-class HighlightAlbum--><!--Device-photoAccessHelper-class HighlightAlbum-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -30,10 +26,6 @@ Constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HighlightAlbum-constructor(album: Album)--><!--Device-HighlightAlbum-constructor(album: Album)-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -54,7 +46,7 @@ Constructor.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -83,10 +75,6 @@ static deleteHighlightAlbums(context: Context, albums: Array<Album>): Promise<in
 Deletes highlight albums.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -118,7 +106,7 @@ Deletes highlight albums.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -157,10 +145,6 @@ Obtains specific information about the **Highlights** album.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-HighlightAlbum-getHighlightAlbumInfo(type: HighlightAlbumInfoType): Promise<string>--><!--Device-HighlightAlbum-getHighlightAlbumInfo(type: HighlightAlbumInfoType): Promise<string>-End-->
@@ -190,7 +174,7 @@ Obtains specific information about the **Highlights** album.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -229,10 +213,6 @@ Obtains the ArrayBuffer for caching the specified asset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-HighlightAlbum-getHighlightResource(resourceUri: string): Promise<ArrayBuffer>--><!--Device-HighlightAlbum-getHighlightResource(resourceUri: string): Promise<ArrayBuffer>-End-->
@@ -262,7 +242,7 @@ Obtains the ArrayBuffer for caching the specified asset.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -299,10 +279,6 @@ Sets the user behavior data for the **Highlights** album.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-HighlightAlbum-setHighlightUserActionData(type: HighlightUserActionType, actionData: int): Promise<void>--><!--Device-HighlightAlbum-setHighlightUserActionData(type: HighlightUserActionType, actionData: int): Promise<void>-End-->
@@ -333,7 +309,7 @@ Sets the user behavior data for the **Highlights** album.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -368,10 +344,6 @@ setSubTitle(subTitle: string): Promise<void>
 Sets the subtitle for this **Highlights** album instance. The subtitle must meet the following requirements: - The total length of the subtitle must be between 0 and 255 characters. - It must not contain any invalid characters, which are: . \ / : * ? " ' ` &lt; &gt; | { } [ ] - The characters are case insensitive.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 

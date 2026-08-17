@@ -4,10 +4,6 @@ Indicates fusion fence request params.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface FusionFenceRequestParams--><!--Device-geoLocationManager-export interface FusionFenceRequestParams-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -32,10 +28,6 @@ Indicates CELL fence array.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceRequestParams-cellFences?: Array<CellFence>--><!--Device-FusionFenceRequestParams-cellFences?: Array<CellFence>-End-->
@@ -55,10 +47,6 @@ Indicates expiration of the circular fence.
 **Type:** double
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Indicates the callback for reporting the fence transition status.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceRequestParams-fenceTransitionCallback: Callback<FusionFenceTransition>--><!--Device-FusionFenceRequestParams-fenceTransitionCallback: Callback<FusionFenceTransition>-End-->
@@ -98,15 +82,11 @@ Indicates the callback for reporting the fence transition status.
 fenceType: int
 ```
 
-Indicates fusion fence type. This field is in bitmap format. Multiple types of fences can be transferred. The definition of each bit is as follows: [FusionFenceType](arkts-location-geolocationmanager-fusionfencetype-e-sys.md#FusionFenceType-(System-API)). The value range is all integers.
+Indicates fusion fence type. This field is in bitmap format. Multiple types of fences can be transferred. The definition of each bit is as follows: [FusionFenceType](arkts-location-geolocationmanager-fusionfencetype-e-sys.md#fusionfencetype-system-api). The value range is all integers.
 
 **Type:** int
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Indicates GNSS fence array.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceRequestParams-gnssFences?: Array<GnssFence>--><!--Device-FusionFenceRequestParams-gnssFences?: Array<GnssFence>-End-->
@@ -151,10 +127,6 @@ Identifier of the fusion fence. The string format should be a valid unique ident
 **Type:** string
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +148,6 @@ Indicates time for which a device is dwelling in the geofence, in milliseconds. 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceRequestParams-loiterTimeMs: int--><!--Device-FusionFenceRequestParams-loiterTimeMs: int-End-->
@@ -194,15 +162,11 @@ Indicates time for which a device is dwelling in the geofence, in milliseconds. 
 monitorTransitionEvents: int
 ```
 
-Indicates geofence transition status monitored. This field is in bitmap format. The definition of each bit is as follows [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md#GeofenceTransitionEvent). The value range is all integers.
+Indicates geofence transition status monitored. This field is in bitmap format. The definition of each bit is as follows [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md#geofencetransitionevent). The value range is all integers.
 
 **Type:** int
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,10 +188,6 @@ Indicates the location of POI.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceRequestParams-poiLocation: Point--><!--Device-FusionFenceRequestParams-poiLocation: Point-End-->
@@ -247,10 +207,6 @@ Indicates the type of POI.
 **Type:** string
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,10 +228,6 @@ Indicates fusion fence scene.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceRequestParams-scene: FusionFenceScene--><!--Device-FusionFenceRequestParams-scene: FusionFenceScene-End-->
@@ -295,10 +247,6 @@ Indicates Wi-Fi fence array.
 **Type:** Array&lt;[WifiFence](arkts-location-geolocationmanager-wififence-i-sys.md)&gt;
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

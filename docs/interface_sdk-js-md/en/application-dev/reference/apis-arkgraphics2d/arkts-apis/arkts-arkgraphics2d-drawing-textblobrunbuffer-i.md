@@ -4,10 +4,6 @@ Describes a series of consecutive glyphs with the same attributes in a text blob
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-interface TextBlobRunBuffer--><!--Device-drawing-interface TextBlobRunBuffer-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Index of the glyph. The value is an integer. If a floating point number is passe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextBlobRunBuffer-glyph: int--><!--Device-TextBlobRunBuffer-glyph: int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -50,10 +42,6 @@ X coordinate of the start point of the text blob. The value is a floating point 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextBlobRunBuffer-positionX: double--><!--Device-TextBlobRunBuffer-positionX: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -69,10 +57,6 @@ Y coordinate of the start point of the text blob. The value is a floating point 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextBlobRunBuffer-positionY: double--><!--Device-TextBlobRunBuffer-positionY: double-End-->
 

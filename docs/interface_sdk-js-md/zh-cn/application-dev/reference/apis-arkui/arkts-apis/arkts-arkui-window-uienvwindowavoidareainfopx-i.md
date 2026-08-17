@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-window-interface UIEnvWindowAvoidAreaInfoPX--><!--Device-window-interface UIEnvWindowAvoidAreaInfoPX-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -18,15 +14,11 @@
 cutout: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_CUTOUT类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_CUTOUT类型的避让区域，单位为px。
 
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoPX-cutout: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-cutout: AvoidArea-End-->
 
@@ -38,15 +30,11 @@ cutout: AvoidArea
 keyboard: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_KEYBOARD类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_KEYBOARD类型的避让区域，单位为px。
 
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoPX-keyboard: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-keyboard: AvoidArea-End-->
 
@@ -58,15 +46,11 @@ keyboard: AvoidArea
 navigationIndicator: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_NAVIGATION_INDICATOR类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_NAVIGATION_INDICATOR类型的避让区域，单位为px。
 
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoPX-navigationIndicator: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-navigationIndicator: AvoidArea-End-->
 
@@ -78,15 +62,11 @@ navigationIndicator: AvoidArea
 statusBar: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_SYSTEM类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM类型的避让区域，单位为px。
 
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoPX-statusBar: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-statusBar: AvoidArea-End-->
 

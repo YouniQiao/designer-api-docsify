@@ -4,10 +4,6 @@ Each component allows for one light source.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface LightSource--><!--Device-unnamed-declare interface LightSource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Light source color. Default value: **Color.White**
 **Type:** ResourceColor
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Intensity of the light source. The recommended value range is 0-1. When the inte
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LightSource-intensity: number--><!--Device-LightSource-intensity: number-End-->
@@ -73,10 +61,6 @@ X-coordinate of the light source relative to the current component.
 **Type:** Dimension
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ Y-coordinate of the light source relative to the current component.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LightSource-positionY: Dimension--><!--Device-LightSource-positionY: Dimension-End-->
@@ -121,10 +101,6 @@ Height of the light source. The higher the light source, the broader the light d
 **Type:** Dimension
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

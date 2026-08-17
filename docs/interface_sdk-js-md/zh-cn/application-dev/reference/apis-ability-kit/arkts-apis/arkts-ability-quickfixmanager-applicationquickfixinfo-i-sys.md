@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-quickFixManager-export interface ApplicationQuickFixInfo--><!--Device-quickFixManager-export interface ApplicationQuickFixInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
@@ -25,10 +21,6 @@ readonly bundleName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly bundleName: string--><!--Device-ApplicationQuickFixInfo-readonly bundleName: string-End-->
 
@@ -48,10 +40,6 @@ readonly bundleVersionCode: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ApplicationQuickFixInfo-readonly bundleVersionCode: long--><!--Device-ApplicationQuickFixInfo-readonly bundleVersionCode: long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
@@ -69,10 +57,6 @@ readonly bundleVersionName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly bundleVersionName: string--><!--Device-ApplicationQuickFixInfo-readonly bundleVersionName: string-End-->
 
@@ -92,10 +76,6 @@ hap级别的快速修复信息。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ApplicationQuickFixInfo-readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>--><!--Device-ApplicationQuickFixInfo-readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
@@ -114,10 +94,6 @@ readonly quickFixVersionCode: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ApplicationQuickFixInfo-readonly quickFixVersionCode: long--><!--Device-ApplicationQuickFixInfo-readonly quickFixVersionCode: long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
@@ -135,10 +111,6 @@ readonly quickFixVersionName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ApplicationQuickFixInfo-readonly quickFixVersionName: string--><!--Device-ApplicationQuickFixInfo-readonly quickFixVersionName: string-End-->
 

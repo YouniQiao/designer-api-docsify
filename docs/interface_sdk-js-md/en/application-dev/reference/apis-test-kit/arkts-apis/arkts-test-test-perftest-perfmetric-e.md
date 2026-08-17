@@ -4,10 +4,6 @@ APP_START_COMPLETE_TIME**): > - Application startup latency data is subject to t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum PerfMetric--><!--Device-unnamed-declare enum PerfMetric-End-->
 
 **System capability:** SystemCapability.Test.PerfTest
@@ -21,10 +17,6 @@ DURATION = 0
 Execution duration of a code segment, in milliseconds.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ CPU load of the application process, in percentage.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfMetric-CPU_LOAD = 1--><!--Device-PerfMetric-CPU_LOAD = 1-End-->
@@ -61,10 +49,6 @@ CPU_USAGE = 2
 CPU usage of the application process, in percentage.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -82,10 +66,6 @@ Physical memory (including the shared library) occupied by the application proce
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfMetric-MEMORY_RSS = 3--><!--Device-PerfMetric-MEMORY_RSS = 3-End-->
@@ -101,10 +81,6 @@ MEMORY_PSS = 4
 Physical memory (the proportionally allocated memory occupied by shared libraries) occupied by the application process when a code segment is executed, in KB.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -122,10 +98,6 @@ Response latency of application startup, in milliseconds. Marks: 1) Delay calcul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5--><!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5-End-->
@@ -141,10 +113,6 @@ APP_START_COMPLETE_TIME = 6
 Completion latency of application startup, in milliseconds. Marks: 1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported, and the end time of the completion delay is the time when the first frame is displayed after the application is started. It is different from the end-to-end user-perceived delay. 2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop; clicking the application on the Multi-Task Center; clicking the application icon on the Dock; clicking the application icon on the application center. 3) This metric does not support the test of current application. 4) During the test, only the data of the first start of specified application can be collected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -162,10 +130,6 @@ Completion latency of page switching in an application, in milliseconds. Marks: 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfMetric-PAGE_SWITCH_COMPLETE_TIME = 7--><!--Device-PerfMetric-PAGE_SWITCH_COMPLETE_TIME = 7-End-->
@@ -181,10 +145,6 @@ LIST_SWIPE_FPS = 8
 List scrolling frame rate in an application, in frames per second (fps). Mark: 1) List sliding frame rate: refers to the frequency at which the screen can be refreshed when the list is sliding. Only the sliding frame rate of the List, grid, scroll, and waterflow scroll components of ArkUI subsystems can be collected. 2) During the test, only the data of the first sliding of the component in specified application can be collected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

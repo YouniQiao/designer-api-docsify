@@ -10,10 +10,6 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-taskpool-function executePeriodically(period: number, task: Task, priority?: Priority): void--><!--Device-taskpool-function executePeriodically(period: number, task: Task, priority?: Priority): void-End-->
@@ -38,7 +34,7 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 | [10200050](../errorcode-utils.md#10200050-并发任务已执行无法周期执行) | The concurrent task has been executed and cannot be executed periodically. |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
-## 示例
+**示例**
 
 ```TypeScript
 @Concurrent
@@ -90,10 +86,6 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 <!--Device-taskpool-function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void--><!--Device-taskpool-function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void-End-->
@@ -118,7 +110,7 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 | [10200050](../errorcode-utils.md#10200050-并发任务已执行无法周期执行) | The concurrent task has been executed and cannot be executed periodically. |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
-## 示例
+**示例**
 
 ```TypeScript
 @Concurrent

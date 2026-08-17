@@ -1,14 +1,10 @@
 # AxisEvent
 
-Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
+Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent).
 
-**Inheritance/Implementation:** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
+**Inheritance/Implementation:** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface AxisEvent--><!--Device-unnamed-declare interface AxisEvent-End-->
 
@@ -23,10 +19,6 @@ getCurrentLocalPosition?(): Coordinate2D
 Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Obtains the horizontal axis value of this axis event.
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -79,10 +67,6 @@ getPinchAxisScaleValue(): number
 Obtains the two-finger pinch zoom ratio from the axis event.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,10 +92,6 @@ Obtains the vertical axis value of this axis event.
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -135,10 +115,6 @@ hasAxis(axisType: AxisType): boolean
 Checks whether this axis event contains the specified axis type.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,10 +148,6 @@ Action type of the axis event.
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -195,10 +167,6 @@ X coordinate of the cursor in the coordinate system of the current application s
 **Type:** number
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,10 +188,6 @@ Y coordinate of the cursor in the coordinate system of the current application s
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -238,15 +202,11 @@ Y coordinate of the cursor in the coordinate system of the current application s
 eventHandleId?: number
 ```
 
-Unique identifier for event processing. Value range: [0, +∞) **NOTE：**This field is used when dispatching events using the [postInputEventWithStrategy](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postInputEventWithStrategy) API. Each time an event is dispatched, this field is increased by 100000. Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+Unique identifier for event processing. Value range: [0, +∞) **NOTE：**This field is used when dispatching events using the [postInputEventWithStrategy](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000. Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -268,10 +228,6 @@ X coordinate of the cursor in the [global coordinate system](../../../windowmana
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -291,10 +247,6 @@ Y coordinate of the cursor in the [global coordinate system](../../../windowmana
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -316,10 +268,6 @@ Enables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -339,10 +287,6 @@ Scroll step length for the mouse wheel. Note: Only the mouse wheel is supported.
 **Type:** number
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -364,10 +308,6 @@ X coordinate of the cursor in the coordinate system of the current application w
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -387,10 +327,6 @@ Y coordinate of the cursor in the coordinate system of the current application w
 **Type:** number
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -412,10 +348,6 @@ X coordinate of the cursor in the [component coordinate system](../../../ui/arku
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -435,10 +367,6 @@ Y coordinate of the cursor in the [component coordinate system](../../../ui/arku
 **Type:** number
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

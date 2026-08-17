@@ -17,10 +17,6 @@ Obtains the information about the running process based on the bundle type. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
 <!--Device-appManager-function getRunningProcessInformationByBundleType(    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInformationByBundleType(    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>-End-->
@@ -50,7 +46,7 @@ Obtains the information about the running process based on the bundle type. This
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager, bundleManager } from '@kit.AbilityKit';

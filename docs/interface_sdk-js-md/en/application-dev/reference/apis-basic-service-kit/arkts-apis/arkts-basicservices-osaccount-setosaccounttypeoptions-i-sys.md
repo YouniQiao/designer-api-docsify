@@ -4,10 +4,6 @@ Defines the options for setting the OS account type.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface SetOsAccountTypeOptions--><!--Device-osAccount-interface SetOsAccountTypeOptions-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -31,10 +27,6 @@ Token obtained from the authentication management API. The value is left empty b
 **Type:** Uint8Array
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-SetOsAccountTypeOptions-token?: Uint8Array--><!--Device-SetOsAccountTypeOptions-token?: Uint8Array-End-->
 

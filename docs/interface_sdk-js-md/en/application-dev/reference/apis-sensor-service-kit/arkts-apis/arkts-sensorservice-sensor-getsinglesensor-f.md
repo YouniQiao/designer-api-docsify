@@ -16,10 +16,6 @@ Obtains information about the sensor of a specific type. This API uses an asynch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void--><!--Device-sensor-function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -39,7 +35,7 @@ Obtains information about the sensor of a specific type. This API uses an asynch
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 | [14500102](../errorcode-sensor.md#14500102-sensor-not-supported-by-the-device) | The sensor is not supported by the device.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -79,10 +75,6 @@ Obtains information about the sensor of a specific type. This API uses a promise
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function getSingleSensor(type: SensorId): Promise<Sensor>--><!--Device-sensor-function getSingleSensor(type: SensorId): Promise<Sensor>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -107,7 +99,7 @@ Obtains information about the sensor of a specific type. This API uses a promise
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 | [14500102](../errorcode-sensor.md#14500102-sensor-not-supported-by-the-device) | The sensor is not supported by the device.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

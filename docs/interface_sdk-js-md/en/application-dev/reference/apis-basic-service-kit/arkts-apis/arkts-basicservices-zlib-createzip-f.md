@@ -16,10 +16,6 @@ Creates this **Zip** instance. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-zlib-function createZip(): Promise<Zip>--><!--Device-zlib-function createZip(): Promise<Zip>-End-->
@@ -32,7 +28,7 @@ Creates this **Zip** instance. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[Zip](arkts-basicservices-zlib-zip-i.md)&gt; | Promise used to return the **Zip** instance created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';

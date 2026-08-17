@@ -10,10 +10,6 @@ function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-errorManager-function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void--><!--Device-errorManager-function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void-End-->
@@ -35,7 +31,7 @@ function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 调用者无效。 |
 | [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';

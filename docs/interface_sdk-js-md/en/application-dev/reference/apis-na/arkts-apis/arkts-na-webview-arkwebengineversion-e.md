@@ -4,9 +4,7 @@ For details about the ArkWeb kernel version, see [Adaptation Guide for the M114 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-enum ArkWebEngineVersion--><!--Device-webview-enum ArkWebEngineVersion-End-->
 
@@ -22,9 +20,7 @@ Default system kernel. For OpenHarmony 6.0, the default kernel is M132.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ArkWebEngineVersion-SYSTEM_DEFAULT = 0--><!--Device-ArkWebEngineVersion-SYSTEM_DEFAULT = 0-End-->
 
@@ -40,9 +36,7 @@ Legacy kernel of OpenHarmony 6.0. You can select this legacy kernel. If it does 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ArkWebEngineVersion-M114 = 1--><!--Device-ArkWebEngineVersion-M114 = 1-End-->
 
@@ -58,9 +52,7 @@ Evergreen kernel of OpenHarmony 6.0, which is M132 by default. If it does not ex
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ArkWebEngineVersion-M132 = 2--><!--Device-ArkWebEngineVersion-M132 = 2-End-->
 
@@ -76,9 +68,7 @@ ArkWeb M144 version.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-ArkWebEngineVersion-M144 = 3--><!--Device-ArkWebEngineVersion-M144 = 3-End-->
 
@@ -94,9 +84,7 @@ Evergreen kernel, which is the latest kernel of the system. You can choose to us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ArkWebEngineVersion-ARKWEB_EVERGREEN = 99999--><!--Device-ArkWebEngineVersion-ARKWEB_EVERGREEN = 99999-End-->
 

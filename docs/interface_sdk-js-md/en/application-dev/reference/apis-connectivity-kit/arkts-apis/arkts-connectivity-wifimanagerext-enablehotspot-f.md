@@ -16,8 +16,6 @@ Enable Wi-Fi hotspot function. This method is asynchronous. After the Wi-Fi hots
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
@@ -34,7 +32,7 @@ Enable Wi-Fi hotspot function. This method is asynchronous. After the Wi-Fi hots
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManagerExt } from '@kit.ConnectivityKit';

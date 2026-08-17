@@ -4,10 +4,6 @@ Describes the filter conditions for track selection.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-media-interface TrackSelectionFilter--><!--Device-media-interface TrackSelectionFilter-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
@@ -23,10 +19,6 @@ Maximum allowed audio bitrate. The value should be an integer.Value constraint:T
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ Maximum allowed audio channel count. The value should be an integer.Value constr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TrackSelectionFilter-maxAudioChannels?: int--><!--Device-TrackSelectionFilter-maxAudioChannels?: int-End-->
@@ -67,10 +55,6 @@ Maximum allowed video bitrate. The value should be an integer.Value constraint:T
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,10 +74,6 @@ Maximum allowed video frame rate. The value should be an integer.Value constrain
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TrackSelectionFilter-maxVideoFrameRate?: int--><!--Device-TrackSelectionFilter-maxVideoFrameRate?: int-End-->
@@ -111,10 +91,6 @@ Maximum allowed video resolution. <br>Default value:If not specified, the maximu
 **类型：** [VideoSize](arkts-media-media-videosize-i.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,10 +110,6 @@ Minimum allowed audio bitrate. The value should be an integer.Value constraint:T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TrackSelectionFilter-minAudioBitrate?: int--><!--Device-TrackSelectionFilter-minAudioBitrate?: int-End-->
@@ -155,10 +127,6 @@ Minimum allowed video bitrate. The value should be an integer.Value constraint:T
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -178,10 +146,6 @@ Minimum allowed video frame rate. The value should be an integer.Value constrain
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TrackSelectionFilter-minVideoFrameRate?: int--><!--Device-TrackSelectionFilter-minVideoFrameRate?: int-End-->
@@ -199,10 +163,6 @@ Minimum allowed video resolution. <br>Default value:If not specified, the minimu
 **类型：** [VideoSize](arkts-media-media-videosize-i.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -222,10 +182,6 @@ The preferred languages for audio tracks. Multiple languages are arranged in the
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TrackSelectionFilter-preferredAudioLanguages?: Array<string>--><!--Device-TrackSelectionFilter-preferredAudioLanguages?: Array<string>-End-->
@@ -243,10 +199,6 @@ Indicates the preferred encoding MIME type of the audio track. Multiple MIMEs ar
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,10 +218,6 @@ Preferred language set for subtitles. Multiple languages are arranged in the ord
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TrackSelectionFilter-preferredSubtitleLanguages?: Array<string>--><!--Device-TrackSelectionFilter-preferredSubtitleLanguages?: Array<string>-End-->
@@ -287,10 +235,6 @@ The preferred sample MIME types for video tracks in order of preference, Multipl
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -10,10 +10,6 @@ function unregisterRemoteAuthCallback(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -32,7 +28,7 @@ function unregisterRemoteAuthCallback(): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

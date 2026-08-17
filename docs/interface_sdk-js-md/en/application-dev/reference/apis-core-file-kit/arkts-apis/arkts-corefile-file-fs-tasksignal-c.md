@@ -4,10 +4,6 @@ Provides APIs for interrupting a copy task.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export class TaskSignal--><!--Device-unnamed-export class TaskSignal-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -42,10 +38,6 @@ Cancels a copy task.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-TaskSignal-cancel(): void--><!--Device-TaskSignal-cancel(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -58,7 +50,7 @@ Cancels a copy task.
 | 13900010 | Try again |
 | 13900043 | No task can be canceled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -110,8 +102,6 @@ onCancel(): Promise<string>
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
 **Deprecated since:** 24
 
 <!--Device-TaskSignal-onCancel(): Promise<string>--><!--Device-TaskSignal-onCancel(): Promise<string>-End-->
@@ -132,7 +122,7 @@ onCancel(): Promise<string>
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs } from '@kit.CoreFileKit';

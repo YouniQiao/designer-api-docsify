@@ -1,4 +1,4 @@
-# WithEnvInterface
+# WithEnvInterface(Define the WithEnv component that allows setting environment properties for child components.)
 
 ```TypeScript
 export declare type WithEnvInterface = () => WithEnvAttribute
@@ -7,10 +7,6 @@ export declare type WithEnvInterface = () => WithEnvAttribute
 Define the WithEnv component's type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

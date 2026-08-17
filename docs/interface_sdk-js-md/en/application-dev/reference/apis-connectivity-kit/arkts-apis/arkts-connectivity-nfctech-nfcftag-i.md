@@ -6,10 +6,6 @@ Provides methods for creating an NFC-F tag, obtaining tag information, and contr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NfcFTag--><!--Device-unnamed-export interface NfcFTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -24,10 +20,6 @@ Obtains the PMm (consisting of the IC code and manufacturer parameters) from thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcFTag-getPmm(): int[]--><!--Device-NfcFTag-getPmm(): int[]-End-->
@@ -40,7 +32,7 @@ Obtains the PMm (consisting of the IC code and manufacturer parameters) from thi
 | --- | --- |
 | int[] | Returns the PMm. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -60,10 +52,6 @@ Obtains the system code from this {@code NfcFTag} instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcFTag-getSystemCode(): int[]--><!--Device-NfcFTag-getSystemCode(): int[]-End-->
@@ -76,7 +64,7 @@ Obtains the system code from this {@code NfcFTag} instance.
 | --- | --- |
 | int[] | Returns the system code. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';

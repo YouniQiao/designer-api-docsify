@@ -4,10 +4,6 @@ ACB connection status parameter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-remoteDevice-interface AcbStateParam--><!--Device-remoteDevice-interface AcbStateParam-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -30,10 +26,6 @@ Indicates the device address. The length must be 17, The value consists of hexad
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AcbStateParam-address: string--><!--Device-AcbStateParam-address: string-End-->
@@ -51,10 +43,6 @@ ACB connection status.
 **Type:** AcbState
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

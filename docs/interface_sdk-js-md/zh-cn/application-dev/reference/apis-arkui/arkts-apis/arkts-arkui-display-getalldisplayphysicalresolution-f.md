@@ -10,10 +10,6 @@ function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolut
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-display-function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolution>>--><!--Device-display-function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolution>>-End-->
@@ -32,7 +28,7 @@ function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolut
 | --- | --- |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

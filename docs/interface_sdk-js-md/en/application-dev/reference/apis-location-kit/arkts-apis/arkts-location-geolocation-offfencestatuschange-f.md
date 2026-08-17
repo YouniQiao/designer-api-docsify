@@ -16,8 +16,6 @@ Remove a geofence and unsubscribe geo fence status changed
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** gnssFenceStatusChange
@@ -36,7 +34,7 @@ Remove a geofence and unsubscribe geo fence status changed
 | request | GeofenceRequest | Yes | Indicates the Geo-fence configuration parameters. |
 | want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | Yes | Indicates which ability to start when the geofence event is triggered. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

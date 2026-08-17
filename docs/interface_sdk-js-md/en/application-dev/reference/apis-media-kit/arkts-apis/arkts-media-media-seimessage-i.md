@@ -4,10 +4,6 @@ Describes the information of an SEI message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface SeiMessage--><!--Device-media-interface SeiMessage-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -30,10 +26,6 @@ Payload data of SEI message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SeiMessage-payload: ArrayBuffer--><!--Device-SeiMessage-payload: ArrayBuffer-End-->
@@ -51,10 +43,6 @@ Payload type of SEI message.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

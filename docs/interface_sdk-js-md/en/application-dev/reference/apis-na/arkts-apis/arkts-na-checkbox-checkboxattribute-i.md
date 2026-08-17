@@ -6,9 +6,7 @@ Defines the Checkbox component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface CheckboxAttribute--><!--Device-unnamed-export declare interface CheckboxAttribute-End-->
 
@@ -23,9 +21,7 @@ attributeModifier(
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CheckboxAttribute-attributeModifier(        modifier: AttributeModifier<CheckboxAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-CheckboxAttribute-attributeModifier(        modifier: AttributeModifier<CheckboxAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -49,9 +45,7 @@ contentModifier(modifier: ContentModifier<CheckBoxConfiguration> | undefined): t
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CheckboxAttribute-contentModifier(modifier: ContentModifier<CheckBoxConfiguration> | undefined): this--><!--Device-CheckboxAttribute-contentModifier(modifier: ContentModifier<CheckBoxConfiguration> | undefined): this-End-->
 
@@ -75,9 +69,7 @@ mark(value: MarkStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CheckboxAttribute-mark(value: MarkStyle | undefined): this--><!--Device-CheckboxAttribute-mark(value: MarkStyle | undefined): this-End-->
 
@@ -101,9 +93,7 @@ onChange(callback: OnCheckboxChangeCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CheckboxAttribute-onChange(callback: OnCheckboxChangeCallback | undefined): this--><!--Device-CheckboxAttribute-onChange(callback: OnCheckboxChangeCallback | undefined): this-End-->
 
@@ -127,9 +117,7 @@ select(isSelected: boolean | undefined | Bindable<boolean>): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CheckboxAttribute-select(isSelected: boolean | undefined | Bindable<boolean>): this--><!--Device-CheckboxAttribute-select(isSelected: boolean | undefined | Bindable<boolean>): this-End-->
 
@@ -153,9 +141,7 @@ selectedColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CheckboxAttribute-selectedColor(value: ResourceColor | undefined): this--><!--Device-CheckboxAttribute-selectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -179,9 +165,7 @@ setCheckboxOptions(options?: CheckboxOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CheckboxAttribute-setCheckboxOptions(options?: CheckboxOptions): this--><!--Device-CheckboxAttribute-setCheckboxOptions(options?: CheckboxOptions): this-End-->
 
@@ -205,9 +189,7 @@ shape(value: CheckBoxShape | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CheckboxAttribute-shape(value: CheckBoxShape | undefined): this--><!--Device-CheckboxAttribute-shape(value: CheckBoxShape | undefined): this-End-->
 
@@ -231,9 +213,7 @@ unselectedColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CheckboxAttribute-unselectedColor(value: ResourceColor | undefined): this--><!--Device-CheckboxAttribute-unselectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -259,9 +239,7 @@ Set checkbox options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

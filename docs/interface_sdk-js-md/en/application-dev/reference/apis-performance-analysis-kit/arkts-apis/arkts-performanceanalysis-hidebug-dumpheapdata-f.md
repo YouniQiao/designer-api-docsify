@@ -16,11 +16,9 @@ Exports the VM heap data and generates a filename.heapsnapshot file. The input p
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpJsHeapData)
+**Substitutes:** [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata)
 
 <!--Device-hidebug-function dumpHeapData(filename: string): void--><!--Device-hidebug-function dumpHeapData(filename: string): void-End-->
 
@@ -32,7 +30,7 @@ Exports the VM heap data and generates a filename.heapsnapshot file. The input p
 | --- | --- | --- | --- |
 | filename | string | Yes | User-defined heap file name. The .heapsnapshot file is generated in the **files** directory of the application based on the specified file name. The maximum length of a string is 128. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

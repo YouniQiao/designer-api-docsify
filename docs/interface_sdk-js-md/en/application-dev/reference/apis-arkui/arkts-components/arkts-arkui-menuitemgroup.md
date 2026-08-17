@@ -12,10 +12,6 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MenuItemGroupInterface-(value?: MenuItemGroupOptions): MenuItemGroupAttribute--><!--Device-MenuItemGroupInterface-(value?: MenuItemGroupOptions): MenuItemGroupAttribute-End-->

@@ -16,10 +16,6 @@ Indicates that there is no uplink or downlink data. &lt;p&gt;It is a return valu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-data-function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void--><!--Device-data-function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void-End-->
@@ -38,7 +34,7 @@ Indicates that there is no uplink or downlink data. &lt;p&gt;It is a return valu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';
@@ -64,10 +60,6 @@ Indicates that there is no uplink or downlink data. &lt;p&gt;It is a return valu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-data-function getCellularDataFlowType(): Promise<DataFlowType>--><!--Device-data-function getCellularDataFlowType(): Promise<DataFlowType>-End-->
@@ -86,7 +78,7 @@ Indicates that there is no uplink or downlink data. &lt;p&gt;It is a return valu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

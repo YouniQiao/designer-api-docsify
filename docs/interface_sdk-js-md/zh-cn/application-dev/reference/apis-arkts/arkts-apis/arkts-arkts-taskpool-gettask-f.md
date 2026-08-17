@@ -10,10 +10,6 @@ function getTask(taskId: number, taskName?: string): Task | undefined
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-taskpool-function getTask(taskId: number, taskName?: string): Task | undefined--><!--Device-taskpool-function getTask(taskId: number, taskName?: string): Task | undefined-End-->
@@ -33,7 +29,7 @@ function getTask(taskId: number, taskName?: string): Task | undefined
 | --- | --- |
 | Task | Task实例；当情况异常时，返回undefined，具体可见上文说明。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-inputMethod-export interface InputWindowInfo--><!--Device-inputMethod-export interface InputWindowInfo-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -23,10 +19,6 @@ displayId?: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ height: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-InputWindowInfo-height: long--><!--Device-InputWindowInfo-height: long-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -65,10 +53,6 @@ left: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-InputWindowInfo-left: int--><!--Device-InputWindowInfo-left: int-End-->
 
@@ -86,10 +70,6 @@ name: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-InputWindowInfo-name: string--><!--Device-InputWindowInfo-name: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -106,10 +86,6 @@ top: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-InputWindowInfo-top: int--><!--Device-InputWindowInfo-top: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -125,10 +101,6 @@ width: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-InputWindowInfo-width: long--><!--Device-InputWindowInfo-width: long-End-->
 

@@ -4,10 +4,6 @@ Enumerates the window blur styles.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-enum BlurStyle--><!--Device-window-enum BlurStyle-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -23,10 +19,6 @@ OFF = 0
 Blur disabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlurStyle-OFF = 0--><!--Device-BlurStyle-OFF = 0-End-->
 
@@ -44,10 +36,6 @@ Thin blur.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlurStyle-THIN = 1--><!--Device-BlurStyle-THIN = 1-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -64,10 +52,6 @@ Regular blur.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BlurStyle-REGULAR = 2--><!--Device-BlurStyle-REGULAR = 2-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -83,10 +67,6 @@ THICK = 3
 Thick blur.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BlurStyle-THICK = 3--><!--Device-BlurStyle-THICK = 3-End-->
 

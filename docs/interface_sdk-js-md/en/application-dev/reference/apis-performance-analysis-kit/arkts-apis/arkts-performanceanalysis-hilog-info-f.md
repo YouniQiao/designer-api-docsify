@@ -16,10 +16,6 @@ Prints INFO logs.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-hilog-function info(domain: number, tag: string, format: string, ...args: any[]): void--><!--Device-hilog-function info(domain: number, tag: string, format: string, ...args: any[]): void-End-->
@@ -35,7 +31,7 @@ Prints INFO logs.
 | format | string | Yes | Format string used to output logs in a specified format. It can contain several elements , where the parameter type and privacy identifier are mandatory.<br>Parameters labeled **{public}** are public data and are displayed in plaintext; parameters labeled **{private}** (default value) are private data and are filtered by **&lt;private&gt;**. |
 | args | any[] | Yes | Variable-length parameter list corresponding to the format string. The number and type of parameters must map to the identifier in the format string. |
 
-## Examples
+**Examples**
 
 This example is used to output an INFO log with the format string being "%{public}s World %{private}d". The variable  is a plaintext string, and the variable  is a private integer.
 
@@ -59,10 +55,6 @@ function info(domain: int, tag: string, format: string, ...args: RecordData[]): 
 Prints INFO logs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

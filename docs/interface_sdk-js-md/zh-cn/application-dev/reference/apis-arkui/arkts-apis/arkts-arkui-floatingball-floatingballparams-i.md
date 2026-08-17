@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-floatingBall-interface FloatingBallParams--><!--Device-floatingBall-interface FloatingBallParams-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -24,10 +20,6 @@ backgroundColor?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-FloatingBallParams-backgroundColor?: string--><!--Device-FloatingBallParams-backgroundColor?: string-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -43,10 +35,6 @@ content?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FloatingBallParams-content?: string--><!--Device-FloatingBallParams-content?: string-End-->
 
@@ -66,10 +54,6 @@ contentColor?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatingBallParams-contentColor?: string--><!--Device-FloatingBallParams-contentColor?: string-End-->
@@ -82,15 +66,11 @@ contentColor?: string
 icon?: image.PixelMap
 ```
 
-闪控球图标，图标像素的总字节数不超过192KB（图标像素的总字节数通过 [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getPixelBytesNumber)获取）。 建议图标像素宽高为128px*128px。实际显示效果依赖于设备能力和闪控球UI样式。
+闪控球图标，图标像素的总字节数不超过192KB（图标像素的总字节数通过 [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取）。 建议图标像素宽高为128px*128px。实际显示效果依赖于设备能力和闪控球UI样式。
 
 **类型：** image.PixelMap
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FloatingBallParams-icon?: image.PixelMap--><!--Device-FloatingBallParams-icon?: image.PixelMap-End-->
 
@@ -107,10 +87,6 @@ template: FloatingBallTemplate
 **类型：** [FloatingBallTemplate](arkts-arkui-floatingball-floatingballtemplate-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FloatingBallParams-template: FloatingBallTemplate--><!--Device-FloatingBallParams-template: FloatingBallTemplate-End-->
 
@@ -130,10 +106,6 @@ textUpdateAnimationType?: FloatingBallTextUpdateAnimationType
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatingBallParams-textUpdateAnimationType?: FloatingBallTextUpdateAnimationType--><!--Device-FloatingBallParams-textUpdateAnimationType?: FloatingBallTextUpdateAnimationType-End-->
@@ -152,10 +124,6 @@ title: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-FloatingBallParams-title: string--><!--Device-FloatingBallParams-title: string-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -173,10 +141,6 @@ titleColor?: string
 **默认值：** Set different default values according to the 'backgroundColor'. - If 'backgroundColor' is provided, when 'backgroundColor' is light color, default value is '#E5FFFFFF', otherwise is '#E5000000'. - If 'backgroundColor' is not provided, default value is $r('sys.color.font_primary').
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

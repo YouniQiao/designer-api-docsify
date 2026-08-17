@@ -4,10 +4,6 @@ Provides the nnrt device description
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-interface NNRTDeviceDescription--><!--Device-mindSporeLite-interface NNRTDeviceDescription-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -28,10 +24,6 @@ Get device id
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NNRTDeviceDescription-deviceID() : bigint--><!--Device-NNRTDeviceDescription-deviceID() : bigint-End-->
@@ -44,7 +36,7 @@ Get device id
 | --- | --- |
 | bigint | the number of device id |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let context: mindSporeLite.Context = {};
@@ -70,10 +62,6 @@ Get device name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NNRTDeviceDescription-deviceName() : string--><!--Device-NNRTDeviceDescription-deviceName() : string-End-->
@@ -86,7 +74,7 @@ Get device name.
 | --- | --- |
 | string | device name |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let context: mindSporeLite.Context = {};
@@ -112,10 +100,6 @@ Get device type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NNRTDeviceDescription-deviceType() : NNRTDeviceType--><!--Device-NNRTDeviceDescription-deviceType() : NNRTDeviceType-End-->
@@ -128,7 +112,7 @@ Get device type.
 | --- | --- |
 | [NNRTDeviceType](arkts-mindsporelite-mindsporelite-nnrtdevicetype-e.md) | the device type |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let context: mindSporeLite.Context = {};

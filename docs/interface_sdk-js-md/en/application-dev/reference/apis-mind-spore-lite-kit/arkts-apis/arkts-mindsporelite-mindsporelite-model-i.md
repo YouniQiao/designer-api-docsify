@@ -4,10 +4,6 @@ Provides manages model function. Including get inputs, predict ,resize.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-interface Model--><!--Device-mindSporeLite-interface Model-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -32,10 +28,6 @@ Export train model to file
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-exportModel(      modelFile: string,      quantizationType?: QuantizationType,      exportInferenceOnly?: boolean,      outputTensorName?: string[]): boolean--><!--Device-Model-exportModel(      modelFile: string,      quantizationType?: QuantizationType,      exportInferenceOnly?: boolean,      outputTensorName?: string[]): boolean-End-->
@@ -57,7 +49,7 @@ Export train model to file
 | --- | --- |
 | boolean | the boolean result if the operation is successful |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
@@ -85,10 +77,6 @@ Export model's weights, which can be used in micro only. Only valid for Lite Tra
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-exportWeightsCollaborateWithMicro(      weightFile: string,      isInference?: boolean,      enableFp16?: boolean,      changeableWeightsName?: string[]): boolean--><!--Device-Model-exportWeightsCollaborateWithMicro(      weightFile: string,      isInference?: boolean,      enableFp16?: boolean,      changeableWeightsName?: string[]): boolean-End-->
@@ -110,7 +98,7 @@ Export model's weights, which can be used in micro only. Only valid for Lite Tra
 | --- | --- |
 | boolean | the boolean result if the operation is successful |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
@@ -133,10 +121,6 @@ Get model input tensors.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-getInputs(): MSTensor[]--><!--Device-Model-getInputs(): MSTensor[]-End-->
@@ -149,7 +133,7 @@ Get model input tensors.
 | --- | --- |
 | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | the MSTensor array of the inputs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
@@ -173,10 +157,6 @@ Obtain all weights of the model
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-getWeights(): MSTensor[]--><!--Device-Model-getWeights(): MSTensor[]-End-->
@@ -189,7 +169,7 @@ Obtain all weights of the model
 | --- | --- |
 | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | the weight tensors of the model |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -231,10 +211,6 @@ Infer model
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-predict(inputs: MSTensor[], callback: Callback<MSTensor[]>): void--><!--Device-Model-predict(inputs: MSTensor[], callback: Callback<MSTensor[]>): void-End-->
@@ -248,7 +224,7 @@ Infer model
 | inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | Yes | the callback of MSTensor array. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -289,10 +265,6 @@ Infer model
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-predict(inputs: MSTensor[]): Promise<MSTensor[]>--><!--Device-Model-predict(inputs: MSTensor[]): Promise<MSTensor[]>-End-->
@@ -311,7 +283,7 @@ Infer model
 | --- | --- |
 | Promise&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -351,10 +323,6 @@ resize model input
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-resize(inputs: MSTensor[], dims: Array<Array<int>>): boolean--><!--Device-Model-resize(inputs: MSTensor[], dims: Array<Array<int>>): boolean-End-->
@@ -374,7 +342,7 @@ resize model input
 | --- | --- |
 | boolean | the boolean result if the resize operation is successful |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
@@ -395,10 +363,6 @@ Train model by step
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-runStep(inputs: MSTensor[]): boolean--><!--Device-Model-runStep(inputs: MSTensor[]): boolean-End-->
@@ -417,7 +381,7 @@ Train model by step
 | --- | --- |
 | boolean | the boolean result if the runStep operation is successful |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
@@ -441,10 +405,6 @@ Setup training with virtual batches
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-setupVirtualBatch(virtualBatchMultiplier: int, lr: double, momentum: double): boolean--><!--Device-Model-setupVirtualBatch(virtualBatchMultiplier: int, lr: double, momentum: double): boolean-End-->
@@ -465,7 +425,7 @@ Setup training with virtual batches
 | --- | --- |
 | boolean | the boolean result if the operation is successful |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -502,10 +462,6 @@ Update weights of the model
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-updateWeights(weights: MSTensor[]): boolean--><!--Device-Model-updateWeights(weights: MSTensor[]): boolean-End-->
@@ -524,7 +480,7 @@ Update weights of the model
 | --- | --- |
 | boolean | the boolean result if updating weights operation is successful |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -564,10 +520,6 @@ The learning rate of the training model
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Model-learningRate?: double--><!--Device-Model-learningRate?: double-End-->
@@ -585,10 +537,6 @@ The running mode of the model
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

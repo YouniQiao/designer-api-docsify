@@ -4,10 +4,6 @@ Describes the audio and video recording parameters. The **audioSourceType** and 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface AVRecorderConfig--><!--Device-media-interface AVRecorderConfig-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -29,10 +25,6 @@ Meta source types, details see @MetaSourceType .
 **Type:** Array&lt;[MetaSourceType](arkts-media-media-metasourcetype-e-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVRecorderConfig-metaSourceTypes?: Array<MetaSourceType>--><!--Device-AVRecorderConfig-metaSourceTypes?: Array<MetaSourceType>-End-->
 

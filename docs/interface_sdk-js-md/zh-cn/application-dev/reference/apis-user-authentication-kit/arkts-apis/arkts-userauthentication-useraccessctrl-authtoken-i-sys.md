@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-userAccessCtrl-interface AuthToken--><!--Device-userAccessCtrl-interface AuthToken-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -25,10 +21,6 @@ authTrustLevel: userAuth.AuthTrustLevel
 **类型：** userAuth.AuthTrustLevel
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel--><!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel-End-->
 
@@ -48,10 +40,6 @@ authType: userAuth.UserAuthType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthToken-authType: userAuth.UserAuthType--><!--Device-AuthToken-authType: userAuth.UserAuthType-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -69,10 +57,6 @@ challenge: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthToken-challenge: Uint8Array--><!--Device-AuthToken-challenge: Uint8Array-End-->
 
@@ -92,10 +76,6 @@ credentialId?: bigint
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthToken-credentialId?: bigint--><!--Device-AuthToken-credentialId?: bigint-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -113,10 +93,6 @@ enrolledId?: bigint
 **类型：** bigint
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthToken-enrolledId?: bigint--><!--Device-AuthToken-enrolledId?: bigint-End-->
 
@@ -136,10 +112,6 @@ secureUid?: bigint
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthToken-secureUid?: bigint--><!--Device-AuthToken-secureUid?: bigint-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -157,10 +129,6 @@ AuthToken签发后经过的时间。自AuthToken签发至当前的时间间隔�
 **类型：** bigint
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthToken-timeInterval: bigint--><!--Device-AuthToken-timeInterval: bigint-End-->
 
@@ -180,10 +148,6 @@ tokenType: AuthTokenType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthToken-tokenType: AuthTokenType--><!--Device-AuthToken-tokenType: AuthTokenType-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -201,10 +165,6 @@ userId: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthToken-userId: int--><!--Device-AuthToken-userId: int-End-->
 

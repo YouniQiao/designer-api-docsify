@@ -16,10 +16,6 @@ Subscribe to significant motion sensor data, {@code SensorId.SIGNIFICANT_MOTION}
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onSignificantMotionChange(callback: Callback<SignificantMotionResponse>, options?: Options): void--><!--Device-sensor-function onSignificantMotionChange(callback: Callback<SignificantMotionResponse>, options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

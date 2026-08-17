@@ -16,10 +16,6 @@ Obtains a BundleInstaller object. This API is a synchronous API.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-installer-function getBundleInstallerSync(): BundleInstaller--><!--Device-installer-function getBundleInstallerSync(): BundleInstaller-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

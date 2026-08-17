@@ -12,10 +12,6 @@ Set a new value of form info.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-FormComponentInterface-(value: FormInfo): FormComponentAttribute--><!--Device-FormComponentInterface-(value: FormInfo): FormComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

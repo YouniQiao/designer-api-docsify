@@ -4,10 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare struct ArcSlider--><!--Device-unnamed-declare struct ArcSlider-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -18,15 +14,11 @@
 options: ArcSliderOptions
 ```
 
-配置弧形滑动条的参数。 默认值：[ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md#ArcSliderOptions)的各项子属性均取其默认值。
+配置弧形滑动条的参数。 默认值：[ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md#arcslideroptions)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

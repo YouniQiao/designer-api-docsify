@@ -16,10 +16,6 @@ Creates a Filter instance for adding multiple filter effects to a component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-function createFilter(): Filter--><!--Device-uiEffect-function createFilter(): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,7 +26,7 @@ Creates a Filter instance for adding multiple filter effects to a component.
 | --- | --- |
 | Filter | Returns a Filter instance, which supports adding multiple filter effects. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filter : uiEffect.Filter = uiEffect.createFilter()

@@ -4,10 +4,6 @@ Represents an update type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export enum BusinessSubType--><!--Device-update-export enum BusinessSubType-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -23,10 +19,6 @@ FIRMWARE = 1
 Firmware, indicating firmware upgrade,which is applicable to upgrade of the system firmware instead of the app. For details, see Upgrading Service Terms
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BusinessSubType-FIRMWARE = 1--><!--Device-BusinessSubType-FIRMWARE = 1-End-->
 

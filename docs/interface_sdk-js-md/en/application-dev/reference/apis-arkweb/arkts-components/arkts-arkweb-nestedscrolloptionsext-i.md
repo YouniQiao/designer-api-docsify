@@ -1,12 +1,8 @@
 # NestedScrollOptionsExt
 
-Implements a **NestedScrollOptionsExt** object to set up, down, left, and right nested scrolling options.
+Sets the nested scrolling rules of the **Web** component, supporting scrolling options in four directions: up, down, left, and right.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface NestedScrollOptionsExt--><!--Device-unnamed-declare interface NestedScrollOptionsExt-End-->
 
@@ -24,10 +20,6 @@ Nested scrolling options when the component scrolls down. Default value: **Neste
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 <!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -43,10 +35,6 @@ Nested scrolling options when the component scrolls left. Default value: **Neste
 **Type:** NestedScrollMode
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 <!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode-End-->
 
@@ -64,10 +52,6 @@ Nested scrolling options when the component scrolls right. Default value: **Nest
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 <!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -83,10 +67,6 @@ Nested scrolling options when the component scrolls up. Default value: **NestedS
 **Type:** NestedScrollMode
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 <!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode-End-->
 

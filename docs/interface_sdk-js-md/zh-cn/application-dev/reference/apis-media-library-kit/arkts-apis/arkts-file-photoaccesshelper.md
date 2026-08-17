@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare namespace photoAccessHelper--><!--Device-unnamed-declare namespace photoAccessHelper-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -18,16 +14,16 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getPhotoAccessHelper) | 获取相册管理模块的实例，用于访问和修改相册中的媒体文件。 |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getPhotoAccessHelper) | 获取相册管理模块的实例，用于访问和修改相册中的媒体文件。 |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper) | 获取相册管理模块的实例，用于访问和修改相册中的媒体文件。 |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper) | 获取相册管理模块的实例，用于访问和修改相册中的媒体文件。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md#getPhotoAccessHelper（系统接口）) | 支持跨用户获取相册管理模块的实例，用于访问和修改相册中的媒体文件。 |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md#getPhotoAccessHelper（系统接口）) | 支持跨用户获取相册管理模块的实例，用于访问和修改相册中的媒体文件。 |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md#getphotoaccesshelper系统接口) | 支持跨用户获取相册管理模块的实例，用于访问和修改相册中的媒体文件。 |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md#getphotoaccesshelper系统接口) | 支持跨用户获取相册管理模块的实例，用于访问和修改相册中的媒体文件。 |
 <!--DelEnd-->
 
 ### 类
@@ -39,8 +35,8 @@
 | [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md) | 介绍退出PhotoPicker的上下文信息。可以在后续的发射中使用 的PhotoPicker，以从上一个出口恢复状态。 |
 | [FileSizeFilter](arkts-medialibrary-photoaccesshelper-filesizefilter-c.md) | 可选择媒体文件大小的过滤配置。 |
 | [GridPinchMode](arkts-medialibrary-photoaccesshelper-gridpinchmode-c.md) | picker内宫格的捏合模式。 |
-| [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md) | MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#MediaChangeRequest). 相册变更请求。 |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#MediaChangeRequest). 资产变更请求。 |
+| [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md) | MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest). 相册变更请求。 |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest). 资产变更请求。 |
 | [MediaAssetManager](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md) | 媒体资产管理类，管理媒体资源读取。 |
 | [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md) | 文件类型的过滤配置。 |
 | [OperationItem](arkts-medialibrary-photoaccesshelper-operationitem-c.md) | 选择媒体文件的过滤配置。 |
@@ -65,12 +61,12 @@
 | [DefaultCoverOrderInfo](arkts-medialibrary-photoaccesshelper-defaultcoverorderinfo-c-sys.md) | 相册默认封面选择规则信息。 |
 | [HighlightAlbum](arkts-medialibrary-photoaccesshelper-highlightalbum-c-sys.md) | 时刻相册。 |
 | [KnowledgeContent](arkts-medialibrary-photoaccesshelper-knowledgecontent-c-sys.md) | 支持的MIME类型。 |
-| [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md) | MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#MediaChangeRequest). 相册变更请求。 |
+| [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md) | MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest). 相册变更请求。 |
 | [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md) | 智慧相册变更请求。 |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md) | MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#MediaChangeRequest). 资产变更请求。 |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md) | MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest). 资产变更请求。 |
 | [MediaAssetEditData](arkts-medialibrary-photoaccesshelper-mediaasseteditdata-c-sys.md) | 资产编辑数据。 |
 | [MediaAssetsChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c-sys.md) | 批量资产变更请求。 |
-| [MediaHighlightAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediahighlightalbumchangerequest-c-sys.md) | 时刻相册变更请求，MediaHighlightAlbumChangeRequest继承自 [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#MediaAnalysisAlbumChangeRequest（系统接口）)。 |
+| [MediaHighlightAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediahighlightalbumchangerequest-c-sys.md) | 时刻相册变更请求，MediaHighlightAlbumChangeRequest继承自 [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#mediaanalysisalbumchangerequest系统接口)。 |
 | [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) | 媒体库支持图库自定义用户统计行为。 |
 | [PhotoSelectOptions](arkts-medialibrary-photoaccesshelper-photoselectoptions-c-sys.md) | 图库选择选项子类，继承于BaseSelectOptions。用于拉起对应userId空间的picker。 |
 | [RecommendationOptions](arkts-medialibrary-photoaccesshelper-recommendationoptions-c-sys.md) | 图片推荐选项(基于图片数据分析结果，依赖设备适配)。 |
@@ -95,7 +91,7 @@
 | [FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md) | 文件检索结果集。 |
 | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md) | 媒体资源处理器，应用在onDataPrepared方法中可自定义媒体资源处理逻辑。 |
 | [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md) | 媒体资产进度处理器，应用于onProgress方法中获取媒体资产进度。 |
-| [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) | 媒体变更请求，资产变更请求和相册变更请求的父类型。 > **注意**： > > 媒体变更请求需要在调用[applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applyChanges)后才会 > 提交生效。 |
+| [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) | 媒体变更请求，资产变更请求和相册变更请求的父类型。 > **注意**： > > 媒体变更请求需要在调用[applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)后才会 > 提交生效。 |
 | [MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md) | 媒体库可用性信息。 |
 | [MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md) | 动态照片对象。 |
 | [PhotoAccessHelper](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md) | 提供访问照片和相册的功能。 |
@@ -170,7 +166,7 @@
 | [CompatibleMode](arkts-medialibrary-photoaccesshelper-compatiblemode-e.md) | 配置转码模式。 |
 | [CompleteButtonText](arkts-medialibrary-photoaccesshelper-completebuttontext-e.md) | 配置完成按钮显示内容。 |
 | [DefaultChangeUri](arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md) | 枚举，DefaultChangeUri子类型。 |
-| [DeliveryMode](arkts-medialibrary-photoaccesshelper-deliverymode-e.md) | 枚举，资源分发模式。 该模式适用于分段式拍照或分段式视频。如果当前设备不具备分段式能力，则以下三种分发模式无区别，直接返回请求的图片或视频资源。 请求的结果通过 [onDataPrepared](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md#onDataPrepared) 回调返回。 |
+| [DeliveryMode](arkts-medialibrary-photoaccesshelper-deliverymode-e.md) | 枚举，资源分发模式。 该模式适用于分段式拍照或分段式视频。如果当前设备不具备分段式能力，则以下三种分发模式无区别，直接返回请求的图片或视频资源。 请求的结果通过 [onDataPrepared](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md#ondataprepared) 回调返回。 |
 | [DynamicRangeType](arkts-medialibrary-photoaccesshelper-dynamicrangetype-e.md) | 枚举，媒体文件的动态范围类型。 |
 | [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md) | 枚举，支持进行过滤的操作符。 |
 | [GridLevel](arkts-medialibrary-photoaccesshelper-gridlevel-e.md) | 枚举类型，用于设置拉起picker后的宫格列数档位。 |
@@ -183,7 +179,7 @@
 | [OperationType](arkts-medialibrary-photoaccesshelper-operationtype-e.md) | 表示各类谓词的枚举。 |
 | [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md) | 枚举，图片和视频文件关键信息。 |
 | [PhotoSource](arkts-medialibrary-photoaccesshelper-photosource-e.md) | 枚举，图片或者视频数据的来源类型。 |
-| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md) | PhotoSubtype是不同[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset)类型的枚举。 |
+| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md) | PhotoSubtype是不同[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset)类型的枚举。 |
 | [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md) | 枚举，媒体文件类型。 |
 | [PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md) | 枚举，可选择的媒体文件类型。 |
 | [PickerColorMode](arkts-medialibrary-photoaccesshelper-pickercolormode-e.md) | 枚举选择器颜色模式。 |
@@ -214,7 +210,7 @@
 | [CloudAssetDownloadCode](arkts-medialibrary-photoaccesshelper-cloudassetdownloadcode-e-sys.md) | 枚举，批量下载添加返回值类型。 |
 | [CloudAssetDownloadNotifyType](arkts-medialibrary-photoaccesshelper-cloudassetdownloadnotifytype-e-sys.md) | 枚举，下载进度通知事件类型。 |
 | [CloudEnhancementState](arkts-medialibrary-photoaccesshelper-cloudenhancementstate-e-sys.md) | 枚举，表示云增强状态。 |
-| [CloudEnhancementTaskStage](arkts-medialibrary-photoaccesshelper-cloudenhancementtaskstage-e-sys.md) | 枚举，应用查询云增强任务状态时，在[CloudEnhancementTaskState](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md#CloudEnhancement（系统接口）)接口中返回，表示云增强任务状态。 |
+| [CloudEnhancementTaskStage](arkts-medialibrary-photoaccesshelper-cloudenhancementtaskstage-e-sys.md) | 枚举，应用查询云增强任务状态时，在[CloudEnhancementTaskState](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md#cloudenhancement系统接口)接口中返回，表示云增强任务状态。 |
 | [CloudMediaAssetTaskStatus](arkts-medialibrary-photoaccesshelper-cloudmediaassettaskstatus-e-sys.md) | 枚举，表示云端媒体资产的下载任务状态。 |
 | [CloudMediaDownloadType](arkts-medialibrary-photoaccesshelper-cloudmediadownloadtype-e-sys.md) | 枚举，表示云端媒体资产的下载方式。 |
 | [CloudMediaRetainType](arkts-medialibrary-photoaccesshelper-cloudmediaretaintype-e-sys.md) | 枚举，表示云端媒体资产的删除方式。 |
@@ -237,7 +233,7 @@
 | [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md) | 枚举，图片和视频文件关键信息。 |
 | [PhotoPermissionType](arkts-medialibrary-photoaccesshelper-photopermissiontype-e-sys.md) | 枚举，应用对媒体资源不同访问权限的类型。 包括临时读权限和永久读权限，临时读权限会随着应用的死亡而删除，永久读权限不会。 同一个应用对同一个媒体资源的权限覆盖规则：永久读会覆盖临时读，而临时读不会覆盖永久读。 |
 | [PhotoRiskStatus](arkts-medialibrary-photoaccesshelper-photoriskstatus-e-sys.md) | 枚举，用于标识图片是否存在风险的类型。 |
-| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e-sys.md) | PhotoSubtype是不同[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset)类型的枚举。 |
+| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e-sys.md) | PhotoSubtype是不同[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset)类型的枚举。 |
 | [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md) | 枚举，文件位置，表示文件在本地或云端。 |
 | [RankingMethod](arkts-medialibrary-photoaccesshelper-rankingmethod-e-sys.md) | 随机类型 |
 | [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e-sys.md) | 枚举，推荐的图片类型。 |

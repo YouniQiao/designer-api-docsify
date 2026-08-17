@@ -1,12 +1,8 @@
 # AISessionResultType
 
-Enum representing the result states for AI session operations.
+Defines the result status of AI session operations.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum AISessionResultType--><!--Device-unnamed-declare enum AISessionResultType-End-->
 
@@ -18,13 +14,9 @@ Enum representing the result states for AI session operations.
 SUCCESS = 0
 ```
 
-Operation completed successfully.
+The operation is successful.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +30,9 @@ Operation completed successfully.
 FAILURE = 1
 ```
 
-Operation failed.
+The operation failed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +46,9 @@ Operation failed.
 RUNNING = 2
 ```
 
-Operation is currently in progress.
+The operation is in progress.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

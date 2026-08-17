@@ -4,10 +4,6 @@ Describes the user-defined data in the routing table configuration of the module
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface DataItem--><!--Device-unnamed-export interface DataItem-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -23,10 +19,6 @@ Key of the user-defined data.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -45,10 +37,6 @@ Value of the user-defined data.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

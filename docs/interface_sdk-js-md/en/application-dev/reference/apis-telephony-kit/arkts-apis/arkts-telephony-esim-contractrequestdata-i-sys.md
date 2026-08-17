@@ -4,10 +4,6 @@ Contract request data
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-eSIM-export interface ContractRequestData--><!--Device-eSIM-export interface ContractRequestData-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -32,10 +28,6 @@ Nonce required to get contract info
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ContractRequestData-nonce: string--><!--Device-ContractRequestData-nonce: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -54,10 +46,6 @@ Euicc Ci PKID to be used, required to get contract info
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ContractRequestData-pkid: string--><!--Device-ContractRequestData-pkid: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -75,10 +63,6 @@ Public key required to get contract info
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContractRequestData-publicKey: string--><!--Device-ContractRequestData-publicKey: string-End-->
 

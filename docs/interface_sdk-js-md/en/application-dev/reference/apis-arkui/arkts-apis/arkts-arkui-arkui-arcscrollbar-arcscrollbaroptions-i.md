@@ -4,10 +4,6 @@ Represents the parameters used to construct an **ArcScrollBar** component. > **N
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ArcScrollBarOptions--><!--Device-unnamed-declare interface ArcScrollBarOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -31,10 +27,6 @@ Scroller, which can be bound to scrollable components for scrolling control.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcScrollBarOptions-scroller: Scroller--><!--Device-ArcScrollBarOptions-scroller: Scroller-End-->
@@ -52,10 +44,6 @@ State of the scrollbar.<br/>Default value: **BarState.Auto**
 **Type:** BarState
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

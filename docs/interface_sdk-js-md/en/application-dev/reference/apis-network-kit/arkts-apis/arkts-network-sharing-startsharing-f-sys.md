@@ -16,10 +16,6 @@ Start network sharing for given type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 <!--Device-sharing-function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): void--><!--Device-sharing-function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): void-End-->
@@ -51,7 +47,7 @@ Start network sharing for given type.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) | Cannot get network sharing configuration. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';
@@ -73,10 +69,6 @@ function startSharing(type: SharingIfaceType): Promise<void>
 Start network sharing for given type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -114,7 +106,7 @@ Start network sharing for given type.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) | Cannot get network sharing configuration. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';

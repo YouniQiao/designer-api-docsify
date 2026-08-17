@@ -2,13 +2,9 @@
 
 CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 > **说明：** > > * 建议使用时将CanvasRenderingContext2D对象与Canvas组件封装到同一个自定义组件中，保证两者一一对应且生命周期保持一致。 > > * 本文绘制接口在调用时会存入被关联的Canvas组件的指令队列中。仅当当前帧进入渲染阶段且关联的Canvas组件处于可见状态时， > 这些指令才会从队列中被提取并执行。因此，在Canvas组件不可见的情况下，应尽量避免频繁调用绘制接口， > 以防止指令在队列中堆积，从而避免内存占用过大的问题。 > > * beginPath、moveTo、lineTo、closePath、bezierCurveTo、quadraticCurveTo、arc、arcTo、ellipse、rect和 > roundRect接口只能对CanvasRenderingContext2D中的路径生效，无法对OffscreenCanvasRenderingContext2D和 > Path2D对象中设置的路径生效。 > > * Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
 
-**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#CanvasRenderer)
+**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#canvasrenderer)
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class CanvasRenderingContext2D--><!--Device-unnamed-declare class CanvasRenderingContext2D-End-->
 
@@ -23,10 +19,6 @@ constructor(settings?: RenderingContextSettings)
 构造Canvas画布对象，支持配置CanvasRenderingContext2D对象的参数。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -51,10 +43,6 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 构造Canvas画布对象，支持配置CanvasRenderingContext2D对象的参数和单位模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,10 +70,6 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 从一个DrawingRenderingContext对象中获取一个CanvasRenderingContext2D对象，该CanvasRenderingContext2D对象与入参的DrawingRenderingContext对 象绑定了相同的Canvas组件。 > **说明：** > > - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建Canvas组件，否则会导致应用崩溃。 > > - 当入参的DrawingRenderingContext对象未绑定Canvas组件时，将返回错误码。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,10 +108,6 @@ off(type: 'onAttach', callback?: Callback<void>): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -158,10 +138,6 @@ off(type: 'onDetach', callback?: Callback<void>): void
 取消订阅CanvasRenderingContext2D与Canvas组件解除绑定的场景。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -194,10 +170,6 @@ on(type: 'onAttach', callback: Callback<void>): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -229,10 +201,6 @@ on(type: 'onDetach', callback: Callback<void>): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -263,10 +231,6 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 配置并启动AI分析功能，使用Promise异步回调。使用前需先设置 [enableAnalyzer](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md#enableanalyzer12)为true，启用图像 AI分析能力。 该方法调用时，将截取调用时刻的画面帧进行分析，使用时需注意启动分析的时机，避免出现画面和分析内容不一致的情况。 未执行完重复调用该方法会触发错误回调。示例代码同stopImageAnalyzer。 > **说明：** > > 分析类型不支持动态修改。 > > 当检测到画面有变化时，分析结果将自动销毁，可重新调用本接口启动分析。 > > 该特性依赖设备能力，不支持该能力的情况下，将返回错误码。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -306,10 +270,6 @@ stopImageAnalyzer(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -327,10 +287,6 @@ toDataURL(type?: string, quality?: any): string
 生成一个包含图片展示的URL，该接口存在内存拷贝行为，高耗时，应避免频繁使用。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -365,10 +321,6 @@ readonly canvas: FrameNode
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -389,10 +341,6 @@ readonly height: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -412,10 +360,6 @@ readonly width: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

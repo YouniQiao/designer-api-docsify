@@ -4,11 +4,9 @@ Enum for location privacy type
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LocationPrivacyType](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#LocationPrivacyType-(System-API))
+**Substitutes:** [LocationPrivacyType](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#locationprivacytype-system-api)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -24,11 +22,9 @@ OTHERS = 0
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [OTHERS](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#OTHERS)
+**Substitutes:** [OTHERS](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#others)
 
 <!--Device-LocationPrivacyType-OTHERS = 0--><!--Device-LocationPrivacyType-OTHERS = 0-End-->
 
@@ -42,11 +38,9 @@ STARTUP
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [STARTUP](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#STARTUP)
+**Substitutes:** [STARTUP](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#startup)
 
 <!--Device-LocationPrivacyType-STARTUP--><!--Device-LocationPrivacyType-STARTUP-End-->
 
@@ -60,11 +54,9 @@ CORE_LOCATION
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [CORE_LOCATION](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#CORE_LOCATION)
+**Substitutes:** [CORE_LOCATION](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#corelocation)
 
 <!--Device-LocationPrivacyType-CORE_LOCATION--><!--Device-LocationPrivacyType-CORE_LOCATION-End-->
 

@@ -4,10 +4,6 @@ Enumerates the camera imaging modes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum CameraImagingMode--><!--Device-camera-enum CameraImagingMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ AUTO = 0
 Auto imaging mode.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ RGB imaging mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CameraImagingMode-RGB = 1--><!--Device-CameraImagingMode-RGB = 1-End-->
@@ -67,10 +55,6 @@ IR = 2
 IR imaging mode.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

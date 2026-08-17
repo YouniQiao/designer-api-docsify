@@ -4,10 +4,6 @@ Enumerates the tag transfer modes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-huks-export enum HuksSendType--><!--Device-huks-export enum HuksSendType-End-->
 
 **System capability:** 
@@ -23,10 +19,6 @@ HUKS_SEND_TYPE_ASYNC = 0
 The tag is sent asynchronously.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -45,10 +37,6 @@ HUKS_SEND_TYPE_SYNC = 1
 The tag is sent synchronously.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

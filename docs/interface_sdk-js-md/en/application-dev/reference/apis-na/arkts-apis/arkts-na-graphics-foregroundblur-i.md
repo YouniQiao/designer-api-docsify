@@ -4,9 +4,7 @@ Defines the foreground blur effect.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export interface ForegroundBlur--><!--Device-unnamed-export interface ForegroundBlur-End-->
 
@@ -24,9 +22,7 @@ Blur radius for foreground blur. Value range: [0, +∞). The larger the value, t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

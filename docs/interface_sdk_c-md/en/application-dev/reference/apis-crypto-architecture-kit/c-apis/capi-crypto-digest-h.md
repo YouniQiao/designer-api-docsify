@@ -4,6 +4,8 @@
 
 Defines the digest algorithm interfaces.
 
+**Include**: <CryptoArchitectureKit/crypto_digest.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

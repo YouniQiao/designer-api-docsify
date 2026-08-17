@@ -4,10 +4,6 @@ Specifies the type and value range of the optional parameters in the HTTP reques
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-http-export interface HttpRequestOptions--><!--Device-http-export interface HttpRequestOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,10 +26,6 @@ Address family option.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-addressFamily?: AddressFamily--><!--Device-HttpRequestOptions-addressFamily?: AddressFamily-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -49,10 +41,6 @@ The body content of the HTTP request. This parameter explicitly specifies the pa
 **Type:** string \| Object \| ArrayBuffer
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,10 +60,6 @@ A PEM representation of a certificate. The system will create an X.509 certifica
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-HttpRequestOptions-caData?: string--><!--Device-HttpRequestOptions-caData?: string-End-->
@@ -94,10 +78,6 @@ If this parameter is set, the system will use ca path specified by user, or else
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HttpRequestOptions-caPath?: string--><!--Device-HttpRequestOptions-caPath?: string-End-->
@@ -110,15 +90,11 @@ If this parameter is set, the system will use ca path specified by user, or else
 certificatePinning?: CertificatePinning | CertificatePinning[]
 ```
 
-Certificate pinning option. If server certificate's digest does not match [publicKeyHash](arkts-network-http-certificatepinning-i.md#publicKeyHash), request will fail.
+Certificate pinning option. If server certificate's digest does not match [publicKeyHash](arkts-network-http-certificatepinning-i.md#publickeyhash), request will fail.
 
 **Type:** [CertificatePinning](arkts-network-http-certificatepinning-i.md) \| [CertificatePinning](arkts-network-http-certificatepinning-i.md)[]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-certificatePinning?: CertificatePinning | CertificatePinning[]--><!--Device-HttpRequestOptions-certificatePinning?: CertificatePinning | CertificatePinning[]-End-->
 
@@ -136,10 +112,6 @@ Support the application to pass in client certificates, allowing the server to v
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-clientCert?: ClientCert--><!--Device-HttpRequestOptions-clientCert?: ClientCert-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -155,10 +127,6 @@ Support the application to pass in client certificates, allowing the server to v
 **Type:** ClientCert
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -178,10 +146,6 @@ Connection timeout interval. The default value is 60,000, in ms.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-connectTimeout?: int--><!--Device-HttpRequestOptions-connectTimeout?: int-End-->
@@ -200,10 +164,6 @@ Supports specifying the user custom defined http request method
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-customMethod?: string--><!--Device-HttpRequestOptions-customMethod?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -219,10 +179,6 @@ If this parameter is set, incoming DNS resolution server URL for the DoH server 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-HttpRequestOptions-dnsOverHttps?: string--><!--Device-HttpRequestOptions-dnsOverHttps?: string-End-->
 
@@ -240,10 +196,6 @@ If this parameter is set, use the specified DNS server for DNS resolution. Multi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-dnsServers?: Array<string>--><!--Device-HttpRequestOptions-dnsServers?: Array<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -259,10 +211,6 @@ Indicates whether to enable partial chain verification. The default value is tru
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,10 +230,6 @@ Data type to be returned. If this parameter is set, the system preferentially re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-expectDataType?: HttpDataType--><!--Device-HttpRequestOptions-expectDataType?: HttpDataType-End-->
@@ -303,10 +247,6 @@ Additional data of the request. extraData can be a string or an Object (API 6) o
 **Type:** string \| Object \| ArrayBuffer
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -326,10 +266,6 @@ HTTP request header. default is 'content-type': 'application/json'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-header?: Object--><!--Device-HttpRequestOptions-header?: Object-End-->
@@ -347,10 +283,6 @@ Maximum HTTP idle time (unit: ms)
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -370,10 +302,6 @@ The maximum limit of the response body. The default value is 5 * 1024 * 1024, in
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-maxLimit?: int--><!--Device-HttpRequestOptions-maxLimit?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -390,10 +318,6 @@ Support specifying the configuration of maximum redirect count
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-maxRedirects?: int--><!--Device-HttpRequestOptions-maxRedirects?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -409,10 +333,6 @@ Request method,default is GET.
 **Type:** [RequestMethod](arkts-network-http-requestmethod-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -432,10 +352,6 @@ The data fields which is supported by the HTTP protocol to post forms and by the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-multiFormDataList?: Array<MultiFormData>--><!--Device-HttpRequestOptions-multiFormDataList?: Array<MultiFormData>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -452,10 +368,6 @@ Support specifying a preferred network when making HTTP requests. If the specifi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-pathPreference?: PathPreference--><!--Device-HttpRequestOptions-pathPreference?: PathPreference-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -471,10 +383,6 @@ priority?: int
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -494,10 +402,6 @@ Query parameters to append to the request URL. Supports two input forms: - `stri
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HttpRequestOptions-queryParams?: string | QueryParamObject--><!--Device-HttpRequestOptions-queryParams?: string | QueryParamObject-End-->
@@ -515,10 +419,6 @@ Read timeout period. The default value is 60,000, in ms.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -538,10 +438,6 @@ Certificate authority(CA) which is used to verify the remote server's identifica
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HttpRequestOptions-remoteValidation?: RemoteValidation--><!--Device-HttpRequestOptions-remoteValidation?: RemoteValidation-End-->
@@ -560,10 +456,6 @@ Used to set to uploading or downloading the start bytes. The default value is 0.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-resumeFrom?: long--><!--Device-HttpRequestOptions-resumeFrom?: long-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -580,10 +472,6 @@ Used to set to uploading or downloading the end bytes. Translate to the end if n
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-resumeTo?: long--><!--Device-HttpRequestOptions-resumeTo?: long-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -599,10 +487,6 @@ Supports forbidding reuse of HTTP/HTTPS connections
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -622,10 +506,6 @@ HTTP server authentication settings. No authentication by default.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HttpRequestOptions-serverAuthentication?: ServerAuthentication--><!--Device-HttpRequestOptions-serverAuthentication?: ServerAuthentication-End-->
@@ -644,10 +524,6 @@ Support specifying an SNI domain name to include the SNI field during the TLS co
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-HttpRequestOptions-sniHostName?: string--><!--Device-HttpRequestOptions-sniHostName?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -663,10 +539,6 @@ Which secure communication protocol is used, TLS (by defaul) or TLCP. If TLCP is
 **Type:** SslType
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -686,10 +558,6 @@ TLS option.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HttpRequestOptions-tlsOptions?: TlsOptions--><!--Device-HttpRequestOptions-tlsOptions?: TlsOptions-End-->
@@ -707,10 +575,6 @@ default is true
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -730,10 +594,6 @@ default is automatically specified by the system.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-usingProtocol?: HttpProtocol--><!--Device-HttpRequestOptions-usingProtocol?: HttpProtocol-End-->
@@ -752,10 +612,6 @@ If this parameter is set as type of boolean, the system will use default proxy o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequestOptions-usingProxy?: boolean | HttpProxy--><!--Device-HttpRequestOptions-usingProxy?: boolean | HttpProxy-End-->
@@ -773,10 +629,6 @@ Specifies the use of a SOCKS5 proxy. Note that this configuration takes preceden
 **Type:** Socks5Proxy
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

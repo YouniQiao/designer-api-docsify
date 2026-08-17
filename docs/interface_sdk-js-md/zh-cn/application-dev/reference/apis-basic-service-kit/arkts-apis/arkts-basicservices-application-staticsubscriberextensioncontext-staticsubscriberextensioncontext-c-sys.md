@@ -6,10 +6,6 @@ StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class StaticSubscriberExtensionContext--><!--Device-unnamed-declare class StaticSubscriberExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -26,10 +22,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -45,7 +37,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收启动结果。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收启动结果。 |
 
 **错误码：**
 
@@ -68,7 +60,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { commonEventManager, BusinessError } from '@kit.BasicServicesKit';
@@ -113,10 +105,6 @@ startAbility(want: Want): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -160,7 +148,7 @@ startAbility(want: Want): Promise<void>
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

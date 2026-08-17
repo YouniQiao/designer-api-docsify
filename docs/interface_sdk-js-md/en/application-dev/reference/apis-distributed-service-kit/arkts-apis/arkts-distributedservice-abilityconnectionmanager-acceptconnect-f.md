@@ -16,10 +16,6 @@ Accepts the UIAbility connection after a collaboration session is set up and the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-abilityConnectionManager-function acceptConnect(sessionId: int, token: string): Promise<void>--><!--Device-abilityConnectionManager-function acceptConnect(sessionId: int, token: string): Promise<void>-End-->
@@ -45,7 +41,7 @@ Accepts the UIAbility connection after a collaboration session is set up and the
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 After createAbilityConnectionSession is called on device A to create a collaboration session and the session ID is obtained, the application on device B can call acceptConnect to accept the connection.
 

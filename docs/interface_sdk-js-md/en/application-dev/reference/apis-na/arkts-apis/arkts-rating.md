@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Rating](arkts-na-rating-rating-f.md#Rating) | Defines Rating Component. |
+| [Rating](arkts-na-rating-rating-f.md#rating) | Defines Rating Component. |
 
 ### Interfaces
 

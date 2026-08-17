@@ -16,10 +16,6 @@ Updates the size of the widget.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 <!--Device-formHost-function updateFormSize(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void--><!--Device-formHost-function updateFormSize(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void-End-->
@@ -46,7 +42,7 @@ Updates the size of the widget.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | caller is not system app. |
 | [16501012](../errorcode-form.md#16501012-incorrect-widget-dimension) | The dimension parameter is incorrect |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formHost, formInfo } from '@kit.FormKit';

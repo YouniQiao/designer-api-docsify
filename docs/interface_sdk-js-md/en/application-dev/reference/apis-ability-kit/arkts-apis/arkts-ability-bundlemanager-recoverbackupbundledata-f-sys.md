@@ -16,10 +16,6 @@ Restores the backup data for a specified application under a given user. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RECOVER_BUNDLE
 
 <!--Device-bundleManager-function recoverBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>--><!--Device-bundleManager-function recoverBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>-End-->
@@ -33,7 +29,7 @@ Restores the backup data for a specified application under a given user. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The value is greater than or equal to 0. |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The value is greater than or equal to 0. |
 | appIndex | int | Yes | Index of the application. The value ranges from 0 to 5. The value **0** indicates the main application, and the values 1 to 5 indicate the indexes of application clones. |
 
 **Return value:**
@@ -52,7 +48,7 @@ Restores the backup data for a specified application under a given user. This AP
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

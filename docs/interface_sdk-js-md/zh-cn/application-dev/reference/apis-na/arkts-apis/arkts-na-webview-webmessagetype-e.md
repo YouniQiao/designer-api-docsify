@@ -1,12 +1,10 @@
 # WebMessageType
 
-Enum type supplied to [onMessageEventExt](arkts-na-webview-webmessageport-i.md#onMessageEventExt) for indicating the type of web message.
+Enum type supplied to [onMessageEventExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageport-i.md#onmessageeventext) for indicating the type of web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-webview-enum WebMessageType--><!--Device-webview-enum WebMessageType-End-->
 
@@ -22,9 +20,7 @@ Unsupported data type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageType-NOT_SUPPORT--><!--Device-WebMessageType-NOT_SUPPORT-End-->
 
@@ -40,9 +36,7 @@ The string data type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageType-STRING--><!--Device-WebMessageType-STRING-End-->
 
@@ -58,9 +52,7 @@ The number data type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageType-NUMBER--><!--Device-WebMessageType-NUMBER-End-->
 
@@ -76,9 +68,7 @@ The boolean data type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageType-BOOLEAN--><!--Device-WebMessageType-BOOLEAN-End-->
 
@@ -94,9 +84,7 @@ The arraybuffer data type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageType-ARRAY_BUFFER--><!--Device-WebMessageType-ARRAY_BUFFER-End-->
 
@@ -112,9 +100,7 @@ The array data type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageType-ARRAY--><!--Device-WebMessageType-ARRAY-End-->
 
@@ -130,9 +116,7 @@ The error data type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageType-ERROR--><!--Device-WebMessageType-ERROR-End-->
 

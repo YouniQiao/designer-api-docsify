@@ -4,10 +4,6 @@ Defines a UDPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-socket-export interface UDPSocket--><!--Device-socket-export interface UDPSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -27,10 +23,6 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 Binds the IP address and port number. The port number can be specified or randomly allocated by the system.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -52,7 +44,7 @@ Binds the IP address and port number. The port number can be specified or random
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -82,10 +74,6 @@ Binds the IP address and port number. The port number can be specified or random
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-bind(address: NetAddress): Promise<void>--><!--Device-UDPSocket-bind(address: NetAddress): Promise<void>-End-->
@@ -111,7 +99,7 @@ Binds the IP address and port number. The port number can be specified or random
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -139,10 +127,6 @@ Closes a UDPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-close(callback: AsyncCallback<void>): void--><!--Device-UDPSocket-close(callback: AsyncCallback<void>): void-End-->
@@ -161,7 +145,7 @@ Closes a UDPSocket connection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -187,10 +171,6 @@ Closes a UDPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-close(): Promise<void>--><!--Device-UDPSocket-close(): Promise<void>-End-->
@@ -209,7 +189,7 @@ Closes a UDPSocket connection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -233,10 +213,6 @@ Obtains the local address of a UDPSocket connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-UDPSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-UDPSocket-getLocalAddress(): Promise<NetAddress>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -255,7 +231,7 @@ Obtains the local address of a UDPSocket connection.
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -289,10 +265,6 @@ Obtains the file descriptor of the UDPSocket.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-getSocketFd(): Promise<int>--><!--Device-UDPSocket-getSocketFd(): Promise<int>-End-->
@@ -311,7 +283,7 @@ Obtains the file descriptor of the UDPSocket.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -345,10 +317,6 @@ Obtains the status of the UDPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-UDPSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
@@ -359,7 +327,7 @@ Obtains the status of the UDPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | the callback of getState. [SocketStateBase](arkts-network-socket-socketstatebase-i.md#SocketStateBase). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | the callback of getState. [SocketStateBase](arkts-network-socket-socketstatebase-i.md#socketstatebase). |
 
 **Error codes:**
 
@@ -367,7 +335,7 @@ Obtains the status of the UDPSocket connection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -404,10 +372,6 @@ Obtains the status of the UDPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-getState(): Promise<SocketStateBase>--><!--Device-UDPSocket-getState(): Promise<SocketStateBase>-End-->
@@ -426,7 +390,7 @@ Obtains the status of the UDPSocket connection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -461,10 +425,6 @@ Cancels listening for data packet message events or close events of the UDPSocke
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -476,7 +436,7 @@ Cancels listening for data packet message events or close events of the UDPSocke
 | type | 'listening' \| 'close' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -509,10 +469,6 @@ Cancels listening for error events of the UDPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -524,7 +480,7 @@ Cancels listening for error events of the UDPSocket connection.
 | type | 'error' | Yes | Indicates Event name. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -550,10 +506,6 @@ Cancels listening for data packet message events or close events of the UDPSocke
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -565,7 +517,7 @@ Cancels listening for data packet message events or close events of the UDPSocke
 | type | 'listening' \| 'close' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -598,10 +550,6 @@ Cancels listening for message receiving events of the UDPSocket connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-UDPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-UDPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -613,7 +561,7 @@ Cancels listening for message receiving events of the UDPSocket connection.
 | type | 'message' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -647,10 +595,6 @@ Listens for data packet message events or close events of the UDPSocket connecti
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -662,7 +606,7 @@ Listens for data packet message events or close events of the UDPSocket connecti
 | type | 'listening' \| 'close' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -687,10 +631,6 @@ Listens for error events of the UDPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -702,7 +642,7 @@ Listens for error events of the UDPSocket connection.
 | type | 'error' | Yes | Indicates Event name. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -724,10 +664,6 @@ Listens for data packet message events or close events of the UDPSocket connecti
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -739,7 +675,7 @@ Listens for data packet message events or close events of the UDPSocket connecti
 | type | 'listening' \| 'close' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -764,10 +700,6 @@ Listens for message receiving events of the UDPSocket connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-UDPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-UDPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -779,7 +711,7 @@ Listens for message receiving events of the UDPSocket connection.
 | type | 'message' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -810,10 +742,6 @@ Sends data over a UDPSocket connection.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-send(options: UDPSendOptions, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-send(options: UDPSendOptions, callback: AsyncCallback<void>): void-End-->
@@ -824,7 +752,7 @@ Sends data over a UDPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | Yes | Optional parameters [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md#UDPSendOptions). |
+| options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | Yes | Optional parameters [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md#udpsendoptions). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of send. |
 
 **Error codes:**
@@ -842,7 +770,7 @@ Sends data over a UDPSocket connection.
 | [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
 | [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -933,10 +861,6 @@ Sends data over a UDPSocket connection.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-send(options: UDPSendOptions): Promise<void>--><!--Device-UDPSocket-send(options: UDPSendOptions): Promise<void>-End-->
@@ -947,7 +871,7 @@ Sends data over a UDPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | Yes | Optional parameters [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md#UDPSendOptions). |
+| options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | Yes | Optional parameters [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md#udpsendoptions). |
 
 **Return value:**
 
@@ -970,7 +894,7 @@ Sends data over a UDPSocket connection.
 | [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
 | [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1055,10 +979,6 @@ Sets other attributes of the UDPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void-End-->
@@ -1069,7 +989,7 @@ Sets other attributes of the UDPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | Yes | Optional parameters [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md#UDPExtraOptions). |
+| options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | Yes | Optional parameters [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md#udpextraoptions). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
 
 **Error codes:**
@@ -1079,7 +999,7 @@ Sets other attributes of the UDPSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1124,10 +1044,6 @@ Sets other attributes of the UDPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions): Promise<void>--><!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions): Promise<void>-End-->
@@ -1138,7 +1054,7 @@ Sets other attributes of the UDPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | Yes | Optional parameters [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md#UDPExtraOptions). |
+| options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | Yes | Optional parameters [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md#udpextraoptions). |
 
 **Return value:**
 
@@ -1153,7 +1069,7 @@ Sets other attributes of the UDPSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

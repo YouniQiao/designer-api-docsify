@@ -10,10 +10,6 @@ function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-text-function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>--><!--Device-text-function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>-End-->
@@ -24,7 +20,7 @@ function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fullName | string | 是 | 指定的字体名称。可以使用[getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getSystemFontFullNamesByType)获取。 |
+| fullName | string | 是 | 指定的字体名称。可以使用[getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype)获取。 |
 | fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | 是 | 指定的字体类型。 |
 
 **返回值：**
@@ -39,7 +35,7 @@ function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType)
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

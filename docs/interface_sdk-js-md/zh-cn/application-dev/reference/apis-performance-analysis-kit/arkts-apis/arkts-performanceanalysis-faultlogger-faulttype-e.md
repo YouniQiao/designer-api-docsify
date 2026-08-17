@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 18
 
 **替代接口：** [event](arkts-performanceanalysis-hiappevent-event-n.md#event)
@@ -24,8 +22,6 @@ NO_SPECIFIC = 0
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 18
 
 <!--Device-FaultType-NO_SPECIFIC = 0--><!--Device-FaultType-NO_SPECIFIC = 0-End-->
@@ -41,8 +37,6 @@ CPP_CRASH = 2
 Native运行时异常。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 18
 
@@ -60,8 +54,6 @@ JS程序故障类型。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 18
 
 <!--Device-FaultType-JS_CRASH = 3--><!--Device-FaultType-JS_CRASH = 3-End-->
@@ -77,8 +69,6 @@ APP_FREEZE = 4
 应用程序冻屏故障类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 18
 

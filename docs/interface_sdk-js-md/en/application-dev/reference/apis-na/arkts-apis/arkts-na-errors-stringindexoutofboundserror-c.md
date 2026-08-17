@@ -1,14 +1,12 @@
-# StringIndexOutOfBoundsError
+# StringIndexOutOfBoundsError(Defines the commonly used Errors for ArkTS)
 
 Represents error that is thrown when provided string index is out of bounds
 
-**Inheritance/Implementation:** StringIndexOutOfBoundsError extends [RangeError](arkts-na-errors-rangeerror-c.md#RangeError)
+**Inheritance/Implementation:** StringIndexOutOfBoundsError extends [RangeError](arkts-na-errors-rangeerror-c.md#rangeerror)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class StringIndexOutOfBoundsError--><!--Device-unnamed-export class StringIndexOutOfBoundsError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new StringIndexOutOfBoundsError instance with provided message and 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

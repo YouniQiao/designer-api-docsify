@@ -4,10 +4,6 @@ Provides interfaces to manage and use data networks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace connection--><!--Device-unnamed-declare namespace connection-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -24,86 +20,86 @@ import { connection } from 'connection';
 
 | Name | Description |
 | --- | --- |
-| [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md#addCustomDnsRule) | Add a custom host and corresponding ip mapping for current application. |
-| [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md#addCustomDnsRule) | Add a custom host and corresponding ip mapping for current application. |
-| [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md#clearCustomDnsRules) | Clear all custom DNS rules for current application. |
-| [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md#clearCustomDnsRules) | Clear all custom DNS rules for current application. |
-| [createNetConnection](arkts-network-connection-createnetconnection-f.md#createNetConnection) | Create a network connection with optional netSpecifier and timeout. |
-| [findProxyForUrl](arkts-network-connection-findproxyforurl-f.md#findProxyForUrl) | Find pac proxy info for the url. |
-| [getAddressesByName](arkts-network-connection-getaddressesbyname-f.md#getAddressesByName) | Resolves the host name to obtain all IP addresses based on the default data network. |
-| [getAddressesByName](arkts-network-connection-getaddressesbyname-f.md#getAddressesByName) | Resolves the host name to obtain all IP addresses based on the default data network. |
-| [getAddressesByNameWithOptions](arkts-network-connection-getaddressesbynamewithoptions-f.md#getAddressesByNameWithOptions) | Resolves a host name to obtain all IP addresses with specified query option. |
-| [getAllNets](arkts-network-connection-getallnets-f.md#getAllNets) | Obtains the list of data networks that are activated. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getAllNets](arkts-network-connection-getallnets-f.md#getAllNets) | Obtains the list of data networks that are activated. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getAllNetsSync](arkts-network-connection-getallnetssync-f.md#getAllNetsSync) | Obtains the list of data networks that are activated. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getAppNet](arkts-network-connection-getappnet-f.md#getAppNet) | Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet). |
-| [getAppNet](arkts-network-connection-getappnet-f.md#getAppNet) | Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet). |
-| [getAppNetSync](arkts-network-connection-getappnetsync-f.md#getAppNetSync) | Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet). |
-| [getConnectOwnerUid](arkts-network-connection-getconnectowneruid-f.md#getConnectOwnerUid) | Obtains the data network that is activated by default. You can only call this method in VPN application. |
-| [getConnectOwnerUidSync](arkts-network-connection-getconnectowneruidsync-f.md#getConnectOwnerUidSync) | Obtains the data network that is activated by default. You can only call this method in VPN application. |
-| [getConnectionProperties](arkts-network-connection-getconnectionproperties-f.md#getConnectionProperties) | Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getConnectionProperties](arkts-network-connection-getconnectionproperties-f.md#getConnectionProperties) | Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getConnectionPropertiesSync](arkts-network-connection-getconnectionpropertiessync-f.md#getConnectionPropertiesSync) | Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getDefaultHttpProxy](arkts-network-connection-getdefaulthttpproxy-f.md#getDefaultHttpProxy) | Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet), the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) proxy settings are returned. In other cases, the proxy settings of default network are returned. |
-| [getDefaultHttpProxy](arkts-network-connection-getdefaulthttpproxy-f.md#getDefaultHttpProxy) | Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet), the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) proxy settings are returned. In other cases, the proxy settings of default network are returned. |
-| [getDefaultNet](arkts-network-connection-getdefaultnet-f.md#getDefaultNet) | Obtains the data network that is activated by default. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getDefaultNet](arkts-network-connection-getdefaultnet-f.md#getDefaultNet) | Obtains the data network that is activated by default. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getDefaultNetSync](arkts-network-connection-getdefaultnetsync-f.md#getDefaultNetSync) | Obtains the data network that is activated by default. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getDnsAscii](arkts-network-connection-getdnsascii-f.md#getDnsAscii) | Convert a string from Unicode to ASCII Compatible Encoding (ACE), as defined by the ToASCII operation of RFC 3490. |
-| [getDnsUnicode](arkts-network-connection-getdnsunicode-f.md#getDnsUnicode) | Convert a string from ASCII Compatible Encoding (ACE) to Unicode, as defined by the ToUnicode operation of RFC 3490. |
-| [getIpNeighTable](arkts-network-connection-getipneightable-f.md#getIpNeighTable) | Obtain the IP and MAC address correspondence table of the neighboring network. |
-| [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md#getNetCapabilities) | Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md#getNetCapabilities) | Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getNetCapabilitiesSync](arkts-network-connection-getnetcapabilitiessync-f.md#getNetCapabilitiesSync) | Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getNetExtAttribute](arkts-network-connection-getnetextattribute-f.md#getNetExtAttribute) | Get the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getNetExtAttributeSync](arkts-network-connection-getnetextattributesync-f.md#getNetExtAttributeSync) | Get the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
-| [getPacFileUrl](arkts-network-connection-getpacfileurl-f.md#getPacFileUrl) | Obtain the URL pacFileUrl of the current PAC script. |
-| [getPacUrl](arkts-network-connection-getpacurl-f.md#getPacUrl) | Obtain the URL pacUrl of the current PAC script. |
-| [getSystemNetPortStates](arkts-network-connection-getsystemnetportstates-f.md#getSystemNetPortStates) | Obtains the port states of system network. To invoke this method, you must have the {@code ohos.permission.GET_IP_MAC_INFO} permission. |
-| [hasDefaultNet](arkts-network-connection-hasdefaultnet-f.md#hasDefaultNet) | Checks whether the default data network is activated. |
-| [hasDefaultNet](arkts-network-connection-hasdefaultnet-f.md#hasDefaultNet) | Checks whether the default data network is activated. |
-| [hasDefaultNetSync](arkts-network-connection-hasdefaultnetsync-f.md#hasDefaultNetSync) | Checks whether the default data network is activated. |
-| [isDefaultNetMetered](arkts-network-connection-isdefaultnetmetered-f.md#isDefaultNetMetered) | Checks whether data traffic usage on the current network is metered. |
-| [isDefaultNetMetered](arkts-network-connection-isdefaultnetmetered-f.md#isDefaultNetMetered) | Checks whether data traffic usage on the current network is metered. |
-| [isDefaultNetMeteredSync](arkts-network-connection-isdefaultnetmeteredsync-f.md#isDefaultNetMeteredSync) | Checks whether data traffic usage on the current network is metered. |
-| [queryProbeResult](arkts-network-connection-queryproberesult-f.md#queryProbeResult) | Query a network probe result. |
-| [queryTraceRoute](arkts-network-connection-querytraceroute-f.md#queryTraceRoute) | Query a network trace route. |
-| [refreshGlobalHttpProxy](arkts-network-connection-refreshglobalhttpproxy-f.md#refreshGlobalHttpProxy) | Notifies the system that global proxy re-authentication is required. Upon receiving the notification, the system will reproces the global proxy's authentication status. |
-| [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removeCustomDnsRule) | Remove the custom DNS rule of the host for current application. |
-| [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removeCustomDnsRule) | Remove the custom DNS rule of the host for current application. |
-| [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportNetConnected) | Reports the network state is connected. |
-| [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportNetConnected) | Reports the network state is connected. |
-| [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md#reportNetDisconnected) | Reports the network state is disconnected. |
-| [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md#reportNetDisconnected) | Reports the network state is disconnected. |
-| [setAppHttpProxy](arkts-network-connection-setapphttpproxy-f.md#setAppHttpProxy) | Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy). |
-| [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet) | Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the process will be bound to the {@code NetHandle}, and the resolution of all host names will be managed by the {@code NetHandle}.&lt;/p&gt; |
-| [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet) | Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the process will be bound to the {@code NetHandle}, and the resolution of all host names will be managed by the {@code NetHandle}.&lt;/p&gt; |
-| [setNetExtAttribute](arkts-network-connection-setnetextattribute-f.md#setNetExtAttribute) | Set the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission. |
-| [setNetExtAttributeSync](arkts-network-connection-setnetextattributesync-f.md#setNetExtAttributeSync) | Set the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission. |
-| [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md#setPacFileUrl) | Set the URL pacFileUrl of the current PAC script. Proxy information can be obtained through parsing the script address. To invoke this method, you must have the {@code ohos.permission.SET_PAC_URL} permission. |
-| [setPacUrl](arkts-network-connection-setpacurl-f.md#setPacUrl) | Set the URL pacUrl of the current PAC script. To invoke this method, you must have the {@code ohos.permission.SET_PAC_URL} permission. |
+| [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md#addcustomdnsrule) | Add a custom host and corresponding ip mapping for current application. |
+| [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md#addcustomdnsrule) | Add a custom host and corresponding ip mapping for current application. |
+| [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md#clearcustomdnsrules) | Clear all custom DNS rules for current application. |
+| [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md#clearcustomdnsrules) | Clear all custom DNS rules for current application. |
+| [createNetConnection](arkts-network-connection-createnetconnection-f.md#createnetconnection) | Create a network connection with optional netSpecifier and timeout. |
+| [findProxyForUrl](arkts-network-connection-findproxyforurl-f.md#findproxyforurl) | Find pac proxy info for the url. |
+| [getAddressesByName](arkts-network-connection-getaddressesbyname-f.md#getaddressesbyname) | Resolves the host name to obtain all IP addresses based on the default data network. |
+| [getAddressesByName](arkts-network-connection-getaddressesbyname-f.md#getaddressesbyname) | Resolves the host name to obtain all IP addresses based on the default data network. |
+| [getAddressesByNameWithOptions](arkts-network-connection-getaddressesbynamewithoptions-f.md#getaddressesbynamewithoptions) | Resolves a host name to obtain all IP addresses with specified query option. |
+| [getAllNets](arkts-network-connection-getallnets-f.md#getallnets) | Obtains the list of data networks that are activated. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getAllNets](arkts-network-connection-getallnets-f.md#getallnets) | Obtains the list of data networks that are activated. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getAllNetsSync](arkts-network-connection-getallnetssync-f.md#getallnetssync) | Obtains the list of data networks that are activated. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getAppNet](arkts-network-connection-getappnet-f.md#getappnet) | Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet). |
+| [getAppNet](arkts-network-connection-getappnet-f.md#getappnet) | Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet). |
+| [getAppNetSync](arkts-network-connection-getappnetsync-f.md#getappnetsync) | Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet). |
+| [getConnectOwnerUid](arkts-network-connection-getconnectowneruid-f.md#getconnectowneruid) | Obtains the data network that is activated by default. You can only call this method in VPN application. |
+| [getConnectOwnerUidSync](arkts-network-connection-getconnectowneruidsync-f.md#getconnectowneruidsync) | Obtains the data network that is activated by default. You can only call this method in VPN application. |
+| [getConnectionProperties](arkts-network-connection-getconnectionproperties-f.md#getconnectionproperties) | Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getConnectionProperties](arkts-network-connection-getconnectionproperties-f.md#getconnectionproperties) | Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getConnectionPropertiesSync](arkts-network-connection-getconnectionpropertiessync-f.md#getconnectionpropertiessync) | Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getDefaultHttpProxy](arkts-network-connection-getdefaulthttpproxy-f.md#getdefaulthttpproxy) | Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet), the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) proxy settings are returned. In other cases, the proxy settings of default network are returned. |
+| [getDefaultHttpProxy](arkts-network-connection-getdefaulthttpproxy-f.md#getdefaulthttpproxy) | Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet), the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) proxy settings are returned. In other cases, the proxy settings of default network are returned. |
+| [getDefaultNet](arkts-network-connection-getdefaultnet-f.md#getdefaultnet) | Obtains the data network that is activated by default. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getDefaultNet](arkts-network-connection-getdefaultnet-f.md#getdefaultnet) | Obtains the data network that is activated by default. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getDefaultNetSync](arkts-network-connection-getdefaultnetsync-f.md#getdefaultnetsync) | Obtains the data network that is activated by default. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getDnsAscii](arkts-network-connection-getdnsascii-f.md#getdnsascii) | Convert a string from Unicode to ASCII Compatible Encoding (ACE), as defined by the ToASCII operation of RFC 3490. |
+| [getDnsUnicode](arkts-network-connection-getdnsunicode-f.md#getdnsunicode) | Convert a string from ASCII Compatible Encoding (ACE) to Unicode, as defined by the ToUnicode operation of RFC 3490. |
+| [getIpNeighTable](arkts-network-connection-getipneightable-f.md#getipneightable) | Obtain the IP and MAC address correspondence table of the neighboring network. |
+| [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md#getnetcapabilities) | Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md#getnetcapabilities) | Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getNetCapabilitiesSync](arkts-network-connection-getnetcapabilitiessync-f.md#getnetcapabilitiessync) | Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getNetExtAttribute](arkts-network-connection-getnetextattribute-f.md#getnetextattribute) | Get the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getNetExtAttributeSync](arkts-network-connection-getnetextattributesync-f.md#getnetextattributesync) | Get the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission. |
+| [getPacFileUrl](arkts-network-connection-getpacfileurl-f.md#getpacfileurl) | Obtain the URL pacFileUrl of the current PAC script. |
+| [getPacUrl](arkts-network-connection-getpacurl-f.md#getpacurl) | Obtain the URL pacUrl of the current PAC script. |
+| [getSystemNetPortStates](arkts-network-connection-getsystemnetportstates-f.md#getsystemnetportstates) | Obtains the port states of system network. To invoke this method, you must have the {@code ohos.permission.GET_IP_MAC_INFO} permission. |
+| [hasDefaultNet](arkts-network-connection-hasdefaultnet-f.md#hasdefaultnet) | Checks whether the default data network is activated. |
+| [hasDefaultNet](arkts-network-connection-hasdefaultnet-f.md#hasdefaultnet) | Checks whether the default data network is activated. |
+| [hasDefaultNetSync](arkts-network-connection-hasdefaultnetsync-f.md#hasdefaultnetsync) | Checks whether the default data network is activated. |
+| [isDefaultNetMetered](arkts-network-connection-isdefaultnetmetered-f.md#isdefaultnetmetered) | Checks whether data traffic usage on the current network is metered. |
+| [isDefaultNetMetered](arkts-network-connection-isdefaultnetmetered-f.md#isdefaultnetmetered) | Checks whether data traffic usage on the current network is metered. |
+| [isDefaultNetMeteredSync](arkts-network-connection-isdefaultnetmeteredsync-f.md#isdefaultnetmeteredsync) | Checks whether data traffic usage on the current network is metered. |
+| [queryProbeResult](arkts-network-connection-queryproberesult-f.md#queryproberesult) | Query a network probe result. |
+| [queryTraceRoute](arkts-network-connection-querytraceroute-f.md#querytraceroute) | Query a network trace route. |
+| [refreshGlobalHttpProxy](arkts-network-connection-refreshglobalhttpproxy-f.md#refreshglobalhttpproxy) | Notifies the system that global proxy re-authentication is required. Upon receiving the notification, the system will reproces the global proxy's authentication status. |
+| [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removecustomdnsrule) | Remove the custom DNS rule of the host for current application. |
+| [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removecustomdnsrule) | Remove the custom DNS rule of the host for current application. |
+| [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportnetconnected) | Reports the network state is connected. |
+| [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportnetconnected) | Reports the network state is connected. |
+| [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md#reportnetdisconnected) | Reports the network state is disconnected. |
+| [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md#reportnetdisconnected) | Reports the network state is disconnected. |
+| [setAppHttpProxy](arkts-network-connection-setapphttpproxy-f.md#setapphttpproxy) | Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy). |
+| [setAppNet](arkts-network-connection-setappnet-f.md#setappnet) | Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the process will be bound to the {@code NetHandle}, and the resolution of all host names will be managed by the {@code NetHandle}.&lt;/p&gt; |
+| [setAppNet](arkts-network-connection-setappnet-f.md#setappnet) | Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the process will be bound to the {@code NetHandle}, and the resolution of all host names will be managed by the {@code NetHandle}.&lt;/p&gt; |
+| [setNetExtAttribute](arkts-network-connection-setnetextattribute-f.md#setnetextattribute) | Set the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission. |
+| [setNetExtAttributeSync](arkts-network-connection-setnetextattributesync-f.md#setnetextattributesync) | Set the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission. |
+| [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md#setpacfileurl) | Set the URL pacFileUrl of the current PAC script. Proxy information can be obtained through parsing the script address. To invoke this method, you must have the {@code ohos.permission.SET_PAC_URL} permission. |
+| [setPacUrl](arkts-network-connection-setpacurl-f.md#setpacurl) | Set the URL pacUrl of the current PAC script. To invoke this method, you must have the {@code ohos.permission.SET_PAC_URL} permission. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addVlanIp](arkts-network-connection-addvlanip-f-sys.md#addVlanIp) | Add ip of vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
-| [createVlanInterface](arkts-network-connection-createvlaninterface-f-sys.md#createVlanInterface) | Create vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
-| [deleteVlanIp](arkts-network-connection-deletevlanip-f-sys.md#deleteVlanIp) | Delete ip of vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
-| [destroyVlanInterface](arkts-network-connection-destroyvlaninterface-f-sys.md#destroyVlanInterface) | Destroy vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
-| [disableAirplaneMode](arkts-network-connection-disableairplanemode-f-sys.md#disableAirplaneMode) | Disables the airplane mode for a device. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
-| [disableAirplaneMode](arkts-network-connection-disableairplanemode-f-sys.md#disableAirplaneMode-(System-API)) | Disables the airplane mode for a device. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
-| [enableAirplaneMode](arkts-network-connection-enableairplanemode-f-sys.md#enableAirplaneMode) | Enables the airplane mode for a device. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
-| [enableAirplaneMode](arkts-network-connection-enableairplanemode-f-sys.md#enableAirplaneMode-(System-API)) | Enables the airplane mode for a device. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
-| [factoryReset](arkts-network-connection-factoryreset-f-sys.md#factoryReset) | factory reset network settings To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
-| [getGlobalHttpProxy](arkts-network-connection-getglobalhttpproxy-f-sys.md#getGlobalHttpProxy) | Obtains the network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings. |
-| [getGlobalHttpProxy](arkts-network-connection-getglobalhttpproxy-f-sys.md#getGlobalHttpProxy-(System-API)) | Obtains the network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings. |
-| [getProxyMode](arkts-network-connection-getproxymode-f-sys.md#getProxyMode) | Obtain the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#ProxyMode-(System-API)). |
-| [setGlobalHttpProxy](arkts-network-connection-setglobalhttpproxy-f-sys.md#setGlobalHttpProxy) | Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings. |
-| [setGlobalHttpProxy](arkts-network-connection-setglobalhttpproxy-f-sys.md#setGlobalHttpProxy-(System-API)) | Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings. |
-| [setInterfaceUp](arkts-network-connection-setinterfaceup-f-sys.md#setInterfaceUp) | Set a specific interface up. |
-| [setProxyMode](arkts-network-connection-setproxymode-f-sys.md#setProxyMode) | Set the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#ProxyMode-(System-API)). |
+| [addVlanIp](arkts-network-connection-addvlanip-f-sys.md#addvlanip) | Add ip of vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
+| [createVlanInterface](arkts-network-connection-createvlaninterface-f-sys.md#createvlaninterface) | Create vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
+| [deleteVlanIp](arkts-network-connection-deletevlanip-f-sys.md#deletevlanip) | Delete ip of vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
+| [destroyVlanInterface](arkts-network-connection-destroyvlaninterface-f-sys.md#destroyvlaninterface) | Destroy vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
+| [disableAirplaneMode](arkts-network-connection-disableairplanemode-f-sys.md#disableairplanemode) | Disables the airplane mode for a device. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
+| [disableAirplaneMode](arkts-network-connection-disableairplanemode-f-sys.md#disableairplanemode-system-api) | Disables the airplane mode for a device. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
+| [enableAirplaneMode](arkts-network-connection-enableairplanemode-f-sys.md#enableairplanemode) | Enables the airplane mode for a device. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
+| [enableAirplaneMode](arkts-network-connection-enableairplanemode-f-sys.md#enableairplanemode-system-api) | Enables the airplane mode for a device. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
+| [factoryReset](arkts-network-connection-factoryreset-f-sys.md#factoryreset) | factory reset network settings To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission. |
+| [getGlobalHttpProxy](arkts-network-connection-getglobalhttpproxy-f-sys.md#getglobalhttpproxy) | Obtains the network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings. |
+| [getGlobalHttpProxy](arkts-network-connection-getglobalhttpproxy-f-sys.md#getglobalhttpproxy-system-api) | Obtains the network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings. |
+| [getProxyMode](arkts-network-connection-getproxymode-f-sys.md#getproxymode) | Obtain the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#proxymode-system-api). |
+| [setGlobalHttpProxy](arkts-network-connection-setglobalhttpproxy-f-sys.md#setglobalhttpproxy) | Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings. |
+| [setGlobalHttpProxy](arkts-network-connection-setglobalhttpproxy-f-sys.md#setglobalhttpproxy-system-api) | Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings. |
+| [setInterfaceUp](arkts-network-connection-setinterfaceup-f-sys.md#setinterfaceup) | Set a specific interface up. |
+| [setProxyMode](arkts-network-connection-setproxymode-f-sys.md#setproxymode) | Set the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#proxymode-system-api). |
 <!--DelEnd-->
 
 ### Interfaces

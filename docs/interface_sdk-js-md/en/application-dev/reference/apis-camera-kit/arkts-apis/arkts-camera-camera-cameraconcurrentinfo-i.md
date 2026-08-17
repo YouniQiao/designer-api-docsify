@@ -4,10 +4,6 @@ Describes the camera's concurrency information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface CameraConcurrentInfo--><!--Device-camera-interface CameraConcurrentInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -30,10 +26,6 @@ Concurrent camera device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraConcurrentInfo-readonly device: CameraDevice--><!--Device-CameraConcurrentInfo-readonly device: CameraDevice-End-->
@@ -51,10 +43,6 @@ Scene mode.
 **Type:** Array&lt;[SceneMode](arkts-camera-camera-scenemode-e.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -74,10 +62,6 @@ Output capabilities of the camera.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraConcurrentInfo-readonly outputCapabilities: Array<CameraOutputCapability>--><!--Device-CameraConcurrentInfo-readonly outputCapabilities: Array<CameraOutputCapability>-End-->
@@ -95,10 +79,6 @@ Concurrency type.
 **Type:** [CameraConcurrentType](arkts-camera-camera-cameraconcurrenttype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

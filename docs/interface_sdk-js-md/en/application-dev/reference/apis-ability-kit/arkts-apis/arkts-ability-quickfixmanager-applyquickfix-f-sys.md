@@ -16,10 +16,6 @@ Applies a quick fix patch. This API uses an asynchronous callback to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
 <!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCallback<void>): void--><!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCallback<void>): void-End-->
@@ -45,7 +41,7 @@ Applies a quick fix patch. This API uses an asynchronous callback to return the 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { quickFixManager } from '@kit.AbilityKit';
@@ -74,10 +70,6 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>
 Applies a quick fix patch. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -109,7 +101,7 @@ Applies a quick fix patch. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { quickFixManager } from '@kit.AbilityKit';

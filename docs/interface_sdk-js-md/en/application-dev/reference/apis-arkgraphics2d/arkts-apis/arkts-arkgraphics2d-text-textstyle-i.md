@@ -1,12 +1,8 @@
 # TextStyle
 
-Represents a text style, which controls the visual appearance attributes of text, including font, color, font size, spacing, decoration lines, and shadows. TextStyle is applied to subsequently added text content through the [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushStyle) method of [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder), and works together with [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments.
+Represents a text style, which controls the visual appearance attributes of text, including font, color, font size, spacing, decoration lines, and shadows. TextStyle is applied to subsequently added text content through the [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle) method of [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder), and works together with [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle) (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-text-interface TextStyle--><!--Device-text-interface TextStyle-End-->
 
@@ -30,10 +26,6 @@ Text rectangle style. Pass this parameter when you need to add a background rect
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-backgroundRect?: RectStyle--><!--Device-TextStyle-backgroundRect?: RectStyle-End-->
@@ -51,10 +43,6 @@ Sets whether to use superscript or subscript in text layout. **TEXT_SUPERSCRIPT*
 **Type:** [TextBadgeType](arkts-arkgraphics2d-text-textbadgetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -74,10 +62,6 @@ Text baseline type. The default value is **ALPHABETIC**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-baseline?: TextBaseline--><!--Device-TextStyle-baseline?: TextBaseline-End-->
@@ -95,10 +79,6 @@ Vertical offset distance of the text baseline, in physical pixels (px). The defa
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -118,10 +98,6 @@ Text color. The default color is white.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-color?: common2D.Color--><!--Device-TextStyle-color?: common2D.Color-End-->
@@ -139,10 +115,6 @@ Text decoration. By default, no decoration is used.
 **Type:** [Decoration](arkts-arkgraphics2d-text-decoration-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -162,10 +134,6 @@ Ellipsis text. When the ellipsis takes effect, this field value replaces the ell
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-ellipsis?: string--><!--Device-TextStyle-ellipsis?: string-End-->
@@ -184,10 +152,6 @@ Ellipsis type. The default value is **END**, indicating that the ellipsis is at 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-ellipsisMode?: EllipsisMode--><!--Device-TextStyle-ellipsisMode?: EllipsisMode-End-->
@@ -205,10 +169,6 @@ Edge processing mode for drawing texts. The default value is **ANTI_ALIAS**.
 **Type:** drawing.FontEdging
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,10 +190,6 @@ List of font family names. The default value is empty, which matches the system 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-fontFamilies?: Array<string>--><!--Device-TextStyle-fontFamilies?: Array<string>-End-->
@@ -251,10 +207,6 @@ Array of text font features. Pass this parameter when you need to enable or disa
 **Type:** Array&lt;FontFeature&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -274,10 +226,6 @@ Font size, a floating-point value with a default value of **14.0**, measured in 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-fontSize?: double--><!--Device-TextStyle-fontSize?: double-End-->
@@ -296,10 +244,6 @@ Font style. The default value is **NORMAL**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-fontStyle?: FontStyle--><!--Device-TextStyle-fontStyle?: FontStyle-End-->
@@ -312,15 +256,11 @@ Font style. The default value is **NORMAL**.
 fontTypefaces?: Array<drawing.Typeface>
 ```
 
-Array of specified typesetting font objects, used to prioritize the specified font objects for text shaping and skip the font matching process. When a font object in the array cannot shape some characters, the unshaped characters will be shaped using the system font. The default value is an empty array, indicating that no font object is specified and the default font matching process is used. When fontTypefaces is set together with [TextStyle](#TextStyle).fontFamilies, fontTypefaces takes precedence.
+Array of specified typesetting font objects, used to prioritize the specified font objects for text shaping and skip the font matching process. When a font object in the array cannot shape some characters, the unshaped characters will be shaped using the system font. The default value is an empty array, indicating that no font object is specified and the default font matching process is used. When fontTypefaces is set together with [TextStyle](#textstyle).fontFamilies, fontTypefaces takes precedence.
 
 **Type:** Array&lt;drawing.Typeface&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -342,10 +282,6 @@ Array of variable font properties. Pass this parameter when you need to adjust t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-fontVariations?: Array<FontVariation>--><!--Device-TextStyle-fontVariations?: Array<FontVariation>-End-->
@@ -363,10 +299,6 @@ Font weight. The default value is W400. Before &lt;!--RP1--&gt;OpenHarmony 6.1&l
 **Type:** FontWeight
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -386,10 +318,6 @@ Font width. The default value is **NORMAL**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-fontWidth?: FontWidth--><!--Device-TextStyle-fontWidth?: FontWidth-End-->
@@ -407,10 +335,6 @@ Whether half leading is enabled. Half leading is the leading split in half and a
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -430,10 +354,6 @@ The value **true** means the text box height is set based on the font size and h
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-heightOnly?: boolean--><!--Device-TextStyle-heightOnly?: boolean-End-->
@@ -451,10 +371,6 @@ Scale factor of the line height. The value is a floating point number. The defau
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -474,10 +390,6 @@ Character spacing, a floating-point value in physical pixels (px) with a default
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-letterSpacing?: double--><!--Device-TextStyle-letterSpacing?: double-End-->
@@ -490,15 +402,11 @@ Character spacing, a floating-point value in physical pixels (px) with a default
 lineHeightMaximum?: double
 ```
 
-Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect when [TextStyle](#TextStyle).heightScale is greater than 0. The value is a positive floating point number. The default value is **Number.MAX_VALUE**.
+Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect when [TextStyle](#textstyle).heightScale is greater than 0. The value is a positive floating point number. The default value is **Number.MAX_VALUE**.
 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -512,15 +420,11 @@ Maximum line height, in physical pixels (px). If the line height is scaled, the 
 lineHeightMinimum?: double
 ```
 
-Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect when [TextStyle](#TextStyle).heightScale is greater than 0. The value is a non-negative floating point number. The default value is **0**.
+Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect when [TextStyle](#textstyle).heightScale is greater than 0. The value is a non-negative floating point number. The default value is **0**.
 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -540,10 +444,6 @@ Scaling base style of the line height. The default value is **FONT_SIZE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-lineHeightStyle?: LineHeightStyle--><!--Device-TextStyle-lineHeightStyle?: LineHeightStyle-End-->
@@ -561,10 +461,6 @@ Language type. For example, **'en-Latn'** indicates English (Latin script), **'z
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -584,10 +480,6 @@ Array of text shadows. Pass this parameter when you need to add shadow effects t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextStyle-textShadows?: Array<TextShadow>--><!--Device-TextStyle-textShadows?: Array<TextShadow>-End-->
@@ -605,10 +497,6 @@ Word spacing, a floating-point value in physical pixels (px) with a default valu
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

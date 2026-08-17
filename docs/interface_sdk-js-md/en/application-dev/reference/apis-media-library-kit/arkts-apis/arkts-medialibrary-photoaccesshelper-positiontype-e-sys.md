@@ -4,10 +4,6 @@ Enumerates the file locations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum PositionType--><!--Device-photoAccessHelper-enum PositionType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -24,10 +20,6 @@ Stored only on a local device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PositionType-LOCAL = 1--><!--Device-PositionType-LOCAL = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -43,10 +35,6 @@ CLOUD = 2
 Stored only on the cloud.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PositionType-CLOUD = 2--><!--Device-PositionType-CLOUD = 2-End-->
 

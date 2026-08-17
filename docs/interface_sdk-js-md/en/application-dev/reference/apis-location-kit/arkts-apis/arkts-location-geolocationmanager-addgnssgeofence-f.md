@@ -16,10 +16,6 @@ Add a geofence.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function addGnssGeofence(fenceRequest: GnssGeofenceRequest): Promise<int>--><!--Device-geoLocationManager-function addGnssGeofence(fenceRequest: GnssGeofenceRequest): Promise<int>-End-->
@@ -49,7 +45,7 @@ Add a geofence.
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

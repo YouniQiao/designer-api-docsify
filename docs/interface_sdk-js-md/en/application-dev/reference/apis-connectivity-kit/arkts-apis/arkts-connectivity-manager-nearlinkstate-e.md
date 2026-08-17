@@ -4,10 +4,6 @@ The enum of NearLink state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-manager-enum NearlinkState--><!--Device-manager-enum NearlinkState-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -21,10 +17,6 @@ STATE_TURNING_ON = 0
 Indicates that NearLink is turning on.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Indicates that NearLink is on and ready for use.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NearlinkState-STATE_ON = 1--><!--Device-NearlinkState-STATE_ON = 1-End-->
@@ -62,10 +50,6 @@ Indicates that NearLink is turning off.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NearlinkState-STATE_TURNING_OFF = 2--><!--Device-NearlinkState-STATE_TURNING_OFF = 2-End-->
@@ -81,10 +65,6 @@ STATE_OFF = 3
 Indicates that NearLink has turned off.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

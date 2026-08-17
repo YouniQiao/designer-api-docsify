@@ -1,12 +1,8 @@
 # RaycastParameters
 
-How a raycast should be performed.
+Describes the configuration parameters for raycasting, defining the behavior of raycasting.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RaycastParameters--><!--Device-unnamed-export interface RaycastParameters-End-->
 
@@ -18,15 +14,11 @@ How a raycast should be performed.
 rootNode?: Node
 ```
 
-If defined, search only the nodes in the hierarchy under this node If undefined, search all the nodes in the scene
+Limits the detection scope to this node and its child nodes. If this parameter is not specified, the entire scene is detected.
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RaycastParameters-rootNode?: Node--><!--Device-RaycastParameters-rootNode?: Node-End-->
 

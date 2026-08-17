@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface ErrorMessage--><!--Device-update-export interface ErrorMessage-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -26,10 +22,6 @@ errorCode: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ErrorMessage-errorCode: int--><!--Device-ErrorMessage-errorCode: int-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -47,10 +39,6 @@ errorMessage: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ErrorMessage-errorMessage: string--><!--Device-ErrorMessage-errorMessage: string-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface ScrollBarMargin--><!--Device-unnamed-declare interface ScrollBarMargin-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ end?: LengthMetrics
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,10 +39,6 @@ start?: LengthMetrics
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

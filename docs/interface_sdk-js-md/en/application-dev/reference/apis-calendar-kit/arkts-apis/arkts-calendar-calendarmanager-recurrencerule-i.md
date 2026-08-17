@@ -4,10 +4,6 @@ Describes the recurrence rule of a recurring event.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-calendarManager-export interface RecurrenceRule--><!--Device-calendarManager-export interface RecurrenceRule-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -30,10 +26,6 @@ Number of times that an event recurs. The value is a non-negative integer. If th
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RecurrenceRule-count?: number--><!--Device-RecurrenceRule-count?: number-End-->
@@ -51,10 +43,6 @@ Repeats by day of a month. If this parameter is not set, the default value is em
 **Type:** number[]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Repeats by day of a week. If this parameter is not set, the default value is emp
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RecurrenceRule-daysOfWeek?: number[]--><!--Device-RecurrenceRule-daysOfWeek?: number[]-End-->
@@ -95,10 +79,6 @@ Repeats by day of a year. If this parameter is not set, the default value is emp
 **Type:** number[]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,10 +98,6 @@ Excluded dates set for a duplicate calendar event, in timestamp format. The valu
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RecurrenceRule-excludedDates?: number[]--><!--Device-RecurrenceRule-excludedDates?: number[]-End-->
@@ -139,10 +115,6 @@ End date of the recurrence period. The value is a 13-digit timestamp. If this pa
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,10 +134,6 @@ Recurrence interval of a recurring event. The value is a non-negative integer. I
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RecurrenceRule-interval?: number--><!--Device-RecurrenceRule-interval?: number-End-->
@@ -183,10 +151,6 @@ Repeats by month of a year. If this parameter is not set, the default value is e
 **Type:** number[]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -206,10 +170,6 @@ Type of the event recurrence rule.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RecurrenceRule-recurrenceFrequency: RecurrenceFrequency--><!--Device-RecurrenceRule-recurrenceFrequency: RecurrenceFrequency-End-->
@@ -228,10 +188,6 @@ Repeats by week of a month. If this parameter is not set, the default value is e
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RecurrenceRule-weeksOfMonth?: number[]--><!--Device-RecurrenceRule-weeksOfMonth?: number[]-End-->
@@ -249,10 +205,6 @@ Repeats by week of a year. If this parameter is not set, the default value is em
 **Type:** number[]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

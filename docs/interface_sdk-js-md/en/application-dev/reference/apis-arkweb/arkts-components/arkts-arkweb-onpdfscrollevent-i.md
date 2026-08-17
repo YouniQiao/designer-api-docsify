@@ -1,12 +1,8 @@
 # OnPdfScrollEvent
 
-Defines the function triggered when the PDF page is scrolled to the bottom.
+Defines the callback function triggered when the PDF page is scrolled to the bottom.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnPdfScrollEvent--><!--Device-unnamed-declare interface OnPdfScrollEvent-End-->
 
@@ -23,10 +19,6 @@ URL of the page.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-OnPdfScrollEvent-url:string--><!--Device-OnPdfScrollEvent-url:string-End-->
 

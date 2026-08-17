@@ -4,10 +4,6 @@ Enumerates the metrics for frame performance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface FrameMetrics--><!--Device-window-interface FrameMetrics-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Whether the frame is the first frame. **true** for first frame, **false** otherw
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FrameMetrics-firstDrawFrame: boolean--><!--Device-FrameMetrics-firstDrawFrame: boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -49,10 +41,6 @@ Duration of gesture handling in a frame, in nanoseconds.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FrameMetrics-inputHandlingDuration: long--><!--Device-FrameMetrics-inputHandlingDuration: long-End-->
 
@@ -70,10 +58,6 @@ Duration of layout measurement in a frame, in nanoseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FrameMetrics-layoutMeasureDuration: long--><!--Device-FrameMetrics-layoutMeasureDuration: long-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -89,10 +73,6 @@ Timestamp marking the start of the current frame, in nanoseconds.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FrameMetrics-vsyncTimestamp: long--><!--Device-FrameMetrics-vsyncTimestamp: long-End-->
 

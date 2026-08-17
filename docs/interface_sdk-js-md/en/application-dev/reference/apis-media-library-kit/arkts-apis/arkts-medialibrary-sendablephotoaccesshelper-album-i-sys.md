@@ -2,13 +2,9 @@
 
 Provides APIs to manage albums.
 
-**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md#AbsAlbum)
+**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md#absalbum)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-sendablePhotoAccessHelper-interface Album--><!--Device-sendablePhotoAccessHelper-interface Album-End-->
 
@@ -29,10 +25,6 @@ getFaceId(): Promise<string>
 Obtains the face identifier on the cover of a portrait album or group photo album. This API uses a promise to return the result.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -56,9 +48,9 @@ Obtains the face identifier on the cover of a portrait album or group photo albu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md#@ohos.file.sendablePhotoAccessHelper).
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md#ohosfilesendablephotoaccesshelper).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

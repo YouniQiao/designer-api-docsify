@@ -4,10 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export default class ApplicationStateChangeCallback--><!--Device-unnamed-export default class ApplicationStateChangeCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -22,10 +18,6 @@ onApplicationBackground(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -34,7 +26,7 @@ onApplicationBackground(): void
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -138,10 +130,6 @@ onApplicationForeground(): void
 当前进程从后台切换到前台时触发回调。当该回调触发时，并不表示进程已完全处于前台状态，而是即将进入前台状态，此时无法执行需要依赖前台状态的操作（例如启动其他UIAbility）。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

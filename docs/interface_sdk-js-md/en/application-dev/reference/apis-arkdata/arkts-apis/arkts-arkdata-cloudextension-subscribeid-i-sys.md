@@ -4,10 +4,6 @@ Represents the subscription ID information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface SubscribeId--><!--Device-cloudExtension-export interface SubscribeId-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -32,10 +28,6 @@ Name of the database on the server.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SubscribeId-databaseAlias: string--><!--Device-SubscribeId-databaseAlias: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -53,10 +45,6 @@ Subscription ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SubscribeId-id: string--><!--Device-SubscribeId-id: string-End-->
 

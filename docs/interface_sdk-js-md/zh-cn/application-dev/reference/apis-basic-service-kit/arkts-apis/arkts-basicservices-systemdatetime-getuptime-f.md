@@ -10,10 +10,6 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -37,7 +33,7 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): long
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. This error code was added due to missing issues.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

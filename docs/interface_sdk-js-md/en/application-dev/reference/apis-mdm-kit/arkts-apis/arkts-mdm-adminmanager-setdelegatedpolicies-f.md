@@ -16,10 +16,6 @@ Delegates other applications to set device management policies. The applications
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_DELEGATED_POLICY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -33,7 +29,7 @@ Delegates other applications to set device management policies. The applications
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| bundleName | string | Yes | Bundle name of the delegated application. The distribution type of the delegated application must be **enterprise_normal** or **enterprise_mdm**. You can call the [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf) API to query the BundleInfo of the application, where **BundleInfo.appInfo.appDistributionType** indicates the distribution type. |
+| bundleName | string | Yes | Bundle name of the delegated application. The distribution type of the delegated application must be **enterprise_normal** or **enterprise_mdm**. You can call the [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself) API to query the BundleInfo of the application, where **BundleInfo.appInfo.appDistributionType** indicates the distribution type. |
 | policies | Array&lt;string&gt; | Yes | [Delegable policy list](../../../mdm/mdm-kit-appendix.md#delegable-policy-list). |
 
 **Error codes:**
@@ -46,7 +42,7 @@ Delegates other applications to set device management policies. The applications
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

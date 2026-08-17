@@ -4,10 +4,6 @@ Represents the information presented on the user authentication page. This API i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-userAuth-interface WidgetParam--><!--Device-userAuth-interface WidgetParam-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -29,10 +25,6 @@ Application window object. It is used to display the identity authentication dia
 **Type:** window.Window
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,10 +49,6 @@ Window type of the user authentication screen. **DIALOG_BOX** is suitable for mo
 **Default:** WindowModeType.DIALOG_BOX
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WidgetParam-windowMode?: WindowModeType--><!--Device-WidgetParam-windowMode?: WindowModeType-End-->
 

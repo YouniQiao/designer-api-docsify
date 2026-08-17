@@ -16,10 +16,6 @@ Subscribe to the callDetailsChange event.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function onCallDetailsChange(callback: Callback<CallAttributeOptions>): void--><!--Device-call-function onCallDetailsChange(callback: Callback<CallAttributeOptions>): void-End-->

@@ -10,10 +10,6 @@ function dumpJsHeapData(filename : string) : void
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function dumpJsHeapData(filename : string) : void--><!--Device-hidebug-function dumpJsHeapData(filename : string) : void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ function dumpJsHeapData(filename : string) : void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | the parameter check failed, Parameter type error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
@@ -54,10 +50,6 @@ function dumpJsHeapData(filename: string, needClean: boolean): void
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -73,7 +65,7 @@ function dumpJsHeapData(filename: string, needClean: boolean): void
 | filename | string | 是 | 用户自定义的虚拟机堆转储文件名，将在应用的files目录下生成fileName.heapsnapshot格式文件。string长度的最大值为128字节。 |
 | needClean | boolean | 是 | 转储堆快照前是否需要清除nodeId缓存。true：需要清除；false：不需要清除。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

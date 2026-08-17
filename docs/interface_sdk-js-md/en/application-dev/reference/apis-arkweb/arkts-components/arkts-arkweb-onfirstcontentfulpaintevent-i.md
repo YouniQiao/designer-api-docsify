@@ -1,12 +1,8 @@
 # OnFirstContentfulPaintEvent
 
-Represents the callback invoked when the first content paint occurs on the web page.
+Defines the callback information for the first content paint on the web page, including the load time and paint time. It is suitable for scenarios where monitoring page rendering performance is required, improving performance optimization accuracy and user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnFirstContentfulPaintEvent--><!--Device-unnamed-declare interface OnFirstContentfulPaintEvent-End-->
 
@@ -18,15 +14,11 @@ Represents the callback invoked when the first content paint occurs on the web p
 firstContentfulPaintMs: number
 ```
 
-Time between navigation and when the content is first rendered. Unit: milliseconds.
+Time between navigation and when the content is first rendered, in milliseconds.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ Time between navigation and when the content is first rendered. Unit: millisecon
 navigationStartTick: number
 ```
 
-Navigation start time, in microseconds. Unit: microseconds.
+Navigation start time, in microseconds.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

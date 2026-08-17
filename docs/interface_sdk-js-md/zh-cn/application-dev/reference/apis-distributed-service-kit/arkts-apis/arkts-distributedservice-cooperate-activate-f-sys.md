@@ -10,11 +10,9 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate)(targetNetworkId: string, inputDeviceId: int, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate)(targetNetworkId: string, inputDeviceId: int, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -28,7 +26,7 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 | --- | --- | --- | --- |
 | targetNetworkId | string | 是 | 键鼠穿越目标设备描述符。 |
 | inputDeviceId | number | 是 | 待穿越输入设备标识符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，键鼠穿越启动成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，键鼠穿越启动成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -38,7 +36,7 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [20900001](../../apis-distributedservice-kit/errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes: <br>1. A system error, such as null pointer, container-related exception, or IPC exception. <br>2. N-API invocation exception or invalid N-API status. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,11 +67,9 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate（系统接口）)(targetNetworkId: string, inputDeviceId: int)
+**替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate系统接口)(targetNetworkId: string, inputDeviceId: int)
 
 <!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>-End-->
 
@@ -102,7 +98,7 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [20900001](../../apis-distributedservice-kit/errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes: <br>1. A system error, such as null pointer, container-related exception, or IPC exception. <br>2. N-API invocation exception or invalid N-API status. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

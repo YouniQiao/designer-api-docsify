@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace charger--><!--Device-unnamed-declare namespace charger-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

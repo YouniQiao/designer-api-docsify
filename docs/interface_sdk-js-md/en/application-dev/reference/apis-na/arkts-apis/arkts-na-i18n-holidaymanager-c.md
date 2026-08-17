@@ -4,9 +4,7 @@ Provide some functions to manage holidays in a country or region. Partly follows
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export class HolidayManager--><!--Device-i18n-export class HolidayManager-End-->
 
@@ -22,9 +20,7 @@ Creates a HolidayManager object for parsing holiday data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -55,9 +51,7 @@ Obtains the holiday information list of the specified year.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -75,7 +69,7 @@ Obtains the holiday information list of the specified year.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[HolidayInfoItem](arkts-na-i18n-holidayinfoitem-i.md)&gt; | Holiday information list. |
+| Array&lt;[HolidayInfoItem](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-holidayinfoitem-i.md)&gt; | Holiday information list. |
 
 **Error codes:**
 
@@ -94,9 +88,7 @@ Determines whether the specified date is a holiday.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

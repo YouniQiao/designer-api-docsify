@@ -4,10 +4,6 @@ Enumerates the data channel types supported by the UDMF. It is used to identify 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unifiedDataChannel-enum Intention--><!--Device-unifiedDataChannel-enum Intention-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -21,10 +17,6 @@ DATA_HUB = 'DataHub'
 Public data channel.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Data channel of the system sharing type. **Use scenario**: This API is used to s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Intention-SYSTEM_SHARE = 'SystemShare'--><!--Device-Intention-SYSTEM_SHARE = 'SystemShare'-End-->
@@ -64,10 +52,6 @@ Data channel of the picker type. **Use scenario**: This API is used to share dat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Intention-PICKER = 'Picker'--><!--Device-Intention-PICKER = 'Picker'-End-->
@@ -83,10 +67,6 @@ MENU = 'Menu'
 Data channel of the menu type. **Use scenario**: This API is used to share data across applications in the shortcut menu.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

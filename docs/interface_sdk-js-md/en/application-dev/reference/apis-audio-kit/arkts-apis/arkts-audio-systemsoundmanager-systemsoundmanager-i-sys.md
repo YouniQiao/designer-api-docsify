@@ -4,10 +4,6 @@ System sound manager object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemSoundManager-interface SystemSoundManager--><!--Device-systemSoundManager-interface SystemSoundManager-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -30,10 +26,6 @@ Add customized tone into ringtone library.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
 <!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string): Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string): Promise<string>-End-->
@@ -47,7 +39,7 @@ Add customized tone into ringtone library.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | Yes | Tone attributes created by [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md#createCustomizedToneAttrs-(System-API)). |
+| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | Yes | Tone attributes created by [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md#createcustomizedtoneattrs-system-api). |
 | externalUri | string | Yes | Tone uri in external storage. |
 
 **Return value:**
@@ -69,7 +61,7 @@ Add customized tone into ringtone library.
 | [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
 | [20700004](../errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -107,10 +99,6 @@ Add customized tone into ringtone library.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
 <!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)      : Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)      : Promise<string>-End-->
@@ -124,7 +112,7 @@ Add customized tone into ringtone library.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | Yes | Tone attributes created by [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md#createCustomizedToneAttrs-(System-API)). |
+| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | Yes | Tone attributes created by [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md#createcustomizedtoneattrs-system-api). |
 | fd | int | Yes | File descriptor. |
 | offset | long | No | The offset in the file where the data to be read, in bytes. By default, the offset is zero. |
 | length | long | No | The length in bytes of the data to be read. By default, the length is the rest of bytes in the file from the offset. |
@@ -148,7 +136,7 @@ Add customized tone into ringtone library.
 | [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
 | [20700004](../errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -187,10 +175,6 @@ Close fd.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemSoundManager-close(fd: int): Promise<void>--><!--Device-SystemSoundManager-close(fd: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -217,7 +201,7 @@ Close fd.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -245,10 +229,6 @@ Gets attribute list of alarm tones.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -275,7 +255,7 @@ Gets attribute list of alarm tones.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -301,10 +281,6 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 Gets uri of the current alarm tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>--><!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>-End-->
 
@@ -332,7 +308,7 @@ Gets uri of the current alarm tone.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -359,10 +335,6 @@ Gets the ringtone attribute which is in use.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -388,7 +360,7 @@ Gets the ringtone attribute which is in use.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -412,10 +384,6 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 Gets attributes of the default alarm tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>-End-->
 
@@ -443,7 +411,7 @@ Gets attributes of the default alarm tone.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -469,10 +437,6 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 Gets attributes of the default ringtone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>-End-->
 
@@ -501,7 +465,7 @@ Gets attributes of the default ringtone.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -528,10 +492,6 @@ getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<T
 Gets attributes of the default system tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>-End-->
 
@@ -560,7 +520,7 @@ Gets attributes of the default system tone.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -587,10 +547,6 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 Get attributes of haptics which is synchronized with one tone. If no haptics is found, then the attributes in the returned ToneHapticsAttrs is empty.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>--><!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>-End-->
 
@@ -621,7 +577,7 @@ Get attributes of haptics which is synchronized with one tone. If no haptics is 
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -648,10 +604,6 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result. Before calling this interface, ensure that the incoming hapticUri actually exists in the system. Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file. After obtaining the instance through this interface, actively call release method of the ringtone player to release player resources when the service is terminated.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -692,10 +644,6 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>-End-->
@@ -723,7 +671,7 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the [addCustomizedTone](#addCustomizedTone). |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the [addCustomizedTone](#addcustomizedtone). |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## getRingtoneAttrList
@@ -735,10 +683,6 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 Gets attribute list of ringtones.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>-End-->
 
@@ -767,7 +711,7 @@ Gets attribute list of ringtones.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -795,10 +739,6 @@ Gets the ringtone player.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -825,7 +765,7 @@ Gets the ringtone player.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -854,10 +794,6 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 Gets the ringtone player.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer | null>-End-->
 
@@ -894,10 +830,6 @@ Gets the ringtone uri.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -925,7 +857,7 @@ Gets the ringtone uri.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -953,11 +885,9 @@ Gets the ringtone player.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getRingtonePlayer](#getRingtonePlayer)
+**Substitutes:** [getRingtonePlayer](#getringtoneplayer)
 
 <!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void-End-->
 
@@ -973,7 +903,7 @@ Gets the ringtone player.
 | type | RingtoneType | Yes | Ringtone type to get. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1005,11 +935,9 @@ Gets the ringtone player.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getRingtonePlayer](#getRingtonePlayer)
+**Substitutes:** [getRingtonePlayer](#getringtoneplayer)
 
 <!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>-End-->
 
@@ -1030,7 +958,7 @@ Gets the ringtone player.
 | --- | --- |
 | Promise&lt;RingtonePlayer&gt; | Promise used to return a ringtone player instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1060,11 +988,9 @@ Gets the ringtone uri.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getRingtoneUri](#getRingtoneUri)
+**Substitutes:** [getRingtoneUri](#getringtoneuri)
 
 <!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void-End-->
 
@@ -1080,7 +1006,7 @@ Gets the ringtone uri.
 | type | RingtoneType | Yes | Ringtone type to get. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1110,11 +1036,9 @@ Gets the ringtone uri.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getRingtoneUri](#getRingtoneUri)
+**Substitutes:** [getRingtoneUri](#getringtoneuri)
 
 <!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>-End-->
 
@@ -1135,7 +1059,7 @@ Gets the ringtone uri.
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the ringtone uri maintained in system. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1162,10 +1086,6 @@ getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneA
 Gets attribute list of alarm tones.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>-End-->
 
@@ -1194,7 +1114,7 @@ Gets attribute list of alarm tones.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1222,10 +1142,6 @@ Gets the system tone player.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>--><!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -1252,7 +1168,7 @@ Gets the system tone player.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1281,10 +1197,6 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 Gets the system tone player.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer | null>--><!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer | null>-End-->
 
@@ -1321,10 +1233,6 @@ Gets the system tone uri.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>--><!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -1352,7 +1260,7 @@ Gets the system tone uri.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1379,10 +1287,6 @@ getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHaptics
 Get haptics list.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>--><!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>-End-->
 
@@ -1412,7 +1316,7 @@ Get haptics list.
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1438,10 +1342,6 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 Get haptics settings.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>--><!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>-End-->
 
@@ -1471,7 +1371,7 @@ Get haptics settings.
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1498,10 +1398,6 @@ openAlarmTone(context: BaseContext, uri: string): Promise<int>
 Open alarm tone file.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>--><!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>-End-->
 
@@ -1531,7 +1427,7 @@ Open alarm tone file.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of uri is notification instead of alarm. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1558,10 +1454,6 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>
 Open haptics.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>--><!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>-End-->
 
@@ -1592,7 +1484,7 @@ Open haptics.
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1620,10 +1512,6 @@ Open tone list in batch.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>--><!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -1649,7 +1537,7 @@ Open tone list in batch.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Calleris not a system application. |
 | [20700007](../errorcode-audio-ringtone-sys.md#20700007-invalid-parameter) | Parameter is invalid, e.g. the length of uriList is too long. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1675,10 +1563,6 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 Remove customized tone in ringtone library.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
@@ -1711,7 +1595,7 @@ Remove customized tone in ringtone library.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1738,10 +1622,6 @@ removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemS
 Remove customized tone list in batch.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
@@ -1771,7 +1651,7 @@ Remove customized tone list in batch.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [20700007](../errorcode-audio-ringtone-sys.md#20700007-invalid-parameter) | Parameter is invalid, e.g. the length of uriList is too long. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1797,10 +1677,6 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 Sets uri of the current alarm tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>--><!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>-End-->
 
@@ -1830,7 +1706,7 @@ Sets uri of the current alarm tone.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of input uri is not an alarm tone. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1857,10 +1733,6 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 Sets the ringtone uri to system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>-End-->
 
@@ -1890,7 +1762,7 @@ Sets the ringtone uri to system.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1919,11 +1791,9 @@ Sets the ringtone uri to system.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setRingtoneUri](#setRingtoneUri)
+**Substitutes:** [setRingtoneUri](#setringtoneuri)
 
 <!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void-End-->
 
@@ -1940,7 +1810,7 @@ Sets the ringtone uri to system.
 | type | RingtoneType | Yes | Ringtone type to set. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the set uri result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1971,11 +1841,9 @@ Sets the ringtone uri to system.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setRingtoneUri](#setRingtoneUri)
+**Substitutes:** [setRingtoneUri](#setringtoneuri)
 
 <!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>-End-->
 
@@ -1997,7 +1865,7 @@ Sets the ringtone uri to system.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the set uri result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2025,10 +1893,6 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 Sets the system tone uri to system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>--><!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>-End-->
 
@@ -2058,7 +1922,7 @@ Sets the system tone uri to system.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2086,10 +1950,6 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 Set haptics settings.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>--><!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>-End-->
 
@@ -2121,7 +1981,7 @@ Set haptics settings.
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

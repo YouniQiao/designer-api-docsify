@@ -4,10 +4,6 @@ InputMethodListDialog({controller: CustomDialogController, patternOptions?: Patt
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct InputMethodListDialog--><!--Device-unnamed-export declare struct InputMethodListDialog-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -31,10 +27,6 @@ The method to build component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodListDialog-@Builder  build(): void--><!--Device-InputMethodListDialog-@Builder  build(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -51,10 +43,6 @@ Sets the controller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodListDialog-controller: CustomDialogController--><!--Device-InputMethodListDialog-controller: CustomDialogController-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -70,10 +58,6 @@ Sets the pattern options. This parameter can be left blank when it is not defaul
 **Type:** [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodListDialog-patternOptions?: PatternOptions--><!--Device-InputMethodListDialog-patternOptions?: PatternOptions-End-->
 

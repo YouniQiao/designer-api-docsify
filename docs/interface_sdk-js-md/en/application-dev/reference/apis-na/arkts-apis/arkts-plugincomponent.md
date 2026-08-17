@@ -7,8 +7,8 @@
 
 | Name | Description |
 | --- | --- |
-| [PluginComponent](arkts-na-plugincomponent-plugincomponent-f-sys.md#PluginComponent-(System-API)) | Defines PluginComponent Component. |
-| [PluginComponent](arkts-na-plugincomponent-plugincomponent-f-sys.md#PluginComponent-(System-API)) | Defines PluginComponent Component.It requires call setPluginComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
+| [PluginComponent](arkts-na-plugincomponent-plugincomponent-f-sys.md#plugincomponent-system-api) | Defines PluginComponent Component. |
+| [PluginComponent](arkts-na-plugincomponent-plugincomponent-f-sys.md#plugincomponent-system-api) | Defines PluginComponent Component.It requires call setPluginComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
 <!--DelEnd-->
 
 <!--Del-->

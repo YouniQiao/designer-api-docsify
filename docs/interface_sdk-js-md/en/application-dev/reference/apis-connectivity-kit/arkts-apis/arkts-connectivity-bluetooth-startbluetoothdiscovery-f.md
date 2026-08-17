@@ -16,11 +16,9 @@ Starts scanning Bluetooth devices.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [startBluetoothDiscovery](arkts-connectivity-bluetoothmanager-startbluetoothdiscovery-f.md#startBluetoothDiscovery)
+**Substitutes:** [startBluetoothDiscovery](arkts-connectivity-bluetoothmanager-startbluetoothdiscovery-f.md#startbluetoothdiscovery)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH and ohos.permission.LOCATION
 
@@ -34,7 +32,7 @@ Starts scanning Bluetooth devices.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let deviceId : Array<string>;

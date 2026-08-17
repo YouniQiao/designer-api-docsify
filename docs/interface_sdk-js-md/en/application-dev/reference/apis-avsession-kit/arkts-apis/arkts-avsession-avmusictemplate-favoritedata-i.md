@@ -4,10 +4,6 @@ The definition of Favorite/Subscribe.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avMusicTemplate-interface FavoriteData--><!--Device-avMusicTemplate-interface FavoriteData-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -30,10 +26,6 @@ Favorite counts.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FavoriteData-favCounts: string--><!--Device-FavoriteData-favCounts: string-End-->
@@ -52,10 +44,6 @@ Is favorite.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FavoriteData-isFavorite: boolean--><!--Device-FavoriteData-isFavorite: boolean-End-->
@@ -73,10 +61,6 @@ Is supported favorite.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Provides APIs for locating certificates or CRLs in a **CertCRLCollection** objec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface CertCRLCollection--><!--Device-cert-interface CertCRLCollection-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -27,10 +23,6 @@ selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>
 Selects CRLs that match the specified parameters. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -58,7 +50,7 @@ Selects CRLs that match the specified parameters. This API uses a promise to ret
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -167,10 +159,6 @@ Selects CRLs that match the specified parameters. This API uses an asynchronous 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void--><!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void-End-->
@@ -192,7 +180,7 @@ Selects CRLs that match the specified parameters. This API uses an asynchronous 
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -301,10 +289,6 @@ Selects certificates that match the specified parameters. This API uses a promis
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>-End-->
@@ -331,7 +315,7 @@ Selects certificates that match the specified parameters. This API uses a promis
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -404,10 +388,6 @@ Selects certificates that match the specified parameters. This API uses an async
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void-End-->
@@ -429,7 +409,7 @@ Selects certificates that match the specified parameters. This API uses an async
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

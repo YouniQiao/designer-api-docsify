@@ -4,10 +4,6 @@ Defines APIs to access the result set obtained by querying the RDB store. Before
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-class ResultSet--><!--Device-photoAccessHelper-class ResultSet-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -30,10 +26,6 @@ Closes this resultSet to release memory. If it is not closed, memory leaks may o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ResultSet-close(): void--><!--Device-ResultSet-close(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -47,7 +39,7 @@ Closes this resultSet to release memory. If it is not closed, memory leaks may o
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
@@ -71,10 +63,6 @@ Obtains the values of all columns in the specified row.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ResultSet-getRow(): ValuesBucket--><!--Device-ResultSet-getRow(): ValuesBucket-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -94,7 +82,7 @@ Obtains the values of all columns in the specified row.
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
@@ -119,10 +107,6 @@ getValue(columnIndex: int): ValueType
 Obtains the value of the specified column in the current row.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ResultSet-getValue(columnIndex: int): ValueType--><!--Device-ResultSet-getValue(columnIndex: int): ValueType-End-->
 
@@ -150,7 +134,7 @@ Obtains the value of the specified column in the current row.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: columnIndex invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
@@ -176,10 +160,6 @@ Moves the cursor to the first row of the result set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ResultSet-goToFirstRow(): boolean--><!--Device-ResultSet-goToFirstRow(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -199,7 +179,7 @@ Moves the cursor to the first row of the result set.
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
@@ -224,10 +204,6 @@ Moves the cursor to the next row in the result set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ResultSet-goToNextRow(): boolean--><!--Device-ResultSet-goToNextRow(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -247,7 +223,7 @@ Moves the cursor to the next row in the result set.
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
@@ -271,10 +247,6 @@ goToRow(position: int): boolean
 Moves the cursor to the specified row in the result set.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ResultSet-goToRow(position: int): boolean--><!--Device-ResultSet-goToRow(position: int): boolean-End-->
 
@@ -302,7 +274,7 @@ Moves the cursor to the specified row in the result set.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: position invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
@@ -329,10 +301,6 @@ Number of columns in the result set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ResultSet-columnCount: int--><!--Device-ResultSet-columnCount: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -350,10 +318,6 @@ Whether the cursor is in the last row of the result set. **true** if the cursor 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ResultSet-isAtLastRow: boolean--><!--Device-ResultSet-isAtLastRow: boolean-End-->
 
@@ -373,10 +337,6 @@ Number of rows in the result set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ResultSet-rowCount: int--><!--Device-ResultSet-rowCount: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -394,10 +354,6 @@ Index of the current row in the result set.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ResultSet-rowIndex: int--><!--Device-ResultSet-rowIndex: int-End-->
 

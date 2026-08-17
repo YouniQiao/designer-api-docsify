@@ -4,10 +4,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-webSocket-export interface WebSocket--><!--Device-webSocket-export interface WebSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -27,10 +23,6 @@ close(callback: AsyncCallback<boolean>): void
 Closes a WebSocket connection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -53,7 +45,7 @@ Closes a WebSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -79,10 +71,6 @@ Closes a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -95,7 +83,7 @@ Closes a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | Yes | Optional parameters [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md#WebSocketCloseOptions). |
+| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | Yes | Optional parameters [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md#websocketcloseoptions). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of close. |
 
 **Error codes:**
@@ -105,7 +93,7 @@ Closes a WebSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -137,10 +125,6 @@ Closes a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -153,7 +137,7 @@ Closes a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | No | Optional parameters [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md#WebSocketCloseOptions). |
+| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | No | Optional parameters [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md#websocketcloseoptions). |
 
 **Return value:**
 
@@ -168,7 +152,7 @@ Closes a WebSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -197,10 +181,6 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -228,7 +208,7 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -255,10 +235,6 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -272,7 +248,7 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for establishing a WebSocket connection. |
-| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | Yes | Optional parameters [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md#WebSocketRequestOptions). |
+| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | Yes | Optional parameters [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md#websocketrequestoptions). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of connect. |
 
 **Error codes:**
@@ -287,7 +263,7 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -338,10 +314,6 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -355,7 +327,7 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for establishing a WebSocket connection. |
-| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | No | Optional parameters [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md#WebSocketRequestOptions). |
+| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | No | Optional parameters [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md#websocketrequestoptions). |
 
 **Return value:**
 
@@ -375,7 +347,7 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -400,10 +372,6 @@ Cancels listening for receiving data ends events of a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocket-offDataEnd(callback?: Callback<void>): void--><!--Device-WebSocket-offDataEnd(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -424,10 +392,6 @@ Unregisters the observer for HTTP Response Header events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocket-offHeaderReceive(callback?: Callback<ResponseHeaders>): void--><!--Device-WebSocket-offHeaderReceive(callback?: Callback<ResponseHeaders>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -447,10 +411,6 @@ offMessage(callback?: AsyncCallback<string | ArrayBuffer>): void
 Cancels listening for the message events of a WebSocket connection. data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -474,10 +434,6 @@ Cancels listening for the open events of a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WebSocket-offOpen(callback?: Callback<OpenResult>): void--><!--Device-WebSocket-offOpen(callback?: Callback<OpenResult>): void-End-->
@@ -499,10 +455,6 @@ offOpenInfo(callback?: Callback<WebSocketOpenInfo>): void
 Cancels listening for the open info events of a WebSocket connection.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -526,10 +478,6 @@ Cancels listening for the close events of a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocket-offWebSocketClose(callback?: AsyncCallback<CloseResult>): void--><!--Device-WebSocket-offWebSocketClose(callback?: AsyncCallback<CloseResult>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -549,10 +497,6 @@ offWebSocketError(callback?: ErrorCallback): void
 Cancels listening for the error events of a WebSocket connection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebSocket-offWebSocketError(callback?: ErrorCallback): void--><!--Device-WebSocket-offWebSocketError(callback?: ErrorCallback): void-End-->
 
@@ -574,10 +518,6 @@ Cancels listening for the close events of a WebSocket connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-off(type: 'close', callback?: AsyncCallback<CloseResult>): void--><!--Device-WebSocket-off(type: 'close', callback?: AsyncCallback<CloseResult>): void-End-->
@@ -591,7 +531,7 @@ Cancels listening for the close events of a WebSocket connection.
 | type | 'close' | Yes | event indicating that a WebSocket connection has been closed. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -610,10 +550,6 @@ Cancels listening for receiving data ends events of a WebSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocket-off(type: 'dataEnd', callback?: Callback<void>): void--><!--Device-WebSocket-off(type: 'dataEnd', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -625,7 +561,7 @@ Cancels listening for receiving data ends events of a WebSocket connection.
 | type | 'dataEnd' | Yes | event indicating the WebSocket connection has received data ends. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -644,10 +580,6 @@ Cancels listening for the error events of a WebSocket connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-WebSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
@@ -661,7 +593,7 @@ Cancels listening for the error events of a WebSocket connection.
 | type | 'error' | Yes | event indicating the WebSocket connection has encountered an error. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -680,10 +612,6 @@ Unregisters the observer for HTTP Response Header events.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocket-off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void--><!--Device-WebSocket-off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -695,7 +623,7 @@ Unregisters the observer for HTTP Response Header events.
 | type | 'headerReceive' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -714,10 +642,6 @@ Cancels listening for the message events of a WebSocket connection. data in Asyn
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void--><!--Device-WebSocket-off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void-End-->
@@ -731,7 +655,7 @@ Cancels listening for the message events of a WebSocket connection. data in Asyn
 | type | 'message' | Yes | event indicating that a message has been received from the server. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -750,10 +674,6 @@ Cancels listening for the open events of a WebSocket connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-off(type: 'open', callback?: AsyncCallback<Object>): void--><!--Device-WebSocket-off(type: 'open', callback?: AsyncCallback<Object>): void-End-->
@@ -767,7 +687,7 @@ Cancels listening for the open events of a WebSocket connection.
 | type | 'open' | Yes | event indicating that a WebSocket connection has been opened. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -796,10 +716,6 @@ Cancels listening for the open info events of a WebSocket connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebSocket-off(type: 'openInfo', callback?: AsyncCallback<WebSocketOpenInfo>): void--><!--Device-WebSocket-off(type: 'openInfo', callback?: AsyncCallback<WebSocketOpenInfo>): void-End-->
@@ -823,10 +739,6 @@ Enables listening for receiving data ends events of a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocket-onDataEnd(callback: Callback<void>): void--><!--Device-WebSocket-onDataEnd(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -847,10 +759,6 @@ Registers an observer for HTTP Response Header events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocket-onHeaderReceive(callback: Callback<ResponseHeaders>): void--><!--Device-WebSocket-onHeaderReceive(callback: Callback<ResponseHeaders>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -870,10 +778,6 @@ onMessage(callback: AsyncCallback<string | ArrayBuffer>): void
 Enables listening for the message events of a WebSocket connection. data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -897,10 +801,6 @@ Enables listening for the open events of a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WebSocket-onOpen(callback: Callback<OpenResult>): void--><!--Device-WebSocket-onOpen(callback: Callback<OpenResult>): void-End-->
@@ -922,10 +822,6 @@ onOpenInfo(callback: Callback<WebSocketOpenInfo>): void
 Enables listening for the open info events of a WebSocket connection.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -949,10 +845,6 @@ Enables listening for the close events of a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocket-onWebSocketClose(callback: AsyncCallback<CloseResult>): void--><!--Device-WebSocket-onWebSocketClose(callback: AsyncCallback<CloseResult>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -972,10 +864,6 @@ onWebSocketError(callback: ErrorCallback): void
 Enables listening for the error events of a WebSocket connection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebSocket-onWebSocketError(callback: ErrorCallback): void--><!--Device-WebSocket-onWebSocketError(callback: ErrorCallback): void-End-->
 
@@ -997,10 +885,6 @@ Enables listening for the close events of a WebSocket connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-on(type: 'close', callback: AsyncCallback<CloseResult>): void--><!--Device-WebSocket-on(type: 'close', callback: AsyncCallback<CloseResult>): void-End-->
@@ -1014,7 +898,7 @@ Enables listening for the close events of a WebSocket connection.
 | type | 'close' | Yes | event indicating that a WebSocket connection has been closed. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -1036,10 +920,6 @@ Enables listening for receiving data ends events of a WebSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocket-on(type: 'dataEnd', callback: Callback<void>): void--><!--Device-WebSocket-on(type: 'dataEnd', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1051,7 +931,7 @@ Enables listening for receiving data ends events of a WebSocket connection.
 | type | 'dataEnd' | Yes | event indicating the WebSocket connection has received data ends. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -1072,10 +952,6 @@ Enables listening for the error events of a WebSocket connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-WebSocket-on(type: 'error', callback: ErrorCallback): void-End-->
@@ -1089,7 +965,7 @@ Enables listening for the error events of a WebSocket connection.
 | type | 'error' | Yes | event indicating the WebSocket connection has encountered an error. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -1111,10 +987,6 @@ Registers an observer for HTTP Response Header events.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocket-on(type: 'headerReceive', callback: Callback<ResponseHeaders>): void--><!--Device-WebSocket-on(type: 'headerReceive', callback: Callback<ResponseHeaders>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1126,7 +998,7 @@ Registers an observer for HTTP Response Header events.
 | type | 'headerReceive' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -1147,10 +1019,6 @@ Enables listening for the message events of a WebSocket connection. data in Asyn
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void--><!--Device-WebSocket-on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void-End-->
@@ -1164,7 +1032,7 @@ Enables listening for the message events of a WebSocket connection. data in Asyn
 | type | 'message' | Yes | event indicating that a message has been received from the server. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -1186,10 +1054,6 @@ Enables listening for the open events of a WebSocket connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-on(type: 'open', callback: AsyncCallback<Object>): void--><!--Device-WebSocket-on(type: 'open', callback: AsyncCallback<Object>): void-End-->
@@ -1203,7 +1067,7 @@ Enables listening for the open events of a WebSocket connection.
 | type | 'open' | Yes | event indicating that a WebSocket connection has been opened. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -1229,10 +1093,6 @@ Enables listening for the open info events of a WebSocket connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebSocket-on(type: 'openInfo', callback: AsyncCallback<WebSocketOpenInfo>): void--><!--Device-WebSocket-on(type: 'openInfo', callback: AsyncCallback<WebSocketOpenInfo>): void-End-->
@@ -1256,10 +1116,6 @@ Sends data through a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -1282,7 +1138,7 @@ Sends data through a WebSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -1323,10 +1179,6 @@ Sends data through a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -1354,7 +1206,7 @@ Sends data through a WebSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';

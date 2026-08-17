@@ -16,10 +16,6 @@ Subscribe satellite status changed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function onSatelliteStatusChange(callback: Callback<SatelliteStatusInfo>): void--><!--Device-geoLocationManager-function onSatelliteStatusChange(callback: Callback<SatelliteStatusInfo>): void-End-->

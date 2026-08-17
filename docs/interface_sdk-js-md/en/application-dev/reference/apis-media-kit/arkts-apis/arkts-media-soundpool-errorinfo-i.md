@@ -4,10 +4,6 @@ Describes the error information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ErrorInfo--><!--Device-unnamed-export interface ErrorInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -23,10 +19,6 @@ Error code. The type of **errorCode** is BusinessError.
 **Type:** T
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ErrorInfo-errorCode: T--><!--Device-ErrorInfo-errorCode: T-End-->
 
@@ -44,10 +36,6 @@ Stage at which the error occurred.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ErrorInfo-errorType?: ErrorType--><!--Device-ErrorInfo-errorType?: ErrorType-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -64,10 +52,6 @@ ID of the resource where the error occurred. It can be obtained by calling **loa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ErrorInfo-soundId?: int--><!--Device-ErrorInfo-soundId?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -83,10 +67,6 @@ ID of the audio stream where the error occurred. It can be obtained by calling *
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ErrorInfo-streamId?: int--><!--Device-ErrorInfo-streamId?: int-End-->
 

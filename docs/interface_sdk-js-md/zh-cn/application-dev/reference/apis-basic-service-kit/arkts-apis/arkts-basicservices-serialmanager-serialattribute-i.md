@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-serialManager-interface SerialAttribute--><!--Device-serialManager-interface SerialAttribute-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
@@ -23,10 +19,6 @@ baudRate: BaudRates
 **类型：** [BaudRates](arkts-basicservices-serialmanager-baudrates-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SerialAttribute-baudRate: BaudRates--><!--Device-SerialAttribute-baudRate: BaudRates-End-->
 
@@ -46,10 +38,6 @@ dataBits?: DataBits
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SerialAttribute-dataBits?: DataBits--><!--Device-SerialAttribute-dataBits?: DataBits-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
@@ -68,10 +56,6 @@ parity?: Parity
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SerialAttribute-parity?: Parity--><!--Device-SerialAttribute-parity?: Parity-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
@@ -89,10 +73,6 @@ stopBits?: StopBits
 **默认值：** STOPBIT_1
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SerialAttribute-stopBits?: StopBits--><!--Device-SerialAttribute-stopBits?: StopBits-End-->
 

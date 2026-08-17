@@ -1,14 +1,10 @@
 # DateOptions
 
-DateOptions defines options for the date picker. Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions).
+DateOptions defines options for the date picker. Inherits from [CommonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions).
 
-**Inheritance/Implementation:** DateOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)
+**Inheritance/Implementation:** DateOptions extends [CommonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class DateOptions--><!--Device-unnamed-export declare class DateOptions-End-->
 
@@ -39,10 +35,6 @@ Specifies whether to display as lunar calendar. - true: Display as lunar calenda
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -59,15 +51,11 @@ mode?: DateMode
 
 Defines the mode of the date picker. Default value: DateMode.DATE
 
-**Type:** [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md)
+**Type:** [DateMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-datemode-e.md)
 
 **Default:** DateMode.DATE
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -19,10 +19,6 @@ Load train model from file description
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-mindSporeLite-function loadTrainModelFromFd(    model: int,    trainCfg?: TrainCfg,    context?: Context): Promise<Model>--><!--Device-mindSporeLite-function loadTrainModelFromFd(    model: int,    trainCfg?: TrainCfg,    context?: Context): Promise<Model>-End-->
@@ -47,10 +43,10 @@ Load train model from file description
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000012 | Failed to create native training model from file descriptor (fd). Possible causes: 1. The model file or file descriptor (fd) is incorrect; 2. The training configuration is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000012 | Failed to create native training model from file descriptor (fd). Possible causes: 1. The model file or file descriptor (fd) is incorrect; 2. The training configuration is incorrect. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo } from '@kit.CoreFileKit';

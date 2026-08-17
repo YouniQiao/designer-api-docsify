@@ -10,10 +10,6 @@ function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-errorManager-function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void--><!--Device-errorManager-function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void-End-->
@@ -34,7 +30,7 @@ function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';

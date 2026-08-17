@@ -10,10 +10,6 @@ function acquireDataAbilityHelper(uri: string): DataAbilityHelper
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-particleAbility-function acquireDataAbilityHelper(uri: string): DataAbilityHelper--><!--Device-particleAbility-function acquireDataAbilityHelper(uri: string): DataAbilityHelper-End-->
@@ -32,7 +28,7 @@ function acquireDataAbilityHelper(uri: string): DataAbilityHelper
 | --- | --- |
 | [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | 用来协助其他Ability访问DataAbility的工具类。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';

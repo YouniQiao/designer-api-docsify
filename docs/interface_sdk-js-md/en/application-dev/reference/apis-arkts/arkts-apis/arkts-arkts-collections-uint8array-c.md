@@ -1,12 +1,8 @@
 # Uint8Array
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md#@arkts.collections). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
+A linear data structure that is implemented on ArkTS ArrayBuffer. > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-collections-class Uint8Array--><!--Device-collections-class Uint8Array-End-->
 
@@ -27,10 +23,6 @@ import { collections } from 'collections';
 Returns an iterator that iterates over numbers.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -59,10 +51,6 @@ at(index: number): number | undefined
 Returns the element at the given index. If no element is found, **undefined** is returned.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -99,10 +87,6 @@ A constructor used to create an empty ArkTS Uint8Array.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-constructor()--><!--Device-Uint8Array-constructor()-End-->
@@ -124,10 +108,6 @@ constructor(length: number)
 A constructor used to create an ArkTS Uint8Array of a given length.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -157,10 +137,6 @@ A constructor that creates an ArkTS Uint8Array from an iterable object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-constructor(elements: Iterable<number>)--><!--Device-Uint8Array-constructor(elements: Iterable<number>)-End-->
@@ -189,10 +165,6 @@ A constructor that creates an ArkTS Uint8Array from an array-like object or ArkT
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-constructor(array: ArrayLike<number> | ArrayBuffer)--><!--Device-Uint8Array-constructor(array: ArrayLike<number> | ArrayBuffer)-End-->
@@ -220,10 +192,6 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 A constructor that creates an ArkTS Uint8Array from an ArrayBuffer.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -254,10 +222,6 @@ copyWithin(target: number, start: number, end?: number): Uint8Array
 Copies elements within a given range from this ArkTS Uint8Array to another position in sequence.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -296,10 +260,6 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-entries(): IterableIterator<[number, number]>--><!--Device-Uint8Array-entries(): IterableIterator<[number, number]>-End-->
@@ -328,10 +288,6 @@ every(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 Checks whether all elements in this ArkTS Uint8Array meet a given condition.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -367,10 +323,6 @@ fill(value: number, start?: number, end?: number): Uint8Array
 Fills all elements in a given range in this ArkTS Uint8Array with a value.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -409,10 +361,6 @@ Returns a new ArkTS Uint8Array that contains all elements that meet the given co
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-filter(predicate: TypedArrayPredicateFn<number, Uint8Array>): Uint8Array--><!--Device-Uint8Array-filter(predicate: TypedArrayPredicateFn<number, Uint8Array>): Uint8Array-End-->
@@ -447,10 +395,6 @@ find(predicate: TypedArrayPredicateFn<number, Uint8Array>): number | undefined
 Returns the value of the first element that passes a test provided by a callback function. If none of the elements pass the test, **undefined** is returned.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -487,10 +431,6 @@ Returns the index of the first element that passes a test provided by a callback
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-findIndex(predicate: TypedArrayPredicateFn<number, Uint8Array>): number--><!--Device-Uint8Array-findIndex(predicate: TypedArrayPredicateFn<number, Uint8Array>): number-End-->
@@ -526,10 +466,6 @@ Calls a callback function for each element in this ArkTS Uint8Array.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-forEach(callbackFn: TypedArrayForEachCallback<number, Uint8Array>): void--><!--Device-Uint8Array-forEach(callbackFn: TypedArrayForEachCallback<number, Uint8Array>): void-End-->
@@ -559,10 +495,6 @@ Creates an ArkTS Uint8Array from an array-like or iterator object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-static from(arrayLike: ArrayLike<number>): Uint8Array--><!--Device-Uint8Array-static from(arrayLike: ArrayLike<number>): Uint8Array-End-->
@@ -590,10 +522,6 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 Creates an ArkTS Uint8Array from an array-like object.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -624,10 +552,6 @@ Creates an ArkTS Uint8Array from an iterator object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint8Array--><!--Device-Uint8Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint8Array-End-->
@@ -656,10 +580,6 @@ includes(searchElement: number, fromIndex?: number): boolean
 Checks whether elements are contained in this ArkTS Uint8Array.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -697,10 +617,6 @@ Returns the index of the first occurrence of a value in this ArkTS Uint8Array. I
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-indexOf(searchElement: number, fromIndex?: number): number--><!--Device-Uint8Array-indexOf(searchElement: number, fromIndex?: number): number-End-->
@@ -737,10 +653,6 @@ Concatenates all elements in this ArkTS Uint8Array into a string, with a given s
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-join(separator?: string): string--><!--Device-Uint8Array-join(separator?: string): string-End-->
@@ -776,10 +688,6 @@ Returns an iterator object that contains the key (index) of each element in this
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-keys(): IterableIterator<number>--><!--Device-Uint8Array-keys(): IterableIterator<number>-End-->
@@ -808,10 +716,6 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 Obtains the index of the last occurrence of the specified value in this ArkTS Uint8Array.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -849,10 +753,6 @@ Applies a callback function to each element in this ArkTS Uint8Array and uses th
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-map(callbackFn: TypedArrayMapCallback<number, Uint8Array>): Uint8Array--><!--Device-Uint8Array-map(callbackFn: TypedArrayMapCallback<number, Uint8Array>): Uint8Array-End-->
@@ -888,10 +788,6 @@ Creates an ArkTS Uint8Array with a variable number of parameters.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Uint8Array-static of(...items: number[]): Uint8Array--><!--Device-Uint8Array-static of(...items: number[]): Uint8Array-End-->
@@ -919,10 +815,6 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number
 Applies a reduce function on each element in this ArkTS Uint8Array and returns the final reduction result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -958,10 +850,6 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>, initial
 Applies a reduce function for each element in this ArkTS Uint8Array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -999,10 +887,6 @@ Applies a reduce function for each element in this ArkTS Uint8Array, receives an
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialValue: U): U--><!--Device-Uint8Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialValue: U): U-End-->
@@ -1038,10 +922,6 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Arr
 Reversely traverses this ArkTS Uint8Array, applies a reduce function for each element in the array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1079,10 +959,6 @@ Reversely traverses this ArkTS Uint8Array, applies a reduce function on each ele
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Uint8Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number--><!--Device-Uint8Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number-End-->
@@ -1118,10 +994,6 @@ Reverses this ArkTS Uint8Array.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-reverse(): Uint8Array--><!--Device-Uint8Array-reverse(): Uint8Array-End-->
@@ -1150,10 +1022,6 @@ set(array: ArrayLike<number>, offset?: number): void
 Writes the elements in an array-like object to the given start position in sequence.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1184,10 +1052,6 @@ slice(start?: number, end?: number): Uint8Array
 Selects a range of elements in this ArkTS Uint8Array to create an ArkTS Uint8Array.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1225,10 +1089,6 @@ Checks whether any element in this ArkTS Uint8Array meets a given condition.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-some(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean--><!--Device-Uint8Array-some(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean-End-->
@@ -1264,10 +1124,6 @@ Sorts elements in this ArkTS Uint8Array and returns the sorted ArkTS Uint8Array.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-sort(compareFn?: TypedArrayCompareFn<number>): Uint8Array--><!--Device-Uint8Array-sort(compareFn?: TypedArrayCompareFn<number>): Uint8Array-End-->
@@ -1302,10 +1158,6 @@ subarray(begin?: number, end?: number): Uint8Array
 Truncates an array from a specified position and returns a new ArkTS Uint8Array based on the same ArkTS ArrayBuffer.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1343,10 +1195,6 @@ Generates a string of digits that matches the cultural conventions of the curren
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Uint8Array-toLocaleString(): string--><!--Device-Uint8Array-toLocaleString(): string-End-->
@@ -1376,10 +1224,6 @@ Converts an ArkTS Uint8Array into a string.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Uint8Array-toString(): string--><!--Device-Uint8Array-toString(): string-End-->
@@ -1408,10 +1252,6 @@ values(): IterableIterator<number>
 Returns an iterator object that contains the value of each element in this ArkTS Uint8Array.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1444,10 +1284,6 @@ Number of bytes occupied by each element in the ArkTS Uint8Array.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8Array-static readonly BYTES_PER_ELEMENT: number-End-->
@@ -1465,10 +1301,6 @@ Bottom-layer buffer used by an ArkTS Uint8Array.
 **Type:** ArrayBuffer
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1488,10 +1320,6 @@ Number of bytes occupied by an ArkTS Uint8Array.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-readonly byteLength: number--><!--Device-Uint8Array-readonly byteLength: number-End-->
@@ -1510,10 +1338,6 @@ Offset between the ArkTS Uint8Array and the start position of the ArrayBuffer.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8Array-readonly byteOffset: number--><!--Device-Uint8Array-readonly byteOffset: number-End-->
@@ -1531,10 +1355,6 @@ Number of elements in an ArkTS Uint8Array.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

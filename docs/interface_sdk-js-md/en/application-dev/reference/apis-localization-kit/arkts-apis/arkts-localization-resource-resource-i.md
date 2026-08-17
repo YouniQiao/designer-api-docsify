@@ -4,10 +4,6 @@ This module provides resource-related information, including the application pac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Resource--><!--Device-unnamed-export interface Resource-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -23,10 +19,6 @@ Application bundle name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ Resource ID. The value ranges are as follows: <br>- Application resource ranges:
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Resource-id: long--><!--Device-Resource-id: long-End-->
@@ -67,10 +55,6 @@ Application module name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,10 +74,6 @@ Set params.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Resource-params?: Array<string | int | long | double | Resource>--><!--Device-Resource-params?: Array<string | int | long | double | Resource>-End-->
@@ -111,10 +91,6 @@ Resource type. The options are as follows: <br>- 10001: color <br>- 10002: float
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

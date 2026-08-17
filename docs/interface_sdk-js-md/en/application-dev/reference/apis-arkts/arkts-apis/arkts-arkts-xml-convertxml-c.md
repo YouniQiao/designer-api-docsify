@@ -4,10 +4,6 @@ ConvertXML representation refers to extensible markup language.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-xml-class ConvertXML--><!--Device-xml-class ConvertXML-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,11 +24,9 @@ Converts an XML text to a JavaScript object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [fastConvertToJSObject](#fastConvertToJSObject)
+**Substitutes:** [fastConvertToJSObject](#fastconverttojsobject)
 
 <!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object-End-->
 
@@ -51,7 +45,7 @@ Converts an XML text to a JavaScript object.
 | --- | --- |
 | Object | JavaScript object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let xml =
@@ -92,11 +86,9 @@ Converts an XML text to an object of the object type.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 14
 
-**Substitutes:** [fastConvertToJSObject](#fastConvertToJSObject)
+**Substitutes:** [fastConvertToJSObject](#fastconverttojsobject)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -123,7 +115,7 @@ Converts an XML text to an object of the object type.
 | --- | --- |
 | [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -168,10 +160,6 @@ Converts an XML text to an object of the object type. > **NOTE：**> > - This AP
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
@@ -197,7 +185,7 @@ Converts an XML text to an object of the object type. > **NOTE：**> > - This AP
 | --- | --- |
 | [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -241,10 +229,6 @@ Convert XML text to JavaScript objects, this method supports parsing large XML t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -272,7 +256,7 @@ Convert XML text to JavaScript objects, this method supports parsing large XML t
 | --- | --- |
 | [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

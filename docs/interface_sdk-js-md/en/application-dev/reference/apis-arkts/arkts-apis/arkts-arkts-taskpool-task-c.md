@@ -4,10 +4,6 @@ Enumerates tasks, which can be executed for multiple times, placed in a task gro
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-taskpool-class Task--><!--Device-taskpool-class Task-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ addDependency(...tasks: Task[]): void
 Adds dependent tasks for this task. Before using this API, you must create a **Task** instance. The task and its dependent tasks cannot be a task in a task group, serial queue, or asynchronous queue, a task that has been executed, or a periodic task. A task with a dependency relationship (a task that depends on another task or a task that is depended on) cannot be executed multiple times.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,7 +44,7 @@ Adds dependent tasks for this task. Before using this API, you must create a **T
 | [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
 | [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -95,10 +87,6 @@ A constructor used to create a **Task** instance.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-constructor(func: Function, ...args: Object[])--><!--Device-Task-constructor(func: Function, ...args: Object[])-End-->
@@ -118,7 +106,7 @@ A constructor used to create a **Task** instance.
 | --- | --- |
 | [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -140,10 +128,6 @@ A constructor used to create a **Task** instance, with the task name specified.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-constructor(name: string, func: Function, ...args: Object[])--><!--Device-Task-constructor(name: string, func: Function, ...args: Object[])-End-->
@@ -164,7 +148,7 @@ A constructor used to create a **Task** instance, with the task name specified.
 | --- | --- |
 | [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -188,10 +172,6 @@ Checks whether the running task is canceled. Before using this method, you need 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-static isCanceled(): boolean--><!--Device-Task-static isCanceled(): boolean-End-->
@@ -204,7 +184,7 @@ Checks whether the running task is canceled. Before using this method, you need 
 | --- | --- |
 | boolean | If the task is canceled, **true** is returned. Otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -260,10 +240,6 @@ Checks whether the task is complete.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Task-isDone(): boolean--><!--Device-Task-isDone(): boolean-End-->
@@ -276,7 +252,7 @@ Checks whether the task is complete.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the task is complete; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -317,10 +293,6 @@ Register a callback function and call it when a task is enqueued. The registrati
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Task-onEnqueued(callback: CallbackFunction): void--><!--Device-Task-onEnqueued(callback: CallbackFunction): void-End-->
@@ -339,7 +311,7 @@ Register a callback function and call it when a task is enqueued. The registrati
 | --- | --- |
 | [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';
@@ -372,10 +344,6 @@ Register a callback function and call it when a task fails to be executed(Period
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Task-onExecutionFailed(callback: CallbackFunctionWithError): void--><!--Device-Task-onExecutionFailed(callback: CallbackFunctionWithError): void-End-->
@@ -394,7 +362,7 @@ Register a callback function and call it when a task fails to be executed(Period
 | --- | --- |
 | [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';
@@ -433,10 +401,6 @@ Register a callback function and call it when a task is executed successfully. T
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Task-onExecutionSucceeded(callback: CallbackFunction): void--><!--Device-Task-onExecutionSucceeded(callback: CallbackFunction): void-End-->
@@ -455,7 +419,7 @@ Register a callback function and call it when a task is executed successfully. T
 | --- | --- |
 | [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';
@@ -488,10 +452,6 @@ Registers a callback for a task to receive and process data from the worker thre
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-onReceiveData(callback?: Function): void--><!--Device-Task-onReceiveData(callback?: Function): void-End-->
@@ -504,7 +464,7 @@ Registers a callback for a task to receive and process data from the worker thre
 | --- | --- | --- | --- |
 | callback | Function | No | Callback function for processing the data received. The data sent to the host thread is transferred to the callback as an input parameter. If no value is passed in, all the registered callbacks are canceled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -541,10 +501,6 @@ Register a callback function and call it when the execution of a task starts. Th
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Task-onStartExecution(callback: CallbackFunction): void--><!--Device-Task-onStartExecution(callback: CallbackFunction): void-End-->
@@ -563,7 +519,7 @@ Register a callback function and call it when the execution of a task starts. Th
 | --- | --- |
 | [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';
@@ -596,10 +552,6 @@ Removes dependent tasks for this task. Before using this method, you need to con
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-removeDependency(...tasks: Task[]): void--><!--Device-Task-removeDependency(...tasks: Task[]): void-End-->
@@ -620,7 +572,7 @@ Removes dependent tasks for this task. Before using this method, you need to con
 | [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
 | [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -667,10 +619,6 @@ Sends data to the host thread and triggers the registered callback. Before calli
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-static sendData(...args: Object[]): void--><!--Device-Task-static sendData(...args: Object[]): void-End-->
@@ -692,7 +640,7 @@ Sends data to the host thread and triggers the registered callback. Before calli
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200022](../errorcode-utils.md#10200022-functions-not-called-in-taskpool) | The function is not called in the TaskPool thread. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -759,10 +707,6 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-setCloneList(cloneList: Object[] | ArrayBuffer[]): void--><!--Device-Task-setCloneList(cloneList: Object[] | ArrayBuffer[]): void-End-->
@@ -781,7 +725,7 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 | --- | --- |
 | [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // sendable.ets
@@ -920,10 +864,6 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-setTransferList(transfer?: ArrayBuffer[]): void--><!--Device-Task-setTransferList(transfer?: ArrayBuffer[]): void-End-->
@@ -942,7 +882,7 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 | --- | --- |
 | [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -989,10 +929,6 @@ Arguments of the function. For details about the supported parameter types, see 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-arguments?: Object[]--><!--Device-Task-arguments?: Object[]-End-->
@@ -1013,10 +949,6 @@ CPU time of the task. in ms. You are advised not to change the value.<br> This A
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-cpuDuration: number--><!--Device-Task-cpuDuration: number-End-->
@@ -1034,10 +966,6 @@ Function to be passed in during task creation. For details about the supported r
 **Type:** Function
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1059,10 +987,6 @@ Asynchronous I/O time of the task. in ms. You are advised not to change the valu
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-ioDuration: number--><!--Device-Task-ioDuration: number-End-->
@@ -1080,10 +1004,6 @@ Name of the task specified when the task is created. You are advised not to chan
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1105,10 +1025,6 @@ Task ID, which is globally unique by default. You are advised not to change the 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Task-taskId: number--><!--Device-Task-taskId: number-End-->
@@ -1128,10 +1044,6 @@ Total execution time of the task. in ms. You are advised not to change the value
 **Default:** 0
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

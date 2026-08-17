@@ -16,10 +16,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace hyperSnapManager--><!--Device-unnamed-declare namespace hyperSnapManager-End-->
@@ -32,6 +28,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [requestRebuildHyperSnap](arkts-ability-hypersnapmanager-requestrebuildhypersnap-f.md#requestRebuildHyperSnap) | 请求重新初始化应用快启。 此方法会销毁当前进程已经初始化的快启数据，系统将在合适的时机重新进行快启初始化。 |
-| [setHyperSnapEnabled](arkts-ability-hypersnapmanager-sethypersnapenabled-f.md#setHyperSnapEnabled) | 启用或禁用应用的快启功能。 |
+| [requestRebuildHyperSnap](arkts-ability-hypersnapmanager-requestrebuildhypersnap-f.md#requestrebuildhypersnap) | 请求重新初始化应用快启。 此方法会销毁当前进程已经初始化的快启数据，系统将在合适的时机重新进行快启初始化。 |
+| [setHyperSnapEnabled](arkts-ability-hypersnapmanager-sethypersnapenabled-f.md#sethypersnapenabled) | 启用或禁用应用的快启功能。 |
 

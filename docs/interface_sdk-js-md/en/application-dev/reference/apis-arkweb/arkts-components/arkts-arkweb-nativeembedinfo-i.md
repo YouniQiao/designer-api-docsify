@@ -1,12 +1,8 @@
 # NativeEmbedInfo
 
-Provides detailed information about the same-layer tag.
+Provides detailed information about the same-layer tag, including the ID, type, size, and location. It is suitable for scenarios where obtaining same-layer element attributes is required, improving same-layer rendering customization and user experience.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface NativeEmbedInfo--><!--Device-unnamed-declare interface NativeEmbedInfo-End-->
 
@@ -18,15 +14,11 @@ Provides detailed information about the same-layer tag.
 height?: number
 ```
 
-The embed tag height. <br>Unit:px.
+Height of the same-layer tag, in px.
 
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ ID of the same-layer tag.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedInfo-id?: string--><!--Device-NativeEmbedInfo-id?: string-End-->
@@ -62,15 +50,11 @@ ID of the same-layer tag.
 params?: Map<string, string>
 ```
 
-List of key-value pairs contained in the **object** tag that form a map of the Object type. Use the methods provided by the Object type, such as **embed.info?.param?.["name"]** to operate the map object.
+List of key-value pairs of the params tag in the object tag. Use the methods provided by Object to operate this object, for example, `embed.info?.params?.["name"]`.
 
 **Type:** Map&lt;string, string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,15 +68,11 @@ List of key-value pairs contained in the **object** tag that form a map of the O
 position?: Position
 ```
 
-Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin, This position is different from the standard position. <br>Unit: pixels.
+Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin, in pixels. This position is different from the standard position.
 
 **Type:** Position
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -112,10 +92,6 @@ src?: string
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedInfo-src?: string--><!--Device-NativeEmbedInfo-src?: string-End-->
@@ -133,10 +109,6 @@ Tag name, which is in uppercase.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -156,10 +128,6 @@ Type of the same-layer tag. The value is in lowercase.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedInfo-type?: string--><!--Device-NativeEmbedInfo-type?: string-End-->
@@ -178,10 +146,6 @@ URL of the same-layer tag.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedInfo-url?: string--><!--Device-NativeEmbedInfo-url?: string-End-->
@@ -194,15 +158,11 @@ URL of the same-layer tag.
 width?: number
 ```
 
-The embed tag width. <br>Unit:px.
+Width of the same-layer tag, in px.
 
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

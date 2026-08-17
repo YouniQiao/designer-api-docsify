@@ -10,11 +10,9 @@ Sets the DND time. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setDoNotDisturbDate-(System-API))
+**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setdonotdisturbdate-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,11 +40,9 @@ Sets the DND time. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setDoNotDisturbDate-(System-API))
+**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setdonotdisturbdate-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -79,11 +75,9 @@ Sets the DND time for a specified user. This API uses an asynchronous callback t
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setDoNotDisturbDate-(System-API))
+**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setdonotdisturbdate-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -112,11 +106,9 @@ Sets the DND time for a specified user. This API uses a promise to return the re
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setDoNotDisturbDate-(System-API))
+**Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setdonotdisturbdate-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

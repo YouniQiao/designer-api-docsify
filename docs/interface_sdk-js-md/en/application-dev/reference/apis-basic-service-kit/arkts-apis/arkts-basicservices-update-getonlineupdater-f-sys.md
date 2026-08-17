@@ -16,10 +16,6 @@ Obtains an **OnlineUpdater** object, which can be used to check for new versions
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater--><!--Device-update-function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -44,7 +40,7 @@ Obtains an **OnlineUpdater** object, which can be used to check for new versions
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

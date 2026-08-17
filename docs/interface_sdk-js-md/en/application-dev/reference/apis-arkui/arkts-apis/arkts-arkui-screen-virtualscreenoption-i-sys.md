@@ -4,10 +4,6 @@ Defines virtual screen parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screen-interface VirtualScreenOption--><!--Device-screen-interface VirtualScreenOption-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -32,10 +28,6 @@ Density of the virtual screen, in px. The value must be a floating-point number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VirtualScreenOption-density: double--><!--Device-VirtualScreenOption-density: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -53,10 +45,6 @@ Height of the virtual screen, in px. The value must be an integer.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VirtualScreenOption-height: long--><!--Device-VirtualScreenOption-height: long-End-->
 
@@ -76,10 +64,6 @@ Name of a virtual screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VirtualScreenOption-name: string--><!--Device-VirtualScreenOption-name: string-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -97,10 +81,6 @@ Whether the virtual screen is focusable. **true** if focusable; **false** otherw
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VirtualScreenOption-supportsFocus?: boolean--><!--Device-VirtualScreenOption-supportsFocus?: boolean-End-->
 
@@ -120,10 +100,6 @@ Surface ID of the virtual screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VirtualScreenOption-surfaceId: string--><!--Device-VirtualScreenOption-surfaceId: string-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -141,10 +117,6 @@ User ID of the virtual screen, which is an integer. The default value is **-1**.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,10 +137,6 @@ Width of the virtual screen, in px. The value must be an integer.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VirtualScreenOption-width: long--><!--Device-VirtualScreenOption-width: long-End-->
 

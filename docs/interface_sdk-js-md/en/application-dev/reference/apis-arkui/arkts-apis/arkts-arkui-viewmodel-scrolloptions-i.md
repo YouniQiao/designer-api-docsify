@@ -4,10 +4,6 @@ ScrollOptions
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ScrollOptions--><!--Device-unnamed-export interface ScrollOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Callback function at the end of the interface invoking (executed both successful
 **Type:** (result: Object) =&gt; void
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,10 +38,6 @@ Duration of the scrolling animation, in ms.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ScrollOptions-duration: number--><!--Device-ScrollOptions-duration: number-End-->
@@ -67,10 +55,6 @@ Callback function for interface invocation failure.
 **Type:** (result: Object) =&gt; void
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -90,10 +74,6 @@ The selector for current scroll.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ScrollOptions-id?: string--><!--Device-ScrollOptions-id?: string-End-->
@@ -111,10 +91,6 @@ Scroll to the target position of the page. Unit: px
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -134,10 +110,6 @@ Callback function for successful interface invocation.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ScrollOptions-success?: (result: Object) => void--><!--Device-ScrollOptions-success?: (result: Object) => void-End-->
@@ -155,10 +127,6 @@ The timing function for current scroll animation.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -1,12 +1,8 @@
-# HuksExternalCryptoTag
+# HuksExternalCryptoTag(External Key Management)
 
 Enumerates the tags used to invoke parameters.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-huksExternalCrypto-export enum HuksExternalCryptoTag--><!--Device-huksExternalCrypto-export enum HuksExternalCryptoTag-End-->
 
@@ -22,10 +18,6 @@ Tag of the PIN.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200001--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200001-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -36,13 +28,9 @@ Tag of the PIN.
 HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200002
 ```
 
-Name of [CryptoExtensionAbility](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#CryptoExtensionAbility).
+Name of [CryptoExtensionAbility](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#cryptoextensionability).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200002--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200002-End-->
 
@@ -58,10 +46,6 @@ External data, which indicates the return data in the common query scenario.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200003--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200003-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -76,10 +60,6 @@ UID of the caller.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200004--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200004-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -90,13 +70,9 @@ UID of the caller.
 HUKS_EXT_CRYPTO_TAG_PURPOSE = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200005
 ```
 
-Usage type of the key corresponding to the certificate chain. For details, see [CertificatePurpose](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md#CertificatePurpose).
+Usage type of the key corresponding to the certificate chain. For details, see [CertificatePurpose](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md#certificatepurpose).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_PURPOSE = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200005--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_PURPOSE = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200005-End-->
 
@@ -111,10 +87,6 @@ HUKS_EXT_CRYPTO_TAG_RESOURCE_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TA
 Specify the information required to obtain the resource ID. The format and content are defined by the provider.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,10 +104,6 @@ Specifies the ability configuration for the custom PIN dialog.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200008--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200008-End-->
@@ -151,10 +119,6 @@ HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_
 Specifies the hap bundle name of the crypto extension ability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Clears all unlocked missions. This API uses an asynchronous callback to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function clearAllMissions(callback: AsyncCallback<void>): void--><!--Device-missionManager-function clearAllMissions(callback: AsyncCallback<void>): void-End-->
@@ -42,7 +38,7 @@ Clears all unlocked missions. This API uses an asynchronous callback to return t
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
@@ -73,10 +69,6 @@ Clears all unlocked missions. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function clearAllMissions(): Promise<void>--><!--Device-missionManager-function clearAllMissions(): Promise<void>-End-->
@@ -98,7 +90,7 @@ Clears all unlocked missions. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';

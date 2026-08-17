@@ -4,8 +4,6 @@ Defines the options for saving images or videos.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 **Substitutes:** SaveButtonOptions
@@ -31,8 +29,6 @@ File name of the image or video to save. If this parameter is not specified, the
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 18
 

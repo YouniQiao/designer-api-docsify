@@ -4,10 +4,6 @@ Defines event subscription parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-export interface ObserverOptions--><!--Device-observer-export interface ObserverOptions-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -29,10 +25,6 @@ Card slot ID. - **0**: card slot 1. - **1**: card slot 2.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ObserverOptions-slotId: int--><!--Device-ObserverOptions-slotId: int-End-->
 

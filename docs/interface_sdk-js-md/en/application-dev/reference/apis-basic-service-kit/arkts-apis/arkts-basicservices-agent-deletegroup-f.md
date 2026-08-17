@@ -16,10 +16,6 @@ Deletes a specified group. No task ID can be added to the group. This API uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-function deleteGroup(gid: string): Promise<void>--><!--Device-agent-function deleteGroup(gid: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -28,7 +24,7 @@ Deletes a specified group. No task ID can be added to the group. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gid | string | Yes | Target group ID. The value must be the same as the ID of the created task group, that is, the return value of the task group created using the [request.agent.createGroup](arkts-basicservices-agent-creategroup-f.md#createGroup) API. |
+| gid | string | Yes | Target group ID. The value must be the same as the ID of the created task group, that is, the return value of the task group created using the [request.agent.createGroup](arkts-basicservices-agent-creategroup-f.md#creategroup) API. |
 
 **Return value:**
 

@@ -1,12 +1,8 @@
 # EvalErrorConstructor
 
-**Inheritance/Implementation:** EvalErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md#ErrorConstructor)
+**Inheritance/Implementation:** EvalErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md#errorconstructor)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface EvalErrorConstructor--><!--Device-unnamed-interface EvalErrorConstructor-End-->
 
@@ -17,10 +13,6 @@ new(message?: string): EvalError
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-EvalErrorConstructor-new(message?: string): EvalError--><!--Device-EvalErrorConstructor-new(message?: string): EvalError-End-->
 
@@ -43,10 +35,6 @@ new(message?: string): EvalError
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-EvalErrorConstructor-(message?: string): EvalError--><!--Device-EvalErrorConstructor-(message?: string): EvalError-End-->
 
@@ -71,10 +59,6 @@ readonly prototype: EvalError
 **Type:** [EvalError](arkts-na-lib-es5-evalerror-i.md)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-EvalErrorConstructor-readonly prototype: EvalError--><!--Device-EvalErrorConstructor-readonly prototype: EvalError-End-->
 

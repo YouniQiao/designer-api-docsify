@@ -4,11 +4,9 @@ Provides APIs to manage the file retrieval result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#FetchResult)
+**Substitutes:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#fetchresult)
 
 <!--Device-userFileManager-interface FetchResult--><!--Device-userFileManager-interface FetchResult-End-->
 
@@ -32,8 +30,6 @@ Releases and invalidates the **FetchFileResult** instance. After this instance i
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [close](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#close)
@@ -44,7 +40,7 @@ Releases and invalidates the **FetchFileResult** instance. After this instance i
 
 **System API:** This is a system API.
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -78,11 +74,9 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAllObjects](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getAllObjects)
+**Substitutes:** [getAllObjects](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getallobjects)
 
 <!--Device-FetchResult-getAllObject(callback: AsyncCallback<Array<T>>): void--><!--Device-FetchResult-getAllObject(callback: AsyncCallback<Array<T>>): void-End-->
 
@@ -96,7 +90,7 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return an array of all file assets in the result set. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -131,11 +125,9 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAllObjects](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getAllObjects)
+**Substitutes:** [getAllObjects](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getallobjects)
 
 <!--Device-FetchResult-getAllObject(): Promise<Array<T>>--><!--Device-FetchResult-getAllObject(): Promise<Array<T>>-End-->
 
@@ -149,7 +141,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 | --- | --- |
 | Promise&lt;Array&lt;T&gt;&gt; | Promise that returns an array of all file assets in the result set. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -179,11 +171,9 @@ Obtains the total number of files in the result set.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getCount](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getCount)
+**Substitutes:** [getCount](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getcount)
 
 <!--Device-FetchResult-getCount(): number--><!--Device-FetchResult-getCount(): number-End-->
 
@@ -197,7 +187,7 @@ Obtains the total number of files in the result set.
 | --- | --- |
 | number | Returns the total number of files obtained. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -227,11 +217,9 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getFirstObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getFirstObject)
+**Substitutes:** [getFirstObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getfirstobject)
 
 <!--Device-FetchResult-getFirstObject(callback: AsyncCallback<T>): void--><!--Device-FetchResult-getFirstObject(callback: AsyncCallback<T>): void-End-->
 
@@ -245,7 +233,7 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the first file asset obtained. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -280,11 +268,9 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getFirstObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getFirstObject)
+**Substitutes:** [getFirstObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getfirstobject)
 
 <!--Device-FetchResult-getFirstObject(): Promise<T>--><!--Device-FetchResult-getFirstObject(): Promise<T>-End-->
 
@@ -298,7 +284,7 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;T&gt; | Promise that returns the first object in the result set. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -328,11 +314,9 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getLastObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getLastObject)
+**Substitutes:** [getLastObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getlastobject)
 
 <!--Device-FetchResult-getLastObject(callback: AsyncCallback<T>): void--><!--Device-FetchResult-getLastObject(callback: AsyncCallback<T>): void-End-->
 
@@ -346,7 +330,7 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the last file asset obtained. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -381,11 +365,9 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getLastObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getLastObject)
+**Substitutes:** [getLastObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getlastobject)
 
 <!--Device-FetchResult-getLastObject(): Promise<T>--><!--Device-FetchResult-getLastObject(): Promise<T>-End-->
 
@@ -399,7 +381,7 @@ Obtains the last file asset in the result set. This API uses a promise to return
 | --- | --- |
 | Promise&lt;T&gt; | Promise that returns the last object in the result set. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -425,15 +407,13 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result. Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getNextObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getNextObject)
+**Substitutes:** [getNextObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getnextobject)
 
 <!--Device-FetchResult-getNextObject(callback: AsyncCallback<T>): void--><!--Device-FetchResult-getNextObject(callback: AsyncCallback<T>): void-End-->
 
@@ -447,7 +427,7 @@ Obtains the next file asset in the result set. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the next file asset. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -481,15 +461,13 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(): Promise<T>
 ```
 
-Obtains the next file asset in the result set. This API uses a promise to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses a promise to return the result. Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getNextObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getNextObject)
+**Substitutes:** [getNextObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getnextobject)
 
 <!--Device-FetchResult-getNextObject(): Promise<T>--><!--Device-FetchResult-getNextObject(): Promise<T>-End-->
 
@@ -503,7 +481,7 @@ Obtains the next file asset in the result set. This API uses a promise to return
 | --- | --- |
 | Promise&lt;T&gt; | Promise that returns the next object in the result set. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -536,11 +514,9 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getObjectByPosition](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getObjectByPosition)
+**Substitutes:** [getObjectByPosition](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getobjectbyposition)
 
 <!--Device-FetchResult-getPositionObject(index: number, callback: AsyncCallback<T>): void--><!--Device-FetchResult-getPositionObject(index: number, callback: AsyncCallback<T>): void-End-->
 
@@ -561,7 +537,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 | --- | --- |
 | 13900020 | if type index is not number |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -596,11 +572,9 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getObjectByPosition](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getObjectByPosition)
+**Substitutes:** [getObjectByPosition](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getobjectbyposition)
 
 <!--Device-FetchResult-getPositionObject(index: number): Promise<T>--><!--Device-FetchResult-getPositionObject(index: number): Promise<T>-End-->
 
@@ -626,7 +600,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 | --- | --- |
 | 13900020 | if type index is not number |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -660,11 +634,9 @@ Checks whether the cursor is in the last row of the result set.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isAfterLast](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#isAfterLast)
+**Substitutes:** [isAfterLast](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#isafterlast)
 
 <!--Device-FetchResult-isAfterLast(): boolean--><!--Device-FetchResult-isAfterLast(): boolean-End-->
 
@@ -678,7 +650,7 @@ Checks whether the cursor is in the last row of the result set.
 | --- | --- |
 | boolean | Returns **true** if the cursor is in the last row of the result set; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 

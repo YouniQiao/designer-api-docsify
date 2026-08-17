@@ -4,9 +4,7 @@ A base class for creating proxy objects that delegate method calls and property 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 <!--Device-reflect-class Proxy--><!--Device-reflect-class Proxy-End-->
 
@@ -22,9 +20,7 @@ Creates a new proxy instance that implements the specified interfaces and uses t
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,9 +52,7 @@ Retrieves the invocation handler associated with this proxy.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,13 +4,9 @@
 export type Scale3 = Vec3
 ```
 
-3D scale information.
+Scaling of an object in 3D space. The value is of the Vec3 type. Any 3D vector.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export type Scale3 = Vec3--><!--Device-unnamed-export type Scale3 = Vec3-End-->
 

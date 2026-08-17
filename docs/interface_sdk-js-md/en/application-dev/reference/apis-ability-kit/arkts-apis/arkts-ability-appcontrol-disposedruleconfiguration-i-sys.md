@@ -4,10 +4,6 @@ Describes the configurations for setting disposed rules in batches.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appControl-export interface DisposedRuleConfiguration--><!--Device-appControl-export interface DisposedRuleConfiguration-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -32,10 +28,6 @@ appId or appIdentifier of the target application. Identical appId and appIdentif
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DisposedRuleConfiguration-appId: string--><!--Device-DisposedRuleConfiguration-appId: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -54,10 +46,6 @@ Index of the application clone. The default value is **0**. The value **0** mean
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DisposedRuleConfiguration-appIndex: int--><!--Device-DisposedRuleConfiguration-appIndex: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -75,10 +63,6 @@ Disposal rule of the application, including the type of the ability to be starte
 **Type:** [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DisposedRuleConfiguration-disposedRule: DisposedRule--><!--Device-DisposedRuleConfiguration-disposedRule: DisposedRule-End-->
 

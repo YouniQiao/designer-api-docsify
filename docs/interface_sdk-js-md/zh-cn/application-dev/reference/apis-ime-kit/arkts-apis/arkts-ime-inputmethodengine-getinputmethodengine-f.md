@@ -6,15 +6,13 @@
 function getInputMethodEngine(): InputMethodEngine
 ```
 
-获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md#InputMethodEngine)（输入法引擎）。 输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。
+获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md#inputmethodengine)（输入法引擎）。 输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)()
+**替代接口：** [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)()
 
 <!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine--><!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine-End-->
 
@@ -26,7 +24,7 @@ function getInputMethodEngine(): InputMethodEngine
 | --- | --- |
 | [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | 输入法应用客户端。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 获取输入法应用客户端实例（已废弃）

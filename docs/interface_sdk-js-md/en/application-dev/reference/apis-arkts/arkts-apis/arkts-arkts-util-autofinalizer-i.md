@@ -4,10 +4,6 @@ Provides an interface that can be implemented for releasing a resource which is 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-util-interface AutoFinalizer--><!--Device-util-interface AutoFinalizer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ onFinalization(heldValue: T): void
 The developer-defined callback used to release resources.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

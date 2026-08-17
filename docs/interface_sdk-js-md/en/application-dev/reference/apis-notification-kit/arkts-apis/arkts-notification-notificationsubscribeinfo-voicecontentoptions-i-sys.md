@@ -4,10 +4,6 @@ Describes the configuration options for notification voice broadcast.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface VoiceContentOptions--><!--Device-unnamed-export interface VoiceContentOptions-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -27,10 +23,6 @@ Whether to subscribe to the voice broadcast content of a notification. - **true*
 **Default:** false
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

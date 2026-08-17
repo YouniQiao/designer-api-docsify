@@ -4,10 +4,6 @@ Defines the descriptor of an audio and video file, which is used in DataSource p
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-interface AVDataSrcDescriptor--><!--Device-unnamed-interface AVDataSrcDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
@@ -23,10 +19,6 @@ Callback function implemented by users, which is used to fill data. buffer - The
 **类型：** (buffer: ArrayBuffer, length: long, pos?: long) =&gt; int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ Size of the file, -1 means the file size is unknown, in this case, seek and setS
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -12,13 +12,9 @@ import { bundleManager } from 'bundleManager';
 function uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean): Promise<void>
 ```
 
-Uninstalls a specified bundle of the current or specified user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses a promise to return the result. After the API is successfully called, the application is uninstalled, and the data is retained or deleted based on the **isKeepData** parameter. > **NOTE：**> > Error code **401** will be returned if this API is called to uninstall an application that is either a non- > removable pre-installed application or one configured as non-uninstallable via the > [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#addDisallowedUninstallBundlesSync) API.
+Uninstalls a specified bundle of the current or specified user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses a promise to return the result. After the API is successfully called, the application is uninstalled, and the data is retained or deleted based on the **isKeepData** parameter. > **NOTE：**> > Error code **401** will be returned if this API is called to uninstall an application that is either a non- > removable pre-installed application or one configured as non-uninstallable via the > [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync) API.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -52,7 +48,7 @@ Uninstalls a specified bundle of the current or specified user. The **isKeepData
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.MDMKit';

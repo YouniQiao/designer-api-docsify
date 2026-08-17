@@ -10,8 +10,6 @@ function createComponentObserver(id: string): ComponentObserver
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 18
 
 **替代接口：** createComponentObserver
@@ -34,9 +32,9 @@ function createComponentObserver(id: string): ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentObserver](../../apis-na/arkts-apis/arkts-na-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let listener: inspector.ComponentObserver = inspector.createComponentObserver('COMPONENT_ID'); // 监听id为COMPONENT_ID的组件回调事件

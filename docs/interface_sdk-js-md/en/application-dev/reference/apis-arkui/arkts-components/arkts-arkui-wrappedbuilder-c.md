@@ -4,10 +4,6 @@ Defines the WrappedBuilder class.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class WrappedBuilder--><!--Device-unnamed-declare class WrappedBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,10 +15,6 @@ constructor(builder: (...args: Args) => void)
 ```
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +30,7 @@ constructor(builder: (...args: Args) => void)
 | --- | --- | --- | --- |
 | builder | (...args: Args) =&gt; void | Yes |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Builder
@@ -58,10 +50,6 @@ builder: (...args: Args) => void
 **Type:** (...args: Args) =&gt; void
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

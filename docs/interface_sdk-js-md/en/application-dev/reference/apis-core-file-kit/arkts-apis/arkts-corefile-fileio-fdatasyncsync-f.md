@@ -10,11 +10,9 @@ Synchronizes the data of a file. This API returns the result synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [fdatasyncSync](arkts-corefile-file-fs-fdatasyncsync-f.md#fdatasyncSync)
+**Substitutes:** [fdatasyncSync](arkts-corefile-file-fs-fdatasyncsync-f.md#fdatasyncsync)
 
 <!--Device-unnamed-declare function fdatasyncSync(fd: number): void--><!--Device-unnamed-declare function fdatasyncSync(fd: number): void-End-->
 

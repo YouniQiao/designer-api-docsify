@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-appAccount-interface AuthenticatorInfo--><!--Device-appAccount-interface AuthenticatorInfo-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -23,10 +19,6 @@ iconId: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthenticatorInfo-iconId: long--><!--Device-AuthenticatorInfo-iconId: long-End-->
 
@@ -44,10 +36,6 @@ labelId: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthenticatorInfo-labelId: long--><!--Device-AuthenticatorInfo-labelId: long-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -63,10 +51,6 @@ owner: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthenticatorInfo-owner: string--><!--Device-AuthenticatorInfo-owner: string-End-->
 

@@ -8,10 +8,6 @@ Defines an observer for obtaining the status change of a distributed object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDataObject-type StatusObserver = (sessionId: string, networkId: string, status: string) => void--><!--Device-distributedDataObject-type StatusObserver = (sessionId: string, networkId: string, status: string) => void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject

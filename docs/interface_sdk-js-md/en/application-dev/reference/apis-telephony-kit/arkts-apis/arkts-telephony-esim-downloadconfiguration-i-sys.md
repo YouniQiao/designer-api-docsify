@@ -4,10 +4,6 @@ Specifies the download configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-eSIM-export interface DownloadConfiguration--><!--Device-eSIM-export interface DownloadConfiguration-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -26,15 +22,11 @@ import { eSIM } from 'eSIM';
 forceDisableProfile: boolean
 ```
 
-Specifies whether to forcibly disable the profile. If true, the active profile is disabled in order to perform the operation. Otherwise, [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#RESULT_MUST_DISABLE_PROFILE) is returned in resultCode to ask for the user's agreement to the operation.
+Specifies whether to forcibly disable the profile. If true, the active profile is disabled in order to perform the operation. Otherwise, [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#resultmustdisableprofile) is returned in resultCode to ask for the user's agreement to the operation.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadConfiguration-forceDisableProfile: boolean--><!--Device-DownloadConfiguration-forceDisableProfile: boolean-End-->
 
@@ -54,10 +46,6 @@ Specifies whether the user allows the service provider to enforce this Profile P
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadConfiguration-isPprAllowed: boolean--><!--Device-DownloadConfiguration-isPprAllowed: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -75,10 +63,6 @@ Specifies whether to enable the profile after successful download.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadConfiguration-switchAfterDownload: boolean--><!--Device-DownloadConfiguration-switchAfterDownload: boolean-End-->
 

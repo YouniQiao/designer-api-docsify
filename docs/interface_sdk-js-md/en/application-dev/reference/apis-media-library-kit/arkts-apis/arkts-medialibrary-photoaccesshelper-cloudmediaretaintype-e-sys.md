@@ -4,10 +4,6 @@ Enumerates the modes used for deleting cloud media assets.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum CloudMediaRetainType--><!--Device-photoAccessHelper-enum CloudMediaRetainType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -24,10 +20,6 @@ Deletes the local metadata and thumbnail of the original files from the cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudMediaRetainType-RETAIN_FORCE = 0--><!--Device-CloudMediaRetainType-RETAIN_FORCE = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -43,10 +35,6 @@ HDC_RETAIN_FORCE = 1
 Deletes the local metadata and thumbnail of the original files from the home storage device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-CloudMediaRetainType-HDC_RETAIN_FORCE = 1--><!--Device-CloudMediaRetainType-HDC_RETAIN_FORCE = 1-End-->
 

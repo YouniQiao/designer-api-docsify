@@ -4,10 +4,6 @@ Represents the database information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface Database--><!--Device-cloudExtension-export interface Database-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -32,10 +28,6 @@ Alias of the database on the server.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Database-alias: string--><!--Device-Database-alias: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -54,10 +46,6 @@ Name of the database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Database-name: string--><!--Device-Database-name: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -75,10 +63,6 @@ Table in the database, including the detailed data information.
 **Type:** Array&lt;[Table](arkts-arkdata-cloudextension-table-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Database-tables: Array<Table>--><!--Device-Database-tables: Array<Table>-End-->
 

@@ -270,7 +270,7 @@ int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const 
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | 指向[OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md)实例的指针。 |
 | const char *table | 要插入的目标表名。 |
-| const OH_Data_VBuckets *rows | 表示要插入到表中的一组数据。 |
+| [const OH_Data_VBuckets](capi-rdb-oh-data-vbuckets.md) *rows | 表示要插入到表中的一组数据。 |
 | int64_t *changes | 输出参数，表示插入成功的次数。 |
 
 **返回：**
@@ -540,7 +540,7 @@ int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const 
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | 指向[OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md)实例的指针。 |
 | const char *table | 要插入的目标表名。 |
-| const OH_Data_VBuckets *rows | 表示要插入到表中的一组数据。 |
+| [const OH_Data_VBuckets](capi-rdb-oh-data-vbuckets.md) *rows | 表示要插入到表中的一组数据。 |
 | Rdb_ConflictResolution resolution | 表示发生冲突时的解决策略。 |
 | int64_t *changes | 输出参数，表示插入成功的次数。 |
 
@@ -568,7 +568,7 @@ int OH_RdbTrans_BatchInsertWithReturning(OH_Rdb_Transaction *trans, const char *
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | 指向[OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md)实例的指针。 |
 | const char *table | 要插入的目标表名。 |
-| const OH_Data_VBuckets *rows | 要插入到表中的行数据。 |
+| [const OH_Data_VBuckets](capi-rdb-oh-data-vbuckets.md) *rows | 要插入到表中的行数据。 |
 | Rdb_ConflictResolution resolution | 发生冲突时的解决策略{@link Rdb_ConflictResolution}，不建议使用RDB_CONFLICT_FAIL，因为失败时会抛异常，<br>无法正常获取实际的变更数据。 |
 | OH_RDB_ReturningContext *context | 指向{@link OH_RDB_ReturningContext}实例的指针。 |
 

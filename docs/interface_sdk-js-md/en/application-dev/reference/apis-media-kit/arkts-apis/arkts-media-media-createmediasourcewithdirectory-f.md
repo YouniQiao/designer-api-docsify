@@ -16,10 +16,6 @@ Create a MediaSource object from the given directory.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-media-function createMediaSourceWithDirectory(path: string): Promise< MediaSource | undefined>--><!--Device-media-function createMediaSourceWithDirectory(path: string): Promise< MediaSource | undefined>-End-->

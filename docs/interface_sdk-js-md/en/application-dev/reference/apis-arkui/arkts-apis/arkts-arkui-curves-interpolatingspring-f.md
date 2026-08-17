@@ -16,10 +16,6 @@ Creates an interpolating spring curve animated from 0 to 1. The actual animation
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -43,7 +39,7 @@ Creates an interpolating spring curve animated from 0 to 1. The actual animation
 | --- | --- |
 | ICurve | Curve. <br>Note: The spring animation curve is physics-based. Its duration depends on the **interpolatingSpring** parameters, rather than the **duration** parameter in [animation]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { curves } from '@kit.ArkUI'

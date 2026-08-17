@@ -16,10 +16,6 @@ Writes data to the serial port device synchronously. The length of data written 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-serialManager-function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int--><!--Device-serialManager-function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -28,7 +24,7 @@ Writes data to the serial port device synchronously. The length of data written 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getPortList). |
+| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 | buffer | Uint8Array | Yes | Destination buffer for writing data, with a maximum length of 4 KB. |
 | timeout | int | No | Timeout interval.Unit: milliseconds. Whether the buffer of the target port is writable within the specified time. If yes, the API is processed properly; otherwise, a timeout message is returned after the specified time. The default value **0** indicates that the API returns the result immediately when the target port is not writable. |
 
@@ -49,7 +45,7 @@ Writes data to the serial port device synchronously. The length of data written 
 | [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) | PortId does not exist. |
 | [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
 
-## Examples
+**Examples**
 
 The following sample code shows the basic process for calling the writeSync API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 

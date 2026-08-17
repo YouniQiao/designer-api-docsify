@@ -16,10 +16,6 @@ Obtain connection information about the Wi-Fi connection. If does't have the per
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -54,10 +50,6 @@ Obtain connection information about the Wi-Fi connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void--><!--Device-wifiManager-function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void-End-->
@@ -80,7 +72,7 @@ Obtain connection information about the Wi-Fi connection.
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

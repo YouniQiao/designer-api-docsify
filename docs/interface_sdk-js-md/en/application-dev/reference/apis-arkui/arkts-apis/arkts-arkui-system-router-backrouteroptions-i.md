@@ -1,10 +1,8 @@
-# BackRouterOptions
+# BackRouterOptions(Page Routing)
 
 Defines the parameters for routing back.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 8
 
@@ -36,8 +34,6 @@ Data that needs to be passed to the target page during redirection.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** params
@@ -57,8 +53,6 @@ URI of the page to return to. If the specified page does not exist in the page s
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 8
 

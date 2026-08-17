@@ -16,10 +16,6 @@ Queries the participants of the specified shared data. This API uses an asynchro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sharing-function queryParticipants(sharingResource: string, callback: AsyncCallback<Result<Array<Participant>>>): void--><!--Device-sharing-function queryParticipants(sharingResource: string, callback: AsyncCallback<Result<Array<Participant>>>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -41,7 +37,7 @@ Queries the participants of the specified shared data. This API uses an asynchro
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,10 +61,6 @@ function queryParticipants(sharingResource: string): Promise<Result<Array<Partic
 Queries the participants of the specified shared data. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sharing-function queryParticipants(sharingResource: string): Promise<Result<Array<Participant>>>--><!--Device-sharing-function queryParticipants(sharingResource: string): Promise<Result<Array<Participant>>>-End-->
 
@@ -96,7 +88,7 @@ Queries the participants of the specified shared data. This API uses a promise t
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

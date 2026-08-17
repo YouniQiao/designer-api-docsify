@@ -16,10 +16,6 @@ Checks whether the SIM card in a specified slot is activated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sim-function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -31,7 +27,7 @@ Checks whether the SIM card in a specified slot is activated.
 | slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for checking whether the SIM card in a specified slot is activated. Returns {@code true} if the SIM card is activated; returns {@code false} otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -53,10 +49,6 @@ Checks whether the SIM card in a specified slot is activated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-function isSimActive(slotId: int): Promise<boolean>--><!--Device-sim-function isSimActive(slotId: int): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -73,7 +65,7 @@ Checks whether the SIM card in a specified slot is activated.
 | --- | --- |
 | Promise&lt;boolean&gt; | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

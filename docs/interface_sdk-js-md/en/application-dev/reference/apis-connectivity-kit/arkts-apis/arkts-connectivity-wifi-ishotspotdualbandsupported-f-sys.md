@@ -16,11 +16,9 @@ Checks whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md#isHotspotDualBandSupported-(System-API))
+**Substitutes:** [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md#ishotspotdualbandsupported-system-api)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -36,7 +34,7 @@ Checks whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

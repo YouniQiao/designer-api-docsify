@@ -4,10 +4,6 @@ Describes the sampling modes used during texture sampling.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Sampler--><!--Device-unnamed-export interface Sampler-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -23,10 +19,6 @@ Sampling mode of the texture in the U (horizontal) direction. The default value 
 **Type:** [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Sampler-addressModeU?: SamplerAddressMode--><!--Device-Sampler-addressModeU?: SamplerAddressMode-End-->
 
@@ -44,10 +36,6 @@ Sampling mode of the texture in the V (vertical) direction. The default value is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Sampler-addressModeV?: SamplerAddressMode--><!--Device-Sampler-addressModeV?: SamplerAddressMode-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -63,10 +51,6 @@ Sampling mode when the texture is enlarged. The default value is LINEAR.
 **Type:** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Sampler-magFilter?: SamplerFilter--><!--Device-Sampler-magFilter?: SamplerFilter-End-->
 
@@ -84,10 +68,6 @@ Sampling mode when the texture is reduced. The default value is LINEAR.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Sampler-minFilter?: SamplerFilter--><!--Device-Sampler-minFilter?: SamplerFilter-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -103,10 +83,6 @@ Sampling modes between different texture resolutions. The default value is LINEA
 **Type:** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Sampler-mipMapMode?: SamplerFilter--><!--Device-Sampler-mipMapMode?: SamplerFilter-End-->
 

@@ -16,11 +16,9 @@ Obtains the first language in the preferred language list.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getFirstPreferredLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getFirstPreferredLanguage)
+**Substitutes:** [getFirstPreferredLanguage](arkts-localization-i18n-system-c.md#getfirstpreferredlanguage)
 
 <!--Device-i18n-export function getFirstPreferredLanguage(): string--><!--Device-i18n-export function getFirstPreferredLanguage(): string-End-->
 
@@ -32,7 +30,7 @@ Obtains the first language in the preferred language list.
 | --- | --- |
 | string | First language in the preferred language list. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

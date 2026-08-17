@@ -4,10 +4,6 @@ Enumerates user status detection features.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-userStatus-export enum UserStatusFeature--><!--Device-userStatus-export enum UserStatusFeature-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
@@ -23,10 +19,6 @@ GESTURES_RECOGNITION = 5
 Gesture recognition feature (100ms reporting interval).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Anti-mistouch detection feature.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusFeature-ANTI_MISTOUCH = 6--><!--Device-UserStatusFeature-ANTI_MISTOUCH = 6-End-->
@@ -67,10 +55,6 @@ QUICK_GESTURES_RECOGNITION = 7
 Quick gesture recognition feature (20ms reporting interval).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ Face relative position recognition feature (100ms reporting interval).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusFeature-FACE_RELATIVE_POSITION_RECOGNITION = 8--><!--Device-UserStatusFeature-FACE_RELATIVE_POSITION_RECOGNITION = 8-End-->
@@ -111,10 +91,6 @@ QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9
 Quick face relative position recognition feature (20ms reporting interval).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,10 +110,6 @@ Hand-eye coordination (attention) recognition feature.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusFeature-HAND_GAZE_COORDINATION = 11--><!--Device-UserStatusFeature-HAND_GAZE_COORDINATION = 11-End-->
@@ -155,10 +127,6 @@ USER_BLOWING_STATUS = 12
 User blowing status detection feature.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +146,6 @@ User mood detection feature.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusFeature-USER_MOOD = 13--><!--Device-UserStatusFeature-USER_MOOD = 13-End-->
@@ -199,10 +163,6 @@ COMFORT_REMINDER = 15
 Comfort reminder detection feature.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,10 +182,6 @@ Environmental sound detection feature.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusFeature-ENV_SOUND = 17--><!--Device-UserStatusFeature-ENV_SOUND = 17-End-->
@@ -243,10 +199,6 @@ EXT_SCREEN_ANTI_MISTOUCH = 19
 External screen anti-mistouch detection feature.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

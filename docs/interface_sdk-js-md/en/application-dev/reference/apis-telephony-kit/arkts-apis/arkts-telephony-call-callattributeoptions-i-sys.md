@@ -4,10 +4,6 @@ Defines the call attribute options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface CallAttributeOptions--><!--Device-call-export interface CallAttributeOptions-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -32,10 +28,6 @@ Account ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallAttributeOptions-accountId: int--><!--Device-CallAttributeOptions-accountId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -53,10 +45,6 @@ Account number.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallAttributeOptions-accountNumber: string--><!--Device-CallAttributeOptions-accountNumber: string-End-->
 
@@ -76,10 +64,6 @@ Call ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallAttributeOptions-callId: int--><!--Device-CallAttributeOptions-callId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -97,10 +81,6 @@ Detailed call state.
 **Type:** [DetailedCallState](arkts-telephony-call-detailedcallstate-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallAttributeOptions-callState: DetailedCallState--><!--Device-CallAttributeOptions-callState: DetailedCallState-End-->
 
@@ -120,10 +100,6 @@ Enumerates call types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallAttributeOptions-callType: CallType--><!--Device-CallAttributeOptions-callType: CallType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -141,10 +117,6 @@ Enumerates conference states.
 **Type:** [ConferenceState](arkts-telephony-call-conferencestate-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallAttributeOptions-conferenceState: ConferenceState--><!--Device-CallAttributeOptions-conferenceState: ConferenceState-End-->
 
@@ -164,10 +136,6 @@ Video RBT type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallAttributeOptions-crsType: int--><!--Device-CallAttributeOptions-crsType: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -185,10 +153,6 @@ Indicates the extra call parameters.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallAttributeOptions-extraParams?: Record<string, Object>--><!--Device-CallAttributeOptions-extraParams?: Record<string, Object>-End-->
 
@@ -208,10 +172,6 @@ Indicates is custom accessibility enabled.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-CallAttributeOptions-isCustomAccessibility?: boolean--><!--Device-CallAttributeOptions-isCustomAccessibility?: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -229,10 +189,6 @@ Whether the call is an ECC. The default value is **false**. - **true**: yes - **
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallAttributeOptions-isEcc: boolean--><!--Device-CallAttributeOptions-isEcc: boolean-End-->
 
@@ -252,10 +208,6 @@ Home location area of the number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallAttributeOptions-numberLocation?: string--><!--Device-CallAttributeOptions-numberLocation?: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -273,10 +225,6 @@ Number mark.
 **Type:** [NumberMarkInfo](arkts-telephony-call-numbermarkinfo-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallAttributeOptions-numberMarkInfo?: NumberMarkInfo--><!--Device-CallAttributeOptions-numberMarkInfo?: NumberMarkInfo-End-->
 
@@ -296,10 +244,6 @@ Original call type of the Video RBT service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallAttributeOptions-originalCallType: int--><!--Device-CallAttributeOptions-originalCallType: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -317,10 +261,6 @@ Indicates the rtt state.
 **Type:** [RttState](arkts-telephony-call-rttstate-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallAttributeOptions-rttState?: RttState--><!--Device-CallAttributeOptions-rttState?: RttState-End-->
 
@@ -340,10 +280,6 @@ Whether the speakerphone is used to answer a call. The default value is **false*
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallAttributeOptions-speakerphoneOn: boolean--><!--Device-CallAttributeOptions-speakerphoneOn: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -361,10 +297,6 @@ Start time.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallAttributeOptions-startTime: int--><!--Device-CallAttributeOptions-startTime: int-End-->
 
@@ -384,10 +316,6 @@ Video state type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallAttributeOptions-videoState: VideoStateType--><!--Device-CallAttributeOptions-videoState: VideoStateType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -406,10 +334,6 @@ Defines the VoIP call information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallAttributeOptions-voipCallAttribute?: VoipCallAttribute--><!--Device-CallAttributeOptions-voipCallAttribute?: VoipCallAttribute-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -427,10 +351,6 @@ X-Call type.
 **Type:** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-CallAttributeOptions-xCallType?: XCallType--><!--Device-CallAttributeOptions-xCallType?: XCallType-End-->
 

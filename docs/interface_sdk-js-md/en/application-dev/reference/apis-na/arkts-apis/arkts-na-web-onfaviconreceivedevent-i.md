@@ -4,9 +4,7 @@ Defines the triggered callback when the application receive a new favicon for th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnFaviconReceivedEvent--><!--Device-unnamed-export declare interface OnFaviconReceivedEvent-End-->
 
@@ -24,9 +22,7 @@ Received the Favicon icon for the image.PixelMap object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnFaviconReceivedEvent-favicon: image.PixelMap--><!--Device-OnFaviconReceivedEvent-favicon: image.PixelMap-End-->
 

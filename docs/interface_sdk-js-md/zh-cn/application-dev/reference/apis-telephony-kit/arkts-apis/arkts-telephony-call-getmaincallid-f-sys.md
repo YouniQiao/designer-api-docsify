@@ -10,10 +10,6 @@ function getMainCallId(callId: int, callback: AsyncCallback<int>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-call-function getMainCallId(callId: int, callback: AsyncCallback<int>): void--><!--Device-call-function getMainCallId(callId: int, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -25,7 +21,7 @@ function getMainCallId(callId: int, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callId | int | 是 | 呼叫Id。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。返回主呼叫Id。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。返回主呼叫Id。 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function getMainCallId(callId: int, callback: AsyncCallback<int>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -62,10 +58,6 @@ function getMainCallId(callId: int): Promise<int>
 获取主呼叫Id。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-call-function getMainCallId(callId: int): Promise<int>--><!--Device-call-function getMainCallId(callId: int): Promise<int>-End-->
 
@@ -96,7 +88,7 @@ function getMainCallId(callId: int): Promise<int>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

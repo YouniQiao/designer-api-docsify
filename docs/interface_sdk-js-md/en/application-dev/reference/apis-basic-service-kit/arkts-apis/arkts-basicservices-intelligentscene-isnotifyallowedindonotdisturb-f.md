@@ -16,10 +16,6 @@ Checks whether calling bundle is allow notify(e.g. sound & vibration) when syste
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_DONOTDISTURB_STATE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -41,7 +37,7 @@ Checks whether calling bundle is allow notify(e.g. sound & vibration) when syste
 | [35200001](../../apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError, intelligentScene } from '@kit.BasicServicesKit';

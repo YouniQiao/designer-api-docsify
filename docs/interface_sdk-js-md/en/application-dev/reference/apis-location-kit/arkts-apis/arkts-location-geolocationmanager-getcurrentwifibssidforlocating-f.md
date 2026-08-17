@@ -16,10 +16,6 @@ Obtains the BSSID of the connected Wi-Fi hotspot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function getCurrentWifiBssidForLocating(): string--><!--Device-geoLocationManager-function getCurrentWifiBssidForLocating(): string-End-->
@@ -42,7 +38,7 @@ Obtains the BSSID of the connected Wi-Fi hotspot.
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
 | [3301900](../errorcode-geoLocationManager.md#3301900-failed-to-obtain-the-mac-address-of-the-wifi-hotspot) | Failed to obtain the BSSID of the Wi-Fi hotspot. The Wi-Fi network is not connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

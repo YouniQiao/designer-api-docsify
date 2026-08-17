@@ -16,10 +16,6 @@ Unsubscribes from agent-powered reminder state changes. This API uses a promise 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-reminderAgentManager-function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Promise<void>--><!--Device-reminderAgentManager-function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Promise<void>-End-->
@@ -44,7 +40,7 @@ Unsubscribes from agent-powered reminder state changes. This API uses a promise 
 | --- | --- |
 | [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';

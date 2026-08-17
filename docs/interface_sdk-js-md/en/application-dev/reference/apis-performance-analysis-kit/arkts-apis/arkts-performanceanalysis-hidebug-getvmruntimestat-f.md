@@ -16,10 +16,6 @@ Obtains the specified system GC statistics based on parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getVMRuntimeStat(item: string): long--><!--Device-hidebug-function getVMRuntimeStat(item: string): long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -42,7 +38,7 @@ Obtains the specified system GC statistics based on parameters.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Invalid parameter, a string parameter required. 2. Invalid parameter, unknown property. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

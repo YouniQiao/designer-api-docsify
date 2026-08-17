@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface EventInfo--><!--Device-update-export interface EventInfo-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -26,10 +22,6 @@ eventId: EventId
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EventInfo-eventId: EventId--><!--Device-EventInfo-eventId: EventId-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -47,10 +39,6 @@ taskBody: TaskBody
 **类型：** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EventInfo-taskBody: TaskBody--><!--Device-EventInfo-taskBody: TaskBody-End-->
 

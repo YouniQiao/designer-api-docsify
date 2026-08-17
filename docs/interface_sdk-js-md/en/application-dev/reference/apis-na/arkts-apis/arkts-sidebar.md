@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [SideBarContainer](arkts-na-sidebar-sidebarcontainer-f.md#SideBarContainer) | Defines sidebar Component |
+| [SideBarContainer](arkts-na-sidebar-sidebarcontainer-f.md#sidebarcontainer) | Defines sidebar Component |
 
 ### Interfaces
 

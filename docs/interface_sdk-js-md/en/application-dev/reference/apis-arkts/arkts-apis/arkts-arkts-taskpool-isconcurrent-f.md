@@ -16,10 +16,6 @@ Checks whether a function is a concurrent function.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-taskpool-function isConcurrent(func: Function): boolean--><!--Device-taskpool-function isConcurrent(func: Function): boolean-End-->
@@ -38,7 +34,7 @@ Checks whether a function is a concurrent function.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the function is a concurrent function, that is , a function decorated with [ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent

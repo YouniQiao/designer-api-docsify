@@ -4,9 +4,7 @@ Defines the triggered function when requesting to show the geolocation permissio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnGeolocationShowEvent--><!--Device-unnamed-export declare interface OnGeolocationShowEvent-End-->
 
@@ -24,9 +22,7 @@ Defines the js geolocation request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnGeolocationShowEvent-geolocation: JsGeolocation--><!--Device-OnGeolocationShowEvent-geolocation: JsGeolocation-End-->
 
@@ -44,9 +40,7 @@ Origin of the page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnGeolocationShowEvent-origin: string--><!--Device-OnGeolocationShowEvent-origin: string-End-->
 

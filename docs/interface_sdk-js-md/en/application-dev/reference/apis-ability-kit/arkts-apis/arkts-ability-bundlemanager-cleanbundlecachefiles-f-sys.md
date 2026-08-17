@@ -16,10 +16,6 @@ Clears the bundle cache based on the given bundle name. This API uses an asynchr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
 <!--Device-bundleManager-function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void-End-->
@@ -33,7 +29,7 @@ Clears the bundle cache based on the given bundle name. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -45,7 +41,7 @@ Clears the bundle cache based on the given bundle name. This API uses an asynchr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -79,10 +75,6 @@ Clears the bundle cache based on the given bundle name. This API uses a promise 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
 <!--Device-bundleManager-function cleanBundleCacheFiles(bundleName: string): Promise<void>--><!--Device-bundleManager-function cleanBundleCacheFiles(bundleName: string): Promise<void>-End-->
@@ -113,7 +105,7 @@ Clears the bundle cache based on the given bundle name. This API uses a promise 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -144,10 +136,6 @@ function cleanBundleCacheFiles(bundleName: string, appIndex: int): Promise<void>
 Clears the bundle cache based on the given bundle name and application index. This API uses a promise to return the result. No permission is required when the caller clears its own cache.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
@@ -181,7 +169,7 @@ Clears the bundle cache based on the given bundle name and application index. Th
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

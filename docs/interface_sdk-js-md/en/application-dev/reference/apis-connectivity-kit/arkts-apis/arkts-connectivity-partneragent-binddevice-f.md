@@ -13,13 +13,9 @@ function bindDevice(deviceAddress: PartnerDeviceAddress, deviceCapability: Devic
     businessCapability: BusinessCapability, partnerAgentExtensionAbilityName: string): Promise<void>
 ```
 
-Bind the partner device. After successfully binding the device, if the device meets the discovery requirements, the [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md#PartnerAgentExtensionAbility) of the application will be launched. - If the [supportBR](arkts-connectivity-partneragent-devicecapability-i.md#supportBR) in the capability variable is set to true, the application's ability will be launched when the device is connected via Bluetooth. - If the [supportBleAdvertiser](arkts-connectivity-partneragent-devicecapability-i.md#supportBleAdvertiser) in the capability variable is set to true, the application's ability will be launched when the device is detected via Bluetooth scanning. Note: The device must be paired first.
+Bind the partner device. After successfully binding the device, if the device meets the discovery requirements, the [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md#partneragentextensionability) of the application will be launched. - If the [supportBR](arkts-connectivity-partneragent-devicecapability-i.md#supportbr) in the capability variable is set to true, the application's ability will be launched when the device is connected via Bluetooth. - If the [supportBleAdvertiser](arkts-connectivity-partneragent-devicecapability-i.md#supportbleadvertiser) in the capability variable is set to true, the application's ability will be launched when the device is detected via Bluetooth scanning. Note: The device must be paired first.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

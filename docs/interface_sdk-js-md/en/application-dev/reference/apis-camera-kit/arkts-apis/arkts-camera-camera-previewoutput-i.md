@@ -1,14 +1,10 @@
 # PreviewOutput
 
-PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
+PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput).
 
-**Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
+**Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface PreviewOutput--><!--Device-camera-interface PreviewOutput-End-->
 
@@ -26,13 +22,9 @@ import { camera } from 'camera';
 enableBandwidthCompression(enabled: boolean): void
 ```
 
-Enables preview bandwidth compression. Before enabling this feature, you can call [isBandwidthCompressionSupported](#isBandwidthCompressionSupported) to check whether the device supports preview bandwidth compression. > **NOTE：**> > This function must be called prior to > [Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig). Otherwise, the > preview output stream format will be affected.
+Enables preview bandwidth compression. Before enabling this feature, you can call [isBandwidthCompressionSupported](#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression. > **NOTE：**> > This function must be called prior to > [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the > preview output stream format will be affected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -60,13 +52,9 @@ Enables preview bandwidth compression. Before enabling this feature, you can cal
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range. This API is valid only after [setFrameRate](#setFrameRate) is called to set a frame rate range for preview streams.
+Obtains the configured frame rate range. This API is valid only after [setFrameRate](#setframerate) is called to set a frame rate range for preview streams.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -89,10 +77,6 @@ getActiveProfile(): Profile
 Obtains the profile that takes effect currently.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -122,10 +106,6 @@ Obtains the preview rotation angle. - Device' natural orientation: the default o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -138,7 +118,7 @@ Obtains the preview rotation angle. - Device' natural orientation: the default o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayRotation | int | No | Screen rotation angle of the display. It is obtained by calling [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync). <br> Since API version 23, the input parameter **displayRotation** is optional. If no parameter is passed, the system obtains the **displayRotation** value to calculate rotation angle of a video. <br> The value ranges from 0 to 360, in degrees.<br>**Since:** 23 |
+| displayRotation | int | No | Screen rotation angle of the display. It is obtained by calling [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync). <br> Since API version 23, the input parameter **displayRotation** is optional. If no parameter is passed, the system obtains the **displayRotation** value to calculate rotation angle of a video. <br> The value ranges from 0 to 360, in degrees.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -163,10 +143,6 @@ Obtains the supported frame rates.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-PreviewOutput-getSupportedFrameRates(): Array<FrameRateRange>--><!--Device-PreviewOutput-getSupportedFrameRates(): Array<FrameRateRange>-End-->
@@ -189,10 +165,6 @@ Checks whether preview bandwidth compression is supported. This involves reducin
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PreviewOutput-isBandwidthCompressionSupported(): boolean--><!--Device-PreviewOutput-isBandwidthCompressionSupported(): boolean-End-->
@@ -214,10 +186,6 @@ isLogViewAssistSupported(): boolean
 Checks whether log video view assistance is supported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -243,10 +211,6 @@ Unsubscribes from error events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PreviewOutput-offError(callback?: ErrorCallback): void--><!--Device-PreviewOutput-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -266,10 +230,6 @@ offFrameEnd(callback?: AsyncCallback<void>): void
 Unsubscribes from frame end event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PreviewOutput-offFrameEnd(callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-offFrameEnd(callback?: AsyncCallback<void>): void-End-->
 
@@ -291,10 +251,6 @@ Unsubscribes from frame start event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PreviewOutput-offFrameStart(callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-offFrameStart(callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -314,10 +270,6 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from PreviewOutput error events.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -342,10 +294,6 @@ Unsubscribes from preview frame end events.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-PreviewOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
@@ -368,10 +316,6 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 Unsubscribes from preview frame start events.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -396,10 +340,6 @@ Subscribes to error events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PreviewOutput-onError(callback: ErrorCallback): void--><!--Device-PreviewOutput-onError(callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -419,10 +359,6 @@ onFrameEnd(callback: AsyncCallback<void>): void
 Subscribes frame end event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PreviewOutput-onFrameEnd(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-onFrameEnd(callback: AsyncCallback<void>): void-End-->
 
@@ -444,10 +380,6 @@ Subscribes frame start event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PreviewOutput-onFrameStart(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-onFrameStart(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -468,10 +400,6 @@ Subscribes to PreviewOutput error events. This API uses an asynchronous callback
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-PreviewOutput-on(type: 'error', callback: ErrorCallback): void--><!--Device-PreviewOutput-on(type: 'error', callback: ErrorCallback): void-End-->
@@ -483,7 +411,7 @@ Subscribes to PreviewOutput error events. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a previewOutput instance is created. This event is triggered and the corresponding error message is returned when an error occurs during the use of a preview-related API such as [Session.start](arkts-camera-camera-session-i.md#start) or [CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release). |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 ## on_frameEnd
 
@@ -494,10 +422,6 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 Subscribes to preview frame end events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -522,10 +446,6 @@ Subscribes to preview frame start events. This API uses an asynchronous callback
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-PreviewOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
@@ -545,13 +465,9 @@ Subscribes to preview frame start events. This API uses an asynchronous callback
 setFrameRate(minFps: int, maxFps: int): void
 ```
 
-Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRates). > **NOTE：**> > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession) or > [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession) mode.
+Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates). > **NOTE：**> > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md#photosession) or > [VideoSession](arkts-camera-camera-videosession-i.md#videosession) mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -579,13 +495,9 @@ Sets a frame rate range for preview streams. The range must be within the suppor
 setLogViewAssistEnable(enable: boolean): void
 ```
 
-Log video view assistance toggle. Before enabling this feature, you can call [isLogViewAssistSupported](#isLogViewAssistSupported) to check whether the device supports log video view assistance.
+Log video view assistance toggle. Before enabling this feature, you can call [isLogViewAssistSupported](#islogviewassistsupported) to check whether the device supports log video view assistance.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -619,10 +531,6 @@ Sets the preview rotation angle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-PreviewOutput-setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): void--><!--Device-PreviewOutput-setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): void-End-->
@@ -653,8 +561,6 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [start](arkts-camera-camera-session-i.md#start)(callback: AsyncCallback&lt;void&gt;)
@@ -667,7 +573,7 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 **Error codes:**
 
@@ -684,8 +590,6 @@ start(): Promise<void>
 Starts to output preview streams. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 
@@ -717,8 +621,6 @@ Stops outputting preview streams. This API uses an asynchronous callback to retu
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [stop](arkts-camera-camera-session-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
@@ -742,8 +644,6 @@ stop(): Promise<void>
 Stops outputting preview streams. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 

@@ -16,10 +16,6 @@ Obtains the enterprise information of the device administrator application. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-adminManager-function getEnterpriseInfo(admin: Want, callback: AsyncCallback<EnterpriseInfo>): void--><!--Device-adminManager-function getEnterpriseInfo(admin: Want, callback: AsyncCallback<EnterpriseInfo>): void-End-->
@@ -43,7 +39,7 @@ Obtains the enterprise information of the device administrator application. This
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
@@ -75,10 +71,6 @@ Obtains the enterprise information of the device administrator application. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-adminManager-function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>--><!--Device-adminManager-function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>-End-->
@@ -107,7 +99,7 @@ Obtains the enterprise information of the device administrator application. This
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

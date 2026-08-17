@@ -1,10 +1,8 @@
 # Schema
 
-Defines the schema of a KV store. You can create a **Schema** object and place it in [Options](arkts-arkdata-distributeddata-options-i.md#Options) when creating or opening a KV store.
+Defines the schema of a KV store. You can create a **Schema** object and place it in [Options](arkts-arkdata-distributeddata-options-i.md#options) when creating or opening a KV store.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -23,8 +21,6 @@ constructor()
 A constructor used to create a **Schema** instance.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -46,8 +42,6 @@ String array in JSON format.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [indexes](#indexes)
@@ -67,8 +61,6 @@ Schema mode.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ JSON root object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [root](#root)
@@ -111,8 +101,6 @@ Size of a skip of the schema.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

@@ -4,10 +4,6 @@ Describes a collection of target [Wants](../../../quick-start/module-configurati
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ShortcutWant--><!--Device-unnamed-export interface ShortcutWant-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -25,10 +21,6 @@ Custom data for launching the shortcut. The data must be strings. Both keys and 
 **Type:** Array&lt;[ParameterItem](arkts-ability-shortcutinfo-parameteritem-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortcutWant-parameters?: Array<ParameterItem>--><!--Device-ShortcutWant-parameters?: Array<ParameterItem>-End-->
 
@@ -48,10 +40,6 @@ Target ability name of the shortcut.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortcutWant-targetAbility: string--><!--Device-ShortcutWant-targetAbility: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -70,10 +58,6 @@ Target bundle name of the shortcut.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortcutWant-targetBundle: string--><!--Device-ShortcutWant-targetBundle: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -91,10 +75,6 @@ Target module name of the shortcut.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortcutWant-targetModule?: string--><!--Device-ShortcutWant-targetModule?: string-End-->
 

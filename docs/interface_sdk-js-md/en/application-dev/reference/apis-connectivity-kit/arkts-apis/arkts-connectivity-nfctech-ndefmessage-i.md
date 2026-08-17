@@ -4,10 +4,6 @@ Provides methods for Message of NDEF.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NdefMessage--><!--Device-unnamed-export interface NdefMessage-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -21,10 +17,6 @@ getNdefRecords(): tag.NdefRecord[]
 Obtains all records of an NDEF message.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

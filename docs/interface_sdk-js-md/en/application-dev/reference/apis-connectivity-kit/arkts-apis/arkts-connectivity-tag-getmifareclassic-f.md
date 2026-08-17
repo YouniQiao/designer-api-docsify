@@ -12,13 +12,9 @@ import { tag } from 'tag';
 function getMifareClassic(tagInfo: TagInfo): MifareClassicTag
 ```
 
-Obtains an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md#MifareClassicTag) object based on the tag information. During tag reading, if the tag supports the MIFARE Classic technology, an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md#MifareClassicTag) object will be created based on the tag information.
+Obtains an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md#mifareclassictag) object based on the tag information. During tag reading, if the tag supports the MIFARE Classic technology, an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md#mifareclassictag) object will be created based on the tag information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -4,10 +4,6 @@ Provides APIs for operating on a revoked certificate entry in a CRL.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface X509CRLEntry--><!--Device-cert-interface X509CRLEntry-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -27,10 +23,6 @@ getCertIssuer(): DataBlob
 Obtains the issuer name of the revoked certificate. > **NOTE：**> > The obtained issuer name of this revoked certificate contains a string terminator.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,7 +45,7 @@ Obtains the issuer name of the revoked certificate. > **NOTE：**> > The obtaine
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -111,10 +103,6 @@ Obtains the issuer name of the revoked certificate based on the encoding type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509CRLEntry-getCertIssuer(encodingType: EncodingType): string--><!--Device-X509CRLEntry-getCertIssuer(encodingType: EncodingType): string-End-->
@@ -143,7 +131,7 @@ Obtains the issuer name of the revoked certificate based on the encoding type.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -203,10 +191,6 @@ Obtains the distinguished name (DN) of the issuer of the revoked certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509CRLEntry-getCertIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509CRLEntry-getCertIssuerX500DistinguishedName(): X500DistinguishedName-End-->
@@ -227,7 +211,7 @@ Obtains the distinguished name (DN) of the issuer of the revoked certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -280,10 +264,6 @@ Obtains the serialized data of this revoked certificate entry. This API uses an 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509CRLEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509CRLEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
@@ -305,7 +285,7 @@ Obtains the serialized data of this revoked certificate entry. This API uses an 
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -369,10 +349,6 @@ Obtains the serialized data of this revoked certificate entry. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509CRLEntry-getEncoded(): Promise<EncodingBlob>--><!--Device-X509CRLEntry-getEncoded(): Promise<EncodingBlob>-End-->
@@ -394,7 +370,7 @@ Obtains the serialized data of this revoked certificate entry. This API uses a p
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -456,10 +432,6 @@ Obtains the CRL entry extensions in DER format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509CRLEntry-getExtensions(): DataBlob--><!--Device-X509CRLEntry-getExtensions(): DataBlob-End-->
@@ -480,7 +452,7 @@ Obtains the CRL entry extensions in DER format.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -541,10 +513,6 @@ Obtains the CRL entry extension object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509CRLEntry-getExtensionsObject(): CertExtension--><!--Device-X509CRLEntry-getExtensionsObject(): CertExtension-End-->
@@ -565,7 +533,7 @@ Obtains the CRL entry extension object.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -685,10 +653,6 @@ Obtains the certificate's revocation date.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509CRLEntry-getRevocationDate(): string--><!--Device-X509CRLEntry-getRevocationDate(): string-End-->
@@ -709,7 +673,7 @@ Obtains the certificate's revocation date.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -767,10 +731,6 @@ Obtains the serial number of this revoked certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509CRLEntry-getSerialNumber(): bigint--><!--Device-X509CRLEntry-getSerialNumber(): bigint-End-->
@@ -791,7 +751,7 @@ Obtains the serial number of this revoked certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -849,10 +809,6 @@ Checks whether this CRL entry has extensions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509CRLEntry-hasExtensions(): boolean--><!--Device-X509CRLEntry-hasExtensions(): boolean-End-->
@@ -873,7 +829,7 @@ Checks whether this CRL entry has extensions.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -931,10 +887,6 @@ Obtains the hash value of the data in DER format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509CRLEntry-hashCode(): Uint8Array--><!--Device-X509CRLEntry-hashCode(): Uint8Array-End-->
@@ -955,7 +907,7 @@ Obtains the hash value of the data in DER format.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1008,10 +960,6 @@ Converts the object data into a string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509CRLEntry-toString(): string--><!--Device-X509CRLEntry-toString(): string-End-->
@@ -1032,7 +980,7 @@ Converts the object data into a string.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

@@ -4,10 +4,6 @@ Declare NodeParam
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NodeParam--><!--Device-unnamed-export interface NodeParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -36,10 +32,6 @@ Right-click child component bound to the node. The child component is decorated 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -59,10 +51,6 @@ Current child node ID. The value must be greater than or equal to -1. The value 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,10 +72,6 @@ Edit icon. The default value is an empty string.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -107,10 +91,6 @@ Icon. The default value is an empty string.
 **Type:** ResourceStr
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,10 +112,6 @@ Whether the node is a directory. Default value: **false**. **true**: The node is
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -155,10 +131,6 @@ ID of the parent node. The value must be greater than or equal to -1. Default va
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,10 +152,6 @@ Primary title. The default value is an empty string.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -203,10 +171,6 @@ Secondary title. The default value is an empty string.
 **Type:** ResourceStr
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,10 +192,6 @@ Icon of the selected node. The default value is an empty string.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -248,13 +208,9 @@ symbolEditIconStyle?: SymbolGlyphModifier
 
 Symbol edit icon, which has a higher priority than **editIcon**. Default value: **undefined**
 
-**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** SymbolGlyphModifier
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,13 +228,9 @@ symbolIconStyle?: SymbolGlyphModifier
 
 Symbol icon, which has higher priority than **icon**. Default value: **undefined**
 
-**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** SymbolGlyphModifier
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -296,13 +248,9 @@ symbolSelectedIconStyle?: SymbolGlyphModifier
 
 Symbol icon of the selected node., which has higher priority than **selectedIcon**. Default value: **undefined**
 
-**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** SymbolGlyphModifier
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

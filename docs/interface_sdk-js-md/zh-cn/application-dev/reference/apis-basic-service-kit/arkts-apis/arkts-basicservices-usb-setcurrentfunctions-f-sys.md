@@ -10,11 +10,9 @@ function setCurrentFunctions(funcs: FunctionType): Promise<boolean>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 9
 
-**替代接口：** [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md#setCurrentFunctions（系统接口）)
+**替代接口：** [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md#setcurrentfunctions系统接口)
 
 <!--Device-usb-function setCurrentFunctions(funcs: FunctionType): Promise<boolean>--><!--Device-usb-function setCurrentFunctions(funcs: FunctionType): Promise<boolean>-End-->
 
@@ -34,7 +32,7 @@ function setCurrentFunctions(funcs: FunctionType): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象，返回设置成功与否的结果。true表示设置成功，false表示设置失败。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let funcs : number = usb.FunctionType.HDC;

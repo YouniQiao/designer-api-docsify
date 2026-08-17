@@ -10,8 +10,6 @@ Chooses files of the specified types. This API uses a promise to return the resu
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-declare function choose(types?: string[]): Promise<string>--><!--Device-unnamed-declare function choose(types?: string[]): Promise<string>-End-->
@@ -41,8 +39,6 @@ Chooses a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-declare function choose(callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function choose(callback: AsyncCallback<string>): void-End-->
@@ -65,8 +61,6 @@ declare function choose(types: string[], callback: AsyncCallback<string>): void
 Chooses files of the specified types. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

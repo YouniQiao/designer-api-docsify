@@ -1,12 +1,8 @@
 # AvoidArea
 
-Describes the area to avoid for window content. When adapting window content for an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding **AvoidArea** specified by [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType). In the avoid area, the application window content is obscured and does not respond to user click events. > **NOTE：**> > The figure below shows the meanings of **leftRect**, **topRect**, **rightRect**, and **bottomRect**. > > 
+Describes the area to avoid for window content. When adapting window content for an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding **AvoidArea** specified by [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype). In the avoid area, the application window content is obscured and does not respond to user click events. > **NOTE：**> > The figure below shows the meanings of **leftRect**, **topRect**, **rightRect**, and **bottomRect**. > > 
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-window-interface AvoidArea--><!--Device-window-interface AvoidArea-End-->
 
@@ -30,10 +26,6 @@ Rectangle centered at the bottom of the window's two diagonals.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AvoidArea-bottomRect: Rect--><!--Device-AvoidArea-bottomRect: Rect-End-->
@@ -51,10 +43,6 @@ Rectangle centered to the left of the window's two diagonals.
 **Type:** Rect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Rectangle centered to the right of the window's two diagonals.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AvoidArea-rightRect: Rect--><!--Device-AvoidArea-rightRect: Rect-End-->
@@ -96,10 +80,6 @@ Rectangle centered at the top of the window's two diagonals.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AvoidArea-topRect: Rect--><!--Device-AvoidArea-topRect: Rect-End-->
@@ -117,10 +97,6 @@ Whether the avoid area is visible. **true** if visible, **false** otherwise.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

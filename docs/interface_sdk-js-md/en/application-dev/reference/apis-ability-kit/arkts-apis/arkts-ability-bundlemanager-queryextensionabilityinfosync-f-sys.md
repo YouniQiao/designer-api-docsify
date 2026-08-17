@@ -17,10 +17,6 @@ Obtains the ExtensionAbility information based on the given want, ExtensionAbili
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
 <!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: ExtensionAbilityType,    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: ExtensionAbilityType,    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>-End-->
@@ -36,7 +32,7 @@ Obtains the ExtensionAbility information based on the given want, ExtensionAbili
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
 | extensionAbilityType | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | Yes | Type of the ExtensionAbility. |
 | extensionAbilityFlags | int | Yes | Type of the ExtensionAbility information to obtain. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
@@ -56,7 +52,7 @@ Obtains the ExtensionAbility information based on the given want, ExtensionAbili
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -117,10 +113,6 @@ Obtains the ExtensionAbility information based on the given Want, ExtensionAbili
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
 <!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>-End-->
@@ -136,7 +128,7 @@ Obtains the ExtensionAbility information based on the given Want, ExtensionAbili
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
 | extensionAbilityType | string | Yes | Type of the custom ExtensionAbility. |
 | extensionAbilityFlags | int | Yes | Information flags to be contained in the returned ExtensionAbilityInfo object. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
@@ -156,7 +148,7 @@ Obtains the ExtensionAbility information based on the given Want, ExtensionAbili
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Call the API with the userId parameter specified.
@@ -217,10 +209,6 @@ Obtains the ExtensionAbility information based on the given ExtensionAbility typ
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
 <!--Device-bundleManager-function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAbilityFlags: int,    userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAbilityFlags: int,    userId?: int): Array<ExtensionAbilityInfo>-End-->
@@ -235,7 +223,7 @@ Obtains the ExtensionAbility information based on the given ExtensionAbility typ
 | --- | --- | --- | --- |
 | extensionAbilityType | string | Yes | Type of the custom ExtensionAbility. |
 | extensionAbilityFlags | int | Yes | Information flags to be contained in the returned ExtensionAbilityInfo object. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
@@ -253,7 +241,7 @@ Obtains the ExtensionAbility information based on the given ExtensionAbility typ
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Call the API with the userId parameter specified.

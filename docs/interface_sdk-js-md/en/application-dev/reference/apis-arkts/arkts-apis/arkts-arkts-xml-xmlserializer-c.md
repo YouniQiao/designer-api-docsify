@@ -4,10 +4,6 @@ The XmlSerializer interface is used to generate an xml file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-xml-class XmlSerializer--><!--Device-xml-class XmlSerializer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ Adds an empty element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-addEmptyElement(name: string): void--><!--Device-XmlSerializer-addEmptyElement(name: string): void-End-->
@@ -44,7 +36,7 @@ Adds an empty element.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the empty element to add. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -67,10 +59,6 @@ A constructor used to create an XmlSerializer instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-constructor(buffer: ArrayBuffer | DataView, encoding?: string)--><!--Device-XmlSerializer-constructor(buffer: ArrayBuffer | DataView, encoding?: string)-End-->
@@ -84,7 +72,7 @@ A constructor used to create an XmlSerializer instance.
 | buffer | ArrayBuffer \| DataView | Yes | ArrayBuffer or DataView for storing the XML information to set. |
 | encoding | string | No | Encoding format. The default value is 'utf-8' (the only format currently supported ). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayBuffer = new ArrayBuffer(2048);
@@ -101,17 +89,13 @@ Writes the end tag of the element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-endElement(): void--><!--Device-XmlSerializer-endElement(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -137,10 +121,6 @@ Sets an attribute.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-setAttributes(name: string, value: string): void--><!--Device-XmlSerializer-setAttributes(name: string, value: string): void-End-->
@@ -154,7 +134,7 @@ Sets an attribute.
 | name | string | Yes | Key of the attribute. |
 | value | string | Yes | Value of the attribute. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -179,10 +159,6 @@ Adds data to the CDATA tag. The structure of the generated CDATA tag is "&lt;! &
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-setCDATA(text: string): void--><!--Device-XmlSerializer-setCDATA(text: string): void-End-->
@@ -195,7 +171,7 @@ Adds data to the CDATA tag. The structure of the generated CDATA tag is "&lt;! &
 | --- | --- | --- | --- |
 | text | string | Yes | CDATA data to set. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -218,10 +194,6 @@ Sets a comment.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-setComment(text: string): void--><!--Device-XmlSerializer-setComment(text: string): void-End-->
@@ -234,7 +206,7 @@ Sets a comment.
 | --- | --- | --- | --- |
 | text | string | Yes | Comment to set. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -257,17 +229,13 @@ Sets a file declaration with encoding.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-setDeclaration(): void--><!--Device-XmlSerializer-setDeclaration(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -291,10 +259,6 @@ Sets a document type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-setDocType(text: string): void--><!--Device-XmlSerializer-setDocType(text: string): void-End-->
@@ -307,7 +271,7 @@ Sets a document type.
 | --- | --- | --- | --- |
 | text | string | Yes | Content of DocType to set. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -330,10 +294,6 @@ Sets the namespace for an element tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-setNamespace(prefix: string, namespace: string): void--><!--Device-XmlSerializer-setNamespace(prefix: string, namespace: string): void-End-->
@@ -347,7 +307,7 @@ Sets the namespace for an element tag.
 | prefix | string | Yes | Prefix of the element and its child elements. |
 | namespace | string | Yes | Namespace to set. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -373,10 +333,6 @@ Sets a tag value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-setText(text: string): void--><!--Device-XmlSerializer-setText(text: string): void-End-->
@@ -389,7 +345,7 @@ Sets a tag value.
 | --- | --- | --- | --- |
 | text | string | Yes | Tag value to set, which is the content of the text attribute. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -415,10 +371,6 @@ Writes the start tag based on the given element name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlSerializer-startElement(name: string): void--><!--Device-XmlSerializer-startElement(name: string): void-End-->
@@ -431,7 +383,7 @@ Writes the start tag based on the given element name.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the element. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';

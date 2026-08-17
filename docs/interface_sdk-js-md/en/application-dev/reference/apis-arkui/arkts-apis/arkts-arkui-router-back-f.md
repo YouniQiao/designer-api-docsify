@@ -12,11 +12,9 @@ import { router } from 'router';
 function back(options?: RouterOptions): void
 ```
 
-Returns to the previous page or a specified page, which deletes all pages between the current page and the target page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
+Returns to the previous page or a specified page, which deletes all pages between the current page and the target page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 18
 
@@ -34,7 +32,7 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 | --- | --- | --- | --- |
 | options | RouterOptions | No | Description of the target page. The **url** parameter indicates the URL of the page to return to. If the specified page does not exist in the navigation stack, no action is taken. If no URL is set, the application returns to the previous page, and the page is not rebuilt. Pages are only reclaimed after being popped from the navigation stack. Setting **url** to the special value **"/"** has no effect. If the named route is used, the provided URL must be the name of the named route. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 this.getUIContext().getRouter().back({ url: 'pages/detail' });
@@ -47,11 +45,9 @@ this.getUIContext().getRouter().back({ url: 'pages/detail' });
 function back(index: number, params?: Object): void
 ```
 
-Returns to the specified page, which deletes all pages between the current page and the target page. > **NOTE：**> > - Since API version 12, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
+Returns to the specified page, which deletes all pages between the current page and the target page. > **NOTE：**> > - Since API version 12, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Deprecated since:** 18
 
@@ -72,7 +68,7 @@ Returns to the specified page, which deletes all pages between the current page 
 | index | number | Yes | Index of the target page to navigate to. The index starts from 1 from the bottom to the top of the stack. |
 | params | Object | No | Parameters carried when returning to the page. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 this.getUIContext().getRouter().back(1);

@@ -14,10 +14,6 @@ Creates a toolbar item at the beginning of the corresponding column in the title
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolBarItemInterface-(options?: ToolBarItemOptions): ToolBarItemAttribute--><!--Device-ToolBarItemInterface-(options?: ToolBarItemOptions): ToolBarItemAttribute-End-->
@@ -28,7 +24,7 @@ Creates a toolbar item at the beginning of the corresponding column in the title
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | No | Optional parameters for **ToolBarItem**, including the **placement** parameter of the [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md#ToolBarItemPlacement) type.<br>Default value: **placement: ToolBarItemPlacement.TOP_BAR_LEADING |
+| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | No | Optional parameters for **ToolBarItem**, including the **placement** parameter of the [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md#toolbaritemplacement) type.<br>Default value: **placement: ToolBarItemPlacement.TOP_BAR_LEADING |
 
 ## Summary
 

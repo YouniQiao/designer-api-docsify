@@ -17,10 +17,6 @@ Check whether the WLAN scan results match the WLAN BSSID list.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -52,7 +48,7 @@ Check whether the WLAN scan results match the WLAN BSSID list.
 | [3301800](../errorcode-geoLocationManager.md#3301800-failed-to-start-wifi-or-bluetooth-scanning) | Failed to start WiFi scanning. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

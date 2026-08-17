@@ -4,10 +4,6 @@ Defines the custom transition animation protocol. You need to implement this pro
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface NavigationAnimatedTransition--><!--Device-unnamed-declare interface NavigationAnimatedTransition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Whether the transition animation is interactive. **true**: yes; **false**: no De
 **Default:** false
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Callback invoked when the transition is complete. **success**: whether the trans
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -74,10 +62,6 @@ Animation timeout time. Unit: ms Value range: [0, +��) Default value: no def
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -97,10 +81,6 @@ Callback for executing the custom transition animation. **transitionProxy**: pro
 **Type:** (transitionProxy: NavigationTransitionProxy) =&gt; void
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

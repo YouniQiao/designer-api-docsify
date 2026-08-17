@@ -16,10 +16,6 @@ Gets all payment services.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Model restriction:** This API can be used only in the stage model.

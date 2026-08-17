@@ -1,14 +1,12 @@
-# USBConfig
+# USBConfig(USB Manager)
 
-USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md#USBDevice)中可以含有多个配置。
+USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md#usbdevice)中可以含有多个配置。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration)
+**替代接口：** [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#usbconfiguration)
 
 <!--Device-usb-interface USBConfig--><!--Device-usb-interface USBConfig-End-->
 
@@ -25,8 +23,6 @@ attributes: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -48,8 +44,6 @@ id: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [id](arkts-basicservices-usbmanager-usbconfiguration-i.md#id)
@@ -69,8 +63,6 @@ interfaces: Array<USBInterface>
 **类型：** Array&lt;USBInterface&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -92,11 +84,9 @@ isRemoteWakeup: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isRemoteWakeup)
+**替代接口：** [isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isremotewakeup)
 
 <!--Device-USBConfig-isRemoteWakeup: boolean--><!--Device-USBConfig-isRemoteWakeup: boolean-End-->
 
@@ -114,11 +104,9 @@ isSelfPowered: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isSelfPowered](arkts-basicservices-usbmanager-usbconfiguration-i.md#isSelfPowered)
+**替代接口：** [isSelfPowered](arkts-basicservices-usbmanager-usbconfiguration-i.md#isselfpowered)
 
 <!--Device-USBConfig-isSelfPowered: boolean--><!--Device-USBConfig-isSelfPowered: boolean-End-->
 
@@ -136,11 +124,9 @@ maxPower: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxPower)
+**替代接口：** [maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxpower)
 
 <!--Device-USBConfig-maxPower: number--><!--Device-USBConfig-maxPower: number-End-->
 
@@ -157,8 +143,6 @@ name: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 

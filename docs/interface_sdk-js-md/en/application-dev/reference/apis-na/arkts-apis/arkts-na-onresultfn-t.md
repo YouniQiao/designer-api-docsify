@@ -8,9 +8,7 @@ Called when the UIExtensionAbility is terminated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -22,5 +20,5 @@ Called when the UIExtensionAbility is terminated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-abilityresult-i.md) | Yes | Result returned when [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#terminateSelfWithResult) is called to terminate the UIExtensionAbility. |
+| parameter | [AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-abilityresult-i.md) | Yes | Result returned when [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#terminateselfwithresult) is called to terminate the UIExtensionAbility. |
 

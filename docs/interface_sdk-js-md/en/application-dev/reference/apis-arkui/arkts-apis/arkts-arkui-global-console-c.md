@@ -4,10 +4,6 @@ Defines the console info.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class console--><!--Device-unnamed-export declare class console-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ static assert(value?: Object, ...arguments: Object[]): void
 Prints assertion information.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -55,10 +47,6 @@ Maintains an internal counter. When this counter is invoked, its label name and 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static count(label?: string): void--><!--Device-console-static count(label?: string): void-End-->
@@ -86,10 +74,6 @@ static countReset(label?: string): void
 Resets a counter based on the specified label name.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -119,10 +103,6 @@ Prints debugging information in formatted output mode.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -148,10 +128,6 @@ Prints content of the specified object.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static dir(dir?: Object): void--><!--Device-console-static dir(dir?: Object): void-End-->
@@ -174,10 +150,6 @@ Displays an interactive tree of the descendant elements of the specified XML ele
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static dirxml(...arguments: Object[]): void--><!--Device-console-static dirxml(...arguments: Object[]): void-End-->
@@ -199,10 +171,6 @@ static error(message: string, ...arguments: any[]): void
 Prints error information in formatted output mode.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -229,10 +197,6 @@ Increases the indentation of subsequent lines by two spaces. If the information 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static group(...arguments: Object[]): void--><!--Device-console-static group(...arguments: Object[]): void-End-->
@@ -254,10 +218,6 @@ static groupCollapsed(...arguments: Object[]): void
 Creates a new inline group in collapsed mode. The usage and function of this API are the same as those of console.group().
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -281,10 +241,6 @@ Reduces the indentation of subsequent lines by two spaces.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static groupEnd(): void--><!--Device-console-static groupEnd(): void-End-->
@@ -300,10 +256,6 @@ static info(message: string, ...arguments: any[]): void
 Prints log information in formatted output mode. This API is the alias of console.log ().
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -330,10 +282,6 @@ Prints log information in formatted output mode.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -359,10 +307,6 @@ Prints data in a table.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static table(tableData?: Object): void--><!--Device-console-static table(tableData?: Object): void-End-->
@@ -384,10 +328,6 @@ static time(label?: string): void
 Starts a timer to track the duration of an operation. You can use console.timeEnd() to close the timer and print the elapsed time (in ms).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -417,10 +357,6 @@ Stops the timer started by calling console.time() and prints the elapsed time (i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static timeEnd(label?: string): void--><!--Device-console-static timeEnd(label?: string): void-End-->
@@ -448,10 +384,6 @@ static timeLog(label?: string, ...arguments: Object[]): void
 Prints the elapsed time and other data parameters for the timer started by console.time().
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -482,10 +414,6 @@ Creates a stack trace.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static trace(...arguments: Object[]): void--><!--Device-console-static trace(...arguments: Object[]): void-End-->
@@ -508,10 +436,6 @@ Prints information about the current hybrid stack of the calling thread in the m
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static traceHybridStack(): void--><!--Device-console-static traceHybridStack(): void-End-->
@@ -527,10 +451,6 @@ static warn(message: string, ...arguments: any[]): void
 Prints warning information in formatted output mode.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,10 +4,6 @@ Represents an automatic upgrade period.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface UpgradePeriod--><!--Device-update-export interface UpgradePeriod-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ End time. The value ranges from 0 to 1440, in minutes. This parameter indicates 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UpgradePeriod-end: int--><!--Device-UpgradePeriod-end: int-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ Start time. The value ranges from 0 to 1440, in minutes. This parameter indicate
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UpgradePeriod-start: int--><!--Device-UpgradePeriod-start: int-End-->
 

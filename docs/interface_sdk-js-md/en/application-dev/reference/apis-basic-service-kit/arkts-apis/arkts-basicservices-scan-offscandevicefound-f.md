@@ -16,10 +16,6 @@ Unregister event callback for scanner device found.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PRINT
 
 <!--Device-scan-function offScanDeviceFound(callback?: Callback<ScannerDevice>): void--><!--Device-scan-function offScanDeviceFound(callback?: Callback<ScannerDevice>): void-End-->

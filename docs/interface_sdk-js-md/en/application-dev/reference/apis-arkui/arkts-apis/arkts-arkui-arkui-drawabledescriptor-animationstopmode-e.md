@@ -4,10 +4,6 @@ Enumerates the stop modes of an animation.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum AnimationStopMode--><!--Device-unnamed-export enum AnimationStopMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ FIRST_FRAME = 0
 The animation returns to the first frame when it stops.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ LAST_FRAME = 1
 The animation stays at the last frame when it stops.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

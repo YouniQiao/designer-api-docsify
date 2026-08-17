@@ -1,12 +1,8 @@
 # DlpConnPlugin
 
-Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API. > **NOTE：**> > [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerPlugin) requires identical parameters to this API. > [connectServer](#connectServer) is called by the SA and the parameters are > returned through the callback.
+Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API. > **NOTE：**> > [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin) requires identical parameters to this API. > [connectServer](#connectserver) is called by the SA and the parameters are > returned through the callback.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-dlpPermission-export interface DlpConnPlugin--><!--Device-dlpPermission-export interface DlpConnPlugin-End-->
 
@@ -27,10 +23,6 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback. This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server. > **NOTE：**> > **connectServer** indicates a call from the system capability side to the frontend.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE

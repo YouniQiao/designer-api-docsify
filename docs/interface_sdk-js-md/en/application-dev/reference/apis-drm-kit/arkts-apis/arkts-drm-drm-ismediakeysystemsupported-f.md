@@ -16,10 +16,6 @@ Checks whether the device supports the combination of the DRM solution, MIME typ
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-drm-function isMediaKeySystemSupported(name: string, mimeType: string, level: ContentProtectionLevel): boolean--><!--Device-drm-function isMediaKeySystemSupported(name: string, mimeType: string, level: ContentProtectionLevel): boolean-End-->
@@ -30,8 +26,8 @@ Checks whether the device supports the combination of the DRM solution, MIME typ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | DRM solution name. Before calling this API, ensure that the DRM solution name is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported). |
-| mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution. Before calling this API, ensure that the MIME type is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported) . |
+| name | string | Yes | DRM solution name. Before calling this API, ensure that the DRM solution name is supported by calling [isMediaKeySystemSupported](#ismediakeysystemsupported). |
+| mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution. Before calling this API, ensure that the MIME type is supported by calling [isMediaKeySystemSupported](#ismediakeysystemsupported) . |
 | level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Yes | Content protection level. |
 
 **Return value:**
@@ -48,7 +44,7 @@ Checks whether the device supports the combination of the DRM solution, MIME typ
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';
@@ -74,10 +70,6 @@ Checks whether the device supports the combination of the DRM solution and MIME 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-drm-function isMediaKeySystemSupported(name: string, mimeType: string): boolean--><!--Device-drm-function isMediaKeySystemSupported(name: string, mimeType: string): boolean-End-->
@@ -88,7 +80,7 @@ Checks whether the device supports the combination of the DRM solution and MIME 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | DRM solution name. Before calling this API, ensure that the DRM solution name is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported). |
+| name | string | Yes | DRM solution name. Before calling this API, ensure that the DRM solution name is supported by calling [isMediaKeySystemSupported](#ismediakeysystemsupported). |
 | mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution. For example, video/avc and video/hevc. |
 
 **Return value:**
@@ -105,7 +97,7 @@ Checks whether the device supports the combination of the DRM solution and MIME 
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';
@@ -130,10 +122,6 @@ function isMediaKeySystemSupported(name: string): boolean
 Checks whether the device supports the specified DRM solution.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -161,7 +149,7 @@ Checks whether the device supports the specified DRM solution.
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';

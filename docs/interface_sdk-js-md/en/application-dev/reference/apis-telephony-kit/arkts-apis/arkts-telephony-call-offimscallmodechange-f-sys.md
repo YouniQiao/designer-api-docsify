@@ -16,10 +16,6 @@ Unsubscribe from the imsCallModeChange event.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function offImsCallModeChange(callback?: Callback<ImsCallModeInfo>): void--><!--Device-call-function offImsCallModeChange(callback?: Callback<ImsCallModeInfo>): void-End-->

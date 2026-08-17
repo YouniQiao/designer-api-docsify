@@ -4,10 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface ArrowStyle--><!--Device-unnamed-declare interface ArrowStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ arrowColor?: ResourceColor
 **默认值：** #182431
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,10 +44,6 @@ arrowSize?: Length
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -77,10 +65,6 @@ backgroundColor?: ResourceColor
 **默认值：** When isSidebarMiddle is false, the default value is #00000000, Otherwise,the default value is #1918243 1 [since 10 - 10] @default When isSidebarMiddle is false, the default value is #00000000, Otherwise, the default value is #1918243 1 [since 11]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,10 +88,6 @@ backgroundSize?: Length
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -130,10 +110,6 @@ isSidebarMiddle?: boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -155,10 +131,6 @@ showBackground?: boolean
 **默认值：** false
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

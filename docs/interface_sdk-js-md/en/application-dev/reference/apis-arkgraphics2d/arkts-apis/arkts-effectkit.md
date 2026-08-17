@@ -1,12 +1,8 @@
 # @ohos.effectKit
 
-The Image Effect module provides basic capabilities for processing images, including brightness adjustment, blurring, grayscale adjustment, and intelligent color picking. It is applicable to scenarios such as adding filter effects in image editing apps, blurring the background image of app startup pages, automatically extracting UI theme colors, and analyzing image color schemes. This module is used for offline processing of image.PixelMap to obtain visual effects, while uiEffect (UI Effect Service) connects to the rendering service in real time to process screen frame buffers for dynamic visual effects. This module provides the following classes: - [Filter](arkts-arkgraphics2d-effectkit-filter-i.md#Filter): an effect class used to add a specified effect to the effect chain, enabling combined processing of multiple image effects through chained calls. - [Color](arkts-arkgraphics2d-effectkit-color-i.md#Color): a class used to store the color picked. - [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md#ColorPicker): a smart color picker.
+The Image Effect module provides basic capabilities for processing images, including brightness adjustment, blurring, grayscale adjustment, and intelligent color picking. It is applicable to scenarios such as adding filter effects in image editing apps, blurring the background image of app startup pages, automatically extracting UI theme colors, and analyzing image color schemes. This module is used for offline processing of image.PixelMap to obtain visual effects, while uiEffect (UI Effect Service) connects to the rendering service in real time to process screen frame buffers for dynamic visual effects. This module provides the following classes: - [Filter](arkts-arkgraphics2d-effectkit-filter-i.md#filter): an effect class used to add a specified effect to the effect chain, enabling combined processing of multiple image effects through chained calls. - [Color](arkts-arkgraphics2d-effectkit-color-i.md#color): a class used to store the color picked. - [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md#colorpicker): a smart color picker.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace effectKit--><!--Device-unnamed-declare namespace effectKit-End-->
 
@@ -24,11 +20,11 @@ import { effectKit } from 'effectKit';
 
 | Name | Description |
 | --- | --- |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker) | Creates a ColorPicker instance based on a pixel map. This API uses a promise to return the result. |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker) | Creates a ColorPicker instance for the selected region based on a pixel map. This API uses a promise to return the result. |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker) | Creates a ColorPicker instance based on a pixel map. This API uses an asynchronous callback to return the result. |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker) | Creates a ColorPicker instance for the selected region based on a pixel map. This API uses an asynchronous callback to return the result. |
-| [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createEffect) | Creates a Filter instance based on the input PixelMap. You can then add various image effects through chained calls, and finally obtain the processed image via getEffectPixelMap. |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker) | Creates a ColorPicker instance based on a pixel map. This API uses a promise to return the result. |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker) | Creates a ColorPicker instance for the selected region based on a pixel map. This API uses a promise to return the result. |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker) | Creates a ColorPicker instance based on a pixel map. This API uses an asynchronous callback to return the result. |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker) | Creates a ColorPicker instance for the selected region based on a pixel map. This API uses an asynchronous callback to return the result. |
+| [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect) | Creates a Filter instance based on the input PixelMap. You can then add various image effects through chained calls, and finally obtain the processed image via getEffectPixelMap. |
 
 ### Interfaces
 

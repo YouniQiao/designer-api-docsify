@@ -4,8 +4,6 @@ Represents a **Schema** instance, which provides the APIs for defining the value
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** FieldNode
@@ -23,8 +21,6 @@ appendChild(child: FieldNode): boolean
 Appends a child node to this **FieldNode**.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -46,7 +42,7 @@ Appends a child node to this **FieldNode**.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ddm from '@ohos.data.distributedData';
@@ -78,8 +74,6 @@ A constructor used to create a **FieldNode** instance with a string field.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** constructor
@@ -106,8 +100,6 @@ Default value of a **FieldNode**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** default
@@ -128,8 +120,6 @@ Whether the database field can be null.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** nullable
@@ -149,8 +139,6 @@ Value of the data type corresponding to the specified node.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

@@ -1,12 +1,8 @@
 # Paragraph
 
-保存文本内容及样式的载体，支持排版与绘制操作。 下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到 Paragraph对象实例，再通过此实例调用对应方法。
+保存文本内容及样式的载体，支持排版与绘制操作。 下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到 Paragraph对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-text-class Paragraph--><!--Device-text-class Paragraph-End-->
 
@@ -22,10 +18,6 @@ didExceedMaxLines(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-didExceedMaxLines(): boolean--><!--Device-Paragraph-didExceedMaxLines(): boolean-End-->
@@ -38,7 +30,7 @@ didExceedMaxLines(): boolean
 | --- | --- |
 | boolean | true表示段落超出了最大行限制，false则表示没有超出最大行限制。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let didExceed = paragraph.didExceedMaxLines();
@@ -54,10 +46,6 @@ forceReuseRasterResult(isForce: boolean): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -72,7 +60,7 @@ forceReuseRasterResult(isForce: boolean): void
 | --- | --- | --- | --- |
 | isForce | boolean | 是 | 是否强制复用光栅化结果。true表示强制复用光栅化结果，false表示允许更新光栅化结果。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -185,10 +173,6 @@ getActualTextRange(lineNumber: int, includeSpaces: boolean): Range
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getActualTextRange(lineNumber: int, includeSpaces: boolean): Range--><!--Device-Paragraph-getActualTextRange(lineNumber: int, includeSpaces: boolean): Range-End-->
@@ -199,7 +183,7 @@ getActualTextRange(lineNumber: int, includeSpaces: boolean): Range
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lineNumber | int | 是 | 要获取文本范围的行索引，行索引从0开始。该接口只能获取已有行的边界，即输入行索引从0开始。最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](#getLineCount)接口获取。 |
+| lineNumber | int | 是 | 要获取文本范围的行索引，行索引从0开始。该接口只能获取已有行的边界，即输入行索引从0开始。最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](#getlinecount)接口获取。 |
 | includeSpaces | boolean | 是 | 表示是否应包含空白字符。true表示包含空白字符，false表示不包含空白字符。 |
 
 **返回值：**
@@ -208,7 +192,7 @@ getActualTextRange(lineNumber: int, includeSpaces: boolean): Range
 | --- | --- |
 | Range | 返回对应行数的实际文本范围。如果行索引非法，返回的start和end均为0。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let rang = paragraph.getActualTextRange(0, true);
@@ -224,10 +208,6 @@ getAlphabeticBaseline(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getAlphabeticBaseline(): double--><!--Device-Paragraph-getAlphabeticBaseline(): double-End-->
@@ -240,7 +220,7 @@ getAlphabeticBaseline(): double
 | --- | --- |
 | double | 拉丁字母下的基线位置，浮点数，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let alphabeticBaseline = paragraph.getAlphabeticBaseline();
@@ -255,10 +235,6 @@ getCharacterPositionAtCoordinate(x: double, y: double, encoding: drawing.TextEnc
 获取与给定坐标最接近的字符位置信息。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -288,7 +264,7 @@ getCharacterPositionAtCoordinate(x: double, y: double, encoding: drawing.TextEnc
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -373,10 +349,6 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -404,7 +376,7 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -487,10 +459,6 @@ getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity--><!--Device-Paragraph-getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity-End-->
@@ -510,7 +478,7 @@ getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity
 | --- | --- |
 | PositionWithAffinity | 字形位置信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let positionWithAffinity = paragraph.getGlyphPositionAtCoordinate(0, 0);
@@ -525,10 +493,6 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 获取指定字符范围对应的字形范围。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -557,7 +521,7 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -640,10 +604,6 @@ getHeight(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getHeight(): double--><!--Device-Paragraph-getHeight(): double-End-->
@@ -656,7 +616,7 @@ getHeight(): double
 | --- | --- |
 | double | 总高度，浮点数，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let height = paragraph.getHeight();
@@ -672,10 +632,6 @@ getIdeographicBaseline(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getIdeographicBaseline(): double--><!--Device-Paragraph-getIdeographicBaseline(): double-End-->
@@ -688,7 +644,7 @@ getIdeographicBaseline(): double
 | --- | --- |
 | double | 表意字下的基线位置，浮点数，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let ideographicBaseline = paragraph.getIdeographicBaseline();
@@ -704,10 +660,6 @@ getLineCount(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getLineCount(): int--><!--Device-Paragraph-getLineCount(): int-End-->
@@ -720,7 +672,7 @@ getLineCount(): int
 | --- | --- |
 | int | 文本行数量，整数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let lineCount = paragraph.getLineCount();
@@ -736,10 +688,6 @@ getLineHeight(line: int): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getLineHeight(line: int): double--><!--Device-Paragraph-getLineHeight(line: int): double-End-->
@@ -750,7 +698,7 @@ getLineHeight(line: int): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| line | int | 是 | 文本行索引，整数，范围为0~[getLineCount](#getLineCount)-1。 |
+| line | int | 是 | 文本行索引，整数，范围为0~[getLineCount](#getlinecount)-1。 |
 
 **返回值：**
 
@@ -758,7 +706,7 @@ getLineHeight(line: int): double
 | --- | --- |
 | double | 行高，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let lineHeight = paragraph.getLineHeight(0);
@@ -774,10 +722,6 @@ getLineMetrics(): Array<LineMetrics>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getLineMetrics(): Array<LineMetrics>--><!--Device-Paragraph-getLineMetrics(): Array<LineMetrics>-End-->
@@ -790,7 +734,7 @@ getLineMetrics(): Array<LineMetrics>
 | --- | --- |
 | Array&lt;LineMetrics&gt; | 文本行的行度量数组。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let arrLineMetric =  paragraph.getLineMetrics();
@@ -806,10 +750,6 @@ getLineMetrics(lineNumber: int): LineMetrics | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getLineMetrics(lineNumber: int): LineMetrics | undefined--><!--Device-Paragraph-getLineMetrics(lineNumber: int): LineMetrics | undefined-End-->
@@ -820,7 +760,7 @@ getLineMetrics(lineNumber: int): LineMetrics | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lineNumber | int | 是 | 要查询度量信息的行的编号，行号从0开始，最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](#getLineCount)接口获取。 |
+| lineNumber | int | 是 | 要查询度量信息的行的编号，行号从0开始，最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](#getlinecount)接口获取。 |
 
 **返回值：**
 
@@ -828,7 +768,7 @@ getLineMetrics(lineNumber: int): LineMetrics | undefined
 | --- | --- |
 | LineMetrics | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let lineMetrics =  paragraph.getLineMetrics(0);
@@ -844,10 +784,6 @@ getLineWidth(line: int): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getLineWidth(line: int): double--><!--Device-Paragraph-getLineWidth(line: int): double-End-->
@@ -858,7 +794,7 @@ getLineWidth(line: int): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| line | int | 是 | 文本行索引，整数，范围为0~[getLineCount](#getLineCount)-1。 |
+| line | int | 是 | 文本行索引，整数，范围为0~[getLineCount](#getlinecount)-1。 |
 
 **返回值：**
 
@@ -866,7 +802,7 @@ getLineWidth(line: int): double
 | --- | --- |
 | double | 行宽，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let lineWidth = paragraph.getLineWidth(0);
@@ -882,10 +818,6 @@ getLongestLine(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getLongestLine(): double--><!--Device-Paragraph-getLongestLine(): double-End-->
@@ -898,7 +830,7 @@ getLongestLine(): double
 | --- | --- |
 | double | 最长一行的宽度，浮点数，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let longestLine = paragraph.getLongestLine();
@@ -914,10 +846,6 @@ getLongestLineWithIndent(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getLongestLineWithIndent(): double--><!--Device-Paragraph-getLongestLineWithIndent(): double-End-->
@@ -930,7 +858,7 @@ getLongestLineWithIndent(): double
 | --- | --- |
 | double | 最长一行的宽度（该宽度包含当前行缩进的宽度），浮点数，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let longestLineWithIndent = paragraph.getLongestLineWithIndent();
@@ -946,10 +874,6 @@ getMaxIntrinsicWidth(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getMaxIntrinsicWidth(): double--><!--Device-Paragraph-getMaxIntrinsicWidth(): double-End-->
@@ -962,7 +886,7 @@ getMaxIntrinsicWidth(): double
 | --- | --- |
 | double | 该段落所占水平空间的最大固有宽度，浮点数，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let maxIntrinsicWidth = paragraph.getMaxIntrinsicWidth();
@@ -978,10 +902,6 @@ getMaxWidth(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getMaxWidth(): double--><!--Device-Paragraph-getMaxWidth(): double-End-->
@@ -994,7 +914,7 @@ getMaxWidth(): double
 | --- | --- |
 | double | 最大的行宽，浮点数，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let maxWidth = paragraph.getMaxWidth();
@@ -1010,10 +930,6 @@ getMinIntrinsicWidth(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getMinIntrinsicWidth(): double--><!--Device-Paragraph-getMinIntrinsicWidth(): double-End-->
@@ -1026,7 +942,7 @@ getMinIntrinsicWidth(): double
 | --- | --- |
 | double | 该段落所占水平空间的最小固有宽度，浮点数，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let minIntrinsicWidth = paragraph.getMinIntrinsicWidth();
@@ -1042,10 +958,6 @@ getParagraphStyle(): ParagraphStyle
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1060,7 +972,7 @@ getParagraphStyle(): ParagraphStyle
 | --- | --- |
 | ParagraphStyle | 段落的样式配置。 <br>其中`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、 `textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于 [common2D.Color]{ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1161,10 +1073,6 @@ getProcessState(): TextProcessState
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1179,7 +1087,7 @@ getProcessState(): TextProcessState
 | --- | --- |
 | [TextProcessState](arkts-arkgraphics2d-text-textprocessstate-e.md) | 段落的文本处理状态。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1262,10 +1170,6 @@ getRectsForPlaceholders(): Array<TextBox>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getRectsForPlaceholders(): Array<TextBox>--><!--Device-Paragraph-getRectsForPlaceholders(): Array<TextBox>-End-->
@@ -1278,7 +1182,7 @@ getRectsForPlaceholders(): Array<TextBox>
 | --- | --- |
 | Array&lt;TextBox&gt; | 矩形区域数组。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let placeholderRects = paragraph.getRectsForPlaceholders();
@@ -1293,10 +1197,6 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 获取给定的矩形区域宽度以及矩形区域高度的规格下，文本中该区间范围内的字符所占的矩形区域。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1318,7 +1218,7 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 | --- | --- |
 | Array&lt;TextBox&gt; | 矩形区域数组。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let range: text.Range = { start: 0, end: 1};
@@ -1335,10 +1235,6 @@ getTextDisplayState(): TextDisplayState
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1353,7 +1249,7 @@ getTextDisplayState(): TextDisplayState
 | --- | --- |
 | [TextDisplayState](arkts-arkgraphics2d-text-textdisplaystate-e.md) | 段落的文本显示状态。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1436,10 +1332,6 @@ getTextLines(): Array<TextLine>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getTextLines(): Array<TextLine>--><!--Device-Paragraph-getTextLines(): Array<TextLine>-End-->
@@ -1452,7 +1344,7 @@ getTextLines(): Array<TextLine>
 | --- | --- |
 | Array&lt;[TextLine](arkts-arkgraphics2d-text-textline-c.md)&gt; | 文本行载体数组。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let lines = paragraph.getTextLines();
@@ -1464,13 +1356,9 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)的maxLines属性）截断或省略号模式（ [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)）替换而未显示的文本。 **说明：** 返回的范围取决于段落的具体截断情况（如是否设置最大行数或省略号等）： | 场景 | 说明 | |---|---| | 文本未被截断 | 范围包含全部已排版文本 | | 仅设置maxLines截断（未设置省略号） | 范围为实际显示的文本，即第一行至第maxLines行末尾的文本。 | | 尾部省略（EllipsisMode.END） | 范围为省略号之前的文本。 | | 头部省略（EllipsisMode.START） | 范围为省略号之后的文本。 | | 中部省略（EllipsisMode.MIDDLE） | 第一个范围为省略号之前的文本，第二个范围为省略号之后的文本。 | | 多行头部省略（EllipsisMode.MULTILINE_START） | 同中部省略，返回省略号前后的文本范围。 | | 多行中部省略（EllipsisMode.MULTILINE_MIDDLE） | 同中部省略，返回省略号前后的文本范围。 |
+获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)的maxLines属性）截断或省略号模式（ [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#ellipsismode)）替换而未显示的文本。 **说明：** 返回的范围取决于段落的具体截断情况（如是否设置最大行数或省略号等）： | 场景 | 说明 | |---|---| | 文本未被截断 | 范围包含全部已排版文本 | | 仅设置maxLines截断（未设置省略号） | 范围为实际显示的文本，即第一行至第maxLines行末尾的文本。 | | 尾部省略（EllipsisMode.END） | 范围为省略号之前的文本。 | | 头部省略（EllipsisMode.START） | 范围为省略号之后的文本。 | | 中部省略（EllipsisMode.MIDDLE） | 第一个范围为省略号之前的文本，第二个范围为省略号之后的文本。 | | 多行头部省略（EllipsisMode.MULTILINE_START） | 同中部省略，返回省略号前后的文本范围。 | | 多行中部省略（EllipsisMode.MULTILINE_MIDDLE） | 同中部省略，返回省略号前后的文本范围。 |
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1486,7 +1374,7 @@ getVisibleTextRanges(): Array<Range>
 | --- | --- |
 | Array&lt;Range&gt; | 段落可见文本范围数组，范围为UTF-16编码单元索引。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1565,10 +1453,6 @@ getWordBoundary(offset: int): Range
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-getWordBoundary(offset: int): Range--><!--Device-Paragraph-getWordBoundary(offset: int): Range-End-->
@@ -1587,7 +1471,7 @@ getWordBoundary(offset: int): Range
 | --- | --- |
 | Range | 单词的索引区间。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let wordRange = paragraph.getWordBoundary(0);
@@ -1602,10 +1486,6 @@ layout(width: double): Promise<void>
 进行排版并计算所有字形位置，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1631,7 +1511,7 @@ layout(width: double): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1794,10 +1674,6 @@ layoutSync(width: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-layoutSync(width: double): void--><!--Device-Paragraph-layoutSync(width: double): void-End-->
@@ -1810,7 +1686,7 @@ layoutSync(width: double): void
 | --- | --- | --- | --- |
 | width | double | 是 | 单行的最大宽度，浮点数，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 paragraph.layoutSync(100);
@@ -1825,10 +1701,6 @@ layoutWithConstraints(size: TextRectSize): TextLayoutResult
 使用给定的高度和宽度进行排版并计算所有字形的位置。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1850,7 +1722,7 @@ layoutWithConstraints(size: TextRectSize): TextLayoutResult
 | --- | --- |
 | [TextLayoutResult](arkts-arkgraphics2d-text-textlayoutresult-i.md) | 布局后的实际尺寸和排版后容下的字符范围。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let size: text.TextRectSize = { width: 200, height: 100 };
@@ -1871,10 +1743,6 @@ paint(canvas: drawing.Canvas, x: double, y: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-paint(canvas: drawing.Canvas, x: double, y: double): void--><!--Device-Paragraph-paint(canvas: drawing.Canvas, x: double, y: double): void-End-->
@@ -1889,7 +1757,7 @@ paint(canvas: drawing.Canvas, x: double, y: double): void
 | x | double | 是 | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
 | y | double | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 const color: ArrayBuffer = new ArrayBuffer(160000);
@@ -1909,10 +1777,6 @@ paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void--><!--Device-Paragraph-paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void-End-->
@@ -1928,7 +1792,7 @@ paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset
 | hOffset | double | 是 | 沿路径方向偏置，从路径起点向前为正，向后为负，单位为物理像素px。 |
 | vOffset | double | 是 | 沿路径垂直方向偏置，沿路径方向左侧为负，右侧为正，单位为物理像素px。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 const color: ArrayBuffer = new ArrayBuffer(160000);
@@ -1950,10 +1814,6 @@ updateColor(color: common2D.Color): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-updateColor(color: common2D.Color): void--><!--Device-Paragraph-updateColor(color: common2D.Color): void-End-->
@@ -1966,7 +1826,7 @@ updateColor(color: common2D.Color): void
 | --- | --- | --- | --- |
 | color | common2D.Color | 是 | 更新后的字体色。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 paragraph.updateColor({ alpha: 255, red: 255, green: 0, blue: 0 });
@@ -1982,10 +1842,6 @@ updateDecoration(decoration: Decoration): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Paragraph-updateDecoration(decoration: Decoration): void--><!--Device-Paragraph-updateDecoration(decoration: Decoration): void-End-->
@@ -1998,7 +1854,7 @@ updateDecoration(decoration: Decoration): void
 | --- | --- | --- | --- |
 | decoration | [Decoration](arkts-arkgraphics2d-text-decoration-i.md) | 是 | 更新后的装饰线。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 paragraph.updateDecoration({

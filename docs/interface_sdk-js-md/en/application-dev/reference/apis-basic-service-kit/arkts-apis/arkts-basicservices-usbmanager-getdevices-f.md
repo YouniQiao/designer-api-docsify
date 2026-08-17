@@ -12,13 +12,9 @@ import { usbManager } from 'usbManager';
 function getDevices(): Array<Readonly<USBDevice>>
 ```
 
-Obtains the list of USB devices connected to the host. > **NOTE：**> > Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they > request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight) > and then initiate a control transfer to obtain it.
+Obtains the list of USB devices connected to the host. > **NOTE：**> > Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they > request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright) > and then initiate a control transfer to obtain it.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>-End-->
 
@@ -36,7 +32,7 @@ Obtains the list of USB devices connected to the host. > **NOTE：**> > Third-pa
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();

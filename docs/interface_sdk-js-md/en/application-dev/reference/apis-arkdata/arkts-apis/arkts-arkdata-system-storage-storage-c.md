@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-unnamed-export default class Storage--><!--Device-unnamed-export default class Storage-End-->
@@ -19,8 +17,6 @@ static clear(options?: ClearStorageOptions): void
 Clears the stored content.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 
@@ -48,8 +44,6 @@ Deletes the stored content.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 **Substitutes:** delete
@@ -76,8 +70,6 @@ Reads the stored content.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 **Substitutes:** get
@@ -103,8 +95,6 @@ static set(options: SetStorageOptions): void
 Modifies the stored content.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 

@@ -1,14 +1,10 @@
-# SyncedPropertyOneWay (System API)
+# SyncedPropertyOneWay(System API) (System API)
 
-Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md#SubscribedAbstractProperty-(System-API)). Represents a property with one-way synchronization.
+Inherits from SubscribedAbstractProperty&lt;T&gt;. Represents a property with one-way synchronization.
 
 **Inheritance/Implementation:** SyncedPropertyOneWay extends SubscribedAbstractProperty<T> and implements ISinglePropertyChangeSubscriber<T>
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class SyncedPropertyOneWay--><!--Device-unnamed-declare class SyncedPropertyOneWay-End-->
 
@@ -25,10 +21,6 @@ aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void
 Called when the object is about to be destroyed.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-SyncedPropertyOneWay-aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void--><!--Device-SyncedPropertyOneWay-aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void-End-->
 
@@ -51,10 +43,6 @@ constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscr
 Constructor.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-SyncedPropertyOneWay-constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscriber, info?: string)--><!--Device-SyncedPropertyOneWay-constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscriber, info?: string)-End-->
 
@@ -80,10 +68,6 @@ Obtains the current value of the property.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-SyncedPropertyOneWay-get(): T--><!--Device-SyncedPropertyOneWay-get(): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -105,10 +89,6 @@ hasChanged(newValue: T): void
 Notifies subscribers that the property value has changed.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-SyncedPropertyOneWay-hasChanged(newValue: T): void--><!--Device-SyncedPropertyOneWay-hasChanged(newValue: T): void-End-->
 
@@ -132,10 +112,6 @@ Sets a new value for the property.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-SyncedPropertyOneWay-set(newValue: T): void--><!--Device-SyncedPropertyOneWay-set(newValue: T): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -158,10 +134,6 @@ Data source for the two-way synchronized property.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-SyncedPropertyOneWay-private source_--><!--Device-SyncedPropertyOneWay-private source_-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -177,10 +149,6 @@ private wrappedValue_
 Value used for one-way binding.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-SyncedPropertyOneWay-private wrappedValue_--><!--Device-SyncedPropertyOneWay-private wrappedValue_-End-->
 

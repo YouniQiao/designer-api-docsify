@@ -16,11 +16,9 @@ Obtains the Bluetooth scanning mode of a device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getBluetoothScanMode](arkts-connectivity-bluetoothmanager-getbluetoothscanmode-f.md#getBluetoothScanMode)
+**Substitutes:** [getBluetoothScanMode](arkts-connectivity-bluetoothmanager-getbluetoothscanmode-f.md#getbluetoothscanmode)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -34,7 +32,7 @@ Obtains the Bluetooth scanning mode of a device.
 | --- | --- |
 | ScanMode | Returns the Bluetooth scanning mode, { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let scanMode : bluetooth.ScanMode = bluetooth.getBluetoothScanMode();

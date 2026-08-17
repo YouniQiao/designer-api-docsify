@@ -16,10 +16,6 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function--><!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function-End-->
@@ -39,7 +35,7 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 | [function](arkts-arkts-taskpool-task-c.md) | Return a function that returns promises<br>**Applicable version:** 9 - 11 |
 | Function | Promise function.<br>**Applicable version:** 10 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function fn() {

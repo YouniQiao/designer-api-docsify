@@ -4,9 +4,7 @@ Describes a file name filter, which can be used to customize file name filtering
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export interface FileFilter--><!--Device-unnamed-export interface FileFilter-End-->
 
@@ -18,13 +16,11 @@ Describes a file name filter, which can be used to customize file name filtering
 filter(name: string): boolean
 ```
 
-Filters files of the [listFileExt](arkts-na-fileio-listfileext-f.md#listFileExt) or [listFileExtSync](arkts-na-fileio-listfileextsync-f.md#listFileExtSync) API and determines whether a specified file name should be included in the returned file list. > **NOTE：**> > This function is frequently called. Do not perform time-consuming operations, such as file I/O operations and > network requests.
+Filters files of the [listFileExt](arkts-na-fileio-listfileext-f.md#listfileext) or [listFileExtSync](arkts-na-fileio-listfileextsync-f.md#listfileextsync) API and determines whether a specified file name should be included in the returned file list. > **NOTE：**> > This function is frequently called. Do not perform time-consuming operations, such as file I/O operations and > network requests.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

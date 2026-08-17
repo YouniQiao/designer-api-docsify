@@ -16,10 +16,6 @@ Checks whether camera tracking is enabled for this mechanical device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-function getCameraTrackingEnabled(): boolean--><!--Device-mechanicManager-function getCameraTrackingEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -37,7 +33,7 @@ Checks whether camera tracking is enabled for this mechanical device.
 | [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 console.info('Get tracking status');

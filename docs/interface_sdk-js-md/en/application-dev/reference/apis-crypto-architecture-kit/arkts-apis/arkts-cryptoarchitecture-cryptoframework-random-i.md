@@ -1,12 +1,8 @@
 # Random
 
-Random interface, defining methods for generating random numbers. Before use, you must create a **Random** instance by using [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createRandom).
+Random interface, defining methods for generating random numbers. Before use, you must create a **Random** instance by using [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface Random--><!--Device-cryptoFramework-interface Random-End-->
 
@@ -30,10 +26,6 @@ Enables the hardware entropy source. Secure random numbers obtained from TEE wil
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -51,7 +43,7 @@ Enables the hardware entropy source. Secure random numbers obtained from TEE wil
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -84,10 +76,6 @@ Generates a random number of the specified length. This API uses an asynchronous
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API version 9 to 11: This API can be used only in the stage model.
@@ -115,7 +103,7 @@ Generates a random number of the specified length. This API uses an asynchronous
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -139,10 +127,6 @@ generateRandom(len: int): Promise<DataBlob>
 Generates a random number of the specified length. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,7 +158,7 @@ Generates a random number of the specified length. This API uses a promise to re
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -195,13 +179,9 @@ promiseGenerateRand.then(randData => {
 generateRandomSync(len: int): DataBlob
 ```
 
-Generates a random number of the specified length. This API returns the result synchronously. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generateRandom](#generateRandom). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a random number of the specified length. This API returns the result synchronously. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generateRandom](#generaterandom). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
@@ -235,7 +215,7 @@ Generates a random number of the specified length. This API returns the result s
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -265,10 +245,6 @@ Sets a seed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API version 9 to 11: This API can be used only in the stage model.
@@ -293,7 +269,7 @@ Sets a seed.
 | --- | --- |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -326,10 +302,6 @@ Indicates the random generation algorithm name. Currently, only CTR_DRBG is supp
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

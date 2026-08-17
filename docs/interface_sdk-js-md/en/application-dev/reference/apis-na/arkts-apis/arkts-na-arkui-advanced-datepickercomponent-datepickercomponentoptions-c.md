@@ -4,9 +4,7 @@ DatePickerComponentOptions defines options for the date time picker component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare class DatePickerComponentOptions--><!--Device-unnamed-export declare class DatePickerComponentOptions-End-->
 
@@ -20,13 +18,11 @@ dateOptions?: DateOptions
 
 Date options.
 
-**Type:** [DateOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)
+**Type:** [DateOptions](arkts-na-arkui-advanced-datepickercomponent-dateoptions-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,15 +38,13 @@ displayMode?: DisplayMode
 
 Display mode of the picker. Default value: DisplayMode.DATE
 
-**Type:** [DisplayMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
+**Type:** [DisplayMode](arkts-na-arkui-advanced-datepickercomponent-displaymode-e.md)
 
 **Default:** DisplayMode.DATE
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,13 +60,11 @@ timeOptions?: TimeOptions
 
 Time options.
 
-**Type:** [TimeOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)
+**Type:** [TimeOptions](arkts-na-arkui-advanced-datepickercomponent-timeoptions-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

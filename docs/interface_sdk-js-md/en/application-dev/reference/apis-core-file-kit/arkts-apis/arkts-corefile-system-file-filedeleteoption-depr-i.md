@@ -4,8 +4,6 @@ Defines the options used in delete().
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileDeleteOption--><!--Device-unnamed-export interface FileDeleteOption-End-->
@@ -23,8 +21,6 @@ Callback invoked when the API call is complete.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ Callback invoked when the API call fails. **data** indicates the error informati
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileDeleteOption-fail?: (data: string, code: number) => void--><!--Device-FileDeleteOption-fail?: (data: string, code: number) => void-End-->
@@ -64,8 +58,6 @@ Callback invoked when the API call is successful.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileDeleteOption-success?: () => void--><!--Device-FileDeleteOption-success?: () => void-End-->
@@ -83,8 +75,6 @@ URI of the file to delete, which cannot be an application resource path. Restric
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

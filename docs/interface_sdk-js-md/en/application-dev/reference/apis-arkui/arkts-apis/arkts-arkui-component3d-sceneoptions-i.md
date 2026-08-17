@@ -4,9 +4,7 @@ Scene options used by 3D scene control
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface SceneOptions--><!--Device-unnamed-export declare interface SceneOptions-End-->
 
@@ -26,9 +24,7 @@ Scene type when 3D rendering
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SceneOptions-modelType?: ModelType--><!--Device-SceneOptions-modelType?: ModelType-End-->
 
@@ -46,9 +42,7 @@ ResourceStr type for 3D rendering, Scene type for 3d scene controlling
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SceneOptions-scene?: ResourceStr | Scene--><!--Device-SceneOptions-scene?: ResourceStr | Scene-End-->
 

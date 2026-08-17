@@ -8,10 +8,6 @@ Obtains configuration information about a overlay hap module.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-overlay-export type OverlayModuleInfo = _OverlayModuleInfo--><!--Device-overlay-export type OverlayModuleInfo = _OverlayModuleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay

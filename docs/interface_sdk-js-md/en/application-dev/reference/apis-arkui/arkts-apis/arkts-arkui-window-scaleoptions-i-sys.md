@@ -4,10 +4,6 @@ Describes the scale parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface ScaleOptions--><!--Device-window-interface ScaleOptions-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -32,10 +28,6 @@ X coordinate of the scale center. The value is a floating-point number in the ra
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScaleOptions-pivotX?: double--><!--Device-ScaleOptions-pivotX?: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -53,10 +45,6 @@ Y coordinate of the scale center. The value is a floating-point number in the ra
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScaleOptions-pivotY?: double--><!--Device-ScaleOptions-pivotY?: double-End-->
 
@@ -76,10 +64,6 @@ Scale factor along the x-axis. The value is a floating-point number, and the def
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScaleOptions-x?: double--><!--Device-ScaleOptions-x?: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -97,10 +81,6 @@ Scale factor along the y-axis. The value is a floating-point number, and the def
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScaleOptions-y?: double--><!--Device-ScaleOptions-y?: double-End-->
 

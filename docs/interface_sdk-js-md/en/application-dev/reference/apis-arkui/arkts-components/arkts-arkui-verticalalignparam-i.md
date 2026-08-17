@@ -4,10 +4,6 @@ Defines the vertical align rule of relative container.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface VerticalAlignParam--><!--Device-unnamed-declare interface VerticalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Sets the vertical alignment relative to the anchor component. Anonymous Object R
 **Type:** VerticalAlign
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -47,10 +39,6 @@ Specifies the anchor component Anonymous Object Rectification
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

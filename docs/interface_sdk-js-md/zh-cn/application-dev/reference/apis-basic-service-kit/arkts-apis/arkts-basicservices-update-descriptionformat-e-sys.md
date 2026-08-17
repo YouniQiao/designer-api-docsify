@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export enum DescriptionFormat--><!--Device-update-export enum DescriptionFormat-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -24,10 +20,6 @@ STANDARD = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DescriptionFormat-STANDARD = 0--><!--Device-DescriptionFormat-STANDARD = 0-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -43,10 +35,6 @@ SIMPLIFIED = 1
 简易格式。适合仅需精简描述信息的场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DescriptionFormat-SIMPLIFIED = 1--><!--Device-DescriptionFormat-SIMPLIFIED = 1-End-->
 

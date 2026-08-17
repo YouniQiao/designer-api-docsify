@@ -16,10 +16,6 @@ Obtains all the shared bundle information. This API uses an asynchronous callbac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function getAllSharedBundleInfo(callback: AsyncCallback<Array<SharedBundleInfo>>): void--><!--Device-bundleManager-function getAllSharedBundleInfo(callback: AsyncCallback<Array<SharedBundleInfo>>): void-End-->
@@ -32,7 +28,7 @@ Obtains all the shared bundle information. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SharedBundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null** and **data** is all the shared bundle information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SharedBundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null** and **data** is all the shared bundle information obtained. |
 
 **Error codes:**
 
@@ -41,7 +37,7 @@ Obtains all the shared bundle information. This API uses an asynchronous callbac
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -73,10 +69,6 @@ Obtains all the shared bundle information. This API uses a promise to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function getAllSharedBundleInfo(): Promise<Array<SharedBundleInfo>>--><!--Device-bundleManager-function getAllSharedBundleInfo(): Promise<Array<SharedBundleInfo>>-End-->
@@ -98,7 +90,7 @@ Obtains all the shared bundle information. This API uses a promise to return the
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

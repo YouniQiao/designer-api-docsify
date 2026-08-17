@@ -4,10 +4,6 @@ Provides the printer extension information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PrinterExtensionInfo--><!--Device-print-interface PrinterExtensionInfo-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -32,10 +28,6 @@ ID of the printer extension.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterExtensionInfo-extensionId: string--><!--Device-PrinterExtensionInfo-extensionId: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -53,10 +45,6 @@ Vendor icon of the printer extension.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterExtensionInfo-vendorIcon: int--><!--Device-PrinterExtensionInfo-vendorIcon: int-End-->
 
@@ -76,10 +64,6 @@ Vendor ID of the printer extension.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterExtensionInfo-vendorId: string--><!--Device-PrinterExtensionInfo-vendorId: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -98,10 +82,6 @@ Vendor name of the printer extension.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterExtensionInfo-vendorName: string--><!--Device-PrinterExtensionInfo-vendorName: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -119,10 +99,6 @@ Version of the printer extension.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterExtensionInfo-version: string--><!--Device-PrinterExtensionInfo-version: string-End-->
 

@@ -1,12 +1,8 @@
 # LightType
 
-The enum of light type.
+Enumerates the light types.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export enum LightType--><!--Device-unnamed-export enum LightType-End-->
 
@@ -22,10 +18,6 @@ Directional light.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LightType-DIRECTIONAL = 1--><!--Device-LightType-DIRECTIONAL = 1-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -39,10 +31,6 @@ SPOT = 2
 Spot light.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LightType-SPOT = 2--><!--Device-LightType-SPOT = 2-End-->
 

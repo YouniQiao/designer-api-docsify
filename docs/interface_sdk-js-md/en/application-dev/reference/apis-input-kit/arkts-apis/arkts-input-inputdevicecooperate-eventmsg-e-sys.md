@@ -4,11 +4,9 @@ Enumerates screen hopping events.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [CooperateState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#CooperateState-(System-API))
+**Substitutes:** [CooperateState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperatestate-system-api)
 
 <!--Device-inputDeviceCooperate-enum EventMsg--><!--Device-inputDeviceCooperate-enum EventMsg-End-->
 
@@ -26,11 +24,9 @@ Screen hopping starts.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [COOPERATE_ACTIVATE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_ACTIVATE)
+**Substitutes:** [COOPERATE_ACTIVATE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateactivate)
 
 <!--Device-EventMsg-MSG_COOPERATE_INFO_START = 200--><!--Device-EventMsg-MSG_COOPERATE_INFO_START = 200-End-->
 
@@ -48,11 +44,9 @@ Screen hopping succeeds.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [COOPERATE_ACTIVATE_SUCCESS](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_ACTIVATE_SUCCESS)
+**Substitutes:** [COOPERATE_ACTIVATE_SUCCESS](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateactivatesuccess)
 
 <!--Device-EventMsg-MSG_COOPERATE_INFO_SUCCESS = 201--><!--Device-EventMsg-MSG_COOPERATE_INFO_SUCCESS = 201-End-->
 
@@ -70,11 +64,9 @@ Screen hopping fails.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [COOPERATE_ACTIVATE_FAILURE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_ACTIVATE_FAILURE)
+**Substitutes:** [COOPERATE_ACTIVATE_FAILURE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateactivatefailure)
 
 <!--Device-EventMsg-MSG_COOPERATE_INFO_FAIL = 202--><!--Device-EventMsg-MSG_COOPERATE_INFO_FAIL = 202-End-->
 
@@ -92,11 +84,9 @@ Screen hopping is enabled.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [COOPERATE_PREPARE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_PREPARE)
+**Substitutes:** [COOPERATE_PREPARE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateprepare)
 
 <!--Device-EventMsg-MSG_COOPERATE_STATE_ON = 500--><!--Device-EventMsg-MSG_COOPERATE_STATE_ON = 500-End-->
 
@@ -114,11 +104,9 @@ Screen hopping is disabled.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [COOPERATE_UNPREPARE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_UNPREPARE)
+**Substitutes:** [COOPERATE_UNPREPARE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateunprepare)
 
 <!--Device-EventMsg-MSG_COOPERATE_STATE_OFF = 501--><!--Device-EventMsg-MSG_COOPERATE_STATE_OFF = 501-End-->
 

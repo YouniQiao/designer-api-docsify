@@ -1,12 +1,8 @@
 # CompletionHandlerForAtomicService
 
-CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onAtomicServiceRequestSuccess) 和 [onAtomicServiceRequestFailure](#onAtomicServiceRequestFailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。
+CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onatomicservicerequestsuccess) 和 [onAtomicServiceRequestFailure](#onatomicservicerequestfailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class CompletionHandlerForAtomicService--><!--Device-unnamed-declare class CompletionHandlerForAtomicService-End-->
 
@@ -21,10 +17,6 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 打开原子化服务失败时的回调函数。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,7 +34,7 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 | failureCode | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | 是 | 失败原因的错误码。 |
 | failureMessage | string | 是 | 失败原因的描述。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AbilityConstant, AtomicServiceOptions, common, UIAbility, Want, CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
@@ -85,10 +77,6 @@ onAtomicServiceRequestSuccess(appId: string): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -103,7 +91,7 @@ onAtomicServiceRequestSuccess(appId: string): void
 | --- | --- | --- | --- |
 | appId | string | 是 | 被拉起原子化服务的appId。 |
 
-## 示例
+**示例**
 
-参见[onAtomicServiceRequestFailure](#onAtomicServiceRequestFailure)接口的示例。
+参见[onAtomicServiceRequestFailure](#onatomicservicerequestfailure)接口的示例。
 

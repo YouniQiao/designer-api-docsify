@@ -12,13 +12,9 @@ import { bundleManager } from 'bundleManager';
 function installMarketApps(admin: Want, bundleNames: Array<string>): void
 ```
 
-Downloads and installs an application from AppGallery. > **NOTE：**> > After this API is successfully called, an application download task is generated on the home screen. The task is > the same as that created during download from AppGallery. Upon completion of the download and installation, the > installation result is returned through the > [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onMarketAppInstallResult) > callback.
+Downloads and installs an application from AppGallery. > **NOTE：**> > After this API is successfully called, an application download task is generated on the home screen. The task is > the same as that created during download from AppGallery. Upon completion of the download and installation, the > installation result is returned through the > [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult) > callback.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -45,7 +41,7 @@ Downloads and installs an application from AppGallery. > **NOTE：**> > After th
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

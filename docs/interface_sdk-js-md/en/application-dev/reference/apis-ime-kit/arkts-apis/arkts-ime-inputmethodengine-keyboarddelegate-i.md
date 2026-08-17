@@ -1,12 +1,8 @@
 # KeyboardDelegate
 
-In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-interface KeyboardDelegate--><!--Device-inputMethodEngine-interface KeyboardDelegate-End-->
 
@@ -28,10 +24,6 @@ Unsubscribe cursor context change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-offCursorContextChange(callback?: CursorContextChangeCallback): void--><!--Device-KeyboardDelegate-offCursorContextChange(callback?: CursorContextChangeCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -51,10 +43,6 @@ offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void
 Unsubscribe input text attribute change.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardDelegate-offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void--><!--Device-KeyboardDelegate-offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void-End-->
 
@@ -76,10 +64,6 @@ Unsubscribe key down event
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-offKeyDown(callback?: KeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyDown(callback?: KeyEventCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -99,10 +83,6 @@ offKeyEvent(callback?: InputKeyEventCallback): void
 Unsubscribe key event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardDelegate-offKeyEvent(callback?: InputKeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyEvent(callback?: InputKeyEventCallback): void-End-->
 
@@ -124,10 +104,6 @@ Unsubscribe key up event
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-offKeyUp(callback?: KeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyUp(callback?: KeyEventCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -147,10 +123,6 @@ offSelectionChange(callback?: SelectionChangeCallback): void
 Unsubscribe selection change.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardDelegate-offSelectionChange(callback?: SelectionChangeCallback): void--><!--Device-KeyboardDelegate-offSelectionChange(callback?: SelectionChangeCallback): void-End-->
 
@@ -172,10 +144,6 @@ Unsubscribe text change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-offTextChange(callback?: Callback<string>): void--><!--Device-KeyboardDelegate-offTextChange(callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -196,10 +164,6 @@ Disables listening for cursor context changes. This API uses an asynchronous cal
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void--><!--Device-KeyboardDelegate-off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -211,7 +175,7 @@ Disables listening for cursor context changes. This API uses an asynchronous cal
 | type | 'cursorContextChange' | Yes | Event type, which is **'cursorContextChange'**. |
 | callback | (x: number, y: number, height: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().off('cursorContextChange', (x: number, y: number, height: number) => {
@@ -229,10 +193,6 @@ Disables listening for the edit box attribute change event. This API uses an asy
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void--><!--Device-KeyboardDelegate-off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -244,7 +204,7 @@ Disables listening for the edit box attribute change event. This API uses an asy
 | type | 'editorAttributeChanged' | Yes | Event type, which is **'editorAttributeChanged'**. |
 | callback | (attr: EditorAttribute) =&gt; void | No | Callback used for unsubscription. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
@@ -260,10 +220,6 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void--><!--Device-KeyboardDelegate-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -275,7 +231,7 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 | type | 'keyDown' \| 'keyUp' | Yes | Event type. <br>- The value **'keyDown'** indicates the keydown event. <br>- The value **'keyUp'** indicates the keyup event. |
 | callback | (event: KeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().off('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
@@ -298,10 +254,6 @@ Disables listening for a keyboard event. This API uses an asynchronous callback 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void--><!--Device-KeyboardDelegate-off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -313,7 +265,7 @@ Disables listening for a keyboard event. This API uses an asynchronous callback 
 | type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
 | callback | (event: InputKeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import type { KeyEvent } from '@kit.InputKit';
@@ -335,10 +287,6 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void--><!--Device-KeyboardDelegate-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -350,7 +298,7 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 | type | 'keyDown' \| 'keyUp' | Yes | Event type. <br>- The value **'keyDown'** indicates the keydown event. <br>- The value **'keyUp'** indicates the keyup event. |
 | callback | (event: KeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().off('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
@@ -376,10 +324,6 @@ Disables listening for the text selection change event. This API uses an asynchr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-off(      type: 'selectionChange',      callback?: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void--><!--Device-KeyboardDelegate-off(      type: 'selectionChange',      callback?: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -391,7 +335,7 @@ Disables listening for the text selection change event. This API uses an asynchr
 | type | 'selectionChange' | Yes | Event type, which is **'selectionChange'**. |
 | callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate()
@@ -410,10 +354,6 @@ Disables listening for the text change event. This API uses an asynchronous call
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-off(type: 'textChange', callback?: (text: string) => void): void--><!--Device-KeyboardDelegate-off(type: 'textChange', callback?: (text: string) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -425,7 +365,7 @@ Disables listening for the text change event. This API uses an asynchronous call
 | type | 'textChange' | Yes | Event type, which is **'textChange'**. |
 | callback | (text: string) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().off('textChange', (text: string) => {
@@ -442,10 +382,6 @@ onCursorContextChange(callback: CursorContextChangeCallback): void
 Subscribe cursor context change.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardDelegate-onCursorContextChange(callback: CursorContextChangeCallback): void--><!--Device-KeyboardDelegate-onCursorContextChange(callback: CursorContextChangeCallback): void-End-->
 
@@ -467,10 +403,6 @@ Subscribe input text attribute change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-onEditorAttributeChanged(callback: Callback<EditorAttribute>): void--><!--Device-KeyboardDelegate-onEditorAttributeChanged(callback: Callback<EditorAttribute>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -490,10 +422,6 @@ onKeyDown(callback: KeyEventCallback): void
 Subscribe key down event
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardDelegate-onKeyDown(callback: KeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyDown(callback: KeyEventCallback): void-End-->
 
@@ -515,10 +443,6 @@ Subscribe key event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-onKeyEvent(callback: InputKeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyEvent(callback: InputKeyEventCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -538,10 +462,6 @@ onKeyUp(callback: KeyEventCallback): void
 Subscribe key up event
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardDelegate-onKeyUp(callback: KeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyUp(callback: KeyEventCallback): void-End-->
 
@@ -563,10 +483,6 @@ Subscribe selection change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-onSelectionChange(callback: SelectionChangeCallback): void--><!--Device-KeyboardDelegate-onSelectionChange(callback: SelectionChangeCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -586,10 +502,6 @@ onTextChange(callback: Callback<string>): void
 Subscribe text change.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardDelegate-onTextChange(callback: Callback<string>): void--><!--Device-KeyboardDelegate-onTextChange(callback: Callback<string>): void-End-->
 
@@ -611,10 +523,6 @@ Enables listening for the cursor change event. This API uses an asynchronous cal
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void--><!--Device-KeyboardDelegate-on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -626,7 +534,7 @@ Enables listening for the cursor change event. This API uses an asynchronous cal
 | type | 'cursorContextChange' | Yes | Event type, which is **'cursorContextChange'**. |
 | callback | (x: number, y: number, height: number) =&gt; void | Yes | Callback used to return the cursor information. <br>- **x**: x coordinate of the top of the cursor. <br>- **y**: y coordinate of the bottom of the cursor. <br>- **height**: height of the cursor. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().on('cursorContextChange', (x: number, y: number, height: number) => {
@@ -646,10 +554,6 @@ Enables listening for the edit box attribute change event. This API uses an asyn
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void--><!--Device-KeyboardDelegate-on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -661,7 +565,7 @@ Enables listening for the edit box attribute change event. This API uses an asyn
 | type | 'editorAttributeChanged' | Yes | Event type, which is **'editorAttributeChanged'**. |
 | callback | (attr: EditorAttribute) =&gt; void | Yes | Callback used to return the changed edit box attribute. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate()
@@ -680,10 +584,6 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void--><!--Device-KeyboardDelegate-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -695,7 +595,7 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 | type | 'keyDown' \| 'keyUp' | Yes | Event type. <br>- The value **'keyDown'** indicates the keydown event. <br>- The value **'keyUp'** indicates the keyup event. |
 | callback | (event: KeyEvent) =&gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().on('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
@@ -720,10 +620,6 @@ Enables listening for a keyboard event. This API uses an asynchronous callback t
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void--><!--Device-KeyboardDelegate-on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -733,9 +629,9 @@ Enables listening for a keyboard event. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type. <br>- Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md#KeyEvent). <br>- If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type. <br>- Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md#keyevent). <br>- If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import type { KeyEvent } from '@kit.InputKit';
@@ -759,10 +655,6 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void--><!--Device-KeyboardDelegate-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -774,7 +666,7 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 | type | 'keyDown' \| 'keyUp' | Yes | Event type. <br>- The value **'keyDown'** indicates the keydown event. <br>- The value **'keyUp'** indicates the keyup event. |
 | callback | (event: KeyEvent) =&gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().on('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
@@ -802,10 +694,6 @@ Enables listening for the text selection change event. This API uses an asynchro
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-on(      type: 'selectionChange',      callback: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void--><!--Device-KeyboardDelegate-on(      type: 'selectionChange',      callback: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -817,7 +705,7 @@ Enables listening for the text selection change event. This API uses an asynchro
 | type | 'selectionChange' | Yes | Event type, which is **'selectionChange'**. |
 | callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | Yes | Callback used to return the text selection information. <br>- **oldBegin**: start of the selected text before the change. <br>- **oldEnd**: end of the selected text before the change. <br>- **newBegin**: start of the selected text after the change. <br>- **newEnd**: end of the selected text after the change. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate()
@@ -839,10 +727,6 @@ Enables listening for the text change event. This API uses an asynchronous callb
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardDelegate-on(type: 'textChange', callback: (text: string) => void): void--><!--Device-KeyboardDelegate-on(type: 'textChange', callback: (text: string) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -854,7 +738,7 @@ Enables listening for the text change event. This API uses an asynchronous callb
 | type | 'textChange' | Yes | Event type, which is **'textChange'**. |
 | callback | (text: string) =&gt; void | Yes | Callback used to return the text content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getKeyboardDelegate().on('textChange', (text: string) => {

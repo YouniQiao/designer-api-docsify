@@ -1,12 +1,8 @@
 # ChildProcessOptions
 
-The module describes the startup configuration of a child process. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md#@ohos.app.ability.childProcessManager), you can configure the startup configuration of the child process through **ChildProcessOptions**.
+The module describes the startup configuration of a child process. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md#ohosappabilitychildprocessmanager), you can configure the startup configuration of the child process through **ChildProcessOptions**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ChildProcessOptions--><!--Device-unnamed-export interface ChildProcessOptions-End-->
 
@@ -30,10 +26,6 @@ Controls the sandbox isolation level and network access permissions of the child
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChildProcessOptions-isolationMode?: boolean--><!--Device-ChildProcessOptions-isolationMode?: boolean-End-->
@@ -51,10 +43,6 @@ Whether the child process uses an independent UID. **true** if the child process
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

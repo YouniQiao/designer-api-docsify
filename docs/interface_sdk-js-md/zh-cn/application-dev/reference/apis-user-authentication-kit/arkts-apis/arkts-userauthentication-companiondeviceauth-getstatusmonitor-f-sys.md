@@ -10,10 +10,6 @@ function getStatusMonitor(localUserId: int): StatusMonitor
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.USE_USER_IDM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -45,7 +41,7 @@ function getStatusMonitor(localUserId: int): StatusMonitor
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

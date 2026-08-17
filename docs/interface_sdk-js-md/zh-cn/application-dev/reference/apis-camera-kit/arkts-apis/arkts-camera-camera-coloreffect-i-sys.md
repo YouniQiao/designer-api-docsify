@@ -1,14 +1,10 @@
 # ColorEffect（系统接口）
 
-ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#ColorEffectQuery（系统接口）) Provides the APIs to obtain and set the lens color effect.
+ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#coloreffectquery系统接口) Provides the APIs to obtain and set the lens color effect.
 
-**继承/实现关系：** ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#ColorEffectQuery（系统接口）)
+**继承/实现关系：** ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#coloreffectquery系统接口)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-camera-interface ColorEffect--><!--Device-camera-interface ColorEffect-End-->
 
@@ -25,10 +21,6 @@ getColorEffect(): ColorEffectType
 Obtains the color effect in use.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColorEffect-getColorEffect(): ColorEffectType--><!--Device-ColorEffect-getColorEffect(): ColorEffectType-End-->
 
@@ -49,7 +41,7 @@ Obtains the color effect in use.
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 function getColorEffect(session: camera.PhotoSessionForSys): camera.ColorEffectType {
@@ -64,13 +56,9 @@ function getColorEffect(session: camera.PhotoSessionForSys): camera.ColorEffectT
 setColorEffect(type: ColorEffectType): void
 ```
 
-Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-camera-camera-coloreffectquery-i-sys.md#getSupportedColorEffects) to obtain the supported color effects.
+Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-camera-camera-coloreffectquery-i-sys.md#getsupportedcoloreffects) to obtain the supported color effects.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColorEffect-setColorEffect(type: ColorEffectType): void--><!--Device-ColorEffect-setColorEffect(type: ColorEffectType): void-End-->
 
@@ -91,7 +79,7 @@ Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-c
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 function setColorEffect(session: camera.PhotoSessionForSys, colorEffect: camera.ColorEffectType): void {

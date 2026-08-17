@@ -4,10 +4,6 @@ Defines the location attributes of a modal dialog box.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dialogRequest-export interface WindowRect--><!--Device-dialogRequest-export interface WindowRect-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -30,10 +26,6 @@ Height of the dialog box, in px.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowRect-height: int--><!--Device-WindowRect-height: int-End-->
@@ -51,10 +43,6 @@ X-coordinate of the upper left corner of the dialog box.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Y-coordinate of the upper left corner of the dialog box.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowRect-top: int--><!--Device-WindowRect-top: int-End-->
@@ -95,10 +79,6 @@ Width of the dialog box, in px.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

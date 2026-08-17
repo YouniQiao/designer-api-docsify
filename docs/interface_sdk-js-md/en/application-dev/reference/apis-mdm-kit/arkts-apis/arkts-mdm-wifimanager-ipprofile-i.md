@@ -4,10 +4,6 @@ Represents IP configuration information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface IpProfile--><!--Device-wifiManager-interface IpProfile-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,10 +26,6 @@ DNS server. The array can contain a maximum of two addresses: the primary DNS se
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IpProfile-dnsServers: number[]--><!--Device-IpProfile-dnsServers: number[]-End-->
@@ -51,10 +43,6 @@ Domain information.
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Default gateway, represented in decimal format, usually the IP address of the ro
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IpProfile-gateway: number--><!--Device-IpProfile-gateway: number-End-->
@@ -96,10 +80,6 @@ IP address, represented in decimal format. For example, the standard dotted deci
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IpProfile-ipAddress: number--><!--Device-IpProfile-ipAddress: number-End-->
@@ -117,10 +97,6 @@ Subnet mask. The address ranges from 0.0.0.0 to 255.255.255.255.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

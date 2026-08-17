@@ -1,12 +1,8 @@
 # KeyPair
 
-非对称密钥对包含公钥和私钥。 <br>可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md#AsyKeyGenerator)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#AsyKeyGeneratorBySpec)来生成。 > **说明：** > > KeyPair对象中的pubKey对象和priKey对象是KeyPair对象的成员。当KeyPair对象超出作用域时，其内部的pubKey对象和priKey对象将被析构。 > > 业务方使用时应持有KeyPair对象的引用，而非内部pubKey或priKey对象的引用。
+非对称密钥对包含公钥和私钥。 <br>可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md#asykeygenerator)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#asykeygeneratorbyspec)来生成。 > **说明：** > > KeyPair对象中的pubKey对象和priKey对象是KeyPair对象的成员。当KeyPair对象超出作用域时，其内部的pubKey对象和priKey对象将被析构。 > > 业务方使用时应持有KeyPair对象的引用，而非内部pubKey或priKey对象的引用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-cryptoFramework-interface KeyPair--><!--Device-cryptoFramework-interface KeyPair-End-->
 
@@ -25,10 +21,6 @@ readonly priKey: PriKey
 **类型：** [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -49,10 +41,6 @@ readonly pubKey: PubKey
 **类型：** [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

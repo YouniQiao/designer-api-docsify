@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-export interface GetLocationTypeOption--><!--Device-unnamed-export interface GetLocationTypeOption-End-->
@@ -32,8 +30,6 @@ Called when the execution is completed.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -54,8 +50,6 @@ Called when the location types fail to be obtained.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -75,8 +69,6 @@ Called when the location types are obtained.
 **Type:** (data: GetLocationTypeResponse) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

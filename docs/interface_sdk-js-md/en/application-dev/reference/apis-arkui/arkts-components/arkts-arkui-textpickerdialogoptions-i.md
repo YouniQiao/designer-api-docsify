@@ -2,13 +2,9 @@
 
 Defines the TextPickerDialogOptions for Text Picker Dialog.
 
-**Inheritance/Implementation:** TextPickerDialogOptions extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md#TextPickerOptions)
+**Inheritance/Implementation:** TextPickerDialogOptions extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md#textpickeroptions)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface TextPickerDialogOptions--><!--Device-unnamed-declare interface TextPickerDialogOptions-End-->
 
@@ -25,10 +21,6 @@ Style of accept button. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In the a
 **Type:** PickerDialogButtonStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Alignment mode of the dialog box in the vertical direction.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -78,10 +66,6 @@ Background blur style of the dialog box.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -101,10 +85,6 @@ Options for customizing the background blur style.
 **Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Backplane color of the dialog box.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -151,10 +127,6 @@ Options for customizing the background effect.
 **Type:** BackgroundEffectOptions
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +150,6 @@ Whether to support scroll looping. The value true means to support scroll loopin
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -201,10 +169,6 @@ Style of cancel button. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In the a
 **Type:** PickerDialogButtonStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,10 +192,6 @@ Height of the picker item.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextPickerDialogOptions-defaultPickerItemHeight?: number | string--><!--Device-TextPickerDialogOptions-defaultPickerItemHeight?: number | string-End-->
@@ -249,10 +209,6 @@ Style of the text items when the text style change animation during the scrollin
 **Type:** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -276,10 +232,6 @@ Sets whether to enable the text style change animation during the scrolling proc
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -301,10 +253,6 @@ Font color, font size, and font weight of the top and bottom items. Default Valu
 **Default:** { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -328,10 +276,6 @@ Whether to enable haptic feedback. true (default): Haptic feedback is enabled. f
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -353,10 +297,6 @@ Whether to enable the hover mode. Default Value: false
 **Default:** false - meaning not to enable the hover mode.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -380,10 +320,6 @@ Display area of the dialog box in hover mode. Default Value: HoverModeAreaType.B
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -405,10 +341,6 @@ Mask area of the dialog box. Events outside the mask area are transparently tran
 **Default:** { x: 0, y: 0, width: '100%', height: '100%' } [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -432,10 +364,6 @@ Offset of the dialog box based on the alignment settings.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -456,10 +384,6 @@ Callback invoked when the OK button in the dialog box is clicked.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextPickerDialogOptions-onAccept?: (value: TextPickerResult) => void--><!--Device-TextPickerDialogOptions-onAccept?: (value: TextPickerResult) => void-End-->
@@ -477,10 +401,6 @@ Callback invoked when the Cancel button in the dialog box is clicked.
 **Type:** () =&gt; void
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -500,10 +420,6 @@ Callback invoked when the text picker in the dialog box snaps to the selected it
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextPickerDialogOptions-onChange?: (value: TextPickerResult) => void--><!--Device-TextPickerDialogOptions-onChange?: (value: TextPickerResult) => void-End-->
@@ -521,10 +437,6 @@ Event callback when the dialog box appears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/stro
 **Type:** () =&gt; void
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -546,10 +458,6 @@ Event callback when the dialog box disappears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/s
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -569,10 +477,6 @@ Represents the callback triggered during the scrolling of the text picker when a
 **Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -594,10 +498,6 @@ Callback invoked when the scrolling in the text picker of the dialog box stops.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -618,10 +518,6 @@ Event callback when the dialog box is about to appear. &lt;p&gt;&lt;strong&gt;NO
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -641,10 +537,6 @@ Event callback when the dialog box is about to disappear. &lt;p&gt;&lt;strong&gt
 **Type:** () =&gt; void
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -668,10 +560,6 @@ Background style of selected items. Default Value: { color: \$r('sys.color.comp_
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -692,10 +580,6 @@ Font color, font size, and font weight of the selected item.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -715,10 +599,6 @@ Shadow of the dialog box. Default value on 2-in-1 devices: ShadowStyle.OUTER_FLO
 **Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -741,10 +621,6 @@ Font color, font size, and font weight of all items except the top, bottom, and 
 **Default:** { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Customize eap packets by callback
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
 <!--Device-eap-function regCustomEapHandler(netType: number, eapCode: number, eapType: number, callback: Callback<EapData>): void--><!--Device-eap-function regCustomEapHandler(netType: number, eapCode: number, eapType: number, callback: Callback<EapData>): void-End-->
@@ -46,7 +42,7 @@ Customize eap packets by callback
 | [33200006](../errorcode-net-eap.md#33200006-invalid-network-type) | Invalid net type |
 | [33200007](../errorcode-net-eap.md#33200007-invalid-eapcode-value) | Invalid eap code |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {eap} from '@kit.NetworkKit';

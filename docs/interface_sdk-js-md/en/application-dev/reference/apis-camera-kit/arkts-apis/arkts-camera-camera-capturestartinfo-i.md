@@ -4,10 +4,6 @@ Describes the capture start information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface CaptureStartInfo--><!--Device-camera-interface CaptureStartInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -30,10 +26,6 @@ ID of this capture action.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CaptureStartInfo-captureId: int--><!--Device-CaptureStartInfo-captureId: int-End-->
@@ -51,10 +43,6 @@ Estimated duration when the sensor captures frames at the bottom layer in a sing
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

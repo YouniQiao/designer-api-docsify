@@ -10,10 +10,6 @@ function isActive(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-power-function isActive(): boolean--><!--Device-power-function isActive(): boolean-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
@@ -24,7 +20,7 @@ function isActive(): boolean
 | --- | --- |
 | boolean | 活动状态返回true，非活动状态返回false。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let isActive = power.isActive();

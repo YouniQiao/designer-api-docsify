@@ -4,10 +4,6 @@ Defines the reminder information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-interface ReminderInfo--><!--Device-reminderAgentManager-interface ReminderInfo-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -30,10 +26,6 @@ Reminder ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderInfo-reminderId: int--><!--Device-ReminderInfo-reminderId: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -49,10 +41,6 @@ Request used for publishing the reminder.
 **Type:** ReminderRequest
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderInfo-reminderReq: ReminderRequest--><!--Device-ReminderInfo-reminderReq: ReminderRequest-End-->
 

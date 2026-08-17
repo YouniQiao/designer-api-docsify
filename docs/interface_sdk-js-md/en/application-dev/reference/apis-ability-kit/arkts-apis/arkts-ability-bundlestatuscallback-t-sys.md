@@ -8,11 +8,9 @@ Contains basic Ability information, which uniquely identifies a launcher StatusC
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo-(System-API))
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#bundlechangedinfo-system-api)
 
 <!--Device-unnamed-export type BundleStatusCallback = _BundleStatusCallback--><!--Device-unnamed-export type BundleStatusCallback = _BundleStatusCallback-End-->
 

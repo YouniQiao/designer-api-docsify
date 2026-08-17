@@ -4,11 +4,9 @@ Enumerates the flags that specify how the Want will be handled.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Flags](arkts-ability-wantconstant-flags-e.md#Flags)
+**Substitutes:** [Flags](arkts-ability-wantconstant-flags-e.md#flags)
 
 <!--Device-wantConstant-export enum Flags--><!--Device-wantConstant-export enum Flags-End-->
 
@@ -24,11 +22,9 @@ Grants the permission to read the URI.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#FLAG_AUTH_READ_URI_PERMISSION)
+**Substitutes:** [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#flagauthreaduripermission)
 
 <!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001--><!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001-End-->
 
@@ -44,11 +40,9 @@ Grants the permission to write data to the URI.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#FLAG_AUTH_WRITE_URI_PERMISSION)
+**Substitutes:** [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#flagauthwriteuripermission)
 
 <!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002--><!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002-End-->
 
@@ -63,8 +57,6 @@ FLAG_ABILITY_FORWARD_RESULT = 0x00000004
 Returns the result to the ability.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -82,8 +74,6 @@ Indicates whether the ability on the local device can be continued on a remote d
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-Flags-FLAG_ABILITY_CONTINUATION = 0x00000008--><!--Device-Flags-FLAG_ABILITY_CONTINUATION = 0x00000008-End-->
@@ -99,8 +89,6 @@ FLAG_NOT_OHOS_COMPONENT = 0x00000010
 Indicates that a component does not belong to OHOS.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -118,8 +106,6 @@ Indicates that an ability is enabled.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-Flags-FLAG_ABILITY_FORM_ENABLED = 0x00000020--><!--Device-Flags-FLAG_ABILITY_FORM_ENABLED = 0x00000020-End-->
@@ -135,8 +121,6 @@ FLAG_ABILITYSLICE_MULTI_DEVICE = 0x00000100
 Indicates the support for cross-device startup in the distributed scheduler.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -154,8 +138,6 @@ Indicates that the ServiceAbility is started regardless of whether the host appl
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-Flags-FLAG_START_FOREGROUND_ABILITY = 0x00000200--><!--Device-Flags-FLAG_START_FOREGROUND_ABILITY = 0x00000200-End-->
@@ -172,11 +154,9 @@ Indicates that the specific ability will be installed if it has not been install
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FLAG_INSTALL_ON_DEMAND](arkts-ability-wantconstant-flags-e.md#FLAG_INSTALL_ON_DEMAND)
+**Substitutes:** [FLAG_INSTALL_ON_DEMAND](arkts-ability-wantconstant-flags-e.md#flaginstallondemand)
 
 <!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800--><!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800-End-->
 
@@ -192,8 +172,6 @@ Indicates that the specific ability will be installed in the background if it ha
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-Flags-FLAG_INSTALL_WITH_BACKGROUND_MODE = 0x80000000--><!--Device-Flags-FLAG_INSTALL_WITH_BACKGROUND_MODE = 0x80000000-End-->
@@ -206,11 +184,9 @@ Indicates that the specific ability will be installed in the background if it ha
 FLAG_ABILITY_CLEAR_MISSION = 0x00008000
 ```
 
-Clears other operation missions. This flag can be set for the Want passed in [startAbility](arkts-ability-featureability-startability-f.md#startAbility) . It must be used together with **FLAG_ABILITY_NEW_MISSION**.
+Clears other operation missions. This flag can be set for the Want passed in [startAbility](arkts-ability-featureability-startability-f.md#startability) . It must be used together with **FLAG_ABILITY_NEW_MISSION**.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -228,8 +204,6 @@ Creates a mission on the history mission stack.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-Flags-FLAG_ABILITY_NEW_MISSION = 0x10000000--><!--Device-Flags-FLAG_ABILITY_NEW_MISSION = 0x10000000-End-->
@@ -245,8 +219,6 @@ FLAG_ABILITY_MISSION_TOP = 0x20000000
 Reuses an ability instance if it is on the top of an existing mission stack; creates an ability instance otherwise.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

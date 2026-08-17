@@ -4,10 +4,6 @@ Enumerates the types of the resources to write.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum ResourceType--><!--Device-photoAccessHelper-enum ResourceType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,10 +17,6 @@ PHOTO_PROXY = 3
 Photo proxy.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ResourceType-PHOTO_PROXY = 3--><!--Device-ResourceType-PHOTO_PROXY = 3-End-->
 
@@ -42,10 +34,6 @@ Private moving photo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ResourceType-PRIVATE_MOVING_PHOTO_RESOURCE = 4--><!--Device-ResourceType-PRIVATE_MOVING_PHOTO_RESOURCE = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -61,10 +49,6 @@ PRIVATE_MOVING_PHOTO_METADATA = 5
 Metadata resource of the private moving photo.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ResourceType-PRIVATE_MOVING_PHOTO_METADATA = 5--><!--Device-ResourceType-PRIVATE_MOVING_PHOTO_METADATA = 5-End-->
 

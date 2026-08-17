@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-request-interface DownloadConfig--><!--Device-request-interface DownloadConfig-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -23,10 +19,6 @@ background?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadConfig-background?: boolean--><!--Device-DownloadConfig-background?: boolean-End-->
 
@@ -44,10 +36,6 @@ description?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadConfig-description?: string--><!--Device-DownloadConfig-description?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -63,10 +51,6 @@ enableMetered?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadConfig-enableMetered?: boolean--><!--Device-DownloadConfig-enableMetered?: boolean-End-->
 
@@ -84,10 +68,6 @@ enableRoaming?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadConfig-enableRoaming?: boolean--><!--Device-DownloadConfig-enableRoaming?: boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -98,15 +78,11 @@ enableRoaming?: boolean
 filePath?: string
 ```
 
-设置下载路径。默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。 - FA模型下使用 Context.getCacheDir方法获取应用 存储路径。 - Stage模型下使用[Context (Stage模型的上下文基类)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)中AbilityContext的类获取文件路径。
+设置下载路径。默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。 - FA模型下使用 Context.getCacheDir方法获取应用 存储路径。 - Stage模型下使用[Context (Stage模型的上下文基类)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)中AbilityContext的类获取文件路径。
 
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadConfig-filePath?: string--><!--Device-DownloadConfig-filePath?: string-End-->
 
@@ -124,10 +100,6 @@ Adds an HTTP or HTTPS header to be included with the download request.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadConfig-header?: Record<string, string>--><!--Device-DownloadConfig-header?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -143,10 +115,6 @@ networkType?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadConfig-networkType?: int--><!--Device-DownloadConfig-networkType?: int-End-->
 
@@ -164,10 +132,6 @@ title?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadConfig-title?: string--><!--Device-DownloadConfig-title?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -183,10 +147,6 @@ url: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadConfig-url: string--><!--Device-DownloadConfig-url: string-End-->
 

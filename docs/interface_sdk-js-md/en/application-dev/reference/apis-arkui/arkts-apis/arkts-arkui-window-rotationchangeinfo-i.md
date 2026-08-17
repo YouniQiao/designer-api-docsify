@@ -4,10 +4,6 @@ Describes the window information obtained during window rotation changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface RotationChangeInfo--><!--Device-window-interface RotationChangeInfo-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ ID of the screen where the window is located.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RotationChangeInfo-displayId: long--><!--Device-RotationChangeInfo-displayId: long-End-->
@@ -51,10 +43,6 @@ Size of the rectangle after the screen where the window is located is rotated.
 **Type:** Rect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -74,10 +62,6 @@ Display orientation of the window. - **0**: portrait. - **1**: reverse landscape
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RotationChangeInfo-orientation: int--><!--Device-RotationChangeInfo-orientation: int-End-->
@@ -95,10 +79,6 @@ Type of window rotation event.
 **Type:** [RotationChangeType](arkts-arkui-window-rotationchangetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

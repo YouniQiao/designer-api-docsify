@@ -10,11 +10,9 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront-(System-API))
+**Substitutes:** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#movemissiontofront-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -31,7 +29,7 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 | missionId | number | Yes | Mission ID. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -61,11 +59,9 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront-(System-API))
+**Substitutes:** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#movemissiontofront-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -83,7 +79,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -113,11 +109,9 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront-(System-API))
+**Substitutes:** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#movemissiontofront-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -140,7 +134,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

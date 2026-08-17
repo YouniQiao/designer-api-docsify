@@ -16,10 +16,6 @@ Terminates a continuous task in the task pool. It is called after the continuous
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-taskpool-function terminateTask(longTask: LongTask): void--><!--Device-taskpool-function terminateTask(longTask: LongTask): void-End-->
@@ -32,7 +28,7 @@ Terminates a continuous task in the task pool. It is called after the continuous
 | --- | --- | --- | --- |
 | longTask | [LongTask](arkts-arkts-taskpool-longtask-c.md) | Yes | Continuous task to terminate. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent

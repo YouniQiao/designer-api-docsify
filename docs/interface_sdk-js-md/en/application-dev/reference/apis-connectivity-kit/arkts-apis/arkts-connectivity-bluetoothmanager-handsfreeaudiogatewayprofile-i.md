@@ -2,15 +2,13 @@
 
 Manager handsfree AG profile.
 
-**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#BaseProfile)
+**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#baseprofile)
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [HandsFreeAudioGatewayProfile](arkts-connectivity-hfp-handsfreeaudiogatewayprofile-i-sys.md#HandsFreeAudioGatewayProfile)
+**Substitutes:** [HandsFreeAudioGatewayProfile](arkts-connectivity-hfp-handsfreeaudiogatewayprofile-i-sys.md#handsfreeaudiogatewayprofile)
 
 <!--Device-bluetoothManager-interface HandsFreeAudioGatewayProfile--><!--Device-bluetoothManager-interface HandsFreeAudioGatewayProfile-End-->
 
@@ -31,8 +29,6 @@ connect(device: string): void
 Connect to device with hfp. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -64,7 +60,7 @@ Connect to device with hfp. On API 10 and above, the permission required by this
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -85,8 +81,6 @@ disconnect(device: string): void
 Disconnect to device with hfp. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -118,7 +112,7 @@ Disconnect to device with hfp. On API 10 and above, the permission required by t
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -139,8 +133,6 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 Unsubscribe the event reported when the profile connection state changes. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -176,8 +168,6 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 Subscribe the event reported when the profile connection state changes. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

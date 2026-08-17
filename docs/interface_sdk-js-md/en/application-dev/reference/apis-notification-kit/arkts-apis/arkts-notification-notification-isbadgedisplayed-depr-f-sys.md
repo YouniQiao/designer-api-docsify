@@ -10,11 +10,9 @@ Checks whether the notification badge is enabled for a specified application. Th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isBadgeDisplayed-(System-API))
+**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isbadgedisplayed-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,11 +40,9 @@ Checks whether the notification badge is enabled for a specified application. Th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isBadgeDisplayed-(System-API))
+**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isbadgedisplayed-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

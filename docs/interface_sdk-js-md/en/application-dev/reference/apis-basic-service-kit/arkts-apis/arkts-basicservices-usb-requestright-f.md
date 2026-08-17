@@ -16,11 +16,9 @@ Requests the temporary permission for the application to access a USB device. Th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight)
+**Substitutes:** [requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)
 
 <!--Device-usb-function requestRight(deviceName: string): Promise<boolean>--><!--Device-usb-function requestRight(deviceName: string): Promise<boolean>-End-->
 
@@ -38,7 +36,7 @@ Requests the temporary permission for the application to access a USB device. Th
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the temporary device access permissions are granted; and the value **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let devicesName= "1-1";

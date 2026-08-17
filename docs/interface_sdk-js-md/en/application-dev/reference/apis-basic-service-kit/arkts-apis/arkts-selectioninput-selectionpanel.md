@@ -18,9 +18,9 @@
  architecture design. The menu panel (**MENU_PANEL**) is the level-1 panel, which displays the function entries (such
  as translation and search) provided by the current app. The main panel (**MAIN_PANEL**) is the level-2 panel, which
  pops up after a user taps a function button on the menu panel and displays the specific function result. This module
- provides the attributes and types of the word selection panel. You can use [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md#PanelInfo-(System-API)) to set the
- position and size of the panel and use [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md#PanelType-(System-API)) to specify the panel type.
- [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)) and
+ provides the attributes and types of the word selection panel. You can use PanelInfo to set the
+ position and size of the panel and use PanelType to specify the panel type.
+ [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api) and
  [show](arkts-basicservices-selectionmanager-panel-i-sys.md#show) are used to create and display the
  word selection panel.
  > **NOTE**

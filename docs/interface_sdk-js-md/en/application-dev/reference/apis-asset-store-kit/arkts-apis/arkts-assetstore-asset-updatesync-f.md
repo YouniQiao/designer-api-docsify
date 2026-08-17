@@ -16,10 +16,6 @@ Updates an asset. This API returns the result synchronously.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-asset-function updateSync(query: AssetMap, attributesToUpdate: AssetMap): void--><!--Device-asset-function updateSync(query: AssetMap, attributesToUpdate: AssetMap): void-End-->
@@ -51,7 +47,7 @@ Updates an asset. This API returns the result synchronously.
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

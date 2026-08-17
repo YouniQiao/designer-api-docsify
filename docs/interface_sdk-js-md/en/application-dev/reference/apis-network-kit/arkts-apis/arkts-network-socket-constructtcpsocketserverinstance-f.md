@@ -16,10 +16,6 @@ Creates a TCPSocketServer object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-socket-function constructTCPSocketServerInstance(): TCPSocketServer--><!--Device-socket-function constructTCPSocketServerInstance(): TCPSocketServer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,7 +26,7 @@ Creates a TCPSocketServer object.
 | --- | --- |
 | [TCPSocketServer](arkts-network-socket-tcpsocketserver-i.md) | the TCPSocketServer of the constructTCPSocketServerInstance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

@@ -4,10 +4,6 @@ Enumerates the print qualities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-enum PrintQuality--><!--Device-print-enum PrintQuality-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -21,10 +17,6 @@ QUALITY_DRAFT = 3
 Draft
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintQuality-QUALITY_DRAFT = 3--><!--Device-PrintQuality-QUALITY_DRAFT = 3-End-->
 
@@ -40,10 +32,6 @@ Standard
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintQuality-QUALITY_NORMAL = 4--><!--Device-PrintQuality-QUALITY_NORMAL = 4-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -57,10 +45,6 @@ QUALITY_HIGH = 5
 High
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintQuality-QUALITY_HIGH = 5--><!--Device-PrintQuality-QUALITY_HIGH = 5-End-->
 

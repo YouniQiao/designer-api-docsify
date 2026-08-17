@@ -10,11 +10,9 @@ Obtains all notification slots. This API uses an asynchronous callback to return
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSlots](arkts-notification-notificationmanager-getslots-f.md#getSlots)
+**Substitutes:** [getSlots](arkts-notification-notificationmanager-getslots-f.md#getslots)
 
 <!--Device-notification-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void--><!--Device-notification-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void-End-->
 
@@ -37,11 +35,9 @@ Obtains all notification slots of this application. This API uses a promise to r
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSlots](arkts-notification-notificationmanager-getslots-f.md#getSlots)
+**Substitutes:** [getSlots](arkts-notification-notificationmanager-getslots-f.md#getslots)
 
 <!--Device-notification-function getSlots(): Promise<Array<NotificationSlot>>--><!--Device-notification-function getSlots(): Promise<Array<NotificationSlot>>-End-->
 

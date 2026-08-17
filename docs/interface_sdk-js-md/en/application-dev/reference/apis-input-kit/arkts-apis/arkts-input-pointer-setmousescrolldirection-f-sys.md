@@ -16,10 +16,6 @@ Sets the scroll direction of the mouse wheel. This API uses a promise to return 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_DEVICE_CONTROLLER
 
 <!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>--><!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>-End-->
@@ -48,7 +44,7 @@ Sets the scroll direction of the mouse wheel. This API uses a promise to return 
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';

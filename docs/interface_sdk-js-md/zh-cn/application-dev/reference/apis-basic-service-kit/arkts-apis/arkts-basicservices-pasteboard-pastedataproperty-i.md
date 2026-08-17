@@ -1,12 +1,8 @@
 # PasteDataProperty
 
-定义剪贴板中所有内容条目的属性，包含时间戳、数据类型、粘贴范围以及一些附加数据等， 该属性必须通过[setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setProperty)方法，才能设置到剪贴板中。
+定义剪贴板中所有内容条目的属性，包含时间戳、数据类型、粘贴范围以及一些附加数据等， 该属性必须通过[setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setproperty)方法，才能设置到剪贴板中。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-pasteboard-interface PasteDataProperty--><!--Device-pasteboard-interface PasteDataProperty-End-->
 
@@ -24,10 +20,6 @@ additions: Record<string, RecordData>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PasteDataProperty-additions: Record<string, RecordData>--><!--Device-PasteDataProperty-additions: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
@@ -38,15 +30,11 @@ additions: Record<string, RecordData>
 localOnly: boolean
 ```
 
-配置剪贴板内容是否为“仅在本地”，true表示仅在本地有效，false表示允许跨设备传输。默认值为false。 其值会被shareOption属性覆盖，推荐使用[ShareOption](arkts-basicservices-pasteboard-shareoption-e.md#ShareOption)属性。
+配置剪贴板内容是否为“仅在本地”，true表示仅在本地有效，false表示允许跨设备传输。默认值为false。 其值会被shareOption属性覆盖，推荐使用[ShareOption](arkts-basicservices-pasteboard-shareoption-e.md#shareoption)属性。
 
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,10 +54,6 @@ readonly mimeTypes: Array<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PasteDataProperty-readonly mimeTypes: Array<string>--><!--Device-PasteDataProperty-readonly mimeTypes: Array<string>-End-->
@@ -87,10 +71,6 @@ shareOption: ShareOption
 **类型：** [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -110,10 +90,6 @@ tag: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PasteDataProperty-tag: string--><!--Device-PasteDataProperty-tag: string-End-->
@@ -131,10 +107,6 @@ readonly timestamp: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -10,11 +10,9 @@ function getId(uri: string): number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [getId](arkts-ability-datauriutils-getid-f.md#getId)
+**替代接口：** [getId](arkts-ability-datauriutils-getid-f.md#getid)
 
 <!--Device-dataUriUtils-function getId(uri: string): number--><!--Device-dataUriUtils-function getId(uri: string): number-End-->
 
@@ -32,7 +30,7 @@ function getId(uri: string): number
 | --- | --- |
 | number | 返回uri路径末尾的ID。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import dataUriUtils from '@ohos.ability.dataUriUtils';

@@ -16,10 +16,6 @@ Obtains the VM memory size occupied by ArkTS objects.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getAppVMObjectUsedSize(): bigint--><!--Device-hidebug-function getAppVMObjectUsedSize(): bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ Obtains the VM memory size occupied by ArkTS objects.
 | --- | --- |
 | bigint | VM memory size occupied by ArkTS objects, in KB. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

@@ -4,11 +4,9 @@ The **userFileManager** module provides user data management capabilities, inclu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#@ohos.file.photoAccessHelper)
+**Substitutes:** [photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#ohosfilephotoaccesshelper)
 
 <!--Device-unnamed-declare namespace userFileManager--><!--Device-unnamed-declare namespace userFileManager-End-->
 
@@ -29,7 +27,7 @@ import { userFileManager } from 'userFileManager';
 
 | Name | Description |
 | --- | --- |
-| [getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr) | Obtains a **UserFileManager** instance. This instance can be used to access and modify user media data (such as audio and video assets, images, and documents). |
+| [getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getuserfilemgr) | Obtains a **UserFileManager** instance. This instance can be used to access and modify user media data (such as audio and video assets, images, and documents). |
 <!--DelEnd-->
 
 <!--Del-->
@@ -46,7 +44,7 @@ import { userFileManager } from 'userFileManager';
 | [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md) | Provides APIs for encapsulating file asset attributes. |
 | [PeerInfo](arkts-corefile-userfilemanager-peerinfo-i-sys.md) | Defines information about a registered device. |
 | [PhotoCreateOptions](arkts-corefile-userfilemanager-photocreateoptions-i-sys.md) | Defines the options for creating an image or video asset. |
-| [PrivateAlbum](arkts-corefile-userfilemanager-privatealbum-i-sys.md) | Provides APIs for managing the system albums. This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-sys.md#Album-(System-API)) instead. |
+| [PrivateAlbum](arkts-corefile-userfilemanager-privatealbum-i-sys.md) | Provides APIs for managing the system albums. This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-sys.md#album-system-api) instead. |
 | [UserFileManager](arkts-corefile-userfilemanager-userfilemanager-i-sys.md) | Defines the UserFileManager class and provides functions to access the data in user file storage. |
 <!--DelEnd-->
 
@@ -63,9 +61,9 @@ import { userFileManager } from 'userFileManager';
 | [FileType](arkts-corefile-userfilemanager-filetype-e-sys.md) | Enumerates media file types. |
 | [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md) | Defines the key information about an image or video file. |
 | [NotifyType](arkts-corefile-userfilemanager-notifytype-e-sys.md) | Enumerates the notification event types. |
-| [PhotoSubType](arkts-corefile-userfilemanager-photosubtype-e-sys.md) | Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md#FileAsset-(System-API)) types. |
+| [PhotoSubType](arkts-corefile-userfilemanager-photosubtype-e-sys.md) | Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md#fileasset-system-api) types. |
 | [PositionType](arkts-corefile-userfilemanager-positiontype-e-sys.md) | Enumerates the file location. |
-| [PrivateAlbumType](arkts-corefile-userfilemanager-privatealbumtype-e-sys.md) | Enumerates the system album types. This API will be deprecated. Use [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md#AlbumType-(System-API)) and [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md#AlbumSubType-(System-API)) instead. |
+| [PrivateAlbumType](arkts-corefile-userfilemanager-privatealbumtype-e-sys.md) | Enumerates the system album types. This API will be deprecated. Use [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md#albumtype-system-api) and [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md#albumsubtype-system-api) instead. |
 <!--DelEnd-->
 
 <!--Del-->

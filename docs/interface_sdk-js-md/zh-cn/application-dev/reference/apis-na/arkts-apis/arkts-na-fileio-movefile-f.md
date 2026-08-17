@@ -10,9 +10,7 @@ function moveFile(src: string, dest: string, mode?: int): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function moveFile(src: string, dest: string, mode?: int): Promise<void>--><!--Device-fileIo-function moveFile(src: string, dest: string, mode?: int): Promise<void>-End-->
 
@@ -67,9 +65,7 @@ function moveFile(src: string, dest: string, callback: AsyncCallback<void>): voi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
 
@@ -81,7 +77,7 @@ function moveFile(src: string, dest: string, callback: AsyncCallback<void>): voi
 | --- | --- | --- | --- |
 | src | string | 是 | 源文件的应用沙箱路径。 |
 | dest | string | 是 | 目标文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -118,9 +114,7 @@ function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void-End-->
 
@@ -133,7 +127,7 @@ function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<
 | src | string | 是 | 源文件的应用沙箱路径。 |
 | dest | string | 是 | 目标文件的应用沙箱路径。 |
 | mode | int | 是 | 移动模式。若mode为0，移动位置存在同名文件时，强制移动覆盖。若mode为1，移动位置存在同名文件时，抛出异常。默认为0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当移动文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

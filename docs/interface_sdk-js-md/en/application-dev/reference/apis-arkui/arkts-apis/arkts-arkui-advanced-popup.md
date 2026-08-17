@@ -16,7 +16,7 @@ import { PopupTextOptions } from 'PopupTextOptions';
 
 | Name | Description |
 | --- | --- |
-| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#Popup) |  |
+| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#popup) |  |
 
 ### Interfaces
 

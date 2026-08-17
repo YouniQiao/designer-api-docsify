@@ -16,10 +16,6 @@ Restoring bluetooth settings.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 <!--Device-access-function factoryReset(callback: AsyncCallback<void>): void--><!--Device-access-function factoryReset(callback: AsyncCallback<void>): void-End-->
@@ -45,7 +41,7 @@ Restoring bluetooth settings.
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,10 +67,6 @@ Restoring bluetooth settings.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 <!--Device-access-function factoryReset(): Promise<void>--><!--Device-access-function factoryReset(): Promise<void>-End-->
@@ -99,7 +91,7 @@ Restoring bluetooth settings.
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

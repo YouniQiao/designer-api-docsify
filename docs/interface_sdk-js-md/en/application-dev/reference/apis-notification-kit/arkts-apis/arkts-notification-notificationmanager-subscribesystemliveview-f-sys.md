@@ -16,10 +16,6 @@ Subscribes to the system live view notification. This API uses a promise to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-function subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise<void>--><!--Device-notificationManager-function subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -50,7 +46,7 @@ Subscribes to the system live view notification. This API uses a promise to retu
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -16,10 +16,6 @@ Cancels a WantAgent object. This API uses an asynchronous callback to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function cancel(agent: WantAgent, callback: AsyncCallback<void>): void--><!--Device-wantAgent-function cancel(agent: WantAgent, callback: AsyncCallback<void>): void-End-->
@@ -41,7 +37,7 @@ Cancels a WantAgent object. This API uses an asynchronous callback to return the
 | [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';
@@ -122,10 +118,6 @@ Cancels a WantAgent object. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>--><!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>-End-->
@@ -152,7 +144,7 @@ Cancels a WantAgent object. This API uses a promise to return the result.
 | [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';

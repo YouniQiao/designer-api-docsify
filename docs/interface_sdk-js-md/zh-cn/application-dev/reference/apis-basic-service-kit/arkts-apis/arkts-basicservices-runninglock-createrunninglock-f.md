@@ -10,8 +10,6 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [create](arkts-basicservices-runninglock-create-f.md#create)
@@ -28,9 +26,9 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 | --- | --- | --- | --- |
 | name | string | 是 | 锁的名字。建议使用包名或类名加后缀的方式命名。 |
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 | 要创建的锁的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | 是 | 回调函数。当创建锁成功，err为undefined，data为创建的RunningLock；否则为错误对象； AsyncCallback封装了一个RunningLock类型的类。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | 是 | 回调函数。当创建锁成功，err为undefined，data为创建的RunningLock；否则为错误对象； AsyncCallback封装了一个RunningLock类型的类。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND, (err: Error, lock: runningLock.RunningLock) => {
@@ -52,8 +50,6 @@ function createRunningLock(name: string, type: RunningLockType): Promise<Running
 创建RunningLock锁。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -78,7 +74,7 @@ function createRunningLock(name: string, type: RunningLockType): Promise<Running
 | --- | --- |
 | Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Promise对象，返回RunningLock锁对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)

@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface RegExpConstructor--><!--Device-unnamed-interface RegExpConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new(pattern: RegExp | string): RegExp
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExpConstructor-new(pattern: RegExp | string): RegExp--><!--Device-RegExpConstructor-new(pattern: RegExp | string): RegExp-End-->
 
@@ -41,10 +33,6 @@ new(pattern: string, flags?: string): RegExp
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExpConstructor-new(pattern: string, flags?: string): RegExp--><!--Device-RegExpConstructor-new(pattern: string, flags?: string): RegExp-End-->
 
@@ -69,10 +57,6 @@ new(pattern: string, flags?: string): RegExp
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-RegExpConstructor-(pattern: RegExp | string): RegExp--><!--Device-RegExpConstructor-(pattern: RegExp | string): RegExp-End-->
 
 **Parameters:**
@@ -94,10 +78,6 @@ new(pattern: string, flags?: string): RegExp
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExpConstructor-(pattern: string, flags?: string): RegExp--><!--Device-RegExpConstructor-(pattern: string, flags?: string): RegExp-End-->
 
@@ -124,8 +104,6 @@ new(pattern: string, flags?: string): RegExp
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-RegExpConstructor-"$&": string--><!--Device-RegExpConstructor-"$&": string-End-->
@@ -139,8 +117,6 @@ new(pattern: string, flags?: string): RegExp
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -156,8 +132,6 @@ new(pattern: string, flags?: string): RegExp
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-RegExpConstructor-"$+": string--><!--Device-RegExpConstructor-"$+": string-End-->
@@ -171,8 +145,6 @@ new(pattern: string, flags?: string): RegExp
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -188,8 +160,6 @@ $1: string
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-RegExpConstructor-$1: string--><!--Device-RegExpConstructor-$1: string-End-->
@@ -203,8 +173,6 @@ $2: string
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -220,8 +188,6 @@ $3: string
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-RegExpConstructor-$3: string--><!--Device-RegExpConstructor-$3: string-End-->
@@ -235,8 +201,6 @@ $4: string
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -252,8 +216,6 @@ $5: string
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-RegExpConstructor-$5: string--><!--Device-RegExpConstructor-$5: string-End-->
@@ -267,8 +229,6 @@ $6: string
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -284,8 +244,6 @@ $7: string
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-RegExpConstructor-$7: string--><!--Device-RegExpConstructor-$7: string-End-->
@@ -299,8 +257,6 @@ $8: string
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -316,8 +272,6 @@ $9: string
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-RegExpConstructor-$9: string--><!--Device-RegExpConstructor-$9: string-End-->
@@ -331,8 +285,6 @@ $_: string
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -348,8 +300,6 @@ input: string
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-RegExpConstructor-input: string--><!--Device-RegExpConstructor-input: string-End-->
@@ -363,8 +313,6 @@ lastMatch: string
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -380,8 +328,6 @@ lastParen: string
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-RegExpConstructor-lastParen: string--><!--Device-RegExpConstructor-lastParen: string-End-->
@@ -395,8 +341,6 @@ leftContext: string
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -412,10 +356,6 @@ readonly prototype: RegExp
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-RegExpConstructor-readonly prototype: RegExp--><!--Device-RegExpConstructor-readonly prototype: RegExp-End-->
 
 ## rightContext
@@ -427,8 +367,6 @@ rightContext: string
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 

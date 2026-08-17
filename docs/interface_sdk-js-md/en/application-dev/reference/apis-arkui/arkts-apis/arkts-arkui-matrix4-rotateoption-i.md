@@ -4,10 +4,6 @@ Describes the rotation parameters.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-matrix4-interface RotateOption--><!--Device-matrix4-interface RotateOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,10 +26,6 @@ Rotation angle. Default value: **0**
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RotateOption-angle?: number--><!--Device-RotateOption-angle?: number-End-->
@@ -51,10 +43,6 @@ Additional x-axis offset of the transformation center relative to the component'
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Additional y-axis offset of the transformation center relative to the component'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RotateOption-centerY?: number--><!--Device-RotateOption-centerY?: number-End-->
@@ -95,10 +79,6 @@ X-coordinate of the rotation axis vector. Default value: **0** Value range: (-âˆ
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,10 +98,6 @@ Y-coordinate of the rotation axis vector. Default value: **0** Value range: (-âˆ
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RotateOption-y?: number--><!--Device-RotateOption-y?: number-End-->
@@ -139,10 +115,6 @@ Z-coordinate of the rotation axis vector. Default value: **0** Value range: (-âˆ
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

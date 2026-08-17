@@ -4,10 +4,6 @@ Describes XMP namespace parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface XMPNamespace--><!--Device-image-interface XMPNamespace-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ The prefix of XMP namespace.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-XMPNamespace-prefix: string--><!--Device-XMPNamespace-prefix: string-End-->
@@ -51,10 +43,6 @@ The uri of XMP namespace.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ The values of the **ScopeComparable** type are used to implement the **compareTo
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-util-interface ScopeComparable--><!--Device-util-interface ScopeComparable-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ Compares two values and returns a Boolean value.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScopeComparable-compareTo(other: ScopeComparable): boolean--><!--Device-ScopeComparable-compareTo(other: ScopeComparable): boolean-End-->
@@ -42,7 +34,7 @@ Compares two values and returns a Boolean value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | Yes | The other value to be compared with the current value. |
+| other | [ScopeComparable](../../apis-na/arkts-apis/arkts-na-util-scopecomparable-i.md) | Yes | The other value to be compared with the current value. |
 
 **Return value:**
 
@@ -50,7 +42,7 @@ Compares two values and returns a Boolean value.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the current value is greater than or equal to the input value; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 Create a class to implement the compareTo method. The Temperature class is used as an example in the following sample code.
 

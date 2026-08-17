@@ -10,10 +10,6 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
 <!--Device-uiAppearance-function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void--><!--Device-uiAppearance-function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void-End-->
@@ -27,7 +23,7 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [DarkMode](../../apis-na/arkts-apis/arkts-na-uiappearance-darkmode-e.md) | 是 | indicates the dark-mode to set |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | the callback of setDarkMode |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | the callback of setDarkMode |
 
 **错误码：**
 
@@ -37,7 +33,7 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 | [500001](../errorcode-uiappearance.md#500001-内部错误) | Internal error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { uiAppearance } from '@kit.ArkUI';
@@ -68,10 +64,6 @@ function setDarkMode(mode: DarkMode): Promise<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
 <!--Device-uiAppearance-function setDarkMode(mode: DarkMode): Promise<void>--><!--Device-uiAppearance-function setDarkMode(mode: DarkMode): Promise<void>-End-->
@@ -100,7 +92,7 @@ function setDarkMode(mode: DarkMode): Promise<void>
 | [500001](../errorcode-uiappearance.md#500001-内部错误) | Internal error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { uiAppearance } from '@kit.ArkUI';

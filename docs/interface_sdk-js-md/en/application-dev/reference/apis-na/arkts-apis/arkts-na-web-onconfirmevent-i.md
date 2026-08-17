@@ -4,9 +4,7 @@ Defines the triggered function when the web page wants to display a JavaScript c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnConfirmEvent--><!--Device-unnamed-export declare interface OnConfirmEvent-End-->
 
@@ -24,9 +22,7 @@ The message of confirm dialog.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnConfirmEvent-message: string--><!--Device-OnConfirmEvent-message: string-End-->
 
@@ -44,9 +40,7 @@ Handle the user's JavaScript result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnConfirmEvent-result: JsResult--><!--Device-OnConfirmEvent-result: JsResult-End-->
 
@@ -64,9 +58,7 @@ The url of the page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnConfirmEvent-url: string--><!--Device-OnConfirmEvent-url: string-End-->
 

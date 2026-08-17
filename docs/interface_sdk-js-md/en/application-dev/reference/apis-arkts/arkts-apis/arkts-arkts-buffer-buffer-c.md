@@ -4,10 +4,6 @@ The Buffer object is a method of handling buffers dedicated to binary data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-buffer-class Buffer--><!--Device-buffer-class Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -33,10 +29,6 @@ compare(
 Compares this **Buffer** object with another object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,7 +58,7 @@ Compares this **Buffer** object with another object.
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and &lt;= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -97,10 +89,6 @@ compare(
 Compares buf with target and returns a number indicating whether buf comes before, after, or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each Buffer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -140,10 +128,6 @@ Copies data at the specified position in this **Buffer** object to the specified
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int--><!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int-End-->
@@ -171,7 +155,7 @@ Copies data at the specified position in this **Buffer** object to the specified
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -198,10 +182,6 @@ Creates and returns an iterator that contains key-value pairs of this **Buffer**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-entries(): IterableIterator<[int, long]>--><!--Device-Buffer-entries(): IterableIterator<[int, long]>-End-->
@@ -215,7 +195,7 @@ Creates and returns an iterator that contains key-value pairs of this **Buffer**
 | IterableIterator&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are of the number type.<br>**Applicable version:** 9 - 10 |
 | IterableIterator&lt;[int, long]&gt; | <br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -247,10 +227,6 @@ Checks whether this **Buffer** object is the same as another **Buffer** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean--><!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean-End-->
@@ -269,7 +245,7 @@ Checks whether this **Buffer** object is the same as another **Buffer** object.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the two objects are the same; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -298,10 +274,6 @@ fill(
 Fills this **Buffer** object at the specified position. By default, data is filled cyclically.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -340,10 +312,6 @@ Checks whether this **Buffer** object contains the specified value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean--><!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean-End-->
@@ -373,10 +341,6 @@ indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: 
 Obtains the index of the first occurrence of the specified value in this **Buffer** object. If no match is found, **-1** is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -408,10 +372,6 @@ Creates and returns an iterator that contains the keys of this **Buffer** object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-keys(): IterableIterator<int>--><!--Device-Buffer-keys(): IterableIterator<int>-End-->
@@ -424,7 +384,7 @@ Creates and returns an iterator that contains the keys of this **Buffer** object
 | --- | --- |
 | IterableIterator&lt;int&gt; | Iterator created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -453,10 +413,6 @@ lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffse
 Obtains the index of the last occurrence of the specified value in this **Buffer** object. If no match is found, **-1** is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -488,10 +444,6 @@ Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-readBigInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigInt64BE(offset?: int): bigint-End-->
@@ -516,7 +468,7 @@ Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at th
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -542,10 +494,6 @@ Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-readBigInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigInt64LE(offset?: int): bigint-End-->
@@ -570,7 +518,7 @@ Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -596,10 +544,6 @@ Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-readBigUInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64BE(offset?: int): bigint-End-->
@@ -624,7 +568,7 @@ Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -648,10 +592,6 @@ readBigUInt64LE(offset?: int): bigint
 Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -677,7 +617,7 @@ Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -703,10 +643,6 @@ Reads a 64-bit, big-endian, double-precision floating-point number from this **B
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-readDoubleBE(offset?: int): double--><!--Device-Buffer-readDoubleBE(offset?: int): double-End-->
@@ -731,7 +667,7 @@ Reads a 64-bit, big-endian, double-precision floating-point number from this **B
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -754,10 +690,6 @@ readDoubleLE(offset?: int): double
 Reads a 64-bit, little-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -783,7 +715,7 @@ Reads a 64-bit, little-endian, double-precision floating-point number from this 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -806,10 +738,6 @@ readFloatBE(offset?: int): double
 Reads a 32-bit, big-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -835,7 +763,7 @@ Reads a 32-bit, big-endian, single-precision floating-point number from this **B
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -858,10 +786,6 @@ readFloatLE(offset?: int): double
 Reads a 32-bit, little-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -887,7 +811,7 @@ Reads a 32-bit, little-endian, single-precision floating-point number from this 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -910,10 +834,6 @@ readInt16BE(offset?: int): long
 Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -939,7 +859,7 @@ Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the sp
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -962,10 +882,6 @@ readInt16LE(offset?: int): long
 Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -991,7 +907,7 @@ Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1014,10 +930,6 @@ readInt32BE(offset?: int): long
 Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1043,7 +955,7 @@ Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the sp
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1066,10 +978,6 @@ readInt32LE(offset?: int): long
 Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1095,7 +1003,7 @@ Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1118,10 +1026,6 @@ readInt8(offset?: int): long
 Reads an 8-bit signed integer from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1147,7 +1051,7 @@ Reads an 8-bit signed integer from this **Buffer** object at the specified offse
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 1 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1172,10 +1076,6 @@ readIntBE(offset: int, byteLength: int): long
 Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as a big-endian, two's complement signed value that supports up to 48 bits of precision.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1202,7 +1102,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1226,10 +1126,6 @@ readIntLE(offset: int, byteLength: int): long
 Reads the specified number of bytes from this **Buffer** object at the specified offset and interprets the result as a little-endian, two's complement signed value that supports up to 48 bits of precision.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1256,7 +1152,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1279,10 +1175,6 @@ readUInt16BE(offset?: int): long
 Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1308,7 +1200,7 @@ Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1334,10 +1226,6 @@ Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-readUInt16LE(offset?: int): long--><!--Device-Buffer-readUInt16LE(offset?: int): long-End-->
@@ -1362,7 +1250,7 @@ Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at t
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1388,10 +1276,6 @@ Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-readUInt32BE(offset?: int): long--><!--Device-Buffer-readUInt32BE(offset?: int): long-End-->
@@ -1416,7 +1300,7 @@ Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1439,10 +1323,6 @@ readUInt32LE(offset?: int): long
 Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1468,7 +1348,7 @@ Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at t
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1491,10 +1371,6 @@ readUInt8(offset?: int): long
 Reads an 8-bit unsigned integer from this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1520,7 +1396,7 @@ Reads an 8-bit unsigned integer from this **Buffer** object at the specified off
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 1 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1545,10 +1421,6 @@ readUIntBE(offset: int, byteLength: int): long
 Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, big-endian integer that supports up to 48 bits of precision.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1575,7 +1447,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1598,10 +1470,6 @@ readUIntLE(offset: int, byteLength: int): long
 Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, little-endian integer that supports up to 48 bits of precision.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1628,7 +1496,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1652,10 +1520,6 @@ Truncates this **Buffer** object from the specified position to create a new **B
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-subarray(start?: int, end?: int): Buffer--><!--Device-Buffer-subarray(start?: int, end?: int): Buffer-End-->
@@ -1675,7 +1539,7 @@ Truncates this **Buffer** object from the specified position to create a new **B
 | --- | --- |
 | [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. When the value of **start** or **end** is less than **0**, an empty buffer is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1700,10 +1564,6 @@ Converts this **Buffer** object into an array of unsigned 16-bit integers and sw
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-swap16(): Buffer--><!--Device-Buffer-swap16(): Buffer-End-->
@@ -1722,7 +1582,7 @@ Converts this **Buffer** object into an array of unsigned 16-bit integers and sw
 | --- | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 16-bits |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1745,10 +1605,6 @@ Converts this **Buffer** object into an array of unsigned 32-bit integers and sw
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-swap32(): Buffer--><!--Device-Buffer-swap32(): Buffer-End-->
@@ -1767,7 +1623,7 @@ Converts this **Buffer** object into an array of unsigned 32-bit integers and sw
 | --- | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 32-bits |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1790,10 +1646,6 @@ Converts this **Buffer** object into an array of unsigned 64-bit integers and sw
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-swap64(): Buffer--><!--Device-Buffer-swap64(): Buffer-End-->
@@ -1812,7 +1664,7 @@ Converts this **Buffer** object into an array of unsigned 64-bit integers and sw
 | --- | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 64-bits |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1835,10 +1687,6 @@ Converts this **Buffer** object into a JSON object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-toJSON(): Object--><!--Device-Buffer-toJSON(): Object-End-->
@@ -1851,7 +1699,7 @@ Converts this **Buffer** object into a JSON object.
 | --- | --- |
 | Object | JSON object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1871,10 +1719,6 @@ toJSON(): jsonx.JsonElement
 Converts this Buffer instance into a JsonElement.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1898,10 +1742,6 @@ Converts the data at the specified position in this **Buffer** object into a str
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string-End-->
@@ -1922,7 +1762,7 @@ Converts the data at the specified position in this **Buffer** object into a str
 | --- | --- |
 | string | String. When the value of **start** is greater than or equal to **Buffer.length** or **start** is greater than **end**, an empty string is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1944,10 +1784,6 @@ toString(): string
 Decodes buf to a string according to the specified character encoding in encoding
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1972,10 +1808,6 @@ toString(encoding?: BufferEncoding, start?: int, end?: int): string
 Decodes buf to a string according to the specified character encoding in encoding
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2009,10 +1841,6 @@ Creates and returns an iterator that contains the values of this **Buffer** obje
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-values(): IterableIterator<long>--><!--Device-Buffer-values(): IterableIterator<long>-End-->
@@ -2025,7 +1853,7 @@ Creates and returns an iterator that contains the values of this **Buffer** obje
 | --- | --- |
 | IterableIterator&lt;long&gt; | Iterator. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2057,10 +1885,6 @@ Writes a string of the specified length to this **Buffer** object at the specifi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int--><!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int-End-->
@@ -2088,7 +1912,7 @@ Writes a string of the specified length to this **Buffer** object at the specifi
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/length]" is out of range. It must be >= 0 and &lt;= buf.length. Received value is: [offset/length] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2113,10 +1937,6 @@ writeBigInt64BE(value: bigint, offset?: int): int
 Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2143,7 +1963,7 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2163,10 +1983,6 @@ writeBigInt64LE(value: bigint, offset?: int): int
 Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2193,7 +2009,7 @@ Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2213,10 +2029,6 @@ writeBigUInt64BE(value: bigint, offset?: int): int
 Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2243,7 +2055,7 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2263,10 +2075,6 @@ writeBigUInt64LE(value: bigint, offset?: int): int
 Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2293,7 +2101,7 @@ Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object a
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2313,10 +2121,6 @@ writeDoubleBE(value: double, offset?: int): int
 Writes a 64-bit, big-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2343,7 +2147,7 @@ Writes a 64-bit, big-endian, double-precision floating-point number to this **Bu
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2363,10 +2167,6 @@ writeDoubleLE(value: double, offset?: int): int
 Writes a 64-bit, little-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2393,7 +2193,7 @@ Writes a 64-bit, little-endian, double-precision floating-point number to this *
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2413,10 +2213,6 @@ writeFloatBE(value: double, offset?: int): int
 Writes a 32-bit, big-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2443,7 +2239,7 @@ Writes a 32-bit, big-endian, single-precision floating-point number to this **Bu
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2463,10 +2259,6 @@ writeFloatLE(value: double, offset?: int): int
 Writes a 32-bit, little-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2493,7 +2285,7 @@ Writes a 32-bit, little-endian, single-precision floating-point number to this *
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2513,10 +2305,6 @@ writeInt16BE(value: long, offset?: int): int
 Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2543,7 +2331,7 @@ Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the spe
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2563,10 +2351,6 @@ writeInt16LE(value: long, offset?: int): int
 Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2593,7 +2377,7 @@ Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2613,10 +2397,6 @@ writeInt32BE(value: long, offset?: int): int
 Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2643,7 +2423,7 @@ Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the spe
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2663,10 +2443,6 @@ writeInt32LE(value: long, offset?: int): int
 Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2693,7 +2469,7 @@ Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2713,10 +2489,6 @@ writeInt8(value: long, offset?: int): int
 Writes an 8-bit signed integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2743,7 +2515,7 @@ Writes an 8-bit signed integer to this **Buffer** object at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2766,10 +2538,6 @@ writeIntBE(value: long, offset: int, byteLength: int): int
 Writes a big-endian signed value of the specified length to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2797,7 +2565,7 @@ Writes a big-endian signed value of the specified length to this **Buffer** obje
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2817,10 +2585,6 @@ writeIntLE(value: long, offset: int, byteLength: int): int
 Writes a little-endian signed value of the specified length to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2848,7 +2612,7 @@ Writes a little-endian signed value of the specified length to this **Buffer** o
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2868,10 +2632,6 @@ writeUInt16BE(value: long, offset?: int): int
 Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2898,7 +2658,7 @@ Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the s
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2921,10 +2681,6 @@ writeUInt16LE(value: long, offset?: int): int
 Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2951,7 +2707,7 @@ Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at th
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2974,10 +2730,6 @@ writeUInt32BE(value: long, offset?: int): int
 Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3004,7 +2756,7 @@ Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the s
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3024,10 +2776,6 @@ writeUInt32LE(value: long, offset?: int): int
 Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3054,7 +2802,7 @@ Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at th
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3074,10 +2822,6 @@ writeUInt8(value: long, offset?: int): int
 Writes an 8-bit unsigned integer to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3104,7 +2848,7 @@ Writes an 8-bit unsigned integer to this **Buffer** object at the specified offs
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3134,10 +2878,6 @@ Writes an unsigned big-endian value of the specified length to this **Buffer** o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int-End-->
@@ -3164,7 +2904,7 @@ Writes an unsigned big-endian value of the specified length to this **Buffer** o
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3184,10 +2924,6 @@ writeUIntLE(value: long, offset: int, byteLength: int): int
 Writes an unsigned little-endian value of the specified length to this **Buffer** object at the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3215,7 +2951,7 @@ Writes an unsigned little-endian value of the specified length to this **Buffer*
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3238,10 +2974,6 @@ buffer: ArrayBuffer
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-buffer: ArrayBuffer--><!--Device-Buffer-buffer: ArrayBuffer-End-->
@@ -3260,10 +2992,6 @@ Offset of the **Buffer** object in the memory pool.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Buffer-byteOffset: number--><!--Device-Buffer-byteOffset: number-End-->
@@ -3281,10 +3009,6 @@ Length of the **Buffer** object, in bytes.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

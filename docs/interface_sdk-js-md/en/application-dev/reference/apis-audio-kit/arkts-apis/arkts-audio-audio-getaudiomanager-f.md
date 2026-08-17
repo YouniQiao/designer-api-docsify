@@ -16,10 +16,6 @@ Obtains an AudioManager instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-audio-function getAudioManager(): AudioManager--><!--Device-audio-function getAudioManager(): AudioManager-End-->
@@ -32,7 +28,7 @@ Obtains an AudioManager instance.
 | --- | --- |
 | [AudioManager](arkts-audio-audio-audiomanager-i.md) | AudioManager instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';

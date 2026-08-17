@@ -4,10 +4,6 @@ Describes the progress information of data migration, including the progress per
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-fontManager-interface DataMigrationProgress--><!--Device-fontManager-interface DataMigrationProgress-End-->
 
 **System capability:** SystemCapability.Global.FontManager
@@ -32,10 +28,6 @@ Data migration progress percentage, which is calculated based on the number or s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataMigrationProgress-progressPercentage: int--><!--Device-DataMigrationProgress-progressPercentage: int-End-->
 
 **System capability:** SystemCapability.Global.FontManager
@@ -53,10 +45,6 @@ Estimated remaining time, which may vary depending on factors such as device per
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataMigrationProgress-timeRemaining: int--><!--Device-DataMigrationProgress-timeRemaining: int-End-->
 

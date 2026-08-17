@@ -10,8 +10,6 @@ function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<long>):
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 20
 
 <!--Device-screen-function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<long>): void--><!--Device-screen-function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<long>): void-End-->
@@ -25,7 +23,7 @@ function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<long>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | Array&lt;[ExpandOption](arkts-arkui-screen-expandoption-i-sys.md)&gt; | 是 | 设置扩展屏幕的参数集合。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。返回扩展屏幕的群组id，其中id为整数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。返回扩展屏幕的群组id，其中id为整数。 |
 
 **错误码：**
 
@@ -35,7 +33,7 @@ function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<long>):
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,8 +71,6 @@ function makeExpand(options:Array<ExpandOption>): Promise<long>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 20
 
 <!--Device-screen-function makeExpand(options:Array<ExpandOption>): Promise<long>--><!--Device-screen-function makeExpand(options:Array<ExpandOption>): Promise<long>-End-->
@@ -103,7 +99,7 @@ function makeExpand(options:Array<ExpandOption>): Promise<long>
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

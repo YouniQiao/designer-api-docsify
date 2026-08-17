@@ -4,10 +4,6 @@ Wi-Fi detail state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-enum WifiDetailState--><!--Device-wifiManager-enum WifiDetailState-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -23,10 +19,6 @@ UNKNOWN = -1
 state is unknown
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiDetailState-UNKNOWN = -1--><!--Device-WifiDetailState-UNKNOWN = -1-End-->
 
@@ -44,10 +36,6 @@ wifi is closed
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiDetailState-INACTIVE = 0--><!--Device-WifiDetailState-INACTIVE = 0-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -63,10 +51,6 @@ ACTIVATED = 1
 wifi is opened
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiDetailState-ACTIVATED = 1--><!--Device-WifiDetailState-ACTIVATED = 1-End-->
 
@@ -84,10 +68,6 @@ wifi is opening
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiDetailState-ACTIVATING = 2--><!--Device-WifiDetailState-ACTIVATING = 2-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -103,10 +83,6 @@ DEACTIVATING = 3
 wifi is closing
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiDetailState-DEACTIVATING = 3--><!--Device-WifiDetailState-DEACTIVATING = 3-End-->
 
@@ -124,10 +100,6 @@ wifi sta is entering semi active
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiDetailState-SEMI_ACTIVATING = 4--><!--Device-WifiDetailState-SEMI_ACTIVATING = 4-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -143,10 +115,6 @@ SEMI_ACTIVE = 5
 wifi sta is semi active
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiDetailState-SEMI_ACTIVE = 5--><!--Device-WifiDetailState-SEMI_ACTIVE = 5-End-->
 

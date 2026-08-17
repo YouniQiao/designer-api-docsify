@@ -17,10 +17,6 @@ Creates the context for a plugin based on a given context, plugin bundle name, p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
@@ -53,7 +49,7 @@ Creates the context for a plugin based on a given context, plugin bundle name, p
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, common, Want } from '@kit.AbilityKit';

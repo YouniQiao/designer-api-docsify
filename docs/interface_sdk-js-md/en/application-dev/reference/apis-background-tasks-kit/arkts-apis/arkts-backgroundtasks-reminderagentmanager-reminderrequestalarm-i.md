@@ -2,13 +2,9 @@
 
 ReminderRequestAlarm extends ReminderRequest Defines a reminder for an alarm.
 
-**Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest)
+**Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#reminderrequest)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-interface ReminderRequestAlarm--><!--Device-reminderAgentManager-interface ReminderRequestAlarm-End-->
 
@@ -32,10 +28,6 @@ Days of a week when the reminder repeats. The value ranges from 1 to 7, correspo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequestAlarm-daysOfWeek?: Array<int>--><!--Device-ReminderRequestAlarm-daysOfWeek?: Array<int>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -52,10 +44,6 @@ Hour portion of the reminder time. The value range is [0, 23].
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReminderRequestAlarm-hour: int--><!--Device-ReminderRequestAlarm-hour: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -71,10 +59,6 @@ Minute portion of the reminder time. The value range is [0, 59].
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequestAlarm-minute: int--><!--Device-ReminderRequestAlarm-minute: int-End-->
 

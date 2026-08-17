@@ -4,10 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface FontConfigs--><!--Device-unnamed-declare interface FontConfigs-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +14,11 @@
 fontWeightConfigs?: FontWeightConfigs
 ```
 
-字体粗细配置。默认值继承[FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md#FontWeightConfigs)。
+字体粗细配置。默认值继承[FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md#fontweightconfigs)。
 
 **类型：** [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

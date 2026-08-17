@@ -16,10 +16,6 @@ Obtains the storage space of an application, in bytes. This API uses an asynchro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats>, index?: int): void--><!--Device-storageStatistics-function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats>, index?: int): void-End-->
@@ -34,7 +30,7 @@ Obtains the storage space of an application, in bytes. This API uses an asynchro
 | --- | --- | --- | --- |
 | packageName | string | Yes | Package name of the application. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | Yes | Callback used to return the application storage space obtained. |
-| index | int | No | Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md#BundleResourceInfo-(System-API)) The index can be obtained by [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getBundleResourceInfo-(System-API))<br>**Since:** 12 |
+| index | int | No | Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md#bundleresourceinfo-system-api) The index can be obtained by [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo-system-api)<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -47,7 +43,7 @@ Obtains the storage space of an application, in bytes. This API uses an asynchro
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';
@@ -88,10 +84,6 @@ Obtains the storage space of an application, in bytes. This API uses a promise t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getBundleStats(packageName: string, index?: int): Promise<BundleStats>--><!--Device-storageStatistics-function getBundleStats(packageName: string, index?: int): Promise<BundleStats>-End-->
@@ -105,7 +97,7 @@ Obtains the storage space of an application, in bytes. This API uses a promise t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | packageName | string | Yes | Package name of the application. |
-| index | int | No | Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md#BundleResourceInfo-(System-API)) The index can be obtained by [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getBundleResourceInfo-(System-API))<br>**Since:** 12 |
+| index | int | No | Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md#bundleresourceinfo-system-api) The index can be obtained by [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo-system-api)<br>**Since:** 12 |
 
 **Return value:**
 
@@ -124,7 +116,7 @@ Obtains the storage space of an application, in bytes. This API uses a promise t
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';

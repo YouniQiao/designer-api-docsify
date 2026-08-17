@@ -16,10 +16,6 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-statistics-function getCellularRxBytes(callback: AsyncCallback<long>): void--><!--Device-statistics-function getCellularRxBytes(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -40,7 +36,7 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 | [2103012](../errorcode-net-statistics.md#2103012-failed-to-obtain-the-nic-name) | Failed to obtain the NIC name. |
 | [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,10 +59,6 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-statistics-function getCellularRxBytes(): Promise<long>--><!--Device-statistics-function getCellularRxBytes(): Promise<long>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -87,7 +79,7 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 | [2103012](../errorcode-net-statistics.md#2103012-failed-to-obtain-the-nic-name) | Failed to obtain the NIC name. |
 | [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { statistics } from '@kit.NetworkKit';

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-emitter-export interface GenericEventData--><!--Device-emitter-export interface GenericEventData-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -23,10 +19,6 @@ data?: T | ESValue
 **类型：** T \| ESValue
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-GenericEventData-data?: T | ESValue--><!--Device-GenericEventData-data?: T | ESValue-End-->
 

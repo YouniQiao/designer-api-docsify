@@ -4,10 +4,6 @@ Execute result of a tool execution.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-cliManager-interface ExecResult--><!--Device-cliManager-interface ExecResult-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -32,10 +28,6 @@ Indicates the error output of the tool.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExecResult-errorText?: string--><!--Device-ExecResult-errorText?: string-End-->
@@ -55,10 +47,6 @@ Indicates the execution duration in milliseconds.
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Indicates the exit code, 0 means success.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExecResult-exitCode?: int--><!--Device-ExecResult-exitCode?: int-End-->
@@ -103,10 +87,6 @@ Indicates the standard output of the tool.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Indicates the termination signal (if the tool process was terminated by a signal
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExecResult-signalNumber?: int--><!--Device-ExecResult-signalNumber?: int-End-->
@@ -151,10 +127,6 @@ Indicates whether it timed out. true means timeout occurred, false means no time
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

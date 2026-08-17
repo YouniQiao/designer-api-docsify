@@ -6,10 +6,6 @@ The context of an ability or an application. It allows access to application-spe
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Context--><!--Device-unnamed-export interface Context-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -23,10 +19,6 @@ getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void
 Checks the detailed information of this ability.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -50,10 +42,6 @@ Checks the detailed information of this ability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getAbilityInfo(): Promise<AbilityInfo>--><!--Device-Context-getAbilityInfo(): Promise<AbilityInfo>-End-->
@@ -75,10 +63,6 @@ getAppType(callback: AsyncCallback<string>): void
 Obtains the application type.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -102,10 +86,6 @@ Obtains the application type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getAppType(): Promise<string>--><!--Device-Context-getAppType(): Promise<string>-End-->
@@ -127,10 +107,6 @@ getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void
 Obtains the application version information.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -154,10 +130,6 @@ Obtains the application version information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getAppVersionInfo(): Promise<AppVersionInfo>--><!--Device-Context-getAppVersionInfo(): Promise<AppVersionInfo>-End-->
@@ -179,10 +151,6 @@ getApplicationContext(): Context
 Obtains the context of this application.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -206,10 +174,6 @@ Obtains information about the current application.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void--><!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void-End-->
@@ -231,10 +195,6 @@ getApplicationInfo(): Promise<ApplicationInfo>
 Obtains information about the current application.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -258,10 +218,6 @@ Obtains the bundle name of the current ability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getBundleName(callback: AsyncCallback<string>): void--><!--Device-Context-getBundleName(callback: AsyncCallback<string>): void-End-->
@@ -283,10 +239,6 @@ getBundleName(): Promise<string>
 Obtains the bundle name of the current ability.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -310,10 +262,6 @@ Obtains the cache directory of this application on the internal storage.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void--><!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void-End-->
@@ -335,10 +283,6 @@ getCacheDir(): Promise<string>
 Obtains the cache directory of this application on the internal storage.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -362,10 +306,6 @@ Obtains the bundle name of the ability that called the current ability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void--><!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void-End-->
@@ -387,10 +327,6 @@ getCallingBundle(): Promise<string>
 Obtains the bundle name of the ability that called the current ability.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -414,10 +350,6 @@ Obtains the current display orientation of this ability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void--><!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void-End-->
@@ -439,10 +371,6 @@ getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 Obtains the current display orientation of this ability.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -466,10 +394,6 @@ Obtains the ohos.bundle.ElementName object of the current ability.This method is
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getElementName(callback: AsyncCallback<ElementName>): void--><!--Device-Context-getElementName(callback: AsyncCallback<ElementName>): void-End-->
@@ -492,10 +416,6 @@ Obtains the ohos.bundle.ElementName object of the current ability.This method is
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getElementName(): Promise<ElementName>--><!--Device-Context-getElementName(): Promise<ElementName>-End-->
@@ -517,8 +437,6 @@ getExternalCacheDir(callback: AsyncCallback<string>): void
 Obtains the absolute path to the application-specific cache directory
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 7
 
@@ -544,8 +462,6 @@ Obtains the absolute path to the application-specific cache directory
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
@@ -570,10 +486,6 @@ Obtains the file directory of this application on the internal storage.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void--><!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void-End-->
@@ -595,10 +507,6 @@ getFilesDir(): Promise<string>
 Obtains the file directory of this application on the internal storage.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -622,10 +530,6 @@ Obtains the ModuleInfo object for this application.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void--><!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void-End-->
@@ -647,10 +551,6 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 Obtains the ModuleInfo object for this application.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -674,10 +574,6 @@ Obtains the distributed file path for storing ability or application data files.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getOrCreateDistributedDir(): Promise<string>--><!--Device-Context-getOrCreateDistributedDir(): Promise<string>-End-->
@@ -699,10 +595,6 @@ getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 Obtains the distributed file path for storing ability or application data files. If the distributed file path does not exist, the system will create a path and return the created path.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -726,10 +618,6 @@ Get the local root dir of an app. If it is the first call, the dir will be creat
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getOrCreateLocalDir(): Promise<string>--><!--Device-Context-getOrCreateLocalDir(): Promise<string>-End-->
@@ -751,10 +639,6 @@ getOrCreateLocalDir(callback: AsyncCallback<string>): void
 Get the local root dir of an app. If it is the first call, the dir will be created. If in the context of the ability, return the root dir of the ability; if in the context of the application, return the root dir of the application.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -778,10 +662,6 @@ Obtains information about the current process, including the process ID and name
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void--><!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void-End-->
@@ -803,10 +683,6 @@ getProcessInfo(): Promise<ProcessInfo>
 Obtains information about the current process, including the process ID and name.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -830,10 +706,6 @@ Obtains the name of the current process.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-getProcessName(callback: AsyncCallback<string>): void--><!--Device-Context-getProcessName(callback: AsyncCallback<string>): void-End-->
@@ -855,10 +727,6 @@ getProcessName(): Promise<string>
 Obtains the name of the current process.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -882,10 +750,6 @@ Checks whether the configuration of this ability is changing.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void--><!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void-End-->
@@ -907,10 +771,6 @@ isUpdatingConfigurations(): Promise<boolean>
 Checks whether the configuration of this ability is changing.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -934,10 +794,6 @@ Inform the system of the time required for drawing this Page ability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void--><!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void-End-->
@@ -959,10 +815,6 @@ printDrawnCompleted(): Promise<void>
 Inform the system of the time required for drawing this Page ability.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -990,10 +842,6 @@ Requests certain permissions from the system.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-requestPermissionsFromUser(    permissions: Array<string>,    requestCode: number,    resultCallback: AsyncCallback<PermissionRequestResult>  ): void--><!--Device-Context-requestPermissionsFromUser(    permissions: Array<string>,    requestCode: number,    resultCallback: AsyncCallback<PermissionRequestResult>  ): void-End-->
@@ -1017,10 +865,6 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 Requests certain permissions from the system.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1051,10 +895,6 @@ Sets the display orientation of the current ability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void--><!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void-End-->
@@ -1077,10 +917,6 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>
 Sets the display orientation of the current ability.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1110,11 +946,9 @@ Sets whether to show this ability on top of the lock screen whenever the lock sc
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setShowOnLockScreen)
+**Substitutes:** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1139,11 +973,9 @@ Sets whether to show this ability on top of the lock screen whenever the lock sc
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setShowOnLockScreen)
+**Substitutes:** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1173,8 +1005,6 @@ Sets whether to wake up the screen when this ability is restored.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 12
 
 **Substitutes:** setWakeUpScreen
@@ -1201,8 +1031,6 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 Sets whether to wake up the screen when this ability is restored.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -1236,10 +1064,6 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-verifyPermission(permission: string, options?: PermissionOptions): Promise<number>--><!--Device-Context-verifyPermission(permission: string, options?: PermissionOptions): Promise<number>-End-->
@@ -1269,10 +1093,6 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Context-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void--><!--Device-Context-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void-End-->
@@ -1296,10 +1116,6 @@ verifyPermission(permission: string, callback: AsyncCallback<number>): void
 Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -1,16 +1,14 @@
 # PrivateAlbum (System API)
 
-Provides APIs for managing the system albums. This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-sys.md#Album-(System-API)) instead.
+Provides APIs for managing the system albums. This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-sys.md#album-system-api) instead.
 
-**Inheritance/Implementation:** PrivateAlbum extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md#AbsAlbum-(System-API))
+**Inheritance/Implementation:** PrivateAlbum extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md#absalbum-system-api)
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#Album)
+**Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#album)
 
 <!--Device-userFileManager-interface PrivateAlbum--><!--Device-userFileManager-interface PrivateAlbum-End-->
 
@@ -30,11 +28,9 @@ import { userFileManager } from 'userFileManager';
 delete(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a file from the system album. Only the files in the trash can be deleted. This API uses an asynchronous callback to return the result. This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletePhotoAssets) instead.
+Deletes a file from the system album. Only the files in the trash can be deleted. This API uses an asynchronous callback to return the result. This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletephotoassets) instead.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -55,7 +51,7 @@ Deletes a file from the system album. Only the files in the trash can be deleted
 | uri | string | Yes | File URI. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -90,11 +86,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 delete(uri: string): Promise<void>
 ```
 
-Deletes a file from the system album. Only the files in the trash can be deleted. This API uses a promise to return the result. This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletePhotoAssets) instead.
+Deletes a file from the system album. Only the files in the trash can be deleted. This API uses a promise to return the result. This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletephotoassets) instead.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -120,7 +114,7 @@ Deletes a file from the system album. Only the files in the trash can be deleted
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -154,11 +148,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 recover(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Recovers a file in the system album. Only the files in the trash can be recovered. This API uses an asynchronous callback to return the result. This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverPhotoAssets) instead.
+Recovers a file in the system album. Only the files in the trash can be recovered. This API uses an asynchronous callback to return the result. This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverphotoassets) instead.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -179,7 +171,7 @@ Recovers a file in the system album. Only the files in the trash can be recovere
 | uri | string | Yes | File URI. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -222,11 +214,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 recover(uri: string): Promise<void>
 ```
 
-Recovers a file in the system album. Only the files in the trash can be recovered. This API uses a promise to return the result. This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverPhotoAssets) instead.
+Recovers a file in the system album. Only the files in the trash can be recovered. This API uses a promise to return the result. This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverphotoassets) instead.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -252,7 +242,7 @@ Recovers a file in the system album. Only the files in the trash can be recovere
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 

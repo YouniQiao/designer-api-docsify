@@ -4,10 +4,6 @@ Describes the notification capsule, which is used to display the capsule form in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationCapsule--><!--Device-unnamed-export interface NotificationCapsule-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -23,10 +19,6 @@ Capsule background color. Colors in rgb, rgba, or argb format are supported. Exa
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationCapsule-backgroundColor?: string--><!--Device-NotificationCapsule-backgroundColor?: string-End-->
 
@@ -44,10 +36,6 @@ Capsule icon. The total bytes of the icon pixel does not exceed 192 KB (the tota
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationCapsule-icon?: image.PixelMap--><!--Device-NotificationCapsule-icon?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -63,10 +51,6 @@ Capsule title. The size does not exceed 202 bytes, and the excess part will be t
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationCapsule-title?: string--><!--Device-NotificationCapsule-title?: string-End-->
 

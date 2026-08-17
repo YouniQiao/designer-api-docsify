@@ -16,10 +16,6 @@ Exports system events in batches and writes them as a file to the fixed director
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_DFX_SYSEVENT
 
 <!--Device-hiSysEvent-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long--><!--Device-hiSysEvent-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long-End-->
@@ -52,7 +48,7 @@ Exports system events in batches and writes them as a file to the fixed director
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
 | [11200304](../errorcode-hisysevent-sys.md#11200304-query-frequency-exceeding-the-limit) | The query frequency exceeds the limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo } from '@kit.CoreFileKit';

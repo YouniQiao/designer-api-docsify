@@ -16,10 +16,6 @@ Unregisters the callback function used to notify whether the trace capture is en
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function unregisterTraceListener(index: int): int--><!--Device-hiTraceMeter-function unregisterTraceListener(index: int): int-End-->
@@ -30,7 +26,7 @@ Unregisters the callback function used to notify whether the trace capture is en
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the registered callback function, that is, the return value when [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registerTraceListener) is successfully called. |
+| index | int | Yes | Index of the registered callback function, that is, the return value when [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registertracelistener) is successfully called. |
 
 **Return value:**
 
@@ -38,7 +34,7 @@ Unregisters the callback function used to notify whether the trace capture is en
 | --- | --- |
 | int | Callback deregistration status. **0**: Deregistration succeeded. **-1**: The callback corresponding to the index is not registered. **-2**: Invalid index. The index value is not within the range of 0 to 9. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Deregister the callback used to notify whether the application trace capture is enabled. index is the callback index returned by hiTraceMeter.registerTraceListener.

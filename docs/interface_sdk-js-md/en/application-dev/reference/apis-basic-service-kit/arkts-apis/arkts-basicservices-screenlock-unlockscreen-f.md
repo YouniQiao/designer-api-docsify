@@ -16,8 +16,6 @@ Unlock the screen.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-screenLock-function unlockScreen(callback: AsyncCallback<void>): void--><!--Device-screenLock-function unlockScreen(callback: AsyncCallback<void>): void-End-->
@@ -30,7 +28,7 @@ Unlock the screen.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of unlockScreen. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -55,8 +53,6 @@ Unlock the screen.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-screenLock-function unlockScreen(): Promise<void>--><!--Device-screenLock-function unlockScreen(): Promise<void>-End-->
@@ -69,7 +65,7 @@ Unlock the screen.
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

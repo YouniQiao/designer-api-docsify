@@ -10,10 +10,6 @@ function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 <!--Device-bundleManager-function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boolean): Promise<void>-End-->
@@ -46,7 +42,7 @@ function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boo
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -102,10 +98,6 @@ function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boo
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -140,7 +132,7 @@ function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boo
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Non-system APP calling system API. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -178,10 +170,6 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback:
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 <!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
@@ -196,7 +184,7 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback:
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundleName。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，当设置应用禁用或使能状态成功时，err为 undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当设置应用禁用或使能状态成功时，err为 undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -207,7 +195,7 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback:
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -241,10 +229,6 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 <!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<void>-End-->
@@ -275,7 +259,7 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

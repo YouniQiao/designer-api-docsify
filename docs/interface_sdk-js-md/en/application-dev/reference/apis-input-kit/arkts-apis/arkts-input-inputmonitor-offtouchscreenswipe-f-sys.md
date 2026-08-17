@@ -16,10 +16,6 @@ Disables listening touchscreen swipe gesture events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function offTouchscreenSwipe(fingers: int, receiver?: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function offTouchscreenSwipe(fingers: int, receiver?: Callback<TouchGestureEvent>): void-End-->

@@ -16,11 +16,9 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getDeviceAltitude)(seaPressure: double, currentPressure: double, callback: AsyncCallback&lt;double&gt;)
+**Substitutes:** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude)(seaPressure: double, currentPressure: double, callback: AsyncCallback&lt;double&gt;)
 
 <!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void-End-->
 
@@ -34,7 +32,7 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 | currentPressure | number | Yes | Atmospheric pressure at the altitude where the device is located, in hPa. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the altitude, in meters. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -60,11 +58,9 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getDeviceAltitude)(seaPressure: double, currentPressure: double)
+**Substitutes:** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude)(seaPressure: double, currentPressure: double)
 
 <!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>-End-->
 
@@ -83,7 +79,7 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the altitude, in meters. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

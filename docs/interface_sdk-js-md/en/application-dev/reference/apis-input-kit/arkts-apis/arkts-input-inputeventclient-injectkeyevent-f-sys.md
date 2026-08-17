@@ -16,10 +16,6 @@ Injects key events (for both single keys and combination keys).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 12+: ohos.permission.INJECT_INPUT_EVENT
 
@@ -43,7 +39,7 @@ Injects key events (for both single keys and combination keys).
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';

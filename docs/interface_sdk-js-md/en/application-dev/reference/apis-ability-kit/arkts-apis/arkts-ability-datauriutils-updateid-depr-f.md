@@ -10,11 +10,9 @@ Updates the ID in a given URI.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [updateId](arkts-ability-datauriutils-updateid-f.md#updateId)
+**Substitutes:** [updateId](arkts-ability-datauriutils-updateid-f.md#updateid)
 
 <!--Device-dataUriUtils-function updateId(uri: string, id: number): string--><!--Device-dataUriUtils-function updateId(uri: string, id: number): string-End-->
 
@@ -33,7 +31,7 @@ Updates the ID in a given URI.
 | --- | --- |
 | string | URI object with the new ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import dataUriUtils from '@ohos.ability.dataUriUtils';

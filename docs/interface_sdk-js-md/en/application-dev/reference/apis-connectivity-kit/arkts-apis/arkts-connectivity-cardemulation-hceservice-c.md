@@ -4,10 +4,6 @@ A class for NFC host application. &lt;p&gt;The NFC host application use this cla
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cardEmulation-export class HceService--><!--Device-cardEmulation-export class HceService-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
@@ -27,10 +23,6 @@ offHceCmd(callback?: AsyncCallback<int[]>): void
 Unsubscribe the event to receive the APDU data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -63,10 +55,6 @@ Unsubscribe the event to receive the APDU data.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -89,7 +77,7 @@ Unsubscribe the event to receive the APDU data.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Applicable to devices other than lite wearables
@@ -135,10 +123,6 @@ register HCE event to receive the APDU data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Model restriction:** This API can be used only in the stage model.
@@ -171,10 +155,6 @@ register HCE event to receive the APDU data.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -198,7 +178,7 @@ register HCE event to receive the APDU data.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Applicable to devices other than lite wearables
@@ -283,8 +263,6 @@ Sends a response APDU to the remote device. &lt;p&gt;This method is used by a ho
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [transmit](#transmit)
@@ -312,10 +290,6 @@ start(elementName: ElementName, aidList: string[]): void
 Starts the HCE, register more aids and allows this application to be preferred while in foreground.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -351,8 +325,6 @@ start HCE
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [start](#start)
@@ -387,10 +359,6 @@ Stops the HCE, and unset the preferred service while in foreground.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -424,8 +392,6 @@ stop HCE
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [stop](#stop)
@@ -444,7 +410,7 @@ stop HCE
 | --- | --- |
 | boolean | Returns true if HCE is disabled or has been disabled; returns false otherwise. |
 
-## Examples
+**Examples**
 
 For details, see the example of on.
 
@@ -457,10 +423,6 @@ transmit(response: int[]): Promise<void>
 Sends a response APDU to the remote device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -491,7 +453,7 @@ Sends a response APDU to the remote device.
 | [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Applicable to devices other than lite wearables
@@ -535,10 +497,6 @@ Sends a response APDU to the remote device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -563,7 +521,7 @@ Sends a response APDU to the remote device.
 | [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Applicable to devices other than lite wearables

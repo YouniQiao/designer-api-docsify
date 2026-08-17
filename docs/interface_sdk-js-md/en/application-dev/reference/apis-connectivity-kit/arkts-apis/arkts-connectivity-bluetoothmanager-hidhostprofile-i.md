@@ -2,15 +2,13 @@
 
 Manager hid host profile.
 
-**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#BaseProfile)
+**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#baseprofile)
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [HidHostProfile](arkts-connectivity-hid-hidhostprofile-i-sys.md#HidHostProfile)
+**Substitutes:** [HidHostProfile](arkts-connectivity-hid-hidhostprofile-i-sys.md#hidhostprofile)
 
 <!--Device-bluetoothManager-interface HidHostProfile--><!--Device-bluetoothManager-interface HidHostProfile-End-->
 
@@ -31,8 +29,6 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 Unsubscribe the event reported when the profile connection state changes. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -68,8 +64,6 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 Subscribe the event reported when the profile connection state changes. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

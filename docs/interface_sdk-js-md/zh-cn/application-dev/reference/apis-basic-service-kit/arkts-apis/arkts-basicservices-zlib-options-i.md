@@ -4,10 +4,6 @@ Options用于指定在压缩或解压Zip文件时的选项。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-zlib-interface Options--><!--Device-zlib-interface Options-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -23,10 +19,6 @@ level?: CompressLevel
 **类型：** [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ memLevel?: MemLevel
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Options-memLevel?: MemLevel--><!--Device-Options-memLevel?: MemLevel-End-->
@@ -67,10 +55,6 @@ parallel?: ParallelStrategy
 **类型：** [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -90,10 +74,6 @@ pathSeparatorStrategy?: PathSeparatorStrategy
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Options-pathSeparatorStrategy?: PathSeparatorStrategy--><!--Device-Options-pathSeparatorStrategy?: PathSeparatorStrategy-End-->
@@ -111,10 +91,6 @@ strategy?: CompressStrategy
 **类型：** [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

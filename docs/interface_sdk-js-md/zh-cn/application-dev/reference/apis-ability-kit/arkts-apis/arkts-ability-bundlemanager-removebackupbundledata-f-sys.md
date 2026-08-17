@@ -10,10 +10,6 @@ function removeBackupBundleData(bundleName: string, userId: int, appIndex: int):
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 
 <!--Device-bundleManager-function removeBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>--><!--Device-bundleManager-function removeBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>-End-->
@@ -27,7 +23,7 @@ function removeBackupBundleData(bundleName: string, userId: int, appIndex: int):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要删除备份的应用包名。 |
-| userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取，取值范围：大于等于0。 |
+| userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，取值范围：大于等于0。 |
 | appIndex | int | 是 | 表示应用索引。取值范围0~5，取值为0表示主应用，取值1~5表示分身应用的索引。 |
 
 **返回值：**
@@ -46,7 +42,7 @@ function removeBackupBundleData(bundleName: string, userId: int, appIndex: int):
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

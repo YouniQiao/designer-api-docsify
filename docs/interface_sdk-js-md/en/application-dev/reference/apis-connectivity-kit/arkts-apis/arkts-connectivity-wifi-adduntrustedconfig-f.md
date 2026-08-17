@@ -16,11 +16,9 @@ Adds a specified untrusted hotspot configuration. &lt;p&gt;This method adds one 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addCandidateConfig)
+**Substitutes:** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
@@ -40,7 +38,7 @@ Adds a specified untrusted hotspot configuration. &lt;p&gt;This method adds one 
 | --- | --- |
 | Promise&lt;boolean&gt; | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';
@@ -84,11 +82,9 @@ Adds a specified untrusted hotspot configuration. &lt;p&gt;This method adds one 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addCandidateConfig)
+**Substitutes:** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
@@ -103,7 +99,7 @@ Adds a specified untrusted hotspot configuration. &lt;p&gt;This method adds one 
 | config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

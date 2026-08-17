@@ -1,12 +1,8 @@
 # TypeCode
 
-Since API version 12, [writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writeArrayBuffer) and [readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readArrayBuffer) are added to pass ArrayBuffer data. The specific TypedArray type is determined by the **TypeCode** defined as follows:
+Since API version 12, [writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writearraybuffer) and [readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readarraybuffer) are added to pass ArrayBuffer data. The specific TypedArray type is determined by the **TypeCode** defined as follows:
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-rpc-enum TypeCode--><!--Device-rpc-enum TypeCode-End-->
 
@@ -22,10 +18,6 @@ The TypedArray type is **INT8_ARRAY**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TypeCode-INT8_ARRAY = 0--><!--Device-TypeCode-INT8_ARRAY = 0-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -39,10 +31,6 @@ UINT8_ARRAY = 1
 The TypedArray type is **UINT8_ARRAY**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TypeCode-UINT8_ARRAY = 1--><!--Device-TypeCode-UINT8_ARRAY = 1-End-->
 
@@ -58,10 +46,6 @@ The TypedArray type is **INT16_ARRAY**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TypeCode-INT16_ARRAY = 2--><!--Device-TypeCode-INT16_ARRAY = 2-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -75,10 +59,6 @@ UINT16_ARRAY = 3
 The TypedArray type is **UINT16_ARRAY**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TypeCode-UINT16_ARRAY = 3--><!--Device-TypeCode-UINT16_ARRAY = 3-End-->
 
@@ -94,10 +74,6 @@ The TypedArray type is **INT32_ARRAY**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TypeCode-INT32_ARRAY = 4--><!--Device-TypeCode-INT32_ARRAY = 4-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -111,10 +87,6 @@ UINT32_ARRAY = 5
 The TypedArray type is **UINT32_ARRAY**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TypeCode-UINT32_ARRAY = 5--><!--Device-TypeCode-UINT32_ARRAY = 5-End-->
 
@@ -130,10 +102,6 @@ The TypedArray type is **FLOAT32_ARRAY**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TypeCode-FLOAT32_ARRAY = 6--><!--Device-TypeCode-FLOAT32_ARRAY = 6-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -147,10 +115,6 @@ FLOAT64_ARRAY = 7
 The TypedArray type is **FLOAT64_ARRAY**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TypeCode-FLOAT64_ARRAY = 7--><!--Device-TypeCode-FLOAT64_ARRAY = 7-End-->
 
@@ -166,10 +130,6 @@ The TypedArray type is **BIGINT64_ARRAY**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TypeCode-BIGINT64_ARRAY = 8--><!--Device-TypeCode-BIGINT64_ARRAY = 8-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -183,10 +143,6 @@ BIGUINT64_ARRAY = 9
 The TypedArray type is **BIGUINT64_ARRAY**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TypeCode-BIGUINT64_ARRAY = 9--><!--Device-TypeCode-BIGUINT64_ARRAY = 9-End-->
 

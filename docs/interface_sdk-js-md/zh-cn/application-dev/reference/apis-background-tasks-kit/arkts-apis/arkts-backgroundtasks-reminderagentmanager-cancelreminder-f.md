@@ -10,10 +10,6 @@ function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-reminderAgentManager-function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -22,8 +18,8 @@ function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reminderId | int | 是 | 需要取消的代理提醒的id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) 时作为返回值返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 当取消代理提醒成功，err为undefined；否则为错误对象。 |
+| reminderId | int | 是 | 需要取消的代理提醒的id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) 时作为返回值返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 当取消代理提醒成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -33,7 +29,7 @@ function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void
 | [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
 | [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) | The bundle name does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -80,10 +76,6 @@ function cancelReminder(reminderId: int): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-reminderAgentManager-function cancelReminder(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function cancelReminder(reminderId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -92,7 +84,7 @@ function cancelReminder(reminderId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reminderId | int | 是 | 需要取消的代理提醒的id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) 时作为返回值返回。 |
+| reminderId | int | 是 | 需要取消的代理提醒的id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) 时作为返回值返回。 |
 
 **返回值：**
 
@@ -108,7 +100,7 @@ function cancelReminder(reminderId: int): Promise<void>
 | [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
 | [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) | The bundle name does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

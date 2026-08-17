@@ -16,10 +16,6 @@ Add a system VPN network configuration.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 <!--Device-vpn-function addSysVpnConfig(config: SysVpnConfig): Promise<void>--><!--Device-vpn-function addSysVpnConfig(config: SysVpnConfig): Promise<void>-End-->
@@ -32,7 +28,7 @@ Add a system VPN network configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md) | Yes | Indicates the [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#SysVpnConfig-(System-API)) configuration of the VPN network. |
+| config | [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md) | Yes | Indicates the [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#sysvpnconfig-system-api) configuration of the VPN network. |
 
 **Return value:**
 

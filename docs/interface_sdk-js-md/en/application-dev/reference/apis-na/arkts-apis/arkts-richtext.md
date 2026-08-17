@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [RichText](arkts-na-richtext-richtext-f.md#RichText) | Defines RichText Component. |
+| [RichText](arkts-na-richtext-richtext-f.md#richtext) | Defines RichText Component. |
 
 ### Interfaces
 

@@ -6,9 +6,7 @@ Provides attribute for Line.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface LineAttribute--><!--Device-unnamed-export declare interface LineAttribute-End-->
 
@@ -22,9 +20,7 @@ attributeModifier(modifier: AttributeModifier<LineAttribute> | AttributeModifier
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LineAttribute-attributeModifier(modifier: AttributeModifier<LineAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LineAttribute-attributeModifier(modifier: AttributeModifier<LineAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,9 +44,7 @@ endPoint(value: ShapePoint | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LineAttribute-endPoint(value: ShapePoint | undefined): this--><!--Device-LineAttribute-endPoint(value: ShapePoint | undefined): this-End-->
 
@@ -74,9 +68,7 @@ setLineOptions(options?: LineOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LineAttribute-setLineOptions(options?: LineOptions): this--><!--Device-LineAttribute-setLineOptions(options?: LineOptions): this-End-->
 
@@ -100,9 +92,7 @@ startPoint(value: ShapePoint | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LineAttribute-startPoint(value: ShapePoint | undefined): this--><!--Device-LineAttribute-startPoint(value: ShapePoint | undefined): this-End-->
 
@@ -128,9 +118,7 @@ Call attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

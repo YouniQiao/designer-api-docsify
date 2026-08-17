@@ -16,10 +16,6 @@ Converts a KV pair that can be passed across threads into the data that cannot b
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendableRelationalStore-function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket--><!--Device-sendableRelationalStore-function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -43,7 +39,7 @@ Converts a KV pair that can be passed across threads into the data that cannot b
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const asset1: sendableRelationalStore.NonSendableAsset = {

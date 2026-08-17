@@ -4,10 +4,6 @@ The enum of reasons for destroying partner agent extension ability.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-partnerAgent-export enum PartnerAgentExtensionAbilityDestroyReason--><!--Device-partnerAgent-export enum PartnerAgentExtensionAbilityDestroyReason-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -21,10 +17,6 @@ UNKNOWN_REASON = 0
 Unknown reason.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ The user actively disables this ability feature.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartnerAgentExtensionAbilityDestroyReason-USER_CLOSED_ABILITY = 1--><!--Device-PartnerAgentExtensionAbilityDestroyReason-USER_CLOSED_ABILITY = 1-End-->
@@ -61,10 +49,6 @@ DEVICE_UNPAIRED = 2
 The device is unpaired.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ The device is lost.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartnerAgentExtensionAbilityDestroyReason-DEVICE_LOST = 3--><!--Device-PartnerAgentExtensionAbilityDestroyReason-DEVICE_LOST = 3-End-->
@@ -101,10 +81,6 @@ BLUETOOTH_DISABLED = 4
 Bluetooth is disabled.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

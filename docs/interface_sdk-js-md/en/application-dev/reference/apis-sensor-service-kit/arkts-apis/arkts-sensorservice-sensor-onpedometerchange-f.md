@@ -16,10 +16,6 @@ Subscribe to pedometer sensor data, {@code SensorId.PEDOMETER}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 <!--Device-sensor-function onPedometerChange(callback: Callback<PedometerResponse>, options?: Options): void--><!--Device-sensor-function onPedometerChange(callback: Callback<PedometerResponse>, options?: Options): void-End-->

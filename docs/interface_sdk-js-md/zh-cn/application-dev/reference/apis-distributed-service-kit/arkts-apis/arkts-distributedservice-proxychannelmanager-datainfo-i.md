@@ -1,12 +1,8 @@
 # DataInfo
 
-存放接收的数据信息，包括通道Id和数据。
+存放接收的数据信息，包括通道ID和数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-proxyChannelManager-interface DataInfo--><!--Device-proxyChannelManager-interface DataInfo-End-->
 
@@ -18,15 +14,11 @@
 channelId: int
 ```
 
-代理通道的channelId。
+代理通道的channelId，取值范围为1~2147483647。
 
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,15 +32,11 @@ channelId: int
 data: ArrayBuffer
 ```
 
-接收到的字节数据。
+接收到的字节数据，长度最大为4096字节。
 
 **类型：** ArrayBuffer
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

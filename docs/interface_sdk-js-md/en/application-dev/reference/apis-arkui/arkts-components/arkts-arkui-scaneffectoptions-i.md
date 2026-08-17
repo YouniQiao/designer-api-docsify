@@ -4,10 +4,6 @@ Defines the scan effect options.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ScanEffectOptions--><!--Device-unnamed-declare interface ScanEffectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,17 +14,13 @@ Defines the scan effect options.
 enableScanEffect?: boolean
 ```
 
-Whether to enable the scan effect. Only the progress indicator of the [linear, ring, and capsule](arkts-arkui-progresstype-e.md#ProgressType) type is supported. **true**: The scan effect is enabled. **false**: The scan effect is disabled. Default value: **false**
+Whether to enable the scan effect. Only the progress indicator of the [linear, ring, and capsule](arkts-arkui-progresstype-e.md#progresstype) type is supported. **true**: The scan effect is enabled. **false**: The scan effect is disabled. Default value: **false**
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ How the color property is updated. > **NOTE：**> > To standardize anonymous obj
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ParticleColorUpdaterOptions--><!--Device-unnamed-interface ParticleColorUpdaterOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +14,11 @@ How the color property is updated. > **NOTE：**> > To standardize anonymous obj
 config: ParticleColorPropertyUpdaterConfigs[UPDATER]
 ```
 
-Color updater configuration. The available options of **type** are as follows: 1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md#ParticleColorPropertyUpdaterConfigs)[ParticleUpdater.NONE]. 2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md#ParticleColorPropertyUpdaterConfigs)[ParticleUpdater.RANDOM]. 3. **ParticleUpdater.CURVE**: The property changes with the animation curve. In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md#ParticleColorPropertyUpdaterConfigs)[ParticleUpdater.CURVE]. **NOTE：**When **type** is set to **ParticleUpdater.RANDOM** or **ParticleUpdater.CURVE**, the color configuration in **updater** has higher priority than that in **range**. During the animation period specified by updater, the color changes based on the color configuration in updater. Before the animation period specified by updater, the color changes based on the color configuration in range.
+Color updater configuration. The available options of **type** are as follows: 1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md#particlecolorpropertyupdaterconfigs)[ParticleUpdater.NONE]. 2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md#particlecolorpropertyupdaterconfigs)[ParticleUpdater.RANDOM]. 3. **ParticleUpdater.CURVE**: The property changes with the animation curve. In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md#particlecolorpropertyupdaterconfigs)[ParticleUpdater.CURVE]. **NOTE：**When **type** is set to **ParticleUpdater.RANDOM** or **ParticleUpdater.CURVE**, the color configuration in **updater** has higher priority than that in **range**. During the animation period specified by updater, the color changes based on the color configuration in updater. Before the animation period specified by updater, the color changes based on the color configuration in range.
 
 **Type:** ParticleColorPropertyUpdaterConfigs[UPDATER]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Type of property updating. The default value of **type** is **ParticleUpdater.NO
 **Type:** UPDATER
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

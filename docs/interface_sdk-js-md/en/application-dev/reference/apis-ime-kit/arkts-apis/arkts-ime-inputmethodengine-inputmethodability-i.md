@@ -1,12 +1,8 @@
 # InputMethodAbility
 
-In the following API examples, you must first use [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-interface InputMethodAbility--><!--Device-inputMethodEngine-interface InputMethodAbility-End-->
 
@@ -24,13 +20,9 @@ import { inputMethodEngine } from 'inputMethodEngine';
 createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility) class. This API uses an asynchronous callback to return the result. > **NOTE：**> > Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel and one > [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel can be created for a single input method. > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such > as > [window.createWindow](../../apis-arkui/arkts-apis/arkts-arkui-window-createwindow-f.md#createWindow) > , bindContextMenu, > and CustomDialog. You are advised to adopt > alternative solutions to sub-windows, such as using a dialog box or > bindMenu, or set > **showInSubwindow** to **false**.
+Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#inputmethodextensionability) class. This API uses an asynchronous callback to return the result. > **NOTE：**> > Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#paneltype) panel and one > [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md#paneltype) panel can be created for a single input method. > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such > as > [window.createWindow](../../apis-arkui/arkts-apis/arkts-arkui-window-createwindow-f.md#createwindow) > , bindContextMenu, > and CustomDialog. You are advised to adopt > alternative solutions to sub-windows, such as using a dialog box or > bindMenu, or set > **showInSubwindow** to **false**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void--><!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void-End-->
 
@@ -51,7 +43,7 @@ Creates an input method panel. This API can be called only by the input method a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -79,13 +71,9 @@ if (!this.context) {
 createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility) class. This API uses a promise to return the result. > **NOTE：**> > Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel and one > [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel can be created for a single input method. > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such > as > [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application) > , bindContextMenu, > and CustomDialog. You are advised to adopt > alternative solutions to sub-windows, such as using a dialog box or > bindMenu, or set > **showInSubwindow** to **false**.
+Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#inputmethodextensionability) class. This API uses a promise to return the result. > **NOTE：**> > Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#paneltype) panel and one > [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md#paneltype) panel can be created for a single input method. > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such > as > [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application) > , bindContextMenu, > and CustomDialog. You are advised to adopt > alternative solutions to sub-windows, such as using a dialog box or > bindMenu, or set > **showInSubwindow** to **false**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>--><!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>-End-->
 
@@ -111,7 +99,7 @@ Creates an input method panel. This API can be called only by the input method a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -141,10 +129,6 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-destroyPanel(panel: Panel, callback: AsyncCallback<void>): void--><!--Device-InputMethodAbility-destroyPanel(panel: Panel, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -162,7 +146,7 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -206,10 +190,6 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-destroyPanel(panel: Panel): Promise<void>--><!--Device-InputMethodAbility-destroyPanel(panel: Panel): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -232,7 +212,7 @@ Destroys the specified input method panel. This API uses a promise to return the
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -274,10 +254,6 @@ Obtains the current security mode of the input method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-getSecurityMode(): SecurityMode--><!--Device-InputMethodAbility-getSecurityMode(): SecurityMode-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -294,7 +270,7 @@ Obtains the current security mode of the input method.
 | --- | --- |
 | [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let security: inputMethodEngine.SecurityMode = inputMethodEngine.getInputMethodAbility().getSecurityMode();
@@ -310,10 +286,6 @@ offCallingDisplayDidChange(callback?: Callback<int>): void
 Unsubscribe 'callingDisplayDidChange' event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-offCallingDisplayDidChange(callback?: Callback<int>): void--><!--Device-InputMethodAbility-offCallingDisplayDidChange(callback?: Callback<int>): void-End-->
 
@@ -335,10 +307,6 @@ Unsubscribe 'discardTypingText' event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-offDiscardTypingText(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offDiscardTypingText(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -358,10 +326,6 @@ offInputStart(callback?: IMAInputStartCallback): void
 Unsubscribe 'inputStart' event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-offInputStart(callback?: IMAInputStartCallback): void--><!--Device-InputMethodAbility-offInputStart(callback?: IMAInputStartCallback): void-End-->
 
@@ -383,10 +347,6 @@ Unsubscribe 'inputStop'.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-offInputStop(callback: Callback<void>): void--><!--Device-InputMethodAbility-offInputStop(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -406,10 +366,6 @@ offKeyboardHide(callback?: Callback<void>): void
 Unsubscribe 'keyboardHide'.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-offKeyboardHide(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offKeyboardHide(callback?: Callback<void>): void-End-->
 
@@ -431,10 +387,6 @@ Unsubscribe 'keyboardShow'.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-offKeyboardShow(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offKeyboardShow(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -454,10 +406,6 @@ offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
 Unsubscribe 'privateCommand'. This function can only be called by default input method configured by system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void-End-->
 
@@ -485,10 +433,6 @@ Unsubscribe 'securityModeChange' event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-offSecurityModeChange(callback?: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-offSecurityModeChange(callback?: Callback<SecurityMode>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -508,10 +452,6 @@ offSetCallingWindow(callback: Callback<int>): void
 Unsubscribe 'setCallingWindow'.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-offSetCallingWindow(callback: Callback<int>): void--><!--Device-InputMethodAbility-offSetCallingWindow(callback: Callback<int>): void-End-->
 
@@ -533,10 +473,6 @@ Unsubscribe 'setSubtype'.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-offSetSubtype(callback?: Callback<InputMethodSubtype>): void--><!--Device-InputMethodAbility-offSetSubtype(callback?: Callback<InputMethodSubtype>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -557,10 +493,6 @@ Disables listening for changes of the screen ID of the window associated with th
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void--><!--Device-InputMethodAbility-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -572,7 +504,7 @@ Disables listening for changes of the screen ID of the window associated with th
 | type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (num: number) => {
@@ -590,10 +522,6 @@ Unsubscribes from the event of discarding candidate words and sends the event to
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-off(type: 'discardTypingText', callback?: Callback<void>): void--><!--Device-InputMethodAbility-off(type: 'discardTypingText', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -605,7 +533,7 @@ Unsubscribes from the event of discarding candidate words and sends the event to
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**. <br> - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words and sending the event to the input method. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
@@ -623,10 +551,6 @@ Disables listening for the input method binding event. This API uses an asynchro
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void--><!--Device-InputMethodAbility-off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -638,7 +562,7 @@ Disables listening for the input method binding event. This API uses an asynchro
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
 | callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('inputStart');
@@ -654,10 +578,6 @@ Disables listening for the input method stop event. This API uses an asynchronou
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-off(type: 'inputStop', callback: () => void): void--><!--Device-InputMethodAbility-off(type: 'inputStop', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -669,7 +589,7 @@ Disables listening for the input method stop event. This API uses an asynchronou
 | type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
 | callback | () =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('inputStop', () => {
@@ -687,10 +607,6 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -702,7 +618,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('keyboardShow', () => {
@@ -723,10 +639,6 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -738,7 +650,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('keyboardShow', () => {
@@ -759,10 +671,6 @@ Disables listening for the private data event of the input method. This API uses
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -780,7 +688,7 @@ Disables listening for the private data event of the input method. This API uses
 | --- | --- |
 | [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
@@ -803,10 +711,6 @@ Disables listening for the security mode changes of the input method. This API u
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -818,7 +722,7 @@ Disables listening for the security mode changes of the input method. This API u
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let securityChangeCallback: (securityMode: inputMethodEngine.SecurityMode) => void =
@@ -840,10 +744,6 @@ Disables listening for the window invocation setting event. This API uses an asy
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-off(type: 'setCallingWindow', callback: (wid: number) => void): void--><!--Device-InputMethodAbility-off(type: 'setCallingWindow', callback: (wid: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -855,7 +755,7 @@ Disables listening for the window invocation setting event. This API uses an asy
 | type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
 | callback | (wid: number) =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('setCallingWindow', (wid: number) => {
@@ -873,10 +773,6 @@ Disables listening for the input method subtype setting event. This API uses an 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void--><!--Device-InputMethodAbility-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -888,7 +784,7 @@ Disables listening for the input method subtype setting event. This API uses an 
 | type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
 | callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
@@ -905,10 +801,6 @@ onCallingDisplayDidChange(callback: Callback<int>): void
 Subscribe 'callingDisplayDidChange' event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-onCallingDisplayDidChange(callback: Callback<int>): void--><!--Device-InputMethodAbility-onCallingDisplayDidChange(callback: Callback<int>): void-End-->
 
@@ -936,10 +828,6 @@ Subscribe 'discardTypingText' event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-onDiscardTypingText(callback: Callback<void>): void--><!--Device-InputMethodAbility-onDiscardTypingText(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -959,10 +847,6 @@ onInputStart(callback: IMAInputStartCallback): void
 Subscribe 'inputStart' event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-onInputStart(callback: IMAInputStartCallback): void--><!--Device-InputMethodAbility-onInputStart(callback: IMAInputStartCallback): void-End-->
 
@@ -984,10 +868,6 @@ Subscribe 'inputStop'.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-onInputStop(callback: Callback<void>): void--><!--Device-InputMethodAbility-onInputStop(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1007,10 +887,6 @@ onKeyboardHide(callback: Callback<void>): void
 Subscribe 'keyboardHide'.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-onKeyboardHide(callback: Callback<void>): void--><!--Device-InputMethodAbility-onKeyboardHide(callback: Callback<void>): void-End-->
 
@@ -1032,10 +908,6 @@ Subscribe 'keyboardShow'.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-onKeyboardShow(callback: Callback<void>): void--><!--Device-InputMethodAbility-onKeyboardShow(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1055,10 +927,6 @@ onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 Subscribe 'privateCommand'. This function can only be called by default input method configured by system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void-End-->
 
@@ -1086,10 +954,6 @@ Subscribe 'securityModeChange' event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-onSecurityModeChange(callback: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-onSecurityModeChange(callback: Callback<SecurityMode>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1109,10 +973,6 @@ onSetCallingWindow(callback: Callback<int>): void
 Subscribe 'setCallingWindow'.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodAbility-onSetCallingWindow(callback: Callback<int>): void--><!--Device-InputMethodAbility-onSetCallingWindow(callback: Callback<int>): void-End-->
 
@@ -1134,10 +994,6 @@ Subscribe 'setSubtype'.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-onSetSubtype(callback: Callback<InputMethodSubtype>): void--><!--Device-InputMethodAbility-onSetSubtype(callback: Callback<InputMethodSubtype>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1158,10 +1014,6 @@ Enables listening for changes of the screen ID of the window associated with the
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-on(type: 'callingDisplayDidChange', callback: Callback<number>): void--><!--Device-InputMethodAbility-on(type: 'callingDisplayDidChange', callback: Callback<number>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1179,7 +1031,7 @@ Enables listening for changes of the screen ID of the window associated with the
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let callingDisplayDidChangeCallback: (num: number) => void = (num: number) => {
@@ -1198,10 +1050,6 @@ Subscribes to the event of discarding candidate words and sends the event to the
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-on(type: 'discardTypingText', callback: Callback<void>): void--><!--Device-InputMethodAbility-on(type: 'discardTypingText', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1213,7 +1061,7 @@ Subscribes to the event of discarding candidate words and sends the event to the
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**. <br> - **'discardTypingText'** : indicates subscribing to the event of discarding candidate words and sending the event to the input method. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().on('discardTypingText', () => {
@@ -1231,10 +1079,6 @@ Enables listening for the input method binding event. This API uses an asynchron
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void--><!--Device-InputMethodAbility-on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1246,7 +1090,7 @@ Enables listening for the input method binding event. This API uses an asynchron
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
 | callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | Yes | Callback used to return instances related to input method operations. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility()
@@ -1267,10 +1111,6 @@ Enables listening for the input method unbinding event. This API uses an asynchr
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-on(type: 'inputStop', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'inputStop', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1282,7 +1122,7 @@ Enables listening for the input method unbinding event. This API uses an asynchr
 | type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().on('inputStop', () => {
@@ -1300,10 +1140,6 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1315,7 +1151,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().on('keyboardShow', () => {
@@ -1336,10 +1172,6 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1351,7 +1183,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().on('keyboardShow', () => {
@@ -1372,10 +1204,6 @@ Enables listening for the private data event of the input method. This API uses 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1393,7 +1221,7 @@ Enables listening for the private data event of the input method. This API uses 
 | --- | --- |
 | [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
@@ -1415,10 +1243,6 @@ Enables listening for the security mode changes of the input method. This API us
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-on(type: 'securityModeChange', callback: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-on(type: 'securityModeChange', callback: Callback<SecurityMode>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1430,7 +1254,7 @@ Enables listening for the security mode changes of the input method. This API us
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | Callback used to return the current security mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility()
@@ -1449,10 +1273,6 @@ Enables listening for the window invocation setting event. This API uses an asyn
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-on(type: 'setCallingWindow', callback: (wid: number) => void): void--><!--Device-InputMethodAbility-on(type: 'setCallingWindow', callback: (wid: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1464,7 +1284,7 @@ Enables listening for the window invocation setting event. This API uses an asyn
 | type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
 | callback | (wid: number) =&gt; void | Yes | Callback used to return the window ID of the caller. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodAbility().on('setCallingWindow', (wid: number) => {
@@ -1482,10 +1302,6 @@ Enables listening for the input method subtype setting event. This API uses an a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodAbility-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void--><!--Device-InputMethodAbility-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1497,7 +1313,7 @@ Enables listening for the input method subtype setting event. This API uses an a
 | type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
 | callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | Callback used to return the input method subtype. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';

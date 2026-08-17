@@ -4,9 +4,7 @@ The Web's behavior to load from HTTP or HTTPS. Defaults to MixedMode.None.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum MixedMode--><!--Device-unnamed-export declare enum MixedMode-End-->
 
@@ -22,9 +20,7 @@ Loose Mode: HTTP and HTTPS hybrid content can be loaded. This means that all ins
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-MixedMode-ALL = 0--><!--Device-MixedMode-ALL = 0-End-->
 
@@ -40,9 +36,7 @@ Compatibility Modes: HTTP and HTTPS hybrid content can be loaded in compatibilit
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-MixedMode-COMPATIBLE = 1--><!--Device-MixedMode-COMPATIBLE = 1-End-->
 
@@ -58,9 +52,7 @@ Strict Mode: HTTP and HTTPS hybrid content cannot be loaded.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-MixedMode-NONE = 2--><!--Device-MixedMode-NONE = 2-End-->
 

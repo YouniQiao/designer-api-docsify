@@ -4,10 +4,6 @@ FlashQuery provides APIs to query the flash status and mode of a camera device. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface FlashQuery--><!--Device-camera-interface FlashQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -28,10 +24,6 @@ Checks whether the LCD flash is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FlashQuery-isLcdFlashSupported(): boolean--><!--Device-FlashQuery-isLcdFlashSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -51,7 +43,7 @@ Checks whether the LCD flash is supported.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function isLcdFlashSupported(nightPhotoSession: camera.NightPhotoSession): boolean {

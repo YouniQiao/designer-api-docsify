@@ -4,10 +4,6 @@ ArcSwiper自定义切换动画执行过程中，返回给开发者的proxy对象
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface SwiperContentTransitionProxy--><!--Device-unnamed-declare interface SwiperContentTransitionProxy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -21,10 +17,6 @@ finishTransition(): void
 通知ArcSwiper组件，此页面的自定义动画已结束。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -44,10 +36,6 @@ index: number
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SwiperContentTransitionProxy-index: number--><!--Device-SwiperContentTransitionProxy-index: number-End-->
@@ -65,10 +53,6 @@ index对应页面在主轴方向上的长度。
 **类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -88,10 +72,6 @@ index页面相对于ArcSwiper主轴起始位置（selectedIndex对应页面的�
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SwiperContentTransitionProxy-position: number--><!--Device-SwiperContentTransitionProxy-position: number-End-->
@@ -109,10 +89,6 @@ selectedIndex: number
 **类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

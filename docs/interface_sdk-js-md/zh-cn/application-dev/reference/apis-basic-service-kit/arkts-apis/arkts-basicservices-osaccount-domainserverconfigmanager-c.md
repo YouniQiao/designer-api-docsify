@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-class DomainServerConfigManager--><!--Device-osAccount-class DomainServerConfigManager-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -21,10 +17,6 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 添加域服务器配置。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -56,7 +48,7 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 | 12300215 | The number of server config reaches the upper limit. |
 | 12300213 | Server config already exists. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -83,10 +75,6 @@ static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainSe
 添加域服务器配置。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -118,7 +106,7 @@ static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainSe
 | 12300215 | The number of server config reaches the upper limit. |
 | 12300213 | Server config already exists. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import osAccount from '@ohos.account.osAccount';
@@ -148,10 +136,6 @@ static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<Dom
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
 <!--Device-DomainServerConfigManager-static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<DomainServerConfig>-End-->
@@ -179,7 +163,7 @@ static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<Dom
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -228,10 +212,6 @@ static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
 <!--Device-DomainServerConfigManager-static getAllServerConfigs(): Promise<Array<DomainServerConfig>>--><!--Device-DomainServerConfigManager-static getAllServerConfigs(): Promise<Array<DomainServerConfig>>-End-->
@@ -252,7 +232,7 @@ static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -313,10 +293,6 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
 <!--Device-DomainServerConfigManager-static getServerConfig(configId: string): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static getServerConfig(configId: string): Promise<DomainServerConfig>-End-->
@@ -344,7 +320,7 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300212 | Server config not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -405,10 +381,6 @@ static removeServerConfig(configId: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
 <!--Device-DomainServerConfigManager-static removeServerConfig(configId: string): Promise<void>--><!--Device-DomainServerConfigManager-static removeServerConfig(configId: string): Promise<void>-End-->
@@ -437,7 +409,7 @@ static removeServerConfig(configId: string): Promise<void>
 | 12300214 | Server config has been associated with an account. |
 | 12300212 | Server config not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -491,10 +463,6 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
 <!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>-End-->
@@ -527,7 +495,7 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 | 12300213 | Server config already exists. |
 | 12300212 | Server config not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -559,10 +527,6 @@ static updateServerConfig(configId: string, parameters: Record<string, RecordDat
 更新域服务器配置。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -596,7 +560,7 @@ static updateServerConfig(configId: string, parameters: Record<string, RecordDat
 | 12300213 | Server config already exists. |
 | 12300212 | Server config not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import osAccount from '@ohos.account.osAccount';

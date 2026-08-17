@@ -12,15 +12,13 @@ import { formProvider } from 'formProvider';
 function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>
 ```
 
-Obtains the information of the widget that has been added to the home screen on the device. This API uses a promise to return the result. > **NOTE：**> > This field is supported since API version 18 and deprecated since API version 20. You are advised to use > [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getPublishedRunningFormInfoById) instead.
+Obtains the information of the widget that has been added to the home screen on the device. This API uses a promise to return the result. > **NOTE：**> > This field is supported since API version 18 and deprecated since API version 20. You are advised to use > [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getpublishedrunningforminfobyid) instead.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getPublishedRunningFormInfoById)
+**Substitutes:** [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getpublishedrunningforminfobyid)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -48,7 +46,7 @@ Obtains the information of the widget that has been added to the home screen on 
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formInfo, formProvider } from '@kit.FormKit';

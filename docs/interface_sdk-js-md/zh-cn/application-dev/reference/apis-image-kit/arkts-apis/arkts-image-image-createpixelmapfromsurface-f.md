@@ -10,10 +10,6 @@ Creates a PixelMap object from surface id.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-image-function createPixelMapFromSurface(surfaceId: string, region: Region): Promise<PixelMap>--><!--Device-image-function createPixelMapFromSurface(surfaceId: string, region: Region): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -39,7 +35,7 @@ Creates a PixelMap object from surface id.
 | [62980178](../errorcode-image.md#62980178-pixelmap创建失败) | Failed to create the PixelMap. |
 | [62980105](../errorcode-image.md#62980105-图片获取数据错误) | Failed to get the data. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -80,10 +76,6 @@ Creates a PixelMap object from surface id.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-image-function createPixelMapFromSurface(surfaceId: string): Promise<PixelMap>--><!--Device-image-function createPixelMapFromSurface(surfaceId: string): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -108,7 +100,7 @@ Creates a PixelMap object from surface id.
 | [62980178](../errorcode-image.md#62980178-pixelmap创建失败) | Failed to create the PixelMap. |
 | [62980105](../errorcode-image.md#62980105-图片获取数据错误) | Failed to get the data. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

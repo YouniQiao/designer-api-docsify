@@ -16,10 +16,6 @@ Obtains the value of dsds mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-sim-function getDsdsMode(callback: AsyncCallback<DsdsMode>): void--><!--Device-sim-function getDsdsMode(callback: AsyncCallback<DsdsMode>): void-End-->
@@ -45,7 +41,7 @@ Obtains the value of dsds mode.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,10 +66,6 @@ function getDsdsMode(): Promise<DsdsMode>
 Obtains the value of dsds mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -100,7 +92,7 @@ Obtains the value of dsds mode.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

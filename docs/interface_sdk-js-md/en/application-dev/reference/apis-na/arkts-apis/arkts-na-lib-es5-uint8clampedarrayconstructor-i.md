@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Uint8ClampedArrayConstructor--><!--Device-unnamed-interface Uint8ClampedArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new(length: number): Uint8ClampedArray
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ClampedArrayConstructor-new(length: number): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-new(length: number): Uint8ClampedArray-End-->
 
@@ -42,10 +34,6 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8ClampedArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray-End-->
 
 **Parameters:**
@@ -67,10 +55,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Clamped
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ClampedArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8ClampedArray-End-->
 
@@ -98,10 +82,6 @@ Creates an array from an array-like or iterable object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8ClampedArrayConstructor-from(arrayLike: ArrayLike<number>): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-from(arrayLike: ArrayLike<number>): Uint8ClampedArray-End-->
 
 **Parameters:**
@@ -125,10 +105,6 @@ from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: a
 Creates an array from an array-like or iterable object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ClampedArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint8ClampedArray-End-->
 
@@ -156,10 +132,6 @@ Returns a new array from a set of elements.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8ClampedArrayConstructor-of(...items: number[]): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-of(...items: number[]): Uint8ClampedArray-End-->
 
 **Parameters:**
@@ -186,10 +158,6 @@ The size in bytes of each element in the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8ClampedArrayConstructor-readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8ClampedArrayConstructor-readonly BYTES_PER_ELEMENT: number-End-->
 
 ## prototype
@@ -201,10 +169,6 @@ readonly prototype: Uint8ClampedArray
 **Type:** [Uint8ClampedArray](arkts-na-lib-es5-uint8clampedarray-i.md)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ClampedArrayConstructor-readonly prototype: Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-readonly prototype: Uint8ClampedArray-End-->
 

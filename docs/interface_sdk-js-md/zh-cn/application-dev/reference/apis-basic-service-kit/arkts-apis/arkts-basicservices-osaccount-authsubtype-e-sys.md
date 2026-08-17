@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-enum AuthSubType--><!--Device-osAccount-enum AuthSubType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ PIN_SIX = 10000
 表示6位凭证。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthSubType-PIN_SIX = 10000--><!--Device-AuthSubType-PIN_SIX = 10000-End-->
 
@@ -44,10 +36,6 @@ PIN_NUMBER = 10001
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthSubType-PIN_NUMBER = 10001--><!--Device-AuthSubType-PIN_NUMBER = 10001-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -63,10 +51,6 @@ PIN_MIXED = 10002
 表示自定义混合凭据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthSubType-PIN_MIXED = 10002--><!--Device-AuthSubType-PIN_MIXED = 10002-End-->
 
@@ -84,10 +68,6 @@ PIN_FOUR = 10003
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthSubType-PIN_FOUR = 10003--><!--Device-AuthSubType-PIN_FOUR = 10003-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -103,10 +83,6 @@ PIN_PATTERN = 10004
 表示图案凭据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthSubType-PIN_PATTERN = 10004--><!--Device-AuthSubType-PIN_PATTERN = 10004-End-->
 
@@ -124,10 +100,6 @@ PIN_QUESTION = 10005
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthSubType-PIN_QUESTION = 10005--><!--Device-AuthSubType-PIN_QUESTION = 10005-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -143,10 +115,6 @@ FACE_2D = 20000
 表示2D 人脸凭证。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthSubType-FACE_2D = 20000--><!--Device-AuthSubType-FACE_2D = 20000-End-->
 
@@ -164,10 +132,6 @@ FACE_3D = 20001
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthSubType-FACE_3D = 20001--><!--Device-AuthSubType-FACE_3D = 20001-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -183,10 +147,6 @@ FINGERPRINT_CAPACITIVE = 30000
 表示电容式指纹。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthSubType-FINGERPRINT_CAPACITIVE = 30000--><!--Device-AuthSubType-FINGERPRINT_CAPACITIVE = 30000-End-->
 
@@ -204,10 +164,6 @@ FINGERPRINT_OPTICAL = 30001
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthSubType-FINGERPRINT_OPTICAL = 30001--><!--Device-AuthSubType-FINGERPRINT_OPTICAL = 30001-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -224,10 +180,6 @@ FINGERPRINT_ULTRASONIC = 30002
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthSubType-FINGERPRINT_ULTRASONIC = 30002--><!--Device-AuthSubType-FINGERPRINT_ULTRASONIC = 30002-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -243,10 +195,6 @@ DOMAIN_MIXED = 10240001
 表示域认证混合凭证。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthSubType-DOMAIN_MIXED = 10240001--><!--Device-AuthSubType-DOMAIN_MIXED = 10240001-End-->
 

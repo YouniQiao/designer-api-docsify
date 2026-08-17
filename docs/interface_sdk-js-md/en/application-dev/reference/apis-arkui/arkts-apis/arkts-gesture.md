@@ -19,19 +19,19 @@ Enumerates gesture competition results.
 | [GestureHandler](arkts-arkui-gesturehandler-c.md) | Represents the base type for gesture handlers. |
 | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Gesture recognizer object. |
 | [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Defines a long press gesture handler object. |
-| [LongPressRecognizer](arkts-arkui-longpressrecognizer-c.md) | Implements a long press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer). |
+| [LongPressRecognizer](arkts-arkui-longpressrecognizer-c.md) | Implements a long press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer). |
 | [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | Defines a pan gesture handler object. |
 | [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | Defines the PanGesture options. |
 | [PanRecognizer](arkts-arkui-panrecognizer-c.md) | Gesture recognizer object. |
 | [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Defines a type of gesture handler object for pinch gestures. |
-| [PinchRecognizer](arkts-arkui-pinchrecognizer-c.md) | Implements a pinch gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer). |
+| [PinchRecognizer](arkts-arkui-pinchrecognizer-c.md) | Implements a pinch gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer). |
 | [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | Defines a rotation gesture handler object. |
-| [RotationRecognizer](arkts-arkui-rotationrecognizer-c.md) | Implements a rotation gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer). |
-| [ScrollableTargetInfo](arkts-arkui-scrollabletargetinfo-c.md) | Provides the information about the scrollable container component corresponding to the gesture recognizer. It inherits from [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md#EventTargetInfo). |
+| [RotationRecognizer](arkts-arkui-rotationrecognizer-c.md) | Implements a rotation gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer). |
+| [ScrollableTargetInfo](arkts-arkui-scrollabletargetinfo-c.md) | Provides the information about the scrollable container component corresponding to the gesture recognizer. It inherits from [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md#eventtargetinfo). |
 | [SwipeGestureHandler](arkts-arkui-swipegesturehandler-c.md) | Defines a swipe gesture handler object. |
-| [SwipeRecognizer](arkts-arkui-swiperecognizer-c.md) | Implements a swipe gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer). |
+| [SwipeRecognizer](arkts-arkui-swiperecognizer-c.md) | Implements a swipe gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer). |
 | [TapGestureHandler](arkts-arkui-tapgesturehandler-c.md) | Defines a type of gesture handler object for tap gestures. |
-| [TapRecognizer](arkts-arkui-taprecognizer-c.md) | Implements a tap gesture recognizer object. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer). |
+| [TapRecognizer](arkts-arkui-taprecognizer-c.md) | Implements a tap gesture recognizer object. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer). |
 | [TouchRecognizer](arkts-arkui-touchrecognizer-c.md) | Represents a touch gesture recognizer. |
 
 ### Interfaces
@@ -47,25 +47,25 @@ Enumerates gesture competition results.
 | [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) | Combined gestures integrate two or more gestures into a compound gesture, supporting sequential recognition, parallel recognition, and exclusive recognition. |
 | [GestureInfo](arkts-arkui-gestureinfo-i.md) | Defines the gesture information type. |
 | [GestureInterface](arkts-arkui-gestureinterface-i.md) | Defines the gesture API. |
-| [LongPressGestureEvent](arkts-arkui-longpressgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
-| [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | Provides the parameters of the long press gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions). |
+| [LongPressGestureEvent](arkts-arkui-longpressgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
+| [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | Provides the parameters of the long press gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions). |
 | [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) | **LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter. > **NOTE：**> > Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing > the application's two-finger long press gesture to be ineffective. |
-| [PanGestureEvent](arkts-arkui-pangestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
-| [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions). |
+| [PanGestureEvent](arkts-arkui-pangestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
+| [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions). |
 | [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) | PanGesture is used to trigger a pan gesture when the movement distance of a finger on the screen reaches the minimum value. |
-| [PinchGestureEvent](arkts-arkui-pinchgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
-| [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | Provides the parameters of the pinch gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions). |
+| [PinchGestureEvent](arkts-arkui-pinchgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
+| [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | Provides the parameters of the pinch gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions). |
 | [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) | **PinchGesture** is used to trigger a pinch gesture, which requires two to five fingers with a minimum 5 vp distance between the fingers. > **NOTE：**> > To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make > contact again to satisfy the recognition criteria. |
-| [RotationGestureEvent](arkts-arkui-rotationgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
-| [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | Provides the parameters of the rotation gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions). |
+| [RotationGestureEvent](arkts-arkui-rotationgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
+| [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | Provides the parameters of the rotation gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions). |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) | **RotationGesture** is used to trigger a rotation gesture, which recognizes rotational movements using two to five fingers, with a minimum angular change of 1 degree. This gesture cannot be triggered using a two-finger rotation operation on a trackpad. |
-| [SwipeGestureEvent](arkts-arkui-swipegestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
-| [SwipeGestureHandlerOptions](arkts-arkui-swipegesturehandleroptions-i.md) | Provides the parameters of the swipe gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions). |
+| [SwipeGestureEvent](arkts-arkui-swipegestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
+| [SwipeGestureHandlerOptions](arkts-arkui-swipegesturehandleroptions-i.md) | Provides the parameters of the swipe gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions). |
 | [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) | **SwipeGesture** is used to trigger a swipe gesture. This gesture is successfully recognized when the swipe speed exceeds the specified threshold, which is 100 vp/s by default. |
-| [TapGestureEvent](arkts-arkui-tapgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
-| [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | Provides the parameters of the tap gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions). |
+| [TapGestureEvent](arkts-arkui-tapgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent). This object can be passed as the **event** parameter of onGestureJudgeBegin. |
+| [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | Provides the parameters of the tap gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions). |
 | [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) | TapGesture is used to trigger a tap gesture with one, two, or more taps. > **NOTE：**> > When both double-tap and single-tap gestures are bound to a component with the double-tap gesture bound first, the > single-tap gesture will have a 300 ms delay. |
-| [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | Defines tap gesture parameters. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions). > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 12. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | Defines tap gesture parameters. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions). > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 12. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
 
 ### Enums
 
@@ -89,11 +89,11 @@ Enumerates gesture competition results.
 
 | Name | Description |
 | --- | --- |
-| [GestureGroup](arkts-arkui-gesture-con.md#GestureGroup) | Defines GestureGroup Component. |
-| [LongPressGesture](arkts-arkui-gesture-con.md#LongPressGesture) | Defines LongPressGesture Component. |
-| [PanGesture](arkts-arkui-gesture-con.md#PanGesture) | Defines PanGesture Component. |
-| [PinchGesture](arkts-arkui-gesture-con.md#PinchGesture) | Defines PinchGesture Component. |
-| [RotationGesture](arkts-arkui-gesture-con.md#RotationGesture) | Defines RotationGesture Component. |
-| [SwipeGesture](arkts-arkui-gesture-con.md#SwipeGesture) | Defines SwipeGesture Component. |
-| [TapGesture](arkts-arkui-gesture-con.md#TapGesture) | Defines TapGesture Component. |
+| [GestureGroup](arkts-arkui-gesture-con.md#gesturegroup) | Defines GestureGroup Component. |
+| [LongPressGesture](arkts-arkui-gesture-con.md#longpressgesture) | Defines LongPressGesture Component. |
+| [PanGesture](arkts-arkui-gesture-con.md#pangesture) | Defines PanGesture Component. |
+| [PinchGesture](arkts-arkui-gesture-con.md#pinchgesture) | Defines PinchGesture Component. |
+| [RotationGesture](arkts-arkui-gesture-con.md#rotationgesture) | Defines RotationGesture Component. |
+| [SwipeGesture](arkts-arkui-gesture-con.md#swipegesture) | Defines SwipeGesture Component. |
+| [TapGesture](arkts-arkui-gesture-con.md#tapgesture) | Defines TapGesture Component. |
 

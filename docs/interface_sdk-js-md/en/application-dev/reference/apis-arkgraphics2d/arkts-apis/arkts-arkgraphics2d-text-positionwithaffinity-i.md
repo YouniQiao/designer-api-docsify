@@ -4,10 +4,6 @@ Describes the position and affinity of a glyph.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface PositionWithAffinity--><!--Device-text-interface PositionWithAffinity-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Affinity of the position.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-PositionWithAffinity-affinity: Affinity--><!--Device-PositionWithAffinity-affinity: Affinity-End-->
@@ -51,10 +43,6 @@ Index of the glyph relative to the paragraph. The value is an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

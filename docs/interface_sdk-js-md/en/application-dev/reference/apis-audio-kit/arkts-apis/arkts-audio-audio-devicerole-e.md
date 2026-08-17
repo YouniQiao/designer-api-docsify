@@ -4,10 +4,6 @@ Enumerates the device roles.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum DeviceRole--><!--Device-audio-enum DeviceRole-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -21,10 +17,6 @@ INPUT_DEVICE = 1
 Input role.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,10 +33,6 @@ OUTPUT_DEVICE = 2
 Output role.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

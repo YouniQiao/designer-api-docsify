@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface UpgradeFile--><!--Device-update-export interface UpgradeFile-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -26,10 +22,6 @@ filePath: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UpgradeFile-filePath: string--><!--Device-UpgradeFile-filePath: string-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -47,10 +39,6 @@ fileType: ComponentType
 **类型：** ComponentType
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UpgradeFile-fileType: ComponentType--><!--Device-UpgradeFile-fileType: ComponentType-End-->
 

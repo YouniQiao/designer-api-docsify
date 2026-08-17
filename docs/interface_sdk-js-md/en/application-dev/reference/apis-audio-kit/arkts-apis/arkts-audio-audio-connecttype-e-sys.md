@@ -4,10 +4,6 @@ Connect type for device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum ConnectType--><!--Device-audio-enum ConnectType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -24,10 +20,6 @@ Connect type for local device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConnectType-CONNECT_TYPE_LOCAL = 1--><!--Device-ConnectType-CONNECT_TYPE_LOCAL = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -43,10 +35,6 @@ CONNECT_TYPE_DISTRIBUTED = 2
 Connect type for distributed device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConnectType-CONNECT_TYPE_DISTRIBUTED = 2--><!--Device-ConnectType-CONNECT_TYPE_DISTRIBUTED = 2-End-->
 

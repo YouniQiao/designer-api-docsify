@@ -16,10 +16,6 @@ Stop ManualNetworkScan.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-radio-function stopManualNetworkScan(slotId: int): Promise<void>--><!--Device-radio-function stopManualNetworkScan(slotId: int): Promise<void>-End-->

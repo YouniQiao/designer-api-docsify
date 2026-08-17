@@ -4,10 +4,6 @@ Defines a contact group.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-contact-class Group--><!--Device-contact-class Group-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -30,10 +26,6 @@ ID of a contact group.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Group-groupId?: number--><!--Device-Group-groupId?: number-End-->
@@ -51,10 +43,6 @@ Name of a contact group.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

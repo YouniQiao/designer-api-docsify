@@ -16,11 +16,9 @@ Implements initialization for the interpolation curve, which is used to create a
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [initCurve](../../apis-na/arkts-apis/arkts-na-curves-initcurve-f.md#initCurve)
+**Substitutes:** [initCurve](../../apis-na/arkts-apis/arkts-na-curves-initcurve-f.md#initcurve)
 
 <!--Device-curves-function init(curve?: Curve): string--><!--Device-curves-function init(curve?: Curve): string-End-->
 

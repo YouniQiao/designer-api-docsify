@@ -4,11 +4,9 @@ Describes the class of a bluetooth device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [DeviceClass](arkts-connectivity-connection-deviceclass-i.md#DeviceClass)
+**Substitutes:** [DeviceClass](arkts-connectivity-connection-deviceclass-i.md#deviceclass)
 
 <!--Device-bluetoothManager-interface DeviceClass--><!--Device-bluetoothManager-interface DeviceClass-End-->
 
@@ -32,11 +30,9 @@ Class of the device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [classOfDevice](arkts-connectivity-connection-deviceclass-i.md#classOfDevice)
+**Substitutes:** [classOfDevice](arkts-connectivity-connection-deviceclass-i.md#classofdevice)
 
 <!--Device-DeviceClass-classOfDevice: number--><!--Device-DeviceClass-classOfDevice: number-End-->
 
@@ -54,11 +50,9 @@ Major classes of Bluetooth devices.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [majorClass](arkts-connectivity-connection-deviceclass-i.md#majorClass)
+**Substitutes:** [majorClass](arkts-connectivity-connection-deviceclass-i.md#majorclass)
 
 <!--Device-DeviceClass-majorClass: MajorClass--><!--Device-DeviceClass-majorClass: MajorClass-End-->
 
@@ -76,11 +70,9 @@ Major and minor classes of Bluetooth devices.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [majorMinorClass](arkts-connectivity-connection-deviceclass-i.md#majorMinorClass)
+**Substitutes:** [majorMinorClass](arkts-connectivity-connection-deviceclass-i.md#majorminorclass)
 
 <!--Device-DeviceClass-majorMinorClass: MajorMinorClass--><!--Device-DeviceClass-majorMinorClass: MajorMinorClass-End-->
 

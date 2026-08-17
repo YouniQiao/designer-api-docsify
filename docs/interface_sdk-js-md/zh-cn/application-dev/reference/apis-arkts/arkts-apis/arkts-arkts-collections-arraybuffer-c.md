@@ -1,12 +1,8 @@
 # ArrayBuffer
 
-ArkTS TypedArray（Int8Array、 Uint8Array、 Int16Array、 Uint16Array、 Int32Array、 Uint32Array、 Uint8ClampedArray、 Float32Array）的底层数据结构。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
+ArkTS TypedArray（[Int8Array](arkts-collections.md#arktscollections)、 [Uint8Array](arkts-collections.md#arktscollections)、 [Int16Array](arkts-collections.md#arktscollections)、 [Uint16Array](arkts-collections.md#arktscollections)、 [Int32Array](arkts-collections.md#arktscollections)、 [Uint32Array](arkts-collections.md#arktscollections)、 [Uint8ClampedArray](arkts-collections.md#arktscollections)、 [Float32Array](arkts-collections.md#arktscollections)）的底层数据结构。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-collections-class ArrayBuffer--><!--Device-collections-class ArrayBuffer-End-->
 
@@ -21,10 +17,6 @@ constructor(byteLength: number)
 构造函数，用于创建一个指定长度的ArkTS ArrayBuffer对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -53,10 +45,6 @@ slice(begin: number, end?: number): ArrayBuffer
 返回一个新的ArkTS ArrayBuffer对象，其包含原ArkTS ArrayBuffer指定范围的内容。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -95,10 +83,6 @@ buffer所占的字节数。
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

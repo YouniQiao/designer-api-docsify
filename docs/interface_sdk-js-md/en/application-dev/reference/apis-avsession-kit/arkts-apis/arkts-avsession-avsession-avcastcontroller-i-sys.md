@@ -4,10 +4,6 @@ AVCastController definition used to implement a remote control when a cast is co
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface AVCastController--><!--Device-avSession-interface AVCastController-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -27,10 +23,6 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 Set a surface instance to display playing view, used at sink side.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVCastController-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void--><!--Device-AVCastController-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void-End-->
 
@@ -53,7 +45,7 @@ Set a surface instance to display playing view, used at sink side.
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -90,10 +82,6 @@ Set a surface instance to display playing view, used at sink side.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastController-setDisplaySurface(surfaceId: string): Promise<void>--><!--Device-AVCastController-setDisplaySurface(surfaceId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -120,7 +108,7 @@ Set a surface instance to display playing view, used at sink side.
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { media } from '@kit.MediaKit';

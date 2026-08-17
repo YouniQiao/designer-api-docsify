@@ -16,11 +16,9 @@ Sets the Bluetooth friendly name of a device. On API 10 and above, the permissio
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [setLocalName](arkts-connectivity-connection-setlocalname-f.md#setLocalName)
+**Substitutes:** [setLocalName](arkts-connectivity-connection-setlocalname-f.md#setlocalname)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -47,7 +45,7 @@ Sets the Bluetooth friendly name of a device. On API 10 and above, the permissio
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

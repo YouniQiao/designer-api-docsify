@@ -16,10 +16,6 @@ Enable Wi-Fi.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WIFI_INFO and (ohos.permission.MANAGE_WIFI_CONNECTION or ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION)
 
 <!--Device-wifiManager-function enableWifi(): void--><!--Device-wifiManager-function enableWifi(): void-End-->
@@ -35,7 +31,7 @@ Enable Wi-Fi.
 | [2501003](../errorcode-wifi.md#2501003-failed-to-open-the-service) | Operation failed because the service is being closed. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

@@ -4,10 +4,6 @@ Provides information about a live form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface LiveFormInfo--><!--Device-unnamed-export interface LiveFormInfo-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -30,10 +26,6 @@ The form border radius. Unit: vp, The value must be greater than or equal to 0.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -54,10 +46,6 @@ The form id of the live form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -77,10 +65,6 @@ The live form display area.
 **Type:** formInfo.Rect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

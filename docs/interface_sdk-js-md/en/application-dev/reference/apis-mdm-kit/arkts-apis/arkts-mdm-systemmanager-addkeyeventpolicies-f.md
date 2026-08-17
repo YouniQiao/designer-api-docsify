@@ -12,13 +12,9 @@ import { systemManager } from 'systemManager';
 function addKeyEventPolicies(admin: Want, keyPolicies: Array<KeyEventPolicy>): void
 ```
 
-Adds a key event handling policy. When the system triggers a key event, if the event matches the delivered key event policy, the MDM app will be notified via the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onKeyEvent) callback, with the key event information of the matched policy carried in the callback.
+Adds a key event handling policy. When the system triggers a key event, if the event matches the delivered key event policy, the MDM app will be notified via the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) callback, with the key event information of the matched policy carried in the callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -33,7 +29,7 @@ Adds a key event handling policy. When the system triggers a key event, if the e
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| keyPolicies | Array&lt;[KeyEventPolicy](arkts-mdm-systemmanager-keyeventpolicy-i.md)&gt; | Yes | Key policy. Physical keys (power key, volume up, and volume down) and navigation keys (back, home, and recently opened) are supported. Physical keys can be combined into a combination key, but navigation keys cannot. For details about the combination key event response, see the key event callback [onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onKeyEvent). |
+| keyPolicies | Array&lt;[KeyEventPolicy](arkts-mdm-systemmanager-keyeventpolicy-i.md)&gt; | Yes | Key policy. Physical keys (power key, volume up, and volume down) and navigation keys (back, home, and recently opened) are supported. Physical keys can be combined into a combination key, but navigation keys cannot. For details about the combination key event response, see the key event callback [onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent). |
 
 **Error codes:**
 
@@ -46,7 +42,7 @@ Adds a key event handling policy. When the system triggers a key event, if the e
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

@@ -4,9 +4,7 @@ Defines the triggered when the scale of WebView changed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnScaleChangeEvent--><!--Device-unnamed-export declare interface OnScaleChangeEvent-End-->
 
@@ -24,9 +22,7 @@ New scale of the page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnScaleChangeEvent-newScale: double--><!--Device-OnScaleChangeEvent-newScale: double-End-->
 
@@ -44,9 +40,7 @@ Old scale of the page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnScaleChangeEvent-oldScale: double--><!--Device-OnScaleChangeEvent-oldScale: double-End-->
 

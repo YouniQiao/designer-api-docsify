@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -23,10 +19,6 @@ action?: Action
 **类型：** Action
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Filter-action?: Action--><!--Device-Filter-action?: Action-End-->
 
@@ -44,10 +36,6 @@ after?: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Filter-after?: long--><!--Device-Filter-after?: long-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -63,10 +51,6 @@ before?: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Filter-before?: long--><!--Device-Filter-before?: long-End-->
 
@@ -84,10 +68,6 @@ mode?: Mode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Filter-mode?: Mode--><!--Device-Filter-mode?: Mode-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -103,10 +83,6 @@ state?: State
 **类型：** State
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Filter-state?: State--><!--Device-Filter-state?: State-End-->
 

@@ -4,10 +4,6 @@ Describe the subclass.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-hid-enum Subclass--><!--Device-hid-enum Subclass-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ SUBCLASS_UNCATEGORIZED = 0
 Uncategorized subclass.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Joystick subclass.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Subclass-SUBCLASS_JOYSTICK = 1--><!--Device-Subclass-SUBCLASS_JOYSTICK = 1-End-->
@@ -61,10 +49,6 @@ SUBCLASS_GAMEPAD = 2
 Gamepad subclass.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ Remote control subclass.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Subclass-SUBCLASS_REMOTE_CONTROL = 3--><!--Device-Subclass-SUBCLASS_REMOTE_CONTROL = 3-End-->
@@ -101,10 +81,6 @@ SUBCLASS_SENSING_DEVICE = 4
 Sensing device subclass.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,10 +98,6 @@ digitizer tablet subclass.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Subclass-SUBCLASS_DIGITIZER_TABLET = 5--><!--Device-Subclass-SUBCLASS_DIGITIZER_TABLET = 5-End-->
@@ -141,10 +113,6 @@ SUBCLASS_CARD_READER = 6
 Card reader subclass.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +130,6 @@ Keyboard subclass.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Subclass-SUBCLASS_KEYBOARD = 64--><!--Device-Subclass-SUBCLASS_KEYBOARD = 64-End-->
@@ -182,10 +146,6 @@ Mouse subclass.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Subclass-SUBCLASS_MOUSE = 128--><!--Device-Subclass-SUBCLASS_MOUSE = 128-End-->
@@ -201,10 +161,6 @@ SUBCLASS_COMBO = 192
 Combo subclass.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

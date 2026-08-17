@@ -16,11 +16,9 @@ Obtains the Bluetooth status of a device. On API 10 and above, the permission re
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getState](arkts-connectivity-access-getstate-f.md#getState)
+**Substitutes:** [getState](arkts-connectivity-access-getstate-f.md#getstate)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -45,7 +43,7 @@ Obtains the Bluetooth status of a device. On API 10 and above, the permission re
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

@@ -10,10 +10,6 @@ function getPhotoAccessHelper(context: Context, userId: number): PhotoAccessHelp
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -45,7 +41,7 @@ function getPhotoAccessHelper(context: Context, userId: number): PhotoAccessHelp
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 此处获取的phAccessHelper实例为全局对象，后续使用到phAccessHelper的地方默认为使用此处获取的对象，如未添加此段代码报phAccessHelper未定义的错误请自行添加。

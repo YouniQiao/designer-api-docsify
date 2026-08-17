@@ -4,10 +4,6 @@ The correspondence information between IP and MAC address.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-connection-export interface NetIpMacInfo--><!--Device-connection-export interface NetIpMacInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -30,10 +26,6 @@ Interface name of the network.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-NetIpMacInfo-iface: string--><!--Device-NetIpMacInfo-iface: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -50,10 +42,6 @@ Link address of the network.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-NetIpMacInfo-ipAddress: NetAddress--><!--Device-NetIpMacInfo-ipAddress: NetAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -69,10 +57,6 @@ Mac address of the network.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-NetIpMacInfo-macAddress: string--><!--Device-NetIpMacInfo-macAddress: string-End-->
 

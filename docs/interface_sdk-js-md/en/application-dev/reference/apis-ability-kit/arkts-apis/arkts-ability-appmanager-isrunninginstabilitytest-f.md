@@ -16,10 +16,6 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-appManager-function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void-End-->
@@ -39,7 +35,7 @@ Checks whether the system is undergoing a stability test. This API uses an async
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -64,10 +60,6 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-appManager-function isRunningInStabilityTest(): Promise<boolean>--><!--Device-appManager-function isRunningInStabilityTest(): Promise<boolean>-End-->
@@ -86,7 +78,7 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

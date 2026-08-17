@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 18
 
 <!--Device-FaultLogger-interface FaultLogInfo--><!--Device-FaultLogger-interface FaultLogInfo-End-->
@@ -23,8 +21,6 @@ fullLog: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 18
 
@@ -44,8 +40,6 @@ module: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 18
 
 <!--Device-FaultLogInfo-module: string--><!--Device-FaultLogInfo-module: string-End-->
@@ -63,8 +57,6 @@ pid: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 18
 
@@ -84,8 +76,6 @@ reason: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 18
 
 <!--Device-FaultLogInfo-reason: string--><!--Device-FaultLogInfo-reason: string-End-->
@@ -103,8 +93,6 @@ summary: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 18
 
@@ -124,8 +112,6 @@ timestamp: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 18
 
 <!--Device-FaultLogInfo-timestamp: number--><!--Device-FaultLogInfo-timestamp: number-End-->
@@ -144,8 +130,6 @@ type: FaultType
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 18
 
 <!--Device-FaultLogInfo-type: FaultType--><!--Device-FaultLogInfo-type: FaultType-End-->
@@ -163,8 +147,6 @@ uid: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 18
 

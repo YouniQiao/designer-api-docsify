@@ -16,10 +16,6 @@ Creates an AVPlayer instance. This API uses an asynchronous callback to return t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer>): void--><!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer>): void-End-->
@@ -38,7 +34,7 @@ Creates an AVPlayer instance. This API uses an asynchronous callback to return t
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -64,10 +60,6 @@ function createAVPlayer(callback: AsyncCallback<AVPlayer | undefined>): void
 Creates an **AVPlayer** instance. This API uses an asynchronous callback to return the result. <br>**NOTE:**<br> You are advised to create a maximum of 16 **AVPlayer** instances for an application in both audio and video playback scenarios. The actual number of instances that can be created may be different. It depends on the specifications of the device chip in use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer | undefined>): void--><!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer | undefined>): void-End-->
 
@@ -96,10 +88,6 @@ Creates an AVPlayer instance. This API uses a promise to return the result. > **
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-media-function createAVPlayer(): Promise<AVPlayer>--><!--Device-media-function createAVPlayer(): Promise<AVPlayer>-End-->
@@ -118,7 +106,7 @@ Creates an AVPlayer instance. This API uses a promise to return the result. > **
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -146,10 +134,6 @@ function createAVPlayer(): Promise<AVPlayer | undefined>
 Creates an **AVPlayer** instance. This API uses a promise to return the result. <br>**NOTE:**<br> You are advised to create a maximum of 16 **AVPlayer** instances for an application in both audio and video playback scenarios. The actual number of instances that can be created may be different. It depends on the specifications of the device chip in use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function createAVPlayer(): Promise<AVPlayer | undefined>--><!--Device-media-function createAVPlayer(): Promise<AVPlayer | undefined>-End-->
 

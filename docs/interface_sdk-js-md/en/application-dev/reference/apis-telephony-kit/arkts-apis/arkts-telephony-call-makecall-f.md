@@ -16,10 +16,6 @@ Launches the call screen and displays the dialed number. This API uses an asynch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-call-function makeCall(phoneNumber: string, callback: AsyncCallback<void>): void--><!--Device-call-function makeCall(phoneNumber: string, callback: AsyncCallback<void>): void-End-->
@@ -43,7 +39,7 @@ Launches the call screen and displays the dialed number. This API uses an asynch
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,10 +63,6 @@ function makeCall(phoneNumber: string): Promise<void>
 Launches the call screen and displays the dialed number. This API uses a promise to return the result. This API can be called only in a UIAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -100,7 +92,7 @@ Launches the call screen and displays the dialed number. This API uses a promise
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -122,10 +114,6 @@ function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>
 Launches the call screen and displays the dialed number. This API uses a promise to return the result. This API can be called only in a UIAbility.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -166,10 +154,6 @@ Launches the call screen and displays the dialed number. This API uses a promise
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-call-function makeCall(context: Context, phoneNumber: string): Promise<void>--><!--Device-call-function makeCall(context: Context, phoneNumber: string): Promise<void>-End-->
@@ -197,7 +181,7 @@ Launches the call screen and displays the dialed number. This API uses a promise
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 

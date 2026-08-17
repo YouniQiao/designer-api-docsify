@@ -4,10 +4,6 @@ Describes the internal information about a task.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-taskpool-class TaskInfo--><!--Device-taskpool-class TaskInfo-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -30,10 +26,6 @@ Duration that the task has been executed, in ms. The default value is **0**. If 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TaskInfo-duration?: number--><!--Device-TaskInfo-duration?: number-End-->
@@ -51,10 +43,6 @@ Task name. You are advised not to change the value.<br> This API can be used in 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -76,10 +64,6 @@ Task state. You are advised not to change the value.<br> This API can be used in
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TaskInfo-state: State--><!--Device-TaskInfo-state: State-End-->
@@ -99,10 +83,6 @@ Task ID, which is globally unique by default. You are advised not to change the 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

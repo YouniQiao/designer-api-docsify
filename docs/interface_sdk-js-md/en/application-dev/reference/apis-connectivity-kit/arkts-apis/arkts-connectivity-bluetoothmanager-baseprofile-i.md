@@ -4,11 +4,9 @@ Base interface of profile.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md#BaseProfile)
+**Substitutes:** [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md#baseprofile)
 
 <!--Device-bluetoothManager-interface BaseProfile--><!--Device-bluetoothManager-interface BaseProfile-End-->
 
@@ -29,8 +27,6 @@ getConnectionDevices(): Array<string>
 Obtains the connected devices list of profile. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -61,7 +57,7 @@ Obtains the connected devices list of profile. On API 10 and above, the permissi
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -82,8 +78,6 @@ getDeviceState(device: string): ProfileConnectionState
 Obtains the profile state of device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -121,7 +115,7 @@ Obtains the profile state of device. On API 10 and above, the permission require
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

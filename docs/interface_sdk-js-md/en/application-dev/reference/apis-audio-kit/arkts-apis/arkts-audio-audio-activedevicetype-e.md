@@ -4,11 +4,9 @@ Enumerates the active device types.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md#CommunicationDeviceType)
+**Substitutes:** [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md#communicationdevicetype)
 
 <!--Device-audio-enum ActiveDeviceType--><!--Device-audio-enum ActiveDeviceType-End-->
 
@@ -23,8 +21,6 @@ SPEAKER = 2
 Speaker.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -43,8 +39,6 @@ BLUETOOTH_SCO = 7
 Bluetooth device using Synchronous Connection Oriented (SCO) links.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

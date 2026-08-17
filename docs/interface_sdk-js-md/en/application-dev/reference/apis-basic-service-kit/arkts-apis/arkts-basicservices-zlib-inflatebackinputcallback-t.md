@@ -8,10 +8,6 @@ A callback function for reading input data provided by a user. When the decompre
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-zlib-type InflateBackInputCallback = (inDesc: RecordData) => ArrayBuffer--><!--Device-zlib-type InflateBackInputCallback = (inDesc: RecordData) => ArrayBuffer-End-->

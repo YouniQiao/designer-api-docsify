@@ -10,10 +10,6 @@ function getHash(object: object): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-util-function getHash(object: object): number--><!--Device-util-function getHash(object: object): number-End-->
@@ -32,7 +28,7 @@ function getHash(object: object): number
 | --- | --- |
 | number | 哈希值。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 interface Person {

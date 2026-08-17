@@ -4,10 +4,6 @@ Enumerates the sensor types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-enum SensorId--><!--Device-sensor-enum SensorId-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -21,10 +17,6 @@ ACCELEROMETER = 1
 Acceleration sensor. This API can be used in atomic services since API version 11.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Gyroscope sensor. This API can be used in atomic services since API version 11.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SensorId-GYROSCOPE = 2--><!--Device-SensorId-GYROSCOPE = 2-End-->
@@ -62,10 +50,6 @@ Ambient light sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-AMBIENT_LIGHT = 5--><!--Device-SensorId-AMBIENT_LIGHT = 5-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -79,10 +63,6 @@ MAGNETIC_FIELD = 6
 Magnetic field sensor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SensorId-MAGNETIC_FIELD = 6--><!--Device-SensorId-MAGNETIC_FIELD = 6-End-->
 
@@ -98,10 +78,6 @@ Barometer sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-BAROMETER = 8--><!--Device-SensorId-BAROMETER = 8-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -115,10 +91,6 @@ HALL = 10
 Hall effect sensor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SensorId-HALL = 10--><!--Device-SensorId-HALL = 10-End-->
 
@@ -134,10 +106,6 @@ Proximity sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-PROXIMITY = 12--><!--Device-SensorId-PROXIMITY = 12-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -152,10 +120,6 @@ Humidity sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-HUMIDITY = 13--><!--Device-SensorId-HUMIDITY = 13-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -169,10 +133,6 @@ ORIENTATION = 256
 Orientation sensor. This API can be used in atomic services since API version 11.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -190,10 +150,6 @@ Gravity sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-GRAVITY = 257--><!--Device-SensorId-GRAVITY = 257-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -207,10 +163,6 @@ LINEAR_ACCELEROMETER = 258
 Linear acceleration sensor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SensorId-LINEAR_ACCELEROMETER = 258--><!--Device-SensorId-LINEAR_ACCELEROMETER = 258-End-->
 
@@ -226,10 +178,6 @@ Rotation vector sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-ROTATION_VECTOR = 259--><!--Device-SensorId-ROTATION_VECTOR = 259-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -243,10 +191,6 @@ AMBIENT_TEMPERATURE = 260
 Ambient temperature sensor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SensorId-AMBIENT_TEMPERATURE = 260--><!--Device-SensorId-AMBIENT_TEMPERATURE = 260-End-->
 
@@ -262,10 +206,6 @@ Uncalibrated magnetic field sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261--><!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -279,10 +219,6 @@ GYROSCOPE_UNCALIBRATED = 263
 Uncalibrated gyroscope sensor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263--><!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263-End-->
 
@@ -298,10 +234,6 @@ Significant motion sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-SIGNIFICANT_MOTION = 264--><!--Device-SensorId-SIGNIFICANT_MOTION = 264-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -315,10 +247,6 @@ PEDOMETER_DETECTION = 265
 Pedometer detection sensor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SensorId-PEDOMETER_DETECTION = 265--><!--Device-SensorId-PEDOMETER_DETECTION = 265-End-->
 
@@ -334,10 +262,6 @@ Pedometer sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-PEDOMETER = 266--><!--Device-SensorId-PEDOMETER = 266-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -351,10 +275,6 @@ HEART_RATE = 278
 Heart rate sensor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SensorId-HEART_RATE = 278--><!--Device-SensorId-HEART_RATE = 278-End-->
 
@@ -370,10 +290,6 @@ Wear detection sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-WEAR_DETECTION = 280--><!--Device-SensorId-WEAR_DETECTION = 280-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -388,10 +304,6 @@ Uncalibrated acceleration sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281--><!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -405,10 +317,6 @@ FUSION_PRESSURE = 283
 Fused pressure sensor. This sensor is available only on smart watches.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SensorId-FUSION_PRESSURE = 283--><!--Device-SensorId-FUSION_PRESSURE = 283-End-->
 

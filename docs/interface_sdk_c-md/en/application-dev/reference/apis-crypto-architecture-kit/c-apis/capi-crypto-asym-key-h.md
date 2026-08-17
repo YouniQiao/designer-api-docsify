@@ -4,6 +4,8 @@
 
 Defines the asymmetric key interfaces.
 
+**Include**: <CryptoArchitectureKit/crypto_asym_key.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

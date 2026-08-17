@@ -1,14 +1,10 @@
 # MouseEvent
 
-Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
+Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent).
 
-**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
+**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface MouseEvent--><!--Device-unnamed-declare interface MouseEvent-End-->
 
@@ -23,10 +19,6 @@ getCurrentLocalPosition?(): Coordinate2D
 Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,13 +40,9 @@ Gets the coordinates of the top-left corner of the current component based on it
 getHistoricalPoints?(): Array<MouseHistoricalPoint>
 ```
 
-Obtains all historical point information of the current frame. Historical points can be used to achieve smoother drawing effects. This API can only be called from [MouseEvent](#MouseEvent) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onMouse) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of [MouseEvent](#MouseEvent) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onMouse), and the remaining points are treated as historical points.
+Obtains all historical point information of the current frame. Historical points can be used to achieve smoother drawing effects. This API can only be called from [MouseEvent](#mouseevent) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onmouse) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of [MouseEvent](#mouseevent) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onmouse), and the remaining points are treated as historical points.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +70,6 @@ Mouse action.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MouseEvent-action: MouseAction--><!--Device-MouseEvent-action: MouseAction-End-->
@@ -104,10 +88,6 @@ Mouse button.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MouseEvent-button: MouseButton--><!--Device-MouseEvent-button: MouseButton-End-->
@@ -125,10 +105,6 @@ X coordinate of the mouse position in the coordinate system of the current scree
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,10 +126,6 @@ Y coordinate of the mouse position in the coordinate system of the current scree
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -168,15 +140,11 @@ Y coordinate of the mouse position in the coordinate system of the current scree
 eventHandleId?: number
 ```
 
-Unique identifier for event processing. Value range: [0, +∞) **NOTE：**This field is used when dispatching events using the [postInputEventWithStrategy](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postInputEventWithStrategy) API. Each time an event is dispatched, this field is increased by 100000. Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+Unique identifier for event processing. Value range: [0, +∞) **NOTE：**This field is used when dispatching events using the [postInputEventWithStrategy](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000. Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,10 +166,6 @@ X coordinate of the mouse position in the [global coordinate system](../../../wi
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -221,10 +185,6 @@ Y coordinate of the mouse position in the [global coordinate system](../../../wi
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -246,10 +206,6 @@ Set of buttons being pressed.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -269,10 +225,6 @@ Movement increment of the mouse along the X axis in a two-dimensional plane. The
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -294,10 +246,6 @@ Movement increment of the mouse along the Y axis in a two-dimensional plane. The
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -318,11 +266,9 @@ X coordinate of the mouse position in the coordinate system of the current appli
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 10
 
-**Substitutes:** [windowX](#windowX)
+**Substitutes:** [windowX](#windowx)
 
 <!--Device-MouseEvent-screenX: number--><!--Device-MouseEvent-screenX: number-End-->
 
@@ -340,11 +286,9 @@ Y coordinate of the mouse position in the coordinate system of the current appli
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 10
 
-**Substitutes:** [windowY](#windowY)
+**Substitutes:** [windowY](#windowy)
 
 <!--Device-MouseEvent-screenY: number--><!--Device-MouseEvent-screenY: number-End-->
 
@@ -361,10 +305,6 @@ Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#even
 **Type:** () =&gt; void
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -383,10 +323,6 @@ X coordinate of the mouse position in the coordinate system of the current appli
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -408,10 +344,6 @@ Y coordinate of the mouse position in the coordinate system of the current appli
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -432,10 +364,6 @@ X coordinate of the mouse point in the [component coordinate system](../../../ui
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MouseEvent-x: number--><!--Device-MouseEvent-x: number-End-->
@@ -453,10 +381,6 @@ Y coordinate of the mouse point in the [component coordinate system](../../../ui
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

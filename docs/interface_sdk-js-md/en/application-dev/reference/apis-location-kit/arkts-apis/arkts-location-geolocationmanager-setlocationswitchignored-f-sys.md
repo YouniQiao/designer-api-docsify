@@ -16,10 +16,6 @@ Set the app locating behavior not controlled by the location switch.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION_SWITCH_IGNORED
 
 <!--Device-geoLocationManager-function setLocationSwitchIgnored(isIgnored: boolean): void--><!--Device-geoLocationManager-function setLocationSwitchIgnored(isIgnored: boolean): void-End-->
@@ -43,7 +39,7 @@ Set the app locating behavior not controlled by the location switch.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

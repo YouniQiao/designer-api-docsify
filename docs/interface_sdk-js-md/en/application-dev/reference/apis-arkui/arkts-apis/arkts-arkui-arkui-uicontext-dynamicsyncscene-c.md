@@ -4,10 +4,6 @@ Represents a dynamic synchronization scene.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export class DynamicSyncScene--><!--Device-unnamed-export class DynamicSyncScene-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -47,6 +43,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## getFrameRateRange
@@ -58,10 +56,6 @@ getFrameRateRange(): ExpectedFrameRateRange
 Gets the FrameRateRange of the DynamicSyncScene.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,10 +80,6 @@ setFrameRateRange(range: ExpectedFrameRateRange): void
 Sets the FrameRateRange of the DynamicSyncScene.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,11 +16,9 @@ Obtains the name of a peer Bluetooth device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRemoteDeviceName](arkts-connectivity-bluetoothmanager-getremotedevicename-f.md#getRemoteDeviceName)
+**Substitutes:** [getRemoteDeviceName](arkts-connectivity-bluetoothmanager-getremotedevicename-f.md#getremotedevicename)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -40,7 +38,7 @@ Obtains the name of a peer Bluetooth device.
 | --- | --- |
 | string | Returns the device name in character string format. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let remoteDeviceName : string = bluetooth.getRemoteDeviceName("XX:XX:XX:XX:XX:XX");

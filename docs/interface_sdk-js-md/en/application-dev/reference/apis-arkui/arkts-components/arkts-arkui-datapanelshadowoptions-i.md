@@ -6,10 +6,6 @@ Inherits from MultiShadowOptions and has all properties of **MultiShadowOptions*
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface DataPanelShadowOptions--><!--Device-unnamed-declare interface DataPanelShadowOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,10 +23,6 @@ Array of shadow colors for data segments. Default value: same as the value of **
 **Default:** Consistent with valueColors
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

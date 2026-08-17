@@ -4,10 +4,6 @@ Describes the options of the line. > **NOTE：**> > To standardize anonymous obj
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface LineOptions--><!--Device-unnamed-interface LineOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Height. If the value is invalid or the default value is used, the height require
 **Type:** Length
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,10 +39,6 @@ Width. If the value is invalid or the default value is used, the width required 
 **Type:** Length
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

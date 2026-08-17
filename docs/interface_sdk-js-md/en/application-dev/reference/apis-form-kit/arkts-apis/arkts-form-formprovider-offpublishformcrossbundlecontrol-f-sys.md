@@ -16,10 +16,6 @@ Unsubscribes from controls on cross-bundle widget addition to the home screen. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PUBLISH_FORM_CROSS_BUNDLE_CONTROL
 
 **Model restriction:** This API can be used only in the stage model.

@@ -4,10 +4,6 @@ Enumerates fingerprint gesture event types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum FingerprintAction--><!--Device-unnamed-export declare enum FingerprintAction-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -23,10 +19,6 @@ DOWN = 0
 Pressing down
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FingerprintAction-DOWN = 0--><!--Device-FingerprintAction-DOWN = 0-End-->
 
@@ -44,10 +36,6 @@ Lifting up
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FingerprintAction-UP = 1--><!--Device-FingerprintAction-UP = 1-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -63,10 +51,6 @@ SLIDE = 2
 Sliding
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FingerprintAction-SLIDE = 2--><!--Device-FingerprintAction-SLIDE = 2-End-->
 
@@ -84,10 +68,6 @@ Second pressing down
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FingerprintAction-RETOUCH = 3--><!--Device-FingerprintAction-RETOUCH = 3-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -103,10 +83,6 @@ CLICK = 4
 Double-click
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FingerprintAction-CLICK = 4--><!--Device-FingerprintAction-CLICK = 4-End-->
 

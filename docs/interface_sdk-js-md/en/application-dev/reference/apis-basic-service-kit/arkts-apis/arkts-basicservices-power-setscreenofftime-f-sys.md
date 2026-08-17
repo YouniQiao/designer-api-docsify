@@ -16,10 +16,6 @@ Sets the screen-off timeout duration, in unit of ms.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 19+: ohos.permission.POWER_MANAGER
 
@@ -45,7 +41,7 @@ Sets the screen-off timeout duration, in unit of ms.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

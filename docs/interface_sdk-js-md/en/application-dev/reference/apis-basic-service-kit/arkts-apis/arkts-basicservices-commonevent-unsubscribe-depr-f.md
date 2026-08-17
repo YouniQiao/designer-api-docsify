@@ -10,8 +10,6 @@ Unsubscribes from common events. This API uses an asynchronous callback to retur
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md#unsubscribe)
@@ -27,7 +25,7 @@ Unsubscribes from common events. This API uses an asynchronous callback to retur
 | subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | Yes | Subscriber object. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import Base from '@ohos.base';

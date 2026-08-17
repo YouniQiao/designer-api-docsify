@@ -4,10 +4,6 @@ System material options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiMaterial-interface MaterialOptions--><!--Device-uiMaterial-interface MaterialOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -33,10 +29,6 @@ Material type. Default value: **MaterialType.NONE**.
 **Default:** uiMaterial.MaterialType.NONE
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

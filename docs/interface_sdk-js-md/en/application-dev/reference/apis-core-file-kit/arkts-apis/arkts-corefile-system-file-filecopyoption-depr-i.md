@@ -4,8 +4,6 @@ Defines the options used in copy().
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileCopyOption--><!--Device-unnamed-export interface FileCopyOption-End-->
@@ -23,8 +21,6 @@ Callback invoked when the API call is complete.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ URI of the location to which the copy is to be saved. The directory of applicati
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileCopyOption-dstUri: string--><!--Device-FileCopyOption-dstUri: string-End-->
@@ -63,8 +57,6 @@ Callback invoked when the API call fails. **data** indicates the error informati
 **Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -84,8 +76,6 @@ URI of the file to copy. Restricted by the underlying file system of lite wearab
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileCopyOption-srcUri: string--><!--Device-FileCopyOption-srcUri: string-End-->
@@ -103,8 +93,6 @@ Callback invoked when the API call is successful. This API returns the URI of th
 **Type:** (uri: string) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

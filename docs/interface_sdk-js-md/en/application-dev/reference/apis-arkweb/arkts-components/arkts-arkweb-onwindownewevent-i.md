@@ -1,12 +1,8 @@
 # OnWindowNewEvent
 
-Represents the callback invoked when the web page requests the user to create a window.
+Defines the callback triggered when the web page requests the user to create a window. Starting from API version 23, you can use [OnWindowNewExtEvent](arkts-arkweb-onwindownewextevent-i.md#onwindownewextevent) to obtain more window information.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnWindowNewEvent--><!--Device-unnamed-declare interface OnWindowNewEvent-End-->
 
@@ -23,10 +19,6 @@ handler: ControllerHandler
 **Type:** [ControllerHandler](arkts-arkweb-controllerhandler-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,10 +38,6 @@ Whether to open the target URL in a new window. The value **true** means to open
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnWindowNewEvent-isAlert: boolean--><!--Device-OnWindowNewEvent-isAlert: boolean-End-->
@@ -68,10 +56,6 @@ Whether the creation is triggered by the user. The value **true** means that the
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnWindowNewEvent-isUserTrigger: boolean--><!--Device-OnWindowNewEvent-isUserTrigger: boolean-End-->
@@ -89,10 +73,6 @@ Target URL.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

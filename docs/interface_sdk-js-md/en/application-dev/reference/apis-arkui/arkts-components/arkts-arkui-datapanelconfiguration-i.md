@@ -6,10 +6,6 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface DataPanelConfiguration--><!--Device-unnamed-declare interface DataPanelConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Maximum value displayed in the data panel. Default value: **100** **NOTE：**If 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Current values of the data panel. The length of the array should be within the r
 **Type:** number[]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

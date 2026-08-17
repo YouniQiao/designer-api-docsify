@@ -16,10 +16,6 @@ Obtains a CameraManager instance. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-camera-function getCameraManager(context: Context): CameraManager--><!--Device-camera-function getCameraManager(context: Context): CameraManager-End-->
@@ -45,7 +41,7 @@ Obtains a CameraManager instance. This API returns the result synchronously.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

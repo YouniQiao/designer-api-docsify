@@ -16,10 +16,6 @@ Get detailed information of a single tool by its name
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.QUERY_CLI_TOOL
 
 **Model restriction:** This API can be used only in the stage model.

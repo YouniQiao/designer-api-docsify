@@ -1,12 +1,8 @@
 # OnDownloadStartEvent
 
-Defines the triggered function when starting to download.
+Defines the callback information for notifying the host app that a file download has started, including the URL, user agent, and file details. It is suitable for scenarios where monitoring and managing file downloads are required, improving download process controllability and user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnDownloadStartEvent--><!--Device-unnamed-declare interface OnDownloadStartEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered function when starting to download.
 contentDisposition: string
 ```
 
-The contentDisposition of page.
+Content-Disposition response header returned by the server, which may be empty.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ The contentDisposition of page.
 contentLength: number
 ```
 
-The contentLength of page. Unit: bytes.
+Length of the file returned by the server. Unit: byte.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,15 +50,11 @@ The contentLength of page. Unit: bytes.
 mimetype: string
 ```
 
-The mimetype of page.
+MIME type of the content returned by the server.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,15 +68,11 @@ The mimetype of page.
 url: string
 ```
 
-The URL of page.
+URL for the download task.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -106,15 +86,11 @@ The URL of page.
 userAgent: string
 ```
 
-The userAgent of page.
+User agent used for download.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

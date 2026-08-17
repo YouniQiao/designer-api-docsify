@@ -16,10 +16,6 @@ Queries the Do Not Disturb profile. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function getDoNotDisturbProfile(id: long): Promise<DoNotDisturbProfile>--><!--Device-notificationManager-function getDoNotDisturbProfile(id: long): Promise<DoNotDisturbProfile>-End-->
@@ -53,7 +49,7 @@ Queries the Do Not Disturb profile. This API uses a promise to return the result
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600019](../errorcode-notification.md#1600019-no-configuration-information-for-a-do-not-disturb-profile) | The do-not-disturb profile does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -75,10 +71,6 @@ function getDoNotDisturbProfile(id: long, userId: int): Promise<DoNotDisturbProf
 Queries the Do Not Disturb profile of a specified user. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -116,7 +108,7 @@ Queries the Do Not Disturb profile of a specified user. This API uses a promise 
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600019](../errorcode-notification.md#1600019-no-configuration-information-for-a-do-not-disturb-profile) | The do-not-disturb profile does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

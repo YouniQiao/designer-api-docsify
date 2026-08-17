@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-interface VideoRecorderProfile--><!--Device-unnamed-interface VideoRecorderProfile-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -25,10 +21,6 @@ readonly audioBitrate: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly audioBitrate: int--><!--Device-VideoRecorderProfile-readonly audioBitrate: int-End-->
 
@@ -48,10 +40,6 @@ readonly audioChannels: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VideoRecorderProfile-readonly audioChannels: int--><!--Device-VideoRecorderProfile-readonly audioChannels: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -69,10 +57,6 @@ readonly audioCodec: CodecMimeType
 **类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly audioCodec: CodecMimeType--><!--Device-VideoRecorderProfile-readonly audioCodec: CodecMimeType-End-->
 
@@ -92,10 +76,6 @@ readonly audioSampleRate: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VideoRecorderProfile-readonly audioSampleRate: int--><!--Device-VideoRecorderProfile-readonly audioSampleRate: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -113,10 +93,6 @@ readonly fileFormat: ContainerFormatType
 **类型：** [ContainerFormatType](arkts-media-multimedia-media-containerformattype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly fileFormat: ContainerFormatType--><!--Device-VideoRecorderProfile-readonly fileFormat: ContainerFormatType-End-->
 
@@ -136,10 +112,6 @@ readonly videoBitrate: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VideoRecorderProfile-readonly videoBitrate: int--><!--Device-VideoRecorderProfile-readonly videoBitrate: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -157,10 +129,6 @@ readonly videoCodec: CodecMimeType
 **类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly videoCodec: CodecMimeType--><!--Device-VideoRecorderProfile-readonly videoCodec: CodecMimeType-End-->
 
@@ -180,10 +148,6 @@ readonly videoFrameHeight: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VideoRecorderProfile-readonly videoFrameHeight: int--><!--Device-VideoRecorderProfile-readonly videoFrameHeight: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -202,10 +166,6 @@ readonly videoFrameRate: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VideoRecorderProfile-readonly videoFrameRate: int--><!--Device-VideoRecorderProfile-readonly videoFrameRate: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -223,10 +183,6 @@ readonly videoFrameWidth: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly videoFrameWidth: int--><!--Device-VideoRecorderProfile-readonly videoFrameWidth: int-End-->
 

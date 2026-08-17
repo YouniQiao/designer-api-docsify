@@ -16,10 +16,6 @@ Deletes a key for the specified user. This API uses a promise to return the resu
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-huks-function deleteKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>--><!--Device-huks-function deleteKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>-End-->
@@ -34,7 +30,7 @@ Deletes a key for the specified user. This API uses a promise to return the resu
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key was generated. |
-| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be deleted. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#HuksAuthStorageLevel) is used to specify the security level of the key to be deleted,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be deleted. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel) is used to specify the security level of the key to be deleted,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
 
 **Return value:**
 
@@ -57,7 +53,7 @@ Deletes a key for the specified user. This API uses a promise to return the resu
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
-## Examples
+**Examples**
 
 Prerequisites: see Example of generateKeyItemAsUser.
 

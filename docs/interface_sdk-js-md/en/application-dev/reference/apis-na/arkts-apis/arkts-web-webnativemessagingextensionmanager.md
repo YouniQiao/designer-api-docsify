@@ -4,9 +4,7 @@ The webNativeMessagingExtensionManager module provides the capability of managin
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -20,8 +18,8 @@ The webNativeMessagingExtensionManager module provides the capability of managin
 
 | Name | Description |
 | --- | --- |
-| [connectNative](arkts-na-webnativemessagingextensionmanager-connectnative-f.md#connectNative) | Connects the current ability to the specified web native message extension ability. |
-| [disconnectNative](arkts-na-webnativemessagingextensionmanager-disconnectnative-f.md#disconnectNative) | Disconnects the connection of a specified web native message extension. |
+| [connectNative](arkts-na-webnativemessagingextensionmanager-connectnative-f.md#connectnative) | Connects the current ability to the specified web native message extension ability. |
+| [disconnectNative](arkts-na-webnativemessagingextensionmanager-disconnectnative-f.md#disconnectnative) | Disconnects the connection of a specified web native message extension. |
 
 ### Interfaces
 

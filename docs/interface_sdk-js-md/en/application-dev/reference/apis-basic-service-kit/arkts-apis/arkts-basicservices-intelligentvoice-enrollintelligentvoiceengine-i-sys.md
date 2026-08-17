@@ -4,10 +4,6 @@ Implements enroll intelligent voice engine.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-interface EnrollIntelligentVoiceEngine--><!--Device-intelligentVoice-interface EnrollIntelligentVoiceEngine-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -29,10 +25,6 @@ commit(callback: AsyncCallback<void>): void
 Commit enroll, This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -56,7 +48,7 @@ Commit enroll, This method uses an asynchronous callback to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -82,10 +74,6 @@ Commit enroll, This method uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-EnrollIntelligentVoiceEngine-commit(): Promise<void>--><!--Device-EnrollIntelligentVoiceEngine-commit(): Promise<void>-End-->
@@ -108,7 +96,7 @@ Commit enroll, This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -131,10 +119,6 @@ enrollForResult(isLast: boolean, callback: AsyncCallback<EnrollCallbackInfo>): v
 Enrolls for result, This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE and ohos.permission.MICROPHONE
 
@@ -160,7 +144,7 @@ Enrolls for result, This method uses an asynchronous callback to return the resu
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -187,10 +171,6 @@ enrollForResult(isLast: boolean): Promise<EnrollCallbackInfo>
 Enrolls for result, This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE and ohos.permission.MICROPHONE
 
@@ -221,7 +201,7 @@ Enrolls for result, This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -246,10 +226,6 @@ evaluateForResult(word: string): Promise<EvaluationResult>
 Evaluates for result, This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -280,7 +256,7 @@ Evaluates for result, This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -306,10 +282,6 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-EnrollIntelligentVoiceEngine-getParameter(key: string, callback: AsyncCallback<string>): void--><!--Device-EnrollIntelligentVoiceEngine-getParameter(key: string, callback: AsyncCallback<string>): void-End-->
@@ -334,7 +306,7 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -360,10 +332,6 @@ getParameter(key: string): Promise<string>
 Obtains the value of an intelligent voice parameter. This method uses a promise to return the query result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -394,7 +362,7 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -419,10 +387,6 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-EnrollIntelligentVoiceEngine-getSupportedRegions(callback: AsyncCallback<Array<string>>): void--><!--Device-EnrollIntelligentVoiceEngine-getSupportedRegions(callback: AsyncCallback<Array<string>>): void-End-->
@@ -444,7 +408,7 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -473,10 +437,6 @@ Obtains the supported regions, This method uses a promise to return the query re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-EnrollIntelligentVoiceEngine-getSupportedRegions(): Promise<Array<string>>--><!--Device-EnrollIntelligentVoiceEngine-getSupportedRegions(): Promise<Array<string>>-End-->
@@ -498,7 +458,7 @@ Obtains the supported regions, This method uses a promise to return the query re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -523,10 +483,6 @@ init(config: EnrollEngineConfig, callback: AsyncCallback<void>): void
 Initials the engine, This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -553,7 +509,7 @@ Initials the engine, This method uses an asynchronous callback to return the res
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 | [22700103](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700103-initialization-failed) | Init failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -582,10 +538,6 @@ init(config: EnrollEngineConfig): Promise<void>
 Initials the engine, This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -617,7 +569,7 @@ Initials the engine, This method uses a promise to return the result.
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 | [22700103](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700103-initialization-failed) | Init failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -645,10 +597,6 @@ Releases the engine, This method uses an asynchronous callback to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-EnrollIntelligentVoiceEngine-release(callback: AsyncCallback<void>): void--><!--Device-EnrollIntelligentVoiceEngine-release(callback: AsyncCallback<void>): void-End-->
@@ -670,7 +618,7 @@ Releases the engine, This method uses an asynchronous callback to return the res
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -696,10 +644,6 @@ Releases the engine, This method uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-EnrollIntelligentVoiceEngine-release(): Promise<void>--><!--Device-EnrollIntelligentVoiceEngine-release(): Promise<void>-End-->
@@ -721,7 +665,7 @@ Releases the engine, This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -744,10 +688,6 @@ setParameter(key: string, value: string, callback: AsyncCallback<void>): void
 Sets an intelligent voice parameter. This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -774,7 +714,7 @@ Sets an intelligent voice parameter. This method uses an asynchronous callback t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -799,10 +739,6 @@ setParameter(key: string, value: string): Promise<void>
 Sets an intelligent voice parameter. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -834,7 +770,7 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -857,10 +793,6 @@ setSensibility(sensibility: SensibilityType, callback: AsyncCallback<void>): voi
 Sets sensibility, This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -886,7 +818,7 @@ Sets sensibility, This method uses an asynchronous callback to return the result
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -911,10 +843,6 @@ setSensibility(sensibility: SensibilityType): Promise<void>
 Sets sensibility, This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -945,7 +873,7 @@ Sets sensibility, This method uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -968,10 +896,6 @@ setWakeupHapInfo(info: WakeupHapInfo, callback: AsyncCallback<void>): void
 Sets wakeup hap information, This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -997,7 +921,7 @@ Sets wakeup hap information, This method uses an asynchronous callback to return
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1026,10 +950,6 @@ setWakeupHapInfo(info: WakeupHapInfo): Promise<void>
 Sets wakeup hap information, This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -1060,7 +980,7 @@ Sets wakeup hap information, This method uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1088,10 +1008,6 @@ Stops the engine, This method uses an asynchronous callback to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-EnrollIntelligentVoiceEngine-stop(callback: AsyncCallback<void>): void--><!--Device-EnrollIntelligentVoiceEngine-stop(callback: AsyncCallback<void>): void-End-->
@@ -1113,7 +1029,7 @@ Stops the engine, This method uses an asynchronous callback to return the result
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1139,10 +1055,6 @@ Stops the engine, This method uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-EnrollIntelligentVoiceEngine-stop(): Promise<void>--><!--Device-EnrollIntelligentVoiceEngine-stop(): Promise<void>-End-->
@@ -1164,7 +1076,7 @@ Stops the engine, This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,4 +1,4 @@
-# Scene
+# Scene(Defines 3D component)
 
 ```TypeScript
 declare type Scene = import('../api/@ohos.graphics.scene').Scene
@@ -7,10 +7,6 @@ declare type Scene = import('../api/@ohos.graphics.scene').Scene
 Provides methods for controlling the 3d scene
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

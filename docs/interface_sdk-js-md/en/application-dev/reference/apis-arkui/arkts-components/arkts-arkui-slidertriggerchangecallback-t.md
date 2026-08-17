@@ -8,10 +8,6 @@ Defines the callback type used in **SliderConfiguration**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -24,6 +20,6 @@ Defines the callback type used in **SliderConfiguration**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Current progress.<br>Value range: [[min](arkts-arkui-slideroptions-i.md#SliderOptions), [max](arkts-arkui-slideroptions-i.md#SliderOptions)] |
+| value | number | Yes | Current progress.<br>Value range: [[min](arkts-arkui-slideroptions-i.md#slideroptions), [max](arkts-arkui-slideroptions-i.md#slideroptions)] |
 | mode | [SliderChangeMode](arkts-arkui-sliderchangemode-e.md) | Yes | State triggered by the event. |
 

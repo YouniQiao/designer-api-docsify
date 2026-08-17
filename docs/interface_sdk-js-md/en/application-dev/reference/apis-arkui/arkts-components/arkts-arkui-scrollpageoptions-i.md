@@ -4,10 +4,6 @@ Provides parameters for page scrolling behavior.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ScrollPageOptions--><!--Device-unnamed-declare interface ScrollPageOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Whether to enable the page-turning animation.The value true means to enable the 
 **Default:** false
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Whether to turn to the next page.The value true means to scroll to the next page
 **Type:** boolean
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,10 +10,6 @@ function getVMRuntimeStat(item: string): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function getVMRuntimeStat(item: string): long--><!--Device-hidebug-function getVMRuntimeStat(item: string): long-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -36,7 +32,7 @@ function getVMRuntimeStat(item: string): long
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Possible causes: 1. Invalid parameter, a string parameter required. 2. Invalid parameter, unknown property. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

@@ -16,10 +16,6 @@ Obtains the path of the configuration file with the highest priority. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-configPolicy-function getOneCfgFile(relPath: string, callback: AsyncCallback<string>): void--><!--Device-configPolicy-function getOneCfgFile(relPath: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
@@ -49,10 +45,6 @@ function getOneCfgFile(relPath: string): Promise<string>
 Obtains the path of the configuration file with the highest priority. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-configPolicy-function getOneCfgFile(relPath: string): Promise<string>--><!--Device-configPolicy-function getOneCfgFile(relPath: string): Promise<string>-End-->
 
@@ -89,10 +81,6 @@ Obtains the path of the configuration file with the highest priority based on th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, callback: AsyncCallback<string>): void--><!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
@@ -124,10 +112,6 @@ Obtains the path of the configuration file with the highest priority based on th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<string>): void--><!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
@@ -140,7 +124,7 @@ Obtains the path of the configuration file with the highest priority based on th
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
-| extra | string | Yes | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#USER_DEFINED). |
+| extra | string | Yes | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#userdefined). |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the configuration file path is successfully obtained, **err** is **undefined**, and **data** is the path of the configuration file with the highest priority. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -160,10 +144,6 @@ Obtains the path of the configuration file with the highest priority based on th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, extra?: string): Promise<string>--><!--Device-configPolicy-function getOneCfgFile(relPath: string, followMode: FollowXMode, extra?: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
@@ -176,7 +156,7 @@ Obtains the path of the configuration file with the highest priority based on th
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
-| extra | string | No | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#USER_DEFINED). |
+| extra | string | No | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#userdefined). |
 
 **Return value:**
 

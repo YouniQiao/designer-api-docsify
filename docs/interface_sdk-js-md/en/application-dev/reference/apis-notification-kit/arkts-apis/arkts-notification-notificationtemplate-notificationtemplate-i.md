@@ -4,10 +4,6 @@ This module defines the notification template, which is used to specify the temp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationTemplate--><!--Device-unnamed-export interface NotificationTemplate-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -24,10 +20,6 @@ Template data. - **title**: Download title. Mandatory field, with the value bein
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationTemplate-data: Record<string, RecordData>--><!--Device-NotificationTemplate-data: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -43,10 +35,6 @@ Template name. Currently, only the progress bar notification template indicating
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationTemplate-name: string--><!--Device-NotificationTemplate-name: string-End-->
 

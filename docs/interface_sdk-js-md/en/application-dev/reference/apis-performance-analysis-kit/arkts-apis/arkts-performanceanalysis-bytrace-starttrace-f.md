@@ -10,8 +10,6 @@ Marks the start of a timeslice trace task. > **NOTE：**> > If multiple trace ta
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** startTrace
@@ -28,7 +26,7 @@ Marks the start of a timeslice trace task. > **NOTE：**> > If multiple trace ta
 | taskId | number | Yes | ID of a timeslice trace task. |
 | expectedTime | number | No | Expected duration of the trace, in ms. This parameter is optional and is left blank by default. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 bytrace.startTrace("myTestFunc", 1);

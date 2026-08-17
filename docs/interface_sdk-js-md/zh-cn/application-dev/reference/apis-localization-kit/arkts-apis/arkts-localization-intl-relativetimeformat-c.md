@@ -1,10 +1,8 @@
-# RelativeTimeFormat
+# RelativeTimeFormat(国际化-Intl)
 
 提供相对时间格式化的能力。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 20
 
@@ -24,8 +22,6 @@ constructor()
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
@@ -36,7 +32,7 @@ constructor()
 
 **系统能力：** SystemCapability.Global.I18n
 
-## 示例
+**示例**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -55,8 +51,6 @@ constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOpt
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
@@ -74,7 +68,7 @@ constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOpt
 | locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
 | options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | 否 | 创建相对时间格式化对象时的配置项。 <br>默认值：所有属性都取默认值时的配置项。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -96,8 +90,6 @@ format(value: double, unit: string): string
 对相对时间进行格式化，返回相对时间字符串。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 20
 
@@ -122,7 +114,7 @@ format(value: double, unit: string): string
 | --- | --- |
 | string | 格式化后的相对时间。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -142,8 +134,6 @@ formatToParts(value: double, unit: string): Array<object>
 对相对时间进行格式化，获取格式化结果中各个部分的对象数组。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 20
 
@@ -168,7 +158,7 @@ formatToParts(value: double, unit: string): Array<object>
 | --- | --- |
 | Array&lt;object&gt; | 格式化结果中各个部分的对象数组。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -188,8 +178,6 @@ resolvedOptions(): RelativeTimeFormatResolvedOptions
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.RelativeTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions)
@@ -206,7 +194,7 @@ resolvedOptions(): RelativeTimeFormatResolvedOptions
 | --- | --- |
 | [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md) | 相对时间格式化对象的格式化配置项。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

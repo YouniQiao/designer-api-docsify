@@ -4,10 +4,6 @@ The solvable errors.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-eSIM-export enum SolvableErrors--><!--Device-eSIM-export enum SolvableErrors-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -24,10 +20,6 @@ Indicates that the user needs to input a confirmation code during the download.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_CONFIRMATION_CODE = 1 << 0--><!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_CONFIRMATION_CODE = 1 << 0-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -43,10 +35,6 @@ SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1
 Indicates that the download process requires user consent to allow profile policy rules.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1--><!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1-End-->
 

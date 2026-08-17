@@ -4,10 +4,6 @@ Enumerates the types of the input method panel.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-export enum PanelType--><!--Device-inputMethodEngine-export enum PanelType-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -22,10 +18,6 @@ Panel for displaying a virtual software keyboard.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PanelType-SOFT_KEYBOARD = 0--><!--Device-PanelType-SOFT_KEYBOARD = 0-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -39,10 +31,6 @@ STATUS_BAR
 Panel for displaying status bar.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PanelType-STATUS_BAR--><!--Device-PanelType-STATUS_BAR-End-->
 

@@ -16,10 +16,6 @@ Find pac proxy info for the url.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-connection-function findProxyForUrl(url: string): string--><!--Device-connection-function findProxyForUrl(url: string): string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -36,7 +32,7 @@ Find pac proxy info for the url.
 | --- | --- |
 | string | Returns the proxy infomation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

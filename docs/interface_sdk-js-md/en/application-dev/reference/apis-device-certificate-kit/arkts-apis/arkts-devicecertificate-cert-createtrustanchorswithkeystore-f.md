@@ -12,13 +12,9 @@ import { cert } from 'cert';
 function createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Promise<Array<X509TrustAnchor>>
 ```
 
-Creates a [TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md#X509TrustAnchor) object array by using the CA certificate parsed from a .p12 keystore file. This API uses a promise to return the result.
+Creates a [TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md#x509trustanchor) object array by using the CA certificate parsed from a .p12 keystore file. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

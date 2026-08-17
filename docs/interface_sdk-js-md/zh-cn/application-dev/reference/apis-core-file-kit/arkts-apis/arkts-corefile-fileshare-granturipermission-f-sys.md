@@ -15,10 +15,6 @@ function grantUriPermission(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WRITE_MEDIA
 
 <!--Device-fileShare-function grantUriPermission(    uri: string,    bundleName: string,    flag: wantConstant.Flags,    callback: AsyncCallback<void>  ): void--><!--Device-fileShare-function grantUriPermission(    uri: string,    bundleName: string,    flag: wantConstant.Flags,    callback: AsyncCallback<void>  ): void-End-->
@@ -34,7 +30,7 @@ function grantUriPermission(
 | uri | string | 是 | 公共目录文件URI。 |
 | bundleName | string | 是 | 分享目标的包名。 |
 | flag | wantConstant.Flags | 是 | 授权的权限，可取wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION或 wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步授权之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步授权之后的回调。 |
 
 **错误码：**
 
@@ -45,7 +41,7 @@ function grantUriPermission(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 14300001 | IPC error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { wantConstant } from '@kit.AbilityKit';
@@ -81,10 +77,6 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WRITE_MEDIA
 
 <!--Device-fileShare-function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.Flags): Promise<void>--><!--Device-fileShare-function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.Flags): Promise<void>-End-->
@@ -116,7 +108,7 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 14300001 | IPC error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { wantConstant } from '@kit.AbilityKit';
@@ -150,10 +142,6 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 <!--Device-fileShare-function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: string, appCloneIndex: int): Promise<void>--><!--Device-fileShare-function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: string, appCloneIndex: int): Promise<void>-End-->
@@ -186,7 +174,7 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13900011 | Out of memory. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

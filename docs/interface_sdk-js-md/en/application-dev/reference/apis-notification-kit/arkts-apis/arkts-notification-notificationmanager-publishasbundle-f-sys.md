@@ -21,10 +21,6 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
 <!--Device-notificationManager-function publishAsBundle(    request: NotificationRequest,    representativeBundle: string,    userId: int,    callback: AsyncCallback<void>  ): void--><!--Device-notificationManager-function publishAsBundle(    request: NotificationRequest,    representativeBundle: string,    userId: int,    callback: AsyncCallback<void>  ): void-End-->
@@ -69,7 +65,7 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 | [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -111,10 +107,6 @@ function publishAsBundle(request: NotificationRequest, representativeBundle: str
 Publishes a notification through the reminder agent. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -165,7 +157,7 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -203,10 +195,6 @@ function publishAsBundle(representativeBundle: BundleOption, request: Notificati
 Publishes a notification through the reminder agent. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -256,7 +244,7 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@ Implements the controller for the **Swiper** component. Bind this object to a **
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class SwiperController--><!--Device-unnamed-declare class SwiperController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ changeIndex(index: number, useAnimation?: boolean)
 Goes to a specified page.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,10 +45,6 @@ Moves to a specific page. > **NOTE：**> > This API itself supports jumping with
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -84,10 +72,6 @@ A constructor used to create a **SwiperController** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -105,10 +89,6 @@ fakeDragBy(offset: number): boolean
 Sets the drag distance of drag simulation. > **NOTE：**> > - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout, > so that the drag effect can be displayed after the current frame layout. If this API is called multiple times > before the layout, only the drag distance passed in the last call takes effect during the current frame layout. > > - In the loop scenario where loop is set to **true**, if the drag distance of drag > simulation is greater than the total layout length, the drag distance will be adjusted to the distance required > to drag just far enough to display the first child node (when dragging toward the start of the layout) or the > last child node (when dragging toward the end of the layout). > > - The onGestureSwipe and > onContentWillScroll events are not triggered during the drag. The > customContentTransition event is triggered before the layout. > Since the actual drag distance may be adjusted during the layout, if the passed drag distance is too large, the > returned node display information may be inconsistent with the layout result when the event is triggered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,10 +122,6 @@ Stops an animation.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -169,10 +145,6 @@ isFakeDragging(): boolean
 Obtains whether drag simulation is enabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -199,10 +171,6 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 Preloads child nodes for **Swiper**. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches. This API uses a promise to return the result. If the **SwiperController** object is not bound to any **Swiper** component, any attempt to call APIs on it will result in a JavaScript exception, together with the error code 100004. Therefore, you are advised to use **try-catch** to handle potential exceptions when calling APIs on **SwiperController**. When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and custom components, be aware that [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) only retains custom components within the cache range. Components outside this range are removed. Therefore, make sure the indexes of nodes to be preloaded via this API are within the cache range to avoid issues. > **NOTE：**> > **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the > first preloading in the onAppear lifecycle of **Swiper**.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -243,10 +211,6 @@ Turns to the next page. The page turning includes a transition animation, with t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -265,10 +229,6 @@ Turns to the previous page. The page turning includes a transition animation, wi
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -286,10 +246,6 @@ startFakeDrag(): boolean
 Enables drag simulation. > **NOTE：**> > - If the **Swiper** component is dragged using real gestures or the drag simulation is enabled, the API returns > **false**, indicating that the operation fails. > > - Simulated drag cannot trigger nested scrolling.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -316,10 +272,6 @@ stopFakeDrag(): boolean
 Disables drag simulation. > **NOTE：**> > After drag simulation is enabled, it will end if a real drag gesture is received.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

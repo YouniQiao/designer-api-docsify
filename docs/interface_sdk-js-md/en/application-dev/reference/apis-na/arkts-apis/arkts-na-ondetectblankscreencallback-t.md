@@ -8,9 +8,7 @@ The callback when web engine detects current page is blank or nearly blank.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => void--><!--Device-unnamed-export type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => void-End-->
 

@@ -16,10 +16,6 @@ Checks whether HD vibration is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-function isHdHapticSupported(): boolean--><!--Device-vibrator-function isHdHapticSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -36,7 +32,7 @@ Checks whether HD vibration is supported.
 | --- | --- |
 | [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

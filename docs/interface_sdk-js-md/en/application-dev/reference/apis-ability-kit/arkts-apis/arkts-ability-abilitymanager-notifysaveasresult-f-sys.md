@@ -12,11 +12,9 @@ import { abilityManager } from 'abilityManager';
 function notifySaveAsResult(parameter: AbilityResult, requestCode: int, callback: AsyncCallback<void>): void
 ```
 
-Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md#@ohos.dlpPermission) management application to notify a sandbox application of the data saving result. This API uses an asynchronous callback to return the result.
+Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md#ohosdlppermission) management application to notify a sandbox application of the data saving result. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 24
 
@@ -52,11 +50,9 @@ Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-ap
 function notifySaveAsResult(parameter: AbilityResult, requestCode: int): Promise<void>
 ```
 
-Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md#@ohos.dlpPermission) management application to notify a sandbox application of the data saving result. This API uses a promise to return the result.
+Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md#ohosdlppermission) management application to notify a sandbox application of the data saving result. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 24
 

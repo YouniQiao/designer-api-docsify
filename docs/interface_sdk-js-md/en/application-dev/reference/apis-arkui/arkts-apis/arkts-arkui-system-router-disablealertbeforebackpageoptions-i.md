@@ -1,10 +1,8 @@
-# DisableAlertBeforeBackPageOptions
+# DisableAlertBeforeBackPageOptions(Page Routing)
 
 Defines the **DisableAlertBeforeBackPage** parameter.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 
@@ -36,8 +34,6 @@ Called when the dialog box fails to be closed. **errMsg** indicates the returned
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** RouterOptions
@@ -58,8 +54,6 @@ Called when the dialog box is closed.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** RouterOptions
@@ -79,8 +73,6 @@ Called when the dialog box is closed. **errMsg** indicates the returned informat
 **Type:** (errMsg: string) =&gt; void
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 

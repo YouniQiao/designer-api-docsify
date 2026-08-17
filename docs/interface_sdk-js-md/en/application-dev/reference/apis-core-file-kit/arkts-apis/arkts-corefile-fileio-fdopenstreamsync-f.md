@@ -10,11 +10,9 @@ Opens a stream based on the file descriptor. This API returns the result synchro
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md#fdopenStreamSync)
+**Substitutes:** [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md#fdopenstreamsync)
 
 <!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream--><!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream-End-->
 

@@ -16,11 +16,9 @@ Obtains the class of a peer Bluetooth device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRemoteDeviceClass](arkts-connectivity-bluetoothmanager-getremotedeviceclass-f.md#getRemoteDeviceClass)
+**Substitutes:** [getRemoteDeviceClass](arkts-connectivity-bluetoothmanager-getremotedeviceclass-f.md#getremotedeviceclass)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -40,7 +38,7 @@ Obtains the class of a peer Bluetooth device.
 | --- | --- |
 | DeviceClass | The class of the remote device, { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let remoteDeviceClass : bluetooth.DeviceClass = bluetooth.getRemoteDeviceClass("XX:XX:XX:XX:XX:XX");

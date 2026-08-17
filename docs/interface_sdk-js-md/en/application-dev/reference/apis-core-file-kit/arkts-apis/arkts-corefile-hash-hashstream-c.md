@@ -1,14 +1,10 @@
 # HashStream
 
-The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](arkts-corefile-hash-createhash-f.md#createHash) to create a **HashStream** instance.
+The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](arkts-corefile-hash-createhash-f.md#createhash) to create a **HashStream** instance.
 
-**Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md#Transform)
+**Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md#transform)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hash-class HashStream--><!--Device-hash-class HashStream-End-->
 
@@ -30,10 +26,6 @@ Generates a message digest.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HashStream-digest(): string--><!--Device-HashStream-digest(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -51,7 +43,7 @@ Generates a message digest.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Create a hash stream.
@@ -73,10 +65,6 @@ Updates the data for generating a message digest. This API can be called multipl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HashStream-update(data: ArrayBuffer): void--><!--Device-HashStream-update(data: ArrayBuffer): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -94,7 +82,7 @@ Updates the data for generating a message digest. This API can be called multipl
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Create a hash stream.

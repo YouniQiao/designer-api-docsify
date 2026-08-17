@@ -1,12 +1,8 @@
 # UIEventObserver
 
-Defines a UI event listener, which is used to listen for various events on the UI, including the display of the **Toast** and **Dialog** components, window change event, and component operation event. An instance can be created using [createUIEventObserver](arkts-test-uitest-driver-c.md#createUIEventObserver).
+Defines a UI event listener, which is used to listen for various events on the UI, including the display of the **Toast** and **Dialog** components, window change event, and component operation event. An instance can be created using [createUIEventObserver](arkts-test-uitest-driver-c.md#createuieventobserver).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface UIEventObserver--><!--Device-unnamed-declare interface UIEventObserver-End-->
 
@@ -56,10 +52,6 @@ Listen on component event once, additional listening options can be set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UIEventObserver-onceComponentEventOccur(componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceComponentEventOccur(componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -89,10 +81,6 @@ Listen for dialog show once
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UIEventObserver-onceDialogShow(callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceDialogShow(callback: Callback<UIElementInfo>): void-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -119,10 +107,6 @@ Listen for toast show once
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UIEventObserver-onceToastShow(callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceToastShow(callback: Callback<UIElementInfo>): void-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -148,10 +132,6 @@ onceWindowChange(windowChangeType: WindowChangeType, options: WindowChangeOption
 Listen on window change once, additional listening options can be set.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UIEventObserver-onceWindowChange(windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceWindowChange(windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void-End-->
 
@@ -182,10 +162,6 @@ Starts listening for component operation events of the specified type with exten
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIEventObserver-once(type: 'componentEventOccur', componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-once(type: 'componentEventOccur', componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void-End-->
@@ -208,7 +184,7 @@ Starts listening for component operation events of the specified type with exten
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -247,10 +223,6 @@ Subscribes to events of the dialog component. This API uses a callback to return
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIEventObserver-once(type: 'dialogShow', callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-once(type: 'dialogShow', callback: Callback<UIElementInfo>): void-End-->
@@ -270,7 +242,7 @@ Subscribes to events of the dialog component. This API uses a callback to return
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -298,10 +270,6 @@ Subscribes to events of the toast component. This API uses a callback to return 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIEventObserver-once(type: 'toastShow', callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-once(type: 'toastShow', callback: Callback<UIElementInfo>): void-End-->
@@ -321,7 +289,7 @@ Subscribes to events of the toast component. This API uses a callback to return 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -349,10 +317,6 @@ Starts listening for window change events of the specified type with extended co
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UIEventObserver-once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void-End-->
@@ -375,7 +339,7 @@ Starts listening for window change events of the specified type with extended co
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets

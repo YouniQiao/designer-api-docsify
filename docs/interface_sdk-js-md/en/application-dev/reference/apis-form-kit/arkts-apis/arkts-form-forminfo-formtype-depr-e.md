@@ -4,11 +4,9 @@ Enumerates the widget types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FormType](arkts-form-forminfo-formtype-e.md#FormType)
+**Substitutes:** [FormType](arkts-form-forminfo-formtype-e.md#formtype)
 
 <!--Device-formInfo-enum FormType--><!--Device-formInfo-enum FormType-End-->
 
@@ -24,11 +22,9 @@ JS widget.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [JS](arkts-form-forminfo-formtype-e.md#JS)
+**Substitutes:** [JS](arkts-form-forminfo-formtype-e.md#js)
 
 <!--Device-FormType-JS = 1--><!--Device-FormType-JS = 1-End-->
 

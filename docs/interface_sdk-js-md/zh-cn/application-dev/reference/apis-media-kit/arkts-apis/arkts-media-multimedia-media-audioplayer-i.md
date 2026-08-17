@@ -1,10 +1,8 @@
 # AudioPlayer
 
-> **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-media-n.md#media)替代。 音频播放管理类，用于管理和播放音频媒体。在调用AudioPlayer的方法前，需要先通过 [createAudioPlayer()](arkts-media-media-createaudioplayer-f.md#createAudioPlayer)构建一个AudioPlayer实例。
+> **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-media-n.md#media)替代。 音频播放管理类，用于管理和播放音频媒体。在调用AudioPlayer的方法前，需要先通过 [createAudioPlayer()](arkts-media-media-createaudioplayer-f.md#createaudioplayer)构建一个AudioPlayer实例。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -20,15 +18,13 @@
 getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 ```
 
-获取音频轨道信息。需在'dataLoad'事件成功触发后，才能调用。通过回调函数获取返回值。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription) > 替代。
+获取音频轨道信息。需在'dataLoad'事件成功触发后，才能调用。通过回调函数获取返回值。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription) > 替代。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
+**替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
 
 <!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
@@ -38,7 +34,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数。获取音频轨道信息成功时，err为undefined，data为获取到的 MediaDescription数组，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数。获取音频轨道信息成功时，err为undefined，data为获取到的 MediaDescription数组，否则为错误对象。 |
 
 ## getTrackDescription
 
@@ -46,15 +42,13 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 getTrackDescription(): Promise<Array<MediaDescription>>
 ```
 
-获取音频轨道信息。需在'dataLoad'事件成功触发后，才能调用。通过Promise获取返回值。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)替代。
+获取音频轨道信息。需在'dataLoad'事件成功触发后，才能调用。通过Promise获取返回值。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)替代。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)()
+**替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)()
 
 <!--Device-AudioPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-AudioPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
 
@@ -72,11 +66,9 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 ```
 
-监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#InterruptEvent)。 > **说明：** > > 从API version 9开始支持，从API version 9开始废弃，建议使用 > AVPlayer.on('audioInterrupt') > 替代。
+监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#interruptevent)。 > **说明：** > > 从API version 9开始支持，从API version 9开始废弃，建议使用 > AVPlayer.on('audioInterrupt') > 替代。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 9
 
@@ -103,8 +95,6 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** on(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler)
@@ -129,8 +119,6 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 开始订阅音频播放事件。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > AVPlayer.on('stateChange') > 替代。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -157,8 +145,6 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** on(type: 'error', callback: ErrorCallback)
@@ -172,7 +158,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 播放错误事件回调类型，支持的事件包括：'error'。<br>- 'error'：音频播放中发生错误，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 播放错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 播放错误事件回调方法。 |
 
 ## on_finish
 
@@ -183,8 +169,6 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 开始订阅音频播放事件。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > AVPlayer.on('stateChange') > 替代。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -211,8 +195,6 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
@@ -237,8 +219,6 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 开始订阅音频播放事件。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > AVPlayer.on('stateChange') > 替代。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -265,8 +245,6 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
@@ -291,8 +269,6 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 开始订阅音频播放事件。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > AVPlayer.on('stateChange') > 替代。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -319,8 +295,6 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** on(type: 'timeUpdate', callback: Callback&lt;int&gt;)
@@ -334,7 +308,7 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'timeUpdate' | 是 | 播放事件回调类型，支持的事件包括：'timeUpdate'。<br>- 'timeUpdate'：音频播放时间戳更新，开始播放后自动触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 播放事件回调方法。回调方法入参为更新后的时间戳。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 播放事件回调方法。回调方法入参为更新后的时间戳。 |
 
 ## on_volumeChange
 
@@ -345,8 +319,6 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 开始订阅音频播放事件。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > AVPlayer.on('stateChange') > 替代。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -373,8 +345,6 @@ pause(): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [pause](arkts-media-media-avplayer-i.md#pause)(callback: AsyncCallback&lt;void&gt;)
@@ -392,8 +362,6 @@ play(): void
 开始播放音频资源，需在'dataLoad'事件成功触发后，才能调用。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [AVPlayer.play](arkts-media-media-avplayer-i.md#play)替代。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -413,8 +381,6 @@ release(): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [release](arkts-media-media-avplayer-i.md#release)(callback: AsyncCallback&lt;void&gt;)
@@ -433,8 +399,6 @@ reset(): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [reset](arkts-media-media-avplayer-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
@@ -452,8 +416,6 @@ seek(timeMs: number): void
 跳转到指定播放位置。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)替代 > 。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -475,15 +437,13 @@ seek(timeMs: number): void
 setVolume(vol: number): void
 ```
 
-设置音量。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setVolume)替代。
+设置音量。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)替代。
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
-**替代接口：** [setVolume](arkts-media-media-avplayer-i.md#setVolume)
+**替代接口：** [setVolume](arkts-media-media-avplayer-i.md#setvolume)
 
 <!--Device-AudioPlayer-setVolume(vol: number): void--><!--Device-AudioPlayer-setVolume(vol: number): void-End-->
 
@@ -505,8 +465,6 @@ stop(): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [stop](arkts-media-media-avplayer-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
@@ -526,8 +484,6 @@ audioInterruptMode?: audio.InterruptMode
 **类型：** audio.InterruptMode
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 9
 
@@ -549,8 +505,6 @@ readonly currentTime: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** currentTime
@@ -570,8 +524,6 @@ readonly duration: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -593,8 +545,6 @@ fdSrc: AVFileDescriptor
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** fdSrc
@@ -615,8 +565,6 @@ loop: boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** loop
@@ -636,8 +584,6 @@ src: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -660,8 +606,6 @@ readonly state: AudioState
 **类型：** [AudioState](arkts-media-audiostate-t.md)
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 

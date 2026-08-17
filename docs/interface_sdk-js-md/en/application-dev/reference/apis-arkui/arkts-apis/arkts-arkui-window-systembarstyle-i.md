@@ -4,10 +4,6 @@ Describes the properties of the status bar. These properties are valid for the p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface SystemBarStyle--><!--Device-window-interface SystemBarStyle-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -29,10 +25,6 @@ Color of the text on the status bar. The default value is **'#E5FFFFFF'**.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

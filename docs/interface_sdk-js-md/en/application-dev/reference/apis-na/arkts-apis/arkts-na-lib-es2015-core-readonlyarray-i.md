@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ReadonlyArray--><!--Device-unnamed-interface ReadonlyArray-End-->
 
 ## find
@@ -17,10 +13,6 @@ find<S extends T>(predicate: (this: void, value: T, index: number, obj: readonly
 Returns the value of the first element in the array where predicate is true, and undefined otherwise.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReadonlyArray-find<S extends T>(predicate: (this: void, value: T, index: number, obj: readonly T[]) => value is S, thisArg?: any): S | undefined--><!--Device-ReadonlyArray-find<S extends T>(predicate: (this: void, value: T, index: number, obj: readonly T[]) => value is S, thisArg?: any): S | undefined-End-->
 
@@ -44,10 +36,6 @@ find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReadonlyArray-find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg?: any): T | undefined--><!--Device-ReadonlyArray-find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg?: any): T | undefined-End-->
 
@@ -73,10 +61,6 @@ findIndex(predicate: (value: T, index: number, obj: readonly T[]) => unknown, th
 Returns the index of the first element in the array where predicate is true, and -1 otherwise.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReadonlyArray-findIndex(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg?: any): number--><!--Device-ReadonlyArray-findIndex(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg?: any): number-End-->
 

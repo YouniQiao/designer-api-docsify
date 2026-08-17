@@ -4,10 +4,6 @@ Enum for accessibility action type
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum AccessibilityAction--><!--Device-unnamed-declare enum AccessibilityAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ UNDEFINED_ACTION = 0
 undefined action type
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +37,6 @@ ACCESSIBILITY_CLICK = 1
 accessibility click action
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

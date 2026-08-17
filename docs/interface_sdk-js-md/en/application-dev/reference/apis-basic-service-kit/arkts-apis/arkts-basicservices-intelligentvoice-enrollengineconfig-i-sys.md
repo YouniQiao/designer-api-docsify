@@ -4,10 +4,6 @@ Describes enroll engine config.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-interface EnrollEngineConfig--><!--Device-intelligentVoice-interface EnrollEngineConfig-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -32,10 +28,6 @@ Language that enroll engine supports.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EnrollEngineConfig-language: string--><!--Device-EnrollEngineConfig-language: string-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -53,10 +45,6 @@ Region that enroll engine supports.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EnrollEngineConfig-region: string--><!--Device-EnrollEngineConfig-region: string-End-->
 

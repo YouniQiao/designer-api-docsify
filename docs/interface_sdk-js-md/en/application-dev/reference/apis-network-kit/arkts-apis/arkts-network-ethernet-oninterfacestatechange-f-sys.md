@@ -16,10 +16,6 @@ Register a callback for the ethernet interface active state change.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-ethernet-function on(type: 'interfaceStateChange', callback: Callback<InterfaceStateInfo>): void--><!--Device-ethernet-function on(type: 'interfaceStateChange', callback: Callback<InterfaceStateInfo>): void-End-->
@@ -43,7 +39,7 @@ Register a callback for the ethernet interface active state change.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';

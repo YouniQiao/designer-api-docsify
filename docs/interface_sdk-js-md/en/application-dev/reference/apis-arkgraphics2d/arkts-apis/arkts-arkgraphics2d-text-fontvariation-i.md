@@ -4,10 +4,6 @@ Describes a font variation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface FontVariation--><!--Device-text-interface FontVariation-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Keyword identifier in the variable font property key-value pair, such as 'wght' 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontVariation-axis: string--><!--Device-FontVariation-axis: string-End-->
@@ -52,10 +44,6 @@ Whether to normalize. If the value is **true**, the value range of the value fie
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariation-isNormalized?: boolean--><!--Device-FontVariation-isNormalized?: boolean-End-->
@@ -73,10 +61,6 @@ Value in the font variation key-value pair.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

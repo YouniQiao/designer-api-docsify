@@ -4,11 +4,9 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#WEAR_DETECTION)
+**替代接口：** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#weardetection)
 
 <!--Device-unnamed-export interface GetOnBodyStateOptions--><!--Device-unnamed-export interface GetOnBodyStateOptions-End-->
 
@@ -25,8 +23,6 @@ complete?: () => void
 **类型：** () =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 8
 
@@ -50,8 +46,6 @@ fail?: (data: string, code: number) => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** once
@@ -73,8 +67,6 @@ success: (data: OnBodyStateResponse) => void
 **类型：** (data: OnBodyStateResponse) =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 8
 

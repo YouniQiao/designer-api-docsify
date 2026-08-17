@@ -4,10 +4,6 @@ Image receiver class. You can use it to obtain the surface ID of a component, re
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendableImage-interface ImageReceiver--><!--Device-sendableImage-interface ImageReceiver-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -28,10 +24,6 @@ Obtains a surface ID for the camera or other components. This API uses a promise
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>--><!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -42,7 +34,7 @@ Obtains a surface ID for the camera or other components. This API uses a promise
 | --- | --- |
 | Promise&lt;string&gt; | Asynchronously returns the surface ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -73,10 +65,6 @@ Listens for image arrival events. This API uses an asynchronous callback to retu
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -88,7 +76,7 @@ Listens for image arrival events. This API uses an asynchronous callback to retu
 | type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which is triggered when an image is received. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked for the event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -112,13 +100,9 @@ async function Demo() {
 readLatestImage(): Promise<Image>
 ```
 
-Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE：**> > This API can be called to receive data only after the [on](#on_imageArrival) callback is > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md#ImageSource) object returned by this API is no longer needed, > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after > the release.
+Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE：**> > This API can be called to receive data only after the [on](#onimagearrival) callback is > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md#imagesource) object returned by this API is no longer needed, > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after > the release.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ImageReceiver-readLatestImage(): Promise<Image>--><!--Device-ImageReceiver-readLatestImage(): Promise<Image>-End-->
 
@@ -130,7 +114,7 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 | --- | --- |
 | Promise&lt;Image&gt; | Promise used to return the latest image. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -157,13 +141,9 @@ async function Demo() {
 readNextImage(): Promise<Image>
 ```
 
-Reads the next image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE：**> > This API can be called to receive data only after the [on](#on_imageArrival) callback is > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md#ImageSource) object returned by this API is no longer needed, > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after > the release.
+Reads the next image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE：**> > This API can be called to receive data only after the [on](#onimagearrival) callback is > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md#imagesource) object returned by this API is no longer needed, > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after > the release.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ImageReceiver-readNextImage(): Promise<Image>--><!--Device-ImageReceiver-readNextImage(): Promise<Image>-End-->
 
@@ -175,7 +155,7 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 | --- | --- |
 | Promise&lt;Image&gt; | Promise used to return the next image. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -206,10 +186,6 @@ Releases this ImageReceiver instance. This API uses a promise to return the resu
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ImageReceiver-release(): Promise<void>--><!--Device-ImageReceiver-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -220,7 +196,7 @@ Releases this ImageReceiver instance. This API uses a promise to return the resu
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -253,10 +229,6 @@ Maximum number of images that can be accessed at the same time. This parameter i
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ImageReceiver-readonly capacity: number--><!--Device-ImageReceiver-readonly capacity: number-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -273,10 +245,6 @@ Image format.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ImageReceiver-readonly format: image.ImageFormat--><!--Device-ImageReceiver-readonly format: image.ImageFormat-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -292,10 +260,6 @@ Image size.
 **Type:** image.Size
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ImageReceiver-readonly size: image.Size--><!--Device-ImageReceiver-readonly size: image.Size-End-->
 

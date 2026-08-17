@@ -4,10 +4,6 @@ Enumerates the status types of an attendee.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-calendarManager-export enum AttendeeStatus--><!--Device-calendarManager-export enum AttendeeStatus-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -21,10 +17,6 @@ UNKNOWN = 0
 The attendee status is unknown.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -42,10 +34,6 @@ The attendee status is tentative.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AttendeeStatus-TENTATIVE = 1--><!--Device-AttendeeStatus-TENTATIVE = 1-End-->
@@ -61,10 +49,6 @@ ACCEPTED = 2
 The attendee has accepted the conference invitation.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -82,10 +66,6 @@ The attendee has rejected the conference invitation.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AttendeeStatus-DECLINED = 3--><!--Device-AttendeeStatus-DECLINED = 3-End-->
@@ -101,10 +81,6 @@ UNRESPONSIVE = 4
 The attendee does not respond.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

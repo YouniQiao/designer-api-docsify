@@ -16,10 +16,6 @@ Update the policy when the quota reaches the upper limit.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 <!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType, callback: AsyncCallback<void>): void--><!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType, callback: AsyncCallback<void>): void-End-->
@@ -32,9 +28,9 @@ Update the policy when the quota reaches the upper limit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netType | NetBearType | Yes | [NetBearType](arkts-network-policy-netbeartype-t.md#NetBearType). |
+| netType | NetBearType | Yes | [NetBearType](arkts-network-policy-netbeartype-t.md#netbeartype). |
 | simId | string | Yes | Specify the matched simId of quota policy when netType is cellular. |
-| remindType | [RemindType](arkts-network-policy-remindtype-e-sys.md) | Yes | [RemindType](arkts-network-policy-remindtype-e-sys.md#RemindType-(System-API)). |
+| remindType | [RemindType](arkts-network-policy-remindtype-e-sys.md) | Yes | [RemindType](arkts-network-policy-remindtype-e-sys.md#remindtype-system-api). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of updateRemindPolicy. |
 
 **Error codes:**
@@ -48,7 +44,7 @@ Update the policy when the quota reaches the upper limit.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -75,10 +71,6 @@ Update the policy when the quota reaches the upper limit.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 <!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType): Promise<void>--><!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType): Promise<void>-End-->
@@ -91,9 +83,9 @@ Update the policy when the quota reaches the upper limit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netType | NetBearType | Yes | [NetBearType](arkts-network-policy-netbeartype-t.md#NetBearType). |
+| netType | NetBearType | Yes | [NetBearType](arkts-network-policy-netbeartype-t.md#netbeartype). |
 | simId | string | Yes | Specify the matched simId of quota policy when netType is cellular. |
-| remindType | [RemindType](arkts-network-policy-remindtype-e-sys.md) | Yes | [RemindType](arkts-network-policy-remindtype-e-sys.md#RemindType-(System-API)). |
+| remindType | [RemindType](arkts-network-policy-remindtype-e-sys.md) | Yes | [RemindType](arkts-network-policy-remindtype-e-sys.md#remindtype-system-api). |
 
 **Return value:**
 
@@ -112,7 +104,7 @@ Update the policy when the quota reaches the upper limit.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

@@ -16,10 +16,6 @@ Add a firewall rule.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
 
 <!--Device-netFirewall-function addNetFirewallRule(rule: NetFirewallRule): Promise<number>--><!--Device-netFirewall-function addNetFirewallRule(rule: NetFirewallRule): Promise<number>-End-->
@@ -55,7 +51,7 @@ Add a firewall rule.
 | [29400007](../errorcode-net-netfirewall.md#29400007-dns-rule-duplication) | The dns rule is duplication. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { netFirewall } from '@kit.NetworkKit';

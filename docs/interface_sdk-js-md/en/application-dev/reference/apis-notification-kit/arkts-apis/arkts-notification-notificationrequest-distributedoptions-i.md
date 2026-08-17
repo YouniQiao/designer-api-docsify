@@ -4,10 +4,6 @@ Describes options for cross-device notifications. Not supported currently.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface DistributedOptions--><!--Device-unnamed-export interface DistributedOptions-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -26,10 +22,6 @@ Whether cross-device notifications are supported. The default value is **true**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedOptions-isDistributed?: boolean--><!--Device-DistributedOptions-isDistributed?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -46,10 +38,6 @@ List of the devices to which the notification can be synchronized.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedOptions-supportDisplayDevices?: Array<string>--><!--Device-DistributedOptions-supportDisplayDevices?: Array<string>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -65,10 +53,6 @@ List of the devices on which the notification can be opened.
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedOptions-supportOperateDevices?: Array<string>--><!--Device-DistributedOptions-supportOperateDevices?: Array<string>-End-->
 

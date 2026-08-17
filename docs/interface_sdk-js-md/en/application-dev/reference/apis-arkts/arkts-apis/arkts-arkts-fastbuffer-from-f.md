@@ -16,10 +16,6 @@ Allocates a new FastBuffer using an array of bytes in the range 0 – 255. Array
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function from(array: number[]): FastBuffer--><!--Device-fastbuffer-function from(array: number[]): FastBuffer-End-->
@@ -38,7 +34,7 @@ Allocates a new FastBuffer using an array of bytes in the range 0 – 255. Array
 | --- | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new allocated FastBuffer |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -58,10 +54,6 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 This creates a view of the ArrayBuffer without copying the underlying memory.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -90,7 +82,7 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
 | [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -111,10 +103,6 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 Copies the passed buffer data onto a new FastBuffer instance.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -140,7 +128,7 @@ Copies the passed buffer data onto a new FastBuffer instance.
 | --- | --- |
 | [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -170,10 +158,6 @@ Creates a new FastBuffer containing string. The encoding parameter identifies th
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer--><!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer-End-->
@@ -193,7 +177,7 @@ Creates a new FastBuffer containing string. The encoding parameter identifies th
 | --- | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new FastBuffer containing string |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

@@ -1,12 +1,8 @@
-# WithThemeOptions
+# WithThemeOptions(Defines WithTheme component.)
 
 设置WithTheme作用域内组件默认配色及深浅色模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface WithThemeOptions--><!--Device-unnamed-declare interface WithThemeOptions-End-->
 
@@ -23,10 +19,6 @@ colorMode?: ThemeColorMode
 **类型：** ThemeColorMode
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,10 +39,6 @@ theme?: CustomTheme
 **类型：** [CustomTheme](arkts-arkui-customtheme-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

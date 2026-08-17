@@ -16,10 +16,6 @@ Unregister a callback function for vibrator plugin or unplug events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-function offVibratorStateChange(callback?: Callback<VibratorStatusEvent>): void--><!--Device-vibrator-function offVibratorStateChange(callback?: Callback<VibratorStatusEvent>): void-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice

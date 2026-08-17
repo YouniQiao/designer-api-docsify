@@ -10,10 +10,6 @@ function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneId
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity--><!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -32,7 +28,7 @@ function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneId
 | --- | --- |
 | AppCloneIdentity | 返回应用包名和分身索引信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

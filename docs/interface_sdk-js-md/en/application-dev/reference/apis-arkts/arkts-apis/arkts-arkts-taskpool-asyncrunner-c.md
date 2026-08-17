@@ -4,10 +4,6 @@ Implements an asynchronous queue, for which you can specify the task execution c
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-taskpool-export class AsyncRunner--><!--Device-taskpool-export class AsyncRunner-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ A constructor used to create an **AsyncRunner** instance. It constructs a non-gl
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AsyncRunner-constructor(runningCapacity: number, waitingCapacity?: number)--><!--Device-AsyncRunner-constructor(runningCapacity: number, waitingCapacity?: number)-End-->
@@ -45,7 +37,7 @@ A constructor used to create an **AsyncRunner** instance. It constructs a non-gl
 | runningCapacity | number | Yes | Maximum number of tasks that can run concurrently. The value must be a positive integer. If a negative number is passed, an error is reported. If a non-integer is passed, the value is rounded down. |
 | waitingCapacity | number | No | Maximum number of tasks that can be queued. The value must be greater than or equal to 0. If a negative number is passed, an error is reported. If a non-integer is passed, the value is rounded down. The default value is **0**, indicating that there is no limit to the number of tasks that can wait. If a value greater than 0 is passed, tasks will be discarded from the front of the queue once the queue size exceeds this limit, implementing a discard policy. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
@@ -61,10 +53,6 @@ A constructor used to create an **AsyncRunner** instance. It constructs a global
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AsyncRunner-constructor(name: string, runningCapacity: number, waitingCapacity?: number)--><!--Device-AsyncRunner-constructor(name: string, runningCapacity: number, waitingCapacity?: number)-End-->
@@ -79,7 +67,7 @@ A constructor used to create an **AsyncRunner** instance. It constructs a global
 | runningCapacity | number | Yes | Maximum number of tasks that can run concurrently. The value must be a positive integer. If a negative number is passed, an error is reported. If a non-integer is passed, the value is rounded down. |
 | waitingCapacity | number | No | Maximum number of tasks that can be queued. The value must be greater than or equal to 0. If a negative number is passed, an error is reported. If a non-integer is passed, the value is rounded down. The default value is **0**, indicating that there is no limit to the number of tasks that can wait. If a value greater than 0 is passed, tasks will be discarded from the front of the queue once the queue size exceeds this limit, implementing a discard policy. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
@@ -94,10 +82,6 @@ execute(task: Task, priority?: Priority): Promise<Object>
 Adds a task to the asynchronous queue for execution. Before using this API, you must create an **AsyncRunner** instance. This API uses a promise to return the result. > **NOTE：**> > - Tasks in a task group cannot be added to the asynchronous queue. > > - Tasks in a serial queue cannot be added to the asynchronous queue. > > - Tasks in other asynchronous queues cannot be added to the asynchronous queue. > > - Periodic tasks cannot be added to the asynchronous queue. > > - Delayed tasks cannot be added to the asynchronous queue. > > - Tasks that depend others cannot be added to the asynchronous queue. > > - Tasks that have been executed cannot be added to the asynchronous queue.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -128,7 +112,7 @@ Adds a task to the asynchronous queue for execution. Before using this API, you 
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200054](../errorcode-utils.md#10200054-asynchronous-queue-task-discarded) | The asyncRunner task is discarded. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';

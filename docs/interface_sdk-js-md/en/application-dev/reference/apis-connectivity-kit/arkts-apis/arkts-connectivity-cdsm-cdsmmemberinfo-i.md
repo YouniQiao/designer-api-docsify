@@ -4,10 +4,6 @@ Describes the member information of coordinated devices set.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-cdsm-interface CdsmMemberInfo--><!--Device-cdsm-interface CdsmMemberInfo-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -30,10 +26,6 @@ Indicates the device address. The length must be 17, The value consists of hexad
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CdsmMemberInfo-address: string--><!--Device-CdsmMemberInfo-address: string-End-->
@@ -51,10 +43,6 @@ Member's connection state.
 **Type:** [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

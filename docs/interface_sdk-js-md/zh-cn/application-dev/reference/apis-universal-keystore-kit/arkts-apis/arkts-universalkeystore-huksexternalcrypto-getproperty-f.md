@@ -10,10 +10,6 @@ function getProperty(resourceId: string, propertyId: string, params?: Array<Huks
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-huksExternalCrypto-function getProperty(resourceId: string, propertyId: string, params?: Array<HuksExternalCryptoParam>): Promise<Array<HuksExternalCryptoParam>>--><!--Device-huksExternalCrypto-function getProperty(resourceId: string, propertyId: string, params?: Array<HuksExternalCryptoParam>): Promise<Array<HuksExternalCryptoParam>>-End-->
@@ -24,9 +20,9 @@ function getProperty(resourceId: string, propertyId: string, params?: Array<Huks
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceId | string | 是 | 资源ID，可通过 [导出证书的接口](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openAuthorizeDialog) 获取，该接口的返回结果中附带resourceId。 |
+| resourceId | string | 是 | 资源ID，可通过 [导出证书的接口](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) 获取，该接口的返回结果中附带resourceId。 |
 | propertyId | string | 是 | 查找操作的属性名称，是GMT 0016-2023中定义的SKF接口名，应用开发者需要针对接口名进行适配。 |
-| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 否 | 需要传递给 [Extension Ability](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#CryptoExtensionAbility)的输入参数。非系统应用传入 [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType)是非法参数。 |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 否 | 需要传递给 [Extension Ability](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#cryptoextensionability)的输入参数。非系统应用传入 [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype)是非法参数。 |
 
 **返回值：**
 
@@ -50,7 +46,7 @@ function getProperty(resourceId: string, propertyId: string, params?: Array<Huks
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | If the cached resource ID is not found. |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | If the provider or UKey is busy. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';

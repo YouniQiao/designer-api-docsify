@@ -10,10 +10,6 @@ function setCallRestrictionPassword(slotId: int, oldPassword: string, newPasswor
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function setCallRestrictionPassword(slotId: int, oldPassword: string, newPassword: string, callback: AsyncCallback<void>): void--><!--Device-call-function setCallRestrictionPassword(slotId: int, oldPassword: string, newPassword: string, callback: AsyncCallback<void>): void-End-->
@@ -29,7 +25,7 @@ function setCallRestrictionPassword(slotId: int, oldPassword: string, newPasswor
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 | oldPassword | string | 是 | 呼叫限制旧密码。 |
 | newPassword | string | 是 | 呼叫限制新密码。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回修改呼叫限制密码的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回修改呼叫限制密码的结果。 |
 
 **错误码：**
 
@@ -43,7 +39,7 @@ function setCallRestrictionPassword(slotId: int, oldPassword: string, newPasswor
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,10 +63,6 @@ function setCallRestrictionPassword(slotId: int, oldPassword: string, newPasswor
 修改呼叫限制密码。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -106,7 +98,7 @@ function setCallRestrictionPassword(slotId: int, oldPassword: string, newPasswor
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

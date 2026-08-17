@@ -1,12 +1,8 @@
-# UIExtensionOptions (System API)
+# UIExtensionOptions(System API) (System API)
 
 Describes the optional construction parameters during **UIExtensionComponent** construction.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface UIExtensionOptions--><!--Device-unnamed-declare interface UIExtensionOptions-End-->
 
@@ -25,10 +21,6 @@ Placeholder for size changes, displayed when the UIExtensionComponent's size cha
 **Type:** Record&lt;string, ComponentContent&gt;
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Whether the DPI settings follow the host or UIExtensionAbility. Default value: *
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionOptions-dpiFollowStrategy?: DpiFollowStrategy--><!--Device-UIExtensionOptions-dpiFollowStrategy?: DpiFollowStrategy-End-->
@@ -78,10 +66,6 @@ Whether the **UIExtensionComponent** forwards the upper-level caller information
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionOptions-isTransferringCaller?: boolean--><!--Device-UIExtensionOptions-isTransferringCaller?: boolean-End-->
@@ -101,10 +85,6 @@ Placeholder to be displayed before the UIExtensionComponent establishes a connec
 **Type:** ComponentContent
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,10 +107,6 @@ Following strategy of the window mode. Default value: **FOLLOW_UI_EXTENSION_ABIL
 **Default:** WindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

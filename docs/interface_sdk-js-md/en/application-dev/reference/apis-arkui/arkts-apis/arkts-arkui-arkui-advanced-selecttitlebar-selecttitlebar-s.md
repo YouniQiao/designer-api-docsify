@@ -4,10 +4,6 @@ The **SelectTitleBar** component represents a drop-down menu title bar used for 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct SelectTitleBar--><!--Device-unnamed-export declare struct SelectTitleBar-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -31,10 +27,6 @@ Value for the badge. Value range: [-2147483648, 2147483647]. If the value is out
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -54,10 +46,6 @@ Whether to hide the back arrow on the left. Default value: **false**. **true** t
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,10 +67,6 @@ List of menu items on the right side of the title bar. This parameter is passed 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -103,10 +87,6 @@ Callback invoked when an option in the drop-down menu is selected. The index of 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -126,10 +106,6 @@ Options in the drop-down menu.
 **Type:** Array&lt;SelectOption&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,10 +128,6 @@ Index of the currently selected item. The index of the first item is 0. If this 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -175,10 +147,6 @@ Subtitle, used to display supplementary information. This parameter is passed to
 **Type:** ResourceStr
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

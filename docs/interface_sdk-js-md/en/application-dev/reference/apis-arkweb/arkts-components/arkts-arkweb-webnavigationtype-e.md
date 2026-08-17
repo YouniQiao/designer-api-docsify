@@ -1,12 +1,8 @@
 # WebNavigationType
 
-Enum type supplied to [navigationType](arkts-arkweb-loadcommitteddetails-i.md#navigationType) for the navigation's type.
+Enumerates the navigation types.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum WebNavigationType--><!--Device-unnamed-declare enum WebNavigationType-End-->
 
@@ -22,10 +18,6 @@ Unknown type.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebNavigationType-UNKNOWN = 0--><!--Device-WebNavigationType-UNKNOWN = 0-End-->
@@ -38,13 +30,9 @@ Unknown type.
 MAIN_FRAME_NEW_ENTRY = 1
 ```
 
-A new entry was created due to a navigation happened on the main frame. Contains all situations that will generate a mainframe navigation entry, which means that navigations to a hash on the same document or history.pushState also belong to this type.
+Navigation to a new history entry from the main document.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ A new entry was created due to a navigation happened on the main frame. Contains
 MAIN_FRAME_EXISTING_ENTRY = 2
 ```
 
-Navigate to an existing entry due to a navigation on the main frame. e.g. 1. History navigations. 2. Reloads (contains loading the same url). 3. Same-document navigations(history.replaceState(), location.replace()).
+Navigation to an existing history entry from the main document.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +62,9 @@ Navigate to an existing entry due to a navigation on the main frame. e.g. 1. His
 NAVIGATION_TYPE_NEW_SUBFRAME = 4
 ```
 
-A navigation happened on subframe which was triggered by user.
+User-triggered navigation from a subdocument.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,13 +78,9 @@ A navigation happened on subframe which was triggered by user.
 NAVIGATION_TYPE_AUTO_SUBFRAME = 5
 ```
 
-A navigation happened on the subframe automatically.
+Non-user-triggered navigation from a subdocument.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

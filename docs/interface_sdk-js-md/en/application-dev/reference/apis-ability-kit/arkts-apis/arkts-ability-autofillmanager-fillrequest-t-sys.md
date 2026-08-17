@@ -8,10 +8,6 @@ Defines the information about an auto-fill request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-autoFillManager-export type FillRequest = _FillRequest--><!--Device-autoFillManager-export type FillRequest = _FillRequest-End-->

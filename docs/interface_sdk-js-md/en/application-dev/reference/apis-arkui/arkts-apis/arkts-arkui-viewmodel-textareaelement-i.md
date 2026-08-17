@@ -2,13 +2,9 @@
 
 The &lt;textarea&gt; component provides an interactive interface to receive user input, which is displayed in multiple lines by default.
 
-**Inheritance/Implementation:** TextAreaElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
+**Inheritance/Implementation:** TextAreaElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface TextAreaElement--><!--Device-unnamed-export interface TextAreaElement-End-->
 
@@ -23,10 +19,6 @@ focus(param: { focus: boolean }): void
 Obtains or loses the focus of a component, which can display or collapse the input method.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

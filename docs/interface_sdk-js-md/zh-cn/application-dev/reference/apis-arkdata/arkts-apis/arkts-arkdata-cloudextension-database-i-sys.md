@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudExtension-export interface Database--><!--Device-cloudExtension-export interface Database-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -25,10 +21,6 @@ alias: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Database-alias: string--><!--Device-Database-alias: string-End-->
 
@@ -48,10 +40,6 @@ name: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Database-name: string--><!--Device-Database-name: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -69,10 +57,6 @@ tables: Array<Table>
 **类型：** Array&lt;[Table](arkts-arkdata-cloudextension-table-i-sys.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Database-tables: Array<Table>--><!--Device-Database-tables: Array<Table>-End-->
 

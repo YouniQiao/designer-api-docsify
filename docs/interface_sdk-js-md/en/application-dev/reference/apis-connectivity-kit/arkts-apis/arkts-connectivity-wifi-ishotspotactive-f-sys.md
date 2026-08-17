@@ -16,11 +16,9 @@ Checks whether Wi-Fi hotspot is active on a device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f.md#isHotspotActive)
+**Substitutes:** [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f.md#ishotspotactive)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -36,7 +34,7 @@ Checks whether Wi-Fi hotspot is active on a device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

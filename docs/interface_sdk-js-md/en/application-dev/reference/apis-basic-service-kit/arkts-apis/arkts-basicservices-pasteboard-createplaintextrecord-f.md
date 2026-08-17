@@ -16,11 +16,9 @@ Creates a **PasteDataRecord** object of the plain text type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createRecord)(mimeType: string, value: ValueType)
+**Substitutes:** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createPlainTextRecord(text: string): PasteDataRecord--><!--Device-pasteboard-function createPlainTextRecord(text: string): PasteDataRecord-End-->
 
@@ -38,7 +36,7 @@ Creates a **PasteDataRecord** object of the plain text type.
 | --- | --- |
 | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | New **PasteDataRecord** object of the plain text type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let record: pasteboard.PasteDataRecord = pasteboard.createPlainTextRecord('hello');

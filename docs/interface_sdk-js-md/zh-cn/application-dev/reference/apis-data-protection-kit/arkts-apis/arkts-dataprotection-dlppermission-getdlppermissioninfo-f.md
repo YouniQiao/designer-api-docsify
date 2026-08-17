@@ -10,10 +10,6 @@ function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>--><!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -32,7 +28,7 @@ function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 | [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) | No permission to call this API, which is available only for DLP sandbox applications. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -42,8 +38,8 @@ dlpPermission.isInSandbox().then(async (inSandbox) => { // 是否在沙箱内。
     dlpPermission.getDLPPermissionInfo().then((permissionInfo: dlpPermission.DLPPermissionInfo) => {
       console.info('permissionInfo', JSON.stringify(permissionInfo));
     }).catch((error: BusinessError)=> {
-      console.error(JSON.stringify(error));
-    })
+      console.error(`Failed to get DLP permission info. Code: ${error.code}, message: ${error.message}`);
+    });
   }
 });
 ```
@@ -59,10 +55,6 @@ function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void--><!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -71,7 +63,7 @@ function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPPermissionInfo](arkts-dataprotection-dlppermission-dlppermissioninfo-i.md)&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DLPPermissionInfo](arkts-dataprotection-dlppermission-dlppermissioninfo-i.md)&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 
@@ -82,7 +74,7 @@ function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 | [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) | No permission to call this API, which is available only for DLP sandbox applications. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

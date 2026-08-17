@@ -10,10 +10,6 @@ function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<b
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
 <!--Device-appManager-function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<boolean>--><!--Device-appManager-function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<boolean>-End-->
@@ -44,7 +40,7 @@ function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<b
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -72,10 +68,6 @@ function isSharedBundleRunning(bundleName: string, versionCode: long, callback: 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
 <!--Device-appManager-function isSharedBundleRunning(bundleName: string, versionCode: long, callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isSharedBundleRunning(bundleName: string, versionCode: long, callback: AsyncCallback<boolean>): void-End-->
@@ -90,7 +82,7 @@ function isSharedBundleRunning(bundleName: string, versionCode: long, callback: 
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示要查询的共享库包名。 |
 | versionCode | long | 是 | 表示要查询的共享库版本号。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示共享库正在使用，返回false表示共享库不在使用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示共享库正在使用，返回false表示共享库不在使用。 |
 
 **错误码：**
 
@@ -101,7 +93,7 @@ function isSharedBundleRunning(bundleName: string, versionCode: long, callback: 
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

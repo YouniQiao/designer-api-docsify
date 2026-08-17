@@ -16,11 +16,9 @@ Obtains the list of devices in the connected status. On API 10 and above, the pe
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getConnectedBLEDevices](#getConnectedBLEDevices)
+**Substitutes:** [getConnectedBLEDevices](#getconnectedbledevices)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -46,7 +44,7 @@ Obtains the list of devices in the connected status. On API 10 and above, the pe
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

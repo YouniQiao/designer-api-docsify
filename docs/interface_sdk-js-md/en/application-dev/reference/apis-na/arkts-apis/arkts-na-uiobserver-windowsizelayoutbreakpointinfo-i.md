@@ -4,9 +4,7 @@ Defines the window size layout breakpoint information. This interface provides t
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 <!--Device-uiObserver-export interface WindowSizeLayoutBreakpointInfo--><!--Device-uiObserver-export interface WindowSizeLayoutBreakpointInfo-End-->
 
@@ -24,9 +22,7 @@ The height breakpoint classification of the current window. This value indicates
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,9 +42,7 @@ The width breakpoint classification of the current window. This value indicates 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

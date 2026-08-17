@@ -10,10 +10,6 @@ declare function getxattrSync(path: string, key: string): string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare function getxattrSync(path: string, key: string): string--><!--Device-unnamed-declare function getxattrSync(path: string, key: string): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

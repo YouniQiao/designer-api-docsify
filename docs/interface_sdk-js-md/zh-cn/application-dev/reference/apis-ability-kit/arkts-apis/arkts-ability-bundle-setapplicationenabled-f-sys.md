@@ -10,8 +10,6 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: 
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** null
@@ -30,7 +28,7 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: 
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指示需要启用或禁用的应用Bundle名称。 |
 | isEnable | boolean | 是 | 指定是否启用应用程序。true表示启用，false表示禁用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 
 ## setApplicationEnabled
@@ -42,8 +40,6 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean): Promise<v
 设置是否启用指定的应用程序，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 

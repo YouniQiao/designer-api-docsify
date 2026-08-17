@@ -4,10 +4,6 @@ Enumerates the global switch types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityAccessCtrl-export enum SwitchType--><!--Device-abilityAccessCtrl-export enum SwitchType-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -21,10 +17,6 @@ CAMERA = 0
 Global switch of the camera.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Global switch of the microphone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -65,10 +53,6 @@ LOCATION = 2
 Global switch of the location service.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

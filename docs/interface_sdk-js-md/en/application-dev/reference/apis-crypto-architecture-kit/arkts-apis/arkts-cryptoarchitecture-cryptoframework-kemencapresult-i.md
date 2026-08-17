@@ -4,10 +4,6 @@ Represents the encapsulation result of the KEM.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-interface KemEncapResult--><!--Device-cryptoFramework-interface KemEncapResult-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
@@ -30,10 +26,6 @@ Indicates the shared secret key of the KEM.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -53,10 +45,6 @@ Indicates the wrapped key of the KEM, which is the ciphertext of the KEM.
 **Type:** Uint8Array
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDeviceManager-interface DeviceManager--><!--Device-distributedDeviceManager-interface DeviceManager-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -27,10 +23,6 @@ getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIco
 Obtains the device icon. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -62,7 +54,7 @@ Obtains the device icon. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -102,10 +94,6 @@ Obtains the list of network devices according to the specified filter options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
 <!--Device-DeviceManager-getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<string>>--><!--Device-DeviceManager-getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<string>>-End-->
@@ -136,7 +124,7 @@ Obtains the list of network devices according to the specified filter options.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -169,10 +157,6 @@ Obtains the list of devices under the same account. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
 <!--Device-DeviceManager-getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise<Array<DeviceProfileInfo>>--><!--Device-DeviceManager-getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise<Array<DeviceProfileInfo>>-End-->
@@ -204,7 +188,7 @@ Obtains the list of devices under the same account. This API uses a promise to r
 | [11600107](../../apis-distributedservice-kit/errorcode-device-manager.md#11600107-login-account-required) | A login account is required. |
 | [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Get data from cloud fail. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -232,10 +216,6 @@ getIdentificationByDeviceIds(deviceIds: Array<string>): Array<DeviceIdentificati
 Query device identification by device IDs.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM and ohos.permission.sec.ACCESS_UDID
 
@@ -268,7 +248,7 @@ Query device identification by device IDs.
 | [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit'
@@ -305,10 +285,6 @@ Obtains the local device's display name with the specified length. This API uses
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
 <!--Device-DeviceManager-getLocalDisplayDeviceName(maxNameLength: int): Promise<string>--><!--Device-DeviceManager-getLocalDisplayDeviceName(maxNameLength: int): Promise<string>-End-->
@@ -338,7 +314,7 @@ Obtains the local device's display name with the specified length. This API uses
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -367,10 +343,6 @@ getOsTypeByNetworkId(networkId: string): int
 Query the device operating system type by device network ID.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM
 
@@ -413,10 +385,6 @@ Unregister uiStateChange, this interface can only be used by devicemanager ui.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
 <!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void--><!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void-End-->
@@ -448,10 +416,6 @@ Unsubscribes from the reply to the UI operation result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
 <!--Device-DeviceManager-off(type: 'replyResult', callback?: Callback<{ param: string; }>): void--><!--Device-DeviceManager-off(type: 'replyResult', callback?: Callback<{ param: string; }>): void-End-->
@@ -475,7 +439,7 @@ Unsubscribes from the reply to the UI operation result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -499,10 +463,6 @@ onReplyResult(callback: Callback<ReplyResult>): void
 Register a callback from deviceManager service so that the devicemanager ui can be notified when uiStateChanges.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -535,10 +495,6 @@ Subscribes to the reply to the UI operation result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
 <!--Device-DeviceManager-on(type: 'replyResult', callback: Callback<{ param: string; }>): void--><!--Device-DeviceManager-on(type: 'replyResult', callback: Callback<{ param: string; }>): void-End-->
@@ -562,7 +518,7 @@ Subscribes to the reply to the UI operation result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -600,10 +556,6 @@ Updates the device list. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
 <!--Device-DeviceManager-putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promise<int>--><!--Device-DeviceManager-putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promise<int>-End-->
@@ -633,7 +585,7 @@ Updates the device list. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -663,10 +615,6 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
 <!--Device-DeviceManager-replyUiAction(action: int, actionResult: string): void--><!--Device-DeviceManager-replyUiAction(action: int, actionResult: string): void-End-->
@@ -690,7 +638,7 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -724,11 +672,9 @@ Restores the local device name by resetting the network settings.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 24
 
-**Substitutes:** [restoreLocalDeviceName](#restoreLocalDeviceName)
+**Substitutes:** [restoreLocalDeviceName](#restorelocaldevicename)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -746,7 +692,7 @@ Restores the local device name by resetting the network settings.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -771,10 +717,6 @@ Restores the local device name.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -793,7 +735,7 @@ Restores the local device name.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -817,10 +759,6 @@ setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: int): void
 Sets the heartbeat broadcast policy.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -846,7 +784,7 @@ Sets the heartbeat broadcast policy.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -872,10 +810,6 @@ setLocalDeviceName(deviceName: string): Promise<int>
 Sets the local device name. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -909,7 +843,7 @@ Sets the local device name. This API uses a promise to return the result.
 | [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
 | [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -938,10 +872,6 @@ setRemoteDeviceName(deviceId: string, deviceName: string): Promise<int>
 Sets the remote device name. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -976,7 +906,7 @@ Sets the remote device name. This API uses a promise to return the result.
 | [11600106](../../apis-distributedservice-kit/errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) | Failed to get data from the cloud. |
 | [11600108](../../apis-distributedservice-kit/errorcode-device-manager.md#11600108-unlawful-information-in-device-name) | The device name contains non-compliant content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';

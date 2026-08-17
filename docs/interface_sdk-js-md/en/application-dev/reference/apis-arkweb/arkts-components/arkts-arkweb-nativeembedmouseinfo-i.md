@@ -1,12 +1,8 @@
 # NativeEmbedMouseInfo
 
-Provides detailed information about clicking or touching and holding a same-layer tag using the mouse or touchpad.
+Provides detailed information about clicking or touching and holding a same-layer tag using the mouse or touchpad, including the tag ID and mouse event. It is suitable for scenarios where handling same-layer element mouse interaction is required, improving mouse experience customization and flexibility.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface NativeEmbedMouseInfo--><!--Device-unnamed-declare interface NativeEmbedMouseInfo-End-->
 
@@ -24,10 +20,6 @@ Unique ID of the same-layer tag.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-NativeEmbedMouseInfo-embedId?: string--><!--Device-NativeEmbedMouseInfo-embedId?: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -44,10 +36,6 @@ Information about clicking or touching and holding using the mouse or touchpad.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-NativeEmbedMouseInfo-mouseEvent?: MouseEvent--><!--Device-NativeEmbedMouseInfo-mouseEvent?: MouseEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -63,10 +51,6 @@ Mouse event consumption result.
 **Type:** [EventResult](arkts-arkweb-eventresult-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-NativeEmbedMouseInfo-result?: EventResult--><!--Device-NativeEmbedMouseInfo-result?: EventResult-End-->
 

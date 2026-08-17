@@ -4,10 +4,6 @@ The **NotificationSlot** module provides APIs for defining the notification slot
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationSlot--><!--Device-unnamed-export interface NotificationSlot-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -23,10 +19,6 @@ Whether to display the badge. The default value is **true**. - **true**: Display
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationSlot-badgeFlag?: boolean--><!--Device-NotificationSlot-badgeFlag?: boolean-End-->
 
@@ -44,10 +36,6 @@ Whether to bypass Do Not Disturb mode in the system. The default value is **fals
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationSlot-bypassDnd?: boolean--><!--Device-NotificationSlot-bypassDnd?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -63,10 +51,6 @@ Description of the notification channel. The size cannot exceed 243 bytes, and t
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationSlot-desc?: string--><!--Device-NotificationSlot-desc?: string-End-->
 
@@ -84,10 +68,6 @@ Whether to allow notifications of this slot type to be published. - **true**: ye
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationSlot-readonly enabled?: boolean--><!--Device-NotificationSlot-readonly enabled?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -104,11 +84,9 @@ Notification level.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
-**Substitutes:** [notificationLevel](#notificationLevel)
+**Substitutes:** [notificationLevel](#notificationlevel)
 
 <!--Device-NotificationSlot-level?: notification.SlotLevel--><!--Device-NotificationSlot-level?: notification.SlotLevel-End-->
 
@@ -126,10 +104,6 @@ Indicator color of the notification. This is a reserved capability and is not su
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationSlot-lightColor?: int--><!--Device-NotificationSlot-lightColor?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -145,10 +119,6 @@ Whether to enable the light. The default value is **false**. - **true**: yes. - 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationSlot-lightEnabled?: boolean--><!--Device-NotificationSlot-lightEnabled?: boolean-End-->
 
@@ -166,10 +136,6 @@ Mode for displaying the notification on the lock screen. This is a reserved capa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationSlot-lockscreenVisibility?: int--><!--Device-NotificationSlot-lockscreenVisibility?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -185,10 +151,6 @@ Notification level, which is used to describe the display priority and alert int
 **Type:** notificationManager.SlotLevel
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel--><!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel-End-->
 
@@ -206,10 +168,6 @@ Slot type. Different slot types have different notification reminder types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationSlot-notificationType?: notificationManager.SlotType--><!--Device-NotificationSlot-notificationType?: notificationManager.SlotType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -225,10 +183,6 @@ File name of the custom ringtone for notifications from this channel. The file i
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationSlot-sound?: string--><!--Device-NotificationSlot-sound?: string-End-->
 
@@ -246,11 +200,9 @@ Channel type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [notificationType](#notificationType)
+**Substitutes:** [notificationType](#notificationtype)
 
 <!--Device-NotificationSlot-type?: notification.SlotType--><!--Device-NotificationSlot-type?: notification.SlotType-End-->
 
@@ -268,10 +220,6 @@ Whether to enable vibration. The default value is **false**. - **true**: yes. - 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationSlot-vibrationEnabled?: boolean--><!--Device-NotificationSlot-vibrationEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -287,10 +235,6 @@ Vibration mode of the notification. This is a reserved capability and is not sup
 **Type:** Array&lt;long&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationSlot-vibrationValues?: Array<long>--><!--Device-NotificationSlot-vibrationValues?: Array<long>-End-->
 

@@ -16,10 +16,6 @@ Obtains the list of detailed information about peripheral drivers. If the device
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
 <!--Device-deviceManager-function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>--><!--Device-deviceManager-function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>-End-->
@@ -49,7 +45,7 @@ Obtains the list of detailed information about peripheral drivers. If the device
 | [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application cannot call a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

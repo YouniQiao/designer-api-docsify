@@ -17,8 +17,6 @@ Obtains the information about all applications. This API uses an asynchronous ca
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
@@ -31,7 +29,7 @@ Obtains the information about all applications. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
 | userId | number | Yes | User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the application information. |
 
@@ -46,8 +44,6 @@ Obtains the information about all applications of the current user. This API use
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
@@ -60,7 +56,7 @@ Obtains the information about all applications of the current user. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the application information. |
 
 
@@ -74,8 +70,6 @@ Obtains the information about all applications of the specified user. This API u
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
@@ -88,7 +82,7 @@ Obtains the information about all applications of the specified user. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
 | userId | number | No | User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**

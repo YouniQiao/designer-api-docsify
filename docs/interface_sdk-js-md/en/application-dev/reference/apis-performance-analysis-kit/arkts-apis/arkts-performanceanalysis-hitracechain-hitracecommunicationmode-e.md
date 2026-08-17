@@ -1,12 +1,8 @@
-# HiTraceCommunicationMode
+# HiTraceCommunicationMode(Distributed Tracing)
 
 Enumerates communication modes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hiTraceChain-enum HiTraceCommunicationMode--><!--Device-hiTraceChain-enum HiTraceCommunicationMode-End-->
 
@@ -22,10 +18,6 @@ Default communication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HiTraceCommunicationMode-DEFAULT = 0--><!--Device-HiTraceCommunicationMode-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -39,10 +31,6 @@ THREAD = 1
 Inter-thread communication.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HiTraceCommunicationMode-THREAD = 1--><!--Device-HiTraceCommunicationMode-THREAD = 1-End-->
 
@@ -58,10 +46,6 @@ Inter-process communication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HiTraceCommunicationMode-PROCESS = 2--><!--Device-HiTraceCommunicationMode-PROCESS = 2-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -75,10 +59,6 @@ DEVICE = 3
 Inter-device communication.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HiTraceCommunicationMode-DEVICE = 3--><!--Device-HiTraceCommunicationMode-DEVICE = 3-End-->
 

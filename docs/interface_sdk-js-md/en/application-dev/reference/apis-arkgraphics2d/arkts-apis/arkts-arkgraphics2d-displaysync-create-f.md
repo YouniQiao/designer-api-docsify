@@ -16,10 +16,6 @@ Creates a **DisplaySync** object, through which you can set the frame rate of th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-displaySync-function create(): DisplaySync--><!--Device-displaySync-function create(): DisplaySync-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,7 +26,7 @@ Creates a **DisplaySync** object, through which you can set the frame rate of th
 | --- | --- |
 | [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | DisplaySync** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let backDisplaySync: displaySync.DisplaySync = displaySync.create();

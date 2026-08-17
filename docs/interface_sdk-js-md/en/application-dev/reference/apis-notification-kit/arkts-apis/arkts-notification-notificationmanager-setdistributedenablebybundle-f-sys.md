@@ -16,11 +16,9 @@ Sets whether to enable distributed notification for a specified application. Thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md#setDistributedEnabledByBundle)(bundle: BundleOption, deviceType: string, enable: boolean)
+**Substitutes:** [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md#setdistributedenabledbybundle)(bundle: BundleOption, deviceType: string, enable: boolean)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -52,7 +50,7 @@ Sets whether to enable distributed notification for a specified application. Thi
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -82,11 +80,9 @@ Sets whether to enable distributed notification for a specified application. Thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md#setDistributedEnabledByBundle)(bundle: BundleOption, deviceType: string, enable: boolean)
+**Substitutes:** [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md#setdistributedenabledbybundle)(bundle: BundleOption, deviceType: string, enable: boolean)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -123,7 +119,7 @@ Sets whether to enable distributed notification for a specified application. Thi
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

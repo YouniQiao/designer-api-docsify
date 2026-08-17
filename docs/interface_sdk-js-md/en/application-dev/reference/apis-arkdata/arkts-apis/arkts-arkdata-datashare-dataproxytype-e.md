@@ -4,10 +4,6 @@ Enumerates the data proxy types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-enum DataProxyType--><!--Device-dataShare-enum DataProxyType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -21,10 +17,6 @@ SHARED_CONFIG = 0
 Inter-application shared configuration.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

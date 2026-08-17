@@ -4,10 +4,6 @@ Provides APIs for operating on certificate extensions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface CertExtension--><!--Device-cert-interface CertExtension-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -27,10 +23,6 @@ checkCA(): int
 Checks whether the certificate is a CA certificate.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,7 +44,7 @@ Checks whether the certificate is a CA certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -101,10 +93,6 @@ Obtains the serialized data of the certificate extensions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertExtension-getEncoded(): EncodingBlob--><!--Device-CertExtension-getEncoded(): EncodingBlob-End-->
@@ -125,7 +113,7 @@ Obtains the serialized data of the certificate extensions.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -175,10 +163,6 @@ Obtains the value of a specific certificate extension entry by OID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertExtension-getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob--><!--Device-CertExtension-getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob-End-->
@@ -207,7 +191,7 @@ Obtains the value of a specific certificate extension entry by OID.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -261,10 +245,6 @@ Obtains the OIDs of the certificate extensions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertExtension-getOidList(valueType: ExtensionOidType): DataArray--><!--Device-CertExtension-getOidList(valueType: ExtensionOidType): DataArray-End-->
@@ -292,7 +272,7 @@ Obtains the OIDs of the certificate extensions.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -342,10 +322,6 @@ Checks whether there is a critical extension that is not supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertExtension-hasUnsupportedCriticalExtension(): boolean--><!--Device-CertExtension-hasUnsupportedCriticalExtension(): boolean-End-->
@@ -366,7 +342,7 @@ Checks whether there is a critical extension that is not supported.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

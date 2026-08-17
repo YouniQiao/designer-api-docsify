@@ -6,9 +6,7 @@ Defines the Button component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface ButtonAttribute--><!--Device-unnamed-export declare interface ButtonAttribute-End-->
 
@@ -22,9 +20,7 @@ attributeModifier(modifier: AttributeModifier<ButtonAttribute> | AttributeModifi
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-attributeModifier(modifier: AttributeModifier<ButtonAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ButtonAttribute-attributeModifier(modifier: AttributeModifier<ButtonAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,9 +44,7 @@ buttonStyle(value: ButtonStyleMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-buttonStyle(value: ButtonStyleMode | undefined): this--><!--Device-ButtonAttribute-buttonStyle(value: ButtonStyleMode | undefined): this-End-->
 
@@ -74,9 +68,7 @@ contentModifier(modifier: ContentModifier<ButtonConfiguration> | undefined): thi
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-contentModifier(modifier: ContentModifier<ButtonConfiguration> | undefined): this--><!--Device-ButtonAttribute-contentModifier(modifier: ContentModifier<ButtonConfiguration> | undefined): this-End-->
 
@@ -100,9 +92,7 @@ controlSize(value: ControlSize | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-controlSize(value: ControlSize | undefined): this--><!--Device-ButtonAttribute-controlSize(value: ControlSize | undefined): this-End-->
 
@@ -126,9 +116,7 @@ fontColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-fontColor(value: ResourceColor | undefined): this--><!--Device-ButtonAttribute-fontColor(value: ResourceColor | undefined): this-End-->
 
@@ -152,9 +140,7 @@ fontFamily(value: string | Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-fontFamily(value: string | Resource | undefined): this--><!--Device-ButtonAttribute-fontFamily(value: string | Resource | undefined): this-End-->
 
@@ -178,9 +164,7 @@ fontSize(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-fontSize(value: Length | undefined): this--><!--Device-ButtonAttribute-fontSize(value: Length | undefined): this-End-->
 
@@ -204,9 +188,7 @@ fontStyle(value: FontStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-fontStyle(value: FontStyle | undefined): this--><!--Device-ButtonAttribute-fontStyle(value: FontStyle | undefined): this-End-->
 
@@ -230,9 +212,7 @@ fontWeight(value: int | FontWeight | string | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-fontWeight(value: int | FontWeight | string | undefined): this--><!--Device-ButtonAttribute-fontWeight(value: int | FontWeight | string | undefined): this-End-->
 
@@ -256,9 +236,7 @@ labelStyle(value: ButtonLabelStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-labelStyle(value: ButtonLabelStyle | undefined): this--><!--Device-ButtonAttribute-labelStyle(value: ButtonLabelStyle | undefined): this-End-->
 
@@ -282,9 +260,7 @@ maxFontScale(scale: double | Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-maxFontScale(scale: double | Resource | undefined): this--><!--Device-ButtonAttribute-maxFontScale(scale: double | Resource | undefined): this-End-->
 
@@ -308,9 +284,7 @@ minFontScale(scale: double | Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-minFontScale(scale: double | Resource | undefined): this--><!--Device-ButtonAttribute-minFontScale(scale: double | Resource | undefined): this-End-->
 
@@ -334,9 +308,7 @@ role(value: ButtonRole | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-role(value: ButtonRole | undefined): this--><!--Device-ButtonAttribute-role(value: ButtonRole | undefined): this-End-->
 
@@ -360,9 +332,7 @@ setButtonOptions(label: ResourceStr, options?: ButtonOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-setButtonOptions(label: ResourceStr, options?: ButtonOptions): this--><!--Device-ButtonAttribute-setButtonOptions(label: ResourceStr, options?: ButtonOptions): this-End-->
 
@@ -387,9 +357,7 @@ setButtonOptions(options?: ButtonOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-setButtonOptions(options?: ButtonOptions): this--><!--Device-ButtonAttribute-setButtonOptions(options?: ButtonOptions): this-End-->
 
@@ -413,9 +381,7 @@ stateEffect(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-stateEffect(value: boolean | undefined): this--><!--Device-ButtonAttribute-stateEffect(value: boolean | undefined): this-End-->
 
@@ -439,9 +405,7 @@ type(value: ButtonType | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ButtonAttribute-type(value: ButtonType | undefined): this--><!--Device-ButtonAttribute-type(value: ButtonType | undefined): this-End-->
 
@@ -467,9 +431,7 @@ Set button options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

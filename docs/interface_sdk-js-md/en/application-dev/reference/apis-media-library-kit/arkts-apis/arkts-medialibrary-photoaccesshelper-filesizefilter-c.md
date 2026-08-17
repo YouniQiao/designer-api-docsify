@@ -4,10 +4,6 @@ Describes the configuration for file size filtering.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-class FileSizeFilter--><!--Device-photoAccessHelper-class FileSizeFilter-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -30,10 +26,6 @@ Maximum file size in **FilterOperator.BETWEEN** mode. The default value is **-1*
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FileSizeFilter-extraFileSize?: long--><!--Device-FileSizeFilter-extraFileSize?: long-End-->
@@ -52,10 +44,6 @@ File size used for filtering. The unit is bytes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FileSizeFilter-fileSize: long--><!--Device-FileSizeFilter-fileSize: long-End-->
@@ -73,10 +61,6 @@ Filter operator. For example, files can be filtered based on being greater than 
 **Type:** [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

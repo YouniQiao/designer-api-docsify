@@ -4,10 +4,6 @@ Obtains IPC context, including the UID and PID, local and remote device IDs, and
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-rpc-class IPCSkeleton--><!--Device-rpc-class IPCSkeleton-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -28,10 +24,6 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void--><!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -48,7 +40,7 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -85,8 +77,6 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** static flushCmdBuffer(object: IRemoteObject)
@@ -107,7 +97,7 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 | --- | --- |
 | number | Returns **0** if the operation is successful; returns an error code if the input object is null or a **RemoteObject**, or if the operation fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -144,10 +134,6 @@ Obtains the ID of the device hosting the caller's process. This API is a static 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IPCSkeleton-static getCallingDeviceID(): string--><!--Device-IPCSkeleton-static getCallingDeviceID(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -158,7 +144,7 @@ Obtains the ID of the device hosting the caller's process. This API is a static 
 | --- | --- |
 | string | Device ID obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -188,10 +174,6 @@ Obtains the PID of the caller. This API is a static method, which is invoked by 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IPCSkeleton-static getCallingPid(): int--><!--Device-IPCSkeleton-static getCallingPid(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -202,7 +184,7 @@ Obtains the PID of the caller. This API is a static method, which is invoked by 
 | --- | --- |
 | int | PID of the caller. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -232,10 +214,6 @@ Obtains the caller's token ID, which is used to verify the caller identity.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IPCSkeleton-static getCallingTokenId(): long--><!--Device-IPCSkeleton-static getCallingTokenId(): long-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -246,7 +224,7 @@ Obtains the caller's token ID, which is used to verify the caller identity.
 | --- | --- |
 | long | Token ID of the caller obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -276,10 +254,6 @@ Obtains the UID of the caller. This API is a static method, which is invoked by 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IPCSkeleton-static getCallingUid(): int--><!--Device-IPCSkeleton-static getCallingUid(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -290,7 +264,7 @@ Obtains the UID of the caller. This API is a static method, which is invoked by 
 | --- | --- |
 | int | UID of the caller. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -320,10 +294,6 @@ Obtains the system capability manager. This API is a static method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IPCSkeleton-static getContextObject(): IRemoteObject--><!--Device-IPCSkeleton-static getContextObject(): IRemoteObject-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -334,7 +304,7 @@ Obtains the system capability manager. This API is a static method.
 | --- | --- |
 | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | System capability manager obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -358,10 +328,6 @@ Obtains the local device ID. This API is a static method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IPCSkeleton-static getLocalDeviceID(): string--><!--Device-IPCSkeleton-static getLocalDeviceID(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -372,7 +338,7 @@ Obtains the local device ID. This API is a static method.
 | --- | --- |
 | string | Local device ID obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -402,10 +368,6 @@ Checks whether the peer process is a process of the local device. This API is a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IPCSkeleton-static isLocalCalling(): boolean--><!--Device-IPCSkeleton-static isLocalCalling(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -416,7 +378,7 @@ Checks whether the peer process is a process of the local device. This API is a 
 | --- | --- |
 | boolean | Returns **true** if the local and peer processes are on the same device; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -446,10 +408,6 @@ Resets the UID and PID of the remote user to those of the local user. This API i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IPCSkeleton-static resetCallingIdentity(): string--><!--Device-IPCSkeleton-static resetCallingIdentity(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -460,7 +418,7 @@ Resets the UID and PID of the remote user to those of the local user. This API i
 | --- | --- |
 | string | String containing the UID and PID of the remote user. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -490,10 +448,6 @@ Restores the UID and PID of the remote user. This API is a static method. It is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void--><!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -510,7 +464,7 @@ Restores the UID and PID of the remote user. This API is a static method. It is 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -541,8 +495,6 @@ Sets the UID and PID of the remote user. This API is a static method. It is usua
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** static restoreCallingIdentity(identity: string)
@@ -563,7 +515,7 @@ Sets the UID and PID of the remote user. This API is a static method. It is usua
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

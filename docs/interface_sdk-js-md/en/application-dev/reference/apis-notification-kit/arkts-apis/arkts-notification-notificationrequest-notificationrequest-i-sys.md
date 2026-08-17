@@ -4,10 +4,6 @@ Defines the data structure of a notification request, which is used to describe 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationRequest--><!--Device-unnamed-export interface NotificationRequest-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -23,10 +19,6 @@ Information about the agent bundle for creating notifications. This parameter is
 **Type:** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationRequest-readonly agentBundle?: BundleOption--><!--Device-NotificationRequest-readonly agentBundle?: BundleOption-End-->
 
@@ -46,10 +38,6 @@ Application instance key. This parameter is left empty by default.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationRequest-readonly appInstanceKey?: string--><!--Device-NotificationRequest-readonly appInstanceKey?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -67,10 +55,6 @@ Notification classification. Not supported currently.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationRequest-classification?: string--><!--Device-NotificationRequest-classification?: string-End-->
 
@@ -90,11 +74,9 @@ Creator instance key.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
 **Deprecated since:** 15
 
-**Substitutes:** [appInstanceKey](#appInstanceKey)
+**Substitutes:** [appInstanceKey](#appinstancekey)
 
 <!--Device-NotificationRequest-readonly creatorInstanceKey?: number--><!--Device-NotificationRequest-readonly creatorInstanceKey?: number-End-->
 
@@ -114,10 +96,6 @@ Device ID of the notification source. Not supported currently.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationRequest-readonly deviceId?: string--><!--Device-NotificationRequest-readonly deviceId?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -135,10 +113,6 @@ Extended parameters customized for the system applications to publish notificati
 **Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationRequest-extendInfo?: Record<string, RecordData>--><!--Device-NotificationRequest-extendInfo?: Record<string, RecordData>-End-->
 
@@ -160,10 +134,6 @@ Whether notifications are forcibly displayed in all scenario across devices. The
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationRequest-forceDistributed?: boolean--><!--Device-NotificationRequest-forceDistributed?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -181,10 +151,6 @@ Custom group notification information. This parameter is left empty by default.
 **Type:** [GroupInfo](arkts-notification-notificationrequest-groupinfo-i-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -207,10 +173,6 @@ Whether the notification can be removed. If a notification is not removable, it 
 **Default:** true
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 11+: ohos.permission.SET_UNREMOVABLE_NOTIFICATION
@@ -235,10 +197,6 @@ Whether notifications are not displayed in all scenarios across devices. The def
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationRequest-notDistributed?: boolean--><!--Device-NotificationRequest-notDistributed?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -256,10 +214,6 @@ Notification mode control. The default value is **0**. This API can be used to r
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationRequest-notificationControlFlags?: long--><!--Device-NotificationRequest-notificationControlFlags?: long-End-->
 
@@ -279,10 +233,6 @@ Notification overlay icon. This parameter is left empty by default. The total by
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationRequest-overlayIcon?: image.PixelMap--><!--Device-NotificationRequest-overlayIcon?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -300,10 +250,6 @@ Information about the proxied bundle. This parameter is left empty by default.
 **Type:** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationRequest-representativeBundle?: BundleOption--><!--Device-NotificationRequest-representativeBundle?: BundleOption-End-->
 
@@ -323,10 +269,6 @@ Notification source. Not supported currently.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationRequest-readonly source?: int--><!--Device-NotificationRequest-readonly source?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -345,10 +287,6 @@ Condition object. This parameter is left empty by default.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationRequest-trigger?:Trigger--><!--Device-NotificationRequest-trigger?:Trigger-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -366,10 +304,6 @@ Intelligent notification unification information. This parameter is left empty b
 **Type:** [UnifiedGroupInfo](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationRequest-unifiedGroupInfo?: UnifiedGroupInfo--><!--Device-NotificationRequest-unifiedGroupInfo?: UnifiedGroupInfo-End-->
 

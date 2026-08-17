@@ -8,10 +8,6 @@ Callback function called when inserting a data record into the database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-type InsertFn = (uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<int>) => void--><!--Device-unnamed-type InsertFn = (uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<int>) => void-End-->

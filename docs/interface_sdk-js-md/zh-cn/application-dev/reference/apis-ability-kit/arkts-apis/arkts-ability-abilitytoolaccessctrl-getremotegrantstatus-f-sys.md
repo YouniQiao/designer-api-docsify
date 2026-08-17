@@ -10,10 +10,6 @@ export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 <!--Device-abilityToolAccessCtrl-export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>--><!--Device-abilityToolAccessCtrl-export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>-End-->
@@ -37,7 +33,7 @@ export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 | [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) | Common internal error. possible cause: dependent service unavailable, resource access failure, etc. |
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { abilityToolAccessCtrl } from '@kit.AbilityKit';

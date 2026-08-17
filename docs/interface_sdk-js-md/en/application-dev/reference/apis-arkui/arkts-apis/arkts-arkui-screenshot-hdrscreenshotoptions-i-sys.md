@@ -4,10 +4,6 @@ Describes the HDR screenshot options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screenshot-interface HdrScreenshotOptions--><!--Device-screenshot-interface HdrScreenshotOptions-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -26,17 +22,13 @@ import { screenshot } from 'screenshot';
 displayId?: long
 ```
 
-ID of the [display](arkts-arkui-display-displaystate-e.md#DisplayState) device on which the screen region is to be captured. The value must be an integer. The default value is **0**.
+ID of the [display](arkts-arkui-display-displaystate-e.md#displaystate) device on which the screen region is to be captured. The value must be an integer. The default value is **0**.
 
 **Type:** long
 
 **Default:** The ID of the current display. The value is a positive integer greater than or equal to 0.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HdrScreenshotOptions-displayId?: long--><!--Device-HdrScreenshotOptions-displayId?: long-End-->
 
@@ -57,10 +49,6 @@ screenshot display intent type.
 **Default:** DisplayIntentType.CANONICAL
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,10 +72,6 @@ Whether to capture all displays on the current screen. If the screen contains mu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HdrScreenshotOptions-isCaptureFullOfScreen?: boolean--><!--Device-HdrScreenshotOptions-isCaptureFullOfScreen?: boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -100,17 +84,13 @@ Whether to capture all displays on the current screen. If the screen contains mu
 isNotificationNeeded?: boolean
 ```
 
-Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through captureStatusChange.
+Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through [captureStatusChange](arkts-arkui-display-onadd-f.md#onadd).
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HdrScreenshotOptions-isNotificationNeeded?: boolean--><!--Device-HdrScreenshotOptions-isNotificationNeeded?: boolean-End-->
 

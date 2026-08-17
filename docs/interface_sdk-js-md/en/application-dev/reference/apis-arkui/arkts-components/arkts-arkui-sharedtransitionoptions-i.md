@@ -4,10 +4,6 @@ Parameters of the shared element transition animation. > **NOTE：**> > **motion
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface sharedTransitionOptions--><!--Device-unnamed-declare interface sharedTransitionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,17 +14,13 @@ Parameters of the shared element transition animation. > **NOTE：**> > **motion
 curve?: Curve | string | ICurve
 ```
 
-Animation curve. You are advised to specify the curve using the **Curve** or **ICurve** type. For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md#AnimateParam). Default value: **Curve.Linear**
+Animation curve. You are advised to specify the curve using the **Curve** or **ICurve** type. For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md#animateparam). Default value: **Curve.Linear**
 
 **Type:** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.Linear
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,10 +42,6 @@ Delay of animation playback. Default value: **0** Unit: ms
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-sharedTransitionOptions-delay?: number--><!--Device-sharedTransitionOptions-delay?: number-End-->
@@ -74,10 +62,6 @@ Animation duration. Default value: **1000** Unit: ms Value range: [0, +∞)
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-sharedTransitionOptions-duration?: number--><!--Device-sharedTransitionOptions-duration?: number-End-->
@@ -95,10 +79,6 @@ Motion path.
 **Type:** [MotionPathOptions](arkts-arkui-motionpathoptions-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -120,10 +100,6 @@ Animation type. Default value: **SharedTransitionEffectType.Exchange**
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-sharedTransitionOptions-type?: SharedTransitionEffectType--><!--Device-sharedTransitionOptions-type?: SharedTransitionEffectType-End-->
@@ -141,10 +117,6 @@ Z-axis. Value range: (-∞, +∞) Default value: **0**
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

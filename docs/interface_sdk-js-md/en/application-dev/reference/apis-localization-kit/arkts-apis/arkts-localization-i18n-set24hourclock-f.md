@@ -16,8 +16,6 @@ Sets the 24-hour clock.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
@@ -38,7 +36,7 @@ Sets the 24-hour clock.
 | --- | --- |
 | boolean | true** if the setting is successful, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

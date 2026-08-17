@@ -4,10 +4,6 @@ Enumerates the playback description keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum PlaybackInfoKey--><!--Device-media-enum PlaybackInfoKey-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -21,10 +17,6 @@ SERVER_IP_ADDRESS = 'server_ip_address'
 IP address of the server. The corresponding key value type is string.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PlaybackInfoKey-SERVER_IP_ADDRESS = 'server_ip_address'--><!--Device-PlaybackInfoKey-SERVER_IP_ADDRESS = 'server_ip_address'-End-->
 
@@ -40,10 +32,6 @@ Average download rate. The corresponding key value type is number, measured in b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlaybackInfoKey-AVG_DOWNLOAD_RATE = 'average_download_rate'--><!--Device-PlaybackInfoKey-AVG_DOWNLOAD_RATE = 'average_download_rate'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -57,10 +45,6 @@ DOWNLOAD_RATE = 'download_rate'
 Download rate in one second. The corresponding key value type is number, measured in bit/s.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PlaybackInfoKey-DOWNLOAD_RATE = 'download_rate'--><!--Device-PlaybackInfoKey-DOWNLOAD_RATE = 'download_rate'-End-->
 
@@ -76,10 +60,6 @@ Download status. The corresponding key value type is number. The value **1** mea
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlaybackInfoKey-IS_DOWNLOADING = 'is_downloading'--><!--Device-PlaybackInfoKey-IS_DOWNLOADING = 'is_downloading'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -93,10 +73,6 @@ BUFFER_DURATION = 'buffer_duration'
 Duration that the cached data can be played. The corresponding key value type is number, measured in seconds.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PlaybackInfoKey-BUFFER_DURATION = 'buffer_duration'--><!--Device-PlaybackInfoKey-BUFFER_DURATION = 'buffer_duration'-End-->
 

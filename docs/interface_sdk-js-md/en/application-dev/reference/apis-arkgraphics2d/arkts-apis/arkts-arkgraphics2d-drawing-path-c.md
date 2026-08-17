@@ -4,10 +4,6 @@ A compound geometric path consisting of line segments, arcs, quadratic Bezier cu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class Path--><!--Device-drawing-class Path-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -27,10 +23,6 @@ addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void
 Adds an arc to this path. When **startAngle** and **sweepAngle** meet the following conditions, an oval instead of an arc is added: 1. The result of **startAngle** modulo 90 is close to 0. 2. The value of **sweepAngle** is not in the range of (-360, 360). In other cases, this API adds an arc by applying the result of **sweepAngle** modulo 360 to the path.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void--><!--Device-Path-addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void-End-->
 
@@ -59,10 +51,6 @@ addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): 
 Adds a circle to this path in the specified direction. The start point of the circle is (x + radius, y).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): void--><!--Device-Path-addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): void-End-->
 
@@ -93,10 +81,6 @@ Adds the inscribed ellipse of a rectangle to this path in the specified directio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void--><!--Device-Path-addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -125,10 +109,6 @@ Transforms the points in a path by a matrix and stores the resulting path in the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-addPath(path: Path, matrix?: Matrix | null): void--><!--Device-Path-addPath(path: Path, matrix?: Matrix | null): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -155,10 +135,6 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 Adds a polygon to this path.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-addPolygon(points: Array<common2D.Point>, close: boolean): void--><!--Device-Path-addPolygon(points: Array<common2D.Point>, close: boolean): void-End-->
 
@@ -187,10 +163,6 @@ Adds a rectangle to a path in the specified direction. The start point is the up
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-addRect(rect: common2D.Rect, pathDirection?: PathDirection): void--><!--Device-Path-addRect(rect: common2D.Rect, pathDirection?: PathDirection): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -218,10 +190,6 @@ Adds a rounded rectangle to a path in the specified direction. When the path dir
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void--><!--Device-Path-addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -248,10 +216,6 @@ approximate(acceptableError: number): Array<number>
 Converts the existing path into an approximate path consisting of consecutive line segments. > **NOTE：**> > - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting > performance and memory usage. > > - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially > distorting the original shape. > > - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies > them to polygons by keeping just the start and end points of their Bezier curve segments.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-Path-approximate(acceptableError: number): Array<number>--><!--Device-Path-approximate(acceptableError: number): Array<number>-End-->
 
@@ -285,10 +249,6 @@ Approximates the path with a series of line segments.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Path-approximate(acceptableError: double): Array<double> | undefined--><!--Device-Path-approximate(acceptableError: double): Array<double> | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -320,10 +280,6 @@ arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg
 Draws an arc to this path using angle arc mode. This mode first defines a rectangle and takes its inscribed ellipse. Then, it specifies a start angle and a sweep angle. The arc is the portion of the ellipse's circumference defined by the start angle and the sweep angle. By default, a line segment from the last point of the path to the start point of the arc is also added.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -358,10 +314,6 @@ Parses the path represented by an SVG string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-buildFromSvgString(str: string): boolean--><!--Device-Path-buildFromSvgString(str: string): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -394,10 +346,6 @@ Closes this path by adding a line segment from the start point to the last point
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-close(): void--><!--Device-Path-close(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -411,10 +359,6 @@ conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double
 Draws a conic curve from the last point of this path to the target point. If the path is empty, the start point ( 0, 0) is used.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -430,7 +374,7 @@ Draws a conic curve from the last point of this path to the target point. If the
 | ctrlY | double | Yes | Y coordinate of the control point. The value is a floating point number. |
 | endX | double | Yes | X coordinate of the target point. The value is a floating point number. |
 | endY | double | Yes | Y coordinate of the target point. The value is a floating point number. |
-| weight | double | Yes | Weight of the curve, which determines its shape. The larger the value, the closer of the curve to the control point. If the value is less than or equal to 0, this API has the same effect as [lineTo](#lineTo). If the value is 1, it has the same effect as [quadTo](#quadTo). The value is a floating point number. |
+| weight | double | Yes | Weight of the curve, which determines its shape. The larger the value, the closer of the curve to the control point. If the value is less than or equal to 0, this API has the same effect as [lineTo](#lineto). If the value is 1, it has the same effect as [quadTo](#quadto). The value is a floating point number. |
 
 **Error codes:**
 
@@ -448,10 +392,6 @@ Constructs a path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Path-constructor()--><!--Device-Path-constructor()-End-->
@@ -467,10 +407,6 @@ constructor(path: Path)
 Constructs a copy of an existing path.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -490,13 +426,9 @@ Constructs a copy of an existing path.
 contains(x: double, y: double): boolean
 ```
 
-Checks whether a coordinate point is included in this path. For details, see [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md#PathFillType).
+Checks whether a coordinate point is included in this path. For details, see [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md#pathfilltype).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-contains(x: double, y: double): boolean--><!--Device-Path-contains(x: double, y: double): boolean-End-->
 
@@ -531,10 +463,6 @@ Converts path to an SVG string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Path-convertToSvgString(): string--><!--Device-Path-convertToSvgString(): string-End-->
@@ -556,10 +484,6 @@ cubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: do
 Draws a cubic Bezier curve from the last point of this path to the target point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -594,10 +518,6 @@ Obtains the minimum bounding rectangle that encloses this path.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Path-getBounds(): common2D.Rect--><!--Device-Path-getBounds(): common2D.Rect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -618,10 +538,6 @@ Obtains the minimum bounding rectangle that encloses this path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-getBounds(): common2D.Rect | undefined--><!--Device-Path-getBounds(): common2D.Rect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -641,10 +557,6 @@ getConicWeightData(): Array<double>
 Gets path conic weight data.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -668,10 +580,6 @@ Obtains the fill type of a path.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-Path-getFillType(): PathFillType--><!--Device-Path-getFillType(): PathFillType-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -692,10 +600,6 @@ Gets fill type, the rule used to fill path.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Path-getFillType(): PathFillType | undefined--><!--Device-Path-getFillType(): PathFillType | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -715,10 +619,6 @@ getLastPoint(): common2D.Point
 Gets the last point of the path.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -742,10 +642,6 @@ Gets the last point of the path.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Path-getLastPoint(): common2D.Point | undefined--><!--Device-Path-getLastPoint(): common2D.Point | undefined-End-->
@@ -767,10 +663,6 @@ getLength(forceClosed: boolean): double
 Obtains the path length.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-getLength(forceClosed: boolean): double--><!--Device-Path-getLength(forceClosed: boolean): double-End-->
 
@@ -797,10 +689,6 @@ getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMea
 Obtains a transformation matrix at a specific position along the path, which represents the coordinates and orientation of that point.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMeasureMatrixFlags): boolean--><!--Device-Path-getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMeasureMatrixFlags): boolean-End-->
 
@@ -837,10 +725,6 @@ Obtains the operation iterator of this path.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-Path-getPathIterator(): PathIterator--><!--Device-Path-getPathIterator(): PathIterator-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -861,10 +745,6 @@ Obtains the operation iterator of this path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-getPathIterator(): PathIterator | undefined--><!--Device-Path-getPathIterator(): PathIterator | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -884,10 +764,6 @@ getPointData(): Array<common2D.Point>
 Gets path point data.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -910,10 +786,6 @@ getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D
 Obtains the coordinates and tangent at a distance from the start point of this path.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D.Point, tangent: common2D.Point): boolean--><!--Device-Path-getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D.Point, tangent: common2D.Point): boolean-End-->
 
@@ -950,10 +822,6 @@ Extracts a segment of a path and appends it to a destination path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: boolean, dst: Path): boolean--><!--Device-Path-getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: boolean, dst: Path): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -965,7 +833,7 @@ Extracts a segment of a path and appends it to a destination path.
 | forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
 | start | double | Yes | Distance from the start point of the path to the start point of the segment. If it is less than 0, it defaults to 0. If it is greater than or equal to **stop**, the extraction fails. The value is a floating point number. |
 | stop | double | Yes | Distance from the start point of the path to the end point of the segment. If it is less than or equal to **start**, the extraction fails. If it is greater than the path length, it defaults to the path length. The value is a floating point number. |
-| startWithMoveTo | boolean | Yes | Whether to execute [moveTo](#moveTo) in the destination path to move to its start point. The value **true** means to move to the start point, and **false** means the opposite. |
+| startWithMoveTo | boolean | Yes | Whether to execute [moveTo](#moveto) in the destination path to move to its start point. The value **true** means to move to the start point, and **false** means the opposite. |
 | dst | Path | Yes | Destination path. If the extraction succeeds, the segment is appended to the path. If the extraction fails, nothing changes. |
 
 **Return value:**
@@ -983,10 +851,6 @@ getVerbData(): Array<PathIteratorVerb>
 Gets path verb data.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1009,10 +873,6 @@ interpolate(other: Path, weight: double, interpolatedPath: Path): boolean
 Interpolates between the existing path and another path based on the given weight and stores the result in the target path object. Interpolation is achievable if the two paths have the same number of points. The target path is created based on the structure of the existing path.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-Path-interpolate(other: Path, weight: double, interpolatedPath: Path): boolean--><!--Device-Path-interpolate(other: Path, weight: double, interpolatedPath: Path): boolean-End-->
 
@@ -1048,10 +908,6 @@ Checks whether a path is closed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-isClosed(): boolean--><!--Device-Path-isClosed(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1072,10 +928,6 @@ Checks whether a path is empty.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Path-isEmpty(): boolean--><!--Device-Path-isEmpty(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1095,10 +947,6 @@ isEqual(path: Path): boolean
 Checks if two paths are equal.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1128,10 +976,6 @@ Checks whether the existing path and another path are compatible for interpolati
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Path-isInterpolate(other: Path): boolean--><!--Device-Path-isInterpolate(other: Path): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1158,10 +1002,6 @@ Checks whether the current path fill type is the inverse fill type. For example,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-isInverseFillType(): boolean--><!--Device-Path-isInverseFillType(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1181,10 +1021,6 @@ isRect(rect: common2D.Rect | null): boolean
 Checks whether a path forms a rectangle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-isRect(rect: common2D.Rect | null): boolean--><!--Device-Path-isRect(rect: common2D.Rect | null): boolean-End-->
 
@@ -1211,10 +1047,6 @@ lineTo(x: double, y: double): void
 Draws a line segment from the last point of this path to the target point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1245,10 +1077,6 @@ Sets the start point of this path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Path-moveTo(x: double, y: double): void--><!--Device-Path-moveTo(x: double, y: double): void-End-->
@@ -1277,10 +1105,6 @@ offset(dx: number, dy: number): Path
 Offsets this path by specified distances along the X axis and Y axis and stores the resulting path in the **Path** object returned.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-Path-offset(dx: number, dy: number): Path--><!--Device-Path-offset(dx: number, dy: number): Path-End-->
 
@@ -1315,10 +1139,6 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-offset(dx: double, dy: double): Path | undefined--><!--Device-Path-offset(dx: double, dy: double): Path | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1351,10 +1171,6 @@ op(path: Path, pathOp: PathOp): boolean
 Combines this path with the passed-in path based on the specified operation mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-op(path: Path, pathOp: PathOp): boolean--><!--Device-Path-op(path: Path, pathOp: PathOp): boolean-End-->
 
@@ -1389,10 +1205,6 @@ Draws a quadratic Bezier curve from the last point of this path to the target po
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Path-quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void--><!--Device-Path-quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void-End-->
@@ -1424,10 +1236,6 @@ Draws a conic curve from the last point of this path to a point relative to the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Path-rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void--><!--Device-Path-rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void-End-->
@@ -1442,7 +1250,7 @@ Draws a conic curve from the last point of this path to a point relative to the 
 | ctrlY | double | Yes | Y offset of the control point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
 | endX | double | Yes | X offset of the target point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
 | endY | double | Yes | Y offset of the target point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
-| weight | double | Yes | Weight of the curve, which determines its shape. The larger the value, the closer of the curve to the control point. If the value is less than or equal to 0, this API is equivalent to [rLineTo](#rLineTo), that is, adding a line segment from the last point of the path to the target point. If the value is 1, this API is equivalent to [rQuadTo](#rQuadTo). The value is a floating point number. |
+| weight | double | Yes | Weight of the curve, which determines its shape. The larger the value, the closer of the curve to the control point. If the value is less than or equal to 0, this API is equivalent to [rLineTo](#rlineto), that is, adding a line segment from the last point of the path to the target point. If the value is 1, this API is equivalent to [rQuadTo](#rquadto). The value is a floating point number. |
 
 **Error codes:**
 
@@ -1459,10 +1267,6 @@ rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: d
 Draws a cubic Bezier curve from the last point of this path to a point relative to the last point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1497,10 +1301,6 @@ Draws a line segment from the last point of this path to a point relative to the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Path-rLineTo(dx: double, dy: double): void--><!--Device-Path-rLineTo(dx: double, dy: double): void-End-->
@@ -1530,10 +1330,6 @@ Sets the start position relative to the last point of this path. If the path is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Path-rMoveTo(dx: double, dy: double): void--><!--Device-Path-rMoveTo(dx: double, dy: double): void-End-->
@@ -1562,10 +1358,6 @@ rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void
 Draws a quadratic Bezier curve from the last point of this path to a point relative to the last point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1598,10 +1390,6 @@ Resets the path data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-reset(): void--><!--Device-Path-reset(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1616,10 +1404,6 @@ Rewinds a path by clearing all its points and lines but reserves the memory spac
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Path-rewind(): void--><!--Device-Path-rewind(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1633,10 +1417,6 @@ set(src: Path): void
 Updates the existing path with another path.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -1659,10 +1439,6 @@ setFillType(pathFillType: PathFillType): void
 Sets the fill type of this path. The fill type determines how "inside" of the path is drawn. For example, when the fill type **Winding** is used, "inside" of the path is determined by a non-zero sum of signed edge crossings. When **EvenOdd** is used, "inside" of the path is determined by an odd number of edge crossings.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-setFillType(pathFillType: PathFillType): void--><!--Device-Path-setFillType(pathFillType: PathFillType): void-End-->
 
@@ -1690,10 +1466,6 @@ Sets the last point of a path.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Path-setLastPoint(x: double, y: double): void--><!--Device-Path-setLastPoint(x: double, y: double): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1715,10 +1487,6 @@ Toggles the fill type of the path to the inverse type. For example, if the **Win
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Path-toggleInverseFillType(): void--><!--Device-Path-toggleInverseFillType(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1732,10 +1500,6 @@ transform(matrix: Matrix): void
 Transforms the points in a path by matrix.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Path-transform(matrix: Matrix): void--><!--Device-Path-transform(matrix: Matrix): void-End-->
 

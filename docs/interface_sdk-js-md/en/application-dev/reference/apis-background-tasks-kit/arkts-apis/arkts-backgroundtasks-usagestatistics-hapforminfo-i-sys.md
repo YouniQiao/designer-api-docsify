@@ -2,10 +2,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usageStatistics-interface HapFormInfo--><!--Device-usageStatistics-interface HapFormInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -30,10 +26,6 @@ The click count of module.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HapFormInfo-count: int--><!--Device-HapFormInfo-count: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -51,10 +43,6 @@ The form dimension.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HapFormInfo-formDimension: int--><!--Device-HapFormInfo-formDimension: int-End-->
 
@@ -74,10 +62,6 @@ The form id.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HapFormInfo-formId: long--><!--Device-HapFormInfo-formId: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -96,10 +80,6 @@ The last time when the form was accessed, in milliseconds. <br> Unit:ms
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HapFormInfo-formLastUsedTime: long--><!--Device-HapFormInfo-formLastUsedTime: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -117,10 +97,6 @@ The form name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HapFormInfo-formName: string--><!--Device-HapFormInfo-formName: string-End-->
 

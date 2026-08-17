@@ -10,10 +10,6 @@ Indicates the configuration for left and right channel volume balance. **-1.0** 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-config-const audioBalance: Config<double>--><!--Device-config-const audioBalance: Config<double>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -29,10 +25,6 @@ const audioMono: Config<boolean>
 Indicates the mono audio feature status. The value **true** indicates that the mono audio feature is enabled, and **false** indicates that it is disabled. The default value is **false**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-config-const audioMono: Config<boolean>--><!--Device-config-const audioMono: Config<boolean>-End-->
 
@@ -50,10 +42,6 @@ Length of time required for a click.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-config-const clickResponseTime: Config<ClickResponseTime>--><!--Device-config-const clickResponseTime: Config<ClickResponseTime>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -69,10 +57,6 @@ const daltonizationState: Config<boolean>
 Indicates the color correction feature status. Used together with daltonizationColorFilter. The value **true** indicates that color correction is enabled, and **false** indicates that it is disabled. The default value is **false**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-config-const daltonizationState: Config<boolean>--><!--Device-config-const daltonizationState: Config<boolean>-End-->
 
@@ -90,10 +74,6 @@ Whether to ignore repeated clicks. This parameter must be used together with **r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-config-const ignoreRepeatClick: Config<boolean>--><!--Device-config-const ignoreRepeatClick: Config<boolean>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -109,10 +89,6 @@ const repeatClickInterval: Config<RepeatClickInterval>
 Indicates the configuration for the interval of ignoring repeated clicks. Used together with ignoreRepeatClick. This configuration takes effect only when ignoreRepeatClick is set to **true**. The default value is Shortest, indicating the shortest interval.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-config-const repeatClickInterval: Config<RepeatClickInterval>--><!--Device-config-const repeatClickInterval: Config<RepeatClickInterval>-End-->
 
@@ -130,10 +106,6 @@ Indicates the configuration of screen magnification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-config-const screenMagnification: Config<boolean>--><!--Device-config-const screenMagnification: Config<boolean>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -149,10 +121,6 @@ const shortkeyMultiTargets: Config<Array<string>>
 Indicates the multi-target list configuration of the accessibility extension shortcut key. The value is the name of the accessibility extension app, in the format ['bundleName/abilityName']. If the format is incorrect or the name is invalid, the setting does not take effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-config-const shortkeyMultiTargets: Config<Array<string>>--><!--Device-config-const shortkeyMultiTargets: Config<Array<string>>-End-->
 

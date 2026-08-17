@@ -16,10 +16,6 @@ Obtains the operation type of a WantAgent object. This API uses an asynchronous 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void--><!--Device-wantAgent-function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void-End-->
@@ -42,7 +38,7 @@ Obtains the operation type of a WantAgent object. This API uses an asynchronous 
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 | [16000015](../errorcode-ability.md#16000015-service-timeout) | Service timeout. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';
@@ -119,10 +115,6 @@ Obtains the operation type of a WantAgent object. This API uses a promise to ret
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function getOperationType(agent: WantAgent): Promise<int>--><!--Device-wantAgent-function getOperationType(agent: WantAgent): Promise<int>-End-->
@@ -150,7 +142,7 @@ Obtains the operation type of a WantAgent object. This API uses a promise to ret
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 | [16000015](../errorcode-ability.md#16000015-service-timeout) | Service timeout. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';

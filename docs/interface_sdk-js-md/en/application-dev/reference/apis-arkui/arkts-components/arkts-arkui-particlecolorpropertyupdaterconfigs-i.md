@@ -4,10 +4,6 @@ Defines the particle color property updater configs.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ParticleColorPropertyUpdaterConfigs--><!--Device-unnamed-interface ParticleColorPropertyUpdaterConfigs-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ The color changes with the animation curve. The array type indicates that multip
 **Type:** Array&lt;[ParticlePropertyAnimation](arkts-arkui-particlepropertyanimation-i.md)&lt;ResourceColor&gt;&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ The color does not change.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -71,10 +59,6 @@ The color changes randomly, with the per-second change difference being a value 
 **Type:** [ParticleColorOptions](arkts-arkui-particlecoloroptions-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Disconnects the UIAbility connection to end the collaboration session.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-abilityConnectionManager-function disconnect(sessionId: int): void--><!--Device-abilityConnectionManager-function disconnect(sessionId: int): void-End-->
@@ -32,7 +28,7 @@ Disconnects the UIAbility connection to end the collaboration session.
 | --- | --- | --- | --- |
 | sessionId | int | Yes | ID of the collaboration session. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

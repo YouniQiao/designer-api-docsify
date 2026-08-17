@@ -4,10 +4,6 @@ Defines the page margins for printing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PrintMargin--><!--Device-print-interface PrintMargin-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -32,10 +28,6 @@ Bottom margin of the page, in millimeters. The default value is **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintMargin-bottom?: int--><!--Device-PrintMargin-bottom?: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -53,10 +45,6 @@ Left margin of the page, in millimeters. The default value is **0**.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintMargin-left?: int--><!--Device-PrintMargin-left?: int-End-->
 
@@ -76,10 +64,6 @@ Right margin of the page, in millimeters. The default value is **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintMargin-right?: int--><!--Device-PrintMargin-right?: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -97,10 +81,6 @@ Top margin of the page, in millimeters. The default value is **0**.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintMargin-top?: int--><!--Device-PrintMargin-top?: int-End-->
 

@@ -4,10 +4,6 @@ A three-dimensional vector used to represent a point, a direction, or a vector t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Vec3--><!--Device-unnamed-export interface Vec3-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -23,10 +19,6 @@ Component on the X axis. The value is a real number.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Vec3-x: double--><!--Device-Vec3-x: double-End-->
 
@@ -44,10 +36,6 @@ Component on the Y axis. The value is a real number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Vec3-y: double--><!--Device-Vec3-y: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -63,10 +51,6 @@ Component on the Z axis. The value is a real number.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Vec3-z: double--><!--Device-Vec3-z: double-End-->
 

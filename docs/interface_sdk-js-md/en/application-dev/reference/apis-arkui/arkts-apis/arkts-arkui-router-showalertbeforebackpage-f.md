@@ -12,15 +12,13 @@ import { router } from 'router';
 function showAlertBeforeBackPage(options: EnableAlertOptions): void
 ```
 
-Enables the display of a confirm dialog box before returning to the previous page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
+Enables the display of a confirm dialog box before returning to the previous page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showAlertBeforeBackPage)
+**Substitutes:** [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +30,7 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md) | Yes | Description of the dialog box. |
+| options | [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | Yes | Description of the dialog box. |
 
 **Error codes:**
 
@@ -41,7 +39,7 @@ Enables the display of a confirm dialog box before returning to the previous pag
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

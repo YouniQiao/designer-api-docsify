@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace keyManager--><!--Device-unnamed-declare namespace keyManager-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Encryption
@@ -37,6 +33,6 @@ import { keyManager } from 'keyManager';
 
 | Name | Description |
 | --- | --- |
-| [deactivateUserKey](arkts-corefile-keymanager-deactivateuserkey-f-sys.md#deactivateUserKey) | When the screen is locked, the specified user key is uninstalled synchronously. **(Currently, this API is available only to lock screen applications.)** |
+| [deactivateUserKey](arkts-corefile-keymanager-deactivateuserkey-f-sys.md#deactivateuserkey) | When the screen is locked, the specified user key is uninstalled synchronously. **(Currently, this API is available only to lock screen applications.)** |
 <!--DelEnd-->
 

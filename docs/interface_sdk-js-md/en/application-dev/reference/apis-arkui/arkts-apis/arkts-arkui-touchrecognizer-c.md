@@ -4,10 +4,6 @@ Represents a touch gesture recognizer.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class TouchRecognizer--><!--Device-unnamed-declare class TouchRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ cancelTouch(): void
 Sends a touch cancellation event to this touch gesture recognizer.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ getEventTargetInfo(): EventTargetInfo
 Obtains the information about the component corresponding to this touch gesture recognizer.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,10 +60,6 @@ Returns whether the node bound to the current touch gesture recognizer is a desc
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -88,7 +72,7 @@ Returns whether the node bound to the current touch gesture recognizer is a desc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | int | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getUniqueId) API. |
+| uniqueId | int | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid) API. |
 
 **Return value:**
 

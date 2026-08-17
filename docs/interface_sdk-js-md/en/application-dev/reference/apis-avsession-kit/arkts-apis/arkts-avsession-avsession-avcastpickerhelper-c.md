@@ -4,10 +4,6 @@ A helper to enable a picker to select output devices
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-class AVCastPickerHelper--><!--Device-avSession-class AVCastPickerHelper-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -27,10 +23,6 @@ constructor(context: Context)
 The constructor used to create a AVCastPickerHelper object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -61,10 +53,6 @@ Unregister picker state change callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastPickerHelper-offPickerStateChange(callback?: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-offPickerStateChange(callback?: Callback<AVCastPickerState>) : void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -90,10 +78,6 @@ off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
 Unregister picker state change callback.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -125,10 +109,6 @@ Register picker state change callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVCastPickerHelper-onPickerStateChange(callback: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-onPickerStateChange(callback: Callback<AVCastPickerState>) : void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -154,10 +134,6 @@ on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
 Register picker state change callback.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -189,10 +165,6 @@ Reset audio device to be default set by the platform which is used for communica
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-AVCastPickerHelper-resetCommunicationDevice(): Promise<void>--><!--Device-AVCastPickerHelper-resetCommunicationDevice(): Promise<void>-End-->
@@ -214,10 +186,6 @@ select(options?: AVCastPickerOptions): Promise<void>
 Pull up the avcastpicker based on the options.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

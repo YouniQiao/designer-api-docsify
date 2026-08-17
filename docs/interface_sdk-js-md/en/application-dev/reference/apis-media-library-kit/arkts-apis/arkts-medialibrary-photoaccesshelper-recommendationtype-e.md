@@ -4,10 +4,6 @@ Enumerates the types of recommended images.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum RecommendationType--><!--Device-photoAccessHelper-enum RecommendationType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,10 +17,6 @@ QR_OR_BAR_CODE = 1
 QR code or barcode.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -42,10 +34,6 @@ QR code.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-QR_CODE = 2--><!--Device-RecommendationType-QR_CODE = 2-End-->
@@ -61,10 +49,6 @@ BAR_CODE = 3
 Barcode.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -82,10 +66,6 @@ ID card.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-ID_CARD = 4--><!--Device-RecommendationType-ID_CARD = 4-End-->
@@ -101,10 +81,6 @@ PROFILE_PICTURE = 5
 Profile.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -122,10 +98,6 @@ Passport.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-PASSPORT = 6--><!--Device-RecommendationType-PASSPORT = 6-End-->
@@ -141,10 +113,6 @@ BANK_CARD = 7
 Bank card.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -162,10 +130,6 @@ Driver license.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-DRIVER_LICENSE = 8--><!--Device-RecommendationType-DRIVER_LICENSE = 8-End-->
@@ -182,10 +146,6 @@ Vehicle license.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-DRIVING_LICENSE = 9--><!--Device-RecommendationType-DRIVING_LICENSE = 9-End-->
@@ -201,10 +161,6 @@ FEATURED_SINGLE_PORTRAIT = 10
 Recommended portrait.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

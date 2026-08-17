@@ -4,10 +4,6 @@ Photo defines a full-quality image object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface Photo--><!--Device-camera-interface Photo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -27,10 +23,6 @@ release(): Promise<void>
 Releases output resources. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -55,10 +47,6 @@ Full-quality image.
 **Type:** image.Image
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

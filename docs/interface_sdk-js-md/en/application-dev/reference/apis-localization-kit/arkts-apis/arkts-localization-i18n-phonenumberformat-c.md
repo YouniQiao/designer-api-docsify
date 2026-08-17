@@ -4,10 +4,6 @@ Provides phone number management capabilities, such as phone number validity ver
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class PhoneNumberFormat--><!--Device-i18n-export class PhoneNumberFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Creates a **PhoneNumberFormat** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhoneNumberFormat-constructor(country: string, options?: PhoneNumberFormatOptions)--><!--Device-PhoneNumberFormat-constructor(country: string, options?: PhoneNumberFormatOptions)-End-->
@@ -43,9 +35,9 @@ Creates a **PhoneNumberFormat** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | country | string | Yes | Country/region to which the phone number to be formatted belongs. |
-| options | [PhoneNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-phonenumberformatoptions-i.md) | No | Options for **PhoneNumberFormat** object initialization. The default value is **NATIONAL**. |
+| options | [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | No | Options for **PhoneNumberFormat** object initialization. The default value is **NATIONAL**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -63,10 +55,6 @@ format(phoneNumber: string): string
 Formats a phone number. > **Description** > > Formatting dialed phone numbers is supported since API version 12.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -86,7 +74,7 @@ Formats a phone number. > **Description** > > Formatting dialed phone numbers is
 | --- | --- |
 | string | Formatted phone number. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -116,10 +104,6 @@ Obtains the home location of a phone number. > **Description** > > This API can 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhoneNumberFormat-getLocationName(phoneNumber: string, locale: string): string--><!--Device-PhoneNumberFormat-getLocationName(phoneNumber: string, locale: string): string-End-->
@@ -139,7 +123,7 @@ Obtains the home location of a phone number. > **Description** > > This API can 
 | --- | --- |
 | string | Home location of the phone number. If the number is invalid, an empty string is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -170,10 +154,6 @@ Checks whether the phone number is valid for the country/region in the **PhoneNu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhoneNumberFormat-isValidNumber(phoneNumber: string): boolean--><!--Device-PhoneNumberFormat-isValidNumber(phoneNumber: string): boolean-End-->
@@ -192,7 +172,7 @@ Checks whether the phone number is valid for the country/region in the **PhoneNu
 | --- | --- |
 | boolean | Whether the phone number is valid. The value **true** indicates that the phone number is valid, and the value **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

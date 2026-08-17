@@ -4,10 +4,6 @@ Defines the dynamic layout container.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface DynamicLayoutInterface--><!--Device-unnamed-export interface DynamicLayoutInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,10 +25,6 @@ Defines the dynamic layout container.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -47,7 +39,7 @@ Defines the dynamic layout container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md) | Yes | Layout algorithm of the dynamic layout component. If an invalid value is used, the child components are stacked and arranged according to StackLayoutAlgorithm. |
+| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes | Layout algorithm of the dynamic layout component. If an invalid value is used, the child components are stacked and arranged according to StackLayoutAlgorithm. |
 
 **Return value:**
 

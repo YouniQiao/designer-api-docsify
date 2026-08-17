@@ -4,10 +4,6 @@ Defines a watcher for event subscription.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiSysEvent-interface Watcher--><!--Device-hiSysEvent-interface Watcher-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -26,15 +22,11 @@ import { hiSysEvent } from 'hiSysEvent';
 onEvent: (info: SysEventInfo) => void
 ```
 
-Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md#SysEventInfo-(System-API))) => void
+Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md#syseventinfo-system-api)) => void
 
 **Type:** (info: SysEventInfo) =&gt; void
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Watcher-onEvent: (info: SysEventInfo) => void--><!--Device-Watcher-onEvent: (info: SysEventInfo) => void-End-->
 
@@ -54,10 +46,6 @@ Callback for disabling of event subscription: () => void
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Watcher-onServiceDied: () => void--><!--Device-Watcher-onServiceDied: () => void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -75,10 +63,6 @@ Array of matching event subscription rules.
 **Type:** [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Watcher-rules: WatchRule[]--><!--Device-Watcher-rules: WatchRule[]-End-->
 

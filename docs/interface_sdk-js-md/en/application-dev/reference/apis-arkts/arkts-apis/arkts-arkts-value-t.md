@@ -1,4 +1,4 @@
-# Value
+# Value(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)
 
 ```TypeScript
 type Value = string | double | Decimal
@@ -7,10 +7,6 @@ type Value = string | double | Decimal
 The type used to denote decimal value
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

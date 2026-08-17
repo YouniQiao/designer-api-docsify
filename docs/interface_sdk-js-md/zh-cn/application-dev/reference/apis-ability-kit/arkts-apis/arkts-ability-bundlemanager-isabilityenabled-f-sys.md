@@ -10,10 +10,6 @@ function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -43,7 +39,7 @@ function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -126,10 +122,6 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -141,7 +133,7 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，返回true表示当前应用组件为使能状态，返回 false表示应用组件为禁用状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，返回true表示当前应用组件为使能状态，返回 false表示应用组件为禁用状态。 |
 
 **错误码：**
 
@@ -152,7 +144,7 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -239,10 +231,6 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -270,7 +258,7 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

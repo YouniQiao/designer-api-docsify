@@ -16,10 +16,6 @@ Verifies an authentication token. This API is used to verify the validity of an 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_USER_ACCESS_MANAGER
 
 <!--Device-userAccessCtrl-function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>--><!--Device-userAccessCtrl-function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>-End-->
@@ -52,7 +48,7 @@ Verifies an authentication token. This API is used to verify the validity of an 
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 | [12500016](../errorcode-useriam.md#12500016-authtoken-has-expired) | AuthToken has expired. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

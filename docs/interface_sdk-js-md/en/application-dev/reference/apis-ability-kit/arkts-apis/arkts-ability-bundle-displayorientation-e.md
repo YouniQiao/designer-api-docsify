@@ -1,14 +1,12 @@
 # DisplayOrientation
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#DisplayOrientation) instead. Enumerates display orientations.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#displayorientation) instead. Enumerates display orientations.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#DisplayOrientation)
+**Substitutes:** [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#displayorientation)
 
 <!--Device-bundle-export enum DisplayOrientation--><!--Device-bundle-export enum DisplayOrientation-End-->
 
@@ -24,11 +22,9 @@ Unspecified display orientation.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UNSPECIFIED](arkts-ability-bundlemanager-displayorientation-e.md#UNSPECIFIED)
+**Substitutes:** [UNSPECIFIED](arkts-ability-bundlemanager-displayorientation-e.md#unspecified)
 
 <!--Device-DisplayOrientation-UNSPECIFIED = 0--><!--Device-DisplayOrientation-UNSPECIFIED = 0-End-->
 
@@ -44,11 +40,9 @@ Landscape orientation.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LANDSCAPE](arkts-ability-bundlemanager-displayorientation-e.md#LANDSCAPE)
+**Substitutes:** [LANDSCAPE](arkts-ability-bundlemanager-displayorientation-e.md#landscape)
 
 <!--Device-DisplayOrientation-LANDSCAPE = 1--><!--Device-DisplayOrientation-LANDSCAPE = 1-End-->
 
@@ -64,11 +58,9 @@ Portrait orientation.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PORTRAIT](arkts-ability-bundlemanager-displayorientation-e.md#PORTRAIT)
+**Substitutes:** [PORTRAIT](arkts-ability-bundlemanager-displayorientation-e.md#portrait)
 
 <!--Device-DisplayOrientation-PORTRAIT = 2--><!--Device-DisplayOrientation-PORTRAIT = 2-End-->
 
@@ -84,11 +76,9 @@ Orientation same as that of the nearest ability in the stack.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FOLLOW_RECENT](arkts-ability-bundlemanager-displayorientation-e.md#FOLLOW_RECENT)
+**Substitutes:** [FOLLOW_RECENT](arkts-ability-bundlemanager-displayorientation-e.md#followrecent)
 
 <!--Device-DisplayOrientation-FOLLOW_RECENT = 3--><!--Device-DisplayOrientation-FOLLOW_RECENT = 3-End-->
 

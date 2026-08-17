@@ -8,10 +8,6 @@ Defines the information about a preinstalled application that can be restored af
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type RecoverableApplicationInfo = _RecoverableApplicationInfo--><!--Device-bundleManager-export type RecoverableApplicationInfo = _RecoverableApplicationInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

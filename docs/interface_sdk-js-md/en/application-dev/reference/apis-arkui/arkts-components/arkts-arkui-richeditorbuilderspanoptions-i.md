@@ -4,10 +4,6 @@ Sets the offset and style of the builder.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface RichEditorBuilderSpanOptions--><!--Device-unnamed-declare interface RichEditorBuilderSpanOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +14,11 @@ Sets the offset and style of the builder.
 accessibilitySpanOptions?: AccessibilitySpanOptions
 ```
 
-Accessibility settings. By default, the default value of [AccessibilitySpanOptions](../arkts-apis/arkts-arkui-accessibilityspanoptions-i.md#AccessibilitySpanOptions) is used.
+Accessibility settings. By default, the default value of [AccessibilitySpanOptions](../arkts-apis/arkts-arkui-accessibilityspanoptions-i.md#accessibilityspanoptions) is used.
 
 **Type:** AccessibilitySpanOptions
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Position of the builder span to be added. If this parameter is omitted or set to
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

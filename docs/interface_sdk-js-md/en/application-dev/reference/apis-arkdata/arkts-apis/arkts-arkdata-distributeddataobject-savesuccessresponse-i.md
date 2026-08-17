@@ -4,10 +4,6 @@ Represents the information returned by the callback of save. .
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDataObject-interface SaveSuccessResponse--><!--Device-distributedDataObject-interface SaveSuccessResponse-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -30,10 +26,6 @@ ID of the device where the distributed data object is stored. The value local in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SaveSuccessResponse-deviceId: string--><!--Device-SaveSuccessResponse-deviceId: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -50,10 +42,6 @@ Unique ID for multi-device collaboration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SaveSuccessResponse-sessionId: string--><!--Device-SaveSuccessResponse-sessionId: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -69,10 +57,6 @@ Version of the saved object, which is a non-negative integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SaveSuccessResponse-version: int--><!--Device-SaveSuccessResponse-version: int-End-->
 

@@ -4,10 +4,6 @@ Enumerates the types of ExtensionAbility components. &lt;!--RP2--&gt;&lt;!--RP2E
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export enum ExtensionAbilityType--><!--Device-bundleManager-export enum ExtensionAbilityType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -18,13 +14,9 @@ Enumerates the types of ExtensionAbility components. &lt;!--RP2--&gt;&lt;!--RP2E
 FORM = 0
 ```
 
-[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#FormExtensionAbility): provides APIs for widget development.
+[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#formextensionability): provides APIs for widget development.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ FORM = 0
 WORK_SCHEDULER = 1
 ```
 
-[WorkSchedulerExtensionAbility](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-workschedulerextensionability-c.md#WorkSchedulerExtensionAbility): provides extended capabilities related to deferred tasks, enabling applications to execute non-real-time tasks when the system is idle.
+[WorkSchedulerExtensionAbility](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-workschedulerextensionability-c.md#workschedulerextensionability): provides extended capabilities related to deferred tasks, enabling applications to execute non-real-time tasks when the system is idle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-WORK_SCHEDULER = 1--><!--Device-ExtensionAbilityType-WORK_SCHEDULER = 1-End-->
 
@@ -56,13 +44,9 @@ WORK_SCHEDULER = 1
 INPUT_METHOD = 2
 ```
 
-[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility): provides extended capabilities related to input method applications.
+[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md#inputmethodextensionability): provides extended capabilities related to input method applications.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-INPUT_METHOD = 2--><!--Device-ExtensionAbilityType-INPUT_METHOD = 2-End-->
 
@@ -74,13 +58,9 @@ INPUT_METHOD = 2
 SERVICE = 3
 ```
 
-[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#ServiceExtensionAbility-(System-API)): provides extended capabilities related to background services.
+[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#serviceextensionability-system-api): provides extended capabilities related to background services.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-SERVICE = 3--><!--Device-ExtensionAbilityType-SERVICE = 3-End-->
 
@@ -96,10 +76,6 @@ AccessibilityExtensionAbility: provides extended capabilities related to accessi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-ACCESSIBILITY = 4--><!--Device-ExtensionAbilityType-ACCESSIBILITY = 4-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -110,13 +86,9 @@ AccessibilityExtensionAbility: provides extended capabilities related to accessi
 DATA_SHARE = 5
 ```
 
-[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md#DataShareExtensionAbility-(System-API)): provides extended capabilities related to data sharing, providing data reading and writing services.
+[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md#datashareextensionability-system-api): provides extended capabilities related to data sharing, providing data reading and writing services.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-DATA_SHARE = 5--><!--Device-ExtensionAbilityType-DATA_SHARE = 5-End-->
 
@@ -132,10 +104,6 @@ FileShareExtensionAbility: provides extended capabilities related to file sharin
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-FILE_SHARE = 6--><!--Device-ExtensionAbilityType-FILE_SHARE = 6-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -146,13 +114,9 @@ FileShareExtensionAbility: provides extended capabilities related to file sharin
 STATIC_SUBSCRIBER = 7
 ```
 
-[StaticSubscriberExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md#StaticSubscriberExtensionAbility-(System-API)) : provides extended capabilities related to static broadcast, used to handle static events such as startup events.
+[StaticSubscriberExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md#staticsubscriberextensionability-system-api) : provides extended capabilities related to static broadcast, used to handle static events such as startup events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-STATIC_SUBSCRIBER = 7--><!--Device-ExtensionAbilityType-STATIC_SUBSCRIBER = 7-End-->
 
@@ -168,10 +132,6 @@ WallpaperExtensionAbility: provides extended capabilities to implement wallpaper
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-WALLPAPER = 8--><!--Device-ExtensionAbilityType-WALLPAPER = 8-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -182,13 +142,9 @@ WallpaperExtensionAbility: provides extended capabilities to implement wallpaper
 BACKUP = 9
 ```
 
-[BackupExtensionAbility](../../apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability-backupextensionability-c.md#BackupExtensionAbility): provides extended capabilities for data backup and restore.
+[BackupExtensionAbility](../../apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability-backupextensionability-c.md#backupextensionability): provides extended capabilities for data backup and restore.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-BACKUP = 9--><!--Device-ExtensionAbilityType-BACKUP = 9-End-->
 
@@ -200,13 +156,9 @@ BACKUP = 9
 WINDOW = 10
 ```
 
-[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#WindowExtensionAbility-(System-API)): provides extended capabilities that allow system applications to pull up and embed UIs of other applications.
+[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#windowextensionability-system-api): provides extended capabilities that allow system applications to pull up and embed UIs of other applications.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-WINDOW = 10--><!--Device-ExtensionAbilityType-WINDOW = 10-End-->
 
@@ -218,13 +170,9 @@ WINDOW = 10
 ENTERPRISE_ADMIN = 11
 ```
 
-[EnterpriseAdminExtensionAbility](../../apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#EnterpriseAdminExtensionAbility) : provides extended capabilities for processing enterprise management events, such as application installation events on devices and events indicating too many incorrect screen-lock password attempts.
+[EnterpriseAdminExtensionAbility](../../apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#enterpriseadminextensionability) : provides extended capabilities for processing enterprise management events, such as application installation events on devices and events indicating too many incorrect screen-lock password attempts.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-ENTERPRISE_ADMIN = 11--><!--Device-ExtensionAbilityType-ENTERPRISE_ADMIN = 11-End-->
 
@@ -240,10 +188,6 @@ ThumbnailExtensionAbility: provides extended capabilities for offering thumbnail
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-THUMBNAIL = 13--><!--Device-ExtensionAbilityType-THUMBNAIL = 13-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -257,10 +201,6 @@ PREVIEW = 14
 PreviewExtensionAbility: provides extended capabilities for file preview so that other applications can be embedded and displayed in the current application. This ability is reserved and supported only by system applications.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-PREVIEW = 14--><!--Device-ExtensionAbilityType-PREVIEW = 14-End-->
 
@@ -276,10 +216,6 @@ PrintExtensionAbility: provides extended capabilities for printing photos and do
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-PRINT = 15--><!--Device-ExtensionAbilityType-PRINT = 15-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -290,13 +226,9 @@ PrintExtensionAbility: provides extended capabilities for printing photos and do
 SHARE = 16
 ```
 
-[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md#ShareExtensionAbility): provides sharing service templates based on the UIExtensionAbility.
+[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md#shareextensionability): provides sharing service templates based on the UIExtensionAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-SHARE = 16--><!--Device-ExtensionAbilityType-SHARE = 16-End-->
 
@@ -312,10 +244,6 @@ PushExtensionAbility: provides extended capabilities for pushing scenario-specif
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-PUSH = 17--><!--Device-ExtensionAbilityType-PUSH = 17-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -326,13 +254,9 @@ PushExtensionAbility: provides extended capabilities for pushing scenario-specif
 DRIVER = 18
 ```
 
-[DriverExtensionAbility](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md#DriverExtensionAbility): provides extended capabilities for the peripheral driver. When an application configures an ExtensionAbility of the driver type, it is recognized as a driver application. Driver applications do not differentiate between users during installation, uninstall, and recovery. Moreover, when a new user account is created, the existing driver applications on the device are installed for that user. For example, when a sub-user is created, the driver applications already installed by the primary user is automatically installed for the sub-user. If a driver application is uninstalled for a sub- user, it is also removed for the primary user.
+[DriverExtensionAbility](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md#driverextensionability): provides extended capabilities for the peripheral driver. When an application configures an ExtensionAbility of the driver type, it is recognized as a driver application. Driver applications do not differentiate between users during installation, uninstall, and recovery. Moreover, when a new user account is created, the existing driver applications on the device are installed for that user. For example, when a sub-user is created, the driver applications already installed by the primary user is automatically installed for the sub-user. If a driver application is uninstalled for a sub- user, it is also removed for the primary user.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-DRIVER = 18--><!--Device-ExtensionAbilityType-DRIVER = 18-End-->
 
@@ -344,13 +268,9 @@ DRIVER = 18
 ACTION = 19
 ```
 
-[ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md#ActionExtensionAbility): provides custom action service templates based on the UIExtensionAbility.
+[ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md#actionextensionability): provides custom action service templates based on the UIExtensionAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-ACTION = 19--><!--Device-ExtensionAbilityType-ACTION = 19-End-->
 
@@ -366,10 +286,6 @@ AdsServiceExtensionAbility: provides background customized ad services for exter
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-ADS_SERVICE = 20--><!--Device-ExtensionAbilityType-ADS_SERVICE = 20-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -380,13 +296,9 @@ AdsServiceExtensionAbility: provides background customized ad services for exter
 EMBEDDED_UI = 21
 ```
 
-[EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md#EmbeddedUIExtensionAbility): provides extended capabilities for the embeddable UI across process.
+[EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md#embeddeduiextensionability): provides extended capabilities for the embeddable UI across process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-EMBEDDED_UI = 21--><!--Device-ExtensionAbilityType-EMBEDDED_UI = 21-End-->
 
@@ -402,10 +314,6 @@ InsightIntentUIExtensionAbility: provides extended capabilities that enable appl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-INSIGHT_INTENT_UI = 22--><!--Device-ExtensionAbilityType-INSIGHT_INTENT_UI = 22-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -416,13 +324,9 @@ InsightIntentUIExtensionAbility: provides extended capabilities that enable appl
 FENCE = 24
 ```
 
-[FenceExtensionAbility](../../apis-location-kit/arkts-apis/arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md#FenceExtensionAbility): provides geofence- related capabilities. It inherits from ExtensionAbility.
+[FenceExtensionAbility](../../apis-location-kit/arkts-apis/arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md#fenceextensionability): provides geofence- related capabilities. It inherits from ExtensionAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-FENCE = 24--><!--Device-ExtensionAbilityType-FENCE = 24-End-->
 
@@ -438,10 +342,6 @@ CallerInfoQueryExtensionAbility: provides the capability of querying incoming an
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-CALLER_INFO_QUERY = 25--><!--Device-ExtensionAbilityType-CALLER_INFO_QUERY = 25-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -456,10 +356,6 @@ AssetAccelerationExtensionAbility: provides extended capabilities of pre-downloa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-ASSET_ACCELERATION = 26--><!--Device-ExtensionAbilityType-ASSET_ACCELERATION = 26-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -470,13 +366,9 @@ AssetAccelerationExtensionAbility: provides extended capabilities of pre-downloa
 FORM_EDIT = 27
 ```
 
-[FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md#FormEditExtensionAbility): provides extended capabilities related to widget editing. It inherits from UIExtensionAbility.
+[FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md#formeditextensionability): provides extended capabilities related to widget editing. It inherits from UIExtensionAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-FORM_EDIT = 27--><!--Device-ExtensionAbilityType-FORM_EDIT = 27-End-->
 
@@ -488,13 +380,9 @@ FORM_EDIT = 27
 DISTRIBUTED = 28
 ```
 
-[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md#DistributedExtensionAbility): provides extended capabilities for distributed services and lifecycle callbacks for creation, destruction, and connection of the DistributedExtensionAbility.
+[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md#distributedextensionability): provides extended capabilities for distributed services and lifecycle callbacks for creation, destruction, and connection of the DistributedExtensionAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-DISTRIBUTED = 28--><!--Device-ExtensionAbilityType-DISTRIBUTED = 28-End-->
 
@@ -506,13 +394,9 @@ DISTRIBUTED = 28
 APP_SERVICE = 29
 ```
 
-[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility): provides backend service capabilities for enterprise common applications.
+[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#appserviceextensionability): provides backend service capabilities for enterprise common applications.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-APP_SERVICE = 29--><!--Device-ExtensionAbilityType-APP_SERVICE = 29-End-->
 
@@ -524,13 +408,9 @@ APP_SERVICE = 29
 LIVE_FORM = 30
 ```
 
-[LiveFormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#LiveFormExtensionAbility): provides extended capabilities for interactive widgets, and provides lifecycle callbacks for creating and destroying interactive widgets.
+[LiveFormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#liveformextensionability): provides extended capabilities for interactive widgets, and provides lifecycle callbacks for creating and destroying interactive widgets.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -548,10 +428,6 @@ SelectionExtensionAbility: provides extended capabilities for text selection pop
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExtensionAbilityType-SELECTION = 31--><!--Device-ExtensionAbilityType-SELECTION = 31-End-->
@@ -564,13 +440,9 @@ SelectionExtensionAbility: provides extended capabilities for text selection pop
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#WebNativeMessagingExtensionAbility): provides extended capabilities for web native message communication.
+[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#webnativemessagingextensionability): provides extended capabilities for web native message communication.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-WEB_NATIVE_MESSAGING = 32--><!--Device-ExtensionAbilityType-WEB_NATIVE_MESSAGING = 32-End-->
 
@@ -582,13 +454,9 @@ WEB_NATIVE_MESSAGING = 32
 FAULT_LOG = 33
 ```
 
-[FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#FaultLogExtensionAbility): provides extended capabilities for delayed fault notifications.
+[FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#faultlogextensionability): provides extended capabilities for delayed fault notifications.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-FAULT_LOG = 33--><!--Device-ExtensionAbilityType-FAULT_LOG = 33-End-->
 
@@ -600,13 +468,9 @@ FAULT_LOG = 33
 NOTIFICATION_SUBSCRIBER = 34
 ```
 
-[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#NotificationSubscriberExtensionAbility) : provides extended capabilities for notification subscription.
+[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#notificationsubscriberextensionability) : provides extended capabilities for notification subscription.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-NOTIFICATION_SUBSCRIBER = 34--><!--Device-ExtensionAbilityType-NOTIFICATION_SUBSCRIBER = 34-End-->
 
@@ -622,10 +486,6 @@ CRYPTO = 35
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-ExtensionAbilityType-CRYPTO = 35--><!--Device-ExtensionAbilityType-CRYPTO = 35-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -636,13 +496,9 @@ CRYPTO = 35
 PARTNER_AGENT = 36
 ```
 
-[PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md#PartnerAgentExtensionAbility): provides the device discovery and device offline notification functions based on Bluetooth.
+[PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md#partneragentextensionability): provides the device discovery and device offline notification functions based on Bluetooth.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -660,10 +516,6 @@ AgentExtensionAbility: provides extended capabilities for agents, including life
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExtensionAbilityType-AGENT = 37--><!--Device-ExtensionAbilityType-AGENT = 37-End-->
@@ -679,10 +531,6 @@ AGENT_UI = 38
 AgentUIExtensionAbility: provides the Agent UI display capability on the access device.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -700,10 +548,6 @@ Indicates extension info with type of the modular object extension.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExtensionAbilityType-MODULAR_OBJECT = 39--><!--Device-ExtensionAbilityType-MODULAR_OBJECT = 39-End-->
@@ -716,13 +560,9 @@ Indicates extension info with type of the modular object extension.
 UNSPECIFIED = 255
 ```
 
-The ability type is not specified. &lt;!--Del--&gt;It can be used in [queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryExtensionAbilityInfo-(System-API)) to obtain ExtensionAbility components of all types.&lt;!--DelEnd--&gt;
+The ability type is not specified. &lt;!--Del--&gt;It can be used in [queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryextensionabilityinfo-system-api) to obtain ExtensionAbility components of all types.&lt;!--DelEnd--&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtensionAbilityType-UNSPECIFIED = 255--><!--Device-ExtensionAbilityType-UNSPECIFIED = 255-End-->
 

@@ -1,12 +1,8 @@
 # ComponentSnapshot
 
-Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot) > in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance. > > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the > target component. Applying these transformation properties directly to the target component itself has no effect; > the snapshot will still display the component as it appears before any transformations are applied.
+Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) > in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance. > > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the > target component. Applying these transformation properties directly to the target component itself has no effect; > the snapshot will still display the component as it appears before any transformations are applied.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class ComponentSnapshot--><!--Device-unnamed-export class ComponentSnapshot-End-->
 
@@ -47,6 +43,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## createFromBuilder
@@ -56,13 +54,9 @@ createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap
     delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void
 ```
 
-Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md#CustomBuilder). This API uses an asynchronous callback to return the result. > **NOTE：**> > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive > scenarios. > > - If a component is on a time-consuming task, for example, an Image or Web component > that is loading online images, its loading may be still in progress when this API is called. In this case, the > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
+Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md#custombuilder). This API uses an asynchronous callback to return the result. > **NOTE：**> > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive > scenarios. > > - If a component is on a time-consuming task, for example, an Image or Web component > that is loading online images, its loading may be still in progress when this API is called. In this case, the > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,7 +71,7 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | builder | CustomBuilder | Yes | Builder of the custom component.<br>Note: The global builder is not supported.&lt; br&gt;If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap). Otherwise, **err** provides detailed error information. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap). Otherwise, **err** provides detailed error information. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
 | delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.<br> When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.&lt; br&gt;Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.<br> Default value: **300**<br> Unit: ms<br> Value range: [0, +∞). If the value is less than 0, the default value is used. |
 | checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.<br>Default value: **false**. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
@@ -99,13 +93,9 @@ createFromBuilder(builder: CustomBuilder, delay?: number,
     checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md#CustomBuilder). This API uses a promise to return the result. > **NOTE：**> > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive > scenarios. > > - If a component is on a time-consuming task, for example, an Image or Web component > that is loading online images, its loading may be still in progress when this API is called. In this case, the > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
+Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md#custombuilder). This API uses a promise to return the result. > **NOTE：**> > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive > scenarios. > > - If a component is on a time-consuming task, for example, an Image or Web component > that is loading online images, its loading may be still in progress when this API is called. In this case, the > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,10 +141,6 @@ Captures a snapshot of the provided component content. This API uses a promise t
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -198,10 +184,6 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -215,7 +197,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | ID of the target component.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap). Otherwise, **err** provides detailed error information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap). Otherwise, **err** provides detailed error information. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Error codes:**
@@ -235,10 +217,6 @@ get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.Pixe
 Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses a promise to return the result. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -279,10 +257,6 @@ Obtains the size limit of a component screenshot.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -303,13 +277,9 @@ Obtains the size limit of a component screenshot.
 getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) after completing the capture. Note that this API blocks the main thread and has a 3-second timeout. If the operation exceeds this limit, it throws an exception. Use with caution in performance-critical scenarios. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
+Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap) after completing the capture. Note that this API blocks the main thread and has a 3-second timeout. If the operation exceeds this limit, it throws an exception. Use with caution in performance-critical scenarios. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -347,13 +317,9 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) object. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
+Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap) object. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -367,7 +333,7 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getUniqueId) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**
@@ -395,10 +361,6 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -411,7 +373,7 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getUniqueId) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**

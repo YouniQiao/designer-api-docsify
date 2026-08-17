@@ -4,10 +4,6 @@ Information of input window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-export interface InputWindowInfo--><!--Device-inputMethod-export interface InputWindowInfo-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -30,10 +26,6 @@ Indicates the id of the display where the input window is shown.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputWindowInfo-displayId?: long--><!--Device-InputWindowInfo-displayId?: long-End-->
@@ -52,10 +44,6 @@ Indicates the height of the input window, unit is px.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputWindowInfo-height: long--><!--Device-InputWindowInfo-height: long-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -71,10 +59,6 @@ Indicates the abscissa of the upper-left vertex of input window, unit is px.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputWindowInfo-left: int--><!--Device-InputWindowInfo-left: int-End-->
 
@@ -92,10 +76,6 @@ Indicates name of the input window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputWindowInfo-name: string--><!--Device-InputWindowInfo-name: string-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -112,10 +92,6 @@ Indicates the ordinate of the upper-left vertex of input window, unit is px.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputWindowInfo-top: int--><!--Device-InputWindowInfo-top: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -131,10 +107,6 @@ Indicates the width of the input window, unit is px.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputWindowInfo-width: long--><!--Device-InputWindowInfo-width: long-End-->
 

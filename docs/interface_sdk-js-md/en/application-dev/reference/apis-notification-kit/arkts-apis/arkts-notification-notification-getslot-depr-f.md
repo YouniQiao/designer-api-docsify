@@ -10,11 +10,9 @@ Obtains a notification slot of a specified type. This API uses an asynchronous c
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSlot](arkts-notification-notificationmanager-getslot-f.md#getSlot)
+**Substitutes:** [getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot)
 
 <!--Device-notification-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void--><!--Device-notification-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void-End-->
 
@@ -38,11 +36,9 @@ Obtains a notification slot of a specified type. This API uses a promise to retu
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSlot](arkts-notification-notificationmanager-getslot-f.md#getSlot)
+**Substitutes:** [getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot)
 
 <!--Device-notification-function getSlot(slotType: SlotType): Promise<NotificationSlot>--><!--Device-notification-function getSlot(slotType: SlotType): Promise<NotificationSlot>-End-->
 

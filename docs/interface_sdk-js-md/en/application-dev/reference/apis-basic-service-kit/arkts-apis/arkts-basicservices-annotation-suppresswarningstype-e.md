@@ -4,10 +4,6 @@ Defines the warning types that support suppression. Developers can selectively s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export const enum SuppressWarningsType--><!--Device-unnamed-export const enum SuppressWarningsType-End-->
 
 **System capability:** SystemCapability.Base
@@ -21,10 +17,6 @@ COMPATIBILITY = 'compatibility'
 Compatibility warning. This warning is generated when the start version of the API called is later than the compatible SDK version set for the project(compatibleSdkVersion specified in build-profile.json5). It is recommended that this warning be suppressed when version check or compatibility processing has been performed. Suppressing this warning without proper handling may cause devices running earlier versions to malfunction.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Multi-device warning. This warning is generated when the system capability obtai
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -69,10 +57,6 @@ PERMISSION = 'permission'
 Permission warning. This warning is generated when an API that requires permissions is called but the corresponding permissions are not declared in the configuration file.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

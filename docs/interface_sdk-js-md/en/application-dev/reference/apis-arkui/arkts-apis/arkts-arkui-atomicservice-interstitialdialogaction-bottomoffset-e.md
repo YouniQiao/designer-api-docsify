@@ -4,10 +4,6 @@ Defines the distance between the popup and the bottom in different scenario mode
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum BottomOffset--><!--Device-unnamed-export declare enum BottomOffset-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ OFFSET_FOR_BAR = 0
 dialog distance relative to the bottom in the presence of tabs.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,10 +33,6 @@ OFFSET_FOR_NONE = 1
 dialog is the distance relative to the bottom without tabs.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,14 +1,10 @@
 # SwipeRecognizer
 
-Implements a swipe gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer).
+Implements a swipe gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer).
 
-**Inheritance/Implementation:** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer)
+**Inheritance/Implementation:** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class SwipeRecognizer--><!--Device-unnamed-declare class SwipeRecognizer-End-->
 
@@ -23,10 +19,6 @@ getDirection(): SwipeDirection
 Obtains the direction for recognizing swipe gestures.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,10 +43,6 @@ getVelocityThreshold(): number
 Obtains the minimum velocity required for the swipe gesture to be recognized.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

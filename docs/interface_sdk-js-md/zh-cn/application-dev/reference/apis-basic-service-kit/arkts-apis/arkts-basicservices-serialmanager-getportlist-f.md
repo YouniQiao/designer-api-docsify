@@ -10,10 +10,6 @@ function getPortList(): Readonly<SerialPort>[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]--><!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
@@ -24,7 +20,7 @@ function getPortList(): Readonly<SerialPort>[]
 | --- | --- |
 | Readonly&lt;SerialPort&gt;[] | Serial port information list. |
 
-## 示例
+**示例**
 
 以下示例代码只是调用getPortList接口的必要流程，需要放入具体的方法中执行。实际调用时，设备开发者需要遵循设备相关协议进行调用。
 

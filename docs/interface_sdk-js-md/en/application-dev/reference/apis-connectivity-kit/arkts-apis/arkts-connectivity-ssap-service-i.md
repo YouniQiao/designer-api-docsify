@@ -4,10 +4,6 @@ Describes the SSAP service.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-ssap-interface Service--><!--Device-ssap-interface Service-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -30,10 +26,6 @@ The properties belong to this service.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Service-properties: Property[]--><!--Device-Service-properties: Property[]-End-->
@@ -51,10 +43,6 @@ The UUID of the service. The length must be 36, The value consists of 36 hexadec
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

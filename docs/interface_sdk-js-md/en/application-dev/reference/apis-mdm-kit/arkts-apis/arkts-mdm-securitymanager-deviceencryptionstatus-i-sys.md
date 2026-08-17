@@ -1,12 +1,8 @@
-# DeviceEncryptionStatus (System API)
+# DeviceEncryptionStatus(Security Management) (System API)
 
 Represents the file system encryption status.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-securityManager-export interface DeviceEncryptionStatus--><!--Device-securityManager-export interface DeviceEncryptionStatus-End-->
 
@@ -31,10 +27,6 @@ Whether the file system of the device is encrypted. The value **true** means the
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Defines the result of the request for the modal dialog box. It contains **Result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dialogRequest-export interface RequestResult--><!--Device-dialogRequest-export interface RequestResult-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -30,10 +26,6 @@ Result code of the request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RequestResult-result: ResultCode--><!--Device-RequestResult-result: ResultCode-End-->
@@ -51,10 +43,6 @@ Want information, such as the ability name and bundle name.
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

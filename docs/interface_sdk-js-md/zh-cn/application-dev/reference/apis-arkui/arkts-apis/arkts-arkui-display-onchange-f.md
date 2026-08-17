@@ -10,10 +10,6 @@ Register the callback for display changes.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-display-function onChange(callback: Callback<long>): void--><!--Device-display-function onChange(callback: Callback<long>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -22,9 +18,9 @@ Register the callback for display changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | the display id of changed |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | 是 | the display id of changed |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

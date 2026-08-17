@@ -4,10 +4,6 @@ Defines the data structure of the task information for query. The fields availab
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-interface TaskInfo--><!--Device-agent-interface TaskInfo-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -30,10 +26,6 @@ The bundle name. For system query only.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TaskInfo-readonly bundle?: string--><!--Device-TaskInfo-readonly bundle?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -51,10 +43,6 @@ The UID of an application. For system query only.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TaskInfo-readonly uid?: string--><!--Device-TaskInfo-readonly uid?: string-End-->
 

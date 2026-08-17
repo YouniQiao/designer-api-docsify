@@ -1,12 +1,8 @@
 # OnHttpAuthRequestEvent
 
-Defines the triggered when the browser needs credentials from the user.
+Defines the callback information triggered when an HTTP authentication request is received, including the host and realm information. It is suitable for scenarios where handling HTTP authentication is required, improving authentication process flexibility and security.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnHttpAuthRequestEvent--><!--Device-unnamed-declare interface OnHttpAuthRequestEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered when the browser needs credentials from the user.
 handler: HttpAuthHandler
 ```
 
-Defines the http auth request result.
+User operation.
 
 **Type:** [HttpAuthHandler](arkts-arkweb-httpauthhandler-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ Defines the http auth request result.
 host: string
 ```
 
-Host of the page.
+Host to which the HTTP authentication credential is applied.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,15 +50,11 @@ Host of the page.
 realm: string
 ```
 
-realm of the page.
+Realm to which the HTTP authentication credential is applied.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

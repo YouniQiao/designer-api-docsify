@@ -4,10 +4,6 @@ Provides APIs for interacting with the cloud sync service. You need to inherit t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface CloudService--><!--Device-cloudExtension-export interface CloudService-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -29,10 +25,6 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader, which is created by using createAssetLoaderStub. This API uses a promise to return the result. You can use this API to connect to the asset loader.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
 
@@ -63,10 +55,6 @@ Connects to a cloud database by obtaining a RemoteObject instance of CloudDB, wh
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -96,10 +84,6 @@ Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter, whi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -119,7 +103,7 @@ Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter, whi
 | --- | --- |
 | Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -148,10 +132,6 @@ Obtains brief application information. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>--><!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -164,7 +144,7 @@ Obtains brief application information. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise used to return bundleName and AppBriefInfo, in KV pairs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyCloudService implements cloudExtension.CloudService {
@@ -196,10 +176,6 @@ Obtains the application database schema information. This API uses a promise to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>--><!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -218,7 +194,7 @@ Obtains the application database schema information. This API uses a promise to 
 | --- | --- |
 | Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise used to return the schema information obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyCloudService implements cloudExtension.CloudService {
@@ -251,10 +227,6 @@ Obtains the server information. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>--><!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -267,7 +239,7 @@ Obtains the server information. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; | Promise used to return the server information obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -305,10 +277,6 @@ Subscribes to data. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>--><!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -328,7 +296,7 @@ Subscribes to data. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;Result&lt;SubscribeInfo&gt;&gt; | Promise used to return the result, including the subscription expiration time and subscription information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let test_time: number = 10;
@@ -361,10 +329,6 @@ unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>
 Unsubscribes from data changes in the cloud. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>--><!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>-End-->
 

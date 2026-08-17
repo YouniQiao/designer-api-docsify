@@ -4,10 +4,6 @@ Defines the data to publish.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface PublishedItem--><!--Device-dataShare-interface PublishedItem-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -32,10 +28,6 @@ Data to publish. If the data to publish exceeds 20 KB, you are advised to use th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PublishedItem-data: string | ArrayBuffer--><!--Device-PublishedItem-data: string | ArrayBuffer-End-->
@@ -56,10 +48,6 @@ Key of the data to publish.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PublishedItem-key: string--><!--Device-PublishedItem-key: string-End-->
@@ -79,10 +67,6 @@ Subscriber ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

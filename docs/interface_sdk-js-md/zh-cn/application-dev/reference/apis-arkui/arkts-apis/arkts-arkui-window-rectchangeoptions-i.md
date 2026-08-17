@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-window-interface RectChangeOptions--><!--Device-window-interface RectChangeOptions-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -23,10 +19,6 @@ reason: RectChangeReason
 **类型：** RectChangeReason
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ New value of the window rectangle.
 **类型：** Rect
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

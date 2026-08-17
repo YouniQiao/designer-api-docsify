@@ -4,9 +4,7 @@ WebviewController can control various behaviors of Web components (including pag
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-webview-class WebviewController--><!--Device-webview-class WebviewController-End-->
 
@@ -22,9 +20,7 @@ Checks whether the web page can go back.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-accessBackward(): boolean--><!--Device-WebviewController-accessBackward(): boolean-End-->
 
@@ -52,9 +48,7 @@ Checks whether the web page can go forward.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-accessForward(): boolean--><!--Device-WebviewController-accessForward(): boolean-End-->
 
@@ -82,9 +76,7 @@ Checks whether the web page can go back or forward the given number of steps.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-accessStep(step: int): boolean--><!--Device-WebviewController-accessStep(step: int): boolean-End-->
 
@@ -119,9 +111,7 @@ Add bypassing hosts for Intelligent Tracking Prevention.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void--><!--Device-WebviewController-static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void-End-->
 
@@ -150,9 +140,7 @@ Sets the bottom avoidance height of the web visible viewport. When setting non-z
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: int): void--><!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: int): void-End-->
 
@@ -181,9 +169,7 @@ Goes forward or back backOrForward in the history of the web page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-backOrForward(step: int): void--><!--Device-WebviewController-backOrForward(step: int): void-End-->
 
@@ -212,9 +198,7 @@ Goes back in the history of the web page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-backward(): void--><!--Device-WebviewController-backward(): void-End-->
 
@@ -236,9 +220,7 @@ Clears the blankless loading cache of the page with a specified key value.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void--><!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void-End-->
 
@@ -266,9 +248,7 @@ Clears the client authentication certificate cache in the Web.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-clearClientAuthenticationCache(): void--><!--Device-WebviewController-clearClientAuthenticationCache(): void-End-->
 
@@ -290,9 +270,7 @@ Clears the history in the Web.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-clearHistory(): void--><!--Device-WebviewController-clearHistory(): void-End-->
 
@@ -314,9 +292,7 @@ Clear the host name IP address.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static clearHostIP(hostName: string): void--><!--Device-WebviewController-static clearHostIP(hostName: string): void-End-->
 
@@ -344,9 +320,7 @@ Clear bypassing hosts for Intelligent Tracking Prevention.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void--><!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void-End-->
 
@@ -368,9 +342,7 @@ Clears the highlighting surrounding text matches created by searchAllAsync.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-clearMatches(): void--><!--Device-WebviewController-clearMatches(): void-End-->
 
@@ -388,13 +360,11 @@ Clears the highlighting surrounding text matches created by searchAllAsync.
 static clearPrefetchedResource(cacheKeyList: Array<string>): void
 ```
 
-Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by API[prefetchResource](#prefetchResource).
+Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by API[prefetchResource](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#prefetchresource).
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static clearPrefetchedResource(cacheKeyList: Array<string>): void--><!--Device-WebviewController-static clearPrefetchedResource(cacheKeyList: Array<string>): void-End-->
 
@@ -416,9 +386,7 @@ Clear all web service worker scheme handlers.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void--><!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void-End-->
 
@@ -434,9 +402,7 @@ Clears the ssl cache in the Web.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-clearSslCache(): void--><!--Device-WebviewController-clearSslCache(): void-End-->
 
@@ -458,9 +424,7 @@ Clear all web scheme handlers for related web component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-clearWebSchemeHandler(): void--><!--Device-WebviewController-clearWebSchemeHandler(): void-End-->
 
@@ -482,9 +446,7 @@ closeAllMediaPresentations(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-closeAllMediaPresentations(): void--><!--Device-WebviewController-closeAllMediaPresentations(): void-End-->
 
@@ -506,9 +468,7 @@ closeCamera(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-closeCamera(): void--><!--Device-WebviewController-closeCamera(): void-End-->
 
@@ -530,9 +490,7 @@ A constructor used to create a WebviewController object.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-constructor(webTag?: string)--><!--Device-WebviewController-constructor(webTag?: string)-End-->
 
@@ -554,9 +512,7 @@ Rendering current Web page into Pdf data, return the result in async mode.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void--><!--Device-WebviewController-createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void-End-->
 
@@ -566,8 +522,8 @@ Rendering current Web page into Pdf data, return the result in async mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](arkts-na-webview-pdfconfiguration-i.md) | 是 | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-na-webview-pdfdata-c.md)&gt; | 是 | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
+| configuration | [PdfConfiguration](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PdfData](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
 
 **错误码：**
 
@@ -586,9 +542,7 @@ Rendering current Web page into Pdf data, return the result in promise mode.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-createPdf(configuration: PdfConfiguration): Promise<PdfData>--><!--Device-WebviewController-createPdf(configuration: PdfConfiguration): Promise<PdfData>-End-->
 
@@ -598,13 +552,13 @@ Rendering current Web page into Pdf data, return the result in promise mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](arkts-na-webview-pdfconfiguration-i.md) | 是 | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
+| configuration | [PdfConfiguration](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PdfData](arkts-na-webview-pdfdata-c.md)&gt; | The promise returned by the function. PdfData is pdf data stream of current web page in Uint8Array { |
+| Promise&lt;[PdfData](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfdata-c.md)&gt; | The promise returned by the function. PdfData is pdf data stream of current web page in Uint8Array { |
 
 **错误码：**
 
@@ -623,9 +577,7 @@ Create web message ports
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>--><!--Device-WebviewController-createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>-End-->
 
@@ -641,7 +593,7 @@ Create web message ports
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[WebMessagePort](arkts-na-webview-webmessageport-i.md)&gt; | An array represent 2 WebMessagePort, then can use those ports to communication with html pages. |
+| Array&lt;[WebMessagePort](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageport-i.md)&gt; | An array represent 2 WebMessagePort, then can use those ports to communication with html pages. |
 
 **错误码：**
 
@@ -660,9 +612,7 @@ Creates a PrintDocumentAdapter instance to provide content for printing.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter--><!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter-End-->
 
@@ -697,9 +647,7 @@ Register Web custom schemes.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>): void--><!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>): void-End-->
 
@@ -709,7 +657,7 @@ Register Web custom schemes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](arkts-na-webview-webcustomscheme-i.md)&gt; | 是 | Configuration of web custom scheme. |
+| schemes | Array&lt;[WebCustomScheme](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webcustomscheme-i.md)&gt; | 是 | Configuration of web custom scheme. |
 
 **错误码：**
 
@@ -728,9 +676,7 @@ Register Web custom schemes.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void--><!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void-End-->
 
@@ -740,7 +686,7 @@ Register Web custom schemes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](arkts-na-webview-webcustomscheme-i.md)&gt; | 是 | Configuration of web custom scheme. |
+| schemes | Array&lt;[WebCustomScheme](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webcustomscheme-i.md)&gt; | 是 | Configuration of web custom scheme. |
 | lazyInitWebEngine | boolean | 是 | When true: The interface internally skips initializing WebEngine and temporarily stores the registered schemes, which will be passed to WebEngine when it actually initializes. When false: The interface automatically performs WebEngine initialization internally. |
 
 **错误码：**
@@ -760,9 +706,7 @@ Deletes a registered JavaScript object with given name.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-deleteJavaScriptRegister(name: string): void--><!--Device-WebviewController-deleteJavaScriptRegister(name: string): void-End-->
 
@@ -792,9 +736,7 @@ Enable the ability to block Ads, disabled by default.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-enableAdsBlock(enable: boolean): void--><!--Device-WebviewController-enableAdsBlock(enable: boolean): void-End-->
 
@@ -824,9 +766,7 @@ Enable the application disable some features such as PDFViewer to enhance the se
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -838,7 +778,7 @@ Enable the application disable some features such as PDFViewer to enhance the se
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| securityParams | [SecurityParams](arkts-na-webview-securityparams-i.md) | 是 | The options means which supported option or item will be disabled. |
+| securityParams | [SecurityParams](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-securityparams-i.md) | 是 | The options means which supported option or item will be disabled. |
 
 ## enableBackForwardCache
 
@@ -850,9 +790,7 @@ Enable the BackForwardCache and indicate features that are allowed to enter Back
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static enableBackForwardCache(features?: BackForwardCacheSupportedFeatures): void--><!--Device-WebviewController-static enableBackForwardCache(features?: BackForwardCacheSupportedFeatures): void-End-->
 
@@ -862,7 +800,7 @@ Enable the BackForwardCache and indicate features that are allowed to enter Back
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| features | [BackForwardCacheSupportedFeatures](arkts-na-webview-backforwardcachesupportedfeatures-c.md) | 否 | The features that supports BackForwardCache. @static |
+| features | [BackForwardCacheSupportedFeatures](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-backforwardcachesupportedfeatures-c.md) | 否 | The features that supports BackForwardCache. @static |
 
 ## enableIntelligentTrackingPrevention
 
@@ -874,9 +812,7 @@ Enable the ability to use Intelligent Tracking Prevention; default is disabled.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void--><!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void-End-->
 
@@ -906,9 +842,7 @@ After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight req
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void--><!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void-End-->
 
@@ -930,9 +864,7 @@ Enable the ability to check website security risks. Illegal and fraudulent websi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-enableSafeBrowsing(enable: boolean): void--><!--Device-WebviewController-enableSafeBrowsing(enable: boolean): void-End-->
 
@@ -960,9 +892,7 @@ Enables the full drawing capability for the web page. This API works only during
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static enableWholeWebPageDrawing(): void--><!--Device-WebviewController-static enableWholeWebPageDrawing(): void-End-->
 
@@ -978,9 +908,7 @@ Goes forward in the history of the web page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-forward(): void--><!--Device-WebviewController-forward(): void-End-->
 
@@ -1002,9 +930,7 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion--><!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion-End-->
 
@@ -1014,7 +940,7 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArkWebEngineVersion](arkts-na-webview-arkwebengineversion-e.md) | 返回由[ArkWebEngineVersion]{ |
+| [ArkWebEngineVersion](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-arkwebengineversion-e.md) | 返回由[ArkWebEngineVersion]{ |
 
 ## getAttachState
 
@@ -1026,9 +952,7 @@ Get whether webviewController is attached to a web component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getAttachState(): ControllerAttachState--><!--Device-WebviewController-getAttachState(): ControllerAttachState-End-->
 
@@ -1038,7 +962,7 @@ Get whether webviewController is attached to a web component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ControllerAttachState](arkts-na-webview-controllerattachstate-e.md) | the attach state of controller |
+| [ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md) | the attach state of controller |
 
 ## getBackForwardEntries
 
@@ -1050,9 +974,7 @@ Get back forward stack list from current webview.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getBackForwardEntries(): BackForwardList--><!--Device-WebviewController-getBackForwardEntries(): BackForwardList-End-->
 
@@ -1062,7 +984,7 @@ Get back forward stack list from current webview.
 
 | 类型 | 说明 |
 | --- | --- |
-| [BackForwardList](arkts-na-webview-backforwardlist-i.md) | Back forward list for current webview. |
+| [BackForwardList](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-backforwardlist-i.md) | Back forward list for current webview. |
 
 **错误码：**
 
@@ -1080,9 +1002,7 @@ Obtains the prediction information about the blankless loading solution and enab
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo--><!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo-End-->
 
@@ -1098,7 +1018,7 @@ Obtains the prediction information about the blankless loading solution and enab
 
 | 类型 | 说明 |
 | --- | --- |
-| [BlanklessInfo](arkts-na-webview-blanklessinfo-i.md) | The prediction information about the blankless loading solution. |
+| [BlanklessInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessinfo-i.md) | The prediction information about the blankless loading solution. |
 
 **错误码：**
 
@@ -1116,9 +1036,7 @@ Get certificate for the current website.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getCertificate(): Promise<Array<cert.X509Cert>>--><!--Device-WebviewController-getCertificate(): Promise<Array<cert.X509Cert>>-End-->
 
@@ -1146,9 +1064,7 @@ Get certificate for the current website.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void--><!--Device-WebviewController-getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void-End-->
 
@@ -1158,7 +1074,7 @@ Get certificate for the current website.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | the callback of getCertificate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | the callback of getCertificate. |
 
 **错误码：**
 
@@ -1177,9 +1093,7 @@ Get custom user agent.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getCustomUserAgent(): string--><!--Device-WebviewController-getCustomUserAgent(): string-End-->
 
@@ -1207,9 +1121,7 @@ Get the default user agent.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static getDefaultUserAgent(): string--><!--Device-WebviewController-static getDefaultUserAgent(): string-End-->
 
@@ -1231,9 +1143,7 @@ Get whether default error page feature is enabled.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getErrorPageEnabled(): boolean--><!--Device-WebviewController-getErrorPageEnabled(): boolean-End-->
 
@@ -1261,9 +1171,7 @@ Gets the favicon of current Web page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getFavicon(): image.PixelMap--><!--Device-WebviewController-getFavicon(): image.PixelMap-End-->
 
@@ -1291,9 +1199,7 @@ Gets the last hit test value of HitTest.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getLastHitTest(): HitTestValue--><!--Device-WebviewController-getLastHitTest(): HitTestValue-End-->
 
@@ -1303,7 +1209,7 @@ Gets the last hit test value of HitTest.
 
 | 类型 | 说明 |
 | --- | --- |
-| [HitTestValue](arkts-na-webview-hittestvalue-i.md) | Return the element information of the clicked area. |
+| [HitTestValue](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-hittestvalue-i.md) | Return the element information of the clicked area. |
 
 **错误码：**
 
@@ -1321,9 +1227,7 @@ Get the url of the last frame that calls the JavaScriptProxy. This should be cal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getLastJavascriptProxyCallingFrameUrl(): string--><!--Device-WebviewController-getLastJavascriptProxyCallingFrameUrl(): string-End-->
 
@@ -1351,9 +1255,7 @@ Gets URL of frame that sent the last postMessage to native application.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1383,9 +1285,7 @@ getMediaPlaybackState(): MediaPlaybackState
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getMediaPlaybackState(): MediaPlaybackState--><!--Device-WebviewController-getMediaPlaybackState(): MediaPlaybackState-End-->
 
@@ -1395,7 +1295,7 @@ getMediaPlaybackState(): MediaPlaybackState
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaPlaybackState](arkts-na-webview-mediaplaybackstate-e.md) | 当前网页的播放状态，具体值为NONE、PLAYING、PAUSED、STOPPED。 |
+| [MediaPlaybackState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediaplaybackstate-e.md) | 当前网页的播放状态，具体值为NONE、PLAYING、PAUSED、STOPPED。 |
 
 **错误码：**
 
@@ -1413,9 +1313,7 @@ Gets the original url of current Web page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getOriginalUrl(): string--><!--Device-WebviewController-getOriginalUrl(): string-End-->
 
@@ -1443,9 +1341,7 @@ Obtains the height of this web page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getPageHeight(): int--><!--Device-WebviewController-getPageHeight(): int-End-->
 
@@ -1473,9 +1369,7 @@ Get the page offset. And the unit is virtual pixel.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getPageOffset(): ScrollOffset--><!--Device-WebviewController-getPageOffset(): ScrollOffset-End-->
 
@@ -1485,7 +1379,7 @@ Get the page offset. And the unit is virtual pixel.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollOffset](arkts-na-webview-scrolloffset-i.md) | page offset |
+| [ScrollOffset](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-scrolloffset-i.md) | page offset |
 
 **错误码：**
 
@@ -1503,9 +1397,7 @@ Get whether print web page background.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getPrintBackground(): boolean--><!--Device-WebviewController-getPrintBackground(): boolean-End-->
 
@@ -1533,9 +1425,7 @@ Gets the loading progress for the current page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getProgress() : int--><!--Device-WebviewController-getProgress() : int-End-->
 
@@ -1563,9 +1453,7 @@ Get render process mode of the ArkWeb.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static getRenderProcessMode(): RenderProcessMode--><!--Device-WebviewController-static getRenderProcessMode(): RenderProcessMode-End-->
 
@@ -1575,7 +1463,7 @@ Get render process mode of the ArkWeb.
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderProcessMode](arkts-na-webview-renderprocessmode-e.md) | mode - The render process mode of the ArkWeb. Call { |
+| [RenderProcessMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-renderprocessmode-e.md) | mode - The render process mode of the ArkWeb. Call { |
 
 ## getScrollOffset
 
@@ -1587,9 +1475,7 @@ Get the scroll offset of the webpage in view port, the coordinates of the top le
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getScrollOffset(): ScrollOffset--><!--Device-WebviewController-getScrollOffset(): ScrollOffset-End-->
 
@@ -1599,7 +1485,7 @@ Get the scroll offset of the webpage in view port, the coordinates of the top le
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollOffset](arkts-na-webview-scrolloffset-i.md) | scroll offset |
+| [ScrollOffset](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-scrolloffset-i.md) | scroll offset |
 
 ## getScrollable
 
@@ -1611,9 +1497,7 @@ Get whether scrolling is allowed.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getScrollable(): boolean--><!--Device-WebviewController-getScrollable(): boolean-End-->
 
@@ -1641,9 +1525,7 @@ Get the security level of the current page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getSecurityLevel(): SecurityLevel--><!--Device-WebviewController-getSecurityLevel(): SecurityLevel-End-->
 
@@ -1671,9 +1553,7 @@ Get the site isolation mode.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode--><!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode-End-->
 
@@ -1683,7 +1563,7 @@ Get the site isolation mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| [SiteIsolationMode](arkts-na-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
+| [SiteIsolationMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
 
 ## getSurfaceId
 
@@ -1695,9 +1575,7 @@ Get the ID of the surface created by ArkWeb. This ID can be used for web page sc
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getSurfaceId(): string--><!--Device-WebviewController-getSurfaceId(): string-End-->
 
@@ -1719,9 +1597,7 @@ Gets the title of current Web page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getTitle(): string--><!--Device-WebviewController-getTitle(): string-End-->
 
@@ -1749,9 +1625,7 @@ Gets the url of current Web page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getUrl(): string--><!--Device-WebviewController-getUrl(): string-End-->
 
@@ -1779,9 +1653,7 @@ Gets the default user agent.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getUserAgent(): string--><!--Device-WebviewController-getUserAgent(): string-End-->
 
@@ -1809,9 +1681,7 @@ Get if the User-Agent Client Hints enabled.
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1835,9 +1705,7 @@ Get the User-Agent metadata corresponding to the User-Agent.
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1855,7 +1723,7 @@ Get the User-Agent metadata corresponding to the User-Agent.
 
 | 类型 | 说明 |
 | --- | --- |
-| [UserAgentMetadata](arkts-na-webview-useragentmetadata-c.md) | The UserAgentMetadata for the userAgent. |
+| [UserAgentMetadata](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-useragentmetadata-c.md) | The UserAgentMetadata for the userAgent. |
 
 ## getWebId
 
@@ -1867,9 +1735,7 @@ Gets the index value of the current Web component for the management of multiple
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-getWebId(): int--><!--Device-WebviewController-getWebId(): int-End-->
 
@@ -1897,9 +1763,7 @@ hasImage(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-hasImage(): Promise<boolean>--><!--Device-WebviewController-hasImage(): Promise<boolean>-End-->
 
@@ -1928,9 +1792,7 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-hasImage(callback: AsyncCallback<boolean>): void--><!--Device-WebviewController-hasImage(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1940,7 +1802,7 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。<br> true表示页面存在图像；false表示页面不存在图像。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。<br> true表示页面存在图像；false表示页面不存在图像。 |
 
 **错误码：**
 
@@ -1959,9 +1821,7 @@ Initialize the web engine before loading the Web components. This is a global st
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static initializeWebEngine(): void--><!--Device-WebviewController-static initializeWebEngine(): void-End-->
 
@@ -1977,9 +1837,7 @@ Inject offline resources into cache.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void--><!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void-End-->
 
@@ -1989,7 +1847,7 @@ Inject offline resources into cache.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceMaps | Array&lt;[OfflineResourceMap](arkts-na-webview-offlineresourcemap-i.md)&gt; | 是 | Array of offline resource info maps. The count of array must between 1 and 30. |
+| resourceMaps | Array&lt;[OfflineResourceMap](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-offlineresourcemap-i.md)&gt; | 是 | Array of offline resource info maps. The count of array must between 1 and 30. |
 
 **错误码：**
 
@@ -2008,9 +1866,7 @@ static isActiveWebEngineEvergreen(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean--><!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean-End-->
 
@@ -2032,9 +1888,7 @@ Get whether Ads block is enabled.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-isAdsBlockEnabled(): boolean--><!--Device-WebviewController-isAdsBlockEnabled(): boolean-End-->
 
@@ -2062,9 +1916,7 @@ Get whether Ads block is enabled for current Webpage.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-isAdsBlockEnabledForCurPage(): boolean--><!--Device-WebviewController-isAdsBlockEnabledForCurPage(): boolean-End-->
 
@@ -2092,9 +1944,7 @@ static isAutoPreconnectEnabled(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean--><!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean-End-->
 
@@ -2116,9 +1966,7 @@ Whether the incognito mode is set.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-isIncognitoMode(): boolean--><!--Device-WebviewController-isIncognitoMode(): boolean-End-->
 
@@ -2146,9 +1994,7 @@ Get whether Intelligent Tracking Prevention is enabled.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-isIntelligentTrackingPreventionEnabled(): boolean--><!--Device-WebviewController-isIntelligentTrackingPreventionEnabled(): boolean-End-->
 
@@ -2177,9 +2023,7 @@ Get whether PrivateNetworkAccess is enabled.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean--><!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean-End-->
 
@@ -2201,9 +2045,7 @@ Get whether checking website security risks is enabled.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-isSafeBrowsingEnabled(): boolean--><!--Device-WebviewController-isSafeBrowsingEnabled(): boolean-End-->
 
@@ -2225,9 +2067,7 @@ Loads the data or URL.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void--><!--Device-WebviewController-loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void-End-->
 
@@ -2260,9 +2100,7 @@ Loads the data or URL.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void--><!--Device-WebviewController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void-End-->
 
@@ -2294,9 +2132,7 @@ Unregister the callback for controller attach state change.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-offControllerAttachStateChange(callback?: Callback<ControllerAttachState>): void--><!--Device-WebviewController-offControllerAttachStateChange(callback?: Callback<ControllerAttachState>): void-End-->
 
@@ -2306,7 +2142,7 @@ Unregister the callback for controller attach state change.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-na-webview-controllerattachstate-e.md)&gt; | 否 | Callback used to return the controller attach state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 | Callback used to return the controller attach state. |
 
 ## onActive
 
@@ -2318,9 +2154,7 @@ Call this interface to notify the Web component to enter the foreground activati
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-onActive(): void--><!--Device-WebviewController-onActive(): void-End-->
 
@@ -2342,9 +2176,7 @@ Register the callback for controller attach state change.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-onControllerAttachStateChange(callback: Callback<ControllerAttachState>): void--><!--Device-WebviewController-onControllerAttachStateChange(callback: Callback<ControllerAttachState>): void-End-->
 
@@ -2354,7 +2186,7 @@ Register the callback for controller attach state change.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-na-webview-controllerattachstate-e.md)&gt; | 是 | Callback used to return the controller attach state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 | Callback used to return the controller attach state. |
 
 ## onCreateNativeMediaPlayer
 
@@ -2366,9 +2198,7 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void--><!--Device-WebviewController-onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void-End-->
 
@@ -2378,7 +2208,7 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [CreateNativeMediaPlayerCallback](arkts-na-webview-createnativemediaplayercallback-t.md) | 是 | 接管网页媒体播放的回调函数。 |
+| callback | [CreateNativeMediaPlayerCallback](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-createnativemediaplayercallback-t.md) | 是 | 接管网页媒体播放的回调函数。 |
 
 ## onInactive
 
@@ -2386,13 +2216,11 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 onInactive(): void
 ```
 
-Call this interface to notify the Web component to enter the inactive state. In this callback, the developer can realize the appropriate behavior when the application loses focus. In this state, any content that can be safely paused will be paused as much as possible, such as animation and geographical location. However, JavaScript will not be paused. To pause JavaScript globally, please use [pauseAllTimers](#pauseAllTimers).To reactivate the Web component, call onActive.
+Call this interface to notify the Web component to enter the inactive state. In this callback, the developer can realize the appropriate behavior when the application loses focus. In this state, any content that can be safely paused will be paused as much as possible, such as animation and geographical location. However, JavaScript will not be paused. To pause JavaScript globally, please use [pauseAllTimers](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#pausealltimers).To reactivate the Web component, call onActive.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-onInactive(): void--><!--Device-WebviewController-onInactive(): void-End-->
 
@@ -2414,9 +2242,7 @@ Scroll the contents of this Webview down by half the view size.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-pageDown(bottom: boolean): void--><!--Device-WebviewController-pageDown(bottom: boolean): void-End-->
 
@@ -2445,9 +2271,7 @@ Scroll the contents of this Webview up by half the view size.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-pageUp(top: boolean): void--><!--Device-WebviewController-pageUp(top: boolean): void-End-->
 
@@ -2476,9 +2300,7 @@ pauseAllMedia(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-pauseAllMedia(): void--><!--Device-WebviewController-pauseAllMedia(): void-End-->
 
@@ -2500,9 +2322,7 @@ Pause all WebView timers.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static pauseAllTimers(): void--><!--Device-WebviewController-static pauseAllTimers(): void-End-->
 
@@ -2524,9 +2344,7 @@ pauseMicrophone(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-pauseMicrophone(): void--><!--Device-WebviewController-pauseMicrophone(): void-End-->
 
@@ -2548,9 +2366,7 @@ Post web message port to html
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void--><!--Device-WebviewController-postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void-End-->
 
@@ -2561,7 +2377,7 @@ Post web message port to html
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | Data name information to send. |
-| ports | Array&lt;[WebMessagePort](arkts-na-webview-webmessageport-i.md)&gt; | 是 | Port number array information to send. |
+| ports | Array&lt;[WebMessagePort](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageport-i.md)&gt; | 是 | Port number array information to send. |
 | uri | string | 是 | URI to receive this information. |
 
 **错误码：**
@@ -2581,9 +2397,7 @@ Loads the URL use "POST" method with post data.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-postUrl(url: string, postData: ArrayBuffer): void--><!--Device-WebviewController-postUrl(url: string, postData: ArrayBuffer): void-End-->
 
@@ -2614,9 +2428,7 @@ Compile javascript and generate code cache.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<int>--><!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<int>-End-->
 
@@ -2628,7 +2440,7 @@ Compile javascript and generate code cache.
 | --- | --- | --- | --- |
 | url | string | 是 | Url of the javascript. Only support HTTP/HTTPS protocol and length no longer than 2048. |
 | script | string \| Uint8Array | 是 | Javascript source code. script must not be empty. |
-| cacheOptions | [CacheOptions](arkts-na-webview-cacheoptions-i.md) | 是 | Generate code cache option. |
+| cacheOptions | [CacheOptions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-cacheoptions-i.md) | 是 | Generate code cache option. |
 
 **返回值：**
 
@@ -2653,9 +2465,7 @@ Prefetch the resources required by the page, but will not execute js or render t
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void--><!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void-End-->
 
@@ -2685,9 +2495,7 @@ Prefetch the resources required by the page, but will not execute js or render t
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void--><!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void-End-->
 
@@ -2699,7 +2507,7 @@ Prefetch the resources required by the page, but will not execute js or render t
 | --- | --- | --- | --- |
 | url | string | 是 | Which url to preresolve/preconnect. |
 | additionalHeaders | Array&lt;WebHeader&gt; | 否 | Additional HTTP request header of the URL. |
-| prefetchOptions | [PrefetchOptions](arkts-na-webview-prefetchoptions-c.md) | 否 | Prefetch behavior can be customized via ‌prefetchOptions‌, including ignoring Cache-Control: no-store and adjusting the throttling interval. |
+| prefetchOptions | [PrefetchOptions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-prefetchoptions-c.md) | 否 | Prefetch behavior can be customized via ‌prefetchOptions‌, including ignoring Cache-Control: no-store and adjusting the throttling interval. |
 
 **错误码：**
 
@@ -2715,13 +2523,11 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
         cacheValidTime?: int): void
 ```
 
-Prefetches resource requests based on specified request information and additional HTTP request headers, saves the requests to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests whose Content-Type is application/x-www-form-urlencoded are supported. A maximum of six POST requests can be pre-obtained. To prefetch the seventh post request, call API[clearPrefetchedResource](#clearPrefetchedResource) to clear the cache of unnecessary post requests. Otherwise, the cache of the earliest prefetched POST request will be automatically cleared. To use the prefetched resource cache, you need to add the key value ArkWebPostCacheKey to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache.
+Prefetches resource requests based on specified request information and additional HTTP request headers, saves the requests to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests whose Content-Type is application/x-www-form-urlencoded are supported. A maximum of six POST requests can be pre-obtained. To prefetch the seventh post request, call API[clearPrefetchedResource](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#clearprefetchedresource) to clear the cache of unnecessary post requests. Otherwise, the cache of the earliest prefetched POST request will be automatically cleared. To use the prefetched resource cache, you need to add the key value ArkWebPostCacheKey to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,        cacheValidTime?: int): void--><!--Device-WebviewController-static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,        cacheValidTime?: int): void-End-->
 
@@ -2752,9 +2558,7 @@ Preresolve or Preconnect the url. This API can be called before loading the url 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: int): void--><!--Device-WebviewController-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: int): void-End-->
 
@@ -2785,9 +2589,7 @@ Refreshes the current URL.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-refresh(): void--><!--Device-WebviewController-refresh(): void-End-->
 
@@ -2809,9 +2611,7 @@ Refreshes the current URL.
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2842,9 +2642,7 @@ Registers the supplied ArkTS object into this Web component. The object is regis
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,            asyncMethodList?: Array<string>, permission?: string): void--><!--Device-WebviewController-registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,            asyncMethodList?: Array<string>, permission?: string): void-End-->
 
@@ -2877,9 +2675,7 @@ Remove resource cache in application. So this method will remove all cache for a
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static removeAllCache(clearRom: boolean): void--><!--Device-WebviewController-static removeAllCache(clearRom: boolean): void-End-->
 
@@ -2907,9 +2703,7 @@ Clears the cache in the application. This API will clear the cache for all webvi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-removeCache(clearRom: boolean): void--><!--Device-WebviewController-removeCache(clearRom: boolean): void-End-->
 
@@ -2938,9 +2732,7 @@ Remove bypassing hosts for Intelligent Tracking Prevention.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void--><!--Device-WebviewController-static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void-End-->
 
@@ -2969,9 +2761,7 @@ Gets the request focus.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-requestFocus(): void--><!--Device-WebviewController-requestFocus(): void-End-->
 
@@ -2993,9 +2783,7 @@ Restoring the web access stack, that is, the history of access.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-restoreWebState(state: Uint8Array): void--><!--Device-WebviewController-restoreWebState(state: Uint8Array): void-End-->
 
@@ -3024,9 +2812,7 @@ resumeAllMedia(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-resumeAllMedia(): void--><!--Device-WebviewController-resumeAllMedia(): void-End-->
 
@@ -3048,9 +2834,7 @@ Resume all timers suspended from the pauseAllTimers() interface.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static resumeAllTimers(): void--><!--Device-WebviewController-static resumeAllTimers(): void-End-->
 
@@ -3072,9 +2856,7 @@ resumeMicrophone(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-resumeMicrophone(): void--><!--Device-WebviewController-resumeMicrophone(): void-End-->
 
@@ -3096,9 +2878,7 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-runJavaScript(script: string): Promise<string>--><!--Device-WebviewController-runJavaScript(script: string): Promise<string>-End-->
 
@@ -3134,9 +2914,7 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-runJavaScript(script: string, callback: AsyncCallback<string>): void--><!--Device-WebviewController-runJavaScript(script: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3147,7 +2925,7 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | script | string | 是 | JavaScript Script. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Callbacks execute JavaScript script results. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | Callbacks execute JavaScript script results. |
 
 **错误码：**
 
@@ -3167,9 +2945,7 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>--><!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>-End-->
 
@@ -3185,7 +2961,7 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[JsMessageExt](arkts-na-webview-jsmessageext-c.md)&gt; | A promise is solved after the JavaScript script is executed. This parameter will be the result of JavaScript script execution. If the JavaScript script fails to execute or has no return value, a none type value will be returned. |
+| Promise&lt;[JsMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessageext-c.md)&gt; | A promise is solved after the JavaScript script is executed. This parameter will be the result of JavaScript script execution. If the JavaScript script fails to execute or has no return value, a none type value will be returned. |
 
 **错误码：**
 
@@ -3204,9 +2980,7 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void--><!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void-End-->
 
@@ -3217,7 +2991,7 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | script | string \| ArrayBuffer | 是 | JavaScript Script. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-na-webview-jsmessageext-c.md)&gt; | 是 | Callbacks execute JavaScript script results. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[JsMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | Callbacks execute JavaScript script results. |
 
 **错误码：**
 
@@ -3236,9 +3010,7 @@ Scroll by the delta position within specified time.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-scrollBy(deltaX: double, deltaY: double, duration?: int): void--><!--Device-WebviewController-scrollBy(deltaX: double, deltaY: double, duration?: int): void-End-->
 
@@ -3269,9 +3041,7 @@ Scrolls by the specified delta position and returns a result indicating whether 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-scrollByWithResult(deltaX: double, deltaY: double): boolean--><!--Device-WebviewController-scrollByWithResult(deltaX: double, deltaY: double): boolean-End-->
 
@@ -3307,9 +3077,7 @@ Scroll to the position within specified time.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-scrollTo(x: double, y: double, duration?: int): void--><!--Device-WebviewController-scrollTo(x: double, y: double, duration?: int): void-End-->
 
@@ -3340,9 +3108,7 @@ Search all instances of 'searchString' on the page and highlights them, result w
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-searchAllAsync(searchString: string): void--><!--Device-WebviewController-searchAllAsync(searchString: string): void-End-->
 
@@ -3371,9 +3137,7 @@ Highlights and scrolls to the next match search.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-searchNext(forward: boolean): void--><!--Device-WebviewController-searchNext(forward: boolean): void-End-->
 
@@ -3402,9 +3166,7 @@ Serialize the access stack of the web, that is, the history of access.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-serializeWebState(): Uint8Array--><!--Device-WebviewController-serializeWebState(): Uint8Array-End-->
 
@@ -3432,9 +3194,7 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void--><!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void-End-->
 
@@ -3444,7 +3204,7 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| engineVersion | [ArkWebEngineVersion](arkts-na-webview-arkwebengineversion-e.md) | 是 | ArkWeb内核版本。 |
+| engineVersion | [ArkWebEngineVersion](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-arkwebengineversion-e.md) | 是 | ArkWeb内核版本。 |
 
 ## setAppCustomUserAgent
 
@@ -3456,9 +3216,7 @@ Set the default User-Agent for the application. &lt;p&gt;&lt;strong&gt;API Note&
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void--><!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void-End-->
 
@@ -3480,9 +3238,7 @@ setAudioMuted(mute: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setAudioMuted(mute: boolean): void--><!--Device-WebviewController-setAudioMuted(mute: boolean): void-End-->
 
@@ -3511,9 +3267,7 @@ Configure whether to enable automatic pre-connection to high-frequency URLs acce
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void--><!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void-End-->
 
@@ -3535,9 +3289,7 @@ Configure the BackForwardCache.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setBackForwardCacheOptions(options?: BackForwardCacheOptions): void--><!--Device-WebviewController-setBackForwardCacheOptions(options?: BackForwardCacheOptions): void-End-->
 
@@ -3547,7 +3299,7 @@ Configure the BackForwardCache.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [BackForwardCacheOptions](arkts-na-webview-backforwardcacheoptions-c.md) | 否 | The configuration of BackForwardCache. |
+| options | [BackForwardCacheOptions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-backforwardcacheoptions-c.md) | 否 | The configuration of BackForwardCache. |
 
 **错误码：**
 
@@ -3565,9 +3317,7 @@ Sets the cache capacity of the blankless loading solution and returns the value 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: int) : int--><!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: int) : int-End-->
 
@@ -3601,9 +3351,7 @@ Sets whether to enable blankless page loading. This API must be used in pair wit
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode--><!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode-End-->
 
@@ -3620,7 +3368,7 @@ Sets whether to enable blankless page loading. This API must be used in pair wit
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebBlanklessErrorCode](arkts-na-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
+| [WebBlanklessErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
 
 **错误码：**
 
@@ -3639,9 +3387,7 @@ Triggers frame interpolation and sets frame interpolation parameters. This API m
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3654,13 +3400,13 @@ Triggers frame interpolation and sets frame interpolation parameters. This API m
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | Key value that uniquely identifies the current page. The key value must be the same as that of getBlanklessInfoWithKey. <br>Value range: (0, 2048] <br>Value range: (0, 2048] <br>which must be the same as the key value in getBlanklessInfoWithKey |
-| param | [BlanklessLoadingParam](arkts-na-webview-blanklessloadingparam-i.md) | 是 | The parameter of blankless. For details see {@Link BlanklessLoadingParam}. <br>na |
+| param | [BlanklessLoadingParam](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessloadingparam-i.md) | 是 | The parameter of blankless. For details see {@Link BlanklessLoadingParam}. <br>na |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebBlanklessErrorCode](arkts-na-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
+| [WebBlanklessErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
 
 **错误码：**
 
@@ -3678,9 +3424,7 @@ Set web engine socket connection timeout. Unit: seconds.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setConnectionTimeout(timeout: int): void--><!--Device-WebviewController-static setConnectionTimeout(timeout: int): void-End-->
 
@@ -3708,9 +3452,7 @@ Set custom user agent.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setCustomUserAgent(userAgent: string): void--><!--Device-WebviewController-setCustomUserAgent(userAgent: string): void-End-->
 
@@ -3739,9 +3481,7 @@ Set delegate for download. Used to notify the progress of the download triggered
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setDownloadDelegate(delegate: WebDownloadDelegate): void--><!--Device-WebviewController-setDownloadDelegate(delegate: WebDownloadDelegate): void-End-->
 
@@ -3751,7 +3491,7 @@ Set delegate for download. Used to notify the progress of the download triggered
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](arkts-na-webview-webdownloaddelegate-c.md) | 是 | Delegate used for download triggered from web. |
+| delegate | [WebDownloadDelegate](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaddelegate-c.md) | 是 | Delegate used for download triggered from web. |
 
 **错误码：**
 
@@ -3769,9 +3509,7 @@ Set whether enable the error page. onOverrideErrorPage will be triggered when th
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void--><!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void-End-->
 
@@ -3799,9 +3537,7 @@ Set IP address for host name.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setHostIP(hostName: string, address: string, aliveTime: int): void--><!--Device-WebviewController-static setHostIP(hostName: string, address: string, aliveTime: int): void-End-->
 
@@ -3831,9 +3567,7 @@ Set web engine to use HttpDns server to resolve dns.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void--><!--Device-WebviewController-static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void-End-->
 
@@ -3843,7 +3577,7 @@ Set web engine to use HttpDns server to resolve dns.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| secureDnsMode | [SecureDnsMode](arkts-na-webview-securednsmode-e.md) | 是 | using HttpDns. |
+| secureDnsMode | [SecureDnsMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-securednsmode-e.md) | 是 | using HttpDns. |
 | secureDnsConfig | string | 是 | The configuration of the HttpDns server. Must be https protocol and only allow one server to be configured. |
 
 **错误码：**
@@ -3862,9 +3596,7 @@ Put network state for web. Which is used to set window.navigator.onLine property
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setNetworkAvailable(enable: boolean): void--><!--Device-WebviewController-setNetworkAvailable(enable: boolean): void-End-->
 
@@ -3893,9 +3625,7 @@ Sets a path list. When a file protocol accesses resources in the path list, it c
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void--><!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void-End-->
 
@@ -3924,9 +3654,7 @@ Set whether print web page background.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setPrintBackground(enable: boolean): void--><!--Device-WebviewController-setPrintBackground(enable: boolean): void-End-->
 
@@ -3955,9 +3683,7 @@ Set render process mode of the ArkWeb.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setRenderProcessMode(mode: RenderProcessMode): void--><!--Device-WebviewController-static setRenderProcessMode(mode: RenderProcessMode): void-End-->
 
@@ -3967,7 +3693,7 @@ Set render process mode of the ArkWeb.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [RenderProcessMode](arkts-na-webview-renderprocessmode-e.md) | 是 | The render process mode for the ArkWeb. Call [getRenderProcessMode](#getRenderProcessMode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value *0 indicates the single render subprocess mode, and *1 indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of *RenderProcessMode is passed, the multi-render subprocess mode is used by default. |
+| mode | [RenderProcessMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-renderprocessmode-e.md) | 是 | The render process mode for the ArkWeb. Call [getRenderProcessMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getrenderprocessmode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value *0 indicates the single render subprocess mode, and *1 indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of *RenderProcessMode is passed, the multi-render subprocess mode is used by default. |
 
 **错误码：**
 
@@ -3985,9 +3711,7 @@ Set whether scroll is allowed; default is true.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setScrollable(enable: boolean, type?: ScrollType): void--><!--Device-WebviewController-setScrollable(enable: boolean, type?: ScrollType): void-End-->
 
@@ -3998,7 +3722,7 @@ Set whether scroll is allowed; default is true.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | Set whether scrolling is allowed {@code true} means scrolling is allowed. {@code false} means scrolling is disabled. |
-| type | [ScrollType](arkts-na-webview-scrolltype-e.md) | 否 | Enable scrolling type When the input parameter enable is false, it indicates that scrolling of the ScrollType type is prohibited. When ScrollType is not specified,it indicates that all types of webpage scrolling are prohibited. When the input parameter enable is true, regardless of whether ScrollType is specified, it indicates that all types of webpage scrolling are allowed. |
+| type | [ScrollType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-scrolltype-e.md) | 否 | Enable scrolling type When the input parameter enable is false, it indicates that scrolling of the ScrollType type is prohibited. When ScrollType is not specified,it indicates that all types of webpage scrolling are prohibited. When the input parameter enable is true, regardless of whether ScrollType is specified, it indicates that all types of webpage scrolling are allowed. |
 
 **错误码：**
 
@@ -4017,9 +3741,7 @@ Sets whether to switch web scrollbar mode.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void--><!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void-End-->
 
@@ -4029,7 +3751,7 @@ Sets whether to switch web scrollbar mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scrollbarMode | [ScrollbarMode](arkts-na-webview-scrollbarmode-e.md) | 是 | web scrollbar mode, default OVERLAY_LAYOUT_SCROLLBAR. |
+| scrollbarMode | [ScrollbarMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-scrollbarmode-e.md) | 是 | web scrollbar mode, default OVERLAY_LAYOUT_SCROLLBAR. |
 
 ## setServiceWorkerWebSchemeHandler
 
@@ -4041,9 +3763,7 @@ Set web scheme handler for specific scheme. This is used for service worker.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void--><!--Device-WebviewController-static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void-End-->
 
@@ -4054,7 +3774,7 @@ Set web scheme handler for specific scheme. This is used for service worker.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scheme | string | 是 | String value for url scheme. |
-| handler | [WebSchemeHandler](arkts-na-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
+| handler | [WebSchemeHandler](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
 
 **错误码：**
 
@@ -4072,9 +3792,7 @@ Set the site isolation mode.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void--><!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void-End-->
 
@@ -4084,7 +3802,7 @@ Set the site isolation mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [SiteIsolationMode](arkts-na-webview-siteisolationmode-e.md) | 是 | The site isolation mode of the application, default value depends on different devices type. |
+| mode | [SiteIsolationMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-siteisolationmode-e.md) | 是 | The site isolation mode of the application, default value depends on different devices type. |
 
 **错误码：**
 
@@ -4102,9 +3820,7 @@ Set web engine socket idle timeout. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&g
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setSocketIdleTimeout(timeout: int): void--><!--Device-WebviewController-static setSocketIdleTimeout(timeout: int): void-End-->
 
@@ -4126,9 +3842,7 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void--><!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void-End-->
 
@@ -4138,7 +3852,7 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebSoftKeyboardBehaviorMode](arkts-na-webview-websoftkeyboardbehaviormode-e.md) | 是 | The WebSoftKeyboardBehaviorMode of this web. |
+| mode | [WebSoftKeyboardBehaviorMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) | 是 | The WebSoftKeyboardBehaviorMode of this web. |
 
 **错误码：**
 
@@ -4156,9 +3870,7 @@ Sets the URL trust list for the ArkWeb. &lt;p&gt;&lt;strong&gt;API Note&lt;/stro
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 <!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void-End-->
 
@@ -4189,9 +3901,7 @@ Set the URL trust list for the ArkWeb. When the URL trust list has been set, onl
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setUrlTrustList(urlTrustList: string): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string): void-End-->
 
@@ -4220,9 +3930,7 @@ Enable the User-Agent Client Hints.
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4246,9 +3954,7 @@ Set the User-Agent to be used for specified hosts, with a maximum of 20,000 host
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void--><!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void-End-->
 
@@ -4271,9 +3977,7 @@ Sets the User-Agent metadata corresponding to the User-Agent. &lt;p&gt;&lt;stron
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4286,7 +3990,7 @@ Sets the User-Agent metadata corresponding to the User-Agent. &lt;p&gt;&lt;stron
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userAgent | string | 是 | The User-Agent string. |
-| metaData | [UserAgentMetadata](arkts-na-webview-useragentmetadata-c.md) | 是 | The UserAgentMetadata for the userAgent. |
+| metaData | [UserAgentMetadata](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-useragentmetadata-c.md) | 是 | The UserAgentMetadata for the userAgent. |
 
 ## setWebDebuggingAccess
 
@@ -4298,9 +4002,7 @@ Sets whether to enable web debugging. By default, web debugging is disabled. For
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean): void-End-->
 
@@ -4328,9 +4030,7 @@ Enables debugging of web contents. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: int): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: int): void-End-->
 
@@ -4359,9 +4059,7 @@ Set web destroy mode.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void--><!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void-End-->
 
@@ -4371,7 +4069,7 @@ Set web destroy mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebDestroyMode](arkts-na-webview-webdestroymode-e.md) | 是 | web destroy mode, default NORMAL_MODE. |
+| mode | [WebDestroyMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdestroymode-e.md) | 是 | web destroy mode, default NORMAL_MODE. |
 
 ## setWebSchemeHandler
 
@@ -4383,9 +4081,7 @@ Set web scheme handler for specific scheme. This is only used for related web co
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void--><!--Device-WebviewController-setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void-End-->
 
@@ -4396,7 +4092,7 @@ Set web scheme handler for specific scheme. This is only used for related web co
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scheme | string | 是 | String value for url scheme. |
-| handler | [WebSchemeHandler](arkts-na-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
+| handler | [WebSchemeHandler](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
 
 **错误码：**
 
@@ -4415,9 +4111,7 @@ Slide by the speed.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-slideScroll(vx: double, vy: double): void--><!--Device-WebviewController-slideScroll(vx: double, vy: double): void-End-->
 
@@ -4447,9 +4141,7 @@ startCamera(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-startCamera(): void--><!--Device-WebviewController-startCamera(): void-End-->
 
@@ -4471,9 +4163,7 @@ Start a download.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-startDownload(url: string): void--><!--Device-WebviewController-startDownload(url: string): void-End-->
 
@@ -4502,9 +4192,7 @@ Stops the current load.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-stop(): void--><!--Device-WebviewController-stop(): void-End-->
 
@@ -4526,9 +4214,7 @@ stopAllMedia(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-stopAllMedia(): void--><!--Device-WebviewController-stopAllMedia(): void-End-->
 
@@ -4550,9 +4236,7 @@ stopCamera(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-stopCamera(): void--><!--Device-WebviewController-stopCamera(): void-End-->
 
@@ -4574,9 +4258,7 @@ stopMicrophone(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-stopMicrophone(): void--><!--Device-WebviewController-stopMicrophone(): void-End-->
 
@@ -4598,9 +4280,7 @@ Stores the current page as a web archive.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean): Promise<string>--><!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean): Promise<string>-End-->
 
@@ -4637,9 +4317,7 @@ Stores the current page as a web archive.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void--><!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void-End-->
 
@@ -4651,7 +4329,7 @@ Stores the current page as a web archive.
 | --- | --- | --- | --- |
 | baseName | string | 是 | Where the generated offline webpage is stored, This value cannot be null. |
 | autoName | boolean | 是 | Decide whether to automatically generate the file name. If false, it is stored by the file name of baseName. If true, the file name is automatically generated based on the current URL and stored in the file directory of baseName. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | called after the web archive has been stored. The parameter will either be the filename under which the file was stored, or empty if storing the file failed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | called after the web archive has been stored. The parameter will either be the filename under which the file was stored, or empty if storing the file failed. |
 
 **错误码：**
 
@@ -4671,9 +4349,7 @@ Destroy the rendering process. Calling this interface will actively destroy the 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-terminateRenderProcess(): boolean--><!--Device-WebviewController-terminateRenderProcess(): boolean-End-->
 
@@ -4701,9 +4377,7 @@ Trim memory by different memory pressure level.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static trimMemoryByPressureLevel(level: PressureLevel): void--><!--Device-WebviewController-static trimMemoryByPressureLevel(level: PressureLevel): void-End-->
 
@@ -4713,7 +4387,7 @@ Trim memory by different memory pressure level.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | [PressureLevel](arkts-na-webview-pressurelevel-e.md) | 是 | The memory pressure level for the ArkWeb. |
+| level | [PressureLevel](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pressurelevel-e.md) | 是 | The memory pressure level for the ArkWeb. |
 
 **错误码：**
 
@@ -4731,9 +4405,7 @@ Wait for the controller to attach a web component until timeout.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-waitForAttached(timeout: int): Promise<ControllerAttachState>--><!--Device-WebviewController-waitForAttached(timeout: int): Promise<ControllerAttachState>-End-->
 
@@ -4749,7 +4421,7 @@ Wait for the controller to attach a web component until timeout.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ControllerAttachState](arkts-na-webview-controllerattachstate-e.md)&gt; | Promise used to return the state of attach. |
+| Promise&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Promise used to return the state of attach. |
 
 ## warmupServiceWorker
 
@@ -4761,9 +4433,7 @@ Warmup the registered service worker associated the url.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-static warmupServiceWorker(url: string): void--><!--Device-WebviewController-static warmupServiceWorker(url: string): void-End-->
 
@@ -4791,9 +4461,7 @@ Web page snapshot. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Only scre
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void--><!--Device-WebviewController-webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void-End-->
 
@@ -4803,8 +4471,8 @@ Web page snapshot. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Only scre
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [SnapshotInfo](arkts-na-webview-snapshotinfo-i.md) | 是 | The snapshot info. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-na-webview-snapshotresult-i.md)&gt; | 是 | the callback of snapshot. |
+| info | [SnapshotInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-snapshotinfo-i.md) | 是 | The snapshot info. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SnapshotResult](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 | the callback of snapshot. |
 
 ## zoom
 
@@ -4816,9 +4484,7 @@ Zooms in or out of this web page. This API is effective only when zoomAccess is 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-zoom(factor: double): void--><!--Device-WebviewController-zoom(factor: double): void-End-->
 
@@ -4848,9 +4514,7 @@ Zooms in on this web page by 25%.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-zoomIn(): void--><!--Device-WebviewController-zoomIn(): void-End-->
 
@@ -4873,9 +4537,7 @@ Zooms out of this web page by 20%.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebviewController-zoomOut(): void--><!--Device-WebviewController-zoomOut(): void-End-->
 

@@ -16,10 +16,6 @@ Registers a listener for wallpaper changes to receive notifications about the ch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wallpaper-function onWallpaperChange(callback: WallpaperChangeObserver): void--><!--Device-wallpaper-function onWallpaperChange(callback: WallpaperChangeObserver): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper

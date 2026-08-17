@@ -4,10 +4,6 @@ Enumerates the error code of the permission policy for the URI operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-fileShare-export enum PolicyErrorCode--><!--Device-fileShare-export enum PolicyErrorCode-End-->
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
@@ -21,10 +17,6 @@ PERSISTENCE_FORBIDDEN = 1
 Indicates that the policy is not allowed to be persisted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1--><!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1-End-->
 
@@ -40,10 +32,6 @@ Indicates that the mode of this policy is invalid.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PolicyErrorCode-INVALID_MODE = 2--><!--Device-PolicyErrorCode-INVALID_MODE = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
@@ -58,10 +46,6 @@ Indicates that the path of this policy is invalid.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PolicyErrorCode-INVALID_PATH = 3--><!--Device-PolicyErrorCode-INVALID_PATH = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
@@ -75,10 +59,6 @@ PERMISSION_NOT_PERSISTED = 4
 Indicates that the permission is not persistent.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PolicyErrorCode-PERMISSION_NOT_PERSISTED = 4--><!--Device-PolicyErrorCode-PERMISSION_NOT_PERSISTED = 4-End-->
 

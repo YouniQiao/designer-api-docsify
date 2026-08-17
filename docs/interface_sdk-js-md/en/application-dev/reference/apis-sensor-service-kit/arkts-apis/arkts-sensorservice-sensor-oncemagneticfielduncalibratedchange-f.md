@@ -16,10 +16,6 @@ Subscribe to uncalibrated magnetic field sensor data once, {@code SensorId.MAGNE
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onceMagneticFieldUncalibratedChange(callback: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function onceMagneticFieldUncalibratedChange(callback: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

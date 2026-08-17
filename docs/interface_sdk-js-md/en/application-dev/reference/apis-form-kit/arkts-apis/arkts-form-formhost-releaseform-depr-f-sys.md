@@ -10,11 +10,9 @@ Releases a widget. After this API is called, the application can no longer use t
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseForm-(System-API))
+**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-system-api)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -42,11 +40,9 @@ Releases a widget. After this API is called, the application can no longer use t
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseForm-(System-API))
+**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-system-api)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -75,11 +71,9 @@ Releases a widget. After this API is called, the application can no longer use t
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseForm-(System-API))
+**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-system-api)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

@@ -18,8 +18,6 @@ Reads data from a file. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [read](arkts-corefile-file-fs-read-f.md#read)
@@ -52,8 +50,6 @@ declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<R
 Reads data from a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -90,8 +86,6 @@ declare function read(
 Reads data from a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

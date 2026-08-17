@@ -16,10 +16,6 @@ Sets the badge count for other applications. This API uses a promise to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise<void>--><!--Device-notificationManager-function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -53,7 +49,7 @@ Sets the badge count for other applications. This API uses a promise to return t
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

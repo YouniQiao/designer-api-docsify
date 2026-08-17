@@ -10,10 +10,6 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void-End-->
@@ -34,7 +30,7 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -75,10 +71,6 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 **起始版本：** 16
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为16。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本16开始，该接口支持在原子化服务API中使用。
 
 <!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void-End-->
@@ -100,7 +92,7 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

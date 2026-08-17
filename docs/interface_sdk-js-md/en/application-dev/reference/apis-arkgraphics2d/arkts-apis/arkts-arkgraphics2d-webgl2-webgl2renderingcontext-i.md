@@ -2,13 +2,9 @@
 
 WebGL 2.0
 
-**Inheritance/Implementation:** WebGL2RenderingContext extends [WebGL2RenderingContextBase](arkts-arkgraphics2d-webgl2-webgl2renderingcontextbase-i.md#WebGL2RenderingContextBase), [WebGL2RenderingContextOverloads](arkts-arkgraphics2d-webgl2-webgl2renderingcontextoverloads-i.md#WebGL2RenderingContextOverloads), [WebGLRenderingContextBase](arkts-arkgraphics2d-webgl-webglrenderingcontextbase-i.md#WebGLRenderingContextBase)
+**Inheritance/Implementation:** WebGL2RenderingContext extends [WebGL2RenderingContextBase](arkts-arkgraphics2d-webgl2-webgl2renderingcontextbase-i.md#webgl2renderingcontextbase), [WebGL2RenderingContextOverloads](arkts-arkgraphics2d-webgl2-webgl2renderingcontextoverloads-i.md#webgl2renderingcontextoverloads), [WebGLRenderingContextBase](arkts-arkgraphics2d-webgl-webglrenderingcontextbase-i.md#webglrenderingcontextbase)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

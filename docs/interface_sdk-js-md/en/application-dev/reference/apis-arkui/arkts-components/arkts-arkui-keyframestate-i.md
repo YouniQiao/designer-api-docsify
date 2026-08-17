@@ -4,10 +4,6 @@ Provides keyframe configuration options.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface KeyframeState--><!--Device-unnamed-declare interface KeyframeState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,17 +14,13 @@ Provides keyframe configuration options.
 curve?: Curve | string | ICurve
 ```
 
-Animation curve used by the keyframe. You are advised to specify the curve using the **Curve** or **ICurve** type. For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md#AnimateParam). Default value: **Curve.EaseInOut** **NOTE：**Because the [springMotion](../../apis-na/arkts-apis/arkts-na-curves-springmotion-f.md#springMotion), [responsiveSpringMotion](../../apis-na/arkts-apis/arkts-na-curves-responsivespringmotion-f.md#responsiveSpringMotion), and [interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md#interpolatingSpring) curves do not have effective duration settings, they are not supported.
+Animation curve used by the keyframe. You are advised to specify the curve using the **Curve** or **ICurve** type. For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md#animateparam). Default value: **Curve.EaseInOut** **NOTE：**Because the [springMotion](../../apis-na/arkts-apis/arkts-na-curves-springmotion-f.md#springmotion), [responsiveSpringMotion](../../apis-na/arkts-apis/arkts-na-curves-responsivespringmotion-f.md#responsivespringmotion), and [interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md#interpolatingspring) curves do not have effective duration settings, they are not supported.
 
 **Type:** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.EaseInOut
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Duration of the keyframe animation, in ms. Value range: [0, +∞) **NOTE：**- I
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -73,10 +61,6 @@ Closure function of the state at the time of the keyframe, that is, the state to
 **Type:** () =&gt; void
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Save the time information of the incremental backup. IncrementalBackupTime is us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backup-interface IncrementalBackupTime--><!--Device-backup-interface IncrementalBackupTime-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -32,10 +28,6 @@ Indicates the name of a bundle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IncrementalBackupTime-bundleName: string--><!--Device-IncrementalBackupTime-bundleName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -53,10 +45,6 @@ Time of the last incremental backup
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IncrementalBackupTime-lastIncrementalTime: long--><!--Device-IncrementalBackupTime-lastIncrementalTime: long-End-->
 

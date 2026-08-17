@@ -16,10 +16,6 @@ Opens the certificate management dialog box and displays the page of the specifi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -49,7 +45,7 @@ Opens the certificate management dialog box and displays the page of the specifi
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';

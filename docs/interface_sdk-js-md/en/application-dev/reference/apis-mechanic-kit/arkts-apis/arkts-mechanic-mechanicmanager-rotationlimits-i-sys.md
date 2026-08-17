@@ -4,10 +4,6 @@ Rotation angle limits relative to the reference point.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export interface RotationLimits--><!--Device-mechanicManager-export interface RotationLimits-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -32,10 +28,6 @@ Maximum pitch rotation angles in the negative direction, ranging from -2*Math.PI
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotationLimits-negativePitchMax: double--><!--Device-RotationLimits-negativePitchMax: double-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -53,10 +45,6 @@ Maximum roll rotation angles in the negative direction, ranging from -2*Math.PI 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotationLimits-negativeRollMax: double--><!--Device-RotationLimits-negativeRollMax: double-End-->
 
@@ -76,10 +64,6 @@ Maximum yaw rotation angles in the negative direction, ranging from -2*Math.PI t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotationLimits-negativeYawMax: double--><!--Device-RotationLimits-negativeYawMax: double-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -97,10 +81,6 @@ Maximum pitch rotation angles in the positive direction, ranging from 0 to 2*Mat
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotationLimits-positivePitchMax: double--><!--Device-RotationLimits-positivePitchMax: double-End-->
 
@@ -120,10 +100,6 @@ Maximum roll rotation angles in the positive direction, ranging from 0 to 2*Math
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotationLimits-positiveRollMax: double--><!--Device-RotationLimits-positiveRollMax: double-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -141,10 +117,6 @@ Maximum yaw rotation angles in the positive direction, ranging from 0 to 2*Math.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotationLimits-positiveYawMax: double--><!--Device-RotationLimits-positiveYawMax: double-End-->
 

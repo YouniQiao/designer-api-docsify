@@ -16,10 +16,6 @@ Obtain the single Wi-Fi configuration with Network ID.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
 **Model restriction:** This API can be used only in the stage model.
@@ -51,7 +47,7 @@ Obtain the single Wi-Fi configuration with Network ID.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

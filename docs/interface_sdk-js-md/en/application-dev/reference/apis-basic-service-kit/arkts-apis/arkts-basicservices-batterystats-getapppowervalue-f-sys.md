@@ -16,10 +16,6 @@ Obtains the power consumption of an application, in unit of mAh.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-batteryStats-function getAppPowerValue(uid: int): double--><!--Device-batteryStats-function getAppPowerValue(uid: int): double-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
@@ -46,7 +42,7 @@ Obtains the power consumption of an application, in unit of mAh.
 | [4600101](../../apis-basic-services-kit/errorcode-batteryStatistics.md#4600101-service-connection-failure) | Failed to connect to the service. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

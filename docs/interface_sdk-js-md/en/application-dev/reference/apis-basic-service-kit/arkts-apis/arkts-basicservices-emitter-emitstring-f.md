@@ -16,10 +16,6 @@ Emits a specified event. This API can be used to emit data objects across thread
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-emitter-function emit(eventId: string, data?: EventData): void--><!--Device-emitter-function emit(eventId: string, data?: EventData): void-End-->
@@ -33,7 +29,7 @@ Emits a specified event. This API can be used to emit data objects across thread
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let eventData: emitter.EventData = {
@@ -57,10 +53,6 @@ Emits the specified event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-function emit(eventId: string): void--><!--Device-emitter-function emit(eventId: string): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -71,7 +63,7 @@ Emits the specified event.
 | --- | --- | --- | --- |
 | eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 emitter.emit("eventId");
@@ -88,10 +80,6 @@ Emits the specified event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-function emit(eventId: string, data: EventData): void--><!--Device-emitter-function emit(eventId: string, data: EventData): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -103,7 +91,7 @@ Emits the specified event.
 | eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | Yes | Data passed in the event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RecordData } from '@ohos.base';
@@ -131,10 +119,6 @@ Emits a specified event. This API can be used to emit data objects across thread
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-emitter-function emit<T>(eventId: string, data?: GenericEventData<T>): void--><!--Device-emitter-function emit<T>(eventId: string, data?: GenericEventData<T>): void-End-->
@@ -148,7 +132,7 @@ Emits a specified event. This API can be used to emit data objects across thread
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Sendable
@@ -179,10 +163,6 @@ Emits the specified event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-function emit<T>(eventId: string, data: GenericEventData<T>): void--><!--Device-emitter-function emit<T>(eventId: string, data: GenericEventData<T>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -205,10 +185,6 @@ Emits an event of a specified priority. This API can be used to emit data object
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-emitter-function emit(eventId: string, options: Options, data?: EventData): void--><!--Device-emitter-function emit(eventId: string, options: Options, data?: EventData): void-End-->
@@ -223,7 +199,7 @@ Emits an event of a specified priority. This API can be used to emit data object
 | options | Options | Yes | Event emit priority. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -253,10 +229,6 @@ Emits an event of a specified priority.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-function emit(eventId: string, options: Options): void--><!--Device-emitter-function emit(eventId: string, options: Options): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -268,7 +240,7 @@ Emits an event of a specified priority.
 | eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
 | options | Options | Yes | Event emit priority. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let options: emitter.Options = {
@@ -289,10 +261,6 @@ Emits an event of a specified priority.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-function emit(eventId: string, options: Options, data: EventData): void--><!--Device-emitter-function emit(eventId: string, options: Options, data: EventData): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -305,7 +273,7 @@ Emits an event of a specified priority.
 | options | Options | Yes | Event emit priority. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | Yes | Data passed in the event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let record: Record<string, RecordData> = {
@@ -335,10 +303,6 @@ Emits an event of a specified priority. This API can be used to emit data object
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-emitter-function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void--><!--Device-emitter-function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void-End-->
@@ -353,7 +317,7 @@ Emits an event of a specified priority. This API can be used to emit data object
 | options | Options | Yes | Event emit priority. |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -412,10 +376,6 @@ function emit<T>(eventId: string, options: Options, data: GenericEventData<T>): 
 Emits an event of a specified priority.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-emitter-function emit<T>(eventId: string, options: Options, data: GenericEventData<T>): void--><!--Device-emitter-function emit<T>(eventId: string, options: Options, data: GenericEventData<T>): void-End-->
 

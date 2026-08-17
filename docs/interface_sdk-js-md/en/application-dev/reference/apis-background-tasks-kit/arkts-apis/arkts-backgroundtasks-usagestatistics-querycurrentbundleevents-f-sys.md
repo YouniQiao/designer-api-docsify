@@ -16,10 +16,6 @@ Queries state data of the current bundle within a specified period.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -32,7 +28,7 @@ Queries state data of the current bundle within a specified period.
 | --- | --- | --- | --- |
 | begin | long | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | long | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md#BundleEvents-(System-API)) object Array containing the state data of the current bundle. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md#bundleevents-system-api) object Array containing the state data of the current bundle. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -48,7 +44,7 @@ Queries state data of the current bundle within a specified period.
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
 | [10000007](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) | Failed to get the system time. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -76,10 +72,6 @@ function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleE
 Queries state data of the current bundle within a specified period.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>-End-->
 
@@ -114,7 +106,7 @@ Queries state data of the current bundle within a specified period.
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
 | [10000007](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) | Failed to get the system time. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -140,10 +132,6 @@ function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<
 Queries state data of the current bundle within a specified period.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

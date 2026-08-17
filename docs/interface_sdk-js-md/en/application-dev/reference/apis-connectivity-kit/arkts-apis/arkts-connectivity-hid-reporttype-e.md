@@ -4,10 +4,6 @@ Describe the report type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-hid-enum ReportType--><!--Device-hid-enum ReportType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ REPORT_TYPE_INPUT = 1
 Report type input.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Report type output.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReportType-REPORT_TYPE_OUTPUT = 2--><!--Device-ReportType-REPORT_TYPE_OUTPUT = 2-End-->
@@ -61,10 +49,6 @@ REPORT_TYPE_FEATURE = 3
 Report type feature.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

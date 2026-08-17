@@ -4,9 +4,7 @@ The ScopeComparable contains comparison methods.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-util-interface ScopeComparable--><!--Device-util-interface ScopeComparable-End-->
 
@@ -22,9 +20,7 @@ The comparison function is used by the scope.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeComparable-compareTo(other: T): boolean--><!--Device-ScopeComparable-compareTo(other: T): boolean-End-->
 

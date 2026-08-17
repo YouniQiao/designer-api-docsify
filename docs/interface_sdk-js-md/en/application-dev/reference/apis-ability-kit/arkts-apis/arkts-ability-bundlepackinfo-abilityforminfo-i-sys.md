@@ -4,10 +4,6 @@ AbilityFormInfo: the form info of an ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AbilityFormInfo--><!--Device-unnamed-export interface AbilityFormInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -25,10 +21,6 @@ Default dimensions of the widget. The value must be available in the **supportDi
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly defaultDimension: string--><!--Device-AbilityFormInfo-readonly defaultDimension: string-End-->
 
@@ -48,10 +40,6 @@ Widget name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AbilityFormInfo-readonly name: string--><!--Device-AbilityFormInfo-readonly name: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -69,10 +57,6 @@ Scheduled time to update the widget. The value is in 24-hour format and accurate
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly scheduledUpdateTime: string--><!--Device-AbilityFormInfo-readonly scheduledUpdateTime: string-End-->
 
@@ -92,10 +76,6 @@ Dimensions of the widget. The value can be **1*2**, **2*2**, **2*4**, **4*4**, o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AbilityFormInfo-readonly supportDimensions: Array<string>--><!--Device-AbilityFormInfo-readonly supportDimensions: Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -113,10 +93,6 @@ Widget type.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly type: string--><!--Device-AbilityFormInfo-readonly type: string-End-->
 
@@ -136,10 +112,6 @@ Interval to update the widget. The unit is 30 minutes. The value is a multiple o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AbilityFormInfo-readonly updateDuration: int--><!--Device-AbilityFormInfo-readonly updateDuration: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -157,10 +129,6 @@ Whether the widget supports periodic update. **true** if the widget supports per
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly updateEnabled: boolean--><!--Device-AbilityFormInfo-readonly updateEnabled: boolean-End-->
 

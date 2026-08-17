@@ -16,10 +16,6 @@ Unsubscribe the service state changed event.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-omapi-function off(type: 'stateChanged', callback?: Callback<ServiceState>): void--><!--Device-omapi-function off(type: 'stateChanged', callback?: Callback<ServiceState>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -37,7 +33,7 @@ Unsubscribe the service state changed event.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';

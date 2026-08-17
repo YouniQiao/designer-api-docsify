@@ -4,8 +4,6 @@ Enumerates the user age groups, for example, child or adult.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 24
 
 <!--Device-userStatus-export enum UserAgeGroup--><!--Device-userStatus-export enum UserAgeGroup-End-->
@@ -22,8 +20,6 @@ Adult.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 24
 
 <!--Device-UserAgeGroup-OTHERS = 0--><!--Device-UserAgeGroup-OTHERS = 0-End-->
@@ -39,8 +35,6 @@ CHILD = 1
 Child.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 24
 

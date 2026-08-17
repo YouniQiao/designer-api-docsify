@@ -4,10 +4,6 @@ Describes the Gatt descriptor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ble-interface BLEDescriptor--><!--Device-ble-interface BLEDescriptor-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -24,15 +20,11 @@ import { ble } from 'ble';
 characteristicUuid: string
 ```
 
-The UUID of the [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md#BLECharacteristic) instance to which the descriptor belongs
+The UUID of the [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md#blecharacteristic) instance to which the descriptor belongs
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,10 +46,6 @@ The descriptor handle of the BLEDescriptor instance
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -77,10 +65,6 @@ The UUID of the BLEDescriptor instance
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,10 +86,6 @@ The value of the BLEDescriptor instance
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -126,10 +106,6 @@ The permissions of a BLEDescriptor instance. The default value is Readable and W
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -144,15 +120,11 @@ The permissions of a BLEDescriptor instance. The default value is Readable and W
 serviceUuid: string
 ```
 
-The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md#GattService) instance to which the descriptor belongs
+The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md#gattservice) instance to which the descriptor belongs
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

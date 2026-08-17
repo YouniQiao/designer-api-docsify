@@ -1,4 +1,4 @@
-# ReceiveCallback (System API)
+# ReceiveCallback(System API) (System API)
 
 ```TypeScript
 declare type ReceiveCallback = import('../api/@ohos.base').Callback<Record<string, Object>>
@@ -7,10 +7,6 @@ declare type ReceiveCallback = import('../api/@ohos.base').Callback<Record<strin
 Triggered to encapsulate the data sent by the started ability.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

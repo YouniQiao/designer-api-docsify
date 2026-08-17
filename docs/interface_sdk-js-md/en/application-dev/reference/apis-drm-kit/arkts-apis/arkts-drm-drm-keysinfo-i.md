@@ -1,12 +1,8 @@
-# KeysInfo
+# KeysInfo(Defines the DRM capability.)
 
 Defines the status information of a media key.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-drm-interface KeysInfo--><!--Device-drm-interface KeysInfo-End-->
 
@@ -30,10 +26,6 @@ Media key ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-KeysInfo-keyId: Uint8Array--><!--Device-KeysInfo-keyId: Uint8Array-End-->
@@ -51,10 +43,6 @@ Media key status.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

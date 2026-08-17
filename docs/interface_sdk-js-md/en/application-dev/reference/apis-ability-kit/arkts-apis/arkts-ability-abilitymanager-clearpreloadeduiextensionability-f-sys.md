@@ -12,13 +12,9 @@ import { abilityManager } from 'abilityManager';
 function clearPreloadedUIExtensionAbility(preloadId: int): Promise<void>
 ```
 
-Clears a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) instance. This API uses a promise to return the result.
+Clears a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -34,7 +30,7 @@ Clears a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiext
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preloadId | int | Yes | ID of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) instance. |
+| preloadId | int | Yes | ID of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance. |
 
 **Return value:**
 
@@ -51,7 +47,7 @@ Clears a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiext
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';

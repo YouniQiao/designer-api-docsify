@@ -4,11 +4,9 @@ Listens for file change. You can call the **Watcher.stop()** method synchronousl
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [Watcher](../../apis-na/arkts-apis/arkts-na-watcher-t.md#Watcher)
+**Substitutes:** [Watcher](arkts-corefile-file-fs-watcher-i.md#watcher)
 
 <!--Device-unnamed-declare interface Watcher--><!--Device-unnamed-declare interface Watcher-End-->
 
@@ -24,8 +22,6 @@ Stops the **watcher** instance. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [stop](arkts-corefile-file-fs-watcher-i.md#stop)
@@ -40,7 +36,7 @@ Stops the **watcher** instance. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | return Promise |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -62,8 +58,6 @@ Stops the **watcher** instance. This API uses an asynchronous callback to return
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [stop](arkts-corefile-file-fs-watcher-i.md#stop)
@@ -78,7 +72,7 @@ Stops the **watcher** instance. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when **watcher** is stopped asynchronously. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";

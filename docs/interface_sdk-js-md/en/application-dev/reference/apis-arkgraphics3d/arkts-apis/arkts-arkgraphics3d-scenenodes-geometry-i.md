@@ -1,14 +1,10 @@
 # Geometry
 
-Geometric node type that holds renderable mesh data and supports optional deformation features.
+Geometric node type that holds renderable mesh data and supports optional deformation features. It inherits from Node.
 
-**Inheritance/Implementation:** Geometry extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#Node)
+**Inheritance/Implementation:** Geometry extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#node)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Geometry--><!--Device-unnamed-export interface Geometry-End-->
 
@@ -26,10 +22,6 @@ Mesh property.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Geometry-readonly mesh: Mesh--><!--Device-Geometry-readonly mesh: Mesh-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -45,10 +37,6 @@ Optional morpher that adds vertex-based deformation or animation effects to the 
 **Type:** [Morpher](arkts-arkgraphics3d-sceneresources-morpher-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Geometry-readonly morpher?: Morpher--><!--Device-Geometry-readonly morpher?: Morpher-End-->
 

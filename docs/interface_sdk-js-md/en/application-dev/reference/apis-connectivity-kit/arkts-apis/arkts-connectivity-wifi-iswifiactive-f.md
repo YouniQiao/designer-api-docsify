@@ -16,11 +16,9 @@ Queries the Wi-Fi status
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md#isWifiActive)
+**Substitutes:** [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md#iswifiactive)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -34,7 +32,7 @@ Queries the Wi-Fi status
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

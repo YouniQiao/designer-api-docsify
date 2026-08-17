@@ -6,10 +6,6 @@ Class for the context of the PartnerAgentExtensionAbility.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export default class PartnerAgentExtensionContext--><!--Device-unnamed-export default class PartnerAgentExtensionContext-End-->

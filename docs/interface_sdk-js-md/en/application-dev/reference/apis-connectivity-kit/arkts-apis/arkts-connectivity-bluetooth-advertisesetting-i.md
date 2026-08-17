@@ -4,11 +4,9 @@ Describes the settings for BLE advertising.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AdvertiseSetting](arkts-connectivity-bluetoothmanager-advertisesetting-i.md#AdvertiseSetting)
+**Substitutes:** [AdvertiseSetting](arkts-connectivity-bluetoothmanager-advertisesetting-i.md#advertisesetting)
 
 <!--Device-bluetooth-interface AdvertiseSetting--><!--Device-bluetooth-interface AdvertiseSetting-End-->
 
@@ -32,8 +30,6 @@ Indicates whether the BLE is connectable, default is {@code true}
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [connectable](arkts-connectivity-bluetoothmanager-advertisesetting-i.md#connectable)
@@ -53,8 +49,6 @@ Minimum slot value for the advertising interval, which is {@code 32} (20 ms) Max
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,11 +70,9 @@ Minimum transmission power level for advertising, which is {@code -127} Maximum 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [txPower](arkts-connectivity-bluetoothmanager-advertisesetting-i.md#txPower)
+**Substitutes:** [txPower](arkts-connectivity-bluetoothmanager-advertisesetting-i.md#txpower)
 
 <!--Device-AdvertiseSetting-txPower?: number--><!--Device-AdvertiseSetting-txPower?: number-End-->
 

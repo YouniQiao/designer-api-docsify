@@ -4,11 +4,9 @@ Enumerates the authentication result codes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#UserAuthResultCode)
+**Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#userauthresultcode)
 
 <!--Device-userAuth-enum ResultCode--><!--Device-userAuth-enum ResultCode-End-->
 
@@ -24,11 +22,9 @@ The operation is successful.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SUCCESS](arkts-userauthentication-userauth-userauthresultcode-e.md#SUCCESS)
+**Substitutes:** [SUCCESS](arkts-userauthentication-userauth-userauthresultcode-e.md#success)
 
 <!--Device-ResultCode-SUCCESS = 0--><!--Device-ResultCode-SUCCESS = 0-End-->
 
@@ -44,11 +40,9 @@ The authentication failed.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FAIL](arkts-userauthentication-userauth-userauthresultcode-e.md#FAIL)
+**Substitutes:** [FAIL](arkts-userauthentication-userauth-userauthresultcode-e.md#fail)
 
 <!--Device-ResultCode-FAIL = 1--><!--Device-ResultCode-FAIL = 1-End-->
 
@@ -64,11 +58,9 @@ A general operation error occurred.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GENERAL_ERROR](arkts-userauthentication-userauth-userauthresultcode-e.md#GENERAL_ERROR)
+**Substitutes:** [GENERAL_ERROR](arkts-userauthentication-userauth-userauthresultcode-e.md#generalerror)
 
 <!--Device-ResultCode-GENERAL_ERROR = 2--><!--Device-ResultCode-GENERAL_ERROR = 2-End-->
 
@@ -84,11 +76,9 @@ The authentication is canceled.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [CANCELED](arkts-userauthentication-userauth-userauthresultcode-e.md#CANCELED)
+**Substitutes:** [CANCELED](arkts-userauthentication-userauth-userauthresultcode-e.md#canceled)
 
 <!--Device-ResultCode-CANCELED = 3--><!--Device-ResultCode-CANCELED = 3-End-->
 
@@ -104,11 +94,9 @@ The authentication timed out.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TIMEOUT](arkts-userauthentication-userauth-userauthresultcode-e.md#TIMEOUT)
+**Substitutes:** [TIMEOUT](arkts-userauthentication-userauth-userauthresultcode-e.md#timeout)
 
 <!--Device-ResultCode-TIMEOUT = 4--><!--Device-ResultCode-TIMEOUT = 4-End-->
 
@@ -124,11 +112,9 @@ The authentication type is not supported.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#TYPE_NOT_SUPPORT)
+**Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#typenotsupport)
 
 <!--Device-ResultCode-TYPE_NOT_SUPPORT = 5--><!--Device-ResultCode-TYPE_NOT_SUPPORT = 5-End-->
 
@@ -144,11 +130,9 @@ The authentication trust level is not supported.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TRUST_LEVEL_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#TRUST_LEVEL_NOT_SUPPORT)
+**Substitutes:** [TRUST_LEVEL_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#trustlevelnotsupport)
 
 <!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6--><!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6-End-->
 
@@ -164,11 +148,9 @@ The system is busy.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BUSY](arkts-userauthentication-userauth-userauthresultcode-e.md#BUSY)
+**Substitutes:** [BUSY](arkts-userauthentication-userauth-userauthresultcode-e.md#busy)
 
 <!--Device-ResultCode-BUSY = 7--><!--Device-ResultCode-BUSY = 7-End-->
 
@@ -184,11 +166,9 @@ Invalid parameters are detected.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-userauth-userauthresultcode-e.md#INVALID_PARAMETERS)
+**Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-userauth-userauthresultcode-e.md#invalidparameters)
 
 <!--Device-ResultCode-INVALID_PARAMETERS = 8--><!--Device-ResultCode-INVALID_PARAMETERS = 8-End-->
 
@@ -204,11 +184,9 @@ The authentication executor is locked.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LOCKED](arkts-userauthentication-userauth-userauthresultcode-e.md#LOCKED)
+**Substitutes:** [LOCKED](arkts-userauthentication-userauth-userauthresultcode-e.md#locked)
 
 <!--Device-ResultCode-LOCKED = 9--><!--Device-ResultCode-LOCKED = 9-End-->
 
@@ -224,11 +202,9 @@ The user has not enrolled the authentication information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NOT_ENROLLED](arkts-userauthentication-userauth-userauthresultcode-e.md#NOT_ENROLLED)
+**Substitutes:** [NOT_ENROLLED](arkts-userauthentication-userauth-userauthresultcode-e.md#notenrolled)
 
 <!--Device-ResultCode-NOT_ENROLLED = 10--><!--Device-ResultCode-NOT_ENROLLED = 10-End-->
 

@@ -8,10 +8,6 @@ Describes the information about the notification extension subscription.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationExtensionSubscription-export type NotificationExtensionSubscriptionInfo = _NotificationExtensionSubscriptionInfo--><!--Device-notificationExtensionSubscription-export type NotificationExtensionSubscriptionInfo = _NotificationExtensionSubscriptionInfo-End-->
 
 **System capability:** SystemCapability.Notification.Notification

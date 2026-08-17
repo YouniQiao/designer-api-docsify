@@ -4,10 +4,6 @@ Pixel Round Mode
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum PixelRoundMode--><!--Device-unnamed-declare enum PixelRoundMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ PIXEL_ROUND_ON_LAYOUT_FINISH = 0
 Do pixel round on layout finish.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +37,6 @@ PIXEL_ROUND_AFTER_MEASURE = 1
 Do pixel round after measure.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

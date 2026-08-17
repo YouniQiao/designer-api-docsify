@@ -4,10 +4,6 @@ Defines a struct for obtaining the batch operation result of shared configuratio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface DataProxyGetResult--><!--Device-dataShare-interface DataProxyGetResult-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -30,10 +26,6 @@ If the operation is successful, the allowlist is the one set in shared configura
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataProxyGetResult-allowList: string[] | undefined--><!--Device-DataProxyGetResult-allowList: string[] | undefined-End-->
@@ -51,10 +43,6 @@ Operation result code.
 **Type:** [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ URI to be operated, with a maximum of 256 bytes. The value is fixed at the forma
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataProxyGetResult-uri: string--><!--Device-DataProxyGetResult-uri: string-End-->
@@ -95,10 +79,6 @@ If the operation is successful, the value is the one set in shared configuration
 **Type:** [ValueType](arkts-arkdata-valuetype-t.md) \| undefined
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,8 @@
 # UploadTask
 
-上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过 [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile)获取，callback形式通过 [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile) 获取。
+上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过 [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)获取，callback形式通过 [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile) 获取。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-request-interface UploadTask--><!--Device-request-interface UploadTask-End-->
 
@@ -22,10 +18,6 @@ delete(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-UploadTask-delete(callback: AsyncCallback<boolean>): void--><!--Device-UploadTask-delete(callback: AsyncCallback<boolean>): void-End-->
@@ -36,7 +28,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
 
 **错误码：**
 
@@ -44,7 +36,7 @@ delete(callback: AsyncCallback<boolean>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 uploadTask.delete((err: BusinessError, result: boolean) => {
@@ -66,10 +58,6 @@ delete(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERNET
 
 <!--Device-UploadTask-delete(): Promise<boolean>--><!--Device-UploadTask-delete(): Promise<boolean>-End-->
@@ -88,7 +76,7 @@ delete(): Promise<boolean>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -141,10 +129,6 @@ Called when the current upload session complete.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -153,9 +137,9 @@ Called when the current upload session complete.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload complete event. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload complete event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
@@ -208,10 +192,6 @@ Called when the current upload session fail.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -220,9 +200,9 @@ Called when the current upload session fail.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload fail change event. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload fail change event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
@@ -275,10 +255,6 @@ Called when the header of the current upload session has been received.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -289,7 +265,7 @@ Called when the header of the current upload session has been received.
 | --- | --- | --- | --- |
 | callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | 否 | The callback function for the HTTP Response Header event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
@@ -336,10 +312,6 @@ Called when the current upload session is in process.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void--><!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -350,7 +322,7 @@ Called when the current upload session is in process.
 | --- | --- | --- | --- |
 | callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | 否 | The callback function for the upload progress event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
@@ -397,10 +369,6 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -410,7 +378,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | 是 | 取消订阅的事件类型。<br>- 取值为'complete'，表示上传任务完成。<br>- 取值为'fail'，表示上传任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
@@ -418,7 +386,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | the parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
@@ -470,10 +438,6 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -483,7 +447,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | 是 | 取消订阅的事件类型。<br>- 取值为'complete'，表示上传任务完成。<br>- 取值为'fail'，表示上传任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
@@ -491,7 +455,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | the parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
@@ -543,10 +507,6 @@ off(type: 'headerReceive', callback?: (header: object) => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-off(type: 'headerReceive', callback?: (header: object) => void): void--><!--Device-UploadTask-off(type: 'headerReceive', callback?: (header: object) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -564,7 +524,7 @@ off(type: 'headerReceive', callback?: (header: object) => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let headerCallback1 = (header: object) => {
@@ -591,10 +551,6 @@ off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void):
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -612,7 +568,7 @@ off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void):
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let upProgressCallback1 = (uploadedSize: number, totalSize: number) => {
@@ -639,10 +595,6 @@ Called when the current upload session complete.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -651,9 +603,9 @@ Called when the current upload session complete.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload complete event. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload complete event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
@@ -694,10 +646,6 @@ Called when the current upload session fail.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -706,9 +654,9 @@ Called when the current upload session fail.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload fail event. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload fail event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
@@ -749,10 +697,6 @@ Called when the header of the current upload session has been received.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -763,7 +707,7 @@ Called when the header of the current upload session has been received.
 | --- | --- | --- | --- |
 | callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | 是 | The callback function for the HTTP Response Header event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
@@ -802,10 +746,6 @@ Called when the current upload session is in process.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void--><!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -816,7 +756,7 @@ Called when the current upload session is in process.
 | --- | --- | --- | --- |
 | callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | 是 | The callback function for the upload progress event. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
@@ -855,10 +795,6 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -868,7 +804,7 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | 是 | 订阅的事件类型，支持的事件包括：`'complete'`\|`'fail'`。<br/>- `'complete'`：表示上传任务完成，任务完成时触发该 事件。 <br/>- `'fail'`：表示上传任务失败，任务失败时触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
 
 **错误码：**
 
@@ -876,7 +812,7 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
@@ -904,10 +840,6 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -917,7 +849,7 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | 是 | 订阅的事件类型，支持的事件包括：`'complete'`\|`'fail'`。<br/>- `'complete'`：表示上传任务完成，任务完成时触发该 事件。 <br/>- `'fail'`：表示上传任务失败，任务失败时触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
 
 **错误码：**
 
@@ -925,7 +857,7 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
@@ -953,10 +885,6 @@ on(type: 'headerReceive', callback: (header: object) => void): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-on(type: 'headerReceive', callback: (header: object) => void): void--><!--Device-UploadTask-on(type: 'headerReceive', callback: (header: object) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -974,7 +902,7 @@ on(type: 'headerReceive', callback: (header: object) => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let headerCallback = (headers: object) => {
@@ -993,10 +921,6 @@ on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): v
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
-**废弃版本：** -1
-
 <!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -1014,7 +938,7 @@ on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): v
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let upProgressCallback = (uploadedSize: number, totalSize: number) => {
@@ -1033,8 +957,6 @@ remove(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [delete](#delete)(callback: AsyncCallback&lt;boolean&gt;)
@@ -1049,7 +971,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
 
 **错误码：**
 
@@ -1057,7 +979,7 @@ remove(callback: AsyncCallback<boolean>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 uploadTask.remove((err: BusinessError, result: boolean) => {
@@ -1081,8 +1003,6 @@ remove(): Promise<boolean>
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [delete](#delete)()
@@ -1105,7 +1025,7 @@ remove(): Promise<boolean>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 uploadTask.remove().then((result: boolean) => {

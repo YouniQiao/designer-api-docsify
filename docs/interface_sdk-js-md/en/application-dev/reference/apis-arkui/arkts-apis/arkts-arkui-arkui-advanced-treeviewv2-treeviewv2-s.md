@@ -4,10 +4,6 @@ Declare TreeViewV2 Component
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct TreeViewV2--><!--Device-unnamed-export declare struct TreeViewV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -32,13 +28,9 @@ import { TreeViewV2 } from 'TreeViewV2';
 
 Node data source of TreeViewV2.
 
-**Type:** [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md)
+**Type:** [TreeControllerV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-treecontrollerv2-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

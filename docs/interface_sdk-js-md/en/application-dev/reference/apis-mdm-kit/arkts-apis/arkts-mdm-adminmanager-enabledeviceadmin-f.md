@@ -16,10 +16,6 @@ Enables a [DA](../../../mdm/mdm-kit-term.md#device-admin-da) application by a [S
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_DEVICE_ADMIN
 
 **Model restriction:** This API can be used only in the stage model.
@@ -51,7 +47,7 @@ Enables a [DA](../../../mdm/mdm-kit-term.md#device-admin-da) application by a [S
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200003](../errorcode-enterpriseDeviceManager.md#9200003-invalid-administrator-ability-component) | The administrator ability component is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

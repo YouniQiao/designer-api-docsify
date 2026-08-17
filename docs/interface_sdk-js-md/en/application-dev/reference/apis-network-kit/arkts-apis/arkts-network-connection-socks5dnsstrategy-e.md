@@ -4,10 +4,6 @@ Socks5 DNS strategy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-connection-export enum Socks5DnsStrategy--><!--Device-connection-export enum Socks5DnsStrategy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -21,10 +17,6 @@ SYSTEM_MODE = 0
 System DNS mode.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,10 +33,6 @@ PROXY_MODE = 1
 Proxy DNS mode.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

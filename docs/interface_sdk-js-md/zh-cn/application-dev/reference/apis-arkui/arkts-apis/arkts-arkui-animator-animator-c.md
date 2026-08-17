@@ -2,9 +2,7 @@
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为-1。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
 
 <!--Device-unnamed-class Animator--><!--Device-unnamed-class Animator-End-->
 
@@ -18,9 +16,7 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

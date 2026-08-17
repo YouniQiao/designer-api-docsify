@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-unnamed-export interface SubscribeMessageResponse--><!--Device-unnamed-export interface SubscribeMessageResponse-End-->
@@ -21,8 +19,6 @@ Peer ability name, which is case sensitive.
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 
@@ -42,8 +38,6 @@ Name of the bundle where the peer ability has been located. The name is case sen
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-SubscribeMessageResponse-bundleName: string--><!--Device-SubscribeMessageResponse-bundleName: string-End-->
@@ -62,8 +56,6 @@ Peer device ID.
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-SubscribeMessageResponse-deviceId: string--><!--Device-SubscribeMessageResponse-deviceId: string-End-->
@@ -81,8 +73,6 @@ Messages received from the device.
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 

@@ -4,11 +4,9 @@ Describes the Gatt characteristic.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#BLECharacteristic)
+**Substitutes:** [BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#blecharacteristic)
 
 <!--Device-bluetooth-interface BLECharacteristic--><!--Device-bluetooth-interface BLECharacteristic-End-->
 
@@ -32,11 +30,9 @@ The UUID of a BLECharacteristic instance
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicUuid](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#characteristicuuid)
 
 <!--Device-BLECharacteristic-characteristicUuid: string--><!--Device-BLECharacteristic-characteristicUuid: string-End-->
 
@@ -54,11 +50,9 @@ The value of a BLECharacteristic instance
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicValue](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#characteristicValue)
+**Substitutes:** [characteristicValue](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#characteristicvalue)
 
 <!--Device-BLECharacteristic-characteristicValue: ArrayBuffer--><!--Device-BLECharacteristic-characteristicValue: ArrayBuffer-End-->
 
@@ -70,13 +64,11 @@ The value of a BLECharacteristic instance
 descriptors: Array<BLEDescriptor>
 ```
 
-The list of [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md#BLEDescriptor) contained in the characteristic
+The list of [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md#bledescriptor) contained in the characteristic
 
 **Type:** Array&lt;BLEDescriptor&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -92,17 +84,15 @@ The list of [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md#BLED
 serviceUuid: string
 ```
 
-The UUID of the [GattService](arkts-connectivity-bluetooth-gattservice-i.md#GattService) instance to which the characteristic belongs
+The UUID of the [GattService](arkts-connectivity-bluetooth-gattservice-i.md#gattservice) instance to which the characteristic belongs
 
 **Type:** string
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#serviceuuid)
 
 <!--Device-BLECharacteristic-serviceUuid: string--><!--Device-BLECharacteristic-serviceUuid: string-End-->
 

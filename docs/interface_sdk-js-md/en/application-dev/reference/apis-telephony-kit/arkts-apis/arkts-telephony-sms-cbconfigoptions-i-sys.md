@@ -4,10 +4,6 @@ Defines the cell broadcast configuration options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-export interface CBConfigOptions--><!--Device-sms-export interface CBConfigOptions-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -32,10 +28,6 @@ Whether to enable cell broadcast.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CBConfigOptions-enable: boolean--><!--Device-CBConfigOptions-enable: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -53,10 +45,6 @@ End message ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-endMessageId: int--><!--Device-CBConfigOptions-endMessageId: int-End-->
 
@@ -76,10 +64,6 @@ RAN type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CBConfigOptions-ranType: RanType--><!--Device-CBConfigOptions-ranType: RanType-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -98,10 +82,6 @@ Card slot ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CBConfigOptions-slotId: int--><!--Device-CBConfigOptions-slotId: int-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -119,10 +99,6 @@ Start message ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-startMessageId: int--><!--Device-CBConfigOptions-startMessageId: int-End-->
 

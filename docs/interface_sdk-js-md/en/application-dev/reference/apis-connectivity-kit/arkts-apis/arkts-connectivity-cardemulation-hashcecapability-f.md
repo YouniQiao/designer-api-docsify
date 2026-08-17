@@ -16,10 +16,6 @@ Checks whether Host Card Emulation(HCE) capability is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -41,7 +37,7 @@ Checks whether Host Card Emulation(HCE) capability is supported.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Applicable to devices other than lite wearables

@@ -4,10 +4,6 @@ Describes the cloud pair device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-interface TrustedPairedDevices--><!--Device-connection-interface TrustedPairedDevices-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -31,10 +27,6 @@ The list of cloud pair devices.
 **Type:** Array&lt;[TrustedPairedDevice](arkts-connectivity-connection-trustedpaireddevice-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

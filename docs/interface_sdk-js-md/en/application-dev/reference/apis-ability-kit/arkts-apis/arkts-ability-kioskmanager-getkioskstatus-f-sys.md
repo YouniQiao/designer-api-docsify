@@ -16,10 +16,6 @@ Obtains the Kiosk mode status information, including whether the system is in ki
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-kioskManager-function getKioskStatus(): Promise<KioskStatus>--><!--Device-kioskManager-function getKioskStatus(): Promise<KioskStatus>-End-->
@@ -42,7 +38,7 @@ Obtains the Kiosk mode status information, including whether the system is in ki
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { kioskManager } from '@kit.AbilityKit';

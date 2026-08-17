@@ -10,10 +10,6 @@ function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProv
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void-End-->
@@ -27,7 +23,7 @@ function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProv
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，当获取成功时，err为 undefined，data为指定bundleName的provision配置文件信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当获取成功时，err为 undefined，data为指定bundleName的provision配置文件信息。 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProv
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -72,10 +68,6 @@ function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCallback<AppProvisionInfo>): void--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCallback<AppProvisionInfo>): void-End-->
@@ -89,8 +81,8 @@ function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundleName。 |
-| userId | int | 是 | 指定用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，当获取成功时，err为 undefined，data为指定bundleName的provision配置文件信息。 |
+| userId | int | 是 | 指定用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当获取成功时，err为 undefined，data为指定bundleName的provision配置文件信息。 |
 
 **错误码：**
 
@@ -102,7 +94,7 @@ function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCal
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -137,10 +129,6 @@ function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvisionInfo>--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvisionInfo>-End-->
@@ -154,7 +142,7 @@ function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定的bundleName。 |
-| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取，默认值：调用方所在用户，取值范围：大于等于0。 |
+| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **返回值：**
 
@@ -172,7 +160,7 @@ function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvi
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

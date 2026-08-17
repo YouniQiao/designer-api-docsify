@@ -10,8 +10,6 @@ Converts a value in vp units to a value in px. By default, the virtual pixel rat
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
 **废弃版本：** 18
 
 **替代接口：** vp2px

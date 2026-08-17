@@ -1,14 +1,10 @@
 # SheetOptions
 
-Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions).
+Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions).
 
-**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)
+**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface SheetOptions--><!--Device-unnamed-declare interface SheetOptions-End-->
 
@@ -27,10 +23,6 @@ Options for blur snapshot optimization of the sheet. When this property is set, 
 **Default:** undefined
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,10 +46,6 @@ Edge light animation mode of the sheet. Default value: EdgeLightMode.EDGELIGHT_D
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SheetOptions-edgeLightMode?: EdgeLightMode--><!--Device-SheetOptions-edgeLightMode?: EdgeLightMode-End-->
@@ -72,15 +60,11 @@ Edge light animation mode of the sheet. Default value: EdgeLightMode.EDGELIGHT_D
 offset?: Position
 ```
 
-Offset of the sheet. Bottom spacing, which is effective only when the sheet is a bottom sheet. The **detents** property of [SheetOptions](arkts-arkui-sheetoptions-i.md#SheetOptions) is not supported. This property has no effect when the y-axis value is set to a negative number. Default value: 0 vp for both the x-axis and y-axis
+Offset of the sheet. Bottom spacing, which is effective only when the sheet is a bottom sheet. The **detents** property of [SheetOptions](arkts-arkui-sheetoptions-i.md#sheetoptions) is not supported. This property has no effect when the y-axis value is set to a negative number. Default value: 0 vp for both the x-axis and y-axis
 
 **Type:** Position
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

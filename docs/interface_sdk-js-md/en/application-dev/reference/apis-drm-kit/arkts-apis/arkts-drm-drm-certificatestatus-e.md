@@ -1,12 +1,8 @@
-# CertificateStatus
+# CertificateStatus(Defines the DRM capability.)
 
 Enumerates the statuses of device certificates.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-drm-enum CertificateStatus--><!--Device-drm-enum CertificateStatus-End-->
 
@@ -21,10 +17,6 @@ CERT_STATUS_PROVISIONED = 0
 A device certificate is provisioned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -42,10 +34,6 @@ A device certificate is not provisioned.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-CertificateStatus-CERT_STATUS_NOT_PROVISIONED = 1--><!--Device-CertificateStatus-CERT_STATUS_NOT_PROVISIONED = 1-End-->
@@ -61,10 +49,6 @@ CERT_STATUS_EXPIRED = 2
 The device certificate has expired.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -82,10 +66,6 @@ The device certificate is invalid.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-CertificateStatus-CERT_STATUS_INVALID = 3--><!--Device-CertificateStatus-CERT_STATUS_INVALID = 3-End-->
@@ -101,10 +81,6 @@ CERT_STATUS_UNAVAILABLE = 4
 The device certificate is unavailable.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

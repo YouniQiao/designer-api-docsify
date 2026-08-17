@@ -4,10 +4,6 @@ Class to be override for backup extension ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -27,10 +23,6 @@ getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 Callback to be called when getting application backup compatibilityInfo. Developer could override this method to provide the backup compatibilityInfo.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,10 +54,6 @@ Callback to be called when getting application backupInfo. Developer could overr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BackupExtensionAbility-getBackupInfo(): string--><!--Device-BackupExtensionAbility-getBackupInfo(): string-End-->
@@ -89,10 +77,6 @@ getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 Callback to be called when getting application restore compatibilityInfo. Developer could override this method to provide the restore compatibilityInfo.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

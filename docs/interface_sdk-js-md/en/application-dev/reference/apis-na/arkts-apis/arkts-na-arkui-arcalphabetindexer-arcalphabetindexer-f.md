@@ -13,9 +13,7 @@ Defines ArcAlphabetIndexer Component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -27,7 +25,7 @@ Defines ArcAlphabetIndexer Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [ArcAlphabetIndexerInitInfo](arkts-na-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Yes | The initialization parameters of the arc alphabet index bar |
+| info | [ArcAlphabetIndexerInitInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Yes | The initialization parameters of the arc alphabet index bar |
 
 **Return value:**
 
@@ -49,9 +47,7 @@ Defines ArcAlphabetIndexer Component.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

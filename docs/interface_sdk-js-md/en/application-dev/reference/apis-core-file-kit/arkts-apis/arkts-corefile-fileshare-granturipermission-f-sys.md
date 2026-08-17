@@ -21,10 +21,6 @@ Provides grant uri permission for app
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_MEDIA
 
 <!--Device-fileShare-function grantUriPermission(    uri: string,    bundleName: string,    flag: wantConstant.Flags,    callback: AsyncCallback<void>  ): void--><!--Device-fileShare-function grantUriPermission(    uri: string,    bundleName: string,    flag: wantConstant.Flags,    callback: AsyncCallback<void>  ): void-End-->
@@ -51,7 +47,7 @@ Provides grant uri permission for app
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
 | 14300001 | IPC error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantConstant } from '@kit.AbilityKit';
@@ -86,10 +82,6 @@ Provides grant uri permission for app
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_MEDIA
 
 <!--Device-fileShare-function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.Flags): Promise<void>--><!--Device-fileShare-function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.Flags): Promise<void>-End-->
@@ -121,7 +113,7 @@ Provides grant uri permission for app
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
 | 14300001 | IPC error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantConstant } from '@kit.AbilityKit';
@@ -153,10 +145,6 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 Grant URI permissions for an application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -190,7 +178,7 @@ Grant URI permissions for an application.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900011 | Out of memory. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

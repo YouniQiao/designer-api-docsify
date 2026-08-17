@@ -4,10 +4,6 @@ Enumerates the time-lapse preview types, which affect the shooting algorithm.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum TimeLapsePreviewType--><!--Device-camera-enum TimeLapsePreviewType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -24,10 +20,6 @@ Dark environment, a scenario with poor illumination, for example, at night or in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePreviewType-DARK = 1--><!--Device-TimeLapsePreviewType-DARK = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -43,10 +35,6 @@ LIGHT = 2
 Bright environment, a scenario with good illumination, for example, in the daytime or under light.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePreviewType-LIGHT = 2--><!--Device-TimeLapsePreviewType-LIGHT = 2-End-->
 

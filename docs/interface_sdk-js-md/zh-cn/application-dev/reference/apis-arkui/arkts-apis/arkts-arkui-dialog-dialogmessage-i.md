@@ -2,13 +2,9 @@
 
 对话框的消息选项。
 
-**继承/实现关系：** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md#DialogTextStyleOptions)
+**继承/实现关系：** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md#dialogtextstyleoptions)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
 
 <!--Device-dialog-declare interface DialogMessage--><!--Device-dialog-declare interface DialogMessage-End-->
 
@@ -25,10 +21,6 @@ content: ResourceStr
 **类型：** ResourceStr
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

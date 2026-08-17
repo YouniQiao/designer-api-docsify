@@ -4,10 +4,6 @@ Describes the screenshot options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screenshot-interface PickInfo--><!--Device-screenshot-interface PickInfo-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -30,10 +26,6 @@ Region of the screen to capture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PickInfo-pickRect: Rect--><!--Device-PickInfo-pickRect: Rect-End-->
@@ -51,10 +43,6 @@ PixelMap object of the captured image.
 **Type:** image.PixelMap
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -6,10 +6,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class InputMethodExtensionContext--><!--Device-unnamed-declare class InputMethodExtensionContext-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -23,8 +19,6 @@ connectAbility(want: Want, options: ConnectOptions): number
 将当前Ability连接到ServiceExtensionAbility。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 10
 
@@ -74,8 +68,6 @@ connectAbilityWithAccount(want: Want, accountId: number): number
 以指定账户连接ServiceExtensionAbility。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 10
 
@@ -130,8 +122,6 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -181,8 +171,6 @@ disconnectAbility(connection: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -198,7 +186,7 @@ disconnectAbility(connection: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | connection | number | 是 | 连接的数字标识，由connectAbility/connectServiceExtensionAbility返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当断开连接成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当断开连接成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -217,8 +205,6 @@ disconnectAbility(connection: number): Promise<void>
 断开与ServiceExtensionAbility的连接。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 10
 
@@ -260,8 +246,6 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -277,7 +261,7 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | connection | number | 是 | 连接的数字标识，由connectServiceExtensionAbility返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当断开连接成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当断开连接成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -296,8 +280,6 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 断开与ServiceExtensionAbility的连接。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 10
 
@@ -339,8 +321,6 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
@@ -359,7 +339,7 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 用于指定目标应用的Want类型信息。 |
 | accountId | number | 是 | 目标系统账户的ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拉起目标应用成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当拉起目标应用成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -393,8 +373,6 @@ startAbilityWithAccount(want: Want, accountId: number): Promise<void>
 以指定账户拉起目标应用。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 10
 
@@ -454,8 +432,6 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** [destroy](arkts-ime-inputmethodextensioncontext-c.md#destroy)(callback: AsyncCallback&lt;void&gt;)
@@ -472,7 +448,7 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当销毁输入法应用成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当销毁输入法应用成功时，err为undefined；否则为错误对象。 |
 
 ## terminateSelf
 
@@ -483,8 +459,6 @@ terminateSelf(): Promise<void>
 销毁输入法ExtensionAbility。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 10
 

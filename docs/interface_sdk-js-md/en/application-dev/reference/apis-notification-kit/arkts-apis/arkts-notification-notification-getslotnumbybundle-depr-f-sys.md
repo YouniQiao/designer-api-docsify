@@ -10,11 +10,9 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getSlotNumByBundle-(System-API))
+**Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getslotnumbybundle-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,11 +40,9 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getSlotNumByBundle-(System-API))
+**Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getslotnumbybundle-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

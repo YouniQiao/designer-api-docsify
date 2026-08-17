@@ -4,10 +4,6 @@ Enumerates data role types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usbManager-export enum DataRoleType--><!--Device-usbManager-export enum DataRoleType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -23,10 +19,6 @@ NONE = 0
 No function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataRoleType-NONE = 0--><!--Device-DataRoleType-NONE = 0-End-->
 
@@ -44,10 +36,6 @@ Host mode
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataRoleType-HOST = 1--><!--Device-DataRoleType-HOST = 1-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -63,10 +51,6 @@ DEVICE = 2
 Device mode
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataRoleType-DEVICE = 2--><!--Device-DataRoleType-DEVICE = 2-End-->
 

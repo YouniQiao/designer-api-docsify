@@ -1,12 +1,8 @@
 # AdsBlockedDetails
 
-Defines the ads block details.
+Provides detailed information about the blocked ads when ads are blocked.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface AdsBlockedDetails--><!--Device-unnamed-declare interface AdsBlockedDetails-End-->
 
@@ -18,15 +14,11 @@ Defines the ads block details.
 adsBlocked: Array<string>
 ```
 
-the url of ads.
+URLs or dompaths of the blocked ads. If multiple ads have the same URLs, duplicate elements may exist.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ the url of ads.
 url: string
 ```
 
-The url of main frame.
+URL of the page where ads are blocked.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

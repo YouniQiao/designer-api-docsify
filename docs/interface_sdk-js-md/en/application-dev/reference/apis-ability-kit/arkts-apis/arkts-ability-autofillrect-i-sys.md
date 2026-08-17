@@ -4,10 +4,6 @@ AutoFillRect describes the rectangle used for auto-fill.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default interface AutoFillRect--><!--Device-unnamed-export default interface AutoFillRect-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -25,10 +21,6 @@ Height of the AutoFill form or page node. The unit is px.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Distance between the AutoFill form or page node and the left boundary of the pag
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -78,10 +66,6 @@ Distance between the AutoFill form or page node and the upper boundary of the pa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -103,10 +87,6 @@ Width of the AutoFill form or page node. The unit is px.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Enumerates the device discovery modes.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-deviceManager-enum DiscoverMode--><!--Device-deviceManager-enum DiscoverMode-End-->
@@ -24,8 +22,6 @@ Passive discovery.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-DiscoverMode-DISCOVER_MODE_PASSIVE = 0x55--><!--Device-DiscoverMode-DISCOVER_MODE_PASSIVE = 0x55-End-->
@@ -43,8 +39,6 @@ DISCOVER_MODE_ACTIVE = 0xAA
 Active discovery.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 

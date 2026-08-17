@@ -4,10 +4,6 @@ Represents the message authentication code (MAC) parameters. You need to constru
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-interface MacSpec--><!--Device-cryptoFramework-interface MacSpec-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
@@ -29,10 +25,6 @@ Algorithm to use.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

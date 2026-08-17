@@ -16,10 +16,6 @@ Establish a new connection that can be used to connect to all the SEs available 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-omapi-function createService(): Promise<SEService>--><!--Device-omapi-function createService(): Promise<SEService>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -36,7 +32,7 @@ Establish a new connection that can be used to connect to all the SEs available 
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';

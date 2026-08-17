@@ -4,8 +4,6 @@ Defines the options used in readText().
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileReadTextOption--><!--Device-unnamed-export interface FileReadTextOption-End-->
@@ -23,8 +21,6 @@ Callback invoked when the API call is complete.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ Encoding format. The default format is **UTF-8**.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileReadTextOption-encoding?: string--><!--Device-FileReadTextOption-encoding?: string-End-->
@@ -63,8 +57,6 @@ Callback invoked when the API call fails. **data** indicates the error informati
 **Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -84,8 +76,6 @@ Length of the text to be read, in bytes. The default value is **4096**.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileReadTextOption-length?: number--><!--Device-FileReadTextOption-length?: number-End-->
@@ -104,8 +94,6 @@ Position where the reading starts, in bytes. The default value is the start posi
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileReadTextOption-position?: number--><!--Device-FileReadTextOption-position?: number-End-->
@@ -118,13 +106,11 @@ Position where the reading starts, in bytes. The default value is the start posi
 success?: (data: FileReadTextResponse) => void
 ```
 
-Callback invoked when the API call is successful. **data** is [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md#FileReadTextResponse).
+Callback invoked when the API call is successful. **data** is [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md#filereadtextresponse).
 
 **Type:** (data: FileReadTextResponse) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -143,8 +129,6 @@ URI of the file to which the content is written. Restricted by the underlying fi
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

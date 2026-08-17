@@ -16,10 +16,6 @@ Disable SIM card in specified slot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-sim-function deactivateSim(slotId: int, callback: AsyncCallback<void>): void--><!--Device-sim-function deactivateSim(slotId: int, callback: AsyncCallback<void>): void-End-->
@@ -48,7 +44,7 @@ Disable SIM card in specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,10 +65,6 @@ function deactivateSim(slotId: int): Promise<void>
 Disable SIM card in specified slot.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -107,7 +99,7 @@ Disable SIM card in specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

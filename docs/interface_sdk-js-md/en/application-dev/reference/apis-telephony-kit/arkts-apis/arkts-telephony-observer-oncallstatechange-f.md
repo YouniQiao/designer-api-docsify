@@ -16,10 +16,6 @@ Callback when the call state corresponding to the default sim card is updated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function onCallStateChange(callback: Callback<CallStateInfo>): void--><!--Device-observer-function onCallStateChange(callback: Callback<CallStateInfo>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -50,10 +46,6 @@ function onCallStateChange(options: ObserverOptions, callback: Callback<CallStat
 Callback when the call state corresponding to the monitored {@code slotId} is updated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-observer-function onCallStateChange(options: ObserverOptions, callback: Callback<CallStateInfo>): void--><!--Device-observer-function onCallStateChange(options: ObserverOptions, callback: Callback<CallStateInfo>): void-End-->
 

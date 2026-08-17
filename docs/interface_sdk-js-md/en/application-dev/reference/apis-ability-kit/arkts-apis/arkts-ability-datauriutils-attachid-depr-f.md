@@ -10,11 +10,9 @@ Attaches an ID to the end of a given URI.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [attachId](arkts-ability-datauriutils-attachid-f.md#attachId)
+**Substitutes:** [attachId](arkts-ability-datauriutils-attachid-f.md#attachid)
 
 <!--Device-dataUriUtils-function attachId(uri: string, id: number): string--><!--Device-dataUriUtils-function attachId(uri: string, id: number): string-End-->
 
@@ -33,7 +31,7 @@ Attaches an ID to the end of a given URI.
 | --- | --- |
 | string | URI object with the ID attached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import dataUriUtils from '@ohos.ability.dataUriUtils';

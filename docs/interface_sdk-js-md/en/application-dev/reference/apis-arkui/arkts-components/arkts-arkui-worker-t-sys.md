@@ -1,4 +1,4 @@
-# Worker (System API)
+# Worker(System API) (System API)
 
 ```TypeScript
 declare type Worker = import('../api/@ohos.worker').default.Worker
@@ -7,10 +7,6 @@ declare type Worker = import('../api/@ohos.worker').default.Worker
 Defines the worker thread object for running the .abc file.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

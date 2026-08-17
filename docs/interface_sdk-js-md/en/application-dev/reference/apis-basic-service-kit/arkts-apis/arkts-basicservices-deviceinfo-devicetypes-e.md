@@ -4,10 +4,6 @@ Enumerates device types, which can be used to verify the return value of **devic
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-enum DeviceTypes--><!--Device-deviceInfo-enum DeviceTypes-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -21,10 +17,6 @@ TYPE_DEFAULT = 'default'
 Default device
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -42,10 +34,6 @@ Smartphone
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DeviceTypes-TYPE_PHONE = 'phone'--><!--Device-DeviceTypes-TYPE_PHONE = 'phone'-End-->
@@ -61,10 +49,6 @@ TYPE_TABLET = 'tablet'
 Tablet
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -82,10 +66,6 @@ PC/2-in-1 device
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DeviceTypes-TYPE_2IN1 = '2in1'--><!--Device-DeviceTypes-TYPE_2IN1 = '2in1'-End-->
@@ -101,10 +81,6 @@ TYPE_TV = 'tv'
 Smart TV
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -122,10 +98,6 @@ Wearable
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'--><!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'-End-->
@@ -141,10 +113,6 @@ TYPE_CAR = 'car'
 Head unit
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

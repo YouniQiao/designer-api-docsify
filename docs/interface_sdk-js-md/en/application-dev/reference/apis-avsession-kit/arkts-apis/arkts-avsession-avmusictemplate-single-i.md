@@ -2,13 +2,9 @@
 
 The definition of Single song.
 
-**Inheritance/Implementation:** Single extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)
+**Inheritance/Implementation:** Single extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#mediaentity)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-avMusicTemplate-interface Single--><!--Device-avMusicTemplate-interface Single-End-->
 
@@ -32,10 +28,6 @@ DownloadProgress of the song.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Single-downloadProgress?: int--><!--Device-Single-downloadProgress?: int-End-->
@@ -53,10 +45,6 @@ DownloadStatus of the song.
 **Type:** [DownloadStatus](arkts-avsession-avmusictemplate-downloadstatus-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,10 +64,6 @@ Favorite/Subscribe information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Single-favSubscribeData: FavoriteData--><!--Device-Single-favSubscribeData: FavoriteData-End-->
@@ -97,10 +81,6 @@ Is vip song.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,10 +100,6 @@ Play information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Single-playInfo: PlayInfo--><!--Device-Single-playInfo: PlayInfo-End-->
@@ -141,10 +117,6 @@ Settings of the song.
 **Type:** [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,10 +136,6 @@ Singer name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Single-singer: string--><!--Device-Single-singer: string-End-->
@@ -185,10 +153,6 @@ Tags of the song.
 **Type:** string[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

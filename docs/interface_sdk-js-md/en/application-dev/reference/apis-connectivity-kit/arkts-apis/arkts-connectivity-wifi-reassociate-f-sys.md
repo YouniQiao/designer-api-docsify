@@ -16,11 +16,9 @@ Re-associate to current network.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [reassociate](arkts-connectivity-wifimanager-reassociate-f-sys.md#reassociate-(System-API))
+**Substitutes:** [reassociate](arkts-connectivity-wifimanager-reassociate-f-sys.md#reassociate-system-api)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -36,7 +34,7 @@ Re-associate to current network.
 | --- | --- |
 | boolean | { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

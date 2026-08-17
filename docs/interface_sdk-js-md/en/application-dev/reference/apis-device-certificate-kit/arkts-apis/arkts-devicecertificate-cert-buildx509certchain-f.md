@@ -16,10 +16,6 @@ Builds an X.509 certificate chain with a CertChainBuildParameters object. This A
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-cert-function buildX509CertChain(param: CertChainBuildParameters): Promise<CertChainBuildResult>--><!--Device-cert-function buildX509CertChain(param: CertChainBuildParameters): Promise<CertChainBuildResult>-End-->
@@ -30,7 +26,7 @@ Builds an X.509 certificate chain with a CertChainBuildParameters object. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md) | Yes | Object used to build the certificate chain.<br> The value of **maxLength** in [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md#CertChainBuildParameters) must be less than the number of certificates in the certificate set. |
+| param | [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md) | Yes | Object used to build the certificate chain.<br> The value of **maxLength** in [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md#certchainbuildparameters) must be less than the number of certificates in the certificate set. |
 
 **Return value:**
 

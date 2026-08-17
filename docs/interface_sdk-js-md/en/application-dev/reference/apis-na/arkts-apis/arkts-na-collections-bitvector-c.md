@@ -1,12 +1,10 @@
-# BitVector
+# BitVector(Defines the collections for ArkTS)
 
 An ordered collections of bit values, which are either 0 or 1. If multiple threads access a BitVector instance concurrently, and at least one of the threads modifies the array structurally, it must be synchronized externally.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-collections-class BitVector--><!--Device-collections-class BitVector-End-->
 
@@ -22,9 +20,7 @@ Returns an iterator that iterates over bit vector.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-$_iterator(): IterableIterator<int>--><!--Device-BitVector-$_iterator(): IterableIterator<int>-End-->
 
@@ -46,9 +42,7 @@ A constructor used to create a BitVector object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-constructor(length: int)--><!--Device-BitVector-constructor(length: int)-End-->
 
@@ -70,9 +64,7 @@ Flips the bit value by index in a bit vector.(Flip 0 to 1, flip 1 to 0)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-flipBitByIndex(index: int): void--><!--Device-BitVector-flipBitByIndex(index: int): void-End-->
 
@@ -102,9 +94,7 @@ Flips a range of bit values in a bit vector.(Flip 0 to 1, flip 1 to 0).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-flipBitsByRange(fromIndex: int, toIndex: int): void--><!--Device-BitVector-flipBitsByRange(fromIndex: int, toIndex: int): void-End-->
 
@@ -135,9 +125,7 @@ Counts the number of times a certain bit element occurs within a range of bits i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-getBitCountByRange(element: int, fromIndex: int, toIndex: int): int--><!--Device-BitVector-getBitCountByRange(element: int, fromIndex: int, toIndex: int): int-End-->
 
@@ -175,9 +163,7 @@ Returns the bit values in a range of indices in a bit vector.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-getBitsByRange(fromIndex: int, toIndex: int): BitVector--><!--Device-BitVector-getBitsByRange(fromIndex: int, toIndex: int): BitVector-End-->
 
@@ -194,7 +180,7 @@ Returns the bit values in a range of indices in a bit vector.
 
 | Type | Description |
 | --- | --- |
-| [BitVector](../../apis-arkts/arkts-apis/arkts-arkts-collections-bitvector-c.md) | The BitVector type, returns the bit values in a range of indices in a bit vector. |
+| [BitVector](arkts-na-collections-bitvector-c.md) | The BitVector type, returns the bit values in a range of indices in a bit vector. |
 
 **Error codes:**
 
@@ -214,9 +200,7 @@ Locates the first occurrence of a certain bit value within a range of bits in a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-getIndexOf(element: int, fromIndex: int, toIndex: int): int--><!--Device-BitVector-getIndexOf(element: int, fromIndex: int, toIndex: int): int-End-->
 
@@ -254,9 +238,7 @@ Locates the last occurrence of a certain bit value within a range of bits in a b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-getLastIndexOf(element: int, fromIndex: int, toIndex: int): int--><!--Device-BitVector-getLastIndexOf(element: int, fromIndex: int, toIndex: int): int-End-->
 
@@ -294,9 +276,7 @@ Check if bit vector contains a particular bit element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-has(element: int, fromIndex: int, toIndex: int): boolean--><!--Device-BitVector-has(element: int, fromIndex: int, toIndex: int): boolean-End-->
 
@@ -334,9 +314,7 @@ Retrieves and removes the bit element to the end of this bit vector.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-pop(): int | undefined--><!--Device-BitVector-pop(): int | undefined-End-->
 
@@ -358,9 +336,7 @@ Appends the bit element to the end of this bit vector.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-push(element: int): boolean--><!--Device-BitVector-push(element: int): boolean-End-->
 
@@ -395,9 +371,7 @@ Resize the bitVector's length.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-resize(size: int): void--><!--Device-BitVector-resize(size: int): void-End-->
 
@@ -426,9 +400,7 @@ Sets all of bits in a bit vector to a particular element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-setAllBits(element: int): void--><!--Device-BitVector-setAllBits(element: int): void-End-->
 
@@ -457,9 +429,7 @@ Sets a range of bits in a bit vector to a particular element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-setBitsByRange(element: int, fromIndex: int, toIndex: int): void--><!--Device-BitVector-setBitsByRange(element: int, fromIndex: int, toIndex: int): void-End-->
 
@@ -491,9 +461,7 @@ Returns an iterable of values in the bit vector
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BitVector-values(): IterableIterator<int>--><!--Device-BitVector-values(): IterableIterator<int>-End-->
 

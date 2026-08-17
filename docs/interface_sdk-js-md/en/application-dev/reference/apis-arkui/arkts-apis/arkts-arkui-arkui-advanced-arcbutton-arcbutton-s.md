@@ -4,10 +4,6 @@ The **ArcButton** component offers various button styles, such as emphasized, no
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -32,13 +28,9 @@ import { ArcButtonStatus } from 'ArcButtonStatus';
 
 Text, background color, shadow, and other parameters of the **ArcButton** component.
 
-**Type:** [ArcButtonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
+**Type:** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

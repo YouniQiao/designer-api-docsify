@@ -6,9 +6,7 @@ SubscribedAbstractProperty&lt;T&gt; is the return value of - AppStorage static f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface SubscribedAbstractProperty--><!--Device-unnamed-export declare interface SubscribedAbstractProperty-End-->
 
@@ -22,9 +20,7 @@ aboutToBeDeleted(): void
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SubscribedAbstractProperty-aboutToBeDeleted(): void--><!--Device-SubscribedAbstractProperty-aboutToBeDeleted(): void-End-->
 
@@ -38,9 +34,7 @@ An app needs to call this function before the instance of SubscribedAbstractProp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

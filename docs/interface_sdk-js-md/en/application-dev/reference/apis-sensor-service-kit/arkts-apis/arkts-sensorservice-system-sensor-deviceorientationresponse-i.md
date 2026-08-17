@@ -4,11 +4,9 @@ Defines a **DeviceOrientationResponse** object.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#OrientationResponse)
+**Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#orientationresponse)
 
 <!--Device-unnamed-export interface DeviceOrientationResponse--><!--Device-unnamed-export interface DeviceOrientationResponse-End-->
 
@@ -52,8 +50,6 @@ Rotation angle around the Z axis when the X/Y axis of the device coincides with 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [alpha](arkts-sensorservice-sensor-orientationresponse-i.md#alpha)
@@ -76,8 +72,6 @@ Rotation angle around the X axis when the Y/Z axis of the device coincides with 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [beta](arkts-sensorservice-sensor-orientationresponse-i.md#beta)
@@ -99,8 +93,6 @@ Rotation angle around the Y axis when the X/Z axis of the device coincides with 
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 

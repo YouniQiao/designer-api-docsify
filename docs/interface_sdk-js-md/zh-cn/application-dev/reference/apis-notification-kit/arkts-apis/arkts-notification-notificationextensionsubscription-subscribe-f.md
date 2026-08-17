@@ -16,10 +16,6 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
 <!--Device-notificationExtensionSubscription-function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>--><!--Device-notificationExtensionSubscription-function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>-End-->
@@ -53,7 +49,7 @@ getSubscribeInfo 获取应用通知扩展订阅信息。
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600023](../errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) | The application does not implement the NotificationSubscriberExtensionAbility. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

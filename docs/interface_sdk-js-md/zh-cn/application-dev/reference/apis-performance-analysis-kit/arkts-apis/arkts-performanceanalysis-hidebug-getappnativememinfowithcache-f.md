@@ -10,10 +10,6 @@ function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo--><!--Device-hidebug-function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo
 | --- | --- |
 | [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) | 应用进程内存信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let nativeMemInfo: hidebug.NativeMemInfo = hidebug.getAppNativeMemInfoWithCache();

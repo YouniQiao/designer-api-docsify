@@ -10,10 +10,6 @@ declare function readLinesSync(filePath: string, options?: Options): ReaderItera
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare function readLinesSync(filePath: string, options?: Options): ReaderIterator--><!--Device-unnamed-declare function readLinesSync(filePath: string, options?: Options): ReaderIterator-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

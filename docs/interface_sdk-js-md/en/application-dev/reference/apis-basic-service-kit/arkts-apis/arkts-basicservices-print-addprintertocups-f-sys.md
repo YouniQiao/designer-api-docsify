@@ -16,10 +16,6 @@ Add a printer to cups.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 **Model restriction:** This API can be used only in the stage model.
@@ -52,7 +48,7 @@ Add a printer to cups.
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

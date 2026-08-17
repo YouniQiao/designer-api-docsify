@@ -4,9 +4,7 @@ The Type represents four different encoding formats for base64
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-util-enum Type--><!--Device-util-enum Type-End-->
 
@@ -22,9 +20,7 @@ The value indicates that the encoding format of base64 is BASIC
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Type-BASIC--><!--Device-Type-BASIC-End-->
 
@@ -40,9 +36,7 @@ The value indicates that the encoding format of base64 is MIME
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Type-MIME--><!--Device-Type-MIME-End-->
 
@@ -58,9 +52,7 @@ The value indicates that the encoding format of base64 is BASIC_URL_SAFE
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Type-BASIC_URL_SAFE--><!--Device-Type-BASIC_URL_SAFE-End-->
 
@@ -76,9 +68,7 @@ The value indicates that the encoding format of base64 is MIME_URL_SAFE
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Type-MIME_URL_SAFE--><!--Device-Type-MIME_URL_SAFE-End-->
 

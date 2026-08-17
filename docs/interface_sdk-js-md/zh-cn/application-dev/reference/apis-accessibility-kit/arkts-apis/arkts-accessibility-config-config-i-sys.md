@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-config-interface Config--><!--Device-config-interface Config-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,10 +19,6 @@ get(): Promise<T>
 获取属性。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Config-get(): Promise<T>--><!--Device-Config-get(): Promise<T>-End-->
 
@@ -47,7 +39,7 @@ get(): Promise<T>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
@@ -70,10 +62,6 @@ get(callback: AsyncCallback<T>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Config-get(callback: AsyncCallback<T>): void--><!--Device-Config-get(callback: AsyncCallback<T>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -84,7 +72,7 @@ get(callback: AsyncCallback<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 | 回调函数。当获取属性成功，err为undefined，data为属性值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | 是 | 回调函数。当获取属性成功，err为undefined，data为属性值；否则为错误对象。 |
 
 **错误码：**
 
@@ -92,7 +80,7 @@ get(callback: AsyncCallback<T>): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -134,10 +122,6 @@ off(callback?: Callback<T>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
 <!--Device-Config-off(callback?: Callback<T>): void--><!--Device-Config-off(callback?: Callback<T>): void-End-->
@@ -150,7 +134,7 @@ off(callback?: Callback<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与on()的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;T&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与on()的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -159,7 +143,7 @@ off(callback?: Callback<T>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
@@ -177,13 +161,9 @@ config.highContrastText.off(callback);
 on(callback: Callback<T>): void
 ```
 
-添加属性变化监听。使用callback异步回调。 需与[off](#off_Callback<T>)配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
+添加属性变化监听。使用callback异步回调。 需与[off](#offcallbackt)配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -197,7 +177,7 @@ on(callback: Callback<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | 是 | 回调函数，在属性变化时通过此函数进行通知。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;T&gt; | 是 | 回调函数，在属性变化时通过此函数进行通知。 |
 
 **错误码：**
 
@@ -207,7 +187,7 @@ on(callback: Callback<T>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
@@ -226,10 +206,6 @@ set(value: T): Promise<void>
 设置属性。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -259,7 +235,7 @@ set(value: T): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
@@ -284,10 +260,6 @@ set(value: T, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
 <!--Device-Config-set(value: T, callback: AsyncCallback<void>): void--><!--Device-Config-set(value: T, callback: AsyncCallback<void>): void-End-->
@@ -301,7 +273,7 @@ set(value: T, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | T | 是 | 设置的属性值，值类型与对应Config属性的类型一致。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置属性成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置属性成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -311,7 +283,7 @@ set(value: T, callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

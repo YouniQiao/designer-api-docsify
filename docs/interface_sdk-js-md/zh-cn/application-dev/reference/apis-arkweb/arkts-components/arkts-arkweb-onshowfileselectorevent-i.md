@@ -1,12 +1,8 @@
 # OnShowFileSelectorEvent
 
-定义文件选择器结果。
+定义文件选择器结果的回调信息，包括结果和参数详情。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface OnShowFileSelectorEvent--><!--Device-unnamed-declare interface OnShowFileSelectorEvent-End-->
 
@@ -23,10 +19,6 @@ fileSelector: FileSelectorParam
 **类型：** [FileSelectorParam](arkts-arkweb-fileselectorparam-c.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ result: FileSelectorResult
 **类型：** [FileSelectorResult](arkts-arkweb-fileselectorresult-c.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

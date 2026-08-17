@@ -1,12 +1,8 @@
 # InsightIntentType (System API)
 
-Enumerates the intent types defined by the intent decorator. You can obtain the intent type from [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md#LinkIntentInfo-(System-API)) returned by calling APIs such as [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getAllInsightIntentInfo-(System-API)).
+Enumerates the intent types defined by the intent decorator. You can obtain the intent type from [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md#linkintentinfo-system-api) returned by calling APIs such as [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getallinsightintentinfo-system-api).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-insightIntentDriver-enum InsightIntentType--><!--Device-insightIntentDriver-enum InsightIntentType-End-->
 
@@ -23,10 +19,6 @@ LINK = '@InsightIntentLink'
 A decorator of the @InsightIntentLink type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ A decorator of the @InsightIntentPage type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentType-PAGE = '@InsightIntentPage'--><!--Device-InsightIntentType-PAGE = '@InsightIntentPage'-End-->
@@ -67,10 +55,6 @@ ENTRY = '@InsightIntentEntry'
 A decorator of the @InsightIntentEntry type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ A decorator of the @InsightIntentFunctionMethod type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentType-FUNCTION = '@InsightIntentFunctionMethod'--><!--Device-InsightIntentType-FUNCTION = '@InsightIntentFunctionMethod'-End-->
@@ -111,10 +91,6 @@ FORM = '@InsightIntentForm'
 A decorator of the @InsightIntentForm type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

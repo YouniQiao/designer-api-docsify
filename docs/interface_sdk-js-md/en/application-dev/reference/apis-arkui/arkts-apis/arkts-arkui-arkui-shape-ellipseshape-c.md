@@ -1,14 +1,10 @@
 # EllipseShape
 
-Represents an ellipse shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-baseshape-c.md#BaseShape).
+Represents an ellipse shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-baseshape-c.md#baseshape).
 
 **Inheritance/Implementation:** EllipseShape extends BaseShape<EllipseShape>
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class EllipseShape--><!--Device-unnamed-export declare class EllipseShape-End-->
 
@@ -32,10 +28,6 @@ constructor(options?: ShapeSize)
 A constructor used to create a **EllipseShape** object.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

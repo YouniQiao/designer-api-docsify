@@ -16,10 +16,6 @@ Updates an asset in the specified user space. This API uses a promise to return 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-asset-function updateAsUser(userId: number, query: AssetMap, attributesToUpdate: AssetMap): Promise<void>--><!--Device-asset-function updateAsUser(userId: number, query: AssetMap, attributesToUpdate: AssetMap): Promise<void>-End-->
@@ -62,7 +58,7 @@ Updates an asset in the specified user space. This API uses a promise to return 
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

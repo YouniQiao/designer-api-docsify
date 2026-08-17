@@ -12,13 +12,9 @@ import { dlpPermission } from 'dlpPermission';
 function openDLPFile(ciphertextFd: number, appId: string): Promise<DLPFile>
 ```
 
-Opens a DLP file. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. This API uses a promise to return the result. After calling **openDLPFile()** to return a **DLPFile** object, the system must call [closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closeDLPFile) to release resources after using the object. When a DLP management application or an authorized application needs to access a DLP file, it must first open the file to obtain the managed object.
+Opens a DLP file. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. This API uses a promise to return the result. After calling **openDLPFile()** to return a **DLPFile** object, the system must call [closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile) to release resources after using the object. When a DLP management application or an authorized application needs to access a DLP file, it must first open the file to obtain the managed object.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -61,7 +57,7 @@ Opens a DLP file. After the API is successfully called, the **DLPFile** object i
 | [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
 | [19100020](../errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -110,10 +106,6 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
 <!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void--><!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void-End-->
@@ -150,7 +142,7 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 | [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
 | [19100020](../errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

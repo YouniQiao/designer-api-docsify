@@ -4,10 +4,6 @@ Enumerates the shadow drawing behaviors.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-enum ShadowFlag--><!--Device-drawing-enum ShadowFlag-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ NONE = 0
 No shadow effect is used.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShadowFlag-NONE = 0--><!--Device-ShadowFlag-NONE = 0-End-->
 
@@ -40,10 +32,6 @@ The occluder is translucent.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShadowFlag-TRANSPARENT_OCCLUDER = 1--><!--Device-ShadowFlag-TRANSPARENT_OCCLUDER = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -58,10 +46,6 @@ Only the geometric shadow effect is used.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShadowFlag-GEOMETRIC_ONLY = 2--><!--Device-ShadowFlag-GEOMETRIC_ONLY = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -75,10 +59,6 @@ ALL = 3
 Shadow effects are combined, including the translucent occluder and geometric shadow.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShadowFlag-ALL = 3--><!--Device-ShadowFlag-ALL = 3-End-->
 

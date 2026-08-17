@@ -12,13 +12,9 @@ import { abilityManager } from 'abilityManager';
 function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>
 ```
 
-Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility) can be started in embedded mode. This API uses a promise to return the result.
+Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#embeddableuiability) can be started in embedded mode. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +44,7 @@ Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuia
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityManager, UIAbility } from '@kit.AbilityKit';

@@ -4,11 +4,9 @@ Configuring parameters in geo fence requests
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md#GeofenceRequest)
+**Substitutes:** [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md#geofencerequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,8 +30,6 @@ geofence: Geofence
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [geofence](arkts-location-geolocationmanager-geofencerequest-i.md#geofence)
@@ -52,8 +48,6 @@ priority: LocationRequestPriority
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** priority
@@ -71,8 +65,6 @@ scenario: LocationRequestScenario
 **Type:** LocationRequestScenario
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

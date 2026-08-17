@@ -4,10 +4,6 @@
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct AtomicServiceNavigation--><!--Device-unnamed-export declare struct AtomicServiceNavigation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -39,10 +35,6 @@ The background with gradient colors of Navigation.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AtomicServiceNavigation-@Prop  gradientBackground?: GradientBackground--><!--Device-AtomicServiceNavigation-@Prop  gradientBackground?: GradientBackground-End-->
@@ -61,10 +53,6 @@ Hide navigation title bar.
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -85,10 +73,6 @@ The layout style users defined and inserted.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AtomicServiceNavigation-@BuilderParam  menus?: CustomBuilder | Array<NavigationMenuItem>--><!--Device-AtomicServiceNavigation-@BuilderParam  menus?: CustomBuilder | Array<NavigationMenuItem>-End-->
@@ -107,10 +91,6 @@ Sets the minimum width of content.
 **Type:** Dimension
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -131,10 +111,6 @@ Sets the mode of navigation.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceNavigation-@Prop  mode?: NavigationMode--><!--Device-AtomicServiceNavigation-@Prop  mode?: NavigationMode-End-->
@@ -152,10 +128,6 @@ Trigger callback when navigation mode changes.
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavigationMode&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -175,10 +147,6 @@ Sets the width of navigation bar.
 **Type:** Length
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -202,10 +170,6 @@ Sets the minimum width and the maximum width of navigation bar.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceNavigation-@Prop  navBarWidthRange?: [    Dimension,    Dimension  ]--><!--Device-AtomicServiceNavigation-@Prop  navBarWidthRange?: [    Dimension,    Dimension  ]-End-->
@@ -224,10 +188,6 @@ The builder of navDestination.
 **Type:** [NavDestinationBuilder](arkts-arkui-navdestinationbuilder-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -248,10 +208,6 @@ the information of route page.Providers methods for controlling destination page
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceNavigation-@State  navPathStack?: NavPathStack--><!--Device-AtomicServiceNavigation-@State  navPathStack?: NavPathStack-End-->
@@ -270,10 +226,6 @@ the content of Navigation.
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -294,10 +246,6 @@ Set side bar content.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AtomicServiceNavigation-@BuilderParam  sideBarContent?: Callback<void>--><!--Device-AtomicServiceNavigation-@BuilderParam  sideBarContent?: Callback<void>-End-->
@@ -317,10 +265,6 @@ Set side bar options.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AtomicServiceNavigation-@Prop  sideBarOptions?: SideBarOptions--><!--Device-AtomicServiceNavigation-@Prop  sideBarOptions?: SideBarOptions-End-->
@@ -338,10 +282,6 @@ Trigger callback when the visibility of navigation bar change.
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -362,10 +302,6 @@ Sets the Navigation title.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceNavigation-@Prop  title?: ResourceStr--><!--Device-AtomicServiceNavigation-@Prop  title?: ResourceStr-End-->
@@ -384,10 +320,6 @@ The color of Navigation's TitleBar.
 **Type:** [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

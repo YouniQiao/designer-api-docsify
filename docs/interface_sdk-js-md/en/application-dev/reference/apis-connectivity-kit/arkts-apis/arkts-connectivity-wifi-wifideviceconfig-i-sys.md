@@ -4,11 +4,9 @@ Wi-Fi device configuration information.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md#WifiDeviceConfig)
+**Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md#wifideviceconfig)
 
 <!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
 
@@ -32,11 +30,9 @@ The UID of the Wi-Fi configuration creator
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [creatorUid](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#creatorUid)
+**Substitutes:** [creatorUid](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#creatoruid)
 
 <!--Device-WifiDeviceConfig-creatorUid: number--><!--Device-WifiDeviceConfig-creatorUid: number-End-->
 
@@ -56,11 +52,9 @@ Disable reason
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [disableReason](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#disableReason)
+**Substitutes:** [disableReason](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#disablereason)
 
 <!--Device-WifiDeviceConfig-disableReason: number--><!--Device-WifiDeviceConfig-disableReason: number-End-->
 
@@ -80,11 +74,9 @@ IP Type
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ipType](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#ipType)
+**Substitutes:** [ipType](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#iptype)
 
 <!--Device-WifiDeviceConfig-ipType: IpType--><!--Device-WifiDeviceConfig-ipType: IpType-End-->
 
@@ -104,11 +96,9 @@ Allocated networkId
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i.md#netId)
+**Substitutes:** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i.md#netid)
 
 <!--Device-WifiDeviceConfig-netId: number--><!--Device-WifiDeviceConfig-netId: number-End-->
 
@@ -128,11 +118,9 @@ Random mac address, the length is 6
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [randomMacAddr](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#randomMacAddr)
+**Substitutes:** [randomMacAddr](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#randommacaddr)
 
 <!--Device-WifiDeviceConfig-randomMacAddr: string--><!--Device-WifiDeviceConfig-randomMacAddr: string-End-->
 
@@ -152,11 +140,9 @@ Random mac type
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [randomMacType](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#randomMacType)
+**Substitutes:** [randomMacType](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#randommactype)
 
 <!--Device-WifiDeviceConfig-randomMacType: number--><!--Device-WifiDeviceConfig-randomMacType: number-End-->
 
@@ -176,11 +162,9 @@ IP config of static
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [staticIp](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#staticIp)
+**Substitutes:** [staticIp](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#staticip)
 
 <!--Device-WifiDeviceConfig-staticIp: IpConfig--><!--Device-WifiDeviceConfig-staticIp: IpConfig-End-->
 

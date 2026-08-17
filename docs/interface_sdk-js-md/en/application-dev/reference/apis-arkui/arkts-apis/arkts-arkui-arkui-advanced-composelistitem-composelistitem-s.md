@@ -4,10 +4,6 @@ The **ComposeListItem** component is a container that presents a series of items
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct ComposeListItem--><!--Device-unnamed-export declare struct ComposeListItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -37,10 +33,6 @@ Elements on the left and in the center.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -61,10 +53,6 @@ Element on the right.
 **Type:** [OperateItem](arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

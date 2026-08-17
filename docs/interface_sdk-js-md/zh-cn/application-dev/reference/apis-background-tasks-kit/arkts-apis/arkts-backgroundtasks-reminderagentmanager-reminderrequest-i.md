@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-reminderAgentManager-interface ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequest-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -24,10 +20,6 @@ Action button displayed on the reminder notification.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-actionButton?: Array<ActionButton>--><!--Device-ReminderRequest-actionButton?: Array<ActionButton>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -38,15 +30,11 @@ Action button displayed on the reminder notification.
 autoDeletedTime?: long
 ```
 
-自动清除的时间。 数据格式：时间戳，单位：ms，具体请参考 [NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autoDeletedTime)
+自动清除的时间。 数据格式：时间戳，单位：ms，具体请参考 [NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autodeletedtime)
 
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReminderRequest-autoDeletedTime?: long--><!--Device-ReminderRequest-autoDeletedTime?: long-End-->
 
@@ -64,10 +52,6 @@ content?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-content?: string--><!--Device-ReminderRequest-content?: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -83,10 +67,6 @@ contentResourceId?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReminderRequest-contentResourceId?: int--><!--Device-ReminderRequest-contentResourceId?: int-End-->
 
@@ -104,10 +84,6 @@ customRingUri?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-customRingUri?: string--><!--Device-ReminderRequest-customRingUri?: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -123,10 +99,6 @@ expiredContent?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReminderRequest-expiredContent?: string--><!--Device-ReminderRequest-expiredContent?: string-End-->
 
@@ -144,10 +116,6 @@ expiredContentResourceId?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-expiredContentResourceId?: int--><!--Device-ReminderRequest-expiredContentResourceId?: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -163,10 +131,6 @@ fixedTimeZone?: TimeZoneType
 **类型：** [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,10 +150,6 @@ groupId?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-groupId?: string--><!--Device-ReminderRequest-groupId?: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -205,10 +165,6 @@ maxScreenWantAgent?: MaxScreenWantAgent
 **类型：** MaxScreenWantAgent
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent--><!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent-End-->
 
@@ -226,10 +182,6 @@ notificationId?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-notificationId?: int--><!--Device-ReminderRequest-notificationId?: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -245,10 +197,6 @@ notificationRequestProxy?: NotificationRequestProxy
 **类型：** [NotificationRequestProxy](arkts-backgroundtasks-reminderagentmanager-notificationrequestproxy-i.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -268,10 +216,6 @@ reminderType: ReminderType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-reminderType: ReminderType--><!--Device-ReminderRequest-reminderType: ReminderType-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -288,10 +232,6 @@ ringChannel?: RingChannel
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-ringChannel?: RingChannel--><!--Device-ReminderRequest-ringChannel?: RingChannel-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -302,15 +242,11 @@ ringChannel?: RingChannel
 ringDuration?: long
 ```
 
-指明响铃时长。 单位：s，默认1s，范围：[0, 1800]。 值为0时：跟随系统设置中的通知铃声。 值大于0时：如果设置了[ReminderRequest.customRingUri](#ReminderRequest)，则在指定的通道 [ReminderRequest.ringChannel](#ReminderRequest)上响铃。否则使用代理提醒默认的自定义提示音。 响铃同时会触发振动，从API版本26.0.0开始，支持长振动，振动时长与响铃时长一致。API版本26.0.0之前版本，响铃时会快速振动一次。
+指明响铃时长。 单位：s，默认1s，范围：[0, 1800]。 值为0时：跟随系统设置中的通知铃声。 值大于0时：如果设置了[ReminderRequest.customRingUri](#reminderrequest)，则在指定的通道 [ReminderRequest.ringChannel](#reminderrequest)上响铃。否则使用代理提醒默认的自定义提示音。 响铃同时会触发振动，从API版本26.0.0开始，支持长振动，振动时长与响铃时长一致。API版本26.0.0之前版本，响铃时会快速振动一次。
 
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReminderRequest-ringDuration?: long--><!--Device-ReminderRequest-ringDuration?: long-End-->
 
@@ -328,10 +264,6 @@ slotType?: notification.SlotType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-slotType?: notification.SlotType--><!--Device-ReminderRequest-slotType?: notification.SlotType-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -347,10 +279,6 @@ snoozeContent?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReminderRequest-snoozeContent?: string--><!--Device-ReminderRequest-snoozeContent?: string-End-->
 
@@ -368,10 +296,6 @@ snoozeContentResourceId?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-snoozeContentResourceId?: int--><!--Device-ReminderRequest-snoozeContentResourceId?: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -387,10 +311,6 @@ snoozeSlotType?: notification.SlotType
 **类型：** notification.SlotType
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReminderRequest-snoozeSlotType?: notification.SlotType--><!--Device-ReminderRequest-snoozeSlotType?: notification.SlotType-End-->
 
@@ -408,10 +328,6 @@ snoozeTimes?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-snoozeTimes?: int--><!--Device-ReminderRequest-snoozeTimes?: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -422,15 +338,11 @@ snoozeTimes?: int
 tapDismissed?: boolean
 ```
 
-通知是否自动清除，默认值为true，具体请参考 [NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapDismissed) - true：点击通知消息或通知按钮后，自动删除当前通知。 - false：点击通知消息或通知按钮后，保留当前通知。
+通知是否自动清除，默认值为true，具体请参考 [NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapdismissed) - true：点击通知消息或通知按钮后，自动删除当前通知。 - false：点击通知消息或通知按钮后，保留当前通知。
 
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReminderRequest-tapDismissed?: boolean--><!--Device-ReminderRequest-tapDismissed?: boolean-End-->
 
@@ -448,10 +360,6 @@ timeInterval?: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-timeInterval?: long--><!--Device-ReminderRequest-timeInterval?: long-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -467,10 +375,6 @@ title?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReminderRequest-title?: string--><!--Device-ReminderRequest-title?: string-End-->
 
@@ -488,10 +392,6 @@ titleResourceId?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ReminderRequest-titleResourceId?: int--><!--Device-ReminderRequest-titleResourceId?: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -507,10 +407,6 @@ wantAgent?: WantAgent
 **类型：** WantAgent
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReminderRequest-wantAgent?: WantAgent--><!--Device-ReminderRequest-wantAgent?: WantAgent-End-->
 

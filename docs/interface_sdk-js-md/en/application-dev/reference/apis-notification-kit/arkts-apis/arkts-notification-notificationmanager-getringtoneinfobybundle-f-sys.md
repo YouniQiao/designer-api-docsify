@@ -16,10 +16,6 @@ Obtains the custom ringtone information of an application. This API uses a promi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function getRingtoneInfoByBundle(bundle: BundleOption): Promise<RingtoneInfo>--><!--Device-notificationManager-function getRingtoneInfoByBundle(bundle: BundleOption): Promise<RingtoneInfo>-End-->
@@ -51,7 +47,7 @@ Obtains the custom ringtone information of an application. This API uses a promi
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

@@ -2,13 +2,11 @@
 
 ItemInfo
 
-**Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md#BaseItemInfo)
+**Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md#baseiteminfo)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare class ItemInfo--><!--Device-unnamed-export declare class ItemInfo-End-->
 
@@ -26,9 +24,7 @@ itemType. include CAMERA and THUMBNAIL.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

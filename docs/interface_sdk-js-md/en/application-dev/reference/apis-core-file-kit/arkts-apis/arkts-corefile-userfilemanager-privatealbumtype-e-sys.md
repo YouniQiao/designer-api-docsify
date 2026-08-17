@@ -1,14 +1,12 @@
 # PrivateAlbumType (System API)
 
-Enumerates the system album types. This API will be deprecated. Use [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md#AlbumType-(System-API)) and [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md#AlbumSubType-(System-API)) instead.
+Enumerates the system album types. This API will be deprecated. Use [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md#albumtype-system-api) and [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md#albumsubtype-system-api) instead.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#AlbumSubtype)
+**Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#albumsubtype)
 
 <!--Device-userFileManager-enum PrivateAlbumType--><!--Device-userFileManager-enum PrivateAlbumType-End-->
 
@@ -26,11 +24,9 @@ Favorites.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#FAVORITE)
+**Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#favorite)
 
 <!--Device-PrivateAlbumType-TYPE_FAVORITE--><!--Device-PrivateAlbumType-TYPE_FAVORITE-End-->
 
@@ -48,11 +44,9 @@ Trash.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#TRASH)
+**Substitutes:** [TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#trash)
 
 <!--Device-PrivateAlbumType-TYPE_TRASH--><!--Device-PrivateAlbumType-TYPE_TRASH-End-->
 

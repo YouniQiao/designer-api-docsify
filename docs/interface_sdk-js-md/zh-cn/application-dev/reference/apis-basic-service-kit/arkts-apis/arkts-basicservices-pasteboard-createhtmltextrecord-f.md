@@ -10,11 +10,9 @@ function createHtmlTextRecord(htmlText: string): PasteDataRecord
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createRecord)(mimeType: string, value: ValueType)
+**替代接口：** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createHtmlTextRecord(htmlText: string): PasteDataRecord--><!--Device-pasteboard-function createHtmlTextRecord(htmlText: string): PasteDataRecord-End-->
 
@@ -32,7 +30,7 @@ function createHtmlTextRecord(htmlText: string): PasteDataRecord
 | --- | --- |
 | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的HTML内容条目。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";

@@ -1,12 +1,8 @@
 # BlanklessFrameInterpolationState
 
-Enumerates the current frame interpolation states. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Frame interpolation status of blankless loading.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum BlanklessFrameInterpolationState--><!--Device-webview-enum BlanklessFrameInterpolationState-End-->
 
@@ -18,13 +14,9 @@ Enumerates the current frame interpolation states. Device behavior differences: 
 FRAME_INTERPOLATION_SUCCEEDED = 0
 ```
 
-Frame interpolation succeeded. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Frame interpolation succeeded.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +30,9 @@ Frame interpolation succeeded. Device behavior differences: Only the mobile phon
 FRAME_INTERPOLATION_FAILED = 1
 ```
 
-Frame interpolation failed. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Frame interpolation failed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +46,9 @@ Frame interpolation failed. Device behavior differences: Only the mobile phone i
 FRAME_INTERPOLATION_REMOVED = 2
 ```
 
-The frame interpolation is removed. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+The frame interpolation is removed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

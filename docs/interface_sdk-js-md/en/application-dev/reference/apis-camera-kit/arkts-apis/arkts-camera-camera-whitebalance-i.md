@@ -1,14 +1,10 @@
 # WhiteBalance (System API)
 
-**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#WhiteBalanceQuery-(System-API)). It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
+**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#whitebalancequery-system-api). It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
 
-**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#WhiteBalanceQuery-(System-API))
+**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#whitebalancequery-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface WhiteBalance--><!--Device-camera-interface WhiteBalance-End-->
 
@@ -31,10 +27,6 @@ getColorTint(): int
 Gets current color tint.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,10 +58,6 @@ Sets color tint.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -82,7 +70,7 @@ Sets color tint.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorTint | int | Yes | Color tint, the supported range can be obtained by calling [getColorTintRange](arkts-camera-camera-whitebalancequery-i.md#getColorTintRange). |
+| colorTint | int | Yes | Color tint, the supported range can be obtained by calling [getColorTintRange](arkts-camera-camera-whitebalancequery-i.md#getcolortintrange). |
 
 **Error codes:**
 

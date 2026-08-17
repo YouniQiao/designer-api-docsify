@@ -4,10 +4,6 @@ Represents combination key options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputConsumer-interface KeyOptions--><!--Device-inputConsumer-interface KeyOptions-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -32,10 +28,6 @@ Final key. This parameter is mandatory. A callback is triggered by the final key
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyOptions-finalKey: int--><!--Device-KeyOptions-finalKey: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -53,10 +45,6 @@ Duration for holding down the key, in μs. If the value of this field is **0**, 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyOptions-finalKeyDownDuration: int--><!--Device-KeyOptions-finalKeyDownDuration: int-End-->
 
@@ -76,10 +64,6 @@ Whether the final key is pressed. The value **true** indicates that the key is p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyOptions-isFinalKeyDown: boolean--><!--Device-KeyOptions-isFinalKeyDown: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -97,10 +81,6 @@ Whether to report repeated key events. The value **true** means to report repeat
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyOptions-isRepeat?: boolean--><!--Device-KeyOptions-isRepeat?: boolean-End-->
 
@@ -120,10 +100,6 @@ Preceding key set. The number of preceding keys ranges from 0 to 4. There is no 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyOptions-preKeys: Array<int>--><!--Device-KeyOptions-preKeys: Array<int>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -141,10 +117,6 @@ Trigger type, which indicates that the conditions for triggering the callback ex
 **Type:** [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

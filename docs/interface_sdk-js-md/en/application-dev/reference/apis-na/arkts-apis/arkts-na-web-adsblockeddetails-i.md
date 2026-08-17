@@ -4,9 +4,7 @@ Defines the ads block details.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface AdsBlockedDetails--><!--Device-unnamed-export declare interface AdsBlockedDetails-End-->
 
@@ -24,9 +22,7 @@ the url of ads.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AdsBlockedDetails-adsBlocked: Array<string>--><!--Device-AdsBlockedDetails-adsBlocked: Array<string>-End-->
 
@@ -44,9 +40,7 @@ The url of main frame.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AdsBlockedDetails-url: string--><!--Device-AdsBlockedDetails-url: string-End-->
 

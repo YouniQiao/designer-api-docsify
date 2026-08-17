@@ -4,10 +4,6 @@ Define the gesture and events collection intervention operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum GestureCollectIntervention--><!--Device-unnamed-declare enum GestureCollectIntervention-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ CONTINUE = 0
 Continue the normal collection process. No intervention will be applied.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Discard all pending lower-priority gestures and events. This includes gestures f
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -65,10 +53,6 @@ DISCARD_HIGHER = 2
 Discard already collected higher-priority gestures and events. This removes gestures from right sibling nodes that have been collected. The collection will continue with lower-priority gestures (left siblings and ancestors).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,10 +72,6 @@ Discard gestures and events from the current node itself. The current node's ges
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -109,10 +89,6 @@ DISCARD_LOWER_PRIORITY_SIBLINGS = 4
 Discard gestures and events from left sibling nodes that are pending collection. Gestures and events from the current node and already collected right sibling nodes will be retained. The collection will continue with ancestor nodes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,8 @@
 # AbilityLifecycleCallback
 
-The lifecycle of a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) dynamically changes from creation to destruction. The AbilityLifecycleCallback module provides the capability to listen for these lifecycle changes, which can be used for scenarios such as tracking the runtime duration of each UIAbility and performing data loading decoupled from the service logic of UIAbility.
+The lifecycle of a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) dynamically changes from creation to destruction. The AbilityLifecycleCallback module provides the capability to listen for these lifecycle changes, which can be used for scenarios such as tracking the runtime duration of each UIAbility and performing data loading decoupled from the service logic of UIAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class AbilityLifecycleCallback--><!--Device-unnamed-declare class AbilityLifecycleCallback-End-->
 
@@ -24,13 +20,9 @@ import { AbilityLifecycleCallback } from 'AbilityLifecycleCallback';
 onAbilityBackground(ability: UIAbility): void
 ```
 
-Called after the [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground) callback of the UIAbility is triggered.
+Called after the [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground) callback of the UIAbility is triggered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +38,7 @@ Called after the [onBackground](arkts-ability-app-ability-uiability-uiability-c.
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -56,13 +48,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilityContinue(ability: UIAbility): void
 ```
 
-Called after the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md#onContinue) callback of the UIAbility is triggered.
+Called after the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue) callback of the UIAbility is triggered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +66,7 @@ Called after the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -88,13 +76,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilityCreate(ability: UIAbility): void
 ```
 
-Called after the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) callback of the UIAbility is triggered.
+Called after the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) callback of the UIAbility is triggered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,7 +94,7 @@ Called after the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#o
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -120,13 +104,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilityDestroy(ability: UIAbility): void
 ```
 
-Called after the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onDestroy) callback of the UIAbility is triggered.
+Called after the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy) callback of the UIAbility is triggered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,7 +122,7 @@ Called after the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -152,13 +132,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilityForeground(ability: UIAbility): void
 ```
 
-Called after the [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground) callback of the UIAbility is triggered.
+Called after the [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground) callback of the UIAbility is triggered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,7 +150,7 @@ Called after the [onForeground](arkts-ability-app-ability-uiability-uiability-c.
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -184,13 +160,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilitySaveState?(ability: UIAbility): void
 ```
 
-Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onSaveState) callback of the UIAbility is triggered.
+Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,7 +178,7 @@ Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.m
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -216,13 +188,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilityWillBackground?(ability: UIAbility): void
 ```
 
-Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground) callback of the UIAbility is triggered.
+Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -238,7 +206,7 @@ Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -248,13 +216,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilityWillContinue?(ability: UIAbility): void
 ```
 
-Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md#onContinue) callback of the UIAbility is triggered.
+Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -270,7 +234,7 @@ Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.m
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -280,13 +244,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilityWillCreate?(ability: UIAbility): void
 ```
 
-Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) callback of the UIAbility is triggered.
+Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -302,7 +262,7 @@ Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -312,13 +272,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilityWillDestroy?(ability: UIAbility): void
 ```
 
-Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onDestroy) callback of the UIAbility is triggered.
+Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,7 +290,7 @@ Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -344,13 +300,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilityWillForeground?(ability: UIAbility): void
 ```
 
-Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground) callback of the UIAbility is triggered.
+Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -366,7 +318,7 @@ Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -376,13 +328,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilityWillSaveState?(ability: UIAbility): void
 ```
 
-Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onSaveState) callback of the UIAbility is triggered.
+Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -398,7 +346,7 @@ Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -408,13 +356,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onNewWant?(ability: UIAbility): void
 ```
 
-Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant) callback of the UIAbility is triggered.
+Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -430,7 +374,7 @@ Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -440,13 +384,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onWillNewWant?(ability: UIAbility): void
 ```
 
-Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant) callback of the UIAbility is triggered.
+Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -462,7 +402,7 @@ Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -475,10 +415,6 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 Called when the main window of the UIAbility gains focus.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -495,7 +431,7 @@ Called when the main window of the UIAbility gains focus.
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 | windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -505,13 +441,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called after the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) callback of the UIAbility is triggered.
+Called after the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback of the UIAbility is triggered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -528,7 +460,7 @@ Called after the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiabi
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 | windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -538,13 +470,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called after the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageDestroy) callback of the UIAbility is triggered.
+Called after the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy) callback of the UIAbility is triggered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -561,7 +489,7 @@ Called after the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiab
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 | windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -574,10 +502,6 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 Called when the main window of the UIAbility loses focus.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -594,7 +518,7 @@ Called when the main window of the UIAbility loses focus.
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 | windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -604,13 +528,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageRestore) callback of the UIAbility is triggered.
+Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -627,7 +547,7 @@ Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiab
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 | windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -637,13 +557,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) callback of the UIAbility is triggered.
+Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -660,7 +576,7 @@ Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiab
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 | windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -670,13 +586,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageDestroy) callback of the UIAbility is triggered.
+Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -693,7 +605,7 @@ Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uia
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 | windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -703,13 +615,9 @@ For details, see AbilityLifecycleCallback Usage Example.
 onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called before the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageRestore) callback of the UIAbility is triggered.
+Called before the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -726,7 +634,7 @@ Called before the [onWindowStageRestore](arkts-ability-app-ability-uiability-uia
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | UIAbility object associated with the callback event. |
 | windowStage | window.WindowStage | Yes | Main window manager of the UIAbility associated with the callback event. |
 
-## Examples
+**Examples**
 
 For details, see AbilityLifecycleCallback Usage Example.
 
@@ -736,15 +644,11 @@ For details, see AbilityLifecycleCallback Usage Example.
 onAbilitySaveState?: OnAbilitySaveStateFn
 ```
 
-Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onSaveState) callback of the UIAbility is triggered.
+Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) callback of the UIAbility is triggered.
 
 **Type:** [OnAbilitySaveStateFn](arkts-ability-onabilitysavestatefn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -758,15 +662,11 @@ Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.m
 onAbilityWillBackground?: OnAbilityWillBackgroundFn
 ```
 
-Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground) callback of the UIAbility is triggered.
+Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground) callback of the UIAbility is triggered.
 
 **Type:** [OnAbilityWillBackgroundFn](arkts-ability-onabilitywillbackgroundfn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -780,15 +680,11 @@ Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c
 onAbilityWillContinue?: OnAbilityWillContinueFn
 ```
 
-Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md#onContinue) callback of the UIAbility is triggered.
+Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue) callback of the UIAbility is triggered.
 
 **Type:** [OnAbilityWillContinueFn](arkts-ability-onabilitywillcontinuefn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -802,15 +698,11 @@ Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.m
 onAbilityWillCreate?: OnAbilityWillCreateFn
 ```
 
-Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) callback of the UIAbility is triggered.
+Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) callback of the UIAbility is triggered.
 
 **Type:** [OnAbilityWillCreateFn](arkts-ability-onabilitywillcreatefn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -824,15 +716,11 @@ Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#
 onAbilityWillDestroy?: OnAbilityWillDestroyFn
 ```
 
-Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onDestroy) callback of the UIAbility is triggered.
+Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy) callback of the UIAbility is triggered.
 
 **Type:** [OnAbilityWillDestroyFn](arkts-ability-onabilitywilldestroyfn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -846,15 +734,11 @@ Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md
 onAbilityWillForeground?: OnAbilityWillForegroundFn
 ```
 
-Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground) callback of the UIAbility is triggered.
+Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground) callback of the UIAbility is triggered.
 
 **Type:** [OnAbilityWillForegroundFn](arkts-ability-onabilitywillforegroundfn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -868,15 +752,11 @@ Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c
 onAbilityWillSaveState?: OnAbilityWillSaveStateFn
 ```
 
-Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onSaveState) callback of the UIAbility is triggered.
+Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) callback of the UIAbility is triggered.
 
 **Type:** [OnAbilityWillSaveStateFn](arkts-ability-onabilitywillsavestatefn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -890,15 +770,11 @@ Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.
 onNewWant?: OnNewWantFn
 ```
 
-Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant) callback of the UIAbility is triggered.
+Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) callback of the UIAbility is triggered.
 
 **Type:** [OnNewWantFn](arkts-ability-onnewwantfn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -912,15 +788,11 @@ Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#
 onWillNewWant?: OnWillNewWantFn
 ```
 
-Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant) callback of the UIAbility is triggered.
+Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) callback of the UIAbility is triggered.
 
 **Type:** [OnWillNewWantFn](arkts-ability-onwillnewwantfn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -934,15 +806,11 @@ Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md
 onWindowStageRestore?: OnWindowStageRestoreFn
 ```
 
-Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageRestore) callback of the UIAbility is triggered.
+Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore) callback of the UIAbility is triggered.
 
 **Type:** [OnWindowStageRestoreFn](arkts-ability-onwindowstagerestorefn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -956,15 +824,11 @@ Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiab
 onWindowStageWillCreate?: OnWindowStageWillCreateFn
 ```
 
-Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) callback of the UIAbility is triggered.
+Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback of the UIAbility is triggered.
 
 **Type:** [OnWindowStageWillCreateFn](arkts-ability-onwindowstagewillcreatefn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -978,15 +842,11 @@ Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiab
 onWindowStageWillDestroy?: OnWindowStageWillDestroyFn
 ```
 
-Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageDestroy) callback of the UIAbility is triggered.
+Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy) callback of the UIAbility is triggered.
 
 **Type:** [OnWindowStageWillDestroyFn](arkts-ability-onwindowstagewilldestroyfn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1000,15 +860,11 @@ Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uia
 onWindowStageWillRestore?: OnWindowStageWillRestoreFn
 ```
 
-Called before the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageRestore) callback of the UIAbility is triggered.
+Called before the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore) callback of the UIAbility is triggered.
 
 **Type:** [OnWindowStageWillRestoreFn](arkts-ability-onwindowstagewillrestorefn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

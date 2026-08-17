@@ -4,10 +4,6 @@ The MediaSourceLoadingRequest class defines a loading request object. Applicatio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface MediaSourceLoadingRequest--><!--Device-media-interface MediaSourceLoadingRequest-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -28,10 +24,6 @@ Notifies the player of the current request status. After pushing all the data fo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaSourceLoadingRequest-finishLoading(uuid: long, state: LoadingRequestError): void--><!--Device-MediaSourceLoadingRequest-finishLoading(uuid: long, state: LoadingRequestError): void-End-->
@@ -42,7 +34,7 @@ Notifies the player of the current request status. After pushing all the data fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
+| uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#sourceopencallback). |
 | state | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | Yes | Request status. |
 
 ## respondData
@@ -55,10 +47,6 @@ Sends data to the player.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-MediaSourceLoadingRequest-respondData(uuid: number, offset: number, buffer: ArrayBuffer): number--><!--Device-MediaSourceLoadingRequest-respondData(uuid: number, offset: number, buffer: ArrayBuffer): number-End-->
@@ -69,7 +57,7 @@ Sends data to the player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
+| uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#sourceopencallback). |
 | offset | number | Yes | Offset of the current media data relative to the start of the resource. The value cannot be less than 0. |
 | buffer | ArrayBuffer | Yes | Media data sent to the player.<br>**Note：**: Do not transmit irrelevant data, as it can affect normal data parsing and playback. |
 
@@ -88,10 +76,6 @@ respondData(uuid: long, offset: long, buffer: ArrayBuffer): int | undefined
 The interface for application used to send requested data to AVPlayer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MediaSourceLoadingRequest-respondData(uuid: long, offset: long, buffer: ArrayBuffer): int | undefined--><!--Device-MediaSourceLoadingRequest-respondData(uuid: long, offset: long, buffer: ArrayBuffer): int | undefined-End-->
 
@@ -117,13 +101,9 @@ The interface for application used to send requested data to AVPlayer.
 respondHeader(uuid: long, header?: Record<string, string>, redirectUrl?: string): void
 ```
 
-Sends response header information to the player. This API must be called before the first call to [respondData](#respondData).
+Sends response header information to the player. This API must be called before the first call to [respondData](#responddata).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -135,7 +115,7 @@ Sends response header information to the player. This API must be called before 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
+| uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#sourceopencallback). |
 | header | Record&lt;string, string&gt; | No | Header information in the HTTP response. The application can intersect the header fields with the fields supported by the underlying layer for parsing or directly pass in all corresponding header information.<br> - The following fields need to be parsed by the underlying player: Transfer-Encoding, Location, Content-Type, Content-Range, Content-Encode, Accept-Ranges, and content-length. |
 | redirectUrl | string | No | Redirect URL in the HTTP response. |
 
@@ -150,10 +130,6 @@ HTTP request header. If the header exists, the application should set the header
 **Type:** Record&lt;string, string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -172,10 +148,6 @@ Resource URL, which is the path to the resource that the application needs to op
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

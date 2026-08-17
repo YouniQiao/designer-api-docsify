@@ -4,10 +4,6 @@ The module defines whether an application supports the multi-app mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum MultiAppMode--><!--Device-unnamed-export enum MultiAppMode-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -23,10 +19,6 @@ NOT_SUPPORTED = 0
 The application does not support the multi-app mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ The application supports the multi-instance mode. Note: This property is valid o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MultiAppMode-MULTI_INSTANCE = 1--><!--Device-MultiAppMode-MULTI_INSTANCE = 1-End-->
@@ -67,10 +55,6 @@ APP_CLONE = 2
 The application supports the app-clone mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

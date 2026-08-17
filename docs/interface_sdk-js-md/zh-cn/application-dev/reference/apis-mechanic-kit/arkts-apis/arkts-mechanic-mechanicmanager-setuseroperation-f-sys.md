@@ -10,10 +10,6 @@ function setUserOperation(operation: Operation, mac: string, params: string): vo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CONNECT_MECHANIC_HARDWARE
 
 <!--Device-mechanicManager-function setUserOperation(operation: Operation, mac: string, params: string): void--><!--Device-mechanicManager-function setUserOperation(operation: Operation, mac: string, params: string): void-End-->
@@ -38,7 +34,7 @@ function setUserOperation(operation: Operation, mac: string, params: string): vo
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
 
-## 示例
+**示例**
 
 ```TypeScript
 console.info('User operate');

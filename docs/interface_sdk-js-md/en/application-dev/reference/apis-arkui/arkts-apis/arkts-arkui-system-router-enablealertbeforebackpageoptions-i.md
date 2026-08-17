@@ -1,14 +1,12 @@
-# EnableAlertBeforeBackPageOptions
+# EnableAlertBeforeBackPageOptions(Page Routing)
 
 Defines the **EnableAlertBeforeBackPage** parameter.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#enablealertoptions)
 
 <!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions--><!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions-End-->
 
@@ -36,11 +34,9 @@ Called when the **Cancel** button in the confirm dialog box is clicked. **errMsg
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#enablealertoptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void-End-->
 
@@ -58,11 +54,9 @@ Called when the dialog box is closed.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#enablealertoptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void--><!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void-End-->
 
@@ -79,8 +73,6 @@ Content displayed in the confirm dialog box.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 
@@ -102,11 +94,9 @@ Called when the **OK** button in the confirm dialog box is clicked. **errMsg** i
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#enablealertoptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
 

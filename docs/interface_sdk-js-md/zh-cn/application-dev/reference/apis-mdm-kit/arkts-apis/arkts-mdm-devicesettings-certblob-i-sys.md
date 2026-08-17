@@ -4,11 +4,9 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 26.0.0
 
-**替代接口：** [CertBlob](arkts-mdm-securitymanager-certblob-i.md#CertBlob)
+**替代接口：** [CertBlob](arkts-mdm-securitymanager-certblob-i.md#certblob)
 
 <!--Device-deviceSettings-export interface CertBlob--><!--Device-deviceSettings-export interface CertBlob-End-->
 
@@ -27,8 +25,6 @@ alias: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -53,8 +49,6 @@ inData: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 26.0.0
 

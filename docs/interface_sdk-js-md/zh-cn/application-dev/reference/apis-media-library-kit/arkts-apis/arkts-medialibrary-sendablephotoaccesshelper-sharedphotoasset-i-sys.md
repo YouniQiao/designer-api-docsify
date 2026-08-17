@@ -6,10 +6,6 @@ Defines the shared photo asset
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-sendablePhotoAccessHelper-interface SharedPhotoAsset--><!--Device-sendablePhotoAccessHelper-interface SharedPhotoAsset-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -27,10 +23,6 @@ Camera shot key of photo asset
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-cameraShotKey: string--><!--Device-SharedPhotoAsset-cameraShotKey: string-End-->
 
@@ -50,10 +42,6 @@ Path data of photo asset
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-data: string--><!--Device-SharedPhotoAsset-data: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -71,10 +59,6 @@ Added date of photo asset 单位为： ms，取值应为≥0的整数。
 **类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-dateAdded: number--><!--Device-SharedPhotoAsset-dateAdded: number-End-->
 
@@ -94,10 +78,6 @@ Added date of photo asset in milliseconds
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-dateAddedMs: number--><!--Device-SharedPhotoAsset-dateAddedMs: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -115,10 +95,6 @@ The day of the file created
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-dateDay: string--><!--Device-SharedPhotoAsset-dateDay: string-End-->
 
@@ -138,10 +114,6 @@ Modify date of photo asset 单位为： ms，取值应为≥0的整数。
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-dateModified: number--><!--Device-SharedPhotoAsset-dateModified: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -159,10 +131,6 @@ Modified time of the asset in milliseconds
 **类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-dateModifiedMs: number--><!--Device-SharedPhotoAsset-dateModifiedMs: number-End-->
 
@@ -182,10 +150,6 @@ The month of the file created
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-dateMonth: string--><!--Device-SharedPhotoAsset-dateMonth: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -203,10 +167,6 @@ DateTaken of photo asset 单位为： ms，取值应为≥0的整数。
 **类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-dateTaken: number--><!--Device-SharedPhotoAsset-dateTaken: number-End-->
 
@@ -226,10 +186,6 @@ Trashed date of photo asset
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-dateTrashed: number--><!--Device-SharedPhotoAsset-dateTrashed: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -247,10 +203,6 @@ Trashed time of the asset in milliseconds
 **类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-dateTrashedMs: number--><!--Device-SharedPhotoAsset-dateTrashedMs: number-End-->
 
@@ -270,10 +222,6 @@ The year of the file created
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-dateYear: string--><!--Device-SharedPhotoAsset-dateYear: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -291,10 +239,6 @@ Display name of photo asset
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-displayName: string--><!--Device-SharedPhotoAsset-displayName: string-End-->
 
@@ -314,10 +258,6 @@ Duration of video photo asset 单位为： ms，取值应为≥0的整数。
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-duration: number--><!--Device-SharedPhotoAsset-duration: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -335,10 +275,6 @@ Dynamic range type of the asset
 **类型：** DynamicRangeType
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-dynamicRangeType: DynamicRangeType--><!--Device-SharedPhotoAsset-dynamicRangeType: DynamicRangeType-End-->
 
@@ -358,10 +294,6 @@ File id of photo asset
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-fileId: number--><!--Device-SharedPhotoAsset-fileId: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -379,10 +311,6 @@ Height of photo asset 单位为： px，取值应为≥0的整数。
 **类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-height: number--><!--Device-SharedPhotoAsset-height: number-End-->
 
@@ -402,10 +330,6 @@ Hidden state of photo asset
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-hidden: boolean--><!--Device-SharedPhotoAsset-hidden: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -423,10 +347,6 @@ Favorite state of photo asset
 **类型：** boolean
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-isFavorite: boolean--><!--Device-SharedPhotoAsset-isFavorite: boolean-End-->
 
@@ -446,10 +366,6 @@ Width and height information of lcd picture
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-lcdSize: string--><!--Device-SharedPhotoAsset-lcdSize: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -467,10 +383,6 @@ Media type of photo asset
 **类型：** PhotoType
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-mediaType: PhotoType--><!--Device-SharedPhotoAsset-mediaType: PhotoType-End-->
 
@@ -490,10 +402,6 @@ Effect mode of moving photo
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-movingPhotoEffectMode: MovingPhotoEffectMode--><!--Device-SharedPhotoAsset-movingPhotoEffectMode: MovingPhotoEffectMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -511,10 +419,6 @@ Orientation of photo asset 单位为： deg，取值应为[0,359]内的整数。
 **类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-orientation: number--><!--Device-SharedPhotoAsset-orientation: number-End-->
 
@@ -534,10 +438,6 @@ Pending state of the asset, true means asset is pending
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-pending: boolean--><!--Device-SharedPhotoAsset-pending: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -555,10 +455,6 @@ Position of photo asset
 **类型：** PositionType
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-position: PositionType--><!--Device-SharedPhotoAsset-position: PositionType-End-->
 
@@ -578,10 +474,6 @@ Size of photo asset 单位为： Byte，取值应为≥0的整数。
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-size: number--><!--Device-SharedPhotoAsset-size: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -599,10 +491,6 @@ Subtype of photo asset
 **类型：** PhotoSubtype
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-subtype: PhotoSubtype--><!--Device-SharedPhotoAsset-subtype: PhotoSubtype-End-->
 
@@ -622,10 +510,6 @@ Width and height information of thumbnail picture
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-thmSize: string--><!--Device-SharedPhotoAsset-thmSize: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -643,10 +527,6 @@ modified time of thumbnail status
 **类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-thumbnailModifiedMs: number--><!--Device-SharedPhotoAsset-thumbnailModifiedMs: number-End-->
 
@@ -666,10 +546,6 @@ Ready state of thumbnail
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-thumbnailReady: boolean--><!--Device-SharedPhotoAsset-thumbnailReady: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -687,10 +563,6 @@ visibility of thumbnails
 **类型：** ThumbnailVisibility
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-thumbnailVisible: ThumbnailVisibility--><!--Device-SharedPhotoAsset-thumbnailVisible: ThumbnailVisibility-End-->
 
@@ -710,10 +582,6 @@ Title of photo asset
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-title: string--><!--Device-SharedPhotoAsset-title: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -731,10 +599,6 @@ URI of photo asset
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-uri: string--><!--Device-SharedPhotoAsset-uri: string-End-->
 
@@ -754,10 +618,6 @@ User comment info of photo asset
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-SharedPhotoAsset-userComment: string--><!--Device-SharedPhotoAsset-userComment: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -775,10 +635,6 @@ Width of photo asset 单位为： px，取值应为≥0的整数。
 **类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-SharedPhotoAsset-width: number--><!--Device-SharedPhotoAsset-width: number-End-->
 

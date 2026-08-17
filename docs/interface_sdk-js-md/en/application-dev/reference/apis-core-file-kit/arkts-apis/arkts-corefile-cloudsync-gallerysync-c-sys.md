@@ -4,10 +4,6 @@ Provides APIs to implement device-cloud sync of media assets in **Gallery**. Bef
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudSync-class GallerySync--><!--Device-cloudSync-class GallerySync-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -30,17 +26,13 @@ A constructor used to create a **GallerySync** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GallerySync-constructor()--><!--Device-GallerySync-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
 
-## Examples
+**Examples**
 
 ```TypeScript
 let gallerySync = new cloudSync.GallerySync()
@@ -55,10 +47,6 @@ offProgress(callback: Callback<SyncProgress>): void
 Unsubscribes from sync progress event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -93,10 +81,6 @@ Unsubscribes all callbacks objects from sync progress event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-GallerySync-offProgress(): void--><!--Device-GallerySync-offProgress(): void-End-->
@@ -123,10 +107,6 @@ Removes the specified callback from the device-cloud sync progress.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-GallerySync-off(evt: 'progress', callback: (pg: SyncProgress) => void): void--><!--Device-GallerySync-off(evt: 'progress', callback: (pg: SyncProgress) => void): void-End-->
@@ -140,7 +120,7 @@ Removes the specified callback from the device-cloud sync progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | (pg: SyncProgress) =&gt; void | Yes | Callback used to return the sync progress. The input parameter is [SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md#SyncProgress), and the return value is **void**. |
+| callback | (pg: SyncProgress) =&gt; void | Yes | Callback used to return the sync progress. The input parameter is [SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md#syncprogress), and the return value is **void**. |
 
 **Error codes:**
 
@@ -151,7 +131,7 @@ Removes the specified callback from the device-cloud sync progress.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let gallerySync = new cloudSync.GallerySync();
@@ -174,10 +154,6 @@ off(evt: 'progress'): void
 Removes all callbacks from the device-cloud sync progress.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -202,7 +178,7 @@ Removes all callbacks from the device-cloud sync progress.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let gallerySync = new cloudSync.GallerySync();
@@ -223,10 +199,6 @@ onProgress(callback: Callback<SyncProgress>): void
 Subscribes to sync progress change event. This method uses a callback to get sync progress changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -261,10 +233,6 @@ Registers a listener for the device-cloud sync progress.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-GallerySync-on(evt: 'progress', callback: (pg: SyncProgress) => void): void--><!--Device-GallerySync-on(evt: 'progress', callback: (pg: SyncProgress) => void): void-End-->
@@ -278,7 +246,7 @@ Registers a listener for the device-cloud sync progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | (pg: SyncProgress) =&gt; void | Yes | Callback used to return the sync progress. The input parameter is [SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md#SyncProgress), and the return value is **void**. |
+| callback | (pg: SyncProgress) =&gt; void | Yes | Callback used to return the sync progress. The input parameter is [SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md#syncprogress), and the return value is **void**. |
 
 **Error codes:**
 
@@ -289,7 +257,7 @@ Registers a listener for the device-cloud sync progress.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let gallerySync = new cloudSync.GallerySync();
@@ -308,10 +276,6 @@ start(): Promise<void>
 Starts device-cloud sync. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -338,7 +302,7 @@ Starts device-cloud sync. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -366,10 +330,6 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-GallerySync-start(callback: AsyncCallback<void>): void--><!--Device-GallerySync-start(callback: AsyncCallback<void>): void-End-->
@@ -395,7 +355,7 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -421,10 +381,6 @@ Stops device-cloud sync. This API uses a promise to return the result. > **NOTEï
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-GallerySync-stop(): Promise<void>--><!--Device-GallerySync-stop(): Promise<void>-End-->
@@ -447,7 +403,7 @@ Stops device-cloud sync. This API uses a promise to return the result. > **NOTEï
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -471,10 +427,6 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-GallerySync-stop(callback: AsyncCallback<void>): void--><!--Device-GallerySync-stop(callback: AsyncCallback<void>): void-End-->
@@ -497,7 +449,7 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

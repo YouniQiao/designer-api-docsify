@@ -4,11 +4,9 @@ Provides the audio recorder configuration definitions.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md#AVRecorderConfig)
+**Substitutes:** [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md#avrecorderconfig)
 
 <!--Device-media-interface AudioRecorderConfig--><!--Device-media-interface AudioRecorderConfig-End-->
 
@@ -32,11 +30,9 @@ Audio encoding bit rate, in bit/s.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [audioBitrate](arkts-media-media-avrecorderprofile-i.md#audioBitrate)
+**Substitutes:** [audioBitrate](arkts-media-media-avrecorderprofile-i.md#audiobitrate)
 
 <!--Device-AudioRecorderConfig-audioEncodeBitRate?: number--><!--Device-AudioRecorderConfig-audioEncodeBitRate?: number-End-->
 
@@ -54,11 +50,9 @@ Audio encoding format. The default value is DEFAULT, it will be deprecated after
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [audioEncoderMime](#audioEncoderMime)
+**Substitutes:** [audioEncoderMime](#audioencodermime)
 
 <!--Device-AudioRecorderConfig-audioEncoder?: AudioEncoder--><!--Device-AudioRecorderConfig-audioEncoder?: AudioEncoder-End-->
 
@@ -76,11 +70,9 @@ audio encoding format MIME. it used to replace audioEncoder.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [audioCodec](arkts-media-media-avrecorderprofile-i.md#audioCodec)
+**Substitutes:** [audioCodec](arkts-media-media-avrecorderprofile-i.md#audiocodec)
 
 <!--Device-AudioRecorderConfig-audioEncoderMime?: CodecMimeType--><!--Device-AudioRecorderConfig-audioEncoderMime?: CodecMimeType-End-->
 
@@ -98,11 +90,9 @@ Audio sampling rate, in Hz.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [audioSampleRate](arkts-media-media-avrecorderprofile-i.md#audioSampleRate)
+**Substitutes:** [audioSampleRate](arkts-media-media-avrecorderprofile-i.md#audiosamplerate)
 
 <!--Device-AudioRecorderConfig-audioSampleRate?: number--><!--Device-AudioRecorderConfig-audioSampleRate?: number-End-->
 
@@ -120,11 +110,9 @@ output file format. see @ContainerFormatType , it used to replace "format".
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [fileFormat](arkts-media-media-avrecorderprofile-i.md#fileFormat)
+**Substitutes:** [fileFormat](arkts-media-media-avrecorderprofile-i.md#fileformat)
 
 <!--Device-AudioRecorderConfig-fileFormat?: ContainerFormatType--><!--Device-AudioRecorderConfig-fileFormat?: ContainerFormatType-End-->
 
@@ -142,11 +130,9 @@ Audio output format. The default value is DEFAULT, it will be deprecated after A
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [fileFormat](#fileFormat)
+**Substitutes:** [fileFormat](#fileformat)
 
 <!--Device-AudioRecorderConfig-format?: AudioOutputFormat--><!--Device-AudioRecorderConfig-format?: AudioOutputFormat-End-->
 
@@ -163,8 +149,6 @@ Geographical location information.
 **Type:** Location
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -186,11 +170,9 @@ Number of audio channels.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [audioChannels](arkts-media-media-avrecorderprofile-i.md#audioChannels)
+**Substitutes:** [audioChannels](arkts-media-media-avrecorderprofile-i.md#audiochannels)
 
 <!--Device-AudioRecorderConfig-numberOfChannels?: number--><!--Device-AudioRecorderConfig-numberOfChannels?: number-End-->
 
@@ -207,8 +189,6 @@ Audio output uri.support two kind of uri now. format like: scheme + "://" + "con
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

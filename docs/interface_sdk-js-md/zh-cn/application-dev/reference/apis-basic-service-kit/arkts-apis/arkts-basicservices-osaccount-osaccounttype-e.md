@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-enum OsAccountType--><!--Device-osAccount-enum OsAccountType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -21,10 +17,6 @@ ADMIN = 0
 管理员账号。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-OsAccountType-ADMIN = 0--><!--Device-OsAccountType-ADMIN = 0-End-->
 
@@ -40,10 +32,6 @@ NORMAL = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-OsAccountType-NORMAL = 1--><!--Device-OsAccountType-NORMAL = 1-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -57,10 +45,6 @@ GUEST = 2
 访客账号。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-OsAccountType-GUEST = 2--><!--Device-OsAccountType-GUEST = 2-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface WatchEvent--><!--Device-unnamed-export interface WatchEvent-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -23,10 +19,6 @@ readonly cookie: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-WatchEvent-readonly cookie: number--><!--Device-WatchEvent-readonly cookie: number-End-->
 
@@ -44,10 +36,6 @@ readonly event: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-WatchEvent-readonly event: number--><!--Device-WatchEvent-readonly event: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -63,10 +51,6 @@ readonly fileName: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-WatchEvent-readonly fileName: string--><!--Device-WatchEvent-readonly fileName: string-End-->
 

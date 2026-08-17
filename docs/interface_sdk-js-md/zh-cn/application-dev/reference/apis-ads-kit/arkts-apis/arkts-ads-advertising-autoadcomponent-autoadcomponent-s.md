@@ -4,10 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare struct AutoAdComponent--><!--Device-unnamed-declare struct AutoAdComponent-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -21,10 +17,6 @@ build(): void
 用于创建AutoAdComponent对象的构造函数。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,10 +36,6 @@ adOptions: advertising.AdOptions
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AutoAdComponent-adOptions: advertising.AdOptions--><!--Device-AutoAdComponent-adOptions: advertising.AdOptions-End-->
@@ -65,10 +53,6 @@ adParam: advertising.AdRequestParams
 **类型：** advertising.AdRequestParams
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -88,10 +72,6 @@ displayOptions: advertising.AdDisplayOptions
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions-End-->
@@ -109,10 +89,6 @@ interactionListener: advertising.AdInteractionListener
 **类型：** advertising.AdInteractionListener
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -16,8 +16,6 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** get
@@ -45,8 +43,6 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 Obtains a value of the specified key. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -76,8 +72,6 @@ function get(key: string, def?: string): Promise<string>
 Obtains a value of the specified key. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

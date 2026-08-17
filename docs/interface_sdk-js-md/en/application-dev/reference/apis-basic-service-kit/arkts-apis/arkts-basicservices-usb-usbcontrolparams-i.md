@@ -1,14 +1,12 @@
-# USBControlParams
+# USBControlParams(USB Manager)
 
 Represents control transfer parameters.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md#USBControlParams)
+**Substitutes:** [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md#usbcontrolparams)
 
 <!--Device-usb-interface USBControlParams--><!--Device-usb-interface USBControlParams-End-->
 
@@ -32,8 +30,6 @@ Buffer for writing or reading data.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [data](arkts-basicservices-usbmanager-usbcontrolparams-i.md#data)
@@ -53,8 +49,6 @@ Index of the request parameter value.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,11 +70,9 @@ Control request type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [reqType](arkts-basicservices-usbmanager-usbcontrolparams-i.md#reqType)
+**Substitutes:** [reqType](arkts-basicservices-usbmanager-usbcontrolparams-i.md#reqtype)
 
 <!--Device-USBControlParams-reqType: USBControlRequestType--><!--Device-USBControlParams-reqType: USBControlRequestType-End-->
 
@@ -97,8 +89,6 @@ Request type.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -120,8 +110,6 @@ Request target type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [target](arkts-basicservices-usbmanager-usbcontrolparams-i.md#target)
@@ -141,8 +129,6 @@ Request parameter value.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

@@ -16,10 +16,6 @@ Destroys a virtual screen. This API uses an asynchronous callback to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screen-function destroyVirtualScreen(screenId:long, callback: AsyncCallback<void>): void--><!--Device-screen-function destroyVirtualScreen(screenId:long, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -42,7 +38,7 @@ Destroys a virtual screen. This API uses an asynchronous callback to return the 
 | [1400002](../errorcode-display.md#1400002-unauthorized-operation) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -68,10 +64,6 @@ function destroyVirtualScreen(screenId:long): Promise<void>
 Destroys a virtual screen. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-screen-function destroyVirtualScreen(screenId:long): Promise<void>--><!--Device-screen-function destroyVirtualScreen(screenId:long): Promise<void>-End-->
 
@@ -100,7 +92,7 @@ Destroys a virtual screen. This API uses a promise to return the result.
 | [1400002](../errorcode-display.md#1400002-unauthorized-operation) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

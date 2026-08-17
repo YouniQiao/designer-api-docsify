@@ -4,10 +4,6 @@ Indicates the screen lock authentication state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screenLock-enum AuthState--><!--Device-screenLock-enum AuthState-End-->
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
@@ -23,10 +19,6 @@ NOT_AUTHED = 0
 Indicates the screen lock is not authenticated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthState-NOT_AUTHED = 0--><!--Device-AuthState-NOT_AUTHED = 0-End-->
 
@@ -44,10 +36,6 @@ Indicates the screen lock is pre authenticated by credential.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthState-PRE_AUTHED_BY_CREDENTIAL = 1--><!--Device-AuthState-PRE_AUTHED_BY_CREDENTIAL = 1-End-->
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
@@ -63,10 +51,6 @@ PRE_AUTHED_BY_FINGERPRINT = 2
 Indicates the screen lock is pre authenticated by fingerprint.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthState-PRE_AUTHED_BY_FINGERPRINT = 2--><!--Device-AuthState-PRE_AUTHED_BY_FINGERPRINT = 2-End-->
 
@@ -84,10 +68,6 @@ Indicates the screen lock is pre authenticated by face.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthState-PRE_AUTHED_BY_FACE = 3--><!--Device-AuthState-PRE_AUTHED_BY_FACE = 3-End-->
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
@@ -103,10 +83,6 @@ AUTHED_BY_CREDENTIAL = 4
 Indicates the screen lock is authenticated by credential.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthState-AUTHED_BY_CREDENTIAL = 4--><!--Device-AuthState-AUTHED_BY_CREDENTIAL = 4-End-->
 
@@ -124,10 +100,6 @@ Indicates the screen lock is authenticated by fingerprint.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthState-AUTHED_BY_FINGERPRINT = 5--><!--Device-AuthState-AUTHED_BY_FINGERPRINT = 5-End-->
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
@@ -143,10 +115,6 @@ AUTHED_BY_FACE = 6
 Indicates the screen lock is authenticated by face.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthState-AUTHED_BY_FACE = 6--><!--Device-AuthState-AUTHED_BY_FACE = 6-End-->
 

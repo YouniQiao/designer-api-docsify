@@ -4,10 +4,6 @@ Defines the options used in listFileExt().
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ListFileExtOptions--><!--Device-unnamed-export interface ListFileExtOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -40,13 +36,9 @@ fileFilter?: FileFilter
 
 File name filtering interface. This parameter is optional. Filtering rules can be defined based on file names.
 
-**Type:** [FileFilter](../../apis-na/arkts-apis/arkts-na-file-fs-filefilter-i.md)
+**Type:** [FileFilter](arkts-corefile-file-fs-filefilter-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,10 +58,6 @@ Number of file names to list. This parameter is optional. The default value is 0
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ListFileExtOptions-listNum?: number--><!--Device-ListFileExtOptions-listNum?: number-End-->
@@ -87,10 +75,6 @@ Whether to list all files in the subdirectories recursively. This parameter is o
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

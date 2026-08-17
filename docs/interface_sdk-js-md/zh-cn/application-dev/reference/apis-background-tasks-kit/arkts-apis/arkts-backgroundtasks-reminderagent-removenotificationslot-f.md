@@ -10,8 +10,6 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** removeNotificationSlot
@@ -25,9 +23,9 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotType | notification.SlotType | 是 | 目标notification.slot的类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -50,8 +48,6 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** removeNotificationSlot
@@ -72,7 +68,7 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise类型异步回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import notification from '@ohos.notification';

@@ -4,10 +4,6 @@ Describes the window parameters during application startup.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface WindowCreateParams--><!--Device-window-interface WindowCreateParams-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -32,10 +28,6 @@ Whether to override system window limits. If true, the main window of the curren
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowCreateParams-isWindowLimitsForcible?: boolean--><!--Device-WindowCreateParams-isWindowLimitsForcible?: boolean-End-->
@@ -55,10 +47,6 @@ Describes the start animation configuration. This API works only for full-screen
 **Type:** [StartAnimationSystemParams](arkts-arkui-window-startanimationsystemparams-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowCreateParams-systemAnimationParams?: StartAnimationSystemParams--><!--Device-WindowCreateParams-systemAnimationParams?: StartAnimationSystemParams-End-->
 

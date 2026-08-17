@@ -1,12 +1,8 @@
-# Decimal
+# Decimal(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)
 
 任意精度的Decimal类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class Decimal--><!--Device-unnamed-declare class Decimal-End-->
 
@@ -21,10 +17,6 @@ abs(): Decimal
 返回一个新的Decimal对象，其值是此Decimal的绝对值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -47,10 +39,6 @@ static abs(n: Value): Decimal
 返回一个新的Decimal对象，Decimal的值为参数n的绝对值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -86,10 +74,6 @@ acos(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-acos(): Decimal--><!--Device-Decimal-acos(): Decimal-End-->
@@ -117,10 +101,6 @@ static acos(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的反余弦值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -157,10 +137,6 @@ acosh(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-acosh(): Decimal--><!--Device-Decimal-acosh(): Decimal-End-->
@@ -188,10 +164,6 @@ static acosh(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的双曲余弦的倒数。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -228,10 +200,6 @@ add(n: Value): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-add(n: Value): Decimal--><!--Device-Decimal-add(n: Value): Decimal-End-->
@@ -265,10 +233,6 @@ static add(x: Value, y: Value): Decimal
 返回一个新的Decimal对象，其值为x加y的和。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -305,10 +269,6 @@ asin(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-asin(): Decimal--><!--Device-Decimal-asin(): Decimal-End-->
@@ -336,10 +296,6 @@ static asin(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的反正弦值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -376,10 +332,6 @@ asinh(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-asinh(): Decimal--><!--Device-Decimal-asinh(): Decimal-End-->
@@ -407,10 +359,6 @@ static asinh(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的双曲正弦的倒数。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -447,10 +395,6 @@ atan(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-atan(): Decimal--><!--Device-Decimal-atan(): Decimal-End-->
@@ -478,10 +422,6 @@ static atan(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的反正切值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -517,10 +457,6 @@ static atan2(y: Value, x: Value): Decimal
 返回一个新的Decimal对象，其值是-π到π（含边界）范围内y/x的反正切值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -558,10 +494,6 @@ atanh(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-atanh(): Decimal--><!--Device-Decimal-atanh(): Decimal-End-->
@@ -589,10 +521,6 @@ static atanh(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的反双曲正切值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -629,10 +557,6 @@ cbrt(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-cbrt(): Decimal--><!--Device-Decimal-cbrt(): Decimal-End-->
@@ -654,10 +578,6 @@ static cbrt(n: Value): Decimal
 返回一个新的Decimal对象，其值为n的立方根。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -693,10 +613,6 @@ ceil(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-ceil(): Decimal--><!--Device-Decimal-ceil(): Decimal-End-->
@@ -718,10 +634,6 @@ static ceil(n: Value): Decimal
 返回一个新的Decimal对象，其值为参数n向正无穷方向舍入得到的结果。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -756,10 +668,6 @@ clamp(min: Value, max: Value): Decimal
 返回一个将Decimal值限制在min到max范围内的Decimal对象。如果值大于max，返回max；如果值小于min，返回min；否则，返回原值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -796,10 +704,6 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 返回一个值为将参数n的值限制在min到max范围内的Decimal对象，当n大于max时返回max，当n小于min时返回min，在范围内返回值不变。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -838,10 +742,6 @@ comparedTo(n: Value): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-comparedTo(n: Value): double--><!--Device-Decimal-comparedTo(n: Value): double-End-->
@@ -876,10 +776,6 @@ Decimal的构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-constructor(n: Value)--><!--Device-Decimal-constructor(n: Value)-End-->
@@ -908,10 +804,6 @@ cos(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-cos(): Decimal--><!--Device-Decimal-cos(): Decimal-End-->
@@ -933,10 +825,6 @@ static cos(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的余弦值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -972,10 +860,6 @@ cosh(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-cosh(): Decimal--><!--Device-Decimal-cosh(): Decimal-End-->
@@ -997,10 +881,6 @@ static cosh(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的双曲余弦值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1036,10 +916,6 @@ decimalPlaces(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-decimalPlaces(): double--><!--Device-Decimal-decimalPlaces(): double-End-->
@@ -1061,10 +937,6 @@ div(n: Value): Decimal
 返回一个新的Decimal对象，其值是将此Decimal的值除以n。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1099,10 +971,6 @@ static div(x: Value, y: Value): Decimal
 返回一个新的Decimal对象，其值为x除以y的商。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1139,10 +1007,6 @@ dividedToIntegerBy(n: Value): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-dividedToIntegerBy(n: Value): Decimal--><!--Device-Decimal-dividedToIntegerBy(n: Value): Decimal-End-->
@@ -1176,10 +1040,6 @@ equals(n: Value): boolean
 返回此Decimal是否等于比较值n，相等返回true，否则返回false。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1215,10 +1075,6 @@ exp(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-exp(): Decimal--><!--Device-Decimal-exp(): Decimal-End-->
@@ -1246,10 +1102,6 @@ static exp(n: Value): Decimal
 返回一个新的Decimal对象，其值为n的自然指数。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1286,10 +1138,6 @@ floor(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-floor(): Decimal--><!--Device-Decimal-floor(): Decimal-End-->
@@ -1311,10 +1159,6 @@ static floor(n: Value): Decimal
 返回一个新的Decimal对象，其值为参数n向负无穷方向舍入得到的结果。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1350,10 +1194,6 @@ greaterThan(n: Value): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-greaterThan(n: Value): boolean--><!--Device-Decimal-greaterThan(n: Value): boolean-End-->
@@ -1387,10 +1227,6 @@ greaterThanOrEqualTo(n: Value): boolean
 返回此Decimal是否大于等于比较值n，大于等于返回true，否则返回false。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1426,10 +1262,6 @@ static hypot(...n: Value[]): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static hypot(...n: Value[]): Decimal--><!--Device-Decimal-static hypot(...n: Value[]): Decimal-End-->
@@ -1464,10 +1296,6 @@ isFinite(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-isFinite(): boolean--><!--Device-Decimal-isFinite(): boolean-End-->
@@ -1489,10 +1317,6 @@ isInteger(): boolean
 返回此Decimal是否为整数，是整数返回true，否则返回false。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1516,10 +1340,6 @@ isNaN(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-isNaN(): boolean--><!--Device-Decimal-isNaN(): boolean-End-->
@@ -1541,10 +1361,6 @@ isNegative(): boolean
 返回此Decimal是否为负数（区分正负零），是负数返回true，否则返回false。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1568,10 +1384,6 @@ isPositive(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-isPositive(): boolean--><!--Device-Decimal-isPositive(): boolean-End-->
@@ -1594,10 +1406,6 @@ isZero(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-isZero(): boolean--><!--Device-Decimal-isZero(): boolean-End-->
@@ -1619,10 +1427,6 @@ lessThan(n: Value): boolean
 返回此Decimal是否小于比较值n，小于返回true，否则返回false。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1658,10 +1462,6 @@ lessThanOrEqualTo(n: Value): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-lessThanOrEqualTo(n: Value): boolean--><!--Device-Decimal-lessThanOrEqualTo(n: Value): boolean-End-->
@@ -1696,10 +1496,6 @@ ln(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-ln(): Decimal--><!--Device-Decimal-ln(): Decimal-End-->
@@ -1727,10 +1523,6 @@ static ln(n: Value): Decimal
 返回一个新的Decimal对象，其值为n的自然对数。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1767,10 +1559,6 @@ log(n: Value): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-log(n: Value): Decimal--><!--Device-Decimal-log(n: Value): Decimal-End-->
@@ -1805,10 +1593,6 @@ static log(n: Value, base: Value): Decimal
 返回一个新的Decimal对象，其值是以base为底n的对数。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1846,10 +1630,6 @@ static log10(n: Value): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static log10(n: Value): Decimal--><!--Device-Decimal-static log10(n: Value): Decimal-End-->
@@ -1884,10 +1664,6 @@ static log2(n: Value): Decimal
 返回一个新的Decimal对象，其值是以2为底n的对数。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1924,10 +1700,6 @@ static max(...n: Value[]): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static max(...n: Value[]): Decimal--><!--Device-Decimal-static max(...n: Value[]): Decimal-End-->
@@ -1961,10 +1733,6 @@ static min(...n: Value[]): Decimal
 返回一个新的Decimal对象，其值是所有参数中的最小值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2000,10 +1768,6 @@ mod(n: Value): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-mod(n: Value): Decimal--><!--Device-Decimal-mod(n: Value): Decimal-End-->
@@ -2037,10 +1801,6 @@ static mod(x: Value, y: Value): Decimal
 返回一个新的Decimal对象，其值是x除以y的模。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2077,10 +1837,6 @@ mul(n: Value): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-mul(n: Value): Decimal--><!--Device-Decimal-mul(n: Value): Decimal-End-->
@@ -2114,10 +1870,6 @@ static mul(x: Value, y: Value): Decimal
 返回一个新的Decimal对象，其值为x乘以y的积。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2154,10 +1906,6 @@ negate(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-negate(): Decimal--><!--Device-Decimal-negate(): Decimal-End-->
@@ -2179,10 +1927,6 @@ pow(n: Value): Decimal
 返回一个新的Decimal对象，其值是这个Decimal值的n次幂。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2218,10 +1962,6 @@ static pow(base: Value, exponent: Value): Decimal
 返回一个新的Decimal对象，其值为base的exponent次幂。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2259,10 +1999,6 @@ precision(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-precision(): double--><!--Device-Decimal-precision(): double-End-->
@@ -2284,10 +2020,6 @@ precision(includeZeros: boolean | int): double
 返回Decimal对象的有效数字位数，可通过includeZeros判断是否计算整数部分的尾随零。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2323,10 +2055,6 @@ static random(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static random(): Decimal--><!--Device-Decimal-static random(): Decimal-End-->
@@ -2354,10 +2082,6 @@ static random(significantDigits: double): Decimal
 返回一个新的Decimal对象，其值为大于等于0且小于1的随机值，并保留significantDigits位有效数字（若产生尾随零则可能少于该位数）。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2394,10 +2118,6 @@ static round(n: Value): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static round(n: Value): Decimal--><!--Device-Decimal-static round(n: Value): Decimal-End-->
@@ -2432,10 +2152,6 @@ static set(config: DecimalConfig): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static set(config: DecimalConfig): void--><!--Device-Decimal-static set(config: DecimalConfig): void-End-->
@@ -2465,10 +2181,6 @@ static sign(n: Value): double
 根据参数n的值返回对应的符号： 1 如果 n > 0， -1 如果 n &lt; 0， 0 如果 n 为 0， NaN 其他情况
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2505,10 +2217,6 @@ sin(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-sin(): Decimal--><!--Device-Decimal-sin(): Decimal-End-->
@@ -2530,10 +2238,6 @@ static sin(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的正弦值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2569,10 +2273,6 @@ sinh(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-sinh(): Decimal--><!--Device-Decimal-sinh(): Decimal-End-->
@@ -2594,10 +2294,6 @@ static sinh(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的双曲正弦值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2633,10 +2329,6 @@ sqrt(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-sqrt(): Decimal--><!--Device-Decimal-sqrt(): Decimal-End-->
@@ -2658,10 +2350,6 @@ static sqrt(n: Value): Decimal
 返回一个新的Decimal对象，其值为n的平方根。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2697,10 +2385,6 @@ sub(n: Value): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-sub(n: Value): Decimal--><!--Device-Decimal-sub(n: Value): Decimal-End-->
@@ -2734,10 +2418,6 @@ static sub(x: Value, y: Value): Decimal
 返回一个新的Decimal对象，其值为x减y的差。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2774,10 +2454,6 @@ static sum(...n: Value[]): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static sum(...n: Value[]): Decimal--><!--Device-Decimal-static sum(...n: Value[]): Decimal-End-->
@@ -2812,10 +2488,6 @@ tan(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-tan(): Decimal--><!--Device-Decimal-tan(): Decimal-End-->
@@ -2837,10 +2509,6 @@ static tan(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的正切值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2876,10 +2544,6 @@ tanh(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-tanh(): Decimal--><!--Device-Decimal-tanh(): Decimal-End-->
@@ -2901,10 +2565,6 @@ static tanh(n: Value): Decimal
 返回一个新的Decimal对象，其值是n的双曲正切值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -2940,10 +2600,6 @@ toBinary(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toBinary(): string--><!--Device-Decimal-toBinary(): string-End-->
@@ -2965,10 +2621,6 @@ toBinary(significantDigits: double): string
 将Decimal转换为二进制表示的字符串，可按照significantDigits设置有效数字。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3003,10 +2655,6 @@ toBinary(significantDigits: double, rounding: Rounding): string
 将Decimal转换为二进制表示的字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3043,10 +2691,6 @@ toDecimalPlaces(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toDecimalPlaces(): Decimal--><!--Device-Decimal-toDecimalPlaces(): Decimal-End-->
@@ -3068,10 +2712,6 @@ toDecimalPlaces(decimalPlaces: double): Decimal
 返回一个保留小数点后指定位数的Decimal对象，可按照decimalPlaces设置小数位数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3106,10 +2746,6 @@ toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 返回一个保留小数点后指定位数的Decimal对象，可按照decimalPlaces设置小数位数，可按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3146,10 +2782,6 @@ toExponential(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toExponential(): string--><!--Device-Decimal-toExponential(): string-End-->
@@ -3171,10 +2803,6 @@ toExponential(decimalPlaces: double): string
 将数值转换为指数表示法的字符串，可按照decimalPlaces设置小数位数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3209,10 +2837,6 @@ toExponential(decimalPlaces: double, rounding: Rounding): string
 将数值转换为指数表示法的字符串，可按照decimalPlaces设置小数位数，可按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3249,10 +2873,6 @@ toFixed(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toFixed(): string--><!--Device-Decimal-toFixed(): string-End-->
@@ -3274,10 +2894,6 @@ toFixed(decimalPlaces: double): string
 将数值转换为十进制定点模式表示的字符串，可按照decimalPlaces设置小数位数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3312,10 +2928,6 @@ toFixed(decimalPlaces: double, rounding: Rounding): string
 将数值转换为十进制定点模式表示的字符串，可按照decimalPlaces设置小数位数，可按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3352,10 +2964,6 @@ toFraction(): Decimal[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toFraction(): Decimal[]--><!--Device-Decimal-toFraction(): Decimal[]-End-->
@@ -3377,10 +2985,6 @@ toFraction(maxDenominator: Value): Decimal[]
 转换为分数表示的数，可以通过maxDenominator设置最大分母值。返回一个长度固定为2的Decimal数组，分别表示分子和分母。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3416,10 +3020,6 @@ toHexadecimal(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toHexadecimal(): string--><!--Device-Decimal-toHexadecimal(): string-End-->
@@ -3441,10 +3041,6 @@ toHexadecimal(significantDigits: double): string
 将Decimal转换为十六进制表示的字符串，可按照significantDigits设置有效数字。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3479,10 +3075,6 @@ toHexadecimal(significantDigits: double, rounding: Rounding): string
 将Decimal转换为十六进制表示的字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3519,10 +3111,6 @@ toNearest(n: Value): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toNearest(n: Value): Decimal--><!--Device-Decimal-toNearest(n: Value): Decimal-End-->
@@ -3556,10 +3144,6 @@ toNearest(n: Value, rounding: Rounding): Decimal
 返回一个新的Decimal对象，其值为指定值n的整数倍中最接近原Decimal值的值，可按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3597,10 +3181,6 @@ toNumber(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toNumber(): double--><!--Device-Decimal-toNumber(): double-End-->
@@ -3623,10 +3203,6 @@ toOctal(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toOctal(): string--><!--Device-Decimal-toOctal(): string-End-->
@@ -3648,10 +3224,6 @@ toOctal(significantDigits: double): string
 将Decimal转换为八进制表示的字符串，可按照significantDigits设置有效数字。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3686,10 +3258,6 @@ toOctal(significantDigits: double, rounding: Rounding): string
 将Decimal转换为八进制表示的字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3726,10 +3294,6 @@ toPrecision(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toPrecision(): string--><!--Device-Decimal-toPrecision(): string-End-->
@@ -3751,10 +3315,6 @@ toPrecision(significantDigits: double): string
 将数值转换为字符串，可按照significantDigits设置有效数字。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3789,10 +3349,6 @@ toPrecision(significantDigits: double, rounding: Rounding): string
 将数值转换为字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3829,10 +3385,6 @@ toSignificantDigits(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toSignificantDigits(): Decimal--><!--Device-Decimal-toSignificantDigits(): Decimal-End-->
@@ -3854,10 +3406,6 @@ toSignificantDigits(significantDigits: double): Decimal
 返回一个按照保留有效数字转换的Decimal对象，可按照significantDigits设置有效数字。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3892,10 +3440,6 @@ toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 返回一个按照保留有效数字转换的Decimal对象，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3932,10 +3476,6 @@ toString(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-toString(): string--><!--Device-Decimal-toString(): string-End-->
@@ -3958,10 +3498,6 @@ trunc(): Decimal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-trunc(): Decimal--><!--Device-Decimal-trunc(): Decimal-End-->
@@ -3983,10 +3519,6 @@ static trunc(n: Value): Decimal
 返回一个新的Decimal对象，其值为将n截断为整数的结果。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -4022,10 +3554,6 @@ valueOf(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-valueOf(): string--><!--Device-Decimal-valueOf(): string-End-->
@@ -4050,10 +3578,6 @@ static readonly EUCLIDEAN: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static readonly EUCLIDEAN: int--><!--Device-Decimal-static readonly EUCLIDEAN: int-End-->
@@ -4071,10 +3595,6 @@ static readonly ROUND_CEILING: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -4094,10 +3614,6 @@ static readonly ROUND_DOWN: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static readonly ROUND_DOWN: int--><!--Device-Decimal-static readonly ROUND_DOWN: int-End-->
@@ -4115,10 +3631,6 @@ static readonly ROUND_FLOOR: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -4138,10 +3650,6 @@ static readonly ROUND_HALF_CEILING: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static readonly ROUND_HALF_CEILING: int--><!--Device-Decimal-static readonly ROUND_HALF_CEILING: int-End-->
@@ -4159,10 +3667,6 @@ static readonly ROUND_HALF_DOWN: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -4182,10 +3686,6 @@ static readonly ROUND_HALF_EVEN: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static readonly ROUND_HALF_EVEN: int--><!--Device-Decimal-static readonly ROUND_HALF_EVEN: int-End-->
@@ -4203,10 +3703,6 @@ static readonly ROUND_HALF_FLOOR: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -4226,10 +3722,6 @@ static readonly ROUND_HALF_UP: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static readonly ROUND_HALF_UP: int--><!--Device-Decimal-static readonly ROUND_HALF_UP: int-End-->
@@ -4248,10 +3740,6 @@ static readonly ROUND_UP: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Decimal-static readonly ROUND_UP: int--><!--Device-Decimal-static readonly ROUND_UP: int-End-->
@@ -4269,10 +3757,6 @@ digits：表示Decimal数整数部分和小数部分的数组。
 **类型：** number[]
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

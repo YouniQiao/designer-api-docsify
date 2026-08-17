@@ -4,10 +4,6 @@ Describes the basic text notification, which is used to display the title and bo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationBasicContent--><!--Device-unnamed-export interface NotificationBasicContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -23,10 +19,6 @@ Additional notification content, which supplements the notification content and 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationBasicContent-additionalText?: string--><!--Device-NotificationBasicContent-additionalText?: string-End-->
 
@@ -44,10 +36,6 @@ Picture displayed on the lock screen. This parameter is left empty by default. C
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationBasicContent-lockscreenPicture?: image.PixelMap--><!--Device-NotificationBasicContent-lockscreenPicture?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -64,10 +52,6 @@ Notification body content, displayed below the title. It cannot be an empty stri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationBasicContent-text: string--><!--Device-NotificationBasicContent-text: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -83,10 +67,6 @@ Notification title, displayed at the top of the notification. It cannot be an em
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationBasicContent-title: string--><!--Device-NotificationBasicContent-title: string-End-->
 

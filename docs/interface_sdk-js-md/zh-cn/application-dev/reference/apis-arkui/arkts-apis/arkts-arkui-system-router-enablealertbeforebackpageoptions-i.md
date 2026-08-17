@@ -1,14 +1,12 @@
-# EnableAlertBeforeBackPageOptions
+# EnableAlertBeforeBackPageOptions(页面路由)
 
 定义EnableAlertBeforeBackPage选项。
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
-**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
+**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#enablealertoptions)
 
 <!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions--><!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions-End-->
 
@@ -26,11 +24,9 @@ cancel?: (errMsg: string) => void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
-**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
+**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#enablealertoptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void-End-->
 
@@ -48,11 +44,9 @@ complete?: () => void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
-**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
+**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#enablealertoptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void--><!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void-End-->
 
@@ -69,8 +63,6 @@ message: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 8
 
@@ -92,11 +84,9 @@ success?: (errMsg: string) => void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
-**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
+**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#enablealertoptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
 

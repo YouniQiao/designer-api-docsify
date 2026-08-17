@@ -10,10 +10,6 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>--><!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>-End-->
@@ -39,7 +35,7 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 | --- | --- |
 | [11105001](../errorcode-hiappevent.md#11105001-非法的参数值) | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

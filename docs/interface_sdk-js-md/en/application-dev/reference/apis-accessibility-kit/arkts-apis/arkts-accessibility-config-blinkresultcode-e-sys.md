@@ -4,10 +4,6 @@ Enumerates the result codes of blinking operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-config-export enum BlinkResultCode--><!--Device-config-export enum BlinkResultCode-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,10 +19,6 @@ SUCCESS = 0
 The blinking API is executed successfully.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ The device is already blinking.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BlinkResultCode-ALREADY_FLASHING = 1--><!--Device-BlinkResultCode-ALREADY_FLASHING = 1-End-->
@@ -67,10 +55,6 @@ DEVICE_IN_USE = 2
 The device is in use.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ The device does not support flash blinking.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BlinkResultCode-FLASH_BLINKING_UNSUPPORTED = 3--><!--Device-BlinkResultCode-FLASH_BLINKING_UNSUPPORTED = 3-End-->
@@ -112,10 +92,6 @@ The device does not support screen blinking.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BlinkResultCode-SCREEN_BLINKING_UNSUPPORTED = 4--><!--Device-BlinkResultCode-SCREEN_BLINKING_UNSUPPORTED = 4-End-->
@@ -133,10 +109,6 @@ FEATURE_DISABLED = 5
 The blinking feature is not enabled.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

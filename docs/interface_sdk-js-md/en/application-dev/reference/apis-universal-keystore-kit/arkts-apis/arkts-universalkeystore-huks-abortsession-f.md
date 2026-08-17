@@ -16,10 +16,6 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-huks-function abortSession(handle: number, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function abortSession(handle: number, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
@@ -50,7 +46,7 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 | [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
 | [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy<br>**Applicable version:** 22 and later |
 
-## Examples
+**Examples**
 
 ArkTS sample code:
 
@@ -426,10 +422,6 @@ Aborts a key operation. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-huks-function abortSession(handle: number, options: HuksOptions): Promise<void>--><!--Device-huks-function abortSession(handle: number, options: HuksOptions): Promise<void>-End-->
@@ -465,7 +457,7 @@ Aborts a key operation. This API uses a promise to return the result.
 | [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
 | [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy<br>**Applicable version:** 22 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

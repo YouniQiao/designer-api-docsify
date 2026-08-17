@@ -16,10 +16,6 @@ Sets the child process priority. After a child process is suppressed, the CPU re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backgroundProcessManager-function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>--><!--Device-backgroundProcessManager-function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>-End-->
 
 **System capability:** SystemCapability.Resourceschedule.BackgroundProcessManager
@@ -43,7 +39,7 @@ Sets the child process priority. After a child process is suppressed, the CPU re
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: priority is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

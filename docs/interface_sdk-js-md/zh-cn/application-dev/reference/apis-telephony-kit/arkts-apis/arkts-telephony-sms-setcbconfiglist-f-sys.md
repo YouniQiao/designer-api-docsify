@@ -10,10 +10,6 @@ function setCBConfigList(configs: CBConfigListConfigs): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RECEIVE_SMS
 
 <!--Device-sms-function setCBConfigList(configs: CBConfigListConfigs): Promise<void>--><!--Device-sms-function setCBConfigList(configs: CBConfigListConfigs): Promise<void>-End-->

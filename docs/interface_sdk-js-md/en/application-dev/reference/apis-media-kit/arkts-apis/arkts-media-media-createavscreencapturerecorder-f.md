@@ -16,10 +16,6 @@ Creates an AVScreenCaptureRecorder instance. This API uses a promise to return t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>--><!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -36,7 +32,7 @@ Creates an AVScreenCaptureRecorder instance. This API uses a promise to return t
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -64,10 +60,6 @@ function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder | unde
 Creates an **AVScreenCaptureRecorder** instance. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder | undefined>--><!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder | undefined>-End-->
 

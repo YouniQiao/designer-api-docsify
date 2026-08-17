@@ -2,13 +2,9 @@
 
 Provides APIs for managing the analysis album change request.
 
-**Inheritance/Implementation:** MediaAnalysisAlbumChangeRequest extends [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#MediaAlbumChangeRequest)
+**Inheritance/Implementation:** MediaAnalysisAlbumChangeRequest extends [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#mediaalbumchangerequest)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest-End-->
 
@@ -32,10 +28,6 @@ Constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -55,7 +47,7 @@ Constructor.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -93,10 +85,6 @@ static createAnalysisAlbumRequest(
 Creates a MediaAnalysisAlbumChangeRequest instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,10 +130,6 @@ Creates a change request for the **Analysis** album. > **NOTE：**> > The album 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(      context:Context,      name: string,      subtype: AlbumSubtype    ): MediaAnalysisAlbumChangeRequest--><!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(      context:Context,      name: string,      subtype: AlbumSubtype    ): MediaAnalysisAlbumChangeRequest-End-->
@@ -176,7 +160,7 @@ Creates a change request for the **Analysis** album. > **NOTE：**> > The album 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
 
-## Examples
+**Examples**
 
 For details about how to create a photoAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -204,10 +188,6 @@ Sets the default cover image for the smart album.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaAnalysisAlbumChangeRequest-setDefaultCoverUri(coverUri: string): void--><!--Device-MediaAnalysisAlbumChangeRequest-setDefaultCoverUri(coverUri: string): void-End-->
@@ -230,7 +210,7 @@ Sets the default cover image for the smart album.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -288,10 +268,6 @@ Sets the sequence of assets in the **Analysis** album.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-MediaAnalysisAlbumChangeRequest-setOrderPosition(assets: Array<PhotoAsset>, position: Array<int>): void--><!--Device-MediaAnalysisAlbumChangeRequest-setOrderPosition(assets: Array<PhotoAsset>, position: Array<int>): void-End-->
@@ -316,7 +292,7 @@ Sets the sequence of assets in the **Analysis** album.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -370,10 +346,6 @@ Sets the relationships of a person in the portrait album. The supported relation
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-MediaAnalysisAlbumChangeRequest-setRelationship(relationship: string): Promise<void>--><!--Device-MediaAnalysisAlbumChangeRequest-setRelationship(relationship: string): Promise<void>-End-->
@@ -403,7 +375,7 @@ Sets the relationships of a person in the portrait album. The supported relation
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

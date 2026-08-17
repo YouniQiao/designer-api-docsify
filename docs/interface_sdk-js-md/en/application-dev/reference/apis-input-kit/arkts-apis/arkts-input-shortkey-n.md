@@ -4,10 +4,6 @@ The shortKey module provides APIs to set the delay for starting an ability using
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace shortKey--><!--Device-unnamed-declare namespace shortKey-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.ShortKey
@@ -27,7 +23,7 @@ import { shortKey } from 'shortKey';
 
 | Name | Description |
 | --- | --- |
-| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setKeyDownDuration) | Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result. |
-| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setKeyDownDuration-(System-API)) | Sets the delay for starting an ability using shortcut keys. This API uses a promise to return the result. |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration) | Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result. |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration-system-api) | Sets the delay for starting an ability using shortcut keys. This API uses a promise to return the result. |
 <!--DelEnd-->
 

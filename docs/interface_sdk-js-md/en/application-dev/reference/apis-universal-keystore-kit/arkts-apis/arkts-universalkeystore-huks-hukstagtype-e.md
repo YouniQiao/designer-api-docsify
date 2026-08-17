@@ -4,10 +4,6 @@ Enumerates the tag data types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-huks-export enum HuksTagType--><!--Device-huks-export enum HuksTagType-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -21,10 +17,6 @@ HUKS_TAG_TYPE_INVALID = 0 << 28
 Invalid tag type.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Number of the int type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksTagType-HUKS_TAG_TYPE_INT = 1 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_INT = 1 << 28-End-->
@@ -61,10 +49,6 @@ HUKS_TAG_TYPE_UINT = 2 << 28
 Number of the uint type.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ BigInt.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksTagType-HUKS_TAG_TYPE_ULONG = 3 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_ULONG = 3 << 28-End-->
@@ -102,10 +82,6 @@ Boolean.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksTagType-HUKS_TAG_TYPE_BOOL = 4 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_BOOL = 4 << 28-End-->
@@ -121,10 +97,6 @@ HUKS_TAG_TYPE_BYTES = 5 << 28
 Uint8Array.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

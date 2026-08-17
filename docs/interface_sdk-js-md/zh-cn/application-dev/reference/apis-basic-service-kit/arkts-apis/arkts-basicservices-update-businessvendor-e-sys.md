@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export enum BusinessVendor--><!--Device-update-export enum BusinessVendor-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -23,10 +19,6 @@ PUBLIC = 'public'
 开源。表示供应商类型为开源厂商，适用于开源版本的升级场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-BusinessVendor-PUBLIC = 'public'--><!--Device-BusinessVendor-PUBLIC = 'public'-End-->
 

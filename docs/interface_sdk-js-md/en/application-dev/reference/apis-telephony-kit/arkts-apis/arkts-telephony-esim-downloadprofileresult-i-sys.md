@@ -4,10 +4,6 @@ Result of the given downloadable Profile.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-eSIM-export interface DownloadProfileResult--><!--Device-eSIM-export interface DownloadProfileResult-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -32,10 +28,6 @@ Gets the card Id. This value comes from EuiccService and is used when resolving 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadProfileResult-cardId: int--><!--Device-DownloadProfileResult-cardId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -54,10 +46,6 @@ Gets the result of the operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadProfileResult-responseResult: ResultCode--><!--Device-DownloadProfileResult-responseResult: ResultCode-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -75,10 +63,6 @@ Gets the solvable errors.
 **Type:** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadProfileResult-solvableErrors: SolvableErrors--><!--Device-DownloadProfileResult-solvableErrors: SolvableErrors-End-->
 

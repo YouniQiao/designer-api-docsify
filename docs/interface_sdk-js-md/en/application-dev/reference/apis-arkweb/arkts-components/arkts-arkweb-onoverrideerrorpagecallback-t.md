@@ -4,13 +4,9 @@
 type OnOverrideErrorPageCallback = (errorPageEvent: OnErrorReceiveEvent) => string
 ```
 
-The callback of onOverrideErrorPage.
+Defines a callback of **onOverrideErrorPage**. This callback is triggered when a web page fails to be loaded.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-type OnOverrideErrorPageCallback = (errorPageEvent: OnErrorReceiveEvent) => string--><!--Device-unnamed-type OnOverrideErrorPageCallback = (errorPageEvent: OnErrorReceiveEvent) => string-End-->
 
@@ -20,11 +16,11 @@ The callback of onOverrideErrorPage.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errorPageEvent | [OnErrorReceiveEvent](arkts-arkweb-onerrorreceiveevent-i.md) | Yes | The information of error. |
+| errorPageEvent | [OnErrorReceiveEvent](arkts-arkweb-onerrorreceiveevent-i.md) | Yes | Information returned when an error occurs during web page loading. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return an HTML text content encoded in Base64. |
+| string | Base64-encoded HTML text content. |
 

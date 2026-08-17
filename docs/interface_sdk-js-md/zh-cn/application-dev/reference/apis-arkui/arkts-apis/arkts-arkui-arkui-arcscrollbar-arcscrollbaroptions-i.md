@@ -4,10 +4,6 @@ ArcScrollBar的构造函数参数。 > **说明：** > > ArcScrollBar与可滚�
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface ArcScrollBarOptions--><!--Device-unnamed-declare interface ArcScrollBarOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -23,10 +19,6 @@ scroller: Scroller
 **类型：** Scroller
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ state?: BarState
 **类型：** BarState
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

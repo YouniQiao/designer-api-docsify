@@ -1,12 +1,8 @@
 # AbilityStage
 
-AbilityStage is a [module](../../../quick-start/application-package-overview.md#multi-module-design-mechanism)-level component manager. It is used for initializing operations such as resource preloading and thread creation at the module level, as well as maintaining the application state under the module. An AbilityStage instance corresponds to a module. When the [HAP](../../../quick-start/hap-package.md) or [HSP](../../../quick-start/in-app-hsp.md) of an application is first loaded, an AbilityStage instance is created. If a module contains both AbilityStage and other components ( like UIAbility or ExtensionAbility), the AbilityStage instance is created before the other component instances. An AbilityStage has the lifecycle callbacks [onCreate()](#onCreate) and [onDestroy()](#onDestroy), and the event callbacks [onAcceptWant()](#onAcceptWant), [onConfigurationUpdate()](#onConfigurationUpdate), and [onMemoryLevel()](#onMemoryLevel).
+AbilityStage is a [module](../../../quick-start/application-package-overview.md#multi-module-design-mechanism)-level component manager. It is used for initializing operations such as resource preloading and thread creation at the module level, as well as maintaining the application state under the module. An AbilityStage instance corresponds to a module. When the [HAP](../../../quick-start/hap-package.md) or [HSP](../../../quick-start/in-app-hsp.md) of an application is first loaded, an AbilityStage instance is created. If a module contains both AbilityStage and other components ( like UIAbility or ExtensionAbility), the AbilityStage instance is created before the other component instances. An AbilityStage has the lifecycle callbacks [onCreate()](#oncreate) and [onDestroy()](#ondestroy), and the event callbacks [onAcceptWant()](#onacceptwant), [onConfigurationUpdate()](#onconfigurationupdate), and [onMemoryLevel()](#onmemorylevel).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class AbilityStage--><!--Device-unnamed-declare class AbilityStage-End-->
 
@@ -24,13 +20,9 @@ import { AbilityStage } from 'AbilityStage';
 onAboutToCreateAbility(): void
 ```
 
-Called when the ability stage is about to create the first ability. If both this method and [onAboutToCreateAbilityAsync](#onAboutToCreateAbilityAsync) are overridden, only [onAboutToCreateAbilityAsync](#onAboutToCreateAbilityAsync) takes effect.
+Called when the ability stage is about to create the first ability. If both this method and [onAboutToCreateAbilityAsync](#onabouttocreateabilityasync) are overridden, only [onAboutToCreateAbilityAsync](#onabouttocreateabilityasync) takes effect.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,13 +36,9 @@ Called when the ability stage is about to create the first ability. If both this
 onAboutToCreateAbilityAsync(): Promise<void>
 ```
 
-Called when the ability stage is about to create the first ability. This API uses a promise to return the result. Subsequent lifecycle callbacks will be suspended until the returned Promise is resolved. If both [onAboutToCreateAbility](#onAboutToCreateAbility) and this method are overridden, only this method takes effect.
+Called when the ability stage is about to create the first ability. This API uses a promise to return the result. Subsequent lifecycle callbacks will be suspended until the returned Promise is resolved. If both [onAboutToCreateAbility](#onabouttocreateability) and this method are overridden, only this method takes effect.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,13 +58,9 @@ Called when the ability stage is about to create the first ability. This API use
 onAcceptWant(want: Want): string
 ```
 
-Called when a UIAbility with the launch mode set to [specified](../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string representing the unique ID of the UIAbility instance. This API returns the result synchronously and does not support asynchronous callbacks. If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created. > **NOTE：**> > Starting from API version 20, this callback is not triggered when > [AbilityStage.onAcceptWantAsync](#onAcceptWantAsync) is implemented.
+Called when a UIAbility with the launch mode set to [specified](../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string representing the unique ID of the UIAbility instance. This API returns the result synchronously and does not support asynchronous callbacks. If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created. > **NOTE：**> > Starting from API version 20, this callback is not triggered when > [AbilityStage.onAcceptWantAsync](#onacceptwantasync) is implemented.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,7 +82,7 @@ Called when a UIAbility with the launch mode set to [specified](../../../applica
 | --- | --- |
 | string | ID of the UIAbility. If a UIAbility with the same ID has been launched, that UIAbility is reused. Otherwise, a new instance is created and launched. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage, Want } from '@kit.AbilityKit';
@@ -121,10 +105,6 @@ Called when a UIAbility with the launch mode set to [specified](../../../applica
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -145,7 +125,7 @@ Called when a UIAbility with the launch mode set to [specified](../../../applica
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return a string that uniquely identifies the UIAbility instance launched. If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -166,13 +146,9 @@ class MyAbilityStage extends AbilityStage {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration) class. This API returns the result synchronously and does not support asynchronous callbacks. > **NOTE：**> > There are certain restrictions when this callback is actually triggered. For example, if you set the application > language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setLanguage), the > system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details, > see [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
+Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-app-ability-configuration-configuration-i.md#configuration) class. This API returns the result synchronously and does not support asynchronous callbacks. > **NOTE：**> > There are certain restrictions when this callback is actually triggered. For example, if you set the application > language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the > system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details, > see [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,7 +164,7 @@ Called when the system global configuration (such as the system language and dar
 | --- | --- | --- | --- |
 | newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | Callback invoked when the global configuration is updated. The global configuration indicates the configuration of the environment where the application is running and includes the language and color mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage, Configuration } from '@kit.AbilityKit';
@@ -210,10 +186,6 @@ Called when an AbilityStage instance is created. Such an instance is automatical
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -222,7 +194,7 @@ Called when an AbilityStage instance is created. Such an instance is automatical
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -244,10 +216,6 @@ Called when the last Ability instance of the corresponding module exits. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -256,7 +224,7 @@ Called when the last Ability instance of the corresponding module exits. This AP
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -278,10 +246,6 @@ Called when the process is launched from HyperSnap.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AbilityStage-onLaunchFromHyperSnap(): void--><!--Device-AbilityStage-onLaunchFromHyperSnap(): void-End-->
@@ -298,10 +262,6 @@ Listens for changes in the system memory level status. Called when the available
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -316,7 +276,7 @@ Listens for changes in the system memory level status. Called when the available
 | --- | --- | --- | --- |
 | level | AbilityConstant.MemoryLevel | Yes | Memory level that indicates the memory usage status. When the specified memory level is reached, a callback will be invoked and the system will start adjustment.<br>**NOTE：**<br>The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory:<br>- A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB.<br>- A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB.<br>- A callback with value 2 is triggered when available memory falls below 1600 MB. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage, AbilityConstant } from '@kit.AbilityKit';
@@ -334,13 +294,9 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequest(want: Want): string
 ```
 
-Called when a UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt;, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API returns the result synchronously and does not support asynchronous callbacks. If the application already has a process with the same ID, the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd- -&gt; runs in that process. Otherwise, a new process is created. If you implement both **onNewProcessRequest** and [onAcceptWant](#onAcceptWant), the system first invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback. &lt;!--Del--&gt; The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type. &lt;!--DelEnd--&gt; > **NOTE：**> > - In API version 19 and earlier, only a UIAbility can be launched in the specified process. &lt;!--Del--&gt;Starting > from API version 20, a UIExtensionAbility can also be launched in the specified process.&lt;!--DelEnd--&gt; > > - Starting from API version 20, this callback is not executed when > [AbilityStage.onNewProcessRequestAsync](#onNewProcessRequestAsync) is implemented.
+Called when a UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt;, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API returns the result synchronously and does not support asynchronous callbacks. If the application already has a process with the same ID, the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd- -&gt; runs in that process. Otherwise, a new process is created. If you implement both **onNewProcessRequest** and [onAcceptWant](#onacceptwant), the system first invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback. &lt;!--Del--&gt; The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type. &lt;!--DelEnd--&gt; > **NOTE：**> > - In API version 19 and earlier, only a UIAbility can be launched in the specified process. &lt;!--Del--&gt;Starting > from API version 20, a UIExtensionAbility can also be launched in the specified process.&lt;!--DelEnd--&gt; > > - Starting from API version 20, this callback is not executed when > [AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync) is implemented.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -360,7 +316,7 @@ Called when a UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt;
 | --- | --- |
 | string | Custom process identifier. If the process with this identifier has been created, the ability runs in the process. Otherwise, a new process is created and the ability runs in it. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage, Want } from '@kit.AbilityKit';
@@ -383,10 +339,6 @@ Called when a UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt;
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -407,7 +359,7 @@ Called when a UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt;
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return a string representing the process ID. If the application already has a process with the same ID, the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt; runs in that process. Otherwise, a new process is created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -428,13 +380,9 @@ class MyAbilityStage extends AbilityStage {
 onPrepareTermination(): AbilityConstant.PrepareTermination
 ```
 
-Called when the application is closed by the user, allowing the user to choose between immediate termination or cancellation. This API returns the result synchronously and does not support asynchronous callbacks. > **NOTE：**> > - The API is called only when the application exits under normal circumstances (for example, when the application > is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be > called if the application is terminated forcibly. > > - This API is not executed when > [AbilityStage.onPrepareTerminationAsync](#onPrepareTerminationAsync) is implemented.
+Called when the application is closed by the user, allowing the user to choose between immediate termination or cancellation. This API returns the result synchronously and does not support asynchronous callbacks. > **NOTE：**> > - The API is called only when the application exits under normal circumstances (for example, when the application > is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be > called if the application is terminated forcibly. > > - This API is not executed when > [AbilityStage.onPrepareTerminationAsync](#onprepareterminationasync) is implemented.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PREPARE_APP_TERMINATE
 
@@ -452,7 +400,7 @@ Called when the application is closed by the user, allowing the user to choose b
 | --- | --- |
 | AbilityConstant.PrepareTermination | The user's choice. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
@@ -475,10 +423,6 @@ Called when the application is closed by the user, allowing the user to choose b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PREPARE_APP_TERMINATE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -495,7 +439,7 @@ Called when the application is closed by the user, allowing the user to choose b
 | --- | --- |
 | Promise&lt;AbilityConstant.PrepareTermination&gt; | Promise used to return the user's choice. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
@@ -521,10 +465,6 @@ Context of an AbilityStage.
 **Type:** [AbilityStageContext](arkts-ability-abilitystagecontext-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

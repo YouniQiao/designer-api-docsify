@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-inputMethodEngine-export interface EnhancedPanelRect--><!--Device-inputMethodEngine-export interface EnhancedPanelRect-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -25,10 +21,6 @@ fullScreenMode?: boolean
 **默认值：** false
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EnhancedPanelRect-fullScreenMode?: boolean--><!--Device-EnhancedPanelRect-fullScreenMode?: boolean-End-->
 
@@ -48,10 +40,6 @@ landscapeAvoidY?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EnhancedPanelRect-landscapeAvoidY?: int--><!--Device-EnhancedPanelRect-landscapeAvoidY?: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -68,10 +56,6 @@ landscapeInputRegion?: Array<window.Rect>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EnhancedPanelRect-landscapeInputRegion?: Array<window.Rect>--><!--Device-EnhancedPanelRect-landscapeInputRegion?: Array<window.Rect>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -87,10 +71,6 @@ landscapeRect?: window.Rect
 **类型：** window.Rect
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EnhancedPanelRect-landscapeRect?: window.Rect--><!--Device-EnhancedPanelRect-landscapeRect?: window.Rect-End-->
 
@@ -110,10 +90,6 @@ portraitAvoidY?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EnhancedPanelRect-portraitAvoidY?: int--><!--Device-EnhancedPanelRect-portraitAvoidY?: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -130,10 +106,6 @@ portraitInputRegion?: Array<window.Rect>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EnhancedPanelRect-portraitInputRegion?: Array<window.Rect>--><!--Device-EnhancedPanelRect-portraitInputRegion?: Array<window.Rect>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -149,10 +121,6 @@ portraitRect?: window.Rect
 **类型：** window.Rect
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EnhancedPanelRect-portraitRect?: window.Rect--><!--Device-EnhancedPanelRect-portraitRect?: window.Rect-End-->
 

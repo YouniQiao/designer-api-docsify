@@ -10,10 +10,6 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater--><!--Device-update-function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -38,7 +34,7 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {

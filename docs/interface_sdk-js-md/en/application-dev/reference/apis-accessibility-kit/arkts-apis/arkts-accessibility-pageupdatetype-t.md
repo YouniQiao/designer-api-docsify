@@ -8,10 +8,6 @@ Enumerates the page update types. A page update event is triggered by the access
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-type PageUpdateType = 'pageContentUpdate' | 'pageStateUpdate'--><!--Device-unnamed-type PageUpdateType = 'pageContentUpdate' | 'pageStateUpdate'-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

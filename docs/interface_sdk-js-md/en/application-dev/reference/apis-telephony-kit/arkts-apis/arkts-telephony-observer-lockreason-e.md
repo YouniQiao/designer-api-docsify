@@ -4,10 +4,6 @@ Enumerates SIM card lock types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-export enum LockReason--><!--Device-observer-export enum LockReason-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -21,10 +17,6 @@ SIM_NONE = 0
 No lock.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_NONE = 0--><!--Device-LockReason-SIM_NONE = 0-End-->
 
@@ -40,10 +32,6 @@ PIN lock.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LockReason-SIM_PIN = 1--><!--Device-LockReason-SIM_PIN = 1-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -57,10 +45,6 @@ SIM_PUK = 2
 PUK lock.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PUK = 2--><!--Device-LockReason-SIM_PUK = 2-End-->
 
@@ -76,10 +60,6 @@ Network PIN lock.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LockReason-SIM_PN_PIN = 3--><!--Device-LockReason-SIM_PN_PIN = 3-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -93,10 +73,6 @@ SIM_PN_PUK = 4
 Network PUK lock.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PN_PUK = 4--><!--Device-LockReason-SIM_PN_PUK = 4-End-->
 
@@ -112,10 +88,6 @@ Subnet PIN lock.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LockReason-SIM_PU_PIN = 5--><!--Device-LockReason-SIM_PU_PIN = 5-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -129,10 +101,6 @@ SIM_PU_PUK = 6
 Subnet PUK lock.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PU_PUK = 6--><!--Device-LockReason-SIM_PU_PUK = 6-End-->
 
@@ -148,10 +116,6 @@ Service provider PIN lock.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LockReason-SIM_PP_PIN = 7--><!--Device-LockReason-SIM_PP_PIN = 7-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -165,10 +129,6 @@ SIM_PP_PUK = 8
 Service provider PUK lock.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PP_PUK = 8--><!--Device-LockReason-SIM_PP_PUK = 8-End-->
 
@@ -184,10 +144,6 @@ Organization PIN lock.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LockReason-SIM_PC_PIN = 9--><!--Device-LockReason-SIM_PC_PIN = 9-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -201,10 +157,6 @@ SIM_PC_PUK = 10
 Organization PUK lock.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_PC_PUK = 10--><!--Device-LockReason-SIM_PC_PUK = 10-End-->
 
@@ -220,10 +172,6 @@ SIM PIN lock.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LockReason-SIM_SIM_PIN = 11--><!--Device-LockReason-SIM_SIM_PIN = 11-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -237,10 +185,6 @@ SIM_SIM_PUK = 12
 SIM PUK lock.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LockReason-SIM_SIM_PUK = 12--><!--Device-LockReason-SIM_SIM_PUK = 12-End-->
 

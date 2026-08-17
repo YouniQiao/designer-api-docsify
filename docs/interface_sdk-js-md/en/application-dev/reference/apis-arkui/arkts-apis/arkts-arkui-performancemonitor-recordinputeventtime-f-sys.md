@@ -16,10 +16,6 @@ Records the trigger event type and time before the start of the animation scene.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void--><!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void-End-->
@@ -42,7 +38,7 @@ Records the trigger event type and time before the start of the animation scene.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { systemDateTime, BusinessError } from '@kit.BasicServicesKit';

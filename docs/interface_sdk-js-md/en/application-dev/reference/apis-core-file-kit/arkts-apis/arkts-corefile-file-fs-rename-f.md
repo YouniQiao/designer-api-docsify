@@ -30,10 +30,6 @@ Renames a file or directory. This API uses a promise to return the result. > **N
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>-End-->
@@ -87,10 +83,6 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 Renames a file or directory. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is not supported in a distributed directory.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

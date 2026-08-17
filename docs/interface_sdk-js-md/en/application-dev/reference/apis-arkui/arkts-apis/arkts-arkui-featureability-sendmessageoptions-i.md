@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-unnamed-export interface SendMessageOptions--><!--Device-unnamed-export interface SendMessageOptions-End-->
@@ -21,8 +19,6 @@ Destination ability name, which is case sensitive.
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 
@@ -42,8 +38,6 @@ Name of the destination bundle where the ability has been located. The name is c
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-SendMessageOptions-bundleName: string--><!--Device-SendMessageOptions-bundleName: string-End-->
@@ -61,8 +55,6 @@ Called when the execution is completed.
 **Type:** () =&gt; void
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 
@@ -82,8 +74,6 @@ Destination device ID.
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-SendMessageOptions-deviceId: string--><!--Device-SendMessageOptions-deviceId: string-End-->
@@ -101,8 +91,6 @@ Called when the messages fail to be sent.
 **Type:** (data: string, code: number) =&gt; void
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 
@@ -122,8 +110,6 @@ Messages sent to the destination device. A maximum of 1 KB of data can be transm
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-SendMessageOptions-message?: string--><!--Device-SendMessageOptions-message?: string-End-->
@@ -141,8 +127,6 @@ Called when the messages are sent successfully.
 **Type:** () =&gt; void
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 

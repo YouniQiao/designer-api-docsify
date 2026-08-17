@@ -4,10 +4,6 @@ Describes the extended configuration of component operation event listening, whi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ComponentEventOptions--><!--Device-unnamed-declare interface ComponentEventOptions-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -58,10 +54,6 @@ Attribute requirements of the target component to listen for. By default, all co
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ComponentEventOptions-on?: On--><!--Device-ComponentEventOptions-on?: On-End-->
@@ -79,10 +71,6 @@ Listening timeout interval, in milliseconds. The value is an integer greater tha
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

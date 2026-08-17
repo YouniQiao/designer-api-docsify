@@ -16,10 +16,6 @@ Checks whether the Cleartext traffic is permitted. To invoke this method, you mu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-networkSecurity-export function isCleartextPermitted(): boolean--><!--Device-networkSecurity-export function isCleartextPermitted(): boolean-End-->
@@ -38,7 +34,7 @@ Checks whether the Cleartext traffic is permitted. To invoke this method, you mu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { networkSecurity } from '@kit.NetworkKit';

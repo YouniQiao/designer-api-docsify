@@ -1,14 +1,10 @@
 # WriteStream
 
-Defines a writeable stream. You need to use fileIo.createWriteStream to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable) .
+Defines a writeable stream. You need to use fileIo.createWriteStream to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#writable) .
 
-**Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)
+**Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#writable)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WriteStream--><!--Device-unnamed-declare class WriteStream-End-->
 
@@ -44,10 +40,6 @@ Closes this writeable stream.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-WriteStream-close(): void--><!--Device-WriteStream-close(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -63,7 +55,7 @@ Closes this writeable stream.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
@@ -81,10 +73,6 @@ The WriteStream constructor.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-WriteStream-constructor()--><!--Device-WriteStream-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -98,10 +86,6 @@ seek(offset: number, whence?: WhenceType): number
 Adjusts the position of the writeable stream offset pointer.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number--><!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number-End-->
 
@@ -129,7 +113,7 @@ Adjusts the position of the writeable stream offset pointer.
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
@@ -151,10 +135,6 @@ Number of bytes written to the writable stream.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-WriteStream-readonly bytesWritten: number--><!--Device-WriteStream-readonly bytesWritten: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -170,10 +150,6 @@ Path of the file corresponding to the writeable stream.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-WriteStream-readonly path: string--><!--Device-WriteStream-readonly path: string-End-->
 

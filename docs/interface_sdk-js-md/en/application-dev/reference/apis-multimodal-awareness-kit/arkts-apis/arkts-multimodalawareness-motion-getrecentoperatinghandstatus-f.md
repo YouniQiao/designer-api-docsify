@@ -16,10 +16,6 @@ Obtains the latest operating hand status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 20+: ohos.permission.ACTIVITY_MOTION or ohos.permission.DETECT_GESTURE
 - API version 15 - 19: ohos.permission.ACTIVITY_MOTION
@@ -42,7 +38,7 @@ Obtains the latest operating hand status.
 | [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-service-exception) | Service exception. Possible causes: 1. A system error, such as null pointer, container-related exception; <br> 2. N-API invocation exception, invalid N-API status. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to get the recent operating hand <br> status forbidden by permission: ohos.permission.ACTIVITY_MOTION or ohos.permission.DETECT_GESTURE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

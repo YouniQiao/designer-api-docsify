@@ -1,12 +1,8 @@
 # Picture
 
-An image that contains special information can be decoded into a picture object, which generally contains the main picture, auxiliary picture, and metadata. The main picture contains most information about the image and is mainly used to render the image. The auxiliary picture is used to store data related to but different from the main picture, revealing more comprehensive details. The metadata is generally used to store information about the image file. The picture object class is used to read or write picture objects. Before calling any API in Picture, you must use [image.createPicture](arkts-image-image-createpicture-f.md#createPicture) to create a Picture object. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+An image that contains special information can be decoded into a picture object, which generally contains the main picture, auxiliary picture, and metadata. The main picture contains most information about the image and is mainly used to render the image. The auxiliary picture is used to store data related to but different from the main picture, revealing more comprehensive details. The metadata is generally used to store information about the image file. The picture object class is used to read or write picture objects. Before calling any API in Picture, you must use [image.createPicture](arkts-image-image-createpicture-f.md#createpicture) to create a Picture object. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-interface Picture--><!--Device-image-interface Picture-End-->
 
@@ -27,10 +23,6 @@ getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null
 Obtains an auxiliary picture by type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Picture-getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null--><!--Device-Picture-getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null-End-->
 
@@ -64,10 +56,6 @@ Obtains the PixelMap object of the gain map.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Picture-getGainmapPixelmap(): PixelMap | null--><!--Device-Picture-getGainmapPixelmap(): PixelMap | null-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -87,10 +75,6 @@ getHdrComposedPixelmap(): Promise<PixelMap>
 Generates a High Dynamic Range (HDR) image and obtains its PixelMap object. This API uses a promise to return the result.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 <!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap>--><!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap>-End-->
 
@@ -119,10 +103,6 @@ Obtains the hdr pixel map. This method uses a promise to return the PixelMap obj
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap | undefined>--><!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -149,10 +129,6 @@ getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap
 Composites an HDR image and returns PixelMap of the image. Composition options (such as PixelMapFormat) can be passed. This API uses a promise to return the result. The Picture object that calls this API must contain the main picture, gain map, and metadata.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,10 +164,6 @@ Obtains the PixelMap object of the main picture. This API returns the result syn
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 <!--Device-Picture-getMainPixelmap(): PixelMap--><!--Device-Picture-getMainPixelmap(): PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -212,10 +184,6 @@ Obtains the pixel map of the main image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Picture-getMainPixelmap(): PixelMap | undefined--><!--Device-Picture-getMainPixelmap(): PixelMap | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -235,10 +203,6 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 Obtains the metadata of this Picture object. This API uses a promise to return the result.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 <!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata>--><!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata>-End-->
 
@@ -273,10 +237,6 @@ Obtains the metadata of main picture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata | undefined>--><!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -309,10 +269,6 @@ Invokes the VPE algorithm to compose the main pixelmap and gainmap. The composed
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Picture-hdrComposeToMainPixelmap(): Promise<void>--><!--Device-Picture-hdrComposeToMainPixelmap(): Promise<void>-End-->
@@ -341,10 +297,6 @@ Marshals this Picture object and writes it to a MessageSequence object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Picture-marshalling(sequence: rpc.MessageSequence): void--><!--Device-Picture-marshalling(sequence: rpc.MessageSequence): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -372,10 +324,6 @@ Releases this Picture object. Images occupy a large amount of memory. When you f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Picture-release(): void--><!--Device-Picture-release(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -389,10 +337,6 @@ setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPictu
 Sets an auxiliary picture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Picture-setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPicture): void--><!--Device-Picture-setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPicture): void-End-->
 
@@ -421,10 +365,6 @@ Sets the PixelMap object of the picture.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Picture-setMainPixelmap(pixelmap: PixelMap): void--><!--Device-Picture-setMainPixelmap(pixelmap: PixelMap): void-End-->
@@ -452,10 +392,6 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 Sets the metadata for this Picture object. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Picture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>--><!--Device-Picture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>-End-->
 

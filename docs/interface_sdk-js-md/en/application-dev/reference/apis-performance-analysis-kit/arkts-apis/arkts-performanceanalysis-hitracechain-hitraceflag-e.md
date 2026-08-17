@@ -1,12 +1,8 @@
-# HiTraceFlag
+# HiTraceFlag(Distributed Tracing)
 
 Enumerates trace flag types.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hiTraceChain-enum HiTraceFlag--><!--Device-hiTraceChain-enum HiTraceFlag-End-->
 
@@ -22,10 +18,6 @@ Default flag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HiTraceFlag-DEFAULT = 0--><!--Device-HiTraceFlag-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -39,10 +31,6 @@ INCLUDE_ASYNC = 1
 Asynchronous call flag. When this flag is set, both synchronous and asynchronous calls are traced. By default, only synchronous calls are traced.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HiTraceFlag-INCLUDE_ASYNC = 1--><!--Device-HiTraceFlag-INCLUDE_ASYNC = 1-End-->
 
@@ -58,10 +46,6 @@ No span flag. When this flag is set, no span information is created. By default,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HiTraceFlag-DONOT_CREATE_SPAN = 1 << 1--><!--Device-HiTraceFlag-DONOT_CREATE_SPAN = 1 << 1-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -75,10 +59,6 @@ TP_INFO = 1 << 2
 Trace point flag. When this flag is set in the debugging scenario, the HiLog logs of the trace point are printed upon calling the **[tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint)** API. By default, the HiLog logs are not printed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HiTraceFlag-TP_INFO = 1 << 2--><!--Device-HiTraceFlag-TP_INFO = 1 << 2-End-->
 
@@ -94,10 +74,6 @@ No begin and end flag. When this flag is set in the debugging scenario, the HiLo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HiTraceFlag-NO_BE_INFO = 1 << 3--><!--Device-HiTraceFlag-NO_BE_INFO = 1 << 3-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -111,10 +87,6 @@ DISABLE_LOG = 1 << 4
 Log association flag. When this flag is set, the **HiTraceId** information is not added to the HiLog logs. By default, the **HiTraceId** information is added to the HiLog logs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HiTraceFlag-DISABLE_LOG = 1 << 4--><!--Device-HiTraceFlag-DISABLE_LOG = 1 << 4-End-->
 
@@ -130,10 +102,6 @@ Failure trigger flag. This is a reserved flag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HiTraceFlag-FAILURE_TRIGGER = 1 << 5--><!--Device-HiTraceFlag-FAILURE_TRIGGER = 1 << 5-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -147,10 +115,6 @@ D2D_TP_INFO = 1 << 6
 Device-to-device trace point flag. It is a subset of **TP_INFO** and is used in debugging scenarios. When the **TP_INFO** flag is set, the **D2D_TP_INFO** flag does not take effect. When **TP_INFO** is not set and **D2D_TP_INFO** is set, the HiLog logs of the trace point are printed only when the mode parameter is set to **DEVICE** upon calling [tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HiTraceFlag-D2D_TP_INFO = 1 << 6--><!--Device-HiTraceFlag-D2D_TP_INFO = 1 << 6-End-->
 

@@ -16,10 +16,6 @@ Obtains the space usage of a specified user, system application bundle name, or 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -53,7 +49,7 @@ Obtains the space usage of a specified user, system application bundle name, or 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { storageStatistics } from '@kit.CoreFileKit';

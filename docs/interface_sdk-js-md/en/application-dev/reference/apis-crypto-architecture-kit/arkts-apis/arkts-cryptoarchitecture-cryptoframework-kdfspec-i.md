@@ -4,10 +4,6 @@ Defines the parameters of the key derivation function. When the key derivation f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-interface KdfSpec--><!--Device-cryptoFramework-interface KdfSpec-End-->
 
 **System capability:** 
@@ -31,10 +27,6 @@ Algorithm of the key derivation function, for example, **PBKDF2**.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

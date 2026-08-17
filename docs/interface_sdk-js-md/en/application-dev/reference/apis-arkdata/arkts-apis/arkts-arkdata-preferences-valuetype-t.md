@@ -9,10 +9,6 @@ Indicates possible value types
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint--><!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint-End-->
 
 **System capability:** 

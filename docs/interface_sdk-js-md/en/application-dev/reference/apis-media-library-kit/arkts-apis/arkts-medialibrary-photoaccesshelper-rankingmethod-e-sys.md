@@ -4,10 +4,6 @@ Enumerates related entity Ranking Method
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum RankingMethod--><!--Device-photoAccessHelper-enum RankingMethod-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -23,10 +19,6 @@ RANDOM_VOTE = 0
 Random Vote Ranking Method
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

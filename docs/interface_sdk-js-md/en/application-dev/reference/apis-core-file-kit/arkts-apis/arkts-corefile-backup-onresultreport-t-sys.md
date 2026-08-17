@@ -8,10 +8,6 @@ Callback called when the backup service return result information. The first ret
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-backup-type OnResultReport = (bundleName: string, result: string) => void--><!--Device-backup-type OnResultReport = (bundleName: string, result: string) => void-End-->

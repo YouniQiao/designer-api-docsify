@@ -16,10 +16,6 @@ Requests to publish a widget to the widget host. This API uses an asynchronous c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.AGENT_REQUIRE_FORM
 
 <!--Device-formAgent-function requestPublishForm(want: Want, callback: AsyncCallback<string>): void--><!--Device-formAgent-function requestPublishForm(want: Want, callback: AsyncCallback<string>): void-End-->
@@ -59,10 +55,6 @@ function requestPublishForm(want: Want): Promise<string>
 Requests to publish a widget to the widget host. This API uses a promise to return the result. The widget host is usually the home screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.AGENT_REQUIRE_FORM
 

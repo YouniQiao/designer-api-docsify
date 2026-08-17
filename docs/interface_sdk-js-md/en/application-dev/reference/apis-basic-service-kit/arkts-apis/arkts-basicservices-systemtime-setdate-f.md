@@ -16,11 +16,9 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setDate-(System-API))
+**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate-system-api)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -41,7 +39,7 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -72,11 +70,9 @@ Sets the system date. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setDate-(System-API))
+**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate-system-api)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -102,7 +98,7 @@ Sets the system date. This API uses a promise to return the result.
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

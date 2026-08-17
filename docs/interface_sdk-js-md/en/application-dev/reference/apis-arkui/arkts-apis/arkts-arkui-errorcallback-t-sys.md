@@ -1,4 +1,4 @@
-# ErrorCallback (System API)
+# ErrorCallback(System API) (System API)
 
 ```TypeScript
 declare type ErrorCallback = import('../api/@ohos.base').ErrorCallback
@@ -7,10 +7,6 @@ declare type ErrorCallback = import('../api/@ohos.base').ErrorCallback
 Indicates error callback.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

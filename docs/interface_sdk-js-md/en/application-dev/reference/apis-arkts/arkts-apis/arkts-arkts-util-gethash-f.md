@@ -16,10 +16,6 @@ Obtains the hash value of an object. If no hash value has been obtained, a rando
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-util-function getHash(object: object): number--><!--Device-util-function getHash(object: object): number-End-->
@@ -38,7 +34,7 @@ Obtains the hash value of an object. If no hash value has been obtained, a rando
 | --- | --- |
 | number | Hash value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 interface Person {

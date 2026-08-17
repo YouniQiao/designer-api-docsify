@@ -4,10 +4,6 @@ Defines the remote authentication callback API. This API is used in remote authe
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-userAuth-interface IRemoteAuthCallback--><!--Device-userAuth-interface IRemoteAuthCallback-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -32,10 +28,6 @@ Callback for obtaining remote authentication widget parameters. When a remote de
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IRemoteAuthCallback-onGetRemoteAuthWidgetParam: WidgetParamCallback--><!--Device-IRemoteAuthCallback-onGetRemoteAuthWidgetParam: WidgetParamCallback-End-->
@@ -55,10 +47,6 @@ Callback for returning remote authentication results. After the remote authentic
 **Type:** [ResultCallback](arkts-userauthentication-userauth-resultcallback-t-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

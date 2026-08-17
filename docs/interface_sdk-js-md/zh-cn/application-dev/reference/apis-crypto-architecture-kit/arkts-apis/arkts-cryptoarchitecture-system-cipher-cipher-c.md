@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** Cipher
@@ -23,8 +21,6 @@ static aes(options: CipherAesOptions): void
 使用AES对数据进行加密或解密。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
@@ -49,8 +45,6 @@ static rsa(options: CipherRsaOptions): void
 使用RSA对数据进行加密或解密。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 

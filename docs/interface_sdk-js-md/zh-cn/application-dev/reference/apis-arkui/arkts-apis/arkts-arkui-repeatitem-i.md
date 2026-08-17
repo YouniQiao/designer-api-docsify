@@ -1,12 +1,8 @@
-# RepeatItem
+# RepeatItem(Defines Repeat component.)
 
 数据项类型。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-interface RepeatItem--><!--Device-unnamed-interface RepeatItem-End-->
 
@@ -23,10 +19,6 @@ index: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,10 +41,6 @@ arr中每一个数据项。T为开发者传入的数据类型。
 **类型：** T
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

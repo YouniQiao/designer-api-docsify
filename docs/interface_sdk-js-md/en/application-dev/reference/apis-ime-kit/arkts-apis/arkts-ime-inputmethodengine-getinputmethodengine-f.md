@@ -12,15 +12,13 @@ import { inputMethodEngine } from 'inputMethodEngine';
 function getInputMethodEngine(): InputMethodEngine
 ```
 
-Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md#InputMethodEngine) instance for the input method. The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event.
+Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md#inputmethodengine) instance for the input method. The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)()
+**Substitutes:** [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)()
 
 <!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine--><!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine-End-->
 
@@ -32,7 +30,7 @@ Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.m
 | --- | --- |
 | [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | InputMethodAbility** instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let InputMethodEngine: inputMethodEngine.InputMethodEngine = inputMethodEngine.getInputMethodEngine();

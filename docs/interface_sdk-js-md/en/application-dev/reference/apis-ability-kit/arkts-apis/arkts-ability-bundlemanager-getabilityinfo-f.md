@@ -16,10 +16,6 @@ Obtains the ability information based on the given resource identifier and abili
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_ABILITY_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -33,7 +29,7 @@ Obtains the ability information based on the given resource identifier and abili
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the resource. The value is the same as that of the [uris field under skills in the module.json5 file](../../../quick-start/module-configuration-file.md#skills). |
-| abilityFlags | int | Yes | [Ability flag](arkts-ability-bundlemanager-abilityflag-e-sys.md#AbilityFlag-(System-API)), indicating the ability information to be obtained. |
+| abilityFlags | int | Yes | [Ability flag](arkts-ability-bundlemanager-abilityflag-e-sys.md#abilityflag-system-api), indicating the ability information to be obtained. |
 
 **Return value:**
 
@@ -48,7 +44,7 @@ Obtains the ability information based on the given resource identifier and abili
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The ability is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace fontManager--><!--Device-unnamed-declare namespace fontManager-End-->
 
 **System capability:** SystemCapability.Global.FontManager
@@ -39,9 +35,9 @@ import { fontManager } from 'fontManager';
 
 | Name | Description |
 | --- | --- |
-| [dataMigration](arkts-localization-fontmanager-datamigration-f-sys.md#dataMigration) | Data migration API used during device upgrades to start a migration task, providing real-time feedback on migration progress and results through a callback function. |
-| [installFont](arkts-localization-fontmanager-installfont-f-sys.md#installFont) | Installs a font file from a specified path into the system font library. This API uses a promise to return the result. After successful installation, applications can use the font by its font name. |
-| [uninstallFont](arkts-localization-fontmanager-uninstallfont-f-sys.md#uninstallFont) | Uninstalls an installed font file from the system font library by font name. This API uses a promise to return the result. |
+| [dataMigration](arkts-localization-fontmanager-datamigration-f-sys.md#datamigration) | Data migration API used during device upgrades to start a migration task, providing real-time feedback on migration progress and results through a callback function. |
+| [installFont](arkts-localization-fontmanager-installfont-f-sys.md#installfont) | Installs a font file from a specified path into the system font library. This API uses a promise to return the result. After successful installation, applications can use the font by its font name. |
+| [uninstallFont](arkts-localization-fontmanager-uninstallfont-f-sys.md#uninstallfont) | Uninstalls an installed font file from the system font library by font name. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -4,8 +4,6 @@ Define the change data information object.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-storage-interface StorageObserver--><!--Device-storage-interface StorageObserver-End-->
@@ -23,8 +21,6 @@ Data changed.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

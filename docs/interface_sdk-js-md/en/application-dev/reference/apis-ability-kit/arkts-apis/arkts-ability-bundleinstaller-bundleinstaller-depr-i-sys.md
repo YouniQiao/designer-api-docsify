@@ -4,11 +4,9 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md#BundleInstaller-(System-API))
+**Substitutes:** [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md#bundleinstaller-system-api)
 
 <!--Device-unnamed-export interface BundleInstaller--><!--Device-unnamed-export interface BundleInstaller-End-->
 
@@ -25,8 +23,6 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 Install an application in a HAP.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -58,8 +54,6 @@ recover an application.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [recover](arkts-ability-installer-bundleinstaller-i-sys.md#recover)
@@ -89,8 +83,6 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 Uninstall an application.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

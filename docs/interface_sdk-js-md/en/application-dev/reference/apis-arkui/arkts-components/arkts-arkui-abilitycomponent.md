@@ -12,8 +12,6 @@ Construct the ability component. Called when the ability component is used.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** UIExtensionComponentInterface

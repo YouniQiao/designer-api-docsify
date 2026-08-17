@@ -16,8 +16,6 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
@@ -33,7 +31,7 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of getFile. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,8 +56,6 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
@@ -80,7 +76,7 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 | --- | --- |
 | Promise&lt;number&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

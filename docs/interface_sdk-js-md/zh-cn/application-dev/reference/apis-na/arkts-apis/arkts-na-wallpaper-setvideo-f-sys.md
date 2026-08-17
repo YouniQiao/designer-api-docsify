@@ -10,10 +10,6 @@ function setVideo(source: string, wallpaperType: WallpaperType, callback: AsyncC
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_WALLPAPER
 
 <!--Device-wallpaper-function setVideo(source: string, wallpaperType: WallpaperType, callback: AsyncCallback<void>): void--><!--Device-wallpaper-function setVideo(source: string, wallpaperType: WallpaperType, callback: AsyncCallback<void>): void-End-->
@@ -28,7 +24,7 @@ function setVideo(source: string, wallpaperType: WallpaperType, callback: AsyncC
 | --- | --- | --- | --- |
 | source | string | 是 | mp4文件的Uri路径。 |
 | wallpaperType | [WallpaperType](arkts-na-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function setVideo(source: string, wallpaperType: WallpaperType, callback: AsyncC
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,10 +63,6 @@ function setVideo(source: string, wallpaperType: WallpaperType): Promise<void>
 将视频资源设置为桌面或锁屏的动态壁纸。使用promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
@@ -101,7 +93,7 @@ function setVideo(source: string, wallpaperType: WallpaperType): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

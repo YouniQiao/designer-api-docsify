@@ -4,10 +4,6 @@ Enumerates the alignment modes of grid items. > **NOTE：**> > 1. The **STRETCH*
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum GridItemAlignment--><!--Device-unnamed-declare enum GridItemAlignment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ DEFAULT = 0
 Use the default alignment mode of the grid.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ STRETCH = 1
 Use the height of the tallest grid item in a row as the height for all other grid items in that row.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

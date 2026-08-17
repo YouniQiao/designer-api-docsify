@@ -4,10 +4,6 @@ Enum for power consumption scenario.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export enum PowerConsumptionScenario--><!--Device-geoLocationManager-export enum PowerConsumptionScenario-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -21,10 +17,6 @@ HIGH_POWER_CONSUMPTION = 0x601
 High power consumption mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ Low power consumption mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PowerConsumptionScenario-LOW_POWER_CONSUMPTION = 0x602--><!--Device-PowerConsumptionScenario-LOW_POWER_CONSUMPTION = 0x602-End-->
@@ -61,10 +49,6 @@ NO_POWER_CONSUMPTION = 0x603
 Power saving scenarios.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

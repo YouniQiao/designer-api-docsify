@@ -4,10 +4,6 @@ Provides an option for determining whether a call is a video call.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface MakeCallOptions--><!--Device-call-export interface MakeCallOptions-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -30,10 +26,6 @@ Whether the third-party app supports custom accessibility features. Default valu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MakeCallOptions-isCustomAccessibility?: boolean--><!--Device-MakeCallOptions-isCustomAccessibility?: boolean-End-->
@@ -51,10 +43,6 @@ Whether to hide the dial screen. **true**: yes; **false**: no.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

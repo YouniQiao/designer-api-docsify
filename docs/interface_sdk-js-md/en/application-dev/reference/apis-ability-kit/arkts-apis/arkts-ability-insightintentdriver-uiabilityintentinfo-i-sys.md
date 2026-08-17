@@ -4,10 +4,6 @@ Describes the information of the UIAbility bound to the [intent developed using 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntentDriver-interface UIAbilityIntentInfo--><!--Device-insightIntentDriver-interface UIAbilityIntentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -32,10 +28,6 @@ Name of the UIAbility bound to the intent.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityIntentInfo-readonly abilityName: string--><!--Device-UIAbilityIntentInfo-readonly abilityName: string-End-->
@@ -55,10 +47,6 @@ Intent execution mode.
 **Type:** [ExecuteModeForConfiguration](arkts-ability-insightintentdriver-executemodeforconfiguration-e-sys.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

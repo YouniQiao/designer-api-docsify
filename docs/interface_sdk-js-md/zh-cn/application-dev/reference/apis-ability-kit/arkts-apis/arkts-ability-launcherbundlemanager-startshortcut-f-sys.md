@@ -10,10 +10,6 @@ function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Prom
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.START_SHORTCUT
 
 <!--Device-launcherBundleManager-function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise<void>--><!--Device-launcherBundleManager-function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise<void>-End-->
@@ -45,7 +41,7 @@ function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Prom
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700065](../errorcode-bundle.md#17700065-shortcutinfo结构体中指定的want不支持被拉起) | The specified shortcut want in shortcut info is not supported to be started. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ Describes the object to be intercepted during navigation redirection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface NavigationInterception--><!--Device-unnamed-declare interface NavigationInterception-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Callback after page redirection. The setting takes effect in the next redirectio
 **Type:** [InterceptionShowCallback](arkts-arkui-interceptionshowcallback-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ Callback invoked before a page transition, allowing for stack operations, which 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -72,10 +60,6 @@ Callback invoked when the display mode of the **Navigation** component switches 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -95,10 +79,6 @@ Callback invoked before a page transition, allowing for stack operations, which 
 **Type:** [InterceptionShowCallback](arkts-arkui-interceptionshowcallback-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

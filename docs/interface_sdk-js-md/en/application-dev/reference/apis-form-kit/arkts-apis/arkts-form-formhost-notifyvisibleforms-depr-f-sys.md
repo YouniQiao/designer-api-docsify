@@ -10,11 +10,9 @@ Instructs the widget framework to make a widget visible. After this API is calle
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyVisibleForms-(System-API))
+**Substitutes:** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyvisibleforms-system-api)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -42,11 +40,9 @@ Instructs the widget framework to make a widget visible. After this API is calle
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyVisibleForms-(System-API))
+**Substitutes:** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyvisibleforms-system-api)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

@@ -16,10 +16,6 @@ Cancels the preparation for screen hopping. This API uses an asynchronous callba
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
 <!--Device-cooperate-function unprepareCooperate(callback: AsyncCallback<void>): void--><!--Device-cooperate-function unprepareCooperate(callback: AsyncCallback<void>): void-End-->
@@ -38,11 +34,11 @@ Cancels the preparation for screen hopping. This API uses an asynchronous callba
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed.  **ArkTS mode:** This error code applies only to ArkTS-Dyn. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,10 +69,6 @@ Cancels the preparation for screen hopping. This API uses a promise to return th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
 <!--Device-cooperate-function unprepareCooperate(): Promise<void>--><!--Device-cooperate-function unprepareCooperate(): Promise<void>-End-->
@@ -98,7 +90,7 @@ Cancels the preparation for screen hopping. This API uses a promise to return th
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

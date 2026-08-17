@@ -4,10 +4,6 @@ Video state type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export enum VideoStateType--><!--Device-call-export enum VideoStateType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -23,10 +19,6 @@ TYPE_VOICE = 0
 Voice state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoStateType-TYPE_VOICE = 0--><!--Device-VideoStateType-TYPE_VOICE = 0-End-->
 
@@ -44,11 +36,9 @@ Video state.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [TYPE_VIDEO_BIDIRECTIONAL](#TYPE_VIDEO_BIDIRECTIONAL)
+**Substitutes:** [TYPE_VIDEO_BIDIRECTIONAL](#typevideobidirectional)
 
 <!--Device-VideoStateType-TYPE_VIDEO = 1--><!--Device-VideoStateType-TYPE_VIDEO = 1-End-->
 
@@ -66,10 +56,6 @@ Data sending only during a video call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoStateType-TYPE_VIDEO_SEND_ONLY = 1--><!--Device-VideoStateType-TYPE_VIDEO_SEND_ONLY = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -86,10 +72,6 @@ Data receiving only during a video call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoStateType-TYPE_VIDEO_RECEIVE_ONLY = 2--><!--Device-VideoStateType-TYPE_VIDEO_RECEIVE_ONLY = 2-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -105,10 +87,6 @@ TYPE_VIDEO_BIDIRECTIONAL = 3
 Data receiving/sending status during a video call.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoStateType-TYPE_VIDEO_BIDIRECTIONAL = 3--><!--Device-VideoStateType-TYPE_VIDEO_BIDIRECTIONAL = 3-End-->
 

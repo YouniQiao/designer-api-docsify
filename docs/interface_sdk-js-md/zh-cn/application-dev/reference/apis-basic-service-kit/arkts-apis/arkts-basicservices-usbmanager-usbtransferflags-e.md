@@ -4,10 +4,6 @@ Enumerates USB transfer flags.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-usbManager-export enum UsbTransferFlags--><!--Device-usbManager-export enum UsbTransferFlags-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -21,10 +17,6 @@ USB_TRANSFER_SHORT_NOT_OK = 0
 将短帧报告为错误。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UsbTransferFlags-USB_TRANSFER_SHORT_NOT_OK = 0--><!--Device-UsbTransferFlags-USB_TRANSFER_SHORT_NOT_OK = 0-End-->
 
@@ -40,10 +32,6 @@ USB_TRANSFER_FREE_BUFFER = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UsbTransferFlags-USB_TRANSFER_FREE_BUFFER = 1--><!--Device-UsbTransferFlags-USB_TRANSFER_FREE_BUFFER = 1-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -58,10 +46,6 @@ USB_TRANSFER_FREE_TRANSFER = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UsbTransferFlags-USB_TRANSFER_FREE_TRANSFER = 2--><!--Device-UsbTransferFlags-USB_TRANSFER_FREE_TRANSFER = 2-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -75,10 +59,6 @@ USB_TRANSFER_ADD_ZERO_PACKET = 3
 传输将增加一个额外的数据包。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UsbTransferFlags-USB_TRANSFER_ADD_ZERO_PACKET = 3--><!--Device-UsbTransferFlags-USB_TRANSFER_ADD_ZERO_PACKET = 3-End-->
 

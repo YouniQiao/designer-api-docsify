@@ -4,10 +4,6 @@ Represents the RDB data change result. The data returned by the callback is not 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface RdbDataChangeNode--><!--Device-dataShare-interface RdbDataChangeNode-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -32,10 +28,6 @@ Data of the callback. If an error occurs during callback data processing, the ca
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbDataChangeNode-data: Array<string>--><!--Device-RdbDataChangeNode-data: Array<string>-End-->
@@ -56,10 +48,6 @@ ID of the template that triggers the callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbDataChangeNode-templateId: TemplateId--><!--Device-RdbDataChangeNode-templateId: TemplateId-End-->
@@ -79,10 +67,6 @@ URI of the callback.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

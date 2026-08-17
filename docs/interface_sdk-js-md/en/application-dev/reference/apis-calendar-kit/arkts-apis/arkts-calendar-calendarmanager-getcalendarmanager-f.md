@@ -16,10 +16,6 @@ Obtains a CalendarManager object based on the context.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -40,7 +36,7 @@ Obtains a CalendarManager object based on the context.
 | --- | --- |
 | [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) | CalendarManager object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Obtain an mContext object.

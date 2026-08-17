@@ -10,8 +10,6 @@ Synchronizes the data of a file. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [fdatasync](arkts-corefile-file-fs-fdatasync-f.md#fdatasync)
@@ -42,8 +40,6 @@ declare function fdatasync(fd: number, callback: AsyncCallback<void>): void
 Synchronizes the data of a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

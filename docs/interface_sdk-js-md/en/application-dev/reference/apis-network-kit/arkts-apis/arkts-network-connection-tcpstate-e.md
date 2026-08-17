@@ -4,10 +4,6 @@ State of the TCP network port.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-connection-export enum TcpState--><!--Device-connection-export enum TcpState-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -21,10 +17,6 @@ TCP_ESTABLISHED = 1
 The TCP connection is in the ESTABLISHED state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ The TCP connection is in the SYN_SENT state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TcpState-TCP_SYN_SENT = 2--><!--Device-TcpState-TCP_SYN_SENT = 2-End-->
@@ -61,10 +49,6 @@ TCP_SYN_RECV = 3
 The TCP connection is in the SYN_RECV state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ The TCP connection is in the FIN_WAIT1 state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TcpState-TCP_FIN_WAIT1 = 4--><!--Device-TcpState-TCP_FIN_WAIT1 = 4-End-->
@@ -101,10 +81,6 @@ TCP_FIN_WAIT2 = 5
 The TCP connection is in the FIN_WAIT2 state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,10 +98,6 @@ The TCP connection is in the TIME_WAIT state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TcpState-TCP_TIME_WAIT = 6--><!--Device-TcpState-TCP_TIME_WAIT = 6-End-->
@@ -141,10 +113,6 @@ TCP_CLOSE = 7
 The TCP connection is in the CLOSE state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +130,6 @@ The TCP connection is in the CLOSE_WAIT state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TcpState-TCP_CLOSE_WAIT = 8--><!--Device-TcpState-TCP_CLOSE_WAIT = 8-End-->
@@ -181,10 +145,6 @@ TCP_LAST_ACK = 9
 The TCP connection is in the LAST_ACK state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,10 +162,6 @@ The TCP connection is in the LISTEN state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TcpState-TCP_LISTEN = 10--><!--Device-TcpState-TCP_LISTEN = 10-End-->
@@ -221,10 +177,6 @@ TCP_CLOSING = 11
 The TCP connection is in the CLOSING state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

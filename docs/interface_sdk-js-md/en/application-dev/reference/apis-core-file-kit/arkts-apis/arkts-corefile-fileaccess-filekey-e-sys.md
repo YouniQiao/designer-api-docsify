@@ -4,8 +4,6 @@ Property elements that support the file queries.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 <!--Device-fileAccess-enum FileKey--><!--Device-fileAccess-enum FileKey-End-->
@@ -23,8 +21,6 @@ DISPLAY_NAME = 'display_name'
 The key represents the file name.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 
@@ -46,8 +42,6 @@ The key represents the date of the file creation.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -67,8 +61,6 @@ DATE_MODIFIED = 'date_modified'
 The key represents the modify date of the file.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 
@@ -90,8 +82,6 @@ The key represents the relative path.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -111,8 +101,6 @@ FILE_SIZE = 'size'
 The key represents the file size.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 

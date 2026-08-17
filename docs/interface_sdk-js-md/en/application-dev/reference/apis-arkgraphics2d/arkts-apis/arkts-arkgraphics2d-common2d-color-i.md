@@ -4,10 +4,6 @@ Describes a color in ARGB format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-common2D-interface Color--><!--Device-common2D-interface Color-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Alpha component of the color. The value is an integer ranging from 0 to 255.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Color-alpha: int--><!--Device-Color-alpha: int-End-->
@@ -51,10 +43,6 @@ Blue component of the color. The value is an integer ranging from 0 to 255.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -74,10 +62,6 @@ Green component of the color. The value is an integer ranging from 0 to 255.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Color-green: int--><!--Device-Color-green: int-End-->
@@ -95,10 +79,6 @@ Red component of the color. The value is an integer ranging from 0 to 255.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

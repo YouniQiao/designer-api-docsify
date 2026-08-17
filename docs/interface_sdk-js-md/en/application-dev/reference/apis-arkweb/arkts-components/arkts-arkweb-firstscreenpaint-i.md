@@ -1,12 +1,8 @@
 # FirstScreenPaint
 
-Defines the event information when the first screen paint is detected.
+Provides the event information when the first screen paint is detected, including the URL and paint time. It is suitable for scenarios where monitoring page first screen rendering performance is required, improving performance optimization accuracy and user experience.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface FirstScreenPaint--><!--Device-unnamed-declare interface FirstScreenPaint-End-->
 
@@ -18,15 +14,11 @@ Defines the event information when the first screen paint is detected.
 firstScreenPaintTime: number
 ```
 
-The first screen paint time of the url. <br>Unit:milliseconds.
+Time when the first screen paint is completed for the page pointed to by url. Unit: ms.
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FirstScreenPaint-firstScreenPaintTime: number--><!--Device-FirstScreenPaint-firstScreenPaintTime: number-End-->
 
@@ -38,15 +30,11 @@ The first screen paint time of the url. <br>Unit:milliseconds.
 navigationStartTime: number
 ```
 
-The navigation start time of the url. <br>Unit:milliseconds.
+Time when navigation starts for the page pointed to by url. Unit: ms.
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FirstScreenPaint-navigationStartTime: number--><!--Device-FirstScreenPaint-navigationStartTime: number-End-->
 
@@ -63,10 +51,6 @@ URL of the first screen paint statistics.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FirstScreenPaint-url: string--><!--Device-FirstScreenPaint-url: string-End-->
 

@@ -1,12 +1,8 @@
 # GeometryDefinition
 
-Define a geometric shape for mesh creation.
+An abstract class used to define the properties of specific geometry types.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare abstract class GeometryDefinition--><!--Device-unnamed-export declare abstract class GeometryDefinition-End-->
 

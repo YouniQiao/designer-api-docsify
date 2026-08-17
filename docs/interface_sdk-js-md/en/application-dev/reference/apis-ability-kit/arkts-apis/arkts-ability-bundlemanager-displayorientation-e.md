@@ -4,10 +4,6 @@ Enumerates the display orientations of the ability. It is applicable only to [Pa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export enum DisplayOrientation--><!--Device-bundleManager-export enum DisplayOrientation-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -21,10 +17,6 @@ UNSPECIFIED = 0
 Unspecified. The orientation is determined by the system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Landscape.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DisplayOrientation-LANDSCAPE = 1--><!--Device-DisplayOrientation-LANDSCAPE = 1-End-->
@@ -61,10 +49,6 @@ PORTRAIT = 2
 Portrait.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ The last display orientation is used.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DisplayOrientation-FOLLOW_RECENT = 3--><!--Device-DisplayOrientation-FOLLOW_RECENT = 3-End-->
@@ -101,10 +81,6 @@ LANDSCAPE_INVERTED = 4
 Reverse landscape.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,10 +98,6 @@ Reverse portrait.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DisplayOrientation-PORTRAIT_INVERTED = 5--><!--Device-DisplayOrientation-PORTRAIT_INVERTED = 5-End-->
@@ -141,10 +113,6 @@ AUTO_ROTATION = 6
 Automatically rotates when the sensor changes to landscape or portrait mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,10 +130,6 @@ Automatically rotates when the sensor changes to landscape mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DisplayOrientation-AUTO_ROTATION_LANDSCAPE = 7--><!--Device-DisplayOrientation-AUTO_ROTATION_LANDSCAPE = 7-End-->
@@ -181,10 +145,6 @@ AUTO_ROTATION_PORTRAIT = 8
 Automatically rotates when the sensor changes to portrait mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,10 +162,6 @@ Switched-determined auto rotation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DisplayOrientation-AUTO_ROTATION_RESTRICTED = 9--><!--Device-DisplayOrientation-AUTO_ROTATION_RESTRICTED = 9-End-->
@@ -221,10 +177,6 @@ AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10
 Switched-determined auto rotation in the horizontal direction.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -242,10 +194,6 @@ Switched-determined auto rotation in the vertical direction.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DisplayOrientation-AUTO_ROTATION_PORTRAIT_RESTRICTED = 11--><!--Device-DisplayOrientation-AUTO_ROTATION_PORTRAIT_RESTRICTED = 11-End-->
@@ -261,10 +209,6 @@ LOCKED = 12
 Locked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -282,10 +226,6 @@ Auto rotation controlled by the switch and determined by the system.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DisplayOrientation-AUTO_ROTATION_UNSPECIFIED = 13--><!--Device-DisplayOrientation-AUTO_ROTATION_UNSPECIFIED = 13-End-->
@@ -301,10 +241,6 @@ FOLLOW_DESKTOP = 14
 Following the orientation of the home screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

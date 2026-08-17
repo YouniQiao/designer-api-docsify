@@ -1,12 +1,8 @@
 # Parameter (System API)
 
-Provides parameter values for specific settings when an accessibility node element performs a specific action. Different action types require different parameter fields. For details about the mapping between action types and parameter fields, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)) (actions that can be performed by an accessibility node element).
+Provides parameter values for specific settings when an accessibility node element performs a specific action. Different action types require different parameter fields. For details about the mapping between action types and parameter fields, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api) (actions that can be performed by an accessibility node element).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class Parameter--><!--Device-unnamed-export declare class Parameter-End-->
 
@@ -20,15 +16,11 @@ Provides parameter values for specific settings when an accessibility node eleme
 accessibilityFocusScene?: AccessibilityFocusScene
 ```
 
-Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).ACCESSIBILITY_FOCUS. Accessibility focus scenario.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api).ACCESSIBILITY_FOCUS. Accessibility focus scenario.
 
 **Type:** [AccessibilityFocusScene](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,15 +36,11 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 customAction?: string
 ```
 
-Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)). EXECUTE_CUSTOM_ACTION. Name of the custom action.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api). EXECUTE_CUSTOM_ACTION. Name of the custom action.
 
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,15 +56,11 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 injectActionType?: InjectActionType
 ```
 
-Sets the injected action type. Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).INJECT_ACTION.
+Sets the injected action type. Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api).INJECT_ACTION.
 
 **Type:** [InjectActionType](arkts-accessibility-accessibility-injectactiontype-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,15 +76,11 @@ Sets the injected action type. Configured when executing [AccessibilityAction](a
 offset?: string
 ```
 
-Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SET_CURSOR_POSITION. Character offset for setting the cursor, for example, '1'.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api).SET_CURSOR_POSITION. Character offset for setting the cursor, for example, '1'.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Parameter-offset?: string--><!--Device-Parameter-offset?: string-End-->
 
@@ -114,15 +94,11 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 scrollType?: string
 ```
 
-Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SCROLL_FORWARD or SCROLL_BACKWARD. Component scroll type. The value 'fullScreen' means full-screen scrolling, and 'halfScreen' means half-screen scrolling.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api).SCROLL_FORWARD or SCROLL_BACKWARD. Component scroll type. The value 'fullScreen' means full-screen scrolling, and 'halfScreen' means half-screen scrolling.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Parameter-scrollType?: string--><!--Device-Parameter-scrollType?: string-End-->
 
@@ -136,15 +112,11 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 selectTextBegin?: string
 ```
 
-Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SET_SELECTION. Start coordinate for selecting text within the component, for example, '2'. Must be set together with selectTextEnd and selectTextInForWard.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api).SET_SELECTION. Start coordinate for selecting text within the component, for example, '2'. Must be set together with selectTextEnd and selectTextInForWard.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Parameter-selectTextBegin?: string--><!--Device-Parameter-selectTextBegin?: string-End-->
 
@@ -158,15 +130,11 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 selectTextEnd?: string
 ```
 
-Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SET_SELECTION. End coordinate for selecting text within the component, for example, '8'. Must be set together with selectTextBegin and selectTextInForWard.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api).SET_SELECTION. End coordinate for selecting text within the component, for example, '8'. Must be set together with selectTextBegin and selectTextInForWard.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Parameter-selectTextEnd?: string--><!--Device-Parameter-selectTextEnd?: string-End-->
 
@@ -180,15 +148,11 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 selectTextInForWard?: boolean
 ```
 
-Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SET_SELECTION. Whether to select forward when selecting text within the component. The value true means forward selection, and false means backward selection. Must be set together with selectTextBegin and selectTextEnd.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api).SET_SELECTION. Whether to select forward when selecting text within the component. The value true means forward selection, and false means backward selection. Must be set together with selectTextBegin and selectTextEnd.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Parameter-selectTextInForWard?: boolean--><!--Device-Parameter-selectTextInForWard?: boolean-End-->
 
@@ -202,15 +166,11 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 setText?: string
 ```
 
-Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SET_TEXT. Text content to set for the component.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api).SET_TEXT. Text content to set for the component.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Parameter-setText?: string--><!--Device-Parameter-setText?: string-End-->
 
@@ -224,15 +184,11 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 spanId?: string
 ```
 
-Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SPAN_CLICK. Text ID for tapping the hyperlink text.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api).SPAN_CLICK. Text ID for tapping the hyperlink text.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Parameter-spanId?: string--><!--Device-Parameter-spanId?: string-End-->
 

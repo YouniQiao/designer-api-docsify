@@ -2,13 +2,9 @@
 
 Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget.
 
-**Inheritance/Implementation:** ThreadWorker implements [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#WorkerEventTarget)
+**Inheritance/Implementation:** ThreadWorker implements [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#workereventtarget)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-worker-class ThreadWorker--><!--Device-worker-class ThreadWorker-End-->
 
@@ -43,10 +39,6 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-addEventListener(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-addEventListener(type: string, listener: WorkerEventListener): void-End-->
@@ -67,7 +59,7 @@ Adds an event listener for the Worker thread. This API provides the same functio
 | [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -93,10 +85,6 @@ A constructor used to create a ThreadWorker instance.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-ThreadWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
@@ -117,7 +105,7 @@ A constructor used to create a ThreadWorker instance.
 | [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed. |
 | [10200007](../errorcode-utils.md#10200007-abnormal-worker-file-path) | The worker file path is invalid. |
 
-## Examples
+**Examples**
 
 The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
 
@@ -138,10 +126,6 @@ dispatchEvent(event: Event): boolean
 Dispatches the event defined for the Worker thread.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -167,7 +151,7 @@ Dispatches the event defined for the Worker thread.
 | --- | --- |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -194,10 +178,6 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-off(type: string, listener?: WorkerEventListener): void--><!--Device-ThreadWorker-off(type: string, listener?: WorkerEventListener): void-End-->
@@ -218,7 +198,7 @@ Removes an event listener for the Worker thread. This API provides the same func
 | [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -256,10 +236,6 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-on(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-on(type: string, listener: WorkerEventListener): void-End-->
@@ -280,7 +256,7 @@ Adds an event listener for the Worker thread. This API provides the same functio
 | [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -307,10 +283,6 @@ Adds an event listener for the Worker thread and removes the event listener afte
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-once(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-once(type: string, listener: WorkerEventListener): void-End-->
@@ -331,7 +303,7 @@ Adds an event listener for the Worker thread and removes the event listener afte
 | [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -359,10 +331,6 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorker-postMessage(message: Object, transfer: ArrayBuffer[]): void--><!--Device-ThreadWorker-postMessage(message: Object, transfer: ArrayBuffer[]): void-End-->
@@ -383,7 +351,7 @@ Sends a message from the host thread to the Worker thread by transferring object
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Worker.ets
@@ -468,10 +436,6 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorker-postMessage(message: Object, options?: PostMessageOptions): void--><!--Device-ThreadWorker-postMessage(message: Object, options?: PostMessageOptions): void-End-->
@@ -492,7 +456,7 @@ Sends a message from the host thread to the Worker thread by transferring object
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { worker } from '@kit.ArkTS';
@@ -520,10 +484,6 @@ Sends a message from the host thread to the Worker thread. In the message, a sen
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorker-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void-End-->
@@ -544,7 +504,7 @@ Sends a message from the host thread to the Worker thread. In the message, a sen
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -597,10 +557,6 @@ Registers an object with the ThreadWorker instance of the host thread. In this w
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-registerGlobalCallObject(instanceName: string, globalCallObject: Object): void--><!--Device-ThreadWorker-registerGlobalCallObject(instanceName: string, globalCallObject: Object): void-End-->
@@ -620,7 +576,7 @@ Registers an object with the ThreadWorker instance of the host thread. In this w
 | --- | --- |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 //Index.ets
@@ -677,10 +633,6 @@ Removes all event listeners for the Worker thread.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-removeAllListener(): void--><!--Device-ThreadWorker-removeAllListener(): void-End-->
@@ -693,7 +645,7 @@ Removes all event listeners for the Worker thread.
 | --- | --- |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -716,10 +668,6 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-removeEventListener(type: string, callback?: WorkerEventListener): void--><!--Device-ThreadWorker-removeEventListener(type: string, callback?: WorkerEventListener): void-End-->
@@ -739,7 +687,7 @@ Removes an event listener for the Worker thread. This API provides the same func
 | --- | --- |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -766,10 +714,6 @@ Terminates the Worker thread to stop it from receiving messages.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorker-terminate(): void--><!--Device-ThreadWorker-terminate(): void-End-->
@@ -782,7 +726,7 @@ Terminates the Worker thread to stop it from receiving messages.
 | --- | --- |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -802,10 +746,6 @@ Unregisters an object with the ThreadWorker instance of the host thread. This AP
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-unregisterGlobalCallObject(instanceName?: string): void--><!--Device-ThreadWorker-unregisterGlobalCallObject(instanceName?: string): void-End-->
@@ -824,7 +764,7 @@ Unregisters an object with the ThreadWorker instance of the host thread. This AP
 | --- | --- |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -861,10 +801,6 @@ Called when an exception occurs within the lifecycle of the Worker thread. The e
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ThreadWorker-onAllErrors?: ErrorCallback--><!--Device-ThreadWorker-onAllErrors?: ErrorCallback-End-->
@@ -882,10 +818,6 @@ Called when an exception occurs during worker execution. The event handler is ex
 **Type:** (err: ErrorEvent) =&gt; void
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -905,10 +837,6 @@ Called when the Worker thread exits. The event handler is executed in the host t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorker-onexit?: (code: number) => void--><!--Device-ThreadWorker-onexit?: (code: number) => void-End-->
@@ -927,10 +855,6 @@ Called when the host thread receives a message sent by the Worker thread through
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void-End-->
@@ -948,10 +872,6 @@ Called when the Worker thread receives a message that cannot be serialized. The 
 **Type:** (event: MessageEvents) =&gt; void
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

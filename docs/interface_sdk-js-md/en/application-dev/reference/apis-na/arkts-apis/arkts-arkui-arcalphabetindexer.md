@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ArcAlphabetIndexer](arkts-na-arkui-arcalphabetindexer-arcalphabetindexer-f.md#ArcAlphabetIndexer) | Defines ArcAlphabetIndexer Component. |
+| [ArcAlphabetIndexer](arkts-na-arkui-arcalphabetindexer-arcalphabetindexer-f.md#arcalphabetindexer) | Defines ArcAlphabetIndexer Component. |
 
 ### Interfaces
 

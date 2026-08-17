@@ -16,10 +16,6 @@ Get the current input method subtype
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype--><!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -30,7 +26,7 @@ Get the current input method subtype
 | --- | --- |
 | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | the subtype of the current input method. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';

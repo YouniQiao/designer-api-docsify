@@ -4,11 +4,9 @@ The Scope interface is used to describe the valid range of a field.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ScopeHelper](arkts-arkts-util-scopehelper-c.md#ScopeHelper)
+**Substitutes:** [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#scopehelper)
 
 <!--Device-util-class Scope--><!--Device-util-class Scope-End-->
 
@@ -30,11 +28,9 @@ Limits a value to this **Scope**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clamp](arkts-arkts-util-scopehelper-c.md#clamp)
+**Substitutes:** [clamp](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#clamp)
 
 <!--Device-Scope-clamp(value: ScopeType): ScopeType--><!--Device-Scope-clamp(value: ScopeType): ScopeType-End-->
 
@@ -44,15 +40,15 @@ Limits a value to this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
+| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
+| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -94,8 +90,6 @@ A constructor used to create a **Scope** object with the specified upper and low
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** constructor
@@ -108,10 +102,10 @@ A constructor used to create a **Scope** object with the specified upper and low
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
+| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
+| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -151,11 +145,9 @@ Checks whether a value is within this **Scope**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
+**Substitutes:** [contains](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#contains)
 
 <!--Device-Scope-contains(value: ScopeType): boolean--><!--Device-Scope-contains(value: ScopeType): boolean-End-->
 
@@ -165,7 +157,7 @@ Checks whether a value is within this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
+| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
@@ -173,7 +165,7 @@ Checks whether a value is within this **Scope**.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the value is within this **Scope**; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -215,11 +207,9 @@ Checks whether a range is within this **Scope**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
+**Substitutes:** [contains](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#contains)
 
 <!--Device-Scope-contains(range: Scope): boolean--><!--Device-Scope-contains(range: Scope): boolean-End-->
 
@@ -237,7 +227,7 @@ Checks whether a range is within this **Scope**.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the range is within this **Scope**; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -281,8 +271,6 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** expand
@@ -295,8 +283,8 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit. |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit. |
+| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
@@ -304,7 +292,7 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 | --- | --- |
 | [Scope](arkts-arkts-util-scope-c.md) | Union set of this **Scope** and the given lower and upper limits. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -347,8 +335,6 @@ Obtains the union set of this **Scope** and the given **Scope**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** expand
@@ -369,7 +355,7 @@ Obtains the union set of this **Scope** and the given **Scope**.
 | --- | --- |
 | [Scope](arkts-arkts-util-scope-c.md) | Union set of this **Scope** and the given **Scope**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -413,8 +399,6 @@ Obtains the union set of this **Scope** and the given value.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** expand
@@ -427,7 +411,7 @@ Obtains the union set of this **Scope** and the given value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
+| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
@@ -435,7 +419,7 @@ Obtains the union set of this **Scope** and the given value.
 | --- | --- |
 | [Scope](arkts-arkts-util-scope-c.md) | Union set of this **Scope** and the given value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -477,11 +461,9 @@ Obtains the lower limit of this **Scope**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getLower](arkts-arkts-util-scopehelper-c.md#getLower)
+**Substitutes:** [getLower](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#getlower)
 
 <!--Device-Scope-getLower(): ScopeType--><!--Device-Scope-getLower(): ScopeType-End-->
 
@@ -491,9 +473,9 @@ Obtains the lower limit of this **Scope**.
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | Lower limit of this **Scope**. |
+| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Lower limit of this **Scope**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -534,11 +516,9 @@ Obtains the upper limit of this **Scope**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getUpper](arkts-arkts-util-scopehelper-c.md#getUpper)
+**Substitutes:** [getUpper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#getupper)
 
 <!--Device-Scope-getUpper(): ScopeType--><!--Device-Scope-getUpper(): ScopeType-End-->
 
@@ -548,9 +528,9 @@ Obtains the upper limit of this **Scope**.
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | Upper limit of this **Scope**. |
+| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Upper limit of this **Scope**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -591,8 +571,6 @@ Obtains the intersection of this **Scope** and the given **Scope**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** intersect
@@ -613,7 +591,7 @@ Obtains the intersection of this **Scope** and the given **Scope**.
 | --- | --- |
 | [Scope](arkts-arkts-util-scope-c.md) | Intersection of this **Scope** and the given **Scope**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -657,8 +635,6 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** intersect
@@ -671,8 +647,8 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit. |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit. |
+| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
@@ -680,7 +656,7 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 | --- | --- |
 | [Scope](arkts-arkts-util-scope-c.md) | Intersection of this **Scope** and the given lower and upper limits. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -723,11 +699,9 @@ Obtains a string representation that contains this **Scope**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#toString)
+**Substitutes:** [toString](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#tostring)
 
 <!--Device-Scope-toString(): string--><!--Device-Scope-toString(): string-End-->
 
@@ -739,7 +713,7 @@ Obtains a string representation that contains this **Scope**.
 | --- | --- |
 | string | String representation containing the **Scope**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {

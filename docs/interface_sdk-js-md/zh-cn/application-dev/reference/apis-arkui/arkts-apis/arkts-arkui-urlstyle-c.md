@@ -4,10 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class UrlStyle--><!--Device-unnamed-declare class UrlStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ constructor(url: string)
 超链接对象的构造函数。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,10 +43,6 @@ readonly url: string
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

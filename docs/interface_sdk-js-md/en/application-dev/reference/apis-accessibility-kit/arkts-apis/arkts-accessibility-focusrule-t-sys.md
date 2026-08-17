@@ -9,10 +9,6 @@ Describes how to determine the focus capability of the starting node and its chi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export type FocusRule = 'bypassSelf' | 'bypassSelfDescendants' |'checkSelf' | 'checkSelfBypassDescendants'--><!--Device-unnamed-export type FocusRule = 'bypassSelf' | 'bypassSelfDescendants' |'checkSelf' | 'checkSelfBypassDescendants'-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

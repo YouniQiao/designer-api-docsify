@@ -16,10 +16,6 @@ Starts a page through an ability, on which users can touch the button to downloa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE_OPEN
 
 <!--Device-eSIM-function addProfile(profile: DownloadableProfile): Promise<boolean>--><!--Device-eSIM-function addProfile(profile: DownloadableProfile): Promise<boolean>-End-->
@@ -48,7 +44,7 @@ Starts a page through an ability, on which users can touch the button to downloa
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,9 +4,7 @@ Defines the triggered callback when the application receive an new url of an app
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnTouchIconUrlReceivedEvent--><!--Device-unnamed-export declare interface OnTouchIconUrlReceivedEvent-End-->
 
@@ -24,9 +22,7 @@ Corresponding to whether apple-touch-icon is precomposited.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnTouchIconUrlReceivedEvent-precomposed: boolean--><!--Device-OnTouchIconUrlReceivedEvent-precomposed: boolean-End-->
 
@@ -44,9 +40,7 @@ The apple-touch-icon URL address received.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnTouchIconUrlReceivedEvent-url: string--><!--Device-OnTouchIconUrlReceivedEvent-url: string-End-->
 

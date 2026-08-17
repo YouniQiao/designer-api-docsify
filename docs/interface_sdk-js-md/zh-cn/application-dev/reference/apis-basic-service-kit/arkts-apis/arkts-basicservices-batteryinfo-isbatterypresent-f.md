@@ -10,9 +10,7 @@ function isBatteryPresent(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-batteryInfo-function isBatteryPresent(): boolean--><!--Device-batteryInfo-function isBatteryPresent(): boolean-End-->
 
@@ -24,7 +22,7 @@ function isBatteryPresent(): boolean
 | --- | --- |
 | boolean | 返回true表示支持电池或电池在位，返回false表示不支持电池或电池不在位。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // ArkTS-Sta示例

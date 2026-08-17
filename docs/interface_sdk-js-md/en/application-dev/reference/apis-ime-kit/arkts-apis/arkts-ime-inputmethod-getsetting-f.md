@@ -16,10 +16,6 @@ Input method setting
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-function getSetting(): InputMethodSetting--><!--Device-inputMethod-function getSetting(): InputMethodSetting-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -36,7 +32,7 @@ Input method setting
 | --- | --- |
 | [12800007](../errorcode-inputmethod-framework.md#12800007-input-method-setter-error) | input method setter error. Possible cause: create InputMethodSetting object failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();

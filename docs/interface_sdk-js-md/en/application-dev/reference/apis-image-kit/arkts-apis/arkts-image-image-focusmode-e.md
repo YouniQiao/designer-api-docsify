@@ -4,10 +4,6 @@ Enumerates the focus modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-enum FocusMode--><!--Device-image-enum FocusMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -21,10 +17,6 @@ AF_A = 0
 Intelligent autofocus.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Single autofocus.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FocusMode-AF_S = 1--><!--Device-FocusMode-AF_S = 1-End-->
@@ -62,10 +50,6 @@ Continuous auto focus.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FocusMode-AF_C = 2--><!--Device-FocusMode-AF_C = 2-End-->
@@ -81,10 +65,6 @@ MF = 3
 Manual focus.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

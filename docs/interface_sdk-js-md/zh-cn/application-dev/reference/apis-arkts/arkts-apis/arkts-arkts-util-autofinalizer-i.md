@@ -4,10 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 <!--Device-util-interface AutoFinalizer--><!--Device-util-interface AutoFinalizer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -21,10 +17,6 @@ onFinalization(heldValue: T): void
 开发者自定义的用于释放资源的回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

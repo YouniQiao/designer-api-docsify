@@ -4,10 +4,6 @@ Describes the parameters for the startup animation. The configuration is valid o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface StartAnimationParams--><!--Device-window-interface StartAnimationParams-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -29,10 +25,6 @@ The type of window animation
 **Type:** [AnimationType](arkts-arkui-window-animationtype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StartAnimationParams-type: AnimationType--><!--Device-StartAnimationParams-type: AnimationType-End-->
 

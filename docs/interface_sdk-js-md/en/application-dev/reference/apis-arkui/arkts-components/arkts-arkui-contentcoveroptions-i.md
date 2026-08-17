@@ -1,14 +1,10 @@
 # ContentCoverOptions
 
-Inherited from [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions). Provides content options of the modal.
+Inherited from [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions). Provides content options of the modal.
 
-**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)
+**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ContentCoverOptions--><!--Device-unnamed-declare interface ContentCoverOptions-End-->
 
@@ -27,10 +23,6 @@ Whether the full-screen modal adapts to the safe area. **true** indicates the fu
 **Default:** false
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,10 +46,6 @@ System transition mode of the modal. Default value: **ModalTransition.DEFAULT**.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -78,10 +66,6 @@ Callback invoked to prevent a user attempt to dismiss the modal. **NOTE：**Afte
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -101,10 +85,6 @@ Custom transition mode of the modal.
 **Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

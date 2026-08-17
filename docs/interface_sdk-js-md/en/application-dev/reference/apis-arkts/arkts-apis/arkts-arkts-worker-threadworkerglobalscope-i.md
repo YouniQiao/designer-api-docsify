@@ -2,13 +2,9 @@
 
 Implements communication between the Worker thread and the host thread. The postMessage API is used to send messages to the host thread, and the close API is used to terminate the Worker thread. The ThreadWorkerGlobalScope class inherits from GlobalScope9+.
 
-**Inheritance/Implementation:** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md#GlobalScope)
+**Inheritance/Implementation:** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md#globalscope)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ThreadWorkerGlobalScope--><!--Device-unnamed-export interface ThreadWorkerGlobalScope-End-->
 
@@ -43,10 +39,6 @@ Calls a method of an object registered with the host thread. This API is called 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorkerGlobalScope-callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object--><!--Device-ThreadWorkerGlobalScope-callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object-End-->
@@ -78,7 +70,7 @@ Calls a method of an object registered with the host thread. This API is called 
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 | [10200020](../errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) | The method to be called is not callable or is an async method or a generator. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 //Index.ets
@@ -137,10 +129,6 @@ Terminates the Worker thread to stop it from receiving messages.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorkerGlobalScope-close(): void--><!--Device-ThreadWorkerGlobalScope-close(): void-End-->
@@ -153,7 +141,7 @@ Terminates the Worker thread to stop it from receiving messages.
 | --- | --- |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -183,10 +171,6 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void-End-->
@@ -207,7 +191,7 @@ Sends a message from the Worker thread to the host thread by transferring object
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -241,10 +225,6 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
@@ -265,7 +245,7 @@ Sends a message from the Worker thread to the host thread by transferring object
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -297,10 +277,6 @@ postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[
 Sends a message from the Worker thread to the main thread by transferring object ownership, and inserted into the head of the corresponding priority queue.Except for the worker thread to the main thread, this interface has the same function as postMessage.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -335,10 +311,6 @@ Sends a message from the Worker thread to the host thread. In the message, a sen
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorkerGlobalScope-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void-End-->
@@ -359,7 +331,7 @@ Sends a message from the Worker thread to the host thread. In the message, a sen
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The worker file path is entry/src/main/ets/workers/Worker.ets.
@@ -413,10 +385,6 @@ Called when the Worker thread receives a message sent by the host thread through
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
@@ -434,10 +402,6 @@ Called when the Worker thread receives a message that cannot be deserialized. Th
 **Type:** (this: ThreadWorkerGlobalScope, ev: MessageEvents) =&gt; void
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

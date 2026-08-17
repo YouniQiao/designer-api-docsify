@@ -16,10 +16,6 @@ Obtains the operator name of the SIM card in a specified slot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-function getOpNameSync(slotId: int): string--><!--Device-sim-function getOpNameSync(slotId: int): string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -36,7 +32,7 @@ Obtains the operator name of the SIM card in a specified slot.
 | --- | --- |
 | string | Returns the operator name; returns an empty string if no SIM card is inserted or no operator name is matched. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

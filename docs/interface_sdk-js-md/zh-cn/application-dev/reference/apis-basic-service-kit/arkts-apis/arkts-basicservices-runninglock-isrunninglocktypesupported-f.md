@@ -10,11 +10,9 @@ function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallba
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [isSupported](arkts-basicservices-runninglock-issupported-f.md#isSupported)
+**替代接口：** [isSupported](arkts-basicservices-runninglock-issupported-f.md#issupported)
 
 <!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void--><!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void-End-->
 
@@ -25,9 +23,9 @@ function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 | 需要查询的锁的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当查询成功，err为undefined，data为获取到的支持情况，返回true表示支持，返回false表示不支持；否则为错误对象 。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当查询成功，err为undefined，data为获取到的支持情况，返回true表示支持，返回false表示不支持；否则为错误对象 。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND, (err: Error, data: boolean) => {
@@ -50,11 +48,9 @@ function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [isSupported](arkts-basicservices-runninglock-issupported-f.md#isSupported)
+**替代接口：** [isSupported](arkts-basicservices-runninglock-issupported-f.md#issupported)
 
 <!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>--><!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>-End-->
 
@@ -72,7 +68,7 @@ function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示支持；返回false表示不支持。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND)

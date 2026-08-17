@@ -4,11 +4,9 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration)
+**替代接口：** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md#configuration)
 
 <!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
 
@@ -26,11 +24,9 @@ colorMode?: ConfigurationConstant.ColorMode
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [colorMode](arkts-ability-app-ability-configuration-configuration-i.md#colorMode)
+**替代接口：** [colorMode](arkts-ability-app-ability-configuration-configuration-i.md#colormode)
 
 <!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
 
@@ -47,8 +43,6 @@ language?: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 

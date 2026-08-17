@@ -4,10 +4,6 @@ Returns the notification priority master switch state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface EnabledPriorityNotificationCallbackData--><!--Device-unnamed-export interface EnabledPriorityNotificationCallbackData-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -25,10 +21,6 @@ Whether the priority notification is enabled. - **true**: The priority notificat
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EnabledPriorityNotificationCallbackData-readonly enable: boolean--><!--Device-EnabledPriorityNotificationCallbackData-readonly enable: boolean-End-->
 

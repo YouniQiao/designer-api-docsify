@@ -4,10 +4,6 @@ AutoFillType enumerates the types of elements to be automatically filled in.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum AutoFillType--><!--Device-unnamed-export enum AutoFillType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -23,10 +19,6 @@ UNSPECIFIED = 0
 Undefined type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ Password.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -71,10 +59,6 @@ USER_NAME = 2
 Username.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,10 +80,6 @@ New password.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -120,10 +100,6 @@ Detailed address with street information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-FULL_STREET_ADDRESS = 4--><!--Device-AutoFillType-FULL_STREET_ADDRESS = 4-End-->
@@ -141,10 +117,6 @@ HOUSE_NUMBER = 5
 House number.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,10 +136,6 @@ District.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-DISTRICT_ADDRESS = 6--><!--Device-AutoFillType-DISTRICT_ADDRESS = 6-End-->
@@ -185,10 +153,6 @@ CITY_ADDRESS = 7
 City.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,10 +172,6 @@ Province.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-PROVINCE_ADDRESS = 8--><!--Device-AutoFillType-PROVINCE_ADDRESS = 8-End-->
@@ -229,10 +189,6 @@ COUNTRY_ADDRESS = 9
 Country/Region.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,10 +208,6 @@ Full name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-PERSON_FULL_NAME = 10--><!--Device-AutoFillType-PERSON_FULL_NAME = 10-End-->
@@ -273,10 +225,6 @@ PERSON_LAST_NAME = 11
 Last name.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -296,10 +244,6 @@ First name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-PERSON_FIRST_NAME = 12--><!--Device-AutoFillType-PERSON_FIRST_NAME = 12-End-->
@@ -317,10 +261,6 @@ PHONE_NUMBER = 13
 Mobile number.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -340,10 +280,6 @@ Country/Region code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-PHONE_COUNTRY_CODE = 14--><!--Device-AutoFillType-PHONE_COUNTRY_CODE = 14-End-->
@@ -361,10 +297,6 @@ FULL_PHONE_NUMBER = 15
 Mobile number with the country/region code.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -384,10 +316,6 @@ Email address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-EMAIL_ADDRESS = 16--><!--Device-AutoFillType-EMAIL_ADDRESS = 16-End-->
@@ -405,10 +333,6 @@ BANK_CARD_NUMBER = 17
 Bank card number.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -428,10 +352,6 @@ ID card number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-ID_CARD_NUMBER = 18--><!--Device-AutoFillType-ID_CARD_NUMBER = 18-End-->
@@ -449,10 +369,6 @@ NICKNAME = 24
 Nickname.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -472,10 +388,6 @@ Detailed address without street information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-DETAIL_INFO_WITHOUT_STREET = 25--><!--Device-AutoFillType-DETAIL_INFO_WITHOUT_STREET = 25-End-->
@@ -493,10 +405,6 @@ FORMAT_ADDRESS = 26
 Standard address.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -516,10 +424,6 @@ Passport number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-PASSPORT_NUMBER = 27--><!--Device-AutoFillType-PASSPORT_NUMBER = 27-End-->
@@ -537,10 +441,6 @@ VALIDITY = 28
 Validity period of the passport.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -560,10 +460,6 @@ Location where the passport was issued.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-ISSUE_AT = 29--><!--Device-AutoFillType-ISSUE_AT = 29-End-->
@@ -581,10 +477,6 @@ ORGANIZATION = 30
 Invoice title.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -604,10 +496,6 @@ Tax ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-TAX_ID = 31--><!--Device-AutoFillType-TAX_ID = 31-End-->
@@ -625,10 +513,6 @@ ADDRESS_CITY_AND_STATE = 32
 Location (city and state).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -648,10 +532,6 @@ Flight number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-FLIGHT_NUMBER = 33--><!--Device-AutoFillType-FLIGHT_NUMBER = 33-End-->
@@ -669,10 +549,6 @@ LICENSE_NUMBER = 34
 Driver's license number.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -692,10 +568,6 @@ Driver's license file number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-LICENSE_FILE_NUMBER = 35--><!--Device-AutoFillType-LICENSE_FILE_NUMBER = 35-End-->
@@ -713,10 +585,6 @@ LICENSE_PLATE = 36
 License plate.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -736,10 +604,6 @@ Vehicle engine number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoFillType-ENGINE_NUMBER = 37--><!--Device-AutoFillType-ENGINE_NUMBER = 37-End-->
@@ -757,10 +621,6 @@ LICENSE_CHASSIS_NUMBER = 38
 Chassis number (VIN) of a vehicle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

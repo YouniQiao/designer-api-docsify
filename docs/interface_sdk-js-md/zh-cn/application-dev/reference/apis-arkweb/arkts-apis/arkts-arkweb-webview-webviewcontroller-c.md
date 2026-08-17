@@ -1,12 +1,8 @@
 # WebviewController
 
-Provides methods for controlling the web controller.
+WebviewController是Web组件各种行为的核心控制器，提供网页加载与导航控制、JavaScript交互、生命周期、滚动控制、页面缩放与内容查找、消息端口通信、缓存与证书管理等广泛功能。一个 WebviewController对象只能控制一个Web组件，且必须在Web组件和WebviewController绑定后，才能调用WebviewController上的方法（静态方法除外）。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 <!--Device-webview-class WebviewController--><!--Device-webview-class WebviewController-End-->
 
@@ -18,13 +14,9 @@ Provides methods for controlling the web controller.
 accessBackward(): boolean
 ```
 
-当前页面是否可后退，即当前页面是否有返回历史记录。
+当前页面是否可后退，即当前页面是否有返回历史记录。 可以结合使用[getBackForwardEntries](#getbackforwardentries)来获取当前WebView的历史信息列表，以及使用 [accessStep](#accessstep)来判断是否可以按照给定的步数前进或后退。 > **说明：** > > 在Web组件首次加载过程中调用[setCustomUserAgent](#setcustomuseragent)，可能会导致在当前存在多个历史节点的情况下，获取 > 的accessBackward实际为false，即没有后退节点。建议先调用setCustomUserAgent方法设置UserAgent，再通过loadUrl加载具体页面。 > > 该现象是由于在Web组件首次加载时，调用[setCustomUserAgent](#setcustomuseragent)会导致组件重新加载并保持初始历史节点的 > 状态。随后新增的节点将替换初始历史节点，不会生成新的历史节点，导致accessBackward为false。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,13 +42,9 @@ accessBackward(): boolean
 accessForward(): boolean
 ```
 
-当前页面是否可前进，即当前页面是否有前进历史记录。
+当前页面是否可前进，即当前页面是否有前进历史记录。 可以结合使用[getBackForwardEntries](#getbackforwardentries)来获取当前WebView的历史信息列表，以及使用 [accessStep](#accessstep)来判断是否可以按照给定的步数前进或后退。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -85,10 +73,6 @@ accessStep(step: number): boolean
 当前页面是否可前进或者后退给定的step步。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -125,10 +109,6 @@ static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): v
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void--><!--Device-WebviewController-static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void-End-->
@@ -154,13 +134,9 @@ static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): v
 avoidVisibleViewportBottom(avoidHeight: number): void
 ```
 
-设置Web网页可视视口底部避让高度。 > **说明：** > > - avoidHeight有效值区间为[0, Web组件高度]，超出有效值区间时取边界值。 > > - 该接口高度设置为非0时，Web组件位置和尺寸不变，可视视口向上避让avoidHeight，表现为Web网页内容抬升avoidHeight。该接口一般用于应用自定义网页底部避让区，不建议和点击web网页可编辑区拉起键盘的 > 场景同时使用。同时使用时，键盘弹起避让模式将使用OVERLAYS_CONTENT。 > > - 该接口高度设置为0时，Web网页内容可恢复，键盘弹起避让模式将使用 > [keyboardAvoidMode()](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#keyboardavoidmode12) > 声明的模式。
+设置Web网页可视视口底部避让高度。 > **说明：** > > - avoidHeight有效值区间为[0, Web组件高度]，超出有效值区间时取边界值。 > > - 该接口高度设置为非0时，Web组件位置和尺寸不变，可视视口向上避让avoidHeight，表现为Web网页内容抬升avoidHeight。该接口一般用于应用自定义网页底部避让区，不建议和点击web网页可编辑区拉起键盘的 > 场景同时使用。同时使用时，键盘弹起避让模式将使用OVERLAYS_CONTENT。 > > - 该接口高度设置为0时，Web网页内容可恢复，键盘弹起避让模式将使用keyboardAvoidMode()声明的模式。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: number): void--><!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: number): void-End-->
 
@@ -170,7 +146,7 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| avoidHeight | number | 是 | 设置Web网页可视视口底部避让高度。<br>单位：vp<br>合法取值范围：0~Web组件高度<br>非法值设置行为：小于0取值为0，大于Web组件高度取值为 Web组件高度。 |
+| avoidHeight | number | 是 | 设置Web网页可视视口底部避让高度。 <br>单位：vp <br>合法取值范围：0~Web组件高度 <br>非法值设置行为：小于0取值为0，大于Web组件高度取值为Web组件高度。 |
 
 **错误码：**
 
@@ -188,10 +164,6 @@ backOrForward(step: number): void
 按照历史栈，前进或者后退指定步长的页面，当历史栈中不存在对应步长的页面时，不会进行页面跳转。 前进或者后退页面时，直接使用已加载过的网页，无需重新加载网页。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -218,13 +190,9 @@ backOrForward(step: number): void
 backward(): void
 ```
 
-按照历史栈，后退一个页面。一般结合[accessBackward](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#accessBackward)一起使用。
+按照历史栈，后退一个页面。一般结合[accessBackward](#accessbackward)一起使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -248,10 +216,6 @@ static clearBlanklessLoadingCache(keys?: Array<string>) : void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void--><!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -260,7 +224,7 @@ static clearBlanklessLoadingCache(keys?: Array<string>) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 否 | 清除Blankless优化方案页面的key值列表，key值为 [getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getBlanklessInfoWithKey)中指定过的。<br>默认值：所有Blankless优化 方案缓存的页面key列表。<br>合法取值范围：长度不超过2048，key列表长度&lt;=100。key和加载页面时输入给ArkWeb的相同。<br>非法值设置行为：传入undefined/null会抛出异常错误码401； key长度超过2048时该key不生效；长度超过100时，取前100个；当为空时，使用默认值。 |
+| keys | Array&lt;string&gt; | 否 | 清除Blankless优化方案页面的key值列表， key值为[getBlanklessInfoWithKey](#getblanklessinfowithkey)中指定过的。 <br>默认值：所有Blankless优化方案缓存的页面key列表。 <br>合法取值范围：长度不超过2048，key列表长度&lt;=100。key和加载页面时输入给ArkWeb的相同。 <br>非法值设置行为：传入undefined/null会抛出异常错误码401；key长度超过2048时该key不生效；长度超过100时，取前100个；当为空时，使用默认值。 |
 
 **错误码：**
 
@@ -277,10 +241,6 @@ clearClientAuthenticationCache(): void
 清除Web组件记录的客户端证书请求事件对应的用户操作行为。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -300,13 +260,9 @@ clearClientAuthenticationCache(): void
 clearHistory(): void
 ```
 
-删除所有前进后退记录。
+删除所有前进后退记录，不建议在onErrorReceive与onPageBegin中调用clearHistory，会造成异常退出。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -329,10 +285,6 @@ static clearHostIP(hostName: string): void
 清除指定主机域名解析后的IP地址。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -362,10 +314,6 @@ static clearIntelligentTrackingPreventionBypassingList(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void--><!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void-End-->
@@ -384,13 +332,9 @@ static clearIntelligentTrackingPreventionBypassingList(): void
 clearMatches(): void
 ```
 
-清除所有通过[searchAllAsync](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#searchAllAsync)匹配到的高亮字符查找结果。
+清除所有通过[searchAllAsync](#searchallasync)匹配到的高亮字符查找结果。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -410,13 +354,9 @@ clearMatches(): void
 static clearPrefetchedResource(cacheKeyList: Array<string>): void
 ```
 
-根据指定的缓存key列表清除对应的预获取资源缓存。入参中的缓存key必须是[prefetchResource](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#prefetchResource)指定预获取到的资 源缓存key。
+根据指定的缓存key列表清除对应的预获取资源缓存。入参中的缓存key必须是[prefetchResource](#prefetchresource)指定预获取到的资 源缓存key。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -436,13 +376,9 @@ static clearPrefetchedResource(cacheKeyList: Array<string>): void
 static clearServiceWorkerWebSchemeHandler(): void
 ```
 
-Clear all web service worker scheme handlers.
+清除应用中设置的所有用于拦截ServiceWorker的WebSchemeHandler。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -459,10 +395,6 @@ clearSslCache(): void
 清除Web组件记录的SSL证书错误事件对应的用户操作行为。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -482,13 +414,9 @@ clearSslCache(): void
 clearWebSchemeHandler(): void
 ```
 
-Clear all web scheme handlers for related web component.
+清除Web组件设置的所有WebSchemeHandler。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -512,10 +440,6 @@ closeAllMediaPresentations(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-closeAllMediaPresentations(): void--><!--Device-WebviewController-closeAllMediaPresentations(): void-End-->
@@ -538,10 +462,6 @@ closeCamera(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-closeCamera(): void--><!--Device-WebviewController-closeCamera(): void-End-->
@@ -560,13 +480,9 @@ closeCamera(): void
 constructor(webTag?: string)
 ```
 
-A constructor used to create a WebviewController object.
+用于创建 WebviewController 对象的构造函数。 > **说明：** > > 不传参：new webview.WebviewController()表示构造函数为空，不使用C API时不需要传参。 > > 传参且参数是合法字符串：new webview.WebviewController("xxx")，用于开发者区分多实例，并调用对应实例下的方法。 > > 传入参数为空：new webview.WebviewController("")或new webview.WebviewController(undefined)，该场景下参数无意义，无法区分多个实例，直接返回 > undefined，需要开发者判断返回值是否正常。 > > Web组件销毁后会解绑WebViewController，之后调用WebviewController的非静态方法会抛出 > [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联)异常，应注意调 > 用时机和捕获异常，防止进程异常退出。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -578,7 +494,7 @@ A constructor used to create a WebviewController object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| webTag | string | 否 | specified the name of the web component, Empty by default. |
+| webTag | string | 否 | 指定了 Web 组件的名称。 |
 
 ## createPdf
 
@@ -586,13 +502,9 @@ A constructor used to create a WebviewController object.
 createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void
 ```
 
-Rendering current Web page into Pdf data, return the result in async mode.
+异步callback方式获取指定网页的数据流。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -604,8 +516,8 @@ Rendering current Web page into Pdf data, return the result in async mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](../../apis-na/arkts-apis/arkts-na-webview-pdfconfiguration-i.md) | 是 | Parameters required for creating a PDF file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](../../apis-na/arkts-apis/arkts-na-webview-pdfdata-c.md)&gt; | 是 | Callback used to return the data stream of an online PDF file. |
+| configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | 生成PDF所需参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 | 回调返回网页PDF数据流。 |
 
 **错误码：**
 
@@ -620,13 +532,9 @@ Rendering current Web page into Pdf data, return the result in async mode.
 createPdf(configuration: PdfConfiguration): Promise<PdfData>
 ```
 
-Rendering current Web page into Pdf data, return the result in promise mode.
+以Promise方式异步获取指定网页的数据流。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -638,13 +546,13 @@ Rendering current Web page into Pdf data, return the result in promise mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](../../apis-na/arkts-apis/arkts-na-webview-pdfconfiguration-i.md) | 是 | Parameters required for creating a PDF file. |
+| configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | 生成PDF所需参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PdfData](../../apis-na/arkts-apis/arkts-na-webview-pdfdata-c.md)&gt; | Promise used to return the data stream of a web page. |
+| Promise&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | Promise实例，返回网页PDF数据流（PdfData对象，包含ArrayBuffer表示的PDF二进制数据）。 |
 
 **错误码：**
 
@@ -663,10 +571,6 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>--><!--Device-WebviewController-createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>-End-->
@@ -677,13 +581,13 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isExtentionType | boolean | 否 | 是否使用扩展增强接口。<br>默认值：false。<br>**起始版本：** 10 |
+| isExtentionType | boolean | 否 | 是否使用扩展增强接口。 <br>true表示使用扩展增强接口，false表示不使用扩展增强接口。 <br>默认值：false。 <br>传入undefined或null会抛出异常错误码401。<br>**起始版本：** 10 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[WebMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md)&gt; | web消息端口列表。 |
+| Array&lt;[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)&gt; | web消息端口列表。 |
 
 **错误码：**
 
@@ -698,13 +602,9 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter
 ```
 
-Creates a PrintDocumentAdapter instance to provide content for printing.
+创建web相关打印功能。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter--><!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter-End-->
 
@@ -714,13 +614,13 @@ Creates a PrintDocumentAdapter instance to provide content for printing.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jobName | string | 是 | Name of the file to print. |
+| jobName | string | 是 | 需要打印的文件名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| print.PrintDocumentAdapter | PrintDocumentAdapter** instance created. |
+| print.PrintDocumentAdapter | 打印文档的适配器，用于控制打印行为和打印任务，可通过打印服务打印当前网页内容。 |
 
 **错误码：**
 
@@ -739,10 +639,6 @@ static customizeSchemes(schemes: Array<WebCustomScheme>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>): void--><!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>): void-End-->
@@ -753,7 +649,7 @@ static customizeSchemes(schemes: Array<WebCustomScheme>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](../../apis-na/arkts-apis/arkts-na-webview-webcustomscheme-i.md)&gt; | 是 | 自定义协议配置，最多支持同时配置10个自定义协议。 |
+| schemes | Array&lt;[WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md)&gt; | 是 | 自定义协议配置，最多支持同时配置10个自定义协议。 |
 
 **错误码：**
 
@@ -772,10 +668,6 @@ static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: bool
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void--><!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void-End-->
@@ -786,8 +678,8 @@ static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: bool
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](../../apis-na/arkts-apis/arkts-na-webview-webcustomscheme-i.md)&gt; | 是 | 自定义协议配置，最多支持同时配置10个自定义协议。 |
-| lazyInitWebEngine | boolean | 是 | 为true时：接口内部跳过初始化WebEngine。 临时存储注册的方案，当它实际被传递给WebEngine时，这些方案将被传递给WebEngine 初始化。当false时：接口内部自动进行WebEngine初始化 - 表示接口内部是否跳过初始化WebEngine。<br>true表示接口内部跳过初始化WebEngine，并将注册的Schemes暂存，当它真正初始化 时，这些Schemes将传递给WebEngine。false表示接口内部自动进行WebEngine初始化。 |
+| schemes | Array&lt;[WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md)&gt; | 是 | 自定义协议配置，最多支持同时配置10个自定义协议。 |
+| lazyInitWebEngine | boolean | 是 | 表示接口内部是否跳过初始化WebEngine。 <br>true表示接口内部跳过初始化WebEngine，并将注册的Schemes暂存，当它真正初始化时，这些Schemes将传递给WebEngine。false表示接口内部自动进行WebEngine初始化。 |
 
 **错误码：**
 
@@ -802,13 +694,9 @@ static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: bool
 deleteJavaScriptRegister(name: string): void
 ```
 
-删除一个已注册的、具有给定名称的JavaScript对象。
+删除通过[registerJavaScriptProxy](#registerjavascriptproxy)或者 javaScriptProxy注册到window上的指定name的应用侧JavaScript对象。删除操作在页面下次（重新）加载后生效。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -820,7 +708,7 @@ deleteJavaScriptRegister(name: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 要删除的已注册JavaScript对象的名称。 |
+| name | string | 是 | 注册对象的名称，可在网页侧JavaScript中通过此名称调用应用侧JavaScript对象。 |
 
 **错误码：**
 
@@ -836,13 +724,9 @@ deleteJavaScriptRegister(name: string): void
 enableAdsBlock(enable: boolean): void
 ```
 
-启用广告过滤功能。
+启用广告过滤功能。 > **说明：** > > - 广告过滤功能需要release包，使用debug包不生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -854,7 +738,7 @@ enableAdsBlock(enable: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用广告过滤功能。<br>true表示启用广告过滤功能，false表示取消广告过滤功能。<br>默认值：false。 |
+| enable | boolean | 是 | 是否启用广告过滤功能。 <br>true表示启用广告过滤功能，false表示取消广告过滤功能。 <br>默认值：false。 |
 
 **错误码：**
 
@@ -870,13 +754,9 @@ enableAdsBlock(enable: boolean): void
 static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 ```
 
-启用应用程序禁用PDFViewer等一些功能，以提高Web应用程序的安全级别
+通过配置安全特性选项禁用特定的Web引擎能力，以降低攻击面。典型使用场景包括：高安全要求的应用（如金融、政务类应用）应启用高级安全模式以禁用不必要的Web引擎能力。 > **说明：** > > - 该接口为全局静态API，在整个APP生命周期中调用一次即可，不需要重复调用。 > > - 必须在[initializeWebEngine()](#initializewebengine)之前调用，否则设置无效。 > 26.0.0
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -888,7 +768,7 @@ static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| securityParams | [SecurityParams](../../apis-na/arkts-apis/arkts-na-webview-securityparams-i.md) | 是 | 参数表示将禁用支持的选项或项目。 |
+| securityParams | [SecurityParams](arkts-arkweb-webview-securityparams-i.md) | 是 | 安全特性选项配置。 |
 
 ## enableBackForwardCache
 
@@ -896,13 +776,9 @@ static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 ```
 
-开启Web组件前进后退缓存功能，通过参数指定是否允许使用特定的页面进入前进后退缓存。 默认设置为禁用。
+开启Web组件前进后退缓存功能，通过参数指定是否允许使用特定的页面进入前进后退缓存。 需要在[initializeWebEngine()](#initializewebengine)初始化内核之前调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void--><!--Device-WebviewController-static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void-End-->
 
@@ -912,7 +788,7 @@ static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| features | [BackForwardCacheSupportedFeatures](../../apis-na/arkts-apis/arkts-na-webview-backforwardcachesupportedfeatures-c.md) | 是 | 允许使用特定的页面进入前进后退缓存中。 |
+| features | [BackForwardCacheSupportedFeatures](arkts-arkweb-webview-backforwardcachesupportedfeatures-c.md) | 是 | 允许使用特定的页面进入前进后退缓存中。 |
 
 ## enableIntelligentTrackingPrevention
 
@@ -924,10 +800,6 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void--><!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void-End-->
@@ -938,7 +810,7 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用智能防跟踪功能。<br>true表示启用智能防跟踪功能，false表示不启用智能防跟踪功能。<br>默认值：false。 |
+| enable | boolean | 是 | 是否启用智能防跟踪功能。 <br>true表示启用智能防跟踪功能，false表示不启用智能防跟踪功能。 <br>默认值：false。 |
 
 **错误码：**
 
@@ -954,13 +826,9 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 static enablePrivateNetworkAccess(enable: boolean): void
 ```
 
-After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight request before issuing any sub-resource private network requests to request explicit permission from the target server. After disable PrivateNetworkAccess, ArkWeb will no longer check whether the private network request is legitimate. By default, PrivateNetworkAccess feature is enabled.
+设置私有网络访问检查功能（Private Network Access）的启用状态。 启用后，Web组件将对私有网络请求（如访问本地服务器或内网资源）进行CORS预检。它会先发送OPTIONS预检请求，获取目标服务器的显式授权，然后传输实际数据。禁用此功能将跳过安全检查。 > **说明：** > > 当前私有网络访问检查功能主要针对Web Worker场景生效。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void--><!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void-End-->
 
@@ -970,7 +838,7 @@ After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight req
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | {@code true} enable the private network acccess check; {@code false} otherwise. |
+| enable | boolean | 是 | 是否启用私有网络访问检查功能开关。true表示启用，false表示禁用。 |
 
 ## enableSafeBrowsing
 
@@ -978,13 +846,9 @@ After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight req
 enableSafeBrowsing(enable: boolean): void
 ```
 
-启用检查网站安全风险的功能，非法和欺诈网站是强制启用的，不能通过此功能禁用。
+启用检查网站安全风险的功能，非法和欺诈网站是强制启用的，不能通过此功能禁用。 本功能默认不生效，OpenHarmony只提供恶意网址拦截页WebUI，网址风险检测以及显示WebUI的功能由Vendor实现。推荐在WebContentsObserver中监听跳转 [DidStartNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) 、 [DidRedirectNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) 进行检测。 > **说明：** > > 该接口不生效，调用不会产生任何实际效果。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -996,7 +860,7 @@ enableSafeBrowsing(enable: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | {@code true} 启用检查网站安全风险的功能， {@code false} 表示不启用检查网站安全风险的功能。 |
+| enable | boolean | 是 | 是否启用检查网站安全风险的功能。 <br>true表示启用检查网站安全风险的功能，false表示不启用检查网站安全风险的功能。 <br>默认值：false。 |
 
 **错误码：**
 
@@ -1014,15 +878,46 @@ static enableWholeWebPageDrawing(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static enableWholeWebPageDrawing(): void--><!--Device-WebviewController-static enableWholeWebPageDrawing(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## executeAIPageCommand
+
+```TypeScript
+executeAIPageCommand(command: string): Promise<string>
+```
+
+异步执行`AIPageCommand`。该接口通过JSON字符串形式的`command`参数指定命令类型和命令参数，使用Promise异步回调。 > **说明：** > > - 不同命令的返回格式不同，详细说明请参见[AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md)和 > [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md)。 > > - 当命令无法分发或无结果返回时，Promise可能返回空字符串。 > > - 返回值非空时为JSON字符串，应用可通过`JSON.parse`解析后使用。 > 26.0.0
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebviewController-executeAIPageCommand(command: string): Promise<string>--><!--Device-WebviewController-executeAIPageCommand(command: string): Promise<string>-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| command | string | 是 | JSON格式的命令参数。不同命令的参数格式不同，查询类命令请参见 [AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md)，交互类命令请参见 [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md)。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回JSON格式的命令执行结果。不同命令的返回格式不同。命令无法分发或无返回值时，返回空字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+| [17100024](../errorcode-webview.md#17100024-aipagecommand格式错误) | Command format error. The command parameter does not conform to the JSON format requirements. |
 
 ## forward
 
@@ -1030,13 +925,9 @@ static enableWholeWebPageDrawing(): void
 forward(): void
 ```
 
-按照历史栈，前进一个页面。一般结合accessForward一起使用。
+按照历史栈，前进一个页面。一般结合[accessForward](#accessforward)一起使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1060,10 +951,6 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion--><!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -1072,7 +959,7 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArkWebEngineVersion](../../apis-na/arkts-apis/arkts-na-webview-arkwebengineversion-e.md) | 返回由[ArkWebEngineVersion]{ |
+| [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | 返回由[ArkWebEngineVersion]{ |
 
 ## getAttachState
 
@@ -1080,13 +967,9 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 getAttachState(): ControllerAttachState
 ```
 
-获取webview controller是否绑定一个web组件
+查询当前WebViewController是否绑定一个Web组件。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-getAttachState(): ControllerAttachState--><!--Device-WebviewController-getAttachState(): ControllerAttachState-End-->
 
@@ -1096,7 +979,7 @@ getAttachState(): ControllerAttachState
 
 | 类型 | 说明 |
 | --- | --- |
-| [ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md) | 绑定状态 |
+| [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md) | WebViewController与Web组件的绑定状态。 |
 
 ## getBackForwardEntries
 
@@ -1104,13 +987,9 @@ getAttachState(): ControllerAttachState
 getBackForwardEntries(): BackForwardList
 ```
 
-获取当前Webview的历史信息列表。 > **说明：** > > onLoadIntercept在加载开始的时候触发，该时刻还未生成历史节点，所以在onLoadIntercept中调用getBackForwardEntries > 拿到的历史栈不包括当前正在加载中的跳转。
+获取当前WebView的历史信息列表。 > **说明：** > > onLoadIntercept在加载开始的时候触发，该时刻还未生成历史节点，所以在onLoadIntercept中调用 > getBackForwardEntries拿到的历史栈不包括当前正在加载中的跳转。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1122,7 +1001,7 @@ getBackForwardEntries(): BackForwardList
 
 | 类型 | 说明 |
 | --- | --- |
-| [BackForwardList](../../apis-na/arkts-apis/arkts-na-webview-backforwardlist-i.md) | 当前Webview的历史信息列表。 |
+| [BackForwardList](arkts-arkweb-webview-backforwardlist-i.md) | 当前WebView的历史信息列表。 |
 
 **错误码：**
 
@@ -1136,13 +1015,9 @@ getBackForwardEntries(): BackForwardList
 getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
-获取页面首屏加载预测信息（详细说明见[BlanklessInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessinfo-i.md#BlanklessInfo)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏 加载。必须与[setBlanklessLoadingWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey)接口配套使用，并且必须在触发加载页面的 接口之前或在`onLoadIntercept`中调用。需在`WebViewController`与Web组件绑定后才能使用。 > **说明：** > > - 持久缓存容量：默认大小为30MB（约30页），可以通过接口 > [setBlanklessLoadingCacheCapacity](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setBlanklessLoadingCacheCapacity)设置缓存容量，具体见该 > 接口说明。超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。 > > - 如果发现快照相似度（即[BlanklessInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessinfo-i.md#BlanklessInfo)中的similarity）极低，请确认key值是否传递正确。 > > - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。 > > - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 * w * h B，页面打开后内存回收，不影响稳态内存。增 > 加固态应用缓存的大小，每个页面增加的缓存约w * h / 10 B，缓存位于应用缓存的位置。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考 > [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+获取页面首屏加载预测信息（详细说明见[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#blanklessinfo)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏加载。 必须与[setBlanklessLoadingWithKey](#setblanklessloadingwithkey)接口配套使用，并且必须在触发加载页面的接口之前或在`onLoadIntercept`中调用。 需在`WebViewController`与Web组件绑定后才能使用。 > **说明：** > > - 持久缓存容量：默认大小为30MB（约30页），可以通过接口[setBlanklessLoadingCacheCapacity](#setblanklessloadingcachecapacity)设置缓存容量，具体见该接口说明。 > 超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。 > > - 如果发现快照相似度（即[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#blanklessinfo)极低，请确认key值是否传递正确。 > > - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。 > > - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 * w * h B，页面打开后内存回收，不影响稳态内存。 > 增加固态应用缓存的大小，每个页面增加的缓存约w * h / 10 B，缓存位于应用缓存的位置。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO， > 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo--><!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo-End-->
 
@@ -1152,13 +1027,13 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 唯一标识本页面的key值。<br>合法取值范围：非空，长度不超过2048个字符。<br>设置非法值时不生效。 |
+| key | string | 是 | 唯一标识本页面的key值。 <br>合法取值范围：非空，长度不超过2048个字符。 <br>设置非法值时不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [BlanklessInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessinfo-i.md) | 页面首屏加载预测信息，主要包括首屏相似度预测值，首屏加载耗时预测值，应用需根据此信息来决策是否启用无白屏加载插帧。 |
+| [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md) | 页面首屏加载预测信息对象，应用需根据此信息来决策是否启用无白屏加载插帧。 |
 
 **错误码：**
 
@@ -1172,13 +1047,9 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 getCertificate(): Promise<Array<cert.X509Cert>>
 ```
 
-获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过Promise异步返回当前网站的X509格式证书。
+获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过Promise异步返回当前网站的X509格式证书（X509Cert证书类型定义见 [X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md#x509cert)定义），便于开发者展示网站证书信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1190,7 +1061,7 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;cert.X509Cert&gt;&gt; | the promise of the current website's certificate. |
+| Promise&lt;Array&lt;cert.X509Cert&gt;&gt; | Promise实例，用于获取当前加载的https网站的X509格式证书数组。 |
 
 **错误码：**
 
@@ -1204,13 +1075,9 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 ```
 
-获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过AsyncCallback异步返回当前网站的X509格式证书。
+获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过AsyncCallback异步返回当前网站的X509格式证书（X509Cert证书类型定义见 [X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md#x509cert)），便于开发者展示网站证书信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1222,7 +1089,7 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
 
 **错误码：**
 
@@ -1237,13 +1104,9 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 getCustomUserAgent(): string
 ```
 
-获取自定义用户代理。
+获取自定义用户代理。 默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1269,13 +1132,9 @@ getCustomUserAgent(): string
 static getDefaultUserAgent(): string
 ```
 
-获取默认用户代理。
+获取默认用户代理。 此接口只允许在UI线程调用。 默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static getDefaultUserAgent(): string--><!--Device-WebviewController-static getDefaultUserAgent(): string-End-->
 
@@ -1293,13 +1152,9 @@ static getDefaultUserAgent(): string
 getErrorPageEnabled(): boolean
 ```
 
-Get whether default error page feature is enabled.
+查询是否启用了默认错误页功能。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-getErrorPageEnabled(): boolean--><!--Device-WebviewController-getErrorPageEnabled(): boolean-End-->
 
@@ -1309,7 +1164,7 @@ Get whether default error page feature is enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if enable the default error page feature; else false. |
+| boolean | 返回是否启用默认错误页功能。 <br>true：已启用；false：未启用。 |
 
 **错误码：**
 
@@ -1327,10 +1182,6 @@ getFavicon(): image.PixelMap
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getFavicon(): image.PixelMap--><!--Device-WebviewController-getFavicon(): image.PixelMap-End-->
@@ -1341,7 +1192,7 @@ getFavicon(): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | Return the favicon bitmap of the current page. |
+| image.PixelMap | 页面favicon图标的PixelMap对象。 |
 
 **错误码：**
 
@@ -1355,15 +1206,13 @@ getFavicon(): image.PixelMap
 getHitTest(): WebHitTestType
 ```
 
-获取当前被点击区域的元素类型。 > **说明：** > > 从API version11开始支持，从API version 18开始废弃。建议使用[getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest)替代。
+获取当前被点击区域的元素类型。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 18
 
-**替代接口：** [getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest)
+**替代接口：** [getLastHitTest](#getlasthittest)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1375,7 +1224,7 @@ getHitTest(): WebHitTestType
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebHitTestType](../../apis-na/arkts-apis/arkts-na-webview-webhittesttype-e.md) | 被点击区域的元素类型。 |
+| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) | 被点击区域的元素类型。 |
 
 **错误码：**
 
@@ -1389,15 +1238,13 @@ getHitTest(): WebHitTestType
 getHitTestValue(): HitTestValue
 ```
 
-获取当前被点击区域的元素信息。 > **说明：** > > 从API version11开始支持，从API version 18开始废弃。建议使用[getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest)替代。
+获取当前被点击区域的元素信息。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 18
 
-**替代接口：** [getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest)
+**替代接口：** [getLastHitTest](#getlasthittest)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1409,7 +1256,7 @@ getHitTestValue(): HitTestValue
 
 | 类型 | 说明 |
 | --- | --- |
-| [HitTestValue](../../apis-na/arkts-apis/arkts-na-webview-hittestvalue-i.md) | 点击区域的元素信息。 |
+| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | 点击区域的元素信息。 |
 
 **错误码：**
 
@@ -1427,10 +1274,6 @@ getLastHitTest(): HitTestValue
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-getLastHitTest(): HitTestValue--><!--Device-WebviewController-getLastHitTest(): HitTestValue-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -1439,7 +1282,7 @@ getLastHitTest(): HitTestValue
 
 | 类型 | 说明 |
 | --- | --- |
-| [HitTestValue](../../apis-na/arkts-apis/arkts-na-webview-hittestvalue-i.md) | 点击区域的元素信息。 |
+| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | 点击区域的元素信息。 |
 
 **错误码：**
 
@@ -1453,13 +1296,9 @@ getLastHitTest(): HitTestValue
 getLastJavascriptProxyCallingFrameUrl(): string
 ```
 
-获取最后一次调用注入的对象的frame的URL。该方法应在 UI 线程上调用。
+通过[registerJavaScriptProxy](#registerjavascriptproxy)或者 javaScriptProxy注入JavaScript对象到window对象中。该接口可以获取最后一次调用注入的对象的frame的URL。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1479,38 +1318,6 @@ getLastJavascriptProxyCallingFrameUrl(): string
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
-## getLastPostMessageURL
-
-```TypeScript
-getLastPostMessageURL(): string
-```
-
-获取上一次发送post message给应用的HTML的frame的url
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WebviewController-getLastPostMessageURL(): string--><!--Device-WebviewController-getLastPostMessageURL(): string-End-->
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | The URL of frame that last sent a postMessage. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-
 ## getMediaPlaybackState
 
 ```TypeScript
@@ -1520,10 +1327,6 @@ getMediaPlaybackState(): MediaPlaybackState
 查询当前网页音视频播放状态。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1535,7 +1338,7 @@ getMediaPlaybackState(): MediaPlaybackState
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaPlaybackState](../../apis-na/arkts-apis/arkts-na-webview-mediaplaybackstate-e.md) | 当前网页的播放状态，具体值为NONE、PLAYING、PAUSED、STOPPED。 |
+| [MediaPlaybackState](arkts-arkweb-webview-mediaplaybackstate-e.md) | 当前网页的播放状态，具体值为NONE、PLAYING、PAUSED、STOPPED。 |
 
 **错误码：**
 
@@ -1549,13 +1352,9 @@ getMediaPlaybackState(): MediaPlaybackState
 getOriginalUrl(): string
 ```
 
-获取当前页面的原始URL地址。
+获取当前页面的原始URL地址。 风险提示：如果想获取URL来做JavascriptProxy通信接口认证，请使用 [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](#getlastjavascriptproxycallingframeurl)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1585,10 +1384,6 @@ getPageHeight(): number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getPageHeight(): number--><!--Device-WebviewController-getPageHeight(): number-End-->
@@ -1617,10 +1412,6 @@ getPageOffset(): ScrollOffset
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-getPageOffset(): ScrollOffset--><!--Device-WebviewController-getPageOffset(): ScrollOffset-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -1629,7 +1420,7 @@ getPageOffset(): ScrollOffset
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollOffset](../../apis-na/arkts-apis/arkts-na-webview-scrolloffset-i.md) | 网页当前的滚动偏移量（不包含过滚动偏移量）。 |
+| [ScrollOffset](arkts-arkweb-webview-scrolloffset-i.md) | 网页当前的滚动偏移量（不包含过滚动偏移量），包含x和y坐标，单位为vp。 |
 
 **错误码：**
 
@@ -1643,13 +1434,9 @@ getPageOffset(): ScrollOffset
 getPrintBackground(): boolean
 ```
 
-Get whether print web page background.
+查询webview是否打印网页背景。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1661,7 +1448,7 @@ Get whether print web page background.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether the web page background is printed. <br>The value **true** indicates that the web page background is printed, and **false** indicates the opposite. |
+| boolean | 返回webview是否打印网页背景。 <br>true:打印网页背景；false:不打印网页背景。 |
 
 **错误码：**
 
@@ -1675,13 +1462,9 @@ Get whether print web page background.
 getProgress() : number
 ```
 
-Gets the loading progress for the current page.
+获取当前网页加载进度。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-getProgress() : number--><!--Device-WebviewController-getProgress() : number-End-->
 
@@ -1705,13 +1488,9 @@ Gets the loading progress for the current page.
 static getRenderProcessMode(): RenderProcessMode
 ```
 
-Get render process mode of the ArkWeb.
+查询ArkWeb的渲染子进程模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1723,7 +1502,7 @@ Get render process mode of the ArkWeb.
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderProcessMode](../../apis-na/arkts-apis/arkts-na-webview-renderprocessmode-e.md) | mode - The render process mode of the ArkWeb. Call { |
+| [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) | 渲染子进程模式类型。 <br>调用getRenderProcessMode()获取当前设备的ArkWeb渲染子进程模式，枚举值0为单子进程模式，枚举值1为多子进程模式。 <br>如果获取的值不在RenderProcessMode枚举值范围内，则默认为多渲染子进程模式。 |
 
 ## getScrollOffset
 
@@ -1735,10 +1514,6 @@ getScrollOffset(): ScrollOffset
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getScrollOffset(): ScrollOffset--><!--Device-WebviewController-getScrollOffset(): ScrollOffset-End-->
@@ -1749,7 +1524,7 @@ getScrollOffset(): ScrollOffset
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollOffset](../../apis-na/arkts-apis/arkts-na-webview-scrolloffset-i.md) | 网页当前的滚动偏移量（包含过滚动偏移量）。 |
+| [ScrollOffset](arkts-arkweb-webview-scrolloffset-i.md) | 网页当前的滚动偏移量（包含过滚动偏移量），包含x和y坐标，单位为vp。 |
 
 ## getScrollable
 
@@ -1760,10 +1535,6 @@ getScrollable(): boolean
 获取当前网页是否允许滚动。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1793,10 +1564,6 @@ getSecurityLevel(): SecurityLevel
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getSecurityLevel(): SecurityLevel--><!--Device-WebviewController-getSecurityLevel(): SecurityLevel-End-->
@@ -1821,13 +1588,9 @@ getSecurityLevel(): SecurityLevel
 static getSiteIsolationMode(): SiteIsolationMode
 ```
 
-Get the site isolation mode.
+查询当前生效的站点隔离模式。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode--><!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode-End-->
 
@@ -1837,7 +1600,35 @@ Get the site isolation mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| [SiteIsolationMode](../../apis-na/arkts-apis/arkts-na-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
+| [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) | 站点隔离模式类型。 <br>getSiteIsolationMode()查询当前生效的站点隔离模式。 |
+
+## getSubframeErrorPageEnabled
+
+```TypeScript
+getSubframeErrorPageEnabled(): boolean
+```
+
+查询是否启用了subframe错误页功能。 26.0.0
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebviewController-getSubframeErrorPageEnabled(): boolean--><!--Device-WebviewController-getSubframeErrorPageEnabled(): boolean-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回是否启用subframe错误页功能。 <br>- true：已启用subframe错误页功能（即enable和includeSubframe均为true）； <br>- false：未启用subframe错误页功能（包括未启用错误页功能、或启用了错误页功能但未启用subframe错误页功能两种情况）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getSurfaceId
 
@@ -1848,10 +1639,6 @@ getSurfaceId(): string
 获取ArkWeb对应Surface的ID，此ID可用于网页截图。 > **说明：** > > 仅Web组件渲染模式是ASYNC_RENDER时有效。getSurfaceId需要在Web组件初始化之后才能获取到值。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1874,10 +1661,6 @@ getTitle(): string
 获取当前网页的标题。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1907,10 +1690,6 @@ getUrl(): string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getUrl(): string--><!--Device-WebviewController-getUrl(): string-End-->
@@ -1935,13 +1714,9 @@ getUrl(): string
 getUserAgent(): string
 ```
 
-获取当前默认用户代理。
+获取当前默认用户代理。 默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1967,13 +1742,9 @@ getUserAgent(): string
 static getUserAgentClientHintsEnabled(): boolean
 ```
 
-Get if the UserAgent Client Hints enabled.
+查询User-Agent Client Hints功能当前是否开启。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static getUserAgentClientHintsEnabled(): boolean--><!--Device-WebviewController-static getUserAgentClientHintsEnabled(): boolean-End-->
 
@@ -1983,7 +1754,7 @@ Get if the UserAgent Client Hints enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | If UserAgent Client Hints was enabled. |
+| boolean | 返回User-Agent Client Hints功能开启状态。true表示已开启；false表示已关闭。 |
 
 ## getUserAgentMetadata
 
@@ -1991,13 +1762,9 @@ Get if the UserAgent Client Hints enabled.
 getUserAgentMetadata(userAgent: string): UserAgentMetadata
 ```
 
-Get the User-Agent metadata corresponding to the User-Agent.
+查询userAgent对应的UserAgent Metadata信息。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-getUserAgentMetadata(userAgent: string): UserAgentMetadata--><!--Device-WebviewController-getUserAgentMetadata(userAgent: string): UserAgentMetadata-End-->
 
@@ -2007,13 +1774,13 @@ Get the User-Agent metadata corresponding to the User-Agent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userAgent | string | 是 | The User-Agent string. |
+| userAgent | string | 是 | 用户自定义代理信息。可以使用[getUserAgent](#getuseragent)获取当前默认用户代 理。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [UserAgentMetadata](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md) | The UserAgentMetadata for the userAgent. |
+| [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) | userAgent对应的[UserAgentMetadata]{ |
 
 ## getWebId
 
@@ -2021,15 +1788,11 @@ Get the User-Agent metadata corresponding to the User-Agent.
 getWebId(): number
 ```
 
-Gets the index value of the current Web component for the management of multiple Web components.
+获取Web组件的索引值，用于多个Web组件的管理。
 
-**起始版本：** 18
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-getWebId(): number--><!--Device-WebviewController-getWebId(): number-End-->
 
@@ -2039,7 +1802,7 @@ Gets the index value of the current Web component for the management of multiple
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Returns the index value of the current Web component. |
+| number | Web组件的索引值。 |
 
 **错误码：**
 
@@ -2056,10 +1819,6 @@ hasImage(): Promise<boolean>
 通过Promise方式异步查找当前页面是否存在图像。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2090,10 +1849,6 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-hasImage(callback: AsyncCallback<boolean>): void--><!--Device-WebviewController-hasImage(callback: AsyncCallback<boolean>): void-End-->
@@ -2104,7 +1859,7 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。<br> true表示页面存在图像；false表示页面不存在图像。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。 <br> true表示页面存在图像；false表示页面不存在图像。 |
 
 **错误码：**
 
@@ -2119,13 +1874,9 @@ hasImage(callback: AsyncCallback<boolean>): void
 static initializeWebEngine(): void
 ```
 
-Initialize the web engine before loading the Web components. This is a global static API that must be called on the UI thread, and it will have no effect if any Web components are loaded.
+在Web组件初始化之前，通过此接口加载Web引擎的动态库文件，以提高启动性能。自动预连接历史访问过的高频网站。 > **说明：** > > - initializeWebEngine不支持在异步线程中调用，否则会造成崩溃。 > > - initializeWebEngine全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2143,10 +1894,6 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void--><!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -2155,7 +1902,7 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceMaps | Array&lt;[OfflineResourceMap](../../apis-na/arkts-apis/arkts-na-webview-offlineresourcemap-i.md)&gt; | 是 | 本地离线资源配置对象，单次调用最大支持注入30个资源，单个资源最大支持10Mb。 |
+| resourceMaps | Array&lt;[OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md)&gt; | 是 | 本地离线资源配置对象，单次调用最大支持注入30个资源，单个资源最大支持10Mb。 |
 
 **错误码：**
 
@@ -2163,7 +1910,7 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 12 - 21 |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**适用版本：** 22+ |
 
 ## isActiveWebEngineEvergreen
 
@@ -2174,10 +1921,6 @@ static isActiveWebEngineEvergreen(): boolean
 判断当前系统是否正在使用常青内核，即系统的最新内核。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean--><!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean-End-->
 
@@ -2198,10 +1941,6 @@ isAdsBlockEnabled(): boolean
 查询广告过滤功能是否开启。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2227,13 +1966,9 @@ isAdsBlockEnabled(): boolean
 isAdsBlockEnabledForCurPage(): boolean
 ```
 
-查询当前网页是否开启广告过滤功能。
+查询当前网页是否开启广告过滤功能。 当Web组件使能广告过滤功能后，默认所有页面都是开启广告过滤的，支持通过 [addAdsBlockDisallowedList](arkts-arkweb-webview-adsblockmanager-c.md#addadsblockdisallowedlist)指定域名禁用广告过滤。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2259,13 +1994,9 @@ isAdsBlockEnabledForCurPage(): boolean
 static isAutoPreconnectEnabled(): boolean
 ```
 
-?Retrieve whether the automatic pre-connection feature is enabled?.
+查询Web内核的自动预连接状态。 如果没有使用[setAutoPreconnect](#setautopreconnect)设置Web内核自动预连接的状态，则默认启用自动预连接，返回true。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean--><!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean-End-->
 
@@ -2275,7 +2006,7 @@ static isAutoPreconnectEnabled(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Return true if enabled, false if disabled. |
+| boolean | 返回Web内核是否启用了自动预连接。true表示已启用；false表示已禁用。 |
 
 ## isIncognitoMode
 
@@ -2286,10 +2017,6 @@ isIncognitoMode(): boolean
 查询当前是否是隐私模式的Webview。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2319,10 +2046,6 @@ isIntelligentTrackingPreventionEnabled(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-isIntelligentTrackingPreventionEnabled(): boolean--><!--Device-WebviewController-isIntelligentTrackingPreventionEnabled(): boolean-End-->
@@ -2348,13 +2071,9 @@ isIntelligentTrackingPreventionEnabled(): boolean
 static isPrivateNetworkAccessEnabled(): boolean
 ```
 
-Get whether PrivateNetworkAccess is enabled.
+获取Web组件是否启用了私有网络访问检查功能。 > **说明：** > > 当前私有网络访问检查功能主要针对Web Worker场景生效。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean--><!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean-End-->
 
@@ -2364,7 +2083,7 @@ Get whether PrivateNetworkAccess is enabled.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if enable the ability to check private network access else false. |
+| boolean | 返回Web组件是否启用了私有网络访问检查功能。true表示已启用；false表示已禁用。 |
 
 ## isSafeBrowsingEnabled
 
@@ -2376,10 +2095,6 @@ isSafeBrowsingEnabled(): boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-isSafeBrowsingEnabled(): boolean--><!--Device-WebviewController-isSafeBrowsingEnabled(): boolean-End-->
@@ -2390,7 +2105,7 @@ isSafeBrowsingEnabled(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true表示启用了检查网站安全风险的功能，false表示未启用检查网站安全风险的功能。 |
+| boolean | 当前网页是否启用了检查网站安全风险的功能。 <br>true表示启用了检查网站安全风险的功能，false表示未启用检查网站安全风险的功能。 <br>默认值：false。 |
 
 ## loadData
 
@@ -2398,13 +2113,9 @@ isSafeBrowsingEnabled(): boolean
 loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void
 ```
 
-加载指定的数据。 baseUrl与historyUrl同时为空的情况下： encoding如果为非base64（包括空值），则假定数据对安全URL字符范围内的八位字节使用ASCII编码，对该范围外的八位字节使用URL的标准%xx十六进制编码。 data数据必须使用base64编码或将内容中的任何#字符编码为%23。否则#将被视为内容的结尾而剩余的文本将被用作文档片段标识符。
+加载指定的数据。 baseUrl与historyUrl同时为空的情况下： encoding如果为非base64（包括空值），则假定数据对安全URL字符范围内的八位字节使用ASCII编码，对该范围外的八位字节使用URL的标准%xx十六进制编码。 data数据必须使用base64编码或将内容中的任何#字符编码为%23。否则#将被视为内容的结尾而剩余的文本将被用作文档片段标识符。 > **说明：** > > - 若加载本地图片，可以给baseUrl或historyUrl任一参数赋值空格，详情请参考示例代码。 > > - 加载本地图片场景，baseUrl和historyUrl不能同时为空，否则图片无法成功加载。 > > - 若html中的富文本中带有注入#等特殊字符，建议将baseUrl和historyUrl两个参数的值设置为"空格"。 > > - 加载文字场景，需主动设置`&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;`避免文本字体大小不 > 一致。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2419,8 +2130,8 @@ loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, his
 | data | string | 是 | 按照"base64"或者"URL"编码后的一段字符串。 |
 | mimeType | string | 是 | 媒体类型（MIME）。 |
 | encoding | string | 是 | 编码类型，具体为"base64"或者"URL"编码。 |
-| baseUrl | string | 否 | 按照"base64"或者"URL"编码后的一段字符串。 |
-| historyUrl | string | 否 | 用作历史记录所使用的URL。非空时，历史记录以此URL进行管理。当baseUrl为空时，此属性无效。 |
+| baseUrl | string | 否 | 指定的一个URL路径（"http"/"https"/"data"协议），并由Web组件赋值给`window.origin`。当加载大量html文件时，需设置为" data"。 <br>传入undefined或null会抛出异常错误码401。 |
+| historyUrl | string | 否 | 用作历史记录所使用的URL。非空时，历史记录以此URL进行管理。当baseUrl为空时，此属性无效。 <br>传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
@@ -2440,10 +2151,6 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void--><!--Device-WebviewController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void-End-->
@@ -2455,7 +2162,7 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要加载的URL。 |
-| headers | Array&lt;WebHeader&gt; | 否 | URL的附加HTTP请求头。<br>默认值： []。 <br>传入undefined或null会抛出异常错误码401。 |
+| headers | Array&lt;WebHeader&gt; | 否 | URL的附加HTTP请求头。 <br>默认值： []。 <br>传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
@@ -2472,13 +2179,9 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void
 ```
 
-取消注册controller绑定状态变化的回调
+取消WebViewController绑定状态事件的注册，取消后将不再接收Callback通知。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void--><!--Device-WebviewController-off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void-End-->
 
@@ -2488,8 +2191,8 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'controllerAttachStateChange' | 是 | the event of controller attach state change. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md)&gt; | 否 | Callback used to return the controller attach state. |
+| type | 'controllerAttachStateChange' | 是 | 表示注册WebViewController绑定状态事件，固定为"controllerAttachStateChange"。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 | WebViewController绑定状态发生改变时的回调函数，默认情况下不填写回调函数。如果填写了Callback， 将仅取消注册该特定的回调。如果不填写Callback，将取消注册所有回调。 <br>传入null或undefined时会抛出异常错误码401。 |
 
 ## onActive
 
@@ -2497,13 +2200,9 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 onActive(): void
 ```
 
-Let the Web active.
+调用此接口通知Web组件进入前台激活状态。 激活状态是应用与用户互动的状态。应用会保持这种状态，直到发生某些事件（例如收到来电或设备屏幕关闭）时将焦点从应用移开。 若页面此前处于未激活状态，H5页面中通过document.addEventListener('visibilitychange',...)注册的事件监听器将被触发，document.visibilityState 从" hidden"变为"visible"。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2523,13 +2222,9 @@ Let the Web active.
 onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 ```
 
-注册回调函数，开启 [应用接管网页媒体播放功能](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12) 后，当网页中有播放媒体时，触发注册的回调函数。 如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
+注册回调函数，使用enableNativeMediaPlayer开启应用接管网页媒体播放功能后，当网页中有播放媒体时，触发注册的回调函 数。 如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2541,7 +2236,7 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md) | 是 | 接管网页媒体播放的回调函数。 |
+| callback | [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | 是 | 接管网页媒体播放的回调函数。 |
 
 ## onInactive
 
@@ -2549,13 +2244,9 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 onInactive(): void
 ```
 
-Let the Web inactive.
+调用此接口通知Web组件进入未激活状态。开发者可以在此回调中实现应用失去焦点时应表现的恰当行为。 此状态下会尽可能的暂停任何可以安全暂停的内容，例如动画和地理位置。但不会暂停JavaScript，要全局暂停JavaScript，请使用 [pauseAllTimers](#pausealltimers)。要重新激活Web组件，请调用 [onActive](#onactive)。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2575,13 +2266,9 @@ Let the Web inactive.
 on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void
 ```
 
-注册controller绑定状态变化的回调
+注册WebViewController绑定状态事件，通过Callback方式获取WebViewController绑定状态的变化通知。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void--><!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void-End-->
 
@@ -2591,8 +2278,8 @@ on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'controllerAttachStateChange' | 是 | the event of controller attach state change. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md)&gt; | 是 | Callback used to return the controller attach state. |
+| type | 'controllerAttachStateChange' | 是 | 表示注册WebViewController绑定状态事件，固定为"controllerAttachStateChange"。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 | WebViewController绑定状态改变时的回调函数。 |
 
 ## pageDown
 
@@ -2604,10 +2291,6 @@ pageDown(bottom: boolean): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-pageDown(bottom: boolean): void--><!--Device-WebviewController-pageDown(bottom: boolean): void-End-->
@@ -2618,7 +2301,7 @@ pageDown(bottom: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bottom | boolean | 是 | 是否跳转到页面最底部。<br>false时表示将页面内容向下滚动半个视框大小，true表示跳转到页面最底部。 |
+| bottom | boolean | 是 | 是否跳转到页面最底部。 <br>false时表示将页面内容向下滚动半个视框大小，true表示跳转到页面最底部。 |
 
 **错误码：**
 
@@ -2637,10 +2320,6 @@ pageUp(top: boolean): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-pageUp(top: boolean): void--><!--Device-WebviewController-pageUp(top: boolean): void-End-->
@@ -2651,7 +2330,7 @@ pageUp(top: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| top | boolean | 是 | 是否跳转到页面最顶部。<br>false表示将页面内容向上滚动半个视框大小，true表示跳转到页面最顶部。 |
+| top | boolean | 是 | 是否跳转到页面最顶部。 <br>false表示将页面内容向上滚动半个视框大小，true表示跳转到页面最顶部。 |
 
 **错误码：**
 
@@ -2669,10 +2348,6 @@ pauseAllMedia(): void
 控制网页所有音视频暂停。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2692,13 +2367,9 @@ pauseAllMedia(): void
 static pauseAllTimers(): void
 ```
 
-暂停所有WebView的定时器。
+暂停所有WebView的定时器，定时器暂停期间，网页中的setInterval、setTimeout等定时操作将被挂起。建议在应用进入后台等场景暂停，前台时恢复，以节省资源，可以与 [resumeAllTimers](#resumealltimers)()成对使用，避免定时器状态混乱。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2718,13 +2389,9 @@ static pauseAllTimers(): void
 pauseMicrophone(): void
 ```
 
-暂停当前网页麦克风捕获。
+暂停当前网页麦克风捕获。 > **说明：** > > 与 resumeMicrophone 和 stopMicrophone 的区别： > > pauseMicrophone 仅暂停麦克风捕获，可通过 resumeMicrophone 恢复；stopMicrophone 会停止捕获并释放资源。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-pauseMicrophone(): void--><!--Device-WebviewController-pauseMicrophone(): void-End-->
 
@@ -2746,10 +2413,6 @@ postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void--><!--Device-WebviewController-postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void-End-->
@@ -2761,7 +2424,7 @@ postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 要发送的消息名称。 |
-| ports | Array&lt;[WebMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md)&gt; | 是 | 要发送的消息端口。 |
+| ports | Array&lt;[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)&gt; | 是 | 要发送的消息端口。 |
 | uri | string | 是 | 接收该消息的URI。 |
 
 **错误码：**
@@ -2777,13 +2440,9 @@ postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void
 postUrl(url: string, postData: ArrayBuffer): void
 ```
 
-使用"POST"方法加载带有postData的URL。
+使用"POST"方法加载带有postData的URL。如果URL不是网络URL，则会使用[loadUrl](#loadurl)方法加载URL，忽略postData参 数。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2796,7 +2455,7 @@ postUrl(url: string, postData: ArrayBuffer): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 需要加载的URL。 |
-| postData | ArrayBuffer | 是 | 使用"POST"方法传递数据。 |
+| postData | ArrayBuffer | 是 | 使用"POST"方法传递数据。 该请求必须采用"application/x-www-form-urlencoded"编码。 |
 
 **错误码：**
 
@@ -2816,10 +2475,6 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>--><!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -2830,7 +2485,7 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 | --- | --- | --- | --- |
 | url | string | 是 | 本地JavaScript文件对应的网络地址，即业务网页请求该文件的服务器版本时使用的网络地址。网络地址仅支持http或https协议，长度不超过2048。如果该网络地址对应的缓存 失效，则业务网页将通过网络请求对应的资源。 |
 | script | string \| Uint8Array | 是 | 本地JavaScript的文本内容。内容不能为空。 |
-| cacheOptions | [CacheOptions](../../apis-na/arkts-apis/arkts-na-webview-cacheoptions-i.md) | 是 | 用于控制字节码缓存更新。 |
+| cacheOptions | [CacheOptions](arkts-arkweb-webview-cacheoptions-i.md) | 是 | 用于控制字节码缓存更新。 |
 
 **返回值：**
 
@@ -2851,13 +2506,9 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 ```
 
-在预测到将要加载的页面之前调用，可提前下载页面所需的资源（包括：主资源和子资源），但不会执行网页JavaScript代码或呈现网页，以加快页面加载速度。 > **说明：** > > - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。 > > - prefetchPage对302重定向页面同样正常预取。 > > - 先执行prefetchPage再加载页面时，已预取的资源将直接从缓存中加载。 > > - 连续prefetchPage多个URL只有第一个生效。 > > - prefetchPage有时间限制，500ms内不能多次预取。
+在预测到将要加载的页面之前调用，可提前下载页面所需的资源（包括：主资源和子资源），但不会执行网页JavaScript代码或呈现网页，以加快页面加载速度。 > **说明：** > > - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。 > > - prefetchPage对302重定向页面同样正常预取。 > > - 先执行prefetchPage再加载页面时，已预取的资源将直接从缓存中加载。 > > - 连续prefetchPage多个URL只有第一个生效。 > > - prefetchPage有时间限制，500ms内不能多次预取。 > > - prefetchPage会缓存所有资源，但具有Cache-Control: no-store标头的资源除外。如果存在Vary响应标头、Cache-Control: no-store标头，或者下载的页面资源已超过五分钟， > 则在使用之前会重新验证资源。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2870,14 +2521,14 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 预加载的URL。 |
-| additionalHeaders | Array&lt;WebHeader&gt; | 否 | URL的附加HTTP请求头。 |
+| additionalHeaders | Array&lt;WebHeader&gt; | 否 | URL的附加HTTP请求头。 <br>默认值： [] |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 10 - 21 |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**适用版本：** 22+ |
 
 ## prefetchPage
 
@@ -2885,13 +2536,9 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void
 ```
 
-Prefetch the resources required by the page, but will not execute js or render the page. > **说明：** > > - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。 > - prefetchPage对302重定向页面同样正常预取。 ?> - prefetchPage默认不缓存Cache-Control: no-store的资源，并且只允许在500ms内进行一次预取。 > - 可以通过prefetchOptions自定义预取行为，包括忽略Cache-Control: no-store和调整节流间隔。
+在预测到将要加载的页面之前调用，可提前下载页面所需的资源（包括：主资源和子资源），但不会执行网页JavaScript代码或呈现网页，以加快页面加载速度。 > **说明：** > > - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。 > > - prefetchPage对302重定向页面同样正常预取。 > > - 先执行prefetchPage再加载页面时，已预取的资源将直接从缓存中加载。 > > - prefetchPage会缓存所有资源，但具有Cache-Control: no-store标头的资源除外。如果存在Vary响应标头、Cache-Control: no-store标头，或者下载的页面资源已超过五分钟， > 则在使用之前会重新验证资源。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void--><!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void-End-->
 
@@ -2902,15 +2549,15 @@ Prefetch the resources required by the page, but will not execute js or render t
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 预加载的URL。 |
-| additionalHeaders | Array&lt;WebHeader&gt; | 否 | URL的附加HTTP请求头。<br>默认值： [] |
-| prefetchOptions | [PrefetchOptions](../../apis-na/arkts-apis/arkts-na-webview-prefetchoptions-c.md) | 否 | 预取行为可以通过 prefetchOptions 进行自定义，包括忽略 Cache-Control: no-store 以及调整节流间隔。 |
+| additionalHeaders | Array&lt;WebHeader&gt; | 否 | URL的附加HTTP请求头。 <br>默认值： [] |
+| prefetchOptions | [PrefetchOptions](arkts-arkweb-webview-prefetchoptions-c.md) | 否 | 用来自定义预取行为的相关选项。 <br>两次预取间的最小时间间隔为500ms，默认不忽略响应头中的Cache-Control: no-store。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 21+ |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**适用版本：** 22+ |
 
 ## prefetchResource
 
@@ -2919,13 +2566,9 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
                             cacheValidTime?: number): void
 ```
 
-根据指定的请求信息和附加的HTTP请求头去预获取资源请求，存入内存缓存，并指定其缓存key和有效期，以加快加载速度。目前仅支持Content-Type为application/x-www-form-urlencoded的 POST请求。最多可以预获取6个POST请求。如果要预获取第7个，请通过 [clearPrefetchedResource](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#clearPrefetchedResource)清除不需要的POST请求缓存，否则会自动清除最早预获取的 POST缓存。如果要使用预获取的资源缓存，开发者需要在正式发起的POST请求的请求头中增加键值“ArkWebPostCacheKey”，其内容为对应缓存的cacheKey。 内存缓存中的资源由内核自动管理，当注入的资源过多导致内存压力过大，内核自动释放未使用的资源，应避免注入大量资源到内存缓存中。
+根据指定的请求信息和附加的HTTP请求头去预获取资源请求，存入内存缓存，并指定其缓存key和有效期，以加快加载速度。目前仅支持Content-Type为application/x-www-form-urlencoded的 POST请求。最多可以预获取6个POST请求。如果要预获取第7个，请通过 [clearPrefetchedResource](#clearprefetchedresource)清除不需要的POST请求缓存，否则会自动清除最早预获取的 POST缓存。如果要使用预获取的资源缓存，开发者需要在正式发起的POST请求的请求头中增加键值“ArkWebPostCacheKey”，其内容为对应缓存的cacheKey。 内存缓存中的资源由内核自动管理。当注入的资源过多，导致内存压力过大时，内核会自动释放未使用的资源，但仍应避免向内存缓存中注入大量资源。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2939,15 +2582,15 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
 | --- | --- | --- | --- |
 | request | RequestInfo | 是 | 预获取请求的信息。 |
 | additionalHeaders | Array&lt;WebHeader&gt; | 否 | 预获取请求的附加HTTP请求头。 <br>传入undefined或null会抛出异常错误码401。 |
-| cacheKey | string | 否 | 用于后续查询预获取资源缓存的key。仅支持字母和数字，未传入或传入空则取默认值url作为key。<br>传入undefined或null会抛出异常错误码401。 |
-| cacheValidTime | number | 否 | 预获取资源缓存的有效期。<br>取值范围：(0, 2147483647]。<br>默认值：300s。 <br>单位：s。 <br>传入 undefined或null会抛出异常错误码401。 |
+| cacheKey | string | 否 | 用于后续查询预获取资源缓存的key。仅支持字母和数字，未传入或传入空则取默认值url作为key。 <br>传入undefined或null会抛出异常错误码401。 |
+| cacheValidTime | number | 否 | 预获取资源缓存的有效期。 <br>取值范围：(0, 2147483647]。 <br>默认值：300s。 <br>单位：s。 <br>传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 12 - 21 |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**适用版本：** 22+ |
 
 ## prepareForPageLoad
 
@@ -2958,10 +2601,6 @@ static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: numb
 预连接URL，在加载URL之前调用此API，对URL只进行DNS解析，socket建链操作，并不获取主资源子资源。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2974,14 +2613,14 @@ static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: numb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 预连接的URL。 |
-| preconnectable | boolean | 是 | 是否进行预连接。如果preconnectable为true，则对URL进行DNS解析，socket建链预连接；如果preconnectable为false ，则不做任何预连接操作。 |
+| preconnectable | boolean | 是 | 是否进行预连接。如果preconnectable为true，则对URL进行DNS解析，socket建链预连接；如果preconnectable为 false，则不做任何预连接操作。 |
 | numSockets | number | 是 | 要预连接的socket数。socket数目连接需要大于0，最多允许6个连接。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 10 - 21 |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**适用版本：** 22+ |
 | [17100013](../errorcode-webview.md#17100013-预连接时输入socket数目无效) | The number of preconnect sockets is invalid. |
 
 ## refresh
@@ -2993,10 +2632,6 @@ refresh(): void
 调用此接口通知Web组件刷新网页。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3020,10 +2655,6 @@ refresh(ignoreCache: boolean): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-refresh(ignoreCache: boolean): void--><!--Device-WebviewController-refresh(ignoreCache: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -3032,7 +2663,7 @@ refresh(ignoreCache: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ignoreCache | boolean | 是 | Web组件刷新网页，选择是否忽略缓存刷新。 |
+| ignoreCache | boolean | 是 | Web组件刷新网页，选择是否忽略缓存刷新。 <br>true表示忽略缓存刷新，false表示不忽略缓存刷新。<br/>**说明：** <br>传入undefined或null时为false。 |
 
 **错误码：**
 
@@ -3047,13 +2678,9 @@ registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string
         asyncMethodList?: Array<string>, permission?: string): void
 ```
 
-Registers the JavaScript object and method list.
+registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的交互能力。注入JavaScript对象到window对象中，并在window对象中调用该对象的方法。 示例请参考[前端页面调用应用侧函数](../../../web/web-in-page-app-function-invoking.md)。 > **说明：** > > - registerJavaScriptProxy需要和deleteJavaScriptRegister接口配合使用，防止内存泄漏。 > > - 请尽可能只在可信的URL及安全通信HTTPS场景下进行registerJavaScriptProxy注册。在非可信的Web组件中注入JavaScript对象，可能会导致应用被恶意攻击。 > > - 在注册registerJavaScriptProxy后，应用会将JavaScript对象暴露给所有的页面frames。 > > - 同一方法在同步与异步列表中重复注册，将默认异步调用。 > > - 同步函数列表和异步函数列表不可同时为空，否则此次调用接口注册失败。 > > - 异步的作用在于：H5线程将异步JavaScript任务提交给ETS主线程后，无需等待任务执行完成并返回结果，H5线程即可继续执行后续任务。这在执行耗时较长的JavaScript任务或ETS线程较为拥堵的情况下，可以有效 > 减少H5线程因JavaScript任务而被阻塞的情况。然而，异步JavaScript任务无法返回值，且任务执行的顺序无法保证，因此需要根据具体情境判断是否使用同步或异步方式。 > > - 注入的对象在页面下一次（重新）加载前不会出现在JavaScript中。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3065,11 +2692,11 @@ Registers the JavaScript object and method list.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jsObject | object | 是 | Application side JavaScript objects participating in registration.<br>**起始版本：** 9 |
-| name | string | 是 | The name of the registered object, which is consistent with the object name called in the window. |
-| methodList | Array&lt;string&gt; | 是 | The method of the application side JavaScript object participating in the registration. |
-| asyncMethodList | Array&lt;string&gt; | 否 | The async method of the application side JavaScript object participating in the registration.<br>**起始版本：** 12 |
-| permission | string | 否 | permission configuration defining web page URLs that can access JavaScriptProxy methods. The configuration can be defined at two levels, object level and method level.<br>**起始版本：** 12 |
+| jsObject | object | 是 | 参与注册的应用侧JavaScript对象。可以单独声明方法和属性，但无法同时进行注册与使用。对象只包含属性时，H5可以访问对象中的属性。对象只包含方法时，H5可以访问对 象中的方法。 <br>1. 方法的参数和返回类型可以为string，number，boolean。 <br>2. 方法的参数和返回类型支持Dictionary，Array，最多嵌套10层，每层1w个数据。 <br>3. 方法的参数和返回类型支持Object，需要在Object里添加属性methodNameListForJsProxy:[fun1, fun2]，fun1和fun2为可被调用的方法。 <br>4. 方法的参数支持Function，Promise，它们的Callback不能有返回值。 <br>5. 方法的返回类型支持Promise，Promise的Callback不能有返回值。 |
+| name | string | 是 | 注册对象的名称，与window中调用的对象名一致。注册后window对象可以通过此名字访问应用侧JavaScript对象。 |
+| methodList | Array&lt;string&gt; | 是 | 参与注册的应用侧JavaScript对象的同步方法。 |
+| asyncMethodList | Array&lt;string&gt; | 否 | 参与注册的应用侧JavaScript对象的异步方法，默认为空。异步方法无法获取返回值。 <br>传入undefined或null会抛出异常错误码401。<br>**起始版本：** 12 |
+| permission | string | 否 | JSON字符串，默认为空，通过该字符串配置JSBridge的权限管控，可以定义object和method级别的URL白名单。 <br>1. scheme（协议）和host（域名）参数不可为空，且host不支持通配符，只能填写完整的host。 <br>2. 可以仅配置object级别的白名单，该白名单对所有JSBridge方法生效。 <br>3. 若JSBridge方法A设置了method级别的白名单，那么方法A最终的白名单是object级别白名单与method级别白名单的交集。 <br>传入undefined或null会抛出异常错误码401。<br>**起始版本：** 12 |
 
 **错误码：**
 
@@ -3084,13 +2711,9 @@ Registers the JavaScript object and method list.
 static removeAllCache(clearRom: boolean): void
 ```
 
-清除应用中的资源缓存文件，此方法将会清除同一应用中所有Webview的缓存文件。
+清除应用内所有Webview(含隐私模式)产生的资源缓存。 > **说明：** > > 可以通过在data/app/el2/100/base/\&lt;applicationPackageName\&gt;/cache/web/目录下查看Webview的缓存。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static removeAllCache(clearRom: boolean): void--><!--Device-WebviewController-static removeAllCache(clearRom: boolean): void-End-->
 
@@ -3114,13 +2737,9 @@ static removeAllCache(clearRom: boolean): void
 removeCache(clearRom: boolean): void
 ```
 
-清除应用中的资源缓存文件，此方法将会清除同一应用中所有Webview的缓存文件。
+清除与当前WebView上下文相关的资源缓存。 > **说明：** > > 可以通过在data/storage/el2/base/cache/web/Cache目录下查看Webview的缓存。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3151,10 +2770,6 @@ static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void--><!--Device-WebviewController-static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void-End-->
@@ -3180,13 +2795,9 @@ static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>)
 requestFocus(): void
 ```
 
-使当前Web页面获取焦点。
+使指定组件获取焦点。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3206,13 +2817,9 @@ requestFocus(): void
 restoreWebState(state: Uint8Array) : void
 ```
 
-当前Webview从序列化数据中恢复页面状态历史记录。 如果state过大，可能会导致异常。建议state大于512k时，放弃恢复页面状态历史记录。
+当前WebView从序列化数据中恢复页面状态历史记录。 如果state过大，可能会导致异常。建议state大于512k时，放弃恢复页面状态历史记录。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3243,10 +2850,6 @@ resumeAllMedia(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-resumeAllMedia(): void--><!--Device-WebviewController-resumeAllMedia(): void-End-->
@@ -3268,10 +2871,6 @@ static resumeAllTimers(): void
 恢复从pauseAllTimers()接口中被暂停的所有的定时器。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3295,10 +2894,6 @@ resumeMicrophone(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-resumeMicrophone(): void--><!--Device-WebviewController-resumeMicrophone(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -3315,13 +2910,9 @@ resumeMicrophone(): void
 runJavaScript(script: string): Promise<string>
 ```
 
-在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过Promise方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。 > **说明：** > > - 跨导航操作（如loadUrl）时，JavaScript状态 将不再保留，例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。 > > - 建议应用程序使用registerJavaScriptProxy来确保JavaScript状态能够在页面导航间保持。
+在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过Promise方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。 > **说明：** > > - 跨导航操作（如loadUrl）时，JavaScript状态 将不再保留，例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。 > > - 建议应用程序使用registerJavaScriptProxy来确保JavaScript状态能够在页面导航间保持。 > > - 目前不支持传递对象，支持传递结构体。 > > - 执行异步方法无法获取返回值，需要根据具体情境判断是否使用同步或异步方式。 > > - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3355,13 +2946,9 @@ runJavaScript(script: string): Promise<string>
 runJavaScript(script: string, callback: AsyncCallback<string>): void
 ```
 
-在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过异步回调方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。 > **说明：** > > - 跨导航操作（如loadUrl）时，JavaScript状态将不再保留。例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。 > > - 建议应用程序使用registerJavaScriptProxy来确保JavaScript状态能够在页面导航间保持。
+在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过异步回调方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。 > **说明：** > > - 跨导航操作（如loadUrl）时，JavaScript状态将不再保留。例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。 > > - 建议应用程序使用registerJavaScriptProxy来确保JavaScript状态能够在页面导航间保持。 > > - 目前不支持传递对象，支持传递结构体。 > > - 执行异步方法无法获取返回值，需要根据具体情境判断是否使用同步或异步方式。 > > - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3374,7 +2961,7 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | script | string | 是 | JavaScript脚本。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调执行JavaScript脚本结果。JavaScript脚本若执行失败或无返回值时，返回null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调执行JavaScript脚本结果。JavaScript脚本若执行失败或无返回值时，返回null。 |
 
 **错误码：**
 
@@ -3390,13 +2977,9 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 ```
 
-异步执行JavaScript脚本，并通过Promise方式返回脚本执行的结果。
+异步执行JavaScript脚本，并通过Promise方式返回脚本执行的结果。runJavaScriptExt需要在loadUrl完成后，比如onPageEnd中 调用。 > **说明：** > > - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3408,13 +2991,13 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 10 - 11 |
+| script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[JsMessageExt](../../apis-na/arkts-apis/arkts-na-webview-jsmessageext-c.md)&gt; | Promise实例，返回脚本执行的结果。 |
+| Promise&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | Promise实例，返回脚本执行的结果。 |
 
 **错误码：**
 
@@ -3429,13 +3012,9 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void
 ```
 
-异步执行JavaScript脚本，并通过回调方式返回脚本执行的结果。
+异步执行JavaScript脚本，并通过回调方式返回脚本执行的结果。runJavaScriptExt需要在loadUrl完成后，比如onPageEnd中调用。 > **说明：** > > - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3447,8 +3026,8 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 10 - 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](../../apis-na/arkts-apis/arkts-na-webview-jsmessageext-c.md)&gt; | 是 | 回调执行JavaScript脚本结果。 |
+| script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 12 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | 回调执行JavaScript脚本结果。 |
 
 **错误码：**
 
@@ -3467,10 +3046,6 @@ scrollBy(deltaX: number, deltaY: number, duration?: number): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-scrollBy(deltaX: number, deltaY: number, duration?: number): void--><!--Device-WebviewController-scrollBy(deltaX: number, deltaY: number, duration?: number): void-End-->
@@ -3481,9 +3056,9 @@ scrollBy(deltaX: number, deltaY: number, duration?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deltaX | number | 是 | 水平偏移量，其中水平向右为正方向。<br>单位：vp。 |
-| deltaY | number | 是 | 垂直偏移量，其中垂直向下为正方向。<br>单位：vp。 |
-| duration | number | 否 | 滚动动画时间。<br>单位：ms。 <br>不传入为无动画，当传入数值为负数或传入0时，按照不传入处理。 <br>传入null或undefined时会抛出异常错误码401。<br>**起始版本：** 14 |
+| deltaX | number | 是 | 水平偏移量，其中水平向右为正方向。 <br>单位：vp。 |
+| deltaY | number | 是 | 垂直偏移量，其中垂直向下为正方向。 <br>单位：vp。 |
+| duration | number | 否 | 滚动动画时间。 <br>单位：ms。 <br>不传入为无动画，当传入数值为负数或传入0时，按照不传入处理。 <br>传入null或undefined时会抛出异常错误码401。<br>**起始版本：** 14 |
 
 **错误码：**
 
@@ -3502,10 +3077,6 @@ scrollByWithResult(deltaX: number, deltaY: number): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-scrollByWithResult(deltaX: number, deltaY: number): boolean--><!--Device-WebviewController-scrollByWithResult(deltaX: number, deltaY: number): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -3521,7 +3092,7 @@ scrollByWithResult(deltaX: number, deltaY: number): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true表示当前网页可以滑动，false表示当前网页不可以滑动。 <br>默认为false。 |
+| boolean | true表示当前网页可以滑动，false表示当前网页不可以滑动。 |
 
 **错误码：**
 
@@ -3536,13 +3107,9 @@ scrollByWithResult(deltaX: number, deltaY: number): boolean
 scrollTo(x: number, y: number, duration?: number): void
 ```
 
-Scrolls the page to the specified absolute position within a specified period. 在指定时间内，将页面滚动到指定的绝对位置。
+在指定时间内，将页面滚动到指定的绝对位置。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3554,9 +3121,9 @@ Scrolls the page to the specified absolute position within a specified period. �
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | 绝对位置的水平坐标，当传入数值为负数时，按照传入0处理。<br>单位：vp。 |
-| y | number | 是 | 绝对位置的垂直坐标，当传入数值为负数时，按照传入0处理。<br>单位：vp。 |
-| duration | number | 否 | 滚动动画时间。<br>单位：ms。<br>不传入为无动画，当传入数值为负数或传入0时，按照不传入处理。 <br>传入null或undefined时会抛出异常错误码401。<br>**起始版本：** 14 |
+| x | number | 是 | 绝对位置的水平坐标，当传入数值为负数时，按照传入0处理。 <br>单位：vp。 |
+| y | number | 是 | 绝对位置的垂直坐标，当传入数值为负数时，按照传入0处理。 <br>单位：vp。 |
+| duration | number | 否 | 滚动动画时间。 <br>单位：ms。 <br>不传入为无动画，当传入数值为负数或传入0时，按照不传入处理。 <br>传入null或undefined时会抛出异常错误码401。<br>**起始版本：** 14 |
 
 **错误码：**
 
@@ -3571,13 +3138,9 @@ Scrolls the page to the specified absolute position within a specified period. �
 searchAllAsync(searchString: string): void
 ```
 
-异步查找网页中所有匹配关键字'searchString'的内容并高亮，结果通过 onSearchResultReceive异步返回。
+异步查找网页中所有匹配关键字'searchString'的内容并高亮，结果通过onSearchResultReceive异步返回。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3608,10 +3171,6 @@ searchNext(forward: boolean): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-searchNext(forward: boolean): void--><!--Device-WebviewController-searchNext(forward: boolean): void-End-->
@@ -3622,7 +3181,7 @@ searchNext(forward: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| forward | boolean | 是 | 从前向后或者逆向查找方式。<br>true表示从前向后查找，false表示从后向前查找。 |
+| forward | boolean | 是 | 从前向后或者逆向查找方式。 <br>true表示从前向后查找，false表示从后向前查找。 |
 
 **错误码：**
 
@@ -3637,13 +3196,9 @@ searchNext(forward: boolean): void
 serializeWebState() : Uint8Array
 ```
 
-Serialize the access stack of the web, that is, the history of access.
+将当前WebView的页面状态历史记录信息序列化。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3655,7 +3210,7 @@ Serialize the access stack of the web, that is, the history of access.
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | Web access stack after serialization. |
+| Uint8Array | 当前WebView的页面状态历史记录序列化后的数据。 |
 
 **错误码：**
 
@@ -3669,13 +3224,9 @@ Serialize the access stack of the web, that is, the history of access.
 static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 ```
 
-设置ArkWeb内核版本。若系统不支持指定版本，则设置无效。该接口为全局静态API，须在调用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。 > **说明：** > > - setActiveWebEngineVersion不支持在异步线程中调用。 > > - setActiveWebEngineVersion全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
+设置ArkWeb内核版本。若系统不支持指定版本，则设置无效，使用系统默认内核（可参考[约束与限制](../../../web/web-component-overview.md#约束与限制)）。该接口为全局静态API，须在调 用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。典型使用场景：使用特定内核版本的特性或兼容性需求时，可切换到对应内核版本。 > **说明：** > > - setActiveWebEngineVersion不支持在异步线程中调用。 > > - setActiveWebEngineVersion全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void--><!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void-End-->
 
@@ -3685,7 +3236,7 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| engineVersion | [ArkWebEngineVersion](../../apis-na/arkts-apis/arkts-na-webview-arkwebengineversion-e.md) | 是 | ArkWeb内核版本。 |
+| engineVersion | [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | 是 | ArkWeb内核版本。 |
 
 ## setAppCustomUserAgent
 
@@ -3693,13 +3244,9 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 static setAppCustomUserAgent(userAgent: string) : void
 ```
 
-Set the default User-Agent for the application. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Unlike setCustomUserAgent, which only takes effect in the current web context, the priority for pages loaded in the web is as follows: 1. The User-Agent set by setCustomUserAgent is used first. 2. If not set, it will check whether a specific User-Agent has been assigned to the current page via setUserAgentForHosts. 3. If no specific User-Agent is assigned, the application will fall back to using the User-Agent set by setAppCustomUserAgent. 4. If the app's default User-Agent is also not specified, the web's default User-Agent will be used as the final fallback. &lt;/p&gt;
+设置应用级自定义用户代理，会覆盖系统的用户代理，应用内所有Web组件生效。 当需要设置应用级自定义用户代理时，建议在Web组件创建前调用setAppCustomUserAgent方法设置User-Agent，再创建指定src的Web组件或通过 [loadUrl](#loadurl)加载具体页面。 默认User-Agent定义与使用场景，及相关User-Agent接口定义优先级请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void--><!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void-End-->
 
@@ -3709,7 +3256,7 @@ Set the default User-Agent for the application. &lt;p&gt;&lt;strong&gt;API Note&
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userAgent | string | 是 | The User-Agent string. |
+| userAgent | string | 是 | 用户自定义代理信息。建议先使用 [getDefaultUserAgent](#getdefaultuseragent)获取当前默认用户代理，在此基础上追加自定义用户代理信息。 |
 
 ## setAudioMuted
 
@@ -3717,13 +3264,9 @@ Set the default User-Agent for the application. &lt;p&gt;&lt;strong&gt;API Note&
 setAudioMuted(mute: boolean): void
 ```
 
-设置网页静音。
+设置网页静音。典型使用场景包括：应用需要控制网页音量（如提供静音开关）、后台播放时需要静音等。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3735,7 +3278,7 @@ setAudioMuted(mute: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mute | boolean | 是 | 表示是否将网页设置为静音状态。<br>true表示将网页设置为静音状态，false表示将网页取消静音状态。 |
+| mute | boolean | 是 | 表示是否将网页设置为静音状态。 <br>true表示将网页设置为静音状态，false表示将网页取消静音状态。 |
 
 **错误码：**
 
@@ -3750,13 +3293,9 @@ setAudioMuted(mute: boolean): void
 static setAutoPreconnect(enabled: boolean): void
 ```
 
-Configure whether to enable automatic pre-connection to high-frequency URLs accessed during the application's previous lifecycle after web initialization.
+设置Web内核的自动预连接状态。若未设置，默认启用自动预连接。 需要在[initializeWebEngine()](#initializewebengine)初始化内核或者创建Web组件之前调用。若已加载任何Web组件，则该设 置无效。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void--><!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void-End-->
 
@@ -3766,7 +3305,7 @@ Configure whether to enable automatic pre-connection to high-frequency URLs acce
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | Enable if true, disable if false. |
+| enabled | boolean | 是 | 是否启用Web内核自动预连接的开关。true表示启用，false表示禁用。 |
 
 ## setBackForwardCacheOptions
 
@@ -3778,10 +3317,6 @@ setBackForwardCacheOptions(options: BackForwardCacheOptions): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-setBackForwardCacheOptions(options: BackForwardCacheOptions): void--><!--Device-WebviewController-setBackForwardCacheOptions(options: BackForwardCacheOptions): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -3790,7 +3325,7 @@ setBackForwardCacheOptions(options: BackForwardCacheOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [BackForwardCacheOptions](../../apis-na/arkts-apis/arkts-na-webview-backforwardcacheoptions-c.md) | 是 | 用来控制Web组件前进后退缓存相关选项。 |
+| options | [BackForwardCacheOptions](arkts-arkweb-webview-backforwardcacheoptions-c.md) | 是 | 用来控制Web组件前进后退缓存相关选项。 |
 
 **错误码：**
 
@@ -3808,10 +3343,6 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: number) : number--><!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: number) : number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -3820,7 +3351,7 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capacity | number | 是 | 设置持久化缓存设置，单位MB，最大设置不超过100MB。<br>合法取值范围：[0, 100]，当设置为0时，无缓存空间，则功能全局不开启。<br>非法值设置行为：小于 0时生效值为0，大于100时生效值为100。 |
+| capacity | number | 是 | 设置持久化缓存设置，单位MB，最大设置不超过100MB。 <br>合法取值范围：[0, 100]，当设置为0时，无缓存空间，则功能全局不开启。 <br>非法值设置行为：小于0时生效值为0，大于100时生效值为100。 |
 
 **返回值：**
 
@@ -3840,13 +3371,9 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode
 ```
 
-设置无白屏加载是否启用，本接口必须与[getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getBlanklessInfoWithKey)接口配套使用。 > **说明：** > > - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getBlanklessInfoWithKey)。 > > - 页面加载必须在调用本接口的组件中进行。 > > - 当相似度较低时，系统将判定为跳变过大，启用插帧会失败。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考 > [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+设置无白屏加载是否启用，本接口必须与[getBlanklessInfoWithKey](#getblanklessinfowithkey)接口配套使用。 > **说明：** > > - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](#getblanklessinfowithkey)。 > > - 页面加载必须在调用本接口的组件中进行。 > > - 当相似度较低时，系统将判定为跳变过大，启用插帧会失败。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO， > 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode--><!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode-End-->
 
@@ -3856,14 +3383,14 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 唯一标识本页面的key值。必须与getBlanklessInfoWithKey接口的key值相同。<br>合法取值范围：非空，长度不超过2048个字符。<br>非法值设置行为：返 回错误码WebBlanklessErrorCode，方案不生效。 |
-| is_start | boolean | 是 | 是否启用开始插帧。true：启用，false：不启用。<br>传入undefined或null时为false。 |
+| key | string | 是 | 唯一标识本页面的key值。必须与getBlanklessInfoWithKey接口的key值相同。 <br>合法取值范围：非空，长度不超过2048个字符。 <br>非法值设置行为：返回错误码WebBlanklessErrorCode，方案不生效。 |
+| is_start | boolean | 是 | 是否启用开始插帧。true：启用，false：不启用。 <br>传入undefined或null时为false。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md) | 返回接口调用是否成功，具体见 [WebBlanklessErrorCode]{ |
+| [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md) | 返回接口调用是否成功，具体见 [WebBlanklessErrorCode]{ |
 
 **错误码：**
 
@@ -3878,13 +3405,9 @@ setBlanklessLoadingWithParams(key: string,
       param: BlanklessLoadingParam) : WebBlanklessErrorCode
 ```
 
-Triggers frame interpolation and sets frame interpolation parameters. This API must be used in pair with the getBlanklessInfoWithKey API. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+设置白屏插帧的配置参数，本接口必须与[getBlanklessInfoWithKey](#getblanklessinfowithkey)接口配套使用。相比于 [setBlanklessLoadingWithKey](#setblanklessloadingwithkey)，本接口支持白屏插帧更多的参数设置，包括插帧持续时 间，缓存数据有效时间，插帧完成后的自定义回调。 > **说明：** > > - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](#getblanklessinfowithkey)。 > > - 页面加载必须在调用本接口的组件中进行。 > > - 当相似度较低时，系统将判定为跳变过大，启用插帧会失败。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考 > [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3896,14 +3419,14 @@ Triggers frame interpolation and sets frame interpolation parameters. This API m
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | Key value that uniquely identifies the current page. <br>Value range: (0, 2048] <br>The key value must be the same as that of getBlanklessInfoWithKey. |
-| param | [BlanklessLoadingParam](../../apis-na/arkts-apis/arkts-na-webview-blanklessloadingparam-i.md) | 是 | The blankless loading parameter. <br>None |
+| key | string | 是 | 唯一标识本页面的key值。必须与getBlanklessInfoWithKey接口的key值相同。 <br>合法取值范围：非空，长度不超过2048个字符。 <br>非法值设置行为：返回错误码WebBlanklessErrorCode，方案不生效。 |
+| param | [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) | 是 | 白屏插帧加载的各项参数设置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
+| [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md) | 返回接口调用结果。 |
 
 **错误码：**
 
@@ -3921,10 +3444,6 @@ static setConnectionTimeout(timeout: number): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static setConnectionTimeout(timeout: number): void--><!--Device-WebviewController-static setConnectionTimeout(timeout: number): void-End-->
@@ -3935,7 +3454,7 @@ static setConnectionTimeout(timeout: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | number | 是 | socket连接超时时间，以秒为单位，必须为大于0的整数。 |
+| timeout | number | 是 | socket连接超时时间，单位：s，必须为大于0的整数。 |
 
 **错误码：**
 
@@ -3949,13 +3468,9 @@ static setConnectionTimeout(timeout: number): void
 setCustomUserAgent(userAgent: string): void
 ```
 
-设置自定义用户代理，会覆盖系统的用户代理。
+设置自定义用户代理，会覆盖系统的用户代理。 > **说明：** > > - 当Web组件src设置了URL时，建议在onControllerAttached回调中设置User-Agent。不要在 > onLoadIntercept回调中设置，否则可能会设置失败或导致不可预期的后果。 > > - 若未在onControllerAttached回调中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现象。 > > - 当Web组件src未设置URL时，建议先调用setCustomUserAgent方法设置User-Agent，再通过loadUrl加载具体页面。 > > - 默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3967,7 +3482,7 @@ setCustomUserAgent(userAgent: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userAgent | string | 是 | 用户自定义代理信息。 |
+| userAgent | string | 是 | 用户自定义代理信息。建议先使用[getUserAgent](#getuseragent)获取当前默认用户 代理，在此基础上追加自定义用户代理信息。 |
 
 **错误码：**
 
@@ -3986,10 +3501,6 @@ setDownloadDelegate(delegate: WebDownloadDelegate): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-setDownloadDelegate(delegate: WebDownloadDelegate): void--><!--Device-WebviewController-setDownloadDelegate(delegate: WebDownloadDelegate): void-End-->
@@ -4000,7 +3511,7 @@ setDownloadDelegate(delegate: WebDownloadDelegate): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](../../apis-na/arkts-apis/arkts-na-webview-webdownloaddelegate-c.md) | 是 | 用来接收下载进度的委托。 |
+| delegate | [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) | 是 | 用来接收下载进度的委托。 |
 
 **错误码：**
 
@@ -4014,13 +3525,9 @@ setDownloadDelegate(delegate: WebDownloadDelegate): void
 setErrorPageEnabled(enable: boolean): void
 ```
 
-是否开启默认错误页，开启后onOverrideErrorPage会在页面发生错误的时候进行回调
+设置是否启用默认错误页。 在当前接口设置为true时如果页面加载发生错误将触发onOverrideErrorPage回调，可在该回调接口中设置自定义的错误展示页面。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void--><!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void-End-->
 
@@ -4030,7 +3537,36 @@ setErrorPageEnabled(enable: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否开启 |
+| enable | boolean | 是 | 表示是否启用默认错误页。true表示启用，false表示不启用。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
+## setErrorPageEnabled
+
+```TypeScript
+setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
+```
+
+设置是否启用mainframe错误页功能，并可控制是否同时启用subframe错误页功能。 当enable设置为true时，mainframe加载发生错误将展示错误页：若设置了onOverrideErrorPage回调，则展示用户自定 义的错误页；若未设置，则展示ArkWeb提供的默认错误页。当enable和includeSubframe同时设置为true时，subframe加载发生错误也会展示错误页，onOverrideErrorPage回调对 subframe同样生效。 > **说明：** > > - 当enable设置为false时，无论includeSubframe取何值，mainframe和subframe的错误页功能均不启用。 > > - 当includeSubframe设置为false时，本接口行为与 > [setErrorPageEnabled](#seterrorpageenabled)一致，即仅启用mainframe错误页功 > 能，不启用subframe错误页功能。 > > - 可通过errorPageEvent.request.isMainFrame()判断错误来源是mainframe还是subframe，以便在 > onOverrideErrorPage回调中分别设置对应的自定义错误页。 > 26.0.0
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebviewController-setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void--><!--Device-WebviewController-setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 表示是否启用mainframe错误页功能。true表示启用，false表示不启用。启用后mainframe加载出错将展示错误页。 |
+| includeSubframe | boolean | 是 | 表示是否同时启用subframe错误页功能。true表示启用，false表示不启用。启用后subframe加载出错也将展示错误页。仅在enable为 true时有效。 |
 
 **错误码：**
 
@@ -4047,10 +3583,6 @@ static setHostIP(hostName: string, address: string, aliveTime: number): void
 设置主机域名解析后的IP地址。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4082,10 +3614,6 @@ static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void--><!--Device-WebviewController-static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void-End-->
@@ -4096,7 +3624,7 @@ static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| secureDnsMode | [SecureDnsMode](../../apis-na/arkts-apis/arkts-na-webview-securednsmode-e.md) | 是 | 使用HTTPDNS的模式。 |
+| secureDnsMode | [SecureDnsMode](arkts-arkweb-webview-securednsmode-e.md) | 是 | 使用HTTPDNS的模式。 |
 | secureDnsConfig | string | 是 | HTTPDNS server的配置，必须是https协议并且只允许配置一个server。 |
 
 **错误码：**
@@ -4111,13 +3639,9 @@ static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void
 setNetworkAvailable(enable: boolean): void
 ```
 
-为网页设置网络状态。该功能用于在JavaScript中设置window.navigator.onLine属性。
+设置JavaScript中的`window.navigator.onLine`属性。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4129,7 +3653,7 @@ setNetworkAvailable(enable: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 设置JavaScript中的`window.navigator.onLine`属性。<br>true表示设置JavaScript中的` window.navigator.onLine`属性为true，false表示设置JavaScript中的`window.navigator.onLine`属性为false。<br>默认值：true。 |
+| enable | boolean | 是 | 设置JavaScript中的`window.navigator.onLine`属性。 <br>true表示设置JavaScript中的`window.navigator.onLine`属性为true，false表示设置JavaScript中的`window.navigator.onLine`属性为 false。 <br>默认值：true。 |
 
 **错误码：**
 
@@ -4144,13 +3668,9 @@ setNetworkAvailable(enable: boolean): void
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访问本地文件，也允许跨域访问其他在线资源。此外，当设置了路径列表时，file协议仅允许访问路径列表中的资源（ [fileAccess](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#fileaccess)的行为将会被此接口行为覆盖）。 setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风险操作。基于最小权限原则，当前el1，el2放开的路径是固定的，路径列表中的路径应符合以下任一路径格式： 1.应用文件目录的子目录（应用文件目录通过Ability Kit中的 [Context.filesDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)获取），例如： * /data/storage/el2/base/files/example * /data/storage/el2/base/haps/entry/files/example 2.应用资源目录及其子目录（应用资源目录通过Ability Kit中的 [Context.resourceDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)获取），例如： * /data/storage/el1/bundle/entry/resources/resfile * /data/storage/el1/bundle/entry/resources/resfile/example 3.从API version 21开始，还包括了应用缓存目录及其子目录（应用缓存目录通过Ability Kit中的 [Context.cacheDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)获取），例如： * /data/storage/el2/base/cache * /data/storage/el2/base/haps/entry/cache/example * 设置的目录路径中，不允许包含cache/web，否则会抛出异常码401。如果设置目录路径是cache，cache/web也不允许访问。 4.从API version 21开始，还包括了应用临时目录及其子目录（应用临时目录通过Ability Kit中的 [Context.tempDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)获取），例如： * /data/storage/el2/base/temp * /data/storage/el2/base/haps/entry/temp/example 当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以 [fileAccess](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#fileaccess)的行为为准。
+设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访问本地文件，也允许跨域访问其他在线资源。此外，当设置了路径列表时，file协议仅允许访问路径列表中的资源。典型使用场景：用于需要允许Web组件跨域访问本地资源 文件，同时限制访问范围以保证安全的场景。（fileAccess的行为将会被此接口行为覆盖）。 setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风险操作。基于最小权限原则，当前el1，el2放开的路径是固定的，路径列表中的路径应符合以下任一路径格式： 1.应用文件目录的子目录（应用文件目录通过Ability Kit中的 [Context.filesDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)获取），例如： * /data/storage/el2/base/files/example * /data/storage/el2/base/haps/entry/files/example 2.应用资源目录及其子目录（应用资源目录通过Ability Kit中的 [Context.resourceDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)获取），例如： * /data/storage/el1/bundle/entry/resources/resfile * /data/storage/el1/bundle/entry/resources/resfile/example 3.从API version 21开始，还包括了应用缓存目录及其子目录（应用缓存目录通过Ability Kit中的 [Context.cacheDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)获取），例如： * /data/storage/el2/base/cache * /data/storage/el2/base/haps/entry/cache/example * 设置的目录路径中，不允许包含cache/web，否则会抛出异常码401。如果设置目录路径是cache，cache/web也不允许访问。 4.从API version 21开始，还包括了应用临时目录及其子目录（应用临时目录通过Ability Kit中的 [Context.tempDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)获取），例如： * /data/storage/el2/base/temp * /data/storage/el2/base/haps/entry/temp/example 当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以fileAccess的 行为为准。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void--><!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void-End-->
 
@@ -4175,13 +3695,9 @@ setPathAllowingUniversalAccess(pathList: Array<string>): void
 setPrintBackground(enable: boolean): void
 ```
 
-Set whether print web page background.
+设置是否打印网页背景，该接口与[PrintAttributes](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-print-printattributes-i.md#printattributes)打印参数配置不一致时，本接口设置优先级高于打印参数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4193,7 +3709,7 @@ Set whether print web page background.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | Whether to print the web page background.<br>The value **true** means to print the web page background, and **false** means the opposite. |
+| enable | boolean | 是 | 表示是否打印网页背景。 <br>true表示设置为打印网页背景，false表示取消网页背景打印。 |
 
 **错误码：**
 
@@ -4208,13 +3724,9 @@ Set whether print web page background.
 static setRenderProcessMode(mode: RenderProcessMode): void
 ```
 
-Set render process mode of the ArkWeb.
+设置ArkWeb渲染子进程模式，可根据应用对内存占用与渲染进程隔离的需求选择对应的模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4226,13 +3738,13 @@ Set render process mode of the ArkWeb.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [RenderProcessMode](../../apis-na/arkts-apis/arkts-na-webview-renderprocessmode-e.md) | 是 | The render process mode for the ArkWeb. Call [getRenderProcessMode](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getRenderProcessMode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value **0** indicates the single render subprocess mode, and **1** indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of **RenderProcessMode** is passed, the multi-render subprocess mode is used by default. |
+| mode | [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) | 是 | 渲染子进程模式。 <br>可以先调用[getRenderProcessMode()](#getrenderprocessmode)查看当前设备的ArkWeb渲染子进程模式，枚 举值0为单子进程模式，枚举值1为多子进程模式。 <br>手机默认为单渲染子进程模式，平板和PC/2in1默认为多渲染子进程模式。 <br>如果传入RenderProcessMode枚举值之外的非法数字，则默认识别为多渲染子进程模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. @static |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 
 ## setScrollable
 
@@ -4244,10 +3756,6 @@ setScrollable(enable: boolean, type?: ScrollType): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-setScrollable(enable: boolean, type?: ScrollType): void--><!--Device-WebviewController-setScrollable(enable: boolean, type?: ScrollType): void-End-->
@@ -4258,8 +3766,8 @@ setScrollable(enable: boolean, type?: ScrollType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 表示是否将网页设置为允许滚动。<br>true表示设置为允许滚动，false表示禁止滚动。<br>默认值：true。 |
-| type | [ScrollType](../../apis-na/arkts-apis/arkts-na-webview-scrolltype-e.md) | 否 | 网页可触发的滚动类型，支持缺省配置。 <br> - enable为false时，表示禁止ScrollType类型的滚动，当ScrollType缺省时表示禁止所有类型网页滚动。 <br> - enable为true时，ScrollType缺省与否，都表示允许所有类型的网页滚动。 <br>传入null或undefined时会抛出异常错误码401。 |
+| enable | boolean | 是 | 表示是否将网页设置为允许滚动。 <br>true表示设置为允许滚动，false表示禁止滚动。 <br>默认值：true。 |
+| type | [ScrollType](arkts-arkweb-webview-scrolltype-e.md) | 否 | 网页可触发的滚动类型，支持缺省配置。<br/> - enable为false时，表示禁止ScrollType类型的滚动，当ScrollType缺省时表示禁止所有类型网页 滚动。<br/> - enable为true时，ScrollType缺省与否，都表示允许所有类型的网页滚动。 <br>传入null或undefined时会抛出异常错误码401。 |
 
 **错误码：**
 
@@ -4274,13 +3782,9 @@ setScrollable(enable: boolean, type?: ScrollType): void
 static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
-在Web页面场景，设置全局滚动条模式。不显式调用时，默认为 [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](../../apis-na/arkts-apis/arkts-na-webview-scrollbarmode-e.md#ScrollbarMode)（非常驻滚动条）。 > **说明：** > > - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。 > > - 若forceDisplayScrollBar > 接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。 > > - 该接口需要在WebViewController绑定Web组件之前调用。
+在Web页面场景，设置全局滚动条模式。不显式调用时，默认为[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md#scrollbarmode)（非常驻滚动条）。 > **说明：** > > - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。 > > - 若forceDisplayScrollBar接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。 > > - 该接口需要在WebViewController绑定Web组件之前调用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void--><!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void-End-->
 
@@ -4290,7 +3794,7 @@ static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scrollbarMode | [ScrollbarMode](../../apis-na/arkts-apis/arkts-na-webview-scrollbarmode-e.md) | 是 | 滚动条模式。 |
+| scrollbarMode | [ScrollbarMode](arkts-arkweb-webview-scrollbarmode-e.md) | 是 | 滚动条模式。 |
 
 ## setServiceWorkerWebSchemeHandler
 
@@ -4298,13 +3802,9 @@ static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void
 ```
 
-Set web scheme handler for specific scheme. This is used for service worker.
+为当前应用的所有Web组件设置用于拦截ServiceWorker的WebSchemeHandler。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4316,8 +3816,8 @@ Set web scheme handler for specific scheme. This is used for service worker.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scheme | string | 是 | String value for url scheme. |
-| handler | [WebSchemeHandler](../../apis-na/arkts-apis/arkts-na-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
+| scheme | string | 是 | 要拦截的协议。 |
+| handler | [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) | 是 | 拦截此协议的拦截器。 |
 
 **错误码：**
 
@@ -4331,13 +3831,9 @@ Set web scheme handler for specific scheme. This is used for service worker.
 static setSiteIsolationMode(mode: SiteIsolationMode): void
 ```
 
-Set the site isolation mode.
+设置站点隔离模式。站点隔离机制将不同源的网站隔离在不同的渲染进程中，减少跨域攻击面。例如：PC等设备上，在未启用站点隔离模式时，原有进程模型是每一个Tab对应一个渲染进程，开启站点隔离后，一个Tab下不同源的Iframe可在独 立的渲染进程中运行。 对于仅加载可信网页的第三方应用，可以关闭此功能，以提升性能并减少内存占用，同时减少跨域访问的拦截。默认值根据不同的设备而定，PC/Table采用严格站点隔离 [SiteIsolationMode.STRICT](arkts-arkweb-webview-siteisolationmode-e.md#siteisolationmode)，Phone默认部分站点隔离 [SiteIsolationMode.PARTIAL](arkts-arkweb-webview-siteisolationmode-e.md#siteisolationmode)。[坚盾守护模式](../../../web/web-secure-shield-mode.md)下采用 严格站点隔离。 > **说明：** > > 不能在单子进程模式下设置严格站点隔离。 > > 接口只能在初始化时调用一次，不支持反复修改。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void--><!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void-End-->
 
@@ -4347,13 +3843,13 @@ Set the site isolation mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [SiteIsolationMode](../../apis-na/arkts-apis/arkts-na-webview-siteisolationmode-e.md) | 是 | The site isolation mode of the application, default value depends on different devices type. |
+| mode | [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) | 是 | 设置站点隔离模式。 <br>默认值取决于设备类型和设备模式：PC/Tablet默认严格站点隔离，Phone默认部分站点隔离；坚盾守护模式默认严格站点隔离。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. Possible causes: 1. Site Isolation mode is already set by the developer. 2. Site Isolation mode cannot be strict in single-render-process mode. 3. Site Isolation mode cannot be changed while Secure Shield mode is active. @static |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. Possible causes: 1. Site Isolation mode is already set by the developer. 2. Site Isolation mode cannot be strict in single-render-process mode. 3. Site Isolation mode cannot be changed while Secure Shield mode is active. |
 
 ## setSocketIdleTimeout
 
@@ -4361,13 +3857,9 @@ Set the site isolation mode.
 static setSocketIdleTimeout(timeout: number): void
 ```
 
-设置ArkWeb中已使用过的空闲socket的超时时间。
+设置ArkWeb中已使用过的空闲socket的超时时间，即已使用过的socket可以处于空闲状态的最大时长。如果设置的值与已存在的空闲socket超时时间不同，则根据新的值对已存在的空闲socket进行清理。 未使用该接口设置空闲socket的超时时间时，ArkWeb的默认值为300s。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static setSocketIdleTimeout(timeout: number): void--><!--Device-WebviewController-static setSocketIdleTimeout(timeout: number): void-End-->
 
@@ -4377,7 +3869,7 @@ static setSocketIdleTimeout(timeout: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | number | 是 | ArkWeb中已经使用过的空闲socket的超时时间。<br>取值范围：[30,300]，单位：s。<br>小于30时生效值为30，大于300时生效值为300。 |
+| timeout | number | 是 | ArkWeb中已经使用过的空闲socket的超时时间。 <br>取值范围：[30,300]，单位：s。 <br>小于30时生效值为30，大于300时生效值为300。 |
 
 ## setSoftKeyboardBehaviorMode
 
@@ -4385,13 +3877,9 @@ static setSocketIdleTimeout(timeout: number): void
 setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void
 ```
 
-Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown/hidden automatically in particular situation, for example, when web is inactive or active.
+设置软键盘自动控制模式，当接口没有显式调用时，Web组件失去焦点或获得焦点、状态切换为inactive或active时，系统均会尝试触发软键盘自动隐藏或拉起。典型使用场景：不希望Web组件在inactive或active状态切 换时自动隐藏或重新拉起软键盘时，可使用DISABLE_AUTO_KEYBOARD_ON_ACTIVE；需要保留默认自动管理行为时，可使用DEFAULT。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void--><!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void-End-->
 
@@ -4401,7 +3889,7 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebSoftKeyboardBehaviorMode](../../apis-na/arkts-apis/arkts-na-webview-websoftkeyboardbehaviormode-e.md) | 是 | The WebSoftKeyboardBehaviorMode of this web. |
+| mode | [WebSoftKeyboardBehaviorMode](arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) | 是 | Web软键盘自动控制模式。 |
 
 **错误码：**
 
@@ -4415,13 +3903,9 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 setUrlTrustList(urlTrustList: string): void
 ```
 
-Set the URL trust list for the ArkWeb. When the URL trust list has been set, only the URLs in the list can be accessed.
+设置Web的URL白名单，只有白名单内的URL才能允许加载/跳转，否则将拦截并弹出告警页。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4433,7 +3917,7 @@ Set the URL trust list for the ArkWeb. When the URL trust list has been set, onl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| urlTrustList | string | 是 | the URL trust list in JSON format. An empty string means that all URLs are allowed to access. |
+| urlTrustList | string | 是 | URL白名单列表，使用json格式配置，最大支持10MB。<br/>白名单设置接口为覆盖方式，多次调用接口时，以最后一次设置为准。<br/>当本参数为空字符串 时，表示取消白名单，放行所有URL的访问。 <br/>json格式示例： <br/>{ <br>  "UrlPermissionList": [ <br/>    { <br/>      "scheme": "https", <br/>      "host": "www.example1.com", <br/>      "port": 443, <br/>      "path": "pathA/pathB" <br/>    }, <br/>    { <br/>      "scheme": "http", <br/>      "host": "www.example2.com", <br/>      "port": 80, <br/>      "path": "test1/test2/test3"<br/>    } <br/>  ] <br/>} |
 
 **错误码：**
 
@@ -4448,13 +3932,9 @@ Set the URL trust list for the ArkWeb. When the URL trust list has been set, onl
 setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void
 ```
 
-Sets the URL trust list for the ArkWeb. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> When the URL trust list is set, only the URLs in the list can be accessed. Example of the urlTrustList: { "UrlPermissionList": [ { "scheme": "https", "host": "www.example1.com", "port": 443, "path": "pathA/pathB" }, { "scheme": "http", "host": "*.example2.com", "port": 80, "path": "test1/test2/test3" } ] } &lt;/p&gt;
+设置Web的URL白名单，只有白名单内的URL才能允许加载/跳转，否则将拦截并弹出告警页。扩展了对Opaque Origin URL以及通配符规则的控制能力。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void-End-->
 
@@ -4464,9 +3944,9 @@ Sets the URL trust list for the ArkWeb. &lt;p&gt;&lt;strong&gt;API Note&lt;/stro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| urlTrustList | string | 是 | The URL trust list in JSON format. An empty string means all URLs are allowed. |
-| allowOpaqueOrigin | boolean | 是 | If true, loading of opaque origin URLs (e.g., javascript, data) is allowed. If false, it is not allowed. |
-| supportWildcard | boolean | 是 | If true, wildcard matching is supported (e.g., *.example.com matches all subdomains). If false, wildcard matching is not supported. |
+| urlTrustList | string | 是 | URL白名单列表，使用json格式配置，最大支持10MB。<br/>白名单设置接口为覆盖方式，多次调用接口时，以最后一次设置为准。<br/>当本参数为空字符串 时，表示取消白名单，放行所有URL的访问。 <br/>json格式示例： <br/>{ <br>  "UrlPermissionList": [ <br/>    { <br/>      "scheme": "https", <br/>      "host": "www.example1.com", <br/>      "port": 443, <br/>      "path": "pathA/pathB" <br/>    }, <br/>    { <br/>      "scheme": "http", <br/>      "host": "www.example2.com", <br/>      "port": 80, <br/>      "path": "test1/test2/test3"<br/>    } <br/>  ] <br/>} |
+| allowOpaqueOrigin | boolean | 是 | true表示允许loadUrl直接加载javascript/data等 [不透明源URL](https://mdn.org.cn/en-US/docs/Web/URI/Reference/Schemes)，false表示不允许加载不透明源URL。 |
+| supportWildcard | boolean | 是 | true表示支持对host、path的通配符匹配能力，例如白名单配置了`*.example.com`，则访问`a.example.com`和 `b.example.com`都是允许的。false表示不支持。 |
 
 **错误码：**
 
@@ -4481,13 +3961,9 @@ Sets the URL trust list for the ArkWeb. &lt;p&gt;&lt;strong&gt;API Note&lt;/stro
 static setUserAgentClientHintsEnabled(enabled: boolean): void
 ```
 
-Enable the UserAgent Client Hints.
+设置是否开启User-Agent Client Hints功能。 > **说明：** > > User-Agent Client Hints（UA-CH）是一种替代传统User-Agent字符串的隐私保护机制，通过按需请求和结构化数据传递客户端信息，减少过度追踪风险。 > > 不使用该方法时，默认不开启User-Agent Client Hints功能。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static setUserAgentClientHintsEnabled(enabled: boolean): void--><!--Device-WebviewController-static setUserAgentClientHintsEnabled(enabled: boolean): void-End-->
 
@@ -4497,7 +3973,7 @@ Enable the UserAgent Client Hints.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | UserAgent Client Hints will enabled when set true. |
+| enabled | boolean | 是 | 是否开启User-Agent Client Hints功能。<br/>true表示开启，false表示不开启。 |
 
 ## setUserAgentForHosts
 
@@ -4505,13 +3981,9 @@ Enable the UserAgent Client Hints.
 static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 ```
 
-设置用于指定主机的User-Agent，最多支持20,000个主机。 为同一个 User-Agent 多次设置相同的 Host 列表，将会覆盖之前的设置。也就是说，如果您希望取消某些Host使用指定的User-Agent， 您需要重新为该 User-Agent 设置 Host 列表。
+针对特定网站设置自定义用户代理，会覆盖系统的用户代理，应用内所有Web组件生效。 当需要对特定网站设置自定义用户代理时，建议在Web组件创建前调用setUserAgentForHosts方法设置User-Agent，再创建指定src的Web组件或通过 [loadUrl](#loadurl)加载具体页面。 默认User-Agent定义与使用场景，及相关User-Agent接口定义优先级请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void--><!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void-End-->
 
@@ -4521,8 +3993,8 @@ static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userAgent | string | 是 | The User-Agent string. |
-| hosts | Array&lt;string&gt; | 是 | The hosts to which the User-Agent apply. |
+| userAgent | string | 是 | 用户自定义代理信息。建议先使用 [getDefaultUserAgent](#getdefaultuseragent)获取当前默认用户代理，在此基础上追加自定义用户代理信息。 |
+| hosts | Array&lt;string&gt; | 是 | 用户自定义代理的相关域名列表，每次调用时仅保留最新传入的列表，并限制最大条目数为两万，超出部分自动截断。 |
 
 ## setUserAgentMetadata
 
@@ -4530,13 +4002,9 @@ static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 ```
 
-Sets the User-Agent metadata corresponding to the User-Agent. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> This User-Agent metadata will be used to populate the User-Agent client hints, They can provide the client's branding and version information, the underlying operating system's branding and major version, as well as details about the underlying device.
+设置与User-Agent相对应的UserAgent Metadata数据。 > **说明：** > > User-Agent Metadata将用于填充用户代理客户端提示，它们可以提供客户端的品牌和版本信息、底层操作系统的品牌和主要版本，以及底层设备的详细信息。 > > 用户代理可以通过setCustomUserAgent、setAppCustomUserAgent或setUserAgentForHosts来设置。 > > 如果根据覆盖后的User-Agent未找到UserAgentMetadata，且覆盖后的User-Agent包含系统默认的User-Agent，则将使用系统默认值。 > > 如果根据覆盖后的User-Agent未找到UserAgentMetadata，但覆盖后的 User-Agent 不包含系统默认用户代理，则只会生成低级用户代理客户端提示。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void--><!--Device-WebviewController-setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void-End-->
 
@@ -4546,8 +4014,8 @@ Sets the User-Agent metadata corresponding to the User-Agent. &lt;p&gt;&lt;stron
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userAgent | string | 是 | The User-Agent string. |
-| metaData | [UserAgentMetadata](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md) | 是 | The UserAgentMetadata for the userAgent. |
+| userAgent | string | 是 | 用户自定义代理信息。可以使用[getUserAgent](#getuseragent)获取当前默认用户代 理。 |
+| metaData | [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) | 是 | userAgent对应的UserAgentMetadata。可以先使用 [getUserAgentMetadata](#getuseragentmetadata)获取当前默认值，然后用相应方法进行修改。 |
 
 ## setWebDebuggingAccess
 
@@ -4555,13 +4023,9 @@ Sets the User-Agent metadata corresponding to the User-Agent. &lt;p&gt;&lt;stron
 static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 ```
 
-设置是否启用网页调试功能。默认情况下，网页调试功能是关闭的。详情请参考DevTools工具。 安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患因此，建议在应用正式发布版本时，不要开启此功能。
+设置是否启用网页调试功能。详情请参考[DevTools工具](../../../web/web-debugging-with-devtools.md)。 安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4573,7 +4037,7 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| webDebuggingAccess | boolean | 是 | 设置是否启用网页调试功能。<br>true表示启用网页调试功能。false表示不启用网页调试功能。<br>默认值：false。 |
+| webDebuggingAccess | boolean | 是 | 设置是否启用网页调试功能。 <br>true表示启用网页调试功能。false表示不启用网页调试功能。 <br>默认值：false。 |
 
 **错误码：**
 
@@ -4587,13 +4051,9 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 ```
 
-设置是否启用无线网页调试功能，默认不开启。 当没有指定端口port时，该接口等同于 setWebDebuggingAccess 接口，ArkWeb会启动一个本地domain socket监听。 当指定了端口port时，ArkWeb会启动一个tcp socket监听。这时可以无线调试网页。 由于小于1024的端口号作为熟知或系统端口，在操作系统上需要特权才能开启，因此port的取值必须大于1024，否则该接口会抛出异常。 安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
+设置是否启用无线网页调试功能，默认不开启。 * 当没有指定端口port时，该接口等同于 [setWebDebuggingAccess](#setwebdebuggingaccess)接口， ArkWeb会启动一个本地domain socket监听。 * 当指定了端口port时，ArkWeb会启动一个tcp socket监听。这时可以无线调试网页。详情请参考[无线调试](../../../web/web-debugging-with-devtools.md#无线调试)。 由于小于1024的端口号作为熟知或系统端口，在操作系统上需要特权才能开启，因此port的取值必须大于1024，否则该接口会抛出异常。 安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void-End-->
 
@@ -4604,7 +4064,7 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | webDebuggingAccess | boolean | 是 | 设置是否启用网页调试功能。<br/>true表示开启网页调试功能，false表示关闭网页调试功能。 |
-| port | number | 是 | 表示 devtools 服务器的端口。指定端口后，将创建一个 TCP 服务器套接字，而不是 Unix 域套接字。 |
+| port | number | 是 | 指定DevTools服务的tcp端口号。如果没有指定port，那么该接口等同于 [setWebDebuggingAccess](#setwebdebuggingaccess)接 口。<br/>取值范围: (1024, 65535]<br/>如果port的值在区间[0, 1024]内，则会抛出BusinessError异常，错误码为17100023。 |
 
 **错误码：**
 
@@ -4618,13 +4078,9 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 static setWebDestroyMode(mode: WebDestroyMode): void
 ```
 
-设置web组件的销毁模式
+设置Web组件的销毁模式。当Web组件销毁时，销毁模式会影响Web内核资源释放的时机，例如JavaScript运行上下文、渲染上下文等。默认值： [WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md#webdestroymode)（普通模式），由系统决定销毁时机。应用可设置 [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md#webdestroymode)（快速模式），以立即销毁资源，从而提升特定场景的性能。 > **说明：** > > [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md#webdestroymode)（快速模式）会改变Web组件销毁时机，应用需关注依赖Web组件销毁时机的错误实现，例如：Web组件销毁后仍调用 > WebviewController的未定义行为，与[WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md#webdestroymode)（普通模式）相比，销毁时机提前，有更高的几率触发未关联绑 > 定的异常（17100001），建议应用捕捉异常，或者通过[getAttachState](#getattachstate)方法查询是否绑定状态，来避免稳定性问 > 题。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void--><!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void-End-->
 
@@ -4634,7 +4090,7 @@ static setWebDestroyMode(mode: WebDestroyMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebDestroyMode](../../apis-na/arkts-apis/arkts-na-webview-webdestroymode-e.md) | 是 | web组件销毁模式，默认NORMAL_MODE |
+| mode | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | 是 | 设置Web组件的销毁模式。 <br>默认值：WebDestroyMode.NORMAL_MODE |
 
 ## setWebSchemeHandler
 
@@ -4642,13 +4098,9 @@ static setWebDestroyMode(mode: WebDestroyMode): void
 setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void
 ```
 
-Set web scheme handler for specific scheme. This is only used for related web component.
+为Web组件设置[WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md#webschemehandler), [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md#webschemehandler)类用于 拦截指定scheme的请求。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4660,8 +4112,8 @@ Set web scheme handler for specific scheme. This is only used for related web co
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scheme | string | 是 | String value for url scheme. |
-| handler | [WebSchemeHandler](../../apis-na/arkts-apis/arkts-na-webview-webschemehandler-c.md) | 是 | Web scheme handler. |
+| scheme | string | 是 | 要拦截的协议。 |
+| handler | [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) | 是 | 拦截此协议的拦截器。 |
 
 **错误码：**
 
@@ -4680,10 +4132,6 @@ slideScroll(vx: number, vy: number): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-slideScroll(vx: number, vy: number): void--><!--Device-WebviewController-slideScroll(vx: number, vy: number): void-End-->
@@ -4694,8 +4142,8 @@ slideScroll(vx: number, vy: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| vx | number | 是 | 轻扫滚动的水平速度分量，其中水平向右为速度正方向。<br>单位：vp/s。 |
-| vy | number | 是 | 轻扫滚动的垂直速度分量，其中垂直向下为速度正方向。<br>单位：vp/s。 |
+| vx | number | 是 | 轻扫滚动的水平速度分量，其中水平向右为速度正方向。 <br>单位：vp/s。 |
+| vy | number | 是 | 轻扫滚动的垂直速度分量，其中垂直向下为速度正方向。 <br>单位：vp/s。 |
 
 **错误码：**
 
@@ -4713,10 +4161,6 @@ startCamera(): void
 开启当前网页摄像头捕获。使用摄像头功能前请在module.json5中添加权限: ohos.permission.CAMERA，具体权限的添加方法请参考 [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4740,10 +4184,6 @@ startDownload(url: string): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-startDownload(url: string): void--><!--Device-WebviewController-startDownload(url: string): void-End-->
@@ -4761,7 +4201,7 @@ startDownload(url: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 11 - 21 |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**适用版本：** 22+ |
 
 ## stop
 
@@ -4772,10 +4212,6 @@ stop(): void
 停止页面加载。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4799,10 +4235,6 @@ stopAllMedia(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-stopAllMedia(): void--><!--Device-WebviewController-stopAllMedia(): void-End-->
@@ -4824,10 +4256,6 @@ stopCamera(): void
 停止当前网页摄像头捕获。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4851,10 +4279,6 @@ stopMicrophone(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WebviewController-stopMicrophone(): void--><!--Device-WebviewController-stopMicrophone(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -4875,10 +4299,6 @@ storeWebArchive(baseName: string, autoName: boolean): Promise<string>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean): Promise<string>--><!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean): Promise<string>-End-->
@@ -4890,7 +4310,7 @@ storeWebArchive(baseName: string, autoName: boolean): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | baseName | string | 是 | 生成的离线网页存储位置，该值不能为空。 |
-| autoName | boolean | 是 | 决定是否自动生成文件名。<br>false表示按baseName的文件名存储，true表示根据当前URL自动生成文件名，并按baseName的文件目录存储。 |
+| autoName | boolean | 是 | 决定是否自动生成文件名。 <br>false表示按baseName的文件名存储，true表示根据当前URL自动生成文件名，并按baseName的文件目录存储。 |
 
 **返回值：**
 
@@ -4916,10 +4336,6 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void--><!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void-End-->
@@ -4931,8 +4347,8 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | baseName | string | 是 | 生成的离线网页存储位置，该值不能为空。 |
-| autoName | boolean | 是 | 决定是否自动生成文件名。<br>false表示按baseName的文件名存储，true表示根据当前URL自动生成文件名，并按baseName的文件目录存储。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 返回文件存储路径，保存网页失败会返回null。 |
+| autoName | boolean | 是 | 决定是否自动生成文件名。 <br>false表示按baseName的文件名存储，true表示根据当前URL自动生成文件名，并按baseName的文件目录存储。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 返回文件存储路径，保存网页失败会返回null。 |
 
 **错误码：**
 
@@ -4948,13 +4364,9 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 terminateRenderProcess(): boolean
 ```
 
-Destroy the rendering process. Calling this interface will actively destroy the associated rendering process. If the rendering process has not been started or destroyed, it has no effect. In addition, destroying the rendering process will also affect all other instances associated with the rendering process.
+销毁渲染进程。 调用该接口将会主动销毁相关联的渲染进程。如果渲染进程尚未启动，或者已销毁则没有任何影响。此外销毁渲染进程会同时影响所有与该渲染进程关联的其他实例。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-terminateRenderProcess(): boolean--><!--Device-WebviewController-terminateRenderProcess(): boolean-End-->
 
@@ -4964,7 +4376,7 @@ Destroy the rendering process. Calling this interface will actively destroy the 
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true if it was possible to terminate the render process, otherwise false. Calling this on a not yet started, or an already terminated render will have no effect. |
+| boolean | 返回销毁渲染进程的结果。 <br>返回true表示渲染进程可以被销毁或已被销毁，返回false表示渲染进程不可以被销毁。 |
 
 **错误码：**
 
@@ -4982,10 +4394,6 @@ static trimMemoryByPressureLevel(level: PressureLevel): void
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-static trimMemoryByPressureLevel(level: PressureLevel): void--><!--Device-WebviewController-static trimMemoryByPressureLevel(level: PressureLevel): void-End-->
@@ -4996,7 +4404,7 @@ static trimMemoryByPressureLevel(level: PressureLevel): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | [PressureLevel](../../apis-na/arkts-apis/arkts-na-webview-pressurelevel-e.md) | 是 | 需要清理内存的内存等级。 |
+| level | [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | 是 | 需要清理内存的内存等级。 |
 
 **错误码：**
 
@@ -5010,13 +4418,9 @@ static trimMemoryByPressureLevel(level: PressureLevel): void
 waitForAttached(timeout: number): Promise<ControllerAttachState>
 ```
 
-Wait for the controller to attach a web component until timeout.
+异步等待WebViewController与Web组件绑定完成，绑定完成或超时触发回调，通过Promise方式返回当前 [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md#controllerattachstate)状态。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-WebviewController-waitForAttached(timeout: number): Promise<ControllerAttachState>--><!--Device-WebviewController-waitForAttached(timeout: number): Promise<ControllerAttachState>-End-->
 
@@ -5026,13 +4430,13 @@ Wait for the controller to attach a web component until timeout.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | number | 是 | 异步等待时长。取值范围: [0, 65535]单位: ms |
+| timeout | number | 是 | 异步等待时长。<br/>取值范围: [0, 65535]<br/>单位: ms |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ControllerAttachState](../../apis-na/arkts-apis/arkts-na-webview-controllerattachstate-e.md)&gt; | Promise used to return the state of attach. |
+| Promise&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Promise实例，返回当前 [ControllerAttachState]{ |
 
 ## warmupServiceWorker
 
@@ -5043,10 +4447,6 @@ static warmupServiceWorker(url: string): void
 预热ServiceWorker，以提升首屏页面的加载速度（仅限于会使用ServiceWorker的页面）。在加载URL之前调用此API。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -5064,7 +4464,7 @@ static warmupServiceWorker(url: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**适用版本：** 12 - 21 |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**适用版本：** 22+ |
 
 ## webPageSnapshot
 
@@ -5076,10 +4476,6 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebviewController-webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void--><!--Device-WebviewController-webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void-End-->
@@ -5090,8 +4486,8 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [SnapshotInfo](../../apis-na/arkts-apis/arkts-na-webview-snapshotinfo-i.md) | 是 | 全量绘制结果入参。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](../../apis-na/arkts-apis/arkts-na-webview-snapshotresult-i.md)&gt; | 是 | 全量绘制回调结果。 |
+| info | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | 是 | 全量绘制结果入参。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 | 全量绘制回调结果。 |
 
 ## zoom
 
@@ -5099,13 +4495,9 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 zoom(factor: number): void
 ```
 
-调整当前网页的缩放比例，zoomAccess需为true.
+调整当前网页的缩放比例，zoomAccess需为true。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5117,7 +4509,7 @@ zoom(factor: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| factor | number | 是 | 基于当前网页所需调整的相对缩放比例，入参要求大于0， 当入参为1时为默认加载网页的缩放比例，入参小于1为缩小，入参大于1为放大。 <br>取值范围：(0，100]。 |
+| factor | number | 是 | 基于当前网页所需调整的相对缩放比例，入参要求大于0，当入参为1时为默认加载网页的缩放比例，入参小于1为缩小，入参大于1为放大。 <br>取值范围：(0，100]。 |
 
 **错误码：**
 
@@ -5136,10 +4528,6 @@ zoomIn(): void
 调用此接口将当前网页进行放大，比例为25%。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5163,10 +4551,6 @@ zoomOut(): void
 调用此接口将当前网页进行缩小，比例为20%。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

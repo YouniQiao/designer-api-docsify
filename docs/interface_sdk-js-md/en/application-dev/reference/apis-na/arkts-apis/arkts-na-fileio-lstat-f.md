@@ -10,9 +10,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function lstat(path: string): Promise<Stat>--><!--Device-fileIo-function lstat(path: string): Promise<Stat>-End-->
 
@@ -56,9 +54,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function lstat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-fileIo-function lstat(path: string, callback: AsyncCallback<Stat>): void-End-->
 

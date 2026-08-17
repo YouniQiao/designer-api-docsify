@@ -4,10 +4,6 @@ Enumerates the custom ringtone types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export enum RingtoneType--><!--Device-notificationManager-export enum RingtoneType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -23,10 +19,6 @@ RINGTONE_TYPE_SYSTEM = 0
 System ringtone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RingtoneType-RINGTONE_TYPE_SYSTEM = 0--><!--Device-RingtoneType-RINGTONE_TYPE_SYSTEM = 0-End-->
 
@@ -44,10 +36,6 @@ Local ringtone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RingtoneType-RINGTONE_TYPE_LOCAL = 1--><!--Device-RingtoneType-RINGTONE_TYPE_LOCAL = 1-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -64,10 +52,6 @@ Online ringtone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RingtoneType-RINGTONE_TYPE_ONLINE = 2--><!--Device-RingtoneType-RINGTONE_TYPE_ONLINE = 2-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -83,10 +67,6 @@ RINGTONE_TYPE_NONE = 3
 Non-custom ringtone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RingtoneType-RINGTONE_TYPE_NONE = 3--><!--Device-RingtoneType-RINGTONE_TYPE_NONE = 3-End-->
 

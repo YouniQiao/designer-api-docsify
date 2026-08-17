@@ -16,10 +16,6 @@ Listens for mouse input events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function onMouse(receiver: Callback<MouseEvent>): void--><!--Device-inputMonitor-function onMouse(receiver: Callback<MouseEvent>): void-End-->
@@ -52,10 +48,6 @@ function onMouse(rect: display.Rect[], receiver: Callback<MouseEvent>): void
 Listens for mouse input events when the mouse arrow is within the specified rectangular area.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 

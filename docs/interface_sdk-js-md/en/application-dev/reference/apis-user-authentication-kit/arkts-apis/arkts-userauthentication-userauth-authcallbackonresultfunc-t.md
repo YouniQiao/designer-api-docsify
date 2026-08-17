@@ -8,10 +8,6 @@ Called to return the authentication result. If the authentication is successful,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-userAuth-type AuthCallbackOnResultFunc = (result: UserAuthResult) => void--><!--Device-userAuth-type AuthCallbackOnResultFunc = (result: UserAuthResult) => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core

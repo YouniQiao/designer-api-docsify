@@ -16,10 +16,6 @@ Creates a **Random** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API version 9 to 11: This API can be used only in the stage model.
@@ -44,7 +40,7 @@ Creates a **Random** instance.
 | --- | --- |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';

@@ -1,14 +1,10 @@
 # PanoramaPhotoSession (System API)
 
-PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect Implements a panoramic photo session, which sets the parameters of the panoramic photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
+PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect Implements a panoramic photo session, which sets the parameters of the panoramic photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#session).
 
-**Inheritance/Implementation:** PanoramaPhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Focus](arkts-camera-camera-focus-i.md#Focus), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#WhiteBalance-(System-API)), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect-(System-API))
+**Inheritance/Implementation:** PanoramaPhotoSession extends [Session](arkts-camera-camera-session-i.md#session), [Focus](arkts-camera-camera-focus-i.md#focus), [AutoExposure](arkts-camera-camera-autoexposure-i.md#autoexposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#whitebalance-system-api), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#coloreffect-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface PanoramaPhotoSession--><!--Device-camera-interface PanoramaPhotoSession-End-->
 
@@ -31,10 +27,6 @@ offError(callback?: ErrorCallback): void
 Unsubscribes from error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PanoramaPhotoSession-offError(callback?: ErrorCallback): void--><!--Device-PanoramaPhotoSession-offError(callback?: ErrorCallback): void-End-->
 
@@ -64,10 +56,6 @@ Unsubscribes from focus state change event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PanoramaPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-PanoramaPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -96,10 +84,6 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-PanoramaPhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-PanoramaPhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -119,7 +103,7 @@ Unsubscribes from HighResolutionPhotoSession error events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterSessionError(panoramaPhotoSession: camera.PanoramaPhotoSession): void {
@@ -136,10 +120,6 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 Unsubscribes from focus state change events.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-PanoramaPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-PanoramaPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -160,7 +140,7 @@ Unsubscribes from focus state change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterFocusStateChange(panoramaPhotoSession: camera.PanoramaPhotoSession): void {
@@ -177,10 +157,6 @@ onError(callback: ErrorCallback): void
 Subscribes to error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PanoramaPhotoSession-onError(callback: ErrorCallback): void--><!--Device-PanoramaPhotoSession-onError(callback: ErrorCallback): void-End-->
 
@@ -210,10 +186,6 @@ Subscribes focus state change event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PanoramaPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-PanoramaPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -242,10 +214,6 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-PanoramaPhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-PanoramaPhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -256,8 +224,8 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-camera-session-i.md#beginConfig), [commitConfig](arkts-camera-camera-session-i.md#commitConfig), and [addInput](arkts-camera-camera-session-i.md#addInput). |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-camera-session-i.md#beginconfig), [commitConfig](arkts-camera-camera-session-i.md#commitconfig), and [addInput](arkts-camera-camera-session-i.md#addinput). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 **Error codes:**
 
@@ -265,7 +233,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -289,10 +257,6 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-PanoramaPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-PanoramaPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -312,7 +276,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

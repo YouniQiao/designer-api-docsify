@@ -10,10 +10,6 @@ function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>--><!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -24,7 +20,7 @@ function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 | --- | --- |
 | Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise对象，返回应用配置文件中定义的所有快捷方式信息。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

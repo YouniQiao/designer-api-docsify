@@ -1,12 +1,8 @@
 # WindowFeatures
 
-Represents the feature information of the new window requested to be created by the web page, including the size and location.
+Provides the feature information of the new window requested to be created by the web page, including the size and location. It is suitable for scenarios where precise control of new window attributes is required, improving window layout accuracy and user experience.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface WindowFeatures--><!--Device-unnamed-declare interface WindowFeatures-End-->
 
@@ -18,15 +14,11 @@ Represents the feature information of the new window requested to be created by 
 height: number
 ```
 
-Height of the new window. Unit:pixels.
+Height of the new window, in pixels.
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowFeatures-height: number--><!--Device-WindowFeatures-height: number-End-->
 
@@ -38,15 +30,11 @@ Height of the new window. Unit:pixels.
 width: number
 ```
 
-Width of the new window. Unit:pixels.
+Width of the new window, in pixels.
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowFeatures-width: number--><!--Device-WindowFeatures-width: number-End-->
 
@@ -58,15 +46,11 @@ Width of the new window. Unit:pixels.
 x: number
 ```
 
-X coordinate of the top-left corner of the new window. Unit:pixels.
+X coordinate of the top-left corner of the new window, in pixels.
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowFeatures-x: number--><!--Device-WindowFeatures-x: number-End-->
 
@@ -78,15 +62,11 @@ X coordinate of the top-left corner of the new window. Unit:pixels.
 y: number
 ```
 
-Y coordinate of the top-left corner of the new window. Unit:pixels.
+Y coordinate of the top-left corner of the new window, in pixels.
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowFeatures-y: number--><!--Device-WindowFeatures-y: number-End-->
 

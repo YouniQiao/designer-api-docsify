@@ -4,10 +4,6 @@ Implements an **AtomicServiceWebController** object for controlling the behavior
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class AtomicServiceWebController--><!--Device-unnamed-export declare class AtomicServiceWebController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -38,10 +34,6 @@ Checks whether going to the previous page can be performed on this page.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWebController-accessBackward(): boolean--><!--Device-AtomicServiceWebController-accessBackward(): boolean-End-->
@@ -70,10 +62,6 @@ Checks whether going to the next page can be performed on this page.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWebController-accessForward(): boolean--><!--Device-AtomicServiceWebController-accessForward(): boolean-End-->
@@ -101,10 +89,6 @@ accessStep(step: number): boolean
 Checks whether this page can navigate forward or backward by the specified number of steps.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -137,13 +121,9 @@ Checks whether this page can navigate forward or backward by the specified numbe
 backward(): void
 ```
 
-Moves to the previous page based on the history stack. This API is generally used together with [accessBackward](#accessBackward).
+Moves to the previous page based on the history stack. This API is generally used together with [accessBackward](#accessbackward).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -163,13 +143,9 @@ Moves to the previous page based on the history stack. This API is generally use
 forward(): void
 ```
 
-Moves to the next page based on the history stack. This API is generally used together with [accessForward](#accessForward).
+Moves to the next page based on the history stack. This API is generally used together with [accessForward](#accessforward).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -192,10 +168,6 @@ getCustomUserAgent(): string
 Obtains a custom user agent.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -225,10 +197,6 @@ Obtains the default user agent of this web page.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWebController-getUserAgent(): string--><!--Device-AtomicServiceWebController-getUserAgent(): string-End-->
@@ -256,10 +224,6 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 Loads a specified URL.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -293,10 +257,6 @@ Refreshes the web page.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWebController-refresh(): void--><!--Device-AtomicServiceWebController-refresh(): void-End-->
@@ -319,10 +279,6 @@ Sets a custom user agent, which will override the default user agent. Set the us
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWebController-setCustomUserAgent(userAgent: string): void--><!--Device-AtomicServiceWebController-setCustomUserAgent(userAgent: string): void-End-->
@@ -333,7 +289,7 @@ Sets a custom user agent, which will override the default user agent. Set the us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getUserAgent](#getUserAgent) and then customize the obtained user agent. |
+| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getUserAgent](#getuseragent) and then customize the obtained user agent. |
 
 **Error codes:**
 

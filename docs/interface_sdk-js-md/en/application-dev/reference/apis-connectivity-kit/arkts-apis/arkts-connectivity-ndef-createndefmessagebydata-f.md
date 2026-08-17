@@ -16,10 +16,6 @@ Creates an NDEF message with raw bytes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ndef-function createNdefMessageByData(data: int[]): NdefMessage--><!--Device-ndef-function createNdefMessageByData(data: int[]): NdefMessage-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag

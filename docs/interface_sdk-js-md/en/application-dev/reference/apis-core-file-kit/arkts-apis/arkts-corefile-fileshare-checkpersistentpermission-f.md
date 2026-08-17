@@ -16,10 +16,6 @@ Check persistent permissions for the URI.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-fileShare-function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>--><!--Device-fileShare-function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>-End-->
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
@@ -44,7 +40,7 @@ Check persistent permissions for the URI.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 13900042 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

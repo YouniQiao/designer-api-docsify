@@ -4,10 +4,6 @@ WebGL 2.0
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface WebGL2RenderingContextBase--><!--Device-unnamed-interface WebGL2RenderingContextBase-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -21,10 +17,6 @@ beginQuery(target: webgl.GLenum, query: WebGLQuery): void
 Begins a query
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -49,10 +41,6 @@ Begins transform feedback
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-beginTransformFeedback(primitiveMode: webgl.GLenum): void--><!--Device-WebGL2RenderingContextBase-beginTransformFeedback(primitiveMode: webgl.GLenum): void-End-->
@@ -74,10 +62,6 @@ bindBufferBase(target: webgl.GLenum, index: webgl.GLuint, buffer: webgl.WebGLBuf
 Binds buffer base
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -109,10 +93,6 @@ Binds buffer range
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-bindBufferRange(      target: webgl.GLenum,      index: webgl.GLuint,      buffer: webgl.WebGLBuffer | null,      offset: webgl.GLintptr,      size: webgl.GLsizeiptr,    ): void--><!--Device-WebGL2RenderingContextBase-bindBufferRange(      target: webgl.GLenum,      index: webgl.GLuint,      buffer: webgl.WebGLBuffer | null,      offset: webgl.GLintptr,      size: webgl.GLsizeiptr,    ): void-End-->
@@ -139,10 +119,6 @@ Binds a sampler
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-bindSampler(unit: webgl.GLuint, sampler: WebGLSampler | null): void--><!--Device-WebGL2RenderingContextBase-bindSampler(unit: webgl.GLuint, sampler: WebGLSampler | null): void-End-->
@@ -166,10 +142,6 @@ Binds a transform feedback
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-bindTransformFeedback(target: webgl.GLenum, tf: WebGLTransformFeedback | null): void--><!--Device-WebGL2RenderingContextBase-bindTransformFeedback(target: webgl.GLenum, tf: WebGLTransformFeedback | null): void-End-->
@@ -192,10 +164,6 @@ bindVertexArray(array: WebGLVertexArrayObject | null): void
 Binds a vertex array
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -230,10 +198,6 @@ Blits framebuffer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-blitFramebuffer(      srcX0: webgl.GLint,      srcY0: webgl.GLint,      srcX1: webgl.GLint,      srcY1: webgl.GLint,      dstX0: webgl.GLint,      dstY0: webgl.GLint,      dstX1: webgl.GLint,      dstY1: webgl.GLint,      mask: webgl.GLbitfield,      filter: webgl.GLenum,    ): void--><!--Device-WebGL2RenderingContextBase-blitFramebuffer(      srcX0: webgl.GLint,      srcY0: webgl.GLint,      srcX1: webgl.GLint,      srcY1: webgl.GLint,      dstX0: webgl.GLint,      dstY0: webgl.GLint,      dstX1: webgl.GLint,      dstY1: webgl.GLint,      mask: webgl.GLbitfield,      filter: webgl.GLenum,    ): void-End-->
@@ -265,10 +229,6 @@ Clears bufferfi
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-clearBufferfi(buffer: webgl.GLenum, drawbuffer: webgl.GLint, depth: webgl.GLfloat, stencil: webgl.GLint): void--><!--Device-WebGL2RenderingContextBase-clearBufferfi(buffer: webgl.GLenum, drawbuffer: webgl.GLint, depth: webgl.GLfloat, stencil: webgl.GLint): void-End-->
@@ -298,10 +258,6 @@ clearBufferfv(
 Clears bufferfv
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -333,10 +289,6 @@ Clears bufferiv
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-clearBufferiv(      buffer: webgl.GLenum,      drawbuffer: webgl.GLint,      values: webgl.Int32List,      srcOffset?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-clearBufferiv(      buffer: webgl.GLenum,      drawbuffer: webgl.GLint,      values: webgl.Int32List,      srcOffset?: webgl.GLuint,    ): void-End-->
@@ -362,10 +314,6 @@ Clears bufferuiv
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-clearBufferuiv(buffer: webgl.GLenum, drawbuffer: webgl.GLint, values: Uint32List, srcOffset?: webgl.GLuint): void--><!--Device-WebGL2RenderingContextBase-clearBufferuiv(buffer: webgl.GLenum, drawbuffer: webgl.GLint, values: Uint32List, srcOffset?: webgl.GLuint): void-End-->
@@ -390,10 +338,6 @@ clientWaitSync(sync: WebGLSync, flags: webgl.GLbitfield, timeout: GLuint64 ): we
 Client waits for sync object
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -435,10 +379,6 @@ Compressed texture image 3D from PBO offset
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-compressedTexImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      imageSize: webgl.GLsizei,      offset: webgl.GLintptr,    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      imageSize: webgl.GLsizei,      offset: webgl.GLintptr,    ): void-End-->
@@ -479,10 +419,6 @@ compressedTexImage3D(
 Compressed texture image 3D from ArrayBufferView
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -526,10 +462,6 @@ compressedTexSubImage3D(
 Compressed texture sub image 3D from PBO offset
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -576,10 +508,6 @@ Compressed texture sub image 3D from ArrayBufferView
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void-End-->
@@ -619,10 +547,6 @@ Copies data from one buffer to another
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-copyBufferSubData(      readTarget: webgl.GLenum,      writeTarget: webgl.GLenum,      readOffset: webgl.GLintptr,      writeOffset: webgl.GLintptr,      size: webgl.GLsizeiptr,    ): void--><!--Device-WebGL2RenderingContextBase-copyBufferSubData(      readTarget: webgl.GLenum,      writeTarget: webgl.GLenum,      readOffset: webgl.GLintptr,      writeOffset: webgl.GLintptr,      size: webgl.GLsizeiptr,    ): void-End-->
@@ -659,10 +583,6 @@ Copies a portion of a 3D texture image
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-copyTexSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-copyTexSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void-End-->
@@ -693,10 +613,6 @@ Creates a query
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-createQuery(): WebGLQuery | null--><!--Device-WebGL2RenderingContextBase-createQuery(): WebGLQuery | null-End-->
@@ -718,10 +634,6 @@ createSampler(): WebGLSampler | null
 Creates a sampler
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -745,10 +657,6 @@ Creates a transform feedback object
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-createTransformFeedback(): WebGLTransformFeedback | null--><!--Device-WebGL2RenderingContextBase-createTransformFeedback(): WebGLTransformFeedback | null-End-->
@@ -770,10 +678,6 @@ createVertexArray(): WebGLVertexArrayObject | null
 Creates a vertex array object
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -797,10 +701,6 @@ Deletes a query
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-deleteQuery(query: WebGLQuery | null): void--><!--Device-WebGL2RenderingContextBase-deleteQuery(query: WebGLQuery | null): void-End-->
@@ -822,10 +722,6 @@ deleteSampler(sampler: WebGLSampler | null): void
 Deletes a sampler
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -849,10 +745,6 @@ Deletes a sync object
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-deleteSync(sync: WebGLSync | null): void--><!--Device-WebGL2RenderingContextBase-deleteSync(sync: WebGLSync | null): void-End-->
@@ -875,10 +767,6 @@ Deletes a transform feedback object
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-deleteTransformFeedback(tf: WebGLTransformFeedback | null): void--><!--Device-WebGL2RenderingContextBase-deleteTransformFeedback(tf: WebGLTransformFeedback | null): void-End-->
@@ -900,10 +788,6 @@ deleteVertexArray(vertexArray: WebGLVertexArrayObject | null): void
 Deletes a vertex array object
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -932,10 +816,6 @@ Draws arrays instanced
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-drawArraysInstanced(      mode: webgl.GLenum,      first: webgl.GLint,      count: webgl.GLsizei,      instanceCount: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-drawArraysInstanced(      mode: webgl.GLenum,      first: webgl.GLint,      count: webgl.GLsizei,      instanceCount: webgl.GLsizei,    ): void-End-->
@@ -960,10 +840,6 @@ drawBuffers(buffers: webgl.GLenum[]): void
 Sets draw buffers
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -992,10 +868,6 @@ drawElementsInstanced(
 Draws elements instanced
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1030,10 +902,6 @@ Draws range elements
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-drawRangeElements(      mode: webgl.GLenum,      start: webgl.GLuint,      end: webgl.GLuint,      count: webgl.GLsizei,      type: webgl.GLenum,      offset: webgl.GLintptr,    ): void--><!--Device-WebGL2RenderingContextBase-drawRangeElements(      mode: webgl.GLenum,      start: webgl.GLuint,      end: webgl.GLuint,      count: webgl.GLsizei,      type: webgl.GLenum,      offset: webgl.GLintptr,    ): void-End-->
@@ -1061,10 +929,6 @@ Ends a query
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-endQuery(target: webgl.GLenum): void--><!--Device-WebGL2RenderingContextBase-endQuery(target: webgl.GLenum): void-End-->
@@ -1087,10 +951,6 @@ Ends transform feedback
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-endTransformFeedback(): void--><!--Device-WebGL2RenderingContextBase-endTransformFeedback(): void-End-->
@@ -1106,10 +966,6 @@ fenceSync(condition: webgl.GLenum, flags: webgl.GLbitfield): WebGLSync | null
 Creates a sync object
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1146,10 +1002,6 @@ Attaches a texture layer to a framebuffer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-framebufferTextureLayer(      target: webgl.GLenum,      attachment: webgl.GLenum,      texture: webgl.WebGLTexture | null,      level: webgl.GLint,      layer: webgl.GLint,    ): void--><!--Device-WebGL2RenderingContextBase-framebufferTextureLayer(      target: webgl.GLenum,      attachment: webgl.GLenum,      texture: webgl.WebGLTexture | null,      level: webgl.GLint,      layer: webgl.GLint,    ): void-End-->
@@ -1175,10 +1027,6 @@ getActiveUniformBlockName(program: webgl.WebGLProgram, uniformBlockIndex: webgl.
 Gets active uniform block name
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1213,10 +1061,6 @@ Gets active uniform block parameter
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-getActiveUniformBlockParameter(      program: webgl.WebGLProgram,      uniformBlockIndex: webgl.GLuint,      pname: webgl.GLenum,    ): any--><!--Device-WebGL2RenderingContextBase-getActiveUniformBlockParameter(      program: webgl.WebGLProgram,      uniformBlockIndex: webgl.GLuint,      pname: webgl.GLenum,    ): any-End-->
@@ -1246,10 +1090,6 @@ getActiveUniforms(program: webgl.WebGLProgram, uniformIndices: webgl.GLuint[], p
 Gets active uniforms
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1287,10 +1127,6 @@ Gets buffer sub data
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-getBufferSubData(      target: webgl.GLenum,      srcByteOffset: webgl.GLintptr,      dstBuffer: ArrayBufferView,      dstOffset?: webgl.GLuint,      length?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-getBufferSubData(      target: webgl.GLenum,      srcByteOffset: webgl.GLintptr,      dstBuffer: ArrayBufferView,      dstOffset?: webgl.GLuint,      length?: webgl.GLuint,    ): void-End-->
@@ -1316,10 +1152,6 @@ getFragDataLocation(program: webgl.WebGLProgram, name: string): webgl.GLint
 Gets fragment data location
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1350,10 +1182,6 @@ Gets indexed parameter
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-getIndexedParameter(target: webgl.GLenum, index: webgl.GLuint): any--><!--Device-WebGL2RenderingContextBase-getIndexedParameter(target: webgl.GLenum, index: webgl.GLuint): any-End-->
@@ -1382,10 +1210,6 @@ getInternalformatParameter(target: webgl.GLenum, internalformat: webgl.GLenum, p
 Gets internal format parameter
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1417,10 +1241,6 @@ Gets a query
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-getQuery(target: webgl.GLenum, pname: webgl.GLenum): WebGLQuery | null--><!--Device-WebGL2RenderingContextBase-getQuery(target: webgl.GLenum, pname: webgl.GLenum): WebGLQuery | null-End-->
@@ -1449,10 +1269,6 @@ getQueryParameter(query: WebGLQuery, pname: webgl.GLenum): any
 Gets query parameter
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1483,10 +1299,6 @@ Gets sampler parameter
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-getSamplerParameter(sampler: WebGLSampler, pname: webgl.GLenum): any--><!--Device-WebGL2RenderingContextBase-getSamplerParameter(sampler: WebGLSampler, pname: webgl.GLenum): any-End-->
@@ -1515,10 +1327,6 @@ getSyncParameter(sync: WebGLSync, pname: webgl.GLenum): any
 Gets sync parameter
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1549,10 +1357,6 @@ Gets transform feedback varying
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-getTransformFeedbackVarying(program: webgl.WebGLProgram, index: webgl.GLuint): webgl.WebGLActiveInfo | null--><!--Device-WebGL2RenderingContextBase-getTransformFeedbackVarying(program: webgl.WebGLProgram, index: webgl.GLuint): webgl.WebGLActiveInfo | null-End-->
@@ -1581,10 +1385,6 @@ getUniformBlockIndex(program: webgl.WebGLProgram, uniformBlockName: string): web
 Gets uniform block index
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1615,10 +1415,6 @@ Gets uniform indices
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-getUniformIndices(program: webgl.WebGLProgram, uniformNames: string[]): webgl.GLuint[] | null--><!--Device-WebGL2RenderingContextBase-getUniformIndices(program: webgl.WebGLProgram, uniformNames: string[]): webgl.GLuint[] | null-End-->
@@ -1647,10 +1443,6 @@ invalidateFramebuffer(target: webgl.GLenum, attachments: webgl.GLenum[]): void
 Invalidates framebuffer attachments
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1682,10 +1474,6 @@ Invalidates sub framebuffer attachments
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-invalidateSubFramebuffer(      target: webgl.GLenum,      attachments: webgl.GLenum[],      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-invalidateSubFramebuffer(      target: webgl.GLenum,      attachments: webgl.GLenum[],      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void-End-->
@@ -1712,10 +1500,6 @@ isQuery(query: WebGLQuery | null): webgl.GLboolean
 Returns whether a query is valid
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1745,10 +1529,6 @@ Returns whether a sampler is valid
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-isSampler(sampler: WebGLSampler | null): webgl.GLboolean--><!--Device-WebGL2RenderingContextBase-isSampler(sampler: WebGLSampler | null): webgl.GLboolean-End-->
@@ -1776,10 +1556,6 @@ isSync(sync: WebGLSync | null): webgl.GLboolean
 Returns whether a sync object is valid
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1809,10 +1585,6 @@ Returns whether a transform feedback is valid
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-isTransformFeedback(tf: WebGLTransformFeedback | null): webgl.GLboolean--><!--Device-WebGL2RenderingContextBase-isTransformFeedback(tf: WebGLTransformFeedback | null): webgl.GLboolean-End-->
@@ -1840,10 +1612,6 @@ isVertexArray(vertexArray: WebGLVertexArrayObject | null): webgl.GLboolean
 Returns whether a vertex array is valid
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1873,10 +1641,6 @@ Pauses transform feedback
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-pauseTransformFeedback(): void--><!--Device-WebGL2RenderingContextBase-pauseTransformFeedback(): void-End-->
@@ -1892,10 +1656,6 @@ readBuffer(src: webgl.GLenum): void
 Sets the read buffer
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1925,10 +1685,6 @@ Sets renderbuffer storage with multisampling
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-renderbufferStorageMultisample(      target: webgl.GLenum,      samples: webgl.GLsizei,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-renderbufferStorageMultisample(      target: webgl.GLenum,      samples: webgl.GLsizei,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void-End-->
@@ -1955,10 +1711,6 @@ Resumes transform feedback
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-resumeTransformFeedback(): void--><!--Device-WebGL2RenderingContextBase-resumeTransformFeedback(): void-End-->
@@ -1974,10 +1726,6 @@ samplerParameterf(sampler: WebGLSampler, pname: webgl.GLenum, param: webgl.GLflo
 Sets sampler parameterf
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2002,10 +1750,6 @@ samplerParameteri(sampler: WebGLSampler, pname: webgl.GLenum, param: webgl.GLint
 Sets sampler parameteri
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2041,10 +1785,6 @@ texImage3D(
 Sets texture image 3D from PBO offset
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2088,10 +1828,6 @@ Sets texture image 3D from TexImageSource
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      source: webgl.TexImageSource,    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      source: webgl.TexImageSource,    ): void-End-->
@@ -2133,10 +1869,6 @@ texImage3D(
 Sets texture image 3D from ArrayBufferView
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2181,10 +1913,6 @@ Sets texture image 3D from ArrayBufferView with offset
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void-End-->
@@ -2223,10 +1951,6 @@ Sets texture storage 2D
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-texStorage2D(      target: webgl.GLenum,      levels: webgl.GLsizei,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-texStorage2D(      target: webgl.GLenum,      levels: webgl.GLsizei,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void-End-->
@@ -2259,10 +1983,6 @@ texStorage3D(
 Sets texture storage 3D
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2302,10 +2022,6 @@ texSubImage3D(
 Sets texture sub image 3D from PBO offset
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2350,10 +2066,6 @@ texSubImage3D(
 Sets texture sub image 3D from TexImageSource
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2400,10 +2112,6 @@ Sets texture sub image 3D from ArrayBufferView
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-texSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView | null,      srcOffset?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-texSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView | null,      srcOffset?: webgl.GLuint,    ): void-End-->
@@ -2437,10 +2145,6 @@ Sets transform feedback varyings
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-transformFeedbackVaryings(program: webgl.WebGLProgram, varyings: string[], bufferMode: webgl.GLenum): void--><!--Device-WebGL2RenderingContextBase-transformFeedbackVaryings(program: webgl.WebGLProgram, varyings: string[], bufferMode: webgl.GLenum): void-End-->
@@ -2464,10 +2168,6 @@ uniform1ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint): void
 Sets uniform1ui value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2497,10 +2197,6 @@ Sets uniform1uiv value
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-uniform1uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniform1uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -2525,10 +2221,6 @@ uniform2ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint, v1: we
 Sets uniform2ui value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2559,10 +2251,6 @@ Sets uniform2uiv value
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-uniform2uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniform2uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -2587,10 +2275,6 @@ uniform3ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint, v1: we
 Sets uniform3ui value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2621,10 +2305,6 @@ uniform3uiv(
 Sets uniform3uiv value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2657,10 +2337,6 @@ Sets uniform4ui value
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-uniform4ui(      location: webgl.WebGLUniformLocation | null,      v0: webgl.GLuint,      v1: webgl.GLuint,      v2: webgl.GLuint,      v3: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniform4ui(      location: webgl.WebGLUniformLocation | null,      v0: webgl.GLuint,      v1: webgl.GLuint,      v2: webgl.GLuint,      v3: webgl.GLuint,    ): void-End-->
@@ -2692,10 +2368,6 @@ Sets uniform4uiv value
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-uniform4uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniform4uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -2724,10 +2396,6 @@ uniformBlockBinding(
 Sets uniform block binding
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2758,10 +2426,6 @@ uniformMatrix2x3fv(
 Sets uniformMatrix2x3fv value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2795,10 +2459,6 @@ Sets uniformMatrix2x4fv value
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-uniformMatrix2x4fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix2x4fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -2830,10 +2490,6 @@ uniformMatrix3x2fv(
 Sets uniformMatrix3x2fv value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2867,10 +2523,6 @@ Sets uniformMatrix3x4fv value
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-uniformMatrix3x4fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix3x4fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -2902,10 +2554,6 @@ uniformMatrix4x2fv(
 Sets uniformMatrix4x2fv value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2939,10 +2587,6 @@ Sets uniformMatrix4x3fv value
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-uniformMatrix4x3fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix4x3fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
@@ -2969,10 +2613,6 @@ Sets vertex attrib divisor
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-vertexAttribDivisor(index: webgl.GLuint, divisor: webgl.GLuint): void--><!--Device-WebGL2RenderingContextBase-vertexAttribDivisor(index: webgl.GLuint, divisor: webgl.GLuint): void-End-->
@@ -2995,10 +2635,6 @@ vertexAttribI4i(index: webgl.GLuint, x: webgl.GLint, y: webgl.GLint, z: webgl.GL
 Sets vertex attrib I4i value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3026,10 +2662,6 @@ Sets vertex attrib I4iv value
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-vertexAttribI4iv(index: webgl.GLuint, values: webgl.Int32List): void--><!--Device-WebGL2RenderingContextBase-vertexAttribI4iv(index: webgl.GLuint, values: webgl.Int32List): void-End-->
@@ -3052,10 +2684,6 @@ vertexAttribI4ui(index: webgl.GLuint, x: webgl.GLuint, y: webgl.GLuint, z: webgl
 Sets vertex attrib I4ui value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3082,10 +2710,6 @@ vertexAttribI4uiv(index: webgl.GLuint, values: Uint32List): void
 Sets vertex attrib I4uiv value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3116,10 +2740,6 @@ Sets vertex attrib integer pointer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-vertexAttribIPointer(      index: webgl.GLuint,      size: webgl.GLint,      type: webgl.GLenum,      stride: webgl.GLsizei,      offset: webgl.GLintptr,    ): void--><!--Device-WebGL2RenderingContextBase-vertexAttribIPointer(      index: webgl.GLuint,      size: webgl.GLint,      type: webgl.GLenum,      stride: webgl.GLsizei,      offset: webgl.GLintptr,    ): void-End-->
@@ -3145,10 +2765,6 @@ waitSync(sync: WebGLSync, flags: webgl.GLbitfield, timeout: GLint64): void
 Waits for sync object
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3176,10 +2792,6 @@ Active Uniform Blocks
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly ACTIVE_UNIFORM_BLOCKS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly ACTIVE_UNIFORM_BLOCKS: webgl.GLenum-End-->
@@ -3197,10 +2809,6 @@ Already Signaled
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3220,10 +2828,6 @@ Any Samples Passed
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly ANY_SAMPLES_PASSED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly ANY_SAMPLES_PASSED: webgl.GLenum-End-->
@@ -3241,10 +2845,6 @@ Any Samples Passed Conservative
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3264,10 +2864,6 @@ Buffer: color
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COLOR: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR: webgl.GLenum-End-->
@@ -3285,10 +2881,6 @@ Color Attachment1
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3308,10 +2900,6 @@ Color Attachment10
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT10: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT10: webgl.GLenum-End-->
@@ -3329,10 +2917,6 @@ Color Attachment11
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3352,10 +2936,6 @@ Color Attachment12
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT12: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT12: webgl.GLenum-End-->
@@ -3373,10 +2953,6 @@ Color Attachment13
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3396,10 +2972,6 @@ Color Attachment14
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT14: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT14: webgl.GLenum-End-->
@@ -3417,10 +2989,6 @@ Color Attachment15
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3440,10 +3008,6 @@ Color Attachment2
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT2: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT2: webgl.GLenum-End-->
@@ -3461,10 +3025,6 @@ Color Attachment3
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3484,10 +3044,6 @@ Color Attachment4
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT4: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT4: webgl.GLenum-End-->
@@ -3505,10 +3061,6 @@ Color Attachment5
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3528,10 +3080,6 @@ Color Attachment6
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT6: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT6: webgl.GLenum-End-->
@@ -3549,10 +3097,6 @@ Color Attachment7
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3572,10 +3116,6 @@ Color Attachment8
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT8: webgl.GLenum-End-->
@@ -3593,10 +3133,6 @@ Color Attachment9
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3616,10 +3152,6 @@ Compare Ref To Texture
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COMPARE_REF_TO_TEXTURE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COMPARE_REF_TO_TEXTURE: webgl.GLenum-End-->
@@ -3637,10 +3169,6 @@ Condition Satisfied
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3660,10 +3188,6 @@ Copy Read Buffer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COPY_READ_BUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COPY_READ_BUFFER: webgl.GLenum-End-->
@@ -3681,10 +3205,6 @@ Copy Read Buffer Binding
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3704,10 +3224,6 @@ Copy Write Buffer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly COPY_WRITE_BUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COPY_WRITE_BUFFER: webgl.GLenum-End-->
@@ -3725,10 +3241,6 @@ Copy Write Buffer Binding
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3748,10 +3260,6 @@ Current query
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly CURRENT_QUERY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly CURRENT_QUERY: webgl.GLenum-End-->
@@ -3769,10 +3277,6 @@ Buffer: depth
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3792,10 +3296,6 @@ Depth24 Stencil8
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DEPTH24_STENCIL8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DEPTH24_STENCIL8: webgl.GLenum-End-->
@@ -3813,10 +3313,6 @@ Depth32F Stencil8
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3836,10 +3332,6 @@ Internal format: depth component24
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DEPTH_COMPONENT24: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DEPTH_COMPONENT24: webgl.GLenum-End-->
@@ -3857,10 +3349,6 @@ Depth Component32F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3880,10 +3368,6 @@ Draw buffer 0
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER0: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER0: webgl.GLenum-End-->
@@ -3901,10 +3385,6 @@ Draw buffer 1
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3924,10 +3404,6 @@ Draw Buffer10
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER10: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER10: webgl.GLenum-End-->
@@ -3945,10 +3421,6 @@ Draw Buffer11
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3968,10 +3440,6 @@ Draw Buffer12
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER12: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER12: webgl.GLenum-End-->
@@ -3989,10 +3457,6 @@ Draw Buffer13
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4012,10 +3476,6 @@ Draw Buffer14
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER14: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER14: webgl.GLenum-End-->
@@ -4033,10 +3493,6 @@ Draw Buffer15
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4056,10 +3512,6 @@ Draw buffer 2
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER2: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER2: webgl.GLenum-End-->
@@ -4077,10 +3529,6 @@ Draw buffer 3
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4100,10 +3548,6 @@ Draw buffer 4
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER4: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER4: webgl.GLenum-End-->
@@ -4121,10 +3565,6 @@ Draw Buffer5
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4144,10 +3584,6 @@ Draw Buffer6
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER6: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER6: webgl.GLenum-End-->
@@ -4165,10 +3601,6 @@ Draw Buffer7
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4188,10 +3620,6 @@ Draw Buffer8
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER8: webgl.GLenum-End-->
@@ -4209,10 +3637,6 @@ Draw Buffer9
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4232,10 +3656,6 @@ Draw Framebuffer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DRAW_FRAMEBUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_FRAMEBUFFER: webgl.GLenum-End-->
@@ -4253,10 +3673,6 @@ Draw Framebuffer Binding
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4276,10 +3692,6 @@ Buffer usage: dynamic copy
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly DYNAMIC_COPY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DYNAMIC_COPY: webgl.GLenum-End-->
@@ -4297,10 +3709,6 @@ Buffer usage: dynamic read
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4320,10 +3728,6 @@ Float 32 Unsigned Int 24 8 Rev
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly FLOAT_32_UNSIGNED_INT_24_8_REV: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_32_UNSIGNED_INT_24_8_REV: webgl.GLenum-End-->
@@ -4341,10 +3745,6 @@ Float Mat2X3
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4364,10 +3764,6 @@ Float Mat2X4
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT2x4: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT2x4: webgl.GLenum-End-->
@@ -4385,10 +3781,6 @@ Float Mat3X2
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4408,10 +3800,6 @@ Float Mat3X4
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT3x4: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT3x4: webgl.GLenum-End-->
@@ -4429,10 +3817,6 @@ Float Mat4X2
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4452,10 +3836,6 @@ Float Mat4X3
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT4x3: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT4x3: webgl.GLenum-End-->
@@ -4473,10 +3853,6 @@ Fragment Shader Derivative Hint
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4496,10 +3872,6 @@ Framebuffer Attachment Alpha Size
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE: webgl.GLenum-End-->
@@ -4517,10 +3889,6 @@ Framebuffer Attachment Blue Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4540,10 +3908,6 @@ Framebuffer Attachment Color Encoding
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING: webgl.GLenum-End-->
@@ -4561,10 +3925,6 @@ Framebuffer Attachment Component Type
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4584,10 +3944,6 @@ Framebuffer Attachment Depth Size
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE: webgl.GLenum-End-->
@@ -4605,10 +3961,6 @@ Framebuffer Attachment Green Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4628,10 +3980,6 @@ Framebuffer Attachment Red Size
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_RED_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_RED_SIZE: webgl.GLenum-End-->
@@ -4649,10 +3997,6 @@ Framebuffer Attachment Stencil Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4672,10 +4016,6 @@ Framebuffer Attachment Texture Layer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER: webgl.GLenum-End-->
@@ -4693,10 +4033,6 @@ Framebuffer Default
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4716,10 +4052,6 @@ Framebuffer Incomplete Multisample
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_INCOMPLETE_MULTISAMPLE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_INCOMPLETE_MULTISAMPLE: webgl.GLenum-End-->
@@ -4737,10 +4069,6 @@ Half Float
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4760,10 +4088,6 @@ Interleaved Attribs
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly INTERLEAVED_ATTRIBS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INTERLEAVED_ATTRIBS: webgl.GLenum-End-->
@@ -4781,10 +4105,6 @@ Data type: INT 2_10_10_10_REV
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4804,10 +4124,6 @@ Int Sampler 2D
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_2D: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_2D: webgl.GLenum-End-->
@@ -4825,10 +4141,6 @@ Int Sampler 2D Array
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4848,10 +4160,6 @@ Int Sampler 3D
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_3D: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_3D: webgl.GLenum-End-->
@@ -4869,10 +4177,6 @@ Int Sampler Cube
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4892,10 +4196,6 @@ Invalid Index
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly INVALID_INDEX: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INVALID_INDEX: webgl.GLenum-End-->
@@ -4913,10 +4213,6 @@ Max value
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4936,10 +4232,6 @@ Max 3D texture size
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_3D_TEXTURE_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_3D_TEXTURE_SIZE: webgl.GLenum-End-->
@@ -4957,10 +4249,6 @@ Max Array Texture Layers
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4980,10 +4268,6 @@ Max client wait timeout WebGL
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_CLIENT_WAIT_TIMEOUT_WEBGL: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_CLIENT_WAIT_TIMEOUT_WEBGL: webgl.GLenum-End-->
@@ -5001,10 +4285,6 @@ Max Color Attachments
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5024,10 +4304,6 @@ Max Combined Fragment Uniform Components
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS: webgl.GLenum-End-->
@@ -5045,10 +4321,6 @@ Max Combined Uniform Blocks
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5068,10 +4340,6 @@ Max Combined Vertex Uniform Components
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS: webgl.GLenum-End-->
@@ -5089,10 +4357,6 @@ Max draw buffers
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5112,10 +4376,6 @@ Max elements indices
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENTS_INDICES: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENTS_INDICES: webgl.GLenum-End-->
@@ -5133,10 +4393,6 @@ Max elements vertices
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5156,10 +4412,6 @@ Max element index
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENT_INDEX: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENT_INDEX: webgl.GLenum-End-->
@@ -5177,10 +4429,6 @@ Max Fragment Input Components
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5200,10 +4448,6 @@ Max Fragment Uniform Blocks
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_FRAGMENT_UNIFORM_BLOCKS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_FRAGMENT_UNIFORM_BLOCKS: webgl.GLenum-End-->
@@ -5221,10 +4465,6 @@ Max Fragment Uniform Components
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5244,10 +4484,6 @@ Max Program Texel Offset
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_PROGRAM_TEXEL_OFFSET: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_PROGRAM_TEXEL_OFFSET: webgl.GLenum-End-->
@@ -5265,10 +4501,6 @@ Max Samples
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5288,10 +4520,6 @@ Max Server Wait Timeout
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_SERVER_WAIT_TIMEOUT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_SERVER_WAIT_TIMEOUT: webgl.GLenum-End-->
@@ -5309,10 +4537,6 @@ Max texture LOD bias
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5332,10 +4556,6 @@ Max Transform Feedback Interleaved Components
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS: webgl.GLenum-End-->
@@ -5353,10 +4573,6 @@ Max Transform Feedback Separate Attribs
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5376,10 +4592,6 @@ Max Transform Feedback Separate Components
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS: webgl.GLenum-End-->
@@ -5397,10 +4609,6 @@ Max Uniform Block Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5420,10 +4628,6 @@ Max Uniform Buffer Bindings
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_UNIFORM_BUFFER_BINDINGS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_UNIFORM_BUFFER_BINDINGS: webgl.GLenum-End-->
@@ -5441,10 +4645,6 @@ Max Varying Components
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5464,10 +4664,6 @@ Max Vertex Output Components
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_VERTEX_OUTPUT_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_VERTEX_OUTPUT_COMPONENTS: webgl.GLenum-End-->
@@ -5485,10 +4681,6 @@ Max Vertex Uniform Blocks
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5508,10 +4700,6 @@ Max Vertex Uniform Components
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_VERTEX_UNIFORM_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_VERTEX_UNIFORM_COMPONENTS: webgl.GLenum-End-->
@@ -5529,10 +4717,6 @@ Min value
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5552,10 +4736,6 @@ Min Program Texel Offset
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MIN_PROGRAM_TEXEL_OFFSET: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MIN_PROGRAM_TEXEL_OFFSET: webgl.GLenum-End-->
@@ -5573,10 +4753,6 @@ Object Type
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5596,10 +4772,6 @@ Pack row length
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly PACK_ROW_LENGTH: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PACK_ROW_LENGTH: webgl.GLenum-End-->
@@ -5617,10 +4789,6 @@ Pack skip pixels
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5640,10 +4808,6 @@ Pack skip rows
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly PACK_SKIP_ROWS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PACK_SKIP_ROWS: webgl.GLenum-End-->
@@ -5661,10 +4825,6 @@ Pixel Pack Buffer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5684,10 +4844,6 @@ Pixel Pack Buffer Binding
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly PIXEL_PACK_BUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PIXEL_PACK_BUFFER_BINDING: webgl.GLenum-End-->
@@ -5705,10 +4861,6 @@ Pixel Unpack Buffer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5728,10 +4880,6 @@ Pixel Unpack Buffer Binding
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly PIXEL_UNPACK_BUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PIXEL_UNPACK_BUFFER_BINDING: webgl.GLenum-End-->
@@ -5749,10 +4897,6 @@ Query result
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5772,10 +4916,6 @@ Query result available
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly QUERY_RESULT_AVAILABLE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly QUERY_RESULT_AVAILABLE: webgl.GLenum-End-->
@@ -5793,10 +4933,6 @@ R11F G11F B10F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5816,10 +4952,6 @@ R16F
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly R16F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R16F: webgl.GLenum-End-->
@@ -5837,10 +4969,6 @@ R16I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5860,10 +4988,6 @@ R16Ui
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly R16UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R16UI: webgl.GLenum-End-->
@@ -5881,10 +5005,6 @@ R32F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5904,10 +5024,6 @@ R32I
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly R32I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R32I: webgl.GLenum-End-->
@@ -5925,10 +5041,6 @@ R32Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5948,10 +5060,6 @@ R8
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly R8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R8: webgl.GLenum-End-->
@@ -5969,10 +5077,6 @@ R8I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5992,10 +5096,6 @@ R8Ui
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly R8UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R8UI: webgl.GLenum-End-->
@@ -6013,10 +5113,6 @@ R8 Snorm
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6036,10 +5132,6 @@ Rasterizer Discard
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RASTERIZER_DISCARD: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RASTERIZER_DISCARD: webgl.GLenum-End-->
@@ -6057,10 +5149,6 @@ Read buffer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6080,10 +5168,6 @@ Read Framebuffer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly READ_FRAMEBUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly READ_FRAMEBUFFER: webgl.GLenum-End-->
@@ -6101,10 +5185,6 @@ Read Framebuffer Binding
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6124,10 +5204,6 @@ Pixel format: red
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RED: webgl.GLenum-End-->
@@ -6145,10 +5221,6 @@ Red Integer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6168,10 +5240,6 @@ Renderbuffer Samples
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RENDERBUFFER_SAMPLES: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RENDERBUFFER_SAMPLES: webgl.GLenum-End-->
@@ -6189,10 +5257,6 @@ Rg
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6212,10 +5276,6 @@ Rg16F
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RG16F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG16F: webgl.GLenum-End-->
@@ -6233,10 +5293,6 @@ Rg16I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6256,10 +5312,6 @@ Rg16Ui
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RG16UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG16UI: webgl.GLenum-End-->
@@ -6277,10 +5329,6 @@ Rg32F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6300,10 +5348,6 @@ Rg32I
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RG32I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG32I: webgl.GLenum-End-->
@@ -6321,10 +5365,6 @@ Rg32Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6344,10 +5384,6 @@ Rg8
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RG8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG8: webgl.GLenum-End-->
@@ -6365,10 +5401,6 @@ Rg8I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6388,10 +5420,6 @@ Rg8Ui
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RG8UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG8UI: webgl.GLenum-End-->
@@ -6409,10 +5437,6 @@ Rg8 Snorm
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6432,10 +5456,6 @@ Internal format: RGB10_A2
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGB10_A2: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB10_A2: webgl.GLenum-End-->
@@ -6453,10 +5473,6 @@ Internal format: RGB10_A2UI
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6476,10 +5492,6 @@ Rgb16F
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGB16F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB16F: webgl.GLenum-End-->
@@ -6497,10 +5509,6 @@ Rgb16I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6520,10 +5528,6 @@ Rgb16Ui
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGB16UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB16UI: webgl.GLenum-End-->
@@ -6541,10 +5545,6 @@ Rgb32F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6564,10 +5564,6 @@ Rgb32I
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGB32I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB32I: webgl.GLenum-End-->
@@ -6585,10 +5581,6 @@ Rgb32Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6608,10 +5600,6 @@ Internal format: RGB8
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGB8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB8: webgl.GLenum-End-->
@@ -6629,10 +5617,6 @@ Rgb8I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6652,10 +5636,6 @@ Rgb8Ui
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGB8UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB8UI: webgl.GLenum-End-->
@@ -6673,10 +5653,6 @@ Rgb8 Snorm
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6696,10 +5672,6 @@ Rgb9 E5
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGB9_E5: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB9_E5: webgl.GLenum-End-->
@@ -6717,10 +5689,6 @@ Rgba16F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6740,10 +5708,6 @@ Rgba16I
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGBA16I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA16I: webgl.GLenum-End-->
@@ -6761,10 +5725,6 @@ Rgba16Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6784,10 +5744,6 @@ Rgba32F
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGBA32F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA32F: webgl.GLenum-End-->
@@ -6805,10 +5761,6 @@ Rgba32I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6828,10 +5780,6 @@ Rgba32Ui
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGBA32UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA32UI: webgl.GLenum-End-->
@@ -6849,10 +5797,6 @@ Internal format: RGBA8
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6872,10 +5816,6 @@ Rgba8I
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGBA8I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA8I: webgl.GLenum-End-->
@@ -6893,10 +5833,6 @@ Rgba8Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6916,10 +5852,6 @@ Rgba8 Snorm
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGBA8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA8_SNORM: webgl.GLenum-End-->
@@ -6937,10 +5869,6 @@ Rgba Integer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6960,10 +5888,6 @@ Rgb Integer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGB_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB_INTEGER: webgl.GLenum-End-->
@@ -6981,10 +5905,6 @@ Rg Integer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7004,10 +5924,6 @@ Sampler 2D Array
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly SAMPLER_2D_ARRAY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SAMPLER_2D_ARRAY: webgl.GLenum-End-->
@@ -7025,10 +5941,6 @@ Sampler 2D Array Shadow
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7048,10 +5960,6 @@ Sampler 2D Shadow
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly SAMPLER_2D_SHADOW: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SAMPLER_2D_SHADOW: webgl.GLenum-End-->
@@ -7069,10 +5977,6 @@ Sampler 3D
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7092,10 +5996,6 @@ Sampler Binding
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly SAMPLER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SAMPLER_BINDING: webgl.GLenum-End-->
@@ -7113,10 +6013,6 @@ Sampler Cube Shadow
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7136,10 +6032,6 @@ Separate Attribs
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly SEPARATE_ATTRIBS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SEPARATE_ATTRIBS: webgl.GLenum-End-->
@@ -7157,10 +6049,6 @@ Signaled
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7180,10 +6068,6 @@ Signed Normalized
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly SIGNED_NORMALIZED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SIGNED_NORMALIZED: webgl.GLenum-End-->
@@ -7201,10 +6085,6 @@ Srgb
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7224,10 +6104,6 @@ Srgb8
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly SRGB8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SRGB8: webgl.GLenum-End-->
@@ -7245,10 +6121,6 @@ Srgb8 Alpha8
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7268,10 +6140,6 @@ Buffer usage: static copy
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly STATIC_COPY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly STATIC_COPY: webgl.GLenum-End-->
@@ -7289,10 +6157,6 @@ Buffer usage: static read
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7312,10 +6176,6 @@ Buffer: stencil
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly STENCIL: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly STENCIL: webgl.GLenum-End-->
@@ -7333,10 +6193,6 @@ Buffer usage: stream copy
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7356,10 +6212,6 @@ Buffer usage: stream read
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly STREAM_READ: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly STREAM_READ: webgl.GLenum-End-->
@@ -7377,10 +6229,6 @@ Sync Condition
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7400,10 +6248,6 @@ Sync Fence
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly SYNC_FENCE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SYNC_FENCE: webgl.GLenum-End-->
@@ -7421,10 +6265,6 @@ Sync Flags
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7444,10 +6284,6 @@ Sync Flush Commands Bit
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly SYNC_FLUSH_COMMANDS_BIT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SYNC_FLUSH_COMMANDS_BIT: webgl.GLenum-End-->
@@ -7465,10 +6301,6 @@ Sync Gpu Commands Complete
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7488,10 +6320,6 @@ Sync Status
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly SYNC_STATUS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SYNC_STATUS: webgl.GLenum-End-->
@@ -7509,10 +6337,6 @@ Texture 2D Array
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7532,10 +6356,6 @@ Texture target: 3D
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TEXTURE_3D: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_3D: webgl.GLenum-End-->
@@ -7553,10 +6373,6 @@ Texture base level
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7576,10 +6392,6 @@ Texture Binding 2D Array
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TEXTURE_BINDING_2D_ARRAY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_BINDING_2D_ARRAY: webgl.GLenum-End-->
@@ -7597,10 +6409,6 @@ Texture binding 3D
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7620,10 +6428,6 @@ Texture compare function
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TEXTURE_COMPARE_FUNC: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_COMPARE_FUNC: webgl.GLenum-End-->
@@ -7641,10 +6445,6 @@ Texture compare mode
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7664,10 +6464,6 @@ Texture immutable format
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TEXTURE_IMMUTABLE_FORMAT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_IMMUTABLE_FORMAT: webgl.GLenum-End-->
@@ -7685,10 +6481,6 @@ Texture immutable levels
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7708,10 +6500,6 @@ Texture max level
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TEXTURE_MAX_LEVEL: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_MAX_LEVEL: webgl.GLenum-End-->
@@ -7729,10 +6517,6 @@ Texture max LOD
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7752,10 +6536,6 @@ Texture min LOD
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TEXTURE_MIN_LOD: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_MIN_LOD: webgl.GLenum-End-->
@@ -7773,10 +6553,6 @@ Texture wrap: R
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7796,10 +6572,6 @@ Timeout Expired
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TIMEOUT_EXPIRED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TIMEOUT_EXPIRED: webgl.GLenum-End-->
@@ -7817,10 +6589,6 @@ Timeout ignored
 **Type:** [GLint64](arkts-arkgraphics2d-glint64-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7840,10 +6608,6 @@ Transform feedback target
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK: webgl.GLenum-End-->
@@ -7861,10 +6625,6 @@ Transform feedback active
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7884,10 +6644,6 @@ Transform feedback binding
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BINDING: webgl.GLenum-End-->
@@ -7905,10 +6661,6 @@ Transform Feedback Buffer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7928,10 +6680,6 @@ Transform Feedback Buffer Binding
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_BINDING: webgl.GLenum-End-->
@@ -7949,10 +6697,6 @@ Transform Feedback Buffer Mode
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7972,10 +6716,6 @@ Transform Feedback Buffer Size
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_SIZE: webgl.GLenum-End-->
@@ -7993,10 +6733,6 @@ Transform Feedback Buffer Start
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8016,10 +6752,6 @@ Transform feedback paused
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_PAUSED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_PAUSED: webgl.GLenum-End-->
@@ -8037,10 +6769,6 @@ Transform Feedback Primitives Written
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8060,10 +6788,6 @@ Transform Feedback Varyings
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_VARYINGS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_VARYINGS: webgl.GLenum-End-->
@@ -8081,10 +6805,6 @@ Uniform Array Stride
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8104,10 +6824,6 @@ Uniform Block Active Uniforms
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum-End-->
@@ -8125,10 +6841,6 @@ Uniform Block Active Uniform Indices
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8148,10 +6860,6 @@ Uniform Block Binding
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_BINDING: webgl.GLenum-End-->
@@ -8169,10 +6877,6 @@ Uniform Block Data Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8192,10 +6896,6 @@ Uniform Block Index
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_INDEX: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_INDEX: webgl.GLenum-End-->
@@ -8213,10 +6913,6 @@ Uniform Block Referenced By Fragment Shader
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8236,10 +6932,6 @@ Uniform Block Referenced By Vertex Shader
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER: webgl.GLenum-End-->
@@ -8257,10 +6949,6 @@ Uniform Buffer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8280,10 +6968,6 @@ Uniform Buffer Binding
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_BINDING: webgl.GLenum-End-->
@@ -8301,10 +6985,6 @@ Uniform Buffer Offset Alignment
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8324,10 +7004,6 @@ Uniform Buffer Size
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_SIZE: webgl.GLenum-End-->
@@ -8345,10 +7021,6 @@ Uniform Buffer Start
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8368,10 +7040,6 @@ Uniform Is Row Major
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNIFORM_IS_ROW_MAJOR: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_IS_ROW_MAJOR: webgl.GLenum-End-->
@@ -8389,10 +7057,6 @@ Uniform Matrix Stride
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8412,10 +7076,6 @@ Uniform Offset
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNIFORM_OFFSET: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_OFFSET: webgl.GLenum-End-->
@@ -8433,10 +7093,6 @@ Uniform Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8456,10 +7112,6 @@ Uniform Type
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNIFORM_TYPE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_TYPE: webgl.GLenum-End-->
@@ -8477,10 +7129,6 @@ Unpack image height
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8500,10 +7148,6 @@ Unpack row length
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNPACK_ROW_LENGTH: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNPACK_ROW_LENGTH: webgl.GLenum-End-->
@@ -8521,10 +7165,6 @@ Unpack skip images
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8544,10 +7184,6 @@ Unpack skip pixels
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNPACK_SKIP_PIXELS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNPACK_SKIP_PIXELS: webgl.GLenum-End-->
@@ -8565,10 +7201,6 @@ Unpack skip rows
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8588,10 +7220,6 @@ Unsignaled
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNSIGNALED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNALED: webgl.GLenum-End-->
@@ -8609,10 +7237,6 @@ Unsigned Int 10F 11F 11F Rev
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8632,10 +7256,6 @@ Unsigned Int 24 8
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_24_8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_24_8: webgl.GLenum-End-->
@@ -8653,10 +7273,6 @@ Data type: unsigned int 2_10_10_10 rev
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8676,10 +7292,6 @@ Unsigned Int 5 9 9 9 Rev
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_5_9_9_9_REV: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_5_9_9_9_REV: webgl.GLenum-End-->
@@ -8697,10 +7309,6 @@ Unsigned Int Sampler 2D
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8720,10 +7328,6 @@ Unsigned Int Sampler 2D Array
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_2D_ARRAY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_2D_ARRAY: webgl.GLenum-End-->
@@ -8741,10 +7345,6 @@ Unsigned Int Sampler 3D
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8764,10 +7364,6 @@ Unsigned Int Sampler Cube
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_CUBE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_CUBE: webgl.GLenum-End-->
@@ -8785,10 +7381,6 @@ Unsigned Int Vec2
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8808,10 +7400,6 @@ Unsigned Int Vec3
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_VEC3: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_VEC3: webgl.GLenum-End-->
@@ -8829,10 +7417,6 @@ Unsigned Int Vec4
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8852,10 +7436,6 @@ Unsigned Normalized
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_NORMALIZED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_NORMALIZED: webgl.GLenum-End-->
@@ -8873,10 +7453,6 @@ Vertex Array Binding
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -8896,10 +7472,6 @@ Vertex Attrib Array Divisor
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_DIVISOR: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_DIVISOR: webgl.GLenum-End-->
@@ -8918,10 +7490,6 @@ Vertex Attrib Array Integer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_INTEGER: webgl.GLenum-End-->
@@ -8939,10 +7507,6 @@ Wait Failed
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

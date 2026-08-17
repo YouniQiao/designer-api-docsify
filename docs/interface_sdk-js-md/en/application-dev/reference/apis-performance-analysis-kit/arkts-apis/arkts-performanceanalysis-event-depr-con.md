@@ -10,8 +10,6 @@ Distributed service event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** DISTRIBUTED_SERVICE_START
@@ -30,8 +28,6 @@ User login event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** USER_LOGIN
@@ -49,8 +45,6 @@ const USER_LOGOUT: string
 User logout event.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

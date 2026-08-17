@@ -4,13 +4,9 @@
 export type NetStatsInfoSequence = Array<NetStatsInfoSequenceItem>
 ```
 
-Array of [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md#NetStatsInfoSequenceItem-(System-API)).
+Array of [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md#netstatsinfosequenceitem-system-api).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-statistics-export type NetStatsInfoSequence = Array<NetStatsInfoSequenceItem>--><!--Device-statistics-export type NetStatsInfoSequence = Array<NetStatsInfoSequenceItem>-End-->
 

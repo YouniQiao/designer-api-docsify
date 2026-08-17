@@ -16,10 +16,6 @@ Obtains detailed information about a private credential. This API uses an asynch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>): void-End-->
@@ -31,7 +27,7 @@ Obtains detailed information about a private credential. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyUri | string | Yes | Unique identifier of the credential to be obtained. The value contains up to 256 bytes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is **credential** in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md#CMResult) object. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is **credential** in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md#cmresult) object. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -42,7 +38,7 @@ Obtains detailed information about a private credential. This API uses an asynch
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. Possible causes: 1. The certificate URI is incorrect; 2. The certificate has been uninstalled. Please check the certificate URI. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -77,10 +73,6 @@ Obtains detailed information about a private credential. This API uses a promise
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function getPrivateCertificate(keyUri: string): Promise<CMResult>--><!--Device-certificateManager-function getPrivateCertificate(keyUri: string): Promise<CMResult>-End-->
@@ -108,7 +100,7 @@ Obtains detailed information about a private credential. This API uses a promise
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

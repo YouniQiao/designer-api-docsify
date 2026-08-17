@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cacheDownload-interface DownloadInfo--><!--Device-cacheDownload-interface DownloadInfo-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -23,10 +19,6 @@ readonly network: NetworkInfo
 **类型：** [NetworkInfo](arkts-basicservices-cachedownload-networkinfo-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadInfo-readonly network: NetworkInfo--><!--Device-DownloadInfo-readonly network: NetworkInfo-End-->
 
@@ -44,10 +36,6 @@ readonly performance: PerformanceInfo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadInfo-readonly performance: PerformanceInfo--><!--Device-DownloadInfo-readonly performance: PerformanceInfo-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -63,10 +51,6 @@ readonly resource: ResourceInfo
 **类型：** [ResourceInfo](arkts-basicservices-cachedownload-resourceinfo-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadInfo-readonly resource: ResourceInfo--><!--Device-DownloadInfo-readonly resource: ResourceInfo-End-->
 

@@ -10,10 +10,6 @@ function getTouchpadSwipeSwitch(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-pointer-function getTouchpadSwipeSwitch(callback: AsyncCallback<boolean>): void--><!--Device-pointer-function getTouchpadSwipeSwitch(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
@@ -24,7 +20,7 @@ function getTouchpadSwipeSwitch(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取触控板多指滑动功能开启状态成功，err为undefined，state是true代表多指滑动开启，false代表多指滑动关 闭，默认开启；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当获取触控板多指滑动功能开启状态成功，err为undefined，state是true代表多指滑动开启，false代表多指滑动关 闭，默认开启；否则为错误对象。 |
 
 **错误码：**
 
@@ -33,7 +29,7 @@ function getTouchpadSwipeSwitch(callback: AsyncCallback<boolean>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -105,10 +101,6 @@ function getTouchpadSwipeSwitch(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-pointer-function getTouchpadSwipeSwitch(): Promise<boolean>--><!--Device-pointer-function getTouchpadSwipeSwitch(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
@@ -128,7 +120,7 @@ function getTouchpadSwipeSwitch(): Promise<boolean>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -16,11 +16,9 @@ Checks whether touch guide mode is enabled. This API uses an asynchronous callba
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md#isOpenTouchGuideSync)
+**Substitutes:** [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md#isopentouchguidesync)
 
 <!--Device-accessibility-function isOpenTouchGuide(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenTouchGuide(callback: AsyncCallback<boolean>): void-End-->
 
@@ -32,7 +30,7 @@ Checks whether touch guide mode is enabled. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the touch browsing mode is enabled, and **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -58,11 +56,9 @@ Checks whether touch guide mode is enabled. This API uses a promise to return th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md#isOpenTouchGuideSync)
+**Substitutes:** [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md#isopentouchguidesync)
 
 <!--Device-accessibility-function isOpenTouchGuide(): Promise<boolean>--><!--Device-accessibility-function isOpenTouchGuide(): Promise<boolean>-End-->
 
@@ -74,7 +70,7 @@ Checks whether touch guide mode is enabled. This API uses a promise to return th
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the touch browsing mode is enabled, and **false** indicates that the touch browsing mode is not enabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

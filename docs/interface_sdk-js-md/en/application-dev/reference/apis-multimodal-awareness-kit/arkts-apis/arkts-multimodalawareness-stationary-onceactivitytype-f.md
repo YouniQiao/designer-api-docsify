@@ -16,10 +16,6 @@ Obtains the device status.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-stationary-function once(activity: ActivityType, callback: Callback<ActivityResponse>): void--><!--Device-stationary-function once(activity: ActivityType, callback: Callback<ActivityResponse>): void-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
@@ -31,7 +27,7 @@ Obtains the device status.
 | activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | Yes | Device status type. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | Yes | Callback used to receive reported data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 stationary.once('still', (data) => {

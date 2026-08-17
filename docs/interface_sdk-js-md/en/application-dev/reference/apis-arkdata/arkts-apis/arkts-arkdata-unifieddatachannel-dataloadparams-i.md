@@ -4,10 +4,6 @@ Defines the data loading policy for the data sender in the lazy loading scenario
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unifiedDataChannel-interface DataLoadParams--><!--Device-unifiedDataChannel-interface DataLoadParams-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -30,10 +26,6 @@ Indicates data loading information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -54,10 +46,6 @@ Indicates the callback function for deferred and non-blocking data loading. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -77,10 +65,6 @@ Indicates the callback function for loading data.
 **Type:** [DataLoadHandler](arkts-arkdata-unifieddatachannel-dataloadhandler-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

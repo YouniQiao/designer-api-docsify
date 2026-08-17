@@ -4,9 +4,7 @@ Provides international settings related APIs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-declare namespace i18n--><!--Device-unnamed-declare namespace i18n-End-->
 
@@ -18,15 +16,15 @@ Provides international settings related APIs.
 
 | Name | Description |
 | --- | --- |
-| [getCalendar](arkts-na-i18n-getcalendar-f.md#getCalendar) | Obtains the Calendar object for the specified locale and calendar type. |
-| [getChineseCalendar](arkts-na-i18n-getchinesecalendar-f.md#getChineseCalendar) | Obtains the ChineseCalendar object for the specified locale. |
-| [getInstance](arkts-na-i18n-getinstance-f.md#getInstance) | Creates an IndexUtil object. |
-| [getLineInstance](arkts-na-i18n-getlineinstance-f.md#getLineInstance) | Obtains a BreakIterator object. The BreakIterator object maintains an internal break iterator that can be used to access various line break points. |
-| [getSimpleDateTimeFormatByPattern](arkts-na-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) | Obtains a SimpleDateTimeFormat object based on the specified pattern string. For details about the display differences between the objects obtained by this API and getSimpleDateTimeFormatBySkeleton, see SimpleDateTimeFormat. |
-| [getSimpleDateTimeFormatBySkeleton](arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) | Obtains a SimpleDateTimeFormat object based on the specified skeleton. For details about the display differences between the objects obtained by this API and getSimpleDateTimeFormatByPattern, see SimpleDateTimeFormat. |
-| [getSimpleNumberFormatBySkeleton](arkts-na-i18n-getsimplenumberformatbyskeleton-f.md#getSimpleNumberFormatBySkeleton) | Obtains a SimpleNumberFormat object based on the specified skeleton. |
-| [getTimeZone](arkts-na-i18n-gettimezone-f.md#getTimeZone) | Obtains the TimeZone object corresponding to the specified time zone ID. |
-| [isRTL](arkts-na-i18n-isrtl-f.md#isRTL) | Checks whether the input character is of the right to left (RTL) language. |
+| [getCalendar](arkts-na-i18n-getcalendar-f.md#getcalendar) | Obtains the Calendar object for the specified locale and calendar type. |
+| [getChineseCalendar](arkts-na-i18n-getchinesecalendar-f.md#getchinesecalendar) | Obtains the ChineseCalendar object for the specified locale. |
+| [getInstance](arkts-na-i18n-getinstance-f.md#getinstance) | Creates an IndexUtil object. |
+| [getLineInstance](arkts-na-i18n-getlineinstance-f.md#getlineinstance) | Obtains a BreakIterator object. The BreakIterator object maintains an internal break iterator that can be used to access various line break points. |
+| [getSimpleDateTimeFormatByPattern](arkts-na-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern) | Obtains a SimpleDateTimeFormat object based on the specified pattern string. For details about the display differences between the objects obtained by this API and getSimpleDateTimeFormatBySkeleton, see SimpleDateTimeFormat. |
+| [getSimpleDateTimeFormatBySkeleton](arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton) | Obtains a SimpleDateTimeFormat object based on the specified skeleton. For details about the display differences between the objects obtained by this API and getSimpleDateTimeFormatByPattern, see SimpleDateTimeFormat. |
+| [getSimpleNumberFormatBySkeleton](arkts-na-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton) | Obtains a SimpleNumberFormat object based on the specified skeleton. |
+| [getTimeZone](arkts-na-i18n-gettimezone-f.md#gettimezone) | Obtains the TimeZone object corresponding to the specified time zone ID. |
+| [isRTL](arkts-na-i18n-isrtl-f.md#isrtl) | Checks whether the input character is of the right to left (RTL) language. |
 
 ### Classes
 

@@ -4,11 +4,9 @@ Describes the callback invoked for audio interruption or focus gain events.When 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [InterruptEvent](arkts-audio-audio-interruptevent-i.md#InterruptEvent)
+**Substitutes:** [InterruptEvent](arkts-audio-audio-interruptevent-i.md#interruptevent)
 
 <!--Device-audio-interface InterruptAction--><!--Device-audio-interface InterruptAction-End-->
 
@@ -32,8 +30,6 @@ Event type. The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERR
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** eventType
@@ -54,11 +50,9 @@ Whether the focus is gained or released. **true** if the focus is gained or rele
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hintType)
+**Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
 
 <!--Device-InterruptAction-activated?: boolean--><!--Device-InterruptAction-activated?: boolean-End-->
 
@@ -76,11 +70,9 @@ Hint provided along with the audio interruption event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hintType)
+**Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
 
 <!--Device-InterruptAction-hint?: InterruptHint--><!--Device-InterruptAction-hint?: InterruptHint-End-->
 
@@ -97,8 +89,6 @@ Type of the audio interruption event.
 **Type:** [InterruptType](arkts-audio-audio-interrupttype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

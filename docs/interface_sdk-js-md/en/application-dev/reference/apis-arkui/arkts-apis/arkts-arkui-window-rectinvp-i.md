@@ -4,10 +4,6 @@ Describes the rectangular area of the window, in vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface RectInVP--><!--Device-window-interface RectInVP-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Height of the rectangle, in vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RectInVP-height: double--><!--Device-RectInVP-height: double-End-->
@@ -51,10 +43,6 @@ Left boundary of the rectangle, in vp.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Top boundary of the rectangle, in vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RectInVP-top: double--><!--Device-RectInVP-top: double-End-->
@@ -95,10 +79,6 @@ Width of the rectangle, in vp.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

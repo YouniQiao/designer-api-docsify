@@ -10,10 +10,6 @@ function getContext(): Context
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-function getContext(): Context--><!--Device-featureAbility-function getContext(): Context-End-->
@@ -26,7 +22,7 @@ function getContext(): Context
 | --- | --- |
 | Context | 返回应用程序上下文。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

@@ -4,11 +4,9 @@ The enum of BR scan mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md#ScanMode)
+**Substitutes:** [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmode)
 
 <!--Device-bluetooth-enum ScanMode--><!--Device-bluetooth-enum ScanMode-End-->
 
@@ -24,11 +22,9 @@ Indicates the scan mode is none
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_NONE](arkts-connectivity-bluetoothmanager-scanmode-e.md#SCAN_MODE_NONE)
+**Substitutes:** [SCAN_MODE_NONE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodenone)
 
 <!--Device-ScanMode-SCAN_MODE_NONE = 0--><!--Device-ScanMode-SCAN_MODE_NONE = 0-End-->
 
@@ -44,11 +40,9 @@ Indicates the scan mode is connectable
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_CONNECTABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#SCAN_MODE_CONNECTABLE)
+**Substitutes:** [SCAN_MODE_CONNECTABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodeconnectable)
 
 <!--Device-ScanMode-SCAN_MODE_CONNECTABLE = 1--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE = 1-End-->
 
@@ -64,11 +58,9 @@ Indicates the scan mode is general discoverable
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_GENERAL_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#SCAN_MODE_GENERAL_DISCOVERABLE)
+**Substitutes:** [SCAN_MODE_GENERAL_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodegeneraldiscoverable)
 
 <!--Device-ScanMode-SCAN_MODE_GENERAL_DISCOVERABLE = 2--><!--Device-ScanMode-SCAN_MODE_GENERAL_DISCOVERABLE = 2-End-->
 
@@ -84,11 +76,9 @@ Indicates the scan mode is limited discoverable
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_LIMITED_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#SCAN_MODE_LIMITED_DISCOVERABLE)
+**Substitutes:** [SCAN_MODE_LIMITED_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodelimiteddiscoverable)
 
 <!--Device-ScanMode-SCAN_MODE_LIMITED_DISCOVERABLE = 3--><!--Device-ScanMode-SCAN_MODE_LIMITED_DISCOVERABLE = 3-End-->
 
@@ -104,11 +94,9 @@ Indicates the scan mode is connectable and general discoverable
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE)
+**Substitutes:** [SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodeconnectablegeneraldiscoverable)
 
 <!--Device-ScanMode-SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE = 4--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE = 4-End-->
 
@@ -124,11 +112,9 @@ Indicates the scan mode is connectable and limited discoverable
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE)
+**Substitutes:** [SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodeconnectablelimiteddiscoverable)
 
 <!--Device-ScanMode-SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE = 5--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE = 5-End-->
 

@@ -16,10 +16,6 @@ function cancel(id: int, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-notificationManager-function cancel(id: int, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancel(id: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -37,7 +33,7 @@ cancelGroup 取消当前应用指定组下的通知。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | int | 是 | 通知ID，用于标识目标通知。该值由发布通知时NotificationRequest的id字段指定。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当取消已发布的通知成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当取消已发布的通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -49,7 +45,7 @@ cancelGroup 取消当前应用指定组下的通知。
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -94,10 +90,6 @@ function cancel(id: int, label: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-notificationManager-function cancel(id: int, label: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancel(id: int, label: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -116,7 +108,7 @@ cancelGroup 取消当前应用指定组下的通知。
 | --- | --- | --- | --- |
 | id | int | 是 | 通知ID，用于标识目标通知。该值由发布通知时NotificationRequest的id字段指定。 |
 | label | string | 是 | 通知标签。该值由发布通知时NotificationRequest的label字段指定。 - 若标签为空，则取消与指定通知ID匹配，标签为空的已发布通知。 - 若标签不为空，则取消与指定通知ID和标签同时匹配的已发布通知。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。根据通知ID和标签取消已发布的通知成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。根据通知ID和标签取消已发布的通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -128,7 +120,7 @@ cancelGroup 取消当前应用指定组下的通知。
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -173,10 +165,6 @@ function cancel(id: int, label?: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-notificationManager-function cancel(id: int, label?: string): Promise<void>--><!--Device-notificationManager-function cancel(id: int, label?: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -212,7 +200,7 @@ cancelGroup 取消当前应用指定组下的通知。
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -4,10 +4,6 @@ Represents a **Server** object, which provides methods for starting, stopping, a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-linkEnhance-interface Server--><!--Device-linkEnhance-interface Server-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -24,13 +20,9 @@ import { linkEnhance } from 'linkEnhance';
 close(): void
 ```
 
-Destroys the **Server** object to release related resources. To interact with the peer device again, create a new **Server** object.
+Destroys the **Server** object to release related resources. To interact with the peer device again, create a new **Server** object. **close()** is called to destroy the **Server** object and release resources. If the call is successful, the **Server** object needs to be re-created when it is needed again. **stop()** is called to stop the server. If the call is successful, the **Server** object can still be restarted. If the server needs to be restarted, use **stop()**. If the server is no longer needed, use **close()**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -46,7 +38,7 @@ Destroys the **Server** object to release related resources. To interact with th
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -77,10 +69,6 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -93,13 +81,13 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection) object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#connection) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## offServerStopped
@@ -111,10 +99,6 @@ offServerStopped(callback?: Callback<int>): void
 Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -134,7 +118,7 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## off_connectionAccepted
@@ -143,13 +127,9 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 ```
 
-Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
+Unregisters the callback listener for **connectionAccepted** event. This API must be called after the server is successfully created. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -164,16 +144,16 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection) object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback. The parameter is [Connection](arkts-distributedservice-linkenhance-connection-i.md#connection). The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -206,13 +186,9 @@ try {
 off(type: 'serverStopped', callback?: Callback<number>): void
 ```
 
-Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
+Unregisters the callback listener for **serverStopped** event. This API must be called after the server is created successfully. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -227,16 +203,16 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | Yes | Event type, which is **serverStopped**. This event is triggered when the server is stopped abnormally. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. This event is triggered when the server is stopped abnormally. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -273,10 +249,6 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -295,7 +267,7 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## onServerStopped
@@ -307,10 +279,6 @@ onServerStopped(callback: Callback<int>): void
 Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -330,7 +298,7 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## on_connectionAccepted
@@ -342,10 +310,6 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -360,16 +324,16 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection) object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to receive server connection events. The callback parameter **connection** is the connection object used to establish the connection. The type is [Connection](arkts-distributedservice-linkenhance-connection-i.md#connection). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -406,10 +370,6 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -423,16 +383,16 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | Yes | Event type, which is **serverStopped**. This event is triggered when the server is stopped abnormally. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. This event is triggered when the server is stopped abnormally. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -465,13 +425,9 @@ try {
 start(): void
 ```
 
-Starts a server so that it can be connected by the client. A maximum of 10 servers are supported.
+Starts a server so that it can be connected by the client. A maximum of 10 servers are supported. After a server is started, you can stop it by calling **stop()** and restart it by calling **start()**. After using the server, call **close()** to destroy the **Server** object to release resources.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -489,7 +445,7 @@ Starts a server so that it can be connected by the client. A maximum of 10 serve
 | [32390202](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390202-number-of-services-exceeding-the-limit) | The number of servers exceeds the limit. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -519,10 +475,6 @@ Stops the server. After the server is stopped, you can call `start` to start it 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -537,7 +489,7 @@ Stops the server. After the server is stopped, you can call `start` to start it 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';

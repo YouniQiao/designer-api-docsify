@@ -4,11 +4,9 @@ Enumerates the sticky effects for list items.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [list/StickyStyle](arkts-arkui-stickystyle-e.md#StickyStyle)
+**Substitutes:** [list/StickyStyle](arkts-arkui-stickystyle-e.md#stickystyle)
 
 <!--Device-unnamed-declare enum Sticky--><!--Device-unnamed-declare enum Sticky-End-->
 
@@ -23,8 +21,6 @@ None
 No sticky.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -42,8 +38,6 @@ The list item is sticky with no special effects.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-Sticky-Normal--><!--Device-Sticky-Normal-End-->
@@ -59,8 +53,6 @@ Opacity
 The list item is sticky with opacity changes.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

@@ -4,13 +4,9 @@
 type OnAdsBlockedCallback = (details: AdsBlockedDetails) => void
 ```
 
-The callback of ads block
+Defines a callback invoked when ads are blocked on the web page.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -22,5 +18,5 @@ The callback of ads block
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| details | [AdsBlockedDetails](arkts-arkweb-adsblockeddetails-i.md) | Yes | details of OnAdsBlockedCallback. |
+| details | [AdsBlockedDetails](arkts-arkweb-adsblockeddetails-i.md) | Yes | Detailed information about the blocked ads when ads are blocked. |
 

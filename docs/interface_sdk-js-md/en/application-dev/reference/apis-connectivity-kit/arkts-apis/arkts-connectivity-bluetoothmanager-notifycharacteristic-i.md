@@ -4,11 +4,9 @@ Describes the value of the indication or notification sent by the Gatt server.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md#NotifyCharacteristic)
+**Substitutes:** [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md#notifycharacteristic)
 
 <!--Device-bluetoothManager-interface NotifyCharacteristic--><!--Device-bluetoothManager-interface NotifyCharacteristic-End-->
 
@@ -32,11 +30,9 @@ The UUID of a NotifyCharacteristic instance
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicUuid](arkts-connectivity-ble-notifycharacteristic-i.md#characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-ble-notifycharacteristic-i.md#characteristicuuid)
 
 <!--Device-NotifyCharacteristic-characteristicUuid: string--><!--Device-NotifyCharacteristic-characteristicUuid: string-End-->
 
@@ -54,11 +50,9 @@ The value of a NotifyCharacteristic instance
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicValue](arkts-connectivity-ble-notifycharacteristic-i.md#characteristicValue)
+**Substitutes:** [characteristicValue](arkts-connectivity-ble-notifycharacteristic-i.md#characteristicvalue)
 
 <!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer--><!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer-End-->
 
@@ -76,8 +70,6 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [confirm](arkts-connectivity-ble-notifycharacteristic-i.md#confirm)
@@ -92,17 +84,15 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 serviceUuid: string
 ```
 
-The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#GattService) instance to which the characteristic belongs
+The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#gattservice) instance to which the characteristic belongs
 
 **Type:** string
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuid](arkts-connectivity-ble-notifycharacteristic-i.md#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-notifycharacteristic-i.md#serviceuuid)
 
 <!--Device-NotifyCharacteristic-serviceUuid: string--><!--Device-NotifyCharacteristic-serviceUuid: string-End-->
 

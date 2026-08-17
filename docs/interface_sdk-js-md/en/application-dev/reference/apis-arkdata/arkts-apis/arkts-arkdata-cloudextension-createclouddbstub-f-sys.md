@@ -16,10 +16,6 @@ Creates a RemoteObject instance based on a CloudDB instance. The system uses thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server

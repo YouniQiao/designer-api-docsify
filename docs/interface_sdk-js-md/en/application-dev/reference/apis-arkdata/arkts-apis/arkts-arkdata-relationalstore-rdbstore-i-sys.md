@@ -1,12 +1,8 @@
 # RdbStore
 
-Provides APIs for managing data in an RDB store. Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getRdbStore) method and then call the corresponding method through the instance. In addition, use [execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
+Provides APIs for managing data in an RDB store. Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore) method and then call the corresponding method through the instance. In addition, use [execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-relationalStore-interface RdbStore--><!--Device-relationalStore-interface RdbStore-End-->
 
@@ -27,10 +23,6 @@ cleanDeviceDirtyData(table: string, cursor?: long): Promise<void>
 Cleans dirty data deleted in the cross-device sync. If a cursor is specified, data whose cursor is smaller than the specified cursor is cleaned. Otherwise, all data is cleaned.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,10 +73,6 @@ Sync data to cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-cloudSync(      mode: SyncMode,      predicates: RdbPredicates,      progress: Callback<ProgressDetails>,      callback: AsyncCallback<void>    ): void--><!--Device-RdbStore-cloudSync(      mode: SyncMode,      predicates: RdbPredicates,      progress: Callback<ProgressDetails>,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -96,8 +84,8 @@ Sync data to cloud.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#ProgressDetails) result. |
+| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of cloudSync. |
 
 **Error codes:**
@@ -119,10 +107,6 @@ Sync data to cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<ProgressDetails>): Promise<void>--><!--Device-RdbStore-cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<ProgressDetails>): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -134,8 +118,8 @@ Sync data to cloud.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#ProgressDetails) result. |
+| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
 
 **Return value:**
 
@@ -162,10 +146,6 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<long>): void--><!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<long>): void-End-->
@@ -179,7 +159,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#DataSharePredicates-(System-API)). |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
@@ -218,10 +198,6 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Promise<long>--><!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Promise<long>-End-->
@@ -235,7 +211,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#DataSharePredicates-(System-API)). |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
 
 **Return value:**
 
@@ -279,10 +255,6 @@ Lock cloud container before non-auto cloud sync.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-lockCloudContainer(): Promise<int>--><!--Device-RdbStore-lockCloudContainer(): Promise<int>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -311,10 +283,6 @@ Queries data in the database based on specified conditions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-query(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<ResultSet>): void-End-->
@@ -328,8 +296,8 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#DataSharePredicates-(System-API)). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet) object if the operation is successful. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) object if the operation is successful. |
 
 **Error codes:**
 
@@ -356,10 +324,6 @@ Queries data in the database based on specified conditions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-query(      table: string,      predicates: dataSharePredicates.DataSharePredicates,      columns: Array<string>,      callback: AsyncCallback<ResultSet>    ): void--><!--Device-RdbStore-query(      table: string,      predicates: dataSharePredicates.DataSharePredicates,      columns: Array<string>,      callback: AsyncCallback<ResultSet>    ): void-End-->
@@ -373,9 +337,9 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#DataSharePredicates-(System-API)). |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
 | columns | Array&lt;string&gt; | Yes | The columns to query. If the value is empty array, the query applies to all columns. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) object if the operation is successful. |
 
 **Error codes:**
 
@@ -401,10 +365,6 @@ Queries data in the database based on specified conditions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-query(      table: string,      predicates: dataSharePredicates.DataSharePredicates,      columns?: Array<string>    ): Promise<ResultSet>--><!--Device-RdbStore-query(      table: string,      predicates: dataSharePredicates.DataSharePredicates,      columns?: Array<string>    ): Promise<ResultSet>-End-->
@@ -418,7 +378,7 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#DataSharePredicates-(System-API)). |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
 | columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
@@ -447,10 +407,6 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -461,7 +417,7 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | No | The specified columns to query. |
 
 **Return value:**
@@ -505,10 +461,6 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -519,8 +471,8 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet) is query result. |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) is query result. |
 
 **Error codes:**
 
@@ -557,10 +509,6 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -571,9 +519,9 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | Yes | The specified columns to query. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet) is query result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) is query result. |
 
 **Error codes:**
 
@@ -609,10 +557,6 @@ restore(): Promise<void>
 Restores a database from a specified database file.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-restore(): Promise<void>--><!--Device-RdbStore-restore(): Promise<void>-End-->
 
@@ -661,10 +605,6 @@ Remove distributed table remote data.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>--><!--Device-RdbStore-retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>-End-->
@@ -708,10 +648,6 @@ Unlock cloud container.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-unlockCloudContainer(): Promise<void>--><!--Device-RdbStore-unlockCloudContainer(): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -745,10 +681,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-update(      table: string,      values: ValuesBucket,      predicates: dataSharePredicates.DataSharePredicates,      callback: AsyncCallback<long>    ): void--><!--Device-RdbStore-update(      table: string,      values: ValuesBucket,      predicates: dataSharePredicates.DataSharePredicates,      callback: AsyncCallback<long>    ): void-End-->
@@ -763,7 +695,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#DataSharePredicates-(System-API)). |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
@@ -802,10 +734,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-update(table: string, values: ValuesBucket, predicates: dataSharePredicates.DataSharePredicates): Promise<long>--><!--Device-RdbStore-update(table: string, values: ValuesBucket, predicates: dataSharePredicates.DataSharePredicates): Promise<long>-End-->
@@ -820,7 +748,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#DataSharePredicates-(System-API)). |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
 
 **Return value:**
 
@@ -864,10 +792,6 @@ Update distributed table log.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise<long>--><!--Device-RdbStore-updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise<long>-End-->
@@ -881,7 +805,7 @@ Update distributed table log.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | DistributedInfo | Yes | Indicates the table log needs to be updated. |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 
 **Return value:**
 

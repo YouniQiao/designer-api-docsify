@@ -12,11 +12,9 @@ import { dragController } from 'dragController';
 function getDragPreview(): DragPreview
 ```
 
-Obtains the **DragPreview** object, which represents the preview displayed during a drag operation. > **NOTE：**> > Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object > associated with the current UI context.
+Obtains the **DragPreview** object, which represents the preview displayed during a drag operation. > **NOTE：**> > Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#dragcontroller) object > associated with the current UI context.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Deprecated since:** 18
 

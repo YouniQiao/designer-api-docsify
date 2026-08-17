@@ -4,10 +4,6 @@ Provides interfaces to manage ethernet.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace ethernet--><!--Device-unnamed-declare namespace ethernet-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -24,27 +20,27 @@ import { ethernet } from 'ethernet';
 
 | Name | Description |
 | --- | --- |
-| [getMacAddress](arkts-network-ethernet-getmacaddress-f.md#getMacAddress) | Get the ethernet mac address list. |
+| [getMacAddress](arkts-network-ethernet-getmacaddress-f.md#getmacaddress) | Get the ethernet mac address list. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [disableEthernetInterface](arkts-network-ethernet-disableethernetinterface-f-sys.md#disableEthernetInterface) | Disable the ethernet interface. |
-| [enableEthernetInterface](arkts-network-ethernet-enableethernetinterface-f-sys.md#enableEthernetInterface) | Enable the ethernet interface. |
-| [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md#getAllActiveIfaces) | Gets the names of all active network interfaces. |
-| [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md#getAllActiveIfaces-(System-API)) | Gets the names of all active network interfaces. |
-| [getEthernetDeviceInfos](arkts-network-ethernet-getethernetdeviceinfos-f-sys.md#getEthernetDeviceInfos) | Get the ethernet mac address list. |
-| [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md#getIfaceConfig) | Get the specified network interface information. |
-| [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md#getIfaceConfig-(System-API)) | Get the specified network interface information. |
-| [isEthernetEnabled](arkts-network-ethernet-isethernetenabled-f-sys.md#isEthernetEnabled) | Check whether the global ethernet switch is enabled. |
-| [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isIfaceActive) | Check whether the specified network is active. |
-| [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isIfaceActive-(System-API)) | Check whether the specified network is active. |
-| [off_interfaceStateChange](arkts-network-ethernet-offinterfacestatechange-f-sys.md#off_interfaceStateChange) | Unregister a callback from the ethernet interface active state change. |
-| [on_interfaceStateChange](arkts-network-ethernet-oninterfacestatechange-f-sys.md#on_interfaceStateChange) | Register a callback for the ethernet interface active state change. |
-| [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setIfaceConfig) | Set the specified network interface parameters. |
-| [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setIfaceConfig-(System-API)) | Set the specified network interface parameters. |
+| [disableEthernetInterface](arkts-network-ethernet-disableethernetinterface-f-sys.md#disableethernetinterface) | Disable the ethernet interface. |
+| [enableEthernetInterface](arkts-network-ethernet-enableethernetinterface-f-sys.md#enableethernetinterface) | Enable the ethernet interface. |
+| [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md#getallactiveifaces) | Gets the names of all active network interfaces. |
+| [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md#getallactiveifaces-system-api) | Gets the names of all active network interfaces. |
+| [getEthernetDeviceInfos](arkts-network-ethernet-getethernetdeviceinfos-f-sys.md#getethernetdeviceinfos) | Get the ethernet mac address list. |
+| [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md#getifaceconfig) | Get the specified network interface information. |
+| [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md#getifaceconfig-system-api) | Get the specified network interface information. |
+| [isEthernetEnabled](arkts-network-ethernet-isethernetenabled-f-sys.md#isethernetenabled) | Check whether the global ethernet switch is enabled. |
+| [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isifaceactive) | Check whether the specified network is active. |
+| [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isifaceactive-system-api) | Check whether the specified network is active. |
+| [off_interfaceStateChange](arkts-network-ethernet-offinterfacestatechange-f-sys.md#offinterfacestatechange) | Unregister a callback from the ethernet interface active state change. |
+| [on_interfaceStateChange](arkts-network-ethernet-oninterfacestatechange-f-sys.md#oninterfacestatechange) | Register a callback for the ethernet interface active state change. |
+| [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setifaceconfig) | Set the specified network interface parameters. |
+| [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setifaceconfig-system-api) | Set the specified network interface parameters. |
 <!--DelEnd-->
 
 ### Interfaces

@@ -16,8 +16,6 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** addNotificationSlot
@@ -33,7 +31,7 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 | slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot, whose type can be set. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import notification from '@ohos.notificationManager'
@@ -58,8 +56,6 @@ Adds a notification slot. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** addNotificationSlot
@@ -80,7 +76,7 @@ Adds a notification slot. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import notification from '@ohos.notificationManager'

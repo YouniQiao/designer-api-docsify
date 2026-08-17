@@ -4,9 +4,7 @@ Provide a DateTime formatting interface which could format DateTime to StyleStri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export class StyledDateTimeFormat--><!--Device-i18n-export class StyledDateTimeFormat-End-->
 
@@ -23,9 +21,7 @@ A constructor used to create a StyledDateTimeFormat object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -37,8 +33,8 @@ A constructor used to create a StyledDateTimeFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](arkts-na-i18n-simpledatetimeformat-c.md) | Yes | Indicates the date and time format object that used to format date. |
-| options | [StyledDateTimeFormatOptions](arkts-na-i18n-styleddatetimeformatoptions-i.md) | No | Indicates the options used to format the date. |
+| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simpledatetimeformat-c.md) | Yes | Indicates the date and time format object that used to format date. |
+| options | [StyledDateTimeFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-styleddatetimeformatoptions-i.md) | No | Indicates the options used to format the date. |
 
 ## format
 
@@ -50,9 +46,7 @@ Formats a date as a rich text object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

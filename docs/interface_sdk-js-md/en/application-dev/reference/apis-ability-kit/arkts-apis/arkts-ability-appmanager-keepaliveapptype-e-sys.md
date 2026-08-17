@@ -4,10 +4,6 @@ Enumerates the types of applications to be kept alive.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appManager-export enum KeepAliveAppType--><!--Device-appManager-export enum KeepAliveAppType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -20,13 +16,9 @@ Enumerates the types of applications to be kept alive.
 ALL = 0
 ```
 
-Third-party and system applications. This value can be called only as an input parameter of [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getKeepAliveBundles-(System-API)).
+Third-party and system applications. This value can be called only as an input parameter of [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles-system-api).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeepAliveAppType-ALL = 0--><!--Device-KeepAliveAppType-ALL = 0-End-->
 
@@ -44,10 +36,6 @@ Third-party application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeepAliveAppType-THIRD_PARTY = 1--><!--Device-KeepAliveAppType-THIRD_PARTY = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -63,10 +51,6 @@ SYSTEM = 2
 System application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeepAliveAppType-SYSTEM = 2--><!--Device-KeepAliveAppType-SYSTEM = 2-End-->
 

@@ -1,14 +1,12 @@
 # RemoteAbilityInfo（系统接口）
 
-remoteAbility信息。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[bundleManager-RemoteAbilityInfo](#RemoteAbilityInfo（系统接口）)替代。 > > 本模块为系统接口。
+remoteAbility信息。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[bundleManager-RemoteAbilityInfo](#remoteabilityinfo系统接口)替代。 > > 本模块为系统接口。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [RemoteAbilityInfo](#RemoteAbilityInfo（系统接口）)
+**替代接口：** [RemoteAbilityInfo](#remoteabilityinfo系统接口)
 
 <!--Device-unnamed-export interface RemoteAbilityInfo--><!--Device-unnamed-export interface RemoteAbilityInfo-End-->
 
@@ -29,8 +27,6 @@ ability元素资源信息。
 **默认值：** Indicates the ability information
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -56,8 +52,6 @@ readonly icon: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** icon
@@ -81,8 +75,6 @@ readonly label: string
 **默认值：** Indicates the label of the ability
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 

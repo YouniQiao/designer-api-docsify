@@ -16,10 +16,6 @@ Obtains the IDs of all input devices. This API uses an asynchronous callback to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputDevice-function getDeviceList(callback: AsyncCallback<Array<int>>): void--><!--Device-inputDevice-function getDeviceList(callback: AsyncCallback<Array<int>>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -36,7 +32,7 @@ Obtains the IDs of all input devices. This API uses an asynchronous callback to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -77,10 +73,6 @@ Obtains the IDs of all input devices. This API uses a promise to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>--><!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -91,7 +83,7 @@ Obtains the IDs of all input devices. This API uses a promise to return the resu
 | --- | --- |
 | Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the IDs of all input devices. The ID is the unique ID of an input device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';

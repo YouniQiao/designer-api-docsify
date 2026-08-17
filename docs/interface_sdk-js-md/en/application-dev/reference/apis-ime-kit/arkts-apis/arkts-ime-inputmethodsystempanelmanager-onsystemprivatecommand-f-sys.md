@@ -16,10 +16,6 @@ Subscribe to the event when the input method application sends private data comm
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-inputMethodSystemPanelManager-function onSystemPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void--><!--Device-inputMethodSystemPanelManager-function onSystemPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void-End-->

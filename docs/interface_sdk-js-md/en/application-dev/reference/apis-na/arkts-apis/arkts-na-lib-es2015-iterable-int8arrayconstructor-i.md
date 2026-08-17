@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Int8ArrayConstructor--><!--Device-unnamed-interface Int8ArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new (elements: Iterable<number>): Int8Array
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Int8ArrayConstructor-new (elements: Iterable<number>): Int8Array--><!--Device-Int8ArrayConstructor-new (elements: Iterable<number>): Int8Array-End-->
 
@@ -43,10 +35,6 @@ from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, this
 Creates an array from an array-like or iterable object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Int8ArrayConstructor-from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int8Array--><!--Device-Int8ArrayConstructor-from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int8Array-End-->
 

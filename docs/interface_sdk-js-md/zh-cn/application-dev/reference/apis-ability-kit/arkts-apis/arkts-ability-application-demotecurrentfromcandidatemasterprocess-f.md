@@ -10,10 +10,6 @@ export function demoteCurrentFromCandidateMasterProcess(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-application-export function demoteCurrentFromCandidateMasterProcess(): Promise<void>--><!--Device-application-export function demoteCurrentFromCandidateMasterProcess(): Promise<void>-End-->
@@ -34,7 +30,7 @@ export function demoteCurrentFromCandidateMasterProcess(): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [16000117](../errorcode-ability.md#16000117-当前进程非备选主控进程) | The current process is not a candidate master process and does not support cancellation. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';

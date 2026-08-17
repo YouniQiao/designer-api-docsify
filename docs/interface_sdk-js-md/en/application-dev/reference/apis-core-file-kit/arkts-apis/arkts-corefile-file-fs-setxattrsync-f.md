@@ -30,10 +30,6 @@ Sets an extended attribute of a file or directory.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function setxattrSync(path: string, key: string, value: string): void--><!--Device-unnamed-declare function setxattrSync(path: string, key: string, value: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

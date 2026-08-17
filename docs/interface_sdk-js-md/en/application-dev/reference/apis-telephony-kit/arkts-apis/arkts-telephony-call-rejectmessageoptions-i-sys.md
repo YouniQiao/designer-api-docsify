@@ -4,10 +4,6 @@ Defines options for the call rejection message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface RejectMessageOptions--><!--Device-call-export interface RejectMessageOptions-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -31,10 +27,6 @@ Message content.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RejectMessageOptions-messageContent: string--><!--Device-RejectMessageOptions-messageContent: string-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface TriggerInfo--><!--Device-unnamed-export interface TriggerInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -18,15 +14,11 @@
 code: int
 ```
 
-表示传递的公共事件数据，仅当WantAgent实例的 OperationType类型是' SEND_COMMON_EVENT'时有效。该字段与发布者使用 [commonEventManager.publish](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventmanager-publish-f.md#publish) 发布公共事件时，传递 [CommonEventPublishData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) 公共事件数据中的`code`字段含义一致。
+表示传递的公共事件数据，仅当WantAgent实例的 OperationType类型是' SEND_COMMON_EVENT'时有效。该字段与发布者使用 [commonEventManager.publish](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventmanager-publish-f.md#publish) 发布公共事件时，传递 [CommonEventPublishData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#commoneventpublishdata) 公共事件数据中的`code`字段含义一致。
 
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ extraInfo?: Record<string, RecordData>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TriggerInfo-extraInfo?: Record<string, RecordData>--><!--Device-TriggerInfo-extraInfo?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -66,10 +54,6 @@ extraInfos?: Record<string, RecordData>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TriggerInfo-extraInfos?: Record<string, RecordData>--><!--Device-TriggerInfo-extraInfos?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -85,10 +69,6 @@ permission?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -107,10 +87,6 @@ want?: Want
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

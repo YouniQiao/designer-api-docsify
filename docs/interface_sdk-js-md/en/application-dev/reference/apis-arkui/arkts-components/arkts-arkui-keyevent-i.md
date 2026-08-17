@@ -4,10 +4,6 @@ KeyEvent object description.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface KeyEvent--><!--Device-unnamed-declare interface KeyEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ getModifierKeyState?(keys: Array<string>): boolean
 Obtains the pressed status of modifier keys.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,10 +56,6 @@ ID of the input device that triggers the key event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyEvent-deviceId: number--><!--Device-KeyEvent-deviceId: number-End-->
@@ -87,10 +75,6 @@ Intention corresponding to the key. Default value: **IntentionCode.INTENTION_UNK
 **Default:** IntentionCode.INTENTION_UNKNOWN
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,10 +96,6 @@ CapsLock state. **true**: locked. **false**: unlocked.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -135,10 +115,6 @@ NumLock state. **true**: locked. **false**: unlocked.
 **Type:** boolean
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,10 +136,6 @@ ScrollLock state. **true**: locked. **false**: unlocked.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -178,15 +150,11 @@ ScrollLock state. **true**: locked. **false**: unlocked.
 keyCode: number
 ```
 
-Key value. For details about the key values provided by the key-based input devices, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode).
+Key value. For details about the key values provided by the key-based input devices, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode).
 
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -206,10 +174,6 @@ Type of the input device that triggers the key event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyEvent-keySource: KeySource--><!--Device-KeyEvent-keySource: KeySource-End-->
@@ -227,10 +191,6 @@ Name of the key.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -250,10 +210,6 @@ State of the Meta key (the key located next to the **Ctrl** key in the lower lef
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyEvent-metaKey: number--><!--Device-KeyEvent-metaKey: number-End-->
@@ -271,10 +227,6 @@ Blocks [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-
 **Type:** () =&gt; void
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -294,10 +246,6 @@ Timestamp of the event. It is the interval between the time when the event is tr
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyEvent-timestamp: number--><!--Device-KeyEvent-timestamp: number-End-->
@@ -316,10 +264,6 @@ Key type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyEvent-type: KeyType--><!--Device-KeyEvent-type: KeyType-End-->
@@ -337,10 +281,6 @@ Unicode value of the key. Non-space basic Latin characters in the 0x0021-0x007E 
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

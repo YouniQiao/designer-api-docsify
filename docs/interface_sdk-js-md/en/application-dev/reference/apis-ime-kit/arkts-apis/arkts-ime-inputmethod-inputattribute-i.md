@@ -4,10 +4,6 @@ Attribute of Input.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-export interface InputAttribute--><!--Device-inputMethod-export interface InputAttribute-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -30,10 +26,6 @@ The name of the ability where the edit box is located.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputAttribute-abilityName?: string--><!--Device-InputAttribute-abilityName?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -51,10 +43,6 @@ Whether the editor supports consuming key events.
 **Default:** false
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Indicates the enter key type of the input method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputAttribute-enterKeyType: EnterKeyType--><!--Device-InputAttribute-enterKeyType: EnterKeyType-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -94,10 +78,6 @@ Placeholder text in the edit box.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputAttribute-placeholder?: string--><!--Device-InputAttribute-placeholder?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -113,10 +93,6 @@ Indicates the text input type of the input method.
 **Type:** [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputAttribute-textInputType: TextInputType--><!--Device-InputAttribute-textInputType: TextInputType-End-->
 

@@ -10,10 +10,6 @@ Application address sanitizer event. This is a system event name constant. **Ato
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-event-const ADDRESS_SANITIZER: string--><!--Device-event-const ADDRESS_SANITIZER: string-End-->
@@ -29,10 +25,6 @@ const APP_CRASH: string
 Application crash event. This is a system event name constant. **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -50,10 +42,6 @@ Application freeze event. This is a system event name constant. **Atomic service
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-event-const APP_FREEZE: string--><!--Device-event-const APP_FREEZE: string-End-->
@@ -69,10 +57,6 @@ const APP_HICOLLIE: string
 Application task execution timeout event. This is a system event name constant. **Atomic service API**: This parameter can be used in atomic services since API version 21.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -90,10 +74,6 @@ Application killed event. This is a system event name constant. **Atomic service
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-event-const APP_KILLED: string--><!--Device-event-const APP_KILLED: string-End-->
@@ -109,10 +89,6 @@ const APP_LAUNCH: string
 Event indicating the application launch duration. This is a system event name constant. **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -130,10 +106,6 @@ Audio jank event. This is a system event name constant. **Atomic service API**: 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-event-const AUDIO_JANK_FRAME: string--><!--Device-event-const AUDIO_JANK_FRAME: string-End-->
@@ -149,10 +121,6 @@ const BATTERY_USAGE: string
 Event indicating battery usage statistics. This is a system event name constant. **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -170,10 +138,6 @@ Event indicating a high CPU usage. This is a system event name constant. **Atomi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-event-const CPU_USAGE_HIGH: string--><!--Device-event-const CPU_USAGE_HIGH: string-End-->
@@ -189,10 +153,6 @@ const DISTRIBUTED_SERVICE_START: string
 Distributed service startup event. This is a reserved application event name constant. **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -210,10 +170,6 @@ Main thread jank event. This is a system event name constant. **Atomic service A
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-event-const MAIN_THREAD_JANK: string--><!--Device-event-const MAIN_THREAD_JANK: string-End-->
@@ -229,10 +185,6 @@ const RESOURCE_OVERLIMIT: string
 Application resource leak event. This is a system event name constant. **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -250,10 +202,6 @@ ArkWeb fling jank event. This is a system event name constant. **Atomic service 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-event-const SCROLL_ARKWEB_FLING_JANK: string--><!--Device-event-const SCROLL_ARKWEB_FLING_JANK: string-End-->
@@ -269,10 +217,6 @@ const SCROLL_JANK: string
 Event indicating frame loss during swiping. This is a system event name constant. **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -290,10 +234,6 @@ User login event. This is a reserved application event name constant. **Atomic s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-event-const USER_LOGIN: string--><!--Device-event-const USER_LOGIN: string-End-->
@@ -310,10 +250,6 @@ User logout event. This is a reserved application event name constant. **Atomic 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-event-const USER_LOGOUT: string--><!--Device-event-const USER_LOGOUT: string-End-->
@@ -329,10 +265,6 @@ const appFreezeWarning: string
 Application freeze warning event. This is a system event name constant. **Model restriction**: This API can be used only in the stage model. **Atomic service API**: This parameter can be used in atomic services since API version 26.0.0.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

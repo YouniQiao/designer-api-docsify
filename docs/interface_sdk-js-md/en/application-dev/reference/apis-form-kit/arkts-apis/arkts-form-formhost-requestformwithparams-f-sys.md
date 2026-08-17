@@ -16,10 +16,6 @@ Carries parameters to request a widget update. This API uses a promise to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 <!--Device-formHost-function requestFormWithParams(formId: string, wantParams?: Record<string, Object>): Promise<void>--><!--Device-formHost-function requestFormWithParams(formId: string, wantParams?: Record<string, Object>): Promise<void>-End-->

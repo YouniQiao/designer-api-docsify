@@ -16,10 +16,6 @@ Register a callback for the global network sharing state change.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 <!--Device-sharing-function on(type: 'sharingStateChange', callback: Callback<boolean>): void--><!--Device-sharing-function on(type: 'sharingStateChange', callback: Callback<boolean>): void-End-->
@@ -43,7 +39,7 @@ Register a callback for the global network sharing state change.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';

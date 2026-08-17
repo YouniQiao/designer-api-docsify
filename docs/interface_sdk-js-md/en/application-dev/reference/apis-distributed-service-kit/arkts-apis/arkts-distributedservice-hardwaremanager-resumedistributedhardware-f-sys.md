@@ -16,10 +16,6 @@ Resumes the distributed hardware service on the controlled device. This API uses
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
 <!--Device-hardwareManager-function resumeDistributedHardware(description: HardwareDescriptor): Promise<void>--><!--Device-hardwareManager-function resumeDistributedHardware(description: HardwareDescriptor): Promise<void>-End-->
@@ -50,7 +46,7 @@ Resumes the distributed hardware service on the controlled device. This API uses
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hardwareManager } from '@kit.DistributedServiceKit';

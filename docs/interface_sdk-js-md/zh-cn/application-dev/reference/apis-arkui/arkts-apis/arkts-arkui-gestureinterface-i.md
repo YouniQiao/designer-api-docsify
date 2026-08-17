@@ -4,10 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-interface GestureInterface--><!--Device-unnamed-interface GestureInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ allowedTypes(types: Array<SourceTool>): T
 设置手势响应的输入类型。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,10 +47,6 @@ tag(tag: string): T
 设置手势的标志。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

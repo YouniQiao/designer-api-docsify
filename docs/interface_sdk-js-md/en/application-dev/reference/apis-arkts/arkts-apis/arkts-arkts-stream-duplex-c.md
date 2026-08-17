@@ -1,14 +1,10 @@
 # Duplex
 
-A stream that is both readable and writable. A duplex stream allows data to be transmitted in two directions, that is, data can be read and written. The **Duplex** class inherits from [Readable](arkts-arkts-stream-readableoptions-i.md#ReadableOptions) and supports all the APIs in **Readable**.
+A stream that is both readable and writable. A duplex stream allows data to be transmitted in two directions, that is, data can be read and written. The **Duplex** class inherits from [Readable](arkts-arkts-stream-readableoptions-i.md#readableoptions) and supports all the APIs in **Readable**.
 
-**Inheritance/Implementation:** Duplex extends [Readable](arkts-arkts-stream-readable-c.md#Readable)
+**Inheritance/Implementation:** Duplex extends [Readable](arkts-arkts-stream-readable-c.md#readable)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-stream-export class Duplex--><!--Device-stream-export class Duplex-End-->
 
@@ -30,17 +26,13 @@ A constructor used to create a **Duplex** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Duplex-constructor()--><!--Device-Duplex-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let duplex = new stream.Duplex();
@@ -56,10 +48,6 @@ Forces subsequent writes to be buffered. This API is called to optimize the perf
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Duplex-cork(): boolean--><!--Device-Duplex-cork(): boolean-End-->
@@ -72,7 +60,7 @@ Forces subsequent writes to be buffered. This API is called to optimize the perf
 | --- | --- |
 | boolean | Operation result. **true** means successful; **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let duplexStream = new stream.Duplex();
@@ -90,10 +78,6 @@ A data write API. You need to implement this API but do not call it directly. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Duplex-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void--><!--Device-Duplex-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void-End-->
@@ -108,7 +92,7 @@ A data write API. You need to implement this API but do not call it directly. Th
 | encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 | callback | Function | Yes | Callback function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -139,10 +123,6 @@ A batch data write API. You need to implement this API but do not call it direct
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Duplex-doWritev(chunks: string[] | Uint8Array[], callback: Function): void--><!--Device-Duplex-doWritev(chunks: string[] | Uint8Array[], callback: Function): void-End-->
@@ -156,7 +136,7 @@ A batch data write API. You need to implement this API but do not call it direct
 | chunks | string[] \| Uint8Array[] | Yes | Data arrays to write in batches. |
 | callback | Function | Yes | Callback function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -195,10 +175,6 @@ Ends the writing process in a duplex stream. If the value of **writableCorked** 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Duplex-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable--><!--Device-Duplex-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable-End-->
@@ -225,7 +201,7 @@ Ends the writing process in a duplex stream. If the value of **writableCorked** 
 | --- | --- |
 | [10200039](../errorcode-utils.md#10200039-dotransform-is-not-implemented) | The doTransform method has not been implemented for a class that inherits from Transform. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -258,10 +234,6 @@ Sets the default encoding format for the writable stream.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Duplex-setDefaultEncoding(encoding?: string): boolean--><!--Device-Duplex-setDefaultEncoding(encoding?: string): boolean-End-->
@@ -280,7 +252,7 @@ Sets the default encoding format for the writable stream.
 | --- | --- |
 | boolean | Operation result. **true** means successful; **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -311,10 +283,6 @@ Releases the cork state, flushing the buffered data and writing it to the target
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Duplex-uncork(): boolean--><!--Device-Duplex-uncork(): boolean-End-->
@@ -327,7 +295,7 @@ Releases the cork state, flushing the buffered data and writing it to the target
 | --- | --- |
 | boolean | Operation result. **true** means successful; **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dataWritten = '';
@@ -363,10 +331,6 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Duplex-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean--><!--Device-Duplex-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean-End-->
@@ -395,7 +359,7 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 | [10200037](../errorcode-utils.md#10200037-callback-is-invoked-multiple-times) | The callback is invoked multiple times consecutively. |
 | [10200036](../errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) | The stream has been ended. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {

@@ -4,10 +4,6 @@ Describes gzip-related APIs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-zlib-interface GZip--><!--Device-zlib-interface GZip-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -27,10 +23,6 @@ gzbuffer(size: long): Promise<int>
 Sets the internal buffer size for the current library function. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -57,7 +49,7 @@ Sets the internal buffer size for the current library function. This API uses a 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs } from '@kit.CoreFileKit';
@@ -108,10 +100,6 @@ Clears the errors and end-of-file flags of a file. This API uses a promise to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzclearerr(): Promise<void>--><!--Device-GZip-gzclearerr(): Promise<void>-End-->
@@ -124,7 +112,7 @@ Clears the errors and end-of-file flags of a file. This API uses a promise to re
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -185,10 +173,6 @@ Clears all pending output of the file. Closes the file and releases the decompre
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzclose(): Promise<ReturnStatus>--><!--Device-GZip-gzclose(): Promise<ReturnStatus>-End-->
@@ -208,7 +192,7 @@ Clears all pending output of the file. Closes the file and releases the decompre
 | [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -256,10 +240,6 @@ Implements the same functions as that of **gzclose()** for reading only. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzcloser(): Promise<ReturnStatus>--><!--Device-GZip-gzcloser(): Promise<ReturnStatus>-End-->
@@ -278,7 +258,7 @@ Implements the same functions as that of **gzclose()** for reading only. This AP
 | --- | --- |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -328,10 +308,6 @@ Implements the same functions as that of **gzclose()** for writing or appending.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzclosew(): Promise<ReturnStatus>--><!--Device-GZip-gzclosew(): Promise<ReturnStatus>-End-->
@@ -351,7 +327,7 @@ Implements the same functions as that of **gzclose()** for writing or appending.
 | [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -399,10 +375,6 @@ Checks whether the specified gzip file handle directly accesses the original unc
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzdirect(): Promise<int>--><!--Device-GZip-gzdirect(): Promise<int>-End-->
@@ -415,7 +387,7 @@ Checks whether the specified gzip file handle directly accesses the original unc
 | --- | --- |
 | Promise&lt;int&gt; | Promise used to return the result. If the original uncompressed data is directly accessed, **1** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -464,10 +436,6 @@ Associates gzip file with the file descriptor (fd) and opens the file for readin
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>--><!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>-End-->
@@ -494,7 +462,7 @@ Associates gzip file with the file descriptor (fd) and opens the file for readin
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -543,10 +511,6 @@ Checks whether the position from which data is read has reached the end of the g
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzeof(): Promise<int>--><!--Device-GZip-gzeof(): Promise<int>-End-->
@@ -559,7 +523,7 @@ Checks whether the position from which data is read has reached the end of the g
 | --- | --- |
 | Promise&lt;int&gt; | Promise used to return the result. If the end-of-file indicator is set while reading, **1** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -618,10 +582,6 @@ Describes the last error message that reported for the file. This API uses a pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>--><!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>-End-->
@@ -640,7 +600,7 @@ Describes the last error message that reported for the file. This API uses a pro
 | --- | --- |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -701,10 +661,6 @@ Flushes all pending output into a compressed file. This API uses a promise to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>-End-->
@@ -715,7 +671,7 @@ Flushes all pending output into a compressed file. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | Controls the flushing mode. For details, see [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md#CompressFlushMode). |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | Controls the flushing mode. For details, see [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md#compressflushmode). |
 
 **Return value:**
 
@@ -730,7 +686,7 @@ Flushes all pending output into a compressed file. This API uses a promise to re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -779,10 +735,6 @@ Decompresses and reads data from a gzip file. This API uses a promise to return 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
@@ -810,7 +762,7 @@ Decompresses and reads data from a gzip file. This API uses a promise to return 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -868,10 +820,6 @@ Compresses data blocks that are declared with size and nitems from the buffer an
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
@@ -899,7 +847,7 @@ Compresses data blocks that are declared with size and nitems from the buffer an
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -953,10 +901,6 @@ Reads and decompresses a byte from a file. This API uses a promise to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzgetc(): Promise<int>--><!--Device-GZip-gzgetc(): Promise<int>-End-->
@@ -975,7 +919,7 @@ Reads and decompresses a byte from a file. This API uses a promise to return the
 | --- | --- |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1027,10 +971,6 @@ Reads bytes from a compressed file until len-1 characters are read, a newline ch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>--><!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>-End-->
@@ -1056,7 +996,7 @@ Reads bytes from a compressed file until len-1 characters are read, a newline ch
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1109,10 +1049,6 @@ Returns the current compressed read or write offset of the file. This API uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzoffset(): Promise<long>--><!--Device-GZip-gzoffset(): Promise<long>-End-->
@@ -1131,7 +1067,7 @@ Returns the current compressed read or write offset of the file. This API uses a
 | --- | --- |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1180,10 +1116,6 @@ Opens the .gz file in the specified path for reading and decompressing, or compr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzopen(path: string, mode: string): Promise<void>--><!--Device-GZip-gzopen(path: string, mode: string): Promise<void>-End-->
@@ -1210,7 +1142,7 @@ Opens the .gz file in the specified path for reading and decompressing, or compr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1258,10 +1190,6 @@ Converts and formats the parameters under the control of the string format and t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>--><!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>-End-->
@@ -1289,7 +1217,7 @@ Converts and formats the parameters under the control of the string format and t
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1338,10 +1266,6 @@ Compresses **char** converted to an unsigned character and writes it to a file. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzputc(ch: int): Promise<int>--><!--Device-GZip-gzputc(ch: int): Promise<int>-End-->
@@ -1367,7 +1291,7 @@ Compresses **char** converted to an unsigned character and writes it to a file. 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1416,10 +1340,6 @@ Compresses the given null-terminated strings and writes them to the file, exclud
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzputs(str: string): Promise<int>--><!--Device-GZip-gzputs(str: string): Promise<int>-End-->
@@ -1445,7 +1365,7 @@ Compresses the given null-terminated strings and writes them to the file, exclud
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1494,10 +1414,6 @@ Reads a maximum of **len** uncompressed bytes from a file and decompresses them 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>--><!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>-End-->
@@ -1523,7 +1439,7 @@ Reads a maximum of **len** uncompressed bytes from a file and decompresses them 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1581,10 +1497,6 @@ Repositions the file pointer to the beginning of the file. This feature is appli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzrewind(): Promise<ReturnStatus>--><!--Device-GZip-gzrewind(): Promise<ReturnStatus>-End-->
@@ -1603,7 +1515,7 @@ Repositions the file pointer to the beginning of the file. This feature is appli
 | --- | --- |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1654,10 +1566,6 @@ Sets the start position to the offset position relative to the next **gzread** o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>--><!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>-End-->
@@ -1669,7 +1577,7 @@ Sets the start position to the offset position relative to the next **gzread** o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | long | Yes | Target offset position. |
-| whence | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | Yes | Defines the reference point for the offset. For details, see [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md#OffsetReferencePoint). |
+| whence | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | Yes | Defines the reference point for the offset. For details, see [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md#offsetreferencepoint). |
 
 **Return value:**
 
@@ -1684,7 +1592,7 @@ Sets the start position to the offset position relative to the next **gzread** o
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1733,10 +1641,6 @@ Dynamically updates the compression level and compression strategy of a file. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
@@ -1747,8 +1651,8 @@ Dynamically updates the compression level and compression strategy of a file. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | Compression level. For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel). |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | Compression strategy. For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md#CompressStrategy). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | Compression level. For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#compresslevel). |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | Compression strategy. For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md#compressstrategy). |
 
 **Return value:**
 
@@ -1763,7 +1667,7 @@ Dynamically updates the compression level and compression strategy of a file. Th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1813,10 +1717,6 @@ Returns the start position of the next **gzread** or **gzwrite** in the file. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gztell(): Promise<long>--><!--Device-GZip-gztell(): Promise<long>-End-->
@@ -1835,7 +1735,7 @@ Returns the start position of the next **gzread** or **gzwrite** in the file. Th
 | --- | --- |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1884,10 +1784,6 @@ Pushes **c** back into the input stream so that it will be read as the first cha
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzungetc(c: int): Promise<int>--><!--Device-GZip-gzungetc(c: int): Promise<int>-End-->
@@ -1913,7 +1809,7 @@ Pushes **c** back into the input stream so that it will be read as the first cha
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1965,10 +1861,6 @@ Compresses the uncompressed bytes of the declared length in the buffer and write
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>--><!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>-End-->
@@ -1995,7 +1887,7 @@ Compresses the uncompressed bytes of the declared length in the buffer and write
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

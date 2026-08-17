@@ -1,12 +1,10 @@
-# UploadResponse
+# UploadResponse(上传下载)
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
-**替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
+**替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#uploadconfig)
 
 <!--Device-unnamed-export interface UploadResponse--><!--Device-unnamed-export interface UploadResponse-End-->
 
@@ -23,8 +21,6 @@ code: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
@@ -46,8 +42,6 @@ data: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** extras
@@ -67,8 +61,6 @@ headers: Object
 **类型：** Object
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 

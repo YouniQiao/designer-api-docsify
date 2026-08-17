@@ -4,10 +4,6 @@ Describes the system memory information, including the total memory, free memory
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-interface SystemMemInfo--><!--Device-hidebug-interface SystemMemInfo-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,10 +26,6 @@ Available memory of the system, in KB. The value of this parameter is obtained b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemMemInfo-availableMem: bigint--><!--Device-SystemMemInfo-availableMem: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -50,10 +42,6 @@ Free memory of the system, in KB. The value of this parameter is obtained by rea
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemMemInfo-freeMem: bigint--><!--Device-SystemMemInfo-freeMem: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -69,10 +57,6 @@ Total memory of the system, in KB. The value of this parameter is obtained by re
 **Type:** bigint
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemMemInfo-totalMem: bigint--><!--Device-SystemMemInfo-totalMem: bigint-End-->
 

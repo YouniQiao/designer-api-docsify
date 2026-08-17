@@ -4,10 +4,6 @@ Describes the rendering configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface RenderConfiguration--><!--Device-unnamed-export interface RenderConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -26,10 +22,6 @@ Global shadow map resolution, in pixels (px). The default value is undefined, in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RenderConfiguration-shadowResolution?: Vec2--><!--Device-RenderConfiguration-shadowResolution?: Vec2-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -40,17 +32,13 @@ Global shadow map resolution, in pixels (px). The default value is undefined, in
 softShadowConfig?: SoftShadowConfig
 ```
 
-param config for soft shadow, control the algorithm type and its configuration
+param config for soft shadow, control the algorithm type and its configuration.
 
 **Type:** [SoftShadowConfig](arkts-arkgraphics3d-scene-softshadowconfig-c.md)
 
-**Default:** { undefined }, means that use the default hard shadow algorithm
+**Default:** undefined
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

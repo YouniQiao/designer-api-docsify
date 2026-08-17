@@ -30,10 +30,6 @@ Obtains an extended attribute of a file or directory. This API returns the resul
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function getxattrSync(path: string, key: string): string--><!--Device-unnamed-declare function getxattrSync(path: string, key: string): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

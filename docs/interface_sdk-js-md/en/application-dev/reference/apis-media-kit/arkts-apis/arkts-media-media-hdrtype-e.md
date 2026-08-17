@@ -4,10 +4,6 @@ Enumerates the HDR types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum HdrType--><!--Device-media-enum HdrType-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -22,10 +18,6 @@ No HDR.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HdrType-AV_HDR_TYPE_NONE = 0--><!--Device-HdrType-AV_HDR_TYPE_NONE = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -39,10 +31,6 @@ AV_HDR_TYPE_VIVID = 1
 HDR VIVID.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HdrType-AV_HDR_TYPE_VIVID = 1--><!--Device-HdrType-AV_HDR_TYPE_VIVID = 1-End-->
 

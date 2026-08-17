@@ -16,11 +16,9 @@ Creates a Bluetooth server listening socket. On API 10 and above, the permission
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [sppListen](arkts-connectivity-socket-spplisten-f.md#sppListen)
+**Substitutes:** [sppListen](arkts-connectivity-socket-spplisten-f.md#spplisten)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -35,7 +33,7 @@ Creates a Bluetooth server listening socket. On API 10 and above, the permission
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the service name. |
-| option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md#SppOption). |
+| option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md#sppoption). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
 
 **Error codes:**
@@ -50,7 +48,7 @@ Creates a Bluetooth server listening socket. On API 10 and above, the permission
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

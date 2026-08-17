@@ -4,10 +4,6 @@ LightWeightSet stores a set of values, each of which must be unique.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class LightWeightSet--><!--Device-unnamed-declare class LightWeightSet-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<T>
 returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-LightWeightSet-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -76,7 +64,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -122,10 +110,6 @@ Adds an element to this LightWeightSet.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-add(obj: T): boolean--><!--Device-LightWeightSet-add(obj: T): boolean-End-->
@@ -150,7 +134,7 @@ Adds an element to this LightWeightSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -167,10 +151,6 @@ addAll(set: LightWeightSet<T>): boolean
 Adds all elements in a LightWeightSet to this LightWeightSet.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -196,7 +176,7 @@ Adds all elements in a LightWeightSet to this LightWeightSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The addAll method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -219,10 +199,6 @@ Clears this LightWeightSet and sets its length to **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-clear(): void--><!--Device-LightWeightSet-clear(): void-End-->
@@ -235,7 +211,7 @@ Clears this LightWeightSet and sets its length to **0**.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -256,10 +232,6 @@ A constructor used to create a **LightWeightSet** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-constructor()--><!--Device-LightWeightSet-constructor()-End-->
@@ -272,7 +244,7 @@ A constructor used to create a **LightWeightSet** instance.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The LightWeightSet's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<number | string>();
@@ -287,10 +259,6 @@ entries(): IterableIterator<[T, T]>
 Returns an iterator that contains all the elements in this LightWeightSet.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -310,7 +278,7 @@ Returns an iterator that contains all the elements in this LightWeightSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -345,8 +313,6 @@ Checks whether the elements of this LightWeightSet are the same as those of **ob
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 12
 
 <!--Device-LightWeightSet-equal(obj: Object): boolean--><!--Device-LightWeightSet-equal(obj: Object): boolean-End-->
@@ -371,7 +337,7 @@ Checks whether the elements of this LightWeightSet are the same as those of **ob
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -392,10 +358,6 @@ Uses a callback to traverse the elements in this LightWeightSet and obtain their
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisArg?: Object): void--><!--Device-LightWeightSet-forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisArg?: Object): void-End-->
@@ -415,7 +377,7 @@ Uses a callback to traverse the elements in this LightWeightSet and obtain their
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -449,10 +411,6 @@ Executes the given callback function once for each real key in the map. It does 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LightWeightSet-forEach(callbackFn: LightWeightSetForEachCb<T>): void--><!--Device-LightWeightSet-forEach(callbackFn: LightWeightSetForEachCb<T>): void-End-->
@@ -474,10 +432,6 @@ getIndexOf(key: T): int
 Obtains the position index of the element with the specified key in this LightWeightSet.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -503,7 +457,7 @@ Obtains the position index of the element with the specified key in this LightWe
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -522,10 +476,6 @@ getValueAt(index: number): T
 Obtains the value of the element at the specified position in this LightWeightSet.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -561,10 +511,6 @@ Obtains the object at the location identified by index in an LightWeightSet cont
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LightWeightSet-getValueAt(index: int): T | undefined--><!--Device-LightWeightSet-getValueAt(index: int): T | undefined-End-->
@@ -593,10 +539,6 @@ Checks whether this LightWeightSet has the specified key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-has(key: T): boolean--><!--Device-LightWeightSet-has(key: T): boolean-End-->
@@ -621,7 +563,7 @@ Checks whether this LightWeightSet has the specified key.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<number>();
@@ -639,10 +581,6 @@ hasAll(set: LightWeightSet<T>): boolean
 Checks whether this LightWeightSet contains all elements of the specified LightWeightSet.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -668,7 +606,7 @@ Checks whether this LightWeightSet contains all elements of the specified LightW
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasAll method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -690,10 +628,6 @@ Increases the capacity of this LightWeightSet. If the passed-in capacity is grea
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-increaseCapacityTo(minimumCapacity: int): void--><!--Device-LightWeightSet-increaseCapacityTo(minimumCapacity: int): void-End-->
@@ -713,7 +647,7 @@ Increases the capacity of this LightWeightSet. If the passed-in capacity is grea
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of minimumCapacity is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -729,10 +663,6 @@ isEmpty(): boolean
 Checks whether this LightWeightSet is empty (contains no element).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -752,7 +682,7 @@ Checks whether this LightWeightSet is empty (contains no element).
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const lightWeightSet = new LightWeightSet<number>();
@@ -769,10 +699,6 @@ remove(key: T): T
 Removes an element of the specified key from this LightWeightSet.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -798,7 +724,7 @@ Removes an element of the specified key from this LightWeightSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -817,10 +743,6 @@ remove(key: T): T | undefined
 Deletes an object of a specified Object type from an LightWeightSet container
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -850,10 +772,6 @@ Removes the element at the specified position from this LightWeightSet.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-removeAt(index: int): boolean--><!--Device-LightWeightSet-removeAt(index: int): boolean-End-->
@@ -878,7 +796,7 @@ Removes the element at the specified position from this LightWeightSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -898,10 +816,6 @@ Obtains an array that contains all objects in this LightWeightSet.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-toArray(): Array<T>--><!--Device-LightWeightSet-toArray(): Array<T>-End-->
@@ -920,7 +834,7 @@ Obtains an array that contains all objects in this LightWeightSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toArray method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -939,10 +853,6 @@ Obtains a string that contains all elements in this LightWeightSet.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-toString(): String--><!--Device-LightWeightSet-toString(): String-End-->
@@ -955,7 +865,7 @@ Obtains a string that contains all elements in this LightWeightSet.
 | --- | --- |
 | String | String obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -975,10 +885,6 @@ Returns an iterator that contains all the values in this LightWeightSet.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-values(): IterableIterator<T>--><!--Device-LightWeightSet-values(): IterableIterator<T>-End-->
@@ -997,7 +903,7 @@ Returns an iterator that contains all the values in this LightWeightSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightSet = new LightWeightSet<string>();
@@ -1022,10 +928,6 @@ Number of elements in a LightWeightSet.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

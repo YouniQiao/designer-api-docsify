@@ -4,10 +4,6 @@ Defines the content and events for selection.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class SubHeaderV2Select--><!--Device-unnamed-export declare class SubHeaderV2Select-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -33,10 +29,6 @@ constructor(options: SubHeaderV2SelectOptions)
 A constructor used to create a **SubHeaderV2SelectOptions** object.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,10 +59,6 @@ Whether the drop-down button is the default focus. **true**: The drop-down butto
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -91,10 +79,6 @@ Set the id for the SubHeaderV2Select.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,10 +101,6 @@ Sets the onSelect of the SubHeaderV2SelectOptions.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -141,10 +121,6 @@ Sets the options of the SubHeaderV2SelectOptions.
 **Type:** SelectOption[]
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,10 +143,6 @@ Sets the selected content of the SubHeaderV2SelectOptions.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -191,10 +163,6 @@ Sets the selected index of the SubHeaderV2SelectOptions.
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

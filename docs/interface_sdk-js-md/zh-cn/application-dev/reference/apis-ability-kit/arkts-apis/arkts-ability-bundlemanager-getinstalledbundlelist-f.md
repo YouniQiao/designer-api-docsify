@@ -10,10 +10,6 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_GET_INSTALLED_BUNDLE_LIST
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -26,7 +22,7 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息，详情请参考 [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag)。 |
+| bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息，详情请参考 [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#bundleflag)。 |
 
 **返回值：**
 
@@ -40,7 +36,7 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

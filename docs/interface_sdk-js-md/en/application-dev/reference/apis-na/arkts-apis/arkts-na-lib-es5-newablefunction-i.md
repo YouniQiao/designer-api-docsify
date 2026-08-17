@@ -1,12 +1,8 @@
 # NewableFunction
 
-**Inheritance/Implementation:** NewableFunction extends [Function](arkts-na-lib-es5-function-i.md#Function)
+**Inheritance/Implementation:** NewableFunction extends [Function](arkts-na-lib-es5-function-i.md#function)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface NewableFunction--><!--Device-unnamed-interface NewableFunction-End-->
 
@@ -19,10 +15,6 @@ apply<T>(this: new () => T, thisArg: T): void
 Calls the function with the specified object as the this value and the elements of specified array as the arguments.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NewableFunction-apply<T>(this: new () => T, thisArg: T): void--><!--Device-NewableFunction-apply<T>(this: new () => T, thisArg: T): void-End-->
 
@@ -40,10 +32,6 @@ apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): voi
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NewableFunction-apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): void--><!--Device-NewableFunction-apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): void-End-->
 
@@ -64,10 +52,6 @@ bind<T>(this: T, thisArg: any): T
 For a given function, creates a bound function that has the same body as the original function. The this object of the bound function is associated with the specified object, and has the specified initial parameters.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NewableFunction-bind<T>(this: T, thisArg: any): T--><!--Device-NewableFunction-bind<T>(this: T, thisArg: any): T-End-->
 
@@ -92,10 +76,6 @@ bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-NewableFunction-bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any, arg0: A0): new (...args: A) => R--><!--Device-NewableFunction-bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any, arg0: A0): new (...args: A) => R-End-->
 
 **Parameters:**
@@ -119,10 +99,6 @@ bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NewableFunction-bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1): new (...args: A) => R--><!--Device-NewableFunction-bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1): new (...args: A) => R-End-->
 
@@ -149,10 +125,6 @@ bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ..
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-NewableFunction-bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2): new (...args: A) => R--><!--Device-NewableFunction-bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2): new (...args: A) => R-End-->
 
 **Parameters:**
@@ -178,10 +150,6 @@ bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NewableFunction-bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2, arg3: A3): new (...args: A) => R--><!--Device-NewableFunction-bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2, arg3: A3): new (...args: A) => R-End-->
 
@@ -210,10 +178,6 @@ bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-NewableFunction-bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (...args: AX[]) => R--><!--Device-NewableFunction-bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (...args: AX[]) => R-End-->
 
 **Parameters:**
@@ -239,10 +203,6 @@ call<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, ...args: A): v
 Calls the function with the specified object as the this value and the specified rest arguments as the arguments.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NewableFunction-call<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, ...args: A): void--><!--Device-NewableFunction-call<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, ...args: A): void-End-->
 

@@ -16,10 +16,6 @@ Listens to the event of change scene animation state. You can use this method to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formHost-function onChangeSceneAnimationState(callback: Callback<formInfo.ChangeSceneAnimationStateRequest>): void--><!--Device-formHost-function onChangeSceneAnimationState(callback: Callback<formInfo.ChangeSceneAnimationStateRequest>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form

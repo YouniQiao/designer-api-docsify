@@ -8,10 +8,6 @@ Enumerates the focus types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export type FocusType = 'accessibility' | 'normal'--><!--Device-unnamed-export type FocusType = 'accessibility' | 'normal'-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

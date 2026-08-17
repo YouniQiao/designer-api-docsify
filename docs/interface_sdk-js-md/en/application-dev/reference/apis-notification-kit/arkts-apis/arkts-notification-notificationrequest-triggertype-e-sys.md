@@ -4,10 +4,6 @@ Enumerates the trigger types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum TriggerType--><!--Device-unnamed-export enum TriggerType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -23,10 +19,6 @@ TRIGGER_TYPE_GEOFENCE = 1
 Geofence.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TriggerType-TRIGGER_TYPE_GEOFENCE = 1--><!--Device-TriggerType-TRIGGER_TYPE_GEOFENCE = 1-End-->
 

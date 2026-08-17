@@ -20,8 +20,6 @@ Queries state data of the current bundle within a specified period.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-bundleState-function queryCurrentBundleActiveStates(    begin: number,    end: number,    callback: AsyncCallback<Array<BundleActiveState>>  ): void--><!--Device-bundleState-function queryCurrentBundleActiveStates(    begin: number,    end: number,    callback: AsyncCallback<Array<BundleActiveState>>  ): void-End-->
@@ -36,7 +34,7 @@ Queries state data of the current bundle within a specified period.
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | Yes | the state data of the current bundle. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -65,8 +63,6 @@ Queries state data of the current bundle within a specified period.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-bundleState-function queryCurrentBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>--><!--Device-bundleState-function queryCurrentBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>-End-->
@@ -86,7 +82,7 @@ Queries state data of the current bundle within a specified period.
 | --- | --- |
 | Promise&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | the state data of the current bundle. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

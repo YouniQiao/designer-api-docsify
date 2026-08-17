@@ -6,10 +6,6 @@ Represents the base type for gesture handlers.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class GestureHandler--><!--Device-unnamed-declare class GestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ allowedTypes(types: Array<SourceTool>): T
 Sets the event input sources supported by the gesture handler.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,10 +49,6 @@ tag(tag: string): T
 Sets the tag for the gesture handler.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

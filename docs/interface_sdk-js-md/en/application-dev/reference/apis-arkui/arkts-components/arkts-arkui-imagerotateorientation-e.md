@@ -4,10 +4,6 @@ Describes the desired display orientation for image content.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum ImageRotateOrientation--><!--Device-unnamed-declare enum ImageRotateOrientation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,13 +14,9 @@ Describes the desired display orientation for image content.
 AUTO = 0
 ```
 
-Use EXIF metadata for display orientation, with support for rotation and mirroring. Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md#DrawableDescriptor) types do not contain header information. When this API is called, the image display effect remains unchanged. 
+Use EXIF metadata for display orientation, with support for rotation and mirroring. Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap) and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md#drawabledescriptor) types do not contain header information. When this API is called, the image display effect remains unchanged. 
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Display original pixel data without transformation.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -69,10 +57,6 @@ RIGHT = 2
 Display the image after rotating it 90 degrees clockwise. 
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,10 +78,6 @@ Display the image after rotating it 180 degrees clockwise.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -117,10 +97,6 @@ LEFT = 4
 Display the image after rotating it 270 degrees clockwise. 
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,10 +118,6 @@ Display the image after flipping it horizontally.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -165,10 +137,6 @@ RIGHT_MIRRORED = 6
 Display the image after flipping it horizontally and then rotating it 90 degrees clockwise. 
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,10 +158,6 @@ Display the image after flipping it vertically.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -213,10 +177,6 @@ LEFT_MIRRORED = 8
 Display the image after flipping it horizontally and then rotating it 270 degrees clockwise. 
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

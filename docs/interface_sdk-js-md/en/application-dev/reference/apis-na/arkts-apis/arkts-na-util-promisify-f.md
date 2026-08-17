@@ -10,9 +10,7 @@ Takes a function following the common error-first callback style, i.e taking an 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-util-function promisify(original: Function): PromisifiedFunc--><!--Device-util-function promisify(original: Function): PromisifiedFunc-End-->
 

@@ -21,11 +21,9 @@ Instructs the device selection module to update the device connection state. Thi
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
+**Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +40,7 @@ Instructs the device selection module to update the device connection state. Thi
 | status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | Device connection state. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the state is updated, **err** is **undefined**; otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -69,11 +67,9 @@ Instructs the device selection module to update the device connection state. Thi
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
+**Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,7 +91,7 @@ Instructs the device selection module to update the device connection state. Thi
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

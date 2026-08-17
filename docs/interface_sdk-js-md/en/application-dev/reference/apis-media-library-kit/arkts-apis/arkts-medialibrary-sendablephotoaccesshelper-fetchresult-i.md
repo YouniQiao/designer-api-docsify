@@ -6,10 +6,6 @@ Provides APIs to manage the file retrieval result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendablePhotoAccessHelper-interface FetchResult--><!--Device-sendablePhotoAccessHelper-interface FetchResult-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -30,10 +26,6 @@ Closes this FetchResult instance to invalidate it. After this instance is closed
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FetchResult-close(): void--><!--Device-FetchResult-close(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -44,7 +36,7 @@ Closes this FetchResult instance to invalidate it. After this instance is closed
 | --- | --- |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
@@ -79,10 +71,6 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FetchResult-getAllObjects(): Promise<Array<T>>--><!--Device-FetchResult-getAllObjects(): Promise<Array<T>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -99,7 +87,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 | --- | --- |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
@@ -130,10 +118,6 @@ Obtains the total number of files in the result set.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FetchResult-getCount(): number--><!--Device-FetchResult-getCount(): number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -150,7 +134,7 @@ Obtains the total number of files in the result set.
 | --- | --- |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
@@ -181,10 +165,6 @@ Obtains the first asset in the result set. This API uses a promise to return the
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FetchResult-getFirstObject(): Promise<T>--><!--Device-FetchResult-getFirstObject(): Promise<T>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -201,7 +181,7 @@ Obtains the first asset in the result set. This API uses a promise to return the
 | --- | --- |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
@@ -232,10 +212,6 @@ Obtains the last asset in the result set. This API uses a promise to return the 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FetchResult-getLastObject(): Promise<T>--><!--Device-FetchResult-getLastObject(): Promise<T>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -252,7 +228,7 @@ Obtains the last asset in the result set. This API uses a promise to return the 
 | --- | --- |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
@@ -279,13 +255,9 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 getNextObject(): Promise<T>
 ```
 
-Obtains the next asset in the result set. This API uses a promise to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+Obtains the next asset in the result set. This API uses a promise to return the result. Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-FetchResult-getNextObject(): Promise<T>--><!--Device-FetchResult-getNextObject(): Promise<T>-End-->
 
@@ -303,7 +275,7 @@ Obtains the next asset in the result set. This API uses a promise to return the 
 | --- | --- |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
@@ -335,10 +307,6 @@ Obtains the asset with the given index in the result set. This API uses a promis
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FetchResult-getObjectByPosition(index: number): Promise<T>--><!--Device-FetchResult-getObjectByPosition(index: number): Promise<T>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -362,7 +330,7 @@ Obtains the asset with the given index in the result set. This API uses a promis
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
@@ -393,10 +361,6 @@ Checks whether the cursor is in the last row of the result set.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FetchResult-isAfterLast(): boolean--><!--Device-FetchResult-isAfterLast(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -413,7 +377,7 @@ Checks whether the cursor is in the last row of the result set.
 | --- | --- |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 

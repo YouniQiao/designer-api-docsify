@@ -16,10 +16,6 @@ Unregister the callback for display add events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-function offAdd(callback?: Callback<long>): void--><!--Device-display-function offAdd(callback?: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

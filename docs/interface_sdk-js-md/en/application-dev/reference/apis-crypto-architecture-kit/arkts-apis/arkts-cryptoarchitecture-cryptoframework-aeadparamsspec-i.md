@@ -1,14 +1,10 @@
 # AeadParamsSpec
 
-Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec). <br>It is applicable to the CCM and GCM modes of AES. <br>It is applicable to the GCM mode of SM4. <br>It is applicable to ChaCha20-Poly1305. > **NOTE：**> > When **AeadParamsSpec** is used for encryption in AES-CCM mode: > - If the tag length is specified during encryption, the same length must be passed during decryption. > > - In CCM mode, only one of [update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update) and > [doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinal) can be called for encryption or decryption, and each method can > be called only once.
+Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#paramsspec). <br>It is applicable to the CCM and GCM modes of AES. <br>It is applicable to the GCM mode of SM4. <br>It is applicable to ChaCha20-Poly1305. > **NOTE：**> > When **AeadParamsSpec** is used for encryption in AES-CCM mode: > - If the tag length is specified during encryption, the same length must be passed during decryption. > > - In CCM mode, only one of [update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update) and > [doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) can be called for encryption or decryption, and each method can > be called only once.
 
-**Inheritance/Implementation:** AeadParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)
+**Inheritance/Implementation:** AeadParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#paramsspec)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface AeadParamsSpec--><!--Device-cryptoFramework-interface AeadParamsSpec-End-->
 
@@ -32,10 +28,6 @@ Optional additional authenticated data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -56,10 +48,6 @@ Number used once. > **NOTE：**> - For AES-CCM, the nonce length ranges from 7 t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -79,10 +67,6 @@ Authentication tag length, in bytes. <br>For encryption, the tag will be added t
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

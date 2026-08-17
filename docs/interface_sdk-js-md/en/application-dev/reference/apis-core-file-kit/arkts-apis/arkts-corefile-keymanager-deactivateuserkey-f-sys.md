@@ -16,10 +16,6 @@ When the screen is locked, the specified user key is uninstalled synchronously. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.STORAGE_MANAGER_CRYPT
 
 <!--Device-keyManager-function deactivateUserKey(userId: long):void--><!--Device-keyManager-function deactivateUserKey(userId: long):void-End-->
@@ -45,7 +41,7 @@ When the screen is locked, the specified user key is uninstalled synchronously. 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { keyManager } from "@kit.CoreFileKit";

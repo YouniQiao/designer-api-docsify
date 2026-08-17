@@ -16,8 +16,6 @@ Subscribes to only one data change of the acceleration sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** once(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;)

@@ -4,10 +4,6 @@ Defines the options for acquiring the authorization.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface AcquireAuthorizationOptions--><!--Device-osAccount-interface AcquireAuthorizationOptions-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -34,10 +30,6 @@ Random challenge value, which prevents replay attacks. The value contains a maxi
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AcquireAuthorizationOptions-challenge?: Uint8Array--><!--Device-AcquireAuthorizationOptions-challenge?: Uint8Array-End-->
@@ -52,17 +44,13 @@ Random challenge value, which prevents replay attacks. The value contains a maxi
 interactionContext?: Context
 ```
 
-User interaction context configuration. The default value is **undefined**. - If no context is specified, the authorization dialog box is displayed in modal system mode. - If [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#UIAbilityContext) or [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#UIExtensionContext) is specified, the authorization dialog box is displayed in modal application mode. - If no valid context is provided, the authorization dialog box cannot be displayed. Note: This parameter is valid only when **isInteractionAllowed** is set to **true**.
+User interaction context configuration. The default value is **undefined**. - If no context is specified, the authorization dialog box is displayed in modal system mode. - If [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#uiabilitycontext) or [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#uiextensioncontext) is specified, the authorization dialog box is displayed in modal application mode. - If no valid context is provided, the authorization dialog box cannot be displayed. Note: This parameter is valid only when **isInteractionAllowed** is set to **true**.
 
 **Type:** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)
 
 **Default:** undefined, which means the authorization dialog will be displayed in modal system mode.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,10 +74,6 @@ Whether user interaction is allowed. The default value is **true**. If the value
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AcquireAuthorizationOptions-isInteractionAllowed?: boolean--><!--Device-AcquireAuthorizationOptions-isInteractionAllowed?: boolean-End-->
@@ -111,10 +95,6 @@ Whether to reuse the previous authorization. The default value is **true**. If t
 **Default:** true
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

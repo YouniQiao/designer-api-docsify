@@ -4,11 +4,9 @@ Enumerates the ability states.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md#AbilityState)
+**Substitutes:** [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md#abilitystate)
 
 <!--Device-abilityManager-export enum AbilityState--><!--Device-abilityManager-export enum AbilityState-End-->
 
@@ -26,11 +24,9 @@ The ability is in the initial state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [INITIAL](arkts-ability-abilitymanager-abilitystate-e.md#INITIAL)
+**Substitutes:** [INITIAL](arkts-ability-abilitymanager-abilitystate-e.md#initial)
 
 <!--Device-AbilityState-INITIAL = 0--><!--Device-AbilityState-INITIAL = 0-End-->
 
@@ -48,11 +44,9 @@ The ability is running in the foreground.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FOREGROUND](arkts-ability-abilitymanager-abilitystate-e.md#FOREGROUND)
+**Substitutes:** [FOREGROUND](arkts-ability-abilitymanager-abilitystate-e.md#foreground)
 
 <!--Device-AbilityState-FOREGROUND = 9--><!--Device-AbilityState-FOREGROUND = 9-End-->
 
@@ -70,11 +64,9 @@ The ability is running in the background.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BACKGROUND](arkts-ability-abilitymanager-abilitystate-e.md#BACKGROUND)
+**Substitutes:** [BACKGROUND](arkts-ability-abilitymanager-abilitystate-e.md#background)
 
 <!--Device-AbilityState-BACKGROUND = 10--><!--Device-AbilityState-BACKGROUND = 10-End-->
 
@@ -92,11 +84,9 @@ The ability is being switched to the foreground.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FOREGROUNDING](arkts-ability-abilitymanager-abilitystate-e.md#FOREGROUNDING)
+**Substitutes:** [FOREGROUNDING](arkts-ability-abilitymanager-abilitystate-e.md#foregrounding)
 
 <!--Device-AbilityState-FOREGROUNDING = 11--><!--Device-AbilityState-FOREGROUNDING = 11-End-->
 
@@ -114,11 +104,9 @@ The ability is being switched to the background.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BACKGROUNDING](arkts-ability-abilitymanager-abilitystate-e.md#BACKGROUNDING)
+**Substitutes:** [BACKGROUNDING](arkts-ability-abilitymanager-abilitystate-e.md#backgrounding)
 
 <!--Device-AbilityState-BACKGROUNDING = 12--><!--Device-AbilityState-BACKGROUNDING = 12-End-->
 

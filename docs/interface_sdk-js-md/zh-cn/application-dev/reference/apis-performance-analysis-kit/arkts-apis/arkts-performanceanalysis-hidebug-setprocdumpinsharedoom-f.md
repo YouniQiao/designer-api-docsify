@@ -10,10 +10,6 @@ function setProcDumpInSharedOOM(enable: boolean): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -28,7 +24,7 @@ function setProcDumpInSharedOOM(enable: boolean): void
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 当进程发生SharedHeap OOM时，系统将依据该进程在其生命周期中最后一次调用该接口所记录的信息，转储相应级别的堆快照。 true：进程级。 false：线程级。 默认值：false。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

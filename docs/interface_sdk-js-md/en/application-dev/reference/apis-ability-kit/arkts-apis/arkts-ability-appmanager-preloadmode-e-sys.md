@@ -4,10 +4,6 @@ Enumerates the modes used for preloading an application process.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appManager-export enum PreloadMode--><!--Device-appManager-export enum PreloadMode-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -23,10 +19,6 @@ PRESS_DOWN
 The application process is preloaded when the application icon is pressed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

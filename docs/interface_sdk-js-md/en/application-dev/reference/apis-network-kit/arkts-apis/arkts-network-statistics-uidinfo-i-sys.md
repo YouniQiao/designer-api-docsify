@@ -4,10 +4,6 @@ Parameters for obtaining detailed information on application traffic usage.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-statistics-export interface UidInfo--><!--Device-statistics-export interface UidInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -26,15 +22,11 @@ import { statistics } from 'statistics';
 ifaceInfo: IfaceInfo
 ```
 
-See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#IfaceInfo-(System-API))
+See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#ifaceinfo-system-api)
 
 **Type:** [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UidInfo-ifaceInfo: IfaceInfo--><!--Device-UidInfo-ifaceInfo: IfaceInfo-End-->
 
@@ -53,10 +45,6 @@ Uid of app for querying traffic.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UidInfo-uid: int--><!--Device-UidInfo-uid: int-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-enum State--><!--Device-agent-enum State-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -18,13 +14,9 @@
 INITIALIZED = 0x00
 ```
 
-表示通过配置信息（[Config](arkts-basicservices-agent-config-i.md#Config)）创建的任务已初始 化。
+表示通过配置信息（[Config](arkts-basicservices-agent-config-i.md#config)）创建的任务已初始 化。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,10 +34,6 @@ WAITING = 0x10
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-State-WAITING = 0x10--><!--Device-State-WAITING = 0x10-End-->
@@ -61,10 +49,6 @@ RUNNING = 0x20
 表示任务正在运行中。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -82,10 +66,6 @@ RETRYING = 0x21
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-State-RETRYING = 0x21--><!--Device-State-RETRYING = 0x21-End-->
@@ -101,10 +81,6 @@ PAUSED = 0x30
 表示任务暂停，通常后续会恢复任务。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -122,10 +98,6 @@ STOPPED = 0x31
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-State-STOPPED = 0x31--><!--Device-State-STOPPED = 0x31-End-->
@@ -141,10 +113,6 @@ COMPLETED = 0x40
 表示任务完成。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -162,10 +130,6 @@ FAILED = 0x41
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-State-FAILED = 0x41--><!--Device-State-FAILED = 0x41-End-->
@@ -181,10 +145,6 @@ REMOVED = 0x50
 表示任务移除。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

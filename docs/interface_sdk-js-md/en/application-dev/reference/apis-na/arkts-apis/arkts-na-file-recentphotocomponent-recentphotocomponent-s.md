@@ -4,9 +4,7 @@ Declare struct RecentPhotoComponent
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare struct RecentPhotoComponent--><!--Device-unnamed-export declare struct RecentPhotoComponent-End-->
 
@@ -23,9 +21,7 @@ Build function of RecentPhotoComponent
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,13 +37,11 @@ onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback
 
 Callback when check whether photos or videos exists and return the recent photo info
 
-**Type:** [RecentPhotoCheckInfoCallback](arkts-na-recentphotocheckinfocallback-t.md)
+**Type:** [RecentPhotoCheckInfoCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-recentphotocheckinfocallback-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,13 +57,11 @@ onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback
 
 Callback when check whether photos or videos exists
 
-**Type:** [RecentPhotoCheckResultCallback](arkts-na-recentphotocheckresultcallback-t.md)
+**Type:** [RecentPhotoCheckResultCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-recentphotocheckresultcallback-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,13 +77,11 @@ onRecentPhotoClick: RecentPhotoClickCallback
 
 Callback when select photos or videos
 
-**Type:** [RecentPhotoClickCallback](arkts-na-recentphotoclickcallback-t.md)
+**Type:** [RecentPhotoClickCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-recentphotoclickcallback-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -107,13 +97,11 @@ recentPhotoOptions?: RecentPhotoOptions
 
 recentPhotoOptions
 
-**Type:** [RecentPhotoOptions](arkts-na-file-recentphotocomponent-recentphotooptions-c.md)
+**Type:** [RecentPhotoOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

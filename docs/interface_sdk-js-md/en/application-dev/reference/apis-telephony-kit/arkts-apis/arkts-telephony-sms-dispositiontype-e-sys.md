@@ -4,10 +4,6 @@ Enumerates disposition types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-export enum DispositionType--><!--Device-sms-export enum DispositionType-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -23,10 +19,6 @@ FROM_DATA = 0
 Data source.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DispositionType-FROM_DATA = 0--><!--Device-DispositionType-FROM_DATA = 0-End-->
 
@@ -44,10 +36,6 @@ Attachment.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DispositionType-ATTACHMENT = 1--><!--Device-DispositionType-ATTACHMENT = 1-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -63,10 +51,6 @@ INLINE = 2
 Inlining.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DispositionType-INLINE = 2--><!--Device-DispositionType-INLINE = 2-End-->
 

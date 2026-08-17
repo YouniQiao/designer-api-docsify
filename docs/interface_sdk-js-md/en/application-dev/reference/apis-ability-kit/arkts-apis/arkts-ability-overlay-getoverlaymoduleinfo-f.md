@@ -16,10 +16,6 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-overlay-function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<OverlayModuleInfo>): void--><!--Device-overlay-function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<OverlayModuleInfo>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
@@ -29,7 +25,7 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Name of the module with the overlay feature. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#OverlayModuleInfo) object. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#overlaymoduleinfo) object. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -40,7 +36,7 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 | [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
 | [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
@@ -74,10 +70,6 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-overlay-function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>--><!--Device-overlay-function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
@@ -103,7 +95,7 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 | [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
 | [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';

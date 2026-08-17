@@ -16,10 +16,6 @@ Queries the status of a specified type of sensitive data key under the lock scre
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_MEDIA_DATA or ohos.permission.ACCESS_SCREEN_LOCK_ALL_DATA
 
 <!--Device-screenLockFileManager-function queryAppKeyState(dataType: DataType): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(dataType: DataType): KeyStatus-End-->
@@ -51,7 +47,7 @@ Queries the status of a specified type of sensitive data key under the lock scre
 | [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
 | [29300001](../errorcode-screenLockFileManager.md#29300001-invalid-parameter) | Invalid DataType. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Obtain the state of access permissions for media data on the lock screen.

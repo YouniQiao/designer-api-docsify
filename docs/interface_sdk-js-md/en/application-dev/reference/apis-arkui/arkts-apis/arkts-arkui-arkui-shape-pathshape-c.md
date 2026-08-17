@@ -1,14 +1,10 @@
 # PathShape
 
-Represents a path used in the **clipShape** and **maskShape** APIs. This API inherits from [CommonShapeMethod](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#CommonShapeMethod).
+Represents a path used in the **clipShape** and **maskShape** APIs. This API inherits from [CommonShapeMethod](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#commonshapemethod).
 
 **Inheritance/Implementation:** PathShape extends CommonShapeMethod<PathShape>
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class PathShape--><!--Device-unnamed-export declare class PathShape-End-->
 
@@ -32,10 +28,6 @@ commands(commands: string): PathShape
 Sets the path drawing commands.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,10 +60,6 @@ constructor(options?: PathShapeOptions)
 A constructor used to create a **PathShape** object.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

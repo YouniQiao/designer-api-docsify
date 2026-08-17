@@ -2,13 +2,9 @@
 
 提供自定义时间日期符号的能力。继承自 [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)， 支持 [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 的方法。
 
-**继承/实现关系：** SymbolDateTimeFormat extends [Intl.DateTimeFormat](../../apis-na/arkts-apis/arkts-na-intl-datetimeformat-c.md#DateTimeFormat)
+**继承/实现关系：** SymbolDateTimeFormat extends [Intl.DateTimeFormat](../../apis-na/arkts-apis/arkts-na-intl-datetimeformat-c.md#datetimeformat)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-i18n-export class SymbolDateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat-End-->
 
@@ -23,10 +19,6 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 创建使用自定义符号的时间日期格式化对象。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,10 +51,6 @@ public format(date?: Date | number): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -92,10 +80,6 @@ public formatRange(startDate: Date | number | bigint, endDate: Date | number | b
 对时间日期范围进行格式化。自定义符号在该接口上暂不生效。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,10 +113,6 @@ public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | num
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -164,10 +144,6 @@ public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -197,10 +173,6 @@ public parse(text: string, lenientMode: boolean): number
 解析本地化时间日期字符串，返回对应的时间戳。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -238,10 +210,6 @@ public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 解析自定义时间日期符号的配置项。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

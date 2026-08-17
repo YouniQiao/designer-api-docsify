@@ -4,10 +4,6 @@ Describes a result object from raycasting, containing details about the 3D objec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface RaycastResult--><!--Device-unnamed-export interface RaycastResult-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -23,10 +19,6 @@ Distance from the center of the hit object's bounding box to the camera center, 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RaycastResult-centerDistance: double--><!--Device-RaycastResult-centerDistance: double-End-->
 
@@ -44,10 +36,6 @@ Exact world coordinates of the collision point between the ray and the object ({
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RaycastResult-hitPosition: Position3--><!--Device-RaycastResult-hitPosition: Position3-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -63,10 +51,6 @@ node: Node
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RaycastResult-node: Node--><!--Device-RaycastResult-node: Node-End-->
 

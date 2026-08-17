@@ -10,11 +10,9 @@ function unbindDevice(deviceId: number, callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 19
 
-**替代接口：** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbindDriverWithDeviceId)(deviceId: long)
+**替代接口：** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid)(deviceId: long)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -27,7 +25,7 @@ function unbindDevice(deviceId: number, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 设备ID，通过queryDevices获得。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当解绑设备成功时，err为undefined，data为设备ID；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。当解绑设备成功时，err为undefined，data为设备ID；否则为错误对象。 |
 
 **错误码：**
 
@@ -37,7 +35,7 @@ function unbindDevice(deviceId: number, callback: AsyncCallback<number>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
 | [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) | ExternalDeviceManager service exception. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';
@@ -68,11 +66,9 @@ function unbindDevice(deviceId: number): Promise<number>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 19
 
-**替代接口：** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbindDriverWithDeviceId)(deviceId: long)
+**替代接口：** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid)(deviceId: long)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -100,7 +96,7 @@ function unbindDevice(deviceId: number): Promise<number>
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
 | [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) | ExternalDeviceManager service exception. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

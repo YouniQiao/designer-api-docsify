@@ -4,10 +4,6 @@ HashSet is implemented based on HashMap. In HashSet, only the value object is pr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class HashSet--><!--Device-unnamed-declare class HashSet-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<T>
 returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-HashSet-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -76,7 +64,7 @@ returns an iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -122,10 +110,6 @@ Adds elements to this HashSet.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashSet-add(value: T): boolean--><!--Device-HashSet-add(value: T): boolean-End-->
@@ -150,7 +134,7 @@ Adds elements to this HashSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -168,10 +152,6 @@ Clears this HashSet and sets its length to **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashSet-clear(): void--><!--Device-HashSet-clear(): void-End-->
@@ -184,7 +164,7 @@ Clears this HashSet and sets its length to **0**.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -205,10 +185,6 @@ A constructor used to create a **HashSet** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashSet-constructor()--><!--Device-HashSet-constructor()-End-->
@@ -221,7 +197,7 @@ A constructor used to create a **HashSet** instance.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The HashSet's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashSet = new HashSet<number>();
@@ -236,10 +212,6 @@ entries(): IterableIterator<[T, T]>
 Returns an iterator that contains all the elements in this HashSet.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -259,7 +231,7 @@ Returns an iterator that contains all the elements in this HashSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -299,10 +271,6 @@ Uses a callback to traverse each element.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashSet-forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Object): void--><!--Device-HashSet-forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Object): void-End-->
@@ -322,7 +290,7 @@ Uses a callback to traverse each element.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -356,10 +324,6 @@ Iterates over all elements in the HashSet and executes a callback function for e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HashSet-forEach(callbackFn: HashSetCbFn<T>): void--><!--Device-HashSet-forEach(callbackFn: HashSetCbFn<T>): void-End-->
@@ -381,10 +345,6 @@ has(value: T): boolean
 Checks whether this HashSet has the specified element.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -410,7 +370,7 @@ Checks whether this HashSet has the specified element.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -428,10 +388,6 @@ isEmpty(): boolean
 Checks whether this HashSet is empty (contains no element).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -451,7 +407,7 @@ Checks whether this HashSet is empty (contains no element).
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const hashSet = new HashSet<number>();
@@ -468,10 +424,6 @@ remove(value: T): boolean
 Removes an element from this HashSet.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -497,7 +449,7 @@ Removes an element from this HashSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -517,10 +469,6 @@ Returns an iterator that contains all the values in this HashSet.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashSet-values(): IterableIterator<T>--><!--Device-HashSet-values(): IterableIterator<T>-End-->
@@ -539,7 +487,7 @@ Returns an iterator that contains all the values in this HashSet.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashSet = new HashSet<string>();
@@ -564,10 +512,6 @@ Number of elements in a HashSet.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

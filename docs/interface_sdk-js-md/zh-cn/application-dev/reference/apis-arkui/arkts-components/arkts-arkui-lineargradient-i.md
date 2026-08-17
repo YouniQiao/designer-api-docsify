@@ -4,10 +4,6 @@ Linear Gradient Interface
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface LinearGradient--><!--Device-unnamed-declare interface LinearGradient-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Linear Gradient Angle
 **类型：** number \| string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ Linear Gradient Colors
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LinearGradient-colors: Array<[ResourceColor, number]>--><!--Device-LinearGradient-colors: Array<[ResourceColor, number]>-End-->
@@ -68,10 +56,6 @@ Linear Gradient Direction
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LinearGradient-direction?: GradientDirection--><!--Device-LinearGradient-direction?: GradientDirection-End-->
@@ -89,10 +73,6 @@ Linear Gradient Repeating
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -4,10 +4,6 @@ Defines DatePickerDialog which uses show method to show DatePicker dialog.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class DatePickerDialog--><!--Device-unnamed-declare class DatePickerDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +14,13 @@ Defines DatePickerDialog which uses show method to show DatePicker dialog.
 static show(options?: DatePickerDialogOptions)
 ```
 
-Shows a date picker dialog box. > **NOTE：**> > Since API version 10, you can use the > [showDatePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showdatepickerdialog) API > in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext), which ensures that the date picker dialog box is shown in the > intended UI instance.
+Shows a date picker dialog box. > **NOTE：**> > Since API version 10, you can use the > [showDatePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showdatepickerdialog) API > in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext), which ensures that the date picker dialog box is shown in the > intended UI instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
-**Substitutes:** [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showDatePickerDialog)
+**Substitutes:** [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showdatepickerdialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

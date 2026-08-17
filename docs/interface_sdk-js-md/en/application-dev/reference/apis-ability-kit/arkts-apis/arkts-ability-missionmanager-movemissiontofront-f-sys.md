@@ -16,10 +16,6 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function moveMissionToFront(missionId: int, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionToFront(missionId: int, callback: AsyncCallback<void>): void-End-->
@@ -44,7 +40,7 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
@@ -77,10 +73,6 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function moveMissionToFront(missionId: int, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionToFront(missionId: int, options: StartOptions, callback: AsyncCallback<void>): void-End-->
@@ -106,7 +98,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
@@ -139,10 +131,6 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function moveMissionToFront(missionId: int, options?: StartOptions): Promise<void>--><!--Device-missionManager-function moveMissionToFront(missionId: int, options?: StartOptions): Promise<void>-End-->
@@ -173,7 +161,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';

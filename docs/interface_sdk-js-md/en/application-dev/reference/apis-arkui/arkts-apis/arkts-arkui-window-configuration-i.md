@@ -4,10 +4,6 @@ Defines the parameters for creating a child window or system window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface Configuration--><!--Device-window-interface Configuration-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -30,10 +26,6 @@ Indicates window context.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Configuration-ctx?: BaseContext--><!--Device-Configuration-ctx?: BaseContext-End-->
@@ -51,10 +43,6 @@ Indicates whether enable window decor, only support dialog, The default value is
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -74,10 +62,6 @@ Screen ID of the current window. If it is not set, the screen ID of the parent w
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Configuration-displayId?: long--><!--Device-Configuration-displayId?: long-End-->
@@ -95,10 +79,6 @@ Indicates window id.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,10 +98,6 @@ Indicates Parent window id
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Configuration-parentId?: int--><!--Device-Configuration-parentId?: int-End-->
@@ -140,10 +116,6 @@ Indicates dialog window title when decor enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Configuration-title?: string--><!--Device-Configuration-title?: string-End-->
@@ -161,10 +133,6 @@ Indicates window type
 **Type:** WindowType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,11 +4,9 @@ The enum of bluetooth state.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [BluetoothState](arkts-connectivity-access-bluetoothstate-e.md#BluetoothState)
+**Substitutes:** [BluetoothState](arkts-connectivity-access-bluetoothstate-e.md#bluetoothstate)
 
 <!--Device-bluetoothManager-enum BluetoothState--><!--Device-bluetoothManager-enum BluetoothState-End-->
 
@@ -24,11 +22,9 @@ Indicates the local Bluetooth is off
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STATE_OFF](arkts-connectivity-access-bluetoothstate-e.md#STATE_OFF)
+**Substitutes:** [STATE_OFF](arkts-connectivity-access-bluetoothstate-e.md#stateoff)
 
 <!--Device-BluetoothState-STATE_OFF = 0--><!--Device-BluetoothState-STATE_OFF = 0-End-->
 
@@ -44,11 +40,9 @@ Indicates the local Bluetooth is turning on
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STATE_TURNING_ON](arkts-connectivity-access-bluetoothstate-e.md#STATE_TURNING_ON)
+**Substitutes:** [STATE_TURNING_ON](arkts-connectivity-access-bluetoothstate-e.md#stateturningon)
 
 <!--Device-BluetoothState-STATE_TURNING_ON = 1--><!--Device-BluetoothState-STATE_TURNING_ON = 1-End-->
 
@@ -64,11 +58,9 @@ Indicates the local Bluetooth is on, and ready for use
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STATE_ON](arkts-connectivity-access-bluetoothstate-e.md#STATE_ON)
+**Substitutes:** [STATE_ON](arkts-connectivity-access-bluetoothstate-e.md#stateon)
 
 <!--Device-BluetoothState-STATE_ON = 2--><!--Device-BluetoothState-STATE_ON = 2-End-->
 
@@ -84,11 +76,9 @@ Indicates the local Bluetooth is turning off
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STATE_TURNING_OFF](arkts-connectivity-access-bluetoothstate-e.md#STATE_TURNING_OFF)
+**Substitutes:** [STATE_TURNING_OFF](arkts-connectivity-access-bluetoothstate-e.md#stateturningoff)
 
 <!--Device-BluetoothState-STATE_TURNING_OFF = 3--><!--Device-BluetoothState-STATE_TURNING_OFF = 3-End-->
 
@@ -104,11 +94,9 @@ Indicates the local Bluetooth is turning LE mode on
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STATE_BLE_TURNING_ON](arkts-connectivity-access-bluetoothstate-e.md#STATE_BLE_TURNING_ON)
+**Substitutes:** [STATE_BLE_TURNING_ON](arkts-connectivity-access-bluetoothstate-e.md#statebleturningon)
 
 <!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4--><!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4-End-->
 
@@ -124,11 +112,9 @@ Indicates the local Bluetooth is in LE only mode
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STATE_BLE_ON](arkts-connectivity-access-bluetoothstate-e.md#STATE_BLE_ON)
+**Substitutes:** [STATE_BLE_ON](arkts-connectivity-access-bluetoothstate-e.md#statebleon)
 
 <!--Device-BluetoothState-STATE_BLE_ON = 5--><!--Device-BluetoothState-STATE_BLE_ON = 5-End-->
 
@@ -144,11 +130,9 @@ Indicates the local Bluetooth is turning off LE only mode
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STATE_BLE_TURNING_OFF](arkts-connectivity-access-bluetoothstate-e.md#STATE_BLE_TURNING_OFF)
+**Substitutes:** [STATE_BLE_TURNING_OFF](arkts-connectivity-access-bluetoothstate-e.md#statebleturningoff)
 
 <!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6--><!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6-End-->
 

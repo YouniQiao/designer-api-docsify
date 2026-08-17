@@ -4,10 +4,6 @@ Describes the image decoding options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface DecodingOptionsForPicture--><!--Device-image-interface DecodingOptionsForPicture-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -30,10 +26,6 @@ Auxiliary picture type. If no auxiliary picture type is specified or an empty ar
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DecodingOptionsForPicture-desiredAuxiliaryPictures: Array<AuxiliaryPictureType>--><!--Device-DecodingOptionsForPicture-desiredAuxiliaryPictures: Array<AuxiliaryPictureType>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -49,10 +41,6 @@ Desired Pixel format, RGBA_8888\BGRA_8888\RGB_565\NV12\NV21 are supported.
 **Type:** PixelMapFormat
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,10 +59,6 @@ Desired size of the main pixel map. The value (0, 0) indicates that the pixels a
 **Type:** Size
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

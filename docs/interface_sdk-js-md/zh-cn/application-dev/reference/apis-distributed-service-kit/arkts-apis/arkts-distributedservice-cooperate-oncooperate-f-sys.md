@@ -10,11 +10,9 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [on](#on_cooperate)(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;)
+**替代接口：** [on](#oncooperate)(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;)
 
 <!--Device-cooperate-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void--><!--Device-cooperate-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void-End-->
 
@@ -27,7 +25,7 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cooperate' | 是 | 监听类型，取值为'cooperate' |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | 是 |  |
 
 **错误码：**
 
@@ -36,7 +34,7 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { cooperate } from '@kit.DistributedServiceKit';

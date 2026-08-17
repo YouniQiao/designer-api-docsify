@@ -1,4 +1,4 @@
-# RepeatArray
+# RepeatArray(Defines Repeat component.)
 
 ```TypeScript
 declare type RepeatArray<T> = Array<T> | ReadonlyArray<T> | Readonly<Array<T>>
@@ -7,10 +7,6 @@ declare type RepeatArray<T> = Array<T> | ReadonlyArray<T> | Readonly<Array<T>>
 Defines a union type for **Repeat** data source parameters.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

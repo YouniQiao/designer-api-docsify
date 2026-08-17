@@ -8,10 +8,6 @@ The controller for the **TextInput** component inherits from TextContentControll
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class TextInputController--><!--Device-unnamed-declare class TextInputController-End-->
 
 **System capability:** 
@@ -26,10 +22,6 @@ caretPosition(value: number): void
 Sets the position of the caret. If the value is less than 0, the value **0** is used. If the value exceeds the text length, the caret is placed at the end of the text.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -53,10 +45,6 @@ A constructor used to create a **TextInputController** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextInputController-constructor()--><!--Device-TextInputController-constructor()-End-->
@@ -72,10 +60,6 @@ setTextSelection(selectionStart: number, selectionEnd: number, options?: Selecti
 Sets the text selection area, which will be highlighted.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,10 +86,6 @@ stopEditing(): void
 Exits the editing state.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

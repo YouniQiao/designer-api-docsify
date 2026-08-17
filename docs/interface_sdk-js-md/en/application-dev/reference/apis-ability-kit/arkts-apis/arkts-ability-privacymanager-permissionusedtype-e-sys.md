@@ -4,10 +4,6 @@ Enumerates the means for using a sensitive permission. | Name | Value| Descripti
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-privacyManager-enum PermissionUsedType--><!--Device-privacyManager-enum PermissionUsedType-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -23,10 +19,6 @@ NORMAL_TYPE = 0
 Sensitive resources are accessed with the declared permission or permission granted by the user.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PermissionUsedType-NORMAL_TYPE = 0--><!--Device-PermissionUsedType-NORMAL_TYPE = 0-End-->
 
@@ -44,10 +36,6 @@ Sensitive resources are accessed through a picker.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PermissionUsedType-PICKER_TYPE = 1--><!--Device-PermissionUsedType-PICKER_TYPE = 1-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -63,10 +51,6 @@ SECURITY_COMPONENT_TYPE = 2
 Sensitive resources are accessed through a security component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PermissionUsedType-SECURITY_COMPONENT_TYPE = 2--><!--Device-PermissionUsedType-SECURITY_COMPONENT_TYPE = 2-End-->
 

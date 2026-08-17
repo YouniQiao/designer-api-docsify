@@ -1,12 +1,8 @@
 # LuminanceSampler (System API)
 
-Sets the background luminance color picking parameters, registers the luminance change listening callback, and unregisters the listening callback. > **NOTE：**> > In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getLuminanceSampler) in > **UIContext** to obtain a **LuminanceSampler** object, and then call the APIs using the obtained object.
+Sets the background luminance color picking parameters, registers the luminance change listening callback, and unregisters the listening callback. > **NOTE：**> > In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler) in > **UIContext** to obtain a **LuminanceSampler** object, and then call the APIs using the obtained object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class LuminanceSampler--><!--Device-unnamed-export class LuminanceSampler-End-->
 
@@ -49,6 +45,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## offBackgroundLuminanceChange
@@ -60,10 +58,6 @@ offBackgroundLuminanceChange(samplingCallback?: Callback<number>): void
 Unregisters the callback for listening to color picking. If no callback is specified, all listeners are canceled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,13 +79,9 @@ Unregisters the callback for listening to color picking. If no callback is speci
 onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 ```
 
-Registers the callback for listening to color picking. The background luminance is divided into three ranges based on the luminance threshold and dark threshold set by the [setBackgroundLuminanceSamplingConfigs](#setBackgroundLuminanceSamplingConfigs) API: [0, Dark threshold], (Dark threshold, Luminance threshold], and (Luminance threshold, 255]. The callback is triggered when the background luminance range changes (or the listener callback is registered for the first time) and the interval between the current color picking and the last color picking reaches the specified interval, and the current background luminance is returned.
+Registers the callback for listening to color picking. The background luminance is divided into three ranges based on the luminance threshold and dark threshold set by the [setBackgroundLuminanceSamplingConfigs](#setbackgroundluminancesamplingconfigs) API: [0, Dark threshold], (Dark threshold, Luminance threshold], and (Luminance threshold, 255]. The callback is triggered when the background luminance range changes (or the listener callback is registered for the first time) and the interval between the current color picking and the last color picking reaches the specified interval, and the current background luminance is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,10 +106,6 @@ setBackgroundLuminanceSamplingConfigs(configs: BackgroundLuminanceSamplingConfig
 Sets the color picking parameters. If the luminance threshold is not within the specified range or the dark threshold is greater than the luminance threshold, an exception is thrown.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

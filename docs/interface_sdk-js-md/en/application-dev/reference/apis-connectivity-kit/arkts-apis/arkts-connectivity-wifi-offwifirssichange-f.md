@@ -16,8 +16,6 @@ Unsubscribe Wi-Fi rssi change events. &lt;p&gt;All callback functions will be de
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** wifiRssiChange
@@ -35,7 +33,7 @@ Unsubscribe Wi-Fi rssi change events. &lt;p&gt;All callback functions will be de
 | type | 'wifiRssiChange' | Yes | event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

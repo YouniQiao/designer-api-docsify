@@ -4,10 +4,6 @@ Provides utilities for ECC key parameter generation and point conversion based o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-class ECCKeyUtil--><!--Device-cryptoFramework-class ECCKeyUtil-End-->
 
 **System capability:** 
@@ -29,10 +25,6 @@ static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported. > **NOTE：**> > According to section 2.2 in RFC 5480: > 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate. > 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented > as follows: **0x03**|x coordinate (when the coordinate y is an odd number); **0x02**|x coordinate (when the > coordinate y is an even number).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -61,7 +53,7 @@ Converts the specified point data into a **Point** object based on the curve nam
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -84,10 +76,6 @@ static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec
 Generates common parameters for an asymmetric key pair based on the specified name identifier (NID) of an elliptic curve. For details, see ECC and SM2.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -117,7 +105,7 @@ Generates common parameters for an asymmetric key pair based on the specified na
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -140,10 +128,6 @@ static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Ar
 Obtains the point data in the specified format from a **Point** object. Currently, compressed and uncompressed point data is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -173,7 +157,7 @@ Obtains the point data in the specified format from a **Point** object. Currentl
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';

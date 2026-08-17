@@ -1,14 +1,10 @@
 # MetadataOutput
 
-MetadataOutput implements metadata streams. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
+MetadataOutput implements metadata streams. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput).
 
-**Inheritance/Implementation:** MetadataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
+**Inheritance/Implementation:** MetadataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface MetadataOutput--><!--Device-camera-interface MetadataOutput-End-->
 
@@ -29,10 +25,6 @@ addMetadataObjectTypes(types: Array<MetadataObjectType>): void
 Adds the types of metadata objects to be detected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -66,10 +58,6 @@ removeMetadataObjectTypes(types: Array<MetadataObjectType>): void
 Removes the types of metadata objects to be detected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

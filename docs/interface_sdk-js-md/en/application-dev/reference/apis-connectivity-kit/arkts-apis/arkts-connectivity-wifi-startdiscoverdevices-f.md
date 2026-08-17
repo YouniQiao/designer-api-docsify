@@ -16,8 +16,6 @@ Discover Wi-Fi P2P devices.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** startDiscoverP2pDevices
@@ -34,7 +32,7 @@ Discover Wi-Fi P2P devices.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

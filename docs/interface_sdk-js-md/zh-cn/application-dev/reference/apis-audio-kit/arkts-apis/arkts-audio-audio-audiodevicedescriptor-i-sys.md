@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-audio-interface AudioDeviceDescriptor--><!--Device-audio-interface AudioDeviceDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
@@ -24,10 +20,6 @@ Extended information for distributed device, including whether the device suppor
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioDeviceDescriptor-readonly dmDeviceInfo?: string--><!--Device-AudioDeviceDescriptor-readonly dmDeviceInfo?: string-End-->
@@ -42,15 +34,11 @@ Extended information for distributed device, including whether the device suppor
 readonly dmDeviceType?: int
 ```
 
-Only [SPEAKER](arkts-audio-audio-devicetype-e.md#SPEAKER) with networkId, [REMOTE_CAST](arkts-audio-audio-devicetype-e.md#REMOTE_CAST) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#REMOTE_DAUDIO) has dmDeviceType which indicated deviceTypeId.
+Only [SPEAKER](arkts-audio-audio-devicetype-e.md#speaker) with networkId, [REMOTE_CAST](arkts-audio-audio-devicetype-e.md#remotecast) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#remotedaudio) has dmDeviceType which indicated deviceTypeId.
 
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly dmDeviceType?: int--><!--Device-AudioDeviceDescriptor-readonly dmDeviceType?: int-End-->
 
@@ -70,10 +58,6 @@ Whether device supports high quality recording.
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-AudioDeviceDescriptor-readonly highQualityRecordingSupported?: boolean--><!--Device-AudioDeviceDescriptor-readonly highQualityRecordingSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -92,10 +76,6 @@ Interrupt group id
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AudioDeviceDescriptor-readonly interruptGroupId: int--><!--Device-AudioDeviceDescriptor-readonly interruptGroupId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
@@ -111,10 +91,6 @@ readonly networkId: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly networkId: string--><!--Device-AudioDeviceDescriptor-readonly networkId: string-End-->
 
@@ -133,10 +109,6 @@ Volume group id
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly volumeGroupId: int--><!--Device-AudioDeviceDescriptor-readonly volumeGroupId: int-End-->
 

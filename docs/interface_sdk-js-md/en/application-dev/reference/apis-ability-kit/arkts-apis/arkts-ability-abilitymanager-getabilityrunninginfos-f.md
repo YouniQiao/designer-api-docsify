@@ -16,10 +16,6 @@ Obtains the UIAbility running information. This API uses a promise to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
 <!--Device-abilityManager-function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>--><!--Device-abilityManager-function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>-End-->
@@ -38,7 +34,7 @@ Obtains the UIAbility running information. This API uses a promise to return the
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ The proxy of the UIExtension window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiExtension-interface WindowProxy--><!--Device-uiExtension-interface WindowProxy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,10 +23,6 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 Sets whether to hide non-secure windows. This API uses a promise to return the result. > **NOTE：**> > - A non-secure window refers to any window that may obstruct the > EmbeddedComponent or > UIExtensionComponent, such as global floating windows > , host subwindows, and dialog box windows created by the host application (excluding windows of these types > created by system applications). > > - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this > API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear > when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed. > > - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when > **hideNonSecureWindows(true)** is called.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS
 
@@ -63,7 +55,7 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. Permission denied. Interface caller does not have permission "ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS". 2. The UIExtension window proxy is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -103,10 +95,6 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowProxy-setWaterMarkFlag(enable: boolean): Promise<void>--><!--Device-WindowProxy-setWaterMarkFlag(enable: boolean): Promise<void>-End-->
@@ -135,7 +123,7 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | The UIExtension window proxy is abnormal. |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts

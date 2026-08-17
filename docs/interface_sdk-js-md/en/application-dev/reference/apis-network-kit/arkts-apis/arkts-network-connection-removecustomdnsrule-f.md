@@ -16,10 +16,6 @@ Remove the custom DNS rule of the host for current application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -45,7 +41,7 @@ Remove the custom DNS rule of the host for current application.
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -70,10 +66,6 @@ function removeCustomDnsRule(host: string): Promise<void>
 Remove the custom DNS rule of the host for current application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -105,7 +97,7 @@ Remove the custom DNS rule of the host for current application.
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

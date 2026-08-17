@@ -6,9 +6,7 @@ Define the attribute functions of DynamicComponent.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare interface DynamicComponentAttribute--><!--Device-unnamed-export declare interface DynamicComponentAttribute-End-->
 
@@ -24,9 +22,7 @@ onError(callback: ErrorCallback<BusinessError> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-DynamicComponentAttribute-onError(callback: ErrorCallback<BusinessError> | undefined): this--><!--Device-DynamicComponentAttribute-onError(callback: ErrorCallback<BusinessError> | undefined): this-End-->
 
@@ -50,9 +46,7 @@ setDynamicComponentOptions(options: DynamicOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-DynamicComponentAttribute-setDynamicComponentOptions(options: DynamicOptions): this--><!--Device-DynamicComponentAttribute-setDynamicComponentOptions(options: DynamicOptions): this-End-->
 

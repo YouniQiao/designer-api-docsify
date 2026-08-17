@@ -4,9 +4,7 @@ Provides the light sensing interaction feedback configuration for immersive mate
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-uiMaterial-export interface LightEffectOptions--><!--Device-uiMaterial-export interface LightEffectOptions-End-->
 
@@ -26,9 +24,7 @@ Custom color of the light sensing feedback. Default value: **Color.White**
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

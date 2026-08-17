@@ -16,10 +16,6 @@ Obtains the bundle name of a WantAgent object. This API uses an asynchronous cal
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void--><!--Device-wantAgent-function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void-End-->
@@ -41,7 +37,7 @@ Obtains the bundle name of a WantAgent object. This API uses an asynchronous cal
 | [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';
@@ -118,10 +114,6 @@ Obtains the bundle name of a WantAgent object. This API uses a promise to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function getBundleName(agent: WantAgent): Promise<string>--><!--Device-wantAgent-function getBundleName(agent: WantAgent): Promise<string>-End-->
@@ -148,7 +140,7 @@ Obtains the bundle name of a WantAgent object. This API uses a promise to return
 | [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';

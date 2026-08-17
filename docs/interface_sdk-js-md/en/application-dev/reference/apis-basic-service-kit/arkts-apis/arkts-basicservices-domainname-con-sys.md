@@ -10,10 +10,6 @@ Provide the domain name for user security property. &lt;p&gt;This constants is a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-domainName-const USER_SECURITY: string--><!--Device-domainName-const USER_SECURITY: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core

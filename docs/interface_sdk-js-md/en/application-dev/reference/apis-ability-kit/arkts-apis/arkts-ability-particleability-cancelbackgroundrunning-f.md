@@ -16,11 +16,9 @@ Requests to cancel a continuous task from the system. This API uses an asynchron
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopBackgroundRunning)
+**Substitutes:** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -34,7 +32,7 @@ Requests to cancel a continuous task from the system. This API uses an asynchron
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';
@@ -62,11 +60,9 @@ Requests to cancel a continuous task from the system. This API uses a promise to
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopBackgroundRunning)
+**Substitutes:** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -80,7 +76,7 @@ Requests to cancel a continuous task from the system. This API uses a promise to
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';

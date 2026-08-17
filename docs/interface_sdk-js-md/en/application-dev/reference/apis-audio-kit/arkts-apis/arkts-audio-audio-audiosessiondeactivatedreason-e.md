@@ -4,10 +4,6 @@ Enumerates the reasons for deactivating an audio session.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum AudioSessionDeactivatedReason--><!--Device-audio-enum AudioSessionDeactivatedReason-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -22,10 +18,6 @@ The application focus is preempted.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSessionDeactivatedReason-DEACTIVATED_LOWER_PRIORITY = 0--><!--Device-AudioSessionDeactivatedReason-DEACTIVATED_LOWER_PRIORITY = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -39,10 +31,6 @@ DEACTIVATED_TIMEOUT = 1
 The audio session times out.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSessionDeactivatedReason-DEACTIVATED_TIMEOUT = 1--><!--Device-AudioSessionDeactivatedReason-DEACTIVATED_TIMEOUT = 1-End-->
 

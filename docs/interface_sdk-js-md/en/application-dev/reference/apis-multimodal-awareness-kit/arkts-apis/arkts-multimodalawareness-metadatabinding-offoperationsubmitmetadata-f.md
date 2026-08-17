@@ -16,10 +16,6 @@ Unsubscribes from system events that are used to obtain the encoded metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-metadataBinding-function offOperationSubmitMetadata(bundleName: string, callback?: Callback<int>): void--><!--Device-metadataBinding-function offOperationSubmitMetadata(bundleName: string, callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding

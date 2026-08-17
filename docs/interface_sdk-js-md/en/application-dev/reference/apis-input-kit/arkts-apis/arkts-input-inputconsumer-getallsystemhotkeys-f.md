@@ -16,10 +16,6 @@ Obtains all system shortcut keys. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>--><!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -36,7 +32,7 @@ Obtains all system shortcut keys. This API uses a promise to return the result.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';

@@ -4,10 +4,6 @@ Provides preferred playback settings for player.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface PlaybackStrategy--><!--Device-media-interface PlaybackStrategy-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -29,10 +25,6 @@ Indicates whether to enable camera post-processing during video playback, which 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PlaybackStrategy-enableCameraPostprocessing?: boolean--><!--Device-PlaybackStrategy-enableCameraPostprocessing?: boolean-End-->
 

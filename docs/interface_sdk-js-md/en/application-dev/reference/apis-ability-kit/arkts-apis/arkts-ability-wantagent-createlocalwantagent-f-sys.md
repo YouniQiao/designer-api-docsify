@@ -16,10 +16,6 @@ Create a local WantAgent object. The WantAgent created by this interface stores 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-wantAgent-function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent--><!--Device-wantAgent-function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent-End-->
@@ -46,7 +42,7 @@ Create a local WantAgent object. The WantAgent created by this interface stores 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';

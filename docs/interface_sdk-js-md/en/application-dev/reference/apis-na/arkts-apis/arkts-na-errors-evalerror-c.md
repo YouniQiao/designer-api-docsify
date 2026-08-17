@@ -1,4 +1,4 @@
-# EvalError
+# EvalError(Defines the commonly used Errors for ArkTS)
 
 Represents an evaluation error
 
@@ -6,9 +6,7 @@ Represents an evaluation error
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class EvalError--><!--Device-unnamed-export class EvalError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new EvalError instance with provided message and options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,9 +53,7 @@ Constructs a new EvalError instance with provided message and error specific inf
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

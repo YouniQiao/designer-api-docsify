@@ -4,10 +4,6 @@ Describes the WAPI pre-shared key Type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-enum WapiPskType--><!--Device-wifiManager-enum WapiPskType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.Core
@@ -22,10 +18,6 @@ ASCII character type of WAPI pre-shared key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WapiPskType-WAPI_PSK_ASCII = 0--><!--Device-WapiPskType-WAPI_PSK_ASCII = 0-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.Core
@@ -39,10 +31,6 @@ WAPI_PSK_HEX = 1
 HEX character type of WAPI pre-shared key.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WapiPskType-WAPI_PSK_HEX = 1--><!--Device-WapiPskType-WAPI_PSK_HEX = 1-End-->
 

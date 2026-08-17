@@ -16,10 +16,6 @@ Terminates a mission. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.KILL_APP_PROCESSES
 
 <!--Device-appManager-function terminateMission(missionId: int): Promise<void>--><!--Device-appManager-function terminateMission(missionId: int): Promise<void>-End-->
@@ -32,7 +28,7 @@ Terminates a mission. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | int | Yes | Mission ID, which can be obtained by calling [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getMissionInfos-(System-API)) . |
+| missionId | int | Yes | Mission ID, which can be obtained by calling [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getmissioninfos-system-api) . |
 
 **Return value:**
 
@@ -49,7 +45,7 @@ Terminates a mission. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 <!--Device-recent-interface FileInfo--><!--Device-recent-interface FileInfo-End-->
@@ -25,8 +23,6 @@ readonly ctime: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 23
 
@@ -50,8 +46,6 @@ readonly fileName: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -68,13 +62,11 @@ readonly fileName: string
 readonly mode: number
 ```
 
-[文件权限信息](arkts-corefile-file-fs-stat-i.md#Stat)。
+[文件权限信息](arkts-corefile-file-fs-stat-i.md#stat)。
 
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 23
 
@@ -98,8 +90,6 @@ readonly mtime: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -121,8 +111,6 @@ readonly size: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 23
 
@@ -146,8 +134,6 @@ readonly srcPath: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -169,8 +155,6 @@ readonly uri: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 23
 

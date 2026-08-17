@@ -4,10 +4,6 @@ Defines a number mark.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface NumberMarkInfo--><!--Device-call-export interface NumberMarkInfo-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -32,10 +28,6 @@ Whether the number mark is from the cloud. The default value is **false**. - **t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NumberMarkInfo-isCloud?: boolean--><!--Device-NumberMarkInfo-isCloud?: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -53,10 +45,6 @@ Mark content. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the returned
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NumberMarkInfo-markContent?: string--><!--Device-NumberMarkInfo-markContent?: string-End-->
 
@@ -76,10 +64,6 @@ Mark count.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NumberMarkInfo-markCount?: int--><!--Device-NumberMarkInfo-markCount?: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -97,10 +81,6 @@ Mark details. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the value of
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NumberMarkInfo-markDetails?: string--><!--Device-NumberMarkInfo-markDetails?: string-End-->
 
@@ -120,10 +100,6 @@ Mark source.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NumberMarkInfo-markSource?: string--><!--Device-NumberMarkInfo-markSource?: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -141,10 +117,6 @@ Mark type.
 **Type:** [MarkType](arkts-telephony-call-marktype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NumberMarkInfo-markType: MarkType--><!--Device-NumberMarkInfo-markType: MarkType-End-->
 

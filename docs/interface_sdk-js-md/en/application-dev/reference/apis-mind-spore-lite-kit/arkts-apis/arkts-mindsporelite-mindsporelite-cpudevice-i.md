@@ -4,10 +4,6 @@ Provides the CPU device info
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-interface CpuDevice--><!--Device-mindSporeLite-interface CpuDevice-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -30,10 +26,6 @@ The precision mode
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CpuDevice-precisionMode?: string--><!--Device-CpuDevice-precisionMode?: string-End-->
@@ -51,10 +43,6 @@ The thread affinity core list
 **Type:** int[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ The thread affinity mode
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CpuDevice-threadAffinityMode?: ThreadAffinityMode--><!--Device-CpuDevice-threadAffinityMode?: ThreadAffinityMode-End-->
@@ -95,10 +79,6 @@ The thread num
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

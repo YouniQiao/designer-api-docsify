@@ -10,10 +10,6 @@ function setRetentionState(docUris: Array<string>): Promise<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-dlpPermission-function setRetentionState(docUris: Array<string>): Promise<void>--><!--Device-dlpPermission-function setRetentionState(docUris: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -39,7 +35,7 @@ function setRetentionState(docUris: Array<string>): Promise<void>
 | [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) | No permission to call this API, which is available only for DLP sandbox applications. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -65,10 +61,6 @@ function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-dlpPermission-function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>): void--><!--Device-dlpPermission-function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -78,7 +70,7 @@ function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | docUris | Array&lt;string&gt; | 是 | 表示需要设置保留状态的文件uri列表。不对Array长度进行限制，每个string长度不超过4095字节，超出此范围抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。err为undefined时表示设置成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。err为undefined时表示设置成功；否则为错误对象。 |
 
 **错误码：**
 
@@ -89,7 +81,7 @@ function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>
 | [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) | No permission to call this API, which is available only for DLP sandbox applications. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

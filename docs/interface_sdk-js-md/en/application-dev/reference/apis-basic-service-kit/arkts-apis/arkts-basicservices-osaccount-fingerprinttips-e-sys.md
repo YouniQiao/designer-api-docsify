@@ -4,10 +4,6 @@ Enumerates the tip codes for fingerprint authentication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-enum FingerprintTips--><!--Device-osAccount-enum FingerprintTips-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ FINGERPRINT_TIP_GOOD = 0
 The captured image is clear.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FingerprintTips-FINGERPRINT_TIP_GOOD = 0--><!--Device-FingerprintTips-FINGERPRINT_TIP_GOOD = 0-End-->
 
@@ -44,10 +36,6 @@ The fingerprint image has big noise due to dirt on the sensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FingerprintTips-FINGERPRINT_TIP_IMAGER_DIRTY = 1--><!--Device-FingerprintTips-FINGERPRINT_TIP_IMAGER_DIRTY = 1-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -63,10 +51,6 @@ FINGERPRINT_TIP_INSUFFICIENT = 2
 Failed to process the fingerprint image due to big noise.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FingerprintTips-FINGERPRINT_TIP_INSUFFICIENT = 2--><!--Device-FingerprintTips-FINGERPRINT_TIP_INSUFFICIENT = 2-End-->
 
@@ -84,10 +68,6 @@ Only part of the fingerprint image is detected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FingerprintTips-FINGERPRINT_TIP_PARTIAL = 3--><!--Device-FingerprintTips-FINGERPRINT_TIP_PARTIAL = 3-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -103,10 +83,6 @@ FINGERPRINT_TIP_TOO_FAST = 4
 The fingerprint image is incomplete due to quick motion.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FingerprintTips-FINGERPRINT_TIP_TOO_FAST = 4--><!--Device-FingerprintTips-FINGERPRINT_TIP_TOO_FAST = 4-End-->
 
@@ -124,10 +100,6 @@ Failed to read the fingerprint image due to lack of motion.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FingerprintTips-FINGERPRINT_TIP_TOO_SLOW = 5--><!--Device-FingerprintTips-FINGERPRINT_TIP_TOO_SLOW = 5-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -144,10 +116,6 @@ Press your finger.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FingerprintTips-FINGERPRINT_TIP_FINGER_DOWN = 6--><!--Device-FingerprintTips-FINGERPRINT_TIP_FINGER_DOWN = 6-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -163,10 +131,6 @@ FINGERPRINT_TIP_FINGER_UP = 7
 Lift your finger.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FingerprintTips-FINGERPRINT_TIP_FINGER_UP = 7--><!--Device-FingerprintTips-FINGERPRINT_TIP_FINGER_UP = 7-End-->
 

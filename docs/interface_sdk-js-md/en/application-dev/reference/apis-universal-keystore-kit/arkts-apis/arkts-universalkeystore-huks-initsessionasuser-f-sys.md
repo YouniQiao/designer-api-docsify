@@ -16,10 +16,6 @@ Initialize a key session for the specified user. This API uses a promise to retu
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-huks-function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksSessionHandle>--><!--Device-huks-function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksSessionHandle>-End-->
@@ -61,7 +57,7 @@ Initialize a key session for the specified user. This API uses a promise to retu
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 | [12000010](../errorcode-huks.md#12000010-key-operation-sessions-reaches-the-limit) | the number of sessions has reached limit |
 
-## Examples
+**Examples**
 
 The values of the following cryptography-related variables (such as initializationVector) are for reference only and cannot be directly used in the service logic. You need to set them based on actual situation.
 

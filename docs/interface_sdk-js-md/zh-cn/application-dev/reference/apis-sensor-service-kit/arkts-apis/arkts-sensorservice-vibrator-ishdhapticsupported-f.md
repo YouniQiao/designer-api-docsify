@@ -10,10 +10,6 @@ function isHdHapticSupported(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-vibrator-function isHdHapticSupported(): boolean--><!--Device-vibrator-function isHdHapticSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
@@ -30,7 +26,7 @@ function isHdHapticSupported(): boolean
 | --- | --- |
 | [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

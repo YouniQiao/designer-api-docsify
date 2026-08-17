@@ -4,10 +4,6 @@ Enum for the hash algorithm type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-connection-enum HashAlgorithmType--><!--Device-connection-enum HashAlgorithmType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ HASH_ALGORITHM_SHA256 = 0
 SHA256 hash algorithm
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Describes the direction of a UI operation such as fling.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum UiDirection--><!--Device-unnamed-declare enum UiDirection-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -21,10 +17,6 @@ LEFT = 0
 Leftward.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Rightward.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiDirection-RIGHT = 1--><!--Device-UiDirection-RIGHT = 1-End-->
@@ -62,10 +50,6 @@ Upward.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiDirection-UP = 2--><!--Device-UiDirection-UP = 2-End-->
@@ -81,10 +65,6 @@ DOWN = 3
 Downward.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

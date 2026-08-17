@@ -1,4 +1,4 @@
-# RepeatInterface
+# RepeatInterface(Defines Repeat component.)
 
 ```TypeScript
 declare type RepeatInterface = <T>(arr: RepeatArray<T>) => RepeatAttribute<T>
@@ -7,10 +7,6 @@ declare type RepeatInterface = <T>(arr: RepeatArray<T>) => RepeatAttribute<T>
 Indicates the type of Repeat.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

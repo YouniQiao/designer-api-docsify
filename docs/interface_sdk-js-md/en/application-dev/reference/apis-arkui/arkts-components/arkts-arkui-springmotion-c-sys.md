@@ -4,8 +4,6 @@ Spring animation model. You can build a spring animation based on the start poin
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 22
 
 <!--Device-unnamed-declare class SpringMotion--><!--Device-unnamed-declare class SpringMotion-End-->
@@ -23,8 +21,6 @@ constructor(start: number, end: number, velocity: number, prop: SpringProp)
 Constructor parameters
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 22
 

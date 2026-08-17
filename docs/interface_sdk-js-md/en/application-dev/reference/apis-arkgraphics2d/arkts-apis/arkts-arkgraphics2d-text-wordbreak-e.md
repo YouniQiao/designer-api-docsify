@@ -4,10 +4,6 @@ Enumerates the word break types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-enum WordBreak--><!--Device-text-enum WordBreak-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ NORMAL = 0
 Default mode that break words based on language-specific conventions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,10 +34,6 @@ Allows breaks within any character in non-CJK text. (CJK means Chinese, Japanese
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WordBreak-BREAK_ALL = 1--><!--Device-WordBreak-BREAK_ALL = 1-End-->
@@ -62,10 +50,6 @@ For non-CJK text, breaks lines between any two characters. If a line contains br
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WordBreak-BREAK_WORD = 2--><!--Device-WordBreak-BREAK_WORD = 2-End-->
@@ -78,13 +62,9 @@ For non-CJK text, breaks lines between any two characters. If a line contains br
 BREAK_HYPHEN = 3
 ```
 
-Attempts to break words at the end of a line using a hyphen. If a hyphen cannot be added, it behaves like **BREAK_WORD**. When using this word break strategy, you need to use the `locale` attribute in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle) to define the language environment, which affects the word break effect.
+Attempts to break words at the end of a line using a hyphen. If a hyphen cannot be added, it behaves like **BREAK_WORD**. When using this word break strategy, you need to use the `locale` attribute in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle) to define the language environment, which affects the word break effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

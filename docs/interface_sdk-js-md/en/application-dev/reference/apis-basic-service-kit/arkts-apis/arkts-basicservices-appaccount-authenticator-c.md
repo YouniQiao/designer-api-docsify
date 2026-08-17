@@ -4,10 +4,6 @@ Provides APIs to operate the authenticator.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appAccount-class Authenticator--><!--Device-appAccount-class Authenticator-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -33,11 +29,9 @@ Adds an application account implicitly based on the specified authentication typ
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createAccountImplicitly](#createAccountImplicitly)(options: CreateAccountImplicitlyOptions, callback: AuthCallback)
+**Substitutes:** [createAccountImplicitly](#createaccountimplicitly)(options: CreateAccountImplicitlyOptions, callback: AuthCallback)
 
 <!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -62,10 +56,6 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void--><!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -88,10 +78,6 @@ auth(name: string, authType: string, options: Record<string, RecordData>, callba
 Authenticates an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, RecordData>, callback: AuthCallback): void--><!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, RecordData>, callback: AuthCallback): void-End-->
 
@@ -122,8 +108,6 @@ Authenticates an application account to obtain the OAuth token. This API uses an
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [auth](#auth)(name: string, authType: string, options: Record&lt;string, Object&gt;, callback: AuthCallback)
@@ -152,10 +136,6 @@ Checks the account labels. This API uses an asynchronous callback to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -168,9 +148,9 @@ Checks the account labels. This API uses an asynchronous callback to return the 
 | labels | Array&lt;string&gt; | Yes | Labels to check. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-## Examples
+**Examples**
 
-This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getRemoteObject) API.
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
 
 ## checkAccountRemovable
 
@@ -181,10 +161,6 @@ checkAccountRemovable(name: string, callback: AuthCallback): void
 Checks whether an application account can be deleted. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void-End-->
 
@@ -197,9 +173,9 @@ Checks whether an application account can be deleted. This API uses an asynchron
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-## Examples
+**Examples**
 
-This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getRemoteObject) API.
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
 
 ## createAccountImplicitly
 
@@ -210,10 +186,6 @@ createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthC
 Creates an application account implicitly based on the specified account owner. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
 
@@ -236,10 +208,6 @@ Obtains the remote object of an authenticator. This API cannot be overloaded.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject--><!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -250,7 +218,7 @@ Obtains the remote object of an authenticator. This API cannot be overloaded.
 | --- | --- |
 | rpc.RemoteObject | Remote object of the authenticator, which is used for inter-process communication. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -307,10 +275,6 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -322,9 +286,9 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 | options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Yes | Authenticator properties to set. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-## Examples
+**Examples**
 
-This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getRemoteObject) API.
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
 
 ## verifyCredential
 
@@ -335,10 +299,6 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 Verifies the credential of an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
 
@@ -352,7 +312,7 @@ Verifies the credential of an application account. This API uses an asynchronous
 | options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Yes | Options for credential verification. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-## Examples
+**Examples**
 
-This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getRemoteObject) API.
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
 

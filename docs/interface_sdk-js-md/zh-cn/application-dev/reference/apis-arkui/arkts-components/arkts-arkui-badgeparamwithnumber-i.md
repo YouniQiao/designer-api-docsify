@@ -1,14 +1,10 @@
 # BadgeParamWithNumber
 
-BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam)，具有BadgeParam的全部属性。
+BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md#badgeparam)，具有BadgeParam的全部属性。
 
-**继承/实现关系：** BadgeParamWithNumber extends [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam)
+**继承/实现关系：** BadgeParamWithNumber extends [BadgeParam](arkts-arkui-badgeparam-i.md#badgeparam)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface BadgeParamWithNumber--><!--Device-unnamed-declare interface BadgeParamWithNumber-End-->
 
@@ -25,10 +21,6 @@ count: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -51,10 +43,6 @@ maxCount?: number
 **默认值：** 99
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

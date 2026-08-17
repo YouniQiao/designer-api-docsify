@@ -8,10 +8,6 @@ Get form rect info callback
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-type GetFormRectInfoCallback = (formId: string) => Promise<formInfo.Rect>--><!--Device-formInfo-type GetFormRectInfoCallback = (formId: string) => Promise<formInfo.Rect>-End-->
 
 **System capability:** SystemCapability.Ability.Form

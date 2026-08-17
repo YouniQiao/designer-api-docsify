@@ -4,10 +4,6 @@ A sync root management class that enables the File Manager to access the sync ro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudDiskManager-class SyncFolderAccessor--><!--Device-cloudDiskManager-class SyncFolderAccessor-End-->
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
@@ -30,10 +26,6 @@ A constructor used to create a **SyncFolderAccessor** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CLOUD_DISK_INFO
 
 <!--Device-SyncFolderAccessor-constructor()--><!--Device-SyncFolderAccessor-constructor()-End-->
@@ -49,7 +41,7 @@ A constructor used to create a **SyncFolderAccessor** instance.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -83,10 +75,6 @@ Obtains information about all registered sync roots. This API uses a promise to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CLOUD_DISK_INFO
 
 <!--Device-SyncFolderAccessor-getAllSyncFolders(): Promise<Array<SyncFolder>>--><!--Device-SyncFolderAccessor-getAllSyncFolders(): Promise<Array<SyncFolder>>-End-->
@@ -112,7 +100,7 @@ Obtains information about all registered sync roots. This API uses a promise to 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc-failed) | IPC communication failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

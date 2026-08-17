@@ -1,12 +1,8 @@
 # OnInterceptRequestEvent
 
-Defines the triggered callback when the resources loading is intercepted.
+Defines the callback information triggered before the **Web** component loads a URL, including the request details. It is suitable for scenarios where intercepting or modifying network requests is required, improving request control flexibility and security.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnInterceptRequestEvent--><!--Device-unnamed-declare interface OnInterceptRequestEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered callback when the resources loading is intercepted.
 request: WebResourceRequest
 ```
 
-The information of request.
+Information about the URL request.
 
 **Type:** [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

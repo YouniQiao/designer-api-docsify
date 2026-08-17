@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-image-interface Component--><!--Device-image-interface Component-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -23,10 +19,6 @@ readonly byteBuffer: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Component-readonly byteBuffer: ArrayBuffer--><!--Device-Component-readonly byteBuffer: ArrayBuffer-End-->
 
@@ -44,10 +36,6 @@ readonly componentType: ComponentType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Component-readonly componentType: ComponentType--><!--Device-Component-readonly componentType: ComponentType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -64,10 +52,6 @@ readonly pixelStride: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Component-readonly pixelStride: int--><!--Device-Component-readonly pixelStride: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -83,10 +67,6 @@ readonly rowStride: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Component-readonly rowStride: int--><!--Device-Component-readonly rowStride: int-End-->
 

@@ -4,10 +4,6 @@ Defines arguments for an event query.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiSysEvent-interface QueryArg--><!--Device-hiSysEvent-interface QueryArg-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -32,10 +28,6 @@ Start time of the system event to be queried. The value is a 13-digit timestamp,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-QueryArg-beginTime: long--><!--Device-QueryArg-beginTime: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -53,10 +45,6 @@ End time of the system event to be queried. The value is a 13-digit timestamp, i
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-QueryArg-endTime: long--><!--Device-QueryArg-endTime: long-End-->
 
@@ -76,10 +64,6 @@ Start SN of the events to be queried. The default value is **-1**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-QueryArg-fromSeq?: long | null | undefined--><!--Device-QueryArg-fromSeq?: long | null | undefined-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -98,10 +82,6 @@ Maximum number of events that can be queried.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-QueryArg-maxEvents: long--><!--Device-QueryArg-maxEvents: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -119,10 +99,6 @@ End SN of the system events to be queried. The default value is **-1**.
 **Type:** long \| null \| undefined
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-QueryArg-toSeq?: long | null | undefined--><!--Device-QueryArg-toSeq?: long | null | undefined-End-->
 

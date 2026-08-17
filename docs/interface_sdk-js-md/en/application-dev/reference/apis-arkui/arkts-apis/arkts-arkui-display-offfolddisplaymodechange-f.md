@@ -16,10 +16,6 @@ Unregister the callback for fold display mode changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-function offFoldDisplayModeChange(callback?: Callback<FoldDisplayMode>): void--><!--Device-display-function offFoldDisplayModeChange(callback?: Callback<FoldDisplayMode>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager

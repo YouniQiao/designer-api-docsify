@@ -4,8 +4,6 @@ Defines published device information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
 <!--Device-deviceManager-interface PublishInfo--><!--Device-deviceManager-interface PublishInfo-End-->
@@ -32,8 +30,6 @@ Frequency of device discovery.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
 <!--Device-PublishInfo-freq: ExchangeFreq--><!--Device-PublishInfo-freq: ExchangeFreq-End-->
@@ -53,8 +49,6 @@ Device discovery mode.
 **Type:** [DiscoverMode](arkts-distributedservice-devicemanager-discovermode-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 11
 
@@ -76,8 +70,6 @@ ID used to identify a publication period.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
 <!--Device-PublishInfo-publishId: number--><!--Device-PublishInfo-publishId: number-End-->
@@ -97,8 +89,6 @@ Whether the device supports ranging. The value **true** indicates that the devic
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 11
 

@@ -16,10 +16,6 @@ Uninstalls all CA certificates trusted by the user. This API is called only by t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_USER_TRUSTED_CERT
 
 **Model restriction:** This API can be used only in the stage model.
@@ -44,7 +40,7 @@ Uninstalls all CA certificates trusted by the user. This API is called only by t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

@@ -4,10 +4,6 @@ Enum for optimization level
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-export enum OptimizationLevel--><!--Device-mindSporeLite-export enum OptimizationLevel-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -21,10 +17,6 @@ O0 = 0
 Do not change
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Cast network to float16, keep batch norm and loss in float32
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OptimizationLevel-O2 = 2--><!--Device-OptimizationLevel-O2 = 2-End-->
@@ -62,10 +50,6 @@ Cast network to float16, including batch norm
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OptimizationLevel-O3 = 3--><!--Device-OptimizationLevel-O3 = 3-End-->
@@ -81,10 +65,6 @@ AUTO = 4
 Choose optimization based on device
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

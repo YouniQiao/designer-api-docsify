@@ -4,10 +4,6 @@ Set configuration of a watermark. The position starts at top left corner.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface WatermarkConfiguration--><!--Device-media-interface WatermarkConfiguration-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -30,10 +26,6 @@ target height of the watermark in pixel The value range is all integers.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WatermarkConfiguration-height?: int--><!--Device-WatermarkConfiguration-height?: int-End-->
@@ -51,10 +43,6 @@ Offset of the watermark to the left line of pixel The value range is all integer
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Offset of the watermark to the top line of pixel The value range is all integers
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WatermarkConfiguration-top: int--><!--Device-WatermarkConfiguration-top: int-End-->
@@ -95,10 +79,6 @@ target width of the watermark in pixel The value range is all integers.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

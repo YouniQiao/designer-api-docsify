@@ -1,12 +1,8 @@
 # WebDownloadItem
 
-Represents a download task, You can use this object to operate the corresponding download task. Currently, the maximum length of the download file name supported by **WebDownloadItem** is 255 bytes.
+WebDownloadItem is a class in the ArkWeb framework used to represent and manage a single download task. Through the callback parameters of [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md#webdownloaddelegate), an app can obtain a WebDownloadItem instance and then query and control the download task, including starting the download to a specified path, querying the download progress and status, pausing/resuming/canceling the task, and serializing failed tasks for later recovery. > **NOTE：**> > - During the download process, the download progress is notified to the user through WebDownloadDelegate, and the > user can operate the download task through the WebDownloadItem parameter. > > - The maximum length of the download file path (including the file name) supported by WebDownloadItem is 255 > bytes&lt;!--RP1--&gt;&lt;!--RP1End--&gt;.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class WebDownloadItem--><!--Device-webview-class WebDownloadItem-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 cancel(): void
 ```
 
-Cancel the web download.
+Cancels the download task.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,13 +36,9 @@ Cancel the web download.
 static deserialize(serializedData: Uint8Array): WebDownloadItem
 ```
 
-Deserialize web download from typed array.
+Deserializes the serialized byte array into a **WebDownloadItem** object.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,13 +50,13 @@ Deserialize web download from typed array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serializedData | Uint8Array | Yes | The serialized data. |
+| serializedData | Uint8Array | Yes | Serialized byte array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | Deserialize the serialized data into a WebDownloadItem. |
+| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | WebDownloadItem** object. |
 
 **Error codes:**
 
@@ -82,13 +70,9 @@ Deserialize web download from typed array.
 getCurrentSpeed(): number
 ```
 
-Get current speed, in bytes per second.
+Obtains the download speed, in bytes per second.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -100,7 +84,7 @@ Get current speed, in bytes per second.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the current download speed. |
+| number | Download speed, in bytes per second. |
 
 ## getFullPath
 
@@ -108,13 +92,9 @@ Get current speed, in bytes per second.
 getFullPath(): string
 ```
 
-Get full path of the web download.
+Obtains the full path of the downloaded file on the disk.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -126,7 +106,7 @@ Get full path of the web download.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the full path of the download. |
+| string | Full path of the downloaded file on the disk. |
 
 ## getGuid
 
@@ -134,13 +114,9 @@ Get full path of the web download.
 getGuid(): string
 ```
 
-Get guid.
+Obtains the unique ID of this download task.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -152,7 +128,7 @@ Get guid.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the download's guid. |
+| string | Unique ID of the download task. |
 
 ## getLastErrorCode
 
@@ -160,13 +136,9 @@ Get guid.
 getLastErrorCode(): WebDownloadErrorCode
 ```
 
-Get last error code of the web download.
+Obtains the download error code.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -178,7 +150,7 @@ Get last error code of the web download.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | Returns the last error code. |
+| [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | Error code when the download fails. |
 
 ## getMethod
 
@@ -186,13 +158,9 @@ Get last error code of the web download.
 getMethod(): string
 ```
 
-Get http method of the web download request.
+Obtains the request mode of this download task.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -204,7 +172,7 @@ Get http method of the web download request.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the http request method. |
+| string | Request mode of the download task. |
 
 ## getMimeType
 
@@ -212,13 +180,9 @@ Get http method of the web download request.
 getMimeType(): string
 ```
 
-Get mime type of the web download.
+Obtains the MIME type of this download task (for example, a sound file may be marked as audio/ogg, and an image file may be image/png).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -230,7 +194,7 @@ Get mime type of the web download.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the mimetype. |
+| string | MIME type (for example, audio/ogg for a sound file, and image/png for an image file). |
 
 ## getOriginalUrl
 
@@ -238,13 +202,9 @@ Get mime type of the web download.
 getOriginalUrl(): string
 ```
 
-Get the original url of the web download.
+Obtains the original URL address of the download file.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -256,7 +216,7 @@ Get the original url of the web download.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the original url of the download. |
+| string | Original URL address of the download file. |
 
 ## getPercentComplete
 
@@ -264,13 +224,9 @@ Get the original url of the web download.
 getPercentComplete(): number
 ```
 
-Get percent complete.
+Obtains the download progress. The value **100** indicates that the download is complete.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -282,7 +238,7 @@ Get percent complete.
 
 | Type | Description |
 | --- | --- |
-| number | Returns -1 if progress is unknown. 100 if the download is already complete. |
+| number | Download progress. The value **100** indicates that the download is complete, and the value **-1** indicates that the progress is unknown. |
 
 ## getReceivedBytes
 
@@ -290,13 +246,9 @@ Get percent complete.
 getReceivedBytes(): number
 ```
 
-Get received bytes.
+Obtains the number of received bytes.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -308,7 +260,7 @@ Get received bytes.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the received bytes. |
+| number | Number of received bytes. |
 
 ## getReferrerUrl
 
@@ -316,13 +268,9 @@ Get received bytes.
 getReferrerUrl(): string
 ```
 
-Get the referrer url of the web download.
+Obtains the referrer address of the download file.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,7 +282,7 @@ Get the referrer url of the web download.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the referrer url of the download. |
+| string | Referrer address of the download file. |
 
 ## getState
 
@@ -342,13 +290,9 @@ Get the referrer url of the web download.
 getState(): WebDownloadState
 ```
 
-Get state of the web download.
+Obtains the download state.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -360,7 +304,7 @@ Get state of the web download.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | Returns the current download state. |
+| [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | Download state. |
 
 ## getSuggestedFileName
 
@@ -368,13 +312,9 @@ Get state of the web download.
 getSuggestedFileName(): string
 ```
 
-Get suggested file name of the web download request.
+Obtains the suggested file name for this download task.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -386,7 +326,7 @@ Get suggested file name of the web download request.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the suggested file name. |
+| string | Suggested file name. |
 
 ## getTotalBytes
 
@@ -394,13 +334,9 @@ Get suggested file name of the web download request.
 getTotalBytes(): number
 ```
 
-Get total bytes.
+Obtains the total length of the file to be downloaded.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -412,7 +348,7 @@ Get total bytes.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the total bytes received, -1 if the total size is unknown. |
+| number | Total length of the file to be downloaded. The value -1 indicates that the total size is unknown. Unit: byte. |
 
 ## getUrl
 
@@ -420,13 +356,9 @@ Get total bytes.
 getUrl(): string
 ```
 
-Get url of the web download request.
+Obtains the download request URL.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -438,7 +370,7 @@ Get url of the web download request.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the url. |
+| string | Download request URL. |
 
 ## pause
 
@@ -446,13 +378,9 @@ Get url of the web download request.
 pause(): void
 ```
 
-Pause the web download.
+Pauses the download task.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -472,13 +400,9 @@ Pause the web download.
 resume(): void
 ```
 
-Resume the web download. Use WebDownloadManager.resumeDownload to resume deserialized downloads. WebDownloadItem.resume is only used to resume the currently paused download.
+Resumes a download task.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -498,13 +422,9 @@ Resume the web download. Use WebDownloadManager.resumeDownload to resume deseria
 serialize(): Uint8Array
 ```
 
-Serialize web download to typed array.
+Serializes the failed download to a byte array.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -516,7 +436,7 @@ Serialize web download to typed array.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Returns the serialized data. |
+| Uint8Array | Byte array into which the failed download is serialized. |
 
 ## start
 
@@ -524,13 +444,9 @@ Serialize web download to typed array.
 start(downloadPath: string): void
 ```
 
-Start the web download. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> This API must be used in the **onBeforeDownload** callback of **WebDownloadDelegate**. If it is not called in the callback, the download task remains in the PENDING state and is downloaded to a temporary directory. After the target path is specified by **WebDownloadItem.start**, the temporary files are renamed to the target path and the unfinished files are directly downloaded to the target path. If you do not want to download the file to the temporary directory before invoking **WebDownloadItem.start**, you can call **WebDownloadItem.cancel** to cancel the current download task and then call **WebDownloadManager.resumeDownload** to resume the task. &lt;/p&gt;
+Starts downloading to the specified directory. The parameter specifies the disk storage path (including the file name) of the download file. > **NOTE：**> > This API must be used in the **onBeforeDownload** callback of **WebDownloadDelegate**. If it is not called in > the callback, the download task remains in the PENDING state and is downloaded to a temporary directory. After > the target path is specified by **WebDownloadItem.start**, the temporary files are renamed to the target path > and the unfinished files are directly downloaded to the target path. If you do not want to download the file to > the temporary directory before invoking **WebDownloadItem.start**, you can call **WebDownloadItem.cancel** to > cancel the current download task and then call **WebDownloadManager.resumeDownload** to resume the task.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -542,7 +458,7 @@ Start the web download. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| downloadPath | string | Yes | The content will be downloaded to this file. |
+| downloadPath | string | Yes | Path of the download file (including the file name). The path length is the same as that in the file manager, with a maximum of 255 bytes. |
 
 **Error codes:**
 

@@ -4,10 +4,6 @@ This module provides settings data access abilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace settings--><!--Device-unnamed-declare namespace settings-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -39,49 +35,49 @@ import { settings } from 'settings';
 
 | Name | Description |
 | --- | --- |
-| [getURI](arkts-basicservices-settings-geturi-f.md#getURI) | Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Data template. |
-| [getURI](arkts-basicservices-settings-geturi-f.md#getURI) | Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Data template. |
-| [getValue](arkts-basicservices-settings-getvalue-f.md#getValue) | Obtains the value of a specified character string in the database. |
-| [getValue](arkts-basicservices-settings-getvalue-f.md#getValue) | Obtains the value of a specified character string in the database. |
-| [getValue](arkts-basicservices-settings-getvalue-f.md#getValue) | Get value from settingsdata |
-| [getValue](arkts-basicservices-settings-getvalue-f.md#getValue) | Get value from settingsdata |
-| [getValue](arkts-basicservices-settings-getvalue-f.md#getValue) | Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
-| [setValue](arkts-basicservices-settings-setvalue-f.md#setValue) | Set settingsdata value. |
-| [setValue](arkts-basicservices-settings-setvalue-f.md#setValue) | Set settingsdata value. |
-| [setValue](arkts-basicservices-settings-setvalue-f.md#setValue) | Set settingsdata value. [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
-| [enableAirplaneMode](arkts-basicservices-settings-enableairplanemode-f.md#enableAirplaneMode) | Enables or disables airplane mode. |
-| [enableAirplaneMode](arkts-basicservices-settings-enableairplanemode-f.md#enableAirplaneMode) | Enables or disables airplane mode. |
-| [canShowFloating](arkts-basicservices-settings-canshowfloating-f.md#canShowFloating) | Checks whether a specified application can show as a floating window. |
-| [canShowFloating](arkts-basicservices-settings-canshowfloating-f.md#canShowFloating) | Checks whether a specified application can show as a floating window. |
-| [getUriSync](arkts-basicservices-settings-geturisync-f.md#getUriSync) | Get settingsdata uri (synchronous method) |
-| [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getValueSync) | Get value from settingsdata(synchronous method) |
-| [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getValueSync) | Get value from settingsdata(synchronous method) |
-| [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getValueSync) | Get value from settingsdata(synchronous method). [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
-| [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setValueSync) | Set settingsdata value(synchronous method) |
-| [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setValueSync) | Set settingsdata value(synchronous method) |
-| [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setValueSync) | Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
-| [registerKeyObserver](arkts-basicservices-settings-registerkeyobserver-f.md#registerKeyObserver) | Monitor registration key(synchronous method) [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
-| [unregisterKeyObserver](arkts-basicservices-settings-unregisterkeyobserver-f.md#unregisterKeyObserver) | Monitor unregister key(synchronous method) [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
-| [openNetworkManagerSettings](arkts-basicservices-settings-opennetworkmanagersettings-f.md#openNetworkManagerSettings) | Open the network manager settings page. |
-| [openInputMethodSettings](arkts-basicservices-settings-openinputmethodsettings-f.md#openInputMethodSettings) | Open the input method settings page. |
-| [openInputMethodDetail](arkts-basicservices-settings-openinputmethoddetail-f.md#openInputMethodDetail) | Open the input method detail page. |
-| [openMobileNetworkSettingsPage](arkts-basicservices-settings-openmobilenetworksettingspage-f.md#openMobileNetworkSettingsPage) | Open the mobile network settings page. |
-| [openDisplaySettingsPage](arkts-basicservices-settings-opendisplaysettingspage-f.md#openDisplaySettingsPage) | Open the display settings page. |
-| [openScreenRefreshRateSettingsPage](arkts-basicservices-settings-openscreenrefreshratesettingspage-f.md#openScreenRefreshRateSettingsPage) | Open the screen refresh rate settings page. |
-| [openSoundSettingsPage](arkts-basicservices-settings-opensoundsettingspage-f.md#openSoundSettingsPage) | Open the sound settings page. |
-| [openBiometricsSettingsPage](arkts-basicservices-settings-openbiometricssettingspage-f.md#openBiometricsSettingsPage) | Open the biometrics and password settings page. |
-| [openAboutDeviceSettingsPage](arkts-basicservices-settings-openaboutdevicesettingspage-f.md#openAboutDeviceSettingsPage) | Open the about device settings page. |
-| [openNfcSettingsPage](arkts-basicservices-settings-opennfcsettingspage-f.md#openNfcSettingsPage) | Open the NFC settings page. |
-| [openAppDetailSettingsPage](arkts-basicservices-settings-openappdetailsettingspage-f.md#openAppDetailSettingsPage) | Open the app detail settings page. |
-| [openDoubleClickSettingsPage](arkts-basicservices-settings-opendoubleclicksettingspage-f.md#openDoubleClickSettingsPage) | 1. Opens the settings page for double-pressing the Down key. 2. This API is used to set the default application started by double-pressing the Down key. |
-| [isDoubleClickAppForSelf](arkts-basicservices-settings-isdoubleclickappforself-f.md#isDoubleClickAppForSelf) | 1. Checks whether the application started by double-pressing the Down key is the application itself. 2. This API is triggered to check whether double-pressing the Down key starts the application itself. |
+| [getURI](arkts-basicservices-settings-geturi-f.md#geturi) | Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Data template. |
+| [getURI](arkts-basicservices-settings-geturi-f.md#geturi) | Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Data template. |
+| [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue) | Obtains the value of a specified character string in the database. |
+| [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue) | Obtains the value of a specified character string in the database. |
+| [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue) | Get value from settingsdata |
+| [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue) | Get value from settingsdata |
+| [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue) | Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [setValue](arkts-basicservices-settings-setvalue-f.md#setvalue) | Set settingsdata value. |
+| [setValue](arkts-basicservices-settings-setvalue-f.md#setvalue) | Set settingsdata value. |
+| [setValue](arkts-basicservices-settings-setvalue-f.md#setvalue) | Set settingsdata value. [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [enableAirplaneMode](arkts-basicservices-settings-enableairplanemode-f.md#enableairplanemode) | Enables or disables airplane mode. |
+| [enableAirplaneMode](arkts-basicservices-settings-enableairplanemode-f.md#enableairplanemode) | Enables or disables airplane mode. |
+| [canShowFloating](arkts-basicservices-settings-canshowfloating-f.md#canshowfloating) | Checks whether a specified application can show as a floating window. |
+| [canShowFloating](arkts-basicservices-settings-canshowfloating-f.md#canshowfloating) | Checks whether a specified application can show as a floating window. |
+| [getUriSync](arkts-basicservices-settings-geturisync-f.md#geturisync) | Get settingsdata uri (synchronous method) |
+| [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getvaluesync) | Get value from settingsdata(synchronous method) |
+| [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getvaluesync) | Get value from settingsdata(synchronous method) |
+| [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getvaluesync) | Get value from settingsdata(synchronous method). [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setvaluesync) | Set settingsdata value(synchronous method) |
+| [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setvaluesync) | Set settingsdata value(synchronous method) |
+| [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setvaluesync) | Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [registerKeyObserver](arkts-basicservices-settings-registerkeyobserver-f.md#registerkeyobserver) | Monitor registration key(synchronous method) [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [unregisterKeyObserver](arkts-basicservices-settings-unregisterkeyobserver-f.md#unregisterkeyobserver) | Monitor unregister key(synchronous method) [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [openNetworkManagerSettings](arkts-basicservices-settings-opennetworkmanagersettings-f.md#opennetworkmanagersettings) | Open the network manager settings page. |
+| [openInputMethodSettings](arkts-basicservices-settings-openinputmethodsettings-f.md#openinputmethodsettings) | Open the input method settings page. |
+| [openInputMethodDetail](arkts-basicservices-settings-openinputmethoddetail-f.md#openinputmethoddetail) | Open the input method detail page. |
+| [openMobileNetworkSettingsPage](arkts-basicservices-settings-openmobilenetworksettingspage-f.md#openmobilenetworksettingspage) | Open the mobile network settings page. |
+| [openDisplaySettingsPage](arkts-basicservices-settings-opendisplaysettingspage-f.md#opendisplaysettingspage) | Open the display settings page. |
+| [openScreenRefreshRateSettingsPage](arkts-basicservices-settings-openscreenrefreshratesettingspage-f.md#openscreenrefreshratesettingspage) | Open the screen refresh rate settings page. |
+| [openSoundSettingsPage](arkts-basicservices-settings-opensoundsettingspage-f.md#opensoundsettingspage) | Open the sound settings page. |
+| [openBiometricsSettingsPage](arkts-basicservices-settings-openbiometricssettingspage-f.md#openbiometricssettingspage) | Open the biometrics and password settings page. |
+| [openAboutDeviceSettingsPage](arkts-basicservices-settings-openaboutdevicesettingspage-f.md#openaboutdevicesettingspage) | Open the about device settings page. |
+| [openNfcSettingsPage](arkts-basicservices-settings-opennfcsettingspage-f.md#opennfcsettingspage) | Open the NFC settings page. |
+| [openAppDetailSettingsPage](arkts-basicservices-settings-openappdetailsettingspage-f.md#openappdetailsettingspage) | Open the app detail settings page. |
+| [openDoubleClickSettingsPage](arkts-basicservices-settings-opendoubleclicksettingspage-f.md#opendoubleclicksettingspage) | 1. Opens the settings page for double-pressing the Down key. 2. This API is used to set the default application started by double-pressing the Down key. |
+| [isDoubleClickAppForSelf](arkts-basicservices-settings-isdoubleclickappforself-f.md#isdoubleclickappforself) | 1. Checks whether the application started by double-pressing the Down key is the application itself. 2. This API is triggered to check whether double-pressing the Down key starts the application itself. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [setValue](arkts-basicservices-settings-setvalue-f-sys.md#setValue) | Saves a character string name and its value to the database. |
-| [setValue](arkts-basicservices-settings-setvalue-f-sys.md#setValue-(System-API)) | Saves a character string name and its value to the database. |
+| [setValue](arkts-basicservices-settings-setvalue-f-sys.md#setvalue) | Saves a character string name and its value to the database. |
+| [setValue](arkts-basicservices-settings-setvalue-f-sys.md#setvalue-system-api) | Saves a character string name and its value to the database. |
 <!--DelEnd-->
 

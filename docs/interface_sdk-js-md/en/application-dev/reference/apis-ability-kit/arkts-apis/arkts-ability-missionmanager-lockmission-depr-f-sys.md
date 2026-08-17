@@ -10,11 +10,9 @@ Locks a given mission. This API uses an asynchronous callback to return the resu
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockMission-(System-API))
+**Substitutes:** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockmission-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -31,7 +29,7 @@ Locks a given mission. This API uses an asynchronous callback to return the resu
 | missionId | number | Yes | Mission ID. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is locked, **err** is **undefined**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -61,11 +59,9 @@ Locks a given mission. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockMission-(System-API))
+**Substitutes:** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockmission-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -87,7 +83,7 @@ Locks a given mission. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

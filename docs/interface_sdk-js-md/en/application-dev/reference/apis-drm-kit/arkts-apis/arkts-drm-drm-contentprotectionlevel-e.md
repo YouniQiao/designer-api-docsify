@@ -1,12 +1,8 @@
-# ContentProtectionLevel
+# ContentProtectionLevel(Defines the DRM capability.)
 
 Enumerates the content protection levels.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-drm-enum ContentProtectionLevel--><!--Device-drm-enum ContentProtectionLevel-End-->
 
@@ -21,10 +17,6 @@ CONTENT_PROTECTION_LEVEL_UNKNOWN = 0
 Unknown content protection level.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Software-based content protection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_SW_CRYPTO = 1--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_SW_CRYPTO = 1-End-->
@@ -61,10 +49,6 @@ CONTENT_PROTECTION_LEVEL_HW_CRYPTO = 2
 Hardware-based content protection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +66,6 @@ Enhanced hardware-based content protection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_ENHANCED_HW = 3--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_ENHANCED_HW = 3-End-->
@@ -101,10 +81,6 @@ CONTENT_PROTECTION_LEVEL_MAX = 4
 Maximum content protection level.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

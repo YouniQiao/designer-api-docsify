@@ -12,13 +12,9 @@ import { proxyChannelManager } from 'proxyChannelManager';
 function closeProxyChannel(channelId: int): void
 ```
 
-Closes a proxy channel that has been opened.
+Closes an opened proxy channel. This is applicable to scenarios where the phone-side app no longer needs to communicate with the wearable device-side app, such as actively releasing channel resources after completing a data synchronization task. This method must be used in pair with [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md#openproxychannel). Call this method to close the channel and release resources after use. After the channel is closed, the registered **receiveData** and **channelStateChange** callbacks are automatically unsubscribed, and data being transmitted is interrupted. Failure to close the proxy channel in a timely manner may cause channel resource leakage.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -32,7 +28,7 @@ Closes a proxy channel that has been opened.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| channelId | int | Yes | Channel ID obtained when the proxy channel is opened. |
+| channelId | int | Yes | Channel ID obtained when opening the proxy channel. The value range is 1 to 2147483647. Using an invalid or closed channelId returns error code 32390004. If the value is out of range, error code 3239 0006 is returned. The channelId takes effect only when the proxy channel is available, and becomes unavailable after the channel is closed or disconnected. |
 
 **Error codes:**
 
@@ -45,7 +41,7 @@ Closes a proxy channel that has been opened.
 | [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
 | [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { proxyChannelManager } from '@kit.DistributedServiceKit';

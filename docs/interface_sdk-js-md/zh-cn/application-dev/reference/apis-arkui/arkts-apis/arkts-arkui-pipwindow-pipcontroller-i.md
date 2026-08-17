@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-PiPWindow-interface PiPController--><!--Device-PiPWindow-interface PiPController-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ getPiPSettingSwitch(): Promise<boolean>
 获取设置中自动启动画中画开关的状态，使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -45,7 +37,7 @@ getPiPSettingSwitch(): Promise<boolean>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let pipSwitchStatus: boolean | undefined = undefined;
@@ -72,10 +64,6 @@ getPiPWindowInfo(): Promise<PiPWindowInfo>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-getPiPWindowInfo(): Promise<PiPWindowInfo>--><!--Device-PiPController-getPiPWindowInfo(): Promise<PiPWindowInfo>-End-->
@@ -95,7 +83,7 @@ getPiPWindowInfo(): Promise<PiPWindowInfo>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible causes: <br>1.The PiP controller has been destroyed. <br>2.The PiP window is not created or has been destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let pipWindowInfo: PiPWindow.PiPWindowInfo | undefined = undefined;
@@ -122,10 +110,6 @@ isPiPActive(): Promise<boolean>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-isPiPActive(): Promise<boolean>--><!--Device-PiPController-isPiPActive(): Promise<boolean>-End-->
@@ -144,7 +128,7 @@ isPiPActive(): Promise<boolean>
 | --- | --- |
 | [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible causes: <br>1.The PiP controller has been destroyed. <br>2.The PiP window is not created or has been destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let pipActiveStatus: boolean | undefined = undefined;
@@ -171,10 +155,6 @@ offActiveStatusChange(callback?: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void--><!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -183,7 +163,7 @@ offActiveStatusChange(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
 
 **错误码：**
 
@@ -202,10 +182,6 @@ offControlEvent(callback?: Callback<ControlEventParam>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -214,9 +190,9 @@ offControlEvent(callback?: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let callbackFunc = (event: PiPWindow.ControlEventParam) => {
@@ -231,19 +207,15 @@ this.pipController.offControlEvent(callbackFunc);
 offControlPanelActionEvent(): void
 ```
 
-关闭画中画控制面板控件动作事件的监听。推荐使用[offControlEvent](#offControlEvent)来关闭画中画控制面板控件动作事件的监听。
+关闭画中画控制面板控件动作事件的监听。推荐使用[offControlEvent](#offcontrolevent)来关闭画中画控制面板控件动作事件的监听。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-PiPController-offControlPanelActionEvent(): void--><!--Device-PiPController-offControlPanelActionEvent(): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## 示例
+**示例**
 
 ```TypeScript
 this.pipController.offControlPanelActionEvent();
@@ -259,10 +231,6 @@ offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -271,7 +239,7 @@ offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
 
 **错误码：**
 
@@ -279,7 +247,7 @@ offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const callback = (size: PiPWindow.PiPWindowSize) => {
@@ -312,15 +280,11 @@ offStateChange(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-PiPController-offStateChange(): void--><!--Device-PiPController-offStateChange(): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## 示例
+**示例**
 
 ```TypeScript
 this.pipController.offStateChange();
@@ -336,10 +300,6 @@ off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-off(type: 'activeStatusChange', callback?: Callback<boolean>): void--><!--Device-PiPController-off(type: 'activeStatusChange', callback?: Callback<boolean>): void-End-->
@@ -351,9 +311,9 @@ off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | 是 | 事件类型，固定为'activeStatusChange'，即画中画隐藏状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。如果未传入参数，解除type为' activeStatusChange'的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。如果未传入参数，解除type为' activeStatusChange'的所有回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let callback = (activeStatus: boolean) => {
@@ -372,10 +332,6 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void-End-->
@@ -387,9 +343,9 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | 是 | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let callbackFunc = (event: PiPWindow.ControlEventParam) => {
@@ -404,13 +360,9 @@ this.pipController.off('controlEvent', callbackFunc);
 off(type: 'controlPanelActionEvent'): void
 ```
 
-关闭画中画控制面板控件动作事件的监听。推荐使用 [off('controlEvent')](#off_stateChange) 来关闭画中画控制面板控件动作事件的监听。
+关闭画中画控制面板控件动作事件的监听。推荐使用 [off('controlEvent')](#offstatechange) 来关闭画中画控制面板控件动作事件的监听。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -424,7 +376,7 @@ off(type: 'controlPanelActionEvent'): void
 | --- | --- | --- | --- |
 | type | 'controlPanelActionEvent' | 是 | 事件类型，固定为'controlPanelActionEvent'，即画中画控制面板控件动作事件。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 this.pipController.off('controlPanelActionEvent');
@@ -440,10 +392,6 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void-End-->
@@ -455,7 +403,7 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
 
 **错误码：**
 
@@ -463,7 +411,7 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const callback = (size: PiPWindow.PiPWindowSize) => {
@@ -496,10 +444,6 @@ off(type: 'stateChange'): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-off(type: 'stateChange'): void--><!--Device-PiPController-off(type: 'stateChange'): void-End-->
@@ -512,7 +456,7 @@ off(type: 'stateChange'): void
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件类型，固定为'stateChange'，即画中画生命周期状态变化事件。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 this.pipController.off('stateChange');
@@ -528,10 +472,6 @@ onActiveStatusChange(callback: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void--><!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -540,7 +480,7 @@ onActiveStatusChange(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 <br>画中画显示状态变化回调函数 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 <br>画中画显示状态变化回调函数 |
 
 **错误码：**
 
@@ -549,7 +489,7 @@ onActiveStatusChange(callback: Callback<boolean>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let callback = (activeStatus: boolean) => {
@@ -568,10 +508,6 @@ onControlEvent(callback: Callback<ControlEventParam>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void--><!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -580,9 +516,9 @@ onControlEvent(callback: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 this.pipController.onControlEvent((control) => {
@@ -619,13 +555,9 @@ this.pipController.onControlEvent((control) => {
 onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用[onControlEvent](#onControlEvent)来开启画中画控制面板控件动作事件的监听。
+开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用[onControlEvent](#oncontrolevent)来开启画中画控制面板控件动作事件的监听。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void--><!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void-End-->
 
@@ -637,7 +569,7 @@ onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
 | --- | --- | --- | --- |
 | callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | 是 | Used to handle {'controlPanelActionEvent'} command. |
 
-## 示例
+**示例**
 
 ```TypeScript
 this.pipController.onControlPanelActionEvent((event: PiPWindow.PiPActionEventType, status?: int) => {
@@ -678,10 +610,6 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void--><!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -690,7 +618,7 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
 
 **错误码：**
 
@@ -699,7 +627,7 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -721,10 +649,6 @@ onStateChange(callback: StateChangeCallback): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-PiPController-onStateChange(callback: StateChangeCallback): void--><!--Device-PiPController-onStateChange(callback: StateChangeCallback): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -735,7 +659,7 @@ onStateChange(callback: StateChangeCallback): void
 | --- | --- | --- | --- |
 | callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | 是 | 描述画中画生命周期状态变化回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 this.pipController.onStateChange((state: PiPWindow.PiPState, reason: string) => {
@@ -776,10 +700,6 @@ on(type: 'activeStatusChange', callback: Callback<boolean>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-on(type: 'activeStatusChange', callback: Callback<boolean>): void--><!--Device-PiPController-on(type: 'activeStatusChange', callback: Callback<boolean>): void-End-->
@@ -791,9 +711,9 @@ on(type: 'activeStatusChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | 是 | 事件类型，固定为'activeStatusChange'，即画中画隐藏状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let callback = (activeStatus: boolean) => {
@@ -812,10 +732,6 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-on(type: 'controlEvent', callback: Callback<ControlEventParam>): void--><!--Device-PiPController-on(type: 'controlEvent', callback: Callback<ControlEventParam>): void-End-->
@@ -827,9 +743,9 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | 是 | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 this.pipController.on('controlEvent', (control) => {
@@ -866,13 +782,9 @@ this.pipController.on('controlEvent', (control) => {
 on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用 [on('controlEvent')](#on_stateChange) 来开启画中画控制面板控件动作事件的监听。
+开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用 [on('controlEvent')](#onstatechange) 来开启画中画控制面板控件动作事件的监听。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -887,7 +799,7 @@ on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): 
 | type | 'controlPanelActionEvent' | 是 | 事件类型，固定为'controlPanelActionEvent'，即画中画控制面板控件动作事件。 |
 | callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | 是 | 描述画中画控制面板控件动作事件回调。<br>**起始版本：** 12 |
 
-## 示例
+**示例**
 
 ```TypeScript
 this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEventType, status?: number) => {
@@ -928,10 +840,6 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void--><!--Device-PiPController-on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void-End-->
@@ -943,7 +851,7 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
 
 **错误码：**
 
@@ -952,7 +860,7 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -974,10 +882,6 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void--><!--Device-PiPController-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void-End-->
@@ -989,9 +893,9 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件类型，固定为'stateChange'，即画中画生命周期状态变化事件。 |
-| callback | (state: PiPState, reason: string) =&gt; void | 是 | 回调生命周期状态变化事件以及原因。<br/>state：[PiPState](arkts-arkui-pipwindow-pipstate-e.md#PiPState)，表示当前画中画生命周期状态。 <br/>reason：string，表示当前生命周期的切换原因。 <br/>在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，reason始终为“0”，无需关注。 <br/>从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，reason为当前生命周期的切换原因： <br/>"requestStart"：应用调用startPip接口； <br/>"autoStart"：应用退后台触发画中画自动启动； <br/>"requestDelete"：应用调用stopPip接口； <br/>"panelActionDelete"：用户点击画中画窗口的关闭按钮； <br/>"dragDelete"：用户将画中画窗口拖入垃圾桶； <br/>"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原； <br/>"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
+| callback | (state: PiPState, reason: string) =&gt; void | 是 | 回调生命周期状态变化事件以及原因。<br/>state：[PiPState](arkts-arkui-pipwindow-pipstate-e.md#pipstate)，表示当前画中画生命周期状态。 <br/>reason：string，表示当前生命周期的切换原因。 <br/>在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，reason始终为“0”，无需关注。 <br/>从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，reason为当前生命周期的切换原因： <br/>"requestStart"：应用调用startPip接口； <br/>"autoStart"：应用退后台触发画中画自动启动； <br/>"requestDelete"：应用调用stopPip接口； <br/>"panelActionDelete"：用户点击画中画窗口的关闭按钮； <br/>"dragDelete"：用户将画中画窗口拖入垃圾桶； <br/>"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原； <br/>"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {
@@ -1032,10 +936,6 @@ setAutoStartEnabled(enable: boolean): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-setAutoStartEnabled(enable: boolean): void--><!--Device-PiPController-setAutoStartEnabled(enable: boolean): void-End-->
@@ -1048,7 +948,7 @@ setAutoStartEnabled(enable: boolean): void
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 如返回桌面时需自动启动画中画，则该参数配置为true，否则为false。若设置-系统-智慧多窗-自动启动画中画开关为关闭状态，就算该参数配置为true，应用返回桌面时也不 会自动启动画中画窗口。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let enable: boolean = true;
@@ -1065,10 +965,6 @@ setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void--><!--Device-PiPController-setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void-End-->
@@ -1082,7 +978,7 @@ setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void
 | controlType | [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | 是 | 表示画中画控制面板控件类型。 |
 | enabled | boolean | 是 | 表示画中画控制面板控件使能状态。true表示控件为可使用状态，false则为禁用状态。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let controlType: PiPWindow.PiPControlType = PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE; // 视频播放控制面板中播放/暂停控件。
@@ -1099,10 +995,6 @@ startPiP(): Promise<void>
 启动画中画，使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1126,7 +1018,7 @@ startPiP(): Promise<void>
 | [1300013](../errorcode-window.md#1300013-创建画中画窗口失败) | Failed to create the PiP window. Possible causes: <br>1.PiP configuration parameters are invalid, such as pipOption or context is null. <br>2.The XComponentController or main window is null. <br>3.The main window is not shown (non-auto-start scenario). <br>4.Navigation component operation failed. |
 | [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible causes: <br>1.The PiP controller has been destroyed. <br>2.The PiP window is not created or has been destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 开发者可根据pipController的定义方式自行实现pipController的调用
@@ -1148,10 +1040,6 @@ stopPiP(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-stopPiP(): Promise<void>--><!--Device-PiPController-stopPiP(): Promise<void>-End-->
@@ -1172,7 +1060,7 @@ stopPiP(): Promise<void>
 | [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
 | [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let promise : Promise<void> = this.pipController.stopPiP();
@@ -1192,10 +1080,6 @@ updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 更新画中画节点内容，使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -1222,7 +1106,7 @@ updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1269,10 +1153,6 @@ updateContentSize(width: int, height: int): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-updateContentSize(width: int, height: int): void--><!--Device-PiPController-updateContentSize(width: int, height: int): void-End-->
@@ -1286,7 +1166,7 @@ updateContentSize(width: int, height: int): void
 | width | int | 是 | 表示媒体内容宽度，必须为大于0的整数，单位为px。用于更新画中画窗口比例。 |
 | height | int | 是 | 表示媒体内容高度，必须为大于0的整数，单位为px。用于更新画中画窗口比例。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1314,10 +1194,6 @@ updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): v
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPController-updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): void--><!--Device-PiPController-updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): void-End-->
@@ -1331,7 +1207,7 @@ updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): v
 | controlType | [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | 是 | 表示画中画控制面板控件类型。目前仅支持VIDEO_PLAY_PAUSE、MICROPHONE_SWITCH、CAMERA_SWITCH和 MUTE_SWITCH这几种控件类型，传入其他控件类型不生效也不报错。 |
 | status | [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md) | 是 | 表示画中画控制面板控件状态。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let controlType: PiPWindow.PiPControlType = PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE; // 视频播放控制面板中播放/暂停控件。

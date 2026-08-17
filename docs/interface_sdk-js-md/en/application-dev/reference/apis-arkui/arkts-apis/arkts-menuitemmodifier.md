@@ -1,0 +1,10 @@
+# MenuItemModifier
+
+## Summary
+
+### Classes
+
+| Name | Description |
+| --- | --- |
+| [MenuItemModifier](arkts-arkui-menuitemmodifier-c.md) | Defines MenuItem Modifier |
+

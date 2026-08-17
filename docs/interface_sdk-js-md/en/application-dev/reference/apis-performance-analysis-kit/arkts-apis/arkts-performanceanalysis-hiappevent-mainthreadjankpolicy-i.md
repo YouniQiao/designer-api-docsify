@@ -4,10 +4,6 @@ Defines the configuration policy for the main thread jank event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiAppEvent-interface MainThreadJankPolicy--><!--Device-hiAppEvent-interface MainThreadJankPolicy-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -30,10 +26,6 @@ Whether to automatically stop sampling the main thread stack when the main threa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MainThreadJankPolicy-autoStopSampling?: boolean--><!--Device-MainThreadJankPolicy-autoStopSampling?: boolean-End-->
@@ -51,10 +43,6 @@ Mainthread jank event detection time ignored during application startup, in seco
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -74,10 +62,6 @@ Type of logs to collect. Default value: **0** **logType = 0**: The default value
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MainThreadJankPolicy-logType?: int--><!--Device-MainThreadJankPolicy-logType?: int-End-->
@@ -95,10 +79,6 @@ Number of sampling reporting times for the main thread jank event of the process
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -118,10 +98,6 @@ Number of samplings for the main thread jank event. Unit: times. The default val
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MainThreadJankPolicy-sampleCount?: int--><!--Device-MainThreadJankPolicy-sampleCount?: int-End-->
@@ -139,10 +115,6 @@ Interval for the main thread jank event detection and sampling, in milliseconds.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

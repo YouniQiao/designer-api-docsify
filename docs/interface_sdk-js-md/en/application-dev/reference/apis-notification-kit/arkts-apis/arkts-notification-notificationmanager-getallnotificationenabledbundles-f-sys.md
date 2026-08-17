@@ -16,10 +16,6 @@ Obtains a list of applications that allow notifications. This API uses a promise
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>--><!--Device-notificationManager-function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>-End-->
@@ -44,7 +40,7 @@ Obtains a list of applications that allow notifications. This API uses a promise
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,10 +66,6 @@ function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOpti
 Obtains the list of applications that are allowed to publish notifications by a specified user. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -106,7 +98,7 @@ Obtains the list of applications that are allowed to publish notifications by a 
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

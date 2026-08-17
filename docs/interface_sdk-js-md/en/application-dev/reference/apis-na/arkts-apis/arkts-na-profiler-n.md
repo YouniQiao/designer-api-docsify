@@ -4,9 +4,7 @@ Profiler tools for inspectors.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -23,7 +21,7 @@ Profiler tools for inspectors.
 
 | Name | Description |
 | --- | --- |
-| [registerVsyncCallback](arkts-na-profiler-registervsynccallback-f-sys.md#registerVsyncCallback-(System-API)) | Registers vsync callback for profiler. AnonyMous Object Rectification. |
-| [unregisterVsyncCallback](arkts-na-profiler-unregistervsynccallback-f-sys.md#unregisterVsyncCallback-(System-API)) | Unregisters vsync callback. |
+| [registerVsyncCallback](arkts-na-profiler-registervsynccallback-f-sys.md#registervsynccallback-system-api) | Registers vsync callback for profiler. AnonyMous Object Rectification. |
+| [unregisterVsyncCallback](arkts-na-profiler-unregistervsynccallback-f-sys.md#unregistervsynccallback-system-api) | Unregisters vsync callback. |
 <!--DelEnd-->
 

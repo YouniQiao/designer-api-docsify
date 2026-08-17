@@ -4,10 +4,6 @@ Defines the agent-powered reminder state information, for which notifications ar
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-interface ReminderState--><!--Device-reminderAgentManager-interface ReminderState-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -30,10 +26,6 @@ Button type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReminderState-buttonType: ActionButtonType--><!--Device-ReminderState-buttonType: ActionButtonType-End-->
@@ -52,10 +44,6 @@ Whether a message is sent repeatedly. - **false**: The message is sent for the f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReminderState-isMessageResent: boolean--><!--Device-ReminderState-isMessageResent: boolean-End-->
@@ -73,10 +61,6 @@ Reminder ID. The value range is all integers.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

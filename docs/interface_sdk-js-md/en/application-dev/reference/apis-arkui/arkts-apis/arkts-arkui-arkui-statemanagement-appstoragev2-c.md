@@ -4,10 +4,6 @@ For details about how to use AppStorageV2, see [AppStorageV2: Storing Applicatio
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class AppStorageV2--><!--Device-unnamed-export declare class AppStorageV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -54,10 +50,6 @@ Stores key-value pair data in the application memory. If the given key already e
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -80,7 +72,7 @@ Stores key-value pair data in the application memory. If the given key already e
 | --- | --- |
 | T | Returns data if the creation or data acquisition from AppStorageV2 is successful; returns **undefined** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AppStorageV2 } from '@kit.ArkUI';
@@ -110,10 +102,6 @@ Obtains all keys in [AppStorageV2](../../../ui/state-management/arkts-new-appsto
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -128,7 +116,7 @@ Obtains all keys in [AppStorageV2](../../../ui/state-management/arkts-new-appsto
 | --- | --- |
 | Array&lt;string&gt; | All keys stored in AppStorageV2. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Assuming there are two keys (key_as1 and key_as2) in AppStorageV2, the following will return an array containing these keys and assign it to keys.
@@ -145,10 +133,6 @@ Removes the specified key-value pair from [AppStorageV2](../../../ui/state-manag
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -163,7 +147,7 @@ Removes the specified key-value pair from [AppStorageV2](../../../ui/state-manag
 | --- | --- | --- | --- |
 | keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes | Key to be removed. If a type is specified, the key to be removed is the name of that type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Assuming that there is a key named key_as2 in AppStorageV2, the following will remove the corresponding key-value pair from AppStorageV2.

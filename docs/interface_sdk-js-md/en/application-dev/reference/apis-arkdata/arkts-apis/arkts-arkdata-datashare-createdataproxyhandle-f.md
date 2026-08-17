@@ -16,10 +16,6 @@ Creates a **DataProxyHandle** instance. This API uses a promise to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-dataShare-function createDataProxyHandle(): Promise<DataProxyHandle>--><!--Device-dataShare-function createDataProxyHandle(): Promise<DataProxyHandle>-End-->
@@ -38,7 +34,7 @@ Creates a **DataProxyHandle** instance. This API uses a promise to return the re
 | --- | --- |
 | [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

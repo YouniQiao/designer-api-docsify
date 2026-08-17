@@ -8,10 +8,6 @@ The ability foreground state observer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityManager-export type AbilityForegroundStateObserver = _AbilityForegroundStateObserver--><!--Device-abilityManager-export type AbilityForegroundStateObserver = _AbilityForegroundStateObserver-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

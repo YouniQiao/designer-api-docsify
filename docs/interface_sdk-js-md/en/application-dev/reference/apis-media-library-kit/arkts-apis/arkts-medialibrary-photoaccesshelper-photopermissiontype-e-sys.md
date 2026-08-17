@@ -4,10 +4,6 @@ Enumerates the types of permissions for accessing media assets. The permissions 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum PhotoPermissionType--><!--Device-photoAccessHelper-enum PhotoPermissionType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -24,10 +20,6 @@ Temporary read permission.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PhotoPermissionType-TEMPORARY_READ_IMAGEVIDEO = 0--><!--Device-PhotoPermissionType-TEMPORARY_READ_IMAGEVIDEO = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -43,10 +35,6 @@ PERSISTENT_READ_IMAGEVIDEO = 1
 Persistent read permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PhotoPermissionType-PERSISTENT_READ_IMAGEVIDEO = 1--><!--Device-PhotoPermissionType-PERSISTENT_READ_IMAGEVIDEO = 1-End-->
 

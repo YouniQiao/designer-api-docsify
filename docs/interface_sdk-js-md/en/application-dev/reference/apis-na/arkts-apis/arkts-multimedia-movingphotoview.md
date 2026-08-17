@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [MovingPhotoView](arkts-na-multimedia-movingphotoview-movingphotoview-f.md#MovingPhotoView) | Defines the MovingPhotoView component. |
+| [MovingPhotoView](arkts-na-multimedia-movingphotoview-movingphotoview-f.md#movingphotoview) | Defines the MovingPhotoView component. |
 
 ### Classes
 

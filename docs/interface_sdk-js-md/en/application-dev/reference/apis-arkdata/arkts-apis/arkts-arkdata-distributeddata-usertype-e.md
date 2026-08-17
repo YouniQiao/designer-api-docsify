@@ -4,8 +4,6 @@ Enumerates the user types.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-distributedData-enum UserType--><!--Device-distributedData-enum UserType-End-->
@@ -21,8 +19,6 @@ SAME_USER_ID = 0
 User who logs in to different devices using the same account.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

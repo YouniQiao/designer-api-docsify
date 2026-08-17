@@ -16,10 +16,6 @@ Obtains the sandbox path of the pre-authorized **Desktop** directory.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 11: ohos.permission.READ_WRITE_DESKTOP_DIRECTORY
 
@@ -41,7 +37,7 @@ Obtains the sandbox path of the pre-authorized **Desktop** directory.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken.<br>**Applicable version:** 11 and later |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

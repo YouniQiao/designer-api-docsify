@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface BigIntConstructor--><!--Device-unnamed-interface BigIntConstructor-End-->
 
 ## asIntN
@@ -17,10 +13,6 @@ asIntN(bits: number, int: bigint): bigint
 Interprets the low bits of a BigInt as a 2's-complement signed integer. All higher bits are discarded.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-BigIntConstructor-asIntN(bits: number, int: bigint): bigint--><!--Device-BigIntConstructor-asIntN(bits: number, int: bigint): bigint-End-->
 
@@ -47,10 +39,6 @@ Interprets the low bits of a BigInt as an unsigned integer. All higher bits are 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-BigIntConstructor-asUintN(bits: number, int: bigint): bigint--><!--Device-BigIntConstructor-asUintN(bits: number, int: bigint): bigint-End-->
 
 **Parameters:**
@@ -73,10 +61,6 @@ Interprets the low bits of a BigInt as an unsigned integer. All higher bits are 
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-BigIntConstructor-(value: bigint | boolean | number | string): bigint--><!--Device-BigIntConstructor-(value: bigint | boolean | number | string): bigint-End-->
 
@@ -101,10 +85,6 @@ readonly prototype: BigInt
 **Type:** [BigInt](arkts-na-lib-es2020-bigint-bigint-i.md)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-BigIntConstructor-readonly prototype: BigInt--><!--Device-BigIntConstructor-readonly prototype: BigInt-End-->
 

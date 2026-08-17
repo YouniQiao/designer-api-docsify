@@ -4,10 +4,6 @@ Defines event query rules.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiSysEvent-interface QueryRule--><!--Device-hiSysEvent-interface QueryRule-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -32,10 +28,6 @@ Additional event conditions. The value of this parameter is in the format of **{
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-QueryRule-condition?: string | null | undefined--><!--Device-QueryRule-condition?: string | null | undefined-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -54,10 +46,6 @@ Event domain.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-QueryRule-domain: string--><!--Device-QueryRule-domain: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -75,10 +63,6 @@ Array of event names. A **QueryRule** object contains multiple system event name
 **Type:** string[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-QueryRule-names: string[]--><!--Device-QueryRule-names: string[]-End-->
 

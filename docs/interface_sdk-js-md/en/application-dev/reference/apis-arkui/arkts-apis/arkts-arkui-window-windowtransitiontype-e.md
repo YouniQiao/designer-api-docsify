@@ -4,10 +4,6 @@ Enumerates the types of window transition animations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-enum WindowTransitionType--><!--Device-window-enum WindowTransitionType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ DESTROY = 0
 Transition animation when the window is destroyed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

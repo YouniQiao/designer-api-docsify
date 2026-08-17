@@ -4,13 +4,9 @@
 type WebMessage = ArrayBuffer | string
 ```
 
-用于描述[onMessageEventExt](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md#onMessageEventExt)所支持的数据类型。
+用于描述[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md#webmessageport)所支持的数据类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本9开始，该接口支持在原子化服务API中使用。
 
@@ -20,6 +16,6 @@ type WebMessage = ArrayBuffer | string
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | [since 11] |
-| string | [since 11] |
+| ArrayBuffer | 二进制类型数据。 [since 11] |
+| string | 字符串类型数据。 [since 11] |
 

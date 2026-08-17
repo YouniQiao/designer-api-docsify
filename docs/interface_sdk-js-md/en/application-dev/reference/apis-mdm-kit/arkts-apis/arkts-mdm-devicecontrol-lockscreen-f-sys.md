@@ -16,11 +16,9 @@ Locks the device screen immediately.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operateDevice)(admin: Want, operation: Operation, addition?: string)
+**Substitutes:** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice)(admin: Want, operation: Operation, addition?: string)
 
 **Required permissions:** ohos.permission.ENTERPRISE_LOCK_DEVICE
 
@@ -48,7 +46,7 @@ Locks the device screen immediately.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceControl } from '@kit.MDMKit';

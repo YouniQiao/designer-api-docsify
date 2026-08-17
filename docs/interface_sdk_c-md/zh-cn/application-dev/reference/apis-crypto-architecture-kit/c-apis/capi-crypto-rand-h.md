@@ -4,6 +4,8 @@
 
 定义随机数生成器接口。
 
+**引用文件：** <CryptoArchitectureKit/crypto_rand.h>
+
 **库：** libohcrypto.so
 
 **系统能力：** SystemCapability.Security.CryptoFramework

@@ -10,10 +10,6 @@ function fromSendableValues(values: collections.Array<ValueType>): NonSendableVa
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-sendableRelationalStore-function fromSendableValues(values: collections.Array<ValueType>): NonSendableValues--><!--Device-sendableRelationalStore-function fromSendableValues(values: collections.Array<ValueType>): NonSendableValues-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -36,7 +32,7 @@ function fromSendableValues(values: collections.Array<ValueType>): NonSendableVa
 | --- | --- |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sendableRelationalStore } from '@kit.ArkData';

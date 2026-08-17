@@ -4,10 +4,6 @@ Execution frequency information.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-workScheduler-export interface FrequencyInfo--><!--Device-workScheduler-export interface FrequencyInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -32,10 +28,6 @@ Set app exec interval, in milliseconds. Unit:ms.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FrequencyInfo-interval: number--><!--Device-FrequencyInfo-interval: number-End-->
@@ -56,10 +48,6 @@ App uid. The value should be an integer.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FrequencyInfo-uid: number--><!--Device-FrequencyInfo-uid: number-End-->
@@ -79,10 +67,6 @@ ID of the deferred task. The value should be an integer.
 **Type:** number
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

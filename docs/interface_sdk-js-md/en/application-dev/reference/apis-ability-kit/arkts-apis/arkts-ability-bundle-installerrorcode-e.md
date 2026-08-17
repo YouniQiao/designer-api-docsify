@@ -4,8 +4,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-bundle-export enum InstallErrorCode--><!--Device-bundle-export enum InstallErrorCode-End-->
@@ -21,8 +19,6 @@ SUCCESS = 0
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE = 1--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE = 1-End-->
@@ -57,8 +51,6 @@ STATUS_INSTALL_FAILURE_ABORTED = 2
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_INVALID = 3--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_INVALID = 3-End-->
@@ -93,8 +83,6 @@ STATUS_INSTALL_FAILURE_CONFLICT = 4
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -112,8 +100,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_STORAGE = 5--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_STORAGE = 5-End-->
@@ -129,8 +115,6 @@ STATUS_INSTALL_FAILURE_INCOMPATIBLE = 6
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -148,8 +132,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE = 7--><!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE = 7-End-->
@@ -165,8 +147,6 @@ STATUS_UNINSTALL_FAILURE_BLOCKED = 8
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -184,8 +164,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_ABORTED = 9--><!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_ABORTED = 9-End-->
@@ -201,8 +179,6 @@ STATUS_UNINSTALL_FAILURE_CONFLICT = 10
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -220,8 +196,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT = 0x0B--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT = 0x0B-End-->
@@ -237,8 +211,6 @@ STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED = 0x0C
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -256,8 +228,6 @@ No uninstallation permission.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-InstallErrorCode-STATUS_RECOVER_FAILURE_INVALID = 0x0D--><!--Device-InstallErrorCode-STATUS_RECOVER_FAILURE_INVALID = 0x0D-End-->
@@ -273,8 +243,6 @@ STATUS_ABILITY_NOT_FOUND = 0x40
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -292,8 +260,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-InstallErrorCode-STATUS_BMS_SERVICE_ERROR = 0x41--><!--Device-InstallErrorCode-STATUS_BMS_SERVICE_ERROR = 0x41-End-->
@@ -309,8 +275,6 @@ STATUS_FAILED_NO_SPACE_LEFT = 0x42
 No uninstallation permission.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -328,8 +292,6 @@ No uninstallation permission.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-InstallErrorCode-STATUS_GRANT_REQUEST_PERMISSIONS_FAILED = 0x43--><!--Device-InstallErrorCode-STATUS_GRANT_REQUEST_PERMISSIONS_FAILED = 0x43-End-->
@@ -346,8 +308,6 @@ No uninstallation permission.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-InstallErrorCode-STATUS_INSTALL_PERMISSION_DENIED = 0x44--><!--Device-InstallErrorCode-STATUS_INSTALL_PERMISSION_DENIED = 0x44-End-->
@@ -363,8 +323,6 @@ STATUS_UNINSTALL_PERMISSION_DENIED = 0x45
 No uninstallation permission.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

@@ -1,12 +1,8 @@
 # SystemSoundManager（系统接口）
 
-管理系统声音。在调用SystemSoundManager的接口前，需要先 通过[getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f-sys.md#getSystemSoundManager（系统接口）)创建实例。
+管理系统声音。在调用SystemSoundManager的接口前，需要先 通过[getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f-sys.md#getsystemsoundmanager系统接口)创建实例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-systemSoundManager-interface SystemSoundManager--><!--Device-systemSoundManager-interface SystemSoundManager-End-->
 
@@ -23,10 +19,6 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string
 通过铃音uri将自定义铃音添加到铃音库。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
 
@@ -63,7 +55,7 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string
 | [20700005](../errorcode-audio-ringtone-sys.md#20700005-文件个数超过限制) | The number of files exceeds the limit.<br>**适用版本：** 20+ |
 | [20700004](../errorcode-audio-ringtone-sys.md#20700004-数据大小超过限制) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**适用版本：** 20+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -100,10 +92,6 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: l
 通过文件描述符fd将自定义铃音添加到铃音库。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
 
@@ -142,7 +130,7 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: l
 | [20700005](../errorcode-audio-ringtone-sys.md#20700005-文件个数超过限制) | The number of files exceeds the limit.<br>**适用版本：** 20+ |
 | [20700004](../errorcode-audio-ringtone-sys.md#20700004-数据大小超过限制) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**适用版本：** 20+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -181,10 +169,6 @@ close(fd: int): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-close(fd: int): Promise<void>--><!--Device-SystemSoundManager-close(fd: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -195,7 +179,7 @@ close(fd: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fd | int | 是 | 文件描述符，通过[openAlarmTone](#openAlarmTone)获取。 |
+| fd | int | 是 | 文件描述符，通过[openAlarmTone](#openalarmtone)获取。 |
 
 **返回值：**
 
@@ -211,7 +195,7 @@ close(fd: int): Promise<void>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -239,10 +223,6 @@ getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -269,7 +249,7 @@ getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -295,10 +275,6 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 获取系统当前闹铃uri。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>--><!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>-End-->
 
@@ -326,7 +302,7 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -353,10 +329,6 @@ getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -382,7 +354,7 @@ getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -406,10 +378,6 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 获取系统闹铃的属性。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>-End-->
 
@@ -437,7 +405,7 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -463,10 +431,6 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 获取系统铃声的属性。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>-End-->
 
@@ -495,7 +459,7 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -522,10 +486,6 @@ getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<T
 获取系统提示音的属性。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>-End-->
 
@@ -554,7 +514,7 @@ getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<T
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -582,10 +542,6 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>--><!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -597,7 +553,7 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| toneUri | string | 是 | 待获取同步振动的系统铃声Uri,可通过 [getRingtoneAttrList](#getRingtoneAttrList)或 [getSystemToneAttrList](#getSystemToneAttrList)等获取。 |
+| toneUri | string | 是 | 待获取同步振动的系统铃声Uri,可通过 [getRingtoneAttrList](#getringtoneattrlist)或 [getSystemToneAttrList](#getsystemtoneattrlist)等获取。 |
 
 **返回值：**
 
@@ -615,7 +571,7 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -644,10 +600,6 @@ getMockHapticRingtonePlayer(
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SystemSoundManager-getMockHapticRingtonePlayer(      context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(      context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>-End-->
@@ -662,7 +614,7 @@ getMockHapticRingtonePlayer(
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
 | type | RingtoneType | 是 | 待获取播放器的铃声类型。 |
-| ringtoneUri | string | 是 | 铃音文件的URI，需确保在系统文件中真实存在。 <br>如果为自定义铃声需使用 [addCustomizedTone](#addCustomizedTone) 接口返回的ringtoneUri，确保铃音文件URI在铃音库中存在。 |
+| ringtoneUri | string | 是 | 铃音文件的URI，需确保在系统文件中真实存在。 <br>如果为自定义铃声需使用 [addCustomizedTone](#addcustomizedtone) 接口返回的ringtoneUri，确保铃音文件URI在铃音库中存在。 |
 
 **返回值：**
 
@@ -675,10 +627,10 @@ getMockHapticRingtonePlayer(
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the [addCustomizedTone](#addCustomizedTone). |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the [addCustomizedTone](#addcustomizedtone). |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -711,10 +663,6 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>-End-->
@@ -744,7 +692,7 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -776,10 +724,6 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -807,7 +751,7 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -835,10 +779,6 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -865,7 +805,7 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -895,10 +835,6 @@ Gets the ringtone player.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer | null>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -924,7 +860,7 @@ Gets the ringtone player.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -954,10 +890,6 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -985,7 +917,7 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1013,11 +945,9 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [getRingtonePlayer](#getRingtonePlayer)
+**替代接口：** [getRingtonePlayer](#getringtoneplayer)
 
 <!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void-End-->
 
@@ -1031,9 +961,9 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | type | RingtoneType | 是 | 待获取播放器的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RingtonePlayer&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1065,11 +995,9 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtoneP
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [getRingtonePlayer](#getRingtonePlayer)
+**替代接口：** [getRingtonePlayer](#getringtoneplayer)
 
 <!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>-End-->
 
@@ -1090,7 +1018,7 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtoneP
 | --- | --- |
 | Promise&lt;RingtonePlayer&gt; | Promise对象，返回获取的系统铃声播放器。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1120,11 +1048,9 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [getRingtoneUri](#getRingtoneUri)
+**替代接口：** [getRingtoneUri](#getringtoneuri)
 
 <!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void-End-->
 
@@ -1138,9 +1064,9 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | type | RingtoneType | 是 | 待获取的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined， data为获取到的系统铃声uri；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined， data为获取到的系统铃声uri；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1170,11 +1096,9 @@ getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [getRingtoneUri](#getRingtoneUri)
+**替代接口：** [getRingtoneUri](#getringtoneuri)
 
 <!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>-End-->
 
@@ -1195,7 +1119,7 @@ getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回获取的系统铃声uri。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1222,10 +1146,6 @@ getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneA
 获取系统提示音的属性列表。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>-End-->
 
@@ -1254,7 +1174,7 @@ getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneA
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1282,10 +1202,6 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>--><!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -1312,7 +1228,7 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1342,10 +1258,6 @@ Gets the system tone player.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer | null>--><!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer | null>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -1371,7 +1283,7 @@ Gets the system tone player.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1401,10 +1313,6 @@ getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>--><!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -1432,7 +1340,7 @@ getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1459,10 +1367,6 @@ getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHaptics
 获取同步或者非同步的系统铃音的振动属性列表。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>--><!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>-End-->
 
@@ -1492,7 +1396,7 @@ getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHaptics
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1518,10 +1422,6 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 获取系统铃音的振动设置。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>--><!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>-End-->
 
@@ -1551,7 +1451,7 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1579,10 +1479,6 @@ openAlarmTone(context: BaseContext, uri: string): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>--><!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -1594,7 +1490,7 @@ openAlarmTone(context: BaseContext, uri: string): Promise<int>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统闹铃的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#AVPlayer)。 |
+| uri | string | 是 | 被设置的系统闹铃的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#avplayer)。 |
 
 **返回值：**
 
@@ -1611,7 +1507,7 @@ openAlarmTone(context: BaseContext, uri: string): Promise<int>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of uri is notification instead of alarm. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1639,10 +1535,6 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>--><!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -1654,7 +1546,7 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| hapticsUri | string | 是 | 待打开系统铃音的振动的uri，资源支持可参考 [media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#AVPlayer)。 |
+| hapticsUri | string | 是 | 待打开系统铃音的振动的uri，资源支持可参考 [media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#avplayer)。 |
 
 **返回值：**
 
@@ -1672,7 +1564,7 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1700,10 +1592,6 @@ openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundEr
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>--><!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -1729,7 +1617,7 @@ openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundEr
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [20700007](../errorcode-audio-ringtone-sys.md#20700007-参数无效) | Parameter is invalid, e.g. the length of uriList is too long. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1759,10 +1647,6 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WRITE_RINGTONE
 
 <!--Device-SystemSoundManager-removeCustomizedTone(context: BaseContext, uri:string): Promise<void>--><!--Device-SystemSoundManager-removeCustomizedTone(context: BaseContext, uri:string): Promise<void>-End-->
@@ -1776,7 +1660,7 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 铃音uri，可通过 [addCustomizedTone](#addCustomizedTone) 或[getAlarmToneAttrList](#getAlarmToneAttrList)等方法获取。 |
+| uri | string | 是 | 铃音uri，可通过 [addCustomizedTone](#addcustomizedtone) 或[getAlarmToneAttrList](#getalarmtoneattrlist)等方法获取。 |
 
 **返回值：**
 
@@ -1794,7 +1678,7 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1821,10 +1705,6 @@ removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemS
 批量删除自定义铃音列表。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
 
@@ -1854,7 +1734,7 @@ removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemS
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [20700007](../errorcode-audio-ringtone-sys.md#20700007-参数无效) | Parameter is invalid, e.g. the length of uriList is too long. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1884,10 +1764,6 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>--><!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -1899,7 +1775,7 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统闹铃的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#AVPlayer)。 |
+| uri | string | 是 | 被设置的系统闹铃的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#avplayer)。 |
 
 **返回值：**
 
@@ -1916,7 +1792,7 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of input uri is not an alarm tone. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1944,10 +1820,6 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -1959,7 +1831,7 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#AVPlayer)。 |
+| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#avplayer)。 |
 | type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
@@ -1976,7 +1848,7 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2005,11 +1877,9 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [setRingtoneUri](#setRingtoneUri)
+**替代接口：** [setRingtoneUri](#setringtoneuri)
 
 <!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void-End-->
 
@@ -2022,11 +1892,11 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#AVPlayer)。 |
+| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#avplayer)。 |
 | type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2057,11 +1927,9 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [setRingtoneUri](#setRingtoneUri)
+**替代接口：** [setRingtoneUri](#setringtoneuri)
 
 <!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>-End-->
 
@@ -2074,7 +1942,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#AVPlayer)。 |
+| uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#avplayer)。 |
 | type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
@@ -2083,7 +1951,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2112,10 +1980,6 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>--><!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -2127,7 +1991,7 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统提示音的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#AVPlayer)。 |
+| uri | string | 是 | 被设置的系统提示音的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#avplayer)。 |
 | type | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e-sys.md) | 是 | 被设置的系统提示音的类型。 |
 
 **返回值：**
@@ -2144,7 +2008,7 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2172,10 +2036,6 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 设置系统铃音的振动。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>--><!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>-End-->
 
@@ -2207,7 +2067,7 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

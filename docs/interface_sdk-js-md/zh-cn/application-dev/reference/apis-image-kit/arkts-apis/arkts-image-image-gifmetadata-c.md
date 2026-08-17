@@ -4,10 +4,6 @@ Gif metadata.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-image-class GifMetadata--><!--Device-image-class GifMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -23,10 +19,6 @@ Canvas height. Unit: px, The value should be an integer.
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ Canvas width. Unit: px, The value should be an integer.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-GifMetadata-readonly canvasWidth?: int--><!--Device-GifMetadata-readonly canvasWidth?: int-End-->
@@ -67,10 +55,6 @@ Delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,10 +74,6 @@ Disposal type of each frame in the image. 0 - No disposal specified. 1 - Do not 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-GifMetadata-readonly disposalType?: int--><!--Device-GifMetadata-readonly disposalType?: int-End-->
@@ -111,10 +91,6 @@ whether the GIF image has a global color map.
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,10 +110,6 @@ Loop count. The value range is all integers.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-GifMetadata-readonly loopCount?: int--><!--Device-GifMetadata-readonly loopCount?: int-End-->
@@ -155,10 +127,6 @@ Unclamped delay of each frame in milliseconds. Unit: ms, The value should be an 
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

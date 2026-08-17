@@ -4,10 +4,6 @@ Represents the data sharing result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface Result--><!--Device-cloudExtension-export interface Result-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -32,10 +28,6 @@ Error code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Result-code: int--><!--Device-Result-code: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -54,10 +46,6 @@ Detailed description of the error code. The default value is undefined.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Result-description?: string--><!--Device-Result-description?: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -75,10 +63,6 @@ Value returned. The specific type is specified by the T parameter. The default v
 **Type:** T
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Result-value?: T--><!--Device-Result-value?: T-End-->
 

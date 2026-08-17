@@ -16,10 +16,6 @@ Creates a Picture object from a MessageSequence object. Images occupy a large am
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-function createPictureFromParcel(sequence: rpc.MessageSequence): Picture--><!--Device-image-function createPictureFromParcel(sequence: rpc.MessageSequence): Picture-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -43,7 +39,7 @@ Creates a Picture object from a MessageSequence object. Images occupy a large am
 | [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

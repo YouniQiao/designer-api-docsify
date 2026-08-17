@@ -16,10 +16,6 @@ Obtains radio access technology (RAT) of the registered network. The system retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-radio-function getRadioTech(slotId: int, callback: AsyncCallback<NetworkRadioTech>): void--><!--Device-radio-function getRadioTech(slotId: int, callback: AsyncCallback<NetworkRadioTech>): void-End-->
@@ -54,10 +50,6 @@ function getRadioTech(slotId: int): Promise<NetworkRadioTech>
 Obtains radio access technology (RAT) of the registered network. The system returns RAT of the packet service (PS) and circuit service (CS) domain.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 

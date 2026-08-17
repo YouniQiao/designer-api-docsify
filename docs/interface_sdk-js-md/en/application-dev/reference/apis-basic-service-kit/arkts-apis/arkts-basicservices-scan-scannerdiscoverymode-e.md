@@ -4,10 +4,6 @@ Enumerates the scanner discovery modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-scan-enum ScannerDiscoveryMode--><!--Device-scan-enum ScannerDiscoveryMode-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -22,10 +18,6 @@ Discovery mode of the network scanner.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScannerDiscoveryMode-TCP_STR = 'TCP'--><!--Device-ScannerDiscoveryMode-TCP_STR = 'TCP'-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -39,10 +31,6 @@ USB_STR = 'USB'
 Discovery mode of the USB scanner.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScannerDiscoveryMode-USB_STR = 'USB'--><!--Device-ScannerDiscoveryMode-USB_STR = 'USB'-End-->
 

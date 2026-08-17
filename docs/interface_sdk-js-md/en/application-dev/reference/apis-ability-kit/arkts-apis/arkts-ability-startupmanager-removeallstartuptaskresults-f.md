@@ -16,17 +16,13 @@ Removes all startup task results. If there are preloading tasks for .so files, t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-startupManager-function removeAllStartupTaskResults(): void--><!--Device-startupManager-function removeAllStartupTaskResults(): void-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';

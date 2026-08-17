@@ -16,11 +16,9 @@ Disables Bluetooth on a device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [disableBluetooth](arkts-connectivity-bluetoothmanager-disablebluetooth-f.md#disableBluetooth)
+**Substitutes:** [disableBluetooth](arkts-connectivity-bluetoothmanager-disablebluetooth-f.md#disablebluetooth)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -34,7 +32,7 @@ Disables Bluetooth on a device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let disable : boolean = bluetooth.disableBluetooth();

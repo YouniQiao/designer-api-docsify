@@ -10,10 +10,6 @@ function getTotalInodes(): Promise<long>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-storageStatistics-function getTotalInodes(): Promise<long>--><!--Device-storageStatistics-function getTotalInodes(): Promise<long>-End-->
@@ -33,7 +29,7 @@ function getTotalInodes(): Promise<long>
 | 13600001 | IPC error. |
 | 13600016 | Failed to query the inode information of the data partition. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

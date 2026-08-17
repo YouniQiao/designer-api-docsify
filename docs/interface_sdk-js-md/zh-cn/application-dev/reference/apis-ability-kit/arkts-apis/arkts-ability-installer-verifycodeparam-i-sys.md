@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
 <!--Device-installer-export interface VerifyCodeParam--><!--Device-installer-export interface VerifyCodeParam-End-->
@@ -26,8 +24,6 @@ moduleName: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
 <!--Device-VerifyCodeParam-moduleName: string--><!--Device-VerifyCodeParam-moduleName: string-End-->
@@ -47,8 +43,6 @@ signatureFilePath: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 11
 

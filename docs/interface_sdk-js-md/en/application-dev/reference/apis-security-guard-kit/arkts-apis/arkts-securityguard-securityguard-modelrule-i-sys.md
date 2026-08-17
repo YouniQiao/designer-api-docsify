@@ -4,10 +4,6 @@ Provides the ModelRule type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-securityGuard-interface ModelRule--><!--Device-securityGuard-interface ModelRule-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -32,10 +28,6 @@ The security model rule
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ModelRule-modelName: string--><!--Device-ModelRule-modelName: string-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -53,10 +45,6 @@ The model param.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ModelRule-param?: string--><!--Device-ModelRule-param?: string-End-->
 

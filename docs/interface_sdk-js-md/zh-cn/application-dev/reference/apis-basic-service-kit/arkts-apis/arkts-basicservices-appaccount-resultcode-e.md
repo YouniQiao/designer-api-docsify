@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-appAccount-enum ResultCode--><!--Device-appAccount-enum ResultCode-End-->
@@ -21,8 +19,6 @@ SUCCESS = 0
 表示操作成功。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ ERROR_ACCOUNT_NOT_EXIST = 10001
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-ResultCode-ERROR_ACCOUNT_NOT_EXIST = 10001--><!--Device-ResultCode-ERROR_ACCOUNT_NOT_EXIST = 10001-End-->
@@ -57,8 +51,6 @@ ERROR_APP_ACCOUNT_SERVICE_EXCEPTION = 10002
 表示应用账号服务异常。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -76,8 +68,6 @@ ERROR_INVALID_PASSWORD = 10003
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-ResultCode-ERROR_INVALID_PASSWORD = 10003--><!--Device-ResultCode-ERROR_INVALID_PASSWORD = 10003-End-->
@@ -93,8 +83,6 @@ ERROR_INVALID_REQUEST = 10004
 表示请求无效。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -112,8 +100,6 @@ ERROR_INVALID_RESPONSE = 10005
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-ResultCode-ERROR_INVALID_RESPONSE = 10005--><!--Device-ResultCode-ERROR_INVALID_RESPONSE = 10005-End-->
@@ -129,8 +115,6 @@ ERROR_NETWORK_EXCEPTION = 10006
 表示网络异常。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -148,8 +132,6 @@ ERROR_OAUTH_AUTHENTICATOR_NOT_EXIST = 10007
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-ResultCode-ERROR_OAUTH_AUTHENTICATOR_NOT_EXIST = 10007--><!--Device-ResultCode-ERROR_OAUTH_AUTHENTICATOR_NOT_EXIST = 10007-End-->
@@ -165,8 +147,6 @@ ERROR_OAUTH_CANCELED = 10008
 表示鉴权取消。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -184,8 +164,6 @@ ERROR_OAUTH_LIST_TOO_LARGE = 10009
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-ResultCode-ERROR_OAUTH_LIST_TOO_LARGE = 10009--><!--Device-ResultCode-ERROR_OAUTH_LIST_TOO_LARGE = 10009-End-->
@@ -201,8 +179,6 @@ ERROR_OAUTH_SERVICE_BUSY = 10010
 表示开放授权服务忙碌。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -220,8 +196,6 @@ ERROR_OAUTH_SERVICE_EXCEPTION = 10011
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-ResultCode-ERROR_OAUTH_SERVICE_EXCEPTION = 10011--><!--Device-ResultCode-ERROR_OAUTH_SERVICE_EXCEPTION = 10011-End-->
@@ -237,8 +211,6 @@ ERROR_OAUTH_SESSION_NOT_EXIST = 10012
 表示鉴权会话不存在。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -256,8 +228,6 @@ ERROR_OAUTH_TIMEOUT = 10013
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-ResultCode-ERROR_OAUTH_TIMEOUT = 10013--><!--Device-ResultCode-ERROR_OAUTH_TIMEOUT = 10013-End-->
@@ -273,8 +243,6 @@ ERROR_OAUTH_TOKEN_NOT_EXIST = 10014
 表示开放授权令牌不存在。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -292,8 +260,6 @@ ERROR_OAUTH_TOKEN_TOO_MANY = 10015
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-ResultCode-ERROR_OAUTH_TOKEN_TOO_MANY = 10015--><!--Device-ResultCode-ERROR_OAUTH_TOKEN_TOO_MANY = 10015-End-->
@@ -309,8 +275,6 @@ ERROR_OAUTH_UNSUPPORT_ACTION = 10016
 表示不支持的鉴权操作。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -328,8 +292,6 @@ ERROR_OAUTH_UNSUPPORT_AUTH_TYPE = 10017
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-ResultCode-ERROR_OAUTH_UNSUPPORT_AUTH_TYPE = 10017--><!--Device-ResultCode-ERROR_OAUTH_UNSUPPORT_AUTH_TYPE = 10017-End-->
@@ -345,8 +307,6 @@ ERROR_PERMISSION_DENIED = 10018
 表示权限不足。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 

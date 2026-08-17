@@ -4,10 +4,6 @@ Indicates request parameters for Bluetooth search function.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface BluetoothSearchRequestParams--><!--Device-geoLocationManager-export interface BluetoothSearchRequestParams-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -30,10 +26,6 @@ Indicates the list of Bluetooth device ID that need to be search.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -53,10 +45,6 @@ Indicates the Bluetooth RSSI threshold, only search Bluetooth BSSID with RSSI gr
 **Type:** int
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

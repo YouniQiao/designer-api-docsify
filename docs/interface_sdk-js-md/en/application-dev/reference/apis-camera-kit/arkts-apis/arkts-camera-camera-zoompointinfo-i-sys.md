@@ -4,10 +4,6 @@ Describes the equivalent focal length information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface ZoomPointInfo--><!--Device-camera-interface ZoomPointInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -32,10 +28,6 @@ Equivalent focal length corresponding to the current focal length ratio.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ZoomPointInfo-readonly equivalentFocalLength: int--><!--Device-ZoomPointInfo-readonly equivalentFocalLength: int-End-->
@@ -55,10 +47,6 @@ Zoom ratio.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

@@ -12,13 +12,9 @@ import { window } from 'window';
 function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>
 ```
 
-Sets a watermark image for windows in the current application process. This API uses a promise to return the result. This API must be called after [loadContent()](arkts-arkui-window-window-i.md#loadContent) or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent) takes effect.
+Sets a watermark image for windows in the current application process. This API uses a promise to return the result. This API must be called after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-window-function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>--><!--Device-window-function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>-End-->
 
@@ -44,7 +40,7 @@ Sets a watermark image for windows in the current application process. This API 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function setWatermarkImageForAppWindows can not work correctly due to limited device capabilities. |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";

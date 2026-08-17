@@ -1,12 +1,8 @@
 # AcceptableFileType
 
-Defines the file types recommended by the web page when the file selector pulls files.
+Provides the file type information recommended by the file selector, including the MIME type and type array.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface AcceptableFileType--><!--Device-unnamed-declare interface AcceptableFileType-End-->
 
@@ -24,10 +20,6 @@ Array of acceptable file types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AcceptableFileType-acceptableType: Array<string>--><!--Device-AcceptableFileType-acceptableType: Array<string>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -43,10 +35,6 @@ MIME type of the file.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AcceptableFileType-mimeType: string--><!--Device-AcceptableFileType-mimeType: string-End-->
 

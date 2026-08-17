@@ -16,10 +16,6 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
@@ -56,7 +52,7 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist<br>**Applicable version:** 9 - 19 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
@@ -119,10 +115,6 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions): Promise<void>--><!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions): Promise<void>-End-->
@@ -162,7 +154,7 @@ Imports a key in plaintext. This API uses a promise to return the result.
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist<br>**Applicable version:** 9 - 19 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

@@ -16,10 +16,6 @@ Obtains the request callback from Want. > **NOTE：**> > This API can be used by
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dialogRequest-function getRequestCallback(want: Want): RequestCallback--><!--Device-dialogRequest-function getRequestCallback(want: Want): RequestCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -42,7 +38,7 @@ Obtains the request callback from Want. > **NOTE：**> > This API can be used by
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class PrintExtensionAbility--><!--Device-unnamed-declare class PrintExtensionAbility-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -24,10 +20,6 @@ onConnectPrinter(printerId: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintExtensionAbility-onConnectPrinter(printerId: int): void--><!--Device-PrintExtensionAbility-onConnectPrinter(printerId: int): void-End-->
@@ -40,7 +32,7 @@ onConnectPrinter(printerId: int): void
 | --- | --- | --- | --- |
 | printerId | int | 是 | 表示打印机ID，应为已发现的打印机，取值于打印机发现流程上报的有效打印机标识。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -78,10 +70,6 @@ onCreate(want: Want): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintExtensionAbility-onCreate(want: Want): void--><!--Device-PrintExtensionAbility-onCreate(want: Want): void-End-->
@@ -94,7 +82,7 @@ onCreate(want: Want): void
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 表示创建打印扩展时传入的Want意图信息，包含调用方指定的信息（如action、uri等），用于初始化打印扩展能力。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -118,17 +106,13 @@ onDestroy(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintExtensionAbility-onDestroy(): void--><!--Device-PrintExtensionAbility-onDestroy(): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-## 示例
+**示例**
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -150,10 +134,6 @@ onDisconnectPrinter(printerId: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintExtensionAbility-onDisconnectPrinter(printerId: int): void--><!--Device-PrintExtensionAbility-onDisconnectPrinter(printerId: int): void-End-->
@@ -166,7 +146,7 @@ onDisconnectPrinter(printerId: int): void
 | --- | --- | --- | --- |
 | printerId | int | 是 | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -200,13 +180,9 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 onStartDiscoverPrinter(): void
 ```
 
-开始发现打印机时调用。开发者可在此回调中实现自己的打印机发现逻辑，可通过 [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addPrinterToDiscovery) 将发现的打印机 信息上报给系统。
+开始发现打印机时调用。开发者可在此回调中实现自己的打印机发现逻辑，可通过 [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addprintertodiscovery) 将发现的打印机 信息上报给系统。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -214,7 +190,7 @@ onStartDiscoverPrinter(): void
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-## 示例
+**示例**
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -237,17 +213,13 @@ onStopDiscoverPrinter(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintExtensionAbility-onStopDiscoverPrinter(): void--><!--Device-PrintExtensionAbility-onStopDiscoverPrinter(): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-## 示例
+**示例**
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -271,10 +243,6 @@ context: PrintExtensionContext
 **类型：** [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

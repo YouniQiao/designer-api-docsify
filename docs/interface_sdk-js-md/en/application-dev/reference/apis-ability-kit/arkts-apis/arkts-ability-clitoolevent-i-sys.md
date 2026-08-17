@@ -4,10 +4,6 @@ The event data of cli execute.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface CliToolEvent--><!--Device-unnamed-export interface CliToolEvent-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -25,10 +21,6 @@ Tool event data.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Tool event type.
 **Type:** [ToolEventType](arkts-ability-clitoolevent-tooleventtype-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

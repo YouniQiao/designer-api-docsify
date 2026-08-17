@@ -4,10 +4,6 @@ Enumerates the data subscription types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-enum SubscriptionType--><!--Device-dataShare-enum SubscriptionType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -23,10 +19,6 @@ SUBSCRIPTION_TYPE_EXACT_URI = 0
 Data change of the specified URI.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

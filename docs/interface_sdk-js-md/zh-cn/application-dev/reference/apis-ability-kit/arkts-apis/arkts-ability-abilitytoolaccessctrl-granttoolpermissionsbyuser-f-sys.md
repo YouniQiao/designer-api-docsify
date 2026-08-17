@@ -10,10 +10,6 @@ export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Pr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
 <!--Device-abilityToolAccessCtrl-export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Promise<TicketInfo[]>--><!--Device-abilityToolAccessCtrl-export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Promise<TicketInfo[]>-End-->
@@ -47,7 +43,7 @@ export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Pr
 | [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) | Invalid parameter. PermissionName exceeds 256 characters, permissionStatus is invalid, etc. |
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { abilityToolAccessCtrl, abilityAccessCtrl, Permissions } from '@kit.AbilityKit';

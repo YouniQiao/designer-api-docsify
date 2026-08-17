@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-interface EncoderInfo--><!--Device-unnamed-interface EncoderInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
@@ -23,10 +19,6 @@ bitRate?: Range
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EncoderInfo-bitRate?: Range--><!--Device-EncoderInfo-bitRate?: Range-End-->
 
@@ -44,10 +36,6 @@ channels?: Range
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EncoderInfo-channels?: Range--><!--Device-EncoderInfo-channels?: Range-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
@@ -63,10 +51,6 @@ frameRate?: Range
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EncoderInfo-frameRate?: Range--><!--Device-EncoderInfo-frameRate?: Range-End-->
 
@@ -84,10 +68,6 @@ height?: Range
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EncoderInfo-height?: Range--><!--Device-EncoderInfo-height?: Range-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
@@ -103,10 +83,6 @@ mimeType: CodecMimeType
 **类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EncoderInfo-mimeType: CodecMimeType--><!--Device-EncoderInfo-mimeType: CodecMimeType-End-->
 
@@ -124,10 +100,6 @@ sampleRate?: Array<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EncoderInfo-sampleRate?: Array<int>--><!--Device-EncoderInfo-sampleRate?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
@@ -144,10 +116,6 @@ type: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EncoderInfo-type: string--><!--Device-EncoderInfo-type: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
@@ -163,10 +131,6 @@ width?: Range
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EncoderInfo-width?: Range--><!--Device-EncoderInfo-width?: Range-End-->
 

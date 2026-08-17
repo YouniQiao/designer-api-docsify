@@ -4,10 +4,6 @@ Defines an **EventInfo** object, which is used to receive the event details tran
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface EventInfo--><!--Device-update-export interface EventInfo-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Event ID, which identifies the upgrade event type. You can determine the specifi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EventInfo-eventId: EventId--><!--Device-EventInfo-eventId: EventId-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ Represents task data.
 **Type:** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EventInfo-taskBody: TaskBody--><!--Device-EventInfo-taskBody: TaskBody-End-->
 

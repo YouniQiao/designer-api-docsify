@@ -16,11 +16,9 @@ Obtains a **UserFileManager** instance. This instance can be used to access and 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getPhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getPhotoAccessHelper)
+**Substitutes:** [getPhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +40,7 @@ Obtains a **UserFileManager** instance. This instance can be used to access and 
 | --- | --- |
 | [UserFileManager](arkts-corefile-userfilemanager-userfilemanager-i-sys.md) | UserFileManager** instance obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The userFileManager instance obtained is a global object. It is used by default in subsequent operations. If the code snippet is not added, an error will be reported indicating that mgr is not defined.

@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace buffer--><!--Device-unnamed-declare namespace buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -37,10 +33,10 @@ import { buffer } from 'buffer';
 | Name | Description |
 | --- | --- |
 | [alloc](arkts-arkts-buffer-alloc-f.md#alloc) | Creates and initializes a **Buffer** object of the specified length. |
-| [allocUninitialized](arkts-arkts-buffer-allocuninitialized-f.md#allocUninitialized) | Creates a **Buffer** object of the specified size, without initializing it. This API does not allocate memory from the buffer pool. You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created. |
-| [allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocUninitializedFromPool) | Creates a **Buffer** object of the specified size from the buffer pool, without initializing it. You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created. |
-| [byteLength](arkts-arkts-buffer-bytelength-f.md#byteLength) | Obtains the number of bytes of a string based on the encoding format. |
-| [byteLength](arkts-arkts-buffer-bytelength-f.md#byteLength) | Obtains the number of bytes of a string based on the encoding format. |
+| [allocUninitialized](arkts-arkts-buffer-allocuninitialized-f.md#allocuninitialized) | Creates a **Buffer** object of the specified size, without initializing it. This API does not allocate memory from the buffer pool. You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created. |
+| [allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool) | Creates a **Buffer** object of the specified size from the buffer pool, without initializing it. You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created. |
+| [byteLength](arkts-arkts-buffer-bytelength-f.md#bytelength) | Obtains the number of bytes of a string based on the encoding format. |
+| [byteLength](arkts-arkts-buffer-bytelength-f.md#bytelength) | Obtains the number of bytes of a string based on the encoding format. |
 | [compare](arkts-arkts-buffer-compare-f.md#compare) | Compares two **Buffer** objects. This API is used for sorting **Buffer** objects. |
 | [compare](arkts-arkts-buffer-compare-f.md#compare) | Compares buf1 to buf2 |
 | [concat](arkts-arkts-buffer-concat-f.md#concat) | Concatenates an array of **Buffer** objects of the specified length into a new object. |
@@ -50,8 +46,8 @@ import { buffer } from 'buffer';
 | [from](arkts-arkts-buffer-from-f.md#from) | Copies the data of a passed **Buffer** object to create a new **Buffer** object and returns the new one. Creates a **Buffer** object based on the memory of a passed **Uint8Array** object and returns the new object, maintaining the memory association of the data. |
 | [from](arkts-arkts-buffer-from-f.md#from) | Creates a **Buffer** object based on the specified object. |
 | [from](arkts-arkts-buffer-from-f.md#from) | Creates a **Buffer** object based on a string in the given encoding format. |
-| [isBuffer](arkts-arkts-buffer-isbuffer-f.md#isBuffer) | Checks whether the specified object is a **Buffer** object. |
-| [isEncoding](arkts-arkts-buffer-isencoding-f.md#isEncoding) | Checks whether the encoding format is supported. |
+| [isBuffer](arkts-arkts-buffer-isbuffer-f.md#isbuffer) | Checks whether the specified object is a **Buffer** object. |
+| [isEncoding](arkts-arkts-buffer-isencoding-f.md#isencoding) | Checks whether the encoding format is supported. |
 | [transcode](arkts-arkts-buffer-transcode-f.md#transcode) | Transcodes a **Buffer** or **Uint8Array** object from one encoding format to another. |
 
 ### Classes

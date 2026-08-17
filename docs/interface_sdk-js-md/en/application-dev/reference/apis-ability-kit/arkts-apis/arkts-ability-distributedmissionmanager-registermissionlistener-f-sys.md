@@ -16,10 +16,6 @@ Registers a mission status listener. This API uses an asynchronous callback to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -45,7 +41,7 @@ Registers a mission status listener. This API uses an asynchronous callback to r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
@@ -95,10 +91,6 @@ Registers a mission status listener. This API uses a promise to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -129,7 +121,7 @@ Registers a mission status listener. This API uses a promise to return the resul
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';

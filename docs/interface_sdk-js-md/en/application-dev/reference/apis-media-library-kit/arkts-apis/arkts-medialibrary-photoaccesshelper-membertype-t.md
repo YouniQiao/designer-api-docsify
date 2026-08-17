@@ -8,10 +8,6 @@ Defines the types of the PhotoAsset members. The member types are the union of t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-type MemberType = int | long | double | string | boolean--><!--Device-photoAccessHelper-type MemberType = int | long | double | string | boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

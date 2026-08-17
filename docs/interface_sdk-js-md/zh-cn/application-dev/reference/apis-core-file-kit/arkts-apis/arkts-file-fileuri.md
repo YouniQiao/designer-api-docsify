@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare namespace fileUri--><!--Device-unnamed-declare namespace fileUri-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
@@ -18,7 +14,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) | 通过应用沙箱内的文件路径生成URI。路径中的中文及非数字字母的特殊字符会进行百分号编码。 |
+| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) | 通过应用沙箱内的文件路径生成URI。路径中的中文及非数字字母的特殊字符会进行百分号编码。 |
 
 ### 类
 

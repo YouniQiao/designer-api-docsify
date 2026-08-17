@@ -16,11 +16,9 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
 
 <!--Device-systemTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -39,7 +37,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,11 +67,9 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
 
 <!--Device-systemTime-function getCurrentTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getCurrentTime(callback: AsyncCallback<number>): void-End-->
 
@@ -91,7 +87,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -121,11 +117,9 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
 
 <!--Device-systemTime-function getCurrentTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getCurrentTime(isNano?: boolean): Promise<number>-End-->
 
@@ -149,7 +143,7 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

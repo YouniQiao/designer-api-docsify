@@ -16,10 +16,6 @@ Unsubscribes from system management events. After the API is successfully called
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_SUBSCRIBE_MANAGED_EVENT
 
 **Model restriction:** This API can be used only in the stage model.
@@ -33,7 +29,7 @@ Unsubscribes from system management events. After the API is successfully called
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| managedEvents | Array&lt;[ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)&gt; | Yes | Array of system management events to be unsubscribed from. Each element in the array is a value from the [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md#ManagedEvent) enumeration. The input event types must be the same as those passed during subscription. |
+| managedEvents | Array&lt;[ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)&gt; | Yes | Array of system management events to be unsubscribed from. Each element in the array is a value from the [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md#managedevent) enumeration. The input event types must be the same as those passed during subscription. |
 
 **Error codes:**
 
@@ -44,7 +40,7 @@ Unsubscribes from system management events. After the API is successfully called
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

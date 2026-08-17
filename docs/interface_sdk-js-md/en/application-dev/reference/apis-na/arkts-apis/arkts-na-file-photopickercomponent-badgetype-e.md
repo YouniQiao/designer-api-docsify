@@ -4,9 +4,7 @@ BadgeType.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 <!--Device-unnamed-export declare enum BadgeType--><!--Device-unnamed-export declare enum BadgeType-End-->
 
@@ -22,9 +20,7 @@ BADGE_UPLOADED. Asset uploaded.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

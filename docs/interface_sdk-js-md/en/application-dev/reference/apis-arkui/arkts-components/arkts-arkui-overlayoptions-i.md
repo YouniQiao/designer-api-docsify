@@ -4,10 +4,6 @@
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface OverlayOptions--><!--Device-unnamed-declare interface OverlayOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Alignment of the overlay relative to the component. Default value: **TopStart**
 **Type:** Alignment
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,10 +39,6 @@ Offset of the overlay from the upper left corner. By default, the overlay is in 
 **Type:** [OverlayOffset](arkts-arkui-overlayoffset-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

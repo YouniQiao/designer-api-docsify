@@ -14,10 +14,6 @@ declare function writeSync(
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: WriteOptions): number--><!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: WriteOptions): number-End-->

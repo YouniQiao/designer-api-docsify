@@ -16,10 +16,6 @@ Checks whether the current application is activated as a BYOD device administrat
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.START_PROVISIONING_MESSAGE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -47,7 +43,7 @@ Checks whether the current application is activated as a BYOD device administrat
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

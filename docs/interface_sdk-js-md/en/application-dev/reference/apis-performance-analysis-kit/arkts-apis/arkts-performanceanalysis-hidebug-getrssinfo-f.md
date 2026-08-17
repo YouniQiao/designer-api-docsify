@@ -16,10 +16,6 @@ Obtains the physical memory information of application process. This API is impl
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-hidebug-function getRssInfo(): RssInfo--><!--Device-hidebug-function getRssInfo(): RssInfo-End-->
@@ -32,7 +28,7 @@ Obtains the physical memory information of application process. This API is impl
 | --- | --- |
 | [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | Returns the Rss information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

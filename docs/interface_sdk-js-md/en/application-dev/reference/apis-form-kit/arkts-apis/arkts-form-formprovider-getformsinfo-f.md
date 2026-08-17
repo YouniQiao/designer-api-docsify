@@ -16,10 +16,6 @@ Obtains the application's widget information that meets a filter criterion on th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-formProvider-function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<Array<formInfo.FormInfo>>): void--><!--Device-formProvider-function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<Array<formInfo.FormInfo>>): void-End-->
@@ -42,7 +38,7 @@ Obtains the application's widget information that meets a filter criterion on th
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formInfo, formProvider } from '@kit.FormKit';
@@ -76,10 +72,6 @@ Obtains the application's widget information on the device. This API uses an asy
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-formProvider-function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void--><!--Device-formProvider-function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void-End-->
@@ -101,7 +93,7 @@ Obtains the application's widget information on the device. This API uses an asy
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formProvider } from '@kit.FormKit';
@@ -131,10 +123,6 @@ Obtains information about widgets that meet the criteria of the current applicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-formProvider-function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.FormInfo>>--><!--Device-formProvider-function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.FormInfo>>-End-->
@@ -162,7 +150,7 @@ Obtains information about widgets that meet the criteria of the current applicat
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formInfo, formProvider } from '@kit.FormKit';

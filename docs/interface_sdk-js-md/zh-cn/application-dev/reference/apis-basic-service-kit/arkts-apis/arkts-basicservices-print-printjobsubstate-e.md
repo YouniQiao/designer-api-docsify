@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-enum PrintJobSubState--><!--Device-print-enum PrintJobSubState-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -21,10 +17,6 @@ PRINT_JOB_COMPLETED_SUCCESS = 0
 表示打印任务成功。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_COMPLETED_SUCCESS = 0--><!--Device-PrintJobSubState-PRINT_JOB_COMPLETED_SUCCESS = 0-End-->
 
@@ -40,10 +32,6 @@ PRINT_JOB_COMPLETED_FAILED = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_COMPLETED_FAILED = 1--><!--Device-PrintJobSubState-PRINT_JOB_COMPLETED_FAILED = 1-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -57,10 +45,6 @@ PRINT_JOB_COMPLETED_CANCELLED = 2
 表示打印任务已取消。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_COMPLETED_CANCELLED = 2--><!--Device-PrintJobSubState-PRINT_JOB_COMPLETED_CANCELLED = 2-End-->
 
@@ -76,10 +60,6 @@ PRINT_JOB_COMPLETED_FILE_CORRUPTED = 3
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_COMPLETED_FILE_CORRUPTED = 3--><!--Device-PrintJobSubState-PRINT_JOB_COMPLETED_FILE_CORRUPTED = 3-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -93,10 +73,6 @@ PRINT_JOB_BLOCK_OFFLINE = 4
 表示打印处于离线状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_OFFLINE = 4--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_OFFLINE = 4-End-->
 
@@ -112,10 +88,6 @@ PRINT_JOB_BLOCK_BUSY = 5
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_BUSY = 5--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_BUSY = 5-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -129,10 +101,6 @@ PRINT_JOB_BLOCK_CANCELLED = 6
 表示打印任务已取消。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_CANCELLED = 6--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_CANCELLED = 6-End-->
 
@@ -148,10 +116,6 @@ PRINT_JOB_BLOCK_OUT_OF_PAPER = 7
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_OUT_OF_PAPER = 7--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_OUT_OF_PAPER = 7-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -165,10 +129,6 @@ PRINT_JOB_BLOCK_OUT_OF_INK = 8
 表示打印墨水用完。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_OUT_OF_INK = 8--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_OUT_OF_INK = 8-End-->
 
@@ -184,10 +144,6 @@ PRINT_JOB_BLOCK_OUT_OF_TONER = 9
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_OUT_OF_TONER = 9--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_OUT_OF_TONER = 9-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -201,10 +157,6 @@ PRINT_JOB_BLOCK_JAMMED = 10
 表示打印卡纸。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_JAMMED = 10--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_JAMMED = 10-End-->
 
@@ -220,10 +172,6 @@ PRINT_JOB_BLOCK_DOOR_OPEN = 11
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_DOOR_OPEN = 11--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_DOOR_OPEN = 11-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -237,10 +185,6 @@ PRINT_JOB_BLOCK_SERVICE_REQUEST = 12
 表示打印服务请求。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_SERVICE_REQUEST = 12--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_SERVICE_REQUEST = 12-End-->
 
@@ -256,10 +200,6 @@ PRINT_JOB_BLOCK_LOW_ON_INK = 13
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_LOW_ON_INK = 13--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_LOW_ON_INK = 13-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -273,10 +213,6 @@ PRINT_JOB_BLOCK_LOW_ON_TONER = 14
 表示打印墨粉不足。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_LOW_ON_TONER = 14--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_LOW_ON_TONER = 14-End-->
 
@@ -292,10 +228,6 @@ PRINT_JOB_BLOCK_REALLY_LOW_ON_INK = 15
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_REALLY_LOW_ON_INK = 15--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_REALLY_LOW_ON_INK = 15-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -309,10 +241,6 @@ PRINT_JOB_BLOCK_BAD_CERTIFICATE = 16
 表示打印证书有误。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_BAD_CERTIFICATE = 16--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_BAD_CERTIFICATE = 16-End-->
 
@@ -328,10 +256,6 @@ PRINT_JOB_BLOCK_DRIVER_EXCEPTION = 17
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_DRIVER_EXCEPTION = 17--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_DRIVER_EXCEPTION = 17-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -345,10 +269,6 @@ PRINT_JOB_BLOCK_ACCOUNT_ERROR = 18
 表示打印账户时出错。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_ACCOUNT_ERROR = 18--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_ACCOUNT_ERROR = 18-End-->
 
@@ -364,10 +284,6 @@ PRINT_JOB_BLOCK_PRINT_PERMISSION_ERROR = 19
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_PRINT_PERMISSION_ERROR = 19--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_PRINT_PERMISSION_ERROR = 19-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -381,10 +297,6 @@ PRINT_JOB_BLOCK_PRINT_COLOR_PERMISSION_ERROR = 20
 表示彩色打印权限异常。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_PRINT_COLOR_PERMISSION_ERROR = 20--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_PRINT_COLOR_PERMISSION_ERROR = 20-End-->
 
@@ -400,10 +312,6 @@ PRINT_JOB_BLOCK_NETWORK_ERROR = 21
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_NETWORK_ERROR = 21--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_NETWORK_ERROR = 21-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -417,10 +325,6 @@ PRINT_JOB_BLOCK_SERVER_CONNECTION_ERROR = 22
 表示无法连接服务器。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_SERVER_CONNECTION_ERROR = 22--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_SERVER_CONNECTION_ERROR = 22-End-->
 
@@ -436,10 +340,6 @@ PRINT_JOB_BLOCK_LARGE_FILE_ERROR = 23
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_LARGE_FILE_ERROR = 23--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_LARGE_FILE_ERROR = 23-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -453,10 +353,6 @@ PRINT_JOB_BLOCK_FILE_PARSING_ERROR = 24
 表示文件分析异常。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_FILE_PARSING_ERROR = 24--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_FILE_PARSING_ERROR = 24-End-->
 
@@ -472,10 +368,6 @@ PRINT_JOB_BLOCK_SLOW_FILE_CONVERSION = 25
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_SLOW_FILE_CONVERSION = 25--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_SLOW_FILE_CONVERSION = 25-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -489,10 +381,6 @@ PRINT_JOB_RUNNING_UPLOADING_FILES = 26
 表示正在上传文件。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_RUNNING_UPLOADING_FILES = 26--><!--Device-PrintJobSubState-PRINT_JOB_RUNNING_UPLOADING_FILES = 26-End-->
 
@@ -508,10 +396,6 @@ PRINT_JOB_RUNNING_CONVERTING_FILES = 27
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_RUNNING_CONVERTING_FILES = 27--><!--Device-PrintJobSubState-PRINT_JOB_RUNNING_CONVERTING_FILES = 27-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -525,10 +409,6 @@ PRINT_JOB_BLOCK_FILE_UPLOADING_ERROR = 30
 表示文件上传失败。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_FILE_UPLOADING_ERROR = 30--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_FILE_UPLOADING_ERROR = 30-End-->
 
@@ -544,10 +424,6 @@ PRINT_JOB_BLOCK_DRIVER_MISSING = 34
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_DRIVER_MISSING = 34--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_DRIVER_MISSING = 34-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -561,10 +437,6 @@ PRINT_JOB_BLOCK_INTERRUPT = 35
 表示打印任务中断。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_INTERRUPT = 35--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_INTERRUPT = 35-End-->
 
@@ -580,10 +452,6 @@ PRINT_JOB_BLOCK_PRINTER_UNAVAILABLE = 98
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_PRINTER_UNAVAILABLE = 98--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_PRINTER_UNAVAILABLE = 98-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -597,10 +465,6 @@ PRINT_JOB_BLOCK_UNKNOWN = 99
 表示打印未知问题。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJobSubState-PRINT_JOB_BLOCK_UNKNOWN = 99--><!--Device-PrintJobSubState-PRINT_JOB_BLOCK_UNKNOWN = 99-End-->
 

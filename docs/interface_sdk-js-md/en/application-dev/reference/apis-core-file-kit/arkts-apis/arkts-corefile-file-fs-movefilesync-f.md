@@ -30,10 +30,6 @@ Moves a file. This API returns the result synchronously. > **NOTE：**> > This A
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function moveFileSync(src: string, dest: string, mode?: number): void--><!--Device-unnamed-declare function moveFileSync(src: string, dest: string, mode?: number): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

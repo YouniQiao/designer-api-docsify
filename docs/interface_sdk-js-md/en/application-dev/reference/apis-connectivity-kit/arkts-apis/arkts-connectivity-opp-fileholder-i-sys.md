@@ -4,10 +4,6 @@ Describes the file info for transfer
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-opp-interface FileHolder--><!--Device-opp-interface FileHolder-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -32,10 +28,6 @@ The file fd
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileHolder-fileFd: int--><!--Device-FileHolder-fileFd: int-End-->
@@ -56,10 +48,6 @@ The file path
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileHolder-filePath: string--><!--Device-FileHolder-filePath: string-End-->
@@ -79,10 +67,6 @@ The file size
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

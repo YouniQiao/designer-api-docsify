@@ -16,10 +16,6 @@ Queries all device administrator applications of the current user. This API uses
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-adminManager-function getAdmins(): Promise<Array<Want>>--><!--Device-adminManager-function getAdmins(): Promise<Array<Want>>-End-->
@@ -40,7 +36,7 @@ Queries all device administrator applications of the current user. This API uses
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

@@ -4,10 +4,6 @@ Enumerates the device connection statuses.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum DeviceChangeType--><!--Device-audio-enum DeviceChangeType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -22,10 +18,6 @@ Connected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceChangeType-CONNECT = 0--><!--Device-DeviceChangeType-CONNECT = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -39,10 +31,6 @@ DISCONNECT = 1
 Disconnected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceChangeType-DISCONNECT = 1--><!--Device-DeviceChangeType-DISCONNECT = 1-End-->
 

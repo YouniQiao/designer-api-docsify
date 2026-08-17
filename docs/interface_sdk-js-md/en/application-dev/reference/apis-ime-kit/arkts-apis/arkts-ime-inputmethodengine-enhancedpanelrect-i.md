@@ -4,10 +4,6 @@ Indicates the size of the enhanced input method panel, including the custom avoi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-export interface EnhancedPanelRect--><!--Device-inputMethodEngine-export interface EnhancedPanelRect-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -32,10 +28,6 @@ Indicates whether to enable the full-screen mode. The default value is **false**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EnhancedPanelRect-fullScreenMode?: boolean--><!--Device-EnhancedPanelRect-fullScreenMode?: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -54,10 +46,6 @@ Distance between the avoid line and the top of the panel in landscape mode, in p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EnhancedPanelRect-landscapeAvoidY?: int--><!--Device-EnhancedPanelRect-landscapeAvoidY?: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -74,10 +62,6 @@ Region where the panel receives input events in landscape mode. - The array size
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EnhancedPanelRect-landscapeInputRegion?: Array<window.Rect>--><!--Device-EnhancedPanelRect-landscapeInputRegion?: Array<window.Rect>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -93,10 +77,6 @@ Size of the input method panel window in landscape mode. - This attribute is man
 **Type:** window.Rect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EnhancedPanelRect-landscapeRect?: window.Rect--><!--Device-EnhancedPanelRect-landscapeRect?: window.Rect-End-->
 
@@ -116,10 +96,6 @@ Distance between the avoid line and the top of the panel in portrait mode, in px
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EnhancedPanelRect-portraitAvoidY?: int--><!--Device-EnhancedPanelRect-portraitAvoidY?: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -136,10 +112,6 @@ Region where the panel receives input events in portrait mode. - The array size 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EnhancedPanelRect-portraitInputRegion?: Array<window.Rect>--><!--Device-EnhancedPanelRect-portraitInputRegion?: Array<window.Rect>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -155,10 +127,6 @@ Size of the input method panel window in portrait mode. - This attribute is mand
 **Type:** window.Rect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EnhancedPanelRect-portraitRect?: window.Rect--><!--Device-EnhancedPanelRect-portraitRect?: window.Rect-End-->
 

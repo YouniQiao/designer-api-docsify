@@ -16,10 +16,6 @@ Obtains the quick fix information of the application. This API uses an asynchron
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-quickFixManager-function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<ApplicationQuickFixInfo>): void--><!--Device-quickFixManager-function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<ApplicationQuickFixInfo>): void-End-->
@@ -45,7 +41,7 @@ Obtains the quick fix information of the application. This API uses an asynchron
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { quickFixManager } from '@kit.AbilityKit';
@@ -75,10 +71,6 @@ function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuic
 Obtains the quick fix information of the application. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -110,7 +102,7 @@ Obtains the quick fix information of the application. This API uses a promise to
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { quickFixManager } from '@kit.AbilityKit';

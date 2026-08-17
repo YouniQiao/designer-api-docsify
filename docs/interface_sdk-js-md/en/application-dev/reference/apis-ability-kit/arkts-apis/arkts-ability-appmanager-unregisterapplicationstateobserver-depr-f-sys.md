@@ -10,11 +10,9 @@ Unregister application state observer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [off](arkts-ability-appmanager-offapplicationstate-f.md#off_applicationState)
+**Substitutes:** [off](arkts-ability-appmanager-offapplicationstate-f.md#offapplicationstate)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -31,7 +29,7 @@ Unregister application state observer.
 | observerId | number | Yes | Indicates the number code of the observer. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -60,11 +58,9 @@ Unregister application state observer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [off](arkts-ability-appmanager-offapplicationstate-f.md#off_applicationState)
+**Substitutes:** [off](arkts-ability-appmanager-offapplicationstate-f.md#offapplicationstate)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -86,7 +82,7 @@ Unregister application state observer.
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

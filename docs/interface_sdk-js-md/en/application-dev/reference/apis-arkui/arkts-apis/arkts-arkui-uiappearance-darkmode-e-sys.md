@@ -4,10 +4,6 @@ Enumerates the color modes.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-uiAppearance-enum DarkMode--><!--Device-uiAppearance-enum DarkMode-End-->
 
 **System capability:** SystemCapability.ArkUI.UiAppearance
@@ -24,10 +20,6 @@ Always display with dark mode.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-DarkMode-ALWAYS_DARK = 0--><!--Device-DarkMode-ALWAYS_DARK = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.UiAppearance
@@ -43,10 +35,6 @@ ALWAYS_LIGHT = 1
 Always display with light mode.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-DarkMode-ALWAYS_LIGHT = 1--><!--Device-DarkMode-ALWAYS_LIGHT = 1-End-->
 

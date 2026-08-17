@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export enum ComponentType--><!--Device-update-export enum ComponentType-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -23,10 +19,6 @@ OTA = 1
 OTA升级包，用于固件升级的完整升级包文件。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ComponentType-OTA = 1--><!--Device-ComponentType-OTA = 1-End-->
 

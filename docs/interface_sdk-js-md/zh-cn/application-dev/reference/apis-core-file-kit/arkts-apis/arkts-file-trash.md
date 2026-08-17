@@ -16,8 +16,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -35,8 +33,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md#completelyDelete) | Permanently deletes a file or directory from the **Recently deleted** list. |
-| [listFile](arkts-corefile-trash-listfile-f-sys.md#listFile) | Lists the files and directories in the **Recently deleted** list. |
+| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md#completelydelete) | Permanently deletes a file or directory from the **Recently deleted** list. |
+| [listFile](arkts-corefile-trash-listfile-f-sys.md#listfile) | Lists the files and directories in the **Recently deleted** list. |
 | [recover](arkts-corefile-trash-recover-f-sys.md#recover) | Recovers a file or directory from the trash. |
 <!--DelEnd-->
 

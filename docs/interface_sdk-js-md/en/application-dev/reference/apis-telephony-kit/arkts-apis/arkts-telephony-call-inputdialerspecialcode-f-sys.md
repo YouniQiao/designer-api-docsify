@@ -16,10 +16,6 @@ Performs a secret code broadcast. This API uses an asynchronous callback to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PLACE_CALL
 
 <!--Device-call-function inputDialerSpecialCode(inputCode: string, callback: AsyncCallback<void>): void--><!--Device-call-function inputDialerSpecialCode(inputCode: string, callback: AsyncCallback<void>): void-End-->
@@ -46,7 +42,7 @@ Performs a secret code broadcast. This API uses an asynchronous callback to retu
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,10 +66,6 @@ function inputDialerSpecialCode(inputCode: string): Promise<void>
 Performs a secret code broadcast. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -106,7 +98,7 @@ Performs a secret code broadcast. This API uses a promise to return the result.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

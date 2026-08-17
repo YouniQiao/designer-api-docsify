@@ -16,10 +16,6 @@ Updates the printer extension information. This API uses an asynchronous callbac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function updateExtensionInfo(info: string, callback: AsyncCallback<void>): void--><!--Device-print-function updateExtensionInfo(info: string, callback: AsyncCallback<void>): void-End-->
@@ -43,7 +39,7 @@ Updates the printer extension information. This API uses an asynchronous callbac
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -69,10 +65,6 @@ function updateExtensionInfo(info: string): Promise<void>
 Updates the printer extension information. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -102,7 +94,7 @@ Updates the printer extension information. This API uses a promise to return the
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

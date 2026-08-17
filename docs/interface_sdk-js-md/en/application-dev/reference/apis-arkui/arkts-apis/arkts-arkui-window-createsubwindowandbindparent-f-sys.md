@@ -17,10 +17,6 @@ Create a subwindow with a specific name and bind parent. The parent window only 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-window-function createSubWindowAndBindParent(name: string, parentId: int, ctx: BaseContext,    parentWindowEventListener: WindowEventListener): Promise<Window>--><!--Device-window-function createSubWindowAndBindParent(name: string, parentId: int, ctx: BaseContext,    parentWindowEventListener: WindowEventListener): Promise<Window>-End-->
@@ -55,7 +51,7 @@ Create a subwindow with a specific name and bind parent. The parent window only 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: 1. The parent window does not exist or has been destroyed. 2. Invalid window type. Only main windows are supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';

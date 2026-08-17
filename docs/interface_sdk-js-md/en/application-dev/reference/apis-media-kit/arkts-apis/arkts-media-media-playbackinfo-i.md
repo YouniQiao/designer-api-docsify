@@ -4,10 +4,6 @@ Provides player statistic info.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface PlaybackInfo--><!--Device-media-interface PlaybackInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core

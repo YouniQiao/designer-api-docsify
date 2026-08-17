@@ -16,11 +16,9 @@ Sets restrictions on specified user behaviors.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setUserRestrictionForAccount](#setUserRestrictionForAccount)(admin: Want, settingsItem: SettingsForAccount, accountId: int, restricted: boolean)
+**Substitutes:** [setUserRestrictionForAccount](#setuserrestrictionforaccount)(admin: Want, settingsItem: SettingsForAccount, accountId: int, restricted: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -36,7 +34,7 @@ Sets restrictions on specified user behaviors.
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | settingsItem | string | Yes | User behavior. <br>- **modifyWallpaper**: Modify the wallpaper, including the lock screen wallpaper and home screen wallpaper. |
-| accountId | int | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId). |
+| accountId | int | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | restricted | boolean | Yes | Whether to disable the action. The value **true** means to disable the action, and **false** means the opposite. |
 
 **Error codes:**
@@ -48,7 +46,7 @@ Sets restrictions on specified user behaviors.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -81,10 +79,6 @@ Restricts a specified user from modifying specified setting items.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
 **Model restriction:** This API can be used only in the stage model.
@@ -99,7 +93,7 @@ Restricts a specified user from modifying specified setting items.
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | settingsItem | [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | Yes | User setting items to be restricted from modification. |
-| accountId | int | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId). |
+| accountId | int | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | restricted | boolean | Yes | The value **true** means to disable the action, and **false** means the opposite. |
 
 **Error codes:**

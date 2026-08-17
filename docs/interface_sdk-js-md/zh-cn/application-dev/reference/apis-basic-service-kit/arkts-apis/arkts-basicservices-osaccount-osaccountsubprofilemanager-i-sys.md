@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-interface OsAccountSubProfileManager--><!--Device-osAccount-interface OsAccountSubProfileManager-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>
 创建一个系统账号子身份资料。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -62,7 +54,7 @@ createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -114,10 +106,6 @@ deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -153,7 +141,7 @@ deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 | [12300404](../../apis-basic-services-kit/errorcode-account.md#12300404-系统账号的前台子身份资料不允许被删除) | The foreground sub-profile cannot be deleted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -207,10 +195,6 @@ getOsAccountForegroundSubProfileId(): Promise<int>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>-End-->
@@ -233,7 +217,7 @@ getOsAccountForegroundSubProfileId(): Promise<int>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -283,10 +267,6 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>-End-->
@@ -316,7 +296,7 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | The foreground sub-profile not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -368,10 +348,6 @@ getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>-End-->
@@ -400,7 +376,7 @@ getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -452,10 +428,6 @@ getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -487,7 +459,7 @@ getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -539,10 +511,6 @@ getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAcco
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -575,7 +543,7 @@ getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAcco
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -629,10 +597,6 @@ getOsAccountSubProfileIds(): Promise<int[]>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -657,7 +621,7 @@ getOsAccountSubProfileIds(): Promise<int[]>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -707,10 +671,6 @@ getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -742,7 +702,7 @@ getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -794,10 +754,6 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void-End-->
@@ -810,7 +766,7 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 否 | 需要取消订阅的回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 否 | 需要取消订阅的回调。 |
 
 **错误码：**
 
@@ -819,7 +775,7 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -863,10 +819,6 @@ onOsAccountSubProfileEvent(
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(      events: OsAccountSubProfileEvent[],      callback: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(      events: OsAccountSubProfileEvent[],      callback: Callback<OsAccountSubProfileEventData>): void-End-->
@@ -880,7 +832,7 @@ onOsAccountSubProfileEvent(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | events | [OsAccountSubProfileEvent](arkts-basicservices-osaccount-osaccountsubprofileevent-e-sys.md)[] | 是 | 要订阅的事件数组 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 是 | 事件发生时调用的回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 是 | 事件发生时调用的回调。 |
 
 **错误码：**
 
@@ -890,7 +842,7 @@ onOsAccountSubProfileEvent(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -938,10 +890,6 @@ switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -977,7 +925,7 @@ switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 | [12300405](../../apis-basic-services-kit/errorcode-account.md#12300405-已登录分布式账号的前台子身份不可直接切换到后台) | The foreground sub-profile bound with a logged-in distributed account cannot be directly switched to background. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

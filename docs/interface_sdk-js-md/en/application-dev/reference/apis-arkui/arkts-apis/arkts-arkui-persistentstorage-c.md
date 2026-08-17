@@ -1,12 +1,8 @@
-# PersistentStorage
+# PersistentStorage(System API)
 
 For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md). > **NOTE：**> Since API version 12, PersistentStorage supports **null** and **undefined**.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class PersistentStorage--><!--Device-unnamed-declare class PersistentStorage-End-->
 
@@ -18,15 +14,13 @@ For details about how to use PersistentStorage on the UI, see [PersistentStorage
 static DeleteProp(key: string): void
 ```
 
-Performs the reverse operation of PersistProp. Specifically, this API deletes the property corresponding to the specified key from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage.
+Performs the reverse operation of [PersistProp](#persistprop). Specifically, this API deletes the property corresponding to the specified key from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** deleteProp
+**Substitutes:** [deleteProp](#deleteprop)
 
 <!--Device-PersistentStorage-static DeleteProp(key: string): void--><!--Device-PersistentStorage-static DeleteProp(key: string): void-End-->
 
@@ -38,7 +32,7 @@ Performs the reverse operation of PersistProp. Specifically, this API deletes th
 | --- | --- | --- | --- |
 | key | string | Yes | Property name in PersistentStorage. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 PersistentStorage.DeleteProp('highScore');
@@ -54,11 +48,9 @@ Returns an array of all persisted property names.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** keys
+**Substitutes:** [keys](#keys)
 
 <!--Device-PersistentStorage-static Keys(): Array<string>--><!--Device-PersistentStorage-static Keys(): Array<string>-End-->
 
@@ -70,7 +62,7 @@ Returns an array of all persisted property names.
 | --- | --- |
 | Array&lt;string&gt; | Returns an array of all persisted property names. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let keys: Array<string> = PersistentStorage.Keys();
@@ -86,11 +78,9 @@ Persists the property corresponding to **key** from [AppStorage](../../../ui/sta
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** persistProp
+**Substitutes:** [persistProp](#persistprop)
 
 <!--Device-PersistentStorage-static PersistProp<T>(key: string, defaultValue: T): void--><!--Device-PersistentStorage-static PersistProp<T>(key: string, defaultValue: T): void-End-->
 
@@ -103,7 +93,7 @@ Persists the property corresponding to **key** from [AppStorage](../../../ui/sta
 | key | string | Yes | Property name. |
 | defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage. The value cannot be **null** or **undefined**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 PersistentStorage.PersistProp('highScore', '0');
@@ -120,15 +110,13 @@ static PersistProps(
   ): void
 ```
 
-Persists multiple properties. This API is similar to PersistProp, but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
+Persists multiple properties. This API is similar to [PersistProp](#persistprop), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** PersistProps
+**Substitutes:** [PersistProps](#persistprops)
 
 <!--Device-PersistentStorage-static PersistProps(    properties: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-PersistentStorage-static PersistProps(    properties: {      key: string;      defaultValue: any;    }[],  ): void-End-->
 
@@ -146,13 +134,9 @@ Persists multiple properties. This API is similar to PersistProp, but allows mul
 static deleteProp(key: string): void
 ```
 
-Performs the reverse operation of persistProp. Specifically, this API deletes the property corresponding to the specified **key** from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage. This operation removes the corresponding key from the persistence file. To persist the property again, you can call the persistProp API.
+Performs the reverse operation of [persistProp](#persistprop). Specifically, this API deletes the property corresponding to the specified **key** from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage. This operation removes the corresponding key from the persistence file. To persist the property again, you can call the [persistProp](#persistprop) API.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -166,7 +150,7 @@ Performs the reverse operation of persistProp. Specifically, this API deletes th
 | --- | --- | --- | --- |
 | key | string | Yes | Property name in PersistentStorage. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 PersistentStorage.deleteProp('highScore');
@@ -182,10 +166,6 @@ Returns an array of all persisted property names.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PersistentStorage-static keys(): Array<string>--><!--Device-PersistentStorage-static keys(): Array<string>-End-->
@@ -198,7 +178,7 @@ Returns an array of all persisted property names.
 | --- | --- |
 | Array&lt;string&gt; | Returns an array of all persisted property names. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let keys: Array<string> = PersistentStorage.keys();
@@ -214,10 +194,6 @@ Persists the property corresponding to **key** from [AppStorage](../../../ui/sta
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PersistentStorage-static persistProp<T>(key: string, defaultValue: T): void--><!--Device-PersistentStorage-static persistProp<T>(key: string, defaultValue: T): void-End-->
@@ -231,7 +207,7 @@ Persists the property corresponding to **key** from [AppStorage](../../../ui/sta
 | key | string | Yes | Property name. |
 | defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage. Since API version 12, the value can be **null** or **undefined**. |
 
-## Examples
+**Examples**
 
 For details about how to use persistProp, see [Accessing a PersistentStorage-Initialized Property from AppStorage](../../../ui/state-management/arkts-persiststorage.md#accessing-a-persistentstorage-initialized-property-from-appstorage).
 
@@ -241,13 +217,9 @@ For details about how to use persistProp, see [Accessing a PersistentStorage-Ini
 static persistProps(props: PersistPropsOptions[]): void
 ```
 
-Persists multiple properties. This API is similar to persistProp, but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
+Persists multiple properties. This API is similar to [persistProp](#persistprop), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -261,7 +233,7 @@ Persists multiple properties. This API is similar to persistProp, but allows mul
 | --- | --- | --- | --- |
 | props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | Yes | Array of properties to persist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 PersistentStorage.persistProps([{ key: 'highScore', defaultValue: '0' }, { key: 'wightScore', defaultValue: '1' }]);

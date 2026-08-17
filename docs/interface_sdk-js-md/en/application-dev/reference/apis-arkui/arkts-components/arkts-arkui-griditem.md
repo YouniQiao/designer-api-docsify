@@ -14,10 +14,6 @@ Creates a **GridItem** component.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GridItemInterface-(value?: GridItemOptions): GridItemAttribute--><!--Device-GridItemInterface-(value?: GridItemOptions): GridItemAttribute-End-->
@@ -28,7 +24,7 @@ Creates a **GridItem** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GridItemOptions](arkts-arkui-griditemoptions-i.md) | No | Parameters of the grid item, containing the **style** parameter of the [GridItemStyle](arkts-arkui-griditemstyle-e.md#GridItemStyle) enum type. |
+| value | [GridItemOptions](arkts-arkui-griditemoptions-i.md) | No | Parameters of the grid item, containing the **style** parameter of the [GridItemStyle](arkts-arkui-griditemstyle-e.md#griditemstyle) enum type. |
 
 ## Summary
 

@@ -1,12 +1,8 @@
 # WebSchemeHandlerResponse
 
-Defines the Web resource response used for scheme handler.
+WebSchemeHandlerResponse is a class used to construct HTTP response data in custom scheme interception scenarios. Developers use this class to create a Response object, set properties such as HTTP status code, status text, MIME type, character set, custom response headers, network error code, and redirection URL, and then return the custom response to the Web component through WebResourceHandler. This class is the core data carrier for custom resource interception. WebSchemeHandlerResponse is used together with WebResourceHandler: the developer constructs a WebSchemeHandlerResponse object and fills in the response properties, and then sends the response header to the intercepted request through the didReceiveResponse method of WebResourceHandler.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class WebSchemeHandlerResponse--><!--Device-webview-class WebSchemeHandlerResponse-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 constructor()
 ```
 
-Constructor.
+Constructs a **Response** object.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -47,10 +39,6 @@ getCustomErrorCode(): number
 Get the custom error code of the Web response.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,13 +58,9 @@ Get the custom error code of the Web response.
 getEncoding(): string
 ```
 
-Get the response encoding.
+Obtains the character encoding format of the response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -88,7 +72,7 @@ Get the response encoding.
 
 | Type | Description |
 | --- | --- |
-| string | Return encoding of response. |
+| string | Character encoding format of the response content, such as 'utf-8', 'gbk', etc. |
 
 ## getHeaderByName
 
@@ -96,13 +80,9 @@ Get the response encoding.
 getHeaderByName(name: string): string
 ```
 
-Get the header value by name from the response.
+Obtains the value of a response header field by name.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -114,13 +94,13 @@ Get the header value by name from the response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Header name. |
+| name | string | Yes | Name of the response header field to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return header value by name. |
+| string | Value of the response header field with the specified name. |
 
 ## getMimeType
 
@@ -128,13 +108,9 @@ Get the header value by name from the response.
 getMimeType(): string
 ```
 
-Get mime type.
+Obtains the MIME type of this response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -146,7 +122,7 @@ Get mime type.
 
 | Type | Description |
 | --- | --- |
-| string | Return mime type of response. |
+| string | MIME type string of the response content, for example, 'text/html' or 'application/json'. |
 
 ## getNetErrorCode
 
@@ -154,13 +130,9 @@ Get mime type.
 getNetErrorCode(): WebNetErrorList
 ```
 
-Get net error code.
+Obtains the network error code of the response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -172,7 +144,7 @@ Get net error code.
 
 | Type | Description |
 | --- | --- |
-| [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Return response error code. |
+| [WebNetErrorList](../../apis-na/arkts-apis/arkts-na-web-neterrorlist-webneterrorlist-e.md) | Network error code returned for the Response. |
 
 ## getStatus
 
@@ -180,13 +152,9 @@ Get net error code.
 getStatus(): number
 ```
 
-Get http status code.
+Obtains the HTTP status code of the response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -198,7 +166,7 @@ Get http status code.
 
 | Type | Description |
 | --- | --- |
-| number | Return http status code. |
+| number | Returns the HTTP status code of the Response. |
 
 ## getStatusText
 
@@ -206,13 +174,9 @@ Get http status code.
 getStatusText(): string
 ```
 
-Get status text.
+Obtains the status text of this response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -224,7 +188,7 @@ Get status text.
 
 | Type | Description |
 | --- | --- |
-| string | Return http status text. |
+| string | Status text. |
 
 ## getUrl
 
@@ -232,13 +196,9 @@ Get status text.
 getUrl(): string
 ```
 
-Get the resolved URL after redirects or changed as a result of HSTS.
+Obtains the redirection URL or the URL changed due to HSTS. Risk warning: To obtain a URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkweb-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -250,7 +210,7 @@ Get the resolved URL after redirects or changed as a result of HSTS.
 
 | Type | Description |
 | --- | --- |
-| string | Return response url for redirects. |
+| string | URL after redirection or HSTS change. |
 
 ## setCustomErrorCode
 
@@ -261,10 +221,6 @@ setCustomErrorCode(customErrorCode: number): void
 Set the custom error code for the Web response.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -284,13 +240,9 @@ Set the custom error code for the Web response.
 setEncoding(encoding: string): void
 ```
 
-Set the response encoding.
+Sets the character encoding format for the current response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -302,7 +254,7 @@ Set the response encoding.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | Yes | Encoding. |
+| encoding | string | Yes | Character encoding format. |
 
 **Error codes:**
 
@@ -316,13 +268,9 @@ Set the response encoding.
 setHeaderByName(name: string, value: string, overwrite: boolean): void
 ```
 
-Set response hander value by name.
+Sets the header information for this response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -334,9 +282,9 @@ Set response hander value by name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Header name. |
-| value | string | Yes | Header value. |
-| overwrite | boolean | Yes | Whether to overwrite. |
+| name | string | Yes | Name of the header, which specifies the HTTP response header field name to set. Common values include 'Content-Type', 'Authorization', 'Cache-Control', etc. |
+| value | string | Yes | Value of the header, which specifies the content of the HTTP response header field. It must match the header field corresponding to the name parameter. For example, when name is 'Content-Type', value can be 'text/html; charset=utf-8'. |
+| overwrite | boolean | Yes | Whether to override the existing header. The value **true** means to override the existing header, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -350,13 +298,9 @@ Set response hander value by name.
 setMimeType(type: string): void
 ```
 
-Set mime type.
+Sets the MIME type for the current response. For example, set it to text/html when injecting HTML content, and set it to application/json when injecting JSON data.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -368,7 +312,7 @@ Set mime type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Mime type. |
+| type | string | Yes | Media type (MIME type). |
 
 **Error codes:**
 
@@ -382,13 +326,9 @@ Set mime type.
 setNetErrorCode(code: WebNetErrorList): void
 ```
 
-Set net error code.
+Sets the network error code for this response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -400,7 +340,7 @@ Set net error code.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Set net error code. |
+| code | [WebNetErrorList](../../apis-na/arkts-apis/arkts-na-web-neterrorlist-webneterrorlist-e.md) | Yes | Network error code. |
 
 **Error codes:**
 
@@ -414,13 +354,9 @@ Set net error code.
 setStatus(code: number): void
 ```
 
-Set http status code.
+Sets the HTTP status code for this response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -432,7 +368,7 @@ Set http status code.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Http status code. |
+| code | number | Yes | HTTP status code. |
 
 **Error codes:**
 
@@ -446,13 +382,9 @@ Set http status code.
 setStatusText(text: string): void
 ```
 
-Set status text.
+Sets the status text for this response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -478,13 +410,9 @@ Set status text.
 setUrl(url: string): void
 ```
 
-Set the resolved URL after redirects or changed as a result of HSTS.
+Sets the redirection URL or the URL changed due to HSTS for this response. After the URL is set, a redirection to the new URL is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -496,7 +424,7 @@ Set the resolved URL after redirects or changed as a result of HSTS.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | Set response url for redirects. |
+| url | string | Yes | URL after redirection or change due to HSTS. |
 
 **Error codes:**
 

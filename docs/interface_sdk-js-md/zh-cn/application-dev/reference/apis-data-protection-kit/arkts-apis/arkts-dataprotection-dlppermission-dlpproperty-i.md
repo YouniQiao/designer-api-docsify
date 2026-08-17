@@ -4,10 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-dlpPermission-export interface DLPProperty--><!--Device-dlpPermission-export interface DLPProperty-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -26,10 +22,6 @@ allowedOpenCount?: number
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 <!--Device-DLPProperty-allowedOpenCount?: number--><!--Device-DLPProperty-allowedOpenCount?: number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -45,10 +37,6 @@ countdown?: number
 **类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,10 +56,6 @@ extensionFields?: Record<string, Object>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DLPProperty-extensionFields?: Record<string, Object>--><!--Device-DLPProperty-extensionFields?: Record<string, Object>-End-->
@@ -90,10 +74,6 @@ fileId?: string
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 <!--Device-DLPProperty-fileId?: string--><!--Device-DLPProperty-fileId?: string-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -109,10 +89,6 @@ waterMarkConfig?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DLPProperty-waterMarkConfig?: boolean--><!--Device-DLPProperty-waterMarkConfig?: boolean-End-->
 

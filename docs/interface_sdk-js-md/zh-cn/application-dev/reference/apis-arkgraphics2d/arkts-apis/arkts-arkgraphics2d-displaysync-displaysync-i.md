@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-displaySync-interface DisplaySync--><!--Device-displaySync-interface DisplaySync-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -22,10 +18,6 @@ offFrame(callback?: Callback<IntervalInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -34,9 +26,9 @@ offFrame(callback?: Callback<IntervalInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 否 | 订阅函数，参数不填时，默认取消全部订阅函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 否 | 订阅函数，参数不填时，默认取消全部订阅函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let callback = (frameInfo: displaySync.IntervalInfo) => {
@@ -59,10 +51,6 @@ off(type: 'frame', callback?: Callback<IntervalInfo>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -72,9 +60,9 @@ off(type: 'frame', callback?: Callback<IntervalInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'frame' | 是 | 设置回调的类型（只能是'frame'类型）。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 否 | 传入调用on('frame')时注册的回调函数，用于取消订阅该回调函数。必须在已通过on('frame')注册回调后使用。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 否 | 传入调用on('frame')时注册的回调函数，用于取消订阅该回调函数。必须在已通过on('frame')注册回调后使用。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let callback = (frameInfo: displaySync.IntervalInfo) => {
@@ -97,10 +85,6 @@ onFrame(callback: Callback<IntervalInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -109,9 +93,9 @@ onFrame(callback: Callback<IntervalInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 是 | 订阅函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 是 | 订阅函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let callback = (frameInfo: displaySync.IntervalInfo) => {
@@ -132,10 +116,6 @@ on(type: 'frame', callback: Callback<IntervalInfo>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -145,9 +125,9 @@ on(type: 'frame', callback: Callback<IntervalInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'frame' | 是 | 设置回调的类型（只能是'frame'类型）。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 是 | 订阅帧变化的回调函数。IntervalInfo包含timestamp（当前帧到达时间）和targetTimestamp（下一帧预期到达时间）两个属性，单位均为纳秒。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 是 | 订阅帧变化的回调函数。IntervalInfo包含timestamp（当前帧到达时间）和targetTimestamp（下一帧预期到达时间）两个属性，单位均为纳秒。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let callback = (frameInfo: displaySync.IntervalInfo) => {
@@ -168,10 +148,6 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void--><!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -188,7 +164,7 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let range : ExpectedFrameRateRange = {
@@ -211,15 +187,11 @@ start(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DisplaySync-start(): void--><!--Device-DisplaySync-start(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 示例
+**示例**
 
 ```TypeScript
 let range : ExpectedFrameRateRange = {
@@ -276,15 +248,11 @@ stop(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DisplaySync-stop(): void--><!--Device-DisplaySync-stop(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 示例
+**示例**
 
 ```TypeScript
 let range : ExpectedFrameRateRange = {

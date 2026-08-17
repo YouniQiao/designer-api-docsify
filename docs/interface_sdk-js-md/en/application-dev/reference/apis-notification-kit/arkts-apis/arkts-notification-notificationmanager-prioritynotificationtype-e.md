@@ -4,10 +4,6 @@ Describes the priority type of a notification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export enum PriorityNotificationType--><!--Device-notificationManager-export enum PriorityNotificationType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -21,10 +17,6 @@ OTHER = 'OTHER'
 Default.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PriorityNotificationType-OTHER = 'OTHER'--><!--Device-PriorityNotificationType-OTHER = 'OTHER'-End-->
 
@@ -40,10 +32,6 @@ Primary contact.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PriorityNotificationType-PRIMARY_CONTACT = 'PRIMARY_CONTACT'--><!--Device-PriorityNotificationType-PRIMARY_CONTACT = 'PRIMARY_CONTACT'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -57,10 +45,6 @@ AT_ME = 'AT_ME'
 Message that mentions me.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PriorityNotificationType-AT_ME = 'AT_ME'--><!--Device-PriorityNotificationType-AT_ME = 'AT_ME'-End-->
 
@@ -76,10 +60,6 @@ Urgent message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PriorityNotificationType-URGENT_MESSAGE = 'URGENT_MESSAGE'--><!--Device-PriorityNotificationType-URGENT_MESSAGE = 'URGENT_MESSAGE'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -93,10 +73,6 @@ SCHEDULE_REMINDER = 'SCHEDULE_REMINDER'
 Schedule reminder.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PriorityNotificationType-SCHEDULE_REMINDER = 'SCHEDULE_REMINDER'--><!--Device-PriorityNotificationType-SCHEDULE_REMINDER = 'SCHEDULE_REMINDER'-End-->
 

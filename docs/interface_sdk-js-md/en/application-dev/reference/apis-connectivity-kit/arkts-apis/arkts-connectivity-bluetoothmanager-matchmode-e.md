@@ -4,11 +4,9 @@ The enum of BLE match mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MatchMode](arkts-connectivity-ble-matchmode-e.md#MatchMode)
+**Substitutes:** [MatchMode](arkts-connectivity-ble-matchmode-e.md#matchmode)
 
 <!--Device-bluetoothManager-enum MatchMode--><!--Device-bluetoothManager-enum MatchMode-End-->
 
@@ -24,11 +22,9 @@ aggressive mode
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#MATCH_MODE_AGGRESSIVE)
+**Substitutes:** [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#matchmodeaggressive)
 
 <!--Device-MatchMode-MATCH_MODE_AGGRESSIVE = 1--><!--Device-MatchMode-MATCH_MODE_AGGRESSIVE = 1-End-->
 
@@ -44,11 +40,9 @@ sticky mode
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MATCH_MODE_STICKY](arkts-connectivity-ble-matchmode-e.md#MATCH_MODE_STICKY)
+**Substitutes:** [MATCH_MODE_STICKY](arkts-connectivity-ble-matchmode-e.md#matchmodesticky)
 
 <!--Device-MatchMode-MATCH_MODE_STICKY = 2--><!--Device-MatchMode-MATCH_MODE_STICKY = 2-End-->
 

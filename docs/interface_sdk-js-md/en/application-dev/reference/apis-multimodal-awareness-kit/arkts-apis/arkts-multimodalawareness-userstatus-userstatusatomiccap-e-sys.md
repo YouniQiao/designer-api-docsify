@@ -4,10 +4,6 @@ Enumerates user status atomic capabilities.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-userStatus-export enum UserStatusAtomicCap--><!--Device-userStatus-export enum UserStatusAtomicCap-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
@@ -23,10 +19,6 @@ ATOMIC_UNKNOWN = 0
 Unknown atomic capability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Detects face position relative to screen.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusAtomicCap-FACE_RELATIVE_POSITION = 1--><!--Device-UserStatusAtomicCap-FACE_RELATIVE_POSITION = 1-End-->
@@ -67,10 +55,6 @@ FACE_NUM_CHANGE = 2
 Detects face number changes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ Detects user hand gestures.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusAtomicCap-GESTURE = 3--><!--Device-UserStatusAtomicCap-GESTURE = 3-End-->
@@ -111,10 +91,6 @@ FACE_ANGLE = 4
 Detects face angle relative to screen.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,10 +110,6 @@ Detects sensor gravity data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusAtomicCap-SENSOR_GRAVITY = 5--><!--Device-UserStatusAtomicCap-SENSOR_GRAVITY = 5-End-->
@@ -155,10 +127,6 @@ SENSOR_GYROSCOPE = 6
 Detects sensor gyroscope data.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +146,6 @@ Detects sensor accelerometer data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusAtomicCap-SENSOR_ACCELEROMETER = 7--><!--Device-UserStatusAtomicCap-SENSOR_ACCELEROMETER = 7-End-->
@@ -199,10 +163,6 @@ SENSOR_LINEAR_ACCELERATION = 8
 Detects sensor linear acceleration data.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,10 +182,6 @@ Detects sensor rotation vector data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusAtomicCap-SENSOR_ROTATION_VECTOR = 9--><!--Device-UserStatusAtomicCap-SENSOR_ROTATION_VECTOR = 9-End-->
@@ -243,10 +199,6 @@ SENSOR_ORIENTATION = 10
 Detects sensor orientation data.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,10 +218,6 @@ Detects user blow data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusAtomicCap-BLOWING_STATUS = 11--><!--Device-UserStatusAtomicCap-BLOWING_STATUS = 11-End-->
@@ -287,10 +235,6 @@ MOOD_STATUS = 12
 Detects user emotion data.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -310,10 +254,6 @@ Detects user ambient sound intensity.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusAtomicCap-ENV_SOUND = 13--><!--Device-UserStatusAtomicCap-ENV_SOUND = 13-End-->
@@ -332,10 +272,6 @@ Detects user noise intensity.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusAtomicCap-NOISE_SOUND = 14--><!--Device-UserStatusAtomicCap-NOISE_SOUND = 14-End-->
@@ -353,10 +289,6 @@ EYE_GAZE_SCREEN = 15
 Detects whether user is gazing at screen.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

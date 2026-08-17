@@ -4,10 +4,6 @@ System panel status.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodSystemPanelManager-interface SystemPanelStatus--><!--Device-inputMethodSystemPanelManager-interface SystemPanelStatus-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -32,10 +28,6 @@ The input type of the input method.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemPanelStatus-inputType: InputMethodInputType--><!--Device-SystemPanelStatus-inputType: InputMethodInputType-End-->
@@ -55,10 +47,6 @@ Whether the system panel needs to be raised.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Whether the system panel's function button is needed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemPanelStatus-needFuncButton: boolean--><!--Device-SystemPanelStatus-needFuncButton: boolean-End-->
@@ -103,10 +87,6 @@ The panel flag of the input method's soft keyboard panel.
 **Type:** [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Specifies the target node for component binding.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface TargetInfo--><!--Device-unnamed-export interface TargetInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -47,6 +43,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## componentId
@@ -60,10 +58,6 @@ Unique ID of the custom component where the target node is located. When the abo
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,10 +78,6 @@ Target node for binding popups or menus.<br>**NOTE：**<br>1. When **id** is a n
 **Type:** string \| number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

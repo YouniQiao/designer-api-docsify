@@ -4,10 +4,6 @@ Describes the app backup icon information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AlternateIconInfo--><!--Device-unnamed-export interface AlternateIconInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -23,10 +19,6 @@ Whether the backup icon is enabled. true: The current backup icon is enabled. fa
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Resource ID of the backup icon, which is automatically generated during compilat
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AlternateIconInfo-readonly iconId: long--><!--Device-AlternateIconInfo-readonly iconId: long-End-->
@@ -67,10 +55,6 @@ Name of the backup icon.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

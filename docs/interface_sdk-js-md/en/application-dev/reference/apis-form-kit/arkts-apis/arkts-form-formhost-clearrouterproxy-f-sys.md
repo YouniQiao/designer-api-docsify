@@ -16,10 +16,6 @@ Clears the router proxy set for widgets. This API uses an asynchronous callback 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 <!--Device-formHost-function clearRouterProxy(formIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-formHost-function clearRouterProxy(formIds: Array<string>, callback: AsyncCallback<void>): void-End-->
@@ -57,10 +53,6 @@ function clearRouterProxy(formIds: Array<string>): Promise<void>
 Clears the router proxy set for widgets. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

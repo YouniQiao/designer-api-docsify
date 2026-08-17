@@ -10,10 +10,6 @@ function on(type: 'sessionCreate', callback: (session: AVSessionDescriptor) => v
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-avSession-function on(type: 'sessionCreate', callback: (session: AVSessionDescriptor) => void): void--><!--Device-avSession-function on(type: 'sessionCreate', callback: (session: AVSessionDescriptor) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
@@ -35,7 +31,7 @@ function on(type: 'sessionCreate', callback: (session: AVSessionDescriptor) => v
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 @Entry

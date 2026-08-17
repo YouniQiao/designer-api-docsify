@@ -16,10 +16,6 @@ Creates a SystemSoundPlayer instance. This function uses a promise to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>--><!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -36,7 +32,7 @@ Creates a SystemSoundPlayer instance. This function uses a promise to return the
 | --- | --- |
 | [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

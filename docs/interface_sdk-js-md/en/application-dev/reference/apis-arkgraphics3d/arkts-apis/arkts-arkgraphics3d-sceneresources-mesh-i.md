@@ -1,14 +1,10 @@
 # Mesh
 
-The mesh instance owned by the mesh node
+Mesh resource, which inherits from SceneResource.
 
-**Inheritance/Implementation:** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
+**Inheritance/Implementation:** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#sceneresource)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Mesh--><!--Device-unnamed-export interface Mesh-End-->
 
@@ -20,15 +16,11 @@ The mesh instance owned by the mesh node
 readonly aabb: Aabb
 ```
 
-The axis aligned bounding box of the mesh.
+Axis aligned bounding box.
 
 **Type:** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Mesh-readonly aabb: Aabb--><!--Device-Mesh-readonly aabb: Aabb-End-->
 
@@ -40,15 +32,11 @@ The axis aligned bounding box of the mesh.
 materialOverride?: Material
 ```
 
-The material override sub mesh's material.
+Material. The default value is undefined.
 
 **Type:** [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Mesh-materialOverride?: Material--><!--Device-Mesh-materialOverride?: Material-End-->
 
@@ -60,15 +48,11 @@ The material override sub mesh's material.
 readonly subMeshes: SubMesh[]
 ```
 
-The sub meshes of the mesh.
+Array of sub-meshes.
 
 **Type:** [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Mesh-readonly subMeshes: SubMesh[]--><!--Device-Mesh-readonly subMeshes: SubMesh[]-End-->
 

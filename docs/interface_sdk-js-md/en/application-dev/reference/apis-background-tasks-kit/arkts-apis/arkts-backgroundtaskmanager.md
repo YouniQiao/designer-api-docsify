@@ -4,11 +4,9 @@ The **BackgroundTaskManager** module provides APIs to manage background tasks. I
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md#@ohos.resourceschedule.backgroundTaskManager)
+**Substitutes:** [backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md#ohosresourceschedulebackgroundtaskmanager)
 
 <!--Device-unnamed-declare namespace backgroundTaskManager--><!--Device-unnamed-declare namespace backgroundTaskManager-End-->
 
@@ -20,14 +18,14 @@ The **BackgroundTaskManager** module provides APIs to manage background tasks. I
 
 | Name | Description |
 | --- | --- |
-| [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-depr-f.md#cancelSuspendDelay) | Cancels the suspension delay. |
-| [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md#getRemainingDelayTime) | Obtains the remaining duration before the application is suspended. This API uses an asynchronous callback to return the result. |
-| [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md#getRemainingDelayTime) | Obtains the remaining duration before the application is suspended. This API uses a promise to return the result. |
-| [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestSuspendDelay) | Requests delayed suspension after the application switches to the background. The default duration of delayed suspension is 3 minutes when the battery level is higher than or equal to the broadcast low battery level and 1 minute when the battery level is lower than the broadcast low battery level. |
-| [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startBackgroundRunning) | Requests a continuous task from the system. This API uses an asynchronous callback to return the result. |
-| [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startBackgroundRunning) | Requests a continuous task from the system. This API uses a promise to return the result. |
-| [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-depr-f.md#stopBackgroundRunning) | Requests to cancel a continuous task. This API uses an asynchronous callback to return the result. |
-| [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-depr-f.md#stopBackgroundRunning) | Requests to cancel a continuous task. This API uses a promise to return the result. |
+| [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-depr-f.md#cancelsuspenddelay) | Cancels the suspension delay. |
+| [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md#getremainingdelaytime) | Obtains the remaining duration before the application is suspended. This API uses an asynchronous callback to return the result. |
+| [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md#getremainingdelaytime) | Obtains the remaining duration before the application is suspended. This API uses a promise to return the result. |
+| [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay) | Requests delayed suspension after the application switches to the background. The default duration of delayed suspension is 3 minutes when the battery level is higher than or equal to the broadcast low battery level and 1 minute when the battery level is lower than the broadcast low battery level. |
+| [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning) | Requests a continuous task from the system. This API uses an asynchronous callback to return the result. |
+| [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning) | Requests a continuous task from the system. This API uses a promise to return the result. |
+| [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-depr-f.md#stopbackgroundrunning) | Requests to cancel a continuous task. This API uses an asynchronous callback to return the result. |
+| [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-depr-f.md#stopbackgroundrunning) | Requests to cancel a continuous task. This API uses a promise to return the result. |
 
 ### Interfaces
 

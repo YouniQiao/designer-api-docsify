@@ -4,10 +4,6 @@ RGBA color description.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-interface Color--><!--Device-uiEffect-interface Color-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -32,10 +28,6 @@ Alpha component of the color (transparency).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Color-alpha: double--><!--Device-Color-alpha: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -53,10 +45,6 @@ Blue component of the color.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Color-blue: double--><!--Device-Color-blue: double-End-->
 
@@ -76,10 +64,6 @@ Green component of the color.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Color-green: double--><!--Device-Color-green: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -97,10 +81,6 @@ Red component of the color.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Color-red: double--><!--Device-Color-red: double-End-->
 

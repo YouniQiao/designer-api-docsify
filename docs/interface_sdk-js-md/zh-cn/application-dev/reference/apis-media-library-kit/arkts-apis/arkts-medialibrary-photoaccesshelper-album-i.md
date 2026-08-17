@@ -2,13 +2,9 @@
 
 实体相册。
 
-**继承/实现关系：** Album extends [AbsAlbum](arkts-medialibrary-photoaccesshelper-absalbum-i.md#AbsAlbum)
+**继承/实现关系：** Album extends [AbsAlbum](arkts-medialibrary-photoaccesshelper-absalbum-i.md#absalbum)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-photoAccessHelper-interface Album--><!--Device-photoAccessHelper-interface Album-End-->
 
@@ -24,11 +20,9 @@ addAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addAssets)
+**替代接口：** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -41,7 +35,7 @@ addAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | 是 | 待添加到相册中的图片或视频数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当添加图片或视频成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当添加图片或视频成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -62,11 +56,9 @@ addAssets(assets: Array<PhotoAsset>): Promise<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addAssets)
+**替代接口：** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -105,10 +97,6 @@ commitModify(callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-Album-commitModify(callback: AsyncCallback<void>): void--><!--Device-Album-commitModify(callback: AsyncCallback<void>): void-End-->
@@ -119,7 +107,7 @@ commitModify(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当相册属性修改成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当相册属性修改成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -139,10 +127,6 @@ commitModify(): Promise<void>
 更新相册属性修改到数据库中。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -175,11 +159,9 @@ removeAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [removeAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeAssets)
+**替代接口：** [removeAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -192,7 +174,7 @@ removeAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | 是 | 相册中待移除的图片或视频数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移除图片或视频成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当移除图片或视频成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -213,11 +195,9 @@ removeAssets(assets: Array<PhotoAsset>): Promise<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [removeAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeAssets)
+**替代接口：** [removeAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -258,10 +238,6 @@ readonly imageCount?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Album-readonly imageCount?: int--><!--Device-Album-readonly imageCount?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -277,10 +253,6 @@ readonly videoCount?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Album-readonly videoCount?: int--><!--Device-Album-readonly videoCount?: int-End-->
 

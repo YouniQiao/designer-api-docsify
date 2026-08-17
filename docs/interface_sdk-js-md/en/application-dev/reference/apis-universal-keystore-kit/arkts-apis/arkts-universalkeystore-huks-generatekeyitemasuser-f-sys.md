@@ -16,10 +16,6 @@ Generates a key for the specified user. This API uses a promise to return the re
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-huks-function generateKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>--><!--Device-huks-function generateKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>-End-->
@@ -62,7 +58,7 @@ Generates a key for the specified user. This API uses a promise to return the re
 | [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 
-## Examples
+**Examples**
 
 The caller must be a system application running under user 0 to user 99 (inclusive) and must have the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission. For details, see [singleton](../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md#device-specific-application-privileges).
 

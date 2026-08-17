@@ -4,10 +4,6 @@ Enumerates the animation types used when the floating ball text is updated.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-floatingBall-enum FloatingBallTextUpdateAnimationType--><!--Device-floatingBall-enum FloatingBallTextUpdateAnimationType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ ANIMATION_NONE = 0
 No animation.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,10 +33,6 @@ ANIMATION_OPACITY = 1
 Fade-in and fade-out animation.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

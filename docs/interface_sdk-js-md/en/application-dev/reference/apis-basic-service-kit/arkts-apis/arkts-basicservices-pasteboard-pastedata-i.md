@@ -1,12 +1,8 @@
 # PasteData
 
-Implements a **PasteData** object. PasteData contains one or more data records ( [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md#PasteDataRecord)) and property description objects ( [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)). Before calling any API in **PasteData**, you must use ** [createData()](arkts-basicservices-pasteboard-createdata-f.md#createData)** or ** [getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getData)** to create a **PasteData** object.
+Implements a **PasteData** object. PasteData contains one or more data records ( [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md#pastedatarecord)) and property description objects ( [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#pastedataproperty)). Before calling any API in **PasteData**, you must use ** [createData()](arkts-basicservices-pasteboard-createdata-f.md#createdata)** or ** [getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)** to create a **PasteData** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-pasteboard-interface PasteData--><!--Device-pasteboard-interface PasteData-End-->
 
@@ -24,15 +20,13 @@ import { pasteboard } from 'pasteboard';
 addHtmlRecord(htmlText: string): void
 ```
 
-Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
+Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#pastedataproperty). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addRecord)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addHtmlRecord(htmlText: string): void--><!--Device-PasteData-addHtmlRecord(htmlText: string): void-End-->
 
@@ -44,7 +38,7 @@ Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeT
 | --- | --- | --- | --- |
 | htmlText | string | Yes | HTML content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('hello');
@@ -58,13 +52,9 @@ pasteData.addHtmlRecord(html);
 addRecord(record: PasteDataRecord): void
 ```
 
-Adds a data record to the PasteData, and adds its type to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
+Adds a data record to the PasteData, and adds its type to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#pastedataproperty). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,7 +68,7 @@ Adds a data record to the PasteData, and adds its type to **mimeTypes** in [Past
 | --- | --- | --- | --- |
 | record | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | Yes | Record to add. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
@@ -95,13 +85,9 @@ pasteData.addRecord(htmlRecord);
 addRecord(mimeType: string, value: ValueType): void
 ```
 
-Adds a data record to the PasteData, and adds its type to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
+Adds a data record to the PasteData, and adds its type to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#pastedataproperty). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -123,7 +109,7 @@ Adds a data record to the PasteData, and adds its type to **mimeTypes** in [Past
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 | [12900002](../../apis-basic-services-kit/errorcode-pasteboard.md#12900002-maximum-number-of-records-reached) | The number of records exceeds the upper limit.<br>**Applicable version:** 9 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
@@ -137,15 +123,13 @@ pasteData.addRecord('app/xml', dataXml);
 addTextRecord(text: string): void
 ```
 
-Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
+Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#pastedataproperty). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addRecord)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addTextRecord(text: string): void--><!--Device-PasteData-addTextRecord(text: string): void-End-->
 
@@ -157,7 +141,7 @@ Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to *
 | --- | --- | --- | --- |
 | text | string | Yes | Plain text. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('hello');
@@ -170,15 +154,13 @@ pasteData.addTextRecord('good');
 addUriRecord(uri: string): void
 ```
 
-Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
+Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#pastedataproperty). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addRecord)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addUriRecord(uri: string): void--><!--Device-PasteData-addUriRecord(uri: string): void-End-->
 
@@ -190,7 +172,7 @@ Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeType
 | --- | --- | --- | --- |
 | uri | string | Yes | URI content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('hello');
@@ -203,15 +185,13 @@ pasteData.addUriRecord('dataability:///com.example.myapplication1/user.txt');
 addWantRecord(want: Want): void
 ```
 
-Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation fails.
+Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#pastedataproperty). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addRecord)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addWantRecord(want: Want): void--><!--Device-PasteData-addWantRecord(want: Want): void-End-->
 
@@ -223,7 +203,7 @@ Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTy
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -242,13 +222,9 @@ pasteData.addWantRecord(object);
 getMimeTypes(): Array<string>
 ```
 
-Obtains types of [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty) of the PasteData.
+Obtains types of [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#pastedataproperty) of the PasteData.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -262,7 +238,7 @@ Obtains types of [PasteDataProperty](arkts-basicservices-pasteboard-pastedatapro
 | --- | --- |
 | Array&lt;string&gt; | Data types of the PasteData. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -279,10 +255,6 @@ Obtains the HTML content of the primary record.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-getPrimaryHtml(): string--><!--Device-PasteData-getPrimaryHtml(): string-End-->
@@ -295,7 +267,7 @@ Obtains the HTML content of the primary record.
 | --- | --- |
 | string | HTML content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -318,10 +290,6 @@ Obtains the data type of the primary record in the pasteboard.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-getPrimaryMimeType(): string--><!--Device-PasteData-getPrimaryMimeType(): string-End-->
@@ -334,7 +302,7 @@ Obtains the data type of the primary record in the pasteboard.
 | --- | --- |
 | string | Data type of the primary record. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -351,10 +319,6 @@ Obtains the PixelMap of the primary record.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-getPrimaryPixelMap(): image.PixelMap--><!--Device-PasteData-getPrimaryPixelMap(): image.PixelMap-End-->
@@ -367,7 +331,7 @@ Obtains the PixelMap of the primary record.
 | --- | --- |
 | image.PixelMap | PixelMap. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -397,10 +361,6 @@ Obtains the plain text of the primary record.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-getPrimaryText(): string--><!--Device-PasteData-getPrimaryText(): string-End-->
@@ -413,7 +373,7 @@ Obtains the plain text of the primary record.
 | --- | --- |
 | string | Plain text. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -436,10 +396,6 @@ Obtains the URI of the primary record.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-getPrimaryUri(): string--><!--Device-PasteData-getPrimaryUri(): string-End-->
@@ -452,7 +408,7 @@ Obtains the URI of the primary record.
 | --- | --- |
 | string | URI content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -475,10 +431,6 @@ Obtains the **Want** object of the primary record.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-getPrimaryWant(): Want--><!--Device-PasteData-getPrimaryWant(): Want-End-->
@@ -491,7 +443,7 @@ Obtains the **Want** object of the primary record.
 | --- | --- |
 | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Want object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -515,10 +467,6 @@ Obtains the property of the PasteData.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-getProperty(): PasteDataProperty--><!--Device-PasteData-getProperty(): PasteDataProperty-End-->
@@ -531,7 +479,7 @@ Obtains the property of the PasteData.
 | --- | --- |
 | [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) | Property of the PasteData. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -547,10 +495,6 @@ getRecord(index: int): PasteDataRecord
 Obtains the record with a specific index in PasteData.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -577,7 +521,7 @@ Obtains the record with a specific index in PasteData.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -594,11 +538,9 @@ Obtains the record with a specific index in PasteData.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRecord](#getRecord)(index: int)
+**Substitutes:** [getRecord](#getrecord)(index: int)
 
 <!--Device-PasteData-getRecordAt(index: number): PasteDataRecord--><!--Device-PasteData-getRecordAt(index: number): PasteDataRecord-End-->
 
@@ -622,7 +564,7 @@ Obtains the record with a specific index in PasteData.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('hello');
@@ -639,10 +581,6 @@ Obtains the number of records in a PasteData object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-getRecordCount(): int--><!--Device-PasteData-getRecordCount(): int-End-->
@@ -655,7 +593,7 @@ Obtains the number of records in a PasteData object.
 | --- | --- |
 | int | Number of records. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -672,10 +610,6 @@ Obtains the custom tag from the PasteData. If no custom tag is set, an empty str
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-getTag(): string--><!--Device-PasteData-getTag(): string-End-->
@@ -688,7 +622,7 @@ Obtains the custom tag from the PasteData. If no custom tag is set, an empty str
 | --- | --- |
 | string | Custom tag. If no custom tag is set, an empty string is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -705,11 +639,9 @@ Checks whether the PasteData contains data of the specified type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hasType](#hasType)(mimeType: string)
+**Substitutes:** [hasType](#hastype)(mimeType: string)
 
 <!--Device-PasteData-hasMimeType(mimeType: string): boolean--><!--Device-PasteData-hasMimeType(mimeType: string): boolean-End-->
 
@@ -733,7 +665,7 @@ Checks whether the PasteData contains data of the specified type.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('hello');
@@ -750,10 +682,6 @@ Checks whether the PasteData contains data of the specified MIME type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-hasType(mimeType: string): boolean--><!--Device-PasteData-hasType(mimeType: string): boolean-End-->
@@ -764,7 +692,7 @@ Checks whether the PasteData contains data of the specified MIME type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | Type of the data to query. The value can be a predefined type listed in [Constants](arkts-pasteboard.md#Constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. |
+| mimeType | string | Yes | Type of the data to query. The value can be a predefined type listed in [Constants](arkts-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. |
 
 **Return value:**
 
@@ -778,7 +706,7 @@ Checks whether the PasteData contains data of the specified MIME type.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -795,15 +723,11 @@ Invoked to notify pasteboard service the utilization of PasteData has completed 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PasteData-pasteComplete(): void--><!--Device-PasteData-pasteComplete(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -830,15 +754,11 @@ Notifies the pasteboard service to retain the cross-device channel before readin
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PasteData-pasteStart(): void--><!--Device-PasteData-pasteStart(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -865,10 +785,6 @@ Removes the record with a specific index in PasteData.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PasteData-removeRecord(index: int): void--><!--Device-PasteData-removeRecord(index: int): void-End-->
@@ -888,7 +804,7 @@ Removes the record with a specific index in PasteData.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -905,11 +821,9 @@ Removes the record with a specific index in PasteData.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [removeRecord](#removeRecord)(index: int)
+**Substitutes:** [removeRecord](#removerecord)(index: int)
 
 <!--Device-PasteData-removeRecordAt(index: number): boolean--><!--Device-PasteData-removeRecordAt(index: number): boolean-End-->
 
@@ -933,7 +847,7 @@ Removes the record with a specific index in PasteData.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('hello');
@@ -949,10 +863,6 @@ replaceRecord(index: int, record: PasteDataRecord): void
 Replaces the record with a specific index in PasteData.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -974,7 +884,7 @@ Replaces the record with a specific index in PasteData.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -992,11 +902,9 @@ Replaces the record with a specific index in PasteData.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [replaceRecord](#replaceRecord)(index: int, record: PasteDataRecord)
+**Substitutes:** [replaceRecord](#replacerecord)(index: int, record: PasteDataRecord)
 
 <!--Device-PasteData-replaceRecordAt(index: number, record: PasteDataRecord): boolean--><!--Device-PasteData-replaceRecordAt(index: number, record: PasteDataRecord): boolean-End-->
 
@@ -1015,7 +923,7 @@ Replaces the record with a specific index in PasteData.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('hello');
@@ -1029,13 +937,9 @@ let isReplace: boolean = pasteData.replaceRecordAt(0, record);
 setProperty(property: PasteDataProperty): void
 ```
 
-Sets a [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty) object.
+Sets a [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#pastedataproperty) object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1055,7 +959,7 @@ Sets a [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 type AdditionType = Record<string, Record<string, Object>>;
@@ -1069,7 +973,7 @@ prop.tag = 'TestTag';
 pasteData.setProperty(prop);
 ```
 
-The localOnly and shareOption attributes of [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty) are mutually exclusive. The shareOption attribute is prioritized, and its value affects the value of localOnly.
+The localOnly and shareOption attributes of [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#pastedataproperty) are mutually exclusive. The shareOption attribute is prioritized, and its value affects the value of localOnly.
 
 ```TypeScript
 (async () => {

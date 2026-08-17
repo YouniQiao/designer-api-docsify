@@ -16,10 +16,6 @@ Delete ip of vlan interface by vlanId. To invoke this method, you must have the 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
@@ -55,7 +51,7 @@ Delete ip of vlan interface by vlanId. To invoke this method, you must have the 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

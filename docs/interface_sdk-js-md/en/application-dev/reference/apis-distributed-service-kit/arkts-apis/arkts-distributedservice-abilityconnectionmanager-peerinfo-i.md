@@ -4,10 +4,6 @@ Defines the application collaboration information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityConnectionManager-interface PeerInfo--><!--Device-abilityConnectionManager-interface PeerInfo-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -30,10 +26,6 @@ Ability name of the peer application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PeerInfo-abilityName: string--><!--Device-PeerInfo-abilityName: string-End-->
@@ -51,10 +43,6 @@ Bundle name of the application.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Peer device ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PeerInfo-deviceId: string--><!--Device-PeerInfo-deviceId: string-End-->
@@ -96,10 +80,6 @@ Module name of the peer application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PeerInfo-moduleName: string--><!--Device-PeerInfo-moduleName: string-End-->
@@ -117,10 +97,6 @@ Service name for the application.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

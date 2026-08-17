@@ -6,10 +6,6 @@ Provides methods for accessing IsoDep tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface IsoDepTag--><!--Device-unnamed-export interface IsoDepTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -24,10 +20,6 @@ Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technol
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-IsoDepTag-getHiLayerResponse(): int[]--><!--Device-IsoDepTag-getHiLayerResponse(): int[]-End-->
@@ -40,7 +32,7 @@ Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technol
 | --- | --- |
 | int[] | Returns HiLayer Response bytes, the length could be 0. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -60,10 +52,6 @@ Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology. I
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-IsoDepTag-getHistoricalBytes(): int[]--><!--Device-IsoDepTag-getHistoricalBytes(): int[]-End-->
@@ -76,7 +64,7 @@ Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology. I
 | --- | --- |
 | int[] | Returns the Historical bytes, the length could be 0. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -95,10 +83,6 @@ isExtendedApduSupported(): Promise<boolean>
 Checks if extended apdu length supported or not.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -123,7 +107,7 @@ Checks if extended apdu length supported or not.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -161,10 +145,6 @@ Checks if extended apdu length supported or not.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -188,7 +168,7 @@ Checks if extended apdu length supported or not.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';

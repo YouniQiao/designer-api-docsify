@@ -4,10 +4,6 @@ Obtains GSM cell information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export interface GsmCellInformation--><!--Device-radio-export interface GsmCellInformation-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -32,10 +28,6 @@ Indicates the ARFCN(absolute radio frequency channel int).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GsmCellInformation-arfcn: int--><!--Device-GsmCellInformation-arfcn: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -53,10 +45,6 @@ Indicates the base station identification code.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-bsic: int--><!--Device-GsmCellInformation-bsic: int-End-->
 
@@ -76,10 +64,6 @@ Indicates the cell identification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GsmCellInformation-cellId: int--><!--Device-GsmCellInformation-cellId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -97,10 +81,6 @@ Indicates the location area code.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-lac: int--><!--Device-GsmCellInformation-lac: int-End-->
 
@@ -120,10 +100,6 @@ Indicates the mobile country code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GsmCellInformation-mcc: string--><!--Device-GsmCellInformation-mcc: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -141,10 +117,6 @@ Indicates the mobile network code.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-mnc: string--><!--Device-GsmCellInformation-mnc: string-End-->
 

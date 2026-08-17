@@ -2,11 +2,9 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md#CurrentLocationRequest)
+**Substitutes:** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md#currentlocationrequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -36,8 +34,6 @@ Called when the execution is completed.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** callback
@@ -60,8 +56,6 @@ Coordinate system type. Available types can be obtained using getSupportedCoordT
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -81,8 +75,6 @@ Called when the location types fail to be obtained
 **Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -106,8 +98,6 @@ Called when the geographic location is obtained.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** callback
@@ -130,11 +120,9 @@ Timeout duration, in milliseconds. For the rich device, the default value is 300
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [timeoutMs](arkts-location-geolocationmanager-currentlocationrequest-i.md#timeoutMs)
+**Substitutes:** [timeoutMs](arkts-location-geolocationmanager-currentlocationrequest-i.md#timeoutms)
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -1,12 +1,10 @@
 # ScrollbarMode
 
-Enum type supplied to [setScrollbarMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setScrollbarMode) for indicating the web component scrollbar mode.
+Enum type supplied to [setScrollbarMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setscrollbarmode) for indicating the web component scrollbar mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-enum ScrollbarMode--><!--Device-webview-enum ScrollbarMode-End-->
 
@@ -22,9 +20,7 @@ The normal scrollbar mode, A scrollbar suspended above the content, appearing wh
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScrollbarMode-OVERLAY_LAYOUT_SCROLLBAR = 0--><!--Device-ScrollbarMode-OVERLAY_LAYOUT_SCROLLBAR = 0-End-->
 
@@ -40,9 +36,7 @@ The Resident scrollbar mode, Always display a fixed position scrollbar in the co
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScrollbarMode-FORCE_DISPLAY_SCROLLBAR = 1--><!--Device-ScrollbarMode-FORCE_DISPLAY_SCROLLBAR = 1-End-->
 
@@ -58,9 +52,7 @@ Overlay VisualViewport scrollbars: appear on scroll, hide when idle. Rendered vi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

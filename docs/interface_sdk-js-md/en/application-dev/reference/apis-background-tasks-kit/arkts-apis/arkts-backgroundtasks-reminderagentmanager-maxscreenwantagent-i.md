@@ -4,10 +4,6 @@ Describes the information about the ability that is started automatically and di
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-interface MaxScreenWantAgent--><!--Device-reminderAgentManager-interface MaxScreenWantAgent-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -30,10 +26,6 @@ Name of the target ability. (If the device is in use, only a notification banner
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MaxScreenWantAgent-abilityName: string--><!--Device-MaxScreenWantAgent-abilityName: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -49,10 +41,6 @@ Name of the target package. (If the device is in use, only a notification banner
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MaxScreenWantAgent-pkgName: string--><!--Device-MaxScreenWantAgent-pkgName: string-End-->
 

@@ -1,6 +1,7 @@
 # ArkTS Components<!--arkts-components-arkweb-->
 
 - [Web](arkts-arkweb-web.md)
+  - [Web properties/events](arkts-arkweb-web-attribute.md)
   - [AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)
   - [AdsBlockedDetails](arkts-arkweb-adsblockeddetails-i.md)
   - [AISessionEvent](arkts-arkweb-aisessionevent-i.md)

@@ -4,10 +4,6 @@ Screen hopping options, such as the exit position.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cooperate-interface CooperateOptions--><!--Device-cooperate-interface CooperateOptions-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
@@ -32,10 +28,6 @@ Screen ID of the peer device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CooperateOptions-displayId: long--><!--Device-CooperateOptions-displayId: long-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
@@ -54,10 +46,6 @@ X coordinate of the mouse cursor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CooperateOptions-displayX: int--><!--Device-CooperateOptions-displayX: int-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
@@ -75,10 +63,6 @@ Y coordinate of the mouse cursor.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CooperateOptions-displayY: int--><!--Device-CooperateOptions-displayY: int-End-->
 

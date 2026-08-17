@@ -10,10 +10,6 @@ function getInfraredFrequencies(): Array<InfraredFrequency>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
 <!--Device-infraredEmitter-function getInfraredFrequencies(): Array<InfraredFrequency>--><!--Device-infraredEmitter-function getInfraredFrequencies(): Array<InfraredFrequency>-End-->
@@ -35,7 +31,7 @@ function getInfraredFrequencies(): Array<InfraredFrequency>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application.<br>**适用版本：** 12 - 14 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

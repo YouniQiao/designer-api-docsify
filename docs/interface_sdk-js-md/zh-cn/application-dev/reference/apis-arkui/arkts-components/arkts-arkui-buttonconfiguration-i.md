@@ -6,10 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface ButtonConfiguration--><!--Device-unnamed-declare interface ButtonConfiguration-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Button的文本标签，用于标识按钮的功能。 **说明：**当文本字
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,10 +42,6 @@ pressed: boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -73,10 +61,6 @@ triggerClick: ButtonTriggerClickCallback
 **类型：** [ButtonTriggerClickCallback](arkts-arkui-buttontriggerclickcallback-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

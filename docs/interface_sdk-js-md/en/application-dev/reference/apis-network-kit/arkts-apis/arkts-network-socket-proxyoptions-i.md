@@ -4,10 +4,6 @@ Define parameters for the proxy connection.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-socket-export interface ProxyOptions--><!--Device-socket-export interface ProxyOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,10 +26,6 @@ Proxy server address.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-ProxyOptions-address: NetAddress--><!--Device-ProxyOptions-address: NetAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -49,10 +41,6 @@ Specify password, if the proxy server supports user-password authentication.
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-ProxyOptions-password?: string--><!--Device-ProxyOptions-password?: string-End-->
 
@@ -70,10 +58,6 @@ Proxy types.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-ProxyOptions-type: ProxyTypes--><!--Device-ProxyOptions-type: ProxyTypes-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -89,10 +73,6 @@ Specify username, if the proxy server supports user-password authentication.
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-ProxyOptions-username?: string--><!--Device-ProxyOptions-username?: string-End-->
 

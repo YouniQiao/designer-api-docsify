@@ -4,10 +4,6 @@ Defines motion path configuration options of the component.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface MotionPathOptions--><!--Device-unnamed-declare interface MotionPathOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,10 +22,6 @@ Start point of the motion path. Default value: **0.0** Value range: [0.0, 1.0]. 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MotionPathOptions-from?: number--><!--Device-MotionPathOptions-from?: number-End-->
@@ -47,10 +39,6 @@ Motion path of the translation animation. The [svg path string](../../../referen
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,10 +60,6 @@ Whether to rotate along the path. The value **true** means to rotate along the p
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MotionPathOptions-rotatable?: boolean--><!--Device-MotionPathOptions-rotatable?: boolean-End-->
@@ -95,10 +79,6 @@ End point of the motion path. Default value: **1.0** Value range: [0.0, 1.0]. Va
 **Default:** 1.0
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

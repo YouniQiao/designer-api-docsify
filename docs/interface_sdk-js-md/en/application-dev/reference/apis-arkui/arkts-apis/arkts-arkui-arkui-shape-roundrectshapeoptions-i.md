@@ -1,14 +1,10 @@
 # RoundRectShapeOptions
 
-Represents the parameter of the constructor used to create a **RectShape** object with rounded corners. This API inherits from [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#ShapeSize).
+Represents the parameter of the constructor used to create a **RectShape** object with rounded corners. This API inherits from [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#shapesize).
 
-**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#ShapeSize)
+**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#shapesize)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface RoundRectShapeOptions--><!--Device-unnamed-interface RoundRectShapeOptions-End-->
 
@@ -35,10 +31,6 @@ Radius height of the rectangle border corners. When the parameter type is number
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -60,10 +52,6 @@ Radius width of the rectangle border corners. When the parameter type is number,
 **Type:** number \| string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

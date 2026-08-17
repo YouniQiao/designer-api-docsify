@@ -4,10 +4,6 @@ Provides APIs for data management in a single KV store, such as adding data, del
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedKVStore-interface SingleKVStore--><!--Device-distributedKVStore-interface SingleKVStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -27,10 +23,6 @@ delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallb
 Deletes the key-value pairs based on the dataSharePredicates.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,10 +58,6 @@ delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>
 Deletes the key-value pairs based on the dataSharePredicates.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,10 +99,6 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SingleKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void-End-->
@@ -149,10 +133,6 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVSto
 Obtains the KVStoreResultSet object matching the specified predicate object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,10 +174,6 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SingleKVStore-putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void-End-->
@@ -232,10 +208,6 @@ putBatch(value: Array<ValuesBucket>): Promise<void>
 Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -277,10 +249,6 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SingleKVStore-putValuesBuckets(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-putValuesBuckets(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void-End-->
@@ -314,10 +282,6 @@ putValuesBuckets(value: Array<ValuesBucket>): Promise<void>
 Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

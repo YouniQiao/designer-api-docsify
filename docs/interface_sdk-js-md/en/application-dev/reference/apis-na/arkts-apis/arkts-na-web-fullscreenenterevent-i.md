@@ -4,9 +4,7 @@ Provides details about the event that the **Web** component to enter the full-sc
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface FullScreenEnterEvent--><!--Device-unnamed-export declare interface FullScreenEnterEvent-End-->
 
@@ -24,9 +22,7 @@ Function handle for exiting full screen mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-FullScreenEnterEvent-handler: FullScreenExitHandler--><!--Device-FullScreenEnterEvent-handler: FullScreenExitHandler-End-->
 
@@ -44,9 +40,7 @@ Video height, in px. If the element that enters fulls screen mode is a **&lt;vid
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-FullScreenEnterEvent-videoHeight?: int--><!--Device-FullScreenEnterEvent-videoHeight?: int-End-->
 
@@ -64,9 +58,7 @@ Video width, in px. If the element that enters fulls screen mode is a **&lt;vide
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-FullScreenEnterEvent-videoWidth?: int--><!--Device-FullScreenEnterEvent-videoWidth?: int-End-->
 

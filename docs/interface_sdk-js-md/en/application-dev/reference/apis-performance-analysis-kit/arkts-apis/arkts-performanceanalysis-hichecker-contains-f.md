@@ -16,11 +16,9 @@ Checks whether the specified rule exists in the collection of added rules. If th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containsCheckRule)
+**Substitutes:** [containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containscheckrule)
 
 <!--Device-hichecker-function contains(rule: bigint): boolean--><!--Device-hichecker-function contains(rule: bigint): boolean-End-->
 
@@ -38,7 +36,7 @@ Checks whether the specified rule exists in the collection of added rules. If th
 | --- | --- |
 | boolean | Check result. If the rule exists in the collection of added rules, **true** is returned; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Add a rule.

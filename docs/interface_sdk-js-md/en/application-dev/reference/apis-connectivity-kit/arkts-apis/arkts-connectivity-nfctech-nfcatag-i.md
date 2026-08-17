@@ -6,10 +6,6 @@ Provides interfaces to control the read and write of tags that support the NFC-A
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NfcATag--><!--Device-unnamed-export interface NfcATag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -24,10 +20,6 @@ Obtains the ATQA of an NFC-A tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcATag-getAtqa(): int[]--><!--Device-NfcATag-getAtqa(): int[]-End-->
@@ -40,7 +32,7 @@ Obtains the ATQA of an NFC-A tag.
 | --- | --- |
 | int[] | Returns the ATQA of the NFC-A tag. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -60,10 +52,6 @@ Obtains the SAK of an NFC-A tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcATag-getSak(): int--><!--Device-NfcATag-getSak(): int-End-->
@@ -76,7 +64,7 @@ Obtains the SAK of an NFC-A tag.
 | --- | --- |
 | int | Returns the SAK of the NFC-A tag. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';

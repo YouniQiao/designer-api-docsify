@@ -4,10 +4,6 @@ Enumerates the types of the multi-app mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export enum MultiAppModeType--><!--Device-bundleManager-export enum MultiAppModeType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -21,10 +17,6 @@ UNSPECIFIED = 0
 Unspecified. It is the default value of [multiAppMode](../../../quick-start/app-configuration-file.md#multiappmode).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MultiAppModeType-UNSPECIFIED = 0--><!--Device-MultiAppModeType-UNSPECIFIED = 0-End-->
 
@@ -40,10 +32,6 @@ MULTI_INSTANCE = 1
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MultiAppModeType-MULTI_INSTANCE = 1--><!--Device-MultiAppModeType-MULTI_INSTANCE = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -57,10 +45,6 @@ APP_CLONE = 2
 [App clone mode](../../../quick-start/app-clone.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MultiAppModeType-APP_CLONE = 2--><!--Device-MultiAppModeType-APP_CLONE = 2-End-->
 

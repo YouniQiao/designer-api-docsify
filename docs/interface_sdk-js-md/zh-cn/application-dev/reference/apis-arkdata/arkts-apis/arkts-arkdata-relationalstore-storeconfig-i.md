@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-relationalStore-interface StoreConfig--><!--Device-relationalStore-interface StoreConfig-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -24,10 +20,6 @@ allowRebuild?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-StoreConfig-allowRebuild?: boolean--><!--Device-StoreConfig-allowRebuild?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -38,15 +30,11 @@ allowRebuild?: boolean
 autoCleanDirtyData?: boolean
 ```
 
-指定是否自动清理云端删除后同步到本地的数据，true表示自动清理，false表示手动清理，默认自动清理。 对于端云协同的数据库，当云端删除的数据同步到设备端时，可通过该参数设置设备端是否自动清理。手动清理可以通过 [cleanDirtyData&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkdata-relationalstore-rdbstore-i.md#cleanDirtyData) 接口清理。 从API version 11开始，支持此可选参数。
+指定是否自动清理云端删除后同步到本地的数据，true表示自动清理，false表示手动清理，默认自动清理。 对于端云协同的数据库，当云端删除的数据同步到设备端时，可通过该参数设置设备端是否自动清理。手动清理可以通过 [cleanDirtyData&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkdata-relationalstore-rdbstore-i.md#cleandirtydata) 接口清理。 从API version 11开始，支持此可选参数。
 
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StoreConfig-autoCleanDirtyData?: boolean--><!--Device-StoreConfig-autoCleanDirtyData?: boolean-End-->
 
@@ -58,15 +46,11 @@ autoCleanDirtyData?: boolean
 cryptoParam?: CryptoParam
 ```
 
-指定用户自定义的加密参数。 当此参数不填时，使用默认的加密参数，见[CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md#CryptoParam)各参数默认值。 此配置只有在encrypt选项设置为true或密钥非空时才有效。 从API version 14开始，支持此可选参数。
+指定用户自定义的加密参数。 当此参数不填时，使用默认的加密参数，见[CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md#cryptoparam)各参数默认值。 此配置只有在encrypt选项设置为true或密钥非空时才有效。 从API version 14开始，支持此可选参数。
 
 **类型：** [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StoreConfig-cryptoParam?: CryptoParam--><!--Device-StoreConfig-cryptoParam?: CryptoParam-End-->
 
@@ -84,10 +68,6 @@ customDir?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-StoreConfig-customDir?: string--><!--Device-StoreConfig-customDir?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -103,10 +83,6 @@ dataGroupId?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,10 +102,6 @@ enableSemanticIndex?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-StoreConfig-enableSemanticIndex?: boolean--><!--Device-StoreConfig-enableSemanticIndex?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -140,15 +112,11 @@ enableSemanticIndex?: boolean
 encrypt?: boolean
 ```
 
-指定数据库是否加密，默认非加密。数据库创建完成后，此参数不允许直接修改。如需变更数据库加密状态，请调用[rekeyEx](arkts-arkdata-relationalstore-rdbstore-i.md#rekeyEx)接口进行更新操作。 true：加密。 false：非加密。
+指定数据库是否加密，默认非加密。数据库创建完成后，此参数不允许直接修改。如需变更数据库加密状态，请调用[rekeyEx](arkts-arkdata-relationalstore-rdbstore-i.md#rekeyex)接口进行更新操作。 true：加密。 false：非加密。
 
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StoreConfig-encrypt?: boolean--><!--Device-StoreConfig-encrypt?: boolean-End-->
 
@@ -166,10 +134,6 @@ isReadOnly?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-StoreConfig-isReadOnly?: boolean--><!--Device-StoreConfig-isReadOnly?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -185,10 +149,6 @@ name: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StoreConfig-name: string--><!--Device-StoreConfig-name: string-End-->
 
@@ -206,10 +166,6 @@ persist?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-StoreConfig-persist?: boolean--><!--Device-StoreConfig-persist?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -225,10 +181,6 @@ pluginLibs?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StoreConfig-pluginLibs?: Array<string>--><!--Device-StoreConfig-pluginLibs?: Array<string>-End-->
 
@@ -246,10 +198,6 @@ rootDir?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-StoreConfig-rootDir?: string--><!--Device-StoreConfig-rootDir?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -265,10 +213,6 @@ securityLevel: SecurityLevel
 **类型：** SecurityLevel
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StoreConfig-securityLevel: SecurityLevel--><!--Device-StoreConfig-securityLevel: SecurityLevel-End-->
 
@@ -286,10 +230,6 @@ tokenizer?: Tokenizer
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-StoreConfig-tokenizer?: Tokenizer--><!--Device-StoreConfig-tokenizer?: Tokenizer-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -305,10 +245,6 @@ vector?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StoreConfig-vector?: boolean--><!--Device-StoreConfig-vector?: boolean-End-->
 

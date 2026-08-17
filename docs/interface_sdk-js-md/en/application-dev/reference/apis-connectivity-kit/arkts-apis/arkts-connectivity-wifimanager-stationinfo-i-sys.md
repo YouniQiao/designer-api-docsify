@@ -4,10 +4,6 @@ Wi-Fi station information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface StationInfo--><!--Device-wifiManager-interface StationInfo-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
@@ -32,10 +28,6 @@ The IP address of the Wi-Fi client
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StationInfo-ipAddress: string--><!--Device-StationInfo-ipAddress: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
@@ -53,10 +45,6 @@ The MAC address of the Wi-Fi client
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StationInfo-macAddress: string--><!--Device-StationInfo-macAddress: string-End-->
 
@@ -76,10 +64,6 @@ The MAC address type of the Wi-Fi client
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StationInfo-macAddressType?: DeviceAddressType--><!--Device-StationInfo-macAddressType?: DeviceAddressType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
@@ -97,10 +81,6 @@ The network name of the Wi-Fi client
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StationInfo-name: string--><!--Device-StationInfo-name: string-End-->
 

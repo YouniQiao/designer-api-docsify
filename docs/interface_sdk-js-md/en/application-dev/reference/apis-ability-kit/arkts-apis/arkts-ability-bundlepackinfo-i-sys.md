@@ -4,10 +4,6 @@ The bundle pack info class.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface BundlePackInfo--><!--Device-unnamed-export interface BundlePackInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -26,10 +22,6 @@ Package configuration information in the **pack.info** file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundlePackInfo-readonly packages: Array<PackageConfig>--><!--Device-BundlePackInfo-readonly packages: Array<PackageConfig>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -47,10 +39,6 @@ Package summary information in the **pack.info** file.
 **Type:** [PackageSummary](arkts-ability-bundlepackinfo-packagesummary-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundlePackInfo-readonly summary: PackageSummary--><!--Device-BundlePackInfo-readonly summary: PackageSummary-End-->
 

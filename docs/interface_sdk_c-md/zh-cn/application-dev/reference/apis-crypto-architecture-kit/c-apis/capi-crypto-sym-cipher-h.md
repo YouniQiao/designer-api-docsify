@@ -4,6 +4,8 @@
 
 定义对称密钥加解密接口。
 
+**引用文件：** <CryptoArchitectureKit/crypto_sym_cipher.h>
+
 **库：** libohcrypto.so
 
 **系统能力：** SystemCapability.Security.CryptoFramework

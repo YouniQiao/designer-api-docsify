@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [SelectionContainer](arkts-na-arkui-components-selectioncontainer-selectioncontainer-f.md#SelectionContainer) | Defines SelectionContainer component. It requires calling setSelectionContainerOptions at start of the component attribute set-up, and it requires calling applyAttributesFinish at the end of the component attribute set-up. |
+| [SelectionContainer](arkts-na-arkui-components-selectioncontainer-selectioncontainer-f.md#selectioncontainer) | Defines SelectionContainer component. It requires calling setSelectionContainerOptions at start of the component attribute set-up, and it requires calling applyAttributesFinish at the end of the component attribute set-up. |
 
 ### Interfaces
 

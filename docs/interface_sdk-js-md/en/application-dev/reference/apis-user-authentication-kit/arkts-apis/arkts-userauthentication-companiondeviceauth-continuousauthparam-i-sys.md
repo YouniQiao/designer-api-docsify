@@ -4,10 +4,6 @@ Defines continuous authentication parameters. They are used to configure paramet
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-companionDeviceAuth-interface ContinuousAuthParam--><!--Device-companionDeviceAuth-interface ContinuousAuthParam-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -31,10 +27,6 @@ Template ID. It is used to specify the target template to be subscribed to. If t
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Obtain the number of cached GNSS locations reported at a time.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function getCachedGnssLocationsSize(callback: AsyncCallback<int>): void--><!--Device-geoLocationManager-function getCachedGnssLocationsSize(callback: AsyncCallback<int>): void-End-->
@@ -42,7 +38,7 @@ Obtain the number of cached GNSS locations reported at a time.
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -72,10 +68,6 @@ Obtain the number of cached GNSS locations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function getCachedGnssLocationsSize(): Promise<int>--><!--Device-geoLocationManager-function getCachedGnssLocationsSize(): Promise<int>-End-->
@@ -97,7 +89,7 @@ Obtain the number of cached GNSS locations.
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

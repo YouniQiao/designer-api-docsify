@@ -4,10 +4,6 @@ Provides methods to accessing bluetooth HID(Human Interface Device)-related capa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace hid--><!--Device-unnamed-declare namespace hid-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -24,8 +20,8 @@ import { hid } from 'hid';
 
 | Name | Description |
 | --- | --- |
-| [createHidDeviceProfile](arkts-connectivity-hid-createhiddeviceprofile-f.md#createHidDeviceProfile) | Creates the instance of HID device profile. |
-| [createHidHostProfile](arkts-connectivity-hid-createhidhostprofile-f.md#createHidHostProfile) | create the instance of hid profile. |
+| [createHidDeviceProfile](arkts-connectivity-hid-createhiddeviceprofile-f.md#createhiddeviceprofile) | Creates the instance of HID device profile. |
+| [createHidHostProfile](arkts-connectivity-hid-createhidhostprofile-f.md#createhidhostprofile) | create the instance of hid profile. |
 
 ### Interfaces
 

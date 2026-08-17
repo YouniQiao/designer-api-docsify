@@ -10,9 +10,7 @@ Obtains a BreakIterator object. The BreakIterator object maintains an internal b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -30,5 +28,5 @@ Obtains a BreakIterator object. The BreakIterator object maintains an internal b
 
 | Type | Description |
 | --- | --- |
-| [BreakIterator](arkts-na-i18n-breakiterator-c.md) | BreakIterator object. |
+| [BreakIterator](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-breakiterator-c.md) | BreakIterator object. |
 

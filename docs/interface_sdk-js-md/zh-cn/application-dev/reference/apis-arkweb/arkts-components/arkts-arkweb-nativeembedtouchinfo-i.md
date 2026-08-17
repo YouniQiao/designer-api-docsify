@@ -1,12 +1,8 @@
 # NativeEmbedTouchInfo
 
-提供手指触摸到同层标签的详细信息。
+提供手指触摸同层标签的详细信息，包括标签ID和触摸事件。适用于需要处理同层元素触摸交互的场景，提升触摸体验的定制性和灵活性。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface NativeEmbedTouchInfo--><!--Device-unnamed-declare interface NativeEmbedTouchInfo-End-->
 
@@ -23,10 +19,6 @@ embedId?: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ result?: EventResult
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeEmbedTouchInfo-result?: EventResult--><!--Device-NativeEmbedTouchInfo-result?: EventResult-End-->
@@ -67,10 +55,6 @@ touchEvent?: TouchEvent
 **类型：** TouchEvent
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

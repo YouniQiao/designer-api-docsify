@@ -4,10 +4,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface RegExpExecArray--><!--Device-unnamed-interface RegExpExecArray-End-->
 
 ## 0
@@ -21,10 +17,6 @@ The first match. This will always be present because `null` will be returned if 
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExpExecArray-0: string--><!--Device-RegExpExecArray-0: string-End-->
 
@@ -40,10 +32,6 @@ The index of the search at which the result was found.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-RegExpExecArray-index: number--><!--Device-RegExpExecArray-index: number-End-->
 
 ## input
@@ -57,10 +45,6 @@ A copy of the search string.
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExpExecArray-input: string--><!--Device-RegExpExecArray-input: string-End-->
 

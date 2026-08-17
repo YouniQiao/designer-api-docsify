@@ -10,10 +10,6 @@ function isDLPFeatureProvided(): Promise<boolean>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-dlpPermission-function isDLPFeatureProvided(): Promise<boolean>--><!--Device-dlpPermission-function isDLPFeatureProvided(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -30,7 +26,7 @@ function isDLPFeatureProvided(): Promise<boolean>
 | --- | --- |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -38,7 +34,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 dlpPermission.isDLPFeatureProvided().then((isFeatureProvided) => { // 查询当前系统是否提供加密保护特性。
   console.info('isFeatureProvided', JSON.stringify(isFeatureProvided));
 }).catch((err: BusinessError) => {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // 失败报错。
+  console.error(`Failed to check if DLP feature is provided. Code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
 });
 ```
 

@@ -4,10 +4,6 @@ The module provides APIs for setting, obtaining, and deleting the disposed statu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace appControl--><!--Device-unnamed-declare namespace appControl-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -27,23 +23,23 @@ import { appControl } from 'appControl';
 
 | Name | Description |
 | --- | --- |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deleteDisposedStatus) | Deletes the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deleteDisposedStatus-(System-API)) | Deletes the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md#deleteDisposedStatusSync) | Deletes the disposed status for an application or an application clone. This API returns the result synchronously. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md#deleteUninstallDisposedRule) | Deletes an uninstallation disposed rule for an application or an application clone. |
-| [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md#getAllDisposedRules) | Obtains all the disposed rules set for the current user. |
-| [getDisposedRule](arkts-ability-appcontrol-getdisposedrule-f-sys.md#getDisposedRule) | Obtains the disposed rule of an application or an application clone. |
-| [getDisposedRulesByBundle](arkts-ability-appcontrol-getdisposedrulesbybundle-f-sys.md#getDisposedRulesByBundle) | Query all disposed rules under the current user for the specified bundle name. |
-| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getDisposedStatus) | Obtains the disposed status of an application. This API uses an asynchronous callback to return the result. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
-| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getDisposedStatus-(System-API)) | Obtains the disposed status of an application. This API uses a promise to return the result. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
-| [getDisposedStatusSync](arkts-ability-appcontrol-getdisposedstatussync-f-sys.md#getDisposedStatusSync) | Obtains the disposed status of an application. This API returns the result synchronously. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
-| [getUninstallDisposedRule](arkts-ability-appcontrol-getuninstalldisposedrule-f-sys.md#getUninstallDisposedRule) | Obtains the uninstallation disposed rule of an application or an application clone. |
-| [setDisposedRule](arkts-ability-appcontrol-setdisposedrule-f-sys.md#setDisposedRule) | Sets the disposed rule for an application or an application clone. |
-| [setDisposedRules](arkts-ability-appcontrol-setdisposedrules-f-sys.md#setDisposedRules) | Sets disposed rules in batches for an application or an application clone. |
-| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setDisposedStatus) | Sets the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setDisposedStatus-(System-API)) | Sets the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [setDisposedStatusSync](arkts-ability-appcontrol-setdisposedstatussync-f-sys.md#setDisposedStatusSync) | Sets the disposed status for an application. This API returns the result synchronously. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [setUninstallDisposedRule](arkts-ability-appcontrol-setuninstalldisposedrule-f-sys.md#setUninstallDisposedRule) | Sets an uninstallation disposed rule for an application or an application clone. |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus) | Deletes the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus-system-api) | Deletes the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md#deletedisposedstatussync) | Deletes the disposed status for an application or an application clone. This API returns the result synchronously. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md#deleteuninstalldisposedrule) | Deletes an uninstallation disposed rule for an application or an application clone. |
+| [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md#getalldisposedrules) | Obtains all the disposed rules set for the current user. |
+| [getDisposedRule](arkts-ability-appcontrol-getdisposedrule-f-sys.md#getdisposedrule) | Obtains the disposed rule of an application or an application clone. |
+| [getDisposedRulesByBundle](arkts-ability-appcontrol-getdisposedrulesbybundle-f-sys.md#getdisposedrulesbybundle) | Query all disposed rules under the current user for the specified bundle name. |
+| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getdisposedstatus) | Obtains the disposed status of an application. This API uses an asynchronous callback to return the result. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
+| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getdisposedstatus-system-api) | Obtains the disposed status of an application. This API uses a promise to return the result. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
+| [getDisposedStatusSync](arkts-ability-appcontrol-getdisposedstatussync-f-sys.md#getdisposedstatussync) | Obtains the disposed status of an application. This API returns the result synchronously. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
+| [getUninstallDisposedRule](arkts-ability-appcontrol-getuninstalldisposedrule-f-sys.md#getuninstalldisposedrule) | Obtains the uninstallation disposed rule of an application or an application clone. |
+| [setDisposedRule](arkts-ability-appcontrol-setdisposedrule-f-sys.md#setdisposedrule) | Sets the disposed rule for an application or an application clone. |
+| [setDisposedRules](arkts-ability-appcontrol-setdisposedrules-f-sys.md#setdisposedrules) | Sets disposed rules in batches for an application or an application clone. |
+| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setdisposedstatus) | Sets the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setdisposedstatus-system-api) | Sets the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [setDisposedStatusSync](arkts-ability-appcontrol-setdisposedstatussync-f-sys.md#setdisposedstatussync) | Sets the disposed status for an application. This API returns the result synchronously. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [setUninstallDisposedRule](arkts-ability-appcontrol-setuninstalldisposedrule-f-sys.md#setuninstalldisposedrule) | Sets an uninstallation disposed rule for an application or an application clone. |
 <!--DelEnd-->
 
 <!--Del-->

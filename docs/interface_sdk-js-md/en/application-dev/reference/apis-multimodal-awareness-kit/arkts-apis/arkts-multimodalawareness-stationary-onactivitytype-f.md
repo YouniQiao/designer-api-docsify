@@ -16,10 +16,6 @@ Subscribes to the device status.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-stationary-function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: number, callback: Callback<ActivityResponse>): void--><!--Device-stationary-function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: number, callback: Callback<ActivityResponse>): void-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
@@ -33,7 +29,7 @@ Subscribes to the device status.
 | reportLatencyNs | number | Yes | Report delay, in ns. The value ranges from **1000000000** to **3000000000**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | Yes | Callback used to receive reported data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let reportLatencyNs = 1000000000;

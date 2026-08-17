@@ -1,10 +1,8 @@
 # Storage
 
-Provides APIs for obtaining and modifying storage data. Before calling the following APIs, use [data_storage.getStorage](arkts-arkdata-storage-getstoragesync-f.md#getStorageSync) or [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getStorageSync) to obtain the **Storage** instance.
+Provides APIs for obtaining and modifying storage data. Before calling the following APIs, use [data_storage.getStorage](arkts-arkdata-storage-getstoragesync-f.md#getstoragesync) or [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getstoragesync) to obtain the **Storage** instance.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -24,8 +22,6 @@ Clears this **Storage** object. This API uses an asynchronous callback to return
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** clear
@@ -38,7 +34,7 @@ Clears this **Storage** object. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 storage.clear(function (err) {
@@ -60,8 +56,6 @@ Clears this **Storage** object. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** clear
@@ -74,7 +68,7 @@ Clears this **Storage** object. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | A promise object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let promiseclear = storage.clear();
@@ -95,15 +89,13 @@ Clears this **Storage** object.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** clear
 
 <!--Device-Storage-clearSync(): void--><!--Device-Storage-clearSync(): void-End-->
 
-## Examples
+**Examples**
 
 ```TypeScript
 storage.clearSync();
@@ -119,8 +111,6 @@ Deletes data with the specified key from this storage object. This API uses an a
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** delete
@@ -134,7 +124,7 @@ Deletes data with the specified key from this storage object. This API uses an a
 | key | string | Yes | Key of the data. It cannot be empty. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 storage.delete('startup', function (err) {
@@ -156,8 +146,6 @@ Deletes data with the specified key from this storage object. This API uses a pr
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** delete
@@ -176,7 +164,7 @@ Deletes data with the specified key from this storage object. This API uses a pr
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let promisedel = storage.delete('startup')
@@ -197,8 +185,6 @@ Deletes data with the specified key from this storage object.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** delete
@@ -211,7 +197,7 @@ Deletes data with the specified key from this storage object.
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 storage.deleteSync('startup');
@@ -227,8 +213,6 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** flush
@@ -241,7 +225,7 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 storage.flush(function (err) {
@@ -263,8 +247,6 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** flush
@@ -277,7 +259,7 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let promiseflush = storage.flush();
@@ -298,15 +280,13 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** flush
 
 <!--Device-Storage-flushSync(): void--><!--Device-Storage-flushSync(): void-End-->
 
-## Examples
+**Examples**
 
 ```TypeScript
 storage.flushSync();
@@ -322,8 +302,6 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** get
@@ -338,7 +316,7 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 | defValue | ValueType | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 storage.get('startup', 'default', function(err, value) {
@@ -360,8 +338,6 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** get
@@ -381,7 +357,7 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 | --- | --- |
 | Promise&lt;ValueType&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let promiseget = storage.get('startup', 'default');
@@ -402,8 +378,6 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** get
@@ -423,7 +397,7 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 | --- | --- |
 | ValueType | Value corresponding to the specified key. If the value is null or not in the default value format, the default value is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let value = storage.getSync('startup', 'default');
@@ -439,8 +413,6 @@ has(key: string, callback: AsyncCallback<boolean>): boolean
 Checks whether the storage object contains data with a given key. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -461,7 +433,7 @@ Checks whether the storage object contains data with a given key. This API uses 
 | --- | --- |
 | boolean | Returns **true** if the storage object contains data with the specified key; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 storage.has('startup', function (err, isExist) {
@@ -485,8 +457,6 @@ Checks whether the storage object contains data with a given key. This API uses 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** has
@@ -505,7 +475,7 @@ Checks whether the storage object contains data with a given key. This API uses 
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let promisehas = storage.has('startup')
@@ -528,8 +498,6 @@ Checks whether the storage object contains data with a given key.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** has
@@ -548,7 +516,7 @@ Checks whether the storage object contains data with a given key.
 | --- | --- |
 | boolean | Returns **true** if the storage object contains data with the specified key; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let isExist = storage.hasSync('startup');
@@ -567,8 +535,6 @@ Unsubscribes from data changes.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** off
@@ -582,7 +548,7 @@ Unsubscribes from data changes.
 | type | 'change' | Yes | Event type. The value **change** indicates data change events. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes | Callback for the data change. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let observer = function (key) {
@@ -601,8 +567,6 @@ Subscribes to data changes. The **StorageObserver** needs to be implemented. Whe
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** on
@@ -616,7 +580,7 @@ Subscribes to data changes. The **StorageObserver** needs to be implemented. Whe
 | type | 'change' | Yes | Event type. The value **change** indicates data change events. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let observer = function (key) {
@@ -637,8 +601,6 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** put
@@ -653,7 +615,7 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 | value | ValueType | Yes | New value to store. It can be a number, string, or Boolean value. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 storage.put('startup', 'auto', function (err) {
@@ -675,8 +637,6 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** put
@@ -696,7 +656,7 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let promiseput = storage.put('startup', 'auto');
@@ -717,8 +677,6 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** put
@@ -732,7 +690,7 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 | key | string | Yes | Key of the data. It cannot be empty. |
 | value | ValueType | Yes | New value to store. It can be a number, string, or Boolean value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 storage.putSync('startup', 'auto');

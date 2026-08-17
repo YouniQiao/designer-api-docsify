@@ -1,10 +1,8 @@
-# PluralRules
+# PluralRules(国际化-Intl)
 
 提供获取单复数类型的能力。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 20
 
@@ -24,8 +22,6 @@ constructor()
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
@@ -36,7 +32,7 @@ constructor()
 
 **系统能力：** SystemCapability.Global.I18n
 
-## 示例
+**示例**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -55,8 +51,6 @@ constructor(locale: string | Array<string>, options?: PluralRulesOptions)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
@@ -74,7 +68,7 @@ constructor(locale: string | Array<string>, options?: PluralRulesOptions)
 | locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
 | options | [PluralRulesOptions](arkts-localization-intl-pluralrulesoptions-i.md) | 否 | 创建单复数对象时设置的配置项。 <br>默认值：所有属性都取默认值时的配置项。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -92,8 +86,6 @@ select(n: double): string
 获取数字的单复数类别。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 20
 
@@ -117,7 +109,7 @@ select(n: double): string
 | --- | --- |
 | string | 单复数类别，取值包括："zero"，"one"，"two", "few", "many", "other"。 <br>不同取值的含义请参考[语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

@@ -10,7 +10,7 @@ Defines the struct and enum of **AVMediaSource**.
 
 **Since**: 23
 
-**Related module**: [AVMediaSource](capi-avmediasource.md)
+**Related module**: [avmedia_source](capi-avmedia-source.md)
 
 ## Summary
 
@@ -18,10 +18,10 @@ Defines the struct and enum of **AVMediaSource**.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) | OH_AVHttpHeader | Defines a struct for the HTTP header. |
-| [OH_AVMediaSource](capi-avmediasource-oh-avmediasource.md) | OH_AVMediaSource | Defines a struct for the media source. |
-| [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) | OH_AVMediaSourceLoadingRequest | Defines a load request object for the media resource, through which the application obtains the location ofthe requested resource. |
-| [OH_AVMediaSourceLoader](capi-avmediasource-oh-avmediasourceloader.md) | OH_AVMediaSourceLoader | Declares the media source loader type, which is implemented by the application. |
+| [OH_AVHttpHeader](capi-avmedia-source-oh-avhttpheader.md) | OH_AVHttpHeader | Defines a struct for the HTTP header. |
+| [OH_AVMediaSource](capi-avmedia-source-oh-avmediasource.md) | OH_AVMediaSource | Defines a struct for the media source. |
+| [OH_AVMediaSourceLoadingRequest](capi-avmedia-source-oh-avmediasourceloadingrequest.md) | OH_AVMediaSourceLoadingRequest | Defines a load request object for the media resource, through which the application obtains the location ofthe requested resource. |
+| [OH_AVMediaSourceLoader](capi-avmedia-source-oh-avmediasourceloader.md) | OH_AVMediaSourceLoader | Declares the media source loader type, which is implemented by the application. |
 
 ### Enum
 
@@ -101,7 +101,7 @@ Creates an HTTP header instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVHttpHeader *](capi-avmediasource-oh-avhttpheader.md) | Pointer to the OH_AVHttpHeader instance if the operation is successful; null pointer if the operation<br> fails. |
+| [OH_AVHttpHeader *](capi-avmedia-source-oh-avhttpheader.md) | Pointer to the OH_AVHttpHeader instance if the operation is successful; null pointer if the operation<br> fails. |
 
 ### OH_AVHttpHeader_Destroy()
 
@@ -119,7 +119,7 @@ Releases an HTTP header instance.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) *header | Pointer to the **OH_AVHttpHeader** instance. |
+| [OH_AVHttpHeader](capi-avmedia-source-oh-avhttpheader.md) *header | Pointer to the **OH_AVHttpHeader** instance. |
 
 **Returns**:
 
@@ -143,7 +143,7 @@ Obtains the number of records in an HTTP header instance.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) *header | Pointer to the **OH_AVHttpHeader** instance. |
+| [OH_AVHttpHeader](capi-avmedia-source-oh-avhttpheader.md) *header | Pointer to the **OH_AVHttpHeader** instance. |
 | uint32_t *count | Pointer to the number of records in the header instance. |
 
 **Returns**:
@@ -168,7 +168,7 @@ Adds a key-value pair record to an HTTP header instance.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) *header | Pointer to the **OH_AVHttpHeader** instance. |
+| [OH_AVHttpHeader](capi-avmedia-source-oh-avhttpheader.md) *header | Pointer to the **OH_AVHttpHeader** instance. |
 | const char *key | Pointer to the key name of the record. |
 | const char *value | Pointer to the value of the record. |
 
@@ -194,7 +194,7 @@ Obtains a key-value pair record in an HTTP header instance by index.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) *header | Pointer to the **OH_AVHttpHeader** instance. |
+| [OH_AVHttpHeader](capi-avmedia-source-oh-avhttpheader.md) *header | Pointer to the **OH_AVHttpHeader** instance. |
 | uint32_t index | Position of the record in the header. |
 | const char **key | Double pointer to the key name of the record. |
 | const char **value | Double pointer to the value of the record. |
@@ -222,13 +222,13 @@ Creates a media source using a URL.
 | Parameter | Description |
 | -- | -- |
 | const char *url | Pointer to the URL of the media source. The following streaming media formats are supported: HLS, HTTP-FLV, DASH, and HTTPS. |
-| [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) *header | Pointer to the HTTP header attached to the network request. |
+| [OH_AVHttpHeader](capi-avmedia-source-oh-avhttpheader.md) *header | Pointer to the HTTP header attached to the network request. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [OH_AVMediaSource *](capi-avmediasource-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation<br> fails. |
+| [OH_AVMediaSource *](capi-avmedia-source-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation<br> fails. |
 
 ### OH_AVMediaSource_CreateWithDataSource()
 
@@ -252,7 +252,7 @@ Creates a media source using **OH_AVDataSource**.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVMediaSource *](capi-avmediasource-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation<br> fails. |
+| [OH_AVMediaSource *](capi-avmedia-source-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation<br> fails. |
 
 ### OH_AVMediaSource_CreateWithFd()
 
@@ -278,7 +278,7 @@ Creates a media source using a file descriptor.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVMediaSource *](capi-avmediasource-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation<br> fails. |
+| [OH_AVMediaSource *](capi-avmedia-source-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation<br> fails. |
 
 ### OH_AVMediaSource_Destroy()
 
@@ -296,7 +296,7 @@ Releases a media source instance.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSource](capi-avmediasource-oh-avmediasource.md) *source | Pointer to the **OH_AVMediaSource** instance. |
+| [OH_AVMediaSource](capi-avmedia-source-oh-avmediasource.md) *source | Pointer to the **OH_AVMediaSource** instance. |
 
 **Returns**:
 
@@ -320,7 +320,7 @@ Sets the MIME type to process extended media sources.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSource](capi-avmediasource-oh-avmediasource.md) *source | Pointer to the **OH_AVMediaSource** instance. |
+| [OH_AVMediaSource](capi-avmedia-source-oh-avmediasource.md) *source | Pointer to the **OH_AVMediaSource** instance. |
 | const char *mimetype | Pointer to the MIME type ({@link AV_MimeTypes}) of the media source. |
 
 **Returns**:
@@ -345,7 +345,7 @@ Obtains the URL of a request.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) *request | Pointer to the **OH_AVMediaSourceLoadingRequest** instance. |
+| [OH_AVMediaSourceLoadingRequest](capi-avmedia-source-oh-avmediasourceloadingrequest.md) *request | Pointer to the **OH_AVMediaSourceLoadingRequest** instance. |
 | const char **url | Double pointer to the URL for output. |
 
 **Returns**:
@@ -370,8 +370,8 @@ Obtains the HTTP header of a request.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) *request | Pointer to the **OH_AVMediaSourceLoadingRequest** instance. |
-| [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) **header | Double pointer to the HTTP header used for the HTTP request. |
+| [OH_AVMediaSourceLoadingRequest](capi-avmedia-source-oh-avmediasourceloadingrequest.md) *request | Pointer to the **OH_AVMediaSourceLoadingRequest** instance. |
+| [OH_AVHttpHeader](capi-avmedia-source-oh-avhttpheader.md) **header | Double pointer to the HTTP header used for the HTTP request. |
 
 **Returns**:
 
@@ -395,7 +395,7 @@ Sends request data to the AVPlayer.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) *request | Pointer to the request for opening a resource. |
+| [OH_AVMediaSourceLoadingRequest](capi-avmedia-source-oh-avmediasourceloadingrequest.md) *request | Pointer to the request for opening a resource. |
 | int64_t uuid | ID of the resource handle. |
 | int64_t offset | Offset of the current media data relative to the start of the resource. |
 | const uint8_t *data | Pointer to the media data sent to the player. |
@@ -423,9 +423,9 @@ Sends the response header to the AVPlayer. This API must be called before [OH_AV
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) *request | Pointer to the request for opening a resource. |
+| [OH_AVMediaSourceLoadingRequest](capi-avmedia-source-oh-avmediasourceloadingrequest.md) *request | Pointer to the request for opening a resource. |
 | int64_t uuid | ID of the resource handle. |
-| [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) *header | Pointer to the header information in the HTTP response.The application can intersect the header field with the supported fields at the bottom layer and then pass theintersection result to the AVPlayer, or directly pass all the corresponding header information. |
+| [OH_AVHttpHeader](capi-avmedia-source-oh-avhttpheader.md) *header | Pointer to the header information in the HTTP response.The application can intersect the header field with the supported fields at the bottom layer and then pass theintersection result to the AVPlayer, or directly pass all the corresponding header information. |
 | const char *redirectUrl | Pointer to the redirection URL contained in the HTTP response (if any). |
 
 ### OH_AVMediaSourceLoadingRequest_FinishLoading()
@@ -444,7 +444,7 @@ Notifies the player of the current request status. After pushing all data of a s
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) *request | Pointer to the request for opening a resource. |
+| [OH_AVMediaSourceLoadingRequest](capi-avmedia-source-oh-avmediasourceloadingrequest.md) *request | Pointer to the request for opening a resource. |
 | int64_t uuid | ID of the resource handle. |
 | [AVLoadingRequestError](capi-avmedia-source-h.md#avloadingrequesterror) error | Audio playback is in the error state. |
 
@@ -464,7 +464,7 @@ Creates an **OH_AVMediaSourceLoader** instance. If the operation is successful, 
 
 | Type | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoader *](capi-avmediasource-oh-avmediasourceloader.md) | OH_AVMediaSourceLoader pointer if success, else return NULL. |
+| [OH_AVMediaSourceLoader *](capi-avmedia-source-oh-avmediasourceloader.md) | OH_AVMediaSourceLoader pointer if success, else return NULL. |
 
 ### OH_AVMediaSourceLoader_Destroy()
 
@@ -482,7 +482,7 @@ Releases an **OH_AVMediaSourceLoader** instance.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoader](capi-avmediasource-oh-avmediasourceloader.md) *loader | Pointer to the **OH_AVMediaSourceLoader** instance to be released. |
+| [OH_AVMediaSourceLoader](capi-avmedia-source-oh-avmediasourceloader.md) *loader | Pointer to the **OH_AVMediaSourceLoader** instance to be released. |
 
 **Returns**:
 
@@ -506,8 +506,8 @@ Sets a source loader for the media source instance.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSource](capi-avmediasource-oh-avmediasource.md) *source | Pointer to the **OH_AVMediaSource** that requires a network proxy. |
-| [OH_AVMediaSourceLoader](capi-avmediasource-oh-avmediasourceloader.md) *loader | Pointer to the **OH_AVMediaSourceLoader** instance. |
+| [OH_AVMediaSource](capi-avmedia-source-oh-avmediasource.md) *source | Pointer to the **OH_AVMediaSource** that requires a network proxy. |
+| [OH_AVMediaSourceLoader](capi-avmedia-source-oh-avmediasourceloader.md) *loader | Pointer to the **OH_AVMediaSourceLoader** instance. |
 
 **Returns**:
 
@@ -596,7 +596,7 @@ Sets the open callback function for **OH_AVMediaSourceLoader**.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoader](capi-avmediasource-oh-avmediasourceloader.md) *loader | Pointer to the **OH_AVMediaSourceLoader** instance for which the callback function is to be set. |
+| [OH_AVMediaSourceLoader](capi-avmedia-source-oh-avmediasourceloader.md) *loader | Pointer to the **OH_AVMediaSourceLoader** instance for which the callback function is to be set. |
 | [OH_AVMediaSourceLoaderOnSourceOpenedCallback](capi-avmedia-source-h.md#oh_avmediasourceloaderonsourceopenedcallback) callback | Open callback function to be set. |
 | void *userData | Pointer to the user-defined data used in the callback function. |
 
@@ -622,7 +622,7 @@ Sets the read callback function for **OH_AVMediaSourceLoader**.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoader](capi-avmediasource-oh-avmediasourceloader.md) *loader | Pointer to the **OH_AVMediaSourceLoader** instance for which the callback function is to be set. |
+| [OH_AVMediaSourceLoader](capi-avmedia-source-oh-avmediasourceloader.md) *loader | Pointer to the **OH_AVMediaSourceLoader** instance for which the callback function is to be set. |
 | [OH_AVMediaSourceLoaderOnSourceReadCallback](capi-avmedia-source-h.md#oh_avmediasourceloaderonsourcereadcallback) callback | Read callback function to be set. |
 | void *userData | Pointer to the user-defined data used in the callback function. |
 
@@ -648,7 +648,7 @@ Sets the close callback function for **OH_AVMediaSourceLoader**.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoader](capi-avmediasource-oh-avmediasourceloader.md) *loader | Pointer to the **OH_AVMediaSourceLoader** instance for which the callback function is to be set. |
+| [OH_AVMediaSourceLoader](capi-avmedia-source-oh-avmediasourceloader.md) *loader | Pointer to the **OH_AVMediaSourceLoader** instance for which the callback function is to be set. |
 | [OH_AVMediaSourceLoaderOnSourceClosedCallback](capi-avmedia-source-h.md#oh_avmediasourceloaderonsourceclosedcallback) callback | Close callback function to be set. |
 | void *userData | Pointer to the user-defined data used in the callback function. |
 

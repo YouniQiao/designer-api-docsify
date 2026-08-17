@@ -1,12 +1,10 @@
-# DownloadResponse
+# DownloadResponse(Upload and Download)
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
+**Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#uploadconfig)
 
 <!--Device-unnamed-export interface DownloadResponse--><!--Device-unnamed-export interface DownloadResponse-End-->
 
@@ -36,8 +34,6 @@ Download token, which is used to obtain the download status
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

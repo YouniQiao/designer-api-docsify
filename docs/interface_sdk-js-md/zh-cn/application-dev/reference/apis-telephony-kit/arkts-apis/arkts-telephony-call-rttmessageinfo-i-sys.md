@@ -4,10 +4,6 @@ rtt通话消息
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-call-export interface RttMessageInfo--><!--Device-call-export interface RttMessageInfo-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -26,10 +22,6 @@ rtt通话id
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-RttMessageInfo-callId: int--><!--Device-RttMessageInfo-callId: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -47,10 +39,6 @@ rtt消息
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-RttMessageInfo-rttMessage: string--><!--Device-RttMessageInfo-rttMessage: string-End-->
 

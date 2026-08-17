@@ -4,10 +4,6 @@ Represents a **File** object opened by **open()**.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface File--><!--Device-unnamed-declare interface File-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -42,10 +38,6 @@ Obtains the parent directory of this file object.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-File-getParent(): string--><!--Device-File-getParent(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -64,7 +56,7 @@ Obtains the parent directory of this file object.
 | 14300002 | Invalid URI |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -83,10 +75,6 @@ lock(exclusive?: boolean): Promise<void>
 Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-File-lock(exclusive?: boolean): Promise<void>--><!--Device-File-lock(exclusive?: boolean): Promise<void>-End-->
 
@@ -115,7 +103,7 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -139,10 +127,6 @@ lock(callback: AsyncCallback<void>): void
 Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-File-lock(callback: AsyncCallback<void>): void--><!--Device-File-lock(callback: AsyncCallback<void>): void-End-->
 
@@ -174,10 +158,6 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-File-lock(exclusive: boolean, callback: AsyncCallback<void>): void--><!--Device-File-lock(exclusive: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -211,10 +191,6 @@ Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-File-tryLock(exclusive?: boolean): void--><!--Device-File-tryLock(exclusive?: boolean): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -236,7 +212,7 @@ Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -256,10 +232,6 @@ Unlocks a file. This API returns the result synchronously.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-File-unlock(): void--><!--Device-File-unlock(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -275,7 +247,7 @@ Unlocks a file. This API returns the result synchronously.
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -298,10 +270,6 @@ FD of the file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-File-readonly fd: number--><!--Device-File-readonly fd: number-End-->
@@ -320,10 +288,6 @@ Name of the file.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-File-readonly name: string--><!--Device-File-readonly name: string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -339,10 +303,6 @@ Path of the file.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-File-readonly path: string--><!--Device-File-readonly path: string-End-->
 

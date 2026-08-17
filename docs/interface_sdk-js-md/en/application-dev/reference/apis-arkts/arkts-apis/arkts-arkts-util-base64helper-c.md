@@ -4,10 +4,6 @@ Provides encoding and decoding for Base64 and Base64URL. The Base64 encoding tab
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-util-class Base64Helper--><!--Device-util-class Base64Helper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,17 +24,13 @@ A constructor used to create a **Base64Helper** instance.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Base64Helper-constructor()--><!--Device-Base64Helper-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64 = new util.Base64Helper();
@@ -54,10 +46,6 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Base64Helper-decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>--><!--Device-Base64Helper-decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>-End-->
@@ -69,7 +57,7 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
-| options | [Type](arkts-arkts-util-type-e.md) | No | Decoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 decoding.<br>- **util.Type.MIME**: Base64 decoding. The input parameter **src** contains carriage return characters and newline characters.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL decoding.<br> - **util.Type.MIME_URL_SAFE**: Base64 URL decoding. The input parameter **src** contains carriage return characters and newline characters.<br>**Since:** 10 |
+| options | [Type](../../apis-na/arkts-apis/arkts-na-util-type-e.md) | No | Decoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 decoding.<br>- **util.Type.MIME**: Base64 decoding. The input parameter **src** contains carriage return characters and newline characters.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL decoding.<br> - **util.Type.MIME_URL_SAFE**: Base64 URL decoding. The input parameter **src** contains carriage return characters and newline characters.<br>**Since:** 10 |
 
 **Return value:**
 
@@ -77,7 +65,7 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64Helper = new util.Base64Helper();
@@ -100,10 +88,6 @@ Decodes a string into a Uint8Array object. This API returns the result synchrono
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Base64Helper-decodeSync(src: Uint8Array | string, options?: Type): Uint8Array--><!--Device-Base64Helper-decodeSync(src: Uint8Array | string, options?: Type): Uint8Array-End-->
@@ -115,7 +99,7 @@ Decodes a string into a Uint8Array object. This API returns the result synchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
-| options | [Type](arkts-arkts-util-type-e.md) | No | Decoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 decoding.<br>- **util.Type.MIME**: Base64 decoding. The input parameter **src** contains carriage return characters and newline characters.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL decoding.<br> - **util.Type.MIME_URL_SAFE**: Base64 URL decoding. The input parameter **src** contains carriage return characters and newline characters.<br>**Since:** 10 |
+| options | [Type](../../apis-na/arkts-apis/arkts-na-util-type-e.md) | No | Decoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 decoding.<br>- **util.Type.MIME**: Base64 decoding. The input parameter **src** contains carriage return characters and newline characters.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL decoding.<br> - **util.Type.MIME_URL_SAFE**: Base64 URL decoding. The input parameter **src** contains carriage return characters and newline characters.<br>**Since:** 10 |
 
 **Return value:**
 
@@ -123,7 +107,7 @@ Decodes a string into a Uint8Array object. This API returns the result synchrono
 | --- | --- |
 | Uint8Array | Uint8Array object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64Helper = new util.Base64Helper();
@@ -145,10 +129,6 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Base64Helper-encode(src: Uint8Array, options?: Type): Promise<Uint8Array>--><!--Device-Base64Helper-encode(src: Uint8Array, options?: Type): Promise<Uint8Array>-End-->
@@ -160,7 +140,7 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | Uint8Array object to encode. |
-| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 encoding.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL encoding.<br>**Since:** 12 |
+| options | [Type](../../apis-na/arkts-apis/arkts-na-util-type-e.md) | No | Encoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 encoding.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL encoding.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -168,7 +148,7 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64Helper = new util.Base64Helper();
@@ -189,10 +169,6 @@ Encodes the input content into a Uint8Array object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Base64Helper-encodeSync(src: Uint8Array, options?: Type): Uint8Array--><!--Device-Base64Helper-encodeSync(src: Uint8Array, options?: Type): Uint8Array-End-->
@@ -204,7 +180,7 @@ Encodes the input content into a Uint8Array object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | Uint8Array object to encode. |
-| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 encoding.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL encoding.<br>**Since:** 12 |
+| options | [Type](../../apis-na/arkts-apis/arkts-na-util-type-e.md) | No | Encoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 encoding.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL encoding.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -212,7 +188,7 @@ Encodes the input content into a Uint8Array object.
 | --- | --- |
 | Uint8Array | Uint8Array object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64Helper = new util.Base64Helper();
@@ -232,10 +208,6 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>--><!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>-End-->
@@ -247,7 +219,7 @@ Encodes the input content into a string. This API uses a promise to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | Uint8Array object to encode. |
-| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME**: Base64 encoding. Each line of the return value contains a maximum of 76 characters and ends with '\r\n'.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME_URL_SAFE**: Base64URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 10 |
+| options | [Type](../../apis-na/arkts-apis/arkts-na-util-type-e.md) | No | Encoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME**: Base64 encoding. Each line of the return value contains a maximum of 76 characters and ends with '\r\n'.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME_URL_SAFE**: Base64URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 10 |
 
 **Return value:**
 
@@ -255,7 +227,7 @@ Encodes the input content into a string. This API uses a promise to return the r
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the string obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64Helper = new util.Base64Helper();
@@ -281,10 +253,6 @@ Performs Base64 encoding on the input Uint8Array byte array and returns a string
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string--><!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string-End-->
@@ -296,7 +264,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns a string
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | Uint8Array | Yes | Uint8Array object to encode. |
-| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME**: Base64 encoding. If the return value exceeds 76 characters, a line break is inserted every 76 characters, and each line ends with '\r\n'. If the return value is fewer than 76 characters, an exception is thrown.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME_URL_SAFE**: Base64 URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 12 |
+| options | [Type](../../apis-na/arkts-apis/arkts-na-util-type-e.md) | No | Encoding format.<br>The following values are available:<br>- **util.Type.BASIC** ( default): Base64 encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME**: Base64 encoding. If the return value exceeds 76 characters, a line break is inserted every 76 characters, and each line ends with '\r\n'. If the return value is fewer than 76 characters, an exception is thrown.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME_URL_SAFE**: Base64 URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -304,7 +272,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns a string
 | --- | --- |
 | string | String obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // MIME encoding

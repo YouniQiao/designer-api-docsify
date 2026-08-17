@@ -4,10 +4,6 @@ Defines the printer capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PrinterCapability--><!--Device-print-interface PrinterCapability-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -32,10 +28,6 @@ Color mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterCapability-colorMode: int--><!--Device-PrinterCapability-colorMode: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -53,10 +45,6 @@ Simplex or duplex mode.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterCapability-duplexMode: int--><!--Device-PrinterCapability-duplexMode: int-End-->
 
@@ -76,10 +64,6 @@ Minimum margin of the printer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterCapability-minMargin?: PrintMargin--><!--Device-PrinterCapability-minMargin?: PrintMargin-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -97,10 +81,6 @@ Printer options. The value is a JSON object string.
 **Type:** Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterCapability-options?: Object--><!--Device-PrinterCapability-options?: Object-End-->
 
@@ -120,10 +100,6 @@ List of page sizes supported by the printer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterCapability-pageSize: Array<PrintPageSize>--><!--Device-PrinterCapability-pageSize: Array<PrintPageSize>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -141,10 +117,6 @@ List of resolutions supported by the printer.
 **Type:** Array&lt;[PrintResolution](arkts-basicservices-print-printresolution-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterCapability-resolution?: Array<PrintResolution>--><!--Device-PrinterCapability-resolution?: Array<PrintResolution>-End-->
 

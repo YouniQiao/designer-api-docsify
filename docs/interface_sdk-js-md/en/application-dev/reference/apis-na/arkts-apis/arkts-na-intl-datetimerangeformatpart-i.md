@@ -2,13 +2,11 @@
 
 Date time range format part.
 
-**Inheritance/Implementation:** DateTimeRangeFormatPart extends [DateTimeFormatPart](arkts-na-intl-datetimeformatpart-i.md#DateTimeFormatPart)
+**Inheritance/Implementation:** DateTimeRangeFormatPart extends [DateTimeFormatPart](arkts-na-intl-datetimeformatpart-i.md#datetimeformatpart)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-Intl-export interface DateTimeRangeFormatPart--><!--Device-Intl-export interface DateTimeRangeFormatPart-End-->
 
@@ -26,9 +24,7 @@ Part source.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

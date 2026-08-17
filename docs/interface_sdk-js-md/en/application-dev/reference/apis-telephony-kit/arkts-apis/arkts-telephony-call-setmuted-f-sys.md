@@ -16,10 +16,6 @@ Sets call muting. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-function setMuted(callback: AsyncCallback<void>): void--><!--Device-call-function setMuted(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -43,7 +39,7 @@ Sets call muting. This API uses an asynchronous callback to return the result.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -68,10 +64,6 @@ Sets call muting. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-function setMuted(): Promise<void>--><!--Device-call-function setMuted(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -93,7 +85,7 @@ Sets call muting. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

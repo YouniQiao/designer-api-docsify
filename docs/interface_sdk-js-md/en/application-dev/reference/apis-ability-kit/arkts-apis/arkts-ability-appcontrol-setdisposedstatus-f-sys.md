@@ -16,10 +16,6 @@ Sets the disposed status for an application. This API uses an asynchronous callb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
 <!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCallback<void>): void--><!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCallback<void>): void-End-->
@@ -34,7 +30,7 @@ Sets the disposed status for an application. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see How do I obtain appId from application information . |
 | disposedWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Disposal intent of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -46,7 +42,7 @@ Sets the disposed status for an application. This API uses an asynchronous callb
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appControl } from '@kit.AbilityKit';
@@ -82,10 +78,6 @@ Sets the disposed status for an application. This API uses a promise to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
 <!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>--><!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>-End-->
@@ -117,7 +109,7 @@ Sets the disposed status for an application. This API uses a promise to return t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

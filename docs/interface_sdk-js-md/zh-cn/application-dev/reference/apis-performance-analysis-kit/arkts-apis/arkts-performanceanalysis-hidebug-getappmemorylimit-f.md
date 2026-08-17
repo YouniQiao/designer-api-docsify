@@ -10,10 +10,6 @@ function getAppMemoryLimit(): MemoryLimit
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function getAppMemoryLimit(): MemoryLimit--><!--Device-hidebug-function getAppMemoryLimit(): MemoryLimit-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -24,7 +20,7 @@ function getAppMemoryLimit(): MemoryLimit
 | --- | --- |
 | [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | 应用程序进程内存限制。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

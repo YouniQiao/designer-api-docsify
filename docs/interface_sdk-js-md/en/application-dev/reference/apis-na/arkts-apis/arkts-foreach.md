@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ForEach](arkts-na-foreach-foreach-f.md#ForEach) | Defines ForEach Component. It requires calling setForEachOptions at start of component attribute set-up, and it requires calling applyAttributesFinish at end of component attribute set-up. |
+| [ForEach](arkts-na-foreach-foreach-f.md#foreach) | Defines ForEach Component. It requires calling setForEachOptions at start of component attribute set-up, and it requires calling applyAttributesFinish at end of component attribute set-up. |
 
 ### Types
 

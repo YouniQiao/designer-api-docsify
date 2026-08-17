@@ -4,10 +4,6 @@ TLS config.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-http-export interface TlsConfig--><!--Device-http-export interface TlsConfig-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,10 +26,6 @@ CipherSuites, cipherSuits must match tsl version, otherswise will set all system
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TlsConfig-cipherSuites?: CipherSuite[]--><!--Device-TlsConfig-cipherSuites?: CipherSuite[]-End-->
@@ -52,10 +44,6 @@ Maximum version num of Tls protocol.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TlsConfig-tlsVersionMax: TlsVersion--><!--Device-TlsConfig-tlsVersionMax: TlsVersion-End-->
@@ -73,10 +61,6 @@ Minimum version num of Tls protocol.
 **Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -16,10 +16,6 @@ Obtains the data security level of a file or directory in synchronous mode. If n
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-securityLabel-function getSecurityLabelSync(path: string): string--><!--Device-securityLabel-function getSecurityLabelSync(path: string): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -49,7 +45,7 @@ Obtains the data security level of a file or directory in synchronous mode. If n
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + '/test.txt';

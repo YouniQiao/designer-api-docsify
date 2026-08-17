@@ -4,11 +4,9 @@ Represents control transfer parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#usbdevicerequestparams)
 
 <!--Device-usbManager-interface USBControlParams--><!--Device-usbManager-interface USBControlParams-End-->
 
@@ -32,11 +30,9 @@ Buffer for writing or reading data.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#usbdevicerequestparams)
 
 <!--Device-USBControlParams-data: Uint8Array--><!--Device-USBControlParams-data: Uint8Array-End-->
 
@@ -54,11 +50,9 @@ Index of the request parameter.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#usbdevicerequestparams)
 
 <!--Device-USBControlParams-index: number--><!--Device-USBControlParams-index: number-End-->
 
@@ -76,11 +70,9 @@ Control request type.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#usbdevicerequestparams)
 
 <!--Device-USBControlParams-reqType: USBControlRequestType--><!--Device-USBControlParams-reqType: USBControlRequestType-End-->
 
@@ -98,11 +90,9 @@ Request type.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#usbdevicerequestparams)
 
 <!--Device-USBControlParams-request: number--><!--Device-USBControlParams-request: number-End-->
 
@@ -120,11 +110,9 @@ Request target type.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#usbdevicerequestparams)
 
 <!--Device-USBControlParams-target: USBRequestTargetType--><!--Device-USBControlParams-target: USBRequestTargetType-End-->
 
@@ -142,11 +130,9 @@ Request parameter.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#usbdevicerequestparams)
 
 <!--Device-USBControlParams-value: number--><!--Device-USBControlParams-value: number-End-->
 

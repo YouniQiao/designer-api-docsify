@@ -4,11 +4,9 @@ Wi-Fi station information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md#StationInfo-(System-API))
+**Substitutes:** [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md#stationinfo-system-api)
 
 <!--Device-wifi-interface StationInfo--><!--Device-wifi-interface StationInfo-End-->
 
@@ -34,11 +32,9 @@ The IP address of the Wi-Fi client
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ipAddress](arkts-connectivity-wifimanager-stationinfo-i-sys.md#ipAddress)
+**Substitutes:** [ipAddress](arkts-connectivity-wifimanager-stationinfo-i-sys.md#ipaddress)
 
 <!--Device-StationInfo-ipAddress: string--><!--Device-StationInfo-ipAddress: string-End-->
 
@@ -58,11 +54,9 @@ The MAC address of the Wi-Fi client
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [macAddress](arkts-connectivity-wifimanager-stationinfo-i-sys.md#macAddress)
+**Substitutes:** [macAddress](arkts-connectivity-wifimanager-stationinfo-i-sys.md#macaddress)
 
 <!--Device-StationInfo-macAddress: string--><!--Device-StationInfo-macAddress: string-End-->
 
@@ -81,8 +75,6 @@ the network name of the Wi-Fi client
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

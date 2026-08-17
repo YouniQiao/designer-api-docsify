@@ -10,10 +10,6 @@ function isSupported(type: RunningLockType): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-runningLock-function isSupported(type: RunningLockType): boolean--><!--Device-runningLock-function isSupported(type: RunningLockType): boolean-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
@@ -36,7 +32,7 @@ function isSupported(type: RunningLockType): boolean
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {

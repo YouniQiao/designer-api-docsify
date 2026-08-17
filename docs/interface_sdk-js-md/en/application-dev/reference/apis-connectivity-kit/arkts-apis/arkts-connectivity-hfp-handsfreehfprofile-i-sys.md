@@ -2,13 +2,9 @@
 
 Manage hfp sink profile.
 
-**Inheritance/Implementation:** HandsFreeHfProfile extends [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md#BaseProfile)
+**Inheritance/Implementation:** HandsFreeHfProfile extends [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md#baseprofile)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-hfp-interface HandsFreeHfProfile--><!--Device-hfp-interface HandsFreeHfProfile-End-->
 
@@ -29,10 +25,6 @@ connect(deviceId: string): void
 Initiate the HFP connection to a remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -71,10 +63,6 @@ disconnect(deviceId: string): void
 Disconnect the HFP connection with the remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

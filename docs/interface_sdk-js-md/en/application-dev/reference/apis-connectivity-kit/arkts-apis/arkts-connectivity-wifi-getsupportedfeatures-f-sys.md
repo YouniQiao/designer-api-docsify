@@ -16,11 +16,9 @@ Obtains the features supported by this device. &lt;p&gt;To check whether this de
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSupportedFeatures](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md#getSupportedFeatures-(System-API))
+**Substitutes:** [getSupportedFeatures](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md#getsupportedfeatures-system-api)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

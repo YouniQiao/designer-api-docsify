@@ -16,11 +16,9 @@ Sets the hotspot for a device. &lt;p&gt;Only OPEN and WPA2 PSK hotspot can be co
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setHotspotConfig](arkts-connectivity-wifimanager-sethotspotconfig-f-sys.md#setHotspotConfig-(System-API))
+**Substitutes:** [setHotspotConfig](arkts-connectivity-wifimanager-sethotspotconfig-f-sys.md#sethotspotconfig-system-api)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
@@ -42,7 +40,7 @@ Sets the hotspot for a device. &lt;p&gt;Only OPEN and WPA2 PSK hotspot can be co
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

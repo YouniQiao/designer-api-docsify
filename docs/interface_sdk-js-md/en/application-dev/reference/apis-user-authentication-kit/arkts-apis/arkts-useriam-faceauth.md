@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace faceAuth--><!--Device-unnamed-declare namespace faceAuth-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.FaceAuth

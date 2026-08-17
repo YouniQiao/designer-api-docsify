@@ -4,8 +4,6 @@ Defines the information about the code signature file.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 <!--Device-installer-export interface VerifyCodeParam--><!--Device-installer-export interface VerifyCodeParam-End-->
@@ -32,8 +30,6 @@ Module name of the bundle.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 <!--Device-VerifyCodeParam-moduleName: string--><!--Device-VerifyCodeParam-moduleName: string-End-->
@@ -53,8 +49,6 @@ Path of the code signature file.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 

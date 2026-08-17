@@ -16,10 +16,6 @@ Subscribe to SAR sensor data, {@code SensorId.SAR}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onSarChange(callback: Callback<SarResponse>, options?: Options): void--><!--Device-sensor-function onSarChange(callback: Callback<SarResponse>, options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

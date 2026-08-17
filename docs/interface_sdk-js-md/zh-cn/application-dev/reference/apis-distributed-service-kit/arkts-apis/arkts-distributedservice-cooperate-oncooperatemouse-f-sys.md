@@ -10,10 +10,6 @@ function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseL
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
 <!--Device-cooperate-function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseLocation>): void--><!--Device-cooperate-function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseLocation>): void-End-->
@@ -28,7 +24,7 @@ function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseL
 | --- | --- | --- | --- |
 | type | 'cooperateMouse' | 是 | 监听类型，取值为'cooperateMouse' |
 | networkId | string | 是 | 目标设备描述符 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | 是 | 回调函数，异步返回指定监听设备鼠标光标位置信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | 是 | 回调函数，异步返回指定监听设备鼠标光标位置信息。 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseL
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 function callback(data: cooperate.MouseLocation) {

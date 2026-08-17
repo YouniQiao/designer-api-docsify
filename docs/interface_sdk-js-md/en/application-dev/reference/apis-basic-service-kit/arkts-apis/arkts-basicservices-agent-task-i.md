@@ -4,10 +4,6 @@ Implements an upload or download task. Before using this API, you must obtain a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-interface Task--><!--Device-agent-interface Task-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -27,10 +23,6 @@ offCompleted(callback?: ProgressCallback): void
 Disables the specified callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Task-offCompleted(callback?: ProgressCallback): void--><!--Device-Task-offCompleted(callback?: ProgressCallback): void-End-->
 
@@ -52,10 +44,6 @@ Disables the specified callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-offFailed(callback?: ProgressCallback): void--><!--Device-Task-offFailed(callback?: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -75,10 +63,6 @@ offFaultOccur(callback?: Callback<Faults>): void
 Disables the 'faultOccur' callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Task-offFaultOccur(callback?: Callback<Faults>): void--><!--Device-Task-offFaultOccur(callback?: Callback<Faults>): void-End-->
 
@@ -100,10 +84,6 @@ Disables the specified callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-offPause(callback?: ProgressCallback): void--><!--Device-Task-offPause(callback?: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -123,10 +103,6 @@ offProgress(callback?: ProgressCallback): void
 Disables the specified callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Task-offProgress(callback?: ProgressCallback): void--><!--Device-Task-offProgress(callback?: ProgressCallback): void-End-->
 
@@ -148,10 +124,6 @@ Disables the specified callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-offRemove(callback?: ProgressCallback): void--><!--Device-Task-offRemove(callback?: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -171,10 +143,6 @@ offResponse(callback?: Callback<HttpResponse>): void
 Disables the response callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Task-offResponse(callback?: Callback<HttpResponse>): void--><!--Device-Task-offResponse(callback?: Callback<HttpResponse>): void-End-->
 
@@ -196,10 +164,6 @@ Disables the specified callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-offResume(callback?: ProgressCallback): void--><!--Device-Task-offResume(callback?: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -220,10 +184,6 @@ Disables the wait callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-offWait(callback?: Callback<WaitingReason>): void--><!--Device-Task-offWait(callback?: Callback<WaitingReason>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -243,10 +203,6 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 Unsubscribes from task completion events. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -278,10 +234,6 @@ Unsubscribes from task failure events. > **NOTE：**> > For details about how to
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-off(event: 'failed', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'failed', callback?: (progress: Progress) => void): void-End-->
@@ -312,10 +264,6 @@ Unsubscribes from task failure events. > **NOTE：**> > For details about how to
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-Task-off(event: 'faultOccur', callback?: Callback<Faults>): void--><!--Device-Task-off(event: 'faultOccur', callback?: Callback<Faults>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -343,10 +291,6 @@ Unsubscribes from the foreground task pause event. > **NOTE：**> > For details 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-Task-off(event: 'pause', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'pause', callback?: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -373,10 +317,6 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 Unsubscribes from task progress events. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -408,10 +348,6 @@ Unsubscribes from the task removal event. > **NOTE：**> > For details about how
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-Task-off(event: 'remove', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'remove', callback?: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -438,10 +374,6 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 Unsubscribes from task response headers. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -472,10 +404,6 @@ Unsubscribes from foreground task resume events. > **NOTE：**> > For details ab
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-Task-off(event: 'resume', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'resume', callback?: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -502,10 +430,6 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 Unsubscribes from task waiting events. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-Task-off(event: 'wait', callback?: Callback<WaitingReason>): void--><!--Device-Task-off(event: 'wait', callback?: Callback<WaitingReason>): void-End-->
 
@@ -534,10 +458,6 @@ Enables the specified callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-onCompleted(callback: ProgressCallback): void--><!--Device-Task-onCompleted(callback: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -557,10 +477,6 @@ onFailed(callback: ProgressCallback): void
 Enables the specified callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Task-onFailed(callback: ProgressCallback): void--><!--Device-Task-onFailed(callback: ProgressCallback): void-End-->
 
@@ -582,10 +498,6 @@ Enables the 'faultOccur' callback. This callback is triggered when the task fail
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-onFaultOccur(callback: Callback<Faults>): void--><!--Device-Task-onFaultOccur(callback: Callback<Faults>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -605,10 +517,6 @@ onPause(callback: ProgressCallback): void
 Enables the specified callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Task-onPause(callback: ProgressCallback): void--><!--Device-Task-onPause(callback: ProgressCallback): void-End-->
 
@@ -630,10 +538,6 @@ Enables the specified callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-onProgress(callback: ProgressCallback): void--><!--Device-Task-onProgress(callback: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -653,10 +557,6 @@ onRemove(callback: ProgressCallback): void
 Enables the specified callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Task-onRemove(callback: ProgressCallback): void--><!--Device-Task-onRemove(callback: ProgressCallback): void-End-->
 
@@ -678,10 +578,6 @@ Enables the response callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-onResponse(callback: Callback<HttpResponse>): void--><!--Device-Task-onResponse(callback: Callback<HttpResponse>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -701,10 +597,6 @@ onResume(callback: ProgressCallback): void
 Enables the specified callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Task-onResume(callback: ProgressCallback): void--><!--Device-Task-onResume(callback: ProgressCallback): void-End-->
 
@@ -726,10 +618,6 @@ Enables the wait callback. This callback is triggered when the task changes from
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-onWait(callback: Callback<WaitingReason>): void--><!--Device-Task-onWait(callback: Callback<WaitingReason>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -749,10 +637,6 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 Subscribes to task completion events. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -784,10 +668,6 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-on(event: 'failed', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'failed', callback: (progress: Progress) => void): void-End-->
@@ -818,10 +698,6 @@ Subscribes to task failure events. This API uses a callback to return the result
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-Task-on(event: 'faultOccur', callback: Callback<Faults>): void--><!--Device-Task-on(event: 'faultOccur', callback: Callback<Faults>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -849,10 +725,6 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-Task-on(event: 'pause', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'pause', callback: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -879,10 +751,6 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 Subscribes to task progress changes. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -914,10 +782,6 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-Task-on(event: 'remove', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'remove', callback: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -944,10 +808,6 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 Subscribes to task response headers. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -978,10 +838,6 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-Task-on(event: 'resume', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'resume', callback: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -1009,10 +865,6 @@ Subscribes to task wait events. This API uses a callback to return the result. >
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-Task-on(event: 'wait', callback: Callback<WaitingReason>): void--><!--Device-Task-on(event: 'wait', callback: Callback<WaitingReason>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -1039,10 +891,6 @@ pause(callback: AsyncCallback<void>): void
 Pauses a task that is waiting, running, or retrying. A paused task can be resumed by [resume](#resume). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Task-pause(callback: AsyncCallback<void>): void--><!--Device-Task-pause(callback: AsyncCallback<void>): void-End-->
 
@@ -1072,10 +920,6 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-pause(): Promise<void>--><!--Device-Task-pause(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -1103,10 +947,6 @@ resume(callback: AsyncCallback<void>): void
 Resumes a paused task. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1139,10 +979,6 @@ Resumes a paused task. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-Task-resume(): Promise<void>--><!--Device-Task-resume(): Promise<void>-End-->
@@ -1174,10 +1010,6 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Task-setMaxSpeed(speed: long): Promise<void>--><!--Device-Task-setMaxSpeed(speed: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -1186,7 +1018,7 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | long | Yes | Maximum number of bytes that can be transmitted by a task per second, with a minimum of 16384 bytes. The value cannot be less than the minimum speed value specified by [MinSpeed](arkts-basicservices-agent-minspeed-i.md#MinSpeed). |
+| speed | long | Yes | Maximum number of bytes that can be transmitted by a task per second, with a minimum of 16384 bytes. The value cannot be less than the minimum speed value specified by [MinSpeed](arkts-basicservices-agent-minspeed-i.md#minspeed). |
 
 **Return value:**
 
@@ -1210,10 +1042,6 @@ start(callback: AsyncCallback<void>): void
 Starts a task. This API uses an asynchronous callback to return the result. Tasks in the following states can be started: 1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1247,10 +1075,6 @@ Starts a task. This API uses a promise to return the result. Tasks in the follow
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1283,10 +1107,6 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-stop(callback: AsyncCallback<void>): void--><!--Device-Task-stop(callback: AsyncCallback<void>): void-End-->
@@ -1315,10 +1135,6 @@ stop(): Promise<void>
 Stops a task that is running, waiting, or retrying. A paused task can be resumed by [start](#start). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1351,10 +1167,6 @@ Task configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Task-config: Config--><!--Device-Task-config: Config-End-->
@@ -1372,10 +1184,6 @@ Task ID, which is unique and automatically generated by the system.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

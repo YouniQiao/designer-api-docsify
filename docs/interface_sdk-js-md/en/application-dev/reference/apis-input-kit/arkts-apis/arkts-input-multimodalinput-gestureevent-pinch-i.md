@@ -4,10 +4,6 @@ Defines a pinch event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare interface Pinch--><!--Device-unnamed-export declare interface Pinch-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -37,10 +33,6 @@ Pinch scale factor. The value is greater than or equal to 0.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pinch-scale: double--><!--Device-Pinch-scale: double-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -56,10 +48,6 @@ Gesture event type, for example, gesture start, gesture update, or gesture end.
 **Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pinch-type: ActionType--><!--Device-Pinch-type: ActionType-End-->
 

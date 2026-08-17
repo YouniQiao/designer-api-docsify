@@ -10,10 +10,6 @@ function createHash(algorithm: string): HashStream
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hash-function createHash(algorithm: string): HashStream--><!--Device-hash-function createHash(algorithm: string): HashStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -38,7 +34,7 @@ function createHash(algorithm: string): HashStream
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 // pages/xxx.ets

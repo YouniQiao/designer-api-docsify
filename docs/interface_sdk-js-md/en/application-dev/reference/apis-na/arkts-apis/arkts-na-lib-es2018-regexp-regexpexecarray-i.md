@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface RegExpExecArray--><!--Device-unnamed-interface RegExpExecArray-End-->
 
 ## groups
@@ -19,10 +15,6 @@ groups?: {
 **Type:** {         [key: string]: string     }
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExpExecArray-groups?: {        [key: string]: string    }--><!--Device-RegExpExecArray-groups?: {        [key: string]: string    }-End-->
 

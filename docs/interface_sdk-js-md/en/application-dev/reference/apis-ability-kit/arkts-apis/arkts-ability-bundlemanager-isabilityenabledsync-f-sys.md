@@ -16,10 +16,6 @@ Checks whether an ability is enabled. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-function isAbilityEnabledSync(info: AbilityInfo): boolean--><!--Device-bundleManager-function isAbilityEnabledSync(info: AbilityInfo): boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -47,7 +43,7 @@ Checks whether an ability is enabled. This API returns the result synchronously.
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

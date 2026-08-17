@@ -16,10 +16,6 @@ Obtains the class of a peer Bluetooth device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 10 - 17: ohos.permission.ACCESS_BLUETOOTH
 
@@ -52,7 +48,7 @@ Obtains the class of a peer Bluetooth device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

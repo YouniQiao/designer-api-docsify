@@ -4,10 +4,6 @@ Represents asset (such as a file, image, or video) information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-commonType-interface Asset--><!--Device-commonType-interface Asset-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
@@ -30,10 +26,6 @@ Time when the asset was created.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Asset-createTime: string--><!--Device-Asset-createTime: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
@@ -49,10 +41,6 @@ Time when the asset was last modified.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Asset-modifyTime: string--><!--Device-Asset-modifyTime: string-End-->
 
@@ -70,10 +58,6 @@ Asset name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Asset-name: string--><!--Device-Asset-name: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
@@ -89,10 +73,6 @@ Application sandbox path of the asset.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Asset-path: string--><!--Device-Asset-path: string-End-->
 
@@ -110,10 +90,6 @@ Size of the asset. If this field changes, the asset is considered to have change
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Asset-size: string--><!--Device-Asset-size: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
@@ -130,10 +106,6 @@ Asset status. The default value is ASSET_NORMAL.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Asset-status?: AssetStatus--><!--Device-Asset-status?: AssetStatus-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
@@ -149,10 +121,6 @@ Asset URI, which is an absolute path in the system.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Asset-uri: string--><!--Device-Asset-uri: string-End-->
 

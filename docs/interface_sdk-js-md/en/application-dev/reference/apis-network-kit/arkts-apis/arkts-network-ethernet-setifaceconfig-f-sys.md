@@ -16,10 +16,6 @@ Set the specified network interface parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 <!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: AsyncCallback<void>): void--><!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: AsyncCallback<void>): void-End-->
@@ -33,7 +29,7 @@ Set the specified network interface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Indicates the network interface name of the network parameter. |
-| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md#InterfaceConfiguration-(System-API)). |
+| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md#interfaceconfiguration-system-api). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setIfaceConfig. |
 
 **Error codes:**
@@ -51,7 +47,7 @@ Set the specified network interface parameters.
 | [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
 | [2201006](../errorcode-net-ethernet.md#2201006-device-not-connected) | Ethernet device not connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';
@@ -86,10 +82,6 @@ Set the specified network interface parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 <!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void>--><!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void>-End-->
@@ -103,7 +95,7 @@ Set the specified network interface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Indicates the network interface name of the network parameter. |
-| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md#InterfaceConfiguration-(System-API)). |
+| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md#interfaceconfiguration-system-api). |
 
 **Return value:**
 
@@ -126,7 +118,7 @@ Set the specified network interface parameters.
 | [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
 | [2201006](../errorcode-net-ethernet.md#2201006-device-not-connected) | Ethernet device not connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';

@@ -4,10 +4,6 @@ The definition of SearchPlayInfo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avMusicTemplate-interface SearchPlayInfo--><!--Device-avMusicTemplate-interface SearchPlayInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -30,10 +26,6 @@ The musicInfo of SearchPlayInfo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchPlayInfo-musicInfo?: SearchPlayMusicInfo--><!--Device-SearchPlayInfo-musicInfo?: SearchPlayMusicInfo-End-->
@@ -51,10 +43,6 @@ The videoInfo of SearchPlayInfo.
 **Type:** [SearchPlayVideoInfo](arkts-avsession-avmusictemplate-searchplayvideoinfo-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

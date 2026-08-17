@@ -4,10 +4,6 @@ Provides APIs for observing the changes of files or directories. Before using th
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Watcher--><!--Device-unnamed-export interface Watcher-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -42,10 +38,6 @@ Starts listening.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Watcher-start(): void--><!--Device-Watcher-start(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -69,7 +61,7 @@ Starts listening.
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -87,10 +79,6 @@ stop(): void
 Stops listening and removes the **Watcher** object.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-Watcher-stop(): void--><!--Device-Watcher-stop(): void-End-->
 
@@ -115,7 +103,7 @@ Stops listening and removes the **Watcher** object.
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";

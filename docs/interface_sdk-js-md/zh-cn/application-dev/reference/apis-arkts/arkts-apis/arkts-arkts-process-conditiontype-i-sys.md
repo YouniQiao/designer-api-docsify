@@ -4,10 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-process-interface ConditionType--><!--Device-process-interface ConditionType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -25,10 +21,6 @@ killSignal?: number | string
 **类型：** number \| string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-ConditionType-killSignal?: number | string--><!--Device-ConditionType-killSignal?: number | string-End-->
 
@@ -48,10 +40,6 @@ maxBuffer?: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-ConditionType-maxBuffer?: number--><!--Device-ConditionType-maxBuffer?: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -69,10 +57,6 @@ timeout?: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-ConditionType-timeout?: number--><!--Device-ConditionType-timeout?: number-End-->
 

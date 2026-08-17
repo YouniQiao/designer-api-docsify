@@ -4,11 +4,9 @@ P2P group information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#WifiP2pGroupInfo)
+**Substitutes:** [WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#wifip2pgroupinfo)
 
 <!--Device-wifi-interface WifiP2pGroupInfo--><!--Device-wifi-interface WifiP2pGroupInfo-End-->
 
@@ -32,11 +30,9 @@ Client list
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clientDevices](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#clientDevices)
+**Substitutes:** [clientDevices](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#clientdevices)
 
 <!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]--><!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]-End-->
 
@@ -53,8 +49,6 @@ Frequency
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,11 +70,9 @@ Group owner IP address
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [goIpAddress](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#goIpAddress)
+**Substitutes:** [goIpAddress](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#goipaddress)
 
 <!--Device-WifiP2pGroupInfo-goIpAddress: string--><!--Device-WifiP2pGroupInfo-goIpAddress: string-End-->
 
@@ -98,11 +90,9 @@ Group name
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [groupName](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#groupName)
+**Substitutes:** [groupName](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#groupname)
 
 <!--Device-WifiP2pGroupInfo-groupName: string--><!--Device-WifiP2pGroupInfo-groupName: string-End-->
 
@@ -119,8 +109,6 @@ Interface name
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -142,11 +130,9 @@ Indicates whether it is group owner
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isP2pGo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#isP2pGo)
+**Substitutes:** [isP2pGo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#isp2pgo)
 
 <!--Device-WifiP2pGroupInfo-isP2pGo: boolean--><!--Device-WifiP2pGroupInfo-isP2pGo: boolean-End-->
 
@@ -164,11 +150,9 @@ Network ID
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [networkId](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#networkId)
+**Substitutes:** [networkId](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#networkid)
 
 <!--Device-WifiP2pGroupInfo-networkId: number--><!--Device-WifiP2pGroupInfo-networkId: number-End-->
 
@@ -186,11 +170,9 @@ Group owner information
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ownerInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#ownerInfo)
+**Substitutes:** [ownerInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#ownerinfo)
 
 <!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice--><!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice-End-->
 
@@ -207,8 +189,6 @@ The group passphrase
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

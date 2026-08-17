@@ -4,10 +4,6 @@ Describes the event received by the application when the volume is changed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface VolumeEvent--><!--Device-audio-interface VolumeEvent-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -30,10 +26,6 @@ Whether to show the volume change in UI. **true** to show, **false** otherwise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VolumeEvent-updateUi: boolean--><!--Device-VolumeEvent-updateUi: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -49,10 +41,6 @@ Volume to set. The value range can be obtained by calling **getMinVolume** and *
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VolumeEvent-volume: int--><!--Device-VolumeEvent-volume: int-End-->
 
@@ -70,10 +58,6 @@ Audio volume mode. The default value is **SYSTEM_GLOBAL**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VolumeEvent-volumeMode?: AudioVolumeMode--><!--Device-VolumeEvent-volumeMode?: AudioVolumeMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -89,10 +73,6 @@ Audio volume type.
 **Type:** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VolumeEvent-volumeType: AudioVolumeType--><!--Device-VolumeEvent-volumeType: AudioVolumeType-End-->
 

@@ -10,11 +10,9 @@ Obtains the Context object associated with a component on the page.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getHostContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getHostContext)
+**Substitutes:** [getHostContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#gethostcontext)
 
 **Model restriction:** This API can be used only in the stage model.
 

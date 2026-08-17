@@ -4,13 +4,9 @@
 type OnOverrideUrlLoadingCallback = (webResourceRequest: WebResourceRequest) => boolean
 ```
 
-The callback of onOverrideUrlLoading. Should not call WebviewController.loadUrl with the request's URL and then return true.
+Callback used to intercept URL loading requests. It can block the loading of specific URLs or perform custom processing. Applicable to scenarios such as intercepting ads and blocking redirects to malicious websites.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -22,11 +18,11 @@ The callback of onOverrideUrlLoading. Should not call WebviewController.loadUrl 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| webResourceRequest | [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md) | Yes | callback information of onOverrideUrlLoading. |
+| webResourceRequest | [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md) | Yes | Information about the URL request. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returning true causes the current Web to abort loading the URL, false causes the Web to continue loading the url as usual. |
+| boolean | Whether the loading is blocked. **true** is returned if the loading is blocked; otherwise, **false** is returned. |
 

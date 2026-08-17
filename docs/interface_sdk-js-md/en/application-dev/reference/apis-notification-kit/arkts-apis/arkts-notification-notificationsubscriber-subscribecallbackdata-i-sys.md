@@ -4,10 +4,6 @@ Returns notification information carrying system property values.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface SubscribeCallbackData--><!--Device-unnamed-export interface SubscribeCallbackData-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -25,10 +21,6 @@ Notification classification information. It exists only when **enableClassificat
 **Type:** [NotificationClassification](arkts-notification-notificationsubscriber-notificationclassification-i-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Reason for deletion. The options are as follows: - **1**: The notification is de
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SubscribeCallbackData-readonly reason?: int--><!--Device-SubscribeCallbackData-readonly reason?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -71,10 +59,6 @@ Notification content.
 **Type:** [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SubscribeCallbackData-readonly request: NotificationRequest--><!--Device-SubscribeCallbackData-readonly request: NotificationRequest-End-->
 
@@ -94,10 +78,6 @@ Notification sorting information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SubscribeCallbackData-readonly sortingMap?: NotificationSortingMap--><!--Device-SubscribeCallbackData-readonly sortingMap?: NotificationSortingMap-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -115,10 +95,6 @@ Notification sound.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SubscribeCallbackData-readonly sound?: string--><!--Device-SubscribeCallbackData-readonly sound?: string-End-->
 
@@ -138,10 +114,6 @@ Notification vibration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SubscribeCallbackData-readonly vibrationValues?: Array<long>--><!--Device-SubscribeCallbackData-readonly vibrationValues?: Array<long>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -159,10 +131,6 @@ Voice broadcast content of the notification.
 **Type:** [VoiceContent](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

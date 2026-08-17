@@ -30,10 +30,6 @@ Creates a symbolic link based on the file path. This API returns the result sync
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void--><!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

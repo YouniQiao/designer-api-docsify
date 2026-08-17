@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-class UserIdentityManager--><!--Device-osAccount-class UserIdentityManager-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 添加凭据，添加用户凭据信息，传入凭据添加方法和凭据信息（凭据类型，子类，如果添加用户的非密码凭据，则传入密码身份验证令牌），并获取结果/获取信息。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
@@ -63,7 +55,7 @@ addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The token is invalid. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -151,10 +143,6 @@ cancel(challenge: Uint8Array): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
 <!--Device-UserIdentityManager-cancel(challenge: Uint8Array): void--><!--Device-UserIdentityManager-cancel(challenge: Uint8Array): void-End-->
@@ -179,7 +167,7 @@ cancel(challenge: Uint8Array): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -218,10 +206,6 @@ closeSession(accountId?: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
 <!--Device-UserIdentityManager-closeSession(accountId?: int): void--><!--Device-UserIdentityManager-closeSession(accountId?: int): void-End-->
@@ -247,7 +231,7 @@ closeSession(accountId?: int): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let userIDM = new osAccount.UserIdentityManager();
@@ -265,10 +249,6 @@ constructor()
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UserIdentityManager-constructor()--><!--Device-UserIdentityManager-constructor()-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -281,7 +261,7 @@ constructor()
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let userIDM = new osAccount.UserIdentityManager();
@@ -296,10 +276,6 @@ delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): vo
 删除用户凭据信息。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
@@ -329,7 +305,7 @@ delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): vo
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The token is invalid. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -381,10 +357,6 @@ delUser(token: Uint8Array, callback: IIdmCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
 <!--Device-UserIdentityManager-delUser(token: Uint8Array, callback: IIdmCallback): void--><!--Device-UserIdentityManager-delUser(token: Uint8Array, callback: IIdmCallback): void-End-->
@@ -410,7 +382,7 @@ delUser(token: Uint8Array, callback: IIdmCallback): void
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The token is invalid. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -460,10 +432,6 @@ getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.USE_USER_IDM
 
 <!--Device-UserIdentityManager-getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void--><!--Device-UserIdentityManager-getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void-End-->
@@ -476,7 +444,7 @@ getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。如果成功，err为null，data为当前用户的所有已注册凭据信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。如果成功，err为null，data为当前用户的所有已注册凭据信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -487,7 +455,7 @@ getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -541,10 +509,6 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.USE_USER_IDM
 
 <!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void--><!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void-End-->
@@ -558,7 +522,7 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | authType | AuthType | 是 | 认证类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | 是 | 回调函数，如果获取成功，err为null，data为当前用户指定类型的所有已注册凭据信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | 是 | 回调函数，如果获取成功，err为null，data为当前用户指定类型的所有已注册凭据信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -570,7 +534,7 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -626,10 +590,6 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.USE_USER_IDM
 
 <!--Device-UserIdentityManager-getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>--><!--Device-UserIdentityManager-getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>-End-->
@@ -660,7 +620,7 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -711,10 +671,6 @@ getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.USE_USER_IDM
 
 <!--Device-UserIdentityManager-getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>--><!--Device-UserIdentityManager-getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>-End-->
@@ -746,7 +702,7 @@ getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -805,10 +761,6 @@ getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.USE_USER_IDM
 
 <!--Device-UserIdentityManager-getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>--><!--Device-UserIdentityManager-getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>-End-->
@@ -843,7 +795,7 @@ getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -898,10 +850,6 @@ offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.USE_USER_IDM
 
 <!--Device-UserIdentityManager-offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void--><!--Device-UserIdentityManager-offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void-End-->
@@ -914,7 +862,7 @@ offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收凭据变更事件的回调函数。默认为undefined，表示清除所有订阅记录；非undefined时，表示清除与该回调函数关 联的订阅记录。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收凭据变更事件的回调函数。默认为undefined，表示清除所有订阅记录；非undefined时，表示清除与该回调函数关 联的订阅记录。 |
 
 **错误码：**
 
@@ -924,7 +872,7 @@ offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -968,10 +916,6 @@ onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialCh
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.USE_USER_IDM
 
 <!--Device-UserIdentityManager-onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialChangeInfo>): void--><!--Device-UserIdentityManager-onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialChangeInfo>): void-End-->
@@ -985,7 +929,7 @@ onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialCh
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | credentialTypes | AuthType[] | 是 | 表示订阅的凭据类型集合。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | 是 | 表示用于接收凭据变更事件的回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | 是 | 表示用于接收凭据变更事件的回调函数。 |
 
 **错误码：**
 
@@ -997,7 +941,7 @@ onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialCh
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1033,10 +977,6 @@ openSession(callback: AsyncCallback<Uint8Array>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
 <!--Device-UserIdentityManager-openSession(callback: AsyncCallback<Uint8Array>): void--><!--Device-UserIdentityManager-openSession(callback: AsyncCallback<Uint8Array>): void-End-->
@@ -1049,7 +989,7 @@ openSession(callback: AsyncCallback<Uint8Array>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数。如果打开会话成功，err为null，data为挑战值；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | 是 | 回调函数。如果打开会话成功，err为null，data为挑战值；否则为错误对象。 |
 
 **错误码：**
 
@@ -1060,7 +1000,7 @@ openSession(callback: AsyncCallback<Uint8Array>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1114,10 +1054,6 @@ openSession(accountId?: int): Promise<Uint8Array>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
 <!--Device-UserIdentityManager-openSession(accountId?: int): Promise<Uint8Array>--><!--Device-UserIdentityManager-openSession(accountId?: int): Promise<Uint8Array>-End-->
@@ -1148,7 +1084,7 @@ openSession(accountId?: int): Promise<Uint8Array>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1201,10 +1137,6 @@ updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
 <!--Device-UserIdentityManager-updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void--><!--Device-UserIdentityManager-updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void-End-->
@@ -1236,7 +1168,7 @@ updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The token is invalid. |
 | [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-凭证复杂度验证失败) | Credential complexity verification failed.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

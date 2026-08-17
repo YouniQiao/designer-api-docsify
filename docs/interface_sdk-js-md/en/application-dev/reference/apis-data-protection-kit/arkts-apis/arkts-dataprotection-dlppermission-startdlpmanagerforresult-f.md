@@ -12,13 +12,9 @@ import { dlpPermission } from 'dlpPermission';
 function startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise<DLPManagerResult>
 ```
 
-Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) page in borderless mode. This API uses a promise to return the result. This API starts the DLP manager application to configure file permissions and return the user operation result to the caller. > **NOTE：**> > This API can be called only by domain accounts.
+Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability) page in borderless mode. This API uses a promise to return the result. This API starts the DLP manager application to configure file permissions and return the user operation result to the caller. > **NOTE：**> > This API can be called only by domain accounts.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,7 +26,7 @@ Starts the DLP manager application on the current [UIAbility](../../apis-ability
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) context. |
+| context | common.UIAbilityContext | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability) context. |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Request object, which must contain the **uri** and **displayName** fields. |
 
 **Return value:**
@@ -50,7 +46,7 @@ Starts the DLP manager application on the current [UIAbility](../../apis-ability
 | [19100016](../errorcode-dlp.md#19100016-uri-missing-in-want) | The uri field is missing in the want parameter. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

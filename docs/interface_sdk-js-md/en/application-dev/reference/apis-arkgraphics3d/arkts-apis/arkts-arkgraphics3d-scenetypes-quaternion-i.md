@@ -4,10 +4,6 @@ A mathematical notation for representing spatial rotations of elements in 3D spa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Quaternion--><!--Device-unnamed-export interface Quaternion-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -23,10 +19,6 @@ Component on the W axis. The value is a real number.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Quaternion-w: double--><!--Device-Quaternion-w: double-End-->
 
@@ -44,10 +36,6 @@ Component on the X axis. The value is a real number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Quaternion-x: double--><!--Device-Quaternion-x: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -64,10 +52,6 @@ Component on the Y axis. The value is a real number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Quaternion-y: double--><!--Device-Quaternion-y: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -83,10 +67,6 @@ Component on the Z axis. The value is a real number.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Quaternion-z: double--><!--Device-Quaternion-z: double-End-->
 

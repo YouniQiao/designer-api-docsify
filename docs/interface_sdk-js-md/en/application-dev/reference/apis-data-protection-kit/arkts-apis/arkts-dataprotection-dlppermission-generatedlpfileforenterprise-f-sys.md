@@ -16,10 +16,6 @@ Encrypts a plaintext file to generate a DLP file for an enterprise account. This
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 <!--Device-dlpPermission-function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>--><!--Device-dlpPermission-function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>-End-->
@@ -59,7 +55,7 @@ Encrypts a plaintext file to generate a DLP file for an enterprise account. This
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 | [19100014](../errorcode-dlp.md#19100014-account-not-logged-in) | Account not logged in. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

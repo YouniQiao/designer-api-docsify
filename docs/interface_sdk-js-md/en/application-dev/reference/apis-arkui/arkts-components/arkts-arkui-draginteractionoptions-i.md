@@ -4,10 +4,6 @@ Interaction behavior for the floating preview image
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface DragInteractionOptions--><!--Device-unnamed-declare interface DragInteractionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Whether to enable the default press animation (scale-down) during long-press lif
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ Whether to trigger automatic scrolling when users drag to the edges of a scrolla
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -66,15 +54,11 @@ Whether to trigger automatic scrolling when users drag to the edges of a scrolla
 enableHapticFeedback?: boolean
 ```
 
-Whether to enable haptic feedback during dragging. **true**: Enable haptic feedback during dragging. **false**: Disable haptic feedback during dragging. This parameter is effective only for previews with masks ( configured using [bindContextMenu](arkts-arkui-commonmethod-c.md#bindContextMenu) ). Note: The settings take effect only when the application has the **ohos.permission.VIBRATE** permission and the user has enabled haptic feedback. Default value: **false**
+Whether to enable haptic feedback during dragging. **true**: Enable haptic feedback during dragging. **false**: Disable haptic feedback during dragging. This parameter is effective only for previews with masks ( configured using [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) ). Note: The settings take effect only when the application has the **ohos.permission.VIBRATE** permission and the user has enabled haptic feedback. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,17 +74,13 @@ Whether to enable haptic feedback during dragging. **true**: Enable haptic feedb
 isLiftingDisabled?: boolean
 ```
 
-Whether to disable the lift animation effect during dragging. **true**: Disable the lifting effect during dragging. **false**: Enable the lifting effect during dragging. With the value **true**, only the custom menu preview (set using [bindContextMenu](arkts-arkui-commonmethod-c.md#bindContextMenu) ), also known as the long-press preview, is displayed if both the long-press preview and drag preview are configured. Default value: **false**
+Whether to disable the lift animation effect during dragging. **true**: Disable the lifting effect during dragging. **false**: Enable the lifting effect during dragging. With the value **true**, only the custom menu preview (set using [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) ), also known as the long-press preview, is displayed if both the long-press preview and drag preview are configured. Default value: **false**
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,15 +96,11 @@ Whether to disable the lift animation effect during dragging. **true**: Disable 
 isMultiSelectionEnabled?: boolean
 ```
 
-Whether to enable multi-select clustering during drag operations. **true** to enable, **false** otherwise. This parameter takes effect only for the grid items and list items in the Grid and List containers. When this feature is enabled, child components cannot be dragged individually. Preview priority: string in [dragPreview](arkts-arkui-commonmethod-c.md#dragPreview) > PixelMap in **dragPreview** > component snapshot. Builder previews not supported. This parameter is incompatible with bindContextMenu](ts-universal-attributes-menu.md#bindcontextmenu12) using **isShown** parameter. Default value: **false**
+Whether to enable multi-select clustering during drag operations. **true** to enable, **false** otherwise. This parameter takes effect only for the grid items and list items in the Grid and List containers. When this feature is enabled, child components cannot be dragged individually. Preview priority: string in [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview) > PixelMap in **dragPreview** > component snapshot. Builder previews not supported. This parameter is incompatible with bindContextMenu](ts-universal-attributes-menu.md#bindcontextmenu12) using **isShown** parameter. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

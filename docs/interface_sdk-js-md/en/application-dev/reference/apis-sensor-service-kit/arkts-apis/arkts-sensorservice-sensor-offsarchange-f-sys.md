@@ -16,10 +16,6 @@ Unsubscribe to sar sensor data, {@code SensorId.SAR}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function offSarChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<SarResponse>): void--><!--Device-sensor-function offSarChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<SarResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

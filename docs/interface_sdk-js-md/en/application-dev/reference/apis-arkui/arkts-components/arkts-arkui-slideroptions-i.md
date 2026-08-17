@@ -4,10 +4,6 @@ Provides information about the slider.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface SliderOptions--><!--Device-unnamed-declare interface SliderOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Whether the slider moves horizontally or vertically. Default value: **Axis.Horiz
 **Default:** Axis.Horizontal [since 11]
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,10 +44,6 @@ Maximum value. Default value: **100** **NOTEï¼š**If the value of **min** is grea
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -77,10 +65,6 @@ Minimum value. Default value: **0**
 **Default:** 0 [since 11]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -104,10 +88,6 @@ Whether the slider values are reversed. **true**: A horizontal slider slides fro
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -129,10 +109,6 @@ Step of the slider. Default value: **1** Value range: [0.01, max - min] **NOTEï¼
 **Default:** 1 - Value range: [0.01, max - min] [since 11]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -156,10 +132,6 @@ Style of the slider thumb and track. Default value: **SliderStyle.OutSet**
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -181,10 +153,6 @@ Current progress. Default value: same as the value of **min**. Since API version
 **Default:** same as the value of min [since 11]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

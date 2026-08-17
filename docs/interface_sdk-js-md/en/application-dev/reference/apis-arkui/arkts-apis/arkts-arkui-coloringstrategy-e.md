@@ -4,10 +4,6 @@ Enumerates the coloring strategies.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum ColoringStrategy--><!--Device-unnamed-declare enum ColoringStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ INVERT = 'invert'
 The foreground colors are the inverse of the component background colors. This strategy is only applicable when set within the foregroundColor attribute.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ The shadow colors of the component are the average color obtained from the compo
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,10 +53,6 @@ PRIMARY = 'primary'
 The shadow colors of the component are the primary color obtained from the component background shadow area. This strategy is only applicable when set within the shadow attribute whose input parameter type is ShadowOptions.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

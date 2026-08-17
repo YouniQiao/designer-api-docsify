@@ -16,10 +16,6 @@ Cancels all reminders set by the current application. This API uses an asynchron
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-function cancelAllReminders(callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function cancelAllReminders(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -37,7 +33,7 @@ Cancels all reminders set by the current application. This API uses an asynchron
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
 | [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,10 +59,6 @@ Cancels all reminders set by the current application. This API uses a promise to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-function cancelAllReminders(): Promise<void>--><!--Device-reminderAgentManager-function cancelAllReminders(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -84,7 +76,7 @@ Cancels all reminders set by the current application. This API uses a promise to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
 | [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,11 +4,9 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#OrientationResponse)
+**替代接口：** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#orientationresponse)
 
 <!--Device-unnamed-export interface CompassResponse--><!--Device-unnamed-export interface CompassResponse-End-->
 
@@ -25,8 +23,6 @@ direction: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 8
 

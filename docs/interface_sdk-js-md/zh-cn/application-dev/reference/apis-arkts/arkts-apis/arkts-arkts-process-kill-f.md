@@ -10,8 +10,6 @@ function kill(signal: number, pid: number): boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [kill](arkts-arkts-process-processmanager-c.md#kill)
@@ -33,7 +31,7 @@ function kill(signal: number, pid: number): boolean
 | --- | --- |
 | boolean | 信号发送成功返回 true，失败返回 false。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let pid = process.pid;

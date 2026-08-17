@@ -16,8 +16,6 @@ Subscribe to cache GNSS locations update messages
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** cachedGnssLocationsChange
@@ -36,7 +34,7 @@ Subscribe to cache GNSS locations update messages
 | request | CachedGnssLocationsRequest | Yes | Indicates the cached GNSS locations request parameters. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

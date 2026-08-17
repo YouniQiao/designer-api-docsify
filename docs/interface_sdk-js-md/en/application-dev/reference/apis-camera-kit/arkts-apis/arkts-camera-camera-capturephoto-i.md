@@ -4,10 +4,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface CapturePhoto--><!--Device-camera-interface CapturePhoto-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -27,10 +23,6 @@ release(): Promise<void>
 Releases output resources. This API uses a promise to return the result. Model constraint: This API can be used only in the stage model.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,10 +49,6 @@ Object of the full-quality image and the uncompressed image.
 **Type:** [ImageType](arkts-camera-camera-imagetype-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

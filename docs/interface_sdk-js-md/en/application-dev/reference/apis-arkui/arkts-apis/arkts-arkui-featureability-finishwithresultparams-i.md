@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-unnamed-export interface FinishWithResultParams--><!--Device-unnamed-export interface FinishWithResultParams-End-->
@@ -22,8 +20,6 @@ Result code.
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-FinishWithResultParams-code: number--><!--Device-FinishWithResultParams-code: number-End-->
@@ -41,8 +37,6 @@ Returned data.
 **Type:** object
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 

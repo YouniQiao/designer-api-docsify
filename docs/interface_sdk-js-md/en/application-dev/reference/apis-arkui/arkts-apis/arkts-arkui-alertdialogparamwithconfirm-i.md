@@ -1,14 +1,10 @@
-# AlertDialogParamWithConfirm
+# AlertDialogParamWithConfirm(AlertDialog)
 
-Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam). Priorities of the **confirm** parameters: **fontColor** and **backgroundColor** > **style** > **defaultFocus**
+Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#alertdialogparam). Priorities of the **confirm** parameters: **fontColor** and **backgroundColor** > **style** > **defaultFocus**
 
-**Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)
+**Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#alertdialogparam)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface AlertDialogParamWithConfirm--><!--Device-unnamed-declare interface AlertDialogParamWithConfirm-End-->
 
@@ -25,10 +21,6 @@ Information about the confirm button. When the dialog box has focus and the **Ta
 **Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

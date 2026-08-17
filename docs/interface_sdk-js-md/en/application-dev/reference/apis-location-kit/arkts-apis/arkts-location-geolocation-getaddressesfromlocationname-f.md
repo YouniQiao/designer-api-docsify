@@ -16,11 +16,9 @@ Obtain latitude and longitude info from location address
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getAddressesFromLocationName)
+**Substitutes:** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getaddressesfromlocationname)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -35,7 +33,7 @@ Obtain latitude and longitude info from location address
 | request | GeoCodeRequest | Yes | Indicates the geocode query parameters. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -61,11 +59,9 @@ Obtain latitude and longitude info from location address
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getAddressesFromLocationName)
+**Substitutes:** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getaddressesfromlocationname)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -85,7 +81,7 @@ Obtain latitude and longitude info from location address
 | --- | --- |
 | Promise&lt;Array&lt;GeoAddress&gt;&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

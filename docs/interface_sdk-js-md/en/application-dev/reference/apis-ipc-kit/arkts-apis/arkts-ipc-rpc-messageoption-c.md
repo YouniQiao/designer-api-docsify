@@ -4,10 +4,6 @@ Defines the options used to construct the **MessageOption** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-rpc-class MessageOption--><!--Device-rpc-class MessageOption-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -28,10 +24,6 @@ A constructor used to create a **MessageOption** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-constructor(syncFlags?: number, waitTime?: number)--><!--Device-MessageOption-constructor(syncFlags?: number, waitTime?: number)-End-->
@@ -45,7 +37,7 @@ A constructor used to create a **MessageOption** object.
 | syncFlags | number | No | Call flag to set. The options are as follows: 0 (synchronous call) and 1 (asynchronous call). The default value is **synchronous**. |
 | waitTime | number | No | Maximum wait time for an RPC call, in seconds. The default value is **TF_WAIT_TIME**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -67,10 +59,6 @@ A constructor used to create a **MessageOption** object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-constructor(async?: boolean)--><!--Device-MessageOption-constructor(async?: boolean)-End-->
@@ -83,7 +71,7 @@ A constructor used to create a **MessageOption** object.
 | --- | --- | --- | --- |
 | async | boolean | No | Whether to execute the call asynchronously. The value **true** means to execute the call asynchronously; the value **false** means to execute the call synchronously. The default value is **synchronous**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -105,10 +93,6 @@ A constructor used to create a MessageOption instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageOption-constructor(isAsync: boolean)--><!--Device-MessageOption-constructor(isAsync: boolean)-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -129,10 +113,6 @@ A constructor used to create a MessageOption instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageOption-constructor()--><!--Device-MessageOption-constructor()-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -146,10 +126,6 @@ constructor(syncFlags: int)
 A constructor used to create a MessageOption instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MessageOption-constructor(syncFlags: int)--><!--Device-MessageOption-constructor(syncFlags: int)-End-->
 
@@ -170,10 +146,6 @@ constructor(syncFlags: int, waitTime: int)
 A constructor used to create a MessageOption instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MessageOption-constructor(syncFlags: int, waitTime: int)--><!--Device-MessageOption-constructor(syncFlags: int, waitTime: int)-End-->
 
@@ -196,10 +168,6 @@ Obtains the call flag, which can be synchronous or asynchronous.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-getFlags(): int--><!--Device-MessageOption-getFlags(): int-End-->
@@ -212,7 +180,7 @@ Obtains the call flag, which can be synchronous or asynchronous.
 | --- | --- |
 | int | Call flag obtained. **0**: synchronous call flag; **1**: asynchronous call flag. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -242,10 +210,6 @@ Obtains the maximum wait time for this RPC call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-getWaitTime(): int--><!--Device-MessageOption-getWaitTime(): int-End-->
@@ -258,7 +222,7 @@ Obtains the maximum wait time for this RPC call.
 | --- | --- |
 | int | Return the maximum waiting time obtained by the RPC, in seconds. The default value is **TF_WAIT_TIME**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -286,10 +250,6 @@ Checks whether **SendMessageRequest** is called synchronously or asynchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-isAsync(): boolean--><!--Device-MessageOption-isAsync(): boolean-End-->
@@ -302,7 +262,7 @@ Checks whether **SendMessageRequest** is called synchronously or asynchronously.
 | --- | --- |
 | boolean | Returns **true** if **SendMessageRequest** is called asynchronously; returns **false** if it is called synchronously. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -326,10 +286,6 @@ Sets whether **SendMessageRequest** is called synchronously or asynchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-setAsync(isAsync: boolean): void--><!--Device-MessageOption-setAsync(isAsync: boolean): void-End-->
@@ -342,7 +298,7 @@ Sets whether **SendMessageRequest** is called synchronously or asynchronously.
 | --- | --- | --- | --- |
 | isAsync | boolean | Yes | Whether to execute the call asynchronously. The value **true** means to execute the call asynchronously; the value **false** means to execute the call synchronously. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -366,10 +322,6 @@ Sets the call flag, which can be synchronous or asynchronous.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-setFlags(flags: int): void--><!--Device-MessageOption-setFlags(flags: int): void-End-->
@@ -382,7 +334,7 @@ Sets the call flag, which can be synchronous or asynchronous.
 | --- | --- | --- | --- |
 | flags | int | Yes | Call flag to set. **0**: synchronous call flag; **1**: asynchronous call flag. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -409,10 +361,6 @@ Sets the maximum wait time for this RPC call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-setWaitTime(waitTime: int): void--><!--Device-MessageOption-setWaitTime(waitTime: int): void-End-->
@@ -425,7 +373,7 @@ Sets the maximum wait time for this RPC call.
 | --- | --- | --- | --- |
 | waitTime | int | Yes | Indicates the maximum waiting time for RPC, in seconds. The upper limit is 3000 seconds. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -455,10 +403,6 @@ Indication to **sendMessageRequest** for passing the file descriptor.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-static readonly TF_ACCEPT_FDS: number--><!--Device-MessageOption-static readonly TF_ACCEPT_FDS: number-End-->
@@ -478,10 +422,6 @@ Asynchronous call.
 **Default:** 1
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -503,10 +443,6 @@ Synchronous call.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageOption-static readonly TF_SYNC: number--><!--Device-MessageOption-static readonly TF_SYNC: number-End-->
@@ -526,10 +462,6 @@ RPC wait time, in seconds. This parameter cannot be used in IPC. The default wai
 **Default:** 4 [since 7 - 10] @default 8 [since 11]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

@@ -1,14 +1,10 @@
 # Camera
 
-Defines camera.
+Camera node, which inherits from Node.
 
-**Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#Node)
+**Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#node)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Camera--><!--Device-unnamed-export interface Camera-End-->
 
@@ -20,13 +16,9 @@ Defines camera.
 getProjectionMatrix(): Mat4x4
 ```
 
-Get the projection matrix of this camera.
+Obtains the projection matrix of the camera.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Camera-getProjectionMatrix(): Mat4x4--><!--Device-Camera-getProjectionMatrix(): Mat4x4-End-->
 
@@ -36,9 +28,9 @@ Get the projection matrix of this camera.
 
 | Type | Description |
 | --- | --- |
-| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | the projection matrix of this camera |
+| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | Projection matrix of the camera. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, SceneResourceFactory, SceneNodeParameters, Camera, Mat4x4 } from '@kit.ArkGraphics3D';
@@ -69,13 +61,9 @@ function GetProjectionMatrix(): void {
 getViewMatrix(): Mat4x4
 ```
 
-Get the view matrix of this camera.
+Obtains the view matrix of the camera.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Camera-getViewMatrix(): Mat4x4--><!--Device-Camera-getViewMatrix(): Mat4x4-End-->
 
@@ -85,9 +73,9 @@ Get the view matrix of this camera.
 
 | Type | Description |
 | --- | --- |
-| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | the view matrix of this camera |
+| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | View matrix of the camera. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, SceneResourceFactory, SceneNodeParameters, Camera, Mat4x4 } from '@kit.ArkGraphics3D';
@@ -122,10 +110,6 @@ Casts a ray from a specific position on the screen to detect and retrieve inform
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Camera-raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>--><!--Device-Camera-raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -143,7 +127,7 @@ Casts a ray from a specific position on the screen to detect and retrieve inform
 | --- | --- |
 | Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; | An array of hit objects sorted by distance (from nearest to farthest). If no objects are hit, an empty array is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { SceneNodeParameters, Camera, SceneResourceFactory, Scene, Node, Vec2, Vec3, Quaternion,
@@ -263,10 +247,6 @@ Color after the render target is cleared.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Camera-clearColor: Color | null--><!--Device-Camera-clearColor: Color | null-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -282,10 +262,6 @@ Post-processing effects applied to the camera output.
 **Type:** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Camera-readonly effects: Container<Effect>--><!--Device-Camera-readonly effects: Container<Effect>-End-->
 
@@ -303,10 +279,6 @@ Whether the camera is enabled. true if enabled, false otherwise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Camera-enabled: boolean--><!--Device-Camera-enabled: boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -323,10 +295,6 @@ Far plane. The unit is the scene unit (such as cm, m, and km) in the world coord
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Camera-farPlane: double--><!--Device-Camera-farPlane: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -342,10 +310,6 @@ Field of view. The unit is radian (rad). The value ranges from 0 to π radians.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Camera-fov: double--><!--Device-Camera-fov: double-End-->
 
@@ -365,10 +329,6 @@ Whether Multisample Anti-Aliasing (MSAA) is enabled. true if enabled, false othe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Camera-msaa?: boolean--><!--Device-Camera-msaa?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -385,10 +345,6 @@ Near plane. The unit is the scene unit (such as cm, m, and km) in the world coor
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Camera-nearPlane: double--><!--Device-Camera-nearPlane: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -404,10 +360,6 @@ Post-processing settings.
 **Type:** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) \| null
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Camera-postProcess: PostProcessSettings | null--><!--Device-Camera-postProcess: PostProcessSettings | null-End-->
 
@@ -426,10 +378,6 @@ Rendering pipeline type. If this parameter is not set, the lightweight forward r
 **Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Camera-renderingPipeline?: RenderingPipelineType--><!--Device-Camera-renderingPipeline?: RenderingPipelineType-End-->
 

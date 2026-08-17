@@ -4,10 +4,6 @@ Rotation axes status
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export interface RotationAxesStatus--><!--Device-mechanicManager-export interface RotationAxesStatus-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -32,10 +28,6 @@ Whether the pitch axis is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotationAxesStatus-pitchEnabled: boolean--><!--Device-RotationAxesStatus-pitchEnabled: boolean-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -53,10 +45,6 @@ Whether the pitch axis is limited.
 **Type:** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotationAxesStatus-pitchLimited?: RotationAxisLimited--><!--Device-RotationAxesStatus-pitchLimited?: RotationAxisLimited-End-->
 
@@ -76,10 +64,6 @@ Whether the roll axis is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotationAxesStatus-rollEnabled: boolean--><!--Device-RotationAxesStatus-rollEnabled: boolean-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -97,10 +81,6 @@ Whether the roll axis is limited.
 **Type:** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotationAxesStatus-rollLimited?: RotationAxisLimited--><!--Device-RotationAxesStatus-rollLimited?: RotationAxisLimited-End-->
 
@@ -120,10 +100,6 @@ Whether the yaw axis is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotationAxesStatus-yawEnabled: boolean--><!--Device-RotationAxesStatus-yawEnabled: boolean-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -141,10 +117,6 @@ Whether the yaw axis is limited.
 **Type:** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotationAxesStatus-yawLimited?: RotationAxisLimited--><!--Device-RotationAxesStatus-yawLimited?: RotationAxisLimited-End-->
 

@@ -4,10 +4,6 @@ The enum of bond state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-enum BondState--><!--Device-connection-enum BondState-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ BOND_STATE_INVALID = 0
 Indicate the bond state is invalid
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Indicate the bond state is bonding
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,10 +53,6 @@ BOND_STATE_BONDED = 2
 Indicate the bond state is bonded
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

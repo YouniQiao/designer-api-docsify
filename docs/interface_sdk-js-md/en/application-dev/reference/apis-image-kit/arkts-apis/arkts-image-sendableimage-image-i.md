@@ -1,14 +1,10 @@
 # Image
 
-Provides APIs for basic image operations, including obtaining image information and reading and writing image data. An Image instance is returned when [readNextImage](arkts-image-sendableimage-imagereceiver-i.md#readNextImage) and [readLatestImage](arkts-image-sendableimage-imagereceiver-i.md#readLatestImage) are called. This class inherits from [ISendable](../../../arkts-utils/arkts-sendable.md#isendable). Images occupy a large amount of memory. When you finish using an Image instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Provides APIs for basic image operations, including obtaining image information and reading and writing image data. An Image instance is returned when [readNextImage](arkts-image-sendableimage-imagereceiver-i.md#readnextimage) and [readLatestImage](arkts-image-sendableimage-imagereceiver-i.md#readlatestimage) are called. This class inherits from [ISendable](../../../arkts-utils/arkts-sendable.md#isendable). Images occupy a large amount of memory. When you finish using an Image instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Inheritance/Implementation:** Image extends lang.ISendable
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-sendableImage-interface Image--><!--Device-sendableImage-interface Image-End-->
 
@@ -30,10 +26,6 @@ Obtains the component buffer from the Image instance based on the color componen
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>--><!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -50,7 +42,7 @@ Obtains the component buffer from the Image instance based on the color componen
 | --- | --- |
 | Promise&lt;image.Component&gt; | Promise used to return the component buffer. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -82,10 +74,6 @@ Releases this Image instance. This API uses a promise to return the result. The 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Image-release(): Promise<void>--><!--Device-Image-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -96,7 +84,7 @@ Releases this Image instance. This API uses a promise to return the result. The 
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -130,10 +118,6 @@ Image area to be cropped.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Image-clipRect: Region--><!--Device-Image-clipRect: Region-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -149,10 +133,6 @@ Image format. For details, see OH_NativeBuffer_Format.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-Image-readonly format: number--><!--Device-Image-readonly format: number-End-->
 
@@ -170,10 +150,6 @@ Image size. If the Image object stores camera preview stream data (YUV image dat
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Image-readonly size: Size--><!--Device-Image-readonly size: Size-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -184,15 +160,11 @@ Image size. If the Image object stores camera preview stream data (YUV image dat
 readonly timestamp: number
 ```
 
-Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can use [getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty) to read the related Exif information.
+Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can use [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty) to read the related Exif information.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-Image-readonly timestamp: number--><!--Device-Image-readonly timestamp: number-End-->
 

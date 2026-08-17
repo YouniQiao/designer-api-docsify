@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [iteratorForEach](arkts-na-iterator-iteratorforeach-f.md#iteratorForEach) | Iterates over an iterator and executes the specified callback function for each element |
+| [iteratorForEach](arkts-na-iterator-iteratorforeach-f.md#iteratorforeach) | Iterates over an iterator and executes the specified callback function for each element |
 
 ### Classes
 

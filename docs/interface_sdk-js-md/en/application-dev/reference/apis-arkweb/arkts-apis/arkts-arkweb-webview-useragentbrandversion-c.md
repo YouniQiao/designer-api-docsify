@@ -1,12 +1,8 @@
 # UserAgentBrandVersion
 
-Class that holds brand name, major version and full version. Brand name and major version used to generated User-Agent client hints sec-cu-ua. Brand name and full version used to generated user-agent client hint sec-ch-ua-full-version-list.
+UserAgentBrandVersion is a data class in the ArkWeb framework used to configure the brand name and version number in User-Agent client hints, and is used together with [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md#useragentmetadata). In the User-Agent Client Hints mechanism, the browser reports brand and version information to the server through request headers such as Sec-CH-UA-Full-Version-List. UserAgentBrandVersion is used to define a single brand entry in it. UserAgentBrandVersion provides methods for setting and obtaining the brand name and version number: setBrand/ getBrand are used to set and obtain the brand name (for example, "ArkWeb"), setMajorVersion/getMajorVersion are used to set and obtain the major version number (for example, "126"), and setFullVersion/getFullVersion are used to set and obtain the full version number (for example, "126.0.0.0"). An app can customize the browser identity information reported by the Web component to the server by modifying these values.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class UserAgentBrandVersion--><!--Device-webview-class UserAgentBrandVersion-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 getBrand(): string
 ```
 
-Get the brand info.
+Obtains the brand name.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +34,7 @@ Get the brand info.
 
 | Type | Description |
 | --- | --- |
-| string | Returns brand info of UserAgentBrandVersion. |
+| string | Brand name string. |
 
 ## getFullVersion
 
@@ -50,13 +42,9 @@ Get the brand info.
 getFullVersion(): string
 ```
 
-Get the full version.
+Obtains the full version number.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,7 +56,7 @@ Get the full version.
 
 | Type | Description |
 | --- | --- |
-| string | Returns full version of UserAgentBrandVersion. |
+| string | Full version number string. |
 
 ## getMajorVersion
 
@@ -76,13 +64,9 @@ Get the full version.
 getMajorVersion(): string
 ```
 
-Get the major version.
+Obtains the major version number.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,7 +78,7 @@ Get the major version.
 
 | Type | Description |
 | --- | --- |
-| string | Returns major version of UserAgentBrandVersion. |
+| string | Major version number string. |
 
 ## setBrand
 
@@ -102,13 +86,9 @@ Get the major version.
 setBrand(brand: string): void
 ```
 
-Sets the brand. Should not be blank.
+Sets the brand name.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,7 +100,7 @@ Sets the brand. Should not be blank.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brand | string | Yes | The brand. |
+| brand | string | Yes | Brand name, which cannot be an empty string. |
 
 ## setFullVersion
 
@@ -128,13 +108,9 @@ Sets the brand. Should not be blank.
 setFullVersion(fullVersion: string): void
 ```
 
-Sets the full version. Should not be blank.
+Sets the full version number.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,7 +122,7 @@ Sets the full version. Should not be blank.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullVersion | string | Yes | The full version. |
+| fullVersion | string | Yes | Full version number, which cannot be an empty string. |
 
 ## setMajorVersion
 
@@ -154,13 +130,9 @@ Sets the full version. Should not be blank.
 setMajorVersion(majorVersion: string): void
 ```
 
-Sets the major version. Should not be blank.
+Sets the major version number.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,5 +144,5 @@ Sets the major version. Should not be blank.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| majorVersion | string | Yes | The major version. |
+| majorVersion | string | Yes | Major version number, which cannot be an empty string. |
 

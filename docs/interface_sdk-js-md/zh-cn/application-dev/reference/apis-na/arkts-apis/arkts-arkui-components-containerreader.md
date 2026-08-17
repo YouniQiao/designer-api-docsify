@@ -6,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ContainerReader](arkts-na-arkui-components-containerreader-containerreader-f.md#ContainerReader) | Defines ContainerReader Component. |
+| [ContainerReader](arkts-na-arkui-components-containerreader-containerreader-f.md#containerreader) | Defines ContainerReader Component. |
 
 ### 接口
 

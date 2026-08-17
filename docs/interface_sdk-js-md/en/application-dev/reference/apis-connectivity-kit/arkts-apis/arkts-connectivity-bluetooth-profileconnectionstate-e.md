@@ -4,11 +4,9 @@ The enum of profile connection state.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#ProfileConnectionState)
+**Substitutes:** [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#profileconnectionstate)
 
 <!--Device-bluetooth-enum ProfileConnectionState--><!--Device-bluetooth-enum ProfileConnectionState-End-->
 
@@ -24,11 +22,9 @@ the current profile is disconnected
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_DISCONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#STATE_DISCONNECTED)
+**Substitutes:** [STATE_DISCONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#statedisconnected)
 
 <!--Device-ProfileConnectionState-STATE_DISCONNECTED = 0--><!--Device-ProfileConnectionState-STATE_DISCONNECTED = 0-End-->
 
@@ -44,11 +40,9 @@ the current profile is being connected
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_CONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#STATE_CONNECTING)
+**Substitutes:** [STATE_CONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#stateconnecting)
 
 <!--Device-ProfileConnectionState-STATE_CONNECTING = 1--><!--Device-ProfileConnectionState-STATE_CONNECTING = 1-End-->
 
@@ -64,11 +58,9 @@ the current profile is connected
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_CONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#STATE_CONNECTED)
+**Substitutes:** [STATE_CONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#stateconnected)
 
 <!--Device-ProfileConnectionState-STATE_CONNECTED = 2--><!--Device-ProfileConnectionState-STATE_CONNECTED = 2-End-->
 
@@ -84,11 +76,9 @@ the current profile is being disconnected
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_DISCONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#STATE_DISCONNECTING)
+**Substitutes:** [STATE_DISCONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#statedisconnecting)
 
 <!--Device-ProfileConnectionState-STATE_DISCONNECTING = 3--><!--Device-ProfileConnectionState-STATE_DISCONNECTING = 3-End-->
 

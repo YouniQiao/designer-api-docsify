@@ -4,10 +4,6 @@ Defines the scanner parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-scan-interface ScannerParameter--><!--Device-scan-interface ScannerParameter-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -30,10 +26,6 @@ Integer constraints of the option.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScannerParameter-optionConstraintInt?: int[]--><!--Device-ScannerParameter-optionConstraintInt?: int[]-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -49,10 +41,6 @@ Range constraint of the option.
 **Type:** Range
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScannerParameter-optionConstraintRange?: Range--><!--Device-ScannerParameter-optionConstraintRange?: Range-End-->
 
@@ -70,10 +58,6 @@ String constraints of the option.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScannerParameter-optionConstraintString?: string[]--><!--Device-ScannerParameter-optionConstraintString?: string[]-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -89,10 +73,6 @@ Constraint type of the option.
 **Type:** [ConstraintType](arkts-basicservices-scan-constrainttype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScannerParameter-optionConstraintType: ConstraintType--><!--Device-ScannerParameter-optionConstraintType: ConstraintType-End-->
 
@@ -110,10 +90,6 @@ Option description.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScannerParameter-optionDesc: string--><!--Device-ScannerParameter-optionDesc: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -129,10 +105,6 @@ Option index.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScannerParameter-optionIndex: int--><!--Device-ScannerParameter-optionIndex: int-End-->
 
@@ -150,10 +122,6 @@ Option name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScannerParameter-optionName: string--><!--Device-ScannerParameter-optionName: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -169,10 +137,6 @@ Option title.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScannerParameter-optionTitle: string--><!--Device-ScannerParameter-optionTitle: string-End-->
 
@@ -190,10 +154,6 @@ Option value type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScannerParameter-optionType: OptionValueType--><!--Device-ScannerParameter-optionType: OptionValueType-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -209,10 +169,6 @@ Physical unit of the option.
 **Type:** [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScannerParameter-optionUnit: PhysicalUnit--><!--Device-ScannerParameter-optionUnit: PhysicalUnit-End-->
 

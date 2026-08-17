@@ -4,10 +4,6 @@ Describes the translation parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface TranslateOptions--><!--Device-window-interface TranslateOptions-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -32,10 +28,6 @@ Distance to translate along the x-axis. The value is a floating-point number, th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TranslateOptions-x?: double--><!--Device-TranslateOptions-x?: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -54,10 +46,6 @@ Distance to translate along the y-axis. The value is a floating-point number, th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TranslateOptions-y?: double--><!--Device-TranslateOptions-y?: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -75,10 +63,6 @@ Distance to translate along the z-axis. The value is a floating-point number, th
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TranslateOptions-z?: double--><!--Device-TranslateOptions-z?: double-End-->
 

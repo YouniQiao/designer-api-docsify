@@ -4,10 +4,6 @@ Enumerates the properties available for the metadata of a HEIFS image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-enum HeifsPropertyKey--><!--Device-image-enum HeifsPropertyKey-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -21,10 +17,6 @@ HEIFS_DELAY_TIME = 'HeifsDelayTime'
 Playback duration of each frame in an HEIF image sequence, in milliseconds.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Unclamped delay of each frame in milliseconds.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HeifsPropertyKey-HEIFS_UNCLAMPED_DELAY_TIME = 'HeifsUnclampedDelayTime'--><!--Device-HeifsPropertyKey-HEIFS_UNCLAMPED_DELAY_TIME = 'HeifsUnclampedDelayTime'-End-->
@@ -62,10 +50,6 @@ Canvas height.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HeifsPropertyKey-HEIFS_CANVAS_HEIGHT = 'HeifsCanvasHeight'--><!--Device-HeifsPropertyKey-HEIFS_CANVAS_HEIGHT = 'HeifsCanvasHeight'-End-->
@@ -81,10 +65,6 @@ HEIFS_CANVAS_WIDTH = 'HeifsCanvasWidth'
 Canvas width.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

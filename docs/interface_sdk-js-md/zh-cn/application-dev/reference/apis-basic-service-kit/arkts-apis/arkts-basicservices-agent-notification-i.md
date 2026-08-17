@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-interface Notification--><!--Device-agent-interface Notification-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -23,10 +19,6 @@ text?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Notification-text?: string--><!--Device-Notification-text?: string-End-->
 
@@ -44,10 +36,6 @@ title?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Notification-title?: string--><!--Device-Notification-title?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -64,10 +52,6 @@ visibility?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Notification-visibility?: int--><!--Device-Notification-visibility?: int-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -83,10 +67,6 @@ wantAgent?: WantAgent
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Notification-wantAgent?: WantAgent--><!--Device-Notification-wantAgent?: WantAgent-End-->
 

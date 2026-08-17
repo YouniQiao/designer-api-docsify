@@ -10,10 +10,6 @@ Create PixelMap by data buffer.
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-sendableImage-function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap--><!--Device-sendableImage-function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -37,7 +33,7 @@ Create PixelMap by data buffer.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';

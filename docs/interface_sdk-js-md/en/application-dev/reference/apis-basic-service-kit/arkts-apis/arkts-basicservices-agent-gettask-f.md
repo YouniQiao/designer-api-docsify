@@ -16,10 +16,6 @@ Obtains task information based on the task ID. This API uses a promise to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-function getTask(context: BaseContext, id: string, token?: string): Promise<Task>--><!--Device-agent-function getTask(context: BaseContext, id: string, token?: string): Promise<Task>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent

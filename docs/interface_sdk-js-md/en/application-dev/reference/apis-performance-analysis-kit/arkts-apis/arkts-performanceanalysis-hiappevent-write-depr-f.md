@@ -10,8 +10,6 @@ Writes event information to the event file of the current day. This API uses a p
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [write](arkts-performanceanalysis-hiappevent-write-f.md#write)
@@ -34,7 +32,7 @@ Writes event information to the event file of the current day. This API uses a p
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to asynchronously process the callback in the **then()** and **catch()** methods when event writing succeeded or failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -64,8 +62,6 @@ Writes event information to the event file of the current day. This API uses an 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [write](arkts-performanceanalysis-hiappevent-write-f.md#write)
@@ -83,7 +79,7 @@ Writes event information to the event file of the current day. This API uses an 
 | keyValues | object | Yes | Application event key-value pair params. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

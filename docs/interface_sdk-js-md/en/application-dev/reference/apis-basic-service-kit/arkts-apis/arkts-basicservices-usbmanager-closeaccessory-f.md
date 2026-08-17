@@ -12,13 +12,9 @@ import { usbManager } from 'usbManager';
 function closeAccessory(accessoryHandle: USBAccessoryHandle): void
 ```
 
-Closes the accessory file descriptor. You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openAccessory) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md#USBAccessoryHandle) as a parameter.
+Closes the accessory file descriptor. You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openaccessory) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md#usbaccessoryhandle) as a parameter.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-usbManager-function closeAccessory(accessoryHandle: USBAccessoryHandle): void--><!--Device-usbManager-function closeAccessory(accessoryHandle: USBAccessoryHandle): void-End-->
 
@@ -28,7 +24,7 @@ Closes the accessory file descriptor. You need to call [usbManager.openAccessory
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accessoryHandle | [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | Yes | USB accessory handle, which is obtained through [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openAccessory). |
+| accessoryHandle | [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | Yes | USB accessory handle, which is obtained through [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openaccessory). |
 
 **Error codes:**
 
@@ -38,7 +34,7 @@ Closes the accessory file descriptor. You need to call [usbManager.openAccessory
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 | [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) | Service exception. Possible causes:  <br>1. No accessory is plugged in. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

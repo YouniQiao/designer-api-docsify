@@ -4,10 +4,6 @@ Defines the onscreen content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-onScreen-export interface PageContent--><!--Device-onScreen-export interface PageContent-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -32,10 +28,6 @@ Bundle name of the onscreen content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PageContent-bundleName: string--><!--Device-PageContent-bundleName: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -53,10 +45,6 @@ Body of the onscreen content. This parameter is available only when **options.co
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PageContent-content?: string--><!--Device-PageContent-content?: string-End-->
 
@@ -76,10 +64,6 @@ Page link of the onscreen content. This parameter is available only when **optio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PageContent-pageLink?: string--><!--Device-PageContent-pageLink?: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -97,10 +81,6 @@ Paragraph information of the onscreen content. This parameter is available only 
 **Type:** Paragraph[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PageContent-paragraphs?: Paragraph[]--><!--Device-PageContent-paragraphs?: Paragraph[]-End-->
 
@@ -120,10 +100,6 @@ Scenario of the onscreen content. This parameter is available only when **option
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PageContent-scenario?: Scenario--><!--Device-PageContent-scenario?: Scenario-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -141,10 +117,6 @@ Session ID, which identifies the call action.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PageContent-sessionId: long--><!--Device-PageContent-sessionId: long-End-->
 
@@ -164,10 +136,6 @@ Title of the onscreen content. This parameter is available only when **options.c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PageContent-title?: string--><!--Device-PageContent-title?: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -185,10 +153,6 @@ Window ID of the onscreen content.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PageContent-windowId: int--><!--Device-PageContent-windowId: int-End-->
 

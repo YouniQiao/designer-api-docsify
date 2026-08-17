@@ -4,10 +4,6 @@ Enumerates the device states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDeviceManager-enum DeviceStateChange--><!--Device-distributedDeviceManager-enum DeviceStateChange-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -21,10 +17,6 @@ UNKNOWN = 0
 The device state is unknown after the device goes online. Before the device state changes to available, distributed services cannot be used.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceStateChange-UNKNOWN = 0--><!--Device-DeviceStateChange-UNKNOWN = 0-End-->
 
@@ -40,10 +32,6 @@ The information between devices has been synchronized in the Distributed Data Se
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceStateChange-AVAILABLE = 1--><!--Device-DeviceStateChange-AVAILABLE = 1-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -57,10 +45,6 @@ UNAVAILABLE = 2
 The device goes offline, and the device state is unknown.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceStateChange-UNAVAILABLE = 2--><!--Device-DeviceStateChange-UNAVAILABLE = 2-End-->
 

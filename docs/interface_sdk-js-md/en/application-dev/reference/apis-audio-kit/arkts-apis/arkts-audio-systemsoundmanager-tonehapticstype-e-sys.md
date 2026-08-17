@@ -4,10 +4,6 @@ Enum for haptics in tone scenario.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemSoundManager-enum ToneHapticsType--><!--Device-systemSoundManager-enum ToneHapticsType-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -23,10 +19,6 @@ CALL_SIM_CARD_0 = 0
 Haptics in incoming call scenario for sim card 0.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneHapticsType-CALL_SIM_CARD_0 = 0--><!--Device-ToneHapticsType-CALL_SIM_CARD_0 = 0-End-->
 
@@ -44,10 +36,6 @@ Haptics in incoming call scenario for sim card 1.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToneHapticsType-CALL_SIM_CARD_1 = 1--><!--Device-ToneHapticsType-CALL_SIM_CARD_1 = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -63,10 +51,6 @@ CALL_ESIM_CARD_0 = 2
 Haptics in incoming call scenario for esim card 0.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,10 +70,6 @@ Haptics in incoming call scenario for esim card 1.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToneHapticsType-CALL_ESIM_CARD_1 = 3--><!--Device-ToneHapticsType-CALL_ESIM_CARD_1 = 3-End-->
@@ -108,10 +88,6 @@ Haptics in text message scenario for sim card 0.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToneHapticsType-TEXT_MESSAGE_SIM_CARD_0 = 20--><!--Device-ToneHapticsType-TEXT_MESSAGE_SIM_CARD_0 = 20-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -128,10 +104,6 @@ Haptics in text message scenario for sim card 1.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToneHapticsType-TEXT_MESSAGE_SIM_CARD_1 = 21--><!--Device-ToneHapticsType-TEXT_MESSAGE_SIM_CARD_1 = 21-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -147,10 +119,6 @@ TEXT_MESSAGE_ESIM_CARD_0 = 22
 Haptics in text message scenario for esim card 0.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,10 +138,6 @@ Haptics in text message scenario for esim card 1.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToneHapticsType-TEXT_MESSAGE_ESIM_CARD_1 = 23--><!--Device-ToneHapticsType-TEXT_MESSAGE_ESIM_CARD_1 = 23-End-->
@@ -191,10 +155,6 @@ NOTIFICATION = 40
 Haptics in notification scenario.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneHapticsType-NOTIFICATION = 40--><!--Device-ToneHapticsType-NOTIFICATION = 40-End-->
 

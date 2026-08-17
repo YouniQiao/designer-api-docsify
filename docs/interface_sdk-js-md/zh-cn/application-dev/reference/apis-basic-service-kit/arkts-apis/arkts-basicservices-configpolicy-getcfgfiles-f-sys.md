@@ -10,10 +10,6 @@ function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-configPolicy-function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
@@ -25,7 +21,7 @@ function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取文件列表成功，err为undefined， data为获取到的文件列表；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取文件列表成功，err为undefined， data为获取到的文件列表；否则err为错误对象。 |
 
 **错误码：**
 
@@ -44,10 +40,6 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCa
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
@@ -60,7 +52,7 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCa
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | 是 | 跟随模式。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取文件列表成功，err为undefined， data为获取到的文件列表；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取文件列表成功，err为undefined， data为获取到的文件列表；否则err为错误对象。 |
 
 **错误码：**
 
@@ -79,10 +71,6 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, ca
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
@@ -95,8 +83,8 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, ca
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | 是 | 跟随模式。 |
-| extra | string | 是 | 用户自定义跟随规则，仅在followMode为 [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#USER_DEFINED)时有效。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取文件列表成功，err为undefined， data为获取到的文件列表；否则err为错误对象。 |
+| extra | string | 是 | 用户自定义跟随规则，仅在followMode为 [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#userdefined)时有效。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取文件列表成功，err为undefined， data为获取到的文件列表；否则err为错误对象。 |
 
 **错误码：**
 
@@ -114,10 +102,6 @@ function getCfgFiles(relPath: string): Promise<Array<string>>
 获取指定文件名的所有文件列表，按优先级从低到高。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-configPolicy-function getCfgFiles(relPath: string): Promise<Array<string>>--><!--Device-configPolicy-function getCfgFiles(relPath: string): Promise<Array<string>>-End-->
 
@@ -154,10 +138,6 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): Promise<Array<string>>--><!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
@@ -170,7 +150,7 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): 
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | 是 | 跟随模式。 |
-| extra | string | 否 | 用户自定义跟随规则，仅在followMode为 [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#USER_DEFINED)时有效。 |
+| extra | string | 否 | 用户自定义跟随规则，仅在followMode为 [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#userdefined)时有效。 |
 
 **返回值：**
 

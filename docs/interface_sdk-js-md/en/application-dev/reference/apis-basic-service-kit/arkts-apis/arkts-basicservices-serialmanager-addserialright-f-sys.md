@@ -16,10 +16,6 @@ Adds the permission to an application for accessing the serial port device. seri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_USB_CONFIG
 
 <!--Device-serialManager-function addSerialRight(tokenId: int, portId: int): void--><!--Device-serialManager-function addSerialRight(tokenId: int, portId: int): void-End-->
@@ -33,7 +29,7 @@ Adds the permission to an application for accessing the serial port device. seri
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tokenId | int | Yes | ID of the token that requires the access permission. |
-| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getPortList). |
+| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 
 **Error codes:**
 
@@ -46,7 +42,7 @@ Adds the permission to an application for accessing the serial port device. seri
 | [14400005](../../apis-basic-services-kit/errorcode-usb.md#14400005-database-operation-exception) | Database operation exception. |
 | [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ Subcommand information
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface SubCommandInfo--><!--Device-unnamed-export interface SubCommandInfo-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -25,10 +21,6 @@ The description of the subcommand.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Schemas about event for subcommand.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubCommandInfo-readonly eventSchemas?: Record<string, Record<string, Object>>--><!--Device-SubCommandInfo-readonly eventSchemas?: Record<string, Record<string, Object>>-End-->
@@ -73,10 +61,6 @@ Supported event types for custom event.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ The input schema of the subcommand.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubCommandInfo-readonly inputSchema: Record<string, Object>--><!--Device-SubCommandInfo-readonly inputSchema: Record<string, Object>-End-->
@@ -122,10 +102,6 @@ The output schema of the subcommand.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubCommandInfo-readonly outputSchema: Record<string, Object>--><!--Device-SubCommandInfo-readonly outputSchema: Record<string, Object>-End-->
@@ -145,10 +121,6 @@ The require permissions of the subcommand.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

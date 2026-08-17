@@ -1,14 +1,10 @@
 # ColorReservation（系统接口）
 
-ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery（系统接口）) Provides API for obtaining and setting a color reservation type.
+ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#colorreservationquery系统接口) Provides API for obtaining and setting a color reservation type.
 
-**继承/实现关系：** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery（系统接口）)
+**继承/实现关系：** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#colorreservationquery系统接口)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-camera-interface ColorReservation--><!--Device-camera-interface ColorReservation-End-->
 
@@ -25,10 +21,6 @@ getColorReservation(): ColorReservationType
 Obtains the color reservation type in use.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColorReservation-getColorReservation(): ColorReservationType--><!--Device-ColorReservation-getColorReservation(): ColorReservationType-End-->
 
@@ -49,7 +41,7 @@ Obtains the color reservation type in use.
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,13 +65,9 @@ function getColorReservation(session: camera.VideoSessionForSys): camera.ColorRe
 setColorReservation(type: ColorReservationType): void
 ```
 
-Sets a color reservation type. Before the setting, call [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getSupportedColorReservationTypes) to obtain the supported color reservation types.
+Sets a color reservation type. Before the setting, call [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes) to obtain the supported color reservation types.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColorReservation-setColorReservation(type: ColorReservationType): void--><!--Device-ColorReservation-setColorReservation(type: ColorReservationType): void-End-->
 
@@ -91,7 +79,7 @@ Sets a color reservation type. Before the setting, call [getSupportedColorReserv
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md) | 是 | Color reservation type, which is obtained by calling [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getSupportedColorReservationTypes). |
+| type | [ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md) | 是 | Color reservation type, which is obtained by calling [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes). |
 
 **错误码：**
 
@@ -103,7 +91,7 @@ Sets a color reservation type. Before the setting, call [getSupportedColorReserv
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

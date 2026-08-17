@@ -4,10 +4,6 @@ Defines the PiP status data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface SketchStatusData--><!--Device-camera-interface SketchStatusData-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -32,10 +28,6 @@ Offset of PiP.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SketchStatusData-centerPointOffset: Point--><!--Device-SketchStatusData-centerPointOffset: Point-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -54,10 +46,6 @@ Zoom ratio of PiP.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SketchStatusData-sketchRatio: double--><!--Device-SketchStatusData-sketchRatio: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -75,10 +63,6 @@ Status of PiP. The options are 0 (stopped), 1 (started), 2 (stopping), and 3 (st
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SketchStatusData-status: int--><!--Device-SketchStatusData-status: int-End-->
 

@@ -4,10 +4,6 @@ Indicates fusion fence transition information.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface FusionFenceTransition--><!--Device-geoLocationManager-export interface FusionFenceTransition-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -32,10 +28,6 @@ Identifier of the fusion fence.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceTransition-identifier: string--><!--Device-FusionFenceTransition-identifier: string-End-->
@@ -56,10 +48,6 @@ Indicates fusion fence scene.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceTransition-scene: FusionFenceScene--><!--Device-FusionFenceTransition-scene: FusionFenceScene-End-->
@@ -79,10 +67,6 @@ Indicates the fence transition event.
 **Type:** [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

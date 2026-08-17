@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-uiEffect-interface HeatDistortionEffectParam--><!--Device-uiEffect-interface HeatDistortionEffectParam-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -25,10 +21,6 @@ intensity: double
 **类型：** double
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,10 +42,6 @@ noiseScale: double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-HeatDistortionEffectParam-noiseScale: double--><!--Device-HeatDistortionEffectParam-noiseScale: double-End-->
@@ -74,10 +62,6 @@ progress: double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-HeatDistortionEffectParam-progress: double--><!--Device-HeatDistortionEffectParam-progress: double-End-->
@@ -97,10 +81,6 @@ riseWeight: double
 **类型：** double
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

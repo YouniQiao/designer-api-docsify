@@ -1,14 +1,12 @@
 # ReadStream
 
-文件可读流，需要先通过[fileIo.createReadStream](arkts-na-fileio-createreadstream-f.md#createReadStream)方法来构建一个ReadStream实例。ReadStream继承自数据流基类 [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#Readable)。 **规格**：ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。
+文件可读流，需要先通过[fileIo.createReadStream](arkts-na-fileio-createreadstream-f.md#createreadstream)方法来构建一个ReadStream实例。ReadStream继承自数据流基类 [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#readable)。 **规格**：ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。
 
-**继承/实现关系：** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#Readable)
+**继承/实现关系：** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#readable)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-class ReadStream--><!--Device-fileIo-class ReadStream-End-->
 
@@ -24,9 +22,7 @@ close(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ReadStream-close(): void--><!--Device-ReadStream-close(): void-End-->
 
@@ -53,9 +49,7 @@ The ReadStream constructor.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ReadStream-constructor()--><!--Device-ReadStream-constructor()-End-->
 
@@ -71,9 +65,7 @@ seek(offset: long, whence?: WhenceType): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ReadStream-seek(offset: long, whence?: WhenceType): long--><!--Device-ReadStream-seek(offset: long, whence?: WhenceType): long-End-->
 
@@ -113,9 +105,7 @@ readonly bytesRead: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ReadStream-readonly bytesRead: long--><!--Device-ReadStream-readonly bytesRead: long-End-->
 
@@ -133,9 +123,7 @@ readonly path: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ReadStream-readonly path: string--><!--Device-ReadStream-readonly path: string-End-->
 

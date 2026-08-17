@@ -1,12 +1,8 @@
 # ProcessData
 
-The module defines process data. If a lifecycle change listener is registered by calling [appManager.on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) , the onProcessCreated callback in ApplicationStateObserver is invoked when the lifecycle of an application or ability changes.
+The module defines process data. If a lifecycle change listener is registered by calling [appManager.on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) , the onProcessCreated callback in ApplicationStateObserver is invoked when the lifecycle of an application or ability changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ProcessData--><!--Device-unnamed-declare class ProcessData-End-->
 
@@ -24,10 +20,6 @@ Bundle name of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ProcessData-bundleName: string--><!--Device-ProcessData-bundleName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -43,10 +35,6 @@ Whether the task is a continuous task. **true** if yes, **false** otherwise.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ProcessData-isContinuousTask: boolean--><!--Device-ProcessData-isContinuousTask: boolean-End-->
 
@@ -64,10 +52,6 @@ Whether the process is a resident task. **true** if yes, **false** otherwise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ProcessData-isKeepAlive: boolean--><!--Device-ProcessData-isKeepAlive: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -83,10 +67,6 @@ Process ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ProcessData-pid: int--><!--Device-ProcessData-pid: int-End-->
 
@@ -104,10 +84,6 @@ Application state. The options are as follows: **0**: The application process is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ProcessData-state: int--><!--Device-ProcessData-state: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -123,10 +99,6 @@ UID of the application.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ProcessData-uid: int--><!--Device-ProcessData-uid: int-End-->
 

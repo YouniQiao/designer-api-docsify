@@ -1,12 +1,10 @@
 # FileSelectorResult
 
-Defines the file selector result, related to onFileSelectorShow method.
+Defines the file selector result, related to [onFileSelectorShow](../../apis-arkweb/arkts-components/arkts-arkweb-web-attribute.md#onfileselectorshow) method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class FileSelectorResult--><!--Device-unnamed-export declare class FileSelectorResult-End-->
 
@@ -22,9 +20,7 @@ Constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-FileSelectorResult-constructor()--><!--Device-FileSelectorResult-constructor()-End-->
 
@@ -40,9 +36,7 @@ select a list of files.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-FileSelectorResult-handleFileList(fileList: Array<string>): void--><!--Device-FileSelectorResult-handleFileList(fileList: Array<string>): void-End-->
 

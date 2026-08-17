@@ -4,13 +4,9 @@
 type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeEmbedVisibilityInfo) => void
 ```
 
-The callback of onNativeEmbedVisibilityChange.
+Defines a callback invoked when the visibility of a same-layer tag changes.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeEmbedVisibilityInfo) => void--><!--Device-unnamed-type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeEmbedVisibilityInfo) => void-End-->
 
@@ -20,5 +16,5 @@ The callback of onNativeEmbedVisibilityChange.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nativeEmbedVisibilityInfo | [NativeEmbedVisibilityInfo](arkts-arkweb-nativeembedvisibilityinfo-i.md) | Yes | callback information of onNativeEmbedVisibilityChange. |
+| nativeEmbedVisibilityInfo | [NativeEmbedVisibilityInfo](arkts-arkweb-nativeembedvisibilityinfo-i.md) | Yes | Provides information about visibility changes of same-layer tags. |
 

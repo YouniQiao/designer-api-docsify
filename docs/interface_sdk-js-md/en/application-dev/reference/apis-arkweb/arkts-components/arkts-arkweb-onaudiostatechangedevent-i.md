@@ -1,12 +1,8 @@
 # OnAudioStateChangedEvent
 
-Represents the callback invoked when the audio playback status on the web page changes.
+Defines the callback information triggered when the audio playback status on the web page changes, including the playback status. It is suitable for scenarios where monitoring audio playback behavior is required, improving audio management visibility and user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnAudioStateChangedEvent--><!--Device-unnamed-declare interface OnAudioStateChangedEvent-End-->
 
@@ -23,10 +19,6 @@ Audio playback status on the current page. The value **true** means that audio i
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

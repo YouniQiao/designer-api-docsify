@@ -4,9 +4,7 @@ Enumerates the memory pressure levels. When an application clears the cache occu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-enum PressureLevel--><!--Device-webview-enum PressureLevel-End-->
 
@@ -22,9 +20,7 @@ Moderate memory pressure level. At this level, the **Web** kernel attempts to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-PressureLevel-MEMORY_PRESSURE_LEVEL_MODERATE = 1--><!--Device-PressureLevel-MEMORY_PRESSURE_LEVEL_MODERATE = 1-End-->
 
@@ -40,9 +36,7 @@ Critical memory pressure level. At this level, the **Web** kernel attempts to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-PressureLevel-MEMORY_PRESSURE_LEVEL_CRITICAL = 2--><!--Device-PressureLevel-MEMORY_PRESSURE_LEVEL_CRITICAL = 2-End-->
 

@@ -1,14 +1,10 @@
 # WorkSchedulerExtensionContext
 
-The **WorkSchedulerExtensionContext** module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext), provides a context environment for the **WorkSchedulerExtensionAbility**. This module provides APIs for accessing the resources of a **WorkSchedulerExtensionAbility**.
+The **WorkSchedulerExtensionContext** module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext), provides a context environment for the **WorkSchedulerExtensionAbility**. This module provides APIs for accessing the resources of a **WorkSchedulerExtensionAbility**.
 
 **Inheritance/Implementation:** WorkSchedulerExtensionContext extends ExtensionContext
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WorkSchedulerExtensionContext--><!--Device-unnamed-declare class WorkSchedulerExtensionContext-End-->
 
@@ -23,10 +19,6 @@ startServiceExtensionAbility(want: Want): Promise<void>
 Starts a **ServiceExtensionAbility**. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,7 +59,7 @@ Starts a **ServiceExtensionAbility**. This API uses a promise to return the resu
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WorkSchedulerExtensionAbility, workScheduler } from '@kit.BackgroundTasksKit';
@@ -106,10 +98,6 @@ Stops a **ServiceExtensionAbility**. This API uses a promise to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WorkSchedulerExtensionContext-stopServiceExtensionAbility(want: Want): Promise<void>--><!--Device-WorkSchedulerExtensionContext-stopServiceExtensionAbility(want: Want): Promise<void>-End-->
@@ -146,7 +134,7 @@ Stops a **ServiceExtensionAbility**. This API uses a promise to return the resul
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WorkSchedulerExtensionAbility, workScheduler } from '@kit.BackgroundTasksKit';

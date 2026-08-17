@@ -4,10 +4,6 @@ Transfer policy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-bluetoothManager-export enum TransferPolicy--><!--Device-bluetoothManager-export enum TransferPolicy-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,10 +17,6 @@ SEND_ONLY = 0
 Disable sending.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Disable receiving.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TransferPolicy-RECEIVE_ONLY = 1--><!--Device-TransferPolicy-RECEIVE_ONLY = 1-End-->
@@ -61,10 +49,6 @@ RECEIVE_SEND = 2
 Disable sending and receiving.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,14 +1,10 @@
 # UIAbilityContext
 
-UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that needs to store its status. It inherits from Context and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
+UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) that needs to store its status. It inherits from Context and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
 
 **Inheritance/Implementation:** UIAbilityContext extends Context
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class UIAbilityContext--><!--Device-unnamed-declare class UIAbilityContext-End-->
 
@@ -24,11 +20,9 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [connectServiceExtensionAbilityWithAccount](#connectServiceExtensionAbilityWithAccount)(want: Want, accountId: int, options: ConnectOptions)
+**Substitutes:** [connectServiceExtensionAbilityWithAccount](#connectserviceextensionabilitywithaccount)(want: Want, accountId: int, options: ConnectOptions)
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -45,7 +39,7 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Instance of the callback function after the connection to the ServiceExtensionAbility is set up. |
 
 **Return value:**
@@ -82,10 +76,6 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -101,7 +91,7 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Instance of the callback function after the connection to the ServiceExtensionAbility is set up. |
 
 **Return value:**
@@ -130,7 +120,7 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires.<br>**Applicable version:** 10 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want, common } from '@kit.AbilityKit';
@@ -182,11 +172,9 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [disconnectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#disconnectServiceExtensionAbility)(connection: long, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [disconnectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#disconnectserviceextensionability)(connection: long, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,7 +188,7 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | long | Yes | ID of the connected ServiceExtensionAbility, that is, **connectionId** returned by [connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectServiceExtensionAbility). |
+| connection | long | Yes | ID of the connected ServiceExtensionAbility, that is, **connectionId** returned by [connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -221,11 +209,9 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [disconnectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#disconnectServiceExtensionAbility)(connection: long)
+**Substitutes:** [disconnectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#disconnectserviceextensionability)(connection: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -239,7 +225,7 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | long | Yes | ID of the connected ServiceExtensionAbility, that is, **connectionId** returned by [connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectServiceExtensionAbility). |
+| connection | long | Yes | ID of the connected ServiceExtensionAbility, that is, **connectionId** returned by [connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability). |
 
 **Return value:**
 
@@ -264,10 +250,6 @@ requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 Requests the specified foreground application to start the UIExtensionAbility of the corresponding type. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The foreground application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the application specified by **bundleName** is not running in the foreground or does not exist, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. Before starting the UIExtensionAbility, ensure that the foreground application has finished page initialization. Otherwise, the UIExtensionAbility fails to start and the error message "uiContent is nullptr" is displayed. The application can determine the time to start the UIExtensionAbility by listening for the page loading status. After the page initialization is successful, the key log information "UIContentImpl: focus again" is recorded. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -297,7 +279,7 @@ Requests the specified foreground application to start the UIExtensionAbility of
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -346,10 +328,6 @@ Requests the specified foreground application to start the UIExtensionAbility of
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityContext-requestModalUIExtension(pickerWant: Want): Promise<void>--><!--Device-UIAbilityContext-requestModalUIExtension(pickerWant: Want): Promise<void>-End-->
@@ -383,7 +361,7 @@ Requests the specified foreground application to start the UIExtensionAbility of
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -432,10 +410,6 @@ Requests the specified foreground application to start the UIExtensionAbility of
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -477,10 +451,6 @@ Sets an icon for this UIAbility in the mission. The maximum size of the icon is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityContext-setMissionIcon(icon: image.PixelMap, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-setMissionIcon(icon: image.PixelMap, callback: AsyncCallback<void>): void-End-->
@@ -505,7 +475,7 @@ Sets an icon for this UIAbility in the mission. The maximum size of the icon is 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api.<br>**Applicable version:** 10 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -551,10 +521,6 @@ Sets an icon for this UIAbility in the mission. The maximum size of the icon is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityContext-setMissionIcon(icon: image.PixelMap): Promise<void>--><!--Device-UIAbilityContext-setMissionIcon(icon: image.PixelMap): Promise<void>-End-->
@@ -584,7 +550,7 @@ Sets an icon for this UIAbility in the mission. The maximum size of the icon is 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api.<br>**Applicable version:** 10 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -629,10 +595,6 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 Starts a UIAbility with the caller information specified. The caller information is carried in **want** and identified at the system service layer. The UIAbility can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start a UIAbility, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -680,7 +642,7 @@ Starts a UIAbility with the caller information specified. The caller information
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
@@ -714,10 +676,6 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 Starts a UIAbility with the caller information and start options specified. The caller information is carried in **want** and identified at the system service layer. The UIAbility can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start a UIAbility, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -764,7 +722,7 @@ Starts a UIAbility with the caller information and start options specified. The 
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want, AbilityConstant, StartOptions } from '@kit.AbilityKit';
@@ -801,10 +759,6 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 Starts a UIAbility with the caller information specified. The caller information is carried in **want** and identified at the system service layer. The UIAbility can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start a UIAbility, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -858,7 +812,7 @@ Starts a UIAbility with the caller information specified. The caller information
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want, AbilityConstant, StartOptions } from '@kit.AbilityKit';
@@ -897,10 +851,6 @@ Starts a UIAbility with the account ID specified and obtains the caller object f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -916,7 +866,7 @@ Starts a UIAbility with the account ID specified and obtains the caller object f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Information about the UIAbility to start, including **abilityName**, **moduleName**, **bundleName**, **deviceId** (optional), and **parameters** (optional). If **deviceId** is left blank or null, the local UIAbility is started. If **parameters** is left blank or null, the UIAbility is started in the background. |
-| accountId | int | Yes | ID of a system account. The value **-1** indicates the current user. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. The value **-1** indicates the current user. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 
 **Return value:**
 
@@ -951,7 +901,7 @@ Starts a UIAbility with the account ID specified and obtains the caller object f
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want, Caller } from '@kit.AbilityKit';
@@ -1002,10 +952,6 @@ Starts a UIAbility with the account ID specified and returns the result when the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1021,7 +967,7 @@ Starts a UIAbility with the account ID specified and returns the result when the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** is the result code and data when the UIAbility is terminated. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -1056,7 +1002,7 @@ Starts a UIAbility with the account ID specified and returns the result when the
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, common, Want } from '@kit.AbilityKit';
@@ -1107,10 +1053,6 @@ Starts a UIAbility with the account ID and start options specified and returns t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1126,7 +1068,7 @@ Starts a UIAbility with the account ID and start options specified and returns t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
@@ -1162,7 +1104,7 @@ Starts a UIAbility with the account ID and start options specified and returns t
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden.<br>**Applicable version:** 9 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, StartOptions, Want } from '@kit.AbilityKit';
@@ -1210,10 +1152,6 @@ Starts a UIAbility with the account ID specified and returns the result when the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1229,7 +1167,7 @@ Starts a UIAbility with the account ID specified and returns the result when the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**
@@ -1270,7 +1208,7 @@ Starts a UIAbility with the account ID specified and returns the result when the
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, StartOptions, Want, common } from '@kit.AbilityKit';
@@ -1318,10 +1256,6 @@ Starts a UIAbility with want and the account ID specified. This API uses an asyn
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1337,7 +1271,7 @@ Starts a UIAbility with want and the account ID specified. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -1372,7 +1306,7 @@ Starts a UIAbility with want and the account ID specified. This API uses an asyn
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -1417,10 +1351,6 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1436,7 +1366,7 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
@@ -1472,7 +1402,7 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden.<br>**Applicable version:** 9 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -1520,10 +1450,6 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1539,7 +1465,7 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**
@@ -1580,7 +1506,7 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -1628,10 +1554,6 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityContext-startRecentAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startRecentAbility(want: Want, callback: AsyncCallback<void>): void-End-->
@@ -1678,7 +1600,7 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -1720,10 +1642,6 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 Starts a UIAbility with the start options specified. If the UIAbility has multiple instances, the latest instance is started. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > - For a successful launch in cross-device scenarios, the caller and target must be the same application and the > application must have the ohos.permission.DISTRIBUTED_DATASYNC permission. > > - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the > ohos.permission.START_INVISIBLE_ABILITY permission. > > - If the specified UIAbility has multiple instances, the caller must have the > ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest > instance. > > - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is > required (available only for system applications). > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1772,7 +1690,7 @@ Starts a UIAbility with the start options specified. If the UIAbility has multip
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden.<br>**Applicable version:** 9 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -1818,10 +1736,6 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 Starts a UIAbility. If the UIAbility has multiple instances, the latest instance is started. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > - For a successful launch in cross-device scenarios, the caller and target must be the same application and the > application must have the ohos.permission.DISTRIBUTED_DATASYNC permission. > > - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the > ohos.permission.START_INVISIBLE_ABILITY permission. > > - If the specified UIAbility has multiple instances, the caller must have the > ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest > instance. > > - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is > required (available only for system applications). > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1875,7 +1789,7 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -1921,10 +1835,6 @@ Starts a ServiceExtensionAbility. This API uses an asynchronous callback to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityContext-startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void-End-->
@@ -1960,7 +1870,7 @@ Starts a ServiceExtensionAbility. This API uses an asynchronous callback to retu
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -2004,10 +1914,6 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityContext-startServiceExtensionAbility(want: Want): Promise<void>--><!--Device-UIAbilityContext-startServiceExtensionAbility(want: Want): Promise<void>-End-->
@@ -2048,7 +1954,7 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result.
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -2092,10 +1998,6 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -2111,7 +2013,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -2134,7 +2036,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -2179,10 +2081,6 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -2198,7 +2096,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 
 **Return value:**
 
@@ -2226,7 +2124,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -2271,10 +2169,6 @@ Stops a ServiceExtensionAbility. This API uses an asynchronous callback to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityContext-stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void-End-->
@@ -2308,7 +2202,7 @@ Stops a ServiceExtensionAbility. This API uses an asynchronous callback to retur
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -2352,10 +2246,6 @@ Stops a ServiceExtensionAbility in the same application. This API uses a promise
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityContext-stopServiceExtensionAbility(want: Want): Promise<void>--><!--Device-UIAbilityContext-stopServiceExtensionAbility(want: Want): Promise<void>-End-->
@@ -2392,7 +2282,7 @@ Stops a ServiceExtensionAbility in the same application. This API uses a promise
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -2436,10 +2326,6 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -2455,7 +2341,7 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
@@ -2474,7 +2360,7 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -2519,10 +2405,6 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -2538,7 +2420,7 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountCount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 
 **Return value:**
 
@@ -2562,7 +2444,7 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';

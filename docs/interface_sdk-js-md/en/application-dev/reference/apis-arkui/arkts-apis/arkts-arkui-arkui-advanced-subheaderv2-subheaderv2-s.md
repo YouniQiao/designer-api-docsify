@@ -4,10 +4,6 @@ The component is positioned at the top of list items or content sections, organi
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct SubHeaderV2--><!--Device-unnamed-export declare struct SubHeaderV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -37,10 +33,6 @@ Icon. Default value: **undefined** **icon** takes effect only when **secondaryTi
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -61,10 +53,6 @@ Items in the operation area. Default value: **undefined**
 **Type:** [SubHeaderV2OperationItem](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,10 +75,6 @@ Style of elements in the operation area. Default value: **SubHeaderV2OperationTy
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -111,10 +95,6 @@ Content and events for selection. Default value: **undefined**
 **Type:** [SubHeaderV2Select](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2select-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,10 +117,6 @@ Title of the subheader. Default value: **undefined**
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -161,10 +137,6 @@ Custom content for the title area. Default value: **() => void**
 **Type:** [SubHeaderV2TitleBuilder](arkts-arkui-subheaderv2titlebuilder-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -15,12 +15,12 @@ Defines the namespace of focus controller.
 
 | Name | Description |
 | --- | --- |
-| [$$](arkts-na-common-$$-f.md#$$) | Convert to a bindable property. |
-| [$r](arkts-na-common-$r-f.md#$r) | global \\$r function |
-| [$rawfile](arkts-na-common-$rawfile-f.md#$rawfile) | global \\$rawfile function |
-| [animateToImmediately](arkts-na-common-animatetoimmediately-f.md#animateToImmediately) | Define animation functions for immediate distribution. This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use animateToImmediately to explicitly specify the UI context. |
-| [applyStyles](arkts-na-common-applystyles-f.md#applyStyles) | Apply style function on this CommonMethod. |
-| [makeBindable](arkts-na-common-makebindable-f.md#makeBindable) | Create a bindable property instance. |
+| [$$](arkts-na-common-$$-f.md#) | Convert to a bindable property. |
+| [$r](arkts-na-common-$r-f.md#r) | global \\$r function |
+| [$rawfile](arkts-na-common-$rawfile-f.md#rawfile) | global \\$rawfile function |
+| [animateToImmediately](arkts-na-common-animatetoimmediately-f.md#animatetoimmediately) | Define animation functions for immediate distribution. This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use animateToImmediately to explicitly specify the UI context. |
+| [applyStyles](arkts-na-common-applystyles-f.md#applystyles) | Apply style function on this CommonMethod. |
+| [makeBindable](arkts-na-common-makebindable-f.md#makebindable) | Create a bindable property instance. |
 
 ### Classes
 

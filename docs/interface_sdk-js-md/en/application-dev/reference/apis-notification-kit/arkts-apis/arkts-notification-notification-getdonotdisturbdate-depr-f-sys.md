@@ -10,11 +10,9 @@ Obtains the DND time. This API uses an asynchronous callback to return the resul
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate-(System-API))
+**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getdonotdisturbdate-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,11 +39,9 @@ Obtains the DND time. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate-(System-API))
+**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getdonotdisturbdate-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -72,11 +68,9 @@ Obtains the DND time of a specified user. This API uses an asynchronous callback
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate-(System-API))
+**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getdonotdisturbdate-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -104,11 +98,9 @@ Obtains the DND time of a specified user. This API uses a promise to return the 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate-(System-API))
+**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getdonotdisturbdate-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

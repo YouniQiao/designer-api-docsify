@@ -4,10 +4,6 @@ Represents detailed file information. Before calling any API of the **Stat()** c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -42,10 +38,6 @@ Checks whether this file is a block special file. A block special file supports 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -63,7 +55,7 @@ Checks whether this file is a block special file. A block special file supports 
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -79,10 +71,6 @@ isCharacterDevice(): boolean
 Checks whether this file is a character special file. A character special device supports random access, and it is not cached when accessed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
 
@@ -101,7 +89,7 @@ Checks whether this file is a character special file. A character special device
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -117,10 +105,6 @@ isDirectory(): boolean
 Checks whether this file is a directory.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -141,7 +125,7 @@ Checks whether this file is a directory.
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dirPath = pathDir + "/test";
@@ -157,10 +141,6 @@ isFIFO(): boolean
 Checks whether this file is a named pipe (or FIFO). Named pipes are used for inter-process communication.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
 
@@ -179,7 +159,7 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -195,10 +175,6 @@ isFile(): boolean
 Checks whether this file is a regular file.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -219,7 +195,7 @@ Checks whether this file is a regular file.
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -235,10 +211,6 @@ isSocket(): boolean
 Checks whether this file is a socket.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
 
@@ -257,7 +229,7 @@ Checks whether this file is a socket.
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -273,10 +245,6 @@ isSymbolicLink(): boolean
 Checks whether this file is a symbolic link.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
@@ -295,7 +263,7 @@ Checks whether this file is a symbolic link.
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -313,10 +281,6 @@ Time when the file was last accessed. The value is the number of seconds elapsed
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -336,10 +300,6 @@ Time of the last access to the file. The value is the number of nanoseconds elap
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-Stat-readonly atimeNs?:bigint--><!--Device-Stat-readonly atimeNs?:bigint-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -355,10 +315,6 @@ Time when the file metadata was last modified. The value is the number of second
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-Stat-readonly ctime: number--><!--Device-Stat-readonly ctime: number-End-->
 
@@ -376,10 +332,6 @@ Time of the last status change of the file. The value is the number of nanosecon
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-Stat-readonly ctimeNs?:bigint--><!--Device-Stat-readonly ctimeNs?:bigint-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -395,10 +347,6 @@ ID of the user group of the file.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-Stat-readonly gid: number--><!--Device-Stat-readonly gid: number-End-->
 
@@ -416,10 +364,6 @@ File ID. Different files on the same device have different **ino**s.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-Stat-readonly ino: bigint--><!--Device-Stat-readonly ino: bigint-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -436,10 +380,6 @@ File location, which indicates whether the file is stored in a local device or i
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-Stat-readonly location: LocationType--><!--Device-Stat-readonly location: LocationType-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -455,10 +395,6 @@ File permissions. The meaning of each bit is as follows: Note: The following val
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -478,10 +414,6 @@ Time when the file content was last modified. The value is the number of seconds
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Stat-readonly mtime: number--><!--Device-Stat-readonly mtime: number-End-->
@@ -500,10 +432,6 @@ Time of the last modification to the file. The value is the number of nanosecond
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-Stat-readonly mtimeNs?:bigint--><!--Device-Stat-readonly mtimeNs?:bigint-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -519,10 +447,6 @@ File size, in bytes. This parameter is valid only for regular files.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -541,10 +465,6 @@ ID of the file owner.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-Stat-readonly uid: number--><!--Device-Stat-readonly uid: number-End-->
 

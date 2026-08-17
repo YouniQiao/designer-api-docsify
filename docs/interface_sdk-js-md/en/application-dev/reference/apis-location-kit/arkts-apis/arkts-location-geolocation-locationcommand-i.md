@@ -4,11 +4,9 @@ Location subsystem command structure
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md#LocationCommand)
+**Substitutes:** [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md#locationcommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,8 +30,6 @@ command: string
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [command](arkts-location-geolocationmanager-locationcommand-i.md#command)
@@ -51,8 +47,6 @@ scenario: LocationRequestScenario
 **Type:** LocationRequestScenario
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

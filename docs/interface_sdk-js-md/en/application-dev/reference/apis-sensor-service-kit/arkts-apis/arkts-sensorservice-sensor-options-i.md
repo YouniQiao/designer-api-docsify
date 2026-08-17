@@ -4,10 +4,6 @@ Describes the sensor data reporting frequency.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-interface Options--><!--Device-sensor-interface Options-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -30,10 +26,6 @@ Frequency at which a sensor reports data. The default value is 200,000,000 ns. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Options-interval?: long | SensorFrequency--><!--Device-Options-interval?: long | SensorFrequency-End-->
@@ -51,10 +43,6 @@ Sensor parameters, including **deviceId** and **sensorIndex**. This API can be u
 **Type:** [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

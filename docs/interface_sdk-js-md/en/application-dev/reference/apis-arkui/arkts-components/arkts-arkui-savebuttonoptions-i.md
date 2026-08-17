@@ -4,10 +4,6 @@ Defines options for the save button, including icon, text, and button type. > **
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface SaveButtonOptions--><!--Device-unnamed-declare interface SaveButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Background type of the **SaveButton** component. Default value: ButtonType.Capsu
 **Type:** ButtonType
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ Icon style of the **SaveButton** component. <br>If this parameter is not specifi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -71,10 +59,6 @@ Text on the **SaveButton** component. <br>If this parameter is not specified, no
 **Type:** [SaveDescription](arkts-arkui-savedescription-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

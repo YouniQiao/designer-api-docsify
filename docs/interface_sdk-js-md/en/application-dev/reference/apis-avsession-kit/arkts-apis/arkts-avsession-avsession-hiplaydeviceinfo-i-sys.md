@@ -4,10 +4,6 @@ HiPlay Device Information Definition
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface HiPlayDeviceInfo--><!--Device-avSession-interface HiPlayDeviceInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -32,10 +28,6 @@ HiPlay device cast mode. 1: DEVICE_LEVEL_CAST 2: APP_LEVEL_CAST
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -58,10 +50,6 @@ HiPlay device current cast uid.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -83,10 +71,6 @@ HiPlay device supports cast mode. when device both support device level cast and
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

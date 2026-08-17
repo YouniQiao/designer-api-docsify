@@ -1,12 +1,8 @@
-# ToolBarItemOptions
+# ToolBarItemOptions(Defines toolbar attributes.)
 
 Provides optional parameters for **ToolBarItem** configuration.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface ToolBarItemOptions--><!--Device-unnamed-interface ToolBarItemOptions-End-->
 
@@ -23,10 +19,6 @@ Placement position of the toolbar item. Default value: **ToolBarItemPlacement.TO
 **Type:** [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

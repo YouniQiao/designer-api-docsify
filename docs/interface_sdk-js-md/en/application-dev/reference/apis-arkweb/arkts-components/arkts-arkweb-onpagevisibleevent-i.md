@@ -4,10 +4,6 @@ Represents the callback invoked when the old page is not displayed and the new p
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface OnPageVisibleEvent--><!--Device-unnamed-declare interface OnPageVisibleEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -18,15 +14,11 @@ Represents the callback invoked when the old page is not displayed and the new p
 url: string
 ```
 
-URL for the download task.
+URL address of the new page.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-appAccount-interface CreateAccountImplicitlyOptions--><!--Device-appAccount-interface CreateAccountImplicitlyOptions-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -23,10 +19,6 @@ authType?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CreateAccountImplicitlyOptions-authType?: string--><!--Device-CreateAccountImplicitlyOptions-authType?: string-End-->
 
@@ -44,10 +36,6 @@ parameters?: Record<string, RecordData>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, RecordData>--><!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -63,10 +51,6 @@ requiredLabels?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>--><!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>-End-->
 

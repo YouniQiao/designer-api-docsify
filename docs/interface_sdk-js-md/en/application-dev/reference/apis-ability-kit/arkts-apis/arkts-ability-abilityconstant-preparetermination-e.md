@@ -1,12 +1,8 @@
 # PrepareTermination
 
-Enumerates the actions triggered when an application is closed by the user. You can use it in [onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onPrepareTermination) or [onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onPrepareTerminationAsync) of [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage).
+Enumerates the actions triggered when an application is closed by the user. You can use it in [onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination) or [onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync) of [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AbilityConstant-export enum PrepareTermination--><!--Device-AbilityConstant-export enum PrepareTermination-End-->
 
@@ -21,10 +17,6 @@ TERMINATE_IMMEDIATELY = 0
 Executes the termination action immediately. This is the default behavior.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ CANCEL = 1
 Cancels the termination action.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

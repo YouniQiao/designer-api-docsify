@@ -1,12 +1,8 @@
 # Header
 
-Defines the Web's request/response header.
+Request/response header object returned by the **Web** component. It is suitable for scenarios where reading or modifying HTTP headers is required, improving network request handling flexibility and controllability.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface Header--><!--Device-unnamed-declare interface Header-End-->
 
@@ -18,15 +14,11 @@ Defines the Web's request/response header.
 headerKey: string
 ```
 
-Gets the key of the request/response header.
+Key of the request or response header.
 
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,15 +32,11 @@ Gets the key of the request/response header.
 headerValue: string
 ```
 
-Gets the value of the request/response header.
+Value of the request or response header.
 
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

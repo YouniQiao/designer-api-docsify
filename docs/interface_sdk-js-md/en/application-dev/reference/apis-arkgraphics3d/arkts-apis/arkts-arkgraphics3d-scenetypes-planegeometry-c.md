@@ -1,14 +1,10 @@
 # PlaneGeometry
 
-Define a plane.
+A plane geometry type that inherits from GeometryDefinition.
 
-**Inheritance/Implementation:** PlaneGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition)
+**Inheritance/Implementation:** PlaneGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#geometrydefinition)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class PlaneGeometry--><!--Device-unnamed-export declare class PlaneGeometry-End-->
 

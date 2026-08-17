@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Float64ArrayConstructor--><!--Device-unnamed-interface Float64ArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new (elements: Iterable<number>): Float64Array
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64ArrayConstructor-new (elements: Iterable<number>): Float64Array--><!--Device-Float64ArrayConstructor-new (elements: Iterable<number>): Float64Array-End-->
 
@@ -43,10 +35,6 @@ from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, this
 Creates an array from an array-like or iterable object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64ArrayConstructor-from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Float64Array--><!--Device-Float64ArrayConstructor-from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Float64Array-End-->
 

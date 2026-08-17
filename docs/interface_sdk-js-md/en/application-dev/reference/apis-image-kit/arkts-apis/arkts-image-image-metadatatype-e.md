@@ -4,10 +4,6 @@ Enumerates image metadata types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-enum MetadataType--><!--Device-image-enum MetadataType-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -21,10 +17,6 @@ EXIF_METADATA = 1
 Exif data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MetadataType-EXIF_METADATA = 1--><!--Device-MetadataType-EXIF_METADATA = 1-End-->
 
@@ -40,10 +32,6 @@ Fragment map metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MetadataType-FRAGMENT_METADATA = 2--><!--Device-MetadataType-FRAGMENT_METADATA = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -58,10 +46,6 @@ GIF image metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MetadataType-GIF_METADATA = 5--><!--Device-MetadataType-GIF_METADATA = 5-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -75,10 +59,6 @@ HEIFS_METADATA = 15
 Metadata of a HEIFS image.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,10 +76,6 @@ Metadata of a DNG image.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MetadataType-DNG_METADATA = 16--><!--Device-MetadataType-DNG_METADATA = 16-End-->
@@ -115,10 +91,6 @@ WEBP_METADATA = 17
 Metadata of a WebP image.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,10 +108,6 @@ Metadata of a PNG image.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MetadataType-PNG_METADATA = 19--><!--Device-MetadataType-PNG_METADATA = 19-End-->
@@ -155,10 +123,6 @@ JFIF_METADATA = 20
 Metadata of a JFIF image.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +140,6 @@ Metadata of a TIFF image.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MetadataType-TIFF_METADATA = 21--><!--Device-MetadataType-TIFF_METADATA = 21-End-->
@@ -196,10 +156,6 @@ XMP metadata.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MetadataType-XMP_METADATA = 22--><!--Device-MetadataType-XMP_METADATA = 22-End-->
@@ -215,10 +171,6 @@ AVIS_METADATA = 23
 Metadata of a Avis image.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

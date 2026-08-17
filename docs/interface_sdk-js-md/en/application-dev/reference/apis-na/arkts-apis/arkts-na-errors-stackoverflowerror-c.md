@@ -1,4 +1,4 @@
-# StackOverflowError
+# StackOverflowError(Defines the commonly used Errors for ArkTS)
 
 Represents an error that occurs when the available memory is not sufficient to create the activation frame
 
@@ -6,9 +6,7 @@ Represents an error that occurs when the available memory is not sufficient to c
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class StackOverflowError--><!--Device-unnamed-export class StackOverflowError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new StackOverflowError instance with provided message and error spe
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

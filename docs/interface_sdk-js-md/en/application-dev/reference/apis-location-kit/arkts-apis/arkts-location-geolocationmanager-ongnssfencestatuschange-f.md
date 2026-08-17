@@ -16,10 +16,6 @@ Add a geofence and subscribe geofence status changed.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function onGnssFenceStatusChange(request: GeofenceRequest, want: WantAgent): void--><!--Device-geoLocationManager-function onGnssFenceStatusChange(request: GeofenceRequest, want: WantAgent): void-End-->

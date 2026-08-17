@@ -16,11 +16,9 @@ Zips a file. The execution result is returned after the compression is complete.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressFile)(inFile: string, outFile: string, options: Options, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressfile)(inFile: string, outFile: string, options: Options, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
 
@@ -40,7 +38,7 @@ Zips a file. The execution result is returned after the compression is complete.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.

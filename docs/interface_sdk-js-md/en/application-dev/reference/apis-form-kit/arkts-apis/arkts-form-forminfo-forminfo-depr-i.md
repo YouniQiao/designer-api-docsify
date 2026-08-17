@@ -4,11 +4,9 @@ Widget information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FormInfo](arkts-form-forminfo-forminfo-i.md#FormInfo)
+**Substitutes:** [FormInfo](arkts-form-forminfo-forminfo-i.md#forminfo)
 
 <!--Device-formInfo-interface FormInfo--><!--Device-formInfo-interface FormInfo-End-->
 
@@ -26,11 +24,9 @@ Name of the ability to which the widget belongs.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [abilityName](arkts-form-forminfo-forminfo-i.md#abilityName)
+**Substitutes:** [abilityName](arkts-form-forminfo-forminfo-i.md#abilityname)
 
 <!--Device-FormInfo-abilityName: string--><!--Device-FormInfo-abilityName: string-End-->
 
@@ -48,11 +44,9 @@ Name of the bundle to which the widget belongs.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [bundleName](arkts-form-forminfo-forminfo-i.md#bundleName)
+**Substitutes:** [bundleName](arkts-form-forminfo-forminfo-i.md#bundlename)
 
 <!--Device-FormInfo-bundleName: string--><!--Device-FormInfo-bundleName: string-End-->
 
@@ -70,11 +64,9 @@ Color mode of the widget.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [colorMode](arkts-form-forminfo-forminfo-i.md#colorMode)
+**Substitutes:** [colorMode](arkts-form-forminfo-forminfo-i.md#colormode)
 
 <!--Device-FormInfo-colorMode: ColorMode--><!--Device-FormInfo-colorMode: ColorMode-End-->
 
@@ -92,11 +84,9 @@ Custom data of the widget.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [customizeData](arkts-form-forminfo-forminfo-i.md#customizeData)
+**Substitutes:** [customizeData](arkts-form-forminfo-forminfo-i.md#customizedata)
 
 <!--Device-FormInfo-customizeData: { [key: string]: [value: string] }--><!--Device-FormInfo-customizeData: { [key: string]: [value: string] }-End-->
 
@@ -114,11 +104,9 @@ Default dimension of the widget.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [defaultDimension](arkts-form-forminfo-forminfo-i.md#defaultDimension)
+**Substitutes:** [defaultDimension](arkts-form-forminfo-forminfo-i.md#defaultdimension)
 
 <!--Device-FormInfo-defaultDimension: number--><!--Device-FormInfo-defaultDimension: number-End-->
 
@@ -135,8 +123,6 @@ Description of the widget.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -158,11 +144,9 @@ Configuration ability of the widget.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [formConfigAbility](arkts-form-forminfo-forminfo-i.md#formConfigAbility)
+**Substitutes:** [formConfigAbility](arkts-form-forminfo-forminfo-i.md#formconfigability)
 
 <!--Device-FormInfo-formConfigAbility: string--><!--Device-FormInfo-formConfigAbility: string-End-->
 
@@ -180,11 +164,9 @@ Whether to send a notification when the widget is visible. - **true**: The widge
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [formVisibleNotify](arkts-form-forminfo-forminfo-i.md#formVisibleNotify)
+**Substitutes:** [formVisibleNotify](arkts-form-forminfo-forminfo-i.md#formvisiblenotify)
 
 <!--Device-FormInfo-formVisibleNotify: boolean--><!--Device-FormInfo-formVisibleNotify: boolean-End-->
 
@@ -202,11 +184,9 @@ Whether the widget is the default one. - **true**: The widget is the default one
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isDefault](arkts-form-forminfo-forminfo-i.md#isDefault)
+**Substitutes:** [isDefault](arkts-form-forminfo-forminfo-i.md#isdefault)
 
 <!--Device-FormInfo-isDefault: boolean--><!--Device-FormInfo-isDefault: boolean-End-->
 
@@ -224,11 +204,9 @@ Component name of the JS widget.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [jsComponentName](arkts-form-forminfo-forminfo-i.md#jsComponentName)
+**Substitutes:** [jsComponentName](arkts-form-forminfo-forminfo-i.md#jscomponentname)
 
 <!--Device-FormInfo-jsComponentName: string--><!--Device-FormInfo-jsComponentName: string-End-->
 
@@ -246,11 +224,9 @@ Name of the module to which the widget belongs.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [moduleName](arkts-form-forminfo-forminfo-i.md#moduleName)
+**Substitutes:** [moduleName](arkts-form-forminfo-forminfo-i.md#modulename)
 
 <!--Device-FormInfo-moduleName: string--><!--Device-FormInfo-moduleName: string-End-->
 
@@ -267,8 +243,6 @@ Widget name.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -290,8 +264,6 @@ Name of the associated bundle to which the widget belongs.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-FormInfo-relatedBundleName: string--><!--Device-FormInfo-relatedBundleName: string-End-->
@@ -310,11 +282,9 @@ Time when the widget was updated.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [scheduledUpdateTime](arkts-form-forminfo-forminfo-i.md#scheduledUpdateTime)
+**Substitutes:** [scheduledUpdateTime](arkts-form-forminfo-forminfo-i.md#scheduledupdatetime)
 
 <!--Device-FormInfo-scheduledUpdateTime: string--><!--Device-FormInfo-scheduledUpdateTime: string-End-->
 
@@ -332,11 +302,9 @@ Dimensions supported by the widget.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [supportDimensions](arkts-form-forminfo-forminfo-i.md#supportDimensions)
+**Substitutes:** [supportDimensions](arkts-form-forminfo-forminfo-i.md#supportdimensions)
 
 <!--Device-FormInfo-supportDimensions: Array<number>--><!--Device-FormInfo-supportDimensions: Array<number>-End-->
 
@@ -353,8 +321,6 @@ Type of the widget. Currently, only JS widgets are supported.
 **Type:** FormType
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -376,11 +342,9 @@ Update period of the widget.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [updateDuration](arkts-form-forminfo-forminfo-i.md#updateDuration)
+**Substitutes:** [updateDuration](arkts-form-forminfo-forminfo-i.md#updateduration)
 
 <!--Device-FormInfo-updateDuration: number--><!--Device-FormInfo-updateDuration: number-End-->
 
@@ -398,11 +362,9 @@ Whether the widget is updatable. - **true**: The widget can be updated periodica
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [updateEnabled](arkts-form-forminfo-forminfo-i.md#updateEnabled)
+**Substitutes:** [updateEnabled](arkts-form-forminfo-forminfo-i.md#updateenabled)
 
 <!--Device-FormInfo-updateEnabled: boolean--><!--Device-FormInfo-updateEnabled: boolean-End-->
 

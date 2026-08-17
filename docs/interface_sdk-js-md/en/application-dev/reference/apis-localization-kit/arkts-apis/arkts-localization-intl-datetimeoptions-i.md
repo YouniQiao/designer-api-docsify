@@ -4,8 +4,6 @@ Defines the options for a **DateTimeOptions** object. Since API version 9, the *
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options)
@@ -32,8 +30,6 @@ Date display format. The value can be: "long", "short", "medium", "full", or 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.dateStyle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#datestyle)
@@ -57,8 +53,6 @@ Day display format. The value can be: "numeric" or  "2-digit".
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -84,8 +78,6 @@ Time period display format. The value can be: "long", "short", "narrow", or  
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.dayPeriod](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#dayperiod)
@@ -109,8 +101,6 @@ Epoch display format. The value can be: "long", "short", "narrow", or  "auto"
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -136,8 +126,6 @@ Format matching algorithm. The value can be: - "basic": exact match. - "best fit
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.formatMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#formatmatcher)
@@ -161,8 +149,6 @@ Hour display format. The value can be: "numeric" or  "2-digit".
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -188,8 +174,6 @@ Whether to use the 12-hour clock. The value **true** means to use the 12-hour cl
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.hour12](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour12)
@@ -213,8 +197,6 @@ Hour cycle. The value can be: "h11", "h12", "h23", or  "h24". For the display
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -240,8 +222,6 @@ Valid locale ID, for example, **zh-Hans-CN**. The default value is the current s
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -263,8 +243,6 @@ Locale matching algorithm. The value can be: - "lookup": exact match. - "best fi
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -290,8 +268,6 @@ Minute display format. The value can be: "numeric" or  "2-digit".
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.minute](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#minute)
@@ -315,8 +291,6 @@ Month display format. The value can be: "numeric", "2-digit", "long", "short"
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -342,8 +316,6 @@ Numbering system. The value can be: **adlm**, **ahom**, **arab**, **arabext**, *
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#numberingsystem)
@@ -367,8 +339,6 @@ Second display format. The value can be: "numeric" or  "2-digit".
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -394,8 +364,6 @@ Time display format. The value can be: "long", "short", "medium", "full", or 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.timeStyle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timestyle)
@@ -419,8 +387,6 @@ Time zone in use. The value is a valid IANA time zone ID.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -446,8 +412,6 @@ Localized representation of a time zone name. The value can be: "long", "short"
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.timeZoneName](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezonename)
@@ -472,8 +436,6 @@ Week display format. The value can be: "long", "short", "narrow", or  "auto".
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.weekday](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#weekday)
@@ -497,8 +459,6 @@ Year display format. The value can be: "numeric" or  "2-digit". For details abo
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 

@@ -1,14 +1,10 @@
 # TouchEvent
 
-继承于[BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可 能不同。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md#baseevent)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可 能不同。
 
-**继承/实现关系：** TouchEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
+**继承/实现关系：** TouchEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface TouchEvent--><!--Device-unnamed-declare interface TouchEvent-End-->
 
@@ -20,13 +16,9 @@
 getHistoricalPoints(): Array<HistoricalPoint>
 ```
 
-获取当前帧的所有历史点。不同设备每帧的触摸事件频率不同，且该接口仅能在[TouchEvent](#TouchEvent)中调用，用于获取触发 [onTouch](arkts-arkui-commonmethod-c.md#onTouch)时当前帧历史点的相关信息。[onTouch](arkts-arkui-commonmethod-c.md#onTouch)一帧通常只会调用一次，如果当前帧收到的 [TouchEvent](#TouchEvent)数目大于1，会将该帧最后一个点通过[onTouch](arkts-arkui-commonmethod-c.md#onTouch)返回，其余点作为历史点。如果多指在同一 帧上报事件，可能触发多次onTouch。
+获取当前帧的所有历史点。不同设备每帧的触摸事件频率不同，且该接口仅能在[TouchEvent](#touchevent)中调用，用于获取触发 [onTouch](arkts-arkui-commonmethod-c.md#ontouch)时当前帧历史点的相关信息。[onTouch](arkts-arkui-commonmethod-c.md#ontouch)一帧通常只会调用一次，如果当前帧收到的 [TouchEvent](#touchevent)数目大于1，会将该帧最后一个点通过[onTouch](arkts-arkui-commonmethod-c.md#ontouch)返回，其余点作为历史点。如果多指在同一 帧上报事件，可能触发多次onTouch。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,10 +46,6 @@ changedTouches: TouchObject[]
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TouchEvent-changedTouches: TouchObject[]--><!--Device-TouchEvent-changedTouches: TouchObject[]-End-->
@@ -70,15 +58,11 @@ changedTouches: TouchObject[]
 eventHandleId?: number
 ```
 
-用于事件处理的唯一标识。 取值范围：[0, +∞) **说明：** 在使用[postInputEventWithStrategy](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postInputEventWithStrategy)接口分发事件时会使用该字段，事件每分 发一次字段会增加100000。 多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
+用于事件处理的唯一标识。 取值范围：[0, +∞) **说明：** 在使用[postInputEventWithStrategy](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分 发一次字段会增加100000。 多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
 **类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -100,10 +84,6 @@ preventDefault: () => void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -124,10 +104,6 @@ stopPropagation: () => void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TouchEvent-stopPropagation: () => void--><!--Device-TouchEvent-stopPropagation: () => void-End-->
@@ -146,10 +122,6 @@ touches: TouchObject[]
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TouchEvent-touches: TouchObject[]--><!--Device-TouchEvent-touches: TouchObject[]-End-->
@@ -167,10 +139,6 @@ type: TouchType
 **类型：** TouchType
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

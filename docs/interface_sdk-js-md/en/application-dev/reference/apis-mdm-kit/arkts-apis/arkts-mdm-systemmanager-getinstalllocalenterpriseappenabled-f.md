@@ -16,10 +16,6 @@ Checks whether local installation of enterprise applications is supported. This 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
 **Model restriction:** This API can be used only in the stage model.

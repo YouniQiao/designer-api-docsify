@@ -4,10 +4,6 @@ Defines the ad status change callback.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-advertising-export interface AdInteractionListener--><!--Device-advertising-export interface AdInteractionListener-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -28,10 +24,6 @@ Called when the ad display status changes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdInteractionListener-onStatusChanged(status: string, ad: Advertisement, data: string)--><!--Device-AdInteractionListener-onStatusChanged(status: string, ad: Advertisement, data: string)-End-->
@@ -46,7 +38,7 @@ Called when the ad display status changes.
 | ad | Advertisement | Yes | Content of the ad. |
 | data | string | Yes | Extended information. When **status** is **onAdClose**, the data value is the close reason, described as follows: - adShowEnded: Ad show ended. - adCloseBtnClicked: Close button clicked. - adSkipBtnClicked: Skip button clicked. - adFeedbackClosed: The ad is closed due to negative feedback. - adBackgroundClosed: The splash ad is closed when the app switches to the background. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

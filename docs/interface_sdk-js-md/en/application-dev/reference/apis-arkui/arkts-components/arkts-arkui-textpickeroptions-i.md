@@ -4,10 +4,6 @@ Defines the configuration options of the text picker.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface TextPickerOptions--><!--Device-unnamed-declare interface TextPickerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,10 +22,6 @@ Custom widths for each column. Default value: Each column has equal width, calcu
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -44,15 +36,11 @@ Custom widths for each column. Default value: Each column has equal width, calcu
 range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]
 ```
 
-Data selection range of the picker. This parameter cannot be set to an empty array. If it is set to an empty array, no value is displayed. If it is dynamically changed to an empty array, the current valid value remains displayed. **NOTE：**1. Single-column pickers: string[], Resource, or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md#TextPickerRangeContent)[] 2. Multi-column independent pickers: string[][] 3. Multi-column cascading pickers: [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md#TextCascadePickerRangeContent)[] 4. The Resource type supports only [strarray.json] (../../../quick-start/resource-categories-and-access.md#resource-group-directories). 5. The type and number of columns in the range cannot be dynamically modified.
+Data selection range of the picker. This parameter cannot be set to an empty array. If it is set to an empty array, no value is displayed. If it is dynamically changed to an empty array, the current valid value remains displayed. **NOTE：**1. Single-column pickers: string[], Resource, or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md#textpickerrangecontent)[] 2. Multi-column independent pickers: string[][] 3. Multi-column cascading pickers: [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md#textcascadepickerrangecontent)[] 4. The Resource type supports only [strarray.json] (../../../quick-start/resource-categories-and-access.md#resource-group-directories). 5. The type and number of columns in the range cannot be dynamically modified.
 
 **Type:** string[] \| string[][] \| Resource \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Index of the selected item in the data list. The index is zero-based. Default va
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextPickerOptions-selected?: number | number[]--><!--Device-TextPickerOptions-selected?: number | number[]-End-->
@@ -97,10 +81,6 @@ Value of the selected item. The priority of this parameter is lower than that of
 **Default:** value of the first item [since 8 - 9]
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

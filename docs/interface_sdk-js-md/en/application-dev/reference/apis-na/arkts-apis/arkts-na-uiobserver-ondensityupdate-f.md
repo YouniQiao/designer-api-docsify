@@ -10,9 +10,7 @@ Registers a callback function to be called when the screen density is updated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -25,5 +23,5 @@ Registers a callback function to be called when the screen density is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-densityinfo-c.md)&gt; | Yes | The callback function to be called when the screen density is updated. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](arkts-na-uiobserver-densityinfo-c.md)&gt; | Yes | The callback function to be called when the screen density is updated. |
 

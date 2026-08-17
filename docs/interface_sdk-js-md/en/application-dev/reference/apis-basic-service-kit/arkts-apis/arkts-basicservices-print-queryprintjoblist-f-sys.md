@@ -16,10 +16,6 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void--><!--Device-print-function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void-End-->
@@ -41,7 +37,7 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -67,10 +63,6 @@ Queries all print jobs. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function queryPrintJobList(): Promise<Array<PrintJob>>--><!--Device-print-function queryPrintJobList(): Promise<Array<PrintJob>>-End-->
@@ -92,7 +84,7 @@ Queries all print jobs. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

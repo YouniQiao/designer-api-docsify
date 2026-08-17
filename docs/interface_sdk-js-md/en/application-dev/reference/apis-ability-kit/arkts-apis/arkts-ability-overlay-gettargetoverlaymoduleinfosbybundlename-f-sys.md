@@ -17,10 +17,6 @@ Obtains the information about all modules with the overlay feature in another ap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string,      callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string,      callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
@@ -34,7 +30,7 @@ Obtains the information about all modules with the overlay feature in another ap
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetBundleName | string | Yes | Bundle name of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#OverlayModuleInfo) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#overlaymoduleinfo) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -46,7 +42,7 @@ Obtains the information about all modules with the overlay feature in another ap
 | [17700035](../errorcode-bundle.md#17700035-application-contains-only-modules-with-the-overlay-feature) | The specified bundle is an overlay bundle. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
@@ -82,10 +78,6 @@ Obtains the information about modules with the overlay feature in another applic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
@@ -100,7 +92,7 @@ Obtains the information about modules with the overlay feature in another applic
 | --- | --- | --- | --- |
 | targetBundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | Yes | Name of the target module. If this parameter is not specified, the API obtains the information associated with all modules in that application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#OverlayModuleInfo) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#overlaymoduleinfo) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -114,7 +106,7 @@ Obtains the information about modules with the overlay feature in another applic
 | [17700035](../errorcode-bundle.md#17700035-application-contains-only-modules-with-the-overlay-feature) | The specified bundle is an overlay bundle. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
@@ -151,10 +143,6 @@ Obtains the information about modules with the overlay feature in another applic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>--><!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>-End-->
@@ -188,7 +176,7 @@ Obtains the information about modules with the overlay feature in another applic
 | [17700035](../errorcode-bundle.md#17700035-application-contains-only-modules-with-the-overlay-feature) | The specified bundle is an overlay bundle. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';

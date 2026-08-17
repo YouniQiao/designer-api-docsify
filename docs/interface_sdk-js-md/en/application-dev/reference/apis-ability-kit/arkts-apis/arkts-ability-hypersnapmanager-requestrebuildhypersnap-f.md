@@ -16,10 +16,6 @@ Requests the recreation of the Hyper Snap process snapshot for the application. 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-hyperSnapManager-function requestRebuildHyperSnap(): void--><!--Device-hyperSnapManager-function requestRebuildHyperSnap(): void-End-->

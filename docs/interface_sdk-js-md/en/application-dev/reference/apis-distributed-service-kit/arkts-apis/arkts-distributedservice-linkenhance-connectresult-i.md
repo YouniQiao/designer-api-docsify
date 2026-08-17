@@ -4,10 +4,6 @@ Represents the connection result, which is returned after the client calls **con
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-linkEnhance-interface ConnectResult--><!--Device-linkEnhance-interface ConnectResult-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -30,10 +26,6 @@ ID of the peer device. If the connection is successful, the device ID of the pee
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectResult-deviceId: string--><!--Device-ConnectResult-deviceId: string-End-->
@@ -52,10 +44,6 @@ Number indicating the result code. If the connection is successful, **0** is ret
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectResult-reason: int--><!--Device-ConnectResult-reason: int-End-->
@@ -73,10 +61,6 @@ Connection result. The value **true** indicates that the connection is successfu
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

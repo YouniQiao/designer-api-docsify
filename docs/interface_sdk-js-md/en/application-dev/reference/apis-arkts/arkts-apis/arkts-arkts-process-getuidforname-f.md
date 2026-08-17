@@ -16,11 +16,9 @@ Obtains the UID of a user from the user database of the system based on the spec
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getUidForName](arkts-arkts-process-processmanager-c.md#getUidForName)
+**Substitutes:** [getUidForName](arkts-arkts-process-processmanager-c.md#getuidforname)
 
 <!--Device-process-function getUidForName(v: string): number--><!--Device-process-function getUidForName(v: string): number-End-->
 
@@ -38,7 +36,7 @@ Obtains the UID of a user from the user database of the system based on the spec
 | --- | --- |
 | number | UID of the user. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pres = process.getUidForName("tool");

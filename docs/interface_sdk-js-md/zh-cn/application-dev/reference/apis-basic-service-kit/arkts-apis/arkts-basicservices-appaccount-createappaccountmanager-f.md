@@ -10,10 +10,6 @@ function createAppAccountManager(): AppAccountManager
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-appAccount-function createAppAccountManager(): AppAccountManager--><!--Device-appAccount-function createAppAccountManager(): AppAccountManager-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -24,7 +20,7 @@ function createAppAccountManager(): AppAccountManager
 | --- | --- |
 | [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | 应用账号管理器对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();

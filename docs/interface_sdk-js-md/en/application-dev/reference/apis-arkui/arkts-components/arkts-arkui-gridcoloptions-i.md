@@ -1,12 +1,8 @@
 # GridColOptions
 
-Defines the options of the **GridCol** component. The values of `span`, `offset`, and `order` attributes are inherited in the sequence of **xs**, **sm**, **md**, **lg**, **xl**, and **xxl**. If no value is set for a breakpoint, the value is obtained from the previous breakpoint. Since API version 20, inheritance of the **span** property follows rules detailed in [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md#GridColColumnOption).
+Defines the options of the **GridCol** component. The values of `span`, `offset`, and `order` attributes are inherited in the sequence of **xs**, **sm**, **md**, **lg**, **xl**, and **xxl**. If no value is set for a breakpoint, the value is obtained from the previous breakpoint. Since API version 20, inheritance of the **span** property follows rules detailed in [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md#gridcolcolumnoption).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface GridColOptions--><!--Device-unnamed-declare interface GridColOptions-End-->
 
@@ -23,10 +19,6 @@ Number of offset columns relative to the original position of the component. The
 **Type:** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,10 +40,6 @@ Sequence number of the component. Child components of the grid are sorted in asc
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -71,10 +59,6 @@ Number of columns occupied by the component. If it is set to **0**, the componen
 **Type:** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

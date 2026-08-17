@@ -4,10 +4,6 @@ Describe the GET_REPORT data is received from remote host.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-hid-interface GetReportData--><!--Device-hid-interface GetReportData-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ bufferSize of GET_REPORT data, maximum number of octets to transfer during data 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GetReportData-bufferSize: int--><!--Device-GetReportData-bufferSize: int-End-->
@@ -52,10 +44,6 @@ id of GET_REPORT data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GetReportData-id: int--><!--Device-GetReportData-id: int-End-->
@@ -73,10 +61,6 @@ reportType of GET_REPORT data.
 **Type:** ReportType
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

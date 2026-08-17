@@ -17,10 +17,6 @@ Subscribe to the results of indoorand outdoor identification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SENSING_WITH_ULTRASOUND
 
 **Model restriction:** This API can be used only in the stage model.
@@ -49,7 +45,7 @@ Subscribe to the results of indoorand outdoor identification.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { spatialAwareness } from '@kit.MultimodalAwarenessKit';

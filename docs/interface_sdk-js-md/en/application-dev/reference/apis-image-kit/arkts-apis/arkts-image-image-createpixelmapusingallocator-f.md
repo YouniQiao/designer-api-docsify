@@ -17,10 +17,6 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -47,7 +43,7 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

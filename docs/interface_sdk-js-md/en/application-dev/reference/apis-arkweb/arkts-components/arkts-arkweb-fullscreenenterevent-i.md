@@ -1,12 +1,8 @@
 # FullScreenEnterEvent
 
-Provides details about the event that the **Web** component to enter the full-screen mode.
+Provides the callback information for the **Web** component to enter the full-screen mode, including the video size and exit handler. It is suitable for scenarios where handling full-screen video is required, improving video playback immersive experience and controllability.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface FullScreenEnterEvent--><!--Device-unnamed-declare interface FullScreenEnterEvent-End-->
 
@@ -23,10 +19,6 @@ Function handle for exiting full screen mode.
 **Type:** [FullScreenExitHandler](arkts-arkweb-fullscreenexithandler-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,10 +38,6 @@ Video height, in px. If the element that enters fulls screen mode is a **&lt;vid
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FullScreenEnterEvent-videoHeight?: number--><!--Device-FullScreenEnterEvent-videoHeight?: number-End-->
@@ -67,10 +55,6 @@ Video width, in px. If the element that enters fulls screen mode is a **&lt;vide
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -16,10 +16,6 @@ Obtains the list of log files of the specified type in synchronous mode. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_HIVIEW_SYSTEM
 
 <!--Device-logLibrary-function list(logType: string): LogEntry[]--><!--Device-logLibrary-function list(logType: string): LogEntry[]-End-->
@@ -48,7 +44,7 @@ Obtains the list of log files of the specified type in synchronous mode. This AP
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { logLibrary } from '@kit.PerformanceAnalysisKit';

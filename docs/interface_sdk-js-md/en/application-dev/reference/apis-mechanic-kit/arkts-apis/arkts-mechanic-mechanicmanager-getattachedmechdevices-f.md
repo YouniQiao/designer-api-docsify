@@ -16,10 +16,6 @@ Obtain the list of connected mechanical devices.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]--><!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -36,7 +32,7 @@ Obtain the list of connected mechanical devices.
 | --- | --- |
 | [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 console.info('Query device list');

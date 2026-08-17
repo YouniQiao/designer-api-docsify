@@ -16,10 +16,6 @@ Generates a CSR.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-cert-function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): string | Uint8Array--><!--Device-cert-function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): string | Uint8Array-End-->
@@ -49,7 +45,7 @@ Generates a CSR.
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 | [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) | Maybe wrong password. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

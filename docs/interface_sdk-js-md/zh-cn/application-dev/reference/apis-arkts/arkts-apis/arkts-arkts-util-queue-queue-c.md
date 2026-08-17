@@ -4,10 +4,6 @@ Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class Queue--><!--Device-unnamed-declare class Queue-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -22,10 +18,6 @@ $_iterator(): IterableIterator<T>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Queue-$_iterator(): IterableIterator<T>--><!--Device-Queue-$_iterator(): IterableIterator<T>-End-->
@@ -38,7 +30,7 @@ $_iterator(): IterableIterator<T>
 | --- | --- |
 | IterableIterator&lt;T&gt; |  |
 
-## 示例
+**示例**
 
 ```TypeScript
 let queue : Queue<int> = new Queue<int>();
@@ -65,10 +57,6 @@ while(temp.value != undefined) {
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Queue-[Symbol.iterator](): IterableIterator<T>--><!--Device-Queue-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -87,7 +75,7 @@ while(temp.value != undefined) {
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -130,10 +118,6 @@ add(element: T): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Queue-add(element: T): boolean--><!--Device-Queue-add(element: T): boolean-End-->
@@ -158,7 +142,7 @@ add(element: T): boolean
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -206,10 +190,6 @@ Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Queue-constructor()--><!--Device-Queue-constructor()-End-->
@@ -222,7 +202,7 @@ Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue�
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Queue's constructor cannot be directly invoked. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -248,10 +228,6 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Queue-forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void--><!--Device-Queue-forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void-End-->
@@ -271,7 +247,7 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -299,10 +275,6 @@ forEach(callbackFn: QueueForEachCb<T>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -327,10 +299,6 @@ getFirst(): T
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Queue-getFirst(): T--><!--Device-Queue-getFirst(): T-End-->
@@ -348,9 +316,9 @@ getFirst(): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -387,10 +355,6 @@ pop(): T
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Queue-pop(): T--><!--Device-Queue-pop(): T-End-->
@@ -408,9 +372,9 @@ pop(): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The pop method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -451,10 +415,6 @@ Queue的元素个数。
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

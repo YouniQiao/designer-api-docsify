@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudData-interface StatisticInfo--><!--Device-cloudData-interface StatisticInfo-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -25,10 +21,6 @@ inserted: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StatisticInfo-inserted: int--><!--Device-StatisticInfo-inserted: int-End-->
 
@@ -48,10 +40,6 @@ normal: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-StatisticInfo-normal: int--><!--Device-StatisticInfo-normal: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -70,10 +58,6 @@ table: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-StatisticInfo-table: string--><!--Device-StatisticInfo-table: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -91,10 +75,6 @@ updated: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StatisticInfo-updated: int--><!--Device-StatisticInfo-updated: int-End-->
 

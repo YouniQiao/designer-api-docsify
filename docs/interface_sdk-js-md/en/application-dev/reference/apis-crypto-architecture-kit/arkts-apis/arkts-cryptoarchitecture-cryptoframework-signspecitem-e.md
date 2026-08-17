@@ -1,12 +1,8 @@
 # SignSpecItem
 
-Enumerates the signing and signature verification parameters, which can be set by using [setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setSignSpec) and [setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setVerifySpec), and obtained by using [getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getSignSpec) and [getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getVerifySpec). <br>Currently, only RSA and SM2 are supported. For details, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md) .
+Enumerates the signing and signature verification parameters, which can be set by using [setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setsignspec) and [setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setverifyspec), and obtained by using [getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getsignspec) and [getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getverifyspec). <br>Currently, only RSA and SM2 are supported. For details, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-cryptoFramework-enum SignSpecItem--><!--Device-cryptoFramework-enum SignSpecItem-End-->
 
@@ -23,10 +19,6 @@ PSS_MD_NAME_STR = 100
 Message digest algorithm used with the PSS padding mode in RSA.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,10 +38,6 @@ Mask generation algorithm used with the PSS padding mode in RSA. Currently, only
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SignSpecItem-PSS_MGF_NAME_STR = 101--><!--Device-SignSpecItem-PSS_MGF_NAME_STR = 101-End-->
@@ -67,10 +55,6 @@ PSS_MGF1_MD_STR = 102
 Message digest algorithm for the MGF1 mask generation used with the PSS padding mode in RSA.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,10 +74,6 @@ Length of the salt in bytes used with the PSS padding mode in RSA. <br>According
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SignSpecItem-PSS_SALT_LEN_NUM = 103--><!--Device-SignSpecItem-PSS_SALT_LEN_NUM = 103-End-->
@@ -111,10 +91,6 @@ PSS_TRAILER_FIELD_NUM = 104
 Trailer field used in the encoding operation when PSS padding mode is used in RSA.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -134,10 +110,6 @@ User ID field in SM2.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SignSpecItem-SM2_USER_ID_UINT8ARR = 105--><!--Device-SignSpecItem-SM2_USER_ID_UINT8ARR = 105-End-->
@@ -155,10 +127,6 @@ ML_DSA_DETERMINISTIC_BOOL = 106
 Indicates whether deterministic signing is used for the ML-DSA signing and verifying process.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +146,6 @@ Indicates the mu parameter value for the ML-DSA signing and verifying process.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -199,10 +163,6 @@ ML_DSA_CONTEXT_UINT8ARR = 108
 Indicates the context data for the ML-DSA signing and verifying process.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

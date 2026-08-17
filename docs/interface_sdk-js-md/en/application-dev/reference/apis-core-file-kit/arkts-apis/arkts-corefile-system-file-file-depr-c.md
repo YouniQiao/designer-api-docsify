@@ -4,8 +4,6 @@ File
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export default class File--><!--Device-unnamed-export default class File-End-->
@@ -21,8 +19,6 @@ static access(options: FileAccessOption): void
 Checks whether a file or directory exists.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -48,11 +44,9 @@ Copies a file to the given URI.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
-**Substitutes:** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyFile)
+**Substitutes:** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile)
 
 <!--Device-File-static copy(options: FileCopyOption): void--><!--Device-File-static copy(options: FileCopyOption): void-End-->
 
@@ -73,8 +67,6 @@ static delete(options: FileDeleteOption): void
 Deletes a local file.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -100,8 +92,6 @@ Obtains information about a local file.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 **Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md#stat)
@@ -126,11 +116,9 @@ Obtains all files in the specified directory.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-File-static list(options: FileListOption): void--><!--Device-File-static list(options: FileListOption): void-End-->
 
@@ -151,8 +139,6 @@ static mkdir(options: FileMkdirOption): void
 Creates a directory.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -178,11 +164,9 @@ Moves a specified file to a given location.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
-**Substitutes:** [moveFile](arkts-corefile-file-fs-movefile-f.md#moveFile)
+**Substitutes:** [moveFile](arkts-corefile-file-fs-movefile-f.md#movefile)
 
 <!--Device-File-static move(options: FileMoveOption): void--><!--Device-File-static move(options: FileMoveOption): void-End-->
 
@@ -203,8 +187,6 @@ static readArrayBuffer(options: FileReadArrayBufferOption): void
 Reads buffer data from a file. Only text files can be read and written.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -230,11 +212,9 @@ Reads text from a file. Only text files can be read and written.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
-**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readText)
+**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readtext)
 
 <!--Device-File-static readText(options: FileReadTextOption): void--><!--Device-File-static readText(options: FileReadTextOption): void-End-->
 
@@ -255,8 +235,6 @@ static rmdir(options: FileRmdirOption): void
 Deletes a directory.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -282,8 +260,6 @@ Writes buffer data into a file. Only text files can be read and written.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 **Substitutes:** [write](arkts-corefile-file-fs-write-f.md#write)
@@ -307,8 +283,6 @@ static writeText(options: FileWriteTextOption): void
 Writes text into a file. Only text files can be read and written.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

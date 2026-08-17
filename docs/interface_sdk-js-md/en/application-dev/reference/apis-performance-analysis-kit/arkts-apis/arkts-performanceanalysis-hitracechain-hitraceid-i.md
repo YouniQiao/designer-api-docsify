@@ -1,12 +1,8 @@
-# HiTraceId
+# HiTraceId(Distributed Tracing)
 
 Defines a **HiTraceId** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hiTraceChain-interface HiTraceId--><!--Device-hiTraceChain-interface HiTraceId-End-->
 
@@ -30,10 +26,6 @@ Call chain ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HiTraceId-chainId: bigint--><!--Device-HiTraceId-chainId: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -49,10 +41,6 @@ Trace flag. The default value is **0**.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HiTraceId-flags?: int--><!--Device-HiTraceId-flags?: int-End-->
 
@@ -70,10 +58,6 @@ Parent span ID. The default value is **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HiTraceId-parentSpanId?: int--><!--Device-HiTraceId-parentSpanId?: int-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -89,10 +73,6 @@ Span ID. The default value is **0**.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HiTraceId-spanId?: int--><!--Device-HiTraceId-spanId?: int-End-->
 

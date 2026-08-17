@@ -4,10 +4,6 @@ Defines the options for initializing the **RichEditor** component.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface RichEditorStyledStringOptions--><!--Device-unnamed-declare interface RichEditorStyledStringOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Controller for the **RichEditor** component.
 **Type:** [RichEditorStyledStringController](arkts-arkui-richeditorstyledstringcontroller-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

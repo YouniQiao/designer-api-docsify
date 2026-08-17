@@ -1,12 +1,8 @@
 # WebSchemeHandlerResponse
 
-请求的响应，可以为被拦截的请求创建一个Response并填充自定义的内容返回给Web组件。
+WebSchemeHandlerResponse是自定义scheme拦截场景中用于构造HTTP响应数据的类。开发者通过该类创建Response对象，设置HTTP状态码、状态文本、媒体类型、字符集、自定义响应头、网络错误码以及重定向 URL等属性，然后通过WebResourceHandler将自定义响应返回给Web组件。该类是自定义资源拦截的核心数据载体。 WebSchemeHandlerResponse与WebResourceHandler配合使用：开发者构造WebSchemeHandlerResponse对象并填充响应属性，然后通过WebResourceHandler的 didReceiveResponse方法将响应头发送给被拦截的请求。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-webview-class WebSchemeHandlerResponse--><!--Device-webview-class WebSchemeHandlerResponse-End-->
 
@@ -18,13 +14,9 @@
 constructor()
 ```
 
-Constructor.
+Response的构造函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -32,19 +24,37 @@ Constructor.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## getCustomErrorCode
+
+```TypeScript
+getCustomErrorCode(): number
+```
+
+获取当前Response的自定义错误码。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebSchemeHandlerResponse-getCustomErrorCode(): number--><!--Device-WebSchemeHandlerResponse-getCustomErrorCode(): number-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前Response的自定义错误码。 |
+
 ## getEncoding
 
 ```TypeScript
 getEncoding(): string
 ```
 
-获取Response的字符集。
+获取Response的字符编码格式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,7 +66,7 @@ getEncoding(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 字符集。 |
+| string | 返回响应内容的字符编码格式，如'utf-8'、'gbk'等。 |
 
 ## getHeaderByName
 
@@ -68,10 +78,6 @@ getHeaderByName(name: string): string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-getHeaderByName(name: string): string--><!--Device-WebSchemeHandlerResponse-getHeaderByName(name: string): string-End-->
@@ -82,13 +88,13 @@ getHeaderByName(name: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 头部（header）的名称。 |
+| name | string | 是 | 要获取的响应头字段名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 头部（header）的值。 |
+| string | 指定名称的响应头字段对应的值。 |
 
 ## getMimeType
 
@@ -100,10 +106,6 @@ getMimeType(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-getMimeType(): string--><!--Device-WebSchemeHandlerResponse-getMimeType(): string-End-->
@@ -114,7 +116,7 @@ getMimeType(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 媒体类型。 |
+| string | 返回响应内容的MIME类型字符串，如'text/html'、'application/json'等。 |
 
 ## getNetErrorCode
 
@@ -126,10 +128,6 @@ getNetErrorCode(): WebNetErrorList
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-getNetErrorCode(): WebNetErrorList--><!--Device-WebSchemeHandlerResponse-getNetErrorCode(): WebNetErrorList-End-->
@@ -140,7 +138,7 @@ getNetErrorCode(): WebNetErrorList
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 获取Response的网络错误码。 |
+| [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 返回Response的网络错误码。 |
 
 ## getStatus
 
@@ -148,13 +146,9 @@ getNetErrorCode(): WebNetErrorList
 getStatus(): number
 ```
 
-获取Response的Http状态码。
+获取Response的HTTP状态码。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -166,7 +160,7 @@ getStatus(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取Response的Http状态码。 |
+| number | 返回Response的HTTP状态码。 |
 
 ## getStatusText
 
@@ -177,10 +171,6 @@ getStatusText(): string
 获取Response的状态文本。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -200,13 +190,9 @@ getStatusText(): string
 getUrl(): string
 ```
 
-获取重定向或由于HSTS而更改后的URL。
+获取重定向或因HSTS而更改后的URL。 风险提示：若想获取URL来做JavascriptProxy通信接口认证，请使用 [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkweb-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl) 。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -218,7 +204,29 @@ getUrl(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 获取经过重定向或由于HSTS而更改后的URL。 |
+| string | 获取经过重定向或因HSTS而更改后的URL。 |
+
+## setCustomErrorCode
+
+```TypeScript
+setCustomErrorCode(customErrorCode: number): void
+```
+
+给当前的Response设置自定义错误码。详情参考WebResourceError.getCustomErrorCode。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebSchemeHandlerResponse-setCustomErrorCode(customErrorCode: number): void--><!--Device-WebSchemeHandlerResponse-setCustomErrorCode(customErrorCode: number): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| customErrorCode | number | 是 | 该响应的自定义错误码。 |
 
 ## setEncoding
 
@@ -226,13 +234,9 @@ getUrl(): string
 setEncoding(encoding: string): void
 ```
 
-给当前的Response设置字符集。
+给当前的Response设置字符编码格式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -244,7 +248,7 @@ setEncoding(encoding: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encoding | string | 是 | 字符集。 |
+| encoding | string | 是 | 字符编码格式。 |
 
 **错误码：**
 
@@ -262,10 +266,6 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-setHeaderByName(name: string, value: string, overwrite: boolean): void--><!--Device-WebSchemeHandlerResponse-setHeaderByName(name: string, value: string, overwrite: boolean): void-End-->
@@ -276,8 +276,8 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 头部（header）的名称。 |
-| value | string | 是 | 头部（header）的值。 |
+| name | string | 是 | 头部（header）的名称，指定要设置的HTTP响应头字段名。常见值包括'Content-Type'（内容类型）、'Authorization'（授权信息）、'Cache- Control'（缓存控制）等。 |
+| value | string | 是 | 头部（header）的值，指定HTTP响应头字段的具体内容。需要与name参数对应的头部字段匹配，如name为'Content-Type'时，value可以是'text/ html; charset=utf-8'。 |
 | overwrite | boolean | 是 | 如果为true，将覆盖现有的头部，否则不覆盖。 |
 
 **错误码：**
@@ -292,13 +292,9 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 setMimeType(type: string): void
 ```
 
-给当前的Response设置媒体类型。
+给当前的Response设置媒体类型。例如，注入HTML内容时设置为text/html，注入JSON数据时设置为application/json。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -310,7 +306,7 @@ setMimeType(type: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 媒体类型。 |
+| type | string | 是 | 媒体类型（MIME类型）。 |
 
 **错误码：**
 
@@ -327,10 +323,6 @@ setNetErrorCode(code: WebNetErrorList): void
 给当前的Response设置网络错误码。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -360,10 +352,6 @@ setStatus(code: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-setStatus(code: number): void--><!--Device-WebSchemeHandlerResponse-setStatus(code: number): void-End-->
@@ -374,7 +362,7 @@ setStatus(code: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | Http状态码。 |
+| code | number | 是 | HTTP状态码。 |
 
 **错误码：**
 
@@ -391,10 +379,6 @@ setStatusText(text: string): void
 给当前的Response设置状态文本。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -424,10 +408,6 @@ setUrl(url: string): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-setUrl(url: string): void--><!--Device-WebSchemeHandlerResponse-setUrl(url: string): void-End-->
@@ -438,7 +418,7 @@ setUrl(url: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | 即将要跳转的URL。 |
+| url | string | 是 | 重定向或因HSTS而更改后的URL。 |
 
 **错误码：**
 

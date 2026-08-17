@@ -1,12 +1,8 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) to create an GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#creategattclientdevice) to create an GattClientDevice instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ble-interface GattClientDevice--><!--Device-ble-interface GattClientDevice-End-->
 
@@ -29,10 +25,6 @@ Writes the characteristic of a BLE peripheral device with context.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -48,7 +40,7 @@ Writes the characteristic of a BLE peripheral device with context.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
-| writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. The interface currently only supports [WRITE](arkts-connectivity-ble-gattwritetype-e.md#WRITE) mode. |
+| writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. The interface currently only supports [WRITE](arkts-connectivity-ble-gattwritetype-e.md#write) mode. |
 
 **Return value:**
 
@@ -72,7 +64,7 @@ Writes the characteristic of a BLE peripheral device with context.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let descriptors: Array<ble.BLEDescriptor>  = [];

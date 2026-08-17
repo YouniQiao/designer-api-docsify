@@ -4,10 +4,6 @@ Describes an audio device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioDeviceDescriptor--><!--Device-audio-interface AudioDeviceDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -30,10 +26,6 @@ Extended information for distributed device, includes whether the device support
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioDeviceDescriptor-readonly dmDeviceInfo?: string--><!--Device-AudioDeviceDescriptor-readonly dmDeviceInfo?: string-End-->
@@ -48,15 +40,11 @@ Extended information for distributed device, includes whether the device support
 readonly dmDeviceType?: int
 ```
 
-Only [SPEAKER](arkts-audio-audio-devicetype-e.md#SPEAKER) with networkId、[REMOTE_CAST](arkts-audio-audio-devicetype-e.md#REMOTE_CAST) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#REMOTE_DAUDIO) has dmDeviceType which indicated deviceTypeId.
+Only [SPEAKER](arkts-audio-audio-devicetype-e.md#speaker) with networkId、[REMOTE_CAST](arkts-audio-audio-devicetype-e.md#remotecast) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#remotedaudio) has dmDeviceType which indicated deviceTypeId.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioDeviceDescriptor-readonly dmDeviceType?: int--><!--Device-AudioDeviceDescriptor-readonly dmDeviceType?: int-End-->
 
@@ -76,10 +64,6 @@ whether supports high-quality recording.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-AudioDeviceDescriptor-readonly highQualityRecordingSupported?: boolean--><!--Device-AudioDeviceDescriptor-readonly highQualityRecordingSupported?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -97,10 +81,6 @@ Interrupt group id
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioDeviceDescriptor-readonly interruptGroupId: int--><!--Device-AudioDeviceDescriptor-readonly interruptGroupId: int-End-->
 
@@ -120,10 +100,6 @@ Device network id
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioDeviceDescriptor-readonly networkId: string--><!--Device-AudioDeviceDescriptor-readonly networkId: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -141,10 +117,6 @@ Volume group id
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioDeviceDescriptor-readonly volumeGroupId: int--><!--Device-AudioDeviceDescriptor-readonly volumeGroupId: int-End-->
 

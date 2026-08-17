@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface RegExp--><!--Device-unnamed-interface RegExp-End-->
 
 ## compile
@@ -15,8 +11,6 @@ compile(pattern: string, flags?: string): this
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -45,10 +39,6 @@ Executes a search on a string using a regular expression pattern, and returns an
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-RegExp-exec(string: string): RegExpExecArray | null--><!--Device-RegExp-exec(string: string): RegExpExecArray | null-End-->
 
 **Parameters:**
@@ -72,10 +62,6 @@ test(string: string): boolean
 Returns a Boolean value that indicates whether or not a pattern exists in a searched string.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExp-test(string: string): boolean--><!--Device-RegExp-test(string: string): boolean-End-->
 
@@ -103,10 +89,6 @@ Returns a Boolean value indicating the state of the global flag (g) used with a 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-RegExp-readonly global: boolean--><!--Device-RegExp-readonly global: boolean-End-->
 
 ## ignoreCase
@@ -121,10 +103,6 @@ Returns a Boolean value indicating the state of the ignoreCase flag (i) used wit
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-RegExp-readonly ignoreCase: boolean--><!--Device-RegExp-readonly ignoreCase: boolean-End-->
 
 ## lastIndex
@@ -136,10 +114,6 @@ lastIndex: number
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExp-lastIndex: number--><!--Device-RegExp-lastIndex: number-End-->
 
@@ -155,10 +129,6 @@ Returns a Boolean value indicating the state of the multiline flag (m) used with
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-RegExp-readonly multiline: boolean--><!--Device-RegExp-readonly multiline: boolean-End-->
 
 ## source
@@ -172,10 +142,6 @@ Returns a copy of the text of the regular expression pattern. Read-only. The reg
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExp-readonly source: string--><!--Device-RegExp-readonly source: string-End-->
 

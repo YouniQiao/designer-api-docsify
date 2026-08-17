@@ -4,10 +4,6 @@ Provides the printer information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PrinterInfo--><!--Device-print-interface PrinterInfo-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -32,10 +28,6 @@ Printer capability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterInfo-capability?: PrinterCapability--><!--Device-PrinterInfo-capability?: PrinterCapability-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -53,10 +45,6 @@ Printer description.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterInfo-description?: string--><!--Device-PrinterInfo-description?: string-End-->
 
@@ -76,10 +64,6 @@ Printer options. The value is a JSON object string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterInfo-options?: Object--><!--Device-PrinterInfo-options?: Object-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -97,10 +81,6 @@ Resource ID of the printer icon. The default value is **-1**.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterInfo-printerIcon?: int--><!--Device-PrinterInfo-printerIcon?: int-End-->
 
@@ -120,10 +100,6 @@ Printer ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterInfo-printerId: string--><!--Device-PrinterInfo-printerId: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -142,10 +118,6 @@ Printer name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterInfo-printerName: string--><!--Device-PrinterInfo-printerName: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -163,10 +135,6 @@ Printer state.
 **Type:** [PrinterState](arkts-basicservices-print-printerstate-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterInfo-printerState: PrinterState--><!--Device-PrinterInfo-printerState: PrinterState-End-->
 

@@ -1,14 +1,10 @@
 # Transform
 
-A special duplex stream that supports data conversion and result output. The **Transform** class inherits from [Duplex](arkts-arkts-stream-duplex-c.md#Duplex) and supports all the APIs in **Duplex**.
+A special duplex stream that supports data conversion and result output. The **Transform** class inherits from [Duplex](arkts-arkts-stream-duplex-c.md#duplex) and supports all the APIs in **Duplex**.
 
-**Inheritance/Implementation:** Transform extends [Duplex](arkts-arkts-stream-duplex-c.md#Duplex)
+**Inheritance/Implementation:** Transform extends [Duplex](arkts-arkts-stream-duplex-c.md#duplex)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-stream-export class Transform--><!--Device-stream-export class Transform-End-->
 
@@ -30,17 +26,13 @@ A constructor used to create a **Transform** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Transform-constructor()--><!--Device-Transform-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let transform = new stream.Transform();
@@ -56,10 +48,6 @@ Called at the end of the stream to process the remaining data. This API uses an 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Transform-doFlush(callback: Function): void--><!--Device-Transform-doFlush(callback: Function): void-End-->
@@ -72,7 +60,7 @@ Called at the end of the stream to process the remaining data. This API uses an 
 | --- | --- | --- | --- |
 | callback | Function | Yes | Callback function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class TestTransform extends stream.Transform {
@@ -106,10 +94,6 @@ Converts or processes input data chunks and uses a callback to notify that the p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void--><!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void-End-->
@@ -124,7 +108,7 @@ Converts or processes input data chunks and uses a callback to notify that the p
 | encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 | callback | Function | Yes | Callback function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class TestTransform extends stream.Transform {

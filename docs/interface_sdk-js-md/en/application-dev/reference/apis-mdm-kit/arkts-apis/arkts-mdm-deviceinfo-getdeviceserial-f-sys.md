@@ -16,11 +16,9 @@ Obtains the device serial number. This API uses an asynchronous callback to retu
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getDeviceInfo)
+**Substitutes:** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_DEVICE_INFO
 
@@ -49,7 +47,7 @@ Obtains the device serial number. This API uses an asynchronous callback to retu
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceInfo } from '@kit.MDMKit';
@@ -81,11 +79,9 @@ Obtains the device serial number. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getDeviceInfo)
+**Substitutes:** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_DEVICE_INFO
 
@@ -119,7 +115,7 @@ Obtains the device serial number. This API uses a promise to return the result.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceInfo } from '@kit.MDMKit';

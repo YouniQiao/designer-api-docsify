@@ -1,14 +1,12 @@
 # OAuthTokenInfo
 
-Defines authorization token information. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md#AuthTokenInfo) instead.
+Defines authorization token information. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md#authtokeninfo) instead.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md#AuthTokenInfo)
+**Substitutes:** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md#authtokeninfo)
 
 <!--Device-appAccount-interface OAuthTokenInfo--><!--Device-appAccount-interface OAuthTokenInfo-End-->
 
@@ -32,11 +30,9 @@ Authentication type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [authType](arkts-basicservices-appaccount-authtokeninfo-i.md#authType)
+**Substitutes:** [authType](arkts-basicservices-appaccount-authtokeninfo-i.md#authtype)
 
 <!--Device-OAuthTokenInfo-authType: string--><!--Device-OAuthTokenInfo-authType: string-End-->
 
@@ -53,8 +49,6 @@ Value of the authorization token.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

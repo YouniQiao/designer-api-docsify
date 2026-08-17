@@ -16,10 +16,6 @@ Obtains the system hotkey shield status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_CONTROL_DISPATCHING
 
 <!--Device-inputConsumer-function getShieldStatus(shieldMode: ShieldMode): boolean--><!--Device-inputConsumer-function getShieldStatus(shieldMode: ShieldMode): boolean-End-->
@@ -48,7 +44,7 @@ Obtains the system hotkey shield status.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';

@@ -16,10 +16,6 @@ Checks whether the system supports the specified font file. You can use this API
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-text-function isFontSupported(fontURL: string | Resource): boolean--><!--Device-text-function isFontSupported(fontURL: string | Resource): boolean-End-->
@@ -38,7 +34,7 @@ Checks whether the system supports the specified font file. You can use this API
 | --- | --- |
 | boolean | Whether the system supports the specified font file. **true** means yes; **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'

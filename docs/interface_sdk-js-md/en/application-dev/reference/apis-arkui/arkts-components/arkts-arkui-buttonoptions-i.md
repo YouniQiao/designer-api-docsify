@@ -4,10 +4,6 @@ Describes the button style.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ButtonOptions--><!--Device-unnamed-declare interface ButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,17 +14,13 @@ Describes the button style.
 buttonStyle?: ButtonStyleMode
 ```
 
-Style and importance of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](arkts-arkui-button-attribute.md#fontColor), and [role](arkts-arkui-button-attribute.md#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting. Default value: **ButtonStyleMode.EMPHASIZED** **NOTE：**The button primacy is as follows, from high to low: emphasized button, normal button, text button.
+Style and importance of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](arkts-arkui-button-attribute.md#fontcolor), and [role](arkts-arkui-button-attribute.md#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting. Default value: **ButtonStyleMode.EMPHASIZED** **NOTE：**The button primacy is as follows, from high to low: emphasized button, normal button, text button.
 
 **Type:** [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md)
 
 **Default:** ButtonStyleMode.EMPHASIZED
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,10 +46,6 @@ Button size. Default value: **ControlSize.NORMAL**
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -74,17 +62,13 @@ Button size. Default value: **ControlSize.NORMAL**
 role?: ButtonRole
 ```
 
-Role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](arkts-arkui-button-attribute.md#fontColor), and [buttonStyle](arkts-arkui-button-attribute.md#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting. Default value: **ButtonRole.NORMAL**
+Role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](arkts-arkui-button-attribute.md#fontcolor), and [buttonStyle](arkts-arkui-button-attribute.md#buttonstyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting. Default value: **ButtonRole.NORMAL**
 
 **Type:** [ButtonRole](arkts-arkui-buttonrole-e.md)
 
 **Default:** ButtonRole.NORMAL
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,10 +92,6 @@ Whether to enable the pressed state effect when the button is clicked. **true**:
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -131,10 +111,6 @@ Button display style. Default value: **ButtonType.ROUNDED_RECTANGLE** API versio
 **Type:** [ButtonType](arkts-arkui-buttontype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

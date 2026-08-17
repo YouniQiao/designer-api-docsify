@@ -1,14 +1,10 @@
 # Zoom
 
-Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)。 变焦类，对设备变焦操作。
+Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery)。 变焦类，对设备变焦操作。
 
-**继承/实现关系：** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)
+**继承/实现关系：** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-camera-interface Zoom--><!--Device-camera-interface Zoom-End-->
 
@@ -23,10 +19,6 @@ getZoomCenterPoint(): Point
 Gets zoom center point.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Zoom-getZoomCenterPoint(): Point--><!--Device-Zoom-getZoomCenterPoint(): Point-End-->
 
@@ -57,10 +49,6 @@ Instructs the bottom layer to prepare for zooming, for example, powering on the 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Zoom-prepareZoom(): void--><!--Device-Zoom-prepareZoom(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -74,7 +62,7 @@ Instructs the bottom layer to prepare for zooming, for example, powering on the 
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -99,10 +87,6 @@ setZoomCenterPoint(point: Point): void
 Sets zoom center point.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Zoom-setZoomCenterPoint(point: Point): void--><!--Device-Zoom-setZoomCenterPoint(point: Point): void-End-->
 
@@ -133,10 +117,6 @@ Instructs the bottom layer to unprepare for zooming.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Zoom-unprepareZoom(): void--><!--Device-Zoom-unprepareZoom(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -150,7 +130,7 @@ Instructs the bottom layer to unprepare for zooming.
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

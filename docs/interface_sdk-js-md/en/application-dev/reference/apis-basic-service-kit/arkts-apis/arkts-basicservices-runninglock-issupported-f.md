@@ -12,13 +12,9 @@ import { runningLock } from 'runningLock';
 function isSupported(type: RunningLockType): boolean
 ```
 
-Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported.
+Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#runninglock) is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-runningLock-function isSupported(type: RunningLockType): boolean--><!--Device-runningLock-function isSupported(type: RunningLockType): boolean-End-->
 
@@ -42,7 +38,7 @@ Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

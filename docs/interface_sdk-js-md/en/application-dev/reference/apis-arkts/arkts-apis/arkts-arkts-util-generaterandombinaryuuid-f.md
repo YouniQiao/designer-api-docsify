@@ -16,10 +16,6 @@ Uses a secure random number generator to generate a random universally unique id
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array--><!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array-End-->
@@ -38,7 +34,7 @@ Uses a secure random number generator to generate a random universally unique id
 | --- | --- |
 | Uint8Array | A Uint8Array value representing the UUID generated. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let uuid = util.generateRandomBinaryUUID(true);

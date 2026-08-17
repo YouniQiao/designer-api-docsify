@@ -16,10 +16,6 @@ Sets the running mode of the device administrator application.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
 **Model restriction:** This API can be used only in the stage model.
@@ -45,7 +41,7 @@ Sets the running mode of the device administrator application.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

@@ -16,8 +16,6 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
@@ -46,7 +44,7 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,8 +69,6 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 Obtains the notification reminder type. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -101,7 +97,7 @@ Obtains the notification reminder type. This API uses a promise to return the re
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

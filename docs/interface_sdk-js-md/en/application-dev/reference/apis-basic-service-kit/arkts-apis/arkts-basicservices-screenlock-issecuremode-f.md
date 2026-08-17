@@ -16,8 +16,6 @@ Checks whether the screen lock of the current device is secure.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 9
 
 <!--Device-screenLock-function isSecureMode(callback: AsyncCallback<boolean>): void--><!--Device-screenLock-function isSecureMode(callback: AsyncCallback<boolean>): void-End-->
@@ -30,7 +28,7 @@ Checks whether the screen lock of the current device is secure.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isSecureMode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -55,8 +53,6 @@ Checks whether the screen lock of the current device is secure.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 9
 
 <!--Device-screenLock-function isSecureMode(): Promise<boolean>--><!--Device-screenLock-function isSecureMode(): Promise<boolean>-End-->
@@ -69,7 +65,7 @@ Checks whether the screen lock of the current device is secure.
 | --- | --- |
 | Promise&lt;boolean&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

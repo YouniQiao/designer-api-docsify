@@ -4,10 +4,6 @@ Defines the resuming download options, which are used to specify the network typ
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface ResumeDownloadOptions--><!--Device-update-export interface ResumeDownloadOptions-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -31,10 +27,6 @@ Network type allowed for resuming download. This parameter is set only after the
 **Type:** [NetType](arkts-basicservices-update-nettype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ResumeDownloadOptions-allowNetwork: NetType--><!--Device-ResumeDownloadOptions-allowNetwork: NetType-End-->
 

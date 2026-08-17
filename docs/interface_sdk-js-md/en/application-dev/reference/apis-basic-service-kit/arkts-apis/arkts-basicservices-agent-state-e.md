@@ -4,10 +4,6 @@ Defines the current task status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-enum State--><!--Device-agent-enum State-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -18,13 +14,9 @@ Defines the current task status.
 INITIALIZED = 0x00
 ```
 
-The task is initialized based on the configuration specified in [Config](arkts-basicservices-agent-config-i.md#Config).
+The task is initialized based on the configuration specified in [Config](arkts-basicservices-agent-config-i.md#config).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ The task lacks resources for running or the resources for retries, or does not m
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-WAITING = 0x10--><!--Device-State-WAITING = 0x10-End-->
@@ -61,10 +49,6 @@ RUNNING = 0x20
 The task is being executed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ The task has failed at least once and is being executed again.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-RETRYING = 0x21--><!--Device-State-RETRYING = 0x21-End-->
@@ -101,10 +81,6 @@ PAUSED = 0x30
 The task is suspended and will be resumed later.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,10 +98,6 @@ The task is stopped.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-STOPPED = 0x31--><!--Device-State-STOPPED = 0x31-End-->
@@ -141,10 +113,6 @@ COMPLETED = 0x40
 The task is complete.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,10 +130,6 @@ The task fails.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-FAILED = 0x41--><!--Device-State-FAILED = 0x41-End-->
@@ -181,10 +145,6 @@ REMOVED = 0x50
 The task is removed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

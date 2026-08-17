@@ -10,10 +10,6 @@ function format(format: string, ...args: Object[]): string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-util-function format(format: string, ...args: Object[]): string--><!--Device-util-function format(format: string, ...args: Object[]): string-End-->
@@ -33,7 +29,7 @@ function format(format: string, ...args: Object[]): string
 | --- | --- |
 | string | 格式化后的字符串。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

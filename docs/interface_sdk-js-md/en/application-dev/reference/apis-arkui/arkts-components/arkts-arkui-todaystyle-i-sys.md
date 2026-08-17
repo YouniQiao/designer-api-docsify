@@ -4,8 +4,6 @@ Non current day style.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 <!--Device-unnamed-interface TodayStyle--><!--Device-unnamed-interface TodayStyle-End-->
@@ -25,8 +23,6 @@ Background color of the focus area.
 **Type:** ResourceColor
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 
@@ -50,8 +46,6 @@ Focus area radius.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -74,8 +68,6 @@ Style of focus color.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -97,8 +89,6 @@ Focus on Lunar Colors.
 **Type:** ResourceColor
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 

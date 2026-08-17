@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-notificationManager-export interface RingtoneInfo--><!--Device-notificationManager-export interface RingtoneInfo-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -32,10 +28,6 @@ ringtoneFileName?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-RingtoneInfo-ringtoneFileName?: string--><!--Device-RingtoneInfo-ringtoneFileName?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -53,10 +45,6 @@ ringtoneTitle?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-RingtoneInfo-ringtoneTitle?: string--><!--Device-RingtoneInfo-ringtoneTitle?: string-End-->
 
@@ -76,10 +64,6 @@ ringtoneType: RingtoneType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-RingtoneInfo-ringtoneType: RingtoneType--><!--Device-RingtoneInfo-ringtoneType: RingtoneType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -97,10 +81,6 @@ ringtoneUri?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-RingtoneInfo-ringtoneUri?: string--><!--Device-RingtoneInfo-ringtoneUri?: string-End-->
 

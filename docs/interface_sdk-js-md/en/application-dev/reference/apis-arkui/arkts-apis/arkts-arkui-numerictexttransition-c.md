@@ -1,14 +1,10 @@
 # NumericTextTransition
 
-Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the copyOption property is ineffective. The flip animation fails if the text contains child components or is set via a styled string. **NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition).
+Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the copyOption property is ineffective. The flip animation fails if the text contains child components or is set via a styled string. **NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition).
 
-**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition)
+**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class NumericTextTransition--><!--Device-unnamed-declare class NumericTextTransition-End-->
 
@@ -24,10 +20,6 @@ A constructor used to create a **NumericTextTransition** object.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -40,7 +32,7 @@ A constructor used to create a **NumericTextTransition** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | Options of the numeric flip animation. The default value is inherited from [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md#NumericTextTransitionOptions). |
+| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | Options of the numeric flip animation. The default value is inherited from [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md#numerictexttransitionoptions). |
 
 ## enableBlur
 
@@ -53,10 +45,6 @@ Whether to enable the blur effect for the flip animation. Default value: **false
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,10 +65,6 @@ Direction of the flip animation. Default value: **FlipDirection.DOWN**
 **Type:** [FlipDirection](arkts-arkui-flipdirection-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

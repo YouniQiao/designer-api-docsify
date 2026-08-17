@@ -10,10 +10,6 @@ function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 <!--Device-bundleManager-function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void--><!--Device-bundleManager-function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void-End-->
@@ -39,7 +35,7 @@ function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityInfo is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

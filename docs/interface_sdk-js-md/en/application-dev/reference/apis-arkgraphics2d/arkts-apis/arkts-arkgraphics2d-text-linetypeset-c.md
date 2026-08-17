@@ -1,12 +1,8 @@
 # LineTypeset
 
-Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text. Before calling any of the following APIs, you must use [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildLineTypeset) in the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) class to create a **LineTypeset** object.
+Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text. Before calling any of the following APIs, you must use [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) in the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder) class to create a **LineTypeset** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-text-class LineTypeset--><!--Device-text-class LineTypeset-End-->
 
@@ -28,10 +24,6 @@ Generates a text line object based on the specified layout range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-LineTypeset-createLine(startIndex: int, count: int): TextLine--><!--Device-LineTypeset-createLine(startIndex: int, count: int): TextLine-End-->
@@ -43,7 +35,7 @@ Generates a text line object based on the specified layout range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | startIndex | int | Yes | Start position for layout calculation. The value is an integer in the range [0, total number of text characters). |
-| count | int | Yes | Number of characters from the specified start position. The value is an integer in the range [0, total number of text characters). The sum of **startIndex** and **count** cannot be greater than the total number of text characters. If **count** is **0**, the layout range is [startIndex, position of the last character in the text]. You can use [getLineBreak](#getLineBreak) to obtain the number of characters that can fit in the layout. |
+| count | int | Yes | Number of characters from the specified start position. The value is an integer in the range [0, total number of text characters). The sum of **startIndex** and **count** cannot be greater than the total number of text characters. If **count** is **0**, the layout range is [startIndex, position of the last character in the text]. You can use [getLineBreak](#getlinebreak) to obtain the number of characters that can fit in the layout. |
 
 **Return value:**
 
@@ -57,7 +49,7 @@ Generates a text line object based on the specified layout range.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let startIndex = 0;
@@ -75,10 +67,6 @@ getLineBreak(startIndex: int, width: double): int
 Obtains the number of characters that can fit in the layout from the specified position within a limited width.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -105,7 +93,7 @@ Obtains the number of characters that can fit in the layout from the specified p
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let startIndex = 0;

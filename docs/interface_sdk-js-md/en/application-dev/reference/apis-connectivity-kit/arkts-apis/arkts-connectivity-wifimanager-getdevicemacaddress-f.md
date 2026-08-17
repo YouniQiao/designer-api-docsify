@@ -16,10 +16,6 @@ Obtain the MAC address of a Wi-Fi device. Wi-Fi must be enabled. The MAC address
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_LOCAL_MAC and ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function getDeviceMacAddress(): string[]--><!--Device-wifiManager-function getDeviceMacAddress(): string[]-End-->
@@ -41,7 +37,7 @@ Obtain the MAC address of a Wi-Fi device. Wi-Fi must be enabled. The MAC address
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

@@ -4,11 +4,9 @@ The enum of bond state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BondState](arkts-connectivity-bluetoothmanager-bondstate-e.md#BondState)
+**Substitutes:** [BondState](arkts-connectivity-bluetoothmanager-bondstate-e.md#bondstate)
 
 <!--Device-bluetooth-enum BondState--><!--Device-bluetooth-enum BondState-End-->
 
@@ -24,11 +22,9 @@ Indicate the bond state is invalid
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BOND_STATE_INVALID](arkts-connectivity-bluetoothmanager-bondstate-e.md#BOND_STATE_INVALID)
+**Substitutes:** [BOND_STATE_INVALID](arkts-connectivity-bluetoothmanager-bondstate-e.md#bondstateinvalid)
 
 <!--Device-BondState-BOND_STATE_INVALID = 0--><!--Device-BondState-BOND_STATE_INVALID = 0-End-->
 
@@ -44,11 +40,9 @@ Indicate the bond state is bonding
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BOND_STATE_BONDING](arkts-connectivity-bluetoothmanager-bondstate-e.md#BOND_STATE_BONDING)
+**Substitutes:** [BOND_STATE_BONDING](arkts-connectivity-bluetoothmanager-bondstate-e.md#bondstatebonding)
 
 <!--Device-BondState-BOND_STATE_BONDING = 1--><!--Device-BondState-BOND_STATE_BONDING = 1-End-->
 
@@ -64,11 +58,9 @@ Indicate the bond state is bonded
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BOND_STATE_BONDED](arkts-connectivity-bluetoothmanager-bondstate-e.md#BOND_STATE_BONDED)
+**Substitutes:** [BOND_STATE_BONDED](arkts-connectivity-bluetoothmanager-bondstate-e.md#bondstatebonded)
 
 <!--Device-BondState-BOND_STATE_BONDED = 2--><!--Device-BondState-BOND_STATE_BONDED = 2-End-->
 

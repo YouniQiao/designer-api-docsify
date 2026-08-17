@@ -4,10 +4,6 @@ Provides Range with lower and upper limit.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface Range--><!--Device-media-interface Range-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -30,10 +26,6 @@ Maximum value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Range-max: int--><!--Device-Range-max: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -49,10 +41,6 @@ Minimum value.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Range-min: int--><!--Device-Range-min: int-End-->
 

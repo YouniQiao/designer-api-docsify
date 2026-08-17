@@ -10,8 +10,6 @@ function cancel(id: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [cancel](arkts-notification-notificationmanager-cancel-f.md#cancel)
@@ -25,7 +23,7 @@ function cancel(id: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 通知ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
 
 
 ## cancel
@@ -37,8 +35,6 @@ function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 通过通知ID和通知标签取消已发布的通知（callback形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -54,7 +50,7 @@ function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | id | number | 是 | 通知ID。 |
 | label | string | 是 | 通知标签。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
 
 
 ## cancel
@@ -66,8 +62,6 @@ function cancel(id: number, label?: string): Promise<void>
 取消与指定通知ID相匹配的已发布通知，label可以指定也可以不指定（Promise形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 

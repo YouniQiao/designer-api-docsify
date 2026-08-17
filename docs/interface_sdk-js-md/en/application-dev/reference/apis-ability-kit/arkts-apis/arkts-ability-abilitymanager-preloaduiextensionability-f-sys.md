@@ -12,13 +12,9 @@ import { abilityManager } from 'abilityManager';
 function preloadUIExtensionAbility(want: Want): Promise<int>
 ```
 
-Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) instance and returns the instance ID. This API uses a promise to return the result.
+Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance and returns the instance ID. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -53,7 +49,7 @@ Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uie
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityManager, Want } from '@kit.AbilityKit';

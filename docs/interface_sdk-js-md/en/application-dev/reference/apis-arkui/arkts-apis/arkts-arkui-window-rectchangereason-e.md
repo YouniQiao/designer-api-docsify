@@ -4,10 +4,6 @@ Enumerates the reasons for window rectangle (position and size) changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-enum RectChangeReason--><!--Device-window-enum RectChangeReason-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ UNDEFINED = 0
 Default value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ The window is maximized.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RectChangeReason-MAXIMIZE = 1--><!--Device-RectChangeReason-MAXIMIZE = 1-End-->
@@ -61,10 +49,6 @@ RECOVER = 2
 The window is restored to the previous state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -82,10 +66,6 @@ The window is moved.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RectChangeReason-MOVE = 3--><!--Device-RectChangeReason-MOVE = 3-End-->
@@ -101,10 +81,6 @@ DRAG = 4
 The window is zoomed in or out by dragging.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -122,10 +98,6 @@ The window starts zooming in or out.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RectChangeReason-DRAG_START = 5--><!--Device-RectChangeReason-DRAG_START = 5-End-->
@@ -141,10 +113,6 @@ DRAG_END = 6
 The window finishes zooming in or out.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

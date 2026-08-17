@@ -10,10 +10,6 @@ declare function utimes(path: string, mtime: number): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare function utimes(path: string, mtime: number): void--><!--Device-unnamed-declare function utimes(path: string, mtime: number): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

@@ -16,10 +16,6 @@ Cancel callback when the call state is updated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function offCallStateChange(callback?: Callback<CallStateInfo>): void--><!--Device-observer-function offCallStateChange(callback?: Callback<CallStateInfo>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry

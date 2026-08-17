@@ -8,10 +8,6 @@ Describes the key-value pair used to store GC statistics. This type does not sup
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-type GcStats = Record<string, long>--><!--Device-hidebug-type GcStats = Record<string, long>-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug

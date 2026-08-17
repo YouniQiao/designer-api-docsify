@@ -12,13 +12,9 @@ import { tag } from 'tag';
 function getNfcB(tagInfo: TagInfo): NfcBTag
 ```
 
-Obtains an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md#NfcBTag) object based on the tag information. During tag reading, if the tag supports the NFC-B technology, an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md#NfcBTag) object will be created based on the tag information.
+Obtains an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md#nfcbtag) object based on the tag information. During tag reading, if the tag supports the NFC-B technology, an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md#nfcbtag) object will be created based on the tag information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

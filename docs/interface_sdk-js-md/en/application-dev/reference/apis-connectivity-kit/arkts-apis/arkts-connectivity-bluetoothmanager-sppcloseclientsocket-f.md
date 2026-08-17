@@ -16,11 +16,9 @@ Disables an spp client socket and releases related resources.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md#sppCloseClientSocket)
+**Substitutes:** [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md#sppcloseclientsocket)
 
 <!--Device-bluetoothManager-function sppCloseClientSocket(socket: number): void--><!--Device-bluetoothManager-function sppCloseClientSocket(socket: number): void-End-->
 
@@ -30,7 +28,7 @@ Disables an spp client socket and releases related resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md#sppAccept) or [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md#sppConnect). |
+| socket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md#sppaccept) or [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md#sppconnect). |
 
 **Error codes:**
 
@@ -41,7 +39,7 @@ Disables an spp client socket and releases related resources.
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@ AccessibilityExtensionAbility provides the accessibility extension service capab
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class AccessibilityExtensionAbility--><!--Device-unnamed-declare class AccessibilityExtensionAbility-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -43,8 +39,6 @@ Called when an accessibility event occurs. In this API, you can implement event-
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionAbility-onAccessibilityEvent(event: AccessibilityEvent): void--><!--Device-AccessibilityExtensionAbility-onAccessibilityEvent(event: AccessibilityEvent): void-End-->
@@ -57,7 +51,7 @@ Called when an accessibility event occurs. In this API, you can implement event-
 | --- | --- | --- | --- |
 | event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | Yes | Accessibility event information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityExtensionAbility, AccessibilityEvent } from '@kit.AccessibilityKit';
@@ -82,15 +76,13 @@ Called when the **AccessibilityExtensionAbility** is enabled and connected to th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionAbility-onConnect(): void--><!--Device-AccessibilityExtensionAbility-onConnect(): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -112,15 +104,13 @@ Called when the **AccessibilityExtensionAbility** is disabled and disconnected f
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionAbility-onDisconnect(): void--><!--Device-AccessibilityExtensionAbility-onDisconnect(): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -142,8 +132,6 @@ Called when a physical key is pressed. In this API, you can determine whether to
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionAbility-onKeyEvent(keyEvent: KeyEvent): boolean--><!--Device-AccessibilityExtensionAbility-onKeyEvent(keyEvent: KeyEvent): boolean-End-->
@@ -162,7 +150,7 @@ Called when a physical key is pressed. In this API, you can determine whether to
 | --- | --- |
 | boolean | Returns **true** if the event is consumed and will not be transferred; <br>returns **false** if the event is not consumed and will be transferred. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -191,10 +179,6 @@ Indicates the context of the accessibility extension.
 **Type:** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext--><!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext-End-->
 

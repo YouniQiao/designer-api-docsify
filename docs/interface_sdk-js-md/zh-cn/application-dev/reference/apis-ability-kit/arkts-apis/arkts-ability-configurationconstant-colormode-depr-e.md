@@ -4,11 +4,9 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [ColorMode](arkts-ability-configurationconstant-colormode-e.md#ColorMode)
+**替代接口：** [ColorMode](arkts-ability-configurationconstant-colormode-e.md#colormode)
 
 <!--Device-ConfigurationConstant-export enum ColorMode--><!--Device-ConfigurationConstant-export enum ColorMode-End-->
 
@@ -24,11 +22,9 @@ COLOR_MODE_NOT_SET = -1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [COLOR_MODE_NOT_SET](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_NOT_SET)
+**替代接口：** [COLOR_MODE_NOT_SET](arkts-ability-configurationconstant-colormode-e.md#colormodenotset)
 
 <!--Device-ColorMode-COLOR_MODE_NOT_SET = -1--><!--Device-ColorMode-COLOR_MODE_NOT_SET = -1-End-->
 
@@ -44,11 +40,9 @@ COLOR_MODE_DARK = 0
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_DARK)
+**替代接口：** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#colormodedark)
 
 <!--Device-ColorMode-COLOR_MODE_DARK = 0--><!--Device-ColorMode-COLOR_MODE_DARK = 0-End-->
 
@@ -64,11 +58,9 @@ COLOR_MODE_LIGHT = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [COLOR_MODE_LIGHT](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_LIGHT)
+**替代接口：** [COLOR_MODE_LIGHT](arkts-ability-configurationconstant-colormode-e.md#colormodelight)
 
 <!--Device-ColorMode-COLOR_MODE_LIGHT = 1--><!--Device-ColorMode-COLOR_MODE_LIGHT = 1-End-->
 

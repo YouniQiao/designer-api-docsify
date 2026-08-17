@@ -8,10 +8,6 @@ Defines the callback invoked to notify the application when the arc slider is to
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-unnamed-declare type ArcSliderTouchHandler = (event: TouchEvent) => void--><!--Device-unnamed-declare type ArcSliderTouchHandler = (event: TouchEvent) => void-End-->

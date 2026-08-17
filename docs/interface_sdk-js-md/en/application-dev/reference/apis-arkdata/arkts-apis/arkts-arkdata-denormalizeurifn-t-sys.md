@@ -8,10 +8,6 @@ Callback function called when converting the given normalized URI into a denorma
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-type DenormalizeUriFn = (uri: string, callback: AsyncCallback<string>) => void--><!--Device-unnamed-type DenormalizeUriFn = (uri: string, callback: AsyncCallback<string>) => void-End-->

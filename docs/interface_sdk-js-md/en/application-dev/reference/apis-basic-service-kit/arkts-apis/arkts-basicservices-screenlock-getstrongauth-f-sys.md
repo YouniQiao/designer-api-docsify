@@ -16,10 +16,6 @@ Obtain strong authentication reason flags for os account local userId.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK
 
 <!--Device-screenLock-function getStrongAuth(userId: int): int--><!--Device-screenLock-function getStrongAuth(userId: int): int-End-->

@@ -4,10 +4,6 @@ Describes the configuration information for a shortcut.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ShortcutInfo--><!--Device-unnamed-export interface ShortcutInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -25,10 +21,6 @@ Whether the shortcut is visible. **true** if visible, **false** otherwise. The d
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortcutInfo-visible?: boolean--><!--Device-ShortcutInfo-visible?: boolean-End-->
 

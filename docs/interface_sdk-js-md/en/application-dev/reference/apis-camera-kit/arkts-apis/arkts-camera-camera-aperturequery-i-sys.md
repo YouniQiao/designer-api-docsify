@@ -4,10 +4,6 @@ Provides the aperture query capability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface ApertureQuery--><!--Device-camera-interface ApertureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -29,10 +25,6 @@ getSupportedPhysicalApertures(): Array<PhysicalAperture>
 Gets the supported physical apertures. Move to ApertureQuery interface from Aperture since 12.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -65,10 +57,6 @@ getSupportedVirtualApertures(): Array<double>
 Obtains the supported virtual apertures.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApertureQuery-getSupportedVirtualApertures(): Array<double>--><!--Device-ApertureQuery-getSupportedVirtualApertures(): Array<double>-End-->
 

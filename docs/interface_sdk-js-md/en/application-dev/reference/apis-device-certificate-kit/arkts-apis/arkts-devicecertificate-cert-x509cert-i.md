@@ -4,10 +4,6 @@ Provides APIs for X.509 certificate operations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface X509Cert--><!--Device-cert-interface X509Cert-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -27,10 +23,6 @@ checkValidityWithDate(date: string): void
 Checks the validity period of this X.509 certificate.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,7 +46,7 @@ Checks the validity period of this X.509 certificate.
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 | [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -114,10 +106,6 @@ Obtains the basic constraints of this X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getBasicConstraints(): int--><!--Device-X509Cert-getBasicConstraints(): int-End-->
@@ -130,7 +118,7 @@ Obtains the basic constraints of this X.509 certificate.
 | --- | --- |
 | int | Basic constraints obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -181,10 +169,6 @@ Obtains the CRL distribution points of this X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getCRLDistributionPoint(): DataArray--><!--Device-X509Cert-getCRLDistributionPoint(): DataArray-End-->
@@ -205,7 +189,7 @@ Obtains the CRL distribution points of this X.509 certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -264,10 +248,6 @@ Obtains the X.509 certificate serial number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getCertSerialNumber(): bigint--><!--Device-X509Cert-getCertSerialNumber(): bigint-End-->
@@ -286,7 +266,7 @@ Obtains the X.509 certificate serial number.
 | --- | --- |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -343,10 +323,6 @@ Obtains the serialized X.509 certificate data. This API uses an asynchronous cal
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509Cert-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
@@ -368,7 +344,7 @@ Obtains the serialized X.509 certificate data. This API uses an asynchronous cal
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -425,10 +401,6 @@ Obtains the serialized X.509 certificate data. This API uses a promise to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getEncoded(): Promise<EncodingBlob>--><!--Device-X509Cert-getEncoded(): Promise<EncodingBlob>-End-->
@@ -450,7 +422,7 @@ Obtains the serialized X.509 certificate data. This API uses a promise to return
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -504,10 +476,6 @@ Obtains the usage of the extended key of this X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getExtKeyUsage(): DataArray--><!--Device-X509Cert-getExtKeyUsage(): DataArray-End-->
@@ -528,7 +496,7 @@ Obtains the usage of the extended key of this X.509 certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -596,10 +564,6 @@ Obtains the certificate extension object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getExtensionsObject(): CertExtension--><!--Device-X509Cert-getExtensionsObject(): CertExtension-End-->
@@ -620,7 +584,7 @@ Obtains the certificate extension object.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -689,10 +653,6 @@ Obtains the Issuer Alternative Names (IANs) of this X.509 certificate. > **NOTE�
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getIssuerAltNames(): DataArray--><!--Device-X509Cert-getIssuerAltNames(): DataArray-End-->
@@ -713,7 +673,7 @@ Obtains the Issuer Alternative Names (IANs) of this X.509 certificate. > **NOTE�
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -779,10 +739,6 @@ Obtains the issuer name of this X.509 certificate. > **NOTE：**> > - The obtain
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getIssuerName(): DataBlob--><!--Device-X509Cert-getIssuerName(): DataBlob-End-->
@@ -803,7 +759,7 @@ Obtains the issuer name of this X.509 certificate. > **NOTE：**> > - The obtain
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -860,10 +816,6 @@ Obtains the issuer name of this X.509 certificate based on the encoding type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string--><!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string-End-->
@@ -891,7 +843,7 @@ Obtains the issuer name of this X.509 certificate based on the encoding type.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -961,10 +913,6 @@ Obtains the X.500 distinguished name object of the X.509 certificate issuer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName-End-->
@@ -985,7 +933,7 @@ Obtains the X.500 distinguished name object of the X.509 certificate issuer.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1054,10 +1002,6 @@ Obtains the fields in the X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getItem(itemType: CertItemType): DataBlob--><!--Device-X509Cert-getItem(itemType: CertItemType): DataBlob-End-->
@@ -1085,7 +1029,7 @@ Obtains the fields in the X.509 certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1143,10 +1087,6 @@ Obtains the key usage of this X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getKeyUsage(): DataBlob--><!--Device-X509Cert-getKeyUsage(): DataBlob-End-->
@@ -1166,7 +1106,7 @@ Obtains the key usage of this X.509 certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1233,10 +1173,6 @@ Obtains the expiration time of this X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getNotAfterTime(): string--><!--Device-X509Cert-getNotAfterTime(): string-End-->
@@ -1257,7 +1193,7 @@ Obtains the expiration time of this X.509 certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1315,10 +1251,6 @@ Obtains the start time of this X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getNotBeforeTime(): string--><!--Device-X509Cert-getNotBeforeTime(): string-End-->
@@ -1339,7 +1271,7 @@ Obtains the start time of this X.509 certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1396,10 +1328,6 @@ Obtains the public key of this X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getPublicKey(): cryptoFramework.PubKey--><!--Device-X509Cert-getPublicKey(): cryptoFramework.PubKey-End-->
@@ -1419,7 +1347,7 @@ Obtains the public key of this X.509 certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1472,15 +1400,13 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 getSerialNumber(): number
 ```
 
-Obtains the X.509 certificate serial number. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 10. Use > [X509Cert.getCertSerialNumber()](#getCertSerialNumber) instead.
+Obtains the X.509 certificate serial number. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 10. Use > [X509Cert.getCertSerialNumber()](#getcertserialnumber) instead.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getCertSerialNumber](#getCertSerialNumber)
+**Substitutes:** [getCertSerialNumber](#getcertserialnumber)
 
 <!--Device-X509Cert-getSerialNumber(): number--><!--Device-X509Cert-getSerialNumber(): number-End-->
 
@@ -1492,7 +1418,7 @@ Obtains the X.509 certificate serial number. > **NOTE：**> > This API is suppor
 | --- | --- |
 | number | X.509 certificate serial number obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1543,10 +1469,6 @@ Obtains the signature data of this X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getSignature(): DataBlob--><!--Device-X509Cert-getSignature(): DataBlob-End-->
@@ -1567,7 +1489,7 @@ Obtains the signature data of this X.509 certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1625,10 +1547,6 @@ Obtains the signing algorithm of this X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getSignatureAlgName(): string--><!--Device-X509Cert-getSignatureAlgName(): string-End-->
@@ -1649,7 +1567,7 @@ Obtains the signing algorithm of this X.509 certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1707,10 +1625,6 @@ Obtains the object identifier (OID) of the X.509 certificate signing algorithm. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getSignatureAlgOid(): string--><!--Device-X509Cert-getSignatureAlgOid(): string-End-->
@@ -1731,7 +1645,7 @@ Obtains the object identifier (OID) of the X.509 certificate signing algorithm. 
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1788,10 +1702,6 @@ Obtains the signing algorithm parameters of this X.509 certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getSignatureAlgParams(): DataBlob--><!--Device-X509Cert-getSignatureAlgParams(): DataBlob-End-->
@@ -1813,7 +1723,7 @@ Obtains the signing algorithm parameters of this X.509 certificate.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1885,10 +1795,6 @@ Obtains the Subject Alternative Names (SANs) of this X.509 certificate. > **NOTE
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getSubjectAltNames(): DataArray--><!--Device-X509Cert-getSubjectAltNames(): DataArray-End-->
@@ -1909,7 +1815,7 @@ Obtains the Subject Alternative Names (SANs) of this X.509 certificate. > **NOTE
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -1977,10 +1883,6 @@ Obtains the subject name of this X.509 certificate. > **NOTE：**> > - If the en
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getSubjectName(encodingType?: EncodingType): DataBlob--><!--Device-X509Cert-getSubjectName(encodingType?: EncodingType): DataBlob-End-->
@@ -2008,7 +1910,7 @@ Obtains the subject name of this X.509 certificate. > **NOTE：**> > - If the en
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -2071,10 +1973,6 @@ Obtains the X.500 distinguished name object of the X.509 certificate subject.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName-End-->
@@ -2095,7 +1993,7 @@ Obtains the X.500 distinguished name object of the X.509 certificate subject.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -2164,10 +2062,6 @@ Obtains the X.509 certificate version.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-getVersion(): int--><!--Device-X509Cert-getVersion(): int-End-->
@@ -2180,7 +2074,7 @@ Obtains the X.509 certificate version.
 | --- | --- |
 | int | X.509 certificate version obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -2230,10 +2124,6 @@ Obtains the hash value of the data in DER format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-hashCode(): Uint8Array--><!--Device-X509Cert-hashCode(): Uint8Array-End-->
@@ -2254,7 +2144,7 @@ Obtains the hash value of the data in DER format.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -2323,10 +2213,6 @@ Checks whether this certificate matches the specified parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-match(param: X509CertMatchParameters): boolean--><!--Device-X509Cert-match(param: X509CertMatchParameters): boolean-End-->
@@ -2353,7 +2239,7 @@ Checks whether this certificate matches the specified parameters.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -2435,10 +2321,6 @@ Converts the object data into a string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-toString(): string--><!--Device-X509Cert-toString(): string-End-->
@@ -2459,7 +2341,7 @@ Converts the object data into a string.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -2528,10 +2410,6 @@ Converts this object into a string in the specified encoding format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-toString(encodingType: EncodingType): string--><!--Device-X509Cert-toString(encodingType: EncodingType): string-End-->
@@ -2559,7 +2437,7 @@ Converts this object into a string in the specified encoding format.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -2626,10 +2504,6 @@ Verifies the certificate signature. This API uses an asynchronous callback to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void--><!--Device-X509Cert-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void-End-->
@@ -2650,7 +2524,7 @@ Verifies the certificate signature. This API uses an asynchronous callback to re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -2718,10 +2592,6 @@ Verifies the certificate signature. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509Cert-verify(key: cryptoFramework.PubKey): Promise<void>--><!--Device-X509Cert-verify(key: cryptoFramework.PubKey): Promise<void>-End-->
@@ -2747,7 +2617,7 @@ Verifies the certificate signature. This API uses a promise to return the result
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

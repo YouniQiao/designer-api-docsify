@@ -16,11 +16,9 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectContacts)(callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
+**Substitutes:** [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)(callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 <!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void-End-->
 
@@ -32,7 +30,7 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -57,11 +55,9 @@ Selects a contact. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectContacts)()
+**Substitutes:** [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)()
 
 <!--Device-contact-function selectContact(): Promise<Array<Contact>>--><!--Device-contact-function selectContact(): Promise<Array<Contact>>-End-->
 
@@ -73,7 +69,7 @@ Selects a contact. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Promise used to return the result, which is an array of selected contacts. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

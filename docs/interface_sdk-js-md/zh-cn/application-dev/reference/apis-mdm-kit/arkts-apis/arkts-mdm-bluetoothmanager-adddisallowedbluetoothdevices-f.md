@@ -6,13 +6,9 @@
 function addDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>): void
 ```
 
-添加蓝牙设备禁用名单。添加禁用名单后当前设备不允许连接该名单下的蓝牙设备。从API version 22开始，数组中的MAC地址必须符合蓝牙MAC规范（例如：00:1A:2B:3C:4D:5E），添加时会移除不合法的MAC地址，仅 添加合法的MAC地址。 以下情况下，通过本接口添加蓝牙设备禁用名单，会报策略冲突： 1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setDisallowedPolicy)接口禁用了蓝牙。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setDisallowedPolicy)接口启用蓝牙后，可解除冲突。 2. 已经通过[addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md#addAllowedBluetoothDevices)接口添加了蓝牙设备可用名单。通过[removeAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-removeallowedbluetoothdevices-f.md#removeAllowedBluetoothDevices)移除蓝牙设备可用名单后，可解除冲突。
+添加蓝牙设备禁用名单。添加禁用名单后当前设备不允许连接该名单下的蓝牙设备。从API version 22开始，数组中的MAC地址必须符合蓝牙MAC规范（例如：00:1A:2B:3C:4D:5E），添加时会移除不合法的MAC地址，仅 添加合法的MAC地址。 以下情况下，通过本接口添加蓝牙设备禁用名单，会报策略冲突： 1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了蓝牙。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口启用蓝牙后，可解除冲突。 2. 已经通过[addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md#addallowedbluetoothdevices)接口添加了蓝牙设备可用名单。通过[removeAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-removeallowedbluetoothdevices-f.md#removeallowedbluetoothdevices)移除蓝牙设备可用名单后，可解除冲突。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -38,7 +34,7 @@ function addDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>): v
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bluetoothManager } from '@kit.MDMKit';
@@ -51,12 +47,12 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 // 定义蓝牙设备MAC地址数组（需根据实际情况进行替换）
-let deviceIds: Array<string> = ["00:1A:2B:3C:4D:5E","AA:BB:CC:DD:EE:FF"];
+let deviceIds: Array<string> = ["00:1A:2B:3C:4D:5E", "AA:BB:CC:DD:EE:FF"];
 try {
   // 添加蓝牙设备禁用名单
   bluetoothManager.addDisallowedBluetoothDevices(wantTemp,deviceIds);
   console.info(`Succeeded in adding disallowed bluetooth devices.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to add disallowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
 }
 ```

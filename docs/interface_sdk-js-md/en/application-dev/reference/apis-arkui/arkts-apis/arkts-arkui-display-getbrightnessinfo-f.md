@@ -12,13 +12,9 @@ import { display } from 'display';
 function getBrightnessInfo(displayId: long): BrightnessInfo
 ```
 
-Obtains the screen brightness information of a display. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#BrightnessInfo) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value.
+Obtains the screen brightness information of a display. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#brightnessinfo) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

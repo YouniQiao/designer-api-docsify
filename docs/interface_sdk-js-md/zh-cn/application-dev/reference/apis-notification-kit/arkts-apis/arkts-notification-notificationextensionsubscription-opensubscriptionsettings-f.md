@@ -16,10 +16,6 @@ function openSubscriptionSettings(context: UIAbilityContext): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
 <!--Device-notificationExtensionSubscription-function openSubscriptionSettings(context: UIAbilityContext): Promise<void>--><!--Device-notificationExtensionSubscription-function openSubscriptionSettings(context: UIAbilityContext): Promise<void>-End-->
@@ -47,7 +43,7 @@ function openSubscriptionSettings(context: UIAbilityContext): Promise<void>
 | [1600018](../errorcode-notification.md#1600018-通知设置页面已经拉起) | The notification settings window is already displayed. |
 | [1600023](../errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) | The application does not implement the NotificationSubscriberExtensionAbility. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

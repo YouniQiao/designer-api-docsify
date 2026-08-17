@@ -4,10 +4,6 @@ Represents an update mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export enum UpgradeAction--><!--Device-update-export enum UpgradeAction-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -24,10 +20,6 @@ Difference package, which contains only the different parts between the current 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UpgradeAction-UPGRADE = 'upgrade'--><!--Device-UpgradeAction-UPGRADE = 'upgrade'-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -43,10 +35,6 @@ RECOVERY = 'recovery'
 Repair package, which is a special upgrade package used to fix system errors or restore system functions. It is applicable to repair in case of system failure. For details, see [Upgrading Service Terms] (../../../basic-services/update/update-kit-term.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UpgradeAction-RECOVERY = 'recovery'--><!--Device-UpgradeAction-RECOVERY = 'recovery'-End-->
 

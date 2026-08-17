@@ -6,8 +6,6 @@ Defines XComponent Node.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 12
 
 **Substitutes:** XComponent
@@ -25,8 +23,6 @@ changeRenderType(type: NodeRenderType): boolean
 Set the render type of the builderNode.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Deprecated since:** 12
 
@@ -61,8 +57,6 @@ constructor.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 12
 
 **Substitutes:** createNode
@@ -93,8 +87,6 @@ Called when the XComponent surface has been created.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 12
 
 **Substitutes:** onLoad
@@ -120,8 +112,6 @@ onDestroy(): void
 Called when the XComponent surface has been destroyed.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Deprecated since:** 12
 

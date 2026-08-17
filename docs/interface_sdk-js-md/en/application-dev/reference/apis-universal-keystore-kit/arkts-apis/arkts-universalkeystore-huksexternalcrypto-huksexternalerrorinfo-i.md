@@ -1,12 +1,8 @@
-# HuksExternalErrorInfo
+# HuksExternalErrorInfo(External Key Management)
 
 Defines detailed error information.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-huksExternalCrypto-export interface HuksExternalErrorInfo--><!--Device-huksExternalCrypto-export interface HuksExternalErrorInfo-End-->
 
@@ -30,10 +26,6 @@ The detailed error code.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HuksExternalErrorInfo-errno: number--><!--Device-HuksExternalErrorInfo-errno: number-End-->
@@ -51,10 +43,6 @@ The detailed error description.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

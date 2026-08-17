@@ -4,10 +4,6 @@ AtomicFile是一个用于对文件进行原子读写操作的类。 在写操作
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export class AtomicFile--><!--Device-unnamed-export class AtomicFile-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -21,10 +17,6 @@ constructor(path: string)
 对于给定路径的文件创建一个AtomicFile类。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
 
 <!--Device-AtomicFile-constructor(path: string)--><!--Device-AtomicFile-constructor(path: string)-End-->
 
@@ -52,10 +44,6 @@ delete(): void
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 <!--Device-AtomicFile-delete(): void--><!--Device-AtomicFile-delete(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -70,7 +58,7 @@ delete(): void
 | 13900042 | Internal error |
 | 13900027 | Read-only file system |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -135,10 +123,6 @@ failWrite(): void
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 <!--Device-AtomicFile-failWrite(): void--><!--Device-AtomicFile-failWrite(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -149,7 +133,7 @@ failWrite(): void
 | --- | --- |
 | 13900042 | Internal error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -200,10 +184,6 @@ finishWrite(): void
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 <!--Device-AtomicFile-finishWrite(): void--><!--Device-AtomicFile-finishWrite(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -214,7 +194,7 @@ finishWrite(): void
 | --- | --- |
 | 13900042 | Internal error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -263,10 +243,6 @@ getBaseFile(): File
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 <!--Device-AtomicFile-getBaseFile(): File--><!--Device-AtomicFile-getBaseFile(): File-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -286,7 +262,7 @@ getBaseFile(): File
 | 13900012 | Permission denied |
 | 13900042 | Internal error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -339,10 +315,6 @@ openRead(): ReadStream
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 <!--Device-AtomicFile-openRead(): ReadStream--><!--Device-AtomicFile-openRead(): ReadStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -362,7 +334,7 @@ openRead(): ReadStream
 | 13900012 | Permission denied |
 | 13900042 | Internal error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -433,10 +405,6 @@ readFully(): ArrayBuffer
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 <!--Device-AtomicFile-readFully(): ArrayBuffer--><!--Device-AtomicFile-readFully(): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -454,7 +422,7 @@ readFully(): ArrayBuffer
 | 13900005 | I/O error |
 | 13900042 | Internal error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -517,10 +485,6 @@ startWrite(): WriteStream
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 <!--Device-AtomicFile-startWrite(): WriteStream--><!--Device-AtomicFile-startWrite(): WriteStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -541,7 +505,7 @@ startWrite(): WriteStream
 | 13900042 | Internal error |
 | 13900027 | Read-only file system |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -7,7 +7,7 @@
 
 | Name | Description |
 | --- | --- |
-| [extendViewModel](arkts-arkui-viewmodel-extendviewmodel-f-sys.md#extendViewModel) |  |
+| [extendViewModel](arkts-arkui-viewmodel-extendviewmodel-f-sys.md#extendviewmodel) |  |
 <!--DelEnd-->
 
 ### Interfaces

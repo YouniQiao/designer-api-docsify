@@ -4,9 +4,7 @@ Defines the js result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class JsResult--><!--Device-unnamed-export declare class JsResult-End-->
 
@@ -22,9 +20,7 @@ Constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JsResult-constructor()--><!--Device-JsResult-constructor()-End-->
 
@@ -40,9 +36,7 @@ Handle the user's JavaScript result if cancel the dialog.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JsResult-handleCancel(): void--><!--Device-JsResult-handleCancel(): void-End-->
 
@@ -58,9 +52,7 @@ Handle the user's JavaScript result if confirm the dialog.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JsResult-handleConfirm(): void--><!--Device-JsResult-handleConfirm(): void-End-->
 
@@ -76,9 +68,7 @@ Handle the user's JavaScript result if confirm the prompt dialog.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JsResult-handlePromptConfirm(result: string): void--><!--Device-JsResult-handlePromptConfirm(result: string): void-End-->
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 23
 
 <!--Device-fileAccess-interface RootIterator--><!--Device-fileAccess-interface RootIterator-End-->
@@ -23,8 +21,6 @@ next(): { value: RootInfo, done: boolean }
 通过next同步方法获取下一级设备根目录。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 23
 

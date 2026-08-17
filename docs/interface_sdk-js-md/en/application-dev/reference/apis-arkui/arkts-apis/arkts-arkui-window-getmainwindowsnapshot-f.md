@@ -17,10 +17,6 @@ Obtains the screenshots of one or more main windows specified by **windowId**. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CUSTOM_SCREEN_CAPTURE
 
 <!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):    Promise<Array<image.PixelMap | undefined>>--><!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):    Promise<Array<image.PixelMap | undefined>>-End-->
@@ -31,7 +27,7 @@ Obtains the screenshots of one or more main windows specified by **windowId**. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | Array&lt;int&gt; | Yes | Array of main window IDs. These IDs can be obtained using [window.getAllMainWindowInfo()](arkts-arkui-window-getallmainwindowinfo-f.md#getAllMainWindowInfo). If the array is null or undefined, contains any negative number, includes duplicates, or has more than 512 entries, error code 401 is returned. If the array contains any positive ID that does not match an existing window, undefined is returned. |
+| windowId | Array&lt;int&gt; | Yes | Array of main window IDs. These IDs can be obtained using [window.getAllMainWindowInfo()](arkts-arkui-window-getallmainwindowinfo-f.md#getallmainwindowinfo). If the array is null or undefined, contains any negative number, includes duplicates, or has more than 512 entries, error code 401 is returned. If the array contains any positive ID that does not match an existing window, undefined is returned. |
 | config | [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md) | Yes | Configuration for obtaining the window screenshot. |
 
 **Return value:**
@@ -48,7 +44,7 @@ Obtains the screenshots of one or more main windows specified by **windowId**. T
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -8,10 +8,6 @@ The ISendable type alias is defined to align with the API specifications of the 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendableColorSpaceManager-type ISendable = lang.ISendable--><!--Device-sendableColorSpaceManager-type ISendable = lang.ISendable-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core

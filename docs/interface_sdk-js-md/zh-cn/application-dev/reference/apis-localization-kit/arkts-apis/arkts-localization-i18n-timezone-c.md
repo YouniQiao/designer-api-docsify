@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-i18n-export class TimeZone--><!--Device-i18n-export class TimeZone-End-->
 
 **系统能力：** SystemCapability.Global.I18n
@@ -18,13 +14,9 @@
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](#setAppDefaultTimeZoneById)设置了默认时区，则返回设置的默认时区对象；否 则，返回系统时区对象。
+获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](#setappdefaulttimezonebyid)设置了默认时区，则返回设置的默认时区对象；否 则，返回系统时区对象。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +32,7 @@ static getAppDefaultTimeZone(): TimeZone
 | --- | --- |
 | [TimeZone](arkts-localization-i18n-timezone-c.md) | 应用使用的默认时区对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,10 +61,6 @@ static getAvailableIDs(): Array<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-static getAvailableIDs(): Array<string>--><!--Device-TimeZone-static getAvailableIDs(): Array<string>-End-->
@@ -85,7 +73,7 @@ static getAvailableIDs(): Array<string>
 | --- | --- |
 | Array&lt;string&gt; | 系统支持的时区ID列表。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -104,10 +92,6 @@ static getAvailableZoneCityIDs(): Array<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-static getAvailableZoneCityIDs(): Array<string>--><!--Device-TimeZone-static getAvailableZoneCityIDs(): Array<string>-End-->
@@ -120,7 +104,7 @@ static getAvailableZoneCityIDs(): Array<string>
 | --- | --- |
 | Array&lt;string&gt; | 系统支持的时区城市ID列表。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -138,10 +122,6 @@ static getCityDisplayName(cityID: string, locale: string): string
 获取时区城市名称在指定语言下的翻译。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -162,7 +142,7 @@ static getCityDisplayName(cityID: string, locale: string): string
 | --- | --- |
 | string | 时区城市名称在指定语言下的翻译。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -179,10 +159,6 @@ getDisplayName(locale?: string, isDST?: boolean): string
 获取时区对象名称在指定语言下的翻译。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -203,7 +179,7 @@ getDisplayName(locale?: string, isDST?: boolean): string
 | --- | --- |
 | string | 时区对象名称在指定语言下的翻译。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -222,10 +198,6 @@ getID(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-getID(): string--><!--Device-TimeZone-getID(): string-End-->
@@ -238,7 +210,7 @@ getID(): string
 | --- | --- |
 | string | 时区对象对应的时区ID。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -256,10 +228,6 @@ getOffset(date?: double): int
 获取某一时刻时区对象所表示时区的偏移量。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -279,7 +247,7 @@ getOffset(date?: double): int
 | --- | --- |
 | int | 时区的偏移量，单位为毫秒（ms）。当处于夏令时时，时区偏移量为时区原始偏移量加夏令时偏移量。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -298,10 +266,6 @@ getRawOffset(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-getRawOffset(): int--><!--Device-TimeZone-getRawOffset(): int-End-->
@@ -314,7 +278,7 @@ getRawOffset(): int
 | --- | --- |
 | int | 时区的原始偏移量，单位为毫秒（ms）。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -332,10 +296,6 @@ static getTimezoneFromCity(cityID: string): TimeZone
 创建对应时区城市的时区对象。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -355,7 +315,7 @@ static getTimezoneFromCity(cityID: string): TimeZone
 | --- | --- |
 | [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区城市对应的时区对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -372,10 +332,6 @@ static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZo
 创建地理位置对应的时区对象数组。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -403,7 +359,7 @@ static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZo
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -427,10 +383,6 @@ public getZoneRules(): ZoneRules
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-public getZoneRules(): ZoneRules--><!--Device-TimeZone-public getZoneRules(): ZoneRules-End-->
@@ -452,10 +404,6 @@ public isDaylightSavingTime(date: Date): boolean
 判断指定的时间日期是否处于夏令时。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -487,10 +435,6 @@ static setAppDefaultTimeZoneById(zoneID: string): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -511,7 +455,7 @@ static setAppDefaultTimeZoneById(zoneID: string): void
 | --- | --- |
 | [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -16,10 +16,6 @@ Listens to the event of remove form. &lt;p&gt;You can use this method to listen 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 <!--Device-formObserver-function onFormRemove(observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function onFormRemove(observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
@@ -52,10 +48,6 @@ function onFormRemove(hostBundleName: string, observerCallback: Callback<formInf
 Listens to the event of remove form. &lt;p&gt;You can use this method to listen to the event of remove form for a particular card host.&lt;/p&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 

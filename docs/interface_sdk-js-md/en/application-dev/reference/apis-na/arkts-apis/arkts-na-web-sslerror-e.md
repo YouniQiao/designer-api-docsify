@@ -4,9 +4,7 @@ Enum type supplied to error when onSslErrorEventReceive being called.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum SslError--><!--Device-unnamed-export declare enum SslError-End-->
 
@@ -22,9 +20,7 @@ General error.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SslError-INVALID = 0--><!--Device-SslError-INVALID = 0-End-->
 
@@ -40,9 +36,7 @@ Hostname mismatch.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SslError-HOST_MISMATCH = 1--><!--Device-SslError-HOST_MISMATCH = 1-End-->
 
@@ -58,9 +52,7 @@ The certificate date is invalid.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SslError-DATE_INVALID = 2--><!--Device-SslError-DATE_INVALID = 2-End-->
 
@@ -76,9 +68,7 @@ The certificate authority is not trusted.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SslError-UNTRUSTED = 3--><!--Device-SslError-UNTRUSTED = 3-End-->
 

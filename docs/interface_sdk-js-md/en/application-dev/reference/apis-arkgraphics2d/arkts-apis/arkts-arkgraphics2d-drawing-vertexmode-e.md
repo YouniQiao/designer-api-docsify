@@ -4,10 +4,6 @@ Enumerates the connection modes for vertex drawing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-enum VertexMode--><!--Device-drawing-enum VertexMode-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ TRIANGLES_VERTEXMODE = 0
 Every three vertices come from different triangles.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VertexMode-TRIANGLES_VERTEXMODE = 0--><!--Device-VertexMode-TRIANGLES_VERTEXMODE = 0-End-->
 
@@ -40,10 +32,6 @@ Consecutive triangles share one edge. It is efficient for continuous surfaces.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VertexMode-TRIANGLESSTRIP_VERTEXMODE = 1--><!--Device-VertexMode-TRIANGLESSTRIP_VERTEXMODE = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -57,10 +45,6 @@ TRIANGLESFAN_VERTEXMODE = 2
 All triangles share one vertex. It is suitable for circles and sectors.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VertexMode-TRIANGLESFAN_VERTEXMODE = 2--><!--Device-VertexMode-TRIANGLESFAN_VERTEXMODE = 2-End-->
 

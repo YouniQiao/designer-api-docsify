@@ -16,11 +16,9 @@ Checks whether distributed notification is enabled for a specified application. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isDistributedEnabledByBundle](#isDistributedEnabledByBundle)(bundle: BundleOption, deviceType: string)
+**Substitutes:** [isDistributedEnabledByBundle](#isdistributedenabledbybundle)(bundle: BundleOption, deviceType: string)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -51,7 +49,7 @@ Checks whether distributed notification is enabled for a specified application. 
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -80,11 +78,9 @@ Checks whether distributed notification is enabled for a specified application. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isDistributedEnabledByBundle](#isDistributedEnabledByBundle)(bundle: BundleOption, deviceType: string)
+**Substitutes:** [isDistributedEnabledByBundle](#isdistributedenabledbybundle)(bundle: BundleOption, deviceType: string)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -120,7 +116,7 @@ Checks whether distributed notification is enabled for a specified application. 
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -145,10 +141,6 @@ function isDistributedEnabledByBundle(bundle: BundleOption, deviceType: string):
 Obtains whether a specified application enables cross-device collaboration. This API uses a promise to return the result. This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -186,7 +178,7 @@ Obtains whether a specified application enables cross-device collaboration. This
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

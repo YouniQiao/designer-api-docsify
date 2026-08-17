@@ -4,10 +4,6 @@ Pen key operation options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface PenKeyOperationOptions--><!--Device-unnamed-declare interface PenKeyOperationOptions-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -57,10 +53,6 @@ The coordinate point for air mouse mode operations. Required when key is AIR_MOU
 **Type:** [Point](arkts-test-uitest-point-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

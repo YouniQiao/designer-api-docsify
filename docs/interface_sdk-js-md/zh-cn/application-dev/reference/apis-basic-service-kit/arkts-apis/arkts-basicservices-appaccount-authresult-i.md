@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-appAccount-interface AuthResult--><!--Device-appAccount-interface AuthResult-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -24,10 +20,6 @@ account?: AppAccountInfo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthResult-account?: AppAccountInfo--><!--Device-AuthResult-account?: AppAccountInfo-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -43,10 +35,6 @@ tokenInfo?: AuthTokenInfo
 **类型：** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthResult-tokenInfo?: AuthTokenInfo--><!--Device-AuthResult-tokenInfo?: AuthTokenInfo-End-->
 

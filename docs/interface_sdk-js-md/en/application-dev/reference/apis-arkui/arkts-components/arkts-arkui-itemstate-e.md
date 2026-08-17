@@ -4,8 +4,6 @@ Display status of **nextLabel** in the stepper.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 **Substitutes:** Swiper
@@ -23,8 +21,6 @@ Normal
 The button on the right is clickable and can navigate users to the next **StepperItem** when it is clicked. **NOTE：**This API is supported since API version 8 and deprecated since API version 22. You are advised to use index instead.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 
@@ -46,8 +42,6 @@ The button on the right is disabled. **NOTE：**This API is supported since API 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 **Substitutes:** indicatorInteractive
@@ -68,8 +62,6 @@ The button on the right is not displayed, and a progress bar is displayed instea
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 **Substitutes:** Swiper
@@ -89,8 +81,6 @@ Skip
 The button on the right reads "Skip" by default. You can define the processing logic for this state in the **onSkip** callback of the stepper. **NOTE：**This API is supported since API version 8 and deprecated since API version 22. You are advised to use index instead.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 

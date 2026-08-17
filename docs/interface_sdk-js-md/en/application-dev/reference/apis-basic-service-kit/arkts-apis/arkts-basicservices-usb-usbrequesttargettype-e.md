@@ -1,14 +1,12 @@
-# USBRequestTargetType
+# USBRequestTargetType(USB Manager)
 
 Enumerates request target types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#USBRequestTargetType)
+**Substitutes:** [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usbrequesttargettype)
 
 <!--Device-usb-export enum USBRequestTargetType--><!--Device-usb-export enum USBRequestTargetType-End-->
 
@@ -24,11 +22,9 @@ Device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USB_REQUEST_TARGET_DEVICE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#USB_REQUEST_TARGET_DEVICE)
+**Substitutes:** [USB_REQUEST_TARGET_DEVICE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usbrequesttargetdevice)
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0-End-->
 
@@ -44,11 +40,9 @@ Interface.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USB_REQUEST_TARGET_INTERFACE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#USB_REQUEST_TARGET_INTERFACE)
+**Substitutes:** [USB_REQUEST_TARGET_INTERFACE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usbrequesttargetinterface)
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1-End-->
 
@@ -64,11 +58,9 @@ Endpoint.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USB_REQUEST_TARGET_ENDPOINT](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#USB_REQUEST_TARGET_ENDPOINT)
+**Substitutes:** [USB_REQUEST_TARGET_ENDPOINT](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usbrequesttargetendpoint)
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2-End-->
 
@@ -84,11 +76,9 @@ Other.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USB_REQUEST_TARGET_OTHER](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#USB_REQUEST_TARGET_OTHER)
+**Substitutes:** [USB_REQUEST_TARGET_OTHER](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usbrequesttargetother)
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3-End-->
 

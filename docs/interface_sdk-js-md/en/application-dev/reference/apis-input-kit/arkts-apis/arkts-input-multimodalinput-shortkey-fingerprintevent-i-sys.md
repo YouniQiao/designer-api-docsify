@@ -4,10 +4,6 @@ Provides fingerprint gesture event types and the offset of the fingerprint senso
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare interface FingerprintEvent--><!--Device-unnamed-export declare interface FingerprintEvent-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -32,10 +28,6 @@ Enumeration of fingerprint gesture event types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FingerprintEvent-action: FingerprintAction--><!--Device-FingerprintEvent-action: FingerprintAction-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -54,10 +46,6 @@ Offset relative to the short axis of the side fingerprint device (positive value
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FingerprintEvent-distanceX: double--><!--Device-FingerprintEvent-distanceX: double-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -75,10 +63,6 @@ Offset relative to the long axis of the side fingerprint device (positive values
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FingerprintEvent-distanceY: double--><!--Device-FingerprintEvent-distanceY: double-End-->
 

@@ -1,14 +1,10 @@
-# BusinessError
+# BusinessError(Public Callback Information)
 
 Defines an error parameter. This API inherits from the **Error** class and is used to pass standard error information, including the error code and optional additional information.
 
 **Inheritance/Implementation:** BusinessError extends Error
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BusinessError--><!--Device-unnamed-export interface BusinessError-End-->
 
@@ -35,10 +31,6 @@ Error code returned when the API fails to be called. The specific error code is 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -58,10 +50,6 @@ Error message returned when the API fails to be called. If this parameter is lef
 **Type:** T
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

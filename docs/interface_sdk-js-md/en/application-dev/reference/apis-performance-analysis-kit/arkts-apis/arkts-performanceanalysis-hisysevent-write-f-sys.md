@@ -16,10 +16,6 @@ Writes event information to the event file. This API uses a promise to return th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>--><!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -52,7 +48,7 @@ Writes event information to the event file. This API uses a promise to return th
 | [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) | The size of the event parameter of the string type exceeds the limit. |
 | [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
@@ -97,10 +93,6 @@ Writes event information to the event file. This API uses an asynchronous callba
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void--><!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -128,7 +120,7 @@ Writes event information to the event file. This API uses an asynchronous callba
 | [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) | The size of the event parameter of the string type exceeds the limit. |
 | [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hiSysEvent } from '@kit.PerformanceAnalysisKit';

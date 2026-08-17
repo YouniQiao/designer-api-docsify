@@ -4,10 +4,6 @@ Enumerates the color effect types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum ColorEffectType--><!--Device-camera-enum ColorEffectType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ NORMAL = 0
 Regular color effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ColorEffectType-NORMAL = 0--><!--Device-ColorEffectType-NORMAL = 0-End-->
 
@@ -44,10 +36,6 @@ Bright color effect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorEffectType-BRIGHT = 1--><!--Device-ColorEffectType-BRIGHT = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -64,10 +52,6 @@ Soft color effect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorEffectType-SOFT = 2--><!--Device-ColorEffectType-SOFT = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -83,10 +67,6 @@ BLACK_WHITE = 3
 Black and white color effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ColorEffectType-BLACK_WHITE = 3--><!--Device-ColorEffectType-BLACK_WHITE = 3-End-->
 

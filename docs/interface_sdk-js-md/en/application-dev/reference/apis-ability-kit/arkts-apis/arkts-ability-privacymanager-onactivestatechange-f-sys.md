@@ -14,13 +14,9 @@ function onActiveStateChange(
     callback: Callback<ActiveChangeResponse>): void
 ```
 
-Subscribes to permission usage status change events for a specified permission list. Permission usage status changes are triggered by calls to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission-(System-API)) and [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission-(System-API)). After a successful subscription, when the permission usage status changes, the callback function is triggered, returning an [ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md#ActiveChangeResponse-(System-API)) object containing details of the permission usage status change. This API uses an asynchronous callback to return the result. Multiple callback functions are allowed to be subscribed for the same permissionList. > **NOTE：**> It is not allowed to subscribe the same callback function using two permissionLists that have an intersection. > That is, if two permissionLists contain the same permission name, the same callback function cannot be used for subscription. > This API is typically used in conjunction with offActiveStateChange. When listening is no longer needed, offActiveStateChange should be called to unsubscribe.
+Subscribes to permission usage status change events for a specified permission list. Permission usage status changes are triggered by calls to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission-system-api) and [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission-system-api). After a successful subscription, when the permission usage status changes, the callback function is triggered, returning an [ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md#activechangeresponse-system-api) object containing details of the permission usage status change. This API uses an asynchronous callback to return the result. Multiple callback functions are allowed to be subscribed for the same permissionList. > **NOTE：**> It is not allowed to subscribe the same callback function using two permissionLists that have an intersection. > That is, if two permissionLists contain the same permission name, the same callback function cannot be used for subscription. > This API is typically used in conjunction with [offActiveStateChange](arkts-ability-privacymanager-offactivestatechange-f-sys.md#offactivestatechange). When listening is no longer needed, offActiveStateChange should be called to unsubscribe.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 

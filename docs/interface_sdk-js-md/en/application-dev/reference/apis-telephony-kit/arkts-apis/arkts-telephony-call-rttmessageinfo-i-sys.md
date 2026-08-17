@@ -4,10 +4,6 @@ Indicates the info of the rtt message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface RttMessageInfo--><!--Device-call-export interface RttMessageInfo-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -32,10 +28,6 @@ Indicates the id of rtt.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RttMessageInfo-callId: int--><!--Device-RttMessageInfo-callId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -53,10 +45,6 @@ Indicates the rtt messgae.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RttMessageInfo-rttMessage: string--><!--Device-RttMessageInfo-rttMessage: string-End-->
 

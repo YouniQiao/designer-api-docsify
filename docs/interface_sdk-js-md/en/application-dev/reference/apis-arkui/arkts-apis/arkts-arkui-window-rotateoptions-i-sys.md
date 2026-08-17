@@ -4,10 +4,6 @@ Describes the rotation parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface RotateOptions--><!--Device-window-interface RotateOptions-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -32,10 +28,6 @@ X coordinate of the rotation center. The value is a floating-point number in the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotateOptions-pivotX?: double--><!--Device-RotateOptions-pivotX?: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -53,10 +45,6 @@ Y coordinate of the rotation center. The value is a floating-point number in the
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotateOptions-pivotY?: double--><!--Device-RotateOptions-pivotY?: double-End-->
 
@@ -76,10 +64,6 @@ Rotation angle around the x-axis. The value is a floating-point number, and the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotateOptions-x?: double--><!--Device-RotateOptions-x?: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -98,10 +82,6 @@ Rotation angle around the y-axis. The value is a floating-point number, and the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotateOptions-y?: double--><!--Device-RotateOptions-y?: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -119,10 +99,6 @@ Rotation angle around the z-axis. The value is a floating-point number, and the 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotateOptions-z?: double--><!--Device-RotateOptions-z?: double-End-->
 

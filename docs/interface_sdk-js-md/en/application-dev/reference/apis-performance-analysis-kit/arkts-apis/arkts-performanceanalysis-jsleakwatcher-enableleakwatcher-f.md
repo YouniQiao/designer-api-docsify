@@ -16,10 +16,6 @@ Enables the detection for JS object leaks. This function is disabled by default.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -40,7 +36,7 @@ Enables the detection for JS object leaks. This function is disabled by default.
 | [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
 | [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let config: Array<string> = ['XComponent'];
@@ -63,10 +59,6 @@ Enables the ArkTS object leak detection. This API can detect memory leaks of Ark
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -87,7 +79,7 @@ Enables the ArkTS object leak detection. This API can detect memory leaks of Ark
 | [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
 | [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 enum MonitorObjectType {

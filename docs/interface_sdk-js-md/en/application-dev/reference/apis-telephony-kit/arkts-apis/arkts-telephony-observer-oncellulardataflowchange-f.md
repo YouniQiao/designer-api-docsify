@@ -16,10 +16,6 @@ Callback when the uplink and downlink data flow state of cellular data services 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function onCellularDataFlowChange(callback: Callback<DataFlowType>): void--><!--Device-observer-function onCellularDataFlowChange(callback: Callback<DataFlowType>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -50,10 +46,6 @@ function onCellularDataFlowChange(options: ObserverOptions, callback: Callback<D
 Callback when the uplink and downlink data flow state of cellular data services corresponding to the monitored {@code slotId} is updated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-observer-function onCellularDataFlowChange(options: ObserverOptions, callback: Callback<DataFlowType>): void--><!--Device-observer-function onCellularDataFlowChange(options: ObserverOptions, callback: Callback<DataFlowType>): void-End-->
 

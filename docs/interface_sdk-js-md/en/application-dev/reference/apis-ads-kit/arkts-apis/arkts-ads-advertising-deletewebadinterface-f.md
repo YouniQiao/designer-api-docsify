@@ -16,10 +16,6 @@ Deletes the ad JavaScript object injected through **registerWebAdInterface** (th
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn only, since version 16.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 16.
 
 <!--Device-advertising-function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void--><!--Device-advertising-function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void-End-->
@@ -40,7 +36,7 @@ Deletes the ad JavaScript object injected through **registerWebAdInterface** (th
 | [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

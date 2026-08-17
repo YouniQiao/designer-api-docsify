@@ -4,10 +4,6 @@ Implements authenticator callbacks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appAccount-interface AuthCallback--><!--Device-appAccount-interface AuthCallback-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -30,10 +26,6 @@ Called to continue to process the request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthCallback-onRequestContinued?: () => void--><!--Device-AuthCallback-onRequestContinued?: () => void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -50,10 +42,6 @@ Called to redirect a request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthCallback-onRequestRedirected: (request: Want) => void--><!--Device-AuthCallback-onRequestRedirected: (request: Want) => void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -69,10 +57,6 @@ Called to return the result of an authentication request.
 **Type:** (code: int, result?: AuthResult) =&gt; void
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthCallback-onResult: (code: int, result?: AuthResult) => void--><!--Device-AuthCallback-onResult: (code: int, result?: AuthResult) => void-End-->
 

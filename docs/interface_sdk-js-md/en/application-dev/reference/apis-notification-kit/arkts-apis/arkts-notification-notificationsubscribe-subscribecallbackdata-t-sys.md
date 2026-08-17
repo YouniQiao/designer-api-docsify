@@ -8,10 +8,6 @@ Provides methods that will be called back when the subscriber receives a new not
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationSubscribe-export type SubscribeCallbackData = _SubscribeCallbackData--><!--Device-notificationSubscribe-export type SubscribeCallbackData = _SubscribeCallbackData-End-->
 
 **System capability:** SystemCapability.Notification.Notification

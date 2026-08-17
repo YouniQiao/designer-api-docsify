@@ -6,9 +6,7 @@ Defines the attributes of SelectionContainer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare interface SelectionContainerAttribute--><!--Device-unnamed-export declare interface SelectionContainerAttribute-End-->
 
@@ -23,9 +21,7 @@ attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | Att
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | AttributeModifier<CommonMethod>    | undefined): this--><!--Device-SelectionContainerAttribute-attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | AttributeModifier<CommonMethod>    | undefined): this-End-->
 
@@ -33,7 +29,7 @@ attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | Att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | AttributeModifier&lt;[SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -50,9 +46,7 @@ bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | u
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | undefined,    responseType: TextResponseType | undefined, options?: SelectionContainerMenuOptions | undefined): this--><!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | undefined,    responseType: TextResponseType | undefined, options?: SelectionContainerMenuOptions | undefined): this-End-->
 
@@ -63,7 +57,7 @@ bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | u
 | spanType | TextSpanType \| undefined | Yes |  |
 | content | CustomBuilder \| undefined | Yes |  |
 | responseType | TextResponseType \| undefined | Yes |  |
-| options | [SelectionContainerMenuOptions](arkts-na-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) \| undefined | No |  |
+| options | [SelectionContainerMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) \| undefined | No |  |
 
 **Return value:**
 
@@ -79,9 +73,7 @@ caretColor(color: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-caretColor(color: ResourceColor | undefined): this--><!--Device-SelectionContainerAttribute-caretColor(color: ResourceColor | undefined): this-End-->
 
@@ -105,9 +97,7 @@ copyOption(value: CopyOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-copyOption(value: CopyOptions | undefined): this--><!--Device-SelectionContainerAttribute-copyOption(value: CopyOptions | undefined): this-End-->
 
@@ -131,9 +121,7 @@ editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this--><!--Device-SelectionContainerAttribute-editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this-End-->
 
@@ -141,7 +129,7 @@ editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| editMenu | [SelectionContainerEditMenuOptions](arkts-na-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) \| undefined | Yes |  |
+| editMenu | [SelectionContainerEditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -157,9 +145,7 @@ enableHapticFeedback(isEnabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-enableHapticFeedback(isEnabled: boolean | undefined): this--><!--Device-SelectionContainerAttribute-enableHapticFeedback(isEnabled: boolean | undefined): this-End-->
 
@@ -183,9 +169,7 @@ onCopy(callback: Callback<string> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-onCopy(callback: Callback<string> | undefined): this--><!--Device-SelectionContainerAttribute-onCopy(callback: Callback<string> | undefined): this-End-->
 
@@ -209,9 +193,7 @@ onTextSelectionChange(callback: Callback<Array<string>> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-onTextSelectionChange(callback: Callback<Array<string>> | undefined): this--><!--Device-SelectionContainerAttribute-onTextSelectionChange(callback: Callback<Array<string>> | undefined): this-End-->
 
@@ -235,9 +217,7 @@ onWillCopy(callback: Callback<string, boolean> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-onWillCopy(callback: Callback<string, boolean> | undefined): this--><!--Device-SelectionContainerAttribute-onWillCopy(callback: Callback<string, boolean> | undefined): this-End-->
 
@@ -261,9 +241,7 @@ selectedBackgroundColor(color: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-selectedBackgroundColor(color: ResourceColor | undefined): this--><!--Device-SelectionContainerAttribute-selectedBackgroundColor(color: ResourceColor | undefined): this-End-->
 
@@ -287,9 +265,7 @@ setSelectionContainerOptions(): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-setSelectionContainerOptions(): this--><!--Device-SelectionContainerAttribute-setSelectionContainerOptions(): this-End-->
 
@@ -307,9 +283,7 @@ textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-SelectionContainerAttribute-textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this--><!--Device-SelectionContainerAttribute-textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this-End-->
 
@@ -317,7 +291,7 @@ textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [SelectionContainerTextJoinStyle](arkts-na-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) \| undefined | Yes |  |
+| style | [SelectionContainerTextJoinStyle](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -335,9 +309,7 @@ Set SelectionContainer Options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

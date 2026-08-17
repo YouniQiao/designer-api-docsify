@@ -10,10 +10,6 @@ function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, poli
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CHECK_SANDBOX_POLICY
 
 <!--Device-fileShare-function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>--><!--Device-fileShare-function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>-End-->
@@ -46,7 +42,7 @@ function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, poli
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 13900042 | Out of memory. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { fileShare } from '@kit.CoreFileKit';

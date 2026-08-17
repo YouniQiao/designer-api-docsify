@@ -16,11 +16,9 @@ Checks whether an accessibility application is enabled. This API uses an asynchr
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isOpenAccessibilitySync)
+**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync)
 
 <!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void-End-->
 
@@ -32,7 +30,7 @@ Checks whether an accessibility application is enabled. This API uses an asynchr
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates the accessibility app is enabled, and **false** indicates the accessibility app is not enabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -58,11 +56,9 @@ Checks whether an accessibility application is enabled. This API uses a promise 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isOpenAccessibilitySync)
+**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync)
 
 <!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>--><!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>-End-->
 
@@ -74,7 +70,7 @@ Checks whether an accessibility application is enabled. This API uses a promise 
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates the accessibility app is enabled, and **false** indicates the accessibility app is disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

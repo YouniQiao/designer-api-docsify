@@ -10,11 +10,9 @@ export function getSystemRegion(): string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [getSystemRegion](arkts-localization-i18n-system-c.md#getSystemRegion)
+**替代接口：** [getSystemRegion](arkts-localization-i18n-system-c.md#getsystemregion)
 
 <!--Device-i18n-export function getSystemRegion(): string--><!--Device-i18n-export function getSystemRegion(): string-End-->
 
@@ -26,7 +24,7 @@ export function getSystemRegion(): string
 | --- | --- |
 | string | 系统地区ID。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

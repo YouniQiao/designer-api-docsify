@@ -16,10 +16,6 @@ Adds disallowed Bluetooth protocols. Specified users cannot use the disallowed B
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -33,7 +29,7 @@ Adds disallowed Bluetooth protocols. Specified users cannot use the disallowed B
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) of @ ohos.account.osAccount to obtain the ID. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;Protocol&gt; | Yes | Bluetooth protocol array, which has a maximum length of 10,000. |
 
 **Error codes:**
@@ -44,7 +40,7 @@ Adds disallowed Bluetooth protocols. Specified users cannot use the disallowed B
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -73,13 +69,9 @@ try{
 function addDisallowedBluetoothProtocols(admin: Want, accountId: number, protocols: Array<Protocol>, policy: TransferPolicy): void
 ```
 
-Adds disallowed Bluetooth protocols. After the setting, specified users cannot use the disallowed Bluetooth protocols based on the specified transfer policy. > **NOTE：**> > 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and > system applications. > > 2. When the SPP protocol is passed, the value of the **policy** parameter can only be > **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned. > > 3. This API and > [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#addDisallowedBluetoothProtocols) are > overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine- > grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving, > or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be > combined and take effect.
+Adds disallowed Bluetooth protocols. After the setting, specified users cannot use the disallowed Bluetooth protocols based on the specified transfer policy. > **NOTE：**> > 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and > system applications. > > 2. When the SPP protocol is passed, the value of the **policy** parameter can only be > **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned. > > 3. This API and > [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#adddisallowedbluetoothprotocols) are > overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine- > grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving, > or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be > combined and take effect.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -94,7 +86,7 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) of @ ohos.account.osAccount to obtain the ID. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;Protocol&gt; | Yes | Array of Bluetooth protocols to be added to the blocklist. |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | Yes | Transfer policy, which specifies the mode for disabling Bluetooth protocols. The options are **SEND_ONLY** (sending disabled), **RECEIVE_ONLY** (receiving disabled), and **RECEIVE_SEND** ( sending and receiving disabled). |
 

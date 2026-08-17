@@ -2,13 +2,11 @@
 
 错误参数。
 
-**继承/实现关系：** BusinessError extends [Error](../../apis-arkweb/arkts-components/arkts-arkweb-messagelevel-e.md#Error)
+**继承/实现关系：** BusinessError extends [Error](../../apis-arkweb/arkts-components/arkts-arkweb-messagelevel-e.md#error)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare class BusinessError--><!--Device-unnamed-export declare class BusinessError-End-->
 
@@ -24,9 +22,7 @@ BusinessError的构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BusinessError-constructor()--><!--Device-BusinessError-constructor()-End-->
 
@@ -42,9 +38,7 @@ BusinessError的构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BusinessError-constructor(code: int, error: Error)--><!--Device-BusinessError-constructor(code: int, error: Error)-End-->
 
@@ -67,9 +61,7 @@ BusinessError的构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BusinessError-constructor(code: int, data: T, error: Error)--><!--Device-BusinessError-constructor(code: int, data: T, error: Error)-End-->
 
@@ -93,9 +85,7 @@ BusinessError的构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BusinessError-constructor(code: int, message: string, data?: T)--><!--Device-BusinessError-constructor(code: int, message: string, data?: T)-End-->
 
@@ -121,9 +111,7 @@ public data?: T
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BusinessError-public data?: T--><!--Device-BusinessError-public data?: T-End-->
 

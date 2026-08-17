@@ -10,10 +10,6 @@ function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): 
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_PRINT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -35,7 +31,7 @@ function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

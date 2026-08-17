@@ -4,10 +4,6 @@ Sets the linear gradient background color of the track.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ColorMetricsLinearGradient--><!--Device-unnamed-declare class ColorMetricsLinearGradient-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ constructor(colorStops: ColorMetricsStop[])
 Constructor of **ColorMetricsLinearGradient**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

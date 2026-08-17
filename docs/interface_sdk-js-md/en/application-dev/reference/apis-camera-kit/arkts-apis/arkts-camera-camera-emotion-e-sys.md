@@ -4,10 +4,6 @@ Enumerates the types of emotions in the detected human face information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum Emotion--><!--Device-camera-enum Emotion-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ NEUTRAL = 0
 Neutral.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -46,10 +38,6 @@ Sad.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Emotion-SADNESS = 1--><!--Device-Emotion-SADNESS = 1-End-->
@@ -68,10 +56,6 @@ Smile.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Emotion-SMILE = 2--><!--Device-Emotion-SMILE = 2-End-->
@@ -89,10 +73,6 @@ SURPRISE = 3
 Surprise.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

@@ -12,13 +12,9 @@ import { deviceManager } from 'deviceManager';
 function bindDriverWithDeviceId(deviceId: long, onDisconnect: AsyncCallback<long>): Promise<RemoteDeviceDriver>
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result. You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device list.
+Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result. You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices) to obtain the peripheral device list.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DDK_DRIVERS
 
@@ -47,7 +43,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 | [26300002](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300002-binding-driver-client-to-driver-server-failed) | The driver service does not allow any client to bind. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

@@ -4,9 +4,7 @@ Defines the event to observe.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export interface WatchEvent--><!--Device-unnamed-export interface WatchEvent-End-->
 
@@ -24,9 +22,7 @@ Cookie bound with the event. Currently, only the **IN_MOVED_FROM** and **IN_MOVE
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WatchEvent-readonly cookie: int--><!--Device-WatchEvent-readonly cookie: int-End-->
 
@@ -44,9 +40,7 @@ Events to observe. Multiple events can be separated by vertical bars (|). - **0x
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WatchEvent-readonly event: int--><!--Device-WatchEvent-readonly event: int-End-->
 
@@ -64,9 +58,7 @@ Sandbox path of the file to observe. The sandbox path contains the file name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WatchEvent-readonly fileName: string--><!--Device-WatchEvent-readonly fileName: string-End-->
 

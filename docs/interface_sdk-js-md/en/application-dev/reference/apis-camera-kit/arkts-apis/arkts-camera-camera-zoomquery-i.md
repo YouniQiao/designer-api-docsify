@@ -4,10 +4,6 @@ ZoomQuery provides APIs to query the zoom feature of a device camera, including 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface ZoomQuery--><!--Device-camera-interface ZoomQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -27,10 +23,6 @@ getRAWCaptureZoomRatioRange(): Array<double>
 Obtains the supported zoom ratio range during shooting in RAW format.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,10 +54,6 @@ getZoomRatioRange(): Array<double>
 Obtains the supported zoom ratio range.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

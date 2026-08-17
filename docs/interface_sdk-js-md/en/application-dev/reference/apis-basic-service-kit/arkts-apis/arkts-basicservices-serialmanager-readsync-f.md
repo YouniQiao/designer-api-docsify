@@ -16,10 +16,6 @@ Reads data from the serial port device synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-serialManager-function readSync(portId: int, buffer: Uint8Array, timeout?: int): int--><!--Device-serialManager-function readSync(portId: int, buffer: Uint8Array, timeout?: int): int-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -28,7 +24,7 @@ Reads data from the serial port device synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getPortList). |
+| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 | buffer | Uint8Array | Yes | Buffer for reading data, with a maximum length of 8192 bytes. |
 | timeout | int | No | Timeout interval.Unit: milliseconds. If the API has no data in the buffer of the target port, it returns the result after waiting for the specified time. The default value **0** indicates that the API returns the result without waiting. |
 
@@ -49,7 +45,7 @@ Reads data from the serial port device synchronously.
 | [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) | PortId does not exist. |
 | [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
 
-## Examples
+**Examples**
 
 The following sample code shows the basic process for calling the readSync API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 

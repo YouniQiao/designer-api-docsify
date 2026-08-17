@@ -4,10 +4,6 @@ Defines the camera prelaunch configuration. Currently, the configuration is used
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-camera-interface PrelaunchConfig--><!--Device-camera-interface PrelaunchConfig-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -25,10 +21,6 @@ Activation time, in minutes.
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrelaunchConfig-activeTime?: int--><!--Device-PrelaunchConfig-activeTime?: int-End-->
 
@@ -48,10 +40,6 @@ Camera device.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrelaunchConfig-cameraDevice: CameraDevice--><!--Device-PrelaunchConfig-cameraDevice: CameraDevice-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -70,10 +58,6 @@ Type of the parameter used for prelaunch.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrelaunchConfig-restoreParamType?: RestoreParamType--><!--Device-PrelaunchConfig-restoreParamType?: RestoreParamType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -91,10 +75,6 @@ Setting parameter.
 **类型：** [SettingParam](arkts-camera-camera-settingparam-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrelaunchConfig-settingParam?: SettingParam--><!--Device-PrelaunchConfig-settingParam?: SettingParam-End-->
 

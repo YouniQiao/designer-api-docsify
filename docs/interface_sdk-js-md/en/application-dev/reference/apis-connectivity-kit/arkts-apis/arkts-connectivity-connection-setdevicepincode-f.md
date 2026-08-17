@@ -16,10 +16,6 @@ Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -47,7 +43,7 @@ Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,10 +67,6 @@ function setDevicePinCode(deviceId: string, code: string): Promise<void>
 Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -108,7 +100,7 @@ Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

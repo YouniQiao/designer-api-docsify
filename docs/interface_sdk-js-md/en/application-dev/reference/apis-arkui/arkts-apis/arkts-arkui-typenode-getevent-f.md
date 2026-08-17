@@ -10,10 +10,6 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -35,7 +31,7 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 | --- | --- |
 | UIScrollEvent | UIScrollEvent** object for the **Scroll** node, or **undefined** if it fails to be obtained. |
 
-## Examples
+**Examples**
 
 See Scroll Event Example.
 
@@ -49,10 +45,6 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 Obtains the **UIListEvent** object associated with the **List** node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,7 +67,7 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 | --- | --- |
 | UIListEvent | UIListEvent** object for the **List** node, or **undefined** if it fails to be obtained. |
 
-## Examples
+**Examples**
 
 See Scroll Event Example.
 
@@ -86,13 +78,9 @@ See Scroll Event Example.
 function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined
 ```
 
-Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-typenode-waterflow-t.md#WaterFlow) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
+Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-typenode-waterflow-t.md#waterflow) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,7 +103,7 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 | --- | --- |
 | UIWaterFlowEvent | UIWaterFlowEvent** object for the **WaterFlow** node, or **undefined** if it fails to be obtained. |
 
-## Examples
+**Examples**
 
 See Scroll Event Example.
 
@@ -129,10 +117,6 @@ function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined
 Obtains the **UIGridEvent** object associated with the **Grid** node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -155,7 +139,7 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 | --- | --- |
 | UIGridEvent | UIGridEvent** object for the **Grid** node, or **undefined** if it fails to be obtained. |
 
-## Examples
+**Examples**
 
 See Scroll Event Example.
 

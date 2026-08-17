@@ -4,11 +4,9 @@ Defines the type of data to return for a subscription to data changes of the acc
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#ACCELEROMETER)
+**Substitutes:** [ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#accelerometer)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -54,11 +52,9 @@ Callback invoked when an API call fails.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -79,8 +75,6 @@ Execution frequency of the callback for returning the acceleration sensor data. 
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 
@@ -106,11 +100,9 @@ Callback invoked when the acceleration sensor data changes.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 

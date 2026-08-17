@@ -4,10 +4,6 @@ The **RenderNode** module provides APIs for creating a RenderNode in custom draw
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export class RenderNode--><!--Device-unnamed-export class RenderNode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ appendChild(node: RenderNode): void
 Appends a child node to this RenderNode.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +38,7 @@ Appends a child node to this RenderNode.
 | --- | --- |
 | [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: its corresponding FrameNode cannot be adopted."<br>**Applicable version:** 22 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -109,10 +101,6 @@ Clears all child nodes of this RenderNode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -121,7 +109,7 @@ Clears all child nodes of this RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -182,10 +170,6 @@ Constructor used to create a RenderNode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -194,7 +178,7 @@ Constructor used to create a RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -247,10 +231,6 @@ Releases this RenderNode immediately.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -259,7 +239,7 @@ Releases this RenderNode immediately.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -319,13 +299,9 @@ struct Index {
 draw(context: DrawContext): void
 ```
 
-Performs drawing. You need to implement this API. It is called when the RenderNode performs drawing. Note: The Canvas provided in the [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md#DrawContext) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-renderNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas). > **NOTE：**> > During RenderNode initialization, the **draw** method is invoked twice. The first call occurs when the FrameNode > is initially created, triggering the rendering process. The second call occurs when the modifier is initially > set, which triggers drawing. All subsequent drawing processes are triggered by the modifier.
+Performs drawing. You need to implement this API. It is called when the RenderNode performs drawing. Note: The Canvas provided in the [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md#drawcontext) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-renderNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas). > **NOTE：**> > During RenderNode initialization, the **draw** method is invoked twice. The first call occurs when the FrameNode > is initially created, triggering the rendering process. The second call occurs when the modifier is initially > set, which triggers drawing. All subsequent drawing processes are triggered by the modifier.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -341,7 +317,7 @@ Performs drawing. You need to implement this API. It is called when the RenderNo
 | --- | --- | --- | --- |
 | context | [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md) | Yes | Graphics drawing context. |
 
-## Examples
+**Examples**
 
 Code in ArkTS:
 
@@ -494,10 +470,6 @@ Obtains the child node in the specified position of this RenderNode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -518,7 +490,7 @@ Obtains the child node in the specified position of this RenderNode.
 | --- | --- |
 | [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | Child node obtained. If the RenderNode does not contain the specified child node, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -589,10 +561,6 @@ Obtains the first child node of this RenderNode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -607,7 +575,7 @@ Obtains the first child node of this RenderNode.
 | --- | --- |
 | [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | First child node. If the RenderNode does not contain any child node, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -683,10 +651,6 @@ Obtains the next sibling node of this RenderNode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -701,7 +665,7 @@ Obtains the next sibling node of this RenderNode.
 | --- | --- |
 | [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | Next sibling node of the current RenderNode. If the RenderNode does not have the next sibling node, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -778,10 +742,6 @@ Obtains the previous sibling node of this RenderNode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -796,7 +756,7 @@ Obtains the previous sibling node of this RenderNode.
 | --- | --- |
 | [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | Previous sibling node of the current RenderNode. If the RenderNode does not have the previous sibling node, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -873,10 +833,6 @@ Inserts a child node after the specified child node of this RenderNode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -898,7 +854,7 @@ Inserts a child node after the specified child node of this RenderNode.
 | --- | --- |
 | [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: its corresponding FrameNode cannot be adopted."<br>**Applicable version:** 22 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -974,10 +930,6 @@ Triggers the re-rendering of this RenderNode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -986,7 +938,7 @@ Triggers the re-rendering of this RenderNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import bridge from "libentry.so"; // This .so file is compiled from your Node-API implementation.
@@ -1059,10 +1011,6 @@ Checks whether this RenderNode object has released its reference to its backend 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1077,7 +1025,7 @@ Checks whether this RenderNode object has released its reference to its backend 
 | --- | --- |
 | boolean | Whether the reference to the backend node is released. The value **true** means that the reference to backend node is released, and **false** means the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -1166,10 +1114,6 @@ Deletes the specified child node from this RenderNode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1184,7 +1128,7 @@ Deletes the specified child node from this RenderNode.
 | --- | --- | --- | --- |
 | node | [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | Yes | Child node to delete. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController } from '@kit.ArkUI';

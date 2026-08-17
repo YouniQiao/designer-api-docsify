@@ -2,11 +2,9 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [I18NUtil](arkts-localization-i18n-i18nutil-c.md#I18NUtil)
+**替代接口：** [I18NUtil](arkts-localization-i18n-i18nutil-c.md#i18nutil)
 
 <!--Device-i18n-export interface Util--><!--Device-i18n-export interface Util-End-->
 
@@ -22,11 +20,9 @@ unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string,
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [unitConvert](arkts-localization-i18n-i18nutil-c.md#unitConvert)
+**替代接口：** [unitConvert](arkts-localization-i18n-i18nutil-c.md#unitconvert)
 
 <!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
 

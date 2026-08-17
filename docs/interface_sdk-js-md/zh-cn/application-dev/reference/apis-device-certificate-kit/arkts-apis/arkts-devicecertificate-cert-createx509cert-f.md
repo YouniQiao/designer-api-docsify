@@ -10,10 +10,6 @@ function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-cert-function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert>): void--><!--Device-cert-function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert>): void-End-->
@@ -25,18 +21,18 @@ function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X.509证书序列化数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt; | 是 | 回调函数。当创建X.509证书对象成功时，err为undefined，data为获取到的 X509Cert实例；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt; | 是 | 回调函数。当创建X.509证书对象成功时，err为undefined，data为获取到的 X509Cert实例；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： <br>1. 必填参数未指定； <br>2. 参数类型不正确； <br>3. 参数校验失败。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该操作。 |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | This operation is not supported. |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -87,10 +83,6 @@ function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-cert-function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>--><!--Device-cert-function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>-End-->
@@ -113,12 +105,12 @@ function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： <br>1. 必填参数未指定； <br>2. 参数类型不正确； <br>3. 参数校验失败。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该操作。 |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | This operation is not supported. |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -4,10 +4,6 @@ The **OffscreenCanvas** component is used to draw custom graphics. When the Canv
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class OffscreenCanvas--><!--Device-unnamed-declare class OffscreenCanvas-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ constructor(width: number, height: number)
 Constructs an OffscreenCanvas for creating an offscreen canvas object.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,10 +43,6 @@ Constructs an **OffscreenCanvas** object for creating an offscreen canvas object
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -71,7 +59,7 @@ Constructs an **OffscreenCanvas** object for creating an offscreen canvas object
 | --- | --- | --- | --- |
 | width | number | Yes | Width of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
 | height | number | Yes | Height of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
-| unit | LengthMetricsUnit | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT**. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT**. |
 
 ## getContext
 
@@ -82,10 +70,6 @@ getContext(contextType: "2d", options?: RenderingContextSettings): OffscreenCanv
 Obtains the drawing context of the offscreen canvas.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +102,6 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -148,10 +128,6 @@ Height of the offscreen canvas. Default unit: vp
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -171,10 +147,6 @@ Width of the offscreen canvas. Default unit: vp
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,10 +4,6 @@ EventHub is an event communication mechanism based on the publish-subscribe patt
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class EventHub--><!--Device-unnamed-declare class EventHub-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -21,10 +17,6 @@ emit(event: string, ...args: Object[]): void
 Trigger the event callbacks.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,7 +39,7 @@ Trigger the event callbacks.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -92,10 +84,6 @@ Trigger the event callbacks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EventHub-emit(event: string, ...args: (Object|null|undefined)[]): void--><!--Device-EventHub-emit(event: string, ...args: (Object|null|undefined)[]): void-End-->
@@ -119,10 +107,6 @@ Unsubscribes from an event. - If **callback** is specified, this API unsubscribe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -144,7 +128,7 @@ Unsubscribes from an event. - If **callback** is specified, this API unsubscribe
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -184,10 +168,6 @@ on(event: string, callback: Function): void
 Subscribes to an event. > **NOTE：**> > When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of > **this** in **callback**, use an arrow function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

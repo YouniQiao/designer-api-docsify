@@ -8,10 +8,6 @@ Mission snapshot corresponding to mission.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-missionManager-export type MissionSnapshot = _MissionSnapshot--><!--Device-missionManager-export type MissionSnapshot = _MissionSnapshot-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission

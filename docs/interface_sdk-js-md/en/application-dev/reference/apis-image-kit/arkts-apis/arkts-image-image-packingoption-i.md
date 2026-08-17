@@ -4,10 +4,6 @@ Describes the options for image encoding.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface PackingOption--><!--Device-image-interface PackingOption-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -30,10 +26,6 @@ The background color used when the image pixels are in RGBA format but the targe
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PackingOption-backgroundColor?: int--><!--Device-PackingOption-backgroundColor?: int-End-->
@@ -46,15 +38,11 @@ The background color used when the image pixels are in RGBA format but the targe
 bufferSize?: int
 ```
 
-Size of the buffer for receiving the encoded data, in bytes. If this parameter is not set, the default value 25 MB is used. If the size of an image exceeds 25 MB, you must specify the size. The value of **bufferSize** must be greater than the size of the encoded image. The use of [packToFile](arkts-image-image-imagepacker-i.md#packToFile) is not restricted by this parameter.
+Size of the buffer for receiving the encoded data, in bytes. If this parameter is not set, the default value 25 MB is used. If the size of an image exceeds 25 MB, you must specify the size. The value of **bufferSize** must be greater than the size of the encoded image. The use of [packToFile](arkts-image-image-imagepacker-i.md#packtofile) is not restricted by this parameter.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Desired dynamic range. The default value is **SDR**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PackingOption-desiredDynamicRange?: PackingDynamicRange--><!--Device-PackingOption-desiredDynamicRange?: PackingDynamicRange-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -93,10 +77,6 @@ Format of the packed image. Currently, only the following formats are supported:
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -116,10 +96,6 @@ This parameter is valid only when needsPackProperties is set to true. It specifi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PackingOption-maxEmbedThumbnailDimension?: int--><!--Device-PackingOption-maxEmbedThumbnailDimension?: int-End-->
@@ -137,10 +113,6 @@ Indicates whether to carry GPS information when encoding the EXIF metadata. Defa
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,10 +132,6 @@ Whether encoding image property information, for example, Exif, is required. **t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PackingOption-needsPackProperties?: boolean--><!--Device-PackingOption-needsPackProperties?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -179,10 +147,6 @@ Quality of the output image set. This parameter takes effect only for JPEG and H
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,10 +166,6 @@ Packing image size limit.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PackingOption-sizeLimit?: PackingSizeLimit--><!--Device-PackingOption-sizeLimit?: PackingSizeLimit-End-->
@@ -223,10 +183,6 @@ Options for tiff image packing.
 **Type:** [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

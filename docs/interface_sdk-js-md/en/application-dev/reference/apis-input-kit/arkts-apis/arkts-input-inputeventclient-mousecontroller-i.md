@@ -4,10 +4,6 @@ Provides the capability of simulating mouse operations. The simulated mouse oper
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-inputEventClient-interface MouseController--><!--Device-inputEventClient-interface MouseController-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -27,10 +23,6 @@ beginAxis(axis: Axis, value: int): Promise<void>
 Starts an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -71,10 +63,6 @@ Ends an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -112,10 +100,6 @@ moveTo(displayId: int, displayX: int, displayY: int): Promise<void>
 Moves the mouse cursor to the specified display coordinates. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -157,10 +141,6 @@ Presses a mouse button. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -199,10 +179,6 @@ Release a mouse button. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -240,10 +216,6 @@ updateAxis(axis: Axis, value: int): Promise<void>
 Updates an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 

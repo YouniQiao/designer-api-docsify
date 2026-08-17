@@ -10,10 +10,6 @@ function openCertificateManagerDialog(context: common.Context, pageType: Certifi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -43,7 +39,7 @@ function openCertificateManagerDialog(context: common.Context, pageType: Certifi
 | [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';

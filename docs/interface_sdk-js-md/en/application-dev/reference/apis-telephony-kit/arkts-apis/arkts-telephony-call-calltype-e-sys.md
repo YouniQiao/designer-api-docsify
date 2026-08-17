@@ -4,10 +4,6 @@ Enumerates call types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export enum CallType--><!--Device-call-export enum CallType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -23,10 +19,6 @@ TYPE_CS = 0
 CS call.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallType-TYPE_CS = 0--><!--Device-CallType-TYPE_CS = 0-End-->
 
@@ -44,10 +36,6 @@ IMS call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallType-TYPE_IMS = 1--><!--Device-CallType-TYPE_IMS = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -63,10 +51,6 @@ TYPE_OTT = 2
 OTT call.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallType-TYPE_OTT = 2--><!--Device-CallType-TYPE_OTT = 2-End-->
 
@@ -84,10 +68,6 @@ Error call type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallType-TYPE_ERR_CALL = 3--><!--Device-CallType-TYPE_ERR_CALL = 3-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -104,10 +84,6 @@ VoIP call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallType-TYPE_VOIP = 4--><!--Device-CallType-TYPE_VOIP = 4-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -123,10 +99,6 @@ TYPE_XCALL = 5
 X-Call.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-CallType-TYPE_XCALL = 5--><!--Device-CallType-TYPE_XCALL = 5-End-->
 

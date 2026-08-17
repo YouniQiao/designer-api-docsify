@@ -6,8 +6,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
 **废弃版本：** 12
 
 **替代接口：** XComponent
@@ -25,8 +23,6 @@ changeRenderType(type: NodeRenderType): boolean
 设置builderNode的渲染类型。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
 **废弃版本：** 12
 
@@ -61,8 +57,6 @@ constructor(uiContext: UIContext, options: RenderOptions,
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
 **废弃版本：** 12
 
 **替代接口：** createNode
@@ -77,7 +71,7 @@ constructor(uiContext: UIContext, options: RenderOptions,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 用于创建FrameNode的UIContext |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 用于创建FrameNode的UIContext |
 | options | [RenderOptions](../../apis-na/arkts-apis/arkts-na-buildernode-renderoptions-i.md) | 是 | Builder Node的渲染选项 |
 | id | string | 是 | 应用定义的XComponent id |
 | type | XComponentType | 是 | XComponent类型 |
@@ -92,8 +86,6 @@ onCreate(event?: Object): void
 当XComponent的surface创建完成时回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
 **废弃版本：** 12
 
@@ -120,8 +112,6 @@ onDestroy(): void
 当XComponent的surface被销毁时回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
 **废弃版本：** 12
 

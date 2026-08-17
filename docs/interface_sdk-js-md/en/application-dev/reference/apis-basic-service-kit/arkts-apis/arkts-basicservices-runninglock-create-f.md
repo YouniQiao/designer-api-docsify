@@ -12,13 +12,9 @@ import { runningLock } from 'runningLock';
 function create(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void
 ```
 
-Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses an asynchronous callback to return the result.
+Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#runninglock) object. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -41,7 +37,7 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#Running
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error, lock: runningLock.RunningLock) => {
@@ -60,13 +56,9 @@ runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SC
 function create(name: string, type: RunningLockType): Promise<RunningLock>
 ```
 
-Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses a promise to return the result.
+Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#runninglock) object. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -94,7 +86,7 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#Running
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL)

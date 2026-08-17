@@ -4,10 +4,6 @@ Enumerates the types of ability components.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export enum AbilityType--><!--Device-bundleManager-export enum AbilityType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -21,10 +17,6 @@ PAGE = 1
 Ability that has the UI. FA developed using the Page template to provide the capability of interacting with users.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,10 +34,6 @@ Ability of the background service type, without the UI. PA developed using the S
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AbilityType-SERVICE = 2--><!--Device-AbilityType-SERVICE = 2-End-->
@@ -61,10 +49,6 @@ DATA = 3
 PA developed using the Data template to provide unified data access for external systems.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

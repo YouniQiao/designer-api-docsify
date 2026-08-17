@@ -16,8 +16,6 @@ Set the current Wi-Fi power mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
@@ -40,7 +38,7 @@ Set the current Wi-Fi power mode.
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManagerExt } from '@kit.ConnectivityKit';

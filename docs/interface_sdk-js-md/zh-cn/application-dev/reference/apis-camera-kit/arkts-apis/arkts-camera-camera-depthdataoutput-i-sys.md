@@ -1,14 +1,10 @@
 # DepthDataOutput（系统接口）
 
-Implements depth data output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
+Implements depth data output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput).
 
-**继承/实现关系：** DepthDataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
+**继承/实现关系：** DepthDataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-camera-interface DepthDataOutput--><!--Device-camera-interface DepthDataOutput-End-->
 
@@ -26,10 +22,6 @@ Unsubscribes from depth data objects available event callback.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DepthDataOutput-offDepthDataAvailable(callback?: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-offDepthDataAvailable(callback?: AsyncCallback<DepthData>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -40,7 +32,7 @@ Unsubscribes from depth data objects available event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 否 | Callback used to get the available DepthData objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 否 | Callback used to get the available DepthData objects. |
 
 **错误码：**
 
@@ -58,10 +50,6 @@ Unsubscribes from error events.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DepthDataOutput-offError(callback?: ErrorCallback): void--><!--Device-DepthDataOutput-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -72,7 +60,7 @@ Unsubscribes from error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the depth data output errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | Callback used to get the depth data output errors. |
 
 **错误码：**
 
@@ -90,10 +78,6 @@ Unsubscribes from depth data availability events.
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 <!--Device-DepthDataOutput-off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -105,7 +89,7 @@ Unsubscribes from depth data availability events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'depthDataAvailable' | 是 | Event type. The value is fixed at **'depthDataAvailable'**. The event can be listened for when a depthDataOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 否 | Callback used to return the result. If this parameter is specified , the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 否 | Callback used to return the result. If this parameter is specified , the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 **错误码：**
 
@@ -113,7 +97,7 @@ Unsubscribes from depth data availability events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -140,10 +124,6 @@ Unsubscribes from DepthDataOutput error events.
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 <!--Device-DepthDataOutput-off(type: 'error', callback?: ErrorCallback): void--><!--Device-DepthDataOutput-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -155,7 +135,7 @@ Unsubscribes from DepthDataOutput error events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | Event type. The value is fixed at **'error'**. The event can be listened for when a depthDataOutput instance is created. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 **错误码：**
 
@@ -163,7 +143,7 @@ Unsubscribes from DepthDataOutput error events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 function unregisterDepthDataOutputError(depthDataOutput: camera.DepthDataOutput): void {
@@ -181,10 +161,6 @@ Subscribes to depth data objects available event callback.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DepthDataOutput-onDepthDataAvailable(callback: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-onDepthDataAvailable(callback: AsyncCallback<DepthData>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -195,7 +171,7 @@ Subscribes to depth data objects available event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 是 | Callback used to get the available DepthData objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 是 | Callback used to get the available DepthData objects. |
 
 **错误码：**
 
@@ -213,10 +189,6 @@ Subscribes to error events.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DepthDataOutput-onError(callback: ErrorCallback): void--><!--Device-DepthDataOutput-onError(callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -227,7 +199,7 @@ Subscribes to error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the depth data output errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | Callback used to get the depth data output errors. |
 
 **错误码：**
 
@@ -245,10 +217,6 @@ Subscribes to depth data availability events. This API uses an asynchronous call
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 <!--Device-DepthDataOutput-on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -260,7 +228,7 @@ Subscribes to depth data availability events. This API uses an asynchronous call
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'depthDataAvailable' | 是 | Event type. The value is fixed at **'depthDataAvailable'**. The event can be listened for when a depthDataOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 是 | Callback used to listen for depth data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DepthData](arkts-camera-camera-depthdata-i-sys.md)&gt; | 是 | Callback used to listen for depth data. |
 
 **错误码：**
 
@@ -268,7 +236,7 @@ Subscribes to depth data availability events. This API uses an asynchronous call
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -295,10 +263,6 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 <!--Device-DepthDataOutput-on(type: 'error', callback: ErrorCallback): void--><!--Device-DepthDataOutput-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -310,7 +274,7 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | Event type. The value is fixed at **'error'**. The event can be listened for when a depthDataOutput instance is created. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 **错误码：**
 
@@ -318,7 +282,7 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -342,10 +306,6 @@ Starts depth data output. This API uses a promise to return the result.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DepthDataOutput-start(): Promise<void>--><!--Device-DepthDataOutput-start(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -366,7 +326,7 @@ Starts depth data output. This API uses a promise to return the result.
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -390,10 +350,6 @@ Stops depth data output. This API uses a promise to return the result.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DepthDataOutput-stop(): Promise<void>--><!--Device-DepthDataOutput-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -414,7 +370,7 @@ Stops depth data output. This API uses a promise to return the result.
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

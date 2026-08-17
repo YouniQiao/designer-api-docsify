@@ -4,10 +4,6 @@ LinkedList is implemented based on the doubly linked list. Each node of the doub
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class LinkedList--><!--Device-unnamed-declare class LinkedList-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<T>
 returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-[Symbol.iterator](): IterableIterator<T>--><!--Device-LinkedList-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -76,7 +64,7 @@ returns an iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -117,10 +105,6 @@ Adds an element at the end of this LinkedList.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-add(element: T): boolean--><!--Device-LinkedList-add(element: T): boolean-End-->
@@ -145,7 +129,7 @@ Adds an element at the end of this LinkedList.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -173,10 +157,6 @@ Adds an element at the top of this LinkedList.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-addFirst(element: T): void--><!--Device-LinkedList-addFirst(element: T): void-End-->
@@ -195,7 +175,7 @@ Adds an element at the top of this LinkedList.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The addFirst method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -224,10 +204,6 @@ Clears this LinkedList and sets its length to **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-clear(): void--><!--Device-LinkedList-clear(): void-End-->
@@ -240,7 +216,7 @@ Clears this LinkedList and sets its length to **0**.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -263,10 +239,6 @@ Clones an instance identical to this **LinkedList** and returns it. The modifica
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-clone(): LinkedList<T>--><!--Device-LinkedList-clone(): LinkedList<T>-End-->
@@ -285,7 +257,7 @@ Clones an instance identical to this **LinkedList** and returns it. The modifica
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clone method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -307,10 +279,6 @@ A constructor used to create a **LinkedList** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-constructor()--><!--Device-LinkedList-constructor()-End-->
@@ -323,7 +291,7 @@ A constructor used to create a **LinkedList** instance.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The LinkedList's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -338,10 +306,6 @@ convertToArray(): Array<T>
 Converts this LinkedList into an array and returns the array.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -361,7 +325,7 @@ Converts this LinkedList into an array and returns the array.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The convertToArray method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -383,10 +347,6 @@ Uses a callback to traverse the elements in this LinkedList and obtain their ind
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void--><!--Device-LinkedList-forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void-End-->
@@ -406,7 +366,7 @@ Uses a callback to traverse the elements in this LinkedList and obtain their ind
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -433,10 +393,6 @@ Replaces each element of this linkedList with the result of applying the operato
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -461,10 +417,6 @@ Obtains an element at the specified position in this LinkedList.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-get(index: int): T--><!--Device-LinkedList-get(index: int): T-End-->
@@ -488,9 +440,9 @@ Obtains an element at the specified position in this LinkedList.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -515,10 +467,6 @@ Obtains the first element in this LinkedList.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-getFirst(): T--><!--Device-LinkedList-getFirst(): T-End-->
@@ -536,9 +484,9 @@ Obtains the first element in this LinkedList.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -559,10 +507,6 @@ getIndexOf(element: T): int
 Obtains the index of the first occurrence of the specified element in this LinkedList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -588,7 +532,7 @@ Obtains the index of the first occurrence of the specified element in this Linke
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -613,10 +557,6 @@ Obtains the last element in this LinkedList.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-getLast(): T--><!--Device-LinkedList-getLast(): T-End-->
@@ -634,9 +574,9 @@ Obtains the last element in this LinkedList.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -657,10 +597,6 @@ getLastIndexOf(element: T): int
 Obtains the index of the last occurrence of the specified element in this LinkedList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -686,7 +622,7 @@ Obtains the index of the last occurrence of the specified element in this Linked
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -710,10 +646,6 @@ has(element: T): boolean
 Checks whether this LinkedList has the specified element.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -739,7 +671,7 @@ Checks whether this LinkedList has the specified element.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<string>();
@@ -757,10 +689,6 @@ insert(index: int, element: T): void
 Inserts an element at the specified position in this LinkedList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -782,7 +710,7 @@ Inserts an element at the specified position in this LinkedList.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insert method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -802,10 +730,6 @@ remove(element: T): boolean
 Removes the first occurrence of the specified element from this LinkedList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -831,7 +755,7 @@ Removes the first occurrence of the specified element from this LinkedList.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -852,10 +776,6 @@ removeByIndex(index: number): T
 Searches for an element based on its index and then removes it.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -882,7 +802,7 @@ Searches for an element based on its index and then removes it.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByIndex method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -904,10 +824,6 @@ removeByIndex(index: int): T | undefined
 Removes and returns the element at the specified index in this linkedlist.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -944,10 +860,6 @@ Removes the first element from this LinkedList.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-removeFirst(): T--><!--Device-LinkedList-removeFirst(): T-End-->
@@ -967,7 +879,7 @@ Removes the first element from this LinkedList.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeFirst method cannot be bound. |
 | [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -989,10 +901,6 @@ removeFirst(): T | undefined
 Retrieves and removes the head (first element) of this linkedList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1022,10 +930,6 @@ Removes the first occurrence of the specified element from this LinkedList.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-removeFirstFound(element: T): boolean--><!--Device-LinkedList-removeFirstFound(element: T): boolean-End-->
@@ -1052,7 +956,7 @@ Removes the first occurrence of the specified element from this LinkedList.
 | [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
 | [10200017](../errorcode-utils.md#10200017-failed-to-delete-an-element-that-does-not-exist) | The element does not exist in this container. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -1074,10 +978,6 @@ Removes the last element from this LinkedList.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-removeLast(): T--><!--Device-LinkedList-removeLast(): T-End-->
@@ -1097,7 +997,7 @@ Removes the last element from this LinkedList.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeLast method cannot be bound. |
 | [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -1119,10 +1019,6 @@ removeLast(): T | undefined
 Removes and returns the last element from this linkedList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1152,10 +1048,6 @@ Removes the last occurrence of the specified element from this LinkedList.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LinkedList-removeLastFound(element: T): boolean--><!--Device-LinkedList-removeLastFound(element: T): boolean-End-->
@@ -1182,7 +1074,7 @@ Removes the last occurrence of the specified element from this LinkedList.
 | [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
 | [10200017](../errorcode-utils.md#10200017-failed-to-delete-an-element-that-does-not-exist) | The element does not exist in this container. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -1203,10 +1095,6 @@ set(index: int, element: T): T
 Replaces an element at the specified position in this LinkedList with a given element.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1232,10 +1120,10 @@ Replaces an element at the specified position in this LinkedList with a given el
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let linkedList = new LinkedList<number | string>();
@@ -1258,10 +1146,6 @@ Number of elements in a LinkedList.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

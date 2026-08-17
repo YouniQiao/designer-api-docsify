@@ -4,10 +4,6 @@ Provides the file information of a table item.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-interface FileSpec--><!--Device-agent-interface FileSpec-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -30,10 +26,6 @@ Content type of the file. The default value is the file name extension. This opt
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FileSpec-contentType?: string--><!--Device-FileSpec-contentType?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -50,10 +42,6 @@ The extras for the file information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FileSpec-extras?: Record<string, string>--><!--Device-FileSpec-extras?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -69,10 +57,6 @@ File name. The default value is obtained from the file path.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -92,11 +76,9 @@ MIME type of the file, which is obtained from the file name. The default value i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 18
 
-**Substitutes:** [contentType](#contentType)
+**Substitutes:** [contentType](#contenttype)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -115,10 +97,6 @@ File path. - Relative path, which is in the cache directory of the caller. Examp
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -16,8 +16,6 @@ Checks whether a user is allowed to set wallpapers. Returns true if a user is al
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-wallpaper-function isOperationAllowed(callback: AsyncCallback<boolean>): void--><!--Device-wallpaper-function isOperationAllowed(callback: AsyncCallback<boolean>): void-End-->
@@ -30,7 +28,7 @@ Checks whether a user is allowed to set wallpapers. Returns true if a user is al
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isOperationAllowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -55,8 +53,6 @@ Checks whether a user is allowed to set wallpapers. Returns true if a user is al
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-wallpaper-function isOperationAllowed(): Promise<boolean>--><!--Device-wallpaper-function isOperationAllowed(): Promise<boolean>-End-->
@@ -69,7 +65,7 @@ Checks whether a user is allowed to set wallpapers. Returns true if a user is al
 | --- | --- |
 | Promise&lt;boolean&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

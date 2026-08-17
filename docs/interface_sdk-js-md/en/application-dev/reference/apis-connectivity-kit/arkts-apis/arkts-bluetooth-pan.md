@@ -4,10 +4,6 @@ Provides methods to accessing bluetooth PAN(Personal Area Networking Profile)-re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace pan--><!--Device-unnamed-declare namespace pan-End-->
@@ -26,7 +22,7 @@ import { pan } from 'pan';
 
 | Name | Description |
 | --- | --- |
-| [createPanProfile](arkts-connectivity-pan-createpanprofile-f.md#createPanProfile) | create the instance of pan profile. |
+| [createPanProfile](arkts-connectivity-pan-createpanprofile-f.md#createpanprofile) | create the instance of pan profile. |
 
 ### Interfaces
 

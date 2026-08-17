@@ -16,10 +16,6 @@ Injects a mouse/touchpad event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 12+: ohos.permission.INJECT_INPUT_EVENT
 
@@ -33,7 +29,7 @@ Injects a mouse/touchpad event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mouseEvent | [MouseEventData](arkts-input-inputeventclient-mouseeventdata-i-sys.md) | Yes | Mouse/touchpad event to inject. [Action](arkts-input-multimodalinput-mouseevent-action-e.md#Action) in this parameter cannot be set to **CANCEL**. |
+| mouseEvent | [MouseEventData](arkts-input-inputeventclient-mouseeventdata-i-sys.md) | Yes | Mouse/touchpad event to inject. [Action](arkts-input-multimodalinput-mouseevent-action-e.md#action) in this parameter cannot be set to **CANCEL**. |
 
 **Error codes:**
 
@@ -43,7 +39,7 @@ Injects a mouse/touchpad event.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';

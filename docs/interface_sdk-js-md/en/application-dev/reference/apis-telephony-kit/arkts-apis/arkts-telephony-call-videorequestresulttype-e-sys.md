@@ -4,10 +4,6 @@ Enumerates video call upgrade or downgrade request types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export enum VideoRequestResultType--><!--Device-call-export enum VideoRequestResultType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -23,10 +19,6 @@ TYPE_REQUEST_SUCCESS = 0
 Success.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoRequestResultType-TYPE_REQUEST_SUCCESS = 0--><!--Device-VideoRequestResultType-TYPE_REQUEST_SUCCESS = 0-End-->
 
@@ -44,10 +36,6 @@ Failed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoRequestResultType-TYPE_REQUEST_FAILURE = 1--><!--Device-VideoRequestResultType-TYPE_REQUEST_FAILURE = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -63,10 +51,6 @@ TYPE_REQUEST_INVALID = 2
 Invalid request.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoRequestResultType-TYPE_REQUEST_INVALID = 2--><!--Device-VideoRequestResultType-TYPE_REQUEST_INVALID = 2-End-->
 
@@ -84,10 +68,6 @@ Request timeout.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoRequestResultType-TYPE_REQUEST_TIMED_OUT = 3--><!--Device-VideoRequestResultType-TYPE_REQUEST_TIMED_OUT = 3-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -103,10 +83,6 @@ TYPE_REQUEST_REJECTED_BY_REMOTE = 4
 Request denied.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoRequestResultType-TYPE_REQUEST_REJECTED_BY_REMOTE = 4--><!--Device-VideoRequestResultType-TYPE_REQUEST_REJECTED_BY_REMOTE = 4-End-->
 
@@ -124,10 +100,6 @@ Upgrade request canceled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoRequestResultType-TYPE_REQUEST_UPGRADE_CANCELED = 5--><!--Device-VideoRequestResultType-TYPE_REQUEST_UPGRADE_CANCELED = 5-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -144,10 +116,6 @@ RTP or RTCP downgrade timeout.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoRequestResultType-TYPE_DOWNGRADE_RTP_OR_RTCP_TIMEOUT = 100--><!--Device-VideoRequestResultType-TYPE_DOWNGRADE_RTP_OR_RTCP_TIMEOUT = 100-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -163,10 +131,6 @@ TYPE_DOWNGRADE_RTP_AND_RTCP_TIMEOUT = 101
 RTP and RTCP downgrade timeout.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoRequestResultType-TYPE_DOWNGRADE_RTP_AND_RTCP_TIMEOUT = 101--><!--Device-VideoRequestResultType-TYPE_DOWNGRADE_RTP_AND_RTCP_TIMEOUT = 101-End-->
 

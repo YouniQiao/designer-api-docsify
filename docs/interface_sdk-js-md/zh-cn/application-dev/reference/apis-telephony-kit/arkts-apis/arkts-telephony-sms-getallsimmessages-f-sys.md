@@ -10,10 +10,6 @@ function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMe
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RECEIVE_SMS
 
 <!--Device-sms-function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMessage>>): void--><!--Device-sms-function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMessage>>): void-End-->
@@ -27,7 +23,7 @@ function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[SimShortMessage](arkts-telephony-sms-simshortmessage-i-sys.md)&gt;&gt; | 是 | 获取所有SIM卡消息的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[SimShortMessage](arkts-telephony-sms-simshortmessage-i-sys.md)&gt;&gt; | 是 | 获取所有SIM卡消息的回调函数。 |
 
 **错误码：**
 
@@ -41,7 +37,7 @@ function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMe
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -63,10 +59,6 @@ function getAllSimMessages(slotId: int): Promise<Array<SimShortMessage>>
 获取所有SIM卡消息。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.RECEIVE_SMS
 
@@ -100,7 +92,7 @@ function getAllSimMessages(slotId: int): Promise<Array<SimShortMessage>>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

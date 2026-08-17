@@ -4,10 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 <!--Device-contact-interface FilterClause--><!--Device-contact-interface FilterClause-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
@@ -23,10 +19,6 @@ dataItem?: DataFilter
 **类型：** [DataFilter](arkts-contacts-contact-datafilter-i.md)
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ focusModeList?: Array<FilterOptions>
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FilterClause-focusModeList?: Array<FilterOptions>--><!--Device-FilterClause-focusModeList?: Array<FilterOptions>-End-->
@@ -68,10 +56,6 @@ id?: Array<FilterOptions>
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FilterClause-id?: Array<FilterOptions>--><!--Device-FilterClause-id?: Array<FilterOptions>-End-->
@@ -89,10 +73,6 @@ name?: Array<FilterOptions>
 **类型：** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

@@ -1,12 +1,8 @@
 # ProtectedResourceType
 
-定义可访问的资源类型，与 onPermissionRequest 方法相关。
+ProtectedResourceType 枚举定义了 Web 组件需要访问的受保护资源类型，用于控制MIDI、相机、麦克风、传感器等敏感资源的访问权限，帮助开发者在保护用户隐私的同时提供丰富的 Web 功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare enum ProtectedResourceType--><!--Device-unnamed-declare enum ProtectedResourceType-End-->
 
@@ -21,10 +17,6 @@ MidiSysex = "TYPE_MIDI_SYSEX"
 MIDI SYSEX资源。 目前仅支持权限事件上报，MIDI设备的使用还未支持。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,10 +34,6 @@ VIDEO_CAPTURE = "TYPE_VIDEO_CAPTURE"
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProtectedResourceType-VIDEO_CAPTURE = "TYPE_VIDEO_CAPTURE"--><!--Device-ProtectedResourceType-VIDEO_CAPTURE = "TYPE_VIDEO_CAPTURE"-End-->
@@ -62,10 +50,6 @@ AUDIO_CAPTURE = "TYPE_AUDIO_CAPTURE"
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProtectedResourceType-AUDIO_CAPTURE = "TYPE_AUDIO_CAPTURE"--><!--Device-ProtectedResourceType-AUDIO_CAPTURE = "TYPE_AUDIO_CAPTURE"-End-->
@@ -81,10 +65,6 @@ SENSOR = 'TYPE_SENSOR'
 传感器资源，例如加速度传感器。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -10,11 +10,9 @@ Obtains active notifications of this application. This API uses an asynchronous 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md#getActiveNotifications)
+**Substitutes:** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md#getactivenotifications)
 
 <!--Device-notification-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void--><!--Device-notification-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void-End-->
 
@@ -37,11 +35,9 @@ Obtains active notifications of this application. This API uses a promise to ret
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md#getActiveNotifications)
+**Substitutes:** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md#getactivenotifications)
 
 <!--Device-notification-function getActiveNotifications(): Promise<Array<NotificationRequest>>--><!--Device-notification-function getActiveNotifications(): Promise<Array<NotificationRequest>>-End-->
 

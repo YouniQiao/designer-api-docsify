@@ -16,10 +16,6 @@ Obtain address info from location.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-function getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void--><!--Device-geoLocationManager-function getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -40,7 +36,7 @@ Obtain address info from location.
 | [3301300](../errorcode-geoLocationManager.md#3301300-query-failed-during-reverse-geocoding) | Reverse geocoding query failed. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -75,10 +71,6 @@ Obtain address info from location.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array<GeoAddress>>--><!--Device-geoLocationManager-function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array<GeoAddress>>-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -104,7 +96,7 @@ Obtain address info from location.
 | [3301300](../errorcode-geoLocationManager.md#3301300-query-failed-during-reverse-geocoding) | Reverse geocoding query failed. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

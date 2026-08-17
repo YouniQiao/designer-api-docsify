@@ -1,14 +1,12 @@
 # VideoPlayer
 
-VideoPlayer is a class for video playback management. It provides APIs to manage and play videos. Before calling any API in VideoPlayer, you must use [createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createVideoPlayer) to create a VideoPlayer instance.
+VideoPlayer is a class for video playback management. It provides APIs to manage and play videos. Before calling any API in VideoPlayer, you must use [createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer) to create a VideoPlayer instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [media](arkts-multimedia-media.md#@ohos.multimedia.media)
+**Substitutes:** [media](arkts-multimedia-media.md#ohosmultimediamedia)
 
 <!--Device-media-interface VideoPlayer--><!--Device-media-interface VideoPlayer-End-->
 
@@ -30,11 +28,9 @@ Obtains the video track information. This API uses an asynchronous callback to r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
+**Substitutes:** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
 
 <!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
@@ -56,11 +52,9 @@ Obtains the video track information. This API uses a promise to return the resul
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)()
+**Substitutes:** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)()
 
 <!--Device-VideoPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-VideoPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
 
@@ -78,15 +72,13 @@ Obtains the video track information. This API uses a promise to return the resul
 on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 ```
 
-Subscribes to the audio interruption event. For details, see [audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#InterruptEvent).
+Subscribes to the audio interruption event. For details, see [audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#interruptevent).
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediaKeySystemInfoUpdate)(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;)
 
 <!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
 
@@ -109,11 +101,9 @@ Subscribes to the video buffering update event. This API works only under online
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediaKeySystemInfoUpdate)(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler)
 
 <!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
 
@@ -124,7 +114,7 @@ Subscribes to the video buffering update event. This API works only under online
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md#BufferingInfoType) is fixed at **0**. |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md#bufferinginfotype) is fixed at **0**. |
 
 ## on_error
 
@@ -136,11 +126,9 @@ Subscribes to video playback error events. After an error event is reported, you
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediaKeySystemInfoUpdate)(type: 'error', callback: ErrorCallback)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'error', callback: ErrorCallback)
 
 <!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -163,11 +151,9 @@ Subscribes to the video playback completion event.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediaKeySystemInfoUpdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
 <!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void-End-->
 
@@ -190,11 +176,9 @@ Subscribes to the frame rendering start event.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediaKeySystemInfoUpdate)(type: 'startRenderFrame', callback: Callback&lt;void&gt;)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'startRenderFrame', callback: Callback&lt;void&gt;)
 
 <!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void-End-->
 
@@ -217,11 +201,9 @@ Subscribes to the video width and height change event.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediaKeySystemInfoUpdate)(type: 'videoSizeChange', callback: OnVideoSizeChangeHandler)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'videoSizeChange', callback: OnVideoSizeChangeHandler)
 
 <!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void--><!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void-End-->
 
@@ -243,8 +225,6 @@ pause(callback: AsyncCallback<void>): void
 Pauses video playback. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -270,8 +250,6 @@ Pauses video playback. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [pause](arkts-media-media-avplayer-i.md#pause)()
@@ -295,8 +273,6 @@ play(callback: AsyncCallback<void>): void
 Starts video playback. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -322,8 +298,6 @@ Starts video playback. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [play](arkts-media-media-avplayer-i.md#play)()
@@ -347,8 +321,6 @@ prepare(callback: AsyncCallback<void>): void
 Prepares for video playback. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -374,8 +346,6 @@ Prepares for video playback. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [prepare](arkts-media-media-avplayer-i.md#prepare)()
@@ -399,8 +369,6 @@ release(callback: AsyncCallback<void>): void
 Releases the video playback resources. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -426,8 +394,6 @@ Releases the video playback resources. This API uses a promise to return the res
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [release](arkts-media-media-avplayer-i.md#release)()
@@ -451,8 +417,6 @@ reset(callback: AsyncCallback<void>): void
 Resets video playback. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -478,8 +442,6 @@ Resets video playback. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [reset](arkts-media-media-avplayer-i.md#reset)()
@@ -503,8 +465,6 @@ seek(timeMs: number, callback: AsyncCallback<number>): void
 Seeks to the specified playback position. The previous key frame at the specified position is played. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -531,8 +491,6 @@ Seeks to the specified playback position. This API uses an asynchronous callback
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [seek](arkts-media-media-avplayer-i.md#seek)
@@ -558,8 +516,6 @@ seek(timeMs: number, mode?: SeekMode): Promise<number>
 Seeks to the specified playback position. If **mode** is not specified, the previous key frame at the specified position is played. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -592,8 +548,6 @@ Sets a surface ID. This API uses an asynchronous callback to return the result. 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** null
@@ -618,8 +572,6 @@ setDisplaySurface(surfaceId: string): Promise<void>
 Sets a surface ID. This API uses a promise to return the result. > **NOTE：**> > - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must > be set for video streams without audio. Otherwise, the calling of **prepare** fails.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -651,11 +603,9 @@ Sets the playback speed. This API uses an asynchronous callback to return the re
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setSpeed](arkts-media-media-avplayer-i.md#setSpeed)
+**Substitutes:** [setSpeed](arkts-media-media-avplayer-i.md#setspeed)
 
 <!--Device-VideoPlayer-setSpeed(speed: number, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-setSpeed(speed: number, callback: AsyncCallback<number>): void-End-->
 
@@ -665,7 +615,7 @@ Sets the playback speed. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#PlaybackSpeed). |
+| speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#playbackspeed). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the playback speed; otherwise, **err** is an error object. |
 
 ## setSpeed
@@ -678,11 +628,9 @@ Sets the playback speed. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setSpeed](arkts-media-media-avplayer-i.md#setSpeed)
+**Substitutes:** [setSpeed](arkts-media-media-avplayer-i.md#setspeed)
 
 <!--Device-VideoPlayer-setSpeed(speed: number): Promise<number>--><!--Device-VideoPlayer-setSpeed(speed: number): Promise<number>-End-->
 
@@ -692,7 +640,7 @@ Sets the playback speed. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#PlaybackSpeed). |
+| speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#playbackspeed). |
 
 **Return value:**
 
@@ -710,11 +658,9 @@ Sets the volume. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setVolume](arkts-media-media-avplayer-i.md#setVolume)
+**Substitutes:** [setVolume](arkts-media-media-avplayer-i.md#setvolume)
 
 <!--Device-VideoPlayer-setVolume(vol: number, callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-setVolume(vol: number, callback: AsyncCallback<void>): void-End-->
 
@@ -737,11 +683,9 @@ Sets the volume. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setVolume](arkts-media-media-avplayer-i.md#setVolume)
+**Substitutes:** [setVolume](arkts-media-media-avplayer-i.md#setvolume)
 
 <!--Device-VideoPlayer-setVolume(vol: number): Promise<void>--><!--Device-VideoPlayer-setVolume(vol: number): Promise<void>-End-->
 
@@ -769,8 +713,6 @@ Stops video playback. This API uses an asynchronous callback to return the resul
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [stop](arkts-media-media-avplayer-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
@@ -794,8 +736,6 @@ stop(): Promise<void>
 Stops video playback. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -823,11 +763,9 @@ Audio interruption mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [audioInterruptMode](arkts-media-media-avplayer-i.md#audioInterruptMode)
+**Substitutes:** [audioInterruptMode](arkts-media-media-avplayer-i.md#audiointerruptmode)
 
 <!--Device-VideoPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-VideoPlayer-audioInterruptMode?: audio.InterruptMode-End-->
 
@@ -845,11 +783,9 @@ Current video playback position, in ms.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [currentTime](arkts-media-media-avplayer-i.md#currentTime)
+**Substitutes:** [currentTime](arkts-media-media-avplayer-i.md#currenttime)
 
 <!--Device-VideoPlayer-readonly currentTime: number--><!--Device-VideoPlayer-readonly currentTime: number-End-->
 
@@ -866,8 +802,6 @@ Video duration, in ms. The value **-1** indicates the live mode.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -889,11 +823,9 @@ Description of a video file. This property is required when video assets of an a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [fdSrc](arkts-media-media-avplayer-i.md#fdSrc)
+**Substitutes:** [fdSrc](arkts-media-media-avplayer-i.md#fdsrc)
 
 <!--Device-VideoPlayer-fdSrc: AVFileDescriptor--><!--Device-VideoPlayer-fdSrc: AVFileDescriptor-End-->
 
@@ -910,8 +842,6 @@ Video height, in px.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -933,8 +863,6 @@ Whether to loop video playback. **true** to loop, **false** otherwise.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [loop](arkts-media-media-avplayer-i.md#loop)
@@ -954,8 +882,6 @@ Video playback state.
 **Type:** [VideoPlayState](arkts-media-media-videoplaystate-t.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -977,8 +903,6 @@ Video URL. The video formats MP4, MPEG-TS, and MKV are supported. **Example of s
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [url](arkts-media-media-avplayer-i.md#url)
@@ -999,11 +923,9 @@ Video scale type. The default value is **VIDEO_SCALE_TYPE_FIT**.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [videoScaleType](arkts-media-media-avplayer-i.md#videoScaleType)
+**Substitutes:** [videoScaleType](arkts-media-media-avplayer-i.md#videoscaletype)
 
 <!--Device-VideoPlayer-videoScaleType?: VideoScaleType--><!--Device-VideoPlayer-videoScaleType?: VideoScaleType-End-->
 
@@ -1020,8 +942,6 @@ Video width, in px.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

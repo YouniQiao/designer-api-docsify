@@ -4,11 +4,9 @@ Enumerates the sensor types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SensorId](arkts-sensorservice-sensor-sensorid-e.md#SensorId)
+**Substitutes:** [SensorId](arkts-sensorservice-sensor-sensorid-e.md#sensorid)
 
 <!--Device-sensor-enum SensorType--><!--Device-sensor-enum SensorType-End-->
 
@@ -24,11 +22,9 @@ Acceleration sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#ACCELEROMETER)
+**Substitutes:** [ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#accelerometer)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER = 1--><!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER = 1-End-->
 
@@ -44,11 +40,9 @@ Gyroscope sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#GYROSCOPE)
+**Substitutes:** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#gyroscope)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE = 2--><!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE = 2-End-->
 
@@ -64,11 +58,9 @@ Ambient light sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#AMBIENT_LIGHT)
+**Substitutes:** [AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#ambientlight)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_LIGHT = 5--><!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_LIGHT = 5-End-->
 
@@ -84,11 +76,9 @@ Magnetic field sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MAGNETIC_FIELD](arkts-sensorservice-sensor-sensorid-e.md#MAGNETIC_FIELD)
+**Substitutes:** [MAGNETIC_FIELD](arkts-sensorservice-sensor-sensorid-e.md#magneticfield)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD = 6--><!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD = 6-End-->
 
@@ -104,11 +94,9 @@ Barometer sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BAROMETER](arkts-sensorservice-sensor-sensorid-e.md#BAROMETER)
+**Substitutes:** [BAROMETER](arkts-sensorservice-sensor-sensorid-e.md#barometer)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_BAROMETER = 8--><!--Device-SensorType-SENSOR_TYPE_ID_BAROMETER = 8-End-->
 
@@ -124,11 +112,9 @@ Hall effect sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HALL](arkts-sensorservice-sensor-sensorid-e.md#HALL)
+**Substitutes:** [HALL](arkts-sensorservice-sensor-sensorid-e.md#hall)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_HALL = 10--><!--Device-SensorType-SENSOR_TYPE_ID_HALL = 10-End-->
 
@@ -144,11 +130,9 @@ Proximity sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#PROXIMITY)
+**Substitutes:** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#proximity)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_PROXIMITY = 12--><!--Device-SensorType-SENSOR_TYPE_ID_PROXIMITY = 12-End-->
 
@@ -164,11 +148,9 @@ Humidity sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HUMIDITY](arkts-sensorservice-sensor-sensorid-e.md#HUMIDITY)
+**Substitutes:** [HUMIDITY](arkts-sensorservice-sensor-sensorid-e.md#humidity)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_HUMIDITY = 13--><!--Device-SensorType-SENSOR_TYPE_ID_HUMIDITY = 13-End-->
 
@@ -184,11 +166,9 @@ Orientation sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#ORIENTATION)
+**Substitutes:** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#orientation)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ORIENTATION = 256--><!--Device-SensorType-SENSOR_TYPE_ID_ORIENTATION = 256-End-->
 
@@ -204,11 +184,9 @@ Gravity sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GRAVITY](arkts-sensorservice-sensor-sensorid-e.md#GRAVITY)
+**Substitutes:** [GRAVITY](arkts-sensorservice-sensor-sensorid-e.md#gravity)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_GRAVITY = 257--><!--Device-SensorType-SENSOR_TYPE_ID_GRAVITY = 257-End-->
 
@@ -224,11 +202,9 @@ Linear acceleration sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LINEAR_ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#LINEAR_ACCELEROMETER)
+**Substitutes:** [LINEAR_ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#linearaccelerometer)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_LINEAR_ACCELERATION = 258--><!--Device-SensorType-SENSOR_TYPE_ID_LINEAR_ACCELERATION = 258-End-->
 
@@ -244,11 +220,9 @@ Rotation vector sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ROTATION_VECTOR](arkts-sensorservice-sensor-sensorid-e.md#ROTATION_VECTOR)
+**Substitutes:** [ROTATION_VECTOR](arkts-sensorservice-sensor-sensorid-e.md#rotationvector)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ROTATION_VECTOR = 259--><!--Device-SensorType-SENSOR_TYPE_ID_ROTATION_VECTOR = 259-End-->
 
@@ -264,11 +238,9 @@ Ambient temperature sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AMBIENT_TEMPERATURE](arkts-sensorservice-sensor-sensorid-e.md#AMBIENT_TEMPERATURE)
+**Substitutes:** [AMBIENT_TEMPERATURE](arkts-sensorservice-sensor-sensorid-e.md#ambienttemperature)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_TEMPERATURE = 260--><!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_TEMPERATURE = 260-End-->
 
@@ -284,11 +256,9 @@ Uncalibrated magnetic field sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MAGNETIC_FIELD_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#MAGNETIC_FIELD_UNCALIBRATED)
+**Substitutes:** [MAGNETIC_FIELD_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#magneticfielduncalibrated)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED = 261--><!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED = 261-End-->
 
@@ -304,11 +274,9 @@ Uncalibrated gyroscope sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GYROSCOPE_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#GYROSCOPE_UNCALIBRATED)
+**Substitutes:** [GYROSCOPE_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#gyroscopeuncalibrated)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED = 263--><!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED = 263-End-->
 
@@ -324,11 +292,9 @@ Significant motion sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SIGNIFICANT_MOTION](arkts-sensorservice-sensor-sensorid-e.md#SIGNIFICANT_MOTION)
+**Substitutes:** [SIGNIFICANT_MOTION](arkts-sensorservice-sensor-sensorid-e.md#significantmotion)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_SIGNIFICANT_MOTION = 264--><!--Device-SensorType-SENSOR_TYPE_ID_SIGNIFICANT_MOTION = 264-End-->
 
@@ -344,11 +310,9 @@ Pedometer detection sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PEDOMETER_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#PEDOMETER_DETECTION)
+**Substitutes:** [PEDOMETER_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#pedometerdetection)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER_DETECTION = 265--><!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER_DETECTION = 265-End-->
 
@@ -364,11 +328,9 @@ Pedometer sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md#PEDOMETER)
+**Substitutes:** [PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md#pedometer)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER = 266--><!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER = 266-End-->
 
@@ -384,11 +346,9 @@ Heart rate sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#HEART_RATE)
+**Substitutes:** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#heartrate)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_HEART_RATE = 278--><!--Device-SensorType-SENSOR_TYPE_ID_HEART_RATE = 278-End-->
 
@@ -404,11 +364,9 @@ Wear detection sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#WEAR_DETECTION)
+**Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#weardetection)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_WEAR_DETECTION = 280--><!--Device-SensorType-SENSOR_TYPE_ID_WEAR_DETECTION = 280-End-->
 
@@ -424,11 +382,9 @@ Uncalibrated acceleration sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#ACCELEROMETER_UNCALIBRATED)
+**Substitutes:** [ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#accelerometeruncalibrated)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED = 281--><!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED = 281-End-->
 

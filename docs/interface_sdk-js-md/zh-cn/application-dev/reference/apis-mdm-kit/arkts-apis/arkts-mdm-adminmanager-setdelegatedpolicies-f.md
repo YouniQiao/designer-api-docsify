@@ -10,10 +10,6 @@ function setDelegatedPolicies(admin: Want, bundleName: string, policies: Array<s
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_DELEGATED_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -27,7 +23,7 @@ function setDelegatedPolicies(admin: Want, bundleName: string, policies: Array<s
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| bundleName | string | 是 | 被委托应用包名。被委托应用的分发类型需为enterprise_normal和enterprise_mdm，可以通过 [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接口查询应用自身的 BundleInfo，其中BundleInfo.appInfo.appDistributionType为应用的分发类型。 |
+| bundleName | string | 是 | 被委托应用包名。被委托应用的分发类型需为enterprise_normal和enterprise_mdm，可以通过 [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口查询应用自身的 BundleInfo，其中BundleInfo.appInfo.appDistributionType为应用的分发类型。 |
 | policies | Array&lt;string&gt; | 是 | [委托策略列表](../../../mdm/mdm-kit-appendix.md#可委托策略列表)。 |
 
 **错误码：**
@@ -40,7 +36,7 @@ function setDelegatedPolicies(admin: Want, bundleName: string, policies: Array<s
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

@@ -16,8 +16,6 @@ Removes a wallpaper of the specified type and restores the default one.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
@@ -33,7 +31,7 @@ Removes a wallpaper of the specified type and restores the default one.
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of reset. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,8 +56,6 @@ Removes a wallpaper of the specified type and restores the default one.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
@@ -80,7 +76,7 @@ Removes a wallpaper of the specified type and restores the default one.
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

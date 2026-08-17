@@ -1,12 +1,8 @@
 # FocusController
 
-Provides capabilities to control focus, including features such as clearing, moving, and activating focus. > **NOTE：**> > In the following API examples, you must first use [getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFocusController) in > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
+Provides capabilities to control focus, including features such as clearing, moving, and activating focus. > **NOTE：**> > In the following API examples, you must first use [getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller) in > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class FocusController--><!--Device-unnamed-export class FocusController-End-->
 
@@ -47,6 +43,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## activate
@@ -58,10 +56,6 @@ activate(isActive: boolean, autoInactive?: boolean): void
 Sets the [focus activation state](../../../ui/arkts-common-events-focus-event.md) of this page.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,10 +82,6 @@ Clears the focus and forcibly moves the focus to the root container node of the 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -109,10 +99,6 @@ isActive(): boolean
 Obtains the focus activation state of the UI instance. For details about the focus activation state, see [Basic Concepts](../../../ui/arkts-common-events-focus-event.md#basic-concepts).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,10 +123,6 @@ requestFocus(key: string): void
 Transfers focus to a component node by the component ID, which is effective immediately.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,10 +156,6 @@ Sets whether the new page automatically obtains focus during page switching.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -190,7 +168,7 @@ Sets whether the new page automatically obtains focus during page switching.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAutoFocusTransfer | boolean | Yes | Whether the new page automatically obtains focus during page switching using navigation components or APIs, such as [Router](../../apis-na/arkts-apis/arkts-router.md#@ohos.router), Navigation, Menu, Dialog, and Popup. The value **true** means the new page automatically obtains focus, and **false** means the opposite. Default value: **true**. |
+| isAutoFocusTransfer | boolean | Yes | Whether the new page automatically obtains focus during page switching using navigation components or APIs, such as [Router](arkts-router.md#ohosrouter), Navigation, Menu, Dialog, and Popup. The value **true** means the new page automatically obtains focus, and **false** means the opposite. Default value: **true**. |
 
 ## setKeyProcessingMode
 
@@ -201,10 +179,6 @@ setKeyProcessingMode(mode: KeyProcessingMode): void
 Sets the mode for processing key events.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

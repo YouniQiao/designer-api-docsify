@@ -10,10 +10,6 @@ function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -43,7 +39,7 @@ function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

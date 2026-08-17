@@ -6,10 +6,6 @@ ApplicationContext inherits from Context and provides application-level manageme
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ApplicationContext--><!--Device-unnamed-declare class ApplicationContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -23,10 +19,6 @@ clearUpApplicationData(): Promise<void>
 Clears up all data in the application file path and revokes the permissions that the application has requested from users. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the application file path, see > [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path) > . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths > in other directories, refer to EL1. > > This API stops the application process. After the application process is stopped, all subsequent callbacks will > not be triggered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,7 +39,7 @@ Clears up all data in the application file path and revokes the permissions that
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -70,10 +62,6 @@ Clears up all data in the application file path and revokes the permissions that
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationContext-clearUpApplicationData(callback: AsyncCallback<void>): void--><!--Device-ApplicationContext-clearUpApplicationData(callback: AsyncCallback<void>): void-End-->
@@ -94,7 +82,7 @@ Clears up all data in the application file path and revokes the permissions that
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -117,13 +105,9 @@ export default class MyAbility extends UIAbility {
 disableDelayedProcessExit(): Promise<void>
 ```
 
-Disables delayed process exit for the current process. &lt;p&gt;&lt;b&gt;NOTE&lt;/b&gt;: <br>This API can be called only by the main thread. <br>Calling this API cancels the effect of [enableDelayedProcessExit](#enableDelayedProcessExit).&lt;/p&gt;
+Disables delayed process exit for the current process. &lt;p&gt;&lt;b&gt;NOTE&lt;/b&gt;: <br>This API can be called only by the main thread. <br>Calling this API cancels the effect of [enableDelayedProcessExit](#enabledelayedprocessexit).&lt;/p&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -155,10 +139,6 @@ Enable delayed exit for the current process. &lt;p&gt;**NOTE：**: <br>It can be
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationContext-enableDelayedProcessExit(): Promise<void>--><!--Device-ApplicationContext-enableDelayedProcessExit(): Promise<void>-End-->
@@ -189,10 +169,6 @@ Obtains the unique instance IDs of all multi-instances of this application. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationContext-getAllRunningInstanceKeys(): Promise<Array<string>>--><!--Device-ApplicationContext-getAllRunningInstanceKeys(): Promise<Array<string>>-End-->
@@ -213,7 +189,7 @@ Obtains the unique instance IDs of all multi-instances of this application. This
 | [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -243,10 +219,6 @@ Obtains all WindowStage objects in the current application process. This API use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -261,7 +233,7 @@ Obtains all WindowStage objects in the current application process. This API use
 | --- | --- |
 | Promise&lt;Array&lt;window.WindowStage&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -297,10 +269,6 @@ Obtains the index of the current application clone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -322,7 +290,7 @@ Obtains the index of the current application clone.
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | The MultiAppMode is not App_CLONE. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -349,10 +317,6 @@ Obtains the unique instance ID of this application. This API can be called only 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationContext-getCurrentInstanceKey(): string--><!--Device-ApplicationContext-getCurrentInstanceKey(): string-End-->
@@ -372,7 +336,7 @@ Obtains the unique instance ID of this application. This API can be called only 
 | [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
@@ -404,10 +368,6 @@ Obtains the information about running processes. This API uses a promise to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -430,7 +390,7 @@ Obtains the information about running processes. This API uses a promise to retu
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -458,10 +418,6 @@ Obtains the information about running processes. This API uses an asynchronous c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -484,7 +440,7 @@ Obtains the information about running processes. This API uses an asynchronous c
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -512,10 +468,6 @@ getUIAbilityByInstanceId(instanceId: string): UIAbility
 Get the UIAbility instance by the instance Id. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -549,13 +501,9 @@ Get the UIAbility instance by the instance Id. &lt;p&gt;**NOTE：**: <br>It can 
 killAllProcesses(): Promise<void>
 ```
 
-Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call > [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateSelf).
+Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call > [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -578,7 +526,7 @@ Kills all processes of this application. The application will not execute the no
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -597,13 +545,9 @@ export default class MyAbility extends UIAbility {
 killAllProcesses(clearPageStack: boolean): Promise<void>
 ```
 
-Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call > [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateSelf).
+Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call > [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -632,7 +576,7 @@ Kills all processes of this application. The application will not execute the no
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -653,13 +597,9 @@ export default class MyAbility extends UIAbility {
 killAllProcesses(callback: AsyncCallback<void>): void
 ```
 
-Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call > [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateSelf).
+Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call > [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -682,7 +622,7 @@ Kills all processes of this application. The application will not execute the no
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -709,10 +649,6 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationContext-offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void--><!--Device-ApplicationContext-offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void-End-->
@@ -724,7 +660,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | int | Yes | ID of the listener to unregister. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#on_abilityLifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
 
 ## offAbilityLifecycle
 
@@ -735,10 +671,6 @@ offAbilityLifecycle(callbackId: int): Promise<void>
 Unregisters the listener that monitors the ability lifecycle of the application. This API uses a promise to return the result. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -768,10 +700,6 @@ Unregister applicationStateChange callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationContext-offApplicationStateChange(callback?: ApplicationStateChangeCallback): void--><!--Device-ApplicationContext-offApplicationStateChange(callback?: ApplicationStateChangeCallback): void-End-->
@@ -782,7 +710,7 @@ Unregister applicationStateChange callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | The applicationStateChange callback. |
+| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | No | The applicationStateChange callback. |
 
 ## offEnvironment
 
@@ -793,10 +721,6 @@ offEnvironment(callbackId: int, callback: AsyncCallback<void>): void
 Unregister environment callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -820,10 +744,6 @@ offEnvironment(callbackId: int): Promise<void>
 Unregister environment callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -853,10 +773,6 @@ Unregisters the listener that monitors the ability lifecycle of the application 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationContext-offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void--><!--Device-ApplicationContext-offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void-End-->
@@ -878,10 +794,6 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 unregisters a listener for system configuration updated. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -907,10 +819,6 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -924,7 +832,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#on_abilityLifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -933,7 +841,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -970,10 +878,6 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -987,7 +891,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#on_abilityLifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
 
 **Return value:**
 
@@ -1001,7 +905,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1032,10 +936,6 @@ Unregisters the listener for application process state changes. This API uses an
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1049,7 +949,7 @@ Unregisters the listener for application process state changes. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#on_abilityLifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 **Error codes:**
 
@@ -1057,9 +957,9 @@ Unregisters the listener for application process state changes. This API uses an
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
-Assume that [ApplicationContext.on('applicationStateChange')](#onApplicationStateChange) is used to register a callback named applicationStateChangeCallback. The following example shows how to unregister the corresponding listener.
+Assume that [ApplicationContext.on('applicationStateChange')](#onapplicationstatechange) is used to register a callback named applicationStateChangeCallback. The following example shows how to unregister the corresponding listener.
 
 ```TypeScript
 import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
@@ -1098,10 +998,6 @@ Unregisters the listener for system environment changes. This API uses an asynch
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1115,7 +1011,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](#on_abilityLifecycle) API is called to register a listener for system environment changes. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](#onabilitylifecycle) API is called to register a listener for system environment changes. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1124,7 +1020,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1160,10 +1056,6 @@ Unregisters the listener for system environment changes. This API uses a promise
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1177,7 +1069,7 @@ Unregisters the listener for system environment changes. This API uses a promise
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](#on_abilityLifecycle) API is called to register a listener for system environment changes. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](#onabilitylifecycle) API is called to register a listener for system environment changes. |
 
 **Return value:**
 
@@ -1191,7 +1083,7 @@ Unregisters the listener for system environment changes. This API uses a promise
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1221,10 +1113,6 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationContext-onAbilityLifecycle(callback: AbilityLifecycleCallback): int--><!--Device-ApplicationContext-onAbilityLifecycle(callback: AbilityLifecycleCallback): int-End-->
@@ -1253,10 +1141,6 @@ Register applicationStateChange callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationContext-onApplicationStateChange(callback: ApplicationStateChangeCallback): void--><!--Device-ApplicationContext-onApplicationStateChange(callback: ApplicationStateChangeCallback): void-End-->
@@ -1267,7 +1151,7 @@ Register applicationStateChange callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | The applicationStateChange callback. |
+| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | Yes | The applicationStateChange callback. |
 
 ## onEnvironment
 
@@ -1278,10 +1162,6 @@ onEnvironment(callback: EnvironmentCallback): int
 Register environment callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1311,10 +1191,6 @@ Registers a listener to monitor the ability lifecycle of the application for int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ApplicationContext-onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void--><!--Device-ApplicationContext-onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void-End-->
@@ -1336,10 +1212,6 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 Registers a listener for system configuration updated. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1364,10 +1236,6 @@ on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback): number
 Registers a listener for the lifecycle of a UIAbility within the application. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1396,7 +1264,7 @@ Registers a listener for the lifecycle of a UIAbility within the application. Th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, AbilityLifecycleCallback } from '@kit.AbilityKit';
@@ -1463,10 +1331,6 @@ Registers a listener for application process state changes. This API uses an asy
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1480,7 +1344,7 @@ Registers a listener for application process state changes. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | Callback triggered when the application process state is changed. |
+| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | Yes | Callback triggered when the application process state is changed. |
 
 **Error codes:**
 
@@ -1488,7 +1352,7 @@ Registers a listener for application process state changes. This API uses an asy
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
@@ -1525,13 +1389,9 @@ export default class MyAbility extends UIAbility {
 on(type: 'environment', callback: EnvironmentCallback): number
 ```
 
-Registers a listener for system environment changes. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onConfigurationUpdate) to > listen for system environment changes. Unlike > [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onConfigurationUpdate) of **Ability**, this > API offers greater flexibility. It can be used both within application components and pages. However, the > environment variables that can be subscribed to are different from those of > [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onConfigurationUpdate). For example, this > API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the > description of each environment variable in > [Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration). > > - There are certain restrictions when this API is triggered. For example, if you set the application language by > calling [setLanguage](#setLanguage), the system does not trigger the > callback for the current API even if the system language changes. For details, see > [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
+Registers a listener for system environment changes. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) to > listen for system environment changes. Unlike > [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) of **Ability**, this > API offers greater flexibility. It can be used both within application components and pages. However, the > environment variables that can be subscribed to are different from those of > [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate). For example, this > API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the > description of each environment variable in > [Configuration](arkts-ability-app-ability-configuration-configuration-i.md#configuration). > > - There are certain restrictions when this API is triggered. For example, if you set the application language by > calling [setLanguage](#setlanguage), the system does not trigger the > callback for the current API even if the system language changes. For details, see > [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1560,7 +1420,7 @@ Registers a listener for system environment changes. This API uses an asynchrono
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, EnvironmentCallback } from '@kit.AbilityKit';
@@ -1598,13 +1458,9 @@ export default class EntryAbility extends UIAbility {
 restartApp(want: Want): void
 ```
 
-Restarts the application and starts the specified UIAbility. This API can be called only by the main thread, and the application to restart must be active. > **NOTE：**> > When this API is called to restart the application, the **onDestroy** lifecycle callback of the ability in the > application is not triggered. > > If an atomic service calls this API, > [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartSelfAtomicService) > , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartApp) within 3 seconds after a > successful call to this API, the system returns error code 16000064. > > If an application calls this API or > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartApp) within 3 seconds after a > successful call to this API, the system returns error code 16000064.
+Restarts the application and starts the specified UIAbility. This API can be called only by the main thread, and the application to restart must be active. > **NOTE：**> > When this API is called to restart the application, the **onDestroy** lifecycle callback of the ability in the > application is not triggered. > > If an atomic service calls this API, > [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartselfatomicservice) > , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a > successful call to this API, the system returns error code 16000064. > > If an application calls this API or > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a > successful call to this API, the system returns error code 16000064.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1630,7 +1486,7 @@ Restarts the application and starts the specified UIAbility. This API can be cal
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000063](../errorcode-ability.md#16000063-invalid-ability-during-application-restart) | The target to restart does not belong to the current application or is not a UIAbility. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -1680,13 +1536,9 @@ struct Index {
 setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 ```
 
-Sets the dark/light color mode for the application. This API can be called only on the main thread. > **NOTE：**> > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has > been loaded (using the > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) lifecycle).
+Sets the dark/light color mode for the application. This API can be called only on the main thread. > **NOTE：**> > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has > been loaded (using the > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1709,7 +1561,7 @@ Sets the dark/light color mode for the application. This API can be called only 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, ConfigurationConstant } from '@kit.AbilityKit';
@@ -1737,13 +1589,9 @@ export default class MyAbility extends UIAbility {
 setFont(font: string): void
 ```
 
-Sets the font for this application. This API can be called only on the main thread. > **NOTE：**> > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has > been loaded (using the > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) lifecycle).
+Sets the font for this application. This API can be called only on the main thread. > **NOTE：**> > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has > been loaded (using the > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1764,7 +1612,7 @@ Sets the font for this application. This API can be called only on the main thre
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -1808,10 +1656,6 @@ Sets the scale ratio for the font size of this application. This API can be call
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -1826,7 +1670,7 @@ Sets the scale ratio for the font size of this application. This API can be call
 | --- | --- | --- | --- |
 | fontSizeScale | double | Yes | Font scale ratio. The value is a non-negative number. When the application's [fontSizeScale](../../../quick-start/app-configuration-file.md#configuration) is set to **followSystem** and the value set here exceeds the value of [fontSizeMaxScale](../../../quick-start/app-configuration-file.md#configuration), the value of [fontSizeMaxScale](../../../quick-start/app-configuration-file.md#configuration) takes effect. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1851,13 +1695,9 @@ export default class MyAbility extends UIAbility {
 setLanguage(language: string): void
 ```
 
-Sets the language for the application. This API can be called only on the main thread. > **NOTE：**> > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has > been loaded (using the > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) lifecycle).
+Sets the language for the application. This API can be called only on the main thread. > **NOTE：**> > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has > been loaded (using the > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1871,7 +1711,7 @@ Sets the language for the application. This API can be called only on the main t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | Target language. The list of supported languages can be obtained by calling [getSystemLanguages()](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getSystemLanguages). |
+| language | string | Yes | Target language. The list of supported languages can be obtained by calling [getSystemLanguages()](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-system-c.md#getsystemlanguages). |
 
 **Error codes:**
 
@@ -1879,7 +1719,7 @@ Sets the language for the application. This API can be called only on the main t
 | --- | --- |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1907,13 +1747,9 @@ export default class MyAbility extends UIAbility {
 setSupportedProcessCache(isSupported : boolean): void
 ```
 
-Sets whether the current application's process supports resource caching, so that the cached process resources can be reused when the application is started again. This API can be called only on the main thread. This setting applies only to the current process instance and does not affect others. If the application process instance is terminated, the previously set state will not be preserved and must be reset. This API can be properly called only on phones and 2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > - This API only sets the application to be ready for quick startup after caching. It does not mean that quick > startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup. > > - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are > advised to call this API within the **onCreate()** callback of the > [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage). > > - If this API is called multiple times within the same process, the outcome of the final call is used. In cases > where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and > configured with the same value in each AbilityStage.
+Sets whether the current application's process supports resource caching, so that the cached process resources can be reused when the application is started again. This API can be called only on the main thread. This setting applies only to the current process instance and does not affect others. If the application process instance is terminated, the previously set state will not be preserved and must be reset. This API can be properly called only on phones and 2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > - This API only sets the application to be ready for quick startup after caching. It does not mean that quick > startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup. > > - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are > advised to call this API within the **onCreate()** callback of the > [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage). > > - If this API is called multiple times within the same process, the outcome of the final call is used. In cases > where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and > configured with the same value in each AbilityStage.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1936,7 +1772,7 @@ Sets whether the current application's process supports resource caching, so tha
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage, Want } from '@kit.AbilityKit';
@@ -1965,10 +1801,6 @@ startSelfUIAbility(want: Want): Promise<void>
 Starts a UIAbility of the current application during the delayed-exit window.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

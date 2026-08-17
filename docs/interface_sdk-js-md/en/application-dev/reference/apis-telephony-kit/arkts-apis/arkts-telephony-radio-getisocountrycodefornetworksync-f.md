@@ -16,10 +16,6 @@ Obtains the ISO-defined country code of the country where the registered network
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-function getISOCountryCodeForNetworkSync(slotId: int): string--><!--Device-radio-function getISOCountryCodeForNetworkSync(slotId: int): string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -36,7 +32,7 @@ Obtains the ISO-defined country code of the country where the registered network
 | --- | --- |
 | string | Returns the country code defined in ISO 3166-2. Returns an empty string if the device is not registered with any network. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let slotId: number = 0;

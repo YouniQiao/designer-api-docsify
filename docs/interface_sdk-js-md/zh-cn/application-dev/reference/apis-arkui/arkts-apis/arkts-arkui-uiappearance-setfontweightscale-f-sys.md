@@ -10,10 +10,6 @@ function setFontWeightScale(fontWeightScale: number): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
 <!--Device-uiAppearance-function setFontWeightScale(fontWeightScale: number): Promise<void>--><!--Device-uiAppearance-function setFontWeightScale(fontWeightScale: number): Promise<void>-End-->
@@ -42,7 +38,7 @@ function setFontWeightScale(fontWeightScale: number): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { uiAppearance } from '@kit.ArkUI';

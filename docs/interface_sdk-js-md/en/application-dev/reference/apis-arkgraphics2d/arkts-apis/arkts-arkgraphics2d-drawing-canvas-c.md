@@ -4,10 +4,6 @@ A carrier that carries the drawn content and drawing status. > **NOTE：**> > - 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class Canvas--><!--Device-drawing-class Canvas-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -27,10 +23,6 @@ attachBrush(brush: Brush): void
 Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes. > **NOTE：**> > If the brush effect changes after this API is called, you must call the API again if you want to use the new > effect in the subsequent drawing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-attachBrush(brush: Brush): void--><!--Device-Canvas-attachBrush(brush: Brush): void-End-->
 
@@ -58,10 +50,6 @@ Attaches a pen to the canvas. When you draw on the canvas, the pen's style is us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-attachPen(pen: Pen): void--><!--Device-Canvas-attachPen(pen: Pen): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -84,13 +72,9 @@ Attaches a pen to the canvas. When you draw on the canvas, the pen's style is us
 clear(color: common2D.Color): void
 ```
 
-Clears the canvas with a given color. This API has the same effect as [drawColor](#drawColor).
+Clears the canvas with a given color. This API has the same effect as [drawColor](#drawcolor).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-clear(color: common2D.Color): void--><!--Device-Canvas-clear(color: common2D.Color): void-End-->
 
@@ -118,10 +102,6 @@ Clears the canvas with a given color.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-clear(color: common2D.Color | int): void--><!--Device-Canvas-clear(color: common2D.Color | int): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -141,10 +121,6 @@ clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void
 Clips the drawable area of the canvas using a custom path.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void--><!--Device-Canvas-clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void-End-->
 
@@ -174,10 +150,6 @@ Clips the drawable area of the canvas using a rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void--><!--Device-Canvas-clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -206,10 +178,6 @@ Clips a region on the canvas.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-clipRegion(region: Region, clipOp?: ClipOp): void--><!--Device-Canvas-clipRegion(region: Region, clipOp?: ClipOp): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -236,10 +204,6 @@ clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): voi
 Clips a rounded rectangle on the canvas.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): void--><!--Device-Canvas-clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): void-End-->
 
@@ -269,10 +233,6 @@ Multiplies the current canvas matrix by the incoming matrix on the left. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-concatMatrix(matrix: Matrix): void--><!--Device-Canvas-concatMatrix(matrix: Matrix): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -298,10 +258,6 @@ constructor(pixelmap: image.PixelMap)
 Creates a **Canvas** object that uses a **PixelMap** as the drawing target.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -331,10 +287,6 @@ Detaches the brush from the canvas. When you draw on the canvas, the brush is no
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-detachBrush(): void--><!--Device-Canvas-detachBrush(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -349,10 +301,6 @@ Detaches the pen from the canvas. When you draw on the canvas, the pen is no lon
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-detachPen(): void--><!--Device-Canvas-detachPen(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -366,10 +314,6 @@ drawArc(arc: common2D.Rect, startAngle: double, sweepAngle: double): void
 Draws an arc on the canvas. with the start angle and sweep angle specified. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawArc(arc: common2D.Rect, startAngle: double, sweepAngle: double): void--><!--Device-Canvas-drawArc(arc: common2D.Rect, startAngle: double, sweepAngle: double): void-End-->
 
@@ -399,10 +343,6 @@ Draws an arc on the canvas. It enables you to define the start angle, sweep angl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawArcWithCenter(arc: common2D.Rect, startAngle: double, sweepAngle: double, useCenter: boolean): void--><!--Device-Canvas-drawArcWithCenter(arc: common2D.Rect, startAngle: double, sweepAngle: double, useCenter: boolean): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -425,10 +365,6 @@ drawBackground(brush: Brush): void
 Uses a brush to fill the drawable area of the canvas.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawBackground(brush: Brush): void--><!--Device-Canvas-drawBackground(brush: Brush): void-End-->
 
@@ -456,10 +392,6 @@ Draws a circle. If the radius is less than or equal to zero, nothing is drawn. B
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawCircle(x: double, y: double, radius: double): void--><!--Device-Canvas-drawCircle(x: double, y: double, radius: double): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -484,13 +416,9 @@ Draws a circle. If the radius is less than or equal to zero, nothing is drawn. B
 drawColor(color: common2D.Color, blendMode?: BlendMode): void
 ```
 
-Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode).
+Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#blendmode).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawColor(color: common2D.Color, blendMode?: BlendMode): void--><!--Device-Canvas-drawColor(color: common2D.Color, blendMode?: BlendMode): void-End-->
 
@@ -515,13 +443,9 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void
 ```
 
-Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode). This API provides better performance than [drawColor](#drawColor) and is recommended.
+Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#blendmode). This API provides better performance than [drawColor](#drawcolor) and is recommended.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void--><!--Device-Canvas-drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void-End-->
 
@@ -549,13 +473,9 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 drawColor(color: int, blendMode?: BlendMode): void
 ```
 
-Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode).
+Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#blendmode).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawColor(color: int, blendMode?: BlendMode): void--><!--Device-Canvas-drawColor(color: int, blendMode?: BlendMode): void-End-->
 
@@ -584,10 +504,6 @@ drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.P
 Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is smaller than or equals to 0.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -622,10 +538,6 @@ Draws an image. The coordinates of the upper left corner of the image are (left,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawImage(pixelmap: image.PixelMap, left: double, top: double, samplingOptions?: SamplingOptions): void--><!--Device-Canvas-drawImage(pixelmap: image.PixelMap, left: double, top: double, samplingOptions?: SamplingOptions): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -655,10 +567,6 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
 Splits an image into multiple sections based on the lattice object's configuration and draws each section into the specified target rectangle on the canvas. When this API is used, the anti-aliasing enablement setting does not take effect. The intersections of even-numbered rows and columns (starting from 0) are fixed points. If the fixed lattice area fits within the target rectangle, it will be drawn without scaling. Otherwise, it will be scaled proportionally to fit the target rectangle. Any remaining space will be filled by stretching or compressing the remaining sections to cover the entire target rectangle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,      filterMode: FilterMode): void--><!--Device-Canvas-drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,      filterMode: FilterMode): void-End-->
 
@@ -690,10 +598,6 @@ Splits an image into nine sections using two horizontal and two vertical lines: 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,      filterMode: FilterMode): void--><!--Device-Canvas-drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,      filterMode: FilterMode): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -723,10 +627,6 @@ Draws an image onto a specified area of the canvas.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?: SamplingOptions): void--><!--Device-Canvas-drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?: SamplingOptions): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -755,10 +655,6 @@ drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: 
 Draws a portion of an image onto a specified area of the canvas.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void--><!--Device-Canvas-drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void-End-->
 
@@ -790,10 +686,6 @@ Draws a line segment from the start point to the end point. If the coordinates o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawLine(x0: double, y0: double, x1: double, y1: double): void--><!--Device-Canvas-drawLine(x0: double, y0: double, x1: double, y1: double): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -823,10 +715,6 @@ Draws two nested rounded rectangles. The outer rectangle boundary must contain t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void--><!--Device-Canvas-drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -854,10 +742,6 @@ Draws an oval on the canvas, where the shape and position of the oval are define
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawOval(oval: common2D.Rect): void--><!--Device-Canvas-drawOval(oval: common2D.Rect): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -883,10 +767,6 @@ drawPath(path: Path): void
 Draws a custom path, which contains a set of path outlines. Each path outline can be open or closed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawPath(path: Path): void--><!--Device-Canvas-drawPath(path: Path): void-End-->
 
@@ -914,10 +794,6 @@ drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,
 Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed across the **PixelMap**. (This API works with brushes but not pens.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void--><!--Device-Canvas-drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void-End-->
 
@@ -951,10 +827,6 @@ Draws a point.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawPoint(x: double, y: double): void--><!--Device-Canvas-drawPoint(x: double, y: double): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -981,10 +853,6 @@ drawPoints(points: Array<common2D.Point>, mode?: PointMode): void
 Draws a group of points, line segments, or polygons on the canvas, with the specified drawing mode. An array is used to hold these points.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawPoints(points: Array<common2D.Point>, mode?: PointMode): void--><!--Device-Canvas-drawPoints(points: Array<common2D.Point>, mode?: PointMode): void-End-->
 
@@ -1013,10 +881,6 @@ Draws a rectangle. By default, black is used for filling.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawRect(rect: common2D.Rect): void--><!--Device-Canvas-drawRect(rect: common2D.Rect): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1039,13 +903,9 @@ Draws a rectangle. By default, black is used for filling.
 drawRect(left: double, top: double, right: double, bottom: double): void
 ```
 
-Draws a rectangle. By default, black is used for filling. This API provides better performance than [drawRect](#drawRect) and is recommended.
+Draws a rectangle. By default, black is used for filling. This API provides better performance than [drawRect](#drawrect) and is recommended.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawRect(left: double, top: double, right: double, bottom: double): void--><!--Device-Canvas-drawRect(left: double, top: double, right: double, bottom: double): void-End-->
 
@@ -1076,10 +936,6 @@ Draws a region.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawRegion(region: Region): void--><!--Device-Canvas-drawRegion(region: Region): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1105,10 +961,6 @@ drawRoundRect(roundRect: RoundRect): void
 Draws a rounded rectangle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawRoundRect(roundRect: RoundRect): void--><!--Device-Canvas-drawRoundRect(roundRect: RoundRect): void-End-->
 
@@ -1136,10 +988,6 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void--><!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void-End-->
 
@@ -1174,10 +1022,6 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void--><!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1210,10 +1054,6 @@ Draws a single character. If the typeface of the current font does not support t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawSingleCharacter(text: string, font: Font, x: double, y: double): void--><!--Device-Canvas-drawSingleCharacter(text: string, font: Font, x: double, y: double): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1242,10 +1082,6 @@ drawSingleCharacterWithFeatures(text: string, font: Font, x: double, y: double, 
 Draws a single character with font features. If the typeface of the current font does not support the character to draw, the system typeface is used to draw the character.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawSingleCharacterWithFeatures(text: string, font: Font, x: double, y: double, features: Array<FontFeature>): void--><!--Device-Canvas-drawSingleCharacterWithFeatures(text: string, font: Font, x: double, y: double, features: Array<FontFeature>): void-End-->
 
@@ -1277,10 +1113,6 @@ Draws a text blob. If the typeface used to construct **blob** does not support a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-drawTextBlob(blob: TextBlob, x: double, y: double): void--><!--Device-Canvas-drawTextBlob(blob: TextBlob, x: double, y: double): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1310,10 +1142,6 @@ drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D
 Draws a triangle mesh described by the vertex array.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,      indices: Array<int> | null, mode: BlendMode): void--><!--Device-Canvas-drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,      indices: Array<int> | null, mode: BlendMode): void-End-->
 
@@ -1348,10 +1176,6 @@ Obtains the canvas height.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-getHeight(): int--><!--Device-Canvas-getHeight(): int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1371,10 +1195,6 @@ getLocalClipBounds(): common2D.Rect
 Obtains the bounds of the cropping region of the canvas.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-getLocalClipBounds(): common2D.Rect--><!--Device-Canvas-getLocalClipBounds(): common2D.Rect-End-->
 
@@ -1396,10 +1216,6 @@ Obtains the bounds of the cropping region of the canvas.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-getLocalClipBounds(): common2D.Rect | undefined--><!--Device-Canvas-getLocalClipBounds(): common2D.Rect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1419,10 +1235,6 @@ getSaveCount(): int
 Obtains the number of canvas states (canvas matrix and clipping area) saved in the stack.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-getSaveCount(): int--><!--Device-Canvas-getSaveCount(): int-End-->
 
@@ -1444,10 +1256,6 @@ Obtains the canvas matrix.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-getTotalMatrix(): Matrix--><!--Device-Canvas-getTotalMatrix(): Matrix-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1467,10 +1275,6 @@ getTotalMatrix(): Matrix | undefined
 Obtains the canvas matrix.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-getTotalMatrix(): Matrix | undefined--><!--Device-Canvas-getTotalMatrix(): Matrix | undefined-End-->
 
@@ -1492,10 +1296,6 @@ Obtains the canvas width.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-getWidth(): int--><!--Device-Canvas-getWidth(): int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1516,10 +1316,6 @@ Checks whether the region that can be drawn is empty after clipping.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-isClipEmpty(): boolean--><!--Device-Canvas-isClipEmpty(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1539,10 +1335,6 @@ isOpaque(): boolean
 Checks whether the current layer that drawn into the device is opaque.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1565,10 +1357,6 @@ quickRejectPath(path: Path): boolean
 Checks whether the path is not intersecting with the canvas area. The canvas area includes its boundaries.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-quickRejectPath(path: Path): boolean--><!--Device-Canvas-quickRejectPath(path: Path): boolean-End-->
 
@@ -1596,10 +1384,6 @@ Checks whether the rectangle is not intersecting with the canvas area. The canva
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-quickRejectRect(rect: common2D.Rect): boolean--><!--Device-Canvas-quickRejectRect(rect: common2D.Rect): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1626,10 +1410,6 @@ Resets the clip status.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Canvas-resetClip(): void--><!--Device-Canvas-resetClip(): void-End-->
@@ -1646,10 +1426,6 @@ Resets the matrix of this canvas to an identity matrix.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-resetMatrix(): void--><!--Device-Canvas-resetMatrix(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1664,10 +1440,6 @@ Restores the canvas state (canvas matrix and clipping area) saved on the top of 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-restore(): void--><!--Device-Canvas-restore(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1681,10 +1453,6 @@ restoreToCount(count: int): void
 Restores the canvas state (canvas matrix and clipping area) to a specified number.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-restoreToCount(count: int): void--><!--Device-Canvas-restoreToCount(count: int): void-End-->
 
@@ -1711,10 +1479,6 @@ rotate(degrees: double, sx: double, sy: double) : void
 Applies a rotation matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a rotation effect applied to their shapes and positions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-rotate(degrees: double, sx: double, sy: double) : void--><!--Device-Canvas-rotate(degrees: double, sx: double, sy: double) : void-End-->
 
@@ -1744,10 +1508,6 @@ Saves the canvas states (canvas matrix and drawable area) to the top of the stac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-save(): int--><!--Device-Canvas-save(): int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1767,10 +1527,6 @@ saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long
 Saves the matrix and cropping region of the canvas, and allocates a **PixelMap** for subsequent drawing. If you call [restore](#restore), changes made to the matrix and clipping region are discarded, and the PixelMap is drawn.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long--><!--Device-Canvas-saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long-End-->
 
@@ -1805,10 +1561,6 @@ Applies a scaling matrix on top of the current canvas matrix (identity matrix by
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-scale(sx: double, sy: double): void--><!--Device-Canvas-scale(sx: double, sy: double): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1836,10 +1588,6 @@ Sets a matrix for the canvas. Subsequent drawing and clipping operations will be
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Canvas-setMatrix(matrix: Matrix): void--><!--Device-Canvas-setMatrix(matrix: Matrix): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -1865,10 +1613,6 @@ skew(sx: double, sy: double) : void
 Applies a skewing matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a skewing effect applied to the shapes and positions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-skew(sx: double, sy: double) : void--><!--Device-Canvas-skew(sx: double, sy: double) : void-End-->
 
@@ -1896,10 +1640,6 @@ translate(dx: double, dy: double): void
 Applies a translation matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a translation effect applied to the shapes and positions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Canvas-translate(dx: double, dy: double): void--><!--Device-Canvas-translate(dx: double, dy: double): void-End-->
 

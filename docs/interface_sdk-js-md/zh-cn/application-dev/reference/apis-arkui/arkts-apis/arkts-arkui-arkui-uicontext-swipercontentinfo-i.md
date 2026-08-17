@@ -4,10 +4,6 @@ Swiper组件的内容区信息。
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface SwiperContentInfo--><!--Device-unnamed-export interface SwiperContentInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Swiper组件的id。
 **类型：** string
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,13 +36,9 @@ swiperItemInfos: Array<SwiperItemInfo>
 
 当前处于显示状态的Swiper子组件的信息。
 
-**类型：** Array&lt;[SwiperItemInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-swiperiteminfo-i.md)&gt;
+**类型：** Array&lt;[SwiperItemInfo](arkts-arkui-arkui-uicontext-swiperiteminfo-i.md)&gt;
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,10 +59,6 @@ Swiper子组件的唯一标识符。
 **类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

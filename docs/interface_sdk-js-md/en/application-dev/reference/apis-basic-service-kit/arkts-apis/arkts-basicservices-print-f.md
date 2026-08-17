@@ -16,8 +16,6 @@ Prints files. This API uses an asynchronous callback to return the result. To st
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [print](#print)
@@ -42,7 +40,7 @@ Prints files. This API uses an asynchronous callback to return the result. To st
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -74,8 +72,6 @@ Prints files. This API uses a promise to return the result. To start the system 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [print](#print)
@@ -105,7 +101,7 @@ Prints files. This API uses a promise to return the result. To start the system 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -135,10 +131,6 @@ Prints files. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PRINT
 
 <!--Device-print-function print(files: Array<string>, context: Context, callback: AsyncCallback<PrintTask>): void--><!--Device-print-function print(files: Array<string>, context: Context, callback: AsyncCallback<PrintTask>): void-End-->
@@ -160,7 +152,7 @@ Prints files. This API uses an asynchronous callback to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -208,10 +200,6 @@ Prints files. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PRINT
 
 <!--Device-print-function print(files: Array<string>, context: Context): Promise<PrintTask>--><!--Device-print-function print(files: Array<string>, context: Context): Promise<PrintTask>-End-->
@@ -238,7 +226,7 @@ Prints files. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -285,10 +273,6 @@ Prints a file. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PRINT
 
 <!--Device-print-function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttributes: PrintAttributes,    context: Context): Promise<PrintTask>--><!--Device-print-function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttributes: PrintAttributes,    context: Context): Promise<PrintTask>-End-->
@@ -299,8 +283,8 @@ Prints a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobName | string | Yes | Name of the file to print, for example, **test.pdf**. The printer uses the [onStartLayoutWrite](arkts-basicservices-print-printdocumentadapter-i.md#onStartLayoutWrite) API to send the **fd** of the empty PDF file to the API caller. The API caller uses the new print attributes to update the file to print. |
-| printAdapter | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md) | Yes | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md#PrintDocumentAdapter) API instance implemented by a third-party application. |
+| jobName | string | Yes | Name of the file to print, for example, **test.pdf**. The printer uses the [onStartLayoutWrite](arkts-basicservices-print-printdocumentadapter-i.md#onstartlayoutwrite) API to send the **fd** of the empty PDF file to the API caller. The API caller uses the new print attributes to update the file to print. |
+| printAdapter | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md) | Yes | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md#printdocumentadapter) API instance implemented by a third-party application. |
 | printAttributes | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | Print attributes. |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | UIAbilityContext used to start the system print UI. |
 
@@ -317,7 +301,7 @@ Prints a file. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

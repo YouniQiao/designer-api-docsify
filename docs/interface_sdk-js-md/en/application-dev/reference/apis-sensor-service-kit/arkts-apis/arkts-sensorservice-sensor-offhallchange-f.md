@@ -16,10 +16,6 @@ Unsubscribe to hall sensor data, {@code SensorId.HALL}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function offHallChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<HallResponse>): void--><!--Device-sensor-function offHallChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<HallResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

@@ -6,8 +6,6 @@ Defines the grid container attribute from inheritance Column
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColAttribute and grid_row/GridRowAttribute

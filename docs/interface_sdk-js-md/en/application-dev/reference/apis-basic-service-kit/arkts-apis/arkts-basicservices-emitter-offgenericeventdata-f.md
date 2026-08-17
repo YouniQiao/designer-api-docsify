@@ -16,10 +16,6 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-function offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-emitter-function offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -31,7 +27,7 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 | eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

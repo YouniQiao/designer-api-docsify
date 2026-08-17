@@ -1,12 +1,8 @@
-# KeyProcessingMode
+# KeyProcessingMode(Provide some common interface for focus.)
 
 Enumerates the modes for processing key events.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum KeyProcessingMode--><!--Device-unnamed-declare enum KeyProcessingMode-End-->
 
@@ -21,10 +17,6 @@ FOCUS_NAVIGATION = 0
 Default value. When the current component does not consume the key event, focus navigation using the **Tab** and arrow keys preferentially stays within the current container.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ ANCESTOR_EVENT = 1
 When the current component does not consume the key event, focus navigation using the **Tab** and arrow keys is bubbled up to the parent component.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

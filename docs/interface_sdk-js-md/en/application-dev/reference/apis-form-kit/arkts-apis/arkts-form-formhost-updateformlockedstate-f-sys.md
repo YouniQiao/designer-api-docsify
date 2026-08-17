@@ -16,10 +16,6 @@ Notifies the update of the widget lock state. This API uses a promise to return 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 <!--Device-formHost-function updateFormLockedState(formId: string, isLocked: boolean): Promise<void>--><!--Device-formHost-function updateFormLockedState(formId: string, isLocked: boolean): Promise<void>-End-->

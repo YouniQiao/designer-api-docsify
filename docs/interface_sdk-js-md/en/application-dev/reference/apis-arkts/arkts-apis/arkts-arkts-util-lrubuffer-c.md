@@ -4,11 +4,9 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LRUCache](arkts-arkts-util-lrucache-c.md#LRUCache)
+**Substitutes:** [LRUCache](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#lrucache)
 
 <!--Device-util-class LruBuffer--><!--Device-util-class LruBuffer-End-->
 
@@ -30,8 +28,6 @@ Specifies the default iterator for an object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** iterator]
@@ -46,7 +42,7 @@ Specifies the default iterator for an object.
 | --- | --- |
 | IterableIterator&lt;[K, V]&gt; | Returns a two - dimensional array in the form of key - value pairs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -64,11 +60,9 @@ Performs subsequent operations after a value is removed.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [afterRemoval](arkts-arkts-util-lrucache-c.md#afterRemoval)
+**Substitutes:** [afterRemoval](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#afterremoval)
 
 <!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void--><!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void-End-->
 
@@ -83,7 +77,7 @@ Performs subsequent operations after a value is removed.
 | value | V | Yes | Value removed. |
 | newValue | V | Yes | New value for the key if the **put()** method is called and the key to be added already exists. In other cases, this parameter is left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class ChildLruBuffer<K, V> extends util.LruBuffer<K, V> {
@@ -118,17 +112,15 @@ Clears key-value pairs from this cache. The **afterRemoval()** API will be calle
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clear](arkts-arkts-util-lrucache-c.md#clear)
+**Substitutes:** [clear](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#clear)
 
 <!--Device-LruBuffer-clear(): void--><!--Device-LruBuffer-clear(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -147,8 +139,6 @@ A constructor used to create a **LruBuffer** instance. The default capacity of t
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** constructor
@@ -163,7 +153,7 @@ A constructor used to create a **LruBuffer** instance. The default capacity of t
 | --- | --- | --- | --- |
 | capacity | number | No | Capacity of the cache to create. The default value is **64**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -179,11 +169,9 @@ Checks whether this cache contains the specified key.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
+**Substitutes:** [contains](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#contains)
 
 <!--Device-LruBuffer-contains(key: K): boolean--><!--Device-LruBuffer-contains(key: K): boolean-End-->
 
@@ -201,7 +189,7 @@ Checks whether this cache contains the specified key.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the cache contains the specified key; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -221,11 +209,9 @@ Creates a value if the value of the specified key is not available.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createDefault](arkts-arkts-util-lrucache-c.md#createDefault)
+**Substitutes:** [createDefault](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#createdefault)
 
 <!--Device-LruBuffer-createDefault(key: K): V--><!--Device-LruBuffer-createDefault(key: K): V-End-->
 
@@ -243,7 +229,7 @@ Creates a value if the value of the specified key is not available.
 | --- | --- |
 | V | Value of the key. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -260,11 +246,9 @@ Obtains a new iterator object that contains all key-value pairs in this object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [entries](arkts-arkts-util-lrucache-c.md#entries)
+**Substitutes:** [entries](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#entries)
 
 <!--Device-LruBuffer-entries(): IterableIterator<[K, V]>--><!--Device-LruBuffer-entries(): IterableIterator<[K, V]>-End-->
 
@@ -276,7 +260,7 @@ Obtains a new iterator object that contains all key-value pairs in this object.
 | --- | --- |
 | IterableIterator&lt;[K, V]&gt; | Iterable array. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -294,11 +278,9 @@ Obtains the value of the specified key.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [get](arkts-arkts-util-lrucache-c.md#get)
+**Substitutes:** [get](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#get)
 
 <!--Device-LruBuffer-get(key: K): V | undefined--><!--Device-LruBuffer-get(key: K): V | undefined-End-->
 
@@ -316,7 +298,7 @@ Obtains the value of the specified key.
 | --- | --- |
 | V | Value of the key. If no match is found, **undefined** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -336,11 +318,9 @@ Obtains the capacity of this cache.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getCapacity](arkts-arkts-util-lrucache-c.md#getCapacity)
+**Substitutes:** [getCapacity](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getcapacity)
 
 <!--Device-LruBuffer-getCapacity(): number--><!--Device-LruBuffer-getCapacity(): number-End-->
 
@@ -352,7 +332,7 @@ Obtains the capacity of this cache.
 | --- | --- |
 | number | Capacity of the cache. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -371,11 +351,9 @@ Obtains the number of return values for **createDefault()**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getCreateCount](arkts-arkts-util-lrucache-c.md#getCreateCount)
+**Substitutes:** [getCreateCount](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getcreatecount)
 
 <!--Device-LruBuffer-getCreateCount(): number--><!--Device-LruBuffer-getCreateCount(): number-End-->
 
@@ -387,7 +365,7 @@ Obtains the number of return values for **createDefault()**.
 | --- | --- |
 | number | Number of return values for **createDefault()**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -407,11 +385,9 @@ Obtains the number of times that the queried values are matched.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMatchCount](arkts-arkts-util-lrucache-c.md#getMatchCount)
+**Substitutes:** [getMatchCount](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getmatchcount)
 
 <!--Device-LruBuffer-getMatchCount(): number--><!--Device-LruBuffer-getMatchCount(): number-End-->
 
@@ -423,7 +399,7 @@ Obtains the number of times that the queried values are matched.
 | --- | --- |
 | number | Number of times that the queried values are matched. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -444,11 +420,9 @@ Obtains the number of times that the queried values are mismatched.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMissCount](arkts-arkts-util-lrucache-c.md#getMissCount)
+**Substitutes:** [getMissCount](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getmisscount)
 
 <!--Device-LruBuffer-getMissCount(): number--><!--Device-LruBuffer-getMissCount(): number-End-->
 
@@ -460,7 +434,7 @@ Obtains the number of times that the queried values are mismatched.
 | --- | --- |
 | number | Number of times that the queried values are mismatched. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -481,11 +455,9 @@ Obtains the number of additions to this cache.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getPutCount](arkts-arkts-util-lrucache-c.md#getPutCount)
+**Substitutes:** [getPutCount](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getputcount)
 
 <!--Device-LruBuffer-getPutCount(): number--><!--Device-LruBuffer-getPutCount(): number-End-->
 
@@ -497,7 +469,7 @@ Obtains the number of additions to this cache.
 | --- | --- |
 | number | Number of additions to the cache. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -517,11 +489,9 @@ Obtains the number of removals from this cache.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRemovalCount](arkts-arkts-util-lrucache-c.md#getRemovalCount)
+**Substitutes:** [getRemovalCount](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getremovalcount)
 
 <!--Device-LruBuffer-getRemovalCount(): number--><!--Device-LruBuffer-getRemovalCount(): number-End-->
 
@@ -533,7 +503,7 @@ Obtains the number of removals from this cache.
 | --- | --- |
 | number | Number of removals from the cache. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -555,11 +525,9 @@ Checks whether this cache is empty.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isEmpty](arkts-arkts-util-lrucache-c.md#isEmpty)
+**Substitutes:** [isEmpty](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#isempty)
 
 <!--Device-LruBuffer-isEmpty(): boolean--><!--Device-LruBuffer-isEmpty(): boolean-End-->
 
@@ -571,7 +539,7 @@ Checks whether this cache is empty.
 | --- | --- |
 | boolean | Returns **true** if the cache does not contain any value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -591,11 +559,9 @@ Obtains all keys in this cache, listed from the most to the least recently acces
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [keys](arkts-arkts-util-lrucache-c.md#keys)
+**Substitutes:** [keys](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#keys)
 
 <!--Device-LruBuffer-keys(): K[]--><!--Device-LruBuffer-keys(): K[]-End-->
 
@@ -607,7 +573,7 @@ Obtains all keys in this cache, listed from the most to the least recently acces
 | --- | --- |
 | K[] | All keys in the cache, listed from the most to the least recently accessed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -627,11 +593,9 @@ Adds a key-value pair to this cache.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [put](arkts-arkts-util-lrucache-c.md#put)
+**Substitutes:** [put](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#put)
 
 <!--Device-LruBuffer-put(key: K, value: V): V--><!--Device-LruBuffer-put(key: K, value: V): V-End-->
 
@@ -650,7 +614,7 @@ Adds a key-value pair to this cache.
 | --- | --- |
 | V | Value added. If the key already exists, the existing value is returned; if **null** is passed in for **key** or **value**, an error is thrown. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -669,11 +633,9 @@ Removes the specified key and its value from this cache.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [remove](arkts-arkts-util-lrucache-c.md#remove)
+**Substitutes:** [remove](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#remove)
 
 <!--Device-LruBuffer-remove(key: K): V | undefined--><!--Device-LruBuffer-remove(key: K): V | undefined-End-->
 
@@ -691,7 +653,7 @@ Removes the specified key and its value from this cache.
 | --- | --- |
 | V | Optional** object containing the removed key-value pair. If the key does not exist, an empty **Optional** object is returned; if **null** is passed in for **key**, an error is thrown. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -711,11 +673,9 @@ Obtains the string representation of this cache.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#toString)
+**Substitutes:** [toString](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#tostring)
 
 <!--Device-LruBuffer-toString(): string--><!--Device-LruBuffer-toString(): string-End-->
 
@@ -727,7 +687,7 @@ Obtains the string representation of this cache.
 | --- | --- |
 | string | String representation of this cache. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -749,11 +709,9 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [updateCapacity](arkts-arkts-util-lrucache-c.md#updateCapacity)
+**Substitutes:** [updateCapacity](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#updatecapacity)
 
 <!--Device-LruBuffer-updateCapacity(newCapacity: number): void--><!--Device-LruBuffer-updateCapacity(newCapacity: number): void-End-->
 
@@ -765,7 +723,7 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 | --- | --- | --- | --- |
 | newCapacity | number | Yes | New capacity of the cache. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number,number> = new util.LruBuffer();
@@ -782,11 +740,9 @@ Obtains all values in this cache, listed from the most to the least recently acc
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [values](arkts-arkts-util-lrucache-c.md#values)
+**Substitutes:** [values](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#values)
 
 <!--Device-LruBuffer-values(): V[]--><!--Device-LruBuffer-values(): V[]-End-->
 
@@ -798,7 +754,7 @@ Obtains all values in this cache, listed from the most to the least recently acc
 | --- | --- |
 | V[] | All values in the cache, listed from the most to the least recently accessed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro : util.LruBuffer<number|string,number|string> = new util.LruBuffer();
@@ -821,8 +777,6 @@ Total number of values in this cache.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

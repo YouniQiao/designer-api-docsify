@@ -4,10 +4,6 @@ Describes the crease region of a foldable device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-interface FoldCreaseRegion--><!--Device-display-interface FoldCreaseRegion-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Crease region.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FoldCreaseRegion-readonly creaseRects: Array<Rect>--><!--Device-FoldCreaseRegion-readonly creaseRects: Array<Rect>-End-->
@@ -51,10 +43,6 @@ ID of the display where the crease is located.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

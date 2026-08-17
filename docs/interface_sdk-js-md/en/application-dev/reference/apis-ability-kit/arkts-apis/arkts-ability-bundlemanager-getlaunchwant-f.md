@@ -16,10 +16,6 @@ Obtains the **Want** parameters of the [entry UIAbility](../../../quick-start/ap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-bundleManager-function getLaunchWant(): Want--><!--Device-bundleManager-function getLaunchWant(): Want-End-->
@@ -38,7 +34,7 @@ Obtains the **Want** parameters of the [entry UIAbility](../../../quick-start/ap
 | --- | --- |
 | [17700072](../errorcode-bundle.md#17700072-launch-want-does-not-exist) | The launch want is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -16,10 +16,6 @@ Get the default cellular data card.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-data-function getDefaultCellularDataSlotIdSync(): int--><!--Device-data-function getDefaultCellularDataSlotIdSync(): int-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -30,7 +26,7 @@ Get the default cellular data card.
 | --- | --- |
 | int | Returns default cellular data slot id. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

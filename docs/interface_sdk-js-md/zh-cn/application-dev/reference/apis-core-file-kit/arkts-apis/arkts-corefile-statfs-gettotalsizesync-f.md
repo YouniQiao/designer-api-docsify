@@ -10,10 +10,6 @@ function getTotalSizeSync(path: string): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-statfs-function getTotalSizeSync(path: string): long--><!--Device-statfs-function getTotalSizeSync(path: string): long-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -48,7 +44,7 @@ function getTotalSizeSync(path: string): long
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

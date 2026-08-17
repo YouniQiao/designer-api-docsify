@@ -1,12 +1,8 @@
-# ColorSpace
+# ColorSpace(Color Space Management)
 
 Enumerates the color space types.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-colorSpaceManager-enum ColorSpace--><!--Device-colorSpaceManager-enum ColorSpace-End-->
 
@@ -21,10 +17,6 @@ UNKNOWN = 0
 Unknown type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Adobe RGB (1998). The conversion function is of the Adobe RGB (1998) type. The e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-ADOBE_RGB_1998 = 1--><!--Device-ColorSpace-ADOBE_RGB_1998 = 1-End-->
@@ -61,10 +49,6 @@ DCI_P3 = 2
 DCI-P3. The conversion function is of the Gamma 2.6 type. The encoding range is of the Full type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +66,6 @@ Display P3. The conversion function is of the SRGB type. The encoding range is o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DISPLAY_P3 = 3--><!--Device-ColorSpace-DISPLAY_P3 = 3-End-->
@@ -101,10 +81,6 @@ SRGB = 4
 SRGB. The conversion function is of the SRGB type. The encoding range is of the Full type. This is the default color space type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,10 +98,6 @@ BT709. The conversion function is of the BT709 type. The encoding range is of th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT709 = 6--><!--Device-ColorSpace-BT709 = 6-End-->
@@ -141,10 +113,6 @@ BT601_EBU = 7
 BT601_P. The conversion function is of the BT709 type. The encoding range is of the Full type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,10 +130,6 @@ BT601_N. The conversion function is of the BT709 type. The encoding range is of 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT601_SMPTE_C = 8--><!--Device-ColorSpace-BT601_SMPTE_C = 8-End-->
@@ -181,10 +145,6 @@ BT2020_HLG = 9
 BT2020. The conversion function is of the HLG type. The encoding range is of the Full type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -202,10 +162,6 @@ BT2020. The conversion function is of the PQ type. The encoding range is of the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT2020_PQ = 10--><!--Device-ColorSpace-BT2020_PQ = 10-End-->
@@ -221,10 +177,6 @@ P3_HLG = 11
 Display P3. The conversion function is of the HLG type. The encoding range is of the Full type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -242,10 +194,6 @@ Display P3. The conversion function is of the PQ type. The encoding range is of 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-P3_PQ = 12--><!--Device-ColorSpace-P3_PQ = 12-End-->
@@ -261,10 +209,6 @@ ADOBE_RGB_1998_LIMIT = 13
 Adobe RGB (1998). The conversion function is of the Adobe RGB (1998) type. The encoding range is of the Limit type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -282,10 +226,6 @@ Display P3. The conversion function is of the SRGB type. The encoding range is o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DISPLAY_P3_LIMIT = 14--><!--Device-ColorSpace-DISPLAY_P3_LIMIT = 14-End-->
@@ -301,10 +241,6 @@ SRGB_LIMIT = 15
 SRGB. The conversion function is of the SRGB type. The encoding range is of the Limit type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -322,10 +258,6 @@ BT709. The conversion function is of the BT709 type. The encoding range is of th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT709_LIMIT = 16--><!--Device-ColorSpace-BT709_LIMIT = 16-End-->
@@ -341,10 +273,6 @@ BT601_EBU_LIMIT = 17
 BT601_P. The conversion function is of the BT709 type. The encoding range is of the Limit type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -362,10 +290,6 @@ BT601_N. The conversion function is of the BT709 type. The encoding range is of 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT601_SMPTE_C_LIMIT = 18--><!--Device-ColorSpace-BT601_SMPTE_C_LIMIT = 18-End-->
@@ -381,10 +305,6 @@ BT2020_HLG_LIMIT = 19
 BT2020. The conversion function is of the HLG type. The encoding range is of the Limit type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -402,10 +322,6 @@ BT2020. The conversion function is of the PQ type. The encoding range is of the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT2020_PQ_LIMIT = 20--><!--Device-ColorSpace-BT2020_PQ_LIMIT = 20-End-->
@@ -421,10 +337,6 @@ P3_HLG_LIMIT = 21
 Display P3. The conversion function is of the HLG type. The encoding range is of the Limit type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -442,10 +354,6 @@ Display P3. The conversion function is of the PQ type. The encoding range is of 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-P3_PQ_LIMIT = 22--><!--Device-ColorSpace-P3_PQ_LIMIT = 22-End-->
@@ -461,10 +369,6 @@ LINEAR_P3 = 23
 Display P3. The conversion function is of the Linear type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -482,10 +386,6 @@ SRGB. The conversion function is of the Linear type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-LINEAR_SRGB = 24--><!--Device-ColorSpace-LINEAR_SRGB = 24-End-->
@@ -501,10 +401,6 @@ LINEAR_BT709 = LINEAR_SRGB
 Same as that of LINEAR_SRGB. BT709. The conversion function is of the Linear type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -522,10 +418,6 @@ BT2020. The conversion function is of the Linear type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-LINEAR_BT2020 = 25--><!--Device-ColorSpace-LINEAR_BT2020 = 25-End-->
@@ -541,10 +433,6 @@ DISPLAY_SRGB = SRGB
 Same as that of SRGB. SRGB. The conversion function is of the SRGB type. The encoding range is of the Full type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -562,10 +450,6 @@ Same as that of DISPLAY_P3. Display P3. The conversion function is of the SRGB t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DISPLAY_P3_SRGB = DISPLAY_P3--><!--Device-ColorSpace-DISPLAY_P3_SRGB = DISPLAY_P3-End-->
@@ -581,10 +465,6 @@ DISPLAY_P3_HLG = P3_HLG
 Same as that of P3_HLG. Display P3. The conversion function is of the HLG type. The encoding range is of the Full type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -602,10 +482,6 @@ Same as that of P3_PQ. Display P3. The conversion function is of the PQ type. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DISPLAY_P3_PQ = P3_PQ--><!--Device-ColorSpace-DISPLAY_P3_PQ = P3_PQ-End-->
@@ -622,10 +498,6 @@ BT2020. The conversion function is of the LOG type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorSpace-H_LOG = 26--><!--Device-ColorSpace-H_LOG = 26-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -640,10 +512,6 @@ DISPLAY BT2020. The conversion function is of the SRGB type. The encoding range 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorSpace-DISPLAY_BT2020_SRGB = 27--><!--Device-ColorSpace-DISPLAY_BT2020_SRGB = 27-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -657,10 +525,6 @@ CUSTOM = 5
 Custom type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -10,10 +10,6 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void--><!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
@@ -22,7 +18,7 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | 是 | 获取指定卷上的应用存储空间大小之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | 是 | 获取指定卷上的应用存储空间大小之后的回调。 |
 
 **错误码：**
 
@@ -32,7 +28,7 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -75,10 +71,6 @@ function getCurrentBundleStats(): Promise<BundleStats>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>--><!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
@@ -97,7 +89,7 @@ function getCurrentBundleStats(): Promise<BundleStats>
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

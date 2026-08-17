@@ -4,9 +4,7 @@ Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare class TabsController--><!--Device-unnamed-export declare class TabsController-End-->
 
@@ -22,9 +20,7 @@ changeIndex(value: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,9 +44,7 @@ TabsController的构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,9 +62,7 @@ preloadItems(indices: Array<int> | undefined): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,13 +94,11 @@ preloadItems(indices: Array<int> | undefined): Promise<void>
 setTabBarOpacity(opacity: double): void
 ```
 
-设置TabBar的不透明度。 > **说明：** > > 当使用 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindTabsToScrollable) > 或 > [bindTabsToNestedScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindTabsToNestedScrollable) > 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarOpacity接口设置的TabBar不透明度会失效。因此不建议同时使 > 用bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarOpacity接口。
+设置TabBar的不透明度。 > **说明：** > > 当使用 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable) > 或 > [bindTabsToNestedScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable) > 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarOpacity接口设置的TabBar不透明度会失效。因此不建议同时使 > 用bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarOpacity接口。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,13 +118,11 @@ setTabBarOpacity(opacity: double): void
 setTabBarTranslate(translate: TranslateOptions): void
 ```
 
-设置TabBar的平移距离。 > **说明：** > > 当使用 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindTabsToScrollable) > 或 > [bindTabsToNestedScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindTabsToNestedScrollable) > 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarTranslate接口设置的TabBar平移距离会失效。因此不建议同 > 时使用bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarTranslate接口。
+设置TabBar的平移距离。 > **说明：** > > 当使用 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable) > 或 > [bindTabsToNestedScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable) > 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarTranslate接口设置的TabBar平移距离会失效。因此不建议同 > 时使用bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarTranslate接口。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

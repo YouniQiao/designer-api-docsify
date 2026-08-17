@@ -1,14 +1,12 @@
-# USBInterface
+# USBInterface(USB Manager)
 
-一个[USBConfig](arkts-basicservices-usb-usbconfig-i.md#USBConfig)中可以含有多个USBInterface，每个USBInterface提供一个功能。
+一个[USBConfig](arkts-basicservices-usb-usbconfig-i.md#usbconfig)中可以含有多个USBInterface，每个USBInterface提供一个功能。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md#USBInterface)
+**替代接口：** [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md#usbinterface)
 
 <!--Device-usb-interface USBInterface--><!--Device-usb-interface USBInterface-End-->
 
@@ -26,11 +24,9 @@ alternateSetting: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [alternateSetting](arkts-basicservices-usbmanager-usbinterface-i.md#alternateSetting)
+**替代接口：** [alternateSetting](arkts-basicservices-usbmanager-usbinterface-i.md#alternatesetting)
 
 <!--Device-USBInterface-alternateSetting: number--><!--Device-USBInterface-alternateSetting: number-End-->
 
@@ -47,8 +43,6 @@ clazz: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -70,8 +64,6 @@ endpoints: Array<USBEndpoint>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [endpoints](arkts-basicservices-usbmanager-usbinterface-i.md#endpoints)
@@ -91,8 +83,6 @@ id: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -114,8 +104,6 @@ name: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [name](arkts-basicservices-usbmanager-usbinterface-i.md#name)
@@ -135,8 +123,6 @@ protocol: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -158,11 +144,9 @@ subClass: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [subClass](arkts-basicservices-usbmanager-usbinterface-i.md#subClass)
+**替代接口：** [subClass](arkts-basicservices-usbmanager-usbinterface-i.md#subclass)
 
 <!--Device-USBInterface-subClass: number--><!--Device-USBInterface-subClass: number-End-->
 

@@ -10,10 +10,6 @@ const APPEND = 0o2000
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-OpenMode-const APPEND = 0o2000--><!--Device-OpenMode-const APPEND = 0o2000-End-->
@@ -29,10 +25,6 @@ const CREATE = 0o100
 若文件不存在，则创建文件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,10 +42,6 @@ const DIR = 0o200000
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-OpenMode-const DIR = 0o200000--><!--Device-OpenMode-const DIR = 0o200000-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -67,10 +55,6 @@ const NOFOLLOW = 0o400000
 如果path指向符号链接，则出错。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 <!--Device-OpenMode-const NOFOLLOW = 0o400000--><!--Device-OpenMode-const NOFOLLOW = 0o400000-End-->
 
@@ -86,10 +70,6 @@ const NONBLOCK = 0o4000
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-OpenMode-const NONBLOCK = 0o4000--><!--Device-OpenMode-const NONBLOCK = 0o4000-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -103,10 +83,6 @@ const READ_ONLY = 0o0
 只读打开。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -124,10 +100,6 @@ const READ_WRITE = 0o2
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-OpenMode-const READ_WRITE = 0o2--><!--Device-OpenMode-const READ_WRITE = 0o2-End-->
@@ -144,10 +116,6 @@ const SYNC = 0o4010000
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-OpenMode-const SYNC = 0o4010000--><!--Device-OpenMode-const SYNC = 0o4010000-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -161,10 +129,6 @@ const TRUNC = 0o1000
 如果文件存在且以只写或读写的方式打开，则将其长度裁剪为零。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -181,10 +145,6 @@ const UNCACHE = 0o10000000000
 UNCACHE IO。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -203,10 +163,6 @@ const WRITE_ONLY = 0o1
 只写打开。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

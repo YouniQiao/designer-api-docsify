@@ -8,10 +8,6 @@ Defines the detailed information of the permissions to request from the system.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type ReqPermissionDetail = _ReqPermissionDetail--><!--Device-bundleManager-export type ReqPermissionDetail = _ReqPermissionDetail-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

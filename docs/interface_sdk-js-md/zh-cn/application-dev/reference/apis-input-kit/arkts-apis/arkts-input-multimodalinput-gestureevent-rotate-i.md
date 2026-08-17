@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export declare interface Rotate--><!--Device-unnamed-export declare interface Rotate-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
@@ -24,10 +20,6 @@ angle: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Rotate-angle: double--><!--Device-Rotate-angle: double-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
@@ -43,10 +35,6 @@ type: ActionType
 **类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Rotate-type: ActionType--><!--Device-Rotate-type: ActionType-End-->
 

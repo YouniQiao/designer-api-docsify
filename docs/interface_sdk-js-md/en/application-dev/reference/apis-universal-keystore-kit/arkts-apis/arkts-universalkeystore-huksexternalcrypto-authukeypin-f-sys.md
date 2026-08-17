@@ -16,10 +16,6 @@ Authenticates a UKey PIN. This API uses a promise to return the result.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-huksExternalCrypto-function authUkeyPin(resourceId: string, params: Array<HuksExternalCryptoParam>): Promise<void>--><!--Device-huksExternalCrypto-function authUkeyPin(resourceId: string, params: Array<HuksExternalCryptoParam>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -30,8 +26,8 @@ Authenticates a UKey PIN. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | Resource ID of a container in the UKey, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openAuthorizeDialog) . The result contains **resourceId**. |
-| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | Yes | Parameters to be passed during the operation. The mandatory tag is [HUKS_EXT_CRYPTO_TAG_UKEY_PIN](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType) . |
+| resourceId | string | Yes | Resource ID of a container in the UKey, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) . The result contains **resourceId**. |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | Yes | Parameters to be passed during the operation. The mandatory tag is [HUKS_EXT_CRYPTO_TAG_UKEY_PIN](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype) . |
 
 **Return value:**
 
@@ -56,7 +52,7 @@ Authenticates a UKey PIN. This API uses a promise to return the result.
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist. |
 | [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';

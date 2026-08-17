@@ -10,8 +10,6 @@ function getAbilityLabel(bundleName: string, abilityName: string, callback: Asyn
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
@@ -26,9 +24,9 @@ function getAbilityLabel(bundleName: string, abilityName: string, callback: Asyn
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | abilityName | string | 是 | Ability名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 程序启动作为入参的回调函数，返回应用名称信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 程序启动作为入参的回调函数，返回应用名称信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import bundle from '@ohos.bundle';
@@ -56,8 +54,6 @@ function getAbilityLabel(bundleName: string, abilityName: string): Promise<strin
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
@@ -79,7 +75,7 @@ function getAbilityLabel(bundleName: string, abilityName: string): Promise<strin
 | --- | --- |
 | Promise&lt;string&gt; | Promise形式返回应用名称信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import bundle from '@ohos.bundle';

@@ -4,10 +4,6 @@ Firewall domain name parameters.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-netFirewall-interface NetFirewallDomainParams--><!--Device-netFirewall-interface NetFirewallDomainParams-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -30,10 +26,6 @@ Domain: when isWildcard is false, the complete domain that needs to be determine
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-NetFirewallDomainParams-domain: string--><!--Device-NetFirewallDomainParams-domain: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -49,10 +41,6 @@ Is there a universal configuration rule.
 **Type:** boolean
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-NetFirewallDomainParams-isWildcard: boolean--><!--Device-NetFirewallDomainParams-isWildcard: boolean-End-->
 

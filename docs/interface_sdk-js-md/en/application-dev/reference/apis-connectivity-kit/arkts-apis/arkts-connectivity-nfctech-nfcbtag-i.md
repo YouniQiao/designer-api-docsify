@@ -6,10 +6,6 @@ Provides interfaces to create an {@code NfcBTag} and perform I/O operations on t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NfcBTag--><!--Device-unnamed-export interface NfcBTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -24,10 +20,6 @@ Obtains the application data of a tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcBTag-getRespAppData(): int[]--><!--Device-NfcBTag-getRespAppData(): int[]-End-->
@@ -40,7 +32,7 @@ Obtains the application data of a tag.
 | --- | --- |
 | int[] | Returns the application data of the tag. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -60,10 +52,6 @@ Obtains the protocol information of a tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcBTag-getRespProtocol(): int[]--><!--Device-NfcBTag-getRespProtocol(): int[]-End-->
@@ -76,7 +64,7 @@ Obtains the protocol information of a tag.
 | --- | --- |
 | int[] | Returns the protocol information of the tag. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';

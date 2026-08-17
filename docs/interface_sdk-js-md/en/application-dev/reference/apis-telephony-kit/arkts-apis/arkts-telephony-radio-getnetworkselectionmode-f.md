@@ -16,10 +16,6 @@ Obtains the network search mode of the SIM card in a specified slot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-function getNetworkSelectionMode(slotId: int, callback: AsyncCallback<NetworkSelectionMode>): void--><!--Device-radio-function getNetworkSelectionMode(slotId: int, callback: AsyncCallback<NetworkSelectionMode>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -29,7 +25,7 @@ Obtains the network search mode of the SIM card in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Yes | Indicates the callback for getting the network search mode of the SIM card. Available values are as follows: &lt;ul&gt; &lt;li&gt;[NETWORK_SELECTION_UNKNOWN](arkts-telephony-radio-networkselectionmode-e.md#NETWORK_SELECTION_UNKNOWN) &lt;li&gt;[NETWORK_SELECTION_AUTOMATIC](arkts-telephony-radio-networkselectionmode-e.md#NETWORK_SELECTION_AUTOMATIC) &lt;li&gt;[NETWORK_SELECTION_MANUAL](arkts-telephony-radio-networkselectionmode-e.md#NETWORK_SELECTION_MANUAL) &lt;ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Yes | Indicates the callback for getting the network search mode of the SIM card. Available values are as follows: &lt;ul&gt; &lt;li&gt;[NETWORK_SELECTION_UNKNOWN](arkts-telephony-radio-networkselectionmode-e.md#networkselectionunknown) &lt;li&gt;[NETWORK_SELECTION_AUTOMATIC](arkts-telephony-radio-networkselectionmode-e.md#networkselectionautomatic) &lt;li&gt;[NETWORK_SELECTION_MANUAL](arkts-telephony-radio-networkselectionmode-e.md#networkselectionmanual) &lt;ul&gt; |
 
 **Error codes:**
 
@@ -41,7 +37,7 @@ Obtains the network search mode of the SIM card in a specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -66,10 +62,6 @@ function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>
 Obtains the network search mode of the SIM card in a specified slot.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-radio-function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>--><!--Device-radio-function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>-End-->
 
@@ -97,7 +89,7 @@ Obtains the network search mode of the SIM card in a specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

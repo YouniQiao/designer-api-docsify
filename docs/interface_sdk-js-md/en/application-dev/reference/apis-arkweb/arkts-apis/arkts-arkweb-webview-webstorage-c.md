@@ -1,12 +1,8 @@
 # WebStorage
 
-Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web** components in an application share a **WebStorage** object. > **NOTE：**> > - The sample effect is subject to the actual device. > > - You must load the **Web** component before calling the APIs in **WebStorage**. > > - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the kernel > discards Web SQL. For details about the ArkWeb kernel version, see > [Constraints](../../../web/web-component-overview.md#constraints).
+Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web** components in an application share a **WebStorage** object. > **NOTE：**> > - You must load the **Web** component before calling the APIs in **WebStorage**. > > - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the kernel > discards Web SQL. For details about the ArkWeb kernel version, see > [Constraints](../../../web/web-component-overview.md#constraints).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class WebStorage--><!--Device-webview-class WebStorage-End-->
 
@@ -28,10 +24,6 @@ Deletes all storage data used by JavaScript storage APIs, including the Web SQL 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorage-static deleteAllData(incognito?: boolean): void--><!--Device-WebStorage-static deleteAllData(incognito?: boolean): void-End-->
@@ -42,7 +34,7 @@ Deletes all storage data used by JavaScript storage APIs, including the Web SQL 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | Whether to delete all data in the Web SQL Database in incognito mode. The value **true** means to delete all data in the Web SQL Database in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **undefined** or **null** is passed, the value is **false**.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to delete all data in the Web SQL Database in incognito mode. The value **true** means to delete all data in the Web SQL Database in incognito mode, and **false** means the opposite. <br>Default value: **false**. <br>If **undefined** or **null** is passed, the value is **false**.<br>**Since:** 11 |
 
 ## deleteOrigin
 
@@ -54,10 +46,6 @@ Deletes all data in the specified origin.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorage-static deleteOrigin(origin: string): void--><!--Device-WebStorage-static deleteOrigin(origin: string): void-End-->
@@ -68,7 +56,7 @@ Deletes all data in the specified origin.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Index of the origin, which is obtained through getOrigins. |
+| origin | string | Yes | Index of the origin, which is obtained through [getOrigins](#getorigins). |
 
 **Error codes:**
 
@@ -86,10 +74,6 @@ static getOriginQuota(origin: string): Promise<number>
 Obtains the storage quota of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -126,10 +110,6 @@ Obtains the storage quota of an origin in Web SQL Database and HTML5-supported W
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<number>): void--><!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<number>): void-End-->
@@ -141,7 +121,7 @@ Obtains the storage quota of an origin in Web SQL Database and HTML5-supported W
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Storage quota of the origin.<br>**number** is a long integer ranging from -2,147,483,648 to 2,147,483,647. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Storage quota of the origin. <br>**number** is a long integer ranging from -2,147,483,648 to 2,147,483,647. |
 
 **Error codes:**
 
@@ -159,10 +139,6 @@ static getOriginUsage(origin: string): Promise<number>
 Obtains the storage usage of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -199,10 +175,6 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<number>): void--><!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<number>): void-End-->
@@ -233,10 +205,6 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>--><!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>-End-->
@@ -265,10 +233,6 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 Obtains information about origins that are currently using the Web SQL Database and HTML5-supported Web Storage APIs. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

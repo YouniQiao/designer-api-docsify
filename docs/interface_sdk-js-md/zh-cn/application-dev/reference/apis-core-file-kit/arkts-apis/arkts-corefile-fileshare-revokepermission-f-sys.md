@@ -10,10 +10,6 @@ function revokePermission(tokenID: int): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.REVOKE_FILE_ACCESS_PERSIST
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -46,7 +42,7 @@ function revokePermission(tokenID: int): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -97,10 +93,6 @@ function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<vo
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.REVOKE_FILE_ACCESS_PERSIST
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -136,7 +128,7 @@ function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<vo
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

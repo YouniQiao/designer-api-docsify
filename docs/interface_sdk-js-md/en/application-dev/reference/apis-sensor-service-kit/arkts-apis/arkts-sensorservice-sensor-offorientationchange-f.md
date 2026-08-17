@@ -16,10 +16,6 @@ Unsubscribe to orientation sensor data, {@code SensorId.ORIENTATION}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function offOrientationChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<OrientationResponse>): void--><!--Device-sensor-function offOrientationChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<OrientationResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

@@ -16,11 +16,9 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [promisify](arkts-arkts-util-promisify-f.md#promisify)
+**Substitutes:** [promisify](../../apis-na/arkts-apis/arkts-na-util-promisify-f.md#promisify)
 
 <!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object--><!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object-End-->
 

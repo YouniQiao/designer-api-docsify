@@ -10,10 +10,6 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string--><!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -36,7 +32,7 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 | --- | --- |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

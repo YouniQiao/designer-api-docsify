@@ -4,10 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface SubHeaderV2TitleOptions--><!--Device-unnamed-export interface SubHeaderV2TitleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,10 +20,6 @@ id?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -42,15 +34,11 @@ id?: string
 primaryTitle?: ResourceStr
 ```
 
-标题内容。 当[SubHeaderV2](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md#SubHeaderV2)中同时使用primaryTitle、secondaryTitle、icon属性时，primaryTitle将不会显示。 默认值：undefined
+标题内容。 当[SubHeaderV2](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md#subheaderv2)中同时使用primaryTitle、secondaryTitle、icon属性时，primaryTitle将不会显示。 默认值：undefined
 
 **类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,10 +60,6 @@ primaryTitleModifier?: TextModifier
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -95,10 +79,6 @@ secondaryTitle?: ResourceStr
 **类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,10 +100,6 @@ secondaryTitleModifier?: TextModifier
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -143,10 +119,6 @@ titleAccessibilityText?: ResourceStr
 **类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -16,10 +16,6 @@ Returns the byte length of a string when encoded using `encoding`. This is not t
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encoding?: BufferEncoding): number--><!--Device-fastbuffer-function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encoding?: BufferEncoding): number-End-->
@@ -39,7 +35,7 @@ Returns the byte length of a string when encoded using `encoding`. This is not t
 | --- | --- |
 | number | The number of bytes contained within `string` |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

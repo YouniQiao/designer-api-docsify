@@ -1,12 +1,10 @@
 # WebNavigationType
 
-Enum type supplied to [navigationType](arkts-na-web-loadcommitteddetails-i.md#navigationType) for the navigation's type.
+Enum type supplied to [navigationType](arkts-na-web-loadcommitteddetails-i.md#navigationtype) for the navigation's type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum WebNavigationType--><!--Device-unnamed-export declare enum WebNavigationType-End-->
 
@@ -22,9 +20,7 @@ Unknown type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebNavigationType-UNKNOWN = 0--><!--Device-WebNavigationType-UNKNOWN = 0-End-->
 
@@ -40,9 +36,7 @@ A new entry was created due to a navigation happened on the main frame. Contains
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebNavigationType-MAIN_FRAME_NEW_ENTRY = 1--><!--Device-WebNavigationType-MAIN_FRAME_NEW_ENTRY = 1-End-->
 
@@ -58,9 +52,7 @@ Navigate to an existing entry due to a navigation on the main frame. e.g. 1. His
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebNavigationType-MAIN_FRAME_EXISTING_ENTRY = 2--><!--Device-WebNavigationType-MAIN_FRAME_EXISTING_ENTRY = 2-End-->
 
@@ -76,9 +68,7 @@ A navigation happened on subframe which was triggered by user.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebNavigationType-NAVIGATION_TYPE_NEW_SUBFRAME = 4--><!--Device-WebNavigationType-NAVIGATION_TYPE_NEW_SUBFRAME = 4-End-->
 
@@ -94,9 +84,7 @@ A navigation happened on the subframe automatically.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebNavigationType-NAVIGATION_TYPE_AUTO_SUBFRAME = 5--><!--Device-WebNavigationType-NAVIGATION_TYPE_AUTO_SUBFRAME = 5-End-->
 

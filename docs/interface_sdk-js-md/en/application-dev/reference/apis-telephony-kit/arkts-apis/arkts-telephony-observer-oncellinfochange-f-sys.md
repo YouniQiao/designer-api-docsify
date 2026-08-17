@@ -16,10 +16,6 @@ Callback when the cell information corresponding to the default sim card is upda
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-observer-function onCellInfoChange(callback: Callback<Array<CellInformation>>): void--><!--Device-observer-function onCellInfoChange(callback: Callback<Array<CellInformation>>): void-End-->
@@ -32,7 +28,7 @@ Callback when the cell information corresponding to the default sim card is upda
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md#CellInformation-(System-API)). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md#cellinformation-system-api). |
 
 **Error codes:**
 
@@ -57,10 +53,6 @@ Callback when the cell information corresponding to a monitored {@code slotId} i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-observer-function onCellInfoChange(options: ObserverOptions, callback: Callback<Array<CellInformation>>): void--><!--Device-observer-function onCellInfoChange(options: ObserverOptions, callback: Callback<Array<CellInformation>>): void-End-->
@@ -74,7 +66,7 @@ Callback when the cell information corresponding to a monitored {@code slotId} i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md#CellInformation-(System-API)). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md#cellinformation-system-api). |
 
 **Error codes:**
 

@@ -4,10 +4,6 @@ Defines a pen, which is used to describe the style and color to outline a shape.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class Pen--><!--Device-drawing-class Pen-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -28,10 +24,6 @@ A constructor used to create a **Pen** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-constructor()--><!--Device-Pen-constructor()-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -45,10 +37,6 @@ constructor(pen: Pen)
 Copies a **Pen** object to create a new one.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-constructor(pen: Pen)--><!--Device-Pen-constructor(pen: Pen)-End-->
 
@@ -76,10 +64,6 @@ Obtains the alpha value of this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-getAlpha(): int--><!--Device-Pen-getAlpha(): int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -99,10 +83,6 @@ getCapStyle(): CapStyle
 Obtains the cap style of this pen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-getCapStyle(): CapStyle--><!--Device-Pen-getCapStyle(): CapStyle-End-->
 
@@ -124,10 +104,6 @@ Obtains the color of this pen.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-getColor(): common2D.Color--><!--Device-Pen-getColor(): common2D.Color-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -148,10 +124,6 @@ Obtains the color of this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-getColor(): common2D.Color | undefined--><!--Device-Pen-getColor(): common2D.Color | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -168,13 +140,9 @@ Obtains the color of this pen.
 getColor4f(): common2D.Color4f
 ```
 
-Obtains the pen color. The difference between this method and [getColor](#getColor) is that this method returns a floating point number.
+Obtains the pen color. The difference between this method and [getColor](#getcolor) is that this method returns a floating point number.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-getColor4f(): common2D.Color4f--><!--Device-Pen-getColor4f(): common2D.Color4f-End-->
 
@@ -196,10 +164,6 @@ Obtains the color of a pen. The color is used by the pen to outline a shape.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-getColor4f(): common2D.Color4f | undefined--><!--Device-Pen-getColor4f(): common2D.Color4f | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -219,10 +183,6 @@ getColorFilter(): ColorFilter
 Obtains the color filter of this pen.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-getColorFilter(): ColorFilter--><!--Device-Pen-getColorFilter(): ColorFilter-End-->
 
@@ -244,10 +204,6 @@ Obtains the color filter of this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-getColorFilter(): ColorFilter | undefined--><!--Device-Pen-getColorFilter(): ColorFilter | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -267,10 +223,6 @@ getFillPath(src: Path, dst: Path): boolean
 Obtains the source path outline drawn using this pen and represents it using a destination path.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-getFillPath(src: Path, dst: Path): boolean--><!--Device-Pen-getFillPath(src: Path, dst: Path): boolean-End-->
 
@@ -305,10 +257,6 @@ Obtains the color of this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-getHexColor(): int--><!--Device-Pen-getHexColor(): int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -328,10 +276,6 @@ getJoinStyle(): JoinStyle
 Obtains the join style of this pen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-getJoinStyle(): JoinStyle--><!--Device-Pen-getJoinStyle(): JoinStyle-End-->
 
@@ -353,10 +297,6 @@ Obtains the maximum ratio allowed between the sharp corner length of a polyline 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-getMiterLimit(): double--><!--Device-Pen-getMiterLimit(): double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -376,10 +316,6 @@ getWidth(): double
 Obtains the stroke width of this pen. The width describes the thickness of the outline of a shape.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-getWidth(): double--><!--Device-Pen-getWidth(): double-End-->
 
@@ -401,10 +337,6 @@ Checks whether anti-aliasing is enabled for this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-isAntiAlias(): boolean--><!--Device-Pen-isAntiAlias(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -425,10 +357,6 @@ Resets this pen to the initial state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-reset(): void--><!--Device-Pen-reset(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -442,10 +370,6 @@ setAlpha(alpha: int): void
 Sets an alpha value for this pen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-setAlpha(alpha: int): void--><!--Device-Pen-setAlpha(alpha: int): void-End-->
 
@@ -473,10 +397,6 @@ Enables anti-aliasing for this pen. Anti-aliasing makes the edges of the content
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-setAntiAlias(aa: boolean): void--><!--Device-Pen-setAntiAlias(aa: boolean): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -502,10 +422,6 @@ setBlendMode(mode: BlendMode): void
 Sets a blend mode for this pen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-setBlendMode(mode: BlendMode): void--><!--Device-Pen-setBlendMode(mode: BlendMode): void-End-->
 
@@ -533,10 +449,6 @@ Sets the cap style for this pen. If this API is not called, the default cap styl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-setCapStyle(style: CapStyle): void--><!--Device-Pen-setCapStyle(style: CapStyle): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -563,10 +475,6 @@ Sets a color for this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-setColor(color: common2D.Color): void--><!--Device-Pen-setColor(color: common2D.Color): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -589,13 +497,9 @@ Sets a color for this pen.
 setColor(alpha: int, red: int, green: int, blue: int): void
 ```
 
-Sets a color for this pen. This API provides better performance than [setColor](#setColor) and is recommended.
+Sets a color for this pen. This API provides better performance than [setColor](#setcolor) and is recommended.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-setColor(alpha: int, red: int, green: int, blue: int): void--><!--Device-Pen-setColor(alpha: int, red: int, green: int, blue: int): void-End-->
 
@@ -626,10 +530,6 @@ Sets a color for this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-setColor(color: int): void--><!--Device-Pen-setColor(color: int): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -646,13 +546,9 @@ Sets a color for this pen.
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-Sets the color and standard color gamut for this pen. The difference between this method and [setColor](#setColor) is that the color gamut can be set separately.
+Sets the color and standard color gamut for this pen. The difference between this method and [setColor](#setcolor) is that the color gamut can be set separately.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void--><!--Device-Pen-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void-End-->
 
@@ -674,10 +570,6 @@ setColorFilter(filter: ColorFilter | null): void
 Sets a color filter for this pen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-setColorFilter(filter: ColorFilter | null): void--><!--Device-Pen-setColorFilter(filter: ColorFilter | null): void-End-->
 
@@ -705,10 +597,6 @@ Enables dithering for this pen. Dithering make the drawn color more realistic.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-setDither(dither: boolean): void--><!--Device-Pen-setDither(dither: boolean): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -734,10 +622,6 @@ setImageFilter(filter: ImageFilter | null): void
 Sets an image filter for this pen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-setImageFilter(filter: ImageFilter | null): void--><!--Device-Pen-setImageFilter(filter: ImageFilter | null): void-End-->
 
@@ -765,10 +649,6 @@ Sets the join style for this pen. If this API is not called, the default join st
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-setJoinStyle(style: JoinStyle): void--><!--Device-Pen-setJoinStyle(style: JoinStyle): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -795,10 +675,6 @@ Adds a mask filter for this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-setMaskFilter(filter: MaskFilter | null): void--><!--Device-Pen-setMaskFilter(filter: MaskFilter | null): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -821,13 +697,9 @@ Adds a mask filter for this pen.
 setMiterLimit(miter: double): void
 ```
 
-Sets the maximum ratio allowed between the sharp corner length of a polyline and its line width. When drawing a polyline with the pen, if [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md#JoinStyle) is set to **MITER_JOIN** and this maximum ratio is exceeded, the corner will be displayed as beveled instead of mitered.
+Sets the maximum ratio allowed between the sharp corner length of a polyline and its line width. When drawing a polyline with the pen, if [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md#joinstyle) is set to **MITER_JOIN** and this maximum ratio is exceeded, the corner will be displayed as beveled instead of mitered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-setMiterLimit(miter: double): void--><!--Device-Pen-setMiterLimit(miter: double): void-End-->
 
@@ -855,10 +727,6 @@ Sets the path effect for this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-setPathEffect(effect: PathEffect | null): void--><!--Device-Pen-setPathEffect(effect: PathEffect | null): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -884,10 +752,6 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 Sets the shader effect for this pen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-setShaderEffect(shaderEffect: ShaderEffect | null): void--><!--Device-Pen-setShaderEffect(shaderEffect: ShaderEffect | null): void-End-->
 
@@ -915,10 +779,6 @@ Sets a shadow layer for this pen. The shadow layer effect takes effect only when
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pen-setShadowLayer(shadowLayer: ShadowLayer | null): void--><!--Device-Pen-setShadowLayer(shadowLayer: ShadowLayer | null): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -944,10 +804,6 @@ setStrokeWidth(width: double): void
 Sets the stroke width for this pen. The value **0** is treated as an unusually thin width. During drawing, the width of 0 is always drawn as 1 pixel wide, regardless of any scaling applied to the canvas. Negative values are also regarded as the value **0** during the drawing process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pen-setStrokeWidth(width: double): void--><!--Device-Pen-setStrokeWidth(width: double): void-End-->
 

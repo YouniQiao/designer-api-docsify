@@ -4,10 +4,6 @@ The parameter of setting orientation
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-screen-interface OrientationOptions--><!--Device-screen-interface OrientationOptions-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -34,10 +30,6 @@ Whether to ignore rotation lock. The value true means allowing the screen to rot
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OrientationOptions-ignoreRotationLock?: boolean--><!--Device-OrientationOptions-ignoreRotationLock?: boolean-End-->
@@ -59,10 +51,6 @@ Whether to need animation. The value true means rotating the screen with animati
 **Default:** true
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

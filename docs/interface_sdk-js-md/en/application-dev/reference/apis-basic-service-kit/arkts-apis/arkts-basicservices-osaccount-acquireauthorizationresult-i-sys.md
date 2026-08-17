@@ -4,10 +4,6 @@ Defines the result of the authorization.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface AcquireAuthorizationResult--><!--Device-osAccount-interface AcquireAuthorizationResult-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -32,10 +28,6 @@ Whether the authorization result is reused. The default value is **undefined**. 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AcquireAuthorizationResult-isReused?: boolean--><!--Device-AcquireAuthorizationResult-isReused?: boolean-End-->
@@ -55,10 +47,6 @@ Permission associated with the authorization.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Authorization result code. If the authorization is successful, AuthorizationResu
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AcquireAuthorizationResult-resultCode: AuthorizationResultCode--><!--Device-AcquireAuthorizationResult-resultCode: AuthorizationResultCode-End-->
@@ -104,10 +88,6 @@ Authorization token. The default value is **undefined**.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AcquireAuthorizationResult-token?: Uint8Array--><!--Device-AcquireAuthorizationResult-token?: Uint8Array-End-->
@@ -127,10 +107,6 @@ Validity period of the authorization, in seconds. The default value is **300**.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

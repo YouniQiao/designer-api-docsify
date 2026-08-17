@@ -10,10 +10,6 @@ function getCallTransferInfo(type: CallTransferType, number: string): Promise<Ca
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_CALL_TRANSFER_INFO
 
 <!--Device-call-function getCallTransferInfo(type: CallTransferType, number: string): Promise<CallTransferResult>--><!--Device-call-function getCallTransferInfo(type: CallTransferType, number: string): Promise<CallTransferResult>-End-->
@@ -45,7 +41,7 @@ function getCallTransferInfo(type: CallTransferType, number: string): Promise<Ca
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { call } from '@kit.TelephonyKit';

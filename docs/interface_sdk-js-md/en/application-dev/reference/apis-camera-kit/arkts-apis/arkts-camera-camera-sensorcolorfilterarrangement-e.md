@@ -4,10 +4,6 @@ Enumerates the arrangement modes of the sensor color filter.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum SensorColorFilterArrangement--><!--Device-camera-enum SensorColorFilterArrangement-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -21,10 +17,6 @@ BGGR = 0
 Blue-green-green-red filter arrangement.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Green-blue-red-green filter arrangement.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -66,10 +54,6 @@ Green-red-blue-green arrangement mode.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -87,10 +71,6 @@ RGGB = 3
 Red-green-green-blue arrangement mode.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

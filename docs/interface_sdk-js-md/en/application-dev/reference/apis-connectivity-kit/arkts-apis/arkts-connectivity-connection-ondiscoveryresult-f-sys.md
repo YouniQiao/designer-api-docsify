@@ -16,10 +16,6 @@ Subscribe the event reported when a remote Bluetooth device is discovered. On AP
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
 - API version 18 - 24: ohos.permission.ACCESS_BLUETOOTH
@@ -49,7 +45,7 @@ Subscribe the event reported when a remote Bluetooth device is discovered. On AP
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

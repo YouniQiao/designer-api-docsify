@@ -16,10 +16,6 @@ Unsubscribe the event reported when the Bluetooth state changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-access-function offStateChange(callback?: Callback<BluetoothState>): void--><!--Device-access-function offStateChange(callback?: Callback<BluetoothState>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

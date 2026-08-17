@@ -4,10 +4,6 @@ Enumerates description file types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export enum DescriptionType--><!--Device-update-export enum DescriptionType-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -24,10 +20,6 @@ Content. This type indicates that the description content is directly provided, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DescriptionType-CONTENT = 0--><!--Device-DescriptionType-CONTENT = 0-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -43,10 +35,6 @@ URI = 1
 Link. This type indicates that the description is provided through a link, which is applicable to scenarios where the description content is long or needs to be obtained from external resources.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DescriptionType-URI = 1--><!--Device-DescriptionType-URI = 1-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace inspector--><!--Device-unnamed-declare namespace inspector-End-->
@@ -20,7 +16,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createComponentObserver) | 绑定指定组件，返回对应的监听句柄。 |
+| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver) | 绑定指定组件，返回对应的监听句柄。 |
 
 ### 接口
 

@@ -4,10 +4,6 @@ Touch tap position.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare interface TouchPosition--><!--Device-unnamed-export declare interface TouchPosition-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -25,10 +21,6 @@ X-coordinate of the tap position, in px.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Y-coordinate of the tap position, in px.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

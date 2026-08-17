@@ -14,11 +14,9 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyFormsEnableUpdate-(System-API))
+**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyformsenableupdate-system-api)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -47,11 +45,9 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyFormsEnableUpdate-(System-API))
+**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyformsenableupdate-system-api)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

@@ -2,13 +2,9 @@
 
 Message options for the dialog box, combining message content with text style.
 
-**Inheritance/Implementation:** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md#DialogTextStyleOptions)
+**Inheritance/Implementation:** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md#dialogtextstyleoptions)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 <!--Device-dialog-declare interface DialogMessage--><!--Device-dialog-declare interface DialogMessage-End-->
 
@@ -36,10 +32,6 @@ Message content of the dialog box.
 **Type:** ResourceStr
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

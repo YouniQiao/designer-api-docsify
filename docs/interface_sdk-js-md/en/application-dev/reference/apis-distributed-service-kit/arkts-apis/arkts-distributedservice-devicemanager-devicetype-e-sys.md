@@ -4,8 +4,6 @@ Enumerates the device types.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-deviceManager-enum DeviceType--><!--Device-deviceManager-enum DeviceType-End-->
@@ -23,8 +21,6 @@ UNKNOWN_TYPE = 0
 Unknown device type.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -44,8 +40,6 @@ Smart speaker.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-DeviceType-SPEAKER = 0x0A--><!--Device-DeviceType-SPEAKER = 0x0A-End-->
@@ -63,8 +57,6 @@ PHONE = 0x0E
 Phone.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -84,8 +76,6 @@ Tablet
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-DeviceType-TABLET = 0x11--><!--Device-DeviceType-TABLET = 0x11-End-->
@@ -103,8 +93,6 @@ WEARABLE = 0x6D
 Wearable
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -124,8 +112,6 @@ Car.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-DeviceType-CAR = 0x83--><!--Device-DeviceType-CAR = 0x83-End-->
@@ -143,8 +129,6 @@ TV = 0x9C
 Smart TV
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 

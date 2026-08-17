@@ -10,10 +10,6 @@ function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hiTraceChain-function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean--><!--Device-hiTraceChain-function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
@@ -31,7 +27,7 @@ function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean
 | --- | --- |
 | boolean | true：HiTraceId已启用flag；false：HiTraceId未启用flag。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 开始跟踪，跟踪标志是INCLUDE_ASYNC。

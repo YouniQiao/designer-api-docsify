@@ -16,9 +16,7 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,9 +33,9 @@
 
 | Name | Description |
 | --- | --- |
-| [begin](arkts-na-performancemonitor-begin-f-sys.md#begin-(System-API)) | Begin monitoring an application scene. |
-| [end](arkts-na-performancemonitor-end-f-sys.md#end-(System-API)) | End monitoring an application scene. |
-| [recordInputEventTime](arkts-na-performancemonitor-recordinputeventtime-f-sys.md#recordInputEventTime-(System-API)) | recordInputEventTime monitoring an application scene. |
+| [begin](arkts-na-performancemonitor-begin-f-sys.md#begin-system-api) | Begin monitoring an application scene. |
+| [end](arkts-na-performancemonitor-end-f-sys.md#end-system-api) | End monitoring an application scene. |
+| [recordInputEventTime](arkts-na-performancemonitor-recordinputeventtime-f-sys.md#recordinputeventtime-system-api) | recordInputEventTime monitoring an application scene. |
 <!--DelEnd-->
 
 <!--Del-->

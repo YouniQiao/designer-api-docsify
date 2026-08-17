@@ -10,10 +10,6 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare function moveFile(src: string, dest: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function moveFile(src: string, dest: string, mode?: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -67,10 +63,6 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -81,7 +73,7 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | src | string | 是 | 源文件的应用沙箱路径。 |
 | dest | string | 是 | 目标文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步移动文件之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步移动文件之后的回调。 |
 
 **错误码：**
 
@@ -118,10 +110,6 @@ declare function moveFile(src: string, dest: string, mode: number, callback: Asy
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare function moveFile(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function moveFile(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -133,7 +121,7 @@ declare function moveFile(src: string, dest: string, mode: number, callback: Asy
 | src | string | 是 | 源文件的应用沙箱路径。 |
 | dest | string | 是 | 目标文件的应用沙箱路径。 |
 | mode | number | 是 | 移动模式。若mode为0，移动位置存在同名文件时，强制移动覆盖。若mode为1，移动位置存在同名文件时，抛出异常。默认为0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步移动文件之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步移动文件之后的回调。 |
 
 **错误码：**
 

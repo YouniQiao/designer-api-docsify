@@ -16,10 +16,6 @@ Runs startup tasks or loads .so files. > **NOTE：**> > This API cannot be used 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-startupManager-function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>-End-->
@@ -30,7 +26,7 @@ Runs startup tasks or loads .so files. > **NOTE：**> > This API cannot be used 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#StartupTask) names or names of .so files to be preloaded. |
+| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md#startuptask) names or names of .so files to be preloaded. |
 | config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | No | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
 
 **Return value:**
@@ -50,7 +46,7 @@ Runs startup tasks or loads .so files. > **NOTE：**> > This API cannot be used 
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) | Startup task or its dependency not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
@@ -86,13 +82,9 @@ export default class EntryAbility extends UIAbility {
 function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
 ```
 
-Runs startup tasks or loads .so files. You can specify [AbilityStageContext](arkts-ability-abilitystagecontext-c.md#AbilityStageContext) for loading startup tasks. This API uses a promise to return the result.
+Runs startup tasks or loads .so files. You can specify [AbilityStageContext](arkts-ability-abilitystagecontext-c.md#abilitystagecontext) for loading startup tasks. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +96,8 @@ Runs startup tasks or loads .so files. You can specify [AbilityStageContext](ark
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#StartupTask) names or names of .so files to be preloaded. |
-| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#StartupTask). It is passed as an input parameter to [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init) of the task. |
+| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md#startuptask) names or names of .so files to be preloaded. |
+| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md#startuptask). It is passed as an input parameter to [init](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md#init) of the task. |
 | config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | Yes | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
 
 **Return value:**
@@ -124,7 +116,7 @@ Runs startup tasks or loads .so files. You can specify [AbilityStageContext](ark
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) | Startup task or its dependency not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityStage, startupManager, StartupListener, StartupConfig } from '@kit.AbilityKit';

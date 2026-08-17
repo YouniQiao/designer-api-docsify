@@ -2,15 +2,13 @@
 
 Manager pan profile.
 
-**Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#BaseProfile)
+**Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#baseprofile)
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [PanProfile](arkts-connectivity-pan-panprofile-i.md#PanProfile)
+**Substitutes:** [PanProfile](arkts-connectivity-pan-panprofile-i.md#panprofile)
 
 <!--Device-bluetoothManager-interface PanProfile--><!--Device-bluetoothManager-interface PanProfile-End-->
 
@@ -31,8 +29,6 @@ disconnect(device: string): void
 Disconnect to device with pan. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -77,11 +73,9 @@ Obtains the tethering enable or disable. On API 10 and above, the permission req
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [isTetheringOn](arkts-connectivity-pan-panprofile-i-sys.md#isTetheringOn)
+**Substitutes:** [isTetheringOn](arkts-connectivity-pan-panprofile-i-sys.md#istetheringon)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -115,11 +109,9 @@ Enable bluetooth tethering. On API 10 and above, the permission required by this
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [setTethering](arkts-connectivity-pan-panprofile-i-sys.md#setTethering)
+**Substitutes:** [setTethering](arkts-connectivity-pan-panprofile-i-sys.md#settethering)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH

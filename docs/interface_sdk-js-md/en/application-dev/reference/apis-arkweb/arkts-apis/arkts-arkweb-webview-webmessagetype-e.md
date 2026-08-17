@@ -1,12 +1,8 @@
 # WebMessageType
 
-Enum type supplied to [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onMessageEventExt) for indicating the type of web message.
+Enumerates the data types supported by the [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md#webmessageport) API.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum WebMessageType--><!--Device-webview-enum WebMessageType-End-->
 
@@ -22,10 +18,6 @@ Unsupported data type.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageType-NOT_SUPPORT = 0--><!--Device-WebMessageType-NOT_SUPPORT = 0-End-->
@@ -38,13 +30,9 @@ Unsupported data type.
 STRING = 1
 ```
 
-The string data type.
+String type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ The string data type.
 NUMBER = 2
 ```
 
-The number data type.
+Number type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +62,9 @@ The number data type.
 BOOLEAN = 3
 ```
 
-The boolean data type.
+Boolean type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,13 +78,9 @@ The boolean data type.
 ARRAY_BUFFER = 4
 ```
 
-The arraybuffer data type.
+Raw binary data buffer.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,13 +94,9 @@ The arraybuffer data type.
 ARRAY = 5
 ```
 
-The array data type.
+Array type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -138,13 +110,9 @@ The array data type.
 ERROR = 6
 ```
 
-The error data type.
+Error object type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

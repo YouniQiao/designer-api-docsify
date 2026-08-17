@@ -10,11 +10,9 @@ getForegroundApplications.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getForegroundApplications-(System-API))
+**Substitutes:** [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getforegroundapplications-system-api)
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -30,7 +28,7 @@ getForegroundApplications.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Yes | Return all application information currently in the foreground in the form of callback. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -55,11 +53,9 @@ getForegroundApplications.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getForegroundApplications-(System-API))
+**Substitutes:** [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getforegroundapplications-system-api)
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -75,7 +71,7 @@ getForegroundApplications.
 | --- | --- |
 | Promise&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Returns the list of AppStateData. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

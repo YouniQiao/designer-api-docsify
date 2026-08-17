@@ -16,10 +16,6 @@ Queries the result of the sync operation. This API uses a promise to return the 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>--><!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -49,7 +45,7 @@ Queries the result of the sync operation. This API uses a promise to return the 
 | [24000018](../errorcode-asset.md#24000018-parameter-check-failed) | Parameter verification failed. |
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

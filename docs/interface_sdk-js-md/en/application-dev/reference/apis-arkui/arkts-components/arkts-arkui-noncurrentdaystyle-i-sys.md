@@ -4,8 +4,6 @@ Non current day style.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 <!--Device-unnamed-interface NonCurrentDayStyle--><!--Device-unnamed-interface NonCurrentDayStyle-End-->
@@ -25,8 +23,6 @@ Non-current month day color.
 **Type:** ResourceColor
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 
@@ -50,8 +46,6 @@ Lunar style of non-current month.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -74,8 +68,6 @@ Non-Current Month Off Day Marker Color.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -97,8 +89,6 @@ Non-Current Month Workday Marker Color.
 **Type:** ResourceColor
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 

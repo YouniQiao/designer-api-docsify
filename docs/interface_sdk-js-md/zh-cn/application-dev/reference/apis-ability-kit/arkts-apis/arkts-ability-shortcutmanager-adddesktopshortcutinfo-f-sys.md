@@ -10,10 +10,6 @@ function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promis
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_SHORTCUTS
 
 <!--Device-shortcutManager-function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promise<void>--><!--Device-shortcutManager-function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promise<void>-End-->
@@ -27,7 +23,7 @@ function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | shortcutInfo | ShortcutInfo | 是 | 快捷方式信息。 |
-| userId | int | 是 | 用户id。可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取。 |
+| userId | int | 是 | 用户id。可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
 
 **返回值：**
 
@@ -48,7 +44,7 @@ function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promis
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

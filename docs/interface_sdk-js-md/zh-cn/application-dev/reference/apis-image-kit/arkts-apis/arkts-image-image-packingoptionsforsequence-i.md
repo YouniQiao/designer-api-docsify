@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-image-interface PackingOptionsForSequence--><!--Device-image-interface PackingOptionsForSequence-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
@@ -23,10 +19,6 @@ GIF编码中设定每帧输出图像的延迟时间，取值需大于0。 - 单�
 **类型：** Array&lt;int&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PackingOptionsForSequence-delayTimeList: Array<int>--><!--Device-PackingOptionsForSequence-delayTimeList: Array<int>-End-->
 
@@ -44,10 +36,6 @@ GIF编码中设定每帧输出图像的帧过渡模式，如果长度小于frame
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PackingOptionsForSequence-disposalTypes?: Array<int>--><!--Device-PackingOptionsForSequence-disposalTypes?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
@@ -64,10 +52,6 @@ GIF编码中指定的帧数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PackingOptionsForSequence-frameCount: int--><!--Device-PackingOptionsForSequence-frameCount: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
@@ -83,10 +67,6 @@ loopCount?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PackingOptionsForSequence-loopCount?: int--><!--Device-PackingOptionsForSequence-loopCount?: int-End-->
 

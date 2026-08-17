@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-proxyChannelManager-enum ChannelState--><!--Device-proxyChannelManager-enum ChannelState-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
@@ -21,10 +17,6 @@ CHANNEL_WAIT_RESUME = 0
 连接已断开，通道不可用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,10 +34,6 @@ CHANNEL_RESUME = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChannelState-CHANNEL_RESUME = 1--><!--Device-ChannelState-CHANNEL_RESUME = 1-End-->
@@ -58,13 +46,9 @@ CHANNEL_RESUME = 1
 CHANNEL_EXCEPTION_SOFTWARE_FAILED = 2
 ```
 
-其他软件错误导致通道不可用。
+软件异常导致通道不可用，如内部协议栈错误、资源分配失败等。建议检查日志定位具体原因。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,10 +65,6 @@ CHANNEL_BR_NO_PAIRED = 3
 蓝牙配对关系被删除，通道不可用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

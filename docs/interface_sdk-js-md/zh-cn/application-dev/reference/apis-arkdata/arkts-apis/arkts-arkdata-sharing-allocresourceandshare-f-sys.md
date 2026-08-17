@@ -15,10 +15,6 @@ function allocResourceAndShare(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns?: Array<string>    ): Promise<relationalStore.ResultSet>--><!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns?: Array<string>    ): Promise<relationalStore.ResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -48,7 +44,7 @@ function allocResourceAndShare(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -104,10 +100,6 @@ function allocResourceAndShare(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void--><!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -121,7 +113,7 @@ function allocResourceAndShare(
 | storeId | string | 是 | 数据库名称。 |
 | predicates | relationalStore.RdbPredicates | 是 | 表示查找共享资源标识的数据的谓词条件。 |
 | participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 | 端云共享的参与者。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;relationalStore.ResultSet&gt; | 是 | 回调函数。返回查询并共享的共享资源标识结果集。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;relationalStore.ResultSet&gt; | 是 | 回调函数。返回查询并共享的共享资源标识结果集。 |
 
 **错误码：**
 
@@ -131,7 +123,7 @@ function allocResourceAndShare(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
@@ -190,10 +182,6 @@ function allocResourceAndShare(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns: Array<string>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void--><!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns: Array<string>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -208,7 +196,7 @@ function allocResourceAndShare(
 | predicates | relationalStore.RdbPredicates | 是 | 表示查找共享资源标识的数据的谓词条件。 |
 | participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 | 端云共享的参与者。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查找的列字段名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;relationalStore.ResultSet&gt; | 是 | 回调函数。返回查询并共享的共享资源标识结果集。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;relationalStore.ResultSet&gt; | 是 | 回调函数。返回查询并共享的共享资源标识结果集。 |
 
 **错误码：**
 
@@ -218,7 +206,7 @@ function allocResourceAndShare(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';

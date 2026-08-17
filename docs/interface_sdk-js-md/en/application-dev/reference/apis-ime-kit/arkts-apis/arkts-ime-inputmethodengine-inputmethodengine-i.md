@@ -1,14 +1,12 @@
 # InputMethodEngine
 
-In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getInputMethodEngine) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 23
 
-**Substitutes:** [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md#InputMethodAbility)
+**Substitutes:** [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md#inputmethodability)
 
 <!--Device-inputMethodEngine-interface InputMethodEngine--><!--Device-inputMethodEngine-interface InputMethodEngine-End-->
 
@@ -33,8 +31,6 @@ Disables listening for the input method binding event.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 23
 
 **Substitutes:** off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
@@ -50,7 +46,7 @@ Disables listening for the input method binding event.
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
 | callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine()
@@ -70,8 +66,6 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 23
 
 **Substitutes:** off(type: 'keyboardShow' | 'keyboardHide', callback?: () =&gt; void)
@@ -87,7 +81,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine().off('keyboardShow');
@@ -104,8 +98,6 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 23
 
 **Substitutes:** off(type: 'keyboardShow' | 'keyboardHide', callback?: () =&gt; void)
@@ -121,7 +113,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine().off('keyboardShow');
@@ -141,8 +133,6 @@ Enables listening for the input method binding event. This API uses an asynchron
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 23
 
 **Substitutes:** on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
@@ -158,7 +148,7 @@ Enables listening for the input method binding event. This API uses an asynchron
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
 | callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | Yes | Callback used to return the **KeyboardController** and **TextInputClient** instances. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine()
@@ -179,8 +169,6 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 23
 
 **Substitutes:** on(type: 'keyboardShow' | 'keyboardHide', callback: () =&gt; void)
@@ -196,7 +184,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {
@@ -217,8 +205,6 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 23
 
 **Substitutes:** on(type: 'keyboardShow' | 'keyboardHide', callback: () =&gt; void)
@@ -234,7 +220,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {

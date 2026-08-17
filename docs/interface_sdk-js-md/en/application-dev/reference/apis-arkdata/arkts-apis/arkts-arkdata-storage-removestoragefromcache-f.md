@@ -10,8 +10,6 @@ Removes the singleton **Storage** instance of a file from the cache. The removed
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** removePreferencesFromCache
@@ -35,8 +33,6 @@ function removeStorageFromCache(path: string): Promise<void>
 Removes the singleton **Storage** instance of a file from the cache. The removed instance cannot be used for data operations. Otherwise, data inconsistency will occur. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

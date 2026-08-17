@@ -10,11 +10,9 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
-**替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#setTime)(time: long, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#settime)(time: long, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.SET_TIME
 
@@ -29,7 +27,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | date | Date | 是 | 目标日期，且必须>0。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。设置系统日期的结果回调，设置成功时err为undefined，设置失败时err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。设置系统日期的结果回调，设置成功时err为undefined，设置失败时err为错误对象。 |
 
 **错误码：**
 
@@ -39,7 +37,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,11 +68,9 @@ function setDate(date: Date): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
-**替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#setTime)(time: long, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#settime)(time: long, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.SET_TIME
 
@@ -104,7 +100,7 @@ function setDate(date: Date): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

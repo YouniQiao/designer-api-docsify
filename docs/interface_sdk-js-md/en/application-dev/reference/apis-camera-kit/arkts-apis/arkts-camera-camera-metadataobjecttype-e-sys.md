@@ -4,10 +4,6 @@ Enumerates the types of metadata objects used for camera detection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum MetadataObjectType--><!--Device-camera-enum MetadataObjectType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -21,10 +17,6 @@ HUMAN_BODY = 1
 Metadata object used for body detection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -44,10 +36,6 @@ Metadata object used for cat face detection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MetadataObjectType-CAT_FACE = 2--><!--Device-MetadataObjectType-CAT_FACE = 2-End-->
@@ -65,10 +53,6 @@ CAT_BODY = 3
 Metadata object used for cat body detection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -88,10 +72,6 @@ Metadata object used for dog face detection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MetadataObjectType-DOG_FACE = 4--><!--Device-MetadataObjectType-DOG_FACE = 4-End-->
@@ -109,10 +89,6 @@ DOG_BODY = 5
 Metadata object used for dog body detection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -132,10 +108,6 @@ Metadata object used for salient detection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MetadataObjectType-SALIENT_DETECTION = 6--><!--Device-MetadataObjectType-SALIENT_DETECTION = 6-End-->
@@ -153,10 +125,6 @@ BAR_CODE_DETECTION = 7
 Metadata object used for QR code detection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -176,10 +144,6 @@ Metadata object for basic face detection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MetadataObjectType-BASIC_FACE_DETECTION = 8--><!--Device-MetadataObjectType-BASIC_FACE_DETECTION = 8-End-->
@@ -197,10 +161,6 @@ TEXT_DETECTION = 9
 Text detection type.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

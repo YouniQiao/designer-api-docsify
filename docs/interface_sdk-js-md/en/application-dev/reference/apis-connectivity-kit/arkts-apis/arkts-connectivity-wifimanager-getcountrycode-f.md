@@ -16,10 +16,6 @@ Obtain the country code of the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function getCountryCode(): string--><!--Device-wifiManager-function getCountryCode(): string-End-->
@@ -40,7 +36,7 @@ Obtain the country code of the device.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2401000](../errorcode-wifi.md#2401000-sta-internal-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

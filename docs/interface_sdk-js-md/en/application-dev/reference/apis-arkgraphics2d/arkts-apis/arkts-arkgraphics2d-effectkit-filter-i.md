@@ -4,10 +4,6 @@ An image effect class used to add a specified effect to the effect chain through
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-effectKit-interface Filter--><!--Device-effectKit-interface Filter-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -27,10 +23,6 @@ blur(radius: double): Filter
 Adds the blur effect to the effect chain and returns the instance of the chain. The shader tile mode uses DECAL. To specify the tile mode, use the blur(radius: double, tileMode: TileMode) API. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur. > **NOTE：**> > This API provides the blur effect for static images. To provide the real-time blur effect for components, use dynamic blur.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,7 +44,7 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 | --- | --- |
 | Filter | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -125,10 +117,6 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter--><!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -146,7 +134,7 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 | --- | --- |
 | Filter | Returns a Filter instance with the added effects, for continuing to add effects or obtaining the processed image. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -219,10 +207,6 @@ Adds the brightness effect to the effect chain and returns the instance of the c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -243,7 +227,7 @@ Adds the brightness effect to the effect chain and returns the instance of the c
 | --- | --- |
 | Filter | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -316,10 +300,6 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -334,7 +314,7 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 | --- | --- |
 | Promise&lt;image.PixelMap&gt; | Promise used to return the image.PixelMap of the source image with the effect chain applied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -366,10 +346,6 @@ Obtains image.PixelMap of the source image with the linked list effect. The rend
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -390,7 +366,7 @@ Obtains image.PixelMap of the source image with the linked list effect. The rend
 | --- | --- |
 | Promise&lt;image.PixelMap&gt; | Promise used to return image.PixelMap of the source image. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -422,11 +398,9 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getEffectPixelMap](#getEffectPixelMap)
+**Substitutes:** [getEffectPixelMap](#geteffectpixelmap)
 
 <!--Device-Filter-getPixelMap(): image.PixelMap--><!--Device-Filter-getPixelMap(): image.PixelMap-End-->
 
@@ -438,7 +412,7 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 | --- | --- |
 | image.PixelMap | image.PixelMap of the source image with the effect chain applied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -469,10 +443,6 @@ Adds the grayscale effect to the effect chain and returns the instance of the ch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -487,7 +457,7 @@ Adds the grayscale effect to the effect chain and returns the instance of the ch
 | --- | --- |
 | Filter | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -559,10 +529,6 @@ Adds the invert effect to the effect chain and returns the instance of the chain
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-invert(): Filter--><!--Device-Filter-invert(): Filter-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -573,7 +539,7 @@ Adds the invert effect to the effect chain and returns the instance of the chain
 | --- | --- |
 | Filter | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -645,10 +611,6 @@ Performs color transformation on the image using a custom color matrix, adds the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-setColorMatrix(colorMatrix: Array<double>): Filter--><!--Device-Filter-setColorMatrix(colorMatrix: Array<double>): Filter-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -671,7 +633,7 @@ Performs color transformation on the image using a custom color matrix, adds the
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';

@@ -10,10 +10,6 @@ const TIMER_TYPE_EXACT: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-systemTimer-const TIMER_TYPE_EXACT: int--><!--Device-systemTimer-const TIMER_TYPE_EXACT: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -29,10 +25,6 @@ const TIMER_TYPE_IDLE: int
 IDLE模式定时器（仅支持系统服务配置，不支持应用配置）。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-systemTimer-const TIMER_TYPE_IDLE: int--><!--Device-systemTimer-const TIMER_TYPE_IDLE: int-End-->
 
@@ -50,10 +42,6 @@ const TIMER_TYPE_REALTIME: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-systemTimer-const TIMER_TYPE_REALTIME: int--><!--Device-systemTimer-const TIMER_TYPE_REALTIME: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -69,10 +57,6 @@ const TIMER_TYPE_WAKEUP: int
 唤醒定时器（如果未配置为唤醒定时器，则系统处于休眠状态下不会触发，直到退出休眠状态）。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-systemTimer-const TIMER_TYPE_WAKEUP: int--><!--Device-systemTimer-const TIMER_TYPE_WAKEUP: int-End-->
 

@@ -4,10 +4,6 @@ Describes the image embedding functions of the multi-modal embedding model.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligence-interface ImageEmbedding--><!--Device-intelligence-interface ImageEmbedding-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -27,10 +23,6 @@ getEmbedding(image: Image): Promise<Array<double>>
 Obtains the embedding vector of the given image. The model can handle images below 20 MB in size in a single inference.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImageEmbedding-getEmbedding(image: Image): Promise<Array<double>>--><!--Device-ImageEmbedding-getEmbedding(image: Image): Promise<Array<double>>-End-->
 
@@ -56,7 +48,7 @@ Obtains the embedding vector of the given image. The model can handle images bel
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -82,10 +74,6 @@ Loads this image embedding model. If the loading fails, an error code is returne
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageEmbedding-loadModel(): Promise<void>--><!--Device-ImageEmbedding-loadModel(): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -103,7 +91,7 @@ Loads this image embedding model. If the loading fails, an error code is returne
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -127,10 +115,6 @@ Releases this image embedding model. If the releasing fails, an error code is re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageEmbedding-releaseModel(): Promise<void>--><!--Device-ImageEmbedding-releaseModel(): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -148,7 +132,7 @@ Releases this image embedding model. If the releasing fails, an error code is re
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

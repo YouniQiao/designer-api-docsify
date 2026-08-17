@@ -4,9 +4,7 @@ Defines the triggered function when the web page wants to display a JavaScript p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnPromptEvent--><!--Device-unnamed-export declare interface OnPromptEvent-End-->
 
@@ -24,9 +22,7 @@ The message of prompt dialog.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnPromptEvent-message: string--><!--Device-OnPromptEvent-message: string-End-->
 
@@ -44,9 +40,7 @@ Handle the user's JavaScript result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnPromptEvent-result: JsResult--><!--Device-OnPromptEvent-result: JsResult-End-->
 
@@ -64,9 +58,7 @@ The url of the page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnPromptEvent-url: string--><!--Device-OnPromptEvent-url: string-End-->
 
@@ -84,9 +76,7 @@ The value of prompt dialog.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnPromptEvent-value: string--><!--Device-OnPromptEvent-value: string-End-->
 

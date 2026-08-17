@@ -4,10 +4,6 @@ Imaging mode query object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface ImagingModeQuery--><!--Device-camera-interface ImagingModeQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -29,10 +25,6 @@ isImagingModeSupported(mode: CameraImagingMode): boolean
 Checks whether a camera imaging mode is supported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

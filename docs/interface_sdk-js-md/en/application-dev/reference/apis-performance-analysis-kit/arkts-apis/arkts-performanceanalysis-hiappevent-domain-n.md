@@ -4,10 +4,6 @@ Provides domain name constants. | Name| Type | Read Only | Description | | --- |
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiAppEvent-namespace domain--><!--Device-hiAppEvent-namespace domain-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -24,5 +20,5 @@ import { hiAppEvent } from 'hiAppEvent';
 
 | Name | Description |
 | --- | --- |
-| [OS](arkts-performanceanalysis-domain-con.md#OS) | System domain. |
+| [OS](arkts-performanceanalysis-domain-con.md#os) | System domain. |
 

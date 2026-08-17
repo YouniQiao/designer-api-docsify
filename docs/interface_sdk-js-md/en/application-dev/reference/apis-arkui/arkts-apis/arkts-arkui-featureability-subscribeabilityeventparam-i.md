@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-unnamed-export interface SubscribeAbilityEventParam--><!--Device-unnamed-export interface SubscribeAbilityEventParam-End-->
@@ -21,8 +19,6 @@ Ability name, which is case sensitive and must be the same as that on the AA sid
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 
@@ -42,8 +38,6 @@ Ability type. Different types of abilities have different implementation on the 
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-SubscribeAbilityEventParam-abilityType: number--><!--Device-SubscribeAbilityEventParam-abilityType: number-End-->
@@ -61,8 +55,6 @@ Name of the bundle where the ability has been located. The name is case sensitiv
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 
@@ -82,8 +74,6 @@ Ability operation code, which defines the service function of an AA and must be 
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-SubscribeAbilityEventParam-messageCode: number--><!--Device-SubscribeAbilityEventParam-messageCode: number-End-->
@@ -101,8 +91,6 @@ Whether the request is synchronous or asynchronous. The synchronous mode is used
 **Type:** number
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 

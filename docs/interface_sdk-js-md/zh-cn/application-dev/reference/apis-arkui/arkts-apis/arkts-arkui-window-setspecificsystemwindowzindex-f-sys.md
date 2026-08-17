@@ -10,10 +10,6 @@ function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Pro
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-window-function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Promise<void>--><!--Device-window-function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -42,7 +38,7 @@ function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Pro
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

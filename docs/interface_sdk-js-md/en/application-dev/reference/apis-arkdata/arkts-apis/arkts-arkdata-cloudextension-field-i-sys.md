@@ -4,10 +4,6 @@ Represents a field in the database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface Field--><!--Device-cloudExtension-export interface Field-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -32,10 +28,6 @@ Alias of the field in the table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Field-alias: string--><!--Device-Field-alias: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -53,10 +45,6 @@ Name of the column, in which the field is located.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Field-colName: string--><!--Device-Field-colName: string-End-->
 
@@ -76,10 +64,6 @@ Whether the current column can be null. The value true means the current column 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Field-nullable: boolean--><!--Device-Field-nullable: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -98,10 +82,6 @@ Whether the current column is the primary key. The value true means the current 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Field-primary: boolean--><!--Device-Field-primary: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -114,15 +94,11 @@ Whether the current column is the primary key. The value true means the current 
 type: FieldType
 ```
 
-Type of the field. For details, see [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md#FieldType-(System-API)).
+Type of the field. For details, see [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md#fieldtype-system-api).
 
 **Type:** FieldType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Field-type: FieldType--><!--Device-Field-type: FieldType-End-->
 

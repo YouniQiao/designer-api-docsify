@@ -16,10 +16,6 @@ Creates a ColorPicker instance based on a pixel map. This API uses a promise to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -46,7 +42,7 @@ Creates a ColorPicker instance based on a pixel map. This API uses a promise to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -83,10 +79,6 @@ Creates a ColorPicker instance for the selected region based on a pixel map. Thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -114,7 +106,7 @@ Creates a ColorPicker instance for the selected region based on a pixel map. Thi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -151,10 +143,6 @@ Creates a ColorPicker instance based on a pixel map. This API uses an asynchrono
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -176,7 +164,7 @@ Creates a ColorPicker instance based on a pixel map. This API uses an asynchrono
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -213,10 +201,6 @@ Creates a ColorPicker instance for the selected region based on a pixel map. Thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -239,7 +223,7 @@ Creates a ColorPicker instance for the selected region based on a pixel map. Thi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";

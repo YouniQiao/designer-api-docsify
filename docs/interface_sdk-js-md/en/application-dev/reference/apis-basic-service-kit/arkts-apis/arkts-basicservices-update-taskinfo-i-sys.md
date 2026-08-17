@@ -4,10 +4,6 @@ Represents the task information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface TaskInfo--><!--Device-update-export interface TaskInfo-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Whether an upgrade task exists, which is used to determine whether an upgrade ta
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TaskInfo-existTask: boolean--><!--Device-TaskInfo-existTask: boolean-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ Task data.
 **Type:** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TaskInfo-taskBody: TaskBody--><!--Device-TaskInfo-taskBody: TaskBody-End-->
 

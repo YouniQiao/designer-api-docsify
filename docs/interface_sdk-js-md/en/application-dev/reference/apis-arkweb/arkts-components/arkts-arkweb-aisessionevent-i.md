@@ -1,12 +1,8 @@
 # AISessionEvent
 
-Custom AI session model integration for Web components. Users can define custom AI session behaviors via this interface.
+Custom AI session configuration object, used to define the lifecycle callbacks of an AI session, including creation, execution, and destruction. &lt;!--no_check--&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface AISessionEvent--><!--Device-unnamed-declare interface AISessionEvent-End-->
 
@@ -18,15 +14,11 @@ Custom AI session model integration for Web components. Users can define custom 
 aiSessionType: AISessionType
 ```
 
-The type of AI session.
+AI session type.
 
 **Type:** [AISessionType](arkts-arkweb-aisessiontype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +32,11 @@ The type of AI session.
 onCreateAISession: OnCreateAISession
 ```
 
-Triggered when an AI session is created. Allows custom model initialization and result handling. Return `true` to bypass the default system behavior; return `false` to proceed with the default logic.
+Callback function triggered when an AI session is created. Returns **true** to skip the system default behavior, and **false** to continue executing the system default logic.
 
 **Type:** [OnCreateAISession](arkts-arkweb-oncreateaisession-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,15 +50,11 @@ Triggered when an AI session is created. Allows custom model initialization and 
 onDestroyAISession: OnDestroyAISession
 ```
 
-Triggered when an AI session is destroyed. Used for cleaning up resources associated with custom AI models.
+Callback function triggered when an AI session is destroyed, used to clean up resources associated with the custom AI model.
 
 **Type:** [OnDestroyAISession](arkts-arkweb-ondestroyaisession-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,15 +68,11 @@ Triggered when an AI session is destroyed. Used for cleaning up resources associ
 onExecuteAIAction: OnExecuteAIAction
 ```
 
-Triggered when executing an AI session action. Enables custom implementation of AI model execution.
+Callback function triggered when an AI session executes an action.
 
 **Type:** [OnExecuteAIAction](arkts-arkweb-onexecuteaiaction-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ This module provides extension abilities of Basic Services Kit for static subscr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class StaticSubscriberExtensionAbility--><!--Device-unnamed-declare class StaticSubscriberExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -30,10 +26,6 @@ Defines a callback to be invoked when a common event is triggered in static mode
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StaticSubscriberExtensionAbility-onReceiveEvent(event: CommonEventData): void--><!--Device-StaticSubscriberExtensionAbility-onReceiveEvent(event: CommonEventData): void-End-->
@@ -48,7 +40,7 @@ Defines a callback to be invoked when a common event is triggered in static mode
 | --- | --- | --- | --- |
 | event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | Yes | Common event data received through static subscription. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { commonEventManager } from '@kit.BasicServicesKit';
@@ -71,10 +63,6 @@ Context of the extension ability subscribed to in static mode.
 **Type:** [StaticSubscriberExtensionContext](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

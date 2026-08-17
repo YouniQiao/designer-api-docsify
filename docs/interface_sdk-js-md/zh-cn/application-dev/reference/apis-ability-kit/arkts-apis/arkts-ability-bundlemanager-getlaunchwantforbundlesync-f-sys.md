@@ -10,10 +10,6 @@ function getLaunchWantForBundleSync(bundleName: string, userId?: int): Want
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本24+：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 - API版本10 - 23：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
@@ -29,7 +25,7 @@ function getLaunchWantForBundleSync(bundleName: string, userId?: int): Want
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用的包名。 |
-| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取。<br/>默认值：调用方所在用户。<br/>取值范围：大于等于0。 |
+| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。<br/>默认值：调用方所在用户。<br/>取值范围：大于等于0。 |
 
 **返回值：**
 
@@ -48,7 +44,7 @@ function getLaunchWantForBundleSync(bundleName: string, userId?: int): Want
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user id is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 示例接口含有userId参数，获取用于启动指定用户下的应用程序所需的Want参数

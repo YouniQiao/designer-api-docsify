@@ -10,10 +10,6 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-startupManager-function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>-End-->
@@ -24,7 +20,7 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务 [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#StartupTask)的名称或预加载so名称的数组。 |
+| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务 [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#startuptask)的名称或预加载so名称的数组。 |
 | config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | 否 | 表示启动任务配置信息，包含启动框架超时时间与启动任务监听器配置。 |
 
 **返回值：**
@@ -44,7 +40,7 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [28800001](../errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
@@ -81,13 +77,9 @@ export default class EntryAbility extends UIAbility {
 function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
 ```
 
-执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md#AbilityStageContext)用于启动任务的加载。使 用Promise异步回调。
+执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md#abilitystagecontext)用于启动任务的加载。使 用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,8 +91,8 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务 [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#StartupTask)的名称或预加载so名称的数组。 |
-| context | common.AbilityStageContext | 是 | 表示执行启动任务 [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#StartupTask)的AbilityStage上下文，作为入参传给启动任务的 [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init)。 |
+| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务 [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#startuptask)的名称或预加载so名称的数组。 |
+| context | common.AbilityStageContext | 是 | 表示执行启动任务 [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#startuptask)的AbilityStage上下文，作为入参传给启动任务的 [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init)。 |
 | config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | 是 | 表示启动任务配置信息，包含启动框架超时时间与启动任务监听器配置。 |
 
 **返回值：**
@@ -119,7 +111,7 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [28800001](../errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AbilityStage, startupManager, StartupListener, StartupConfig } from '@kit.AbilityKit';

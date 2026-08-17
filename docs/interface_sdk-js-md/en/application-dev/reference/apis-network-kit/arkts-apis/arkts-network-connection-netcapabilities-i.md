@@ -4,10 +4,6 @@ Defines the network capability set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-export interface NetCapabilities--><!--Device-connection-export interface NetCapabilities-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -30,10 +26,6 @@ Network type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetCapabilities-bearerTypes: Array<NetBearType>--><!--Device-NetCapabilities-bearerTypes: Array<NetBearType>-End-->
@@ -52,10 +44,6 @@ Downstream (network-to-device) bandwidth.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetCapabilities-linkDownBandwidthKbps?: int--><!--Device-NetCapabilities-linkDownBandwidthKbps?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -72,10 +60,6 @@ Uplink (device-to-network) bandwidth.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetCapabilities-linkUpBandwidthKbps?: int--><!--Device-NetCapabilities-linkUpBandwidthKbps?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -91,10 +75,6 @@ Network-specific capabilities.
 **Type:** Array&lt;[NetCap](arkts-network-connection-netcap-e.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

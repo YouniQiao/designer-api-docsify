@@ -4,10 +4,6 @@ Provides tag information. &lt;p&gt;This class provides the technology a tag supp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tag-export interface TagInfo--><!--Device-tag-export interface TagInfo-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -29,8 +25,6 @@ The supported technology list of this tag.
 **Type:** number[]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -54,10 +48,6 @@ The supported technology list of this tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -77,10 +67,6 @@ The uid of this tag, it.
 **Type:** int[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 

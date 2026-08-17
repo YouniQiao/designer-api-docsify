@@ -16,10 +16,6 @@ Finishes the signing operation. This is the last step in the signature process. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function finish(handle: Uint8Array, callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function finish(handle: Uint8Array, callback: AsyncCallback<CMResult>): void-End-->
@@ -31,7 +27,7 @@ Finishes the signing operation. This is the last step in the signature process. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | Uint8Array | Yes | Handle of initialization. You need to invoke the init method to obtain the handle. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the signature, that is, **outData** of the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md#CMResult) object. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the signature, that is, **outData** of the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md#cmresult) object. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -41,7 +37,7 @@ Finishes the signing operation. This is the last step in the signature process. 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -79,10 +75,6 @@ Finishes the signature verification operation. This is the last step in the sign
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallback<CMResult>): void-End-->
@@ -105,7 +97,7 @@ Finishes the signature verification operation. This is the last step in the sign
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -141,10 +133,6 @@ Finishes the signing or signature verification operation. This API uses a promis
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function finish(handle: Uint8Array, signature?: Uint8Array): Promise<CMResult>--><!--Device-certificateManager-function finish(handle: Uint8Array, signature?: Uint8Array): Promise<CMResult>-End-->
@@ -172,7 +160,7 @@ Finishes the signing or signature verification operation. This API uses a promis
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

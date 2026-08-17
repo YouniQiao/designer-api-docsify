@@ -16,10 +16,6 @@ Checks whether animation reduction mode is enabled. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-accessibility-function isAnimationReduceEnabled(): Promise<boolean>--><!--Device-accessibility-function isAnimationReduceEnabled(): Promise<boolean>-End-->
@@ -32,7 +28,7 @@ Checks whether animation reduction mode is enabled. This API uses a promise to r
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if animation reduction mode is enabled; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

@@ -6,13 +6,9 @@
 function sendControlEvent(event: ControlEvent): Promise<void>
 ```
 
-在需要控制的窗口在桌面上时，在调用[onScreen.getPageContent](arkts-multimodalawareness-onscreen-getpagecontent-f-sys.md#getPageContent（系统接口）)后，根据其返回的段落信息，调用该接口发送屏上控制事件。
+在需要控制的窗口在桌面上时，在调用[onScreen.getPageContent](arkts-multimodalawareness-onscreen-getpagecontent-f-sys.md#getpagecontent系统接口)后，根据其返回的段落信息，调用该接口发送屏上控制事件。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.SIMULATE_USER_INPUT
 

@@ -4,10 +4,6 @@ Enumerates the page types of the certificate management dialog box.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-certificateManagerDialog-export enum CertificateDialogPageType--><!--Device-certificateManagerDialog-export enum CertificateDialogPageType-End-->
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
@@ -21,10 +17,6 @@ PAGE_MAIN = 1
 Main page of the Certificate Manager application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ CA certificate list page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CertificateDialogPageType-PAGE_CA_CERTIFICATE = 2--><!--Device-CertificateDialogPageType-PAGE_CA_CERTIFICATE = 2-End-->
@@ -62,10 +50,6 @@ Credential list page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CertificateDialogPageType-PAGE_CREDENTIAL = 3--><!--Device-CertificateDialogPageType-PAGE_CREDENTIAL = 3-End-->
@@ -81,10 +65,6 @@ PAGE_INSTALL_CERTIFICATE = 4
 Certificate installation page.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

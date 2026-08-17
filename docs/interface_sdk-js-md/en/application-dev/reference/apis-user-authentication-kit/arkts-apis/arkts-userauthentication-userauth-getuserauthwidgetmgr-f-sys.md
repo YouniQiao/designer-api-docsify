@@ -16,10 +16,6 @@ Obtains the authentication widget manager object. It is used to obtain the **Use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SUPPORT_USER_AUTH
 
 <!--Device-userAuth-function getUserAuthWidgetMgr(version: int): UserAuthWidgetMgr--><!--Device-userAuth-function getUserAuthWidgetMgr(version: int): UserAuthWidgetMgr-End-->
@@ -49,7 +45,7 @@ Obtains the authentication widget manager object. It is used to obtain the **Use
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';

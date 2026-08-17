@@ -4,10 +4,6 @@ Describes the audio capturer change event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioCapturerChangeInfo--><!--Device-audio-interface AudioCapturerChangeInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -30,10 +26,6 @@ Audio state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioCapturerChangeInfo-readonly capturerState: AudioState--><!--Device-AudioCapturerChangeInfo-readonly capturerState: AudioState-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -51,10 +43,6 @@ Uid for audio capturer client application.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioCapturerChangeInfo-readonly clientUid: int--><!--Device-AudioCapturerChangeInfo-readonly clientUid: int-End-->
 

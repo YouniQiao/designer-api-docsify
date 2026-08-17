@@ -4,10 +4,6 @@ Enumerates the data sources. Use the enum name rather than the enum value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-enum Origin--><!--Device-relationalStore-enum Origin-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -21,10 +17,6 @@ LOCAL = 0
 Indicates the data source is local.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Origin-LOCAL = 0--><!--Device-Origin-LOCAL = 0-End-->
 
@@ -40,10 +32,6 @@ Indicates the data source is cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Origin-CLOUD = 1--><!--Device-Origin-CLOUD = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -57,10 +45,6 @@ REMOTE = 2
 Indicates the data source is remote.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Origin-REMOTE = 2--><!--Device-Origin-REMOTE = 2-End-->
 

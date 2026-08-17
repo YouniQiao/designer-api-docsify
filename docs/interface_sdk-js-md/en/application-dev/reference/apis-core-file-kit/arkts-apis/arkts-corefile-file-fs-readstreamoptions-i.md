@@ -4,10 +4,6 @@ Defines the options used in **createReadStream()**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ReadStreamOptions--><!--Device-unnamed-export interface ReadStreamOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -44,10 +40,6 @@ End position to read the data, in bytes. This parameter is optional. The default
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ReadStreamOptions-end?: number--><!--Device-ReadStreamOptions-end?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -63,10 +55,6 @@ Start position to read the data, in bytes. This parameter is optional. By defaul
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ReadStreamOptions-start?: number--><!--Device-ReadStreamOptions-start?: number-End-->
 

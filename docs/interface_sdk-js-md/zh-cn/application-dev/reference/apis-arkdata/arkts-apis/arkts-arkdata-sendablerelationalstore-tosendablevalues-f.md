@@ -10,10 +10,6 @@ function toSendableValues(values: NonSendableValues): collections.Array<ValueTyp
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>--><!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -36,7 +32,7 @@ function toSendableValues(values: NonSendableValues): collections.Array<ValueTyp
 | --- | --- |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { relationalStore, sendableRelationalStore } from '@kit.ArkData';

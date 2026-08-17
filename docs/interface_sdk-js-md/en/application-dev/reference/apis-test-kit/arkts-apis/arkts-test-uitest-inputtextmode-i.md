@@ -4,10 +4,6 @@ Describes the text input mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface InputTextMode--><!--Device-unnamed-declare interface InputTextMode-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -58,10 +54,6 @@ Whether to input text in addition mode. The value **true** means to input text i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-InputTextMode-addition?: boolean--><!--Device-InputTextMode-addition?: boolean-End-->
@@ -79,10 +71,6 @@ Whether to copy and paste text. The value **true** means to copy and paste text,
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

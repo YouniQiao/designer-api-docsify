@@ -1,14 +1,10 @@
 # TapGestureParameters
 
-Defines tap gesture parameters. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions). > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 12. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability.
+Defines tap gesture parameters. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions). > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 12. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
-**Inheritance/Implementation:** TapGestureParameters extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions)
+**Inheritance/Implementation:** TapGestureParameters extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface TapGestureParameters--><!--Device-unnamed-declare interface TapGestureParameters-End-->
 
@@ -25,10 +21,6 @@ Number of consecutive taps. If the value is less than 1 or is not set, the defau
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Movement threshold for the tap gesture. If the value is less than or equal to 0 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -73,10 +61,6 @@ Number of fingers required to trigger a tap. The value ranges from 1 to 10. If t
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

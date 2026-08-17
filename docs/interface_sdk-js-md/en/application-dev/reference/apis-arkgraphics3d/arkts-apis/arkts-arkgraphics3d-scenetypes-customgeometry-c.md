@@ -1,14 +1,10 @@
 # CustomGeometry
 
-An array of vertices and their data defining a custom geometric shape.
+A custom geometry type that inherits from GeometryDefinition.
 
-**Inheritance/Implementation:** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition)
+**Inheritance/Implementation:** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#geometrydefinition)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class CustomGeometry--><!--Device-unnamed-export declare class CustomGeometry-End-->
 
@@ -20,15 +16,11 @@ An array of vertices and their data defining a custom geometric shape.
 colors?: Color[]
 ```
 
-Vertex color. If colors is not null, colors[N] is for vertices[N].
+Array of colors for the vertices. The default value is undefined.
 
 **Type:** [Color](arkts-arkgraphics3d-scenetypes-color-i.md)[]
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-CustomGeometry-colors?: Color[]--><!--Device-CustomGeometry-colors?: Color[]-End-->
 
@@ -40,17 +32,13 @@ Vertex color. If colors is not null, colors[N] is for vertices[N].
 indices?: int[]
 ```
 
-Indices of those vertices that form triangles. PrimitiveTopology is applied to the sequence defined by indices. An example of creating an identical pair of triangles, given vertices = [a, b, c, d]: topology = PrimitiveTopology.TRIANGLE_LIST indices = [0, 1, 2, 2, 1, 3] resulting triangles: abc, cbd topology = PrimitiveTopology.TRIANGLE_STRIP indices = [0, 1, 2, 3] resulting triangles: abc, cbd (b and c are reversed in cbd, to match the face direction of the first triangle)
+Array of indices for the vertices, with values starting at 0. The default value is undefined.
 
 **Type:** int[]
 
-**Default:** indices: [0, 1 ,2,..., vertices.size() - 1]
+**Default:** undefined
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-CustomGeometry-indices?: int[]--><!--Device-CustomGeometry-indices?: int[]-End-->
 
@@ -62,15 +50,11 @@ Indices of those vertices that form triangles. PrimitiveTopology is applied to t
 normals?: Vec3[]
 ```
 
-Vertex normal. If normals is not null. normals[N] is for vertices[N] and generateNormals is ignored.
+Array of normals corresponding to the vertices. The default value is undefined.
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-CustomGeometry-normals?: Vec3[]--><!--Device-CustomGeometry-normals?: Vec3[]-End-->
 
@@ -82,17 +66,13 @@ Vertex normal. If normals is not null. normals[N] is for vertices[N] and generat
 topology?: PrimitiveTopology
 ```
 
-How to form mesh triangles from the indexed vertices.
+Parsing mode of triangle primitives. The default value is TRIANGLE_LIST.
 
 **Type:** [PrimitiveTopology](arkts-arkgraphics3d-scenetypes-primitivetopology-e.md)
 
 **Default:** PrimitiveTopology.TRIANGLE_LIST
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-CustomGeometry-topology?: PrimitiveTopology--><!--Device-CustomGeometry-topology?: PrimitiveTopology-End-->
 
@@ -104,15 +84,11 @@ How to form mesh triangles from the indexed vertices.
 uvs?: Vec2[]
 ```
 
-Vertex texture mapping UV coordinate. If uvs is not null, uvs[N] is for vertices[N]
+Array of UV coordinates for the vertices. The default value is undefined.
 
 **Type:** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)[]
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-CustomGeometry-uvs?: Vec2[]--><!--Device-CustomGeometry-uvs?: Vec2[]-End-->
 

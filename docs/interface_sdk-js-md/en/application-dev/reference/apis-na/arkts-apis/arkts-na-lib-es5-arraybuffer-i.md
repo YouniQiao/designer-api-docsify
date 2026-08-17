@@ -4,10 +4,6 @@ Represents a raw buffer of binary data, which is used to store data for the diff
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ArrayBuffer--><!--Device-unnamed-interface ArrayBuffer-End-->
 
 ## slice
@@ -19,10 +15,6 @@ slice(begin: number, end?: number): ArrayBuffer
 Returns a section of an ArrayBuffer.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ArrayBuffer-slice(begin: number, end?: number): ArrayBuffer--><!--Device-ArrayBuffer-slice(begin: number, end?: number): ArrayBuffer-End-->
 
@@ -50,10 +42,6 @@ Read-only. The length of the ArrayBuffer (in bytes).
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ArrayBuffer-readonly byteLength: number--><!--Device-ArrayBuffer-readonly byteLength: number-End-->
 

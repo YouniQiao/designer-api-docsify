@@ -4,8 +4,6 @@ Provides the border information of the child component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** Measurable/Layoutable
@@ -25,8 +23,6 @@ Edge widths in different directions of the component.
 **Type:** EdgeWidths
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -50,8 +46,6 @@ Margin values in different directions of the component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** getMargin
@@ -73,8 +67,6 @@ Padding values in different directions of the component.
 **Type:** Padding
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class ArcSliderStyleOptions--><!--Device-unnamed-declare class ArcSliderStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -21,10 +17,6 @@ constructor(options?: ArcSliderStyleOptionsConstructorOptions)
 ArcSliderStyleOptions的构造函数。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -53,10 +45,6 @@ ArcSliderStyleOptions的构造函数。
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArcSliderStyleOptions-@Trace  activeTrackThickness?: number--><!--Device-ArcSliderStyleOptions-@Trace  activeTrackThickness?: number-End-->
@@ -77,10 +65,6 @@ ArcSliderStyleOptions的构造函数。
 **默认值：** #FF5EA1FF
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -103,10 +87,6 @@ ArcSliderStyleOptions的构造函数。
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArcSliderStyleOptions-@Trace  trackBlur?: number--><!--Device-ArcSliderStyleOptions-@Trace  trackBlur?: number-End-->
@@ -128,10 +108,6 @@ ArcSliderStyleOptions的构造函数。
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArcSliderStyleOptions-@Trace  trackColor?: string--><!--Device-ArcSliderStyleOptions-@Trace  trackColor?: string-End-->
@@ -152,10 +128,6 @@ ArcSliderStyleOptions的构造函数。
 **默认值：** 5
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

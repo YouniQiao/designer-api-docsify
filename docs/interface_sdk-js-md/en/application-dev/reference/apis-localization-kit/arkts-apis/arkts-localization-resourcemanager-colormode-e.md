@@ -4,10 +4,6 @@ Defines the color mode of the current device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-resourceManager-export enum ColorMode--><!--Device-resourceManager-export enum ColorMode-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -21,10 +17,6 @@ DARK = 0
 Dark mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -41,10 +33,6 @@ LIGHT = 1
 Light mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

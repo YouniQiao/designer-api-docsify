@@ -4,10 +4,6 @@ Describes the settings for bloom effects. It is unavailable when RenderingPipeli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface BloomSettings--><!--Device-unnamed-export interface BloomSettings-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -23,10 +19,6 @@ Scale factor. The value must be greater than 0. The default value is 1.0.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BloomSettings-scaleFactor?: double--><!--Device-BloomSettings-scaleFactor?: double-End-->
 
@@ -44,10 +36,6 @@ Scatter amount. The value must be greater than 0. The default value is 1.0.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BloomSettings-scatter?: double--><!--Device-BloomSettings-scatter?: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -64,10 +52,6 @@ Hard threshold. The value is a non-negative number. The default value is 1.0.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BloomSettings-thresholdHard?: double--><!--Device-BloomSettings-thresholdHard?: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -83,10 +67,6 @@ Soft threshold. The value is a non-negative number. The default value is 2.0.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BloomSettings-thresholdSoft?: double--><!--Device-BloomSettings-thresholdSoft?: double-End-->
 

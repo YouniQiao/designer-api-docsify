@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 23
 
 <!--Device-fileAccess-interface FileIterator--><!--Device-fileAccess-interface FileIterator-End-->
@@ -23,8 +21,6 @@ next(): { value: FileInfo, done: boolean }
 可以通过next同步方法获取下一级文件(夹)信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 23
 

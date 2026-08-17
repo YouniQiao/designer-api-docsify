@@ -16,10 +16,6 @@ Creates a **HashStream** instance, which can be used to generate a message diges
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hash-function createHash(algorithm: string): HashStream--><!--Device-hash-function createHash(algorithm: string): HashStream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -44,7 +40,7 @@ Creates a **HashStream** instance, which can be used to generate a message diges
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // pages/xxx.ets

@@ -4,10 +4,6 @@ Counting the time taken of various stages of HTTP request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-http-export interface PerformanceTiming--><!--Device-http-export interface PerformanceTiming-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,10 +26,6 @@ Time taken from startup to DNS resolution completion, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PerformanceTiming-dnsTiming: double--><!--Device-PerformanceTiming-dnsTiming: double-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -49,10 +41,6 @@ Time taken from startup to receiving the first byte, in milliseconds.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PerformanceTiming-firstReceiveTiming: double--><!--Device-PerformanceTiming-firstReceiveTiming: double-End-->
 
@@ -70,10 +58,6 @@ Time taken from startup to start sending the first byte, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PerformanceTiming-firstSendTiming: double--><!--Device-PerformanceTiming-firstSendTiming: double-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -89,10 +73,6 @@ Time taken from startup to completion of all redirection steps, in milliseconds.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PerformanceTiming-redirectTiming: double--><!--Device-PerformanceTiming-redirectTiming: double-End-->
 
@@ -110,10 +90,6 @@ Time taken from HTTP Request to body completion, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PerformanceTiming-responseBodyTiming: double--><!--Device-PerformanceTiming-responseBodyTiming: double-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -129,10 +105,6 @@ Time taken from HTTP request to header completion, in milliseconds.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PerformanceTiming-responseHeaderTiming: double--><!--Device-PerformanceTiming-responseHeaderTiming: double-End-->
 
@@ -150,10 +122,6 @@ Time taken from startup to TCP connection completion, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PerformanceTiming-tcpTiming: double--><!--Device-PerformanceTiming-tcpTiming: double-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -169,10 +137,6 @@ Time taken from startup to TLS connection completion, in milliseconds.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PerformanceTiming-tlsTiming: double--><!--Device-PerformanceTiming-tlsTiming: double-End-->
 
@@ -190,10 +154,6 @@ Time taken from startup to the completion of the request, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PerformanceTiming-totalFinishTiming: double--><!--Device-PerformanceTiming-totalFinishTiming: double-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -209,10 +169,6 @@ Time taken from HTTP Request to callback to the application, in milliseconds.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PerformanceTiming-totalTiming: double--><!--Device-PerformanceTiming-totalTiming: double-End-->
 

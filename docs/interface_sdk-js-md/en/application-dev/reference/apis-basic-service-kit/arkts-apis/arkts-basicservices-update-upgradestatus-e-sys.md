@@ -4,10 +4,6 @@ Enumerates update states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export enum UpgradeStatus--><!--Device-update-export enum UpgradeStatus-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -23,10 +19,6 @@ WAITING_DOWNLOAD = 20
 Waiting for download.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-WAITING_DOWNLOAD = 20--><!--Device-UpgradeStatus-WAITING_DOWNLOAD = 20-End-->
 
@@ -44,10 +36,6 @@ Downloading.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UpgradeStatus-DOWNLOADING = 21--><!--Device-UpgradeStatus-DOWNLOADING = 21-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -63,10 +51,6 @@ DOWNLOAD_PAUSED = 22
 Download paused.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-DOWNLOAD_PAUSED = 22--><!--Device-UpgradeStatus-DOWNLOAD_PAUSED = 22-End-->
 
@@ -84,10 +68,6 @@ Download failed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UpgradeStatus-DOWNLOAD_FAIL = 23--><!--Device-UpgradeStatus-DOWNLOAD_FAIL = 23-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -103,10 +83,6 @@ WAITING_INSTALL = 30
 Waiting for installation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-WAITING_INSTALL = 30--><!--Device-UpgradeStatus-WAITING_INSTALL = 30-End-->
 
@@ -124,10 +100,6 @@ Updating.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UpgradeStatus-UPDATING = 31--><!--Device-UpgradeStatus-UPDATING = 31-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -143,10 +115,6 @@ WAITING_APPLY = 40
 Waiting for applying the upgrade.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-WAITING_APPLY = 40--><!--Device-UpgradeStatus-WAITING_APPLY = 40-End-->
 
@@ -164,10 +132,6 @@ Applying the update.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UpgradeStatus-APPLYING = 41--><!--Device-UpgradeStatus-APPLYING = 41-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -184,10 +148,6 @@ Update succeeded.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UpgradeStatus-UPGRADE_SUCCESS = 50--><!--Device-UpgradeStatus-UPGRADE_SUCCESS = 50-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -203,10 +163,6 @@ UPGRADE_FAIL = 51
 Update failed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UpgradeStatus-UPGRADE_FAIL = 51--><!--Device-UpgradeStatus-UPGRADE_FAIL = 51-End-->
 

@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Float32ArrayConstructor--><!--Device-unnamed-interface Float32ArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new(length: number): Float32Array
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float32ArrayConstructor-new(length: number): Float32Array--><!--Device-Float32ArrayConstructor-new(length: number): Float32Array-End-->
 
@@ -42,10 +34,6 @@ new(array: ArrayLike<number> | ArrayBufferLike): Float32Array
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float32ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Float32Array--><!--Device-Float32ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Float32Array-End-->
 
 **Parameters:**
@@ -67,10 +55,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Float32Array
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float32ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Float32Array--><!--Device-Float32ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Float32Array-End-->
 
@@ -98,10 +82,6 @@ Creates an array from an array-like or iterable object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float32ArrayConstructor-from(arrayLike: ArrayLike<number>): Float32Array--><!--Device-Float32ArrayConstructor-from(arrayLike: ArrayLike<number>): Float32Array-End-->
 
 **Parameters:**
@@ -125,10 +105,6 @@ from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: a
 Creates an array from an array-like or iterable object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float32ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Float32Array--><!--Device-Float32ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Float32Array-End-->
 
@@ -156,10 +132,6 @@ Returns a new array from a set of elements.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float32ArrayConstructor-of(...items: number[]): Float32Array--><!--Device-Float32ArrayConstructor-of(...items: number[]): Float32Array-End-->
 
 **Parameters:**
@@ -186,10 +158,6 @@ The size in bytes of each element in the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float32ArrayConstructor-readonly BYTES_PER_ELEMENT: number--><!--Device-Float32ArrayConstructor-readonly BYTES_PER_ELEMENT: number-End-->
 
 ## prototype
@@ -201,10 +169,6 @@ readonly prototype: Float32Array
 **Type:** Float32Array
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float32ArrayConstructor-readonly prototype: Float32Array--><!--Device-Float32ArrayConstructor-readonly prototype: Float32Array-End-->
 

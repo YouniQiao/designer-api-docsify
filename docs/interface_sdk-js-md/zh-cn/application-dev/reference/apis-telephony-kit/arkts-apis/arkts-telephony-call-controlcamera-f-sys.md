@@ -10,10 +10,6 @@ function controlCamera(callId: int, cameraId: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function controlCamera(callId: int, cameraId: string): Promise<void>--><!--Device-call-function controlCamera(callId: int, cameraId: string): Promise<void>-End-->
@@ -27,7 +23,7 @@ function controlCamera(callId: int, cameraId: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callId | int | 是 | 呼叫Id。可以通过订阅callDetailsChange事件获得。 |
-| cameraId | string | 是 | 相机ID。cameraId获取方式可参考相机管理 [getSupportedCameras](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#getSupportedCameras)接口。 |
+| cameraId | string | 是 | 相机ID。cameraId获取方式可参考相机管理 [getSupportedCameras](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#getsupportedcameras)接口。 |
 
 **返回值：**
 
@@ -47,7 +43,7 @@ function controlCamera(callId: int, cameraId: string): Promise<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@ Enumerates the window types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-enum WindowType--><!--Device-window-enum WindowType-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -21,8 +17,6 @@ TYPE_INPUT_METHOD = 2
 Input method window. Note: This API is supported since API version 9 and deprecated since API version 13. There is no alternative window type. To control the input method, call [Input method framework APIs](../../../inputmethod/inputmethod-application-guide.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 13
 
@@ -44,10 +38,6 @@ Status bar window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_STATUS_BAR = 3--><!--Device-WindowType-TYPE_STATUS_BAR = 3-End-->
@@ -65,10 +55,6 @@ TYPE_PANEL = 4
 Notification panel.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,10 +74,6 @@ Keyguard.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_KEYGUARD = 5--><!--Device-WindowType-TYPE_KEYGUARD = 5-End-->
@@ -109,10 +91,6 @@ TYPE_VOLUME_OVERLAY = 6
 Volume bar.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,10 +110,6 @@ Navigation bar.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_NAVIGATION_BAR = 7--><!--Device-WindowType-TYPE_NAVIGATION_BAR = 7-End-->
@@ -153,10 +127,6 @@ TYPE_WALLPAPER = 9
 Wallpaper.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +146,6 @@ Home screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_DESKTOP = 10--><!--Device-WindowType-TYPE_DESKTOP = 10-End-->
@@ -197,10 +163,6 @@ TYPE_LAUNCHER_RECENT = 11
 Recent tasks screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,10 +182,6 @@ Dock bar on the home screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_LAUNCHER_DOCK = 12--><!--Device-WindowType-TYPE_LAUNCHER_DOCK = 12-End-->
@@ -241,10 +199,6 @@ TYPE_VOICE_INTERACTION = 13
 Voice assistant.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -264,10 +218,6 @@ Mouse.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_POINTER = 14--><!--Device-WindowType-TYPE_POINTER = 14-End-->
@@ -285,10 +235,6 @@ TYPE_FLOAT_CAMERA = 15
 Floating camera window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -308,10 +254,6 @@ Screenshot window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_SCREENSHOT = 17--><!--Device-WindowType-TYPE_SCREENSHOT = 17-End-->
@@ -329,10 +271,6 @@ TYPE_SYSTEM_TOAST = 18
 Toast displayed at the top.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -352,10 +290,6 @@ Divider.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_DIVIDER = 19--><!--Device-WindowType-TYPE_DIVIDER = 19-End-->
@@ -373,10 +307,6 @@ TYPE_GLOBAL_SEARCH = 20
 Window used for global search.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -396,10 +326,6 @@ Stylus window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_HANDWRITE = 21--><!--Device-WindowType-TYPE_HANDWRITE = 21-End-->
@@ -417,10 +343,6 @@ TYPE_WALLET_SWIPE_CARD = 22
 Wallet swipe card window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -440,10 +362,6 @@ Top-level window used for locking touch input, which intercepts screen touch and
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_SCREEN_CONTROL = 23--><!--Device-WindowType-TYPE_SCREEN_CONTROL = 23-End-->
@@ -461,10 +379,6 @@ TYPE_FLOAT_NAVIGATION = 24
 Floating window with a three-button navigation bar.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -484,10 +398,6 @@ System window that allows for adjustable z-levels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowType-TYPE_DYNAMIC = 25--><!--Device-WindowType-TYPE_DYNAMIC = 25-End-->
@@ -505,10 +415,6 @@ TYPE_MUTISCREEN_COLLABORATION = 26
 Window for multi-screen collaboration.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

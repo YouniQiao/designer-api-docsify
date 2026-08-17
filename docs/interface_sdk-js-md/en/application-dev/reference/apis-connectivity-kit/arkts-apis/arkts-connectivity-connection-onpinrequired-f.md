@@ -16,10 +16,6 @@ Subscribe the event of a pairing request from a remote Bluetooth device. On API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
 - API version 23 - 24: ohos.permission.ACCESS_BLUETOOTH

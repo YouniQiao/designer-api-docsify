@@ -4,10 +4,6 @@ Base interface of profile.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-baseProfile-export interface BaseProfile--><!--Device-baseProfile-export interface BaseProfile-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -27,10 +23,6 @@ getConnectionStrategy(deviceId: string, callback: AsyncCallback<ConnectionStrate
 Get connection strategy of this profile.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -71,10 +63,6 @@ getConnectionStrategy(deviceId: string): Promise<ConnectionStrategy>
 Get connection strategy of this profile.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -121,10 +109,6 @@ Set connection strategy of this profile.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -170,10 +154,6 @@ setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy, callback: 
 Set connection strategy of this profile.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 

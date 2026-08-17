@@ -16,10 +16,6 @@ Get the list of all SIM card account information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-sim-function getAllSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void--><!--Device-sim-function getAllSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void-End-->
@@ -32,7 +28,7 @@ Get the list of all SIM card account information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Yes | The callback is used to return the array of [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md#IccAccountInfo). The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Yes | The callback is used to return the array of [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md#iccaccountinfo). The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **Error codes:**
 
@@ -46,7 +42,7 @@ Get the list of all SIM card account information.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,10 +63,6 @@ function getAllSimAccountInfoList(): Promise<Array<IccAccountInfo>>
 Get the list of all SIM card account information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -97,7 +89,7 @@ Get the list of all SIM card account information.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

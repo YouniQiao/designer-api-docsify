@@ -4,10 +4,6 @@ NfcForum Type definition. The NDEF tag may use one of them.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tag-enum NfcForumType--><!--Device-tag-enum NfcForumType-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -21,10 +17,6 @@ NFC_FORUM_TYPE_1 = 1
 NFC FORUM TYPE 1
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ NFC FORUM TYPE 2
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_2 = 2--><!--Device-NfcForumType-NFC_FORUM_TYPE_2 = 2-End-->
@@ -61,10 +49,6 @@ NFC_FORUM_TYPE_3 = 3
 NFC FORUM TYPE 3
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -82,10 +66,6 @@ NFC FORUM TYPE 4
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_4 = 4--><!--Device-NfcForumType-NFC_FORUM_TYPE_4 = 4-End-->
@@ -101,10 +81,6 @@ MIFARE_CLASSIC = 101
 Mifare Classic
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

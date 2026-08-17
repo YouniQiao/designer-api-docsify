@@ -4,10 +4,6 @@ Provides APIs for reading and writing data in specific format. During RPC or IPC
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-rpc-class MessageSequence--><!--Device-rpc-class MessageSequence-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -28,10 +24,6 @@ Closes a file descriptor. This API is a static method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-static closeFileDescriptor(fd: int): void--><!--Device-MessageSequence-static closeFileDescriptor(fd: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -48,7 +40,7 @@ Closes a file descriptor. This API is a static method.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -77,10 +69,6 @@ Checks whether this **MessageSequence** object contains file descriptors.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-containFileDescriptors(): boolean--><!--Device-MessageSequence-containFileDescriptors(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -91,7 +79,7 @@ Checks whether this **MessageSequence** object contains file descriptors.
 | --- | --- |
 | boolean | Returns **true** if the **MessageSequence** object contains file descriptors; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -122,10 +110,6 @@ Creates a **MessageSequence** object. This API is a static method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-static create(): MessageSequence--><!--Device-MessageSequence-static create(): MessageSequence-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -136,7 +120,7 @@ Creates a **MessageSequence** object. This API is a static method.
 | --- | --- |
 | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | MessageSequence** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -166,10 +150,6 @@ Duplicates a file descriptor. This API is a static method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-static dupFileDescriptor(fd: int): int--><!--Device-MessageSequence-static dupFileDescriptor(fd: int): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -193,7 +173,7 @@ Duplicates a file descriptor. This API is a static method.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900013](../errorcode-rpc.md#1900013-failed-to-invoke-dup) | Failed to call dup. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -222,10 +202,6 @@ Obtains the capacity of this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-getCapacity(): int--><!--Device-MessageSequence-getCapacity(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -236,7 +212,7 @@ Obtains the capacity of this **MessageSequence** object.
 | --- | --- |
 | int | Capacity of the obtained **MessageSequence** object, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -264,10 +240,6 @@ Obtains the maximum amount of raw data that can be held by this **MessageSequenc
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-getRawDataCapacity(): int--><!--Device-MessageSequence-getRawDataCapacity(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -278,7 +250,7 @@ Obtains the maximum amount of raw data that can be held by this **MessageSequenc
 | --- | --- |
 | int | Maximum amount of raw data that **MessageSequence** can hold, that is, 128 MB. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -306,10 +278,6 @@ Obtains the read position of this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-getReadPosition(): int--><!--Device-MessageSequence-getReadPosition(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -320,7 +288,7 @@ Obtains the read position of this **MessageSequence** object.
 | --- | --- |
 | int | Read position obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -349,10 +317,6 @@ Obtains the readable capacity of this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-getReadableBytes(): int--><!--Device-MessageSequence-getReadableBytes(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -363,7 +327,7 @@ Obtains the readable capacity of this **MessageSequence** object.
 | --- | --- |
 | int | Readable capacity of the **MessageSequence** instance, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -392,10 +356,6 @@ Obtains the data size of this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-getSize(): int--><!--Device-MessageSequence-getSize(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -406,7 +366,7 @@ Obtains the data size of this **MessageSequence** object.
 | --- | --- |
 | int | Size of the **MessageSequence** instance obtained, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -434,10 +394,6 @@ Obtains the writable capacity (in bytes) of this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-getWritableBytes(): int--><!--Device-MessageSequence-getWritableBytes(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -448,7 +404,7 @@ Obtains the writable capacity (in bytes) of this **MessageSequence** object.
 | --- | --- |
 | int | Writable capacity of the **MessageSequence** instance, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -477,10 +433,6 @@ Obtains the write position of this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-getWritePosition(): int--><!--Device-MessageSequence-getWritePosition(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -491,7 +443,7 @@ Obtains the write position of this **MessageSequence** object.
 | --- | --- |
 | int | Write position obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -520,10 +472,6 @@ Reads data of the ArrayBuffer type from this **MessageSequence**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer--><!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -547,7 +495,7 @@ Reads data of the ArrayBuffer type from this **MessageSequence**.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The obtained value of typeCode is incorrect; |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // In this example, the value of TypeCode is Int16Array.
@@ -583,10 +531,6 @@ Reads the anonymous shared object from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readAshmem(): Ashmem--><!--Device-MessageSequence-readAshmem(): Ashmem-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -603,7 +547,7 @@ Reads the anonymous shared object from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -653,10 +597,6 @@ Reads the Boolean value from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readBoolean(): boolean--><!--Device-MessageSequence-readBoolean(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -673,7 +613,7 @@ Reads the Boolean value from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -702,10 +642,6 @@ Reads the Boolean array from this **MessageSequence** object and writes it to th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -723,7 +659,7 @@ Reads the Boolean array from this **MessageSequence** object and writes it to th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -753,10 +689,6 @@ Reads the Boolean array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readBooleanArray(): boolean[]--><!--Device-MessageSequence-readBooleanArray(): boolean[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -773,7 +705,7 @@ Reads the Boolean array from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -802,10 +734,6 @@ Reads the byte value from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readByte(): int--><!--Device-MessageSequence-readByte(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -822,7 +750,7 @@ Reads the byte value from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -851,10 +779,6 @@ Reads the byte array from this **MessageSequence** object and writes it to the c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readByteArray(dataIn: int[]): void--><!--Device-MessageSequence-readByteArray(dataIn: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -872,7 +796,7 @@ Reads the byte array from this **MessageSequence** object and writes it to the c
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -903,10 +827,6 @@ Reads the byte array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readByteArray(): int[]--><!--Device-MessageSequence-readByteArray(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -923,7 +843,7 @@ Reads the byte array from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -953,10 +873,6 @@ Reads the character from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readChar(): int--><!--Device-MessageSequence-readChar(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -973,7 +889,7 @@ Reads the character from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1002,10 +918,6 @@ Reads the character array from this **MessageSequence** object and writes it to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readCharArray(dataIn: int[]): void--><!--Device-MessageSequence-readCharArray(dataIn: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1023,7 +935,7 @@ Reads the character array from this **MessageSequence** object and writes it to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1053,10 +965,6 @@ Reads the character array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readCharArray(): int[]--><!--Device-MessageSequence-readCharArray(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1073,7 +981,7 @@ Reads the character array from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1102,10 +1010,6 @@ Reads the double value from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readDouble(): double--><!--Device-MessageSequence-readDouble(): double-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1122,7 +1026,7 @@ Reads the double value from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1151,10 +1055,6 @@ Reads the double array from this **MessageSequence** object and writes it to the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void--><!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1172,7 +1072,7 @@ Reads the double array from this **MessageSequence** object and writes it to the
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1202,10 +1102,6 @@ Reads the double array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readDoubleArray(): double[]--><!--Device-MessageSequence-readDoubleArray(): double[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1222,7 +1118,7 @@ Reads the double array from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1251,10 +1147,6 @@ Reads the exception information from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readException(): void--><!--Device-MessageSequence-readException(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1265,7 +1157,7 @@ Reads the exception information from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -1353,10 +1245,6 @@ Reads the file descriptor from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readFileDescriptor(): int--><!--Device-MessageSequence-readFileDescriptor(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1373,7 +1261,7 @@ Reads the file descriptor from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1405,10 +1293,6 @@ Reads the double value from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readFloat(): double--><!--Device-MessageSequence-readFloat(): double-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1425,7 +1309,7 @@ Reads the double value from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1454,10 +1338,6 @@ Reads the double array from this **MessageSequence** object and writes it to the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readFloatArray(dataIn: double[]): void--><!--Device-MessageSequence-readFloatArray(dataIn: double[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1475,7 +1355,7 @@ Reads the double array from this **MessageSequence** object and writes it to the
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1505,10 +1385,6 @@ Reads the double array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readFloatArray(): double[]--><!--Device-MessageSequence-readFloatArray(): double[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1525,7 +1401,7 @@ Reads the double array from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1554,10 +1430,6 @@ Reads the integer from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageSequence-readInt(): int--><!--Device-MessageSequence-readInt(): int-End-->
@@ -1576,7 +1448,7 @@ Reads the integer from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1605,10 +1477,6 @@ Reads the integer array from this **MessageSequence** object and writes it to th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readIntArray(dataIn: int[]): void--><!--Device-MessageSequence-readIntArray(dataIn: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1626,7 +1494,7 @@ Reads the integer array from this **MessageSequence** object and writes it to th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1656,10 +1524,6 @@ Reads the integer array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readIntArray(): int[]--><!--Device-MessageSequence-readIntArray(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1676,7 +1540,7 @@ Reads the integer array from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1705,10 +1569,6 @@ Reads the interface token from this **MessageSequence** object. The interface to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readInterfaceToken(): string--><!--Device-MessageSequence-readInterfaceToken(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1725,7 +1585,7 @@ Reads the interface token from this **MessageSequence** object. The interface to
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1754,10 +1614,6 @@ Reads the long integer from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readLong(): long--><!--Device-MessageSequence-readLong(): long-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1774,7 +1630,7 @@ Reads the long integer from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1803,10 +1659,6 @@ Reads the long array from this **MessageSequence** object and writes it to the c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readLongArray(dataIn: long[]): void--><!--Device-MessageSequence-readLongArray(dataIn: long[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1824,7 +1676,7 @@ Reads the long array from this **MessageSequence** object and writes it to the c
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1854,10 +1706,6 @@ Reads the long integer array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readLongArray(): long[]--><!--Device-MessageSequence-readLongArray(): long[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1874,7 +1722,7 @@ Reads the long integer array from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1903,10 +1751,6 @@ Reads the **Parcelable** object from this **MessageSequence** object to the spec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void--><!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1925,7 +1769,7 @@ Reads the **Parcelable** object from this **MessageSequence** object to the spec
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1974,10 +1818,6 @@ Reads the **Parcelable** array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1996,7 +1836,7 @@ Reads the **Parcelable** array from this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2048,11 +1888,9 @@ Reads raw data from this **MessageSequence** object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [readRawDataBuffer](#readRawDataBuffer)(size: int)
+**Substitutes:** [readRawDataBuffer](#readrawdatabuffer)(size: int)
 
 <!--Device-MessageSequence-readRawData(size: number): number[]--><!--Device-MessageSequence-readRawData(size: number): number[]-End-->
 
@@ -2077,7 +1915,7 @@ Reads raw data from this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2108,10 +1946,6 @@ Reads raw data from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer--><!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2135,7 +1969,7 @@ Reads raw data from this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2171,10 +2005,6 @@ Reads the remote object from **MessageSequence**. You can use this API to deseri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readRemoteObject(): IRemoteObject--><!--Device-MessageSequence-readRemoteObject(): IRemoteObject-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2192,7 +2022,7 @@ Reads the remote object from **MessageSequence**. You can use this API to deseri
 | [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2233,10 +2063,6 @@ Reads the **IRemoteObject** array from this **MessageSequence** object and write
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2254,7 +2080,7 @@ Reads the **IRemoteObject** array from this **MessageSequence** object and write
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2296,10 +2122,6 @@ Reads the **IRemoteObject** array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2316,7 +2138,7 @@ Reads the **IRemoteObject** array from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2356,10 +2178,6 @@ Reads the short integer from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readShort(): int--><!--Device-MessageSequence-readShort(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2376,7 +2194,7 @@ Reads the short integer from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2405,10 +2223,6 @@ Reads the short array from this **MessageSequence** object and writes it to the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readShortArray(dataIn: int[]): void--><!--Device-MessageSequence-readShortArray(dataIn: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2426,7 +2240,7 @@ Reads the short array from this **MessageSequence** object and writes it to the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2456,10 +2270,6 @@ Reads the short array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readShortArray(): int[]--><!--Device-MessageSequence-readShortArray(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2476,7 +2286,7 @@ Reads the short array from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2505,10 +2315,6 @@ Reads the string from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageSequence-readString(): string--><!--Device-MessageSequence-readString(): string-End-->
@@ -2527,7 +2333,7 @@ Reads the string from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2556,10 +2362,6 @@ Reads the string array from this **MessageSequence** object and writes it to the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readStringArray(dataIn: string[]): void--><!--Device-MessageSequence-readStringArray(dataIn: string[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2577,7 +2379,7 @@ Reads the string array from this **MessageSequence** object and writes it to the
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2607,10 +2409,6 @@ Reads the string array from this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-readStringArray(): string[]--><!--Device-MessageSequence-readStringArray(): string[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2627,7 +2425,7 @@ Reads the string array from this **MessageSequence** object.
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2656,15 +2454,11 @@ Reclaims the **MessageSequence** object that is no longer used.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-reclaim(): void--><!--Device-MessageSequence-reclaim(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2691,10 +2485,6 @@ Moves the read pointer to the specified position.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-rewindRead(pos: int): void--><!--Device-MessageSequence-rewindRead(pos: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2712,7 +2502,7 @@ Moves the read pointer to the specified position.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2745,10 +2535,6 @@ Moves the write pointer to the specified position.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-rewindWrite(pos: int): void--><!--Device-MessageSequence-rewindWrite(pos: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2766,7 +2552,7 @@ Moves the write pointer to the specified position.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2797,10 +2583,6 @@ Sets the storage capacity of this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-setCapacity(size: int): void--><!--Device-MessageSequence-setCapacity(size: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2819,7 +2601,7 @@ Sets the storage capacity of this **MessageSequence** object.
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 | [1900011](../errorcode-rpc.md#1900011-memory-allocation-failed) | Memory allocation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2846,10 +2628,6 @@ Sets the size of the data contained in this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-setSize(size: int): void--><!--Device-MessageSequence-setSize(size: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2867,7 +2645,7 @@ Sets the size of the data contained in this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2895,10 +2673,6 @@ Writes data of the ArrayBuffer type to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void--><!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2917,7 +2691,7 @@ Writes data of the ArrayBuffer type to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The obtained value of typeCode is incorrect; 5.Failed to obtain arrayBuffer information. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // In this example, the value of TypeCode is Int16Array.
@@ -2950,10 +2724,6 @@ Writes an anonymous shared object to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void--><!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -2971,7 +2741,7 @@ Writes an anonymous shared object to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter is not an instance of the Ashmem object. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3011,10 +2781,6 @@ Writes a Boolean value to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeBoolean(val: boolean): void--><!--Device-MessageSequence-writeBoolean(val: boolean): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3032,7 +2798,7 @@ Writes a Boolean value to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3059,10 +2825,6 @@ Writes a Boolean array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void--><!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3080,7 +2842,7 @@ Writes a Boolean array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3107,10 +2869,6 @@ Writes a byte value to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeByte(val: int): void--><!--Device-MessageSequence-writeByte(val: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3128,7 +2886,7 @@ Writes a byte value to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3155,10 +2913,6 @@ Writes a byte array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeByteArray(byteArray: int[]): void--><!--Device-MessageSequence-writeByteArray(byteArray: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3176,7 +2930,7 @@ Writes a byte array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3204,10 +2958,6 @@ Writes a character to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeChar(val: int): void--><!--Device-MessageSequence-writeChar(val: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3225,7 +2975,7 @@ Writes a character to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3252,10 +3002,6 @@ Writes a character array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeCharArray(charArray: int[]): void--><!--Device-MessageSequence-writeCharArray(charArray: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3273,7 +3019,7 @@ Writes a character array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3300,10 +3046,6 @@ Writes a double value to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeDouble(val: double): void--><!--Device-MessageSequence-writeDouble(val: double): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3321,7 +3063,7 @@ Writes a double value to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3348,10 +3090,6 @@ Writes a double array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void--><!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3369,7 +3107,7 @@ Writes a double array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3396,10 +3134,6 @@ Writes a file descriptor to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeFileDescriptor(fd: int): void--><!--Device-MessageSequence-writeFileDescriptor(fd: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3417,7 +3151,7 @@ Writes a file descriptor to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3447,10 +3181,6 @@ Writes a double value to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeFloat(val: double): void--><!--Device-MessageSequence-writeFloat(val: double): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3468,7 +3198,7 @@ Writes a double value to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3495,10 +3225,6 @@ Writes a double array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void--><!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3516,7 +3242,7 @@ Writes a double array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3543,10 +3269,6 @@ Writes an integer to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageSequence-writeInt(val: int): void--><!--Device-MessageSequence-writeInt(val: int): void-End-->
@@ -3566,7 +3288,7 @@ Writes an integer to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3593,10 +3315,6 @@ Writes an integer array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeIntArray(intArray: int[]): void--><!--Device-MessageSequence-writeIntArray(intArray: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3614,7 +3332,7 @@ Writes an integer array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3641,10 +3359,6 @@ Writes an interface token to this **MessageSequence** object. The remote object 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeInterfaceToken(token: string): void--><!--Device-MessageSequence-writeInterfaceToken(token: string): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3662,7 +3376,7 @@ Writes an interface token to this **MessageSequence** object. The remote object 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3689,10 +3403,6 @@ Writes a long integer to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeLong(val: long): void--><!--Device-MessageSequence-writeLong(val: long): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3710,7 +3420,7 @@ Writes a long integer to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3737,10 +3447,6 @@ Writes a long array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeLongArray(longArray: long[]): void--><!--Device-MessageSequence-writeLongArray(longArray: long[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3758,7 +3464,7 @@ Writes a long array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3785,10 +3491,6 @@ Writes information to this **MessageSequence** object indicating that no excepti
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeNoException(): void--><!--Device-MessageSequence-writeNoException(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3799,7 +3501,7 @@ Writes information to this **MessageSequence** object indicating that no excepti
 | --- | --- |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3840,10 +3542,6 @@ Writes a **Parcelable** object to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeParcelable(val: Parcelable): void--><!--Device-MessageSequence-writeParcelable(val: Parcelable): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3861,7 +3559,7 @@ Writes a **Parcelable** object to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3908,10 +3606,6 @@ Writes the **Parcelable** array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -3929,7 +3623,7 @@ Writes the **Parcelable** array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3979,11 +3673,9 @@ Writes raw data to this **MessageSequence** object. > **NOTE：**> > - This API 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [writeRawDataBuffer](#writeRawDataBuffer)(rawData: ArrayBuffer, size: int)
+**Substitutes:** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: int)
 
 <!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void--><!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void-End-->
 
@@ -4003,7 +3695,7 @@ Writes raw data to this **MessageSequence** object. > **NOTE：**> > - This API 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4031,10 +3723,6 @@ Writes raw data to this **MessageSequence** object. > **NOTE：**> > - This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void--><!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -4053,7 +3741,7 @@ Writes raw data to this **MessageSequence** object. > **NOTE：**> > - This API 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The transferred size is greater than the byte length of ArrayBuffer. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4082,13 +3770,9 @@ try {
 writeRemoteObject(obj: IRemoteObject): void
 ```
 
-Serializes the remote object and writes it to the [MessageSequence](#MessageSequence) object.
+Serializes the remote object and writes it to the [MessageSequence](#messagesequence) object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void--><!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void-End-->
 
@@ -4108,7 +3792,7 @@ Serializes the remote object and writes it to the [MessageSequence](#MessageSequ
 | [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4147,10 +3831,6 @@ Writes an **IRemoteObject** array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void--><!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -4168,7 +3848,7 @@ Writes an **IRemoteObject** array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The obtained remoteObject is null. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4207,10 +3887,6 @@ Writes a short integer to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeShort(val: int): void--><!--Device-MessageSequence-writeShort(val: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -4228,7 +3904,7 @@ Writes a short integer to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4255,10 +3931,6 @@ Writes a short array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeShortArray(shortArray: int[]): void--><!--Device-MessageSequence-writeShortArray(shortArray: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -4276,7 +3948,7 @@ Writes a short array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4303,10 +3975,6 @@ Writes a string to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageSequence-writeString(val: string): void--><!--Device-MessageSequence-writeString(val: string): void-End-->
@@ -4326,7 +3994,7 @@ Writes a string to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4353,10 +4021,6 @@ Writes a string array to this **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageSequence-writeStringArray(stringArray: string[]): void--><!--Device-MessageSequence-writeStringArray(stringArray: string[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -4374,7 +4038,7 @@ Writes a string array to this **MessageSequence** object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The string length is greater than or equal to 40960; 5.The number of bytes copied to the buffer is different from the length of the obtained string. |
 | [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

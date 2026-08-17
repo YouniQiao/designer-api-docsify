@@ -4,10 +4,6 @@ This module encapsulates the data and attributes carried when a common event is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface CommonEventPublishData--><!--Device-unnamed-export interface CommonEventPublishData-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -23,10 +19,6 @@ Bundle name of the subscriber, which is used to specify the subscriber to whom t
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,10 +40,6 @@ Common event data transferred by the publisher. The default value is **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventPublishData-code?: int--><!--Device-CommonEventPublishData-code?: int-End-->
@@ -69,10 +57,6 @@ Common event data transferred by the publisher. The value is a string and cannot
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,10 +78,6 @@ Whether the common event is an ordered one. The default value is **false**. - **
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventPublishData-isOrdered?: boolean--><!--Device-CommonEventPublishData-isOrdered?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -115,10 +95,6 @@ Whether the common event is a sticky one. The default value is **false**. - **tr
 **Default:** false
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.COMMONEVENT_STICKY
 
@@ -138,10 +114,6 @@ Additional information about the common event transferred by the publisher. Cust
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventPublishData-parameters?: Record<string, RecordData>--><!--Device-CommonEventPublishData-parameters?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -157,10 +129,6 @@ Subscriber permissions. Only subscribers with the specified permissions can rece
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

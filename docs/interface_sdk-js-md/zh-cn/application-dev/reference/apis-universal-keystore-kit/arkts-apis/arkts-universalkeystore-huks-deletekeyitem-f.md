@@ -6,13 +6,9 @@
 function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void
 ```
 
-删除密钥。使用callback异步回调。 > **说明：** > 删除[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
+删除密钥。使用callback异步回调。 > **说明：** > 删除[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -25,8 +21,8 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，应为生成key时传入的别名。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于删除密钥时指定密钥的属性，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#HuksAuthStorageLevel)指定需删除密钥的安 全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除密钥成功时，err为undefined，否则为错误对象。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于删除密钥时指定密钥的属性，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需删除密钥的安 全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除密钥成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -42,7 +38,7 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -143,13 +139,9 @@ export default {
 function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 ```
 
-删除密钥。使用Promise异步回调。 > **说明：** > > 删除[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
+删除密钥。使用Promise异步回调。 > **说明：** > > 删除[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -162,7 +154,7 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，应为生成key时传入的别名。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于删除时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#HuksAuthStorageLevel)指定需删除密钥的 安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于删除时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需删除密钥的 安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 
 **返回值：**
 
@@ -184,7 +176,7 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

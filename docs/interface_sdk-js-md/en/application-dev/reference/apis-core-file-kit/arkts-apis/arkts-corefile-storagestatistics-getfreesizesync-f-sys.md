@@ -16,10 +16,6 @@ Obtains the available space of the built-in storage, in bytes. This API returns 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 10 - 14: ohos.permission.STORAGE_MANAGER
 
@@ -44,7 +40,7 @@ Obtains the available space of the built-in storage, in bytes. This API returns 
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

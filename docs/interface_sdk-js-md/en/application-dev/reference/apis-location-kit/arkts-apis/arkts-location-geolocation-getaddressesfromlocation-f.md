@@ -16,11 +16,9 @@ Obtain address info from location
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getAddressesFromLocation)
+**Substitutes:** [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getaddressesfromlocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -35,7 +33,7 @@ Obtain address info from location
 | request | ReverseGeoCodeRequest | Yes | Indicates the reverse geocode query parameters. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -61,11 +59,9 @@ Obtain address info from location
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getAddressesFromLocation)
+**Substitutes:** [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getaddressesfromlocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -85,7 +81,7 @@ Obtain address info from location
 | --- | --- |
 | Promise&lt;Array&lt;GeoAddress&gt;&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

@@ -16,8 +16,6 @@ Sets whether to enable an application. This API uses an asynchronous callback to
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** null
@@ -48,8 +46,6 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean): Promise<v
 Sets whether to enable an application. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

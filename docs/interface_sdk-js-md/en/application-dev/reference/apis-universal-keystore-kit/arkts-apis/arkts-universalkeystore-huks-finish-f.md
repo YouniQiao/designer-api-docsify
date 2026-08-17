@@ -16,11 +16,9 @@ Finishes the key operation. This API uses an asynchronous callback to return the
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [finishSession](arkts-universalkeystore-huks-finishsession-f.md#finishSession)(handle: number, options: HuksOptions, callback: AsyncCallback&lt;HuksReturnResult&gt;)
+**Substitutes:** [finishSession](arkts-universalkeystore-huks-finishsession-f.md#finishsession)(handle: number, options: HuksOptions, callback: AsyncCallback&lt;HuksReturnResult&gt;)
 
 <!--Device-huks-function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -45,11 +43,9 @@ Finishes the key operation. This API uses a promise to return the result. The **
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [finishSession](arkts-universalkeystore-huks-finishsession-f.md#finishSession)( handle: number, options: HuksOptions, token: Uint8Array, callback: AsyncCallback&lt;HuksReturnResult&gt; )
+**Substitutes:** [finishSession](arkts-universalkeystore-huks-finishsession-f.md#finishsession)( handle: number, options: HuksOptions, token: Uint8Array, callback: AsyncCallback&lt;HuksReturnResult&gt; )
 
 <!--Device-huks-function finish(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function finish(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
 

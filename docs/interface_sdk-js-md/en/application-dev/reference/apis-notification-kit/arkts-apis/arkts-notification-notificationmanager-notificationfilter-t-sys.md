@@ -8,10 +8,6 @@ Describes the filter criteria for querying the live view.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export type NotificationFilter = _NotificationFilter--><!--Device-notificationManager-export type NotificationFilter = _NotificationFilter-End-->
 
 **System capability:** SystemCapability.Notification.Notification

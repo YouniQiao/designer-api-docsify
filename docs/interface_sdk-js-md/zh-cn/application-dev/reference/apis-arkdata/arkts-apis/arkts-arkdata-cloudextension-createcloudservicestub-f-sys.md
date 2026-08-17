@@ -10,10 +10,6 @@ function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObjec
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -32,7 +28,7 @@ function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObjec
 | --- | --- |
 | Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudService的RemoteObject对象。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

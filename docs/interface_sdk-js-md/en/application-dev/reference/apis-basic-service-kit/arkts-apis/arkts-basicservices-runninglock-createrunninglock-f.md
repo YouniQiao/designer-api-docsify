@@ -12,11 +12,9 @@ import { runningLock } from 'runningLock';
 function createRunningLock(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void
 ```
 
-Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses an asynchronous callback to return the result.
+Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#runninglock) object. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -32,11 +30,11 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#Running
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Indicates the [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) name. A recommended name consists of the package or class name and a suffix. |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Indicates the [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md#RunningLockType). |
+| name | string | Yes | Indicates the [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#runninglock) name. A recommended name consists of the package or class name and a suffix. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Indicates the [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md#runninglocktype). |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND, (err: Error, lock: runningLock.RunningLock) => {
@@ -55,11 +53,9 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 function createRunningLock(name: string, type: RunningLockType): Promise<RunningLock>
 ```
 
-Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses a promise to return the result.
+Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#runninglock) object. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -75,8 +71,8 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#Running
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Indicates the [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) name. A recommended name consists of the package or class name and a suffix. |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Indicates the [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md#RunningLockType). |
+| name | string | Yes | Indicates the [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#runninglock) name. A recommended name consists of the package or class name and a suffix. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Indicates the [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md#runninglocktype). |
 
 **Return value:**
 
@@ -84,7 +80,7 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#Running
 | --- | --- |
 | Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Promise used to return the { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)

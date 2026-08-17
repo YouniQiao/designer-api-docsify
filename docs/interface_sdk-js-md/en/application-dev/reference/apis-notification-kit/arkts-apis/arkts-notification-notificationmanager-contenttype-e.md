@@ -4,10 +4,6 @@ Enumerates the notification content types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export enum ContentType--><!--Device-notificationManager-export enum ContentType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -21,10 +17,6 @@ NOTIFICATION_CONTENT_BASIC_TEXT
 Normal text notification.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Long text notification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT-End-->
@@ -61,10 +49,6 @@ NOTIFICATION_CONTENT_PICTURE
 Picture-attached notification.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +66,6 @@ Conversation notification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION--><!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION-End-->
@@ -101,10 +81,6 @@ NOTIFICATION_CONTENT_MULTILINE
 Multi-line text notification.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,10 +98,6 @@ System live view notification. A third-party application cannot directly create 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW--><!--Device-ContentType-NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW-End-->
@@ -141,10 +113,6 @@ NOTIFICATION_CONTENT_LIVE_VIEW
 Common live view notification. Available only to system applications.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

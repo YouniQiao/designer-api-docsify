@@ -1,12 +1,8 @@
 # ScrollDirectionalLockType
 
-Enum defining the scope of directional lock behavior in the WebView, used with enableScrollDirectionalLock.
+Defines the scenario types for scroll direction locking.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum ScrollDirectionalLockType--><!--Device-unnamed-declare enum ScrollDirectionalLockType-End-->
 
@@ -18,13 +14,9 @@ Enum defining the scope of directional lock behavior in the WebView, used with e
 ALL = 0
 ```
 
-Applies directional lock across all scroll contexts. This includes both nested and flat scroll scenarios.
+Scroll locking is supported in all scenarios.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +30,9 @@ Applies directional lock across all scroll contexts. This includes both nested a
 NESTED_SCROLL = 1
 ```
 
-Applies directional lock only within nested scroll scenarios. This is the default behavior in ArkWeb to improve UX in complex scroll hierarchies.
+Scroll locking is supported in nested scroll scenarios.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

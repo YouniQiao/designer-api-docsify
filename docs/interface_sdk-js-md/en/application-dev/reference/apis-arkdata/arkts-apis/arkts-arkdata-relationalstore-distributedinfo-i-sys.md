@@ -4,10 +4,6 @@ Manages the distributed info of the table.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-interface DistributedInfo--><!--Device-relationalStore-interface DistributedInfo-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -32,10 +28,6 @@ Specifies the data origin sources.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistributedInfo-flag?: DistributedOrigin--><!--Device-DistributedInfo-flag?: DistributedOrigin-End-->
@@ -55,10 +47,6 @@ Specifies the data origin sources device ID.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

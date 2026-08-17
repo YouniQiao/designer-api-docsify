@@ -4,10 +4,6 @@ The **NotificationSorting** module provides APIs for defining the sorting inform
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationSorting--><!--Device-unnamed-export interface NotificationSorting-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -25,10 +21,6 @@ Unique ID of the notification.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationSorting-readonly hashCode: string--><!--Device-NotificationSorting-readonly hashCode: string-End-->
 
@@ -48,10 +40,6 @@ Notification level. If this parameter is not set, the default value is used base
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationSorting-readonly ranking: long--><!--Device-NotificationSorting-readonly ranking: long-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -69,10 +57,6 @@ Notification slot type.
 **Type:** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationSorting-readonly slot: NotificationSlot--><!--Device-NotificationSorting-readonly slot: NotificationSlot-End-->
 

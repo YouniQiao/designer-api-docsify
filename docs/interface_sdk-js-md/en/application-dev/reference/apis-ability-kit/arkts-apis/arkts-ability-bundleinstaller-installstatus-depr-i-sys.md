@@ -4,8 +4,6 @@ Describes the bundle installation or uninstall status.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-export interface InstallStatus--><!--Device-unnamed-export interface InstallStatus-End-->
@@ -20,15 +18,13 @@ Describes the bundle installation or uninstall status.
 status: bundle.InstallErrorCode
 ```
 
-Installation or uninstall error code. The value must be defined in [InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md#InstallErrorCode).
+Installation or uninstall error code. The value must be defined in [InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md#installerrorcode).
 
 **Type:** bundle.InstallErrorCode
 
 **Default:** Indicates the install or uninstall error code
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -51,8 +47,6 @@ Installation or uninstall status message. **SUCCESS**: Installation succeeded. *
 **Default:** Indicates the install or uninstall result string message
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

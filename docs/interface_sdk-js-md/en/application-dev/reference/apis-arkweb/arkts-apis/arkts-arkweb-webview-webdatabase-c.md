@@ -1,12 +1,8 @@
 # WebDataBase
 
-Implements a **WebDataBase** object. > **NOTE：**> > - The sample effect is subject to the actual device. > > - You must load the **Web** component before calling the APIs in **WebDataBase**.
+Implements a **WebDataBase** object. > **NOTE：**> > - You must load the **Web** component before calling the APIs in **WebDataBase**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class WebDataBase--><!--Device-webview-class WebDataBase-End-->
 
@@ -28,10 +24,6 @@ Deletes all HTTP authentication credentials saved in the cache. This API returns
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDataBase-static deleteHttpAuthCredentials(): void--><!--Device-WebDataBase-static deleteHttpAuthCredentials(): void-End-->
@@ -47,10 +39,6 @@ static existHttpAuthCredentials(): boolean
 Checks whether any saved HTTP authentication credentials exist. This API returns the result synchronously.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>--><!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>-End-->
@@ -88,8 +72,8 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Host to which the HTTP authentication credential is applied. |
-| realm | string | Yes | Realm to which the HTTP authentication credential is applied. |
+| host | string | Yes | Host address of the HTTP authentication credential app, in the format of ' www.example.com' or '192.168.1.1', excluding the protocol and port number. |
+| realm | string | Yes | Authentication realm of the HTTP authentication credential app, which indicates the scope or protection area for authentication under the same host. It is usually specified by the WWW- Authenticate header returned by the server. |
 
 **Return value:**
 
@@ -113,10 +97,6 @@ Saves HTTP authentication credentials for a given host and realm. This API retur
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void--><!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void-End-->
@@ -127,10 +107,10 @@ Saves HTTP authentication credentials for a given host and realm. This API retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Host to which the HTTP authentication credential is applied. |
-| realm | string | Yes | Realm to which the HTTP authentication credential is applied. |
-| username | string | Yes | User name. |
-| password | string | Yes | Password. |
+| host | string | Yes | Host of the HTTP authentication credential. Used to match the host corresponding to the credential. |
+| realm | string | Yes | Realm of the HTTP authentication credential. Used to match the authentication realm corresponding to the credential. |
+| username | string | Yes | Username for HTTP authentication, which serves as the identity for accessing protected resources. |
+| password | string | Yes | Password for HTTP authentication. Used with the username to complete authentication. |
 
 **Error codes:**
 

@@ -4,9 +4,7 @@ Enumerates the error types of the player.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-enum MediaError--><!--Device-webview-enum MediaError-End-->
 
@@ -22,9 +20,7 @@ Network error.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-MediaError-NETWORK_ERROR = 1--><!--Device-MediaError-NETWORK_ERROR = 1-End-->
 
@@ -40,9 +36,7 @@ Media format error.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-MediaError-FORMAT_ERROR = 2--><!--Device-MediaError-FORMAT_ERROR = 2-End-->
 
@@ -58,9 +52,7 @@ Decoding error.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-MediaError-DECODE_ERROR = 3--><!--Device-MediaError-DECODE_ERROR = 3-End-->
 

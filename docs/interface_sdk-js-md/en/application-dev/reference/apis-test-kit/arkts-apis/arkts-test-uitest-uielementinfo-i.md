@@ -4,10 +4,6 @@ Provides information about the UI event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface UIElementInfo--><!--Device-unnamed-declare interface UIElementInfo-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -58,10 +54,6 @@ Bundle name of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIElementInfo-readonly bundleName: string--><!--Device-UIElementInfo-readonly bundleName: string-End-->
@@ -74,15 +66,11 @@ Bundle name of the application.
 readonly componentEventType?: ComponentEventType
 ```
 
-Component operation event type. If it is not a component operation event, [COMPONENT_UNDEFINED](arkts-test-uitest-componenteventtype-e.md#COMPONENT_UNDEFINED) is returned.
+Component operation event type. If it is not a component operation event, [COMPONENT_UNDEFINED](arkts-test-uitest-componenteventtype-e.md#componentundefined) is returned.
 
 **Type:** [ComponentEventType](arkts-test-uitest-componenteventtype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -102,10 +90,6 @@ Component ID. If it is not a component operation event, an empty string is retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIElementInfo-readonly componentId?: string--><!--Device-UIElementInfo-readonly componentId?: string-End-->
@@ -118,15 +102,11 @@ Component ID. If it is not a component operation event, an empty string is retur
 readonly componentRect?: Rect
 ```
 
-Component border information. If it is not a component operation event, a [Rect](arkts-test-uitest-rect-i.md#Rect) object whose attribute values are all **0** is returned.
+Component border information. If it is not a component operation event, a [Rect](arkts-test-uitest-rect-i.md#rect) object whose attribute values are all **0** is returned.
 
 **Type:** [Rect](arkts-test-uitest-rect-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -146,10 +126,6 @@ Text information of the component or window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIElementInfo-readonly text: string--><!--Device-UIElementInfo-readonly text: string-End-->
@@ -168,10 +144,6 @@ Component or window type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIElementInfo-readonly type: string--><!--Device-UIElementInfo-readonly type: string-End-->
@@ -184,15 +156,11 @@ Component or window type.
 readonly windowChangeType?: WindowChangeType
 ```
 
-Window change event type. If the event is not a window change event, [WINDOW_UNDEFINED](arkts-test-uitest-windowchangetype-e.md#WINDOW_UNDEFINED) is returned.
+Window change event type. If the event is not a window change event, [WINDOW_UNDEFINED](arkts-test-uitest-windowchangetype-e.md#windowundefined) is returned.
 
 **Type:** [WindowChangeType](arkts-test-uitest-windowchangetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -211,10 +179,6 @@ ID of the window to which the component belongs. If it is not a component operat
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

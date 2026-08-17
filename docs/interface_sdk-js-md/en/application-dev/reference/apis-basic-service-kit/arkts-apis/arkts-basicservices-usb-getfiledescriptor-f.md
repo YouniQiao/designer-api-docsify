@@ -12,15 +12,13 @@ import { usb } from 'usb';
 function getFileDescriptor(pipe: USBDevicePipe): number
 ```
 
-Obtains the file descriptor. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter.
+Obtains the file descriptor. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getFileDescriptor](arkts-basicservices-usbmanager-getfiledescriptor-f.md#getFileDescriptor)
+**Substitutes:** [getFileDescriptor](arkts-basicservices-usbmanager-getfiledescriptor-f.md#getfiledescriptor)
 
 <!--Device-usb-function getFileDescriptor(pipe: USBDevicePipe): number--><!--Device-usb-function getFileDescriptor(pipe: USBDevicePipe): number-End-->
 
@@ -38,7 +36,7 @@ Obtains the file descriptor. Before you do this, call [usb.getDevices](arkts-bas
 | --- | --- |
 | number | Returns the file descriptor of the USB device if the operation is successful; returns **-1** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ret = usb.getFileDescriptor(devicepipe);

@@ -1,12 +1,8 @@
 # RenderExitReason
 
-Enum type supplied to [renderExitReason](arkts-arkweb-onrenderexitedevent-i.md#renderExitReason) when onRenderExited being called.
+onRenderExited接口返回的渲染进程退出的具体原因。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 <!--Device-unnamed-declare enum RenderExitReason--><!--Device-unnamed-declare enum RenderExitReason-End-->
 
@@ -18,13 +14,9 @@ Enum type supplied to [renderExitReason](arkts-arkweb-onrenderexitedevent-i.md#r
 ProcessAbnormalTermination = 0
 ```
 
-Render process non-zero exit status.
+渲染进程异常退出，可能原因包括：渲染进程启动超时、达到进程数量上限导致系统回收旧渲染进程、多个页签同时关闭等。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,13 +30,9 @@ Render process non-zero exit status.
 ProcessWasKilled = 1
 ```
 
-SIGKILL or task manager kill.
+收到SIGKILL，或被手动终止。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -58,13 +46,9 @@ SIGKILL or task manager kill.
 ProcessCrashed = 2
 ```
 
-Segmentation fault.
+渲染进程崩溃退出，如段错误。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -78,13 +62,9 @@ Segmentation fault.
 ProcessOom = 3
 ```
 
-Out of memory.
+程序内存不足。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,13 +78,9 @@ Out of memory.
 ProcessExitUnknown = 4
 ```
 
-Unknown reason.
+其他原因，比如渲染进程孵化失败。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

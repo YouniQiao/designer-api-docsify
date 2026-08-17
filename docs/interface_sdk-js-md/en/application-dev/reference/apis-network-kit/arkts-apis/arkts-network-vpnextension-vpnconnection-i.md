@@ -4,10 +4,6 @@ Defines a VPN connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-vpnExtension-export interface VpnConnection--><!--Device-vpnExtension-export interface VpnConnection-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -28,10 +24,6 @@ Create a VPN network using the VpnConfig.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConnection-create(config: VpnConfig): Promise<number>--><!--Device-VpnConnection-create(config: VpnConfig): Promise<number>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -40,7 +32,7 @@ Create a VPN network using the VpnConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | Indicates the [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md#VpnConfig) configuration of the VPN network. |
+| config | VpnConfig | Yes | Indicates the [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md#vpnconfig) configuration of the VPN network. |
 
 **Return value:**
 
@@ -59,7 +51,7 @@ Create a VPN network using the VpnConfig.
 | [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) | VPN creation denied, please check the user type. |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) | VPN exist already, please execute destroy first. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
@@ -148,10 +140,6 @@ Destroy the VPN network.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConnection-destroy(): Promise<void>--><!--Device-VpnConnection-destroy(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -170,7 +158,7 @@ Destroy the VPN network.
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
@@ -201,10 +189,6 @@ Destroy the VPN network.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConnection-destroy(vpnId: string): Promise<void>--><!--Device-VpnConnection-destroy(vpnId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -228,7 +212,7 @@ Destroy the VPN network.
 | [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
 | [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
@@ -259,10 +243,6 @@ generate vpn id.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConnection-generateVpnId(): Promise<string>--><!--Device-VpnConnection-generateVpnId(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -280,7 +260,7 @@ generate vpn id.
 | [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
 | [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
@@ -310,10 +290,6 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConnection-protect(socketFd: number): Promise<void>--><!--Device-VpnConnection-protect(socketFd: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -340,7 +316,7 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
 | [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
@@ -382,10 +358,6 @@ Protect all socket of the VPN process. After executing this function, all socket
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConnection-protectProcessNet(): Promise<void>--><!--Device-VpnConnection-protectProcessNet(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -396,7 +368,7 @@ Protect all socket of the VPN process. After executing this function, all socket
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';

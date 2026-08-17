@@ -10,10 +10,6 @@ function offAbilityForegroundState(observer?: AbilityForegroundStateObserver): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
 <!--Device-abilityManager-function offAbilityForegroundState(observer?: AbilityForegroundStateObserver): void--><!--Device-abilityManager-function offAbilityForegroundState(observer?: AbilityForegroundStateObserver): void-End-->
@@ -36,7 +32,7 @@ function offAbilityForegroundState(observer?: AbilityForegroundStateObserver): v
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ArkTS-Sta示例：
 

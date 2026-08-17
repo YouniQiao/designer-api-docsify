@@ -4,10 +4,6 @@ Type of the touch event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface TouchObject--><!--Device-unnamed-declare interface TouchObject-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ getCurrentLocalPosition?(): Coordinate2D
 Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ X coordinate of the touch point in the coordinate system of the current applicat
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -75,10 +63,6 @@ Y coordinate of the touch point in the coordinate system of the current applicat
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,10 +84,6 @@ X coordinate of the touch point in the [global coordinate system](../../../windo
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -123,10 +103,6 @@ Y coordinate of the touch point in the [global coordinate system](../../../windo
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,10 +124,6 @@ Whether the event was triggered by a left-hand or right-hand tap.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -171,10 +143,6 @@ Height of the finger contact area. Unit: vp.
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,10 +164,6 @@ Unique identifier of a finger.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TouchObject-id: number--><!--Device-TouchObject-id: number-End-->
@@ -217,10 +181,6 @@ Time when the finger is pressed. Unit: ns
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,10 +202,6 @@ Pressure value of finger contact. Value range: [0, 65535), where higher values i
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -266,11 +222,9 @@ X coordinate of the touch point in the coordinate system of the current applicat
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [windowX](#windowX)
+**Substitutes:** [windowX](#windowx)
 
 <!--Device-TouchObject-screenX: number--><!--Device-TouchObject-screenX: number-End-->
 
@@ -288,11 +242,9 @@ Y coordinate of the touch point in the coordinate system of the current applicat
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [windowY](#windowY)
+**Substitutes:** [windowY](#windowy)
 
 <!--Device-TouchObject-screenY: number--><!--Device-TouchObject-screenY: number-End-->
 
@@ -309,10 +261,6 @@ Type of the touch event.
 **Type:** TouchType
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -331,10 +279,6 @@ Width of the finger contact area. Unit: vp.
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -356,10 +300,6 @@ X coordinate of the touch point in the coordinate system of the current applicat
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -379,10 +319,6 @@ Y coordinate of the touch point in the coordinate system of the current applicat
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -404,10 +340,6 @@ X coordinate of the touch point in the [component coordinate system](../../../ui
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TouchObject-x: number--><!--Device-TouchObject-x: number-End-->
@@ -425,10 +357,6 @@ Y coordinate of the touch point in the [component coordinate system](../../../ui
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,11 +4,9 @@ A system common event is an event that is published by a system service or syste
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Support](arkts-basicservices-commoneventmanager-support-e.md#Support)
+**Substitutes:** [Support](arkts-basicservices-commoneventmanager-support-e.md#support)
 
 <!--Device-commonEvent-export enum Support--><!--Device-commonEvent-export enum Support-End-->
 
@@ -24,11 +22,9 @@ Indicates that the boot is complete and the system is loaded. To subscribe to th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BOOT_COMPLETED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BOOT_COMPLETED)
+**Substitutes:** [COMMON_EVENT_BOOT_COMPLETED](arkts-basicservices-commoneventmanager-support-e.md#commoneventbootcompleted)
 
 <!--Device-Support-COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'--><!--Device-Support-COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'-End-->
 
@@ -44,11 +40,9 @@ COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_LOCKED_BOOT_COMPLETED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_LOCKED_BOOT_COMPLETED)
+**Substitutes:** [COMMON_EVENT_LOCKED_BOOT_COMPLETED](arkts-basicservices-commoneventmanager-support-e.md#commoneventlockedbootcompleted)
 
 <!--Device-Support-COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'--><!--Device-Support-COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'-End-->
 
@@ -64,11 +58,9 @@ Indicates that the device is being shut down and will continue until it is final
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_SHUTDOWN](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_SHUTDOWN)
+**Substitutes:** [COMMON_EVENT_SHUTDOWN](arkts-basicservices-commoneventmanager-support-e.md#commoneventshutdown)
 
 <!--Device-Support-COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'--><!--Device-Support-COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'-End-->
 
@@ -84,11 +76,9 @@ Indicates that the battery charging status, battery level, and other information
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BATTERY_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BATTERY_CHANGED)
+**Substitutes:** [COMMON_EVENT_BATTERY_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventbatterychanged)
 
 <!--Device-Support-COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'--><!--Device-Support-COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'-End-->
 
@@ -104,11 +94,9 @@ Indicates that the battery level is low.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BATTERY_LOW](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BATTERY_LOW)
+**Substitutes:** [COMMON_EVENT_BATTERY_LOW](arkts-basicservices-commoneventmanager-support-e.md#commoneventbatterylow)
 
 <!--Device-Support-COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'--><!--Device-Support-COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'-End-->
 
@@ -124,11 +112,9 @@ Indicates that the battery level is normal.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BATTERY_OKAY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BATTERY_OKAY)
+**Substitutes:** [COMMON_EVENT_BATTERY_OKAY](arkts-basicservices-commoneventmanager-support-e.md#commoneventbatteryokay)
 
 <!--Device-Support-COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'--><!--Device-Support-COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'-End-->
 
@@ -144,11 +130,9 @@ Indicates that the device is connected to an external power supply.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_POWER_CONNECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_POWER_CONNECTED)
+**Substitutes:** [COMMON_EVENT_POWER_CONNECTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpowerconnected)
 
 <!--Device-Support-COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'--><!--Device-Support-COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'-End-->
 
@@ -164,11 +148,9 @@ Indicates that the device is disconnected from the external power supply.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_POWER_DISCONNECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_POWER_DISCONNECTED)
+**Substitutes:** [COMMON_EVENT_POWER_DISCONNECTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpowerdisconnected)
 
 <!--Device-Support-COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'--><!--Device-Support-COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'-End-->
 
@@ -184,11 +166,9 @@ Indicates that the device screen is off and the device is in sleep mode.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_SCREEN_OFF](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_SCREEN_OFF)
+**Substitutes:** [COMMON_EVENT_SCREEN_OFF](arkts-basicservices-commoneventmanager-support-e.md#commoneventscreenoff)
 
 <!--Device-Support-COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'--><!--Device-Support-COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'-End-->
 
@@ -204,11 +184,9 @@ Indicates that the device screen is on and the device is in interactive state.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_SCREEN_ON](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_SCREEN_ON)
+**Substitutes:** [COMMON_EVENT_SCREEN_ON](arkts-basicservices-commoneventmanager-support-e.md#commoneventscreenon)
 
 <!--Device-Support-COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'--><!--Device-Support-COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'-End-->
 
@@ -224,11 +202,9 @@ Indicates that the device thermal level has changed.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_THERMAL_LEVEL_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_THERMAL_LEVEL_CHANGED)
+**Substitutes:** [COMMON_EVENT_THERMAL_LEVEL_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventthermallevelchanged)
 
 <!--Device-Support-COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'--><!--Device-Support-COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'-End-->
 
@@ -244,11 +220,9 @@ COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_PRESENT](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_PRESENT)
+**Substitutes:** [COMMON_EVENT_USER_PRESENT](arkts-basicservices-commoneventmanager-support-e.md#commoneventuserpresent)
 
 <!--Device-Support-COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'--><!--Device-Support-COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'-End-->
 
@@ -264,11 +238,9 @@ Indicates that the system time has changed as time ticks by.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_TIME_TICK](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_TIME_TICK)
+**Substitutes:** [COMMON_EVENT_TIME_TICK](arkts-basicservices-commoneventmanager-support-e.md#commoneventtimetick)
 
 <!--Device-Support-COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'--><!--Device-Support-COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'-End-->
 
@@ -284,11 +256,9 @@ Indicates that the system time is set.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_TIME_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_TIME_CHANGED)
+**Substitutes:** [COMMON_EVENT_TIME_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventtimechanged)
 
 <!--Device-Support-COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'--><!--Device-Support-COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'-End-->
 
@@ -304,11 +274,9 @@ COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DATE_CHANGED)
+**Substitutes:** [COMMON_EVENT_DATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventdatechanged)
 
 <!--Device-Support-COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'--><!--Device-Support-COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'-End-->
 
@@ -324,11 +292,9 @@ Indicates that the system time zone is changed.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_TIMEZONE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_TIMEZONE_CHANGED)
+**Substitutes:** [COMMON_EVENT_TIMEZONE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventtimezonechanged)
 
 <!--Device-Support-COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'--><!--Device-Support-COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'-End-->
 
@@ -344,11 +310,9 @@ COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_CLOSE_SYSTEM_DIALOGS](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_CLOSE_SYSTEM_DIALOGS)
+**Substitutes:** [COMMON_EVENT_CLOSE_SYSTEM_DIALOGS](arkts-basicservices-commoneventmanager-support-e.md#commoneventclosesystemdialogs)
 
 <!--Device-Support-COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'--><!--Device-Support-COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'-End-->
 
@@ -364,11 +328,9 @@ Indicates that a new application package has been installed on the device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGE_ADDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_ADDED)
+**Substitutes:** [COMMON_EVENT_PACKAGE_ADDED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackageadded)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'--><!--Device-Support-COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'-End-->
 
@@ -384,11 +346,9 @@ COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGE_REPLACED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_REPLACED)
+**Substitutes:** [COMMON_EVENT_PACKAGE_REPLACED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackagereplaced)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'--><!--Device-Support-COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'-End-->
 
@@ -404,11 +364,9 @@ COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_MY_PACKAGE_REPLACED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_MY_PACKAGE_REPLACED)
+**Substitutes:** [COMMON_EVENT_MY_PACKAGE_REPLACED](arkts-basicservices-commoneventmanager-support-e.md#commoneventmypackagereplaced)
 
 <!--Device-Support-COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'--><!--Device-Support-COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'-End-->
 
@@ -424,11 +382,9 @@ Indicates that an installed application has been uninstalled from the device wit
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGE_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_REMOVED)
+**Substitutes:** [COMMON_EVENT_PACKAGE_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackageremoved)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'--><!--Device-Support-COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'-End-->
 
@@ -444,11 +400,9 @@ COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BUNDLE_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BUNDLE_REMOVED)
+**Substitutes:** [COMMON_EVENT_BUNDLE_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#commoneventbundleremoved)
 
 <!--Device-Support-COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'--><!--Device-Support-COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'-End-->
 
@@ -464,11 +418,9 @@ COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGE_FULLY_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_FULLY_REMOVED)
+**Substitutes:** [COMMON_EVENT_PACKAGE_FULLY_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackagefullyremoved)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'--><!--Device-Support-COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'-End-->
 
@@ -484,11 +436,9 @@ Indicates that an application package has been changed (for example, an ability 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_CHANGED)
+**Substitutes:** [COMMON_EVENT_PACKAGE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackagechanged)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'--><!--Device-Support-COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'-End-->
 
@@ -504,11 +454,9 @@ Indicates that the user closed all processes of the application and restarted th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGE_RESTARTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_RESTARTED)
+**Substitutes:** [COMMON_EVENT_PACKAGE_RESTARTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackagerestarted)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'--><!--Device-Support-COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'-End-->
 
@@ -524,11 +472,9 @@ Indicates that the user cleared the application package data.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGE_DATA_CLEARED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_DATA_CLEARED)
+**Substitutes:** [COMMON_EVENT_PACKAGE_DATA_CLEARED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackagedatacleared)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'--><!--Device-Support-COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'-End-->
 
@@ -544,11 +490,9 @@ COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGES_SUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGES_SUSPENDED)
+**Substitutes:** [COMMON_EVENT_PACKAGES_SUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackagessuspended)
 
 <!--Device-Support-COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'--><!--Device-Support-COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'-End-->
 
@@ -564,11 +508,9 @@ COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGES_UNSUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGES_UNSUSPENDED)
+**Substitutes:** [COMMON_EVENT_PACKAGES_UNSUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackagesunsuspended)
 
 <!--Device-Support-COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'--><!--Device-Support-COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'-End-->
 
@@ -584,11 +526,9 @@ Indicates that the application HAP package is suspended.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_MY_PACKAGE_SUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_MY_PACKAGE_SUSPENDED)
+**Substitutes:** [COMMON_EVENT_MY_PACKAGE_SUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#commoneventmypackagesuspended)
 
 <!--Device-Support-COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'--><!--Device-Support-COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'-End-->
 
@@ -604,11 +544,9 @@ Indicates that the application package is not suspended.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_MY_PACKAGE_UNSUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_MY_PACKAGE_UNSUSPENDED)
+**Substitutes:** [COMMON_EVENT_MY_PACKAGE_UNSUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#commoneventmypackageunsuspended)
 
 <!--Device-Support-COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'--><!--Device-Support-COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'-End-->
 
@@ -624,11 +562,9 @@ COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_UID_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_UID_REMOVED)
+**Substitutes:** [COMMON_EVENT_UID_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#commoneventuidremoved)
 
 <!--Device-Support-COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'--><!--Device-Support-COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'-End-->
 
@@ -644,11 +580,9 @@ COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGE_FIRST_LAUNCH](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_FIRST_LAUNCH)
+**Substitutes:** [COMMON_EVENT_PACKAGE_FIRST_LAUNCH](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackagefirstlaunch)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'--><!--Device-Support-COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'-End-->
 
@@ -664,11 +598,9 @@ COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATIO
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION)
+**Substitutes:** [COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackageneedsverification)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATION'--><!--Device-Support-COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATION'-End-->
 
@@ -684,11 +616,9 @@ COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_PACKAGE_VERIFIED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_VERIFIED)
+**Substitutes:** [COMMON_EVENT_PACKAGE_VERIFIED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpackageverified)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'--><!--Device-Support-COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'-End-->
 
@@ -704,11 +634,9 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATION
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE)
+**Substitutes:** [COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE](arkts-basicservices-commoneventmanager-support-e.md#commoneventexternalapplicationsavailable)
 
 <!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_AVAILABLE'--><!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_AVAILABLE'-End-->
 
@@ -724,11 +652,9 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATI
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE)
+**Substitutes:** [COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE](arkts-basicservices-commoneventmanager-support-e.md#commoneventexternalapplicationsunavailable)
 
 <!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'--><!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'-End-->
 
@@ -744,11 +670,9 @@ COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_CONFIGURATION_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_CONFIGURATION_CHANGED)
+**Substitutes:** [COMMON_EVENT_CONFIGURATION_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventconfigurationchanged)
 
 <!--Device-Support-COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'--><!--Device-Support-COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'-End-->
 
@@ -764,11 +688,9 @@ COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_LOCALE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_LOCALE_CHANGED)
+**Substitutes:** [COMMON_EVENT_LOCALE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventlocalechanged)
 
 <!--Device-Support-COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'--><!--Device-Support-COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'-End-->
 
@@ -784,11 +706,9 @@ COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_MANAGE_PACKAGE_STORAGE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_MANAGE_PACKAGE_STORAGE)
+**Substitutes:** [COMMON_EVENT_MANAGE_PACKAGE_STORAGE](arkts-basicservices-commoneventmanager-support-e.md#commoneventmanagepackagestorage)
 
 <!--Device-Support-COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'--><!--Device-Support-COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'-End-->
 
@@ -804,11 +724,9 @@ COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DRIVE_MODE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DRIVE_MODE)
+**Substitutes:** [COMMON_EVENT_DRIVE_MODE](arkts-basicservices-commoneventmanager-support-e.md#commoneventdrivemode)
 
 <!--Device-Support-COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'--><!--Device-Support-COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'-End-->
 
@@ -824,11 +742,9 @@ COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_HOME_MODE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_HOME_MODE)
+**Substitutes:** [COMMON_EVENT_HOME_MODE](arkts-basicservices-commoneventmanager-support-e.md#commoneventhomemode)
 
 <!--Device-Support-COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'--><!--Device-Support-COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'-End-->
 
@@ -844,11 +760,9 @@ COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_OFFICE_MODE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_OFFICE_MODE)
+**Substitutes:** [COMMON_EVENT_OFFICE_MODE](arkts-basicservices-commoneventmanager-support-e.md#commoneventofficemode)
 
 <!--Device-Support-COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'--><!--Device-Support-COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'-End-->
 
@@ -864,11 +778,9 @@ COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_STARTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_STARTED)
+**Substitutes:** [COMMON_EVENT_USER_STARTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventuserstarted)
 
 <!--Device-Support-COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'--><!--Device-Support-COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'-End-->
 
@@ -884,11 +796,9 @@ COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_BACKGROUND](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_BACKGROUND)
+**Substitutes:** [COMMON_EVENT_USER_BACKGROUND](arkts-basicservices-commoneventmanager-support-e.md#commoneventuserbackground)
 
 <!--Device-Support-COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'--><!--Device-Support-COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'-End-->
 
@@ -904,11 +814,9 @@ COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_FOREGROUND](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_FOREGROUND)
+**Substitutes:** [COMMON_EVENT_USER_FOREGROUND](arkts-basicservices-commoneventmanager-support-e.md#commoneventuserforeground)
 
 <!--Device-Support-COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'--><!--Device-Support-COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'-End-->
 
@@ -924,11 +832,9 @@ Indicates that user switching is in progress. To subscribe to this common event,
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_SWITCHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_SWITCHED)
+**Substitutes:** [COMMON_EVENT_USER_SWITCHED](arkts-basicservices-commoneventmanager-support-e.md#commoneventuserswitched)
 
 <!--Device-Support-COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'--><!--Device-Support-COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'-End-->
 
@@ -944,11 +850,9 @@ COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_STARTING](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_STARTING)
+**Substitutes:** [COMMON_EVENT_USER_STARTING](arkts-basicservices-commoneventmanager-support-e.md#commoneventuserstarting)
 
 <!--Device-Support-COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'--><!--Device-Support-COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'-End-->
 
@@ -964,11 +868,9 @@ COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_UNLOCKED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_UNLOCKED)
+**Substitutes:** [COMMON_EVENT_USER_UNLOCKED](arkts-basicservices-commoneventmanager-support-e.md#commoneventuserunlocked)
 
 <!--Device-Support-COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'--><!--Device-Support-COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'-End-->
 
@@ -984,11 +886,9 @@ COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_STOPPING](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_STOPPING)
+**Substitutes:** [COMMON_EVENT_USER_STOPPING](arkts-basicservices-commoneventmanager-support-e.md#commoneventuserstopping)
 
 <!--Device-Support-COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'--><!--Device-Support-COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'-End-->
 
@@ -1004,11 +904,9 @@ COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_STOPPED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_STOPPED)
+**Substitutes:** [COMMON_EVENT_USER_STOPPED](arkts-basicservices-commoneventmanager-support-e.md#commoneventuserstopped)
 
 <!--Device-Support-COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'--><!--Device-Support-COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'-End-->
 
@@ -1024,11 +922,9 @@ HW id login successfully.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN)
+**Substitutes:** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN](arkts-basicservices-commoneventmanager-support-e.md#commoneventdistributedaccountlogin)
 
 <!--Device-Support-COMMON_EVENT_HWID_LOGIN = 'common.event.HWID_LOGIN'--><!--Device-Support-COMMON_EVENT_HWID_LOGIN = 'common.event.HWID_LOGIN'-End-->
 
@@ -1044,11 +940,9 @@ HW id logout successfully.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT)
+**Substitutes:** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT](arkts-basicservices-commoneventmanager-support-e.md#commoneventdistributedaccountlogout)
 
 <!--Device-Support-COMMON_EVENT_HWID_LOGOUT = 'common.event.HWID_LOGOUT'--><!--Device-Support-COMMON_EVENT_HWID_LOGOUT = 'common.event.HWID_LOGOUT'-End-->
 
@@ -1064,11 +958,9 @@ HW id is invalid.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID)
+**Substitutes:** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID](arkts-basicservices-commoneventmanager-support-e.md#commoneventdistributedaccounttokeninvalid)
 
 <!--Device-Support-COMMON_EVENT_HWID_TOKEN_INVALID = 'common.event.HWID_TOKEN_INVALID'--><!--Device-Support-COMMON_EVENT_HWID_TOKEN_INVALID = 'common.event.HWID_TOKEN_INVALID'-End-->
 
@@ -1084,11 +976,9 @@ HW id logs off.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF)
+**Substitutes:** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF](arkts-basicservices-commoneventmanager-support-e.md#commoneventdistributedaccountlogoff)
 
 <!--Device-Support-COMMON_EVENT_HWID_LOGOFF = 'common.event.HWID_LOGOFF'--><!--Device-Support-COMMON_EVENT_HWID_LOGOFF = 'common.event.HWID_LOGOFF'-End-->
 
@@ -1104,11 +994,9 @@ Indicates a change in the Wi-Fi state (enabled or disabled).
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_POWER_STATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_POWER_STATE)
+**Substitutes:** [COMMON_EVENT_WIFI_POWER_STATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifipowerstate)
 
 <!--Device-Support-COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'--><!--Device-Support-COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'-End-->
 
@@ -1124,11 +1012,9 @@ Indicates that the Wi-Fi access point has been scanned and proved available. To 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_SCAN_FINISHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_SCAN_FINISHED)
+**Substitutes:** [COMMON_EVENT_WIFI_SCAN_FINISHED](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifiscanfinished)
 
 <!--Device-Support-COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'--><!--Device-Support-COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'-End-->
 
@@ -1144,11 +1030,9 @@ Indicates that the Wi-Fi signal strength (RSSI) has changed. To subscribe to thi
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_RSSI_VALUE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_RSSI_VALUE)
+**Substitutes:** [COMMON_EVENT_WIFI_RSSI_VALUE](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifirssivalue)
 
 <!--Device-Support-COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'--><!--Device-Support-COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'-End-->
 
@@ -1164,11 +1048,9 @@ Indicates that the Wi-Fi connection state has changed.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_CONN_STATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_CONN_STATE)
+**Substitutes:** [COMMON_EVENT_WIFI_CONN_STATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventwificonnstate)
 
 <!--Device-Support-COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'--><!--Device-Support-COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'-End-->
 
@@ -1184,11 +1066,9 @@ Indicates a change in the Wi-Fi hotspot state (enabled or disabled).
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_HOTSPOT_STATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_HOTSPOT_STATE)
+**Substitutes:** [COMMON_EVENT_WIFI_HOTSPOT_STATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifihotspotstate)
 
 <!--Device-Support-COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'--><!--Device-Support-COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'-End-->
 
@@ -1204,11 +1084,9 @@ Indicates that a client has joined the Wi-Fi hotspot of the current device. To s
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_AP_STA_JOIN](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_AP_STA_JOIN)
+**Substitutes:** [COMMON_EVENT_WIFI_AP_STA_JOIN](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifiapstajoin)
 
 <!--Device-Support-COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'--><!--Device-Support-COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'-End-->
 
@@ -1224,11 +1102,9 @@ Indicates that the client is disconnected from the Wi-Fi hotspot of the current 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_AP_STA_LEAVE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_AP_STA_LEAVE)
+**Substitutes:** [COMMON_EVENT_WIFI_AP_STA_LEAVE](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifiapstaleave)
 
 <!--Device-Support-COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'--><!--Device-Support-COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'-End-->
 
@@ -1244,11 +1120,9 @@ COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE)
+**Substitutes:** [COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifimplinkstatechange)
 
 <!--Device-Support-COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'-End-->
 
@@ -1264,11 +1138,9 @@ Indicates that the Wi-Fi P2P connection state has changed. To subscribe to this 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_P2P_CONN_STATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_CONN_STATE)
+**Substitutes:** [COMMON_EVENT_WIFI_P2P_CONN_STATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifip2pconnstate)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'-End-->
 
@@ -1284,11 +1156,9 @@ Indicates a change in the Wi-Fi P2P state (enabled or disabled). To subscribe to
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_P2P_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_STATE_CHANGED)
+**Substitutes:** [COMMON_EVENT_WIFI_P2P_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifip2pstatechanged)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'-End-->
 
@@ -1304,11 +1174,9 @@ Indicates that the state of the Wi-Fi P2P peer device has changed. To subscribe 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED)
+**Substitutes:** [COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifip2ppeersstatechanged)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE'-End-->
 
@@ -1324,11 +1192,9 @@ Indicates that the Wi-Fi P2P discovery state has changed. To subscribe to this c
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED)
+**Substitutes:** [COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifip2ppeersdiscoverystatechanged)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER_DISCOVERY_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER_DISCOVERY_STATE_CHANGE'-End-->
 
@@ -1344,11 +1210,9 @@ Indicates that the state of the Wi-Fi P2P local device has changed. To subscribe
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED)
+**Substitutes:** [COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifip2pcurrentdevicestatechanged)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRENT_DEVICE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRENT_DEVICE_CHANGE'-End-->
 
@@ -1364,11 +1228,9 @@ Indicates that the Wi-Fi P2P group information has changed. To subscribe to this
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED)
+**Substitutes:** [COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventwifip2pgroupstatechanged)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CHANGED'-End-->
 
@@ -1384,11 +1246,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetoot
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhandsfreeagconnectstateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'-End-->
 
@@ -1404,11 +1264,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetoo
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhandsfreeagcurrentdeviceupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CURRENT_DEVICE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CURRENT_DEVICE_UPDATE'-End-->
 
@@ -1424,11 +1282,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhandsfreeagaudiostateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.AUDIO_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.AUDIO_STATE_UPDATE'-End-->
 
@@ -1444,11 +1300,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetootha2dpsourceconnectstateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'-End-->
 
@@ -1464,11 +1318,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetootha2dpsourcecurrentdeviceupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.a2dpsource.CURRENT_DEVICE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.a2dpsource.CURRENT_DEVICE_UPDATE'-End-->
 
@@ -1484,11 +1336,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetootha2dpsourceplayingstateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.PLAYING_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.PLAYING_STATE_UPDATE'-End-->
 
@@ -1504,11 +1354,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.blue
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetootha2dpsourceavrcpconnectstateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'-End-->
 
@@ -1524,11 +1372,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetootha2dpsourcecodecvalueupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'-End-->
 
@@ -1544,11 +1390,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotede
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedevicediscovered)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotedevice.DISCOVERED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotedevice.DISCOVERED'-End-->
 
@@ -1564,11 +1408,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedeviceclassvalueupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.CLASS_VALUE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.CLASS_VALUE_UPDATE'-End-->
 
@@ -1584,11 +1426,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remot
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedeviceaclconnected)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remotedevice.ACL_CONNECTED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remotedevice.ACL_CONNECTED'-End-->
 
@@ -1604,11 +1444,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.re
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedeviceacldisconnected)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'-End-->
 
@@ -1624,11 +1462,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remoted
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedevicenameupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remotedevice.NAME_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remotedevice.NAME_UPDATE'-End-->
 
@@ -1644,11 +1480,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotede
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedevicepairstate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotedevice.PAIR_STATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotedevice.PAIR_STATE'-End-->
 
@@ -1664,11 +1498,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE = 'usual.event.bluetoot
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedevicebatteryvalueupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.BATTERY_VALUE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.BATTERY_VALUE_UPDATE'-End-->
 
@@ -1684,11 +1516,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT = 'usual.event.bluetooth.remotede
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedevicesdpresult)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT = 'usual.event.bluetooth.remotedevice.SDP_RESULT'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT = 'usual.event.bluetooth.remotedevice.SDP_RESULT'-End-->
 
@@ -1704,11 +1534,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotede
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedeviceuuidvalue)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotedevice.UUID_VALUE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotedevice.UUID_VALUE'-End-->
 
@@ -1724,11 +1552,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ = 'usual.event.bluetooth.remoted
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedevicepairingreq)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ = 'usual.event.bluetooth.remotedevice.PAIRING_REQ'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ = 'usual.event.bluetooth.remotedevice.PAIRING_REQ'-End-->
 
@@ -1744,11 +1570,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL = 'usual.event.bluetooth.remo
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedevicepairingcancel)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL = 'usual.event.bluetooth.remotedevice.PAIRING_CANCEL'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL = 'usual.event.bluetooth.remotedevice.PAIRING_CANCEL'-End-->
 
@@ -1764,11 +1588,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ = 'usual.event.bluetooth.remoted
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedeviceconnectreq)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ = 'usual.event.bluetooth.remotedevice.CONNECT_REQ'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ = 'usual.event.bluetooth.remotedevice.CONNECT_REQ'-End-->
 
@@ -1784,11 +1606,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY = 'usual.event.bluetooth.remot
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedeviceconnectreply)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY = 'usual.event.bluetooth.remotedevice.CONNECT_REPLY'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY = 'usual.event.bluetooth.remotedevice.CONNECT_REPLY'-End-->
 
@@ -1804,11 +1624,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL = 'usual.event.bluetooth.remo
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothremotedeviceconnectcancel)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL = 'usual.event.bluetooth.remotedevice.CONNECT_CANCEL'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL = 'usual.event.bluetooth.remotedevice.CONNECT_CANCEL'-End-->
 
@@ -1824,11 +1642,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE = 'usual.event.bluetoo
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhandsfreeunitconnectstateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.CONNECT_STATE_UPDATE'-End-->
 
@@ -1844,11 +1660,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE = 'usual.event.bluetooth
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhandsfreeunitaudiostateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.AUDIO_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.AUDIO_STATE_UPDATE'-End-->
 
@@ -1864,11 +1678,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT = 'usual.event.bluetooth.ha
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhandsfreeunitagcommonevent)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT = 'usual.event.bluetooth.handsfreeunit.AG_COMMON_EVENT'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT = 'usual.event.bluetooth.handsfreeunit.AG_COMMON_EVENT'-End-->
 
@@ -1884,11 +1696,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE = 'usual.event.bluetoo
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhandsfreeunitagcallstateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.AG_CALL_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.AG_CALL_STATE_UPDATE'-End-->
 
@@ -1904,11 +1714,9 @@ COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE = 'usual.event.bluetooth.host.STATE_UPD
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhoststateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE = 'usual.event.bluetooth.host.STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE = 'usual.event.bluetooth.host.STATE_UPDATE'-End-->
 
@@ -1924,11 +1732,9 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE = 'usual.event.bluetooth.host.REQ_D
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhostreqdiscoverable)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE = 'usual.event.bluetooth.host.REQ_DISCOVERABLE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE = 'usual.event.bluetooth.host.REQ_DISCOVERABLE'-End-->
 
@@ -1944,11 +1750,9 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhostreqenable)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'-End-->
 
@@ -1964,11 +1768,9 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABL
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhostreqdisable)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABLE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABLE'-End-->
 
@@ -1984,11 +1786,9 @@ COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhostscanmodeupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_MODE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_MODE_UPDATE'-End-->
 
@@ -2004,11 +1804,9 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISC
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhostdiscoverystarted)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISCOVERY_STARTED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISCOVERY_STARTED'-End-->
 
@@ -2024,11 +1822,9 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DIS
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhostdiscoveryfinished)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DISCOVERY_FINISHED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DISCOVERY_FINISHED'-End-->
 
@@ -2044,11 +1840,9 @@ COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDAT
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetoothhostnameupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDATE'-End-->
 
@@ -2064,11 +1858,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetootha2dpsinkconnectstateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.CONNECT_STATE_UPDATE'-End-->
 
@@ -2084,11 +1876,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetootha2dpsinkplayingstateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.PLAYING_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.PLAYING_STATE_UPDATE'-End-->
 
@@ -2104,11 +1894,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.a2dp
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#commoneventbluetootha2dpsinkaudiostateupdate)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.AUDIO_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.AUDIO_STATE_UPDATE'-End-->
 
@@ -2124,11 +1912,9 @@ COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED)
+**Substitutes:** [COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventnfcactionadapterstatechanged)
 
 <!--Device-Support-COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_STATE_CHANGED'-End-->
 
@@ -2144,11 +1930,9 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED)
+**Substitutes:** [COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventnfcactionrffieldondetected)
 
 <!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_ON_DETECTED'--><!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_ON_DETECTED'-End-->
 
@@ -2164,11 +1948,9 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED)
+**Substitutes:** [COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventnfcactionrffieldoffdetected)
 
 <!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD_OFF_DETECTED'--><!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD_OFF_DETECTED'-End-->
 
@@ -2184,11 +1966,9 @@ Indicates that the system stops charging the battery.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISCHARGING](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISCHARGING)
+**Substitutes:** [COMMON_EVENT_DISCHARGING](arkts-basicservices-commoneventmanager-support-e.md#commoneventdischarging)
 
 <!--Device-Support-COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'--><!--Device-Support-COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'-End-->
 
@@ -2204,11 +1984,9 @@ Indicates that the system starts charging the battery.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_CHARGING](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_CHARGING)
+**Substitutes:** [COMMON_EVENT_CHARGING](arkts-basicservices-commoneventmanager-support-e.md#commoneventcharging)
 
 <!--Device-Support-COMMON_EVENT_CHARGING = 'usual.event.CHARGING'--><!--Device-Support-COMMON_EVENT_CHARGING = 'usual.event.CHARGING'-End-->
 
@@ -2224,11 +2002,9 @@ COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED)
+**Substitutes:** [COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventdeviceidlemodechanged)
 
 <!--Device-Support-COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'--><!--Device-Support-COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'-End-->
 
@@ -2244,11 +2020,9 @@ Indicates that the system power-saving mode has changed.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_POWER_SAVE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_POWER_SAVE_MODE_CHANGED)
+**Substitutes:** [COMMON_EVENT_POWER_SAVE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventpowersavemodechanged)
 
 <!--Device-Support-COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'--><!--Device-Support-COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'-End-->
 
@@ -2264,11 +2038,9 @@ Indicates that a user has been added to the system. To subscribe to this common 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_ADDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_ADDED)
+**Substitutes:** [COMMON_EVENT_USER_ADDED](arkts-basicservices-commoneventmanager-support-e.md#commoneventuseradded)
 
 <!--Device-Support-COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'--><!--Device-Support-COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'-End-->
 
@@ -2284,11 +2056,9 @@ Indicates that a user has been removed from the system. To subscribe to this com
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USER_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_REMOVED)
+**Substitutes:** [COMMON_EVENT_USER_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#commoneventuserremoved)
 
 <!--Device-Support-COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'--><!--Device-Support-COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'-End-->
 
@@ -2304,11 +2074,9 @@ COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_ABILITY_ADDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_ABILITY_ADDED)
+**Substitutes:** [COMMON_EVENT_ABILITY_ADDED](arkts-basicservices-commoneventmanager-support-e.md#commoneventabilityadded)
 
 <!--Device-Support-COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'--><!--Device-Support-COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'-End-->
 
@@ -2324,11 +2092,9 @@ COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_ABILITY_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_ABILITY_REMOVED)
+**Substitutes:** [COMMON_EVENT_ABILITY_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#commoneventabilityremoved)
 
 <!--Device-Support-COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'--><!--Device-Support-COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'-End-->
 
@@ -2344,11 +2110,9 @@ COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_ABILITY_UPDATED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_ABILITY_UPDATED)
+**Substitutes:** [COMMON_EVENT_ABILITY_UPDATED](arkts-basicservices-commoneventmanager-support-e.md#commoneventabilityupdated)
 
 <!--Device-Support-COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'--><!--Device-Support-COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'-End-->
 
@@ -2364,11 +2128,9 @@ COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHAN
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_LOCATION_MODE_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_LOCATION_MODE_STATE_CHANGED)
+**Substitutes:** [COMMON_EVENT_LOCATION_MODE_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventlocationmodestatechanged)
 
 <!--Device-Support-COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHANGED'-End-->
 
@@ -2384,11 +2146,9 @@ COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_SLEEP](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_SLEEP)
+**Substitutes:** [COMMON_EVENT_IVI_SLEEP](arkts-basicservices-commoneventmanager-support-e.md#commoneventivisleep)
 
 <!--Device-Support-COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'--><!--Device-Support-COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'-End-->
 
@@ -2404,11 +2164,9 @@ COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_PAUSE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_PAUSE)
+**Substitutes:** [COMMON_EVENT_IVI_PAUSE](arkts-basicservices-commoneventmanager-support-e.md#commoneventivipause)
 
 <!--Device-Support-COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'--><!--Device-Support-COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'-End-->
 
@@ -2424,11 +2182,9 @@ COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_STANDBY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_STANDBY)
+**Substitutes:** [COMMON_EVENT_IVI_STANDBY](arkts-basicservices-commoneventmanager-support-e.md#commoneventivistandby)
 
 <!--Device-Support-COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'--><!--Device-Support-COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'-End-->
 
@@ -2444,11 +2200,9 @@ COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_LASTMODE_SAVE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_LASTMODE_SAVE)
+**Substitutes:** [COMMON_EVENT_IVI_LASTMODE_SAVE](arkts-basicservices-commoneventmanager-support-e.md#commoneventivilastmodesave)
 
 <!--Device-Support-COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'--><!--Device-Support-COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'-End-->
 
@@ -2464,11 +2218,9 @@ COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_VOLTAGE_ABNORMAL](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_VOLTAGE_ABNORMAL)
+**Substitutes:** [COMMON_EVENT_IVI_VOLTAGE_ABNORMAL](arkts-basicservices-commoneventmanager-support-e.md#commoneventivivoltageabnormal)
 
 <!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'--><!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'-End-->
 
@@ -2484,11 +2236,9 @@ COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_HIGH_TEMPERATURE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_HIGH_TEMPERATURE)
+**Substitutes:** [COMMON_EVENT_IVI_HIGH_TEMPERATURE](arkts-basicservices-commoneventmanager-support-e.md#commoneventivihightemperature)
 
 <!--Device-Support-COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'--><!--Device-Support-COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'-End-->
 
@@ -2504,11 +2254,9 @@ COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_EXTREME_TEMPERATURE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_EXTREME_TEMPERATURE)
+**Substitutes:** [COMMON_EVENT_IVI_EXTREME_TEMPERATURE](arkts-basicservices-commoneventmanager-support-e.md#commoneventiviextremetemperature)
 
 <!--Device-Support-COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'--><!--Device-Support-COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'-End-->
 
@@ -2524,11 +2272,9 @@ COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL)
+**Substitutes:** [COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL](arkts-basicservices-commoneventmanager-support-e.md#commoneventivitemperatureabnormal)
 
 <!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'--><!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'-End-->
 
@@ -2544,11 +2290,9 @@ COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_VOLTAGE_RECOVERY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_VOLTAGE_RECOVERY)
+**Substitutes:** [COMMON_EVENT_IVI_VOLTAGE_RECOVERY](arkts-basicservices-commoneventmanager-support-e.md#commoneventivivoltagerecovery)
 
 <!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'--><!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'-End-->
 
@@ -2564,11 +2308,9 @@ COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_TEMPERATURE_RECOVERY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_TEMPERATURE_RECOVERY)
+**Substitutes:** [COMMON_EVENT_IVI_TEMPERATURE_RECOVERY](arkts-basicservices-commoneventmanager-support-e.md#commoneventivitemperaturerecovery)
 
 <!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'--><!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'-End-->
 
@@ -2584,11 +2326,9 @@ COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_IVI_ACTIVE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_ACTIVE)
+**Substitutes:** [COMMON_EVENT_IVI_ACTIVE](arkts-basicservices-commoneventmanager-support-e.md#commoneventiviactive)
 
 <!--Device-Support-COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'--><!--Device-Support-COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'-End-->
 
@@ -2604,11 +2344,9 @@ Indicates that a USB device has been attached to the device functioning as a USB
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USB_DEVICE_ATTACHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USB_DEVICE_ATTACHED)
+**Substitutes:** [COMMON_EVENT_USB_DEVICE_ATTACHED](arkts-basicservices-commoneventmanager-support-e.md#commoneventusbdeviceattached)
 
 <!--Device-Support-COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_ATTACHED'--><!--Device-Support-COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_ATTACHED'-End-->
 
@@ -2624,11 +2362,9 @@ Indicates that a USB device has been detached from the device functioning as a U
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USB_DEVICE_DETACHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USB_DEVICE_DETACHED)
+**Substitutes:** [COMMON_EVENT_USB_DEVICE_DETACHED](arkts-basicservices-commoneventmanager-support-e.md#commoneventusbdevicedetached)
 
 <!--Device-Support-COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_DETACHED'--><!--Device-Support-COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_DETACHED'-End-->
 
@@ -2644,11 +2380,9 @@ COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCES
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USB_ACCESSORY_ATTACHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USB_ACCESSORY_ATTACHED)
+**Substitutes:** [COMMON_EVENT_USB_ACCESSORY_ATTACHED](arkts-basicservices-commoneventmanager-support-e.md#commoneventusbaccessoryattached)
 
 <!--Device-Support-COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_ATTACHED'--><!--Device-Support-COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_ATTACHED'-End-->
 
@@ -2664,11 +2398,9 @@ COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCES
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_USB_ACCESSORY_DETACHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USB_ACCESSORY_DETACHED)
+**Substitutes:** [COMMON_EVENT_USB_ACCESSORY_DETACHED](arkts-basicservices-commoneventmanager-support-e.md#commoneventusbaccessorydetached)
 
 <!--Device-Support-COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_DETACHED'--><!--Device-Support-COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_DETACHED'-End-->
 
@@ -2684,11 +2416,9 @@ COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISK_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_REMOVED)
+**Substitutes:** [COMMON_EVENT_DISK_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#commoneventdiskremoved)
 
 <!--Device-Support-COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'--><!--Device-Support-COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'-End-->
 
@@ -2704,11 +2434,9 @@ COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISK_UNMOUNTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_UNMOUNTED)
+**Substitutes:** [COMMON_EVENT_DISK_UNMOUNTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventdiskunmounted)
 
 <!--Device-Support-COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'--><!--Device-Support-COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'-End-->
 
@@ -2724,11 +2452,9 @@ COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISK_MOUNTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_MOUNTED)
+**Substitutes:** [COMMON_EVENT_DISK_MOUNTED](arkts-basicservices-commoneventmanager-support-e.md#commoneventdiskmounted)
 
 <!--Device-Support-COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'--><!--Device-Support-COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'-End-->
 
@@ -2744,11 +2470,9 @@ COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISK_BAD_REMOVAL](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_BAD_REMOVAL)
+**Substitutes:** [COMMON_EVENT_DISK_BAD_REMOVAL](arkts-basicservices-commoneventmanager-support-e.md#commoneventdiskbadremoval)
 
 <!--Device-Support-COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'--><!--Device-Support-COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'-End-->
 
@@ -2764,11 +2488,9 @@ COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISK_UNMOUNTABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_UNMOUNTABLE)
+**Substitutes:** [COMMON_EVENT_DISK_UNMOUNTABLE](arkts-basicservices-commoneventmanager-support-e.md#commoneventdiskunmountable)
 
 <!--Device-Support-COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'--><!--Device-Support-COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'-End-->
 
@@ -2784,11 +2506,9 @@ COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_DISK_EJECT](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_EJECT)
+**Substitutes:** [COMMON_EVENT_DISK_EJECT](arkts-basicservices-commoneventmanager-support-e.md#commoneventdiskeject)
 
 <!--Device-Support-COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'--><!--Device-Support-COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'-End-->
 
@@ -2804,11 +2524,9 @@ COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDAT
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED)
+**Substitutes:** [COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED](arkts-basicservices-commoneventmanager-support-e.md#commoneventvisibleaccountsupdated)
 
 <!--Device-Support-COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDATED'--><!--Device-Support-COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDATED'-End-->
 
@@ -2824,11 +2542,9 @@ COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_ACCOUNT_DELETED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_ACCOUNT_DELETED)
+**Substitutes:** [COMMON_EVENT_ACCOUNT_DELETED](arkts-basicservices-commoneventmanager-support-e.md#commoneventaccountdeleted)
 
 <!--Device-Support-COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'--><!--Device-Support-COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'-End-->
 
@@ -2844,11 +2560,9 @@ COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_FOUNDATION_READY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_FOUNDATION_READY)
+**Substitutes:** [COMMON_EVENT_FOUNDATION_READY](arkts-basicservices-commoneventmanager-support-e.md#commoneventfoundationready)
 
 <!--Device-Support-COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'--><!--Device-Support-COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'-End-->
 
@@ -2864,11 +2578,9 @@ Indicates that the airplane mode of the device has changed.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_AIRPLANE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_AIRPLANE_MODE_CHANGED)
+**Substitutes:** [COMMON_EVENT_AIRPLANE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#commoneventairplanemodechanged)
 
 <!--Device-Support-COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'--><!--Device-Support-COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'-End-->
 
@@ -2884,11 +2596,9 @@ Indicates that the screen has been split.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMMON_EVENT_SPLIT_SCREEN](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_SPLIT_SCREEN)
+**Substitutes:** [COMMON_EVENT_SPLIT_SCREEN](arkts-basicservices-commoneventmanager-support-e.md#commoneventsplitscreen)
 
 <!--Device-Support-COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'--><!--Device-Support-COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'-End-->
 

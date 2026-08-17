@@ -8,10 +8,6 @@ Defines a onAbilityWillDestroy function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-type OnAbilityWillDestroyFn = (ability: UIAbility) => void--><!--Device-unnamed-type OnAbilityWillDestroyFn = (ability: UIAbility) => void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore

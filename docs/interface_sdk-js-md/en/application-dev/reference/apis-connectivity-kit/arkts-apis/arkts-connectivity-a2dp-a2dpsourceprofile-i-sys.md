@@ -2,13 +2,9 @@
 
 Manager a2dp source profile.
 
-**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md#BaseProfile)
+**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md#baseprofile)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-a2dp-interface A2dpSourceProfile--><!--Device-a2dp-interface A2dpSourceProfile-End-->
 
@@ -29,10 +25,6 @@ connect(deviceId: string): void
 Initiate an A2DP connection to a remote device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -70,10 +62,6 @@ disableAbsoluteVolume(deviceId: string): Promise<void>
 Turn off the absolute volume switch.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -117,10 +105,6 @@ Turn off the absolute volume switch..
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 <!--Device-A2dpSourceProfile-disableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-A2dpSourceProfile-disableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void-End-->
@@ -157,10 +141,6 @@ disableAutoPlay(deviceId: string, duration: int): Promise<void>
 Restriction devices to play music within {@code duration} milliseconds of connection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -205,10 +185,6 @@ Disconnect the A2DP connection with the remote device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 <!--Device-A2dpSourceProfile-disconnect(deviceId: string): void--><!--Device-A2dpSourceProfile-disconnect(deviceId: string): void-End-->
@@ -245,10 +221,6 @@ enableAbsoluteVolume(deviceId: string): Promise<void>
 Turn on the absolute volume switch.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -292,10 +264,6 @@ Turn on the absolute volume switch..
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 <!--Device-A2dpSourceProfile-enableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-A2dpSourceProfile-enableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void-End-->
@@ -332,10 +300,6 @@ enableAutoPlay(deviceId: string): Promise<void>
 Allow devices to automatically play music when connected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -379,10 +343,6 @@ Obtains the duration for which automatic playback is disabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 <!--Device-A2dpSourceProfile-getAutoPlayDisabledDuration(deviceId: string): Promise<int>--><!--Device-A2dpSourceProfile-getAutoPlayDisabledDuration(deviceId: string): Promise<int>-End-->
@@ -424,10 +384,6 @@ getCurrentCodecInfo(deviceId: string): CodecInfo
 Get codec information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -471,10 +427,6 @@ Get the full codec capabilities negotiated between the active device and the loc
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 <!--Device-A2dpSourceProfile-getCurrentFullCodecInfo(deviceId: string): CodecInfoList[]--><!--Device-A2dpSourceProfile-getCurrentFullCodecInfo(deviceId: string): CodecInfoList[]-End-->
@@ -516,10 +468,6 @@ isAbsoluteVolumeEnabled(deviceId: string): Promise<boolean>
 Checks whether the absolute volume is enabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -563,10 +511,6 @@ Checks whether the absolute volume is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 <!--Device-A2dpSourceProfile-isAbsoluteVolumeEnabled(deviceId: string, callback: AsyncCallback<boolean>): void--><!--Device-A2dpSourceProfile-isAbsoluteVolumeEnabled(deviceId: string, callback: AsyncCallback<boolean>): void-End-->
@@ -603,10 +547,6 @@ isAbsoluteVolumeSupported(deviceId: string): Promise<boolean>
 Checks whether the device supports absolute volume.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -650,10 +590,6 @@ Checks whether the device supports absolute volume.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 <!--Device-A2dpSourceProfile-isAbsoluteVolumeSupported(deviceId: string, callback: AsyncCallback<boolean>): void--><!--Device-A2dpSourceProfile-isAbsoluteVolumeSupported(deviceId: string, callback: AsyncCallback<boolean>): void-End-->
@@ -690,10 +626,6 @@ setCurrentCodecInfo(deviceId: string, codecInfo: CodecInfo): void
 Set codec information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 

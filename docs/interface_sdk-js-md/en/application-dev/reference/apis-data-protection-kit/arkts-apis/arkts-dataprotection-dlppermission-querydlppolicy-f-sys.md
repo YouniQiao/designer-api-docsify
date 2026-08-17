@@ -12,13 +12,9 @@ import { dlpPermission } from 'dlpPermission';
 function queryDlpPolicy(dlpFd: number): Promise<string>
 ```
 
-Parses the file header in a DLP file to obtain the DLP plaintext policy. The returned JSON string of the DLP policy contains the [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md#DLPProperty-(System-API)) and [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md#CustomProperty-(System-API)) information. This API uses a promise to return the result. This API obtains the policy information of a DLP file for analysis in scenarios such as viewing the DLP file permission configuration. > **NOTE：**> > This API can be called only by enterprise accounts.
+Parses the file header in a DLP file to obtain the DLP plaintext policy. The returned JSON string of the DLP policy contains the [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md#dlpproperty-system-api) and [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md#customproperty-system-api) information. This API uses a promise to return the result. This API obtains the policy information of a DLP file for analysis in scenarios such as viewing the DLP file permission configuration. > **NOTE：**> > This API can be called only by enterprise accounts.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
@@ -57,7 +53,7 @@ Parses the file header in a DLP file to obtain the DLP plaintext policy. The ret
 | [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
 | [19100013](../errorcode-dlp.md#19100013-user-access-denied) | The user does not have the permission. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

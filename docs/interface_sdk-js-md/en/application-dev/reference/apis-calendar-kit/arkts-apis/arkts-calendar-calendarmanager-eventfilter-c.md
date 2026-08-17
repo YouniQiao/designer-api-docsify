@@ -1,12 +1,8 @@
 # EventFilter
 
-Implements an event filter. You can use [filterById()](#filterById), [filterByTime()](#filterByTime), [filterByTitle()](#filterByTitle) to obtain an event filter, and then pass the filter in getEvents() for filtering.
+Implements an event filter. You can use [filterById()](#filterbyid), [filterByTime()](#filterbytime), [filterByTitle()](#filterbytitle) to obtain an event filter, and then pass the filter in getEvents() for filtering.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-calendarManager-class EventFilter--><!--Device-calendarManager-class EventFilter-End-->
 
@@ -28,10 +24,6 @@ Defines a filter based on the event ID.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-EventFilter-static filterById(ids: number[]): EventFilter--><!--Device-EventFilter-static filterById(ids: number[]): EventFilter-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -48,7 +40,7 @@ Defines a filter based on the event ID.
 | --- | --- |
 | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | EventFilter object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -106,10 +98,6 @@ Defines a filter based on the event time.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter--><!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -127,7 +115,7 @@ Defines a filter based on the event time.
 | --- | --- |
 | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | EventFilter object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -180,10 +168,6 @@ Filters events by event title. This API supports fuzzy match.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-EventFilter-static filterByTitle(title: string): EventFilter--><!--Device-EventFilter-static filterByTitle(title: string): EventFilter-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -200,7 +184,7 @@ Filters events by event title. This API supports fuzzy match.
 | --- | --- |
 | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | EventFilter object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

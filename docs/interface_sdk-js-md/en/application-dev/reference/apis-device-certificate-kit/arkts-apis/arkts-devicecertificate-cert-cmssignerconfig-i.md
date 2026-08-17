@@ -4,10 +4,6 @@ Represents the configuration of the CMS signer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface CmsSignerConfig--><!--Device-cert-interface CmsSignerConfig-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -32,10 +28,6 @@ Whether to add the signature attribute. The default value is **true**. **true**:
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsSignerConfig-addAttr?: boolean--><!--Device-CmsSignerConfig-addAttr?: boolean-End-->
@@ -55,10 +47,6 @@ Whether to add a certificate. The default value is **true**. **true**: yes; **fa
 **Default:** true
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -80,10 +68,6 @@ Whether to add the SMIME capability to the CMS object. The default value is **tr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsSignerConfig-addSmimeCapAttr?: boolean--><!--Device-CmsSignerConfig-addSmimeCapAttr?: boolean-End-->
@@ -101,10 +85,6 @@ Message digest algorithm, for example, **SHA384**. Currently, **SHA1**, **SHA256
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -125,10 +105,6 @@ Padding mode for an RSA signature. The default value is **PKCS1_PADDING**. <br>W
 **Default:** CmsRsaSignaturePadding.PKCS1_PADDING
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

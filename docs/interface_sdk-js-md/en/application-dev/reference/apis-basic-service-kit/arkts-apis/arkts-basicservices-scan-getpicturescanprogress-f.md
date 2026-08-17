@@ -16,10 +16,6 @@ Obtains the progress of scanning a picture. This API uses a promise to return th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PRINT
 
 <!--Device-scan-function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>--><!--Device-scan-function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>-End-->
@@ -44,7 +40,7 @@ Obtains the progress of scanning a picture. This API uses a promise to return th
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

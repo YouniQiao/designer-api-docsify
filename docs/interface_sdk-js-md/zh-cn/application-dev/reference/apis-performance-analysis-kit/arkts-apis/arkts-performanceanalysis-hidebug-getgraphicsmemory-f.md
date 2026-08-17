@@ -10,10 +10,6 @@ function getGraphicsMemory(): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hidebug-function getGraphicsMemory(): Promise<int>--><!--Device-hidebug-function getGraphicsMemory(): Promise<int>-End-->
@@ -32,7 +28,7 @@ function getGraphicsMemory(): Promise<int>
 | --- | --- |
 | [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Failed to get the application memory due to a remote exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

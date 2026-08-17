@@ -1,12 +1,8 @@
 # InteractionUI (System API)
 
-Defines the base information of the interaction UI to be displayed after the current intent execution completes. This is a base class. Use its subclasses such as [InteractionModalUIExtension](arkts-ability-insightintent-interactionmodaluiextension-i-sys.md#InteractionModalUIExtension-(System-API)) in practice.
+Defines the base information of the interaction UI to be displayed after the current intent execution completes. This is a base class. Use its subclasses such as [InteractionModalUIExtension](arkts-ability-insightintent-interactionmodaluiextension-i-sys.md#interactionmodaluiextension-system-api) in practice.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 <!--Device-insightIntent-interface InteractionUI--><!--Device-insightIntent-interface InteractionUI-End-->
 
@@ -31,10 +27,6 @@ Type of the interaction UI.
 **Type:** string
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

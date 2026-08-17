@@ -4,10 +4,6 @@ The enum of member's connection state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-cdsm-enum CdsmConnectionState--><!--Device-cdsm-enum CdsmConnectionState-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -21,10 +17,6 @@ DISCONNECTED = 0
 The member is disconnected.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,10 +33,6 @@ CONNECTED = 1
 The member is connected.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

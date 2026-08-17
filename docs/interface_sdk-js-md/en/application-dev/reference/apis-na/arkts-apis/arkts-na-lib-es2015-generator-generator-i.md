@@ -4,10 +4,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Generator--><!--Device-unnamed-interface Generator-End-->
 
 ## [Symbol.iterator]
@@ -17,10 +13,6 @@
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Generator-[Symbol.iterator](): Generator<T, TReturn, TNext>--><!--Device-Generator-[Symbol.iterator](): Generator<T, TReturn, TNext>-End-->
 
@@ -37,10 +29,6 @@ next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Generator-next(...args: [] | [TNext]): IteratorResult<T, TReturn>--><!--Device-Generator-next(...args: [] | [TNext]): IteratorResult<T, TReturn>-End-->
 
@@ -64,10 +52,6 @@ return(value: TReturn): IteratorResult<T, TReturn>
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Generator-return(value: TReturn): IteratorResult<T, TReturn>--><!--Device-Generator-return(value: TReturn): IteratorResult<T, TReturn>-End-->
 
 **Parameters:**
@@ -89,10 +73,6 @@ throw(e: any): IteratorResult<T, TReturn>
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Generator-throw(e: any): IteratorResult<T, TReturn>--><!--Device-Generator-throw(e: any): IteratorResult<T, TReturn>-End-->
 

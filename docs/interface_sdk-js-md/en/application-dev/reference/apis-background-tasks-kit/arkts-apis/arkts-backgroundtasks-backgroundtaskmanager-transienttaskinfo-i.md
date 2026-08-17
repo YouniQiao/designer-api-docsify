@@ -4,10 +4,6 @@ Describes all transient task information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backgroundTaskManager-interface TransientTaskInfo--><!--Device-backgroundTaskManager-interface TransientTaskInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
@@ -30,10 +26,6 @@ Remaining quota of the application on the current day, in ms. <br>Unit:ms
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TransientTaskInfo-remainingQuota: int--><!--Device-TransientTaskInfo-remainingQuota: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
@@ -49,10 +41,6 @@ All information about the requested transient task.
 **Type:** DelaySuspendInfo[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TransientTaskInfo-transientTasks: DelaySuspendInfo[]--><!--Device-TransientTaskInfo-transientTasks: DelaySuspendInfo[]-End-->
 

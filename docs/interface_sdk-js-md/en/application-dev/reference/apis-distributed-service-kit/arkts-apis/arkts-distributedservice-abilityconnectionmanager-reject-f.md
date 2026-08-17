@@ -16,10 +16,6 @@ Rejects a connection request in a cross-device collaboration session. After a co
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-abilityConnectionManager-function reject(token: string, reason: string): void--><!--Device-abilityConnectionManager-function reject(token: string, reason: string): void-End-->
@@ -39,7 +35,7 @@ Rejects a connection request in a cross-device collaboration session. After a co
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want} from '@kit.AbilityKit';

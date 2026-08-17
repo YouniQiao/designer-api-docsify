@@ -4,8 +4,6 @@ Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is u
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -29,7 +27,7 @@ import { fileExtensionInfo } from 'fileExtensionInfo';
 
 | Name | Description |
 | --- | --- |
-| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#SUPPORTS_READ) | The device supports read. |
-| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#SUPPORTS_WRITE) | The device supports write. |
+| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supportsread) | The device supports read. |
+| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supportswrite) | The device supports write. |
 <!--DelEnd-->
 

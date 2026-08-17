@@ -4,11 +4,9 @@ The state of the supplicant enumeration.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md#SuppState-(System-API))
+**Substitutes:** [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md#suppstate-system-api)
 
 <!--Device-wifi-export enum SuppState--><!--Device-wifi-export enum SuppState-End-->
 
@@ -26,11 +24,9 @@ The supplicant is not associated with or is disconnected from the AP.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DISCONNECTED](arkts-connectivity-wifimanager-suppstate-e-sys.md#DISCONNECTED)
+**Substitutes:** [DISCONNECTED](arkts-connectivity-wifimanager-suppstate-e-sys.md#disconnected)
 
 <!--Device-SuppState-DISCONNECTED--><!--Device-SuppState-DISCONNECTED-End-->
 
@@ -48,11 +44,9 @@ The network interface is disabled.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [INTERFACE_DISABLED](arkts-connectivity-wifimanager-suppstate-e-sys.md#INTERFACE_DISABLED)
+**Substitutes:** [INTERFACE_DISABLED](arkts-connectivity-wifimanager-suppstate-e-sys.md#interfacedisabled)
 
 <!--Device-SuppState-INTERFACE_DISABLED--><!--Device-SuppState-INTERFACE_DISABLED-End-->
 
@@ -70,11 +64,9 @@ The supplicant is disabled.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [INACTIVE](arkts-connectivity-wifimanager-suppstate-e-sys.md#INACTIVE)
+**Substitutes:** [INACTIVE](arkts-connectivity-wifimanager-suppstate-e-sys.md#inactive)
 
 <!--Device-SuppState-INACTIVE--><!--Device-SuppState-INACTIVE-End-->
 
@@ -92,11 +84,9 @@ The supplicant is scanning for a Wi-Fi connection.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SCANNING](arkts-connectivity-wifimanager-suppstate-e-sys.md#SCANNING)
+**Substitutes:** [SCANNING](arkts-connectivity-wifimanager-suppstate-e-sys.md#scanning)
 
 <!--Device-SuppState-SCANNING--><!--Device-SuppState-SCANNING-End-->
 
@@ -114,11 +104,9 @@ The supplicant is authenticating with a specified AP.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUTHENTICATING](arkts-connectivity-wifimanager-suppstate-e-sys.md#AUTHENTICATING)
+**Substitutes:** [AUTHENTICATING](arkts-connectivity-wifimanager-suppstate-e-sys.md#authenticating)
 
 <!--Device-SuppState-AUTHENTICATING--><!--Device-SuppState-AUTHENTICATING-End-->
 
@@ -136,11 +124,9 @@ The supplicant is associating with a specified AP.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ASSOCIATING](arkts-connectivity-wifimanager-suppstate-e-sys.md#ASSOCIATING)
+**Substitutes:** [ASSOCIATING](arkts-connectivity-wifimanager-suppstate-e-sys.md#associating)
 
 <!--Device-SuppState-ASSOCIATING--><!--Device-SuppState-ASSOCIATING-End-->
 
@@ -158,11 +144,9 @@ The supplicant is associated with a specified AP.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ASSOCIATED](arkts-connectivity-wifimanager-suppstate-e-sys.md#ASSOCIATED)
+**Substitutes:** [ASSOCIATED](arkts-connectivity-wifimanager-suppstate-e-sys.md#associated)
 
 <!--Device-SuppState-ASSOCIATED--><!--Device-SuppState-ASSOCIATED-End-->
 
@@ -180,11 +164,9 @@ The four-way handshake is ongoing.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FOUR_WAY_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#FOUR_WAY_HANDSHAKE)
+**Substitutes:** [FOUR_WAY_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#fourwayhandshake)
 
 <!--Device-SuppState-FOUR_WAY_HANDSHAKE--><!--Device-SuppState-FOUR_WAY_HANDSHAKE-End-->
 
@@ -202,11 +184,9 @@ The group handshake is ongoing.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GROUP_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#GROUP_HANDSHAKE)
+**Substitutes:** [GROUP_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#grouphandshake)
 
 <!--Device-SuppState-GROUP_HANDSHAKE--><!--Device-SuppState-GROUP_HANDSHAKE-End-->
 
@@ -224,11 +204,9 @@ All authentication is completed.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMPLETED](arkts-connectivity-wifimanager-suppstate-e-sys.md#COMPLETED)
+**Substitutes:** [COMPLETED](arkts-connectivity-wifimanager-suppstate-e-sys.md#completed)
 
 <!--Device-SuppState-COMPLETED--><!--Device-SuppState-COMPLETED-End-->
 
@@ -246,11 +224,9 @@ Failed to establish a connection to the supplicant.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UNINITIALIZED](arkts-connectivity-wifimanager-suppstate-e-sys.md#UNINITIALIZED)
+**Substitutes:** [UNINITIALIZED](arkts-connectivity-wifimanager-suppstate-e-sys.md#uninitialized)
 
 <!--Device-SuppState-UNINITIALIZED--><!--Device-SuppState-UNINITIALIZED-End-->
 
@@ -268,11 +244,9 @@ The supplicant is in an unknown or invalid state.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [INVALID](arkts-connectivity-wifimanager-suppstate-e-sys.md#INVALID)
+**Substitutes:** [INVALID](arkts-connectivity-wifimanager-suppstate-e-sys.md#invalid)
 
 <!--Device-SuppState-INVALID--><!--Device-SuppState-INVALID-End-->
 

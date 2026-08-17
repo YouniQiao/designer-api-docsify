@@ -16,10 +16,6 @@ Obtains the OAID. This API uses an asynchronous callback to return the result. >
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.APP_TRACKING_CONSENT
 
 <!--Device-identifier-function getOAID(callback: AsyncCallback<string>): void--><!--Device-identifier-function getOAID(callback: AsyncCallback<string>): void-End-->
@@ -38,7 +34,7 @@ Obtains the OAID. This API uses an asynchronous callback to return the result. >
 | --- | --- |
 | [17300001](../errorcode-oaid.md#17300001-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { identifier } from '@kit.AdsKit';
@@ -63,10 +59,6 @@ Obtains the OAID. This API uses a promise to return the result. > **NOTE：**> >
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.APP_TRACKING_CONSENT
 
 <!--Device-identifier-function getOAID(): Promise<string>--><!--Device-identifier-function getOAID(): Promise<string>-End-->
@@ -85,7 +77,7 @@ Obtains the OAID. This API uses a promise to return the result. > **NOTE：**> >
 | --- | --- |
 | [17300001](../errorcode-oaid.md#17300001-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { identifier } from '@kit.AdsKit';

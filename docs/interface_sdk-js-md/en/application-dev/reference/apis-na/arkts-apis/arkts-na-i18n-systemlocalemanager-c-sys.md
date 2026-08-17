@@ -4,9 +4,7 @@ Provide some functions for settings and startup guide to select language or regi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export class SystemLocaleManager--><!--Device-i18n-export class SystemLocaleManager-End-->
 
@@ -24,9 +22,7 @@ Creates a SystemLocaleManager object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SystemLocaleManager-constructor()--><!--Device-SystemLocaleManager-constructor()-End-->
 
@@ -50,9 +46,7 @@ Obtains the list of languages after sorting.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SystemLocaleManager-getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>--><!--Device-SystemLocaleManager-getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>-End-->
 
@@ -65,13 +59,13 @@ Obtains the list of languages after sorting.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | languages | Array&lt;string&gt; | Yes | Valid IDs of the languages to be sorted. |
-| options | [SortOptions](arkts-na-i18n-sortoptions-i-sys.md) | No | Language sorting option. |
+| options | [SortOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-sortoptions-i-sys.md) | No | Language sorting option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[LocaleItem](arkts-na-i18n-localeitem-i-sys.md)&gt; | Language list after sorting. |
+| Array&lt;[LocaleItem](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-localeitem-i-sys.md)&gt; | Language list after sorting. |
 
 **Error codes:**
 
@@ -91,9 +85,7 @@ Obtains the IDs of the countries or regions after sorting.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SystemLocaleManager-getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>--><!--Device-SystemLocaleManager-getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>-End-->
 
@@ -106,13 +98,13 @@ Obtains the IDs of the countries or regions after sorting.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | regions | Array&lt;string&gt; | Yes | Valid IDs of the countries or regions to be sorted. |
-| options | [SortOptions](arkts-na-i18n-sortoptions-i-sys.md) | No | Country/region sorting option. By default, locale is the current system locale, isUseLocalName is false, and isSuggestedFirst is true. |
+| options | [SortOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-sortoptions-i-sys.md) | No | Country/region sorting option. By default, locale is the current system locale, isUseLocalName is false, and isSuggestedFirst is true. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[LocaleItem](arkts-na-i18n-localeitem-i-sys.md)&gt; | IDs of the countries or regions after sorting. |
+| Array&lt;[LocaleItem](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-localeitem-i-sys.md)&gt; | IDs of the countries or regions after sorting. |
 
 **Error codes:**
 
@@ -132,9 +124,7 @@ Obtains list of time zone city items after sorting.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SystemLocaleManager-static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>--><!--Device-SystemLocaleManager-static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>-End-->
 
@@ -146,7 +136,7 @@ Obtains list of time zone city items after sorting.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TimeZoneCityItem](arkts-na-i18n-timezonecityitem-i-sys.md)&gt; | List of time zone city items after sorting. |
+| Array&lt;[TimeZoneCityItem](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezonecityitem-i-sys.md)&gt; | List of time zone city items after sorting. |
 
 **Error codes:**
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export declare enum FixedMode--><!--Device-unnamed-export declare enum FixedMode-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
@@ -24,10 +20,6 @@ NONE = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-FixedMode-NONE = 0--><!--Device-FixedMode-NONE = 0-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
@@ -43,10 +35,6 @@ AUTO = 1
 单手模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FixedMode-AUTO = 1--><!--Device-FixedMode-AUTO = 1-End-->
 

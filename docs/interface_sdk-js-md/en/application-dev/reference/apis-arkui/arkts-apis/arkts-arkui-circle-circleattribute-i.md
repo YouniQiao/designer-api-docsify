@@ -6,9 +6,7 @@ Circle drawing component attribute functions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface CircleAttribute--><!--Device-unnamed-export declare interface CircleAttribute-End-->
 
@@ -22,9 +20,7 @@ attributeModifier(modifier: AttributeModifier<CircleAttribute> | AttributeModifi
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CircleAttribute-attributeModifier(modifier: AttributeModifier<CircleAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-CircleAttribute-attributeModifier(modifier: AttributeModifier<CircleAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,9 +44,7 @@ fill(value: ResourceColor | ColorMetrics | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CircleAttribute-fill(value: ResourceColor | ColorMetrics | undefined): this--><!--Device-CircleAttribute-fill(value: ResourceColor | ColorMetrics | undefined): this-End-->
 
@@ -74,9 +68,7 @@ setCircleOptions(options?: CircleOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CircleAttribute-setCircleOptions(options?: CircleOptions): this--><!--Device-CircleAttribute-setCircleOptions(options?: CircleOptions): this-End-->
 
@@ -100,9 +92,7 @@ stroke(value: ResourceColor | ColorMetrics| undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-CircleAttribute-stroke(value: ResourceColor | ColorMetrics| undefined): this--><!--Device-CircleAttribute-stroke(value: ResourceColor | ColorMetrics| undefined): this-End-->
 
@@ -128,9 +118,7 @@ Call attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

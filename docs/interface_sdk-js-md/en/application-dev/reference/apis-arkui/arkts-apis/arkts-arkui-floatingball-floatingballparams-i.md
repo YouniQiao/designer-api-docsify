@@ -4,10 +4,6 @@ Describes the parameters for starting and updating the floating ball.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-floatingBall-interface FloatingBallParams--><!--Device-floatingBall-interface FloatingBallParams-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Background color of the floating ball, in hexadecimal format without opacity (fo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallParams-backgroundColor?: string--><!--Device-FloatingBallParams-backgroundColor?: string-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -49,10 +41,6 @@ Content of the floating ball. It cannot exceed 64 bytes. The default value is an
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FloatingBallParams-content?: string--><!--Device-FloatingBallParams-content?: string-End-->
 
@@ -72,10 +60,6 @@ The color of the floating ball content, in hexadecimal format without opacity (e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatingBallParams-contentColor?: string--><!--Device-FloatingBallParams-contentColor?: string-End-->
@@ -88,15 +72,11 @@ The color of the floating ball content, in hexadecimal format without opacity (e
 icon?: image.PixelMap
 ```
 
-Icon of the floating ball. The total number of bytes of the icon pixels cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getPixelBytesNumber)). The recommended size is 128 px * 128 px. Actual display may vary based on the device capability and floating ball UI style.
+Icon of the floating ball. The total number of bytes of the icon pixels cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)). The recommended size is 128 px * 128 px. Actual display may vary based on the device capability and floating ball UI style.
 
 **Type:** image.PixelMap
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FloatingBallParams-icon?: image.PixelMap--><!--Device-FloatingBallParams-icon?: image.PixelMap-End-->
 
@@ -113,10 +93,6 @@ Floating ball template.
 **Type:** [FloatingBallTemplate](arkts-arkui-floatingball-floatingballtemplate-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FloatingBallParams-template: FloatingBallTemplate--><!--Device-FloatingBallParams-template: FloatingBallTemplate-End-->
 
@@ -136,10 +112,6 @@ Animation type used when the floating ball text is updated. The default value is
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatingBallParams-textUpdateAnimationType?: FloatingBallTextUpdateAnimationType--><!--Device-FloatingBallParams-textUpdateAnimationType?: FloatingBallTextUpdateAnimationType-End-->
@@ -158,10 +130,6 @@ Title of the floating ball. It cannot be an empty string and cannot exceed 64 by
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallParams-title: string--><!--Device-FloatingBallParams-title: string-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -179,10 +147,6 @@ The color of the floating ball title, in hexadecimal format without opacity (e.g
 **Default:** Set different default values according to the 'backgroundColor'. - If 'backgroundColor' is provided, when 'backgroundColor' is light color, default value is '#E5FFFFFF', otherwise is '#E5000000'. - If 'backgroundColor' is not provided, default value is $r('sys.color.font_primary').
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

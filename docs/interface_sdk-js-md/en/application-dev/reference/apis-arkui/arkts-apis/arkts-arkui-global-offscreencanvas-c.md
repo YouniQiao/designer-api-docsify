@@ -4,10 +4,6 @@ OffscreenCanvas provides a Canvas object that can be rendered off-screen. It wor
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class OffscreenCanvas--><!--Device-unnamed-export declare class OffscreenCanvas-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ constructor(width: number, height: number)
 The width of the offScreen Canvas object The height of the offScreen Canvas object
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -50,10 +42,6 @@ getContext(contextId: "2d", options?: CanvasRenderingContext2DSettings): Offscre
 Gets the context object for off-screen drawing.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -86,10 +74,6 @@ Converts the draw contents of the current off-screen draw object to a string in 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -121,10 +105,6 @@ Converts the draw content in the current off-screen draw object to a Bitmap obje
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -151,10 +131,6 @@ The height of the offScreen Canvas object
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -174,10 +150,6 @@ The width of the offScreen Canvas object
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

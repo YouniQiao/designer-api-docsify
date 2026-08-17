@@ -4,11 +4,9 @@ Defines the type of data to return for a subscription to data changes of the dev
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#ORIENTATION)
+**Substitutes:** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#orientation)
 
 <!--Device-unnamed-export interface SubscribeDeviceOrientationOptions--><!--Device-unnamed-export interface SubscribeDeviceOrientationOptions-End-->
 
@@ -52,11 +50,9 @@ Callback invoked when an API call fails.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -75,8 +71,6 @@ Interval at which the callback is invoked to return the device orientation senso
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 
@@ -100,11 +94,9 @@ Callback invoked when the device orientation sensor data changes.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **Model restriction:** This API can be used only in the FA model.
 

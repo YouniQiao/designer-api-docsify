@@ -10,8 +10,6 @@ Defines a numeric variable that indicates the number of timeslice trace tasks.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** traceByValue
@@ -27,7 +25,7 @@ Defines a numeric variable that indicates the number of timeslice trace tasks.
 | name | string | Yes | Name of the numeric variable. |
 | count | number | Yes | Value of the numeric variable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let traceCount = 3;

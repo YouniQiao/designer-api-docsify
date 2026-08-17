@@ -4,10 +4,6 @@ Enumerates keyboard types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputDevice-enum KeyboardType--><!--Device-inputDevice-enum KeyboardType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -21,10 +17,6 @@ NONE = 0
 Keyboard without keys.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardType-NONE = 0--><!--Device-KeyboardType-NONE = 0-End-->
 
@@ -40,10 +32,6 @@ Keyboard with unknown keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardType-UNKNOWN = 1--><!--Device-KeyboardType-UNKNOWN = 1-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -57,10 +45,6 @@ ALPHABETIC_KEYBOARD = 2
 Full keyboard.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardType-ALPHABETIC_KEYBOARD = 2--><!--Device-KeyboardType-ALPHABETIC_KEYBOARD = 2-End-->
 
@@ -76,10 +60,6 @@ Keypad.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardType-DIGITAL_KEYBOARD = 3--><!--Device-KeyboardType-DIGITAL_KEYBOARD = 3-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -94,10 +74,6 @@ Stylus.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardType-HANDWRITING_PEN = 4--><!--Device-KeyboardType-HANDWRITING_PEN = 4-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -111,10 +87,6 @@ REMOTE_CONTROL = 5
 Remote control.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardType-REMOTE_CONTROL = 5--><!--Device-KeyboardType-REMOTE_CONTROL = 5-End-->
 

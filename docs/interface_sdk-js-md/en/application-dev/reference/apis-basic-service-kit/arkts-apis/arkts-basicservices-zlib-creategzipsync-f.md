@@ -16,10 +16,6 @@ Creates this **GZip** object. A **GZip** instance is returned upon a success.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-zlib-function createGZipSync(): GZip--><!--Device-zlib-function createGZipSync(): GZip-End-->
@@ -32,7 +28,7 @@ Creates this **GZip** object. A **GZip** instance is returned upon a success.
 | --- | --- |
 | [GZip](arkts-basicservices-zlib-gzip-i.md) | gzip object instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

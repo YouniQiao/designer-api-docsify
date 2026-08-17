@@ -4,10 +4,6 @@ Provides information about geographic locations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface Location--><!--Device-geoLocationManager-export interface Location-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -30,10 +26,6 @@ Indicates location accuracy, in meters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Location-accuracy: double--><!--Device-Location-accuracy: double-End-->
@@ -51,10 +43,6 @@ Indicates the amount of additional descriptive information.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Indicates additional information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Location-additions?: Array<string>--><!--Device-Location-additions?: Array<string>-End-->
@@ -95,10 +79,6 @@ Indicates additional information map.
 **Type:** Map&lt;string, string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -118,10 +98,6 @@ Indicates location altitude, in meters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Location-altitude: double--><!--Device-Location-altitude: double-End-->
@@ -139,10 +115,6 @@ Indicates vertical position accuracy in meters.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -162,10 +134,6 @@ Indicates direction information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Location-direction: double--><!--Device-Location-direction: double-End-->
@@ -183,10 +151,6 @@ Indicates direction accuracy in degrees.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -206,10 +170,6 @@ Indicates latitude information. A positive value indicates north latitude, and a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Location-latitude: double--><!--Device-Location-latitude: double-End-->
@@ -227,10 +187,6 @@ Indicates Longitude information. A positive value indicates east longitude , and
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -250,10 +206,6 @@ Indicates the poi information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Location-poi?: PoiInfo--><!--Device-Location-poi?: PoiInfo-End-->
@@ -271,10 +223,6 @@ Indicates the source of the location.
 **Type:** [LocationSourceType](arkts-location-geolocationmanager-locationsourcetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -294,10 +242,6 @@ Indicates speed, in m/s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Location-speed: double--><!--Device-Location-speed: double-End-->
@@ -315,10 +259,6 @@ Indicates speed accuracy in meter per seconds.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -338,10 +278,6 @@ Indicates location timestamp since boot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Location-timeSinceBoot: long--><!--Device-Location-timeSinceBoot: long-End-->
@@ -360,10 +296,6 @@ Indicates location timestamp in the UTC format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Location-timeStamp: long--><!--Device-Location-timeStamp: long-End-->
@@ -381,10 +313,6 @@ Time uncertainty Of timeSinceBoot in nanosecond.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

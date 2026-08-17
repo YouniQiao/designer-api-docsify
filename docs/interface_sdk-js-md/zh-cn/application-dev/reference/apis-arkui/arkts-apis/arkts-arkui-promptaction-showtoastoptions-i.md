@@ -4,10 +4,6 @@ Toast的选项。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-promptAction-interface ShowToastOptions--><!--Device-promptAction-interface ShowToastOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ alignment?: Alignment
 **类型：** Alignment
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,10 +40,6 @@ Toast的背板模糊材质。 <br/>默认值：从API版本26.0.0开始，为Blu
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -71,10 +59,6 @@ Toast的背板颜色。 <br/>默认值：Color.Transparent <br/>**说明：** <b
 **类型：** ResourceColor
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,10 +80,6 @@ bottom?: string | number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
@@ -117,10 +97,6 @@ duration?: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -141,10 +117,6 @@ enableHoverMode?: boolean
 **默认值：** false
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -168,10 +140,6 @@ hoverModeArea?: HoverModeAreaType
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -192,10 +160,6 @@ message: string | Resource
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ShowToastOptions-message: string | Resource--><!--Device-ShowToastOptions-message: string | Resource-End-->
@@ -213,10 +177,6 @@ offset?: Offset
 **类型：** Offset
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -238,10 +198,6 @@ Toast的背板阴影。 <br/>默认值：ShadowStyle.OUTER_DEFAULT_MD
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -258,15 +214,11 @@ showMode?: ToastShowMode
 
 设置Toast层级。 <br>默认值：ToastShowMode.DEFAULT，默认显示在应用内。
 
-**类型：** [ToastShowMode](../../apis-na/arkts-apis/arkts-na-promptaction-toastshowmode-e.md)
+**类型：** [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e.md)
 
 **默认值：** ToastShowMode.DEFAULT
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -282,15 +234,11 @@ showMode?: ToastShowMode
 systemMaterial?: SystemUiMaterial
 ```
 
-设置组件的系统材质。 <br/>默认值：如果主动设置了backgroundBlurStyle或backgroundColor接口，默认值是无系统材质效果，否则默认值 是style为ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial)对象。 设置undefined时与默认值保持一致。 <br/>**说明：** &lt;br /&gt;不同系统材质对应不同的属性影响效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 边框颜色[borderColor](../arkui-ts/ts-universal-attributes-border.md#bordercolor)、 边框宽度[borderWidth](../arkui-ts/ts-universal-attributes-border.md#borderwidth)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
+设置组件的系统材质。 <br/>默认值：如果主动设置了backgroundBlurStyle或backgroundColor接口，默认值是无系统材质效果，否则默认值 是style为ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivematerial-c.md#immersivematerial)对象。 设置undefined时与默认值保持一致。 <br/>**说明：** &lt;br /&gt;不同系统材质对应不同的属性影响效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 边框颜色[borderColor](../arkui-ts/ts-universal-attributes-border.md#bordercolor)、 边框宽度[borderWidth](../arkui-ts/ts-universal-attributes-border.md#borderwidth)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
 
 **类型：** SystemUiMaterial
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -311,10 +259,6 @@ Toast的文本颜色。<br/>默认值：Color.Black
 **类型：** ResourceColor
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

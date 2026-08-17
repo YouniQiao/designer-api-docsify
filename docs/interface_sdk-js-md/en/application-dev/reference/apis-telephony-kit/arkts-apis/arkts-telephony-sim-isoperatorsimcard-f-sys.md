@@ -16,10 +16,6 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-function isOperatorSimCard(slotId: int, operator: OperatorSimCard): boolean--><!--Device-sim-function isOperatorSimCard(slotId: int, operator: OperatorSimCard): boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -51,7 +47,7 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

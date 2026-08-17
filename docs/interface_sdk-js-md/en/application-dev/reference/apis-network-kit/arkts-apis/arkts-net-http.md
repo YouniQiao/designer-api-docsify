@@ -4,10 +4,6 @@ Provides http related APIs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace http--><!--Device-unnamed-declare namespace http-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -24,8 +20,8 @@ import { http } from 'http';
 
 | Name | Description |
 | --- | --- |
-| [createHttp](arkts-network-http-createhttp-f.md#createHttp) | Creates an HTTP request task. |
-| [createHttpResponseCache](arkts-network-http-createhttpresponsecache-f.md#createHttpResponseCache) | Creates a default {@code HttpResponseCache} object to store the responses of HTTP access requests. |
+| [createHttp](arkts-network-http-createhttp-f.md#createhttp) | Creates an HTTP request task. |
+| [createHttpResponseCache](arkts-network-http-createhttpresponsecache-f.md#createhttpresponsecache) | Creates a default {@code HttpResponseCache} object to store the responses of HTTP access requests. |
 
 ### Classes
 
@@ -53,7 +49,7 @@ import { http } from 'http';
 | [PerformanceTiming](arkts-network-http-performancetiming-i.md) | Counting the time taken of various stages of HTTP request. |
 | [ServerAuthentication](arkts-network-http-serverauthentication-i.md) | HTTP server authentication. |
 | [TlsConfig](arkts-network-http-tlsconfig-i.md) | TLS config. |
-| [ValidationContext](arkts-network-http-validationcontext-i.md) | The validation context of [ValidationCallback](arkts-network-http-validationcallback-t.md#ValidationCallback) |
+| [ValidationContext](arkts-network-http-validationcontext-i.md) | The validation context of [ValidationCallback](arkts-network-http-validationcallback-t.md#validationcallback) |
 
 ### Enums
 
@@ -77,8 +73,8 @@ import { http } from 'http';
 | [CipherSuite](arkts-network-http-ciphersuite-t.md) | Include all cipher suite. |
 | [HttpProxy](arkts-network-http-httpproxy-t.md) | Http Proxy Configuration Information. |
 | [PathPreference](arkts-network-http-pathpreference-t.md) | HTTP request path preference. This is only a suggestion of the caller, and the system decides which path to use. |
-| [QueryParamObject](arkts-network-http-queryparamobject-t.md) | A key-value object used to construct URL query parameters automatically. Each property name is treated as a query parameter key. Each property value may be either: - a single [QueryParamValue](arkts-network-http-queryparamvalue-t.md#QueryParamValue), or - an array of [QueryParamValue](arkts-network-http-queryparamvalue-t.md#QueryParamValue), which is expanded into repeated parameters with the same key. Serialization rules: - Keys and values are URL-encoded by the system. - A single value is serialized as one `key=value` pair. - An array value is serialized as multiple pairs using the same key. For example, `{ tag: ['a', 'b'] }` is serialized as `tag=a&tag=b`. - For array values, `undefined` and `null` elements are serialized as empty values without `=`. For example, `{ a: [1, "", undefined, null] }` is serialized as `a=1&a=&a&a`. Order semantics: - This type represents query parameters as an object, not as an ordered list of key-value pairs. - Multiple values for the same key are supported through arrays. - However, callers must not rely on preserving an exact original pair order such as `a=1&b=2&a=3`. If strict ordering or repeated-key ordering is required, use a pre-encoded query string instead of [QueryParamObject](arkts-network-http-queryparamobject-t.md#QueryParamObject). Usage notes: - Provide raw, unencoded keys and values. Do not pre-encode them. - If you need full control over the final query string format, use the `string` form of `queryParams` instead. |
-| [QueryParamValue](arkts-network-http-queryparamvalue-t.md) | A single value that can be used as a query parameter. Serialization rules when used in [QueryParamObject](arkts-network-http-queryparamobject-t.md#QueryParamObject): - textual values: serialized as-is before URL encoding. - numeric values: converted to its string representation before URL encoding. - logical values: converted to "true" or "false" before URL encoding. - null or undefined: serialized as the key without `=` or a value (for example, `{ a: null }` -> `a`). |
+| [QueryParamObject](arkts-network-http-queryparamobject-t.md) | A key-value object used to construct URL query parameters automatically. Each property name is treated as a query parameter key. Each property value may be either: - a single [QueryParamValue](arkts-network-http-queryparamvalue-t.md#queryparamvalue), or - an array of [QueryParamValue](arkts-network-http-queryparamvalue-t.md#queryparamvalue), which is expanded into repeated parameters with the same key. Serialization rules: - Keys and values are URL-encoded by the system. - A single value is serialized as one `key=value` pair. - An array value is serialized as multiple pairs using the same key. For example, `{ tag: ['a', 'b'] }` is serialized as `tag=a&tag=b`. - For array values, `undefined` and `null` elements are serialized as empty values without `=`. For example, `{ a: [1, "", undefined, null] }` is serialized as `a=1&a=&a&a`. Order semantics: - This type represents query parameters as an object, not as an ordered list of key-value pairs. - Multiple values for the same key are supported through arrays. - However, callers must not rely on preserving an exact original pair order such as `a=1&b=2&a=3`. If strict ordering or repeated-key ordering is required, use a pre-encoded query string instead of [QueryParamObject](arkts-network-http-queryparamobject-t.md#queryparamobject). Usage notes: - Provide raw, unencoded keys and values. Do not pre-encode them. - If you need full control over the final query string format, use the `string` form of `queryParams` instead. |
+| [QueryParamValue](arkts-network-http-queryparamvalue-t.md) | A single value that can be used as a query parameter. Serialization rules when used in [QueryParamObject](arkts-network-http-queryparamobject-t.md#queryparamobject): - textual values: serialized as-is before URL encoding. - numeric values: converted to its string representation before URL encoding. - logical values: converted to "true" or "false" before URL encoding. - null or undefined: serialized as the key without `=` or a value (for example, `{ a: null }` -> `a`). |
 | [RemoteValidation](arkts-network-http-remotevalidation-t.md) | Remote Validation Type. |
 | [Socks5Proxy](arkts-network-http-socks5proxy-t.md) | Socks5 Proxy Configuration Information. |
 | [SslType](arkts-network-http-ssltype-t.md) | The secure communication protocol. |

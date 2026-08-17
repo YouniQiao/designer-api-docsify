@@ -16,11 +16,9 @@ Obtains the system configuration.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSystemConfig](arkts-arkts-process-processmanager-c.md#getSystemConfig)
+**Substitutes:** [getSystemConfig](arkts-arkts-process-processmanager-c.md#getsystemconfig)
 
 <!--Device-process-function getSystemConfig(name: number): number--><!--Device-process-function getSystemConfig(name: number): number-End-->
 
@@ -38,7 +36,7 @@ Obtains the system configuration.
 | --- | --- |
 | number | System configuration obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let _SC_ARG_MAX = 0;

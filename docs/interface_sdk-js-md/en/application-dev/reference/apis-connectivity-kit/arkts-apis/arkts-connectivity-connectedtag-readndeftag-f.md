@@ -16,8 +16,6 @@ Reads the NDEF Data.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md#read)
@@ -34,7 +32,7 @@ Reads the NDEF Data.
 | --- | --- |
 | Promise&lt;string&gt; | Returns the NDEF Data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connectedTag } from '@kit.ConnectivityKit';
@@ -58,8 +56,6 @@ Reads the NDEF Data.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md#read)
@@ -76,7 +72,7 @@ Reads the NDEF Data.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connectedTag } from '@kit.ConnectivityKit';

@@ -4,10 +4,6 @@ Describes the launch parameters, which mainly include the ability launch reasons
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AbilityConstant-export interface LaunchParam--><!--Device-AbilityConstant-export interface LaunchParam-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -30,10 +26,6 @@ Key runtime information for the last exit of the ability (including process ID, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -53,10 +45,6 @@ Detailed message that describes the reason for the last exit of the ability.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,10 +66,6 @@ An enumerated value indicating the reason for the last exit of the ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -96,15 +80,11 @@ An enumerated value indicating the reason for the last exit of the ability.
 launchReason: LaunchReason
 ```
 
-An enumerated value indicating the reason for ability launch (for example, recovery from a fault, intent invocation, or atomic service sharing). For details, see [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md#LaunchReason).
+An enumerated value indicating the reason for ability launch (for example, recovery from a fault, intent invocation, or atomic service sharing). For details, see [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md#launchreason).
 
 **Type:** LaunchReason
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,10 +106,6 @@ Detailed message that describes the reason for the ability launch.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -150,10 +126,6 @@ UTC timestamp when the UIAbility starts, in milliseconds. This API can be used i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -173,10 +145,6 @@ System uptime (the time elapsed since the system booted up) when the UIAbility s
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

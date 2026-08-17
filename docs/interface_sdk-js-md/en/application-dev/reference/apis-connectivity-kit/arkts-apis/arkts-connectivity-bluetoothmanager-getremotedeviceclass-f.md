@@ -16,11 +16,9 @@ Obtains the class of a peer Bluetooth device. On API 10 and above, the permissio
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getRemoteDeviceClass](arkts-connectivity-connection-getremotedeviceclass-f.md#getRemoteDeviceClass)
+**Substitutes:** [getRemoteDeviceClass](arkts-connectivity-connection-getremotedeviceclass-f.md#getremotedeviceclass)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -53,7 +51,7 @@ Obtains the class of a peer Bluetooth device. On API 10 and above, the permissio
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

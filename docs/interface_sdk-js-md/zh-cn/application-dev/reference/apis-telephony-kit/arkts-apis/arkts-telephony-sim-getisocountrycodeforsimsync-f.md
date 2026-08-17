@@ -10,10 +10,6 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sim-function getISOCountryCodeForSimSync(slotId: int): string--><!--Device-sim-function getISOCountryCodeForSimSync(slotId: int): string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
@@ -30,7 +26,7 @@ Obtains the ISO country code of the SIM card in a specified slot.
 | --- | --- |
 | string | Returns the country code defined in ISO 3166-2; returns an empty string if no SIM card is inserted. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

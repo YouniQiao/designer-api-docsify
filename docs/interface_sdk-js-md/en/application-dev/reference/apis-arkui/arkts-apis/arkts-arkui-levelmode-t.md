@@ -1,4 +1,4 @@
-# LevelMode
+# LevelMode(ActionSheet)
 
 ```TypeScript
 declare type LevelMode = import('../api/@ohos.promptAction').LevelMode
@@ -7,10 +7,6 @@ declare type LevelMode = import('../api/@ohos.promptAction').LevelMode
 Defines the display level mode for the dialog box.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

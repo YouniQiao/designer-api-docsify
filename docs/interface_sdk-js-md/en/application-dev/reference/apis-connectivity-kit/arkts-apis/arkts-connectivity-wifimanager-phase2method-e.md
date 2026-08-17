@@ -4,10 +4,6 @@ Wi-Fi phase 2 method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-enum Phase2Method--><!--Device-wifiManager-enum Phase2Method-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -21,10 +17,6 @@ PHASE2_NONE
 Phase2 NONE
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_NONE--><!--Device-Phase2Method-PHASE2_NONE-End-->
 
@@ -40,10 +32,6 @@ Phase2 PAP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Phase2Method-PHASE2_PAP--><!--Device-Phase2Method-PHASE2_PAP-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -57,10 +45,6 @@ PHASE2_MSCHAP
 Phase2 MSCHAP
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_MSCHAP--><!--Device-Phase2Method-PHASE2_MSCHAP-End-->
 
@@ -76,10 +60,6 @@ Phase2 MSCHAPV2
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Phase2Method-PHASE2_MSCHAPV2--><!--Device-Phase2Method-PHASE2_MSCHAPV2-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -93,10 +73,6 @@ PHASE2_GTC
 Phase2 GTC
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_GTC--><!--Device-Phase2Method-PHASE2_GTC-End-->
 
@@ -112,10 +88,6 @@ Phase2 SIM
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Phase2Method-PHASE2_SIM--><!--Device-Phase2Method-PHASE2_SIM-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -130,10 +102,6 @@ Phase2 AKA
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Phase2Method-PHASE2_AKA--><!--Device-Phase2Method-PHASE2_AKA-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -147,10 +115,6 @@ PHASE2_AKA_PRIME
 Phase2 AKA+
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_AKA_PRIME--><!--Device-Phase2Method-PHASE2_AKA_PRIME-End-->
 

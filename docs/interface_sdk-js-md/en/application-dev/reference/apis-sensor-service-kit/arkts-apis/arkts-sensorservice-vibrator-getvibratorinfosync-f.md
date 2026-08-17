@@ -16,10 +16,6 @@ Queries the vibrator list of one or all devices.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>--><!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -36,7 +32,7 @@ Queries the vibrator list of one or all devices.
 | --- | --- |
 | Array&lt;[VibratorInfo](arkts-sensorservice-vibrator-vibratorinfo-i.md)&gt; | Vibrator information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

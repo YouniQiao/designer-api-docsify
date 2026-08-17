@@ -4,10 +4,6 @@ Represents a class for defining a uniform data type. It provides properties and 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uniformTypeDescriptor-class TypeDescriptor--><!--Device-uniformTypeDescriptor-class TypeDescriptor-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -28,10 +24,6 @@ Checks whether this data type belongs to the specified uniform data type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TypeDescriptor-belongsTo(type: string): boolean--><!--Device-TypeDescriptor-belongsTo(type: string): boolean-End-->
@@ -42,7 +34,7 @@ Checks whether this data type belongs to the specified uniform data type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType). |
+| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
 
 **Return value:**
 
@@ -56,7 +48,7 @@ Checks whether this data type belongs to the specified uniform data type.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
@@ -80,13 +72,9 @@ try{
 equals(typeDescriptor: TypeDescriptor): boolean
 ```
 
-Checks whether this data type is the same as the specified uniform data type. That is, compares **typeId**s of two [TypeDescriptor](#TypeDescriptor) objects.
+Checks whether this data type is the same as the specified uniform data type. That is, compares **typeId**s of two [TypeDescriptor](#typedescriptor) objects.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,7 +100,7 @@ Checks whether this data type is the same as the specified uniform data type. Th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
@@ -140,10 +128,6 @@ Checks whether this data type is a higher-level type of the specified uniform da
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TypeDescriptor-isHigherLevelType(type: string): boolean--><!--Device-TypeDescriptor-isHigherLevelType(type: string): boolean-End-->
@@ -154,7 +138,7 @@ Checks whether this data type is a higher-level type of the specified uniform da
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType). |
+| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
 
 **Return value:**
 
@@ -168,7 +152,7 @@ Checks whether this data type is a higher-level type of the specified uniform da
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
@@ -196,10 +180,6 @@ Checks whether this data type is a lower-level type of the specified uniform dat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TypeDescriptor-isLowerLevelType(type: string): boolean--><!--Device-TypeDescriptor-isLowerLevelType(type: string): boolean-End-->
@@ -210,7 +190,7 @@ Checks whether this data type is a lower-level type of the specified uniform dat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType). |
+| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
 
 **Return value:**
 
@@ -224,7 +204,7 @@ Checks whether this data type is a lower-level type of the specified uniform dat
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';

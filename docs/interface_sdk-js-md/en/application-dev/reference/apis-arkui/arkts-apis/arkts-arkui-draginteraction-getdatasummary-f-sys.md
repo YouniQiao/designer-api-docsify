@@ -16,10 +16,6 @@ Obtains the data summary of all dragged objects.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dragInteraction-function getDataSummary(): Array<Summary>--><!--Device-dragInteraction-function getDataSummary(): Array<Summary>-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
@@ -38,7 +34,7 @@ Obtains the data summary of all dragged objects.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let summary: Array<dragInteraction.Summary> = dragInteraction.getDataSummary();

@@ -16,10 +16,6 @@ Delete a firewall rule by userId and ruleId.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
 
 <!--Device-netFirewall-function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>--><!--Device-netFirewall-function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>-End-->
@@ -51,7 +47,7 @@ Delete a firewall rule by userId and ruleId.
 | [29400006](../errorcode-net-netfirewall.md#29400006-specified-rule-does-not-exist) | The specified rule does not exist. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { netFirewall } from '@kit.NetworkKit';

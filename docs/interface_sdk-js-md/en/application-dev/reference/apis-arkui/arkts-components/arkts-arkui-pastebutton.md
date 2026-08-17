@@ -2,7 +2,7 @@
 
 **PasteButton** is a security component that provides paste functionality. When users tap this component, the application temporarily gains pasteboard read permissions. <br>**Description**</br>
 
-## Key Enums <li>[PasteIconStyle](arkts-arkui-pasteiconstyle-e.md#PasteIconStyle): Enumeration of icon styles for the paste button. Specifies the icon style displayed.</li> <li>[PasteDescription](arkts-arkui-pastedescription-e.md#PasteDescription): Enumeration of text descriptions for the paste button. Specifies the text description displayed.</li> <li>[PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md#PasteButtonOnClickResult): Enumeration of click results for the paste button. Indicates whether authorization succeeds after a click.</li> ###### Key APIs <li>[PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md#PasteButtonOptions): Configuration object for the paste button. Defines properties including icon, text and button type.</li> <li>[PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md#PasteButtonCallback): Callback for paste button clicks. Returns click events, authorization results and error messages.</li> ###### Child Components <li>Not supported.</li></ul>
+## Key Enums <li>[PasteIconStyle](arkts-arkui-pasteiconstyle-e.md#pasteiconstyle): Enumeration of icon styles for the paste button. Specifies the icon style displayed.</li> <li>[PasteDescription](arkts-arkui-pastedescription-e.md#pastedescription): Enumeration of text descriptions for the paste button. Specifies the text description displayed.</li> <li>[PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md#pastebuttononclickresult): Enumeration of click results for the paste button. Indicates whether authorization succeeds after a click.</li> ###### Key APIs <li>[PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md#pastebuttonoptions): Configuration object for the paste button. Defines properties including icon, text and button type.</li> <li>[PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md#pastebuttoncallback): Callback for paste button clicks. Returns click events, authorization results and error messages.</li> ###### Child Components <li>Not supported.</li></ul>
 
 ## PasteButton
 
@@ -13,10 +13,6 @@ PasteButton()
 Creates a **PasteButton** component with an icon, text, and background by default. After creation, the system triggers an authorization check when the button is tapped. Upon successful authorization, the application gains permission to read the current clipboard content. <br>**Description**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;You may want to learn the [restrictions on security component styles](../../../security/AccessToken/security-component-overview.md#constraints) to avoid authorization failures caused by incompliant styles.&lt;/li&gt;&lt;/ul&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,10 +31,6 @@ PasteButton(options: PasteButtonOptions)
 Creates a paste button with the specified icon, text and button type. After creation, the system triggers an authorization check when the button is tapped. Upon successful authorization, the app gains temporary permission to read the clipboard. <br>**Description**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;You may want to learn the [restrictions on security component styles](../../../security/AccessToken/security-component-overview.md#constraints) to avoid authorization failures caused by incompliant styles.&lt;/li&gt;&lt;/ul&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

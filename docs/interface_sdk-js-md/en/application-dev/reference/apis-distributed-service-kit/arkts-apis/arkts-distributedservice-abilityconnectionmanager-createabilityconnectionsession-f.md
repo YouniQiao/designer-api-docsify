@@ -17,10 +17,6 @@ Creates a collaboration session between applications.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET and ohos.permission.GET_NETWORK_INFO and ohos.permission.SET_NETWORK_INFO and ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -52,7 +48,7 @@ Creates a collaboration session between applications.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 On device A, an application calls createAbilityConnectionSession() to create a collaboration session and return the session ID.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** AVRecorderConfig
@@ -25,8 +23,6 @@ audioEncodeBitRate?: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -48,8 +44,6 @@ audioEncoder?: AudioEncoder
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** audioEncoderMime
@@ -69,8 +63,6 @@ audioEncoderMime?: CodecMimeType
 **类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -92,8 +84,6 @@ audioSampleRate?: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** audioSampleRate
@@ -113,8 +103,6 @@ fileFormat?: ContainerFormatType
 **类型：** [ContainerFormatType](arkts-media-multimedia-media-containerformattype-e.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -136,8 +124,6 @@ format?: AudioOutputFormat
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** fileFormat
@@ -157,8 +143,6 @@ location?: Location
 **类型：** [Location](arkts-media-multimedia-media-location-i.md)
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -180,8 +164,6 @@ numberOfChannels?: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** audioChannels
@@ -201,8 +183,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 

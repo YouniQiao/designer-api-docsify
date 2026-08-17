@@ -16,10 +16,6 @@ Checks whether geofencing is enabled. This API uses a promise to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-function isGeofenceEnabled(): Promise<boolean>--><!--Device-notificationManager-function isGeofenceEnabled(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -39,7 +35,7 @@ Checks whether geofencing is enabled. This API uses a promise to return the resu
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

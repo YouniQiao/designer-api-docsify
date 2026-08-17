@@ -12,13 +12,9 @@ import { systemTimer } from 'systemTimer';
 function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void
 ```
 
-Creates a timer. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)). Otherwise > , memory leakage occurs.
+Creates a timer. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-system-api). Otherwise > , memory leakage occurs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void--><!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void-End-->
 
@@ -40,7 +36,7 @@ Creates a timer. This API uses an asynchronous callback to return the result. > 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,13 +66,9 @@ try {
 function createTimer(options: TimerOptions): Promise<long>
 ```
 
-Creates a timer. This API uses a promise to return the timer ID. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)). Otherwise > , memory leakage occurs.
+Creates a timer. This API uses a promise to return the timer ID. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-system-api). Otherwise > , memory leakage occurs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>--><!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>-End-->
 
@@ -103,7 +95,7 @@ Creates a timer. This API uses a promise to return the timer ID. > **NOTE：**> 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

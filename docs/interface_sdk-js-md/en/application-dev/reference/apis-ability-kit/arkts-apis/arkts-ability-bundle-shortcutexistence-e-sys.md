@@ -4,8 +4,6 @@ Result returned when querying whether a shortcut exists.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 <!--Device-bundle-export enum ShortcutExistence--><!--Device-bundle-export enum ShortcutExistence-End-->
@@ -23,8 +21,6 @@ SHORTCUT_EXISTENCE_EXISTS = 0
 Exists.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ Does not exist.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 <!--Device-ShortcutExistence-SHORTCUT_EXISTENCE_NOT_EXISTS = 1--><!--Device-ShortcutExistence-SHORTCUT_EXISTENCE_NOT_EXISTS = 1-End-->
@@ -63,8 +57,6 @@ SHORTCUT_EXISTENCE_UNKNOW = 2
 Unknown.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

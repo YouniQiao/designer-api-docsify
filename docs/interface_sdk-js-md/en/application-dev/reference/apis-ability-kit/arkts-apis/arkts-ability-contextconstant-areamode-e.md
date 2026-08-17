@@ -4,10 +4,6 @@ Enumerates the file encryption levels, which are used to ensure data security fo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-contextConstant-export enum AreaMode--><!--Device-contextConstant-export enum AreaMode-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -21,10 +17,6 @@ EL1 = 0
 Device-level encryption. Directories with this encryption level are accessible after the device is powered on.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ User-level encryption. Directories with this encryption level are accessible onl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -65,10 +53,6 @@ EL3 = 2
 User-level encryption. The file permissions vary according to their scenarios. - An open file is always readable and writable regardless of whether the screen is locked. - When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such a file can be opened, read, and written. - When the screen is locked, a file can be created and then opened and written but not read. When the screen is unlocked, a file can be created and then opened, read, and written.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,10 +72,6 @@ User-level encryption. The file permissions vary according to their scenarios. -
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -106,13 +86,9 @@ User-level encryption. The file permissions vary according to their scenarios. -
 EL5 = 4
 ```
 
-Application-level encryption. The file permissions vary according to their scenarios. - An open file is always readable and writable regardless of whether the screen is locked. When the screen is locked, a closed file can be opened, read, and written only if the reserved key is obtained by calling [Access](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireAccess). When the screen is unlocked, such a file can be opened, read, and written. A file can be created and then opened, read, and written regardless of whether the screen is locked.
+Application-level encryption. The file permissions vary according to their scenarios. - An open file is always readable and writable regardless of whether the screen is locked. When the screen is locked, a closed file can be opened, read, and written only if the reserved key is obtained by calling [Access](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess). When the screen is unlocked, such a file can be opened, read, and written. A file can be created and then opened, read, and written regardless of whether the screen is locked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

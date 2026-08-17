@@ -4,10 +4,6 @@ Represents data of the HTML type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uniformDataStruct-interface HTML--><!--Device-uniformDataStruct-interface HTML-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -30,10 +26,6 @@ Object of the dictionary type used to describe the attributes of the HTML conten
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HTML-details?: Record<string, string>--><!--Device-HTML-details?: Record<string, string>-End-->
@@ -51,10 +43,6 @@ Content in HTML format.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Plaintext without HTML tags. This parameter is optional. By default, it is an em
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HTML-plainContent?: string--><!--Device-HTML-plainContent?: string-End-->
@@ -90,15 +74,11 @@ Plaintext without HTML tags. This parameter is optional. By default, it is an em
 readonly uniformDataType: 'general.html'
 ```
 
-Uniform data type, which has a fixed value of **general.html**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
+Uniform data type, which has a fixed value of **general.html**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype).
 
 **Type:** 'general.html'
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,10 +97,6 @@ Defines URI authorization policies for drag intention.
 **Type:** Array&lt;int&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

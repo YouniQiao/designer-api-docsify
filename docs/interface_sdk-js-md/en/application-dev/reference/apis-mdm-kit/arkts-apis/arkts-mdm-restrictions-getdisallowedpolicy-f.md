@@ -16,11 +16,9 @@ Queries whether a feature is disabled.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedPolicy](#getDisallowedPolicy)(admin: Want | null, feature: FeatureForDevice)
+**Substitutes:** [getDisallowedPolicy](#getdisallowedpolicy)(admin: Want | null, feature: FeatureForDevice)
 
 **Required permissions:** 
 - API version 20+: ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS or ohos.permission.ENTERPRISE_MANAGE_NETWORK
@@ -38,7 +36,7 @@ Queries whether a feature is disabled.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application.<br>**Since:** 20 |
-| feature | string | Yes | For features that can be queried, see Table 2. <br> **Note:** Since API version 15, applications granted with the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and activated as the [BDA](../../../mdm/mdm-kit-term.md#byod-device-admin-bdabyod) via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startAdminProvision) can use this API to obtain the status of the following features: bluetooth, hdc, microphone, usb, wifi, tethering, and camera. Since API version 26.0.0, this API can also be used to obtain the status of the mtpServer feature. |
+| feature | string | Yes | For features that can be queried, see Table 2. <br> **Note:** Since API version 15, applications granted with the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and activated as the [BDA](../../../mdm/mdm-kit-term.md#byod-device-admin-bdabyod) via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision) can use this API to obtain the status of the following features: bluetooth, hdc, microphone, usb, wifi, tethering, and camera. Since API version 26.0.0, this API can also be used to obtain the status of the mtpServer feature. |
 
 **Return value:**
 
@@ -54,7 +52,7 @@ Queries whether a feature is disabled.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { restrictions } from '@kit.MDMKit';
@@ -85,10 +83,6 @@ function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boo
 Queries whether a specified device feature is disabled.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 

@@ -4,10 +4,6 @@ Provides APIs for handling data transformations related to state management.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class UIUtils--><!--Device-unnamed-export declare class UIUtils-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -50,10 +46,6 @@ Dynamically adds a listener to the state variable of state management V2. For de
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -69,7 +61,7 @@ Dynamically adds a listener to the state variable of state management V2. For de
 | target | object | Yes | Target object. Only [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2) and [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) instances are supported. <br>If an unsupported type is provided, a runtime error is thrown. |
 | path | string \| string[] | Yes | Name path of the variable to be listened for. You can specify a path or pass a string array to specify multiple variable paths to be listened for at a time. <br>Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | Listener function registered with the corresponding state variable. That is, when the state variable corresponding to the path changes, a specific function is called. <br>If an unsupported type is provided, a runtime error is thrown. |
-| options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | No | Configuration item of the listener. For details, see [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md#MonitorOptions). By default, the asynchronous callback is used. |
+| options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | No | Configuration item of the listener. For details, see [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md#monitoroptions). By default, the asynchronous callback is used. |
 
 **Error codes:**
 
@@ -88,10 +80,6 @@ static applySync<T>(task: TaskCallback): T
 Synchronously updates a specified state variable. This API receives a closure function and updates only the internal modifications, including the updates of [@Computed](../../../ui/state-management/arkts-new-computed.md) and [@Monitor](../../../ui/state-management/arkts-new-monitor.md) decorators, and re-rendering of the UI nodes. For details, see [applySync/flushUpdates/flushUIUpdates APIs: Synchronous Update](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,7 +107,7 @@ Synchronously updates a specified state variable. This API receives a closure fu
 | --- | --- |
 | [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -175,10 +163,6 @@ Determines whether a data object can be observed and returns the observation res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -199,7 +183,7 @@ Determines whether a data object can be observed and returns the observation res
 | --- | --- |
 | [ObservedResult](arkts-arkui-arkui-statemanagement-observedresult-i.md) | Returns a result about whether the object can be observed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -316,13 +300,9 @@ export struct School {
 static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void
 ```
 
-Deletes the listener added to the state variable of the state management V2 by calling the [addMonitor](#addMonitor) API. For details, see [addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
+Deletes the listener added to the state variable of the state management V2 by calling the [addMonitor](#addmonitor) API. For details, see [addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -358,10 +338,6 @@ Enables V1 state variables to be observable in @ComponentV2. This API is primari
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -382,7 +358,7 @@ Enables V1 state variables to be observable in @ComponentV2. This API is primari
 | --- | --- |
 | T | If the data source is V1 state data, returns data that can be observed in |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -433,10 +409,6 @@ Processes all state variable modifications before this API call and synchronizes
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -452,7 +424,7 @@ Processes all state variable modifications before this API call and synchronizes
 | [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
 | [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -507,10 +479,6 @@ Synchronously updates all state variable modifications before this API call, inc
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -526,7 +494,7 @@ Synchronously updates all state variable modifications before this API call, inc
 | [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
 | [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -577,13 +545,9 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md#CustomComponentContext) of the given @Component(V1) or @ComponentV2. **CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool, see [Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
+Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md#customcomponentcontext) of the given @Component(V1) or @ComponentV2. **CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool, see [Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -615,10 +579,6 @@ Obtains the lifecycle of a custom component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -639,7 +599,7 @@ Obtains the lifecycle of a custom component.
 | --- | --- |
 | [CustomComponentLifecycle](arkts-arkui-arkui-statemanagement-customcomponentlifecycle-i.md) | Lifecycle instance of a custom component obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIUtils, ComponentAppear } from '@kit.ArkUI';
@@ -672,10 +632,6 @@ Obtains the original object from a proxy object wrapped by the state management 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -696,7 +652,7 @@ Obtains the original object from a proxy object wrapped by the state management 
 | --- | --- |
 | T | Original object of the source after the proxy added by the state management framework is removed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -732,10 +688,6 @@ Creates a read-only one-way data binding instance, which is used to construct th
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -756,7 +708,7 @@ Creates a read-only one-way data binding instance, which is used to construct th
 | --- | --- |
 | [Binding](arkts-arkui-arkui-statemanagement-binding-c.md)&lt;T&gt; | Returns a read-only one-way data binding instance with a **value** attribute, which is used to obtain the currently bound value. The value can only be read and cannot be directly modified. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Binding, MutableBinding, UIUtils } from '@kit.ArkUI';
@@ -810,10 +762,6 @@ Creates a mutable two-way data binding instance, which is used to construct the 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -835,7 +783,7 @@ Creates a mutable two-way data binding instance, which is used to construct the 
 | --- | --- |
 | [MutableBinding](arkts-arkui-arkui-statemanagement-mutablebinding-c.md)&lt;T&gt; | Returns a two-way data binding instance with a **value** attribute, which allows you to read and modify data. If the value is set, the system checks whether the value type matches the generic type **T**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Binding, MutableBinding, UIUtils } from '@kit.ArkUI';
@@ -893,10 +841,6 @@ Converts ordinary unobservable data into observable data. For details, see [make
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -917,7 +861,7 @@ Converts ordinary unobservable data into observable data. For details, see [make
 | --- | --- |
 | T | Observable data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -953,13 +897,9 @@ struct Index {
 static makeV1Observed<T extends object>(source: T): T
 ```
 
-Wraps an unobservable object into an object that is observable by V1 state management. This API is equivalent to @ Observed and can be used to initialize @ObjectLink. This API can be used together with [enableV2Compatibility](#enableV2Compatibility) in scenarios where state management V1 and V2 are used together. For details, see [Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
+Wraps an unobservable object into an object that is observable by V1 state management. This API is equivalent to @ Observed and can be used to initialize @ObjectLink. This API can be used together with [enableV2Compatibility](#enablev2compatibility) in scenarios where state management V1 and V2 are used together. For details, see [Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -973,7 +913,7 @@ Wraps an unobservable object into an object that is observable by V1 state manag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. <br>[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md#@arkts.collections) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. <br>**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeObserved) are not supported. |
+| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. <br>@arkts.collections (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. <br>**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeobserved) are not supported. |
 
 **Return value:**
 
@@ -981,7 +921,7 @@ Wraps an unobservable object into an object that is observable by V1 state manag
 | --- | --- |
 | T | For supported input parameter types, returns data observable by V1 state management. For unsupported input parameter types, returns the data source object itself. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';

@@ -1,14 +1,10 @@
 # LinearGradientStyle
 
-Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle).
+Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle).
 
-**Inheritance/Implementation:** LinearGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle)
+**Inheritance/Implementation:** LinearGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class LinearGradientStyle--><!--Device-unnamed-declare class LinearGradientStyle-End-->
 
@@ -23,10 +19,6 @@ constructor(options: LinearGradientOptions)
 A constructor used to create a **LinearGradientStyle** object.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,10 +45,6 @@ Options for displaying a linear gradient.
 **Type:** LinearGradientOptions
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,10 +10,6 @@ function startPrintJob(jobInfo: PrintJob, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function startPrintJob(jobInfo: PrintJob, callback: AsyncCallback<void>): void--><!--Device-print-function startPrintJob(jobInfo: PrintJob, callback: AsyncCallback<void>): void-End-->
@@ -27,7 +23,7 @@ function startPrintJob(jobInfo: PrintJob, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobInfo | [PrintJob](arkts-basicservices-print-printjob-i-sys.md) | 是 | 打印任务信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步开始打印任务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步开始打印任务之后的回调。 |
 
 **错误码：**
 
@@ -37,7 +33,7 @@ function startPrintJob(jobInfo: PrintJob, callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -80,10 +76,6 @@ function startPrintJob(jobInfo: PrintJob): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function startPrintJob(jobInfo: PrintJob): Promise<void>--><!--Device-print-function startPrintJob(jobInfo: PrintJob): Promise<void>-End-->
@@ -112,7 +104,7 @@ function startPrintJob(jobInfo: PrintJob): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

@@ -8,10 +8,6 @@ Defines the preinstalled application information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type PreinstalledApplicationInfo = _PreinstalledApplicationInfo--><!--Device-bundleManager-export type PreinstalledApplicationInfo = _PreinstalledApplicationInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

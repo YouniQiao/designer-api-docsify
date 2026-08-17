@@ -10,11 +10,9 @@ Cancels all notifications. This API uses an asynchronous callback to return the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [cancelAll](arkts-notification-notificationmanager-cancelall-f.md#cancelAll)
+**Substitutes:** [cancelAll](arkts-notification-notificationmanager-cancelall-f.md#cancelall)
 
 <!--Device-notification-function cancelAll(callback: AsyncCallback<void>): void--><!--Device-notification-function cancelAll(callback: AsyncCallback<void>): void-End-->
 
@@ -37,11 +35,9 @@ Cancels all notifications. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [cancelAll](arkts-notification-notificationmanager-cancelall-f.md#cancelAll)
+**Substitutes:** [cancelAll](arkts-notification-notificationmanager-cancelall-f.md#cancelall)
 
 <!--Device-notification-function cancelAll(): Promise<void>--><!--Device-notification-function cancelAll(): Promise<void>-End-->
 

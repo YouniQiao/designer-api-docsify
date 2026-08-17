@@ -4,10 +4,6 @@ Information details of the HTTP request
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-http-export interface ConnectionExtraInfo--><!--Device-http-export interface ConnectionExtraInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,10 +26,6 @@ The cipher suite used to fetch the resource.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionExtraInfo-cipherSuite?: CipherSuite--><!--Device-ConnectionExtraInfo-cipherSuite?: CipherSuite-End-->
@@ -51,10 +43,6 @@ A Boolean value that indicates whether the http request hit cache.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ A Boolean value that indicastes whether the task used a proxy connection to fetc
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionExtraInfo-isProxyConnection: boolean--><!--Device-ConnectionExtraInfo-isProxyConnection: boolean-End-->
@@ -95,10 +79,6 @@ The HTTP request is a reused connection or not.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ localAddress of the HTTP request.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionExtraInfo-localAddress: string--><!--Device-ConnectionExtraInfo-localAddress: string-End-->
@@ -139,10 +115,6 @@ localPort of the HTTP request. -1 for unknown.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +134,6 @@ The network protocol used to fetch the resource.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionExtraInfo-networkProtocolName: string--><!--Device-ConnectionExtraInfo-networkProtocolName: string-End-->
@@ -183,10 +151,6 @@ The HTTP request redirect count.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,10 +170,6 @@ remoteAddress of the HTTP request.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionExtraInfo-remoteAddress: string--><!--Device-ConnectionExtraInfo-remoteAddress: string-End-->
@@ -228,10 +188,6 @@ remotePort of the HTTP request. -1 for unknown.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionExtraInfo-remotePort: int--><!--Device-ConnectionExtraInfo-remotePort: int-End-->
@@ -249,10 +205,6 @@ The tls version used to fetch the resource.
 **Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

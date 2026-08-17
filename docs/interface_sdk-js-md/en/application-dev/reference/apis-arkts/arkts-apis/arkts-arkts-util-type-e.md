@@ -4,10 +4,6 @@ Enumerates the Base64 encoding formats.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-util-enum Type--><!--Device-util-enum Type-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -21,10 +17,6 @@ BASIC = 0
 Basic format. This API can be used in atomic services since API version 11.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ MIME format. This API can be used in atomic services since API version 11.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Type-MIME = 1--><!--Device-Type-MIME = 1-End-->
@@ -62,10 +50,6 @@ BASIC_URL_SAFE format. This value is supported since API version 12. This API ca
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Type-BASIC_URL_SAFE = 2--><!--Device-Type-BASIC_URL_SAFE = 2-End-->
@@ -81,10 +65,6 @@ MIME_URL_SAFE = 3
 MIME_URL_SAFE format. This value is supported since API version 12. This API can be used in atomic services since API version 12.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

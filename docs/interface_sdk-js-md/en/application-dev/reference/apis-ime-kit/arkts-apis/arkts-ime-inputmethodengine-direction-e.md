@@ -4,10 +4,6 @@ Enumerates the directions of cursor movement of the input method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-export enum Direction--><!--Device-inputMethodEngine-export enum Direction-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -21,10 +17,6 @@ CURSOR_UP = 1
 Upward.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Direction-CURSOR_UP = 1--><!--Device-Direction-CURSOR_UP = 1-End-->
 
@@ -40,10 +32,6 @@ Downward.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Direction-CURSOR_DOWN--><!--Device-Direction-CURSOR_DOWN-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -58,10 +46,6 @@ Leftward.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Direction-CURSOR_LEFT--><!--Device-Direction-CURSOR_LEFT-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -75,10 +59,6 @@ CURSOR_RIGHT
 Rightward.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Direction-CURSOR_RIGHT--><!--Device-Direction-CURSOR_RIGHT-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface NativeXComponentParameters--><!--Device-unnamed-declare interface NativeXComponentParameters-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ imageAIOptions?: ImageAIOptions
 **类型：** ImageAIOptions
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,10 +39,6 @@ XComponent的类型。
 **类型：** [XComponentType](../arkts-apis/arkts-arkui-xcomponenttype-e.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -10,10 +10,6 @@ function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback:
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 <!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
@@ -34,7 +30,7 @@ function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback:
 | [10801002](../errorcode-jsleakwatcher.md#10801002-参数config无效) | The parameter config is invalid. |
 | [10801003](../errorcode-jsleakwatcher.md#10801003-参数callback无效) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let config: Array<string> = ['XComponent'];
@@ -57,10 +53,6 @@ function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callb
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 <!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
@@ -81,7 +73,7 @@ function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callb
 | [10801002](../errorcode-jsleakwatcher.md#10801002-参数config无效) | The parameter config is invalid. |
 | [10801003](../errorcode-jsleakwatcher.md#10801003-参数callback无效) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 监测ArkTS对象CustomComponent和Window的内存泄漏

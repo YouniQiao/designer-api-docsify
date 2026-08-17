@@ -4,8 +4,6 @@ Defines the values of **deviceType** used in **RootInfo**.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 <!--Device-fileExtensionInfo-enum DeviceType--><!--Device-fileExtensionInfo-enum DeviceType-End-->
@@ -23,8 +21,6 @@ DEVICE_LOCAL_DISK = 1
 Local disk.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -46,8 +42,6 @@ Shared disk.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -67,8 +61,6 @@ DEVICE_SHARED_TERMINAL = 3
 Distributed network device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -90,8 +82,6 @@ Network neighbor device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -111,8 +101,6 @@ DEVICE_EXTERNAL_MTP = 5
 MTP device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -134,8 +122,6 @@ USB device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -155,8 +141,6 @@ DEVICE_EXTERNAL_CLOUD = 7
 Cloud disk.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 

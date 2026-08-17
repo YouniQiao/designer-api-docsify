@@ -1,12 +1,8 @@
 # Tokenizer
 
-Enumerates tokenizers that can be used for FTS. Use the enum name rather than the enum value. The table creation statement varies with the tokenizer in use. For details about the definition of **this.context** in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context) of the stage model. The following is an example of the table creation statement when **ICU_TOKENIZER** is used: The following is an example of the table creation statement when **CUSTOM_TOKENIZER** is used: The following is an example of the table creation statement when **CUSTOM_TOKENIZER** is used:
+Enumerates tokenizers that can be used for FTS. Use the enum name rather than the enum value. The table creation statement varies with the tokenizer in use. For details about the definition of **this.context** in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context) of the stage model. The following is an example of the table creation statement when **ICU_TOKENIZER** is used: The following is an example of the table creation statement when **CUSTOM_TOKENIZER** is used: The following is an example of the table creation statement when **CUSTOM_TOKENIZER** is used:
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-relationalStore-enum Tokenizer--><!--Device-relationalStore-enum Tokenizer-End-->
 
@@ -22,10 +18,6 @@ NONE_TOKENIZER: not use tokenizer
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Tokenizer-NONE_TOKENIZER = 0--><!--Device-Tokenizer-NONE_TOKENIZER = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -40,10 +32,6 @@ The ICU tokenizer is used, which supports Chinese and multiple languages. If the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Tokenizer-ICU_TOKENIZER = 1--><!--Device-Tokenizer-ICU_TOKENIZER = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -57,10 +45,6 @@ CUSTOM_TOKENIZER = 2
 A custom tokenizer is used. Chinese (simplified and traditional), English, and Arabic numerals are supported. Compared with **ICU_TOKENIZER**, **CUSTOM_TOKENIZER** has advantages in tokenization accuracy and resident memory usage. The self-developed tokenizer supports two modes: default tokenization mode and short word tokenization mode (short_words). You can use the cut_mode parameter to specify the mode. If no mode is specified, the default mode is used.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Tokenizer-CUSTOM_TOKENIZER = 2--><!--Device-Tokenizer-CUSTOM_TOKENIZER = 2-End-->
 

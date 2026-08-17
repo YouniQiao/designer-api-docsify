@@ -4,10 +4,6 @@ Describes the type of the extended edit action on the text box.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-export enum ExtendAction--><!--Device-inputMethodEngine-export enum ExtendAction-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -21,10 +17,6 @@ SELECT_ALL = 0
 Select all.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtendAction-SELECT_ALL = 0--><!--Device-ExtendAction-SELECT_ALL = 0-End-->
 
@@ -40,10 +32,6 @@ Cut.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtendAction-CUT = 3--><!--Device-ExtendAction-CUT = 3-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -58,10 +46,6 @@ Copy.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtendAction-COPY = 4--><!--Device-ExtendAction-COPY = 4-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -75,10 +59,6 @@ PASTE = 5
 Paste.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtendAction-PASTE = 5--><!--Device-ExtendAction-PASTE = 5-End-->
 

@@ -4,11 +4,9 @@ Enumerates the color modes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ColorMode](arkts-ability-configurationconstant-colormode-e.md#ColorMode)
+**Substitutes:** [ColorMode](arkts-ability-configurationconstant-colormode-e.md#colormode)
 
 <!--Device-ConfigurationConstant-export enum ColorMode--><!--Device-ConfigurationConstant-export enum ColorMode-End-->
 
@@ -24,11 +22,9 @@ Unspecified color mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_NOT_SET](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_NOT_SET)
+**Substitutes:** [COLOR_MODE_NOT_SET](arkts-ability-configurationconstant-colormode-e.md#colormodenotset)
 
 <!--Device-ColorMode-COLOR_MODE_NOT_SET = -1--><!--Device-ColorMode-COLOR_MODE_NOT_SET = -1-End-->
 
@@ -44,11 +40,9 @@ Dark mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_DARK)
+**Substitutes:** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#colormodedark)
 
 <!--Device-ColorMode-COLOR_MODE_DARK = 0--><!--Device-ColorMode-COLOR_MODE_DARK = 0-End-->
 
@@ -64,11 +58,9 @@ Light mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_LIGHT](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_LIGHT)
+**Substitutes:** [COLOR_MODE_LIGHT](arkts-ability-configurationconstant-colormode-e.md#colormodelight)
 
 <!--Device-ColorMode-COLOR_MODE_LIGHT = 1--><!--Device-ColorMode-COLOR_MODE_LIGHT = 1-End-->
 

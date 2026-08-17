@@ -12,13 +12,9 @@ import { deviceSettings } from 'deviceSettings';
 function setSwitchStatus(admin: Want, key: SwitchKey, status: SwitchStatus): void
 ```
 
-Sets the state of a switch. This API can enable or disable NearLink, Bluetooth, Wi-Fi, and NFC. After the setting is applied, users can manually enable or disable them. Bluetooth and NFC can be forced on. Once set, they cannot be manually turned on or off by the user. If a switch has been disabled through the [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setDisallowedPolicy) API, error code 203 will be reported when you attempt to set the state of the switch through this API. In this case, you need to use the [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setDisallowedPolicy) API to enable the switch. When multiple MDM applications are present on the device, there are no conflicts among the switch states set by different MDM applications. The policy set last takes effect. The three states, on (user can manually enable /disable), off (user can manually enable/disable), and forced on (user cannot manually disable), can be switched arbitrarily, and no conflict occurs.
+Sets the state of a switch. This API can enable or disable NearLink, Bluetooth, Wi-Fi, and NFC. After the setting is applied, users can manually enable or disable them. Bluetooth and NFC can be forced on. Once set, they cannot be manually turned on or off by the user. If a switch has been disabled through the [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) API, error code 203 will be reported when you attempt to set the state of the switch through this API. In this case, you need to use the [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) API to enable the switch. When multiple MDM applications are present on the device, there are no conflicts among the switch states set by different MDM applications. The policy set last takes effect. The three states, on (user can manually enable /disable), off (user can manually enable/disable), and forced on (user cannot manually disable), can be switched arbitrarily, and no conflict occurs.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SETTINGS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 
@@ -33,8 +29,8 @@ Sets the state of a switch. This API can enable or disable NearLink, Bluetooth, 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| key | [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md) | Yes | Switch name. An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been activated as the built-in device administrator application via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startAdminProvision) can use this API to set the following switches: NearLink, Bluetooth, and Wi-Fi. Attempting to set the NFC switch will result in error code 9200002. |
-| status | [SwitchStatus](arkts-mdm-devicesettings-switchstatus-e.md) | Yes | Switch state. An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been activated as the built-in device administrator application via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startAdminProvision) can use this API to set the following states: ON and OFF. Attempting to set the FORCE_ON state will result in error code 9200002. |
+| key | [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md) | Yes | Switch name. An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been activated as the built-in device administrator application via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision) can use this API to set the following switches: NearLink, Bluetooth, and Wi-Fi. Attempting to set the NFC switch will result in error code 9200002. |
+| status | [SwitchStatus](arkts-mdm-devicesettings-switchstatus-e.md) | Yes | Switch state. An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been activated as the built-in device administrator application via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision) can use this API to set the following states: ON and OFF. Attempting to set the FORCE_ON state will result in error code 9200002. |
 
 **Error codes:**
 

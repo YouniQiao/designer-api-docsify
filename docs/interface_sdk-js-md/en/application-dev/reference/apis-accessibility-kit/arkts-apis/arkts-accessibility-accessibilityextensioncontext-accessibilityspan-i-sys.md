@@ -1,12 +1,8 @@
 # AccessibilitySpan (System API)
 
-Hyperlink text information for accessibility. For details, see the attribute spans in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement).
+Hyperlink text information for accessibility. For details, see the attribute spans in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#accessibilityelement).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface AccessibilitySpan--><!--Device-unnamed-interface AccessibilitySpan-End-->
 
@@ -26,10 +22,6 @@ Accessibility description of the hyperlink text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilitySpan-accessibilityDescription: string--><!--Device-AccessibilitySpan-accessibilityDescription: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -47,10 +39,6 @@ Accessibility level of the hyperlink text. 'auto': whether the text can be ident
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilitySpan-accessibilityLevel: string--><!--Device-AccessibilitySpan-accessibilityLevel: string-End-->
 
@@ -70,10 +58,6 @@ Accessibility text of the hyperlink text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilitySpan-accessibilityText: string--><!--Device-AccessibilitySpan-accessibilityText: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -92,10 +76,6 @@ Hyperlink text number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilitySpan-spanId: int--><!--Device-AccessibilitySpan-spanId: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -113,10 +93,6 @@ Text content of the hyperlink text.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilitySpan-spanText: string--><!--Device-AccessibilitySpan-spanText: string-End-->
 

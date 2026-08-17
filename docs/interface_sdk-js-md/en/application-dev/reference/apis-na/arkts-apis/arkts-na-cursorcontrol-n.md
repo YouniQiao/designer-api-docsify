@@ -4,9 +4,7 @@ CursorControl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -20,6 +18,6 @@ CursorControl
 
 | Name | Description |
 | --- | --- |
-| [setCursor](arkts-na-cursorcontrol-setcursor-f.md#setCursor) | Change the mouse cursor style by param: 'PointerStyle'. |
-| [restoreDefault](arkts-na-cursorcontrol-restoredefault-f.md#restoreDefault) | Restore the default mouse cursor style. |
+| [setCursor](arkts-na-cursorcontrol-setcursor-f.md#setcursor) | Change the mouse cursor style by param: 'PointerStyle'. |
+| [restoreDefault](arkts-na-cursorcontrol-restoredefault-f.md#restoredefault) | Restore the default mouse cursor style. |
 

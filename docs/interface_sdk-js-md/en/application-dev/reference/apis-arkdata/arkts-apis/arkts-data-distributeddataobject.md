@@ -4,10 +4,6 @@ The distributedDataObject module provides basic data object management, includin
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace distributedDataObject--><!--Device-unnamed-declare namespace distributedDataObject-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -25,8 +21,8 @@ import { distributedDataObject } from 'distributedDataObject';
 | Name | Description |
 | --- | --- |
 | [create](arkts-arkdata-distributeddataobject-create-f.md#create) | Creates a distributed data object. The object properties support basic types (number, Boolean, and string) and complex types (array and nested basic types). |
-| [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createDistributedObject) | Creates a distributed data object. |
-| [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md#genSessionId) | Creates a random session ID. |
+| [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createdistributedobject) | Creates a distributed data object. |
+| [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md#gensessionid) | Creates a random session ID. |
 
 ### Interfaces
 

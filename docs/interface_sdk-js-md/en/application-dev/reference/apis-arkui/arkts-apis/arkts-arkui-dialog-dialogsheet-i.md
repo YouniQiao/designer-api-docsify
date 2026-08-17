@@ -4,10 +4,6 @@ The information of sheet item for action sheet style.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-dialog-declare interface DialogSheet--><!--Device-dialog-declare interface DialogSheet-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,10 +31,6 @@ Callback executed when the sheet item is clicked.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -59,10 +51,6 @@ Icon of the sheet item.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -82,10 +70,6 @@ Title of the sheet item.
 **Type:** ResourceStr
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

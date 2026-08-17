@@ -10,10 +10,6 @@ function alloc(size: number, fill?: string | FastBuffer | number, encoding?: Buf
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-fastbuffer-function alloc(size: number, fill?: string | FastBuffer | number, encoding?: BufferEncoding): FastBuffer--><!--Device-fastbuffer-function alloc(size: number, fill?: string | FastBuffer | number, encoding?: BufferEncoding): FastBuffer-End-->
@@ -34,7 +30,7 @@ function alloc(size: number, fill?: string | FastBuffer | number, encoding?: Buf
 | --- | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回一个FastBuffer对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

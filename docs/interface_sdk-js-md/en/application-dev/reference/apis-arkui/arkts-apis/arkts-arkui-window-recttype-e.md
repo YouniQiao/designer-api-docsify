@@ -4,10 +4,6 @@ Enumerates the types of window rectangle coordinate systems.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-enum RectType--><!--Device-window-enum RectType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ RELATIVE_TO_SCREEN  = 0
 The window rectangle is relative to the screen coordinate system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -41,10 +33,6 @@ RELATIVE_TO_PARENT_WINDOW = 1
 The window rectangle is relative to the parent window coordinate system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

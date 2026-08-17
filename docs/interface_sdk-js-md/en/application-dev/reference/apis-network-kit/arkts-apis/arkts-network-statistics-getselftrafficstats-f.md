@@ -16,10 +16,6 @@ Get the traffic usage details of the specified network of the calling applicatio
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -46,7 +42,7 @@ Get the traffic usage details of the specified network of the calling applicatio
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) | Failed to read the database. |
 | [2103019](../errorcode-net-statistics.md#2103019-invalid-timestamp) | The timestamp in param is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

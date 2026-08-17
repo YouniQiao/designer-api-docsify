@@ -4,10 +4,6 @@ Domain account policy.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 <!--Device-accountManager-interface DomainAccountPolicy--><!--Device-accountManager-interface DomainAccountPolicy-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,10 +26,6 @@ Validity period (in seconds) of the token for domain account authentication. Thi
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DomainAccountPolicy-authenticationValidityPeriod?: number--><!--Device-DomainAccountPolicy-authenticationValidityPeriod?: number-End-->
@@ -52,10 +44,6 @@ Notification period before a domain account password expires, in seconds. The va
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DomainAccountPolicy-passwordExpirationNotification?: number--><!--Device-DomainAccountPolicy-passwordExpirationNotification?: number-End-->
@@ -73,10 +61,6 @@ Validity period (in seconds) of the domain account password. It is used to requi
 **Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

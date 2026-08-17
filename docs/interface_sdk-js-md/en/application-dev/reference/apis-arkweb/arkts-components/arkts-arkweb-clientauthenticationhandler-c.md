@@ -1,12 +1,8 @@
 # ClientAuthenticationHandler
 
-Defines the client certificate request result, related to onClientAuthenticationRequest method.
+ClientAuthenticationHandler is a class in the **Web** component that handles SSL client certificate authentication requests. When a server requests a client certificate for TLS mutual authentication, this handler is provided to the app through the `onClientAuthenticationRequest` event callback, allowing the app to select appropriate certificate credentials for response. For sample code, see [onClientAuthenticationRequest](arkts-arkweb-web-attribute.md#onclientauthenticationrequest).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ClientAuthenticationHandler--><!--Device-unnamed-declare class ClientAuthenticationHandler-End-->
 
@@ -22,10 +18,6 @@ Cancel this certificate request.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ClientAuthenticationHandler-cancel(): void--><!--Device-ClientAuthenticationHandler-cancel(): void-End-->
@@ -38,13 +30,9 @@ Cancel this certificate request.
 confirm(priKeyFile: string, certChainFile: string): void
 ```
 
-Confirm to use the specified private key and client certificate chain.
+Uses the specified private key and client certificate chain.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,8 +44,8 @@ Confirm to use the specified private key and client certificate chain.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKeyFile | string | Yes | The file that store private key. |
-| certChainFile | string | Yes | The file that store client certificate chain. |
+| priKeyFile | string | Yes | Full path for storing the private key file. |
+| certChainFile | string | Yes | Full path for storing the certificate chain file. |
 
 ## confirm
 
@@ -65,13 +53,9 @@ Confirm to use the specified private key and client certificate chain.
 confirm(authUri: string): void
 ```
 
-Confirm to use the authUri.The authUri can be obtained from certificate management.
+Instructs the **Web** component to use the specified credentials (obtained from the certificate management module).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -83,7 +67,7 @@ Confirm to use the authUri.The authUri can be obtained from certificate manageme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authUri | string | Yes | is the key of credentials.The credentials contain sign info and client certificates info. |
+| authUri | string | Yes | Key value of the credentials. |
 
 ## confirm
 
@@ -91,13 +75,9 @@ Confirm to use the authUri.The authUri can be obtained from certificate manageme
 confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void
 ```
 
-Confirm to use the identify of the certificate. The identify can be obtained from certificate management.
+Instructs the **Web** component to use the specified credential and credential type obtained from the certificate management module.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-ClientAuthenticationHandler-confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void--><!--Device-ClientAuthenticationHandler-confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void-End-->
 
@@ -107,8 +87,8 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| identity | string | Yes | The identify of the credential. |
-| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) \| string | Yes | The type of the credential or the file that store client certificate chain. |
+| identity | string | Yes | Unique ID of a credential. |
+| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) \| string | Yes | Credential type when the type is CredentialType, or certificate chain file path when the type is string. |
 
 **Error codes:**
 
@@ -122,13 +102,9 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 constructor()
 ```
 
-Constructor.
+Constructs a **ClientAuthenticationHandler**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -142,13 +118,9 @@ Constructor.
 ignore(): void
 ```
 
-Ignore this certificate request temporarily.
+Ignores this request.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

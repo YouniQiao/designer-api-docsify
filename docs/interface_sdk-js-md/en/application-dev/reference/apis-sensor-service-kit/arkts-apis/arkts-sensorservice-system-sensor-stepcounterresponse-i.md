@@ -4,11 +4,9 @@ Callback invoked when the step counter sensor data changes.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md#PedometerResponse)
+**Substitutes:** [PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md#pedometerresponse)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -53,8 +51,6 @@ Number of counted steps after the sensor is restarted.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 

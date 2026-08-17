@@ -8,10 +8,6 @@ The **NotificationSubscribeInfo** module provides APIs for defining the informat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationSubscribe-export type NotificationSubscribeInfo = _NotificationSubscribeInfo--><!--Device-notificationSubscribe-export type NotificationSubscribeInfo = _NotificationSubscribeInfo-End-->
 
 **System capability:** SystemCapability.Notification.Notification

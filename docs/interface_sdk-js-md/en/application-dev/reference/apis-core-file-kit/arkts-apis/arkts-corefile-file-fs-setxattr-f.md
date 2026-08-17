@@ -30,10 +30,6 @@ Sets an extended attribute of a file or directory. This API uses a promise to re
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>--><!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

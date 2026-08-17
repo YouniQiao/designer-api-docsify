@@ -4,10 +4,6 @@ Represents an event type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export enum EventClassify--><!--Device-update-export enum EventClassify-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -23,10 +19,6 @@ TASK = 0x01000000
 Task event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EventClassify-TASK = 0x01000000--><!--Device-EventClassify-TASK = 0x01000000-End-->
 

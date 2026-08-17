@@ -10,8 +10,6 @@ function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpape
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-wallpaper-function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void--><!--Device-wallpaper-function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void-End-->
@@ -25,7 +23,7 @@ function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpape
 | type | 'colorChange' | 是 |  |
 | callback | (colors: Array&lt;[RgbaColor](arkts-na-wallpaper-rgbacolor-i.md)&gt;, wallpaperType: WallpaperType) =&gt; void | 否 |  |
 
-## 示例
+**示例**
 
 ```TypeScript
 let listener = (colors: Array<wallpaper.RgbaColor>, wallpaperType: wallpaper.WallpaperType): void => {

@@ -6,9 +6,7 @@ Defines the DistortionComponent attribute functions
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare interface DistortionComponentAttribute--><!--Device-unnamed-export declare interface DistortionComponentAttribute-End-->
 
@@ -24,9 +22,7 @@ setDistortionComponentOptions(options?: DistortionComponentOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-DistortionComponentAttribute-setDistortionComponentOptions(options?: DistortionComponentOptions): this--><!--Device-DistortionComponentAttribute-setDistortionComponentOptions(options?: DistortionComponentOptions): this-End-->
 

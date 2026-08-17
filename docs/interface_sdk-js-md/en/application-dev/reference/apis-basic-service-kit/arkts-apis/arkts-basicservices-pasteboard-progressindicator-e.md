@@ -4,10 +4,6 @@ Enumerates options for the progress indicator. You can choose whether to use the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-pasteboard-enum ProgressIndicator--><!--Device-pasteboard-enum ProgressIndicator-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -21,10 +17,6 @@ NONE = 0
 Getting data without system default progress indicator.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -41,10 +33,6 @@ DEFAULT = 1
 Getting data with system default progress indicator.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

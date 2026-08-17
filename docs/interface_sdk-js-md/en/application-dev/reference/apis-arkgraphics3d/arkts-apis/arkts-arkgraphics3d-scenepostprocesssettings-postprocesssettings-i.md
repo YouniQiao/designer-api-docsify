@@ -4,10 +4,6 @@ Post-processing settings, which are used to configure the image processing effec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface PostProcessSettings--><!--Device-unnamed-export interface PostProcessSettings-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -18,15 +14,11 @@ Post-processing settings, which are used to configure the image processing effec
 bloom?: BloomSettings
 ```
 
-Bloom settings of the post processing settings. The default value is undefined.
+Bloom settings. The default value is undefined.
 
 **Type:** [BloomSettings](arkts-arkgraphics3d-scenepostprocesssettings-bloomsettings-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PostProcessSettings-bloom?: BloomSettings--><!--Device-PostProcessSettings-bloom?: BloomSettings-End-->
 
@@ -38,17 +30,13 @@ Bloom settings of the post processing settings. The default value is undefined.
 colorFringe?: ColorFringeSettings
 ```
 
-Color fringe settings of the post processing settings.
+Color fringing settings. The default value is undefined.
 
 **Type:** [ColorFringeSettings](arkts-arkgraphics3d-scenepostprocesssettings-colorfringesettings-i.md)
 
 **Default:** undefined
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PostProcessSettings-colorFringe?: ColorFringeSettings--><!--Device-PostProcessSettings-colorFringe?: ColorFringeSettings-End-->
 
@@ -60,15 +48,11 @@ Color fringe settings of the post processing settings.
 toneMapping?: ToneMappingSettings
 ```
 
-Tone mapping settings of the post processing settings. The default value is undefined.
+Tone mapping settings. The default value is undefined.
 
 **Type:** [ToneMappingSettings](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PostProcessSettings-toneMapping?: ToneMappingSettings--><!--Device-PostProcessSettings-toneMapping?: ToneMappingSettings-End-->
 
@@ -80,17 +64,13 @@ Tone mapping settings of the post processing settings. The default value is unde
 vignette?: VignetteSettings
 ```
 
-Vignette settings of the post processing settings.
+Vignette settings. The default value is undefined.
 
 **Type:** [VignetteSettings](arkts-arkgraphics3d-scenepostprocesssettings-vignettesettings-i.md)
 
 **Default:** undefined
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PostProcessSettings-vignette?: VignetteSettings--><!--Device-PostProcessSettings-vignette?: VignetteSettings-End-->
 

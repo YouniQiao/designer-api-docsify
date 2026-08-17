@@ -4,9 +4,7 @@ StackLayoutAlgorithm constructor options.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 <!--Device-unnamed-interface StackLayoutAlgorithmOptions--><!--Device-unnamed-interface StackLayoutAlgorithmOptions-End-->
 
@@ -26,9 +24,7 @@ Defines the align rules of child components in stack layout algorithm.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

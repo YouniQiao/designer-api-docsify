@@ -1,12 +1,8 @@
 # WebContextMenuParam
 
-Defines the context menu param, related to [WebContextMenuParam](#WebContextMenuParam) method.
+WebContextMenuParam is a parameter class in the ArkWeb component used to carry context menu information displayed when a user long presses a web element or right-clicks. As the data carrier for the **onContextMenuShow** event callback, it encapsulates key information such as the menu popup position, link address, media type, selected text, and edit state. When customizing the context menu of a Web component, use WebContextMenuParam to obtain detailed information about the web element at the long press/right-click position (such as the link URL, image content, media type, input field type, and edit state), determine the user operation scenario, and decide whether to intercept the default menu and build custom menu items. When customizing the long press or right-click menu of a Web component (such as replacing the default menu, providing differentiated menu items based on element types, or previewing images), use WebContextMenuParam in the **onContextMenuShow** event callback to obtain context information. For sample code, see [onContextMenuShow](arkts-arkweb-web-attribute.md#oncontextmenushow).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WebContextMenuParam--><!--Device-unnamed-declare class WebContextMenuParam-End-->
 
@@ -18,13 +14,9 @@ Defines the context menu param, related to [WebContextMenuParam](#WebContextMenu
 constructor()
 ```
 
-Constructor.
+Constructs a **WebContextMenuParam** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ Constructor.
 existsImageContents(): boolean
 ```
 
-Long press menu location has image content.
+Checks whether there is image content at the current long press or right-click position. This is used to provide image-related functions such as "Save Image" in a custom menu.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,7 +44,7 @@ Long press menu location has image content.
 
 | Type | Description |
 | --- | --- |
-| boolean | Return whether this context menu has image content. |
+| boolean | true if an image exists at the long-press position; false otherwise. |
 
 ## getContextMenuMediaType
 
@@ -64,13 +52,9 @@ Long press menu location has image content.
 getContextMenuMediaType(): ContextMenuDataMediaType
 ```
 
-Returns the type of context node.
+Obtains the type of the web element that the user long presses or right-clicks when reporting a context menu event.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-WebContextMenuParam-getContextMenuMediaType(): ContextMenuDataMediaType--><!--Device-WebContextMenuParam-getContextMenuMediaType(): ContextMenuDataMediaType-End-->
 
@@ -80,7 +64,7 @@ Returns the type of context node.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) | Returns the type of context node. |
+| [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) | Media type of the web element, including image, video, audio, and other types, used to distinguish the type of web element tapped by the user. |
 
 ## getEditStateFlags
 
@@ -88,13 +72,9 @@ Returns the type of context node.
 getEditStateFlags(): number
 ```
 
-Returns the context editable flags [ContextMenuEditStateFlags](arkts-arkweb-contextmenueditstateflags-e.md#ContextMenuEditStateFlags).
+Obtains the edit state flag of the web element. This is used to finely control the display logic of custom menu options (such as displaying corresponding menu items based on whether copying, pasting, or undoing is available).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -106,7 +86,7 @@ Returns the context editable flags [ContextMenuEditStateFlags](arkts-arkweb-cont
 
 | Type | Description |
 | --- | --- |
-| number |  |
+| number | Obtains the editable flag of the web element. See [ContextMenuEditStateFlags]{ |
 
 ## getInputFieldType
 
@@ -114,13 +94,9 @@ Returns the context editable flags [ContextMenuEditStateFlags](arkts-arkweb-cont
 getInputFieldType(): ContextMenuInputFieldType
 ```
 
-Returns input field type if the context menu was invoked on an input field.
+Obtains the input field type of the web element (such as text box, password box, search box, etc.). This is used to provide appropriate editing menu options based on the input field type (such as Paste and Select All for text boxes, and Copy or Hide Password for password boxes).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -132,7 +108,7 @@ Returns input field type if the context menu was invoked on an input field.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuInputFieldType](arkts-arkweb-contextmenuinputfieldtype-e.md) | Input field type if the context menu was invoked on an input field. |
+| [ContextMenuInputFieldType](arkts-arkweb-contextmenuinputfieldtype-e.md) | Type of the web element input field, including text, password, email, and other types. It is used to identify the type of the input element that currently has focus. |
 
 ## getLinkUrl
 
@@ -140,13 +116,9 @@ Returns input field type if the context menu was invoked on an input field.
 getLinkUrl(): string
 ```
 
-If the long-press location is the link returns the link's security-checked URL.
+Obtains the URL link address that has passed the security check. This can be used to provide operations such as " Open Link", "Share Link", and "Copy Link" when building a custom menu. > **NOTE：**> > Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with > getSourceUrl(), this method obtains the link URL at the long press position, whereas getSourceUrl() obtains the > URL of the **src** attribute of the selected element (such as images, media, and other resources).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -158,7 +130,7 @@ If the long-press location is the link returns the link's security-checked URL.
 
 | Type | Description |
 | --- | --- |
-| string | If relate to a link return link url, else return null. |
+| string | Security-checked URL if the long-press position is a link; otherwise, an empty string. |
 
 ## getMediaType
 
@@ -166,13 +138,9 @@ If the long-press location is the link returns the link's security-checked URL.
 getMediaType(): ContextMenuMediaType
 ```
 
-Returns the type of context node.
+Obtains the media type of the web element. > **NOTE：**> > Since API version 22, [getContextMenuMediaType](#getcontextmenumediatype) provides > richer media type identification capabilities.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -184,7 +152,7 @@ Returns the type of context node.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) | Returns the type of context node. |
+| [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) | Media type of the web page element. |
 
 ## getPreviewHeight
 
@@ -192,13 +160,9 @@ Returns the type of context node.
 getPreviewHeight(): number
 ```
 
-Returns the selection menu preview height.
+Obtains the height of a preview image.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 <!--Device-WebContextMenuParam-getPreviewHeight(): number--><!--Device-WebContextMenuParam-getPreviewHeight(): number-End-->
 
@@ -208,7 +172,7 @@ Returns the selection menu preview height.
 
 | Type | Description |
 | --- | --- |
-| number | The preview menu height. Unit: px. |
+| number | Height of a preview image. <br>Unit: px (physical pixel) |
 
 ## getPreviewWidth
 
@@ -216,13 +180,9 @@ Returns the selection menu preview height.
 getPreviewWidth(): number
 ```
 
-Returns the selection menu preview width.
+Obtains the width of a preview image.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 <!--Device-WebContextMenuParam-getPreviewWidth(): number--><!--Device-WebContextMenuParam-getPreviewWidth(): number-End-->
 
@@ -232,7 +192,7 @@ Returns the selection menu preview width.
 
 | Type | Description |
 | --- | --- |
-| number | The preview menu width. Unit: px. |
+| number | Width of a preview image. <br>Unit: px (physical pixel) |
 
 ## getSelectionText
 
@@ -240,13 +200,9 @@ Returns the selection menu preview width.
 getSelectionText(): string
 ```
 
-Returns the text of the selection.
+Obtains the content when right-clicking selected text. This is used to provide text operation functions such as " Copy", "Share", "Translate", and "Search" in a custom menu.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -258,7 +214,7 @@ Returns the text of the selection.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the text of the selection, or return null if no text is selected. |
+| string | Selected text content. If selected text exists at the right-click position, the selected text is returned; otherwise, an empty string is returned. |
 
 ## getSourceType
 
@@ -266,13 +222,9 @@ Returns the text of the selection.
 getSourceType(): ContextMenuSourceType
 ```
 
-Returns the context menu source type.
+Obtains the trigger source type of the context menu event (such as mouse right-click, long press, etc.). This is used to adjust the menu display style or provide differentiated menu options based on different sources.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -284,7 +236,7 @@ Returns the context menu source type.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuSourceType](arkts-arkweb-contextmenusourcetype-e.md) |  |
+| [ContextMenuSourceType](arkts-arkweb-contextmenusourcetype-e.md) | Type of the trigger source for the context menu event, including right-click, long press, and other trigger methods. |
 
 ## getSourceUrl
 
@@ -292,13 +244,9 @@ Returns the context menu source type.
 getSourceUrl(): string
 ```
 
-Returns the SRC URL if the selected element has a SRC attribute.
+Obtains the URL link address corresponding to the **src** attribute of the element.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -310,7 +258,7 @@ Returns the SRC URL if the selected element has a SRC attribute.
 
 | Type | Description |
 | --- | --- |
-| string | If this context menu is "src" attribute, return link url, else return null. |
+| string | If the selected element has the **src** attribute, the URL in the **src** is returned. The maximum size of the returned URL is 2 MB. If the size exceeds the upper limit, an empty string is returned. |
 
 ## getUnfilteredLinkUrl
 
@@ -318,13 +266,9 @@ Returns the SRC URL if the selected element has a SRC attribute.
 getUnfilteredLinkUrl(): string
 ```
 
-If the long-press location is the link returns the link's original URL.
+Obtains the original URL link address that has not passed the security check.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -336,7 +280,7 @@ If the long-press location is the link returns the link's original URL.
 
 | Type | Description |
 | --- | --- |
-| string | If relate to a link return unfiltered link url, else return null. |
+| string | If the long-press position is a link, returns the original URL link; otherwise, returns an empty string. |
 
 ## isEditable
 
@@ -344,13 +288,9 @@ If the long-press location is the link returns the link's original URL.
 isEditable(): boolean
 ```
 
-Returns whether the context is editable.
+Checks whether a web element is editable. This is used to dynamically show or hide editing-related options in a custom menu (such as displaying Paste, Cut, and Select All when editable, and hiding these options when not editable).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -362,7 +302,7 @@ Returns whether the context is editable.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
+| boolean | true if the web element is editable; false otherwise. |
 
 ## x
 
@@ -370,13 +310,9 @@ Returns whether the context is editable.
 x(): number
 ```
 
-Horizontal offset coordinates of the menu within the Web component.
+X coordinate of the context menu, which is the horizontal distance relative to the upper left corner of the Web component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -388,7 +324,7 @@ Horizontal offset coordinates of the menu within the Web component.
 
 | Type | Description |
 | --- | --- |
-| number | The context menu x coordinate. Returns a non-negative integer if normal, otherwise returns -1. Unit: px. |
+| number | Non-negative integer if successful; -1 otherwise. <br>Unit: px (physical pixel). |
 
 ## y
 
@@ -396,13 +332,9 @@ Horizontal offset coordinates of the menu within the Web component.
 y(): number
 ```
 
-Vertical offset coordinates for the menu within the Web component.
+Y coordinate of the context menu, which is the vertical distance relative to the upper left corner of the Web component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -414,5 +346,5 @@ Vertical offset coordinates for the menu within the Web component.
 
 | Type | Description |
 | --- | --- |
-| number | The context menu y coordinate. Returns a non-negative integer if normal, otherwise returns -1. Unit: px. |
+| number | Non-negative integer when obtained successfully, and -1 otherwise. <br>Unit: px (physical pixel). |
 

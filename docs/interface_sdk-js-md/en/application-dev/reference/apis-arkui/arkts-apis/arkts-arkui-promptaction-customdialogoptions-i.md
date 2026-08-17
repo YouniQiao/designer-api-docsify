@@ -1,14 +1,10 @@
 # CustomDialogOptions
 
-Extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) to provide enhanced customization capabilities for the dialog box.
+Extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) to provide enhanced customization capabilities for the dialog box.
 
-**Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)
+**Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-promptAction-interface CustomDialogOptions--><!--Device-promptAction-interface CustomDialogOptions-End-->
 
@@ -36,10 +32,6 @@ Background blur style of the dialog box. <br>Default value: **BlurStyle.COMPONEN
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -59,10 +51,6 @@ Background color of the dialog box.<br>Default value: **Color.Transparent**. <br
 **Type:** ResourceColor
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,10 +72,6 @@ Border color of the dialog box. <br>Default value: **Color.Black**. <br> **borde
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -107,10 +91,6 @@ Border style of the dialog box. <br>Default value: **BorderStyle.Solid**. <br> *
 **Type:** BorderStyle \| EdgeStyles
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,10 +112,6 @@ Border width of the dialog box. <br>You can set the width for all four sides or 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -155,10 +131,6 @@ Custom content of the dialog box. <br>**NOTE：**<br>The builder needs to be ass
 **Type:** CustomBuilder
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,10 +152,6 @@ Corner radius of the background. <br>You can set separate radii for the four cor
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -203,10 +171,6 @@ Height of the dialog box. <br>**NOTE：**<br>- Default maximum height of the dia
 **Type:** Dimension
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,10 +192,6 @@ Shadow of the dialog box. <br>Default value on 2-in-1 devices: **ShadowStyle.OUT
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -251,10 +211,6 @@ Width of the dialog box. <br>**NOTE：**<br>- Default maximum width of the dialo
 **Type:** Dimension
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

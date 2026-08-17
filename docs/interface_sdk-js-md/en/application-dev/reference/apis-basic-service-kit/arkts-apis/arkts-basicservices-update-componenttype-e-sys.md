@@ -4,10 +4,6 @@ Represents a component type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export enum ComponentType--><!--Device-update-export enum ComponentType-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -23,10 +19,6 @@ OTA = 1
 OTA upgrade package, which is a complete upgrade package used for firmware upgrade
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ComponentType-OTA = 1--><!--Device-ComponentType-OTA = 1-End-->
 

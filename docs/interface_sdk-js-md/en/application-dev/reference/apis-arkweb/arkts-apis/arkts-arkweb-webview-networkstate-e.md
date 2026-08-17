@@ -4,10 +4,6 @@ Enumerates the network statuses of the player.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-webview-enum NetworkState--><!--Device-webview-enum NetworkState-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,10 +17,6 @@ EMPTY = 0
 The player has not started downloading data.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ The player's network activity is idle. This could mean that the download of a me
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetworkState-IDLE = 1--><!--Device-NetworkState-IDLE = 1-End-->
@@ -62,10 +50,6 @@ The player is downloading media data.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetworkState-LOADING = 2--><!--Device-NetworkState-LOADING = 2-End-->
@@ -81,10 +65,6 @@ NETWORK_ERROR = 3
 A network error occurs.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

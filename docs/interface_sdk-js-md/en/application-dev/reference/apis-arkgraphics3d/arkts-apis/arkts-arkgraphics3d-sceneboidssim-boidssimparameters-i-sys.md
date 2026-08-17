@@ -4,10 +4,6 @@ Boids simulation parameters used to configure the behavioral attributes of each 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface BoidsSimParameters--><!--Device-unnamed-export interface BoidsSimParameters-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -25,10 +21,6 @@ Perception radius of the alignment rule. Unit is m. Neighboring individuals with
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Weight of the alignment rule. The intensity with which the individual steers tow
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BoidsSimParameters-alignmentWeight?: double--><!--Device-BoidsSimParameters-alignmentWeight?: double-End-->
@@ -73,10 +61,6 @@ Effective distance of the boundary constraint force. Unit is m. The individual i
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ Maximum corner of the axis-aligned bounding box that constrains the individual's
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BoidsSimParameters-boundaryMaxPos?: Vec3--><!--Device-BoidsSimParameters-boundaryMaxPos?: Vec3-End-->
@@ -121,10 +101,6 @@ Minimum corner of the axis-aligned bounding box that constrains the individual's
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,10 +122,6 @@ Weight of the boundary constraint force. The intensity with which the individual
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BoidsSimParameters-boundaryWeight?: double--><!--Device-BoidsSimParameters-boundaryWeight?: double-End-->
@@ -169,10 +141,6 @@ Perception radius of the cohesion rule. Unit is m. Neighboring individuals withi
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,10 +162,6 @@ Weight of the cohesion rule. The intensity with which the individual is attracte
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BoidsSimParameters-cohesionWeight?: double--><!--Device-BoidsSimParameters-cohesionWeight?: double-End-->
@@ -217,10 +181,6 @@ Attraction intensity of the attraction field on this individual. Value >= 0. Def
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,10 +202,6 @@ Initial position of each individual. Each component unit is m. If not set, the c
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BoidsSimParameters-initialPosition?: Vec3--><!--Device-BoidsSimParameters-initialPosition?: Vec3-End-->
@@ -265,10 +221,6 @@ Quaternion of the initial rotation direction of each individual. If not set, the
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,10 +242,6 @@ Initial velocity vector of each individual. Each component unit is m/s. Default 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BoidsSimParameters-initialVelocity?: Vec3--><!--Device-BoidsSimParameters-initialVelocity?: Vec3-End-->
@@ -313,10 +261,6 @@ Maximum acceleration that the individual can reach per simulation frame. Unit is
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,10 +282,6 @@ Maximum turn rate per axis per simulation frame. Each component unit is rad/simu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BoidsSimParameters-maxTurnRate?: Vec3--><!--Device-BoidsSimParameters-maxTurnRate?: Vec3-End-->
@@ -361,10 +301,6 @@ Maximum velocity that the individual can reach per simulation frame. Unit is m/s
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -386,10 +322,6 @@ Repulsion intensity of the repulsion field on this individual. Value >= 0. Defau
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BoidsSimParameters-repulsionWeight?: double--><!--Device-BoidsSimParameters-repulsionWeight?: double-End-->
@@ -410,10 +342,6 @@ Perception radius of the separation rule. Unit is m. Only neighboring individual
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BoidsSimParameters-separationDistance?: double--><!--Device-BoidsSimParameters-separationDistance?: double-End-->
@@ -433,10 +361,6 @@ Weight of the separation rule. The intensity with which the individual is repell
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

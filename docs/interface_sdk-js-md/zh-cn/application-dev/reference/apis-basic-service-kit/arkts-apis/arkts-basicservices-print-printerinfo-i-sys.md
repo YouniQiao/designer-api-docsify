@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-interface PrinterInfo--><!--Device-print-interface PrinterInfo-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -25,10 +21,6 @@ capability?: PrinterCapability
 **类型：** [PrinterCapability](arkts-basicservices-print-printercapability-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterInfo-capability?: PrinterCapability--><!--Device-PrinterInfo-capability?: PrinterCapability-End-->
 
@@ -48,10 +40,6 @@ description?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterInfo-description?: string--><!--Device-PrinterInfo-description?: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -69,10 +57,6 @@ options?: Object
 **类型：** Object
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterInfo-options?: Object--><!--Device-PrinterInfo-options?: Object-End-->
 
@@ -92,10 +76,6 @@ printerIcon?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterInfo-printerIcon?: int--><!--Device-PrinterInfo-printerIcon?: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -113,10 +93,6 @@ printerId: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterInfo-printerId: string--><!--Device-PrinterInfo-printerId: string-End-->
 
@@ -136,10 +112,6 @@ printerName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterInfo-printerName: string--><!--Device-PrinterInfo-printerName: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -157,10 +129,6 @@ printerState: PrinterState
 **类型：** [PrinterState](arkts-basicservices-print-printerstate-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterInfo-printerState: PrinterState--><!--Device-PrinterInfo-printerState: PrinterState-End-->
 

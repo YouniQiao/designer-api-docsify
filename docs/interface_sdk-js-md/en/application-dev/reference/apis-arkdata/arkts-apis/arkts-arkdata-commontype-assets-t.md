@@ -8,10 +8,6 @@ Represents an array of Assets.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-commonType-type Assets = Array<Asset>--><!--Device-commonType-type Assets = Array<Asset>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType

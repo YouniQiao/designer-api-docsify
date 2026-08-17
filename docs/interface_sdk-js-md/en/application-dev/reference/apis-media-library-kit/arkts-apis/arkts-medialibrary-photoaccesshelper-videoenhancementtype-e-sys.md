@@ -4,10 +4,6 @@ Enumerates the types of segmented video enhancement.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum VideoEnhancementType--><!--Device-photoAccessHelper-enum VideoEnhancementType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -23,10 +19,6 @@ QUALITY_ENHANCEMENT_LOCAL = 0
 Apply enhancement on the device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoEnhancementType-QUALITY_ENHANCEMENT_LOCAL = 0--><!--Device-VideoEnhancementType-QUALITY_ENHANCEMENT_LOCAL = 0-End-->
 
@@ -44,10 +36,6 @@ Apply enhancement on the cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoEnhancementType-QUALITY_ENHANCEMENT_CLOUD = 1--><!--Device-VideoEnhancementType-QUALITY_ENHANCEMENT_CLOUD = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -63,10 +51,6 @@ QUALITY_ENHANCEMENT_LOCAL_AND_CLOUD = 2
 Apply enhancement on both the device and cloud.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoEnhancementType-QUALITY_ENHANCEMENT_LOCAL_AND_CLOUD = 2--><!--Device-VideoEnhancementType-QUALITY_ENHANCEMENT_LOCAL_AND_CLOUD = 2-End-->
 

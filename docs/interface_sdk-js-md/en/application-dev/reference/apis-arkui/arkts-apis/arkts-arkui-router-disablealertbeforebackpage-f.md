@@ -16,17 +16,15 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hideAlertBeforeBackPage)
+**Substitutes:** [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)
 
 <!--Device-router-function disableAlertBeforeBackPage(): void--><!--Device-router-function disableAlertBeforeBackPage(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 router.disableAlertBeforeBackPage();

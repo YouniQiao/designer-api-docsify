@@ -4,10 +4,6 @@ Describes the audio device blocked status and device information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface DeviceBlockStatusInfo--><!--Device-audio-interface DeviceBlockStatusInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -30,10 +26,6 @@ Blocked status of the audio device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceBlockStatusInfo-blockStatus: DeviceBlockStatus--><!--Device-DeviceBlockStatusInfo-blockStatus: DeviceBlockStatus-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -49,10 +41,6 @@ Device information.
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceBlockStatusInfo-devices: AudioDeviceDescriptors--><!--Device-DeviceBlockStatusInfo-devices: AudioDeviceDescriptors-End-->
 

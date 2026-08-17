@@ -4,13 +4,9 @@
 type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'
 ```
 
-The configuration takes effect when the ignore repeated click feature is enabled ( [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignoreRepeatClick) is set to **true**). When the ignore repeated click feature is disabled ([ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignoreRepeatClick) is set to **false**), the configuration does not take effect.
+The configuration takes effect when the ignore repeated click feature is enabled ( [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) is set to **true**). When the ignore repeated click feature is disabled ([ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) is set to **false**), the configuration does not take effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-config-type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'--><!--Device-config-type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'-End-->
 

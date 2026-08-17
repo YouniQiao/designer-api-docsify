@@ -4,10 +4,6 @@ Callback information about the device attachment state change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export interface AttachStateChangeInfo--><!--Device-mechanicManager-export interface AttachStateChangeInfo-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -30,10 +26,6 @@ Mechanical device information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AttachStateChangeInfo-mechInfo: MechInfo--><!--Device-AttachStateChangeInfo-mechInfo: MechInfo-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -49,10 +41,6 @@ Device attachment state.
 **Type:** [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AttachStateChangeInfo-state: AttachState--><!--Device-AttachStateChangeInfo-state: AttachState-End-->
 

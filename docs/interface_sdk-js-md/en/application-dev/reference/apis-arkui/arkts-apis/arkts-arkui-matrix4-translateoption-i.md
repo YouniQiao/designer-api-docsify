@@ -4,10 +4,6 @@ Describes the translation parameters.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-matrix4-interface TranslateOption--><!--Device-matrix4-interface TranslateOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,10 +26,6 @@ Translation distance along the x-axis. Unit: px Default value: **0** Value range
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TranslateOption-x?: number--><!--Device-TranslateOption-x?: number-End-->
@@ -52,10 +44,6 @@ Translation distance along the y-axis. Unit: px Default value: **0** Value range
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TranslateOption-y?: number--><!--Device-TranslateOption-y?: number-End-->
@@ -73,10 +61,6 @@ Translation distance along the z-axis. Unit: px Default value: **0** Value range
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

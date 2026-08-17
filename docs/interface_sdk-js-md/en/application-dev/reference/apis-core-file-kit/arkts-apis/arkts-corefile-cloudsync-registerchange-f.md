@@ -16,10 +16,6 @@ Subscribes to the change of a file. The callback returns the changed data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudSync-function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void--><!--Device-cloudSync-function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -42,7 +38,7 @@ Subscribes to the change of a file. The callback returns the changed data.
 | 14000002 | Invalid uri. |
 | 13900012 | Permission denied |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';

@@ -4,10 +4,6 @@ Defines the pausing download options, which are used to control the pause behavi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface PauseDownloadOptions--><!--Device-update-export interface PauseDownloadOptions-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -31,10 +27,6 @@ Whether to allow automatic resuming of download. This parameter is set only when
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PauseDownloadOptions-isAllowAutoResume: boolean--><!--Device-PauseDownloadOptions-isAllowAutoResume: boolean-End-->
 

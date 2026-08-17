@@ -16,10 +16,6 @@ Unregister device offline callback
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-function offDeviceOffline(callback?: Callback<string>): void--><!--Device-avSession-function offDeviceOffline(callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast

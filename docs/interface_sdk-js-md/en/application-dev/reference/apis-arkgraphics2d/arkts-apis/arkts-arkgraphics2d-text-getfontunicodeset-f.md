@@ -16,10 +16,6 @@ Obtains an array of font Unicode by font file path. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-text-function getFontUnicodeSet(path: string | Resource, index: int) : Promise<Array<int>>--><!--Device-text-function getFontUnicodeSet(path: string | Resource, index: int) : Promise<Array<int>>-End-->
@@ -39,7 +35,7 @@ Obtains an array of font Unicode by font file path. This API uses a promise to r
 | --- | --- |
 | Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the Unicode array corresponding to the font file. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'

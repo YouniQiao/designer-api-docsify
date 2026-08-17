@@ -4,10 +4,6 @@ Describe the error reason.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-hid-enum ErrorReason--><!--Device-hid-enum ErrorReason-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ RSP_SUCCESS = 0
 Constant representing success response for set report.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Constant representing error response for set report due to not ready.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ErrorReason-RSP_NOT_READY = 1--><!--Device-ErrorReason-RSP_NOT_READY = 1-End-->
@@ -61,10 +49,6 @@ RSP_INVALID_REPORT_ID = 2
 Constant representing error response for set report due to invalid report ID.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ Constant representing error response for set report due to unsupported request.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ErrorReason-RSP_UNSUPPORTED_REQ = 3--><!--Device-ErrorReason-RSP_UNSUPPORTED_REQ = 3-End-->
@@ -102,10 +82,6 @@ Constant representing error response for set report due to invalid parameter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ErrorReason-RSP_INVALID_PARAM = 4--><!--Device-ErrorReason-RSP_INVALID_PARAM = 4-End-->
@@ -121,10 +97,6 @@ RSP_UNKNOWN = 14
 Constant representing error response for Set Report with unknown reason.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

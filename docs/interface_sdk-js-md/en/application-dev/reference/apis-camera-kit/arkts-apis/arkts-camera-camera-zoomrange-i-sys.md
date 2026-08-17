@@ -4,10 +4,6 @@ Describes the zoom range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface ZoomRange--><!--Device-camera-interface ZoomRange-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -32,10 +28,6 @@ Maximum zoom value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-ZoomRange-readonly max: double--><!--Device-ZoomRange-readonly max: double-End-->
@@ -55,10 +47,6 @@ Minimum zoom value.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

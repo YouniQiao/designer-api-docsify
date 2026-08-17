@@ -16,10 +16,6 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-sendableResourceManager-export function sendableResourceToResource(resource: SendableResource): Resource--><!--Device-sendableResourceManager-export function sendableResourceToResource(resource: SendableResource): Resource-End-->
@@ -44,7 +40,7 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json

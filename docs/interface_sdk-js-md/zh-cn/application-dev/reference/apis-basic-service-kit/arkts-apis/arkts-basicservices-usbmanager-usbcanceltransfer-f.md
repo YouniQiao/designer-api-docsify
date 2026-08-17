@@ -6,13 +6,9 @@
 function usbCancelTransfer(transfer: UsbDataTransferParams): void
 ```
 
-取消异步传输请求。 > **说明：** > > 该接口的主要作用是主动取消尚未完成的USB数据传输请求（如usbSubmitTransfer提交的传输）。<br> > > 在调用该接口前需要通过 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface) > claim通信接口。
+取消异步传输请求。 > **说明：** > > 该接口的主要作用是主动取消尚未完成的USB数据传输请求（如usbSubmitTransfer提交的传输）。<br> > > 在调用该接口前需要通过 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface) > claim通信接口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void-End-->
 
@@ -22,7 +18,7 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | 是 | 在取消传输的接口中，只需要填充[USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#USBDevicePipe)和 [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md#USBEndpoint)即可。 |
+| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | 是 | 在取消传输的接口中，只需要填充[USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#usbdevicepipe)和 [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md#usbendpoint)即可。 |
 
 **错误码：**
 
@@ -34,7 +30,7 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 | [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) | No such device (it may have been disconnected). |
 | [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
 
-## 示例
+**示例**
 
 以下示例代码需要放入具体的方法中执行，只是调用usbCancelTransfer接口的必要流程，实际调用时，设备开发者需要遵循目标USB设备的协议规范进行调用，具体协议要求请参考设备的技术文档，确保数据的正确传输和设备的兼容性。
 

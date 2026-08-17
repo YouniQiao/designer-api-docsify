@@ -16,10 +16,6 @@ start ManualNetworkScan , Real-time report.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-radio-function startManualNetworkScan(slotId: int, callback: Callback<NetworkSearchRealTimeResult>): void--><!--Device-radio-function startManualNetworkScan(slotId: int, callback: Callback<NetworkSearchRealTimeResult>): void-End-->

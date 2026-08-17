@@ -1,14 +1,10 @@
 # LiveFormExtensionContext
 
-**LiveFormExtensionContext**, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext), is the context of [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#LiveFormExtensionAbility).
+**LiveFormExtensionContext**, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext), is the context of [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#liveformextensionability).
 
 **Inheritance/Implementation:** LiveFormExtensionContext extends ExtensionContext
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class LiveFormExtensionContext--><!--Device-unnamed-declare class LiveFormExtensionContext-End-->
 
@@ -23,10 +19,6 @@ public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): l
 Connect a service extension ability.The destination of the connection must be a service extension. You must implement the ConnectOptions interface to obtain the proxy of the target service extension when the Service extension is connected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,13 +56,9 @@ Connect a service extension ability.The destination of the connection must be a 
 public disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 ```
 
-Disconnect an ability to a service extension, in contrast to [connectServiceExtensionAbility](#connectServiceExtensionAbility).
+Disconnect an ability to a service extension, in contrast to [connectServiceExtensionAbility](#connectserviceextensionability).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

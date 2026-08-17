@@ -16,10 +16,6 @@ Unsubscribe to humidity sensor data, {@code SensorId.HUMIDITY}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function offHumidityChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<HumidityResponse>): void--><!--Device-sensor-function offHumidityChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<HumidityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

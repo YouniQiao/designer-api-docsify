@@ -16,10 +16,6 @@ Sends text messages after a collaboration session is set up.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-abilityConnectionManager-function sendMessage(sessionId: int, msg: string): Promise<void>--><!--Device-abilityConnectionManager-function sendMessage(sessionId: int, msg: string): Promise<void>-End-->
@@ -45,7 +41,7 @@ Sends text messages after a collaboration session is set up.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

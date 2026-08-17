@@ -4,10 +4,6 @@ Describes the settings for filtering media files.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-export class OperationItem--><!--Device-photoAccessHelper-export class OperationItem-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -24,15 +20,11 @@ import { photoAccessHelper } from 'photoAccessHelper';
 field?: PhotoKeys
 ```
 
-Column name in the data table. Currently, only the following key fields are supported: **URI**, **PHOTO_TYPE**, **DISPLAY_NAME**, **SIZE**, **DURATION**, **WIDTH**, **HEIGHT**, **ORIENTATION**, **FAVORITE**, **TITLE**, **POSITION**, **PHOTO_SUBTYPE**, **DYNAMIC_RANGE_TYPE**, **COVER_POSITION**, **BURST_KEY**, **LCD_SIZE**, **THM_SIZE**, **DETAIL_TIME**, **MEDIA_SUFFIX**, **OWNER_ALBUM_ID**, **ASPECT_RATIO** and **DATE_TAKEN_MS**. When [select](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select) is used to set this parameter, an invalid field results in error code 401. When [@ohos.file.PhotoPickerComponent (PhotoPickerComponent)](arkts-medialibrary-file-photopickercomponent-photopickercomponent-s.md#PhotoPickerComponent) is used to set this parameter, an invalid field does not trigger the **onPickerControllerReady** callback. This field is not involved in non-conditional predicates such as **and**, **or**, **beginWrap**, and **endWrap**.
+Column name in the data table. Currently, only the following key fields are supported: **URI**, **PHOTO_TYPE**, **DISPLAY_NAME**, **SIZE**, **DURATION**, **WIDTH**, **HEIGHT**, **ORIENTATION**, **FAVORITE**, **TITLE**, **POSITION**, **PHOTO_SUBTYPE**, **DYNAMIC_RANGE_TYPE**, **COVER_POSITION**, **BURST_KEY**, **LCD_SIZE**, **THM_SIZE**, **DETAIL_TIME**, **MEDIA_SUFFIX**, **OWNER_ALBUM_ID**, **ASPECT_RATIO** and **DATE_TAKEN_MS**. When [select](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select) is used to set this parameter, an invalid field results in error code 401. When [@ohos.file.PhotoPickerComponent (PhotoPickerComponent)](arkts-medialibrary-file-photopickercomponent-photopickercomponent-s.md#photopickercomponent) is used to set this parameter, an invalid field does not trigger the **onPickerControllerReady** callback. This field is not involved in non-conditional predicates such as **and**, **or**, **beginWrap**, and **endWrap**.
 
 **Type:** [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,10 +46,6 @@ Predicates.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -77,10 +65,6 @@ Values needed for matching different predicates. This field is not involved in n
 **Type:** Array&lt;[OperationValueType](arkts-medialibrary-photoaccesshelper-operationvaluetype-t.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

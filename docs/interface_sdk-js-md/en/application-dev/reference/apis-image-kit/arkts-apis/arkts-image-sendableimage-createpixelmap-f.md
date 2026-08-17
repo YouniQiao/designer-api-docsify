@@ -16,10 +16,6 @@ Create PixelMap by data buffer.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendableImage-function createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise<PixelMap>--><!--Device-sendableImage-function createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -37,7 +33,7 @@ Create PixelMap by data buffer.
 | --- | --- |
 | Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

@@ -16,10 +16,6 @@ Sets the disposed status for an application. This API returns the result synchro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
 <!--Device-appControl-function setDisposedStatusSync(appId: string, disposedWant: Want): void--><!--Device-appControl-function setDisposedStatusSync(appId: string, disposedWant: Want): void-End-->
@@ -45,7 +41,7 @@ Sets the disposed status for an application. This API returns the result synchro
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appControl } from '@kit.AbilityKit';

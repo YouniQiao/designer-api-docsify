@@ -4,10 +4,6 @@ Enumerates the intent parameter categories available for the @InsightIntentLink 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum LinkParamCategory--><!--Device-unnamed-declare enum LinkParamCategory-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -21,10 +17,6 @@ LINK = 'link'
 Category of link. Intent parameters are appended to the end of a URI link and passed to the application via the URI.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,13 +32,9 @@ Category of link. Intent parameters are appended to the end of a URI link and pa
 WANT = 'want'
 ```
 
-Category of want. Intent parameters are passed to the application through the **parameters** field in [Want](arkts-ability-app-ability-want-want-c.md#Want).
+Category of want. Intent parameters are passed to the application through the **parameters** field in [Want](arkts-ability-app-ability-want-want-c.md#want).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

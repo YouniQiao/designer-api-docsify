@@ -10,10 +10,6 @@ Cancel callback when the telCall state is updated.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-observer-function offCallStateChangeEx(callback?: Callback<TelCallState>): void--><!--Device-observer-function offCallStateChangeEx(callback?: Callback<TelCallState>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
@@ -22,7 +18,7 @@ Cancel callback when the telCall state is updated.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | 否 | Indicates the callback to unsubscribe from the callStateChangeEx event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TelCallState&gt; | 否 | Indicates the callback to unsubscribe from the callStateChangeEx event. |
 
 **错误码：**
 
@@ -33,7 +29,7 @@ Cancel callback when the telCall state is updated.
 | [8800003](../errorcode-telephony.md#8800003-系统内部错误) | System internal error. |
 | [8800001](../errorcode-telephony.md#8800001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { call } from '@kit.TelephonyKit';

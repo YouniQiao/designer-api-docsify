@@ -4,10 +4,6 @@ Declare interface OperateCheckV2Options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface OperateCheckV2Options--><!--Device-unnamed-export interface OperateCheckV2Options-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,10 +37,6 @@ The accessibilityDescription of the checkbox/switch/radio.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -67,10 +59,6 @@ The accessibilityLevel of the checkbox/switch/radio.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -90,10 +78,6 @@ The accessibilityText of the checkbox/switch/radio
 **Type:** ResourceStr
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,10 +99,6 @@ Whether is checked on default
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -138,10 +118,6 @@ Callback function when operate the checkbox/switch/radio
 **Type:** [OnChangeCallback](arkts-arkui-onchangecallback-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

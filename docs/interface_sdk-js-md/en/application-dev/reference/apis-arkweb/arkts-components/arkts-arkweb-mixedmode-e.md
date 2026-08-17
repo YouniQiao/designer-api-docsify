@@ -1,12 +1,8 @@
 # MixedMode
 
-The Web's behavior to load from HTTP or HTTPS. Defaults to MixedMode.None.
+Enumerates the mixed content modes.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum MixedMode--><!--Device-unnamed-declare enum MixedMode-End-->
 
@@ -18,13 +14,9 @@ The Web's behavior to load from HTTP or HTTPS. Defaults to MixedMode.None.
 All = 0
 ```
 
-Loose mode: Allow a secure origin to load content from any other origin.
+Loose mode: HTTP and HTTPS hybrid content can be loaded. This means that all insecure content can be loaded.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ Loose mode: Allow a secure origin to load content from any other origin.
 Compatible = 1
 ```
 
-Compatible mode: Some insecure content may be allowed to be loaded by a secure origin.
+Compatible mode. Allows some HTTP content to be loaded on an HTTPS page.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ Compatible mode: Some insecure content may be allowed to be loaded by a secure o
 None = 2
 ```
 
-Strict mode: Not allow a secure origin to load content from an insecure origin.
+Strict mode: HTTP and HTTPS hybrid content cannot be loaded.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

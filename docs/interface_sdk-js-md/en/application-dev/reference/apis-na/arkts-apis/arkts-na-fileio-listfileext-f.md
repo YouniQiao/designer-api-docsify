@@ -13,9 +13,7 @@ Lists all files in a directory. This API supports recursive listing of files and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +26,7 @@ Lists all files in a directory. This API supports recursive listing of files and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileExtOptions](arkts-na-file-fs-listfileextoptions-i.md) | No | Options for listing files. The default value is empty, indicating no recursive listing of files or file filtering and no limit on the number of files to be listed. |
+| options | [ListFileExtOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-listfileextoptions-i.md) | No | Options for listing files. The default value is empty, indicating no recursive listing of files or file filtering and no limit on the number of files to be listed. |
 
 **Return value:**
 

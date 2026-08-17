@@ -4,10 +4,6 @@ Rounded rectangle. > **NOTE：**> > - The initial APIs of this class are support
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class RoundRect--><!--Device-drawing-class RoundRect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -28,10 +24,6 @@ Copies a rounded rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RoundRect-constructor(roundRect: RoundRect)--><!--Device-RoundRect-constructor(roundRect: RoundRect)-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -51,10 +43,6 @@ constructor(rect: common2D.Rect, xRadii: double, yRadii: double)
 A constructor used to create a **RoundRect** object. A rounded rectangle is created when both **xRadii** and **yRadii** are greater than 0. Otherwise, only a rectangle is created.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RoundRect-constructor(rect: common2D.Rect, xRadii: double, yRadii: double)--><!--Device-RoundRect-constructor(rect: common2D.Rect, xRadii: double, yRadii: double)-End-->
 
@@ -83,10 +71,6 @@ getCorner(pos: CornerPos): common2D.Point
 Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point--><!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point-End-->
 
@@ -120,10 +104,6 @@ Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point | undefined--><!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -156,10 +136,6 @@ Translates this rounded rectangle by an offset along the X axis and Y axis.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RoundRect-offset(dx: double, dy: double): void--><!--Device-RoundRect-offset(dx: double, dy: double): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -186,10 +162,6 @@ setCorner(pos: CornerPos, x: double, y: double): void
 Sets the radii of the specified rounded corner in this rounded rectangle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RoundRect-setCorner(pos: CornerPos, x: double, y: double): void--><!--Device-RoundRect-setCorner(pos: CornerPos, x: double, y: double): void-End-->
 

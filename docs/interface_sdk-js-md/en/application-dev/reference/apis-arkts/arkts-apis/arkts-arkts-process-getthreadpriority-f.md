@@ -16,11 +16,9 @@ Obtains the thread priority based on the specified TID.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getThreadPriority](arkts-arkts-process-processmanager-c.md#getThreadPriority)
+**Substitutes:** [getThreadPriority](arkts-arkts-process-processmanager-c.md#getthreadpriority)
 
 <!--Device-process-function getThreadPriority(v: number): number--><!--Device-process-function getThreadPriority(v: number): number-End-->
 
@@ -38,7 +36,7 @@ Obtains the thread priority based on the specified TID.
 | --- | --- |
 | number | Priority of the thread. The priority depends on the operating system. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let tid = process.tid;

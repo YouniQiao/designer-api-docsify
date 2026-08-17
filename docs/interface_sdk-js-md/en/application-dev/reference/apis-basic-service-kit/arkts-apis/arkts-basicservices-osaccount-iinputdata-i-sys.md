@@ -4,10 +4,6 @@ Provides callbacks for PIN operations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface IInputData--><!--Device-osAccount-interface IInputData-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -30,10 +26,6 @@ Called to notify the caller the data is set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IInputData-onSetData(authSubType: AuthSubType, data: Uint8Array): void--><!--Device-IInputData-onSetData(authSubType: AuthSubType, data: Uint8Array): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -55,7 +47,7 @@ Called to notify the caller the data is set.
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid pinSubType. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0, 0]);

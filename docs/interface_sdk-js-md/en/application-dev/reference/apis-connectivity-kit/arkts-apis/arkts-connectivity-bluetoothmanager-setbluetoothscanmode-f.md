@@ -16,11 +16,9 @@ Sets the Bluetooth scan mode for a device. On API 10 and above, the permission r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [setBluetoothScanMode](arkts-connectivity-connection-setbluetoothscanmode-f.md#setBluetoothScanMode)
+**Substitutes:** [setBluetoothScanMode](arkts-connectivity-connection-setbluetoothscanmode-f.md#setbluetoothscanmode)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -34,7 +32,7 @@ Sets the Bluetooth scan mode for a device. On API 10 and above, the permission r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | ScanMode | Yes | Indicates the Bluetooth scan mode to set, [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md#ScanMode). |
+| mode | ScanMode | Yes | Indicates the Bluetooth scan mode to set, [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmode). |
 | duration | number | Yes | Indicates the duration in seconds, in which the host is discoverable. |
 
 **Error codes:**
@@ -48,7 +46,7 @@ Sets the Bluetooth scan mode for a device. On API 10 and above, the permission r
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

@@ -4,10 +4,6 @@ Defines the cause of a task failure. > **NOTE：**> > In API version 12 or earli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-enum Faults--><!--Device-agent-enum Faults-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -21,10 +17,6 @@ OTHERS = 0xFF
 Other fault.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Network disconnection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Faults-DISCONNECTED = 0x00--><!--Device-Faults-DISCONNECTED = 0x00-End-->
@@ -61,10 +49,6 @@ TIMEOUT = 0x10
 Timeout.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ Protocol error, for example, an internal server error (500) or a data range that
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Faults-PROTOCOL = 0x20--><!--Device-Faults-PROTOCOL = 0x20-End-->
@@ -101,10 +81,6 @@ PARAM = 0x30
 Parameter error, for example, incorrect URL format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -122,10 +98,6 @@ File system I/O error, for example, an error that occurs during the open, search
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Faults-FSIO = 0x40--><!--Device-Faults-FSIO = 0x40-End-->
@@ -141,10 +113,6 @@ DNS = 0x50
 DNS resolution error.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -162,10 +130,6 @@ TCP connection error.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Faults-TCP = 0x60--><!--Device-Faults-TCP = 0x60-End-->
@@ -181,10 +145,6 @@ SSL = 0x70
 SSL connection error, for example, a certificate error or certificate verification failure.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -202,10 +162,6 @@ Redirection error.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Faults-REDIRECT = 0x80--><!--Device-Faults-REDIRECT = 0x80-End-->
@@ -221,10 +177,6 @@ LOW_SPEED = 0x90
 Low speed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Faults-LOW_SPEED = 0x90--><!--Device-Faults-LOW_SPEED = 0x90-End-->
 

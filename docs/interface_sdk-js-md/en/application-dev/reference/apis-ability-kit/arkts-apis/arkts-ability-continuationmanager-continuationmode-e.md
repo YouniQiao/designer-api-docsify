@@ -4,8 +4,6 @@ Enumerates the continuation modes provided by the device selection module.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 <!--Device-continuationManager-export enum ContinuationMode--><!--Device-continuationManager-export enum ContinuationMode-End-->
@@ -21,8 +19,6 @@ COLLABORATION_SINGLE = 0
 Single-choice mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 
@@ -43,8 +39,6 @@ COLLABORATION_MULTIPLE = 1
 Multi-choice mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 

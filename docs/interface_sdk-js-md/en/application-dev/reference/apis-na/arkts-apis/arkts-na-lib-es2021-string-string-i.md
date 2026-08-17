@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
 
 ## replaceAll
@@ -17,10 +13,6 @@ replaceAll(searchValue: string | RegExp, replaceValue: string): string
 Replace all instances of a substring in a string, using a regular expression or search string.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-replaceAll(searchValue: string | RegExp, replaceValue: string): string--><!--Device-String-replaceAll(searchValue: string | RegExp, replaceValue: string): string-End-->
 
@@ -46,10 +38,6 @@ replaceAll(searchValue: string | RegExp, replacer: (substring: string, ...args: 
 Replace all instances of a substring in a string, using a regular expression or search string.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-replaceAll(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string--><!--Device-String-replaceAll(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string-End-->
 

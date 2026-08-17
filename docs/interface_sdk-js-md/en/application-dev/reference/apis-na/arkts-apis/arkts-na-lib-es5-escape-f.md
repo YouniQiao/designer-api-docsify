@@ -10,8 +10,6 @@ Computes a new string in which certain characters have been replaced by a hexade
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-unnamed-declare function escape(string: string): string--><!--Device-unnamed-declare function escape(string: string): string-End-->

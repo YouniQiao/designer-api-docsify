@@ -10,10 +10,6 @@ function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>):
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>): void--><!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>): void-End-->
@@ -27,7 +23,7 @@ function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeUuid | string | 是 | 卷设备uuid。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 获取指定卷可用空间之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 获取指定卷可用空间之后的回调。 |
 
 **错误码：**
 
@@ -40,7 +36,7 @@ function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>):
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -95,10 +91,6 @@ function getFreeSizeOfVolume(volumeUuid: string): Promise<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string): Promise<long>--><!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string): Promise<long>-End-->
@@ -130,7 +122,7 @@ function getFreeSizeOfVolume(volumeUuid: string): Promise<long>
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

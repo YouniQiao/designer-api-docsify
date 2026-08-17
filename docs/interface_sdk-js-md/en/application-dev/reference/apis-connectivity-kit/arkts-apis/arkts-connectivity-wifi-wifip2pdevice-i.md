@@ -4,11 +4,9 @@ P2P device information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md#WifiP2pDevice)
+**Substitutes:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md#wifip2pdevice)
 
 <!--Device-wifi-interface WifiP2pDevice--><!--Device-wifi-interface WifiP2pDevice-End-->
 
@@ -32,11 +30,9 @@ Device mac address
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deviceAddress](arkts-connectivity-wifimanager-wifip2pdevice-i.md#deviceAddress)
+**Substitutes:** [deviceAddress](arkts-connectivity-wifimanager-wifip2pdevice-i.md#deviceaddress)
 
 <!--Device-WifiP2pDevice-deviceAddress: string--><!--Device-WifiP2pDevice-deviceAddress: string-End-->
 
@@ -54,11 +50,9 @@ Device name
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deviceName](arkts-connectivity-wifimanager-wifip2pdevice-i.md#deviceName)
+**Substitutes:** [deviceName](arkts-connectivity-wifimanager-wifip2pdevice-i.md#devicename)
 
 <!--Device-WifiP2pDevice-deviceName: string--><!--Device-WifiP2pDevice-deviceName: string-End-->
 
@@ -76,11 +70,9 @@ Device status
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deviceStatus](arkts-connectivity-wifimanager-wifip2pdevice-i.md#deviceStatus)
+**Substitutes:** [deviceStatus](arkts-connectivity-wifimanager-wifip2pdevice-i.md#devicestatus)
 
 <!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus--><!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus-End-->
 
@@ -97,8 +89,6 @@ Device group capabilities
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -120,11 +110,9 @@ Primary device type
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [primaryDeviceType](arkts-connectivity-wifimanager-wifip2pdevice-i.md#primaryDeviceType)
+**Substitutes:** [primaryDeviceType](arkts-connectivity-wifimanager-wifip2pdevice-i.md#primarydevicetype)
 
 <!--Device-WifiP2pDevice-primaryDeviceType: string--><!--Device-WifiP2pDevice-primaryDeviceType: string-End-->
 

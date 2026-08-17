@@ -8,10 +8,6 @@ Defines a onCompleted function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-type OnCompletedFn = (error: BusinessError<void>) => void--><!--Device-unnamed-type OnCompletedFn = (error: BusinessError<void>) => void-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup

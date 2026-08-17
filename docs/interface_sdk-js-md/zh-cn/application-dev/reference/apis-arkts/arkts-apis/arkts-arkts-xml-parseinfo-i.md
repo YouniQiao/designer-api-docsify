@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-xml-interface ParseInfo--><!--Device-xml-interface ParseInfo-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -22,10 +18,6 @@ ArkTS-Sta: getAttributeCount(): int 当前开始标记的属性数量，用于�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseInfo-getAttributeCount(): int--><!--Device-ParseInfo-getAttributeCount(): int-End-->
@@ -38,7 +30,7 @@ ArkTS-Sta: getAttributeCount(): int 当前开始标记的属性数量，用于�
 | --- | --- |
 | int | 当前开始标记的属性数量，用于遍历和处理XML属性。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -68,10 +60,6 @@ ArkTS-Sta: getColumnNumber(): int 获取当前列号，从1开始计数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseInfo-getColumnNumber(): int--><!--Device-ParseInfo-getColumnNumber(): int-End-->
@@ -84,7 +72,7 @@ ArkTS-Sta: getColumnNumber(): int 获取当前列号，从1开始计数。
 | --- | --- |
 | int | 当前元素的列号（从1开始），用于定位XML解析位置。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -114,10 +102,6 @@ ArkTS-Sta: getDepth(): int 获取元素的当前深度。 > **说明：** > > �
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseInfo-getDepth(): int--><!--Device-ParseInfo-getDepth(): int-End-->
@@ -130,7 +114,7 @@ ArkTS-Sta: getDepth(): int 获取元素的当前深度。 > **说明：** > > �
 | --- | --- |
 | int | 元素的嵌套深度（从0开始），用于判断XML层级结构。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -164,10 +148,6 @@ ArkTS-Sta: getLineNumber(): int 获取当前行号，从1开始。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseInfo-getLineNumber(): int--><!--Device-ParseInfo-getLineNumber(): int-End-->
@@ -180,7 +160,7 @@ ArkTS-Sta: getLineNumber(): int 获取当前行号，从1开始。
 | --- | --- |
 | int | 当前元素的行号（从1开始），用于定位XML解析位置。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -210,10 +190,6 @@ getName(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseInfo-getName(): string--><!--Device-ParseInfo-getName(): string-End-->
@@ -226,7 +202,7 @@ getName(): string
 | --- | --- |
 | string | 当前元素的名称（不包含命名空间前缀），用于标识XML元素。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -256,10 +232,6 @@ getNamespace(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseInfo-getNamespace(): string--><!--Device-ParseInfo-getNamespace(): string-End-->
@@ -272,7 +244,7 @@ getNamespace(): string
 | --- | --- |
 | string | 返回当前元素的命名空间。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -306,10 +278,6 @@ getPrefix(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseInfo-getPrefix(): string--><!--Device-ParseInfo-getPrefix(): string-End-->
@@ -322,7 +290,7 @@ getPrefix(): string
 | --- | --- |
 | string | 返回当前元素的命名空间前缀，如果元素没有命名空间前缀则返回空字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -356,10 +324,6 @@ getText(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseInfo-getText(): string--><!--Device-ParseInfo-getText(): string-End-->
@@ -372,7 +336,7 @@ getText(): string
 | --- | --- |
 | string | 当前事件的文本内容（如标签值、注释等），用于获取解析的XML数据。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -402,10 +366,6 @@ isEmptyElementTag(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseInfo-isEmptyElementTag(): boolean--><!--Device-ParseInfo-isEmptyElementTag(): boolean-End-->
@@ -418,7 +378,7 @@ isEmptyElementTag(): boolean
 | --- | --- |
 | boolean | 返回true，表示当前元素为空元素。返回false，表示当前元素为非空元素。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -452,10 +412,6 @@ isWhitespace(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseInfo-isWhitespace(): boolean--><!--Device-ParseInfo-isWhitespace(): boolean-End-->
@@ -468,7 +424,7 @@ isWhitespace(): boolean
 | --- | --- |
 | boolean | 返回true，表示当前文本事件仅包含空格字符。返回false，表示当前文本事件包含非空格字符。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';

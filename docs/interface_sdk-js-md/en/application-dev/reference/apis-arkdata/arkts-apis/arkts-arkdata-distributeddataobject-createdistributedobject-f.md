@@ -16,8 +16,6 @@ Creates a distributed data object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [create](arkts-arkdata-distributeddataobject-create-f.md#create)
@@ -38,7 +36,7 @@ Creates a distributed data object.
 | --- | --- |
 | [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) | Distributed data object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class SourceObject {

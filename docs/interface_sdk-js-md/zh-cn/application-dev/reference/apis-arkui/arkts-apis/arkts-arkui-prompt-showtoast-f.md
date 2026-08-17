@@ -10,8 +10,6 @@ function showToast(options: ShowToastOptions): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** showToast
@@ -26,7 +24,7 @@ function showToast(options: ShowToastOptions): void
 | --- | --- | --- | --- |
 | options | ShowToastOptions | 是 | 文本弹窗选项。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import prompt from '@ohos.prompt'

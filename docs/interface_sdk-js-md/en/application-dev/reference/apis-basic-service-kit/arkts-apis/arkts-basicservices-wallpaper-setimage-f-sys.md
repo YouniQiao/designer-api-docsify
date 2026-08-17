@@ -16,10 +16,6 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
 <!--Device-wallpaper-function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType, callback: AsyncCallback<void>): void--><!--Device-wallpaper-function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType, callback: AsyncCallback<void>): void-End-->
@@ -44,7 +40,7 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -92,10 +88,6 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
 <!--Device-wallpaper-function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>-End-->
@@ -125,7 +117,7 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

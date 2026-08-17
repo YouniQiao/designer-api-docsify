@@ -8,10 +8,6 @@ Defines the callback triggered for the companion device selection. When the syst
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-companionDeviceAuth-type DeviceSelectCallback = (selectPurpose: int) => DeviceSelectResult--><!--Device-companionDeviceAuth-type DeviceSelectCallback = (selectPurpose: int) => DeviceSelectResult-End-->
@@ -24,7 +20,7 @@ Defines the callback triggered for the companion device selection. When the syst
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectPurpose | int | Yes | Selection purpose. It identifies the purpose of the current device selection. For details about the value, see [SelectPurpose](arkts-userauthentication-companiondeviceauth-selectpurpose-e-sys.md#SelectPurpose-(System-API)). **SELECT_ADD_DEVICE(1)** means to select the device for adding a template, and **SELECT_AUTH_DEVICE(2)** means to select the device for authentication. Vendors can customize the extended value (greater than or equal to 10000). The application should return the corresponding device list based on the selection purpose. |
+| selectPurpose | int | Yes | Selection purpose. It identifies the purpose of the current device selection. For details about the value, see [SelectPurpose](arkts-userauthentication-companiondeviceauth-selectpurpose-e-sys.md#selectpurpose-system-api). **SELECT_ADD_DEVICE(1)** means to select the device for adding a template, and **SELECT_AUTH_DEVICE(2)** means to select the device for authentication. Vendors can customize the extended value (greater than or equal to 10000). The application should return the corresponding device list based on the selection purpose. |
 
 **Return value:**
 

@@ -10,11 +10,9 @@ Registers a listener to observe the mission status.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** on
+**Substitutes:** [on](arkts-ability-missionmanager-onmission-f-sys.md#onmission)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -36,7 +34,7 @@ Registers a listener to observe the mission status.
 | --- | --- |
 | number | Index of the mission status listener, which is created by the system and allocated when the listener is registered. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

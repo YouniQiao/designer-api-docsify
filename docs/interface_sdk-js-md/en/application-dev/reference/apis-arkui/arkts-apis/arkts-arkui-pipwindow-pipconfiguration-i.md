@@ -4,10 +4,6 @@ Defines the parameters for creating a PiP controller.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-PiPWindow-interface PiPConfiguration--><!--Device-PiPWindow-interface PiPConfiguration-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Original XComponent controller.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPConfiguration-componentController: XComponentController--><!--Device-PiPConfiguration-componentController: XComponentController-End-->
@@ -51,10 +43,6 @@ Height of the original content, in px. It is used to determine the aspect ratio 
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Width of the original content, in px. It is used to determine the aspect ratio o
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPConfiguration-contentWidth?: int--><!--Device-PiPConfiguration-contentWidth?: int-End-->
@@ -96,10 +80,6 @@ Context environment.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPConfiguration-context: BaseContext--><!--Device-PiPConfiguration-context: BaseContext-End-->
@@ -117,10 +97,6 @@ A list of optional component groups of the PiP controller. An application can co
 **Type:** Array&lt;[PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -142,10 +118,6 @@ Whether the PiP window automatically snaps to screen corners. When this feature 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPConfiguration-cornerAdsorptionEnabled?: boolean--><!--Device-PiPConfiguration-cornerAdsorptionEnabled?: boolean-End-->
@@ -164,10 +136,6 @@ Custom UI controller, which is used to implement the custom UI features on the P
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPConfiguration-customUIController?: NodeController--><!--Device-PiPConfiguration-customUIController?: NodeController-End-->
@@ -185,10 +153,6 @@ Size of the PiP window that the current app starts for the first time. **0**: no
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -210,10 +174,6 @@ ID of the subpage under the **Navigation** component. After the Full-screen Wind
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPConfiguration-handleId?: int--><!--Device-PiPConfiguration-handleId?: int-End-->
@@ -232,10 +192,6 @@ A page-level UI state storage unit. In multi-instance scenarios, it can be used 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPConfiguration-localStorage?: LocalStorage--><!--Device-PiPConfiguration-localStorage?: LocalStorage-End-->
@@ -248,15 +204,11 @@ A page-level UI state storage unit. In multi-instance scenarios, it can be used 
 navigationId?: string
 ```
 
-ID of the **Navigation** component. If no value is passed, the page does not need to be cached. 1. When the UIAbility uses Navigation to manage pages, set the ID of the **Navigation** component for the PiP controller. This ensures that the original page can be restored from the PiP window. 2. When the UIAbility uses [Router](../../apis-na/arkts-apis/arkts-router.md#@ohos.router) to manage pages, you do not need to set the ID of the **Navigation** component for the PiP controller. 3. If the UIAbility has only one page, you do not need to set the navigation ID. The original page can be restored from the PiP window.
+ID of the **Navigation** component. If no value is passed, the page does not need to be cached. 1. When the UIAbility uses Navigation to manage pages, set the ID of the **Navigation** component for the PiP controller. This ensures that the original page can be restored from the PiP window. 2. When the UIAbility uses [Router](arkts-router.md#ohosrouter) to manage pages, you do not need to set the ID of the **Navigation** component for the PiP controller. 3. If the UIAbility has only one page, you do not need to set the navigation ID. The original page can be restored from the PiP window.
 
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -275,10 +227,6 @@ Template type, which is used to distinguish video playback, video call, video me
 **Type:** [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

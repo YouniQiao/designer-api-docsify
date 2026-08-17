@@ -1,12 +1,8 @@
 # WebStorage
 
-通过WebStorage可管理Web SQL数据库接口和HTML5 Web存储接口，每个应用中的所有Web组件共享一个WebStorage。 > **说明：** > > - 本Class首批接口从API version 9开始支持。 > > - 示例效果请以真机运行为准。 > > - 目前调用WebStorage下的方法，都需要先加载Web组件。 > > - 本Class下的接口在ArkWeb内核升级到M132版本后因内核废弃Web SQL，对Web SQL数据库的管理失效。ArkWeb内核版本参考ArkWeb简介 > [约束与限制](../../../web/web-component-overview.md#约束与限制)。
+通过WebStorage可管理Web SQL数据库接口和HTML5 Web存储接口，每个应用中的所有Web组件共享一个WebStorage。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 <!--Device-webview-class WebStorage--><!--Device-webview-class WebStorage-End-->
 
@@ -22,10 +18,6 @@ static deleteAllData(incognito?: boolean): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebStorage-static deleteAllData(incognito?: boolean): void--><!--Device-WebStorage-static deleteAllData(incognito?: boolean): void-End-->
@@ -36,7 +28,7 @@ static deleteAllData(incognito?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| incognito | boolean | 否 | true表示删除所有隐私模式下内存中的web数据，false表示删除正常非隐私模式下Web的SQL数据库当前使用的所有存储。<br>默认值：false。<br>传入 undefined或null时为false。<br>**起始版本：** 11 |
+| incognito | boolean | 否 | true表示删除所有隐私模式下内存中的web数据，false表示删除正常非隐私模式下被JavaScript存储API使用的所有存储数据，这包括Web SQL数据库和 HTML5支持的Web存储API。 <br>默认值：false。 <br>传入undefined或null时为false。<br>**起始版本：** 11 |
 
 ## deleteOrigin
 
@@ -44,13 +36,9 @@ static deleteAllData(incognito?: boolean): void
 static deleteOrigin(origin: string): void
 ```
 
-清除指定源所使用的存储。
+清除指定源所使用的存储。 > **说明：** > > 方法调用关系： > > origin参数应从getOrigins()方法获取。 > > 建议先调用getOrigins()获取源列表，再调用deleteOrigin()清除指定源存储。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -62,7 +50,7 @@ static deleteOrigin(origin: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| origin | string | 是 | 指定源的字符串索引，来自于 getOrigins。 |
+| origin | string | 是 | 指定源的字符串索引，来自于 [getOrigins](#getorigins)。 |
 
 **错误码：**
 
@@ -77,13 +65,9 @@ static deleteOrigin(origin: string): void
 static getOriginQuota(origin: string): Promise<number>
 ```
 
-以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。
+以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。 > **说明：** > > 方法调用关系： > > origin参数应从getOrigins()方法获取。 > > 建议先调用getOrigins()获取源列表，再调用getOriginQuota()获取指定源配额。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -116,13 +100,9 @@ static getOriginQuota(origin: string): Promise<number>
 static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 ```
 
-使用callback回调异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。
+使用callback回调异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。 > **说明：** > > 方法调用关系： > > origin参数应从getOrigins()方法获取。 > > 建议先调用getOrigins()获取源列表，再调用getOriginQuota()获取指定源配额。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -135,7 +115,7 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | origin | string | 是 | 指定源的字符串索引。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 指定源的存储配额。<br>number是long型整数，范围为[-2147483648, 2147483647]。<br>单位：byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 指定源的存储配额。 <br>number是long型整数，范围为[-2147483648, 2147483647]。 <br>单位：byte。 |
 
 **错误码：**
 
@@ -150,13 +130,9 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 static getOriginUsage(origin: string): Promise<number>
 ```
 
-以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。
+以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。 > **说明：** > > 方法调用关系： > > origin参数应从getOrigins()方法获取。 > > 建议先调用getOrigins()获取源列表，再调用getOriginUsage()获取指定源使用量。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -189,13 +165,9 @@ static getOriginUsage(origin: string): Promise<number>
 static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 ```
 
-以回调方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。
+以回调方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。 > **说明：** > > 方法调用关系： > > origin参数应从getOrigins()方法获取。 > > 建议先调用getOrigins()获取源列表，再调用getOriginUsage()获取指定源使用量。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -208,7 +180,7 @@ static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | origin | string | 是 | 指定源的字符串索引 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 指定源的存储量。<br>单位：byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 指定源的存储量。 <br>单位：byte。 |
 
 **错误码：**
 
@@ -227,10 +199,6 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>--><!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>-End-->
@@ -241,7 +209,7 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[WebStorageOrigin](../../apis-na/arkts-apis/arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. |
+| Promise&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Promise实例，用于获取当前所有源的信息。 |
 
 **错误码：**
 
@@ -260,10 +228,6 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void--><!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void-End-->
@@ -274,7 +238,7 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](../../apis-na/arkts-apis/arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | 是 | 以数组方式返回源的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | 是 | 以数组方式返回源的信息。 |
 
 **错误码：**
 

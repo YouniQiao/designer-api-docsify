@@ -16,10 +16,6 @@ Execute OS upgrade if current OS upgrade is not the latest one.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
 <!--Device-eSIM-function startOsu(slotId: int): Promise<OsuStatus>--><!--Device-eSIM-function startOsu(slotId: int): Promise<OsuStatus>-End-->
@@ -51,7 +47,7 @@ Execute OS upgrade if current OS upgrade is not the latest one.
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

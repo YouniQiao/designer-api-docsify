@@ -6,10 +6,6 @@ This module provides information related to `SendableResource`, including the ap
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface SendableResource--><!--Device-unnamed-interface SendableResource-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -25,10 +21,6 @@ Application bundle name.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,10 +40,6 @@ Resource ID. The value ranges are as follows: <br>- Application resource ranges:
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SendableResource-id: number--><!--Device-SendableResource-id: number-End-->
@@ -69,10 +57,6 @@ Application module name.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -92,10 +76,6 @@ Resource parameters, including the resource name (string type), replacement valu
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SendableResource-params?: collections.Array <string | number>--><!--Device-SendableResource-params?: collections.Array <string | number>-End-->
@@ -113,10 +93,6 @@ Resource type. The options are as follows: <br>- 10001: color <br>- 10002: float
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

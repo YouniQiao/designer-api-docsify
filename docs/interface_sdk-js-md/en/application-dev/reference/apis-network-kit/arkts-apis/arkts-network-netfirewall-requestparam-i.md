@@ -4,10 +4,6 @@ Pagination query input parameters.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-netFirewall-interface RequestParam--><!--Device-netFirewall-interface RequestParam-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -30,10 +26,6 @@ Sort field.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-RequestParam-orderField: NetFirewallOrderField--><!--Device-RequestParam-orderField: NetFirewallOrderField-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -49,10 +41,6 @@ Sort Type: ascending or descending.
 **Type:** [NetFirewallOrderType](arkts-network-netfirewall-netfirewallordertype-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-RequestParam-orderType: NetFirewallOrderType--><!--Device-RequestParam-orderType: NetFirewallOrderType-End-->
 
@@ -70,10 +58,6 @@ Page number: indicates the page number to be queried. The start value is 1.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-RequestParam-page: number--><!--Device-RequestParam-page: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -89,10 +73,6 @@ Page size: indicates the number of data records to be queried at a time. The max
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-RequestParam-pageSize: number--><!--Device-RequestParam-pageSize: number-End-->
 

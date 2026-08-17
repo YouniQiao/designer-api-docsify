@@ -1,14 +1,10 @@
 # CustomElement
 
-“我的主页”自定义元素的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。
+“我的主页”自定义元素的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)。
 
-**继承/实现关系：** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
+**继承/实现关系：** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-avMusicTemplate-interface CustomElement--><!--Device-avMusicTemplate-interface CustomElement-End-->
 
@@ -25,10 +21,6 @@ customCompilations?: Compilation[]
 **类型：** [Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,10 +40,6 @@ settings?: SettingItem[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CustomElement-settings?: SettingItem[]--><!--Device-CustomElement-settings?: SettingItem[]-End-->
@@ -70,10 +58,6 @@ tabs?: MediaTab[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CustomElement-tabs?: MediaTab[]--><!--Device-CustomElement-tabs?: MediaTab[]-End-->
@@ -91,10 +75,6 @@ userInfo?: UserInfo
 **类型：** UserInfo
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

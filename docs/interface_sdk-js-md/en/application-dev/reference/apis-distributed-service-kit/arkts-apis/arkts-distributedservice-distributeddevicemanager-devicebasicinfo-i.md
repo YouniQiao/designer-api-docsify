@@ -4,10 +4,6 @@ Represents the basic information about a distributed device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDeviceManager-interface DeviceBasicInfo--><!--Device-distributedDeviceManager-interface DeviceBasicInfo-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -30,10 +26,6 @@ Device ID. The value is the result of obfuscating the udid-hash (hash value of t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceBasicInfo-deviceId: string--><!--Device-DeviceBasicInfo-deviceId: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -50,10 +42,6 @@ Device name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceBasicInfo-deviceName: string--><!--Device-DeviceBasicInfo-deviceName: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -64,15 +52,11 @@ Device name.
 deviceType: string
 ```
 
-[Device type](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getDeviceType).
+[Device type](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicetype).
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceBasicInfo-deviceType: string--><!--Device-DeviceBasicInfo-deviceType: string-End-->
 
@@ -89,10 +73,6 @@ Network ID of the device.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceBasicInfo-networkId?: string--><!--Device-DeviceBasicInfo-networkId?: string-End-->
 

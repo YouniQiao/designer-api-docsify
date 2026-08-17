@@ -4,11 +4,9 @@ Defines a **HeartRateResponse** object.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md#HeartRateResponse)
+**Substitutes:** [HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md#heartrateresponse)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -54,11 +52,9 @@ Heart rate.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [heartRate](arkts-sensorservice-sensor-heartrateresponse-i.md#heartRate)
+**Substitutes:** [heartRate](arkts-sensorservice-sensor-heartrateresponse-i.md#heartrate)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 

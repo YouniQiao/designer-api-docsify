@@ -8,10 +8,6 @@ Represents the **AbilityStageMonitor** module.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-abilityDelegatorRegistry-export type AbilityStageMonitor = _AbilityStageMonitor--><!--Device-abilityDelegatorRegistry-export type AbilityStageMonitor = _AbilityStageMonitor-End-->

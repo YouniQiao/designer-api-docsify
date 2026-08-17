@@ -4,11 +4,9 @@ Data struct describes geographic locations.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GeoAddress](arkts-location-geolocationmanager-geoaddress-i.md#GeoAddress)
+**Substitutes:** [GeoAddress](arkts-location-geolocationmanager-geoaddress-i.md#geoaddress)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -34,11 +32,9 @@ Indicates website URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [addressUrl](arkts-location-geolocationmanager-geoaddress-i.md#addressUrl)
+**Substitutes:** [addressUrl](arkts-location-geolocationmanager-geoaddress-i.md#addressurl)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -58,11 +54,9 @@ Indicates administrative region name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [administrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#administrativeArea)
+**Substitutes:** [administrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#administrativearea)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -82,11 +76,9 @@ Indicates country code.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [countryCode](arkts-location-geolocationmanager-geoaddress-i.md#countryCode)
+**Substitutes:** [countryCode](arkts-location-geolocationmanager-geoaddress-i.md#countrycode)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -106,11 +98,9 @@ Indicates country name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [countryName](arkts-location-geolocationmanager-geoaddress-i.md#countryName)
+**Substitutes:** [countryName](arkts-location-geolocationmanager-geoaddress-i.md#countryname)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -129,8 +119,6 @@ Indicates additional information.
 **Type:** Array&lt;string&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -154,11 +142,9 @@ Indicates the amount of additional descriptive information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [descriptionsSize](arkts-location-geolocationmanager-geoaddress-i.md#descriptionsSize)
+**Substitutes:** [descriptionsSize](arkts-location-geolocationmanager-geoaddress-i.md#descriptionssize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -177,8 +163,6 @@ Indicates latitude information. A positive value indicates north latitude, and a
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -202,8 +186,6 @@ Indicates language used for the location description. zh indicates Chinese, and 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [locale](arkts-location-geolocationmanager-geoaddress-i.md#locale)
@@ -225,8 +207,6 @@ Indicates locality information.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -250,8 +230,6 @@ Indicates longitude information. A positive value indicates east longitude , and
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [longitude](arkts-location-geolocationmanager-geoaddress-i.md#longitude)
@@ -274,11 +252,9 @@ Indicates phone number.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [phoneNumber](arkts-location-geolocationmanager-geoaddress-i.md#phoneNumber)
+**Substitutes:** [phoneNumber](arkts-location-geolocationmanager-geoaddress-i.md#phonenumber)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -298,11 +274,9 @@ Indicates landmark of the location.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [placeName](arkts-location-geolocationmanager-geoaddress-i.md#placeName)
+**Substitutes:** [placeName](arkts-location-geolocationmanager-geoaddress-i.md#placename)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -322,11 +296,9 @@ Indicates postal code.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [postalCode](arkts-location-geolocationmanager-geoaddress-i.md#postalCode)
+**Substitutes:** [postalCode](arkts-location-geolocationmanager-geoaddress-i.md#postalcode)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -345,8 +317,6 @@ Indicates house information.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -370,11 +340,9 @@ Indicates road name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [roadName](arkts-location-geolocationmanager-geoaddress-i.md#roadName)
+**Substitutes:** [roadName](arkts-location-geolocationmanager-geoaddress-i.md#roadname)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -394,11 +362,9 @@ Indicates sub-administrative region name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [subAdministrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#subAdministrativeArea)
+**Substitutes:** [subAdministrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#subadministrativearea)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -418,11 +384,9 @@ Indicates sub-locality information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [subLocality](arkts-location-geolocationmanager-geoaddress-i.md#subLocality)
+**Substitutes:** [subLocality](arkts-location-geolocationmanager-geoaddress-i.md#sublocality)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -442,11 +406,9 @@ Indicates auxiliary road information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [subRoadName](arkts-location-geolocationmanager-geoaddress-i.md#subRoadName)
+**Substitutes:** [subRoadName](arkts-location-geolocationmanager-geoaddress-i.md#subroadname)
 
 **Required permissions:** ohos.permission.LOCATION
 

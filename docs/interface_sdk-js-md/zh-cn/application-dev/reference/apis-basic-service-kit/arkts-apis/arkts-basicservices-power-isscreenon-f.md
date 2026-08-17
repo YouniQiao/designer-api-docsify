@@ -10,11 +10,9 @@ function isScreenOn(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [isActive](arkts-basicservices-power-isactive-f.md#isActive)
+**替代接口：** [isActive](arkts-basicservices-power-isactive-f.md#isactive)
 
 <!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void--><!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void-End-->
 
@@ -24,9 +22,9 @@ function isScreenOn(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检测成功，err为undefined，data为获取到的亮灭屏状态，返回true表示亮屏，返回false表示灭屏；否则为错误对象 。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当检测成功，err为undefined，data为获取到的亮灭屏状态，返回true表示亮屏，返回false表示灭屏；否则为错误对象 。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 power.isScreenOn((err: Error, data: boolean) => {
@@ -49,11 +47,9 @@ function isScreenOn(): Promise<boolean>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [isActive](arkts-basicservices-power-isactive-f.md#isActive)
+**替代接口：** [isActive](arkts-basicservices-power-isactive-f.md#isactive)
 
 <!--Device-power-function isScreenOn(): Promise<boolean>--><!--Device-power-function isScreenOn(): Promise<boolean>-End-->
 
@@ -65,7 +61,7 @@ function isScreenOn(): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示亮屏；返回false表示灭屏。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 power.isScreenOn()

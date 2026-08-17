@@ -16,10 +16,6 @@ Grants the URI access permission of the specified application to the target appl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GRANT_URI_PERMISSION_AS_CALLER
 
 <!--Device-uriPermissionManager-function grantUriPermissionByKeyAsCaller(key: string, flag: wantConstant.Flags, callerTokenId: int, targetTokenId: int): Promise<void>--><!--Device-uriPermissionManager-function grantUriPermissionByKeyAsCaller(key: string, flag: wantConstant.Flags, callerTokenId: int, targetTokenId: int): Promise<void>-End-->
@@ -32,10 +28,10 @@ Grants the URI access permission of the specified application to the target appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Unique key of the target UDMF data. The key must be created by the application (corresponding to **callerTokenId**) through [unifiedDataChannel.insertData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-insertdata-f.md#insertData) , and the written data must be the URIs of the authorized files.<br>Currently, only the keys of the [UDMF data channels](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-intention-e.md#Intention) of the **SYSTEM_SHARE**, **PICKER**, and **MENU** types are supported. For details about how to create and use a key, see [Sharing Data via Unified Data Channels](../../../database/unified-data-channels.md). |
+| key | string | Yes | Unique key of the target UDMF data. The key must be created by the application (corresponding to **callerTokenId**) through [unifiedDataChannel.insertData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata) , and the written data must be the URIs of the authorized files.<br>Currently, only the keys of the [UDMF data channels](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-intention-e.md#intention) of the **SYSTEM_SHARE**, **PICKER**, and **MENU** types are supported. For details about how to create and use a key, see [Sharing Data via Unified Data Channels](../../../database/unified-data-channels.md). |
 | flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. The options are as follows:<br>- **FLAG_AUTH_READ_URI_PERMISSION**: read permission.<br>- **FLAG_AUTH_WRITE_URI_PERMISSION**: write permission. |
-| callerTokenId | int | Yes | Identity of the caller application. You can obtain the value from the **ohos.aafwk.param.callerToken** field in [want](arkts-ability-app-ability-want-want-c.md#Want). |
-| targetTokenId | int | Yes | Identity of the target application, which can be obtained through [bundleManager.getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getApplicationInfo-(System-API)) . |
+| callerTokenId | int | Yes | Identity of the caller application. You can obtain the value from the **ohos.aafwk.param.callerToken** field in [want](arkts-ability-app-ability-want-want-c.md#want). |
+| targetTokenId | int | Yes | Identity of the target application, which can be obtained through [bundleManager.getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getapplicationinfo-system-api) . |
 
 **Return value:**
 
@@ -58,7 +54,7 @@ Grants the URI access permission of the specified application to the target appl
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000091](../errorcode-ability.md#16000091-failed-to-obtain-a-file-uri-by-key) | Failed to get the file URI from the key. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The bundle name of the caller application is com.example.caller.

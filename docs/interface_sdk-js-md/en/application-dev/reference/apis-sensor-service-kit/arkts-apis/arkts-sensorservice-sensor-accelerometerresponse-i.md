@@ -1,14 +1,10 @@
 # AccelerometerResponse
 
-Describes the acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
+Describes the acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
 
-**Inheritance/Implementation:** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**Inheritance/Implementation:** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-interface AccelerometerResponse--><!--Device-sensor-interface AccelerometerResponse-End-->
 
@@ -32,10 +28,6 @@ Acceleration along the x-axis of the device, in m/s?. The value is equal to the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AccelerometerResponse-x: double--><!--Device-AccelerometerResponse-x: double-End-->
@@ -54,10 +46,6 @@ Acceleration along the y-axis of the device, in m/s?. The value is equal to the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AccelerometerResponse-y: double--><!--Device-AccelerometerResponse-y: double-End-->
@@ -75,10 +63,6 @@ Acceleration along the z-axis of the device, in m/s?. The value is equal to the 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

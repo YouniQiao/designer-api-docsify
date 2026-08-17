@@ -4,10 +4,6 @@ Represents the device-cloud file version management class. It allows you to mana
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudSync-class FileVersion--><!--Device-cloudSync-class FileVersion-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -27,10 +23,6 @@ clearFileConflict(uri: string): Promise<void>
 Clears the version conflict flag of the local file. If a conflict occurs, you need to call this API to clear the conflict flag after the conflict is resolved locally and trigger automatic synchronization. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FileVersion-clearFileConflict(uri: string): Promise<void>--><!--Device-FileVersion-clearFileConflict(uri: string): Promise<void>-End-->
 
@@ -60,7 +52,7 @@ Clears the version conflict flag of the local file. If a conflict occurs, you ne
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
@@ -95,10 +87,6 @@ A constructor used to create a **FileVersion** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FileVersion-constructor()--><!--Device-FileVersion-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -109,7 +97,7 @@ A constructor used to create a **FileVersion** instance.
 | --- | --- |
 | 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let fileVersion = new cloudSync.FileVersion();
@@ -125,10 +113,6 @@ Obtains the content of a file of a specified version based on the version number
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FileVersion-downloadHistoryVersion(uri: string, versionId: string, callback: Callback<VersionDownloadProgress>): Promise<string>--><!--Device-FileVersion-downloadHistoryVersion(uri: string, versionId: string, callback: Callback<VersionDownloadProgress>): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -138,7 +122,7 @@ Obtains the content of a file of a specified version based on the version number
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| versionId | string | Yes | Version ID of a file. The format is returned by the [gethistoryversionlist](#getHistoryVersionList) API. |
+| versionId | string | Yes | Version ID of a file. The format is returned by the [gethistoryversionlist](#gethistoryversionlist) API. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | Yes | Callback used to return the download progress. |
 
 **Return value:**
@@ -170,10 +154,6 @@ Obtains the list of historical versions. The returned versions are sorted by mod
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FileVersion-getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>--><!--Device-FileVersion-getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -204,7 +184,7 @@ Obtains the list of historical versions. The returned versions are sorted by mod
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
@@ -231,13 +211,9 @@ fileVersion.getHistoryVersionList(uri, limit).then((versionList: Array<cloudSync
 isFileConflict(uri: string): Promise<boolean>
 ```
 
-Obtains the version conflict flag of a local file. This API uses a promise to return the result. This API takes effect only when the application is configured for manual conflict resolution. Otherwise, conflicts are automatically resolved during synchronization, and the return value will be **false**. Once the application is configured for manual conflict resolution, calling this API returns whether the current local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the conflict is resolved, you need to call the [clearFileConflict](#clearFileConflict) method to clear the conflict flag and synchronize the file to the cloud.
+Obtains the version conflict flag of a local file. This API uses a promise to return the result. This API takes effect only when the application is configured for manual conflict resolution. Otherwise, conflicts are automatically resolved during synchronization, and the return value will be **false**. Once the application is configured for manual conflict resolution, calling this API returns whether the current local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the conflict is resolved, you need to call the [clearFileConflict](#clearfileconflict) method to clear the conflict flag and synchronize the file to the cloud.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FileVersion-isFileConflict(uri: string): Promise<boolean>--><!--Device-FileVersion-isFileConflict(uri: string): Promise<boolean>-End-->
 
@@ -267,7 +243,7 @@ Obtains the version conflict flag of a local file. This API uses a promise to re
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
@@ -291,13 +267,9 @@ fileVersion.isFileConflict(uri).then((isConflict: boolean) => {
 replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>
 ```
 
-Replaces the local file with the file of a historical version. Before replacement, call the [downloadHistoryVersion](#downloadHistoryVersion) method to download the selected historical version and obtain its version URI. If this API is called directly without prior download or the version URI is invalid, an exception will be thrown. Once replacement is complete, the temporary file will be automatically deleted. This API uses a promise to return the result.
+Replaces the local file with the file of a historical version. Before replacement, call the [downloadHistoryVersion](#downloadhistoryversion) method to download the selected historical version and obtain its version URI. If this API is called directly without prior download or the version URI is invalid, an exception will be thrown. Once replacement is complete, the temporary file will be automatically deleted. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FileVersion-replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>--><!--Device-FileVersion-replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>-End-->
 
@@ -331,7 +303,7 @@ Replaces the local file with the file of a historical version. Before replacemen
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';

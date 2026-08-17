@@ -4,10 +4,6 @@ Defines the asset analysis configuration.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface AnalysisConfig--><!--Device-photoAccessHelper-interface AnalysisConfig-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -32,10 +28,6 @@ Extended information in JSON string format. Length range: (0, 500].
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AnalysisConfig-extraInfos?: string--><!--Device-AnalysisConfig-extraInfos?: string-End-->
@@ -50,15 +42,11 @@ Extended information in JSON string format. Length range: (0, 500].
 types: AnalysisType[]
 ```
 
-Array of intelligent analysis types. The maximum size of the array is the number of members defined by the [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md#AnalysisType-(System-API)) enum.
+Array of intelligent analysis types. The maximum size of the array is the number of members defined by the [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md#analysistype-system-api) enum.
 
 **Type:** [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md)[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,10 +67,6 @@ Asset URI array. Length range: [0, 100].
 **Type:** string[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

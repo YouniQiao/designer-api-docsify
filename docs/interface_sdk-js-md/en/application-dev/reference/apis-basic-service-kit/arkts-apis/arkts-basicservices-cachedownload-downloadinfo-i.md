@@ -4,10 +4,6 @@ Describes the pre-downloaded download information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cacheDownload-interface DownloadInfo--><!--Device-cacheDownload-interface DownloadInfo-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -30,10 +26,6 @@ Pre-downloaded network information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadInfo-readonly network: NetworkInfo--><!--Device-DownloadInfo-readonly network: NetworkInfo-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -50,10 +42,6 @@ Pre-downloaded performance information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadInfo-readonly performance: PerformanceInfo--><!--Device-DownloadInfo-readonly performance: PerformanceInfo-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -69,10 +57,6 @@ Pre-downloaded resource information.
 **Type:** [ResourceInfo](arkts-basicservices-cachedownload-resourceinfo-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadInfo-readonly resource: ResourceInfo--><!--Device-DownloadInfo-readonly resource: ResourceInfo-End-->
 

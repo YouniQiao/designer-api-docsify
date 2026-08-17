@@ -4,10 +4,6 @@ Represents the device-cloud sync statistics.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudData-interface StatisticInfo--><!--Device-cloudData-interface StatisticInfo-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -32,10 +28,6 @@ Number of data records that are added locally and have not been synced to the cl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StatisticInfo-inserted: int--><!--Device-StatisticInfo-inserted: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -53,10 +45,6 @@ Number of consistent data records between the device and the cloud. For example,
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StatisticInfo-normal: int--><!--Device-StatisticInfo-normal: int-End-->
 
@@ -76,10 +64,6 @@ Name of the table queried. For example, the value **cloud_notes** indicates that
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StatisticInfo-table: string--><!--Device-StatisticInfo-table: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -97,10 +81,6 @@ Number of data records that are modified locally or on the cloud but have not be
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StatisticInfo-updated: int--><!--Device-StatisticInfo-updated: int-End-->
 

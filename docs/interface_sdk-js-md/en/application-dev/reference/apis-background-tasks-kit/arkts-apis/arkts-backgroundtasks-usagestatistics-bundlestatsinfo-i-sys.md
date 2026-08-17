@@ -2,10 +2,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usageStatistics-interface BundleStatsInfo--><!--Device-usageStatistics-interface BundleStatsInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -30,10 +26,6 @@ The total duration, in milliseconds. <br> Unit:ms
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleStatsInfo-abilityInFgTotalTime?: long--><!--Device-BundleStatsInfo-abilityInFgTotalTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -51,10 +43,6 @@ The last time when the application was accessed, in milliseconds. <br> Unit:ms
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-abilityPrevAccessTime?: long--><!--Device-BundleStatsInfo-abilityPrevAccessTime?: long-End-->
 
@@ -74,10 +62,6 @@ The last time when the application was visible in the foreground, in millisecond
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleStatsInfo-abilityPrevSeenTime?: long--><!--Device-BundleStatsInfo-abilityPrevSeenTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -95,10 +79,6 @@ The total duration, in milliseconds. <br> Unit:ms
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-abilitySeenTotalTime?: long--><!--Device-BundleStatsInfo-abilitySeenTotalTime?: long-End-->
 
@@ -118,10 +98,6 @@ The app index of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleStatsInfo-appIndex?: int--><!--Device-BundleStatsInfo-appIndex?: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -139,10 +115,6 @@ The bundle name of the application.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-bundleName?: string--><!--Device-BundleStatsInfo-bundleName?: string-End-->
 
@@ -162,10 +134,6 @@ The total duration, in milliseconds. <br> Unit:ms
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleStatsInfo-fgAbilityAccessTotalTime?: long--><!--Device-BundleStatsInfo-fgAbilityAccessTotalTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -183,10 +151,6 @@ The last time when the foreground application was accessed, in milliseconds. <br
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-fgAbilityPrevAccessTime?: long--><!--Device-BundleStatsInfo-fgAbilityPrevAccessTime?: long-End-->
 
@@ -206,10 +170,6 @@ The identifier of BundleStatsInfo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleStatsInfo-id: int--><!--Device-BundleStatsInfo-id: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -228,10 +188,6 @@ The time of the first bundle usage record in this {@code BundleActiveInfo} objec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleStatsInfo-infosBeginTime?: long--><!--Device-BundleStatsInfo-infosBeginTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -249,10 +205,6 @@ The time of the last bundle usage record in this {@code BundleActiveInfo} object
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-infosEndTime?: long--><!--Device-BundleStatsInfo-infosEndTime?: long-End-->
 

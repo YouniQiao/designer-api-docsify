@@ -4,10 +4,6 @@ This module provides data sharing and expansion capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class DataShareExtensionAbility--><!--Device-unnamed-declare class DataShareExtensionAbility-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
@@ -30,10 +26,6 @@ Batch inserts data into the database. This API is called by the server and can b
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-DataShareExtensionAbility-batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCallback<number>): void-End-->
@@ -50,7 +42,7 @@ Batch inserts data into the database. This API is called by the server and can b
 | valueBuckets | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | Data to insert. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DataShareExtensionAbility, relationalStore, ValuesBucket } from '@kit.ArkData';
@@ -86,10 +78,6 @@ Batch updates data into the database. This API is called by the server and can b
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-batchUpdate?(    operations: Record<string, Array<UpdateOperation>>,    callback: AsyncCallback<Record<string, Array<number>>>  ): void--><!--Device-DataShareExtensionAbility-batchUpdate?(    operations: Record<string, Array<UpdateOperation>>,    callback: AsyncCallback<Record<string, Array<number>>>  ): void-End-->
@@ -105,7 +93,7 @@ Batch updates data into the database. This API is called by the server and can b
 | operations | Record&lt;string, Array&lt;[UpdateOperation](arkts-arkdata-updateoperation-t-sys.md)&gt;&gt; | Yes | Collection of the path of the data to update, update conditions, and new data. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Yes | Callback used to return an array of updated data records. The value **-1** means the update operation fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DataShareExtensionAbility, relationalStore, dataShare } from '@kit.ArkData';
@@ -149,10 +137,6 @@ Deletes data from the database. This API can be overridden as required.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<number>): void--><!--Device-DataShareExtensionAbility-delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<number>): void-End-->
@@ -169,7 +153,7 @@ Deletes data from the database. This API can be overridden as required.
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for deleting data. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DataShareExtensionAbility, relationalStore, dataSharePredicates } from '@kit.ArkData';
@@ -201,10 +185,6 @@ Denormalizes a URI. This API can be overridden as required.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareExtensionAbility-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -217,10 +197,10 @@ Denormalizes a URI. This API can be overridden as required.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#URI) to denormalize. |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#uri) to denormalize. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, the denormalized URI is returned. If the URI passed in is returned, denormalization is not required. If denormalization is not supported, **null** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DataShareExtensionAbility } from '@kit.ArkData';
@@ -251,10 +231,6 @@ Inserts data into the database. This API can be overridden as required.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataShareExtensionAbility-insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>): void-End-->
@@ -271,7 +247,7 @@ Inserts data into the database. This API can be overridden as required.
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Data to insert. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index of the inserted data record. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DataShareExtensionAbility, relationalStore, ValuesBucket } from '@kit.ArkData';
@@ -305,10 +281,6 @@ Normalizes a URI. This API can be overridden as required.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-normalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareExtensionAbility-normalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -321,10 +293,10 @@ Normalizes a URI. This API can be overridden as required.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#URI) to normalize. |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#uri) to normalize. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, the normalized URI is returned. Otherwise, **null** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DataShareExtensionAbility } from '@kit.ArkData';
@@ -355,10 +327,6 @@ Called by the server to initialize service logic when the DataShare client conne
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-onCreate?(want: Want, callback: AsyncCallback<void>): void--><!--Device-DataShareExtensionAbility-onCreate?(want: Want, callback: AsyncCallback<void>): void-End-->
@@ -374,7 +342,7 @@ Called by the server to initialize service logic when the DataShare client conne
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information, including the ability name and bundle name. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DataShareExtensionAbility, relationalStore } from '@kit.ArkData';
@@ -421,10 +389,6 @@ Queries data from the database. This API can be overridden as required.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-query?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    columns: Array<string>,    callback: AsyncCallback<Object>  ): void--><!--Device-DataShareExtensionAbility-query?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    columns: Array<string>,    callback: AsyncCallback<Object>  ): void-End-->
@@ -442,7 +406,7 @@ Queries data from the database. This API can be overridden as required.
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is empty, all columns will be queried. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result set obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DataShareExtensionAbility, relationalStore, dataSharePredicates } from '@kit.ArkData';
@@ -482,10 +446,6 @@ Updates data in the database. This API can be overridden as required.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-update?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    valueBucket: ValuesBucket,    callback: AsyncCallback<number>  ): void--><!--Device-DataShareExtensionAbility-update?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    valueBucket: ValuesBucket,    callback: AsyncCallback<number>  ): void-End-->
@@ -503,7 +463,7 @@ Updates data in the database. This API can be overridden as required.
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | New data. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of data records updated. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DataShareExtensionAbility, relationalStore, dataSharePredicates, ValuesBucket } from '@kit.ArkData';
@@ -537,10 +497,6 @@ Inserts multiple data records into the database. This method should be implement
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-batchInsert?: BatchInsertFn--><!--Device-DataShareExtensionAbility-batchInsert?: BatchInsertFn-End-->
@@ -560,10 +516,6 @@ Updates multiple data records in the database. This method should be implemented
 **Type:** [BatchUpdateFn](arkts-arkdata-batchupdatefn-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -585,10 +537,6 @@ Context of the DataShare ExtensionAbility.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-context: ExtensionContext--><!--Device-DataShareExtensionAbility-context: ExtensionContext-End-->
@@ -608,10 +556,6 @@ Deletes one or more data records. This method should be implemented by a data sh
 **Type:** [DeleteFn](arkts-arkdata-deletefn-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -633,10 +577,6 @@ Converts the given normalized {@code uri} generated by normalizeUri into a denor
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-denormalizeUri?: DenormalizeUriFn--><!--Device-DataShareExtensionAbility-denormalizeUri?: DenormalizeUriFn-End-->
@@ -656,10 +596,6 @@ Inserts a data record into the database. This method should be implemented by a 
 **Type:** [InsertFn](arkts-arkdata-insertfn-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -681,10 +617,6 @@ Converts the given {@code uri} that refer to the data share into a normalized UR
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-normalizeUri?: NormalizeUriFn--><!--Device-DataShareExtensionAbility-normalizeUri?: NormalizeUriFn-End-->
@@ -704,10 +636,6 @@ Called back when a datashare extension ability is started for initialization.
 **Type:** [OnCreateFn](arkts-arkdata-oncreatefn-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -729,10 +657,6 @@ Queries one or more data records in the database. This method should be implemen
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-query?: QueryFn--><!--Device-DataShareExtensionAbility-query?: QueryFn-End-->
@@ -752,10 +676,6 @@ Updates one or more data records in the database. This method should be implemen
 **Type:** [UpdateFn](arkts-arkdata-updatefn-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

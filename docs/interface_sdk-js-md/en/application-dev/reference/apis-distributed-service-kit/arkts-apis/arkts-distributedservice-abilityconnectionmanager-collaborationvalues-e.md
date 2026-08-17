@@ -4,10 +4,6 @@ Enumerates application collaboration key values.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityConnectionManager-export enum CollaborationValues--><!--Device-abilityConnectionManager-export enum CollaborationValues-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -21,10 +17,6 @@ ABILITY_COLLABORATION_TYPE_DEFAULT = 'ohos.collaboration.value.abilityCollab'
 Default collaboration.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,10 +33,6 @@ ABILITY_COLLABORATION_TYPE_CONNECT_PROXY = 'ohos.collaboration.value.connectProx
 Collaboration via connection proxy.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

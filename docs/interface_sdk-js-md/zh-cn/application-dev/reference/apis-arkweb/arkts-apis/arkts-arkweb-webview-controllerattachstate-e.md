@@ -1,12 +1,8 @@
 # ControllerAttachState
 
-表示controller的绑定状态枚举
+WebviewController与Web组件的绑定状态。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-webview-enum ControllerAttachState--><!--Device-webview-enum ControllerAttachState-End-->
 
@@ -18,13 +14,9 @@
 UNATTACHED = 0
 ```
 
-表示controller当前并未绑定一个web组件
+未绑定状态。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-ControllerAttachState-UNATTACHED = 0--><!--Device-ControllerAttachState-UNATTACHED = 0-End-->
 
@@ -36,13 +28,9 @@ UNATTACHED = 0
 ATTACHED = 1
 ```
 
-Indicates webviewController is attached a web component.
+已绑定状态。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-ControllerAttachState-ATTACHED = 1--><!--Device-ControllerAttachState-ATTACHED = 1-End-->
 

@@ -16,11 +16,9 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getQuaternion)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
+**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
 
 <!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -33,7 +31,7 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 | rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the quaternion. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -62,11 +60,9 @@ Converts a rotation vector into a quaternion. This API uses a promise to return 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getQuaternion)(rotationVector: Array&lt;double&gt;)
+**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)(rotationVector: Array&lt;double&gt;)
 
 <!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>-End-->
 
@@ -84,7 +80,7 @@ Converts a rotation vector into a quaternion. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the quaternion. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

@@ -16,10 +16,6 @@ Pushes the component and data to the component user.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-pluginComponentManager-function push(param: PushParameters, callback: AsyncCallback<void>): void--><!--Device-pluginComponentManager-function push(param: PushParameters, callback: AsyncCallback<void>): void-End-->
@@ -33,7 +29,7 @@ Pushes the component and data to the component user.
 | param | [PushParameters](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-pushparameters-i.md) | Yes |  |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { pluginComponentManager } from '@kit.ArkUI';

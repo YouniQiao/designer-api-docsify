@@ -4,10 +4,6 @@ Enumerates the log modes of video files.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-export enum VideoMode--><!--Device-photoAccessHelper-export enum VideoMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -22,10 +18,6 @@ Default type. A value of **0** indicates that the video is either not in log mod
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoMode-DEFAULT = 0--><!--Device-VideoMode-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -39,10 +31,6 @@ LOG_VIDEO = 1
 Video file in log mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoMode-LOG_VIDEO = 1--><!--Device-VideoMode-LOG_VIDEO = 1-End-->
 

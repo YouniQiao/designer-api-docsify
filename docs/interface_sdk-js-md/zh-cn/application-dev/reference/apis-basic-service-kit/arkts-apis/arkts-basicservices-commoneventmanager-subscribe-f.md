@@ -10,10 +10,6 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-commonEventManager-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void--><!--Device-commonEventManager-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void-End-->
@@ -25,7 +21,7 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventData&gt; | 是 | 回调函数。当公共事件订阅成功后，事件触发时通过data返回公共 事件数据；订阅失败时，err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;CommonEventData&gt; | 是 | 回调函数。当公共事件订阅成功后，事件触发时通过data返回公共 事件数据；订阅失败时，err为错误对象。 |
 
 **错误码：**
 
@@ -36,7 +32,7 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 | [1500010](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500010-订阅者数量超限) | The count of subscriber exceeds system specification.<br>**适用版本：** 20+ |
 | [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) | Failed to initialize the common event service. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

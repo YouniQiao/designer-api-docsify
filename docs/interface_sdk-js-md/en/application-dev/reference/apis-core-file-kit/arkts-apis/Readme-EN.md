@@ -381,7 +381,6 @@
   <!--Del-->
   - [getExtBundleStats(system api)](arkts-corefile-storagestatistics-getextbundlestats-f-sys.md)<!--DelEnd-->
   - [getFreeInodes](arkts-corefile-storagestatistics-getfreeinodes-f.md)
-  - [getFreeSize](arkts-corefile-storagestatistics-getfreesize-f.md)
   <!--Del-->
   - [getFreeSize(system api)](arkts-corefile-storagestatistics-getfreesize-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -393,7 +392,6 @@
   <!--Del-->
   - [getSystemSize(system api)](arkts-corefile-storagestatistics-getsystemsize-f-sys.md)<!--DelEnd-->
   - [getTotalInodes](arkts-corefile-storagestatistics-gettotalinodes-f.md)
-  - [getTotalSize](arkts-corefile-storagestatistics-gettotalsize-f.md)
   <!--Del-->
   - [getTotalSize(system api)](arkts-corefile-storagestatistics-gettotalsize-f-sys.md)<!--DelEnd-->
   <!--Del-->

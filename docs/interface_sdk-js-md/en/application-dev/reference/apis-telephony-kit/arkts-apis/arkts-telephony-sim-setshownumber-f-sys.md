@@ -16,10 +16,6 @@ Set the SIM card number in the specified slot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-sim-function setShowNumber(slotId: int, teleNumber: string, callback: AsyncCallback<void>): void--><!--Device-sim-function setShowNumber(slotId: int, teleNumber: string, callback: AsyncCallback<void>): void-End-->
@@ -59,10 +55,6 @@ function setShowNumber(slotId: int, teleNumber: string): Promise<void>
 Set the SIM card number in the specified slot.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 

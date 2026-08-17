@@ -4,10 +4,6 @@ Result of an analysis tool execution.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface AnalysisToolResult--><!--Device-photoAccessHelper-interface AnalysisToolResult-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -32,10 +28,6 @@ Error code of the tool execution. The value 0 indicates success. Possible error 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AnalysisToolResult-errCode: int--><!--Device-AnalysisToolResult-errCode: int-End-->
@@ -55,10 +47,6 @@ Result of the tool execution, in JSON string format.
 **Type:** string
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

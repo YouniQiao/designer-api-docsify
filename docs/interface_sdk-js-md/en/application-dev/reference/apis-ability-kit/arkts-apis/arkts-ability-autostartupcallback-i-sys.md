@@ -4,10 +4,6 @@ The module defines the callback to be invoked when auto-startup is set or cancel
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AutoStartupCallback--><!--Device-unnamed-export interface AutoStartupCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -24,10 +20,6 @@ Called when the auto-startup setting of an application component is canceled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoStartupCallback-onAutoStartupOff(info: AutoStartupInfo): void--><!--Device-AutoStartupCallback-onAutoStartupOff(info: AutoStartupInfo): void-End-->
@@ -42,7 +34,7 @@ Called when the auto-startup setting of an application component is canceled.
 | --- | --- | --- | --- |
 | info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes | Information about the target application component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { autoStartupManager, common } from '@kit.AbilityKit';
@@ -76,10 +68,6 @@ Called when auto-startup is set for an application component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoStartupCallback-onAutoStartupOn(info: AutoStartupInfo): void--><!--Device-AutoStartupCallback-onAutoStartupOn(info: AutoStartupInfo): void-End-->
@@ -94,7 +82,7 @@ Called when auto-startup is set for an application component.
 | --- | --- | --- | --- |
 | info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes | Information about the target application component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { autoStartupManager, common } from '@kit.AbilityKit';

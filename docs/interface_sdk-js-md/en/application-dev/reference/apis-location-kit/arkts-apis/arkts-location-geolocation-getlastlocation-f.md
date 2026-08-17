@@ -16,11 +16,9 @@ Obtain last known location
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getLastLocation)
+**Substitutes:** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getlastlocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -34,7 +32,7 @@ Obtain last known location
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -59,11 +57,9 @@ Obtain last known location
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getLastLocation)
+**Substitutes:** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getlastlocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -77,7 +73,7 @@ Obtain last known location
 | --- | --- |
 | Promise&lt;Location&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

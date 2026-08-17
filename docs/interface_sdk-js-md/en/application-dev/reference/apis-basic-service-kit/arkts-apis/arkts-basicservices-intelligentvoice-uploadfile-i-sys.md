@@ -4,10 +4,6 @@ Describes upload file information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-interface UploadFile--><!--Device-intelligentVoice-interface UploadFile-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -32,10 +28,6 @@ Files content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UploadFile-filesContent: Array<ArrayBuffer>--><!--Device-UploadFile-filesContent: Array<ArrayBuffer>-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -54,10 +46,6 @@ Files description.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UploadFile-filesDescription: string--><!--Device-UploadFile-filesDescription: string-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -75,10 +63,6 @@ Report file type.
 **Type:** [UploadFileType](arkts-basicservices-intelligentvoice-uploadfiletype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UploadFile-type: UploadFileType--><!--Device-UploadFile-type: UploadFileType-End-->
 

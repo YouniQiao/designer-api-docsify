@@ -4,10 +4,6 @@ Represents the keyboard area on the panel.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-export interface KeyboardArea--><!--Device-inputMethodEngine-export interface KeyboardArea-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -30,10 +26,6 @@ Distance between the lower boundary of the keyboard area and the lower boundary 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardArea-bottom: int--><!--Device-KeyboardArea-bottom: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -49,10 +41,6 @@ Distance between the left boundary of the keyboard area and the left boundary of
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardArea-left: int--><!--Device-KeyboardArea-left: int-End-->
 
@@ -70,10 +58,6 @@ Distance between the right border of the keyboard area and the right border of t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardArea-right: int--><!--Device-KeyboardArea-right: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -89,10 +73,6 @@ Distance between the upper boundary of the keyboard area and the upper boundary 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardArea-top: int--><!--Device-KeyboardArea-top: int-End-->
 

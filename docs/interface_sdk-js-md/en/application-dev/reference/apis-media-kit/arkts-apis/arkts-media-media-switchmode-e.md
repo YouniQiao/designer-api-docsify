@@ -4,10 +4,6 @@ Enumerates the **selectTrack** modes for video playback. SwitchMode can be passe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum SwitchMode--><!--Device-media-enum SwitchMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -21,10 +17,6 @@ SMOOTH = 0
 Smooth playback is ensured after the switching. This mode has a delay, that is, the switching does not take effect immediately.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ The playback starts from the start position of the current segment after the swi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SwitchMode-SEGMENT = 1--><!--Device-SwitchMode-SEGMENT = 1-End-->
@@ -61,10 +49,6 @@ CLOSEST = 2
 The playback starts from the frame closest to the current playback time. In this mode, the switching takes effect immediately, and the playback is suspended for 3s to 5s and then resumed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

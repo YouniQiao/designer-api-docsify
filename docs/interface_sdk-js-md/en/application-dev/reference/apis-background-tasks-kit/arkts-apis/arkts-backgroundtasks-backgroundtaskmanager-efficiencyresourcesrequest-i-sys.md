@@ -4,10 +4,6 @@ Describes the parameters for requesting efficiency resources.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backgroundTaskManager-export interface EfficiencyResourcesRequest--><!--Device-backgroundTaskManager-export interface EfficiencyResourcesRequest-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
@@ -32,10 +28,6 @@ CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EfficiencyResourcesRequest-cpuLevel?: EfficiencyResourcesCpuLevel--><!--Device-EfficiencyResourcesRequest-cpuLevel?: EfficiencyResourcesCpuLevel-End-->
@@ -56,10 +48,6 @@ Whether the request is used to apply for resources. - **true**: The request is u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EfficiencyResourcesRequest-isApply: boolean--><!--Device-EfficiencyResourcesRequest-isApply: boolean-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
@@ -77,10 +65,6 @@ Whether the resource is permanently held. The default value is **false**. - **tr
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesRequest-isPersist?: boolean--><!--Device-EfficiencyResourcesRequest-isPersist?: boolean-End-->
 
@@ -100,10 +84,6 @@ Whether the request is initiated by a process. The default value is **false**. -
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EfficiencyResourcesRequest-isProcess?: boolean--><!--Device-EfficiencyResourcesRequest-isProcess?: boolean-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
@@ -121,10 +101,6 @@ Reason for requesting the resource.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesRequest-reason: string--><!--Device-EfficiencyResourcesRequest-reason: string-End-->
 
@@ -144,10 +120,6 @@ Type of the resource to request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EfficiencyResourcesRequest-resourceTypes: int--><!--Device-EfficiencyResourcesRequest-resourceTypes: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
@@ -165,10 +137,6 @@ Duration for which the resource will be used, in milliseconds.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesRequest-timeOut: int--><!--Device-EfficiencyResourcesRequest-timeOut: int-End-->
 

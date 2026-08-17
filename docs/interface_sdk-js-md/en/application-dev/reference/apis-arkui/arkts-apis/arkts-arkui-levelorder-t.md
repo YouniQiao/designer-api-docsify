@@ -1,4 +1,4 @@
-# LevelOrder
+# LevelOrder(AlertDialog)
 
 ```TypeScript
 declare type LevelOrder = import('../api/@ohos.promptAction').LevelOrder
@@ -7,10 +7,6 @@ declare type LevelOrder = import('../api/@ohos.promptAction').LevelOrder
 Defines the display order of the dialog box.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

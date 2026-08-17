@@ -8,10 +8,6 @@ Describes current cell information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-type CellInformation = radio.CellInformation--><!--Device-observer-type CellInformation = radio.CellInformation-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry

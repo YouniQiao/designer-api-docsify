@@ -16,10 +16,6 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_GET_INSTALLED_BUNDLE_LIST
 
 **Model restriction:** This API can be used only in the stage model.
@@ -32,7 +28,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | int | Yes | Information contained in the returned BundleInfo. For details, see [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag). |
+| bundleFlags | int | Yes | Information contained in the returned BundleInfo. For details, see [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#bundleflag). |
 
 **Return value:**
 

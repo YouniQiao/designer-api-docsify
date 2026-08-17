@@ -1,12 +1,8 @@
 # JsMessageExt
 
-The message for indicating the of result of JavaScript code execution.
+JsMessageExt is a data class in the ArkWeb framework used to encapsulate the result returned after executing a JavaScript script through the [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext) API. Unlike the conventional runJavaScript API, runJavaScriptExt supports richer return value types, and JsMessageExt provides a type-safe way to access these diverse return results. Developers first obtain the data type through the getType method of JsMessageExt, and then call the corresponding get method to retrieve the specific value. JsMessageExt supports parsing of multiple JavaScript return value types: string (getString), number (getNumber), boolean (getBoolean), raw binary data (getArrayBuffer), array (getArray), and more. When the obtained data type does not match the actual stored type (for example, calling getString on a numeric type), error code 17100014 is thrown. Starting from API version 22, JsMessageExt also provides the getErrorDescription method for obtaining exception information during JavaScript execution. If the return value is of the object type, it is uniformly formatted into a description string.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class JsMessageExt--><!--Device-webview-class JsMessageExt-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 getArray(): Array<string | number | boolean>
 ```
 
-Get the array value of the the JavaScript code execution result.
+Obtains array-type data of the data object. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +34,7 @@ Get the array value of the the JavaScript code execution result.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string \| number \| boolean&gt; | Returns data of Array type |
+| Array&lt;string \| number \| boolean&gt; | Array data obtained after the script of the runJavaScriptExt API is executed. |
 
 **Error codes:**
 
@@ -56,13 +48,9 @@ Get the array value of the the JavaScript code execution result.
 getArrayBuffer(): ArrayBuffer
 ```
 
-Get the array buffer value of the JavaScript code execution result.
+Obtains raw binary data of the data object. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,7 +62,7 @@ Get the array buffer value of the JavaScript code execution result.
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Returns data of ArrayBuffer |
+| ArrayBuffer | Raw binary data obtained after the execution of the runJavaScriptExt interface script. |
 
 **Error codes:**
 
@@ -88,13 +76,9 @@ Get the array buffer value of the JavaScript code execution result.
 getBoolean(): boolean
 ```
 
-Get the boolean value of the JavaScript code execution result.
+Obtains Boolean-type data of the data object. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -106,7 +90,7 @@ Get the boolean value of the JavaScript code execution result.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns data of Boolean type |
+| boolean | Boolean data obtained after the script of the runJavaScriptExt API is executed. |
 
 **Error codes:**
 
@@ -120,13 +104,9 @@ Get the boolean value of the JavaScript code execution result.
 getErrorDescription(): string | null
 ```
 
-Get the object or exception of the the JavaScript code execution result and serialize it into a string.
+Obtains the error information about the JavaScript execution. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-JsMessageExt-getErrorDescription(): string | null--><!--Device-JsMessageExt-getErrorDescription(): string | null-End-->
 
@@ -136,7 +116,7 @@ Get the object or exception of the the JavaScript code execution result and seri
 
 | Type | Description |
 | --- | --- |
-| string | If an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of 2048 will be truncated; otherwise, return null. |
+| string | If an exception occurs during JavaScript script execution, or the return value is of the object type, the system formats the exception information or object into the string "Not support type: &lt;{ exception \| object}&gt;". The string length does not exceed 2048 characters, and the excess part will be truncated. If the object contains members of the callback type, they will be automatically ignored during serialization. In all other cases, the interface returns null. |
 
 ## getNumber
 
@@ -144,13 +124,9 @@ Get the object or exception of the the JavaScript code execution result and seri
 getNumber(): number
 ```
 
-Get the number value of the JavaScript code execution result.
+Obtains number-type data of the data object. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,7 +138,7 @@ Get the number value of the JavaScript code execution result.
 
 | Type | Description |
 | --- | --- |
-| number | Returns data of number type |
+| number | Numeric data obtained after the script of the runJavaScriptExt API is executed. |
 
 **Error codes:**
 
@@ -176,13 +152,9 @@ Get the number value of the JavaScript code execution result.
 getString(): string
 ```
 
-Get the string value of the JavaScript code execution result.
+Obtains string-type data of the data object. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -194,7 +166,7 @@ Get the string value of the JavaScript code execution result.
 
 | Type | Description |
 | --- | --- |
-| string | Returns data of string type |
+| string | String-type data obtained after the script of the runJavaScriptExt API is executed. |
 
 **Error codes:**
 
@@ -208,13 +180,9 @@ Get the string value of the JavaScript code execution result.
 getType(): JsMessageType
 ```
 
-Get the type of the JavaScript code execution result.
+Obtains the type of the data object. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -226,5 +194,5 @@ Get the type of the JavaScript code execution result.
 
 | Type | Description |
 | --- | --- |
-| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | Returns data of JsMessageType type |
+| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | Data type of the result returned after the [runJavaScriptExt]{ |
 

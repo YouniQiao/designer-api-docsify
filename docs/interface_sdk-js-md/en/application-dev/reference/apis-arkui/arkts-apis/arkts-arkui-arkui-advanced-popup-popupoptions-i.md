@@ -4,10 +4,6 @@ Defines the style parameters of the popup.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface PopupOptions--><!--Device-unnamed-export interface PopupOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -34,10 +30,6 @@ Buttons of the popup. A maximum of two buttons can be set. By default, no button
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -57,10 +49,6 @@ Layout direction. Default value: **Direction.Auto**
 **Type:** Direction
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +70,6 @@ Icon of the popup. **NOTE：**The icon is not displayed when **width** and **hei
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -105,10 +89,6 @@ Maximum width of the popup. This API allows the popup to display with a custom w
 **Type:** Dimension
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,10 +110,6 @@ Message of the popup. **NOTE：****fontWeight** is not available for messages. B
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -153,10 +129,6 @@ Callback for the popup close button. By default, the callback for the close butt
 **Type:** () =&gt; void
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +150,6 @@ Whether to show the close button. **true**: Show the close button. **false**: Do
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -201,10 +169,6 @@ Title of the popup. By default, no title is displayed.
 **Type:** [PopupTextOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

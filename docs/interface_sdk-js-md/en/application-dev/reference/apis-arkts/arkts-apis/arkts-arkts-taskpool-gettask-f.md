@@ -16,10 +16,6 @@ Obtains the corresponding task instance by task ID, or by task ID and task name.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-taskpool-function getTask(taskId: number, taskName?: string): Task | undefined--><!--Device-taskpool-function getTask(taskId: number, taskName?: string): Task | undefined-End-->
@@ -39,7 +35,7 @@ Obtains the corresponding task instance by task ID, or by task ID and task name.
 | --- | --- |
 | Task | Task instance. If an exception occurs, **undefined** is returned. For details, see the preceding description. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';

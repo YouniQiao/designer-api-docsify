@@ -16,10 +16,6 @@
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-declare namespace settingsLite--><!--Device-unnamed-declare namespace settingsLite-End-->
@@ -38,10 +34,10 @@ import { settingsLite } from 'settingsLite';
 
 | Name | Description |
 | --- | --- |
-| [isDoubleClickAppForSelf](arkts-basicservices-settingslite-isdoubleclickappforself-f.md#isDoubleClickAppForSelf) | 1. Checks whether the application started by double-pressing the function key is the application itself. 2. This API is triggered to check whether double-pressing the function key starts the application itself. |
-| [openDoubleClickSettingsPage](arkts-basicservices-settingslite-opendoubleclicksettingspage-f.md#openDoubleClickSettingsPage) | Opens the settings page for double-pressing the function key. |
-| [openNfcSettingsPage](arkts-basicservices-settingslite-opennfcsettingspage-f.md#openNfcSettingsPage) | Opens the NFC settings page. |
-| [openPinSettingPage](arkts-basicservices-settingslite-openpinsettingpage-f.md#openPinSettingPage) | Opens the password settings page. |
+| [isDoubleClickAppForSelf](arkts-basicservices-settingslite-isdoubleclickappforself-f.md#isdoubleclickappforself) | 1. Checks whether the application started by double-pressing the function key is the application itself. 2. This API is triggered to check whether double-pressing the function key starts the application itself. |
+| [openDoubleClickSettingsPage](arkts-basicservices-settingslite-opendoubleclicksettingspage-f.md#opendoubleclicksettingspage) | Opens the settings page for double-pressing the function key. |
+| [openNfcSettingsPage](arkts-basicservices-settingslite-opennfcsettingspage-f.md#opennfcsettingspage) | Opens the NFC settings page. |
+| [openPinSettingPage](arkts-basicservices-settingslite-openpinsettingpage-f.md#openpinsettingpage) | Opens the password settings page. |
 
 ### Interfaces
 

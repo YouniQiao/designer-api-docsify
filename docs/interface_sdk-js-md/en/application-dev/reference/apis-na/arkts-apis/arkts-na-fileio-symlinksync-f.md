@@ -10,9 +10,7 @@ Creates a symbolic link based on the file path. This API returns the result sync
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function symlinkSync(target: string, srcPath: string): void--><!--Device-fileIo-function symlinkSync(target: string, srcPath: string): void-End-->
 

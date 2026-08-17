@@ -2,13 +2,9 @@
 
 ReplaceSymbolEffect继承自父类SymbolEffect。
 
-**继承/实现关系：** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
+**继承/实现关系：** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#symboleffect)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class ReplaceSymbolEffect--><!--Device-unnamed-declare class ReplaceSymbolEffect-End-->
 
@@ -23,10 +19,6 @@ constructor(scope?: EffectScope)
 AppearSymbolEffect的构造函数，出现动效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,10 +45,6 @@ constructor(scope?: EffectScope, replaceType?: ReplaceEffectType)
 ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换动效类型。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,10 +75,6 @@ replaceType?: ReplaceEffectType
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -112,10 +96,6 @@ scope?: EffectScope
 **类型：** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

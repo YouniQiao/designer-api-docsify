@@ -4,10 +4,6 @@ Enumerates the reverb modes of audio loopback.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum AudioLoopbackReverbPreset--><!--Device-audio-enum AudioLoopbackReverbPreset-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -21,10 +17,6 @@ ORIGINAL = 1
 Maintains the original reverb without enhancement.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopbackReverbPreset-ORIGINAL = 1--><!--Device-AudioLoopbackReverbPreset-ORIGINAL = 1-End-->
 
@@ -40,10 +32,6 @@ Provides a Karaoke-style reverb effect.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-AudioLoopbackReverbPreset-KTV = 2--><!--Device-AudioLoopbackReverbPreset-KTV = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -58,10 +46,6 @@ Provides a theater-style reverb effect (default).
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-AudioLoopbackReverbPreset-THEATER = 3--><!--Device-AudioLoopbackReverbPreset-THEATER = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -75,10 +59,6 @@ CONCERT = 4
 Provides a concert-style reverb effect.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopbackReverbPreset-CONCERT = 4--><!--Device-AudioLoopbackReverbPreset-CONCERT = 4-End-->
 

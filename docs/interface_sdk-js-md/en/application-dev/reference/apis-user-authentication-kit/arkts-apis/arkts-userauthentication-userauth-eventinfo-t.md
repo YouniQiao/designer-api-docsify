@@ -8,11 +8,9 @@ Enumerates the authentication event information types. It consists of the fields
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md#UserAuthResult)
+**Substitutes:** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md#userauthresult)
 
 <!--Device-userAuth-type EventInfo = AuthResultInfo | TipInfo--><!--Device-userAuth-type EventInfo = AuthResultInfo | TipInfo-End-->
 

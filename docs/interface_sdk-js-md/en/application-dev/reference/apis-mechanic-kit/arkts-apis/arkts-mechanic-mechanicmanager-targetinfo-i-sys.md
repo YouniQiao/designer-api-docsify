@@ -4,10 +4,6 @@ Target information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export interface TargetInfo--><!--Device-mechanicManager-export interface TargetInfo-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -31,10 +27,6 @@ Target type.
 **Type:** [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TargetInfo-targetType: TargetType--><!--Device-TargetInfo-targetType: TargetType-End-->
 

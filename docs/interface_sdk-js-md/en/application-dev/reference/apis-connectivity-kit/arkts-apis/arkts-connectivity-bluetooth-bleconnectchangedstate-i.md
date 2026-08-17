@@ -4,11 +4,9 @@ Describes the Gatt profile connection state.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BLEConnectChangedState](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md#BLEConnectChangedState)
+**Substitutes:** [BLEConnectChangedState](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md#bleconnectchangedstate)
 
 <!--Device-bluetooth-interface BLEConnectChangedState--><!--Device-bluetooth-interface BLEConnectChangedState-End-->
 
@@ -32,11 +30,9 @@ Indicates the peer device address
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md#deviceid)
 
 <!--Device-BLEConnectChangedState-deviceId: string--><!--Device-BLEConnectChangedState-deviceId: string-End-->
 
@@ -53,8 +49,6 @@ Connection state of the Gatt profile
 **Type:** ProfileConnectionState
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

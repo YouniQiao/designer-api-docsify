@@ -16,10 +16,6 @@ Publishes a notification to a specified user. This API uses an asynchronous call
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 18+: ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
 - API version 9 - 17: ohos.permission.NOTIFICATION_CONTROLLER
@@ -65,7 +61,7 @@ Publishes a notification to a specified user. This API uses an asynchronous call
 | [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -105,10 +101,6 @@ function publish(request: NotificationRequest, userId: int): Promise<void>
 Publishes a notification to a specified user. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 18+: ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
@@ -160,7 +152,7 @@ Publishes a notification to a specified user. This API uses a promise to return 
 | [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

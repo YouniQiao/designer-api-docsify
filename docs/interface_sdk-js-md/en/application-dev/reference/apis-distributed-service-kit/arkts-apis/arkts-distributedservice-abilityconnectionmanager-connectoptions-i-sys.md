@@ -4,10 +4,6 @@ Connection options for the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityConnectionManager-interface ConnectOptions--><!--Device-abilityConnectionManager-interface ConnectOptions-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -30,10 +26,6 @@ Receive Stream Data Configuration Options. WiFi needs to be turned on.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectOptions-needReceiveStream?: boolean--><!--Device-ConnectOptions-needReceiveStream?: boolean-End-->
@@ -53,10 +45,6 @@ Send Stream Data Configuration Options. WiFi needs to be turned on.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

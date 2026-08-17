@@ -4,10 +4,6 @@ Describes the style of a rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface RectStyle--><!--Device-text-interface RectStyle-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Color of the rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RectStyle-color: common2D.Color--><!--Device-RectStyle-color: common2D.Color-End-->
@@ -51,10 +43,6 @@ Lower left radius of the rectangle, in physical pixels (px).
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -74,10 +62,6 @@ Upper left radius of the rectangle, in physical pixels (px).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RectStyle-leftTopRadius: double--><!--Device-RectStyle-leftTopRadius: double-End-->
@@ -96,10 +80,6 @@ Lower right radius of the rectangle, in physical pixels (px).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RectStyle-rightBottomRadius: double--><!--Device-RectStyle-rightBottomRadius: double-End-->
@@ -117,10 +97,6 @@ Upper right radius of the rectangle, in physical pixels (px).
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -16,10 +16,6 @@ Sets volume description. This API uses an asynchronous callback to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
 <!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string, callback: AsyncCallback<void>): void-End-->
@@ -59,10 +55,6 @@ function setVolumeDescription(uuid: string, description: string): Promise<void>
 Sets volume description. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 

@@ -4,10 +4,6 @@ Provides fileUri APIS
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace fileUri--><!--Device-unnamed-declare namespace fileUri-End-->
 
 **System capability:** SystemCapability.FileManagement.AppFileService
@@ -24,7 +20,7 @@ import { fileUri } from 'fileUri';
 
 | Name | Description |
 | --- | --- |
-| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) | Get the uri from the path of file in app sandbox |
+| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) | Get the uri from the path of file in app sandbox |
 
 ### Classes
 

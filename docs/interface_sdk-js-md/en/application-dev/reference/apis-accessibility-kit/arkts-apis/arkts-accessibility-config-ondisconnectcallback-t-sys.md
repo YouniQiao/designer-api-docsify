@@ -8,10 +8,6 @@ Describes the callback to be invoked when the connection to **AccessibilityExten
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-config-type OnDisconnectCallback = () => void--><!--Device-config-type OnDisconnectCallback = () => void-End-->

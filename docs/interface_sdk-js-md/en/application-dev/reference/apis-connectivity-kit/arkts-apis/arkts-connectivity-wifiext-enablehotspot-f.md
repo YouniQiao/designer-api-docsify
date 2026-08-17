@@ -16,11 +16,9 @@ Enables a Wi-Fi hotspot.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [enableHotspot](arkts-connectivity-wifimanagerext-enablehotspot-f.md#enableHotspot)
+**Substitutes:** [enableHotspot](arkts-connectivity-wifimanagerext-enablehotspot-f.md#enablehotspot)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 

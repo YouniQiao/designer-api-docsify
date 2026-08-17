@@ -10,10 +10,6 @@ function setMagnificationState(state: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
 <!--Device-config-function setMagnificationState(state: boolean): void--><!--Device-config-function setMagnificationState(state: boolean): void-End-->
@@ -37,7 +33,7 @@ function setMagnificationState(state: boolean): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [9300007](../errorcode-accessibility.md#9300007-触发放大功能失败) | Trigger magnification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';

@@ -13,10 +13,6 @@ Gets the own property descriptor of the specified object. An own property descri
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Reflect-function getOwnPropertyDescriptor<T extends object, P extends PropertyKey>(        target: T,        propertyKey: P,    ): TypedPropertyDescriptor<P extends keyof T ? T[P] : any> | undefined--><!--Device-Reflect-function getOwnPropertyDescriptor<T extends object, P extends PropertyKey>(        target: T,        propertyKey: P,    ): TypedPropertyDescriptor<P extends keyof T ? T[P] : any> | undefined-End-->
 
 **Parameters:**

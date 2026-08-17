@@ -4,11 +4,9 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [ActionMenuOptions](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md#ActionMenuOptions)
+**替代接口：** [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md#actionmenuoptions)
 
 <!--Device-prompt-interface ActionMenuOptions--><!--Device-prompt-interface ActionMenuOptions-End-->
 
@@ -26,11 +24,9 @@ buttons: [Button, Button?, Button?, Button?, Button?, Button?]
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [buttons](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md#buttons)
+**替代接口：** [buttons](arkts-arkui-promptaction-actionmenuoptions-i.md#buttons)
 
 <!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
 
@@ -48,11 +44,9 @@ title?: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [title](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md#title)
+**替代接口：** [title](arkts-arkui-promptaction-actionmenuoptions-i.md#title)
 
 <!--Device-ActionMenuOptions-title?: string--><!--Device-ActionMenuOptions-title?: string-End-->
 

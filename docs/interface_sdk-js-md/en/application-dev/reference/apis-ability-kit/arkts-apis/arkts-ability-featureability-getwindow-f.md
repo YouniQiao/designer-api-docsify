@@ -16,10 +16,6 @@ Obtains the window corresponding to this ability. This API uses an asynchronous 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function getWindow(callback: AsyncCallback<window.Window>): void--><!--Device-featureAbility-function getWindow(callback: AsyncCallback<window.Window>): void-End-->
@@ -32,7 +28,7 @@ Obtains the window corresponding to this ability. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;window.Window&gt; | Yes | Callback used to return the window. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
@@ -59,10 +55,6 @@ Obtains the window corresponding to this ability. This API uses a promise to ret
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function getWindow(): Promise<window.Window>--><!--Device-featureAbility-function getWindow(): Promise<window.Window>-End-->
@@ -75,7 +67,7 @@ Obtains the window corresponding to this ability. This API uses a promise to ret
 | --- | --- |
 | Promise&lt;window.Window&gt; | Promise used to return the window. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

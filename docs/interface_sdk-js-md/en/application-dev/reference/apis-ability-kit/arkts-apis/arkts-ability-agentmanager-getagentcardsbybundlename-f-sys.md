@@ -16,10 +16,6 @@ Gets all AgentCards within specified bundleName.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_AGENT_CARD
 
 **Model restriction:** This API can be used only in the stage model.

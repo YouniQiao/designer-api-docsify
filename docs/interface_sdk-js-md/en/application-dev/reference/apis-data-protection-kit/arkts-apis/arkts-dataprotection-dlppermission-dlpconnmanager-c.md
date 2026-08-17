@@ -4,10 +4,6 @@ Calls **registerPlugin** and **unregisterPlugin** to register or unregister call
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-dlpPermission-export class DlpConnManager--><!--Device-dlpPermission-export class DlpConnManager-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -24,13 +20,9 @@ import { dlpPermission } from 'dlpPermission';
 constructor()
 ```
 
-Represents a constructor for instantiating [DlpConnManager](#DlpConnManager).
+Represents a constructor for instantiating [DlpConnManager](#dlpconnmanager).
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -56,10 +48,6 @@ static registerPlugin(plugin: DlpConnPlugin): number
 Registers a callback with the SA. > **NOTE：**> > **registerPlugin** registers the callback with the SA.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -101,10 +89,6 @@ static unregisterPlugin(): void
 Unregisters a callback from the SA. This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released. > **NOTE：**> > **unregisterPlugin** unregisters a plug-in from the SA.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE

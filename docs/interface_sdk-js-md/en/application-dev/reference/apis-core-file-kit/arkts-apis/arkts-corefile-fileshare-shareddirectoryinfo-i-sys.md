@@ -4,10 +4,6 @@ The directory information shared with the system by the application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-fileShare-export interface SharedDirectoryInfo--><!--Device-fileShare-export interface SharedDirectoryInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
@@ -32,10 +28,6 @@ Indicates the bundle name of the application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SharedDirectoryInfo-bundleName: string--><!--Device-SharedDirectoryInfo-bundleName: string-End-->
@@ -56,10 +48,6 @@ Indicates the path of the application's shared directory.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SharedDirectoryInfo-path: string--><!--Device-SharedDirectoryInfo-path: string-End-->
@@ -79,10 +67,6 @@ Indicates the permission for the application's shared directory, e.g., { Operati
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

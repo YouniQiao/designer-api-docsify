@@ -4,10 +4,6 @@ Enumerates the orientations of a display.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-enum Orientation--><!--Device-display-enum Orientation-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -21,10 +17,6 @@ PORTRAIT = 0
 The display is in portrait mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ The display is in landscape mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-LANDSCAPE = 1--><!--Device-Orientation-LANDSCAPE = 1-End-->
@@ -62,10 +50,6 @@ The display is in reverse portrait mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-PORTRAIT_INVERTED = 2--><!--Device-Orientation-PORTRAIT_INVERTED = 2-End-->
@@ -81,10 +65,6 @@ LANDSCAPE_INVERTED = 3
 The display is in reverse landscape mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

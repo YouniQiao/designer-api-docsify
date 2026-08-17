@@ -4,10 +4,6 @@ Describes the camera parameters, which are used to define additional configurati
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface CameraParameters--><!--Device-unnamed-export interface CameraParameters-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -26,10 +22,6 @@ Whether Multisample Anti-Aliasing (MSAA) is enabled for the camera. true if enab
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CameraParameters-msaa?: boolean--><!--Device-CameraParameters-msaa?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -47,10 +39,6 @@ Initial rendering pipeline type. The default value is FORWARD_LIGHTWEIGHT.
 **Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CameraParameters-renderingPipeline?: RenderingPipelineType--><!--Device-CameraParameters-renderingPipeline?: RenderingPipelineType-End-->
 

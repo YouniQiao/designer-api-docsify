@@ -4,10 +4,6 @@ Enumerates text display states. Native result after text typesetting, which is i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-text-enum TextDisplayState--><!--Device-text-enum TextDisplayState-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ UNKNOWN = 0
 Unknown display state, which is the default state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Complete display state, in which the text is not truncated or omitted and all co
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -66,10 +54,6 @@ Cropping display state, in which the part of the text that exceeds the typesetti
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -87,10 +71,6 @@ OMITTED = 3
 Ellipsized display state, in which part of the content is replaced by specified characters (such as ellipsis '... ') when the text exceeds the typesetting area.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

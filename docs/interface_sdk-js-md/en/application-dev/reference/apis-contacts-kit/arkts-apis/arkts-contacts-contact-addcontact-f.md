@@ -16,11 +16,9 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [addContact](#addContact)(context: Context, contact: Contact, callback: AsyncCallback&lt;number&gt;)
+**Substitutes:** [addContact](#addcontact)(context: Context, contact: Contact, callback: AsyncCallback&lt;number&gt;)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -35,7 +33,7 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 | contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the added contact is returned. If the operation fails, an error code is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,10 +68,6 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -97,7 +91,7 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 | [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -134,11 +128,9 @@ Adds a contact. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [addContact](#addContact)(context: Context, contact: Contact)
+**Substitutes:** [addContact](#addcontact)(context: Context, contact: Contact)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -158,7 +150,7 @@ Adds a contact. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the result, which is the ID of the added contact. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -189,10 +181,6 @@ Adds a contact. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -221,7 +209,7 @@ Adds a contact. This API uses a promise to return the result.
 | [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 

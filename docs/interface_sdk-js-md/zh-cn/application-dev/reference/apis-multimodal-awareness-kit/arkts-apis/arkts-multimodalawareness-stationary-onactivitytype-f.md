@@ -10,10 +10,6 @@ function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: numbe
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-stationary-function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: number, callback: Callback<ActivityResponse>): void--><!--Device-stationary-function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: number, callback: Callback<ActivityResponse>): void-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
@@ -25,9 +21,9 @@ function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: numbe
 | activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 | 设备状态类型。 |
 | event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | 是 | 事件类型。 |
 | reportLatencyNs | number | 是 | 报告延时，单位：纳秒（ns），取值范围[1000000000, 3000000000]。超出范围时返回错误。建议根据业务场景选择合适的值， <br>较小值可提高实时性但会增加功耗，较大值可降低功耗但会降低响应速度。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 是 | 回调函数，用于接收设备状态变化结果。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 是 | 回调函数，用于接收设备状态变化结果。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let reportLatencyNs = 1000000000; // 单位：纳秒

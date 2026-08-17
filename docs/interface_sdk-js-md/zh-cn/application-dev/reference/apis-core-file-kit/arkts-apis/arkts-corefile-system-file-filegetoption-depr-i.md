@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-unnamed-export interface FileGetOption--><!--Device-unnamed-export interface FileGetOption-End-->
@@ -23,8 +21,6 @@ complete?: () => void
 **类型：** () =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 
@@ -44,8 +40,6 @@ fail?: (data: string, code: number) => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-FileGetOption-fail?: (data: string, code: number) => void--><!--Device-FileGetOption-fail?: (data: string, code: number) => void-End-->
@@ -64,8 +58,6 @@ recursive?: boolean
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-FileGetOption-recursive?: boolean--><!--Device-FileGetOption-recursive?: boolean-End-->
@@ -78,13 +70,11 @@ recursive?: boolean
 success?: (file: FileResponse) => void
 ```
 
-接口调用成功的回调函数。 返回[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md#FileResponse)。
+接口调用成功的回调函数。 返回[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md#fileresponse)。
 
 **类型：** (file: FileResponse) =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 
@@ -103,8 +93,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 

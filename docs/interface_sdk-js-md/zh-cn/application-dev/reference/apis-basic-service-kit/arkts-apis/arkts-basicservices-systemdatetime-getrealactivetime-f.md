@@ -10,11 +10,9 @@ function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): vo
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 12
 
-**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemDateTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -25,7 +23,7 @@ function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isNano | boolean | 是 | 返回结果是否为纳秒数。<br/>- true：表示返回结果为纳秒数（ns）。 <br/>- false：表示返回结果为毫秒数（ms）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回自系统启动以来经过的时间，但不包括深度睡眠时间。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回自系统启动以来经过的时间，但不包括深度睡眠时间。 |
 
 **错误码：**
 
@@ -33,7 +31,7 @@ function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): vo
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Incorrect parameter types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,11 +61,9 @@ function getRealActiveTime(callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 12
 
-**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemDateTime-function getRealActiveTime(callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getRealActiveTime(callback: AsyncCallback<number>): void-End-->
 
@@ -77,7 +73,7 @@ function getRealActiveTime(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回自系统启动以来经过的时间（ms），但不包括深度睡眠时间。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回自系统启动以来经过的时间（ms），但不包括深度睡眠时间。 |
 
 **错误码：**
 
@@ -85,7 +81,7 @@ function getRealActiveTime(callback: AsyncCallback<number>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Incorrect parameter types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -115,11 +111,9 @@ function getRealActiveTime(isNano?: boolean): Promise<number>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 12
 
-**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemDateTime-function getRealActiveTime(isNano?: boolean): Promise<number>--><!--Device-systemDateTime-function getRealActiveTime(isNano?: boolean): Promise<number>-End-->
 
@@ -143,7 +137,7 @@ function getRealActiveTime(isNano?: boolean): Promise<number>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Incorrect parameter types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

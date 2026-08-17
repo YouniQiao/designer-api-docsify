@@ -12,13 +12,9 @@ import { reminderAgentManager } from 'reminderAgentManager';
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<int>): void
 ```
 
-Publishes a reminder. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification) > permission is obtained. >
+Publishes a reminder. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification) > permission is obtained. >
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -42,7 +38,7 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,13 +65,9 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
 function publishReminder(reminderReq: ReminderRequest): Promise<int>
 ```
 
-Publishes a reminder. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification) > permission is obtained. >
+Publishes a reminder. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification) > permission is obtained. >
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -104,7 +96,7 @@ Publishes a reminder. This API uses a promise to return the result. > **NOTE：*
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

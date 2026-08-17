@@ -4,10 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class ColorMetrics--><!--Device-unnamed-declare class ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -22,10 +18,6 @@ autoRefresh?(value: boolean): ColorMetrics
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -38,7 +30,7 @@ autoRefresh?(value: boolean): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 使用[resourceColor](#resourceColor)方法构造的ColorMetrics对象是否在系统配置变化时自动刷新颜色值。 <br>true表示主动监听系统配置变化，变化时值刷新为对应配置下的资源值。 <br>false表示不主动监听系统配置变化。 |
+| value | boolean | 是 | 使用[resourceColor](#resourcecolor)方法构造的ColorMetrics对象是否在系统配置变化时自动刷新颜色值。 <br>true表示主动监听系统配置变化，变化时值刷新为对应配置下的资源值。 <br>false表示不主动监听系统配置变化。 |
 
 **返回值：**
 
@@ -55,10 +47,6 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 在当前颜色的上方叠加上一层指定的颜色（overlayColor），并返回混合后的新颜色。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,10 +84,6 @@ static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: 
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -112,7 +96,7 @@ static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | ColorSpace | 是 | 色彩空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用 [setWindowColorSpace](arkts-arkui-window-window-i.md#setWindowColorSpace)接口，将当前窗口设置为广色 域模式。 |
+| colorSpace | ColorSpace | 是 | 色彩空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用 [setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace)接口，将当前窗口设置为广色 域模式。 |
 | red | number | 是 | 颜色的R分量（红色），值是0~1的浮点数。超出范围时按边界值处理。 |
 | green | number | 是 | 颜色的G分量（绿色），值是0~1的浮点数。超出范围时按边界值处理。 |
 | blue | number | 是 | 颜色的B分量（蓝色），值是0~1的浮点数。超出范围时按边界值处理。 |
@@ -133,10 +117,6 @@ static numeric(value: number): ColorMetrics
 使用HEX格式颜色实例化 ColorMetrics 类。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -167,10 +147,6 @@ static resourceColor(color: ResourceColor): ColorMetrics
 使用资源格式颜色实例化 ColorMetrics 类。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -208,10 +184,6 @@ static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetr
 使用rgb或者rgba格式颜色实例化 ColorMetrics 类。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

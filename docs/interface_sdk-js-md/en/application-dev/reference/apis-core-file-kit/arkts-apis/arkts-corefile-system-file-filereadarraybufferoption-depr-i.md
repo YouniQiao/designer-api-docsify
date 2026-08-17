@@ -4,8 +4,6 @@ Defines the options used in readArrayBuffer().
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileReadArrayBufferOption--><!--Device-unnamed-export interface FileReadArrayBufferOption-End-->
@@ -23,8 +21,6 @@ Callback invoked when the API call is complete.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ Callback invoked when the API call fails. **data** indicates the error informati
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileReadArrayBufferOption-fail?: (data: string, code: number) => void--><!--Device-FileReadArrayBufferOption-fail?: (data: string, code: number) => void-End-->
@@ -63,8 +57,6 @@ Length of data to read, in bytes. If this parameter is not set, the reading proc
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -84,8 +76,6 @@ Position where the reading starts, in bytes. The default value is the start posi
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileReadArrayBufferOption-position?: number--><!--Device-FileReadArrayBufferOption-position?: number-End-->
@@ -98,13 +88,11 @@ Position where the reading starts, in bytes. The default value is the start posi
 success?: (data: FileReadArrayBufferResponse) => void
 ```
 
-Callback invoked when the API call is successful. **data** is [FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md#FileReadArrayBufferResponse).
+Callback invoked when the API call is successful. **data** is [FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md#filereadarraybufferresponse).
 
 **Type:** (data: FileReadArrayBufferResponse) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -123,8 +111,6 @@ URI of the file to which the content is written. Restricted by the underlying fi
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

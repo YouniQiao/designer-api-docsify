@@ -4,10 +4,6 @@ Enumerates the deferred delivery image types. In deferred delivery, photo and vi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum DeferredDeliveryImageType--><!--Device-camera-enum DeferredDeliveryImageType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ NONE = 0
 Deferred delivery is not supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeferredDeliveryImageType-NONE = 0--><!--Device-DeferredDeliveryImageType-NONE = 0-End-->
 
@@ -44,10 +36,6 @@ Deferred delivery for photo capture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeferredDeliveryImageType-PHOTO = 1--><!--Device-DeferredDeliveryImageType-PHOTO = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -63,10 +51,6 @@ VIDEO = 2
 Deferred delivery for video capture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeferredDeliveryImageType-VIDEO = 2--><!--Device-DeferredDeliveryImageType-VIDEO = 2-End-->
 

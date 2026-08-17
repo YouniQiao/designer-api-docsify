@@ -4,10 +4,6 @@ TreeSet is implemented based on TreeMap. In TreeSet, only value objects are proc
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class TreeSet--><!--Device-unnamed-declare class TreeSet-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<T>
 returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -76,7 +64,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -121,10 +109,6 @@ If the set does not contain the element, the specified element is added
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-add(value: T): boolean--><!--Device-TreeSet-add(value: T): boolean-End-->
@@ -149,7 +133,7 @@ If the set does not contain the element, the specified element is added
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -167,10 +151,6 @@ Clears all element groups in a set
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-clear(): void--><!--Device-TreeSet-clear(): void-End-->
@@ -183,7 +163,7 @@ Clears all element groups in a set
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -204,10 +184,6 @@ A constructor used to create a TreeSet object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)--><!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)-End-->
@@ -226,7 +202,7 @@ A constructor used to create a TreeSet object.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The TreeSet's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Default constructor.
@@ -278,10 +254,6 @@ A constructor used to create a TreeSet object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TreeSet-constructor(comparator?: TreeSetComparator<T>)--><!--Device-TreeSet-constructor(comparator?: TreeSetComparator<T>)-End-->
@@ -304,10 +276,6 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-entries(): IterableIterator<[T, T]>--><!--Device-TreeSet-entries(): IterableIterator<[T, T]>-End-->
@@ -326,7 +294,7 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -363,10 +331,6 @@ Executes a provided function once for each value in the Set object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void--><!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void-End-->
@@ -386,7 +350,7 @@ Executes a provided function once for each value in the Set object.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -420,10 +384,6 @@ Executes a provided function once for each value in the Set object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TreeSet-forEach(callbackFn: TreeSetForEachCb<T>): void--><!--Device-TreeSet-forEach(callbackFn: TreeSetForEachCb<T>): void-End-->
@@ -446,10 +406,6 @@ Gets the first elements in a set
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-getFirstValue(): T--><!--Device-TreeSet-getFirstValue(): T-End-->
@@ -467,9 +423,9 @@ Gets the first elements in a set
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirstValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -488,10 +444,6 @@ getHigherValue(key: T): T
 Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -517,7 +469,7 @@ Returns the least element greater than or equal to the specified key if the key 
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherValue method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -537,10 +489,6 @@ getHigherValue(key: T): T | undefined
 Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -576,10 +524,6 @@ Gets the last elements in a set
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-getLastValue(): T--><!--Device-TreeSet-getLastValue(): T-End-->
@@ -597,9 +541,9 @@ Gets the last elements in a set
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -618,10 +562,6 @@ getLowerValue(key: T): T
 Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -647,7 +587,7 @@ Returns the greatest element smaller than or equal to the specified key if the k
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerValue method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -667,10 +607,6 @@ getLowerValue(key: T): T | undefined
 Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -706,10 +642,6 @@ Returns whether the Set object contains the elements
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-has(value: T): boolean--><!--Device-TreeSet-has(value: T): boolean-End-->
@@ -734,7 +666,7 @@ Returns whether the Set object contains the elements
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet  = new TreeSet<number>();
@@ -752,10 +684,6 @@ isEmpty(): boolean
 Returns whether the Set object contains elements
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -775,7 +703,7 @@ Returns whether the Set object contains elements
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -792,10 +720,6 @@ popFirst(): T
 Return and delete the first element, returns undefined if tree set is empty
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -814,9 +738,9 @@ Return and delete the first element, returns undefined if tree set is empty
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -836,10 +760,6 @@ Return and delete the last element, returns undefined if tree set is empty
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-popLast(): T--><!--Device-TreeSet-popLast(): T-End-->
@@ -857,9 +777,9 @@ Return and delete the last element, returns undefined if tree set is empty
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -878,10 +798,6 @@ remove(value: T): boolean
 Remove a specified element from a Set object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -907,7 +823,7 @@ Remove a specified element from a Set object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -927,10 +843,6 @@ Returns a new Iterator object that contains the values contained in this set
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-values(): IterableIterator<T>--><!--Device-TreeSet-values(): IterableIterator<T>-End-->
@@ -949,7 +861,7 @@ Returns a new Iterator object that contains the values contained in this set
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -974,10 +886,6 @@ Gets the element number of the TreeSet.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

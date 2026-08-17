@@ -16,10 +16,6 @@ Disable the specified DeviceConfig by networkId. The disabled DeviceConfig will 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
 <!--Device-wifiManager-function disableNetwork(netId: int): void--><!--Device-wifiManager-function disableNetwork(netId: int): void-End-->
@@ -45,7 +41,7 @@ Disable the specified DeviceConfig by networkId. The disabled DeviceConfig will 
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
@@ -68,10 +64,6 @@ function disableNetwork(netId: int, blockDuration: int): void
 Disable the specified DeviceConfig by networkId for a period of time. The disabled DeviceConfig will not be associated with again.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -98,7 +90,7 @@ Disable the specified DeviceConfig by networkId for a period of time. The disabl
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

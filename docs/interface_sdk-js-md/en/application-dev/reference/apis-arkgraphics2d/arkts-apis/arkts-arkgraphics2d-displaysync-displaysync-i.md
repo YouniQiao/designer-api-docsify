@@ -4,10 +4,6 @@ An object that implements the setting of the frame rate and callback. It provide
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-displaySync-interface DisplaySync--><!--Device-displaySync-interface DisplaySync-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,10 +23,6 @@ offFrame(callback?: Callback<IntervalInfo>): void
 Unsubscribes from change events of each frame.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void-End-->
 
@@ -52,10 +44,6 @@ Unsubscribes from change events of each frame.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -67,7 +55,7 @@ Unsubscribes from change events of each frame.
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let callback = (frameInfo: displaySync.IntervalInfo) => {
@@ -90,10 +78,6 @@ Subscribes to change events of each frame.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -114,10 +98,6 @@ Subscribes to change events of each frame.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -129,7 +109,7 @@ Subscribes to change events of each frame.
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let callback = (frameInfo: displaySync.IntervalInfo) => {
@@ -150,10 +130,6 @@ Sets the expected frame rate range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void--><!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -170,7 +146,7 @@ Sets the expected frame rate range.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let range : ExpectedFrameRateRange = {
@@ -193,15 +169,11 @@ Starts callback for each frame.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DisplaySync-start(): void--><!--Device-DisplaySync-start(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 let range : ExpectedFrameRateRange = {
@@ -258,15 +230,11 @@ Stops callback for each frame.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DisplaySync-stop(): void--><!--Device-DisplaySync-stop(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 let range : ExpectedFrameRateRange = {

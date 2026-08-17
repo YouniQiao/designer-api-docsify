@@ -4,9 +4,7 @@ Enumerates how the player preloads media data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-enum Preload--><!--Device-webview-enum Preload-End-->
 
@@ -22,9 +20,7 @@ No media data is preloaded.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Preload-NONE = 0--><!--Device-Preload-NONE = 0-End-->
 
@@ -40,9 +36,7 @@ Only the metadata of the media is preloaded.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Preload-METADATA = 1--><!--Device-Preload-METADATA = 1-End-->
 
@@ -58,9 +52,7 @@ A sufficient amount of media data is preloaded to ensure smooth playback
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Preload-AUTO = 2--><!--Device-Preload-AUTO = 2-End-->
 

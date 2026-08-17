@@ -4,10 +4,6 @@ Session represent a connection session to one of the SEs available on the device
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-omapi-export interface Session--><!--Device-omapi-export interface Session-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -28,10 +24,6 @@ Close the connection with the SE. This will close any channels opened by this ap
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-close(): void--><!--Device-Session-close(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -43,7 +35,7 @@ Close the connection with the SE. This will close any channels opened by this ap
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -70,10 +62,6 @@ Close any channels opened on this session.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-closeChannels(): void--><!--Device-Session-closeChannels(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -85,7 +73,7 @@ Close any channels opened on this session.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -112,10 +100,6 @@ Get the ATR of this SE. A empty array SHALL be returned if the ATR for this SE i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-getATR(): number[]--><!--Device-Session-getATR(): number[]-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -133,7 +117,7 @@ Get the ATR of this SE. A empty array SHALL be returned if the ATR for this SE i
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -161,10 +145,6 @@ Get the reader that provides this session.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-getReader(): Reader--><!--Device-Session-getReader(): Reader-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -181,7 +161,7 @@ Get the reader that provides this session.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -221,10 +201,6 @@ Check if this session is closed.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-isClosed(): boolean--><!--Device-Session-isClosed(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -241,7 +217,7 @@ Check if this session is closed.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -268,10 +244,6 @@ openBasicChannel(aid: number[]): Promise<Channel>
 This method is provided to ease the development of mobile applications and for backward compatibility with existing applications. This method is equivalent to openBasicChannel(aid, P2=0x00).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-Session-openBasicChannel(aid: number[]): Promise<Channel>--><!--Device-Session-openBasicChannel(aid: number[]): Promise<Channel>-End-->
 
@@ -300,7 +272,7 @@ This method is provided to ease the development of mobile applications and for b
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -339,10 +311,6 @@ This method is provided to ease the development of mobile applications and for b
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -365,7 +333,7 @@ This method is provided to ease the development of mobile applications and for b
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -406,10 +374,6 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-openBasicChannel(aid: number[], p2: number): Promise<Channel>--><!--Device-Session-openBasicChannel(aid: number[], p2: number): Promise<Channel>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -438,7 +402,7 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -478,10 +442,6 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -505,7 +465,7 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -547,10 +507,6 @@ This method is provided to ease the development of mobile applications and for b
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-openLogicalChannel(aid: number[]): Promise<Channel>--><!--Device-Session-openLogicalChannel(aid: number[]): Promise<Channel>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -578,7 +534,7 @@ This method is provided to ease the development of mobile applications and for b
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -617,10 +573,6 @@ This method is provided to ease the development of mobile applications and for b
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -643,7 +595,7 @@ This method is provided to ease the development of mobile applications and for b
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -684,10 +636,6 @@ Open a logical channel with the SE, selecting the applet represented by the give
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-openLogicalChannel(aid: number[], p2: number): Promise<Channel>--><!--Device-Session-openLogicalChannel(aid: number[], p2: number): Promise<Channel>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -716,7 +664,7 @@ Open a logical channel with the SE, selecting the applet represented by the give
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -756,10 +704,6 @@ Open a logical channel with the SE, selecting the applet represented by the give
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Session-openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -783,7 +727,7 @@ Open a logical channel with the SE, selecting the applet represented by the give
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

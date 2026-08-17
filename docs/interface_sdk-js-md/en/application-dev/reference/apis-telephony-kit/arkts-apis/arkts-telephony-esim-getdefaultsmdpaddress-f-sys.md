@@ -16,10 +16,6 @@ Gets the default SM-DP+ address stored in an eUICC.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
 <!--Device-eSIM-function getDefaultSmdpAddress(slotId: int): Promise<string>--><!--Device-eSIM-function getDefaultSmdpAddress(slotId: int): Promise<string>-End-->
@@ -51,7 +47,7 @@ Gets the default SM-DP+ address stored in an eUICC.
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

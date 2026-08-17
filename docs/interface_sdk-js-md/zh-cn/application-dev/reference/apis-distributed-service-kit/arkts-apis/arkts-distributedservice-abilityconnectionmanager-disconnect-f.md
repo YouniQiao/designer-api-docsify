@@ -10,10 +10,6 @@ function disconnect(sessionId: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-abilityConnectionManager-function disconnect(sessionId: int): void--><!--Device-abilityConnectionManager-function disconnect(sessionId: int): void-End-->
@@ -26,7 +22,7 @@ function disconnect(sessionId: int): void
 | --- | --- | --- | --- |
 | sessionId | int | 是 | 协同会话ID |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

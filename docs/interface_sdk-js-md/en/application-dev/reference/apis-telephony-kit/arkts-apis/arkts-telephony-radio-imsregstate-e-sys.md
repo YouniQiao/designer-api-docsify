@@ -4,10 +4,6 @@ Obtains IMS registration status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export enum ImsRegState--><!--Device-radio-export enum ImsRegState-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -24,10 +20,6 @@ Indicates that the ims service is not registered.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImsRegState-IMS_UNREGISTERED = 0--><!--Device-ImsRegState-IMS_UNREGISTERED = 0-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -43,10 +35,6 @@ IMS_REGISTERED = 1
 Indicates that the ims service has been registered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImsRegState-IMS_REGISTERED = 1--><!--Device-ImsRegState-IMS_REGISTERED = 1-End-->
 

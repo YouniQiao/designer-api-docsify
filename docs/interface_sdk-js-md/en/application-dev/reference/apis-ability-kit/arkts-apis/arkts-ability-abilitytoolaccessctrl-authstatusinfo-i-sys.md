@@ -4,10 +4,6 @@ Authorization status information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-abilityToolAccessCtrl-interface AuthStatusInfo--><!--Device-abilityToolAccessCtrl-interface AuthStatusInfo-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -26,10 +22,6 @@ Authorization status.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-AuthStatusInfo-authStatus?: AuthStatus--><!--Device-AuthStatusInfo-authStatus?: AuthStatus-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -47,10 +39,6 @@ Authorization flag. Value range: (-∞,+∞).
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-AuthStatusInfo-flag?: long--><!--Device-AuthStatusInfo-flag?: long-End-->
 

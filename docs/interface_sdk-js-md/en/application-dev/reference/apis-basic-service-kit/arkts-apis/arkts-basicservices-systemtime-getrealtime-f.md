@@ -16,11 +16,9 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemTime-function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -39,7 +37,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,11 +67,9 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemTime-function getRealTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealTime(callback: AsyncCallback<number>): void-End-->
 
@@ -91,7 +87,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -121,11 +117,9 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemTime-function getRealTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getRealTime(isNano?: boolean): Promise<number>-End-->
 
@@ -149,7 +143,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -2,13 +2,11 @@
 
 Provides an interface to set transition style when a page enters.
 
-**Inheritance/Implementation:** PageTransitionEnter extends [CommonTransition](arkts-na-pagetransition-commontransition-c.md#CommonTransition)
+**Inheritance/Implementation:** PageTransitionEnter extends [CommonTransition](arkts-na-pagetransition-commontransition-c.md#commontransition)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class PageTransitionEnter--><!--Device-unnamed-export declare class PageTransitionEnter-End-->
 
@@ -24,9 +22,7 @@ Called when page Jump animation is used.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,9 +52,7 @@ Called frame by frame to customize pageTransition animation when the page enters
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

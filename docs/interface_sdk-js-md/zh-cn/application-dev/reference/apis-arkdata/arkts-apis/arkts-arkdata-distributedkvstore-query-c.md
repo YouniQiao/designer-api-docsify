@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-distributedKVStore-class Query--><!--Device-distributedKVStore-class Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -22,10 +18,6 @@ and(): Query
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Query-and(): Query--><!--Device-Query-and(): Query-End-->
@@ -38,7 +30,7 @@ and(): Query
 | --- | --- |
 | Query | 返回查询对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,13 +55,9 @@ try {
 beginGroup(): Query
 ```
 
-创建一个带有左括号的查询条件组。必须与[endGroup()](#endGroup)成对使用，以形成完整的查询条件分组。
+创建一个带有左括号的查询条件组。必须与[endGroup()](#endgroup)成对使用，以形成完整的查询条件分组。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,7 +71,7 @@ beginGroup(): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -112,10 +100,6 @@ constructor()
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Query-constructor()--><!--Device-Query-constructor()-End-->
@@ -128,13 +112,9 @@ constructor()
 deviceId(deviceId: string): Query
 ```
 
-添加设备ID作为Key的前缀。 > **说明：** > > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)中的 > networkId，通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+添加设备ID作为Key的前缀。 > **说明：** > > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo)中的 > networkId，通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,7 +140,7 @@ deviceId(deviceId: string): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -183,13 +163,9 @@ try {
 endGroup(): Query
 ```
 
-创建一个带有右括号的查询条件组。必须与[beginGroup()](#beginGroup)成对使用，以形成完整的查询条件分组。
+创建一个带有右括号的查询条件组。必须与[beginGroup()](#begingroup)成对使用，以形成完整的查询条件分组。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -203,7 +179,7 @@ endGroup(): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -228,13 +204,9 @@ try {
 equalTo(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。 > **说明：** > > 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。 > **说明：** > > 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -271,10 +243,6 @@ getSqlLike(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Query-getSqlLike(): string--><!--Device-Query-getSqlLike(): string-End-->
@@ -287,7 +255,7 @@ getSqlLike(): string
 | --- | --- |
 | string | 返回Query对象构建的查询语句字符串，可用于查看和调试当前的查询条件。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -309,13 +277,9 @@ try {
 greaterThan(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象以查询具有大于指定值的指定字段的条目。 > **说明：** > > 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有大于指定值的指定字段的条目。 > **说明：** > > 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -348,13 +312,9 @@ greaterThan(field: string, value: long | double | string | boolean): Query
 greaterThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。 > **说明：** > > 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。 > **说明：** > > 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -387,13 +347,9 @@ greaterThanOrEqualTo(field: string, value: long | double | string): Query
 inNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。 > **说明：** > > 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。 > **说明：** > > 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -426,13 +382,9 @@ inNumber(field: string, valueList: long[] | double[]): Query
 inString(field: string, valueList: string[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。 > **说明：** > > 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。 > **说明：** > > 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -459,7 +411,7 @@ inString(field: string, valueList: string[]): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -483,13 +435,9 @@ try {
 isNotNull(field: string): Query
 ```
 
-构造一个Query对象以查询具有值不为null的指定字段的条目。 > **说明：** > > 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有值不为null的指定字段的条目。 > **说明：** > > 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -515,7 +463,7 @@ isNotNull(field: string): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -539,13 +487,9 @@ try {
 isNull(field: string): Query
 ```
 
-构造一个Query对象以查询具有值为null的指定字段的条目。 > **说明：** > > 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有值为null的指定字段的条目。 > **说明：** > > 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -571,7 +515,7 @@ isNull(field: string): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -595,13 +539,9 @@ try {
 lessThan(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有小于指定值的指定字段的条目。 > **说明：** > > 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有小于指定值的指定字段的条目。 > **说明：** > > 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -634,13 +574,9 @@ lessThan(field: string, value: long | double | string): Query
 lessThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。 > **说明：** > > 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。 > **说明：** > > 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -673,13 +609,9 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 like(field: string, value: string): Query
 ```
 
-构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。 > **说明：** > > 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。 > **说明：** > > 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -706,7 +638,7 @@ like(field: string, value: string): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -734,10 +666,6 @@ limit(total: int, offset: int): Query
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Query-limit(total: int, offset: int): Query--><!--Device-Query-limit(total: int, offset: int): Query-End-->
@@ -763,7 +691,7 @@ limit(total: int, offset: int): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -790,13 +718,9 @@ try {
 notEqualTo(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值不等于指定值的条目。 > **说明：** > > 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段且值不等于指定值的条目。 > **说明：** > > 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -829,13 +753,9 @@ notEqualTo(field: string, value: long | double | string | boolean): Query
 notInNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。 > **说明：** > > 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。 > **说明：** > > 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -868,13 +788,9 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 notInString(field: string, valueList: string[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。 > **说明：** > > 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。 > **说明：** > > 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -901,7 +817,7 @@ notInString(field: string, valueList: string[]): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -929,10 +845,6 @@ or(): Query
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Query-or(): Query--><!--Device-Query-or(): Query-End-->
@@ -945,7 +857,7 @@ or(): Query
 | --- | --- |
 | Query | 返回查询对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -970,13 +882,9 @@ try {
 orderByAsc(field: string): Query
 ```
 
-构造一个Query对象，将查询结果按升序排序。 > **说明：** > > 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象，将查询结果按升序排序。 > **说明：** > > 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1002,7 +910,7 @@ orderByAsc(field: string): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1027,13 +935,9 @@ try {
 orderByDesc(field: string): Query
 ```
 
-构造一个Query对象，将查询结果按降序排序。 > **说明：** > > 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象，将查询结果按降序排序。 > **说明：** > > 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1059,7 +963,7 @@ orderByDesc(field: string): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1088,10 +992,6 @@ prefixKey(prefix: string): Query
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Query-prefixKey(prefix: string): Query--><!--Device-Query-prefixKey(prefix: string): Query-End-->
@@ -1102,7 +1002,7 @@ prefixKey(prefix: string): Query
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| prefix | string | 是 | 表示指定的键前缀，长度范围为0-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)，不能包含'^'。包含'^'将导致谓 词失效，查询结果会返回数据库中的所有数据。 |
+| prefix | string | 是 | 表示指定的键前缀，长度范围为0-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)，不能包含'^'。包含'^'将导致谓 词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -1116,7 +1016,7 @@ prefixKey(prefix: string): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1145,10 +1045,6 @@ reset(): Query
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Query-reset(): Query--><!--Device-Query-reset(): Query-End-->
@@ -1161,7 +1057,7 @@ reset(): Query
 | --- | --- |
 | Query | 返回重置后的Query对象，所有已添加的谓词条件被清空，可用于重新构建查询条件。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1190,10 +1086,6 @@ setSuggestIndex(index: string): Query
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Query-setSuggestIndex(index: string): Query--><!--Device-Query-setSuggestIndex(index: string): Query-End-->
@@ -1218,7 +1110,7 @@ setSuggestIndex(index: string): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1243,13 +1135,9 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。 > **说明：** > > 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。 > **说明：** > > 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1276,7 +1164,7 @@ unlike(field: string, value: string): Query
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

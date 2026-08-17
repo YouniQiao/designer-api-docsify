@@ -10,10 +10,6 @@ function connectAbility(request: Want, options: ConnectOptions): number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-function connectAbility(request: Want, options: ConnectOptions): number--><!--Device-featureAbility-function connectAbility(request: Want, options: ConnectOptions): number-End-->
@@ -33,7 +29,7 @@ function connectAbility(request: Want, options: ConnectOptions): number
 | --- | --- |
 | number | 连接的ServiceAbility的ID(ID从0开始自增，每连接成功一次ID加1)。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

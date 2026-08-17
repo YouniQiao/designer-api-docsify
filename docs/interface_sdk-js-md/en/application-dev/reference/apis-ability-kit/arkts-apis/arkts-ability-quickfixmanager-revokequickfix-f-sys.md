@@ -16,10 +16,6 @@ Revokes quick fix. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
 <!--Device-quickFixManager-function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-quickFixManager-function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void-End-->
@@ -45,7 +41,7 @@ Revokes quick fix. This API uses an asynchronous callback to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { quickFixManager } from '@kit.AbilityKit';
@@ -69,10 +65,6 @@ function revokeQuickFix(bundleName: string): Promise<void>
 Revokes quick fix. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
@@ -104,7 +96,7 @@ Revokes quick fix. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { quickFixManager } from '@kit.AbilityKit';

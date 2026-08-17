@@ -16,11 +16,9 @@ Re-connects to current network.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [reconnect](arkts-connectivity-wifimanager-reconnect-f-sys.md#reconnect-(System-API))
+**Substitutes:** [reconnect](arkts-connectivity-wifimanager-reconnect-f-sys.md#reconnect-system-api)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -36,7 +34,7 @@ Re-connects to current network.
 | --- | --- |
 | boolean | { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

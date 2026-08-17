@@ -16,10 +16,6 @@ Receives an ICC account change. This callback is invoked when the ICC account up
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function onIccAccountInfoChange(callback: Callback<void>): void--><!--Device-observer-function onIccAccountInfoChange(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry

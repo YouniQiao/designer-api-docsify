@@ -16,8 +16,6 @@ Sets the Bluetooth friendly name of a device. It is used only by system applicat
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
 **Deprecated since:** 12
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
@@ -45,7 +43,7 @@ Sets the Bluetooth friendly name of a device. It is used only by system applicat
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

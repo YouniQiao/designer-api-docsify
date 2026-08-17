@@ -4,10 +4,6 @@ Options used to build the **TextClock** component. > **NOTE：**> > To standardi
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface TextClockOptions--><!--Device-unnamed-declare interface TextClockOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Controller to control the status of the **&lt;TextClock&gt;** component.
 **Type:** [TextClockController](arkts-arkui-textclockcontroller-c.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,10 +39,6 @@ Time zone offset. The value range is [-14, 12], indicating UTC+12 to UTC-12. A n
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

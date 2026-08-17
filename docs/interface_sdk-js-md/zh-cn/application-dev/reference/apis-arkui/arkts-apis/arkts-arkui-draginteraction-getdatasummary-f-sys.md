@@ -10,10 +10,6 @@ function getDataSummary(): Array<Summary>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-dragInteraction-function getDataSummary(): Array<Summary>--><!--Device-dragInteraction-function getDataSummary(): Array<Summary>-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
@@ -32,7 +28,7 @@ function getDataSummary(): Array<Summary>
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let summary: Array<dragInteraction.Summary> = dragInteraction.getDataSummary();

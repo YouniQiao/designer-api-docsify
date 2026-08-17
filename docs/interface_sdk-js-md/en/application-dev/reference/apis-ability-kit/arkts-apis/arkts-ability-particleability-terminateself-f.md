@@ -16,10 +16,6 @@ Terminates this ParticleAbility. This API uses an asynchronous callback to retur
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-particleAbility-function terminateSelf(callback: AsyncCallback<void>): void--><!--Device-particleAbility-function terminateSelf(callback: AsyncCallback<void>): void-End-->
@@ -32,7 +28,7 @@ Terminates this ParticleAbility. This API uses an asynchronous callback to retur
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ParticleAbility is terminated, **err** is **undefined**; otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';
@@ -57,10 +53,6 @@ Terminates this ParticleAbility. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-particleAbility-function terminateSelf(): Promise<void>--><!--Device-particleAbility-function terminateSelf(): Promise<void>-End-->
@@ -73,7 +65,7 @@ Terminates this ParticleAbility. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';

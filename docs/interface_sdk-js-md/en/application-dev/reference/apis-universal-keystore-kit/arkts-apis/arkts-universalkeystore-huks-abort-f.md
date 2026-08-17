@@ -16,11 +16,9 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortSession)(handle: number, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortsession)(handle: number, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -34,7 +32,7 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **abort** operation. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
@@ -136,11 +134,9 @@ Aborts a key operation. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortSession)(handle: number, options: HuksOptions)
+**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortsession)(handle: number, options: HuksOptions)
 
 <!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
 
@@ -159,7 +155,7 @@ Aborts a key operation. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Promise that returns **HuksResult**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

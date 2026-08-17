@@ -1,12 +1,8 @@
 # WebMediaOptions
 
-Describes the web media options.
+Configures the media policy of the **Web** component, including the audio playback continuation validity period, audio exclusive mode, and more. It is suitable for scenarios where audio playback experience optimization and multi- instance audio management are required, improving media playback stability and user experience.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface WebMediaOptions--><!--Device-unnamed-declare interface WebMediaOptions-End-->
 
@@ -18,15 +14,11 @@ Describes the web media options.
 audioExclusive?: boolean
 ```
 
-Whether the audio of multiple **Web** instances in an application is exclusive. The value **true** indicates that the audio of multiple **Web** instances in an application is exclusive, and **false** indicates the opposite. The default value is **true**.
+Whether the audio of multiple Web instances in an app is exclusive. The value **true** means the audio of multiple Web instances in an app is exclusive, and **false** means the opposite. Default value: **true**.
 
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,15 +32,11 @@ Whether the audio of multiple **Web** instances in an application is exclusive. 
 audioSessionType?: AudioSessionType
 ```
 
-Web audio type in the application. The default value is [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#StreamUsage). This parameter changes the mapping between the component audio type and the system audio type, which affects the ArkWeb audio focus policy.
+Web audio type in the app. The default value corresponds to STREAM_USAGE_MUSIC in the system audio stream type [StreamUsage](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#streamusage). Used to change the mapping between the component audio type and the system audio type, affecting the ArkWeb audio focus policy.
 
 **Type:** [AudioSessionType](arkts-arkweb-audiosessiontype-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-WebMediaOptions-audioSessionType?: AudioSessionType--><!--Device-WebMediaOptions-audioSessionType?: AudioSessionType-End-->
 
@@ -60,15 +48,11 @@ Web audio type in the application. The default value is [STREAM_USAGE_MUSIC](../
 resumeInterval?: number
 ```
 
-Validity period for automatically resuming a web audio paused by another application, in seconds. The value range is [-2147483648, 2147483647]. If **resumeInterval** is set to **0**, the playback is not automatically resumed. If **resumeInterval** is set to a value greater than 0, the playback is resumed in the specified period. If **resumeInterval** is set to a value less than 0, the playback is resumed in an unlimited period. Due to the approximate value, the validity period may have a deviation of less than 1 second. **NOTE：**After an HLS video is interrupted, the video playback is automatically resumed when the video is returned to the foreground.
+Validity period during which Web audio and video paused by other apps can automatically resume playback, in seconds. Value range: [-2147483648, 2147483647]. The value **0** means no automatic resumption; a value greater than **0** means an attempt to resume within the specified period; a value less than **0** means an attempt to resume within an unlimited period. Due to approximation, this validity period may have an error within one second. **NOTE：**After an HLS video is interrupted, it will automatically resume when returning to the foreground, regardless of this time setting. Default value: **0**.
 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

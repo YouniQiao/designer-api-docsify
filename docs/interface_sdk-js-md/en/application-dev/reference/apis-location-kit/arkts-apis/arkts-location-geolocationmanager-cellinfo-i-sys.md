@@ -4,10 +4,6 @@ Cell information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface CellInfo--><!--Device-geoLocationManager-export interface CellInfo-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -32,10 +28,6 @@ Indicates additional information map.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CellInfo-additionsMap?: Map<string, string>--><!--Device-CellInfo-additionsMap?: Map<string, string>-End-->
@@ -55,10 +47,6 @@ Indicates absolute radio frequency channel number (ARFCN). The value should be a
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Indicates ID of cell.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CellInfo-cellId: long--><!--Device-CellInfo-cellId: long-End-->
@@ -103,10 +87,6 @@ Indicates location area code(LAC). The value should be an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Indicates mobile country code (MCC). The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CellInfo-mcc: int--><!--Device-CellInfo-mcc: int-End-->
@@ -151,10 +127,6 @@ Indicates mobile network code (MNC). The value should be an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +148,6 @@ Indicates physical cell identifier (PCI). The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CellInfo-pci: int--><!--Device-CellInfo-pci: int-End-->
@@ -199,10 +167,6 @@ Indicates radio access technology (RAT). The value should be an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,10 +188,6 @@ Indicates signal intensity. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CellInfo-signalIntensity: int--><!--Device-CellInfo-signalIntensity: int-End-->
@@ -248,10 +208,6 @@ Indicates tracking area code (TAC). The value range is all integers.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CellInfo-tac?: int--><!--Device-CellInfo-tac?: int-End-->
@@ -271,10 +227,6 @@ Indicates timestamp since boot.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ RgbaColor definition
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-wallpaper-interface RgbaColor--><!--Device-wallpaper-interface RgbaColor-End-->
@@ -30,8 +28,6 @@ The range is 0 to 255.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-RgbaColor-alpha: long--><!--Device-RgbaColor-alpha: long-End-->
@@ -49,8 +45,6 @@ The range is 0 to 255.
 **Type:** long
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -70,8 +64,6 @@ The range is 0 to 255.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-RgbaColor-green: long--><!--Device-RgbaColor-green: long-End-->
@@ -89,8 +81,6 @@ The range is 0 to 255.
 **Type:** long
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

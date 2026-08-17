@@ -4,10 +4,6 @@ Provides preferred playback settings for player.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface PlaybackStrategy--><!--Device-media-interface PlaybackStrategy-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -24,15 +20,11 @@ import { media } from 'media';
 enableSuperResolution?: boolean
 ```
 
-Enable super-resolution feature. default is false. Must enable super-resolution feature before calling [setSuperResolution](arkts-media-media-avplayer-i.md#setSuperResolution) and [setVideoWindowSize](arkts-media-media-avplayer-i.md#setVideoWindowSize).
+Enable super-resolution feature. default is false. Must enable super-resolution feature before calling [setSuperResolution](arkts-media-media-avplayer-i.md#setsuperresolution) and [setVideoWindowSize](arkts-media-media-avplayer-i.md#setvideowindowsize).
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -52,10 +44,6 @@ Indicates whether to keep the decoder working when closing the media, which is u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlaybackStrategy-keepDecodingOnMute?: boolean--><!--Device-PlaybackStrategy-keepDecodingOnMute?: boolean-End-->
@@ -74,10 +62,6 @@ mute the specified media stream when playing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlaybackStrategy-mutedMediaType?: MediaType--><!--Device-PlaybackStrategy-mutedMediaType?: MediaType-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -93,10 +77,6 @@ Audio language.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -116,10 +96,6 @@ Chooses a preferred buffer duration. &lt;p&gt;The preferred buffer duration in t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlaybackStrategy-preferredBufferDuration?: int--><!--Device-PlaybackStrategy-preferredBufferDuration?: int-End-->
@@ -137,10 +113,6 @@ Customize the buffering threshold for start or restart playing. The unit is seco
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -160,10 +132,6 @@ If true, the player should choose HDR stream if exist.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlaybackStrategy-preferredHdr?: boolean--><!--Device-PlaybackStrategy-preferredHdr?: boolean-End-->
@@ -181,10 +149,6 @@ Choose a stream with height close to it.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -204,10 +168,6 @@ Subtitle language.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlaybackStrategy-preferredSubtitleLanguage?: string--><!--Device-PlaybackStrategy-preferredSubtitleLanguage?: string-End-->
@@ -225,10 +185,6 @@ Choose a stream with width close to it.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -248,10 +204,6 @@ Show first frame on prepare.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlaybackStrategy-showFirstFrameOnPrepare?: boolean--><!--Device-PlaybackStrategy-showFirstFrameOnPrepare?: boolean-End-->
@@ -269,10 +221,6 @@ set max buffering threshold for liveStreaming or avplayer while change the speed
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

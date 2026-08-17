@@ -16,10 +16,6 @@ Unsubscribes from changes in the static configuration information of template wi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
@@ -44,7 +40,7 @@ Unsubscribes from changes in the static configuration information of template wi
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formHost } from '@kit.FormKit';

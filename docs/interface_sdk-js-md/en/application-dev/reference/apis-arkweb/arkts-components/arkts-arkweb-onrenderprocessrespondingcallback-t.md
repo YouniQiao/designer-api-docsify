@@ -4,13 +4,9 @@
 type OnRenderProcessRespondingCallback = () => void
 ```
 
-The callback of render process responding.
+Defines a callback invoked when the rendering process transitions back to a normal operating state from an unresponsive state.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-type OnRenderProcessRespondingCallback = () => void--><!--Device-unnamed-type OnRenderProcessRespondingCallback = () => void-End-->
 

@@ -4,10 +4,6 @@ Queue follows the principle of First In First Out (FIFO). It supports insertion 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class Queue--><!--Device-unnamed-declare class Queue-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<T>
 returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Queue-[Symbol.iterator](): IterableIterator<T>--><!--Device-Queue-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -76,7 +64,7 @@ returns an iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -117,10 +105,6 @@ Adds an element at the end of this Queue.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Queue-add(element: T): boolean--><!--Device-Queue-add(element: T): boolean-End-->
@@ -145,7 +129,7 @@ Adds an element at the end of this Queue.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class C1 {
@@ -172,10 +156,6 @@ A constructor used to create a **Queue** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Queue-constructor()--><!--Device-Queue-constructor()-End-->
@@ -188,7 +168,7 @@ A constructor used to create a **Queue** instance.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Queue's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let queue = new Queue<number | string | Object>();
@@ -203,10 +183,6 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 Uses a callback to traverse each element in the **Queue** instance.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -227,7 +203,7 @@ Uses a callback to traverse each element in the **Queue** instance.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -254,10 +230,6 @@ Executes a provided function once for each value in the queue object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -282,10 +254,6 @@ Obtains the first element of this Queue.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Queue-getFirst(): T--><!--Device-Queue-getFirst(): T-End-->
@@ -303,9 +271,9 @@ Obtains the first element of this Queue.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -327,10 +295,6 @@ Removes the first element from this Queue.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Queue-pop(): T--><!--Device-Queue-pop(): T-End-->
@@ -348,9 +312,9 @@ Removes the first element from this Queue.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -374,10 +338,6 @@ Number of elements in a Queue.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

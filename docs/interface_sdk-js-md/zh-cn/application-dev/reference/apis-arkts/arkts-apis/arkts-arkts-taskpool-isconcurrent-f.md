@@ -10,10 +10,6 @@ function isConcurrent(func: Function): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-taskpool-function isConcurrent(func: Function): boolean--><!--Device-taskpool-function isConcurrent(func: Function): boolean-End-->
@@ -32,7 +28,7 @@ function isConcurrent(func: Function): boolean
 | --- | --- |
 | boolean | 检查结果。如果被检查函数标注了 [ |
 
-## 示例
+**示例**
 
 ```TypeScript
 @Concurrent

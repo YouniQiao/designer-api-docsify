@@ -4,9 +4,7 @@ Enum type supplied to threatType for the website's threat type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum ThreatType--><!--Device-unnamed-export declare enum ThreatType-End-->
 
@@ -22,9 +20,7 @@ Illegal websites.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ThreatType-THREAT_ILLEGAL = 0--><!--Device-ThreatType-THREAT_ILLEGAL = 0-End-->
 
@@ -40,9 +36,7 @@ Fraud websites.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ThreatType-THREAT_FRAUD = 1--><!--Device-ThreatType-THREAT_FRAUD = 1-End-->
 
@@ -58,9 +52,7 @@ Websites with security risks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ThreatType-THREAT_RISK = 2--><!--Device-ThreatType-THREAT_RISK = 2-End-->
 
@@ -76,9 +68,7 @@ Websites suspected of containing unhealthy content. ArkWeb will not intercept th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ThreatType-THREAT_WARNING = 3--><!--Device-ThreatType-THREAT_WARNING = 3-End-->
 
@@ -94,9 +84,7 @@ Security check passed, no risks found.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ThreatType-THREAT_NONE = 4--><!--Device-ThreatType-THREAT_NONE = 4-End-->
 
@@ -112,9 +100,7 @@ Security check not performed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ThreatType-THREAT_UNPROCESSED = 5--><!--Device-ThreatType-THREAT_UNPROCESSED = 5-End-->
 

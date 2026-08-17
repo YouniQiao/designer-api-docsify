@@ -6,9 +6,7 @@ Provide a DateTime formatting interface that supports custom symbols. This inter
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-i18n-export class SymbolDateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat-End-->
 
@@ -24,9 +22,7 @@ A constructor used to create a SymbolDateTimeFormat object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,7 +37,7 @@ A constructor used to create a SymbolDateTimeFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. |
-| options | [SymbolDateTimeFormatOptions](arkts-na-i18n-symboldatetimeformatoptions-i.md) | No | Indicates the symbols used to replace. The symbols that support replacement are "AM" and "PM". |
+| options | [SymbolDateTimeFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-symboldatetimeformatoptions-i.md) | No | Indicates the symbols used to replace. The symbols that support replacement are "AM" and "PM". |
 
 **Error codes:**
 
@@ -59,9 +55,7 @@ Parse a date time localized string to Unix timestamp. Unix timestamp, indicating
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,9 +94,7 @@ Obtains the options for creating a SymbolDateTimeFormat object. This will allow 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,5 +108,5 @@ Obtains the options for creating a SymbolDateTimeFormat object. This will allow 
 
 | Type | Description |
 | --- | --- |
-| [ResolvedSymbolDateTimeFormatOptions](arkts-na-i18n-resolvedsymboldatetimeformatoptions-i.md) | Symbol options for SymbolDateTimeFormat. |
+| [ResolvedSymbolDateTimeFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | Symbol options for SymbolDateTimeFormat. |
 

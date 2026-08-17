@@ -16,10 +16,6 @@ Set the name of the Wi-Fi P2P device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
 <!--Device-wifiManager-function setDeviceName(devName: string): void--><!--Device-wifiManager-function setDeviceName(devName: string): void-End-->
@@ -45,7 +41,7 @@ Set the name of the Wi-Fi P2P device.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

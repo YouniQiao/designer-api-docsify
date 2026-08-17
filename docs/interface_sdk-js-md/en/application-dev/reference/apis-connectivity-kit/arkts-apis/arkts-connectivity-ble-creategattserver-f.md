@@ -16,11 +16,9 @@ create a JavaScript Gatt server instance.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [createGattServer](#createGattServer)
+**Substitutes:** [createGattServer](#creategattserver)
 
 <!--Device-BLE-function createGattServer(): GattServer--><!--Device-BLE-function createGattServer(): GattServer-End-->
 
@@ -32,7 +30,7 @@ create a JavaScript Gatt server instance.
 | --- | --- |
 | GattServer | Returns a JavaScript Gatt server instance { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let gattServer: bluetoothManager.GattServer  = bluetoothManager.BLE.createGattServer();

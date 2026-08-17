@@ -10,10 +10,6 @@ function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObse
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
 <!--Device-appManager-function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string): void--><!--Device-appManager-function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string): void-End-->
@@ -39,7 +35,7 @@ function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObse
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

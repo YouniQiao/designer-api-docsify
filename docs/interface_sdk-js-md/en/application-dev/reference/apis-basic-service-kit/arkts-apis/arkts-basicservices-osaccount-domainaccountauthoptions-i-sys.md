@@ -4,10 +4,6 @@ Defines the options for domain account authentication.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface DomainAccountAuthOptions--><!--Device-osAccount-interface DomainAccountAuthOptions-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -31,10 +27,6 @@ Indicates the server parameters.
 **Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-DomainAccountAuthOptions-serverParams?: Record<string, RecordData>--><!--Device-DomainAccountAuthOptions-serverParams?: Record<string, RecordData>-End-->
 

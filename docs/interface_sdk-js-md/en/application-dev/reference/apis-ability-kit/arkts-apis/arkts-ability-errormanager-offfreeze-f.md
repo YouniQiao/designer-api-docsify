@@ -16,10 +16,6 @@ Unregister the observer for freeze event. This function can only be called from 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-errorManager-function offFreeze(observer?: FreezeObserver): void--><!--Device-errorManager-function offFreeze(observer?: FreezeObserver): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

@@ -10,11 +10,9 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishAsUser)(event: string, userId: int, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishasuser)(event: string, userId: int, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -28,9 +26,9 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发布的公共事件。 |
 | userId | number | 是 | 表示指定向该用户ID发布此公共事件。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import Base from '@ohos.base';
@@ -67,11 +65,9 @@ function publishAsUser(
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishAsUser（系统接口）)( event: string, userId: int, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt; )
+**替代接口：** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishasuser系统接口)( event: string, userId: int, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt; )
 
 <!--Device-commonEvent-function publishAsUser(    event: string,    userId: number,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void--><!--Device-commonEvent-function publishAsUser(    event: string,    userId: number,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void-End-->
 
@@ -86,9 +82,9 @@ function publishAsUser(
 | event | string | 是 | 表示要发布的公共事件。 |
 | userId | number | 是 | 表示指定向该用户ID发布此公共事件。 |
 | options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 是 | 表示发布公共事件的属性。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 公共事件发布结果的回调方法。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import Base from '@ohos.base';

@@ -10,10 +10,6 @@ function stopDistributedHardware(description: HardwareDescriptor): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
 <!--Device-hardwareManager-function stopDistributedHardware(description: HardwareDescriptor): Promise<void>--><!--Device-hardwareManager-function stopDistributedHardware(description: HardwareDescriptor): Promise<void>-End-->
@@ -44,7 +40,7 @@ function stopDistributedHardware(description: HardwareDescriptor): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hardwareManager } from '@kit.DistributedServiceKit';

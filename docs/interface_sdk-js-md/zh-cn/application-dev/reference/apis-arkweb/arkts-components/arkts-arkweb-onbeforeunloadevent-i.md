@@ -1,12 +1,8 @@
 # OnBeforeUnloadEvent
 
-Defines the triggered function when the web page wants to confirm navigation from JavaScript onbeforeunload.
+定义刷新或关闭场景下，在即将离开当前页面时触发此回调。适用于表单编辑等场景，允许开发者拦截离开动作并弹窗确认，从而避免用户未提交的数据意外丢失。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface OnBeforeUnloadEvent--><!--Device-unnamed-declare interface OnBeforeUnloadEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered function when the web page wants to confirm navigation fro
 isReload?: boolean
 ```
 
-页面是否刷新。<br>当页面因刷新即将离开时，isReload参数被设置为true；当页面因关闭即将离开时，isReload参数被设置为false。
+页面是否刷新。 当页面因刷新即将离开时，isReload为true；当页面因关闭即将离开时，isReload为false。 默认值：false。
 
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-OnBeforeUnloadEvent-isReload?: boolean--><!--Device-OnBeforeUnloadEvent-isReload?: boolean-End-->
 
@@ -43,10 +35,6 @@ message: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -66,10 +54,6 @@ result: JsResult
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-OnBeforeUnloadEvent-result: JsResult--><!--Device-OnBeforeUnloadEvent-result: JsResult-End-->
@@ -87,10 +71,6 @@ url: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

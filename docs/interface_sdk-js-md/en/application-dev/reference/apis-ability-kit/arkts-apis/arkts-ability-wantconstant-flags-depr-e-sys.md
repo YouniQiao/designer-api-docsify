@@ -4,11 +4,9 @@ Enumerates the flags that specify how the Want will be handled.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Flags](arkts-ability-wantconstant-flags-e.md#Flags)
+**Substitutes:** [Flags](arkts-ability-wantconstant-flags-e.md#flags)
 
 <!--Device-wantConstant-export enum Flags--><!--Device-wantConstant-export enum Flags-End-->
 
@@ -23,8 +21,6 @@ FLAG_AUTH_PERSISTABLE_URI_PERMISSION = 0x00000040
 Grants the permission to make the URI persistent.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ Grants the permission to verify URIs by prefix matching.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-Flags-FLAG_AUTH_PREFIX_URI_PERMISSION = 0x00000080--><!--Device-Flags-FLAG_AUTH_PREFIX_URI_PERMISSION = 0x00000080-End-->
@@ -63,8 +57,6 @@ FLAG_ABILITY_CONTINUATION_REVERSIBLE = 0x00000400
 Indicates that ability continuation is reversible.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

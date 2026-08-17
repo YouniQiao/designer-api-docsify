@@ -4,10 +4,6 @@ Enumerates the album types.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendablePhotoAccessHelper-const enum AlbumType--><!--Device-sendablePhotoAccessHelper-const enum AlbumType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,10 +17,6 @@ SMART = 4096
 Smart analysis album.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-AlbumType-SMART = 4096--><!--Device-AlbumType-SMART = 4096-End-->
 

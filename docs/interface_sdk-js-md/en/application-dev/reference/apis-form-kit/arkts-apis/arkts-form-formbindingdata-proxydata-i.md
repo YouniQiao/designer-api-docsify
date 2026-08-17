@@ -4,10 +4,6 @@ Defines the form proxy data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formBindingData-interface ProxyData--><!--Device-formBindingData-interface ProxyData-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -30,10 +26,6 @@ Key for proxy. The value depends on the data publisher.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -53,10 +45,6 @@ SubscriberId. The value depends on the data publisher. The default value is curr
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

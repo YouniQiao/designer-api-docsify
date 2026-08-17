@@ -16,10 +16,6 @@ Obtains the AttestResultInfo object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-deviceAttest-function getAttestStatus(callback: AsyncCallback<AttestResultInfo>): void--><!--Device-deviceAttest-function getAttestStatus(callback: AsyncCallback<AttestResultInfo>): void-End-->
 
 **System capability:** SystemCapability.XTS.DeviceAttest
@@ -40,7 +36,7 @@ Obtains the AttestResultInfo object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -76,10 +72,6 @@ Obtains the AttestResultInfo object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-deviceAttest-function getAttestStatus(): Promise<AttestResultInfo>--><!--Device-deviceAttest-function getAttestStatus(): Promise<AttestResultInfo>-End-->
 
 **System capability:** SystemCapability.XTS.DeviceAttest
@@ -100,7 +92,7 @@ Obtains the AttestResultInfo object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,14 +1,12 @@
-# USBDevicePipe
+# USBDevicePipe(USB Manager)
 
 USB设备消息传输通道，用于确定设备。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#USBDevicePipe)
+**替代接口：** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#usbdevicepipe)
 
 <!--Device-usb-interface USBDevicePipe--><!--Device-usb-interface USBDevicePipe-End-->
 
@@ -26,11 +24,9 @@ busNum: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [busNum](arkts-basicservices-usbmanager-usbdevicepipe-i.md#busNum)
+**替代接口：** [busNum](arkts-basicservices-usbmanager-usbdevicepipe-i.md#busnum)
 
 <!--Device-USBDevicePipe-busNum: number--><!--Device-USBDevicePipe-busNum: number-End-->
 
@@ -48,11 +44,9 @@ devAddress: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [devAddress](arkts-basicservices-usbmanager-usbdevicepipe-i.md#devAddress)
+**替代接口：** [devAddress](arkts-basicservices-usbmanager-usbdevicepipe-i.md#devaddress)
 
 <!--Device-USBDevicePipe-devAddress: number--><!--Device-USBDevicePipe-devAddress: number-End-->
 

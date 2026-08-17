@@ -4,10 +4,6 @@ Describes the menu item button in the action menu.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-promptAction-interface Button--><!--Device-promptAction-interface Button-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -32,10 +28,6 @@ Text color of the button.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Button-color: string | Resource--><!--Device-Button-color: string | Resource-End-->
@@ -53,10 +45,6 @@ Whether the button responds to the **Enter** key by default when the dialog box 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,10 +65,6 @@ Button text.
 **Type:** string \| Resource
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

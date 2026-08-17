@@ -16,11 +16,9 @@ Obtains the power policy.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getValue)
+**Substitutes:** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SETTINGS
 
@@ -55,7 +53,7 @@ Obtains the power policy.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceSettings } from '@kit.MDMKit';

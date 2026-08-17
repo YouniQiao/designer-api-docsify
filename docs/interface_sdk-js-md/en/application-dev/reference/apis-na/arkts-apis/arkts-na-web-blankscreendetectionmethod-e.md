@@ -4,9 +4,7 @@ The methods can be chosen to detect if current page is blank or nearly blank.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum BlankScreenDetectionMethod--><!--Device-unnamed-export declare enum BlankScreenDetectionMethod-End-->
 
@@ -22,9 +20,7 @@ This detection method is used to probe whether there are rendered contentful nod
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BlankScreenDetectionMethod-DETECTION_CONTENTFUL_NODES_SEVENTEEN = 0--><!--Device-BlankScreenDetectionMethod-DETECTION_CONTENTFUL_NODES_SEVENTEEN = 0-End-->
 

@@ -4,10 +4,6 @@ Enum for satellite constellation category.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export enum SatelliteConstellationCategory--><!--Device-geoLocationManager-export enum SatelliteConstellationCategory-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
@@ -21,10 +17,6 @@ CONSTELLATION_CATEGORY_UNKNOWN = 0
 Invalid value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_UNKNOWN = 0--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_UNKNOWN = 0-End-->
 
@@ -40,10 +32,6 @@ GPS.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GPS = 1--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GPS = 1-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
@@ -57,10 +45,6 @@ CONSTELLATION_CATEGORY_SBAS = 2
 SBAS.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_SBAS = 2--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_SBAS = 2-End-->
 
@@ -76,10 +60,6 @@ GLONASS.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GLONASS = 3--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GLONASS = 3-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
@@ -93,10 +73,6 @@ CONSTELLATION_CATEGORY_QZSS = 4
 QZSS.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_QZSS = 4--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_QZSS = 4-End-->
 
@@ -112,10 +88,6 @@ BEIDOU.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_BEIDOU = 5--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_BEIDOU = 5-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
@@ -130,10 +102,6 @@ GALILEO.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GALILEO = 6--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_GALILEO = 6-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
@@ -147,10 +115,6 @@ CONSTELLATION_CATEGORY_IRNSS = 7
 IRNSS.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_IRNSS = 7--><!--Device-SatelliteConstellationCategory-CONSTELLATION_CATEGORY_IRNSS = 7-End-->
 

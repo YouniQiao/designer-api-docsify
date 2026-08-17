@@ -16,10 +16,6 @@ Obtains the screen hopping status of the target device. This API uses an asynchr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
 <!--Device-cooperate-function getCooperateSwitchState(networkId: string, callback: AsyncCallback<boolean>): void--><!--Device-cooperate-function getCooperateSwitchState(networkId: string, callback: AsyncCallback<boolean>): void-End-->
@@ -43,7 +39,7 @@ Obtains the screen hopping status of the target device. This API uses an asynchr
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,10 +69,6 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
 <!--Device-cooperate-function getCooperateSwitchState(networkId: string): Promise<boolean>--><!--Device-cooperate-function getCooperateSwitchState(networkId: string): Promise<boolean>-End-->
@@ -105,7 +97,7 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

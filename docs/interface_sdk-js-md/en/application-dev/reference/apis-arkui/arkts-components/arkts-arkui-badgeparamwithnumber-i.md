@@ -1,14 +1,10 @@
 # BadgeParamWithNumber
 
-Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam) and has all attributes of **BadgeParam**.
+Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#badgeparam) and has all attributes of **BadgeParam**.
 
-**Inheritance/Implementation:** BadgeParamWithNumber extends [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam)
+**Inheritance/Implementation:** BadgeParamWithNumber extends [BadgeParam](arkts-arkui-badgeparam-i.md#badgeparam)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface BadgeParamWithNumber--><!--Device-unnamed-declare interface BadgeParamWithNumber-End-->
 
@@ -25,10 +21,6 @@ Number of notifications. **NOTE：**If the value is less than or equal to 0 and 
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,10 +43,6 @@ Maximum number of messages. If the number of messages exceeds the maximum, only 
 **Default:** 99
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

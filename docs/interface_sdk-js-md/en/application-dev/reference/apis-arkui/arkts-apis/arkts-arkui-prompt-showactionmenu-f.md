@@ -16,8 +16,6 @@ Displays the menu.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** showActionMenu
@@ -33,7 +31,7 @@ Displays the menu.
 | options | ActionMenuOptions | Yes | Options. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import prompt from '@ohos.prompt'
@@ -69,8 +67,6 @@ Displays the menu.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** showActionMenu
@@ -91,7 +87,7 @@ Displays the menu.
 | --- | --- |
 | Promise&lt;ActionMenuSuccessResponse&gt; |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import prompt from '@ohos.prompt'

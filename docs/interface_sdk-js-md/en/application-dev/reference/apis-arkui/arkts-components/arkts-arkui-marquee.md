@@ -1,6 +1,6 @@
 # Marquee
 
-The **Marquee** component is used to display a scrolling piece of text. Text scrolling is activated only when the content width is greater than or equal to the component's width. > **NOTE** > > To ensure that scrolling frame rates are not affected, it is recommended that the number of **Marquee** components > in a scroll container does not exceed four, or alternatively, use the Text component's > TextOverflow.MARQUEE as a substitute. > > For the scenario where the frame rate of the **Marquee** component is dynamic, you can use the > [MarqueeDynamicSyncScene](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) API. > > If the text width is less than the **Marquee** component width, use the property animation to > implement scrolling.
+The **Marquee** component is used to display a scrolling piece of text. Text scrolling is activated only when the content width is greater than or equal to the component's width. > **NOTE** > > To ensure that scrolling frame rates are not affected, it is recommended that the number of **Marquee** components > in a scroll container does not exceed four, or alternatively, use the Text component's > TextOverflow.MARQUEE as a substitute. > > For the scenario where the frame rate of the **Marquee** component is dynamic, you can use the > [MarqueeDynamicSyncScene](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) API. > > If the text width is less than the **Marquee** component width, use the property animation to > implement scrolling.
 
 ## Child Components Not supported
 
@@ -13,10 +13,6 @@ Marquee(options: MarqueeOptions)
 Creates a marquee.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

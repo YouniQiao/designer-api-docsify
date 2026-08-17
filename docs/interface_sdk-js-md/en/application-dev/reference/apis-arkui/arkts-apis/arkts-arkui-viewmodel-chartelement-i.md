@@ -2,13 +2,9 @@
 
 The &lt;chart&gt; component displays line charts, gauge charts, and bar charts.
 
-**Inheritance/Implementation:** ChartElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
+**Inheritance/Implementation:** ChartElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ChartElement--><!--Device-unnamed-export interface ChartElement-End-->
 
@@ -42,10 +38,6 @@ append(params: {
 Data is dynamiconlyally added to an existing data sequence. The target sequence is specified based on serial, which is the subscript of the datasets array and starts from 0. datasets[index].data is not updated. Only line charts support this attribute. The value is incremented by 1 based on the horizontal coordinate and is related to the xAxis min/max setting.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

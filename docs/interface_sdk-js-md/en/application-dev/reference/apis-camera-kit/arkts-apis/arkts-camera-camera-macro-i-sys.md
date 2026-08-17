@@ -1,14 +1,10 @@
 # Macro (System API)
 
-**Macro** inherits from [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#MacroQuery-(System-API)). It provides the API to enable macro photography.
+**Macro** inherits from [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery-system-api). It provides the API to enable macro photography.
 
-**Inheritance/Implementation:** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#MacroQuery-(System-API))
+**Inheritance/Implementation:** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface Macro--><!--Device-camera-interface Macro-End-->
 
@@ -28,13 +24,9 @@ import { camera } from 'camera';
 enableMacro(enabled: boolean): void
 ```
 
-Enables or disables macro photography. > **NOTE：**> > Before calling this API, call [isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#isMacroSupported) to check whether the > current device supports macro photography.
+Enables or disables macro photography. > **NOTE：**> > Before calling this API, call [isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported) to check whether the > current device supports macro photography.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

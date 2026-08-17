@@ -10,10 +10,6 @@ function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-commonEventManager-function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -26,7 +22,7 @@ function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发布的公共事件。 |
 | userId | int | 是 | 表示指定接收此公共事件的用户ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -39,7 +35,7 @@ function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>
 | [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) | Failed to initialize the common event service. |
 | [1500009](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500009-获取系统参数失败) | Failed to obtain system parameters. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -103,10 +99,6 @@ function publishAsUser(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-commonEventManager-function publishAsUser(    event: string,    userId: int,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void--><!--Device-commonEventManager-function publishAsUser(    event: string,    userId: int,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -120,7 +112,7 @@ function publishAsUser(
 | event | string | 是 | 表示要发布的公共事件。 |
 | userId | int | 是 | 表示指定接收此公共事件的用户ID。 |
 | options | CommonEventPublishData | 是 | 表示发布公共事件的属性。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -133,7 +125,7 @@ function publishAsUser(
 | [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) | Failed to initialize the common event service. |
 | [1500009](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500009-获取系统参数失败) | Failed to obtain system parameters. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

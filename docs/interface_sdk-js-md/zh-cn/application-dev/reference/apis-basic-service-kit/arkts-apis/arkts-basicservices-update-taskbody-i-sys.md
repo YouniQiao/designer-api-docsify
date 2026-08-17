@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface TaskBody--><!--Device-update-export interface TaskBody-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -25,10 +21,6 @@ errorMessages: Array<ErrorMessage>
 **类型：** Array&lt;[ErrorMessage](arkts-basicservices-update-errormessage-i-sys.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskBody-errorMessages: Array<ErrorMessage>--><!--Device-TaskBody-errorMessages: Array<ErrorMessage>-End-->
 
@@ -48,10 +40,6 @@ installMode: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskBody-installMode: int--><!--Device-TaskBody-installMode: int-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -69,10 +57,6 @@ progress: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskBody-progress: int--><!--Device-TaskBody-progress: int-End-->
 
@@ -92,10 +76,6 @@ status: UpgradeStatus
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskBody-status: UpgradeStatus--><!--Device-TaskBody-status: UpgradeStatus-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -108,15 +88,11 @@ status: UpgradeStatus
 subStatus: int
 ```
 
-子状态，取值范围参考[UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md#UpgradeStatus（系统接口）)状态码。
+子状态，取值范围参考[UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md#upgradestatus系统接口)状态码。
 
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskBody-subStatus: int--><!--Device-TaskBody-subStatus: int-End-->
 
@@ -136,10 +112,6 @@ versionComponents: Array<VersionComponent>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskBody-versionComponents: Array<VersionComponent>--><!--Device-TaskBody-versionComponents: Array<VersionComponent>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -157,10 +129,6 @@ versionDigestInfo: VersionDigestInfo
 **类型：** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskBody-versionDigestInfo: VersionDigestInfo--><!--Device-TaskBody-versionDigestInfo: VersionDigestInfo-End-->
 

@@ -4,10 +4,6 @@ Describes the pre-downloaded resource information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cacheDownload-interface ResourceInfo--><!--Device-cacheDownload-interface ResourceInfo-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -29,10 +25,6 @@ Size of a pre-downloaded resource after decompression, in bytes. If the value is
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ResourceInfo-readonly size: long--><!--Device-ResourceInfo-readonly size: long-End-->
 

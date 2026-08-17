@@ -16,10 +16,6 @@ Deletes dynamic shortcuts.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SHORTCUTS or (ohos.permission.MANAGE_SHORTCUTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
 <!--Device-shortcutManager-function deleteDynamicShortcutInfos(bundleName: string, appIndex: int, userId: int, ids?: Array<string>): Promise<void>--><!--Device-shortcutManager-function deleteDynamicShortcutInfos(bundleName: string, appIndex: int, userId: int, ids?: Array<string>): Promise<void>-End-->
@@ -34,7 +30,7 @@ Deletes dynamic shortcuts.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application to which the dynamic shortcuts belong. |
 | appIndex | int | Yes | Clone index of the application to which the dynamic shortcuts belong. The value can be 1, 2, 3, 4, or 5. |
-| userId | int | Yes | ID of the user to which the dynamic shortcuts belong. The user ID can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | int | Yes | ID of the user to which the dynamic shortcuts belong. The user ID can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 | ids | Array&lt;string&gt; | No | Array of IDs of the dynamic shortcuts to be deleted. If the default value is used or an empty array is passed, all dynamic shortcuts that meet the conditions are deleted. |
 
 **Return value:**
@@ -56,7 +52,7 @@ Deletes dynamic shortcuts.
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user id is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';

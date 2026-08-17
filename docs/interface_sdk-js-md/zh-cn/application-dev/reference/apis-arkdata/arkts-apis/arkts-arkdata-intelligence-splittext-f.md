@@ -10,10 +10,6 @@ function splitText(text: string, config: SplitConfig): Promise<Array<string>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-intelligence-function splitText(text: string, config: SplitConfig): Promise<Array<string>>--><!--Device-intelligence-function splitText(text: string, config: SplitConfig): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -39,7 +35,7 @@ function splitText(text: string, config: SplitConfig): Promise<Array<string>>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -4,10 +4,6 @@ The module provides APIs for an application to use the system camera to take pho
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace cameraPicker--><!--Device-unnamed-declare namespace cameraPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core

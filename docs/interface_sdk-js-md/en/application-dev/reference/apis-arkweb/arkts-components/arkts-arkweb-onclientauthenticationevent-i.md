@@ -1,12 +1,8 @@
 # OnClientAuthenticationEvent
 
-Defines the triggered callback when needs ssl client certificate from the user.
+Defines the callback information triggered when an SSL client certificate is required, including the host, port, and key type. It is suitable for scenarios where handling client certificate authentication is required, improving authentication process flexibility and security.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnClientAuthenticationEvent--><!--Device-unnamed-declare interface OnClientAuthenticationEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered callback when needs ssl client certificate from the user.
 handler : ClientAuthenticationHandler
 ```
 
-Notifies the user of the operation behavior of the web component.
+User operation.
 
 **Type:** [ClientAuthenticationHandler](arkts-arkweb-clientauthenticationhandler-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ Notifies the user of the operation behavior of the web component.
 host : string
 ```
 
-The hostname of the requesting certificate server.
+Host name of the server that requests a certificate.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,15 +50,11 @@ The hostname of the requesting certificate server.
 issuers : Array<string>
 ```
 
-Certificates that match the private key are acceptable to the issuer.
+Issuer of the certificate that matches the private key.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,10 +74,6 @@ Acceptable asymmetric key types.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnClientAuthenticationEvent-keyTypes : Array<string>--><!--Device-OnClientAuthenticationEvent-keyTypes : Array<string>-End-->
@@ -106,15 +86,11 @@ Acceptable asymmetric key types.
 port : number
 ```
 
-The port number of the request certificate server.
+Port number for requesting the certificate server. The valid range is 0-65535, and an exception is thrown when the value is out of range.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

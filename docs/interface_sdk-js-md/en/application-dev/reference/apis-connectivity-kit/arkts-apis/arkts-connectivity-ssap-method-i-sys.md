@@ -4,10 +4,6 @@ Describes the SSAP method.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-ssap-interface Method--><!--Device-ssap-interface Method-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -32,10 +28,6 @@ The UUID of a method instance. The length must be 36, The value consists of 36 h
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Method-methodUuid: string--><!--Device-Method-methodUuid: string-End-->
@@ -55,10 +47,6 @@ The parameter of a method instance.
 **Type:** ArrayBuffer
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ The result of a method instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Method-result?: ArrayBuffer--><!--Device-Method-result?: ArrayBuffer-End-->
@@ -98,15 +82,11 @@ The result of a method instance.
 serviceUuid: string
 ```
 
-The UUID of the [Service](arkts-connectivity-ssap-service-i.md#Service) instance to which the method belongs The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+The UUID of the [Service](arkts-connectivity-ssap-service-i.md#service) instance to which the method belongs The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

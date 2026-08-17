@@ -1,12 +1,8 @@
-# PreDefinedConfigName
+# PreDefinedConfigName(Defines the DRM capability.)
 
 Enumerates the predefined configuration properties.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-drm-enum PreDefinedConfigName--><!--Device-drm-enum PreDefinedConfigName-End-->
 
@@ -18,13 +14,9 @@ Enumerates the predefined configuration properties.
 CONFIG_DEVICE_VENDOR = 'vendor'
 ```
 
-Plugin vendor name, which corresponds to the value of **vendor** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
+Plugin vendor name, which corresponds to the value of **vendor** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getconfigurationstring).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -38,13 +30,9 @@ Plugin vendor name, which corresponds to the value of **vendor** in the return v
 CONFIG_DEVICE_VERSION = 'version'
 ```
 
-Plugin version number, which corresponds to the value of **version** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
+Plugin version number, which corresponds to the value of **version** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getconfigurationstring).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -58,13 +46,9 @@ Plugin version number, which corresponds to the value of **version** in the retu
 CONFIG_DEVICE_DESCRIPTION = 'description'
 ```
 
-Device description, which corresponds to the value of **description** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
+Device description, which corresponds to the value of **description** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getconfigurationstring).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -78,13 +62,9 @@ Device description, which corresponds to the value of **description** in the ret
 CONFIG_DEVICE_ALGORITHMS = 'algorithms'
 ```
 
-Supported algorithms, which correspond to the value of **algorithms** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
+Supported algorithms, which correspond to the value of **algorithms** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getconfigurationstring).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -98,13 +78,9 @@ Supported algorithms, which correspond to the value of **algorithms** in the ret
 CONFIG_DEVICE_UNIQUE_ID = 'deviceUniqueId'
 ```
 
-Unique device ID, which corresponds to the value of **deviceUniqueId** in the return value of [getConfigurationByteArray](arkts-drm-drm-mediakeysystem-i.md#getConfigurationByteArray).
+Unique device ID, which corresponds to the value of **deviceUniqueId** in the return value of [getConfigurationByteArray](arkts-drm-drm-mediakeysystem-i.md#getconfigurationbytearray).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -118,13 +94,9 @@ Unique device ID, which corresponds to the value of **deviceUniqueId** in the re
 CONFIG_SESSION_MAX = 'maxSessionNum'
 ```
 
-Maximum number of supported sessions, which corresponds to the value of **maxSessionNum** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
+Maximum number of supported sessions, which corresponds to the value of **maxSessionNum** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getconfigurationstring).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -138,13 +110,9 @@ Maximum number of supported sessions, which corresponds to the value of **maxSes
 CONFIG_SESSION_CURRENT = 'currentSessionNum'
 ```
 
-Number of active sessions, which corresponds to the value of **currentSessionNum** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
+Number of active sessions, which corresponds to the value of **currentSessionNum** in the return value of [getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getconfigurationstring).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

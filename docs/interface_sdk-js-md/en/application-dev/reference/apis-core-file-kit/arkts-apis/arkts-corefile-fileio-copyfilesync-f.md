@@ -10,11 +10,9 @@ Copies a file. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [copyFileSync](arkts-corefile-file-fs-copyfilesync-f.md#copyFileSync)
+**Substitutes:** [copyFileSync](arkts-corefile-file-fs-copyfilesync-f.md#copyfilesync)
 
 <!--Device-unnamed-declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void--><!--Device-unnamed-declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void-End-->
 

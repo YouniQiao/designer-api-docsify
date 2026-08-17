@@ -16,10 +16,6 @@ Obtains the information about the primary display. For devices other than 2-in-1
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-display-function getPrimaryDisplaySync(): Display--><!--Device-display-function getPrimaryDisplaySync(): Display-End-->
@@ -38,7 +34,7 @@ Obtains the information about the primary display. For devices other than 2-in-1
 | --- | --- |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: Invalid display id. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { display } from '@kit.ArkUI';

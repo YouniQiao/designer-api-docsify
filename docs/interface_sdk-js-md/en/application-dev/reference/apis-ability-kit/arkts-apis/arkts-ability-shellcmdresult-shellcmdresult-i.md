@@ -4,10 +4,6 @@ The **ShellCmdResult** module provides the shell command execution result. > **N
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ShellCmdResult--><!--Device-unnamed-export interface ShellCmdResult-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -23,10 +19,6 @@ Result code of the shell command.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,10 +37,6 @@ Standard output of the shell command.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

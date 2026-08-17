@@ -16,8 +16,6 @@ Checks whether the application specified by **bundleName** is in the idle state.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-bundleState-function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundleState-function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
@@ -31,7 +29,7 @@ Checks whether the application specified by **bundleName** is in the idle state.
 | bundleName | string | Yes | Bundle name of an application. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the specified **bundleName** is valid, the idle state of the application is returned; otherwise, **null** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -56,8 +54,6 @@ Checks whether the application specified by **bundleName** is in the idle state.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-bundleState-function isIdleState(bundleName: string): Promise<boolean>--><!--Device-bundleState-function isIdleState(bundleName: string): Promise<boolean>-End-->
@@ -76,7 +72,7 @@ Checks whether the application specified by **bundleName** is in the idle state.
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. If the specified **bundleName** is valid, the idle state of the application is returned; otherwise, **null** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

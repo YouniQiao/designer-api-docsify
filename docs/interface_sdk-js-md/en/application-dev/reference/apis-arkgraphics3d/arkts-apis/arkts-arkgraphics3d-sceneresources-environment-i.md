@@ -1,14 +1,10 @@
 # Environment
 
-Environment resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource).
+Environment resource, which inherits from SceneResource.
 
-**Inheritance/Implementation:** Environment extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
+**Inheritance/Implementation:** Environment extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#sceneresource)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Environment--><!--Device-unnamed-export interface Environment-End-->
 
@@ -26,10 +22,6 @@ Environment background type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Environment-backgroundType: EnvironmentBackgroundType--><!--Device-Environment-backgroundType: EnvironmentBackgroundType-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -45,10 +37,6 @@ Environment image. The default value is undefined.
 **Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Environment-environmentImage?: Image | null--><!--Device-Environment-environmentImage?: Image | null-End-->
 
@@ -66,10 +54,6 @@ Environment map factor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Environment-environmentMapFactor: Vec4--><!--Device-Environment-environmentMapFactor: Vec4-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -84,13 +68,9 @@ Rotation of the ambient light. The default value is undefined. The parameter mus
 
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
-**Default:** Quaternion {x:0, y:0, z:0, w:1}
+**Default:** undefined
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,10 +90,6 @@ Indirect diffuse factor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Environment-indirectDiffuseFactor: Vec4--><!--Device-Environment-indirectDiffuseFactor: Vec4-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -129,10 +105,6 @@ Indirect specular factor.
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Environment-indirectSpecularFactor: Vec4--><!--Device-Environment-indirectSpecularFactor: Vec4-End-->
 
@@ -150,10 +122,6 @@ Irradiance coefficients. The default value is undefined.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Environment-irradianceCoefficients?: Vec3[]--><!--Device-Environment-irradianceCoefficients?: Vec3[]-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -169,10 +137,6 @@ Radiance image. The default value is undefined.
 **Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Environment-radianceImage?: Image | null--><!--Device-Environment-radianceImage?: Image | null-End-->
 

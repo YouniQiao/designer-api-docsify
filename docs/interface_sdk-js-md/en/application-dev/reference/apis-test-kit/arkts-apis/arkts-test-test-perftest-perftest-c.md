@@ -4,10 +4,6 @@ Represents the general entry of the white-box performance test framework. It pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class PerfTest--><!--Device-unnamed-declare class PerfTest-End-->
 
 **System capability:** SystemCapability.Test.PerfTest
@@ -27,13 +23,9 @@ import { PerfTest } from 'PerfTest';
 static create(strategy: PerfTestStrategy): PerfTest
 ```
 
-Creates a [PerfTest](#PerfTest) object and returns the object created. This API is a static API.
+Creates a [PerfTest](#perftest) object and returns the object created. This API is a static API.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -62,7 +54,7 @@ Creates a [PerfTest](#PerfTest) object and returns the object created. This API 
 | [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
 | [32400001](../errorcode-perftest.md#32400001-initialization-failed) | Initialization failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
@@ -101,10 +93,6 @@ Destroys the **PerfTest** object to release the resources occupied by the object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfTest-destroy(): void--><!--Device-PerfTest-destroy(): void-End-->
@@ -118,7 +106,7 @@ Destroys the **PerfTest** object to release the resources occupied by the object
 | [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
@@ -152,10 +140,6 @@ Obtains the measurement data of a specified performance metric. This method must
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult--><!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult-End-->
@@ -183,7 +167,7 @@ Obtains the measurement data of a specified performance metric. This method must
 | [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 | [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';
@@ -213,13 +197,9 @@ async function demo() {
 run(): Promise<void>
 ```
 
-Runs a performance test, iteratively executes test code segments based on the configured times, and collects performance data. This API uses a promise to return the result. In each iteration, the framework executes **actionCode** and **resetCode** (if configured) in sequence and collects performance data during the execution of **actionCode**. After the execution is complete, you can call [getMeasureResult](#getMeasureResult) to obtain the collected measurement result data.
+Runs a performance test, iteratively executes test code segments based on the configured times, and collects performance data. This API uses a promise to return the result. In each iteration, the framework executes **actionCode** and **resetCode** (if configured) in sequence and collects performance data during the execution of **actionCode**. After the execution is complete, you can call [getMeasureResult](#getmeasureresult) to obtain the collected measurement result data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -242,7 +222,7 @@ Runs a performance test, iteratively executes test code segments based on the co
 | [32400005](../errorcode-perftest.md#32400005-failed-to-collect-performance-data) | Failed to collect metric data. |
 | [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PerfMetric, PerfTest, PerfTestStrategy } from '@kit.TestKit';

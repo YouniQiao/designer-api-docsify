@@ -4,10 +4,6 @@ Enumerates the screen directions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-resourceManager-export enum Direction--><!--Device-resourceManager-export enum Direction-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -21,10 +17,6 @@ DIRECTION_VERTICAL = 0
 Portrait
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -41,10 +33,6 @@ DIRECTION_HORIZONTAL = 1
 Landscape
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

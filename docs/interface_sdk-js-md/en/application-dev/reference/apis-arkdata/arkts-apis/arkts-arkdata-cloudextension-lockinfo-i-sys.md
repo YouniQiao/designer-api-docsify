@@ -4,10 +4,6 @@ Represents the cloud database lock information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface LockInfo--><!--Device-cloudExtension-export interface LockInfo-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -32,10 +28,6 @@ Lock period of the cloud database, in seconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LockInfo-interval: int--><!--Device-LockInfo-interval: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -53,10 +45,6 @@ Lock ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LockInfo-lockId: int--><!--Device-LockInfo-lockId: int-End-->
 

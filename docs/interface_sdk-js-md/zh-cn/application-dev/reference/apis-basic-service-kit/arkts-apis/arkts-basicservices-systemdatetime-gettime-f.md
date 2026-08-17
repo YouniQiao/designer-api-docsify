@@ -10,10 +10,6 @@ function getTime(isNanoseconds?: boolean): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -30,7 +26,7 @@ function getTime(isNanoseconds?: boolean): long
 | --- | --- |
 | long | 自Unix纪元以来到当前系统时间所经过的时间。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

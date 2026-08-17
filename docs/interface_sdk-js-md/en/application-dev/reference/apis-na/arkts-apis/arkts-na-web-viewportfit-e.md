@@ -1,12 +1,10 @@
 # ViewportFit
 
-Defines the viewport-fit type, related to [ViewportFit](#ViewportFit).
+Defines the viewport-fit type, related to [ViewportFit](#viewportfit).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum ViewportFit--><!--Device-unnamed-export declare enum ViewportFit-End-->
 
@@ -22,9 +20,7 @@ No effect - the whole web page is viewable(default)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ViewportFit-AUTO = 0--><!--Device-ViewportFit-AUTO = 0-End-->
 
@@ -40,9 +36,7 @@ The initial layout viewport and the visual viewport are set to the largest recta
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ViewportFit-CONTAINS = 1--><!--Device-ViewportFit-CONTAINS = 1-End-->
 
@@ -58,9 +52,7 @@ The initial layout viewport and the visual viewport are set to the circumscribe 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ViewportFit-COVER = 2--><!--Device-ViewportFit-COVER = 2-End-->
 

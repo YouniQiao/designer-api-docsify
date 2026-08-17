@@ -2,13 +2,11 @@
 
 Defines radial gradient class.
 
-**Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#ShaderStyle)
+**Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#shaderstyle)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 <!--Device-unnamed-export declare class RadialGradientStyle--><!--Device-unnamed-export declare class RadialGradientStyle-End-->
 
@@ -24,9 +22,7 @@ The constructor.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,9 +48,7 @@ The options of the gradient. center:Center point of radial gradient radius:Radiu
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

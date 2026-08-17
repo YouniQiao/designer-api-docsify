@@ -10,10 +10,6 @@ function getSystemDataSize(): Promise<long>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -39,7 +35,7 @@ function getSystemDataSize(): Promise<long>
 | 13600018 | Failed to query the system data size. |
 | 13600001 | IPC error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -16,11 +16,9 @@ Constructs a spring curve object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [springCurve](../../apis-na/arkts-apis/arkts-na-curves-springcurve-f.md#springCurve)
+**Substitutes:** [springCurve](../../apis-na/arkts-apis/arkts-na-curves-springcurve-f.md#springcurve)
 
 <!--Device-curves-function spring(velocity: number, mass: number, stiffness: number, damping: number): string--><!--Device-curves-function spring(velocity: number, mass: number, stiffness: number, damping: number): string-End-->
 

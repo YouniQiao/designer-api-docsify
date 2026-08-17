@@ -1,12 +1,8 @@
 # ChannelInfo
 
-Represents the proxy channel information, including the MAC address and service UUID of the peer device.
+Input parameters of the function for opening a proxy channel, including the link type of the proxy channel, the MAC address of the peer device, and the UUID of the listening service.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-proxyChannelManager-interface ChannelInfo--><!--Device-proxyChannelManager-interface ChannelInfo-End-->
 
@@ -24,15 +20,11 @@ import { proxyChannelManager } from 'proxyChannelManager';
 linkType: LinkType
 ```
 
-Link type of the proxy channel.
+Link type of the proxy channel. For details about the value range, see [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md#linktype). Currently, only **LINK_BR** (Bluetooth BR protocol) is supported.
 
 **Type:** [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,15 +38,11 @@ Link type of the proxy channel.
 peerDevAddr: string
 ```
 
-MAC address of the peer device.
+MAC address of the peer device, in the format of XX:XX:XX:XX:XX:XX, where XX is a hexadecimal character (0-9, A- F, or a-f). The peer device must be paired. Error code 32390002 is returned if the device is not paired. Error code 32390006 is returned if the format does not meet the requirements.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,15 +56,11 @@ MAC address of the peer device.
 peerUuid: string
 ```
 
-Service UUID of the peer device.
+UUID of the service listened on by the peer device, in the standard UUID string format, for example, xxxxxxxx- xxxx-xxxx-xxxx-xxxxxxxxxxxx. Error code 32390006 is returned if the format does not meet the requirements.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,13 +12,9 @@ import { unifiedDataChannel } from 'unifiedDataChannel';
 function removeAppShareOptions(intention: Intention): void
 ```
 
-Removes the data control information set by [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md#setAppShareOptions-(System-API)).
+Removes the data control information set by [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md#setappshareoptions-system-api).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 14+: ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION
@@ -45,7 +41,7 @@ Removes the data control information set by [setAppShareOptions](arkts-arkdata-u
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission " ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION".<br>**Applicable version:** 14 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API.<br>**Applicable version:** 12 - 13 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

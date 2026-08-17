@@ -4,10 +4,6 @@ Defines the device information of the Ethernet.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-ethernet-export interface EthernetDeviceInfos--><!--Device-ethernet-export interface EthernetDeviceInfos-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -32,10 +28,6 @@ Device connection mode.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-EthernetDeviceInfos-connectionMode: DeviceConnectionType--><!--Device-EthernetDeviceInfos-connectionMode: DeviceConnectionType-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -53,10 +45,6 @@ Ethernet device name.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-EthernetDeviceInfos-deviceName: string--><!--Device-EthernetDeviceInfos-deviceName: string-End-->
 
@@ -76,10 +64,6 @@ Ethernet interface name.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-EthernetDeviceInfos-ifaceName: string--><!--Device-EthernetDeviceInfos-ifaceName: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -97,10 +81,6 @@ Maximum Rate of device.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-EthernetDeviceInfos-maximumRate: string--><!--Device-EthernetDeviceInfos-maximumRate: string-End-->
 
@@ -120,10 +100,6 @@ Product name of device.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-EthernetDeviceInfos-productName: string--><!--Device-EthernetDeviceInfos-productName: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -142,10 +118,6 @@ Supplier id of device.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-EthernetDeviceInfos-supplierId: string--><!--Device-EthernetDeviceInfos-supplierId: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -163,10 +135,6 @@ Supplier name of device.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-EthernetDeviceInfos-supplierName: string--><!--Device-EthernetDeviceInfos-supplierName: string-End-->
 

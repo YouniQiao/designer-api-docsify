@@ -16,10 +16,6 @@ Unregister system load callback for perception system load change
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemLoad-function offSystemLoadChange(callback?: Callback<SystemLoadLevel>): void--><!--Device-systemLoad-function offSystemLoadChange(callback?: Callback<SystemLoadLevel>): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.SystemLoad

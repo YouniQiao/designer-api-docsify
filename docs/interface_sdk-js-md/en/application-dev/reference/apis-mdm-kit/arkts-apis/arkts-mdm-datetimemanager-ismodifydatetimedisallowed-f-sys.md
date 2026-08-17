@@ -16,11 +16,9 @@ Queries whether the system time of a device can be modified. This API uses an as
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getDisallowedPolicy)(admin: Want | null, feature: FeatureForDevice)
+**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy)(admin: Want | null, feature: FeatureForDevice)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_DATETIME
 
@@ -49,7 +47,7 @@ Queries whether the system time of a device can be modified. This API uses an as
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dateTimeManager } from '@kit.MDMKit';
@@ -81,11 +79,9 @@ Queries whether the system time of a device can be modified. This API uses a pro
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getDisallowedPolicy)(admin: Want | null, feature: FeatureForDevice)
+**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy)(admin: Want | null, feature: FeatureForDevice)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_DATETIME
 
@@ -119,7 +115,7 @@ Queries whether the system time of a device can be modified. This API uses a pro
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dateTimeManager } from '@kit.MDMKit';

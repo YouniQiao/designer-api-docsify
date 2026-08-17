@@ -1,6 +1,6 @@
 # NodeContainer
 
-**NodeContainer** is a basic component for mounting custom nodes (such as FrameNode or BuilderNode) and dynamically managing node attachment and detachment through [NodeController](../arkts-apis/arkts-arkui-nodecontroller-c.md#NodeController). This component does not support adding trailing child components and requires a [NodeController](../arkts-apis/arkts-arkui-nodecontroller-c.md#NodeController) instance for operation. It must be used in combination with **NodeController**. > **NOTE** > > Only custom FrameNodes or the root FrameNode obtained from a > BuilderNode can be attached to this component. > > [Proxy nodes](../arkts-apis/arkts-arkui-framenode-c.md#isModifiable) of built-in system components obtained through > querying cannot be attached to this component. > > This component does not work with the attribute modifier. > > A [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) instance is used to construct the node tree for this component. During > instance switching, the input parameter of the > [makeNode](../arkts-apis/arkts-arkui-nodecontroller-c.md#makeNode) callback method of the bound > [NodeController](../arkts-apis/arkts-arkui-nodecontroller-c.md#NodeController) may be **undefined** due to instance mismatch. > Therefore, this component does not support cross-instance node reuse. > > When this component is not destroyed, the unmounting of its mounted child nodes will not be triggered.
+**NodeContainer** is a basic component for mounting custom nodes (such as FrameNode or BuilderNode) and dynamically managing node attachment and detachment through [NodeController](../arkts-apis/arkts-arkui-nodecontroller-c.md#nodecontroller). This component does not support adding trailing child components and requires a [NodeController](../arkts-apis/arkts-arkui-nodecontroller-c.md#nodecontroller) instance for operation. It must be used in combination with **NodeController**. > **NOTE** > > Only custom FrameNodes or the root FrameNode obtained from a > BuilderNode can be attached to this component. > > [Proxy nodes](../arkts-apis/arkts-arkui-framenode-c.md#ismodifiable) of built-in system components obtained through > querying cannot be attached to this component. > > This component does not work with the attribute modifier. > > A [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) instance is used to construct the node tree for this component. During > instance switching, the input parameter of the > [makeNode](../arkts-apis/arkts-arkui-nodecontroller-c.md#makenode) callback method of the bound > [NodeController](../arkts-apis/arkts-arkui-nodecontroller-c.md#nodecontroller) may be **undefined** due to instance mismatch. > Therefore, this component does not support cross-instance node reuse. > > When this component is not destroyed, the unmounting of its mounted child nodes will not be triggered.
 
 ## NodeContainer
 
@@ -11,10 +11,6 @@ NodeContainer(controller: import('../api/@ohos.arkui.node').NodeController)
 Creates a **NodeContainer** component.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

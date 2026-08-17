@@ -4,8 +4,6 @@ class of wallpaper extension ability.
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 <!--Device-unnamed-declare class WallpaperExtensionAbility--><!--Device-unnamed-declare class WallpaperExtensionAbility-End-->
@@ -24,8 +22,6 @@ onCreate(want: object): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -42,7 +38,7 @@ onCreate(want: object): void
 | --- | --- | --- | --- |
 | want | object | 是 | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
@@ -65,8 +61,6 @@ onDestroy(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -77,7 +71,7 @@ onDestroy(): void
 
 **系统接口：** 此接口为系统接口。
 
-## 示例
+**示例**
 
 ```TypeScript
 import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
@@ -99,8 +93,6 @@ onWallpaperChange(wallpaperType: number): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -117,7 +109,7 @@ onWallpaperChange(wallpaperType: number): void
 | --- | --- | --- | --- |
 | wallpaperType | number | 是 | 壁纸类型。主屏幕壁纸为0，锁屏壁纸为1。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';

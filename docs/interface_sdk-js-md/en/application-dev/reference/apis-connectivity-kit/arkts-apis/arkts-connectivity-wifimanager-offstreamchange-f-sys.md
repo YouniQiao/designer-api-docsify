@@ -16,10 +16,6 @@ Unsubscribe Wi-Fi stream change events. All callback functions will be deregiste
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_WIFI_CONNECTION
 
 <!--Device-wifiManager-function offStreamChange(callback?: Callback<int>): void--><!--Device-wifiManager-function offStreamChange(callback?: Callback<int>): void-End-->

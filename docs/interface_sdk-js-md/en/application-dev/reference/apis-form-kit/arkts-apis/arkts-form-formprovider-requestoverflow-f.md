@@ -16,10 +16,6 @@ Requests an animation. This API takes effect only for [scene-based widgets](../.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-formProvider-function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): Promise<void>--><!--Device-formProvider-function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): Promise<void>-End-->
@@ -52,7 +48,7 @@ Requests an animation. This API takes effect only for [scene-based widgets](../.
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formInfo, formProvider } from '@kit.FormKit';

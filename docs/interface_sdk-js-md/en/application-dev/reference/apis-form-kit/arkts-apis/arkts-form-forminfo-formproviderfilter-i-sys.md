@@ -4,10 +4,6 @@ Information about a running form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-interface FormProviderFilter--><!--Device-formInfo-interface FormProviderFilter-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -32,10 +28,6 @@ Obtains the ability name of the provider application module.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormProviderFilter-abilityName ?: string--><!--Device-FormProviderFilter-abilityName ?: string-End-->
@@ -56,10 +48,6 @@ Obtains the bundle name of the provider application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormProviderFilter-bundleName: string--><!--Device-FormProviderFilter-bundleName: string-End-->
@@ -79,10 +67,6 @@ Obtains the form name of the provider application form.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,10 +90,6 @@ Indicates whether to include unused form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormProviderFilter-isUnusedIncluded?: boolean--><!--Device-FormProviderFilter-isUnusedIncluded?: boolean-End-->
@@ -129,10 +109,6 @@ Obtains the module name of the provider application module.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

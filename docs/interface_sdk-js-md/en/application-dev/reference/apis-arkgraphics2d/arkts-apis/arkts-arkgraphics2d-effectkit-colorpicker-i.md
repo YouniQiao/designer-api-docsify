@@ -4,10 +4,6 @@ A color picker class used to obtain the main color from image data. It is suitab
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-effectKit-interface ColorPicker--><!--Device-effectKit-interface ColorPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -28,10 +24,6 @@ Reads the average color value from the image and writes the result to a Color in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -46,7 +38,7 @@ Reads the average color value from the image and writes the result to a Color in
 | --- | --- |
 | Color | Average color value. If the operation fails, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -84,10 +76,6 @@ Reads the color value with the highest saturation from the image and writes the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -102,7 +90,7 @@ Reads the color value with the highest saturation from the image and writes the 
 | --- | --- |
 | Color | Color value of the color with the highest saturation. If the operation fails, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -140,10 +128,6 @@ Reads the color value with the largest proportion in the image and writes the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -158,7 +142,7 @@ Reads the color value with the largest proportion in the image and writes the re
 | --- | --- |
 | Color | Color value of the color with the largest proportion. If the operation fails, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -196,10 +180,6 @@ Reads the color value of the main color from the image and writes the result to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -214,7 +194,7 @@ Reads the color value of the main color from the image and writes the result to 
 | --- | --- |
 | Promise&lt;Color&gt; | Promise used to return the color value of the main color. If the operation fails, an error message is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -254,10 +234,6 @@ Reads the color value of the main color from the image and writes the result to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -272,7 +248,7 @@ Reads the color value of the main color from the image and writes the result to 
 | --- | --- |
 | Color | Color value of the main color. If the operation fails, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -310,10 +286,6 @@ Reads the top proportion colors from the image, with the number specified by col
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -334,7 +306,7 @@ Reads the top proportion colors from the image, with the number specified by col
 | --- | --- |
 | Array&lt;Color \| null&gt; | Array of colors, i.e., the top colorCount color values by proportion in the image, sorted by proportion. - If the number of colors obtained is less than the value of colorCount, the array size is the actual number obtained. - If the colors fail to be obtained or the number of colors obtained is less than 1, [null] is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -376,10 +348,6 @@ Determines whether the specified color value is a black, white, or gray color, a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -400,7 +368,7 @@ Determines whether the specified color value is a black, white, or gray color, a
 | --- | --- |
 | boolean | The value true means the color is black, white, or gray, and false means the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";

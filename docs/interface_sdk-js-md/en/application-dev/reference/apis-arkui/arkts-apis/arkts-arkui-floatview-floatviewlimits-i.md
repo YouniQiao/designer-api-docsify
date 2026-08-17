@@ -4,10 +4,6 @@ Provides the limits of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-floatView-interface FloatViewLimits--><!--Device-floatView-interface FloatViewLimits-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Maximum size of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewLimits-maxSize: window.Size--><!--Device-FloatViewLimits-maxSize: window.Size-End-->
@@ -52,10 +44,6 @@ Minimum size of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewLimits-minSize: window.Size--><!--Device-FloatViewLimits-minSize: window.Size-End-->
@@ -73,10 +61,6 @@ Aspect ratio range of the float view.
 **Type:** Array&lt;[RatioLimit](arkts-arkui-floatview-ratiolimit-i.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

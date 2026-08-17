@@ -2,13 +2,11 @@
 
 Defines ComponentContent.
 
-**继承/实现关系：** ComponentContent extends [ComponentContentBase](arkts-na-componentcontent-componentcontentbase-c.md#ComponentContentBase)
+**继承/实现关系：** ComponentContent extends [ComponentContentBase](arkts-na-componentcontent-componentcontentbase-c.md#componentcontentbase)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare class ComponentContent--><!--Device-unnamed-export declare class ComponentContent-End-->
 
@@ -24,9 +22,7 @@ Constructor.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,7 +34,7 @@ Constructor.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
 | builder | WrappedBuilder&lt;CustomBuilder&gt; | 是 | Defines the builder that will be called to build ComponentContent. |
 
 ## constructor
@@ -51,9 +47,7 @@ Constructor.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,7 +59,7 @@ Constructor.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
 | builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | Defines the builder that will be called to build ComponentContent. |
 | args | T | 是 | Parameters used to update the ComponentContent. |
 
@@ -79,9 +73,7 @@ Constructor.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,7 +85,7 @@ Constructor.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
 | builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | Defines the builder that will be called to build ComponentContent. ComponentContent. |
 | args | T | 是 | Parameters used to update the ComponentContent. |
 | options | [BuildOptions](arkts-na-buildernode-buildoptions-i.md) | 是 | Defines the options that will be used when building. |
@@ -108,9 +100,7 @@ Dispose the ComponentContent immediately.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,9 +118,7 @@ isDisposed(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -154,9 +142,7 @@ isTransferred(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -180,9 +166,7 @@ Recycle the ComponentContent.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,9 +184,7 @@ reuse(param?: RecordData): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -226,9 +208,7 @@ Update the ComponentContent based on the provided parameters.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -252,9 +232,7 @@ Notify ComponentContent to update the configuration to trigger a reload of the C
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

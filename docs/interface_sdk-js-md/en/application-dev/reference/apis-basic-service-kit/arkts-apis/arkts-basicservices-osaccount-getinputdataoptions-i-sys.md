@@ -4,10 +4,6 @@ Represents a set of optional parameters for onGetData.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface GetInputDataOptions--><!--Device-osAccount-interface GetInputDataOptions-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -31,10 +27,6 @@ Challenge value, which is **undefined** by default.
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GetInputDataOptions-challenge?: Uint8Array--><!--Device-GetInputDataOptions-challenge?: Uint8Array-End-->
 

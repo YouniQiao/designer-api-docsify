@@ -4,10 +4,6 @@ Serial port management.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace serial--><!--Device-unnamed-declare namespace serial-End-->
@@ -26,14 +22,14 @@ import { serial } from 'serial';
 
 | Name | Description |
 | --- | --- |
-| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getSerialPortList) | Obtains the serial port list. This API returns the result asynchronously through a promise. |
+| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist) | Obtains the serial port list. This API returns the result asynchronously through a promise. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addPortAuthorization](arkts-basicservices-serial-addportauthorization-f-sys.md#addPortAuthorization) | Adds the permission for applications to access the serial port. This API is open only to system applications that display a pop-up window for serial port authorization. |
+| [addPortAuthorization](arkts-basicservices-serial-addportauthorization-f-sys.md#addportauthorization) | Adds the permission for applications to access the serial port. This API is open only to system applications that display a pop-up window for serial port authorization. |
 <!--DelEnd-->
 
 ### Interfaces

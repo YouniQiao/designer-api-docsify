@@ -4,10 +4,6 @@ Describes the SSAP service.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-ssap-interface Service--><!--Device-ssap-interface Service-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -24,15 +20,11 @@ import { ssap } from 'ssap';
 events?: Event[]
 ```
 
-The events belong to this service. <br>This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addService) method.
+The events belong to this service. <br>This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addservice) method.
 
 **Type:** Event[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,15 +40,11 @@ The events belong to this service. <br>This field is not supported in [addServic
 methods?: Method[]
 ```
 
-The methods belong to this service. <br>This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addService) method.
+The methods belong to this service. <br>This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addservice) method.
 
 **Type:** [Method](arkts-connectivity-ssap-method-i-sys.md)[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

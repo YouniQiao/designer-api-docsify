@@ -16,10 +16,6 @@ Cancel callback when the sim state is updated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function offSimStateChange(callback?: Callback<SimStateData>): void--><!--Device-observer-function offSimStateChange(callback?: Callback<SimStateData>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry

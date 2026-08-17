@@ -4,10 +4,6 @@ Defines an accessibility virtual node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare interface AccessibilityVirtualNode--><!--Device-unnamed-export declare interface AccessibilityVirtualNode-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -25,10 +21,6 @@ Whether the element has gained focus for accessibility purposes. The value true 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Whether the element is an accessibility group. The value true indicates that the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-accessibilityGroup?: boolean--><!--Device-AccessibilityVirtualNode-accessibilityGroup?: boolean-End-->
@@ -73,10 +61,6 @@ Accessibility level of the component. 'auto': The accessibility grouping service
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ Accessibility text information of the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-accessibilityText?: string--><!--Device-AccessibilityVirtualNode-accessibilityText?: string-End-->
@@ -121,10 +101,6 @@ Whether the element is checkable. The value true indicates that the element is c
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,10 +122,6 @@ Whether the element is checked. The value true indicates that the element is che
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-checked?: boolean--><!--Device-AccessibilityVirtualNode-checked?: boolean-End-->
@@ -169,10 +141,6 @@ List of child element IDs of the component.
 **Type:** Array&lt;long&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,10 +162,6 @@ Whether the element is clickable. The value true indicates that the element is c
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-clickable?: boolean--><!--Device-AccessibilityVirtualNode-clickable?: boolean-End-->
@@ -217,10 +181,6 @@ Custom component type.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,10 +202,6 @@ ID of the component to which the element belongs. Default value: -1.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-elementId?: long--><!--Device-AccessibilityVirtualNode-elementId?: long-End-->
@@ -265,10 +221,6 @@ Whether the element is enabled. The value true indicates that the element is ena
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,10 +242,6 @@ Parent element ID of the component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-parentId?: long--><!--Device-AccessibilityVirtualNode-parentId?: long-End-->
@@ -313,10 +261,6 @@ Area of the element (relative to the parent node).
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,10 +282,6 @@ Whether the element is selected. The value true indicates that the element is se
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-selected?: boolean--><!--Device-AccessibilityVirtualNode-selected?: boolean-End-->
@@ -361,10 +301,6 @@ Supported action names.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -386,10 +322,6 @@ Text content of the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-text?: string--><!--Device-AccessibilityVirtualNode-text?: string-End-->
@@ -410,10 +342,6 @@ Simulated touch position.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-touchPosition?: TouchPosition--><!--Device-AccessibilityVirtualNode-touchPosition?: TouchPosition-End-->
@@ -433,10 +361,6 @@ Custom virtual node ID of the element.
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

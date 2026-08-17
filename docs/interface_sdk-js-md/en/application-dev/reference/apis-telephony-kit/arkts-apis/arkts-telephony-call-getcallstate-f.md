@@ -16,10 +16,6 @@ Obtains the call status. This API uses an asynchronous callback to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void--><!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -30,7 +26,7 @@ Obtains the call status. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallState&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -55,10 +51,6 @@ Obtains the call status. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-function getCallState(): Promise<CallState>--><!--Device-call-function getCallState(): Promise<CallState>-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -69,7 +61,7 @@ Obtains the call status. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;CallState&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

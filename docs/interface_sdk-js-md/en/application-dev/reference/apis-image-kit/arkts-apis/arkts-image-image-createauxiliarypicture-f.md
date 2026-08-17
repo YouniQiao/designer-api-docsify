@@ -16,10 +16,6 @@ Creates an AuxiliaryPicture instance based on the ArrayBuffer image data, auxili
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: AuxiliaryPictureType): AuxiliaryPicture--><!--Device-image-function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: AuxiliaryPictureType): AuxiliaryPicture-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -44,7 +40,7 @@ Creates an AuxiliaryPicture instance based on the ArrayBuffer image data, auxili
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function CreateAuxiliaryPicture(context: Context) {

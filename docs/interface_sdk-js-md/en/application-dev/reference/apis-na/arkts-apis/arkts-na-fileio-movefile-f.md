@@ -10,9 +10,7 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function moveFile(src: string, dest: string, mode?: int): Promise<void>--><!--Device-fileIo-function moveFile(src: string, dest: string, mode?: int): Promise<void>-End-->
 
@@ -67,9 +65,7 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
 
@@ -118,9 +114,7 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void-End-->
 

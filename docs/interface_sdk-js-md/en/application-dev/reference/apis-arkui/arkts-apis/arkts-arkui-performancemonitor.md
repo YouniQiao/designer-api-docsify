@@ -16,10 +16,6 @@
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace performanceMonitor--><!--Device-unnamed-declare namespace performanceMonitor-End-->
@@ -43,7 +39,7 @@ import { performanceMonitor } from 'performanceMonitor';
 | --- | --- |
 | [begin](arkts-arkui-performancemonitor-begin-f-sys.md#begin) | Marks the start of a user scene. Call this API when the scene begins. |
 | [end](arkts-arkui-performancemonitor-end-f-sys.md#end) | Marks the end of a user scene. Call this API when the scene ends. |
-| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md#recordInputEventTime) | Records the trigger event type and time before the start of the animation scene. |
+| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md#recordinputeventtime) | Records the trigger event type and time before the start of the animation scene. |
 <!--DelEnd-->
 
 <!--Del-->

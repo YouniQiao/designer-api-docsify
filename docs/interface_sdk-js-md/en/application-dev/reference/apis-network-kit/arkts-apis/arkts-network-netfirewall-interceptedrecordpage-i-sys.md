@@ -4,10 +4,6 @@ Intercepted record page information.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 <!--Device-netFirewall-interface InterceptedRecordPage--><!--Device-netFirewall-interface InterceptedRecordPage-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -32,10 +28,6 @@ Page data: all records displayed on this page.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 <!--Device-InterceptedRecordPage-data: Array<InterceptedRecord>--><!--Device-InterceptedRecordPage-data: Array<InterceptedRecord>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -53,10 +45,6 @@ Current page number: indicates the page number of this query.
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 <!--Device-InterceptedRecordPage-page: number--><!--Device-InterceptedRecordPage-page: number-End-->
 
@@ -76,10 +64,6 @@ Page size: maximum number of records on a page for this query.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 <!--Device-InterceptedRecordPage-pageSize: number--><!--Device-InterceptedRecordPage-pageSize: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -97,10 +81,6 @@ Total pages: total number of pages.
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 <!--Device-InterceptedRecordPage-totalPage: number--><!--Device-InterceptedRecordPage-totalPage: number-End-->
 

@@ -4,10 +4,6 @@ Defines the call restriction information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface CallRestrictionInfo--><!--Device-call-export interface CallRestrictionInfo-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -32,10 +28,6 @@ Enumerates call restriction modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallRestrictionInfo-mode: CallRestrictionMode--><!--Device-CallRestrictionInfo-mode: CallRestrictionMode-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -54,10 +46,6 @@ Password.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallRestrictionInfo-password: string--><!--Device-CallRestrictionInfo-password: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -75,10 +63,6 @@ Call restriction type.
 **Type:** [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallRestrictionInfo-type: CallRestrictionType--><!--Device-CallRestrictionInfo-type: CallRestrictionType-End-->
 

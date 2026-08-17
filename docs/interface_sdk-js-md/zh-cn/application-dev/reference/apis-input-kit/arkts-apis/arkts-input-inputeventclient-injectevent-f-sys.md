@@ -10,10 +10,6 @@ function injectEvent({ KeyEvent: KeyEvent }): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本12+：ohos.permission.INJECT_INPUT_EVENT
 
@@ -37,7 +33,7 @@ function injectEvent({ KeyEvent: KeyEvent }): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 12+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';
@@ -88,10 +84,6 @@ function injectEvent(keyEvent: KeyEventInfo): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INJECT_INPUT_EVENT
 
 <!--Device-inputEventClient-function injectEvent(keyEvent: KeyEventInfo): void--><!--Device-inputEventClient-function injectEvent(keyEvent: KeyEventInfo): void-End-->
@@ -114,7 +106,7 @@ function injectEvent(keyEvent: KeyEventInfo): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';

@@ -4,10 +4,6 @@ Manages configurations of the embedding model.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligence-interface ModelConfig--><!--Device-intelligence-interface ModelConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -30,10 +26,6 @@ If NPU is used for accelerating, a local path is required for model caching.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ModelConfig-cachePath?: string--><!--Device-ModelConfig-cachePath?: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -50,10 +42,6 @@ Indicates whether NPU is used.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ModelConfig-isNpuAvailable: boolean--><!--Device-ModelConfig-isNpuAvailable: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -69,10 +57,6 @@ Indicates cloud embedding model information.
 **Type:** [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,10 +76,6 @@ Indicates cloud embedding model network policy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ModelConfig-networkPolicy?: NetworkPolicy--><!--Device-ModelConfig-networkPolicy?: NetworkPolicy-End-->
@@ -113,10 +93,6 @@ Version of the model. The outputs of text or image embedding models with the sam
 **Type:** [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ModelConfig-version: ModelVersion--><!--Device-ModelConfig-version: ModelVersion-End-->
 

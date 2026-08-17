@@ -8,10 +8,6 @@ Defines the type of system bar that can be displayed or hidden.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-window-type SpecificSystemBar = 'status' | 'navigation'| 'navigationIndicator'--><!--Device-window-type SpecificSystemBar = 'status' | 'navigation'| 'navigationIndicator'-End-->

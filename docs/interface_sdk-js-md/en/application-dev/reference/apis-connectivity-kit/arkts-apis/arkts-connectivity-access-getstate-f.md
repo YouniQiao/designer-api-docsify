@@ -16,10 +16,6 @@ Obtains the Bluetooth status of a device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 10 - 12: ohos.permission.ACCESS_BLUETOOTH
 
@@ -44,7 +40,7 @@ Obtains the Bluetooth status of a device.
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

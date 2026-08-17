@@ -6,10 +6,6 @@ Represents the cloud asset information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface CloudAsset--><!--Device-cloudExtension-export interface CloudAsset-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -34,10 +30,6 @@ Asset ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudAsset-assetId: string--><!--Device-CloudAsset-assetId: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -55,10 +47,6 @@ Hashed value of the asset modification time and size.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CloudAsset-hash: string--><!--Device-CloudAsset-hash: string-End-->
 

@@ -16,10 +16,6 @@ Mounts a volume. This API uses an asynchronous callback to return the result. Cu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
 <!--Device-volumeManager-function mount(volumeId: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function mount(volumeId: string, callback: AsyncCallback<void>): void-End-->
@@ -59,10 +55,6 @@ function mount(volumeId: string): Promise<void>
 Mounts a volume. This API uses a promise to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file systems are supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 

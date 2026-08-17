@@ -10,11 +10,9 @@ Obtains an RDB store. This API uses an asynchronous callback to return the resul
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getRdbStore)
+**Substitutes:** [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore)
 
 <!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback<RdbStore>): void--><!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback<RdbStore>): void-End-->
 
@@ -39,8 +37,6 @@ function getRdbStore(context: Context, config: StoreConfig, version: number): Pr
 Obtains an RDB store. This API uses a promise to return the result. You can set parameters for the RDB store based on service requirements and call APIs to perform data operations.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

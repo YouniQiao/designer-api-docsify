@@ -4,13 +4,11 @@
 export declare type OnUIPickerComponentCallback = (selectedIndex: int) => void
 ```
 
-定义[onChange](arkts-na-uipickercomponent-uipickercomponentattribute-i.md#onChange)和[onScrollStop](arkts-na-uipickercomponent-uipickercomponentattribute-i.md#onScrollStop)事件的回调类型。
+定义[onChange](arkts-na-uipickercomponent-uipickercomponentattribute-i.md#onchange)和[onScrollStop](arkts-na-uipickercomponent-uipickercomponentattribute-i.md#onscrollstop)事件的回调类型。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

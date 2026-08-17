@@ -4,10 +4,6 @@ Describes the audio-haptic file descriptor. > **NOTE：**> > Ensure that **fd** 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audioHaptic-interface AudioHapticFileDescriptor--><!--Device-audioHaptic-interface AudioHapticFileDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -30,10 +26,6 @@ File descriptor of the audio-haptic file, which is generally greater than or equ
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticFileDescriptor-fd: int--><!--Device-AudioHapticFileDescriptor-fd: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -50,10 +42,6 @@ Number of bytes to read. By default, the length is the number of bytes remaining
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticFileDescriptor-length?: long--><!--Device-AudioHapticFileDescriptor-length?: long-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -69,10 +57,6 @@ Offset for reading data from the file, in bytes. By default, the offset is 0.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioHapticFileDescriptor-offset?: long--><!--Device-AudioHapticFileDescriptor-offset?: long-End-->
 

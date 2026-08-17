@@ -10,10 +10,6 @@ function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Conte
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-wantAgent-function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Context): Promise<CompleteData>--><!--Device-wantAgent-function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Context): Promise<CompleteData>-End-->
@@ -46,7 +42,7 @@ function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Conte
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
 | [16000153](../errorcode-ability.md#16000153-wantagent对象已被取消) | The Wantagent has been canceled. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { wantAgent, Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';

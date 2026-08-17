@@ -10,8 +10,6 @@ function registerContinuation(callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 22
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
@@ -28,7 +26,7 @@ function registerContinuation(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | AsyncCallback形式返回流转管理服务连接后生成的token。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | AsyncCallback形式返回流转管理服务连接后生成的token。 |
 
 **错误码：**
 
@@ -39,7 +37,7 @@ function registerContinuation(callback: AsyncCallback<number>): void
 | [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) | The system ability works abnormally. |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-应用注册token已达到最大次数限制) | The number of token registration times has reached the upper limit. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -70,8 +68,6 @@ function registerContinuation(options: ContinuationExtraParams, callback: AsyncC
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 22
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
@@ -89,7 +85,7 @@ function registerContinuation(options: ContinuationExtraParams, callback: AsyncC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | ContinuationExtraParams | 是 | 过滤可选择设备列表的额外参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | AsyncCallback形式返回流转管理服务连接后生成的token。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | AsyncCallback形式返回流转管理服务连接后生成的token。 |
 
 **错误码：**
 
@@ -100,7 +96,7 @@ function registerContinuation(options: ContinuationExtraParams, callback: AsyncC
 | [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) | The system ability works abnormally. |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-应用注册token已达到最大次数限制) | The number of token registration times has reached the upper limit. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -135,8 +131,6 @@ function registerContinuation(options?: ContinuationExtraParams): Promise<number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 22
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
@@ -170,7 +164,7 @@ function registerContinuation(options?: ContinuationExtraParams): Promise<number
 | [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) | The system ability works abnormally. |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-应用注册token已达到最大次数限制) | The number of token registration times has reached the upper limit. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

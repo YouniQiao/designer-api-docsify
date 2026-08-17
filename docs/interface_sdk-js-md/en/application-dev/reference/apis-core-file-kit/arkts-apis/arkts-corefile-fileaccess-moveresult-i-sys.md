@@ -4,8 +4,6 @@ Represents the information returned when the move operation fails. If the operat
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 23
 
 <!--Device-fileAccess-interface MoveResult--><!--Device-fileAccess-interface MoveResult-End-->
@@ -32,8 +30,6 @@ URI of the conflicting file. If the error is not caused by a file conflict, **de
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -57,8 +53,6 @@ Error code. For details about the error codes, see [File Management Error Codes]
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Deprecated since:** 23
 
@@ -84,8 +78,6 @@ Error message.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -109,8 +101,6 @@ URI of the source file or directory.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Deprecated since:** 23
 

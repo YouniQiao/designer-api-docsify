@@ -10,10 +10,6 @@ Updates the remote grant status. This function enables or disables the remote au
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
 <!--Device-abilityToolAccessCtrl-export function updateRemoteGrantStatus(remoteGrantStatus: RemoteGrantStatus): Promise<void>--><!--Device-abilityToolAccessCtrl-export function updateRemoteGrantStatus(remoteGrantStatus: RemoteGrantStatus): Promise<void>-End-->

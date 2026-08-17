@@ -1,12 +1,8 @@
 # OnFaviconReceivedEvent
 
-Defines the triggered callback when the application receive a new favicon for the current web page.
+Defines the callback information triggered when the app receives a new favicon, including the icon PixelMap object. It is suitable for scenarios where obtaining web page favicons is required, improving icon management flexibility and user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnFaviconReceivedEvent--><!--Device-unnamed-declare interface OnFaviconReceivedEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered callback when the application receive a new favicon for th
 favicon: PixelMap
 ```
 
-Received the Favicon icon for the PixelMap object.
+**PixelMap** object of the received favicon.
 
 **Type:** PixelMap
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -16,8 +16,6 @@ Subscribe the event reported when the Bluetooth state changes. On API 10 and abo
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** stateChange
@@ -46,7 +44,7 @@ Subscribe the event reported when the Bluetooth state changes. On API 10 and abo
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

@@ -1,12 +1,8 @@
 # EmbedOptions
 
-Web同层渲染的配置。
+Web同层渲染的配置。用于配置Web同层渲染选项，包括支持固定大小和CSS显示属性。适用于需要优化同层元素渲染效果的场景，提升渲染的兼容性和灵活性。
 
 **起始版本：** 16
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为16。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface EmbedOptions--><!--Device-unnamed-declare interface EmbedOptions-End-->
 
@@ -26,10 +22,6 @@ supportCssDisplayChange?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-EmbedOptions-supportCssDisplayChange?: boolean--><!--Device-EmbedOptions-supportCssDisplayChange?: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -40,17 +32,13 @@ supportCssDisplayChange?: boolean
 supportDefaultIntrinsicSize?: boolean
 ```
 
-设置同层渲染元素是否支持固定大小 300 * 150。 当H5侧CSS设置了大小时，同层渲染元素大小为CSS大小，否则为固定大小。 为true时，固定大小为 300 * 150。 为false时，若H5侧CSS未设置大小，则同层渲染元素不渲染。 默认值：false 单位：像素。
+设置同层渲染元素是否支持固定大小 300 * 150。 当H5侧CSS设置了大小时，同层渲染元素大小为CSS大小，否则为固定大小。 为true时，固定大小为 300 * 150。 为false时，若H5侧CSS未设置大小，则同层渲染元素不渲染。 默认值：false 单位：px
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 16
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为16。
-
-**废弃版本：** -1
 
 <!--Device-EmbedOptions-supportDefaultIntrinsicSize?: boolean--><!--Device-EmbedOptions-supportDefaultIntrinsicSize?: boolean-End-->
 

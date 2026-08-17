@@ -10,9 +10,7 @@ function rename(oldPath: string, newPath: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function rename(oldPath: string, newPath: string): Promise<void>--><!--Device-fileIo-function rename(oldPath: string, newPath: string): Promise<void>-End-->
 
@@ -66,9 +64,7 @@ function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void-End-->
 
@@ -80,7 +76,7 @@ function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>)
 | --- | --- | --- | --- |
 | oldPath | string | 是 | 文件或目录的应用沙箱原路径。 |
 | newPath | string | 是 | 文件或目录的应用沙箱新路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当重命名文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当重命名文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

@@ -4,10 +4,6 @@ Provides APIs for managing a distributed data object. Before using any API of th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDataObject-interface DataObject--><!--Device-distributedDataObject-interface DataObject-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -28,10 +24,6 @@ Binds joint assets. Currently, only the binding between an asset in a distribute
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -51,7 +43,7 @@ Binds joint assets. Currently, only the binding between an asset in a distribute
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -116,10 +108,6 @@ Binds joint assets. Currently, only the binding between an asset in a distribute
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -144,7 +132,7 @@ Binds joint assets. Currently, only the binding between an asset in a distribute
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -208,10 +196,6 @@ Off watch of change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-offChange(callback?: DataObserver): void--><!--Device-DataObject-offChange(callback?: DataObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -231,10 +215,6 @@ offProgressChanged(callback?: ProgressObserver): void
 Unsubscribes from the asset sync progress.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataObject-offProgressChanged(callback?: ProgressObserver): void--><!--Device-DataObject-offProgressChanged(callback?: ProgressObserver): void-End-->
 
@@ -256,10 +236,6 @@ Off watch of status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-offStatus(callback?: StatusObserver): void--><!--Device-DataObject-offStatus(callback?: StatusObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -280,10 +256,6 @@ Unsubscribes from data changes of this distributed data object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -301,7 +273,7 @@ Unsubscribes from data changes of this distributed data object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Unregister the specified data change callback.
@@ -327,10 +299,6 @@ Unsubscribes from data changes of this distributed object.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-off(type: 'change', callback?: DataObserver): void--><!--Device-DataObject-off(type: 'change', callback?: DataObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -342,7 +310,7 @@ Unsubscribes from data changes of this distributed object.
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
 | callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for data changes of this distributed object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
@@ -387,10 +355,6 @@ Unsubscribes from asset transfer progress changes.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void--><!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -402,7 +366,7 @@ Unsubscribes from asset transfer progress changes.
 | type | 'progressChanged' | Yes | Event type. The value is 'progressChanged', which indicates the asset transfer progress changes. |
 | callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for progress changes of this distributed object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const progressChangedCallback1: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
@@ -441,10 +405,6 @@ Unsubscribes from the status change of this distributed data object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -462,7 +422,7 @@ Unsubscribes from the status change of this distributed data object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Unregister the specified status change callback.
@@ -483,10 +443,6 @@ Unsubscribes from status changes of this distributed object.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void--><!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -498,7 +454,7 @@ Unsubscribes from status changes of this distributed object.
 | type | 'status' | Yes | Event type. The value is 'status', which indicates the status changes of a distributed object. |
 | callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
@@ -532,10 +488,6 @@ On watch of change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-onChange(callback: DataObserver): void--><!--Device-DataObject-onChange(callback: DataObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -556,10 +508,6 @@ Subscribes to the asset sync progress.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-onProgressChanged(callback: ProgressObserver): void--><!--Device-DataObject-onProgressChanged(callback: ProgressObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -579,10 +527,6 @@ onStatus(callback: StatusObserver): void
 On watch of status.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -606,10 +550,6 @@ Subscribes to data changes of this distributed data object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -627,7 +567,7 @@ Subscribes to data changes of this distributed data object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 g_object.on("change", (sessionId: string, fields: Array<string>) => {
@@ -650,10 +590,6 @@ Subscribes to data changes of this distributed data object.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-on(type: 'change', callback: DataObserver): void--><!--Device-DataObject-on(type: 'change', callback: DataObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -665,7 +601,7 @@ Subscribes to data changes of this distributed data object.
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
 | callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | Yes | Callback used to listen for data changes of a distributed object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
@@ -693,10 +629,6 @@ Subscribes to the asset transfer progress changes.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void--><!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -708,7 +640,7 @@ Subscribes to the asset transfer progress changes.
 | type | 'progressChanged' | Yes | Event type. The value is 'progressChanged', which indicates the asset transfer progress changes. |
 | callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | Yes | Callback used to listen for the asset transfer progress changes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const progressChangedCallback: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
@@ -735,10 +667,6 @@ Subscribes to status changes of this distributed data object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -756,7 +684,7 @@ Subscribes to status changes of this distributed data object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 g_object.on("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
@@ -774,10 +702,6 @@ Subscribes to the status changes of this distributed object.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-on(type: 'status', callback: StatusObserver): void--><!--Device-DataObject-on(type: 'status', callback: StatusObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -789,7 +713,7 @@ Subscribes to the status changes of this distributed object.
 | type | 'status' | Yes | Event type. The value is 'status', which indicates the status changes of a distributed object. |
 | callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | Yes | Callback used to listen for status changes of a distributed object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
@@ -812,10 +736,6 @@ Revokes the data of this distributed data object saved. This API uses an asynchr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void--><!--Device-DataObject-revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -833,7 +753,7 @@ Revokes the data of this distributed data object saved. This API uses an asynchr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 g_object.setSessionId("123456");
@@ -871,10 +791,6 @@ Revokes the data of this distributed data object saved. This API uses a promise 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-revokeSave(): Promise<RevokeSaveSuccessResponse>--><!--Device-DataObject-revokeSave(): Promise<RevokeSaveSuccessResponse>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -891,7 +807,7 @@ Revokes the data of this distributed data object saved. This API uses a promise 
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 g_object.setSessionId("123456");
@@ -925,10 +841,6 @@ Saves a distributed data object. This API uses an asynchronous callback to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void--><!--Device-DataObject-save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -947,7 +859,7 @@ Saves a distributed data object. This API uses an asynchronous callback to retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 g_object.setSessionId("123456");
@@ -974,10 +886,6 @@ Saves a distributed data object. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-save(deviceId: string): Promise<SaveSuccessResponse>--><!--Device-DataObject-save(deviceId: string): Promise<SaveSuccessResponse>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -1001,7 +909,7 @@ Saves a distributed data object. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 g_object.setSessionId("123456");
@@ -1025,10 +933,6 @@ setAsset(assetKey: string, uri: string): Promise<void>
 Sets the property information about a single asset in a distributed object. This API must be called before the setSessionId API is called. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataObject-setAsset(assetKey: string, uri: string): Promise<void>--><!--Device-DataObject-setAsset(assetKey: string, uri: string): Promise<void>-End-->
 
@@ -1054,7 +958,7 @@ Sets the property information about a single asset in a distributed object. This
 | [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) | Parameter error. Possible causes: 1. The assetKey is invalid, such as ""; 2. The uri is invalid, such as "". |
 | [15400003](../errorcode-distributed-dataObject.md#15400003-sessionid-already-set) | The sessionId of the distributed object has been set. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1108,10 +1012,6 @@ Sets the property information about multiple assets in a distributed object. Thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataObject-setAssets(assetsKey: string, uris: Array<string>): Promise<void>--><!--Device-DataObject-setAssets(assetsKey: string, uris: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -1136,7 +1036,7 @@ Sets the property information about multiple assets in a distributed object. Thi
 | [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) | Parameter error. Possible causes: 1. The assetsKey is invalid, such as ""; 2. The uris is invalid, such as the length of uris is more than 50. |
 | [15400003](../errorcode-distributed-dataObject.md#15400003-sessionid-already-set) | The sessionId of the distributed object has been set. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1190,10 +1090,6 @@ Sets a session ID. This API uses an asynchronous callback to return the result. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-DataObject-setSessionId(sessionId: string, callback: AsyncCallback<void>): void--><!--Device-DataObject-setSessionId(sessionId: string, callback: AsyncCallback<void>): void-End-->
@@ -1215,7 +1111,7 @@ Sets a session ID. This API uses an asynchronous callback to return the result. 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-inmemory-database) | Failed to create the in-memory database. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Add g_object to the distributed network.
@@ -1238,10 +1134,6 @@ Exits all sessions. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 9 - 19: ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1263,7 +1155,7 @@ Exits all sessions. This API uses an asynchronous callback to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.<br>**Applicable version:** 9 - 19 |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-inmemory-database) | Failed to create the in-memory database. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Add g_object to the distributed network.
@@ -1285,10 +1177,6 @@ setSessionId(sessionId?: string): Promise<void>
 Sets a session ID or exits the distributed network. This API uses a promise to return the result. If this parameter is set to "" or null, or left empty, the distributed data object exits the network. For the devices in the collaboration state in a trusted network, data of the distributed objects with the same session ID can be automatically synced across devices.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1316,7 +1204,7 @@ Sets a session ID or exits the distributed network. This API uses a promise to r
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-inmemory-database) | Failed to create the in-memory database. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Add g_object to the distributed network.

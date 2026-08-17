@@ -4,10 +4,6 @@ Defines a float view controller instance, which is used to start and stop the fl
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-floatView-interface FloatViewController--><!--Device-floatView-interface FloatViewController-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -27,10 +23,6 @@ getWindowProperties(): FloatViewProperties
 Obtains the properties of the float view.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,10 +53,6 @@ Unregisters the callback for listening to limit changes of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewController-offLimitsChange(callback?: Callback<FloatViewLimits>): void--><!--Device-FloatViewController-offLimitsChange(callback?: Callback<FloatViewLimits>): void-End-->
@@ -92,10 +80,6 @@ offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 Unregisters the callback for listening to changes in the rectangular area of the float view.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,10 +109,6 @@ Unregisters the callback for listening to float view state changes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewController-offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void--><!--Device-FloatViewController-offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void-End-->
@@ -156,10 +136,6 @@ onLimitsChange(callback: Callback<FloatViewLimits>): void
 Registers a callback for listening to limit changes of the float view. When the limit changes, for example, when the device is folded or unfolded, the callback is triggered. To prevent memory leaks, remember to unregister the callback when it is no longer needed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,10 +166,6 @@ Registers a callback for listening to changes in the rectangular area (position 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewController-onRectChange(callback: Callback<FloatViewRectChangeInfo>): void--><!--Device-FloatViewController-onRectChange(callback: Callback<FloatViewRectChangeInfo>): void-End-->
@@ -223,10 +195,6 @@ Registers a callback for listening to float view state changes. To prevent memor
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewController-onStateChange(callback: Callback<FloatViewStateChangeInfo>): void--><!--Device-FloatViewController-onStateChange(callback: Callback<FloatViewStateChangeInfo>): void-End-->
@@ -255,10 +223,6 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 Restores the main window of the float view to display in the foreground. If this API is called when the main window is already in the foreground, the main window level will be raised. This API can be used only after the float view is clicked. If the main window is in the **PAUSED** state or in the multitasking state, error code 130 0032 will be returned if this API is called. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -297,10 +261,6 @@ Sets whether the float view is visible when the application is running in the fo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewController-setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>--><!--Device-FloatViewController-setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>-End-->
@@ -335,10 +295,6 @@ setUIContext(path: string, storage?: LocalStorage): Promise<void>
 Loads the content of a page, with its path specified in the current project, for the float view, and transfers the state attribute to the page through **LocalStorage**. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -376,10 +332,6 @@ Sets the UI content of a [named route](../../../ui/arkts-routing.md#named-route)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewController-setUIContextByName(name: string, storage?: LocalStorage): Promise<void>--><!--Device-FloatViewController-setUIContextByName(name: string, storage?: LocalStorage): Promise<void>-End-->
@@ -412,13 +364,9 @@ Sets the UI content of a [named route](../../../ui/arkts-routing.md#named-route)
 setWindowSize(size: window.Size): Promise<void>
 ```
 
-Sets the size of the float view. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](#onRectChange) API. This API uses a promise to return the result.
+Sets the size of the float view. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](#onrectchange) API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -430,7 +378,7 @@ Sets the size of the float view. You are advised to call the [getFloatViewLimits
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits) API. |
+| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API. |
 
 **Return value:**
 
@@ -452,13 +400,9 @@ Sets the size of the float view. You are advised to call the [getFloatViewLimits
 start(): Promise<void>
 ```
 
-Starts the float view. The return value of this API does not indicate that the start process is complete. You need to use the [onStateChange](#onStateChange) API to listen for the **STARTED** callback to determine whether the start is successful. You are advised to call **start ()** after calling [setUIContext()](#setUIContext). This API uses a promise to return the result.
+Starts the float view. The return value of this API does not indicate that the start process is complete. You need to use the [onStateChange](#onstatechange) API to listen for the **STARTED** callback to determine whether the start is successful. You are advised to call **start ()** after calling [setUIContext()](#setuicontext). This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.FLOAT_VIEW
 
@@ -492,13 +436,9 @@ Starts the float view. The return value of this API does not indicate that the s
 stop(): Promise<void>
 ```
 
-Stops the float view. The return value of this API does not indicate that the stop process is complete. You need to use the [onStateChange](#onStateChange) API to listen for the **STOPPED** callback to determine whether the stop is successful. This API uses a promise to return the result.
+Stops the float view. The return value of this API does not indicate that the stop process is complete. You need to use the [onStateChange](#onstatechange) API to listen for the **STOPPED** callback to determine whether the stop is successful. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -527,13 +467,9 @@ Stops the float view. The return value of this API does not indicate that the st
 switchTemplate(templateProperty: TemplateProperty): Promise<void>
 ```
 
-Switches the template of the flow view and changes the window size. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](#onRectChange) API. This API uses a promise to return the result.
+Switches the template of the flow view and changes the window size. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](#onrectchange) API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -545,7 +481,7 @@ Switches the template of the flow view and changes the window size. You are advi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Yes | Target flow view template and window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits) API. |
+| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Yes | Target flow view template and window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API. |
 
 **Return value:**
 

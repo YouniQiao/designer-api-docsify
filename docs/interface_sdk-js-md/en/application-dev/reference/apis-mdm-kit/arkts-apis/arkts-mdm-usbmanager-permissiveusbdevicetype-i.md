@@ -1,12 +1,8 @@
 # PermissiveUsbDeviceType
 
-USB device type information. Partial field matching is supported. - Compared with [UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md#UsbDeviceType), the **subClass**, **protocol**, and **descriptor** parameters in this API are optional, allowing for more flexible USB device disabling policies. - Only the matching based on the **baseClass** parameter is supported. - Multiple parameters can be configured. All parameters must be satisfied simultaneously for a match. - You can obtain the list of USB devices connected to the host device through the [getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md#getDevices) API, and then find the type of the current device in the returned list.
+USB device type information. Partial field matching is supported. - Compared with [UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md#usbdevicetype), the **subClass**, **protocol**, and **descriptor** parameters in this API are optional, allowing for more flexible USB device disabling policies. - Only the matching based on the **baseClass** parameter is supported. - Multiple parameters can be configured. All parameters must be satisfied simultaneously for a match. - You can obtain the list of USB devices connected to the host device through the [getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md#getdevices) API, and then find the type of the current device in the returned list.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-usbManager-export interface PermissiveUsbDeviceType--><!--Device-usbManager-export interface PermissiveUsbDeviceType-End-->
 
@@ -30,10 +26,6 @@ Type code. The value range is [0, 255]. If **descriptor** is **DEVICE**, this pa
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissiveUsbDeviceType-baseClass: number--><!--Device-PermissiveUsbDeviceType-baseClass: number-End-->
@@ -51,10 +43,6 @@ USB descriptor. If **USBDevice.clazz** is **0**, locate the value of **USBDevice
 **Type:** [Descriptor](arkts-mdm-usbmanager-descriptor-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Protocol code. The value range is [0, 255]. If **descriptor** is **DEVICE**, thi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissiveUsbDeviceType-protocol?: number--><!--Device-PermissiveUsbDeviceType-protocol?: number-End-->
@@ -95,10 +79,6 @@ Subtype code. The value range is [0, 255]. If **descriptor** is **DEVICE**, this
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

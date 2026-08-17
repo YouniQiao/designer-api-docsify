@@ -16,10 +16,6 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemParameterEnhance-function getSync(key: string, def?: string): string--><!--Device-systemParameterEnhance-function getSync(key: string, def?: string): string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -48,7 +44,7 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 | [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-operation-permission-denied) | The operation on the system permission is denied. |
 | [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) | System internal error such as out memory or deadlock. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

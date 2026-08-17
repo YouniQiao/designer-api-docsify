@@ -4,11 +4,9 @@ Defines the prompt info of button.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Button](arkts-arkui-promptaction-button-i.md#Button)
+**Substitutes:** [Button](arkts-arkui-promptaction-button-i.md#button)
 
 <!--Device-prompt-interface Button--><!--Device-prompt-interface Button-End-->
 
@@ -32,8 +30,6 @@ Defines the color of button.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [color](arkts-arkui-promptaction-button-i.md#color)
@@ -53,8 +49,6 @@ Defines the button info.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

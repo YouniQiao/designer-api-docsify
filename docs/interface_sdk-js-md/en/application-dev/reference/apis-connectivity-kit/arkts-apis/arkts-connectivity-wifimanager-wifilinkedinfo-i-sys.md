@@ -4,10 +4,6 @@ Wi-Fi connection information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface WifiLinkedInfo--><!--Device-wifiManager-interface WifiLinkedInfo-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -30,10 +26,6 @@ The load value of this Wi-Fi connection. A greater value indicates a higher load
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiLinkedInfo-chload: int--><!--Device-WifiLinkedInfo-chload: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -51,10 +43,6 @@ Whether the Wi-Fi hotspot is HiLinkPro network.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiLinkedInfo-isHiLinkProNetwork?: boolean--><!--Device-WifiLinkedInfo-isHiLinkProNetwork?: boolean-End-->
 
@@ -74,10 +62,6 @@ The ID(uniquely identifies) of a Wi-Fi connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiLinkedInfo-networkId: int--><!--Device-WifiLinkedInfo-networkId: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -95,10 +79,6 @@ The signal-to-noise ratio (SNR) of this Wi-Fi connection.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiLinkedInfo-snr: int--><!--Device-WifiLinkedInfo-snr: int-End-->
 
@@ -118,10 +98,6 @@ The state of the supplicant of this Wi-Fi connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiLinkedInfo-suppState: SuppState--><!--Device-WifiLinkedInfo-suppState: SuppState-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -139,10 +115,6 @@ Whether Wi-Fi Tx and Rx are both working properly
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

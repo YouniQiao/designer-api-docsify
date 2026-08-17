@@ -1,14 +1,10 @@
 # Beauty (System API)
 
-Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#BeautyQuery-(System-API)) Provides APIs to obtain and set the beauty effect.
+Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#beautyquery-system-api) Provides APIs to obtain and set the beauty effect.
 
-**Inheritance/Implementation:** Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#BeautyQuery-(System-API))
+**Inheritance/Implementation:** Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#beautyquery-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface Beauty--><!--Device-camera-interface Beauty-End-->
 
@@ -31,10 +27,6 @@ getBeauty(type: BeautyType): int
 Obtains the level of the beauty type in use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Beauty-getBeauty(type: BeautyType): int--><!--Device-Beauty-getBeauty(type: BeautyType): int-End-->
 
@@ -61,7 +53,7 @@ Obtains the level of the beauty type in use.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function getBeauty(portraitPhotoSession: camera.PortraitPhotoSession): number {
@@ -86,13 +78,9 @@ function getBeauty(portraitPhotoSession: camera.PortraitPhotoSession): number {
 setBeauty(type: BeautyType, value: int): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType-(System-API)) obtained through [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyTypes) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#beautytype-system-api) obtained through [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes) are disabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Beauty-setBeauty(type: BeautyType, value: int): void--><!--Device-Beauty-setBeauty(type: BeautyType, value: int): void-End-->
 
@@ -105,7 +93,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | Yes | Beauty type. |
-| value | int | Yes | Beauty level, which is obtained through [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). |
+| value | int | Yes | Beauty level, which is obtained through [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange). |
 
 **Error codes:**
 
@@ -114,7 +102,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function setBeauty(portraitPhotoSession: camera.PortraitPhotoSession): void {
@@ -139,10 +127,6 @@ setPortraitThemeType(type: PortraitThemeType): void
 Sets a portrait theme type for a camera device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Beauty-setPortraitThemeType(type: PortraitThemeType): void--><!--Device-Beauty-setPortraitThemeType(type: PortraitThemeType): void-End-->
 

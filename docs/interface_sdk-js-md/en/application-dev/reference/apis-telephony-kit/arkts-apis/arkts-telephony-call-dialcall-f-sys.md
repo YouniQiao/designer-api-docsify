@@ -16,10 +16,6 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PLACE_CALL
 
 <!--Device-call-function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void--><!--Device-call-function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void-End-->
@@ -50,7 +46,7 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -81,10 +77,6 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PLACE_CALL
 
 <!--Device-call-function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>--><!--Device-call-function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>-End-->
@@ -98,7 +90,7 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | No | Call options, which carry other configuration information of the call. <br>If this field is not set, the following configuration is used by default. For details, see [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md#DialCallOptions-(System-API)). <br>- **accountId**: 0 (card slot 1) <br>- **videoState**: voice call <br>- **dialScene**: common call <br>- **dialType**: carrier call |
+| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | No | Call options, which carry other configuration information of the call. <br>If this field is not set, the following configuration is used by default. For details, see [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md#dialcalloptions-system-api). <br>- **accountId**: 0 (card slot 1) <br>- **videoState**: voice call <br>- **dialScene**: common call <br>- **dialType**: carrier call |
 
 **Return value:**
 
@@ -120,7 +112,7 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -148,10 +140,6 @@ function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void
 Initiates a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -182,7 +170,7 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

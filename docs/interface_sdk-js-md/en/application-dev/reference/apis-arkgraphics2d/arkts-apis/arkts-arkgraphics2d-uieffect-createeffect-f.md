@@ -16,10 +16,6 @@ Creates a VisualEffect instance for adding multiple VisualEffect effects to a co
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-uiEffect-function createEffect(): VisualEffect--><!--Device-uiEffect-function createEffect(): VisualEffect-End-->
@@ -32,7 +28,7 @@ Creates a VisualEffect instance for adding multiple VisualEffect effects to a co
 | --- | --- |
 | VisualEffect | Returns a VisualEffect instance, which supports adding multiple VisualEffect effects. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let visualEffect : uiEffect.VisualEffect = uiEffect.createEffect()

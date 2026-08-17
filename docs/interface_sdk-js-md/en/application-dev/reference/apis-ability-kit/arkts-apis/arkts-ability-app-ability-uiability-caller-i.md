@@ -1,12 +1,8 @@
 # Caller
 
-A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startAbilityByCall) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication.
+A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Caller--><!--Device-unnamed-export interface Caller-End-->
 
@@ -31,10 +27,6 @@ call(method: string, data: rpc.Parcelable): Promise<void>
 Used by a Caller UIAbility to send serialized data, as agreed upon by both parties, to the Callee UIAbility. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +56,7 @@ Used by a Caller UIAbility to send serialized data, as agreed upon by both parti
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -132,10 +124,6 @@ Used by a Caller UIAbility to send serialized data to a Callee UIAbility and ret
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Caller-callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequence>--><!--Device-Caller-callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequence>-End-->
@@ -164,7 +152,7 @@ Used by a Caller UIAbility to send serialized data to a Callee UIAbility and ret
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -231,13 +219,9 @@ export default class MainUIAbility extends UIAbility {
 offRelease(callback: OnReleaseCallback): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.onRelease](#onRelease).
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.onRelease](#onrelease).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -257,13 +241,9 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 offRelease(): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.onRelease](#onRelease).
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.onRelease](#onrelease).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -277,13 +257,9 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 off(type: 'release', callback: OnReleaseCallback): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [on('release')](#on_release). It is currently not supported.
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [on('release')](#onrelease). It is currently not supported.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -304,7 +280,7 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
@@ -341,13 +317,9 @@ export default class MainUIAbility extends UIAbility {
 off(type: 'release'): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.on('release')](#on_release). It is currently not supported.
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.on('release')](#onrelease). It is currently not supported.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -367,7 +339,7 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
@@ -410,10 +382,6 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Caller-onRelease(callback: OnReleaseCallback): void--><!--Device-Caller-onRelease(callback: OnReleaseCallback): void-End-->
@@ -433,7 +401,7 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -472,10 +440,6 @@ Called when the remote UIAbility state changes in the collaboration scenario. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Caller-onRemoteStateChange(callback: OnRemoteStateChangeCallback): void--><!--Device-Caller-onRemoteStateChange(callback: OnRemoteStateChangeCallback): void-End-->
@@ -495,7 +459,7 @@ Called when the remote UIAbility state changes in the collaboration scenario. Th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -535,10 +499,6 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void-End-->
@@ -559,7 +519,7 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';
@@ -599,10 +559,6 @@ Used by a Caller UIAbility to proactively release the connection with the Callee
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Caller-release(): void--><!--Device-Caller-release(): void-End-->
@@ -616,7 +572,7 @@ Used by a Caller UIAbility to proactively release the connection with the Callee
 | [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Caller } from '@kit.AbilityKit';

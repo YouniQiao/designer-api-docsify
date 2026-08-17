@@ -4,10 +4,6 @@ Defines the accessibility event information. An accessibility event is generated
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare interface AccessibilityEvent--><!--Device-unnamed-export declare interface AccessibilityEvent-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -45,10 +41,6 @@ ID of the element that is actively focused. Active focus means that the app acti
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEvent-elementId?: long--><!--Device-AccessibilityEvent-elementId?: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -66,10 +58,6 @@ Specific event type, which identifies the category of the current accessibility 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType--><!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -85,10 +73,6 @@ For TextArea, TextInput, SearchField, and RichEdit components, when text content
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEvent-extraInfo?: string--><!--Device-AccessibilityEvent-extraInfo?: string-End-->
 
@@ -106,10 +90,6 @@ Target element on which the event occurs. When the accessibility event involves 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEvent-target?: AccessibilityElement--><!--Device-AccessibilityEvent-target?: AccessibilityElement-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -126,10 +106,6 @@ Content actively announced. When the app needs to actively announce content, set
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string--><!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -145,10 +121,6 @@ Event timestamp, which is a non-negative integer in milliseconds. The default va
 **Type:** long
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEvent-timeStamp?: long--><!--Device-AccessibilityEvent-timeStamp?: long-End-->
 

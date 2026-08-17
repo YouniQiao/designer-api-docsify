@@ -16,10 +16,6 @@ Creates a RemoteObject instance based on an AssetLoader instance. The system use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-function createAssetLoaderStub(instance: AssetLoader): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createAssetLoaderStub(instance: AssetLoader): Promise<rpc.RemoteObject>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -38,7 +34,7 @@ Creates a RemoteObject instance based on an AssetLoader instance. The system use
 | --- | --- |
 | Promise&lt;rpc.RemoteObject&gt; | Promise used to return the rpc.RemoteObject instance of AssetLoader. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

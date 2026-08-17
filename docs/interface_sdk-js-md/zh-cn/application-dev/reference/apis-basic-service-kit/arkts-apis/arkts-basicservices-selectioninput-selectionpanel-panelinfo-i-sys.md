@@ -1,12 +1,8 @@
-# PanelInfo（系统接口）
+# PanelInfo(划词面板)（系统接口）
 
 划词面板属性信息，包含面板类型、位置和宽高。开发者通过panelType指定面板类型（菜单面板或主面板），通过x、y设定面板左上角坐标，通过width、height设定面板尺寸，各项属性共同定义面板的呈现形态。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export interface PanelInfo--><!--Device-unnamed-export interface PanelInfo-End-->
 
@@ -26,10 +22,6 @@ height: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanelInfo-height: int--><!--Device-PanelInfo-height: int-End-->
@@ -44,17 +36,13 @@ height: int
 panelType: PanelType
 ```
 
-划词面板类型枚举，有两种面板可供选择，详见[PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md#PanelType（系统接口）)。
+划词面板类型枚举，有两种面板可供选择，详见PanelType。
 
 **类型：** [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md)
 
 **默认值：** MENU_PANEL
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,10 +64,6 @@ width: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanelInfo-width: int--><!--Device-PanelInfo-width: int-End-->
@@ -100,10 +84,6 @@ x: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanelInfo-x: int--><!--Device-PanelInfo-x: int-End-->
@@ -123,10 +103,6 @@ y: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,10 +4,6 @@ Represents the configuration of the recent image or video.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class RecentPhotoOptions--><!--Device-unnamed-export declare class RecentPhotoOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -36,10 +32,6 @@ Types of the file displayed. The default value is **PhotoViewMIMETypes.IMAGE_VID
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RecentPhotoOptions-MIMEType?: photoAccessHelper.PhotoViewMIMETypes--><!--Device-RecentPhotoOptions-MIMEType?: photoAccessHelper.PhotoViewMIMETypes-End-->
@@ -57,10 +49,6 @@ Color mode of the placeholder. This setting is used when **isAutoRefreshSupporte
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -80,10 +68,6 @@ Whether the **RecentPhotoComponent** automatically refreshes when there are chan
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-RecentPhotoOptions-isAutoRefreshSupported?: boolean--><!--Device-RecentPhotoOptions-isAutoRefreshSupported?: boolean-End-->
@@ -102,10 +86,6 @@ Time period for displaying the latest image sorted by creation time, in seconds.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RecentPhotoOptions-period?: number--><!--Device-RecentPhotoOptions-period?: number-End-->
@@ -120,13 +100,9 @@ photoSource?: PhotoSource
 
 Source of the recent image or video, for example, image or video taken by the camera or screenshot. By default, the source is not restricted.
 
-**Type:** [PhotoSource](../../apis-na/arkts-apis/arkts-na-file-recentphotocomponent-photosource-e.md)
+**Type:** [PhotoSource](arkts-medialibrary-file-recentphotocomponent-photosource-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

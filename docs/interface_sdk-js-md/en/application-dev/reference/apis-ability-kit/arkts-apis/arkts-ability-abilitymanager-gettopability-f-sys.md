@@ -16,10 +16,6 @@ Obtains the top ability, which is the ability that has the window focus. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityManager-function getTopAbility(): Promise<ElementName>--><!--Device-abilityManager-function getTopAbility(): Promise<ElementName>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -49,10 +45,6 @@ function getTopAbility(callback: AsyncCallback<ElementName>): void
 Obtains the top ability, which is the ability that has the window focus. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-abilityManager-function getTopAbility(callback: AsyncCallback<ElementName>): void--><!--Device-abilityManager-function getTopAbility(callback: AsyncCallback<ElementName>): void-End-->
 

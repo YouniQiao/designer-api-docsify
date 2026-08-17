@@ -4,10 +4,6 @@ Defines struct of the parameters used to configure the next accessibility focus 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface AccessibilityNextFocusParams--><!--Device-unnamed-declare interface AccessibilityNextFocusParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ isConsiderDescendants - Determines whether the focus search should consider focu
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

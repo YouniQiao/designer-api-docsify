@@ -4,10 +4,6 @@ Sets the mask type.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface MenuMaskType--><!--Device-unnamed-declare interface MenuMaskType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Blur material of the mask. Default value: **BlurStyle.BACKGROUND_THIN**
 **Default:** BlurStyle.BACKGROUND_THIN
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Mask color. Default value: **\$r('sys.color.ohos_id_color_mask_thin')**
 **Type:** ResourceColor
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,10 +10,6 @@ function addApn(admin: Want, apnInfo: Record<string, string>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APN
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -37,7 +33,7 @@ function addApn(admin: Want, apnInfo: Record<string, string>): void
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -46,14 +42,14 @@ import { networkManager } from '@kit.MDMKit';
 let wantTemp: Want = {
   // 需根据实际情况进行替换
   bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility',
+  abilityName: 'EnterpriseAdminAbility'
 };
 let apnInfo: Record<string, string> = {
   // 需根据实际情况进行替换
   "apnName": "CTNET",
   "apn": "CTNET",
   "mnc": "11",
-  "mcc": "460",
+  "mcc": "460"
 };
 try {
   networkManager.addApn(wantTemp, apnInfo);

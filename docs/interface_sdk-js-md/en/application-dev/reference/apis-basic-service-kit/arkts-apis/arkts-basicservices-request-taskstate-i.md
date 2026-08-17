@@ -1,12 +1,8 @@
 # TaskState
 
-Upload task information, which is the callback parameter of the [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) and [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#off_progress) APIs.
+Upload task information, which is the callback parameter of the [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) and [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#offprogress) APIs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-interface TaskState--><!--Device-request-interface TaskState-End-->
 
@@ -30,10 +26,6 @@ Description of the upload task result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TaskState-message: string--><!--Device-TaskState-message: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -50,10 +42,6 @@ File path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TaskState-path: string--><!--Device-TaskState-path: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -69,10 +57,6 @@ Return value of an upload task. The value **0** means that the task is successfu
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TaskState-responseCode: int--><!--Device-TaskState-responseCode: int-End-->
 

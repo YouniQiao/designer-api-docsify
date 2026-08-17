@@ -4,10 +4,6 @@ Enumerates the cipher modes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-huks-export enum HuksCipherMode--><!--Device-huks-export enum HuksCipherMode-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -21,10 +17,6 @@ HUKS_MODE_ECB = 1
 Electronic Code Block (ECB) mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Cipher Block Chaining (CBC) mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksCipherMode-HUKS_MODE_CBC = 2--><!--Device-HuksCipherMode-HUKS_MODE_CBC = 2-End-->
@@ -62,10 +50,6 @@ Counter (CTR) mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksCipherMode-HUKS_MODE_CTR = 3--><!--Device-HuksCipherMode-HUKS_MODE_CTR = 3-End-->
@@ -81,10 +65,6 @@ HUKS_MODE_OFB = 4
 Output Feedback (OFB) mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,10 +84,6 @@ Ciphertext Feedback (CFB) mode.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksCipherMode-HUKS_MODE_CFB = 5--><!--Device-HuksCipherMode-HUKS_MODE_CFB = 5-End-->
@@ -123,10 +99,6 @@ HUKS_MODE_CCM = 31
 Counter with CBC-MAC (CCM) mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -145,10 +117,6 @@ HUKS_MODE_GCM = 32
 Galois/Counter (GCM) mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

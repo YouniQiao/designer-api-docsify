@@ -1,12 +1,10 @@
-# RequestData
+# RequestData(上传下载)
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
-**替代接口：** [RequestData](arkts-basicservices-request-requestdata-i.md#RequestData)
+**替代接口：** [RequestData](arkts-basicservices-request-requestdata-i.md#requestdata)
 
 <!--Device-unnamed-export interface RequestData--><!--Device-unnamed-export interface RequestData-End-->
 
@@ -23,8 +21,6 @@ name: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
@@ -45,8 +41,6 @@ value: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 

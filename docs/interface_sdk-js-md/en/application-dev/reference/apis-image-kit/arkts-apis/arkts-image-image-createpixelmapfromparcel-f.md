@@ -16,10 +16,6 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap--><!--Device-image-function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -50,7 +46,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 | [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the PixelMap. |
 | [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

@@ -4,10 +4,6 @@ Defines parameters of the event information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiAppEvent-interface AppEventInfo--><!--Device-hiAppEvent-interface AppEventInfo-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -30,10 +26,6 @@ Event domain. The value is a string of up to 32 characters, including digits (0 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AppEventInfo-domain: string--><!--Device-AppEventInfo-domain: string-End-->
@@ -51,10 +43,6 @@ Event type.
 **Type:** EventType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Event name. The value is string that contains a maximum of 48 characters, includ
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AppEventInfo-name: string--><!--Device-AppEventInfo-name: string-End-->
@@ -95,10 +79,6 @@ Event parameter object, which consists of a parameter name and a parameter value
 **Type:** [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

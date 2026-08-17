@@ -4,10 +4,6 @@ Describes the setting item list.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-deviceSettings-enum SettingsMenu--><!--Device-deviceSettings-enum SettingsMenu-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,10 +17,6 @@ ACCOUNT_ID = 0
 Account.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Wi-Fi.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-WIFI = 1--><!--Device-SettingsMenu-WIFI = 1-End-->
@@ -61,10 +49,6 @@ WIFI_PROXY_SETTINGS = 2
 WLAN proxy.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ WLAN IP.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-WIFI_IP_SETTINGS = 3--><!--Device-SettingsMenu-WIFI_IP_SETTINGS = 3-End-->
@@ -101,10 +81,6 @@ BLUETOOTH = 4
 Bluetooth/NearLink & Bluetooth.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,10 +98,6 @@ Network.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-NETWORK = 5--><!--Device-SettingsMenu-NETWORK = 5-End-->
@@ -141,10 +113,6 @@ MOBILE_NETWORK = 6
 Mobile network.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +130,6 @@ More connectivity options - Super Device.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-SUPER_DEVICE = 7--><!--Device-SettingsMenu-SUPER_DEVICE = 7-End-->
@@ -181,10 +145,6 @@ MORE_CONNECTIVITY_OPTIONS = 8
 More connectivity options.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,10 +162,6 @@ Home screen & style.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-HOME_SCREEN_STYLE = 9--><!--Device-SettingsMenu-HOME_SCREEN_STYLE = 9-End-->
@@ -221,10 +177,6 @@ DISPLAY_BRIGHTNESS = 10
 Display & brightness.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,10 +194,6 @@ Sounds & vibration.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-SOUND_VIBRATION = 11--><!--Device-SettingsMenu-SOUND_VIBRATION = 11-End-->
@@ -261,10 +209,6 @@ NOTIFICATIONS = 12
 Notifications & status bar.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,10 +226,6 @@ Biometrics & screen lock.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-BIOMETRICS_PASSWORD = 13--><!--Device-SettingsMenu-BIOMETRICS_PASSWORD = 13-End-->
@@ -301,10 +241,6 @@ APPS_AND_SERVICES = 14
 Apps & services.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,10 +258,6 @@ Battery.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-BATTERY = 15--><!--Device-SettingsMenu-BATTERY = 15-End-->
@@ -341,10 +273,6 @@ STORAGE = 16
 Storage.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -362,10 +290,6 @@ Privacy & security.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-PRIVACY_AND_SECURITY = 17--><!--Device-SettingsMenu-PRIVACY_AND_SECURITY = 17-End-->
@@ -381,10 +305,6 @@ DIGITAL_BALANCE = 18
 Digital Balance.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -402,10 +322,6 @@ Smart assistant.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-SMART_ASSISTANT = 19--><!--Device-SettingsMenu-SMART_ASSISTANT = 19-End-->
@@ -421,10 +337,6 @@ ACCESSIBILITY = 20
 Accessibility.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -442,10 +354,6 @@ System.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-SYSTEM = 21--><!--Device-SettingsMenu-SYSTEM = 21-End-->
@@ -461,10 +369,6 @@ ABOUT_DEVICE = 22
 About.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -482,10 +386,6 @@ System - system navigation.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-SYSTEM_NAVIGATION = 23--><!--Device-SettingsMenu-SYSTEM_NAVIGATION = 23-End-->
@@ -501,10 +401,6 @@ LANGUAGE_REGION = 24
 System - Language & region.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -522,10 +418,6 @@ System - Input method.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-INPUT_METHODS = 25--><!--Device-SettingsMenu-INPUT_METHODS = 25-End-->
@@ -541,10 +433,6 @@ DATE_TIME = 26
 System - Date & time.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -562,10 +450,6 @@ System - Data Clone.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-DATA_CLONE = 27--><!--Device-SettingsMenu-DATA_CLONE = 27-End-->
@@ -581,10 +465,6 @@ BACKUP_SETTINGS = 28
 System - Backup & Restore.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -602,10 +482,6 @@ System - Reset.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-RESET = 29--><!--Device-SettingsMenu-RESET = 29-End-->
@@ -621,10 +497,6 @@ SUPERHUB = 30
 System - SuperHub.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -642,10 +514,6 @@ System - User Experience Improvement Program.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-USER_EXPERIENCE = 31--><!--Device-SettingsMenu-USER_EXPERIENCE = 31-End-->
@@ -661,10 +529,6 @@ SCREEN_CAST = 32
 More connectivity options - ScreenCast.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -682,10 +546,6 @@ Printers & scanners.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-PRINTERS_SCANNERS = 33--><!--Device-SettingsMenu-PRINTERS_SCANNERS = 33-End-->
@@ -701,10 +561,6 @@ MOBILE_DATA = 34
 Mobile network - Mobile data.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -722,10 +578,6 @@ Mobile network - Personal hotspot.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-PERSONAL_HOTSPOT = 35--><!--Device-SettingsMenu-PERSONAL_HOTSPOT = 35-End-->
@@ -741,10 +593,6 @@ SIM_MANAGEMENT = 36
 Mobile network - SIM management.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -762,10 +610,6 @@ Mobile network - Airplane mode.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-AIRPLANE_MODE = 37--><!--Device-SettingsMenu-AIRPLANE_MODE = 37-End-->
@@ -781,10 +625,6 @@ MANAGE_DATA_USAGE = 38
 Mobile network - Management data usage.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -802,10 +642,6 @@ Mobile network - VPN.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-VPN_SETTINGS = 39--><!--Device-SettingsMenu-VPN_SETTINGS = 39-End-->
@@ -821,10 +657,6 @@ TEXT_DISPLAY_SIZE = 40
 Display & brightness - Text & display size.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -842,10 +674,6 @@ System - App duplicator.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsMenu-APP_DUPLICATOR = 41--><!--Device-SettingsMenu-APP_DUPLICATOR = 41-End-->
@@ -861,10 +689,6 @@ SEARCH = 42
 Search.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

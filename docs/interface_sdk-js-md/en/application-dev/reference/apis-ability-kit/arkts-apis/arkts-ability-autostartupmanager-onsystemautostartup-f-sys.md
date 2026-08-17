@@ -16,10 +16,6 @@ Register the listener that watches for all applications auto startup state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_APP_BOOT
 
 **Model restriction:** This API can be used only in the stage model.

@@ -10,10 +10,6 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-systemDateTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemDateTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -22,9 +18,9 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回系统时区。具体可见 支持的系统时区。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回系统时区。具体可见 支持的系统时区。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -75,10 +71,6 @@ function getTimezone(): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-systemDateTime-function getTimezone(): Promise<string>--><!--Device-systemDateTime-function getTimezone(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -89,7 +81,7 @@ function getTimezone(): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回系统时区。具体可见 支持的系统时区。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

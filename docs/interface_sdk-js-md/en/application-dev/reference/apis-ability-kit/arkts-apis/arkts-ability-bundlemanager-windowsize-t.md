@@ -8,10 +8,6 @@ Defines the window size.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-bundleManager-export type WindowSize = _WindowSize--><!--Device-bundleManager-export type WindowSize = _WindowSize-End-->

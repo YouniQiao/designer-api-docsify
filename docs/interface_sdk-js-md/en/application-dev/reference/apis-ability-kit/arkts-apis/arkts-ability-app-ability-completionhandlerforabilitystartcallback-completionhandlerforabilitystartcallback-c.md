@@ -4,10 +4,6 @@ CompletionHandlerForAbilityStartCallback provides two callback functions, **onRe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export class CompletionHandlerForAbilityStartCallback--><!--Device-unnamed-export class CompletionHandlerForAbilityStartCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -31,10 +27,6 @@ Callback invoked when launching the specified ability fails. This API can be use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -54,10 +46,6 @@ Callback invoked when the specified ability is successfully launched. This API c
 **Type:** [OnRequestSuccessFn](arkts-ability-onrequestsuccessfn-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

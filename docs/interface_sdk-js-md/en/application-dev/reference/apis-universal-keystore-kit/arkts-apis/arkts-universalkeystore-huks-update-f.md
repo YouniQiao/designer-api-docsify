@@ -16,11 +16,9 @@ Updates the key operation data by segment. This API uses an asynchronous callbac
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md#updateSession)( handle: long, options: HuksOptions, token: Uint8Array, callback: AsyncCallback&lt;HuksReturnResult&gt; )
+**Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md#updatesession)( handle: long, options: HuksOptions, token: Uint8Array, callback: AsyncCallback&lt;HuksReturnResult&gt; )
 
 <!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -46,11 +44,9 @@ Updates the key operation data by segment. This API uses a promise to return the
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md#updateSession)(handle: long, options: HuksOptions, token?: Uint8Array)
+**Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md#updatesession)(handle: long, options: HuksOptions, token?: Uint8Array)
 
 <!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions): Promise<HuksResult>-End-->
 

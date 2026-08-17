@@ -10,9 +10,7 @@ function batterySOC(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-batteryInfo-function batterySOC(): int--><!--Device-batteryInfo-function batterySOC(): int-End-->
 
@@ -24,7 +22,7 @@ function batterySOC(): int
 | --- | --- |
 | int | 返回当前设备剩余电池电量百分比，取值范围是[0，100]。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // ArkTS-Sta示例

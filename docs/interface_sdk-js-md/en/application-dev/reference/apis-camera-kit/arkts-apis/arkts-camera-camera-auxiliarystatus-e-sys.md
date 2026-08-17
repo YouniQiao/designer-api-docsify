@@ -4,10 +4,6 @@ Enum for auxiliary status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum AuxiliaryStatus--><!--Device-camera-enum AuxiliaryStatus-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ LOCKED = 0
 Auxiliary locked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuxiliaryStatus-LOCKED = 0--><!--Device-AuxiliaryStatus-LOCKED = 0-End-->
 
@@ -44,10 +36,6 @@ Turn on auxiliary.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuxiliaryStatus-ON = 1--><!--Device-AuxiliaryStatus-ON = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -63,10 +51,6 @@ OFF = 2
 Turn off auxiliary.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuxiliaryStatus-OFF = 2--><!--Device-AuxiliaryStatus-OFF = 2-End-->
 

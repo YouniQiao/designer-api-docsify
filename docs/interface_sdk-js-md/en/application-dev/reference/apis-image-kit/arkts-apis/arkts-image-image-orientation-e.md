@@ -4,10 +4,6 @@ Enumerates image orientation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-enum Orientation--><!--Device-image-enum Orientation-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -21,10 +17,6 @@ TOP_LEFT = 1
 The image is not rotated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ The image is mirrored horizontally.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Orientation-TOP_RIGHT = 2--><!--Device-Orientation-TOP_RIGHT = 2-End-->
@@ -61,10 +49,6 @@ BOTTOM_RIGHT = 3
 The image is rotated 180 degrees.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ The image is mirrored vertically.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Orientation-BOTTOM_LEFT = 4--><!--Device-Orientation-BOTTOM_LEFT = 4-End-->
@@ -101,10 +81,6 @@ LEFT_TOP = 5
 The image is mirrored horizontally, then rotated 270 degrees clockwise.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,10 +98,6 @@ The image is rotated 90 degrees clockwise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Orientation-RIGHT_TOP = 6--><!--Device-Orientation-RIGHT_TOP = 6-End-->
@@ -142,10 +114,6 @@ The image is mirrored horizontally, then rotated 90 degrees clockwise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Orientation-RIGHT_BOTTOM = 7--><!--Device-Orientation-RIGHT_BOTTOM = 7-End-->
@@ -161,10 +129,6 @@ LEFT_BOTTOM = 8
 The image is rotated 270 degrees clockwise.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

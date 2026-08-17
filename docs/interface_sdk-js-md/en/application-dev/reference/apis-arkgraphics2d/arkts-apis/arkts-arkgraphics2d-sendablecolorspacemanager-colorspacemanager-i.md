@@ -2,13 +2,9 @@
 
 Implements management of color space objects. ColorSpaceManager is a core class used to manage and operate color space objects. It provides functions such as obtaining the color space type, white point value, and gamma value, and supports transfer between concurrent ArkTS instances. Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) to create a color space manager.
 
-**Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md#ISendable)
+**Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md#isendable)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-sendableColorSpaceManager-interface ColorSpaceManager--><!--Device-sendableColorSpaceManager-interface ColorSpaceManager-End-->
 
@@ -30,10 +26,6 @@ Obtains the color space type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -50,7 +42,7 @@ Obtains the color space type.
 | --- | --- |
 | [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let spaceName: colorSpaceManager.ColorSpace = colorSpace.getColorSpaceName();
@@ -65,10 +57,6 @@ getGamma(): number
 Obtains the gamma of the color space.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ColorSpaceManager-getGamma(): number--><!--Device-ColorSpaceManager-getGamma(): number-End-->
 
@@ -86,7 +74,7 @@ Obtains the gamma of the color space.
 | --- | --- |
 | [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let gamma: number = colorSpace.getGamma();
@@ -101,10 +89,6 @@ getWhitePoint(): collections.Array<number>
 Obtains the white point value of the color space. The chromaticity coordinates [x, y] are returned, indicating the coordinates of the white point in the color space.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>--><!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>-End-->
 
@@ -122,7 +106,7 @@ Obtains the white point value of the color space. The chromaticity coordinates [
 | --- | --- |
 | [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { collections } from '@kit.ArkTS';

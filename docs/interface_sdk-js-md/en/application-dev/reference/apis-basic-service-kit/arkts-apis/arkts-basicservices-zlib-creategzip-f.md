@@ -16,10 +16,6 @@ Creates this **GZip** object. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-zlib-function createGZip(): Promise<GZip>--><!--Device-zlib-function createGZip(): Promise<GZip>-End-->
@@ -32,7 +28,7 @@ Creates this **GZip** object. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[GZip](arkts-basicservices-zlib-gzip-i.md)&gt; | Promise used to return the **GZip** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

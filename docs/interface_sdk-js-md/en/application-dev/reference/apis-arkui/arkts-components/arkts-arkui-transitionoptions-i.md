@@ -4,11 +4,9 @@ Defines the transition effect by setting parameters in the struct. > **NOTE：**
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect)
+**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect)
 
 <!--Device-unnamed-declare interface TransitionOptions--><!--Device-unnamed-declare interface TransitionOptions-End-->
 
@@ -25,8 +23,6 @@ Opacity of the component during transition, which is the value of the start poin
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 10
 
@@ -48,8 +44,6 @@ Rotation of the component during transition, which is the value of the start poi
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [rotate](arkts-arkui-transitioneffect-c.md#rotate)
@@ -69,8 +63,6 @@ Scaling of the component during transition, which is the value of the start poin
 **Type:** [ScaleOptions](arkts-arkui-scaleoptions-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 10
 
@@ -92,8 +84,6 @@ Translation of the component during transition, which is the value of the start 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [translate](arkts-arkui-transitioneffect-c.md#translate)
@@ -114,11 +104,9 @@ Transition type. Default value: **TransitionType.All** **NOTE：**If **type** is
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect)
+**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect)
 
 <!--Device-TransitionOptions-type?: TransitionType--><!--Device-TransitionOptions-type?: TransitionType-End-->
 

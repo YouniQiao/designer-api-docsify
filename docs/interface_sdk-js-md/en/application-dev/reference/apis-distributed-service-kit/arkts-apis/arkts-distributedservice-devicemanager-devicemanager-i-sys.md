@@ -4,11 +4,9 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#DeviceManager)
+**Substitutes:** [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#devicemanager)
 
 <!--Device-deviceManager-interface DeviceManager--><!--Device-deviceManager-interface DeviceManager-End-->
 
@@ -34,11 +32,9 @@ Authenticates a device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [bindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#bindTarget)(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback&lt;{deviceId: string;}&gt;)
+**Substitutes:** [bindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#bindtarget)(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback&lt;{deviceId: string;}&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -63,7 +59,7 @@ Authenticates a device.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -140,8 +136,6 @@ Deletes credential information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
@@ -166,7 +160,7 @@ Deletes credential information.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified queryInfo is greater than 5999. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -214,11 +208,9 @@ Obtains the information about a specific device based on the network ID. This AP
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getDeviceName)
+**Substitutes:** [getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicename)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -242,7 +234,7 @@ Obtains the information about a specific device based on the network ID. This AP
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -276,11 +268,9 @@ Obtains the information about a specific device based on the network ID. This AP
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getDeviceName)
+**Substitutes:** [getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicename)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -309,7 +299,7 @@ Obtains the information about a specific device based on the network ID. This AP
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -336,11 +326,9 @@ Obtains local device information. This API uses an asynchronous callback to retu
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getLocalDeviceNetworkId)
+**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -363,7 +351,7 @@ Obtains local device information. This API uses an asynchronous callback to retu
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -396,11 +384,9 @@ Obtains local device information. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getLocalDeviceNetworkId)
+**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -422,7 +408,7 @@ Obtains local device information. This API uses a promise to return the result.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -447,11 +433,9 @@ Obtains local device information synchronously.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getLocalDeviceNetworkId)
+**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -475,7 +459,7 @@ Obtains local device information synchronously.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -501,11 +485,9 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceList)(callback: AsyncCallback&lt;Array&lt;DeviceBasicInfo&gt;&gt;)
+**Substitutes:** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist)(callback: AsyncCallback&lt;Array&lt;DeviceBasicInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -528,7 +510,7 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -560,11 +542,9 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceList)()
+**Substitutes:** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist)()
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -586,7 +566,7 @@ Obtains all trusted devices. This API uses a promise to return the result.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -611,11 +591,9 @@ Obtains all trusted devices synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getAvailableDeviceListSync](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
+**Substitutes:** [getAvailableDeviceListSync](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -639,7 +617,7 @@ Obtains all trusted devices synchronously.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -664,8 +642,6 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 Enables the DSoftBus heartbeat mode to quickly bring offline trusted devices online and updates the list of online trusted devices.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 
@@ -698,7 +674,7 @@ Enables the DSoftBus heartbeat mode to quickly bring offline trusted devices onl
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -724,8 +700,6 @@ Imports credential information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
@@ -750,7 +724,7 @@ Imports credential information.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified credentialInfo is greater than 5999. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -827,11 +801,9 @@ Unsubscribes from device discovery events.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'discoverSuccess', callback: Callback&lt;{ device: DeviceBasicInfo; }&gt;)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#offdevicestatechange)(type: 'discoverSuccess', callback: Callback&lt;{ device: DeviceBasicInfo; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -855,7 +827,7 @@ Unsubscribes from device discovery events.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -895,11 +867,9 @@ Unsubscribes from changes in the device state.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#offdevicestatechange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -923,7 +893,7 @@ Unsubscribes from changes in the device state.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -963,11 +933,9 @@ Unsubscribes from device discovery failures.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'discoverFailure', callback: Callback&lt;{ reason: int; }&gt;)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#offdevicestatechange)(type: 'discoverFailure', callback: Callback&lt;{ reason: int; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -991,7 +959,7 @@ Unsubscribes from device discovery failures.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1023,8 +991,6 @@ Unsubscribes from device information publication failures.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
@@ -1049,7 +1015,7 @@ Unsubscribes from device information publication failures.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1081,8 +1047,6 @@ Unsubscribes from device information publication success events.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
@@ -1107,7 +1071,7 @@ Unsubscribes from device information publication success events.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1138,11 +1102,9 @@ Unsubscribes from dead events of the **DeviceManager** service.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'serviceDie', callback?: Callback&lt;{}&gt;)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#offdevicestatechange)(type: 'serviceDie', callback?: Callback&lt;{}&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1166,7 +1128,7 @@ Unsubscribes from dead events of the **DeviceManager** service.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1193,11 +1155,9 @@ Unsubscribes from UI status changes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#offdevicestatechange)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1221,7 +1181,7 @@ Unsubscribes from UI status changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1246,11 +1206,9 @@ Subscribes to device discovery events.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'discoverSuccess', callback: Callback&lt;{ device: DeviceBasicInfo; }&gt;)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'discoverSuccess', callback: Callback&lt;{ device: DeviceBasicInfo; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1274,7 +1232,7 @@ Subscribes to device discovery events.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1314,11 +1272,9 @@ Subscribes to changes in the device state.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1342,7 +1298,7 @@ Subscribes to changes in the device state.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1382,11 +1338,9 @@ Subscribes to device discovery failures.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'discoverFailure', callback: Callback&lt;{ reason: int; }&gt;)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'discoverFailure', callback: Callback&lt;{ reason: int; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1410,7 +1364,7 @@ Subscribes to device discovery failures.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1442,8 +1396,6 @@ Subscribes to device information publication failures.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
@@ -1468,7 +1420,7 @@ Subscribes to device information publication failures.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1500,8 +1452,6 @@ Subscribes to device information publication success events.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
@@ -1526,7 +1476,7 @@ Subscribes to device information publication success events.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1557,11 +1507,9 @@ Subscribes to dead events of the **DeviceManager** service.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'serviceDie', callback?: Callback&lt;{}&gt;)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'serviceDie', callback?: Callback&lt;{}&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1585,7 +1533,7 @@ Subscribes to dead events of the **DeviceManager** service.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1612,11 +1560,9 @@ Subscribes to UI status changes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1640,7 +1586,7 @@ Subscribes to UI status changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1678,8 +1624,6 @@ Publishes device information for discovery purposes. The publish process lasts 2
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
@@ -1706,7 +1650,7 @@ Publishes device information for discovery purposes. The publish process lasts 2
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1747,11 +1691,9 @@ Releases this **DeviceManager** instance when it is no longer used.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releaseDeviceManager)
+**Substitutes:** [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releasedevicemanager)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1769,7 +1711,7 @@ Releases this **DeviceManager** instance when it is no longer used.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1793,8 +1735,6 @@ requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ reg
 Obtains the registration information of the credential.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 
@@ -1820,7 +1760,7 @@ Obtains the registration information of the credential.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified requestInfo is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1865,11 +1805,9 @@ Sets a user operation.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [replyUiAction](arkts-distributedservice-distributeddevicemanager-devicemanager-i-sys.md#replyUiAction)
+**Substitutes:** [replyUiAction](arkts-distributedservice-distributeddevicemanager-devicemanager-i-sys.md#replyuiaction)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1894,7 +1832,7 @@ Sets a user operation.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -1928,11 +1866,9 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
+**Substitutes:** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1958,7 +1894,7 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 | [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -2004,11 +1940,9 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
+**Substitutes:** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2035,7 +1969,7 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 | [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -2103,11 +2037,9 @@ Stops device discovery.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [stopDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#stopDiscovering)
+**Substitutes:** [stopDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#stopdiscovering)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2132,7 +2064,7 @@ Stops device discovery.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -2159,11 +2091,9 @@ Deauthenticates a device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [unbindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#unbindTarget)
+**Substitutes:** [unbindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#unbindtarget)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2188,7 +2118,7 @@ Deauthenticates a device.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -2229,8 +2159,6 @@ Stops publishing device information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
@@ -2256,7 +2184,7 @@ Stops publishing device information.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
@@ -2283,8 +2211,6 @@ Verifies authentication information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
@@ -2309,7 +2235,7 @@ Verifies authentication information.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 

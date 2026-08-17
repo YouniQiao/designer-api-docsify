@@ -16,10 +16,6 @@ Creates a web socket Server.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-webSocket-function createWebSocketServer(): WebSocketServer--><!--Device-webSocket-function createWebSocketServer(): WebSocketServer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,7 +26,7 @@ Creates a web socket Server.
 | --- | --- |
 | [WebSocketServer](arkts-network-websocket-websocketserver-i.md) | the WebSocketServer Object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ws: webSocket.WebSocketServer = webSocket.createWebSocketServer();

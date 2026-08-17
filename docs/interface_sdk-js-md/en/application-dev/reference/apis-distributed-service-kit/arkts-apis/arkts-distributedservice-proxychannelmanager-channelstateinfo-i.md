@@ -4,10 +4,6 @@ Represents the connection state information of the proxy channel.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-proxyChannelManager-interface ChannelStateInfo--><!--Device-proxyChannelManager-interface ChannelStateInfo-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -24,15 +20,11 @@ import { proxyChannelManager } from 'proxyChannelManager';
 channelId: int
 ```
 
-Proxy channel ID.
+Channel ID of the proxy channel. The value range is 1 to 2147483647.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,15 +38,11 @@ Proxy channel ID.
 state: ChannelState
 ```
 
-Connection state of the proxy channel.
+Connection state of the channel. For the value range, see [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md#channelstate). You are advised to adjust service policies based on different state values, for example, suspending data transmission when the channel is disconnected and retrying services after the channel is restored.
 
 **Type:** [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

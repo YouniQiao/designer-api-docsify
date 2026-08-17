@@ -17,10 +17,6 @@ Get the network capability state according to the specified capability type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,    callback: AsyncCallback<NetworkCapabilityState>): void--><!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,    callback: AsyncCallback<NetworkCapabilityState>): void-End-->
@@ -34,7 +30,7 @@ Get the network capability state according to the specified capability type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| type | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md#NetworkCapabilityType-(System-API)). |
+| type | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md#networkcapabilitytype-system-api). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md)&gt; | Yes | Indicates the callback for getting the network capability state. |
 
 **Error codes:**
@@ -49,7 +45,7 @@ Get the network capability state according to the specified capability type.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -76,10 +72,6 @@ Get the network capability state according to the specified capability type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType): Promise<NetworkCapabilityState>--><!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType): Promise<NetworkCapabilityState>-End-->
@@ -93,7 +85,7 @@ Get the network capability state according to the specified capability type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| type | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md#NetworkCapabilityType-(System-API)). |
+| type | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md#networkcapabilitytype-system-api). |
 
 **Return value:**
 
@@ -113,7 +105,7 @@ Get the network capability state according to the specified capability type.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

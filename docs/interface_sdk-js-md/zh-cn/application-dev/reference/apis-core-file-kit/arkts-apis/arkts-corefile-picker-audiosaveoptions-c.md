@@ -4,10 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-picker-class AudioSaveOptions--><!--Device-picker-class AudioSaveOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
@@ -23,10 +19,6 @@ newFileNames?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

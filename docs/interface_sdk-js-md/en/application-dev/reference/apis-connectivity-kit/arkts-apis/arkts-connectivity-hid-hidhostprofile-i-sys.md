@@ -2,13 +2,9 @@
 
 Manager hid host profile.
 
-**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-hid-baseprofile-t.md#BaseProfile)
+**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-hid-baseprofile-t.md#baseprofile)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hid-interface HidHostProfile--><!--Device-hid-interface HidHostProfile-End-->
 
@@ -29,10 +25,6 @@ connect(deviceId: string): void
 Initiate an HID connection to a remote device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -61,7 +53,7 @@ Initiate an HID connection to a remote device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -82,10 +74,6 @@ disconnect(deviceId: string): void
 Disconnect the HID connection with the remote device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -114,7 +102,7 @@ Disconnect the HID connection with the remote device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

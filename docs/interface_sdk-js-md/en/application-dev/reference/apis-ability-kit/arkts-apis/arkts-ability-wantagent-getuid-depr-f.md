@@ -10,11 +10,9 @@ Obtains the UID of a WantAgent.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md#getUid)
+**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md#getuid)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -29,7 +27,7 @@ Obtains the UID of a WantAgent.
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | whose UID to obtain. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Create a callback method for WantAgent. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -94,11 +92,9 @@ Obtains the UID of a WantAgent.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md#getUid)
+**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md#getuid)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,7 +114,7 @@ Obtains the UID of a WantAgent.
 | --- | --- |
 | Promise&lt;number&gt; | Returns the UID of the { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

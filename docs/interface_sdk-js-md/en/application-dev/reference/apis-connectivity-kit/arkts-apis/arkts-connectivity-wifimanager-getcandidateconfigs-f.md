@@ -16,10 +16,6 @@ Obtain the list of all existed candidate Wi-Fi configurations which added by our
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -42,7 +38,7 @@ Obtain the list of all existed candidate Wi-Fi configurations which added by our
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

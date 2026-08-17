@@ -16,10 +16,6 @@ Requests a deferred task. Upon successful request, the deferred task is added to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-workScheduler-function startWork(work: WorkInfo): void--><!--Device-workScheduler-function startWork(work: WorkInfo): void-End-->
@@ -43,7 +39,7 @@ Requests a deferred task. Upon successful request, the deferred task is added to
 | [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
 | [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

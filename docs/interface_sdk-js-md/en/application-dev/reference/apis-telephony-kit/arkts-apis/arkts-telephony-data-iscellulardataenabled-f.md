@@ -16,10 +16,6 @@ Check whether cellular data services are enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-data-function isCellularDataEnabled(callback: AsyncCallback<boolean>): void--><!--Device-data-function isCellularDataEnabled(callback: AsyncCallback<boolean>): void-End-->
@@ -43,7 +39,7 @@ Check whether cellular data services are enabled.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';
@@ -69,10 +65,6 @@ Check whether cellular data services are enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-data-function isCellularDataEnabled(): Promise<boolean>--><!--Device-data-function isCellularDataEnabled(): Promise<boolean>-End-->
@@ -94,7 +86,7 @@ Check whether cellular data services are enabled.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

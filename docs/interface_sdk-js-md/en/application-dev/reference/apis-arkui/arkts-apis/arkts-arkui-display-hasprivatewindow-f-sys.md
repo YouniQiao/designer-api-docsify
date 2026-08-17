@@ -16,10 +16,6 @@ Checks whether there is a visible privacy window on a display. The window privac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-function hasPrivateWindow(displayId: long): boolean--><!--Device-display-function hasPrivateWindow(displayId: long): boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -46,7 +42,7 @@ Checks whether there is a visible privacy window on a display. The window privac
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { display } from '@kit.ArkUI';

@@ -1,12 +1,8 @@
 # Tag
 
-Enumerate the keys of asset attributes ([AssetMap](arkts-assetstore-asset-assetmap-t.md#AssetMap)), which are in key-value (KV) pairs.
+Enumerate the keys of asset attributes ([AssetMap](arkts-assetstore-asset-assetmap-t.md#assetmap)), which are in key-value (KV) pairs.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-asset-enum Tag--><!--Device-asset-enum Tag-End-->
 
@@ -21,10 +17,6 @@ SECRET = TagType.BYTES | 0x01
 Asset plaintext.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -42,10 +34,6 @@ Asset alias, which uniquely identifies an asset.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-ALIAS = TagType.BYTES | 0x02--><!--Device-Tag-ALIAS = TagType.BYTES | 0x02-End-->
@@ -61,10 +49,6 @@ ACCESSIBILITY = TagType.NUMBER | 0x03
 Access control based on the lock screen status.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -82,10 +66,6 @@ Whether the asset is accessible only when a lock screen password is set.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-REQUIRE_PASSWORD_SET = TagType.BOOL | 0x04--><!--Device-Tag-REQUIRE_PASSWORD_SET = TagType.BOOL | 0x04-End-->
@@ -101,10 +81,6 @@ AUTH_TYPE = TagType.NUMBER | 0x05
 Type of user authentication required for accessing the asset.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -122,10 +98,6 @@ Validity period of the user authentication.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-AUTH_VALIDITY_PERIOD = TagType.NUMBER | 0x06--><!--Device-Tag-AUTH_VALIDITY_PERIOD = TagType.NUMBER | 0x06-End-->
@@ -141,10 +113,6 @@ AUTH_CHALLENGE = TagType.BYTES | 0x07
 Challenge for the user authentication.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -162,10 +130,6 @@ Authorization token obtained after the user authentication is successful.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-AUTH_TOKEN = TagType.BYTES | 0x08--><!--Device-Tag-AUTH_TOKEN = TagType.BYTES | 0x08-End-->
@@ -181,10 +145,6 @@ SYNC_TYPE = TagType.NUMBER | 0x10
 Asset sync type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -202,10 +162,6 @@ Whether to retain the asset when the application is uninstalled.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-Tag-IS_PERSISTENT = TagType.BOOL | 0x11--><!--Device-Tag-IS_PERSISTENT = TagType.BOOL | 0x11-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -219,10 +175,6 @@ DATA_LABEL_CRITICAL_1 = TagType.BYTES | 0x20
 Additional asset data customized by the service with integrity protection.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -240,10 +192,6 @@ Additional asset data customized by the service with integrity protection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-DATA_LABEL_CRITICAL_2 = TagType.BYTES | 0x21--><!--Device-Tag-DATA_LABEL_CRITICAL_2 = TagType.BYTES | 0x21-End-->
@@ -259,10 +207,6 @@ DATA_LABEL_CRITICAL_3 = TagType.BYTES | 0x22
 Additional asset data customized by the service with integrity protection.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -280,10 +224,6 @@ Additional asset data customized by the service with integrity protection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-DATA_LABEL_CRITICAL_4 = TagType.BYTES | 0x23--><!--Device-Tag-DATA_LABEL_CRITICAL_4 = TagType.BYTES | 0x23-End-->
@@ -299,10 +239,6 @@ DATA_LABEL_NORMAL_1 = TagType.BYTES | 0x30
 Additional asset data customized by the service without integrity protection.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -320,10 +256,6 @@ Additional asset data customized by the service without integrity protection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-DATA_LABEL_NORMAL_2 = TagType.BYTES | 0x31--><!--Device-Tag-DATA_LABEL_NORMAL_2 = TagType.BYTES | 0x31-End-->
@@ -339,10 +271,6 @@ DATA_LABEL_NORMAL_3 = TagType.BYTES | 0x32
 Additional asset data customized by the service without integrity protection.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -360,10 +288,6 @@ Additional asset data customized by the service without integrity protection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-DATA_LABEL_NORMAL_4 = TagType.BYTES | 0x33--><!--Device-Tag-DATA_LABEL_NORMAL_4 = TagType.BYTES | 0x33-End-->
@@ -379,10 +303,6 @@ DATA_LABEL_NORMAL_LOCAL_1 = TagType.BYTES | 0x34
 Local information about the asset. The value is assigned by the service without integrity protection and will not be synced.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -400,10 +320,6 @@ Local information about the asset. The value is assigned by the service without 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-DATA_LABEL_NORMAL_LOCAL_2 = TagType.BYTES | 0x35--><!--Device-Tag-DATA_LABEL_NORMAL_LOCAL_2 = TagType.BYTES | 0x35-End-->
@@ -419,10 +335,6 @@ DATA_LABEL_NORMAL_LOCAL_3 = TagType.BYTES | 0x36
 Local information about the asset. The value is assigned by the service without integrity protection and will not be synced.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -440,10 +352,6 @@ Local information about the asset. The value is assigned by the service without 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-DATA_LABEL_NORMAL_LOCAL_4 = TagType.BYTES | 0x37--><!--Device-Tag-DATA_LABEL_NORMAL_LOCAL_4 = TagType.BYTES | 0x37-End-->
@@ -459,10 +367,6 @@ RETURN_TYPE = TagType.NUMBER | 0x40
 Type of the asset query result to return.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -480,10 +384,6 @@ Maximum number of asset records to return.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-RETURN_LIMIT = TagType.NUMBER | 0x41--><!--Device-Tag-RETURN_LIMIT = TagType.NUMBER | 0x41-End-->
@@ -499,10 +399,6 @@ RETURN_OFFSET = TagType.NUMBER | 0x42
 Offset of the asset query result. **Note：**: This parameter specifies the starting asset record to return in batch asset query.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -520,10 +416,6 @@ Sorting order of the query results. Currently, the results can be sorted only by
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-RETURN_ORDERED_BY = TagType.NUMBER | 0x43--><!--Device-Tag-RETURN_ORDERED_BY = TagType.NUMBER | 0x43-End-->
@@ -539,10 +431,6 @@ CONFLICT_RESOLUTION = TagType.NUMBER | 0x44
 Policy for resolving the conflict (for example, a duplicate alias).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -560,10 +448,6 @@ Data update time, in timestamp.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Tag-UPDATE_TIME = TagType.BYTES | 0x45--><!--Device-Tag-UPDATE_TIME = TagType.BYTES | 0x45-End-->
@@ -580,10 +464,6 @@ Additional operation type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Tag-OPERATION_TYPE = TagType.NUMBER | 0x46--><!--Device-Tag-OPERATION_TYPE = TagType.NUMBER | 0x46-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -597,10 +477,6 @@ REQUIRE_ATTR_ENCRYPTED = TagType.BOOL | 0x47
 Whether to encrypt the additional asset information customized by the service.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -618,10 +494,6 @@ Group to which the asset belongs.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-Tag-GROUP_ID = TagType.BYTES | 0x48--><!--Device-Tag-GROUP_ID = TagType.BYTES | 0x48-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -635,10 +507,6 @@ WRAP_TYPE = TagType.NUMBER | 0x49
 Encrypted import/export type supported by the asset.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-Tag-WRAP_TYPE = TagType.NUMBER | 0x49--><!--Device-Tag-WRAP_TYPE = TagType.NUMBER | 0x49-End-->
 

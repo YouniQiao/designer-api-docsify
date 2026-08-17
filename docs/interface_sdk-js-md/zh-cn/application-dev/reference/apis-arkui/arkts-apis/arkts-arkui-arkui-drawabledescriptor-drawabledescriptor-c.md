@@ -1,12 +1,8 @@
 # DrawableDescriptor
 
-父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap)实例，图片资源加载能力。
+父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap)实例，图片资源加载能力。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export class DrawableDescriptor--><!--Device-unnamed-export class DrawableDescriptor-End-->
 
@@ -21,10 +17,6 @@ getPixelMap(): image.PixelMap
 获取PixelMap实例。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,9 +38,9 @@ getPixelMap(): image.PixelMap
 | --- | --- |
 | [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced by the drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
 
-## 示例
+**示例**
 
-示例请参考[LayeredDrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#LayeredDrawableDescriptor)中的示例代码。
+示例请参考[LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#layereddrawabledescriptor)中的示例代码。
 
 ## invalidate
 
@@ -56,13 +48,9 @@ getPixelMap(): image.PixelMap
 invalidate(): void
 ```
 
-重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-picturedrawabledescriptor-c.md#PictureDrawableDescriptor)类型，其他DrawableDescriptor子类型触 发后无效果。若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
+重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-picturedrawabledescriptor-c.md#picturedrawabledescriptor)类型，其他DrawableDescriptor子类型触 发后无效果。若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,13 +66,9 @@ invalidate(): void
 isReleased(): boolean
 ```
 
-查询DrawableDescriptor是否已被释放。返回true表示已释放，此时调用 [getPixelMap](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#getPixelMap)、 [getForeground](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getForeground)、 [getBackground](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getBackground)、 [getMask](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getMask)、 [loadSync](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#loadSync)、 [load](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#load)等接口会抛出111002错误；返回false表示未释放，对象可正 常使用。
+查询DrawableDescriptor是否已被释放。返回true表示已释放，此时调用 [getPixelMap](#getpixelmap)、 [getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground)、 [getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground)、 [getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask)、 [loadSync](#loadsync)、 [load](#load)等接口会抛出111002错误；返回false表示未释放，对象可正 常使用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,10 +94,6 @@ load(): Promise<DrawableDescriptorLoadedResult>
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DrawableDescriptor-load(): Promise<DrawableDescriptorLoadedResult>--><!--Device-DrawableDescriptor-load(): Promise<DrawableDescriptorLoadedResult>-End-->
@@ -124,7 +104,7 @@ load(): Promise<DrawableDescriptorLoadedResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[DrawableDescriptorLoadedResult](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; | 图片资源的加载结果。 |
+| Promise&lt;[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; | 图片资源的加载结果。 |
 
 **错误码：**
 
@@ -133,9 +113,9 @@ load(): Promise<DrawableDescriptorLoadedResult>
 | [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) | resource loading failed. |
 | [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced by the drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
 
-## 示例
+**示例**
 
-示例请参考[DrawableDescriptorLoadedResult](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult)中的示例代码。
+示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult)中的示例代码。
 
 ## loadSync
 
@@ -147,10 +127,6 @@ loadSync(): DrawableDescriptorLoadedResult
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DrawableDescriptor-loadSync(): DrawableDescriptorLoadedResult--><!--Device-DrawableDescriptor-loadSync(): DrawableDescriptorLoadedResult-End-->
@@ -161,7 +137,7 @@ loadSync(): DrawableDescriptorLoadedResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptorLoadedResult](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) | 图片资源的加载结果。 |
+| [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) | 图片资源的加载结果。 |
 
 **错误码：**
 
@@ -170,9 +146,9 @@ loadSync(): DrawableDescriptorLoadedResult
 | [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) | resource loading failed. |
 | [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced by the drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
 
-## 示例
+**示例**
 
-示例请参考[DrawableDescriptorLoadedResult](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult)中的示例代码。
+示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult)中的示例代码。
 
 ## release
 
@@ -180,13 +156,9 @@ loadSync(): DrawableDescriptorLoadedResult
 release(): void
 ```
 
-释放DrawableDescriptor持有的资源。调用release后，该对象将不可用，再调用 [getPixelMap](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#getPixelMap)、 [getForeground](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getForeground)、 [getBackground](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getBackground)、 [getMask](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getMask)、 [loadSync](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#loadSync)、 [load](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#load)等接口会抛出111002错误。重复调用release不会崩溃。
+释放DrawableDescriptor持有的资源。调用release后，该对象将不可用，再调用 [getPixelMap](#getpixelmap)、 [getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground)、 [getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground)、 [getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask)、 [loadSync](#loadsync)、 [load](#load)等接口会抛出111002错误。重复调用release不会崩溃。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -196,7 +168,7 @@ release(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 示例
+**示例**
 
 ```TypeScript
 import { DrawableDescriptor } from '@kit.ArkUI';

@@ -16,10 +16,6 @@ Set the window animation controller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void--><!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -32,7 +28,7 @@ Set the window animation controller.
 | --- | --- | --- | --- |
 | controller | [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Yes | Window animation controller. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let controller: windowAnimationManager.WindowAnimationController = {

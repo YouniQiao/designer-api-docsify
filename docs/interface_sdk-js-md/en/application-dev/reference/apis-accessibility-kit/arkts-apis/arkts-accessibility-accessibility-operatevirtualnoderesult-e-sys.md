@@ -4,10 +4,6 @@ Enumerates the result types of operating virtual nodes for accessibility.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum OperateVirtualNodeResult--><!--Device-unnamed-export enum OperateVirtualNodeResult-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,10 +19,6 @@ SUCCESS = 0
 The operation is successful.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ The node to be operated does not exist.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateVirtualNodeResult-ACCESSIBILITY_ELEMENT_NOT_EXIST = 1--><!--Device-OperateVirtualNodeResult-ACCESSIBILITY_ELEMENT_NOT_EXIST = 1-End-->
@@ -67,10 +55,6 @@ CANNOT_MODIFY_ROOT_NODE = 2
 The current root node cannot be modified.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ The accessibility node property is empty.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateVirtualNodeResult-ACCESSIBILITY_PROPERTY_IS_EMPTY = 3--><!--Device-OperateVirtualNodeResult-ACCESSIBILITY_PROPERTY_IS_EMPTY = 3-End-->
@@ -111,10 +91,6 @@ ALLOCATE_ID_FAILED = 4
 Failed to allocate a virtual node ID.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,10 +110,6 @@ The array of newly added virtual nodes is empty.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5--><!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5-End-->
@@ -156,10 +128,6 @@ System exception.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperateVirtualNodeResult-INTERNAL_ERROR = 6--><!--Device-OperateVirtualNodeResult-INTERNAL_ERROR = 6-End-->
@@ -177,10 +145,6 @@ VIRTUAL_NODE_NOT_SUPPORTED = 7
 Virtual node operations are not supported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

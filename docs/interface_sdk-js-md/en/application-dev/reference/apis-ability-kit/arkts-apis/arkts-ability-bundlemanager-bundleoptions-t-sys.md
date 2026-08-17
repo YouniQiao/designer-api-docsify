@@ -8,10 +8,6 @@ Describes the bundle options used to set or query application information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type BundleOptions = _BundleOptions--><!--Device-bundleManager-export type BundleOptions = _BundleOptions-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

@@ -1,12 +1,8 @@
 # MissionInfo (System API)
 
-The module defines detailed information about a mission. The information can be obtained through [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo-(System-API)) .
+The module defines detailed information about a mission. The information can be obtained through [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo-system-api) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MissionInfo--><!--Device-unnamed-export interface MissionInfo-End-->
 
@@ -26,10 +22,6 @@ Indicates the ability state of this mission.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MissionInfo-abilityState: int--><!--Device-MissionInfo-abilityState: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
@@ -47,10 +39,6 @@ Indicates whether the mission is continuable.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MissionInfo-continuable: boolean--><!--Device-MissionInfo-continuable: boolean-End-->
 
@@ -70,10 +58,6 @@ Indicates icon path of the mission.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MissionInfo-iconPath: string--><!--Device-MissionInfo-iconPath: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
@@ -91,10 +75,6 @@ Indicates label of the mission.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MissionInfo-label: string--><!--Device-MissionInfo-label: string-End-->
 
@@ -114,10 +94,6 @@ Indicates locked state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MissionInfo-lockedState: boolean--><!--Device-MissionInfo-lockedState: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
@@ -135,10 +111,6 @@ Indicates mission id.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MissionInfo-missionId: int--><!--Device-MissionInfo-missionId: int-End-->
 
@@ -158,10 +130,6 @@ Indicates running state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MissionInfo-runningState: int--><!--Device-MissionInfo-runningState: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
@@ -179,10 +147,6 @@ Indicates the recent created or updated time of the mission.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MissionInfo-timestamp: string--><!--Device-MissionInfo-timestamp: string-End-->
 
@@ -202,10 +166,6 @@ Indicates whether the mission is unclearable.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MissionInfo-unclearable: boolean--><!--Device-MissionInfo-unclearable: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
@@ -223,10 +183,6 @@ Indicates want of the mission.
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MissionInfo-want: Want--><!--Device-MissionInfo-want: Want-End-->
 

@@ -4,9 +4,7 @@ Provides util functions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export class I18NUtil--><!--Device-i18n-export class I18NUtil-End-->
 
@@ -22,9 +20,7 @@ Adjusts a locale ID to a format that complies with the [BCP47](https://www.rfc-e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,9 +52,7 @@ Obtains the locale that best matches a region from the specified locale list.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -96,9 +90,7 @@ Obtains the sequence of the year, month, and day in the specified locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -128,9 +120,7 @@ Converts a language code from two letters to three letters. For example, the two
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -167,9 +157,7 @@ Converts a region code from two letters to three letters. For example, the two-l
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -206,9 +194,7 @@ Obtains the localized expression of the specified time in the specified locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -246,9 +232,7 @@ Localizes a file path for the specified locale. For example, /data/out/tmp is ch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -286,9 +270,7 @@ Sets the text direction for certain text within a paragraph, including RTL (righ
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -321,9 +303,7 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -335,8 +315,8 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
-| toUnit | [UnitInfo](arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
+| fromUnit | [UnitInfo](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
+| toUnit | [UnitInfo](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
 | value | double | Yes | Value of the measurement unit to be converted. |
 | locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example, "zh-Hans-CN". |
 | style | string | No | Style used for formatting. The value can be long, short, or narrow. The default value is short. For details about the meaning or display effect of different values, see Number and Unit of Measurement Formatting. |

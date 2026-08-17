@@ -2,13 +2,9 @@
 
 Manager hfp source profile.
 
-**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md#BaseProfile)
+**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md#baseprofile)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hfp-interface HandsFreeAudioGatewayProfile--><!--Device-hfp-interface HandsFreeAudioGatewayProfile-End-->
 
@@ -29,10 +25,6 @@ connect(deviceId: string): void
 Initiate an HFP connection to a remote device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -70,10 +62,6 @@ disconnect(deviceId: string): void
 Disconnect the HFP connection with the remote device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

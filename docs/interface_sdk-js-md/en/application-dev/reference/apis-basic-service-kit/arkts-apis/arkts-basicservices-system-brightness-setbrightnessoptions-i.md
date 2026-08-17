@@ -4,8 +4,6 @@ Options for setting the screen brightness.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-unnamed-export interface SetBrightnessOptions--><!--Device-unnamed-export interface SetBrightnessOptions-End-->
@@ -36,8 +34,6 @@ Called when an API call is complete.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-SetBrightnessOptions-complete?: () => void--><!--Device-SetBrightnessOptions-complete?: () => void-End-->
@@ -55,8 +51,6 @@ Called when an API call has failed. **data** indicates the error information, an
 **Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 7
 
@@ -76,8 +70,6 @@ Called when an API call is successful.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-SetBrightnessOptions-success?: () => void--><!--Device-SetBrightnessOptions-success?: () => void-End-->
@@ -95,8 +87,6 @@ Screen brightness. The value is an integer ranging from **1** to **255**. - If t
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 7
 

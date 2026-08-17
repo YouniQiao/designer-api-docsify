@@ -16,10 +16,6 @@ Turn off the wearing detection switch.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 <!--Device-wearDetection-function disableWearDetection(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-wearDetection-function disableWearDetection(deviceId: string, callback: AsyncCallback<void>): void-End-->
@@ -47,7 +43,7 @@ Turn off the wearing detection switch.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -71,10 +67,6 @@ function disableWearDetection(deviceId: string): Promise<void>
 Turn off the wearing detection switch.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -108,7 +100,7 @@ Turn off the wearing detection switch.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

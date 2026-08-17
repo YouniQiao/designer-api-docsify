@@ -4,8 +4,6 @@ Color mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-formInfo-enum ColorMode--><!--Device-formInfo-enum ColorMode-End-->
@@ -21,8 +19,6 @@ MODE_AUTO = -1
 Automatic mode.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -42,8 +38,6 @@ Dark mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -61,8 +55,6 @@ MODE_LIGHT = 1
 Light mode.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 

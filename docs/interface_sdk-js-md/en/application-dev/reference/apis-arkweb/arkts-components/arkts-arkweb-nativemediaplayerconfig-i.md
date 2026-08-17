@@ -1,12 +1,8 @@
 # NativeMediaPlayerConfig
 
-Represents the configuration for enabling the application to take over web page media playback.
+Configures the [enableNativeMediaPlayer](arkts-arkweb-web-attribute.md#enablenativemediaplayer) API for the app to take over web page media playback, supporting whether to enable it and whether to override web page content. It is suitable for scenarios where custom media playback behavior is required, improving media playback integration and user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface NativeMediaPlayerConfig--><!--Device-unnamed-declare interface NativeMediaPlayerConfig-End-->
 
@@ -18,15 +14,11 @@ Represents the configuration for enabling the application to take over web page 
 enable: boolean
 ```
 
-Whether to enable the application to take over web page media playback. The value **true** means to enable the application to take over web page media playback, and **false** means the opposite. Default value: **false**.
+Whether to enable the app to take over web media playback. The value **true** indicates that the app takes over web media playback, and **false** indicates that this feature is disabled. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ Whether to enable the application to take over web page media playback. The valu
 shouldOverlay: boolean
 ```
 
-Whether the video player's display overlays the web page content when the application takes over the web page's video player. The value **true** indicates that the video player's display overlays the web page content. This means that the height of the video layer is adjusted to cover the web page content. The value **false** indicates that the video player's display does not overlay the web page content. This means that the video player maintains its original height and is embedded within the web page. Default value: **false**.
+Whether the player screen of the app-taken-over web video overlays the web content after the app takes over web media playback. The value **true** indicates that the video layer level is changed to overlay the web content, and **false** indicates that the original layer level is maintained and the video is embedded in the web page. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

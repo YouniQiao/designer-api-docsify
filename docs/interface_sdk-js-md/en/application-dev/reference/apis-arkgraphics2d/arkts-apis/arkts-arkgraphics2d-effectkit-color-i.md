@@ -4,10 +4,6 @@ A color class used to store the color picking result. It is suitable for scenari
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-effectKit-interface Color--><!--Device-effectKit-interface Color-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ Alpha component value. Value range: [0x0, 0xFF].
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -53,10 +45,6 @@ Blue component value. Value range: [0x0, 0xFF].
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,10 +66,6 @@ Green component value. Value range: [0x0, 0xFF].
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -101,10 +85,6 @@ Red component value. Value range: [0x0, 0xFF].
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

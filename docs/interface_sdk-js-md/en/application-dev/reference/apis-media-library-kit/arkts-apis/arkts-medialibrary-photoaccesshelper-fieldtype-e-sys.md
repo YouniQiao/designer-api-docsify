@@ -4,10 +4,6 @@ Enumerates related entity filed type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum FieldType--><!--Device-photoAccessHelper-enum FieldType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -23,10 +19,6 @@ NONE = 0
 Field Type None
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Field Type Analysis People
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FieldType-ANALYSIS_PEOPLE = 1--><!--Device-FieldType-ANALYSIS_PEOPLE = 1-End-->
@@ -67,10 +55,6 @@ ANALYSIS_LABEL = 2
 Field Type Analysis Label
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ Field Type Analysis City
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FieldType-ANALYSIS_CITY = 3--><!--Device-FieldType-ANALYSIS_CITY = 3-End-->
@@ -111,10 +91,6 @@ YEAR = 4
 Field Type Year
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,10 +110,6 @@ Field Type Month
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FieldType-MONTH = 5--><!--Device-FieldType-MONTH = 5-End-->
@@ -155,10 +127,6 @@ DAY = 6
 Field Type Day
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +146,6 @@ Field Type Holiday
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FieldType-HOLIDAY = 7--><!--Device-FieldType-HOLIDAY = 7-End-->
@@ -199,10 +163,6 @@ MEDIA_TYPE = 8
 Field Type Media Type
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

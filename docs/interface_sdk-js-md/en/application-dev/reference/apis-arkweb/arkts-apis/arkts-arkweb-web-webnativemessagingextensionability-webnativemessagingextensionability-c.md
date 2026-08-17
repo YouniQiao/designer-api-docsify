@@ -6,10 +6,6 @@ Provides the web native messaging capability and is inherited from ExtensionAbil
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class WebNativeMessagingExtensionAbility--><!--Device-unnamed-export default class WebNativeMessagingExtensionAbility-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -30,10 +26,6 @@ Called when a web native message connection is established. In this callback, yo
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebNativeMessagingExtensionAbility-onConnectNative(info: ConnectionInfo): void--><!--Device-WebNativeMessagingExtensionAbility-onConnectNative(info: ConnectionInfo): void-End-->
@@ -44,9 +36,9 @@ Called when a web native message connection is established. In this callback, yo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Connection information. |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Connection information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
@@ -71,17 +63,13 @@ Called when the WebNativeMessagingExtensionAbility is destroyed. In this callbac
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void--><!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WebNativeMessagingExtensionAbility } from '@kit.ArkWeb';
@@ -104,10 +92,6 @@ Called when a web native message connection is disconnected. In this callback, y
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebNativeMessagingExtensionAbility-onDisconnectNative(info: ConnectionInfo): void--><!--Device-WebNativeMessagingExtensionAbility-onDisconnectNative(info: ConnectionInfo): void-End-->
@@ -118,9 +102,9 @@ Called when a web native message connection is disconnected. In this callback, y
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Connection information. |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Connection information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
@@ -145,10 +129,6 @@ Context of the current web native message ExtensionAbility.
 **Type:** [WebNativeMessagingExtensionContext](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

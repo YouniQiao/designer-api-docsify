@@ -16,8 +16,6 @@ Unsubscribe Wi-Fi stream change events. &lt;p&gt;All callback functions will be 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** streamChange

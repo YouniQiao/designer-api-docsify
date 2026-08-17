@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-export interface GetLocationTypeResponse--><!--Device-unnamed-export interface GetLocationTypeResponse-End-->
@@ -29,8 +27,6 @@ types: Array<string>
 **Type:** Array&lt;string&gt;
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

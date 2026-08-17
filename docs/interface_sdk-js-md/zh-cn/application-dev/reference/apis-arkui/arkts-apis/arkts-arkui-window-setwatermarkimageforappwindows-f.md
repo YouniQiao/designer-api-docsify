@@ -6,13 +6,9 @@
 function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>
 ```
 
-设置或取消本应用进程下窗口的水印图片，使用Promise异步回调。该接口需要在 [loadContent()](arkts-arkui-window-window-i.md#loadContent) 或[setUIContent()](arkts-arkui-window-window-i.md#setUIContent)调用生效后使 用。
+设置或取消本应用进程下窗口的水印图片，使用Promise异步回调。该接口需要在 [loadContent()](arkts-arkui-window-window-i.md#loadcontent) 或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使 用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-window-function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>--><!--Device-window-function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>-End-->
 
@@ -38,7 +34,7 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function setWatermarkImageForAppWindows can not work correctly due to limited device capabilities. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";

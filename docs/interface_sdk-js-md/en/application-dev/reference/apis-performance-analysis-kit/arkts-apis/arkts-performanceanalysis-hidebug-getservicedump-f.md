@@ -16,10 +16,6 @@ Obtains system service information. It need dump permission. This API can be cal
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DUMP
 
 <!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void--><!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void-End-->
@@ -41,7 +37,7 @@ Obtains system service information. It need dump permission. This API can be cal
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Possible causes: 1.The parameter type error. 2.The args parameter is not string array. |
 | [11400101](../errorcode-hiviewdfx-hidebug.md#11400101-failed-to-obtain-the-system-service) | ServiceId invalid. The system ability does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo } from '@kit.CoreFileKit';

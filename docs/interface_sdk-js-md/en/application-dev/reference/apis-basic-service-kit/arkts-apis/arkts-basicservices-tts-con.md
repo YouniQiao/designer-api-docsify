@@ -10,8 +10,6 @@ Indicates the default pitch of the text-to-speech (TTS) engine. &lt;p&gt;100 = 1
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-TTS-const DEFAULT_TTS_PITCH: string--><!--Device-TTS-const DEFAULT_TTS_PITCH: string-End-->
@@ -27,8 +25,6 @@ const DEFAULT_TTS_RATE: string
 Indicates the default speech rate of the TTS engine. 100 = 1x.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 
@@ -46,8 +42,6 @@ Indicates the default TTS engine.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-TTS-const DEFAULT_TTS_SYNTH: string--><!--Device-TTS-const DEFAULT_TTS_SYNTH: string-End-->
@@ -63,8 +57,6 @@ const ENABLED_TTS_PLUGINS: string
 Indicates the list of activated plug-in packages used for TTS. Multiple plug-in packages are separated by spaces.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 

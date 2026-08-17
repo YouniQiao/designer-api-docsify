@@ -10,10 +10,6 @@ function destroyAbilityConnectionSession(sessionId: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-abilityConnectionManager-function destroyAbilityConnectionSession(sessionId: int): void--><!--Device-abilityConnectionManager-function destroyAbilityConnectionSession(sessionId: int): void-End-->
@@ -26,7 +22,7 @@ function destroyAbilityConnectionSession(sessionId: int): void
 | --- | --- | --- | --- |
 | sessionId | int | 是 | 待销毁的协同会话ID。&lt;br /&gt;取值范围是大于100的整数。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -16,10 +16,6 @@
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace common--><!--Device-unnamed-declare namespace common-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -43,5 +39,5 @@ import { common } from 'common';
 | Name | Description |
 | --- | --- |
 | [BluetoothAddressType](arkts-connectivity-common-bluetoothaddresstype-e.md) | Enum for the type of Bluetooth address. |
-| [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md) | Enum for the type of Bluetooth raw address. The enum is used only when the [addressType](arkts-connectivity-common-bluetoothaddress-i.md#addressType) is [REAL](arkts-connectivity-common-bluetoothaddresstype-e.md#REAL). |
+| [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md) | Enum for the type of Bluetooth raw address. The enum is used only when the [addressType](arkts-connectivity-common-bluetoothaddress-i.md#addresstype) is [REAL](arkts-connectivity-common-bluetoothaddresstype-e.md#real). |
 

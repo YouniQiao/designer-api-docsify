@@ -1,12 +1,8 @@
 # MessageLevel
 
-Enum type supplied to [getMessageLevel](arkts-arkweb-consolemessage-c.md#getMessageLevel) for receiving the console log level of JavaScript.
+ConsoleMessage的信息级别。 > **说明：** > > - 在HTML5侧，调用console.log或console.info对应ConsoleMessage的信息级别都为MessageLevel.Info。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare enum MessageLevel--><!--Device-unnamed-declare enum MessageLevel-End-->
 
@@ -21,10 +17,6 @@ Debug = 1
 调试级别。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,10 +34,6 @@ Info = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MessageLevel-Info = 2--><!--Device-MessageLevel-Info = 2-End-->
@@ -61,10 +49,6 @@ Warn = 3
 警告级别。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -82,10 +66,6 @@ Error = 4
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MessageLevel-Error = 4--><!--Device-MessageLevel-Error = 4-End-->
@@ -101,8 +81,6 @@ Log = 5
 日志级别。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 26.0.0
 

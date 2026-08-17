@@ -10,10 +10,6 @@ function enable(isEnable: boolean): void
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 <!--Device-jsLeakWatcher-function enable(isEnable: boolean): void--><!--Device-jsLeakWatcher-function enable(isEnable: boolean): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
@@ -24,7 +20,7 @@ function enable(isEnable: boolean): void
 | --- | --- | --- | --- |
 | isEnable | boolean | 是 | 是否使能jsLeakWatcher。true：使能jsLeakWatcher；false：不使能jsLeakWatcher。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 jsLeakWatcher.enable(true);

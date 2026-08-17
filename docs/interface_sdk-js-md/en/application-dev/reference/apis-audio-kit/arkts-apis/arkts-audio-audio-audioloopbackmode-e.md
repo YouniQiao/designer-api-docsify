@@ -4,10 +4,6 @@ Enumerates the audio loopback modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum AudioLoopbackMode--><!--Device-audio-enum AudioLoopbackMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -21,10 +17,6 @@ HARDWARE = 0
 Hardware loopback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopbackMode-HARDWARE = 0--><!--Device-AudioLoopbackMode-HARDWARE = 0-End-->
 

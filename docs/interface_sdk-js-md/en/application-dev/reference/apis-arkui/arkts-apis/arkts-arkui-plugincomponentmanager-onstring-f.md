@@ -16,10 +16,6 @@ Listens for events of the request type and returns the requested data, or listen
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-pluginComponentManager-function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCallback): void--><!--Device-pluginComponentManager-function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCallback): void-End-->
@@ -31,9 +27,9 @@ Listens for events of the request type and returns the requested data, or listen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventType | string | Yes | Type of the event to listen for. The options are as follows:<br>**"push"**: The component provider pushes data to the component user.<br>**"request"**: The component user proactively requests data from the component provider. |
-| callback | [OnPushEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onrequesteventcallback-t.md) | Yes | Callback used to return the result. The type is [OnPushEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onpusheventcallback-t.md#OnPushEventCallback) for the push event and [OnRequestEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onrequesteventcallback-t.md#OnRequestEventCallback) for the request event. |
+| callback | [OnPushEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onrequesteventcallback-t.md) | Yes | Callback used to return the result. The type is [OnPushEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onpusheventcallback-t.md#onpusheventcallback) for the push event and [OnRequestEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onrequesteventcallback-t.md#onrequesteventcallback) for the request event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';

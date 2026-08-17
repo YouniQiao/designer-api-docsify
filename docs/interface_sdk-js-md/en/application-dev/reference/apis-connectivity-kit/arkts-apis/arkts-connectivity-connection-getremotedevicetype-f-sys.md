@@ -16,10 +16,6 @@ Get remote device custom type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 12 - 17: ohos.permission.ACCESS_BLUETOOTH
 
@@ -53,7 +49,7 @@ Get remote device custom type.
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

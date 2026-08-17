@@ -1,14 +1,10 @@
 # DSACommonParamsSpec
 
-Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec) used to specify the common parameters of the public and private keys in the DSA algorithm. It can be used to randomly generate a public or private key. <br>To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec) to create a key generator.
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#asykeyspec) used to specify the common parameters of the public and private keys in the DSA algorithm. It can be used to randomly generate a public or private key. <br>To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) to create a key generator.
 
-**Inheritance/Implementation:** DSACommonParamsSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)
+**Inheritance/Implementation:** DSACommonParamsSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#asykeyspec)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface DSACommonParamsSpec--><!--Device-cryptoFramework-interface DSACommonParamsSpec-End-->
 
@@ -34,10 +30,6 @@ Parameter **g** in the DSA algorithm.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DSACommonParamsSpec-g: bigint--><!--Device-DSACommonParamsSpec-g: bigint-End-->
@@ -58,10 +50,6 @@ Prime modulus **p** in the DSA algorithm.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DSACommonParamsSpec-p: bigint--><!--Device-DSACommonParamsSpec-p: bigint-End-->
@@ -81,10 +69,6 @@ Parameter **q**, prime factor of (p - 1) in the DSA algorithm.
 **Type:** bigint
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,10 +4,6 @@ Indicates the state of the rtt.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export enum RttState--><!--Device-call-export enum RttState-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -23,10 +19,6 @@ RTT_STATE_NO = 0
 Indicates the rtt is disable.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RttState-RTT_STATE_NO = 0--><!--Device-RttState-RTT_STATE_NO = 0-End-->
 
@@ -44,10 +36,6 @@ Indicates the rtt is enable.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RttState-RTT_STATE_YES = 1--><!--Device-RttState-RTT_STATE_YES = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -64,10 +52,6 @@ Indicates the rtt is tty state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RttState-RTT_STATE_REMOTE_TTY = 2--><!--Device-RttState-RTT_STATE_REMOTE_TTY = 2-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -83,10 +67,6 @@ RTT_STATE_REMOTE_NOT_SUPPORT = 3
 Indicates the rtt is not support.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RttState-RTT_STATE_REMOTE_NOT_SUPPORT = 3--><!--Device-RttState-RTT_STATE_REMOTE_NOT_SUPPORT = 3-End-->
 

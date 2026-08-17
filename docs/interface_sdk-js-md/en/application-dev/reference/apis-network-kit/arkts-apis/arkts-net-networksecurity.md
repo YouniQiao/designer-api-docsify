@@ -4,10 +4,6 @@ Provides networkSecurity related APIs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace networkSecurity--><!--Device-unnamed-declare namespace networkSecurity-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -24,11 +20,11 @@ import { networkSecurity } from 'networkSecurity';
 
 | Name | Description |
 | --- | --- |
-| [certVerification](arkts-network-networksecurity-certverification-f.md#certVerification) | Certificate verification to the server. |
-| [certVerificationSync](arkts-network-networksecurity-certverificationsync-f.md#certVerificationSync) | Certificate verification to the server. |
-| [isCleartextPermitted](arkts-network-networksecurity-iscleartextpermitted-f.md#isCleartextPermitted) | Checks whether the Cleartext traffic is permitted. To invoke this method, you must have the {@code ohos.permission.INTERNET} permission. |
-| [isCleartextPermittedByHostName](arkts-network-networksecurity-iscleartextpermittedbyhostname-f.md#isCleartextPermittedByHostName) | Checks whether the Cleartext traffic for a specified hostname is permitted. To invoke this method, you must have the {@code ohos.permission.INTERNET} permission. |
-| [verifyCertChain](arkts-network-networksecurity-verifycertchain-f.md#verifyCertChain) | Verifies the server certificate chain and returns a sorted chain. |
+| [certVerification](arkts-network-networksecurity-certverification-f.md#certverification) | Certificate verification to the server. |
+| [certVerificationSync](arkts-network-networksecurity-certverificationsync-f.md#certverificationsync) | Certificate verification to the server. |
+| [isCleartextPermitted](arkts-network-networksecurity-iscleartextpermitted-f.md#iscleartextpermitted) | Checks whether the Cleartext traffic is permitted. To invoke this method, you must have the {@code ohos.permission.INTERNET} permission. |
+| [isCleartextPermittedByHostName](arkts-network-networksecurity-iscleartextpermittedbyhostname-f.md#iscleartextpermittedbyhostname) | Checks whether the Cleartext traffic for a specified hostname is permitted. To invoke this method, you must have the {@code ohos.permission.INTERNET} permission. |
+| [verifyCertChain](arkts-network-networksecurity-verifycertchain-f.md#verifycertchain) | Verifies the server certificate chain and returns a sorted chain. |
 
 ### Interfaces
 

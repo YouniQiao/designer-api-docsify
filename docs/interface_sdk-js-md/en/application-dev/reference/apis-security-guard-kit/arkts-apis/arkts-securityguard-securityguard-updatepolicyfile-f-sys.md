@@ -16,10 +16,6 @@ Update the policy file.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SECURITY_GUARD_CONFIG
 
 <!--Device-securityGuard-function updatePolicyFile(policyFile: PolicyFile): Promise<void>--><!--Device-securityGuard-function updatePolicyFile(policyFile: PolicyFile): Promise<void>-End-->

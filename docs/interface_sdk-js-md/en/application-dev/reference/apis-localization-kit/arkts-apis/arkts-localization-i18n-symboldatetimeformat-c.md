@@ -6,10 +6,6 @@ Provide a DateTime formatting interface that supports custom symbols. This inter
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class SymbolDateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -30,10 +26,6 @@ A constructor used to create a SymbolDateTimeFormat object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -47,7 +39,7 @@ A constructor used to create a SymbolDateTimeFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. |
-| options | [SymbolDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-symboldatetimeformatoptions-i.md) | No | Indicates the symbols used to replace. The symbols that support replacement are "AM" and "PM". |
+| options | [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | No | Indicates the symbols used to replace. The symbols that support replacement are "AM" and "PM". |
 
 **Error codes:**
 
@@ -64,10 +56,6 @@ public format(date?: Date | number): string
 Formats the date and time.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +86,6 @@ public formatRange(startDate: Date | number | bigint, endDate: Date | number | b
 Formats date and time ranges.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -135,10 +119,6 @@ Formats a date time range to Parts.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -170,10 +150,6 @@ Formats a date to parts.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -203,10 +179,6 @@ public parse(text: string, lenientMode: boolean): number
 Parse a date time localized string to Unix timestamp. Unix timestamp, indicating the number of milliseconds elapsed since 00:00:00 on January 1, 1970 GMT.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -245,10 +217,6 @@ Obtains the options for creating a SymbolDateTimeFormat object. This will allow 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -261,5 +229,5 @@ Obtains the options for creating a SymbolDateTimeFormat object. This will allow 
 
 | Type | Description |
 | --- | --- |
-| [ResolvedSymbolDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-resolvedsymboldatetimeformatoptions-i.md) | Symbol options for SymbolDateTimeFormat. |
+| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | Symbol options for SymbolDateTimeFormat. |
 

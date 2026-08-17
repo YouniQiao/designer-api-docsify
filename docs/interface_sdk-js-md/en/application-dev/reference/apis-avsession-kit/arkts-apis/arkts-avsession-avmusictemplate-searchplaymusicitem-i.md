@@ -4,10 +4,6 @@ The definition of SearchPlayMusicItem.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avMusicTemplate-interface SearchPlayMusicItem--><!--Device-avMusicTemplate-interface SearchPlayMusicItem-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -30,10 +26,6 @@ Unique id of the Media.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchPlayMusicItem-entityId: string--><!--Device-SearchPlayMusicItem-entityId: string-End-->
@@ -51,10 +43,6 @@ Name of the Media.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

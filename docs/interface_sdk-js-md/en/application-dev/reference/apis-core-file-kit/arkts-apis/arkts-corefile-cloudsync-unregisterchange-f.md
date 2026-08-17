@@ -16,10 +16,6 @@ Unsubscribes from the change of a file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudSync-function unregisterChange(uri: string): void--><!--Device-cloudSync-function unregisterChange(uri: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -40,7 +36,7 @@ Unsubscribes from the change of a file.
 | 14000002 | Invalid uri. |
 | 13900012 | Permission denied |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';

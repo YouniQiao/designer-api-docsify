@@ -4,10 +4,6 @@ Configuration parameters for simulating reverse geocoding.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface ReverseGeocodingMockInfo--><!--Device-geoLocationManager-export interface ReverseGeocodingMockInfo-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -32,10 +28,6 @@ Actual address information corresponding to the location.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReverseGeocodingMockInfo-geoAddress: GeoAddress--><!--Device-ReverseGeocodingMockInfo-geoAddress: GeoAddress-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -53,10 +45,6 @@ Location for which reverse geocoding query is required.
 **Type:** ReverseGeoCodeRequest
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReverseGeocodingMockInfo-location: ReverseGeoCodeRequest--><!--Device-ReverseGeocodingMockInfo-location: ReverseGeoCodeRequest-End-->
 

@@ -4,10 +4,6 @@ Describes the window information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface WindowInfo--><!--Device-window-interface WindowInfo-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -32,10 +28,6 @@ abilityName of window
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowInfo-abilityName: string--><!--Device-WindowInfo-abilityName: string-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -54,10 +46,6 @@ Bundle name of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowInfo-bundleName: string--><!--Device-WindowInfo-bundleName: string-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -70,15 +58,11 @@ Bundle name of the application.
 isFocused?: boolean
 ```
 
-Whether the window gains focus. **true** if the window gains focus, **false** otherwise. The return value is the same as that of the [isFocused()](arkts-arkui-window-window-i.md#isFocused) API.
+Whether the window gains focus. **true** if the window gains focus, **false** otherwise. The return value is the same as that of the [isFocused()](arkts-arkui-window-window-i.md#isfocused) API.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowInfo-isFocused?: boolean--><!--Device-WindowInfo-isFocused?: boolean-End-->
 
@@ -98,10 +82,6 @@ Window size.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowInfo-rect: Rect--><!--Device-WindowInfo-rect: Rect-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -120,10 +100,6 @@ Window ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowInfo-windowId: int--><!--Device-WindowInfo-windowId: int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -141,10 +117,6 @@ Window mode.
 **Type:** WindowStatusType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowInfo-windowStatusType: WindowStatusType--><!--Device-WindowInfo-windowStatusType: WindowStatusType-End-->
 

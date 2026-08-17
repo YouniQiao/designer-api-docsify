@@ -4,11 +4,9 @@ Defines the key information about an image or video file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PhotoKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#PhotoKeys)
+**Substitutes:** [PhotoKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys)
 
 <!--Device-userFileManager-enum ImageVideoKey--><!--Device-userFileManager-enum ImageVideoKey-End-->
 
@@ -26,11 +24,9 @@ URI of the file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#URI)
+**Substitutes:** [URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#uri)
 
 <!--Device-ImageVideoKey-URI--><!--Device-ImageVideoKey-URI-End-->
 
@@ -48,11 +44,9 @@ Type of the file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PHOTO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#PHOTO_TYPE)
+**Substitutes:** [PHOTO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#phototype)
 
 <!--Device-ImageVideoKey-FILE_TYPE--><!--Device-ImageVideoKey-FILE_TYPE-End-->
 
@@ -70,11 +64,9 @@ File name displayed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DISPLAY_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#DISPLAY_NAME)
+**Substitutes:** [DISPLAY_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#displayname)
 
 <!--Device-ImageVideoKey-DISPLAY_NAME--><!--Device-ImageVideoKey-DISPLAY_NAME-End-->
 
@@ -92,11 +84,9 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_ADDED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#DATE_ADDED)
+**Substitutes:** [DATE_ADDED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#dateadded)
 
 <!--Device-ImageVideoKey-DATE_ADDED--><!--Device-ImageVideoKey-DATE_ADDED-End-->
 
@@ -114,11 +104,9 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#DATE_MODIFIED)
+**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#datemodified)
 
 <!--Device-ImageVideoKey-DATE_MODIFIED--><!--Device-ImageVideoKey-DATE_MODIFIED-End-->
 
@@ -136,11 +124,9 @@ Title of the file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [TITLE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#TITLE)
+**Substitutes:** [TITLE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#title)
 
 <!--Device-ImageVideoKey-TITLE--><!--Device-ImageVideoKey-TITLE-End-->
 
@@ -158,11 +144,9 @@ Duration, in ms.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DURATION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#DURATION)
+**Substitutes:** [DURATION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#duration)
 
 <!--Device-ImageVideoKey-DURATION--><!--Device-ImageVideoKey-DURATION-End-->
 
@@ -180,11 +164,9 @@ Image width, in pixels.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [WIDTH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#WIDTH)
+**Substitutes:** [WIDTH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#width)
 
 <!--Device-ImageVideoKey-WIDTH--><!--Device-ImageVideoKey-WIDTH-End-->
 
@@ -202,11 +184,9 @@ Image height, in pixels.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [HEIGHT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#HEIGHT)
+**Substitutes:** [HEIGHT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#height)
 
 <!--Device-ImageVideoKey-HEIGHT--><!--Device-ImageVideoKey-HEIGHT-End-->
 
@@ -224,11 +204,9 @@ Date when the file (photo) was taken. The value is the number of seconds elapsed
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_TAKEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#DATE_TAKEN)
+**Substitutes:** [DATE_TAKEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#datetaken)
 
 <!--Device-ImageVideoKey-DATE_TAKEN--><!--Device-ImageVideoKey-DATE_TAKEN-End-->
 
@@ -246,11 +224,9 @@ Orientation of the image file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [ORIENTATION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#ORIENTATION)
+**Substitutes:** [ORIENTATION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#orientation)
 
 <!--Device-ImageVideoKey-ORIENTATION--><!--Device-ImageVideoKey-ORIENTATION-End-->
 
@@ -268,11 +244,9 @@ Whether the file is added to favorites.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#FAVORITE)
+**Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#favorite)
 
 <!--Device-ImageVideoKey-FAVORITE--><!--Device-ImageVideoKey-FAVORITE-End-->
 
@@ -290,11 +264,9 @@ File location type.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [POSITION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#POSITION)
+**Substitutes:** [POSITION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#position)
 
 <!--Device-ImageVideoKey-POSITION--><!--Device-ImageVideoKey-POSITION-End-->
 
@@ -312,11 +284,9 @@ Date when the file was deleted. The value is the number of seconds elapsed since
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_TRASHED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#DATE_TRASHED)
+**Substitutes:** [DATE_TRASHED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#datetrashed)
 
 <!--Device-ImageVideoKey-DATE_TRASHED--><!--Device-ImageVideoKey-DATE_TRASHED-End-->
 
@@ -334,11 +304,9 @@ Whether the file is hidden.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#HIDDEN)
+**Substitutes:** [HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#hidden)
 
 <!--Device-ImageVideoKey-HIDDEN--><!--Device-ImageVideoKey-HIDDEN-End-->
 
@@ -356,11 +324,9 @@ User comment information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [USER_COMMENT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#USER_COMMENT)
+**Substitutes:** [USER_COMMENT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#usercomment)
 
 <!--Device-ImageVideoKey-USER_COMMENT--><!--Device-ImageVideoKey-USER_COMMENT-End-->
 
@@ -378,11 +344,9 @@ Key for the Ultra Snapshot feature. This parameter is available only for the sys
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [CAMERA_SHOT_KEY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#CAMERA_SHOT_KEY)
+**Substitutes:** [CAMERA_SHOT_KEY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#camerashotkey)
 
 <!--Device-ImageVideoKey-CAMERA_SHOT_KEY--><!--Device-ImageVideoKey-CAMERA_SHOT_KEY-End-->
 

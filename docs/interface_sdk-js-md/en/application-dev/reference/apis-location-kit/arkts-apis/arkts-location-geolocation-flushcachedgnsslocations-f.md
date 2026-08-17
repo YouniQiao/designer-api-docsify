@@ -16,11 +16,9 @@ All prepared GNSS locations are returned to the application through the callback
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushCachedGnssLocations)
+**Substitutes:** [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushcachedgnsslocations)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -34,7 +32,7 @@ All prepared GNSS locations are returned to the application through the callback
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -59,11 +57,9 @@ All prepared GNSS locations are returned to the application through the callback
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushCachedGnssLocations)
+**Substitutes:** [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushcachedgnsslocations)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -77,7 +73,7 @@ All prepared GNSS locations are returned to the application through the callback
 | --- | --- |
 | Promise&lt;boolean&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

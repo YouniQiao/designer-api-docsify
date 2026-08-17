@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-enum WaitingReason--><!--Device-agent-enum WaitingReason-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -21,10 +17,6 @@ TASK_QUEUE_FULL = 0x00
 表示任务因任务队列已满而进入等待状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WaitingReason-TASK_QUEUE_FULL = 0x00--><!--Device-WaitingReason-TASK_QUEUE_FULL = 0x00-End-->
 
@@ -40,10 +32,6 @@ NETWORK_NOT_MATCH = 0x01
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WaitingReason-NETWORK_NOT_MATCH = 0x01--><!--Device-WaitingReason-NETWORK_NOT_MATCH = 0x01-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -58,10 +46,6 @@ APP_BACKGROUND = 0x02
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WaitingReason-APP_BACKGROUND = 0x02--><!--Device-WaitingReason-APP_BACKGROUND = 0x02-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -75,10 +59,6 @@ USER_INACTIVATED = 0x03
 表示任务因所属用户处于非激活状态而进入等待状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WaitingReason-USER_INACTIVATED = 0x03--><!--Device-WaitingReason-USER_INACTIVATED = 0x03-End-->
 

@@ -4,10 +4,6 @@ Provides the train configuration
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-interface TrainCfg--><!--Device-mindSporeLite-interface TrainCfg-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -30,10 +26,6 @@ Array of loss name
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrainCfg-lossName?: string[]--><!--Device-TrainCfg-lossName?: string[]-End-->
@@ -51,10 +43,6 @@ Train optimization level
 **Type:** [OptimizationLevel](arkts-mindsporelite-mindsporelite-optimizationlevel-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

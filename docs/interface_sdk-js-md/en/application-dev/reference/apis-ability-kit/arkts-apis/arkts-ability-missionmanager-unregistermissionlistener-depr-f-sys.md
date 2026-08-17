@@ -10,11 +10,9 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** off
+**Substitutes:** [off](arkts-ability-missionmanager-offmission-f-sys.md#offmission)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -31,7 +29,7 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 | listenerId | number | Yes | Index of the mission status listener to unregister. It is returned by **registerMissionListener()**. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -77,11 +75,9 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** off
+**Substitutes:** [off](arkts-ability-missionmanager-offmission-f-sys.md#offmission)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -103,7 +99,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

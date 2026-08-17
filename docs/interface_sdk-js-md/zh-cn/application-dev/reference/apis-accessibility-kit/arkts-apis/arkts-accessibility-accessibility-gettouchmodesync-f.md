@@ -10,10 +10,6 @@ function getTouchModeSync(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -28,7 +24,7 @@ function getTouchModeSync(): string
 | --- | --- |
 | string | 表示当前操作模式。 <br>- singleTouchMode：表示单击操作模式。 <br>- doubleTouchMode：表示双击操作模式。 <br>- none：表示未开启触摸浏览功能。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

@@ -4,8 +4,6 @@ Provides the **FileIterator** object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 <!--Device-fileAccess-interface FileIterator--><!--Device-fileAccess-interface FileIterator-End-->
@@ -29,8 +27,6 @@ next(): { value: FileInfo, done: boolean }
 Obtains information about the next-level files or directories.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 

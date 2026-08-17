@@ -4,10 +4,6 @@ Enumerates the uniform data types. Some data types are related. For example, the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uniformTypeDescriptor-enum UniformDataType--><!--Device-uniformTypeDescriptor-enum UniformDataType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -21,10 +17,6 @@ ENTITY = 'general.entity'
 Generic physical storage type. This type is uncategorized.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Generic logical content type. This type is uncategorized.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-OBJECT = 'general.object'--><!--Device-UniformDataType-OBJECT = 'general.object'-End-->
@@ -62,10 +50,6 @@ Generic composite content type. For example, a PDF file that contains text and i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-COMPOSITE_OBJECT = 'general.composite-object'--><!--Device-UniformDataType-COMPOSITE_OBJECT = 'general.composite-object'-End-->
@@ -81,10 +65,6 @@ TEXT = 'general.text'
 Generic text type. This type belongs to **OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,10 +84,6 @@ Text without specific encoding or identifier. This type belongs to **TEXT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -125,10 +101,6 @@ HTML = 'general.html'
 HTML. This type belongs to **TEXT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,10 +120,6 @@ Hyperlink. This type belongs to **TEXT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -170,10 +138,6 @@ XML. This type belongs to **TEXT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-XML = 'general.xml'--><!--Device-UniformDataType-XML = 'general.xml'-End-->
@@ -189,10 +153,6 @@ XHTML = 'general.xhtml'
 XHTML. This type belongs to **XML**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,10 +170,6 @@ RSS. This type belongs to **XML**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-RSS = 'general.rss'--><!--Device-UniformDataType-RSS = 'general.rss'-End-->
@@ -229,10 +185,6 @@ SMIL = 'com.real.smil'
 Synchronized Multimedia Integration Language (SMIL). This type belongs to **XML**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,10 +202,6 @@ Generic source code type. This type belongs to **TEXT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-SOURCE_CODE = 'general.source-code'--><!--Device-UniformDataType-SOURCE_CODE = 'general.source-code'-End-->
@@ -269,10 +217,6 @@ SCRIPT = 'general.script'
 Source code in any scripting language. This type belongs to **SOURCE_CODE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,10 +234,6 @@ Shell script. This type belongs to **SCRIPT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-SHELL_SCRIPT = 'general.shell-script'--><!--Device-UniformDataType-SHELL_SCRIPT = 'general.shell-script'-End-->
@@ -309,10 +249,6 @@ CSH_SCRIPT = 'general.csh-script'
 C shell script. This type belongs to **SHELL_SCRIPT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -330,10 +266,6 @@ Perl script. This type belongs to **SHELL_SCRIPT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-PERL_SCRIPT = 'general.perl-script'--><!--Device-UniformDataType-PERL_SCRIPT = 'general.perl-script'-End-->
@@ -349,10 +281,6 @@ PHP_SCRIPT = 'general.php-script'
 PHP script. This type belongs to **SHELL_SCRIPT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -370,10 +298,6 @@ Python script. This type belongs to **SHELL_SCRIPT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-PYTHON_SCRIPT = 'general.python-script'--><!--Device-UniformDataType-PYTHON_SCRIPT = 'general.python-script'-End-->
@@ -389,10 +313,6 @@ RUBY_SCRIPT = 'general.ruby-script'
 Ruby script. This type belongs to **SHELL_SCRIPT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -410,10 +330,6 @@ TypeScript source code. This type belongs to **SOURCE_CODE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-TYPE_SCRIPT = 'general.type-script'--><!--Device-UniformDataType-TYPE_SCRIPT = 'general.type-script'-End-->
@@ -429,10 +345,6 @@ JAVA_SCRIPT = 'general.java-script'
 JavaScript source code. This type belongs to **SOURCE_CODE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -450,10 +362,6 @@ CSS. This type belongs to **SCRIPT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-CSS = 'general.css'--><!--Device-UniformDataType-CSS = 'general.css'-End-->
@@ -469,10 +377,6 @@ C_HEADER = 'general.c-header'
 Header file in C. This type belongs to **SOURCE_CODE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -490,10 +394,6 @@ Source code in C. This type belongs to **SOURCE_CODE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-C_SOURCE = 'general.c-source'--><!--Device-UniformDataType-C_SOURCE = 'general.c-source'-End-->
@@ -509,10 +409,6 @@ C_PLUS_PLUS_HEADER = 'general.c-plus-plus-header'
 Header file in C++. This type belongs to **SOURCE_CODE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -530,10 +426,6 @@ Source code in C++. This type belongs to **SOURCE_CODE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-C_PLUS_PLUS_SOURCE = 'general.c-plus-plus-source'--><!--Device-UniformDataType-C_PLUS_PLUS_SOURCE = 'general.c-plus-plus-source'-End-->
@@ -549,10 +441,6 @@ JAVA_SOURCE = 'general.java-source'
 Source code in Java. This type belongs to **SOURCE_CODE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -570,10 +458,6 @@ Source code in TEX format. This type belongs to **SOURCE_CODE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-TEX = 'general.tex'--><!--Device-UniformDataType-TEX = 'general.tex'-End-->
@@ -589,10 +473,6 @@ MARKDOWN = 'general.markdown'
 Markdown. This type belongs to **TEXT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -610,10 +490,6 @@ ASCII. This type belongs to **TEXT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-ASC_TEXT = 'general.asc-text'--><!--Device-UniformDataType-ASC_TEXT = 'general.asc-text'-End-->
@@ -629,10 +505,6 @@ RICH_TEXT = 'general.rich-text'
 Rich text. This type belongs to **TEXT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -650,10 +522,6 @@ Generic type of all delimited value texts. This type belongs to **TEXT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-DELIMITED_VALUES_TEXT = 'general.delimited-values-text'--><!--Device-UniformDataType-DELIMITED_VALUES_TEXT = 'general.delimited-values-text'-End-->
@@ -669,10 +537,6 @@ COMMA_SEPARATED_VALUES_TEXT = 'general.comma-separated-values-text'
 Comma-separated values (CSV). This type belongs to **DELIMITED_VALUES_TEXT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -690,10 +554,6 @@ Tab-separated values (TSV). This type belongs to **DELIMITED_VALUES_TEXT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-TAB_SEPARATED_VALUES_TEXT = 'general.tab-separated-values-text'--><!--Device-UniformDataType-TAB_SEPARATED_VALUES_TEXT = 'general.tab-separated-values-text'-End-->
@@ -709,10 +569,6 @@ EBOOK = 'general.ebook'
 Generic eBook file format type. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -730,10 +586,6 @@ Electronic publication (EPUB). This type belongs to **EBOOK**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-EPUB = 'general.epub'--><!--Device-UniformDataType-EPUB = 'general.epub'-End-->
@@ -749,10 +601,6 @@ AZW = 'com.amazon.azw'
 AZW. This type belongs to **EBOOK**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -770,10 +618,6 @@ AZW3. This type belongs to **EBOOK**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-AZW3 = 'com.amazon.azw3'--><!--Device-UniformDataType-AZW3 = 'com.amazon.azw3'-End-->
@@ -789,10 +633,6 @@ KFX = 'com.amazon.kfx'
 KFX. This type belongs to **EBOOK**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -810,10 +650,6 @@ MOBI. This type belongs to **EBOOK**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-MOBI = 'com.amazon.mobi'--><!--Device-UniformDataType-MOBI = 'com.amazon.mobi'-End-->
@@ -830,10 +666,6 @@ Generic media type. This type belongs to **OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-MEDIA = 'general.media'--><!--Device-UniformDataType-MEDIA = 'general.media'-End-->
@@ -849,10 +681,6 @@ IMAGE = 'general.image'
 Image. This type belongs to **MEDIA**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -872,10 +700,6 @@ JPEG. This type belongs to **IMAGE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-JPEG = 'general.jpeg'--><!--Device-UniformDataType-JPEG = 'general.jpeg'-End-->
@@ -891,10 +715,6 @@ PNG = 'general.png'
 PNG. This type belongs to **IMAGE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -912,10 +732,6 @@ Raw image. This type belongs to **IMAGE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-RAW_IMAGE = 'general.raw-image'--><!--Device-UniformDataType-RAW_IMAGE = 'general.raw-image'-End-->
@@ -931,10 +747,6 @@ TIFF = 'general.tiff'
 TIFF. This type belongs to **IMAGE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -952,10 +764,6 @@ BMP. This type belongs to **IMAGE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-BMP = 'com.microsoft.bmp'--><!--Device-UniformDataType-BMP = 'com.microsoft.bmp'-End-->
@@ -971,10 +779,6 @@ ICO = 'com.microsoft.ico'
 Windows icon. This type belongs to **IMAGE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -992,10 +796,6 @@ Adobe Photoshop image. This type belongs to **IMAGE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-PHOTOSHOP_IMAGE = 'com.adobe.photoshop-image'--><!--Device-UniformDataType-PHOTOSHOP_IMAGE = 'com.adobe.photoshop-image'-End-->
@@ -1011,10 +811,6 @@ AI_IMAGE = 'com.adobe.illustrator.ai-image'
 Adobe Illustrator image (.ai). This type belongs to **IMAGE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1032,10 +828,6 @@ Generic type of the fax. This type belongs to **IMAGE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-FAX = 'general.fax'--><!--Device-UniformDataType-FAX = 'general.fax'-End-->
@@ -1051,10 +843,6 @@ JFX_FAX = 'com.j2.jfx-fax'
 J2 jConnect fax file format. This type belongs to **FAX**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1072,10 +860,6 @@ EFX file format. This type belongs to **FAX**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-EFX_FAX = 'com.js.efx-fax'--><!--Device-UniformDataType-EFX_FAX = 'com.js.efx-fax'-End-->
@@ -1091,10 +875,6 @@ XBITMAP_IMAGE = 'general.xbitmap-image'
 X BitMAP (XBM) used in the X Window system (X11). This type belongs to **IMAGE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1112,10 +892,6 @@ GIF. This type belongs to **IMAGE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-GIF = 'general.gif'--><!--Device-UniformDataType-GIF = 'general.gif'-End-->
@@ -1131,10 +907,6 @@ TGA_IMAGE = 'com.truevision.tga-image'
 Tagged Graphics (TGA) format. This type belongs to **IMAGE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1152,10 +924,6 @@ Silicon Graphics image (SGI) format. This type belongs to **IMAGE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-SGI_IMAGE = 'com.sgi.sgi-image'--><!--Device-UniformDataType-SGI_IMAGE = 'com.sgi.sgi-image'-End-->
@@ -1171,10 +939,6 @@ OPENEXR_IMAGE = 'com.ilm.openexr-image'
 OpenXR image format. This type belongs to **IMAGE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1192,10 +956,6 @@ FlashPix image format. This type belongs to **IMAGE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-FLASHPIX_IMAGE = 'com.kodak.flashpix.image'--><!--Device-UniformDataType-FLASHPIX_IMAGE = 'com.kodak.flashpix.image'-End-->
@@ -1211,10 +971,6 @@ WORD_DOC = 'com.microsoft.word.doc'
 Microsoft Word. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1232,10 +988,6 @@ Microsoft Excel. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-EXCEL = 'com.microsoft.excel.xls'--><!--Device-UniformDataType-EXCEL = 'com.microsoft.excel.xls'-End-->
@@ -1251,10 +1003,6 @@ PPT = 'com.microsoft.powerpoint.ppt'
 Microsoft PowerPoint presentation format. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1272,10 +1020,6 @@ Microsoft Word template. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-WORD_DOT = 'com.microsoft.word.dot'--><!--Device-UniformDataType-WORD_DOT = 'com.microsoft.word.dot'-End-->
@@ -1291,10 +1035,6 @@ POWERPOINT_PPS = 'com.microsoft.powerpoint.pps'
 Microsoft PowerPoint slide show format. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1312,10 +1052,6 @@ Microsoft PowerPoint template. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-POWERPOINT_POT = 'com.microsoft.powerpoint.pot'--><!--Device-UniformDataType-POWERPOINT_POT = 'com.microsoft.powerpoint.pot'-End-->
@@ -1331,10 +1067,6 @@ EXCEL_XLT = 'com.microsoft.excel.xlt'
 Microsoft Excel template. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1352,10 +1084,6 @@ Microsoft Visio. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-VISIO_VSD = 'com.microsoft.visio.vsd'--><!--Device-UniformDataType-VISIO_VSD = 'com.microsoft.visio.vsd'-End-->
@@ -1371,10 +1099,6 @@ PDF = 'com.adobe.pdf'
 PDF. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1392,10 +1116,6 @@ PostScript. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-POSTSCRIPT = 'com.adobe.postscript'--><!--Device-UniformDataType-POSTSCRIPT = 'com.adobe.postscript'-End-->
@@ -1412,10 +1132,6 @@ Encapsulated PostScript. This type belongs to **POSTSCRIPT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-ENCAPSULATED_POSTSCRIPT = 'com.adobe.encapsulated-postscript'--><!--Device-UniformDataType-ENCAPSULATED_POSTSCRIPT = 'com.adobe.encapsulated-postscript'-End-->
@@ -1431,10 +1147,6 @@ VIDEO = 'general.video'
 Generic video type. This type belongs to **MEDIA**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1454,10 +1166,6 @@ AVI. This type belongs to **VIDEO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-AVI = 'general.avi'--><!--Device-UniformDataType-AVI = 'general.avi'-End-->
@@ -1473,10 +1181,6 @@ MPEG = 'general.mpeg'
 MPEG-1 or MPEG-2. This type belongs to **VIDEO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1494,10 +1198,6 @@ MPEG-4. This type belongs to **VIDEO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-MPEG4 = 'general.mpeg-4'--><!--Device-UniformDataType-MPEG4 = 'general.mpeg-4'-End-->
@@ -1513,10 +1213,6 @@ VIDEO_3GPP = 'general.3gpp'
 3GP (3GPP file format). This type belongs to **VIDEO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1534,10 +1230,6 @@ VIDEO_3GPP2 = 'general.3gpp2'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-VIDEO_3GPP2 = 'general.3gpp2'--><!--Device-UniformDataType-VIDEO_3GPP2 = 'general.3gpp2'-End-->
@@ -1553,10 +1245,6 @@ TS = 'general.ts'
 MPEG-TS. This type belongs to **VIDEO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1574,10 +1262,6 @@ MPEG video playlist format. This type belongs to **VIDEO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-MPEGURL_VIDEO = 'general.mpegurl-video'--><!--Device-UniformDataType-MPEGURL_VIDEO = 'general.mpegurl-video'-End-->
@@ -1593,10 +1277,6 @@ WINDOWS_MEDIA_WM = 'com.microsoft.windows-media-wm'
 Windows WM format. This type belongs to **VIDEO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1614,10 +1294,6 @@ Windows WMV format. This type belongs to **VIDEO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-WINDOWS_MEDIA_WMV = 'com.microsoft.windows-media-wmv'--><!--Device-UniformDataType-WINDOWS_MEDIA_WMV = 'com.microsoft.windows-media-wmv'-End-->
@@ -1633,10 +1309,6 @@ WINDOWS_MEDIA_WMP = 'com.microsoft.windows-media-wmp'
 Windows WMP format. This type belongs to **VIDEO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1654,10 +1326,6 @@ Windows WVX format. This type belongs to **VIDEO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-WINDOWS_MEDIA_WVX = 'com.microsoft.windows-media-wvx'--><!--Device-UniformDataType-WINDOWS_MEDIA_WVX = 'com.microsoft.windows-media-wvx'-End-->
@@ -1673,10 +1341,6 @@ WINDOWS_MEDIA_WMX = 'com.microsoft.windows-media-wmx'
 Windows WMX format. This type belongs to **VIDEO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1694,10 +1358,6 @@ RealMedia format. This type belongs to **VIDEO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-REALMEDIA = 'com.real.realmedia'--><!--Device-UniformDataType-REALMEDIA = 'com.real.realmedia'-End-->
@@ -1713,10 +1373,6 @@ MATROSKA_VIDEO = 'org.matroska.mkv'
 MKV. This type belongs to **VIDEO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1734,10 +1390,6 @@ Flash. This type belongs to **VIDEO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-FLASH = 'com.adobe.flash'--><!--Device-UniformDataType-FLASH = 'com.adobe.flash'-End-->
@@ -1753,10 +1405,6 @@ AUDIO = 'general.audio'
 Generic audio type. This type belongs to **MEDIA**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1776,10 +1424,6 @@ AAC. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-AAC = 'general.aac'--><!--Device-UniformDataType-AAC = 'general.aac'-End-->
@@ -1795,10 +1439,6 @@ AIFF = 'general.aiff'
 AIFF. This type belongs to **AUDIO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1816,10 +1456,6 @@ ALAC. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-ALAC = 'general.alac'--><!--Device-UniformDataType-ALAC = 'general.alac'-End-->
@@ -1835,10 +1471,6 @@ FLAC = 'general.flac'
 FLAC. This type belongs to **AUDIO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1856,10 +1488,6 @@ MP3. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-MP3 = 'general.mp3'--><!--Device-UniformDataType-MP3 = 'general.mp3'-End-->
@@ -1875,10 +1503,6 @@ OGG = 'general.ogg'
 OGG. This type belongs to **AUDIO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1896,10 +1520,6 @@ PCM. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-PCM = 'general.pcm'--><!--Device-UniformDataType-PCM = 'general.pcm'-End-->
@@ -1915,10 +1535,6 @@ WINDOWS_MEDIA_WMA = 'com.microsoft.windows-media-wma'
 Windows WMA. This type belongs to **AUDIO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1936,10 +1552,6 @@ Windows Waveform. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-WAVEFORM_AUDIO = 'com.microsoft.waveform-audio'--><!--Device-UniformDataType-WAVEFORM_AUDIO = 'com.microsoft.waveform-audio'-End-->
@@ -1955,10 +1567,6 @@ WINDOWS_MEDIA_WAX = 'com.microsoft.windows-media-wax'
 Windows WAX. This type belongs to **AUDIO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1976,10 +1584,6 @@ AU format. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-AU_AUDIO = 'general.au-audio'--><!--Device-UniformDataType-AU_AUDIO = 'general.au-audio'-End-->
@@ -1995,10 +1599,6 @@ AIFC_AUDIO = 'general.aifc-audio'
 AIFC. This type belongs to **AUDIO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2016,10 +1616,6 @@ MPEG audio playlist format. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-MPEGURL_AUDIO = 'general.mpegurl-audio'--><!--Device-UniformDataType-MPEGURL_AUDIO = 'general.mpegurl-audio'-End-->
@@ -2035,10 +1631,6 @@ MPEG_4_AUDIO = 'general.mpeg-4-audio'
 MPEG-4. This type belongs to **AUDIO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2056,10 +1648,6 @@ MP2. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-MP2 = 'general.mp2'--><!--Device-UniformDataType-MP2 = 'general.mp2'-End-->
@@ -2075,10 +1663,6 @@ MPEG_AUDIO = 'general.mpeg-audio'
 MPEG audio format. This type belongs to **AUDIO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2096,10 +1680,6 @@ ULAW. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-ULAW_AUDIO = 'general.ulaw-audio'--><!--Device-UniformDataType-ULAW_AUDIO = 'general.ulaw-audio'-End-->
@@ -2115,10 +1695,6 @@ SD2_AUDIO = 'com.digidesign.sd2-audio'
 Digidesign Sound Designer II (SDII). This type belongs to **AUDIO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2136,10 +1712,6 @@ RealAudio. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-REALAUDIO = 'com.real.realaudio'--><!--Device-UniformDataType-REALAUDIO = 'com.real.realaudio'-End-->
@@ -2156,10 +1728,6 @@ MKA. This type belongs to **AUDIO**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-MATROSKA_AUDIO = 'org.matroska.mka'--><!--Device-UniformDataType-MATROSKA_AUDIO = 'org.matroska.mka'-End-->
@@ -2175,10 +1743,6 @@ FILE = 'general.file'
 Generic file type. This type belongs to **ENTITY**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2198,10 +1762,6 @@ Generic directory type. This type belongs to **ENTITY**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-DIRECTORY = 'general.directory'--><!--Device-UniformDataType-DIRECTORY = 'general.directory'-End-->
@@ -2217,10 +1777,6 @@ FOLDER = 'general.folder'
 Generic folder type. This type belongs to **DIRECTORY**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2240,10 +1796,6 @@ Generic symbolic type. This type belongs to **ENTITY**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-SYMLINK = 'general.symlink'--><!--Device-UniformDataType-SYMLINK = 'general.symlink'-End-->
@@ -2259,10 +1811,6 @@ ARCHIVE = 'general.archive'
 Generic archive file type. This type belongs to **OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2280,10 +1828,6 @@ BZ2. This type belongs to **ARCHIVE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-BZ2_ARCHIVE = 'general.bz2-archive'--><!--Device-UniformDataType-BZ2_ARCHIVE = 'general.bz2-archive'-End-->
@@ -2299,10 +1843,6 @@ OPG = 'general.opg'
 OPG. This type belongs to **ARCHIVE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2320,10 +1860,6 @@ TAR. This type belongs to **TAR_ARCHIVE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-TAZ_ARCHIVE = 'general.taz-archive'--><!--Device-UniformDataType-TAZ_ARCHIVE = 'general.taz-archive'-End-->
@@ -2339,10 +1875,6 @@ WEB_ARCHIVE = 'general.web-archive'
 MHTML format for web page archiving. This type belongs to **ARCHIVE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2360,10 +1892,6 @@ Generic type of any file that can be mounted as a volume. This type belongs to *
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-DISK_IMAGE = 'general.disk-image'--><!--Device-UniformDataType-DISK_IMAGE = 'general.disk-image'-End-->
@@ -2379,10 +1907,6 @@ ISO = 'general.iso'
 ISO image (optical disk image) format. This type belongs to **DISK_IMAGE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2400,10 +1924,6 @@ TAR. This type belongs to ARCHIVE.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-TAR_ARCHIVE = 'general.tar-archive'--><!--Device-UniformDataType-TAR_ARCHIVE = 'general.tar-archive'-End-->
@@ -2419,10 +1939,6 @@ ZIP_ARCHIVE = 'general.zip-archive'
 ZIP. This type belongs to **ARCHIVE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2440,10 +1956,6 @@ JAR (Java archive). This type belongs to **ARCHIVE** and **EXECUTABLE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-JAVA_ARCHIVE = 'com.sun.java-archive'--><!--Device-UniformDataType-JAVA_ARCHIVE = 'com.sun.java-archive'-End-->
@@ -2459,10 +1971,6 @@ GNU_TAR_ARCHIVE = 'org.gnu.gnu-tar-archive'
 GNU. This type belongs to **ARCHIVE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2480,10 +1988,6 @@ GZIP archive. This type belongs to **ARCHIVE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-GNU_ZIP_ARCHIVE = 'org.gnu.gnu-zip-archive'--><!--Device-UniformDataType-GNU_ZIP_ARCHIVE = 'org.gnu.gnu-zip-archive'-End-->
@@ -2499,10 +2003,6 @@ GNU_ZIP_TAR_ARCHIVE = 'org.gnu.gnu-zip-tar-archive'
 GZIP TAR. This type belongs to **ARCHIVE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2520,10 +2020,6 @@ OpenXML base type. This type belongs to **ARCHIVE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-OPENXML = 'org.openxmlformats.openxml'--><!--Device-UniformDataType-OPENXML = 'org.openxmlformats.openxml'-End-->
@@ -2539,10 +2035,6 @@ WORDPROCESSINGML_DOCUMENT = 'org.openxmlformats.wordprocessingml.document'
 WordProcessingML format. This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2560,10 +2052,6 @@ SpreadsheetML format. This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-SPREADSHEETML_SHEET = 'org.openxmlformats.spreadsheetml.sheet'--><!--Device-UniformDataType-SPREADSHEETML_SHEET = 'org.openxmlformats.spreadsheetml.sheet'-End-->
@@ -2579,10 +2067,6 @@ PRESENTATIONML_PRESENTATION = 'org.openxmlformats.presentationml.presentation'
 PresentationML format. This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2600,10 +2084,6 @@ DrawingML file format of Office Open XML (OOXML). This type belongs to **OPENXML
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-DRAWINGML_VISIO = 'org.openxmlformats.drawingml.visio'--><!--Device-UniformDataType-DRAWINGML_VISIO = 'org.openxmlformats.drawingml.visio'-End-->
@@ -2619,10 +2099,6 @@ DRAWINGML_TEMPLATE = 'org.openxmlformats.drawingml.template'
 DrawingML template format of OOXML. This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2640,10 +2116,6 @@ WordProcessingML template format of OOXML. This type belongs to **OPENXML** and 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-WORDPROCESSINGML_TEMPLATE = 'org.openxmlformats.wordprocessingml.template'--><!--Device-UniformDataType-WORDPROCESSINGML_TEMPLATE = 'org.openxmlformats.wordprocessingml.template'-End-->
@@ -2659,10 +2131,6 @@ PRESENTATIONML_TEMPLATE = 'org.openxmlformats.presentationml.template'
 PresentationML template format of OOXML. This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2680,10 +2148,6 @@ PresentationML slide show format of OOXML. This type belongs to **OPENXML** and 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-PRESENTATIONML_SLIDESHOW = 'org.openxmlformats.presentationml.slideshow'--><!--Device-UniformDataType-PRESENTATIONML_SLIDESHOW = 'org.openxmlformats.presentationml.slideshow'-End-->
@@ -2699,10 +2163,6 @@ SPREADSHEETML_TEMPLATE = 'org.openxmlformats.spreadsheetml.template'
 SpreadsheetML template format of OOXML. This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2720,10 +2180,6 @@ OpenDocument format for Office applications. This type belongs to **ARCHIVE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-OPENDOCUMENT = 'org.oasis.opendocument'--><!--Device-UniformDataType-OPENDOCUMENT = 'org.oasis.opendocument'-End-->
@@ -2739,10 +2195,6 @@ OPENDOCUMENT_TEXT = 'org.oasis.opendocument.text'
 OpenDocument format for word processing (text) documents. This type belongs to **OPENDOCUMENT** and **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2760,10 +2212,6 @@ OpenDocument format for spreadsheets. This type belongs to **OPENDOCUMENT** and 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-OPENDOCUMENT_SPREADSHEET = 'org.oasis.opendocument.spreadsheet'--><!--Device-UniformDataType-OPENDOCUMENT_SPREADSHEET = 'org.oasis.opendocument.spreadsheet'-End-->
@@ -2779,10 +2227,6 @@ OPENDOCUMENT_PRESENTATION = 'org.oasis.opendocument.presentation'
 OpenDocument format for presentations. This type belongs to **OPENDOCUMENT** and **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2800,10 +2244,6 @@ OpenDocument format for graphics. This type belongs to **OPENDOCUMENT** and **CO
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-OPENDOCUMENT_GRAPHICS = 'org.oasis.opendocument.graphics'--><!--Device-UniformDataType-OPENDOCUMENT_GRAPHICS = 'org.oasis.opendocument.graphics'-End-->
@@ -2819,10 +2259,6 @@ OPENDOCUMENT_FORMULA = 'org.oasis.opendocument.formula'
 OpenDocument format for formula. This type belongs to **OPENDOCUMENT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2840,10 +2276,6 @@ Stuffit compression format (stuffit archive). This type belongs to **ARCHIVE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-STUFFIT_ARCHIVE = 'com.allume.stuffit-archive'--><!--Device-UniformDataType-STUFFIT_ARCHIVE = 'com.allume.stuffit-archive'-End-->
@@ -2859,10 +2291,6 @@ RAR_ARCHIVE = 'com.rarlab.rar-archive'
 WinRAR. This type belongs to **ARCHIVE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2880,10 +2308,6 @@ SEVEN_ZIP_ARCHIVE = 'org.7-zip.7-zip-archive'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-SEVEN_ZIP_ARCHIVE = 'org.7-zip.7-zip-archive'--><!--Device-UniformDataType-SEVEN_ZIP_ARCHIVE = 'org.7-zip.7-zip-archive'-End-->
@@ -2899,10 +2323,6 @@ CALENDAR = 'general.calendar'
 Generic calendar type. This type belongs to **OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2920,10 +2340,6 @@ VCalendar (VCS) format. This type belongs to **CALENDAR** and **TEXT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-VCS = 'general.vcs'--><!--Device-UniformDataType-VCS = 'general.vcs'-End-->
@@ -2939,10 +2355,6 @@ ICS = 'general.ics'
 Internet Calendaring and Scheduling (ICS) format. This type belongs to **CALENDAR** and **TEXT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2960,10 +2372,6 @@ Generic contact type. This type belongs to **OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-CONTACT = 'general.contact'--><!--Device-UniformDataType-CONTACT = 'general.contact'-End-->
@@ -2979,10 +2387,6 @@ DATABASE = 'general.database'
 Generic database file type. This type belongs to **OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3000,10 +2404,6 @@ Generic message type. This type belongs to **OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-MESSAGE = 'general.message'--><!--Device-UniformDataType-MESSAGE = 'general.message'-End-->
@@ -3019,10 +2419,6 @@ EXECUTABLE = 'general.executable'
 Generic type of all executable files. This type belongs to **OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3040,10 +2436,6 @@ Microsoft Windows portable executable format. This type belongs to **EXECUTABLE*
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-PORTABLE_EXECUTABLE = 'com.microsoft.portable-executable'--><!--Device-UniformDataType-PORTABLE_EXECUTABLE = 'com.microsoft.portable-executable'-End-->
@@ -3059,10 +2451,6 @@ SUN_JAVA_CLASS = 'com.sun.java-class'
 Java class file format. This type belongs to **EXECUTABLE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3080,10 +2468,6 @@ Generic electronic business card type. This type belongs to **OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-VCARD = 'general.vcard'--><!--Device-UniformDataType-VCARD = 'general.vcard'-End-->
@@ -3099,10 +2483,6 @@ NAVIGATION = 'general.navigation'
 Generic navigation data type. This type belongs to **OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3120,10 +2500,6 @@ Location data. This type belongs to **NAVIGATION**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-LOCATION = 'general.location'--><!--Device-UniformDataType-LOCATION = 'general.location'-End-->
@@ -3139,10 +2515,6 @@ FONT = 'general.font'
 Basic type of fonts. This type belongs to **OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3160,10 +2532,6 @@ TrueType font format. This type belongs to **FONT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-TRUETYPE_FONT = 'general.truetype-font'--><!--Device-UniformDataType-TRUETYPE_FONT = 'general.truetype-font'-End-->
@@ -3179,10 +2547,6 @@ TRUETYPE_COLLECTION_FONT = 'general.truetype-collection-font'
 TrueType Collection font format. This type belongs to **FONT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3200,10 +2564,6 @@ OpenType font format. This type belongs to **FONT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-OPENTYPE_FONT = 'general.opentype-font'--><!--Device-UniformDataType-OPENTYPE_FONT = 'general.opentype-font'-End-->
@@ -3219,10 +2579,6 @@ POSTSCRIPT_FONT = 'com.adobe.postscript-font'
 PostScript font format. This type belongs to **FONT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3240,10 +2596,6 @@ PostScript Font Binary font format. This type belongs to **FONT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-POSTSCRIPT_PFB_FONT = 'com.adobe.postscript-pfb-font'--><!--Device-UniformDataType-POSTSCRIPT_PFB_FONT = 'com.adobe.postscript-pfb-font'-End-->
@@ -3260,10 +2612,6 @@ Adobe Type 1 font format. This type belongs to **FONT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-POSTSCRIPT_PFA_FONT = 'com.adobe.postscript-pfa-font'--><!--Device-UniformDataType-POSTSCRIPT_PFA_FONT = 'com.adobe.postscript-pfa-font'-End-->
@@ -3279,10 +2627,6 @@ OPENHARMONY_FORM = 'openharmony.form'
 Widget defined for the system. This type belongs to **OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3302,10 +2646,6 @@ Home screen icon defined for the system. This type belongs to **OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -3323,10 +2663,6 @@ OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'
 Pixel map defined for the system. This type belongs to **IMAGE**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3346,10 +2682,6 @@ Atomic service type defined for the system. This type belongs to **OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-OPENHARMONY_ATOMIC_SERVICE = 'openharmony.atomic-service'--><!--Device-UniformDataType-OPENHARMONY_ATOMIC_SERVICE = 'openharmony.atomic-service'-End-->
@@ -3365,10 +2697,6 @@ OPENHARMONY_PACKAGE = 'openharmony.package'
 Package (compressed folder) defined for the system. This type belongs to **DIRECTORY**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3386,10 +2714,6 @@ Ability package defined for the system. This type belongs to **OPENHARMONY_PACKA
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-OPENHARMONY_HAP = 'openharmony.hap'--><!--Device-UniformDataType-OPENHARMONY_HAP = 'openharmony.hap'-End-->
@@ -3405,10 +2729,6 @@ OPENHARMONY_HDOC = 'openharmony.hdoc'
 Memo format defined for the system. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3426,10 +2746,6 @@ Note format defined for the system. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-OPENHARMONY_HINOTE = 'openharmony.hinote'--><!--Device-UniformDataType-OPENHARMONY_HINOTE = 'openharmony.hinote'-End-->
@@ -3445,10 +2761,6 @@ OPENHARMONY_STYLED_STRING = 'openharmony.styled-string'
 Style string type defined for the system. This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3466,10 +2778,6 @@ Want defined for the system. This type belongs to **OBJECT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-OPENHARMONY_WANT = 'openharmony.want'--><!--Device-UniformDataType-OPENHARMONY_WANT = 'openharmony.want'-End-->
@@ -3485,10 +2793,6 @@ OFD = 'general.ofd'
 Open Fixed-layout Document (OFD). This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3506,10 +2810,6 @@ Generic type of all computer-aided design types. This type belongs to **OBJECT**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-CAD = 'general.cad'--><!--Device-UniformDataType-CAD = 'general.cad'-End-->
@@ -3525,10 +2825,6 @@ OCTET_STREAM = 'general.octet-stream'
 Any binary data type. This type belongs to **OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3546,10 +2842,6 @@ File address type. This type belongs to **TEXT**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UniformDataType-FILE_URI = 'general.file-uri'--><!--Device-UniformDataType-FILE_URI = 'general.file-uri'-End-->
@@ -3565,10 +2857,6 @@ CONTENT_FORM = 'general.content-form'
 Content widget type. This type belongs to **OBJECT**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

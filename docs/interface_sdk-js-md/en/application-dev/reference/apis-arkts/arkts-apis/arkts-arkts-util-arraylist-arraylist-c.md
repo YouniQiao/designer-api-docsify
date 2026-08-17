@@ -4,10 +4,6 @@ ArrayList is a linear data structure that is implemented based on arrays. ArrayL
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ArrayList--><!--Device-unnamed-declare class ArrayList-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<T>
 Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>--><!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -76,7 +64,7 @@ Obtains an iterator, each item of which is a JavaScript object.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -117,10 +105,6 @@ Adds an element at the end of this ArrayList.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-add(element: T): boolean--><!--Device-ArrayList-add(element: T): boolean-End-->
@@ -145,7 +129,7 @@ Adds an element at the end of this ArrayList.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class C1 {
@@ -175,10 +159,6 @@ Clears this ArrayList and sets its length to **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-clear(): void--><!--Device-ArrayList-clear(): void-End-->
@@ -191,7 +171,7 @@ Clears this ArrayList and sets its length to **0**.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -212,10 +192,6 @@ Clones this ArrayList and returns a copy. The modification to the copy does not 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-clone(): ArrayList<T>--><!--Device-ArrayList-clone(): ArrayList<T>-End-->
@@ -234,7 +210,7 @@ Clones this ArrayList and returns a copy. The modification to the copy does not 
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clone method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -256,10 +232,6 @@ A constructor used to create an **ArrayList** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-constructor()--><!--Device-ArrayList-constructor()-End-->
@@ -272,7 +244,7 @@ A constructor used to create an **ArrayList** instance.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArrayList's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<string | number>();
@@ -287,10 +259,6 @@ convertToArray(): Array<T>
 Converts this ArrayList into an array.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -310,7 +278,7 @@ Converts this ArrayList into an array.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The convertToArray method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -332,10 +300,6 @@ Uses a callback to traverse each element in the **ArrayList** instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void--><!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void-End-->
@@ -355,7 +319,7 @@ Uses a callback to traverse each element in the **ArrayList** instance.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -382,10 +346,6 @@ Iterates over elements in a generic ArrayList and executes a callback function f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ArrayList-forEach(callbackFn: ArrayListForEachCb<T>): void--><!--Device-ArrayList-forEach(callbackFn: ArrayListForEachCb<T>): void-End-->
@@ -408,10 +368,6 @@ Obtains the capacity of this ArrayList.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-getCapacity(): int--><!--Device-ArrayList-getCapacity(): int-End-->
@@ -430,7 +386,7 @@ Obtains the capacity of this ArrayList.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getCapacity method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -451,10 +407,6 @@ getIndexOf(element: T): int
 Obtains the index of the first occurrence of the specified element in this ArrayList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -480,7 +432,7 @@ Obtains the index of the first occurrence of the specified element in this Array
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -504,10 +456,6 @@ getLastIndexOf(element: T): int
 Obtains the index of the last occurrence of the specified element in this ArrayList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -533,7 +481,7 @@ Obtains the index of the last occurrence of the specified element in this ArrayL
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -557,10 +505,6 @@ has(element: T): boolean
 Checks whether this ArrayList has the specified element.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -586,7 +530,7 @@ Checks whether this ArrayList has the specified element.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<string>();
@@ -604,10 +548,6 @@ increaseCapacityTo(newCapacity: int): void
 Increases the capacity of this ArrayList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -627,7 +567,7 @@ Increases the capacity of this ArrayList.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -650,10 +590,6 @@ Inserts an element at a specified index within the length range. If index is out
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-insert(element: T, index: int): void--><!--Device-ArrayList-insert(element: T, index: int): void-End-->
@@ -674,7 +610,7 @@ Inserts an element at a specified index within the length range. If index is out
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insert method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number | string | boolean>();
@@ -694,10 +630,6 @@ Checks whether this ArrayList is empty (contains no element).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-isEmpty(): boolean--><!--Device-ArrayList-isEmpty(): boolean-End-->
@@ -716,7 +648,7 @@ Checks whether this ArrayList is empty (contains no element).
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -737,10 +669,6 @@ remove(element: T): boolean
 Removes the first occurrence of the specified element from this ArrayList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -766,7 +694,7 @@ Removes the first occurrence of the specified element from this ArrayList.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -787,10 +715,6 @@ removeByIndex(index: int): T
 Removes an element with the specified position from this ArrayList.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -817,7 +741,7 @@ Removes an element with the specified position from this ArrayList.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByIndex method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -840,10 +764,6 @@ Removes elements within the range [fromIndex, toIndex).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-removeByRange(fromIndex: int, toIndex: int): void--><!--Device-ArrayList-removeByRange(fromIndex: int, toIndex: int): void-End-->
@@ -864,7 +784,7 @@ Removes elements within the range [fromIndex, toIndex).
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByRange method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -885,10 +805,6 @@ Replaces all elements in this ArrayList with new elements, and returns the new o
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void--><!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void-End-->
@@ -908,7 +824,7 @@ Replaces all elements in this ArrayList with new elements, and returns the new o
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replaceAllElements method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -932,10 +848,6 @@ Replaces all elements in this container with new elements, and returns the new o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ArrayList-replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void--><!--Device-ArrayList-replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void-End-->
@@ -958,10 +870,6 @@ Sorts elements in an ArrayList according to the order defined by the specified c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-sort(comparator?: ArrayListComparatorFn<T>): void--><!--Device-ArrayList-sort(comparator?: ArrayListComparatorFn<T>): void-End-->
@@ -980,7 +888,7 @@ Sorts elements in an ArrayList according to the order defined by the specified c
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -1002,10 +910,6 @@ subArrayList(fromIndex: int, toIndex: int): ArrayList<T>
 Obtains elements from this **ArrayList** within the range [fromIndex, toIndex) and returns them as a new ArrayList instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1033,7 +937,7 @@ Obtains elements from this **ArrayList** within the range [fromIndex, toIndex) a
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subArrayList method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -1055,10 +959,6 @@ Releases the reserved space in this ArrayList by adjusting the capacity to the a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-trimToCurrentLength(): void--><!--Device-ArrayList-trimToCurrentLength(): void-End-->
@@ -1071,7 +971,7 @@ Releases the reserved space in this ArrayList by adjusting the capacity to the a
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The trimToCurrentLength method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -1094,10 +994,6 @@ Number of elements in an ArrayList.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

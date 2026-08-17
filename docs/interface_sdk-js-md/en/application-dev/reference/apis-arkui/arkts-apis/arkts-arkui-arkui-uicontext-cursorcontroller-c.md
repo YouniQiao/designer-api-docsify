@@ -1,12 +1,8 @@
 # CursorController
 
-Provides the capability to set cursor styles. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getCursorController) in > **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
+Provides the capability to set cursor styles. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcursorcontroller) in > **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class CursorController--><!--Device-unnamed-export class CursorController-End-->
 
@@ -47,6 +43,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## restoreDefault
@@ -58,10 +56,6 @@ restoreDefault(): void
 Restores the default cursor style.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +74,6 @@ setCursor(value: PointerStyle): void
 Sets the cursor style. > **NOTE：**> > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,10 +98,6 @@ setCustomCursor(value: image.PixelMap, focusX?: int, focusY?: int): void
 Sets the custom cursor style. > **NOTE：**> > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

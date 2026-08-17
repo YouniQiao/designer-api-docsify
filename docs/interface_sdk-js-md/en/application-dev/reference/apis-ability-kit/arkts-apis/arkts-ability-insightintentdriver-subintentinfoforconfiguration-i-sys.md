@@ -4,10 +4,6 @@ Describes the unique information of the [intent developed using a configuration 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntentDriver-interface SubIntentInfoForConfiguration--><!--Device-insightIntentDriver-interface SubIntentInfoForConfiguration-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -32,10 +28,6 @@ Entity information contained in the intent.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, RecordData>--><!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, RecordData>-End-->
@@ -55,10 +47,6 @@ Information about the widget bound to the intent.
 **Type:** [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Data format of intent parameters, which is used to define the input data format 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, RecordData>>--><!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, RecordData>>-End-->
@@ -103,10 +87,6 @@ Data format for the results returned by intent calls. It defines how the data sh
 **Type:** Array&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Information about the ServiceExtensionAbility bound to the intent.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubIntentInfoForConfiguration-readonly serviceExtension?: ServiceExtensionIntentInfo--><!--Device-SubIntentInfoForConfiguration-readonly serviceExtension?: ServiceExtensionIntentInfo-End-->
@@ -151,10 +127,6 @@ Relative path of the intent execution file. The value is a string of a maximum o
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +148,6 @@ Information about the UIAbility bound to the intent, including the **ability** a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubIntentInfoForConfiguration-readonly uiAbility?: UIAbilityIntentInfo--><!--Device-SubIntentInfoForConfiguration-readonly uiAbility?: UIAbilityIntentInfo-End-->
@@ -199,10 +167,6 @@ Information about the UIExtensionAbility bound to the intent.
 **Type:** [UIExtensionIntentInfo](arkts-ability-insightintentdriver-uiextensionintentinfo-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

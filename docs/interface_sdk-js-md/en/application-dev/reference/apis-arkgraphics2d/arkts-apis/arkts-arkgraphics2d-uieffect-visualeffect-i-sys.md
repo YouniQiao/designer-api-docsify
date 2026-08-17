@@ -4,10 +4,6 @@ VisualEffect class, used to apply background color blending, border lighting, co
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-interface VisualEffect--><!--Device-uiEffect-interface VisualEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -27,10 +23,6 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 A blender for changing the background color of the component. Currently, only the brightness blender is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -52,7 +44,7 @@ A blender for changing the background color of the component. Currently, only th
 | --- | --- |
 | VisualEffect | Returns the VisualEffect with the background color change effect attached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let blender : uiEffect.BrightnessBlender =
@@ -71,10 +63,6 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 Adds a 3D lighting effect to the border of a rounded rectangle component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect--><!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect-End-->
 
@@ -103,7 +91,7 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common2D, uiEffect } from '@kit.ArkGraphics2D'
@@ -156,10 +144,6 @@ Adds a color gradient effect to the component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect--><!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -187,7 +171,7 @@ Adds a color gradient effect to the component.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common2D, uiEffect } from "@kit.ArkGraphics2D"
@@ -235,10 +219,6 @@ Adds a nonlinear deformation effect to the component. Typical application scenar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VisualEffect-distortionCollapse(distortionParam: DistortionParam): VisualEffect--><!--Device-VisualEffect-distortionCollapse(distortionParam: DistortionParam): VisualEffect-End-->
@@ -270,10 +250,6 @@ Adds a material effect to the component. The material effect simulates the optic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect--><!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -301,7 +277,7 @@ Adds a material effect to the component. The material effect simulates the optic
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';

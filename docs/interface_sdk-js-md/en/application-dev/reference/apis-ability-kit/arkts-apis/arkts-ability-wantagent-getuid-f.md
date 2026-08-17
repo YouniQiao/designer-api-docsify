@@ -16,10 +16,6 @@ Obtains the user ID of a WantAgent object. This API uses an asynchronous callbac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<int>): void--><!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<int>): void-End-->
@@ -41,7 +37,7 @@ Obtains the user ID of a WantAgent object. This API uses an asynchronous callbac
 | [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';
@@ -122,10 +118,6 @@ Obtains the user ID of a WantAgent object. This API uses a promise to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function getUid(agent: WantAgent): Promise<int>--><!--Device-wantAgent-function getUid(agent: WantAgent): Promise<int>-End-->
@@ -152,7 +144,7 @@ Obtains the user ID of a WantAgent object. This API uses a promise to return the
 | [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';

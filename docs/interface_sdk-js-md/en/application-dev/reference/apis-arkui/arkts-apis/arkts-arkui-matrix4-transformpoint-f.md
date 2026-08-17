@@ -16,11 +16,9 @@ Applies the current transformation effect to a coordinate point.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [transformPoint](arkts-arkui-matrix4-matrix4transit-i.md#transformPoint)
+**Substitutes:** [transformPoint](arkts-arkui-matrix4-matrix4transit-i.md#transformpoint)
 
 <!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]--><!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]-End-->
 

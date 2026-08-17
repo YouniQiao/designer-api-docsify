@@ -4,9 +4,7 @@ Provide a DateTime formatting interface which could format date to ISO 8601 stan
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-i18n-export class ISO8601DateTimeFormat--><!--Device-i18n-export class ISO8601DateTimeFormat-End-->
 
@@ -22,9 +20,7 @@ A constructor used to create a ISO8601DateTimeFormat object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +34,7 @@ A constructor used to create a ISO8601DateTimeFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ISO8601DateTimeFormatOptions](arkts-na-i18n-iso8601datetimeformatoptions-i.md) | No | Options for creating a date formatting object that complies with ISO 8601. Default format is yyyy-MM-ddThh:mm:ssZZZZZ. |
+| options | [ISO8601DateTimeFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | No | Options for creating a date formatting object that complies with ISO 8601. Default format is yyyy-MM-ddThh:mm:ssZZZZZ. |
 
 ## format
 
@@ -50,9 +46,7 @@ Formats a date to ISO 8601 formatted string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

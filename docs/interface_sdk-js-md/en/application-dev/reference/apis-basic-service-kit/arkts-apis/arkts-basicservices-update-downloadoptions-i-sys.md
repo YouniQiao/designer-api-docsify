@@ -4,10 +4,6 @@ Defines the download options, including the **allowNetwork** and **order** field
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface DownloadOptions--><!--Device-update-export interface DownloadOptions-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Network type allowed for download. The value **CELLULAR** indicates that only do
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadOptions-allowNetwork: NetType--><!--Device-DownloadOptions-allowNetwork: NetType-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ The options are as follows: **DOWNLOAD**: download the upgrade package, which ne
 **Type:** [Order](arkts-basicservices-update-order-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadOptions-order: Order--><!--Device-DownloadOptions-order: Order-End-->
 

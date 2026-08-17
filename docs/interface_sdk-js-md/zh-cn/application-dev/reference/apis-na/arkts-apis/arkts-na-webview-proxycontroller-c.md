@@ -4,9 +4,7 @@ This class is used for set proxy for ArkWeb.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-webview-class ProxyController--><!--Device-webview-class ProxyController-End-->
 
@@ -22,9 +20,7 @@ Sets ProxyConfig which will be used by all Webs in the app. URLs that match patt
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ProxyController-static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChangeCallback): void--><!--Device-ProxyController-static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChangeCallback): void-End-->
 
@@ -34,8 +30,8 @@ Sets ProxyConfig which will be used by all Webs in the app. URLs that match patt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| proxyConfig | [ProxyConfig](arkts-na-webview-proxyconfig-c.md) | 是 | The proxy config. |
-| callback | [OnProxyConfigChangeCallback](arkts-na-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
+| proxyConfig | [ProxyConfig](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyconfig-c.md) | 是 | The proxy config. |
+| callback | [OnProxyConfigChangeCallback](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
 
 **错误码：**
 
@@ -53,9 +49,7 @@ Remove the proxy config. Requests are not guaranteed to not use the proxy; Wait 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ProxyController-static removeProxyOverride(callback: OnProxyConfigChangeCallback): void--><!--Device-ProxyController-static removeProxyOverride(callback: OnProxyConfigChangeCallback): void-End-->
 
@@ -65,7 +59,7 @@ Remove the proxy config. Requests are not guaranteed to not use the proxy; Wait 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnProxyConfigChangeCallback](arkts-na-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
+| callback | [OnProxyConfigChangeCallback](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
 
 **错误码：**
 

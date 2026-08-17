@@ -10,11 +10,9 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearMission-(System-API))
+**Substitutes:** [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearmission-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -31,7 +29,7 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 | missionId | number | Yes | Mission ID. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is cleared, **err** is **undefined**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -61,11 +59,9 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearMission-(System-API))
+**Substitutes:** [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearmission-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -87,7 +83,7 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

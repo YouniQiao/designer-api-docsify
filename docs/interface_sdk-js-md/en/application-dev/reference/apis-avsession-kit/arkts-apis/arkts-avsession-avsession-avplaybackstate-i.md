@@ -4,10 +4,6 @@ Used to indicate the playback state of the current media. If the playback state 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface AVPlaybackState--><!--Device-avSession-interface AVPlaybackState-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -30,10 +26,6 @@ Current active item id
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlaybackState-activeItemId?: int--><!--Device-AVPlaybackState-activeItemId?: int-End-->
@@ -51,10 +43,6 @@ The current buffered time, the maximum playable position, described by milliseco
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ The duration of this media asset, described by milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlaybackState-duration?: int--><!--Device-AVPlaybackState-duration?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -93,10 +77,6 @@ Current custom media packets
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -116,10 +96,6 @@ Current Favorite Status
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlaybackState-isFavorite?: boolean--><!--Device-AVPlaybackState-isFavorite?: boolean-End-->
@@ -132,15 +108,11 @@ Current Favorite Status
 loopMode?: LoopMode
 ```
 
-Current playback loop mode. See [LoopMode](arkts-avsession-avsession-loopmode-e.md#LoopMode)
+Current playback loop mode. See [LoopMode](arkts-avsession-avsession-loopmode-e.md#loopmode)
 
 **Type:** [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -160,10 +132,6 @@ maximum volume
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlaybackState-maxVolume?: int--><!--Device-AVPlaybackState-maxVolume?: int-End-->
@@ -182,10 +150,6 @@ Current muted status
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlaybackState-muted?: boolean--><!--Device-AVPlaybackState-muted?: boolean-End-->
@@ -198,15 +162,11 @@ Current muted status
 position?: PlaybackPosition
 ```
 
-Current playback position of this media. See [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md#PlaybackPosition)
+Current playback position of this media. See [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md#playbackposition)
 
 **Type:** [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -226,10 +186,6 @@ Current playback speed
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlaybackState-speed?: double--><!--Device-AVPlaybackState-speed?: double-End-->
@@ -242,15 +198,11 @@ Current playback speed
 state?: PlaybackState
 ```
 
-Current playback state. See [PlaybackState](arkts-avsession-avsession-playbackstate-e.md#PlaybackState)
+Current playback state. See [PlaybackState](arkts-avsession-avsession-playbackstate-e.md#playbackstate)
 
 **Type:** PlaybackState
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -270,10 +222,6 @@ The video height of this media asset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlaybackState-videoHeight?: int--><!--Device-AVPlaybackState-videoHeight?: int-End-->
@@ -292,10 +240,6 @@ The video width of this media asset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlaybackState-videoWidth?: int--><!--Device-AVPlaybackState-videoWidth?: int-End-->
@@ -313,10 +257,6 @@ Current player volume
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -12,13 +12,9 @@ import { curves } from 'curves';
 function responsiveSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve
 ```
 
-Creates a responsive spring animation curve. It is a special case of [springMotion](../../apis-na/arkts-apis/arkts-na-curves-springmotion-f.md#springMotion), with the only difference in the default values. It can be used together with **springMotion**.
+Creates a responsive spring animation curve. It is a special case of [springMotion](../../apis-na/arkts-apis/arkts-na-curves-springmotion-f.md#springmotion), with the only difference in the default values. It can be used together with **springMotion**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,7 +36,7 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 | --- | --- |
 | ICurve | Curve. <br>**NOTE：**<br>1. To apply custom settings for a spring animation, you are advised to use **springMotion**. When using **responsiveSpringMotion**, you are advised to retain the default settings. <br>2. The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in [animation]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { curves } from '@kit.ArkUI'

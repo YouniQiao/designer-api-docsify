@@ -4,10 +4,6 @@ The symbol rendering strategy.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum SymbolRenderingStrategy--><!--Device-unnamed-declare enum SymbolRenderingStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ SINGLE = 0
 Single-color mode (default value). The default color is black. You can set one or multiple colors, but only the first color will be applied.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Multi-color mode. A maximum of three colors can be set. If only one color is set
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -69,10 +57,6 @@ MULTIPLE_OPACITY = 2
 Layered mode. The default color is black. You can set one or multiple colors, but only the first color will be applied. Opacity is predefined for the layers: 100% for the first layer, 50% for the second layer, and 20% for the third layer.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

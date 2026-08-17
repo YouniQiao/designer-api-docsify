@@ -16,10 +16,6 @@ Exports the public key for the specified user. This API uses a promise to return
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-huks-function exportKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function exportKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>-End-->
@@ -60,7 +56,7 @@ Exports the public key for the specified user. This API uses a promise to return
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
-## Examples
+**Examples**
 
 Prerequisites: see Example of generateKeyItemAsUser.
 

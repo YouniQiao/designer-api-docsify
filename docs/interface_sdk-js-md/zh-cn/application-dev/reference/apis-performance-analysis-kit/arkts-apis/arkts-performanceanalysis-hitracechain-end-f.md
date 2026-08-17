@@ -10,10 +10,6 @@ function end(id: HiTraceId): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hiTraceChain-function end(id: HiTraceId): void--><!--Device-hiTraceChain-function end(id: HiTraceId): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
@@ -24,7 +20,7 @@ function end(id: HiTraceId): void
 | --- | --- | --- | --- |
 | id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 | HiTraceId实例。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 开始跟踪，跟踪标志是DEFAULT。

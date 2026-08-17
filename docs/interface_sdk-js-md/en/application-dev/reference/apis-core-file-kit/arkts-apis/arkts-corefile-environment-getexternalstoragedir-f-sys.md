@@ -16,10 +16,6 @@ Obtains the sandbox path of the root directory of an external storage card. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 <!--Device-Environment-function getExternalStorageDir(): string--><!--Device-Environment-function getExternalStorageDir(): string-End-->

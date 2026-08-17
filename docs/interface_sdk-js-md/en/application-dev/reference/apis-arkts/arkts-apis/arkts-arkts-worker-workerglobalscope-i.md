@@ -2,15 +2,13 @@
 
 Specifies the worker thread running environment, which is isolated from the host thread environment.
 
-**Inheritance/Implementation:** WorkerGlobalScope extends [EventTarget](arkts-arkts-worker-eventtarget-i.md#EventTarget)
+**Inheritance/Implementation:** WorkerGlobalScope extends [EventTarget](arkts-arkts-worker-eventtarget-i.md#eventtarget)
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GlobalScope](arkts-arkts-worker-globalscope-i.md#GlobalScope)
+**Substitutes:** [GlobalScope](arkts-arkts-worker-globalscope-i.md#globalscope)
 
 <!--Device-unnamed-declare interface WorkerGlobalScope--><!--Device-unnamed-declare interface WorkerGlobalScope-End-->
 
@@ -47,8 +45,6 @@ Worker name specified when there is a new worker.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** name
@@ -69,8 +65,6 @@ The onerror attribute of parentPort specifies the event handler to be called whe
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** onerror
@@ -90,8 +84,6 @@ Specify the type attribute for self.
 **Type:** [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md) & typeof globalThis
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

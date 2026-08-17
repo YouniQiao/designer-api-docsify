@@ -6,10 +6,6 @@ Class of the photo editor ExtensionAbility, which provides APIs for you to edit 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class PhotoEditorExtensionAbility--><!--Device-unnamed-declare class PhotoEditorExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
@@ -30,17 +26,13 @@ Called back when the state of an UI extension changes to background.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoEditorExtensionAbility-onBackground(): void--><!--Device-PhotoEditorExtensionAbility-onBackground(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
@@ -64,17 +56,13 @@ Called back when an UI extension is started for initialization.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoEditorExtensionAbility-onCreate(): void--><!--Device-PhotoEditorExtensionAbility-onCreate(): void-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
@@ -98,17 +86,13 @@ Called back before an UI extension is destroyed.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoEditorExtensionAbility-onDestroy(): void | Promise<void>--><!--Device-PhotoEditorExtensionAbility-onDestroy(): void | Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
-## Examples
+**Examples**
 
 A synchronous callback example is as follows:
 
@@ -150,10 +134,6 @@ Called back before an UI extension is destroyed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoEditorExtensionAbility-onDestroy(): Promise<void> | undefined--><!--Device-PhotoEditorExtensionAbility-onDestroy(): Promise<void> | undefined-End-->
@@ -176,17 +156,13 @@ Called back when the state of an UI extension changes to foreground.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoEditorExtensionAbility-onForeground(): void--><!--Device-PhotoEditorExtensionAbility-onForeground(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
@@ -210,10 +186,6 @@ Called back when an UI extension session is created and original image is ready.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoEditorExtensionAbility-onStartContentEditing(uri: string, want: Want, session: UIExtensionContentSession): void--><!--Device-PhotoEditorExtensionAbility-onStartContentEditing(uri: string, want: Want, session: UIExtensionContentSession): void-End-->
@@ -228,7 +200,7 @@ Called back when an UI extension session is created and original image is ready.
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want info of the UI extension. |
 | session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | Indicates the session of the UI extension page. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PhotoEditorExtensionAbility, Want, UIExtensionContentSession } from '@kit.AbilityKit';
@@ -253,10 +225,6 @@ Indicates configuration information about an Photo editor extension ability cont
 **Type:** [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

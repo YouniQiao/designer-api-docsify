@@ -16,10 +16,6 @@ Searching for a specified target.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-function searchTarget(target: TargetInfo, params: SearchParams): Promise<SearchResult>--><!--Device-mechanicManager-function searchTarget(target: TargetInfo, params: SearchParams): Promise<SearchResult>-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -49,7 +45,7 @@ Searching for a specified target.
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 | [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let targetInfo: mechanicManager.TargetInfo = {

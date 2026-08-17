@@ -4,10 +4,6 @@ Defines a struct for the details about the device-cloud sync process.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-interface ChangeInfo--><!--Device-relationalStore-interface ChangeInfo-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -30,10 +26,6 @@ Location where data is deleted. If the primary key of the table is of the string
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ChangeInfo-deleted: Array<string> | Array<long>--><!--Device-ChangeInfo-deleted: Array<string> | Array<long>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -49,10 +41,6 @@ Location where data is inserted. If the primary key of the table is of the strin
 **Type:** Array&lt;string&gt; \| Array&lt;long&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ChangeInfo-inserted: Array<string> | Array<long>--><!--Device-ChangeInfo-inserted: Array<string> | Array<long>-End-->
 
@@ -70,10 +58,6 @@ Name of the table with data changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ChangeInfo-table: string--><!--Device-ChangeInfo-table: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -90,10 +74,6 @@ Type of the data changed, which can be data or asset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ChangeInfo-type: ChangeType--><!--Device-ChangeInfo-type: ChangeType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -109,10 +89,6 @@ Location where data is updated. If the primary key of the table is of the string
 **Type:** Array&lt;string&gt; \| Array&lt;long&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ChangeInfo-updated: Array<string> | Array<long>--><!--Device-ChangeInfo-updated: Array<string> | Array<long>-End-->
 

@@ -4,10 +4,6 @@ AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct AlbumPickerComponent--><!--Device-unnamed-export declare struct AlbumPickerComponent-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -30,13 +26,9 @@ albumPickerController?: AlbumPickerController
 
 AlbumPickerController
 
-**Type:** [AlbumPickerController](../../apis-na/arkts-apis/arkts-na-file-albumpickercomponent-albumpickercontroller-c.md)
+**Type:** [AlbumPickerController](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -52,13 +44,9 @@ albumPickerOptions?: AlbumPickerOptions
 
 AlbumPickerOptions
 
-**Type:** [AlbumPickerOptions](../../apis-na/arkts-apis/arkts-na-file-albumpickercomponent-albumpickeroptions-c.md)
+**Type:** [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,10 +66,6 @@ Callback when select an album, will return album uri
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AlbumPickerComponent-onAlbumClick?: (albumInfo: AlbumInfo) => boolean--><!--Device-AlbumPickerComponent-onAlbumClick?: (albumInfo: AlbumInfo) => boolean-End-->
@@ -96,13 +80,9 @@ onEmptyAreaClick?: EmptyAreaClickCallback
 
 Callback when click the empty area of the album component
 
-**Type:** [EmptyAreaClickCallback](../../apis-na/arkts-apis/arkts-na-emptyareaclickcallback-t.md)
+**Type:** [EmptyAreaClickCallback](arkts-medialibrary-emptyareaclickcallback-t.md)
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 

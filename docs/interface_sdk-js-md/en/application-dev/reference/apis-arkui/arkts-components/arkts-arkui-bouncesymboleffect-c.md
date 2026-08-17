@@ -2,13 +2,9 @@
 
 Defines BounceSymbolEffect class, which inherits from **SymbolEffect**.
 
-**Inheritance/Implementation:** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
+**Inheritance/Implementation:** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#symboleffect)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class BounceSymbolEffect--><!--Device-unnamed-declare class BounceSymbolEffect-End-->
 
@@ -23,10 +19,6 @@ constructor(scope?: EffectScope, direction?: EffectDirection)
 A constructor used to create a **ScaleSymbolEffect** instance, which comes with a scaling animation effect.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,10 +49,6 @@ Effect direction. Default value: **EffectDirection.DOWN**
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -82,10 +70,6 @@ Effect scope. Default value: **EffectScope.LAYER**
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

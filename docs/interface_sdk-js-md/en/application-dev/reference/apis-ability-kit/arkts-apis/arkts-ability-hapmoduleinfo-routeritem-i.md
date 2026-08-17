@@ -4,10 +4,6 @@ Describes the router table configuration of the module.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface RouterItem--><!--Device-unnamed-export interface RouterItem-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -23,10 +19,6 @@ Function decorated by @Builder. The function describes the UI of the page.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -46,10 +38,6 @@ Any type of custom data in the [routing table configuration file](../../../quick
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RouterItem-readonly customData: string--><!--Device-RouterItem-readonly customData: string-End-->
@@ -67,10 +55,6 @@ User-defined string in the [routing table configuration file](../../../quick-sta
 **Type:** Array&lt;[DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -90,10 +74,6 @@ Name of the page to be redirected to.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RouterItem-readonly name: string--><!--Device-RouterItem-readonly name: string-End-->
@@ -111,10 +91,6 @@ Path of the page in the module.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -16,10 +16,6 @@ Calculate the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function getSignalLevel(rssi: int, band: int): int--><!--Device-wifiManager-function getSignalLevel(rssi: int, band: int): int-End-->
@@ -48,7 +44,7 @@ Calculate the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

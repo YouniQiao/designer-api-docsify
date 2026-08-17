@@ -4,10 +4,6 @@ Enumerates the print directions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-enum PrintOrientationMode--><!--Device-print-enum PrintOrientationMode-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -21,10 +17,6 @@ ORIENTATION_MODE_PORTRAIT = 0
 Portrait mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintOrientationMode-ORIENTATION_MODE_PORTRAIT = 0--><!--Device-PrintOrientationMode-ORIENTATION_MODE_PORTRAIT = 0-End-->
 
@@ -40,10 +32,6 @@ Landscape mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintOrientationMode-ORIENTATION_MODE_LANDSCAPE= 1--><!--Device-PrintOrientationMode-ORIENTATION_MODE_LANDSCAPE= 1-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -57,10 +45,6 @@ ORIENTATION_MODE_REVERSE_LANDSCAPE = 2
 Reverse landscape mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_LANDSCAPE = 2--><!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_LANDSCAPE = 2-End-->
 
@@ -76,10 +60,6 @@ Reverse portrait mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_PORTRAIT = 3--><!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_PORTRAIT = 3-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -93,10 +73,6 @@ ORIENTATION_MODE_NONE = 4
 Adaptive mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintOrientationMode-ORIENTATION_MODE_NONE = 4--><!--Device-PrintOrientationMode-ORIENTATION_MODE_NONE = 4-End-->
 

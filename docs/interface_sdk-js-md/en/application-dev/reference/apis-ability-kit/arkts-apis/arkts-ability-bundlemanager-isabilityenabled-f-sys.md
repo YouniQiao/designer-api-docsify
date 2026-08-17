@@ -16,10 +16,6 @@ Checks whether an ability of an application or an application clone is enabled. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -49,7 +45,7 @@ Checks whether an ability of an application or an application clone is enabled. 
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -94,10 +90,6 @@ Checks whether an ability is enabled. This API uses an asynchronous callback to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -109,7 +101,7 @@ Checks whether an ability is enabled. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | AbilityInfo | Yes | Information about the target ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. **true** if enabled, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
@@ -120,7 +112,7 @@ Checks whether an ability is enabled. This API uses an asynchronous callback to 
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -167,10 +159,6 @@ Checks whether an ability is enabled. This API uses a promise to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -198,7 +186,7 @@ Checks whether an ability is enabled. This API uses a promise to return the resu
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

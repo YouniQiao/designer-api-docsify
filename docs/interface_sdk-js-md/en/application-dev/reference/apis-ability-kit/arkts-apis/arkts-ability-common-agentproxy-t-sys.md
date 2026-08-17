@@ -8,10 +8,6 @@ Represents the AgentProxy type.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-common-export type AgentProxy = _AgentProxy--><!--Device-common-export type AgentProxy = _AgentProxy-End-->

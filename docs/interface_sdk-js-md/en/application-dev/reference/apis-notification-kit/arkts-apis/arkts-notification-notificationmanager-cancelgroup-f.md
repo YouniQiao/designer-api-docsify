@@ -16,10 +16,6 @@ Cancels notifications under a notification group of this application. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -28,7 +24,7 @@ Cancels notifications under a notification group of this application. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest) when the notification is published. |
+| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest) when the notification is published. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -40,7 +36,7 @@ Cancels notifications under a notification group of this application. This API u
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,10 +63,6 @@ Cancels notifications under a notification group of this application. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>--><!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -79,7 +71,7 @@ Cancels notifications under a notification group of this application. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest) when the notification is published. |
+| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest) when the notification is published. |
 
 **Return value:**
 
@@ -96,7 +88,7 @@ Cancels notifications under a notification group of this application. This API u
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -16,11 +16,9 @@ Obtains the list of all existing Wi-Fi configurations. &lt;p&gt;You can obtain o
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceConfigs](arkts-connectivity-wifimanager-getdeviceconfigs-f.md#getDeviceConfigs)
+**Substitutes:** [getDeviceConfigs](arkts-connectivity-wifimanager-getdeviceconfigs-f.md#getdeviceconfigs)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.GET_WIFI_CONFIG
 
@@ -36,7 +34,7 @@ Obtains the list of all existing Wi-Fi configurations. &lt;p&gt;You can obtain o
 | --- | --- |
 | Array&lt;WifiDeviceConfig&gt; | sReturns the list of all existing Wi-Fi configurations you created on your application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

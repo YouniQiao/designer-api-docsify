@@ -4,10 +4,6 @@ Anonymous personalzied HRTF file descriptor for cross-process transfer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioHRTFAnonymousDescriptor--><!--Device-audio-interface AudioHRTFAnonymousDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -32,10 +28,6 @@ The file descriptor of personalzied HRTF.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioHRTFAnonymousDescriptor-fd: int--><!--Device-AudioHRTFAnonymousDescriptor-fd: int-End-->
@@ -55,10 +47,6 @@ Total size of personalzied HRTF data in bytes.
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

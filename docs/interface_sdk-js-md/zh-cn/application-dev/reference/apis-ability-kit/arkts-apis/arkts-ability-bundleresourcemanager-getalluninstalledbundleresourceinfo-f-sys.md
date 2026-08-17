@@ -10,10 +10,6 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
 
 <!--Device-bundleResourceManager-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>--><!--Device-bundleResourceManager-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>-End-->
@@ -26,7 +22,7 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceFlags | int | 是 | 指定返回的BundleResourceInfo所包含的信息，取值请参考 [ResourceFlag枚举值](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag（系统接口）)。 |
+| resourceFlags | int | 是 | 指定返回的BundleResourceInfo所包含的信息，取值请参考 [ResourceFlag枚举值](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#resourceflag系统接口)。 |
 
 **返回值：**
 
@@ -41,7 +37,7 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';

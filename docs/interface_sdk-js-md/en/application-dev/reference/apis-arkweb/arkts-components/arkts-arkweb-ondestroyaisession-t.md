@@ -4,13 +4,9 @@
 type OnDestroyAISession = (id: string) => void
 ```
 
-Triggered when an AI session is destroyed. Used for cleaning up resources associated with custom AI models.
+AI session destruction callback function type. Used to clean up resources associated with the custom AI model.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Defines the controller of the **XComponent**. You can bind the controller to the
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class XComponentController--><!--Device-unnamed-declare class XComponentController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,17 +18,13 @@ A constructor used to create a **XComponentController** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentController-constructor()--><!--Device-XComponentController-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 xcomponentController: XComponentController = new XComponentController();
@@ -47,10 +39,6 @@ getXComponentContext(): Object
 Obtains the context of an **XComponent** object. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Obtains the ID of the surface held by the **XComponent**. This API works only wh
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentController-getXComponentSurfaceId(): string--><!--Device-XComponentController-getXComponentSurfaceId(): string-End-->
@@ -90,7 +74,7 @@ Obtains the ID of the surface held by the **XComponent**. This API works only wh
 | --- | --- |
 | string | ID of the surface held by the **XComponent**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.ets
@@ -124,10 +108,6 @@ Obtains the display area for the surface held by the **XComponent**, including t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -152,10 +132,6 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -176,13 +152,9 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 lockCanvas(): DrawingCanvas | null
 ```
 
-Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods, see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#Canvas).
+Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods, see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#canvas).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -207,10 +179,6 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 Triggered when the surface held by the **XComponent** has its size changed (including the time when the **XComponent** is created with the specified size). This API works only when **type** of the **XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -237,10 +205,6 @@ Triggered when the surface held by the **XComponent** is created. This API works
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -264,10 +228,6 @@ onSurfaceDestroyed(surfaceId: string): void
 Triggered when the surface held by the **XComponent** is destroyed. This API works only when **type** of the **XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -293,10 +253,6 @@ Sets the options of the surface created by the **XComponent**, which determine w
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -321,10 +277,6 @@ Sets the display area for the surface held by the **XComponent**, including the 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -348,10 +300,6 @@ setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 Sets whether to lock the orientation of the surface held by this **XComponent** when the screen rotates. This API is effective only when the **XComponent** type is **SURFACE** (**"surface"**).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -380,11 +328,9 @@ Sets the width and height of the surface held by the **XComponent**. This API wo
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [setXComponentSurfaceRect](#setXComponentSurfaceRect)
+**Substitutes:** [setXComponentSurfaceRect](#setxcomponentsurfacerect)
 
 <!--Device-XComponentController-setXComponentSurfaceSize(value: {    surfaceWidth: number;    surfaceHeight: number;  }): void--><!--Device-XComponentController-setXComponentSurfaceSize(value: {    surfaceWidth: number;    surfaceHeight: number;  }): void-End-->
 
@@ -402,13 +348,9 @@ Sets the width and height of the surface held by the **XComponent**. This API wo
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Starts AI image analysis in the given settings. Before calling this API, make sure the AI image analyzer is [enabled](arkts-arkui-xcomponent-attribute.md#enableAnalyzer). This API uses a promise to return the result. Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API. If this API is repeatedly called before the execution is complete, an error callback is triggered. > **NOTE：**> The image analysis type cannot be dynamically modified. > > This API depends on device capabilities. If it is called on an incompatible device, an error code is returned.
+Starts AI image analysis in the given settings. Before calling this API, make sure the AI image analyzer is [enabled](arkts-arkui-xcomponent-attribute.md#enableanalyzer). This API uses a promise to return the result. Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API. If this API is repeatedly called before the execution is complete, an error callback is triggered. > **NOTE：**> The image analysis type cannot be dynamically modified. > > This API depends on device capabilities. If it is called on an incompatible device, an error code is returned.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -448,10 +390,6 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -469,10 +407,6 @@ unlockCanvasAndPost(canvas: DrawingCanvas):void
 Submits the drawn content from a canvas object to the display area of the **XComponent** component and releases the canvas object.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

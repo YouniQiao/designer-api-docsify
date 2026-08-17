@@ -8,10 +8,6 @@ The ErrorHandler will be called when the ArkTS runtime throws an exception that 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-errorManager-export type ErrorHandler = (errObject: Error) => void--><!--Device-errorManager-export type ErrorHandler = (errObject: Error) => void-End-->

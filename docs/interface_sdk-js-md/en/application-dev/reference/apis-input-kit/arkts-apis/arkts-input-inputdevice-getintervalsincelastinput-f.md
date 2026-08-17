@@ -16,10 +16,6 @@ Obtains the interval (including the device sleep time) elapsed since the last sy
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputDevice-function getIntervalSinceLastInput(): Promise<long>--><!--Device-inputDevice-function getIntervalSinceLastInput(): Promise<long>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -30,7 +26,7 @@ Obtains the interval (including the device sleep time) elapsed since the last sy
 | --- | --- |
 | Promise&lt;long&gt; | Promise used to return the time elapsed since the last system input event, in microseconds (μs). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';

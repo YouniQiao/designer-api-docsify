@@ -4,11 +4,9 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 12
 
-**替代接口：** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md#PhotoSelectOptions)
+**替代接口：** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md#photoselectoptions)
 
 <!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
 
@@ -25,8 +23,6 @@ MIMEType?: PhotoViewMIMETypes
 **类型：** PhotoViewMIMETypes
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 18
 
@@ -49,8 +45,6 @@ maxSelectNumber?: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 18
 

@@ -10,8 +10,6 @@ Changes file permissions. This API returns the result synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-declare function chmodSync(path: string, mode: number): void--><!--Device-unnamed-declare function chmodSync(path: string, mode: number): void-End-->

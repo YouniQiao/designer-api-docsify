@@ -2,10 +2,6 @@
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class Configuration--><!--Device-unnamed-export declare class Configuration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ The magnification of the current system font.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -43,10 +35,6 @@ Internationalization related information, such as language, country, text layout
 **Type:** [Locate](arkts-arkui-viewmodel-locate-c.md)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

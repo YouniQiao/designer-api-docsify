@@ -16,10 +16,6 @@ Unsubscribe to wear detection sensor data, {@code SensorId.WEAR_DETECTION}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function offWearDetectionChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<WearDetectionResponse>): void--><!--Device-sensor-function offWearDetectionChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<WearDetectionResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

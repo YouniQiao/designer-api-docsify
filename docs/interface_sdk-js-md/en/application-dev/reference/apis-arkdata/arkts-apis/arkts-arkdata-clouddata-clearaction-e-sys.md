@@ -4,10 +4,6 @@ Enumerates the operations for clearing the downloaded cloud data locally.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudData-enum ClearAction--><!--Device-cloudData-enum ClearAction-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -23,10 +19,6 @@ CLEAR_CLOUD_INFO = 0
 Clear the cloud identifier of the data downloaded from the cloud and retain the data locally.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ClearAction-CLEAR_CLOUD_INFO = 0--><!--Device-ClearAction-CLEAR_CLOUD_INFO = 0-End-->
 
@@ -44,10 +36,6 @@ Clear the data downloaded from the cloud, excluding the cloud data that has been
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ClearAction-CLEAR_CLOUD_DATA_AND_INFO = 1--><!--Device-ClearAction-CLEAR_CLOUD_DATA_AND_INFO = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -63,10 +51,6 @@ CLEAR_CLOUD_NONE = 2
 Does not clear any data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ClearAction-CLEAR_CLOUD_NONE = 2--><!--Device-ClearAction-CLEAR_CLOUD_NONE = 2-End-->
 

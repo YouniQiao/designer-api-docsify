@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-interface PreviewAttribute--><!--Device-print-interface PreviewAttribute-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -26,10 +22,6 @@ previewRange: PrinterRange
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PreviewAttribute-previewRange: PrinterRange--><!--Device-PreviewAttribute-previewRange: PrinterRange-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -47,10 +39,6 @@ result?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PreviewAttribute-result?: int--><!--Device-PreviewAttribute-result?: int-End-->
 

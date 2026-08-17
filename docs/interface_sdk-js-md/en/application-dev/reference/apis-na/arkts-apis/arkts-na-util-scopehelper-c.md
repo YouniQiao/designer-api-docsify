@@ -4,9 +4,7 @@ Provides APIs to define the valid range of a field. The constructor of this clas
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-util-class ScopeHelper--><!--Device-util-class ScopeHelper-End-->
 
@@ -22,9 +20,7 @@ Clamps a given value to the current range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-clamp(value: T): T--><!--Device-ScopeHelper-clamp(value: T): T-End-->
 
@@ -52,9 +48,7 @@ A constructor used to create a Scope instance with the lower and upper bounds sp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-constructor(lowerObj: T, upperObj: T)--><!--Device-ScopeHelper-constructor(lowerObj: T, upperObj: T)-End-->
 
@@ -77,9 +71,7 @@ Checks whether a given value is within the current range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-contains(value: T): boolean--><!--Device-ScopeHelper-contains(value: T): boolean-End-->
 
@@ -107,9 +99,7 @@ Checks whether a given range is within the current range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-contains(range: ScopeHelper<T>): boolean--><!--Device-ScopeHelper-contains(range: ScopeHelper<T>): boolean-End-->
 
@@ -119,7 +109,7 @@ Checks whether a given range is within the current range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range |
+| range | [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range |
 
 **Return value:**
 
@@ -137,9 +127,7 @@ Creates the smallest range that includes the current range and the given lower a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-expand(lowerObj: T, upperObj: T): ScopeHelper<T>--><!--Device-ScopeHelper-expand(lowerObj: T, upperObj: T): ScopeHelper<T>-End-->
 
@@ -156,7 +144,7 @@ Creates the smallest range that includes the current range and the given lower a
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and the given lower and upper bounds. |
+| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and the given lower and upper bounds. |
 
 ## expand
 
@@ -168,9 +156,7 @@ Creates the smallest range that includes the current range and a given range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-expand(range: ScopeHelper<T>): ScopeHelper<T>--><!--Device-ScopeHelper-expand(range: ScopeHelper<T>): ScopeHelper<T>-End-->
 
@@ -180,13 +166,13 @@ Creates the smallest range that includes the current range and a given range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range object |
+| range | [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range object |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given range. |
+| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given range. |
 
 ## expand
 
@@ -198,9 +184,7 @@ Creates the smallest range that includes the current range and a given value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-expand(value: T): ScopeHelper<T>--><!--Device-ScopeHelper-expand(value: T): ScopeHelper<T>-End-->
 
@@ -216,7 +200,7 @@ Creates the smallest range that includes the current range and a given value.
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given value. |
+| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given value. |
 
 ## getLower
 
@@ -228,9 +212,7 @@ Obtains the lower bound of the current range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-getLower(): T--><!--Device-ScopeHelper-getLower(): T-End-->
 
@@ -252,9 +234,7 @@ Obtains the upper bound of the current range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-getUpper(): T--><!--Device-ScopeHelper-getUpper(): T-End-->
 
@@ -276,9 +256,7 @@ Returns the intersection of a given range and the current range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-intersect(range: ScopeHelper<T>): ScopeHelper<T>--><!--Device-ScopeHelper-intersect(range: ScopeHelper<T>): ScopeHelper<T>-End-->
 
@@ -288,13 +266,13 @@ Returns the intersection of a given range and the current range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range object |
+| range | [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range object |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of a given range and the current range. |
+| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of a given range and the current range. |
 
 ## intersect
 
@@ -306,9 +284,7 @@ Returns the intersection of the current range and the range specified by the giv
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-intersect(lowerObj: T, upperObj: T): ScopeHelper<T>--><!--Device-ScopeHelper-intersect(lowerObj: T, upperObj: T): ScopeHelper<T>-End-->
 
@@ -325,7 +301,7 @@ Returns the intersection of the current range and the range specified by the giv
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of the current range and the range specified by the given lower and upper bounds. |
+| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of the current range and the range specified by the given lower and upper bounds. |
 
 ## toString
 
@@ -337,9 +313,7 @@ Obtains a string representation of the current range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScopeHelper-toString(): string--><!--Device-ScopeHelper-toString(): string-End-->
 

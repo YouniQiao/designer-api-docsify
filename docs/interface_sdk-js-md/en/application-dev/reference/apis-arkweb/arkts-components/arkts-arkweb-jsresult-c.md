@@ -1,12 +1,8 @@
 # JsResult
 
-Defines the js result.
+JsResult is a result handling object returned by the Web component when processing JavaScript dialog box events. It is used in scenarios where developers intercept and customize the handling of dialog boxes such as `window.alert`, `window.confirm`, and `window.prompt`. In event callbacks such as [onAlert](arkts-arkweb-web-attribute.md#onalert), [onConfirm](arkts-arkweb-web-attribute.md#onconfirm), or [onPrompt](arkts-arkweb-web-attribute.md#onprompt), developers can use this object to feed back the user's operation results, such as confirmation, cancellation, or input content, to the Web component, thereby controlling the subsequent behavior of the dialog box.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class JsResult--><!--Device-unnamed-declare class JsResult-End-->
 
@@ -18,13 +14,9 @@ Defines the js result.
 constructor()
 ```
 
-Constructor.
+Constructor of JsResult. Used to handle JavaScript dialog box events.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ Constructor.
 handleCancel(): void
 ```
 
-Handle the user's JavaScript result if cancel the dialog.
+Notifies the **Web** component of the user's cancel operation in the dialog box.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ Handle the user's JavaScript result if cancel the dialog.
 handleConfirm(): void
 ```
 
-Handle the user's JavaScript result if confirm the dialog.
+Notifies the **Web** component of the user's confirm operation in the dialog box.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +62,9 @@ Handle the user's JavaScript result if confirm the dialog.
 handlePromptConfirm(result: string): void
 ```
 
-Handle the user's JavaScript result if confirm the prompt dialog.
+Notifies the Web component that the user has confirmed the dialog box operation and passes the dialog box content.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,5 +76,5 @@ Handle the user's JavaScript result if confirm the prompt dialog.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | string | Yes | The content of the dialog box entered by the user. |
+| result | string | Yes | User input in the dialog box. |
 

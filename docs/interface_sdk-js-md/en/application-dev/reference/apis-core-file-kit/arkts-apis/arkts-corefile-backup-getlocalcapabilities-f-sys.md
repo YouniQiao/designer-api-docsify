@@ -16,10 +16,6 @@ Obtain a Json file that describes local capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-backup-function getLocalCapabilities(): Promise<FileData>--><!--Device-backup-function getLocalCapabilities(): Promise<FileData>-End-->
@@ -44,7 +40,7 @@ Obtain a Json file that describes local capabilities.
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -93,10 +89,6 @@ Obtain a Json file that describes local capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-backup-function getLocalCapabilities(callback: AsyncCallback<FileData>): void--><!--Device-backup-function getLocalCapabilities(callback: AsyncCallback<FileData>): void-End-->
@@ -121,7 +113,7 @@ Obtain a Json file that describes local capabilities.
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -173,10 +165,6 @@ Obtain a json file that describes local capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-backup-function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<FileData>--><!--Device-backup-function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<FileData>-End-->
@@ -210,7 +198,7 @@ Obtain a json file that describes local capabilities.
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

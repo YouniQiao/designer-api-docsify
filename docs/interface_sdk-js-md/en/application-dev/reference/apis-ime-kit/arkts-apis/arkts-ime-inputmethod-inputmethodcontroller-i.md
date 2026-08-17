@@ -1,12 +1,8 @@
 # InputMethodController
 
-A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getController).
+A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-inputMethod-interface InputMethodController--><!--Device-inputMethod-interface InputMethodController-End-->
 
@@ -28,10 +24,6 @@ Attach application to the input method service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -52,7 +44,7 @@ Attach application to the input method service.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -81,10 +73,6 @@ Attach application to the input method service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -110,7 +98,7 @@ Attach application to the input method service.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -136,10 +124,6 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 Attach application to the input method service.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>-End-->
 
@@ -167,7 +151,7 @@ Attach application to the input method service.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -196,10 +180,6 @@ Attach application to the input method service with UI context.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputMethodController-attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>--><!--Device-InputMethodController-attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>-End-->
@@ -227,7 +207,7 @@ Attach application to the input method service with UI context.
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -257,10 +237,6 @@ Notify the input method the selected text and the selection range of the current
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -283,7 +259,7 @@ Notify the input method the selected text and the selection range of the current
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -306,10 +282,6 @@ changeSelection(text: string, start: int, end: int): Promise<void>
 Notify the input method the selected text and the selection range of the current application text has changed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-changeSelection(text: string, start: int, end: int): Promise<void>--><!--Device-InputMethodController-changeSelection(text: string, start: int, end: int): Promise<void>-End-->
 
@@ -338,7 +310,7 @@ Notify the input method the selected text and the selection range of the current
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -360,10 +332,6 @@ Detach the applications from the input method manager service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-detach(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-detach(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -381,7 +349,7 @@ Detach the applications from the input method manager service.
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -405,10 +373,6 @@ Detach the applications from the input method manager service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-detach(): Promise<void>--><!--Device-InputMethodController-detach(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -426,7 +390,7 @@ Detach the applications from the input method manager service.
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -448,10 +412,6 @@ Discard the typing text
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-discardTypingText(): Promise<void>--><!--Device-InputMethodController-discardTypingText(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -470,7 +430,7 @@ Discard the typing text
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) | the other side does not accept the request. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -492,10 +452,6 @@ Hide soft keyboard. This API can be called only by system applications.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
 <!--Device-InputMethodController-hideSoftKeyboard(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-hideSoftKeyboard(callback: AsyncCallback<void>): void-End-->
@@ -516,7 +472,7 @@ Hide soft keyboard. This API can be called only by system applications.
 | [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -540,10 +496,6 @@ Hide soft keyboard. This API can be called only by system applications.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
 <!--Device-InputMethodController-hideSoftKeyboard(): Promise<void>--><!--Device-InputMethodController-hideSoftKeyboard(): Promise<void>-End-->
@@ -564,7 +516,7 @@ Hide soft keyboard. This API can be called only by system applications.
 | [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -586,10 +538,6 @@ Hide the text input and stop typing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-hideTextInput(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-hideTextInput(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -608,7 +556,7 @@ Hide the text input and stop typing.
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -632,10 +580,6 @@ Hide the text input and stop typing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-hideTextInput(): Promise<void>--><!--Device-InputMethodController-hideTextInput(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -654,7 +598,7 @@ Hide the text input and stop typing.
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -676,10 +620,6 @@ Unregister the callback of deleteLeft.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-offDeleteLeft(callback?: Callback<int>): void--><!--Device-InputMethodController-offDeleteLeft(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -699,10 +639,6 @@ offDeleteRight(callback?: Callback<int>): void
 Unregister the callback of deleteRight.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-offDeleteRight(callback?: Callback<int>): void--><!--Device-InputMethodController-offDeleteRight(callback?: Callback<int>): void-End-->
 
@@ -724,10 +660,6 @@ Unsubscribe 'finishTextPreview' event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-offFinishTextPreview(callback?: Callback<void>): void--><!--Device-InputMethodController-offFinishTextPreview(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -747,10 +679,6 @@ offGetLeftTextOfCursor(callback?: GetTextCallback): void
 Unregister the callback of getLeftTextofCursor event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-offGetLeftTextOfCursor(callback?: GetTextCallback): void--><!--Device-InputMethodController-offGetLeftTextOfCursor(callback?: GetTextCallback): void-End-->
 
@@ -772,10 +700,6 @@ Unregister the callback of getRightTextOfCursor event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-offGetRightTextOfCursor(callback?: GetTextCallback): void--><!--Device-InputMethodController-offGetRightTextOfCursor(callback?: GetTextCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -795,10 +719,6 @@ offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void
 Unregister the callback of getTextIndexAtCursor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -822,10 +742,6 @@ Unregister the callback of handleExtendAction.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-offHandleExtendAction(callback?: Callback<ExtendAction>): void--><!--Device-InputMethodController-offHandleExtendAction(callback?: Callback<ExtendAction>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -845,10 +761,6 @@ offInsertText(callback?: Callback<string>): void
 Unregister the callback of insertText.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-offInsertText(callback?: Callback<string>): void--><!--Device-InputMethodController-offInsertText(callback?: Callback<string>): void-End-->
 
@@ -870,10 +782,6 @@ Unregister the callback of moveCursor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-offMoveCursor(callback?: Callback<Direction>): void--><!--Device-InputMethodController-offMoveCursor(callback?: Callback<Direction>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -893,10 +801,6 @@ offSelectByMovement(callback?: Callback<Movement>): void
 Unregister the callback of selectedByMovement.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-offSelectByMovement(callback?: Callback<Movement>): void--><!--Device-InputMethodController-offSelectByMovement(callback?: Callback<Movement>): void-End-->
 
@@ -918,10 +822,6 @@ Unregister the callback of selectedByRange.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-offSelectByRange(callback?: Callback<Range>): void--><!--Device-InputMethodController-offSelectByRange(callback?: Callback<Range>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -941,10 +841,6 @@ offSendFunctionKey(callback?: Callback<FunctionKey>): void
 Unregister the callback of sendFunctionKey.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-offSendFunctionKey(callback?: Callback<FunctionKey>): void--><!--Device-InputMethodController-offSendFunctionKey(callback?: Callback<FunctionKey>): void-End-->
 
@@ -966,10 +862,6 @@ Unregister the callback of sendKeyboardStatus.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void--><!--Device-InputMethodController-offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -989,10 +881,6 @@ offSetPreviewText(callback?:SetPreviewTextCallback): void
 Unsubscribe 'setPreviewText' event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1016,10 +904,6 @@ Unregister the callback of deleteLeft.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'deleteLeft', callback?: (length: number) => void): void--><!--Device-InputMethodController-off(type: 'deleteLeft', callback?: (length: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1031,7 +915,7 @@ Unregister the callback of deleteLeft.
 | type | 'deleteLeft' | Yes | event type, fixed as 'deleteLeft'. |
 | callback | (length: number) =&gt; void | No | the callback of 'deleteLeft', when subscriber unsubscribes all callback functions of event 'deleteLeft', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -1055,10 +939,6 @@ Unregister the callback of deleteRight.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'deleteRight', callback?: (length: number) => void): void--><!--Device-InputMethodController-off(type: 'deleteRight', callback?: (length: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1070,7 +950,7 @@ Unregister the callback of deleteRight.
 | type | 'deleteRight' | Yes | event type, fixed as 'deleteRight'. |
 | callback | (length: number) =&gt; void | No | the callback of 'deleteRight', when subscriber unsubscribes all callback functions of event 'deleteRight', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -1093,10 +973,6 @@ Unsubscribe 'finishTextPreview' event.
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'finishTextPreview', callback?: Callback<void>): void--><!--Device-InputMethodController-off(type: 'finishTextPreview', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1108,7 +984,7 @@ Unsubscribe 'finishTextPreview' event.
 | type | 'finishTextPreview' | Yes | the type of unsubscribe event. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback of off('finishTextPreview'). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -1143,10 +1019,6 @@ Unregister the callback of getLeftTextOfCursor event.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void--><!--Device-InputMethodController-off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1158,7 +1030,7 @@ Unregister the callback of getLeftTextOfCursor event.
 | type | 'getLeftTextOfCursor' | Yes | event type, fixed as 'getLeftTextOfCursor'. |
 | callback | (length: number) =&gt; string | No | the callback of 'getLeftTextOfCursor', when subscriber unsubscribes all callback functions of event 'getLeftTextOfCursor', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let getLeftTextOfCursorCallback: (length: number) => string = (length: number): string => {
@@ -1182,10 +1054,6 @@ Unregister the callback of getRightTextOfCursor event.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void--><!--Device-InputMethodController-off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1197,7 +1065,7 @@ Unregister the callback of getRightTextOfCursor event.
 | type | 'getRightTextOfCursor' | Yes | event type, fixed as 'getRightTextOfCursor'. |
 | callback | (length: number) =&gt; string | No | the callback of 'getRightTextOfCursor', when subscriber unsubscribes all callback functions of event 'getRightTextOfCursor', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let getRightTextOfCursorCallback: (length: number) => string = (length: number): string => {
@@ -1221,10 +1089,6 @@ Unregister the callback of getTextIndexAtCursor.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'getTextIndexAtCursor', callback?: () => number): void--><!--Device-InputMethodController-off(type: 'getTextIndexAtCursor', callback?: () => number): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1236,7 +1100,7 @@ Unregister the callback of getTextIndexAtCursor.
 | type | 'getTextIndexAtCursor' | Yes | event type, fixed as 'getTextIndexAtCursor'. |
 | callback | () =&gt; number | No | the callback of 'getTextIndexAtCursor', when subscriber unsubscribes all callback functions of event 'getTextIndexAtCursor', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let getTextIndexAtCursorCallback: () => number = (): number => {
@@ -1260,10 +1124,6 @@ Unregister the callback of handleExtendAction.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void--><!--Device-InputMethodController-off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1275,7 +1135,7 @@ Unregister the callback of handleExtendAction.
 | type | 'handleExtendAction' | Yes | event type, fixed as 'handleExtendAction'. |
 | callback | (action: ExtendAction) =&gt; void | No | the callback of 'handleExtendAction', when subscriber unsubscribes all callback functions of event 'handleExtendAction', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -1299,10 +1159,6 @@ Unregister the callback of insertText.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'insertText', callback?: (text: string) => void): void--><!--Device-InputMethodController-off(type: 'insertText', callback?: (text: string) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1314,7 +1170,7 @@ Unregister the callback of insertText.
 | type | 'insertText' | Yes | event type, fixed as 'insertText'. |
 | callback | (text: string) =&gt; void | No | the callback of 'insertText', when subscriber unsubscribes all callback functions of event 'insertText', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -1338,10 +1194,6 @@ Unregister the callback of moveCursor.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'moveCursor', callback?: (direction: Direction) => void): void--><!--Device-InputMethodController-off(type: 'moveCursor', callback?: (direction: Direction) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1353,7 +1205,7 @@ Unregister the callback of moveCursor.
 | type | 'moveCursor' | Yes | event type, fixed as 'moveCursor'. |
 | callback | (direction: Direction) =&gt; void | No | the callback of 'moveCursor', when subscriber unsubscribes all callback functions of event 'moveCursor', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -1377,10 +1229,6 @@ Unregister the callback of selectedByMovement.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'selectByMovement', callback?: Callback<Movement>): void--><!--Device-InputMethodController-off(type: 'selectByMovement', callback?: Callback<Movement>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1392,7 +1240,7 @@ Unregister the callback of selectedByMovement.
 | type | 'selectByMovement' | Yes | event type, fixed as 'selectByMovement'. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | No | the callback of 'selectByMovement', when subscriber unsubscribes all callback functions of event 'selectByMovement', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -1416,10 +1264,6 @@ Unregister the callback of selectedByRange.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'selectByRange', callback?: Callback<Range>): void--><!--Device-InputMethodController-off(type: 'selectByRange', callback?: Callback<Range>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1431,7 +1275,7 @@ Unregister the callback of selectedByRange.
 | type | 'selectByRange' | Yes | event type, fixed as 'selectByRange'. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | No | the callback of 'selectByRange', when subscriber unsubscribes all callback functions of event 'selectByRange', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -1455,10 +1299,6 @@ Unregister the callback of sendFunctionKey.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void--><!--Device-InputMethodController-off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1470,7 +1310,7 @@ Unregister the callback of sendFunctionKey.
 | type | 'sendFunctionKey' | Yes | event type, fixed as 'sendFunctionKey'. |
 | callback | (functionKey: FunctionKey) =&gt; void | No | the callback of 'sendFunctionKey', when subscriber unsubscribes all callback functions of event 'sendFunctionKey', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -1494,10 +1334,6 @@ Unregister the callback of sendKeyboardStatus.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void--><!--Device-InputMethodController-off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1509,7 +1345,7 @@ Unregister the callback of sendKeyboardStatus.
 | type | 'sendKeyboardStatus' | Yes | event type, fixed as 'sendKeyboardStatus'. |
 | callback | (keyboardStatus: KeyboardStatus) =&gt; void | No | the callback of 'sendKeyboardStatus', when subscriber unsubscribes all callback functions of event 'sendKeyboardStatus', this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -1533,10 +1369,6 @@ Unsubscribe 'setPreviewText' event.
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void--><!--Device-InputMethodController-off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1548,7 +1380,7 @@ Unsubscribe 'setPreviewText' event.
 | type | 'setPreviewText' | Yes | the type of unsubscribe event. |
 | callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | No | optional, the callback of off('setPreviewText'). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let setPreviewTextCallback1: inputMethod.SetPreviewTextCallback = (text: string, range: inputMethod.Range): void => {
@@ -1582,10 +1414,6 @@ Register a callback and when IME sends delete left event with length, the callba
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-onDeleteLeft(callback: Callback<int>): void--><!--Device-InputMethodController-onDeleteLeft(callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1611,10 +1439,6 @@ onDeleteRight(callback: Callback<int>): void
 Register a callback and when IME sends delete right event with length, the callback will beinvoked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-onDeleteRight(callback: Callback<int>): void--><!--Device-InputMethodController-onDeleteRight(callback: Callback<int>): void-End-->
 
@@ -1642,10 +1466,6 @@ onFinishTextPreview(callback: Callback<void>): void
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-onFinishTextPreview(callback: Callback<void>): void--><!--Device-InputMethodController-onFinishTextPreview(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1665,10 +1485,6 @@ onGetLeftTextOfCursor(callback: GetTextCallback): void
 Register a callback and when input method ability gets left text of cursor, the callback will be invoked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-onGetLeftTextOfCursor(callback: GetTextCallback): void--><!--Device-InputMethodController-onGetLeftTextOfCursor(callback: GetTextCallback): void-End-->
 
@@ -1696,10 +1512,6 @@ Register a callback and when input method ability gets right text of cursor, the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-onGetRightTextOfCursor(callback: GetTextCallback): void--><!--Device-InputMethodController-onGetRightTextOfCursor(callback: GetTextCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1725,10 +1537,6 @@ onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void
 Register a callback and when input method ability gets the text index at cursor, the callback will be invoked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void--><!--Device-InputMethodController-onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void-End-->
 
@@ -1756,10 +1564,6 @@ Register a callback and when IME sends extend action code, the callback will be 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-onHandleExtendAction(callback: Callback<ExtendAction>): void--><!--Device-InputMethodController-onHandleExtendAction(callback: Callback<ExtendAction>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1785,10 +1589,6 @@ onInsertText(callback: Callback<string>): void
 Register a callback and when IME sends insert text event, the callback will be invoked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-onInsertText(callback: Callback<string>): void--><!--Device-InputMethodController-onInsertText(callback: Callback<string>): void-End-->
 
@@ -1816,10 +1616,6 @@ Register a callback and when IME sends move cursor, the callback will be invoked
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-onMoveCursor(callback: Callback<Direction>): void--><!--Device-InputMethodController-onMoveCursor(callback: Callback<Direction>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1846,10 +1642,6 @@ Register a callback and when IME sends select event witch movement of cursor, th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-onSelectByMovement(callback: Callback<Movement>): void--><!--Device-InputMethodController-onSelectByMovement(callback: Callback<Movement>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1870,10 +1662,6 @@ Register a callback and when IME sends select event with range of selection, the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-onSelectByRange(callback: Callback<Range>): void--><!--Device-InputMethodController-onSelectByRange(callback: Callback<Range>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1893,10 +1681,6 @@ onSendFunctionKey(callback: Callback<FunctionKey>): void
 Register a callback and whenIME sends functionKey, the callback will be invoked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-onSendFunctionKey(callback: Callback<FunctionKey>): void--><!--Device-InputMethodController-onSendFunctionKey(callback: Callback<FunctionKey>): void-End-->
 
@@ -1924,10 +1708,6 @@ Register a callback and when IME sends keyboard status, the callback will be inv
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void--><!--Device-InputMethodController-onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1954,10 +1734,6 @@ onSetPreviewText(callback: SetPreviewTextCallback): void
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-onSetPreviewText(callback: SetPreviewTextCallback): void--><!--Device-InputMethodController-onSetPreviewText(callback: SetPreviewTextCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -1978,10 +1754,6 @@ Register a callback and when IME sends delete left event with length, the callba
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-on(type: 'deleteLeft', callback: (length: number) => void): void--><!--Device-InputMethodController-on(type: 'deleteLeft', callback: (length: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -2000,7 +1772,7 @@ Register a callback and when IME sends delete left event with length, the callba
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('deleteLeft', (length: number) => {
@@ -2017,10 +1789,6 @@ on(type: 'deleteRight', callback: (length: number) => void): void
 Register a callback and when IME sends delete right event with length, the callback will be invoked.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-on(type: 'deleteRight', callback: (length: number) => void): void--><!--Device-InputMethodController-on(type: 'deleteRight', callback: (length: number) => void): void-End-->
 
@@ -2040,7 +1808,7 @@ Register a callback and when IME sends delete right event with length, the callb
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('deleteRight', (length: number) => {
@@ -2057,10 +1825,6 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 &lt;p&gt;Subscribe 'finishTextPreview' event.&lt;/p&gt; &lt;p&gt;To support the preview text feature, developers should subscribe to this event before calling attach.&lt;/p&gt;
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-on(type: 'finishTextPreview', callback: Callback<void>): void--><!--Device-InputMethodController-on(type: 'finishTextPreview', callback: Callback<void>): void-End-->
 
@@ -2079,7 +1843,7 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -2114,10 +1878,6 @@ Register a callback and when input method ability gets left text of cursor, the 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void--><!--Device-InputMethodController-on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -2136,7 +1896,7 @@ Register a callback and when input method ability gets left text of cursor, the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('getLeftTextOfCursor', (length: number) => {
@@ -2156,10 +1916,6 @@ Register a callback and when input method ability gets right text of cursor, the
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-on(type: 'getRightTextOfCursor', callback: (length: number) => string): void--><!--Device-InputMethodController-on(type: 'getRightTextOfCursor', callback: (length: number) => string): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -2178,7 +1934,7 @@ Register a callback and when input method ability gets right text of cursor, the
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('getRightTextOfCursor', (length: number) => {
@@ -2198,10 +1954,6 @@ Register a callback and when input method ability gets the text index at cursor,
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-on(type: 'getTextIndexAtCursor', callback: () => number): void--><!--Device-InputMethodController-on(type: 'getTextIndexAtCursor', callback: () => number): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -2220,7 +1972,7 @@ Register a callback and when input method ability gets the text index at cursor,
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('getTextIndexAtCursor', () => {
@@ -2240,10 +1992,6 @@ Register a callback and when IME sends extend action code, the callback will be 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void--><!--Device-InputMethodController-on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -2262,7 +2010,7 @@ Register a callback and when IME sends extend action code, the callback will be 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('handleExtendAction', (action: inputMethod.ExtendAction) => {
@@ -2279,10 +2027,6 @@ on(type: 'insertText', callback: (text: string) => void): void
 Register a callback and when IME sends insert text event, the callback will be invoked.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-on(type: 'insertText', callback: (text: string) => void): void--><!--Device-InputMethodController-on(type: 'insertText', callback: (text: string) => void): void-End-->
 
@@ -2302,7 +2046,7 @@ Register a callback and when IME sends insert text event, the callback will be i
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function callback1(text: string): void {
@@ -2333,10 +2077,6 @@ Register a callback and when IME sends move cursor, the callback will be invoked
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-on(type: 'moveCursor', callback: (direction: Direction) => void): void--><!--Device-InputMethodController-on(type: 'moveCursor', callback: (direction: Direction) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -2355,7 +2095,7 @@ Register a callback and when IME sends move cursor, the callback will be invoked
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('moveCursor', (direction: inputMethod.Direction) => {
@@ -2372,10 +2112,6 @@ on(type: 'selectByMovement', callback: Callback<Movement>): void
 Register a callback and when IME sends select event witch movement of cursor, the callback will be invoked.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-on(type: 'selectByMovement', callback: Callback<Movement>): void--><!--Device-InputMethodController-on(type: 'selectByMovement', callback: Callback<Movement>): void-End-->
 
@@ -2394,7 +2130,7 @@ Register a callback and when IME sends select event witch movement of cursor, th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('selectByMovement', (movement: inputMethod.Movement) => {
@@ -2411,10 +2147,6 @@ on(type: 'selectByRange', callback: Callback<Range>): void
 Register a callback and when IME sends select event with range of selection, the callback will be invoked.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-on(type: 'selectByRange', callback: Callback<Range>): void--><!--Device-InputMethodController-on(type: 'selectByRange', callback: Callback<Range>): void-End-->
 
@@ -2433,7 +2165,7 @@ Register a callback and when IME sends select event with range of selection, the
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('selectByRange', (range: inputMethod.Range) => {
@@ -2450,10 +2182,6 @@ on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void
 Register a callback and when IME sends functionKey, the callback will be invoked.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void--><!--Device-InputMethodController-on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void-End-->
 
@@ -2473,7 +2201,7 @@ Register a callback and when IME sends functionKey, the callback will be invoked
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('sendFunctionKey', (functionKey: inputMethod.FunctionKey) => {
@@ -2490,10 +2218,6 @@ on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => voi
 Register a callback and when IME sends keyboard status, the callback will be invoked.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void--><!--Device-InputMethodController-on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void-End-->
 
@@ -2513,7 +2237,7 @@ Register a callback and when IME sends keyboard status, the callback will be inv
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 inputMethod.getController().on('sendKeyboardStatus', (keyboardStatus: inputMethod.KeyboardStatus) => {
@@ -2530,10 +2254,6 @@ on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 &lt;p&gt;Subscribe 'setPreviewText' event.&lt;/p&gt; &lt;p&gt;To support the preview text feature, developers should subscribe to this event before calling attach.&lt;/p&gt;
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-on(type: 'setPreviewText', callback: SetPreviewTextCallback): void--><!--Device-InputMethodController-on(type: 'setPreviewText', callback: SetPreviewTextCallback): void-End-->
 
@@ -2552,7 +2272,7 @@ on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let setPreviewTextCallback1: inputMethod.SetPreviewTextCallback = (text: string, range: inputMethod.Range): void => {
@@ -2586,10 +2306,6 @@ Start receiving message from input method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-recvMessage(msgHandler?: MessageHandler): void--><!--Device-InputMethodController-recvMessage(msgHandler?: MessageHandler): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -2606,7 +2322,7 @@ Start receiving message from input method.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2634,10 +2350,6 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 Send message to input method.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>--><!--Device-InputMethodController-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>-End-->
 
@@ -2667,7 +2379,7 @@ Send message to input method.
 | [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) | the other side does not accept the request. |
 | [12800014](../errorcode-inputmethod-framework.md#12800014-nonfull-access-mode-of-the-input-method-application) | the input method is in basic mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2691,10 +2403,6 @@ Inform the system of the window ID of the application currently bound to the inp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-setCallingWindow(windowId: int, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-setCallingWindow(windowId: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -2715,7 +2423,7 @@ Inform the system of the window ID of the application currently bound to the inp
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2739,10 +2447,6 @@ setCallingWindow(windowId: int): Promise<void>
 Inform the system of the window ID of the application currently bound to the input method. After the correct setting, the window where the client is located can avoid the input method window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-setCallingWindow(windowId: int): Promise<void>--><!--Device-InputMethodController-setCallingWindow(windowId: int): Promise<void>-End-->
 
@@ -2769,7 +2473,7 @@ Inform the system of the window ID of the application currently bound to the inp
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2792,10 +2496,6 @@ Show soft keyboard. This API can be called only by system applications.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
 <!--Device-InputMethodController-showSoftKeyboard(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-showSoftKeyboard(callback: AsyncCallback<void>): void-End-->
@@ -2816,7 +2516,7 @@ Show soft keyboard. This API can be called only by system applications.
 | [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2840,10 +2540,6 @@ Show soft keyboard. This API can be called only by system applications.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
 <!--Device-InputMethodController-showSoftKeyboard(): Promise<void>--><!--Device-InputMethodController-showSoftKeyboard(): Promise<void>-End-->
@@ -2864,7 +2560,7 @@ Show soft keyboard. This API can be called only by system applications.
 | [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2886,10 +2582,6 @@ Show the text input and start typing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-showTextInput(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-showTextInput(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -2908,7 +2600,7 @@ Show the text input and start typing.
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2932,10 +2624,6 @@ Show the text input and start typing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-showTextInput(): Promise<void>--><!--Device-InputMethodController-showTextInput(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -2954,7 +2642,7 @@ Show the text input and start typing.
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2975,10 +2663,6 @@ showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 Show the text input and start typing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>--><!--Device-InputMethodController-showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>-End-->
 
@@ -3004,7 +2688,7 @@ Show the text input and start typing.
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3028,11 +2712,9 @@ Stop input
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [stopInputSession](#stopInputSession)
+**Substitutes:** [stopInputSession](#stopinputsession)
 
 <!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void-End-->
 
@@ -3044,7 +2726,7 @@ Stop input
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of stopInput. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3072,11 +2754,9 @@ Stop input
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [stopInputSession](#stopInputSession)
+**Substitutes:** [stopInputSession](#stopinputsession)
 
 <!--Device-InputMethodController-stopInput(): Promise<boolean>--><!--Device-InputMethodController-stopInput(): Promise<boolean>-End-->
 
@@ -3088,7 +2768,7 @@ Stop input
 | --- | --- |
 | Promise&lt;boolean&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3114,10 +2794,6 @@ Stop input session
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-stopInputSession(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodController-stopInputSession(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -3135,7 +2811,7 @@ Stop input session
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3163,10 +2839,6 @@ Stop input session
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-stopInputSession(): Promise<boolean>--><!--Device-InputMethodController-stopInputSession(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -3184,7 +2856,7 @@ Stop input session
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3210,10 +2882,6 @@ Update InputAttribute information of input text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -3234,7 +2902,7 @@ Update InputAttribute information of input text.
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3258,10 +2926,6 @@ updateAttribute(attribute: InputAttribute): Promise<void>
 Update InputAttribute information of input text.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InputMethodController-updateAttribute(attribute: InputAttribute): Promise<void>--><!--Device-InputMethodController-updateAttribute(attribute: InputAttribute): Promise<void>-End-->
 
@@ -3288,7 +2952,7 @@ Update InputAttribute information of input text.
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3311,10 +2975,6 @@ Update Cursor and notify the input method that the current application cursor ha
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -3335,7 +2995,7 @@ Update Cursor and notify the input method that the current application cursor ha
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3365,10 +3025,6 @@ Update Cursor and notify the input method that the current application cursor ha
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo): Promise<void>--><!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -3394,7 +3050,7 @@ Update Cursor and notify the input method that the current application cursor ha
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

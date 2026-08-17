@@ -16,10 +16,6 @@ Obtains the module names corresponding to the extended resources based on the gi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
 <!--Device-bundleManager-function getExtResource(bundleName: string): Promise<Array<string>>--><!--Device-bundleManager-function getExtResource(bundleName: string): Promise<Array<string>>-End-->
@@ -50,7 +46,7 @@ Obtains the module names corresponding to the extended resources based on the gi
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

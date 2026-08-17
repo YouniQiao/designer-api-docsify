@@ -1,14 +1,10 @@
 # TimePickerDialogOptions
 
-Defines the configuration options of the time picker dialog box. Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions).
+Defines the configuration options of the time picker dialog box. Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#timepickeroptions).
 
-**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions)
+**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#timepickeroptions)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface TimePickerDialogOptions--><!--Device-unnamed-declare interface TimePickerDialogOptions-End-->
 
@@ -25,10 +21,6 @@ Style of the accept button. **NOTE：**1. In **acceptButtonStyle** and **cancelB
 **Type:** PickerDialogButtonStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Alignment mode of the dialog box in the vertical direction. Default value: **Dia
 **Type:** DialogAlignment
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,10 +64,6 @@ Background blur style of the dialog box. Default value: **BlurStyle.COMPONENT_UL
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -99,10 +83,6 @@ Options for customizing the background blur style.
 **Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,10 +106,6 @@ Backplane color of the dialog box. Default value: **Color.Transparent** **NOTE�
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -149,10 +125,6 @@ Options for customizing the background effect.
 **Type:** BackgroundEffectOptions
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,10 +146,6 @@ Style of the cancel button. **NOTE：**1. In **acceptButtonStyle** and **cancelB
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -198,10 +166,6 @@ Whether to display a leading zero for the hours and minutes. Currently only the 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -221,10 +185,6 @@ Text color, font size, and font weight of edge items (the second item above or b
 **Type:** PickerTextStyle
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,10 +208,6 @@ Whether the AM/PM indicator automatically switches based on the hour value. Only
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -273,10 +229,6 @@ Whether to enable haptic feedback. - **true**: Enable haptic feedback. - **false
 **Default:** true
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -300,10 +252,6 @@ Whether to enable the hover mode. - **true**: Respond when the device is in semi
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -326,10 +274,6 @@ Display area of the dialog box in hover mode. Default value: **HoverModeAreaType
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -349,10 +293,6 @@ Mask area of the dialog box. Events outside the mask area are transparently tran
 **Type:** Rectangle
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -374,10 +314,6 @@ Offset of the dialog box relative to the alignment position. Default value: **{�
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -398,10 +334,6 @@ Callback invoked when the OK button in the dialog box is clicked.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TimePickerDialogOptions-onAccept?: (value: TimePickerResult) => void--><!--Device-TimePickerDialogOptions-onAccept?: (value: TimePickerResult) => void-End-->
@@ -419,10 +351,6 @@ Callback invoked when the cancel button in the dialog box is clicked.
 **Type:** () =&gt; void
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -442,10 +370,6 @@ Triggered when the text picker in the dialog box snaps to the selected item.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TimePickerDialogOptions-onChange?: (value: TimePickerResult) => void--><!--Device-TimePickerDialogOptions-onChange?: (value: TimePickerResult) => void-End-->
@@ -463,10 +387,6 @@ Event callback after the dialog box appears. **NOTE：**1. The normal timing seq
 **Type:** () =&gt; void
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -488,10 +408,6 @@ Event callback after the dialog box disappears. **NOTE：**1. The normal timing 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -511,10 +427,6 @@ Represents the callback triggered during the scrolling of the text picker when a
 **Type:** Callback&lt;[TimePickerResult](arkts-arkui-timepickerresult-i.md)&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -536,10 +448,6 @@ Event callback when the dialog box is about to appear. **NOTE：**1. The normal 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -559,10 +467,6 @@ Event callback when the dialog box is about to disappear. **NOTE：**1. The norm
 **Type:** () =&gt; void
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -584,10 +488,6 @@ Font color, font size, and font weight of the selected item. Default value: { co
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -607,10 +507,6 @@ Shadow of the dialog box. **NOTE：**Default value on 2-in-1 devices: **ShadowSt
 **Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -632,10 +528,6 @@ Set system-styled materials for dialog. Different materials have different effec
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -656,10 +548,6 @@ Text color, font size, and font weight of candidate items (the first item immedi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -679,10 +567,6 @@ Whether to display the time in 24-hour format or 12-hour format. - **true**: 24-
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

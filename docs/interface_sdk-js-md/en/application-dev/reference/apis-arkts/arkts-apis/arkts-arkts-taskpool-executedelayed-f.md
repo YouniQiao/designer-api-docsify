@@ -16,10 +16,6 @@ Executes a task after a given delay. In this execution mode, you can set the tas
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-taskpool-function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>-End-->
@@ -50,7 +46,7 @@ Executes a task after a given delay. In this execution mode, you can set the tas
 | [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // import BusinessError
@@ -82,10 +78,6 @@ Executes the generic task with a delay without verifying the parameter type and 
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-taskpool-function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
@@ -114,7 +106,7 @@ Executes the generic task with a delay without verifying the parameter type and 
 | [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The delayTime is less than zero. |
 | [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // import BusinessError

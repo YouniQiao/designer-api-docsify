@@ -8,9 +8,7 @@ Notify the failure result of openAtomicService.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -23,6 +21,6 @@ Notify the failure result of openAtomicService.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | Globally unique identifier of an atomicservice, which is allocated by the cloud. |
-| failureCode | [FailureCode](arkts-na-app-ability-completionhandlerforatomicservice-failurecode-e.md) | Yes | Indicates the failure code for open atomic service. |
+| failureCode | [FailureCode](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | Yes | Indicates the failure code for open atomic service. |
 | failureMessage | string | Yes | Indicates the detail failure message for open atomic service. |
 

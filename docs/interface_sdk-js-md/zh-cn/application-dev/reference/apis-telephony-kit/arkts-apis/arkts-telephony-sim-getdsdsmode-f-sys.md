@@ -10,10 +10,6 @@ Obtains the value of dsds mode.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-sim-function getDsdsMode(callback: AsyncCallback<DsdsMode>): void--><!--Device-sim-function getDsdsMode(callback: AsyncCallback<DsdsMode>): void-End-->
@@ -26,7 +22,7 @@ Obtains the value of dsds mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md)&gt; | 是 | Indicates the callback for getting one of the following dsds mode states: &lt;ul&gt; &lt;li&gt;{@code DsdsMode#DSDS_MODE_V2} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V3} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA} &lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md)&gt; | 是 | Indicates the callback for getting one of the following dsds mode states: &lt;ul&gt; &lt;li&gt;{@code DsdsMode#DSDS_MODE_V2} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V3} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA} &lt;/ul&gt; |
 
 **错误码：**
 
@@ -39,7 +35,7 @@ Obtains the value of dsds mode.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -64,10 +60,6 @@ function getDsdsMode(): Promise<DsdsMode>
 Obtains the value of dsds mode.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -94,7 +86,7 @@ Obtains the value of dsds mode.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

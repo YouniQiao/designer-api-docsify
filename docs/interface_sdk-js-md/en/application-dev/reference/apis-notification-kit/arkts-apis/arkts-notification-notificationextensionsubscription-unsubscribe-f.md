@@ -16,10 +16,6 @@ Unsubscribes from the notification extension. This API uses a promise to return 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
 
 <!--Device-notificationExtensionSubscription-function unsubscribe(): Promise<void>--><!--Device-notificationExtensionSubscription-function unsubscribe(): Promise<void>-End-->
@@ -44,7 +40,7 @@ subscribe subscribes to the
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 notificationExtensionSubscription.unsubscribe().then(() => {

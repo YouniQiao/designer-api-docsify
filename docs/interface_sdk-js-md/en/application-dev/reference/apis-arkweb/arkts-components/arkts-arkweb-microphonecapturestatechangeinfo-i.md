@@ -1,12 +1,8 @@
 # MicrophoneCaptureStateChangeInfo
 
-Defines the state information of the microphone before and after the callback is triggered.
+Provides the state change information of the microphone when the callback is triggered, including the state before the change and the state after the change. It is suitable for scenarios where monitoring microphone state changes is required, improving microphone management visibility and user experience.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface MicrophoneCaptureStateChangeInfo--><!--Device-unnamed-declare interface MicrophoneCaptureStateChangeInfo-End-->
 
@@ -24,10 +20,6 @@ New state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MicrophoneCaptureStateChangeInfo-newState: MicrophoneCaptureState--><!--Device-MicrophoneCaptureStateChangeInfo-newState: MicrophoneCaptureState-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -38,15 +30,11 @@ New state.
 originalState: MicrophoneCaptureState
 ```
 
-Original state.
+State before the change.
 
 **Type:** [MicrophoneCaptureState](arkts-arkweb-microphonecapturestate-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MicrophoneCaptureStateChangeInfo-originalState: MicrophoneCaptureState--><!--Device-MicrophoneCaptureStateChangeInfo-originalState: MicrophoneCaptureState-End-->
 

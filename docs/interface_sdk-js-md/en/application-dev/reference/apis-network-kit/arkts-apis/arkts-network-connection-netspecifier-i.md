@@ -4,10 +4,6 @@ Provides an instance that bear data network capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-export interface NetSpecifier--><!--Device-connection-export interface NetSpecifier-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -30,10 +26,6 @@ Network identifier, the identifier for Wi Fi networks is "wifi", and the identif
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetSpecifier-bearerPrivateIdentifier?: string--><!--Device-NetSpecifier-bearerPrivateIdentifier?: string-End-->
@@ -51,10 +43,6 @@ The transmission capacity and support of the network's global proxy storage data
 **Type:** [NetCapabilities](arkts-network-connection-netcapabilities-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

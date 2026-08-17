@@ -1,14 +1,10 @@
 # ExtensionAbility
 
-ExtensionAbility is the base class for scenario-specific ExtensionAbilities. It inherits from [Ability](arkts-ability-app-ability-ability-ability-c.md#Ability), with no property or method added. You cannot directly inherit from ExtensionAbility. For details about the inheritance relationship of each ability, see Inheritance Relationship .
+ExtensionAbility is the base class for scenario-specific ExtensionAbilities. It inherits from [Ability](arkts-ability-app-ability-ability-ability-c.md#ability), with no property or method added. You cannot directly inherit from ExtensionAbility. For details about the inheritance relationship of each ability, see Inheritance Relationship .
 
-**Inheritance/Implementation:** ExtensionAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md#Ability)
+**Inheritance/Implementation:** ExtensionAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md#ability)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

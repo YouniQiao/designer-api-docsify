@@ -2,10 +2,6 @@
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace utils--><!--Device-unnamed-declare namespace utils-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -29,7 +25,7 @@ import { ArkTSUtils } from 'ArkTSUtils';
 
 | Name | Description |
 | --- | --- |
-| [isSendable](arkts-arkts-utils-issendable-f.md#isSendable) | Checks whether an ArkTS value is sendable. |
+| [isSendable](arkts-arkts-utils-issendable-f.md#issendable) | Checks whether an ArkTS value is sendable. |
 
 ### Classes
 

@@ -16,10 +16,6 @@ Connects to a printer by printer ID. This API uses an asynchronous callback to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
@@ -44,7 +40,7 @@ Connects to a printer by printer ID. This API uses an asynchronous callback to r
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 19 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -70,10 +66,6 @@ function connectPrinter(printerId: string): Promise<void>
 Connects to a printer by printer ID. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
@@ -104,7 +96,7 @@ Connects to a printer by printer ID. This API uses a promise to return the resul
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 19 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

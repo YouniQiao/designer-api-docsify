@@ -16,10 +16,6 @@ Releases a **DeviceManager** instance that is no longer used.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void--><!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -37,7 +33,7 @@ Releases a **DeviceManager** instance that is no longer used.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';

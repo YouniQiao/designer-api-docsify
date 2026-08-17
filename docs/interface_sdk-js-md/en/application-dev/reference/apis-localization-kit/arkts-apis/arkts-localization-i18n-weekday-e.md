@@ -4,10 +4,6 @@ Enumerates the first day of a week. The value ranges from Monday to Sunday.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export enum WeekDay--><!--Device-i18n-export enum WeekDay-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -21,10 +17,6 @@ MON = 1
 Monday.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ Tuesday.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WeekDay-TUE = 2--><!--Device-WeekDay-TUE = 2-End-->
@@ -61,10 +49,6 @@ WED = 3
 Wednesday.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -82,10 +66,6 @@ Thursday.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WeekDay-THU = 4--><!--Device-WeekDay-THU = 4-End-->
@@ -101,10 +81,6 @@ FRI = 5
 Friday.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -122,10 +98,6 @@ Saturday.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WeekDay-SAT = 6--><!--Device-WeekDay-SAT = 6-End-->
@@ -141,10 +113,6 @@ SUN = 7
 Sunday.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

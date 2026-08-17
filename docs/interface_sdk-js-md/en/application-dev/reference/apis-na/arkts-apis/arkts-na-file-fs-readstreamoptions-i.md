@@ -4,9 +4,7 @@ Defines the options used in **createReadStream()**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export interface ReadStreamOptions--><!--Device-unnamed-export interface ReadStreamOptions-End-->
 
@@ -24,9 +22,7 @@ End position to read the data, in bytes. This parameter is optional. The default
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ReadStreamOptions-end?: long--><!--Device-ReadStreamOptions-end?: long-End-->
 
@@ -44,9 +40,7 @@ Start position to read the data, in bytes. This parameter is optional. By defaul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ReadStreamOptions-start?: long--><!--Device-ReadStreamOptions-start?: long-End-->
 

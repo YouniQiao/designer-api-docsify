@@ -4,10 +4,6 @@ Represents a time zone and city combination item.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export interface TimeZoneCityItem--><!--Device-i18n-export interface TimeZoneCityItem-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -32,10 +28,6 @@ City display name in the system locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeZoneCityItem-cityDisplayName: string--><!--Device-TimeZoneCityItem-cityDisplayName: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -54,10 +46,6 @@ City ID, for example, "Shanghai".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeZoneCityItem-cityId: string--><!--Device-TimeZoneCityItem-cityId: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -75,10 +63,6 @@ Latitude info of time zone city in decimal degrees (°).
 **Type:** double
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,10 +84,6 @@ Longitude info of time zone city in decimal degrees (°).
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TimeZoneCityItem-longitude: double--><!--Device-TimeZoneCityItem-longitude: double-End-->
@@ -124,10 +104,6 @@ Offset of the time zone ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeZoneCityItem-offset: int--><!--Device-TimeZoneCityItem-offset: int-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -145,10 +121,6 @@ Fixed offset of the time zone ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimeZoneCityItem-rawOffset?: int--><!--Device-TimeZoneCityItem-rawOffset?: int-End-->
 
@@ -168,10 +140,6 @@ Time zone display name in the system locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeZoneCityItem-zoneDisplayName: string--><!--Device-TimeZoneCityItem-zoneDisplayName: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -189,10 +157,6 @@ Time zone ID, for example, "Asia/Shanghai".
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimeZoneCityItem-zoneId: string--><!--Device-TimeZoneCityItem-zoneId: string-End-->
 

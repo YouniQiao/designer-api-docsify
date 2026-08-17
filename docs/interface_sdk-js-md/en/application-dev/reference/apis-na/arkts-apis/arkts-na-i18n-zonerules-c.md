@@ -4,9 +4,7 @@ Provides the API for obtaining timezone offset changing rules information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export class ZoneRules--><!--Device-i18n-export class ZoneRules-End-->
 
@@ -22,9 +20,7 @@ Get the next timezone offset transition after date.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,5 +38,5 @@ Get the next timezone offset transition after date.
 
 | Type | Description |
 | --- | --- |
-| [ZoneOffsetTransition](arkts-na-i18n-zoneoffsettransition-c.md) | Returns a timezone offset transition after date. |
+| [ZoneOffsetTransition](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-zoneoffsettransition-c.md) | Returns a timezone offset transition after date. |
 

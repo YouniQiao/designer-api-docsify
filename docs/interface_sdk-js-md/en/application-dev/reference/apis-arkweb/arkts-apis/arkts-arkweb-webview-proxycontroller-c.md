@@ -1,12 +1,8 @@
 # ProxyController
 
-This class is used for set proxy for ArkWeb.
+ProxyController is a static class in the ArkWeb framework used to manage the proxy configuration of all Web components in an app. With ProxyController, developers can uniformly set or remove proxy configurations for all Web requests in the app, which is suitable for scenarios where Web traffic needs to be routed to a specific proxy server (such as enterprise network environments, content filtering, and traffic monitoring). ProxyController provides two core methods: **applyProxyOverride** is used to apply a proxy configuration, which accepts a [ProxyConfig](arkts-arkweb-webview-proxyconfig-c.md#proxyconfig) object and a callback function for successful proxy setup; **removeProxyOverride** is used to remove the current proxy configuration and restore the default network connection. Note that the proxy setting or removal does not take effect immediately. Before loading a page, wait for the callback function to be triggered. The callback function is invoked on the UI thread.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class ProxyController--><!--Device-webview-class ProxyController-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChangeCallback): void
 ```
 
-Sets ProxyConfig which will be used by all Webs in the app. URLs that match patterns in the bypass list will connect the server directly. Instead, the request will use the proxy specified by the config. Requests are not guaranteed to use the new proxy immediately; wait for the listener before loading a page. This listener will be called on the UI thread. Note: calling applyProxyOverride will cause any existing system wide setting to be ignored.
+Sets the proxy configuration used by all Web instances in the app. URLs that match the bypass rules inserted through [insertBypassRule](arkts-arkweb-webview-proxyconfig-c.md#insertbypassrule) will not use the proxy but instead send requests directly to the origin address specified by the URL. After the proxy is successfully set, there is no guarantee that the new proxy configuration will be used immediately after the network is connected. Before loading a page, wait for the callback function to be triggered. The callback function is invoked on the UI thread.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,8 +34,8 @@ Sets ProxyConfig which will be used by all Webs in the app. URLs that match patt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| proxyConfig | [ProxyConfig](arkts-arkweb-webview-proxyconfig-c.md) | Yes | The proxy config. |
-| callback | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | Yes | Called when the proxy has been changed. |
+| proxyConfig | [ProxyConfig](arkts-arkweb-webview-proxyconfig-c.md) | Yes | Configuration of the proxy. |
+| callback | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | Yes | Callback invoked when the proxy configuration changes. |
 
 **Error codes:**
 
@@ -57,13 +49,9 @@ Sets ProxyConfig which will be used by all Webs in the app. URLs that match patt
 static removeProxyOverride(callback: OnProxyConfigChangeCallback): void
 ```
 
-Remove the proxy config. Requests are not guaranteed to not use the proxy; Wait for the listener before loading a page. This listener will be called on the UI thread.
+Removes the proxy configuration. After the proxy configuration is removed, there is no guarantee that the default network connection will be restored immediately after the network is connected. Before loading a page, wait for the callback function to be triggered. The callback function is invoked on the UI thread.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -75,7 +63,7 @@ Remove the proxy config. Requests are not guaranteed to not use the proxy; Wait 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | Yes | Called when the proxy has been changed. |
+| callback | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | Yes | Callback for proxy configuration changes. |
 
 **Error codes:**
 

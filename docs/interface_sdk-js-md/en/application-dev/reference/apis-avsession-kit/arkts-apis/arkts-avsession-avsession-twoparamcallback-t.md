@@ -8,10 +8,6 @@ Defines the callback type including two parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-type TwoParamCallback<T, G> = (data1: T, data2: G) => void--><!--Device-avSession-type TwoParamCallback<T, G> = (data1: T, data2: G) => void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core

@@ -16,10 +16,6 @@ Clears application data by bundle name. This API uses a promise to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 
 <!--Device-appManager-function clearUpApplicationData(bundleName: string): Promise<void>--><!--Device-appManager-function clearUpApplicationData(bundleName: string): Promise<void>-End-->
@@ -49,7 +45,7 @@ Clears application data by bundle name. This API uses a promise to return the re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -81,10 +77,6 @@ Clears application data by bundle name. This API uses an asynchronous callback t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 
 <!--Device-appManager-function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-appManager-function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void>): void-End-->
@@ -109,7 +101,7 @@ Clears application data by bundle name. This API uses an asynchronous callback t
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

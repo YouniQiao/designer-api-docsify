@@ -1,14 +1,10 @@
 # ShaderMaterial
 
-Shader material resource.
+Shader material, which inherits from Material.
 
-**Inheritance/Implementation:** ShaderMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material)
+**Inheritance/Implementation:** ShaderMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#material)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ShaderMaterial--><!--Device-unnamed-export interface ShaderMaterial-End-->
 
@@ -20,15 +16,11 @@ Shader material resource.
 colorShader?: Shader
 ```
 
-Color shader of material.
+Shader. The default value is undefined.
 
 **Type:** [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShaderMaterial-colorShader?: Shader--><!--Device-ShaderMaterial-colorShader?: Shader-End-->
 

@@ -1,12 +1,8 @@
 # Schema
 
-Defines the schema of a KV store. You can create a **Schema** object and pass it in [Options](arkts-arkdata-distributedkvstore-options-i.md#Options) when creating or opening a KV store.
+Defines the schema of a KV store. You can create a **Schema** object and pass it in [Options](arkts-arkdata-distributedkvstore-options-i.md#options) when creating or opening a KV store.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-distributedKVStore-class Schema--><!--Device-distributedKVStore-class Schema-End-->
 
@@ -28,17 +24,13 @@ Defines a constructor used to create a **Schema** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Schema-constructor()--><!--Device-Schema-constructor()-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
-## Examples
+**Examples**
 
 ```TypeScript
 let child1 = new distributedKVStore.FieldNode('id');

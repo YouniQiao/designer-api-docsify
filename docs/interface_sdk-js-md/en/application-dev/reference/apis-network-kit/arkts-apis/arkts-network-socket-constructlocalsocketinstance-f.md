@@ -16,10 +16,6 @@ Creates a LocalSocket object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-socket-function constructLocalSocketInstance(): LocalSocket--><!--Device-socket-function constructLocalSocketInstance(): LocalSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,7 +26,7 @@ Creates a LocalSocket object.
 | --- | --- |
 | [LocalSocket](arkts-network-socket-localsocket-i.md) | the LocalSocket of the constructLocalSocketInstance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

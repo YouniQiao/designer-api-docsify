@@ -1,4 +1,4 @@
-# OnContentWillChangeCallback
+# OnContentWillChangeCallback(Provides an advanced struct of tabs for atomic services)
 
 ```TypeScript
 export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: number) => boolean
@@ -7,10 +7,6 @@ export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: nu
 Defines the callback function triggered when the page content changes.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -16,10 +16,6 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>--><!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
@@ -47,7 +43,7 @@ Encodes metadata into an image. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
 | [32100002](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100002-encoding-failed) | Encode process fail. Possible causes: <br>1. Image processing error. <br>2. Channel coding error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';

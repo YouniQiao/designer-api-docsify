@@ -4,9 +4,7 @@ Defines the options of RichEditor with StyledString.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface RichEditorStyledStringOptions--><!--Device-unnamed-export declare interface RichEditorStyledStringOptions-End-->
 
@@ -24,9 +22,7 @@ RichEditor controller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

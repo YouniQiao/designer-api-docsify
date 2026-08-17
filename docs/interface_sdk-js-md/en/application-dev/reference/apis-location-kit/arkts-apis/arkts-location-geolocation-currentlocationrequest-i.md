@@ -4,11 +4,9 @@ Configuring parameters in current location requests
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md#CurrentLocationRequest)
+**Substitutes:** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md#currentlocationrequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,11 +30,9 @@ maxAccuracy?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [maxAccuracy](arkts-location-geolocationmanager-currentlocationrequest-i.md#maxAccuracy)
+**Substitutes:** [maxAccuracy](arkts-location-geolocationmanager-currentlocationrequest-i.md#maxaccuracy)
 
 <!--Device-CurrentLocationRequest-maxAccuracy?: number--><!--Device-CurrentLocationRequest-maxAccuracy?: number-End-->
 
@@ -51,8 +47,6 @@ priority?: LocationRequestPriority
 **Type:** LocationRequestPriority
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -72,8 +66,6 @@ scenario?: LocationRequestScenario
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [scenario](arkts-location-geolocationmanager-currentlocationrequest-i.md#scenario)
@@ -92,11 +84,9 @@ timeoutMs?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [timeoutMs](arkts-location-geolocationmanager-currentlocationrequest-i.md#timeoutMs)
+**Substitutes:** [timeoutMs](arkts-location-geolocationmanager-currentlocationrequest-i.md#timeoutms)
 
 <!--Device-CurrentLocationRequest-timeoutMs?: number--><!--Device-CurrentLocationRequest-timeoutMs?: number-End-->
 

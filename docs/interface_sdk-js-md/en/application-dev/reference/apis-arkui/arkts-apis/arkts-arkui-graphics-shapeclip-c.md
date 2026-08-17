@@ -4,10 +4,6 @@ Sets the clipping shape.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class ShapeClip--><!--Device-unnamed-export declare class ShapeClip-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ constructor()
 A constructor used to create a **ShapeClip** object.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Sets a circle for shape clipping.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -62,7 +50,7 @@ Sets a circle for shape clipping.
 | --- | --- | --- | --- |
 | circle | [Circle](../../apis-na/arkts-apis/arkts-na-graphics-circle-i.md) | Yes | Round shape. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
@@ -124,10 +112,6 @@ Sets the command for drawing a path.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -142,7 +126,7 @@ Sets the command for drawing a path.
 | --- | --- | --- | --- |
 | path | [CommandPath](../../apis-na/arkts-apis/arkts-na-graphics-commandpath-i.md) | Yes | Command for drawing a path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
@@ -203,10 +187,6 @@ Sets an oval shape for shape clipping.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -221,7 +201,7 @@ Sets an oval shape for shape clipping.
 | --- | --- | --- | --- |
 | oval | [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md) | Yes | Oval shape. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
@@ -287,10 +267,6 @@ Sets a rectangle for shape clipping.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -305,7 +281,7 @@ Sets a rectangle for shape clipping.
 | --- | --- | --- | --- |
 | rect | [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md) | Yes | Shape of the rectangle. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
@@ -374,10 +350,6 @@ Sets a rounded rectangle for shape clipping.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -392,7 +364,7 @@ Sets a rounded rectangle for shape clipping.
 | --- | --- | --- | --- |
 | roundRect | [RoundRect](../../apis-na/arkts-apis/arkts-na-graphics-roundrect-i.md) | Yes | Shape of the rectangle with rounded corners. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';

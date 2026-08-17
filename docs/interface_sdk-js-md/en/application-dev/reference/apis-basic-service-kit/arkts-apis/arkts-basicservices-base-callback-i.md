@@ -1,12 +1,8 @@
-# Callback
+# Callback(Public Callback Information)
 
 Defines a common callback used to return the processing result when an asynchronous operation is successful. You need to define the callback type.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Callback--><!--Device-unnamed-export interface Callback-End-->
 
@@ -28,10 +24,6 @@ import { ErrorCallback } from 'ErrorCallback';
 ```
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

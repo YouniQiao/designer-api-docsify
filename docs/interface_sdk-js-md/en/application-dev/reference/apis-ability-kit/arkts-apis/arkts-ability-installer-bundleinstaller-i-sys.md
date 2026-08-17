@@ -4,10 +4,6 @@ Bundle installer interface, include install uninstall recover.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-installer-interface BundleInstaller--><!--Device-installer-interface BundleInstaller-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -29,10 +25,6 @@ addExtResource(bundleName: string, filePaths: Array<string>): Promise<void>
 Adds extended resources based on the specified bundle name and HSP file path. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -65,7 +57,7 @@ Adds extended resources based on the specified bundle name and HSP file path. Th
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -100,10 +92,6 @@ Creates an application clone. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_CLONE_BUNDLE
 
 <!--Device-BundleInstaller-createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): Promise<int>--><!--Device-BundleInstaller-createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): Promise<int>-End-->
@@ -117,7 +105,7 @@ Creates an application clone. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application for which a clone is to be created. |
-| createAppCloneParam | [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) | No | Other parameters required for creating the clone. For details about the default values of these parameters, see [createAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md#CreateAppCloneParam-(System-API)). |
+| createAppCloneParam | [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) | No | Other parameters required for creating the clone. For details about the default values of these parameters, see [createAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md#createappcloneparam-system-api). |
 
 **Return value:**
 
@@ -137,7 +125,7 @@ Creates an application clone. This API uses a promise to return the result.
 | [17700069](../errorcode-bundle.md#17700069-application-clone-is-not-supported) | The app does not support the creation of an appClone instance. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -176,10 +164,6 @@ Destroys an application clone. This API uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.UNINSTALL_CLONE_BUNDLE
 
 <!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<void>--><!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<void>-End-->
@@ -194,7 +178,7 @@ Destroys an application clone. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application for which a clone is to be destroyed. |
 | appIndex | number | Yes | Index of the clone to destroy. |
-| userId | number | No | ID of the user for whom the clone is to be destroyed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The default value is the user ID of the caller. |
+| userId | number | No | ID of the user for whom the clone is to be destroyed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. |
 
 **Return value:**
 
@@ -213,7 +197,7 @@ Destroys an application clone. This API uses a promise to return the result.
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -250,10 +234,6 @@ Destroys an application clone. This API uses a promise to return the result.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.UNINSTALL_CLONE_BUNDLE
 
 <!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: DestroyAppCloneParam): Promise<void>--><!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: DestroyAppCloneParam): Promise<void>-End-->
@@ -268,7 +248,7 @@ Destroys an application clone. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application for which a clone is to be destroyed. |
 | appIndex | number | Yes | Index of the clone to destroy. |
-| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | No | Other parameters required for destroying the clone. For details about the default values of these parameters, see [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md#DestroyAppCloneParam-(System-API)). |
+| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | No | Other parameters required for destroying the clone. For details about the default values of these parameters, see [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md#destroyappcloneparam-system-api). |
 
 **Return value:**
 
@@ -288,7 +268,7 @@ Destroys an application clone. This API uses a promise to return the result.
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -333,10 +313,6 @@ Destroy clone instance for an application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.UNINSTALL_CLONE_BUNDLE
 
 <!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: int, options?: int | DestroyAppCloneParam): Promise<void>--><!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: int, options?: int | DestroyAppCloneParam): Promise<void>-End-->
@@ -376,13 +352,9 @@ Destroy clone instance for an application.
 install(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo).
+Installs an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#applicationinfo).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 23+: ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
@@ -402,7 +374,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -437,7 +409,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -474,13 +446,9 @@ try {
 install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo).
+Installs an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#applicationinfo).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 23+: ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
@@ -499,7 +467,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -533,7 +501,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -565,13 +533,9 @@ try {
 install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo).
+Installs an application. This API uses a promise to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#applicationinfo).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 23+: ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
@@ -590,7 +554,7 @@ Installs an application. This API uses a promise to return the result. > **NOTE�
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API)).<br>**Since:** 12 |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api).<br>**Since:** 12 |
 
 **Return value:**
 
@@ -631,7 +595,7 @@ Installs an application. This API uses a promise to return the result. > **NOTE�
 | [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -671,10 +635,6 @@ Installs a plugin for an application. This API uses a promise to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_PLUGIN_BUNDLE
 
 <!--Device-BundleInstaller-installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginParam?: PluginParam): Promise<void>--><!--Device-BundleInstaller-installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginParam?: PluginParam): Promise<void>-End-->
@@ -689,7 +649,7 @@ Installs a plugin for an application. This API uses a promise to return the resu
 | --- | --- | --- | --- |
 | hostBundleName | string | Yes | Bundle name of the application for which the plugin is to be installed. |
 | pluginFilePaths | Array&lt;string&gt; | Yes | Paths where the plugin package files are stored. If multiple file paths or a directory is provided, ensure that these files are HSPs of the same plugin program and their signatures are consistent. |
-| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for installing the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md#PluginParam-(System-API)). |
+| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for installing the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md#pluginparam-system-api). |
 
 **Return value:**
 
@@ -720,7 +680,7 @@ Installs a plugin for an application. This API uses a promise to return the resu
 | [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the plugin because the code signature verification is failed. |
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the plugin since the version of the plugin to install is too early. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -755,13 +715,9 @@ try {
 installPreexistingApp(bundleName: string, userId?: int): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result. > **NOTE：**> > This API does not support the installation of applications whose > [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md#ApplicationInfo) > is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
+Installs an application. This API uses a promise to return the result. > **NOTE：**> > This API does not support the installation of applications whose > [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md#applicationinfo) > is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -776,7 +732,7 @@ Installs an application. This API uses a promise to return the result. > **NOTE�
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application to install. |
-| userId | int | No | ID of the user for whom the bundle is to be installed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The value must be greater than 0. The default value is the user ID of the caller. |
+| userId | int | No | ID of the user for whom the bundle is to be installed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The value must be greater than 0. The default value is the user ID of the caller. |
 
 **Return value:**
 
@@ -796,7 +752,7 @@ Installs an application. This API uses a promise to return the result. > **NOTE�
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -832,10 +788,6 @@ Rolls back an application to the initial installation state. This API uses an as
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
 
 <!--Device-BundleInstaller-recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<void>): void-End-->
@@ -850,7 +802,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -864,7 +816,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -905,10 +857,6 @@ Rolls back an application to the initial installation state. This API uses an as
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
 
 <!--Device-BundleInstaller-recover(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-recover(bundleName: string, callback: AsyncCallback<void>): void-End-->
@@ -922,7 +870,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -935,7 +883,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -971,10 +919,6 @@ Rolls back an application to the initial installation state. This API uses a pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
 
 <!--Device-BundleInstaller-recover(bundleName: string, installParam?: InstallParam): Promise<void>--><!--Device-BundleInstaller-recover(bundleName: string, installParam?: InstallParam): Promise<void>-End-->
@@ -988,7 +932,7 @@ Rolls back an application to the initial installation state. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API)). |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api). |
 
 **Return value:**
 
@@ -1008,7 +952,7 @@ Rolls back an application to the initial installation state. This API uses a pro
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1048,10 +992,6 @@ Removes extended resources based on the specified bundle name and module names. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
 <!--Device-BundleInstaller-removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>--><!--Device-BundleInstaller-removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>-End-->
@@ -1083,7 +1023,7 @@ Removes extended resources based on the specified bundle name and module names. 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1118,10 +1058,6 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
 <!--Device-BundleInstaller-uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallback<void>): void-End-->
@@ -1136,7 +1072,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1154,7 +1090,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1195,10 +1131,6 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
 <!--Device-BundleInstaller-uninstall(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-uninstall(bundleName: string, callback: AsyncCallback<void>): void-End-->
@@ -1212,7 +1144,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1228,7 +1160,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1264,10 +1196,6 @@ Uninstalls an application. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
 <!--Device-BundleInstaller-uninstall(bundleName: string, installParam?: InstallParam): Promise<void>--><!--Device-BundleInstaller-uninstall(bundleName: string, installParam?: InstallParam): Promise<void>-End-->
@@ -1281,7 +1209,7 @@ Uninstalls an application. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API)).<br>**Since:** 15 |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api).<br>**Since:** 15 |
 
 **Return value:**
 
@@ -1305,7 +1233,7 @@ Uninstalls an application. This API uses a promise to return the result.
 | [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1345,10 +1273,6 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
 <!--Device-BundleInstaller-uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void-End-->
@@ -1362,7 +1286,7 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uninstallParam | [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) | Yes | Parameters required for the uninstall. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1375,7 +1299,7 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 | [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
 | [17700037](../errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1413,10 +1337,6 @@ Uninstalls a shared package. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
 <!--Device-BundleInstaller-uninstall(uninstallParam: UninstallParam): Promise<void>--><!--Device-BundleInstaller-uninstall(uninstallParam: UninstallParam): Promise<void>-End-->
@@ -1448,7 +1368,7 @@ Uninstalls a shared package. This API uses a promise to return the result.
 | [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
 | [17700037](../errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1485,10 +1405,6 @@ uninstallNewPreinstalledApps(bundleNames: Array<string>): Promise<void>
 Uninstall new preinstalled applications. Only supports uninstalling pre installed applications added during device OTA upgrade. Asynchronous execution of application uninstallation tasks, the interface return value only indicates successful interface invocation and does not return uninstallation results.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UNINSTALL_BUNDLE
 
@@ -1529,10 +1445,6 @@ Uninstalls a plugin for an application. This API uses a promise to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.UNINSTALL_PLUGIN_BUNDLE
 
 <!--Device-BundleInstaller-uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: PluginParam): Promise<void>--><!--Device-BundleInstaller-uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: PluginParam): Promise<void>-End-->
@@ -1547,7 +1459,7 @@ Uninstalls a plugin for an application. This API uses a promise to return the re
 | --- | --- | --- | --- |
 | hostBundleName | string | Yes | Bundle name of the application for which the plugin is to be uninstalled. |
 | pluginBundleName | string | Yes | Bundle name of the plugin. |
-| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for uninstalling the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md#PluginParam-(System-API)). |
+| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for uninstalling the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md#pluginparam-system-api). |
 
 **Return value:**
 
@@ -1565,7 +1477,7 @@ Uninstalls a plugin for an application. This API uses a promise to return the re
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The user id is invalid. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1604,10 +1516,6 @@ Uninstalls and updates a preinstalled application and restores it to the initial
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
 <!--Device-BundleInstaller-uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>--><!--Device-BundleInstaller-uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>-End-->
@@ -1621,7 +1529,7 @@ Uninstalls and updates a preinstalled application and restores it to the initial
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the uninstall and update. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API)). The **userId** parameter cannot be specified. Calling this API will uninstall and update the application for all users. |
+| installParam | InstallParam | No | Parameters required for the uninstall and update. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api). The **userId** parameter cannot be specified. Calling this API will uninstall and update the application for all users. |
 
 **Return value:**
 
@@ -1643,7 +1551,7 @@ Uninstalls and updates a preinstalled application and restores it to the initial
 | [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 13 and later |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1682,10 +1590,6 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_SELF_BUNDLE
 
 <!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void-End-->
@@ -1700,7 +1604,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1728,7 +1632,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 | [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1769,10 +1673,6 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_SELF_BUNDLE
 
 <!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void-End-->
@@ -1786,7 +1686,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1813,7 +1713,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 | [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
@@ -1849,10 +1749,6 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INSTALL_SELF_BUNDLE
 
 <!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>--><!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>-End-->
@@ -1866,7 +1762,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API)). |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api). |
 
 **Return value:**
 
@@ -1900,7 +1796,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 | [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';

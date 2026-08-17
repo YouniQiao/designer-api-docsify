@@ -10,9 +10,7 @@ Copies the source directory and its content to the destination path. You can set
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function copyDir(src: string, dest: string, mode?: int): Promise<void>--><!--Device-fileIo-function copyDir(src: string, dest: string, mode?: int): Promise<void>-End-->
 
@@ -24,7 +22,7 @@ Copies the source directory and its content to the destination path. You can set
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| mode | int | No | Copy mode. The default value is **0**. <br>- **0**: Throw an exception if a file conflict occurs. <br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained. The **data** attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](arkts-na-file-fs-conflictfiles-i.md#ConflictFiles)&gt; format. <br>- **1**: Forcibly overwrite the files with the same name in the destination directory. <br> When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
+| mode | int | No | Copy mode. The default value is **0**. <br>- **0**: Throw an exception if a file conflict occurs. <br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained. The **data** attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-conflictfiles-i.md#conflictfiles)&gt; format. <br>- **1**: Forcibly overwrite the files with the same name in the destination directory. <br> When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
 
 **Return value:**
 
@@ -66,9 +64,7 @@ Copies the source directory and its content to the destination path. This API us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function copyDir(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copyDir(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
 
@@ -115,9 +111,7 @@ Copies the source directory and its content to the destination path. You can set
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function copyDir(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copyDir(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void-End-->
 

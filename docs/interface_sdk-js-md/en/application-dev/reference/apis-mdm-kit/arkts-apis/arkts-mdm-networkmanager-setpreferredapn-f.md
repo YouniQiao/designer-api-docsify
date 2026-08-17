@@ -16,10 +16,6 @@ Sets the preferred APN.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APN
 
 **Model restriction:** This API can be used only in the stage model.
@@ -33,7 +29,7 @@ Sets the preferred APN.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnId | string | Yes | Preferred APN ID to be set. You can obatin the device APN information via [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryApn). |
+| apnId | string | Yes | Preferred APN ID to be set. You can obatin the device APN information via [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn). |
 
 **Error codes:**
 
@@ -43,7 +39,7 @@ Sets the preferred APN.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

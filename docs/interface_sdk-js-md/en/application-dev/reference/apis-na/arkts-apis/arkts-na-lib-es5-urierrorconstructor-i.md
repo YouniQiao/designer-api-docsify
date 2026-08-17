@@ -1,12 +1,8 @@
 # URIErrorConstructor
 
-**Inheritance/Implementation:** URIErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md#ErrorConstructor)
+**Inheritance/Implementation:** URIErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md#errorconstructor)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface URIErrorConstructor--><!--Device-unnamed-interface URIErrorConstructor-End-->
 
@@ -17,10 +13,6 @@ new(message?: string): URIError
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-URIErrorConstructor-new(message?: string): URIError--><!--Device-URIErrorConstructor-new(message?: string): URIError-End-->
 
@@ -43,10 +35,6 @@ new(message?: string): URIError
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-URIErrorConstructor-(message?: string): URIError--><!--Device-URIErrorConstructor-(message?: string): URIError-End-->
 
@@ -71,10 +59,6 @@ readonly prototype: URIError
 **Type:** [URIError](arkts-na-lib-es5-urierror-i.md)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-URIErrorConstructor-readonly prototype: URIError--><!--Device-URIErrorConstructor-readonly prototype: URIError-End-->
 

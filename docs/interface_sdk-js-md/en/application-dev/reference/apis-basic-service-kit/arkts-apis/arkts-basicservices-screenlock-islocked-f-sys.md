@@ -16,10 +16,6 @@ Checks whether the screen is currently locked.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screenLock-function isLocked(): boolean--><!--Device-screenLock-function isLocked(): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
@@ -38,7 +34,7 @@ Checks whether the screen is currently locked.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let isLocked = screenLock.isLocked();

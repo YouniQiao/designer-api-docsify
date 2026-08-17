@@ -16,8 +16,6 @@ Unsubscribe the event reported when data is read from the socket.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** sppRead
@@ -34,7 +32,7 @@ Unsubscribe the event reported when data is read from the socket.
 | clientSocket | number | Yes | Client socket ID, which is obtained by sppAccept or sppConnect. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to listen for the spp read event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

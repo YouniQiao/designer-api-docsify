@@ -10,10 +10,6 @@ function shiftAppWindowPointerEvent(sourceWindowId: int, targetWindowId: int): P
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-window-function shiftAppWindowPointerEvent(sourceWindowId: int, targetWindowId: int): Promise<void>--><!--Device-window-function shiftAppWindowPointerEvent(sourceWindowId: int, targetWindowId: int): Promise<void>-End-->
@@ -24,8 +20,8 @@ function shiftAppWindowPointerEvent(sourceWindowId: int, targetWindowId: int): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sourceWindowId | int | 是 | 源窗口id。推荐使用 [getWindowProperties()](arkts-arkui-window-window-i.md#getWindowProperties)方法获取窗口id属性。 |
-| targetWindowId | int | 是 | 目标窗口id。推荐使用 [getWindowProperties()](arkts-arkui-window-window-i.md#getWindowProperties)方法获取窗口id属性。 |
+| sourceWindowId | int | 是 | 源窗口id。推荐使用 [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)方法获取窗口id属性。 |
+| targetWindowId | int | 是 | 目标窗口id。推荐使用 [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)方法获取窗口id属性。 |
 
 **返回值：**
 
@@ -43,7 +39,7 @@ function shiftAppWindowPointerEvent(sourceWindowId: int, targetWindowId: int): P
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. SourceWindow cannot find: not created or not belong to current process; 2. TargetWindow cannot find: not created or not belong to current process; 3. Internal task error. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows and subwindows are supported; 2. The two windows are not from the same process. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -16,10 +16,6 @@ Checks whether the device has an infrared transmitter. This API uses a promise t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
 <!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>--><!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>-End-->
@@ -39,7 +35,7 @@ Checks whether the device has an infrared transmitter. This API uses a promise t
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { infraredEmitter } from '@kit.InputKit';

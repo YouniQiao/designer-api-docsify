@@ -10,8 +10,6 @@ Specifies whether data roaming is enabled. &lt;p&gt;If the value is {@code true}
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-network-const DATA_ROAMING_STATUS: string--><!--Device-network-const DATA_ROAMING_STATUS: string-End-->
@@ -28,8 +26,6 @@ Indicates the host name and port number of the global HTTP proxy. The host name 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-network-const HTTP_PROXY_CFG: string--><!--Device-network-const HTTP_PROXY_CFG: string-End-->
@@ -45,8 +41,6 @@ const NETWORK_PREFERENCE_USAGE: string
 Indicates the user preferences of the network to use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 

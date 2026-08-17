@@ -4,10 +4,6 @@ Defines the attributes specific to the dialog box and custom click actions for t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare interface DialogOptions--><!--Device-unnamed-export declare interface DialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -33,10 +29,6 @@ The background of the dialog.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DialogOptions-backgroundImage?: Resource--><!--Device-DialogOptions-backgroundImage?: Resource-End-->
@@ -54,10 +46,6 @@ The type of the bottom offset.
 **Type:** [BottomOffset](arkts-arkui-atomicservice-interstitialdialogaction-bottomoffset-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -77,10 +65,6 @@ The foreground of the dialog.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DialogOptions-foregroundImage?: Resource--><!--Device-DialogOptions-foregroundImage?: Resource-End-->
@@ -98,10 +82,6 @@ The style of the close button.
 **Type:** [IconStyle](arkts-arkui-atomicservice-interstitialdialogaction-iconstyle-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -121,10 +101,6 @@ The action after clicking dialog.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DialogOptions-onDialogClick?: Callback<void>--><!--Device-DialogOptions-onDialogClick?: Callback<void>-End-->
@@ -142,10 +118,6 @@ The action after clicking close button.
 **Type:** Callback&lt;void&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -165,10 +137,6 @@ The subtitle of the dialog.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DialogOptions-subtitle?: ResourceStr--><!--Device-DialogOptions-subtitle?: ResourceStr-End-->
@@ -186,10 +154,6 @@ The color of the subtitle.
 **Type:** ResourceStr \| Color
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -209,10 +173,6 @@ The title of the dialog.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DialogOptions-title?: ResourceStr--><!--Device-DialogOptions-title?: ResourceStr-End-->
@@ -230,10 +190,6 @@ The color of the title.
 **Type:** ResourceStr \| Color
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -253,10 +209,6 @@ The relative position of the title and subtitle.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DialogOptions-titlePosition?: TitlePosition--><!--Device-DialogOptions-titlePosition?: TitlePosition-End-->
@@ -274,10 +226,6 @@ The UIContext required by the dialog.
 **Type:** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

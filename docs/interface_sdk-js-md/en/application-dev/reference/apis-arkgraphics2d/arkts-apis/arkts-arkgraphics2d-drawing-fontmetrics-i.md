@@ -4,10 +4,6 @@ Describes the attributes that describe the font size and layout. A typeface has 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-interface FontMetrics--><!--Device-drawing-interface FontMetrics-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Distance from the baseline to the highest coordinate of the text. The value is a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetrics-ascent: double--><!--Device-FontMetrics-ascent: double-End-->
@@ -51,10 +43,6 @@ Average character width.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -74,10 +62,6 @@ Maximum distance from the baseline to the lowest coordinate of the text. The val
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetrics-bottom: double--><!--Device-FontMetrics-bottom: double-End-->
@@ -95,10 +79,6 @@ Height of a capital letter. The value is usually a negative value.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -118,10 +98,6 @@ Distance from the baseline to the lowest coordinate of the text. The value is a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetrics-descent: double--><!--Device-FontMetrics-descent: double-End-->
@@ -140,10 +116,6 @@ Font measurement flags that are valid.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FontMetrics-flags?: int--><!--Device-FontMetrics-flags?: int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -159,10 +131,6 @@ Interline spacing, that is, the distance from the descent of one line of text to
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -182,10 +150,6 @@ Maximum character width.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetrics-maxCharWidth?: double--><!--Device-FontMetrics-maxCharWidth?: double-End-->
@@ -203,10 +167,6 @@ Vertical distance from the baseline to the bottom of the strikethrough. The valu
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -226,10 +186,6 @@ Thickness of the strikethrough.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetrics-strikethroughThickness?: double--><!--Device-FontMetrics-strikethroughThickness?: double-End-->
@@ -247,10 +203,6 @@ Maximum distance from the baseline to the highest coordinate of the text. The va
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -270,10 +222,6 @@ Vertical distance from the baseline to the top of the underline. The value is us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetrics-underlinePosition?: double--><!--Device-FontMetrics-underlinePosition?: double-End-->
@@ -291,10 +239,6 @@ Thickness of the underline.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -314,10 +258,6 @@ Height of the lowercase letter x. The value is usually a negative value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetrics-xHeight?: double--><!--Device-FontMetrics-xHeight?: double-End-->
@@ -336,10 +276,6 @@ Horizontal distance from the rightmost edge of any glyph bounding box to the ori
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetrics-xMax?: double--><!--Device-FontMetrics-xMax?: double-End-->
@@ -357,10 +293,6 @@ Horizontal distance from the leftmost edge of any glyph bounding box to the orig
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -1,14 +1,12 @@
 # AbilityType
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md#AbilityType) instead. Enumerates the ability types.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md#abilitytype) instead. Enumerates the ability types.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md#AbilityType)
+**Substitutes:** [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md#abilitytype)
 
 <!--Device-bundle-export enum AbilityType--><!--Device-bundle-export enum AbilityType-End-->
 
@@ -23,8 +21,6 @@ UNKNOWN = 0
 Unknown ability type.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -42,11 +38,9 @@ FA developed using the Page template to provide the capability of interacting wi
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PAGE](arkts-ability-bundlemanager-abilitytype-e.md#PAGE)
+**Substitutes:** [PAGE](arkts-ability-bundlemanager-abilitytype-e.md#page)
 
 <!--Device-AbilityType-PAGE = 1--><!--Device-AbilityType-PAGE = 1-End-->
 
@@ -62,11 +56,9 @@ PA developed using the Service template to provide the capability of running tas
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SERVICE](arkts-ability-bundlemanager-abilitytype-e.md#SERVICE)
+**Substitutes:** [SERVICE](arkts-ability-bundlemanager-abilitytype-e.md#service)
 
 <!--Device-AbilityType-SERVICE = 2--><!--Device-AbilityType-SERVICE = 2-End-->
 
@@ -82,11 +74,9 @@ PA developed using the Data template to provide unified data access for external
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DATA](arkts-ability-bundlemanager-abilitytype-e.md#DATA)
+**Substitutes:** [DATA](arkts-ability-bundlemanager-abilitytype-e.md#data)
 
 <!--Device-AbilityType-DATA = 3--><!--Device-AbilityType-DATA = 3-End-->
 

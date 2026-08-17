@@ -4,10 +4,6 @@ Indicates the Dsds Mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-export enum DsdsMode--><!--Device-sim-export enum DsdsMode-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -23,10 +19,6 @@ DSDS_MODE_V2 = 0
 Indicates the DSDS 2.0 Mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DsdsMode-DSDS_MODE_V2 = 0--><!--Device-DsdsMode-DSDS_MODE_V2 = 0-End-->
 
@@ -44,10 +36,6 @@ Indicates the DSDS 3.0 Mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DsdsMode-DSDS_MODE_V3 = 1--><!--Device-DsdsMode-DSDS_MODE_V3 = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -64,10 +52,6 @@ Indicates the DSDS 5.0 TDM Mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DsdsMode-DSDS_MODE_V5_TDM = 2--><!--Device-DsdsMode-DSDS_MODE_V5_TDM = 2-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -83,10 +67,6 @@ DSDS_MODE_V5_DSDA = 3
 Indicates the DSDS 5.0 DSDA Mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DsdsMode-DSDS_MODE_V5_DSDA = 3--><!--Device-DsdsMode-DSDS_MODE_V5_DSDA = 3-End-->
 

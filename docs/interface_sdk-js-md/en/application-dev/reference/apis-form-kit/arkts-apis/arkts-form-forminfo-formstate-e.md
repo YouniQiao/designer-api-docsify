@@ -4,10 +4,6 @@ Provides state about a form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-enum FormState--><!--Device-formInfo-enum FormState-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -21,10 +17,6 @@ UNKNOWN = -1
 Indicates that the form status is unknown due to an internal error.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Indicates that the form is in the default state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormState-DEFAULT = 0--><!--Device-FormState-DEFAULT = 0-End-->
@@ -61,10 +49,6 @@ READY = 1
 Indicates that the form is ready.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

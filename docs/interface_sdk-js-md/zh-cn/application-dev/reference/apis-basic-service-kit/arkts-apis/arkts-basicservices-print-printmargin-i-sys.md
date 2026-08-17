@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-interface PrintMargin--><!--Device-print-interface PrintMargin-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -25,10 +21,6 @@ bottom?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintMargin-bottom?: int--><!--Device-PrintMargin-bottom?: int-End-->
 
@@ -48,10 +40,6 @@ left?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintMargin-left?: int--><!--Device-PrintMargin-left?: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -70,10 +58,6 @@ right?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintMargin-right?: int--><!--Device-PrintMargin-right?: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -91,10 +75,6 @@ top?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintMargin-top?: int--><!--Device-PrintMargin-top?: int-End-->
 

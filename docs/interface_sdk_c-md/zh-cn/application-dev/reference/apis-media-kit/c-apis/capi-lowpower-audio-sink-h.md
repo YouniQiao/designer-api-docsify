@@ -68,7 +68,7 @@ OH_LowPowerAudioSink* OH_LowPowerAudioSink_CreateByMime(const char* mime)
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_LowPowerAudioSink*](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md) | 如果创建成功返回指向OH_LowPowerAudioSink实例的指针，否则返回空指针。 |
+| OH_LowPowerAudioSink* | 如果创建成功返回指向OH_LowPowerAudioSink实例的指针，否则返回空指针。 |
 
 ### OH_LowPowerAudioSink_Configure()
 
@@ -86,7 +86,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Configure(OH_LowPowerAudioSink* sink, const OH
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 | const OH_AVFormat* format | A pointer to an OH_AVFormat to give the description of the audio track to be decoded |
 
 **返回：**
@@ -111,7 +111,7 @@ OH_AVErrCode OH_LowPowerAudioSink_SetParameter(OH_LowPowerAudioSink* sink, const
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 | const OH_AVFormat* format | pointer to an OH_AVFormat instance |
 
 **返回：**
@@ -136,7 +136,7 @@ OH_AVErrCode OH_LowPowerAudioSink_GetParameter(OH_LowPowerAudioSink* sink, OH_AV
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 | OH_AVFormat* format | pointer to an OH_AVFormat instance |
 
 **返回：**
@@ -161,7 +161,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Prepare(OH_LowPowerAudioSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 
 **返回：**
 
@@ -185,7 +185,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Start(OH_LowPowerAudioSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 
 **返回：**
 
@@ -209,7 +209,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Pause(OH_LowPowerAudioSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 
 **返回：**
 
@@ -233,7 +233,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Resume(OH_LowPowerAudioSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 
 **返回：**
 
@@ -257,7 +257,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Flush(OH_LowPowerAudioSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 
 **返回：**
 
@@ -281,7 +281,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Stop(OH_LowPowerAudioSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 
 **返回：**
 
@@ -305,7 +305,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Reset(OH_LowPowerAudioSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 
 **返回：**
 
@@ -329,7 +329,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Destroy(OH_LowPowerAudioSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 
 **返回：**
 
@@ -353,7 +353,7 @@ OH_AVErrCode OH_LowPowerAudioSink_SetVolume(OH_LowPowerAudioSink* sink, const fl
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 | const float volume | Volume to set which changes from 0.0 to 1.0 |
 
 **返回：**
@@ -378,7 +378,7 @@ OH_AVErrCode OH_LowPowerAudioSink_SetPlaybackSpeed(OH_LowPowerAudioSink* sink, c
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
 | const float speed | The playback speed value needs to be specified, the valid value is 0.25-4.0 |
 
 **返回：**
@@ -403,8 +403,8 @@ OH_AVErrCode OH_LowPowerAudioSink_ReturnSamples(OH_LowPowerAudioSink* sink, OH_A
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
-| [OH_AVSamplesBuffer](capi-avsinkbase-oh-avsamplesbuffer.md)* samples | Pointer to an OH_AVSamplesBuffer instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_AVSamplesBuffer* samples | Pointer to an OH_AVSamplesBuffer instance |
 
 **返回：**
 
@@ -428,8 +428,8 @@ OH_AVErrCode OH_LowPowerAudioSink_RegisterCallback(OH_LowPowerAudioSink* sink, O
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance |
-| [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md)* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
 
 **返回：**
 
@@ -453,7 +453,7 @@ OH_LowPowerAudioSinkCallback* OH_LowPowerAudioSinkCallback_Create(void)
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_LowPowerAudioSinkCallback*](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md) | 返回指向OH_LowPowerAudioSinkCallback实例的指针。如果内存不足，则返回nullptr。 |
+| OH_LowPowerAudioSinkCallback* | 返回指向OH_LowPowerAudioSinkCallback实例的指针。如果内存不足，则返回nullptr。 |
 
 ### OH_LowPowerAudioSinkCallback_Destroy()
 
@@ -471,7 +471,7 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_Destroy(OH_LowPowerAudioSinkCallback* 
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md)* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
+| OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
 
 **返回：**
 
@@ -495,8 +495,8 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetPositionUpdateListener(OH_LowPowerA
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md)* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
-| [OH_LowPowerAudioSink_OnPositionUpdated](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_onpositionupdated) onPositionUpdated | OH_LowPowerAudioSink_OnPositionUpdated function,refer to [OH_LowPowerAudioSink_OnPositionUpdated](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_onpositionupdated) |
+| OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
+| OH_LowPowerAudioSink_OnPositionUpdated onPositionUpdated | OH_LowPowerAudioSink_OnPositionUpdated function,refer to [OH_LowPowerAudioSink_OnPositionUpdated](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_onpositionupdated) |
 | void* userData | 用户执行回调所依赖的数据。 |
 
 **返回：**
@@ -521,8 +521,8 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDataNeededListener(OH_LowPowerAudio
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md)* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
-| [OH_LowPowerAudioSink_OnDataNeeded](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_ondataneeded) onDataNeeded | OH_LowPowerAudioSink_OnDataNeeded function,refer to [OH_LowPowerAudioSink_OnDataNeeded](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_ondataneeded) |
+| OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
+| OH_LowPowerAudioSink_OnDataNeeded onDataNeeded | OH_LowPowerAudioSink_OnDataNeeded function,refer to [OH_LowPowerAudioSink_OnDataNeeded](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_ondataneeded) |
 | void* userData | User specific data |
 
 **返回：**
@@ -547,8 +547,8 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetErrorListener(OH_LowPowerAudioSinkC
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md)* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
-| [OH_LowPowerAudioSink_OnError](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_onerror) onError | OH_LowPowerAudioSink_OnError function,refer to [OH_LowPowerAudioSink_OnError](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_onerror) |
+| OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
+| OH_LowPowerAudioSink_OnError onError | OH_LowPowerAudioSink_OnError function,refer to [OH_LowPowerAudioSink_OnError](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_onerror) |
 | void* userData | User specific data |
 
 **返回：**
@@ -573,8 +573,8 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetInterruptListener(OH_LowPowerAudioS
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md)* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
-| [OH_LowPowerAudioSink_OnInterrupted](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_oninterrupted) onInterrupted | OH_LowPowerAudioSink_OnInterrupted function,refer to [OH_LowPowerAudioSink_OnInterrupted](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_oninterrupted) |
+| OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
+| OH_LowPowerAudioSink_OnInterrupted onInterrupted | OH_LowPowerAudioSink_OnInterrupted function,refer to [OH_LowPowerAudioSink_OnInterrupted](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_oninterrupted) |
 | void* userData | User specific data |
 
 **返回：**
@@ -599,8 +599,8 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetDeviceChangeListener(OH_LowPowerAud
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md)* callback | Pointer to an OH_LowPowerAudioSink Callback instance |
-| [OH_LowPowerAudioSink_OnDeviceChanged](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_ondevicechanged) onDeviceChanged | OH_LowPowerAudioSink_OnDeviceChanged function,refer to [OH_LowPowerAudioSink_OnDeviceChanged](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_ondevicechanged) |
+| OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSink Callback instance |
+| OH_LowPowerAudioSink_OnDeviceChanged onDeviceChanged | OH_LowPowerAudioSink_OnDeviceChanged function,refer to [OH_LowPowerAudioSink_OnDeviceChanged](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_ondevicechanged) |
 | void* userData | User specific data |
 
 **返回：**
@@ -625,8 +625,8 @@ OH_AVErrCode OH_LowPowerAudioSinkCallback_SetEosListener(OH_LowPowerAudioSinkCal
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md) *callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
-| [OH_LowPowerAudioSink_OnEos](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_oneos) onEos | OH_LowPowerAudioSink_OnEos function,refer to [OH_LowPowerAudioSink_OnEos](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_oneos) |
+| OH_LowPowerAudioSinkCallback *callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
+| OH_LowPowerAudioSink_OnEos onEos | OH_LowPowerAudioSink_OnEos function,refer to [OH_LowPowerAudioSink_OnEos](capi-lowpower-audio-sink-base-h.md#oh_lowpoweraudiosink_oneos) |
 | void* userData | User specific data |
 
 **返回：**
@@ -651,7 +651,7 @@ OH_AVErrCode OH_LowPowerAudioSink_SetLoudnessGain(OH_LowPowerAudioSink* sink, fl
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* sink | Pointer to an OH_LowPowerAudioSink instance. |
+| OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance. |
 | float loudnessGain | Loudness gain to set which changes from -90.0 to 24.0, expressing in dB.The default loudness gain is 0.0dB. |
 
 **返回：**

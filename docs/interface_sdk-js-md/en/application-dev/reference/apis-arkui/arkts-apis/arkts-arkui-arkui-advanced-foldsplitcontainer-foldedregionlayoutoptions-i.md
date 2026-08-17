@@ -4,10 +4,6 @@ Provides the layout information of the folded state.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface FoldedRegionLayoutOptions--><!--Device-unnamed-export interface FoldedRegionLayoutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -36,10 +32,6 @@ Height ratio between the primary and extra regions. The value range is all integ
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

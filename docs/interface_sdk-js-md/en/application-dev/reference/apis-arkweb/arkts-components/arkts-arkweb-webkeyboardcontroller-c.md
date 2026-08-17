@@ -1,12 +1,8 @@
 # WebKeyboardController
 
-Define the controller to interact with a custom keyboard, related to the onInterceptKeyboardAttach event.
+WebKeyboardController is a controller class provided by ArkWeb for controlling the custom keyboard behavior of the Web component. When an input field on a web page needs to display a keyboard, developers can intercept the mounting of the system default keyboard through the [onInterceptKeyboardAttach](arkts-arkweb-web-attribute.md#oninterceptkeyboardattach) event, and use WebKeyboardController to perform operations such as inserting characters, forward/backward deletion, sending function keys like Enter, and closing the custom keyboard on the currently focused web input field. This class is suitable for apps that need to implement custom secure keyboards, emoji keyboards, handwriting keyboards, or business-specific input panels for web scenarios, enabling developers to fully take over the keyboard input logic of web input fields.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WebKeyboardController--><!--Device-unnamed-declare class WebKeyboardController-End-->
 
@@ -22,10 +18,6 @@ Closes this custom keyboard.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-WebKeyboardController-close(): void--><!--Device-WebKeyboardController-close(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -40,10 +32,6 @@ Constructs a **WebKeyboardController** API.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebKeyboardController-constructor()--><!--Device-WebKeyboardController-constructor()-End-->
@@ -56,13 +44,9 @@ Constructs a **WebKeyboardController** API.
 deleteBackward(length: number): void
 ```
 
-Deletes a specified number of characters backward in a **Web** component text box.
+Deletes a specified length of characters after the cursor.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-WebKeyboardController-deleteBackward(length: number): void--><!--Device-WebKeyboardController-deleteBackward(length: number): void-End-->
 
@@ -72,7 +56,7 @@ Deletes a specified number of characters backward in a **Web** component text bo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | Length of characters to delete backward in a **Web** component text box.<br>Value range: [-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters after the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
+| length | number | Yes | Number of characters to delete after the cursor. <br>Value range: [-2147483648, 2147483647]. If the parameter value is greater than the character length, all characters after the cursor are deleted by default. If the parameter value is negative, no deletion is performed. |
 
 ## deleteForward
 
@@ -80,13 +64,9 @@ Deletes a specified number of characters backward in a **Web** component text bo
 deleteForward(length: number): void
 ```
 
-Deletes a specified number of characters forward in a **Web** component text box.
+Deletes a specified length of characters before the cursor.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-WebKeyboardController-deleteForward(length: number): void--><!--Device-WebKeyboardController-deleteForward(length: number): void-End-->
 
@@ -96,7 +76,7 @@ Deletes a specified number of characters forward in a **Web** component text box
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | Length of characters to delete forward in a **Web** component text box.<br>Value range: [-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters before the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
+| length | number | Yes | Deletes a specified length of characters before the cursor. <br>Value range: [-2147483648, 2147483647]. When the parameter value is greater than the character length, all characters before the cursor are deleted by default. When the parameter value is negative, no deletion is performed. |
 
 ## insertText
 
@@ -108,10 +88,6 @@ Inserts characters into the **Web** component text box.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-WebKeyboardController-insertText(text: string): void--><!--Device-WebKeyboardController-insertText(text: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -120,7 +96,7 @@ Inserts characters into the **Web** component text box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Characters to insert into the **Web** component text box. |
+| text | string | Yes | Text inserted into the web input box at the current cursor position. If there is selected text, it is replaced with this text. An input event is triggered. The cursor moves to the end of the inserted text. |
 
 ## sendFunctionKey
 
@@ -128,13 +104,9 @@ Inserts characters into the **Web** component text box.
 sendFunctionKey(key: number): void
 ```
 
-Inserts a function key. Currently, only the Enter key type is supported. For details about the value, see [EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#EnterKeyType).
+Inserts a function key. Currently, only the Enter key type is supported. For details about the value, see [EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#enterkeytype).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-WebKeyboardController-sendFunctionKey(key: number): void--><!--Device-WebKeyboardController-sendFunctionKey(key: number): void-End-->
 
@@ -144,5 +116,5 @@ Inserts a function key. Currently, only the Enter key type is supported. For det
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | number | Yes | Function key to insert into the **Web** component text box. Currently, only the Enter key is supported. |
+| key | number | Yes | Type of the function key. Only the Enter key is supported. |
 

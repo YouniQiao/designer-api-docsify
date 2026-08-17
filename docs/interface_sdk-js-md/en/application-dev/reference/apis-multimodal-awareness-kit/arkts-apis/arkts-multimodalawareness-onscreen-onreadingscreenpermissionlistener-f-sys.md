@@ -16,10 +16,6 @@ Enables the screen content access permission monitoring and returns the permissi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_SCREEN_CONTENT
 
 **Model restriction:** This API can be used only in the stage model.
@@ -45,7 +41,7 @@ Enables the screen content access permission monitoring and returns the permissi
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to get page content forbidden by <br> permission: ohos.permission.GET_SCREEN_CONTENT. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import onScreen from "@ohos.multimodalAwareness.onScreen";

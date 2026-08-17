@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudExtension-export interface CloudData--><!--Device-cloudExtension-export interface CloudData-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -25,10 +21,6 @@ hasMore: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CloudData-hasMore: boolean--><!--Device-CloudData-hasMore: boolean-End-->
 
@@ -48,10 +40,6 @@ nextCursor: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CloudData-nextCursor: string--><!--Device-CloudData-nextCursor: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -69,10 +57,6 @@ values: Array<Record<string, CloudType>>
 **类型：** Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CloudData-values: Array<Record<string, CloudType>>--><!--Device-CloudData-values: Array<Record<string, CloudType>>-End-->
 

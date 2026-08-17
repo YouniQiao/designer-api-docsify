@@ -12,13 +12,9 @@ import { systemManager } from 'systemManager';
 function finishLogCollected(admin: Want): void
 ```
 
-Deletes the device logs collected by the current MDM app under the current user. > **NOTE：**> > After the app calls [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startCollectLog) to initiate log collection and > receives the > [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onLogCollected) > callback, you are advised to immediately copy or process the logs, and then call this API to delete the collected > logs. > > If this API is not called, device logs will occupy the system storage space, which does not affect the next call > of [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startCollectLog) to start a log collection task.
+Deletes the device logs collected by the current MDM app under the current user. > **NOTE：**> > After the app calls [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startcollectlog) to initiate log collection and > receives the > [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) > callback, you are advised to immediately copy or process the logs, and then call this API to delete the collected > logs. > > If this API is not called, device logs will occupy the system storage space, which does not affect the next call > of [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startcollectlog) to start a log collection task.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_READ_LOG
 
@@ -43,7 +39,7 @@ Deletes the device logs collected by the current MDM app under the current user.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

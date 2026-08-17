@@ -16,10 +16,6 @@ Obtains a text embedding model.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligence-function getTextEmbeddingModel(config: ModelConfig): Promise<TextEmbedding>--><!--Device-intelligence-function getTextEmbeddingModel(config: ModelConfig): Promise<TextEmbedding>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -44,7 +40,7 @@ Obtains a text embedding model.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

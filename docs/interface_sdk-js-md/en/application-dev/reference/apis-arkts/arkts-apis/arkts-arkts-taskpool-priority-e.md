@@ -4,10 +4,6 @@ Enumerates the priorities available for created tasks. The task priority applies
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-taskpool-enum Priority--><!--Device-taskpool-enum Priority-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -21,10 +17,6 @@ HIGH = 0
 The task has a high priority. This API can be used in atomic services since API version 11.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ The task has a medium priority. This API can be used in atomic services since AP
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Priority-MEDIUM = 1--><!--Device-Priority-MEDIUM = 1-End-->
@@ -62,10 +50,6 @@ The task has a low priority. This API can be used in atomic services since API v
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Priority-LOW = 2--><!--Device-Priority-LOW = 2-End-->
@@ -81,10 +65,6 @@ IDLE = 3
 The task is a background task. This API can be used in atomic services since API version 12.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Swiper](arkts-na-swiper-swiper-f.md#Swiper) | Defines Swiper Component |
+| [Swiper](arkts-na-swiper-swiper-f.md#swiper) | Defines Swiper Component |
 
 ### Classes
 

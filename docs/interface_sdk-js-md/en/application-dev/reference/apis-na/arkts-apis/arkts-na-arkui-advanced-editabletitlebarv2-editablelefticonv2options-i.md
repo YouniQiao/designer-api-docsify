@@ -4,9 +4,7 @@ Indicates the options of the left icon.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare interface EditableLeftIconV2Options--><!--Device-unnamed-export declare interface EditableLeftIconV2Options-End-->
 
@@ -26,9 +24,7 @@ Whether to get focus by default.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,13 +40,11 @@ iconType?: EditableLeftIconTypeV2
 
 Icon type, Back or Cancel.
 
-**Type:** [EditableLeftIconTypeV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
+**Type:** [EditableLeftIconTypeV2](arkts-na-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,13 +60,11 @@ onAction?: OnActionCallback
 
 Callback function when click on the left icon.
 
-**Type:** [OnActionCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

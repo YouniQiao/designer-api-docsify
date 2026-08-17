@@ -4,10 +4,6 @@ Describes the filter conditions for track selection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface TrackSelectionFilter--><!--Device-media-interface TrackSelectionFilter-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -30,10 +26,6 @@ Maximum allowed audio bitrate. The value should be an integer.Value constraint:T
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrackSelectionFilter-maxAudioBitrate?: int--><!--Device-TrackSelectionFilter-maxAudioBitrate?: int-End-->
@@ -51,10 +43,6 @@ Maximum allowed audio channel count. The value should be an integer.Value constr
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Maximum allowed video bitrate. The value should be an integer.Value constraint:T
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrackSelectionFilter-maxVideoBitrate?: int--><!--Device-TrackSelectionFilter-maxVideoBitrate?: int-End-->
@@ -95,10 +79,6 @@ Maximum allowed video frame rate. The value should be an integer.Value constrain
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ Maximum allowed video resolution. <br>Default value:If not specified, the maximu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrackSelectionFilter-maxVideoResolution?: VideoSize--><!--Device-TrackSelectionFilter-maxVideoResolution?: VideoSize-End-->
@@ -139,10 +115,6 @@ Minimum allowed audio bitrate. The value should be an integer.Value constraint:T
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +134,6 @@ Minimum allowed video bitrate. The value should be an integer.Value constraint:T
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrackSelectionFilter-minVideoBitrate?: int--><!--Device-TrackSelectionFilter-minVideoBitrate?: int-End-->
@@ -183,10 +151,6 @@ Minimum allowed video frame rate. The value should be an integer.Value constrain
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,10 +170,6 @@ Minimum allowed video resolution. <br>Default value:If not specified, the minimu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrackSelectionFilter-minVideoResolution?: VideoSize--><!--Device-TrackSelectionFilter-minVideoResolution?: VideoSize-End-->
@@ -227,10 +187,6 @@ The preferred languages for audio tracks. Multiple languages are arranged in the
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,10 +206,6 @@ Indicates the preferred encoding MIME type of the audio track. Multiple MIMEs ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrackSelectionFilter-preferredAudioMimeTypes?: Array<string>--><!--Device-TrackSelectionFilter-preferredAudioMimeTypes?: Array<string>-End-->
@@ -272,10 +224,6 @@ Preferred language set for subtitles. Multiple languages are arranged in the ord
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrackSelectionFilter-preferredSubtitleLanguages?: Array<string>--><!--Device-TrackSelectionFilter-preferredSubtitleLanguages?: Array<string>-End-->
@@ -293,10 +241,6 @@ The preferred sample MIME types for video tracks in order of preference, Multipl
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,10 +10,6 @@ API version 10之前，此常量值为512，表示单个PasteData中所能包含
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-pasteboard-const MAX_RECORD_NUM: int--><!--Device-pasteboard-const MAX_RECORD_NUM: int-End-->
@@ -29,10 +25,6 @@ const MIMETYPE_PIXELMAP: string
 PixelMap内容的MIME类型，值为'pixelMap'。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,10 +42,6 @@ HTML内容的MIME类型，值为'text/html'。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-pasteboard-const MIMETYPE_TEXT_HTML: string--><!--Device-pasteboard-const MIMETYPE_TEXT_HTML: string-End-->
@@ -69,10 +57,6 @@ const MIMETYPE_TEXT_PLAIN: string
 纯文本内容的MIME类型，值为'text/plain'。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,10 +74,6 @@ URI内容的MIME类型，值为'text/uri'。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-pasteboard-const MIMETYPE_TEXT_URI: string--><!--Device-pasteboard-const MIMETYPE_TEXT_URI: string-End-->
@@ -109,10 +89,6 @@ const MIMETYPE_TEXT_WANT: string
 Want内容的MIME类型，值为'text/want'。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

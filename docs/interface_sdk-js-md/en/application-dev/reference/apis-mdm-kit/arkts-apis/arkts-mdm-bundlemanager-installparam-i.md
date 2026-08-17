@@ -4,10 +4,6 @@ Defines the parameters for application installation.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-interface InstallParam--><!--Device-bundleManager-interface InstallParam-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,10 +26,6 @@ Installation flag. **0** (default value) indicates fresh installation of the app
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InstallParam-installFlag?: number--><!--Device-InstallParam-installFlag?: number-End-->
@@ -52,10 +44,6 @@ Extended parameters. The default value is null. The key can be **ohos.bms.param.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InstallParam-parameters?: Record<string, string>--><!--Device-InstallParam-parameters?: Record<string, string>-End-->
@@ -73,10 +61,6 @@ User ID, which must be greater than or equal to 0. The default value is the user
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

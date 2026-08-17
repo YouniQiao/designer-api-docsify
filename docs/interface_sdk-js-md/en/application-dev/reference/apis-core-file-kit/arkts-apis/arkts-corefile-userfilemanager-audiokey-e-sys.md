@@ -4,11 +4,9 @@ Defines the key information about an audio file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-userFileManager-enum AudioKey--><!--Device-userFileManager-enum AudioKey-End-->
 
@@ -26,11 +24,9 @@ URI of the file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-AudioKey-URI--><!--Device-AudioKey-URI-End-->
 
@@ -48,11 +44,9 @@ File name displayed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-AudioKey-DISPLAY_NAME--><!--Device-AudioKey-DISPLAY_NAME-End-->
 
@@ -70,11 +64,9 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-AudioKey-DATE_ADDED--><!--Device-AudioKey-DATE_ADDED-End-->
 
@@ -92,11 +84,9 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-AudioKey-DATE_MODIFIED--><!--Device-AudioKey-DATE_MODIFIED-End-->
 
@@ -114,11 +104,9 @@ Title of the file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-AudioKey-TITLE--><!--Device-AudioKey-TITLE-End-->
 
@@ -136,11 +124,9 @@ Author of the file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-AudioKey-ARTIST--><!--Device-AudioKey-ARTIST-End-->
 
@@ -158,11 +144,9 @@ Audio album.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-AudioKey-AUDIOALBUM--><!--Device-AudioKey-AUDIOALBUM-End-->
 
@@ -180,11 +164,9 @@ Duration, in ms.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-AudioKey-DURATION--><!--Device-AudioKey-DURATION-End-->
 
@@ -202,11 +184,9 @@ Whether the file is added to favorites.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
 
 <!--Device-AudioKey-FAVORITE--><!--Device-AudioKey-FAVORITE-End-->
 

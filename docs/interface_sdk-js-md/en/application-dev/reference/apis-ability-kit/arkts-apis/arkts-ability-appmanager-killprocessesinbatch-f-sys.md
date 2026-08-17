@@ -16,10 +16,6 @@ Kills processes in batches. This API uses a promise to return the result. This A
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.KILL_APP_PROCESSES
 
 <!--Device-appManager-function killProcessesInBatch(pids: Array<int>): Promise<void>--><!--Device-appManager-function killProcessesInBatch(pids: Array<int>): Promise<void>-End-->
@@ -50,7 +46,7 @@ Kills processes in batches. This API uses a promise to return the result. This A
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

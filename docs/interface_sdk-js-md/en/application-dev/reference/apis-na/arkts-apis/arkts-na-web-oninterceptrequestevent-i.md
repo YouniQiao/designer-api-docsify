@@ -4,9 +4,7 @@ Defines the triggered callback when the resources loading is intercepted.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnInterceptRequestEvent--><!--Device-unnamed-export declare interface OnInterceptRequestEvent-End-->
 
@@ -24,9 +22,7 @@ The information of request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnInterceptRequestEvent-request: WebResourceRequest--><!--Device-OnInterceptRequestEvent-request: WebResourceRequest-End-->
 

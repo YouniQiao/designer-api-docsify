@@ -16,10 +16,6 @@ Creates an **X509CertChain** instance. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cert-function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>--><!--Device-cert-function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>-End-->
@@ -46,7 +42,7 @@ Creates an **X509CertChain** instance. This API uses a promise to return the res
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -147,10 +143,6 @@ Creates an **X509CertChain** instance. This API uses an asynchronous callback to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cert-function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X509CertChain>): void--><!--Device-cert-function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X509CertChain>): void-End-->
@@ -172,7 +164,7 @@ Creates an **X509CertChain** instance. This API uses an asynchronous callback to
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -268,10 +260,6 @@ Creates an X.509 certificate chain object based on the specified certificates. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cert-function createX509CertChain(certs: Array<X509Cert>): X509CertChain--><!--Device-cert-function createX509CertChain(certs: Array<X509Cert>): X509CertChain-End-->
@@ -298,7 +286,7 @@ Creates an X.509 certificate chain object based on the specified certificates. T
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

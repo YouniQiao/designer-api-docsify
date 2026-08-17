@@ -16,10 +16,6 @@ Set the policy to access the network of the specified application.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 <!--Device-policy-function setNetworkAccessPolicy(uid: number, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise<void>--><!--Device-policy-function setNetworkAccessPolicy(uid: number, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise<void>-End-->
@@ -33,7 +29,7 @@ Set the policy to access the network of the specified application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | The specified UID of application. |
-| policy | [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md) | Yes | The network access policy of application. For details, see [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md#NetworkAccessPolicy-(System-API)). |
+| policy | [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md) | Yes | The network access policy of application. For details, see [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md#networkaccesspolicy-system-api). |
 | isReconfirmed | boolean | No | Whether this operation is reconfirmed by user or not. Default false. |
 
 **Return value:**
@@ -53,7 +49,7 @@ Set the policy to access the network of the specified application.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

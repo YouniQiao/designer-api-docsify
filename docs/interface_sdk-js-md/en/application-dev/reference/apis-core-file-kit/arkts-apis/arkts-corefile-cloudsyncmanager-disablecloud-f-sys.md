@@ -16,10 +16,6 @@ Disables device-cloud sync. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
 <!--Device-cloudSyncManager-function disableCloud(accountId: string): Promise<void>--><!--Device-cloudSyncManager-function disableCloud(accountId: string): Promise<void>-End-->
@@ -48,7 +44,7 @@ Disables device-cloud sync. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,10 +67,6 @@ function disableCloud(accountId: string, callback: AsyncCallback<void>): void
 Disables device-cloud sync. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -99,7 +91,7 @@ Disables device-cloud sync. This API uses an asynchronous callback to return the
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

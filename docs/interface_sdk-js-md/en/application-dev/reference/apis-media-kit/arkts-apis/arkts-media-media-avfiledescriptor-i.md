@@ -4,10 +4,6 @@ Media file descriptor. The caller needs to ensure that the fd is valid and the o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface AVFileDescriptor--><!--Device-media-interface AVFileDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -30,10 +26,6 @@ The file descriptor of audio or video source from file system. The caller is res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVFileDescriptor-fd: int--><!--Device-AVFileDescriptor-fd: int-End-->
@@ -52,10 +44,6 @@ The length in bytes of the data to be read. By default, the length is the rest o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVFileDescriptor-length?: long--><!--Device-AVFileDescriptor-length?: long-End-->
@@ -73,10 +61,6 @@ The offset into the file where the data to be read, in bytes. By default, the of
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -10,10 +10,6 @@ export function getApplicationContextInstance(): ApplicationContext
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -34,7 +30,7 @@ export function getApplicationContextInstance(): ApplicationContext
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Memory operation error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want, common } from '@kit.AbilityKit';

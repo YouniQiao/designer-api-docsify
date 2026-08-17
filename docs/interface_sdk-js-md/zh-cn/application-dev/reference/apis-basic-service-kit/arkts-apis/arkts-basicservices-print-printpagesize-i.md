@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-interface PrintPageSize--><!--Device-print-interface PrintPageSize-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -23,10 +19,6 @@ height: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintPageSize-height: int--><!--Device-PrintPageSize-height: int-End-->
 
@@ -44,10 +36,6 @@ id: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintPageSize-id: string--><!--Device-PrintPageSize-id: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -64,10 +52,6 @@ name: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintPageSize-name: string--><!--Device-PrintPageSize-name: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -83,10 +67,6 @@ width: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintPageSize-width: int--><!--Device-PrintPageSize-width: int-End-->
 

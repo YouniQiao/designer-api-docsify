@@ -4,10 +4,6 @@ Describes the data content of a single channel of the gain map. For details, see
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface GainmapChannel--><!--Device-image-interface GainmapChannel-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ The per-component alternate offset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GainmapChannel-alternateOffset: double--><!--Device-GainmapChannel-alternateOffset: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -49,10 +41,6 @@ The per-component baseline offset.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GainmapChannel-baseOffset: double--><!--Device-GainmapChannel-baseOffset: double-End-->
 
@@ -70,10 +58,6 @@ The per-component max gain map values.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GainmapChannel-gainmapMax: double--><!--Device-GainmapChannel-gainmapMax: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -90,10 +74,6 @@ The per-component min gain map values.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GainmapChannel-gainmapMin: double--><!--Device-GainmapChannel-gainmapMin: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -109,10 +89,6 @@ The per-component gamma values.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GainmapChannel-gamma: double--><!--Device-GainmapChannel-gamma: double-End-->
 

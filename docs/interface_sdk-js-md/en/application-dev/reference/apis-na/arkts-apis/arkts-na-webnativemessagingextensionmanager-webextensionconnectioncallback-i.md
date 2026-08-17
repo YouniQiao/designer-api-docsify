@@ -4,9 +4,7 @@ As an input parameter when connecting a web native messaging extension, it is us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback--><!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback-End-->
 
@@ -22,9 +20,7 @@ Called when a connection is set up.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +32,7 @@ Called when a connection is set up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](arkts-na-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
+| connection | [ConnectionNativeInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
 
 ## onDisconnect
 
@@ -48,9 +44,7 @@ Called when a connection is interrupted.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,7 +56,7 @@ Called when a connection is interrupted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](arkts-na-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
+| connection | [ConnectionNativeInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
 
 ## onFailed
 
@@ -74,9 +68,7 @@ Called when the connection fails.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,6 +80,6 @@ Called when the connection fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [NmErrorCode](arkts-na-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | The error code of the failure. |
+| code | [NmErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | The error code of the failure. |
 | errMsg | string | Yes | The error message of the failure. |
 

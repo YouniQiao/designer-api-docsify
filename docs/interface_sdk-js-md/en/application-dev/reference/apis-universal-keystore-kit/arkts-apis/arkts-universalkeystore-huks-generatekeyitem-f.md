@@ -12,13 +12,9 @@ import { huks } from 'huks';
 function generateKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void
 ```
 
-Generates a key. This API uses an asynchronous callback to return the result. Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful. > **NOTE：**> > Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Generates a key. This API uses an asynchronous callback to return the result. Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful. > **NOTE：**> > Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -31,7 +27,7 @@ Generates a key. This API uses an asynchronous callback to return the result. Ba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for generating the key. The algorithm, key purpose, and key length are mandatory. When specifying the SE security level defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel), the ohos.permission.ACCESS_SE_KEY permission is required. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for generating the key. The algorithm, key purpose, and key length are mandatory. When specifying the SE security level defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel), the ohos.permission.ACCESS_SE_KEY permission is required. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -60,7 +56,7 @@ Generates a key. This API uses an asynchronous callback to return the result. Ba
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried entity does not exist. This may happen because the key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ArkTS sample code:
 
@@ -189,13 +185,9 @@ export default {
 function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 ```
 
-Generates a key. This API uses a promise to return the result. > **NOTE：**> > Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel) > requires the ohos.permission.ACCESS_SE_KEY permission. Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful.
+Generates a key. This API uses a promise to return the result. > **NOTE：**> > Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission. Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -208,7 +200,7 @@ Generates a key. This API uses a promise to return the result. > **NOTE：**> > 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for generating the key. The algorithm, key purpose, and key length are mandatory. When specifying the SE security level defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel), the ohos.permission.ACCESS_SE_KEY permission is required. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for generating the key. The algorithm, key purpose, and key length are mandatory. When specifying the SE security level defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel), the ohos.permission.ACCESS_SE_KEY permission is required. |
 
 **Return value:**
 
@@ -242,7 +234,7 @@ Generates a key. This API uses a promise to return the result. > **NOTE：**> > 
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried entity does not exist. This may happen because the key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 /* Generate a 256-bit ECC key. */

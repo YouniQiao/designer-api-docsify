@@ -16,10 +16,6 @@ Unholds a call based on the specified call ID. This API uses an asynchronous cal
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ANSWER_CALL
 
 <!--Device-call-function unHoldCall(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function unHoldCall(callId: int, callback: AsyncCallback<void>): void-End-->
@@ -47,7 +43,7 @@ Unholds a call based on the specified call ID. This API uses an asynchronous cal
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,10 +67,6 @@ function unHoldCall(callId: int): Promise<void>
 Unholds a call based on the specified call ID. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
@@ -108,7 +100,7 @@ Unholds a call based on the specified call ID. This API uses a promise to return
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

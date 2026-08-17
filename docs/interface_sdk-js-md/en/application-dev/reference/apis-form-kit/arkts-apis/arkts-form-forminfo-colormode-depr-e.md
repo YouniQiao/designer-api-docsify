@@ -4,11 +4,9 @@ Enumerates the color modes supported by the widget.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ColorMode](arkts-form-forminfo-colormode-e.md#ColorMode)
+**Substitutes:** [ColorMode](arkts-form-forminfo-colormode-e.md#colormode)
 
 <!--Device-formInfo-enum ColorMode--><!--Device-formInfo-enum ColorMode-End-->
 
@@ -24,11 +22,9 @@ Auto mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MODE_AUTO](arkts-form-forminfo-colormode-e.md#MODE_AUTO)
+**Substitutes:** [MODE_AUTO](arkts-form-forminfo-colormode-e.md#modeauto)
 
 <!--Device-ColorMode-MODE_AUTO = -1--><!--Device-ColorMode-MODE_AUTO = -1-End-->
 
@@ -44,11 +40,9 @@ Dark mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MODE_DARK](arkts-form-forminfo-colormode-e.md#MODE_DARK)
+**Substitutes:** [MODE_DARK](arkts-form-forminfo-colormode-e.md#modedark)
 
 <!--Device-ColorMode-MODE_DARK = 0--><!--Device-ColorMode-MODE_DARK = 0-End-->
 
@@ -64,11 +58,9 @@ Light mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MODE_LIGHT](arkts-form-forminfo-colormode-e.md#MODE_LIGHT)
+**Substitutes:** [MODE_LIGHT](arkts-form-forminfo-colormode-e.md#modelight)
 
 <!--Device-ColorMode-MODE_LIGHT = 1--><!--Device-ColorMode-MODE_LIGHT = 1-End-->
 

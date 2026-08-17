@@ -16,10 +16,6 @@ Deletes an .abc file based on the specified file path. This API uses a promise t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RUN_DYN_CODE
 
 <!--Device-bundleManager-function deleteAbc(abcPath: string): Promise<void>--><!--Device-bundleManager-function deleteAbc(abcPath: string): Promise<void>-End-->
@@ -49,7 +45,7 @@ Deletes an .abc file based on the specified file path. This API uses a promise t
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

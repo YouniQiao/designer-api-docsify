@@ -6,10 +6,6 @@ Provides methods for creating an NFC-V tag, obtaining tag information, and contr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NfcVTag--><!--Device-unnamed-export interface NfcVTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -24,10 +20,6 @@ Obtains the response flags from this {@code NfcVTag} instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcVTag-getDsfId(): int--><!--Device-NfcVTag-getDsfId(): int-End-->
@@ -40,7 +32,7 @@ Obtains the response flags from this {@code NfcVTag} instance.
 | --- | --- |
 | int | Returns the response flags. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -60,10 +52,6 @@ Obtains the response flags from this {@code NfcVTag} instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcVTag-getResponseFlags(): int--><!--Device-NfcVTag-getResponseFlags(): int-End-->
@@ -76,7 +64,7 @@ Obtains the response flags from this {@code NfcVTag} instance.
 | --- | --- |
 | int | Returns the response flags. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';

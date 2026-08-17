@@ -10,10 +10,6 @@ Maximum number of records in a **PasteData** object. In versions earlier than AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-pasteboard-const MAX_RECORD_NUM: int--><!--Device-pasteboard-const MAX_RECORD_NUM: int-End-->
@@ -29,10 +25,6 @@ const MIMETYPE_PIXELMAP: string
 MIME type of the PixelMap content. The value is 'pixelMap'.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ MIME type of the HTML content. The value is 'text/html'.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-pasteboard-const MIMETYPE_TEXT_HTML: string--><!--Device-pasteboard-const MIMETYPE_TEXT_HTML: string-End-->
@@ -69,10 +57,6 @@ const MIMETYPE_TEXT_PLAIN: string
 MIME type of the plain text content. The value is 'text/plain'.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ MIME type of the URI content. The value is 'text/uri'.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-pasteboard-const MIMETYPE_TEXT_URI: string--><!--Device-pasteboard-const MIMETYPE_TEXT_URI: string-End-->
@@ -109,10 +89,6 @@ const MIMETYPE_TEXT_WANT: string
 MIME type of the Want content. The value is 'text/want'.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

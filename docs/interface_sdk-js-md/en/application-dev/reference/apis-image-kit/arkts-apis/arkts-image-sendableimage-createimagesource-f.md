@@ -16,10 +16,6 @@ Creates an ImageSource instance based on a given URI. Images occupy a large amou
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-sendableImage-function createImageSource(uri: string): ImageSource--><!--Device-sendableImage-function createImageSource(uri: string): ImageSource-End-->
@@ -38,7 +34,7 @@ Creates an ImageSource instance based on a given URI. Images occupy a large amou
 | --- | --- |
 | ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -60,10 +56,6 @@ Creates an ImageSource instance based on a given file descriptor. Images occupy 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-sendableImage-function createImageSource(fd: number): ImageSource--><!--Device-sendableImage-function createImageSource(fd: number): ImageSource-End-->
@@ -82,7 +74,7 @@ Creates an ImageSource instance based on a given file descriptor. Images occupy 
 | --- | --- |
 | ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -102,13 +94,9 @@ async function Demo(context : Context) {
 function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
-Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [sendableImage.createPixelMap](arkts-image-sendableimage-createpixelmap-f.md#createPixelMap). Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [sendableImage.createPixelMap](arkts-image-sendableimage-createpixelmap-f.md#createpixelmap). Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,7 +118,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 | --- | --- |
 | ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

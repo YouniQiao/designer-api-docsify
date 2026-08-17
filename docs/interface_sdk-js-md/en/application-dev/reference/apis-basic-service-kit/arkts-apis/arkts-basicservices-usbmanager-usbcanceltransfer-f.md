@@ -12,13 +12,9 @@ import { usbManager } from 'usbManager';
 function usbCancelTransfer(transfer: UsbDataTransferParams): void
 ```
 
-Cancels an asynchronous USB data transfer request. > **NOTE：**> > This API is used to proactively cancel an unfinished USB data transfer request (for example, the one submitted by > **usbSubmitTransfer**). > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface) > API to claim a communication interface.
+Cancels an asynchronous USB data transfer request. > **NOTE：**> > This API is used to proactively cancel an unfinished USB data transfer request (for example, the one submitted by > **usbSubmitTransfer**). > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface) > API to claim a communication interface.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void-End-->
 
@@ -28,7 +24,7 @@ Cancels an asynchronous USB data transfer request. > **NOTE：**> > This API is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | Only the [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#USBDevicePipe) and [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md#USBEndpoint) parameters should be specified in this API. |
+| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | Only the [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#usbdevicepipe) and [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md#usbendpoint) parameters should be specified in this API. |
 
 **Error codes:**
 
@@ -40,7 +36,7 @@ Cancels an asynchronous USB data transfer request. > **NOTE：**> > This API is 
 | [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) | No such device (it may have been disconnected). |
 | [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
 
-## Examples
+**Examples**
 
 The following sample code shows the basic process for calling the usbCancelTransfer API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols to ensure correct data transfer and device compatibility.
 

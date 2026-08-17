@@ -1,12 +1,8 @@
 # Run
 
-Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine) class. Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine) class to create a **Run** object.
+Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#textline) class. Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#textline) class to create a **Run** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-text-class Run--><!--Device-text-class Run-End-->
 
@@ -28,10 +24,6 @@ Obtains the glyph width array of each glyph within the specified range of the ru
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getAdvances(range: Range): Array<common2D.Point>--><!--Device-Run-getAdvances(range: Range): Array<common2D.Point>-End-->
@@ -50,7 +42,7 @@ Obtains the glyph width array of each glyph within the specified range of the ru
 | --- | --- |
 | Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let advancesRange = runs[0].getAdvances({start:1, end:2}); // Obtain the widths of glyphs in the range starting from position 1, with a length of 2.
@@ -68,10 +60,6 @@ getAdvances(range: Range): Array<common2D.Point> | undefined
 Gets the glyph width array within the range.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Run-getAdvances(range: Range): Array<common2D.Point> | undefined--><!--Device-Run-getAdvances(range: Range): Array<common2D.Point> | undefined-End-->
 
@@ -99,10 +87,6 @@ Obtains the **Font** object of this run.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getFont(): drawing.Font--><!--Device-Run-getFont(): drawing.Font-End-->
@@ -115,7 +99,7 @@ Obtains the **Font** object of this run.
 | --- | --- |
 | drawing.Font | Font** object of this run. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let font = runs[0].getFont();
@@ -131,10 +115,6 @@ Obtains the number of glyphs in this run.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getGlyphCount(): int--><!--Device-Run-getGlyphCount(): int-End-->
@@ -147,7 +127,7 @@ Obtains the number of glyphs in this run.
 | --- | --- |
 | int | Number of glyphs. The value is an integer. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let glyphs = runs[0].getGlyphCount();
@@ -163,10 +143,6 @@ Obtains the index of each glyph in this run.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getGlyphs(): Array<int>--><!--Device-Run-getGlyphs(): Array<int>-End-->
@@ -179,7 +155,7 @@ Obtains the index of each glyph in this run.
 | --- | --- |
 | Array&lt;int&gt; | Array holding the index of each glyph in the run. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let glyph = runs[0].getGlyphs();
@@ -194,10 +170,6 @@ getGlyphs(range: Range): Array<int>
 Obtains the index of each glyph in the specified range of this run.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -217,7 +189,7 @@ Obtains the index of each glyph in the specified range of this run.
 | --- | --- |
 | Array&lt;int&gt; | Array holding the index of each glyph in the run. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -255,10 +227,6 @@ Gets the range glyph identifier for each character.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Run-getGlyphs(range: Range): Array<int> | undefined--><!--Device-Run-getGlyphs(range: Range): Array<int> | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -285,10 +253,6 @@ Obtains the image boundaries of the typographic unit. Equivalent to visual bound
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getImageBounds(): common2D.Rect--><!--Device-Run-getImageBounds(): common2D.Rect-End-->
@@ -301,7 +265,7 @@ Obtains the image boundaries of the typographic unit. Equivalent to visual bound
 | --- | --- |
 | common2D.Rect | Image boundary of the layout unit, in physical pixels (px). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let bounds = runs[0].getImageBounds();
@@ -317,10 +281,6 @@ Obtains the offset of each glyph in this run relative to its index.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getOffsets(): Array<common2D.Point>--><!--Device-Run-getOffsets(): Array<common2D.Point>-End-->
@@ -333,7 +293,7 @@ Obtains the offset of each glyph in this run relative to its index.
 | --- | --- |
 | Array&lt;common2D.Point&gt; | Array holding the offset of each glyph in the run relative to its index. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let offsets = runs[0].getOffsets();
@@ -349,10 +309,6 @@ Obtains the position of each glyph relative to the respective line in this run.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getPositions(): Array<common2D.Point>--><!--Device-Run-getPositions(): Array<common2D.Point>-End-->
@@ -365,7 +321,7 @@ Obtains the position of each glyph relative to the respective line in this run.
 | --- | --- |
 | Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let positions = runs[0].getPositions();
@@ -380,10 +336,6 @@ getPositions(range: Range): Array<common2D.Point>
 Obtains the position array of each glyph relative to the respective line within the specified range of this run.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -403,7 +355,7 @@ Obtains the position array of each glyph relative to the respective line within 
 | --- | --- |
 | Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -441,10 +393,6 @@ Gets the range font position offset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Run-getPositions(range: Range): Array<common2D.Point> | undefined--><!--Device-Run-getPositions(range: Range): Array<common2D.Point> | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -471,10 +419,6 @@ Obtains an array of character indices for glyphs within a specified range of thi
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getStringIndices(range?: Range): Array<int>--><!--Device-Run-getStringIndices(range?: Range): Array<int>-End-->
@@ -493,7 +437,7 @@ Obtains an array of character indices for glyphs within a specified range of thi
 | --- | --- |
 | Array&lt;int&gt; | Array of character indices. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -531,10 +475,6 @@ Gets the range of run glyph indices, the offset of the indices relative to the e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Run-getStringIndices(range?: Range): Array<int> | undefined--><!--Device-Run-getStringIndices(range?: Range): Array<int> | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -561,10 +501,6 @@ Obtains the range of glyphs generated by this run.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getStringRange(): Range--><!--Device-Run-getStringRange(): Range-End-->
@@ -577,7 +513,7 @@ Obtains the range of glyphs generated by this run.
 | --- | --- |
 | Range | Range of the glyphs, where **start** indicates the start position of the range, which is the index relative to the entire paragraph, and **end** indicates the length of the range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let runStringRange = runs[0].getStringRange();
@@ -595,10 +531,6 @@ Obtains the text direction of the run.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getTextDirection(): TextDirection--><!--Device-Run-getTextDirection(): TextDirection-End-->
@@ -611,7 +543,7 @@ Obtains the text direction of the run.
 | --- | --- |
 | TextDirection | Obtains the text direction of the run. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textDirection = runs[0].getTextDirection();
@@ -626,10 +558,6 @@ getTextStyle(): TextStyle
 Obtains the text style of this typesetting unit.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -655,10 +583,6 @@ Obtains the typographic boundaries of the typographic unit. These boundaries are
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-getTypographicBounds(): TypographicBounds--><!--Device-Run-getTypographicBounds(): TypographicBounds-End-->
@@ -671,7 +595,7 @@ Obtains the typographic boundaries of the typographic unit. These boundaries are
 | --- | --- |
 | [TypographicBounds](arkts-arkgraphics2d-text-typographicbounds-i.md) | Typographic boundaries of the run. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let typographicBounds = runs[0].getTypographicBounds();
@@ -687,10 +611,6 @@ Paints this run on the canvas with the coordinate point (x, y) as the upper left
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Run-paint(canvas: drawing.Canvas, x: double, y: double): void--><!--Device-Run-paint(canvas: drawing.Canvas, x: double, y: double): void-End-->
@@ -705,7 +625,7 @@ Paints this run on the canvas with the coordinate point (x, y) as the upper left
 | x | double | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 | y | double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'

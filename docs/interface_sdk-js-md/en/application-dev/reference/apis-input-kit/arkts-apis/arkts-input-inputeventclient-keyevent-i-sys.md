@@ -4,10 +4,6 @@ Defines the key event to inject.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputEventClient-interface KeyEvent--><!--Device-inputEventClient-interface KeyEvent-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -32,10 +28,6 @@ Whether the key event can be intercepted. The value **true** indicates that the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyEvent-isIntercepted: boolean--><!--Device-KeyEvent-isIntercepted: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -53,10 +45,6 @@ Whether the key is pressed. The value **true** indicates that the key is pressed
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyEvent-isPressed: boolean--><!--Device-KeyEvent-isPressed: boolean-End-->
 
@@ -76,10 +64,6 @@ Key code. Currently, only the **KEYCODE_BACK** key is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyEvent-keyCode: int--><!--Device-KeyEvent-keyCode: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -97,10 +81,6 @@ Duration of key press, in microseconds (μs).
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyEvent-keyDownDuration: int--><!--Device-KeyEvent-keyDownDuration: int-End-->
 

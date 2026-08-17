@@ -4,9 +4,7 @@ This module provides functionality for component coordinates and sizes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -27,7 +25,7 @@ import { componentUtils } from 'componentUtils';
 
 | Name | Description |
 | --- | --- |
-| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md#getItemsInShapePath) | Get the image objects located within the selected area. |
+| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md#getitemsinshapepath) | Get the image objects located within the selected area. |
 <!--DelEnd-->
 
 ### Interfaces

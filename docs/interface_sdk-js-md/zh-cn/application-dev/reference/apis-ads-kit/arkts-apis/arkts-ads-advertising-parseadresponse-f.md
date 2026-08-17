@@ -10,10 +10,6 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -35,7 +31,7 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 | [21800005](../errorcode-ads.md#21800005-广告数据解析失败) | Failed to parse the ad response. |
 | [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
-## 示例
+**示例**
 
 其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
 

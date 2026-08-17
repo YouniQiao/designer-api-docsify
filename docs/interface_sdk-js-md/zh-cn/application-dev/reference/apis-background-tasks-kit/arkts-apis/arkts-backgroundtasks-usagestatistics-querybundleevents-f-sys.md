@@ -10,10 +10,6 @@ function queryBundleEvents(begin: long, end: long, callback: AsyncCallback<Array
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
 <!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void--><!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void-End-->
@@ -28,7 +24,7 @@ function queryBundleEvents(begin: long, end: long, callback: AsyncCallback<Array
 | --- | --- | --- | --- |
 | begin | long | 是 | 起始时间，单位：ms。 |
 | end | long | 是 | 结束时间，单位：ms。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | 是 | 回调方法。 当查询成功，err为undefined，data为起始和结束时间段内，所有应用的事件集合；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | 是 | 回调方法。 当查询成功，err为undefined，data为起始和结束时间段内，所有应用的事件集合；否则为错误对象。 |
 
 **错误码：**
 
@@ -45,7 +41,7 @@ function queryBundleEvents(begin: long, end: long, callback: AsyncCallback<Array
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
 | [10000007](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) | Failed to get the system time. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -74,10 +70,6 @@ function queryBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>
 通过指定起始和结束时间，查询所有应用的事件集合，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -115,7 +107,7 @@ function queryBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
 | [10000007](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) | Failed to get the system time. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -142,10 +134,6 @@ function queryBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<B
 通过指定起始时间、结束时间及最大返回条数，查询指定时间段内所有应用的事件集合。若条数大于maxNum，则按事件发生时间降序排列，返回前maxNum条，否则返回所有数据。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -185,7 +173,7 @@ function queryBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<B
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
 | [10000007](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) | Failed to get the system time. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

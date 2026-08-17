@@ -10,11 +10,9 @@ Checks whether the system is ready. This API uses an asynchronous callback to re
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#isSystemReady-(System-API))
+**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#issystemready-system-api)
 
 <!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void--><!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void-End-->
 
@@ -39,11 +37,9 @@ Checks whether the system is ready. This API uses a promise to return the result
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#isSystemReady-(System-API))
+**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#issystemready-system-api)
 
 <!--Device-formHost-function isSystemReady(): Promise<void>--><!--Device-formHost-function isSystemReady(): Promise<void>-End-->
 

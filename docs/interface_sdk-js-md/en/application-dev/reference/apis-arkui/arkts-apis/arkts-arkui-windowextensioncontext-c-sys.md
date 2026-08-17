@@ -1,12 +1,10 @@
 # WindowExtensionContext (System API)
 
-The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext). The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#WindowExtensionAbility-(System-API)), including starting the ability. > **NOTE：**> > - This module is deprecated since API version 21. You are advised to use > [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#UIExtensionContext) instead. > > - The APIs provided by this module are system APIs. > > - The APIs of this module can be used only in the stage model.
+The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext). The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#windowextensionability-system-api), including starting the ability. > **NOTE：**> > - This module is deprecated since API version 21. You are advised to use > [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#uiextensioncontext) instead. > > - The APIs provided by this module are system APIs. > > - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** WindowExtensionContext extends ExtensionContext
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 21
 
@@ -25,8 +23,6 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 Starts an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 21
 
@@ -53,7 +49,7 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WindowExtensionAbility } from '@kit.ArkUI';
@@ -103,8 +99,6 @@ Starts an ability. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
@@ -135,7 +129,7 @@ Starts an ability. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WindowExtensionAbility } from '@kit.ArkUI';

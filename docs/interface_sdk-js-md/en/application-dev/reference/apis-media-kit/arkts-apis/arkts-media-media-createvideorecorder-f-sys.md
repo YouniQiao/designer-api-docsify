@@ -16,10 +16,6 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void--><!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
@@ -39,7 +35,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,10 +61,6 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>)
 The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>): void--><!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>): void-End-->
 
@@ -100,10 +92,6 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>--><!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
@@ -123,7 +111,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -151,10 +139,6 @@ function createVideoRecorder(): Promise<VideoRecorder | undefined>
 The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function createVideoRecorder(): Promise<VideoRecorder | undefined>--><!--Device-media-function createVideoRecorder(): Promise<VideoRecorder | undefined>-End-->
 

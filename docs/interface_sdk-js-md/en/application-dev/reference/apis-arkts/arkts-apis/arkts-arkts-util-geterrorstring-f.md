@@ -16,11 +16,9 @@ Obtains detailed information about a system error code.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [errnoToString](arkts-arkts-util-errnotostring-f.md#errnoToString)
+**Substitutes:** [errnoToString](../../apis-na/arkts-apis/arkts-na-util-errnotostring-f.md#errnotostring)
 
 <!--Device-util-function getErrorString(errno: number): string--><!--Device-util-function getErrorString(errno: number): string-End-->
 
@@ -38,7 +36,7 @@ Obtains detailed information about a system error code.
 | --- | --- |
 | string | Detailed information about the error code. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let errnum = -1; // -1 is a system error code.

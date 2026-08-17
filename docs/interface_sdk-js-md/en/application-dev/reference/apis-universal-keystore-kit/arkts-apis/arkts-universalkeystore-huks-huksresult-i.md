@@ -4,11 +4,9 @@ Represents the result returned. > **NOTE：**> > - For details about the error c
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md#HuksReturnResult)
+**Substitutes:** [HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md#huksreturnresult)
 
 <!--Device-huks-export interface HuksResult--><!--Device-huks-export interface HuksResult-End-->
 
@@ -32,8 +30,6 @@ Reserved field. Note: This API is deprecated since API version 9. No substitute 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-HuksResult-certChains?: Array<string>--><!--Device-HuksResult-certChains?: Array<string>-End-->
@@ -51,8 +47,6 @@ Reserved field. Note: This API is deprecated since API version 9. No substitute 
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -72,8 +66,6 @@ Reserved field. Note: This API is deprecated since API version 9. No substitute 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-HuksResult-outData?: Uint8Array--><!--Device-HuksResult-outData?: Uint8Array-End-->
@@ -91,8 +83,6 @@ Reserved field. Note: This API is deprecated since API version 9. No substitute 
 **Type:** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

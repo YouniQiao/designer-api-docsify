@@ -4,10 +4,6 @@ Enumerates the padding algorithms.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-huks-export enum HuksKeyPadding--><!--Device-huks-export enum HuksKeyPadding-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -21,10 +17,6 @@ HUKS_PADDING_NONE = 0
 No padding algorithm is used.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -41,10 +33,6 @@ HUKS_PADDING_OAEP = 1
 Optimal Asymmetric Encryption Padding (OAEP).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,10 +52,6 @@ Probabilistic Signature Scheme (PSS).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyPadding-HUKS_PADDING_PSS = 2--><!--Device-HuksKeyPadding-HUKS_PADDING_PSS = 2-End-->
@@ -85,10 +69,6 @@ HUKS_PADDING_PKCS1_V1_5 = 3
 Public Key Cryptography Standards (PKCS) #1 v1.5.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -108,10 +88,6 @@ PKCS #5.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyPadding-HUKS_PADDING_PKCS5 = 4--><!--Device-HuksKeyPadding-HUKS_PADDING_PKCS5 = 4-End-->
@@ -130,10 +106,6 @@ PKCS #7.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyPadding-HUKS_PADDING_PKCS7 = 5--><!--Device-HuksKeyPadding-HUKS_PADDING_PKCS7 = 5-End-->
@@ -150,10 +122,6 @@ ISO_IEC_9796_2&lt;!--Del--&gt; (not supported currently)&lt;!--DelEnd--&gt;.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9796_2 = 6--><!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9796_2 = 6-End-->
@@ -169,10 +137,6 @@ HUKS_PADDING_ISO_IEC_9797_1 = 7
 ISO_IEC_9797_1&lt;!--Del--&gt; (not supported currently)&lt;!--DelEnd--&gt;.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

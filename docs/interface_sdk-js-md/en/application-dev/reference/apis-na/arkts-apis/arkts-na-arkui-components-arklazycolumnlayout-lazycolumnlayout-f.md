@@ -13,9 +13,7 @@ Defines LazyColumnLayout Component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,7 +31,7 @@ Defines LazyColumnLayout Component.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | The attribute of the LazyColumnLayout. |
+| [LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | The attribute of the LazyColumnLayout. |
 
 
 ## LazyColumnLayout
@@ -50,9 +48,7 @@ Defines LazyColumnLayout Component.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,12 +60,12 @@ Defines LazyColumnLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md)&gt; | Yes | The style to create a LazyColumnLayout. |
+| style_ | CustomBuilderT&lt;[LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; | Yes | The style to create a LazyColumnLayout. |
 | content_ | CustomBuilder | No | content |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | The attribute of the LazyColumnLayout. |
+| [LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | The attribute of the LazyColumnLayout. |
 

@@ -16,8 +16,6 @@ Deletes the persistent P2P group with the specified network ID.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** deletePersistentP2pGroup
@@ -42,7 +40,7 @@ Deletes the persistent P2P group with the specified network ID.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

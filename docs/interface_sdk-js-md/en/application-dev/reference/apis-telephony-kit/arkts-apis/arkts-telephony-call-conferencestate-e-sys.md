@@ -4,10 +4,6 @@ Enumerates conference states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export enum ConferenceState--><!--Device-call-export enum ConferenceState-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -23,10 +19,6 @@ TEL_CONFERENCE_IDLE = 0
 Idle state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConferenceState-TEL_CONFERENCE_IDLE = 0--><!--Device-ConferenceState-TEL_CONFERENCE_IDLE = 0-End-->
 
@@ -44,10 +36,6 @@ Active state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConferenceState-TEL_CONFERENCE_ACTIVE = 1--><!--Device-ConferenceState-TEL_CONFERENCE_ACTIVE = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -64,10 +52,6 @@ Disconnecting state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTING = 2--><!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTING = 2-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -83,10 +67,6 @@ TEL_CONFERENCE_DISCONNECTED = 3
 Disconnected state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTED = 3--><!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTED = 3-End-->
 

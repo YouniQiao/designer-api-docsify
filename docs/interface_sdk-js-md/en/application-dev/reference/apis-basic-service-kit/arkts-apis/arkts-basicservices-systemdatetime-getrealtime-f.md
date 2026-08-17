@@ -16,11 +16,9 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemDateTime-function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -39,7 +37,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,11 +67,9 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemDateTime-function getRealTime(callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getRealTime(callback: AsyncCallback<number>): void-End-->
 
@@ -91,7 +87,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -121,11 +117,9 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemDateTime-function getRealTime(isNano?: boolean): Promise<number>--><!--Device-systemDateTime-function getRealTime(isNano?: boolean): Promise<number>-End-->
 
@@ -149,7 +143,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

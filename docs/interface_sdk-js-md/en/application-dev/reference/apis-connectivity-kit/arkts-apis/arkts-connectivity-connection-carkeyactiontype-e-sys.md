@@ -4,10 +4,6 @@ Enum for the action of car key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-connection-enum CarKeyActionType--><!--Device-connection-enum CarKeyActionType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -23,10 +19,6 @@ CAR_KEY_ACTION_ADD = 0
 Add the data of car key.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +37,6 @@ CAR_KEY_ACTION_DELETE = 1
 Delete the data of car key.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Enumerates the P12 MAC digest algorithms.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-enum Pkcs12MacDigestAlgorithm--><!--Device-cert-enum Pkcs12MacDigestAlgorithm-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -21,10 +17,6 @@ SHA256 = 0
 SHA-256.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ SHA-384.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12MacDigestAlgorithm-SHA384 = 1--><!--Device-Pkcs12MacDigestAlgorithm-SHA384 = 1-End-->
@@ -61,10 +49,6 @@ SHA512 = 2
 SHA-512.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

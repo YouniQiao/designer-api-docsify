@@ -4,10 +4,6 @@ class of print extension ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class PrintExtensionAbility--><!--Device-unnamed-declare class PrintExtensionAbility-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -30,10 +26,6 @@ Called once to connect to the specific printer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintExtensionAbility-onConnectPrinter(printerId: int): void--><!--Device-PrintExtensionAbility-onConnectPrinter(printerId: int): void-End-->
@@ -46,7 +38,7 @@ Called once to connect to the specific printer.
 | --- | --- | --- | --- |
 | printerId | int | Yes | connect the printerId. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -69,10 +61,6 @@ Called once to initialize the extensionAbility.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintExtensionAbility-onCreate(want: Want): void--><!--Device-PrintExtensionAbility-onCreate(want: Want): void-End-->
@@ -85,7 +73,7 @@ Called once to initialize the extensionAbility.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | call print page want params. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -109,17 +97,13 @@ Called once to finalize the extensionAbility.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintExtensionAbility-onDestroy(): void--><!--Device-PrintExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -141,10 +125,6 @@ Called once to disconnect to the specific printer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintExtensionAbility-onDisconnectPrinter(printerId: int): void--><!--Device-PrintExtensionAbility-onDisconnectPrinter(printerId: int): void-End-->
@@ -157,7 +137,7 @@ Called once to disconnect to the specific printer.
 | --- | --- | --- | --- |
 | printerId | int | Yes | connect the printerId. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -180,17 +160,13 @@ Called once to start to discover the printers connected with the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintExtensionAbility-onStartDiscoverPrinter(): void--><!--Device-PrintExtensionAbility-onStartDiscoverPrinter(): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -213,17 +189,13 @@ Called once to stop discovering the printer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintExtensionAbility-onStopDiscoverPrinter(): void--><!--Device-PrintExtensionAbility-onStopDiscoverPrinter(): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -247,10 +219,6 @@ Indicates print service extension ability context.
 **Type:** [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Obtains the total number of bytes occupied by the total allocated space (**uordb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getNativeHeapAllocatedSize() : bigint--><!--Device-hidebug-function getNativeHeapAllocatedSize() : bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ Obtains the total number of bytes occupied by the total allocated space (**uordb
 | --- | --- |
 | bigint | Size of the memory occupied by the total allocated space held by the process, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

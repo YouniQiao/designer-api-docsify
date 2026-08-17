@@ -4,10 +4,6 @@ Defines the descriptor of an audio and video file, which is used in DataSource p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface AVDataSrcDescriptor--><!--Device-media-interface AVDataSrcDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -30,10 +26,6 @@ Callback function implemented by users, which is used to fill data. buffer - The
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVDataSrcDescriptor-callback: (buffer: ArrayBuffer, length: long, pos?: long) => int--><!--Device-AVDataSrcDescriptor-callback: (buffer: ArrayBuffer, length: long, pos?: long) => int-End-->
@@ -51,10 +43,6 @@ Size of the file, -1 means the file size is unknown, in this case, seek and setS
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

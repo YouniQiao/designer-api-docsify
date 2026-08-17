@@ -4,6 +4,8 @@
 
 Defines the key derivation interfaces.
 
+**Include**: <CryptoArchitectureKit/crypto_kdf.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

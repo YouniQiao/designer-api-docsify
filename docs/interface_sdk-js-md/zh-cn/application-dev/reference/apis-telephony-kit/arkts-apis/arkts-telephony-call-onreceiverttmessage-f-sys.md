@@ -10,10 +10,6 @@ function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void--><!--Device-call-function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void-End-->
@@ -26,7 +22,7 @@ function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RttMessageInfo](arkts-telephony-call-rttmessageinfo-i-sys.md)&gt; | 是 | Indicates the callback for getting the rtt message. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RttMessageInfo](arkts-telephony-call-rttmessageinfo-i-sys.md)&gt; | 是 | Indicates the callback for getting the rtt message. |
 
 **错误码：**
 

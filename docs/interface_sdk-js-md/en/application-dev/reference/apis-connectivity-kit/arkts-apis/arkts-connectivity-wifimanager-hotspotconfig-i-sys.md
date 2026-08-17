@@ -4,10 +4,6 @@ Wi-Fi hotspot configuration information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface HotspotConfig--><!--Device-wifiManager-interface HotspotConfig-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
@@ -32,10 +28,6 @@ The frequency band of the Wi-Fi hotspot
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HotspotConfig-band: int--><!--Device-HotspotConfig-band: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
@@ -53,10 +45,6 @@ The channel of the Wi-Fi hotspot.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HotspotConfig-channel?: int--><!--Device-HotspotConfig-channel?: int-End-->
 
@@ -76,10 +64,6 @@ IP address of the dhcp server, it's a string, For example 192.168.43.1
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HotspotConfig-ipAddress?: string--><!--Device-HotspotConfig-ipAddress?: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
@@ -97,10 +81,6 @@ The maximum number of connections allowed by the Wi-Fi hotspot
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HotspotConfig-maxConn: int--><!--Device-HotspotConfig-maxConn: int-End-->
 
@@ -120,10 +100,6 @@ The password of the Wi-Fi hotspot
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HotspotConfig-preSharedKey: string--><!--Device-HotspotConfig-preSharedKey: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
@@ -142,10 +118,6 @@ The encryption mode of the Wi-Fi hotspot
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HotspotConfig-securityType: WifiSecurityType--><!--Device-HotspotConfig-securityType: WifiSecurityType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
@@ -163,10 +135,6 @@ The SSID of the Wi-Fi hotspot
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HotspotConfig-ssid: string--><!--Device-HotspotConfig-ssid: string-End-->
 

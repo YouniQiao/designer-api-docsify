@@ -12,13 +12,9 @@ import { asset } from 'asset';
 function preQuery(query: AssetMap): Promise<Uint8Array>
 ```
 
-Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.query](arkts-assetstore-asset-query-f.md#query) and [asset.postQuery](arkts-assetstore-asset-postquery-f.md#postQuery). This API uses a promise to return the result.
+Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.query](arkts-assetstore-asset-query-f.md#query) and [asset.postQuery](arkts-assetstore-asset-postquery-f.md#postquery). This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -57,7 +53,7 @@ Performs preprocessing for the asset query. This API is used when user authentic
 | [24000016](../errorcode-asset.md#24000016-cached-assets-reaches-the-limit) | The cache exceeds the limit. |
 | [24000017](../errorcode-asset.md#24000017-function-not-supported) | The capability is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

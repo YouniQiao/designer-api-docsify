@@ -4,10 +4,6 @@ Layout information for the expanded state.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ExpandedRegionLayoutOptions--><!--Device-unnamed-export interface ExpandedRegionLayoutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -37,10 +33,6 @@ Position information of the extra region. This setting takes effect only when **
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -60,10 +52,6 @@ Width ratio between the primary and extra regions. This setting takes effect onl
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,10 +73,6 @@ Whether the extra region extends perpendicularly through the entire component fr
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -108,10 +92,6 @@ Height ratio between the primary and extra regions. The value range is all integ
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Defines the service profile information. It is populated based on the data retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDeviceManager-interface ServiceProfileInfo--><!--Device-distributedDeviceManager-interface ServiceProfileInfo-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -32,10 +28,6 @@ Service data. The value is a string of up to 1000 characters. This parameter is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ServiceProfileInfo-data?: string--><!--Device-ServiceProfileInfo-data?: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -53,10 +45,6 @@ Device ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ServiceProfileInfo-deviceId: string--><!--Device-ServiceProfileInfo-deviceId: string-End-->
 
@@ -76,10 +64,6 @@ Service ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ServiceProfileInfo-serviceId: string--><!--Device-ServiceProfileInfo-serviceId: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -97,10 +81,6 @@ Service type.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ServiceProfileInfo-serviceType: string--><!--Device-ServiceProfileInfo-serviceType: string-End-->
 

@@ -8,10 +8,6 @@ Defines the listener for the completion of the first frame rendering of the UIAb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appManager-export type AbilityFirstFrameStateObserver = _AbilityFirstFrameStateObserver--><!--Device-appManager-export type AbilityFirstFrameStateObserver = _AbilityFirstFrameStateObserver-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

@@ -4,10 +4,6 @@ Material effect parameters, used to control the display properties of the materi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-interface LiquidMaterialEffectParam--><!--Device-uiEffect-interface LiquidMaterialEffectParam-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -32,10 +28,6 @@ The perturbation effect coefficient. The value must be greater than or equal to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LiquidMaterialEffectParam-distortFactor : double--><!--Device-LiquidMaterialEffectParam-distortFactor : double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -53,10 +45,6 @@ The perturbation effect progress. The value range is [0, 1]. Values less than 0 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-distortProgress : double--><!--Device-LiquidMaterialEffectParam-distortProgress : double-End-->
 
@@ -76,10 +64,6 @@ Whether to enable the material effect. true means enabled, false means disabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LiquidMaterialEffectParam-enable : boolean--><!--Device-LiquidMaterialEffectParam-enable : boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -97,10 +81,6 @@ The material coefficient. The value range is [0, 1]. Values less than 0 are trea
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-materialFactor : double--><!--Device-LiquidMaterialEffectParam-materialFactor : double-End-->
 
@@ -120,10 +100,6 @@ The reflection coefficient. The value range is [0, 10]. Values less than 0 are t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LiquidMaterialEffectParam-reflectionFactor : double--><!--Device-LiquidMaterialEffectParam-reflectionFactor : double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -141,10 +117,6 @@ The refraction coefficient. The value range is [0, 10]. Values less than 0 are t
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-refractionFactor : double--><!--Device-LiquidMaterialEffectParam-refractionFactor : double-End-->
 
@@ -164,10 +136,6 @@ The positions where the ripple effect is applied. Pass this parameter when you n
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LiquidMaterialEffectParam-ripplePosition?: Array<[double, double]>--><!--Device-LiquidMaterialEffectParam-ripplePosition?: Array<[double, double]>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -186,10 +154,6 @@ The ripple effect progress. The value must be greater than or equal to 0. Values
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LiquidMaterialEffectParam-rippleProgress : double--><!--Device-LiquidMaterialEffectParam-rippleProgress : double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -207,10 +171,6 @@ The overlay color of the material, where the four variables correspond to RGBA r
 **Type:** [double, double, double, double]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-tintColor : [double, double, double, double]--><!--Device-LiquidMaterialEffectParam-tintColor : [double, double, double, double]-End-->
 

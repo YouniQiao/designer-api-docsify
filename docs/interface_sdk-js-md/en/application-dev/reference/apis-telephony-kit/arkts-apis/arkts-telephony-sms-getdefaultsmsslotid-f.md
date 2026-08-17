@@ -16,10 +16,6 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void--><!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -30,7 +26,7 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -52,10 +48,6 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-function getDefaultSmsSlotId(): Promise<int>--><!--Device-sms-function getDefaultSmsSlotId(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -66,7 +58,7 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 | --- | --- |
 | Promise&lt;int&gt; | Promise used to return the result. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

@@ -10,10 +10,6 @@ function offRttModifyInd(callback?: Callback<RttEventInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function offRttModifyInd(callback?: Callback<RttEventInfo>): void--><!--Device-call-function offRttModifyInd(callback?: Callback<RttEventInfo>): void-End-->
@@ -26,7 +22,7 @@ function offRttModifyInd(callback?: Callback<RttEventInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RttEventInfo](arkts-telephony-call-rtteventinfo-i-sys.md)&gt; | 否 | Indicates the callback for getting the rtt event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RttEventInfo](arkts-telephony-call-rtteventinfo-i-sys.md)&gt; | 否 | Indicates the callback for getting the rtt event. |
 
 **错误码：**
 

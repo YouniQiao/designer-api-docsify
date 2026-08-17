@@ -6,9 +6,7 @@ Provides attribute for Shape.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface ShapeAttribute--><!--Device-unnamed-export declare interface ShapeAttribute-End-->
 
@@ -22,9 +20,7 @@ antiAlias(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-antiAlias(value: boolean | undefined): this--><!--Device-ShapeAttribute-antiAlias(value: boolean | undefined): this-End-->
 
@@ -48,9 +44,7 @@ attributeModifier(modifier: AttributeModifier<ShapeAttribute> | AttributeModifie
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-attributeModifier(modifier: AttributeModifier<ShapeAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ShapeAttribute-attributeModifier(modifier: AttributeModifier<ShapeAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -74,9 +68,7 @@ fill(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-fill(value: ResourceColor | undefined): this--><!--Device-ShapeAttribute-fill(value: ResourceColor | undefined): this-End-->
 
@@ -100,9 +92,7 @@ fillOpacity(value: double | string | Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-fillOpacity(value: double | string | Resource | undefined): this--><!--Device-ShapeAttribute-fillOpacity(value: double | string | Resource | undefined): this-End-->
 
@@ -126,9 +116,7 @@ mesh(value: Array<double> | undefined, column: int | undefined, row: int | undef
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-mesh(value: Array<double> | undefined, column: int | undefined, row: int | undefined): this--><!--Device-ShapeAttribute-mesh(value: Array<double> | undefined, column: int | undefined, row: int | undefined): this-End-->
 
@@ -154,9 +142,7 @@ setShapeOptions(value?: PixelMap): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-setShapeOptions(value?: PixelMap): this--><!--Device-ShapeAttribute-setShapeOptions(value?: PixelMap): this-End-->
 
@@ -180,9 +166,7 @@ stroke(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-stroke(value: ResourceColor | undefined): this--><!--Device-ShapeAttribute-stroke(value: ResourceColor | undefined): this-End-->
 
@@ -206,9 +190,7 @@ strokeDashArray(value: Array<Length> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-strokeDashArray(value: Array<Length> | undefined): this--><!--Device-ShapeAttribute-strokeDashArray(value: Array<Length> | undefined): this-End-->
 
@@ -232,9 +214,7 @@ strokeDashOffset(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-strokeDashOffset(value: Length | undefined): this--><!--Device-ShapeAttribute-strokeDashOffset(value: Length | undefined): this-End-->
 
@@ -258,9 +238,7 @@ strokeLineCap(value: LineCapStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-strokeLineCap(value: LineCapStyle | undefined): this--><!--Device-ShapeAttribute-strokeLineCap(value: LineCapStyle | undefined): this-End-->
 
@@ -284,9 +262,7 @@ strokeLineJoin(value: LineJoinStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-strokeLineJoin(value: LineJoinStyle | undefined): this--><!--Device-ShapeAttribute-strokeLineJoin(value: LineJoinStyle | undefined): this-End-->
 
@@ -310,9 +286,7 @@ strokeMiterLimit(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-strokeMiterLimit(value: Length | undefined): this--><!--Device-ShapeAttribute-strokeMiterLimit(value: Length | undefined): this-End-->
 
@@ -336,9 +310,7 @@ strokeOpacity(value: double | string | Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-strokeOpacity(value: double | string | Resource | undefined): this--><!--Device-ShapeAttribute-strokeOpacity(value: double | string | Resource | undefined): this-End-->
 
@@ -362,9 +334,7 @@ strokeWidth(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-strokeWidth(value: Length | undefined): this--><!--Device-ShapeAttribute-strokeWidth(value: Length | undefined): this-End-->
 
@@ -388,9 +358,7 @@ viewPort(value: ViewportRect | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ShapeAttribute-viewPort(value: ViewportRect | undefined): this--><!--Device-ShapeAttribute-viewPort(value: ViewportRect | undefined): this-End-->
 
@@ -416,9 +384,7 @@ Call attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

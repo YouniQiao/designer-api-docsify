@@ -4,10 +4,6 @@ Provides interfaces for acquiring location information, managing location switch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace geoLocationManager--><!--Device-unnamed-declare namespace geoLocationManager-End-->
 
 **System capability:** 
@@ -25,114 +21,114 @@ import { geoLocationManager } from 'geoLocationManager';
 
 | Name | Description |
 | --- | --- |
-| [addBeaconFence](arkts-location-geolocationmanager-addbeaconfence-f.md#addBeaconFence) | Add a beacon fence. |
-| [addGnssGeofence](arkts-location-geolocationmanager-addgnssgeofence-f.md#addGnssGeofence) | Add a geofence. |
-| [findMatchingWlan](arkts-location-geolocationmanager-findmatchingwlan-f.md#findMatchingWlan) | Check whether the WLAN scan results match the WLAN BSSID list, return information about the WLAN device that is successfully matched. |
-| [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushCachedGnssLocations) | All prepared GNSS locations are returned to the application through the callback function, and the bottom-layer buffer is cleared. |
-| [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushCachedGnssLocations) | All prepared GNSS locations are returned to the application, and the bottom-layer buffer is cleared. |
-| [getActiveGeoFences](arkts-location-geolocationmanager-getactivegeofences-f.md#getActiveGeoFences) | Get all active fences. |
-| [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getAddressesFromLocation) | Obtain address info from location. |
-| [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getAddressesFromLocation) | Obtain address info from location. |
-| [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getAddressesFromLocationName) | Obtain latitude and longitude info from location address. |
-| [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getAddressesFromLocationName) | Obtain latitude and longitude info from location address. |
-| [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize) | Obtain the number of cached GNSS locations reported at a time. |
-| [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize) | Obtain the number of cached GNSS locations. |
-| [getCountryCode](arkts-location-geolocationmanager-getcountrycode-f.md#getCountryCode) | Obtain the current country code. |
-| [getCountryCode](arkts-location-geolocationmanager-getcountrycode-f.md#getCountryCode) | Obtain the current country code. |
-| [getCurrentDistrict](arkts-location-geolocationmanager-getcurrentdistrict-f.md#getCurrentDistrict) | Obtains the information about the district where the current device is located. |
-| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getCurrentLocation) | Obtain current location. |
-| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getCurrentLocation) | Obtain current location. |
-| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getCurrentLocation) | Obtain current location. |
-| [getCurrentWifiBssidForLocating](arkts-location-geolocationmanager-getcurrentwifibssidforlocating-f.md#getCurrentWifiBssidForLocating) | Obtains the BSSID of the connected Wi-Fi hotspot. |
-| [getDistanceBetweenLocations](arkts-location-geolocationmanager-getdistancebetweenlocations-f.md#getDistanceBetweenLocations) | Obtains the distance between two locations. |
-| [getGeofenceSupportedCoordTypes](arkts-location-geolocationmanager-getgeofencesupportedcoordtypes-f.md#getGeofenceSupportedCoordTypes) | Obtains the coordinate system types supported by geofence. |
-| [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getLastLocation) | Obtain last known location. |
-| [getPoiInfo](arkts-location-geolocationmanager-getpoiinfo-f.md#getPoiInfo) | Obtaining POI Information. |
-| [getPostProcessingTrack](arkts-location-geolocationmanager-getpostprocessingtrack-f.md#getPostProcessingTrack) | Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#SKIING) is supported currently. Before calling this API, you need to call on('locationChange') and set the input parameter [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i-sys.md#sportsType) to the specific sport mode to start tracking. Returns data within 24 hours since tracking started; Subsequent calls return only new records. |
-| [isBeaconFenceSupported](arkts-location-geolocationmanager-isbeaconfencesupported-f.md#isBeaconFenceSupported) | Check whether the BeaconFence service is supported. |
-| [isCachedGnssServiceSupported](arkts-location-geolocationmanager-iscachedgnssservicesupported-f.md#isCachedGnssServiceSupported) | Check whether the cached GNSS service is supported. |
-| [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isGeocoderAvailable) | Obtain geocoding service status. |
-| [isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md#isGnssFenceServiceSupported) | Check whether the GNSS fence service is supported. |
-| [isGnssServiceSupported](arkts-location-geolocationmanager-isgnssservicesupported-f.md#isGnssServiceSupported) | Check whether the GNSS service is supported. |
-| [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#isLocationEnabled) | Obtain current location switch status. |
-| [isPoiServiceSupported](arkts-location-geolocationmanager-ispoiservicesupported-f.md#isPoiServiceSupported) | Check whether the POI service is supported. |
-| [isWlanBssidMatched](arkts-location-geolocationmanager-iswlanbssidmatched-f.md#isWlanBssidMatched) | Check whether the WLAN scan results match the WLAN BSSID list. |
-| [offBluetoothScanResultChange](arkts-location-geolocationmanager-offbluetoothscanresultchange-f.md#offBluetoothScanResultChange) | Stop bluetooth scanning and unregister to listen to bluetooth scanning result changes. |
-| [offCachedGnssLocationsChange](arkts-location-geolocationmanager-offcachedgnsslocationschange-f.md#offCachedGnssLocationsChange) | Unsubscribe to cache GNSS locations update messages. |
-| [offCountryCodeChange](arkts-location-geolocationmanager-offcountrycodechange-f.md#offCountryCodeChange) | Unregistering the callback function for listening to country code changes. |
-| [offGnssFenceStatusChange](arkts-location-geolocationmanager-offgnssfencestatuschange-f.md#offGnssFenceStatusChange) | Remove a geofence and unsubscribe geofence status changed. |
-| [offLocationChange](arkts-location-geolocationmanager-offlocationchange-f.md#offLocationChange) | Unsubscribe location changed. |
-| [offLocationEnabledChange](arkts-location-geolocationmanager-offlocationenabledchange-f.md#offLocationEnabledChange) | Unsubscribe location switch changed. |
-| [offLocationError](arkts-location-geolocationmanager-offlocationerror-f.md#offLocationError) | Unsubscribe continuous location error changed. |
-| [offNmeaMessage](arkts-location-geolocationmanager-offnmeamessage-f.md#offNmeaMessage) | Unsubscribe nmea message changed. |
-| [offSatelliteStatusChange](arkts-location-geolocationmanager-offsatellitestatuschange-f.md#offSatelliteStatusChange) | Unsubscribe satellite status changed. |
-| off_bluetoothScanResultChange | Stop bluetooth scanning and unregister to listen to bluetooth scanning result changes. |
-| off_cachedGnssLocationsChange | Unsubscribe to cache GNSS locations update messages. |
-| off_countryCodeChange | Unregistering the callback function for listening to country code changes. |
-| off_gnssFenceStatusChange | Remove a geofence and unsubscribe geofence status changed. |
-| off_locationChange | Unsubscribe location changed. You are advised to use the offLocationChange instead. |
-| off_locationEnabledChange | Unsubscribe location switch changed. |
-| off_locationError | Unsubscribe continuous location error changed. |
-| off_nmeaMessage | Unsubscribe nmea message changed. |
-| off_satelliteStatusChange | Unsubscribe satellite status changed. |
-| [onBluetoothScanResultChange](arkts-location-geolocationmanager-onbluetoothscanresultchange-f.md#onBluetoothScanResultChange) | Registers and listens to bluetooth scanning results for location services. |
-| [onCachedGnssLocationsChange](arkts-location-geolocationmanager-oncachedgnsslocationschange-f.md#onCachedGnssLocationsChange) | Subscribe to cache GNSS locations update messages. |
-| [onCountryCodeChange](arkts-location-geolocationmanager-oncountrycodechange-f.md#onCountryCodeChange) | Registering the callback function for listening to country code changes. |
-| [onGnssFenceStatusChange](arkts-location-geolocationmanager-ongnssfencestatuschange-f.md#onGnssFenceStatusChange) | Add a geofence and subscribe geofence status changed. |
-| [onLocationChange](arkts-location-geolocationmanager-onlocationchange-f.md#onLocationChange) | Subscribe location changed. |
-| [onLocationEnabledChange](arkts-location-geolocationmanager-onlocationenabledchange-f.md#onLocationEnabledChange) | Subscribe location switch changed. |
-| [onLocationError](arkts-location-geolocationmanager-onlocationerror-f.md#onLocationError) | Subscribe continuous location error changed. |
-| [onNmeaMessage](arkts-location-geolocationmanager-onnmeamessage-f.md#onNmeaMessage) | Subscribe nmea message changed. |
-| [onSatelliteStatusChange](arkts-location-geolocationmanager-onsatellitestatuschange-f.md#onSatelliteStatusChange) | Subscribe satellite status changed. |
-| on_bluetoothScanResultChange | Registers and listens to bluetooth scanning results for location services. |
-| on_cachedGnssLocationsChange | Subscribe to cache GNSS locations update messages. |
-| on_countryCodeChange | Registering the callback function for listening to country code changes. |
-| on_gnssFenceStatusChange | Add a geofence and subscribe geofence status changed. |
-| on_locationChange | Subscribe location changed. You are advised to use the onLocationChange instead. |
-| on_locationEnabledChange | Subscribe location switch changed. |
-| on_locationError | Subscribe continuous location error changed. |
-| on_nmeaMessage | Subscribe nmea message changed. |
-| on_satelliteStatusChange | Subscribe satellite status changed. |
-| [removeBeaconFence](arkts-location-geolocationmanager-removebeaconfence-f.md#removeBeaconFence) | Remove a beacon fence. |
-| [removeGnssGeofence](arkts-location-geolocationmanager-removegnssgeofence-f.md#removeGnssGeofence) | Remove a geofence. |
-| [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendCommand) | Send extended commands to location subsystem. |
-| [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendCommand) | Send extended commands to location subsystem. |
-| [startBluetoothSearch](arkts-location-geolocationmanager-startbluetoothsearch-f.md#startBluetoothSearch) | Starts Bluetooth scanning and matches the device ID list in the input parameter with the Bluetooth scanning result. If the matching is successful, the Bluetooth device information is returned through the callback. |
-| [stopBluetoothSearch](arkts-location-geolocationmanager-stopbluetoothsearch-f.md#stopBluetoothSearch) | Stop Bluetooth scanning and searching. |
+| [addBeaconFence](arkts-location-geolocationmanager-addbeaconfence-f.md#addbeaconfence) | Add a beacon fence. |
+| [addGnssGeofence](arkts-location-geolocationmanager-addgnssgeofence-f.md#addgnssgeofence) | Add a geofence. |
+| [findMatchingWlan](arkts-location-geolocationmanager-findmatchingwlan-f.md#findmatchingwlan) | Check whether the WLAN scan results match the WLAN BSSID list, return information about the WLAN device that is successfully matched. |
+| [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushcachedgnsslocations) | All prepared GNSS locations are returned to the application through the callback function, and the bottom-layer buffer is cleared. |
+| [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushcachedgnsslocations) | All prepared GNSS locations are returned to the application, and the bottom-layer buffer is cleared. |
+| [getActiveGeoFences](arkts-location-geolocationmanager-getactivegeofences-f.md#getactivegeofences) | Get all active fences. |
+| [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getaddressesfromlocation) | Obtain address info from location. |
+| [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getaddressesfromlocation) | Obtain address info from location. |
+| [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getaddressesfromlocationname) | Obtain latitude and longitude info from location address. |
+| [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getaddressesfromlocationname) | Obtain latitude and longitude info from location address. |
+| [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getcachedgnsslocationssize) | Obtain the number of cached GNSS locations reported at a time. |
+| [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getcachedgnsslocationssize) | Obtain the number of cached GNSS locations. |
+| [getCountryCode](arkts-location-geolocationmanager-getcountrycode-f.md#getcountrycode) | Obtain the current country code. |
+| [getCountryCode](arkts-location-geolocationmanager-getcountrycode-f.md#getcountrycode) | Obtain the current country code. |
+| [getCurrentDistrict](arkts-location-geolocationmanager-getcurrentdistrict-f.md#getcurrentdistrict) | Obtains the information about the district where the current device is located. |
+| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation) | Obtain current location. |
+| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation) | Obtain current location. |
+| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation) | Obtain current location. |
+| [getCurrentWifiBssidForLocating](arkts-location-geolocationmanager-getcurrentwifibssidforlocating-f.md#getcurrentwifibssidforlocating) | Obtains the BSSID of the connected Wi-Fi hotspot. |
+| [getDistanceBetweenLocations](arkts-location-geolocationmanager-getdistancebetweenlocations-f.md#getdistancebetweenlocations) | Obtains the distance between two locations. |
+| [getGeofenceSupportedCoordTypes](arkts-location-geolocationmanager-getgeofencesupportedcoordtypes-f.md#getgeofencesupportedcoordtypes) | Obtains the coordinate system types supported by geofence. |
+| [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getlastlocation) | Obtain last known location. |
+| [getPoiInfo](arkts-location-geolocationmanager-getpoiinfo-f.md#getpoiinfo) | Obtaining POI Information. |
+| [getPostProcessingTrack](arkts-location-geolocationmanager-getpostprocessingtrack-f.md#getpostprocessingtrack) | Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently. Before calling this API, you need to call [on('locationChange')](arkts-location-geolocationmanager-onlocationchange-f.md#onlocationchange) and set the input parameter [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i-sys.md#sportstype) to the specific sport mode to start tracking. Returns data within 24 hours since tracking started; Subsequent calls return only new records. |
+| [isBeaconFenceSupported](arkts-location-geolocationmanager-isbeaconfencesupported-f.md#isbeaconfencesupported) | Check whether the BeaconFence service is supported. |
+| [isCachedGnssServiceSupported](arkts-location-geolocationmanager-iscachedgnssservicesupported-f.md#iscachedgnssservicesupported) | Check whether the cached GNSS service is supported. |
+| [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isgeocoderavailable) | Obtain geocoding service status. |
+| [isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md#isgnssfenceservicesupported) | Check whether the GNSS fence service is supported. |
+| [isGnssServiceSupported](arkts-location-geolocationmanager-isgnssservicesupported-f.md#isgnssservicesupported) | Check whether the GNSS service is supported. |
+| [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#islocationenabled) | Obtain current location switch status. |
+| [isPoiServiceSupported](arkts-location-geolocationmanager-ispoiservicesupported-f.md#ispoiservicesupported) | Check whether the POI service is supported. |
+| [isWlanBssidMatched](arkts-location-geolocationmanager-iswlanbssidmatched-f.md#iswlanbssidmatched) | Check whether the WLAN scan results match the WLAN BSSID list. |
+| [offBluetoothScanResultChange](arkts-location-geolocationmanager-offbluetoothscanresultchange-f.md#offbluetoothscanresultchange) | Stop bluetooth scanning and unregister to listen to bluetooth scanning result changes. |
+| [offCachedGnssLocationsChange](arkts-location-geolocationmanager-offcachedgnsslocationschange-f.md#offcachedgnsslocationschange) | Unsubscribe to cache GNSS locations update messages. |
+| [offCountryCodeChange](arkts-location-geolocationmanager-offcountrycodechange-f.md#offcountrycodechange) | Unregistering the callback function for listening to country code changes. |
+| [offGnssFenceStatusChange](arkts-location-geolocationmanager-offgnssfencestatuschange-f.md#offgnssfencestatuschange) | Remove a geofence and unsubscribe geofence status changed. |
+| [offLocationChange](arkts-location-geolocationmanager-offlocationchange-f.md#offlocationchange) | Unsubscribe location changed. |
+| [offLocationEnabledChange](arkts-location-geolocationmanager-offlocationenabledchange-f.md#offlocationenabledchange) | Unsubscribe location switch changed. |
+| [offLocationError](arkts-location-geolocationmanager-offlocationerror-f.md#offlocationerror) | Unsubscribe continuous location error changed. |
+| [offNmeaMessage](arkts-location-geolocationmanager-offnmeamessage-f.md#offnmeamessage) | Unsubscribe nmea message changed. |
+| [offSatelliteStatusChange](arkts-location-geolocationmanager-offsatellitestatuschange-f.md#offsatellitestatuschange) | Unsubscribe satellite status changed. |
+| [off_bluetoothScanResultChange](arkts-location-geolocationmanager-offbluetoothscanresultchange-f.md#offbluetoothscanresultchange) | Stop bluetooth scanning and unregister to listen to bluetooth scanning result changes. |
+| [off_cachedGnssLocationsChange](arkts-location-geolocationmanager-offcachedgnsslocationschange-f.md#offcachedgnsslocationschange) | Unsubscribe to cache GNSS locations update messages. |
+| [off_countryCodeChange](arkts-location-geolocationmanager-offcountrycodechange-f.md#offcountrycodechange) | Unregistering the callback function for listening to country code changes. |
+| [off_gnssFenceStatusChange](arkts-location-geolocationmanager-offgnssfencestatuschange-f.md#offgnssfencestatuschange) | Remove a geofence and unsubscribe geofence status changed. |
+| [off_locationChange](arkts-location-geolocationmanager-offlocationchange-f.md#offlocationchange) | Unsubscribe location changed. You are advised to use the [offLocationChange](arkts-location-geolocationmanager-offlocationchange-f.md#offlocationchange) instead. |
+| [off_locationEnabledChange](arkts-location-geolocationmanager-offlocationenabledchange-f.md#offlocationenabledchange) | Unsubscribe location switch changed. |
+| [off_locationError](arkts-location-geolocationmanager-offlocationerror-f.md#offlocationerror) | Unsubscribe continuous location error changed. |
+| [off_nmeaMessage](arkts-location-geolocationmanager-offnmeamessage-f.md#offnmeamessage) | Unsubscribe nmea message changed. |
+| [off_satelliteStatusChange](arkts-location-geolocationmanager-offsatellitestatuschange-f.md#offsatellitestatuschange) | Unsubscribe satellite status changed. |
+| [onBluetoothScanResultChange](arkts-location-geolocationmanager-onbluetoothscanresultchange-f.md#onbluetoothscanresultchange) | Registers and listens to bluetooth scanning results for location services. |
+| [onCachedGnssLocationsChange](arkts-location-geolocationmanager-oncachedgnsslocationschange-f.md#oncachedgnsslocationschange) | Subscribe to cache GNSS locations update messages. |
+| [onCountryCodeChange](arkts-location-geolocationmanager-oncountrycodechange-f.md#oncountrycodechange) | Registering the callback function for listening to country code changes. |
+| [onGnssFenceStatusChange](arkts-location-geolocationmanager-ongnssfencestatuschange-f.md#ongnssfencestatuschange) | Add a geofence and subscribe geofence status changed. |
+| [onLocationChange](arkts-location-geolocationmanager-onlocationchange-f.md#onlocationchange) | Subscribe location changed. |
+| [onLocationEnabledChange](arkts-location-geolocationmanager-onlocationenabledchange-f.md#onlocationenabledchange) | Subscribe location switch changed. |
+| [onLocationError](arkts-location-geolocationmanager-onlocationerror-f.md#onlocationerror) | Subscribe continuous location error changed. |
+| [onNmeaMessage](arkts-location-geolocationmanager-onnmeamessage-f.md#onnmeamessage) | Subscribe nmea message changed. |
+| [onSatelliteStatusChange](arkts-location-geolocationmanager-onsatellitestatuschange-f.md#onsatellitestatuschange) | Subscribe satellite status changed. |
+| [on_bluetoothScanResultChange](arkts-location-geolocationmanager-onbluetoothscanresultchange-f.md#onbluetoothscanresultchange) | Registers and listens to bluetooth scanning results for location services. |
+| [on_cachedGnssLocationsChange](arkts-location-geolocationmanager-oncachedgnsslocationschange-f.md#oncachedgnsslocationschange) | Subscribe to cache GNSS locations update messages. |
+| [on_countryCodeChange](arkts-location-geolocationmanager-oncountrycodechange-f.md#oncountrycodechange) | Registering the callback function for listening to country code changes. |
+| [on_gnssFenceStatusChange](arkts-location-geolocationmanager-ongnssfencestatuschange-f.md#ongnssfencestatuschange) | Add a geofence and subscribe geofence status changed. |
+| [on_locationChange](arkts-location-geolocationmanager-onlocationchange-f.md#onlocationchange) | Subscribe location changed. You are advised to use the [onLocationChange](arkts-location-geolocationmanager-onlocationchange-f.md#onlocationchange) instead. |
+| [on_locationEnabledChange](arkts-location-geolocationmanager-onlocationenabledchange-f.md#onlocationenabledchange) | Subscribe location switch changed. |
+| [on_locationError](arkts-location-geolocationmanager-onlocationerror-f.md#onlocationerror) | Subscribe continuous location error changed. |
+| [on_nmeaMessage](arkts-location-geolocationmanager-onnmeamessage-f.md#onnmeamessage) | Subscribe nmea message changed. |
+| [on_satelliteStatusChange](arkts-location-geolocationmanager-onsatellitestatuschange-f.md#onsatellitestatuschange) | Subscribe satellite status changed. |
+| [removeBeaconFence](arkts-location-geolocationmanager-removebeaconfence-f.md#removebeaconfence) | Remove a beacon fence. |
+| [removeGnssGeofence](arkts-location-geolocationmanager-removegnssgeofence-f.md#removegnssgeofence) | Remove a geofence. |
+| [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendcommand) | Send extended commands to location subsystem. |
+| [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendcommand) | Send extended commands to location subsystem. |
+| [startBluetoothSearch](arkts-location-geolocationmanager-startbluetoothsearch-f.md#startbluetoothsearch) | Starts Bluetooth scanning and matches the device ID list in the input parameter with the Bluetooth scanning result. If the matching is successful, the Bluetooth device information is returned through the callback. |
+| [stopBluetoothSearch](arkts-location-geolocationmanager-stopbluetoothsearch-f.md#stopbluetoothsearch) | Stop Bluetooth scanning and searching. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addFusionFence](arkts-location-geolocationmanager-addfusionfence-f-sys.md#addFusionFence) | Add a fusion fence. |
-| [disableLocation](arkts-location-geolocationmanager-disablelocation-f-sys.md#disableLocation) | Disable location switch. |
-| [disableLocationByUserId](arkts-location-geolocationmanager-disablelocationbyuserid-f-sys.md#disableLocationByUserId) | Turn off the location switch for a specified user. |
-| [disableLocationMock](arkts-location-geolocationmanager-disablelocationmock-f-sys.md#disableLocationMock) | Disable the geographical location simulation function. |
-| [disableReverseGeocodingMock](arkts-location-geolocationmanager-disablereversegeocodingmock-f-sys.md#disableReverseGeocodingMock) | Disable the reverse geocoding simulation function. |
-| [enableLocation](arkts-location-geolocationmanager-enablelocation-f-sys.md#enableLocation) | Enable location switch. |
-| [enableLocation](arkts-location-geolocationmanager-enablelocation-f-sys.md#enableLocation-(System-API)) | Enable location switch. |
-| [enableLocationByUserId](arkts-location-geolocationmanager-enablelocationbyuserid-f-sys.md#enableLocationByUserId) | Turn on the location switch for a specified user. |
-| [enableLocationMock](arkts-location-geolocationmanager-enablelocationmock-f-sys.md#enableLocationMock) | Enable the geographical location simulation function. |
-| [enableReverseGeocodingMock](arkts-location-geolocationmanager-enablereversegeocodingmock-f-sys.md#enableReverseGeocodingMock) | Enable the reverse geocoding simulation function. |
-| [getLocatingRequiredData](arkts-location-geolocationmanager-getlocatingrequireddata-f-sys.md#getLocatingRequiredData) | Get WiFi/BT scanning information, and use the WiFi/BT scanning information for localization. |
-| [getLocationIconStatus](arkts-location-geolocationmanager-getlocationiconstatus-f-sys.md#getLocationIconStatus) | Get location icon status. |
-| [isFusionFenceSupported](arkts-location-geolocationmanager-isfusionfencesupported-f-sys.md#isFusionFenceSupported) | Check whether the fusion fence service is supported. |
-| [isLocationEnabledByUserId](arkts-location-geolocationmanager-islocationenabledbyuserid-f-sys.md#isLocationEnabledByUserId) | Obtaining the location switch status of a specified user. |
-| [isLocationPrivacyConfirmed](arkts-location-geolocationmanager-islocationprivacyconfirmed-f-sys.md#isLocationPrivacyConfirmed) | Querying location privacy protocol confirmation status. |
-| [offLocatingRequiredDataChange](arkts-location-geolocationmanager-offlocatingrequireddatachange-f-sys.md#offLocatingRequiredDataChange) | Stop WiFi/BT scanning and unsubscribe from WiFi/BT scanning information changes. |
-| [offLocationIconStatusChange](arkts-location-geolocationmanager-offlocationiconstatuschange-f-sys.md#offLocationIconStatusChange) | Unsubscribe location icon status changed. |
-| off_locatingRequiredDataChange | Stop WiFi/BT scanning and unsubscribe from WiFi/BT scanning information changes. |
-| off_locationIconStatusChange | Unsubscribe location icon status changed. |
-| [onLocatingRequiredDataChange](arkts-location-geolocationmanager-onlocatingrequireddatachange-f-sys.md#onLocatingRequiredDataChange) | Subscribe to changes in WiFi/BT scanning information, and use the WiFi/BT scanning information for localization. |
-| [onLocationIconStatusChange](arkts-location-geolocationmanager-onlocationiconstatuschange-f-sys.md#onLocationIconStatusChange) | Subscribe location icon status changed. |
-| on_locatingRequiredDataChange | Subscribe to changes in WiFi/BT scanning information, and use the WiFi/BT scanning information for localization. |
-| on_locationIconStatusChange | Subscribe location icon status changed. |
-| [removeFusionFence](arkts-location-geolocationmanager-removefusionfence-f-sys.md#removeFusionFence) | Remove a fusion fence. |
-| [setLocationPrivacyConfirmStatus](arkts-location-geolocationmanager-setlocationprivacyconfirmstatus-f-sys.md#setLocationPrivacyConfirmStatus) | Set location privacy protocol confirmation status. |
-| [setLocationSwitchIgnored](arkts-location-geolocationmanager-setlocationswitchignored-f-sys.md#setLocationSwitchIgnored) | Set the app locating behavior not controlled by the location switch. |
-| [setMockedLocations](arkts-location-geolocationmanager-setmockedlocations-f-sys.md#setMockedLocations) | Set the configuration parameters for location simulation. |
-| [setReverseGeocodingMockInfo](arkts-location-geolocationmanager-setreversegeocodingmockinfo-f-sys.md#setReverseGeocodingMockInfo) | Set the configuration parameters for simulating reverse geocoding. |
+| [addFusionFence](arkts-location-geolocationmanager-addfusionfence-f-sys.md#addfusionfence) | Add a fusion fence. |
+| [disableLocation](arkts-location-geolocationmanager-disablelocation-f-sys.md#disablelocation) | Disable location switch. |
+| [disableLocationByUserId](arkts-location-geolocationmanager-disablelocationbyuserid-f-sys.md#disablelocationbyuserid) | Turn off the location switch for a specified user. |
+| [disableLocationMock](arkts-location-geolocationmanager-disablelocationmock-f-sys.md#disablelocationmock) | Disable the geographical location simulation function. |
+| [disableReverseGeocodingMock](arkts-location-geolocationmanager-disablereversegeocodingmock-f-sys.md#disablereversegeocodingmock) | Disable the reverse geocoding simulation function. |
+| [enableLocation](arkts-location-geolocationmanager-enablelocation-f-sys.md#enablelocation) | Enable location switch. |
+| [enableLocation](arkts-location-geolocationmanager-enablelocation-f-sys.md#enablelocation-system-api) | Enable location switch. |
+| [enableLocationByUserId](arkts-location-geolocationmanager-enablelocationbyuserid-f-sys.md#enablelocationbyuserid) | Turn on the location switch for a specified user. |
+| [enableLocationMock](arkts-location-geolocationmanager-enablelocationmock-f-sys.md#enablelocationmock) | Enable the geographical location simulation function. |
+| [enableReverseGeocodingMock](arkts-location-geolocationmanager-enablereversegeocodingmock-f-sys.md#enablereversegeocodingmock) | Enable the reverse geocoding simulation function. |
+| [getLocatingRequiredData](arkts-location-geolocationmanager-getlocatingrequireddata-f-sys.md#getlocatingrequireddata) | Get WiFi/BT scanning information, and use the WiFi/BT scanning information for localization. |
+| [getLocationIconStatus](arkts-location-geolocationmanager-getlocationiconstatus-f-sys.md#getlocationiconstatus) | Get location icon status. |
+| [isFusionFenceSupported](arkts-location-geolocationmanager-isfusionfencesupported-f-sys.md#isfusionfencesupported) | Check whether the fusion fence service is supported. |
+| [isLocationEnabledByUserId](arkts-location-geolocationmanager-islocationenabledbyuserid-f-sys.md#islocationenabledbyuserid) | Obtaining the location switch status of a specified user. |
+| [isLocationPrivacyConfirmed](arkts-location-geolocationmanager-islocationprivacyconfirmed-f-sys.md#islocationprivacyconfirmed) | Querying location privacy protocol confirmation status. |
+| [offLocatingRequiredDataChange](arkts-location-geolocationmanager-offlocatingrequireddatachange-f-sys.md#offlocatingrequireddatachange) | Stop WiFi/BT scanning and unsubscribe from WiFi/BT scanning information changes. |
+| [offLocationIconStatusChange](arkts-location-geolocationmanager-offlocationiconstatuschange-f-sys.md#offlocationiconstatuschange) | Unsubscribe location icon status changed. |
+| [off_locatingRequiredDataChange](arkts-location-geolocationmanager-offlocatingrequireddatachange-f-sys.md#offlocatingrequireddatachange) | Stop WiFi/BT scanning and unsubscribe from WiFi/BT scanning information changes. |
+| [off_locationIconStatusChange](arkts-location-geolocationmanager-offlocationiconstatuschange-f-sys.md#offlocationiconstatuschange) | Unsubscribe location icon status changed. |
+| [onLocatingRequiredDataChange](arkts-location-geolocationmanager-onlocatingrequireddatachange-f-sys.md#onlocatingrequireddatachange) | Subscribe to changes in WiFi/BT scanning information, and use the WiFi/BT scanning information for localization. |
+| [onLocationIconStatusChange](arkts-location-geolocationmanager-onlocationiconstatuschange-f-sys.md#onlocationiconstatuschange) | Subscribe location icon status changed. |
+| [on_locatingRequiredDataChange](arkts-location-geolocationmanager-onlocatingrequireddatachange-f-sys.md#onlocatingrequireddatachange) | Subscribe to changes in WiFi/BT scanning information, and use the WiFi/BT scanning information for localization. |
+| [on_locationIconStatusChange](arkts-location-geolocationmanager-onlocationiconstatuschange-f-sys.md#onlocationiconstatuschange) | Subscribe location icon status changed. |
+| [removeFusionFence](arkts-location-geolocationmanager-removefusionfence-f-sys.md#removefusionfence) | Remove a fusion fence. |
+| [setLocationPrivacyConfirmStatus](arkts-location-geolocationmanager-setlocationprivacyconfirmstatus-f-sys.md#setlocationprivacyconfirmstatus) | Set location privacy protocol confirmation status. |
+| [setLocationSwitchIgnored](arkts-location-geolocationmanager-setlocationswitchignored-f-sys.md#setlocationswitchignored) | Set the app locating behavior not controlled by the location switch. |
+| [setMockedLocations](arkts-location-geolocationmanager-setmockedlocations-f-sys.md#setmockedlocations) | Set the configuration parameters for location simulation. |
+| [setReverseGeocodingMockInfo](arkts-location-geolocationmanager-setreversegeocodingmockinfo-f-sys.md#setreversegeocodingmockinfo) | Set the configuration parameters for simulating reverse geocoding. |
 <!--DelEnd-->
 
 ### Interfaces

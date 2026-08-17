@@ -6,10 +6,6 @@ The universal attributes are supported. Universal events, such as the click even
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class UIExtensionComponentAttribute--><!--Device-unnamed-declare class UIExtensionComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

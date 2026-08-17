@@ -4,10 +4,6 @@ Enumeration of current call state
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-enum CallState--><!--Device-avSession-enum CallState-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -21,10 +17,6 @@ CALL_STATE_IDLE = 0
 Idle state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Incoming state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CallState-CALL_STATE_INCOMING = 1--><!--Device-CallState-CALL_STATE_INCOMING = 1-End-->
@@ -61,10 +49,6 @@ CALL_STATE_ACTIVE = 2
 Active state in calling.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +66,6 @@ Dialing state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CallState-CALL_STATE_DIALING = 3--><!--Device-CallState-CALL_STATE_DIALING = 3-End-->
@@ -101,10 +81,6 @@ CALL_STATE_WAITING = 4
 Waiting state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,10 +98,6 @@ Holding state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CallState-CALL_STATE_HOLDING = 5--><!--Device-CallState-CALL_STATE_HOLDING = 5-End-->
@@ -141,10 +113,6 @@ CALL_STATE_DISCONNECTING = 6
 Disconnecting state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -6,13 +6,9 @@
 function destroyPanel(panel: Panel): Promise<void>
 ```
 
-销毁划词面板。与[createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel（系统接口）)搭配使用，用于销毁由createPanel()创建的面板对象。使用Promise异步回调。
+销毁划词面板。与[createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel系统接口)搭配使用，用于销毁由createPanel()创建的面板对象。使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +36,7 @@ function destroyPanel(panel: Panel): Promise<void>
 | --- | --- |
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

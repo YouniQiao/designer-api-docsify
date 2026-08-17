@@ -4,10 +4,6 @@ Describes the notification timing information. > **NOTE：**> > The actual displ
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationTime--><!--Device-unnamed-export interface NotificationTime-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -23,10 +19,6 @@ Initial time for the timer, which is used to set the starting point of the timer
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationTime-initialTime?: int--><!--Device-NotificationTime-initialTime?: int-End-->
 
@@ -44,10 +36,6 @@ Whether it is countdown mode. The default value is **false**. - **true**: The ti
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationTime-isCountDown?: boolean--><!--Device-NotificationTime-isCountDown?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -64,10 +52,6 @@ Whether the time information is displayed in the notification title. The default
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationTime-isInTitle?: boolean--><!--Device-NotificationTime-isInTitle?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -83,10 +67,6 @@ Whether the timer is paused. The default value is **false**. - **true**: The tim
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationTime-isPaused?: boolean--><!--Device-NotificationTime-isPaused?: boolean-End-->
 

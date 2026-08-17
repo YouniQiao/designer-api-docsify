@@ -4,10 +4,6 @@ FocusQuery provides APIs to check whether a focus mode is supported. > **NOTE：
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface FocusQuery--><!--Device-camera-interface FocusQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -28,10 +24,6 @@ Checks whether the focus assist is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FocusQuery-isFocusAssistSupported(): boolean--><!--Device-FocusQuery-isFocusAssistSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -51,7 +43,7 @@ Checks whether the focus assist is supported.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -79,10 +71,6 @@ Checks whether a focus drive type is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FocusQuery-isFocusDrivenTypeSupported(type: FocusDrivenType): boolean--><!--Device-FocusQuery-isFocusDrivenTypeSupported(type: FocusDrivenType): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -109,7 +97,7 @@ Checks whether a focus drive type is supported.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -137,10 +125,6 @@ Checks whether a focus range type is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FocusQuery-isFocusRangeTypeSupported(type: FocusRangeType): boolean--><!--Device-FocusQuery-isFocusRangeTypeSupported(type: FocusRangeType): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -167,7 +151,7 @@ Checks whether a focus range type is supported.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

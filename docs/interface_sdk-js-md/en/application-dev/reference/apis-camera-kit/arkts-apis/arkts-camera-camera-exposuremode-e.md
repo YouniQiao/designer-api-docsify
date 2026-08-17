@@ -4,10 +4,6 @@ Enumerates the exposure modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum ExposureMode--><!--Device-camera-enum ExposureMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -21,10 +17,6 @@ EXPOSURE_MODE_UNSPECIFIED = -1
 Unspecified exposure.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Exposure locked. The metering point cannot be set. After this mode is used, the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-ExposureMode-EXPOSURE_MODE_LOCKED = 0--><!--Device-ExposureMode-EXPOSURE_MODE_LOCKED = 0-End-->
@@ -60,13 +48,9 @@ Exposure locked. The metering point cannot be set. After this mode is used, the 
 EXPOSURE_MODE_AUTO = 1
 ```
 
-Auto exposure. The metering point can be set by calling [AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setMeteringPoint). After this mode is used, it takes effect only for the first photo capture.
+Auto exposure. The metering point can be set by calling [AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint). After this mode is used, it takes effect only for the first photo capture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -83,10 +67,6 @@ EXPOSURE_MODE_CONTINUOUS_AUTO = 2
 Continuous auto exposure. The metering point cannot be set. After this mode is used, the camera system automatically adjusts the exposure based on the environment changes each time.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

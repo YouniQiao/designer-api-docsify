@@ -16,10 +16,6 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function clearMission(missionId: int, callback: AsyncCallback<void>): void--><!--Device-missionManager-function clearMission(missionId: int, callback: AsyncCallback<void>): void-End-->
@@ -43,7 +39,7 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
@@ -76,10 +72,6 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function clearMission(missionId: int): Promise<void>--><!--Device-missionManager-function clearMission(missionId: int): Promise<void>-End-->
@@ -108,7 +100,7 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';

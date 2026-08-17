@@ -4,10 +4,6 @@ Describes the window size. **Atomic service API**: This API can be used in atomi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface WindowSize--><!--Device-unnamed-export interface WindowSize-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -23,10 +19,6 @@ Maximum height of the window in free window mode. The unit is vp.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ Maximum aspect ratio of the window in free window mode. The value ranges from 0 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowSize-readonly maxWindowRatio: double--><!--Device-WindowSize-readonly maxWindowRatio: double-End-->
@@ -67,10 +55,6 @@ Maximum width of the window in free window mode. The unit is vp.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,10 +74,6 @@ Minimum height of the window in free window mode. The unit is vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowSize-readonly minWindowHeight: long--><!--Device-WindowSize-readonly minWindowHeight: long-End-->
@@ -112,10 +92,6 @@ Minimum aspect ratio of the window in free window mode. The value ranges from 0 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowSize-readonly minWindowRatio: double--><!--Device-WindowSize-readonly minWindowRatio: double-End-->
@@ -133,10 +109,6 @@ Minimum width of the window in free window mode. The unit is vp.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

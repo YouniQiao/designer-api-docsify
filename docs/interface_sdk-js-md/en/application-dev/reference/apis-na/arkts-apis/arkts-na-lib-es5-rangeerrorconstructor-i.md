@@ -1,12 +1,8 @@
 # RangeErrorConstructor
 
-**Inheritance/Implementation:** RangeErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md#ErrorConstructor)
+**Inheritance/Implementation:** RangeErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md#errorconstructor)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface RangeErrorConstructor--><!--Device-unnamed-interface RangeErrorConstructor-End-->
 
@@ -17,10 +13,6 @@ new(message?: string): RangeError
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RangeErrorConstructor-new(message?: string): RangeError--><!--Device-RangeErrorConstructor-new(message?: string): RangeError-End-->
 
@@ -43,10 +35,6 @@ new(message?: string): RangeError
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RangeErrorConstructor-(message?: string): RangeError--><!--Device-RangeErrorConstructor-(message?: string): RangeError-End-->
 
@@ -71,10 +59,6 @@ readonly prototype: RangeError
 **Type:** RangeError
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RangeErrorConstructor-readonly prototype: RangeError--><!--Device-RangeErrorConstructor-readonly prototype: RangeError-End-->
 

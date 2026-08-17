@@ -12,13 +12,9 @@ import { asset } from 'asset';
 function query(query: AssetMap): Promise<Array<AssetMap>>
 ```
 
-Queries one or more assets. If user authentication is required for the access to the asset, call [asset.preQuery](arkts-assetstore-asset-prequery-f.md#preQuery) before this API and call [asset.postQuery](arkts-assetstore-asset-postquery-f.md#postQuery) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API uses a promise to return the result. If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
+Queries one or more assets. If user authentication is required for the access to the asset, call [asset.preQuery](arkts-assetstore-asset-prequery-f.md#prequery) before this API and call [asset.postQuery](arkts-assetstore-asset-postquery-f.md#postquery) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API uses a promise to return the result. If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -57,7 +53,7 @@ Queries one or more assets. If user authentication is required for the access to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [24000017](../errorcode-asset.md#24000017-function-not-supported) | The capability is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

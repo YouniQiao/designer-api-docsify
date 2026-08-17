@@ -1,12 +1,8 @@
-# WithEnvAttribute
+# WithEnvAttribute(Define the WithEnv component that allows setting environment properties for child components.)
 
 Define the WithEnv attribute functions.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class WithEnvAttribute--><!--Device-unnamed-export declare class WithEnvAttribute-End-->
 
@@ -29,10 +25,6 @@ Defining Custom Environment Variables
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -52,7 +44,7 @@ Defining Custom Environment Variables
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](../../apis-na/arkts-apis/arkts-na-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute object. |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute object. |
 
 ## env
 
@@ -63,10 +55,6 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 Defining System Environment Variables
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,5 +75,5 @@ Defining System Environment Variables
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](../../apis-na/arkts-apis/arkts-na-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute object. |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute object. |
 

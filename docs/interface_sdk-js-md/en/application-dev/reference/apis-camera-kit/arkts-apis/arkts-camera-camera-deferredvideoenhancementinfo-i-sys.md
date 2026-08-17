@@ -4,10 +4,6 @@ Deferred video enhancement info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface DeferredVideoEnhancementInfo--><!--Device-camera-interface DeferredVideoEnhancementInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -32,10 +28,6 @@ Check whether deferred video enhancement available.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean--><!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -53,10 +45,6 @@ Video identifier.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string--><!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string-End-->
 

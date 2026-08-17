@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-unnamed-export interface ActionResult--><!--Device-unnamed-export interface ActionResult-End-->
@@ -29,8 +27,6 @@ Name of the application ability to which the notification will be redirected aft
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-ActionResult-abilityName: string--><!--Device-ActionResult-abilityName: string-End-->
@@ -49,8 +45,6 @@ Name of the application bundle to which the notification will be redirected afte
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-ActionResult-bundleName: string--><!--Device-ActionResult-bundleName: string-End-->
@@ -68,8 +62,6 @@ URI of the page to be redirected to.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 7
 

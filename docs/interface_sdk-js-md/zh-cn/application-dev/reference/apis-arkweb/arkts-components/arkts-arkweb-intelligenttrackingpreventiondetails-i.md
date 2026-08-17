@@ -1,12 +1,8 @@
 # IntelligentTrackingPreventionDetails
 
-提供智能防跟踪拦截的详细信息。
+提供智能防跟踪拦截的详细信息，包括网站域名和追踪者域名。适用于需要监控广告拦截行为的场景，提升隐私保护的透明度和可控性。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface IntelligentTrackingPreventionDetails--><!--Device-unnamed-declare interface IntelligentTrackingPreventionDetails-End-->
 
@@ -23,10 +19,6 @@ host: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ trackerHost: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

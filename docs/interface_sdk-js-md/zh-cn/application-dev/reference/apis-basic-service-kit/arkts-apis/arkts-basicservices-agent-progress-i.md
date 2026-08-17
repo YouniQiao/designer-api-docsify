@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-interface Progress--><!--Device-agent-interface Progress-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -24,10 +20,6 @@ The extras for an interaction. Such as headers and body of response from server.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Progress-readonly extras?: Record<string, string>--><!--Device-Progress-readonly extras?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -43,10 +35,6 @@ readonly index: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,10 +54,6 @@ readonly processed: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Progress-readonly processed: long--><!--Device-Progress-readonly processed: long-End-->
@@ -88,10 +72,6 @@ readonly sizes: Array<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Progress-readonly sizes: Array<long>--><!--Device-Progress-readonly sizes: Array<long>-End-->
@@ -109,10 +89,6 @@ readonly state: State
 **类型：** State
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

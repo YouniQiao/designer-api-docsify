@@ -4,13 +4,9 @@
 type OnIntelligentTrackingPreventionCallback = (details: IntelligentTrackingPreventionDetails) => void
 ```
 
-The callback of Intelligent Tracking Prevention.
+Defines a callback invoked when the tracker cookie is intercepted.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -22,5 +18,5 @@ The callback of Intelligent Tracking Prevention.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| details | [IntelligentTrackingPreventionDetails](arkts-arkweb-intelligenttrackingpreventiondetails-i.md) | Yes | callback information of onIntelligentTrackingPrevention. |
+| details | [IntelligentTrackingPreventionDetails](arkts-arkweb-intelligenttrackingpreventiondetails-i.md) | Yes | Detailed information about intelligent tracking prevention. |
 

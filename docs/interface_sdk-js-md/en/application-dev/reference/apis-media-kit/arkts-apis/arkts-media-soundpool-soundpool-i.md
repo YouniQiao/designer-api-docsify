@@ -1,12 +1,8 @@
 # SoundPool
 
-Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md) to create a SoundPool instance. > **NOTE：**> > - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain > status changes: > > - [on('loadComplete')](#on_loadComplete): listens for the > event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that > the audio is played after being loaded. > > - > [on('playFinishedWithStreamId')](#on_loadComplete): > listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes > playing. > > - [on('playFinished')](#on_loadComplete): listens > for the event indicating that the playback is finished. > > - [on('error')](#on_loadComplete): listens for error events. > > - [on('errorOccurred')](#on_loadComplete): listens for > error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo). > > - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or > skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using > SoundPool, see > [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
+Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md) to create a SoundPool instance. > **NOTE：**> > - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain > status changes: > > - [on('loadComplete')](#onloadcomplete): listens for the > event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that > the audio is played after being loaded. > > - > [on('playFinishedWithStreamId')](#onloadcomplete): > listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes > playing. > > - [on('playFinished')](#onloadcomplete): listens > for the event indicating that the playback is finished. > > - [on('error')](#onloadcomplete): listens for error events. > > - [on('errorOccurred')](#onloadcomplete): listens for > error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md#errorinfo). > > - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or > skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using > SoundPool, see > [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface SoundPool--><!--Device-unnamed-export declare interface SoundPool-End-->
 
@@ -21,10 +17,6 @@ load(uri: string, callback: AsyncCallback<int>): void
 Loads a sound. This API uses an asynchronous callback to return the result. This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained. This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) . > **NOTE：**> > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to > the player, do not use the resource handle or path description in read or write operations, including but not > limited to transferring it to multiple players. > > - Competition occurs when multiple players use the same resource handle or path description to read and write > files at the same time, resulting in playback errors.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void-End-->
 
@@ -54,10 +46,6 @@ load(uri: string): Promise<int>
 Loads a sound. This API uses a promise to return the result. This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained. This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) . > **NOTE：**> > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to > the player, do not use the resource handle or path description in read or write operations, including but not > limited to transferring it to multiple players. > > - Competition occurs when multiple players use the same resource handle or path description to read and write > files at the same time, resulting in playback errors.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-load(uri: string): Promise<int>--><!--Device-SoundPool-load(uri: string): Promise<int>-End-->
 
@@ -93,10 +81,6 @@ Loads a sound. This API uses an asynchronous callback to return the result. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -127,10 +111,6 @@ load(fd: int, offset: long, length: long): Promise<int>
 Loads a sound. This API uses a promise to return the result. This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources. > **NOTE：**> > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to > the player, do not use the resource handle or path description in read or write operations, including but not > limited to transferring it to multiple players. > > - Competition occurs when multiple players use the same resource handle or path description to read and write > files at the same time, resulting in playback errors.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>--><!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>-End-->
 
@@ -168,10 +148,6 @@ Unsubscribes from error events of this **SoundPool** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-offError(): void--><!--Device-SoundPool-offError(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -185,10 +161,6 @@ offErrorOccurred(callback?: Callback<ErrorInfo>): void
 Unsubscribes from errorOccurred events of this **SoundPool** instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void-End-->
 
@@ -210,10 +182,6 @@ Unsubscribes from events indicating that a sound finishes loading.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-offLoadComplete(): void--><!--Device-SoundPool-offLoadComplete(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -227,10 +195,6 @@ offPlayFinished(): void
 Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-offPlayFinished(): void--><!--Device-SoundPool-offPlayFinished(): void-End-->
 
@@ -246,10 +210,6 @@ Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-offPlayFinishedWithStreamId(): void--><!--Device-SoundPool-offPlayFinishedWithStreamId(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -263,10 +223,6 @@ off(type: 'error'): void
 Unsubscribes from error events of a SoundPool instance.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-off(type: 'error'): void--><!--Device-SoundPool-off(type: 'error'): void-End-->
 
@@ -288,10 +244,6 @@ Unsubscribes from error events of a SoundPool instance.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -301,7 +253,7 @@ Unsubscribes from error events of a SoundPool instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo) if an error occurs during the use of the player. If the callback is not set, no related information is provided. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md#errorinfo) if an error occurs during the use of the player. If the callback is not set, no related information is provided. |
 
 ## off_loadComplete
 
@@ -312,10 +264,6 @@ off(type: 'loadComplete'): void
 Unsubscribes from events indicating that a sound finishes loading.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-off(type: 'loadComplete'): void--><!--Device-SoundPool-off(type: 'loadComplete'): void-End-->
 
@@ -337,10 +285,6 @@ Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-off(type: 'playFinished'): void--><!--Device-SoundPool-off(type: 'playFinished'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -360,10 +304,6 @@ off(type: 'playFinishedWithStreamId'): void
 Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void--><!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void-End-->
 
@@ -385,10 +325,6 @@ Subscribes to error events of this **SoundPool** instance. This event is used on
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-onError(callback: ErrorCallback): void--><!--Device-SoundPool-onError(callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -408,10 +344,6 @@ onErrorOccurred(callback: Callback<ErrorInfo>): void
 Subscribes to errorOccurred events of this **SoundPool** instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void-End-->
 
@@ -433,10 +365,6 @@ Subscribes to events indicating that a sound finishes loading. This event is tri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void--><!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -456,10 +384,6 @@ onPlayFinished(callback: Callback<void>): void
 Subscribes to events indicating that a sound finishes playing. This event is triggered when a sound finishes playing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void--><!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void-End-->
 
@@ -481,10 +405,6 @@ Subscribes to events indicating the completion of audio playback and returns the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void--><!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -505,10 +425,6 @@ Subscribes to error events of a SoundPool instance. This event is used only for 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void--><!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -526,13 +442,9 @@ Subscribes to error events of a SoundPool instance. This event is used only for 
 on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 ```
 
-Subscribes to error events of a SoundPool instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
+Subscribes to error events of a SoundPool instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md#errorinfo) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void-End-->
 
@@ -543,7 +455,7 @@ Subscribes to error events of a SoundPool instance and returns [ErrorInfo](arkts
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. This event can be triggered by both user operations and the system. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md#errorinfo). |
 
 ## on_loadComplete
 
@@ -554,10 +466,6 @@ on(type: 'loadComplete', callback: Callback<int>): void
 Subscribes to events indicating that a sound finishes loading. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void-End-->
 
@@ -580,10 +488,6 @@ Subscribes to events indicating that a sound finishes playing. This API uses an 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void--><!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -601,13 +505,9 @@ Subscribes to events indicating that a sound finishes playing. This API uses an 
 on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
 ```
 
-Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result. When only [on('playFinished')](#on_loadComplete) or [on('playFinishedWithStreamId')](#on_loadComplete) is subscribed to, the registered callback is triggered when the audio playback is complete. When both [on('playFinished')](#on_loadComplete) and [on('playFinishedWithStreamId')](#on_loadComplete) are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result. When only [on('playFinished')](#onloadcomplete) or [on('playFinishedWithStreamId')](#onloadcomplete) is subscribed to, the registered callback is triggered when the audio playback is complete. When both [on('playFinished')](#onloadcomplete) and [on('playFinishedWithStreamId')](#onloadcomplete) are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void-End-->
 
@@ -629,10 +529,6 @@ play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void
 Plays a sound and obtains the stream ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void-End-->
 
@@ -664,10 +560,6 @@ Plays a sound using default parameters and obtains the stream ID. This API uses 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -696,10 +588,6 @@ play(soundID: int, params?: PlayParameters): Promise<int>
 Plays a sound and obtains the stream ID. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>--><!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>-End-->
 
@@ -736,10 +624,6 @@ Releases a **SoundPool** instance. This API uses an asynchronous callback to ret
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-release(callback: AsyncCallback<void>): void--><!--Device-SoundPool-release(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -765,10 +649,6 @@ release(): Promise<void>
 Releases a **SoundPool** instance. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-release(): Promise<void>--><!--Device-SoundPool-release(): Promise<void>-End-->
 
@@ -796,10 +676,6 @@ Sets the interruption mode of the audio files with the same ID during playback. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SoundPool-setInterruptMode(interruptMode: media.SoundInterruptMode): void--><!--Device-SoundPool-setInterruptMode(interruptMode: media.SoundInterruptMode): void-End-->
@@ -821,10 +697,6 @@ setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void
 Sets the loop mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void-End-->
 
@@ -855,10 +727,6 @@ setLoop(streamID: int, loop: int): Promise<void>
 Sets the loop mode. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>--><!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>-End-->
 
@@ -895,10 +763,6 @@ Sets the priority for an audio stream. This API uses an asynchronous callback to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -928,10 +792,6 @@ setPriority(streamID: int, priority: int): Promise<void>
 Sets the priority for an audio stream. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>--><!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>-End-->
 
@@ -968,10 +828,6 @@ Sets the playback rate for an audio stream. This API uses an asynchronous callba
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -1001,10 +857,6 @@ setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>
 Sets the playback rate for an audio stream. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>-End-->
 
@@ -1041,10 +893,6 @@ Sets the volume for an audio stream. This API uses an asynchronous callback to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -1075,10 +923,6 @@ setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>
 Sets the volume for an audio stream. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>-End-->
 
@@ -1116,10 +960,6 @@ Stops audio playback. This API uses an asynchronous callback to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -1148,10 +988,6 @@ stop(streamID: int): Promise<void>
 Stops audio playback. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-stop(streamID: int): Promise<void>--><!--Device-SoundPool-stop(streamID: int): Promise<void>-End-->
 
@@ -1187,10 +1023,6 @@ Unloads a sound. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -1219,10 +1051,6 @@ unload(soundID: int): Promise<void>
 Unloads a sound. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SoundPool-unload(soundID: int): Promise<void>--><!--Device-SoundPool-unload(soundID: int): Promise<void>-End-->
 

@@ -10,10 +10,6 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
 <!--Device-inputMethod-function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void>--><!--Device-inputMethod-function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void>-End-->
@@ -45,7 +41,7 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';

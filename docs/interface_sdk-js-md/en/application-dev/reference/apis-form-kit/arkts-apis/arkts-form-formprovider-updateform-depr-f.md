@@ -14,11 +14,9 @@ Updates a widget. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [updateForm](arkts-form-formprovider-updateform-f.md#updateForm)
+**Substitutes:** [updateForm](arkts-form-formprovider-updateform-f.md#updateform)
 
 <!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void--><!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void-End-->
 
@@ -32,7 +30,7 @@ Updates a widget. This API uses an asynchronous callback to return the result.
 | formBindingData | formBindingData.FormBindingData | Yes | Data to be used for the update. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,11 +61,9 @@ Updates a widget. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [updateForm](arkts-form-formprovider-updateform-f.md#updateForm)
+**Substitutes:** [updateForm](arkts-form-formprovider-updateform-f.md#updateform)
 
 <!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>--><!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>-End-->
 
@@ -86,7 +82,7 @@ Updates a widget. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

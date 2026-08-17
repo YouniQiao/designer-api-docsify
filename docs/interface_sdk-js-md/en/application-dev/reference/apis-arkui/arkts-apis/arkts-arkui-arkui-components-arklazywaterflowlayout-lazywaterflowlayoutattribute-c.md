@@ -6,10 +6,6 @@ Defines the lazy waterflow layout attribute.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute--><!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -31,10 +27,6 @@ columnsGap(value: LengthMetrics | undefined): T
 The spacing between columns.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,10 +58,6 @@ Sets the footer of the lazy waterflow layout.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -99,10 +87,6 @@ header(builder: CustomBuilder | undefined): T
 Sets the header of the lazy waterflow layout.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,10 +118,6 @@ Called when the first or last item displayed in the component changes. It is tri
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -168,10 +148,6 @@ The spacing between rows.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -201,10 +177,6 @@ sticky(sticky: StickyStyle | undefined): T
 Sets the sticky style for header and footer.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

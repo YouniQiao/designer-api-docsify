@@ -1,14 +1,10 @@
 # WhiteBalance (System API)
 
-**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#WhiteBalanceQuery-(System-API)). It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
+**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#whitebalancequery-system-api). It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
 
-**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#WhiteBalanceQuery-(System-API))
+**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#whitebalancequery-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface WhiteBalance--><!--Device-camera-interface WhiteBalance-End-->
 
@@ -31,10 +27,6 @@ getWhiteBalance(): int
 Obtains the current white balance value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -67,10 +59,6 @@ Gets RGB white balance gain values.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WhiteBalance-getWhiteBalanceGains(): WhiteBalanceGains--><!--Device-WhiteBalance-getWhiteBalanceGains(): WhiteBalanceGains-End-->
@@ -102,10 +90,6 @@ Obtains the white balance mode in use.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalance-getWhiteBalanceMode(): WhiteBalanceMode--><!--Device-WhiteBalance-getWhiteBalanceMode(): WhiteBalanceMode-End-->
@@ -133,13 +117,9 @@ Obtains the white balance mode in use.
 setWhiteBalance(whiteBalance: int): void
 ```
 
-Sets a white balance value. Before the setting, run [getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i-sys.md#getWhiteBalanceRange) to check the white balance value range supported by the device.
+Sets a white balance value. Before the setting, run [getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i-sys.md#getwhitebalancerange) to check the white balance value range supported by the device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -173,10 +153,6 @@ Sets RGB white balance gain values.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WhiteBalance-setWhiteBalanceGains(gains: WhiteBalanceGains): void--><!--Device-WhiteBalance-setWhiteBalanceGains(gains: WhiteBalanceGains): void-End-->
@@ -204,13 +180,9 @@ Sets RGB white balance gain values.
 setWhiteBalanceMode(mode: WhiteBalanceMode): void
 ```
 
-Sets a white balance mode. Before the setting, run [isWhiteBalanceModeSupported](arkts-camera-camera-whitebalancequery-i-sys.md#isWhiteBalanceModeSupported) to check whether the device supports the specified white balance mode.
+Sets a white balance mode. Before the setting, run [isWhiteBalanceModeSupported](arkts-camera-camera-whitebalancequery-i-sys.md#iswhitebalancemodesupported) to check whether the device supports the specified white balance mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

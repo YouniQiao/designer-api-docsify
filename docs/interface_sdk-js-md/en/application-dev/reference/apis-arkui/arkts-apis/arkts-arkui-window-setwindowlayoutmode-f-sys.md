@@ -16,8 +16,6 @@ Sets the window layout mode. This API uses an asynchronous callback to return th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-window-function setWindowLayoutMode(mode: WindowLayoutMode, callback: AsyncCallback<void>): void--><!--Device-window-function setWindowLayoutMode(mode: WindowLayoutMode, callback: AsyncCallback<void>): void-End-->
@@ -41,7 +39,7 @@ Sets the window layout mode. This API uses an asynchronous callback to return th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,8 +69,6 @@ Sets the window layout mode. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-window-function setWindowLayoutMode(mode: WindowLayoutMode): Promise<void>--><!--Device-window-function setWindowLayoutMode(mode: WindowLayoutMode): Promise<void>-End-->
@@ -101,7 +97,7 @@ Sets the window layout mode. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -8,10 +8,6 @@ The callback function for the download fail event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-export type DownloadFailCallback = (err: int) => void--><!--Device-request-export type DownloadFailCallback = (err: int) => void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download

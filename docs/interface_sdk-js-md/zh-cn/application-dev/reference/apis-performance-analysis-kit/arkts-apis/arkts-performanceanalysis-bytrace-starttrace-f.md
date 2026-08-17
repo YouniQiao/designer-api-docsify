@@ -10,8 +10,6 @@ function startTrace(name: string, taskId: number, expectedTime?: number): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 8
 
 **替代接口：** startTrace
@@ -28,7 +26,7 @@ function startTrace(name: string, taskId: number, expectedTime?: number): void
 | taskId | number | 是 | 时间片跟踪任务id。 |
 | expectedTime | number | 否 | 期望的耗时时间（单位：ms）。设置该值后，系统会在实际执行时间超过期望值时产生性能警告。可选，默认为空 表示不产生警告。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 bytrace.startTrace("myTestFunc", 1);

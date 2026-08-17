@@ -8,10 +8,6 @@ Defines the type of value in a KV pair. The type varies with the parameter funct
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-type ValueType = int | long | double | string | boolean | Uint8Array | null--><!--Device-photoAccessHelper-type ValueType = int | long | double | string | boolean | Uint8Array | null-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

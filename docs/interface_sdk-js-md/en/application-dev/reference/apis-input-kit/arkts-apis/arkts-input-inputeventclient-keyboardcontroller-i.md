@@ -4,10 +4,6 @@ Provides the capability of simulating key operations. The simulated key operatio
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-inputEventClient-interface KeyboardController--><!--Device-inputEventClient-interface KeyboardController-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -27,10 +23,6 @@ pressKey(keyCode: KeyCode): Promise<void>
 Presses a key. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -69,10 +61,6 @@ releaseKey(keyCode: KeyCode): Promise<void>
 Releases a key. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 

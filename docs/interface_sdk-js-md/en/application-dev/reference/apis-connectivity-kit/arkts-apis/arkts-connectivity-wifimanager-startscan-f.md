@@ -16,10 +16,6 @@ Scan Wi-Fi hotspot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
 <!--Device-wifiManager-function startScan(): void--><!--Device-wifiManager-function startScan(): void-End-->
@@ -34,7 +30,7 @@ Scan Wi-Fi hotspot.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

@@ -16,10 +16,6 @@ Set preferred APN.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
 
 <!--Device-data-function setPreferredApn(apnId: int): Promise<boolean>--><!--Device-data-function setPreferredApn(apnId: int): Promise<boolean>-End-->
@@ -44,7 +40,7 @@ Set preferred APN.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

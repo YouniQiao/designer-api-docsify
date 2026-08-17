@@ -4,11 +4,9 @@ Enumerates the file location.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#PositionType-(System-API))
+**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#positiontype-system-api)
 
 <!--Device-userFileManager-enum PositionType--><!--Device-userFileManager-enum PositionType-End-->
 
@@ -26,11 +24,9 @@ Stored only on a local device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md#LOCAL)
+**Substitutes:** [LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md#local)
 
 <!--Device-PositionType-LOCAL = 1--><!--Device-PositionType-LOCAL = 1-End-->
 
@@ -48,11 +44,9 @@ Stored only on the cloud.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md#CLOUD)
+**Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md#cloud)
 
 <!--Device-PositionType-CLOUD--><!--Device-PositionType-CLOUD-End-->
 
@@ -70,11 +64,9 @@ Stored both on a local device and the cloud.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [LOCAL_AND_CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#LOCAL_AND_CLOUD)
+**Substitutes:** [LOCAL_AND_CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#localandcloud)
 
 <!--Device-PositionType-BOTH--><!--Device-PositionType-BOTH-End-->
 

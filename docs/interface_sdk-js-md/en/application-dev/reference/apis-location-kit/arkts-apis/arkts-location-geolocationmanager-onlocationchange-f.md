@@ -17,10 +17,6 @@ Subscribe location changed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 23+: ohos.permission.APPROXIMATELY_LOCATION
 

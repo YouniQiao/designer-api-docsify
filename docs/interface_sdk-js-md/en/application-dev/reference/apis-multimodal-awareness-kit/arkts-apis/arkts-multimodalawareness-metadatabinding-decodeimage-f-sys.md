@@ -16,10 +16,6 @@ Decodes the information carried in the image. This API uses a promise to return 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-metadataBinding-function decodeImage(encodedImage: image.PixelMap): Promise<string>--><!--Device-metadataBinding-function decodeImage(encodedImage: image.PixelMap): Promise<string>-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
@@ -46,7 +42,7 @@ Decodes the information carried in the image. This API uses a promise to return 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
 | [32100003](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100003-decoding-failed) | Decode process fail. Possible causes: <br>1. Image is not an encoded Image. <br>2. Image destroyed, decoding failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';

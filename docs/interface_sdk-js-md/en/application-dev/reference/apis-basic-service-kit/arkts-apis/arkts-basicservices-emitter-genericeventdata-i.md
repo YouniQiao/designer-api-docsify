@@ -4,10 +4,6 @@ Describes the generic data carried by the emitted event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-export interface GenericEventData--><!--Device-emitter-export interface GenericEventData-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -29,10 +25,6 @@ Data passed in the event. T: generic type.
 **Type:** T \| ESValue
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GenericEventData-data?: T | ESValue--><!--Device-GenericEventData-data?: T | ESValue-End-->
 

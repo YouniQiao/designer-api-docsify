@@ -4,10 +4,6 @@ Provides the API for formatting number strings.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-intl-export class NumberFormat--><!--Device-intl-export class NumberFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,17 +24,13 @@ Creates a **NumberFormat** object for the current system locale.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberFormat-constructor()--><!--Device-NumberFormat-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -57,10 +49,6 @@ Creates a **NumberFormat** object based on the specified locale and options.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)--><!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)-End-->
@@ -72,9 +60,9 @@ Creates a **NumberFormat** object based on the specified locale and options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | [NumberOptions](../../apis-na/arkts-apis/arkts-na-intl-numberoptions-i.md) | No | Options for creating the **NumberFormat** object. |
+| options | [NumberOptions](arkts-localization-intl-numberoptions-i.md) | No | Options for creating the **NumberFormat** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -92,10 +80,6 @@ format(num: double): string
 Formats a number.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -115,7 +99,7 @@ Formats a number.
 | --- | --- |
 | string | Formatted number. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -142,10 +126,6 @@ Formats a number range.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string--><!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string-End-->
@@ -165,7 +145,7 @@ Formats a number range.
 | --- | --- |
 | string | Formatted number range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -184,10 +164,6 @@ Obtains the options for creating a **NumberFormat** object.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberFormat-resolvedOptions(): NumberOptions--><!--Device-NumberFormat-resolvedOptions(): NumberOptions-End-->
@@ -198,9 +174,9 @@ Obtains the options for creating a **NumberFormat** object.
 
 | Type | Description |
 | --- | --- |
-| [NumberOptions](../../apis-na/arkts-apis/arkts-na-intl-numberoptions-i.md) | Options for creating the **NumberFormat** object. |
+| [NumberOptions](arkts-localization-intl-numberoptions-i.md) | Options for creating the **NumberFormat** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

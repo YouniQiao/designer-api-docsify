@@ -1,12 +1,8 @@
 # WebHttpBodyStream
 
-The http body stream of the request.
+WebHttpBodyStream is an HTTP request body data stream object used to read the request body data of POST, PUT, and other requests in custom scheme interception scenarios. This object is obtained through the getHttpBodyStream method of WebSchemeHandlerRequest and supports data of the BYTES, FILE, BLOB, and CHUNKED types. Developers can use this API to read uplink data in a custom protocol interceptor, enabling inspection or forwarding of the request body. Note: Other APIs in this class can be called only after [initialize](#initialize) succeeds. WebHttpBodyStream works in conjunction with [WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md#webschemehandlerrequest): WebSchemeHandlerRequest represents the intercepted request, and WebHttpBodyStream represents the HTTP body data stream of that request. By reading data from the stream, developers can obtain the complete request body content.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class WebHttpBodyStream--><!--Device-webview-class WebHttpBodyStream-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 getPosition(): number
 ```
 
-Get the current position of the data stream. Unit: bytes.
+Reads the current read position in this **WebHttpBodyStream** instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +34,7 @@ Get the current position of the data stream. Unit: bytes.
 
 | Type | Description |
 | --- | --- |
-| number | Return position in post data stream. |
+| number | Current read position in WebHttpBodyStream. Unit: Byte. |
 
 ## getSize
 
@@ -50,13 +42,9 @@ Get the current position of the data stream. Unit: bytes.
 getSize(): number
 ```
 
-Get the total size of the data stream. When data is chunked, always return zero. Unit: bytes.
+Obtains the size of data in this **WebHttpBodyStream** instance. This API always returns zero when chunked transfer is used.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -68,7 +56,7 @@ Get the total size of the data stream. When data is chunked, always return zero.
 
 | Type | Description |
 | --- | --- |
-| number | Return size of data stream size. |
+| number | Data size of the WebHttpBodyStream, in bytes. |
 
 ## initialize
 
@@ -76,13 +64,9 @@ Get the total size of the data stream. When data is chunked, always return zero.
 initialize(): Promise<void>
 ```
 
-Initialize data stream.
+Initializes this **WebHttpBodyStream** instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,7 +78,7 @@ Initialize data stream.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise of data stream is initialized. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -108,13 +92,9 @@ Initialize data stream.
 isChunked(): boolean
 ```
 
-Whether data stream is chunked.
+Checks whether this **WebHttpBodyStream** instance is transmitted by chunk.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -126,7 +106,7 @@ Whether data stream is chunked.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether data stream is chunked. |
+| boolean | Whether the **WebHttpBodyStream** instance is transmitted by chunk. The value **true** indicates that the **WebHttpBodyStream** instance is transmitted by chunk, and **false** indicates the opposite. |
 
 ## isEof
 
@@ -134,13 +114,9 @@ Whether data stream is chunked.
 isEof(): boolean
 ```
 
-Whether all data stream has been consumed. For chunked uploads, returns false until the first read attempt.
+Checks whether all data in this **WebHttpBodyStream** instance has been read.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -152,7 +128,7 @@ Whether all data stream has been consumed. For chunked uploads, returns false un
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether data stream has been consumed. |
+| boolean | Whether all data in the **WebHttpBodyStream** instance has been read. <br>This API returns **true** if all data in the **WebHttpBodyStream** instance is read. It returns **false** before the first read attempt is made for the **WebHttpBodyStream** instance that uses chunked transfer. |
 
 ## isInMemory
 
@@ -160,13 +136,9 @@ Whether all data stream has been consumed. For chunked uploads, returns false un
 isInMemory(): boolean
 ```
 
-Returns true if the upload data in the stream is entirely in memory, and all read requests will succeed synchronously. Expected to return false for chunked requests.
+Checks whether the uploaded data in this **WebHttpBodyStream** instance is in memory.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -178,7 +150,7 @@ Returns true if the upload data in the stream is entirely in memory, and all rea
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the data stream is in memory. |
+| boolean | Whether the uploaded data in the **WebHttpBodyStream** instance is stored in memory. <br>This API returns **true** if all the upload data in the **WebHttpBodyStream** instance is in memory and all read requests will be completed synchronously. **false** is returned if the data is chunked. |
 
 ## read
 
@@ -186,13 +158,9 @@ Returns true if the upload data in the stream is entirely in memory, and all rea
 read(size: number): Promise<ArrayBuffer>
 ```
 
-Read the data stream to the buffer. Unit: bytes.
+Reads data from this **WebHttpBodyStream** instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -204,13 +172,13 @@ Read the data stream to the buffer. Unit: bytes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Read size. |
+| size | number | Yes | Number of bytes to read from the WebHttpBodyStream. Unit: byte. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Read array buffer of result. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the result. |
 
 **Error codes:**
 

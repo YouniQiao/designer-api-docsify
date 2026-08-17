@@ -4,11 +4,9 @@ Enumerates the returned event types for audio interruption events.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [InterruptType](arkts-audio-audio-interrupttype-e.md#InterruptType)
+**Substitutes:** [InterruptType](arkts-audio-audio-interrupttype-e.md#interrupttype)
 
 <!--Device-audio-enum InterruptActionType--><!--Device-audio-enum InterruptActionType-End-->
 
@@ -24,11 +22,9 @@ Focus gain event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [INTERRUPT_TYPE_BEGIN](arkts-audio-audio-interrupttype-e.md#INTERRUPT_TYPE_BEGIN)
+**Substitutes:** [INTERRUPT_TYPE_BEGIN](arkts-audio-audio-interrupttype-e.md#interrupttypebegin)
 
 <!--Device-InterruptActionType-TYPE_ACTIVATED = 0--><!--Device-InterruptActionType-TYPE_ACTIVATED = 0-End-->
 
@@ -44,11 +40,9 @@ Audio interruption event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [INTERRUPT_TYPE_END](arkts-audio-audio-interrupttype-e.md#INTERRUPT_TYPE_END)
+**Substitutes:** [INTERRUPT_TYPE_END](arkts-audio-audio-interrupttype-e.md#interrupttypeend)
 
 <!--Device-InterruptActionType-TYPE_INTERRUPT = 1--><!--Device-InterruptActionType-TYPE_INTERRUPT = 1-End-->
 

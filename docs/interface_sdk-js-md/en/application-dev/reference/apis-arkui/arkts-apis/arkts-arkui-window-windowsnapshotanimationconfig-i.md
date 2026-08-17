@@ -4,10 +4,6 @@ Configuration for window snapshot animation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface WindowSnapshotAnimationConfig--><!--Device-window-interface WindowSnapshotAnimationConfig-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ The delay before the window snapshot fade-out animation begins (ms). If left uns
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowSnapshotAnimationConfig-delay?: long--><!--Device-WindowSnapshotAnimationConfig-delay?: long-End-->
@@ -51,10 +43,6 @@ The duration of the window snapshot fade-out animation (ms). If left unspecified
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

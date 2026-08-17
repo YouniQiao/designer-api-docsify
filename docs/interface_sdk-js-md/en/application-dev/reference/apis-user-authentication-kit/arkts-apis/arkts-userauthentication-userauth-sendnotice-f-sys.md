@@ -16,10 +16,6 @@ Sends a notification from the user authentication widget. When the unified authe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SUPPORT_USER_AUTH
 
 <!--Device-userAuth-function sendNotice(noticeType: NoticeType, eventData: string): void--><!--Device-userAuth-function sendNotice(noticeType: NoticeType, eventData: string): void-End-->
@@ -44,7 +40,7 @@ Sends a notification from the user authentication widget. When the unified authe
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';

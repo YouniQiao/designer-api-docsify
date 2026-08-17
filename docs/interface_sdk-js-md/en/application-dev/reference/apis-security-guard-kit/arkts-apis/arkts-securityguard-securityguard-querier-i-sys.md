@@ -4,10 +4,6 @@ Definition callback of receiving the query data.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-securityGuard-interface Querier--><!--Device-securityGuard-interface Querier-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -32,10 +28,6 @@ Triggered when data is complete.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Querier-onComplete: () => void--><!--Device-Querier-onComplete: () => void-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -54,10 +46,6 @@ Triggered when error.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Querier-onError: (message: string) => void--><!--Device-Querier-onError: (message: string) => void-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -75,10 +63,6 @@ Triggered when data is returned.
 **Type:** (events: Array&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt;) =&gt; void
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-Querier-onQuery: (events: Array<SecurityEvent>) => void--><!--Device-Querier-onQuery: (events: Array<SecurityEvent>) => void-End-->
 

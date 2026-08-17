@@ -4,11 +4,9 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [InterruptType](arkts-audio-audio-interrupttype-e.md#InterruptType)
+**替代接口：** [InterruptType](arkts-audio-audio-interrupttype-e.md#interrupttype)
 
 <!--Device-audio-enum InterruptActionType--><!--Device-audio-enum InterruptActionType-End-->
 
@@ -24,11 +22,9 @@ TYPE_ACTIVATED = 0
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [INTERRUPT_TYPE_BEGIN](arkts-audio-audio-interrupttype-e.md#INTERRUPT_TYPE_BEGIN)
+**替代接口：** [INTERRUPT_TYPE_BEGIN](arkts-audio-audio-interrupttype-e.md#interrupttypebegin)
 
 <!--Device-InterruptActionType-TYPE_ACTIVATED = 0--><!--Device-InterruptActionType-TYPE_ACTIVATED = 0-End-->
 
@@ -44,11 +40,9 @@ TYPE_INTERRUPT = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [INTERRUPT_TYPE_END](arkts-audio-audio-interrupttype-e.md#INTERRUPT_TYPE_END)
+**替代接口：** [INTERRUPT_TYPE_END](arkts-audio-audio-interrupttype-e.md#interrupttypeend)
 
 <!--Device-InterruptActionType-TYPE_INTERRUPT = 1--><!--Device-InterruptActionType-TYPE_INTERRUPT = 1-End-->
 

@@ -19,7 +19,7 @@
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [OH_AVSamplesBuffer](capi-avsinkbase-oh-avsamplesbuffer.md) | OH_AVSamplesBuffer | LowPowerAVSink输入数据的结构体。应用在收到DataNeeded回调后需要将数据打包装进OH_AVSamplesBuffer实例中送给对应的lowpower_avsink。 |
-| [OH_LowPowerAVSink_Capability](capi-avsinkbase-oh-lowpoweravsink-capability.md) | OH_LowPowerAVSink_Capability | Forward declaration of OH_LowPowerAVSink_Capability. |
+| [OH_LowPowerAVSink_Capability](capi-avsinkbase-oh-lowpoweravsink-capability.md) | OH_LowPowerAVSink_Capability | OH_LowPowerAVSink_Capability的前向声明。 |
 
 ### 函数
 
@@ -54,7 +54,7 @@ OH_AVErrCode OH_AVSamplesBuffer_AppendOneBuffer(OH_AVSamplesBuffer *samplesBuffe
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br> AV_ERR_NO_MEMORY：framePacketBuffer没有足够的剩余容量来追加一个OH_AVBuffer。<br> AV_ERR_UNKNOWN：未知错误。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：参数为nullptr或参数非法。<br> AV_ERR_NO_MEMORY：framePacketBuffer没有足够的剩余容量来追加一个OH_AVBuffer。<br> AV_ERR_UNKNOWN：未知错误。 |
 
 ### OH_AVSamplesBuffer_GetRemainedCapacity()
 

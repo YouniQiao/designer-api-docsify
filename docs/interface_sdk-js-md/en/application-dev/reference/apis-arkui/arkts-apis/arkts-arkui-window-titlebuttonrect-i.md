@@ -4,10 +4,6 @@ Describes the rectangle used to hold the minimize, maximize, and close buttons o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface TitleButtonRect--><!--Device-window-interface TitleButtonRect-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Height of the rectangle, in vp. The value must be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TitleButtonRect-height: int--><!--Device-TitleButtonRect-height: int-End-->
@@ -51,10 +43,6 @@ Right boundary of the rectangle, in vp. The value must be an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Top boundary of the rectangle, in vp. The value must be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TitleButtonRect-top: int--><!--Device-TitleButtonRect-top: int-End-->
@@ -95,10 +79,6 @@ Width of the rectangle, in vp. The value must be an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

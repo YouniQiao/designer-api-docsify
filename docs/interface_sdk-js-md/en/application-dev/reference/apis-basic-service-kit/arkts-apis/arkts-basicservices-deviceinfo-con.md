@@ -10,10 +10,6 @@ Open device identifier. An ODID will be regenerated in the following scenarios: 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const ODID: string--><!--Device-deviceInfo-const ODID: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -27,10 +23,6 @@ const abiList: string
 Application binary interface (Abi) list. Example: arm64-v8a
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-deviceInfo-const abiList: string--><!--Device-deviceInfo-const abiList: string-End-->
 
@@ -46,10 +38,6 @@ Number of device reboots. If the number cannot be obtained, **-1** is returned. 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const bootCount: number--><!--Device-deviceInfo-const bootCount: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -64,10 +52,6 @@ Bootloader version, which identifies the version of the device bootloader. Examp
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const bootloaderVersion: string--><!--Device-deviceInfo-const bootloaderVersion: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -81,10 +65,6 @@ const brand: string
 Device brand.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -102,10 +82,6 @@ Build host. Example: default
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const buildHost: string--><!--Device-deviceInfo-const buildHost: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -119,10 +95,6 @@ const buildRootHash: string
 Build root hash. Example: default
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-deviceInfo-const buildRootHash: string--><!--Device-deviceInfo-const buildRootHash: string-End-->
 
@@ -138,10 +110,6 @@ Build time. Example: default
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const buildTime: string--><!--Device-deviceInfo-const buildTime: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -155,10 +123,6 @@ const buildType: string
 Build type. Example: default
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-deviceInfo-const buildType: string--><!--Device-deviceInfo-const buildType: string-End-->
 
@@ -174,10 +138,6 @@ Build user. Example: default
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const buildUser: string--><!--Device-deviceInfo-const buildUser: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -191,10 +151,6 @@ const buildVersion: number
 Build version number. The value is the fourth digit in **osFullName**. You are advised to use **deviceInfo.buildVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement. Example: 1
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-deviceInfo-const buildVersion: number--><!--Device-deviceInfo-const buildVersion: number-End-->
 
@@ -210,10 +166,6 @@ Obtains the device CPU chipType by a string. Example: xxxxx
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const chipType: string--><!--Device-deviceInfo-const chipType: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -227,10 +179,6 @@ const deviceColor: string
 Device color. If the value cannot be obtained, an empty string is returned.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,10 +196,6 @@ Device type. For details, see [deviceTypes tag](../../../quick-start/module-conf
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-deviceInfo-const deviceType: string--><!--Device-deviceInfo-const deviceType: string-End-->
@@ -267,10 +211,6 @@ const diskSN: string
 Serial number of the disk. This API will start a temporary process during execution. When the system load is high, blocking may occur. To ensure the response of the main thread of your application, you are advised not to call this API in the main thread. This value varies depending on the device and is fixed. To improve performance, you can store this information on a local device after obtaining it for the first time. **NOTE：**This field can be queried only on the 2-in-1 device. For other devices, the query result is empty. ohos.permission.ACCESS_DISK_PHY_INFO Example: 2502EM400567
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DISK_PHY_INFO
 
@@ -288,10 +228,6 @@ Product version. Example: &lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt;
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const displayVersion: string--><!--Device-deviceInfo-const displayVersion: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -305,10 +241,6 @@ const distributionOSApiName: string
 Distribution OS API name.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 <!--Device-deviceInfo-const distributionOSApiName: string--><!--Device-deviceInfo-const distributionOSApiName: string-End-->
 
@@ -324,10 +256,6 @@ Distribution OS API version.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const distributionOSApiVersion: number--><!--Device-deviceInfo-const distributionOSApiVersion: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -341,10 +269,6 @@ const distributionOSName: string
 Distribution OS name.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt; Example: OpenHarmony
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-deviceInfo-const distributionOSName: string--><!--Device-deviceInfo-const distributionOSName: string-End-->
 
@@ -360,10 +284,6 @@ Distribution OS release type.&lt;!--Del--&gt; It is defined by the issuer.&lt;!-
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const distributionOSReleaseType: string--><!--Device-deviceInfo-const distributionOSReleaseType: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -377,10 +297,6 @@ const distributionOSVersion: string
 Distribution OS version.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;&lt;!--RP11--&gt;&lt;!--RP11End--&gt; Example: 5.0.0
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-deviceInfo-const distributionOSVersion: string--><!--Device-deviceInfo-const distributionOSVersion: string-End-->
 
@@ -396,10 +312,6 @@ Feature version number. The value is the third digit in **osFullName**. You are 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const featureVersion: number--><!--Device-deviceInfo-const featureVersion: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -413,10 +325,6 @@ const firstApiVersion: number
 First API version. Example: 3
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-deviceInfo-const firstApiVersion: number--><!--Device-deviceInfo-const firstApiVersion: number-End-->
 
@@ -432,10 +340,6 @@ Hardware model. Example: &lt;!--RP6--&gt;TASA00CVN1&lt;!--RP6End--&gt;
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const hardwareModel: string--><!--Device-deviceInfo-const hardwareModel: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -449,8 +353,6 @@ const hardwareProfile: string
 Hardware profile. **NOTE：**This API is supported since API version 6 and deprecated since API version 9. You are advised to use [SystemCapability](../../../reference/syscap.md) instead. Example: default
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -468,10 +370,6 @@ Incremental version, which is the Ohos version number generated during compilati
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const incrementalVersion: string--><!--Device-deviceInfo-const incrementalVersion: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -485,10 +383,6 @@ const majorVersion: number
 Major version number, which increments with the main version. The value is the first digit in **osFullName**. You are advised to use **deviceInfo.majorVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement. Example: 5
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-deviceInfo-const majorVersion: number--><!--Device-deviceInfo-const majorVersion: number-End-->
 
@@ -504,10 +398,6 @@ Device manufacturer.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const manufacture: string--><!--Device-deviceInfo-const manufacture: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -522,10 +412,6 @@ Marketing name. Example: &lt;!--RP2--&gt;Mate XX&lt;!--RP2End--&gt;
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const marketName: string--><!--Device-deviceInfo-const marketName: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -539,10 +425,6 @@ const osFullName: string
 System version. The version number is in the format of **&lt;!--RP12--&gt;OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. &lt;!--RP12End--&gt;To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended. Example: &lt;!--RP10--&gt;Openharmony-5.0.0.1&lt;!--RP10End--&gt;
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -560,10 +442,6 @@ OS release type. The options are as follows: - **Canary**: Preliminary release o
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const osReleaseType: string--><!--Device-deviceInfo-const osReleaseType: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -578,10 +456,6 @@ Device capability level, which is evaluated based on factors such as CPU, memory
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const performanceClass: PerformanceClassLevel--><!--Device-deviceInfo-const performanceClass: PerformanceClassLevel-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -595,10 +469,6 @@ const productModel: string
 Product model. Example: &lt;!--RP4--&gt;TAS-AL00&lt;!--RP4End--&gt;
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -616,10 +486,6 @@ Product model alias. Example: TAS-AL00
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-deviceInfo-const productModelAlias: string--><!--Device-deviceInfo-const productModelAlias: string-End-->
@@ -636,10 +502,6 @@ Product series. Example: &lt;!--RP3--&gt;TAS&lt;!--RP3End--&gt;
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const productSeries: string--><!--Device-deviceInfo-const productSeries: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -653,10 +515,6 @@ const sdkApiVersion: number
 SDK API version. Example: 12
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -673,10 +531,6 @@ const sdkMinorApiVersion: number
 System version. The version number is in the format of **&lt;!--RP12--&gt;OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. &lt;!--RP12End--&gt;To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -696,10 +550,6 @@ SDK patch API version. Starting from API version 26.0.0, the system API version 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -718,10 +568,6 @@ Security patch tag. Example: &lt;!--RP7--&gt;2021/01/01&lt;!--RP7End--&gt;
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const securityPatchTag: string--><!--Device-deviceInfo-const securityPatchTag: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -736,10 +582,6 @@ Senior version number, which increments with architecture and feature updates. T
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const seniorVersion: number--><!--Device-deviceInfo-const seniorVersion: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -753,10 +595,6 @@ const serial: string
 Serial number of the device. This API will start a temporary process during execution. When the system load is high, blocking may occur. To ensure the response of the main thread of your application, you are advised not to call this API in the main thread. This value varies depending on the device and is fixed. To improve performance, you can store this information on a local device after obtaining it for the first time.. **NOTE：**The device SN can be used as the unique identifier of a device. **Required permission**: ohos.permission.sec.ACCESS_UDID (for system applications and enterprise applications only) Example: The SN varies with the device.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.sec.ACCESS_UDID
 
@@ -774,10 +612,6 @@ Software model. Example: &lt;!--RP5--&gt;TAS-AL00&lt;!--RP5End--&gt;
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-deviceInfo-const softwareModel: string--><!--Device-deviceInfo-const softwareModel: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
@@ -791,10 +625,6 @@ const udid: string
 UDID of the device. This API will start a temporary process during execution. When the system load is high, blocking may occur. To ensure the response of the main thread of your application, you are advised not to call this API in the main thread. This value varies depending on the device and is fixed. To improve performance, you can store this information on a local device after obtaining it for the first time. **NOTE：**The data length is 65 bytes. The UDID can be used as the unique identifier of a device. **Required permission**: ohos.permission.sec.ACCESS_UDID (for system applications and enterprise applications only) Example: 9D6AABD147XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXE5536412
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.sec.ACCESS_UDID
 
@@ -811,10 +641,6 @@ const versionId: string
 Version ID, which is a concatenation of **deviceType**, **manufacture**, **brand**, **productSeries**, **osFullName**, **productModel**, **softwareModel**, **sdkApiVersion**, **incrementalVersion**, and **buildType**. To obtain a specific field value, you are advised to use the corresponding field directly (such as **deviceType** and **manufacture**) instead of parsing **versionId**, facilitating efficiency improvement.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-deviceInfo-const versionId: string--><!--Device-deviceInfo-const versionId: string-End-->
 

@@ -10,10 +10,6 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender--><!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -38,7 +34,7 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { uiEffect } from "@kit.ArkGraphics2D"

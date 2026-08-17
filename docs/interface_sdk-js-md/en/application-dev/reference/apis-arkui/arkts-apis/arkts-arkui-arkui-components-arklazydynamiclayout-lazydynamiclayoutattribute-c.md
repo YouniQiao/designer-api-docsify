@@ -6,10 +6,6 @@ Defines the LazyDynamicLayout attribute functions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class LazyDynamicLayoutAttribute--><!--Device-unnamed-export declare class LazyDynamicLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,10 +26,6 @@ onVisibleIndexesChange(callback: Callback<int[]> | undefined): LazyDynamicLayout
 Called when visible indexes change.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

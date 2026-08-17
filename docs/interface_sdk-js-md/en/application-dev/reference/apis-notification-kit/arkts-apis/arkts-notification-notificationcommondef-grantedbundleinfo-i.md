@@ -1,12 +1,8 @@
-# GrantedBundleInfo
+# GrantedBundleInfo(Some common definitions)
 
 Describes the authorized bundle information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface GrantedBundleInfo--><!--Device-unnamed-export interface GrantedBundleInfo-End-->
 
@@ -24,10 +20,6 @@ Index of an application clone, which takes effect only for application clones. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GrantedBundleInfo-readonly appIndex: int--><!--Device-GrantedBundleInfo-readonly appIndex: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -44,10 +36,6 @@ Application name, which is obtained from the **label** of ApplicationInfo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GrantedBundleInfo-readonly appName?: string--><!--Device-GrantedBundleInfo-readonly appName?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -63,10 +51,6 @@ Bundle name of the application.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GrantedBundleInfo-bundleName: string--><!--Device-GrantedBundleInfo-bundleName: string-End-->
 

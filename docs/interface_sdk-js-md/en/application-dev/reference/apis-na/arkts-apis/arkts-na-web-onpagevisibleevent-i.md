@@ -4,9 +4,7 @@ Defines the triggered callback when previous page will no longer be drawn and ne
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnPageVisibleEvent--><!--Device-unnamed-export declare interface OnPageVisibleEvent-End-->
 
@@ -24,9 +22,7 @@ The URL of page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnPageVisibleEvent-url: string--><!--Device-OnPageVisibleEvent-url: string-End-->
 

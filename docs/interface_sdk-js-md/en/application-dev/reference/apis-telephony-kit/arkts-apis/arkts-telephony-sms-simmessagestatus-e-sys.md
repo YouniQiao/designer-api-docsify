@@ -4,10 +4,6 @@ Defines the SIM message status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-export enum SimMessageStatus--><!--Device-sms-export enum SimMessageStatus-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -23,10 +19,6 @@ SIM_MESSAGE_STATUS_FREE = 0
 Free space state of the SIM card.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SimMessageStatus-SIM_MESSAGE_STATUS_FREE = 0--><!--Device-SimMessageStatus-SIM_MESSAGE_STATUS_FREE = 0-End-->
 
@@ -44,10 +36,6 @@ Read state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SimMessageStatus-SIM_MESSAGE_STATUS_READ = 1--><!--Device-SimMessageStatus-SIM_MESSAGE_STATUS_READ = 1-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -63,10 +51,6 @@ SIM_MESSAGE_STATUS_UNREAD = 3
 Unread state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SimMessageStatus-SIM_MESSAGE_STATUS_UNREAD = 3--><!--Device-SimMessageStatus-SIM_MESSAGE_STATUS_UNREAD = 3-End-->
 
@@ -84,10 +68,6 @@ Storage of sent messages (applicable only to SMS).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SimMessageStatus-SIM_MESSAGE_STATUS_SENT = 5--><!--Device-SimMessageStatus-SIM_MESSAGE_STATUS_SENT = 5-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -103,10 +83,6 @@ SIM_MESSAGE_STATUS_UNSENT = 7
 Storage of unsent messages (applicable only to SMS).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SimMessageStatus-SIM_MESSAGE_STATUS_UNSENT = 7--><!--Device-SimMessageStatus-SIM_MESSAGE_STATUS_UNSENT = 7-End-->
 

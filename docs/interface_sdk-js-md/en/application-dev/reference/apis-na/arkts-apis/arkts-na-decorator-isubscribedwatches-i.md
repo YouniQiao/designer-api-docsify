@@ -2,13 +2,11 @@
 
 Define ISubscribedWatches interface.
 
-**Inheritance/Implementation:** ISubscribedWatches extends [IWatchSubscriberRegister](arkts-na-decorator-iwatchsubscriberregister-i.md#IWatchSubscriberRegister)
+**Inheritance/Implementation:** ISubscribedWatches extends [IWatchSubscriberRegister](arkts-na-decorator-iwatchsubscriberregister-i.md#iwatchsubscriberregister)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface ISubscribedWatches--><!--Device-unnamed-export declare interface ISubscribedWatches-End-->
 
@@ -24,9 +22,7 @@ Execute the watch function callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

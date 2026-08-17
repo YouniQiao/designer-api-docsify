@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Int8Array--><!--Device-unnamed-interface Int8Array-End-->
 
 ## [Symbol.toStringTag]
@@ -17,10 +13,6 @@ readonly [Symbol.toStringTag]: "Int8Array"
 **Type:** "Int8Array"
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Int8Array-readonly [Symbol.toStringTag]: "Int8Array"--><!--Device-Int8Array-readonly [Symbol.toStringTag]: "Int8Array"-End-->
 

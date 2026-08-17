@@ -16,10 +16,6 @@ Checks whether the main window of this ability has the focus. This API uses an a
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void--><!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void-End-->
@@ -32,7 +28,7 @@ Checks whether the main window of this ability has the focus. This API uses an a
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result.<br>If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
@@ -57,10 +53,6 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function hasWindowFocus(): Promise<boolean>--><!--Device-featureAbility-function hasWindowFocus(): Promise<boolean>-End-->
@@ -73,7 +65,7 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

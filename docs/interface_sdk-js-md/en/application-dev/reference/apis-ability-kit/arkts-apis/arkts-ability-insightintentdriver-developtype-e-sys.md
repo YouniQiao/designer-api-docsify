@@ -4,10 +4,6 @@ Enumerates the modes that define how an intent is developed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntentDriver-enum DevelopType--><!--Device-insightIntentDriver-enum DevelopType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -23,10 +19,6 @@ CONFIGURATION = 'configuration'
 The intent is developed using a configuration file.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +37,6 @@ DECORATOR = 'decorator'
 The intent is developed using a decorator.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

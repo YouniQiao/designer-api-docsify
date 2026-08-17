@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-call-export interface DialOptions--><!--Device-call-export interface DialOptions-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -23,10 +19,6 @@ extras?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DialOptions-extras?: boolean--><!--Device-DialOptions-extras?: boolean-End-->
 

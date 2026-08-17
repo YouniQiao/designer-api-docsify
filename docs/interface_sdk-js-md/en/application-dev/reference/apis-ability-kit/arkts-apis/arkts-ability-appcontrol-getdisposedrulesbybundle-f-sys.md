@@ -16,10 +16,6 @@ Query all disposed rules under the current user for the specified bundle name.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
 **Model restriction:** This API can be used only in the stage model.

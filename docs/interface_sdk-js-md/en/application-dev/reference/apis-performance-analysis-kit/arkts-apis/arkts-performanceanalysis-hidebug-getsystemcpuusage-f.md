@@ -16,10 +16,6 @@ Obtains the CPU usage of the system. > **NOTE：**> > This API involves cross-pr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getSystemCpuUsage(): double--><!--Device-hidebug-function getSystemCpuUsage(): double-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -36,7 +32,7 @@ Obtains the CPU usage of the system. > **NOTE：**> > This API involves cross-pr
 | --- | --- |
 | [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | The status of the system CPU usage is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

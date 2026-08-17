@@ -4,10 +4,6 @@ MovingPhoto provides APIs for managing a moving photo instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface MovingPhoto--><!--Device-photoAccessHelper-interface MovingPhoto-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -27,10 +23,6 @@ getUri(): string
 Obtains the URI of this moving photo.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -61,10 +53,6 @@ Obtains the URI of this moving photo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MovingPhoto-getUri(): string | null--><!--Device-MovingPhoto-getUri(): string | null-End-->
@@ -92,10 +80,6 @@ requestContent(imageFileUri: string, videoFileUri: string): Promise<void>
 Requests the image data and video data of this moving photo and writes them to the specified URIs, respectively. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -136,10 +120,6 @@ Requests the moving photo content of the specified resource type and writes it t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -178,10 +158,6 @@ requestContent(resourceType: ResourceType): Promise<ArrayBuffer>
 Requests the moving photo content of the specified resource type and returns it in ArrayBuffer format. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 

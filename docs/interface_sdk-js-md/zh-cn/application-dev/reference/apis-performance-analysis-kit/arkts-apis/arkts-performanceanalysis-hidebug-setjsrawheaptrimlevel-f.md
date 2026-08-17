@@ -10,10 +10,6 @@ function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void--><!--Device-hidebug-function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -24,7 +20,7 @@ function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void
 | --- | --- | --- | --- |
 | level | [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | 是 | 转储堆快照的裁剪级别，默认为TRIM_LEVEL_1。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

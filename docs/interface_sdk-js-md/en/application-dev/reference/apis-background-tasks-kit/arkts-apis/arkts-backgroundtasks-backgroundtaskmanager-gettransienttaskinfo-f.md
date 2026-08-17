@@ -16,10 +16,6 @@ Obtains all transient task information, including the remaining quota of the cur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>--><!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
@@ -38,7 +34,7 @@ Obtains all transient task information, including the remaining quota of the cur
 | [9900003](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900003-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
 | [9900001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900001-caller-information-verification-failure-for-a-transient-task) | Caller information verification failed for a transient task. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

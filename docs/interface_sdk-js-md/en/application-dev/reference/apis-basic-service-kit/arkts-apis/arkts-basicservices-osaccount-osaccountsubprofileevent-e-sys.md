@@ -4,10 +4,6 @@ Enumerates the events of an OS account sub-profile.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-enum OsAccountSubProfileEvent--><!--Device-osAccount-enum OsAccountSubProfileEvent-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ CREATED = 0
 CREATED event. Triggered when an OS account sub-profile creation is completed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ DELETED event. Triggered when an OS account sub-profile deletion is completed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfileEvent-DELETED = 1--><!--Device-OsAccountSubProfileEvent-DELETED = 1-End-->
@@ -68,10 +56,6 @@ SWITCHING event. Triggered when an OS account sub-profile switch is about to hap
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfileEvent-SWITCHING = 2--><!--Device-OsAccountSubProfileEvent-SWITCHING = 2-End-->
@@ -89,10 +73,6 @@ SWITCHED = 3
 SWITCHED event. Triggered when an OS account sub-profile switch is completed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Enumerates the skill types.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum SkillType--><!--Device-unnamed-export enum SkillType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -21,10 +17,6 @@ APP_SKILL = 0
 Indicates an app skill.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ INDEPENDENT_SKILL = 1
 Indicates an independent skill.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

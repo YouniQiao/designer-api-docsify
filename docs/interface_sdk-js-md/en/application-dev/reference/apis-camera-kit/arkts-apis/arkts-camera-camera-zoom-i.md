@@ -1,14 +1,10 @@
 # Zoom
 
-**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery). It provides APIs related to zoom operations.
+**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery). It provides APIs related to zoom operations.
 
-**Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)
+**Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface Zoom--><!--Device-camera-interface Zoom-End-->
 
@@ -29,10 +25,6 @@ getZoomRatio(): double
 Obtains the zoom ratio in use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -63,10 +55,6 @@ Sets smooth zoom.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-Zoom-setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void--><!--Device-Zoom-setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void-End-->
@@ -77,7 +65,7 @@ Sets smooth zoom.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetRatio | double | Yes | Target zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getZoomRatioRange). If the value passed in is not within the supported range, the value within the precision range is retained. |
+| targetRatio | double | Yes | Target zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange). If the value passed in is not within the supported range, the value within the precision range is retained. |
 | mode | [SmoothZoomMode](arkts-camera-camera-smoothzoommode-e.md) | No | Smooth zoom mode. The default value is **0**. |
 
 **Error codes:**
@@ -96,10 +84,6 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-Zoom-setZoomRatio(zoomRatio: double): void--><!--Device-Zoom-setZoomRatio(zoomRatio: double): void-End-->
@@ -110,7 +94,7 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoomRatio | double | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getZoomRatioRange). If the value passed in is not within the supported range, the value within the precision range is retained. <br>It takes some time for the zoom ratio to take effect at the bottom layer. To obtain the correct zoom ratio, you need to wait for one to two frames. |
+| zoomRatio | double | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange). If the value passed in is not within the supported range, the value within the precision range is retained. <br>It takes some time for the zoom ratio to take effect at the bottom layer. To obtain the correct zoom ratio, you need to wait for one to two frames. |
 
 **Error codes:**
 

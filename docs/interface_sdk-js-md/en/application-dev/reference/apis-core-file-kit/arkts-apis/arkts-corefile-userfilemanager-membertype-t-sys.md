@@ -8,11 +8,9 @@ Represents the type of a file asset member.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [MemberType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-membertype-t.md#MemberType)
+**Substitutes:** [MemberType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-membertype-t.md#membertype)
 
 <!--Device-userFileManager-type MemberType = number | string | boolean--><!--Device-userFileManager-type MemberType = number | string | boolean-End-->
 

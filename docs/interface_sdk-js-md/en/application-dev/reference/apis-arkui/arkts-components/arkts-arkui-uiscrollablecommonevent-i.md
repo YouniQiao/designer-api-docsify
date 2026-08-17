@@ -2,13 +2,9 @@
 
 Defines a UIScrollableCommonEvent which is used to set event to target component.
 
-**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md#UICommonEvent)
+**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md#uicommonevent)
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIScrollableCommonEvent-End-->
 
@@ -23,10 +19,6 @@ setOnReachEnd(callback: Callback<void> | undefined): void
 Set or reset the callback which is triggered when the scrolling reaches the end position.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -79,10 +67,6 @@ setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 Set or reset the callback which is triggered when scrolling begin each frame.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,10 +92,6 @@ Set or reset the callback which is triggered when the scrolling started.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -135,10 +115,6 @@ setOnScrollStop(callback: Callback<void> | undefined): void
 Set or reset the callback which is triggered when the scrolling stoped.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

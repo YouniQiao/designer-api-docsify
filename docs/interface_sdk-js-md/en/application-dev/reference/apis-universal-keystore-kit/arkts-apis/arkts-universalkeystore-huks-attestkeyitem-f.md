@@ -16,10 +16,6 @@ Attests a key. This API uses an asynchronous callback to return the result. &lt;
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ATTEST_KEY
 
 <!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void--><!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void-End-->
@@ -50,7 +46,7 @@ Attests a key. This API uses an asynchronous callback to return the result. &lt;
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
@@ -154,10 +150,6 @@ Attests a key. This API uses a promise to return the result. &lt;!--RP6--&gt; > 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ATTEST_KEY
 
 <!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>-End-->
@@ -193,7 +185,7 @@ Attests a key. This API uses a promise to return the result. &lt;!--RP6--&gt; > 
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

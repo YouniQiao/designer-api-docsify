@@ -4,10 +4,6 @@ The **inputEventClient** module provides the capability of injecting key, mouse/
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace inputEventClient--><!--Device-unnamed-declare namespace inputEventClient-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -26,21 +22,21 @@ import { inputEventClient } from 'inputEventClient';
 
 | Name | Description |
 | --- | --- |
-| [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md#createKeyboardController) | Creates a keyboard controller for simulating key operations. This API uses a promise to return the result. |
-| [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md#createMouseController) | Creates a mouse controller for simulating mouse operations. This API uses a promise to return the result. |
-| [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md#createTouchController) | Creates a touch controller for simulating touch operations. This API uses a promise to return the result. |
+| [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md#createkeyboardcontroller) | Creates a keyboard controller for simulating key operations. This API uses a promise to return the result. |
+| [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md#createmousecontroller) | Creates a mouse controller for simulating mouse operations. This API uses a promise to return the result. |
+| [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md#createtouchcontroller) | Creates a touch controller for simulating touch operations. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md#injectEvent) | Injects keys (including single keys and combination keys). |
-| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md#injectEvent-(System-API)) | Inject system keys. |
-| [injectKeyEvent](arkts-input-inputeventclient-injectkeyevent-f-sys.md#injectKeyEvent) | Injects key events (for both single keys and combination keys). |
-| [injectMouseEvent](arkts-input-inputeventclient-injectmouseevent-f-sys.md#injectMouseEvent) | Injects a mouse/touchpad event. |
-| [injectTouchEvent](arkts-input-inputeventclient-injecttouchevent-f-sys.md#injectTouchEvent) | Injects a touch event. |
-| [permitInjection](arkts-input-inputeventclient-permitinjection-f-sys.md#permitInjection) | Specifies whether to authorize event injection. |
+| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md#injectevent) | Injects keys (including single keys and combination keys). |
+| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md#injectevent-system-api) | Inject system keys. |
+| [injectKeyEvent](arkts-input-inputeventclient-injectkeyevent-f-sys.md#injectkeyevent) | Injects key events (for both single keys and combination keys). |
+| [injectMouseEvent](arkts-input-inputeventclient-injectmouseevent-f-sys.md#injectmouseevent) | Injects a mouse/touchpad event. |
+| [injectTouchEvent](arkts-input-inputeventclient-injecttouchevent-f-sys.md#injecttouchevent) | Injects a touch event. |
+| [permitInjection](arkts-input-inputeventclient-permitinjection-f-sys.md#permitinjection) | Specifies whether to authorize event injection. |
 <!--DelEnd-->
 
 ### Interfaces

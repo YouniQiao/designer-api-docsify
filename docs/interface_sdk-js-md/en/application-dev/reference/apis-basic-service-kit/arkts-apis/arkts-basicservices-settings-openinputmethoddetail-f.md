@@ -16,10 +16,6 @@ Open the input method detail page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function openInputMethodDetail(context: Context, bundleName: string, inputMethodId: string): void--><!--Device-settings-function openInputMethodDetail(context: Context, bundleName: string, inputMethodId: string): void-End-->
@@ -40,7 +36,7 @@ Open the input method detail page.
 | --- | --- |
 | [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

@@ -16,10 +16,6 @@ is random mac disabled
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
 <!--Device-wifiManager-function isRandomMacDisabled(): boolean--><!--Device-wifiManager-function isRandomMacDisabled(): boolean-End-->
@@ -43,7 +39,7 @@ is random mac disabled
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

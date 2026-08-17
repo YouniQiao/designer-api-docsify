@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudExtension-export interface Table--><!--Device-cloudExtension-export interface Table-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -25,10 +21,6 @@ alias: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Table-alias: string--><!--Device-Table-alias: string-End-->
 
@@ -48,10 +40,6 @@ fields: Array<Field>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Table-fields: Array<Field>--><!--Device-Table-fields: Array<Field>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -69,10 +57,6 @@ name: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Table-name: string--><!--Device-Table-name: string-End-->
 

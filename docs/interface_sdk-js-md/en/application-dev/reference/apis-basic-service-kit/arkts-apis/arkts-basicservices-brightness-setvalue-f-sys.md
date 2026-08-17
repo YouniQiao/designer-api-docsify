@@ -16,10 +16,6 @@ Sets the screen brightness.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-brightness-function setValue(value: int): void--><!--Device-brightness-function setValue(value: int): void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager
@@ -40,7 +36,7 @@ Sets the screen brightness.
 | [4700101](../../apis-basic-services-kit/errorcode-brightness.md#4700101-service-connection-failure) | Failed to connect to the service. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -60,10 +56,6 @@ function setValue(value: int, continuous: boolean): void
 Sets the screen brightness. This API is used for continuous brightness adjustment. To achieve a better performance, set **continuous** to **true** when you start, and set it to **false** after you finish.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-brightness-function setValue(value: int, continuous: boolean): void--><!--Device-brightness-function setValue(value: int, continuous: boolean): void-End-->
 
@@ -86,7 +78,7 @@ Sets the screen brightness. This API is used for continuous brightness adjustmen
 | [4700101](../../apis-basic-services-kit/errorcode-brightness.md#4700101-service-connection-failure) | Failed to connect to the service. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

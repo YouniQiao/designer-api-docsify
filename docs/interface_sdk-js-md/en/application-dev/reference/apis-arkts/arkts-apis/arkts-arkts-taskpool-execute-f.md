@@ -16,10 +16,6 @@ Places a function to be executed in the internal queue of the task pool. The fun
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>--><!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>-End-->
@@ -48,7 +44,7 @@ Places a function to be executed in the internal queue of the task pool. The fun
 | [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 9 - 11 |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -72,10 +68,6 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 Verifies the passed-in parameter types and return value type of a concurrent function, and places the function in the queue of the task pool. This API uses a promise to return the result.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -103,7 +95,7 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 | [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -146,10 +138,6 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>-End-->
@@ -180,7 +168,7 @@ Places a task in the internal queue of the task pool. The task will not be execu
 | [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -214,10 +202,6 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
@@ -246,7 +230,7 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 | [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -280,10 +264,6 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>-End-->
@@ -310,7 +290,7 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 | 10200059 | TaskGroup cannot be re-executed.<br>**Applicable version:** 24 and later |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -349,10 +329,6 @@ function execute(task: Task, configs: Configs): Promise<Object>
 Execute a concurrent task with Configs.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -394,10 +370,6 @@ Execute a concurrent generics task with Configs.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>-End-->
@@ -437,10 +409,6 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 Execute a concurrent task group with Configs.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

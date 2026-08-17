@@ -1,12 +1,8 @@
 # CallableFunction
 
-**Inheritance/Implementation:** CallableFunction extends [Function](arkts-na-lib-es5-function-i.md#Function)
+**Inheritance/Implementation:** CallableFunction extends [Function](arkts-na-lib-es5-function-i.md#function)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface CallableFunction--><!--Device-unnamed-interface CallableFunction-End-->
 
@@ -19,10 +15,6 @@ apply<T, R>(this: (this: T) => R, thisArg: T): R
 Calls the function with the specified object as the this value and the elements of specified array as the arguments.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-CallableFunction-apply<T, R>(this: (this: T) => R, thisArg: T): R--><!--Device-CallableFunction-apply<T, R>(this: (this: T) => R, thisArg: T): R-End-->
 
@@ -46,10 +38,6 @@ apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args:
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-CallableFunction-apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args: A): R--><!--Device-CallableFunction-apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args: A): R-End-->
 
@@ -77,10 +65,6 @@ For a given function, creates a bound function that has the same body as the ori
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-CallableFunction-bind<T>(this: T, thisArg: ThisParameterType<T>): OmitThisParameter<T>--><!--Device-CallableFunction-bind<T>(this: T, thisArg: ThisParameterType<T>): OmitThisParameter<T>-End-->
 
 **Parameters:**
@@ -103,10 +87,6 @@ bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, this
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-CallableFunction-bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, thisArg: T, arg0: A0): (...args: A) => R--><!--Device-CallableFunction-bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, thisArg: T, arg0: A0): (...args: A) => R-End-->
 
@@ -131,10 +111,6 @@ bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args:
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-CallableFunction-bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1): (...args: A) => R--><!--Device-CallableFunction-bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1): (...args: A) => R-End-->
 
@@ -161,10 +137,6 @@ bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-CallableFunction-bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2): (...args: A) => R--><!--Device-CallableFunction-bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2): (...args: A) => R-End-->
 
 **Parameters:**
@@ -190,10 +162,6 @@ bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, 
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-CallableFunction-bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3): (...args: A) => R--><!--Device-CallableFunction-bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3): (...args: A) => R-End-->
 
@@ -222,10 +190,6 @@ bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-CallableFunction-bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): (...args: AX[]) => R--><!--Device-CallableFunction-bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): (...args: AX[]) => R-End-->
 
 **Parameters:**
@@ -251,10 +215,6 @@ call<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...arg
 Calls the function with the specified object as the this value and the specified rest arguments as the arguments.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-CallableFunction-call<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A): R--><!--Device-CallableFunction-call<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A): R-End-->
 

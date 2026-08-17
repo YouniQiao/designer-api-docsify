@@ -16,8 +16,6 @@ Queries the usage priority group of the calling application. The priority define
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-bundleState-function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void--><!--Device-bundleState-function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void-End-->
@@ -30,7 +28,7 @@ Queries the usage priority group of the calling application. The priority define
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -55,8 +53,6 @@ Queries the usage priority group of the calling application. The priority define
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-bundleState-function queryAppUsagePriorityGroup(): Promise<number>--><!--Device-bundleState-function queryAppUsagePriorityGroup(): Promise<number>-End-->
@@ -69,7 +65,7 @@ Queries the usage priority group of the calling application. The priority define
 | --- | --- |
 | Promise&lt;number&gt; | the promise returned by queryAppUsagePriorityGroup. Returns the app group of the calling application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

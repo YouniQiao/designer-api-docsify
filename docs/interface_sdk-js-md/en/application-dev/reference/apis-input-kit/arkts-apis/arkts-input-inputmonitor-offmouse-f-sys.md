@@ -16,10 +16,6 @@ Cancel listening for mouse input events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function offMouse(receiver?: Callback<MouseEvent>): void--><!--Device-inputMonitor-function offMouse(receiver?: Callback<MouseEvent>): void-End-->

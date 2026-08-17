@@ -4,10 +4,6 @@ Definition of the Offline Download Management Interface
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface AVDownloaderManager--><!--Device-media-interface AVDownloaderManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -27,10 +23,6 @@ addAVDownloadTask(source: MediaSource): string
 Create a download task based on the media description.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,10 +52,6 @@ Set the network environment for the download. By default, the download is perfor
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void--><!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void-End-->
@@ -86,10 +74,6 @@ Obtains all offline download tasks in the Task Manager. Ended download tasks are
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-getDownloadTasks(): Array<string>--><!--Device-AVDownloaderManager-getDownloadTasks(): Array<string>-End-->
@@ -111,10 +95,6 @@ getTaskCacheDirectory(taskId: string): string
 Obtains the offline download cache directory of a specified task.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,10 +130,6 @@ Obtains the progress of a specified offline download task.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-getTaskProgress(taskId: string): double--><!--Device-AVDownloaderManager-getTaskProgress(taskId: string): double-End-->
@@ -187,10 +163,6 @@ getTaskStatus(taskId: string): AVDownloadTaskState
 Obtains the status of a specified offline download task. For details, see #AVDownloadTaskState.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,10 +198,6 @@ Deregisters a specified function's listening on task progress change events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void--><!--Device-AVDownloaderManager-offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void-End-->
@@ -251,10 +219,6 @@ offStatusChange(callback?: OnAVDownloadTaskStateHandle): void
 Deregisters a specified function's listening on task status change events.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -278,10 +242,6 @@ Registers a function to listen to the progress change value of an offline downlo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-onProgressChange(callback: OnAVDownloadProgressChangeHandle): void--><!--Device-AVDownloaderManager-onProgressChange(callback: OnAVDownloadProgressChangeHandle): void-End-->
@@ -304,10 +264,6 @@ Registering a Function for Listening on Status Changes of Offline Download Tasks
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void-End-->
@@ -329,10 +285,6 @@ pauseDownloadTask(taskId?: string): void
 Suspending the download of a specified task
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -363,10 +315,6 @@ Release resources used for AVDownloaderManager.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-release(): void--><!--Device-AVDownloaderManager-release(): void-End-->
@@ -382,10 +330,6 @@ removeDownloadTask(taskId?: string): void
 Remove a download task from the offline download manager
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -415,10 +359,6 @@ Resuming Offline Download of a Specified Task
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVDownloaderManager-resumeDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-resumeDownloadTask(taskId?: string): void-End-->
@@ -447,10 +387,6 @@ setRequestTimeout(timeout: int): void
 Sets the network timeout interval for HTTP requests. If the timeout interval is exceeded, the download fails.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

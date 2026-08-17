@@ -17,10 +17,6 @@ Set the type and state for the specified network capability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState,    callback: AsyncCallback<void>): void--><!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState,    callback: AsyncCallback<void>): void-End-->
@@ -34,8 +30,8 @@ Set the type and state for the specified network capability.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| type | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md#NetworkCapabilityType-(System-API)). |
-| state | [NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md) | Yes | Indicates the service ability state of the [NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md#NetworkCapabilityState-(System-API)). |
+| type | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md#networkcapabilitytype-system-api). |
+| state | [NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md) | Yes | Indicates the service ability state of the [NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md#networkcapabilitystate-system-api). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setNetworkCapability. |
 
 **Error codes:**
@@ -50,7 +46,7 @@ Set the type and state for the specified network capability.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -78,10 +74,6 @@ Set the type and state for the specified network capability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState): Promise<void>--><!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState): Promise<void>-End-->
@@ -95,8 +87,8 @@ Set the type and state for the specified network capability.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| type | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md#NetworkCapabilityType-(System-API)). |
-| state | [NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md) | Yes | Indicates the service ability state of the [NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md#NetworkCapabilityState-(System-API)). |
+| type | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md#networkcapabilitytype-system-api). |
+| state | [NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md) | Yes | Indicates the service ability state of the [NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md#networkcapabilitystate-system-api). |
 
 **Return value:**
 
@@ -116,7 +108,7 @@ Set the type and state for the specified network capability.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

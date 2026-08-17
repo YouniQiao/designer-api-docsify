@@ -4,10 +4,6 @@ Enum for provides MSTensor format
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-export enum Format--><!--Device-mindSporeLite-export enum Format-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -21,10 +17,6 @@ DEFAULT_FORMAT = -1
 data format is default
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ data format is NCHW
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Format-NCHW = 0--><!--Device-Format-NCHW = 0-End-->
@@ -61,10 +49,6 @@ NHWC = 1
 data format is NHWC
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ data format is NHWC4
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Format-NHWC4 = 2--><!--Device-Format-NHWC4 = 2-End-->
@@ -101,10 +81,6 @@ HWKC = 3
 data format is HWKC
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,10 +98,6 @@ data format is HWCK
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Format-HWCK = 4--><!--Device-Format-HWCK = 4-End-->
@@ -141,10 +113,6 @@ KCHW = 5
 data format is KCHW
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

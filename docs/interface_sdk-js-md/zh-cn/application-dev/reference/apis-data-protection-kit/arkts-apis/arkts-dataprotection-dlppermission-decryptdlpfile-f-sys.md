@@ -10,10 +10,6 @@ function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 <!--Device-dlpPermission-function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>--><!--Device-dlpPermission-function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>-End-->
@@ -51,7 +47,7 @@ function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 | [19100008](../errorcode-dlp.md#19100008-非dlp文件) | The file is not a DLP file. |
 | [19100013](../errorcode-dlp.md#19100013-用户无权限) | The user does not have the permission. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

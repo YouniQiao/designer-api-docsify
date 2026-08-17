@@ -4,10 +4,6 @@ Implements a path operation iterator. You can read path operation instructions b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class PathIterator--><!--Device-drawing-class PathIterator-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -27,10 +23,6 @@ constructor(path: Path)
 Creates an iterator and binds it with a path.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PathIterator-constructor(path: Path)--><!--Device-PathIterator-constructor(path: Path)-End-->
 
@@ -52,10 +44,6 @@ Checks whether there is any next operation in the path operation iterator.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PathIterator-hasNext(): boolean--><!--Device-PathIterator-hasNext(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -75,10 +63,6 @@ next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 Retrieves the next operation in this path and moves the iterator to that operation.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-PathIterator-next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb--><!--Device-PathIterator-next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb-End-->
 
@@ -113,10 +97,6 @@ Retrieves the next operation in this path and moves the iterator to that operati
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PathIterator-next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined--><!--Device-PathIterator-next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -150,10 +130,6 @@ Retrieves the next operation in this path, without moving the iterator.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-PathIterator-peek(): PathIteratorVerb--><!--Device-PathIterator-peek(): PathIteratorVerb-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -173,10 +149,6 @@ peek(): PathIteratorVerb | undefined
 Retrieves the next operation in this path, without moving the iterator.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PathIterator-peek(): PathIteratorVerb | undefined--><!--Device-PathIterator-peek(): PathIteratorVerb | undefined-End-->
 

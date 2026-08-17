@@ -4,10 +4,6 @@ Provides the configuration information of an upload or download task.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-interface Config--><!--Device-agent-interface Config-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -30,10 +26,6 @@ Task action. - **UPLOAD**: Upload tasks. - **DOWNLOAD**: Download tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Config-action: Action--><!--Device-Config-action: Action-End-->
@@ -52,10 +44,6 @@ File start point of the task, in bytes. It is usually used for resumable transfe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Config-begins?: long--><!--Device-Config-begins?: long-End-->
@@ -68,15 +56,11 @@ File start point of the task, in bytes. It is usually used for resumable transfe
 data?: string | Array<FormItem>
 ```
 
-- For the download task, the value is a string, typically in JSON format (an object will be converted to a JSON string); the default value is null. - For the upload task, the value is Array&lt; [FormItem](arkts-basicservices-agent-formitem-i.md#FormItem)&gt;. Since API version 15, a maximum of 100 files can be uploaded in a single task. This parameter is left empty by default.
+- For the download task, the value is a string, typically in JSON format (an object will be converted to a JSON string); the default value is null. - For the upload task, the value is Array&lt; [FormItem](arkts-basicservices-agent-formitem-i.md#formitem)&gt;. Since API version 15, a maximum of 100 files can be uploaded in a single task. This parameter is left empty by default.
 
 **Type:** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,10 +80,6 @@ Task description. The value contains a maximum of 1024 characters. The default v
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Config-description?: string--><!--Device-Config-description?: string-End-->
@@ -117,10 +97,6 @@ File end point of the task, in bytes. It is usually used for resumable transfers
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -140,10 +116,6 @@ The extras for the configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Config-extras?: Record<string, string>--><!--Device-Config-extras?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -159,10 +131,6 @@ Whether to send progress notifications. This parameter applies only to backgroun
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -182,10 +150,6 @@ The HTTP headers. For upload request, the `Content-Type` is forced to `multipart
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Config-headers?: Record<string, string>--><!--Device-Config-headers?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -201,10 +165,6 @@ Path index of the task. It is usually used for resumable transfers. The default 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -226,10 +186,6 @@ Whether the task is allowed on a metered network. The default value is **false**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Config-metered?: boolean--><!--Device-Config-metered?: boolean-End-->
@@ -247,10 +203,6 @@ Standard HTTP method for the task. The value can be **GET**, **POST**, or **PUT*
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -270,10 +222,6 @@ Minimum speed, which is disabled by default.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Config-minSpeed?: MinSpeed--><!--Device-Config-minSpeed?: MinSpeed-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -289,10 +237,6 @@ Task mode. The default mode is background. Since API version 20, the task mode f
 **Type:** [Mode](arkts-basicservices-agent-mode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -312,10 +256,6 @@ Whether to use a single request to upload multiple files. If yes, **multipart/fo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Config-multipart?: boolean--><!--Device-Config-multipart?: boolean-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -333,10 +273,6 @@ Network used for the task. The default value is **ANY** (Wi-Fi or cellular).
 **Default:** Network.ANY
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -356,10 +292,6 @@ Custom settings for the notification bar. The default value is **{}**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Config-notification?: Notification--><!--Device-Config-notification?: Notification-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -375,10 +307,6 @@ Whether to overwrite an existing file during the download. The default value is 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -398,10 +326,6 @@ precise?: boolean
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Config-precise?: boolean--><!--Device-Config-precise?: boolean-End-->
@@ -420,10 +344,6 @@ Priority of the task. The priority of a foreground task is higher than that of a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Config-priority?: int--><!--Device-Config-priority?: int-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -440,10 +360,6 @@ Proxy address. The value contains a maximum of 512 characters. It is in the form
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Config-proxy?: string--><!--Device-Config-proxy?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -459,10 +375,6 @@ Whether redirection is allowed. The default value is **true**. - **true**: allow
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -482,10 +394,6 @@ Whether automatic retry is enabled for the task. This parameter is only applicab
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Config-retry?: boolean--><!--Device-Config-retry?: boolean-End-->
@@ -503,10 +411,6 @@ Whether the task is allowed on a roaming network. The default value is **true**.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -528,10 +432,6 @@ Path for storing downloaded files. The options are as follows: - Relative path, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Config-saveas?: string--><!--Device-Config-saveas?: string-End-->
@@ -544,15 +444,11 @@ Path for storing downloaded files. The options are as follows: - Relative path, 
 timeout?: Timeout
 ```
 
-Custom timeout interval. The default connection timeout interval is 60 seconds, and the default total timeout interval is 604800 seconds (one week). If retry is set to **true**, the [timeout](arkts-basicservices-agent-timeout-i.md#Timeout) event triggers immediate retry, which will obscure the timeout event itself. As a result, the internal [timeout](arkts-basicservices-agent-timeout-i.md#Timeout) condition has been triggered but the [timeout](arkts-basicservices-agent-timeout-i.md#Timeout) event is not observable. Set **retry** to **false** to explicitly observe the [timeout](arkts-basicservices-agent-timeout-i.md#Timeout) event.
+Custom timeout interval. The default connection timeout interval is 60 seconds, and the default total timeout interval is 604800 seconds (one week). If retry is set to **true**, the [timeout](arkts-basicservices-agent-timeout-i.md#timeout) event triggers immediate retry, which will obscure the timeout event itself. As a result, the internal [timeout](arkts-basicservices-agent-timeout-i.md#timeout) condition has been triggered but the [timeout](arkts-basicservices-agent-timeout-i.md#timeout) event is not observable. Set **retry** to **false** to explicitly observe the [timeout](arkts-basicservices-agent-timeout-i.md#timeout) event.
 
 **Type:** [Timeout](arkts-basicservices-agent-timeout-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Config-timeout?: Timeout--><!--Device-Config-timeout?: Timeout-End-->
 
@@ -569,10 +465,6 @@ Task title. The value contains a maximum of 256 characters. The default value is
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -592,10 +484,6 @@ Task token. To query a task with a token, you need to provide the token and use 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Config-token?: string--><!--Device-Config-token?: string-End-->
@@ -613,10 +501,6 @@ Resource URL. From API version 6 to 14, the value contains a maximum of 2048 cha
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

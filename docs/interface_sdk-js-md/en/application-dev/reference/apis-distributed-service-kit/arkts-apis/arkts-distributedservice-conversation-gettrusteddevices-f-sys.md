@@ -16,10 +16,6 @@ Obtains the list of historical trusted devices. Typical use scenarios include qu
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.sec.ACCESS_UDID
 
 **Model restriction:** This API can be used only in the stage model.

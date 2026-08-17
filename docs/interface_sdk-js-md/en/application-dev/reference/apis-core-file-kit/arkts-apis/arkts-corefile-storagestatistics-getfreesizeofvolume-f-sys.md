@@ -16,10 +16,6 @@ Get the free size of volume.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>): void--><!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>): void-End-->
@@ -46,7 +42,7 @@ Get the free size of volume.
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';
@@ -82,10 +78,6 @@ Get the free size of volume.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string): Promise<long>--><!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string): Promise<long>-End-->
@@ -117,7 +109,7 @@ Get the free size of volume.
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';

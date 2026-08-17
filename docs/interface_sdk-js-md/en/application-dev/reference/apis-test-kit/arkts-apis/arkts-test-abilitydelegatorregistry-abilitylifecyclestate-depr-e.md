@@ -4,11 +4,9 @@ Enumerates the ability lifecycle states.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#AbilityLifecycleState)
+**Substitutes:** [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#abilitylifecyclestate)
 
 <!--Device-abilityDelegatorRegistry-export enum AbilityLifecycleState--><!--Device-abilityDelegatorRegistry-export enum AbilityLifecycleState-End-->
 
@@ -24,11 +22,9 @@ The ability is in an invalid state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UNINITIALIZED](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#UNINITIALIZED)
+**Substitutes:** [UNINITIALIZED](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#uninitialized)
 
 <!--Device-AbilityLifecycleState-UNINITIALIZED = 0--><!--Device-AbilityLifecycleState-UNINITIALIZED = 0-End-->
 
@@ -44,11 +40,9 @@ The ability is created.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [CREATE](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#CREATE)
+**Substitutes:** [CREATE](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#create)
 
 <!--Device-AbilityLifecycleState-CREATE = 1--><!--Device-AbilityLifecycleState-CREATE = 1-End-->
 
@@ -64,11 +58,9 @@ The ability is running in the foreground.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FOREGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#FOREGROUND)
+**Substitutes:** [FOREGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#foreground)
 
 <!--Device-AbilityLifecycleState-FOREGROUND = 2--><!--Device-AbilityLifecycleState-FOREGROUND = 2-End-->
 
@@ -84,11 +76,9 @@ The ability is running in the background.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BACKGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#BACKGROUND)
+**Substitutes:** [BACKGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#background)
 
 <!--Device-AbilityLifecycleState-BACKGROUND = 3--><!--Device-AbilityLifecycleState-BACKGROUND = 3-End-->
 
@@ -104,11 +94,9 @@ The ability is destroyed.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DESTROY](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#DESTROY)
+**Substitutes:** [DESTROY](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#destroy)
 
 <!--Device-AbilityLifecycleState-DESTROY = 4--><!--Device-AbilityLifecycleState-DESTROY = 4-End-->
 

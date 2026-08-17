@@ -4,10 +4,6 @@ Rectangle in a plane.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Rect--><!--Device-unnamed-export interface Rect-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -23,10 +19,6 @@ Rectangle height, in scene units of the world coordinate system (such as cm, m, 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Rect-height: double--><!--Device-Rect-height: double-End-->
 
@@ -44,10 +36,6 @@ Rectangle width, in scene units of the world coordinate system (such as cm, m, k
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Rect-width: double--><!--Device-Rect-width: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -64,10 +52,6 @@ X component of the rectangle's bottom-left corner, in scene units of the world c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Rect-x: double--><!--Device-Rect-x: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -83,10 +67,6 @@ Y component of the rectangle's bottom-left corner, in scene units of the world c
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Rect-y: double--><!--Device-Rect-y: double-End-->
 

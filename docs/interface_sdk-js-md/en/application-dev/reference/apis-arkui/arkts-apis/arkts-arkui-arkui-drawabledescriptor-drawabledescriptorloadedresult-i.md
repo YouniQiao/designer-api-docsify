@@ -4,10 +4,6 @@ Represents the result of loading an image resource or URI.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface DrawableDescriptorLoadedResult--><!--Device-unnamed-export interface DrawableDescriptorLoadedResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -39,10 +35,6 @@ Image height. Unit: px.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -62,10 +54,6 @@ Image width. Unit: px.
 **Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

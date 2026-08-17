@@ -4,10 +4,6 @@ Want is a carrier for information transfer between objects (application componen
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class Want--><!--Device-unnamed-export default class Want-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -30,10 +26,6 @@ Ability name of the application. It represents the ability name of the target ap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
@@ -51,10 +43,6 @@ Action to take, such as viewing and sharing application details. In implicit Wan
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Bundle name of the application. It represents the bundle name of the target appl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
@@ -95,10 +79,6 @@ Device ID. It indicates the device ID of the target application in the applicati
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,10 +98,6 @@ Additional category information (such as browser and video player) of the abilit
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
@@ -140,10 +116,6 @@ File descriptor (FD). The FD written by the launcher in the application launch s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Want-readonly fds?: Record<string, int>--><!--Device-Want-readonly fds?: Record<string, int>-End-->
@@ -156,15 +128,11 @@ File descriptor (FD). The FD written by the launcher in the application launch s
 flags?: int
 ```
 
-How the Want object will be handled. The value is of the enumeration type [Flags](arkts-ability-wantconstant-flags-e.md#Flags). A numeric value should be passed by default. For example, if the value is 0x00000001 (**wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION**), the receiver is temporarily granted the permission to read the data pointed to by the URI.
+How the Want object will be handled. The value is of the enumeration type [Flags](arkts-ability-wantconstant-flags-e.md#flags). A numeric value should be passed by default. For example, if the value is 0x00000001 (**wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION**), the receiver is temporarily granted the permission to read the data pointed to by the URI.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -184,10 +152,6 @@ Module name of the application. It represents the module name of the target appl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-moduleName?: string--><!--Device-Want-moduleName?: string-End-->
@@ -200,15 +164,11 @@ Module name of the application. It represents the module name of the target appl
 parameters?: Record<string, RecordData>
 ```
 
-List of parameters in the Want object. 1. The values of the following keys are assigned by the system. Manual settings do not take effect, since the system automatically changes the values to the actual values during data transfer. - **ohos.aafwk.param.callerPid**: PID of the caller. The value is a string. - **ohos.aafwk.param.callerBundleName**: bundle name of the caller. The value is a string. - **ohos.aafwk.param.callerAbilityName**: ability name of the caller. The value is a string. - **ohos.aafwk.param.callerNativeName**: process name of the caller when the native method is called. The value is a string. - **ohos.aafwk.param.callerAppId**: appId of the caller. The value is a string. - **ohos.aafwk.param.callerAppIdentifier**: appIdentifier of the caller. The value is a string. - **ohos.aafwk.param.callerToken**: token of the caller. The value is a string. - **ohos.aafwk.param.callerUid**: UID in [BundleInfo](arkts-ability-bundleinfo-i.md#BundleInfo), that is, the application's UID in the bundle information. The value is a number. - **ohos.param.callerAppCloneIndex**: clone index of the caller. The value is of the numeric type. - **component.startup.newRules**: enabled status of the new control rule. The value is of the Boolean type. - **moduleName**: module name of the caller. The value is a string. - **ohos.ability.params.abilityRecoveryRestart**: support for ability restart upon fault recovery. The value is of the Boolean type. - **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of wantConstant.ShowMode. **NOTE：**In cross-device scenarios, the following fields do not take effect and cannot be used for identity or permission verification: **ohos.aafwk.param.callerPid**, **ohos.aafwk.param.callerToken**, and **ohos.aafwk.param.callerUid**. 2. Certain keys are defined by the system, and their values need to be manually assigned. For details about the keys and their values, see wantConstant.Params. 3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer. **NOTE：**For details about the constants of **Params** in **want**, see [wantConstant](arkts-app-ability-wantconstant.md#@ohos.app.ability.wantConstant). Note that a maximum of 100 KB data that can be transferred by using **WantParams**. If the data volume exceeds 100 KB, transfer data in WriteRawDataBuffer or [uri](../../apis-arkts/arkts-apis/arkts-uri.md#@ohos.uri) mode. The values of **parameters** must be of the following basic data types: String, Number, Boolean, Object, undefined, and null. Functions in an object cannot be transferred.
+List of parameters in the Want object. 1. The values of the following keys are assigned by the system. Manual settings do not take effect, since the system automatically changes the values to the actual values during data transfer. - **ohos.aafwk.param.callerPid**: PID of the caller. The value is a string. - **ohos.aafwk.param.callerBundleName**: bundle name of the caller. The value is a string. - **ohos.aafwk.param.callerAbilityName**: ability name of the caller. The value is a string. - **ohos.aafwk.param.callerNativeName**: process name of the caller when the native method is called. The value is a string. - **ohos.aafwk.param.callerAppId**: appId of the caller. The value is a string. - **ohos.aafwk.param.callerAppIdentifier**: appIdentifier of the caller. The value is a string. - **ohos.aafwk.param.callerToken**: token of the caller. The value is a string. - **ohos.aafwk.param.callerUid**: UID in [BundleInfo](arkts-ability-bundleinfo-i.md#bundleinfo), that is, the application's UID in the bundle information. The value is a number. - **ohos.param.callerAppCloneIndex**: clone index of the caller. The value is of the numeric type. - **component.startup.newRules**: enabled status of the new control rule. The value is of the Boolean type. - **moduleName**: module name of the caller. The value is a string. - **ohos.ability.params.abilityRecoveryRestart**: support for ability restart upon fault recovery. The value is of the Boolean type. - **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of wantConstant.ShowMode. **NOTE：**In cross-device scenarios, the following fields do not take effect and cannot be used for identity or permission verification: **ohos.aafwk.param.callerPid**, **ohos.aafwk.param.callerToken**, and **ohos.aafwk.param.callerUid**. 2. Certain keys are defined by the system, and their values need to be manually assigned. For details about the keys and their values, see wantConstant.Params. 3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer. **NOTE：**For details about the constants of **Params** in **want**, see [wantConstant](arkts-app-ability-wantconstant.md#ohosappabilitywantconstant). Note that a maximum of 100 KB data that can be transferred by using **WantParams**. If the data volume exceeds 100 KB, transfer data in WriteRawDataBuffer or [uri](../../apis-arkts/arkts-apis/arkts-uri.md#ohosuri) mode. The values of **parameters** must be of the following basic data types: String, Number, Boolean, Object, undefined, and null. Functions in an object cannot be transferred.
 
 **Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Want-parameters?: Record<string, RecordData>--><!--Device-Want-parameters?: Record<string, RecordData>-End-->
 
@@ -225,10 +185,6 @@ MIME type, that is, the type of the file to open, for example, **'text/xml'** an
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -247,10 +203,6 @@ URI, which is used with **type** to specify the data type to be processed in the
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

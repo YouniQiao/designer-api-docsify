@@ -1,12 +1,8 @@
 # OnTouchIconUrlReceivedEvent
 
-Defines the triggered callback when the application receive an new url of an apple-touch-icon.
+Defines the callback information triggered when an apple-touch-icon URL is received, including the URL and precomposed status. It is suitable for scenarios where obtaining web page icons is required, improving icon management flexibility and user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnTouchIconUrlReceivedEvent--><!--Device-unnamed-declare interface OnTouchIconUrlReceivedEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered callback when the application receive an new url of an app
 precomposed: boolean
 ```
 
-Corresponding to whether apple-touch-icon is precomposited.
+Whether the apple-touch-icon is precomposed. **true** indicates that the apple-touch-icon is precomposed, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ Corresponding to whether apple-touch-icon is precomposited.
 url: string
 ```
 
-The apple-touch-icon URL address received.
+Received apple-touch-icon URL.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

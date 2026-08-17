@@ -1,12 +1,8 @@
 # WebContextMenuResult
 
-Defines the context menu result, related to [WebContextMenuResult](#WebContextMenuResult) method.
+WebContextMenuResult is a class in the ArkWeb component used to handle context menu events (triggered by long- pressing a page element or right-clicking). It provides developers with a set of menu operation execution capabilities, including text editing operations (copy, paste, cut, select all, undo, redo, paste and match style), image operations (copy image, save image), menu control (close menu), and password auto-fill. Developers typically use WebContextMenuResult when they need to customize the context menu behavior of the Web component. Obtain a WebContextMenuResult instance through the **onContextMenuShow** event callback, and use the menu context information provided by **WebContextMenuParam** to determine the user operation scenario and call the corresponding response method, thereby implementing custom menu interaction logic. If the developer does not perform any menu response operation, the **closeContextMenu** method must be called to close the menu. For details about the sample code, see [onContextMenuShow&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkweb-web-attribute.md#oncontextmenushow).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WebContextMenuResult--><!--Device-unnamed-declare class WebContextMenuResult-End-->
 
@@ -18,13 +14,9 @@ Defines the context menu result, related to [WebContextMenuResult](#WebContextMe
 closeContextMenu(): void
 ```
 
-When close context menu without other call in WebContextMenuResult, User should call this function to close menu
+Closes this context menu. This API must be called when no operations in **WebContextMenuResult** are performed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ When close context menu without other call in WebContextMenuResult, User should 
 constructor()
 ```
 
-Constructor.
+Constructs a **WebContextMenuResult** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ Constructor.
 copy(): void
 ```
 
-Executes the copy operation related to this context menu.
+Performs the copy text operation. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +62,9 @@ Executes the copy operation related to this context menu.
 copyImage(): void
 ```
 
-If WebContextMenuParam has image content, this function will copy image related to this context menu. If WebContextMenuParam has no image content, this function will do nothing.
+When **WebContextMenuParam** contains image content, this method is used to copy the image to the clipboard. Starting from API version 24, copying canvas images is supported. If you need to save the image to a local file, use the saveImage() method. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,13 +78,9 @@ If WebContextMenuParam has image content, this function will copy image related 
 cut(): void
 ```
 
-Executes the cut operation related to this context menu.
+Performs the cut operation. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,13 +94,9 @@ Executes the cut operation related to this context menu.
 paste(): void
 ```
 
-Executes the paste operation related to this context menu. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Permissions need to be configured: ohos.permission.READ_PASTEBOARD. &lt;/p&gt;
+Performs the paste operation, preserving the original format. If you need to paste plain text and match the target format, use the pasteAndMatchStyle() method. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released. > > The permission > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > must be declared.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -138,13 +110,9 @@ Executes the paste operation related to this context menu. &lt;p&gt;&lt;strong&g
 pasteAndMatchStyle(): void
 ```
 
-Executes the paste and match style operation related to this context menu. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Permissions need to be configured: ohos.permission.READ_PASTEBOARD. &lt;/p&gt;
+Performs the paste operation related to this context menu. The pasted content matches the target format and is presented as plain text. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released. > > The permission > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > must be declared.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-WebContextMenuResult-pasteAndMatchStyle(): void--><!--Device-WebContextMenuResult-pasteAndMatchStyle(): void-End-->
 
@@ -156,13 +124,9 @@ Executes the paste and match style operation related to this context menu. &lt;p
 redo(): void
 ```
 
-Executes the redo operation related to this context menu.
+Performs the redo operation, which re-executes the revoked operation. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-WebContextMenuResult-redo(): void--><!--Device-WebContextMenuResult-redo(): void-End-->
 
@@ -174,13 +138,9 @@ Executes the redo operation related to this context menu.
 requestPasswordAutoFill(): void
 ```
 
-Request to fill the password vault contents into the input field.
+Requests the username or password data in the password vault to be automatically filled in the current focused text box. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebContextMenuResult-requestPasswordAutoFill(): void--><!--Device-WebContextMenuResult-requestPasswordAutoFill(): void-End-->
 
@@ -192,13 +152,9 @@ Request to fill the password vault contents into the input field.
 saveImage(): void
 ```
 
-Performing the "Save As Image" operation associated with this context menu will trigger the download process.
+Saves the image related to this context menu. Calling this method triggers the download process. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -212,13 +168,9 @@ Performing the "Save As Image" operation associated with this context menu will 
 selectAll(): void
 ```
 
-Executes the selectAll operation related to this context menu.
+Performs the select all operation. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -232,13 +184,9 @@ Executes the selectAll operation related to this context menu.
 undo(): void
 ```
 
-Executes the undo operation related to this context menu.
+Performs the undo operation, which undoes the last editing operation. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-WebContextMenuResult-undo(): void--><!--Device-WebContextMenuResult-undo(): void-End-->
 

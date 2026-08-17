@@ -4,10 +4,6 @@ Sets the single-line text box type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum InputType--><!--Device-unnamed-declare enum InputType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ Normal
 Normal input mode. In this mode, there is no special restriction on the input characters. The inline style supports only the **InputType.Normal** type.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Digit input mode. Negative numbers and decimals are not supported.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-InputType-Number--><!--Device-InputType-Number-End-->
@@ -61,10 +49,6 @@ PhoneNumber
 Phone number input mode. In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#), opening parentheses ((), and closing parenthesis ()); the length is not limited.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ Email address input mode. This mode accepts only digits, letters, underscores (_
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-InputType-Email--><!--Device-InputType-Email-End-->
@@ -102,10 +82,6 @@ Password input mode. The entered text is briefly displayed before turning to dot
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-InputType-Password--><!--Device-InputType-Password-End-->
@@ -121,10 +97,6 @@ NUMBER_PASSWORD = 8
 Numeric password input mode. The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices. The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices. The password input mode does not support underlines. If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,10 +116,6 @@ User name input mode with no special restrictions. If Password Vault is enabled,
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -165,10 +133,6 @@ NEW_PASSWORD = 11
 New password input mode with no special restrictions. The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices. The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices. If Password Vault is enabled, a new password can be automatically generated.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,10 +152,6 @@ Number input mode with a decimal point. The value can contain digits and only on
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -210,10 +170,6 @@ URL input mode with no special restrictions.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -231,10 +187,6 @@ ONE_TIME_CODE = 14
 One-time code (verification code) input mode with no special restrictions.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,10 +10,6 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.USE_USER_ACCESS_MANAGER
 
 <!--Device-userAccessCtrl-function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>--><!--Device-userAccessCtrl-function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>-End-->
@@ -46,7 +42,7 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 | [12500016](../errorcode-useriam.md#12500016-authtoken过期) | AuthToken has expired. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

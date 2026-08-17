@@ -4,10 +4,6 @@ Path2D
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Path2D--><!--Device-unnamed-export interface Path2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ addPath(path: Path2D): void
 Add another path to current path.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -47,10 +39,6 @@ arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, 
 Draws an arc on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -79,10 +67,6 @@ Draws an arc based on the radius and points on the arc.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Path2D-arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void--><!--Device-Path2D-arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void-End-->
@@ -108,10 +92,6 @@ bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number,
 Draws a cubic bezier curve on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -140,10 +120,6 @@ Draws a closed path.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Path2D-closePath(): void--><!--Device-Path2D-closePath(): void-End-->
@@ -168,10 +144,6 @@ ellipse(
 Draws an ellipse based on the coordinate and radius.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -202,10 +174,6 @@ Connects the current point to a target position using a straight line.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Path2D-lineTo(x: number, y: number): void--><!--Device-Path2D-lineTo(x: number, y: number): void-End-->
@@ -229,10 +197,6 @@ Moves a drawing path to a target position on the canvas.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Path2D-moveTo(x: number, y: number): void--><!--Device-Path2D-moveTo(x: number, y: number): void-End-->
@@ -255,10 +219,6 @@ quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void
 Draws a quadratic curve on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -284,10 +244,6 @@ rect(x: number, y: number, width: number, height: number): void
 Creates a rectangular.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -320,10 +276,6 @@ setTransform(
 Uses same parameters as the transform() function to reset the existing transformation matrix and create a new transformation matrix.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

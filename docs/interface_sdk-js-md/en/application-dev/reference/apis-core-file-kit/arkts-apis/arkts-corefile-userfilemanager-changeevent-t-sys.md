@@ -14,11 +14,9 @@ Enumerates the type of changes to observe.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md#ChangeData)
+**Substitutes:** [ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md#changedata)
 
 <!--Device-userFileManager-type ChangeEvent =    'deviceChange'    | 'albumChange'    | 'imageChange'    | 'audioChange'    | 'videoChange'    | 'remoteFileChange'--><!--Device-userFileManager-type ChangeEvent =    'deviceChange'    | 'albumChange'    | 'imageChange'    | 'audioChange'    | 'videoChange'    | 'remoteFileChange'-End-->
 

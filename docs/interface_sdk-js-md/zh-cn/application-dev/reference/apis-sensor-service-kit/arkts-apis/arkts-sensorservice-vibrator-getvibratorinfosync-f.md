@@ -10,10 +10,6 @@ function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>--><!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
@@ -30,7 +26,7 @@ function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>
 | --- | --- |
 | Array&lt;[VibratorInfo](arkts-sensorservice-vibrator-vibratorinfo-i.md)&gt; | 马达设备的信息数组。每个元素包含deviceId、vibratorId、deviceName、isHdHapticSupported、isLocalVibrator等属性，可 用于选择合适的马达触发振动或判断设备振动能力。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

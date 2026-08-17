@@ -10,9 +10,7 @@ export function getLineInstance(locale: string): BreakIterator
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -24,7 +22,7 @@ export function getLineInstance(locale: string): BreakIterator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 <br>生成的[BreakIterator](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-breakiterator-c.md#BreakIterator)将按照指定区域的规则计算可换行点的位置。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 <br>生成的[BreakIterator](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-breakiterator-c.md#breakiterator)将按照指定区域的规则计算可换行点的位置。 |
 
 **返回值：**
 

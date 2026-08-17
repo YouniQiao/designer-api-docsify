@@ -12,15 +12,13 @@ import { sms } from 'sms';
 function sendMessage(options: SendMessageOptions): void
 ```
 
-Sends an SMS message. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 10. You are advised to use > [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendShortMessage).
+Sends an SMS message. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 10. You are advised to use > [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage).
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 10
 
-**Substitutes:** [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendShortMessage)
+**Substitutes:** [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage)
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
@@ -32,7 +30,7 @@ Sends an SMS message. > **NOTE：**> > This API is supported since API version 6
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#SendMessageOptions). |
+| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#sendmessageoptions). |
 
 **Error codes:**
 
@@ -45,7 +43,7 @@ Sends an SMS message. > **NOTE：**> > This API is supported since API version 6
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

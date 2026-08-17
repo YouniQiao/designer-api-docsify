@@ -16,10 +16,6 @@ Write data through the socket.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-socket-function sppWrite(clientSocket: int, data: ArrayBuffer): void--><!--Device-socket-function sppWrite(clientSocket: int, data: ArrayBuffer): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -28,7 +24,7 @@ Write data through the socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppAccept) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppConnect). |
+| clientSocket | int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppaccept) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppconnect). |
 | data | ArrayBuffer | Yes | Indicates the data to write. |
 
 **Error codes:**
@@ -40,7 +36,7 @@ Write data through the socket.
 | 2901054 | IO error. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

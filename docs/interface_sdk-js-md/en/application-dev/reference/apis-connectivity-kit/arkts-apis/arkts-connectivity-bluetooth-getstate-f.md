@@ -16,11 +16,9 @@ Obtains the Bluetooth status of a device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getState](arkts-connectivity-bluetoothmanager-getstate-f.md#getState)
+**Substitutes:** [getState](arkts-connectivity-bluetoothmanager-getstate-f.md#getstate)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -34,7 +32,7 @@ Obtains the Bluetooth status of a device.
 | --- | --- |
 | BluetoothState | Returns the Bluetooth status, which can be { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let state : bluetooth.BluetoothState = bluetooth.getState();

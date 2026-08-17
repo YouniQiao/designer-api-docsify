@@ -2,8 +2,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 <!--Device-storage-interface StorageObserver--><!--Device-storage-interface StorageObserver-End-->
@@ -21,8 +19,6 @@ key: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 

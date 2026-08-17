@@ -4,10 +4,6 @@ Defines a print job.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PrintJob--><!--Device-print-interface PrintJob-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -32,10 +28,6 @@ Color mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintJob-colorMode: int--><!--Device-PrintJob-colorMode: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -53,10 +45,6 @@ Copy of the file list.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintJob-copyNumber: int--><!--Device-PrintJob-copyNumber: int-End-->
 
@@ -76,10 +64,6 @@ Simplex or duplex mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintJob-duplexMode: int--><!--Device-PrintJob-duplexMode: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -97,10 +81,6 @@ FD list of files to print.
 **Type:** Array&lt;int&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintJob-fdList: Array<int>--><!--Device-PrintJob-fdList: Array<int>-End-->
 
@@ -120,10 +100,6 @@ Whether pages are printed in landscape mode. The value **true** indicates that p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintJob-isLandscape: boolean--><!--Device-PrintJob-isLandscape: boolean-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -141,10 +117,6 @@ Whether the printing is sequential. The value **true** means that the printing i
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintJob-isSequential: boolean--><!--Device-PrintJob-isSequential: boolean-End-->
 
@@ -164,10 +136,6 @@ ID of the print job.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintJob-jobId: string--><!--Device-PrintJob-jobId: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -185,10 +153,6 @@ State of the print job.
 **Type:** [PrintJobState](arkts-basicservices-print-printjobstate-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintJob-jobState: PrintJobState--><!--Device-PrintJob-jobState: PrintJobState-End-->
 
@@ -208,10 +172,6 @@ Substate of the print job.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintJob-jobSubstate: PrintJobSubState--><!--Device-PrintJob-jobSubstate: PrintJobSubState-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -229,10 +189,6 @@ Current page margin.
 **Type:** [PrintMargin](arkts-basicservices-print-printmargin-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintJob-margin?: PrintMargin--><!--Device-PrintJob-margin?: PrintMargin-End-->
 
@@ -252,10 +208,6 @@ Printer options. The value is a JSON object string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintJob-options?: Object--><!--Device-PrintJob-options?: Object-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -273,10 +225,6 @@ Print range.
 **Type:** [PrinterRange](arkts-basicservices-print-printerrange-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintJob-pageRange: PrinterRange--><!--Device-PrintJob-pageRange: PrinterRange-End-->
 
@@ -296,10 +244,6 @@ Selected page size.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintJob-pageSize: PrintPageSize--><!--Device-PrintJob-pageSize: PrintPageSize-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -318,10 +262,6 @@ Preview settings.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintJob-preview?: PreviewAttribute--><!--Device-PrintJob-preview?: PreviewAttribute-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -339,10 +279,6 @@ ID of the printer used for printing.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintJob-printerId: string--><!--Device-PrintJob-printerId: string-End-->
 

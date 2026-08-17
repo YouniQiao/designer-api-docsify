@@ -4,8 +4,6 @@ Rolling animation model: You can build rolling animation based on the initial po
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 22
 
 <!--Device-unnamed-declare class ScrollMotion--><!--Device-unnamed-declare class ScrollMotion-End-->
@@ -23,8 +21,6 @@ constructor(position: number, velocity: number, min: number, max: number, prop: 
 Constructor parameters
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 22
 

@@ -12,13 +12,9 @@ import { hidebug } from 'hidebug';
 function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo
 ```
 
-Obtains the memory information of the application process. This API uses the cache mechanism and has higher performance than the **getAppNativeMemInfo** API. The cache is valid for 5 minutes. > **NOTE：**> > Reading **\/proc/{pid}/smaps_rollup** is time-consuming. Therefore, you are advised not to use this API in the > main thread. You can use [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#@ohos.taskpool) or [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md#worker) to > enable asynchronous threads to avoid application frame freezing.
+Obtains the memory information of the application process. This API uses the cache mechanism and has higher performance than the **getAppNativeMemInfo** API. The cache is valid for 5 minutes. > **NOTE：**> > Reading **\/proc/{pid}/smaps_rollup** is time-consuming. Therefore, you are advised not to use this API in the > main thread. You can use [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#ohostaskpool) or [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md#worker) to > enable asynchronous threads to avoid application frame freezing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hidebug-function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo--><!--Device-hidebug-function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo-End-->
 
@@ -36,7 +32,7 @@ Obtains the memory information of the application process. This API uses the cac
 | --- | --- |
 | [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) | Memory information of the application process. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let nativeMemInfo: hidebug.NativeMemInfo = hidebug.getAppNativeMemInfoWithCache();

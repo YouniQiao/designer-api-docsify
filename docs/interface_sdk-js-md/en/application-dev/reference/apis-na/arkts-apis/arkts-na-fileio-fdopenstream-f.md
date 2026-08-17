@@ -6,13 +6,11 @@
 function fdopenStream(fd: int, mode: string): Promise<Stream>
 ```
 
-Opens a file stream based on the file descriptor. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#Stream).
+Opens a file stream based on the file descriptor. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#stream).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function fdopenStream(fd: int, mode: string): Promise<Stream>--><!--Device-fileIo-function fdopenStream(fd: int, mode: string): Promise<Stream>-End-->
 
@@ -70,13 +68,11 @@ Opens a file stream based on the file descriptor. This API uses a promise to ret
 function fdopenStream(fd: int, mode: string, callback: AsyncCallback<Stream>): void
 ```
 
-Opens a stream based on the file descriptor. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#Stream). This API uses an asynchronous callback to return the result.
+Opens a stream based on the file descriptor. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#stream). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function fdopenStream(fd: int, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-fileIo-function fdopenStream(fd: int, mode: string, callback: AsyncCallback<Stream>): void-End-->
 

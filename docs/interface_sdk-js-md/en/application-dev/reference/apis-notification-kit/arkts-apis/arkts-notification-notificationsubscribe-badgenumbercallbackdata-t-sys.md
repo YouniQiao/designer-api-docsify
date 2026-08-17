@@ -8,10 +8,6 @@ Describes the badge number of the application has changed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationSubscribe-export type BadgeNumberCallbackData = _BadgeNumberCallbackData--><!--Device-notificationSubscribe-export type BadgeNumberCallbackData = _BadgeNumberCallbackData-End-->
 
 **System capability:** SystemCapability.Notification.Notification

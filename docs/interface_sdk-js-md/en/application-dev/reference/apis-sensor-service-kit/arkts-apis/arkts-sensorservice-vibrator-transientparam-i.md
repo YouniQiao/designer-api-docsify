@@ -4,10 +4,6 @@ Defines the parameters for transient vibration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-interface TransientParam--><!--Device-vibrator-interface TransientParam-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -30,10 +26,6 @@ Vibration frequency. This parameter is optional. The value range is [0,100]. If 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TransientParam-frequency?: int--><!--Device-TransientParam-frequency?: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -50,10 +42,6 @@ Channel number. This parameter is optional. The value range is [0,2]. If this pa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TransientParam-index?: int--><!--Device-TransientParam-index?: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -69,10 +57,6 @@ Vibration intensity. This parameter is optional. The value range is [0,100]. If 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TransientParam-intensity?: int--><!--Device-TransientParam-intensity?: int-End-->
 

@@ -12,13 +12,9 @@ import { networkManager } from 'networkManager';
 function addFirewallRule(admin: Want, firewallRule: FirewallRule): void
 ```
 
-Adds firewall rules for the device. This API is suitable for enterprise network security management and control scenarios. For example, it can be used to restrict network access from specific IP addresses, prevent malicious network attacks, control network communication of applications, and manage the trustlist or blocklist for network access. This helps enterprises implement refined control over network access and prevent network attacks and data leaks. In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22. [LogType](arkts-mdm-networkmanager-logtype-e.md#LogType) is supported since API version 23. > **NOTE：**> > - After a rule with [Action](arkts-mdm-networkmanager-action-e.md#Action) set to **ALLOW** is added, a rule with **Action** set > to **DENY** is added by default to discard or intercept all network data packets that do not meet the **ALLOW** > rule. > > - After the device is restarted, the firewall rules are cleared. > > - Rule matching order: Domain name filtering rules (added via > [addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md#addDomainFilterRule)) are matched first, followed by IP firewall rules > added by this API. Within both domain name rules and IP rules, matching is performed in the order of ALLOW, DENY, > and REJECT [actions](arkts-mdm-networkmanager-action-e.md#Action).
+Adds firewall rules for the device. This API is suitable for enterprise network security management and control scenarios. For example, it can be used to restrict network access from specific IP addresses, prevent malicious network attacks, control network communication of applications, and manage the trustlist or blocklist for network access. This helps enterprises implement refined control over network access and prevent network attacks and data leaks. In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22. [LogType](arkts-mdm-networkmanager-logtype-e.md#logtype) is supported since API version 23. > **NOTE：**> > - After a rule with [Action](arkts-mdm-networkmanager-action-e.md#action) set to **ALLOW** is added, a rule with **Action** set > to **DENY** is added by default to discard or intercept all network data packets that do not meet the **ALLOW** > rule. > > - After the device is restarted, the firewall rules are cleared. > > - Rule matching order: Domain name filtering rules (added via > [addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md#adddomainfilterrule)) are matched first, followed by IP firewall rules > added by this API. Within both domain name rules and IP rules, matching is performed in the order of ALLOW, DENY, > and REJECT [actions](arkts-mdm-networkmanager-action-e.md#action).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -44,7 +40,7 @@ Adds firewall rules for the device. This API is suitable for enterprise network 
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { networkManager } from '@kit.MDMKit';

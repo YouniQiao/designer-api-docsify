@@ -10,11 +10,9 @@ Kill processes by bundle name
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f.md#killProcessesByBundleName)
+**Substitutes:** killProcessesByBundleName
 
 **Required permissions:** ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -36,7 +34,7 @@ Kill processes by bundle name
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -63,11 +61,9 @@ Kill processes by bundle name
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f.md#killProcessesByBundleName)
+**Substitutes:** killProcessesByBundleName
 
 **Required permissions:** ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -84,7 +80,7 @@ Kill processes by bundle name
 | bundleName | string | Yes | bundle name. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | cut off the callback function of the account process. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

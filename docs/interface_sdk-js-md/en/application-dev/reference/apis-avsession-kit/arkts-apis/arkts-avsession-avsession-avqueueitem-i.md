@@ -4,10 +4,6 @@ The item in the playlist of the session
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface AVQueueItem--><!--Device-avSession-interface AVQueueItem-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -30,10 +26,6 @@ The media description of the item in the playlist.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVQueueItem-description?: AVMediaDescription--><!--Device-AVQueueItem-description?: AVMediaDescription-End-->
@@ -51,10 +43,6 @@ Sequence number of the item in the playlist.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

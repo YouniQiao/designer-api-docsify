@@ -4,10 +4,6 @@ Obtains the network selection mode option.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export interface NetworkSelectionModeOptions--><!--Device-radio-export interface NetworkSelectionModeOptions-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -32,10 +28,6 @@ Indicates the network information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetworkSelectionModeOptions-networkInformation: NetworkInformation--><!--Device-NetworkSelectionModeOptions-networkInformation: NetworkInformation-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -53,10 +45,6 @@ Indicates whether to continue selecting the network selection mode.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkSelectionModeOptions-resumeSelection: boolean--><!--Device-NetworkSelectionModeOptions-resumeSelection: boolean-End-->
 
@@ -76,10 +64,6 @@ Indicates the network search mode of the SIM card.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetworkSelectionModeOptions-selectMode: NetworkSelectionMode--><!--Device-NetworkSelectionModeOptions-selectMode: NetworkSelectionMode-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -97,10 +81,6 @@ Indicates the card slot index number, ranging from 0 to the maximum card slot in
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkSelectionModeOptions-slotId: int--><!--Device-NetworkSelectionModeOptions-slotId: int-End-->
 

@@ -12,15 +12,13 @@ import { router } from 'router';
 function getStateByUrl(url: string): Array<RouterState>
 ```
 
-Obtains the status information about a page by its URL. > **NOTE：**> > - Since API version 12, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
+Obtains the status information about a page by its URL. > **NOTE：**> > - Since API version 12, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getStateByUrl](arkts-arkui-arkui-uicontext-router-c.md#getStateByUrl)
+**Substitutes:** [getStateByUrl](arkts-arkui-arkui-uicontext-router-c.md#getstatebyurl)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +40,7 @@ Obtains the status information about a page by its URL. > **NOTE：**> > - Since
 | --- | --- |
 | Array&lt;RouterState&gt; | Page routing state. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let options: Array<router.RouterState> = router.getStateByUrl('pages/index');

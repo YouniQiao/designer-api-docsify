@@ -17,10 +17,6 @@ Fills in and gets the metadata for a downloadable profile.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
 <!--Device-eSIM-function getDownloadableProfileMetadata(slotId: int, portIndex: int,                                          profile: DownloadableProfile, forceDisableProfile: boolean): Promise<GetDownloadableProfileMetadataResult>--><!--Device-eSIM-function getDownloadableProfileMetadata(slotId: int, portIndex: int,                                          profile: DownloadableProfile, forceDisableProfile: boolean): Promise<GetDownloadableProfileMetadataResult>-End-->
@@ -36,7 +32,7 @@ Fills in and gets the metadata for a downloadable profile.
 | slotId | int | Yes | Indicates the card slot index number. |
 | portIndex | int | Yes | Index of the port for the slot. |
 | profile | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | Yes | The Bound Profile Package data returned by SM-DP+ server. |
-| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform the operation. Otherwise, the resultCode should return [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#RESULT_MUST_DISABLE_PROFILE) to allow the user to agree to this operation first. |
+| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform the operation. Otherwise, the resultCode should return [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#resultmustdisableprofile) to allow the user to agree to this operation first. |
 
 **Return value:**
 
@@ -55,7 +51,7 @@ Fills in and gets the metadata for a downloadable profile.
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

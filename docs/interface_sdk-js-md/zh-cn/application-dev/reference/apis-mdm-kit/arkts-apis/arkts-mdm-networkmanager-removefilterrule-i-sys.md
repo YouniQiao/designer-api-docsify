@@ -4,10 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-networkManager-interface RemoveFilterRule--><!--Device-networkManager-interface RemoveFilterRule-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -25,10 +21,6 @@ action?: Action
 **类型：** Action
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,10 +42,6 @@ ip目标地址。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RemoveFilterRule-destAddr?: string--><!--Device-RemoveFilterRule-destAddr?: string-End-->
@@ -73,10 +61,6 @@ ip目标端口。
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,10 +82,6 @@ direction: Direction
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RemoveFilterRule-direction: Direction--><!--Device-RemoveFilterRule-direction: Direction-End-->
@@ -121,10 +101,6 @@ protocol?: Protocol
 **类型：** Protocol
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,10 +122,6 @@ ip源地址。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RemoveFilterRule-srcAddr?: string--><!--Device-RemoveFilterRule-srcAddr?: string-End-->
@@ -170,10 +142,6 @@ ip源端口。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RemoveFilterRule-srcPort?: string--><!--Device-RemoveFilterRule-srcPort?: string-End-->
@@ -193,10 +161,6 @@ uid?: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

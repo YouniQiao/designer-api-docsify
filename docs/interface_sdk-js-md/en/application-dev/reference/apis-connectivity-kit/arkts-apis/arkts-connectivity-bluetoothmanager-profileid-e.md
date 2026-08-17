@@ -4,11 +4,9 @@ The enum of profile id.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [ProfileId](arkts-connectivity-constant-profileid-e.md#ProfileId)
+**Substitutes:** [ProfileId](arkts-connectivity-constant-profileid-e.md#profileid)
 
 <!--Device-bluetoothManager-enum ProfileId--><!--Device-bluetoothManager-enum ProfileId-End-->
 
@@ -24,11 +22,9 @@ A2DP profile.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [PROFILE_A2DP_SOURCE](arkts-connectivity-constant-profileid-e.md#PROFILE_A2DP_SOURCE)
+**Substitutes:** [PROFILE_A2DP_SOURCE](arkts-connectivity-constant-profileid-e.md#profilea2dpsource)
 
 <!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1--><!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1-End-->
 
@@ -44,11 +40,9 @@ HFP profile.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [PROFILE_HANDSFREE_AUDIO_GATEWAY](arkts-connectivity-constant-profileid-e.md#PROFILE_HANDSFREE_AUDIO_GATEWAY)
+**Substitutes:** [PROFILE_HANDSFREE_AUDIO_GATEWAY](arkts-connectivity-constant-profileid-e.md#profilehandsfreeaudiogateway)
 
 <!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4--><!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4-End-->
 
@@ -64,11 +58,9 @@ Human Interface Device (HID) profile.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [PROFILE_HID_HOST](arkts-connectivity-constant-profileid-e.md#PROFILE_HID_HOST)
+**Substitutes:** [PROFILE_HID_HOST](arkts-connectivity-constant-profileid-e.md#profilehidhost)
 
 <!--Device-ProfileId-PROFILE_HID_HOST = 6--><!--Device-ProfileId-PROFILE_HID_HOST = 6-End-->
 
@@ -84,11 +76,9 @@ PAN profile.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [PROFILE_PAN_NETWORK](arkts-connectivity-constant-profileid-e.md#PROFILE_PAN_NETWORK)
+**Substitutes:** [PROFILE_PAN_NETWORK](arkts-connectivity-constant-profileid-e.md#profilepannetwork)
 
 <!--Device-ProfileId-PROFILE_PAN_NETWORK = 7--><!--Device-ProfileId-PROFILE_PAN_NETWORK = 7-End-->
 

@@ -4,10 +4,6 @@ The module defines the application version information. You can use getAppVersio
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AppVersionInfo--><!--Device-unnamed-export interface AppVersionInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -25,10 +21,6 @@ Application name.
 **Default:** appName
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used only in the FA model.
@@ -53,10 +45,6 @@ Application version number.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** 
 - API version 12 and later: This API can be used only in the FA model.
 
@@ -79,10 +67,6 @@ Application version name.
 **Default:** versionName
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used only in the FA model.

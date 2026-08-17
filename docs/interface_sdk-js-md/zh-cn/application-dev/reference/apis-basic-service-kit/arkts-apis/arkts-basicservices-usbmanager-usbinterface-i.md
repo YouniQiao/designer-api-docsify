@@ -1,12 +1,8 @@
 # USBInterface
 
-一个[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration)中可以含有多个USBInterface，每个USBInterface提供一个功能。
+一个[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#usbconfiguration)中可以含有多个USBInterface，每个USBInterface提供一个功能。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-usbManager-interface USBInterface--><!--Device-usbManager-interface USBInterface-End-->
 
@@ -24,10 +20,6 @@ alternateSetting: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBInterface-alternateSetting: int--><!--Device-USBInterface-alternateSetting: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -43,10 +35,6 @@ clazz: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBInterface-clazz: int--><!--Device-USBInterface-clazz: int-End-->
 
@@ -64,10 +52,6 @@ endpoints: Array<USBEndpoint>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBInterface-endpoints: Array<USBEndpoint>--><!--Device-USBInterface-endpoints: Array<USBEndpoint>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -83,10 +67,6 @@ id: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBInterface-id: int--><!--Device-USBInterface-id: int-End-->
 
@@ -104,10 +84,6 @@ name: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBInterface-name: string--><!--Device-USBInterface-name: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -124,10 +100,6 @@ protocol: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBInterface-protocol: int--><!--Device-USBInterface-protocol: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -143,10 +115,6 @@ subClass: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBInterface-subClass: int--><!--Device-USBInterface-subClass: int-End-->
 

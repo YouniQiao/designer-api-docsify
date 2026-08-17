@@ -16,8 +16,6 @@ Installs specified applications. This API uses an asynchronous callback to retur
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [install](arkts-mdm-bundlemanager-install-f.md#install)(admin: Want, hapFilePaths: Array&lt;string&gt;, installParam?: InstallParam)
@@ -51,7 +49,7 @@ Installs specified applications. This API uses an asynchronous callback to retur
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.MDMKit';
@@ -84,8 +82,6 @@ function install(admin: Want, hapFilePaths: Array<string>, installParam: Install
 Installs applications with specified parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -121,7 +117,7 @@ Installs applications with specified parameters. This API uses an asynchronous c
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.MDMKit';

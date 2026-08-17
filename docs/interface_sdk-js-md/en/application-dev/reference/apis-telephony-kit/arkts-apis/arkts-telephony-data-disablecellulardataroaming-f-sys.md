@@ -16,10 +16,6 @@ Disable cellular data roaming.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-data-function disableCellularDataRoaming(slotId: int, callback: AsyncCallback<void>): void--><!--Device-data-function disableCellularDataRoaming(slotId: int, callback: AsyncCallback<void>): void-End-->
@@ -47,7 +43,7 @@ Disable cellular data roaming.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';
@@ -72,10 +68,6 @@ function disableCellularDataRoaming(slotId: int): Promise<void>
 Disable cellular data roaming.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -109,7 +101,7 @@ Disable cellular data roaming.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

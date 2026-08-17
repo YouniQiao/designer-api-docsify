@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-reminderAgentManager-interface LocalDateTime--><!--Device-reminderAgentManager-interface LocalDateTime-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -23,10 +19,6 @@ day: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-LocalDateTime-day: int--><!--Device-LocalDateTime-day: int-End-->
 
@@ -44,10 +36,6 @@ hour: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-LocalDateTime-hour: int--><!--Device-LocalDateTime-hour: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -63,10 +51,6 @@ minute: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-LocalDateTime-minute: int--><!--Device-LocalDateTime-minute: int-End-->
 
@@ -84,10 +68,6 @@ month: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-LocalDateTime-month: int--><!--Device-LocalDateTime-month: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -104,10 +84,6 @@ second?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-LocalDateTime-second?: int--><!--Device-LocalDateTime-second?: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -123,10 +99,6 @@ year: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-LocalDateTime-year: int--><!--Device-LocalDateTime-year: int-End-->
 

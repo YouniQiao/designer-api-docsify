@@ -4,10 +4,6 @@ Describes the options of the polygon. > **NOTE：**> > To standardize anonymous 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface PolygonOptions--><!--Device-unnamed-declare interface PolygonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Height. Unit: vp, The value must be greater than or equal to 0, The **undefined*
 **Type:** Length
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,10 +39,6 @@ Width. Unit: vp, The value must be greater than or equal to 0, The **undefined**
 **Type:** Length
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

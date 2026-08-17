@@ -4,11 +4,9 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md#EventType)
+**替代接口：** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md#eventtype)
 
 <!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
 
@@ -24,11 +22,9 @@ FAULT = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [FAULT](arkts-performanceanalysis-hiappevent-eventtype-e.md#FAULT)
+**替代接口：** [FAULT](arkts-performanceanalysis-hiappevent-eventtype-e.md#fault)
 
 <!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
@@ -44,11 +40,9 @@ STATISTIC = 2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [STATISTIC](arkts-performanceanalysis-hiappevent-eventtype-e.md#STATISTIC)
+**替代接口：** [STATISTIC](arkts-performanceanalysis-hiappevent-eventtype-e.md#statistic)
 
 <!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
@@ -64,11 +58,9 @@ SECURITY = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [SECURITY](arkts-performanceanalysis-hiappevent-eventtype-e.md#SECURITY)
+**替代接口：** [SECURITY](arkts-performanceanalysis-hiappevent-eventtype-e.md#security)
 
 <!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
 
@@ -84,11 +76,9 @@ BEHAVIOR = 4
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [BEHAVIOR](arkts-performanceanalysis-hiappevent-eventtype-e.md#BEHAVIOR)
+**替代接口：** [BEHAVIOR](arkts-performanceanalysis-hiappevent-eventtype-e.md#behavior)
 
 <!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 

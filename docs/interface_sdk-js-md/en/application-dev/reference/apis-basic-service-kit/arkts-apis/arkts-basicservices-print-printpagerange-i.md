@@ -4,10 +4,6 @@ Defines the print range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PrintPageRange--><!--Device-print-interface PrintPageRange-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -30,10 +26,6 @@ End page. The default value is the maximum number of pages of the file to be pri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintPageRange-endPage?: int--><!--Device-PrintPageRange-endPage?: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -50,10 +42,6 @@ Page range set of the file to print. The default value is empty.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintPageRange-pages?: Array<int>--><!--Device-PrintPageRange-pages?: Array<int>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -69,10 +57,6 @@ Start page. The default value is **1**.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintPageRange-startPage?: int--><!--Device-PrintPageRange-startPage?: int-End-->
 

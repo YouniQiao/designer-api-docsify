@@ -4,10 +4,6 @@ Enum for provides MSTensor data type
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-export enum DataType--><!--Device-mindSporeLite-export enum DataType-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -21,10 +17,6 @@ TYPE_UNKNOWN = 0
 data type is unknown
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ data type is int8
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataType-NUMBER_TYPE_INT8 = 32--><!--Device-DataType-NUMBER_TYPE_INT8 = 32-End-->
@@ -61,10 +49,6 @@ NUMBER_TYPE_INT16 = 33
 data type is int16
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ data type is int32
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataType-NUMBER_TYPE_INT32 = 34--><!--Device-DataType-NUMBER_TYPE_INT32 = 34-End-->
@@ -101,10 +81,6 @@ NUMBER_TYPE_INT64 = 35
 data type is int64
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,10 +98,6 @@ data type is uint8
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataType-NUMBER_TYPE_UINT8 = 37--><!--Device-DataType-NUMBER_TYPE_UINT8 = 37-End-->
@@ -141,10 +113,6 @@ NUMBER_TYPE_UINT16 = 38
 data type is uint16
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +130,6 @@ data type is uint32
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataType-NUMBER_TYPE_UINT32 = 39--><!--Device-DataType-NUMBER_TYPE_UINT32 = 39-End-->
@@ -181,10 +145,6 @@ NUMBER_TYPE_UINT64 = 40
 data type is uint64
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,10 +162,6 @@ data type is float16
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataType-NUMBER_TYPE_FLOAT16 = 42--><!--Device-DataType-NUMBER_TYPE_FLOAT16 = 42-End-->
@@ -222,10 +178,6 @@ data type is float32
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataType-NUMBER_TYPE_FLOAT32 = 43--><!--Device-DataType-NUMBER_TYPE_FLOAT32 = 43-End-->
@@ -241,10 +193,6 @@ NUMBER_TYPE_FLOAT64 = 44
 data type is float64
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

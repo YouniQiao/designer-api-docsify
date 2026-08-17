@@ -12,13 +12,9 @@ import { selectionManager } from 'selectionManager';
 function getSelectionContent(): Promise<string>
 ```
 
-Obtains the content of the selected text. This API uses a promise to return the result. This API must be called in the [on('selectionCompleted')](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md#on_selectionCompleted) callback and is valid only after the word selection completion event is triggered.
+Obtains the content of the selected text. This API uses a promise to return the result. This API must be called in the [on('selectionCompleted')](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md#onselectioncompleted) callback and is valid only after the word selection completion event is triggered.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-selectionManager-function getSelectionContent(): Promise<string>--><!--Device-selectionManager-function getSelectionContent(): Promise<string>-End-->
 
@@ -43,7 +39,7 @@ Obtains the content of the selected text. This API uses a promise to return the 
 | [33600007](../../apis-basic-services-kit/errorcode-selection.md#33600007-selected-text-is-out-of-range) | The length of selected content is out of range. |
 | [33600008](../../apis-basic-services-kit/errorcode-selection.md#33600008-content-acquisition-timed-out) | Getting the selected content times out. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 

@@ -4,11 +4,9 @@ Configuring parameters in reverse geocode requests
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ReverseGeoCodeRequest](arkts-location-geolocationmanager-reversegeocoderequest-i.md#ReverseGeoCodeRequest)
+**Substitutes:** [ReverseGeoCodeRequest](arkts-location-geolocationmanager-reversegeocoderequest-i.md#reversegeocoderequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,8 +30,6 @@ latitude: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [latitude](arkts-location-geolocationmanager-reversegeocoderequest-i.md#latitude)
@@ -51,8 +47,6 @@ locale?: string
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -72,8 +66,6 @@ longitude: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [longitude](arkts-location-geolocationmanager-reversegeocoderequest-i.md#longitude)
@@ -92,11 +84,9 @@ maxItems?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [maxItems](arkts-location-geolocationmanager-reversegeocoderequest-i.md#maxItems)
+**Substitutes:** [maxItems](arkts-location-geolocationmanager-reversegeocoderequest-i.md#maxitems)
 
 <!--Device-ReverseGeoCodeRequest-maxItems?: number--><!--Device-ReverseGeoCodeRequest-maxItems?: number-End-->
 

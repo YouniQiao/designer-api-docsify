@@ -4,11 +4,9 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#KVStoreResultSet)
+**Substitutes:** [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#kvstoreresultset)
 
 <!--Device-distributedData-interface KvStoreResultSet--><!--Device-distributedData-interface KvStoreResultSet-End-->
 
@@ -24,8 +22,6 @@ Obtains the total number of rows in the result set.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** getCount
@@ -40,7 +36,7 @@ Obtains the total number of rows in the result set.
 | --- | --- |
 | number | Total number of rows obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -69,8 +65,6 @@ Obtains the KV pair from the current position.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** getEntry
@@ -85,7 +79,7 @@ Obtains the KV pair from the current position.
 | --- | --- |
 | Entry | KV pair obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -114,8 +108,6 @@ Obtains the current data read position (position from which data is read) in the
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** getPosition
@@ -130,7 +122,7 @@ Obtains the current data read position (position from which data is read) in the
 | --- | --- |
 | number | Current data read position obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -159,8 +151,6 @@ Checks whether the data read position is after the last row.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** isAfterLast
@@ -175,7 +165,7 @@ Checks whether the data read position is after the last row.
 | --- | --- |
 | boolean | Returns **true** if the data read position is after the last row; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -204,8 +194,6 @@ Checks whether the data read position is before the first row.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** isBeforeFirst
@@ -220,7 +208,7 @@ Checks whether the data read position is before the first row.
 | --- | --- |
 | boolean | Returns **true** if the data read position is before the first row; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -249,8 +237,6 @@ Checks whether the data read position is the first row.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** isFirst
@@ -265,7 +251,7 @@ Checks whether the data read position is the first row.
 | --- | --- |
 | boolean | Returns **true** if the first row is being read; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -294,8 +280,6 @@ Checks whether the data read position is the last row.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** isLast
@@ -310,7 +294,7 @@ Checks whether the data read position is the last row.
 | --- | --- |
 | boolean | Returns **true** if the last row is being read; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -339,8 +323,6 @@ Moves the data read position with the specified offset from the current position
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** move
@@ -361,7 +343,7 @@ Moves the data read position with the specified offset from the current position
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -390,8 +372,6 @@ Moves the data read position to the first row. If the result set is empty, **fal
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** moveToFirst
@@ -406,7 +386,7 @@ Moves the data read position to the first row. If the result set is empty, **fal
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -435,8 +415,6 @@ Moves the data read position to the last row. If the result set is empty, **fals
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** moveToLast
@@ -451,7 +429,7 @@ Moves the data read position to the last row. If the result set is empty, **fals
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -480,8 +458,6 @@ Moves the data read position to the next row. If the result set is empty, **fals
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** moveToNext
@@ -496,7 +472,7 @@ Moves the data read position to the next row. If the result set is empty, **fals
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -525,8 +501,6 @@ Moves the data read position from 0 to an absolute position.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** moveToPosition
@@ -547,7 +521,7 @@ Moves the data read position from 0 to an absolute position.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;
@@ -576,8 +550,6 @@ Moves the data read position to the previous row. If the result set is empty, **
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** moveToPrevious
@@ -592,7 +564,7 @@ Moves the data read position to the previous row. If the result set is empty, **
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvStore;

@@ -4,10 +4,6 @@ ArrayList是一种线性数据结构，底层基于数组实现，解决了固�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class ArrayList--><!--Device-unnamed-declare class ArrayList-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -22,10 +18,6 @@ $_iterator(): IterableIterator<T>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-$_iterator(): IterableIterator<T>--><!--Device-ArrayList-$_iterator(): IterableIterator<T>-End-->
@@ -38,7 +30,7 @@ $_iterator(): IterableIterator<T>
 | --- | --- |
 | IterableIterator&lt;T&gt; |  |
 
-## 示例
+**示例**
 
 ```TypeScript
 let arrayList: ArrayList<int> = new ArrayList<int>();
@@ -77,10 +69,6 @@ while(!temp.done) {
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>--><!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -99,7 +87,7 @@ while(!temp.done) {
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -140,10 +128,6 @@ add(element: T): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-add(element: T): boolean--><!--Device-ArrayList-add(element: T): boolean-End-->
@@ -168,7 +152,7 @@ add(element: T): boolean
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -223,10 +207,6 @@ clear(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-clear(): void--><!--Device-ArrayList-clear(): void-End-->
@@ -239,7 +219,7 @@ clear(): void
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -273,10 +253,6 @@ clone(): ArrayList<T>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-clone(): ArrayList<T>--><!--Device-ArrayList-clone(): ArrayList<T>-End-->
@@ -295,7 +271,7 @@ clone(): ArrayList<T>
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clone method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -331,10 +307,6 @@ ArrayList的构造函数，用于创建一个空的ArrayList实例。该构造�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-constructor()--><!--Device-ArrayList-constructor()-End-->
@@ -347,7 +319,7 @@ ArrayList的构造函数，用于创建一个空的ArrayList实例。该构造�
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArrayList's constructor cannot be directly invoked. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -371,10 +343,6 @@ convertToArray(): Array<T>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-convertToArray(): Array<T>--><!--Device-ArrayList-convertToArray(): Array<T>-End-->
@@ -393,7 +361,7 @@ convertToArray(): Array<T>
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The convertToArray method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -429,10 +397,6 @@ forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, 
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void--><!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void-End-->
@@ -452,7 +416,7 @@ forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, 
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -480,10 +444,6 @@ forEach(callbackFn: ArrayListForEachCb<T>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-forEach(callbackFn: ArrayListForEachCb<T>): void--><!--Device-ArrayList-forEach(callbackFn: ArrayListForEachCb<T>): void-End-->
@@ -496,7 +456,7 @@ forEach(callbackFn: ArrayListForEachCb<T>): void
 | --- | --- | --- | --- |
 | callbackFn | [ArrayListForEachCb](arkts-arkts-arraylistforeachcb-t.md)&lt;T&gt; | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ArrayListForEachCb } from '@ohos.util.ArrayList';
@@ -522,10 +482,6 @@ getCapacity(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-getCapacity(): int--><!--Device-ArrayList-getCapacity(): int-End-->
@@ -544,7 +500,7 @@ getCapacity(): int
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getCapacity method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -580,10 +536,6 @@ getIndexOf(element: T): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-getIndexOf(element: T): int--><!--Device-ArrayList-getIndexOf(element: T): int-End-->
@@ -608,7 +560,7 @@ getIndexOf(element: T): int
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOf method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -649,10 +601,6 @@ getLastIndexOf(element: T): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-getLastIndexOf(element: T): int--><!--Device-ArrayList-getLastIndexOf(element: T): int-End-->
@@ -677,7 +625,7 @@ getLastIndexOf(element: T): int
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLastIndexOf method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -719,10 +667,6 @@ has(element: T): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-has(element: T): boolean--><!--Device-ArrayList-has(element: T): boolean-End-->
@@ -747,7 +691,7 @@ has(element: T): boolean
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let arrayList = new ArrayList<string>();
@@ -765,10 +709,6 @@ increaseCapacityTo(newCapacity: int): void
 如果传入的新容量大于或等于ArrayList中的元素个数，将容量变更为新容量；如果传入的新容量小于ArrayList中的元素个数，则容量保持不变。当需要批量添加元素时，可预先调用此方法扩充容量，避免多次自动扩容带来的性能开销。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -788,7 +728,7 @@ increaseCapacityTo(newCapacity: int): void
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The increaseCapacityTo method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -826,10 +766,6 @@ insert(element: T, index: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-insert(element: T, index: int): void--><!--Device-ArrayList-insert(element: T, index: int): void-End-->
@@ -850,7 +786,7 @@ insert(element: T, index: int): void
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The insert method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -884,10 +820,6 @@ isEmpty(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-isEmpty(): boolean--><!--Device-ArrayList-isEmpty(): boolean-End-->
@@ -906,7 +838,7 @@ isEmpty(): boolean
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -942,10 +874,6 @@ remove(element: T): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-remove(element: T): boolean--><!--Device-ArrayList-remove(element: T): boolean-End-->
@@ -970,7 +898,7 @@ remove(element: T): boolean
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1006,10 +934,6 @@ removeByIndex(index: int): T
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-removeByIndex(index: int): T--><!--Device-ArrayList-removeByIndex(index: int): T-End-->
@@ -1035,7 +959,7 @@ removeByIndex(index: int): T
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeByIndex method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "index" is out of range. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1073,10 +997,6 @@ removeByRange(fromIndex: int, toIndex: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-removeByRange(fromIndex: int, toIndex: int): void--><!--Device-ArrayList-removeByRange(fromIndex: int, toIndex: int): void-End-->
@@ -1097,7 +1017,7 @@ removeByRange(fromIndex: int, toIndex: int): void
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeByRange method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of fromIndex or toIndex is out of range. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1132,10 +1052,6 @@ replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void--><!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void-End-->
@@ -1155,7 +1071,7 @@ replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The replaceAllElements method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let arrayList = new ArrayList<number>();
@@ -1179,10 +1095,6 @@ replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void--><!--Device-ArrayList-replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void-End-->
@@ -1195,7 +1107,7 @@ replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void
 | --- | --- | --- | --- |
 | callbackFn | [ArrayListReplaceCb](arkts-arkts-arraylistreplacecb-t.md)&lt;T&gt; | 是 | 用于操作元素并返回替换值的回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ArrayListReplaceCb } from '@ohos.util.ArrayList';
@@ -1222,10 +1134,6 @@ sort(comparator?: ArrayListComparatorFn<T>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-sort(comparator?: ArrayListComparatorFn<T>): void--><!--Device-ArrayList-sort(comparator?: ArrayListComparatorFn<T>): void-End-->
@@ -1244,7 +1152,7 @@ sort(comparator?: ArrayListComparatorFn<T>): void
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The sort method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1293,10 +1201,6 @@ subArrayList(fromIndex: int, toIndex: int): ArrayList<T>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-subArrayList(fromIndex: int, toIndex: int): ArrayList<T>--><!--Device-ArrayList-subArrayList(fromIndex: int, toIndex: int): ArrayList<T>-End-->
@@ -1323,7 +1227,7 @@ subArrayList(fromIndex: int, toIndex: int): ArrayList<T>
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The subArrayList method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of fromIndex or toIndex is out of range. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1359,10 +1263,6 @@ trimToCurrentLength(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArrayList-trimToCurrentLength(): void--><!--Device-ArrayList-trimToCurrentLength(): void-End-->
@@ -1375,7 +1275,7 @@ trimToCurrentLength(): void
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The trimToCurrentLength method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1412,10 +1312,6 @@ ArrayList的元素个数。
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

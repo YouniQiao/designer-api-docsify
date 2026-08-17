@@ -16,10 +16,6 @@ Obtains radio access technology (RAT) of the registered network.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-radio-function getRadioTechSync(slotId: int): NetworkRadioTech--><!--Device-radio-function getRadioTechSync(slotId: int): NetworkRadioTech-End-->

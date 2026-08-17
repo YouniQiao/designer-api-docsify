@@ -4,9 +4,7 @@ Define the ContainerSpan attribute functions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface ContainerSpanAttribute--><!--Device-unnamed-export declare interface ContainerSpanAttribute-End-->
 
@@ -20,9 +18,7 @@ applyAttributesFinish(): void
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ContainerSpanAttribute-applyAttributesFinish(): void--><!--Device-ContainerSpanAttribute-applyAttributesFinish(): void-End-->
 
@@ -34,9 +30,7 @@ attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute> | undefine
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ContainerSpanAttribute-attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute> | undefined): this--><!--Device-ContainerSpanAttribute-attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute> | undefined): this-End-->
 
@@ -60,9 +54,7 @@ debugLine(sourceLine: string, moduleName?: string): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ContainerSpanAttribute-debugLine(sourceLine: string, moduleName?: string): this--><!--Device-ContainerSpanAttribute-debugLine(sourceLine: string, moduleName?: string): this-End-->
 
@@ -87,9 +79,7 @@ setContainerSpanOptions(): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ContainerSpanAttribute-setContainerSpanOptions(): this--><!--Device-ContainerSpanAttribute-setContainerSpanOptions(): this-End-->
 
@@ -107,9 +97,7 @@ textBackgroundStyle(style: TextBackgroundStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ContainerSpanAttribute-textBackgroundStyle(style: TextBackgroundStyle | undefined): this--><!--Device-ContainerSpanAttribute-textBackgroundStyle(style: TextBackgroundStyle | undefined): this-End-->
 
@@ -135,9 +123,7 @@ Notify the component is finished setting up its attributes.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

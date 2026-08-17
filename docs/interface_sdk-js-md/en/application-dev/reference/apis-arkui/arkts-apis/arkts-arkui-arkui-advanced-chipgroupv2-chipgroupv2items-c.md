@@ -6,10 +6,6 @@ Defines items of chip group.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class ChipGroupV2Items--><!--Device-unnamed-export declare class ChipGroupV2Items-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,10 +37,6 @@ constructor(items: ChipGroupV2ItemConfig[])
 The constructor of ChipGroupV2Items
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

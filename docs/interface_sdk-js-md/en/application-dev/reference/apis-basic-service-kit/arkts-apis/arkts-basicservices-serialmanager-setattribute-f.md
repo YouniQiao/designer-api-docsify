@@ -16,10 +16,6 @@ Sets the parameters of the serial port. If this method is not called, the defaul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-serialManager-function setAttribute(portId: int, attribute: SerialAttribute): void--><!--Device-serialManager-function setAttribute(portId: int, attribute: SerialAttribute): void-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -28,7 +24,7 @@ Sets the parameters of the serial port. If this method is not called, the defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getPortList). |
+| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 | attribute | [SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md) | Yes | Configuration parameters of the serial port. |
 
 **Error codes:**
@@ -40,7 +36,7 @@ Sets the parameters of the serial port. If this method is not called, the defaul
 | [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) | PortId does not exist. |
 | [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
 
-## Examples
+**Examples**
 
 The following sample code shows the basic process for calling the setAttribute API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 

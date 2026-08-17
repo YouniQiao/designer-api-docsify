@@ -4,10 +4,6 @@ Defines the options for saving audio clips.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-picker-class AudioSaveOptions--><!--Device-picker-class AudioSaveOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -29,10 +25,6 @@ File names of the audio clips to save. If this parameter is not specified, the u
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

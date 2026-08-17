@@ -6,10 +6,6 @@ The context of an ability or an application. It allows access to application-spe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class BackupExtensionContext--><!--Device-unnamed-declare class BackupExtensionContext-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -31,10 +27,6 @@ Indicates backup dir.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

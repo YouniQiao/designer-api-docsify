@@ -10,10 +10,6 @@ function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sms-function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sms-function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -25,7 +21,7 @@ function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 指示是否支持IMS发送SMS的回调函数，默认false。<br/>-true：是<br/>-false：否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 指示是否支持IMS发送SMS的回调函数，默认false。<br/>-true：是<br/>-false：否 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -60,10 +56,6 @@ function isImsSmsSupported(slotId: int): Promise<boolean>
 如果IMS已注册并且在IMS上支持SMS，则支持通过IMS发送SMS。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-sms-function isImsSmsSupported(slotId: int): Promise<boolean>--><!--Device-sms-function isImsSmsSupported(slotId: int): Promise<boolean>-End-->
 
@@ -94,7 +86,7 @@ function isImsSmsSupported(slotId: int): Promise<boolean>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

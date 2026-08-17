@@ -16,8 +16,6 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 11
 
 **Substitutes:** null
@@ -53,8 +51,6 @@ function queryAllPrintJobs(): Promise<void>
 Queries all print jobs. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 11
 

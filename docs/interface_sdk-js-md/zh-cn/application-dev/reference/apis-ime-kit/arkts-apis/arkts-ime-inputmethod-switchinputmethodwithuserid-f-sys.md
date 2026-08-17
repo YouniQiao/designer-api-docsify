@@ -10,10 +10,6 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -50,7 +46,7 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

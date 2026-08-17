@@ -4,11 +4,9 @@ Manages notifications.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
-**Substitutes:** [notification/notification](arkts-notification.md#@ohos.notification)
+**Substitutes:** [notification/notification](arkts-notification.md#ohosnotification)
 
 <!--Device-unnamed-declare class Notification--><!--Device-unnamed-declare class Notification-End-->
 
@@ -31,11 +29,9 @@ Displays the notification.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
-**Substitutes:** [notification/notification](arkts-notification.md#@ohos.notification)
+**Substitutes:** [notification/notification](arkts-notification.md#ohosnotification)
 
 <!--Device-Notification-static show(options?: ShowNotificationOptions): void--><!--Device-Notification-static show(options?: ShowNotificationOptions): void-End-->
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-unnamed-export default class File--><!--Device-unnamed-export default class File-End-->
@@ -22,8 +20,6 @@ static access(options: FileAccessOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 **替代接口：** [access](arkts-corefile-file-fs-access-f.md#access)
@@ -38,7 +34,7 @@ static access(options: FileAccessOption): void
 | --- | --- | --- | --- |
 | options | [FileAccessOption](arkts-corefile-system-file-fileaccessoption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -129,11 +125,9 @@ static copy(options: FileCopyOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
-**替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyFile)
+**替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile)
 
 <!--Device-File-static copy(options: FileCopyOption): void--><!--Device-File-static copy(options: FileCopyOption): void-End-->
 
@@ -145,7 +139,7 @@ static copy(options: FileCopyOption): void
 | --- | --- | --- | --- |
 | options | [FileCopyOption](arkts-corefile-system-file-filecopyoption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -238,8 +232,6 @@ static delete(options: FileDeleteOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 **替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
@@ -254,7 +246,7 @@ static delete(options: FileDeleteOption): void
 | --- | --- | --- | --- |
 | options | [FileDeleteOption](arkts-corefile-system-file-filedeleteoption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -345,8 +337,6 @@ static get(options: FileGetOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 **替代接口：** [stat](arkts-corefile-file-fs-stat-f.md#stat)
@@ -361,7 +351,7 @@ static get(options: FileGetOption): void
 | --- | --- | --- | --- |
 | options | [FileGetOption](arkts-corefile-system-file-filegetoption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -452,11 +442,9 @@ static list(options: FileListOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
-**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-File-static list(options: FileListOption): void--><!--Device-File-static list(options: FileListOption): void-End-->
 
@@ -468,7 +456,7 @@ static list(options: FileListOption): void
 | --- | --- | --- | --- |
 | options | [FileListOption](arkts-corefile-system-file-filelistoption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -559,8 +547,6 @@ static mkdir(options: FileMkdirOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 **替代接口：** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
@@ -575,7 +561,7 @@ static mkdir(options: FileMkdirOption): void
 | --- | --- | --- | --- |
 | options | [FileMkdirOption](arkts-corefile-system-file-filemkdiroption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -666,11 +652,9 @@ static move(options: FileMoveOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
-**替代接口：** [moveFile](arkts-corefile-file-fs-movefile-f.md#moveFile)
+**替代接口：** [moveFile](arkts-corefile-file-fs-movefile-f.md#movefile)
 
 <!--Device-File-static move(options: FileMoveOption): void--><!--Device-File-static move(options: FileMoveOption): void-End-->
 
@@ -682,7 +666,7 @@ static move(options: FileMoveOption): void
 | --- | --- | --- | --- |
 | options | [FileMoveOption](arkts-corefile-system-file-filemoveoption-depr-i.md) | 是 | 文件过滤选项。默认不进行过滤。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -775,8 +759,6 @@ static readArrayBuffer(options: FileReadArrayBufferOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 **替代接口：** [read](arkts-corefile-file-fs-read-f.md#read)
@@ -791,7 +773,7 @@ static readArrayBuffer(options: FileReadArrayBufferOption): void
 | --- | --- | --- | --- |
 | options | [FileReadArrayBufferOption](arkts-corefile-system-file-filereadarraybufferoption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -886,11 +868,9 @@ static readText(options: FileReadTextOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
-**替代接口：** [readText](arkts-corefile-file-fs-readtext-f.md#readText)
+**替代接口：** [readText](arkts-corefile-file-fs-readtext-f.md#readtext)
 
 <!--Device-File-static readText(options: FileReadTextOption): void--><!--Device-File-static readText(options: FileReadTextOption): void-End-->
 
@@ -902,7 +882,7 @@ static readText(options: FileReadTextOption): void
 | --- | --- | --- | --- |
 | options | [FileReadTextOption](arkts-corefile-system-file-filereadtextoption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -993,8 +973,6 @@ static rmdir(options: FileRmdirOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 **替代接口：** [rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir)
@@ -1009,7 +987,7 @@ static rmdir(options: FileRmdirOption): void
 | --- | --- | --- | --- |
 | options | [FileRmdirOption](arkts-corefile-system-file-filermdiroption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -1100,8 +1078,6 @@ static writeArrayBuffer(options: FileWriteArrayBufferOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 **替代接口：** [write](arkts-corefile-file-fs-write-f.md#write)
@@ -1116,7 +1092,7 @@ static writeArrayBuffer(options: FileWriteArrayBufferOption): void
 | --- | --- | --- | --- |
 | options | [FileWriteArrayBufferOption](arkts-corefile-system-file-filewritearraybufferoption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 
@@ -1209,8 +1185,6 @@ static writeText(options: FileWriteTextOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 **替代接口：** [write](arkts-corefile-file-fs-write-f.md#write)
@@ -1225,7 +1199,7 @@ static writeText(options: FileWriteTextOption): void
 | --- | --- | --- | --- |
 | options | [FileWriteTextOption](arkts-corefile-system-file-filewritetextoption-depr-i.md) | 是 | 接口选项。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 

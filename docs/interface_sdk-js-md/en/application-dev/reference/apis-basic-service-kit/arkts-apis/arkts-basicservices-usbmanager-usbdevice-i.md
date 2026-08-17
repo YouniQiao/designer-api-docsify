@@ -4,10 +4,6 @@ Represents the USB device information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usbManager-interface USBDevice--><!--Device-usbManager-interface USBDevice-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -30,10 +26,6 @@ Bus address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBDevice-busNum: int--><!--Device-USBDevice-busNum: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -49,10 +41,6 @@ Device class.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBDevice-clazz: int--><!--Device-USBDevice-clazz: int-End-->
 
@@ -70,10 +58,6 @@ Device configuration descriptor information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBDevice-configs: Array<USBConfiguration>--><!--Device-USBDevice-configs: Array<USBConfiguration>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -89,10 +73,6 @@ Device address.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBDevice-devAddress: int--><!--Device-USBDevice-devAddress: int-End-->
 
@@ -110,10 +90,6 @@ Device manufacturer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBDevice-manufacturerName: string--><!--Device-USBDevice-manufacturerName: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -129,10 +105,6 @@ Device name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBDevice-name: string--><!--Device-USBDevice-name: string-End-->
 
@@ -150,10 +122,6 @@ Product ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBDevice-productId: int--><!--Device-USBDevice-productId: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -169,10 +137,6 @@ Product name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBDevice-productName: string--><!--Device-USBDevice-productName: string-End-->
 
@@ -190,10 +154,6 @@ Device protocol code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBDevice-protocol: int--><!--Device-USBDevice-protocol: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -209,10 +169,6 @@ Sequence number.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBDevice-serial: string--><!--Device-USBDevice-serial: string-End-->
 
@@ -230,10 +186,6 @@ Device subclass.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBDevice-subClass: int--><!--Device-USBDevice-subClass: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -250,10 +202,6 @@ Vendor ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBDevice-vendorId: int--><!--Device-USBDevice-vendorId: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -269,10 +217,6 @@ Version number.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBDevice-version: string--><!--Device-USBDevice-version: string-End-->
 

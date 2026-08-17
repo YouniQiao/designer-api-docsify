@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-window-interface WindowInfo--><!--Device-window-interface WindowInfo-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -25,10 +21,6 @@ Ability的名称。
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WindowInfo-abilityName: string--><!--Device-WindowInfo-abilityName: string-End-->
 
@@ -48,10 +40,6 @@ bundleName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WindowInfo-bundleName: string--><!--Device-WindowInfo-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -64,15 +52,11 @@ bundleName: string
 isFocused?: boolean
 ```
 
-窗口是否获焦。true表示窗口获焦；false表示窗口未获焦。返回值与[isFocused()](arkts-arkui-window-window-i.md#isFocused)接口一致。
+窗口是否获焦。true表示窗口获焦；false表示窗口未获焦。返回值与[isFocused()](arkts-arkui-window-window-i.md#isfocused)接口一致。
 
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WindowInfo-isFocused?: boolean--><!--Device-WindowInfo-isFocused?: boolean-End-->
 
@@ -92,10 +76,6 @@ rect: Rect
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WindowInfo-rect: Rect--><!--Device-WindowInfo-rect: Rect-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -114,10 +94,6 @@ windowId: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WindowInfo-windowId: int--><!--Device-WindowInfo-windowId: int-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -135,10 +111,6 @@ windowStatusType: WindowStatusType
 **类型：** WindowStatusType
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WindowInfo-windowStatusType: WindowStatusType--><!--Device-WindowInfo-windowStatusType: WindowStatusType-End-->
 

@@ -4,10 +4,6 @@ VoIP通话信息。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-call-export interface VoipCallAttribute--><!--Device-call-export interface VoipCallAttribute-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -25,10 +21,6 @@ abilityName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-abilityName: string--><!--Device-VoipCallAttribute-abilityName: string-End-->
 
@@ -48,10 +40,6 @@ extensionId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VoipCallAttribute-extensionId: string--><!--Device-VoipCallAttribute-extensionId: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -69,10 +57,6 @@ isConferenceCall?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-isConferenceCall?: boolean--><!--Device-VoipCallAttribute-isConferenceCall?: boolean-End-->
 
@@ -92,10 +76,6 @@ isVoiceAnswerSupported?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VoipCallAttribute-isVoiceAnswerSupported?: boolean--><!--Device-VoipCallAttribute-isVoiceAnswerSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -113,10 +93,6 @@ showBannerForIncomingCall?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-showBannerForIncomingCall?: boolean--><!--Device-VoipCallAttribute-showBannerForIncomingCall?: boolean-End-->
 
@@ -136,10 +112,6 @@ userName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VoipCallAttribute-userName: string--><!--Device-VoipCallAttribute-userName: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -157,10 +129,6 @@ userProfile: image.PixelMap
 **类型：** image.PixelMap
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-userProfile: image.PixelMap--><!--Device-VoipCallAttribute-userProfile: image.PixelMap-End-->
 
@@ -180,10 +148,6 @@ voipBundleName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VoipCallAttribute-voipBundleName: string--><!--Device-VoipCallAttribute-voipBundleName: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -201,10 +165,6 @@ VoIP通话唯一Id。
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VoipCallAttribute-voipCallId: string--><!--Device-VoipCallAttribute-voipCallId: string-End-->
 

@@ -1,14 +1,10 @@
 # Image
 
-提供基本的图像操作，包括获取图像信息、读写图像数据。调用[readNextImage](arkts-image-sendableimage-imagereceiver-i.md#readNextImage)和 [readLatestImage](arkts-image-sendableimage-imagereceiver-i.md#readLatestImage)接口时会返回Image。继承自 [ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再 使用该实例。
+提供基本的图像操作，包括获取图像信息、读写图像数据。调用[readNextImage](arkts-image-sendableimage-imagereceiver-i.md#readnextimage)和 [readLatestImage](arkts-image-sendableimage-imagereceiver-i.md#readlatestimage)接口时会返回Image。继承自 [ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再 使用该实例。
 
 **继承/实现关系：** Image extends lang.ISendable
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-sendableImage-interface Image--><!--Device-sendableImage-interface Image-End-->
 
@@ -23,10 +19,6 @@ getComponent(componentType: image.ComponentType): Promise<image.Component>
 根据图像的组件类型从图像中获取组件缓存。使用Promise异步回调。getComponent是线程不安全的。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>--><!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>-End-->
 
@@ -44,7 +36,7 @@ getComponent(componentType: image.ComponentType): Promise<image.Component>
 | --- | --- |
 | Promise&lt;image.Component&gt; | Promise实例，用于异步返回组件缓冲区。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -76,10 +68,6 @@ release(): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-Image-release(): Promise<void>--><!--Device-Image-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -90,7 +78,7 @@ release(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | promise返回操作结果。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
@@ -124,10 +112,6 @@ clipRect: Region
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-Image-clipRect: Region--><!--Device-Image-clipRect: Region-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -143,10 +127,6 @@ readonly format: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-Image-readonly format: number--><!--Device-Image-readonly format: number-End-->
 
@@ -164,10 +144,6 @@ readonly size: Size
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-Image-readonly size: Size--><!--Device-Image-readonly size: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -178,15 +154,11 @@ readonly size: Size
 readonly timestamp: number
 ```
 
-图像时间戳。时间戳以纳秒为单位，通常是单调递增的。时间戳的具体含义和基准取决于图像的生产者，在相机预览/拍照场景，生产者就是相机。来自不同生产者的图像的时间戳可能有不同的含义和基准，因此可能无法进行比较。如果要获取某张照片的生 成时间，可以通过 [getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty) 接口读取相关的EXIF信息。
+图像时间戳。时间戳以纳秒为单位，通常是单调递增的。时间戳的具体含义和基准取决于图像的生产者，在相机预览/拍照场景，生产者就是相机。来自不同生产者的图像的时间戳可能有不同的含义和基准，因此可能无法进行比较。如果要获取某张照片的生 成时间，可以通过 [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty) 接口读取相关的EXIF信息。
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-Image-readonly timestamp: number--><!--Device-Image-readonly timestamp: number-End-->
 

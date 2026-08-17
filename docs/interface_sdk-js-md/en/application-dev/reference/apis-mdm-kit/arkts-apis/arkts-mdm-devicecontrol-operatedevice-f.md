@@ -16,10 +16,6 @@ Allows administrators to perform operations such as factory reset, restart, shut
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_OPERATE_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -33,7 +29,7 @@ Allows administrators to perform operations such as factory reset, restart, shut
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| operate | string | Yes | Operation to be performed, which can be any of the following: Only the following operations are supported: <br>- **resetFactory**: restore device factory settings. After this API is called, the device will be restored to factory settings immediately. Once the restoration is complete, all device data will be erased and cannot be restored. To protect against data loss caused by potential application attacks, enterprises should implement robust security measures for their applications. If factory reset has been disabled via [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setDisallowedPolicy), enable it first. <br>- **reboot**: restart devices. <br>- **shutDown**: shut down devices. <br>- **lockScreen**: lock the device screen. |
+| operate | string | Yes | Operation to be performed, which can be any of the following: Only the following operations are supported: <br>- **resetFactory**: restore device factory settings. After this API is called, the device will be restored to factory settings immediately. Once the restoration is complete, all device data will be erased and cannot be restored. To protect against data loss caused by potential application attacks, enterprises should implement robust security measures for their applications. If factory reset has been disabled via [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy), enable it first. <br>- **reboot**: restart devices. <br>- **shutDown**: shut down devices. <br>- **lockScreen**: lock the device screen. |
 | addition | string | No | Additional parameter for the operation. This parameter is reserved and does not need to be passed. |
 
 **Error codes:**
@@ -45,7 +41,7 @@ Allows administrators to perform operations such as factory reset, restart, shut
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceControl } from '@kit.MDMKit';
@@ -75,10 +71,6 @@ function operateDevice(admin: Want, operation: Operation, addition?: string): vo
 Allows the administrator to operate devices, for example, erasing disks.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_OPERATE_DEVICE
 

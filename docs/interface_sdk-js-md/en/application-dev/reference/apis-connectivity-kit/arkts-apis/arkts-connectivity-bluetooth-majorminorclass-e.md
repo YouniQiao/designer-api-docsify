@@ -4,11 +4,9 @@ The enum of major minor class of a bluetooth device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MajorMinorClass](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#MajorMinorClass)
+**Substitutes:** [MajorMinorClass](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#majorminorclass)
 
 <!--Device-bluetooth-enum MajorMinorClass--><!--Device-bluetooth-enum MajorMinorClass-End-->
 
@@ -24,11 +22,9 @@ The Minor Device Class field Computer Major Class
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMPUTER_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#COMPUTER_UNCATEGORIZED)
+**Substitutes:** [COMPUTER_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computeruncategorized)
 
 <!--Device-MajorMinorClass-COMPUTER_UNCATEGORIZED = 0x0100--><!--Device-MajorMinorClass-COMPUTER_UNCATEGORIZED = 0x0100-End-->
 
@@ -44,11 +40,9 @@ Desktop computer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMPUTER_DESKTOP](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#COMPUTER_DESKTOP)
+**Substitutes:** [COMPUTER_DESKTOP](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computerdesktop)
 
 <!--Device-MajorMinorClass-COMPUTER_DESKTOP = 0x0104--><!--Device-MajorMinorClass-COMPUTER_DESKTOP = 0x0104-End-->
 
@@ -64,11 +58,9 @@ Server.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMPUTER_SERVER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#COMPUTER_SERVER)
+**Substitutes:** [COMPUTER_SERVER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computerserver)
 
 <!--Device-MajorMinorClass-COMPUTER_SERVER = 0x0108--><!--Device-MajorMinorClass-COMPUTER_SERVER = 0x0108-End-->
 
@@ -84,11 +76,9 @@ Laptop.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMPUTER_LAPTOP](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#COMPUTER_LAPTOP)
+**Substitutes:** [COMPUTER_LAPTOP](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computerlaptop)
 
 <!--Device-MajorMinorClass-COMPUTER_LAPTOP = 0x010C--><!--Device-MajorMinorClass-COMPUTER_LAPTOP = 0x010C-End-->
 
@@ -104,11 +94,9 @@ Hand-held computer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMPUTER_HANDHELD_PC_PDA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#COMPUTER_HANDHELD_PC_PDA)
+**Substitutes:** [COMPUTER_HANDHELD_PC_PDA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computerhandheldpcpda)
 
 <!--Device-MajorMinorClass-COMPUTER_HANDHELD_PC_PDA = 0x0110--><!--Device-MajorMinorClass-COMPUTER_HANDHELD_PC_PDA = 0x0110-End-->
 
@@ -124,11 +112,9 @@ Palmtop computer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMPUTER_PALM_SIZE_PC_PDA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#COMPUTER_PALM_SIZE_PC_PDA)
+**Substitutes:** [COMPUTER_PALM_SIZE_PC_PDA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computerpalmsizepcpda)
 
 <!--Device-MajorMinorClass-COMPUTER_PALM_SIZE_PC_PDA = 0x0114--><!--Device-MajorMinorClass-COMPUTER_PALM_SIZE_PC_PDA = 0x0114-End-->
 
@@ -144,11 +130,9 @@ Wearable computer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMPUTER_WEARABLE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#COMPUTER_WEARABLE)
+**Substitutes:** [COMPUTER_WEARABLE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computerwearable)
 
 <!--Device-MajorMinorClass-COMPUTER_WEARABLE = 0x0118--><!--Device-MajorMinorClass-COMPUTER_WEARABLE = 0x0118-End-->
 
@@ -164,11 +148,9 @@ Tablet.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COMPUTER_TABLET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#COMPUTER_TABLET)
+**Substitutes:** [COMPUTER_TABLET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computertablet)
 
 <!--Device-MajorMinorClass-COMPUTER_TABLET = 0x011C--><!--Device-MajorMinorClass-COMPUTER_TABLET = 0x011C-End-->
 
@@ -184,11 +166,9 @@ Phone Major Class
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PHONE_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PHONE_UNCATEGORIZED)
+**Substitutes:** [PHONE_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phoneuncategorized)
 
 <!--Device-MajorMinorClass-PHONE_UNCATEGORIZED = 0x0200--><!--Device-MajorMinorClass-PHONE_UNCATEGORIZED = 0x0200-End-->
 
@@ -204,11 +184,9 @@ Portable phone.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PHONE_CELLULAR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PHONE_CELLULAR)
+**Substitutes:** [PHONE_CELLULAR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phonecellular)
 
 <!--Device-MajorMinorClass-PHONE_CELLULAR = 0x0204--><!--Device-MajorMinorClass-PHONE_CELLULAR = 0x0204-End-->
 
@@ -224,11 +202,9 @@ Cordless phone.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PHONE_CORDLESS](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PHONE_CORDLESS)
+**Substitutes:** [PHONE_CORDLESS](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phonecordless)
 
 <!--Device-MajorMinorClass-PHONE_CORDLESS = 0x0208--><!--Device-MajorMinorClass-PHONE_CORDLESS = 0x0208-End-->
 
@@ -244,11 +220,9 @@ Smartphone.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PHONE_SMART](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PHONE_SMART)
+**Substitutes:** [PHONE_SMART](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phonesmart)
 
 <!--Device-MajorMinorClass-PHONE_SMART = 0x020C--><!--Device-MajorMinorClass-PHONE_SMART = 0x020C-End-->
 
@@ -264,11 +238,9 @@ Modem or gateway phone.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PHONE_MODEM_OR_GATEWAY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PHONE_MODEM_OR_GATEWAY)
+**Substitutes:** [PHONE_MODEM_OR_GATEWAY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phonemodemorgateway)
 
 <!--Device-MajorMinorClass-PHONE_MODEM_OR_GATEWAY = 0x0210--><!--Device-MajorMinorClass-PHONE_MODEM_OR_GATEWAY = 0x0210-End-->
 
@@ -284,11 +256,9 @@ ISDN phone.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PHONE_ISDN](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PHONE_ISDN)
+**Substitutes:** [PHONE_ISDN](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phoneisdn)
 
 <!--Device-MajorMinorClass-PHONE_ISDN = 0x0214--><!--Device-MajorMinorClass-PHONE_ISDN = 0x0214-End-->
 
@@ -304,11 +274,9 @@ LAN/Network Access Point Major Class
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NETWORK_FULLY_AVAILABLE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#NETWORK_FULLY_AVAILABLE)
+**Substitutes:** [NETWORK_FULLY_AVAILABLE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#networkfullyavailable)
 
 <!--Device-MajorMinorClass-NETWORK_FULLY_AVAILABLE = 0x0300--><!--Device-MajorMinorClass-NETWORK_FULLY_AVAILABLE = 0x0300-End-->
 
@@ -324,11 +292,9 @@ Device used on network 1 to 17.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NETWORK_1_TO_17_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#NETWORK_1_TO_17_UTILIZED)
+**Substitutes:** [NETWORK_1_TO_17_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network1to17utilized)
 
 <!--Device-MajorMinorClass-NETWORK_1_TO_17_UTILIZED = 0x0320--><!--Device-MajorMinorClass-NETWORK_1_TO_17_UTILIZED = 0x0320-End-->
 
@@ -344,11 +310,9 @@ Device used on network 17 to 33.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NETWORK_17_TO_33_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#NETWORK_17_TO_33_UTILIZED)
+**Substitutes:** [NETWORK_17_TO_33_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network17to33utilized)
 
 <!--Device-MajorMinorClass-NETWORK_17_TO_33_UTILIZED = 0x0340--><!--Device-MajorMinorClass-NETWORK_17_TO_33_UTILIZED = 0x0340-End-->
 
@@ -364,11 +328,9 @@ Device used on network 33 to 50.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NETWORK_33_TO_50_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#NETWORK_33_TO_50_UTILIZED)
+**Substitutes:** [NETWORK_33_TO_50_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network33to50utilized)
 
 <!--Device-MajorMinorClass-NETWORK_33_TO_50_UTILIZED = 0x0360--><!--Device-MajorMinorClass-NETWORK_33_TO_50_UTILIZED = 0x0360-End-->
 
@@ -384,11 +346,9 @@ Device used on network 60 to 67.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NETWORK_60_TO_67_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#NETWORK_60_TO_67_UTILIZED)
+**Substitutes:** [NETWORK_60_TO_67_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network60to67utilized)
 
 <!--Device-MajorMinorClass-NETWORK_60_TO_67_UTILIZED = 0x0380--><!--Device-MajorMinorClass-NETWORK_60_TO_67_UTILIZED = 0x0380-End-->
 
@@ -404,11 +364,9 @@ Device used on network 67 to 83.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NETWORK_67_TO_83_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#NETWORK_67_TO_83_UTILIZED)
+**Substitutes:** [NETWORK_67_TO_83_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network67to83utilized)
 
 <!--Device-MajorMinorClass-NETWORK_67_TO_83_UTILIZED = 0x03A0--><!--Device-MajorMinorClass-NETWORK_67_TO_83_UTILIZED = 0x03A0-End-->
 
@@ -424,11 +382,9 @@ Device used on network 83 to 99.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NETWORK_83_TO_99_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#NETWORK_83_TO_99_UTILIZED)
+**Substitutes:** [NETWORK_83_TO_99_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network83to99utilized)
 
 <!--Device-MajorMinorClass-NETWORK_83_TO_99_UTILIZED = 0x03C0--><!--Device-MajorMinorClass-NETWORK_83_TO_99_UTILIZED = 0x03C0-End-->
 
@@ -444,11 +400,9 @@ Device without network service.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NETWORK_NO_SERVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#NETWORK_NO_SERVICE)
+**Substitutes:** [NETWORK_NO_SERVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#networknoservice)
 
 <!--Device-MajorMinorClass-NETWORK_NO_SERVICE = 0x03E0--><!--Device-MajorMinorClass-NETWORK_NO_SERVICE = 0x03E0-End-->
 
@@ -464,11 +418,9 @@ Unclassified audio or video device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_UNCATEGORIZED)
+**Substitutes:** [AUDIO_VIDEO_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideouncategorized)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_UNCATEGORIZED = 0x0400--><!--Device-MajorMinorClass-AUDIO_VIDEO_UNCATEGORIZED = 0x0400-End-->
 
@@ -484,11 +436,9 @@ Wearable audio or video headset.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_WEARABLE_HEADSET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_WEARABLE_HEADSET)
+**Substitutes:** [AUDIO_VIDEO_WEARABLE_HEADSET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideowearableheadset)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404--><!--Device-MajorMinorClass-AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404-End-->
 
@@ -504,11 +454,9 @@ Hands-free audio or video device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_HANDSFREE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_HANDSFREE)
+**Substitutes:** [AUDIO_VIDEO_HANDSFREE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideohandsfree)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HANDSFREE = 0x0408--><!--Device-MajorMinorClass-AUDIO_VIDEO_HANDSFREE = 0x0408-End-->
 
@@ -524,11 +472,9 @@ Audio or video microphone.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_MICROPHONE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_MICROPHONE)
+**Substitutes:** [AUDIO_VIDEO_MICROPHONE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideomicrophone)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_MICROPHONE = 0x0410--><!--Device-MajorMinorClass-AUDIO_VIDEO_MICROPHONE = 0x0410-End-->
 
@@ -544,11 +490,9 @@ Audio or video loudspeaker.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_LOUDSPEAKER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_LOUDSPEAKER)
+**Substitutes:** [AUDIO_VIDEO_LOUDSPEAKER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideoloudspeaker)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_LOUDSPEAKER = 0x0414--><!--Device-MajorMinorClass-AUDIO_VIDEO_LOUDSPEAKER = 0x0414-End-->
 
@@ -564,11 +508,9 @@ Audio or video headphones.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_HEADPHONES](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_HEADPHONES)
+**Substitutes:** [AUDIO_VIDEO_HEADPHONES](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideoheadphones)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HEADPHONES = 0x0418--><!--Device-MajorMinorClass-AUDIO_VIDEO_HEADPHONES = 0x0418-End-->
 
@@ -584,11 +526,9 @@ Portable audio or video device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_PORTABLE_AUDIO](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_PORTABLE_AUDIO)
+**Substitutes:** [AUDIO_VIDEO_PORTABLE_AUDIO](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideoportableaudio)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C--><!--Device-MajorMinorClass-AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C-End-->
 
@@ -604,11 +544,9 @@ In-vehicle audio or video device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_CAR_AUDIO](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_CAR_AUDIO)
+**Substitutes:** [AUDIO_VIDEO_CAR_AUDIO](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideocaraudio)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_CAR_AUDIO = 0x0420--><!--Device-MajorMinorClass-AUDIO_VIDEO_CAR_AUDIO = 0x0420-End-->
 
@@ -624,11 +562,9 @@ Audio or video STB device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_SET_TOP_BOX](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_SET_TOP_BOX)
+**Substitutes:** [AUDIO_VIDEO_SET_TOP_BOX](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideosettopbox)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_SET_TOP_BOX = 0x0424--><!--Device-MajorMinorClass-AUDIO_VIDEO_SET_TOP_BOX = 0x0424-End-->
 
@@ -644,11 +580,9 @@ High-fidelity speaker device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_HIFI_AUDIO](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_HIFI_AUDIO)
+**Substitutes:** [AUDIO_VIDEO_HIFI_AUDIO](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideohifiaudio)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HIFI_AUDIO = 0x0428--><!--Device-MajorMinorClass-AUDIO_VIDEO_HIFI_AUDIO = 0x0428-End-->
 
@@ -664,11 +598,9 @@ Video cassette recording (VCR) device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_VCR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_VCR)
+**Substitutes:** [AUDIO_VIDEO_VCR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideovcr)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VCR = 0x042C--><!--Device-MajorMinorClass-AUDIO_VIDEO_VCR = 0x042C-End-->
 
@@ -684,11 +616,9 @@ Camera.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_VIDEO_CAMERA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_VIDEO_CAMERA)
+**Substitutes:** [AUDIO_VIDEO_VIDEO_CAMERA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideovideocamera)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CAMERA = 0x0430--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CAMERA = 0x0430-End-->
 
@@ -704,11 +634,9 @@ Camcorder.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_CAMCORDER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_CAMCORDER)
+**Substitutes:** [AUDIO_VIDEO_CAMCORDER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideocamcorder)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_CAMCORDER = 0x0434--><!--Device-MajorMinorClass-AUDIO_VIDEO_CAMCORDER = 0x0434-End-->
 
@@ -724,11 +652,9 @@ Audio or video monitor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_VIDEO_MONITOR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_VIDEO_MONITOR)
+**Substitutes:** [AUDIO_VIDEO_VIDEO_MONITOR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideovideomonitor)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_MONITOR = 0x0438--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_MONITOR = 0x0438-End-->
 
@@ -744,11 +670,9 @@ Video display or loudspeaker.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER)
+**Substitutes:** [AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideovideodisplayandloudspeaker)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C-End-->
 
@@ -764,11 +688,9 @@ Video conferencing device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_VIDEO_CONFERENCING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_VIDEO_CONFERENCING)
+**Substitutes:** [AUDIO_VIDEO_VIDEO_CONFERENCING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideovideoconferencing)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440-End-->
 
@@ -784,11 +706,9 @@ Audio or video gaming toy.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_VIDEO_VIDEO_GAMING_TOY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#AUDIO_VIDEO_VIDEO_GAMING_TOY)
+**Substitutes:** [AUDIO_VIDEO_VIDEO_GAMING_TOY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audiovideovideogamingtoy)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448-End-->
 
@@ -804,11 +724,9 @@ Peripheral Major Class
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_NON_KEYBOARD_NON_POINTING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_NON_KEYBOARD_NON_POINTING)
+**Substitutes:** [PERIPHERAL_NON_KEYBOARD_NON_POINTING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheralnonkeyboardnonpointing)
 
 <!--Device-MajorMinorClass-PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500--><!--Device-MajorMinorClass-PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500-End-->
 
@@ -824,11 +742,9 @@ Keyboard device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_KEYBOARD](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_KEYBOARD)
+**Substitutes:** [PERIPHERAL_KEYBOARD](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheralkeyboard)
 
 <!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD = 0x0540--><!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD = 0x0540-End-->
 
@@ -844,11 +760,9 @@ Pointing peripheral device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_POINTING_DEVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_POINTING_DEVICE)
+**Substitutes:** [PERIPHERAL_POINTING_DEVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheralpointingdevice)
 
 <!--Device-MajorMinorClass-PERIPHERAL_POINTING_DEVICE = 0x0580--><!--Device-MajorMinorClass-PERIPHERAL_POINTING_DEVICE = 0x0580-End-->
 
@@ -864,11 +778,9 @@ Keyboard pointing device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_KEYBOARD_POINTING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_KEYBOARD_POINTING)
+**Substitutes:** [PERIPHERAL_KEYBOARD_POINTING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheralkeyboardpointing)
 
 <!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD_POINTING = 0x05C0--><!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD_POINTING = 0x05C0-End-->
 
@@ -884,11 +796,9 @@ Unclassified peripheral device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_UNCATEGORIZED)
+**Substitutes:** [PERIPHERAL_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheraluncategorized)
 
 <!--Device-MajorMinorClass-PERIPHERAL_UNCATEGORIZED = 0x0500--><!--Device-MajorMinorClass-PERIPHERAL_UNCATEGORIZED = 0x0500-End-->
 
@@ -904,11 +814,9 @@ Peripheral joystick.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_JOYSTICK](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_JOYSTICK)
+**Substitutes:** [PERIPHERAL_JOYSTICK](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheraljoystick)
 
 <!--Device-MajorMinorClass-PERIPHERAL_JOYSTICK = 0x0504--><!--Device-MajorMinorClass-PERIPHERAL_JOYSTICK = 0x0504-End-->
 
@@ -924,11 +832,9 @@ Peripheral game pad.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_GAMEPAD](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_GAMEPAD)
+**Substitutes:** [PERIPHERAL_GAMEPAD](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheralgamepad)
 
 <!--Device-MajorMinorClass-PERIPHERAL_GAMEPAD = 0x0508--><!--Device-MajorMinorClass-PERIPHERAL_GAMEPAD = 0x0508-End-->
 
@@ -944,11 +850,9 @@ Peripheral remote control device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_REMOTE_CONTROL](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_REMOTE_CONTROL)
+**Substitutes:** [PERIPHERAL_REMOTE_CONTROL](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheralremotecontrol)
 
 <!--Device-MajorMinorClass-PERIPHERAL_REMOTE_CONTROL = 0x05C0--><!--Device-MajorMinorClass-PERIPHERAL_REMOTE_CONTROL = 0x05C0-End-->
 
@@ -964,11 +868,9 @@ Peripheral sensing device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_SENSING_DEVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_SENSING_DEVICE)
+**Substitutes:** [PERIPHERAL_SENSING_DEVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheralsensingdevice)
 
 <!--Device-MajorMinorClass-PERIPHERAL_SENSING_DEVICE = 0x0510--><!--Device-MajorMinorClass-PERIPHERAL_SENSING_DEVICE = 0x0510-End-->
 
@@ -984,11 +886,9 @@ Peripheral digitizer tablet.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_DIGITIZER_TABLET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_DIGITIZER_TABLET)
+**Substitutes:** [PERIPHERAL_DIGITIZER_TABLET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheraldigitizertablet)
 
 <!--Device-MajorMinorClass-PERIPHERAL_DIGITIZER_TABLET = 0x0514--><!--Device-MajorMinorClass-PERIPHERAL_DIGITIZER_TABLET = 0x0514-End-->
 
@@ -1004,11 +904,9 @@ Peripheral card reader.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_CARD_READER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_CARD_READER)
+**Substitutes:** [PERIPHERAL_CARD_READER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheralcardreader)
 
 <!--Device-MajorMinorClass-PERIPHERAL_CARD_READER = 0x0518--><!--Device-MajorMinorClass-PERIPHERAL_CARD_READER = 0x0518-End-->
 
@@ -1024,11 +922,9 @@ Peripheral digital pen.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_DIGITAL_PEN](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_DIGITAL_PEN)
+**Substitutes:** [PERIPHERAL_DIGITAL_PEN](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheraldigitalpen)
 
 <!--Device-MajorMinorClass-PERIPHERAL_DIGITAL_PEN = 0x051C--><!--Device-MajorMinorClass-PERIPHERAL_DIGITAL_PEN = 0x051C-End-->
 
@@ -1044,11 +940,9 @@ Peripheral RFID scanner.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_SCANNER_RFID](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_SCANNER_RFID)
+**Substitutes:** [PERIPHERAL_SCANNER_RFID](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheralscannerrfid)
 
 <!--Device-MajorMinorClass-PERIPHERAL_SCANNER_RFID = 0x0520--><!--Device-MajorMinorClass-PERIPHERAL_SCANNER_RFID = 0x0520-End-->
 
@@ -1064,11 +958,9 @@ Gesture input device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PERIPHERAL_GESTURAL_INPUT](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#PERIPHERAL_GESTURAL_INPUT)
+**Substitutes:** [PERIPHERAL_GESTURAL_INPUT](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheralgesturalinput)
 
 <!--Device-MajorMinorClass-PERIPHERAL_GESTURAL_INPUT = 0x0522--><!--Device-MajorMinorClass-PERIPHERAL_GESTURAL_INPUT = 0x0522-End-->
 
@@ -1084,11 +976,9 @@ Imaging Major Class
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IMAGING_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#IMAGING_UNCATEGORIZED)
+**Substitutes:** [IMAGING_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#imaginguncategorized)
 
 <!--Device-MajorMinorClass-IMAGING_UNCATEGORIZED = 0x0600--><!--Device-MajorMinorClass-IMAGING_UNCATEGORIZED = 0x0600-End-->
 
@@ -1104,11 +994,9 @@ Imaging display device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IMAGING_DISPLAY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#IMAGING_DISPLAY)
+**Substitutes:** [IMAGING_DISPLAY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#imagingdisplay)
 
 <!--Device-MajorMinorClass-IMAGING_DISPLAY = 0x0610--><!--Device-MajorMinorClass-IMAGING_DISPLAY = 0x0610-End-->
 
@@ -1124,11 +1012,9 @@ Imaging camera device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IMAGING_CAMERA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#IMAGING_CAMERA)
+**Substitutes:** [IMAGING_CAMERA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#imagingcamera)
 
 <!--Device-MajorMinorClass-IMAGING_CAMERA = 0x0620--><!--Device-MajorMinorClass-IMAGING_CAMERA = 0x0620-End-->
 
@@ -1144,11 +1030,9 @@ Imaging scanner.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IMAGING_SCANNER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#IMAGING_SCANNER)
+**Substitutes:** [IMAGING_SCANNER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#imagingscanner)
 
 <!--Device-MajorMinorClass-IMAGING_SCANNER = 0x0640--><!--Device-MajorMinorClass-IMAGING_SCANNER = 0x0640-End-->
 
@@ -1164,11 +1048,9 @@ Imaging printer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IMAGING_PRINTER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#IMAGING_PRINTER)
+**Substitutes:** [IMAGING_PRINTER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#imagingprinter)
 
 <!--Device-MajorMinorClass-IMAGING_PRINTER = 0x0680--><!--Device-MajorMinorClass-IMAGING_PRINTER = 0x0680-End-->
 
@@ -1184,11 +1066,9 @@ Wearable Major Class
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WEARABLE_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#WEARABLE_UNCATEGORIZED)
+**Substitutes:** [WEARABLE_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearableuncategorized)
 
 <!--Device-MajorMinorClass-WEARABLE_UNCATEGORIZED = 0x0700--><!--Device-MajorMinorClass-WEARABLE_UNCATEGORIZED = 0x0700-End-->
 
@@ -1204,11 +1084,9 @@ Smart watch.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WEARABLE_WRIST_WATCH](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#WEARABLE_WRIST_WATCH)
+**Substitutes:** [WEARABLE_WRIST_WATCH](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearablewristwatch)
 
 <!--Device-MajorMinorClass-WEARABLE_WRIST_WATCH = 0x0704--><!--Device-MajorMinorClass-WEARABLE_WRIST_WATCH = 0x0704-End-->
 
@@ -1224,11 +1102,9 @@ Wearable pager.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WEARABLE_PAGER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#WEARABLE_PAGER)
+**Substitutes:** [WEARABLE_PAGER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearablepager)
 
 <!--Device-MajorMinorClass-WEARABLE_PAGER = 0x0708--><!--Device-MajorMinorClass-WEARABLE_PAGER = 0x0708-End-->
 
@@ -1244,11 +1120,9 @@ Smart jacket.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WEARABLE_JACKET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#WEARABLE_JACKET)
+**Substitutes:** [WEARABLE_JACKET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearablejacket)
 
 <!--Device-MajorMinorClass-WEARABLE_JACKET = 0x070C--><!--Device-MajorMinorClass-WEARABLE_JACKET = 0x070C-End-->
 
@@ -1264,11 +1138,9 @@ Wearable helmet.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WEARABLE_HELMET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#WEARABLE_HELMET)
+**Substitutes:** [WEARABLE_HELMET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearablehelmet)
 
 <!--Device-MajorMinorClass-WEARABLE_HELMET = 0x0710--><!--Device-MajorMinorClass-WEARABLE_HELMET = 0x0710-End-->
 
@@ -1284,11 +1156,9 @@ Wearable glasses.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WEARABLE_GLASSES](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#WEARABLE_GLASSES)
+**Substitutes:** [WEARABLE_GLASSES](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearableglasses)
 
 <!--Device-MajorMinorClass-WEARABLE_GLASSES = 0x0714--><!--Device-MajorMinorClass-WEARABLE_GLASSES = 0x0714-End-->
 
@@ -1304,11 +1174,9 @@ Minor Device Class field - Toy Major Class
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TOY_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#TOY_UNCATEGORIZED)
+**Substitutes:** [TOY_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toyuncategorized)
 
 <!--Device-MajorMinorClass-TOY_UNCATEGORIZED = 0x0800--><!--Device-MajorMinorClass-TOY_UNCATEGORIZED = 0x0800-End-->
 
@@ -1324,11 +1192,9 @@ Toy robot.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TOY_ROBOT](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#TOY_ROBOT)
+**Substitutes:** [TOY_ROBOT](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toyrobot)
 
 <!--Device-MajorMinorClass-TOY_ROBOT = 0x0804--><!--Device-MajorMinorClass-TOY_ROBOT = 0x0804-End-->
 
@@ -1344,11 +1210,9 @@ Toy vehicle.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TOY_VEHICLE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#TOY_VEHICLE)
+**Substitutes:** [TOY_VEHICLE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toyvehicle)
 
 <!--Device-MajorMinorClass-TOY_VEHICLE = 0x0808--><!--Device-MajorMinorClass-TOY_VEHICLE = 0x0808-End-->
 
@@ -1364,11 +1228,9 @@ Humanoid toy doll.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TOY_DOLL_ACTION_FIGURE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#TOY_DOLL_ACTION_FIGURE)
+**Substitutes:** [TOY_DOLL_ACTION_FIGURE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toydollactionfigure)
 
 <!--Device-MajorMinorClass-TOY_DOLL_ACTION_FIGURE = 0x080C--><!--Device-MajorMinorClass-TOY_DOLL_ACTION_FIGURE = 0x080C-End-->
 
@@ -1384,11 +1246,9 @@ Toy controller.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TOY_CONTROLLER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#TOY_CONTROLLER)
+**Substitutes:** [TOY_CONTROLLER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toycontroller)
 
 <!--Device-MajorMinorClass-TOY_CONTROLLER = 0x0810--><!--Device-MajorMinorClass-TOY_CONTROLLER = 0x0810-End-->
 
@@ -1404,11 +1264,9 @@ Toy gaming device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TOY_GAME](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#TOY_GAME)
+**Substitutes:** [TOY_GAME](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toygame)
 
 <!--Device-MajorMinorClass-TOY_GAME = 0x0814--><!--Device-MajorMinorClass-TOY_GAME = 0x0814-End-->
 
@@ -1424,11 +1282,9 @@ Minor Device Class field - Health
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_UNCATEGORIZED)
+**Substitutes:** [HEALTH_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthuncategorized)
 
 <!--Device-MajorMinorClass-HEALTH_UNCATEGORIZED = 0x0900--><!--Device-MajorMinorClass-HEALTH_UNCATEGORIZED = 0x0900-End-->
 
@@ -1444,11 +1300,9 @@ Blood pressure device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_BLOOD_PRESSURE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_BLOOD_PRESSURE)
+**Substitutes:** [HEALTH_BLOOD_PRESSURE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthbloodpressure)
 
 <!--Device-MajorMinorClass-HEALTH_BLOOD_PRESSURE = 0x0904--><!--Device-MajorMinorClass-HEALTH_BLOOD_PRESSURE = 0x0904-End-->
 
@@ -1464,11 +1318,9 @@ Thermometer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_THERMOMETER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_THERMOMETER)
+**Substitutes:** [HEALTH_THERMOMETER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healththermometer)
 
 <!--Device-MajorMinorClass-HEALTH_THERMOMETER = 0x0908--><!--Device-MajorMinorClass-HEALTH_THERMOMETER = 0x0908-End-->
 
@@ -1484,11 +1336,9 @@ Body scale.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_WEIGHING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_WEIGHING)
+**Substitutes:** [HEALTH_WEIGHING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthweighing)
 
 <!--Device-MajorMinorClass-HEALTH_WEIGHING = 0x090C--><!--Device-MajorMinorClass-HEALTH_WEIGHING = 0x090C-End-->
 
@@ -1504,11 +1354,9 @@ Blood glucose monitor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_GLUCOSE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_GLUCOSE)
+**Substitutes:** [HEALTH_GLUCOSE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthglucose)
 
 <!--Device-MajorMinorClass-HEALTH_GLUCOSE = 0x0910--><!--Device-MajorMinorClass-HEALTH_GLUCOSE = 0x0910-End-->
 
@@ -1524,11 +1372,9 @@ Pulse oximeter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_PULSE_OXIMETER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_PULSE_OXIMETER)
+**Substitutes:** [HEALTH_PULSE_OXIMETER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthpulseoximeter)
 
 <!--Device-MajorMinorClass-HEALTH_PULSE_OXIMETER = 0x0914--><!--Device-MajorMinorClass-HEALTH_PULSE_OXIMETER = 0x0914-End-->
 
@@ -1544,11 +1390,9 @@ Heart rate monitor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_PULSE_RATE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_PULSE_RATE)
+**Substitutes:** [HEALTH_PULSE_RATE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthpulserate)
 
 <!--Device-MajorMinorClass-HEALTH_PULSE_RATE = 0x0918--><!--Device-MajorMinorClass-HEALTH_PULSE_RATE = 0x0918-End-->
 
@@ -1564,11 +1408,9 @@ Health data display.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_DATA_DISPLAY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_DATA_DISPLAY)
+**Substitutes:** [HEALTH_DATA_DISPLAY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthdatadisplay)
 
 <!--Device-MajorMinorClass-HEALTH_DATA_DISPLAY = 0x091C--><!--Device-MajorMinorClass-HEALTH_DATA_DISPLAY = 0x091C-End-->
 
@@ -1584,11 +1426,9 @@ Step counter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_STEP_COUNTER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_STEP_COUNTER)
+**Substitutes:** [HEALTH_STEP_COUNTER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthstepcounter)
 
 <!--Device-MajorMinorClass-HEALTH_STEP_COUNTER = 0x0920--><!--Device-MajorMinorClass-HEALTH_STEP_COUNTER = 0x0920-End-->
 
@@ -1604,11 +1444,9 @@ Body composition analyzer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_BODY_COMPOSITION_ANALYZER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_BODY_COMPOSITION_ANALYZER)
+**Substitutes:** [HEALTH_BODY_COMPOSITION_ANALYZER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthbodycompositionanalyzer)
 
 <!--Device-MajorMinorClass-HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924--><!--Device-MajorMinorClass-HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924-End-->
 
@@ -1623,8 +1461,6 @@ HEALTH_PEAK_FLOW_MOITOR = 0x0928
 Hygrometer.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -1644,11 +1480,9 @@ Medication monitor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_MEDICATION_MONITOR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_MEDICATION_MONITOR)
+**Substitutes:** [HEALTH_MEDICATION_MONITOR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthmedicationmonitor)
 
 <!--Device-MajorMinorClass-HEALTH_MEDICATION_MONITOR = 0x092C--><!--Device-MajorMinorClass-HEALTH_MEDICATION_MONITOR = 0x092C-End-->
 
@@ -1664,11 +1498,9 @@ Prosthetic knee.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_KNEE_PROSTHESIS](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_KNEE_PROSTHESIS)
+**Substitutes:** [HEALTH_KNEE_PROSTHESIS](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthkneeprosthesis)
 
 <!--Device-MajorMinorClass-HEALTH_KNEE_PROSTHESIS = 0x0930--><!--Device-MajorMinorClass-HEALTH_KNEE_PROSTHESIS = 0x0930-End-->
 
@@ -1684,11 +1516,9 @@ Prosthetic ankle.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_ANKLE_PROSTHESIS](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_ANKLE_PROSTHESIS)
+**Substitutes:** [HEALTH_ANKLE_PROSTHESIS](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthankleprosthesis)
 
 <!--Device-MajorMinorClass-HEALTH_ANKLE_PROSTHESIS = 0x0934--><!--Device-MajorMinorClass-HEALTH_ANKLE_PROSTHESIS = 0x0934-End-->
 
@@ -1704,11 +1534,9 @@ Generic health management device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_GENERIC_HEALTH_MANAGER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_GENERIC_HEALTH_MANAGER)
+**Substitutes:** [HEALTH_GENERIC_HEALTH_MANAGER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthgenerichealthmanager)
 
 <!--Device-MajorMinorClass-HEALTH_GENERIC_HEALTH_MANAGER = 0x0938--><!--Device-MajorMinorClass-HEALTH_GENERIC_HEALTH_MANAGER = 0x0938-End-->
 
@@ -1724,11 +1552,9 @@ Personal mobility device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEALTH_PERSONAL_MOBILITY_DEVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#HEALTH_PERSONAL_MOBILITY_DEVICE)
+**Substitutes:** [HEALTH_PERSONAL_MOBILITY_DEVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#healthpersonalmobilitydevice)
 
 <!--Device-MajorMinorClass-HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C--><!--Device-MajorMinorClass-HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C-End-->
 

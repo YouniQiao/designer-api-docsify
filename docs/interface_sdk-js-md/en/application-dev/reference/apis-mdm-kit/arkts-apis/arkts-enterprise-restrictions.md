@@ -4,10 +4,6 @@ This **restrictions** module provides APIs for disallowing general features of d
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace restrictions--><!--Device-unnamed-declare namespace restrictions-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,43 +22,43 @@ import { restrictions } from 'restrictions';
 
 | Name | Description |
 | --- | --- |
-| [addDisallowedListForAccount](arkts-mdm-restrictions-adddisallowedlistforaccount-f.md#addDisallowedListForAccount) | Adds a list of applications that are not allowed to use a feature for a specified user. |
-| [getDisallowedListForAccount](arkts-mdm-restrictions-getdisallowedlistforaccount-f.md#getDisallowedListForAccount) | Obtains the list of applications that are not allowed to use a feature for a specified user. |
-| [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getDisallowedPolicy) | Queries whether a feature is disabled. |
-| [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getDisallowedPolicy) | Queries whether a specified device feature is disabled. |
-| [getDisallowedPolicyForAccount](arkts-mdm-restrictions-getdisallowedpolicyforaccount-f.md#getDisallowedPolicyForAccount) | Obtains the status of a feature for a specified user. |
-| [getDisallowedPolicyForAccount](arkts-mdm-restrictions-getdisallowedpolicyforaccount-f.md#getDisallowedPolicyForAccount) | Obtains the status of a feature for a specified user. |
-| [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md#getUserRestricted) | Obtains the disabled status of a setting item. |
-| [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md#getUserRestricted) | Obtains the disabled status of the specified device setting item. |
-| [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md#getUserRestrictedForAccount) | Obtains the disabled status of a setting item for a specified user. |
-| [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md#getUserRestrictedForAccount) | Obtains the disabled status of a setting item for a specified user. |
-| [removeDisallowedListForAccount](arkts-mdm-restrictions-removedisallowedlistforaccount-f.md#removeDisallowedListForAccount) | Removes the list of applications that are not allowed to use a feature for a specified user. |
-| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setDisallowedPolicy) | Disallows a feature. > **NOTE：**> > This API applies a device-level restriction policy that affects all users of the device. To set a restriction > policy for a specific user, use the > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount) API. |
-| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setDisallowedPolicy) | Enables or disables a specified device feature. Once disabled, the feature cannot be used. |
-| [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount) | Disallows a feature for a specified user. |
-| [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount) | Disallows a feature for a specified user. |
-| [setUserRestriction](arkts-mdm-restrictions-setuserrestriction-f.md#setUserRestriction) | Sets restrictions on user behaviors. |
-| [setUserRestriction](arkts-mdm-restrictions-setuserrestriction-f.md#setUserRestriction) | Restricts users from modifying specified device setting items. |
-| [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md#setUserRestrictionForAccount) | Sets restrictions on specified user behaviors. |
-| [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md#setUserRestrictionForAccount) | Restricts a specified user from modifying specified setting items. |
+| [addDisallowedListForAccount](arkts-mdm-restrictions-adddisallowedlistforaccount-f.md#adddisallowedlistforaccount) | Adds a list of applications that are not allowed to use a feature for a specified user. |
+| [getDisallowedListForAccount](arkts-mdm-restrictions-getdisallowedlistforaccount-f.md#getdisallowedlistforaccount) | Obtains the list of applications that are not allowed to use a feature for a specified user. |
+| [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy) | Queries whether a feature is disabled. |
+| [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy) | Queries whether a specified device feature is disabled. |
+| [getDisallowedPolicyForAccount](arkts-mdm-restrictions-getdisallowedpolicyforaccount-f.md#getdisallowedpolicyforaccount) | Obtains the status of a feature for a specified user. |
+| [getDisallowedPolicyForAccount](arkts-mdm-restrictions-getdisallowedpolicyforaccount-f.md#getdisallowedpolicyforaccount) | Obtains the status of a feature for a specified user. |
+| [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md#getuserrestricted) | Obtains the disabled status of a setting item. |
+| [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md#getuserrestricted) | Obtains the disabled status of the specified device setting item. |
+| [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md#getuserrestrictedforaccount) | Obtains the disabled status of a setting item for a specified user. |
+| [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md#getuserrestrictedforaccount) | Obtains the disabled status of a setting item for a specified user. |
+| [removeDisallowedListForAccount](arkts-mdm-restrictions-removedisallowedlistforaccount-f.md#removedisallowedlistforaccount) | Removes the list of applications that are not allowed to use a feature for a specified user. |
+| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) | Disallows a feature. > **NOTE：**> > This API applies a device-level restriction policy that affects all users of the device. To set a restriction > policy for a specific user, use the > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) API. |
+| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) | Enables or disables a specified device feature. Once disabled, the feature cannot be used. |
+| [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) | Disallows a feature for a specified user. |
+| [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) | Disallows a feature for a specified user. |
+| [setUserRestriction](arkts-mdm-restrictions-setuserrestriction-f.md#setuserrestriction) | Sets restrictions on user behaviors. |
+| [setUserRestriction](arkts-mdm-restrictions-setuserrestriction-f.md#setuserrestriction) | Restricts users from modifying specified device setting items. |
+| [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md#setuserrestrictionforaccount) | Sets restrictions on specified user behaviors. |
+| [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md#setuserrestrictionforaccount) | Restricts a specified user from modifying specified setting items. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [disableMicrophone](arkts-mdm-restrictions-disablemicrophone-f-sys.md#disableMicrophone) | Enables or disables the microphone. |
-| [isFingerprintAuthDisabled](arkts-mdm-restrictions-isfingerprintauthdisabled-f-sys.md#isFingerprintAuthDisabled) | Queries whether fingerprint authentication is disabled. |
-| [isHdcDisabled](arkts-mdm-restrictions-ishdcdisabled-f-sys.md#isHdcDisabled) | Queries whether HDC is disabled. This API uses an asynchronous callback to return the result. |
-| [isHdcDisabled](arkts-mdm-restrictions-ishdcdisabled-f-sys.md#isHdcDisabled-(System-API)) | Queries whether HDC is disabled. This API uses a promise to return the result. |
-| [isMicrophoneDisabled](arkts-mdm-restrictions-ismicrophonedisabled-f-sys.md#isMicrophoneDisabled) | Queries whether the microphone is disabled. |
-| [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f-sys.md#isPrinterDisabled) | Queries whether the printing capability of a device is disabled. This API uses an asynchronous callback to return the result. |
-| [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f-sys.md#isPrinterDisabled-(System-API)) | Queries whether the printing capability of a device is disabled. This API uses a promise to return the result. |
-| [setFingerprintAuthDisabled](arkts-mdm-restrictions-setfingerprintauthdisabled-f-sys.md#setFingerprintAuthDisabled) | Enables or disables fingerprint authentication. |
-| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f-sys.md#setHdcDisabled) | Enables or disables [HDC](../../../../device-dev/subsystems/subsys-toolchain-hdc-guide.md). This API uses an asynchronous callback to return the result. |
-| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f-sys.md#setHdcDisabled-(System-API)) | Enables or disables HDC on a device. This API uses a promise to return the result. |
-| [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f-sys.md#setPrinterDisabled) | Enables or disables the printing capability of the device. This API uses an asynchronous callback to return the result. |
-| [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f-sys.md#setPrinterDisabled-(System-API)) | Enables or disables the printing capability of the device. This API uses a promise to return the result. |
+| [disableMicrophone](arkts-mdm-restrictions-disablemicrophone-f-sys.md#disablemicrophone) | Enables or disables the microphone. |
+| [isFingerprintAuthDisabled](arkts-mdm-restrictions-isfingerprintauthdisabled-f-sys.md#isfingerprintauthdisabled) | Queries whether fingerprint authentication is disabled. |
+| [isHdcDisabled](arkts-mdm-restrictions-ishdcdisabled-f-sys.md#ishdcdisabled) | Queries whether HDC is disabled. This API uses an asynchronous callback to return the result. |
+| [isHdcDisabled](arkts-mdm-restrictions-ishdcdisabled-f-sys.md#ishdcdisabled-system-api) | Queries whether HDC is disabled. This API uses a promise to return the result. |
+| [isMicrophoneDisabled](arkts-mdm-restrictions-ismicrophonedisabled-f-sys.md#ismicrophonedisabled) | Queries whether the microphone is disabled. |
+| [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f-sys.md#isprinterdisabled) | Queries whether the printing capability of a device is disabled. This API uses an asynchronous callback to return the result. |
+| [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f-sys.md#isprinterdisabled-system-api) | Queries whether the printing capability of a device is disabled. This API uses a promise to return the result. |
+| [setFingerprintAuthDisabled](arkts-mdm-restrictions-setfingerprintauthdisabled-f-sys.md#setfingerprintauthdisabled) | Enables or disables fingerprint authentication. |
+| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f-sys.md#sethdcdisabled) | Enables or disables [HDC](../../../../device-dev/subsystems/subsys-toolchain-hdc-guide.md). This API uses an asynchronous callback to return the result. |
+| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f-sys.md#sethdcdisabled-system-api) | Enables or disables HDC on a device. This API uses a promise to return the result. |
+| [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f-sys.md#setprinterdisabled) | Enables or disables the printing capability of the device. This API uses an asynchronous callback to return the result. |
+| [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f-sys.md#setprinterdisabled-system-api) | Enables or disables the printing capability of the device. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Enums

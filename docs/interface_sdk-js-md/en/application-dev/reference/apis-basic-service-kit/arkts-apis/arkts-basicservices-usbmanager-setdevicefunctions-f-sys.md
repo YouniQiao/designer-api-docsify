@@ -16,10 +16,6 @@ Sets the current USB function list in Device mode. This API uses a promise to re
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_USB_CONFIG
 
 <!--Device-usbManager-function setDeviceFunctions(funcs: FunctionType): Promise<void>--><!--Device-usbManager-function setDeviceFunctions(funcs: FunctionType): Promise<void>-End-->
@@ -61,10 +57,6 @@ function setDeviceFunctions(funcs: int): Promise<void>
 Sets the current USB function list in Device mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USB_CONFIG
 

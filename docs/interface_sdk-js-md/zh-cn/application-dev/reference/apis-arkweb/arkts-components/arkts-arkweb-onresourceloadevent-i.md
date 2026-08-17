@@ -1,12 +1,8 @@
 # OnResourceLoadEvent
 
-定义加载url时触发。
+定义加载URL时触发的回调信息，包括资源URL。适用于需要监控资源加载行为的场景，提升资源管理的可见性和性能优化。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface OnResourceLoadEvent--><!--Device-unnamed-declare interface OnResourceLoadEvent-End-->
 
@@ -23,10 +19,6 @@ url: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

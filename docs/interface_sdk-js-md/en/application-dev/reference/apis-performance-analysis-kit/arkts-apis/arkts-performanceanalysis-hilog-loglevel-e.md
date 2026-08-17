@@ -4,10 +4,6 @@ Enumerates the log levels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hilog-enum LogLevel--><!--Device-hilog-enum LogLevel-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
@@ -21,10 +17,6 @@ DEBUG = 3
 Log level used to record more detailed process information than INFO logs to help developers analyze service processes and locate faults.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Log level used to record key service process nodes and exceptions that occur dur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LogLevel-INFO = 4--><!--Device-LogLevel-INFO = 4-End-->
@@ -61,10 +49,6 @@ WARN = 5
 Log level used to record severe, unexpected faults that have little impact on users and can be rectified by the programs themselves or through simple operations.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ Log level used to record program or functional errors that affect the normal run
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LogLevel-ERROR = 6--><!--Device-LogLevel-ERROR = 6-End-->
@@ -101,10 +81,6 @@ FATAL = 7
 Log level used to record program or functionality crashes that cannot be rectified.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

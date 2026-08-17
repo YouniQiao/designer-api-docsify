@@ -16,10 +16,6 @@ Obtains the system time zone in synchronous mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemDateTime-function getTimezoneSync(): string--><!--Device-systemDateTime-function getTimezoneSync(): string-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -30,7 +26,7 @@ Obtains the system time zone in synchronous mode.
 | --- | --- |
 | string | System time zone. For details, see Supported System Time Zones . |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

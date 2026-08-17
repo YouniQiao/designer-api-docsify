@@ -4,10 +4,6 @@ Describes the information of restoring factory settings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface FactoryResetInfo--><!--Device-update-export interface FactoryResetInfo-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -31,10 +27,6 @@ Duration required for restoring factory settings, in minutes. The value range is
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

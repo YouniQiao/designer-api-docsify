@@ -1,14 +1,10 @@
 # MeshResource
 
-The mesh data description resource for the geometry node
+Mesh resource, which inherits from SceneResource.
 
-**Inheritance/Implementation:** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
+**Inheritance/Implementation:** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#sceneresource)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MeshResource--><!--Device-unnamed-export interface MeshResource-End-->
 

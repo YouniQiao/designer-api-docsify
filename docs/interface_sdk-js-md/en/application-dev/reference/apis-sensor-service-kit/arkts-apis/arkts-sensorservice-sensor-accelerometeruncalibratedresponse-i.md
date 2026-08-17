@@ -1,14 +1,10 @@
 # AccelerometerUncalibratedResponse
 
-Describes the uncalibrated acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
+Describes the uncalibrated acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
 
-**Inheritance/Implementation:** AccelerometerUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**Inheritance/Implementation:** AccelerometerUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-interface AccelerometerUncalibratedResponse--><!--Device-sensor-interface AccelerometerUncalibratedResponse-End-->
 
@@ -32,10 +28,6 @@ Uncalibrated acceleration bias along the x-axis of the device, in m/s?.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccelerometerUncalibratedResponse-biasX: double--><!--Device-AccelerometerUncalibratedResponse-biasX: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -51,10 +43,6 @@ Uncalibrated acceleration bias along the y-axis of the device, in m/s?.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccelerometerUncalibratedResponse-biasY: double--><!--Device-AccelerometerUncalibratedResponse-biasY: double-End-->
 
@@ -72,10 +60,6 @@ Uncalibrated acceleration bias along the z-axis of the device, in m/s?.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccelerometerUncalibratedResponse-biasZ: double--><!--Device-AccelerometerUncalibratedResponse-biasZ: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -91,10 +75,6 @@ Uncalibrated acceleration along the x-axis of the device, in m/s?.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccelerometerUncalibratedResponse-x: double--><!--Device-AccelerometerUncalibratedResponse-x: double-End-->
 
@@ -112,10 +92,6 @@ Uncalibrated acceleration along the y-axis of the device, in m/s?.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccelerometerUncalibratedResponse-y: double--><!--Device-AccelerometerUncalibratedResponse-y: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -131,10 +107,6 @@ Uncalibrated acceleration along the z-axis of the device, in m/s?.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccelerometerUncalibratedResponse-z: double--><!--Device-AccelerometerUncalibratedResponse-z: double-End-->
 

@@ -10,8 +10,6 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [cancel](arkts-ability-wantagent-cancel-f.md#cancel)
@@ -29,7 +27,7 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to cancel. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Cancel the callback method for Want in WantAgent. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -94,8 +92,6 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [cancel](arkts-ability-wantagent-cancel-f.md#cancel)
@@ -118,7 +114,7 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

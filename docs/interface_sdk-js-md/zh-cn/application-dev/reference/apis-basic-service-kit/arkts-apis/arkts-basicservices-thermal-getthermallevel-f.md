@@ -10,11 +10,9 @@ function getThermalLevel(): ThermalLevel
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getLevel](arkts-basicservices-thermal-getlevel-f.md#getLevel)
+**替代接口：** [getLevel](arkts-basicservices-thermal-getlevel-f.md#getlevel)
 
 <!--Device-thermal-function getThermalLevel(): ThermalLevel--><!--Device-thermal-function getThermalLevel(): ThermalLevel-End-->
 
@@ -26,7 +24,7 @@ function getThermalLevel(): ThermalLevel
 | --- | --- |
 | [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | 热档位信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let level = thermal.getThermalLevel();

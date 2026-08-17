@@ -20,10 +20,6 @@ Shares data based on the specified shared resource ID and participants. This API
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sharing-function share(      sharingResource: string,      participants: Array<Participant>,      callback: AsyncCallback<Result<Array<Result<Participant>>>>    ): void--><!--Device-sharing-function share(      sharingResource: string,      participants: Array<Participant>,      callback: AsyncCallback<Result<Array<Result<Participant>>>>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -46,7 +42,7 @@ Shares data based on the specified shared resource ID and participants. This API
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -88,10 +84,6 @@ Shares data based on the specified shared resource ID and participants. This API
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sharing-function share(      sharingResource: string,      participants: Array<Participant>    ): Promise<Result<Array<Result<Participant>>>>--><!--Device-sharing-function share(      sharingResource: string,      participants: Array<Participant>    ): Promise<Result<Array<Result<Participant>>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -119,7 +111,7 @@ Shares data based on the specified shared resource ID and participants. This API
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

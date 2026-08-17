@@ -10,8 +10,6 @@ Cancels a notification with the specified ID. This API uses an asynchronous call
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [cancel](arkts-notification-notificationmanager-cancel-f.md#cancel)
@@ -37,8 +35,6 @@ function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 Cancels a notification with the specified ID and label. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -66,8 +62,6 @@ function cancel(id: number, label?: string): Promise<void>
 Cancels a notification with the specified ID and optional label. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

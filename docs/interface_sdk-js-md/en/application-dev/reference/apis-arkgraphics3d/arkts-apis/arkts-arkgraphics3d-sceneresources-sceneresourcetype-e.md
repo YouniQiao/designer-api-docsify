@@ -1,12 +1,8 @@
 # SceneResourceType
 
-The enum of SceneResource type.
+Enumerates the scene resource types, which are used to classify resources in a scene.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export enum SceneResourceType--><!--Device-unnamed-export enum SceneResourceType-End-->
 
@@ -18,13 +14,9 @@ The enum of SceneResource type.
 UNKNOWN = 0
 ```
 
-The resource is an Unknown.
+Unknown.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceType-UNKNOWN = 0--><!--Device-SceneResourceType-UNKNOWN = 0-End-->
 
@@ -36,13 +28,9 @@ The resource is an Unknown.
 NODE = 1
 ```
 
-The resource is a Node.
+Node type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceType-NODE = 1--><!--Device-SceneResourceType-NODE = 1-End-->
 
@@ -54,13 +42,9 @@ The resource is a Node.
 ENVIRONMENT = 2
 ```
 
-The resource is an Environment.
+Environment resource.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceType-ENVIRONMENT = 2--><!--Device-SceneResourceType-ENVIRONMENT = 2-End-->
 
@@ -72,13 +56,9 @@ The resource is an Environment.
 MATERIAL = 3
 ```
 
-The resource is a Material.
+Material type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceType-MATERIAL = 3--><!--Device-SceneResourceType-MATERIAL = 3-End-->
 
@@ -90,13 +70,9 @@ The resource is a Material.
 MESH = 4
 ```
 
-The resource is a Mesh.
+Mesh resource.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceType-MESH = 4--><!--Device-SceneResourceType-MESH = 4-End-->
 
@@ -108,13 +84,9 @@ The resource is a Mesh.
 ANIMATION = 5
 ```
 
-The resource is an Animation.
+Animation resource.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceType-ANIMATION = 5--><!--Device-SceneResourceType-ANIMATION = 5-End-->
 
@@ -126,13 +98,9 @@ The resource is an Animation.
 SHADER = 6
 ```
 
-The resource is a Shader.
+Shader resource.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceType-SHADER = 6--><!--Device-SceneResourceType-SHADER = 6-End-->
 
@@ -144,13 +112,9 @@ The resource is a Shader.
 IMAGE = 7
 ```
 
-The resource is an Image.
+Image resource.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceType-IMAGE = 7--><!--Device-SceneResourceType-IMAGE = 7-End-->
 
@@ -162,13 +126,9 @@ The resource is an Image.
 MESH_RESOURCE = 8
 ```
 
-The resource is a mesh resource
+Mesh resource.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceType-MESH_RESOURCE = 8--><!--Device-SceneResourceType-MESH_RESOURCE = 8-End-->
 
@@ -180,13 +140,9 @@ The resource is a mesh resource
 EFFECT = 9
 ```
 
-The resource is an Effect.
+Post-processing effect resource.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceType-EFFECT = 9--><!--Device-SceneResourceType-EFFECT = 9-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-linkEnhance-interface Server--><!--Device-linkEnhance-interface Server-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
@@ -18,13 +14,9 @@
 close(): void
 ```
 
-当业务执行完毕，服务端清理资源时，调用close()方法，销毁Server对象，释放相关资源。之后如果再次与对端设备交互，需要重新创建Server对象。
+当业务执行完毕，服务端清理资源时，调用close()方法，销毁Server对象，释放相关资源。之后如果再次与对端设备交互，需要重新创建Server对象。close()会销毁Server对象并释放资源，之后需重新创建Server 对象；stop()仅停止服务，Server对象仍可重新启动。如果还需重新启动服务，使用stop()；如果业务完全结束，使用close()。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -40,7 +32,7 @@ close(): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -67,13 +59,9 @@ try {
 offConnectionAccepted(callback?: Callback<Connection>): void
 ```
 
-取消注册connectionAccepted事件的回调监听。使用callback异步回调。
+Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -87,16 +75,16 @@ offConnectionAccepted(callback?: Callback<Connection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#connection) object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -129,13 +117,9 @@ try {
 offServerStopped(callback?: Callback<int>): void
 ```
 
-取消注册serverStopped事件的回调监听。使用callback异步回调。
+Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -149,16 +133,16 @@ offServerStopped(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 注册的回调函数，int为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | Registered callback, where **int** indicates the returned error code. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -191,13 +175,9 @@ try {
 off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 ```
 
-取消注册connectionAccepted事件的回调监听。使用callback异步回调。
+取消注册connectionAccepted事件的回调监听。需要在创建服务成功后调用。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -212,16 +192,16 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | 是 | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | 注册的回调函数，参数为连接对象[Connection](arkts-distributedservice-linkenhance-connection-i.md#connection)。 需传入对应on方法 最后一次注册的回调函数，用于取消该回调的订阅，默认缺省效果与传入行为一致。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -254,13 +234,9 @@ try {
 off(type: 'serverStopped', callback?: Callback<number>): void
 ```
 
-取消注册serverStopped事件的回调监听。使用callback异步回调。
+取消注册serverStopped事件的回调监听。需要在创建服务成功后调用。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -275,16 +251,16 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时触发。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 注册的回调函数，number为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 否 | 注册的回调函数，当底层服务异常停止时触发，number为返回的错误码。需传入对应on方法最后一次注册的回调函数，用于取消该回调的订阅，默认缺省效 果与传入行为一致。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -317,13 +293,9 @@ try {
 onConnectionAccepted(callback: Callback<Connection>): void
 ```
 
-创建服务成功后，注册connectionAccepted事件的回调监听，等待对端连接。使用callback异步回调。
+Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -337,16 +309,16 @@ onConnectionAccepted(callback: Callback<Connection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | Callback used to listen for the server is connected event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -379,13 +351,9 @@ try {
 onServerStopped(callback: Callback<int>): void
 ```
 
-在创建服务成功后，注册serverStopped回调，监听服务异常停止。使用callback异步回调。
+Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -399,16 +367,16 @@ onServerStopped(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 注册的回调函数，int为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | Registered callback, where **int** indicates the returned error code. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -445,10 +413,6 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -461,17 +425,17 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'connectionAccepted' | 是 | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
+| type | 'connectionAccepted' | 是 | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#connection) object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -508,10 +472,6 @@ on(type: 'serverStopped', callback: Callback<number>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -524,17 +484,17 @@ on(type: 'serverStopped', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 注册的回调函数，number为返回的错误码。 |
+| type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时触发。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 注册的回调函数，当底层服务异常停止时触发，number为返回的错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -567,13 +527,9 @@ try {
 start(): void
 ```
 
-创建服务成功后，需要调用start()开启该服务，方可被客户端连接，最大服务个数为10。
+创建服务成功后，需要调用start()开启该服务，方可被客户端连接，最大服务个数为10。服务开启后，可通过stop()停止服务，可以重新通过start()再次开启服务。服务使用完毕后，需调用close()销毁Server对象释 放资源。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -591,7 +547,7 @@ start(): void
 | [32390202](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390202-服务个数超出限制) | The number of servers exceeds the limit. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -621,10 +577,6 @@ stop(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -639,7 +591,7 @@ stop(): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';

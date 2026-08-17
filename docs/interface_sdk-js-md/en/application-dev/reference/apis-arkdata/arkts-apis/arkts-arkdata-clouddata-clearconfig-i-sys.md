@@ -4,10 +4,6 @@ Defines the clearance configuration of a device-cloud synergy database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudData-interface ClearConfig--><!--Device-cloudData-interface ClearConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -31,10 +27,6 @@ Information about the database whose data is to be cleared and the clearance rul
 **Type:** Record&lt;string, [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

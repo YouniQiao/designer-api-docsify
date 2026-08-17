@@ -4,10 +4,6 @@ Describes the contents of the discovery results
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-interface DiscoveryResult--><!--Device-connection-interface DiscoveryResult-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -32,10 +28,6 @@ The class of the device
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DiscoveryResult-deviceClass: DeviceClass--><!--Device-DiscoveryResult-deviceClass: DeviceClass-End-->
@@ -55,10 +47,6 @@ Identify of the discovery device
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ The local name of the device
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DiscoveryResult-deviceName: string--><!--Device-DiscoveryResult-deviceName: string-End-->
@@ -103,10 +87,6 @@ RSSI of the remote device
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

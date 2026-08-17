@@ -4,11 +4,9 @@ Defines the key album information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AlbumKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#AlbumKeys)
+**Substitutes:** [AlbumKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#albumkeys)
 
 <!--Device-userFileManager-enum AlbumKey--><!--Device-userFileManager-enum AlbumKey-End-->
 
@@ -26,11 +24,9 @@ URI of the album.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#URI)
+**Substitutes:** [URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#uri)
 
 <!--Device-AlbumKey-URI--><!--Device-AlbumKey-URI-End-->
 
@@ -48,11 +44,9 @@ Type of the file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#AlbumType)
+**Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#albumtype)
 
 <!--Device-AlbumKey-FILE_TYPE--><!--Device-AlbumKey-FILE_TYPE-End-->
 
@@ -70,11 +64,9 @@ Name of the album.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [ALBUM_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#ALBUM_NAME)
+**Substitutes:** [ALBUM_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#albumname)
 
 <!--Device-AlbumKey-ALBUM_NAME--><!--Device-AlbumKey-ALBUM_NAME-End-->
 
@@ -92,11 +84,9 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#DATE_MODIFIED)
+**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#datemodified)
 
 <!--Device-AlbumKey-DATE_ADDED--><!--Device-AlbumKey-DATE_ADDED-End-->
 
@@ -114,11 +104,9 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#DATE_MODIFIED)
+**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#datemodified)
 
 <!--Device-AlbumKey-DATE_MODIFIED--><!--Device-AlbumKey-DATE_MODIFIED-End-->
 

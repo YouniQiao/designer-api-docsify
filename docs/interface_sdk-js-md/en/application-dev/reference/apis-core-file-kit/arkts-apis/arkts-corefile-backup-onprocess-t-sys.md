@@ -8,10 +8,6 @@ function that returns backup datasize by bundleName. Callback called when the ba
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-backup-type OnProcess = (bundleName: string, process: string) => void--><!--Device-backup-type OnProcess = (bundleName: string, process: string) => void-End-->

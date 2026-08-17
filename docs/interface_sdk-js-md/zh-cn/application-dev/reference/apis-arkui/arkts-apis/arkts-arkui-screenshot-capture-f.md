@@ -10,10 +10,6 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本22+：ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API版本14 - 21：ohos.permission.CUSTOM_SCREEN_CAPTURE
@@ -45,7 +41,7 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

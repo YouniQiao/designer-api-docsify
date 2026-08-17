@@ -4,9 +4,7 @@ Enumerates the rendering mode of Web components. By default, the asynchronous re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum RenderMode--><!--Device-unnamed-export declare enum RenderMode-End-->
 
@@ -22,9 +20,7 @@ The Web component is rendered asynchronously. The ArkWeb component as a graphic 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-RenderMode-ASYNC_RENDER = 0--><!--Device-RenderMode-ASYNC_RENDER = 0-End-->
 
@@ -40,9 +36,7 @@ The Web component is rendered synchronously. The ArkWeb component as a graphic c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-RenderMode-SYNC_RENDER = 1--><!--Device-RenderMode-SYNC_RENDER = 1-End-->
 

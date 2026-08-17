@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-interface GroupConfig--><!--Device-agent-interface GroupConfig-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -24,10 +20,6 @@ gauge?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-GroupConfig-gauge?: boolean--><!--Device-GroupConfig-gauge?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -43,10 +35,6 @@ notification: Notification
 **类型：** Notification
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-GroupConfig-notification: Notification--><!--Device-GroupConfig-notification: Notification-End-->
 

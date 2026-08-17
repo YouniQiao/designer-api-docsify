@@ -4,10 +4,6 @@ Invoke options for function execution.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-functionManager-interface InvokeOptions--><!--Device-functionManager-interface InvokeOptions-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -26,15 +22,11 @@ import { functionManager } from 'functionManager';
 context?: Context
 ```
 
-Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#UIAbilityContext) is supported.
+Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#uiabilitycontext) is supported.
 
 **Type:** [Context](arkts-ability-context-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

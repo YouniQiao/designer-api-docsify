@@ -16,10 +16,6 @@ Rotates a mechanical device at the specified speed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promise<Result>--><!--Device-mechanicManager-function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promise<Result>-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -48,7 +44,7 @@ Rotates a mechanical device at the specified speed.
 | [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 console.info('Start rotate');

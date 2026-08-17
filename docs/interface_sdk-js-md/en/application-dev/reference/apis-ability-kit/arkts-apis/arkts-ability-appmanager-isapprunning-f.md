@@ -16,10 +16,6 @@ Checks whether the application with the specified bundle name and application cl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
 <!--Device-appManager-function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>--><!--Device-appManager-function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>-End-->
@@ -48,7 +44,7 @@ Checks whether the application with the specified bundle name and application cl
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ LazyCustomLayoutAlgorithm constructor options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface LazyCustomLayoutAlgorithmOptions--><!--Device-unnamed-interface LazyCustomLayoutAlgorithmOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Defines the lazy layout axis.
 **Default:** Axis.Vertical
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

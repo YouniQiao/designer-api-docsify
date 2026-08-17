@@ -4,10 +4,6 @@ Enumerates the directions in which a window can be resized.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum ResizeDirection--><!--Device-unnamed-declare enum ResizeDirection-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -21,10 +17,6 @@ LEFT = 0
 Left.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Right.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-RIGHT = 1--><!--Device-ResizeDirection-RIGHT = 1-End-->
@@ -61,10 +49,6 @@ UP = 2
 Up.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ Down.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-DOWN = 3--><!--Device-ResizeDirection-DOWN = 3-End-->
@@ -101,10 +81,6 @@ LEFT_UP = 4
 Upper left.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,10 +98,6 @@ Lower left.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-LEFT_DOWN = 5--><!--Device-ResizeDirection-LEFT_DOWN = 5-End-->
@@ -142,10 +114,6 @@ Upper right.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-RIGHT_UP = 6--><!--Device-ResizeDirection-RIGHT_UP = 6-End-->
@@ -161,10 +129,6 @@ RIGHT_DOWN = 7
 Lower right.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -16,10 +16,6 @@ Sets the system font scale. **Permission required**: ohos.permission.UPDATE_CONF
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
 <!--Device-uiAppearance-function setFontScale(fontScale: number): Promise<void>--><!--Device-uiAppearance-function setFontScale(fontScale: number): Promise<void>-End-->
@@ -49,7 +45,7 @@ Sets the system font scale. **Permission required**: ohos.permission.UPDATE_CONF
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiAppearance } from '@kit.ArkUI';

@@ -2,15 +2,13 @@
 
 Specifies the worker thread running environment, which is isolated from the host thread environment
 
-**Inheritance/Implementation:** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md#WorkerGlobalScope)
+**Inheritance/Implementation:** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md#workerglobalscope)
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md#ThreadWorkerGlobalScope)
+**Substitutes:** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md#threadworkerglobalscope)
 
 <!--Device-unnamed-export interface DedicatedWorkerGlobalScope--><!--Device-unnamed-export interface DedicatedWorkerGlobalScope-End-->
 
@@ -45,8 +43,6 @@ Close the worker thread to stop the worker from receiving messages
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** close
@@ -55,7 +51,7 @@ Close the worker thread to stop the worker from receiving messages
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -85,8 +81,6 @@ Send a message to be host thread from the worker
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** postMessage
@@ -112,8 +106,6 @@ Send a message to be host thread from the worker
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** postMessage
@@ -129,7 +121,7 @@ Send a message to be host thread from the worker
 | messageObject | Object | Yes | messageObject Data to be sent to the worker |
 | options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | Option can be set for postmessage. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -162,8 +154,6 @@ Send a message to host thread from the worker
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** postMessage
@@ -179,7 +169,7 @@ Send a message to host thread from the worker
 | messageObject | Object | Yes | messageObject Data to be sent to the worker |
 | transfer | ArrayBuffer[] | Yes | transfer array cannot contain null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -218,8 +208,6 @@ The onmessage attribute of parentPort specifies the event handler to be called t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** onmessage
@@ -239,8 +227,6 @@ The onmessage attribute of parentPort specifies the event handler to be called t
 **Type:** (this: DedicatedWorkerGlobalScope, ev: MessageEvent) =&gt; void
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

@@ -16,8 +16,6 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-settings-function getURI(name: string, callback: AsyncCallback<object>): void--><!--Device-settings-function getURI(name: string, callback: AsyncCallback<object>): void-End-->
@@ -31,7 +29,7 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 | name | string | Yes | Indicates the name of the setting to set. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes | The callback of getURI result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 settings.getURI(settings.display.SCREEN_BRIGHTNESS_STATUS, (uri:string) => {
@@ -49,8 +47,6 @@ function getURI(name: string): Promise<object>
 Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Data template.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -70,7 +66,7 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 | --- | --- |
 | Promise&lt;object&gt; | Returns the corresponding URI; returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 settings.getURI(settings.display.SCREEN_BRIGHTNESS_STATUS).then((uri:string) => {

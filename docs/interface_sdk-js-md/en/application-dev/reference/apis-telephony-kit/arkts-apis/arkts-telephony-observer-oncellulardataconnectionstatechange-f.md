@@ -16,10 +16,6 @@ Callback when the cellular data link connection state corresponding to the defau
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function onCellularDataConnectionStateChange(callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function onCellularDataConnectionStateChange(callback: Callback<DataConnectionStateInfo>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -51,10 +47,6 @@ function onCellularDataConnectionStateChange(options: ObserverOptions,
 Callback when the cellular data link connection state corresponding to the monitored {@code slotId} is updated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-observer-function onCellularDataConnectionStateChange(options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function onCellularDataConnectionStateChange(options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void-End-->
 

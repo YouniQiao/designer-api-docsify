@@ -4,10 +4,6 @@ Provides a list of contact attributes, which are generally used as arguments. If
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-contact-class ContactAttributes--><!--Device-contact-class ContactAttributes-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -29,10 +25,6 @@ Indicates the contact attributes.
 **Type:** [Attribute](arkts-contacts-contact-attribute-e.md)[]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -12,15 +12,13 @@ import { image } from 'image';
 function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver
 ```
 
-Creates an ImageReceiver instance by specifying the image width, height, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput) . Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageReceiver instance by specifying the image width, height, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput) . Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [createImageReceiver](#createImageReceiver)(size: Size, format: ImageFormat, capacity: int)
+**Substitutes:** [createImageReceiver](#createimagereceiver)(size: Size, format: ImageFormat, capacity: int)
 
 <!--Device-image-function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver--><!--Device-image-function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver-End-->
 
@@ -32,7 +30,7 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 | --- | --- | --- | --- |
 | width | number | Yes | Default image width, in px. This parameter does not affect the width of the received image. The actual width is determined by the producer, for example, the camera. |
 | height | number | Yes | Default image height, in px. This parameter does not affect the height of the received image. The actual height is determined by the producer, for example, the camera. |
-| format | number | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md#ImageFormat). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
+| format | number | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md#imageformat). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
 | capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
@@ -41,7 +39,7 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 | --- | --- |
 | ImageReceiver | ImageReceiver instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.ImageFormat.JPEG, 8);
@@ -54,13 +52,9 @@ let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.
 function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver
 ```
 
-Creates an ImageReceiver instance by specifying the image size, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput) . Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageReceiver instance by specifying the image size, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput) . Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver--><!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver-End-->
 
@@ -71,7 +65,7 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | Size | Yes | Default size of the image. This parameter does not affect the size of the received image. The actual returned size is determined by the producer, for example, the camera. |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md#ImageFormat). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md#imageformat). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
 | capacity | int | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
@@ -86,7 +80,7 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let size: image.Size = {
@@ -107,10 +101,6 @@ Creates an ImageReceiver instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver | undefined--><!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -119,8 +109,8 @@ Creates an ImageReceiver instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | Size | Yes | The default [Size](arkts-image-image-size-i.md#Size) in pixels of the Images that this receiver will produce. |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | The format of the Image that this receiver will produce. This must be one of the [ImageFormat](arkts-image-image-imageformat-e.md#ImageFormat) constants. |
+| size | Size | Yes | The default [Size](arkts-image-image-size-i.md#size) in pixels of the Images that this receiver will produce. |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | The format of the Image that this receiver will produce. This must be one of the [ImageFormat](arkts-image-image-imageformat-e.md#imageformat) constants. |
 | capacity | int | Yes | The maximum number of images the user will want to access simultaneously. |
 
 **Return value:**
@@ -139,10 +129,6 @@ function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | un
 Creates an ImageReceiver instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

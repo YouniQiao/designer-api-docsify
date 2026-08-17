@@ -1,10 +1,8 @@
 # HuksHandle
 
-Defines the struct for a HUKS handle. > **NOTE：**> > This API is deprecated since API version 9. You are advised to use > [HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md#HuksSessionHandle).
+Defines the struct for a HUKS handle. > **NOTE：**> > This API is deprecated since API version 9. You are advised to use > [HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md#hukssessionhandle).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -32,8 +30,6 @@ Reserved field. Note: This API is deprecated since API version 9. No substitute 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-HuksHandle-errorCode: number--><!--Device-HuksHandle-errorCode: number-End-->
@@ -52,8 +48,6 @@ Reserved field. Note: This API is deprecated since API version 9. No substitute 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-HuksHandle-handle: number--><!--Device-HuksHandle-handle: number-End-->
@@ -71,8 +65,6 @@ Reserved field. Note: This API is deprecated since API version 9. No substitute 
 **Type:** Uint8Array
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

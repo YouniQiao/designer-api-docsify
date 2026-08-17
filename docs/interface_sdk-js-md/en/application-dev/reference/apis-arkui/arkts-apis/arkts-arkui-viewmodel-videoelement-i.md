@@ -2,13 +2,9 @@
 
 The &lt;video&gt; component provides a video player.
 
-**Inheritance/Implementation:** VideoElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
+**Inheritance/Implementation:** VideoElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface VideoElement--><!--Device-unnamed-export interface VideoElement-End-->
 
@@ -23,10 +19,6 @@ exitFullscreen(): void
 Requests to exit the full screen mode.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -44,10 +36,6 @@ Requests to pause a video.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-VideoElement-pause(): void--><!--Device-VideoElement-pause(): void-End-->
@@ -63,10 +51,6 @@ requestFullscreen(param: { screenOrientation: "default" }): void
 Requests to enter the full screen mode.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -90,10 +74,6 @@ Specifies the video playing position.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-VideoElement-setCurrentTime(param: { currenttime: number }): void--><!--Device-VideoElement-setCurrentTime(param: { currenttime: number }): void-End-->
@@ -116,10 +96,6 @@ Requests to start playing a video.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-VideoElement-start(): void--><!--Device-VideoElement-start(): void-End-->
@@ -135,10 +111,6 @@ stop(): void
 Requests to stop playing a video.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

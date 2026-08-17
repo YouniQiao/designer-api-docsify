@@ -4,10 +4,6 @@ Creates an **Animator** object.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class Animator--><!--Device-unnamed-export default class Animator-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,11 +22,9 @@ import { SimpleAnimatorOptions } from 'SimpleAnimatorOptions';
 static create(options: AnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. > **NOTE：**> > - Since API version 10, you can use the > [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext), which ensures that the object is created in the intended UI instance.
+Creates an **AnimatorResult** object for animations. > **NOTE：**> > - Since API version 10, you can use the > [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext), which ensures that the object is created in the intended UI instance.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 18
 
@@ -46,13 +40,13 @@ Creates an **AnimatorResult** object for animations. > **NOTE：**> > - Since AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -60,7 +54,7 @@ Creates an **AnimatorResult** object for animations. > **NOTE：**> > - Since AP
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
 
@@ -86,13 +80,9 @@ animator.create(options); // You are advised to use UIContext.createAnimator().
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared with [create](#create), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
+Creates an **AnimatorResult** object for animations. Compared with [create](../../apis-na/arkts-apis/arkts-na-animator-animator-c.md#create), this API accepts parameters of the [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md#simpleanimatoroptions) type.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,13 +96,13 @@ Creates an **AnimatorResult** object for animations. Compared with [create](#cre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Parameters of the animation. |
+| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | Yes | Parameters of the animation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -120,7 +110,7 @@ Creates an **AnimatorResult** object for animations. Compared with [create](#cre
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
 
@@ -140,8 +130,6 @@ Creates an animation.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** create
@@ -154,15 +142,15 @@ Creates an animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
 
-## Examples
+**Examples**
 
 See ArkTS-based Declarative Development Paradigm.
 

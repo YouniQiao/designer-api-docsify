@@ -10,8 +10,6 @@ declare function fchown(fd: number, uid: number, gid: number): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-unnamed-declare function fchown(fd: number, uid: number, gid: number): Promise<void>--><!--Device-unnamed-declare function fchown(fd: number, uid: number, gid: number): Promise<void>-End-->
@@ -43,8 +41,6 @@ declare function fchown(fd: number, uid: number, gid: number, callback: AsyncCal
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-unnamed-declare function fchown(fd: number, uid: number, gid: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function fchown(fd: number, uid: number, gid: number, callback: AsyncCallback<void>): void-End-->
@@ -58,5 +54,5 @@ declare function fchown(fd: number, uid: number, gid: number, callback: AsyncCal
 | fd | number | 是 | 待改变文件的文件描述符。 |
 | uid | number | 是 | 文件所有者的UID。 |
 | gid | number | 是 | 文件所有组的GID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步改变文件所有者之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步改变文件所有者之后的回调。 |
 

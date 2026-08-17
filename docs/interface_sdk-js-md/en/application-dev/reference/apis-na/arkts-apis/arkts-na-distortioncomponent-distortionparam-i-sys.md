@@ -4,9 +4,7 @@ DistortionParam defines parameters for spatial distortion effects.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare interface DistortionParam--><!--Device-unnamed-export declare interface DistortionParam-End-->
 
@@ -24,13 +22,9 @@ Distortion parameters for spatial distortion effects.
 
 **Type:** [Vector4](arkts-na-graphics-vector4-i.md)
 
-**Default:** [0, 0, 0, 0]
-
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,13 +44,9 @@ Coordinate of bottom-left corner.
 
 **Type:** [Vector2](arkts-na-graphics-vector2-i.md)
 
-**Default:** [0, 0]
-
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,13 +66,9 @@ Coordinate of bottom-right corner.
 
 **Type:** [Vector2](arkts-na-graphics-vector2-i.md)
 
-**Default:** [0, 0]
-
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,13 +88,9 @@ Coordinate of top-left corner.
 
 **Type:** [Vector2](arkts-na-graphics-vector2-i.md)
 
-**Default:** [0, 0]
-
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,13 +110,9 @@ Coordinate of top-right corner.
 
 **Type:** [Vector2](arkts-na-graphics-vector2-i.md)
 
-**Default:** [0, 0]
-
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

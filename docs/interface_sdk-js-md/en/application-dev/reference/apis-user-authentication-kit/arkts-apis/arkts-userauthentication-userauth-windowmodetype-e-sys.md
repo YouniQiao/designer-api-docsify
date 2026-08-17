@@ -4,10 +4,6 @@ Enumerates the display types of the user authentication screen. This enum define
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-userAuth-enum WindowModeType--><!--Device-userAuth-enum WindowModeType-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -24,10 +20,6 @@ Dialog box type. The authentication screen is displayed in dialog box mode, whic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowModeType-DIALOG_BOX = 1--><!--Device-WindowModeType-DIALOG_BOX = 1-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -43,10 +35,6 @@ FULLSCREEN = 2
 Full screen. The authentication screen is displayed in full screen mode, which is applicable to scenarios that require immersive authentication experience or scenarios where a large amount of authentication information needs to be displayed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowModeType-FULLSCREEN = 2--><!--Device-WindowModeType-FULLSCREEN = 2-End-->
 

@@ -4,10 +4,6 @@ Enumerates the charging types that trigger deferred task callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-workScheduler-export enum ChargingType--><!--Device-workScheduler-export enum ChargingType-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -21,10 +17,6 @@ CHARGING_PLUGGED_ANY = 0
 Any charging type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ DC charging.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChargingType-CHARGING_PLUGGED_AC = 1--><!--Device-ChargingType-CHARGING_PLUGGED_AC = 1-End-->
@@ -62,10 +50,6 @@ USB charging.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChargingType-CHARGING_PLUGGED_USB = 2--><!--Device-ChargingType-CHARGING_PLUGGED_USB = 2-End-->
@@ -81,10 +65,6 @@ CHARGING_PLUGGED_WIRELESS = 3
 Wireless charging.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

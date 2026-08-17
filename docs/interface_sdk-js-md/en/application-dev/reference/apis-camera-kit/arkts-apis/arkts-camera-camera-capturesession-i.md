@@ -1,14 +1,12 @@
 # CaptureSession
 
-**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera and requests the camera to complete shooting or video recording.
+**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)
+**Substitutes:** [VideoSession](arkts-camera-camera-videosession-i.md#videosession)
 
 <!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
@@ -26,15 +24,13 @@ import { camera } from 'camera';
 addInput(cameraInput: CameraInput): void
 ```
 
-Adds a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instance to this session.
+Adds a [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) instance to this session.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [addInput](arkts-camera-camera-session-i.md#addInput)
+**Substitutes:** [addInput](arkts-camera-camera-session-i.md#addinput)
 
 <!--Device-CaptureSession-addInput(cameraInput: CameraInput): void--><!--Device-CaptureSession-addInput(cameraInput: CameraInput): void-End-->
 
@@ -59,15 +55,13 @@ Adds a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instance 
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instance to this session.
+Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instance to this session.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [addOutput](arkts-camera-camera-session-i.md#addOutput)
+**Substitutes:** [addOutput](arkts-camera-camera-session-i.md#addoutput)
 
 <!--Device-CaptureSession-addOutput(cameraOutput: CameraOutput): void--><!--Device-CaptureSession-addOutput(cameraOutput: CameraOutput): void-End-->
 
@@ -96,11 +90,9 @@ Starts configuration for the session.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [beginConfig](arkts-camera-camera-session-i.md#beginConfig)
+**Substitutes:** [beginConfig](arkts-camera-camera-session-i.md#beginconfig)
 
 <!--Device-CaptureSession-beginConfig(): void--><!--Device-CaptureSession-beginConfig(): void-End-->
 
@@ -122,11 +114,9 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [commitConfig](arkts-camera-camera-session-i.md#commitConfig)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [commitConfig](arkts-camera-camera-session-i.md#commitconfig)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void-End-->
 
@@ -136,7 +126,7 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 **Error codes:**
 
@@ -155,11 +145,9 @@ Commits the configuration for this session. This API uses a promise to return th
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [commitConfig](arkts-camera-camera-session-i.md#commitConfig)()
+**Substitutes:** [commitConfig](arkts-camera-camera-session-i.md#commitconfig)()
 
 <!--Device-CaptureSession-commitConfig(): Promise<void>--><!--Device-CaptureSession-commitConfig(): Promise<void>-End-->
 
@@ -188,11 +176,9 @@ Obtains the video stabilization mode in use.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getActiveVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#getActiveVideoStabilizationMode)
+**Substitutes:** [getActiveVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#getactivevideostabilizationmode)
 
 <!--Device-CaptureSession-getActiveVideoStabilizationMode(): VideoStabilizationMode--><!--Device-CaptureSession-getActiveVideoStabilizationMode(): VideoStabilizationMode-End-->
 
@@ -220,11 +206,9 @@ Obtains the exposure compensation values of the camera device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange)
+**Substitutes:** [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)
 
 <!--Device-CaptureSession-getExposureBiasRange(): Array<number>--><!--Device-CaptureSession-getExposureBiasRange(): Array<number>-End-->
 
@@ -252,11 +236,9 @@ Obtains the exposure mode in use.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getExposureMode](arkts-camera-camera-autoexposure-i.md#getExposureMode)
+**Substitutes:** [getExposureMode](arkts-camera-camera-autoexposure-i.md#getexposuremode)
 
 <!--Device-CaptureSession-getExposureMode(): ExposureMode--><!--Device-CaptureSession-getExposureMode(): ExposureMode-End-->
 
@@ -284,11 +266,9 @@ Obtains the exposure value in use.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getExposureValue](arkts-camera-camera-autoexposure-i.md#getExposureValue)
+**Substitutes:** [getExposureValue](arkts-camera-camera-autoexposure-i.md#getexposurevalue)
 
 <!--Device-CaptureSession-getExposureValue(): number--><!--Device-CaptureSession-getExposureValue(): number-End-->
 
@@ -316,11 +296,9 @@ Obtains the flash mode in use.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getFlashMode](arkts-camera-camera-flash-i.md#getFlashMode)
+**Substitutes:** [getFlashMode](arkts-camera-camera-flash-i.md#getflashmode)
 
 <!--Device-CaptureSession-getFlashMode(): FlashMode--><!--Device-CaptureSession-getFlashMode(): FlashMode-End-->
 
@@ -348,11 +326,9 @@ Obtains the focal length of the camera device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getFocalLength](arkts-camera-camera-focus-i.md#getFocalLength)
+**Substitutes:** [getFocalLength](arkts-camera-camera-focus-i.md#getfocallength)
 
 <!--Device-CaptureSession-getFocalLength(): number--><!--Device-CaptureSession-getFocalLength(): number-End-->
 
@@ -380,11 +356,9 @@ Obtains the focus mode in use.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getFocusMode](arkts-camera-camera-focus-i.md#getFocusMode)
+**Substitutes:** [getFocusMode](arkts-camera-camera-focus-i.md#getfocusmode)
 
 <!--Device-CaptureSession-getFocusMode(): FocusMode--><!--Device-CaptureSession-getFocusMode(): FocusMode-End-->
 
@@ -412,11 +386,9 @@ Obtains the focal point of the camera device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getFocusPoint](arkts-camera-camera-focus-i.md#getFocusPoint)
+**Substitutes:** [getFocusPoint](arkts-camera-camera-focus-i.md#getfocuspoint)
 
 <!--Device-CaptureSession-getFocusPoint(): Point--><!--Device-CaptureSession-getFocusPoint(): Point-End-->
 
@@ -444,11 +416,9 @@ Obtains the metering point of the camera device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getMeteringPoint](arkts-camera-camera-autoexposure-i.md#getMeteringPoint)
+**Substitutes:** [getMeteringPoint](arkts-camera-camera-autoexposure-i.md#getmeteringpoint)
 
 <!--Device-CaptureSession-getMeteringPoint(): Point--><!--Device-CaptureSession-getMeteringPoint(): Point-End-->
 
@@ -476,11 +446,9 @@ Obtains the zoom ratio in use.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getZoomRatio](arkts-camera-camera-zoom-i.md#getZoomRatio)
+**Substitutes:** [getZoomRatio](arkts-camera-camera-zoom-i.md#getzoomratio)
 
 <!--Device-CaptureSession-getZoomRatio(): number--><!--Device-CaptureSession-getZoomRatio(): number-End-->
 
@@ -508,11 +476,9 @@ Obtains the supported zoom ratio range.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getZoomRatioRange)
+**Substitutes:** [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)
 
 <!--Device-CaptureSession-getZoomRatioRange(): Array<number>--><!--Device-CaptureSession-getZoomRatioRange(): Array<number>-End-->
 
@@ -540,11 +506,9 @@ Checks whether the camera device has flash.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [hasFlash](arkts-camera-camera-flashquery-i.md#hasFlash)
+**Substitutes:** [hasFlash](arkts-camera-camera-flashquery-i.md#hasflash)
 
 <!--Device-CaptureSession-hasFlash(): boolean--><!--Device-CaptureSession-hasFlash(): boolean-End-->
 
@@ -572,11 +536,9 @@ Checks whether an exposure mode is supported.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isExposureModeSupported)
+**Substitutes:** [isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isexposuremodesupported)
 
 <!--Device-CaptureSession-isExposureModeSupported(aeMode: ExposureMode): boolean--><!--Device-CaptureSession-isExposureModeSupported(aeMode: ExposureMode): boolean-End-->
 
@@ -610,11 +572,9 @@ Checks whether the flash mode is supported.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isFlashModeSupported)
+**Substitutes:** [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported)
 
 <!--Device-CaptureSession-isFlashModeSupported(flashMode: FlashMode): boolean--><!--Device-CaptureSession-isFlashModeSupported(flashMode: FlashMode): boolean-End-->
 
@@ -648,11 +608,9 @@ Checks whether a focus mode is supported.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isFocusModeSupported)
+**Substitutes:** [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported)
 
 <!--Device-CaptureSession-isFocusModeSupported(afMode: FocusMode): boolean--><!--Device-CaptureSession-isFocusModeSupported(afMode: FocusMode): boolean-End-->
 
@@ -686,11 +644,9 @@ Checks whether a video stabilization mode is supported.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isVideoStabilizationModeSupported)
+**Substitutes:** [isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isvideostabilizationmodesupported)
 
 <!--Device-CaptureSession-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean--><!--Device-CaptureSession-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean-End-->
 
@@ -724,11 +680,9 @@ Unsubscribes from CaptureSession error events. This API uses a callback to retur
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [off](arkts-camera-camera-videosession-i.md#off_error)(type: 'error', callback?: ErrorCallback)
+**Substitutes:** [off](arkts-camera-camera-videosession-i.md#offerror)(type: 'error', callback?: ErrorCallback)
 
 <!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -751,11 +705,9 @@ Unsubscribes from focus state change events.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [off](arkts-camera-camera-videosession-i.md#off_error)(type: 'focusStateChange', callback?: AsyncCallback&lt;FocusState&gt;)
+**Substitutes:** [off](arkts-camera-camera-videosession-i.md#offerror)(type: 'focusStateChange', callback?: AsyncCallback&lt;FocusState&gt;)
 
 <!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -778,11 +730,9 @@ Subscribes to CaptureSession error events. This API uses an asynchronous callbac
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [on](arkts-camera-camera-videosession-i.md#on_error)(type: 'error', callback: ErrorCallback)
+**Substitutes:** [on](arkts-camera-camera-videosession-i.md#onerror)(type: 'error', callback: ErrorCallback)
 
 <!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -792,8 +742,8 @@ Subscribes to CaptureSession error events. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](#beginConfig), [commitConfig](#commitConfig), and [addInput](#addInput). |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](#beginconfig), [commitConfig](#commitconfig), and [addInput](#addinput). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 ## on_focusStateChange
 
@@ -805,11 +755,9 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [on](arkts-camera-camera-videosession-i.md#on_error)(type: 'focusStateChange', callback: AsyncCallback&lt;FocusState&gt;)
+**Substitutes:** [on](arkts-camera-camera-videosession-i.md#onerror)(type: 'focusStateChange', callback: AsyncCallback&lt;FocusState&gt;)
 
 <!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
@@ -832,8 +780,6 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [release](arkts-camera-camera-session-i.md#release)(callback: AsyncCallback&lt;void&gt;)
@@ -846,7 +792,7 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 **Error codes:**
 
@@ -863,8 +809,6 @@ release(): Promise<void>
 Releases this session. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 
@@ -892,15 +836,13 @@ Releases this session. This API uses a promise to return the result.
 removeInput(cameraInput: CameraInput): void
 ```
 
-Removes a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instance from this session.
+Removes a [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) instance from this session.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [removeInput](arkts-camera-camera-session-i.md#removeInput)
+**Substitutes:** [removeInput](arkts-camera-camera-session-i.md#removeinput)
 
 <!--Device-CaptureSession-removeInput(cameraInput: CameraInput): void--><!--Device-CaptureSession-removeInput(cameraInput: CameraInput): void-End-->
 
@@ -925,15 +867,13 @@ Removes a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instan
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instance from this session.
+Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instance from this session.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [removeOutput](arkts-camera-camera-session-i.md#removeOutput)
+**Substitutes:** [removeOutput](arkts-camera-camera-session-i.md#removeoutput)
 
 <!--Device-CaptureSession-removeOutput(cameraOutput: CameraOutput): void--><!--Device-CaptureSession-removeOutput(cameraOutput: CameraOutput): void-End-->
 
@@ -958,15 +898,13 @@ Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) ins
 setExposureBias(exposureBias: number): void
 ```
 
-Sets an exposure compensation value (EV). Before the setting, you are advised to use [getExposureBiasRange](#getExposureBiasRange) to obtain the supported values.
+Sets an exposure compensation value (EV). Before the setting, you are advised to use [getExposureBiasRange](#getexposurebiasrange) to obtain the supported values.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setExposureBias](arkts-camera-camera-autoexposure-i.md#setExposureBias)
+**Substitutes:** [setExposureBias](arkts-camera-camera-autoexposure-i.md#setexposurebias)
 
 <!--Device-CaptureSession-setExposureBias(exposureBias: number): void--><!--Device-CaptureSession-setExposureBias(exposureBias: number): void-End-->
 
@@ -976,7 +914,7 @@ Sets an exposure compensation value (EV). Before the setting, you are advised to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange). If the value passed is not within the supported range, the nearest critical point is used. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode) is returned. If the input parameter is null or undefined, the EV is set to 0. |
+| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange). If the value passed is not within the supported range, the nearest critical point is used. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. If the input parameter is null or undefined, the EV is set to 0. |
 
 **Error codes:**
 
@@ -990,15 +928,13 @@ Sets an exposure compensation value (EV). Before the setting, you are advised to
 setExposureMode(aeMode: ExposureMode): void
 ```
 
-Sets an exposure mode. Before the setting, call [isExposureModeSupported](#isExposureModeSupported) to check whether the target exposure mode is supported.
+Sets an exposure mode. Before the setting, call [isExposureModeSupported](#isexposuremodesupported) to check whether the target exposure mode is supported.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setExposureMode](arkts-camera-camera-autoexposure-i.md#setExposureMode)
+**Substitutes:** [setExposureMode](arkts-camera-camera-autoexposure-i.md#setexposuremode)
 
 <!--Device-CaptureSession-setExposureMode(aeMode: ExposureMode): void--><!--Device-CaptureSession-setExposureMode(aeMode: ExposureMode): void-End-->
 
@@ -1022,15 +958,13 @@ Sets an exposure mode. Before the setting, call [isExposureModeSupported](#isExp
 setFlashMode(flashMode: FlashMode): void
 ```
 
-Sets a flash mode. Before the setting, do the following checks: 1. Use [hasFlash](#hasFlash) to check whether the camera device has flash. 2. Use [isFlashModeSupported](#isFlashModeSupported) to check whether the camera device supports the flash mode.
+Sets a flash mode. Before the setting, do the following checks: 1. Use [hasFlash](#hasflash) to check whether the camera device has flash. 2. Use [isFlashModeSupported](#isflashmodesupported) to check whether the camera device supports the flash mode.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setFlashMode](arkts-camera-camera-flash-i.md#setFlashMode)
+**Substitutes:** [setFlashMode](arkts-camera-camera-flash-i.md#setflashmode)
 
 <!--Device-CaptureSession-setFlashMode(flashMode: FlashMode): void--><!--Device-CaptureSession-setFlashMode(flashMode: FlashMode): void-End-->
 
@@ -1054,15 +988,13 @@ Sets a flash mode. Before the setting, do the following checks: 1. Use [hasFlash
 setFocusMode(afMode: FocusMode): void
 ```
 
-Sets a focus mode. Before the setting, call [isFocusModeSupported](#isFocusModeSupported) to check whether the focus mode is supported.
+Sets a focus mode. Before the setting, call [isFocusModeSupported](#isfocusmodesupported) to check whether the focus mode is supported.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setFocusMode](arkts-camera-camera-focus-i.md#setFocusMode)
+**Substitutes:** [setFocusMode](arkts-camera-camera-focus-i.md#setfocusmode)
 
 <!--Device-CaptureSession-setFocusMode(afMode: FocusMode): void--><!--Device-CaptureSession-setFocusMode(afMode: FocusMode): void-End-->
 
@@ -1090,11 +1022,9 @@ Sets the focal point. The focal point must be in the coordinate system (0-1), wh
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setFocusPoint](arkts-camera-camera-focus-i.md#setFocusPoint)
+**Substitutes:** [setFocusPoint](arkts-camera-camera-focus-i.md#setfocuspoint)
 
 <!--Device-CaptureSession-setFocusPoint(point: Point): void--><!--Device-CaptureSession-setFocusPoint(point: Point): void-End-->
 
@@ -1122,11 +1052,9 @@ Sets the metering point, which is the center point of the metering rectangle. Th
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setMeteringPoint)
+**Substitutes:** [setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint)
 
 <!--Device-CaptureSession-setMeteringPoint(point: Point): void--><!--Device-CaptureSession-setMeteringPoint(point: Point): void-End-->
 
@@ -1150,15 +1078,13 @@ Sets the metering point, which is the center point of the metering rectangle. Th
 setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
-Sets a video stabilization mode. Before the setting, call [isVideoStabilizationModeSupported](#isVideoStabilizationModeSupported) to check whether the target video stabilization mode is supported.
+Sets a video stabilization mode. Before the setting, call [isVideoStabilizationModeSupported](#isvideostabilizationmodesupported) to check whether the target video stabilization mode is supported.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#setVideoStabilizationMode)
+**Substitutes:** [setVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#setvideostabilizationmode)
 
 <!--Device-CaptureSession-setVideoStabilizationMode(mode: VideoStabilizationMode): void--><!--Device-CaptureSession-setVideoStabilizationMode(mode: VideoStabilizationMode): void-End-->
 
@@ -1186,11 +1112,9 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setZoomRatio](arkts-camera-camera-zoom-i.md#setZoomRatio)
+**Substitutes:** [setZoomRatio](arkts-camera-camera-zoom-i.md#setzoomratio)
 
 <!--Device-CaptureSession-setZoomRatio(zoomRatio: number): void--><!--Device-CaptureSession-setZoomRatio(zoomRatio: number): void-End-->
 
@@ -1200,7 +1124,7 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoomRatio | number | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getZoomRatioRange). If the value passed in is not within the supported range, the value within the precision range is retained. If the input parameter is null or undefined, it is treated as 0 and the minimum zoom ratio is used. |
+| zoomRatio | number | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange). If the value passed in is not within the supported range, the value within the precision range is retained. If the input parameter is null or undefined, it is treated as 0 and the minimum zoom ratio is used. |
 
 **Error codes:**
 
@@ -1218,8 +1142,6 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [start](arkts-camera-camera-session-i.md#start)(callback: AsyncCallback&lt;void&gt;)
@@ -1232,7 +1154,7 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 **Error codes:**
 
@@ -1250,8 +1172,6 @@ start(): Promise<void>
 Starts this session. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 
@@ -1284,8 +1204,6 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [stop](arkts-camera-camera-session-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
@@ -1298,7 +1216,7 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 **Error codes:**
 
@@ -1315,8 +1233,6 @@ stop(): Promise<void>
 Stops this session. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 

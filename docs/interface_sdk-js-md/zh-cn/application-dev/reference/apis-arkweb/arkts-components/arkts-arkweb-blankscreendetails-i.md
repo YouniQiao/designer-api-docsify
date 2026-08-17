@@ -1,12 +1,8 @@
 # BlankScreenDetails
 
-定义检测到白屏时的结果的细节。
+提供检测到白屏时的结果细节，包括有内容节点数量。适用于需要分析白屏原因的场景，提升白屏诊断的详细性和准确性。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface BlankScreenDetails--><!--Device-unnamed-declare interface BlankScreenDetails-End-->
 
@@ -23,10 +19,6 @@ detectedContentfulNodesCount?: number
 **类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 <!--Device-BlankScreenDetails-detectedContentfulNodesCount?: number--><!--Device-BlankScreenDetails-detectedContentfulNodesCount?: number-End-->
 

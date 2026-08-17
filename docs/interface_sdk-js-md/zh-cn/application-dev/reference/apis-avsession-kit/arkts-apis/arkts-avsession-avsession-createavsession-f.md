@@ -10,10 +10,6 @@ function createAVSession(context: Context, tag: string, type: AVSessionType, cal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void--><!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -25,7 +21,7 @@ function createAVSession(context: Context, tag: string, type: AVSessionType, cal
 | context | Context | 是 | 需要使用UIAbilityContext，用于系统获取应用组件的相关信息。 |
 | tag | string | 是 | 会话的自定义名称。 |
 | type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | 是 | 会话类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVSession](arkts-avsession-avsession-avsession-i.md)&gt; | 是 | 回调函数。回调返回会话实例对象，可用于获取会话ID，以及设置元数据、播放状态，发送按键事件等操作。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVSession](arkts-avsession-avsession-avsession-i.md)&gt; | 是 | 回调函数。回调返回会话实例对象，可用于获取会话ID，以及设置元数据、播放状态，发送按键事件等操作。 |
 
 **错误码：**
 
@@ -34,7 +30,7 @@ function createAVSession(context: Context, tag: string, type: AVSessionType, cal
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
@@ -78,10 +74,6 @@ function createAVSession(context: Context, tag: string, type: AVSessionType): Pr
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType): Promise<AVSession>--><!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType): Promise<AVSession>-End-->
@@ -109,7 +101,7 @@ function createAVSession(context: Context, tag: string, type: AVSessionType): Pr
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';

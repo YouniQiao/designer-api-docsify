@@ -4,10 +4,6 @@ Plugin component push parameters which is used in push function.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-pluginComponentManager-interface PushParameterForStage--><!--Device-pluginComponentManager-interface PushParameterForStage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -32,10 +28,6 @@ Defines data.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-PushParameterForStage-data: KVObject--><!--Device-PushParameterForStage-data: KVObject-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -53,10 +45,6 @@ Defines extraData.
 **Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-PushParameterForStage-extraData: KVObject--><!--Device-PushParameterForStage-extraData: KVObject-End-->
 
@@ -76,10 +64,6 @@ Defines jsonPath.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-PushParameterForStage-jsonPath?: string--><!--Device-PushParameterForStage-jsonPath?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -97,10 +81,6 @@ Defines name.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-PushParameterForStage-name: string--><!--Device-PushParameterForStage-name: string-End-->
 
@@ -120,10 +100,6 @@ Defines owner.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-PushParameterForStage-owner: Want--><!--Device-PushParameterForStage-owner: Want-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -141,10 +117,6 @@ Defines target.
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-PushParameterForStage-target: Want--><!--Device-PushParameterForStage-target: Want-End-->
 

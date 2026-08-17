@@ -8,11 +8,9 @@ Enumerates the authentication security levels.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md#AuthTrustLevel)
+**Substitutes:** [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md#authtrustlevel)
 
 <!--Device-userAuth-type SecureLevel = 'S1' | 'S2' | 'S3' | 'S4'--><!--Device-userAuth-type SecureLevel = 'S1' | 'S2' | 'S3' | 'S4'-End-->
 

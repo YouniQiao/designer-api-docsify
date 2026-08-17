@@ -4,8 +4,6 @@ Defines the options used in writeText().
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileWriteTextOption--><!--Device-unnamed-export interface FileWriteTextOption-End-->
@@ -23,8 +21,6 @@ Whether to enable the append mode. The default value is **false**. The value **t
 **Type:** boolean
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ Callback invoked when the API call is complete.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileWriteTextOption-complete?: () => void--><!--Device-FileWriteTextOption-complete?: () => void-End-->
@@ -63,8 +57,6 @@ Encoding format. The default format is **UTF-8**.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -84,8 +76,6 @@ Callback invoked when the API call fails. **data** indicates the error informati
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void--><!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void-End-->
@@ -103,8 +93,6 @@ Callback invoked when the API call is successful.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -124,8 +112,6 @@ String to write into the file.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileWriteTextOption-text: string--><!--Device-FileWriteTextOption-text: string-End-->
@@ -143,8 +129,6 @@ URI of a local file. If it does not exist, a file will be created. Restricted by
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

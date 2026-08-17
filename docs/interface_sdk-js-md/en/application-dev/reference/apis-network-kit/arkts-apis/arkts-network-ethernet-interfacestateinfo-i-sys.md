@@ -4,10 +4,6 @@ The interface is used to monitor network interface status changes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-ethernet-export interface InterfaceStateInfo--><!--Device-ethernet-export interface InterfaceStateInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -32,10 +28,6 @@ Check if it is active.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-InterfaceStateInfo-active: boolean--><!--Device-InterfaceStateInfo-active: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -53,10 +45,6 @@ Define network card name.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-InterfaceStateInfo-iface: string--><!--Device-InterfaceStateInfo-iface: string-End-->
 

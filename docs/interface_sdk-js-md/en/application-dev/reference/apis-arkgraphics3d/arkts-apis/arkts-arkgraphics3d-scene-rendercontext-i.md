@@ -1,12 +1,8 @@
 # RenderContext
 
-Render context defines the context for all rendering resources. Resources within the same render context may be shared between scenes created within the same render context.
+Defines the context of all rendering resources. Multiple scenes created within the same render context can share rendering resources.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RenderContext--><!--Device-unnamed-export interface RenderContext-End-->
 
@@ -18,13 +14,9 @@ Render context defines the context for all rendering resources. Resources within
 getRenderResourceFactory() : RenderResourceFactory
 ```
 
-Get resource factory.
+Obtains the rendering resource factory, which provides APIs for creating different rendering resources.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RenderContext-getRenderResourceFactory() : RenderResourceFactory--><!--Device-RenderContext-getRenderResourceFactory() : RenderResourceFactory-End-->
 
@@ -34,9 +26,9 @@ Get resource factory.
 
 | Type | Description |
 | --- | --- |
-| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | RenderResourceFactory instance |
+| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | RenderResourceFactory instance for creating rendering resources. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
@@ -62,10 +54,6 @@ Loads a plugin by name. The API locates and loads the corresponding plugin resou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RenderContext-loadPlugin(name: string): Promise<boolean>--><!--Device-RenderContext-loadPlugin(name: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -82,7 +70,7 @@ Loads a plugin by name. The API locates and loads the corresponding plugin resou
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return a Boolean value, indicating whether the plugin is loaded. The value true means that the plugin is loaded, and false means the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, RenderContext } from '@kit.ArkGraphics3D';
@@ -107,10 +95,6 @@ Registers the directory path and retrieval name for asset files, such as shaders
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RenderContext-registerResourcePath(protocol: string, uri: string): boolean--><!--Device-RenderContext-registerResourcePath(protocol: string, uri: string): boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -128,7 +112,7 @@ Registers the directory path and retrieval name for asset files, such as shaders
 | --- | --- |
 | boolean | Result indicating whether the registration is successful. true if successful, and false otherwise. The possible cause of a registration failure is that the retrieval name has been registered or an input parameter is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, RenderContext } from '@kit.ArkGraphics3D';

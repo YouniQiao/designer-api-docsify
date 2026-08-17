@@ -2,13 +2,9 @@
 
 OIS (Optical Image Stabilization) interface.
 
-**Inheritance/Implementation:** OIS extends [OISQuery](arkts-camera-camera-oisquery-i.md#OISQuery)
+**Inheritance/Implementation:** OIS extends [OISQuery](arkts-camera-camera-oisquery-i.md#oisquery)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface OIS--><!--Device-camera-interface OIS-End-->
 
@@ -29,10 +25,6 @@ setOISMode(mode: OISMode): void
 Sets the OIS mode.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,10 +56,6 @@ setOISModeCustom(pitch: double, yaw: double): void
 Sets custom OIS bias values for each axis.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

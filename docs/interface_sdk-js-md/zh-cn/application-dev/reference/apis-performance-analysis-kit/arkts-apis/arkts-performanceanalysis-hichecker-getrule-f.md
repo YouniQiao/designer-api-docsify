@@ -10,10 +10,6 @@ function getRule() : bigint
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hichecker-function getRule() : bigint--><!--Device-hichecker-function getRule() : bigint-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
@@ -24,7 +20,7 @@ function getRule() : bigint
 | --- | --- |
 | bigint | 当前系统中添加的规则。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 添加一条规则

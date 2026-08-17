@@ -16,10 +16,6 @@ Checks whether Do Not Disturb is enabled on this device. The Do Not Disturb stat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_DONOTDISTURB_STATE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -41,7 +37,7 @@ Checks whether Do Not Disturb is enabled on this device. The Do Not Disturb stat
 | [35200001](../../apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError, intelligentScene } from '@kit.BasicServicesKit';

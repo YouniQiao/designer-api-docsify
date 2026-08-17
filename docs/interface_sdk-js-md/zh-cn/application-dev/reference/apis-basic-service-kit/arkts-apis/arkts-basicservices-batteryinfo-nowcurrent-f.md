@@ -10,9 +10,7 @@ function nowCurrent(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-batteryInfo-function nowCurrent(): int--><!--Device-batteryInfo-function nowCurrent(): int-End-->
 
@@ -24,7 +22,7 @@ function nowCurrent(): int
 | --- | --- |
 | int | 返回当前设备电池的电流，单位毫安。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // ArkTS-Sta示例

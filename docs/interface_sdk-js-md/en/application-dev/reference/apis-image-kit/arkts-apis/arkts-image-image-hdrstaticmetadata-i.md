@@ -1,12 +1,8 @@
 # HdrStaticMetadata
 
-Describes the static metadata keys, that is, the values available for **HDR_STATIC_METADATA** in [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#HdrMetadataKey).
+Describes the static metadata keys, that is, the values available for **HDR_STATIC_METADATA** in [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#hdrmetadatakey).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-interface HdrStaticMetadata--><!--Device-image-interface HdrStaticMetadata-End-->
 
@@ -30,10 +26,6 @@ The X-coordinate of the primary colors. Specifies the normalized X-coordinates o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HdrStaticMetadata-displayPrimariesX: Array<double>--><!--Device-HdrStaticMetadata-displayPrimariesX: Array<double>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -49,10 +41,6 @@ The Y-coordinate of the primary colors. Specifies the normalized Y-coordinates o
 **Type:** Array&lt;double&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-displayPrimariesY: Array<double>--><!--Device-HdrStaticMetadata-displayPrimariesY: Array<double>-End-->
 
@@ -70,10 +58,6 @@ Maximum brightness of displayed content. The value is measured in units of 1, wi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HdrStaticMetadata-maxContentLightLevel: double--><!--Device-HdrStaticMetadata-maxContentLightLevel: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -89,10 +73,6 @@ Maximum average brightness of displayed content. The value is measured in units 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-maxFrameAverageLightLevel: double--><!--Device-HdrStaticMetadata-maxFrameAverageLightLevel: double-End-->
 
@@ -110,10 +90,6 @@ Maximum luminance of the image's primary display. The value is measured in units
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HdrStaticMetadata-maxLuminance: double--><!--Device-HdrStaticMetadata-maxLuminance: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -129,10 +105,6 @@ Minimum luminance of the image's primary display. The value is measured in units
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-minLuminance: double--><!--Device-HdrStaticMetadata-minLuminance: double-End-->
 
@@ -150,10 +122,6 @@ The X-coordinate of the white point value. Specifies the normalized X-coordinate
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HdrStaticMetadata-whitePointX: double--><!--Device-HdrStaticMetadata-whitePointX: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -169,10 +137,6 @@ The Y-coordinate of the white point value. Specifies the normalized Y-coordinate
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-whitePointY: double--><!--Device-HdrStaticMetadata-whitePointY: double-End-->
 

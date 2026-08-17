@@ -16,10 +16,6 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-statistics-function getAllRxBytes(callback: AsyncCallback<long>): void--><!--Device-statistics-function getAllRxBytes(callback: AsyncCallback<long>): void-End-->
@@ -41,7 +37,7 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 | [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) | Failed to create a system map. |
 | [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { statistics } from '@kit.NetworkKit';
@@ -64,10 +60,6 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-statistics-function getAllRxBytes(): Promise<long>--><!--Device-statistics-function getAllRxBytes(): Promise<long>-End-->
@@ -89,7 +81,7 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 | [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) | Failed to create a system map. |
 | [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { statistics } from '@kit.NetworkKit';

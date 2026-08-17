@@ -8,10 +8,6 @@ Provides the information required to create a local WantAgent.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wantAgent-export type LocalWantAgentInfo = _LocalWantAgentInfo--><!--Device-wantAgent-export type LocalWantAgentInfo = _LocalWantAgentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

@@ -12,10 +12,6 @@ Called when the remote window interface is used.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-RemoteWindowInterface-(target: WindowAnimationTarget): RemoteWindowAttribute--><!--Device-RemoteWindowInterface-(target: WindowAnimationTarget): RemoteWindowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

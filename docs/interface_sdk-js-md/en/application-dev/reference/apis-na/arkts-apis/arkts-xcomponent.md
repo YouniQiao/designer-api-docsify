@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [XComponent](arkts-na-xcomponent-xcomponent-f.md#XComponent) | Defines XComponent Component.It requires call setXComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
+| [XComponent](arkts-na-xcomponent-xcomponent-f.md#xcomponent) | Defines XComponent Component.It requires call setXComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
 
 ### Classes
 

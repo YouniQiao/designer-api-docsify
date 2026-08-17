@@ -4,10 +4,6 @@ Enumerates the network types allowed for download. The value **CELLULAR** indica
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export enum NetType--><!--Device-update-export enum NetType-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -23,10 +19,6 @@ CELLULAR = 1
 Data network.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetType-CELLULAR = 1--><!--Device-NetType-CELLULAR = 1-End-->
 
@@ -44,10 +36,6 @@ Wi-Fi hotspot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetType-METERED_WIFI = 2--><!--Device-NetType-METERED_WIFI = 2-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -63,10 +51,6 @@ NOT_METERED_WIFI = 4
 Non Wi-Fi hotspot.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetType-NOT_METERED_WIFI = 4--><!--Device-NetType-NOT_METERED_WIFI = 4-End-->
 
@@ -84,10 +68,6 @@ Wi-Fi.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetType-WIFI = 6--><!--Device-NetType-WIFI = 6-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -103,10 +83,6 @@ CELLULAR_AND_WIFI = 7
 Data network and Wi-Fi.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetType-CELLULAR_AND_WIFI = 7--><!--Device-NetType-CELLULAR_AND_WIFI = 7-End-->
 

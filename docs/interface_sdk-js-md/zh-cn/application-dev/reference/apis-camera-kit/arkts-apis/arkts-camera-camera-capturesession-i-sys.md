@@ -1,14 +1,12 @@
 # CaptureSession
 
-拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)，并向相机设备申请完成相 机功能(录像，拍照)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#camerainput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)，并向相机设备申请完成相 机功能(录像，拍照)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)
+**替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md#videosession)
 
 <!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
@@ -24,11 +22,9 @@ Obtains the level of the beauty type in use.
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [getBeauty](arkts-camera-camera-beauty-i-sys.md#getBeauty)
+**替代接口：** [getBeauty](arkts-camera-camera-beauty-i-sys.md#getbeauty)
 
 <!--Device-CaptureSession-getBeauty(type: BeautyType): number--><!--Device-CaptureSession-getBeauty(type: BeautyType): number-End-->
 
@@ -54,7 +50,7 @@ Obtains the level of the beauty type in use.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
-## 示例
+**示例**
 
 ```TypeScript
 function getBeauty(captureSession: camera.CaptureSession): number {
@@ -83,11 +79,9 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange)
+**替代接口：** [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange)
 
 <!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>--><!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>-End-->
 
@@ -113,7 +107,7 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
-## 示例
+**示例**
 
 ```TypeScript
 function getSupportedBeautyRange(captureSession: camera.CaptureSession): Array<number> {
@@ -136,11 +130,9 @@ Obtains the supported beauty types.
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyTypes)
+**替代接口：** [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes)
 
 <!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>--><!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>-End-->
 
@@ -160,7 +152,7 @@ Obtains the supported beauty types.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
-## 示例
+**示例**
 
 ```TypeScript
 function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<camera.BeautyType> {
@@ -175,15 +167,13 @@ function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<c
 setBeauty(type: BeautyType, value: number): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType（系统接口）) obtained through [getSupportedBeautyTypes](#getSupportedBeautyTypes) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#beautytype系统接口) obtained through [getSupportedBeautyTypes](#getsupportedbeautytypes) are disabled.
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 11
 
-**替代接口：** [setBeauty](arkts-camera-camera-beauty-i-sys.md#setBeauty)
+**替代接口：** [setBeauty](arkts-camera-camera-beauty-i-sys.md#setbeauty)
 
 <!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void--><!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void-End-->
 
@@ -196,7 +186,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 是 | Beauty type. |
-| value | number | 是 | Beauty level, which is obtained through [getSupportedBeautyRange](#getSupportedBeautyRange). |
+| value | number | 是 | Beauty level, which is obtained through [getSupportedBeautyRange](#getsupportedbeautyrange). |
 
 **错误码：**
 
@@ -204,7 +194,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
-## 示例
+**示例**
 
 ```TypeScript
 function setBeauty(captureSession: camera.CaptureSession): void {

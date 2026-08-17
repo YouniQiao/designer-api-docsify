@@ -10,11 +10,9 @@ Subscribes to notifications of all applications under this user. This API uses a
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-(System-API))
+**Substitutes:** [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -46,11 +44,9 @@ Subscribes to a notification with the subscription information specified. This A
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-(System-API))
+**Substitutes:** [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -79,11 +75,9 @@ Subscribes to a notification with the subscription information specified. This A
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-(System-API))
+**Substitutes:** [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

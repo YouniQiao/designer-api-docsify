@@ -20,10 +20,6 @@ Imports a key securely for the specified user. This API uses a promise to return
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-huks-function importWrappedKeyItemAsUser(    userId: number, keyAlias: string,    wrappingKeyAlias: string,    huksOptions: HuksOptions  ): Promise<void>--><!--Device-huks-function importWrappedKeyItemAsUser(    userId: number, keyAlias: string,    wrappingKeyAlias: string,    huksOptions: HuksOptions  ): Promise<void>-End-->
@@ -68,7 +64,7 @@ Imports a key securely for the specified user. This API uses a promise to return
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
-## Examples
+**Examples**
 
 The values of the following cryptography-related variables (such as initializationVector, associatedData, and nonce) are for reference only and cannot be directly used in the service logic. You need to set them based on actual situation.
 

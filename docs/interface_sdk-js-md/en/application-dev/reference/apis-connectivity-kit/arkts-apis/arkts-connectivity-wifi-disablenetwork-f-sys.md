@@ -16,8 +16,6 @@ Disables a specified network. &lt;p&gt;The disabled network will not be associat
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** disableDeviceConfig
@@ -42,7 +40,7 @@ Disables a specified network. &lt;p&gt;The disabled network will not be associat
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

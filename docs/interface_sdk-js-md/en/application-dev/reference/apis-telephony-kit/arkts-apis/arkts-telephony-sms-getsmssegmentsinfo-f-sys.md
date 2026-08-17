@@ -16,10 +16,6 @@ Obtains SMS message segment information. This API uses an asynchronous callback 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, callback: AsyncCallback<SmsSegmentsInfo>): void--><!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, callback: AsyncCallback<SmsSegmentsInfo>): void-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -46,7 +42,7 @@ Obtains SMS message segment information. This API uses an asynchronous callback 
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -68,10 +64,6 @@ function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): P
 Obtains SMS message segment information. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): Promise<SmsSegmentsInfo>--><!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): Promise<SmsSegmentsInfo>-End-->
 
@@ -104,7 +96,7 @@ Obtains SMS message segment information. This API uses a promise to return the r
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

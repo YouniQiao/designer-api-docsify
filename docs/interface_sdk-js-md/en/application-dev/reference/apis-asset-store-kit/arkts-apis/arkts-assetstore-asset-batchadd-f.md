@@ -12,13 +12,9 @@ import { asset } from 'asset';
 function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>
 ```
 
-Adds assets in batches based on an attributes array. To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#IS_PERSISTENT), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission. Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) can be added in batches.
+Adds assets in batches based on an attributes array. To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#ispersistent), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission. Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) can be added in batches.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-asset-function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>--><!--Device-asset-function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>-End-->
 
@@ -52,5 +48,5 @@ Adds assets in batches based on an attributes array. To set [IS_PERSISTENT](arkt
 | [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
 | [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) | The screen lock status does not match. |
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
-| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) in the array is not consistent. |
+| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) in the array is not consistent. |
 

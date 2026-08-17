@@ -6,13 +6,9 @@
 function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 ```
 
-订阅划词完成事件，与 [off('selectionCompleted')](arkts-basicservices-selectionmanager-offselectioncompleted-f-sys.md#off_selectionCompleted) 搭配使用取消订阅。
+订阅划词完成事件，与 [off('selectionCompleted')](arkts-basicservices-selectionmanager-offselectioncompleted-f-sys.md#offselectioncompleted) 搭配使用取消订阅。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-selectionManager-function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void--><!--Device-selectionManager-function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void-End-->
 
@@ -25,7 +21,7 @@ function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectionCompleted' | 是 | 设置监听类型，固定取值为'selectionCompleted'。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)&gt; | 是 | 回调函数，返回划词事件信息[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md#SelectionInfo（系统接口）)。该回 调仅在用户通过鼠标或触控板选中文本（双击/三击/滑动）后按下Ctrl键时触发。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)&gt; | 是 | 回调函数，返回划词事件信息[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md#selectioninfo系统接口)。该回 调仅在用户通过鼠标或触控板选中文本（双击/三击/滑动）后按下Ctrl键时触发。 |
 
 **错误码：**
 
@@ -33,7 +29,7 @@ function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 | --- | --- |
 | [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-调用接口的应用与系统设置中选择的应用不匹配) | The application calling the API does not match the application selected in the system settings. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { selectionManager } from '@kit.BasicServicesKit';

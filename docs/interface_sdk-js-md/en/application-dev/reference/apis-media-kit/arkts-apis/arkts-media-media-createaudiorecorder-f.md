@@ -16,11 +16,9 @@ Creates an AudioRecorder instance to control audio recording. Only one AudioReco
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder)(callback: AsyncCallback&lt;AVRecorder&gt;)
+**Substitutes:** [createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder)(callback: AsyncCallback&lt;AVRecorder&gt;)
 
 <!--Device-media-function createAudioRecorder(): AudioRecorder--><!--Device-media-function createAudioRecorder(): AudioRecorder-End-->
 
@@ -32,7 +30,7 @@ Creates an AudioRecorder instance to control audio recording. Only one AudioReco
 | --- | --- |
 | [AudioRecorder](arkts-media-media-audiorecorder-i.md) | If the operation is successful, an AudioRecorder instance is returned; otherwise, **null** is returned. The instance can be used to record audio. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let audioRecorder: media.AudioRecorder = media.createAudioRecorder();

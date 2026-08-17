@@ -1,12 +1,8 @@
-# ProvisionRequest
+# ProvisionRequest(Defines the DRM capability.)
 
 Defines a device certificate provisioning request.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-drm-interface ProvisionRequest--><!--Device-drm-interface ProvisionRequest-End-->
 
@@ -30,10 +26,6 @@ Binary data of the provisioning request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ProvisionRequest-data: Uint8Array--><!--Device-ProvisionRequest-data: Uint8Array-End-->
@@ -51,10 +43,6 @@ URL of the device certificate provisioning server.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

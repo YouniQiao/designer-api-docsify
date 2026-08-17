@@ -8,10 +8,6 @@ Obtains business ability info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-businessAbilityRouter-export type BusinessAbilityInfo = _BusinessAbilityInfo--><!--Device-businessAbilityRouter-export type BusinessAbilityInfo = _BusinessAbilityInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

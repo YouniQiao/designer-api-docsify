@@ -10,10 +10,6 @@ function startAppTraceCapture(tags: long[], flag: TraceFlag, limitSize: int): st
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function startAppTraceCapture(tags: long[], flag: TraceFlag, limitSize: int): string--><!--Device-hidebug-function startAppTraceCapture(tags: long[], flag: TraceFlag, limitSize: int): string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -41,7 +37,7 @@ function startAppTraceCapture(tags: long[], flag: TraceFlag, limitSize: int): st
 | [11400103](../errorcode-hiviewdfx-hidebug-trace.md#11400103-权限校验失败) | No write permission on the file. |
 | [11400102](../errorcode-hiviewdfx-hidebug-trace.md#11400102-重复采集) | Capture trace already enabled. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -19,10 +19,6 @@ Obtains the number of bytes of a string based on the encoding format.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function byteLength(    string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer,    encoding?: BufferEncoding  ): number--><!--Device-buffer-function byteLength(    string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer,    encoding?: BufferEncoding  ): number-End-->
@@ -42,7 +38,7 @@ Obtains the number of bytes of a string based on the encoding format.
 | --- | --- |
 | number | Number of bytes of the string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -65,10 +61,6 @@ function byteLength(
 Obtains the number of bytes of a string based on the encoding format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

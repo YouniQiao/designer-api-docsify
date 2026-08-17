@@ -16,10 +16,6 @@ Get the operator name of the specified SIM card slot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-function getOperatorNameSync(slotId: int): string--><!--Device-radio-function getOperatorNameSync(slotId: int): string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -36,7 +32,7 @@ Get the operator name of the specified SIM card slot.
 | --- | --- |
 | string | Returns the operator name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let slotId: number = 0;

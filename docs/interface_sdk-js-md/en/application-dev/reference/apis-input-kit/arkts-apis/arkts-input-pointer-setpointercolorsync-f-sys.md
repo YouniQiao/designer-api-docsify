@@ -16,10 +16,6 @@ Sets the pointer color. This API returns the result synchronously. > **NOTE：**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-pointer-function setPointerColorSync(color: int): void--><!--Device-pointer-function setPointerColorSync(color: int): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -39,7 +35,7 @@ Sets the pointer color. This API returns the result synchronously. > **NOTE：**
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';

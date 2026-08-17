@@ -16,10 +16,6 @@ Creates an ImageSource instance based on a given URI. Images occupy a large amou
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-image-function createImageSource(uri: string): ImageSource--><!--Device-image-function createImageSource(uri: string): ImageSource-End-->
@@ -38,7 +34,7 @@ Creates an ImageSource instance based on a given URI. Images occupy a large amou
 | --- | --- |
 | ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function CreateImageSource(context : Context) {
@@ -58,10 +54,6 @@ function createImageSource(uri: string): ImageSource | undefined
 Creates an ImageSource instance based on the URI.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(uri: string): ImageSource | undefined--><!--Device-image-function createImageSource(uri: string): ImageSource | undefined-End-->
 
@@ -90,10 +82,6 @@ Creates an ImageSource instance based on a given URI. Images occupy a large amou
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -115,7 +103,7 @@ Creates an ImageSource instance based on a given URI. Images occupy a large amou
 | --- | --- |
 | ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function CreateImageSource(context : Context) {
@@ -136,10 +124,6 @@ function createImageSource(uri: string, options: SourceOptions): ImageSource | u
 Creates an ImageSource instance based on the URI.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource | undefined-End-->
 
@@ -169,10 +153,6 @@ Creates an ImageSource instance based on a given file descriptor. Images occupy 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-image-function createImageSource(fd: int): ImageSource--><!--Device-image-function createImageSource(fd: int): ImageSource-End-->
@@ -191,7 +171,7 @@ Creates an ImageSource instance based on a given file descriptor. Images occupy 
 | --- | --- |
 | ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs } from '@kit.CoreFileKit';
@@ -214,10 +194,6 @@ function createImageSource(fd: int): ImageSource | undefined
 Creates an ImageSource instance based on the file descriptor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(fd: int): ImageSource | undefined--><!--Device-image-function createImageSource(fd: int): ImageSource | undefined-End-->
 
@@ -246,10 +222,6 @@ Creates an ImageSource instance based on a given file descriptor. Images occupy 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -271,7 +243,7 @@ Creates an ImageSource instance based on a given file descriptor. Images occupy 
 | --- | --- |
 | ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs } from '@kit.CoreFileKit';
@@ -295,10 +267,6 @@ function createImageSource(fd: int, options: SourceOptions): ImageSource | undef
 Creates an ImageSource instance based on the file descriptor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource | undefined-End-->
 
@@ -324,13 +292,9 @@ Creates an ImageSource instance based on the file descriptor.
 function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
-Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync) . Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [image.createPixelMapSync](arkts-image-image-imagesource-i.md#createpixelmapsync) . Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -352,7 +316,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 | --- | --- |
 | ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function CreateImageSource() {
@@ -371,10 +335,6 @@ function createImageSource(buf: ArrayBuffer): ImageSource | undefined
 Creates an ImageSource instance based on the buffer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource | undefined--><!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource | undefined-End-->
 
@@ -399,13 +359,9 @@ Creates an ImageSource instance based on the buffer.
 function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync) . Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [image.createPixelMapSync](arkts-image-image-imagesource-i.md#createpixelmapsync) . Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -428,7 +384,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 | --- | --- |
 | ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function CreateImageSource() {
@@ -448,10 +404,6 @@ function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSourc
 Creates an ImageSource instance based on the buffer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource | undefined-End-->
 
@@ -481,10 +433,6 @@ Creates an ImageSource instance based on the raw file descriptor of an image res
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions): ImageSource--><!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions): ImageSource-End-->
@@ -504,7 +452,7 @@ Creates an ImageSource instance based on the raw file descriptor of an image res
 | --- | --- |
 | ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -533,10 +481,6 @@ function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?:
 Creates an ImageSource instance based on the raw file descriptor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions)      : ImageSource | undefined--><!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions)      : ImageSource | undefined-End-->
 

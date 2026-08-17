@@ -2,13 +2,9 @@
 
 The definition of Ranking.
 
-**Inheritance/Implementation:** Ranking extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)
+**Inheritance/Implementation:** Ranking extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#mediaentity)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-avMusicTemplate-interface Ranking--><!--Device-avMusicTemplate-interface Ranking-End-->
 
@@ -31,10 +27,6 @@ Recommended songs under the chart.
 **Type:** [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

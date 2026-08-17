@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface ClearOptions--><!--Device-update-export interface ClearOptions-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -25,10 +21,6 @@ status: UpgradeStatus
 **类型：** [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ClearOptions-status: UpgradeStatus--><!--Device-ClearOptions-status: UpgradeStatus-End-->
 

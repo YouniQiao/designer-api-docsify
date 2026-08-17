@@ -4,8 +4,6 @@ Defines the options used in rmdir().
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileRmdirOption--><!--Device-unnamed-export interface FileRmdirOption-End-->
@@ -23,8 +21,6 @@ Callback invoked when the API call is complete.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ Callback invoked when the API call fails. **data** indicates the error informati
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileRmdirOption-fail?: (data: string, code: number) => void--><!--Device-FileRmdirOption-fail?: (data: string, code: number) => void-End-->
@@ -63,8 +57,6 @@ Whether to recursively delete files and subdirectories of the specified director
 **Type:** boolean
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -84,8 +76,6 @@ Callback invoked when the API call is successful.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileRmdirOption-success?: () => void--><!--Device-FileRmdirOption-success?: () => void-End-->
@@ -103,8 +93,6 @@ URI of the directory. Restricted by the underlying file system of lite wearables
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

@@ -2,13 +2,9 @@
 
 Describes the multi-line text notification. This API is inherited from NotificationBasicContent. > **NOTE：**> > - When this notification type forms a group notification with other notifications, its display effect defaults > to the collapsed state, and the displayed title and body are the **title** and **text** inherited from > NotificationBasicContent. When this notification type is displayed alone and does not form a group notification > with other notifications, its display effect defaults to the expanded state, where the displayed title is the > expanded title **longTitle**, and the multi-line text content **lines** is displayed as the body. > > - When a user taps a group notification to view the notification details, the display effect of this > notification changes to the expanded state. > > - The actual display effect depends on the device capabilities and the notification center UI style.
 
-**Inheritance/Implementation:** NotificationMultiLineContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
+**Inheritance/Implementation:** NotificationMultiLineContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#notificationbasiccontent)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationMultiLineContent--><!--Device-unnamed-export interface NotificationMultiLineContent-End-->
 
@@ -25,10 +21,6 @@ lineWantAgents?: Array<WantAgent>
 **Type:** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 

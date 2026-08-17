@@ -10,8 +10,6 @@ Subscribes to common events. This API uses an asynchronous callback to return th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md#subscribe)
@@ -27,7 +25,7 @@ Subscribes to common events. This API uses an asynchronous callback to return th
 | subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | Yes | Subscriber object. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md)&gt; | Yes | Callback to be invoked when a common event is subscribed to. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import Base from '@ohos.base';

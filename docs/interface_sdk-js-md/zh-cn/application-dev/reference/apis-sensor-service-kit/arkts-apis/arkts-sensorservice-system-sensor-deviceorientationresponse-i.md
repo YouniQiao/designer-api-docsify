@@ -4,11 +4,9 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
-**替代接口：** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#OrientationResponse)
+**替代接口：** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#orientationresponse)
 
 <!--Device-unnamed-export interface DeviceOrientationResponse--><!--Device-unnamed-export interface DeviceOrientationResponse-End-->
 
@@ -25,8 +23,6 @@ alpha: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 8
 
@@ -50,8 +46,6 @@ beta: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** [beta](arkts-sensorservice-sensor-orientationresponse-i.md#beta)
@@ -73,8 +67,6 @@ gamma: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 8
 

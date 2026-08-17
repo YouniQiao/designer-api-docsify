@@ -4,8 +4,6 @@ Route information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 13
 
 **Substitutes:** NavPathStack and navDestination
@@ -25,8 +23,6 @@ Name of the navigation destination page to be redirected to.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 13
 
@@ -51,8 +47,6 @@ Parameter transferred during redirection.
 **Type:** unknown
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 13
 

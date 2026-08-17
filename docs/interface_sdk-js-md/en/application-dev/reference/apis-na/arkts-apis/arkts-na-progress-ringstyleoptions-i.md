@@ -2,13 +2,11 @@
 
 Defines the ring style Options.
 
-**Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](arkts-na-progress-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
+**Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](arkts-na-progress-scaneffectoptions-i.md#scaneffectoptions), [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface RingStyleOptions--><!--Device-unnamed-export declare interface RingStyleOptions-End-->
 
@@ -26,9 +24,7 @@ Enables progress shadow. Default value: false.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,9 +44,7 @@ The status of progress, default is PROGRESSING. Set to LOADING status will trigg
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,9 +64,7 @@ Defines the strokeWidth property. Default value: 4vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

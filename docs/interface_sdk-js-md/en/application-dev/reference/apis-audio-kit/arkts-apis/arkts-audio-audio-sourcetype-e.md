@@ -4,10 +4,6 @@ Enumerates the types of audio streams captured.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum SourceType--><!--Device-audio-enum SourceType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -21,10 +17,6 @@ SOURCE_TYPE_INVALID = -1
 Invalid audio source.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SourceType-SOURCE_TYPE_INVALID = -1--><!--Device-SourceType-SOURCE_TYPE_INVALID = -1-End-->
 
@@ -40,10 +32,6 @@ Mic source.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SourceType-SOURCE_TYPE_MIC = 0--><!--Device-SourceType-SOURCE_TYPE_MIC = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -57,10 +45,6 @@ SOURCE_TYPE_VOICE_RECOGNITION = 1
 Voice recognition source.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SourceType-SOURCE_TYPE_VOICE_RECOGNITION = 1--><!--Device-SourceType-SOURCE_TYPE_VOICE_RECOGNITION = 1-End-->
 
@@ -76,8 +60,6 @@ Playback capture source type.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 12
 
 **Substitutes:** OH_AVScreenCapture in native interface.
@@ -92,13 +74,9 @@ Playback capture source type.
 SOURCE_TYPE_VOICE_COMMUNICATION = 7
 ```
 
-Voice communication source. (The 3A algorithm is not enabled if recording is started independently. It is enabled when the AudioRenderer of the [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#StreamUsage) or [STREAM_USAGE_VIDEO_COMMUNICATION](arkts-audio-audio-streamusage-e.md#StreamUsage) type is also used to start playback.)
+Voice communication source. (The 3A algorithm is not enabled if recording is started independently. It is enabled when the AudioRenderer of the [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#streamusage) or [STREAM_USAGE_VIDEO_COMMUNICATION](arkts-audio-audio-streamusage-e.md#streamusage) type is also used to start playback.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SourceType-SOURCE_TYPE_VOICE_COMMUNICATION = 7--><!--Device-SourceType-SOURCE_TYPE_VOICE_COMMUNICATION = 7-End-->
 
@@ -114,10 +92,6 @@ Voice message source.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SourceType-SOURCE_TYPE_VOICE_MESSAGE = 10--><!--Device-SourceType-SOURCE_TYPE_VOICE_MESSAGE = 10-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -131,10 +105,6 @@ SOURCE_TYPE_CAMCORDER = 13
 Camcorder source type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SourceType-SOURCE_TYPE_CAMCORDER = 13--><!--Device-SourceType-SOURCE_TYPE_CAMCORDER = 13-End-->
 
@@ -150,10 +120,6 @@ Unprocessed source type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SourceType-SOURCE_TYPE_UNPROCESSED = 14--><!--Device-SourceType-SOURCE_TYPE_UNPROCESSED = 14-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -167,10 +133,6 @@ SOURCE_TYPE_LIVE = 17
 Live broadcast source type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SourceType-SOURCE_TYPE_LIVE = 17--><!--Device-SourceType-SOURCE_TYPE_LIVE = 17-End-->
 

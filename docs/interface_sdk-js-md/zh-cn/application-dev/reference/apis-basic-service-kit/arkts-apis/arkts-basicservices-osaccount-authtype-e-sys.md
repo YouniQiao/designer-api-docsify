@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-enum AuthType--><!--Device-osAccount-enum AuthType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ PIN = 1
 表示PIN认证类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthType-PIN = 1--><!--Device-AuthType-PIN = 1-End-->
 
@@ -44,10 +36,6 @@ FACE = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthType-FACE = 2--><!--Device-AuthType-FACE = 2-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -63,10 +51,6 @@ FINGERPRINT = 4
 表示指纹认证类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthType-FINGERPRINT = 4--><!--Device-AuthType-FINGERPRINT = 4-End-->
 
@@ -84,10 +68,6 @@ RECOVERY_KEY = 8
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthType-RECOVERY_KEY = 8--><!--Device-AuthType-RECOVERY_KEY = 8-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -103,10 +83,6 @@ PRIVATE_PIN = 16
 表示隐私PIN类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthType-PRIVATE_PIN = 16--><!--Device-AuthType-PRIVATE_PIN = 16-End-->
 
@@ -124,10 +100,6 @@ COMPANION_DEVICE = 64
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthType-COMPANION_DEVICE = 64--><!--Device-AuthType-COMPANION_DEVICE = 64-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -143,10 +115,6 @@ CUSTOM = 128
 自定义认证。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -165,10 +133,6 @@ DOMAIN = 1024
 表示域认证类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthType-DOMAIN = 1024--><!--Device-AuthType-DOMAIN = 1024-End-->
 

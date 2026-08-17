@@ -16,10 +16,6 @@ Enables the trace flag specified in HiTraceId. This API returns the result synch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiTraceChain-function enableFlag(id: HiTraceId, flag: HiTraceFlag): void--><!--Device-hiTraceChain-function enableFlag(id: HiTraceId, flag: HiTraceFlag): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -31,7 +27,7 @@ Enables the trace flag specified in HiTraceId. This API returns the result synch
 | id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance for which the trace flag is enabled. |
 | flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes | Specified trace flag. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Start tracing. The tracing flag is INCLUDE_ASYNC.

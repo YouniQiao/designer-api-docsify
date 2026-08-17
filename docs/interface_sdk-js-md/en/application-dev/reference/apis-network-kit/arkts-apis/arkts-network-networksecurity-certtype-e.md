@@ -4,10 +4,6 @@ Defines the certificate type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-networkSecurity-export enum CertType--><!--Device-networkSecurity-export enum CertType-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -22,10 +18,6 @@ PEM type certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CertType-CERT_TYPE_PEM = 0--><!--Device-CertType-CERT_TYPE_PEM = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -39,10 +31,6 @@ CERT_TYPE_DER = 1
 DER type certificate.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CertType-CERT_TYPE_DER = 1--><!--Device-CertType-CERT_TYPE_DER = 1-End-->
 

@@ -8,10 +8,6 @@ Defines the PacMap type used for data storage.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type PacMap = Record<string, int | double | string | boolean | Array<string | int | double | boolean> | null>--><!--Device-unnamed-export type PacMap = Record<string, int | double | string | boolean | Array<string | int | double | boolean> | null>-End-->

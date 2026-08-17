@@ -4,8 +4,6 @@ The module allows you to query the charging status and remaining power of a devi
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-unnamed-export default class Battery--><!--Device-unnamed-export default class Battery-End-->
@@ -29,8 +27,6 @@ Obtains the current charging state and battery level.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-Battery-static getStatus(options?: GetStatusOptions): void--><!--Device-Battery-static getStatus(options?: GetStatusOptions): void-End-->
@@ -43,7 +39,7 @@ Obtains the current charging state and battery level.
 | --- | --- | --- | --- |
 | options | [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md) | No | Object that contains the API calling result. This parameter is optional and is left blank by default. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 Battery.getStatus({

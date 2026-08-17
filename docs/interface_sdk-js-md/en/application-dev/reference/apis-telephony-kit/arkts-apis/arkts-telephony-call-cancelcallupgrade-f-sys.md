@@ -16,10 +16,6 @@ Cancels the upgrade of a video call. This API uses a promise to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PLACE_CALL
 
 <!--Device-call-function cancelCallUpgrade(callId: int): Promise<void>--><!--Device-call-function cancelCallUpgrade(callId: int): Promise<void>-End-->
@@ -52,7 +48,7 @@ Cancels the upgrade of a video call. This API uses a promise to return the resul
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

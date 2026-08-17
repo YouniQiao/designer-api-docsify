@@ -1,14 +1,10 @@
 # NumericTextTransition
 
-数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，copyOption属性无效。当文本存在子组件时或通过属性字符串设置时，数字 翻牌失效。 NumericTextTransition继承自[ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition)。
+数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，copyOption属性无效。当文本存在子组件时或通过属性字符串设置时，数字 翻牌失效。 NumericTextTransition继承自[ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition)。
 
-**继承/实现关系：** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition)
+**继承/实现关系：** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition)
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class NumericTextTransition--><!--Device-unnamed-declare class NumericTextTransition-End-->
 
@@ -24,10 +20,6 @@ constructor(options?: NumericTextTransitionOptions)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -40,7 +32,7 @@ constructor(options?: NumericTextTransitionOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | 否 | 设置数字翻牌动效。 默认值继承 [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md#NumericTextTransitionOptions)。 |
+| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | 否 | 设置数字翻牌动效。 默认值继承 [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md#numerictexttransitionoptions)。 |
 
 ## enableBlur
 
@@ -53,10 +45,6 @@ enableBlur?: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,10 +65,6 @@ flipDirection?: FlipDirection
 **类型：** [FlipDirection](arkts-arkui-flipdirection-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

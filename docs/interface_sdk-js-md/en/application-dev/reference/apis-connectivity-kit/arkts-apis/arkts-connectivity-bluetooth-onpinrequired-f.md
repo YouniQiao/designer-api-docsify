@@ -16,8 +16,6 @@ Subscribe the event of a pairing request from a remote Bluetooth device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** pinRequired
@@ -35,7 +33,7 @@ Subscribe the event of a pairing request from a remote Bluetooth device.
 | type | 'pinRequired' | Yes | Type of the pairing request event to listen for. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | Yes | Callback used to listen for the pairing request event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function onReceiveEvent(data : bluetooth.PinRequiredParam) { // data is the pairing request parameter.

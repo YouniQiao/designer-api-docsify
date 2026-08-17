@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-floatView-enum FloatViewState--><!--Device-floatView-enum FloatViewState-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -22,10 +18,6 @@ STARTED = 1
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewState-STARTED = 1--><!--Device-FloatViewState-STARTED = 1-End-->
@@ -38,13 +30,9 @@ STARTED = 1
 HIDDEN = 2
 ```
 
-标准悬浮窗已隐藏。上滑进入多任务界面时触发、使用 [setFloatViewVisibilityInApp](arkts-arkui-floatview-floatviewcontroller-i.md#setFloatViewVisibilityInApp)接口设置了应用在前台时隐藏标准悬浮窗且 应用处于前台时触发。
+标准悬浮窗已隐藏。上滑进入多任务界面时触发、使用 [setFloatViewVisibilityInApp](arkts-arkui-floatview-floatviewcontroller-i.md#setfloatviewvisibilityinapp)接口设置了应用在前台时隐藏标准悬浮窗且 应用处于前台时触发。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,10 +50,6 @@ STOPPED = 3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewState-STOPPED = 3--><!--Device-FloatViewState-STOPPED = 3-End-->
@@ -81,10 +65,6 @@ IN_SIDEBAR = 4
 标准悬浮窗在侧边栏中。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,10 +82,6 @@ IN_FLOATING_BALL = 5
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewState-IN_FLOATING_BALL = 5--><!--Device-FloatViewState-IN_FLOATING_BALL = 5-End-->
@@ -121,10 +97,6 @@ ERROR = 6
 标准悬浮窗发生异常。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,10 +4,6 @@ The **stationary** module provides APIs to report the device status, including a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace stationary--><!--Device-unnamed-declare namespace stationary-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
@@ -24,9 +20,9 @@ import { stationary } from 'stationary';
 
 | Name | Description |
 | --- | --- |
-| [off_ActivityType](arkts-multimodalawareness-stationary-offactivitytype-f.md#off_ActivityType) | Unsubscribes from the device status. |
-| [on_ActivityType](arkts-multimodalawareness-stationary-onactivitytype-f.md#on_ActivityType) | Subscribes to the device status. |
-| [once_ActivityType](arkts-multimodalawareness-stationary-onceactivitytype-f.md#once_ActivityType) | Obtains the device status. |
+| [off_ActivityType](arkts-multimodalawareness-stationary-offactivitytype-f.md#offactivitytype) | Unsubscribes from the device status. |
+| [on_ActivityType](arkts-multimodalawareness-stationary-onactivitytype-f.md#onactivitytype) | Subscribes to the device status. |
+| [once_ActivityType](arkts-multimodalawareness-stationary-onceactivitytype-f.md#onceactivitytype) | Obtains the device status. |
 
 ### Interfaces
 

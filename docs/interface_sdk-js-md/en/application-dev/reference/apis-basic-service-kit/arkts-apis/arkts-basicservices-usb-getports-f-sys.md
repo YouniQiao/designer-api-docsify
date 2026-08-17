@@ -16,11 +16,9 @@ Obtains the list of all physical USB ports.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getPorts-(System-API))
+**Substitutes:** [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getports-system-api)
 
 <!--Device-usb-function getPorts(): Array<USBPort>--><!--Device-usb-function getPorts(): Array<USBPort>-End-->
 
@@ -34,7 +32,7 @@ Obtains the list of all physical USB ports.
 | --- | --- |
 | Array&lt;USBPort&gt; | List of physical USB ports. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ret = usb.getPorts();

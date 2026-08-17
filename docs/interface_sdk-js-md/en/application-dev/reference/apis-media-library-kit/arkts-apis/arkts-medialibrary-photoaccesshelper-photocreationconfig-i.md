@@ -4,10 +4,6 @@ Represents the configuration for saving a media asset (image or video) to the me
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface PhotoCreationConfig--><!--Device-photoAccessHelper-interface PhotoCreationConfig-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -30,10 +26,6 @@ File name extension, for example, **'jpg'**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PhotoCreationConfig-fileNameExtension: string--><!--Device-PhotoCreationConfig-fileNameExtension: string-End-->
@@ -46,15 +38,11 @@ File name extension, for example, **'jpg'**.
 photoType: PhotoType
 ```
 
-Type of the file to create, which can be **IMAGE** or **VIDEO**. See [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#PhotoType).
+Type of the file to create, which can be **IMAGE** or **VIDEO**. See [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#phototype).
 
 **Type:** PhotoType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -68,15 +56,11 @@ Type of the file to create, which can be **IMAGE** or **VIDEO**. See [PhotoType]
 subtype?: PhotoSubtype
 ```
 
-Image or video file subtype. The default value is **DEFAULT**. See [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md#PhotoSubtype-(System-API)).
+Image or video file subtype. The default value is **DEFAULT**. See [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md#photosubtype-system-api).
 
 **Type:** PhotoSubtype
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -95,10 +79,6 @@ Title of the image or video. If this parameter is not passed, the system generat
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

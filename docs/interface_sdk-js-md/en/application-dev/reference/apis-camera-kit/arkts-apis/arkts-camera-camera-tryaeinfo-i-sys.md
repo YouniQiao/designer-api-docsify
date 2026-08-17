@@ -4,10 +4,6 @@ Describes the Try AE parameters. Try AE indicates that the hardware reports the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface TryAEInfo--><!--Device-camera-interface TryAEInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -32,10 +28,6 @@ Timelapse capture interval.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TryAEInfo-readonly captureInterval?: int--><!--Device-TryAEInfo-readonly captureInterval?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -53,10 +45,6 @@ Determine whether try AE is done.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TryAEInfo-readonly isTryAEDone: boolean--><!--Device-TryAEInfo-readonly isTryAEDone: boolean-End-->
 
@@ -76,10 +64,6 @@ Determine whether AE hint is needed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TryAEInfo-readonly isTryAEHintNeeded?: boolean--><!--Device-TryAEInfo-readonly isTryAEHintNeeded?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -97,10 +81,6 @@ Timelapse preview type.
 **Type:** [TimeLapsePreviewType](arkts-camera-camera-timelapsepreviewtype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TryAEInfo-readonly previewType?: TimeLapsePreviewType--><!--Device-TryAEInfo-readonly previewType?: TimeLapsePreviewType-End-->
 

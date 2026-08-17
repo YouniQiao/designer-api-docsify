@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-screenshot-interface PickInfo--><!--Device-screenshot-interface PickInfo-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -23,10 +19,6 @@ pickRect: Rect
 **类型：** Rect
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ pixelMap: image.PixelMap
 **类型：** image.PixelMap
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

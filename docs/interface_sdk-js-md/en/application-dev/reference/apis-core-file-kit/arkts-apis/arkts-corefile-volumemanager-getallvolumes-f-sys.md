@@ -16,10 +16,6 @@ Obtains information about all volumes of this external storage device. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 <!--Device-volumeManager-function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void--><!--Device-volumeManager-function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void-End-->
@@ -54,10 +50,6 @@ function getAllVolumes(): Promise<Array<Volume>>
 Obtains information about all volumes of this external storage device. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 

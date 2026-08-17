@@ -10,10 +10,6 @@ function getBundleNameByUidSync(uid: int): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
 <!--Device-bundleManager-function getBundleNameByUidSync(uid: int): string--><!--Device-bundleManager-function getBundleNameByUidSync(uid: int): string-End-->
@@ -40,7 +36,7 @@ function getBundleNameByUidSync(uid: int): string
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [17700021](../errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -4,11 +4,9 @@ Wi-Fi connection information.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#WifiLinkedInfo)
+**Substitutes:** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#wifilinkedinfo)
 
 <!--Device-wifi-interface WifiLinkedInfo--><!--Device-wifi-interface WifiLinkedInfo-End-->
 
@@ -32,8 +30,6 @@ The load value of this Wi-Fi connection. A greater value indicates a higher load
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [chload](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#chload)
@@ -56,11 +52,9 @@ The ID(uniquely identifies) of a Wi-Fi connection.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [networkId](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#networkId)
+**Substitutes:** [networkId](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#networkid)
 
 <!--Device-WifiLinkedInfo-networkId: number--><!--Device-WifiLinkedInfo-networkId: number-End-->
 
@@ -79,8 +73,6 @@ The signal-to-noise ratio (SNR) of this Wi-Fi connection.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -104,11 +96,9 @@ The state of the supplicant of this Wi-Fi connection.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [suppState](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#suppState)
+**Substitutes:** [suppState](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#suppstate)
 
 <!--Device-WifiLinkedInfo-suppState: SuppState--><!--Device-WifiLinkedInfo-suppState: SuppState-End-->
 

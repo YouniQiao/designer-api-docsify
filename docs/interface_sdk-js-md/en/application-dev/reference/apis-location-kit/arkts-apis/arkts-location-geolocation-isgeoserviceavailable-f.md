@@ -16,11 +16,9 @@ Obtain geocode service status
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isGeocoderAvailable)
+**Substitutes:** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isgeocoderavailable)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -34,7 +32,7 @@ Obtain geocode service status
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the geocode service status. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -59,11 +57,9 @@ Obtain geocode service status
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isGeocoderAvailable)
+**Substitutes:** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isgeocoderavailable)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -77,7 +73,7 @@ Obtain geocode service status
 | --- | --- |
 | Promise&lt;boolean&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

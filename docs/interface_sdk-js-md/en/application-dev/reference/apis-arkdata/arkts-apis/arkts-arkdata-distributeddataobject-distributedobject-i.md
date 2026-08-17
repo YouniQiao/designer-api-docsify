@@ -4,8 +4,6 @@ Provides APIs for managing a distributed data object. Before using any API of th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** null
@@ -30,8 +28,6 @@ Unsubscribes from data changes of this distributed data object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** off(type: 'change', callback?: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
@@ -47,7 +43,7 @@ Unsubscribes from data changes of this distributed data object.
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
 | callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for data changes of this distributed object.sessionId indicates the session ID of the distributed data object. fields indicates the changed properties of the distributed data object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class SourceObject {
@@ -90,8 +86,6 @@ Unsubscribes from the status change of this distributed data object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** off( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
@@ -107,7 +101,7 @@ Unsubscribes from the status change of this distributed data object.
 | type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
 | callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. sessionId indicates the session ID of the distributed data object. networkId identifies the distributed data object. status indicates the object status, which can be online or offline. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class SourceObject {
@@ -142,8 +136,6 @@ Subscribes to data changes of this distributed data object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** on(type: 'change', callback: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
@@ -159,7 +151,7 @@ Subscribes to data changes of this distributed data object.
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
 | callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | Yes | Callback used to return the changes of the distributed data object. sessionId indicates the session ID of the distributed data object. fields indicates the changed properties of the distributed data object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class SourceObject {
@@ -199,8 +191,6 @@ Subscribes to status changes of this distributed data object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** on( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
@@ -216,7 +206,7 @@ Subscribes to status changes of this distributed data object.
 | type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
 | callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | Yes | Callback used to return the status change. sessionId indicates the session ID of the distributed data object. networkId identifies the device. status indicates the object status, which can be online or offline. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class SourceObject {
@@ -249,11 +239,9 @@ Sets a session ID. For the devices in the collaboration state in a trusted netwo
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setSessionId](arkts-arkdata-distributeddataobject-dataobject-i.md#setSessionId)(sessionId: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setSessionId](arkts-arkdata-distributeddataobject-dataobject-i.md#setsessionid)(sessionId: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -273,7 +261,7 @@ Sets a session ID. For the devices in the collaboration state in a trusted netwo
 | --- | --- |
 | boolean | Returns true if the session ID is set successfully; returns false otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class SourceObject {

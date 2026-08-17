@@ -4,8 +4,6 @@ Defines the response to the cipher interface called.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -33,8 +31,6 @@ Response content.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 11
 

@@ -4,11 +4,9 @@ Defines the notification source type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SourceType](arkts-notification-notificationmanager-sourcetype-e-sys.md#SourceType-(System-API))
+**Substitutes:** [SourceType](arkts-notification-notificationmanager-sourcetype-e-sys.md#sourcetype-system-api)
 
 <!--Device-notification-export enum SourceType--><!--Device-notification-export enum SourceType-End-->
 
@@ -26,11 +24,9 @@ Normal notification.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_NORMAL](arkts-notification-notificationmanager-sourcetype-e-sys.md#TYPE_NORMAL)
+**Substitutes:** [TYPE_NORMAL](arkts-notification-notificationmanager-sourcetype-e-sys.md#typenormal)
 
 <!--Device-SourceType-TYPE_NORMAL = 0--><!--Device-SourceType-TYPE_NORMAL = 0-End-->
 
@@ -48,11 +44,9 @@ Continuous notification.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_CONTINUOUS](arkts-notification-notificationmanager-sourcetype-e-sys.md#TYPE_CONTINUOUS)
+**Substitutes:** [TYPE_CONTINUOUS](arkts-notification-notificationmanager-sourcetype-e-sys.md#typecontinuous)
 
 <!--Device-SourceType-TYPE_CONTINUOUS = 1--><!--Device-SourceType-TYPE_CONTINUOUS = 1-End-->
 
@@ -70,11 +64,9 @@ Timed notification.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_TIMER](arkts-notification-notificationmanager-sourcetype-e-sys.md#TYPE_TIMER)
+**Substitutes:** [TYPE_TIMER](arkts-notification-notificationmanager-sourcetype-e-sys.md#typetimer)
 
 <!--Device-SourceType-TYPE_TIMER = 2--><!--Device-SourceType-TYPE_TIMER = 2-End-->
 

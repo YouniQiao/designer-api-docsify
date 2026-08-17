@@ -16,10 +16,6 @@ Queries usage information about each bundle within a specified period. This meth
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
 <!--Device-usageStatistics-function queryBundleStatsInfos(begin: long, end: long, callback: AsyncCallback<BundleStatsMap>): void--><!--Device-usageStatistics-function queryBundleStatsInfos(begin: long, end: long, callback: AsyncCallback<BundleStatsMap>): void-End-->
@@ -34,7 +30,7 @@ Queries usage information about each bundle within a specified period. This meth
 | --- | --- | --- | --- |
 | begin | long | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | long | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md)&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md#BundleStatsMap-(System-API)) objects containing the usage information about each bundle. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md)&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md#bundlestatsmap-system-api) objects containing the usage information about each bundle. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -51,7 +47,7 @@ Queries usage information about each bundle within a specified period. This meth
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
 | [10000007](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) | Failed to get the system time. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -76,10 +72,6 @@ function queryBundleStatsInfos(begin: long, end: long): Promise<BundleStatsMap>
 Queries usage information about each bundle within a specified period. This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -117,7 +109,7 @@ Queries usage information about each bundle within a specified period. This meth
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
 | [10000007](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) | Failed to get the system time. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@ Provides APIs for selecting and saving audio clips. Before using the APIs of **A
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-picker-class AudioViewPicker--><!--Device-picker-class AudioViewPicker-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -28,17 +24,13 @@ A constructor used to create an **AudioViewPicker** instance. This constructor i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AudioViewPicker-constructor()--><!--Device-AudioViewPicker-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
-## Examples
+**Examples**
 
 ```TypeScript
 let audioPicker = new picker.AudioViewPicker(); // Construction without parameter is not recommended. There is a possibility that the AudioViewPicker instance fails to start.
@@ -50,13 +42,9 @@ let audioPicker = new picker.AudioViewPicker(); // Construction without paramete
 constructor(context: Context)
 ```
 
-A constructor used to create an **AudioViewPicker** instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getHostContext).
+A constructor used to create an **AudioViewPicker** instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -70,7 +58,7 @@ A constructor used to create an **AudioViewPicker** instance. This constructor i
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see Context. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -108,10 +96,6 @@ Starts an **audioPicker** page (currently, a **documentPicker** page is displaye
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AudioViewPicker-save(option?: AudioSaveOptions): Promise<Array<string>>--><!--Device-AudioViewPicker-save(option?: AudioSaveOptions): Promise<Array<string>>-End-->
@@ -130,7 +114,7 @@ Starts an **audioPicker** page (currently, a **documentPicker** page is displaye
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the audio clips saved. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -163,10 +147,6 @@ Starts an **audioPicker** page (currently, a **documentPicker** page is displaye
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioViewPicker-save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -178,7 +158,7 @@ Starts an **audioPicker** page (currently, a **documentPicker** page is displaye
 | option | [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-c.md) | Yes | Options for saving audio clips. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the audio clips saved. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -213,10 +193,6 @@ Starts an **audioPicker** page (currently, a **documentPicker** page is displaye
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -227,7 +203,7 @@ Starts an **audioPicker** page (currently, a **documentPicker** page is displaye
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the audio clips saved. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -260,10 +236,6 @@ Starts an **audioPicker** page for the user to select one or more audio clips. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AudioViewPicker-select(option?: AudioSelectOptions): Promise<Array<string>>--><!--Device-AudioViewPicker-select(option?: AudioSelectOptions): Promise<Array<string>>-End-->
@@ -282,7 +254,7 @@ Starts an **audioPicker** page for the user to select one or more audio clips. T
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the audio clips selected. <br>**Note：**: For details about how to use the returned URIs, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -314,10 +286,6 @@ Starts an **audioPicker** page for the user to select one or more audio clips. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioViewPicker-select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -329,7 +297,7 @@ Starts an **audioPicker** page for the user to select one or more audio clips. T
 | option | [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-c.md) | Yes | Options for selecting audio clips. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the audio clips selected. <br>**Note：**: For details about how to use the returned URIs, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -363,10 +331,6 @@ Starts an **audioPicker** page for the user to select one or more audio clips. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -377,7 +341,7 @@ Starts an **audioPicker** page for the user to select one or more audio clips. T
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the audio clips selected. <br>**Note：**: For details about how to use the returned URIs, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@ Defines the particle property updater configs.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ParticlePropertyUpdaterConfigs--><!--Device-unnamed-interface ParticlePropertyUpdaterConfigs-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ The property changes with the animation curve. The array type indicates that mul
 **Type:** Array&lt;[ParticlePropertyAnimation](arkts-arkui-particlepropertyanimation-i.md)&lt;T&gt;&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ No effect of particle updater.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -71,10 +59,6 @@ The property changes randomly, with the per-second change difference being a val
 **Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;T, T&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

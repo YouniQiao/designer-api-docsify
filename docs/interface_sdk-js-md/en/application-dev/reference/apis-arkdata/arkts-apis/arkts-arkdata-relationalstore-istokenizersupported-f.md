@@ -16,10 +16,6 @@ Checks whether the specified tokenizer is supported. This API returns the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-function isTokenizerSupported(tokenizer: Tokenizer): boolean--><!--Device-relationalStore-function isTokenizerSupported(tokenizer: Tokenizer): boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -42,7 +38,7 @@ Checks whether the specified tokenizer is supported. This API returns the result
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let customType = relationalStore.Tokenizer.CUSTOM_TOKENIZER;

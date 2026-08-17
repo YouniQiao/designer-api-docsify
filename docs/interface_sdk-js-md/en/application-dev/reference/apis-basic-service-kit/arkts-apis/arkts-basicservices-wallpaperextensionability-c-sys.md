@@ -4,8 +4,6 @@ class of wallpaper extension ability.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 <!--Device-unnamed-declare class WallpaperExtensionAbility--><!--Device-unnamed-declare class WallpaperExtensionAbility-End-->
@@ -30,8 +28,6 @@ Called once to initialize the extension ability.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -48,7 +44,7 @@ Called once to initialize the extension ability.
 | --- | --- | --- | --- |
 | want | object | Yes | Indicates connection information about the wallpaper extension ability. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
@@ -71,8 +67,6 @@ Called once to destroy the extension ability.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -83,7 +77,7 @@ Called once to destroy the extension ability.
 
 **System API:** This is a system API.
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
@@ -105,8 +99,6 @@ The onWallpaperChange callback is triggered when the user modifies the wallpaper
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -123,7 +115,7 @@ The onWallpaperChange callback is triggered when the user modifies the wallpaper
 | --- | --- | --- | --- |
 | wallpaperType | number | Yes | Indicates the wallpaper type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';

@@ -10,10 +10,6 @@ function getCoreFileSyncState(uri: string): FileState
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudSync-function getCoreFileSyncState(uri: string): FileState--><!--Device-cloudSync-function getCoreFileSyncState(uri: string): FileState-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -44,7 +40,7 @@ function getCoreFileSyncState(uri: string): FileState
 | 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -16,10 +16,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace process--><!--Device-unnamed-declare namespace process-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -38,15 +34,15 @@ import { process } from 'process';
 | --- | --- |
 | [abort](arkts-arkts-process-abort-f.md#abort) | Aborts a process and generates a core file. This method will cause a process to exit immediately. Exercise caution when using this method. |
 | [exit](arkts-arkts-process-exit-f.md#exit) | Terminates this process. Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur. |
-| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md#getEnvironmentVar) | Obtains the value of an environment variable. |
-| [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md#getPastCpuTime) | Obtains the CPU time (in milliseconds) from the time the process starts to the current time. |
-| [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md#getStartRealtime) | Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts. |
-| [getSystemConfig](arkts-arkts-process-getsystemconfig-f.md#getSystemConfig) | Obtains the system configuration. |
-| [getThreadPriority](arkts-arkts-process-getthreadpriority-f.md#getThreadPriority) | Obtains the thread priority based on the specified TID. |
-| [getUidForName](arkts-arkts-process-getuidforname-f.md#getUidForName) | Obtains the UID of a user from the user database of the system based on the specified user name. |
-| [is64Bit](arkts-arkts-process-is64bit-f.md#is64Bit) | Checks whether this process is running in a 64-bit environment. |
-| [isAppUid](arkts-arkts-process-isappuid-f.md#isAppUid) | Checks whether a UID belongs to this application. |
-| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md#isIsolatedProcess) | Checks whether this process is isolated. |
+| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md#getenvironmentvar) | Obtains the value of an environment variable. |
+| [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md#getpastcputime) | Obtains the CPU time (in milliseconds) from the time the process starts to the current time. |
+| [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md#getstartrealtime) | Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts. |
+| [getSystemConfig](arkts-arkts-process-getsystemconfig-f.md#getsystemconfig) | Obtains the system configuration. |
+| [getThreadPriority](arkts-arkts-process-getthreadpriority-f.md#getthreadpriority) | Obtains the thread priority based on the specified TID. |
+| [getUidForName](arkts-arkts-process-getuidforname-f.md#getuidforname) | Obtains the UID of a user from the user database of the system based on the specified user name. |
+| [is64Bit](arkts-arkts-process-is64bit-f.md#is64bit) | Checks whether this process is running in a 64-bit environment. |
+| [isAppUid](arkts-arkts-process-isappuid-f.md#isappuid) | Checks whether a UID belongs to this application. |
+| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md#isisolatedprocess) | Checks whether this process is isolated. |
 | [kill](arkts-arkts-process-kill-f.md#kill) | Sends a signal to a specified process to terminate it. |
 | [uptime](arkts-arkts-process-uptime-f.md#uptime) | Obtains the running time of the current system, in seconds. |
 
@@ -57,9 +53,9 @@ import { process } from 'process';
 | --- | --- |
 | [chdir](arkts-arkts-process-chdir-f-sys.md#chdir) | Change current directory |
 | [cwd](arkts-arkts-process-cwd-f-sys.md#cwd) | Return the current work directory; |
-| [off_string](arkts-arkts-process-offstring-f-sys.md#off_string) | Remove registered event |
-| [on_string](arkts-arkts-process-onstring-f-sys.md#on_string) | Register for an event |
-| [runCmd](arkts-arkts-process-runcmd-f-sys.md#runCmd) | Returns a child process object and spawns a new ChildProcess to run the command. |
+| [off_string](arkts-arkts-process-offstring-f-sys.md#offstring) | Remove registered event |
+| [on_string](arkts-arkts-process-onstring-f-sys.md#onstring) | Register for an event |
+| [runCmd](arkts-arkts-process-runcmd-f-sys.md#runcmd) | Returns a child process object and spawns a new ChildProcess to run the command. |
 <!--DelEnd-->
 
 ### Classes

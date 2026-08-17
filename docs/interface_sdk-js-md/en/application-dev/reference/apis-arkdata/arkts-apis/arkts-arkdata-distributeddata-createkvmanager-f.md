@@ -10,8 +10,6 @@ Creates a **KVManager** instance to manage KV stores. This API uses an asynchron
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** createKVManager
@@ -27,7 +25,7 @@ Creates a **KVManager** instance to manage KV stores. This API uses an asynchron
 | config | KVManagerConfig | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVManager&gt; | Yes | Callback used to return the **KVManager** instance created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let kvManager;
@@ -63,8 +61,6 @@ Creates a **KVManager** instance to manage KV stores. This API uses a promise to
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** createKVManager
@@ -85,7 +81,7 @@ Creates a **KVManager** instance to manage KV stores. This API uses a promise to
 | --- | --- |
 | Promise&lt;KVManager&gt; | Promise used to return the **KVManager** instance created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

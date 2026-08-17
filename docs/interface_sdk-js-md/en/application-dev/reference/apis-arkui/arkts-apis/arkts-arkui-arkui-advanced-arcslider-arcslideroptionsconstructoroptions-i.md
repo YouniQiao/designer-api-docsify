@@ -4,10 +4,6 @@ Defines the constructor information for **ArcSliderOptions**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ArcSliderOptionsConstructorOptions--><!--Device-unnamed-interface ArcSliderOptionsConstructorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -39,10 +35,6 @@ Sensitivity to the digital crown rotation. Default value: **CrownSensitivity.MED
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderOptionsConstructorOptions-digitalCrownSensitivity?: CrownSensitivity--><!--Device-ArcSliderOptionsConstructorOptions-digitalCrownSensitivity?: CrownSensitivity-End-->
@@ -55,15 +47,11 @@ Sensitivity to the digital crown rotation. Default value: **CrownSensitivity.MED
 layoutOptions?: ArcSliderLayoutOptions
 ```
 
-Style of the arc slider. Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)
+Style of the arc slider. Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#arcsliderstyleoptions)
 
 **Type:** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -83,10 +71,6 @@ Callback invoked to notify the application when the progress value of the arc sl
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderOptionsConstructorOptions-onChange?: ArcSliderChangeHandler--><!--Device-ArcSliderOptionsConstructorOptions-onChange?: ArcSliderChangeHandler-End-->
@@ -101,13 +85,9 @@ onEnlarge?: ArcSliderEnlargeHandler
 
 Callback invoked to notify the application when the arc slider is enlarged or reduced. Default value: If this parameter is not provided, no callback will be invoked.
 
-**Type:** [ArcSliderEnlargeHandler](../../apis-na/arkts-apis/arkts-na-arcsliderenlargehandler-t.md)
+**Type:** [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -127,10 +107,6 @@ Callback invoked to notify the application when the arc slider is touched. Defau
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderOptionsConstructorOptions-onTouch?: ArcSliderTouchHandler--><!--Device-ArcSliderOptionsConstructorOptions-onTouch?: ArcSliderTouchHandler-End-->
@@ -143,15 +119,11 @@ Callback invoked to notify the application when the arc slider is touched. Defau
 styleOptions?: ArcSliderStyleOptions
 ```
 
-Style of the arc slider. Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)
+Style of the arc slider. Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#arcsliderstyleoptions)
 
 **Type:** [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -165,15 +137,11 @@ Style of the arc slider. Default value: default values of all properties of [Arc
 valueOptions?: ArcSliderValueOptions
 ```
 
-Style of the arc slider. Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)
+Style of the arc slider. Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#arcsliderstyleoptions)
 
 **Type:** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

@@ -4,10 +4,6 @@ The module defines the operation result on DataAbilities. When you call executeB
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface DataAbilityResult--><!--Device-unnamed-export interface DataAbilityResult-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -23,10 +19,6 @@ Indicates the number of rows affected by the operation.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -45,10 +37,6 @@ Indicates the path of data to operate.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

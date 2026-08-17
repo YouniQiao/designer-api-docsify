@@ -4,10 +4,6 @@ Filter effect class, used to apply corresponding effects to specified components
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-interface Filter--><!--Device-uiEffect-interface Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -28,10 +24,6 @@ Adds a blur effect to the component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-blur(blurRadius: double): Filter--><!--Device-Filter-blur(blurRadius: double): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -48,7 +40,7 @@ Adds a blur effect to the component.
 | --- | --- |
 | Filter | Returns the Filter with the blur effect attached, supporting chained calls to add other effects. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.ts

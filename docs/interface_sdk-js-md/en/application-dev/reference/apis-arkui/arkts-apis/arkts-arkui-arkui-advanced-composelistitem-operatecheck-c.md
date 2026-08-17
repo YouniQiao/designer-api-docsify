@@ -4,10 +4,6 @@ Defines the type where the element on the right of the **ComposeListItem** compo
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class OperateCheck--><!--Device-unnamed-export declare class OperateCheck-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -36,10 +32,6 @@ Accessible description of the switch, check box, or radio button on the right. Y
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -62,10 +54,6 @@ Accessibility level of the switch, check box, or radio button on the right. It d
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -85,10 +73,6 @@ Accessibility text, that is, accessible label name, of the switch, check box, or
 **Type:** ResourceStr
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,10 +94,6 @@ Whether the switch, check box, or radio button on the right is selected. Default
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -133,10 +113,6 @@ Callback invoked when the selected state of the switch, check box, or radio butt
 **Type:** (value: boolean) =&gt; void
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

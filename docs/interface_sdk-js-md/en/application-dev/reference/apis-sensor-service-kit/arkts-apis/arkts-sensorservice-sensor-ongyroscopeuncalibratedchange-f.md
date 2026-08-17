@@ -16,10 +16,6 @@ Subscribe to uncalibrated gyroscope sensor data, {@code SensorId.GYROSCOPE_UNCAL
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GYROSCOPE
 
 <!--Device-sensor-function onGyroscopeUncalibratedChange(callback: Callback<GyroscopeUncalibratedResponse>, options?: Options): void--><!--Device-sensor-function onGyroscopeUncalibratedChange(callback: Callback<GyroscopeUncalibratedResponse>, options?: Options): void-End-->

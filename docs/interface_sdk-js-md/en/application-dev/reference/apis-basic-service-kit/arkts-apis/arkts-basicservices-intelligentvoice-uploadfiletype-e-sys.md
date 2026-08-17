@@ -4,10 +4,6 @@ Enumerates upload file type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-enum UploadFileType--><!--Device-intelligentVoice-enum UploadFileType-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -24,10 +20,6 @@ Enroll file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UploadFileType-ENROLL_FILE = 0--><!--Device-UploadFileType-ENROLL_FILE = 0-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -43,10 +35,6 @@ WAKEUP_FILE = 1
 Wakeup file.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UploadFileType-WAKEUP_FILE = 1--><!--Device-UploadFileType-WAKEUP_FILE = 1-End-->
 

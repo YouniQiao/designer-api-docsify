@@ -4,10 +4,6 @@ Defines the network packet filtering rule to add.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-networkManager-interface AddFilterRule--><!--Device-networkManager-interface AddFilterRule-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -32,10 +28,6 @@ Action to take, that is, receive or discard the data packets.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AddFilterRule-action: Action--><!--Device-AddFilterRule-action: Action-End-->
@@ -55,10 +47,6 @@ Destination IP address.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Port of the destination IP address.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AddFilterRule-destPort?: string--><!--Device-AddFilterRule-destPort?: string-End-->
@@ -103,10 +87,6 @@ Direction chains to which the rule applies.
 **Type:** Direction
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Method used to add the data packets.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AddFilterRule-method: AddMethod--><!--Device-AddFilterRule-method: AddMethod-End-->
@@ -151,10 +127,6 @@ Network protocol.
 **Type:** Protocol
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +148,6 @@ Sequence number of the rule.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AddFilterRule-ruleNo?: number--><!--Device-AddFilterRule-ruleNo?: number-End-->
@@ -199,10 +167,6 @@ Source IP address.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,10 +188,6 @@ Port of the source IP address.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AddFilterRule-srcPort?: string--><!--Device-AddFilterRule-srcPort?: string-End-->
@@ -247,10 +207,6 @@ UID of the application.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

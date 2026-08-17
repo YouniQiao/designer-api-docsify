@@ -4,10 +4,6 @@ Defines the ad configuration.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-advertising-export interface AdOptions--><!--Device-advertising-export interface AdOptions-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -30,10 +26,6 @@ Sets the maximum ad content rating. W: ages 3+, all audiences. PI: ages 7+, pare
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdOptions-adContentClassification?: string--><!--Device-AdOptions-adContentClassification?: string-End-->
@@ -52,10 +44,6 @@ Sets whether to request only non-personalized ads. 0: Request both personalized 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdOptions-nonPersonalizedAd?: number--><!--Device-AdOptions-nonPersonalizedAd?: number-End-->
@@ -73,10 +61,6 @@ Whether you want your content to be treated as child-directed for purposes of CO
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

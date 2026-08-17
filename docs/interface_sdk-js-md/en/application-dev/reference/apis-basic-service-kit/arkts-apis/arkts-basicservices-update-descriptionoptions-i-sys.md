@@ -4,10 +4,6 @@ Defines the description options, which specifies the format and language of the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface DescriptionOptions--><!--Device-update-export interface DescriptionOptions-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Format of the description file. The value **STANDARD** is applicable to the scen
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DescriptionOptions-format: DescriptionFormat--><!--Device-DescriptionOptions-format: DescriptionFormat-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ Language of the description file. The value is a string of 2 to 10 characters, f
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DescriptionOptions-language: string--><!--Device-DescriptionOptions-language: string-End-->
 

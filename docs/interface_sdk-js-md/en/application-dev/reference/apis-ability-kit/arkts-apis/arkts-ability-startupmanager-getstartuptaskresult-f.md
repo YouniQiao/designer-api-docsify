@@ -16,10 +16,6 @@ Obtains the execution result of a startup task or .so file preloading task.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object--><!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object-End-->
@@ -30,7 +26,7 @@ Obtains the execution result of a startup task or .so file preloading task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#StartupTask) or name of the .so file to be preloaded. |
+| startupTask | string | Yes | Name of the [StartupTask](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md#startuptask) or name of the .so file to be preloaded. |
 
 **Return value:**
 
@@ -44,7 +40,7 @@ Obtains the execution result of a startup task or .so file preloading task.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
@@ -92,10 +88,6 @@ function getStartupTaskResult(startupTask: string): Any
 Obtains specific startup task result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

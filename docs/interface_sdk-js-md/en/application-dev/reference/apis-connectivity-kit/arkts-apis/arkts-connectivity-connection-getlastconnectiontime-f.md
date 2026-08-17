@@ -16,10 +16,6 @@ Get latest connection time of device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-connection-function getLastConnectionTime(deviceId: string): Promise<long>--><!--Device-connection-function getLastConnectionTime(deviceId: string): Promise<long>-End-->
@@ -48,7 +44,7 @@ Get latest connection time of device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

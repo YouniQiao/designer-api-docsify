@@ -12,13 +12,9 @@ import { abilityManager } from 'abilityManager';
 function queryAtomicServiceStartupRule(context: Context, appId: string): Promise<AtomicServiceStartupRule>
 ```
 
-Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility) in embedded mode. This API uses a promise to return the result. This API can be properly called only on phones and tablets. On other devices, it returns the error code 801.
+Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#embeddableuiability) in embedded mode. This API uses a promise to return the result. This API can be properly called only on phones and tablets. On other devices, it returns the error code 801.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +28,7 @@ Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-abilit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#UIAbilityContext) is supported. |
+| context | [Context](arkts-ability-context-c.md) | Yes | Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#uiabilitycontext) is supported. |
 | appId | string | Yes | Unique ID of the application, which is allocated by the cloud. |
 
 **Return value:**
@@ -49,7 +45,7 @@ Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-abilit
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityManager, UIAbility } from '@kit.AbilityKit';

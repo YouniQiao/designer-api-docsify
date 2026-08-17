@@ -16,10 +16,6 @@ Cancels listening to the event of uninstall form. You can use this method to can
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formHost-function offFormUninstall(callback?: Callback<string>): void--><!--Device-formHost-function offFormUninstall(callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form

@@ -10,10 +10,6 @@ declare function createReadStream(path: string, options?: ReadStreamOptions): Re
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare function createReadStream(path: string, options?: ReadStreamOptions): ReadStream--><!--Device-unnamed-declare function createReadStream(path: string, options?: ReadStreamOptions): ReadStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

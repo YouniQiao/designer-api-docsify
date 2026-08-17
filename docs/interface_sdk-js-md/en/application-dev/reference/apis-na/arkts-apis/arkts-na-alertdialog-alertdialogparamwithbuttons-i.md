@@ -2,13 +2,11 @@
 
 Defines the dialog param with buttons.
 
-**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md#AlertDialogParam)
+**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md#alertdialogparam)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface AlertDialogParamWithButtons--><!--Device-unnamed-export declare interface AlertDialogParamWithButtons-End-->
 
@@ -26,9 +24,7 @@ First button. Anonymous Object Rectification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,9 +44,7 @@ Second button. Anonymous Object Rectification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

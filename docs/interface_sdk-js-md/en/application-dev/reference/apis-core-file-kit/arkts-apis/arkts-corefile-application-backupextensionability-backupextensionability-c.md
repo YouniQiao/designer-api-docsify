@@ -4,10 +4,6 @@ Class to be override for backup extension ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -28,17 +24,13 @@ Callback to be called when the backup procedure is started. Developer could over
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BackupExtensionAbility-onBackup(): void--><!--Device-BackupExtensionAbility-onBackup(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
-## Examples
+**Examples**
 
 ```TypeScript
 class BackupExt extends BackupExtensionAbility {
@@ -58,10 +50,6 @@ Callback to be called when the backup procedure is started. Developer could over
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BackupExtensionAbility-onBackupEx(backupInfo: string): string | Promise<string>--><!--Device-BackupExtensionAbility-onBackupEx(backupInfo: string): string | Promise<string>-End-->
@@ -80,7 +68,7 @@ Callback to be called when the backup procedure is started. Developer could over
 | --- | --- |
 | string | Return backup result, support promise, the result is a JSON string, it includes type, errorCode and errorInfo now. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
@@ -153,10 +141,6 @@ Callback to be called when getting backup/restore process info. Developer could 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BackupExtensionAbility-onProcess(): string--><!--Device-BackupExtensionAbility-onProcess(): string-End-->
@@ -169,7 +153,7 @@ Callback to be called when getting backup/restore process info. Developer could 
 | --- | --- |
 | string | Return the backup/restore process info. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BackupExtensionAbility } from '@kit.CoreFileKit';
@@ -255,10 +239,6 @@ Callback to be called before extension ability exits. Developer could override t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BackupExtensionAbility-onRelease(scenario: int): Promise<void>--><!--Device-BackupExtensionAbility-onRelease(scenario: int): Promise<void>-End-->
@@ -277,7 +257,7 @@ Callback to be called before extension ability exits. Developer could override t
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The following describes an example of removing files.
@@ -320,10 +300,6 @@ Callback to be called when the restore procedure is started. Developer could ove
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BackupExtensionAbility-onRestore(bundleVersion: BundleVersion): void--><!--Device-BackupExtensionAbility-onRestore(bundleVersion: BundleVersion): void-End-->
@@ -336,7 +312,7 @@ Callback to be called when the restore procedure is started. Developer could ove
 | --- | --- | --- | --- |
 | bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes | Bundle version to be restore. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
@@ -358,10 +334,6 @@ Callback to be called when the restore procedure is started. Developer could ove
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BackupExtensionAbility-onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>--><!--Device-BackupExtensionAbility-onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>-End-->
@@ -381,7 +353,7 @@ Callback to be called when the restore procedure is started. Developer could ove
 | --- | --- |
 | string | Return restore result, support promise. the result is a JSON string, it includes type, errorCode and errorInfo now. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
@@ -455,10 +427,6 @@ Indicates backup extension ability context.
 **Type:** [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

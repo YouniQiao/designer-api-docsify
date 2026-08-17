@@ -4,10 +4,6 @@ Provides APIs for obtaining the distributed KV store result sets. A maximum of e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedKVStore-interface KVStoreResultSet--><!--Device-distributedKVStore-interface KVStoreResultSet-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -28,10 +24,6 @@ Obtains the total number of rows in the result set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-getCount(): int--><!--Device-KVStoreResultSet-getCount(): int-End-->
@@ -44,7 +36,7 @@ Obtains the total number of rows in the result set.
 | --- | --- |
 | int | Total number of rows obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -75,10 +67,6 @@ Obtains the KV pair from the current position.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-getEntry(): Entry--><!--Device-KVStoreResultSet-getEntry(): Entry-End-->
@@ -91,7 +79,7 @@ Obtains the KV pair from the current position.
 | --- | --- |
 | Entry | KV pair obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -117,13 +105,9 @@ try {
 getPosition(): int
 ```
 
-Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](#moveToFirst) and [moveToLast](#moveToLast).
+Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](#movetofirst) and [moveToLast](#movetolast).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,7 +121,7 @@ Obtains the current data read position (position from which data is read) in the
 | --- | --- |
 | int | Current data read position obtained. The value must be greater than or equal to **-1**. The value **-1 ** means no data is read; the value **0** indicates the first row. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -168,10 +152,6 @@ Checks whether the data read position is after the last row.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-isAfterLast(): boolean--><!--Device-KVStoreResultSet-isAfterLast(): boolean-End-->
@@ -184,7 +164,7 @@ Checks whether the data read position is after the last row.
 | --- | --- |
 | boolean | Returns **true** if the data read position is after the last row; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -214,10 +194,6 @@ Checks whether the data read position is before the first row.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-isBeforeFirst(): boolean--><!--Device-KVStoreResultSet-isBeforeFirst(): boolean-End-->
@@ -230,7 +206,7 @@ Checks whether the data read position is before the first row.
 | --- | --- |
 | boolean | Returns **true** if the data read position is before the first row; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -260,10 +236,6 @@ Checks whether the data read position is the first row.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-isFirst(): boolean--><!--Device-KVStoreResultSet-isFirst(): boolean-End-->
@@ -276,7 +248,7 @@ Checks whether the data read position is the first row.
 | --- | --- |
 | boolean | Returns **true** if the first row is being read; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -307,10 +279,6 @@ Checks whether the data read position is the last row.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-isLast(): boolean--><!--Device-KVStoreResultSet-isLast(): boolean-End-->
@@ -323,7 +291,7 @@ Checks whether the data read position is the last row.
 | --- | --- |
 | boolean | Returns **true** if the last row is being read; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -354,10 +322,6 @@ Moves the data read position with the specified offset from the current position
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-move(offset: int): boolean--><!--Device-KVStoreResultSet-move(offset: int): boolean-End-->
@@ -382,7 +346,7 @@ Moves the data read position with the specified offset from the current position
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -414,10 +378,6 @@ Moves the data read position to the first row. If the result set is empty, **fal
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-moveToFirst(): boolean--><!--Device-KVStoreResultSet-moveToFirst(): boolean-End-->
@@ -430,7 +390,7 @@ Moves the data read position to the first row. If the result set is empty, **fal
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -461,10 +421,6 @@ Moves the data read position to the last row. If the result set is empty, **fals
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-moveToLast(): boolean--><!--Device-KVStoreResultSet-moveToLast(): boolean-End-->
@@ -477,7 +433,7 @@ Moves the data read position to the last row. If the result set is empty, **fals
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -508,10 +464,6 @@ Moves the data read position to the next row. If the result set is empty, **fals
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-moveToNext(): boolean--><!--Device-KVStoreResultSet-moveToNext(): boolean-End-->
@@ -524,7 +476,7 @@ Moves the data read position to the next row. If the result set is empty, **fals
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -557,10 +509,6 @@ Moves the data read position from 0 to an absolute position.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-moveToPosition(position: int): boolean--><!--Device-KVStoreResultSet-moveToPosition(position: int): boolean-End-->
@@ -585,7 +533,7 @@ Moves the data read position from 0 to an absolute position.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -617,10 +565,6 @@ Moves the data read position to the previous row. If the result set is empty, **
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KVStoreResultSet-moveToPrevious(): boolean--><!--Device-KVStoreResultSet-moveToPrevious(): boolean-End-->
@@ -633,7 +577,7 @@ Moves the data read position to the previous row. If the result set is empty, **
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

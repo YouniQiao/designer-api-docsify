@@ -1,12 +1,8 @@
 # BackForwardList
 
-Provides back and forward history list information method. related to [HistoryItem](arkts-arkweb-webview-historyitem-i.md#HistoryItem).
+BackForwardList is an interface in the ArkWeb framework for accessing the browsing history list of a Web component. It is obtained through the [getBackForwardEntries](arkts-arkweb-webview-webviewcontroller-c.md#getbackforwardentries) method. This interface provides read-only access to the page navigation history. Developers can obtain basic information about the current history list (the current index and the total number of history entries), as well as detailed information about a specific history item by index.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-webview-interface BackForwardList--><!--Device-webview-interface BackForwardList-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 getItemAtIndex(index: number): HistoryItem
 ```
 
-Get history entry at given index.
+Obtains the information of the history item at the specified index in the history list. A BackForwardList instance must be obtained first through the [getBackForwardEntries](arkts-arkweb-webview-webviewcontroller-c.md#getbackforwardentries) method.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,13 +34,13 @@ Get history entry at given index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of back forward list entry. |
+| index | number | Yes | Index of the history item in the backforward list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [HistoryItem](arkts-arkweb-webview-historyitem-i.md) | HistoryItem at given index in back forward list. |
+| [HistoryItem](arkts-arkweb-webview-historyitem-i.md) | History item. |
 
 **Error codes:**
 
@@ -62,15 +54,11 @@ Get history entry at given index.
 currentIndex: number
 ```
 
-Current index in BackForwardList.
+Index of the current page in the backforward list.
 
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -84,15 +72,11 @@ Current index in BackForwardList.
 size: number
 ```
 
-Size of in BackForwardList.
+Number of history records in the history list. A maximum of 50 records are saved. When the limit is exceeded, the earliest record is overwritten.
 
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

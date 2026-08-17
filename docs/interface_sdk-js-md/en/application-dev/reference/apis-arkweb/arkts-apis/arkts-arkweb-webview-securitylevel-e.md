@@ -1,12 +1,8 @@
 # SecurityLevel
 
-Defines the security level for the page.
+Enumerates the security levels of the web page.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum SecurityLevel--><!--Device-webview-enum SecurityLevel-End-->
 
@@ -18,13 +14,9 @@ Defines the security level for the page.
 NONE = 0
 ```
 
-Unable to determine whether it is safe or not, the non-http/https protocol used.
+The web page is neither absolutely secure nor insecure, that is, neutral. A typical example is a web page whose URL scheme is not HTTP or HTTPS.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ Unable to determine whether it is safe or not, the non-http/https protocol used.
 SECURE = 1
 ```
 
-Indicates the HTTPS protocol used by the page and the authentication is successful.
+The web page is secure, using the HTTPS protocol and a trusted certificate.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ Indicates the HTTPS protocol used by the page and the authentication is successf
 WARNING = 2
 ```
 
-The page is insecure. For example, the HTTP protocol is used or the HTTPS protocol is used but use an legacy TLS version.
+The web page is insecure. A typical example is a web page that uses the HTTP or HTTPS protocol but an outdated TLS version.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +62,9 @@ The page is insecure. For example, the HTTP protocol is used or the HTTPS protoc
 DANGEROUS = 3
 ```
 
-Attempted HTTPS and failed, the authentication is failed.
+The web page is dangerous. This means that the page may have attempted to load HTTPS scripts to no avail, have failed authentication, or contain insecure active content in HTTPS, malware, phishing, or any other sources of major threats.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

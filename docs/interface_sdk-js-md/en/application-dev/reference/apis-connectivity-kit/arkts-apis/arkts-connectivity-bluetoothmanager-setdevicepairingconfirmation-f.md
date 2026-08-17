@@ -16,11 +16,9 @@ Sets the confirmation of pairing with a certain device. On API 10 and above, the
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [setDevicePairingConfirmation](arkts-connectivity-connection-setdevicepairingconfirmation-f.md#setDevicePairingConfirmation)
+**Substitutes:** [setDevicePairingConfirmation](arkts-connectivity-connection-setdevicepairingconfirmation-f.md#setdevicepairingconfirmation)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
@@ -48,7 +46,7 @@ Sets the confirmation of pairing with a certain device. On API 10 and above, the
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

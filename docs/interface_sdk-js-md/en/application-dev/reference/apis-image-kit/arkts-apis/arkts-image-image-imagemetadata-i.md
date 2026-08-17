@@ -4,10 +4,6 @@ Metadata set of an image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface ImageMetadata--><!--Device-image-interface ImageMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ Avis metadata.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageMetadata-avisMetadata?: AvisMetadata--><!--Device-ImageMetadata-avisMetadata?: AvisMetadata-End-->
@@ -51,10 +43,6 @@ Dng metadata.
 **Type:** [DngMetadata](arkts-image-image-dngmetadata-c.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Exif metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageMetadata-exifMetadata?: ExifMetadata--><!--Device-ImageMetadata-exifMetadata?: ExifMetadata-End-->
@@ -95,10 +79,6 @@ Gif metadata.
 **Type:** [GifMetadata](arkts-image-image-gifmetadata-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ Heifs metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageMetadata-heifsMetadata?: HeifsMetadata--><!--Device-ImageMetadata-heifsMetadata?: HeifsMetadata-End-->
@@ -139,10 +115,6 @@ Jfif metadata.
 **Type:** [JfifMetadata](arkts-image-image-jfifmetadata-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +134,6 @@ Huawei Camera metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageMetadata-makerNoteHuaweiMetadata?: MakerNoteHuaweiMetadata--><!--Device-ImageMetadata-makerNoteHuaweiMetadata?: MakerNoteHuaweiMetadata-End-->
@@ -183,10 +151,6 @@ Png metadata.
 **Type:** [PngMetadata](arkts-image-image-pngmetadata-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,10 +170,6 @@ Tiff metadata.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageMetadata-tiffMetadata?: TiffMetadata--><!--Device-ImageMetadata-tiffMetadata?: TiffMetadata-End-->
@@ -228,10 +188,6 @@ WebP metadata.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageMetadata-webPMetadata?: WebPMetadata--><!--Device-ImageMetadata-webPMetadata?: WebPMetadata-End-->
@@ -249,10 +205,6 @@ XMP metadata.
 **Type:** [XMPMetadata](arkts-image-image-xmpmetadata-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

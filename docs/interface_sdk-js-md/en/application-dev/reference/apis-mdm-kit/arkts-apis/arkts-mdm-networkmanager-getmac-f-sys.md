@@ -16,11 +16,9 @@ Obtains the MAC address of a device based on the network interface. This API use
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md#getMacSync)
+**Substitutes:** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md#getmacsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -50,7 +48,7 @@ Obtains the MAC address of a device based on the network interface. This API use
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { networkManager } from '@kit.MDMKit';
@@ -83,11 +81,9 @@ Obtains the MAC address of a device based on the network interface. This API use
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md#getMacSync)
+**Substitutes:** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md#getmacsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -122,7 +118,7 @@ Obtains the MAC address of a device based on the network interface. This API use
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { networkManager } from '@kit.MDMKit';

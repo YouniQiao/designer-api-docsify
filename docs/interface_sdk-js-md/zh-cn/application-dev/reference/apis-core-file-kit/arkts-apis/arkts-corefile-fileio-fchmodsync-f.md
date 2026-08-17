@@ -10,8 +10,6 @@ declare function fchmodSync(fd: number, mode: number): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-unnamed-declare function fchmodSync(fd: number, mode: number): void--><!--Device-unnamed-declare function fchmodSync(fd: number, mode: number): void-End-->

@@ -4,10 +4,6 @@ Defines network options. If the network does not meet the preset conditions, the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-enum Network--><!--Device-agent-enum Network-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -21,10 +17,6 @@ ANY
 Network of any type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Wi-Fi network.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Network-WIFI--><!--Device-Network-WIFI-End-->
@@ -61,10 +49,6 @@ CELLULAR
 Cellular data network.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

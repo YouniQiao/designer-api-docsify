@@ -16,10 +16,6 @@ Checks whether the specified WantAgent is local.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-wantAgent-function isLocalWantAgent(agent: WantAgent): boolean--><!--Device-wantAgent-function isLocalWantAgent(agent: WantAgent): boolean-End-->
@@ -46,7 +42,7 @@ Checks whether the specified WantAgent is local.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System app. Interface caller is not a system app. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wantAgent } from '@kit.AbilityKit';

@@ -4,13 +4,9 @@
 type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) => void
 ```
 
-Defines a callback triggered when the camera state of the page changes.
+This callback is triggered when the camera device state of the page changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) => void--><!--Device-unnamed-type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) => void-End-->
 

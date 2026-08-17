@@ -1,12 +1,8 @@
 # BatchResult
 
-Result object containing batch operation,including [batchAdd](arkts-assetstore-asset-batchadd-f.md#batchAdd) and [batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchUpdate).
+Result object containing batch operation,including [batchAdd](arkts-assetstore-asset-batchadd-f.md#batchadd) and [batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchupdate).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-asset-interface BatchResult--><!--Device-asset-interface BatchResult-End-->
 
@@ -30,10 +26,6 @@ Failed count of the batch operation, 0 means all success.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-BatchResult-failedCount: number--><!--Device-BatchResult-failedCount: number-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -44,15 +36,11 @@ Failed count of the batch operation, 0 means all success.
 failedErrorInfos: Array<BatchErrInfo>
 ```
 
-An array of error details for assets that failed in the batch operation, including [failedCount](#failedCount) items, which is an empty array if all succeed.
+An array of error details for assets that failed in the batch operation, including [failedCount](#failedcount) items, which is an empty array if all succeed.
 
 **Type:** Array&lt;[BatchErrInfo](arkts-assetstore-asset-batcherrinfo-i.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-BatchResult-failedErrorInfos: Array<BatchErrInfo>--><!--Device-BatchResult-failedErrorInfos: Array<BatchErrInfo>-End-->
 

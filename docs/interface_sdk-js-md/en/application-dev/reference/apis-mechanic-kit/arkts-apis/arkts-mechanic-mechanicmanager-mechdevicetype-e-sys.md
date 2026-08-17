@@ -4,10 +4,6 @@ Enumerates the mechanical device types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export enum MechDeviceType--><!--Device-mechanicManager-export enum MechDeviceType-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -21,10 +17,6 @@ DESKTOP_GIMBAL_DEVICE = 1
 Desktop gimbal device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-MechDeviceType-DESKTOP_GIMBAL_DEVICE = 1--><!--Device-MechDeviceType-DESKTOP_GIMBAL_DEVICE = 1-End-->
 
@@ -41,10 +33,6 @@ WHEELED_BASE_DEVICE = 2
 Wheeled?mounted base device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-MechDeviceType-WHEELED_BASE_DEVICE = 2--><!--Device-MechDeviceType-WHEELED_BASE_DEVICE = 2-End-->
 

@@ -1,14 +1,10 @@
 # MenuOptions
 
-Configues menu item information, which is inherited from [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md#ContextMenuOptions).
+Configues menu item information, which is inherited from [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md#contextmenuoptions).
 
-**Inheritance/Implementation:** MenuOptions extends [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md#ContextMenuOptions)
+**Inheritance/Implementation:** MenuOptions extends [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md#contextmenuoptions)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface MenuOptions--><!--Device-unnamed-declare interface MenuOptions-End-->
 
@@ -28,10 +24,6 @@ Whether to show the menu in a subwindow. **true**: yes; **false**: no Default va
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -46,15 +38,11 @@ Whether to show the menu in a subwindow. **true**: yes; **false**: no Default va
 title?: ResourceStr
 ```
 
-Menu title. **NOTE：**This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md#MenuElement)&gt;.
+Menu title. **NOTE：**This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md#menuelement)&gt;.
 
 **Type:** ResourceStr
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

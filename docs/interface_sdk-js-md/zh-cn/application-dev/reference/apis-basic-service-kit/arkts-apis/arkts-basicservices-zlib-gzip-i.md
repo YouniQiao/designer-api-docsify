@@ -4,10 +4,6 @@ Gzip相关接口。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-zlib-interface GZip--><!--Device-zlib-interface GZip-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -21,10 +17,6 @@ gzbuffer(size: long): Promise<int>
 为当前库函数设置内部缓冲区尺寸。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -51,7 +43,7 @@ gzbuffer(size: long): Promise<int>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { fileIo as fs } from '@kit.CoreFileKit';
@@ -102,10 +94,6 @@ gzclearerr(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzclearerr(): Promise<void>--><!--Device-GZip-gzclearerr(): Promise<void>-End-->
@@ -118,7 +106,7 @@ gzclearerr(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回值。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -179,10 +167,6 @@ gzclose(): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzclose(): Promise<ReturnStatus>--><!--Device-GZip-gzclose(): Promise<ReturnStatus>-End-->
@@ -202,7 +186,7 @@ gzclose(): Promise<ReturnStatus>
 | [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -250,10 +234,6 @@ gzcloser(): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzcloser(): Promise<ReturnStatus>--><!--Device-GZip-gzcloser(): Promise<ReturnStatus>-End-->
@@ -272,7 +252,7 @@ gzcloser(): Promise<ReturnStatus>
 | --- | --- |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -322,10 +302,6 @@ gzclosew(): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzclosew(): Promise<ReturnStatus>--><!--Device-GZip-gzclosew(): Promise<ReturnStatus>-End-->
@@ -345,7 +321,7 @@ gzclosew(): Promise<ReturnStatus>
 | [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -393,10 +369,6 @@ gzdirect(): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzdirect(): Promise<int>--><!--Device-GZip-gzdirect(): Promise<int>-End-->
@@ -409,7 +381,7 @@ gzdirect(): Promise<int>
 | --- | --- |
 | Promise&lt;int&gt; | Promise对象，如果直接访问原始未压缩数据，则返回1。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -458,10 +430,6 @@ gzdopen(fd: int, mode: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>--><!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>-End-->
@@ -488,7 +456,7 @@ gzdopen(fd: int, mode: string): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -537,10 +505,6 @@ gzeof(): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzeof(): Promise<int>--><!--Device-GZip-gzeof(): Promise<int>-End-->
@@ -553,7 +517,7 @@ gzeof(): Promise<int>
 | --- | --- |
 | Promise&lt;int&gt; | Promise对象，如果在读取时设置了文件的文件结束指示符，则返回1。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -612,10 +576,6 @@ gzerror(): Promise<GzErrorOutputInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>--><!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>-End-->
@@ -634,7 +594,7 @@ gzerror(): Promise<GzErrorOutputInfo>
 | --- | --- |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -695,10 +655,6 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>-End-->
@@ -709,7 +665,7 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 控制刷新操作的行为，参考[CompressFlushMode枚举](arkts-basicservices-zlib-compressflushmode-e.md#CompressFlushMode)的定义。 |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 控制刷新操作的行为，参考[CompressFlushMode枚举](arkts-basicservices-zlib-compressflushmode-e.md#compressflushmode)的定义。 |
 
 **返回值：**
 
@@ -724,7 +680,7 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -773,10 +729,6 @@ gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
@@ -804,7 +756,7 @@ gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -862,10 +814,6 @@ gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
@@ -893,7 +841,7 @@ gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -947,10 +895,6 @@ gzgetc(): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzgetc(): Promise<int>--><!--Device-GZip-gzgetc(): Promise<int>-End-->
@@ -969,7 +913,7 @@ gzgetc(): Promise<int>
 | --- | --- |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1021,10 +965,6 @@ gzgets(buf: ArrayBuffer): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>--><!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>-End-->
@@ -1050,7 +990,7 @@ gzgets(buf: ArrayBuffer): Promise<string>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1103,10 +1043,6 @@ gzoffset(): Promise<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzoffset(): Promise<long>--><!--Device-GZip-gzoffset(): Promise<long>-End-->
@@ -1125,7 +1061,7 @@ gzoffset(): Promise<long>
 | --- | --- |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1174,10 +1110,6 @@ gzopen(path: string, mode: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzopen(path: string, mode: string): Promise<void>--><!--Device-GZip-gzopen(path: string, mode: string): Promise<void>-End-->
@@ -1204,7 +1136,7 @@ gzopen(path: string, mode: string): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1252,10 +1184,6 @@ gzprintf(format: string, ...args: Array<string | double>): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>--><!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>-End-->
@@ -1283,7 +1211,7 @@ gzprintf(format: string, ...args: Array<string | double>): Promise<int>
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1332,10 +1260,6 @@ gzputc(ch: int): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzputc(ch: int): Promise<int>--><!--Device-GZip-gzputc(ch: int): Promise<int>-End-->
@@ -1361,7 +1285,7 @@ gzputc(ch: int): Promise<int>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1410,10 +1334,6 @@ gzputs(str: string): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzputs(str: string): Promise<int>--><!--Device-GZip-gzputs(str: string): Promise<int>-End-->
@@ -1439,7 +1359,7 @@ gzputs(str: string): Promise<int>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1488,10 +1408,6 @@ gzread(buf: ArrayBuffer): Promise<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>--><!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>-End-->
@@ -1517,7 +1433,7 @@ gzread(buf: ArrayBuffer): Promise<long>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1575,10 +1491,6 @@ gzrewind(): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzrewind(): Promise<ReturnStatus>--><!--Device-GZip-gzrewind(): Promise<ReturnStatus>-End-->
@@ -1597,7 +1509,7 @@ gzrewind(): Promise<ReturnStatus>
 | --- | --- |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1648,10 +1560,6 @@ gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>--><!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>-End-->
@@ -1663,7 +1571,7 @@ gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | offset | long | 是 | 目标偏移位置。 |
-| whence | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | 是 | 定义偏移的参考点，参考[OffsetReferencePoint枚举定义](arkts-basicservices-zlib-offsetreferencepoint-e.md#OffsetReferencePoint)。 |
+| whence | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | 是 | 定义偏移的参考点，参考[OffsetReferencePoint枚举定义](arkts-basicservices-zlib-offsetreferencepoint-e.md#offsetreferencepoint)。 |
 
 **返回值：**
 
@@ -1678,7 +1586,7 @@ gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1727,10 +1635,6 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
@@ -1741,8 +1645,8 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 压缩级别，参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel)。 |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 压缩策略，参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md#CompressStrategy)。 |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 压缩级别，参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#compresslevel)。 |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 压缩策略，参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md#compressstrategy)。 |
 
 **返回值：**
 
@@ -1757,7 +1661,7 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1807,10 +1711,6 @@ gztell(): Promise<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gztell(): Promise<long>--><!--Device-GZip-gztell(): Promise<long>-End-->
@@ -1829,7 +1729,7 @@ gztell(): Promise<long>
 | --- | --- |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1878,10 +1778,6 @@ gzungetc(c: int): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzungetc(c: int): Promise<int>--><!--Device-GZip-gzungetc(c: int): Promise<int>-End-->
@@ -1907,7 +1803,7 @@ gzungetc(c: int): Promise<int>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1959,10 +1855,6 @@ gzwrite(buf: ArrayBuffer, len: long): Promise<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>--><!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>-End-->
@@ -1989,7 +1881,7 @@ gzwrite(buf: ArrayBuffer, len: long): Promise<long>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

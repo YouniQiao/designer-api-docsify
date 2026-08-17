@@ -16,10 +16,6 @@ Sets or cancels the keep-alive status for an AppServiceExtensionAbility. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
 <!--Device-appManager-function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>--><!--Device-appManager-function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>-End-->
@@ -54,7 +50,7 @@ Sets or cancels the keep-alive status for an AppServiceExtensionAbility. This AP
 | [16000202](../errorcode-ability.md#16000202-keepalive-can-be-set-only-for-an-extensionability-of-the-appservice-type) | Invalid main element type. |
 | [16000203](../errorcode-ability.md#16000203-cannot-change-the-keepalive-status-of-an-appserviceextensionability) | Cannot change the keep-alive status. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ Enum for DownloadDescription
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum DownloadDescription--><!--Device-unnamed-export declare enum DownloadDescription-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ DOWNLOAD = 1
 Description is DOWNLOAD.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Description is DOWNLOAD_FILE.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadDescription-DOWNLOAD_FILE = 2--><!--Device-DownloadDescription-DOWNLOAD_FILE = 2-End-->
@@ -61,10 +49,6 @@ SAVE = 3
 Description is SAVE.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +66,6 @@ Description is SAVE_IMAGE.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadDescription-SAVE_IMAGE = 4--><!--Device-DownloadDescription-SAVE_IMAGE = 4-End-->
@@ -101,10 +81,6 @@ SAVE_FILE = 5
 Description is SAVE_FILE.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,10 +98,6 @@ Description is DOWNLOAD_AND_SHARE.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadDescription-DOWNLOAD_AND_SHARE = 6--><!--Device-DownloadDescription-DOWNLOAD_AND_SHARE = 6-End-->
@@ -142,10 +114,6 @@ Description is RECEIVE.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadDescription-RECEIVE = 7--><!--Device-DownloadDescription-RECEIVE = 7-End-->
@@ -161,10 +129,6 @@ CONTINUE_TO_RECEIVE = 8
 Description is CONTINUE_TO_RECEIVE.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

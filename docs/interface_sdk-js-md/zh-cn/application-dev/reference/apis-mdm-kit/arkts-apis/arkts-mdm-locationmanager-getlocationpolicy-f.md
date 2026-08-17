@@ -10,10 +10,6 @@ function getLocationPolicy(admin: Want): LocationPolicy
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -43,6 +39,26 @@ function getLocationPolicy(admin: Want): LocationPolicy
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
+**示例**
+
+```TypeScript
+import { locationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(wantTemp);
+  console.info(`Succeeded in getting location policy. policy: ${result}`);
+} catch (err) {
+  console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getLocationPolicy
 
@@ -53,10 +69,6 @@ function getLocationPolicy(admin: Want | null): LocationPolicy
 查询位置服务管理策略。可在企业设备管理应用中检查当前设备的位置服务策略状态，用于策略合规性验证或策略调整前的状态确认。适用于确认当前策略配置、设备管理应用启动时读取策略状态、排查位置服务问题时检查策略等场景。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
@@ -87,20 +99,14 @@ function getLocationPolicy(admin: Want | null): LocationPolicy
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { locationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
 
 try {
-  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(wantTemp);
+  // 参数需根据实际情况进行替换
+  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(null);
   console.info(`Succeeded in getting location policy. policy: ${result}`);
 } catch(err) {
   console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);

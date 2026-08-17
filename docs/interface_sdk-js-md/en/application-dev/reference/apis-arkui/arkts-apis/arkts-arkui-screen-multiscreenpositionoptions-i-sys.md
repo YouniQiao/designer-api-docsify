@@ -4,10 +4,6 @@ Describes the screen position information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screen-interface MultiScreenPositionOptions--><!--Device-screen-interface MultiScreenPositionOptions-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -32,10 +28,6 @@ Screen ID. The value must be a positive integer. Any non-positive integer values
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MultiScreenPositionOptions-id: long--><!--Device-MultiScreenPositionOptions-id: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -54,10 +46,6 @@ Start X coordinate of the screen. The top-left vertex of the bounding rectangle 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MultiScreenPositionOptions-startX: long--><!--Device-MultiScreenPositionOptions-startX: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -75,10 +63,6 @@ Start Y coordinate of the screen. The top-left vertex of the bounding rectangle 
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MultiScreenPositionOptions-startY: long--><!--Device-MultiScreenPositionOptions-startY: long-End-->
 

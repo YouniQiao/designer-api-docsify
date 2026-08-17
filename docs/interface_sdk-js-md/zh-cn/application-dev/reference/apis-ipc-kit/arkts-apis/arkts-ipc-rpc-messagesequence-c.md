@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-rpc-class MessageSequence--><!--Device-rpc-class MessageSequence-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -21,10 +17,6 @@ static closeFileDescriptor(fd: int): void
 静态方法，关闭给定的文件描述符。 - 文件使用完毕后及时关闭，避免资源泄漏。 - 关闭前确保文件操作已完成。 - 不要关闭已关闭的文件描述符。 - 关闭后不能再读写文件。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-static closeFileDescriptor(fd: int): void--><!--Device-MessageSequence-static closeFileDescriptor(fd: int): void-End-->
 
@@ -42,7 +34,7 @@ static closeFileDescriptor(fd: int): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -71,10 +63,6 @@ containFileDescriptors(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-containFileDescriptors(): boolean--><!--Device-MessageSequence-containFileDescriptors(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -85,7 +73,7 @@ containFileDescriptors(): boolean
 | --- | --- |
 | boolean | true：包含文件描述符，false：不包含文件描述符。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -116,10 +104,6 @@ static create(): MessageSequence
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-static create(): MessageSequence--><!--Device-MessageSequence-static create(): MessageSequence-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -130,7 +114,7 @@ static create(): MessageSequence
 | --- | --- |
 | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 返回创建的MessageSequence对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -160,10 +144,6 @@ static dupFileDescriptor(fd: int): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-static dupFileDescriptor(fd: int): int--><!--Device-MessageSequence-static dupFileDescriptor(fd: int): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -187,7 +167,7 @@ static dupFileDescriptor(fd: int): int
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900013](../errorcode-rpc.md#1900013-系统调用dup失败) | Failed to call dup. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -216,10 +196,6 @@ getCapacity(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-getCapacity(): int--><!--Device-MessageSequence-getCapacity(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -230,7 +206,7 @@ getCapacity(): int
 | --- | --- |
 | int | 获取的MessageSequence实例的容量大小。以字节为单位。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -258,10 +234,6 @@ getRawDataCapacity(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-getRawDataCapacity(): int--><!--Device-MessageSequence-getRawDataCapacity(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -272,7 +244,7 @@ getRawDataCapacity(): int
 | --- | --- |
 | int | 返回MessageSequence可以容纳的最大原始数据量，即128MB。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -300,10 +272,6 @@ getReadPosition(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-getReadPosition(): int--><!--Device-MessageSequence-getReadPosition(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -314,7 +282,7 @@ getReadPosition(): int
 | --- | --- |
 | int | 返回MessageSequence实例中的当前读取位置。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -343,10 +311,6 @@ getReadableBytes(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-getReadableBytes(): int--><!--Device-MessageSequence-getReadableBytes(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -357,7 +321,7 @@ getReadableBytes(): int
 | --- | --- |
 | int | 获取到的MessageSequence实例的可读字节空间。以字节为单位。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -386,10 +350,6 @@ getSize(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-getSize(): int--><!--Device-MessageSequence-getSize(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -400,7 +360,7 @@ getSize(): int
 | --- | --- |
 | int | 获取的MessageSequence实例的数据大小。以字节为单位。用于调整数据读取范围，建议设置为实际写入数据的大小。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -428,10 +388,6 @@ getWritableBytes(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-getWritableBytes(): int--><!--Device-MessageSequence-getWritableBytes(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -442,7 +398,7 @@ getWritableBytes(): int
 | --- | --- |
 | int | 获取到的MessageSequence实例的可写字节空间。以字节为单位。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -471,10 +427,6 @@ getWritePosition(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-getWritePosition(): int--><!--Device-MessageSequence-getWritePosition(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -485,7 +437,7 @@ getWritePosition(): int
 | --- | --- |
 | int | 返回MessageSequence实例中的当前写入位置。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -510,13 +462,9 @@ try {
 readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 ```
 
-从MessageSequence读取ArrayBuffer类型数据。 - 必须与[writeArrayBuffer](#writeArrayBuffer)配对使用。 - 读取typeCode必须与写入typeCode一致，顺序必须匹配。 - typeCode必须正确匹配，不匹配会导致数据异常或错误，建议根据业务类型选择合适的[TypeCode](arkts-ipc-rpc-typecode-e.md#TypeCode)。
+从MessageSequence读取ArrayBuffer类型数据。 - 必须与[writeArrayBuffer](#writearraybuffer)配对使用。 - 读取typeCode必须与写入typeCode一致，顺序必须匹配。 - typeCode必须正确匹配，不匹配会导致数据异常或错误，建议根据业务类型选择合适的[TypeCode](arkts-ipc-rpc-typecode-e.md#typecode)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer--><!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer-End-->
 
@@ -541,7 +489,7 @@ readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The obtained value of typeCode is incorrect; |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // TypeCode 类型枚举较多，示例代码以Int16Array为例
@@ -573,13 +521,9 @@ try {
 readAshmem(): Ashmem
 ```
 
-从MessageSequence读取匿名共享对象。使用前需先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapReadWriteAshmem)方法进行内存映射。 - readAshmem()获取对象。 - [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapReadWriteAshmem)映射内存。 - [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readDataFromAshmem)读取数据。 - unmapAshmem()取消映射。 - closeAshmem()关闭对象。 - 必须先映射才能读取数据。 - 数据读取后需要取消映射。 - 及时关闭避免内存泄漏。
+从MessageSequence读取匿名共享对象。使用前需先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)方法进行内存映射。 - readAshmem()获取对象。 - [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)映射内存。 - [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)读取数据。 - unmapAshmem()取消映射。 - closeAshmem()关闭对象。 - 必须先映射才能读取数据。 - 数据读取后需要取消映射。 - 及时关闭避免内存泄漏。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-readAshmem(): Ashmem--><!--Device-MessageSequence-readAshmem(): Ashmem-End-->
 
@@ -597,7 +541,7 @@ readAshmem(): Ashmem
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -647,10 +591,6 @@ readBoolean(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readBoolean(): boolean--><!--Device-MessageSequence-readBoolean(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -667,7 +607,7 @@ readBoolean(): boolean
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -696,10 +636,6 @@ readBooleanArray(dataIn: boolean[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -717,7 +653,7 @@ readBooleanArray(dataIn: boolean[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -747,10 +683,6 @@ readBooleanArray(): boolean[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readBooleanArray(): boolean[]--><!--Device-MessageSequence-readBooleanArray(): boolean[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -767,7 +699,7 @@ readBooleanArray(): boolean[]
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -792,13 +724,9 @@ try {
 readByte(): int
 ```
 
-从MessageSequence实例中读取字节值。 - 必须与[writeByte](#writeByte)配对使用。 - 一次写入对应一次读取。
+从MessageSequence实例中读取字节值。 - 必须与[writeByte](#writebyte)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-readByte(): int--><!--Device-MessageSequence-readByte(): int-End-->
 
@@ -816,7 +744,7 @@ readByte(): int
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -845,10 +773,6 @@ readByteArray(dataIn: int[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readByteArray(dataIn: int[]): void--><!--Device-MessageSequence-readByteArray(dataIn: int[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -866,7 +790,7 @@ readByteArray(dataIn: int[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -920,10 +844,6 @@ readByteArray(): int[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readByteArray(): int[]--><!--Device-MessageSequence-readByteArray(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -940,7 +860,7 @@ readByteArray(): int[]
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -970,10 +890,6 @@ readChar(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readChar(): int--><!--Device-MessageSequence-readChar(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -990,7 +906,7 @@ readChar(): int
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1019,10 +935,6 @@ readCharArray(dataIn: int[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readCharArray(dataIn: int[]): void--><!--Device-MessageSequence-readCharArray(dataIn: int[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1040,7 +952,7 @@ readCharArray(dataIn: int[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1092,10 +1004,6 @@ readCharArray(): int[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readCharArray(): int[]--><!--Device-MessageSequence-readCharArray(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1112,7 +1020,7 @@ readCharArray(): int[]
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1141,10 +1049,6 @@ readDouble(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readDouble(): double--><!--Device-MessageSequence-readDouble(): double-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1161,7 +1065,7 @@ readDouble(): double
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1190,10 +1094,6 @@ readDoubleArray(dataIn: double[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void--><!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1211,7 +1111,7 @@ readDoubleArray(dataIn: double[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1263,10 +1163,6 @@ readDoubleArray(): double[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readDoubleArray(): double[]--><!--Device-MessageSequence-readDoubleArray(): double[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1283,7 +1179,7 @@ readDoubleArray(): double[]
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1308,13 +1204,9 @@ try {
 readException(): void
 ```
 
-从MessageSequence中读取异常。适用于接收远端服务响应后检查异常状态的场景。 - 在IPC/RPC通信的客户端使用。 - 在调用sendMessageRequest收到响应后调用。 - 在每次IPC/RPC调用后优先调用此方法。 - 如有异常立即处理并终止后续数据读取，异常处理后建议调用reclaim()释放MessageSequence对象。 - 此方法与[writeNoException](#writeNoException)方法配对使用。 - 调用顺序：服务端处理请求 → [writeNoException](#writeNoException) → 客户端收到响应 → [readException](#readException) - 如果服务端未调用 [writeNoException](#writeNoException)，调用此方法会失败。
+从MessageSequence中读取异常。适用于接收远端服务响应后检查异常状态的场景。 - 在IPC/RPC通信的客户端使用。 - 在调用sendMessageRequest收到响应后调用。 - 在每次IPC/RPC调用后优先调用此方法。 - 如有异常立即处理并终止后续数据读取，异常处理后建议调用reclaim()释放MessageSequence对象。 - 此方法与[writeNoException](#writenoexception)方法配对使用。 - 调用顺序：服务端处理请求 → [writeNoException](#writenoexception) → 客户端收到响应 → [readException](#readexception) - 如果服务端未调用 [writeNoException](#writenoexception)，调用此方法会失败。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-readException(): void--><!--Device-MessageSequence-readException(): void-End-->
 
@@ -1326,7 +1218,7 @@ readException(): void
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -1410,13 +1302,9 @@ try {
 readFileDescriptor(): int
 ```
 
-从MessageSequence中读取文件描述符。接收端读取到的是映射后的新文件描述符编号，与发送端写入的描述符编号不同，但指向同一个文件资源。读取后建议及时使用并关闭，防止资源泄漏。 如需长期使用，可调用dupFileDescriptor复制描述符。 - 必须与[writeFileDescriptor](#writeFileDescriptor)配对使用。 - 不要依赖源端的fd编号。 - 读取后需要管理生命周期。 - 建议及时使用避免资源浪费。 - 使用完毕后及时关闭。
+从MessageSequence中读取文件描述符。接收端读取到的是映射后的新文件描述符编号，与发送端写入的描述符编号不同，但指向同一个文件资源。读取后建议及时使用并关闭，防止资源泄漏。 如需长期使用，可调用dupFileDescriptor复制描述符。 - 必须与[writeFileDescriptor](#writefiledescriptor)配对使用。 - 不要依赖源端的fd编号。 - 读取后需要管理生命周期。 - 建议及时使用避免资源浪费。 - 使用完毕后及时关闭。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-readFileDescriptor(): int--><!--Device-MessageSequence-readFileDescriptor(): int-End-->
 
@@ -1434,7 +1322,7 @@ readFileDescriptor(): int
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1466,10 +1354,6 @@ readFloat(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readFloat(): double--><!--Device-MessageSequence-readFloat(): double-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1486,7 +1370,7 @@ readFloat(): double
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1515,10 +1399,6 @@ readFloatArray(dataIn: double[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readFloatArray(dataIn: double[]): void--><!--Device-MessageSequence-readFloatArray(dataIn: double[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1536,7 +1416,7 @@ readFloatArray(dataIn: double[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1588,10 +1468,6 @@ readFloatArray(): double[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readFloatArray(): double[]--><!--Device-MessageSequence-readFloatArray(): double[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1608,7 +1484,7 @@ readFloatArray(): double[]
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1637,10 +1513,6 @@ readInt(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MessageSequence-readInt(): int--><!--Device-MessageSequence-readInt(): int-End-->
@@ -1659,7 +1531,7 @@ readInt(): int
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 在原子化服务中，本示例仅用于说明readInt()接口的使用方法，示例中rpc.MessageSequence.create()暂不支持在原子化服务中调用。
@@ -1689,10 +1561,6 @@ readIntArray(dataIn: int[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readIntArray(dataIn: int[]): void--><!--Device-MessageSequence-readIntArray(dataIn: int[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1710,7 +1578,7 @@ readIntArray(dataIn: int[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1762,10 +1630,6 @@ readIntArray(): int[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readIntArray(): int[]--><!--Device-MessageSequence-readIntArray(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1782,7 +1646,7 @@ readIntArray(): int[]
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1807,13 +1671,9 @@ try {
 readInterfaceToken(): string
 ```
 
-从MessageSequence对象中读取接口描述符，接口描述符按写入MessageSequence的顺序读取，本地对象可使用该信息检验本次通信。 - 必须与[writeInterfaceToken](#writeInterfaceToken)配对使用。 - 读取前应确保缓冲区中有可读数据。 - 建议在收到IPC请求后立即读取校验。
+从MessageSequence对象中读取接口描述符，接口描述符按写入MessageSequence的顺序读取，本地对象可使用该信息检验本次通信。 - 必须与[writeInterfaceToken](#writeinterfacetoken)配对使用。 - 读取前应确保缓冲区中有可读数据。 - 建议在收到IPC请求后立即读取校验。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-readInterfaceToken(): string--><!--Device-MessageSequence-readInterfaceToken(): string-End-->
 
@@ -1831,7 +1691,7 @@ readInterfaceToken(): string
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1860,10 +1720,6 @@ readLong(): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readLong(): long--><!--Device-MessageSequence-readLong(): long-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1880,7 +1736,7 @@ readLong(): long
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1909,10 +1765,6 @@ readLongArray(dataIn: long[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readLongArray(dataIn: long[]): void--><!--Device-MessageSequence-readLongArray(dataIn: long[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1930,7 +1782,7 @@ readLongArray(dataIn: long[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1982,10 +1834,6 @@ readLongArray(): long[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readLongArray(): long[]--><!--Device-MessageSequence-readLongArray(): long[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2002,7 +1850,7 @@ readLongArray(): long[]
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2031,10 +1879,6 @@ readParcelable(dataIn: Parcelable): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void--><!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2053,7 +1897,7 @@ readParcelable(dataIn: Parcelable): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2102,10 +1946,6 @@ readParcelableArray(parcelableArray: Parcelable[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2124,7 +1964,7 @@ readParcelableArray(parcelableArray: Parcelable[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2176,11 +2016,9 @@ readRawData(size: number): number[]
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 11
 
-**替代接口：** [readRawDataBuffer](#readRawDataBuffer)(size: int)
+**替代接口：** [readRawDataBuffer](#readrawdatabuffer)(size: int)
 
 <!--Device-MessageSequence-readRawData(size: number): number[]--><!--Device-MessageSequence-readRawData(size: number): number[]-End-->
 
@@ -2205,7 +2043,7 @@ readRawData(size: number): number[]
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2232,13 +2070,9 @@ try {
 readRawDataBuffer(size: int): ArrayBuffer
 ```
 
-从MessageSequence读取原始数据。 - 需与写入时的数据大小匹配。 - 该接口是一次性接口,不允许在一次parcel通信中多次调用。 - 大数据量传输时注意系统资源占用。 - 必须与[writeRawDataBuffer](#writeRawDataBuffer)配对使用。
+从MessageSequence读取原始数据。 - 需与写入时的数据大小匹配。 - 该接口是一次性接口,不允许在一次parcel通信中多次调用。 - 大数据量传输时注意系统资源占用。 - 必须与[writeRawDataBuffer](#writerawdatabuffer)配对使用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer--><!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer-End-->
 
@@ -2263,7 +2097,7 @@ readRawDataBuffer(size: int): ArrayBuffer
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2299,10 +2133,6 @@ readRemoteObject(): IRemoteObject
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readRemoteObject(): IRemoteObject--><!--Device-MessageSequence-readRemoteObject(): IRemoteObject-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2320,7 +2150,7 @@ readRemoteObject(): IRemoteObject
 | [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2361,10 +2191,6 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2382,7 +2208,7 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2424,10 +2250,6 @@ readRemoteObjectArray(): IRemoteObject[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2444,7 +2266,7 @@ readRemoteObjectArray(): IRemoteObject[]
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2480,13 +2302,9 @@ try {
 readShort(): int
 ```
 
-从MessageSequence实例中读取短整数值。 - 必须与[writeShort](#writeShort)配对使用。 - 注意写入时的取值范围[-2^15, 2^15-1]，超出此范围会导致数据截断。
+从MessageSequence实例中读取短整数值。 - 必须与[writeShort](#writeshort)配对使用。 - 注意写入时的取值范围[-2^15, 2^15-1]，超出此范围会导致数据截断。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-readShort(): int--><!--Device-MessageSequence-readShort(): int-End-->
 
@@ -2504,7 +2322,7 @@ readShort(): int
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2533,10 +2351,6 @@ readShortArray(dataIn: int[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readShortArray(dataIn: int[]): void--><!--Device-MessageSequence-readShortArray(dataIn: int[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2554,7 +2368,7 @@ readShortArray(dataIn: int[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2606,10 +2420,6 @@ readShortArray(): int[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readShortArray(): int[]--><!--Device-MessageSequence-readShortArray(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2626,7 +2436,7 @@ readShortArray(): int[]
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2655,10 +2465,6 @@ readString(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MessageSequence-readString(): string--><!--Device-MessageSequence-readString(): string-End-->
@@ -2677,7 +2483,7 @@ readString(): string
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 在原子化服务中，本示例仅用于说明readString()接口的使用方法，示例中rpc.MessageSequence.create()暂不支持在原子化服务中调用。
@@ -2707,10 +2513,6 @@ readStringArray(dataIn: string[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readStringArray(dataIn: string[]): void--><!--Device-MessageSequence-readStringArray(dataIn: string[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2728,7 +2530,7 @@ readStringArray(dataIn: string[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2758,10 +2560,6 @@ readStringArray(): string[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-readStringArray(): string[]--><!--Device-MessageSequence-readStringArray(): string[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2778,7 +2576,7 @@ readStringArray(): string[]
 | --- | --- |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2807,15 +2605,11 @@ reclaim(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-reclaim(): void--><!--Device-MessageSequence-reclaim(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2842,10 +2636,6 @@ rewindRead(pos: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-rewindRead(pos: int): void--><!--Device-MessageSequence-rewindRead(pos: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2854,7 +2644,7 @@ rewindRead(pos: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pos | int | 是 | 开始读取数据的目标位置，以字节为单位。用于重新定位MessageSequence的读指针，值应在 [0, [getSize](#getSize)]范围内。 |
+| pos | int | 是 | 开始读取数据的目标位置，以字节为单位。用于重新定位MessageSequence的读指针，值应在 [0, [getSize](#getsize)]范围内。 |
 
 **错误码：**
 
@@ -2863,7 +2653,7 @@ rewindRead(pos: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2896,10 +2686,6 @@ rewindWrite(pos: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-rewindWrite(pos: int): void--><!--Device-MessageSequence-rewindWrite(pos: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2908,7 +2694,7 @@ rewindWrite(pos: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pos | int | 是 | 开始写入数据的目标位置，以字节为单位。用于重新定位MessageSequence的写指针，值应在 [0, [getSize](#getSize)]范围内。 |
+| pos | int | 是 | 开始写入数据的目标位置，以字节为单位。用于重新定位MessageSequence的写指针，值应在 [0, [getSize](#getsize)]范围内。 |
 
 **错误码：**
 
@@ -2917,7 +2703,7 @@ rewindWrite(pos: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2948,10 +2734,6 @@ setCapacity(size: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-setCapacity(size: int): void--><!--Device-MessageSequence-setCapacity(size: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -2970,7 +2752,7 @@ setCapacity(size: int): void
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 | [1900011](../errorcode-rpc.md#1900011-内存分配失败) | Memory allocation failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2997,10 +2779,6 @@ setSize(size: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-setSize(size: int): void--><!--Device-MessageSequence-setSize(size: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -3018,7 +2796,7 @@ setSize(size: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3042,13 +2820,9 @@ try {
 writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 ```
 
-将ArrayBuffer类型数据写入MessageSequence对象。 - 此方法与[readArrayBuffer](#readArrayBuffer)方法配对使用。 - 写入的typeCode必须与读取的typeCode一致，否则会导致数据异常。 - 调用顺序：先调用writeArrayBuffer()写入数据 → 再调用[readArrayBuffer](#readArrayBuffer)读取数据。 - typeCode参数决定了数据的写入和读取方式。 - 读写typeCode不匹配会导致数据解析错误。 - 必须根据实际数据类型选择正确的[TypeCode](arkts-ipc-rpc-typecode-e.md#TypeCode)枚举值。
+将ArrayBuffer类型数据写入MessageSequence对象。 - 此方法与[readArrayBuffer](#readarraybuffer)方法配对使用。 - 写入的typeCode必须与读取的typeCode一致，否则会导致数据异常。 - 调用顺序：先调用writeArrayBuffer()写入数据 → 再调用[readArrayBuffer](#readarraybuffer)读取数据。 - typeCode参数决定了数据的写入和读取方式。 - 读写typeCode不匹配会导致数据解析错误。 - 必须根据实际数据类型选择正确的[TypeCode](arkts-ipc-rpc-typecode-e.md#typecode)枚举值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void--><!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void-End-->
 
@@ -3068,7 +2842,7 @@ writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The obtained value of typeCode is incorrect; 5.Failed to obtain arrayBuffer information. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // TypeCode 类型枚举较多，示例代码以Int16Array为例
@@ -3097,13 +2871,9 @@ try {
 writeAshmem(ashmem: Ashmem): void
 ```
 
-将指定的匿名共享对象写入此MessageSequence。 - 创建Ashmem对象：Ashmem.create()。 - 映射内存并写入数据：[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapReadWriteAshmem) + [writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writeDataToAshmem)。 - 将Ashmem写入MessageSequence：writeAshmem()。 - 接收端读取Ashmem：[readAshmem](#readAshmem)。 - 接收端映射内存并读取数据：mapReadWriteAshmem() + readDataFromAshmem()。 - 此方法与readAshmem()方法配对使用。 - 调用顺序：writeAshmem() → 传输MessageSequence → [readAshmem](#readAshmem) → [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapReadWriteAshmem) → [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readDataFromAshmem)。 - 使用前需先创建Ashmem对象并写入数据。
+将指定的匿名共享对象写入此MessageSequence。 - 创建Ashmem对象：Ashmem.create()。 - 映射内存并写入数据：[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) + [writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)。 - 将Ashmem写入MessageSequence：writeAshmem()。 - 接收端读取Ashmem：[readAshmem](#readashmem)。 - 接收端映射内存并读取数据：mapReadWriteAshmem() + readDataFromAshmem()。 - 此方法与readAshmem()方法配对使用。 - 调用顺序：writeAshmem() → 传输MessageSequence → [readAshmem](#readashmem) → [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) → [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)。 - 使用前需先创建Ashmem对象并写入数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void--><!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void-End-->
 
@@ -3122,7 +2892,7 @@ writeAshmem(ashmem: Ashmem): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter is not an instance of the Ashmem object. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3158,13 +2928,9 @@ try {
 writeBoolean(val: boolean): void
 ```
 
-将布尔值写入MessageSequence实例。 - 必须与[readBoolean](#readBoolean)配对使用。 - 一次写入对应一次读取。
+将布尔值写入MessageSequence实例。 - 必须与[readBoolean](#readboolean)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeBoolean(val: boolean): void--><!--Device-MessageSequence-writeBoolean(val: boolean): void-End-->
 
@@ -3183,7 +2949,7 @@ writeBoolean(val: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3206,13 +2972,9 @@ try {
 writeBooleanArray(booleanArray: boolean[]): void
 ```
 
-将布尔数组写入MessageSequence实例。 - 必须与[readBooleanArray](#readBooleanArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将布尔数组写入MessageSequence实例。 - 必须与[readBooleanArray](#readbooleanarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void--><!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void-End-->
 
@@ -3231,7 +2993,7 @@ writeBooleanArray(booleanArray: boolean[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3254,13 +3016,9 @@ try {
 writeByte(val: int): void
 ```
 
-将字节值写入MessageSequence实例。调用此方法后，字节值会被以8位无符号整数形式存入缓冲区当前写指针位置，并自动更新写指针。该方法适用于传输小范围整数或标志位数据。 - 存储范围:[0, 255](无符号)或[-128, 127](有符号)。 - 数据对齐方式为字节对齐。 - 数值必须在字节范围内，超出范围可能导致数据截断。 - 读取时必须使用[readByte](#readByte)方法配对读取。 - 不适合传输大范围数值，大范围数值建议使用[writeInt](#writeInt)/ [writeLong](#writeLong)等。
+将字节值写入MessageSequence实例。调用此方法后，字节值会被以8位无符号整数形式存入缓冲区当前写指针位置，并自动更新写指针。该方法适用于传输小范围整数或标志位数据。 - 存储范围:[0, 255](无符号)或[-128, 127](有符号)。 - 数据对齐方式为字节对齐。 - 数值必须在字节范围内，超出范围可能导致数据截断。 - 读取时必须使用[readByte](#readbyte)方法配对读取。 - 不适合传输大范围数值，大范围数值建议使用[writeInt](#writeint)/ [writeLong](#writelong)等。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeByte(val: int): void--><!--Device-MessageSequence-writeByte(val: int): void-End-->
 
@@ -3279,7 +3037,7 @@ writeByte(val: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3302,13 +3060,9 @@ try {
 writeByteArray(byteArray: int[]): void
 ```
 
-将字节数组写入MessageSequence实例。 - 必须与[readByteArray](#readByteArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将字节数组写入MessageSequence实例。 - 必须与[readByteArray](#readbytearray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeByteArray(byteArray: int[]): void--><!--Device-MessageSequence-writeByteArray(byteArray: int[]): void-End-->
 
@@ -3327,7 +3081,7 @@ writeByteArray(byteArray: int[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3351,13 +3105,9 @@ try {
 writeChar(val: int): void
 ```
 
-将单个字符值写入MessageSequence实例。 - 必须与[readChar](#readChar)配对使用。 - 一次写入对应一次读取。
+将单个字符值写入MessageSequence实例。 - 必须与[readChar](#readchar)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeChar(val: int): void--><!--Device-MessageSequence-writeChar(val: int): void-End-->
 
@@ -3376,7 +3126,7 @@ writeChar(val: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3399,13 +3149,9 @@ try {
 writeCharArray(charArray: int[]): void
 ```
 
-将单个字符数组写入MessageSequence实例。 - 必须与[readCharArray](#readCharArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将单个字符数组写入MessageSequence实例。 - 必须与[readCharArray](#readchararray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeCharArray(charArray: int[]): void--><!--Device-MessageSequence-writeCharArray(charArray: int[]): void-End-->
 
@@ -3424,7 +3170,7 @@ writeCharArray(charArray: int[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3447,13 +3193,9 @@ try {
 writeDouble(val: double): void
 ```
 
-将双精度浮点值写入MessageSequence实例。 - 必须与[readDouble](#readDouble)配对使用。 - 一次写入对应一次读取。
+将双精度浮点值写入MessageSequence实例。 - 必须与[readDouble](#readdouble)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeDouble(val: double): void--><!--Device-MessageSequence-writeDouble(val: double): void-End-->
 
@@ -3472,7 +3214,7 @@ writeDouble(val: double): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3495,13 +3237,9 @@ try {
 writeDoubleArray(doubleArray: double[]): void
 ```
 
-将双精度浮点数组写入MessageSequence实例。 - 必须与[readDoubleArray](#readDoubleArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将双精度浮点数组写入MessageSequence实例。 - 必须与[readDoubleArray](#readdoublearray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void--><!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void-End-->
 
@@ -3520,7 +3258,7 @@ writeDoubleArray(doubleArray: double[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3547,10 +3285,6 @@ writeFileDescriptor(fd: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-writeFileDescriptor(fd: int): void--><!--Device-MessageSequence-writeFileDescriptor(fd: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -3568,7 +3302,7 @@ writeFileDescriptor(fd: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3598,10 +3332,6 @@ writeFloat(val: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-writeFloat(val: double): void--><!--Device-MessageSequence-writeFloat(val: double): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -3610,7 +3340,7 @@ writeFloat(val: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| val | double | 是 | 要写入的双精度浮点值。适用于传输浮点数据(如坐标、比例、测量值等)。 必须与[readFloat](#readFloat)配对使用。 |
+| val | double | 是 | 要写入的双精度浮点值。适用于传输浮点数据(如坐标、比例、测量值等)。 必须与[readFloat](#readfloat)配对使用。 |
 
 **错误码：**
 
@@ -3619,7 +3349,7 @@ writeFloat(val: double): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3642,13 +3372,9 @@ try {
 writeFloatArray(floatArray: double[]): void
 ```
 
-将双精度浮点数组写入MessageSequence实例。 - 必须与[readFloatArray](#readFloatArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将双精度浮点数组写入MessageSequence实例。 - 必须与[readFloatArray](#readfloatarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void--><!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void-End-->
 
@@ -3667,7 +3393,7 @@ writeFloatArray(floatArray: double[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3690,13 +3416,9 @@ try {
 writeInt(val: int): void
 ```
 
-将整数值写入MessageSequence实例。 调用此方法后，整数值会被以32位有符号整数形式存入缓冲区当前写指针位置，并自动更新写指针。该方法适用于传输标准整数数据。对于小范围数值建议使用 [writeByte](#writeByte)/[writeShort](#writeShort)提高效率；对于大范围数值建议 使用[writeLong](#writeLong)。 - 必须与[readInt](#readInt)配对使用。 - 一次写入对应一次读取 - 占用4字节(32位)存储空间。 - 采用系统默认字节序存储。 - 超出范围会导致数据截断或写入失败。
+将整数值写入MessageSequence实例。 调用此方法后，整数值会被以32位有符号整数形式存入缓冲区当前写指针位置，并自动更新写指针。该方法适用于传输标准整数数据。对于小范围数值建议使用 [writeByte](#writebyte)/[writeShort](#writeshort)提高效率；对于大范围数值建议 使用[writeLong](#writelong)。 - 必须与[readInt](#readint)配对使用。 - 一次写入对应一次读取 - 占用4字节(32位)存储空间。 - 采用系统默认字节序存储。 - 超出范围会导致数据截断或写入失败。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -3717,7 +3439,7 @@ writeInt(val: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 在原子化服务中，本示例仅用于说明writeInt()接口的使用方法，示例中rpc.MessageSequence.create()暂不支持在原子化服务中调用。
@@ -3741,13 +3463,9 @@ try {
 writeIntArray(intArray: int[]): void
 ```
 
-将整数数组写入MessageSequence实例。 - 必须与[readIntArray](#readIntArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将整数数组写入MessageSequence实例。 - 必须与[readIntArray](#readintarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeIntArray(intArray: int[]): void--><!--Device-MessageSequence-writeIntArray(intArray: int[]): void-End-->
 
@@ -3766,7 +3484,7 @@ writeIntArray(intArray: int[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3789,13 +3507,9 @@ try {
 writeInterfaceToken(token: string): void
 ```
 
-将接口描述符写入MessageSequence对象，远端对象可使用该信息校验本次通信。适用于需要验证通信双方接口一致性的场景，如跨进程服务调用、安全通信验证以及标识服务端提供的接口类型。建议使用唯一且有意义的描述符字符串（如" com.example.service"），避免使用敏感信息，长度应小于40960。调用此方法后，接口描述符字符串会被序列化并存入MessageSequence缓冲区。远端在接收到通信请求后，可读取该描述符来验证请求来源的合法 性。 - 必须与[readInterfaceToken](#readInterfaceToken)配对使用。 - 长度超过限制会抛出参数错误异常。
+将接口描述符写入MessageSequence对象，远端对象可使用该信息校验本次通信。适用于需要验证通信双方接口一致性的场景，如跨进程服务调用、安全通信验证以及标识服务端提供的接口类型。建议使用唯一且有意义的描述符字符串（如" com.example.service"），避免使用敏感信息，长度应小于40960。调用此方法后，接口描述符字符串会被序列化并存入MessageSequence缓冲区。远端在接收到通信请求后，可读取该描述符来验证请求来源的合法 性。 - 必须与[readInterfaceToken](#readinterfacetoken)配对使用。 - 长度超过限制会抛出参数错误异常。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeInterfaceToken(token: string): void--><!--Device-MessageSequence-writeInterfaceToken(token: string): void-End-->
 
@@ -3814,7 +3528,7 @@ writeInterfaceToken(token: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3837,13 +3551,9 @@ try {
 writeLong(val: long): void
 ```
 
-将长整数值写入MessageSequence实例。 - 必须与[readLong](#readLong)配对使用。 - 一次写入对应一次读取。
+将长整数值写入MessageSequence实例。 - 必须与[readLong](#readlong)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeLong(val: long): void--><!--Device-MessageSequence-writeLong(val: long): void-End-->
 
@@ -3862,7 +3572,7 @@ writeLong(val: long): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3885,13 +3595,9 @@ try {
 writeLongArray(longArray: long[]): void
 ```
 
-将长整数数组写入MessageSequence实例。 - 必须与[readLongArray](#readLongArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将长整数数组写入MessageSequence实例。 - 必须与[readLongArray](#readlongarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeLongArray(longArray: long[]): void--><!--Device-MessageSequence-writeLongArray(longArray: long[]): void-End-->
 
@@ -3910,7 +3616,7 @@ writeLongArray(longArray: long[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3933,13 +3639,9 @@ try {
 writeNoException(): void
 ```
 
-向MessageSequence写入“指示未发生异常”的信息。通常在IPC/RPC通信的服务端实现以及onRemoteMessageRequest回调中调用。 - 此方法与[readException](#readException)方法配对使用。 - 服务端在处理请求完成后，应调用writeNoException()写入未发生异常的信息。 - 客户端在收到响应后，应调用[readException](#readException)读取异常信息。 - 如果服务端未调用writeNoException()，客户端调用[readException](#readException)会读取失败。
+向MessageSequence写入“指示未发生异常”的信息。通常在IPC/RPC通信的服务端实现以及onRemoteMessageRequest回调中调用。 - 此方法与[readException](#readexception)方法配对使用。 - 服务端在处理请求完成后，应调用writeNoException()写入未发生异常的信息。 - 客户端在收到响应后，应调用[readException](#readexception)读取异常信息。 - 如果服务端未调用writeNoException()，客户端调用[readException](#readexception)会读取失败。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeNoException(): void--><!--Device-MessageSequence-writeNoException(): void-End-->
 
@@ -3951,7 +3653,7 @@ writeNoException(): void
 | --- | --- |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3992,10 +3694,6 @@ writeParcelable(val: Parcelable): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-writeParcelable(val: Parcelable): void--><!--Device-MessageSequence-writeParcelable(val: Parcelable): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -4013,7 +3711,7 @@ writeParcelable(val: Parcelable): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4056,13 +3754,9 @@ try {
 writeParcelableArray(parcelableArray: Parcelable[]): void
 ```
 
-将可序列化对象数组写入MessageSequence实例。适用于批量传输多个自定义数据结构对象的场景，如传输多条业务记录、批量配置信息、多个实体对象等。 - 必须与[readParcelableArray](#readParcelableArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将可序列化对象数组写入MessageSequence实例。适用于批量传输多个自定义数据结构对象的场景，如传输多条业务记录、批量配置信息、多个实体对象等。 - 必须与[readParcelableArray](#readparcelablearray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
@@ -4081,7 +3775,7 @@ writeParcelableArray(parcelableArray: Parcelable[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4131,11 +3825,9 @@ writeRawData(rawData: number[], size: number): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 11
 
-**替代接口：** [writeRawDataBuffer](#writeRawDataBuffer)(rawData: ArrayBuffer, size: int)
+**替代接口：** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: int)
 
 <!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void--><!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void-End-->
 
@@ -4155,7 +3847,7 @@ writeRawData(rawData: number[], size: number): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4183,10 +3875,6 @@ writeRawDataBuffer(rawData: ArrayBuffer, size: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void--><!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -4205,7 +3893,7 @@ writeRawDataBuffer(rawData: ArrayBuffer, size: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The transferred size is greater than the byte length of ArrayBuffer. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4234,13 +3922,9 @@ try {
 writeRemoteObject(obj: IRemoteObject): void
 ```
 
-序列化远程对象并将其写入[MessageSequence](#MessageSequence)对象。调用此方法后，IRemoteObject对象会被序列化为特定格式并存入MessageSequence的缓冲区 中，同时会更新内部写指针位置。该序列化对象可在接收端通过readRemoteObject方法反序列化读取。 - 只能写入有效的IRemoteObject对象，传入无效对象会抛出异常。 - 序列化后的对象占用固定大小的缓冲区空间。 - 写入的对象必须与对应的readRemoteObject方法配对使用。
+序列化远程对象并将其写入[MessageSequence](#messagesequence)对象。调用此方法后，IRemoteObject对象会被序列化为特定格式并存入MessageSequence的缓冲区 中，同时会更新内部写指针位置。该序列化对象可在接收端通过readRemoteObject方法反序列化读取。 - 只能写入有效的IRemoteObject对象，传入无效对象会抛出异常。 - 序列化后的对象占用固定大小的缓冲区空间。 - 写入的对象必须与对应的readRemoteObject方法配对使用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void--><!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void-End-->
 
@@ -4260,7 +3944,7 @@ writeRemoteObject(obj: IRemoteObject): void
 | [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4295,13 +3979,9 @@ try {
 writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 ```
 
-将IRemoteObject对象数组写入MessageSequence。适用于需要传递多个远程对象的场景，如批量注册多个服务代理、传递多个回调接口、多服务端点管理等。 - 必须与[readRemoteObjectArray](#readRemoteObjectArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将IRemoteObject对象数组写入MessageSequence。适用于需要传递多个远程对象的场景，如批量注册多个服务代理、传递多个回调接口、多服务端点管理等。 - 必须与[readRemoteObjectArray](#readremoteobjectarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void--><!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void-End-->
 
@@ -4320,7 +4000,7 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The obtained remoteObject is null. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4355,13 +4035,9 @@ try {
 writeShort(val: int): void
 ```
 
-将短整数值写入MessageSequence实例。 - 超出范围会导致数据截断。 - 必须与[readShort](#readShort)配对使用。 - 一次写入对应一次读取。
+将短整数值写入MessageSequence实例。 - 超出范围会导致数据截断。 - 必须与[readShort](#readshort)配对使用。 - 一次写入对应一次读取。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeShort(val: int): void--><!--Device-MessageSequence-writeShort(val: int): void-End-->
 
@@ -4380,7 +4056,7 @@ writeShort(val: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4403,13 +4079,9 @@ try {
 writeShortArray(shortArray: int[]): void
 ```
 
-将短整数数组写入MessageSequence实例。 - 必须与[readShortArray](#readShortArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将短整数数组写入MessageSequence实例。 - 必须与[readShortArray](#readshortarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeShortArray(shortArray: int[]): void--><!--Device-MessageSequence-writeShortArray(shortArray: int[]): void-End-->
 
@@ -4428,7 +4100,7 @@ writeShortArray(shortArray: int[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -4451,13 +4123,9 @@ try {
 writeString(val: string): void
 ```
 
-将字符串值写入MessageSequence实例。调用此方法后，字符串会被序列化存入缓冲区。写入时会先存储字符串长度，再存储字节数据。 - 此方法与[readString](#readString)方法配对使用。 - 先写入长度，再写入内容。 - 支持多语言字符集。 - 长度信息便于[readString](#readString)确定读取边界。 - 注意区分字符数和字节数，中文字符占用更多字节。 - 长字符串会占用较多缓冲区空间。 - 空字符串也可以正常写入。
+将字符串值写入MessageSequence实例。调用此方法后，字符串会被序列化存入缓冲区。写入时会先存储字符串长度，再存储字节数据。 - 此方法与[readString](#readstring)方法配对使用。 - 先写入长度，再写入内容。 - 支持多语言字符集。 - 长度信息便于[readString](#readstring)确定读取边界。 - 注意区分字符数和字节数，中文字符占用更多字节。 - 长字符串会占用较多缓冲区空间。 - 空字符串也可以正常写入。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -4478,7 +4146,7 @@ writeString(val: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 在原子化服务中，本示例仅用于说明writeString()接口的使用方法，示例中rpc.MessageSequence.create()暂不支持在原子化服务中调用。
@@ -4502,13 +4170,9 @@ try {
 writeStringArray(stringArray: string[]): void
 ```
 
-将字符串数组写入MessageSequence实例。 - 必须与[readStringArray](#readStringArray)配对使用。 - 读取数组长度必须与写入数组长度一致。
+将字符串数组写入MessageSequence实例。 - 必须与[readStringArray](#readstringarray)配对使用。 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MessageSequence-writeStringArray(stringArray: string[]): void--><!--Device-MessageSequence-writeStringArray(stringArray: string[]): void-End-->
 
@@ -4527,7 +4191,7 @@ writeStringArray(stringArray: string[]): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The string length is greater than or equal to 40960; 5.The number of bytes copied to the buffer is different from the length of the obtained string. |
 | [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

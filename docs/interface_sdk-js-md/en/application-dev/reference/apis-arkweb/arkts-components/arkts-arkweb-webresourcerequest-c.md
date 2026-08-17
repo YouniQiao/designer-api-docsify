@@ -1,12 +1,8 @@
 # WebResourceRequest
 
-Defines the Web resource request.
+WebResourceRequest is a class in the Web component that represents a network resource request, providing detailed metadata about the requested resource. This object is used in event callbacks such as `onErrorReceive`, `onHttpErrorReceive`, and request interception to help developers diagnose network errors, monitor request status, and implement resource interception control. By using this class, the app can improve error handling, enhance request controllability, and optimize user experience. For sample code, see [onErrorReceive event](arkts-arkweb-web-attribute.md#onerrorreceive).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WebResourceRequest--><!--Device-unnamed-declare class WebResourceRequest-End-->
 
@@ -18,13 +14,9 @@ Defines the Web resource request.
 constructor()
 ```
 
-Constructor.
+Constructs a **WebResourceRequest** object.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ Constructor.
 getRequestHeader(): Array<Header>
 ```
 
-Gets request headers.
+Obtains the information about the resource request header.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,7 +44,7 @@ Gets request headers.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Return the request headers |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Array containing the key-value pair information of the request headers. Each **Header** object contains the name and corresponding value of a request header, such as User-Agent and Content-Type. |
 
 ## getRequestMethod
 
@@ -64,13 +52,9 @@ Gets request headers.
 getRequestMethod(): string
 ```
 
-Get request method.
+Obtains the request method.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,7 +66,7 @@ Get request method.
 
 | Type | Description |
 | --- | --- |
-| string | Return the request method. |
+| string | HTTP request method string. Common values include GET, POST, PUT, DELETE, etc., indicating the HTTP method type used for the resource request. |
 
 ## getRequestUrl
 
@@ -90,13 +74,9 @@ Get request method.
 getRequestUrl(): string
 ```
 
-Gets the request URL.
+Obtains the URL of the resource request.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,7 +88,7 @@ Gets the request URL.
 
 | Type | Description |
 | --- | --- |
-| string | Return the request URL. |
+| string | Returns the complete resource request URL string, including the protocol, domain name, path, and query parameters. |
 
 ## isMainFrame
 
@@ -116,13 +96,9 @@ Gets the request URL.
 isMainFrame(): boolean
 ```
 
-Check whether the request is for getting the main frame.
+Checks whether the resource request is for the main frame. Used to differentiate between main frame and subframe requests.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -134,7 +110,7 @@ Check whether the request is for getting the main frame.
 
 | Type | Description |
 | --- | --- |
-| boolean | Return { |
+| boolean | Whether the resource request is a main frame request. <br>The value **true** indicates that the resource request is a main frame request, and **false** indicates that the resource request is not a main frame request. |
 
 ## isRedirect
 
@@ -142,13 +118,9 @@ Check whether the request is for getting the main frame.
 isRedirect(): boolean
 ```
 
-Check whether the request redirects.
+Checks whether the resource request is redirected by the server. Used to inspect the request redirect chain and identify malicious redirects.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -160,7 +132,7 @@ Check whether the request redirects.
 
 | Type | Description |
 | --- | --- |
-| boolean | Return { |
+| boolean | Whether the resource request is redirected by the server. <br>The value **true** indicates that the resource request is redirected by the server, and **false** indicates that the resource request is not redirected by the server. |
 
 ## isRequestGesture
 
@@ -168,13 +140,9 @@ Check whether the request redirects.
 isRequestGesture(): boolean
 ```
 
-Check whether the request is associated with gesture.
+Checks whether the resource request is associated with a gesture (such as a tap).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -186,5 +154,5 @@ Check whether the request is associated with gesture.
 
 | Type | Description |
 | --- | --- |
-| boolean | Return { |
+| boolean | Whether the resource request is associated with a gesture (for example, a tap). <br>The value **true** indicates that the resource request is associated with a gesture, and **false** indicates the opposite. |
 

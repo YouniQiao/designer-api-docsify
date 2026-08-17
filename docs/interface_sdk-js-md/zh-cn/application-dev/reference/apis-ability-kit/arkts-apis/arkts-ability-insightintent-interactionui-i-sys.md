@@ -4,10 +4,6 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 <!--Device-insightIntent-interface InteractionUI--><!--Device-insightIntent-interface InteractionUI-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -25,10 +21,6 @@ interactionUIType: string
 **类型：** string
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

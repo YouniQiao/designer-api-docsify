@@ -10,10 +10,6 @@ function registerTraceListener(callback: TraceEventListener): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int--><!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int-End-->
@@ -32,7 +28,7 @@ function registerTraceListener(callback: TraceEventListener): int
 | --- | --- |
 | int | 回调注册状态。 >= 0：注册成功，返回用于注销的回调索引，索引范围[0, 9]； -1：已达到最大回调函数注册数量； -2：无效参数，参数非TraceEventListener类型。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 注册的回调函数定义

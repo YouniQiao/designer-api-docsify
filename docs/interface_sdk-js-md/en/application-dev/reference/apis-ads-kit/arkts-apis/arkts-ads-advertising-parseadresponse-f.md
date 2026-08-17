@@ -17,10 +17,6 @@ Parses and processes the body of an ad response (this API is only open to some p
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -42,7 +38,7 @@ Parses and processes the body of an ad response (this API is only open to some p
 | [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) | Failed to parse the ad response. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
-## Examples
+**Examples**
 
 For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
 

@@ -1,12 +1,8 @@
 # PrimitiveTopology
 
-How vertices in a sequence form triangles.
+Enumerates the vertex processing methods.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export enum PrimitiveTopology--><!--Device-unnamed-export enum PrimitiveTopology-End-->
 
@@ -18,13 +14,9 @@ How vertices in a sequence form triangles.
 TRIANGLE_LIST = 0
 ```
 
-The vertices form a set of independent triangle. Vertices (0, 1, 2), (3, 4, 5), ... define separate triangles.
+A set of vertices forming separate triangles without intersecting.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrimitiveTopology-TRIANGLE_LIST = 0--><!--Device-PrimitiveTopology-TRIANGLE_LIST = 0-End-->
 
@@ -36,13 +28,9 @@ The vertices form a set of independent triangle. Vertices (0, 1, 2), (3, 4, 5), 
 TRIANGLE_STRIP = 1
 ```
 
-The vertices form a triangle strip. Starting from the 3rd, each vertex defines a triangle with the previous two.
+Each vertex and the edge of the previous triangle create a new triangle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrimitiveTopology-TRIANGLE_STRIP = 1--><!--Device-PrimitiveTopology-TRIANGLE_STRIP = 1-End-->
 

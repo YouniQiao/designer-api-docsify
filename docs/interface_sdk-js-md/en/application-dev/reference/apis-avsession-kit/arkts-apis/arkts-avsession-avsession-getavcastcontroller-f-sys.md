@@ -16,10 +16,6 @@ Register a callback to retrieve an avsession cast controller. This function can 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-avSession-function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void--><!--Device-avSession-function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void-End-->
@@ -45,7 +41,7 @@ Register a callback to retrieve an avsession cast controller. This function can 
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -93,10 +89,6 @@ Register a callback to retrieve an avsession cast controller. This function can 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-avSession-function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController | undefined>): void--><!--Device-avSession-function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController | undefined>): void-End-->
@@ -132,10 +124,6 @@ Get the current session's remote controller client. If the avsession is not unde
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-avSession-function getAVCastController(sessionId: string): Promise<AVCastController>--><!--Device-avSession-function getAVCastController(sessionId: string): Promise<AVCastController>-End-->
@@ -166,7 +154,7 @@ Get the current session's remote controller client. If the avsession is not unde
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -211,10 +199,6 @@ function getAVCastController(sessionId: string): Promise<AVCastController | unde
 Get the current session's remote controller client. If the avsession is not under casting state, the controller will return undefined.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 

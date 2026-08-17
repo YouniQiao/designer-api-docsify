@@ -16,10 +16,6 @@ Updates the NTP time from the NTP server This API returns the result asynchronou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemDateTime-function updateNtpTime(): Promise<void>--><!--Device-systemDateTime-function updateNtpTime(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -39,7 +35,7 @@ Updates the NTP time from the NTP server This API returns the result asynchronou
 | [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

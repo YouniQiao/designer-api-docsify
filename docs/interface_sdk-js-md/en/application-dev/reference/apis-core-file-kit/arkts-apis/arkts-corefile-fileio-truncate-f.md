@@ -10,8 +10,6 @@ Truncates a file based on the file path. This API uses a promise to return the r
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
@@ -44,8 +42,6 @@ Truncates a file based on the file path. This API uses an asynchronous callback 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
@@ -71,8 +67,6 @@ declare function truncate(path: string, len: number, callback: AsyncCallback<voi
 Truncates a file based on the file path. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

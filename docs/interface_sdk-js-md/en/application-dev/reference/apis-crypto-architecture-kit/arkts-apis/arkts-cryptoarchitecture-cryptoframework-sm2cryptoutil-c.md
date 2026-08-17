@@ -4,10 +4,6 @@ Provides APIs for SM2 cryptographic operations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-class SM2CryptoUtil--><!--Device-cryptoFramework-class SM2CryptoUtil-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
@@ -27,10 +23,6 @@ static genCipherTextBySpec(spec: SM2CipherTextSpec, mode?: string): DataBlob
 Generates SM2 ciphertext in ASN.1 format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -59,7 +51,7 @@ Generates SM2 ciphertext in ASN.1 format.
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -90,10 +82,6 @@ static getCipherTextSpec(cipherText: DataBlob, mode?: string): SM2CipherTextSpec
 Obtains SM2 ciphertext parameters from the SM2 ciphertext in ASN.1 format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

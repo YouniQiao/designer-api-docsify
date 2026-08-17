@@ -16,10 +16,6 @@ Sets the number of FDs, number of threads, JS memory, or native memory limit of 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-hidebug-function setAppResourceLimit(type: string, value: int, enableDebugLog: boolean): void--><!--Device-hidebug-function setAppResourceLimit(type: string, value: int, enableDebugLog: boolean): void-End-->
@@ -41,7 +37,7 @@ Sets the number of FDs, number of threads, JS memory, or native memory limit of 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid argument, Possible causes: 1.The limit parameter is too small. 2.The parameter is not in the specified type. 3.The parameter type error or parameter order error. |
 | [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Set limit failed due to remote exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

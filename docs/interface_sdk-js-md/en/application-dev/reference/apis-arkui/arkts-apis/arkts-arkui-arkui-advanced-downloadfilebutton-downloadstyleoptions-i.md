@@ -4,10 +4,6 @@ Defines the DownloadFileButton style option.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface DownloadStyleOptions--><!--Device-unnamed-export interface DownloadStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,10 +31,6 @@ Font color.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-fontColor?: ResourceColor--><!--Device-DownloadStyleOptions-fontColor?: ResourceColor-End-->
@@ -56,10 +48,6 @@ Font family.
 **Type:** string \| Resource
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -79,10 +67,6 @@ Font size.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-fontSize?: Dimension--><!--Device-DownloadStyleOptions-fontSize?: Dimension-End-->
@@ -100,10 +84,6 @@ Font Style.
 **Type:** FontStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -123,10 +103,6 @@ Font weight.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-fontWeight?: number | FontWeight | string--><!--Device-DownloadStyleOptions-fontWeight?: number | FontWeight | string-End-->
@@ -144,10 +120,6 @@ Icon color.
 **Type:** ResourceColor
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -167,10 +139,6 @@ Icon size.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-iconSize?: Dimension--><!--Device-DownloadStyleOptions-iconSize?: Dimension-End-->
@@ -189,10 +157,6 @@ Layout direction.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadStyleOptions-layoutDirection?: DownloadLayoutDirection--><!--Device-DownloadStyleOptions-layoutDirection?: DownloadLayoutDirection-End-->
@@ -210,10 +174,6 @@ Text and Icon space.
 **Type:** Dimension
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

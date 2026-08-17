@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [MenuItemGroup](arkts-na-menuitemgroup-menuitemgroup-f.md#MenuItemGroup) | Defines MenuItem Component. |
+| [MenuItemGroup](arkts-na-menuitemgroup-menuitemgroup-f.md#menuitemgroup) | Defines MenuItem Component. |
 
 ### Interfaces
 

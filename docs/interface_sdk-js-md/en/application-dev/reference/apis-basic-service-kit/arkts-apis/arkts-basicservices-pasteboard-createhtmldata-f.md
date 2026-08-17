@@ -16,11 +16,9 @@ Creates a **PasteData** object of the HTML type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createData](arkts-basicservices-pasteboard-createdata-f.md#createData)(mimeType: string, value: ValueType)
+**Substitutes:** [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createHtmlData(htmlText: string): PasteData--><!--Device-pasteboard-function createHtmlData(htmlText: string): PasteData-End-->
 
@@ -38,7 +36,7 @@ Creates a **PasteData** object of the HTML type.
 | --- | --- |
 | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";

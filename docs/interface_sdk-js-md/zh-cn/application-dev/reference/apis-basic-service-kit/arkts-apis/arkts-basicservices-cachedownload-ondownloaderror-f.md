@@ -10,10 +10,6 @@ function onDownloadError(url: string, callback: Callback<DownloadError>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cacheDownload-function onDownloadError(url: string, callback: Callback<DownloadError>): void--><!--Device-cacheDownload-function onDownloadError(url: string, callback: Callback<DownloadError>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -23,9 +19,9 @@ function onDownloadError(url: string, callback: Callback<DownloadError>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 待注册回调的url，URL字符串的最大长度为8192字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | 是 | 回调函数，返回预下载的错误信息。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | 是 | 回调函数，返回预下载的错误信息。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

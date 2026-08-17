@@ -4,11 +4,9 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [Unicode](arkts-localization-i18n-unicode-c.md#Unicode)
+**替代接口：** [Unicode](arkts-localization-i18n-unicode-c.md#unicode)
 
 <!--Device-i18n-export class Character--><!--Device-i18n-export class Character-End-->
 
@@ -24,11 +22,9 @@ getType(ch: string): string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getType](arkts-localization-i18n-unicode-c.md#getType)
+**替代接口：** [getType](arkts-localization-i18n-unicode-c.md#gettype)
 
 <!--Device-Character-getType(ch: string): string--><!--Device-Character-getType(ch: string): string-End-->
 
@@ -56,11 +52,9 @@ isDigit(ch: string): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isDigit](arkts-localization-i18n-unicode-c.md#isDigit)
+**替代接口：** [isDigit](arkts-localization-i18n-unicode-c.md#isdigit)
 
 <!--Device-Character-isDigit(ch: string): boolean--><!--Device-Character-isDigit(ch: string): boolean-End-->
 
@@ -88,11 +82,9 @@ isIdeograph(ch: string): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isIdeograph](arkts-localization-i18n-unicode-c.md#isIdeograph)
+**替代接口：** [isIdeograph](arkts-localization-i18n-unicode-c.md#isideograph)
 
 <!--Device-Character-isIdeograph(ch: string): boolean--><!--Device-Character-isIdeograph(ch: string): boolean-End-->
 
@@ -120,11 +112,9 @@ isLetter(ch: string): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isLetter](arkts-localization-i18n-unicode-c.md#isLetter)
+**替代接口：** [isLetter](arkts-localization-i18n-unicode-c.md#isletter)
 
 <!--Device-Character-isLetter(ch: string): boolean--><!--Device-Character-isLetter(ch: string): boolean-End-->
 
@@ -152,11 +142,9 @@ isLowerCase(ch: string): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isLowerCase](arkts-localization-i18n-unicode-c.md#isLowerCase)
+**替代接口：** [isLowerCase](arkts-localization-i18n-unicode-c.md#islowercase)
 
 <!--Device-Character-isLowerCase(ch: string): boolean--><!--Device-Character-isLowerCase(ch: string): boolean-End-->
 
@@ -184,11 +172,9 @@ isRTL(ch: string): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isRTL](arkts-localization-i18n-unicode-c.md#isRTL)
+**替代接口：** [isRTL](arkts-localization-i18n-unicode-c.md#isrtl)
 
 <!--Device-Character-isRTL(ch: string): boolean--><!--Device-Character-isRTL(ch: string): boolean-End-->
 
@@ -216,11 +202,9 @@ isSpaceChar(ch: string): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isSpaceChar](arkts-localization-i18n-unicode-c.md#isSpaceChar)
+**替代接口：** [isSpaceChar](arkts-localization-i18n-unicode-c.md#isspacechar)
 
 <!--Device-Character-isSpaceChar(ch: string): boolean--><!--Device-Character-isSpaceChar(ch: string): boolean-End-->
 
@@ -248,11 +232,9 @@ isUpperCase(ch: string): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isUpperCase](arkts-localization-i18n-unicode-c.md#isUpperCase)
+**替代接口：** [isUpperCase](arkts-localization-i18n-unicode-c.md#isuppercase)
 
 <!--Device-Character-isUpperCase(ch: string): boolean--><!--Device-Character-isUpperCase(ch: string): boolean-End-->
 
@@ -280,11 +262,9 @@ isWhitespace(ch: string): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isWhitespace](arkts-localization-i18n-unicode-c.md#isWhitespace)
+**替代接口：** [isWhitespace](arkts-localization-i18n-unicode-c.md#iswhitespace)
 
 <!--Device-Character-isWhitespace(ch: string): boolean--><!--Device-Character-isWhitespace(ch: string): boolean-End-->
 

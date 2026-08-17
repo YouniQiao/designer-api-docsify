@@ -1,4 +1,4 @@
-# Modulo
+# Modulo(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)
 
 ```TypeScript
 type Modulo = int
@@ -7,10 +7,6 @@ type Modulo = int
 The type used to set modulo
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

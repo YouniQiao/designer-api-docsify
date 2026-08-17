@@ -10,10 +10,6 @@ Checks whether the SIM card in a specified slot is activated.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sim-function isSimActiveSync(slotId: int): boolean--><!--Device-sim-function isSimActiveSync(slotId: int): boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
@@ -30,7 +26,7 @@ Checks whether the SIM card in a specified slot is activated.
 | --- | --- |
 | boolean | Returns { |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

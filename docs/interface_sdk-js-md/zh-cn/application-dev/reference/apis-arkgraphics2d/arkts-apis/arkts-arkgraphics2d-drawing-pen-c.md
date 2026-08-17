@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-drawing-class Pen--><!--Device-drawing-class Pen-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -22,10 +18,6 @@ constructor()
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-constructor()--><!--Device-Pen-constructor()-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -39,10 +31,6 @@ constructor(pen: Pen)
 复制构造一个新的画笔对象。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-constructor(pen: Pen)--><!--Device-Pen-constructor(pen: Pen)-End-->
 
@@ -70,10 +58,6 @@ getAlpha(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-getAlpha(): int--><!--Device-Pen-getAlpha(): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -93,10 +77,6 @@ getCapStyle(): CapStyle
 获取画笔的线帽样式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-getCapStyle(): CapStyle--><!--Device-Pen-getCapStyle(): CapStyle-End-->
 
@@ -118,10 +98,6 @@ getColor(): common2D.Color
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-Pen-getColor(): common2D.Color--><!--Device-Pen-getColor(): common2D.Color-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -142,10 +118,6 @@ getColor(): common2D.Color | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-getColor(): common2D.Color | undefined--><!--Device-Pen-getColor(): common2D.Color | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -162,13 +134,9 @@ getColor(): common2D.Color | undefined
 getColor4f(): common2D.Color4f
 ```
 
-获取画笔的颜色，与[getColor](#getColor)的区别在于返回值类型为 [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md#Color4f)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
+获取画笔的颜色，与[getColor](#getcolor)的区别在于返回值类型为 [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md#color4f)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-Pen-getColor4f(): common2D.Color4f--><!--Device-Pen-getColor4f(): common2D.Color4f-End-->
 
@@ -186,13 +154,9 @@ getColor4f(): common2D.Color4f
 getColor4f(): common2D.Color4f | undefined
 ```
 
-获取画笔的颜色，与[getColor](#getColor)的区别在于返回值类型为 [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md#Color4f)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
+获取画笔的颜色，与[getColor](#getcolor)的区别在于返回值类型为 [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md#color4f)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-Pen-getColor4f(): common2D.Color4f | undefined--><!--Device-Pen-getColor4f(): common2D.Color4f | undefined-End-->
 
@@ -214,10 +178,6 @@ getColorFilter(): ColorFilter
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-Pen-getColorFilter(): ColorFilter--><!--Device-Pen-getColorFilter(): ColorFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -238,10 +198,6 @@ getColorFilter(): ColorFilter | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-getColorFilter(): ColorFilter | undefined--><!--Device-Pen-getColorFilter(): ColorFilter | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -261,10 +217,6 @@ getFillPath(src: Path, dst: Path): boolean
 获取使用画笔绘制的源路径轮廓，并用目标路径表示。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-getFillPath(src: Path, dst: Path): boolean--><!--Device-Pen-getFillPath(src: Path, dst: Path): boolean-End-->
 
@@ -299,10 +251,6 @@ getHexColor(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-getHexColor(): int--><!--Device-Pen-getHexColor(): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -322,10 +270,6 @@ getJoinStyle(): JoinStyle
 获取画笔绘制转角的样式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-getJoinStyle(): JoinStyle--><!--Device-Pen-getJoinStyle(): JoinStyle-End-->
 
@@ -347,10 +291,6 @@ getMiterLimit(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-getMiterLimit(): double--><!--Device-Pen-getMiterLimit(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -370,10 +310,6 @@ getWidth(): double
 获取画笔的线宽属性，线宽描述了画笔绘制图形轮廓的宽度。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-getWidth(): double--><!--Device-Pen-getWidth(): double-End-->
 
@@ -395,10 +331,6 @@ isAntiAlias(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-isAntiAlias(): boolean--><!--Device-Pen-isAntiAlias(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -419,10 +351,6 @@ reset(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-reset(): void--><!--Device-Pen-reset(): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -436,10 +364,6 @@ setAlpha(alpha: int): void
 设置画笔的透明度。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-setAlpha(alpha: int): void--><!--Device-Pen-setAlpha(alpha: int): void-End-->
 
@@ -467,10 +391,6 @@ setAntiAlias(aa: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-setAntiAlias(aa: boolean): void--><!--Device-Pen-setAntiAlias(aa: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -496,10 +416,6 @@ setBlendMode(mode: BlendMode): void
 设置画笔的混合模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-setBlendMode(mode: BlendMode): void--><!--Device-Pen-setBlendMode(mode: BlendMode): void-End-->
 
@@ -527,10 +443,6 @@ setCapStyle(style: CapStyle): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-setCapStyle(style: CapStyle): void--><!--Device-Pen-setCapStyle(style: CapStyle): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -557,10 +469,6 @@ setColor(color: common2D.Color): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-setColor(color: common2D.Color): void--><!--Device-Pen-setColor(color: common2D.Color): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -583,13 +491,9 @@ setColor(color: common2D.Color): void
 setColor(alpha: int, red: int, green: int, blue: int): void
 ```
 
-设置画笔的颜色。性能优于[setColor](#setColor)接口，推荐使用本接口。
+设置画笔的颜色。性能优于[setColor](#setcolor)接口，推荐使用本接口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-setColor(alpha: int, red: int, green: int, blue: int): void--><!--Device-Pen-setColor(alpha: int, red: int, green: int, blue: int): void-End-->
 
@@ -620,10 +524,6 @@ setColor(color: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-setColor(color: int): void--><!--Device-Pen-setColor(color: int): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -640,13 +540,9 @@ setColor(color: int): void
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-设置画笔的颜色以及标准色域，与[setColor](#setColor)的区别在于可以单独设置色域。
+设置画笔的颜色以及标准色域，与[setColor](#setcolor)的区别在于可以单独设置色域。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-Pen-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void--><!--Device-Pen-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void-End-->
 
@@ -668,10 +564,6 @@ setColorFilter(filter: ColorFilter | null): void
 给画笔添加额外的颜色滤波器。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-setColorFilter(filter: ColorFilter | null): void--><!--Device-Pen-setColorFilter(filter: ColorFilter | null): void-End-->
 
@@ -699,10 +591,6 @@ setDither(dither: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-setDither(dither: boolean): void--><!--Device-Pen-setDither(dither: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -728,10 +616,6 @@ setImageFilter(filter: ImageFilter | null): void
 设置画笔的图像滤波器。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-setImageFilter(filter: ImageFilter | null): void--><!--Device-Pen-setImageFilter(filter: ImageFilter | null): void-End-->
 
@@ -759,10 +643,6 @@ setJoinStyle(style: JoinStyle): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-setJoinStyle(style: JoinStyle): void--><!--Device-Pen-setJoinStyle(style: JoinStyle): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -789,10 +669,6 @@ setMaskFilter(filter: MaskFilter | null): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-setMaskFilter(filter: MaskFilter | null): void--><!--Device-Pen-setMaskFilter(filter: MaskFilter | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -815,13 +691,9 @@ setMaskFilter(filter: MaskFilter | null): void
 setMiterLimit(miter: double): void
 ```
 
-设置折线尖角长度与线宽的最大比值。当画笔绘制一条折线，并且[JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md#JoinStyle)为MITER_JOIN时，若尖角长度与线宽的比值大于该最大比值，则该转角使用BEVEL_JOIN 绘制。
+设置折线尖角长度与线宽的最大比值。当画笔绘制一条折线，并且[JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md#joinstyle)为MITER_JOIN时，若尖角长度与线宽的比值大于该最大比值，则该转角使用BEVEL_JOIN 绘制。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-setMiterLimit(miter: double): void--><!--Device-Pen-setMiterLimit(miter: double): void-End-->
 
@@ -849,10 +721,6 @@ setPathEffect(effect: PathEffect | null): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-setPathEffect(effect: PathEffect | null): void--><!--Device-Pen-setPathEffect(effect: PathEffect | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -878,10 +746,6 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 设置画笔着色器效果。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-setShaderEffect(shaderEffect: ShaderEffect | null): void--><!--Device-Pen-setShaderEffect(shaderEffect: ShaderEffect | null): void-End-->
 
@@ -909,10 +773,6 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Pen-setShadowLayer(shadowLayer: ShadowLayer | null): void--><!--Device-Pen-setShadowLayer(shadowLayer: ShadowLayer | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -938,10 +798,6 @@ setStrokeWidth(width: double): void
 设置画笔的线宽。0线宽被视作特殊的极细线宽，在绘制时始终会被绘制为1像素，不随画布的缩放而改变；负数线宽在实际绘制时会被视作0线宽。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Pen-setStrokeWidth(width: double): void--><!--Device-Pen-setStrokeWidth(width: double): void-End-->
 

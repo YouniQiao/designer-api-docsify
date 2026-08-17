@@ -4,6 +4,8 @@
 
 Defines the asymmetric cipher interfaces.
 
+**Include**: <CryptoArchitectureKit/crypto_asym_cipher.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

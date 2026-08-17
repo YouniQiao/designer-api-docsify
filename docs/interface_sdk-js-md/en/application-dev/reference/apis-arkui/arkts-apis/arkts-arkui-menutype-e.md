@@ -4,10 +4,6 @@ Enumerates the menu types.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum MenuType--><!--Device-unnamed-declare enum MenuType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ SELECTION_MENU = 0
 Text selection menu.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ PREVIEW_MENU = 1
 Preview menu.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

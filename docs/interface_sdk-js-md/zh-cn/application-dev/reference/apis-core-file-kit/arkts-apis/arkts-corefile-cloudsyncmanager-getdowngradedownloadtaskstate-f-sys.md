@@ -10,10 +10,6 @@ function getDowngradeDownloadTaskState(bundleNames: Array<string>): Promise<Arra
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -45,7 +41,7 @@ function getDowngradeDownloadTaskState(bundleNames: Array<string>): Promise<Arra
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13900010 | Try again. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -6,10 +6,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class UIExtensionComponentAttribute--><!--Device-unnamed-declare class UIExtensionComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

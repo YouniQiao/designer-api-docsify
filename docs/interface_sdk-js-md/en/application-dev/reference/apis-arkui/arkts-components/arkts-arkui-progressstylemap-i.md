@@ -4,10 +4,6 @@ Defines the mapping between progress indicators and styles.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ProgressStyleMap--><!--Device-unnamed-declare interface ProgressStyleMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Progress bar style corresponding to the capsule progress bar.
 **Type:** [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ Progress bar style corresponding to a round progress bar.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -71,10 +59,6 @@ Progress bar style corresponding to the linear progress bar.
 **Type:** [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,10 +80,6 @@ Progress bar style corresponding to the ring unscaled progress bar.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -119,10 +99,6 @@ Progress bar style corresponding to the ring scaled progress bar.
 **Type:** [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

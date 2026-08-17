@@ -4,10 +4,6 @@ Defines the CSR attribute representation. <br>CSR attribute field. Currently, on
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface CsrAttribute--><!--Device-cert-interface CsrAttribute-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -30,10 +26,6 @@ Attribute type defined in PKCS #9.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CsrAttribute-type: string--><!--Device-CsrAttribute-type: string-End-->
@@ -51,10 +43,6 @@ Attribute value.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -16,10 +16,6 @@ Subscribes to key press events. This API uses an asynchronous callback to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputConsumer-function onKeyPressed(options: KeyPressedConfig, callback: Callback<KeyEvent>): void--><!--Device-inputConsumer-function onKeyPressed(options: KeyPressedConfig, callback: Callback<KeyEvent>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer

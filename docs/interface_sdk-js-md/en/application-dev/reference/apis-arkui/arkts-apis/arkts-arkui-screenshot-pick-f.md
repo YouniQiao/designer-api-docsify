@@ -16,10 +16,6 @@ Obtains this screenshot. Currently, only the screenshot of the display whose ID 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-screenshot-function pick(): Promise<PickInfo>--><!--Device-screenshot-function pick(): Promise<PickInfo>-End-->
@@ -39,7 +35,7 @@ Obtains this screenshot. Currently, only the screenshot of the display whose ID 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported on this device. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

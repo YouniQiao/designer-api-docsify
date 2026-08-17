@@ -16,10 +16,6 @@ Checks whether the **Allow access to notifications on this device** switch is to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
 
 <!--Device-notificationExtensionSubscription-function isUserGranted(): Promise<boolean>--><!--Device-notificationExtensionSubscription-function isUserGranted(): Promise<boolean>-End-->
@@ -40,7 +36,7 @@ Checks whether the **Allow access to notifications on this device** switch is to
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 notificationExtensionSubscription.isUserGranted().then((isOpen: boolean) => {

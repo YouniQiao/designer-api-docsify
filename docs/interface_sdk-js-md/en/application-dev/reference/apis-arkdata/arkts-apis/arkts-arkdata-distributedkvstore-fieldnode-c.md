@@ -4,10 +4,6 @@ Represents a **Schema** instance, which provides the methods for defining the va
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedKVStore-class FieldNode--><!--Device-distributedKVStore-class FieldNode-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
@@ -27,10 +23,6 @@ appendChild(child: FieldNode): boolean
 Appends a child node to this **FieldNode**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +48,7 @@ Appends a child node to this **FieldNode**.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -87,10 +79,6 @@ Defines a constructor used to create a **FieldNode** instance with a string fiel
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FieldNode-constructor(name: string)--><!--Device-FieldNode-constructor(name: string)-End-->
@@ -120,10 +108,6 @@ Indicates the default value of field node.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
 

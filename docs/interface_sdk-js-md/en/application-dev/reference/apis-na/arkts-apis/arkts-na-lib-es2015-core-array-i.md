@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Array--><!--Device-unnamed-interface Array-End-->
 
 ## copyWithin
@@ -17,10 +13,6 @@ copyWithin(target: number, start: number, end?: number): this
 Returns the this object after copying a section of the array identified by start and end to the same array starting at position target
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Array-copyWithin(target: number, start: number, end?: number): this--><!--Device-Array-copyWithin(target: number, start: number, end?: number): this-End-->
 
@@ -48,10 +40,6 @@ Changes all array elements from `start` to `end` index to a static `value` and r
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Array-fill(value: T, start?: number, end?: number): this--><!--Device-Array-fill(value: T, start?: number, end?: number): this-End-->
 
 **Parameters:**
@@ -78,10 +66,6 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Array-find<S extends T>(predicate: (this: void, value: T, index: number, obj: T[]) => value is S, thisArg?: any): S | undefined--><!--Device-Array-find<S extends T>(predicate: (this: void, value: T, index: number, obj: T[]) => value is S, thisArg?: any): S | undefined-End-->
 
 **Parameters:**
@@ -104,10 +88,6 @@ find(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): 
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Array-find(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): T | undefined--><!--Device-Array-find(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): T | undefined-End-->
 
@@ -133,10 +113,6 @@ findIndex(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: a
 Returns the index of the first element in the array where predicate is true, and -1 otherwise.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Array-findIndex(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): number--><!--Device-Array-findIndex(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): number-End-->
 

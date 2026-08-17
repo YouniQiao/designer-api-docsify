@@ -1,14 +1,10 @@
 # ColorReservation (System API)
 
-ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery-(System-API)) Provides API for obtaining and setting a color reservation type.
+ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#colorreservationquery-system-api) Provides API for obtaining and setting a color reservation type.
 
-**Inheritance/Implementation:** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#ColorReservationQuery-(System-API))
+**Inheritance/Implementation:** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#colorreservationquery-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface ColorReservation--><!--Device-camera-interface ColorReservation-End-->
 
@@ -32,10 +28,6 @@ Obtains the color reservation type in use.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorReservation-getColorReservation(): ColorReservationType--><!--Device-ColorReservation-getColorReservation(): ColorReservationType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -55,7 +47,7 @@ Obtains the color reservation type in use.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -79,13 +71,9 @@ function getColorReservation(session: camera.VideoSessionForSys): camera.ColorRe
 setColorReservation(type: ColorReservationType): void
 ```
 
-Sets a color reservation type. Before the setting, call [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getSupportedColorReservationTypes) to obtain the supported color reservation types.
+Sets a color reservation type. Before the setting, call [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes) to obtain the supported color reservation types.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ColorReservation-setColorReservation(type: ColorReservationType): void--><!--Device-ColorReservation-setColorReservation(type: ColorReservationType): void-End-->
 
@@ -97,7 +85,7 @@ Sets a color reservation type. Before the setting, call [getSupportedColorReserv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md) | Yes | Color reservation type, which is obtained by calling [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getSupportedColorReservationTypes). |
+| type | [ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md) | Yes | Color reservation type, which is obtained by calling [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes). |
 
 **Error codes:**
 
@@ -109,7 +97,7 @@ Sets a color reservation type. Before the setting, call [getSupportedColorReserv
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

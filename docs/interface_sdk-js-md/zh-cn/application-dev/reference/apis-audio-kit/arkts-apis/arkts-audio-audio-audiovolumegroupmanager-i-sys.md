@@ -1,12 +1,8 @@
 # AudioVolumeGroupManager
 
-管理音频组音量。 在使用AudioVolumeGroupManager的接口之前，需先通过 [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getVolumeGroupManager) 获取AudioVolumeGroupManager实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
+管理音频组音量。 在使用AudioVolumeGroupManager的接口之前，需先通过 [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) 获取AudioVolumeGroupManager实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
 
@@ -19,10 +15,6 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 ```
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -38,7 +30,7 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio volume type. |
 | adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -49,7 +41,7 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,10 +62,6 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 ```
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -105,7 +93,7 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 | [201](../../errorcode-universal.md#201-权限校验失败) | @throws { BusinessError } 201 - Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by promise. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -125,10 +113,6 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void-End-->
@@ -142,7 +126,7 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | 是 | Volume adjustment type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -153,7 +137,7 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -175,10 +159,6 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 ```
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -209,7 +189,7 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | @throws { BusinessError } 201 - Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by promise. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -230,10 +210,6 @@ getActiveVolumeTypeSync(uid: int): AudioVolumeType
 Obtains the active volume type in the calling moment. This method returns in sync mode.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-getActiveVolumeTypeSync(uid: int): AudioVolumeType--><!--Device-AudioVolumeGroupManager-getActiveVolumeTypeSync(uid: int): AudioVolumeType-End-->
 
@@ -261,7 +237,7 @@ Obtains the active volume type in the calling moment. This method returns in syn
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let uid = 20010041; // 应用ID。
@@ -276,10 +252,6 @@ isPersistentMicMute(): boolean
 ```
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MICROPHONE_CONTROL
 
@@ -302,7 +274,7 @@ isPersistentMicMute(): boolean
 | [201](../../errorcode-universal.md#201-权限校验失败) | @throws { BusinessError } 201 - Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let value: boolean = audioVolumeGroupManager.isPersistentMicMute();
@@ -315,10 +287,6 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 ```
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -334,9 +302,9 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
 | mute | boolean | 是 | Mute status to set. The value true means to mute the stream, and false means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -357,10 +325,6 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 ```
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -385,7 +349,7 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; |  |
 
-## 示例
+**示例**
 
 ```TypeScript
 audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
@@ -400,10 +364,6 @@ setMicMute(mute: boolean): Promise<void>
 ```
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
@@ -434,7 +394,7 @@ setMicMute(mute: boolean): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | @throws { BusinessError } 201 - Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 audioVolumeGroupManager.setMicMute(true).then(() => {
@@ -449,10 +409,6 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 ```
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MICROPHONE_CONTROL
 
@@ -484,7 +440,7 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | @throws { BusinessError } 201 - Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 audioVolumeGroupManager.setMicMutePersistent(true, audio.PolicyType.PRIVACY).then(() => {
@@ -500,10 +456,6 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void-End-->
@@ -517,9 +469,9 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 | Ringer mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -540,10 +492,6 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 ```
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -567,7 +515,7 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; |  |
 
-## 示例
+**示例**
 
 ```TypeScript
 audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
@@ -585,10 +533,6 @@ Sets the volume for a stream. This method uses an asynchronous callback to retur
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int, callback: AsyncCallback<void>): void-End-->
@@ -603,9 +547,9 @@ Sets the volume for a stream. This method uses an asynchronous callback to retur
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
 | volume | int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -629,10 +573,6 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int): Promise<void>--><!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int): Promise<void>-End-->
@@ -654,7 +594,7 @@ Sets the volume for a stream. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## 示例
+**示例**
 
 ```TypeScript
 audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
@@ -672,10 +612,6 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-setVolumeWithFlag(volumeType: AudioVolumeType, volume: int, flags: int): Promise<void>--><!--Device-AudioVolumeGroupManager-setVolumeWithFlag(volumeType: AudioVolumeType, volume: int, flags: int): Promise<void>-End-->
@@ -690,7 +626,7 @@ Sets the volume for a stream. This method uses a promise to return the result.
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | Audio stream type. |
 | volume | int | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| flags | int | 是 | volume flags used to enable different operations, can be union of [VolumeFlag](arkts-audio-audio-volumeflag-e-sys.md#VolumeFlag（系统接口）) |
+| flags | int | 是 | volume flags used to enable different operations, can be union of [VolumeFlag](arkts-audio-audio-volumeflag-e-sys.md#volumeflag系统接口) |
 
 **返回值：**
 
@@ -705,7 +641,7 @@ Sets the volume for a stream. This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 audioVolumeGroupManager.setVolumeWithFlag(audio.AudioVolumeType.MEDIA, 10, 1).then(() => {

@@ -4,10 +4,6 @@ DNG metadata.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-image-class DngMetadata--><!--Device-image-class DngMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ The active area.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly activeArea?: int[]--><!--Device-DngMetadata-readonly activeArea?: int[]-End-->
@@ -51,10 +43,6 @@ The analog balance.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ The anti-alias strength.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly antiAliasStrength?: double--><!--Device-DngMetadata-readonly antiAliasStrength?: double-End-->
@@ -95,10 +79,6 @@ An ICC profile.
 **Type:** ArrayBuffer
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ The as-shot neutral.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly asShotNeutral?: double[]--><!--Device-DngMetadata-readonly asShotNeutral?: double[]-End-->
@@ -139,10 +115,6 @@ The as-shot pre-profile matrix.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +134,6 @@ The as-shot camera profile.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly asShotProfileName?: string--><!--Device-DngMetadata-readonly asShotProfileName?: string-End-->
@@ -183,10 +151,6 @@ The as-shot white, encoded as x-y chromaticity coordinates.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,10 +170,6 @@ The baseline exposure.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly baselineExposure?: double--><!--Device-DngMetadata-readonly baselineExposure?: double-End-->
@@ -227,10 +187,6 @@ The baseline exposure offset.
 **Type:** double
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,10 +206,6 @@ The baseline noise.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly baselineNoise?: double--><!--Device-DngMetadata-readonly baselineNoise?: double-End-->
@@ -271,10 +223,6 @@ The baseline sharpness.
 **Type:** double
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -294,10 +242,6 @@ The Bayer green split.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly bayerGreenSplit?: int--><!--Device-DngMetadata-readonly bayerGreenSplit?: int-End-->
@@ -315,10 +259,6 @@ The best quality scale.
 **Type:** double
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,10 +278,6 @@ The zero-light encoding level.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly blackLevel?: double[]--><!--Device-DngMetadata-readonly blackLevel?: double[]-End-->
@@ -359,10 +295,6 @@ The black level delta H.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -382,10 +314,6 @@ The black level delta V.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly blackLevelDeltaV?: double[]--><!--Device-DngMetadata-readonly blackLevelDeltaV?: double[]-End-->
@@ -403,10 +331,6 @@ The black level repeat dimension.
 **Type:** int[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -426,10 +350,6 @@ The first calibration illuminant.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly calibrationIlluminant1?: int--><!--Device-DngMetadata-readonly calibrationIlluminant1?: int-End-->
@@ -447,10 +367,6 @@ The second calibration illuminant.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -470,10 +386,6 @@ A calibration matrix under the first calibration illuminant.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly cameraCalibration1?: double[]--><!--Device-DngMetadata-readonly cameraCalibration1?: double[]-End-->
@@ -491,10 +403,6 @@ A calibration matrix under the second calibration illuminant.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -514,10 +422,6 @@ The camera calibration signature.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly cameraCalibrationSignature?: string--><!--Device-DngMetadata-readonly cameraCalibrationSignature?: string-End-->
@@ -535,10 +439,6 @@ The serial number of the camera.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -558,10 +458,6 @@ The CFA (color filter array) layout.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly cfaLayout?: int--><!--Device-DngMetadata-readonly cfaLayout?: int-End-->
@@ -579,10 +475,6 @@ The CFA (color filter array) plane color.
 **Type:** int[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -602,10 +494,6 @@ The chroma blur radius.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly chromaBlurRadius?: double--><!--Device-DngMetadata-readonly chromaBlurRadius?: double-End-->
@@ -623,10 +511,6 @@ A transformation matrix under the first calibration illuminant.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -646,10 +530,6 @@ A transformation matrix under the second calibration illuminant.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly colorMatrix2?: double[]--><!--Device-DngMetadata-readonly colorMatrix2?: double[]-End-->
@@ -667,10 +547,6 @@ The colorimetric reference.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -690,10 +566,6 @@ The current ICC profile.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly currentICCProfile?: ArrayBuffer--><!--Device-DngMetadata-readonly currentICCProfile?: ArrayBuffer-End-->
@@ -711,10 +583,6 @@ The current pre-profile matrix.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -734,10 +602,6 @@ The default black render.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly defaultBlackRender?: int--><!--Device-DngMetadata-readonly defaultBlackRender?: int-End-->
@@ -755,10 +619,6 @@ The default crop origin.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -778,10 +638,6 @@ The default crop size.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly defaultCropSize?: int[]--><!--Device-DngMetadata-readonly defaultCropSize?: int[]-End-->
@@ -799,10 +655,6 @@ The default scale.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -822,10 +674,6 @@ The default user crop.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly defaultUserCrop?: int[]--><!--Device-DngMetadata-readonly defaultUserCrop?: int[]-End-->
@@ -843,10 +691,6 @@ The DNG backward compatibility version.
 **Type:** int[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -866,10 +710,6 @@ The private data.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly dngPrivateData?: ArrayBuffer--><!--Device-DngMetadata-readonly dngPrivateData?: ArrayBuffer-End-->
@@ -887,10 +727,6 @@ The DNG version.
 **Type:** int[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -910,10 +746,6 @@ The extra camera profiles.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly extraCameraProfiles?: int[]--><!--Device-DngMetadata-readonly extraCameraProfiles?: int[]-End-->
@@ -931,10 +763,6 @@ The first forward matrix.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -954,10 +782,6 @@ The second forward matrix.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly forwardMatrix2?: double[]--><!--Device-DngMetadata-readonly forwardMatrix2?: double[]-End-->
@@ -975,10 +799,6 @@ Information about the lens.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -998,10 +818,6 @@ The linear response limit.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly linearResponseLimit?: double--><!--Device-DngMetadata-readonly linearResponseLimit?: double-End-->
@@ -1019,10 +835,6 @@ The linearization table.
 **Type:** int[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1042,10 +854,6 @@ A localized camera model.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly localizedCameraModel?: string--><!--Device-DngMetadata-readonly localizedCameraModel?: string-End-->
@@ -1063,10 +871,6 @@ Whether the EXIF MakerNote tag is safe.
 **Type:** boolean
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1086,10 +890,6 @@ The masked areas.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly maskedAreas?: int[]--><!--Device-DngMetadata-readonly maskedAreas?: int[]-End-->
@@ -1107,10 +907,6 @@ A modified MD5 digest of the raw image data.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1130,10 +926,6 @@ The noise profile.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly noiseProfile?: double[]--><!--Device-DngMetadata-readonly noiseProfile?: double[]-End-->
@@ -1151,10 +943,6 @@ The applied noise reduction.
 **Type:** double
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1174,10 +962,6 @@ The first opcode list.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly opcodeList1?: ArrayBuffer--><!--Device-DngMetadata-readonly opcodeList1?: ArrayBuffer-End-->
@@ -1195,10 +979,6 @@ The second opcode list.
 **Type:** ArrayBuffer
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1218,10 +998,6 @@ The third opcode list.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly opcodeList3?: ArrayBuffer--><!--Device-DngMetadata-readonly opcodeList3?: ArrayBuffer-End-->
@@ -1239,10 +1015,6 @@ The original best quality final size.
 **Type:** int[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1262,10 +1034,6 @@ The original default crop size.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly originalDefaultCropSize?: double[]--><!--Device-DngMetadata-readonly originalDefaultCropSize?: double[]-End-->
@@ -1283,10 +1051,6 @@ The original default final size.
 **Type:** int[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1306,10 +1070,6 @@ The original raw file data.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly originalRawFileData?: ArrayBuffer--><!--Device-DngMetadata-readonly originalRawFileData?: ArrayBuffer-End-->
@@ -1327,10 +1087,6 @@ An MD5 digest of the data stored in the OriginalRawFileData.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1350,10 +1106,6 @@ The original raw file name.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly originalRawFileName?: string--><!--Device-DngMetadata-readonly originalRawFileName?: string-End-->
@@ -1371,10 +1123,6 @@ The preview application name.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1394,10 +1142,6 @@ The preview application version.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly previewApplicationVersion?: string--><!--Device-DngMetadata-readonly previewApplicationVersion?: string-End-->
@@ -1415,10 +1159,6 @@ The preview color space.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1438,10 +1178,6 @@ The preview date time.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly previewDateTime?: string--><!--Device-DngMetadata-readonly previewDateTime?: string-End-->
@@ -1459,10 +1195,6 @@ The preview settings digest.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1482,10 +1214,6 @@ The preview settings name.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly previewSettingsName?: string--><!--Device-DngMetadata-readonly previewSettingsName?: string-End-->
@@ -1503,10 +1231,6 @@ The profile calibration signature.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1526,10 +1250,6 @@ The profile copyright.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly profileCopyright?: string--><!--Device-DngMetadata-readonly profileCopyright?: string-End-->
@@ -1547,10 +1267,6 @@ The profile embed policy.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1570,10 +1286,6 @@ The first hue/saturation mapping table data.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly profileHueSatMapData1?: double[]--><!--Device-DngMetadata-readonly profileHueSatMapData1?: double[]-End-->
@@ -1591,10 +1303,6 @@ The second hue/saturation mapping table data.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1614,10 +1322,6 @@ The profile hue/saturation map dims.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly profileHueSatMapDims?: int[]--><!--Device-DngMetadata-readonly profileHueSatMapDims?: int[]-End-->
@@ -1635,10 +1339,6 @@ The profile hue/saturation map encoding.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1658,10 +1358,6 @@ The profile lookup table data.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly profileLookTableData?: double[]--><!--Device-DngMetadata-readonly profileLookTableData?: double[]-End-->
@@ -1679,10 +1375,6 @@ The profile lookup table dimensions.
 **Type:** int[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1702,10 +1394,6 @@ The profile lookup table encoding.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly profileLookTableEncoding?: int--><!--Device-DngMetadata-readonly profileLookTableEncoding?: int-End-->
@@ -1723,10 +1411,6 @@ The profile name.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1746,10 +1430,6 @@ The profile tone curve.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly profileToneCurve?: double[]--><!--Device-DngMetadata-readonly profileToneCurve?: double[]-End-->
@@ -1767,10 +1447,6 @@ The unique identifier of raw image data.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1790,10 +1466,6 @@ An MD5 digest of the raw image data.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly rawImageDigest?: string--><!--Device-DngMetadata-readonly rawImageDigest?: string-End-->
@@ -1811,10 +1483,6 @@ The gain between the main raw IFD and the preview IFD.
 **Type:** double
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1834,10 +1502,6 @@ A dimensionality reduction matrix under the first calibration illuminant.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly reductionMatrix1?: double[]--><!--Device-DngMetadata-readonly reductionMatrix1?: double[]-End-->
@@ -1855,10 +1519,6 @@ A dimensionality reduction matrix under the second calibration illuminant.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1878,10 +1538,6 @@ The row interleave factor.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly rowInterleaveFactor?: int--><!--Device-DngMetadata-readonly rowInterleaveFactor?: int-End-->
@@ -1899,10 +1555,6 @@ The shadow scale.
 **Type:** double
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1922,10 +1574,6 @@ The sub‑tile block size.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly subTileBlockSize?: int[]--><!--Device-DngMetadata-readonly subTileBlockSize?: int[]-End-->
@@ -1944,10 +1592,6 @@ A unique camera model.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly uniqueCameraModel?: string--><!--Device-DngMetadata-readonly uniqueCameraModel?: string-End-->
@@ -1965,10 +1609,6 @@ The white level.
 **Type:** double[]
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

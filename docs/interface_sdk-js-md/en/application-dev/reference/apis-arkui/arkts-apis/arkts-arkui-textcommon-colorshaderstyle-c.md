@@ -2,13 +2,11 @@
 
 Defines a shader with single color.
 
-**Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#ShaderStyle)
+**Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#shaderstyle)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 <!--Device-unnamed-export declare class ColorShaderStyle--><!--Device-unnamed-export declare class ColorShaderStyle-End-->
 
@@ -24,9 +22,7 @@ The constructor.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,9 +48,7 @@ The color of the shader.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Deletes the ID from the end of a given URI.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataUriUtils-function deleteId(uri: string): string--><!--Device-dataUriUtils-function deleteId(uri: string): string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -42,7 +38,7 @@ Deletes the ID from the end of a given URI.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataUriUtils } from '@kit.AbilityKit';

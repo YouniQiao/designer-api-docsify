@@ -4,13 +4,9 @@
 type OnSslErrorEventCallback = (sslErrorEvent: SslErrorEvent) => void
 ```
 
-The callback of ssl error event.
+Callback invoked when an SSL error occurs during resource loading. Returns detailed information about the SSL error.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -22,5 +18,5 @@ The callback of ssl error event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sslErrorEvent | [SslErrorEvent](arkts-arkweb-sslerrorevent-i.md) | Yes | callback information of onSslErrorEvent. |
+| sslErrorEvent | [SslErrorEvent](arkts-arkweb-sslerrorevent-i.md) | Yes | Detailed information passed when an SSL error occurs during resource loading. |
 

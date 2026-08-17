@@ -2,13 +2,11 @@
 
 Represents a dynamic synchronization scene of Swiper.
 
-**Inheritance/Implementation:** SwiperDynamicSyncScene extends [DynamicSyncScene](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md#DynamicSyncScene)
+**Inheritance/Implementation:** SwiperDynamicSyncScene extends [DynamicSyncScene](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md#dynamicsyncscene)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class SwiperDynamicSyncScene--><!--Device-unnamed-export declare class SwiperDynamicSyncScene-End-->
 
@@ -26,9 +24,7 @@ Type of the SwiperDynamicSyncSceneType.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

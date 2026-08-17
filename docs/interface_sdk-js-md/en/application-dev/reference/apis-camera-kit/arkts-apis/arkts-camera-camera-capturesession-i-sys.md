@@ -1,14 +1,12 @@
 # CaptureSession
 
-**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera and requests the camera to complete shooting or video recording.
+**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)
+**Substitutes:** [VideoSession](arkts-camera-camera-videosession-i.md#videosession)
 
 <!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
@@ -30,11 +28,9 @@ Obtains the level of the beauty type in use.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getBeauty](arkts-camera-camera-beauty-i-sys.md#getBeauty)
+**Substitutes:** [getBeauty](arkts-camera-camera-beauty-i-sys.md#getbeauty)
 
 <!--Device-CaptureSession-getBeauty(type: BeautyType): number--><!--Device-CaptureSession-getBeauty(type: BeautyType): number-End-->
 
@@ -60,7 +56,7 @@ Obtains the level of the beauty type in use.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function getBeauty(captureSession: camera.CaptureSession): number {
@@ -89,11 +85,9 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange)
+**Substitutes:** [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange)
 
 <!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>--><!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>-End-->
 
@@ -119,7 +113,7 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function getSupportedBeautyRange(captureSession: camera.CaptureSession): Array<number> {
@@ -142,11 +136,9 @@ Obtains the supported beauty types.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyTypes)
+**Substitutes:** [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes)
 
 <!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>--><!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>-End-->
 
@@ -166,7 +158,7 @@ Obtains the supported beauty types.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<camera.BeautyType> {
@@ -181,15 +173,13 @@ function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<c
 setBeauty(type: BeautyType, value: number): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType-(System-API)) obtained through [getSupportedBeautyTypes](#getSupportedBeautyTypes) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#beautytype-system-api) obtained through [getSupportedBeautyTypes](#getsupportedbeautytypes) are disabled.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setBeauty](arkts-camera-camera-beauty-i-sys.md#setBeauty)
+**Substitutes:** [setBeauty](arkts-camera-camera-beauty-i-sys.md#setbeauty)
 
 <!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void--><!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void-End-->
 
@@ -202,7 +192,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | Yes | Beauty type. |
-| value | number | Yes | Beauty level, which is obtained through [getSupportedBeautyRange](#getSupportedBeautyRange). |
+| value | number | Yes | Beauty level, which is obtained through [getSupportedBeautyRange](#getsupportedbeautyrange). |
 
 **Error codes:**
 
@@ -210,7 +200,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function setBeauty(captureSession: camera.CaptureSession): void {

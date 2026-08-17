@@ -16,8 +16,6 @@ Lists the files and directories in the **Recently deleted** list.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -44,7 +42,7 @@ Lists the files and directories in the **Recently deleted** list.
 | 13900002 | No such file or directory |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let fileinfos = trash.listFile();

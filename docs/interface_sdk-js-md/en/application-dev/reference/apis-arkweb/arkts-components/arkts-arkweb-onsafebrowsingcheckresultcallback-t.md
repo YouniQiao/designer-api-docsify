@@ -4,13 +4,9 @@
 type OnSafeBrowsingCheckResultCallback = (threatType: ThreatType) => void
 ```
 
-The callback of safe browsing check.
+Defines a callback invoked by a website safe browsing check.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -22,5 +18,5 @@ The callback of safe browsing check.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| threatType | [ThreatType](arkts-arkweb-threattype-e.md) | Yes | callback information of onSafeBrowsingCheckResult. |
+| threatType | [ThreatType](arkts-arkweb-threattype-e.md) | Yes | Website threat type. |
 

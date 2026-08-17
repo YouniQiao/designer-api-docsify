@@ -16,10 +16,6 @@ Connects to a remote device over the socket.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 <!--Device-socket-function sppConnect(deviceId: string, options: SppOptions, callback: AsyncCallback<int>): void--><!--Device-socket-function sppConnect(deviceId: string, options: SppOptions, callback: AsyncCallback<int>): void-End-->
@@ -31,7 +27,7 @@ Connects to a remote device over the socket.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| options | [SppOptions](arkts-connectivity-socket-sppoptions-i.md) | Yes | Indicates the connect parameters [SppOptions](arkts-connectivity-socket-sppoptions-i.md#SppOptions). |
+| options | [SppOptions](arkts-connectivity-socket-sppoptions-i.md) | Yes | Indicates the connect parameters [SppOptions](arkts-connectivity-socket-sppoptions-i.md#sppoptions). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return a client socket ID. |
 
 **Error codes:**
@@ -46,7 +42,7 @@ Connects to a remote device over the socket.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

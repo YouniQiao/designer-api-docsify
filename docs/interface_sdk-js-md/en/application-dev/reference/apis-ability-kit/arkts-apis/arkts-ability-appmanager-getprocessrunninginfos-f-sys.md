@@ -16,11 +16,9 @@ Obtains information about the running processes of the current application. This
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.GET_RUNNING_INFO
@@ -54,11 +52,9 @@ Obtains information about the running processes of the current application. This
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.GET_RUNNING_INFO

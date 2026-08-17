@@ -16,10 +16,6 @@ Enters kiosk mode. This API uses a promise to return the result. This API can be
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-kioskManager-function enterKioskMode(context: UIAbilityContext): Promise<void>--><!--Device-kioskManager-function enterKioskMode(context: UIAbilityContext): Promise<void>-End-->
@@ -48,7 +44,7 @@ Enters kiosk mode. This API uses a promise to return the result. This API can be
 | [16000110](../errorcode-ability.md#16000110-application-is-not-in-the-kiosk-mode-list) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
 | [16000111](../errorcode-ability.md#16000111-application-is-already-in-kiosk-mode) | The system is already in Kiosk mode and cannot enter Kiosk mode again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common, kioskManager } from '@kit.AbilityKit';

@@ -16,10 +16,6 @@ Sets a trace ID. This API returns the result synchronously. Sets the given HiTra
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiTraceChain-function setId(id: HiTraceId): void--><!--Device-hiTraceChain-function setId(id: HiTraceId): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -30,7 +26,7 @@ Sets a trace ID. This API returns the result synchronously. Sets the given HiTra
 | --- | --- | --- | --- |
 | id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Obtain the trace ID of the current call chain.

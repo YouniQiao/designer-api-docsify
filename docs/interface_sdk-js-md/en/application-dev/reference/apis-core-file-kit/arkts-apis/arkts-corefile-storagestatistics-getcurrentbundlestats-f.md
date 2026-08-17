@@ -16,10 +16,6 @@ Obtains the storage space (in bytes) of this application. This API uses an async
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void--><!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
@@ -38,7 +34,7 @@ Obtains the storage space (in bytes) of this application. This API uses an async
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,10 +59,6 @@ Obtains the storage space (in bytes) of this application. This API uses a promis
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>--><!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
@@ -85,7 +77,7 @@ Obtains the storage space (in bytes) of this application. This API uses a promis
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

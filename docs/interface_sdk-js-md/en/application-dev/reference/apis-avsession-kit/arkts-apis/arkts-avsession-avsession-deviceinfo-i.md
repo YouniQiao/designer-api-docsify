@@ -4,10 +4,6 @@ Device Information Definition
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface DeviceInfo--><!--Device-avSession-interface DeviceInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -30,10 +26,6 @@ Audio capabilities supported by the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceInfo-audioCapabilities?: AudioCapabilities--><!--Device-DeviceInfo-audioCapabilities?: AudioCapabilities-End-->
@@ -46,15 +38,11 @@ Audio capabilities supported by the device.
 castCategory: AVCastCategory
 ```
 
-The playback type supported by the device. See [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md#AVCastCategory)
+The playback type supported by the device. See [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md#avcastcategory)
 
 **Type:** [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Audio device id.The length of the audioDeviceId array is greater than 1 if outpu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceInfo-deviceId: string--><!--Device-DeviceInfo-deviceId: string-End-->
@@ -95,10 +79,6 @@ Device name. The length of the deviceName array is greater than 1 if output to m
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,10 +98,6 @@ device type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceInfo-deviceType: DeviceType--><!--Device-DeviceInfo-deviceType: DeviceType-End-->
@@ -139,10 +115,6 @@ Device manufacturer.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -162,10 +134,6 @@ Device model name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceInfo-modelName?: string--><!--Device-DeviceInfo-modelName?: string-End-->
@@ -184,10 +152,6 @@ The drm capability supported by current device, each drm is represented by uuid.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceInfo-supportedDrmCapabilities?: Array<string>--><!--Device-DeviceInfo-supportedDrmCapabilities?: Array<string>-End-->
@@ -200,15 +164,11 @@ The drm capability supported by current device, each drm is represented by uuid.
 supportedProtocols?: int
 ```
 
-The protocols supported by current device, can be union of [ProtocolType](arkts-avsession-avsession-protocoltype-e.md#ProtocolType).
+The protocols supported by current device, can be union of [ProtocolType](arkts-avsession-avsession-protocoltype-e.md#protocoltype).
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -227,10 +187,6 @@ Whether the device supports pull-end playback, including a collection of pull-en
 **Type:** Array&lt;int&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

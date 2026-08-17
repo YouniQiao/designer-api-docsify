@@ -16,10 +16,6 @@ Adds a non-reminder date for a recurring calendar reminder with a specific ID. F
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-function addExcludeDate(reminderId: int, date: Date): Promise<void>--><!--Device-reminderAgentManager-function addExcludeDate(reminderId: int, date: Date): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -28,7 +24,7 @@ Adds a non-reminder date for a recurring calendar reminder with a specific ID. F
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | int | Yes | ID of the agent-powered reminder to be added. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) API is called. |
+| reminderId | int | Yes | ID of the agent-powered reminder to be added. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) API is called. |
 | date | Date | Yes | Non-reminder date. |
 
 **Return value:**
@@ -45,7 +41,7 @@ Adds a non-reminder date for a recurring calendar reminder with a specific ID. F
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

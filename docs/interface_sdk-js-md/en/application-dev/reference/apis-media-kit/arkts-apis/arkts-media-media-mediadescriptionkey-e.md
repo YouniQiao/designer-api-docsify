@@ -4,10 +4,6 @@ Enumerates the media description keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum MediaDescriptionKey--><!--Device-media-enum MediaDescriptionKey-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -22,10 +18,6 @@ Track index. The corresponding key value type is number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MediaDescriptionKey-MD_KEY_TRACK_INDEX = 'track_index'--><!--Device-MediaDescriptionKey-MD_KEY_TRACK_INDEX = 'track_index'-End-->
@@ -38,13 +30,9 @@ Track index. The corresponding key value type is number.
 MD_KEY_TRACK_TYPE = 'track_type'
 ```
 
-Track type. The corresponding key value type is number. For details, see [MediaType](arkts-media-media-mediatype-e.md#MediaType).
+Track type. The corresponding key value type is number. For details, see [MediaType](arkts-media-media-mediatype-e.md#mediatype).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,10 +50,6 @@ Codec MIME type. The corresponding key value type is string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MediaDescriptionKey-MD_KEY_CODEC_MIME = 'codec_mime'--><!--Device-MediaDescriptionKey-MD_KEY_CODEC_MIME = 'codec_mime'-End-->
@@ -81,10 +65,6 @@ MD_KEY_DURATION = 'duration'
 Media duration. The corresponding key value type is number, measured in ms.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -102,10 +82,6 @@ Bit rate. The corresponding key value type is number, measured in bit/s. If the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MediaDescriptionKey-MD_KEY_BITRATE = 'bitrate'--><!--Device-MediaDescriptionKey-MD_KEY_BITRATE = 'bitrate'-End-->
@@ -121,10 +97,6 @@ MD_KEY_WIDTH = 'width'
 Video width. The corresponding key value type is number, measured in px.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -142,10 +114,6 @@ Video height. The corresponding key value type is number, measured in px.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MediaDescriptionKey-MD_KEY_HEIGHT = 'height'--><!--Device-MediaDescriptionKey-MD_KEY_HEIGHT = 'height'-End-->
@@ -161,10 +129,6 @@ MD_KEY_FRAME_RATE = 'frame_rate'
 Video frame rate. The corresponding key value type is number, measured in frames per 100 seconds.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -182,10 +146,6 @@ Audio channel count. The corresponding key value type is number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MediaDescriptionKey-MD_KEY_AUD_CHANNEL_COUNT = 'channel_count'--><!--Device-MediaDescriptionKey-MD_KEY_AUD_CHANNEL_COUNT = 'channel_count'-End-->
@@ -201,10 +161,6 @@ MD_KEY_AUD_SAMPLE_RATE = 'sample_rate'
 Sample rate. The corresponding key value type is number, measured in Hz.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -222,10 +178,6 @@ Bit depth. The corresponding key value type is number, measured in bits.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaDescriptionKey-MD_KEY_AUD_SAMPLE_DEPTH = 'sample_depth'--><!--Device-MediaDescriptionKey-MD_KEY_AUD_SAMPLE_DEPTH = 'sample_depth'-End-->
@@ -241,10 +193,6 @@ MD_KEY_LANGUAGE = 'language'
 Subtitle language. The corresponding key value type is string.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -262,10 +210,6 @@ Track name. The corresponding key value type is string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaDescriptionKey-MD_KEY_TRACK_NAME = 'track_name'--><!--Device-MediaDescriptionKey-MD_KEY_TRACK_NAME = 'track_name'-End-->
@@ -281,10 +225,6 @@ MD_KEY_HDR_TYPE = 'hdr_type'
 Codec track type. The corresponding key value type is string.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -302,10 +242,6 @@ Original video width. The corresponding key value type is number, measured in px
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaDescriptionKey-MD_KEY_ORIGINAL_WIDTH = 'original_width'--><!--Device-MediaDescriptionKey-MD_KEY_ORIGINAL_WIDTH = 'original_width'-End-->
@@ -321,10 +257,6 @@ MD_KEY_ORIGINAL_HEIGHT = 'original_height'
 Original video height. The corresponding key value type is number, measured in px.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -342,10 +274,6 @@ MIME type of the track. The corresponding key value type is string. For audio an
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaDescriptionKey-MD_KEY_MIME_TYPE = 'mime_type'--><!--Device-MediaDescriptionKey-MD_KEY_MIME_TYPE = 'mime_type'-End-->
@@ -362,10 +290,6 @@ Reference relationships between this track and other tracks. The corresponding k
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaDescriptionKey-MD_KEY_REFERENCE_TRACK_IDS = 'ref_track_ids'--><!--Device-MediaDescriptionKey-MD_KEY_REFERENCE_TRACK_IDS = 'ref_track_ids'-End-->
@@ -381,10 +305,6 @@ MD_KEY_TRACK_REFERENCE_TYPE = 'track_ref_type'
 Auxiliary type of this track when it acts as a reference track. The corresponding key value type is string.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

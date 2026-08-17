@@ -10,10 +10,6 @@ Unsubscribe from the callSessionEvent.
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function offCallSessionEvent(callback?: Callback<CallSessionEvent>): void--><!--Device-call-function offCallSessionEvent(callback?: Callback<CallSessionEvent>): void-End-->
@@ -26,7 +22,7 @@ Unsubscribe from the callSessionEvent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md)&gt; | 否 | Indicates the callback to unsubscribe from the CallSessionEvent event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md)&gt; | 否 | Indicates the callback to unsubscribe from the CallSessionEvent event. |
 
 **错误码：**
 

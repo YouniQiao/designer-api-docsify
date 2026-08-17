@@ -16,10 +16,6 @@ Verifies an .abc file. This API uses an asynchronous callback to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RUN_DYN_CODE
 
 <!--Device-bundleManager-function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callback: AsyncCallback<void>): void-End-->
@@ -34,7 +30,7 @@ Verifies an .abc file. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | abcPaths | Array&lt;string&gt; | Yes | Path of the .abc file. |
 | deleteOriginalFiles | boolean | Yes | Whether to delete the .abc file. **true** to delete, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -45,7 +41,7 @@ Verifies an .abc file. This API uses an asynchronous callback to return the resu
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -79,10 +75,6 @@ Verifies an .abc file. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RUN_DYN_CODE
 
 <!--Device-bundleManager-function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promise<void>--><!--Device-bundleManager-function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promise<void>-End-->
@@ -113,7 +105,7 @@ Verifies an .abc file. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

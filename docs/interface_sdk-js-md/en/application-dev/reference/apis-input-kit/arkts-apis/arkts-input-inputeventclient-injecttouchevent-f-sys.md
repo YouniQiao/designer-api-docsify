@@ -16,10 +16,6 @@ Injects a touch event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 12+: ohos.permission.INJECT_INPUT_EVENT
 
@@ -33,7 +29,7 @@ Injects a touch event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touchEvent | [TouchEventData](arkts-input-inputeventclient-toucheventdata-i-sys.md) | Yes | Touch event data. [Action](arkts-input-multimodalinput-touchevent-action-e.md#Action) in this parameter cannot be set to **CANCEL**. |
+| touchEvent | [TouchEventData](arkts-input-inputeventclient-toucheventdata-i-sys.md) | Yes | Touch event data. [Action](arkts-input-multimodalinput-touchevent-action-e.md#action) in this parameter cannot be set to **CANCEL**. |
 
 **Error codes:**
 
@@ -43,7 +39,7 @@ Injects a touch event.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';

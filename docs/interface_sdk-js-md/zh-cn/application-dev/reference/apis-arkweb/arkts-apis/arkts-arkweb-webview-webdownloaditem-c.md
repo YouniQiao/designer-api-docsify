@@ -1,12 +1,8 @@
 # WebDownloadItem
 
-表示下载任务，您可以使用此对象来操作相应的下载任务。 当前WebDownloadItem支持的下载文件名最长长度为255字节。
+WebDownloadItem是ArkWeb框架中用于表示和管理单个下载任务的类。通过[WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md#webdownloaddelegate)的回调参数，应用可以获取到 WebDownloadItem实例，进而对下载任务进行查询和控制，包括启动下载到指定路径、查询下载进度和状态、暂停/恢复/取消任务、序列化失败任务以便后续恢复等。 > **说明：** > > - 在下载过程中，下载的进度会通过WebDownloadDelegate通知给使用者，使用者可以通过参数WebDownloadItem来操作下载任务。 > > - 当前WebDownloadItem支持的下载文件路径（包含文件名）最长长度为255字节&lt;!--RP1--&gt;&lt;!--RP1End--&gt;。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-webview-class WebDownloadItem--><!--Device-webview-class WebDownloadItem-End-->
 
@@ -18,13 +14,9 @@
 cancel(): void
 ```
 
-取消一个正在下载的下载任务。
+取消下载任务。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,10 +34,6 @@ static deserialize(serializedData: Uint8Array): WebDownloadItem
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-static deserialize(serializedData: Uint8Array): WebDownloadItem--><!--Device-WebDownloadItem-static deserialize(serializedData: Uint8Array): WebDownloadItem-End-->
@@ -56,13 +44,13 @@ static deserialize(serializedData: Uint8Array): WebDownloadItem
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| serializedData | Uint8Array | 是 | 序列化后的下载。 |
+| serializedData | Uint8Array | 是 | 序列化后的字节数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadItem](../../apis-na/arkts-apis/arkts-na-webview-webdownloaditem-c.md) | 从字节数组反序列化为一个WebDownloadItem对象。 |
+| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | 从字节数组反序列化为一个WebDownloadItem对象。 |
 
 **错误码：**
 
@@ -80,10 +68,6 @@ getCurrentSpeed(): number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getCurrentSpeed(): number--><!--Device-WebDownloadItem-getCurrentSpeed(): number-End-->
@@ -94,7 +78,7 @@ getCurrentSpeed(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 下载的速度（字节每秒）。 |
+| number | 下载的速度，单位：字节每秒。 |
 
 ## getFullPath
 
@@ -105,10 +89,6 @@ getFullPath(): string
 获取下载文件在磁盘上的全路径。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -132,10 +112,6 @@ getGuid(): string
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getGuid(): string--><!--Device-WebDownloadItem-getGuid(): string-End-->
@@ -158,10 +134,6 @@ getLastErrorCode(): WebDownloadErrorCode
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getLastErrorCode(): WebDownloadErrorCode--><!--Device-WebDownloadItem-getLastErrorCode(): WebDownloadErrorCode-End-->
@@ -172,7 +144,7 @@ getLastErrorCode(): WebDownloadErrorCode
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webdownloaderrorcode-e.md) | 下载发生错误的时候的错误码。 |
+| [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | 下载失败时的错误码。 |
 
 ## getMethod
 
@@ -183,10 +155,6 @@ getMethod(): string
 获取下载任务的请求方式。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -210,10 +178,6 @@ getMimeType(): string
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getMimeType(): string--><!--Device-WebDownloadItem-getMimeType(): string-End-->
@@ -235,10 +199,6 @@ getOriginalUrl(): string
 获取下载文件的原始URL地址。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -262,10 +222,6 @@ getPercentComplete(): number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getPercentComplete(): number--><!--Device-WebDownloadItem-getPercentComplete(): number-End-->
@@ -287,10 +243,6 @@ getReceivedBytes(): number
 获取已经接收的字节数。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -314,10 +266,6 @@ getReferrerUrl(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WebDownloadItem-getReferrerUrl(): string--><!--Device-WebDownloadItem-getReferrerUrl(): string-End-->
@@ -340,10 +288,6 @@ getState(): WebDownloadState
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getState(): WebDownloadState--><!--Device-WebDownloadItem-getState(): WebDownloadState-End-->
@@ -354,7 +298,7 @@ getState(): WebDownloadState
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadState](../../apis-na/arkts-apis/arkts-na-webview-webdownloadstate-e.md) | 下载的状态。 |
+| [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | 下载的状态。 |
 
 ## getSuggestedFileName
 
@@ -365,10 +309,6 @@ getSuggestedFileName(): string
 获取下载的建议文件名。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -392,10 +332,6 @@ getTotalBytes(): number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getTotalBytes(): number--><!--Device-WebDownloadItem-getTotalBytes(): number-End-->
@@ -418,10 +354,6 @@ getUrl(): string
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getUrl(): string--><!--Device-WebDownloadItem-getUrl(): string-End-->
@@ -440,13 +372,9 @@ getUrl(): string
 pause(): void
 ```
 
-暂停一个正在下载的下载任务。
+暂停下载任务。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -470,10 +398,6 @@ resume(): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-resume(): void--><!--Device-WebDownloadItem-resume(): void-End-->
@@ -496,10 +420,6 @@ serialize(): Uint8Array
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-serialize(): Uint8Array--><!--Device-WebDownloadItem-serialize(): Uint8Array-End-->
@@ -521,10 +441,6 @@ start(downloadPath: string): void
 开始下载到指定目录，参数为下载文件的磁盘存储路径（包含文件名）。 > **说明：** > > 该接口应在WebDownloadDelegate的onBeforeDownload回调中使用。若在WebDownloadDelegate的onBeforeDownload中未调用start('xxx')，则下载任务将保持在 > PENDING状态。处于PENDING状态的下载会将文件下载到临时目录，临时文件会在WebDownloadItem.start指定目标路径后被重命名为目标路径，未下载完成的部分会在WebDownloadItem.start > 指定目标路径后直接下载到目标路径。如果在调用WebDownloadItem.start之前不希望下载到临时文件路径，可以先通过WebDownloadItem.cancel取消当前下载任务，随后通过 > WebDownloadManager.resumeDownload恢复被取消的下载任务。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

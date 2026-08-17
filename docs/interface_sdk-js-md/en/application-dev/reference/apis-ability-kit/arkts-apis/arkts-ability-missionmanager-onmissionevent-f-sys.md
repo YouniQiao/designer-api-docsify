@@ -16,11 +16,9 @@ Registers a listener to observe the mission status.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** on(type: 'mission', listener: MissionListener)
+**Substitutes:** [on](arkts-ability-missionmanager-onmission-f-sys.md#onmission)(type: 'mission', listener: MissionListener)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

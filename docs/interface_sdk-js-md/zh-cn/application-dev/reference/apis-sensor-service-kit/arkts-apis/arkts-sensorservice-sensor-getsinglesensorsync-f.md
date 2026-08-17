@@ -10,10 +10,6 @@ function getSingleSensorSync(type: SensorId): Sensor
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sensor-function getSingleSensorSync(type: SensorId): Sensor--><!--Device-sensor-function getSingleSensorSync(type: SensorId): Sensor-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -38,7 +34,7 @@ function getSingleSensorSync(type: SensorId): Sensor
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 | [14500102](../errorcode-sensor.md#14500102-设备不支持该传感器) | The sensor is not supported by the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

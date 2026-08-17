@@ -4,10 +4,6 @@ Enumerates NearLink protocols.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-systemManager-enum NearLinkProtocol--><!--Device-systemManager-enum NearLinkProtocol-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,10 +17,6 @@ SSAP = 0
 SparkLink Service Access Protocol (SSAP).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,10 +33,6 @@ DATA_TRANSFER = 1
 Data transfer protocol.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

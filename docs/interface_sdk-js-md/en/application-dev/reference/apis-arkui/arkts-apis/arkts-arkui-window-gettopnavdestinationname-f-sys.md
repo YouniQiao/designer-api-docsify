@@ -16,10 +16,6 @@ Obtains the name of NavDestination in the current top-level Navigation component
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-function getTopNavDestinationName(windowId: int): Promise<string>--><!--Device-window-function getTopNavDestinationName(windowId: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -48,7 +44,7 @@ Obtains the name of NavDestination in the current top-level Navigation component
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';

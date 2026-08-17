@@ -16,10 +16,6 @@ Queries the mouse pointer style type of a specified window, such as east arrow, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle--><!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -28,7 +24,7 @@ Queries the mouse pointer style type of a specified window, such as east arrow, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. <br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. <br>If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. <br>If the mouse pointer style is set for a non-existent window through [setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md#setPointerStyleSync), this API can obtain the mouse pointer style properly. |
+| windowId | int | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. <br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. <br>If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. <br>If the mouse pointer style is set for a non-existent window through [setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md#setpointerstylesync), this API can obtain the mouse pointer style properly. |
 
 **Return value:**
 
@@ -42,7 +38,7 @@ Queries the mouse pointer style type of a specified window, such as east arrow, 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';

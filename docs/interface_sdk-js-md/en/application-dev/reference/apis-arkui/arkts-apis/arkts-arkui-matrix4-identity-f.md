@@ -16,10 +16,6 @@ Constructs an identity matrix.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-matrix4-function identity(): Matrix4Transit--><!--Device-matrix4-function identity(): Matrix4Transit-End-->
@@ -32,7 +28,7 @@ Constructs an identity matrix.
 | --- | --- |
 | Matrix4Transit | Identity matrix object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The effect of matrix 1 is the same as that of matrix 2.

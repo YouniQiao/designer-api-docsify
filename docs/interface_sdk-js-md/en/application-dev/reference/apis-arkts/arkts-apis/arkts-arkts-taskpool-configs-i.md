@@ -4,10 +4,6 @@ Defines the task configs interface
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-taskpool-interface Configs--><!--Device-taskpool-interface Configs-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -30,10 +26,6 @@ The priority of the task. The default value is taskpool.Priority.MEDIUM.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-Configs-priority?: Priority--><!--Device-Configs-priority?: Priority-End-->
@@ -51,10 +43,6 @@ The timeout for the task in ms. Suggest passing in integers. If decimals are pas
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

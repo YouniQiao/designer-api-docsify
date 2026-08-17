@@ -10,10 +10,6 @@ function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback<MmsInformation>): void--><!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback<MmsInformation>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -25,7 +21,7 @@ function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mmsFilePathName | string \| Array&lt;int&gt; | 是 | 彩信文件路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | 是 | 获取｛@code MmsInformation｝的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | 是 | 获取｛@code MmsInformation｝的回调函数。 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -65,10 +61,6 @@ function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation
 彩信解码。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation>--><!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation>-End-->
 
@@ -99,7 +91,7 @@ function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

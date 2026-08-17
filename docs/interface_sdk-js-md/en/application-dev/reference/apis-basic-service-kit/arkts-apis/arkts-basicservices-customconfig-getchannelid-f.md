@@ -16,10 +16,6 @@ Obtains a pre-installed channel ID of this application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-customConfig-function getChannelId(): string--><!--Device-customConfig-function getChannelId(): string-End-->
@@ -32,7 +28,7 @@ Obtains a pre-installed channel ID of this application.
 | --- | --- |
 | string | Channel ID obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { customConfig } from '@kit.BasicServicesKit';

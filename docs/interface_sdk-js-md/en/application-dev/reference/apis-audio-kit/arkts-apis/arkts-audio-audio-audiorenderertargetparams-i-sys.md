@@ -4,10 +4,6 @@ Options for setting the render target of an audio renderer. This parameter takes
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioRendererTargetParams--><!--Device-audio-interface AudioRendererTargetParams-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -26,15 +22,11 @@ import { audio } from 'audio';
 streamId: long
 ```
 
-The stream ID of the [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_COMMUNICATION) capture stream identified by uid. This stream is the injection target for the render stream. It is valid only when the target is non-PLAYBACK.
+The stream ID of the [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#sourcetypevoicecommunication) capture stream identified by uid. This stream is the injection target for the render stream. It is valid only when the target is non-PLAYBACK.
 
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,10 +47,6 @@ The application UID of the target capture stream into which the render stream is
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

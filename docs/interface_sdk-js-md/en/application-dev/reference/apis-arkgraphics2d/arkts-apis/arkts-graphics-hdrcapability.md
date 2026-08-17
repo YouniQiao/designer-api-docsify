@@ -4,10 +4,6 @@ The hdrCapability module provides enums related to the High Dynamic Range (HDR) 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace hdrCapability--><!--Device-unnamed-declare namespace hdrCapability-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core

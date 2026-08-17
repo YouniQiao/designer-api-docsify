@@ -10,10 +10,6 @@ function callbackWrapper(original: Function): (err: Object, value: Object) => vo
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-util-function callbackWrapper(original: Function): (err: Object, value: Object) => void--><!--Device-util-function callbackWrapper(original: Function): (err: Object, value: Object) => void-End-->
@@ -32,7 +28,7 @@ function callbackWrapper(original: Function): (err: Object, value: Object) => vo
 | --- | --- |
 | (err: Object, value: Object) =&gt; void | 返回一个回调函数，该函数第一个参数 **err** 是拒绝原因（如果Promise已解决，则为null），第二个参数 **value** 是已解决的值。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // original为一个入参示例

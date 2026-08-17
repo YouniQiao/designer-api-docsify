@@ -2,13 +2,9 @@
 
 设备协同数据库，继承自SingleKVStore，提供查询数据和端端同步数据的方法，可以使用SingleKVStore的方法例如：put、putBatch等。 设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。 比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。 在调用DeviceKVStore的方法前，需要先通过 getKVStore 构建一个DeviceKVStore实例。
 
-**继承/实现关系：** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#SingleKVStore)
+**继承/实现关系：** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#singlekvstore)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-distributedKVStore-interface DeviceKVStore--><!--Device-distributedKVStore-interface DeviceKVStore-End-->
 
@@ -24,10 +20,6 @@ get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceKVStore-get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void--><!--Device-DeviceKVStore-get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void-End-->
@@ -38,8 +30,8 @@ get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | 是 | 回调函数。返回获取查询的值。 |
+| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | 是 | 回调函数。返回获取查询的值。 |
 
 **错误码：**
 
@@ -60,10 +52,6 @@ get(key: string): Promise<boolean | string | long | double | Uint8Array>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceKVStore-get(key: string): Promise<boolean | string | long | double | Uint8Array>--><!--Device-DeviceKVStore-get(key: string): Promise<boolean | string | long | double | Uint8Array>-End-->
@@ -74,7 +62,7 @@ get(key: string): Promise<boolean | string | long | double | Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
+| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
 
 **返回值：**
 
@@ -97,13 +85,9 @@ get(key: string): Promise<boolean | string | long | double | Uint8Array>
 get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void
 ```
 
-获取与指定设备ID和Key匹配的值，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Key匹配的值，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,8 +100,8 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | lo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| key | string | 是 | 要查询数据的键名，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | 是 | 回调函数。成功时返回匹配给定条件的值（值的类型取决于存储时的 数据类型），失败时返回错误对象。 |
+| key | string | 是 | 要查询数据的键名，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | 是 | 回调函数。成功时返回匹配给定条件的值（值的类型取决于存储时的 数据类型），失败时返回错误对象。 |
 
 **错误码：**
 
@@ -134,13 +118,9 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | lo
 get(deviceId: string, key: string): Promise<boolean | string | long | double | Uint8Array>
 ```
 
-获取与指定设备ID和Key匹配的值，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Key匹配的值，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -153,7 +133,7 @@ get(deviceId: string, key: string): Promise<boolean | string | long | double | U
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| key | string | 是 | 表示要查询Key值的键，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
+| key | string | 是 | 表示要查询Key值的键，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
 
 **返回值：**
 
@@ -180,10 +160,6 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void-End-->
@@ -194,8 +170,8 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回匹配指定前缀的键值对列表。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | 是 | 回调函数。返回匹配指定前缀的键值对列表。 |
 
 **错误码：**
 
@@ -205,7 +181,7 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -301,10 +277,6 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceKVStore-getEntries(keyPrefix: string): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(keyPrefix: string): Promise<Entry[]>-End-->
@@ -315,7 +287,7 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -331,7 +303,7 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -413,13 +385,9 @@ try {
 getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-获取与指定设备ID和Key前缀匹配的所有键值对，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Key前缀匹配的所有键值对，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -432,8 +400,8 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数，返回满足给定条件的所有键值对的列表。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | 是 | 回调函数，返回满足给定条件的所有键值对的列表。 |
 
 **错误码：**
 
@@ -443,7 +411,7 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -535,13 +503,9 @@ try {
 getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 ```
 
-获取与指定设备ID和Key前缀匹配的所有键值对，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Key前缀匹配的所有键值对，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -554,7 +518,7 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -570,7 +534,7 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -662,10 +626,6 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void-End-->
@@ -677,7 +637,7 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | query | Query | 是 | 表示要查询的对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回本设备与指定Query对象匹配的键值对列表。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | 是 | 回调函数。返回本设备与指定Query对象匹配的键值对列表。 |
 
 **错误码：**
 
@@ -687,7 +647,7 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -785,10 +745,6 @@ getEntries(query: Query): Promise<Entry[]>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceKVStore-getEntries(query: Query): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(query: Query): Promise<Entry[]>-End-->
@@ -815,7 +771,7 @@ getEntries(query: Query): Promise<Entry[]>
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -904,13 +860,9 @@ try {
 getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-获取与指定设备ID和Query对象匹配的键值对列表，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Query对象匹配的键值对列表，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -924,7 +876,7 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
 | query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
 
 **错误码：**
 
@@ -934,7 +886,7 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1035,13 +987,9 @@ try {
 getEntries(deviceId: string, query: Query): Promise<Entry[]>
 ```
 
-获取与指定设备ID和Query对象匹配的键值对列表，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Query对象匹配的键值对列表，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1070,7 +1018,7 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1161,13 +1109,9 @@ try {
 getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet) 关闭结果集释放资源。
+从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset) 关闭结果集释放资源。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1179,8 +1123,8 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回具有指定前缀的结果集。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回具有指定前缀的结果集。 |
 
 **错误码：**
 
@@ -1191,7 +1135,7 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1298,13 +1242,9 @@ try {
 getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet) 关闭结果集释放资源。
+从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset) 关闭结果集释放资源。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1316,7 +1256,7 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -1333,7 +1273,7 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1384,13 +1324,9 @@ try {
 getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1403,8 +1339,8 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回与指定设备ID和Key前缀匹配的KVStoreResultSet对象。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回与指定设备ID和Key前缀匹配的KVStoreResultSet对象。 |
 
 **错误码：**
 
@@ -1415,7 +1351,7 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1501,13 +1437,9 @@ try {
 getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1520,7 +1452,7 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -1537,7 +1469,7 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1617,10 +1549,6 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceKVStore-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void-End-->
@@ -1632,7 +1560,7 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。成功时返回与指定Query对象匹配的KVStoreResultSet对象，失败时返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。成功时返回与指定Query对象匹配的KVStoreResultSet对象，失败时返回错误对象。 |
 
 **错误码：**
 
@@ -1643,7 +1571,7 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1758,10 +1686,6 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceKVStore-getResultSet(query: Query): Promise<KVStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(query: Query): Promise<KVStoreResultSet>-End-->
@@ -1789,7 +1713,7 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1835,13 +1759,9 @@ try {
 getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet) 关闭结果集释放资源。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset) 关闭结果集释放资源。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1855,7 +1775,7 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
 | query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的KVStoreResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的KVStoreResultSet对象。 |
 
 **错误码：**
 
@@ -1866,7 +1786,7 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1977,13 +1897,9 @@ try {
 getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 ```
 
-获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet) 关闭结果集释放资源。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset) 关闭结果集释放资源。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2013,7 +1929,7 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2119,10 +2035,6 @@ getResultSize(query: Query, callback: AsyncCallback<int>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceKVStore-getResultSize(query: Query, callback: AsyncCallback<int>): void--><!--Device-DeviceKVStore-getResultSize(query: Query, callback: AsyncCallback<int>): void-End-->
@@ -2134,7 +2046,7 @@ getResultSize(query: Query, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。返回与本设备指定Query对象匹配的结果数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。返回与本设备指定Query对象匹配的结果数。 |
 
 **错误码：**
 
@@ -2145,7 +2057,7 @@ getResultSize(query: Query, callback: AsyncCallback<int>): void
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2233,10 +2145,6 @@ getResultSize(query: Query): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceKVStore-getResultSize(query: Query): Promise<int>--><!--Device-DeviceKVStore-getResultSize(query: Query): Promise<int>-End-->
@@ -2264,7 +2172,7 @@ getResultSize(query: Query): Promise<int>
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2344,13 +2252,9 @@ try {
 getResultSize(deviceId: string, query: Query, callback: AsyncCallback<int>): void
 ```
 
-获取与指定设备ID和Query对象匹配的结果数，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Query对象匹配的结果数，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2364,7 +2268,7 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<int>): voi
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
 | query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的结果数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的结果数。 |
 
 **错误码：**
 
@@ -2375,7 +2279,7 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<int>): voi
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2464,13 +2368,9 @@ try {
 getResultSize(deviceId: string, query: Query): Promise<int>
 ```
 
-获取与指定设备ID和Query对象匹配的结果数，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+获取与指定设备ID和Query对象匹配的结果数，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2500,7 +2400,7 @@ getResultSize(deviceId: string, query: Query): Promise<int>
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

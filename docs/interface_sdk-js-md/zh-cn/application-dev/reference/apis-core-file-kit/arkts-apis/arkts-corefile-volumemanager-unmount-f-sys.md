@@ -10,10 +10,6 @@ function unmount(volumeId: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
 <!--Device-volumeManager-function unmount(volumeId: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function unmount(volumeId: string, callback: AsyncCallback<void>): void-End-->
@@ -27,7 +23,7 @@ function unmount(volumeId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeId | string | 是 | 卷设备id。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 卸载指定卷设备之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 卸载指定卷设备之后的回调。 |
 
 **错误码：**
 
@@ -53,10 +49,6 @@ function unmount(volumeId: string): Promise<void>
 卸载指定卷设备，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MOUNT_UNMOUNT_MANAGER
 

@@ -1,14 +1,10 @@
 # ConnectOptionsCollections
 
-globalConnect 接口参数类型，ConnectOptionsCollections继承自[ConnectOptions\&lt;T\&gt;](arkts-arkui-arkui-statemanagement-connectoptions-c.md#ConnectOptions)。当开发者需要持久化容器类型数据（如`Array&lt;S&gt;`）时，需要使用 `ConnectOptionsCollections`入参。 如下展示`StorageDefaultCreator&lt;T&gt;`和`StorageDefaultCreator&lt;S&gt;`示例：
+globalConnect 接口参数类型，ConnectOptionsCollections继承自[ConnectOptions\&lt;T\&gt;](arkts-arkui-arkui-statemanagement-connectoptions-c.md#connectoptions)。当开发者需要持久化容器类型数据（如`Array&lt;S&gt;`）时，需要使用 `ConnectOptionsCollections`入参。 如下展示`StorageDefaultCreator&lt;T&gt;`和`StorageDefaultCreator&lt;S&gt;`示例：
 
 **继承/实现关系：** ConnectOptionsCollections extends ConnectOptions<T>
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export class ConnectOptionsCollections--><!--Device-unnamed-export class ConnectOptionsCollections-End-->
 
@@ -25,10 +21,6 @@ defaultCreator?: StorageDefaultCreator<T>
 **类型：** [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,10 +41,6 @@ defaultSubCreator?: StorageDefaultCreator<S>
 **类型：** [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;S&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

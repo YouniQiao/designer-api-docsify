@@ -16,11 +16,9 @@ Obtains the fault information about the current application. This API uses an as
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)
+**Substitutes:** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)
 
 <!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
 
@@ -41,7 +39,7 @@ Obtains the fault information about the current application. This API uses an as
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Parameter type error |
 | [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FaultLogger } from '@kit.PerformanceAnalysisKit';
@@ -84,11 +82,9 @@ Obtains the fault information about the current application. This API uses a pro
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)
+**Substitutes:** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)
 
 <!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
 
@@ -114,7 +110,7 @@ Obtains the fault information about the current application. This API uses a pro
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Parameter type error |
 | [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FaultLogger } from '@kit.PerformanceAnalysisKit';

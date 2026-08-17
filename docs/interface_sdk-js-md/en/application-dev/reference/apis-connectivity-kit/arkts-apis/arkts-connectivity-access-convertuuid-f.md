@@ -16,10 +16,6 @@ Convert 2-byte and 4-byte UUID strings to the 16-byte UUID string standard used 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-access-function convertUuid(uuid: string): string--><!--Device-access-function convertUuid(uuid: string): string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -36,7 +32,7 @@ Convert 2-byte and 4-byte UUID strings to the 16-byte UUID string standard used 
 | --- | --- |
 | string | Return the converted 16-byte UUID string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

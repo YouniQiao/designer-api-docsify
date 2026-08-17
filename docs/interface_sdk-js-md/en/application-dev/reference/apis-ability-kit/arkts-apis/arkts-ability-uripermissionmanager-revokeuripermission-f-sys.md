@@ -12,13 +12,9 @@ import { uriPermissionManager } from 'uriPermissionManager';
 function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<number>): void
 ```
 
-Revokes the URI permission from an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > - This API can be used to revoke the URI permission of another application obtained by this application or URI > permission granted by this application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+Revokes the URI permission from an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > - This API can be used to revoke the URI permission of another application obtained by this application or URI > permission granted by this application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.PROXY_AUTHORIZATION_URI
@@ -48,7 +44,7 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uriPermissionManager } from '@kit.AbilityKit';
@@ -72,13 +68,9 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
 function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Revokes the URI permission from an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > - This API can be used to revoke the URI permission of another application obtained by this application or URI > permission granted by this application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+Revokes the URI permission from an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > - This API can be used to revoke the URI permission of another application obtained by this application or URI > permission granted by this application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<void>): void--><!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -110,13 +102,9 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 function revokeUriPermission(uri: string, targetBundleName: string): Promise<number>
 ```
 
-Revokes the URI permission from an application. This API uses a promise to return the result. > **NOTE：**> > - This API can be used to revoke the URI permission of another application obtained by this application or URI > permission granted by this application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+Revokes the URI permission from an application. This API uses a promise to return the result. > **NOTE：**> > - This API can be used to revoke the URI permission of another application obtained by this application or URI > permission granted by this application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.PROXY_AUTHORIZATION_URI
@@ -151,7 +139,7 @@ Revokes the URI permission from an application. This API uses a promise to retur
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uriPermissionManager } from '@kit.AbilityKit';
@@ -175,13 +163,9 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName)
 function revokeUriPermission(uri: string, targetBundleName: string): Promise<void>
 ```
 
-Revokes the URI permission from an application. This API uses a promise to return the result. > **NOTE：**> > - This API can be used to revoke the URI permission of another application obtained by this application or URI > permission granted by this application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+Revokes the URI permission from an application. This API uses a promise to return the result. > **NOTE：**> > - This API can be used to revoke the URI permission of another application obtained by this application or URI > permission granted by this application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string): Promise<void>--><!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string): Promise<void>-End-->
 
@@ -218,13 +202,9 @@ Revokes the URI permission from an application. This API uses a promise to retur
 function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: int): Promise<void>
 ```
 
-Revokes the URI permission from an application. This API uses a promise to return the result. > **NOTE：**> > - This API can be used to revoke the URI permission of another application obtained by this application or URI > permission granted by this application. > > - This API can be used to revoke the URI permissions granted to a cloned application. You need to specify the > application bundle name and index of the cloned application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+Revokes the URI permission from an application. This API uses a promise to return the result. > **NOTE：**> > - This API can be used to revoke the URI permission of another application obtained by this application or URI > permission granted by this application. > > - This API can be used to revoke the URI permissions granted to a cloned application. You need to specify the > application bundle name and index of the cloned application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: int): Promise<void>--><!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: int): Promise<void>-End-->
 
@@ -257,7 +237,7 @@ Revokes the URI permission from an application. This API uses a promise to retur
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';

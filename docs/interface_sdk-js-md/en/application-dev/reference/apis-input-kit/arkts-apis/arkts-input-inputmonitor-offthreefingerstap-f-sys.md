@@ -16,10 +16,6 @@ Cancel listening touchPad three fingers tap events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function offThreeFingersTap(receiver?: Callback<ThreeFingersTap>): void--><!--Device-inputMonitor-function offThreeFingersTap(receiver?: Callback<ThreeFingersTap>): void-End-->

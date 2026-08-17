@@ -1,12 +1,8 @@
 # ScreenCaptureConfig
 
-Web屏幕捕获的配置。
+提供 Web 屏幕捕获的配置选项，包括捕获模式。适用于需要自定义网页录屏行为的场景，提升录屏功能的灵活性和用户体验。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface ScreenCaptureConfig--><!--Device-unnamed-declare interface ScreenCaptureConfig-End-->
 
@@ -23,10 +19,6 @@ Web屏幕捕获模式。
 **类型：** [WebCaptureMode](arkts-arkweb-webcapturemode-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

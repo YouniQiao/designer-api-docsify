@@ -1,12 +1,10 @@
 # AppForegroundStateObserver（系统接口）
 
-定义应用启动和退出的状态监听，可以作为 [appManager.on('appForegroundState')](../../apis-ability-kit/arkts-apis/arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) 的入参监听所有应用的启动和退出的变化。
+定义应用启动和退出的状态监听，可以作为 [appManager.on('appForegroundState')](../../apis-ability-kit/arkts-apis/arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) 的入参监听所有应用的启动和退出的变化。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-declare interface AppForegroundStateObserver--><!--Device-unnamed-declare interface AppForegroundStateObserver-End-->
 
@@ -24,9 +22,7 @@ onAppStateChanged(appStateData: AppStateData): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-AppForegroundStateObserver-onAppStateChanged(appStateData: AppStateData): void--><!--Device-AppForegroundStateObserver-onAppStateChanged(appStateData: AppStateData): void-End-->
 

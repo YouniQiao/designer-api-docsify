@@ -4,10 +4,6 @@ Haptics settings in tone scenario.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemSoundManager-interface ToneHapticsSettings--><!--Device-systemSoundManager-interface ToneHapticsSettings-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -32,10 +28,6 @@ Haptics uri. Users can set/get this parameter when [mode](#mode) is NON_SYC. In 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToneHapticsSettings-hapticsUri?: string--><!--Device-ToneHapticsSettings-hapticsUri?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -53,10 +45,6 @@ Haptics mode.
 **Type:** [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneHapticsSettings-mode: ToneHapticsMode--><!--Device-ToneHapticsSettings-mode: ToneHapticsMode-End-->
 

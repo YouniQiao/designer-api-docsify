@@ -16,10 +16,6 @@ Disables listening for release events of specified keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function offKeyPressed(receiver?: Callback<KeyEvent>): void--><!--Device-inputMonitor-function offKeyPressed(receiver?: Callback<KeyEvent>): void-End-->

@@ -4,10 +4,6 @@ Filter effect class, used to apply corresponding effects to specified components
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-interface Filter--><!--Device-uiEffect-interface Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -27,10 +23,6 @@ bezierWarp(controlPoints: Array<common2D.Point>): Filter
 Adds a Bezier curve deformation effect to the component. This effect achieves precise distortion and shape adjustment of the image by creating closed Bezier curves at the layer boundary. There are four Bezier curve segments, connected head to tail in sequence, with each segment containing one vertex and two tangent points. Typical application scenarios include face deformation effects, card perspective distortion, etc.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Filter-bezierWarp(controlPoints: Array<common2D.Point>): Filter--><!--Device-Filter-bezierWarp(controlPoints: Array<common2D.Point>): Filter-End-->
 
@@ -56,7 +48,7 @@ Adds a Bezier curve deformation effect to the component. This effect achieves pr
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common2D, uiEffect } from '@kit.ArkGraphics2D'
@@ -89,10 +81,6 @@ Applies a blur bubbles rise effect to the image, simulating a dreamy, bubbly dis
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Filter-blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter--><!--Device-Filter-blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter-End-->
@@ -124,10 +112,6 @@ Adds a color gradient effect to the component content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,        alphaMask?: Mask): Filter--><!--Device-Filter-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,        alphaMask?: Mask): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -155,7 +139,7 @@ Adds a color gradient effect to the component content.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common2D, uiEffect } from "@kit.ArkGraphics2D"
@@ -196,10 +180,6 @@ Adds a 3D lighting effect to the component content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      displacementMap?: Mask): Filter--><!--Device-Filter-contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      displacementMap?: Mask): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -227,7 +207,7 @@ Adds a 3D lighting effect to the component content.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common2D, uiEffect } from '@kit.ArkGraphics2D'
@@ -276,10 +256,6 @@ Provides a Mask-based and directional light lighting effect for the component co
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter--><!--Device-Filter-directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -308,7 +284,7 @@ Provides a Mask-based and directional light lighting effect for the component co
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiEffect, common2D } from "@kit.ArkGraphics2D";
@@ -355,10 +331,6 @@ Adds a distortion effect to the component content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter--><!--Device-Filter-displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -384,7 +356,7 @@ Adds a distortion effect to the component content.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiEffect } from "@kit.ArkGraphics2D"
@@ -416,10 +388,6 @@ Adds a lens distortion effect to the component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-distort(distortionK: double): Filter--><!--Device-Filter-distort(distortionK: double): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -444,7 +412,7 @@ Adds a lens distortion effect to the component.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 filter.distort(-0.5)
@@ -459,10 +427,6 @@ edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter
 Detects edges of the component content and adds an edge highlight effect. This effect automatically detects the edge contours of the component content and overlays a highlight stroke.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Filter-edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter--><!--Device-Filter-edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter-End-->
 
@@ -491,7 +455,7 @@ Detects edges of the component content and adds an edge highlight effect. This e
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiEffect } from "@kit.ArkGraphics2D"
@@ -525,10 +489,6 @@ Adds a fly-in or fly-out deformation effect to the component. Typical applicatio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter--><!--Device-Filter-flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -554,7 +514,7 @@ Adds a fly-in or fly-out deformation effect to the component. Typical applicatio
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP)
@@ -569,10 +529,6 @@ hdrBrightnessRatio(ratio: double): Filter
 Adds an HDR (High Dynamic Range) brightening effect to the component content. Nesting is not recommended, as forced nesting may cause overexposure. The brightening effect requires the HDR rendering pipeline to be enabled to take effect. In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline, for example, when the device hardware specifications do not support HDR. The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance. > **NOTE：**> > Using the HDR brightening effect incurs certain performance and power consumption overhead. > It is recommended to use it in scenarios where HDR images or videos already exist.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 24+: ohos.permission.HDR_BRIGHTNESS
@@ -602,7 +558,7 @@ Adds an HDR (High Dynamic Range) brightening effect to the component content. Ne
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 24 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 23 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 filter.hdrBrightnessRatio(2.0)
@@ -617,10 +573,6 @@ heatDistortion(param: HeatDistortionEffectParam): Filter
 Applies a heat distortion effect to the image, simulating the visual distortion caused by hot air flow.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -652,10 +604,6 @@ maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], g
 Adds a dispersion effect controlled by a displacement map to the component content, simulating the dispersion phenomenon when light passes through a prism. Typical application scenarios include colorful effects, prism refraction simulation, etc.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Filter-maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], gFactor?: [double, double],      bFactor?: [double, double]): Filter--><!--Device-Filter-maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], gFactor?: [double, double],      bFactor?: [double, double]): Filter-End-->
 
@@ -695,10 +643,6 @@ Provides a Mask-based transition effect for the component content, which can be 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter--><!--Device-Filter-maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -725,7 +669,7 @@ Provides a Mask-based transition effect for the component content, which can be 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiEffect, common2D } from "@kit.ArkGraphics2D";
@@ -780,10 +724,6 @@ Adds a pixel stretch effect to the component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter--><!--Device-Filter-pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -803,7 +743,7 @@ Adds a pixel stretch effect to the component.
 | --- | --- |
 | Filter | Returns the Filter with the pixel stretch effect attached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 filter.pixelStretch([0.2, 0.2, 0.2, 0.2], uiEffect.TileMode.CLAMP)
@@ -818,10 +758,6 @@ radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Fi
 Adds a radius linear gradient blur effect to the component content.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Filter-radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter--><!--Device-Filter-radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter-End-->
 
@@ -858,10 +794,6 @@ Provides a Mask-based gradient blur effect for the component content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-variableRadiusBlur(radius: double, radiusMap: Mask): Filter--><!--Device-Filter-variableRadiusBlur(radius: double, radiusMap: Mask): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -887,7 +819,7 @@ Provides a Mask-based gradient blur effect for the component content.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiEffect } from "@kit.ArkGraphics2D";
@@ -919,10 +851,6 @@ Adds a water ripple effect to the component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Filter-waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter--><!--Device-Filter-waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -951,7 +879,7 @@ Adds a water ripple effect to the component.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 filter.waterRipple(0.5, 2, 0.5, 0.5, uiEffect.WaterRippleMode.SMALL2SMALL)

@@ -16,11 +16,9 @@ Disables Bluetooth on a device. On API 10 and above, the permission required by 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [disableBluetooth](arkts-connectivity-access-disablebluetooth-f.md#disableBluetooth)
+**Substitutes:** [disableBluetooth](arkts-connectivity-access-disablebluetooth-f.md#disablebluetooth)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -39,7 +37,7 @@ Disables Bluetooth on a device. On API 10 and above, the permission required by 
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

@@ -4,10 +4,6 @@ Represents the distributed information about an OS account.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedAccount-interface DistributedInfo--><!--Device-distributedAccount-interface DistributedInfo-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -30,10 +26,6 @@ Avatar of the distributed account. By default, no value is passed in.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedInfo-avatar?: string--><!--Device-DistributedInfo-avatar?: string-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -49,10 +41,6 @@ Login state of the distributed account. The state can be login, logout, token in
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedInfo-event: string--><!--Device-DistributedInfo-event: string-End-->
 
@@ -70,10 +58,6 @@ UID of the distributed account. It must be a non-null string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedInfo-id: string--><!--Device-DistributedInfo-id: string-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -89,10 +73,6 @@ Name of the distributed account. It must be a non-null string.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedInfo-name: string--><!--Device-DistributedInfo-name: string-End-->
 
@@ -110,10 +90,6 @@ Nickname of the distributed account. By default, no value is passed in.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedInfo-nickname?: string--><!--Device-DistributedInfo-nickname?: string-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -130,10 +106,6 @@ Additional information about the distributed account, in the form of KV pairs. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedInfo-scalableData?: Record<string, RecordData>--><!--Device-DistributedInfo-scalableData?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -149,10 +121,6 @@ Status of the distributed account. The value is of the enumerated type. The defa
 **Type:** [DistributedAccountStatus](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedInfo-readonly status?: DistributedAccountStatus--><!--Device-DistributedInfo-readonly status?: DistributedAccountStatus-End-->
 

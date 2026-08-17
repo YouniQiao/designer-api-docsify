@@ -1,14 +1,10 @@
 # ClickEvent
 
-Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
+Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent).
 
-**Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
+**Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ClickEvent--><!--Device-unnamed-declare interface ClickEvent-End-->
 
@@ -23,10 +19,6 @@ getCurrentLocalPosition?(): Coordinate2D
 Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,10 +46,6 @@ X coordinate of the click position in the coordinate system of the current appli
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -77,10 +65,6 @@ Y coordinate of the click position in the coordinate system of the current appli
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,10 +86,6 @@ X coordinate of the click position in the [global coordinate system](../../../wi
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -125,10 +105,6 @@ Y coordinate of the click position in the [global coordinate system](../../../wi
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,10 +126,6 @@ Whether the event is triggered by a left-hand or right-hand tap.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -173,10 +145,6 @@ Blocks the default event. Note: This API is only supported by the following comp
 **Type:** () =&gt; void
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,11 +166,9 @@ X coordinate of the click position in the coordinate system of the current appli
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [windowX](#windowX)
+**Substitutes:** [windowX](#windowx)
 
 <!--Device-ClickEvent-screenX: number--><!--Device-ClickEvent-screenX: number-End-->
 
@@ -220,11 +186,9 @@ Y coordinate of the click position in the coordinate system of the current appli
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [windowY](#windowY)
+**Substitutes:** [windowY](#windowy)
 
 <!--Device-ClickEvent-screenY: number--><!--Device-ClickEvent-screenY: number-End-->
 
@@ -241,10 +205,6 @@ X coordinate of the click position in the coordinate system of the current appli
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,10 +226,6 @@ Y coordinate of the click position in the coordinate system of the current appli
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -284,15 +240,11 @@ Y coordinate of the click position in the coordinate system of the current appli
 x: number
 ```
 
-X coordinate of the click position in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element. After [distanceThreshold](arkts-arkui-commonmethod-c.md#onClick) is set for **onClick**, the click position is the lift-off point. If the event is triggered by a keyboard or gamepad device, the click position is the center of the clicked element. Unit: vp
+X coordinate of the click position in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element. After [distanceThreshold](arkts-arkui-commonmethod-c.md#onclick) is set for **onClick**, the click position is the lift-off point. If the event is triggered by a keyboard or gamepad device, the click position is the center of the clicked element. Unit: vp
 
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -313,10 +265,6 @@ Y coordinate of the click position in the [component coordinate system](../../..
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

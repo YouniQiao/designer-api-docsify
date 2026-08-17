@@ -4,13 +4,9 @@
 export type ExtensionContext = _ExtensionContext
 ```
 
-Defines the context environment for the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility). It inherits from Context.
+Defines the context environment for the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#extensionability). It inherits from Context.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

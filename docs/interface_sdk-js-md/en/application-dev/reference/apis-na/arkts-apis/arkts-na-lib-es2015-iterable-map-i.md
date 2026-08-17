@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Map--><!--Device-unnamed-interface Map-End-->
 
 ## [Symbol.iterator]
@@ -17,10 +13,6 @@
 Returns an iterable of entries in the map.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Map-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-Map-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
@@ -40,10 +32,6 @@ Returns an iterable of key, value pairs for every entry in the map.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Map-entries(): IterableIterator<[K, V]>--><!--Device-Map-entries(): IterableIterator<[K, V]>-End-->
 
 **Return value:**
@@ -62,10 +50,6 @@ Returns an iterable of keys in the map
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Map-keys(): IterableIterator<K>--><!--Device-Map-keys(): IterableIterator<K>-End-->
 
 **Return value:**
@@ -83,10 +67,6 @@ values(): IterableIterator<V>
 Returns an iterable of values in the map
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Map-values(): IterableIterator<V>--><!--Device-Map-values(): IterableIterator<V>-End-->
 

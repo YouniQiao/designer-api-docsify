@@ -16,10 +16,6 @@ Send extended commands to location subsystem.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-function sendCommand(command: LocationCommand, callback: AsyncCallback<void>): void--><!--Device-geoLocationManager-function sendCommand(command: LocationCommand, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -39,7 +35,7 @@ Send extended commands to location subsystem.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.sendCommand} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -67,10 +63,6 @@ Send extended commands to location subsystem.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-function sendCommand(command: LocationCommand): Promise<void>--><!--Device-geoLocationManager-function sendCommand(command: LocationCommand): Promise<void>-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -95,7 +87,7 @@ Send extended commands to location subsystem.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.sendCommand} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

@@ -6,10 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class TextAttribute--><!--Device-unnamed-declare class TextAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ baselineOffset(value: number | ResourceStr)
 设置文本基线的偏移量，可用于调整文本与其他元素（如图片、图标）的基线对齐，或在图文混排、数学公式、化学公式等需要精确垂直对齐的特殊排版场景中使用。未通过该接口设置时，默认偏移量为0。 正数内容向上偏移，负数向下偏移。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,13 +41,9 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
     options?: SelectionMenuOptions)
 ```
 
-设置自定义选择菜单。未通过该接口设置时，默认菜单类型为TextSpanType.TEXT，响应类型为TextResponseType.LONG_PRESS。 bindSelectionMenu的长按响应时长为600ms， bindContextMenu 的长按响应时长为800ms，当两者同时绑定且触发方式均为长按时，优先响应bindSelectionMenu。 自定义菜单超长时，建议内部嵌套使用Scroll组件，避免键盘被遮挡。 从API版本26.0.0开始，文本组件调用该接口时，options中的menuType属性传入MenuType.PREVIEW_MENU，设置图片预览菜单的能力生效。 如果要使用图片预览菜单，需要同时把spanType设置为TextSpanType.IMAGE，responseType设置为TextResponseType.LONG_PRESS，options中的menuType设置为 MenuType.PREVIEW_MENU才会生效。 当[copyOption](#copyOption)为CopyOptions.None时，设置图片预览菜单将不会生效。 > **说明：** > > 该接口不支持在attributeModifier中调用。 > > 通过[editMenuOptions](#editMenuOptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 > > 通过[bindSelectionMenu](#bindSelectionMenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
+设置自定义选择菜单。未通过该接口设置时，默认菜单类型为TextSpanType.TEXT，响应类型为TextResponseType.LONG_PRESS。 bindSelectionMenu的长按响应时长为600ms， bindContextMenu 的长按响应时长为800ms，当两者同时绑定且触发方式均为长按时，优先响应bindSelectionMenu。 自定义菜单超长时，建议内部嵌套使用Scroll组件，避免键盘被遮挡。 从API版本26.0.0开始，文本组件调用该接口时，options中的menuType属性传入MenuType.PREVIEW_MENU，设置图片预览菜单的能力生效。 如果要使用图片预览菜单，需要同时把spanType设置为TextSpanType.IMAGE，responseType设置为TextResponseType.LONG_PRESS，options中的menuType设置为 MenuType.PREVIEW_MENU才会生效。 当[copyOption](#copyoption)为CopyOptions.None时，设置图片预览菜单将不会生效。 > **说明：** > > 该接口不支持在attributeModifier中调用。 > > 通过[editMenuOptions](#editmenuoptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 > > 通过[bindSelectionMenu](#bindselectionmenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,10 +72,6 @@ caretColor(color: ResourceColor)
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -108,13 +92,9 @@ caretColor(color: ResourceColor)
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)的行首压缩的标点范围。
+设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)的行首压缩的标点范围。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,10 +120,6 @@ contentTransition(transition: Optional<ContentTransition>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -164,13 +140,9 @@ contentTransition(transition: Optional<ContentTransition>)
 copyOption(value: CopyOptions)
 ```
 
-设置组件是否支持文本可复制粘贴。未通过该接口设置时，默认值为CopyOptions.None，不支持文本可复制粘贴。 多个属性的功能依赖copyOption的设置，包括[selection](#selection)、 [setTextSelection](arkts-arkui-textcontroller-c.md#setTextSelection)、[draggable](#draggable)、 [enableSelectedDataDetector](#enableSelectedDataDetector)、 [textSelectable](#textSelectable)等，具体依赖条件请参考各属性说明。 从API version 20开始，当Text组件执行复制操作时，会将HTML格式的内容添加到剪贴板中。 - 当Text组件包含子组件时，仅支持Span和ImageSpan子组件向剪贴板中添加HTML格式的内容。 - 设置Text组件的属性字符串时，请参考属性字符串toHtml接口文档，以了解支持转换为HTML的范围。 设置copyOption为CopyOptions.InApp或者CopyOptions.LocalDevice时： - 长按文本，会弹出文本选择菜单，可选中文本并进行复制、全选操作。 - 默认情况下，长按选中文本可拖拽。若要取消此功能，可将 `draggable` 设置为 `false`。 - 若需要支持Ctrl+C复制，需同时设置[textSelectable](#textSelectable)为TextSelectableMode.SELECTABLE_FOCUSABLE。 此时Text会监听onClick事件，手势事件为非冒泡事件，若需要点击Text组件区域响应父组件的点击手势事件，建议在父组件上使用 parallelGesture绑定手势识别，也可参考 [示例7（设置文本识别）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例7设置文本识别)。 由于卡片没有长按事件，此场景下长按文本，不会弹出文本选择菜单。
+设置组件是否支持文本可复制粘贴。未通过该接口设置时，默认值为CopyOptions.None，不支持文本可复制粘贴。 多个属性的功能依赖copyOption的设置，包括[selection](#selection)、 [setTextSelection](arkts-arkui-textcontroller-c.md#settextselection)、[draggable](#draggable)、 [enableSelectedDataDetector](#enableselecteddatadetector)、 [textSelectable](#textselectable)等，具体依赖条件请参考各属性说明。 从API version 20开始，当Text组件执行复制操作时，会将HTML格式的内容添加到剪贴板中。 - 当Text组件包含子组件时，仅支持Span和ImageSpan子组件向剪贴板中添加HTML格式的内容。 - 设置Text组件的属性字符串时，请参考属性字符串toHtml接口文档，以了解支持转换为HTML的范围。 设置copyOption为CopyOptions.InApp或者CopyOptions.LocalDevice时： - 长按文本，会弹出文本选择菜单，可选中文本并进行复制、全选操作。 - 默认情况下，长按选中文本可拖拽。若要取消此功能，可将 `draggable` 设置为 `false`。 - 若需要支持Ctrl+C复制，需同时设置[textSelectable](#textselectable)为TextSelectableMode.SELECTABLE_FOCUSABLE。 此时Text会监听onClick事件，手势事件为非冒泡事件，若需要点击Text组件区域响应父组件的点击手势事件，建议在父组件上使用 parallelGesture绑定手势识别，也可参考 [示例7（设置文本识别）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例7设置文本识别)。 由于卡片没有长按事件，此场景下长按文本，不会弹出文本选择菜单。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -192,13 +164,9 @@ copyOption(value: CopyOptions)
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-设置文本识别配置，可配置识别类型、实体显示样式，以及是否开启长按预览等。 需配合[enableDataDetector](#enableDataDetector)一起使用，设置enableDataDetector为true时，dataDetectorConfig的配 置才能生效。
+设置文本识别配置，可配置识别类型、实体显示样式，以及是否开启长按预览等。 需配合[enableDataDetector](#enabledatadetector)一起使用，设置enableDataDetector为true时，dataDetectorConfig的配 置才能生效。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -212,7 +180,7 @@ dataDetectorConfig(config: TextDataDetectorConfig)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | TextDataDetectorConfig | 是 | 文本识别配置对象，用于配置文本识别的具体行为。可配置识别类型（如电话号码、网址、邮箱、地址、日期等）、实体显示样式，以及是否开启长按预览等。需配 合[enableDataDetector](#enableDataDetector)一起使用。 |
+| config | TextDataDetectorConfig | 是 | 文本识别配置对象，用于配置文本识别的具体行为。可配置识别类型（如电话号码、网址、邮箱、地址、日期等）、实体显示样式，以及是否开启长按预览等。需配 合[enableDataDetector](#enabledatadetector)一起使用。 |
 
 ## decoration
 
@@ -223,10 +191,6 @@ decoration(value: DecorationStyleInterface)
 设置文本装饰线样式及其颜色。未通过该接口设置时，默认文本装饰线样式为： { &nbsp;type:&nbsp;TextDecorationType.None, &nbsp;color:&nbsp;Color.Black, &nbsp;style:&nbsp;TextDecorationStyle.SOLID&nbsp; } > **说明：** > > 当文字的下边缘轮廓与装饰线位置相交时，会触发下划线避让规则，下划线将在这些字符处避让文字。常见"gjyqp"等英文字符。 > > 当装饰线颜色设置为Color.Transparent时，装饰线会显示为每行第一个字的字体颜色。设置为透明色16进制值"#00FFFFFF"时，装饰线会显示为透明色。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -252,10 +216,6 @@ draggable(value: boolean)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TextAttribute-draggable(value: boolean): TextAttribute--><!--Device-TextAttribute-draggable(value: boolean): TextAttribute-End-->
@@ -274,13 +234,9 @@ draggable(value: boolean)
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。 调用[disableMenuItems](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#disableMenuItems)或 [disableSystemServiceMenuItems](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#disableSystemServiceMenuItems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > **说明：** > > 通过[editMenuOptions](#editMenuOptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 > > 通过[bindSelectionMenu](#bindSelectionMenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
+设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。 调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > **说明：** > > 通过[editMenuOptions](#editmenuoptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 > > 通过[bindSelectionMenu](#bindselectionmenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -306,10 +262,6 @@ ellipsisMode(value: EllipsisMode)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -334,10 +286,6 @@ enableAutoSpacing(enabled: Optional<boolean>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -358,13 +306,9 @@ enableAutoSpacing(enabled: Optional<boolean>)
 enableDataDetector(enable: boolean)
 ```
 
-设置是否进行文本特殊实体识别，可自动识别文本中的电话号码、网址、邮箱、地址、日期等实体信息，适用于聊天消息、评论内容、文章正文等需要智能识别和交互的场景。未通过该接口设置时，默认不进行文本特殊实体识别。当 enableDataDetector设置为true时，识别特殊实体。 所识别实体的样式如下，即字体颜色改为蓝色、并添加蓝色下划线。 > **说明：** > > - 设备底层需要具备文本识别能力，该接口才能生效。 > > - 当[textOverflow](#textOverflow)设置为TextOverflow.MARQUEE时，不进行文本特殊实体识别。 &lt;!--RP2--&gt;&lt;!--RP2End--&gt;
+设置是否进行文本特殊实体识别，可自动识别文本中的电话号码、网址、邮箱、地址、日期等实体信息，适用于聊天消息、评论内容、文章正文等需要智能识别和交互的场景。未通过该接口设置时，默认不进行文本特殊实体识别。当 enableDataDetector设置为true时，识别特殊实体。 所识别实体的样式如下，即字体颜色改为蓝色、并添加蓝色下划线。 > **说明：** > > - 设备底层需要具备文本识别能力，该接口才能生效。 > > - 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE时，不进行文本特殊实体识别。 &lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -390,10 +334,6 @@ enableHapticFeedback(isEnabled: boolean)
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -417,10 +357,6 @@ enableSelectedDataDetector(enable: boolean | undefined)
 设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。未通过该接口设置时，默认对选中文本进行实体识别。 启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。 AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。 AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。 需要CopyOptions为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。 在[SelectionContainer](../../../reference/apis-arkui/arkui-ts/ts-basic-components-selectioncontainer.md)跨节点选中场景中该属性 无效，在文本选择菜单中不会展示对应的AI菜单项。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -446,10 +382,6 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -474,10 +406,6 @@ font(value: Font)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -501,10 +429,6 @@ font(fontValue: Font, options?: FontSettingOptions)
 设置文本样式，支持设置字体配置项。 仅Text组件生效，其子组件不生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -533,10 +457,6 @@ fontColor(value: ResourceColor)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -557,13 +477,9 @@ fontColor(value: ResourceColor)
 fontFamily(value: string | Resource)
 ```
 
-设置字体族。未通过该接口设置时，默认字体为'HarmonyOS Sans'。Wearable设备上默认字体也为'HarmonyOS Sans'。 > **说明：** > > 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)注册自定义字体。
+设置字体族。未通过该接口设置时，默认字体为'HarmonyOS Sans'。Wearable设备上默认字体也为'HarmonyOS Sans'。 > **说明：** > > 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -588,10 +504,6 @@ fontFeature(value: string)
 设置文字特性效果，比如数字等宽的特性。 格式为：normal \| \&lt;feature-tag-value\&gt; \&lt;feature-tag-value\&gt;的格式为：\&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ] \&lt;feature-tag-value\&gt;的个数可以有多个，中间用','隔开。 例如，使用等宽数字的输入格式为："ss01" on。 > **说明：** > > 不支持Text内同时存在文本内容和Span或ImageSpan子组件。如果同时存在，只显示Span或ImageSpan内的内容。 > > 字体排版引擎会对开发者传入的宽度width进行向下取整，保证是整型像素后进行排版。如果向上取整，可能会出现文字右侧被截断。 > > 当多个Text组件在Row容器内布局且没有设置具体的布局分配信息时，Text会以Row的最大尺寸进行布局。如果需要子组件主轴累加的尺寸不超过Row容器主轴的尺寸，可以设置 > layoutWeight或者是以Flex布局来约束子组件的主轴尺寸。 > > 系统默认字体支持的liga连字：Th fb ff fb ffb ffh ffi ffk ffl fh fi fk fl rf rt rv rx ry。常导致Span、属性字符串的效果不符合预期，关闭liga连字特性可以规避。 > > 文字特性效果与使用的字体文件密切相关。例如，8标点挤压功能需要字体文件中字符支持"ss08"特性，否则无法压缩，在当前系统默认字体中右侧标点符号及感叹号、顿号、问号均不生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -619,10 +531,6 @@ fontSize(value: number | string | Resource)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -646,10 +554,6 @@ fontStyle(value: FontStyle)
 设置字体样式。未通过该接口设置时，默认字体样式为FontStyle.Normal。Wearable设备上默认字体样式也为FontStyle.Normal。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -675,10 +579,6 @@ fontVariations(fontVariations: Array<FontVariation>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -691,7 +591,7 @@ fontVariations(fontVariations: Array<FontVariation>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontVariations | Array&lt;FontVariation&gt; | 是 | 可变字体的属性数组，数组成员为可变字体的各种属性。fontVariations属性的优先级高于 [fontWeight](#fontWeight) 。 |
+| fontVariations | Array&lt;FontVariation&gt; | 是 | 可变字体的属性数组，数组成员为可变字体的各种属性。fontVariations属性的优先级高于 [fontWeight](#fontweight) 。 |
 
 ## fontWeight
 
@@ -702,10 +602,6 @@ fontWeight(value: number | FontWeight | ResourceStr)
 设置文本的字体粗细，设置过大可能会在不同字体下有截断。未通过该接口设置时，默认字体粗细为FontWeight.Normal。Wearable设备上默认字体粗细为FontWeight.Regular。 仅Text组件生效，其子组件不生效。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -727,13 +623,9 @@ fontWeight(value: number | FontWeight | ResourceStr)
 fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptions)
 ```
 
-设置文本字重，支持设置字体配置项。设置过大可能会在不同字体下有截断。[fontVariations](#fontVariations)属性的优先级高于本属性，同时设置时以 fontVariations的值为准。未通过该接口设置时，默认文本字重为FontWeight.Normal。Wearable设备上默认文本字重为FontWeight.Regular。 仅Text组件生效，其子组件不生效。&lt;!--RP4--&gt;&lt;!--RP4End--&gt;
+设置文本字重，支持设置字体配置项。设置过大可能会在不同字体下有截断。[fontVariations](#fontvariations)属性的优先级高于本属性，同时设置时以 fontVariations的值为准。未通过该接口设置时，默认文本字重为FontWeight.Normal。Wearable设备上默认文本字重为FontWeight.Regular。 仅Text组件生效，其子组件不生效。&lt;!--RP4--&gt;&lt;!--RP4End--&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -758,13 +650,9 @@ fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptio
 halfLeading(halfLeading: boolean)
 ```
 
-设置文本是否垂直居中。未通过该接口设置时，默认文本不平分至行的顶部与底部。 > **说明：** > > 与[textVerticalAlign](#textVerticalAlign)同时配置时，halfLeading不生效。
+设置文本是否垂直居中。未通过该接口设置时，默认文本不平分至行的顶部与底部。 > **说明：** > > 与[textVerticalAlign](#textverticalalign)同时配置时，halfLeading不生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -778,7 +666,7 @@ halfLeading(halfLeading: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| halfLeading | boolean | 是 | 设置文本是否垂直居中。与[textVerticalAlign](#textVerticalAlign)同时配置时， halfLeading不生效。 <br>true表示将行间距平分至行的顶部与底部，false则不平分。 |
+| halfLeading | boolean | 是 | 设置文本是否垂直居中。与[textVerticalAlign](#textverticalalign)同时配置时， halfLeading不生效。 <br>true表示将行间距平分至行的顶部与底部，false则不平分。 |
 
 ## heightAdaptivePolicy
 
@@ -786,13 +674,9 @@ halfLeading(halfLeading: boolean)
 heightAdaptivePolicy(value: TextHeightAdaptivePolicy)
 ```
 
-设置文本自适应布局调整字号的方式。未通过该接口设置时，默认文本自适应高度的方式为TextHeightAdaptivePolicy.MAX_LINES_FIRST。 规则如下： - MAX_LINES_FIRST模式：优先使用[maxLines](#maxLines)属性来调整文本高度。如果使用maxLines属性的布局大小超过了布局约束，则尝试在 [minFontSize](#minFontSize)和[maxFontSize](#maxFontSize)的范围内缩小字体以显示更多文本。 - MIN_FONT_SIZE_FIRST模式：优先使用minFontSize属性来调整文本高度。如果使用minFontSize属性可以将文本布局在一行中，则尝试在minFontSize和maxFontSize的范围内增大字体并使 用最大限度的字体大小在一行内显示，否则按minFontSize显示。 - LAYOUT_CONSTRAINT_FIRST模式：优先使用布局约束来调整文本高度。如果布局大小超过布局约束，则尝试在minFontSize和maxFontSize的范围内缩小字体以满足布局约束。如果将字体大小缩小到 minFontSize后，布局大小仍然超过布局约束，则删除超过布局约束的行。
+设置文本自适应布局调整字号的方式。未通过该接口设置时，默认文本自适应高度的方式为TextHeightAdaptivePolicy.MAX_LINES_FIRST。 规则如下： - MAX_LINES_FIRST模式：优先使用[maxLines](#maxlines)属性来调整文本高度。如果使用maxLines属性的布局大小超过了布局约束，则尝试在 [minFontSize](#minfontsize)和[maxFontSize](#maxfontsize)的范围内缩小字体以显示更多文本。 - MIN_FONT_SIZE_FIRST模式：优先使用minFontSize属性来调整文本高度。如果使用minFontSize属性可以将文本布局在一行中，则尝试在minFontSize和maxFontSize的范围内增大字体并使 用最大限度的字体大小在一行内显示，否则按minFontSize显示。 - LAYOUT_CONSTRAINT_FIRST模式：优先使用布局约束来调整文本高度。如果布局大小超过布局约束，则尝试在minFontSize和maxFontSize的范围内缩小字体以满足布局约束。如果将字体大小缩小到 minFontSize后，布局大小仍然超过布局约束，则删除超过布局约束的行。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -818,10 +702,6 @@ includeFontPadding(include: Optional<boolean>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -845,10 +725,6 @@ incrementalUpdatePolicy(policy: IncrementalUpdatePolicy | undefined)
 设置文本渲染的增量更新策略。未通过该接口设置时，默认为IncrementalUpdatePolicy.NONE。 该接口仅在Text内容包含属性字符串（StyledString）时生效。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -874,10 +750,6 @@ letterSpacing(value: number | ResourceStr)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -898,13 +770,9 @@ letterSpacing(value: number | ResourceStr)
 lineBreakStrategy(strategy: LineBreakStrategy)
 ```
 
-设置折行规则。该属性在[wordBreak](#wordBreak)不等于WordBreak.BREAK_ALL的时候生效，且不支持连词符。未通过该接口设置时，默认折行规则为 LineBreakStrategy.GREEDY。
+设置折行规则。该属性在[wordBreak](#wordbreak)不等于WordBreak.BREAK_ALL的时候生效，且不支持连词符。未通过该接口设置时，默认折行规则为 LineBreakStrategy.GREEDY。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -926,13 +794,9 @@ lineBreakStrategy(strategy: LineBreakStrategy)
 lineHeight(value: number | string | Resource)
 ```
 
-设置文本行高。 当与[lineHeightMultiple](#lineHeightMultiple)同时设置且lineHeightMultiple使用有效值时，lineHeight的设置不生效，以 lineHeightMultiple为准。 设置值不大于0时，不限制文本行高，自适应字体大小，number类型时单位为fp。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。 > **说明：** > > 特殊字符字体高度远超出同行的其他字符高度时，文本框出现截断、遮挡、内容相对位置发生变化等不符合预期的显示异常，需要开发者调整组件高度、行高等属性，修改对应的页面布局。
+设置文本行高。 当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineHeight的设置不生效，以 lineHeightMultiple为准。 设置值不大于0时，不限制文本行高，自适应字体大小，number类型时单位为fp。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。 > **说明：** > > 特殊字符字体高度远超出同行的其他字符高度时，文本框出现截断、遮挡、内容相对位置发生变化等不符合预期的显示异常，需要开发者调整组件高度、行高等属性，修改对应的页面布局。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -954,13 +818,9 @@ lineHeight(value: number | string | Resource)
 lineHeightMultiple(value: number | undefined)
 ```
 
-使用倍数模式设置文本的行高。 设置行高为入参（value）与字高（fontHeight）的乘积。 > **说明：** > > 当lineHeightMultiple使用有效值和[lineHeight](#lineHeight)或 > [lineSpacing](#lineSpacing)同时设置时，仅lineHeightMultiple生效。 > lineHeightMultiple小于0时，lineHeightMultiple不生效，使用[lineHeight](#lineHeight)和 > [lineSpacing](#lineSpacing)设置行高和行间距。
+使用倍数模式设置文本的行高。 设置行高为入参（value）与字高（fontHeight）的乘积。 > **说明：** > > 当lineHeightMultiple使用有效值和[lineHeight](#lineheight)或 > [lineSpacing](#linespacing)同时设置时，仅lineHeightMultiple生效。 > lineHeightMultiple小于0时，lineHeightMultiple不生效，使用[lineHeight](#lineheight)和 > [lineSpacing](#linespacing)设置行高和行间距。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -984,13 +844,9 @@ lineHeightMultiple(value: number | undefined)
 lineSpacing(value: LengthMetrics)
 ```
 
-设置文本的行间距，设置值小于0时，取默认值0。未通过该接口设置时，默认行间距为0。 当与[lineHeightMultiple](#lineHeightMultiple)同时设置且lineHeightMultiple使用有效值时，lineSpacing的设置不生效，以 lineHeightMultiple为准。
+设置文本的行间距，设置值小于0时，取默认值0。未通过该接口设置时，默认行间距为0。 当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineSpacing的设置不生效，以 lineHeightMultiple为准。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1012,13 +868,9 @@ lineSpacing(value: LengthMetrics)
 lineSpacing(value: LengthMetrics, options?: LineSpacingOptions)
 ```
 
-设置文本的行间距。当不配置LineSpacingOptions时，首行上方和尾行下方默认会有行间距。 当与[lineHeightMultiple](#lineHeightMultiple)同时设置且lineHeightMultiple使用有效值时，lineSpacing的设置不生效，以 lineHeightMultiple为准。
+设置文本的行间距。当不配置LineSpacingOptions时，首行上方和尾行下方默认会有行间距。 当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineSpacing的设置不生效，以 lineHeightMultiple为准。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1045,10 +897,6 @@ marqueeOptions(options: Optional<TextMarqueeOptions>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1073,10 +921,6 @@ maxFontScale(scale: number | Resource)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1097,13 +941,9 @@ maxFontScale(scale: number | Resource)
 maxFontSize(value: number | string | Resource)
 ```
 
-设置文本最大显示字号。 string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。 需配合[minFontSize](#minFontSize)以及[maxLines](#maxLines)或布局大小限制使用，单独设置不生效。 自适应字号生效时，fontSize设置不生效。 maxFontSize小于等于0或者maxFontSize小于minFontSize时，自适应字号不生效，此时按照[fontSize](#fontSize)属性的值生效，未设置时按照其默认值生 效。 从API version 18开始支持在子组件和属性字符串上生效，未设置字号的部分会自适应。
+设置文本最大显示字号。 string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。 需配合[minFontSize](#minfontsize)以及[maxLines](#maxlines)或布局大小限制使用，单独设置不生效。 自适应字号生效时，fontSize设置不生效。 maxFontSize小于等于0或者maxFontSize小于minFontSize时，自适应字号不生效，此时按照[fontSize](#fontsize)属性的值生效，未设置时按照其默认值生 效。 从API version 18开始支持在子组件和属性字符串上生效，未设置字号的部分会自适应。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1129,10 +969,6 @@ maxLineHeight(value: LengthMetrics | undefined)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -1155,13 +991,9 @@ maxLineHeight(value: LengthMetrics | undefined)
 maxLines(value: number)
 ```
 
-设置文本的最大行数。与[minLines](#minLines)同时配置时，最小行数显示范围不会超过maxLines设置的限制。 默认情况下，文本是自动折行的，如果指定此属性，则文本最多不会超过指定的行数。如果有多余的文本，可以通过[textOverflow](#textOverflow)来指定截断方式。
+设置文本的最大行数。与[minLines](#minlines)同时配置时，最小行数显示范围不会超过maxLines设置的限制。 默认情况下，文本是自动折行的，如果指定此属性，则文本最多不会超过指定的行数。如果有多余的文本，可以通过[textOverflow](#textoverflow)来指定截断方式。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1187,10 +1019,6 @@ minFontScale(scale: number | Resource)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1211,13 +1039,9 @@ minFontScale(scale: number | Resource)
 minFontSize(value: number | string | Resource)
 ```
 
-设置文本最小显示字号。 string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。 需配合[maxFontSize](#maxFontSize)以及[maxLines](#maxLines)或布局大小限制使用，单独设置不生效。 自适应字号生效时，fontSize设置不生效。 minFontSize小于或等于0时，自适应字号不生效，此时按照[fontSize](#fontSize)属性的值生效，未设置时按照其默认值生效。 从API version 18开始，支持在子组件和属性字符串上生效，未设置字号的部分会自适应。
+设置文本最小显示字号。 string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。 需配合[maxFontSize](#maxfontsize)以及[maxLines](#maxlines)或布局大小限制使用，单独设置不生效。 自适应字号生效时，fontSize设置不生效。 minFontSize小于或等于0时，自适应字号不生效，此时按照[fontSize](#fontsize)属性的值生效，未设置时按照其默认值生效。 从API version 18开始，支持在子组件和属性字符串上生效，未设置字号的部分会自适应。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1239,13 +1063,9 @@ minFontSize(value: number | string | Resource)
 minLineHeight(value: LengthMetrics | undefined)
 ```
 
-设置文本的最小行高，设置值不大于0时，取默认值0。当[maxLineHeight](#maxLineHeight)的设置值小于minLineHeight时，maxLineHeight会按照 minLineHeight的值生效。
+设置文本的最小行高，设置值不大于0时，取默认值0。当[maxLineHeight](#maxlineheight)的设置值小于minLineHeight时，maxLineHeight会按照 minLineHeight的值生效。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1269,13 +1089,9 @@ minLineHeight(value: LengthMetrics | undefined)
 minLines(minLines: Optional<number>)
 ```
 
-设置文本显示的最小行数。 如果实际文本高度小于最小行数对应的高度，最后显示高度为最小行数对应的高度。 与[maxLines](#maxLines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。 如果文本设置了constraintSize，那么组件最后显示高度会在 constraintSize约束内。
+设置文本显示的最小行数。 如果实际文本高度小于最小行数对应的高度，最后显示高度为最小行数对应的高度。 与[maxLines](#maxlines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。 如果文本设置了constraintSize，那么组件最后显示高度会在 constraintSize约束内。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1291,7 +1107,7 @@ minLines(minLines: Optional<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| minLines | Optional&lt;number&gt; | 是 | 文本最小行数。 <br>取值范围：[0, INT32_MAX] <br>设置的值小于0时按0处理。 <br>**说明：** <br>与[maxLines](#maxLines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。 |
+| minLines | Optional&lt;number&gt; | 是 | 文本最小行数。 <br>取值范围：[0, INT32_MAX] <br>设置的值小于0时按0处理。 <br>**说明：** <br>与[maxLines](#maxlines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。 |
 
 ## onCopy
 
@@ -1302,10 +1118,6 @@ onCopy(callback: (value: string) => void)
 长按文本内部区域弹出剪贴板后，点击剪贴板复制按钮，触发该回调。目前只有文本可以复制。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1331,10 +1143,6 @@ onMarqueeStateChange(callback: Callback<MarqueeState>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1358,10 +1166,6 @@ onTextSelectionChange(callback: (selectionStart: number, selectionEnd: number) =
 文本选择的位置发生变化时，触发该回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1387,10 +1191,6 @@ onWillCopy(callback: Callback<string, boolean>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1411,13 +1211,9 @@ onWillCopy(callback: Callback<string, boolean>)
 optimizeTrailingSpace(optimize: Optional<boolean>)
 ```
 
-设置是否在文本布局过程中优化每行末尾的空格，可解决行尾空格影响对齐显示效果问题。未通过该接口设置时，默认不优化每行末尾的空格。 设置Text.optimizeTrailingSpace为true时： * 多行、单行、图文混排等多种情况下均会优化行尾空格（TextAlign.Center或TextAlign.End时，优化效果明显）； * 纯空格文本时，修饰线、阴影、背景色跟随空格文本显示； * 行首空格不在优化范围内，行尾文本强制换行，每行行尾空格根据组件宽度优化行尾空格。 当纯空格文本设置优化行尾空格[optimizeTrailingSpace](#optimizeTrailingSpace)为true时，不允许同时设置文本背景色 backgroundColor、空格装饰线 [decoration](#decoration)和对齐[textAlign](#textAlign)三个属性。
+设置是否在文本布局过程中优化每行末尾的空格，可解决行尾空格影响对齐显示效果问题。未通过该接口设置时，默认不优化每行末尾的空格。 设置Text.optimizeTrailingSpace为true时： * 多行、单行、图文混排等多种情况下均会优化行尾空格（TextAlign.Center或TextAlign.End时，优化效果明显）； * 纯空格文本时，修饰线、阴影、背景色跟随空格文本显示； * 行首空格不在优化范围内，行尾文本强制换行，每行行尾空格根据组件宽度优化行尾空格。 当纯空格文本设置优化行尾空格[optimizeTrailingSpace](#optimizetrailingspace)为true时，不允许同时设置文本背景色 backgroundColor、空格装饰线 [decoration](#decoration)和对齐[textAlign](#textalign)三个属性。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1439,13 +1235,9 @@ optimizeTrailingSpace(optimize: Optional<boolean>)
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。 孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](#wordBreak)为非 BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)为“zh-Hans”或“zh-Hant”时生效。
+设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。 孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](#wordbreak)为非 BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md#textstyle)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md#textstyle)为“zh-Hans”或“zh-Hant”时生效。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -1468,10 +1260,6 @@ privacySensitive(supported: boolean)
 设置是否支持卡片敏感隐私信息。未通过该接口设置时，默认不支持卡片敏感隐私信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1499,10 +1287,6 @@ punctuationOverflow(enabled: Optional<boolean>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1526,10 +1310,6 @@ selectedBackgroundColor(color: ResourceColor)
 设置文本选中底板颜色。如果未设置不透明度，默认不透明度为20%。未通过该接口设置时，默认文本选中底板颜色为'#007DFF'（蓝色）。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1555,10 +1335,6 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -1579,13 +1355,9 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 selection(selectionStart: number, selectionEnd: number)
 ```
 
-设置选中区域。未通过该接口设置时，默认不设置选中区域（selectionStart和selectionEnd均为-1）。 选中区域高亮且显示手柄和文本选择菜单。 当[copyOption](#copyOption)设置为CopyOptions.None时，设置selection属性不生效。 当[textOverflow](#textOverflow)设置为TextOverflow.MARQUEE时，设置selection属性不生效。 当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。 当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。当clip设置为false时，超出父组件的文本可以被 选中。 可通过[onTextSelectionChange](#onTextSelectionChange)接口获取选中区域位置变化结果。
+设置选中区域。未通过该接口设置时，默认不设置选中区域（selectionStart和selectionEnd均为-1）。 选中区域高亮且显示手柄和文本选择菜单。 当[copyOption](#copyoption)设置为CopyOptions.None时，设置selection属性不生效。 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE时，设置selection属性不生效。 当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。 当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。当clip设置为false时，超出父组件的文本可以被 选中。 可通过[onTextSelectionChange](#ontextselectionchange)接口获取选中区域位置变化结果。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1608,13 +1380,9 @@ selection(selectionStart: number, selectionEnd: number)
 shaderStyle(shader: ShaderStyle)
 ```
 
-可以显示为径向渐变RadialGradientStyle或线性渐变LinearGradientStyle或纯色 ColorShaderStyle的效果，shaderStyle的优先级高于[fontColor](#fontColor)和AI识别，纯色建议 使用[fontColor](#fontColor)。
+可以显示为径向渐变RadialGradientStyle或线性渐变LinearGradientStyle或纯色 ColorShaderStyle的效果，shaderStyle的优先级高于[fontColor](#fontcolor)和AI识别，纯色建议 使用[fontColor](#fontcolor)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1640,10 +1408,6 @@ tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1664,13 +1428,9 @@ tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>)
 textAlign(value: TextAlign)
 ```
 
-设置文本段落在水平方向的对齐方式。未通过该接口设置时，默认文本段落在水平方向的对齐方式为TextAlign.Start。Wearable设备上默认为TextAlign.Center。 当[textOverflow](#textOverflow)设置为TextOverflow.MARQUEE且文本可滚动时，textAlign属性不生效。 文本段落宽度占满Text组件宽度。 可通过align属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置，具体效果如下： - Alignment.TopStart、Alignment.Top、Alignment.TopEnd：内容顶部对齐。 - Alignment.Start、Alignment.Center、Alignment.End：内容垂直居中。 - Alignment.BottomStart、Alignment.Bottom、Alignment.BottomEnd：内容底部对齐。 当textAlign属性设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordBreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 > **说明：** > > textAlign只能调整文本整体的布局，不影响字符的显示顺序。若需要调整字符的显示顺序，请参考[镜像状态字符对齐](../../../ui/arkts-internationalization.md#镜像状态字符对齐)。
+设置文本段落在水平方向的对齐方式。未通过该接口设置时，默认文本段落在水平方向的对齐方式为TextAlign.Start。Wearable设备上默认为TextAlign.Center。 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE且文本可滚动时，textAlign属性不生效。 文本段落宽度占满Text组件宽度。 可通过align属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置，具体效果如下： - Alignment.TopStart、Alignment.Top、Alignment.TopEnd：内容顶部对齐。 - Alignment.Start、Alignment.Center、Alignment.End：内容垂直居中。 - Alignment.BottomStart、Alignment.Bottom、Alignment.BottomEnd：内容底部对齐。 当textAlign属性设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordbreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 > **说明：** > > textAlign只能调整文本整体的布局，不影响字符的显示顺序。若需要调整字符的显示顺序，请参考[镜像状态字符对齐](../../../ui/arkts-internationalization.md#镜像状态字符对齐)。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1684,7 +1444,7 @@ textAlign(value: TextAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | TextAlign | 是 | 文本段落在水平方向的对齐方式。 <br>**说明：** <br>当设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordBreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 |
+| value | TextAlign | 是 | 文本段落在水平方向的对齐方式。 <br>**说明：** <br>当设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordbreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 |
 
 ## textCase
 
@@ -1695,10 +1455,6 @@ textCase(value: TextCase)
 设置文本大小写。未通过该接口设置时，默认文本大小写行为为TextCase.Normal。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1724,10 +1480,6 @@ textContentAlign(textContentAlign: Optional<TextContentAlign>)
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -1751,10 +1503,6 @@ textDirection(direction: TextDirection | undefined)
 指定文本排版方向，未通过该接口设置时，默认文本排版方向遵循组件布局方向。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1780,10 +1528,6 @@ textIndent(value: Length)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1804,13 +1548,9 @@ textIndent(value: Length)
 textOverflow(options: TextOverflowOptions)
 ```
 
-设置文本超长时的显示方式。 当[TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md#TextOverflowOptions)设置为TextOverflow.None、TextOverflow.Clip或TextOverflow.Ellipsis时： - 设置为TextOverflow.None、TextOverflow.Clip，文本超长时按最大行截断显示。 - 设置为TextOverflow.Ellipsis，文本超长时超出显示区域的文本用省略号代替。 - 需配合[maxLines](#maxLines)使用，单独设置不生效。 - 断行规则参考[wordBreak](#wordBreak)。默认情况下参考WordBreak.BREAK_WORD的截断方式，文本截断按字进行。例如，英文以单词为最小单位进行截断。若需要以 字母为单位进行截断，可设置wordBreak属性为WordBreak.BREAK_ALL。 - 折行规则参考[lineBreakStrategy](#lineBreakStrategy)。该属性在[wordBreak](#wordBreak)不等 于WordBreak.BREAK_ALL的时候生效，不支持连词符。 - 从API version 11开始，建议优先组合[textOverflow](#textOverflow)和 [wordBreak](#wordBreak)属性来设置截断方式，具体详见 [示例4（设置文本断行及折行）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例4设置文本断行及折行)&lt;!--RP1--&gt;&lt;!--RP1 End--&gt;。 当TextOverflowOptions设置为TextOverflow.MARQUEE时： - 文本在一行内滚动显示。 - 设置[maxLines](#maxLines)、[copyOption](#copyOption)、 [selection](#selection)属性均不生效，且不能进行文本特殊实体识别（即 [enableDataDetector](#enableDataDetector)设置enable为true时不生效）。 - Text组件clip属性默认为true。 - 属性字符串的CustomSpan不支持跑马灯模式。 - [textAlign](#textAlign)属性的生效规则：当文本不可滚动时，textAlign属性生效；当文本可滚动时，textAlign属性不生效。 - 从API version 12开始，当TextOverflowOptions设置为TextOverflow.MARQUEE时，支持ImageSpan组件，文本和图片可在一行内滚动显示。
+设置文本超长时的显示方式。 当[TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md#textoverflowoptions)设置为TextOverflow.None、TextOverflow.Clip或TextOverflow.Ellipsis时： - 设置为TextOverflow.None、TextOverflow.Clip，文本超长时按最大行截断显示。 - 设置为TextOverflow.Ellipsis，文本超长时超出显示区域的文本用省略号代替。 - 需配合[maxLines](#maxlines)使用，单独设置不生效。 - 断行规则参考[wordBreak](#wordbreak)。默认情况下参考WordBreak.BREAK_WORD的截断方式，文本截断按字进行。例如，英文以单词为最小单位进行截断。若需要以 字母为单位进行截断，可设置wordBreak属性为WordBreak.BREAK_ALL。 - 折行规则参考[lineBreakStrategy](#linebreakstrategy)。该属性在[wordBreak](#wordbreak)不等 于WordBreak.BREAK_ALL的时候生效，不支持连词符。 - 从API version 11开始，建议优先组合[textOverflow](#textoverflow)和 [wordBreak](#wordbreak)属性来设置截断方式，具体详见 [示例4（设置文本断行及折行）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例4设置文本断行及折行)&lt;!--RP1--&gt;&lt;!--RP1 End--&gt;。 当TextOverflowOptions设置为TextOverflow.MARQUEE时： - 文本在一行内滚动显示。 - 设置[maxLines](#maxlines)、[copyOption](#copyoption)、 [selection](#selection)属性均不生效，且不能进行文本特殊实体识别（即 [enableDataDetector](#enabledatadetector)设置enable为true时不生效）。 - Text组件clip属性默认为true。 - 属性字符串的CustomSpan不支持跑马灯模式。 - [textAlign](#textalign)属性的生效规则：当文本不可滚动时，textAlign属性生效；当文本可滚动时，textAlign属性不生效。 - 从API version 12开始，当TextOverflowOptions设置为TextOverflow.MARQUEE时，支持ImageSpan组件，文本和图片可在一行内滚动显示。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1832,13 +1572,9 @@ textOverflow(options: TextOverflowOptions)
 textSelectable(mode: TextSelectableMode)
 ```
 
-设置是否支持文本可选择、可获焦。未通过该接口设置时，默认文本可选择、不可获焦（TextSelectableMode.SELECTABLE_UNFOCUSABLE）。 需配合[copyOption](#copyOption)使用。当copyOption设置为CopyOptions.None时，设置textSelectable属性不生效。
+设置是否支持文本可选择、可获焦。未通过该接口设置时，默认文本可选择、不可获焦（TextSelectableMode.SELECTABLE_UNFOCUSABLE）。 需配合[copyOption](#copyoption)使用。当copyOption设置为CopyOptions.None时，设置textSelectable属性不生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1864,10 +1600,6 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1890,13 +1622,9 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>)
 ```
 
-设置文本段落在垂直方向的对齐方式。未通过该接口设置时，默认文本段落在垂直方向的对齐方式为TextVerticalAlign.BASELINE。 > **说明：** > > - 与[halfLeading](#halfLeading)同时配置时，halfLeading不生效。 > > - 一个段落下使用同一字号必须同时设置行高[lineHeight](#lineHeight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的 > 排版效果。属性字符串TextStyle中的SuperscriptStyle上下角标样式仅在TextVerticalAlign属性值为 > TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
+设置文本段落在垂直方向的对齐方式。未通过该接口设置时，默认文本段落在垂直方向的对齐方式为TextVerticalAlign.BASELINE。 > **说明：** > > - 与[halfLeading](#halfleading)同时配置时，halfLeading不生效。 > > - 一个段落下使用同一字号必须同时设置行高[lineHeight](#lineheight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的 > 排版效果。属性字符串TextStyle中的SuperscriptStyle上下角标样式仅在TextVerticalAlign属性值为 > TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1921,10 +1649,6 @@ wordBreak(value: WordBreak)
 设置断行规则。未通过该接口设置时，默认断行规则为WordBreak.BREAK_WORD。 默认情况下，不调用wordBreak或者设置WordBreak.BREAK_WORD时，文本截断按字进行。例如，英文以单词为最小单位进行截断。 WordBreak.BREAK_ALL与{overflow:&nbsp;TextOverflow.Ellipsis}、maxLines组合使用，可实现英文单词按字母截断，超出部分以省略号显示。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

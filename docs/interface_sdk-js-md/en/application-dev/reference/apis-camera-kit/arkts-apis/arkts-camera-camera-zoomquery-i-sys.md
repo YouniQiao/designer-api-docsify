@@ -4,10 +4,6 @@ ZoomQuery provides APIs to query the zoom feature of a device camera, including 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface ZoomQuery--><!--Device-camera-interface ZoomQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -27,10 +23,6 @@ getZoomPointInfos(): Array<ZoomPointInfo>
 Obtains the equivalent focal length information list in the current mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -53,7 +45,7 @@ Obtains the equivalent focal length information list in the current mode.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 24 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { camera } from '@kit.CameraKit';
@@ -81,10 +73,6 @@ isZoomCenterPointSupported(): boolean
 Checks whether zoom center point is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ZoomQuery-isZoomCenterPointSupported(): boolean--><!--Device-ZoomQuery-isZoomCenterPointSupported(): boolean-End-->
 

@@ -16,10 +16,6 @@ Certificate verification to the server.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-networkSecurity-export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<int>--><!--Device-networkSecurity-export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -60,7 +56,7 @@ Certificate verification to the server.
 | [2305018](../errorcode-net-networkSecurity.md#2305018-selfsigned-certificate) | Self-signed certificate. |
 | [2305023](../errorcode-net-networkSecurity.md#2305023-certificate-revoked) | Certificate has been revoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { networkSecurity } from '@kit.NetworkKit';

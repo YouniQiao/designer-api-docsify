@@ -4,10 +4,6 @@ TemplateFormDetailInfo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-interface TemplateFormDetailInfo--><!--Device-formInfo-interface TemplateFormDetailInfo-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -32,10 +28,6 @@ Obtains the ability name of the template form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TemplateFormDetailInfo-abilityName: string--><!--Device-TemplateFormDetailInfo-abilityName: string-End-->
@@ -55,10 +47,6 @@ Obtains the bundle name of the template form.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Obtains the form description of the template form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TemplateFormDetailInfo-description: string--><!--Device-TemplateFormDetailInfo-description: string-End-->
@@ -103,10 +87,6 @@ Obtains the form detail Id of the template form.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Obtains the form dimension of the template form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TemplateFormDetailInfo-dimension: FormDimension--><!--Device-TemplateFormDetailInfo-dimension: FormDimension-End-->
@@ -151,10 +127,6 @@ Obtains the form display name of the template form.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +148,6 @@ Obtains the form name of the template form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TemplateFormDetailInfo-formName: string--><!--Device-TemplateFormDetailInfo-formName: string-End-->
@@ -199,10 +167,6 @@ Obtains the module name of the template form.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,10 +10,6 @@ function getRssInfo(): RssInfo
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hidebug-function getRssInfo(): RssInfo--><!--Device-hidebug-function getRssInfo(): RssInfo-End-->
@@ -26,7 +22,7 @@ function getRssInfo(): RssInfo
 | --- | --- |
 | [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | 应用进程的物理内存信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

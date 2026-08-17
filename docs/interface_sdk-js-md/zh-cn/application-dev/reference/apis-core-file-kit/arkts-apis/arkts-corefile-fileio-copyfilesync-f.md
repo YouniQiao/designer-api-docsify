@@ -10,11 +10,9 @@ declare function copyFileSync(src: string | number, dest: string | number, mode?
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
-**替代接口：** [copyFileSync](arkts-corefile-file-fs-copyfilesync-f.md#copyFileSync)
+**替代接口：** [copyFileSync](arkts-corefile-file-fs-copyfilesync-f.md#copyfilesync)
 
 <!--Device-unnamed-declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void--><!--Device-unnamed-declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void-End-->
 

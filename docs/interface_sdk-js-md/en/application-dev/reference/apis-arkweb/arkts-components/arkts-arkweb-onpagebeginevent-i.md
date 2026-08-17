@@ -1,12 +1,8 @@
 # OnPageBeginEvent
 
-Defines the triggered function at the begin of web page loading.
+Defines the callback information triggered when the web page loading begins, including the page URL. It is suitable for scenarios where monitoring page loading start is required, improving page lifecycle management capabilities.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnPageBeginEvent--><!--Device-unnamed-declare interface OnPageBeginEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered function at the begin of web page loading.
 url: string
 ```
 
-The url of page.
+URL of the page to be loaded when page loading starts.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

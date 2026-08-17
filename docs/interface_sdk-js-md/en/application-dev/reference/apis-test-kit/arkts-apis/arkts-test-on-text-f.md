@@ -44,10 +44,6 @@ Specifies the text for the target Component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ON-export function text(txt: string, pattern?: MatchPattern): On--><!--Device-ON-export function text(txt: string, pattern?: MatchPattern): On-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -57,7 +53,7 @@ Specifies the text for the target Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | the text value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) of the text value. <br>Default value: MatchPattern.EQUALS |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern) of the text value. <br>Default value: MatchPattern.EQUALS |
 
 **Return value:**
 

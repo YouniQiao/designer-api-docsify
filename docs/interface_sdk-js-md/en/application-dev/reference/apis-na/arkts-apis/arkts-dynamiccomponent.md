@@ -7,8 +7,8 @@
 
 | Name | Description |
 | --- | --- |
-| [DynamicComponent](arkts-na-dynamiccomponent-dynamiccomponent-f-sys.md#DynamicComponent-(System-API)) | Defines DynamicComponent Component. |
-| [DynamicComponent](arkts-na-dynamiccomponent-dynamiccomponent-f-sys.md#DynamicComponent-(System-API)) | Defines DynamicComponent Component.It requires call setDynamicComponentOptions at start of the component attribute set-up and it requires call applyAttributeFinish at the end of the component attribute set-up. |
+| [DynamicComponent](arkts-na-dynamiccomponent-dynamiccomponent-f-sys.md#dynamiccomponent-system-api) | Defines DynamicComponent Component. |
+| [DynamicComponent](arkts-na-dynamiccomponent-dynamiccomponent-f-sys.md#dynamiccomponent-system-api) | Defines DynamicComponent Component.It requires call setDynamicComponentOptions at start of the component attribute set-up and it requires call applyAttributeFinish at the end of the component attribute set-up. |
 <!--DelEnd-->
 
 ### Interfaces

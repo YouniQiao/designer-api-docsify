@@ -1,12 +1,8 @@
 # DownloadInfo
 
-下载任务信息，[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#getTaskInfo)接口的回调参数。
+下载任务信息，[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)接口的回调参数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-request-interface DownloadInfo--><!--Device-request-interface DownloadInfo-End-->
 
@@ -24,10 +20,6 @@ description: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadInfo-description: string--><!--Device-DownloadInfo-description: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -43,10 +35,6 @@ downloadId: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadInfo-downloadId: long--><!--Device-DownloadInfo-downloadId: long-End-->
 
@@ -64,10 +52,6 @@ downloadTitle: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadInfo-downloadTitle: string--><!--Device-DownloadInfo-downloadTitle: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -83,10 +67,6 @@ downloadTotalBytes: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadInfo-downloadTotalBytes: long--><!--Device-DownloadInfo-downloadTotalBytes: long-End-->
 
@@ -104,10 +84,6 @@ downloadedBytes: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -123,10 +99,6 @@ failedReason: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadInfo-failedReason: int--><!--Device-DownloadInfo-failedReason: int-End-->
 
@@ -144,10 +116,6 @@ fileName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadInfo-fileName: string--><!--Device-DownloadInfo-fileName: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -163,10 +131,6 @@ filePath: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadInfo-filePath: string--><!--Device-DownloadInfo-filePath: string-End-->
 
@@ -184,10 +148,6 @@ pausedReason: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadInfo-pausedReason: int--><!--Device-DownloadInfo-pausedReason: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -204,10 +164,6 @@ status: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadInfo-status: int--><!--Device-DownloadInfo-status: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
@@ -223,10 +179,6 @@ targetURI: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadInfo-targetURI: string--><!--Device-DownloadInfo-targetURI: string-End-->
 

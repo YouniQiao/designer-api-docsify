@@ -16,9 +16,7 @@ Battery voltage of the device, in unit of microvolt.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-batteryInfo-function voltage(): int--><!--Device-batteryInfo-function voltage(): int-End-->
 

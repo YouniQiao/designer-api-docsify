@@ -4,10 +4,6 @@ Provides fileshare APIS
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace fileShare--><!--Device-unnamed-declare namespace fileShare-End-->
 
 **System capability:** SystemCapability.FileManagement.AppFileService
@@ -24,27 +20,27 @@ import { fileShare } from 'fileShare';
 
 | Name | Description |
 | --- | --- |
-| [activatePermission](arkts-corefile-fileshare-activatepermission-f.md#activatePermission) | Enable the URI that have been permanently authorized |
-| [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md#checkPersistentPermission) | Check persistent permissions for the URI. |
-| [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md#deactivatePermission) | Stop the authorized URI that has been enabled |
-| [persistPermission](arkts-corefile-fileshare-persistpermission-f.md#persistPermission) | Set persistence permissions for the URI |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f.md#revokePermission) | Revoke persistence permissions for the URI |
+| [activatePermission](arkts-corefile-fileshare-activatepermission-f.md#activatepermission) | Enable the URI that have been permanently authorized |
+| [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md#checkpersistentpermission) | Check persistent permissions for the URI. |
+| [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md#deactivatepermission) | Stop the authorized URI that has been enabled |
+| [persistPermission](arkts-corefile-fileshare-persistpermission-f.md#persistpermission) | Set persistence permissions for the URI |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f.md#revokepermission) | Revoke persistence permissions for the URI |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [checkPathPermission](arkts-corefile-fileshare-checkpathpermission-f-sys.md#checkPathPermission) | Check permissions for the path. |
-| [getPersistentPolicy](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md#getPersistentPolicy) | Get all persistence permissions for the application. |
-| [getSharedDirectoryInfo](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md#getSharedDirectoryInfo) | Gets the shared sandbox directories of applications |
-| [grantSharedDirectoryPermission](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md#grantSharedDirectoryPermission) | Provides a permission grant for application-shared directories |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#grantUriPermission) | Provides grant uri permission for app |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#grantUriPermission-(System-API)) | Provides grant uri permission for app |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#grantUriPermission-(System-API)) | Grant URI permissions for an application. |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokePermission-(System-API)) | Revoke all persistence permissions for the application. |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokePermission-(System-API)) | Revoke persistence permissions for the URI. |
-| [revokeSharedDirectoryPermission](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md#revokeSharedDirectoryPermission) | Revokes permission for application-shared directories |
+| [checkPathPermission](arkts-corefile-fileshare-checkpathpermission-f-sys.md#checkpathpermission) | Check permissions for the path. |
+| [getPersistentPolicy](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md#getpersistentpolicy) | Get all persistence permissions for the application. |
+| [getSharedDirectoryInfo](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md#getshareddirectoryinfo) | Gets the shared sandbox directories of applications |
+| [grantSharedDirectoryPermission](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md#grantshareddirectorypermission) | Provides a permission grant for application-shared directories |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission) | Provides grant uri permission for app |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission-system-api) | Provides grant uri permission for app |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md#granturipermission-system-api) | Grant URI permissions for an application. |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokepermission-system-api) | Revoke all persistence permissions for the application. |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md#revokepermission-system-api) | Revoke persistence permissions for the URI. |
+| [revokeSharedDirectoryPermission](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md#revokeshareddirectorypermission) | Revokes permission for application-shared directories |
 <!--DelEnd-->
 
 ### Interfaces

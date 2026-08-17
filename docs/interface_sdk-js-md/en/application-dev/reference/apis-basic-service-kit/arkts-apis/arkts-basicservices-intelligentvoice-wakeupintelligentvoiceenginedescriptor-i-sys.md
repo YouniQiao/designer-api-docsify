@@ -4,10 +4,6 @@ Describes wakeup intelligent voice engine.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngineDescriptor--><!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngineDescriptor-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -32,10 +28,6 @@ Need reconfirm.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WakeupIntelligentVoiceEngineDescriptor-needReconfirm: boolean--><!--Device-WakeupIntelligentVoiceEngineDescriptor-needReconfirm: boolean-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -53,10 +45,6 @@ Wakeup phrase.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WakeupIntelligentVoiceEngineDescriptor-wakeupPhrase: string--><!--Device-WakeupIntelligentVoiceEngineDescriptor-wakeupPhrase: string-End-->
 

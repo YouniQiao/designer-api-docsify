@@ -4,10 +4,6 @@ Represents EAP profile (configuration) information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface WifiEapProfile--><!--Device-wifiManager-interface WifiEapProfile-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,10 +26,6 @@ A string to match the alternate subject. In addition to checking the primary dom
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiEapProfile-altSubjectMatch: string--><!--Device-WifiEapProfile-altSubjectMatch: string-End-->
@@ -51,10 +43,6 @@ Anonymous identity.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ CA certificate alias.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiEapProfile-caCertAliases: string--><!--Device-WifiEapProfile-caCertAliases: string-End-->
@@ -95,10 +79,6 @@ CA certificate path.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ Client certificate content. When **eapMethod** is set to **EAP_TLS**, if this fi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiEapProfile-certEntry: Uint8Array--><!--Device-WifiEapProfile-certEntry: Uint8Array-End-->
@@ -139,10 +115,6 @@ CA certificate password.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +134,6 @@ Client certificate alias. When the client certificate content is empty, the clie
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiEapProfile-clientCertAliases: string--><!--Device-WifiEapProfile-clientCertAliases: string-End-->
@@ -183,10 +151,6 @@ A string to match the domain suffix.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,10 +170,6 @@ EAP authentication method.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiEapProfile-eapMethod: EapMethod--><!--Device-WifiEapProfile-eapMethod: EapMethod-End-->
@@ -227,10 +187,6 @@ Sub-ID of the SIM card.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,10 +206,6 @@ Identity Information. This parameter cannot be empty when **eapMethod** is **TLS
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiEapProfile-identity: string--><!--Device-WifiEapProfile-identity: string-End-->
@@ -271,10 +223,6 @@ Password Authentication (PWD). It enables password-based authentication and does
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -294,10 +242,6 @@ Phase 2 authentication method. This parameter is mandatory only when **eapMethod
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiEapProfile-phase2Method: Phase2Method--><!--Device-WifiEapProfile-phase2Method: Phase2Method-End-->
@@ -316,10 +260,6 @@ Credential provider.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiEapProfile-plmn: string--><!--Device-WifiEapProfile-plmn: string-End-->
@@ -337,10 +277,6 @@ Realm for the passpoint credential.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Defines the ParticleOptions Interface.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ParticleOptions--><!--Device-unnamed-interface ParticleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Particle acceleration. **NOTE：****speed** indicates the acceleration speed, an
 **Default:** {speed:{range:[0,0]};angle:{range:[0,0]}}
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Particle color. **NOTE：**Default value: **{ range:[Color.White,Color.White] }.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -75,10 +63,6 @@ Particle emitter.
 **Type:** [EmitterOptions](arkts-arkui-emitteroptions-i.md)&lt;PARTICLE&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,10 +86,6 @@ Particle opacity. Default value: **{ range:[1.0,1.0] }**
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -127,10 +107,6 @@ Particle scale. Default value: **{ range:[1.0,1.0] }**
 **Default:** {range:[1.0,1.0]}
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,10 +130,6 @@ Particle spin angle. Default value: **{range:[0.0,0.0]}** Direction: A positive 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -179,10 +151,6 @@ Particle velocity. **NOTE：****speed** indicates the time rate at which the par
 **Default:** {speed:[0,0];angle:[0,0]}
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Returns a new `FastBuffer` which is the result of concatenating all the `FastBuf
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBuffer--><!--Device-fastbuffer-function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBuffer-End-->
@@ -45,7 +41,7 @@ Returns a new `FastBuffer` which is the result of concatenating all the `FastBuf
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

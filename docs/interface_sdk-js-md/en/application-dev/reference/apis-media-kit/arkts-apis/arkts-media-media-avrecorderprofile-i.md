@@ -4,10 +4,6 @@ Describes the audio and video recording profile.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface AVRecorderProfile--><!--Device-media-interface AVRecorderProfile-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -30,10 +26,6 @@ AAC profile for AAC audio encoder. If not set, use AAC_LC profile as default.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVRecorderProfile-aacProfile?: AacProfile--><!--Device-AVRecorderProfile-aacProfile?: AacProfile-End-->
@@ -51,10 +43,6 @@ Audio encoding bit rate, in bit/s. This parameter is mandatory for audio recordi
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Number of audio channels. This parameter is mandatory for audio recording.<br>- 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVRecorderProfile-audioChannels?: int--><!--Device-AVRecorderProfile-audioChannels?: int-End-->
@@ -95,10 +79,6 @@ Audio encoding format. This parameter is mandatory for audio recording. Currentl
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,10 +98,6 @@ Audio sampling rate, in Hz. This parameter is mandatory for audio recording.<br>
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVRecorderProfile-audioSampleRate?: int--><!--Device-AVRecorderProfile-audioSampleRate?: int-End-->
@@ -140,10 +116,6 @@ Indicates whether enable B Frame. Default is disabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVRecorderProfile-enableBFrame?: boolean--><!--Device-AVRecorderProfile-enableBFrame?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -160,10 +132,6 @@ Whether temporal layered encoding is supported. This parameter is optional for v
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVRecorderProfile-enableTemporalScale?: boolean--><!--Device-AVRecorderProfile-enableTemporalScale?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -179,10 +147,6 @@ Container format of a file. This parameter is mandatory. Currently, the MP4, M4A
 **Type:** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -202,10 +166,6 @@ HDR encoding. This parameter is optional for video recording. The default value 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVRecorderProfile-isHdr?: boolean--><!--Device-AVRecorderProfile-isHdr?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -221,10 +181,6 @@ Video encoding bit rate, in bit/s. This parameter is mandatory for video recordi
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-videoBitrate?: int--><!--Device-AVRecorderProfile-videoBitrate?: int-End-->
 
@@ -242,10 +198,6 @@ Video encoding format. This parameter is mandatory for video recording. Currentl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVRecorderProfile-videoCodec?: CodecMimeType--><!--Device-AVRecorderProfile-videoCodec?: CodecMimeType-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -261,10 +213,6 @@ Height of a video frame, in px. This parameter is mandatory for video recording.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-videoFrameHeight?: int--><!--Device-AVRecorderProfile-videoFrameHeight?: int-End-->
 
@@ -282,10 +230,6 @@ Video frame rate, in fps. This parameter is mandatory for video recording. The v
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVRecorderProfile-videoFrameRate?: int--><!--Device-AVRecorderProfile-videoFrameRate?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -301,10 +245,6 @@ Width of a video frame, in px. This parameter is mandatory for video recording. 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-videoFrameWidth?: int--><!--Device-AVRecorderProfile-videoFrameWidth?: int-End-->
 

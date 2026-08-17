@@ -1,14 +1,10 @@
 # DotIndicator
 
-A constructor used to create a **DotIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md#Indicator).
+A constructor used to create a **DotIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md#indicator).
 
 **Inheritance/Implementation:** DotIndicator extends Indicator<DotIndicator>
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class DotIndicator--><!--Device-unnamed-declare class DotIndicator-End-->
 
@@ -23,10 +19,6 @@ color(value: ResourceColor): DotIndicator
 Sets the color of the dot-style navigation indicator.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,10 +52,6 @@ A constructor used to create a **DotIndicator** object. > **NOTE：**> > - When 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -83,10 +71,6 @@ indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 Set indicator icon.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,10 +104,6 @@ Sets the height of a dot-style navigation indicator of the **Swiper** component.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -155,10 +135,6 @@ itemWidth(value: Length): DotIndicator
 Sets the width of a dot-style navigation indicator of the **Swiper** component.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,10 +168,6 @@ Sets whether to enable the mask for the dot-style navigation indicator.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -228,10 +200,6 @@ Sets the maximum number of navigation dots in the dot-style navigation indicator
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -261,10 +229,6 @@ selectedColor(value: ResourceColor): DotIndicator
 Sets the color of the selected dot-style navigation indicator.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -298,10 +262,6 @@ Sets the height of the selected dot-style navigation indicator.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -334,10 +294,6 @@ Sets the width of the selected dot-style navigation indicator.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -369,10 +325,6 @@ space(space: LengthMetrics): DotIndicator
 Sets the spacing between dot-style navigation indicators of the **Swiper** component.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Intl-interface Collator--><!--Device-Intl-interface Collator-End-->
 
 ## compare
@@ -15,10 +11,6 @@ compare(x: string, y: string): number
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Collator-compare(x: string, y: string): number--><!--Device-Collator-compare(x: string, y: string): number-End-->
 
@@ -42,10 +34,6 @@ resolvedOptions(): ResolvedCollatorOptions
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Collator-resolvedOptions(): ResolvedCollatorOptions--><!--Device-Collator-resolvedOptions(): ResolvedCollatorOptions-End-->
 

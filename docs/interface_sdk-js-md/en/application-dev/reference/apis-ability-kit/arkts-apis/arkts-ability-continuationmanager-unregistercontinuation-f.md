@@ -16,8 +16,6 @@ Unregisters the continuation management service. This API uses an asynchronous c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -46,7 +44,7 @@ Unregisters the continuation management service. This API uses an asynchronous c
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -75,8 +73,6 @@ function unregisterContinuation(token: number): Promise<void>
 Unregisters the continuation management service. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 22
 
@@ -111,7 +107,7 @@ Unregisters the continuation management service. This API uses a promise to retu
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

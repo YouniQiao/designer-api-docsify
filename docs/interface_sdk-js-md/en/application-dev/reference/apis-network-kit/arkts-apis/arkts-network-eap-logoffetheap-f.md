@@ -16,10 +16,6 @@ Check whether the specified network is active.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
 <!--Device-eap-function logOffEthEap(netId: number): void--><!--Device-eap-function logOffEthEap(netId: number): void-End-->
@@ -43,7 +39,7 @@ Check whether the specified network is active.
 | [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
 | [33200001](../errorcode-net-eap.md#33200001-invalid-netid) | Invalid netId |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {eap} from '@kit.NetworkKit';

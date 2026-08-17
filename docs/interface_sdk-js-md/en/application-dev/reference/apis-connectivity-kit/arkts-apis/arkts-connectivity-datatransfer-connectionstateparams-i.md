@@ -4,10 +4,6 @@ Describes the parameters required for obtaining the connection status.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-dataTransfer-interface ConnectionStateParams--><!--Device-dataTransfer-interface ConnectionStateParams-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -30,10 +26,6 @@ Indicates the connected device address. The length must be 17, The value consist
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionStateParams-address: string--><!--Device-ConnectionStateParams-address: string-End-->
@@ -51,10 +43,6 @@ Indicates the service uuid. The length must be 36, The value consists of 36 hexa
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ function openDoubleClickSettingsPage(context: Context): void
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function openDoubleClickSettingsPage(context: Context): void--><!--Device-settings-function openDoubleClickSettingsPage(context: Context): void-End-->

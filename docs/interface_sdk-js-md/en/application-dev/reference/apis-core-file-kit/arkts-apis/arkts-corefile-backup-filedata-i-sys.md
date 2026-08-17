@@ -4,10 +4,6 @@ Corresponding to a file's data. Filedata is useful when doing IPC with the backu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backup-interface FileData--><!--Device-backup-interface FileData-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -31,10 +27,6 @@ Indicates a native file descriptor typically retrieved from the backup service t
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FileData-fd: int--><!--Device-FileData-fd: int-End-->
 

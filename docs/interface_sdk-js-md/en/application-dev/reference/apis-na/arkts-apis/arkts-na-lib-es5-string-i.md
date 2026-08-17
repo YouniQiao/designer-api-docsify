@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
 
 ## charAt
@@ -17,10 +13,6 @@ charAt(pos: number): string
 Returns the character at the specified index.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-charAt(pos: number): string--><!--Device-String-charAt(pos: number): string-End-->
 
@@ -46,10 +38,6 @@ Returns the Unicode value of the character at the specified location.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-charCodeAt(index: number): number--><!--Device-String-charCodeAt(index: number): number-End-->
 
 **Parameters:**
@@ -74,10 +62,6 @@ Returns a string that contains the concatenation of two or more strings.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-concat(...strings: string[]): string--><!--Device-String-concat(...strings: string[]): string-End-->
 
 **Parameters:**
@@ -101,10 +85,6 @@ indexOf(searchString: string, position?: number): number
 Returns the position of the first occurrence of a substring.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-indexOf(searchString: string, position?: number): number--><!--Device-String-indexOf(searchString: string, position?: number): number-End-->
 
@@ -131,10 +111,6 @@ Returns the last occurrence of a substring in the string.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-lastIndexOf(searchString: string, position?: number): number--><!--Device-String-lastIndexOf(searchString: string, position?: number): number-End-->
 
 **Parameters:**
@@ -159,10 +135,6 @@ localeCompare(that: string, locales?: string | string[], options?: Intl.Collator
 Determines whether two strings are equivalent in the current or specified locale.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-localeCompare(that: string, locales?: string | string[], options?: Intl.CollatorOptions): number--><!--Device-String-localeCompare(that: string, locales?: string | string[], options?: Intl.CollatorOptions): number-End-->
 
@@ -190,10 +162,6 @@ Matches a string with a regular expression, and returns an array containing the 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-match(regexp: string | RegExp): RegExpMatchArray | null--><!--Device-String-match(regexp: string | RegExp): RegExpMatchArray | null-End-->
 
 **Parameters:**
@@ -217,10 +185,6 @@ replace(searchValue: string | RegExp, replaceValue: string): string
 Replaces text in a string, using a regular expression or search string.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-replace(searchValue: string | RegExp, replaceValue: string): string--><!--Device-String-replace(searchValue: string | RegExp, replaceValue: string): string-End-->
 
@@ -247,10 +211,6 @@ Replaces text in a string, using a regular expression or search string.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-replace(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string--><!--Device-String-replace(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string-End-->
 
 **Parameters:**
@@ -276,10 +236,6 @@ Finds the first substring match in a regular expression search.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-search(regexp: string | RegExp): number--><!--Device-String-search(regexp: string | RegExp): number-End-->
 
 **Parameters:**
@@ -303,10 +259,6 @@ slice(start?: number, end?: number): string
 Returns a section of a string.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-slice(start?: number, end?: number): string--><!--Device-String-slice(start?: number, end?: number): string-End-->
 
@@ -333,10 +285,6 @@ Split a string into substrings using the specified separator and return them as 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-split(separator: string | RegExp, limit?: number): string[]--><!--Device-String-split(separator: string | RegExp, limit?: number): string[]-End-->
 
 **Parameters:**
@@ -361,8 +309,6 @@ substr(from: number, length?: number): string
 Gets a substring beginning at the specified location and having the specified length.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -391,10 +337,6 @@ Returns the substring at the specified location within a String object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-substring(start: number, end?: number): string--><!--Device-String-substring(start: number, end?: number): string-End-->
 
 **Parameters:**
@@ -420,10 +362,6 @@ Converts all alphabetic characters to lowercase, taking into account the host en
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-toLocaleLowerCase(locales?: string | string[]): string--><!--Device-String-toLocaleLowerCase(locales?: string | string[]): string-End-->
 
 **Parameters:**
@@ -447,10 +385,6 @@ toLocaleUpperCase(locales?: string | string[]): string
 Returns a string where all alphabetic characters have been converted to uppercase, taking into account the host environment's current locale.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-toLocaleUpperCase(locales?: string | string[]): string--><!--Device-String-toLocaleUpperCase(locales?: string | string[]): string-End-->
 
@@ -476,10 +410,6 @@ Converts all the alphabetic characters in a string to lowercase.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-toLowerCase(): string--><!--Device-String-toLowerCase(): string-End-->
 
 **Return value:**
@@ -497,10 +427,6 @@ toString(): string
 Returns a string representation of a string.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-toString(): string--><!--Device-String-toString(): string-End-->
 
@@ -520,10 +446,6 @@ Converts all the alphabetic characters in a string to uppercase.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-toUpperCase(): string--><!--Device-String-toUpperCase(): string-End-->
 
 **Return value:**
@@ -542,10 +464,6 @@ Removes the leading and trailing white space and line terminator characters from
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-trim(): string--><!--Device-String-trim(): string-End-->
 
 **Return value:**
@@ -563,10 +481,6 @@ valueOf(): string
 Returns the primitive value of the specified object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-valueOf(): string--><!--Device-String-valueOf(): string-End-->
 
@@ -587,10 +501,6 @@ Returns the length of a String object.
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-readonly length: number--><!--Device-String-readonly length: number-End-->
 

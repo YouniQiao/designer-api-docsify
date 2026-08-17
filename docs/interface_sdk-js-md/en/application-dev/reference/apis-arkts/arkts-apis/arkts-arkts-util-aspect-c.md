@@ -4,10 +4,6 @@ Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-util-class Aspect--><!--Device-util-class Aspect-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ Inserts a function after a method of a class object. The final return value is t
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Aspect-static addAfter(targetClass: Object, methodName: string, isStatic: boolean, after: Function): void--><!--Device-Aspect-static addAfter(targetClass: Object, methodName: string, isStatic: boolean, after: Function): void-End-->
@@ -47,7 +39,7 @@ Inserts a function after a method of a class object. The final return value is t
 | isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method, and **false** means an instance method. |
 | after | Function | Yes | Function to insert. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; the second parameter is the return value of the original method (**undefined** if the original method does not have a return value); other parameters are the parameters carried by the original method. If the function does not carry any parameter, no processing is performed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyClass {
@@ -113,10 +105,6 @@ Inserts a function before a method of a class object. The inserted function is e
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Aspect-static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void--><!--Device-Aspect-static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void-End-->
@@ -132,7 +120,7 @@ Inserts a function before a method of a class object. The inserted function is e
 | isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method, and **false** means an instance method. |
 | before | Function | Yes | Function to insert. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; other parameters are the parameters carried in the original method. If the function does not carry any parameter, no processing is performed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyClass {
@@ -207,10 +195,6 @@ Replaces a method of a class object with another function. After the replacement
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Aspect-static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void--><!--Device-Aspect-static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void-End-->
@@ -226,7 +210,7 @@ Replaces a method of a class object with another function. After the replacement
 | isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method, and **false** means an instance method. |
 | instead | Function | Yes | Function to be used replacement. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; other parameters are the parameters carried in the original method. If the function does not carry any parameter, no processing is performed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyClass {

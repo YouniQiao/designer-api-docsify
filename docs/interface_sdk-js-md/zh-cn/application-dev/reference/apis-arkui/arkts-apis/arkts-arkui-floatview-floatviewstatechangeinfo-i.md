@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-floatView-interface FloatViewStateChangeInfo--><!--Device-floatView-interface FloatViewStateChangeInfo-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -23,10 +19,6 @@ state: FloatViewState
 **类型：** [FloatViewState](arkts-arkui-floatview-floatviewstate-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,10 +37,6 @@ stopReason: string
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,10 +4,6 @@ Defines the reference point for the offset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-zlib-export enum OffsetReferencePoint--><!--Device-zlib-export enum OffsetReferencePoint-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -21,10 +17,6 @@ SEEK_SET = 0
 Searches from the beginning of a file.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -41,10 +33,6 @@ SEEK_CUR = 1
 Searches from the current location.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

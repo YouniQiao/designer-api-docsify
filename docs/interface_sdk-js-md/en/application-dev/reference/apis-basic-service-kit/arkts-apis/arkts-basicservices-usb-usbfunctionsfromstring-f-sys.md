@@ -16,11 +16,9 @@ Converts the USB function list in the string format to a numeric mask in Device 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [usbFunctionsFromString](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md#usbFunctionsFromString-(System-API))
+**Substitutes:** [usbFunctionsFromString](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md#usbfunctionsfromstring-system-api)
 
 <!--Device-usb-function usbFunctionsFromString(funcs: string): number--><!--Device-usb-function usbFunctionsFromString(funcs: string): number-End-->
 
@@ -40,7 +38,7 @@ Converts the USB function list in the string format to a numeric mask in Device 
 | --- | --- |
 | number | Function list in numeric mask format after conversion. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let funcs = "acm";

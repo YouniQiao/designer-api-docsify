@@ -2,10 +2,6 @@
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare namespace resourceManager--><!--Device-unnamed-declare namespace resourceManager-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -16,12 +12,12 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager) | 获取当前应用的资源管理对象。使用callback异步回调。 |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager) | 获取指定应用的资源管理对象。使用callback异步回调。 |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager) | 获取当前应用的资源管理对象。使用Promise异步回调。 |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager) | 获取指定应用的资源管理对象。使用Promise异步回调。 |
-| [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getSysResourceManager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
-| [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md#getSystemResourceManager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager) | 获取当前应用的资源管理对象。使用callback异步回调。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager) | 获取指定应用的资源管理对象。使用callback异步回调。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager) | 获取当前应用的资源管理对象。使用Promise异步回调。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager) | 获取指定应用的资源管理对象。使用Promise异步回调。 |
+| [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
+| [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md#getsystemresourcemanager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
 
 ### 类
 

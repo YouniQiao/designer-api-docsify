@@ -6,10 +6,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class SaveButtonAttribute--><!--Device-unnamed-declare class SaveButtonAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ iconBorderRadius(radius: Dimension | BorderRadiuses)
 设置保存控件图标的边框圆角半径。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -54,10 +46,6 @@ iconSize(size: Dimension | SizeOptions)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -82,10 +70,6 @@ onClick(event: SaveButtonCallback)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -109,10 +93,6 @@ setIcon(icon: Resource)
 设置保存控件的图标。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -140,10 +120,6 @@ setText(text: string | Resource)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -170,10 +146,6 @@ stateEffect(enabled: boolean)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -196,13 +168,9 @@ stateEffect(enabled: boolean)
 symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 ```
 
-设置保存控件Symbol图标粗细。 - 调用本方法前，需先调用[setIcon](#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的粗细不会生效。
+设置保存控件Symbol图标粗细。 - 调用本方法前，需先调用[setIcon](#seticon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的粗细不会生效。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -226,13 +194,9 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 symbolIconColor(color: Array<ResourceColor>)
 ```
 
-设置保存控件Symbol图标颜色。 - 调用本方法前，需先调用[setIcon](#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的颜色不会生效。 - 建议与[symbolRenderingStrategy](#symbolRenderingStrategy)配合使用，以实现不同的渲染效果。
+设置保存控件Symbol图标颜色。 - 调用本方法前，需先调用[setIcon](#seticon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的颜色不会生效。 - 建议与[symbolRenderingStrategy](#symbolrenderingstrategy)配合使用，以实现不同的渲染效果。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -248,7 +212,7 @@ symbolIconColor(color: Array<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | Array&lt;ResourceColor&gt; | 是 | 设置保存控件Symbol图标颜色。适用于Symbol图标需要与业务视觉风格保持一致的场景。 <br>默认值：随[symbolRenderingStrategy](#symbolRenderingStrategy)不同而变化。 <br>若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
+| color | Array&lt;ResourceColor&gt; | 是 | 设置保存控件Symbol图标颜色。适用于Symbol图标需要与业务视觉风格保持一致的场景。 <br>默认值：随[symbolRenderingStrategy](#symbolrenderingstrategy)不同而变化。 <br>若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
 
 ## symbolRenderingStrategy
 
@@ -256,13 +220,9 @@ symbolIconColor(color: Array<ResourceColor>)
 symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 ```
 
-设置保存控件Symbol图标渲染策略。 - 调用本方法前，需先调用[setIcon](#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的渲染策略不会生效。 - 与[symbolIconColor](#symbolIconColor)配合使用时，渲染策略会影响颜色数组的作用方式。
+设置保存控件Symbol图标渲染策略。 - 调用本方法前，需先调用[setIcon](#seticon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的渲染策略不会生效。 - 与[symbolIconColor](#symboliconcolor)配合使用时，渲染策略会影响颜色数组的作用方式。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -289,10 +249,6 @@ userCancelEvent(enabled: boolean)
 设置接收保存控件的用户取消授权事件。适用于需要区分用户主动取消授权和授权失败的场景，以便进行不同的业务处理，例如记录用户行为、提供重试提示等。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

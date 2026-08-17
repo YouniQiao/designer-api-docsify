@@ -397,6 +397,8 @@
   - [OnHoverStatusChangeHandler](arkts-arkui-onhoverstatuschangehandler-t.md)
   - [ExtraRegionPosition](arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
   - [PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md)
+- @ohos.arkui.advanced.FormMenu
+  - [AddFormMenuItem](arkts-arkui-arkui-advanced-formmenu-addformmenuitem-f.md)
 - [@ohos.arkui.advanced.FullScreenLaunchComponent](arkts-arkui-advanced-fullscreenlaunchcomponent.md)
   - [FullScreenLaunchComponent](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md)
 - [@ohos.arkui.advanced.FullScreenLaunchComponent](arkts-arkui-advanced-fullscreenlaunchcomponent.md)
@@ -1982,6 +1984,10 @@
     - [Translation](arkts-arkui-translation-t.md)
     - [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md)
     - [LengthUnit](arkts-arkui-graphics-lengthunit-e.md)
+  - HyperlinkModifier
+  - HyperlinkModifier
+  - ImageSpanModifier
+  - ImageSpanModifier
   - [LayoutAlgorithm](arkts-layoutalgorithm.md)
     - [ColumnLayoutAlgorithm](arkts-arkui-layoutalgorithm-columnlayoutalgorithm-c.md)
     - [CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md)
@@ -1999,12 +2005,23 @@
     - [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md)
     - [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md)
     - [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md)
+  - MarqueeModifier
   - [NodeContent](arkts-nodecontent.md)
     - [NodeContent](arkts-arkui-nodecontent-c.md)
   - [NodeController](arkts-nodecontroller.md)
     - [NodeController](arkts-arkui-nodecontroller-c.md)
   - [RenderNode](arkts-rendernode.md)
     - [RenderNode](arkts-arkui-rendernode-c.md)
+  - SearchModifier
+  - SearchModifier
+  - SymbolGlyphModifier
+  - SymbolGlyphModifier
+  - SymbolSpanModifier
+  - SymbolSpanModifier
+  - TextInputModifier
+  - TextInputModifier
+  - TextModifier
+  - TextModifier
   - [XComponentNode](arkts-xcomponentnode.md)
     - [XComponentNode](arkts-arkui-xcomponentnode-c.md)
   - blank

@@ -10,8 +10,6 @@ function exit(code: number): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [exit](arkts-arkts-process-processmanager-c.md#exit)
@@ -26,7 +24,7 @@ function exit(code: number): void
 | --- | --- | --- | --- |
 | code | number | 是 | 进程的退出码。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 process.exit(0);

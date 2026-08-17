@@ -4,10 +4,6 @@ The **cloudData** module provides APIs for implementing device-cloud synergy and
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace cloudData--><!--Device-unnamed-declare namespace cloudData-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -30,9 +26,9 @@ import { cloudData } from 'cloudData';
 
 | Name | Description |
 | --- | --- |
-| [setCloudStrategy](arkts-arkdata-clouddata-setcloudstrategy-f.md#setCloudStrategy) | Sets the cloud sync strategy of an application. This API uses a promise to return the result. |
-| [onAutoSyncTrigger](arkts-arkdata-clouddata-onautosynctrigger-f.md#onAutoSyncTrigger) | Describes the triggering method for automatic device-cloud synchronization subscription. |
-| [offAutoSyncTrigger](arkts-arkdata-clouddata-offautosynctrigger-f.md#offAutoSyncTrigger) | Describes unsubscribing from the device-cloud automatic synchronization trigger mode. |
+| [setCloudStrategy](arkts-arkdata-clouddata-setcloudstrategy-f.md#setcloudstrategy) | Sets the cloud sync strategy of an application. This API uses a promise to return the result. |
+| [onAutoSyncTrigger](arkts-arkdata-clouddata-onautosynctrigger-f.md#onautosynctrigger) | Describes the triggering method for automatic device-cloud synchronization subscription. |
+| [offAutoSyncTrigger](arkts-arkdata-clouddata-offautosynctrigger-f.md#offautosynctrigger) | Describes unsubscribing from the device-cloud automatic synchronization trigger mode. |
 
 <!--Del-->
 ### Classes（系统接口）
@@ -85,6 +81,6 @@ import { cloudData } from 'cloudData';
 
 | Name | Description |
 | --- | --- |
-| [DATA_CHANGE_EVENT_ID](arkts-arkdata-clouddata-con-sys.md#DATA_CHANGE_EVENT_ID) | ID of the event, which indicates the change of the data in the cloud. |
+| [DATA_CHANGE_EVENT_ID](arkts-arkdata-clouddata-con-sys.md#datachangeeventid) | ID of the event, which indicates the change of the data in the cloud. |
 <!--DelEnd-->
 

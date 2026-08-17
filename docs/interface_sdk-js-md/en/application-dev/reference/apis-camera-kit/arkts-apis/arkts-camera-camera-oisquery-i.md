@@ -4,10 +4,6 @@ OIS (Optical Image Stabilization) query interface.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface OISQuery--><!--Device-camera-interface OISQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -27,10 +23,6 @@ getCurrentCustomOISBias(oisAxis: OISAxes): double
 Gets the current custom bias value for the specified OIS axis.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,10 +61,6 @@ Gets the current OIS mode.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -103,10 +91,6 @@ getSupportedOISBiasRange(oisAxis: OISAxes): Array<double>
 Gets the supported bias range for the specified OIS axis.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,10 +129,6 @@ Gets the bias step for the specified OIS axis.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -185,10 +165,6 @@ isOISModeSupported(mode: OISMode): boolean
 Checks if the specified OIS mode is supported.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

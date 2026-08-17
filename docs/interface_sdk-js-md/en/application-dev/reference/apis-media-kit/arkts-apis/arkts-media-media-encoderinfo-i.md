@@ -4,10 +4,6 @@ Describes the information about an encoder.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface EncoderInfo--><!--Device-media-interface EncoderInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -30,10 +26,6 @@ Bit rate range of the encoder, with the minimum and maximum bit rates specified,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EncoderInfo-bitRate?: Range--><!--Device-EncoderInfo-bitRate?: Range-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -49,10 +41,6 @@ Number of audio channels for the audio capturer, with the minimum and maximum nu
 **Type:** Range
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EncoderInfo-channels?: Range--><!--Device-EncoderInfo-channels?: Range-End-->
 
@@ -70,10 +58,6 @@ Video frame rate range, with the minimum and maximum frame rates specified, in f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EncoderInfo-frameRate?: Range--><!--Device-EncoderInfo-frameRate?: Range-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -89,10 +73,6 @@ Video frame height range, with the minimum and maximum heights specified, in px.
 **Type:** Range
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EncoderInfo-height?: Range--><!--Device-EncoderInfo-height?: Range-End-->
 
@@ -110,10 +90,6 @@ MIME type of the encoder.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EncoderInfo-mimeType: CodecMimeType--><!--Device-EncoderInfo-mimeType: CodecMimeType-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -129,10 +105,6 @@ Audio sampling rate, including all available audio sampling rates, in Hz. The va
 **Type:** Array&lt;int&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EncoderInfo-sampleRate?: Array<int>--><!--Device-EncoderInfo-sampleRate?: Array<int>-End-->
 
@@ -150,10 +122,6 @@ Encoder type. The value **audio** means an audio encoder, and **video** means a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EncoderInfo-type: string--><!--Device-EncoderInfo-type: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -169,10 +137,6 @@ Video frame width range, with the minimum and maximum widths specified, in px. T
 **Type:** Range
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EncoderInfo-width?: Range--><!--Device-EncoderInfo-width?: Range-End-->
 

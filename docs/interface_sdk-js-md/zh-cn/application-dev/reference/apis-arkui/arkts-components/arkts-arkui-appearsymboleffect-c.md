@@ -2,13 +2,9 @@
 
 AppearSymbolEffect继承自父类SymbolEffect。
 
-**继承/实现关系：** AppearSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
+**继承/实现关系：** AppearSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#symboleffect)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class AppearSymbolEffect--><!--Device-unnamed-declare class AppearSymbolEffect-End-->
 
@@ -23,10 +19,6 @@ constructor(scope?: EffectScope)
 AppearSymbolEffect的构造函数，出现动效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,10 +47,6 @@ scope?: EffectScope
 **类型：** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

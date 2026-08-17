@@ -1,12 +1,8 @@
 # CameraCaptureStateChangeInfo
 
-定义摄像头触发回调时的改变前后的状态信息。
+提供摄像头触发回调时的状态变化信息，包括改变前的状态和新状态。适用于需要监控摄像头状态变化的场景，提升摄像头管理的可见性和用户体验。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface CameraCaptureStateChangeInfo--><!--Device-unnamed-declare interface CameraCaptureStateChangeInfo-End-->
 
@@ -18,15 +14,11 @@
 newState: CameraCaptureState
 ```
 
-改变后的状态
+改变后的状态。
 
 **类型：** [CameraCaptureState](arkts-arkweb-cameracapturestate-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CameraCaptureStateChangeInfo-newState: CameraCaptureState--><!--Device-CameraCaptureStateChangeInfo-newState: CameraCaptureState-End-->
 
@@ -38,15 +30,11 @@ newState: CameraCaptureState
 originalState: CameraCaptureState
 ```
 
-原来的状态
+改变前的状态。
 
 **类型：** [CameraCaptureState](arkts-arkweb-cameracapturestate-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CameraCaptureStateChangeInfo-originalState: CameraCaptureState--><!--Device-CameraCaptureStateChangeInfo-originalState: CameraCaptureState-End-->
 

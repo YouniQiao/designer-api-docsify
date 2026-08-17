@@ -16,11 +16,9 @@ Creates a Bluetooth server listening socket.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md#sppListen)
+**Substitutes:** [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md#spplisten)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -33,10 +31,10 @@ Creates a Bluetooth server listening socket.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the service name. |
-| option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetooth-sppoption-i.md#SppOption). |
+| option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetooth-sppoption-i.md#sppoption). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

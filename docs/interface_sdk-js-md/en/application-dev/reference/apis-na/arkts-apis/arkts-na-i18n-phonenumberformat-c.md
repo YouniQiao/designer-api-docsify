@@ -4,9 +4,7 @@ Provides the API for formatting phone number strings
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export class PhoneNumberFormat--><!--Device-i18n-export class PhoneNumberFormat-End-->
 
@@ -22,9 +20,7 @@ Creates a PhoneNumberFormat object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -37,7 +33,7 @@ Creates a PhoneNumberFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | country | string | Yes | Country/region to which the phone number to be formatted belongs. |
-| options | [PhoneNumberFormatOptions](arkts-na-i18n-phonenumberformatoptions-i.md) | No | Options for PhoneNumberFormat object initialization. The default value is "NATIONAL". |
+| options | [PhoneNumberFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-phonenumberformatoptions-i.md) | No | Options for PhoneNumberFormat object initialization. The default value is "NATIONAL". |
 
 ## format
 
@@ -49,9 +45,7 @@ Formats a phone number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -81,9 +75,7 @@ Obtains the home location of a phone number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -114,9 +106,7 @@ Checks whether the phone number is valid for the country/region in the PhoneNumb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

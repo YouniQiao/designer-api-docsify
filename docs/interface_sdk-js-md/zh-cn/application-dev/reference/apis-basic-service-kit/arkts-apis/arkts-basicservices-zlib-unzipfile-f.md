@@ -6,15 +6,13 @@
 function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-解压文件，解压完成后返回执行结果。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [zlib.decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) > 替代。 > > 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回-1错误码。
+解压文件，解压完成后返回执行结果。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [zlib.decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile) > 替代。 > > 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回-1错误码。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile)(inFile: string, outFile: string, options: Options, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile)(inFile: string, outFile: string, options: Options, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-zlib-function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
 
@@ -34,7 +32,7 @@ function unzipFile(inFile: string, outFile: string, options: Options): Promise<v
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回值。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 代码中使用的路径需为应用的沙箱路径，如/data/storage/el2/base/temp,也可以通过context获取。

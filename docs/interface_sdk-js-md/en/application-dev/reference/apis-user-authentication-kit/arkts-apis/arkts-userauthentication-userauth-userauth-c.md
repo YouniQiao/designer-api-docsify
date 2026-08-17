@@ -4,11 +4,9 @@ Provides APIs for managing the **UserAuth** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md#AuthInstance)
+**Substitutes:** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md#authinstance)
 
 <!--Device-userAuth-class UserAuth--><!--Device-userAuth-class UserAuth-End-->
 
@@ -35,8 +33,6 @@ Starts user authentication. This API uses a callback to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
@@ -62,7 +58,7 @@ Starts user authentication. This API uses a callback to return the result.
 | --- | --- |
 | Uint8Array | Context ID, which is used as the input parameter of [cancelAuth]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -96,8 +92,6 @@ Cancels the authentication based on the context ID.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [cancel](arkts-userauthentication-userauth-authinstance-i.md#cancel)
@@ -120,7 +114,7 @@ Cancels the authentication based on the context ID.
 | --- | --- |
 | number | Returns **SUCCESS** if the cancellation is successful. Returns a [ResultCode]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -146,17 +140,15 @@ A constructor used to create a **UserAuth** instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getAuthInstance)
+**Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance)
 
 <!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -174,11 +166,9 @@ Checks whether the specified authentication capability is supported.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getAvailableStatus)
+**Substitutes:** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -199,7 +189,7 @@ Checks whether the specified authentication capability is supported.
 | --- | --- |
 | number | Query result. If the authentication capability is supported, **SUCCESS** is returned. Otherwise, a [ResultCode]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -223,8 +213,6 @@ Obtains the version of this authenticator.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
@@ -239,7 +227,7 @@ Obtains the version of this authenticator.
 | --- | --- |
 | number | Authenticator version obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';

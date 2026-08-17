@@ -8,10 +8,6 @@ Callback method of event registration and processing.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -24,5 +20,5 @@ Callback method of event registration and processing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackParam | [CallbackParamV2](arkts-arkui-arkui-advanced-treeviewv2-callbackparamv2-i.md) | Yes | The result of event. |
+| callbackParam | [CallbackParamV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-callbackparamv2-i.md) | Yes | The result of event. |
 

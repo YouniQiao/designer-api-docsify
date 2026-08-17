@@ -1,14 +1,10 @@
 # Flash
 
-**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery). It provides APIs related to the flash.
+**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery). It provides APIs related to the flash.
 
-**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)
+**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface Flash--><!--Device-camera-interface Flash-End-->
 
@@ -29,10 +25,6 @@ getFlashMode(): FlashMode
 Obtains the flash mode in use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -62,10 +54,6 @@ Unsubscribes from flash light status change events.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -90,10 +78,6 @@ Subscribes to flash light status change events.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -114,13 +98,9 @@ Subscribes to flash light status change events.
 setFlashMode(flashMode: FlashMode): void
 ```
 
-Sets a flash mode. Before the setting, do the following checks: 1. Use [hasFlash](arkts-camera-camera-flashquery-i.md#hasFlash) to check whether the camera device has flash. 2. Use [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isFlashModeSupported) to check whether the camera device supports the flash mode.
+Sets a flash mode. Before the setting, do the following checks: 1. Use [hasFlash](arkts-camera-camera-flashquery-i.md#hasflash) to check whether the camera device has flash. 2. Use [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported) to check whether the camera device supports the flash mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

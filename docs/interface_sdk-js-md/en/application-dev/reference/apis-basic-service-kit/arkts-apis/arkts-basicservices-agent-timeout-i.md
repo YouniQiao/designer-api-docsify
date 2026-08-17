@@ -1,12 +1,8 @@
 # Timeout
 
-Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see [WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md#WaitingReason) .
+Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see [WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md#waitingreason) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-agent-interface Timeout--><!--Device-agent-interface Timeout-End-->
 
@@ -30,10 +26,6 @@ Task connection timeout interval, in seconds. The connection timeout interval in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Timeout-connectionTimeout?: int--><!--Device-Timeout-connectionTimeout?: int-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -49,10 +41,6 @@ Total timeout interval of a task, in seconds. The total timeout interval include
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Timeout-totalTimeout?: int--><!--Device-Timeout-totalTimeout?: int-End-->
 

@@ -16,11 +16,9 @@ Canceling a P2P connection.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md#p2pCancelConnect)
+**Substitutes:** [p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md#p2pcancelconnect)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -34,7 +32,7 @@ Canceling a P2P connection.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

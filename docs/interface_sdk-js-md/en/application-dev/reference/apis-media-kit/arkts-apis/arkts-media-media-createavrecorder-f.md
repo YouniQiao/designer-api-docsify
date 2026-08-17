@@ -16,10 +16,6 @@ Creates an AVRecorder instance. This API uses an asynchronous callback to return
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder>): void--><!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -36,7 +32,7 @@ Creates an AVRecorder instance. This API uses an asynchronous callback to return
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -62,10 +58,6 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void
 Creates an **AVRecorder** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void--><!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void-End-->
 
@@ -94,10 +86,6 @@ Creates an AVRecorder instance. This API uses a promise to return the result. > 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-media-function createAVRecorder(): Promise<AVRecorder>--><!--Device-media-function createAVRecorder(): Promise<AVRecorder>-End-->
@@ -116,7 +104,7 @@ Creates an AVRecorder instance. This API uses a promise to return the result. > 
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -143,10 +131,6 @@ function createAVRecorder(): Promise<AVRecorder | undefined>
 Creates an **AVRecorder** instance. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function createAVRecorder(): Promise<AVRecorder | undefined>--><!--Device-media-function createAVRecorder(): Promise<AVRecorder | undefined>-End-->
 

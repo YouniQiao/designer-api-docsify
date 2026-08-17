@@ -4,10 +4,6 @@ Enumerates the types of recommended images.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum RecommendationType--><!--Device-photoAccessHelper-enum RecommendationType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,10 +17,6 @@ COLOR_STYLE_PHOTO = 12
 Recommended style.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-RecommendationType-COLOR_STYLE_PHOTO = 12--><!--Device-RecommendationType-COLOR_STYLE_PHOTO = 12-End-->
 
@@ -41,10 +33,6 @@ CAT = 13
 Cat images will be recommended.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,10 +52,6 @@ Dog images will be recommended.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RecommendationType-DOG = 14--><!--Device-RecommendationType-DOG = 14-End-->
@@ -85,10 +69,6 @@ ARCHITECTURE = 15
 Architecture images will be recommended.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,10 +88,6 @@ Landscape images will be recommended.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RecommendationType-LANDSCAPE = 16--><!--Device-RecommendationType-LANDSCAPE = 16-End-->
@@ -129,10 +105,6 @@ GAUSSIAN_SPLAT_3D = 17
 Images generated using the 3D Gaussian technology will be recommended.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

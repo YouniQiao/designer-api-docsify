@@ -16,10 +16,6 @@ Checks whether the target application can be accessed based on the provided link
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-bundleManager-function canOpenLink(link: string): boolean--><!--Device-bundleManager-function canOpenLink(link: string): boolean-End-->
@@ -46,7 +42,7 @@ Checks whether the target application can be accessed based on the provided link
 | [17700056](../errorcode-bundle.md#17700056-scheme-of-the-link-not-configured-in-queryschemes) | The scheme of the specified link is not in the querySchemes. |
 | [17700055](../errorcode-bundle.md#17700055-invalid-link) | The specified link is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

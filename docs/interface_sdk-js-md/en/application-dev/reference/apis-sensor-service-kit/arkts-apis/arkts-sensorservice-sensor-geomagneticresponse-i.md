@@ -4,10 +4,6 @@ Describes a geomagnetic response object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-interface GeomagneticResponse--><!--Device-sensor-interface GeomagneticResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -30,10 +26,6 @@ Magnetic declination, which is the angle between true north (geographic north) a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeomagneticResponse-deflectionAngle: double--><!--Device-GeomagneticResponse-deflectionAngle: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -49,10 +41,6 @@ Magnetic dip, also called magnetic inclination, which is the angle measured from
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-geomagneticDip: double--><!--Device-GeomagneticResponse-geomagneticDip: double-End-->
 
@@ -70,10 +58,6 @@ Horizontal intensity of the magnetic field vector field, in nT.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeomagneticResponse-levelIntensity: double--><!--Device-GeomagneticResponse-levelIntensity: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -89,10 +73,6 @@ Total intensity of the magnetic field vector, in nT.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-totalIntensity: double--><!--Device-GeomagneticResponse-totalIntensity: double-End-->
 
@@ -110,10 +90,6 @@ North component of the geomagnetic field, in nT.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeomagneticResponse-x: double--><!--Device-GeomagneticResponse-x: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -130,10 +106,6 @@ East component of the geomagnetic field, in nT.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeomagneticResponse-y: double--><!--Device-GeomagneticResponse-y: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -149,10 +121,6 @@ Vertical component of the geomagnetic field, in nT.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeomagneticResponse-z: double--><!--Device-GeomagneticResponse-z: double-End-->
 

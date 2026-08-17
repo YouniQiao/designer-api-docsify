@@ -18,10 +18,6 @@ Create a Model instance from file path
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context?: Context): Promise<Model>--><!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context?: Context): Promise<Model>-End-->
@@ -45,12 +41,12 @@ Create a Model instance from file path
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
+| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let modelFile = '/path/to/xxx.ms';
@@ -76,10 +72,6 @@ Create a Model instance from file path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-mindSporeLite-function loadModelFromFile(    model: string, callback: Callback<Model>): void--><!--Device-mindSporeLite-function loadModelFromFile(    model: string, callback: Callback<Model>): void-End-->
@@ -97,12 +89,12 @@ Create a Model instance from file path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
+| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let modelFile: string = '/path/to/xxx.ms';
@@ -129,10 +121,6 @@ Create a Model instance from file path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context: Context, callback: Callback<Model>): void--><!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context: Context, callback: Callback<Model>): void-End-->
@@ -151,12 +139,12 @@ Create a Model instance from file path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
+| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
+| 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let context: mindSporeLite.Context = {};

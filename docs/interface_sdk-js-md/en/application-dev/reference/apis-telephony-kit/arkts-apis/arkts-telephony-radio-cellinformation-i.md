@@ -4,10 +4,6 @@ Obtains current cell information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export interface CellInformation--><!--Device-radio-export interface CellInformation-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -30,10 +26,6 @@ Obtains the network type of the serving cell. An application can call this metho
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CellInformation-networkType: NetworkType--><!--Device-CellInformation-networkType: NetworkType-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -49,10 +41,6 @@ An abstract method of the parent class whose implementation depends on the child
 **Type:** SignalInformation
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CellInformation-signalInformation: SignalInformation--><!--Device-CellInformation-signalInformation: SignalInformation-End-->
 

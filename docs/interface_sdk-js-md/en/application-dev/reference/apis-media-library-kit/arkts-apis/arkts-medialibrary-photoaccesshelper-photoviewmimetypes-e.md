@@ -4,10 +4,6 @@ Enumerates the media file types.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-export enum PhotoViewMIMETypes--><!--Device-photoAccessHelper-export enum PhotoViewMIMETypes-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,10 +17,6 @@ IMAGE_TYPE = 'image/*'
 Image.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Video.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'--><!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'-End-->
@@ -62,10 +50,6 @@ Image and video.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhotoViewMIMETypes-IMAGE_VIDEO_TYPE = '*/*'--><!--Device-PhotoViewMIMETypes-IMAGE_VIDEO_TYPE = '*/*'-End-->
@@ -81,10 +65,6 @@ MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'
 Moving photo.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

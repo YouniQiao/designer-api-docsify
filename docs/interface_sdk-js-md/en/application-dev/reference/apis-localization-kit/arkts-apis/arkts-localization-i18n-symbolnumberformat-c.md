@@ -6,10 +6,6 @@ Provide a Number formatting interface that supports custom symbols. This interfa
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class SymbolNumberFormat--><!--Device-i18n-export class SymbolNumberFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -30,10 +26,6 @@ A constructor used to create a SymbolNumberFormat object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -47,7 +39,7 @@ A constructor used to create a SymbolNumberFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. <br>Default value:The default is the current system locale. <br>Default Value: System Locale. <br>Region object. |
-| options | [SymbolNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace. Such as zero, nan, positiveInfinity, etc. <br>Symbol Number Formatting Options. |
+| options | [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace. Such as zero, nan, positiveInfinity, etc. <br>Symbol Number Formatting Options. |
 
 ## format
 
@@ -58,10 +50,6 @@ public format(value: number | bigint): string
 Formats a number with give locale and SymbolNumberFormatOptions.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,10 +80,6 @@ public formatRange(startRange: number, endRange: number): string
 Formats a number range.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +112,6 @@ Formats a number range into parts.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -163,10 +143,6 @@ Formats a number into parts.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -196,10 +172,6 @@ public parse(text: string, lenientMode: boolean): number
 Parse a localized string to number object. For example, "123,456" will parse to 123456.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -238,10 +210,6 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -254,5 +222,5 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 
 | Type | Description |
 | --- | --- |
-| [ResolvedSymbolNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-resolvedsymbolnumberformatoptions-i.md) | Symbol options for SymbolNumberFormat. |
+| [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | Symbol options for SymbolNumberFormat. |
 

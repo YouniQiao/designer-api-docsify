@@ -1,12 +1,8 @@
 # ControllerAttachState
 
-Describes the attach status of WebViewController and the **Web** component.
+Binding state between WebviewController and the Web component.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum ControllerAttachState--><!--Device-webview-enum ControllerAttachState-End-->
 
@@ -18,13 +14,9 @@ Describes the attach status of WebViewController and the **Web** component.
 UNATTACHED = 0
 ```
 
-Indicates webviewController is not attached a web component.
+Unattached.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-ControllerAttachState-UNATTACHED = 0--><!--Device-ControllerAttachState-UNATTACHED = 0-End-->
 
@@ -36,13 +28,9 @@ Indicates webviewController is not attached a web component.
 ATTACHED = 1
 ```
 
-Indicates webviewController is attached a web component.
+Attached.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-ControllerAttachState-ATTACHED = 1--><!--Device-ControllerAttachState-ATTACHED = 1-End-->
 

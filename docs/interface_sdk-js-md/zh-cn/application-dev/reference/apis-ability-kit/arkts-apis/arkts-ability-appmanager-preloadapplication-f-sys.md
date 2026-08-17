@@ -10,10 +10,6 @@ function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.PRELOAD_APPLICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -49,7 +45,7 @@ function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, 
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [16300005](../errorcode-ability.md#16300005-指定的包信息不存在) | The target bundle does not exist. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

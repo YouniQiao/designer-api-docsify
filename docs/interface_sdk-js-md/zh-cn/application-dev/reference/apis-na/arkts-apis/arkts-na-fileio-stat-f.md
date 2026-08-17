@@ -10,9 +10,7 @@ function stat(file: string | int): Promise<Stat>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function stat(file: string | int): Promise<Stat>--><!--Device-fileIo-function stat(file: string | int): Promise<Stat>-End-->
 
@@ -59,9 +57,7 @@ function stat(file: string | int, callback: AsyncCallback<Stat>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function stat(file: string | int, callback: AsyncCallback<Stat>): void--><!--Device-fileIo-function stat(file: string | int, callback: AsyncCallback<Stat>): void-End-->
 
@@ -72,7 +68,7 @@ function stat(file: string | int, callback: AsyncCallback<Stat>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | file | string \| int | 是 | 文件或目录的应用沙箱路径path、URI或已打开的文件描述符fd。 <br>**说明：**从API version 22开始，支持传入URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件或目录的信息之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件或目录的信息之后的回调。 |
 
 **错误码：**
 

@@ -8,10 +8,6 @@ Describes the fields of notification intelligent unification information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export type UnifiedGroupInfo = _UnifiedGroupInfo--><!--Device-notificationManager-export type UnifiedGroupInfo = _UnifiedGroupInfo-End-->
 
 **System capability:** SystemCapability.Notification.Notification

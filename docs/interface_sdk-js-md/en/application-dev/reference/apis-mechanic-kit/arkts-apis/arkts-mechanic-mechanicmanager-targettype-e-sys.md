@@ -4,10 +4,6 @@ Target type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export enum TargetType--><!--Device-mechanicManager-export enum TargetType-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -23,10 +19,6 @@ HUMAN_FACE = 0
 human Face type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TargetType-HUMAN_FACE = 0--><!--Device-TargetType-HUMAN_FACE = 0-End-->
 

@@ -1,12 +1,8 @@
 # ScreenCaptureConfig
 
-Provides the web screen capture configuration.
+Provides the web screen capture configuration options, including the capture mode. It is suitable for scenarios where custom web page screen recording behavior is required, improving screen recording flexibility and user experience.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ScreenCaptureConfig--><!--Device-unnamed-declare interface ScreenCaptureConfig-End-->
 
@@ -23,10 +19,6 @@ Web screen capture mode.
 **Type:** [WebCaptureMode](arkts-arkweb-webcapturemode-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

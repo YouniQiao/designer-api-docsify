@@ -4,11 +4,9 @@ Describes the data returned by after wantAgent.trigger is called.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [CompleteData](arkts-ability-wantagent-completedata-i.md#CompleteData)
+**Substitutes:** [CompleteData](arkts-ability-wantagent-completedata-i.md#completedata)
 
 <!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
 
@@ -26,11 +24,9 @@ Extra data collected by the common event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [extraInfo](arkts-ability-wantagent-completedata-i.md#extraInfo)
+**Substitutes:** [extraInfo](arkts-ability-wantagent-completedata-i.md#extrainfo)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -50,11 +46,9 @@ Request code used to trigger the WantAgent.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [finalCode](arkts-ability-wantagent-completedata-i.md#finalCode)
+**Substitutes:** [finalCode](arkts-ability-wantagent-completedata-i.md#finalcode)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,11 +68,9 @@ Final data collected by the common event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [finalData](arkts-ability-wantagent-completedata-i.md#finalData)
+**Substitutes:** [finalData](arkts-ability-wantagent-completedata-i.md#finaldata)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -97,8 +89,6 @@ Triggered WantAgent.
 **Type:** [WantAgent](arkts-ability-wantagent-depr-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -121,8 +111,6 @@ Existing Want that is triggered.
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

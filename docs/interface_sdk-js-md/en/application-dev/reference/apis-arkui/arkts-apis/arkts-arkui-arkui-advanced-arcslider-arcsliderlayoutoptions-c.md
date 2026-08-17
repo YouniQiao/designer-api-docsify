@@ -4,10 +4,6 @@ Defines the layout of the arc slider.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ArcSliderLayoutOptions--><!--Device-unnamed-declare class ArcSliderLayoutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -37,10 +33,6 @@ A constructor used to create an **ArcSliderLayoutOptions** instance.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderLayoutOptions-constructor(options?: ArcSliderLayoutOptionsConstructorOptions)--><!--Device-ArcSliderLayoutOptions-constructor(options?: ArcSliderLayoutOptionsConstructorOptions)-End-->
@@ -68,10 +60,6 @@ Position of the arc slider on the screen. Default value: **ArcSliderPosition.RIG
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderLayoutOptions-@Trace  position?: ArcSliderPosition--><!--Device-ArcSliderLayoutOptions-@Trace  position?: ArcSliderPosition-End-->
@@ -92,10 +80,6 @@ Whether the value range of the arc slider is reversed. **false**: top-to-bottom 
 **Default:** true
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

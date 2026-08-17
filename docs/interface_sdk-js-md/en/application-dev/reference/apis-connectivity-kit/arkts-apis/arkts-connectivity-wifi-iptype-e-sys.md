@@ -4,11 +4,9 @@ Wi-Fi IP type enumeration.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md#IpType-(System-API))
+**Substitutes:** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md#iptype-system-api)
 
 <!--Device-wifi-enum IpType--><!--Device-wifi-enum IpType-End-->
 
@@ -26,11 +24,9 @@ Use statically configured IP settings
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [STATIC](arkts-connectivity-wifimanager-iptype-e-sys.md#STATIC)
+**Substitutes:** [STATIC](arkts-connectivity-wifimanager-iptype-e-sys.md#static)
 
 <!--Device-IpType-STATIC--><!--Device-IpType-STATIC-End-->
 
@@ -48,11 +44,9 @@ Use dynamically configured IP settings
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DHCP](arkts-connectivity-wifimanager-iptype-e-sys.md#DHCP)
+**Substitutes:** [DHCP](arkts-connectivity-wifimanager-iptype-e-sys.md#dhcp)
 
 <!--Device-IpType-DHCP--><!--Device-IpType-DHCP-End-->
 
@@ -70,11 +64,9 @@ No IP details are assigned
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UNKNOWN](arkts-connectivity-wifimanager-iptype-e-sys.md#UNKNOWN)
+**Substitutes:** [UNKNOWN](arkts-connectivity-wifimanager-iptype-e-sys.md#unknown)
 
 <!--Device-IpType-UNKNOWN--><!--Device-IpType-UNKNOWN-End-->
 

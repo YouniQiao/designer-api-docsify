@@ -4,9 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare enum SideBarContainerType--><!--Device-unnamed-export declare enum SideBarContainerType-End-->
 
@@ -18,13 +16,11 @@
 Embed = 0
 ```
 
-侧边栏嵌入到组件内，和内容区并列显示。 整体容器大小不变时，显示侧边栏会导致内容区缩小，隐藏侧边栏会扩大内容区。 组件尺寸小于[minContentWidth](arkts-na-sidebar-sidebarcontainerattribute-i.md#minContentWidth) + [minSideBarWidth](arkts-na-sidebar-sidebarcontainerattribute-i.md#minSideBarWidth)，并且未设置showSideBar时，侧边栏自动隐藏。 未设置minSideBarWidth或者minContentWidth采用未设置接口的默认值进行计算。 组件在自动隐藏后，如果通过点击控制按钮唤出侧边栏，则侧边栏悬浮在内容区上显示。
+侧边栏嵌入到组件内，和内容区并列显示。 整体容器大小不变时，显示侧边栏会导致内容区缩小，隐藏侧边栏会扩大内容区。 组件尺寸小于[minContentWidth](arkts-na-sidebar-sidebarcontainerattribute-i.md#mincontentwidth) + [minSideBarWidth](arkts-na-sidebar-sidebarcontainerattribute-i.md#minsidebarwidth)，并且未设置showSideBar时，侧边栏自动隐藏。 未设置minSideBarWidth或者minContentWidth采用未设置接口的默认值进行计算。 组件在自动隐藏后，如果通过点击控制按钮唤出侧边栏，则侧边栏悬浮在内容区上显示。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,9 +38,7 @@ Overlay = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,9 +56,7 @@ AUTO = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,9 +74,7 @@ DISPLACE =3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

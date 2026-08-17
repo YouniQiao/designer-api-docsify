@@ -10,10 +10,6 @@ function setTextHighContrast(action : TextHighContrast): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-text-function setTextHighContrast(action : TextHighContrast): void--><!--Device-text-function setTextHighContrast(action : TextHighContrast): void-End-->
@@ -26,7 +22,7 @@ function setTextHighContrast(action : TextHighContrast): void
 | --- | --- | --- | --- |
 | action | [TextHighContrast](arkts-arkgraphics2d-text-texthighcontrast-e.md) | 是 | 文字渲染高对比度模式。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 text.setTextHighContrast(text.TextHighContrast.TEXT_APP_DISABLE_HIGH_CONTRAST)

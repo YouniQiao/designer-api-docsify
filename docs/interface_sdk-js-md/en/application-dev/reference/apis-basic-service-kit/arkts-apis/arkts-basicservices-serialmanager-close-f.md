@@ -16,10 +16,6 @@ Closes the serial port device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-serialManager-function close(portId: int): void--><!--Device-serialManager-function close(portId: int): void-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -28,7 +24,7 @@ Closes the serial port device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getPortList). |
+| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 
 **Error codes:**
 
@@ -39,7 +35,7 @@ Closes the serial port device.
 | [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) | PortId does not exist. |
 | [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
 
-## Examples
+**Examples**
 
 The following sample code shows the basic process for calling the close API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 

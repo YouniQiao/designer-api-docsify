@@ -4,10 +4,6 @@ Device state used to describe states including discovery, authentication and oth
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface DeviceState--><!--Device-avSession-interface DeviceState-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -32,10 +28,6 @@ Unique device descriptor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceState-readonly deviceId: string--><!--Device-DeviceState-readonly deviceId: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -53,10 +45,6 @@ Device connection state.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceState-readonly deviceState: int--><!--Device-DeviceState-readonly deviceState: int-End-->
 
@@ -76,10 +64,6 @@ System radar error code returned by cast+services.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceState-readonly radarErrorCode: int--><!--Device-DeviceState-readonly radarErrorCode: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -97,10 +81,6 @@ Reason for connection failure, for example, user cancellation and timeout.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceState-readonly reasonCode: int--><!--Device-DeviceState-readonly reasonCode: int-End-->
 

@@ -10,10 +10,6 @@ function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): Bundle
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): BundleInfo--><!--Device-bundleManager-function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): BundleInfo-End-->
@@ -44,7 +40,7 @@ function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): Bundle
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

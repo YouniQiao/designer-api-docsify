@@ -16,10 +16,6 @@ Checks whether a device administrator application of the current user is enabled
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-adminManager-function isAdminEnabled(admin: Want, callback: AsyncCallback<boolean>): void--><!--Device-adminManager-function isAdminEnabled(admin: Want, callback: AsyncCallback<boolean>): void-End-->
@@ -42,7 +38,7 @@ Checks whether a device administrator application of the current user is enabled
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
@@ -74,10 +70,6 @@ Checks whether a device administrator application of the specified user is enabl
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-adminManager-function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boolean>): void--><!--Device-adminManager-function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boolean>): void-End-->
@@ -101,7 +93,7 @@ Checks whether a device administrator application of the specified user is enabl
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
@@ -134,10 +126,6 @@ Checks whether a device administrator application of the current or specified us
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-adminManager-function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>--><!--Device-adminManager-function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>-End-->
@@ -166,7 +154,7 @@ Checks whether a device administrator application of the current or specified us
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';

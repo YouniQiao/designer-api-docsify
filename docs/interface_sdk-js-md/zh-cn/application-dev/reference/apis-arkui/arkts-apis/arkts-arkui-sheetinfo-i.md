@@ -1,12 +1,8 @@
-# SheetInfo
+# SheetInfo(ActionSheet)
 
 弹窗中的选项内容，每一项支持设置文本、图标以及选中的回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-interface SheetInfo--><!--Device-unnamed-interface SheetInfo-End-->
 
@@ -23,10 +19,6 @@ action: VoidCallback
 **类型：** VoidCallback
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ icon?: string | Resource
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SheetInfo-icon?: string | Resource--><!--Device-SheetInfo-icon?: string | Resource-End-->
@@ -67,10 +55,6 @@ title: string | Resource
 **类型：** string \| Resource
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

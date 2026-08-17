@@ -4,10 +4,6 @@ ASR whisper detection mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum AsrWhisperDetectionMode--><!--Device-audio-enum AsrWhisperDetectionMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -24,10 +20,6 @@ No operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AsrWhisperDetectionMode-BYPASS = 0--><!--Device-AsrWhisperDetectionMode-BYPASS = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -43,10 +35,6 @@ STANDARD = 1
 Use standard whisper detection model.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AsrWhisperDetectionMode-STANDARD = 1--><!--Device-AsrWhisperDetectionMode-STANDARD = 1-End-->
 

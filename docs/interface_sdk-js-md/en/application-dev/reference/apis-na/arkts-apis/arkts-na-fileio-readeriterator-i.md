@@ -4,9 +4,7 @@ Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-interface ReaderIterator--><!--Device-fileIo-interface ReaderIterator-End-->
 
@@ -22,9 +20,7 @@ Obtains the **ReaderIterator** result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ReaderIterator-next(): ReaderIteratorResult--><!--Device-ReaderIterator-next(): ReaderIteratorResult-End-->
 
@@ -34,7 +30,7 @@ Obtains the **ReaderIterator** result.
 
 | Type | Description |
 | --- | --- |
-| [ReaderIteratorResult](arkts-na-file-fs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
+| [ReaderIteratorResult](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
 
 **Error codes:**
 

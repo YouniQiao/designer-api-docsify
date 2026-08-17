@@ -4,10 +4,6 @@ Represents the holder of a remote proxy object. It is used to obtain a proxy obj
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-rpc-interface IRemoteBroker--><!--Device-rpc-interface IRemoteBroker-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -28,10 +24,6 @@ Obtains a proxy or remote object. This API must be implemented by its derived cl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IRemoteBroker-asObject(): IRemoteObject--><!--Device-IRemoteBroker-asObject(): IRemoteObject-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -42,7 +34,7 @@ Obtains a proxy or remote object. This API must be implemented by its derived cl
 | --- | --- |
 | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Returns the **RemoteObject** if it is the caller; returns the [IRemoteObject]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

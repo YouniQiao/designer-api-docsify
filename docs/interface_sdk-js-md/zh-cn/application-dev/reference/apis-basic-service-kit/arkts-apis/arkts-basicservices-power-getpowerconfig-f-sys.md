@@ -10,10 +10,6 @@ function getPowerConfig(sceneName: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.POWER_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -46,7 +42,7 @@ function getPowerConfig(sceneName: string): string
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
 | [4900501](../../apis-basic-services-kit/errorcode-power.md#4900501-读电源配置值失败) | Failed to read the power configuration value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {

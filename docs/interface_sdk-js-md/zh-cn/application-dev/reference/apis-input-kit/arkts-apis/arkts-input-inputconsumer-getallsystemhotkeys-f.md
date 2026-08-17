@@ -10,10 +10,6 @@ function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>--><!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -30,7 +26,7 @@ function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

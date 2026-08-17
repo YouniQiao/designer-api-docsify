@@ -12,10 +12,6 @@ The **ArcAlphabetIndexer** component is an arc-shaped component designed for qui
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-unnamed-declare const ArcAlphabetIndexer: ArcAlphabetIndexerInterface--><!--Device-unnamed-declare const ArcAlphabetIndexer: ArcAlphabetIndexerInterface-End-->
@@ -31,10 +27,6 @@ declare const ArcAlphabetIndexerInstance: ArcAlphabetIndexerAttribute
 Defines ArcAlphabetIndexer Component instance.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

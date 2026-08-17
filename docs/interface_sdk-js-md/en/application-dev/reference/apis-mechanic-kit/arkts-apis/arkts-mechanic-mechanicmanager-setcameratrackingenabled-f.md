@@ -16,10 +16,6 @@ Enables or disables camera tracking.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void--><!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -38,7 +34,7 @@ Enables or disables camera tracking.
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 | [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 console.info('Enable tracing');

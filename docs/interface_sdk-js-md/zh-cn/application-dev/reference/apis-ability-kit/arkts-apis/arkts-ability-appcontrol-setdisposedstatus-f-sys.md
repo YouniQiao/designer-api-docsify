@@ -10,10 +10,6 @@ function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
 <!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCallback<void>): void--><!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCallback<void>): void-End-->
@@ -28,7 +24,7 @@ function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCal
 | --- | --- | --- | --- |
 | appId | string | 是 | 需要设置处置的应用的appId。<br> appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获取方法参见 [获取应用的appId](../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appid)。 |
 | disposedWant | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 对应用的处置意图。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置处置状态成功，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置处置状态成功，err为null；否则为错误对象。 |
 
 **错误码：**
 
@@ -40,7 +36,7 @@ function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCal
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is empty string. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -105,10 +101,6 @@ function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
 <!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>--><!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>-End-->
@@ -140,7 +132,7 @@ function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is empty string. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

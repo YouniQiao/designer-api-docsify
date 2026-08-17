@@ -16,10 +16,6 @@
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace xml--><!--Device-unnamed-declare namespace xml-End-->
 
 **System capability:** SystemCapability.Utils.Lang

@@ -16,10 +16,6 @@ Obtains the credential state. This API is used to obtain the credential enrollme
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -50,7 +46,7 @@ Obtains the credential state. This API is used to obtain the credential enrollme
 | [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';

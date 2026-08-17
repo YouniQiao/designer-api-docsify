@@ -16,10 +16,6 @@ Enable the URI that have been permanently authorized
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.FILE_ACCESS_PERSIST
 
 <!--Device-fileShare-function activatePermission(policies: Array<PolicyInfo>): Promise<void>--><!--Device-fileShare-function activatePermission(policies: Array<PolicyInfo>): Promise<void>-End-->
@@ -48,7 +44,7 @@ Enable the URI that have been permanently authorized
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | 13900042 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

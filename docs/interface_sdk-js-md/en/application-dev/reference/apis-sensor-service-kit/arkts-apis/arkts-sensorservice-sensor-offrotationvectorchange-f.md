@@ -16,10 +16,6 @@ Unsubscribe to rotation vector sensor data, {@code SensorId.ROTATION_VECTOR}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function offRotationVectorChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<RotationVectorResponse>): void--><!--Device-sensor-function offRotationVectorChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<RotationVectorResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

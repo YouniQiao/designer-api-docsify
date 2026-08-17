@@ -4,10 +4,6 @@ Defines custom edit menu options for SelectionContainer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface SelectionContainerEditMenuOptions--><!--Device-unnamed-export interface SelectionContainerEditMenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -38,10 +34,6 @@ Passes the default menu, invokes before every display to generate a menu for tri
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -58,13 +50,9 @@ onMenuItemClick?: OnMenuItemClickWithTextCallback
 
 Invoked upon clicking an item, capable of intercepting the default system menu execution behavior.
 
-**Type:** [OnMenuItemClickWithTextCallback](../../apis-na/arkts-apis/arkts-na-onmenuitemclickwithtextcallback-t.md)
+**Type:** [OnMenuItemClickWithTextCallback](arkts-arkui-onmenuitemclickwithtextcallback-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,10 +73,6 @@ Callback before displaying the menu when the selection text changes.
 **Type:** OnPrepareMenuCallback
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

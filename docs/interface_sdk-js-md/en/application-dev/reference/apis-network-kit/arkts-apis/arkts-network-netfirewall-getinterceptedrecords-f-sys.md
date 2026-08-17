@@ -16,10 +16,6 @@ Get intercepted records by userId, and it is necessary to specify the pagination
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
 <!--Device-netFirewall-function getInterceptedRecords(userId: number, requestParam: RequestParam): Promise<InterceptedRecordPage>--><!--Device-netFirewall-function getInterceptedRecords(userId: number, requestParam: RequestParam): Promise<InterceptedRecordPage>-End-->
@@ -53,7 +49,7 @@ Get intercepted records by userId, and it is necessary to specify the pagination
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { netFirewall } from '@kit.NetworkKit';

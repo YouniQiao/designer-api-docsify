@@ -4,10 +4,6 @@ Layout information for the semi-folded state. > **NOTE：**> > 1. In semi-folded
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface HoverModeRegionLayoutOptions--><!--Device-unnamed-export interface HoverModeRegionLayoutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -37,10 +33,6 @@ Position information of the extra region. This setting takes effect only when **
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -61,10 +53,6 @@ Width ratio between the primary and extra regions. This setting takes effect onl
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -84,10 +72,6 @@ Whether to display the extra region in the half-folded state. The value **true**
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

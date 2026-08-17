@@ -4,10 +4,6 @@ Enum for user activity scenario.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export enum UserActivityScenario--><!--Device-geoLocationManager-export enum UserActivityScenario-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -21,10 +17,6 @@ NAVIGATION = 0x401
 Navigation scenario. High positioning precision and real-time performance are required.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ Sport scenario. High positioning precision is required.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UserActivityScenario-SPORT = 0x402--><!--Device-UserActivityScenario-SPORT = 0x402-End-->
@@ -62,10 +50,6 @@ Transport scenario. High positioning precision and real-time performance are req
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UserActivityScenario-TRANSPORT = 0x403--><!--Device-UserActivityScenario-TRANSPORT = 0x403-End-->
@@ -81,10 +65,6 @@ DAILY_LIFE_SERVICE = 0x404
 Daily life scenarios. Low requirements on positioning precision.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

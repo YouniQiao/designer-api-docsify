@@ -4,10 +4,6 @@ Streaming configuration parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityConnectionManager-interface StreamParam--><!--Device-abilityConnectionManager-interface StreamParam-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -32,10 +28,6 @@ This value indicates video bitrate, default 80(kbps). Only valid on the sender s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StreamParam-bitrate?: int--><!--Device-StreamParam-bitrate?: int-End-->
@@ -55,10 +47,6 @@ The target color space for conversion. Currently, only BT709_LIMIT is supported.
 **Type:** colorSpaceManager.ColorSpace
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Stream name, the receive end must be consistent with the transmit end.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StreamParam-name: string--><!--Device-StreamParam-name: string-End-->
@@ -103,10 +87,6 @@ Stream transmission role, which can be a receive stream or a transmit stream.
 **Type:** [StreamRole](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

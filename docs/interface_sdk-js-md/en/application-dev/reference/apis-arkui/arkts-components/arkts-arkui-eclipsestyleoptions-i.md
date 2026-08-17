@@ -1,14 +1,10 @@
 # EclipseStyleOptions
 
-Options of the eclipse style. The eclipse style visualizes the progress in a way similar to the moon waxing from new to full. Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
+Options of the eclipse style. The eclipse style visualizes the progress in a way similar to the moon waxing from new to full. Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions).
 
-**Inheritance/Implementation:** EclipseStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
+**Inheritance/Implementation:** EclipseStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

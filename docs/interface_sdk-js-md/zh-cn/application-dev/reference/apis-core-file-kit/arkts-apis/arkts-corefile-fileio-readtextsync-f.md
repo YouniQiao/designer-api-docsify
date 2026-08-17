@@ -17,11 +17,9 @@ declare function readTextSync(
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [readTextSync](arkts-corefile-file-fs-readtextsync-f.md#readTextSync)
+**替代接口：** [readTextSync](arkts-corefile-file-fs-readtextsync-f.md#readtextsync)
 
 <!--Device-unnamed-declare function readTextSync(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): string--><!--Device-unnamed-declare function readTextSync(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): string-End-->
 

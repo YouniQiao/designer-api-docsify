@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 11
 
 <!--Device-deviceManager-interface AuthParam--><!--Device-deviceManager-interface AuthParam-End-->
@@ -26,8 +24,6 @@ authType: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 11
 
 <!--Device-AuthParam-authType: number--><!--Device-AuthParam-authType: number-End-->
@@ -47,8 +43,6 @@ extraInfo: { [key: string]: any }
 **类型：** { [key: string]: any }
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 11
 

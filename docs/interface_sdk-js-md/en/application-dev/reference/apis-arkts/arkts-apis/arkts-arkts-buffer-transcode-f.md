@@ -16,10 +16,6 @@ Transcodes a **Buffer** or **Uint8Array** object from one encoding format to ano
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function transcode(source: Buffer | Uint8Array, fromEnc: string, toEnc: string): Buffer--><!--Device-buffer-function transcode(source: Buffer | Uint8Array, fromEnc: string, toEnc: string): Buffer-End-->
@@ -31,8 +27,8 @@ Transcodes a **Buffer** or **Uint8Array** object from one encoding format to ano
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Instance object. |
-| fromEnc | string | Yes | Current encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md#BufferEncoding). |
-| toEnc | string | Yes | Target encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md#BufferEncoding). |
+| fromEnc | string | Yes | Current encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md#bufferencoding). |
+| toEnc | string | Yes | Target encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md#bufferencoding). |
 
 **Return value:**
 
@@ -40,7 +36,7 @@ Transcodes a **Buffer** or **Uint8Array** object from one encoding format to ano
 | --- | --- |
 | [Buffer](arkts-arkts-buffer-buffer-c.md) | New **Buffer** object in the target encoding format. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

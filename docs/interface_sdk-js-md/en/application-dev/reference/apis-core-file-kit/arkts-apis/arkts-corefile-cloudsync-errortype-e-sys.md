@@ -4,10 +4,6 @@ Enumerates the device-cloud sync errors. - In the current phase, **NETWORK_UNAVA
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudSync-enum ErrorType--><!--Device-cloudSync-enum ErrorType-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -21,10 +17,6 @@ RESPONSE_TIME_OUT = 9
 Upload aborted due to cloud response time out.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ UNKNOWN_ERROR = 10
 Upload aborted due to unknown error.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Describes the codec type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-a2dp-enum CodecType--><!--Device-a2dp-enum CodecType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ CODEC_TYPE_INVALID = -1
 invalid codec type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CodecType-CODEC_TYPE_INVALID = -1--><!--Device-CodecType-CODEC_TYPE_INVALID = -1-End-->
 
@@ -40,10 +32,6 @@ SBC - Sub-band coding.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CodecType-CODEC_TYPE_SBC = 0--><!--Device-CodecType-CODEC_TYPE_SBC = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -57,10 +45,6 @@ CODEC_TYPE_AAC = 1
 AAC - Advanced Audio Coding.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CodecType-CODEC_TYPE_AAC = 1--><!--Device-CodecType-CODEC_TYPE_AAC = 1-End-->
 
@@ -76,10 +60,6 @@ L2HC.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CodecType-CODEC_TYPE_L2HC = 2--><!--Device-CodecType-CODEC_TYPE_L2HC = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -94,10 +74,6 @@ L2HCST.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CodecType-CODEC_TYPE_L2HCST = 3--><!--Device-CodecType-CODEC_TYPE_L2HCST = 3-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -111,10 +87,6 @@ CODEC_TYPE_LDAC = 4
 LDAC.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CodecType-CODEC_TYPE_LDAC = 4--><!--Device-CodecType-CODEC_TYPE_LDAC = 4-End-->
 

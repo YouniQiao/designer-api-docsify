@@ -16,10 +16,6 @@ Parses P12.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-cert-function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data--><!--Device-cert-function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data-End-->
@@ -49,7 +45,7 @@ Parses P12.
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 | [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) | Maybe wrong password. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -237,10 +233,6 @@ Parses P12. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-cert-function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>--><!--Device-cert-function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>-End-->
@@ -270,7 +262,7 @@ Parses P12. This API uses a promise to return the result.
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 | [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) | Maybe wrong password. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

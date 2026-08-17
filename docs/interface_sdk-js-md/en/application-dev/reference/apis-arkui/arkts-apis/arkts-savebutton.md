@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [SaveButton](arkts-arkui-savebutton-savebutton-f.md#SaveButton) | Set a save button. |
+| [SaveButton](arkts-arkui-savebutton-savebutton-f.md#savebutton) | Set a save button. |
 
 ### Interfaces
 

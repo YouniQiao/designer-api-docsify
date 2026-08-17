@@ -6,10 +6,6 @@ Class inherited for the distributed extension function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class DistributedExtensionContext--><!--Device-unnamed-declare class DistributedExtensionContext-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -29,10 +25,6 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 Connects to a remote Service extension ability. This method connects to a Service extension ability on a remote device. You must implement the ConnectOptions interface to obtain the proxy of the target service extension when connected.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +72,6 @@ disconnectServiceExtensionAbility(connection: long): Promise<void>
 Disconnects from a remote Service extension ability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

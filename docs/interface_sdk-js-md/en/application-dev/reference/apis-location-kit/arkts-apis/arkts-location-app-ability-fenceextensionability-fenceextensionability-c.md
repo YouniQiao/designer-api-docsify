@@ -4,10 +4,6 @@ Class of fence extension ability.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class FenceExtensionAbility--><!--Device-unnamed-export default class FenceExtensionAbility-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -28,17 +24,13 @@ Called back before a fence extension is destroyed.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FenceExtensionAbility-onDestroy(): void--><!--Device-FenceExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FenceExtensionAbility } from '@kit.LocationKit';
@@ -61,10 +53,6 @@ Called back when geofence status is change.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FenceExtensionAbility-onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions: Record<string, string>): void--><!--Device-FenceExtensionAbility-onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions: Record<string, string>): void-End-->
@@ -78,7 +66,7 @@ Called back when geofence status is change.
 | transition | geoLocationManager.GeofenceTransition | Yes | Geofence transition status |
 | additions | Record&lt;string, string&gt; | Yes | Indicates additional information |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FenceExtensionAbility, geoLocationManager } from '@kit.LocationKit';
@@ -136,10 +124,6 @@ Indicates the fence extension context.
 **Type:** [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

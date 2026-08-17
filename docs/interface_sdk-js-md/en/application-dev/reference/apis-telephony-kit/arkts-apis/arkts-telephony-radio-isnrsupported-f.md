@@ -16,10 +16,6 @@ Checks whether the device supports 5G New Radio (NR).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-function isNRSupported(): boolean--><!--Device-radio-function isNRSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -30,7 +26,7 @@ Checks whether the device supports 5G New Radio (NR).
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let result: boolean = radio.isNRSupported();
@@ -48,10 +44,6 @@ Checks whether the device supports 5G New Radio (NR) by according card slot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-function isNRSupported(slotId: int): boolean--><!--Device-radio-function isNRSupported(slotId: int): boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -68,7 +60,7 @@ Checks whether the device supports 5G New Radio (NR) by according card slot.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let slotId: number = 0;

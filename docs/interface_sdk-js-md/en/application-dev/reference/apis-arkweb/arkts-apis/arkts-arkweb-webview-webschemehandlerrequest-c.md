@@ -1,12 +1,8 @@
 # WebSchemeHandlerRequest
 
-Defines the Web resource request used for scheme handler.
+The WebSchemeHandlerRequest class defines a wrapper object for resource requests intercepted through WebSchemeHandler. When a developer registers a custom protocol handler (WebSchemeHandler), the Web kernel creates a WebSchemeHandlerRequest instance and passes it to the callback method upon intercepting a request matching the protocol. This object provides the following request information query methods: getting request header information, request URL, request method, source URL, determining whether it is a main frame request, whether it is associated with a user gesture, getting the request body stream, resource type, and the frame URL that triggered the request, so as to determine whether to intercept the request and construct a corresponding response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class WebSchemeHandlerRequest--><!--Device-webview-class WebSchemeHandlerRequest-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 getFrameUrl(): string
 ```
 
-Gets the URL of frame which trigger this request.
+Obtains the URL of the frame that triggers this request.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-WebSchemeHandlerRequest-getFrameUrl(): string--><!--Device-WebSchemeHandlerRequest-getFrameUrl(): string-End-->
 
@@ -40,7 +32,7 @@ Gets the URL of frame which trigger this request.
 
 | Type | Description |
 | --- | --- |
-| string | Return the URL of frame which trigger this request. |
+| string | URL of the frame that triggers the request. |
 
 ## getHeader
 
@@ -48,13 +40,9 @@ Gets the URL of frame which trigger this request.
 getHeader(): Array<WebHeader>
 ```
 
-Gets request headers.
+Obtains the information about the resource request header.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,7 +54,7 @@ Gets request headers.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WebHeader&gt; | Return the request headers. |
+| Array&lt;WebHeader&gt; | Information about the resource request header. |
 
 ## getHttpBodyStream
 
@@ -74,13 +62,9 @@ Gets request headers.
 getHttpBodyStream(): WebHttpBodyStream | null
 ```
 
-Get http body stream.
+Obtains the **WebHttpBodyStream** instance in this resource request.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -92,7 +76,7 @@ Get http body stream.
 
 | Type | Description |
 | --- | --- |
-| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
+| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) | WebHttpBodyStream** instance in the resource request. If there is no **WebHttpBodyStream** instance, **null** is returned. |
 
 ## getReferrer
 
@@ -100,13 +84,9 @@ Get http body stream.
 getReferrer(): string
 ```
 
-Get referrer of request.
+Obtains the referrer.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,7 +98,7 @@ Get referrer of request.
 
 | Type | Description |
 | --- | --- |
-| string | Return referrer of request. |
+| string | Obtained referrer. |
 
 ## getRequestMethod
 
@@ -126,13 +106,9 @@ Get referrer of request.
 getRequestMethod(): string
 ```
 
-Get request method.
+Obtains the request method.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -144,7 +120,7 @@ Get request method.
 
 | Type | Description |
 | --- | --- |
-| string | Return the request method. |
+| string | Request method. |
 
 ## getRequestResourceType
 
@@ -152,13 +128,9 @@ Get request method.
 getRequestResourceType(): WebResourceType
 ```
 
-Get request's resource type.
+Obtains the resource type of this resource request.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-WebSchemeHandlerRequest-getRequestResourceType(): WebResourceType--><!--Device-WebSchemeHandlerRequest-getRequestResourceType(): WebResourceType-End-->
 
@@ -168,7 +140,7 @@ Get request's resource type.
 
 | Type | Description |
 | --- | --- |
-| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Return the request's resource type. |
+| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Resource type of the resource request. |
 
 ## getRequestUrl
 
@@ -176,13 +148,9 @@ Get request's resource type.
 getRequestUrl(): string
 ```
 
-Gets the request URL.
+Obtains the URL of the resource request.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -194,7 +162,7 @@ Gets the request URL.
 
 | Type | Description |
 | --- | --- |
-| string | Return the request URL. |
+| string | URL of the resource request. |
 
 ## hasGesture
 
@@ -202,13 +170,9 @@ Gets the request URL.
 hasGesture(): boolean
 ```
 
-Check whether the request is associated with gesture.
+Checks whether the resource request is associated with a gesture (for example, a tap).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -220,7 +184,7 @@ Check whether the request is associated with gesture.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether request has user gesture. |
+| boolean | true if the resource request is associated with a gesture (such as a tap); false otherwise. |
 
 ## isMainFrame
 
@@ -228,13 +192,9 @@ Check whether the request is associated with gesture.
 isMainFrame(): boolean
 ```
 
-Check whether the request is for getting the main frame.
+Checks whether the resource request is from the main frame.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -246,5 +206,5 @@ Check whether the request is for getting the main frame.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether request is main frame. |
+| boolean | Whether the resource request is for the main frame. The value **true** indicates the resource request is for the main frame, and **false** indicates otherwise. |
 

@@ -10,10 +10,6 @@ SIM卡激活状态变化的监听，使用callback方式作为异步方法。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-observer-function onGetSimActiveState(slotId: int, callback: Callback<boolean>): void--><!--Device-observer-function onGetSimActiveState(slotId: int, callback: Callback<boolean>): void-End-->
@@ -25,7 +21,7 @@ SIM卡激活状态变化的监听，使用callback方式作为异步方法。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回SIM卡是否激活。<br/>- true：激活。<br/>- false：未激活。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 回调函数，返回SIM卡是否激活。<br/>- true：激活。<br/>- false：未激活。 |
 
 **错误码：**
 
@@ -37,7 +33,7 @@ SIM卡激活状态变化的监听，使用callback方式作为异步方法。
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

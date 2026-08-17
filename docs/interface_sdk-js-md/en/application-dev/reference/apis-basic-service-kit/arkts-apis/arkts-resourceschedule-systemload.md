@@ -4,10 +4,6 @@ The **systemload** module allows the system to determine the system load level b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace systemLoad--><!--Device-unnamed-declare namespace systemLoad-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.SystemLoad
@@ -24,11 +20,11 @@ import { systemLoad } from 'systemLoad';
 
 | Name | Description |
 | --- | --- |
-| [getLevel](arkts-basicservices-systemload-getlevel-f.md#getLevel) | Obtains the system load level. This API uses a promise to return the result. |
-| [offSystemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md#offSystemLoadChange) | Unregister system load callback for perception system load change |
-| off_systemLoadChange | Disables listening for system load level changes. This API uses an asynchronous callback to return the result. |
-| [onSystemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md#onSystemLoadChange) | Register system load callback for perception system load change |
-| on_systemLoadChange | Enables listening for system load level changes. This API uses an asynchronous callback to return the result. |
+| [getLevel](arkts-basicservices-systemload-getlevel-f.md#getlevel) | Obtains the system load level. This API uses a promise to return the result. |
+| [offSystemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md#offsystemloadchange) | Unregister system load callback for perception system load change |
+| [off_systemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md#offsystemloadchange) | Disables listening for system load level changes. This API uses an asynchronous callback to return the result. |
+| [onSystemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md#onsystemloadchange) | Register system load callback for perception system load change |
+| [on_systemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md#onsystemloadchange) | Enables listening for system load level changes. This API uses an asynchronous callback to return the result. |
 
 ### Enums
 

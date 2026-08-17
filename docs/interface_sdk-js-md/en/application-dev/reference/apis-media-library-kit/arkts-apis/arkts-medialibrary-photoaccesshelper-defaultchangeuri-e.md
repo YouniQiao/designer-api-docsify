@@ -4,10 +4,6 @@ Enumerates the **DefaultChangeUri** subtypes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum DefaultChangeUri--><!--Device-photoAccessHelper-enum DefaultChangeUri-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -22,10 +18,6 @@ Default **PhotoAsset** URI, which must be used with **forChildUris{true}** to su
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DefaultChangeUri-DEFAULT_PHOTO_URI = 'file://media/Photo'--><!--Device-DefaultChangeUri-DEFAULT_PHOTO_URI = 'file://media/Photo'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -39,10 +31,6 @@ DEFAULT_ALBUM_URI = 'file://media/PhotoAlbum'
 Default album URI, which must be used with **forChildUris{true}** to subscribe to change notifications of all albums.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DefaultChangeUri-DEFAULT_ALBUM_URI = 'file://media/PhotoAlbum'--><!--Device-DefaultChangeUri-DEFAULT_ALBUM_URI = 'file://media/PhotoAlbum'-End-->
 

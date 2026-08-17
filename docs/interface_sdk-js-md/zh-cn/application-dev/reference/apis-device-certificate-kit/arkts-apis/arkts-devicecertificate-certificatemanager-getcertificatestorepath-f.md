@@ -10,10 +10,6 @@ function getCertificateStorePath(property: CertStoreProperty): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-certificateManager-function getCertificateStorePath(property: CertStoreProperty): string--><!--Device-certificateManager-function getCertificateStorePath(property: CertStoreProperty): string-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
@@ -38,7 +34,7 @@ function getCertificateStorePath(property: CertStoreProperty): string
 | [17500009](../errorcode-certManager.md#17500009-不支持指定的证书存储路径) | The device does not support the specified certificate storage path, For example, the device outside China does not support the certificate that uses SM algorithm.<br>**适用版本：** 20+ |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -49,7 +45,7 @@ try {
     certType: certificateManager.CertType.CA_CERT_SYSTEM
   };
   let systemCAPath = certificateManager.getCertificateStorePath(property1);
-  console.info(`Success to get system ca path: ${systemCAPath}`);
+  console.info(`Succeeded in getting system CA path: ${systemCAPath}`);
 
   /* 获取当前用户的用户CA存储位置 */
   let property2: certificateManager.CertStoreProperty = {
@@ -57,7 +53,7 @@ try {
     certScope: certificateManager.CertScope.CURRENT_USER
   };
   let userCACurrentPath = certificateManager.getCertificateStorePath(property2);
-  console.info(`Success to get current user's user ca path: ${userCACurrentPath}`);
+  console.info(`Succeeded in getting current user's user CA path: ${userCACurrentPath}`);
 
   /* 获取设备公共的用户CA存储位置 */
   let property3: certificateManager.CertStoreProperty = {
@@ -65,7 +61,7 @@ try {
     certScope: certificateManager.CertScope.GLOBAL_USER
   };
   let globalCACurrentPath = certificateManager.getCertificateStorePath(property3);
-  console.info(`Success to get global user's user ca path: ${globalCACurrentPath}`);
+  console.info(`Succeeded in getting global user's user CA path: ${globalCACurrentPath}`);
 
   /* 获取SM算法系统CA的存储位置 */
   let property4: certificateManager.CertStoreProperty = {
@@ -73,7 +69,7 @@ try {
     certAlg: certificateManager.CertAlgorithm.SM
   };
   let smSystemCAPath = certificateManager.getCertificateStorePath(property4);
-  console.info(`Success to get SM system ca path: ${smSystemCAPath}`);
+  console.info(`Succeeded in getting SM system CA path: ${smSystemCAPath}`);
 } catch (error) {
   console.error(`Failed to get store path. Code: ${error.code}, message: ${error.message}`);
 }

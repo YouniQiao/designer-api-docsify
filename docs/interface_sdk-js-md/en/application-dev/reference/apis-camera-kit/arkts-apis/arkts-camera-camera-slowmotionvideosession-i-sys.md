@@ -1,14 +1,10 @@
 # SlowMotionVideoSession (System API)
 
-SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect Implements a slow-motion video session, which sets the parameters of the slow-motion video mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
+SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect Implements a slow-motion video session, which sets the parameters of the slow-motion video mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#session).
 
-**Inheritance/Implementation:** SlowMotionVideoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Flash](arkts-camera-camera-flash-i.md#Flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [Focus](arkts-camera-camera-focus-i.md#Focus), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect-(System-API))
+**Inheritance/Implementation:** SlowMotionVideoSession extends [Session](arkts-camera-camera-session-i.md#session), [Flash](arkts-camera-camera-flash-i.md#flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#autoexposure), [Focus](arkts-camera-camera-focus-i.md#focus), [Zoom](arkts-camera-camera-zoom-i.md#zoom), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#coloreffect-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface SlowMotionVideoSession--><!--Device-camera-interface SlowMotionVideoSession-End-->
 
@@ -32,10 +28,6 @@ Checks whether the device supports slow-motion detection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-isSlowMotionDetectionSupported(): boolean--><!--Device-SlowMotionVideoSession-isSlowMotionDetectionSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -55,7 +47,7 @@ Checks whether the device supports slow-motion detection.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 12 - 18 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -82,10 +74,6 @@ offError(callback?: ErrorCallback): void
 Unsubscribes from error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SlowMotionVideoSession-offError(callback?: ErrorCallback): void--><!--Device-SlowMotionVideoSession-offError(callback?: ErrorCallback): void-End-->
 
@@ -115,10 +103,6 @@ Unsubscribes from focus state change event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-SlowMotionVideoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -146,10 +130,6 @@ offSlowMotionStatus(callback?: AsyncCallback<SlowMotionStatus>): void
 Unsubscribes slow motion status callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SlowMotionVideoSession-offSlowMotionStatus(callback?: AsyncCallback<SlowMotionStatus>): void--><!--Device-SlowMotionVideoSession-offSlowMotionStatus(callback?: AsyncCallback<SlowMotionStatus>): void-End-->
 
@@ -179,10 +159,6 @@ Unsubscribes from zoom info event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-SlowMotionVideoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -211,10 +187,6 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-SlowMotionVideoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -234,7 +206,7 @@ Unsubscribes from HighResolutionPhotoSession error events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterSessionError(slowMotionVideoSession: camera.SlowMotionVideoSession): void {
@@ -251,10 +223,6 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 Unsubscribes from focus state change events.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-SlowMotionVideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-SlowMotionVideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -275,7 +243,7 @@ Unsubscribes from focus state change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterFocusStateChange(slowMotionVideoSession: camera.SlowMotionVideoSession): void {
@@ -293,10 +261,6 @@ Unsubscribes from slow-motion status change events.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-off(type: 'slowMotionStatus', callback?: AsyncCallback<SlowMotionStatus>): void--><!--Device-SlowMotionVideoSession-off(type: 'slowMotionStatus', callback?: AsyncCallback<SlowMotionStatus>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -308,7 +272,7 @@ Unsubscribes from slow-motion status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'slowMotionStatus' | Yes | Event type. The value is fixed at **'slowMotionStatus'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SlowMotionStatus](arkts-camera-camera-slowmotionstatus-e-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('slowMotionStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode) is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SlowMotionStatus](arkts-camera-camera-slowmotionstatus-e-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('slowMotionStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
 
 **Error codes:**
 
@@ -316,7 +280,7 @@ Unsubscribes from slow-motion status change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterSlowMotionStatus(slowMotionVideoSession: camera.SlowMotionVideoSession): void {
@@ -333,10 +297,6 @@ off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): 
 Unsubscribes from smooth zoom state change events.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-SlowMotionVideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-SlowMotionVideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
 
@@ -357,7 +317,7 @@ Unsubscribes from smooth zoom state change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterSmoothZoomInfo(slowMotionVideoSession: camera.SlowMotionVideoSession): void {
@@ -374,10 +334,6 @@ onError(callback: ErrorCallback): void
 Subscribes to error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SlowMotionVideoSession-onError(callback: ErrorCallback): void--><!--Device-SlowMotionVideoSession-onError(callback: ErrorCallback): void-End-->
 
@@ -407,10 +363,6 @@ Subscribes focus state change event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-SlowMotionVideoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -438,10 +390,6 @@ onSlowMotionStatus(callback: AsyncCallback<SlowMotionStatus>): void
 Subscribes slow motion status callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SlowMotionVideoSession-onSlowMotionStatus(callback: AsyncCallback<SlowMotionStatus>): void--><!--Device-SlowMotionVideoSession-onSlowMotionStatus(callback: AsyncCallback<SlowMotionStatus>): void-End-->
 
@@ -471,10 +419,6 @@ Subscribes zoom info event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-SlowMotionVideoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -503,10 +447,6 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-SlowMotionVideoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -517,8 +457,8 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-camera-session-i.md#beginConfig), [commitConfig](arkts-camera-camera-session-i.md#commitConfig), and [addInput](arkts-camera-camera-session-i.md#addInput). |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-camera-session-i.md#beginconfig), [commitConfig](arkts-camera-camera-session-i.md#commitconfig), and [addInput](arkts-camera-camera-session-i.md#addinput). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 **Error codes:**
 
@@ -526,7 +466,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -550,10 +490,6 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-SlowMotionVideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -573,7 +509,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -601,10 +537,6 @@ Subscribes to slow-motion status change events. This API uses an asynchronous ca
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-on(type: 'slowMotionStatus', callback: AsyncCallback<SlowMotionStatus>): void--><!--Device-SlowMotionVideoSession-on(type: 'slowMotionStatus', callback: AsyncCallback<SlowMotionStatus>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -624,7 +556,7 @@ Subscribes to slow-motion status change events. This API uses an asynchronous ca
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -652,10 +584,6 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-SlowMotionVideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -675,7 +603,7 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -703,10 +631,6 @@ Sets an area for slow-motion detection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SlowMotionVideoSession-setSlowMotionDetectionArea(area: Rect): void--><!--Device-SlowMotionVideoSession-setSlowMotionDetectionArea(area: Rect): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -727,7 +651,7 @@ Sets an area for slow-motion detection.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 12 - 18 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

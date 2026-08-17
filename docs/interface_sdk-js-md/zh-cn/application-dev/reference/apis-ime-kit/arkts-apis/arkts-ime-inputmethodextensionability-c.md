@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class InputMethodExtensionAbility--><!--Device-unnamed-declare class InputMethodExtensionAbility-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -22,10 +18,6 @@ onCreate(want: Want): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InputMethodExtensionAbility-onCreate(want: Want): void--><!--Device-InputMethodExtensionAbility-onCreate(want: Want): void-End-->
@@ -38,7 +30,7 @@ onCreate(want: Want): void
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 当前Extension相关的Want类型信息，包括Ability名称、bundle名称等。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { InputMethodExtensionAbility, InputMethodAbility, KeyboardDelegate, PanelInfo, PanelType, PanelFlag, inputMethodEngine } from '@kit.IMEKit';
@@ -85,17 +77,13 @@ onDestroy(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InputMethodExtensionAbility-onDestroy(): void--><!--Device-InputMethodExtensionAbility-onDestroy(): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 示例
+**示例**
 
 ```TypeScript
 import { InputMethodExtensionAbility } from '@kit.IMEKit';
@@ -119,10 +107,6 @@ InputMethodExtensionAbility的上下文环境，继承于ExtensionContext。
 **类型：** [InputMethodExtensionContext](arkts-ime-inputmethodextensioncontext-c.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

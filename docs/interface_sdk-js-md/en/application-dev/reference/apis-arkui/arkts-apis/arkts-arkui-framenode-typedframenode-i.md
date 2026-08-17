@@ -1,14 +1,10 @@
 # TypedFrameNode
 
-Extends [FrameNode](arkts-arkui-framenode-c.md#FrameNode) to define a FrameNode with specific type constraints.
+Extends [FrameNode](arkts-arkui-framenode-c.md#framenode) to define a FrameNode with specific type constraints.
 
-**Inheritance/Implementation:** TypedFrameNode extends [FrameNode](arkts-arkui-framenode-c.md#FrameNode)
+**Inheritance/Implementation:** TypedFrameNode extends [FrameNode](arkts-arkui-framenode-c.md#framenode)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface TypedFrameNode--><!--Device-unnamed-export interface TypedFrameNode-End-->
 
@@ -25,10 +21,6 @@ Attribute configuration object for setting or updating common and specific attri
 **Type:** T
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Construction parameters for creating a component, used to set or update the comp
 **Type:** C
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

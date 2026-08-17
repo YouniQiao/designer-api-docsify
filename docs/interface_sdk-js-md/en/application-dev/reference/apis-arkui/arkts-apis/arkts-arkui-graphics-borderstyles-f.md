@@ -10,10 +10,6 @@ Generates a border style object with the specified border style color for all bo
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -34,7 +30,7 @@ Generates a border style object with the specified border style color for all bo
 | --- | --- |
 | [Edges](arkts-arkui-graphics-edges-i.md)&lt;BorderStyle&gt; | borderStyles** object whose borders are all in the specified style. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, borderStyles } from '@kit.ArkUI';

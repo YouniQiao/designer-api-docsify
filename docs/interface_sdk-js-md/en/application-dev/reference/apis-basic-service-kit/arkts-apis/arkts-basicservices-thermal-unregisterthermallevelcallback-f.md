@@ -16,10 +16,6 @@ Unregisters from the thermal level changes. This API uses an asynchronous callba
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-thermal-function unregisterThermalLevelCallback(callback?: Callback<void>): void--><!--Device-thermal-function unregisterThermalLevelCallback(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
@@ -36,7 +32,7 @@ Unregisters from the thermal level changes. This API uses an asynchronous callba
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

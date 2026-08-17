@@ -17,10 +17,6 @@ Proactively triggers screen content awareness and obtains the current screen awa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
 - API version 23 - 24: ohos.permission.GET_SCREEN_CONTENT
@@ -56,7 +52,7 @@ Proactively triggers screen content awareness and obtains the current screen awa
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to get page content forbidden by <br> permission: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import onScreen from "@ohos.multimodalAwareness.onScreen";

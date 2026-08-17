@@ -4,10 +4,6 @@ TreeMap stores key-value (KV) pairs. Each key must be unique and have only one v
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class TreeMap--><!--Device-unnamed-declare class TreeMap-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<[K, V]>
 returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-TreeMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
@@ -76,7 +64,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -127,10 +115,6 @@ Clear all element groups in the map
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-clear(): void--><!--Device-TreeMap-clear(): void-End-->
@@ -143,7 +127,7 @@ Clear all element groups in the map
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -164,10 +148,6 @@ A constructor used to create a TreeMap object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-constructor(comparator?: (firstValue: K, secondValue: K) => boolean)--><!--Device-TreeMap-constructor(comparator?: (firstValue: K, secondValue: K) => boolean)-End-->
@@ -186,7 +166,7 @@ A constructor used to create a TreeMap object.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The TreeMap's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Default constructor.
@@ -242,10 +222,6 @@ A constructor used to create a TreeMap object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TreeMap-constructor(comparator?: TreeMapComparator<K>)--><!--Device-TreeMap-constructor(comparator?: TreeMapComparator<K>)-End-->
@@ -268,10 +244,6 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-entries(): IterableIterator<[K, V]>--><!--Device-TreeMap-entries(): IterableIterator<[K, V]>-End-->
@@ -290,7 +262,7 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -328,10 +300,6 @@ Executes the given callback function once for each real key in the map. It does 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void--><!--Device-TreeMap-forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void-End-->
@@ -351,7 +319,7 @@ Executes the given callback function once for each real key in the map. It does 
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -386,10 +354,6 @@ Executes the given callback function once for each real key in the map. It does 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TreeMap-forEach(callbackFn: TreeMapForEachCb<K, V>): void--><!--Device-TreeMap-forEach(callbackFn: TreeMapForEachCb<K, V>): void-End-->
@@ -411,10 +375,6 @@ get(key: K): V
 Returns a specified element in a Map object, or undefined if there is no corresponding element
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -440,7 +400,7 @@ Returns a specified element in a Map object, or undefined if there is no corresp
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -459,10 +419,6 @@ get(key: K): V | undefined
 Returns a specified element in a Map object, or undefined if there is no corresponding element
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -492,10 +448,6 @@ Obtains the first sorted key in the treemap. Or returns undefined if tree map is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-getFirstKey(): K--><!--Device-TreeMap-getFirstKey(): K-End-->
@@ -513,9 +465,9 @@ Obtains the first sorted key in the treemap. Or returns undefined if tree map is
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirstKey method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -534,10 +486,6 @@ getHigherKey(key: K): K
 Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -563,7 +511,7 @@ Returns the least element greater than or equal to the specified key if the key 
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherKey method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<number, string>();
@@ -584,10 +532,6 @@ getHigherKey(key: K): K | undefined
 Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -624,10 +568,6 @@ Obtains the last sorted key in the treemap. Or returns undefined if tree map is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-getLastKey(): K--><!--Device-TreeMap-getLastKey(): K-End-->
@@ -645,9 +585,9 @@ Obtains the last sorted key in the treemap. Or returns undefined if tree map is 
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastKey method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -666,10 +606,6 @@ getLowerKey(key: K): K
 Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -695,7 +631,7 @@ Returns the greatest element smaller than or equal to the specified key if the k
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerKey method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<number, string>();
@@ -716,10 +652,6 @@ getLowerKey(key: K): K | undefined
 Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -756,10 +688,6 @@ Returns whether a key is contained in this map
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-hasKey(key: K): boolean--><!--Device-TreeMap-hasKey(key: K): boolean-End-->
@@ -784,7 +712,7 @@ Returns whether a key is contained in this map
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasKey method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -802,10 +730,6 @@ hasValue(value: V): boolean
 Returns whether a value is contained in this map
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -831,7 +755,7 @@ Returns whether a value is contained in this map
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasValue method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -849,10 +773,6 @@ isEmpty(): boolean
 Returns whether the Map object contains elements
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -872,7 +792,7 @@ Returns whether the Map object contains elements
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<number, number>();
@@ -889,10 +809,6 @@ keys(): IterableIterator<K>
 Returns a new Iterator object that contains the keys contained in this map
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -912,7 +828,7 @@ Returns a new Iterator object that contains the keys contained in this map
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -936,10 +852,6 @@ remove(key: K): V
 Remove a specified element from a Map object
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -965,7 +877,7 @@ Remove a specified element from a Map object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -984,10 +896,6 @@ remove(key: K): V | undefined
 Remove a specified element from a Map object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1017,10 +925,6 @@ Replace the old value by new value corresponding to the specified key
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-replace(key: K, newValue: V): boolean--><!--Device-TreeMap-replace(key: K, newValue: V): boolean-End-->
@@ -1046,7 +950,7 @@ Replace the old value by new value corresponding to the specified key
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replace method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1064,10 +968,6 @@ set(key: K, value: V): Object
 Adds or updates a(new) key-value pair with a key and value specified for the Map object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1094,7 +994,7 @@ Adds or updates a(new) key-value pair with a key and value specified for the Map
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1111,10 +1011,6 @@ setAll(map: TreeMap<K, V>): void
 Adds all element groups in one map to another map
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1134,7 +1030,7 @@ Adds all element groups in one map to another map
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAll method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1162,10 +1058,6 @@ Returns a new Iterator object that contains the values contained in this map
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-values(): IterableIterator<V>--><!--Device-TreeMap-values(): IterableIterator<V>-End-->
@@ -1184,7 +1076,7 @@ Returns a new Iterator object that contains the values contained in this map
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let treeMap = new TreeMap<string, number>();
@@ -1209,10 +1101,6 @@ Gets the element number of the TreeMap.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

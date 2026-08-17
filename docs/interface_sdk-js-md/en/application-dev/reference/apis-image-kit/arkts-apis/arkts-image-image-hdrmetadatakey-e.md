@@ -1,12 +1,8 @@
 # HdrMetadataKey
 
-Enumerates the keys of HDR metadata used by [pixelmap](arkts-image-image-pixelmap-i.md#PixelMap).
+Enumerates the keys of HDR metadata used by [pixelmap](arkts-image-image-pixelmap-i.md#pixelmap).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-enum HdrMetadataKey--><!--Device-image-enum HdrMetadataKey-End-->
 
@@ -18,13 +14,9 @@ Enumerates the keys of HDR metadata used by [pixelmap](arkts-image-image-pixelma
 HDR_METADATA_TYPE = 0
 ```
 
-Metadata type used by [pixelmap](arkts-image-image-pixelmap-i.md#PixelMap).
+Metadata type used by [pixelmap](arkts-image-image-pixelmap-i.md#pixelmap).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HdrMetadataKey-HDR_METADATA_TYPE = 0--><!--Device-HdrMetadataKey-HDR_METADATA_TYPE = 0-End-->
 
@@ -40,10 +32,6 @@ Static metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HdrMetadataKey-HDR_STATIC_METADATA = 1--><!--Device-HdrMetadataKey-HDR_STATIC_METADATA = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -58,10 +46,6 @@ Dynamic metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HdrMetadataKey-HDR_DYNAMIC_METADATA = 2--><!--Device-HdrMetadataKey-HDR_DYNAMIC_METADATA = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -75,10 +59,6 @@ HDR_GAINMAP_METADATA = 3
 Metadata used by gain maps.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HdrMetadataKey-HDR_GAINMAP_METADATA = 3--><!--Device-HdrMetadataKey-HDR_GAINMAP_METADATA = 3-End-->
 

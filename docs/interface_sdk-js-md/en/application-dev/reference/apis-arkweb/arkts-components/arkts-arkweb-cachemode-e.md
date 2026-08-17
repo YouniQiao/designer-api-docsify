@@ -1,12 +1,8 @@
 # CacheMode
 
-Enum type supplied to cacheMode for setting the Web cache mode.
+Enumerates the cache modes.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum CacheMode--><!--Device-unnamed-declare enum CacheMode-End-->
 
@@ -18,13 +14,9 @@ Enum type supplied to cacheMode for setting the Web cache mode.
 Default = 0
 ```
 
-load cache when they are available and not expired, otherwise load online.
+The cache that has not expired is preferentially used to load resources. If the cache is invalid or no cache is available, resources are obtained from the Internet.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ load cache when they are available and not expired, otherwise load online.
 None = 1
 ```
 
-load cache when they are available, otherwise load online.
+Preferentially loads resources from the cache (including expired ones), and fetches them from the network when no cache is available.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ load cache when they are available, otherwise load online.
 Online = 2
 ```
 
-Load online and not cache.
+The cache is not used to load the resources. All resources are forcibly obtained from the Internet.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +62,9 @@ Load online and not cache.
 Only = 3
 ```
 
-load cache and not online.
+The local cache alone is used to load the resources.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

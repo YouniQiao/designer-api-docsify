@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-enum PrintDocumentFormat--><!--Device-print-enum PrintDocumentFormat-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -21,10 +17,6 @@ DOCUMENT_FORMAT_AUTO = 0
 表示自动检测格式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,10 +34,6 @@ DOCUMENT_FORMAT_JPEG = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_JPEG = 1--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_JPEG = 1-End-->
@@ -61,10 +49,6 @@ DOCUMENT_FORMAT_PDF = 2
 表示PDF格式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,10 +66,6 @@ DOCUMENT_FORMAT_POSTSCRIPT = 3
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_POSTSCRIPT = 3--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_POSTSCRIPT = 3-End-->
@@ -102,10 +82,6 @@ DOCUMENT_FORMAT_TEXT = 4
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_TEXT = 4--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_TEXT = 4-End-->
@@ -121,10 +97,6 @@ DOCUMENT_FORMAT_RAW = 5
 表示RAW格式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

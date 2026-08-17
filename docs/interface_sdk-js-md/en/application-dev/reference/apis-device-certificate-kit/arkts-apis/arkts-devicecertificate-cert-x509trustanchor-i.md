@@ -4,10 +4,6 @@ Represents an X.509 trust anchor, which is used to verify the certificate chain.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface X509TrustAnchor--><!--Device-cert-interface X509TrustAnchor-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -30,10 +26,6 @@ Trusted CA certificate. If **CACert** is set, only **CACert** is used to validat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509TrustAnchor-CACert?: X509Cert--><!--Device-X509TrustAnchor-CACert?: X509Cert-End-->
@@ -51,10 +43,6 @@ Public key of the trusted CA certificate, in DER format. This parameter takes ef
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Subject of the trusted CA certificate, in DER format. This parameter takes effec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-X509TrustAnchor-CASubject?: Uint8Array--><!--Device-X509TrustAnchor-CASubject?: Uint8Array-End-->
@@ -95,10 +79,6 @@ Name constraints, in DER format. Only the leaf certificate of the current certif
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

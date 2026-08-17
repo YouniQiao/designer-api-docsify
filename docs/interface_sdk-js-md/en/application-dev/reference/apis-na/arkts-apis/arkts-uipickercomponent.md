@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [UIPickerComponent](arkts-na-uipickercomponent-uipickercomponent-f.md#UIPickerComponent) | Defines the Picker container. |
+| [UIPickerComponent](arkts-na-uipickercomponent-uipickercomponent-f.md#uipickercomponent) | Defines the Picker container. |
 
 ### Interfaces
 

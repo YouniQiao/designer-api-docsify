@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-enum FingerprintTips--><!--Device-osAccount-enum FingerprintTips-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ FINGERPRINT_TIP_GOOD = 0
 表示采集的图像良好。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FingerprintTips-FINGERPRINT_TIP_GOOD = 0--><!--Device-FingerprintTips-FINGERPRINT_TIP_GOOD = 0-End-->
 
@@ -44,10 +36,6 @@ FINGERPRINT_TIP_IMAGER_DIRTY = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-FingerprintTips-FINGERPRINT_TIP_IMAGER_DIRTY = 1--><!--Device-FingerprintTips-FINGERPRINT_TIP_IMAGER_DIRTY = 1-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -63,10 +51,6 @@ FINGERPRINT_TIP_INSUFFICIENT = 2
 表示由于检测到的情况，指纹图像噪声太大，无法处理。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FingerprintTips-FINGERPRINT_TIP_INSUFFICIENT = 2--><!--Device-FingerprintTips-FINGERPRINT_TIP_INSUFFICIENT = 2-End-->
 
@@ -84,10 +68,6 @@ FINGERPRINT_TIP_PARTIAL = 3
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-FingerprintTips-FINGERPRINT_TIP_PARTIAL = 3--><!--Device-FingerprintTips-FINGERPRINT_TIP_PARTIAL = 3-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -103,10 +83,6 @@ FINGERPRINT_TIP_TOO_FAST = 4
 表示指纹图像由于快速运动而不完整。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FingerprintTips-FINGERPRINT_TIP_TOO_FAST = 4--><!--Device-FingerprintTips-FINGERPRINT_TIP_TOO_FAST = 4-End-->
 
@@ -124,10 +100,6 @@ FINGERPRINT_TIP_TOO_SLOW = 5
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-FingerprintTips-FINGERPRINT_TIP_TOO_SLOW = 5--><!--Device-FingerprintTips-FINGERPRINT_TIP_TOO_SLOW = 5-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -144,10 +116,6 @@ FINGERPRINT_TIP_FINGER_DOWN = 6
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-FingerprintTips-FINGERPRINT_TIP_FINGER_DOWN = 6--><!--Device-FingerprintTips-FINGERPRINT_TIP_FINGER_DOWN = 6-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -163,10 +131,6 @@ FINGERPRINT_TIP_FINGER_UP = 7
 表示手指抬起。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FingerprintTips-FINGERPRINT_TIP_FINGER_UP = 7--><!--Device-FingerprintTips-FINGERPRINT_TIP_FINGER_UP = 7-End-->
 

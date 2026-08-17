@@ -4,10 +4,6 @@ The cloudExtension module provides APIs for third-party vendors to implement the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace cloudExtension--><!--Device-unnamed-declare namespace cloudExtension-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -25,10 +21,10 @@ import { cloudExtension } from 'cloudExtension';
 
 | Name | Description |
 | --- | --- |
-| [createAssetLoaderStub](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md#createAssetLoaderStub) | Creates a RemoteObject instance based on an AssetLoader instance. The system uses this object to call the APIs of the AssetLoader instance. This API uses a promise to return the result. |
-| [createCloudDBStub](arkts-arkdata-cloudextension-createclouddbstub-f-sys.md#createCloudDBStub) | Creates a RemoteObject instance based on a CloudDB instance. The system uses this object to call the APIs of the CloudDB instance. This API uses a promise to return the result. |
-| [createCloudServiceStub](arkts-arkdata-cloudextension-createcloudservicestub-f-sys.md#createCloudServiceStub) | Creates a RemoteObject instance based on a CloudService instance. The system uses this object to call the APIs of the CloudService instance. This API uses a promise to return the result. |
-| [createShareServiceStub](arkts-arkdata-cloudextension-createshareservicestub-f-sys.md#createShareServiceStub) | Creates a RemoteObject instance based on a ShareCenter instance. The system uses this object to call the APIs of the ShareCenter instance. This API uses a promise to return the result. |
+| [createAssetLoaderStub](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md#createassetloaderstub) | Creates a RemoteObject instance based on an AssetLoader instance. The system uses this object to call the APIs of the AssetLoader instance. This API uses a promise to return the result. |
+| [createCloudDBStub](arkts-arkdata-cloudextension-createclouddbstub-f-sys.md#createclouddbstub) | Creates a RemoteObject instance based on a CloudDB instance. The system uses this object to call the APIs of the CloudDB instance. This API uses a promise to return the result. |
+| [createCloudServiceStub](arkts-arkdata-cloudextension-createcloudservicestub-f-sys.md#createcloudservicestub) | Creates a RemoteObject instance based on a CloudService instance. The system uses this object to call the APIs of the CloudService instance. This API uses a promise to return the result. |
+| [createShareServiceStub](arkts-arkdata-cloudextension-createshareservicestub-f-sys.md#createshareservicestub) | Creates a RemoteObject instance based on a ShareCenter instance. The system uses this object to call the APIs of the ShareCenter instance. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->

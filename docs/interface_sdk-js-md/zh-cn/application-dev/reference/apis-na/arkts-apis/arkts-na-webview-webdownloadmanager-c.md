@@ -4,9 +4,7 @@ You can trigger download manually through this interface, or resume failed or ca
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-webview-class WebDownloadManager--><!--Device-webview-class WebDownloadManager-End-->
 
@@ -22,9 +20,7 @@ Resume the canceled or failed download.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebDownloadManager-static resumeDownload(webDownloadItem: WebDownloadItem): void--><!--Device-WebDownloadManager-static resumeDownload(webDownloadItem: WebDownloadItem): void-End-->
 
@@ -34,7 +30,7 @@ Resume the canceled or failed download.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| webDownloadItem | [WebDownloadItem](arkts-na-webview-webdownloaditem-c.md) | 是 | Download that need to be resume. |
+| webDownloadItem | [WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md) | 是 | Download that need to be resume. |
 
 **错误码：**
 
@@ -52,9 +48,7 @@ Set a delegate used to receive the progress of the download triggered from WebDo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebDownloadManager-static setDownloadDelegate(delegate: WebDownloadDelegate): void--><!--Device-WebDownloadManager-static setDownloadDelegate(delegate: WebDownloadDelegate): void-End-->
 
@@ -64,5 +58,5 @@ Set a delegate used to receive the progress of the download triggered from WebDo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](arkts-na-webview-webdownloaddelegate-c.md) | 是 | Delegate used for download triggered from WebDownloadManager. |
+| delegate | [WebDownloadDelegate](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaddelegate-c.md) | 是 | Delegate used for download triggered from WebDownloadManager. |
 

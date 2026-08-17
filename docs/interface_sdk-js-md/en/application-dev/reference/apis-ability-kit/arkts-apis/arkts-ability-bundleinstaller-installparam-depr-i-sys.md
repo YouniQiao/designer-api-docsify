@@ -4,11 +4,9 @@ Describes the parameters required for bundle installation, recovery, or uninstal
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API))
+**Substitutes:** [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api)
 
 <!--Device-unnamed-export interface InstallParam--><!--Device-unnamed-export interface InstallParam-End-->
 
@@ -30,11 +28,9 @@ Installation flag. The value can be: **1** (default): overwrite installation. **
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [installFlag](arkts-ability-installer-installparam-i-sys.md#installFlag)
+**Substitutes:** [installFlag](arkts-ability-installer-installparam-i-sys.md#installflag)
 
 <!--Device-InstallParam-installFlag: number--><!--Device-InstallParam-installFlag: number-End-->
 
@@ -56,11 +52,9 @@ Whether to retain the bundle data when the application is uninstalled. The defau
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isKeepData](arkts-ability-installer-installparam-i-sys.md#isKeepData)
+**Substitutes:** [isKeepData](arkts-ability-installer-installparam-i-sys.md#iskeepdata)
 
 <!--Device-InstallParam-isKeepData: boolean--><!--Device-InstallParam-isKeepData: boolean-End-->
 
@@ -82,11 +76,9 @@ User ID. The default value is the user ID of the caller.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [userId](arkts-ability-installer-installparam-i-sys.md#userId)
+**Substitutes:** [userId](arkts-ability-installer-installparam-i-sys.md#userid)
 
 <!--Device-InstallParam-userId: number--><!--Device-InstallParam-userId: number-End-->
 

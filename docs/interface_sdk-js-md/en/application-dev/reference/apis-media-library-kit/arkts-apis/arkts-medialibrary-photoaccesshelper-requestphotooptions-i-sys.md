@@ -4,10 +4,6 @@ Defines the options for obtaining the thumbnail of an image or video.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface RequestPhotoOptions--><!--Device-photoAccessHelper-interface RequestPhotoOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -32,10 +28,6 @@ Operation to perform.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RequestPhotoOptions-requestPhotoType?: RequestPhotoType--><!--Device-RequestPhotoOptions-requestPhotoType?: RequestPhotoType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -53,10 +45,6 @@ Size of the thumbnail to obtain.
 **Type:** image.Size
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RequestPhotoOptions-size?: image.Size--><!--Device-RequestPhotoOptions-size?: image.Size-End-->
 

@@ -16,10 +16,6 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-hiAppEvent-function addWatcher(watcher: Watcher): AppEventPackageHolder--><!--Device-hiAppEvent-function addWatcher(watcher: Watcher): AppEventPackageHolder-End-->
@@ -49,7 +45,7 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 | [11102005](../errorcode-hiappevent.md#11102005-invalid-timeout-value) | Invalid timeout value. Possibly caused by the timeout value is less than zero. |
 | [11102004](../errorcode-hiappevent.md#11102004-invalid-event-size) | Invalid size value. Possibly caused by the size value is less than zero. |
 
-## Examples
+**Examples**
 
 Method 1: Set triggerCondition to implement the onTrigger() callback. When the callback conditions are met, the system automatically triggers the callback.
 

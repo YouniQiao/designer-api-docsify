@@ -1,14 +1,12 @@
 # WriteStream
 
-Defines a writeable stream. You need to use [fileIo.createWriteStream](arkts-na-fileio-createwritestream-f.md#createWriteStream) to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable).
+Defines a writeable stream. You need to use [fileIo.createWriteStream](arkts-na-fileio-createwritestream-f.md#createwritestream) to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#writable).
 
-**Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)
+**Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#writable)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-class WriteStream--><!--Device-fileIo-class WriteStream-End-->
 
@@ -24,9 +22,7 @@ Closes this writeable stream.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WriteStream-close(): void--><!--Device-WriteStream-close(): void-End-->
 
@@ -53,9 +49,7 @@ The WriteStream constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WriteStream-constructor()--><!--Device-WriteStream-constructor()-End-->
 
@@ -71,9 +65,7 @@ Adjusts the position of the writeable stream offset pointer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WriteStream-seek(offset: long, whence?: WhenceType): long--><!--Device-WriteStream-seek(offset: long, whence?: WhenceType): long-End-->
 
@@ -113,9 +105,7 @@ Number of bytes written to the writable stream.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WriteStream-readonly bytesWritten: long--><!--Device-WriteStream-readonly bytesWritten: long-End-->
 
@@ -133,9 +123,7 @@ Path of the file corresponding to the writeable stream.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WriteStream-readonly path: string--><!--Device-WriteStream-readonly path: string-End-->
 

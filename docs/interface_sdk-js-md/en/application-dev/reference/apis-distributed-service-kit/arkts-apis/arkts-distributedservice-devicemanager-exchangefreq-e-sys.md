@@ -4,8 +4,6 @@ Enumerates the device discovery frequencies.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-deviceManager-enum ExchangeFreq--><!--Device-deviceManager-enum ExchangeFreq-End-->
@@ -23,8 +21,6 @@ LOW = 0
 Low frequency.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -44,8 +40,6 @@ Medium frequency.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-ExchangeFreq-MID = 1--><!--Device-ExchangeFreq-MID = 1-End-->
@@ -64,8 +58,6 @@ High frequency.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-ExchangeFreq-HIGH = 2--><!--Device-ExchangeFreq-HIGH = 2-End-->
@@ -83,8 +75,6 @@ SUPER_HIGH = 3
 Ultra-high frequency.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 

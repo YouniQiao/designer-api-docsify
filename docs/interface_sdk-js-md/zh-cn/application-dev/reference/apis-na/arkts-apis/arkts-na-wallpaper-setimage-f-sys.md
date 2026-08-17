@@ -10,10 +10,6 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType,
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_WALLPAPER
 
 <!--Device-wallpaper-function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType, callback: AsyncCallback<void>): void--><!--Device-wallpaper-function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType, callback: AsyncCallback<void>): void-End-->
@@ -28,7 +24,7 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType,
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | 是 | JPEG或PNG文件的Uri路径，或者PNG格式文件的位图。 |
 | wallpaperType | [WallpaperType](arkts-na-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType,
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -86,10 +82,6 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_WALLPAPER
 
 <!--Device-wallpaper-function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>-End-->
@@ -119,7 +111,7 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType)
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

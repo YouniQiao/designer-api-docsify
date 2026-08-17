@@ -16,10 +16,6 @@ Updates the ID in a given URI.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataUriUtils-function updateId(uri: string, id: double): string--><!--Device-dataUriUtils-function updateId(uri: string, id: double): string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -43,7 +39,7 @@ Updates the ID in a given URI.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataUriUtils } from '@kit.AbilityKit';

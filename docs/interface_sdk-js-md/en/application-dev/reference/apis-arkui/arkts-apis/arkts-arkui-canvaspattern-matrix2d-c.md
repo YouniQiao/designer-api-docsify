@@ -4,10 +4,6 @@
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export class Matrix2D--><!--Device-unnamed-export class Matrix2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ constructor()
 Constructs a 2D change matrix object. The default value is the unit matrix.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -45,10 +37,6 @@ identity(): Matrix2D
 Transforms the current 2D matrix back to the identity matrix (i.e., without any rotational translation scaling effect)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -76,10 +64,6 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -105,10 +89,6 @@ multiply(other?: Matrix2D): Matrix2D
 The matrix is superimposed in right multiplication mode. When the input parameter is empty, the matrix is superimposed.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -141,10 +121,6 @@ rotate(rx?: number, ry?: number): Matrix2D
 Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -179,10 +155,6 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -215,10 +187,6 @@ translate(tx?: number, ty?: number): Matrix2D
 Adds the translation effect of the X and Y axes to the current matrix.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -255,10 +223,6 @@ Horizontal Tilt
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -280,10 +244,6 @@ Vertical Tilt
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -307,10 +267,6 @@ Horizontal Zoom
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -332,10 +288,6 @@ Vertical Zoom
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -359,10 +311,6 @@ Horizontal movement
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -384,10 +332,6 @@ Vertical movement
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

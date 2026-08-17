@@ -2,13 +2,9 @@
 
 Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-taskpool-execute-f.md#execute). During the creation of a generic task, the passed-in parameter types and return value types of concurrent functions are verified in the compilation phase. Other behaviors are the same as those during the creation of a task.
 
-**Inheritance/Implementation:** GenericsTask extends [Task](arkts-arkts-taskpool-task-c.md#Task)
+**Inheritance/Implementation:** GenericsTask extends [Task](arkts-arkts-taskpool-task-c.md#task)
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 <!--Device-taskpool-class GenericsTask--><!--Device-taskpool-class GenericsTask-End-->
 
@@ -30,10 +26,6 @@ A constructor used to create a **GenericsTask** object.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-GenericsTask-constructor(func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(func: (...args: A) => R | Promise<R>, ...args: A)-End-->
@@ -53,7 +45,7 @@ A constructor used to create a **GenericsTask** object.
 | --- | --- |
 | [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -89,10 +81,6 @@ A constructor used to create a **GenericsTask** instance, with the task name spe
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)-End-->
@@ -113,7 +101,7 @@ A constructor used to create a **GenericsTask** instance, with the task name spe
 | --- | --- |
 | [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent

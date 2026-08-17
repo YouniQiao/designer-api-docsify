@@ -10,10 +10,6 @@ function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 
 <!--Device-appManager-function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>--><!--Device-appManager-function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>-End-->
@@ -45,7 +41,7 @@ function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

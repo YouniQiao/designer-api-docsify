@@ -4,10 +4,6 @@ Used to indicate the call state of the current call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface AVCallState--><!--Device-avSession-interface AVCallState-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -30,10 +26,6 @@ Current muted status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCallState-muted: boolean--><!--Device-AVCallState-muted: boolean-End-->
@@ -46,15 +38,11 @@ Current muted status.
 state: CallState
 ```
 
-Current call state. See [CallState](arkts-avsession-avsession-callstate-e.md#CallState)
+Current call state. See [CallState](arkts-avsession-avsession-callstate-e.md#callstate)
 
 **Type:** CallState
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

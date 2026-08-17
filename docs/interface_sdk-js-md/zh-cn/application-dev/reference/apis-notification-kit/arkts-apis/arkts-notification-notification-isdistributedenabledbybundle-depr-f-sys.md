@@ -10,11 +10,9 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md#isDistributedEnabledByBundle（系统接口）)
+**替代接口：** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md#isdistributedenabledbybundle系统接口)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -29,7 +27,7 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 应用的包。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 查询指定应用是否支持分布式通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 查询指定应用是否支持分布式通知的回调函数。 |
 
 
 ## isDistributedEnabledByBundle
@@ -42,11 +40,9 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md#isDistributedEnabledByBundle（系统接口）)
+**替代接口：** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md#isdistributedenabledbybundle系统接口)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

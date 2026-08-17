@@ -16,10 +16,6 @@ Obtains a notification slot of a specified type. This API uses an asynchronous c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void--><!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -48,7 +44,7 @@ removeAllSlots removes all notification slots
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -75,10 +71,6 @@ function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot|nu
 Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result. This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot|null>): void--><!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot|null>): void-End-->
 
@@ -119,10 +111,6 @@ Obtains a notification slot of a specified type. This API uses a promise to retu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot>--><!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -156,7 +144,7 @@ removeAllSlots removes all
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -179,10 +167,6 @@ function getSlot(slotType: SlotType): Promise<NotificationSlot|null>
 Obtains a notification slot of a specified type. This API uses a promise to return the result. This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot|null>--><!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot|null>-End-->
 

@@ -4,10 +4,6 @@ Defines the parameters of the edge light effect.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface EdgeLightParams--><!--Device-unnamed-declare interface EdgeLightParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,10 +23,6 @@ The color of the light effect. <br>If not specified, the default color is white 
 **Default:** #FFFFFF
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ The luminous intensity of the Edge Streamer effect. <br>Valid range: [0.0, 1.0].
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EdgeLightParams-intensity?: double--><!--Device-EdgeLightParams-intensity?: double-End-->
@@ -76,10 +64,6 @@ Projection length of the edge streamer along the flow direction. <br>Negative va
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EdgeLightParams-length: Length--><!--Device-EdgeLightParams-length: Length-End-->
@@ -99,10 +83,6 @@ The location of the edge light effect.
 **Type:** EdgeLightPosition
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,10 +105,6 @@ The thickness (width) of the light effect line. <br>Negative values are treated 
 **Default:** 0vp
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,14 +1,10 @@
 # DateOptions
 
-DateOptions定义日期选择器的选项。 继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)。
+DateOptions定义日期选择器的选项。 继承于[CommonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)。
 
-**继承/实现关系：** DateOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)
+**继承/实现关系：** DateOptions extends [CommonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export declare class DateOptions--><!--Device-unnamed-export declare class DateOptions-End-->
 
@@ -28,10 +24,6 @@ lunar?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -48,15 +40,11 @@ mode?: DateMode
 
 定义日期选择器的模式。 默认值：DateMode.DATE
 
-**类型：** [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md)
+**类型：** [DateMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-datemode-e.md)
 
 **默认值：** DateMode.DATE
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

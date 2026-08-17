@@ -4,10 +4,6 @@ This module provides tools for processing rectangles. Use scenarios: 1. Quickly 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class RectUtils--><!--Device-drawing-class RectUtils-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -27,10 +23,6 @@ static centerX(rect: common2D.Rect): double
 Obtains the X coordinate of the rectangle center.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static centerX(rect: common2D.Rect): double--><!--Device-RectUtils-static centerX(rect: common2D.Rect): double-End-->
 
@@ -58,10 +50,6 @@ Obtains the Y coordinate of the rectangle center.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static centerY(rect: common2D.Rect): double--><!--Device-RectUtils-static centerY(rect: common2D.Rect): double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -87,10 +75,6 @@ static contains(rect: common2D.Rect, other: common2D.Rect): boolean
 Checks whether a rectangle completely contains another rectangle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static contains(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
 
@@ -118,10 +102,6 @@ static contains(rect: common2D.Rect, left: double, top: double, right: double, b
 Checks whether a rectangle completely contains another rectangle (which is marked by the coordinates of the upper left and lower right corners).
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean-End-->
 
@@ -153,10 +133,6 @@ Checks whether a rectangle completely contains a specified point.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static contains(rect: common2D.Rect, x: double, y: double): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, x: double, y: double): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -185,10 +161,6 @@ Obtains the height of a rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static getHeight(rect: common2D.Rect): double--><!--Device-RectUtils-static getHeight(rect: common2D.Rect): double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -214,10 +186,6 @@ static getWidth(rect: common2D.Rect): double
 Obtains the width of a rectangle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static getWidth(rect: common2D.Rect): double--><!--Device-RectUtils-static getWidth(rect: common2D.Rect): double-End-->
 
@@ -245,10 +213,6 @@ Adds the input left, top, right, and bottom values to the left, top, right, and 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void--><!--Device-RectUtils-static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -272,10 +236,6 @@ static intersect(rect: common2D.Rect, other: common2D.Rect): boolean
 Calculates the intersection of two rectangles and updates the intersection result to the rectangle represented by the first input parameter.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static intersect(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static intersect(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
 
@@ -304,10 +264,6 @@ Checks whether a rectangle is empty (the left boundary is greater than or equal 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static isEmpty(rect: common2D.Rect): boolean--><!--Device-RectUtils-static isEmpty(rect: common2D.Rect): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -333,10 +289,6 @@ static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean
 Checks whether two rectangles are equal.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
 
@@ -365,10 +317,6 @@ Checks whether two rectangles intersect.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -396,10 +344,6 @@ Copies a rectangle.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect--><!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -425,10 +369,6 @@ static makeCopy(src: common2D.Rect): common2D.Rect | undefined
 Makes a deep copy of a 2D rectangular object.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect | undefined--><!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect | undefined-End-->
 
@@ -456,10 +396,6 @@ Creates a rectangle with the top, bottom, left, and right boundary coordinates a
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static makeEmpty(): common2D.Rect--><!--Device-RectUtils-static makeEmpty(): common2D.Rect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -480,10 +416,6 @@ Makes an uninitialized 2D rectangular object with zero dimensions and origin at 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static makeEmpty(): common2D.Rect | undefined--><!--Device-RectUtils-static makeEmpty(): common2D.Rect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -503,10 +435,6 @@ static makeLtrb(left: number, top: number, right: number, bottom: number): commo
 Creates a rectangle with specified top, bottom, left, and right boundaries.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static makeLtrb(left: number, top: number, right: number, bottom: number): common2D.Rect--><!--Device-RectUtils-static makeLtrb(left: number, top: number, right: number, bottom: number): common2D.Rect-End-->
 
@@ -537,10 +465,6 @@ Makes a 2D rectangular object from boundary coordinates.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static makeLtrb(left: double, top: double, right: double, bottom: double): common2D.Rect | undefined--><!--Device-RectUtils-static makeLtrb(left: double, top: double, right: double, bottom: double): common2D.Rect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -570,10 +494,6 @@ Translates a rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static offset(rect: common2D.Rect, dx: double, dy: double): void--><!--Device-RectUtils-static offset(rect: common2D.Rect, dx: double, dy: double): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -595,10 +515,6 @@ static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void
 Translates a rectangle to a specified position.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void--><!--Device-RectUtils-static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void-End-->
 
@@ -622,10 +538,6 @@ Sets the left, right, top, and bottom boundaries of the rectangle to **0**.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static setEmpty(rect: common2D.Rect): void--><!--Device-RectUtils-static setEmpty(rect: common2D.Rect): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -645,10 +557,6 @@ static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bo
 Updates the top, bottom, left, and right boundary values of the existing rectangle using the input top, bottom, left, and right values, respectively.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void--><!--Device-RectUtils-static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void-End-->
 
@@ -674,10 +582,6 @@ Assigns the existing rectangle with another rectangle.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static setRect(rect: common2D.Rect, other: common2D.Rect): void--><!--Device-RectUtils-static setRect(rect: common2D.Rect, other: common2D.Rect): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -699,10 +603,6 @@ If the rectangle is reversed (that is, the left boundary is greater than the rig
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RectUtils-static sort(rect: common2D.Rect): void--><!--Device-RectUtils-static sort(rect: common2D.Rect): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -722,10 +622,6 @@ static union(rect: common2D.Rect, other: common2D.Rect): void
 Calculates the union of two rectangles and updates the union result to the rectangle represented by the first input parameter. If the first input parameter is empty, the union result is updated to the rectangle represented by the second input parameter. If the second input parameter is empty, no operation is performed.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-RectUtils-static union(rect: common2D.Rect, other: common2D.Rect): void--><!--Device-RectUtils-static union(rect: common2D.Rect, other: common2D.Rect): void-End-->
 

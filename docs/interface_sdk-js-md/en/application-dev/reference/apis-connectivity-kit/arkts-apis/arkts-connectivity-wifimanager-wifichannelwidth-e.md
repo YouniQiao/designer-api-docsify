@@ -4,10 +4,6 @@ Describes the wifi channel width.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-enum WifiChannelWidth--><!--Device-wifiManager-enum WifiChannelWidth-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -21,10 +17,6 @@ WIDTH_20MHZ = 0
 20MHz.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiChannelWidth-WIDTH_20MHZ = 0--><!--Device-WifiChannelWidth-WIDTH_20MHZ = 0-End-->
 
@@ -40,10 +32,6 @@ WIDTH_40MHZ = 1
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiChannelWidth-WIDTH_40MHZ = 1--><!--Device-WifiChannelWidth-WIDTH_40MHZ = 1-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -57,10 +45,6 @@ WIDTH_80MHZ = 2
 80MHz.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiChannelWidth-WIDTH_80MHZ = 2--><!--Device-WifiChannelWidth-WIDTH_80MHZ = 2-End-->
 
@@ -76,10 +60,6 @@ WIDTH_160MHZ = 3
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiChannelWidth-WIDTH_160MHZ = 3--><!--Device-WifiChannelWidth-WIDTH_160MHZ = 3-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -94,10 +74,6 @@ WIDTH_80MHZ_PLUS = 4
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiChannelWidth-WIDTH_80MHZ_PLUS = 4--><!--Device-WifiChannelWidth-WIDTH_80MHZ_PLUS = 4-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -111,10 +87,6 @@ WIDTH_INVALID
 Invalid.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiChannelWidth-WIDTH_INVALID--><!--Device-WifiChannelWidth-WIDTH_INVALID-End-->
 

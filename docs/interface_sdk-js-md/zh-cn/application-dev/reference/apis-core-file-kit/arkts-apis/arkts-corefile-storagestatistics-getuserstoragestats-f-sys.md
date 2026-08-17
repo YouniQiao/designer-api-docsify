@@ -10,10 +10,6 @@ function getUserStorageStats(): Promise<StorageStats>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getUserStorageStats(): Promise<StorageStats>--><!--Device-storageStatistics-function getUserStorageStats(): Promise<StorageStats>-End-->
@@ -38,7 +34,7 @@ function getUserStorageStats(): Promise<StorageStats>
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -75,10 +71,6 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getUserStorageStats(callback: AsyncCallback<StorageStats>): void--><!--Device-storageStatistics-function getUserStorageStats(callback: AsyncCallback<StorageStats>): void-End-->
@@ -91,7 +83,7 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | 是 | 返回用户各类别存储空间大小之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | 是 | 返回用户各类别存储空间大小之后的回调。 |
 
 **错误码：**
 
@@ -103,7 +95,7 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -146,10 +138,6 @@ function getUserStorageStats(userId: long): Promise<StorageStats>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getUserStorageStats(userId: long): Promise<StorageStats>--><!--Device-storageStatistics-function getUserStorageStats(userId: long): Promise<StorageStats>-End-->
@@ -181,7 +169,7 @@ function getUserStorageStats(userId: long): Promise<StorageStats>
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -220,10 +208,6 @@ function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>): void--><!--Device-storageStatistics-function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>): void-End-->
@@ -237,7 +221,7 @@ function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | long | 是 | 用户id。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | 是 | 返回指定用户各类别存储空间大小之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | 是 | 返回指定用户各类别存储空间大小之后的回调。 |
 
 **错误码：**
 
@@ -250,7 +234,7 @@ function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -4,10 +4,6 @@ Defines a struct for distributed configuration of a table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-interface DistributedConfig--><!--Device-relationalStore-interface DistributedConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -30,10 +26,6 @@ Specifies the asset conflict policy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistributedConfig-assetConflictPolicy?: AssetConflictPolicy--><!--Device-DistributedConfig-assetConflictPolicy?: AssetConflictPolicy-End-->
@@ -51,10 +43,6 @@ Specifies whether to download assets on demand.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Specifies the asset temp path.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistributedConfig-assetTempPath?: string--><!--Device-DistributedConfig-assetTempPath?: string-End-->
@@ -96,10 +80,6 @@ Whether to download assets synchronously or asynchronously when device-cloud syn
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedConfig-asyncDownloadAsset?: boolean--><!--Device-DistributedConfig-asyncDownloadAsset?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -110,15 +90,11 @@ Whether to download assets synchronously or asynchronously when device-cloud syn
 autoSync: boolean
 ```
 
-Whether the table supports automatic device-cloud synchronization. If the value is **true**, the system can automatically trigger device-cloud sync. If the value is **false**, the system cannot automatically trigger device-cloud sync, and the [cloudSync] [cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudSync) API needs to be called to trigger device-cloud sync.
+Whether the table supports automatic device-cloud synchronization. If the value is **true**, the system can automatically trigger device-cloud sync. If the value is **false**, the system cannot automatically trigger device-cloud sync, and the [cloudSync] [cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudsync) API needs to be called to trigger device-cloud sync.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedConfig-autoSync: boolean--><!--Device-DistributedConfig-autoSync: boolean-End-->
 
@@ -135,10 +111,6 @@ Specifies the auto synchronization switch.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,10 +130,6 @@ Whether to enable device-cloud sync for this RDB store. The value **true** means
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedConfig-enableCloud?: boolean--><!--Device-DistributedConfig-enableCloud?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -177,10 +145,6 @@ Distributed table type. **DEVICE_COLLABORATION** indicates the device collaborat
 **Type:** [DistributedTableType](arkts-arkdata-relationalstore-distributedtabletype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedConfig-tableType?: DistributedTableType--><!--Device-DistributedConfig-tableType?: DistributedTableType-End-->
 

@@ -10,10 +10,6 @@ function getSelfManagedBrowserPolicyVersion(): string
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string--><!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string-End-->
@@ -26,7 +22,7 @@ function getSelfManagedBrowserPolicyVersion(): string
 | --- | --- |
 | string | 浏览器策略版本。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';
@@ -34,7 +30,7 @@ import { browser } from '@kit.MDMKit';
 try {
   let version: string = browser.getSelfManagedBrowserPolicyVersion();
   console.info(`Succeeded in getting self managed browser policy version, result : ${version}`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to get self managed browser policy version. Code is ${err.code}, message is ${err.message}`);
 }
 ```

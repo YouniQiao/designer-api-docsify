@@ -2,13 +2,9 @@
 
 The &lt;button&gt; component includes capsule, circle, text, arc, and download buttons.
 
-**Inheritance/Implementation:** ButtonElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
+**Inheritance/Implementation:** ButtonElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ButtonElement--><!--Device-unnamed-export interface ButtonElement-End-->
 
@@ -23,10 +19,6 @@ setProgress(param: { progress: number }): void
 Progress bar of the download button. The value ranges from 0 to 100. The progress bar is displayed if the value is greater than 0. If the value is greater than or equal to 100, the progress bar is not displayed. NOTE The text displayed on the progress bar is changed based on the value.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

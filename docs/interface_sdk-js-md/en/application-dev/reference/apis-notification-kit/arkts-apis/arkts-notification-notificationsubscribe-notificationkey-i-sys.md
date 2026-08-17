@@ -4,10 +4,6 @@ Defines the notification key value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationSubscribe-export interface NotificationKey--><!--Device-notificationSubscribe-export interface NotificationKey-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -32,10 +28,6 @@ Notification ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationKey-id: int--><!--Device-NotificationKey-id: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -53,10 +45,6 @@ Notification label. This parameter is left empty by default.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationKey-label?: string--><!--Device-NotificationKey-label?: string-End-->
 

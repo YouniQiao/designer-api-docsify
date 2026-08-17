@@ -1,12 +1,8 @@
 # ElementName
 
-A structured identifier for an application component, containing fields such as **bundleName**, **moduleName**, and **abilityName**. It is usually used in [AbilityRunningInfo.ability](arkts-ability-abilityrunninginfo-i.md#AbilityRunningInfo) for component launch information and in the [connectOptions.onConnect](arkts-ability-connectoptions-connectoptions-i.md#onConnect) callback for component connection.
+A structured identifier for an application component, containing fields such as **bundleName**, **moduleName**, and **abilityName**. It is usually used in [AbilityRunningInfo.ability](arkts-ability-abilityrunninginfo-i.md#abilityrunninginfo) for component launch information and in the [connectOptions.onConnect](arkts-ability-connectoptions-connectoptions-i.md#onconnect) callback for component connection.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ElementName--><!--Device-unnamed-export interface ElementName-End-->
 
@@ -23,10 +19,6 @@ Name of the ability.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,10 +40,6 @@ Bundle name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ElementName-bundleName: string--><!--Device-ElementName-bundleName: string-End-->
@@ -69,10 +57,6 @@ Device ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,10 +78,6 @@ Module name of the HAP file to which the ability belongs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ElementName-moduleName?: string--><!--Device-ElementName-moduleName?: string-End-->
@@ -116,10 +96,6 @@ Short name of the ability. It is a string starting with a period (.).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ElementName-shortName?: string--><!--Device-ElementName-shortName?: string-End-->
@@ -137,10 +113,6 @@ Resource ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

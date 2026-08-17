@@ -4,10 +4,6 @@ Defines a struct for the batch operation result of shared configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface DataProxyResult--><!--Device-dataShare-interface DataProxyResult-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -30,10 +26,6 @@ Operation result code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataProxyResult-result: DataProxyErrorCode--><!--Device-DataProxyResult-result: DataProxyErrorCode-End-->
@@ -51,10 +43,6 @@ URI to be operated, with a maximum of 256 bytes. The value is fixed at the forma
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

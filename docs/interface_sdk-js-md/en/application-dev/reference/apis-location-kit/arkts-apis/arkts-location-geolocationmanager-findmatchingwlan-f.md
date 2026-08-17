@@ -17,10 +17,6 @@ Check whether the WLAN scan results match the WLAN BSSID list, return informatio
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **Model restriction:** This API can be used only in the stage model.

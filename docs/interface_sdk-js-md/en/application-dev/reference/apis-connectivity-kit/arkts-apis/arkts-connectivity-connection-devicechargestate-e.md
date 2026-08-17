@@ -4,10 +4,6 @@ Enum for the charge state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-enum DeviceChargeState--><!--Device-connection-enum DeviceChargeState-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ DEVICE_NORMAL_CHARGE_NOT_CHARGED = 0
 Not support super charge, and not charged.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Not support super charge, and in charging.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceChargeState-DEVICE_NORMAL_CHARGE_IN_CHARGING = 1--><!--Device-DeviceChargeState-DEVICE_NORMAL_CHARGE_IN_CHARGING = 1-End-->
@@ -62,10 +50,6 @@ Support super charge, and not charged.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceChargeState-DEVICE_SUPER_CHARGE_NOT_CHARGED = 2--><!--Device-DeviceChargeState-DEVICE_SUPER_CHARGE_NOT_CHARGED = 2-End-->
@@ -81,10 +65,6 @@ DEVICE_SUPER_CHARGE_IN_CHARGING = 3
 Support super charge, and in charging.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

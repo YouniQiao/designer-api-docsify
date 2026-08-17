@@ -4,10 +4,6 @@ Provides the callback for the SMS message sending result. It consists of three p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-export interface ISendShortMessageCallback--><!--Device-sms-export interface ISendShortMessageCallback-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -30,10 +26,6 @@ Whether this SMS message is the last part of a long SMS message. The default val
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ISendShortMessageCallback-isLastPart: boolean--><!--Device-ISendShortMessageCallback-isLastPart: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -50,10 +42,6 @@ SMS message sending result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ISendShortMessageCallback-result: SendSmsResult--><!--Device-ISendShortMessageCallback-result: SendSmsResult-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -69,10 +57,6 @@ URI for storing the sent SMS message.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ISendShortMessageCallback-url: string--><!--Device-ISendShortMessageCallback-url: string-End-->
 

@@ -4,11 +4,9 @@ The URLSearchParams interface defines some practical methods to process URL quer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [URLParams](arkts-arkts-url-urlparams-c.md#URLParams)
+**Substitutes:** [URLParams](arkts-arkts-url-urlparams-c.md#urlparams)
 
 <!--Device-url-class URLSearchParams--><!--Device-url-class URLSearchParams-End-->
 
@@ -30,8 +28,6 @@ Returns an iterator allowing to go through all key/value pairs contained in this
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** iterator]
@@ -46,7 +42,7 @@ Returns an iterator allowing to go through all key/value pairs contained in this
 | --- | --- |
 | IterableIterator&lt;[string, string]&gt; | Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The first item of Array is name, and the second item of Array is value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const paramsObject = new url.URLSearchParams('fod=bay&edg=bap');
@@ -68,8 +64,6 @@ Appends a specified key/value pair as a new search parameter.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** append
@@ -85,7 +79,7 @@ Appends a specified key/value pair as a new search parameter.
 | name | string | Yes | The key name of the search parameter to insert |
 | value | string | Yes | The value of the search parameter to insert |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -103,8 +97,6 @@ A parameterized constructor used to create an URLSearchParams instance. As the i
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** constructor
@@ -119,7 +111,7 @@ A parameterized constructor used to create an URLSearchParams instance. As the i
 | --- | --- | --- | --- |
 | init | string[][] \| Record&lt;string, string&gt; \| string \| [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) | No | init init |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let objectParams = new url.URLSearchParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
@@ -139,8 +131,6 @@ Deletes the given search parameter and its associated value,from the list of all
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** delete
@@ -155,7 +145,7 @@ Deletes the given search parameter and its associated value,from the list of all
 | --- | --- | --- | --- |
 | name | string | Yes | The name of the key-value pair to delete |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -173,8 +163,6 @@ Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The fi
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** entries
@@ -189,7 +177,7 @@ Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The fi
 | --- | --- |
 | IterableIterator&lt;[string, string]&gt; | Returns an iterator for ES6. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let searchParamsObject = new url.URLSearchParams("keyName1=valueName1&keyName2=valueName2");
@@ -211,8 +199,6 @@ Callback functions are used to traverse key-value pairs on the URLSearchParams i
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** forEach
@@ -228,7 +214,7 @@ Callback functions are used to traverse key-value pairs on the URLSearchParams i
 | callbackFn | (value: string, key: string, searchParams: URLSearchParams) =&gt; void | Yes | The callback function to execute for each key-value pair |
 | thisArg | Object | No | The value to use as this when executing callbackFn |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const myURLObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -246,8 +232,6 @@ get(name: string): string | null
 Returns the first value associated to the given search parameter.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -269,7 +253,7 @@ Returns the first value associated to the given search parameter.
 | --- | --- |
 | string | Returns the first value found by name. If no value is found, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let paramsObject = new url.URLSearchParams('name=Jonathan&age=18');
@@ -287,8 +271,6 @@ getAll(name: string): string[]
 Returns all key-value pairs associated with a given search parameter as an array.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -310,7 +292,7 @@ Returns all key-value pairs associated with a given search parameter as an array
 | --- | --- |
 | string[] | Returns all key-value pairs with the specified name |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -328,8 +310,6 @@ has(name: string): boolean
 Returns a Boolean that indicates whether a parameter with the specified name exists.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -351,7 +331,7 @@ Returns a Boolean that indicates whether a parameter with the specified name exi
 | --- | --- |
 | boolean | Returns a Boolean value that indicates whether a found |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -369,8 +349,6 @@ Returns an iterator allowing to go through all keys contained in this object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** keys
@@ -385,7 +363,7 @@ Returns an iterator allowing to go through all keys contained in this object.
 | --- | --- |
 | IterableIterator&lt;string&gt; | Returns an ES6 Iterator over the names of each name-value pair. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let searchParamsObject = new url.URLSearchParams("key1=value1&key2=value2");
@@ -407,8 +385,6 @@ Sets the value associated with a given search parameter to the given value. If t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** set
@@ -424,7 +400,7 @@ Sets the value associated with a given search parameter to the given value. If t
 | name | string | Yes | The key name of the parameter to set |
 | value | string | Yes | The value to set for the parameter |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -442,8 +418,6 @@ Sort all key/value pairs contained in this object in place and return undefined.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** sort
@@ -452,7 +426,7 @@ Sort all key/value pairs contained in this object in place and return undefined.
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let searchParamsObject = new url.URLSearchParams("c=3&a=9&b=4&d=2"); // Create a test URLSearchParams object
@@ -470,8 +444,6 @@ Returns a query string suitable for use in a URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** toString
@@ -486,7 +458,7 @@ Returns a query string suitable for use in a URL.
 | --- | --- |
 | string | Returns a search parameter serialized as a string, percent-encoded if necessary. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -505,8 +477,6 @@ Returns an iterator allowing to go through all values contained in this object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** values
@@ -521,7 +491,7 @@ Returns an iterator allowing to go through all values contained in this object.
 | --- | --- |
 | IterableIterator&lt;string&gt; | Returns an ES6 Iterator over the values of each name-value pair. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let searchParams = new url.URLSearchParams("key1=value1&key2=value2");

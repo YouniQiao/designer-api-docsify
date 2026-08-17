@@ -10,10 +10,6 @@ function getApplicationWindowStates(admin: Want, bundleName: string, appIndex: n
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -28,7 +24,7 @@ function getApplicationWindowStates(admin: Want, bundleName: string, appIndex: n
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 应用的包名。 |
-| appIndex | number | 是 | 应用分身索引，取值范围：大于等于0的整数。 <br> appIndex可以通过@ohos.bundle.bundleManager中的 [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md#getAppCloneIdentity)等接口来获取。 |
+| appIndex | number | 是 | 应用分身索引，取值范围：大于等于0的整数。 <br> appIndex可以通过@ohos.bundle.bundleManager中的 [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md#getappcloneidentity)等接口来获取。 |
 
 **返回值：**
 
@@ -45,7 +41,7 @@ function getApplicationWindowStates(admin: Want, bundleName: string, appIndex: n
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { applicationManager } from '@kit.MDMKit';
@@ -61,9 +57,10 @@ let bundleName: string = 'com.example.myapplication';
 // 被查询应用的分身索引，需根据实际情况进行替换
 let appIndex: number = 0;
 try {
-  let result: Array<applicationManager.WindowStateInfo> = applicationManager.getApplicationWindowStates(wantTemp, bundleName, appIndex);
+  let result: Array<applicationManager.WindowStateInfo> =
+    applicationManager.getApplicationWindowStates(wantTemp, bundleName, appIndex);
   console.info(`Succeeded in getting application window states, result: ${JSON.stringify(result)}`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to get application window states. Code: ${err.code}, message: ${err.message}`);
 }
 ```

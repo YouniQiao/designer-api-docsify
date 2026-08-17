@@ -16,10 +16,6 @@ Check whether the current socket connection has been established.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-socket-function isConnected(clientSocket: int): boolean--><!--Device-socket-function isConnected(clientSocket: int): boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -36,7 +32,7 @@ Check whether the current socket connection has been established.
 | --- | --- |
 | boolean | Indicates whether or not it is connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

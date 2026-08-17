@@ -4,10 +4,6 @@ Represents the peripheral device information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-deviceManager-interface Device--><!--Device-deviceManager-interface Device-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -30,10 +26,6 @@ Bus type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Device-busType: BusType--><!--Device-Device-busType: BusType-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -50,10 +42,6 @@ Description of the peripheral device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Device-description: string--><!--Device-Device-description: string-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -69,10 +57,6 @@ ID of the peripheral device.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Device-deviceId: long--><!--Device-Device-deviceId: long-End-->
 

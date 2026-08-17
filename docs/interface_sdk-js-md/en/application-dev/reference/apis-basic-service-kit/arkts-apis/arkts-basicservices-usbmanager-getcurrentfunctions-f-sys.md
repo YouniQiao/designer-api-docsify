@@ -16,11 +16,9 @@ Obtains the numeric mask combination for the USB function list in Device mode. W
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md#getDeviceFunctions-(System-API))()
+**Substitutes:** [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md#getdevicefunctions-system-api)()
 
 <!--Device-usbManager-function getCurrentFunctions(): FunctionType--><!--Device-usbManager-function getCurrentFunctions(): FunctionType-End-->
 

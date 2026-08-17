@@ -4,10 +4,6 @@ Represents the transparently transmitted data, which contains information requir
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudData-interface ExtraData--><!--Device-cloudData-interface ExtraData-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -32,10 +28,6 @@ Event ID. The value **cloud_data_change** indicates cloud data changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -53,10 +45,6 @@ Data to be transmitted transparently. **extraData** is a JSON string that must c
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
 

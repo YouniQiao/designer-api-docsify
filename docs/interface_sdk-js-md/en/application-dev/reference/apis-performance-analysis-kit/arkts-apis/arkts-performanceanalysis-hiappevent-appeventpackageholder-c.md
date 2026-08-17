@@ -4,10 +4,6 @@ Defines a subscription data holder for processing event information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiAppEvent-class AppEventPackageHolder--><!--Device-hiAppEvent-class AppEventPackageHolder-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -24,13 +20,9 @@ import { hiAppEvent } from 'hiAppEvent';
 constructor(watcherName: string)
 ```
 
-Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher) to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
+Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher) to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,9 +34,9 @@ Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcherName | string | Yes | Name of the event watcher added through [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher). If no watcher is added, no data is displayed by default. |
+| watcherName | string | Yes | Name of the event watcher added through [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher). If no watcher is added, no data is displayed by default. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Add the Watcher1 to subscribe to system events.
@@ -71,10 +63,6 @@ Sets the number of data records of the event package obtained each time. When **
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AppEventPackageHolder-setRow(size: int): void--><!--Device-AppEventPackageHolder-setRow(size: int): void-End-->
@@ -94,7 +82,7 @@ Sets the number of data records of the event package obtained each time. When **
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Create an AppEventPackageHolder instance. holder3 holds the event data subscribed by Watcher1 added through addWatcher.
@@ -112,10 +100,6 @@ setSize(size: int): void
 Sets the threshold for the data size of the event package obtained each time.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -136,7 +120,7 @@ Sets the threshold for the data size of the event package obtained each time.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Create an AppEventPackageHolder instance. holder2 holds the event data subscribed by Watcher1 added through addWatcher.
@@ -155,10 +139,6 @@ Obtains the subscription event. The system obtains the subscription event data b
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AppEventPackageHolder-takeNext(): AppEventPackage--><!--Device-AppEventPackageHolder-takeNext(): AppEventPackage-End-->
@@ -171,7 +151,7 @@ Obtains the subscription event. The system obtains the subscription event data b
 | --- | --- |
 | [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) | Event package object. If all subscription event data has been retrieved, **null** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Create an AppEventPackageHolder instance. holder4 holds the event data subscribed by Watcher1 added through addWatcher.
@@ -189,10 +169,6 @@ takeNext(): AppEventPackage | null
 Obtains the subscription event. <br>The system obtains the subscription event data based on the data size threshold specified by setSize or the number of data records specified by setRow. By default, one subscription event data record is obtained. When all subscription event data is obtained, null is returned. <br>When setRow and setSize are called at the same time, only setRow takes effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

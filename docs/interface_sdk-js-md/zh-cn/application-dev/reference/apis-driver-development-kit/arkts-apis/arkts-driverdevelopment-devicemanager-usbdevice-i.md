@@ -1,14 +1,10 @@
 # USBDevice
 
-USB设备信息，继承自[Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)。
+USB设备信息，继承自[Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)。
 
-**继承/实现关系：** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md#Device)
+**继承/实现关系：** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md#device)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-deviceManager-interface USBDevice--><!--Device-deviceManager-interface USBDevice-End-->
 
@@ -26,10 +22,6 @@ USB设备Product ID。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBDevice-productId: int--><!--Device-USBDevice-productId: int-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
@@ -45,10 +37,6 @@ USB设备Vendor ID。
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBDevice-vendorId: int--><!--Device-USBDevice-vendorId: int-End-->
 

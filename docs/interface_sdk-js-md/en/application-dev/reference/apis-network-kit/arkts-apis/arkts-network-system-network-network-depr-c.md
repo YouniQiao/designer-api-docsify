@@ -2,10 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class Network--><!--Device-unnamed-export default class Network-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -38,10 +34,6 @@ static getType(options?: {
 Obtains the network type.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
 
 <!--Device-Network-static getType(options?: {    /**     * Called when the network type is obtained.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    success?: (data: NetworkResponse) => void;    /**     * Called when the network type fails to be obtained.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    fail?: (data: any, code: number) => void;    /**     * Called when the execution is completed.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    complete?: () => void;  }): void--><!--Device-Network-static getType(options?: {    /**     * Called when the network type is obtained.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    success?: (data: NetworkResponse) => void;    /**     * Called when the network type fails to be obtained.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    fail?: (data: any, code: number) => void;    /**     * Called when the execution is completed.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    complete?: () => void;  }): void-End-->
 
@@ -76,10 +68,6 @@ Listens to the network connection state. If this method is called multiple times
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
-
 <!--Device-Network-static subscribe(options?: {    /**     * Called when the network connection state changes.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    success?: (data: NetworkResponse) => void;    /**     * Called when the listening fails.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    fail?: (data: any, code: number) => void;  }): void--><!--Device-Network-static subscribe(options?: {    /**     * Called when the network connection state changes.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    success?: (data: NetworkResponse) => void;    /**     * Called when the listening fails.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    fail?: (data: any, code: number) => void;  }): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -99,10 +87,6 @@ static unsubscribe(): void
 Cancels listening to the network connection state.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
 
 <!--Device-Network-static unsubscribe(): void--><!--Device-Network-static unsubscribe(): void-End-->
 

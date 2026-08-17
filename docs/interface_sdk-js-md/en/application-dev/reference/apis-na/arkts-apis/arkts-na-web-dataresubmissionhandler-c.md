@@ -4,9 +4,7 @@ Defines the onDataResubmission callback, related to onDataResubmission method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class DataResubmissionHandler--><!--Device-unnamed-export declare class DataResubmissionHandler-End-->
 
@@ -22,9 +20,7 @@ Do not resend related form data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DataResubmissionHandler-cancel(): void--><!--Device-DataResubmissionHandler-cancel(): void-End-->
 
@@ -40,9 +36,7 @@ Constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DataResubmissionHandler-constructor()--><!--Device-DataResubmissionHandler-constructor()-End-->
 
@@ -58,9 +52,7 @@ Resend related form data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DataResubmissionHandler-resend(): void--><!--Device-DataResubmissionHandler-resend(): void-End-->
 

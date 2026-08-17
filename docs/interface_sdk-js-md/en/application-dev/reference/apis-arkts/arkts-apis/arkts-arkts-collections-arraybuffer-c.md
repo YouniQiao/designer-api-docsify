@@ -1,12 +1,8 @@
 # ArrayBuffer
 
-Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-collections.md#@arkts.collections), [Uint8Array](arkts-collections.md#@arkts.collections), [Int16Array](arkts-collections.md#@arkts.collections), [Uint16Array](arkts-collections.md#@arkts.collections), [Int32Array](arkts-collections.md#@arkts.collections), [Uint32Array](arkts-collections.md#@arkts.collections), [Uint8ClampedArray](arkts-collections.md#@arkts.collections), and [Float32Array](arkts-collections.md#@arkts.collections)). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
+Underlying data structure of the ArkTS TypedArray (Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Uint8ClampedArray, and Float32Array). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-collections-class ArrayBuffer--><!--Device-collections-class ArrayBuffer-End-->
 
@@ -27,10 +23,6 @@ constructor(byteLength: number)
 A constructor used to create an ArkTS ArrayBuffer of a given length.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -59,10 +51,6 @@ slice(begin: number, end?: number): ArrayBuffer
 Selects a range of elements in this ArkTS ArrayBuffer to create an ArkTS ArrayBuffer.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -101,10 +89,6 @@ Number of bytes occupied by the buffer.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

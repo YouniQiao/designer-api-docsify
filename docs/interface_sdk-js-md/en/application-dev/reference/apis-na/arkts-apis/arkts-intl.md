@@ -16,9 +16,7 @@
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,11 +30,11 @@
 
 | Name | Description |
 | --- | --- |
-| [intlBestFitLocale](arkts-na-intl-intlbestfitlocale-f.md#intlBestFitLocale) | Gets the best fit locale from the given language tags. |
-| [intlBestFitLocales](arkts-na-intl-intlbestfitlocales-f.md#intlBestFitLocales) | Gets the best fit locales from the given language tags. |
-| [intlLocalesToLanguageTags](arkts-na-intl-intllocalestolanguagetags-f.md#intlLocalesToLanguageTags) | Converts locales to language tags. |
-| [intlLookUpLocale](arkts-na-intl-intllookuplocale-f.md#intlLookUpLocale) | Looks up a locale from the given language tags. |
-| [intlLookUpLocales](arkts-na-intl-intllookuplocales-f.md#intlLookUpLocales) | Looks up locales from the given language tags. |
+| [intlBestFitLocale](arkts-na-intl-intlbestfitlocale-f.md#intlbestfitlocale) | Gets the best fit locale from the given language tags. |
+| [intlBestFitLocales](arkts-na-intl-intlbestfitlocales-f.md#intlbestfitlocales) | Gets the best fit locales from the given language tags. |
+| [intlLocalesToLanguageTags](arkts-na-intl-intllocalestolanguagetags-f.md#intllocalestolanguagetags) | Converts locales to language tags. |
+| [intlLookUpLocale](arkts-na-intl-intllookuplocale-f.md#intllookuplocale) | Looks up a locale from the given language tags. |
+| [intlLookUpLocales](arkts-na-intl-intllookuplocales-f.md#intllookuplocales) | Looks up locales from the given language tags. |
 
 ### Classes
 

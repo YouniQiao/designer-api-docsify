@@ -16,10 +16,6 @@ Obtains the **Calendar** object for the specified locale and calendar type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-i18n-export function getCalendar(locale: string, type?: string): Calendar--><!--Device-i18n-export function getCalendar(locale: string, type?: string): Calendar-End-->
@@ -39,7 +35,7 @@ Obtains the **Calendar** object for the specified locale and calendar type.
 | --- | --- |
 | Calendar | Calendar** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

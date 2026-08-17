@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-displaySync-interface IntervalInfo--><!--Device-displaySync-interface IntervalInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,10 +20,6 @@ targetTimestamp: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-IntervalInfo-targetTimestamp: long--><!--Device-IntervalInfo-targetTimestamp: long-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -43,10 +35,6 @@ timestamp: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-IntervalInfo-timestamp: long--><!--Device-IntervalInfo-timestamp: long-End-->
 

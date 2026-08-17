@@ -1,14 +1,12 @@
 # ExpandedMenuItemOptions
 
-Defines the menu item option.
+Custom menu extension item. > **NOTE：**> > This API is supported from API version 12 and deprecated from API version 20. You are advised to use > [editMenuOptions](arkts-arkweb-web-attribute.md#editmenuoptions) instead.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
 **Deprecated since:** 20
 
-**Substitutes:** EditMenuOptions
+**Substitutes:** [editMenuOptions](arkts-arkweb-web-attribute.md#editmenuoptions)
 
 <!--Device-unnamed-declare interface ExpandedMenuItemOptions--><!--Device-unnamed-declare interface ExpandedMenuItemOptions-End-->
 
@@ -20,13 +18,11 @@ Defines the menu item option.
 action: (selectedText: {plainText: string}) => void
 ```
 
-Selected text.
+Callback invoked when the user selects a menu extension item. The callback parameter **selectedText** contains the **plainText** field, which indicates the text content selected by the user.
 
 **Type:** (selectedText: {plainText: string}) =&gt; void
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Deprecated since:** 20
 
@@ -50,8 +46,6 @@ Display content.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
 **Deprecated since:** 20
 
 **Substitutes:** EditMenuOptions
@@ -73,8 +67,6 @@ Display icon. The default value is empty, and no icon is displayed.
 **Type:** ResourceStr
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Deprecated since:** 20
 

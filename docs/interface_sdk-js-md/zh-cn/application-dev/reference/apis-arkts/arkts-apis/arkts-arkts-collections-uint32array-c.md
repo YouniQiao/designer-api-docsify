@@ -1,12 +1,8 @@
 # Uint32Array
 
-一种线性数据结构，底层基于ArkTS ArrayBuffer实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器**：\@Sendable
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md#arktscollections)实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器**：\@Sendable
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-collections-class Uint32Array--><!--Device-collections-class Uint32Array-End-->
 
@@ -21,10 +17,6 @@
 返回一个迭代器，迭代器的每一项都是一个数字。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -53,10 +45,6 @@ at(index: number): number | undefined
 返回指定下标的元素，如果不存在，则返回**undefined**。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -93,10 +81,6 @@ constructor()
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-constructor()--><!--Device-Uint32Array-constructor()-End-->
@@ -118,10 +102,6 @@ constructor(length: number)
 构造函数，用于创建一个指定长度的ArkTS Uint32Array对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -151,10 +131,6 @@ constructor(elements: Iterable<number>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-constructor(elements: Iterable<number>)--><!--Device-Uint32Array-constructor(elements: Iterable<number>)-End-->
@@ -183,10 +159,6 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-constructor(array: ArrayLike<number> | ArrayBuffer)--><!--Device-Uint32Array-constructor(array: ArrayLike<number> | ArrayBuffer)-End-->
@@ -214,10 +186,6 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 构造函数，以ArrayBuffer创建一个ArkTS Uint32Array对象。Uint32Array与传入的ArrayBuffer共享同一份底层数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -248,10 +216,6 @@ copyWithin(target: number, start: number, end?: number): Uint32Array
 将ArkTS Uint32Array指定范围内的元素依次拷贝到目标位置。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -290,10 +254,6 @@ entries(): IterableIterator<[number, number]>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-entries(): IterableIterator<[number, number]>--><!--Device-Uint32Array-entries(): IterableIterator<[number, number]>-End-->
@@ -322,10 +282,6 @@ every(predicate: TypedArrayPredicateFn<number, Uint32Array>): boolean
 测试ArkTS Uint32Array中的所有元素是否满足指定条件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -361,10 +317,6 @@ fill(value: number, start?: number, end?: number): Uint32Array
 使用特定值填充ArkTS Uint32Array指定范围的全部元素。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -403,10 +355,6 @@ filter(predicate: TypedArrayPredicateFn<number, Uint32Array>): Uint32Array
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-filter(predicate: TypedArrayPredicateFn<number, Uint32Array>): Uint32Array--><!--Device-Uint32Array-filter(predicate: TypedArrayPredicateFn<number, Uint32Array>): Uint32Array-End-->
@@ -441,10 +389,6 @@ find(predicate: TypedArrayPredicateFn<number, Uint32Array>): number | undefined
 返回ArkTS Uint32Array中第一个满足指定条件的元素的值，如果所有元素都不满足，则返回**undefined**。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -481,10 +425,6 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint32Array>): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-findIndex(predicate: TypedArrayPredicateFn<number, Uint32Array>): number--><!--Device-Uint32Array-findIndex(predicate: TypedArrayPredicateFn<number, Uint32Array>): number-End-->
@@ -520,10 +460,6 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint32Array>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-forEach(callbackFn: TypedArrayForEachCallback<number, Uint32Array>): void--><!--Device-Uint32Array-forEach(callbackFn: TypedArrayForEachCallback<number, Uint32Array>): void-End-->
@@ -553,10 +489,6 @@ static from(arrayLike: ArrayLike<number>): Uint32Array
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-static from(arrayLike: ArrayLike<number>): Uint32Array--><!--Device-Uint32Array-static from(arrayLike: ArrayLike<number>): Uint32Array-End-->
@@ -584,10 +516,6 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 从一个ArrayLike中创建一个ArkTS Uint32Array对象，通过映射函数对每个元素进行转换。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -618,10 +546,6 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint32Array--><!--Device-Uint32Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint32Array-End-->
@@ -650,10 +574,6 @@ includes(searchElement: number, fromIndex?: number): boolean
 判断ArkTS Uint32Array是否包含特定元素。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -691,10 +611,6 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-indexOf(searchElement: number, fromIndex?: number): number--><!--Device-Uint32Array-indexOf(searchElement: number, fromIndex?: number): number-End-->
@@ -731,10 +647,6 @@ join(separator?: string): string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-join(separator?: string): string--><!--Device-Uint32Array-join(separator?: string): string-End-->
@@ -770,10 +682,6 @@ keys(): IterableIterator<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-keys(): IterableIterator<number>--><!--Device-Uint32Array-keys(): IterableIterator<number>-End-->
@@ -802,10 +710,6 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 返回ArkTS Uint32Array实例中最后一次出现给定元素的索引，如果不存在，则返回**-1**。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -843,10 +747,6 @@ map(callbackFn: TypedArrayMapCallback<number, Uint32Array>): Uint32Array
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-map(callbackFn: TypedArrayMapCallback<number, Uint32Array>): Uint32Array--><!--Device-Uint32Array-map(callbackFn: TypedArrayMapCallback<number, Uint32Array>): Uint32Array-End-->
@@ -882,10 +782,6 @@ static of(...items: number[]): Uint32Array
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-static of(...items: number[]): Uint32Array--><!--Device-Uint32Array-static of(...items: number[]): Uint32Array-End-->
@@ -913,10 +809,6 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint32Array>): numbe
 对每个元素执行归约函数，并返回最终的归约结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -952,10 +844,6 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint32Array>, initia
 对ArkTS Uint32Array中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数， 并返回最终的归约结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -993,10 +881,6 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint32Array>, initialV
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint32Array>, initialValue: U): U--><!--Device-Uint32Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint32Array>, initialValue: U): U-End-->
@@ -1032,10 +916,6 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint32Ar
 反向遍历ArkTS Uint32Array，对ArkTS Uint32Array中的每个元素执行归约函数，且接收一个初始值作为归约函数 首次调用的参数，并返回最终的归约结果。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1073,10 +953,6 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint32Array>): 
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint32Array>): number--><!--Device-Uint32Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint32Array>): number-End-->
@@ -1112,10 +988,6 @@ reverse(): Uint32Array
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-reverse(): Uint32Array--><!--Device-Uint32Array-reverse(): Uint32Array-End-->
@@ -1144,10 +1016,6 @@ set(array: ArrayLike<number>, offset?: number): void
 将传入的ArrayLike元素依次写入到指定的起始位置。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1178,10 +1046,6 @@ slice(start?: number, end?: number): Uint32Array
 返回一个新的ArkTS Uint32Array对象，其包含原ArkTS Uint32Array指定范围的内容。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1219,10 +1083,6 @@ some(predicate: TypedArrayPredicateFn<number, Uint32Array>): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-some(predicate: TypedArrayPredicateFn<number, Uint32Array>): boolean--><!--Device-Uint32Array-some(predicate: TypedArrayPredicateFn<number, Uint32Array>): boolean-End-->
@@ -1258,10 +1118,6 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint32Array
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-sort(compareFn?: TypedArrayCompareFn<number>): Uint32Array--><!--Device-Uint32Array-sort(compareFn?: TypedArrayCompareFn<number>): Uint32Array-End-->
@@ -1296,10 +1152,6 @@ subarray(begin?: number, end?: number): Uint32Array
 从指定的位置截取数组，返回一个新的、基于相同ArkTS ArrayBuffer的ArkTS Uint32Array对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1337,10 +1189,6 @@ toLocaleString(): string
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-toLocaleString(): string--><!--Device-Uint32Array-toLocaleString(): string-End-->
@@ -1370,10 +1218,6 @@ toString(): string
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-toString(): string--><!--Device-Uint32Array-toString(): string-End-->
@@ -1402,10 +1246,6 @@ values(): IterableIterator<number>
 返回一个新的迭代器对象，该对象包含ArkTS Uint32Array中每个元素的值。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1438,10 +1278,6 @@ ArkTS Uint32Array中每个元素所占的字节数。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Uint32Array-static readonly BYTES_PER_ELEMENT: number-End-->
@@ -1459,10 +1295,6 @@ ArkTS Uint32Array底层使用的ArrayBuffer对象。
 **类型：** ArrayBuffer
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1482,10 +1314,6 @@ ArkTS Uint32Array所占的字节数。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-readonly byteLength: number--><!--Device-Uint32Array-readonly byteLength: number-End-->
@@ -1504,10 +1332,6 @@ ArkTS Uint32Array距离其ArrayBuffer起始位置的字节偏移。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint32Array-readonly byteOffset: number--><!--Device-Uint32Array-readonly byteOffset: number-End-->
@@ -1525,10 +1349,6 @@ ArkTS Uint32Array元素个数。
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

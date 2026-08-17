@@ -1,6 +1,6 @@
 # EmbeddedComponent
 
-The **EmbeddedComponent** is a component used to embed into the current page the UI provided by another [EmbeddedUIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md#EmbeddedUIExtensionAbility) in the same application. The EmbeddedUIExtensionAbility runs in an independent process for UI layout and rendering. It is usually used in modular development scenarios where process isolation is required. > **NOTE**
+The **EmbeddedComponent** is a component used to embed into the current page the UI provided by another [EmbeddedUIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md#embeddeduiextensionability) in the same application. The EmbeddedUIExtensionAbility runs in an independent process for UI layout and rendering. It is usually used in modular development scenarios where process isolation is required. > **NOTE**
 
 ## Constraints The **EmbeddedComponent** is supported only on devices configured with multi-process permissions. The **EmbeddedComponent** can be used only in the UIAbility, and the EmbeddedUIExtensionAbility to start must belong to the same application as the UIAbility. ###### Child Components Not supported
 
@@ -16,10 +16,6 @@ EmbeddedComponent(
 Creates a cross-process embedded component to display the UI of the EmbeddedUIExtensionAbility with the same bundle name.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +45,6 @@ EmbeddedComponent(
 Construct the EmbeddedComponent.<br/> Called when the EmbeddedComponent is used.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

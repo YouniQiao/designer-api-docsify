@@ -10,10 +10,6 @@ function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): vo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sms-function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): void--><!--Device-sms-function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -25,7 +21,7 @@ function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mms | [MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md) | 是 | 彩信信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | 是 | 指示用于获取MMS编码结果的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | 是 | 指示用于获取MMS编码结果的回调函数。 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): vo
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -69,10 +65,6 @@ function encodeMms(mms: MmsInformation): Promise<Array<int>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sms-function encodeMms(mms: MmsInformation): Promise<Array<int>>--><!--Device-sms-function encodeMms(mms: MmsInformation): Promise<Array<int>>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -102,7 +94,7 @@ function encodeMms(mms: MmsInformation): Promise<Array<int>>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

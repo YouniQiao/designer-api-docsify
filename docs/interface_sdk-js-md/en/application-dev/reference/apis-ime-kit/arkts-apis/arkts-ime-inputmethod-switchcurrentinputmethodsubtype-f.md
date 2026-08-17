@@ -16,10 +16,6 @@ Switch current input method subtype. The caller must be the current inputmethod.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
 
@@ -43,7 +39,7 @@ Switch current input method subtype. The caller must be the current inputmethod.
 | [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails.<br>**Applicable version:** 9 - 10 |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -83,10 +79,6 @@ Switch current input method subtype. The caller must be the current inputmethod.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
 
@@ -115,7 +107,7 @@ Switch current input method subtype. The caller must be the current inputmethod.
 | [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails.<br>**Applicable version:** 9 - 10 |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

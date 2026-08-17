@@ -10,10 +10,6 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -30,7 +26,7 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 | --- | --- | --- | --- |
 | parameter | ContinueDeviceInfo | 是 | 迁移信息。 |
 | options | ContinueCallback | 是 | 迁移任务完成回调函数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，迁移任务完成时，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，迁移任务完成时，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -46,7 +42,7 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 | [16300502](../errorcode-DistributedSchedule.md#16300502-获取指定的missionid的missioninfo失败) | Failed to get the missionInfo of the specified missionId. |
 | [16300503](../errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) | The application is not installed on the remote end and installation-free isnot supported. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -128,10 +124,6 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -169,7 +161,7 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 | [16300502](../errorcode-DistributedSchedule.md#16300502-获取指定的missionid的missioninfo失败) | Failed to get the missionInfo of the specified missionId. |
 | [16300503](../errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) | The application is not installed on the remote end and installation-free isnot supported. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -246,10 +238,6 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -265,7 +253,7 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | parameter | ContinueMissionInfo | 是 | 迁移信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，通过指定包名迁移任务完成时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，通过指定包名迁移任务完成时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -281,7 +269,7 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 | [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) | The system ability work abnormally. |
 | [16300503](../errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) | The application is not installed on the remote end and installation-free isnot supported. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -347,10 +335,6 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -387,7 +371,7 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 | [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) | The system ability work abnormally. |
 | [16300503](../errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) | The application is not installed on the remote end and installation-free isnot supported. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -4,10 +4,6 @@ Describes the data structure of the task progress.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-interface Progress--><!--Device-agent-interface Progress-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -30,10 +26,6 @@ The extras for an interaction. Such as headers and body of response from server.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Progress-readonly extras?: Record<string, string>--><!--Device-Progress-readonly extras?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -49,10 +41,6 @@ Index of the file that is being processed in the task.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,10 +60,6 @@ Size of processed data in the current file in the task, in bytes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Progress-readonly processed: long--><!--Device-Progress-readonly processed: long-End-->
@@ -94,10 +78,6 @@ Size of a file in a task, in bytes. If the server uses the chunk mode for data t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Progress-readonly sizes: Array<long>--><!--Device-Progress-readonly sizes: Array<long>-End-->
@@ -115,10 +95,6 @@ Current task status.
 **Type:** State
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

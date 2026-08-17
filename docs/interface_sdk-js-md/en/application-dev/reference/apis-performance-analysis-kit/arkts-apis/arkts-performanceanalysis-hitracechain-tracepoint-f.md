@@ -12,13 +12,9 @@ import { hiTraceChain } from 'hiTraceChain';
 function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType, id: HiTraceId, msg?: string): void
 ```
 
-Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitracemeter.md#@ohos.hiTraceMeter(Performance-Tracing)) logging, which is synchronous. When type is set to **CS** and **SR**, the HiTraceMeter tracing starts. When type is set to **CR** and **SS**, the HiTraceMeter tracing ends. When type is set to **GENERAL**, the HiTraceMeter tracing does not start. The trace points for **CS** and **CR** types must be used as a pair; likewise, trace points for **SR** and **SS** types must also be used together. Otherwise, the start and end trace points of HiTraceMeter cannot match each other.
+Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitracemeter.md#ohoshitracemeterperformance-tracing) logging, which is synchronous. When type is set to **CS** and **SR**, the HiTraceMeter tracing starts. When type is set to **CR** and **SS**, the HiTraceMeter tracing ends. When type is set to **GENERAL**, the HiTraceMeter tracing does not start. The trace points for **CS** and **CR** types must be used as a pair; likewise, trace points for **SR** and **SS** types must also be used together. Otherwise, the start and end trace points of HiTraceMeter cannot match each other.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hiTraceChain-function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType, id: HiTraceId, msg?: string): void--><!--Device-hiTraceChain-function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType, id: HiTraceId, msg?: string): void-End-->
 
@@ -33,7 +29,7 @@ Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitr
 | id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance for trace point triggering. |
 | msg | string | No | Trace description information passed by the HiTraceMeter logging. The default value is "". |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Start tracing. The trace flag is the union of INCLUDE_ASYNC and DONOT_CREATE_SPAN.

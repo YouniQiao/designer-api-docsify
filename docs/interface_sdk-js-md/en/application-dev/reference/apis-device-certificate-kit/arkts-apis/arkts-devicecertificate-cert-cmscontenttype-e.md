@@ -4,10 +4,6 @@ Enumerates the Cryptographic Message Syntax (CMS) message types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-enum CmsContentType--><!--Device-cert-enum CmsContentType-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -21,10 +17,6 @@ SIGNED_DATA = 0
 Signed data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -41,10 +33,6 @@ ENVELOPED_DATA = 1
 Enveloped data, including authenticated enveloped data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

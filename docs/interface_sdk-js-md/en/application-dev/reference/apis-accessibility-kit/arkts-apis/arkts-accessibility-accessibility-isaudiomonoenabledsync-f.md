@@ -12,13 +12,9 @@ import { accessibility } from 'accessibility';
 function isAudioMonoEnabledSync(): boolean
 ```
 
-Checks whether mono audio mode is enabled. This API is the synchronous version of [accessibility.isAudioMonoEnabled](arkts-accessibility-accessibility-isaudiomonoenabled-f.md#isAudioMonoEnabled) ( asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios.
+Checks whether mono audio mode is enabled. This API is the synchronous version of [accessibility.isAudioMonoEnabled](arkts-accessibility-accessibility-isaudiomonoenabled-f.md#isaudiomonoenabled) ( asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +28,7 @@ Checks whether mono audio mode is enabled. This API is the synchronous version o
 | --- | --- |
 | boolean | Whether mono audio mode is enabled. Returns **true** if mono audio mode is enabled; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

@@ -4,13 +4,9 @@
 export type UIAbilityContext = _UIAbilityContext
 ```
 
-Defines the context environment for the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility). It inherits from Context.
+Defines the context environment for the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability). It inherits from Context.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,8 @@
-# FocusBoxStyle
+# FocusBoxStyle(Provide some common interface for focus.)
 
 Sets the system focus box style for the component.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface FocusBoxStyle--><!--Device-unnamed-declare interface FocusBoxStyle-End-->
 
@@ -23,10 +19,6 @@ Distance of the focus box from the component's edge. A positive number indicates
 **Type:** LengthMetrics
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ Stroke color of the focus box.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -71,10 +59,6 @@ Stroke width of the focus box. Negative numbers and percentages are not supporte
 **Type:** LengthMetrics
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

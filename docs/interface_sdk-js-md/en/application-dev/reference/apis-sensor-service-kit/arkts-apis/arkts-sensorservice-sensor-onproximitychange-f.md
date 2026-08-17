@@ -16,10 +16,6 @@ Subscribe to proximity sensor data, {@code SensorId.PROXIMITY}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onProximityChange(callback: Callback<ProximityResponse>, options?: Options): void--><!--Device-sensor-function onProximityChange(callback: Callback<ProximityResponse>, options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

@@ -12,13 +12,9 @@ import { abilityManager } from 'abilityManager';
 function onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAbilityDestroyedFn): void
 ```
 
-Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) instance in the current process.
+Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance in the current process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -34,7 +30,7 @@ Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-abilitymanager-preloadeduiextensionabilitydestroyedfn-t-sys.md) | Yes | Callback used to receive the ID of the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) instance that is destroyed. |
+| callback | [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-abilitymanager-preloadeduiextensionabilitydestroyedfn-t-sys.md) | Yes | Callback used to receive the ID of the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance that is destroyed. |
 
 **Error codes:**
 
@@ -44,7 +40,7 @@ Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';

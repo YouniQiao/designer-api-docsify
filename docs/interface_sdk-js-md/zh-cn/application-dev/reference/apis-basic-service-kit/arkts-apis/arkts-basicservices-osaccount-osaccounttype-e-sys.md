@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-enum OsAccountType--><!--Device-osAccount-enum OsAccountType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -21,10 +17,6 @@ PRIVATE = 1024
 隐私账号。隐私账号只能有一个。 此接口为系统接口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-OsAccountType-PRIVATE = 1024--><!--Device-OsAccountType-PRIVATE = 1024-End-->
 

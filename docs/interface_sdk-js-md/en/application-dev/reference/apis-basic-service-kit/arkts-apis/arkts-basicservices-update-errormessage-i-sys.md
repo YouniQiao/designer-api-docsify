@@ -4,10 +4,6 @@ Represents an error message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface ErrorMessage--><!--Device-update-export interface ErrorMessage-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Error code, which identifies an error type. You can quickly locate the cause of 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ErrorMessage-errorCode: int--><!--Device-ErrorMessage-errorCode: int-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ Error message, which provides detailed description of the error. **errorMessage*
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ErrorMessage-errorMessage: string--><!--Device-ErrorMessage-errorMessage: string-End-->
 

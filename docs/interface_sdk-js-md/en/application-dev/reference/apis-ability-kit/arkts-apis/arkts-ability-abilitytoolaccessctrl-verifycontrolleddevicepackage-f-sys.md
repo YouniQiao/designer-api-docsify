@@ -10,10 +10,6 @@ Verifies the authorization package from the controlled device. This function ver
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 <!--Device-abilityToolAccessCtrl-export function verifyControlledDevicePackage(ticketInfo: RemoteAuthPackage[]): Promise<boolean[]>--><!--Device-abilityToolAccessCtrl-export function verifyControlledDevicePackage(ticketInfo: RemoteAuthPackage[]): Promise<boolean[]>-End-->

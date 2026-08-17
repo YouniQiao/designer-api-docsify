@@ -16,10 +16,6 @@ Obtains the name of a peer Bluetooth device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -53,7 +49,7 @@ Obtains the name of a peer Bluetooth device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -74,10 +70,6 @@ function getRemoteDeviceName(deviceId: string, alias?: boolean): string
 Obtains the name or alias of the Bluetooth peer device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -113,7 +105,7 @@ Obtains the name or alias of the Bluetooth peer device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Failed to obtain the name or alias of the peer Bluetooth device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,14 +1,10 @@
 # DirectionalLight
 
-Defines directional light.
+Directional light, which inherits from Light.
 
-**Inheritance/Implementation:** DirectionalLight extends [Light](arkts-arkgraphics3d-scenenodes-light-i.md#Light)
+**Inheritance/Implementation:** DirectionalLight extends [Light](arkts-arkgraphics3d-scenenodes-light-i.md#light)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DirectionalLight--><!--Device-unnamed-export interface DirectionalLight-End-->
 

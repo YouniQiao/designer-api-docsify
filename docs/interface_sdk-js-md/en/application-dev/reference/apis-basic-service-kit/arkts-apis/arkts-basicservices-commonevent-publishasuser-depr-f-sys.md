@@ -10,11 +10,9 @@ Publishes a common event to a specific user. This API uses an asynchronous callb
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishAsUser)(event: string, userId: int, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishasuser)(event: string, userId: int, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -30,7 +28,7 @@ Publishes a common event to a specific user. This API uses an asynchronous callb
 | userId | number | Yes | ID of the user to whom the common event is published. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the common event publication result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import Base from '@ohos.base';
@@ -67,11 +65,9 @@ Publishes a common event with given properties to a specific user. This API uses
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishAsUser-(System-API))( event: string, userId: int, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt; )
+**Substitutes:** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishasuser-system-api)( event: string, userId: int, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt; )
 
 <!--Device-commonEvent-function publishAsUser(    event: string,    userId: number,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void--><!--Device-commonEvent-function publishAsUser(    event: string,    userId: number,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void-End-->
 
@@ -88,7 +84,7 @@ Publishes a common event with given properties to a specific user. This API uses
 | options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | Yes | Properties of the common event to publish. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the common event publication result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import Base from '@ohos.base';

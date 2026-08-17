@@ -4,10 +4,6 @@ Provides AI image analyzer configuration.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ImageAnalyzerConfig--><!--Device-unnamed-declare interface ImageAnalyzerConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ AI image analysis types.
 **Type:** [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

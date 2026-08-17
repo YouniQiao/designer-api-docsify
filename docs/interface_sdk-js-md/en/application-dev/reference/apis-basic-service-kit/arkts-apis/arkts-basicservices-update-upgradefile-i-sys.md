@@ -4,10 +4,6 @@ Represents the upgrade file, including the file type and file path, which are us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface UpgradeFile--><!--Device-update-export interface UpgradeFile-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ File path, which can be an absolute path or a relative path. The path length ran
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UpgradeFile-filePath: string--><!--Device-UpgradeFile-filePath: string-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ File type, which specifies the type of the upgrade package. If this parameter is
 **Type:** ComponentType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UpgradeFile-fileType: ComponentType--><!--Device-UpgradeFile-fileType: ComponentType-End-->
 

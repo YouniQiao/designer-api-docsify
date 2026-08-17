@@ -1,14 +1,10 @@
 # RectShapeOptions
 
-Represents the parameter of the constructor used to create a **RectShape** object. This API inherits from [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#ShapeSize).
+Represents the parameter of the constructor used to create a **RectShape** object. This API inherits from [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#shapesize).
 
-**Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#ShapeSize)
+**Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#shapesize)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface RectShapeOptions--><!--Device-unnamed-interface RectShapeOptions-End-->
 
@@ -34,10 +30,6 @@ Radius of the rectangle border corners. When the parameter type is number, the v
 **Type:** number \| string \| Array&lt;number \| string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

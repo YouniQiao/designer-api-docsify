@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-enum PrinterStatus--><!--Device-print-enum PrinterStatus-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -21,10 +17,6 @@ PRINTER_IDLE = 0
 表示打印机空闲状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterStatus-PRINTER_IDLE = 0--><!--Device-PrinterStatus-PRINTER_IDLE = 0-End-->
 
@@ -40,10 +32,6 @@ PRINTER_BUSY = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterStatus-PRINTER_BUSY = 1--><!--Device-PrinterStatus-PRINTER_BUSY = 1-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -57,10 +45,6 @@ PRINTER_UNAVAILABLE = 2
 表示打印机脱机状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterStatus-PRINTER_UNAVAILABLE = 2--><!--Device-PrinterStatus-PRINTER_UNAVAILABLE = 2-End-->
 

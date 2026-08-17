@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-unnamed-export interface DeviceResponse--><!--Device-unnamed-export interface DeviceResponse-End-->
@@ -29,8 +27,6 @@ API version.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
 **Deprecated since:** 6
 
 <!--Device-DeviceResponse-apiVersion: number--><!--Device-DeviceResponse-apiVersion: number-End-->
@@ -48,8 +44,6 @@ Brand.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 
@@ -69,8 +63,6 @@ Device type. The options are as follows: phone: smartphone tablet: tablet tv: sm
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
 **Deprecated since:** 6
 
 <!--Device-DeviceResponse-deviceType: string--><!--Device-DeviceResponse-deviceType: string-End-->
@@ -88,8 +80,6 @@ System language.
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
 
 **Deprecated since:** 6
 
@@ -109,8 +99,6 @@ Manufacturer.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-DeviceResponse-manufacturer: string--><!--Device-DeviceResponse-manufacturer: string-End-->
@@ -128,8 +116,6 @@ Model.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 
@@ -149,8 +135,6 @@ Product number.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-DeviceResponse-product: string--><!--Device-DeviceResponse-product: string-End-->
@@ -168,8 +152,6 @@ System region.
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
 
 **Deprecated since:** 6
 
@@ -189,8 +171,6 @@ Screen density, unit dpi.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
 **Deprecated since:** 6
 
 <!--Device-DeviceResponse-screenDensity: number--><!--Device-DeviceResponse-screenDensity: number-End-->
@@ -209,8 +189,6 @@ Screen shape. The options are as follows: rect: Rectangle screen. circle: Circle
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
 **Deprecated since:** 6
 
 <!--Device-DeviceResponse-screenShape: 'rect' | 'circle'--><!--Device-DeviceResponse-screenShape: 'rect' | 'circle'-End-->
@@ -228,8 +206,6 @@ Minor API version of the system software. From API 26 and later versions, the sy
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Deprecated since:** 26.0.0
 
@@ -251,8 +227,6 @@ Minor API version of the system software. From API 26 and later versions, the sy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
 **Deprecated since:** 26.0.0
 
 **Model restriction:** This API can be used only in the FA model.
@@ -273,8 +247,6 @@ Window Height, unit px.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-DeviceResponse-windowHeight: number--><!--Device-DeviceResponse-windowHeight: number-End-->
@@ -292,8 +264,6 @@ Window width, unit px.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 

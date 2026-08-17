@@ -4,10 +4,6 @@
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct AtomicServiceSearch--><!--Device-unnamed-export declare struct AtomicServiceSearch-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -36,10 +32,6 @@ Set the Search component controller.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AtomicServiceSearch-controller?: SearchController--><!--Device-AtomicServiceSearch-controller?: SearchController-End-->
@@ -57,10 +49,6 @@ Function settings in the selection area (right).
 **Type:** [OperationParams](arkts-arkui-atomicservice-atomicservicesearch-operationparams-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -81,10 +69,6 @@ Indicates default prompt text displayed in the search box. The default value is 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AtomicServiceSearch-@Prop  placeholder?: ResourceStr--><!--Device-AtomicServiceSearch-@Prop  placeholder?: ResourceStr-End-->
@@ -103,10 +87,6 @@ Events and styles supported by the search area.
 **Type:** [SearchParams](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -127,10 +107,6 @@ Contents, events, and styles of the select area.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AtomicServiceSearch-@Prop  select?: SelectParams--><!--Device-AtomicServiceSearch-@Prop  select?: SelectParams-End-->
@@ -149,10 +125,6 @@ Sets the search text content that is currently displayed.
 **Type:** ResourceStr
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

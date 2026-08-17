@@ -4,8 +4,6 @@ Provides the capability for obtaining the plural rule type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
@@ -30,8 +28,6 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
@@ -42,7 +38,7 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 **System capability:** SystemCapability.Global.I18n
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -61,8 +57,6 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
@@ -80,7 +74,7 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 | locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
 | options | PluralRulesOptions | No | Options for creating a **PluralRules** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -98,8 +92,6 @@ select(n: double): string
 Obtains the singular-plural type of the specified number.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 20
 
@@ -123,7 +115,7 @@ Obtains the singular-plural type of the specified number.
 | --- | --- |
 | string | Singular-plural type. The value can be any of the following: **zero**, **one**, **two**, **few**, **many**, **others**. For details about the meanings of different values, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

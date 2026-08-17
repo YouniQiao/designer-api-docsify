@@ -10,10 +10,6 @@ function isFontSupported(fontURL: string | Resource): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-text-function isFontSupported(fontURL: string | Resource): boolean--><!--Device-text-function isFontSupported(fontURL: string | Resource): boolean-End-->
@@ -32,7 +28,7 @@ function isFontSupported(fontURL: string | Resource): boolean
 | --- | --- |
 | boolean | 系统是否支持指定的字体文件。返回true表示支持，返回false表示不支持。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -12,13 +12,9 @@ import { intelligentVoice } from 'intelligentVoice';
 function getIntelligentVoiceManager(): IntelligentVoiceManager
 ```
 
-Obtains an [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intelligentvoicemanager-i-sys.md#IntelligentVoiceManager-(System-API)) instance.
+Obtains an [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intelligentvoicemanager-i-sys.md#intelligentvoicemanager-system-api) instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -42,7 +38,7 @@ Obtains an [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intell
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700101](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -16,10 +16,6 @@ Sets additional information for an application. This API can be called only by A
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function setAdditionalInfo(bundleName: string, additionalInfo: string): void--><!--Device-bundleManager-function setAdditionalInfo(bundleName: string, additionalInfo: string): void-End-->
@@ -45,7 +41,7 @@ Sets additional information for an application. This API can be called only by A
 | [17700053](../errorcode-bundle.md#17700053-not-invoked-by-appgallery) | The caller is not AppGallery. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

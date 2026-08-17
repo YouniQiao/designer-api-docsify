@@ -4,10 +4,6 @@ Enumerates the types of the floating ball template.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-floatingBall-enum FloatingBallTemplate--><!--Device-floatingBall-enum FloatingBallTemplate-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ STATIC = 1
 Static layout, which provides a title and an icon. When this template is used, the **title** and **icon** parameters in **FloatingBallParams** must be passed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FloatingBallTemplate-STATIC = 1--><!--Device-FloatingBallTemplate-STATIC = 1-End-->
 
@@ -40,10 +32,6 @@ Standard text layout, which provides a title and content. When this template is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallTemplate-NORMAL = 2--><!--Device-FloatingBallTemplate-NORMAL = 2-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -58,10 +46,6 @@ Emphasized text layout, which provides an icon, a title, and content. When this 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallTemplate-EMPHATIC = 3--><!--Device-FloatingBallTemplate-EMPHATIC = 3-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -75,10 +59,6 @@ SIMPLE = 4
 Plain text layout, which provides only a title. When this template is used, the **title** parameter in **FloatingBallParams** must be passed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FloatingBallTemplate-SIMPLE = 4--><!--Device-FloatingBallTemplate-SIMPLE = 4-End-->
 

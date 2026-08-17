@@ -4,10 +4,6 @@ Enumerates the data channel types supported by the UDMF. It is used to identify 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unifiedDataChannel-enum Intention--><!--Device-unifiedDataChannel-enum Intention-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -21,10 +17,6 @@ DRAG = 'Drag'
 Channel in which data can be dragged and dropped. **Use scenario**: This API is used to share data across applications in drag-and-drop scenarios.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Register the listener that watches for changes in the installed status of access
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
 <!--Device-config-function onInstalledAccessibilityListChange(callback: Callback<void>): void--><!--Device-config-function onInstalledAccessibilityListChange(callback: Callback<void>): void-End-->

@@ -4,10 +4,6 @@ The result of publish form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-interface PublishFormResult--><!--Device-formInfo-interface PublishFormResult-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -32,10 +28,6 @@ The error code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PublishFormResult-code: PublishFormErrorCode--><!--Device-PublishFormResult-code: PublishFormErrorCode-End-->
@@ -55,10 +47,6 @@ The message.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

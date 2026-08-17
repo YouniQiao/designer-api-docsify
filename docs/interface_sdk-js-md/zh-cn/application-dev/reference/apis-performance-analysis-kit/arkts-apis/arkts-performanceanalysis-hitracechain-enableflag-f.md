@@ -10,10 +10,6 @@ function enableFlag(id: HiTraceId, flag: HiTraceFlag): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hiTraceChain-function enableFlag(id: HiTraceId, flag: HiTraceFlag): void--><!--Device-hiTraceChain-function enableFlag(id: HiTraceId, flag: HiTraceFlag): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
@@ -25,7 +21,7 @@ function enableFlag(id: HiTraceId, flag: HiTraceFlag): void
 | id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 | 需要启用指定跟踪标志的HiTraceId实例。 |
 | flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | 是 | 指定的跟踪标志。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 开始跟踪，跟踪标志是INCLUDE_ASYNC。

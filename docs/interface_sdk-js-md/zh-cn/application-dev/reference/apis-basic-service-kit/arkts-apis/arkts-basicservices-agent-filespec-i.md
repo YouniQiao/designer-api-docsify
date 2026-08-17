@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-interface FileSpec--><!--Device-agent-interface FileSpec-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -23,10 +19,6 @@ contentType?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FileSpec-contentType?: string--><!--Device-FileSpec-contentType?: string-End-->
 
@@ -44,10 +36,6 @@ The extras for the file information.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-FileSpec-extras?: Record<string, string>--><!--Device-FileSpec-extras?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -63,10 +51,6 @@ filename?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -86,11 +70,9 @@ mimeType?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 18
 
-**替代接口：** [contentType](#contentType)
+**替代接口：** [contentType](#contenttype)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -109,10 +91,6 @@ path: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

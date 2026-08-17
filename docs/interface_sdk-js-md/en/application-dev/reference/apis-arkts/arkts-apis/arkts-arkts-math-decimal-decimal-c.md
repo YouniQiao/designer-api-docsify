@@ -1,12 +1,8 @@
-# Decimal
+# Decimal(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)
 
 An arbitrary-precision Decimal type
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class Decimal--><!--Device-unnamed-declare class Decimal-End-->
 
@@ -27,10 +23,6 @@ abs(): Decimal
 Return a new Decimal whose value is the absolute value of this Decimal.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -53,10 +45,6 @@ static abs(n: Value): Decimal
 Return a new Decimal whose value is the absolute value of `n`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -92,10 +80,6 @@ Return a new Decimal whose value is the arccosine (inverse cosine) in radians of
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-acos(): Decimal--><!--Device-Decimal-acos(): Decimal-End-->
@@ -123,10 +107,6 @@ static acos(n: Value): Decimal
 Return a new Decimal whose value is the arccosine in radians of `n`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -163,10 +143,6 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine in radi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-acosh(): Decimal--><!--Device-Decimal-acosh(): Decimal-End-->
@@ -194,10 +170,6 @@ static acosh(n: Value): Decimal
 Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -234,10 +206,6 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-add(n: Value): Decimal--><!--Device-Decimal-add(n: Value): Decimal-End-->
@@ -271,10 +239,6 @@ static add(x: Value, y: Value): Decimal
 Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -311,10 +275,6 @@ Return a new Decimal whose value is the arcsine (inverse sine) in radians of the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-asin(): Decimal--><!--Device-Decimal-asin(): Decimal-End-->
@@ -342,10 +302,6 @@ static asin(n: Value): Decimal
 Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -382,10 +338,6 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine in radian
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-asinh(): Decimal--><!--Device-Decimal-asinh(): Decimal-End-->
@@ -413,10 +365,6 @@ static asinh(n: Value): Decimal
 Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -453,10 +401,6 @@ Return a new Decimal whose value is the arctangent (inverse tangent) in radians 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-atan(): Decimal--><!--Device-Decimal-atan(): Decimal-End-->
@@ -484,10 +428,6 @@ static atan(n: Value): Decimal
 Return a new Decimal whose value is the arctangent in radians of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -523,10 +463,6 @@ static atan2(y: Value, x: Value): Decimal
 Return a new Decimal whose value is the arctangent in radians of `y/x` in the range -pi to pi (inclusive), rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -564,10 +500,6 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent in rad
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-atanh(): Decimal--><!--Device-Decimal-atanh(): Decimal-End-->
@@ -595,10 +527,6 @@ static atanh(n: Value): Decimal
 Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -635,10 +563,6 @@ Return a new Decimal whose value is the cube root of the value of this Decimal, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-cbrt(): Decimal--><!--Device-Decimal-cbrt(): Decimal-End-->
@@ -660,10 +584,6 @@ static cbrt(n: Value): Decimal
 Return a new Decimal whose value is the cube root of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -699,10 +619,6 @@ Return a new Decimal whose value is the value of this Decimal rounded to a whole
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-ceil(): Decimal--><!--Device-Decimal-ceil(): Decimal-End-->
@@ -724,10 +640,6 @@ static ceil(n: Value): Decimal
 Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -762,10 +674,6 @@ clamp(min: Value, max: Value): Decimal
 Return a new Decimal whose value is the value of this Decimal clamped to the range delineated by `min` and `max`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -802,10 +710,6 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 Return a new Decimal whose value is `n` clamped to the range delineated by `min` and `max`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -844,10 +748,6 @@ Return 1 if the value of this Decimal is greater than the value of `n`, -1 if th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-comparedTo(n: Value): double--><!--Device-Decimal-comparedTo(n: Value): double-End-->
@@ -882,10 +782,6 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-constructor(n: Value)--><!--Device-Decimal-constructor(n: Value)-End-->
@@ -914,10 +810,6 @@ Return a new Decimal whose value is the cosine of the value in radians of this D
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-cos(): Decimal--><!--Device-Decimal-cos(): Decimal-End-->
@@ -939,10 +831,6 @@ static cos(n: Value): Decimal
 Return a new Decimal whose value is the cosine of `n`, rounded to `precision` significant digits using rounding mode `rounding`
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -978,10 +866,6 @@ Return a new Decimal whose value is the hyperbolic cosine of the value in radian
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-cosh(): Decimal--><!--Device-Decimal-cosh(): Decimal-End-->
@@ -1003,10 +887,6 @@ static cosh(n: Value): Decimal
 Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to precision significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1042,10 +922,6 @@ Return the number of decimal places of the value of this Decimal.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-decimalPlaces(): double--><!--Device-Decimal-decimalPlaces(): double-End-->
@@ -1067,10 +943,6 @@ div(n: Value): Decimal
 Return a new Decimal whose value is the value of this Decimal divided by `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1105,10 +977,6 @@ static div(x: Value, y: Value): Decimal
 Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1145,10 +1013,6 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-dividedToIntegerBy(n: Value): Decimal--><!--Device-Decimal-dividedToIntegerBy(n: Value): Decimal-End-->
@@ -1182,10 +1046,6 @@ equals(n: Value): boolean
 Return true if the value of this Decimal is equal to the value of `n`, otherwise return false.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1221,10 +1081,6 @@ Return a new Decimal whose value is the natural exponential of the value of this
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-exp(): Decimal--><!--Device-Decimal-exp(): Decimal-End-->
@@ -1252,10 +1108,6 @@ static exp(n: Value): Decimal
 Return a new Decimal whose value is the natural exponential of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1292,10 +1144,6 @@ Return a new Decimal whose value is the value of this Decimal rounded to a whole
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-floor(): Decimal--><!--Device-Decimal-floor(): Decimal-End-->
@@ -1317,10 +1165,6 @@ static floor(n: Value): Decimal
 Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1356,10 +1200,6 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-greaterThan(n: Value): boolean--><!--Device-Decimal-greaterThan(n: Value): boolean-End-->
@@ -1393,10 +1233,6 @@ greaterThanOrEqualTo(n: Value): boolean
 Return true if the value of this Decimal is greater than or equal to the value of `n`, otherwise return false.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1432,10 +1268,6 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static hypot(...n: Value[]): Decimal--><!--Device-Decimal-static hypot(...n: Value[]): Decimal-End-->
@@ -1470,10 +1302,6 @@ Return true if the value of this Decimal is a finite number, otherwise return fa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-isFinite(): boolean--><!--Device-Decimal-isFinite(): boolean-End-->
@@ -1495,10 +1323,6 @@ isInteger(): boolean
 Return true if the value of this Decimal is an integer, otherwise return false.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1522,10 +1346,6 @@ Return true if the value of this Decimal is NaN, otherwise return false.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-isNaN(): boolean--><!--Device-Decimal-isNaN(): boolean-End-->
@@ -1547,10 +1367,6 @@ isNegative(): boolean
 Return true if the value of this Decimal is negative, otherwise return false.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1574,10 +1390,6 @@ Return true if the value of this Decimal is positive, otherwise return false.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-isPositive(): boolean--><!--Device-Decimal-isPositive(): boolean-End-->
@@ -1600,10 +1412,6 @@ Return true if the value of this Decimal is 0 or -0, otherwise return false.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-isZero(): boolean--><!--Device-Decimal-isZero(): boolean-End-->
@@ -1625,10 +1433,6 @@ lessThan(n: Value): boolean
 Return true if the value of this Decimal is less than `n`, otherwise return false.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1664,10 +1468,6 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-lessThanOrEqualTo(n: Value): boolean--><!--Device-Decimal-lessThanOrEqualTo(n: Value): boolean-End-->
@@ -1702,10 +1502,6 @@ Return a new Decimal whose value is the natural logarithm of the value of this D
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-ln(): Decimal--><!--Device-Decimal-ln(): Decimal-End-->
@@ -1733,10 +1529,6 @@ static ln(n: Value): Decimal
 Return a new Decimal whose value is the natural logarithm of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1773,10 +1565,6 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-log(n: Value): Decimal--><!--Device-Decimal-log(n: Value): Decimal-End-->
@@ -1811,10 +1599,6 @@ static log(n: Value, base: Value): Decimal
 Return a new Decimal whose value is the log of `n` to the base `base`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1852,10 +1636,6 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static log10(n: Value): Decimal--><!--Device-Decimal-static log10(n: Value): Decimal-End-->
@@ -1890,10 +1670,6 @@ static log2(n: Value): Decimal
 Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1930,10 +1706,6 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static max(...n: Value[]): Decimal--><!--Device-Decimal-static max(...n: Value[]): Decimal-End-->
@@ -1967,10 +1739,6 @@ static min(...n: Value[]): Decimal
 Return a new Decimal whose value is the minimum of the arguments.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2006,10 +1774,6 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-mod(n: Value): Decimal--><!--Device-Decimal-mod(n: Value): Decimal-End-->
@@ -2043,10 +1807,6 @@ static mod(x: Value, y: Value): Decimal
 Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2083,10 +1843,6 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-mul(n: Value): Decimal--><!--Device-Decimal-mul(n: Value): Decimal-End-->
@@ -2120,10 +1876,6 @@ static mul(x: Value, y: Value): Decimal
 Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2160,10 +1912,6 @@ Return a new Decimal whose value is the value of this Decimal negated, i.e. as i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-negate(): Decimal--><!--Device-Decimal-negate(): Decimal-End-->
@@ -2185,10 +1933,6 @@ pow(n: Value): Decimal
 Return a new Decimal whose value is the value of this Decimal raised to the power `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2224,10 +1968,6 @@ static pow(base: Value, exponent: Value): Decimal
 Return a new Decimal whose value is `base` raised to the power `exponent`, rounded to precision significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2265,10 +2005,6 @@ Return the number of significant digits of the value of this Decimal.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-precision(): double--><!--Device-Decimal-precision(): double-End-->
@@ -2290,10 +2026,6 @@ precision(includeZeros: boolean | int): double
 Return the number of significant digits of the value of this Decimal, whether to count integer-part trailing zeros.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2329,10 +2061,6 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static random(): Decimal--><!--Device-Decimal-static random(): Decimal-End-->
@@ -2360,10 +2088,6 @@ static random(significantDigits: double): Decimal
 Returns a new Decimal with a random value equal to or greater than 0 and less than 1, and with `significantDigits` significant digits (or less if trailing zeros are produced).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2400,10 +2124,6 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static round(n: Value): Decimal--><!--Device-Decimal-static round(n: Value): Decimal-End-->
@@ -2438,10 +2158,6 @@ Configures the 'global' settings for this particular Decimal constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static set(config: DecimalConfig): void--><!--Device-Decimal-static set(config: DecimalConfig): void-End-->
@@ -2471,10 +2187,6 @@ static sign(n: Value): double
 Return the sign of the passed value to the method. 1 if x > 0, -1 if x &lt; 0, 0 if x is 0, -0 if x is -0, NaN otherwise
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2511,10 +2223,6 @@ Return a new Decimal whose value is the sine of the value in radians of this Dec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-sin(): Decimal--><!--Device-Decimal-sin(): Decimal-End-->
@@ -2536,10 +2244,6 @@ static sin(n: Value): Decimal
 Return a new Decimal whose value is the sine of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2575,10 +2279,6 @@ Return a new Decimal whose value is the hyperbolic sine of the value in radians 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-sinh(): Decimal--><!--Device-Decimal-sinh(): Decimal-End-->
@@ -2600,10 +2300,6 @@ static sinh(n: Value): Decimal
 Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2639,10 +2335,6 @@ Return a new Decimal whose value is the square root of this Decimal, rounded to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-sqrt(): Decimal--><!--Device-Decimal-sqrt(): Decimal-End-->
@@ -2664,10 +2356,6 @@ static sqrt(n: Value): Decimal
 Return a new Decimal whose value is the square root of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2703,10 +2391,6 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-sub(n: Value): Decimal--><!--Device-Decimal-sub(n: Value): Decimal-End-->
@@ -2740,10 +2424,6 @@ static sub(x: Value, y: Value): Decimal
 Return a new Decimal whose value is `x` minus `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2780,10 +2460,6 @@ Return a new Decimal whose value is the sum of the arguments, rounded to `precis
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static sum(...n: Value[]): Decimal--><!--Device-Decimal-static sum(...n: Value[]): Decimal-End-->
@@ -2818,10 +2494,6 @@ Return a new Decimal whose value is the tangent of the value in radians of this 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-tan(): Decimal--><!--Device-Decimal-tan(): Decimal-End-->
@@ -2843,10 +2515,6 @@ static tan(n: Value): Decimal
 Return a new Decimal whose value is the tangent of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2882,10 +2550,6 @@ Return a new Decimal whose value is the hyperbolic tangent of the value in radia
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-tanh(): Decimal--><!--Device-Decimal-tanh(): Decimal-End-->
@@ -2907,10 +2571,6 @@ static tanh(n: Value): Decimal
 Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2946,10 +2606,6 @@ Return a string representing the value of this Decimal in base 2.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toBinary(): string--><!--Device-Decimal-toBinary(): string-End-->
@@ -2971,10 +2627,6 @@ toBinary(significantDigits: double): string
 Return a string representing the value of this Decimal in base 2, round to `significantDigits` significant digits.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3009,10 +2661,6 @@ toBinary(significantDigits: double, rounding: Rounding): string
 Return a string representing the value of this Decimal in base 2, round to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3049,10 +2697,6 @@ Return a new Decimal whose value is the value of this Decimal.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toDecimalPlaces(): Decimal--><!--Device-Decimal-toDecimalPlaces(): Decimal-End-->
@@ -3074,10 +2718,6 @@ toDecimalPlaces(decimalPlaces: double): Decimal
 Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `decimalPlaces` decimal places.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3112,10 +2752,6 @@ toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `decimalPlaces` decimal places using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3152,10 +2788,6 @@ Return a string representing the value of this Decimal in exponential notation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toExponential(): string--><!--Device-Decimal-toExponential(): string-End-->
@@ -3177,10 +2809,6 @@ toExponential(decimalPlaces: double): string
 Return a string representing the value of this Decimal in exponential notation rounded to `decimalPlaces` fixed decimal places.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3215,10 +2843,6 @@ toExponential(decimalPlaces: double, rounding: Rounding): string
 Return a string representing the value of this Decimal in exponential notation rounded to `decimalPlaces` fixed decimal places using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3255,10 +2879,6 @@ Return a string representing the value of this Decimal in normal (fixed-point).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toFixed(): string--><!--Device-Decimal-toFixed(): string-End-->
@@ -3280,10 +2900,6 @@ toFixed(decimalPlaces: double): string
 Return a string representing the value of this Decimal in normal (fixed-point) notation to `decimalPlaces` fixed decimal places.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3320,10 +2936,6 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toFixed(decimalPlaces: double, rounding: Rounding): string--><!--Device-Decimal-toFixed(decimalPlaces: double, rounding: Rounding): string-End-->
@@ -3359,10 +2971,6 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toFraction(): Decimal[]--><!--Device-Decimal-toFraction(): Decimal[]-End-->
@@ -3384,10 +2992,6 @@ toFraction(maxDenominator: Value): Decimal[]
 Return an array representing the value of this Decimal as a simple fraction with an integer numerator and an integer denominator. The denominator will be a positive non-zero value less than or equal to `max_denominator`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3423,10 +3027,6 @@ Return a string representing the value of this Decimal in base 16
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toHexadecimal(): string--><!--Device-Decimal-toHexadecimal(): string-End-->
@@ -3448,10 +3048,6 @@ toHexadecimal(significantDigits: double): string
 Return a string representing the value of this Decimal in base 16, round to `significantDigits` significant.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3486,10 +3082,6 @@ toHexadecimal(significantDigits: double, rounding: Rounding): string
 Return a string representing the value of this Decimal in base 16, round to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3526,10 +3118,6 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toNearest(n: Value): Decimal--><!--Device-Decimal-toNearest(n: Value): Decimal-End-->
@@ -3563,10 +3151,6 @@ toNearest(n: Value, rounding: Rounding): Decimal
 Returns a new Decimal whose value is the nearest multiple of `n` in the direction of rounding mode `rounding`, to the value of this Decimal.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3604,10 +3188,6 @@ Return the value of this Decimal converted to a number primitive. Zero keeps its
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toNumber(): double--><!--Device-Decimal-toNumber(): double-End-->
@@ -3630,10 +3210,6 @@ Return a string representing the value of this Decimal in base 8.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toOctal(): string--><!--Device-Decimal-toOctal(): string-End-->
@@ -3655,10 +3231,6 @@ toOctal(significantDigits: double): string
 Return a string representing the value of this Decimal in base 8, round to `significantDigits` significant.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3693,10 +3265,6 @@ toOctal(significantDigits: double, rounding: Rounding): string
 Return a string representing the value of this Decimal in base 8, round to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3733,10 +3301,6 @@ Return a string representing the value of this Decimal.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toPrecision(): string--><!--Device-Decimal-toPrecision(): string-End-->
@@ -3758,10 +3322,6 @@ toPrecision(significantDigits: double): string
 Return a string representing the value of this Decimal rounded to `significantDigits` significant digits.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3796,10 +3356,6 @@ toPrecision(significantDigits: double, rounding: Rounding): string
 Return a string representing the value of this Decimal rounded to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3836,10 +3392,6 @@ Return a new Decimal whose value is the value of this Decimal.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toSignificantDigits(): Decimal--><!--Device-Decimal-toSignificantDigits(): Decimal-End-->
@@ -3861,10 +3413,6 @@ toSignificantDigits(significantDigits: double): Decimal
 Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `significantDigits` significant digits.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3899,10 +3447,6 @@ toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3939,10 +3483,6 @@ Return a string representing the value of this Decimal. Return exponential notat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-toString(): string--><!--Device-Decimal-toString(): string-End-->
@@ -3965,10 +3505,6 @@ Return a new Decimal whose value is the value of this Decimal truncated to a who
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-trunc(): Decimal--><!--Device-Decimal-trunc(): Decimal-End-->
@@ -3990,10 +3526,6 @@ static trunc(n: Value): Decimal
 Return a new Decimal whose value is `n` truncated to an integer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -4029,10 +3561,6 @@ Return a string representing the value of this Decimal. Unlike `toString`, negat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-valueOf(): string--><!--Device-Decimal-valueOf(): string-End-->
@@ -4057,10 +3585,6 @@ Not a rounding mode, see modulo The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static readonly EUCLIDEAN: int--><!--Device-Decimal-static readonly EUCLIDEAN: int-End-->
@@ -4078,10 +3602,6 @@ Rounds towards Infinity The value should be an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -4101,10 +3621,6 @@ Rounds towards zero The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static readonly ROUND_DOWN: int--><!--Device-Decimal-static readonly ROUND_DOWN: int-End-->
@@ -4122,10 +3638,6 @@ Rounds towards -Infinity The value should be an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -4145,10 +3657,6 @@ Rounds towards nearest neighbour. If equidistant, rounds towards Infinity The va
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static readonly ROUND_HALF_CEILING: int--><!--Device-Decimal-static readonly ROUND_HALF_CEILING: int-End-->
@@ -4166,10 +3674,6 @@ Rounds towards nearest neighbour. If equidistant, rounds towards zero The value 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -4189,10 +3693,6 @@ Rounds towards nearest neighbour. If equidistant, rounds towards even neighbour 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static readonly ROUND_HALF_EVEN: int--><!--Device-Decimal-static readonly ROUND_HALF_EVEN: int-End-->
@@ -4210,10 +3710,6 @@ Rounds towards nearest neighbour. If equidistant, rounds towards -Infinity The v
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -4233,10 +3729,6 @@ Rounds towards nearest neighbour. If equidistant, rounds away from zero The valu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static readonly ROUND_HALF_UP: int--><!--Device-Decimal-static readonly ROUND_HALF_UP: int-End-->
@@ -4255,10 +3747,6 @@ Rounds away from zero The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Decimal-static readonly ROUND_UP: int--><!--Device-Decimal-static readonly ROUND_UP: int-End-->
@@ -4276,10 +3764,6 @@ The numbers of decimal digits.
 **Type:** number[]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

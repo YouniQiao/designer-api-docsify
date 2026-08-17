@@ -10,10 +10,6 @@ function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOp
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-huks-function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksSessionHandle>--><!--Device-huks-function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksSessionHandle>-End-->
@@ -55,7 +51,7 @@ function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOp
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 | [12000010](../errorcode-huks.md#12000010-密钥操作会话数已达上限) | the number of sessions has reached limit |
 
-## 示例
+**示例**
 
 注意：下文密码学相关的变量（如initializationVector）赋值，均为参考样例，不能直接适用于业务功能逻辑。开发者需要根据自身场景使用合适的初始值。
 

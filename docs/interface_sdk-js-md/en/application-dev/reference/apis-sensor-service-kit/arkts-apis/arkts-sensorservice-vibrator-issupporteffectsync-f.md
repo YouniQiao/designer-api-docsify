@@ -16,10 +16,6 @@ Checks whether the preset vibration effect is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-function isSupportEffectSync(effectId: string): boolean--><!--Device-vibrator-function isSupportEffectSync(effectId: string): boolean-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -43,7 +39,7 @@ Checks whether the preset vibration effect is supported.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

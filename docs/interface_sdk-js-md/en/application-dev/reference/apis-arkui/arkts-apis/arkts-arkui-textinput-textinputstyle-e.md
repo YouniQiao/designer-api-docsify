@@ -4,9 +4,7 @@ Text input style.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum TextInputStyle--><!--Device-unnamed-export declare enum TextInputStyle-End-->
 
@@ -22,9 +20,7 @@ Text input default style. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The ca
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,9 +38,7 @@ Text input inline style. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The bac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

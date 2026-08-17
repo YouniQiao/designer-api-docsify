@@ -10,10 +10,6 @@ function createAtManager(): AtManager
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-abilityAccessCtrl-function createAtManager(): AtManager--><!--Device-abilityAccessCtrl-function createAtManager(): AtManager-End-->
@@ -26,7 +22,7 @@ function createAtManager(): AtManager
 | --- | --- |
 | [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | 获取程序访问控制模块的实例。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 创建权限管理实例

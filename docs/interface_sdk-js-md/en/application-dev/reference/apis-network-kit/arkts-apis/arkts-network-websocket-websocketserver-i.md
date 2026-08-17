@@ -4,10 +4,6 @@
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-webSocket-export interface WebSocketServer--><!--Device-webSocket-export interface WebSocketServer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -28,10 +24,6 @@ Close a given WebSocket connection.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-WebSocketServer-close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions): Promise<boolean>--><!--Device-WebSocketServer-close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions): Promise<boolean>-End-->
@@ -43,7 +35,7 @@ Close a given WebSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | connection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Yes | which on to be closed. |
-| options | [webSocket.WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | No | Optional parameters [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md#WebSocketCloseOptions). |
+| options | [webSocket.WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | No | Optional parameters [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md#websocketcloseoptions). |
 
 **Return value:**
 
@@ -58,7 +50,7 @@ Close a given WebSocket connection.
 | 2302006 | websocket connection does not exist. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -104,10 +96,6 @@ List all alive connections.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-WebSocketServer-listAllConnections(): WebSocketConnection[]--><!--Device-WebSocketServer-listAllConnections(): WebSocketConnection[]-End-->
@@ -126,7 +114,7 @@ List all alive connections.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -176,10 +164,6 @@ Cancels listening for events that a client requested to connect the server.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -199,10 +183,6 @@ offMessageReceive(callback?: Callback<WebSocketMessage>): void
 Cancels listening for events that the server received a message.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void-End-->
 
@@ -224,10 +204,6 @@ Cancels listening for events that a connection from a given client has been clos
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -247,10 +223,6 @@ offWebSocketServerError(callback?: ErrorCallback): void
 Cancels listening for the error events of a WebSocket Server.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void--><!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void-End-->
 
@@ -272,10 +244,6 @@ Cancels listening for events that a connection from a given client has been clos
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-off(type: 'close', callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-off(type: 'close', callback?: ClientConnectionCloseCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -287,7 +255,7 @@ Cancels listening for events that a connection from a given client has been clos
 | type | 'close' | Yes | event indicating that a connection from a given client has been closed. |
 | callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -307,10 +275,6 @@ Cancels listening for events that a client requested to connect the server.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -322,7 +286,7 @@ Cancels listening for events that a client requested to connect the server.
 | type | 'connect' | Yes | event indicating that a client requested to connect the server. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -342,10 +306,6 @@ Cancels listening for the error events of a WebSocket Server.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -357,7 +317,7 @@ Cancels listening for the error events of a WebSocket Server.
 | type | 'error' | Yes | event indicating that the WebSocket Server has encountered an error. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -377,10 +337,6 @@ Cancels listening for events that the server received a message.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -392,7 +348,7 @@ Cancels listening for events that the server received a message.
 | type | 'messageReceive' | Yes | event indicating that the server received a message. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -411,10 +367,6 @@ onConnect(callback: Callback<WebSocketConnection>): void
 Enables listening for events that a client requested to connect the server.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void-End-->
 
@@ -436,10 +388,6 @@ Enables listening for events that the server received a message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -459,10 +407,6 @@ onWebSocketServerClose(callback: ClientConnectionCloseCallback): void
 Enables listening for events that a connection from a given client has been closed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void-End-->
 
@@ -484,10 +428,6 @@ Enables listening for the error events of a WebSocket Server.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void--><!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -508,10 +448,6 @@ Enables listening for events that a connection from a given client has been clos
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-on(type: 'close', callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-on(type: 'close', callback: ClientConnectionCloseCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -523,7 +459,7 @@ Enables listening for events that a connection from a given client has been clos
 | type | 'close' | Yes | event indicating that a connection from a given client has been closed. |
 | callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | Yes | the callback function when a client connection is closed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -545,10 +481,6 @@ Enables listening for events that a client requested to connect the server.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -560,7 +492,7 @@ Enables listening for events that a client requested to connect the server.
 | type | 'connect' | Yes | event indicating that a client requested to connect the server. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -582,10 +514,6 @@ Enables listening for the error events of a WebSocket Server.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -597,7 +525,7 @@ Enables listening for the error events of a WebSocket Server.
 | type | 'error' | Yes | event indicating that the WebSocket Server has encountered an error. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -619,10 +547,6 @@ Enables listening for events that the server received a message.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -634,7 +558,7 @@ Enables listening for events that the server received a message.
 | type | 'messageReceive' | Yes | event indicating that the server received a message. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -655,10 +579,6 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 Send a message using a specific connection.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -686,7 +606,7 @@ Send a message using a specific connection.
 | 2302006 | websocket connection does not exist. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -735,10 +655,6 @@ Start the WebSocket Server, and listen to a given port.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-WebSocketServer-start(config: WebSocketServerConfig): Promise<boolean>--><!--Device-WebSocketServer-start(config: WebSocketServerConfig): Promise<boolean>-End-->
@@ -768,7 +684,7 @@ Start the WebSocket Server, and listen to a given port.
 | [2302004](../errorcode-net-webSocket.md#2302004-listening-failed-on-the-specified-nic) | Can't listen on the given NIC. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
@@ -803,10 +719,6 @@ Stop listening.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-WebSocketServer-stop(): Promise<boolean>--><!--Device-WebSocketServer-stop(): Promise<boolean>-End-->
@@ -825,7 +737,7 @@ Stop listening.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';

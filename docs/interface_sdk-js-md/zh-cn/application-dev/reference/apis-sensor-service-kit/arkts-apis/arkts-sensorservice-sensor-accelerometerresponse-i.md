@@ -1,14 +1,10 @@
 # AccelerometerResponse
 
-加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#Response)。
+加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#response)。
 
-**继承/实现关系：** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**继承/实现关系：** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-sensor-interface AccelerometerResponse--><!--Device-sensor-interface AccelerometerResponse-End-->
 
@@ -25,10 +21,6 @@ x: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -48,10 +40,6 @@ y: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AccelerometerResponse-y: double--><!--Device-AccelerometerResponse-y: double-End-->
@@ -69,10 +57,6 @@ z: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

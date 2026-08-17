@@ -4,10 +4,6 @@ Describes the configuration information for a shortcut.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ShortcutInfo--><!--Device-unnamed-export interface ShortcutInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -25,10 +21,6 @@ Index of the application clone to which the shortcut belongs.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortcutInfo-appIndex: int--><!--Device-ShortcutInfo-appIndex: int-End-->
 
@@ -48,10 +40,6 @@ Bundle name of the application to which the shortcut belongs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortcutInfo-bundleName: string--><!--Device-ShortcutInfo-bundleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -69,10 +57,6 @@ Name of the ability that hosts the shortcut.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortcutInfo-hostAbility?: string--><!--Device-ShortcutInfo-hostAbility?: string-End-->
 
@@ -92,10 +76,6 @@ Icon of the shortcut. The value is the index of a resource file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortcutInfo-icon?: string--><!--Device-ShortcutInfo-icon?: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -113,10 +93,6 @@ Resource ID of the shortcut icon.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortcutInfo-iconId?: long--><!--Device-ShortcutInfo-iconId?: long-End-->
 
@@ -136,10 +112,6 @@ ID of the shortcut.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortcutInfo-id: string--><!--Device-ShortcutInfo-id: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -157,10 +129,6 @@ Label of the shortcut. The value can be descriptive text or a resource index.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortcutInfo-label?: string--><!--Device-ShortcutInfo-label?: string-End-->
 
@@ -180,10 +148,6 @@ Resource ID of the shortcut label.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortcutInfo-labelId?: long--><!--Device-ShortcutInfo-labelId?: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -201,10 +165,6 @@ Module name of the shortcut.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortcutInfo-moduleName?: string--><!--Device-ShortcutInfo-moduleName?: string-End-->
 
@@ -224,10 +184,6 @@ Source type of the shortcut. The value **0** means a custom shortcut, **1** mean
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortcutInfo-sourceType: int--><!--Device-ShortcutInfo-sourceType: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -245,10 +201,6 @@ A collection of target Wants information defined within the shortcut.
 **Type:** Array&lt;[ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortcutInfo-wants?: Array<ShortcutWant>--><!--Device-ShortcutInfo-wants?: Array<ShortcutWant>-End-->
 

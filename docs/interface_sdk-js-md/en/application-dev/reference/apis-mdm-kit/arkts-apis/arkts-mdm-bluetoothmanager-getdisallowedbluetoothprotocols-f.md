@@ -16,10 +16,6 @@ Obtains the disallowed Bluetooth protocols of a specified user.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -33,7 +29,7 @@ Obtains the disallowed Bluetooth protocols of a specified user.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) of @ ohos.account.osAccount to obtain the ID. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 
 **Return value:**
 
@@ -49,7 +45,7 @@ Obtains the disallowed Bluetooth protocols of a specified user.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -77,13 +73,9 @@ try{
 function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, policy: TransferPolicy): Array<Protocol>
 ```
 
-Obtains the list of disallowed Bluetooth protocols for a specified user under a specified transfer policy. > **NOTE：**> > 1. This API and > [getDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#getDisallowedBluetoothProtocols) are > overloaded APIs. This API adds the **policy** parameter to query the disallowing configuration based on the > transfer policy.
+Obtains the list of disallowed Bluetooth protocols for a specified user under a specified transfer policy. > **NOTE：**> > 1. This API and > [getDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#getdisallowedbluetoothprotocols) are > overloaded APIs. This API adds the **policy** parameter to query the disallowing configuration based on the > transfer policy.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -98,7 +90,7 @@ Obtains the list of disallowed Bluetooth protocols for a specified user under a 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) of @ ohos.account.osAccount to obtain the ID. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | Yes | Transfer policy. |
 
 **Return value:**

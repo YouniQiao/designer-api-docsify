@@ -4,10 +4,6 @@ Defines a contact's relationship.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-contact-class Relation--><!--Device-contact-class Relation-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -30,10 +26,6 @@ Custom relationship, the default value is **0**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-static readonly CUSTOM_LABEL: 0--><!--Device-Relation-static readonly CUSTOM_LABEL: 0-End-->
@@ -51,10 +43,6 @@ Invalid relationship, the default value is **-1**.
 **Type:** -1
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Assistant, the default value is **1**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-static readonly RELATION_ASSISTANT: 1--><!--Device-Relation-static readonly RELATION_ASSISTANT: 1-End-->
@@ -95,10 +79,6 @@ Brother, the default value is **2**.
 **Type:** 2
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,10 +98,6 @@ Child, the default value is **3**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-static readonly RELATION_CHILD: 3--><!--Device-Relation-static readonly RELATION_CHILD: 3-End-->
@@ -139,10 +115,6 @@ Domestic partner, the default value is **4**.
 **Type:** 4
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,10 +134,6 @@ Father, the default value is **5**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-static readonly RELATION_FATHER: 5--><!--Device-Relation-static readonly RELATION_FATHER: 5-End-->
@@ -183,10 +151,6 @@ Friend, the default value is **6**.
 **Type:** 6
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -206,10 +170,6 @@ Manager, the default value is **7**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-static readonly RELATION_MANAGER: 7--><!--Device-Relation-static readonly RELATION_MANAGER: 7-End-->
@@ -227,10 +187,6 @@ Mother, the default value is **8**.
 **Type:** 8
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -250,10 +206,6 @@ Parent, the default value is **9**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-static readonly RELATION_PARENT: 9--><!--Device-Relation-static readonly RELATION_PARENT: 9-End-->
@@ -271,10 +223,6 @@ Partner, the default value is **10**.
 **Type:** 10
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -294,10 +242,6 @@ Referrer, the default value is **11**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-static readonly RELATION_REFERRED_BY: 11--><!--Device-Relation-static readonly RELATION_REFERRED_BY: 11-End-->
@@ -315,10 +259,6 @@ Relative, the default value is **12**.
 **Type:** 12
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -338,10 +278,6 @@ Sister, the default value is **13**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-static readonly RELATION_SISTER: 13--><!--Device-Relation-static readonly RELATION_SISTER: 13-End-->
@@ -359,10 +295,6 @@ Spouse, the default value is **14**.
 **Type:** 14
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -382,10 +314,6 @@ Relation type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-labelId?: number--><!--Device-Relation-labelId?: number-End-->
@@ -404,10 +332,6 @@ Name of the Relation type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-labelName?: string--><!--Device-Relation-labelName?: string-End-->
@@ -425,10 +349,6 @@ Relationship name.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

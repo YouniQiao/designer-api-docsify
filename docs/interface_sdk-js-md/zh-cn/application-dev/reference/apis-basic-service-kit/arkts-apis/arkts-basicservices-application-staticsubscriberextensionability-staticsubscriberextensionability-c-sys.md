@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class StaticSubscriberExtensionAbility--><!--Device-unnamed-declare class StaticSubscriberExtensionAbility-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -24,10 +20,6 @@ onReceiveEvent(event: CommonEventData): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-StaticSubscriberExtensionAbility-onReceiveEvent(event: CommonEventData): void--><!--Device-StaticSubscriberExtensionAbility-onReceiveEvent(event: CommonEventData): void-End-->
@@ -42,7 +34,7 @@ onReceiveEvent(event: CommonEventData): void
 | --- | --- | --- | --- |
 | event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | 是 | 静态订阅接收到的公共事件数据。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { commonEventManager } from '@kit.BasicServicesKit';
@@ -65,10 +57,6 @@ context: StaticSubscriberExtensionContext
 **类型：** [StaticSubscriberExtensionContext](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

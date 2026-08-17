@@ -4,10 +4,6 @@ Defines user status data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-userStatus-export interface UserStatusData--><!--Device-userStatus-export interface UserStatusData-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
@@ -32,10 +28,6 @@ Business error code. The value `0` indicates success, and other values indicate 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusData-errCode: int--><!--Device-UserStatusData-errCode: int-End-->
@@ -55,10 +47,6 @@ User status detection feature type.
 **Type:** [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ User status detection result. The value `0` indicates success, and other values 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserStatusData-result: int--><!--Device-UserStatusData-result: int-End-->
@@ -103,10 +87,6 @@ Multi-stage detection states under a single perception feature.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

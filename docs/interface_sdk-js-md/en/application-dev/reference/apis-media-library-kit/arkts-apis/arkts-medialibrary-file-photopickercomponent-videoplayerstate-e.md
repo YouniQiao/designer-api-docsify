@@ -4,10 +4,6 @@ Enumerates the video playback states.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum VideoPlayerState--><!--Device-unnamed-export declare enum VideoPlayerState-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,10 +17,6 @@ PLAYING = 0
 The video is being played.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -42,10 +34,6 @@ Video playback is paused.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-VideoPlayerState-PAUSED = 1--><!--Device-VideoPlayerState-PAUSED = 1-End-->
@@ -61,10 +49,6 @@ STOPPED = 2
 Video playback is stopped.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -82,10 +66,6 @@ Started dragging the progress bar.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-VideoPlayerState-SEEK_START = 3--><!--Device-VideoPlayerState-SEEK_START = 3-End-->
@@ -101,10 +81,6 @@ SEEK_FINISH = 4
 Finished dragging the progress bar.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

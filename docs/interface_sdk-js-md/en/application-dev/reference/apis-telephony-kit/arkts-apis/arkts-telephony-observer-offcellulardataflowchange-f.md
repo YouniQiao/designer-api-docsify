@@ -16,10 +16,6 @@ Cancel callback when the uplink and downlink data flow state of cellular data se
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function offCellularDataFlowChange(callback?: Callback<DataFlowType>): void--><!--Device-observer-function offCellularDataFlowChange(callback?: Callback<DataFlowType>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry

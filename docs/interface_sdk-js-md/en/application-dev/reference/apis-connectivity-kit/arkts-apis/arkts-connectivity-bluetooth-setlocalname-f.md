@@ -16,11 +16,9 @@ Sets the Bluetooth friendly name of a device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setLocalName](arkts-connectivity-bluetoothmanager-setlocalname-f.md#setLocalName)
+**Substitutes:** [setLocalName](arkts-connectivity-bluetoothmanager-setlocalname-f.md#setlocalname)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -40,7 +38,7 @@ Sets the Bluetooth friendly name of a device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ret : boolean = bluetooth.setLocalName('device_name');

@@ -4,10 +4,6 @@ Provides APIs for parsing, verifying, and decrypting CMS messages. > **NOTE：**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface CmsParser--><!--Device-cert-interface CmsParser-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -27,10 +23,6 @@ decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 Decrypts the CMS message of the **ENVELOPED_DATA** content type. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -59,7 +51,7 @@ Decrypts the CMS message of the **ENVELOPED_DATA** content type. This API uses a
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -153,10 +145,6 @@ Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>--><!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>-End-->
@@ -194,10 +182,6 @@ Obtains the content data from CMS message of the **SIGNED_DATA** type. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-getContentData(): Promise<Uint8Array>--><!--Device-CmsParser-getContentData(): Promise<Uint8Array>-End-->
@@ -218,7 +202,7 @@ Obtains the content data from CMS message of the **SIGNED_DATA** type. This API 
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -343,10 +327,6 @@ Obtains the CMS content type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-getContentType(): CmsContentType--><!--Device-CmsParser-getContentType(): CmsContentType-End-->
@@ -367,7 +347,7 @@ Obtains the CMS content type.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -493,10 +473,6 @@ Set the CMS message data. This API uses a promise to return the result. > **NOTE
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>--><!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>-End-->
@@ -525,7 +501,7 @@ Set the CMS message data. This API uses a promise to return the result. > **NOTE
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -649,10 +625,6 @@ Verifies the CMS message of the **SIGNED_DATA** content type. This API uses a pr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>--><!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>-End-->
@@ -683,7 +655,7 @@ Verifies the CMS message of the **SIGNED_DATA** content type. This API uses a pr
 | [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
 | [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

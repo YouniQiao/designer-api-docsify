@@ -10,10 +10,6 @@ function generateRandomUUID(entropyCache?: boolean): string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-util-function generateRandomUUID(entropyCache?: boolean): string--><!--Device-util-function generateRandomUUID(entropyCache?: boolean): string-End-->
@@ -32,7 +28,7 @@ function generateRandomUUID(entropyCache?: boolean): string
 | --- | --- |
 | string | 表示此UUID的字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let uuid = util.generateRandomUUID(true);

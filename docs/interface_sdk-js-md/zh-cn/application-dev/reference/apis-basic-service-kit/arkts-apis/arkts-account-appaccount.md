@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare namespace appAccount--><!--Device-unnamed-declare namespace appAccount-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -18,7 +14,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md#createAppAccountManager) | 创建应用账号管理器对象。 |
+| [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md#createappaccountmanager) | 创建应用账号管理器对象。 |
 
 ### 类
 

@@ -1,14 +1,10 @@
 # ColorResponse (System API)
 
-Describes the color sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
+Describes the color sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
 
-**Inheritance/Implementation:** ColorResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**Inheritance/Implementation:** ColorResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-interface ColorResponse--><!--Device-sensor-interface ColorResponse-End-->
 
@@ -34,10 +30,6 @@ Color temperature, in Kelvin.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorResponse-colorTemperature: double--><!--Device-ColorResponse-colorTemperature: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -55,10 +47,6 @@ Intensity of light, in lux.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ColorResponse-lightIntensity: double--><!--Device-ColorResponse-lightIntensity: double-End-->
 

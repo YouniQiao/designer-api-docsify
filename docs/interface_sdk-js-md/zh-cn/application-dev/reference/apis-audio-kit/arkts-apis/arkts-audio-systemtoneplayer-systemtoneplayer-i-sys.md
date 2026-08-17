@@ -1,12 +1,8 @@
 # SystemTonePlayer（系统接口）
 
-系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过 [getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getSystemTonePlayer) 创建实例。
+系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过 [getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getsystemtoneplayer) 创建实例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface SystemTonePlayer--><!--Device-unnamed-export declare interface SystemTonePlayer-End-->
 
@@ -23,10 +19,6 @@ getAudioVolumeScale(): double
 获取当前音频音量大小，同步返回当前音量。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-getAudioVolumeScale(): double--><!--Device-SystemTonePlayer-getAudioVolumeScale(): double-End-->
 
@@ -46,7 +38,7 @@ getAudioVolumeScale(): double
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,10 +62,6 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature--><!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -93,7 +81,7 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -117,10 +105,6 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>--><!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -140,7 +124,7 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 systemTonePlayer.getSupportedHapticsFeatures().then((features: Array<systemSoundManager.ToneHapticsFeature>) => {
@@ -159,10 +143,6 @@ getTitle(): Promise<string>
 获取提示音标题。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-getTitle(): Promise<string>--><!--Device-SystemTonePlayer-getTitle(): Promise<string>-End-->
 
@@ -183,7 +163,7 @@ getTitle(): Promise<string>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -205,10 +185,6 @@ offError(callback?: ErrorCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -219,7 +195,7 @@ offError(callback?: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Error callback while receiving the error event. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | Error callback while receiving the error event. |
 
 **错误码：**
 
@@ -228,7 +204,7 @@ offError(callback?: ErrorCallback): void
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -256,10 +232,6 @@ offPlayFinished(callback?: Callback<int>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void--><!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -270,7 +242,7 @@ offPlayFinished(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Callback used to obtain the finished event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | Callback used to obtain the finished event. |
 
 **错误码：**
 
@@ -279,7 +251,7 @@ offPlayFinished(callback?: Callback<int>): void
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 取消该事件的所有监听。
@@ -305,10 +277,6 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -320,7 +288,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当取消监听铃音播放过程中的错误事件时，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，返回错误码和错误信息。不填入此参数时，会取消该事件的所有监听。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数，返回错误码和错误信息。不填入此参数时，会取消该事件的所有监听。 |
 
 **错误码：**
 
@@ -329,7 +297,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -357,10 +325,6 @@ off(type: 'playFinished', callback?: Callback<int>): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void--><!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -372,7 +336,7 @@ off(type: 'playFinished', callback?: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 事件回调类型，支持的事件为'playFinished'，当取消监听铃音播放完成事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 回调函数，返回结束事件的音频流的streamId。不填入此参数时，会取消该事件的所有监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 回调函数，返回结束事件的音频流的streamId。不填入此参数时，会取消该事件的所有监听。 |
 
 **错误码：**
 
@@ -381,7 +345,7 @@ off(type: 'playFinished', callback?: Callback<int>): void
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 取消该事件的所有监听。
@@ -407,10 +371,6 @@ onError(callback: ErrorCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void--><!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -421,7 +381,7 @@ onError(callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Error callback while receiving the error event. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | Error callback while receiving the error event. |
 
 **错误码：**
 
@@ -430,7 +390,7 @@ onError(callback: ErrorCallback): void
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -450,10 +410,6 @@ onPlayFinished(streamId: int, callback: Callback<int>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -465,7 +421,7 @@ onPlayFinished(streamId: int, callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | streamId | int | 是 | Stream id, received from start(). |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
 
 **错误码：**
 
@@ -474,7 +430,7 @@ onPlayFinished(streamId: int, callback: Callback<int>): void
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -504,10 +460,6 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -519,7 +471,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当铃音播放过程中发生错误时，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的 on('error')。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的 on('error')。 |
 
 **错误码：**
 
@@ -528,7 +480,7 @@ on(type: 'error', callback: ErrorCallback): void
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -548,10 +500,6 @@ on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -564,7 +512,7 @@ on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 事件回调类型，支持的事件为'playFinished'，当铃音播放完成时，触发该事件。 |
 | streamId | int | 是 | 监听对象为指定streamId对应的音频流，streamId通过[start](#start)获取。 当streamId传入0时，可监听当前播放器对应的所有音频流。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 'playFinished'的回调方法。返回播放完成的音频流的streamId。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 'playFinished'的回调方法。返回播放完成的音频流的streamId。 |
 
 **错误码：**
 
@@ -573,7 +521,7 @@ on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -603,10 +551,6 @@ prepare(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-prepare(): Promise<void>--><!--Device-SystemTonePlayer-prepare(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -627,7 +571,7 @@ prepare(): Promise<void>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -649,10 +593,6 @@ release(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-release(): Promise<void>--><!--Device-SystemTonePlayer-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -671,7 +611,7 @@ release(): Promise<void>
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -692,10 +632,6 @@ setAudioVolumeScale(scale: double): void
 设置音频音量大小，无返回结果。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void--><!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void-End-->
 
@@ -718,7 +654,7 @@ setAudioVolumeScale(scale: double): void
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. For example, value is outside [0,1]. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -739,13 +675,9 @@ try {
 setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 ```
 
-设置播放铃音时的振动风格。 调用本接口前，应该先调用[getSupportedHapticsFeatures](#getSupportedHapticsFeatures)查询 支持的振动风格，如果设置不支持的振动风格，则设置失败。
+设置播放铃音时的振动风格。 调用本接口前，应该先调用[getSupportedHapticsFeatures](#getsupportedhapticsfeatures)查询 支持的振动风格，如果设置不支持的振动风格，则设置失败。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void--><!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void-End-->
 
@@ -768,7 +700,7 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 systemTonePlayer.getSupportedHapticsFeatures().then((features: Array<systemSoundManager.ToneHapticsFeature>) => {
@@ -792,10 +724,6 @@ start(toneOptions?: SystemToneOptions): Promise<int>
 开始播放提示音。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -826,7 +754,7 @@ start(toneOptions?: SystemToneOptions): Promise<int>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -854,10 +782,6 @@ stop(id: int): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemTonePlayer-stop(id: int): Promise<void>--><!--Device-SystemTonePlayer-stop(id: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -884,7 +808,7 @@ stop(id: int): Promise<void>
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

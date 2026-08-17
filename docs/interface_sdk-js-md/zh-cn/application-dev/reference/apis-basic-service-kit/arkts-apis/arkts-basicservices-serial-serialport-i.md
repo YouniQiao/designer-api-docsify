@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-serial-interface SerialPort--><!--Device-serial-interface SerialPort-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
@@ -21,10 +17,6 @@ close(): Promise<void>
 关闭串口。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,10 +46,6 @@ drain(): Promise<void>
 等待所有写入请求完成。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -89,10 +77,6 @@ flush串口缓冲区。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SerialPort-flush(): Promise<void>--><!--Device-SerialPort-flush(): Promise<void>-End-->
@@ -122,10 +106,6 @@ getCts(): Promise<boolean>
 获取cts信号状态。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -157,10 +137,6 @@ getDsr(): Promise<boolean>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SerialPort-getDsr(): Promise<boolean>--><!--Device-SerialPort-getDsr(): Promise<boolean>-End-->
@@ -191,10 +167,6 @@ offDataRead(callback?: Callback<Uint8Array>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SerialPort-offDataRead(callback?: Callback<Uint8Array>): void--><!--Device-SerialPort-offDataRead(callback?: Callback<Uint8Array>): void-End-->
@@ -205,7 +177,7 @@ offDataRead(callback?: Callback<Uint8Array>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | 否 | 回调函数，返回串口端口接收到的数据 <br>默认值:缺省行为：清除串口端口接收数据事件的所有监听。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Uint8Array&gt; | 否 | 回调函数，返回串口端口接收到的数据 <br>默认值:缺省行为：清除串口端口接收数据事件的所有监听。 |
 
 **错误码：**
 
@@ -224,10 +196,6 @@ offDisconnect(callback?: Callback<void>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SerialPort-offDisconnect(callback?: Callback<void>): void--><!--Device-SerialPort-offDisconnect(callback?: Callback<void>): void-End-->
@@ -238,7 +206,7 @@ offDisconnect(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | USB虚拟串口断开的回调函数。 <br>默认值：清除所有USB虚拟串口断开事件的回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | USB虚拟串口断开的回调函数。 <br>默认值：清除所有USB虚拟串口断开事件的回调函数。 |
 
 **错误码：**
 
@@ -257,10 +225,6 @@ onDataRead(callback: Callback<Uint8Array>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SerialPort-onDataRead(callback: Callback<Uint8Array>): void--><!--Device-SerialPort-onDataRead(callback: Callback<Uint8Array>): void-End-->
@@ -271,7 +235,7 @@ onDataRead(callback: Callback<Uint8Array>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回串口端口接收到的数据 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回串口端口接收到的数据 |
 
 **错误码：**
 
@@ -291,10 +255,6 @@ onDisconnect(callback: Callback<void>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SerialPort-onDisconnect(callback: Callback<void>): void--><!--Device-SerialPort-onDisconnect(callback: Callback<void>): void-End-->
@@ -305,7 +265,7 @@ onDisconnect(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | USB虚拟串口断开事件的回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | USB虚拟串口断开事件的回调函数。 |
 
 **错误码：**
 
@@ -323,10 +283,6 @@ open(config?: SerialConfigs): Promise<void>
 打开端口。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -366,10 +322,6 @@ sendBrk(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SerialPort-sendBrk(): Promise<void>--><!--Device-SerialPort-sendBrk(): Promise<void>-End-->
@@ -399,10 +351,6 @@ setDtr(enable: boolean): Promise<void>
 设置DTR信号状态，使用Promise异步返回
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -440,10 +388,6 @@ setRts(enable: boolean): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SerialPort-setRts(enable: boolean): Promise<void>--><!--Device-SerialPort-setRts(enable: boolean): Promise<void>-End-->
@@ -479,10 +423,6 @@ write(data: Uint8Array, timeout?: int): Promise<int>
 发送数据。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -524,10 +464,6 @@ readonly portInfo: SerialPortInfo
 **类型：** [SerialPortInfo](arkts-basicservices-serial-serialportinfo-i.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

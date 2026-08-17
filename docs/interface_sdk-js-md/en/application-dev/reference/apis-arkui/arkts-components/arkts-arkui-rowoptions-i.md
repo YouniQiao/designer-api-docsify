@@ -4,10 +4,6 @@ Sets the spacing between child components of the **Row** component. > **NOTE：*
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface RowOptions--><!--Device-unnamed-declare interface RowOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Spacing between child components. Since API version 9, this parameter does not t
 **Type:** string \| number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

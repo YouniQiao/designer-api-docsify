@@ -4,10 +4,6 @@ Enumerates executable actions for accessibility node elements. An accessibility 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum AccessibilityAction--><!--Device-unnamed-export enum AccessibilityAction-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -20,13 +16,9 @@ Enumerates executable actions for accessibility node elements. An accessibility 
 ACCESSIBILITY_FOCUS = 0
 ```
 
-Gains accessibility focus. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)). accessibilityFocusScene parameter must be configured, with the parameter value being the accessibility focus scenario type.
+Gains accessibility focus. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api). accessibilityFocusScene parameter must be configured, with the parameter value being the accessibility focus scenario type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-ACCESSIBILITY_FOCUS = 0--><!--Device-AccessibilityAction-ACCESSIBILITY_FOCUS = 0-End-->
 
@@ -44,10 +36,6 @@ Clear an accessibility focus.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityAction-CLEAR_ACCESSIBILITY_FOCUS = 1--><!--Device-AccessibilityAction-CLEAR_ACCESSIBILITY_FOCUS = 1-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -63,10 +51,6 @@ FOCUS = 2
 Gain a focus for a component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-FOCUS = 2--><!--Device-AccessibilityAction-FOCUS = 2-End-->
 
@@ -84,10 +68,6 @@ Clear a focus for a component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityAction-CLEAR_FOCUS = 3--><!--Device-AccessibilityAction-CLEAR_FOCUS = 3-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -103,10 +83,6 @@ CLICK = 4
 Click a component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-CLICK = 4--><!--Device-AccessibilityAction-CLICK = 4-End-->
 
@@ -124,10 +100,6 @@ Long-presses a component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityAction-LONG_CLICK = 5--><!--Device-AccessibilityAction-LONG_CLICK = 5-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -143,10 +115,6 @@ CUT = 6
 Cut the content of a component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-CUT = 6--><!--Device-AccessibilityAction-CUT = 6-End-->
 
@@ -164,10 +132,6 @@ Copy the content of a component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityAction-COPY = 7--><!--Device-AccessibilityAction-COPY = 7-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -183,10 +147,6 @@ PASTE = 8
 Paste the content into a component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-PASTE = 8--><!--Device-AccessibilityAction-PASTE = 8-End-->
 
@@ -204,10 +164,6 @@ Select a component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityAction-SELECT = 9--><!--Device-AccessibilityAction-SELECT = 9-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -220,13 +176,9 @@ Select a component.
 SET_TEXT = 10
 ```
 
-Sets the text of a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).setText parameter must be configured, with the parameter value being the text content to set.
+Sets the text of a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).setText parameter must be configured, with the parameter value being the text content to set.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SET_TEXT = 10--><!--Device-AccessibilityAction-SET_TEXT = 10-End-->
 
@@ -240,13 +192,9 @@ Sets the text of a component. The [Parameter](arkts-accessibility-accessibilitye
 SCROLL_FORWARD = 11
 ```
 
-Scrolls a component forward (toward the end of the content). The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).scrollType parameter must be configured, with the parameter value being 'fullScreen' or 'halfScreen'.
+Scrolls a component forward (toward the end of the content). The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).scrollType parameter must be configured, with the parameter value being 'fullScreen' or 'halfScreen'.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SCROLL_FORWARD = 11--><!--Device-AccessibilityAction-SCROLL_FORWARD = 11-End-->
 
@@ -260,13 +208,9 @@ Scrolls a component forward (toward the end of the content). The [Parameter](ark
 SCROLL_BACKWARD = 12
 ```
 
-Scrolls a component backward (toward the beginning of the content). The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).scrollType parameter must be configured, with the parameter value being 'fullScreen' or 'halfScreen'.
+Scrolls a component backward (toward the beginning of the content). The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).scrollType parameter must be configured, with the parameter value being 'fullScreen' or 'halfScreen'.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SCROLL_BACKWARD = 12--><!--Device-AccessibilityAction-SCROLL_BACKWARD = 12-End-->
 
@@ -280,13 +224,9 @@ Scrolls a component backward (toward the beginning of the content). The [Paramet
 SET_SELECTION = 13
 ```
 
-Selects a text range within a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).selectTextBegin, [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).selectTextEnd, and [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).selectTextInForWard parameters must be configured, with the parameter values being the start coordinate, end coordinate of the selected text, and whether to select forward.
+Selects a text range within a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).selectTextBegin, [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).selectTextEnd, and [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).selectTextInForWard parameters must be configured, with the parameter values being the start coordinate, end coordinate of the selected text, and whether to select forward.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SET_SELECTION = 13--><!--Device-AccessibilityAction-SET_SELECTION = 13-End-->
 
@@ -300,13 +240,9 @@ Selects a text range within a component. The [Parameter](arkts-accessibility-acc
 SET_CURSOR_POSITION = 14
 ```
 
-Sets the cursor position within a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).offset parameter must be configured, with the parameter value being the character offset of the cursor.
+Sets the cursor position within a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).offset parameter must be configured, with the parameter value being the character offset of the cursor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SET_CURSOR_POSITION = 14--><!--Device-AccessibilityAction-SET_CURSOR_POSITION = 14-End-->
 
@@ -324,10 +260,6 @@ Performs the operation of returning to the home screen. **Usage constraint:** Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityAction-HOME = 15--><!--Device-AccessibilityAction-HOME = 15-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -343,10 +275,6 @@ BACK = 16
 Return to the previous screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-BACK = 16--><!--Device-AccessibilityAction-BACK = 16-End-->
 
@@ -364,10 +292,6 @@ Displays recent tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityAction-RECENT_TASK = 17--><!--Device-AccessibilityAction-RECENT_TASK = 17-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -383,10 +307,6 @@ NOTIFICATION_CENTER = 18
 Displays the notification center.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-NOTIFICATION_CENTER = 18--><!--Device-AccessibilityAction-NOTIFICATION_CENTER = 18-End-->
 
@@ -404,10 +324,6 @@ Displays the control center.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityAction-CONTROL_CENTER = 19--><!--Device-AccessibilityAction-CONTROL_CENTER = 19-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -420,13 +336,9 @@ Displays the control center.
 SPAN_CLICK = 20
 ```
 
-Performs a click operation on partial text. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).spanId parameter must be configured, with the parameter value being the hyperlink text ID.
+Performs a click operation on partial text. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).spanId parameter must be configured, with the parameter value being the hyperlink text ID.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityAction-SPAN_CLICK = 20--><!--Device-AccessibilityAction-SPAN_CLICK = 20-End-->
 
@@ -440,13 +352,9 @@ Performs a click operation on partial text. The [Parameter](arkts-accessibility-
 INJECT_ACTION = 21
 ```
 
-Injects an action that simulates a user operation. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).injectActionType parameter must be configured, with the parameter value being the injection action type.
+Injects an action that simulates a user operation. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).injectActionType parameter must be configured, with the parameter value being the injection action type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -462,13 +370,9 @@ Injects an action that simulates a user operation. The [Parameter](arkts-accessi
 EXECUTE_CUSTOM_ACTION = 22
 ```
 
-Executes a custom action. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).customAction parameter must be configured, with the parameter value being the name of the custom action.
+Executes a custom action. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).customAction parameter must be configured, with the parameter value being the name of the custom action.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

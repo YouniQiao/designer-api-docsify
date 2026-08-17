@@ -1,12 +1,8 @@
 # KeyItem
 
-Enumerates other key information. This refers to the information of other keys that have been pressed when the current [KeyCode](arkts-mdm-systemmanager-keycode-e.md#KeyCode) event occurs.
+Enumerates other key information. This refers to the information of other keys that have been pressed when the current [KeyCode](arkts-mdm-systemmanager-keycode-e.md#keycode) event occurs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-systemManager-interface KeyItem--><!--Device-systemManager-interface KeyItem-End-->
 
@@ -30,10 +26,6 @@ Time when the key action occurs. The value is a microsecond-level timestamp afte
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KeyItem-downTime: number--><!--Device-KeyItem-downTime: number-End-->
@@ -52,10 +44,6 @@ Key code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KeyItem-keyCode: KeyCode--><!--Device-KeyItem-keyCode: KeyCode-End-->
@@ -73,10 +61,6 @@ Key action. It indicates whether the key is pressed: **true** for pressed; **fal
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

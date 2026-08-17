@@ -16,10 +16,6 @@ Hides or restores the application's windows during quick multi-window switching.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-function toggleShownStateForAllAppWindows(callback: AsyncCallback<void>): void--><!--Device-window-function toggleShownStateForAllAppWindows(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -40,7 +36,7 @@ Hides or restores the application's windows during quick multi-window switching.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -66,10 +62,6 @@ Hides or restores the application's windows during quick multi-window switching.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-function toggleShownStateForAllAppWindows(): Promise<void>--><!--Device-window-function toggleShownStateForAllAppWindows(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -90,7 +82,7 @@ Hides or restores the application's windows during quick multi-window switching.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

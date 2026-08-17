@@ -4,10 +4,6 @@ The matching rules of network quota policies.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-policy-export interface NetworkMatchRule--><!--Device-policy-export interface NetworkMatchRule-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -32,10 +28,6 @@ To specify the identity of network, such as different WLAN.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-NetworkMatchRule-identity: string--><!--Device-NetworkMatchRule-identity: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -48,15 +40,11 @@ To specify the identity of network, such as different WLAN.
 netType: NetBearType
 ```
 
-netType see [NetBearType](arkts-network-policy-netbeartype-t.md#NetBearType).
+netType see [NetBearType](arkts-network-policy-netbeartype-t.md#netbeartype).
 
 **Type:** NetBearType
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkMatchRule-netType: NetBearType--><!--Device-NetworkMatchRule-netType: NetBearType-End-->
 
@@ -75,10 +63,6 @@ The ID of the target card, valid when netType is BEARER_CELLULAR.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkMatchRule-simId: string--><!--Device-NetworkMatchRule-simId: string-End-->
 

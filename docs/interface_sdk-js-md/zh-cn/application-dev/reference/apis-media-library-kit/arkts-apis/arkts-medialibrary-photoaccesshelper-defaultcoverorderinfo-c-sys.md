@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-photoAccessHelper-export class DefaultCoverOrderInfo--><!--Device-photoAccessHelper-export class DefaultCoverOrderInfo-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -25,10 +21,6 @@ public albumSubtype: AlbumSubtype
 **类型：** AlbumSubtype
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,10 +42,6 @@ public albumType: AlbumType
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DefaultCoverOrderInfo-public albumType: AlbumType--><!--Device-DefaultCoverOrderInfo-public albumType: AlbumType-End-->
@@ -73,10 +61,6 @@ public lpath?: string
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,10 +82,6 @@ public orderKey: PhotoKeys
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DefaultCoverOrderInfo-public orderKey: PhotoKeys--><!--Device-DefaultCoverOrderInfo-public orderKey: PhotoKeys-End-->
@@ -122,10 +102,6 @@ public orderSubKey: PhotoKeys
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DefaultCoverOrderInfo-public orderSubKey: PhotoKeys--><!--Device-DefaultCoverOrderInfo-public orderSubKey: PhotoKeys-End-->
@@ -145,10 +121,6 @@ public orderType: int
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

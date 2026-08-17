@@ -1,12 +1,10 @@
 # WebHitTestType
 
-Enum type supplied to [getHitTest](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getHitTest) for indicating the cursor node HitTest.
+Enum type supplied to [getHitTest](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#gethittest) for indicating the cursor node HitTest.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-enum WebHitTestType--><!--Device-webview-enum WebHitTestType-End-->
 
@@ -22,9 +20,7 @@ Editable area.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebHitTestType-EDIT_TEXT = 0--><!--Device-WebHitTestType-EDIT_TEXT = 0-End-->
 
@@ -40,9 +36,7 @@ Email address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebHitTestType-EMAIL = 1--><!--Device-WebHitTestType-EMAIL = 1-End-->
 
@@ -58,9 +52,7 @@ Hyperlink, where **src** is **http**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebHitTestType-HTTP_ANCHOR = 2--><!--Device-WebHitTestType-HTTP_ANCHOR = 2-End-->
 
@@ -76,9 +68,7 @@ Image with a hyperlink, where **src** is http + HTML::img.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebHitTestType-HTTP_ANCHOR_IMG = 3--><!--Device-WebHitTestType-HTTP_ANCHOR_IMG = 3-End-->
 
@@ -94,9 +84,7 @@ HTML::img tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebHitTestType-IMG = 4--><!--Device-WebHitTestType-IMG = 4-End-->
 
@@ -112,9 +100,7 @@ Geographical address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebHitTestType-MAP = 5--><!--Device-WebHitTestType-MAP = 5-End-->
 
@@ -130,9 +116,7 @@ Phone number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebHitTestType-PHONE = 6--><!--Device-WebHitTestType-PHONE = 6-End-->
 
@@ -148,9 +132,7 @@ Unknown content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebHitTestType-UNKNOWN = 7--><!--Device-WebHitTestType-UNKNOWN = 7-End-->
 

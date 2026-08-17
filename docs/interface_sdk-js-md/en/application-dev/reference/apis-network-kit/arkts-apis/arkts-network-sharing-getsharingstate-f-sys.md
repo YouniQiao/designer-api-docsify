@@ -16,10 +16,6 @@ Obtains the network sharing state for given type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 <!--Device-sharing-function getSharingState(type: SharingIfaceType, callback: AsyncCallback<SharingIfaceState>): void--><!--Device-sharing-function getSharingState(type: SharingIfaceType, callback: AsyncCallback<SharingIfaceState>): void-End-->
@@ -46,7 +42,7 @@ Obtains the network sharing state for given type.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';
@@ -69,10 +65,6 @@ function getSharingState(type: SharingIfaceType): Promise<SharingIfaceState>
 Obtains the network sharing state for given type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -105,7 +97,7 @@ Obtains the network sharing state for given type.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';

@@ -10,10 +10,6 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MIGRATE_DATA
 
 <!--Device-bundleManager-function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>--><!--Device-bundleManager-function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>-End-->
@@ -49,7 +45,7 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 | [17700080](../errorcode-bundle.md#17700080-源路径中存在无效路径) | The source paths are invalid. |
 | [17700081](../errorcode-bundle.md#17700081-目标路径为无效路径) | The destination path is invalid. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

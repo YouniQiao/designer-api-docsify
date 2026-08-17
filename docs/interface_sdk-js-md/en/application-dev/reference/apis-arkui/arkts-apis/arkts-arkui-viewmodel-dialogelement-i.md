@@ -2,13 +2,9 @@
 
 The &lt;dialog&gt; component is a custom pop-up container.
 
-**Inheritance/Implementation:** DialogElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
+**Inheritance/Implementation:** DialogElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DialogElement--><!--Device-unnamed-export interface DialogElement-End-->
 
@@ -23,10 +19,6 @@ close(): void
 Closes a dialog box.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -43,10 +35,6 @@ show(): void
 Shows a dialog box.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

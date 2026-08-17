@@ -16,10 +16,6 @@ Unregisters an error observer. This API uses an asynchronous callback to return 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-errorManager-function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void--><!--Device-errorManager-function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void-End-->
@@ -41,7 +37,7 @@ Unregisters an error observer. This API uses an asynchronous callback to return 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -75,10 +71,6 @@ Unregisters an error observer. This API uses a promise to return the result. Thi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-errorManager-function off(type: 'error', observerId: number): Promise<void>--><!--Device-errorManager-function off(type: 'error', observerId: number): Promise<void>-End-->
@@ -105,7 +97,7 @@ Unregisters an error observer. This API uses a promise to return the result. Thi
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';

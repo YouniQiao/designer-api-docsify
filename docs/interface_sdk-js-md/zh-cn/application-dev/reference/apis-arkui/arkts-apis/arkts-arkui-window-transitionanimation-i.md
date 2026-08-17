@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-window-interface TransitionAnimation--><!--Device-window-interface TransitionAnimation-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -23,10 +19,6 @@ config: WindowAnimationConfig
 **类型：** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ opacity?: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

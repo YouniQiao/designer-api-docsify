@@ -4,10 +4,6 @@ Enum for locating required data type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export enum LocatingRequiredDataType--><!--Device-geoLocationManager-export enum LocatingRequiredDataType-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -23,10 +19,6 @@ WIFI = 1
 Obtains WiFi scanning information for locating.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataType-WIFI = 1--><!--Device-LocatingRequiredDataType-WIFI = 1-End-->
 
@@ -44,10 +36,6 @@ Obtains BT scanning information for locating.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocatingRequiredDataType-BLUETOOTH = 2--><!--Device-LocatingRequiredDataType-BLUETOOTH = 2-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -63,10 +51,6 @@ CELLULAR = 3
 Obtaining cellular cell information for locating.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataType-CELLULAR = 3--><!--Device-LocatingRequiredDataType-CELLULAR = 3-End-->
 

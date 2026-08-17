@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 22
 
 <!--Device-unnamed-declare class SpringProp--><!--Device-unnamed-declare class SpringProp-End-->
@@ -23,8 +21,6 @@ constructor(mass: number, stiffness: number, damping: number)
 构造器参数。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 22
 

@@ -16,11 +16,9 @@ Starts pairing with a remote Bluetooth device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [pairDevice](arkts-connectivity-bluetoothmanager-pairdevice-f.md#pairDevice)
+**Substitutes:** [pairDevice](arkts-connectivity-bluetoothmanager-pairdevice-f.md#pairdevice)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -40,7 +38,7 @@ Starts pairing with a remote Bluetooth device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The address can be scanned.

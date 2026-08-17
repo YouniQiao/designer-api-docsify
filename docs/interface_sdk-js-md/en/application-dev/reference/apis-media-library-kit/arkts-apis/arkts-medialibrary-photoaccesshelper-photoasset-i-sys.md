@@ -4,10 +4,6 @@ PhotoAsset provides APIs for encapsulating file asset attributes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface PhotoAsset--><!--Device-photoAccessHelper-interface PhotoAsset-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -27,10 +23,6 @@ cancelPhotoRequest(requestId: string): void
 Cancels a task for obtaining media thumbnails.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -55,7 +47,7 @@ Cancels a task for obtaining media thumbnails.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -99,13 +91,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void
 ```
 
-Commits the edited image or video asset. This API uses an asynchronous callback to return the result. The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#@ohos.file.fileuri). > **NOTE：**> > The commit operation overwrites the previous edited data.
+Commits the edited image or video asset. This API uses an asynchronous callback to return the result. The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#ohosfilefileuri). > **NOTE：**> > The commit operation overwrites the previous edited data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -138,13 +126,9 @@ Commits the edited image or video asset. This API uses an asynchronous callback 
 commitEditedAsset(editData: string, uri: string): Promise<void>
 ```
 
-Commits the edited image or video asset. This API uses a promise to return the result. The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#@ohos.file.fileuri). > **NOTE：**> > The commit operation overwrites the previous edited data.
+Commits the edited image or video asset. This API uses a promise to return the result. The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#ohosfilefileuri). > **NOTE：**> > The commit operation overwrites the previous edited data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -176,7 +160,7 @@ Commits the edited image or video asset. This API uses a promise to return the r
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -213,10 +197,6 @@ Duplicates an image within the same album (either user-created or application-sp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-PhotoAsset-convertImageFormat(title: string, imageFormat: SupportedImageFormat): Promise<PhotoAsset>--><!--Device-PhotoAsset-convertImageFormat(title: string, imageFormat: SupportedImageFormat): Promise<PhotoAsset>-End-->
@@ -247,7 +227,7 @@ Duplicates an image within the same album (either user-created or application-sp
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. The original file does not exist locally in PhotoAsset; <br>2. The original file format is not within the supported range; <br>3. The original file is a temporary file or is being edited; <br>4. The title is the same with an image in the same album; <br>5. PhotoAsset is a photo in the trash or a hidden photo; <br>6. The title does not meet the parameter specifications. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -281,10 +261,6 @@ Creates a JPEG-compatible copy for a third-party application that does not suppo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-PhotoAsset-createTemporaryCompatibleDuplicate(): Promise<void>--><!--Device-PhotoAsset-createTemporaryCompatibleDuplicate(): Promise<void>-End-->
@@ -308,7 +284,7 @@ Creates a JPEG-compatible copy for a third-party application that does not suppo
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. The original file does not exist locally in PhotoAsset; <br>2. The original file format is not within the supported range; <br>3. The original file is a temporary file or is being edited; |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -341,10 +317,6 @@ Obtains analysis data. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-getAnalysisData(analysisType: AnalysisType): Promise<string>--><!--Device-PhotoAsset-getAnalysisData(analysisType: AnalysisType): Promise<string>-End-->
@@ -374,7 +346,7 @@ Obtains analysis data. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -413,10 +385,6 @@ Obtains the edited data of this asset. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-getEditData(): Promise<MediaAssetEditData>--><!--Device-PhotoAsset-getEditData(): Promise<MediaAssetEditData>-End-->
@@ -440,7 +408,7 @@ Obtains the edited data of this asset. This API uses a promise to return the res
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -472,13 +440,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(callback: AsyncCallback<string>): void
 ```
 
-Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result. The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey). > **NOTE：**> > This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md#PhotoKeys). These two fields must be passed in via > [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions).fetchColumns.
+Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result. The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#ohosmultimediaimage) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#propertykey). > **NOTE：**> > This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys). These two fields must be passed in via > [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#fetchoptions).fetchColumns.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -504,7 +468,7 @@ Obtains the Exif data from a JPG image and returns a JSON string. This API uses 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -545,13 +509,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(): Promise<string>
 ```
 
-Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result. The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey). > **NOTE：**> > This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md#PhotoKeys). These two fields must be passed in via > [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions).fetchColumns.
+Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result. The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#ohosmultimediaimage) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#propertykey). > **NOTE：**> > This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys). These two fields must be passed in via > [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#fetchoptions).fetchColumns.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -577,7 +537,7 @@ Obtains the Exif data from a JPG image and returns a JSON string. This API uses 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -615,10 +575,6 @@ Obtains the thumbnail of the specified type for the key frame. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-getKeyFrameThumbnail(beginFrameTimeMs: long, type: ThumbnailType): Promise<image.PixelMap>--><!--Device-PhotoAsset-getKeyFrameThumbnail(beginFrameTimeMs: long, type: ThumbnailType): Promise<image.PixelMap>-End-->
@@ -649,7 +605,7 @@ Obtains the thumbnail of the specified type for the key frame. This API uses a p
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -688,10 +644,6 @@ Open the file and cache it in the gallery sandbox when streaming video from the 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-getReadOnlyFdWithCached(): Promise<int>--><!--Device-PhotoAsset-getReadOnlyFdWithCached(): Promise<int>-End-->
@@ -725,10 +677,6 @@ Obtains the ArrayBuffer of a file thumbnail by specifying its type. This API use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-getThumbnailData(type: ThumbnailType): Promise<ArrayBuffer>--><!--Device-PhotoAsset-getThumbnailData(type: ThumbnailType): Promise<ArrayBuffer>-End-->
@@ -758,7 +706,7 @@ Obtains the ArrayBuffer of a file thumbnail by specifying its type. This API use
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -792,10 +740,6 @@ Checks whether this image or video asset is edited. This API uses an asynchronou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-isEdited(callback: AsyncCallback<boolean>): void--><!--Device-PhotoAsset-isEdited(callback: AsyncCallback<boolean>): void-End-->
@@ -819,7 +763,7 @@ Checks whether this image or video asset is edited. This API uses an asynchronou
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -863,10 +807,6 @@ Checks whether this image or video asset is edited. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-isEdited(): Promise<boolean>--><!--Device-PhotoAsset-isEdited(): Promise<boolean>-End-->
@@ -890,7 +830,7 @@ Checks whether this image or video asset is edited. This API uses a promise to r
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -929,8 +869,6 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md#open)
@@ -960,7 +898,7 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -989,8 +927,6 @@ open(mode: string): Promise<number>
 Opens this file asset. This API uses a promise to return the result. The returned FD must be closed when it is not required. > **NOTE：**> > This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API > for obtaining the media file handle is no longer provided.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 11
 
@@ -1026,7 +962,7 @@ Opens this file asset. This API uses a promise to return the result. The returne
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1059,10 +995,6 @@ Obtains the edit data of this image or video asset. This API uses an asynchronou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-requestEditData(callback: AsyncCallback<string>): void--><!--Device-PhotoAsset-requestEditData(callback: AsyncCallback<string>): void-End-->
@@ -1086,7 +1018,7 @@ Obtains the edit data of this image or video asset. This API uses an asynchronou
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1126,10 +1058,6 @@ Obtains the edit data of this image or video asset. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-requestEditData(): Promise<string>--><!--Device-PhotoAsset-requestEditData(): Promise<string>-End-->
@@ -1153,7 +1081,7 @@ Obtains the edit data of this image or video asset. This API uses a promise to r
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1188,10 +1116,6 @@ Obtains the quick thumbnail and quality thumbnail of this asset. This API uses a
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string--><!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string-End-->
@@ -1221,7 +1145,7 @@ Obtains the quick thumbnail and quality thumbnail of this asset. This API uses a
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1262,10 +1186,6 @@ Obtains the quick thumbnail and quality thumbnail of this asset. This API uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null--><!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null-End-->
@@ -1305,10 +1225,6 @@ Obtains the thumbnails of an asset based on the specified options. This API uses
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string--><!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string-End-->
@@ -1339,7 +1255,7 @@ Obtains the thumbnails of an asset based on the specified options. This API uses
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1386,10 +1302,6 @@ Obtains the thumbnails of an asset based on the specified options. This API uses
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string | null--><!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string | null-End-->
@@ -1430,10 +1342,6 @@ Opens the source file and returns the FD. This API uses an asynchronous callback
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-requestSource(callback: AsyncCallback<int>): void--><!--Device-PhotoAsset-requestSource(callback: AsyncCallback<int>): void-End-->
@@ -1457,7 +1365,7 @@ Opens the source file and returns the FD. This API uses an asynchronous callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1497,10 +1405,6 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-requestSource(): Promise<int>--><!--Device-PhotoAsset-requestSource(): Promise<int>-End-->
@@ -1524,7 +1428,7 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1559,10 +1463,6 @@ Reverts to the state of the file before being edited. This API uses an asynchron
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-PhotoAsset-revertToOriginal(callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-revertToOriginal(callback: AsyncCallback<void>): void-End-->
@@ -1596,10 +1496,6 @@ Reverts to the state of the file before being edited. This API uses a promise to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-PhotoAsset-revertToOriginal(): Promise<void>--><!--Device-PhotoAsset-revertToOriginal(): Promise<void>-End-->
@@ -1623,7 +1519,7 @@ Reverts to the state of the file before being edited. This API uses a promise to
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1662,11 +1558,9 @@ Favorites or unfavorites this file asset. This API uses an asynchronous callback
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setFavorite)
+**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setfavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1693,7 +1587,7 @@ Favorites or unfavorites this file asset. This API uses an asynchronous callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1729,11 +1623,9 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setFavorite)
+**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setfavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1765,7 +1657,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1804,11 +1696,9 @@ Sets this file asset to the hidden state. This API uses an asynchronous callback
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setHidden](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setHidden)
+**Substitutes:** [setHidden](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#sethidden)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1835,7 +1725,7 @@ Sets this file asset to the hidden state. This API uses an asynchronous callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1871,11 +1761,9 @@ Sets this file asset to the hidden state. This API uses a promise to return the 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setHidden](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setHidden)
+**Substitutes:** [setHidden](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#sethidden)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1907,7 +1795,7 @@ Sets this file asset to the hidden state. This API uses a promise to return the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1945,10 +1833,6 @@ Sets the pending state for this image or video asset. This API uses an asynchron
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-PhotoAsset-setPending(pendingState: boolean, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-setPending(pendingState: boolean, callback: AsyncCallback<void>): void-End-->
@@ -1973,7 +1857,7 @@ Sets the pending state for this image or video asset. This API uses an asynchron
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -2012,10 +1896,6 @@ Sets the pending state for this image or video asset. This API uses a promise to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-PhotoAsset-setPending(pendingState: boolean): Promise<void>--><!--Device-PhotoAsset-setPending(pendingState: boolean): Promise<void>-End-->
@@ -2045,7 +1925,7 @@ Sets the pending state for this image or video asset. This API uses a promise to
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -2074,11 +1954,9 @@ Sets user comment information of an image or video. This API uses an asynchronou
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setUserComment](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setUserComment)
+**Substitutes:** [setUserComment](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -2105,7 +1983,7 @@ Sets user comment information of an image or video. This API uses an asynchronou
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -2146,11 +2024,9 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [setUserComment](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setUserComment)
+**Substitutes:** [setUserComment](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -2182,7 +2058,7 @@ Sets user comment information of an image or video. This API uses a promise to r
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 

@@ -10,10 +10,6 @@ Start task method.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-backgroundLoader-const ON_START: string--><!--Device-backgroundLoader-const ON_START: string-End-->
@@ -29,10 +25,6 @@ const ON_STOP: string
 Stop task method.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

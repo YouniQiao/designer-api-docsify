@@ -4,10 +4,6 @@ Represents a USB port.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usbManager-interface USBPort--><!--Device-usbManager-interface USBPort-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -32,10 +28,6 @@ Unique identifier of a USB port.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBPort-id: int--><!--Device-USBPort-id: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -54,10 +46,6 @@ USB port role.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBPort-status: USBPortStatus--><!--Device-USBPort-status: USBPortStatus-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -75,10 +63,6 @@ Numeric mask combination for the supported mode list.
 **Type:** PortModeType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBPort-supportedModes: PortModeType--><!--Device-USBPort-supportedModes: PortModeType-End-->
 

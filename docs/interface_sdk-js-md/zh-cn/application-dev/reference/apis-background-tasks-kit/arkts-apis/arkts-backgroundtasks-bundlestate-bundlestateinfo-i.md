@@ -2,8 +2,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-bundleState-interface BundleStateInfo--><!--Device-bundleState-interface BundleStateInfo-End-->
@@ -19,8 +17,6 @@ merge(toMerge: BundleStateInfo): void
 Merges a specified BundleActiveInfo object with this BundleActiveInfo object. The bundle name of both objects must be the same.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -46,8 +42,6 @@ The total duration, in milliseconds. <br> Unit:ms
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-BundleStateInfo-abilityInFgTotalTime?: number--><!--Device-BundleStateInfo-abilityInFgTotalTime?: number-End-->
@@ -65,8 +59,6 @@ The last time when the application was accessed, in milliseconds. <br> Unit:ms
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -86,8 +78,6 @@ The last time when the application was visible in the foreground, in millisecond
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-BundleStateInfo-abilityPrevSeenTime?: number--><!--Device-BundleStateInfo-abilityPrevSeenTime?: number-End-->
@@ -105,8 +95,6 @@ The total duration when the application was visible in the foreground, in millis
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -126,8 +114,6 @@ The bundle name of the application.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-BundleStateInfo-bundleName?: string--><!--Device-BundleStateInfo-bundleName?: string-End-->
@@ -145,8 +131,6 @@ The total duration when the foreground application was accessed, in milliseconds
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -166,8 +150,6 @@ The last time when the foreground application was accessed, in milliseconds. <br
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-BundleStateInfo-fgAbilityPrevAccessTime?: number--><!--Device-BundleStateInfo-fgAbilityPrevAccessTime?: number-End-->
@@ -185,8 +167,6 @@ The identifier of BundleStateInfo.
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -206,8 +186,6 @@ The time of the first bundle usage record in this {@code BundleActiveInfo} objec
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-BundleStateInfo-infosBeginTime?: number--><!--Device-BundleStateInfo-infosBeginTime?: number-End-->
@@ -225,8 +203,6 @@ The time of the last bundle usage record in this {@code BundleActiveInfo} object
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 

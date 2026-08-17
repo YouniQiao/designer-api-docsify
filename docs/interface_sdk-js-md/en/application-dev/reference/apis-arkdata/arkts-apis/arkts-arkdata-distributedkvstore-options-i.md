@@ -4,10 +4,6 @@ Provides KV store configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedKVStore-interface Options--><!--Device-distributedKVStore-interface Options-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -30,10 +26,6 @@ Whether to enable auto sync across devices. The default value is **false**, indi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -54,10 +46,6 @@ Whether to back up the database files. The value **true** means to back up the d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Options-backup?: boolean--><!--Device-Options-backup?: boolean-End-->
@@ -75,10 +63,6 @@ Whether to create a database when database files do not exist. The value **true*
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ Whether to encrypt the database files. The value **true** means to encrypt the d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Options-encrypt?: boolean--><!--Device-Options-encrypt?: boolean-End-->
@@ -119,10 +99,6 @@ Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, w
 **Type:** KVStoreType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,10 +118,6 @@ Specifies the root directory relative to the database
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Options-rootDir?: string--><!--Device-Options-rootDir?: string-End-->
@@ -164,10 +136,6 @@ Schema that defines the values stored in the KV store. The default value is **un
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Options-schema?: Schema--><!--Device-Options-schema?: Schema-End-->
@@ -185,10 +153,6 @@ Security level of the KV store.
 **Type:** SecurityLevel
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,10 @@
-# RequestFile
+# RequestFile(Upload and Download)
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [File](arkts-basicservices-request-file-i.md#File)
+**Substitutes:** [File](arkts-basicservices-request-file-i.md#file)
 
 <!--Device-unnamed-export interface RequestFile--><!--Device-unnamed-export interface RequestFile-End-->
 
@@ -37,8 +35,6 @@ File name in the header when **multipart** is used.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** filename
@@ -58,8 +54,6 @@ Name of a form item when **multipart** is used. The default value is **file**.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -81,8 +75,6 @@ Type of the file content. By default, the type is obtained based on the extensio
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** contentType
@@ -102,8 +94,6 @@ Local path for storing files.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

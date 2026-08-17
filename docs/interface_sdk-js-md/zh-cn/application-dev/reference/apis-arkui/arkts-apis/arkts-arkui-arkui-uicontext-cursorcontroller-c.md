@@ -1,12 +1,8 @@
 # CursorController
 
-提供光标样式设置的能力。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 以下API需先使用UIContext中的[getCursorController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getCursorController)方法获取CursorController实例，再通过此实例调用对应方法。
+提供光标样式设置的能力。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 以下API需先使用UIContext中的[getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcursorcontroller)方法获取CursorController实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export class CursorController--><!--Device-unnamed-export class CursorController-End-->
 
@@ -21,10 +17,6 @@ restoreDefault(): void
 恢复默认的光标样式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,10 +36,6 @@ setCursor(value: PointerStyle): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -60,7 +48,7 @@ setCursor(value: PointerStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PointerStyle](../../apis-na/arkts-apis/arkts-na-pointerstyle-t.md) | 是 | 光标样式。 |
+| value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | 是 | 光标样式。 |
 
 ## setCustomCursor
 
@@ -71,10 +59,6 @@ setCustomCursor(value: image.PixelMap, focusX?: int, focusY?: int): void
 设置自定义鼠标光标样式。 > **说明：** > > 该接口调用后不会立即生效，而是在下一帧改变鼠标光标样式。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

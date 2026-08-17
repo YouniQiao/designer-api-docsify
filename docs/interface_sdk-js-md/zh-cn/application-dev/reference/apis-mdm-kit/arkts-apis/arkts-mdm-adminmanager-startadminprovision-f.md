@@ -10,10 +10,6 @@ function startAdminProvision(admin: Want, type: AdminType, context: common.Conte
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.START_PROVISIONING_MESSAGE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -38,7 +34,7 @@ function startAdminProvision(admin: Want, type: AdminType, context: common.Conte
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
@@ -59,9 +55,9 @@ const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 try {
   console.info('context:' + JSON.stringify(context));
   adminManager.startAdminProvision(wantTemp, adminManager.AdminType.ADMIN_TYPE_BYOD, context, recordParameters);
-  console.info('startAdminProvision::success');
+  console.info('Succeeded in starting Admin Provision');
 } catch (error) {
-  console.error('startAdminProvision::errorCode: ' + error.code + ' errorMessage: ' + error.message);
+  console.error('Failed to start Admin Provision::errorCode: ' + error.code + ' errorMessage: ' + error.message);
 }
 ```
 

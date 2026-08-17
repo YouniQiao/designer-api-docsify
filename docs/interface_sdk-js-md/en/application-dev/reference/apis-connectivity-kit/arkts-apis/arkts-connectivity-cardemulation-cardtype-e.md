@@ -4,10 +4,6 @@ Define the card emulation type, payment or other.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cardEmulation-enum CardType--><!--Device-cardEmulation-enum CardType-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
@@ -21,10 +17,6 @@ PAYMENT = 'payment'
 Payment type of card emulation
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -41,10 +33,6 @@ OTHER = 'other'
 Other type of card emulation
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

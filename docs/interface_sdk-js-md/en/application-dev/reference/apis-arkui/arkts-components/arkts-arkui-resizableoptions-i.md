@@ -4,10 +4,6 @@ Defines the resizable image options. **Figure 1** Effect of Setting EdgeWidths
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ResizableOptions--><!--Device-unnamed-declare interface ResizableOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +14,11 @@ Defines the resizable image options. **Figure 1** Effect of Setting EdgeWidths
 lattice?: DrawingLattice
 ```
 
-Lattice object, which is used to divide the image by lattice. **NOTE：**Use the [createImageLattice](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-lattice-c.md#createImageLattice) API of **@ohos.graphics.drawing** to create a **Lattice** type as the input parameter. Lattices located at both even columns and even rows are fixed; those at other positions are stretched according to **slice**. This parameter does not take effect for the backgroundImageResizable API. When a number is passed, the default unit is px.
+Lattice object, which is used to divide the image by lattice. **NOTE：**Use the [createImageLattice](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-lattice-c.md#createimagelattice) API of **@ohos.graphics.drawing** to create a **Lattice** type as the input parameter. Lattices located at both even columns and even rows are fixed; those at other positions are stretched according to **slice**. This parameter does not take effect for the backgroundImageResizable API. When a number is passed, the default unit is px.
 
 **Type:** [DrawingLattice](arkts-arkui-drawinglattice-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Edge widths in different directions of a component. **NOTE：**This attribute ta
 **Type:** EdgeWidths
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

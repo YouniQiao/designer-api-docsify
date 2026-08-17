@@ -4,9 +4,7 @@ Defines the close swipe action options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface CloseSwipeActionOptions--><!--Device-unnamed-export declare interface CloseSwipeActionOptions-End-->
 
@@ -24,9 +22,7 @@ Triggered after the collapse animation is complete.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

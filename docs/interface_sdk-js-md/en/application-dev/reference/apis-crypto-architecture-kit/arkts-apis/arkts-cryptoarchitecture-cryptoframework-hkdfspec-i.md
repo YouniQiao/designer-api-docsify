@@ -1,14 +1,10 @@
 # HKDFSpec
 
-Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec). It is a parameter for HKDF key derivation. > **NOTE：**> > **key** is the original key material entered by the user. An empty string can be passed in for **info** and > **salt** based on the mode. > > For example, if the mode is **EXTRACT_AND_EXPAND**, all parameter values must be passed in. If the mode is > **EXTRACT_ONLY**, **info** can be empty. When **HKDFSpec** is constructed, pass in **null** to **info**. > > The default mode is **EXTRACT_AND_EXPAND**. The value **HKDF|SHA256|EXTRACT_AND_EXPAND** is equivalent to > **HKDF|SHA256**.
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#kdfspec). It is a parameter for HKDF key derivation. > **NOTE：**> > **key** is the original key material entered by the user. An empty string can be passed in for **info** and > **salt** based on the mode. > > For example, if the mode is **EXTRACT_AND_EXPAND**, all parameter values must be passed in. If the mode is > **EXTRACT_ONLY**, **info** can be empty. When **HKDFSpec** is constructed, pass in **null** to **info**. > > The default mode is **EXTRACT_AND_EXPAND**. The value **HKDF|SHA256|EXTRACT_AND_EXPAND** is equivalent to > **HKDF|SHA256**.
 
-**Inheritance/Implementation:** HKDFSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec)
+**Inheritance/Implementation:** HKDFSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#kdfspec)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface HKDFSpec--><!--Device-cryptoFramework-interface HKDFSpec-End-->
 
@@ -32,10 +28,6 @@ Information used to expand the key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HKDFSpec-info: Uint8Array--><!--Device-HKDFSpec-info: Uint8Array-End-->
@@ -53,10 +45,6 @@ Key material.
 **Type:** string \| Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -76,10 +64,6 @@ Length of the derived key, in bytes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HKDFSpec-keySize: int--><!--Device-HKDFSpec-keySize: int-End-->
@@ -97,10 +81,6 @@ Salt value.
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

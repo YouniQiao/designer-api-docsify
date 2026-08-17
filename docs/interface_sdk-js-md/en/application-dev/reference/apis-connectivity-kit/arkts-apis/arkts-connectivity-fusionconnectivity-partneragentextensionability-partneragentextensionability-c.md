@@ -6,10 +6,6 @@ Class for the PartnerAgentExtensionAbility. Applications can use this ability to
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class PartnerAgentExtensionAbility--><!--Device-unnamed-export default class PartnerAgentExtensionAbility-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -30,10 +26,6 @@ Called when the PartnerAgentExtensionAbility is to be destroyed. Applications ca
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartnerAgentExtensionAbility-onDestroyWithReason(reason: PartnerAgentExtensionAbilityDestroyReason): void--><!--Device-PartnerAgentExtensionAbility-onDestroyWithReason(reason: PartnerAgentExtensionAbilityDestroyReason): void-End-->
@@ -46,7 +38,7 @@ Called when the PartnerAgentExtensionAbility is to be destroyed. Applications ca
 | --- | --- | --- | --- |
 | reason | [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragentextensionabilitydestroyreason-t.md) | Yes | The reason for Ability destruction. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 export default class PartnerAgentExtAbility extends PartnerAgentExtensionAbility {
@@ -66,10 +58,6 @@ Called when a device is discovered.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartnerAgentExtensionAbility-onDeviceDiscovered(deviceAddress: PartnerDeviceAddress): void--><!--Device-PartnerAgentExtensionAbility-onDeviceDiscovered(deviceAddress: PartnerDeviceAddress): void-End-->
@@ -82,7 +70,7 @@ Called when a device is discovered.
 | --- | --- | --- | --- |
 | deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | Address of the discovered device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 export default class PartnerAgentExtAbility extends PartnerAgentExtensionAbility {
@@ -103,10 +91,6 @@ Context of the PartnerAgentExtensionAbility.
 **Type:** [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

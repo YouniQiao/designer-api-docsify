@@ -4,8 +4,6 @@ Represents information about a file or directory in the **Recently deleted** lis
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 <!--Device-trash-interface FileInfo--><!--Device-trash-interface FileInfo-End-->
@@ -25,8 +23,6 @@ Time when the file or directory was created. It is the number of seconds elapsed
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 23
 
@@ -50,8 +46,6 @@ Name of the file or directory.
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -73,8 +67,6 @@ Permission on the file or directory.
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 23
 
@@ -98,8 +90,6 @@ Time when the file or directory was last modified. It is the number of milliseco
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -121,8 +111,6 @@ Size of a file or directory, in bytes.
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 23
 
@@ -146,8 +134,6 @@ Path of the file or directory before being deleted.
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -169,8 +155,6 @@ URI of the file or directory.
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 23
 

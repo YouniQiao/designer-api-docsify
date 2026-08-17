@@ -4,10 +4,6 @@ Parameter for dynamically enable advertising.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ble-interface AdvertisingEnableParams--><!--Device-ble-interface AdvertisingEnableParams-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ Indicates the ID of current advertising.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AdvertisingEnableParams-advertisingId: int--><!--Device-AdvertisingEnableParams-advertisingId: int-End-->
@@ -51,10 +43,6 @@ Indicates the duration for advertising continuously. The duration, in 10ms unit.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

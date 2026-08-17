@@ -1,12 +1,8 @@
 # PrefetchOptions
 
-Defines the PrefetchOptions class.
+PrefetchOptions is a configuration class in the ArkWeb framework for customizing web page prefetch behavior. It is set through the prefetch-related API of [prefetchPage](arkts-arkweb-webview-webviewcontroller-c.md#prefetchpage), and the customizable settings include whether to ignore Cache-Control: no-store in the response header and the minimum time interval between two prefetches.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class PrefetchOptions--><!--Device-webview-class PrefetchOptions-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 constructor()
 ```
 
-Constructor for PrefetchOptions.
+A constructor used to create a **PrefetchOptions** instance.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-PrefetchOptions-constructor()--><!--Device-PrefetchOptions-constructor()-End-->
 
@@ -42,15 +34,11 @@ Constructor for PrefetchOptions.
 ignoreCacheControlNoStore: boolean
 ```
 
-Set whether to ignore Cache-Control: no-store‌. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> This setting controls whether prefetch operations bypass the HTTP Cache-Control: no-store directive. Important‌: Default behavior (false) aligns with HTTP security standards. Overriding (true) requires explicit risk assessment for non-sensitive resources.
+Sets whether to ignore Cache-Control: no-store in the response header. If set to true, the header is ignored; if set to false, it is not ignored.
 
 **Type:** boolean
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-PrefetchOptions-ignoreCacheControlNoStore: boolean--><!--Device-PrefetchOptions-ignoreCacheControlNoStore: boolean-End-->
 
@@ -62,15 +50,11 @@ Set whether to ignore Cache-Control: no-store‌. &lt;p&gt;&lt;strong&gt;API Not
 minTimeBetweenPrefetchesMs: number
 ```
 
-‌Set prefetch page interval limit. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The value should be an integer.Unit: ms. Default 500ms (ensures only one successful prefetch within 500ms). The interval throttles prefetch frequency to balance performance and resource usage.
+Sets the minimum time interval between two web page prefetches. During each prefetch, the interval from the last prefetch is calculated. If it is less than the set value, the current prefetch is canceled. Value range: [0, 500]. If set to a negative number, the default value 0 is used. Unit: ms
 
 **Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-PrefetchOptions-minTimeBetweenPrefetchesMs: number--><!--Device-PrefetchOptions-minTimeBetweenPrefetchesMs: number-End-->
 

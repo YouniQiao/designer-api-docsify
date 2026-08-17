@@ -8,10 +8,6 @@ Continuable information corresponding to ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-distributedMissionManager-export type ContinuableInfo = _ContinuableInfo--><!--Device-distributedMissionManager-export type ContinuableInfo = _ContinuableInfo-End-->

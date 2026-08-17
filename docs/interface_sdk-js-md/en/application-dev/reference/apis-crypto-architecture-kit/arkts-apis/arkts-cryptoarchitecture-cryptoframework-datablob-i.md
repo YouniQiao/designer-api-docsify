@@ -4,10 +4,6 @@ Encapsulates binary data. The core field **data** is of the Uint8Array type. > *
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-interface DataBlob--><!--Device-cryptoFramework-interface DataBlob-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework
@@ -29,10 +25,6 @@ Binary data array.
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.

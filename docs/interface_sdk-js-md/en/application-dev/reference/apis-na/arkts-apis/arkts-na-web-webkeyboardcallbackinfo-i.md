@@ -4,9 +4,7 @@ Defines the web keyboard callback info related to the onInterceptKeyboardAttach 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface WebKeyboardCallbackInfo--><!--Device-unnamed-export declare interface WebKeyboardCallbackInfo-End-->
 
@@ -24,9 +22,7 @@ The attributes of web input element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebKeyboardCallbackInfo-attributes: Record<string, string>--><!--Device-WebKeyboardCallbackInfo-attributes: Record<string, string>-End-->
 
@@ -44,9 +40,7 @@ The web keyboard controller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebKeyboardCallbackInfo-controller: WebKeyboardController--><!--Device-WebKeyboardCallbackInfo-controller: WebKeyboardController-End-->
 

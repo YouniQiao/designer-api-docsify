@@ -16,11 +16,9 @@ Sets the confirmation of pairing with a certain device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setDevicePairingConfirmation](arkts-connectivity-bluetoothmanager-setdevicepairingconfirmation-f.md#setDevicePairingConfirmation)
+**Substitutes:** [setDevicePairingConfirmation](arkts-connectivity-bluetoothmanager-setdevicepairingconfirmation-f.md#setdevicepairingconfirmation)
 
 **Required permissions:** ohos.permission.MANAGE_BLUETOOTH
 
@@ -41,7 +39,7 @@ Sets the confirmation of pairing with a certain device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Subscribe to the pinRequired event and configure the pairing confirmation after receiving a pairing request from the remote device.

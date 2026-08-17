@@ -12,15 +12,13 @@ import { router } from 'router';
 function getStateByIndex(index: number): RouterState | undefined
 ```
 
-Obtains the status information about a page by its index. > **NOTE：**> > - Since API version 12, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
+Obtains the status information about a page by its index. > **NOTE：**> > - Since API version 12, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getStateByIndex)
+**Substitutes:** [getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getstatebyindex)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +40,7 @@ Obtains the status information about a page by its index. > **NOTE：**> > - Sin
 | --- | --- |
 | RouterState | State information about the target page; **undefined** if the specified index does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let options: router.RouterState | undefined = router.getStateByIndex(1);

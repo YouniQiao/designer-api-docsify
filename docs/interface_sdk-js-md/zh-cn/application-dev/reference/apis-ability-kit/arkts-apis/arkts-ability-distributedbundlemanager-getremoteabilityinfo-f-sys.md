@@ -10,10 +10,6 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<RemoteAbilityInfo>): void--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<RemoteAbilityInfo>): void-End-->
@@ -27,7 +23,7 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | 是 | ElementName信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RemoteAbilityInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，调用成功返回err为null，data为 RemoteAbilityInfo对象；调用失败err为错误对象, data为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RemoteAbilityInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，调用成功返回err为null，data为 RemoteAbilityInfo对象；调用失败err为错误对象, data为undefined。 |
 
 **错误码：**
 
@@ -42,7 +38,7 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -110,10 +106,6 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityInfo>--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityInfo>-End-->
@@ -147,7 +139,7 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -211,10 +203,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void-End-->
@@ -228,7 +216,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | 是 | ElementName信息,最大数组长度为10。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，调用成功返回err为null ，data为RemoteAbilityInfo数组对象；调用失败err为错误对象, data为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，调用成功返回err为null ，data为RemoteAbilityInfo数组对象；调用失败err为错误对象, data为undefined。 |
 
 **错误码：**
 
@@ -243,7 +231,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -327,10 +315,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<R
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>-End-->
@@ -364,7 +348,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<R
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -443,10 +427,6 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback: AsyncCallback<RemoteAbilityInfo>): void--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback: AsyncCallback<RemoteAbilityInfo>): void-End-->
@@ -461,7 +441,7 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | 是 | ElementName信息。 |
 | locale | string | 是 | 语言地区。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RemoteAbilityInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，调用成功返回err为null，data为 RemoteAbilityInfo对象；调用失败err为错误对象, data为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RemoteAbilityInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，调用成功返回err为null，data为 RemoteAbilityInfo对象；调用失败err为错误对象, data为undefined。 |
 
 **错误码：**
 
@@ -476,7 +456,7 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -544,10 +524,6 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise<RemoteAbilityInfo>--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise<RemoteAbilityInfo>-End-->
@@ -582,7 +558,7 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -646,10 +622,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void-End-->
@@ -664,7 +636,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 | --- | --- | --- | --- |
 | elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | 是 | ElementName信息,最大数组长度为10。 |
 | locale | string | 是 | 语言地区。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，调用成功返回err为null ，data为RemoteAbilityInfo数组对象；调用失败err为错误对象, data为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，调用成功返回err为null ，data为RemoteAbilityInfo数组对象；调用失败err为错误对象, data为undefined。 |
 
 **错误码：**
 
@@ -679,7 +651,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -763,10 +735,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string):
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string): Promise<Array<RemoteAbilityInfo>>--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string): Promise<Array<RemoteAbilityInfo>>-End-->
@@ -801,7 +769,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string):
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

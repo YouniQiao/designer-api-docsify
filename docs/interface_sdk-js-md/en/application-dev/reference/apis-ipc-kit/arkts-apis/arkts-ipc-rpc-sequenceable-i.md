@@ -4,11 +4,9 @@ Writes objects of classes to a **MessageParcel** and reads them from the **Messa
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Parcelable](arkts-ipc-rpc-parcelable-i.md#Parcelable)
+**Substitutes:** [Parcelable](arkts-ipc-rpc-parcelable-i.md#parcelable)
 
 <!--Device-rpc-interface Sequenceable--><!--Device-rpc-interface Sequenceable-End-->
 
@@ -30,8 +28,6 @@ Marshals the sequenceable object into a **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [marshalling](arkts-ipc-rpc-parcelable-i.md#marshalling)(dataOut: MessageSequence)
@@ -52,7 +48,7 @@ Marshals the sequenceable object into a **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -100,8 +96,6 @@ Unmarshals this sequenceable object from a **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [unmarshalling](arkts-ipc-rpc-parcelable-i.md#unmarshalling)(dataIn: MessageSequence)
@@ -122,7 +116,7 @@ Unmarshals this sequenceable object from a **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

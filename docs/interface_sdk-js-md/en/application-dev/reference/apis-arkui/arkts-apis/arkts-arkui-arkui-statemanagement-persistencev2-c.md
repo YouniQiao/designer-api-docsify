@@ -1,14 +1,10 @@
 # PersistenceV2
 
-Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#AppStorageV2). For details, see [PersistenceV2: Persisting Application State](../../../ui/state-management/arkts-new-persistencev2.md).
+Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#appstoragev2). For details, see [PersistenceV2: Persisting Application State](../../../ui/state-management/arkts-new-persistencev2.md).
 
-**Inheritance/Implementation:** PersistenceV2 extends [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#AppStorageV2)
+**Inheritance/Implementation:** PersistenceV2 extends [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#appstoragev2)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class PersistenceV2--><!--Device-unnamed-export declare class PersistenceV2-End-->
 
@@ -54,10 +50,6 @@ Stores key-value pair data on the application disk. If the given key already exi
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -86,13 +78,9 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
   ): T | undefined
 ```
 
-Stores key-value pair data on the application disk. Supports the persistence of the following collection types: [Array, Map, Set, Date, collections.Array, collections.Map, and collections.Set](../../../ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect). Note that when persisting data of the **Array\&lt;ClassA&gt;** type, you need to call [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeObserved) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array&lt;Array\<ClassA>&gt;** persistence is not supported.
+Stores key-value pair data on the application disk. Supports the persistence of the following collection types: [Array, Map, Set, Date, collections.Array, collections.Map, and collections.Set](../../../ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect). Note that when persisting data of the **Array\&lt;ClassA&gt;** type, you need to call [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array&lt;Array\<ClassA>&gt;** persistence is not supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,7 +102,7 @@ Stores key-value pair data on the application disk. Supports the persistence of 
 | --- | --- |
 | T | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
 
-## Examples
+**Examples**
 
 The following is the sample code for globalConnect to persist data of the Map type:
 
@@ -164,10 +152,6 @@ Called when persistence fails.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -182,7 +166,7 @@ Called when persistence fails.
 | --- | --- | --- | --- |
 | callback | [PersistenceErrorCallback](arkts-arkui-persistenceerrorcallback-t.md) \| undefined | Yes | Callback called when persistence fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Called when persistence fails.
@@ -201,10 +185,6 @@ Persists the specified key-value pair data once.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -219,7 +199,7 @@ Persists the specified key-value pair data once.
 | --- | --- | --- | --- |
 | keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes | Key to be persisted. If a type is specified, the key for persistence is the name of the type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @ObservedV2

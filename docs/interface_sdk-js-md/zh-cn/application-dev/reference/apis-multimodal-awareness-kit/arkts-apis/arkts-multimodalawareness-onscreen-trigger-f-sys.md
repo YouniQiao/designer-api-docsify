@@ -11,10 +11,6 @@ function trigger(capability: OnscreenAwarenessCap,
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
 - API版本23 - 24：ohos.permission.GET_SCREEN_CONTENT
@@ -31,7 +27,7 @@ function trigger(capability: OnscreenAwarenessCap,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md) | 是 | 屏上感知能力列表，支持列表见 [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md#OnscreenAwarenessCap（系统接口）)。 |
+| capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md) | 是 | 屏上感知能力列表，支持列表见 [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md#onscreenawarenesscap系统接口)。 |
 | options | [OnscreenAwarenessOptions](arkts-multimodalawareness-onscreen-onscreenawarenessoptions-i-sys.md) | 否 | 屏上感知参数列表，不传递则使用默认参数配置。 |
 
 **返回值：**
@@ -50,7 +46,7 @@ function trigger(capability: OnscreenAwarenessCap,
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to get page content forbidden by <br> permission: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import onScreen from "@ohos.multimodalAwareness.onScreen";

@@ -1,12 +1,8 @@
 # AudioManager
 
-This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager) to obtain an AudioManager instance.
+This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager) to obtain an AudioManager instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
 
@@ -27,8 +23,6 @@ getAudioParameter(key: string, callback: AsyncCallback<string>): void
 Obtains the value of an audio parameter. This method uses an asynchronous callback to return the query result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -52,8 +46,6 @@ getAudioParameter(key: string): Promise<string>
 Obtains the value of an audio parameter. This method uses a promise to return the query result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -83,10 +75,6 @@ Obtains the audio scene. This API uses an asynchronous callback to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioManager-getAudioScene(callback: AsyncCallback<AudioScene>): void--><!--Device-AudioManager-getAudioScene(callback: AsyncCallback<AudioScene>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -106,10 +94,6 @@ getAudioScene(): Promise<AudioScene>
 Obtains the audio scene. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioManager-getAudioScene(): Promise<AudioScene>--><!--Device-AudioManager-getAudioScene(): Promise<AudioScene>-End-->
 
@@ -131,10 +115,6 @@ Obtains the audio scene. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioManager-getAudioSceneSync(): AudioScene--><!--Device-AudioManager-getAudioSceneSync(): AudioScene-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -151,13 +131,9 @@ Obtains the audio scene. This API returns the result synchronously.
 getDebuggingManager(): AudioDebuggingManager
 ```
 
-Obtains an AudioDebuggingManager instance. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md#AudioDebuggingManager) instance is a singleton. &lt;/p&gt;
+Obtains an AudioDebuggingManager instance. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md#audiodebuggingmanager) instance is a singleton. &lt;/p&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,10 +157,6 @@ Obtains a device enhancement manager instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioManager-getDeviceEnhanceManager(): AudioDeviceEnhanceManager--><!--Device-AudioManager-getDeviceEnhanceManager(): AudioDeviceEnhanceManager-End-->
@@ -206,8 +178,6 @@ getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptor
 Obtains the audio devices with a specific flag. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -233,8 +203,6 @@ getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>
 Obtains the audio devices with a specific flag. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -266,8 +234,6 @@ Obtains the maximum volume allowed for a stream. This API uses an asynchronous c
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** getMaxVolume
@@ -292,8 +258,6 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 Obtains the maximum volume allowed for a stream. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -325,8 +289,6 @@ Obtains the minimum volume allowed for a stream. This API uses an asynchronous c
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** getMinVolume
@@ -351,8 +313,6 @@ getMinVolume(volumeType: AudioVolumeType): Promise<number>
 Obtains the minimum volume allowed for a stream. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -384,10 +344,6 @@ Obtains a recording manager instance. Provides recording strategy management, in
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioManager-getRecordingManager(): AudioRecordingManager--><!--Device-AudioManager-getRecordingManager(): AudioRecordingManager-End-->
@@ -409,8 +365,6 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 Obtains the ringer mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -436,8 +390,6 @@ Obtains the ringer mode. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** getRingerMode
@@ -462,10 +414,6 @@ Obtains an AudioRoutingManager instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioManager-getRoutingManager(): AudioRoutingManager--><!--Device-AudioManager-getRoutingManager(): AudioRoutingManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -485,10 +433,6 @@ getSessionManager(): AudioSessionManager
 Obtains an AudioSessionManager instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -512,10 +456,6 @@ Obtains an AudioSpatializationManager instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioManager-getSpatializationManager(): AudioSpatializationManager--><!--Device-AudioManager-getSpatializationManager(): AudioSpatializationManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -535,10 +475,6 @@ getStreamManager(): AudioStreamManager
 Obtains an AudioStreamManager instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioManager-getStreamManager(): AudioStreamManager--><!--Device-AudioManager-getStreamManager(): AudioStreamManager-End-->
 
@@ -560,8 +496,6 @@ Obtains the volume of a stream. This API uses an asynchronous callback to return
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** getVolume
@@ -575,7 +509,7 @@ Obtains the volume of a stream. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream volume obtained; otherwise, **err** is an error object. The volume range of a specified stream can be obtained by calling [getMinVolume](#getMinVolume) and [getMaxVolume](#getMaxVolume) . |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream volume obtained; otherwise, **err** is an error object. The volume range of a specified stream can be obtained by calling [getMinVolume](#getminvolume) and [getMaxVolume](#getmaxvolume) . |
 
 ## getVolume
 
@@ -586,8 +520,6 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 Obtains the volume of a stream. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -619,10 +551,6 @@ Obtains an AudioVolumeManager instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AudioManager-getVolumeManager(): AudioVolumeManager--><!--Device-AudioManager-getVolumeManager(): AudioVolumeManager-End-->
@@ -644,8 +572,6 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 Checks whether a stream is active. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -671,8 +597,6 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 Checks whether a stream is active. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -704,11 +628,9 @@ Checks whether a device is active. This API uses an asynchronous callback to ret
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isCommunicationDeviceActive](arkts-audio-audio-audioroutingmanager-i.md#isCommunicationDeviceActive)
+**Substitutes:** [isCommunicationDeviceActive](arkts-audio-audio-audioroutingmanager-i.md#iscommunicationdeviceactive)
 
 <!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback<boolean>): void-End-->
 
@@ -731,11 +653,9 @@ Checks whether a device is active. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isCommunicationDeviceActive](arkts-audio-audio-audioroutingmanager-i.md#isCommunicationDeviceActive)
+**Substitutes:** [isCommunicationDeviceActive](arkts-audio-audio-audioroutingmanager-i.md#iscommunicationdeviceactive)
 
 <!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType): Promise<boolean>--><!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType): Promise<boolean>-End-->
 
@@ -763,8 +683,6 @@ Checks whether the microphone is muted. This API uses an asynchronous callback t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** isMicrophoneMute
@@ -790,8 +708,6 @@ isMicrophoneMute(): Promise<boolean>
 Checks whether the microphone is muted. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -819,8 +735,6 @@ Checks whether a stream is muted. This API uses an asynchronous callback to retu
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** isMute
@@ -845,8 +759,6 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 Checks whether a stream is muted. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -878,11 +790,9 @@ Mutes a volume type. This method uses an asynchronous callback to return the res
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
+**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -906,11 +816,9 @@ Mutes a volume type. This method uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
+**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
 
@@ -939,10 +847,6 @@ Unsubscribes to audio scene change events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioManager-offAudioSceneChange(callback?: Callback<AudioScene>): void--><!--Device-AudioManager-offAudioSceneChange(callback?: Callback<AudioScene>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -962,10 +866,6 @@ off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
 Unsubscribes from the audio scene change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-AudioManager-off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void--><!--Device-AudioManager-off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void-End-->
 
@@ -987,8 +887,6 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 Unsubscribes from the audio device change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -1014,8 +912,6 @@ off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptA
 Unsubscribes from the audio interruption event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -1043,10 +939,6 @@ Subscribes to audio scene change events. When system changes communication scene
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioManager-onAudioSceneChange(callback: Callback<AudioScene>): void--><!--Device-AudioManager-onAudioSceneChange(callback: Callback<AudioScene>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -1066,10 +958,6 @@ on(type: 'audioSceneChange', callback: Callback<AudioScene>): void
 Subscribes to the audio scene change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-AudioManager-on(type: 'audioSceneChange', callback: Callback<AudioScene>): void--><!--Device-AudioManager-on(type: 'audioSceneChange', callback: Callback<AudioScene>): void-End-->
 
@@ -1092,8 +980,6 @@ Subscribes to the event indicating that the connection status of an audio device
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** deviceChange
@@ -1115,11 +1001,9 @@ Subscribes to the event indicating that the connection status of an audio device
 on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. Same as [on('audioInterrupt')](arkts-audio-audio-audiorenderer-i.md#on_audioInterrupt) , this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. Same as [on('audioInterrupt')](arkts-audio-audio-audiorenderer-i.md#onaudiointerrupt) , this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -1147,8 +1031,6 @@ Sets an audio parameter. This method uses an asynchronous callback to return the
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
@@ -1174,8 +1056,6 @@ setAudioParameter(key: string, value: string): Promise<void>
 Sets an audio parameter. This method uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -1208,11 +1088,9 @@ Sets a device to the active state. This API uses an asynchronous callback to ret
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setCommunicationDevice](arkts-audio-audio-audioroutingmanager-i.md#setCommunicationDevice)
+**Substitutes:** [setCommunicationDevice](arkts-audio-audio-audioroutingmanager-i.md#setcommunicationdevice)
 
 <!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -1236,11 +1114,9 @@ Sets a device to the active state. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setCommunicationDevice](arkts-audio-audio-audioroutingmanager-i.md#setCommunicationDevice)
+**Substitutes:** [setCommunicationDevice](arkts-audio-audio-audioroutingmanager-i.md#setcommunicationdevice)
 
 <!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>--><!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>-End-->
 
@@ -1269,8 +1145,6 @@ Mutes or unmutes the microphone. This method uses an asynchronous callback to re
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.MICROPHONE
@@ -1295,8 +1169,6 @@ setMicrophoneMute(mute: boolean): Promise<void>
 Mutes or unmutes the microphone. This method uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -1328,8 +1200,6 @@ Sets the ringer mode. This method uses an asynchronous callback to return the re
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
@@ -1354,8 +1224,6 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 Sets the ringer mode. This method uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -1387,11 +1255,9 @@ Sets the volume for a volume type. This method uses an asynchronous callback to 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
+**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -1417,11 +1283,9 @@ Sets the volume for a volume type. This method uses a promise to return the resu
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
+**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 

@@ -4,11 +4,9 @@ Defines the response of ShowActionMenu.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md#ActionMenuSuccessResponse)
+**Substitutes:** [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md#actionmenusuccessresponse)
 
 <!--Device-prompt-interface ActionMenuSuccessResponse--><!--Device-prompt-interface ActionMenuSuccessResponse-End-->
 
@@ -31,8 +29,6 @@ Defines the index of data.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

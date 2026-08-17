@@ -4,10 +4,6 @@ Window animation manager.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace windowAnimationManager--><!--Device-unnamed-declare namespace windowAnimationManager-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -27,9 +23,9 @@ import { windowAnimationManager } from 'windowAnimationManager';
 
 | Name | Description |
 | --- | --- |
-| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizeWindowWithAnimation) | Minimize the window target with animation. |
-| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizeWindowWithAnimation-(System-API)) | Minimize the window target with animation. |
-| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md#setController) | Set the window animation controller. |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation) | Minimize the window target with animation. |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation-system-api) | Minimize the window target with animation. |
+| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md#setcontroller) | Set the window animation controller. |
 <!--DelEnd-->
 
 <!--Del-->

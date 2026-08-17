@@ -4,10 +4,6 @@ Provides APIs for user authentication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-class UserAuth--><!--Device-osAccount-class UserAuth-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -34,10 +30,6 @@ auth(
 Performs authentication of the current user.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -89,7 +81,7 @@ Performs authentication of the current user.
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -126,10 +118,6 @@ auth(
 Starts user authentication based on the specified challenge value, authentication type (PIN, facial, or fingerprint authentication), authentication trust level, and optional parameters (such as the account ID and authentication intent).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -183,7 +171,7 @@ Starts user authentication based on the specified challenge value, authenticatio
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -223,10 +211,6 @@ authUser(
 Performs authentication of the specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -280,7 +264,7 @@ Performs authentication of the specified user. This API uses an asynchronous cal
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -313,10 +297,6 @@ Cancels an authentication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void--><!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void-End-->
@@ -341,7 +321,7 @@ Cancels an authentication.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -373,10 +353,6 @@ A constructor used to create an instance for user authentication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -389,7 +365,7 @@ A constructor used to create an instance for user authentication.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let userAuth = new osAccount.UserAuth();
@@ -404,10 +380,6 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int
 Obtains the available status of the authentication capability corresponding to the specified authentication type and trust level.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -441,7 +413,7 @@ Obtains the available status of the authentication capability corresponding to t
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300117](../../apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) | PIN is expired. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -467,10 +439,6 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 Obtains the executor property based on the request. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -498,7 +466,7 @@ Obtains the executor property based on the request. This API uses an asynchronou
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -537,10 +505,6 @@ Obtains the executor property based on the request. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>--><!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>-End-->
@@ -572,7 +536,7 @@ Obtains the executor property based on the request. This API uses a promise to r
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -609,10 +573,6 @@ Obtains the specified property information of the associated executor based on t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>--><!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>-End-->
@@ -645,7 +605,7 @@ Obtains the specified property information of the associated executor based on t
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -694,10 +654,6 @@ Obtains this version number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UserAuth-getVersion(): int--><!--Device-UserAuth-getVersion(): int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -716,7 +672,7 @@ Obtains this version number.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let userAuth = new osAccount.UserAuth();
@@ -733,10 +689,6 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 Prepares for remote authentication. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -770,7 +722,7 @@ Prepares for remote authentication. This API uses a promise to return the result
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -805,10 +757,6 @@ Sets the property for the initialization algorithm. This API uses an asynchronou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void--><!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void-End-->
@@ -834,7 +782,7 @@ Sets the property for the initialization algorithm. This API uses an asynchronou
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -869,10 +817,6 @@ Sets the property for the initialization algorithm. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>--><!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>-End-->
@@ -903,7 +847,7 @@ Sets the property for the initialization algorithm. This API uses a promise to r
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

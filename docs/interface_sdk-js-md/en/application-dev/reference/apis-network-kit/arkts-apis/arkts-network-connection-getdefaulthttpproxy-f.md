@@ -12,13 +12,9 @@ import { connection } from 'connection';
 function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 ```
 
-Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet), the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) proxy settings are returned. In other cases, the proxy settings of default network are returned.
+Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet), the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) proxy settings are returned. In other cases, the proxy settings of default network are returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-connection-function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void--><!--Device-connection-function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void-End-->
 
@@ -28,7 +24,7 @@ Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProx
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpProxy&gt; | Yes | Returns the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) settings. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpProxy&gt; | Yes | Returns the default [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) settings. |
 
 **Error codes:**
 
@@ -37,7 +33,7 @@ Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProx
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -59,13 +55,9 @@ connection.getDefaultHttpProxy((error: BusinessError, data: connection.HttpProxy
 function getDefaultHttpProxy(): Promise<HttpProxy>
 ```
 
-Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet), the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) proxy settings are returned. In other cases, the proxy settings of default network are returned.
+Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet), the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) proxy settings are returned. In other cases, the proxy settings of default network are returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-connection-function getDefaultHttpProxy(): Promise<HttpProxy>--><!--Device-connection-function getDefaultHttpProxy(): Promise<HttpProxy>-End-->
 
@@ -84,7 +76,7 @@ Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProx
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

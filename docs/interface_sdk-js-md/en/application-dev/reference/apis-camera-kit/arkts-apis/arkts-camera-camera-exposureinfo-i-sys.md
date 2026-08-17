@@ -4,10 +4,6 @@ Describes the exposure information object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface ExposureInfo--><!--Device-camera-interface ExposureInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -31,10 +27,6 @@ Exposure time, in microseconds.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

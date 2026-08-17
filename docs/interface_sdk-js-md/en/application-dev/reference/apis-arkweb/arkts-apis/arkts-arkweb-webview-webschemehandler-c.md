@@ -1,12 +1,8 @@
 # WebSchemeHandler
 
-This class is used to intercept requests for a specified scheme.
+WebSchemeHandler is an interceptor class used to intercept network requests for a specified scheme (protocol), supporting scenarios such as custom protocol handling, local resource substitution, and specific request interception. Developers implement the onRequestStart callback to decide whether to intercept a request, and intercepted requests can have custom response content returned through WebResourceHandler. The WebSchemeHandler instance is registered to a specified scheme through the [setWebSchemeHandler](arkts-arkweb-webview-webviewcontroller-c.md#setwebschemehandler) method of WebviewController, thereby intercepting and processing all requests for that scheme. WebSchemeHandler works in conjunction with [WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md#webschemehandlerrequest), [WebResourceHandler](arkts-arkweb-webview-webresourcehandler-c.md#webresourcehandler), and [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md#webschemehandlerresponse): the onRequestStart callback receives a WebSchemeHandlerRequest (information about the intercepted request) and a WebResourceHandler (the handler used to return a custom response), and returns a boolean value indicating whether to intercept. onRequestStop is triggered when the request ends (only for intercepted requests) and is used for resource cleanup.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class WebSchemeHandler--><!--Device-webview-class WebSchemeHandler-End-->
 
@@ -25,13 +21,9 @@ onRequestStart(
       callback: (request: WebSchemeHandlerRequest, handler: WebResourceHandler) => boolean): void
 ```
 
-Callback for handling the request.
+Called when a request starts. In this callback, you can determine whether to intercept the request. If **false** is returned, the request is not intercepted and the handler is invalid. If **true** is returned, the request is intercepted. > **NOTE：**> > - Redirected URLs cannot be intercepted individually. To intercept a redirected URL, you must also intercept > the original request URL.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,7 +35,7 @@ Callback for handling the request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (request: WebSchemeHandlerRequest, handler: WebResourceHandler) =&gt; boolean | Yes | Callback of handling the request. If callback return false, it means no interception. |
+| callback | (request: WebSchemeHandlerRequest, handler: WebResourceHandler) =&gt; boolean | Yes | Callback invoked when interception of the corresponding scheme request starts. `request` is the request, and `handler` is used to provide custom response headers and response body to the Web component. The return value **true** indicates that the request is intercepted, and **false** indicates that the request is not intercepted and the handler becomes invalid. |
 
 **Error codes:**
 
@@ -57,13 +49,9 @@ Callback for handling the request.
 onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 ```
 
-Callback when the request is completed.
+Called when the request is complete. This callback is triggered only when the onRequestStart callback intercepts the request. Specifically, this callback is invoked in the following cases: 1. WebResourceHandler calls didFail or didFinish. 2. The request is interrupted due to other reasons (such as network errors or system exceptions).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -75,7 +63,7 @@ Callback when the request is completed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md)&gt; | Yes | Callback of request is completed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md)&gt; | Yes | Callback invoked when the request is complete. |
 
 **Error codes:**
 

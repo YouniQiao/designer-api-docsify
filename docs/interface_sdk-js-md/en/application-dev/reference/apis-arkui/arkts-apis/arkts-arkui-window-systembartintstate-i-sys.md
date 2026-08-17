@@ -4,10 +4,6 @@ Describes the callback for the current system bar.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface SystemBarTintState--><!--Device-window-interface SystemBarTintState-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -32,10 +28,6 @@ ID of the screen where the window is located. The value must be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemBarTintState-displayId: long--><!--Device-SystemBarTintState-displayId: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -53,10 +45,6 @@ All system bar information that has been changed.
 **Type:** Array&lt;[SystemBarRegionTint](arkts-arkui-window-systembarregiontint-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemBarTintState-regionTint: Array<SystemBarRegionTint>--><!--Device-SystemBarTintState-regionTint: Array<SystemBarRegionTint>-End-->
 

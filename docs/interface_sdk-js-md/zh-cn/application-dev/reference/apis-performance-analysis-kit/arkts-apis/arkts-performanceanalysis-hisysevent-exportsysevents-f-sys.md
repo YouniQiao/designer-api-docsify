@@ -10,10 +10,6 @@ function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
 
 <!--Device-hiSysEvent-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long--><!--Device-hiSysEvent-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long-End-->
@@ -46,7 +42,7 @@ function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
 | [11200304](../errorcode-hisysevent-sys.md#11200304-查询频率超过限制) | The query frequency exceeds the limit. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

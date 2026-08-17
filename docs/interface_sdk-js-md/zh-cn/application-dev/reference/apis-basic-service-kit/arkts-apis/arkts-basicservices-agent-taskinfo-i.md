@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-interface TaskInfo--><!--Device-agent-interface TaskInfo-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -24,10 +20,6 @@ readonly action: Action
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskInfo-readonly action: Action--><!--Device-TaskInfo-readonly action: Action-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -38,15 +30,11 @@ readonly action: Action
 readonly ctime: long
 ```
 
-创建任务的Unix时间戳（毫秒），由当前设备的系统生成。 说明：使用 [request.agent.search](arkts-basicservices-agent-search-f.md#search)进行 查询时，该值需处于[after,before]区间内才可正常查询到任务id，before和after信息详见 [Filter](arkts-basicservices-agent-filter-i.md#Filter)。
+创建任务的Unix时间戳（毫秒），由当前设备的系统生成。 说明：使用 [request.agent.search](arkts-basicservices-agent-search-f.md#search)进行 查询时，该值需处于[after,before]区间内才可正常查询到任务id，before和after信息详见 [Filter](arkts-basicservices-agent-filter-i.md#filter)。
 
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskInfo-readonly ctime: long--><!--Device-TaskInfo-readonly ctime: long-End-->
 
@@ -64,10 +52,6 @@ readonly data?: string | Array<FormItem>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskInfo-readonly data?: string | Array<FormItem>--><!--Device-TaskInfo-readonly data?: string | Array<FormItem>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -83,10 +67,6 @@ readonly description: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskInfo-readonly description: string--><!--Device-TaskInfo-readonly description: string-End-->
 
@@ -104,10 +84,6 @@ The extras of a task. For frontend, nothing now.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskInfo-readonly extras?: Record<string, string>--><!--Device-TaskInfo-readonly extras?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -123,10 +99,6 @@ readonly faults: Faults
 **类型：** [Faults](arkts-basicservices-agent-faults-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskInfo-readonly faults: Faults--><!--Device-TaskInfo-readonly faults: Faults-End-->
 
@@ -144,10 +116,6 @@ readonly gauge: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskInfo-readonly gauge: boolean--><!--Device-TaskInfo-readonly gauge: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -163,10 +131,6 @@ readonly mimeType: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskInfo-readonly mimeType: string--><!--Device-TaskInfo-readonly mimeType: string-End-->
 
@@ -184,10 +148,6 @@ readonly mode: Mode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskInfo-readonly mode: Mode--><!--Device-TaskInfo-readonly mode: Mode-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -203,10 +163,6 @@ readonly mtime: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskInfo-readonly mtime: long--><!--Device-TaskInfo-readonly mtime: long-End-->
 
@@ -224,10 +180,6 @@ readonly priority: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskInfo-readonly priority: int--><!--Device-TaskInfo-readonly priority: int-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -243,10 +195,6 @@ readonly progress: Progress
 **类型：** Progress
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskInfo-readonly progress: Progress--><!--Device-TaskInfo-readonly progress: Progress-End-->
 
@@ -264,10 +212,6 @@ readonly reason: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskInfo-readonly reason: string--><!--Device-TaskInfo-readonly reason: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -283,10 +227,6 @@ readonly retry: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskInfo-readonly retry: boolean--><!--Device-TaskInfo-readonly retry: boolean-End-->
 
@@ -304,10 +244,6 @@ readonly saveas?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskInfo-readonly saveas?: string--><!--Device-TaskInfo-readonly saveas?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -323,10 +259,6 @@ readonly tid: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskInfo-readonly tid: string--><!--Device-TaskInfo-readonly tid: string-End-->
 
@@ -344,10 +276,6 @@ readonly title: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskInfo-readonly title: string--><!--Device-TaskInfo-readonly title: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -364,10 +292,6 @@ readonly tries: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskInfo-readonly tries: int--><!--Device-TaskInfo-readonly tries: int-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -383,10 +307,6 @@ readonly url?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskInfo-readonly url?: string--><!--Device-TaskInfo-readonly url?: string-End-->
 

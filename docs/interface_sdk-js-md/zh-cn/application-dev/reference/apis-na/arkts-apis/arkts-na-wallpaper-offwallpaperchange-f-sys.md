@@ -10,10 +10,6 @@ function offWallpaperChange(callback?: WallpaperChangeObserver): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-wallpaper-function offWallpaperChange(callback?: WallpaperChangeObserver): void--><!--Device-wallpaper-function offWallpaperChange(callback?: WallpaperChangeObserver): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper

@@ -16,10 +16,6 @@ Obtains the names of interfaces in each sharing state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 <!--Device-sharing-function getSharingIfaces(state: SharingIfaceState, callback: AsyncCallback<Array<string>>): void--><!--Device-sharing-function getSharingIfaces(state: SharingIfaceState, callback: AsyncCallback<Array<string>>): void-End-->
@@ -46,7 +42,7 @@ Obtains the names of interfaces in each sharing state.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';
@@ -69,10 +65,6 @@ function getSharingIfaces(state: SharingIfaceState): Promise<Array<string>>
 Obtains the names of interfaces in each sharing state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -105,7 +97,7 @@ Obtains the names of interfaces in each sharing state.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';

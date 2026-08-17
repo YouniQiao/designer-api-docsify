@@ -16,10 +16,6 @@ Obtains the power mode of this device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-power-function getPowerMode(): DevicePowerMode--><!--Device-power-function getPowerMode(): DevicePowerMode-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
@@ -30,7 +26,7 @@ Obtains the power mode of this device.
 | --- | --- |
 | [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | Power mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let mode = power.getPowerMode();

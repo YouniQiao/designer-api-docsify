@@ -4,10 +4,6 @@ Describes [environment variable](../../../ui/arkts-env-system-property.md) data 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface UIEnvWindowAvoidAreaInfoVP--><!--Device-window-interface UIEnvWindowAvoidAreaInfoVP-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -24,15 +20,11 @@ import { window } from 'window';
 cutout: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_CUTOUT** type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_CUTOUT** type, in vp.
 
 **Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoVP-cutout: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-cutout: UIEnvAvoidAreaVP-End-->
 
@@ -44,15 +36,11 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#Avoid
 keyboard: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_KEYBOARD** type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD** type, in vp.
 
 **Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoVP-keyboard: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-keyboard: UIEnvAvoidAreaVP-End-->
 
@@ -64,15 +52,11 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#Avoid
 navigationIndicator: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_NAVIGATION_INDICATOR** type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_NAVIGATION_INDICATOR** type, in vp.
 
 **Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoVP-navigationIndicator: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-navigationIndicator: UIEnvAvoidAreaVP-End-->
 
@@ -84,15 +68,11 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#Avoid
 statusBar: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_SYSTEM** type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM** type, in vp.
 
 **Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoVP-statusBar: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-statusBar: UIEnvAvoidAreaVP-End-->
 

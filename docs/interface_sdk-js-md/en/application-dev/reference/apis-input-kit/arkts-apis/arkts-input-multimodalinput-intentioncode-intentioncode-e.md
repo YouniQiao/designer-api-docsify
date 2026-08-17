@@ -1,12 +1,8 @@
-# IntentionCode
+# IntentionCode(Intention Code)
 
 The **intentionCode** module maps the original events of the keyboard to intention codes for normalized interaction. For example, if the mapped event of the space bar on the keyboard is **INTENTION_SELECT**, the intent is to select an item.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum IntentionCode--><!--Device-unnamed-export declare enum IntentionCode-End-->
 
@@ -21,10 +17,6 @@ INTENTION_UNKNOWN = -1
 Unknown intent
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Up
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_UP = 1--><!--Device-IntentionCode-INTENTION_UP = 1-End-->
@@ -61,10 +49,6 @@ INTENTION_DOWN = 2
 Down
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +66,6 @@ Left
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_LEFT = 3--><!--Device-IntentionCode-INTENTION_LEFT = 3-End-->
@@ -101,10 +81,6 @@ INTENTION_RIGHT = 4
 Right
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,10 +98,6 @@ Select
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_SELECT = 5--><!--Device-IntentionCode-INTENTION_SELECT = 5-End-->
@@ -141,10 +113,6 @@ INTENTION_ESCAPE = 6
 Escape
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,10 +130,6 @@ Back
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_BACK = 7--><!--Device-IntentionCode-INTENTION_BACK = 7-End-->
@@ -181,10 +145,6 @@ INTENTION_FORWARD = 8
 Forward
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -202,10 +162,6 @@ Menu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_MENU = 9--><!--Device-IntentionCode-INTENTION_MENU = 9-End-->
@@ -221,10 +177,6 @@ INTENTION_PAGE_UP = 11
 Page up
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -242,10 +194,6 @@ Page down
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12--><!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12-End-->
@@ -262,10 +210,6 @@ Zoom out
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13--><!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13-End-->
@@ -281,10 +225,6 @@ INTENTION_ZOOM_IN = 14
 Zoom in
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

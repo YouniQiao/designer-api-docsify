@@ -4,10 +4,6 @@ Represents the options for verifying the user credential.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appAccount-interface VerifyCredentialOptions--><!--Device-appAccount-interface VerifyCredentialOptions-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -30,10 +26,6 @@ Credential value. The custom value, the value cannot exceed 1024 characters. By 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VerifyCredentialOptions-credential?: string--><!--Device-VerifyCredentialOptions-credential?: string-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -50,10 +42,6 @@ Credential type. The custom type, the value cannot exceed 1024 characters. By de
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VerifyCredentialOptions-credentialType?: string--><!--Device-VerifyCredentialOptions-credentialType?: string-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -69,10 +57,6 @@ Custom parameter object. By default, no value is passed in.
 **Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VerifyCredentialOptions-parameters?: Record<string, RecordData>--><!--Device-VerifyCredentialOptions-parameters?: Record<string, RecordData>-End-->
 

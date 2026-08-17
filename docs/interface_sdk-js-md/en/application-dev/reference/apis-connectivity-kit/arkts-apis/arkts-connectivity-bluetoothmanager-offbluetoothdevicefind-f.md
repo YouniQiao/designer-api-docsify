@@ -16,8 +16,6 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered. On 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** bluetoothDeviceFind
@@ -45,7 +43,7 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered. On 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

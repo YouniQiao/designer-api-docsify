@@ -4,11 +4,9 @@ Specific event features.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#WorkerEventTarget)
+**Substitutes:** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#workereventtarget)
 
 <!--Device-unnamed-export interface EventTarget--><!--Device-unnamed-export interface EventTarget-End-->
 
@@ -43,8 +41,6 @@ Adds an event listener to the worker.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** addEventListener
@@ -60,7 +56,7 @@ Adds an event listener to the worker.
 | type | string | Yes | Type of the event to listen for. |
 | listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | listener Callback to invoke when an event of the specified type occurs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // worker.ets
@@ -83,8 +79,6 @@ Dispatches the event defined for the worker.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** dispatchEvent
@@ -105,7 +99,7 @@ Dispatches the event defined for the worker.
 | --- | --- |
 | boolean |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // worker.ets
@@ -158,8 +152,6 @@ Removes all event listeners for the worker.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** removeAllListener
@@ -168,7 +160,7 @@ Removes all event listeners for the worker.
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 // worker.ets
@@ -193,8 +185,6 @@ Removes an event defined for the worker.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** removeEventListener
@@ -210,7 +200,7 @@ Removes an event defined for the worker.
 | type | string | Yes | Type of the event for which the event listener is removed. |
 | callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No | Callback of the event listener to remove. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // worker.ets

@@ -12,13 +12,9 @@ import { linkEnhance } from 'linkEnhance';
 function createConnection(deviceId: string, name: string): Connection
 ```
 
-Creates a **Connection** object on the device that functions as the client. The device can then initiate connection requests to the device that functions as the server.
+Creates a **Connection** object on the device that functions as the client. After the **Connection** object is created, subscribe to **on('connectResult')** and call **connect()** to initiate a connection request to the server. After the connection is successful, call **sendData()** to send data. If the connection is not required, call **close()** to destroy the **Connection** object to release resources.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -32,8 +28,8 @@ Creates a **Connection** object on the device that functions as the client. The 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID of the peer device, that is, the BLE MAC address of the peer device. For details about how to obtain the BLE MAC address, see [BLE Advertising and Scanning](../../../connectivity/bluetooth/ble-development-guide.md). |
-| name | string | Yes | Server name of the device to be connected. The value is a string of up to 255 bytes. It cannot be empty. |
+| deviceId | string | Yes | Device ID of the peer device, that is, the BLE MAC address of the peer device. For details about how to obtain the BLE MAC address, see [BLE Scanning and Advertising](../../../connectivity/bluetooth/ble-development-guide.md). |
+| name | string | Yes | Server name of the device to be connected. The value is a string of up to 255 bytes. It cannot be empty. If the length exceeds the upper limit or an empty string is passed, error code 32390206 is returned. |
 
 **Return value:**
 
@@ -49,7 +45,7 @@ Creates a **Connection** object on the device that functions as the client. The 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 On the device that functions as the client, call the createConnection() to create a Connection object.
 

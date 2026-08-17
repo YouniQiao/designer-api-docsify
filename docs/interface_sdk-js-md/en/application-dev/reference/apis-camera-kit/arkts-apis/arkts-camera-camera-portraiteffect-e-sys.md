@@ -4,10 +4,6 @@ Enumerates the portrait effects.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum PortraitEffect--><!--Device-camera-enum PortraitEffect-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ OFF = 0
 Disabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PortraitEffect-OFF = 0--><!--Device-PortraitEffect-OFF = 0-End-->
 
@@ -44,10 +36,6 @@ Circles.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PortraitEffect-CIRCLES = 1--><!--Device-PortraitEffect-CIRCLES = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -63,10 +51,6 @@ HEART = 2
 Heart-shaped.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PortraitEffect-HEART = 2--><!--Device-PortraitEffect-HEART = 2-End-->
 
@@ -84,10 +68,6 @@ Rotated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PortraitEffect-ROTATED = 3--><!--Device-PortraitEffect-ROTATED = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -104,10 +84,6 @@ Studio light.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PortraitEffect-STUDIO = 4--><!--Device-PortraitEffect-STUDIO = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -123,10 +99,6 @@ THEATER = 5
 Theater light.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PortraitEffect-THEATER = 5--><!--Device-PortraitEffect-THEATER = 5-End-->
 

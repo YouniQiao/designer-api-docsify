@@ -4,10 +4,6 @@ MifareUltralight Type definition
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tag-enum MifareUltralightType--><!--Device-tag-enum MifareUltralightType-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -21,10 +17,6 @@ TYPE_UNKNOWN = 0
 Mifare Type unknown
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ Mifare Ultralight
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MifareUltralightType-TYPE_ULTRALIGHT = 1--><!--Device-MifareUltralightType-TYPE_ULTRALIGHT = 1-End-->
@@ -61,10 +49,6 @@ TYPE_ULTRALIGHT_C = 2
 Mifare UltralightC
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Menu](arkts-na-menu-menu-f.md#Menu) | Defines Menu Component. |
+| [Menu](arkts-na-menu-menu-f.md#menu) | Defines Menu Component. |
 
 ### Interfaces
 

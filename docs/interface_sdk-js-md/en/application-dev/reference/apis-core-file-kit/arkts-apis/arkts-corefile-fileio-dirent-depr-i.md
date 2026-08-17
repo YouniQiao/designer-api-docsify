@@ -4,11 +4,9 @@ Provides information about files and directories. Before calling an API of the *
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-unnamed-declare interface Dirent--><!--Device-unnamed-declare interface Dirent-End-->
 
@@ -24,11 +22,9 @@ Checks whether this directory entry is a block special file. A block special fil
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isBlockDevice(): boolean--><!--Device-Dirent-isBlockDevice(): boolean-End-->
 
@@ -40,7 +36,7 @@ Checks whether this directory entry is a block special file. A block special fil
 | --- | --- |
 | boolean | Returns **true** if it is a block special file; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -57,11 +53,9 @@ Checks whether this directory entry is a character special file. A character spe
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isCharacterDevice(): boolean--><!--Device-Dirent-isCharacterDevice(): boolean-End-->
 
@@ -73,7 +67,7 @@ Checks whether this directory entry is a character special file. A character spe
 | --- | --- |
 | boolean | Returns **true** if it is a character special file; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -90,11 +84,9 @@ Checks whether this directory entry is a directory.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isDirectory(): boolean--><!--Device-Dirent-isDirectory(): boolean-End-->
 
@@ -106,7 +98,7 @@ Checks whether this directory entry is a directory.
 | --- | --- |
 | boolean | Returns **true** if it is a directory; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -123,11 +115,9 @@ Checks whether this directory entry is a named pipe (also called FIFO). Named pi
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isFIFO(): boolean--><!--Device-Dirent-isFIFO(): boolean-End-->
 
@@ -139,7 +129,7 @@ Checks whether this directory entry is a named pipe (also called FIFO). Named pi
 | --- | --- |
 | boolean | Returns **true** if it is a named pipe; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -156,11 +146,9 @@ Checks whether this directory entry is a regular file.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isFile(): boolean--><!--Device-Dirent-isFile(): boolean-End-->
 
@@ -172,7 +160,7 @@ Checks whether this directory entry is a regular file.
 | --- | --- |
 | boolean | Returns **true** if it is a regular file; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -189,11 +177,9 @@ Checks whether this directory entry is a socket.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isSocket(): boolean--><!--Device-Dirent-isSocket(): boolean-End-->
 
@@ -205,7 +191,7 @@ Checks whether this directory entry is a socket.
 | --- | --- |
 | boolean | Returns **true** if it is a socket; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -222,11 +208,9 @@ Checks whether this directory entry is a symbolic link.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isSymbolicLink(): boolean--><!--Device-Dirent-isSymbolicLink(): boolean-End-->
 
@@ -238,7 +222,7 @@ Checks whether this directory entry is a symbolic link.
 | --- | --- |
 | boolean | Returns **true** if it is a symbolic link; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -257,11 +241,9 @@ Directory entry name.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-readonly name: string--><!--Device-Dirent-readonly name: string-End-->
 

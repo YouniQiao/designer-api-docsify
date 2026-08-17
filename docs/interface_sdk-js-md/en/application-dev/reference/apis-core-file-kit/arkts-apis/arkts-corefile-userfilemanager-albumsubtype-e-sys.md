@@ -4,11 +4,9 @@ Enumerates the album subtypes.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#AlbumSubtype)
+**Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#albumsubtype)
 
 <!--Device-userFileManager-enum AlbumSubType--><!--Device-userFileManager-enum AlbumSubType-End-->
 
@@ -26,11 +24,9 @@ User album.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [USER_GENERIC](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#USER_GENERIC)
+**Substitutes:** [USER_GENERIC](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#usergeneric)
 
 <!--Device-AlbumSubType-USER_GENERIC = 1--><!--Device-AlbumSubType-USER_GENERIC = 1-End-->
 
@@ -48,11 +44,9 @@ Favorites.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#FAVORITE)
+**Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#favorite)
 
 <!--Device-AlbumSubType-FAVORITE = 1025--><!--Device-AlbumSubType-FAVORITE = 1025-End-->
 
@@ -70,11 +64,9 @@ Video album.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#VIDEO)
+**Substitutes:** [VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#video)
 
 <!--Device-AlbumSubType-VIDEO--><!--Device-AlbumSubType-VIDEO-End-->
 
@@ -92,11 +84,9 @@ Hidden album.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#HIDDEN)
+**Substitutes:** [HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#hidden)
 
 <!--Device-AlbumSubType-HIDDEN--><!--Device-AlbumSubType-HIDDEN-End-->
 
@@ -114,11 +104,9 @@ Trash.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#TRASH)
+**Substitutes:** [TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#trash)
 
 <!--Device-AlbumSubType-TRASH--><!--Device-AlbumSubType-TRASH-End-->
 
@@ -136,11 +124,9 @@ Album for screenshots and screen recording files.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [SCREENSHOT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#SCREENSHOT)
+**Substitutes:** [SCREENSHOT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#screenshot)
 
 <!--Device-AlbumSubType-SCREENSHOT--><!--Device-AlbumSubType-SCREENSHOT-End-->
 
@@ -158,11 +144,9 @@ Album for photos and videos taken by the camera.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [CAMERA](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#CAMERA)
+**Substitutes:** [CAMERA](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#camera)
 
 <!--Device-AlbumSubType-CAMERA--><!--Device-AlbumSubType-CAMERA-End-->
 
@@ -180,11 +164,9 @@ Any album.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [ANY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#ANY)
+**Substitutes:** [ANY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#any)
 
 <!--Device-AlbumSubType-ANY = 2147483647--><!--Device-AlbumSubType-ANY = 2147483647-End-->
 

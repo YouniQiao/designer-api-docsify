@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hiAppEvent-namespace domain--><!--Device-hiAppEvent-namespace domain-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
@@ -18,5 +14,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [OS](arkts-performanceanalysis-domain-con.md#OS) | 系统领域。 |
+| [OS](arkts-performanceanalysis-domain-con.md#os) | 系统领域。 |
 

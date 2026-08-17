@@ -10,10 +10,6 @@ function off(type: BundleChangedEvent, callback?: Callback<BundleChangedInfo>): 
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
 <!--Device-bundleMonitor-function off(type: BundleChangedEvent, callback?: Callback<BundleChangedInfo>): void--><!--Device-bundleMonitor-function off(type: BundleChangedEvent, callback?: Callback<BundleChangedInfo>): void-End-->
@@ -27,7 +23,7 @@ function off(type: BundleChangedEvent, callback?: Callback<BundleChangedInfo>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | 是 | 注销监听的事件类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | 否 | 回调函数，当回调成功时，err为undefined，data为应用变更信息；否则为错误对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | 否 | 回调函数，当回调成功时，err为undefined，data为应用变更信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -37,7 +33,7 @@ function off(type: BundleChangedEvent, callback?: Callback<BundleChangedInfo>): 
 | [201](../../errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleMonitor } from '@kit.AbilityKit';

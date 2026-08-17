@@ -4,9 +4,7 @@ The message received or sent from web message port.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-webview-class WebMessageExt--><!--Device-webview-class WebMessageExt-End-->
 
@@ -22,9 +20,7 @@ Get the array value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-getArray(): Array<string | double | long | boolean>--><!--Device-WebMessageExt-getArray(): Array<string | double | long | boolean>-End-->
 
@@ -52,9 +48,7 @@ Get the array buffer value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer--><!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer-End-->
 
@@ -82,9 +76,7 @@ Get the boolean value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-getBoolean(): boolean--><!--Device-WebMessageExt-getBoolean(): boolean-End-->
 
@@ -112,9 +104,7 @@ Get the error value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-getError(): Error--><!--Device-WebMessageExt-getError(): Error-End-->
 
@@ -142,9 +132,7 @@ Get the number value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-getNumber(): double | long--><!--Device-WebMessageExt-getNumber(): double | long-End-->
 
@@ -172,9 +160,7 @@ Get the string value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-getString(): string--><!--Device-WebMessageExt-getString(): string-End-->
 
@@ -202,9 +188,7 @@ Get the type of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-getType(): WebMessageType--><!--Device-WebMessageExt-getType(): WebMessageType-End-->
 
@@ -214,7 +198,7 @@ Get the type of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebMessageType](arkts-na-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
+| [WebMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
 
 ## setArray
 
@@ -226,9 +210,7 @@ Set the array value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-setArray(message: Array<string | double | long | boolean>): void--><!--Device-WebMessageExt-setArray(message: Array<string | double | long | boolean>): void-End-->
 
@@ -257,9 +239,7 @@ Set the array buffer value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void--><!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void-End-->
 
@@ -288,9 +268,7 @@ Set the boolean value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-setBoolean(message: boolean): void--><!--Device-WebMessageExt-setBoolean(message: boolean): void-End-->
 
@@ -319,9 +297,7 @@ Set the error value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-setError(message: Error): void--><!--Device-WebMessageExt-setError(message: Error): void-End-->
 
@@ -350,9 +326,7 @@ Set the number value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-setNumber(message: double): void--><!--Device-WebMessageExt-setNumber(message: double): void-End-->
 
@@ -381,9 +355,7 @@ Set the string value of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-setString(message: string): void--><!--Device-WebMessageExt-setString(message: string): void-End-->
 
@@ -412,9 +384,7 @@ Set the type of the web message.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebMessageExt-setType(type: WebMessageType): void--><!--Device-WebMessageExt-setType(type: WebMessageType): void-End-->
 
@@ -424,7 +394,7 @@ Set the type of the web message.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [WebMessageType](arkts-na-webview-webmessagetype-e.md) | 是 | set WebMessageType type data |
+| type | [WebMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessagetype-e.md) | 是 | set WebMessageType type data |
 
 **错误码：**
 

@@ -16,8 +16,6 @@ Saves a character string name and its value to the database.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** setValue
@@ -49,8 +47,6 @@ function setValue(dataAbilityHelper: DataAbilityHelper, name: string, value: obj
 Saves a character string name and its value to the database.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

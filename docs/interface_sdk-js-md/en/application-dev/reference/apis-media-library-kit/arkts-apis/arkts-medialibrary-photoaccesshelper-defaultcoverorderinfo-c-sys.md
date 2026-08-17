@@ -4,10 +4,6 @@ Default Cover Order
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-export class DefaultCoverOrderInfo--><!--Device-photoAccessHelper-export class DefaultCoverOrderInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -32,10 +28,6 @@ Album subtype
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DefaultCoverOrderInfo-public albumSubtype: AlbumSubtype--><!--Device-DefaultCoverOrderInfo-public albumSubtype: AlbumSubtype-End-->
@@ -55,10 +47,6 @@ Album type
 **Type:** AlbumType
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Virtual path of the album.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DefaultCoverOrderInfo-public lpath?: string--><!--Device-DefaultCoverOrderInfo-public lpath?: string-End-->
@@ -103,10 +87,6 @@ The field of default cover order.
 **Type:** [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ The subfield of default cover order.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DefaultCoverOrderInfo-public orderSubKey: PhotoKeys--><!--Device-DefaultCoverOrderInfo-public orderSubKey: PhotoKeys-End-->
@@ -151,10 +127,6 @@ order type The value must be an integer within [0,1].
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

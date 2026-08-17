@@ -16,10 +16,6 @@ Obtains the list of objects that are leaked and registered using **jsLeakWatcher
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-jsLeakWatcher-function check(): string--><!--Device-jsLeakWatcher-function check(): string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -30,7 +26,7 @@ Obtains the list of objects that are leaked and registered using **jsLeakWatcher
 | --- | --- |
 | string | List of leaked objects that are not reclaimed after GC is triggered. <br>Note: If this API is successful, a list of leaked objects in JSON format is returned. Otherwise, an empty string is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let leakObjlist:string = jsLeakWatcher.check();

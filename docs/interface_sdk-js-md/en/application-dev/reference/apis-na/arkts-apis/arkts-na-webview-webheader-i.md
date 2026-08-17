@@ -4,9 +4,7 @@ Defines the Web's request/response header.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-interface WebHeader--><!--Device-webview-interface WebHeader-End-->
 
@@ -24,9 +22,7 @@ Gets the key of the request/response header.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebHeader-headerKey: string--><!--Device-WebHeader-headerKey: string-End-->
 
@@ -44,9 +40,7 @@ Gets the value of the request/response header.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebHeader-headerValue: string--><!--Device-WebHeader-headerValue: string-End-->
 

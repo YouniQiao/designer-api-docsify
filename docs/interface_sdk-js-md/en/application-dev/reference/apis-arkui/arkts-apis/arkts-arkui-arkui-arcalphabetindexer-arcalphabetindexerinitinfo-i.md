@@ -4,10 +4,6 @@ Initialization parameters for the **ArcAlphabetIndexer** component.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ArcAlphabetIndexerInitInfo--><!--Device-unnamed-declare interface ArcAlphabetIndexerInitInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -31,10 +27,6 @@ Array of alphabet index strings. It cannot be set to empty.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcAlphabetIndexerInitInfo-arrayValue: string[]--><!--Device-ArcAlphabetIndexerInitInfo-arrayValue: string[]-End-->
@@ -52,10 +44,6 @@ Index of the initial selected item. If the value is out of range, the default va
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

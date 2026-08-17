@@ -1,12 +1,8 @@
 # GeometryType
 
-Types of geometric shapes.
+Enumerates the geometry types.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export enum GeometryType--><!--Device-unnamed-export enum GeometryType-End-->
 
@@ -18,13 +14,9 @@ Types of geometric shapes.
 CUSTOM = 0
 ```
 
-A custom geometric shape.
+Custom geometry type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeometryType-CUSTOM = 0--><!--Device-GeometryType-CUSTOM = 0-End-->
 
@@ -36,13 +28,9 @@ A custom geometric shape.
 CUBE = 1
 ```
 
-A cube.
+Cube.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeometryType-CUBE = 1--><!--Device-GeometryType-CUBE = 1-End-->
 
@@ -54,13 +42,9 @@ A cube.
 PLANE = 2
 ```
 
-A plane.
+Plane.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeometryType-PLANE = 2--><!--Device-GeometryType-PLANE = 2-End-->
 
@@ -72,13 +56,9 @@ A plane.
 SPHERE = 3
 ```
 
-A sphere.
+Sphere.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeometryType-SPHERE = 3--><!--Device-GeometryType-SPHERE = 3-End-->
 
@@ -90,13 +70,9 @@ A sphere.
 CYLINDER = 4
 ```
 
-A cylinder.
+Cylinder.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeometryType-CYLINDER = 4--><!--Device-GeometryType-CYLINDER = 4-End-->
 

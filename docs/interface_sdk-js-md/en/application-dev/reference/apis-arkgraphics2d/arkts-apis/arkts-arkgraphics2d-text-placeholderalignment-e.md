@@ -4,10 +4,6 @@ Enumerates the vertical alignment modes of a placeholder relative to the surroun
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-enum PlaceholderAlignment--><!--Device-text-enum PlaceholderAlignment-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ OFFSET_AT_BASELINE = 0
 Aligns the baseline of the placeholder to the baseline of the text.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,10 +34,6 @@ Aligns the bottom edge of the placeholder to the baseline of the text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-PlaceholderAlignment-ABOVE_BASELINE = 1--><!--Device-PlaceholderAlignment-ABOVE_BASELINE = 1-End-->
@@ -61,10 +49,6 @@ BELOW_BASELINE = 2
 Aligns the top edge of the placeholder to the baseline of the text.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -82,10 +66,6 @@ Aligns the top edge of the placeholder to the top edge of the text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-PlaceholderAlignment-TOP_OF_ROW_BOX = 3--><!--Device-PlaceholderAlignment-TOP_OF_ROW_BOX = 3-End-->
@@ -101,10 +81,6 @@ BOTTOM_OF_ROW_BOX = 4
 Aligns the bottom edge of the placeholder to the bottom edge of the text.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -122,10 +98,6 @@ Center-aligned.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-PlaceholderAlignment-CENTER_OF_ROW_BOX = 5--><!--Device-PlaceholderAlignment-CENTER_OF_ROW_BOX = 5-End-->
@@ -141,10 +113,6 @@ FOLLOW_PARAGRAPH = 6
 Aligns with the text baseline.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -1,12 +1,8 @@
 # MinSpeed
 
-任务的最低限速配置。若任务速度持续低于设定值并达到指定时长，则任务失败，失败原因为 [LOW_SPEED](arkts-basicservices-agent-faults-e.md#Faults)。
+任务的最低限速配置。若任务速度持续低于设定值并达到指定时长，则任务失败，失败原因为 [LOW_SPEED](arkts-basicservices-agent-faults-e.md#faults)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-agent-interface MinSpeed--><!--Device-agent-interface MinSpeed-End-->
 
@@ -24,10 +20,6 @@ duration: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MinSpeed-duration: int--><!--Device-MinSpeed-duration: int-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -43,10 +35,6 @@ speed: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MinSpeed-speed: long--><!--Device-MinSpeed-speed: long-End-->
 

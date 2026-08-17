@@ -16,10 +16,6 @@ Get the default cellular data card.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-data-function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void--><!--Device-data-function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -30,7 +26,7 @@ Get the default cellular data card.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates the default cellular data slot id. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';
@@ -56,10 +52,6 @@ Get the default cellular data card.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-data-function getDefaultCellularDataSlotId(): Promise<int>--><!--Device-data-function getDefaultCellularDataSlotId(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -70,7 +62,7 @@ Get the default cellular data card.
 | --- | --- |
 | Promise&lt;int&gt; | Returns the default cellular data slot id. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

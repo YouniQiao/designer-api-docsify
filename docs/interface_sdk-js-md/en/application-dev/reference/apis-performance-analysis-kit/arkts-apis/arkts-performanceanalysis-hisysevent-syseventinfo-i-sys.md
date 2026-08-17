@@ -4,10 +4,6 @@ Defines a system event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiSysEvent-interface SysEventInfo--><!--Device-hiSysEvent-interface SysEventInfo-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -32,10 +28,6 @@ Event domain.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SysEventInfo-domain: string--><!--Device-SysEventInfo-domain: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -53,10 +45,6 @@ Event type.
 **Type:** EventType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SysEventInfo-eventType: EventType--><!--Device-SysEventInfo-eventType: EventType-End-->
 
@@ -76,10 +64,6 @@ Event name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SysEventInfo-name: string--><!--Device-SysEventInfo-name: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -97,10 +81,6 @@ Event parameters.
 **Type:** Record&lt;string, boolean \| int \| double \| string \| bigint \| boolean[] \| int[] \| double[] \| string[] \| bigint[]&gt; \| null \| undefined
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SysEventInfo-params?: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> | null | undefined--><!--Device-SysEventInfo-params?: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> | null | undefined-End-->
 

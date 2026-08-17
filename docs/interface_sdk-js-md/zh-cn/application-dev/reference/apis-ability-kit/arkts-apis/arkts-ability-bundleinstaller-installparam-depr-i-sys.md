@@ -4,11 +4,9 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam（系统接口）)
+**替代接口：** [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam系统接口)
 
 <!--Device-unnamed-export interface InstallParam--><!--Device-unnamed-export interface InstallParam-End-->
 
@@ -30,11 +28,9 @@ installFlag: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [installFlag](arkts-ability-installer-installparam-i-sys.md#installFlag)
+**替代接口：** [installFlag](arkts-ability-installer-installparam-i-sys.md#installflag)
 
 <!--Device-InstallParam-installFlag: number--><!--Device-InstallParam-installFlag: number-End-->
 
@@ -56,11 +52,9 @@ isKeepData: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [isKeepData](arkts-ability-installer-installparam-i-sys.md#isKeepData)
+**替代接口：** [isKeepData](arkts-ability-installer-installparam-i-sys.md#iskeepdata)
 
 <!--Device-InstallParam-isKeepData: boolean--><!--Device-InstallParam-isKeepData: boolean-End-->
 
@@ -82,11 +76,9 @@ userId: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [userId](arkts-ability-installer-installparam-i-sys.md#userId)
+**替代接口：** [userId](arkts-ability-installer-installparam-i-sys.md#userid)
 
 <!--Device-InstallParam-userId: number--><!--Device-InstallParam-userId: number-End-->
 

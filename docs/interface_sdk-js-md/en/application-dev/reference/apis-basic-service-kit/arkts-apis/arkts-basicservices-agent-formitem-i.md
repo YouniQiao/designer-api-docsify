@@ -4,10 +4,6 @@ Describes the form item of a task.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-interface FormItem--><!--Device-agent-interface FormItem-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -30,10 +26,6 @@ Form parameter name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormItem-name: string--><!--Device-FormItem-name: string-End-->
@@ -51,10 +43,6 @@ Form parameter value.
 **Type:** string \| [FileSpec](arkts-basicservices-agent-filespec-i.md) \| Array&lt;[FileSpec](arkts-basicservices-agent-filespec-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

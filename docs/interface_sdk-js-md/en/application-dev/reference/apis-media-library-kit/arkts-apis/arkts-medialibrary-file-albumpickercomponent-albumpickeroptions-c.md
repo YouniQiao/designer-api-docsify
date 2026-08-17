@@ -4,10 +4,6 @@ Represents the **AlbumPicker** configuration.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class AlbumPickerOptions--><!--Device-unnamed-export declare class AlbumPickerOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -34,10 +30,6 @@ Type of the filter. You can use it to display images, videos, or both. If this p
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AlbumPickerOptions-filterType?: photoAccessHelper.PhotoViewMIMETypes--><!--Device-AlbumPickerOptions-filterType?: photoAccessHelper.PhotoViewMIMETypes-End-->
@@ -56,10 +48,6 @@ Font size. For details about the value range, see fontSize.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AlbumPickerOptions-fontSize?: number | string--><!--Device-AlbumPickerOptions-fontSize?: number | string-End-->
@@ -77,10 +65,6 @@ Theme color of the album page. The options are **AUTO**, **Light**, and **Dark**
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

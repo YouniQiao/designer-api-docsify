@@ -12,13 +12,9 @@ import { audio } from 'audio';
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer-(System-API)) instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-api) instance. This method uses an asynchronous callback to return the renderer instance.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void-End-->
 
@@ -33,7 +29,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer-(System-
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Yes | Callback used to return the tonePlayer instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -62,13 +58,9 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer-(System-API)) instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-api) instance. This method uses an asynchronous callback to return the renderer instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void-End-->
 
@@ -96,13 +88,9 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer-(System-
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer-(System-API)) instance. This method uses a promise to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-api) instance. This method uses a promise to return the renderer instance.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>-End-->
 
@@ -122,7 +110,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer-(System-
 | --- | --- |
 | Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Promise used to return the tonePlayer instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -144,13 +132,9 @@ async function createTonePlayerBefore(){
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer-(System-API)) instance. This method uses a promise to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-api) instance. This method uses a promise to return the renderer instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>-End-->
 

@@ -16,10 +16,6 @@ Obtains the call status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-function getCallStateSync(): CallState--><!--Device-call-function getCallStateSync(): CallState-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -30,7 +26,7 @@ Obtains the call status.
 | --- | --- |
 | CallState | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let callState: call.CallState = call.getCallStateSync();

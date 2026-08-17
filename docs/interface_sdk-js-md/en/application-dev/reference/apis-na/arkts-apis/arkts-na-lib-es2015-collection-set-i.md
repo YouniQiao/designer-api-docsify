@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Set--><!--Device-unnamed-interface Set-End-->
 
 ## add
@@ -17,10 +13,6 @@ add(value: T): this
 Appends a new element with a specified value to the end of the Set.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Set-add(value: T): this--><!--Device-Set-add(value: T): this-End-->
 
@@ -44,10 +36,6 @@ clear(): void
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Set-clear(): void--><!--Device-Set-clear(): void-End-->
 
 ## delete
@@ -59,10 +47,6 @@ delete(value: T): boolean
 Removes a specified value from the Set.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Set-delete(value: T): boolean--><!--Device-Set-delete(value: T): boolean-End-->
 
@@ -88,10 +72,6 @@ Executes a provided function once per each value in the Set object, in insertion
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Set-forEach(callbackfn: (value: T, value2: T, set: Set<T>) => void, thisArg?: any): void--><!--Device-Set-forEach(callbackfn: (value: T, value2: T, set: Set<T>) => void, thisArg?: any): void-End-->
 
 **Parameters:**
@@ -108,10 +88,6 @@ has(value: T): boolean
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Set-has(value: T): boolean--><!--Device-Set-has(value: T): boolean-End-->
 
@@ -136,10 +112,6 @@ readonly size: number
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Set-readonly size: number--><!--Device-Set-readonly size: number-End-->
 

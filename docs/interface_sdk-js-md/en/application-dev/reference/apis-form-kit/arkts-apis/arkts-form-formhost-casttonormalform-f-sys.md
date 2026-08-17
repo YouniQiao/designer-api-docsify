@@ -16,10 +16,6 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 <!--Device-formHost-function castToNormalForm(formId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function castToNormalForm(formId: string, callback: AsyncCallback<void>): void-End-->
@@ -58,10 +54,6 @@ function castToNormalForm(formId: string): Promise<void>
 Converts a temporary widget to a normal one. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

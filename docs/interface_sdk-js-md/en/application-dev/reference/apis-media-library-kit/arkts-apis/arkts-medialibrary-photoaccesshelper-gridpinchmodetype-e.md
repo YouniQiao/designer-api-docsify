@@ -4,10 +4,6 @@ Enumeration type of grid pinch mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-export enum GridPinchModeType--><!--Device-photoAccessHelper-export enum GridPinchModeType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,10 +17,6 @@ FULL_FUNCTION_GRID = 0
 Users are allowed to pinch the grid, and then select it or click it to operate the large image.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

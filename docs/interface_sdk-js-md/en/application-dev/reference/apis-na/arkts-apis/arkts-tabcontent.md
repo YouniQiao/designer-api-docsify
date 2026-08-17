@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [TabContent](arkts-na-tabcontent-tabcontent-f.md#TabContent) | Defines TabContent Component |
+| [TabContent](arkts-na-tabcontent-tabcontent-f.md#tabcontent) | Defines TabContent Component |
 
 ### Classes
 

@@ -16,10 +16,6 @@ Creates this checksum object. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-zlib-function createChecksum(): Promise<Checksum>--><!--Device-zlib-function createChecksum(): Promise<Checksum>-End-->
@@ -32,7 +28,7 @@ Creates this checksum object. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[Checksum](arkts-basicservices-zlib-checksum-i.md)&gt; | Promise used to return the created checksum object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

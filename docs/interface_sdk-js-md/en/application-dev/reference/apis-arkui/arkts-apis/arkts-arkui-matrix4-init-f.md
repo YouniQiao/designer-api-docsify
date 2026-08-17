@@ -35,10 +35,6 @@ Matrix constructor, which is used to create a 4 x 4 matrix with the input parame
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-matrix4-function init(    options: [      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number    ]  ): Matrix4Transit--><!--Device-matrix4-function init(    options: [      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number    ]  ): Matrix4Transit-End-->
@@ -57,7 +53,7 @@ Matrix constructor, which is used to create a 4 x 4 matrix with the input parame
 | --- | --- |
 | Matrix4Transit | 4 x 4 matrix object created based on the input parameters. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { matrix4 } from '@kit.ArkUI';

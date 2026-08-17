@@ -10,10 +10,6 @@ function setAppDragSwitchState(enabled: boolean, bundleName: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-dragInteraction-function setAppDragSwitchState(enabled: boolean, bundleName: string): void--><!--Device-dragInteraction-function setAppDragSwitchState(enabled: boolean, bundleName: string): void-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag

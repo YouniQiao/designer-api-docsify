@@ -4,9 +4,7 @@ Defines the triggered when the file selector shows.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnShowFileSelectorEvent--><!--Device-unnamed-export declare interface OnShowFileSelectorEvent-End-->
 
@@ -24,9 +22,7 @@ Encompassed message information as parameters to fileSelector.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnShowFileSelectorEvent-fileSelector: FileSelectorParam--><!--Device-OnShowFileSelectorEvent-fileSelector: FileSelectorParam-End-->
 
@@ -44,9 +40,7 @@ Defines the file selector result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnShowFileSelectorEvent-result: FileSelectorResult--><!--Device-OnShowFileSelectorEvent-result: FileSelectorResult-End-->
 

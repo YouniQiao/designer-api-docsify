@@ -4,10 +4,6 @@ Provides the number formatting capability, supporting automatic unit conversion 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class AdvancedMeasureFormat--><!--Device-i18n-export class AdvancedMeasureFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Creates a **NumberFormat** object for the specified locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -45,9 +37,9 @@ Creates a **NumberFormat** object for the specified locale.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | numberFormat | Intl.NumberFormat | Yes | Indicates the number format object that used to format number. |
-| options | [AdvancedMeasureFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-advancedmeasureformatoptions-i.md) | No |  |
+| options | [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | No |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -67,10 +59,6 @@ format(num: double): string
 Formats a number by appropriate measure for usage scenarios. For instance, when formatting the value 12.3 for rainfall in the English locale, the output is "12.3 mm".
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,7 +80,7 @@ Formats a number by appropriate measure for usage scenarios. For instance, when 
 | --- | --- |
 | string | Formatted text. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

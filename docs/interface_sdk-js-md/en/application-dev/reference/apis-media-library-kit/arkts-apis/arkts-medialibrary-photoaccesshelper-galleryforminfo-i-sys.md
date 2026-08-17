@@ -4,10 +4,6 @@ Defines the Gallery widget information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface GalleryFormInfo--><!--Device-photoAccessHelper-interface GalleryFormInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -32,10 +28,6 @@ URIs of the images or albums bound to the widget. This parameter cannot be empty
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GalleryFormInfo-assetUris?: Array<string>--><!--Device-GalleryFormInfo-assetUris?: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -53,10 +45,6 @@ Widget ID, which is provided when a widget is created in Gallery.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GalleryFormInfo-formId: string--><!--Device-GalleryFormInfo-formId: string-End-->
 

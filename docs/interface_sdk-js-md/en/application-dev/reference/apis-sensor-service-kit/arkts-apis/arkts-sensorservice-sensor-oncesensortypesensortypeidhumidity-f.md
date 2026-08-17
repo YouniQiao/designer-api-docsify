@@ -16,8 +16,6 @@ Subscribes to only one data change of the humidity sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** once(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;)

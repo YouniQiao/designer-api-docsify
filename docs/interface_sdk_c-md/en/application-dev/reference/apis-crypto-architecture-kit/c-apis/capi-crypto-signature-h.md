@@ -4,6 +4,8 @@
 
 Defines the signing and verification interfaces.
 
+**Include**: <CryptoArchitectureKit/crypto_signature.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

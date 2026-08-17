@@ -4,10 +4,6 @@ File mapping object. Before invoking the FileMapping method, you need to use the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface FileMapping--><!--Device-unnamed-declare interface FileMapping-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -42,10 +38,6 @@ Obtains the capacity of the file mapping area.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-capacity(): number--><!--Device-FileMapping-capacity(): number-End-->
@@ -76,10 +68,6 @@ Mode reversal. That is, the limit attribute is set to the current position, and 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-flip(): void--><!--Device-FileMapping-flip(): void-End-->
@@ -103,10 +91,6 @@ getLimit(): number
 Obtains the upper bound of the readable and writable area of the file mapping area.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,10 +122,6 @@ Gets the current location of the file mapping area.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-getPosition(): number--><!--Device-FileMapping-getPosition(): number-End-->
@@ -171,10 +151,6 @@ msync(): Promise<void>
 Synchronizes the dirty page data in the entire file mapping area to the disk file and uses the promise asynchronous callback function. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,10 +184,6 @@ msync(position: number, length: number): Promise<void>
 Synchronizes the dirty page data in the specified range of the file mapping area to the disk file and uses the promise asynchronous callback function. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -253,10 +225,6 @@ Synchronizes the dirty page data of the entire file mapping area to the disk fil
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-msyncSync(): void--><!--Device-FileMapping-msyncSync(): void-End-->
@@ -283,10 +251,6 @@ msyncSync(position: number, length: number): void
 Synchronize the dirty page data in the specified range of the file mapping area to the disk file by using the synchronization method. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -321,10 +285,6 @@ read(buffer: ArrayBuffer, length?: number): number
 Reads data from the current position and moves the position backward by the number of bytes actually read.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -364,10 +324,6 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 Reads data from the specified location without affecting the current location.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -409,10 +365,6 @@ Obtains the number of remaining bytes between the current position (position) an
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-remaining(): number--><!--Device-FileMapping-remaining(): number-End-->
@@ -442,10 +394,6 @@ setLimit(limit: number): void
 Sets the upper bound of the readable and writable area of the file mapping area. The upper bound does not exceed the total capacity of the mapping area (0 &lt;= limit &lt;= capacity).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -477,10 +425,6 @@ Sets the current location of the file mapping area.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-setPosition(position: number): void--><!--Device-FileMapping-setPosition(position: number): void-End-->
@@ -511,10 +455,6 @@ Releases the file mapping area and use the promise asynchronous callback functio
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-unmap(): Promise<void>--><!--Device-FileMapping-unmap(): Promise<void>-End-->
@@ -544,10 +484,6 @@ Releases the file mapping area by using the synchronization method.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-unmapSync(): void--><!--Device-FileMapping-unmapSync(): void-End-->
@@ -570,10 +506,6 @@ write(data: ArrayBuffer, length?: number): number
 Writes data from the current location and moves the location backward by the number of bytes actually written.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -614,10 +546,6 @@ write(position: number, data: ArrayBuffer, length?: number): number
 Writes data from the specified location without affecting the current location.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,8 +16,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -36,7 +34,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [add](arkts-corefile-recent-add-f-sys.md#add) | 将uri对应的文件加入最近访问列表。 |
-| [listFile](arkts-corefile-recent-listfile-f-sys.md#listFile) | 查询最近访问列表中文件信息。 |
+| [listFile](arkts-corefile-recent-listfile-f-sys.md#listfile) | 查询最近访问列表中文件信息。 |
 | [remove](arkts-corefile-recent-remove-f-sys.md#remove) | 将uri对应的文件从最近访问列表中移除。 |
 <!--DelEnd-->
 

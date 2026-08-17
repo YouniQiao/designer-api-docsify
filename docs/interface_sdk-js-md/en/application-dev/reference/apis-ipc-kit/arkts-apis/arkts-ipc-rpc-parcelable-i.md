@@ -4,10 +4,6 @@ Writes an object to a **MessageSequence** and reads it from the **MessageSequenc
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-rpc-interface Parcelable--><!--Device-rpc-interface Parcelable-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -28,10 +24,6 @@ Marshals this **Parcelable** object into a **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Parcelable-marshalling(dataOut: MessageSequence): boolean--><!--Device-Parcelable-marshalling(dataOut: MessageSequence): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -48,7 +40,7 @@ Marshals this **Parcelable** object into a **MessageSequence** object.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -95,10 +87,6 @@ Unmarshals this **Parcelable** object from a **MessageSequence** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Parcelable-unmarshalling(dataIn: MessageSequence): boolean--><!--Device-Parcelable-unmarshalling(dataIn: MessageSequence): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -115,7 +103,7 @@ Unmarshals this **Parcelable** object from a **MessageSequence** object.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

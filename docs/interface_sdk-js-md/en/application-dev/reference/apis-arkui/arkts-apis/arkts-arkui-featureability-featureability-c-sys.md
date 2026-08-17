@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 **Substitutes:** FeatureAbility
@@ -23,8 +21,6 @@ static sendMsg(options: SendMessageOptions): void
 Sends messages to the destination device.
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 
@@ -50,8 +46,6 @@ Listens for messages sent from other devices.
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-FeatureAbility-static subscribeMsg(options: SubscribeMessageOptions): void--><!--Device-FeatureAbility-static subscribeMsg(options: SubscribeMessageOptions): void-End-->
@@ -75,8 +69,6 @@ static unsubscribeMsg(): void
 Cancel the listening for messages sent from other devices.
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 

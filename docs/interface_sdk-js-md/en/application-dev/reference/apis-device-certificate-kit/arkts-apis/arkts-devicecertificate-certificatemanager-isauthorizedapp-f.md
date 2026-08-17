@@ -16,10 +16,6 @@ Checks whether this application is authorized by the specified user credential. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function isAuthorizedApp(keyUri: string): Promise<boolean>--><!--Device-certificateManager-function isAuthorizedApp(keyUri: string): Promise<boolean>-End-->
@@ -46,7 +42,7 @@ Checks whether this application is authorized by the specified user credential. 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

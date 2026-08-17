@@ -4,10 +4,6 @@ Window animation controller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-windowAnimationManager-export interface WindowAnimationController--><!--Device-windowAnimationManager-export interface WindowAnimationController-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -31,10 +27,6 @@ Called on application transition.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowAnimationController-onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void-End-->
@@ -51,7 +43,7 @@ Called on application transition.
 | toWindowTarget | WindowAnimationTarget | Yes | Window target of the destination application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
-## Examples
+**Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
 
@@ -64,10 +56,6 @@ onCloseWindow(closingWindowTarget: WindowAnimationTarget, finishCallback: Window
 Called on closing a window.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,7 +72,7 @@ Called on closing a window.
 | closingWindowTarget | WindowAnimationTarget | Yes |  |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
-## Examples
+**Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
 
@@ -98,10 +86,6 @@ onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
 Called on minimizing a window.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,7 +102,7 @@ Called on minimizing a window.
 | minimizingWindowTarget | WindowAnimationTarget | Yes | Window target of the minimizing window. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
-## Examples
+**Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
 
@@ -131,10 +115,6 @@ onScreenUnlock(finishCallback: WindowAnimationFinishedCallback): void
 Called on unlocking the screen.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,10 +141,6 @@ Called on starting an application form launcher.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowAnimationController-onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void-End-->
@@ -180,7 +156,7 @@ Called on starting an application form launcher.
 | startingWindowTarget | WindowAnimationTarget | Yes | indicates Window target of the starting application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
-## Examples
+**Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
 
@@ -194,10 +170,6 @@ onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
 Called on starting an application form other.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,7 +186,7 @@ Called on starting an application form other.
 | startingWindowTarget | WindowAnimationTarget | Yes | Window target of the starting application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
-## Examples
+**Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
 
@@ -228,10 +200,6 @@ onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
 Called on starting an application form recent.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,7 +216,7 @@ Called on starting an application form recent.
 | startingWindowTarget | WindowAnimationTarget | Yes | Window target of the starting application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
-## Examples
+**Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
 
@@ -262,10 +230,6 @@ onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
 Called on window animation targets update.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,7 +246,7 @@ Called on window animation targets update.
 | fullScreenWindowTarget | WindowAnimationTarget | Yes | The fullscreen window target. |
 | floatingWindowTargets | Array&lt;WindowAnimationTarget&gt; | Yes | All the floating window targets. |
 
-## Examples
+**Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
 
@@ -297,10 +261,6 @@ Callback function on application transition.
 **Type:** [AppTransitionCallback](arkts-arkui-windowanimationmanager-apptransitioncallback-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowAnimationController-onAppTransition?: AppTransitionCallback--><!--Device-WindowAnimationController-onAppTransition?: AppTransitionCallback-End-->
 
@@ -320,10 +280,6 @@ Callback function on closing a window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowAnimationController-onCloseWindow?: WindowCloseCallback--><!--Device-WindowAnimationController-onCloseWindow?: WindowCloseCallback-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -341,10 +297,6 @@ Callback function on minimizing a window.
 **Type:** [WindowMinimizationCallback](arkts-arkui-windowanimationmanager-windowminimizationcallback-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowAnimationController-onMinimizeWindow?: WindowMinimizationCallback--><!--Device-WindowAnimationController-onMinimizeWindow?: WindowMinimizationCallback-End-->
 
@@ -364,10 +316,6 @@ Callback function on unlocking the screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowAnimationController-onScreenUnlock?: ScreenUnlockCallback--><!--Device-WindowAnimationController-onScreenUnlock?: ScreenUnlockCallback-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -385,10 +333,6 @@ Callback function on starting an application form launcher.
 **Type:** [AppStartCallback](arkts-arkui-windowanimationmanager-appstartcallback-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowAnimationController-onStartAppFromLauncher?: AppStartCallback--><!--Device-WindowAnimationController-onStartAppFromLauncher?: AppStartCallback-End-->
 
@@ -408,10 +352,6 @@ Callback function on starting an application form other.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowAnimationController-onStartAppFromOther?: AppStartCallback--><!--Device-WindowAnimationController-onStartAppFromOther?: AppStartCallback-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -430,10 +370,6 @@ Callback function on starting an application form recent.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowAnimationController-onStartAppFromRecent?: AppStartCallback--><!--Device-WindowAnimationController-onStartAppFromRecent?: AppStartCallback-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -451,10 +387,6 @@ Callback function on window animation targets update.
 **Type:** [WindowAnimationTargetsUpdationCallback](arkts-arkui-windowanimationmanager-windowanimationtargetsupdationcallback-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowAnimationController-onWindowAnimationTargetsUpdate?: WindowAnimationTargetsUpdationCallback--><!--Device-WindowAnimationController-onWindowAnimationTargetsUpdate?: WindowAnimationTargetsUpdationCallback-End-->
 

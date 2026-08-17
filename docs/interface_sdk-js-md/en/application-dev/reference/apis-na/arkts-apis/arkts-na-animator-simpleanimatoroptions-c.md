@@ -4,9 +4,7 @@ Defines the SimpleAnimatorOptions class.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class SimpleAnimatorOptions--><!--Device-unnamed-export declare class SimpleAnimatorOptions-End-->
 
@@ -22,9 +20,7 @@ constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,9 +45,7 @@ Set delay for the animation start. The default value indicates no delay.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,7 +63,7 @@ Set delay for the animation start. The default value indicates no delay.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
 
 ## direction
 
@@ -81,9 +75,7 @@ Set the animation playback mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,7 +93,7 @@ Set the animation playback mode.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
 
 ## duration
 
@@ -113,9 +105,7 @@ Set duration of the animation, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,7 +123,7 @@ Set duration of the animation, in milliseconds.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
 
 ## easing
 
@@ -145,9 +135,7 @@ Set time curve of the animation. For details about the supported types. linear T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,7 +153,7 @@ Set time curve of the animation. For details about the supported types. linear T
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
 
 ## fill
 
@@ -177,9 +165,7 @@ Set FillMode of animation. FillMode indicates whether to resume to the initial s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -197,7 +183,7 @@ Set FillMode of animation. FillMode indicates whether to resume to the initial s
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
 
 ## iterations
 
@@ -209,9 +195,7 @@ Set number of times the animation will be played. Number indicates a fixed numbe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -229,5 +213,5 @@ Set number of times the animation will be played. Number indicates a fixed numbe
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
 

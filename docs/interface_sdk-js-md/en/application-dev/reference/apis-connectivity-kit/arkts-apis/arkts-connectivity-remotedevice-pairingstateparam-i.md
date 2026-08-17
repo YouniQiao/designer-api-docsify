@@ -4,10 +4,6 @@ Describes the pairing state parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-remoteDevice-interface PairingStateParam--><!--Device-remoteDevice-interface PairingStateParam-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -30,10 +26,6 @@ Indicates the device address. The length must be 17, The value consists of hexad
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PairingStateParam-address: string--><!--Device-PairingStateParam-address: string-End-->
@@ -51,10 +43,6 @@ Indicates the previous pairing state.
 **Type:** PairingState
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Indicates the pairing state reason.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PairingStateParam-reason: PairingReason--><!--Device-PairingStateParam-reason: PairingReason-End-->
@@ -96,10 +80,6 @@ Indicates reason message. This field is intended for log information only and sh
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PairingStateParam-reasonMsg?: string--><!--Device-PairingStateParam-reasonMsg?: string-End-->
@@ -117,10 +97,6 @@ Indicates the current pairing state.
 **Type:** PairingState
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,10 +10,6 @@ function getTopNavDestinationName(windowId: int): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-window-function getTopNavDestinationName(windowId: int): Promise<string>--><!--Device-window-function getTopNavDestinationName(windowId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -42,7 +38,7 @@ function getTopNavDestinationName(windowId: int): Promise<string>
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';

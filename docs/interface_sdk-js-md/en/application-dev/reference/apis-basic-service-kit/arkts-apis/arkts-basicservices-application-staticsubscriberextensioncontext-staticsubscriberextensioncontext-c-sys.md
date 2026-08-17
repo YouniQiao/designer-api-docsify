@@ -6,10 +6,6 @@ The **StaticSubscriberExtensionContext** module, inherited from **ExtensionConte
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class StaticSubscriberExtensionContext--><!--Device-unnamed-declare class StaticSubscriberExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -31,10 +27,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 Starts an ability that belongs to the same application as this **StaticSubscriberExtensionAbility**. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
@@ -74,7 +66,7 @@ Starts an ability that belongs to the same application as this **StaticSubscribe
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { commonEventManager, BusinessError } from '@kit.BasicServicesKit';
@@ -119,10 +111,6 @@ Starts an ability that belongs to the same application as this **StaticSubscribe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
 **Model restriction:** This API can be used only in the stage model.
@@ -166,7 +154,7 @@ Starts an ability that belongs to the same application as this **StaticSubscribe
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { commonEventManager, BusinessError } from '@kit.BasicServicesKit';

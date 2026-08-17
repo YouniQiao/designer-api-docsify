@@ -16,10 +16,6 @@ Transfers metadata to the application or service that calls the encoding API. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-metadataBinding-function notifyMetadataBindingEvent(bundleName: string): Promise<string>--><!--Device-metadataBinding-function notifyMetadataBindingEvent(bundleName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
@@ -45,7 +41,7 @@ Transfers metadata to the application or service that calls the encoding API. Th
 | [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';

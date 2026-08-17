@@ -1,12 +1,8 @@
 # CommonOptions
 
-CommonOptions defines common options for the date time picker. > **Description:** > > - For Date usage, refer to > [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。 > > - The text size of DatePickerComponent changes based on the total number of columns displayed. When the number of > columns is 6 or more, the text size is 14vp; in other cases, it is 16vp. When the component width is too narrow, > text may be truncated. > > - When parameters are omitted or set to undefined, default values are used. > > - In [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md#DateOptions), setting start, end, and selected only takes effect for the date part (year, > month, day). In [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md#TimeOptions), setting start, end, and selected only takes effect for the time > part (hour, minute, second).
+CommonOptions defines common options for the date time picker. > **Description:** > > - For Date usage, refer to > [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。 > > - The text size of DatePickerComponent changes based on the total number of columns displayed. When the number of > columns is 6 or more, the text size is 14vp; in other cases, it is 16vp. When the component width is too narrow, > text may be truncated. > > - When parameters are omitted or set to undefined, default values are used. > > - In [DateOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-dateoptions-c.md#dateoptions), setting start, end, and selected only takes effect for the date part (year, > month, day). In [TimeOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-timeoptions-c.md#timeoptions), setting start, end, and selected only takes effect for the time > part (hour, minute, second).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class CommonOptions--><!--Device-unnamed-export declare class CommonOptions-End-->
 
@@ -37,10 +33,6 @@ Enables or disables haptic feedback. Default value: true - true: Enable haptic f
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -60,10 +52,6 @@ End date or time of the picker. Default value: Date(2100, 12, 31, 23, 59, 59) Va
 **Type:** Date
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,10 +75,6 @@ Sets whether to enable loop mode. - true: Enable loop mode. - false: Disable loo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -107,13 +91,9 @@ onChange?: Callback<DatePickerComponentResult>
 
 Callback triggered after date or time is selected.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,13 +111,9 @@ onScrollStop?: Callback<DatePickerComponentResult>
 
 Callback triggered when a picker item is selected and scrolling stops.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,10 +137,6 @@ Selected date. Default value is the current system date or time.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -184,10 +156,6 @@ Start date or time of the picker. Default value: Date(1970, 0, 1, 0, 0, 0) Value
 **Type:** Date
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,8 @@
-# DataType
+# DataType(Sensitive Data Access Management Under Lock Screen)
 
 Enumerates the types of sensitive data that can be accessed under the lock screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-screenLockFileManager-export enum DataType--><!--Device-screenLockFileManager-export enum DataType-End-->
 
@@ -22,10 +18,6 @@ Media data type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataType-MEDIA_DATA = 0x00000001--><!--Device-DataType-MEDIA_DATA = 0x00000001-End-->
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager
@@ -39,10 +31,6 @@ ALL_DATA = 0xffffffff
 All sensitive data types.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataType-ALL_DATA = 0xffffffff--><!--Device-DataType-ALL_DATA = 0xffffffff-End-->
 

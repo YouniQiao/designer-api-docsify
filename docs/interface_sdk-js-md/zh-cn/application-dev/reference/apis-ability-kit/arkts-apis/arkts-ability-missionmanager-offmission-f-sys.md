@@ -10,10 +10,6 @@ function offMission(listenerId: long, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function offMission(listenerId: long, callback: AsyncCallback<void>): void--><!--Device-missionManager-function offMission(listenerId: long, callback: AsyncCallback<void>): void-End-->
@@ -37,7 +33,7 @@ function offMission(listenerId: long, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [16300002](../errorcode-ability.md#16300002-指定的任务监听器不存在) | The specified mission listener does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Sta示例：
 
@@ -140,10 +136,6 @@ function offMission(listenerId: long): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function offMission(listenerId: long): Promise<void>--><!--Device-missionManager-function offMission(listenerId: long): Promise<void>-End-->
@@ -172,7 +164,7 @@ function offMission(listenerId: long): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [16300002](../errorcode-ability.md#16300002-指定的任务监听器不存在) | The specified mission listener does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Sta示例：
 

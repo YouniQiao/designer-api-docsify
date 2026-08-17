@@ -4,10 +4,6 @@ Generates common parameters for a DH key based on the prime **p** length and the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-class DHKeyUtil--><!--Device-cryptoFramework-class DHKeyUtil-End-->
 
 **System capability:** 
@@ -29,10 +25,6 @@ static genDHCommonParamsSpec(pLen: int, skLen?: int): DHCommonParamsSpec
 Generates common parameters for a DH key based on the prime **p** length and the private key length, in bits. For details, see DH.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +56,7 @@ Generates common parameters for a DH key based on the prime **p** length and the
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';

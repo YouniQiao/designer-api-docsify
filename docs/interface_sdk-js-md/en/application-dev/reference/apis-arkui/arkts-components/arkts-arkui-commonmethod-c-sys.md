@@ -4,10 +4,6 @@ CommonMethod.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class CommonMethod--><!--Device-unnamed-declare class CommonMethod-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,13 +14,9 @@ CommonMethod.
 advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 ```
 
-Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. This API cannot be used with [blendMode](arkts-arkui-commonmethod-c.md#blendMode).
+Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. This API cannot be used with [blendMode](arkts-arkui-commonmethod-c.md#blendmode).
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,10 +51,6 @@ constructor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-CommonMethod-constructor()--><!--Device-CommonMethod-constructor()-End-->
@@ -80,10 +68,6 @@ edgeLight(params: EdgeLightParams | undefined): T
 Sets the edge light effect for the component. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. <br>This effect can enhance the visual appeal and highlight important components. &lt;/p&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,13 +95,9 @@ Sets the edge light effect for the component. &lt;p&gt;&lt;strong&gt;NOTE&lt;/st
 excludeFromRenderGroup(exclude: boolean | undefined): T
 ```
 
-Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the [renderGroup](arkts-arkui-commonmethod-c.md#renderGroup) attribute of the ancestor component. Removing the current component and its children from the render group does not affect the offscreen canvas of the ancestor component, and the cache of the render group is still valid. In this way, the render group cache can be reused. If the display area of the current component occupies only a part of the display area of the render group drawing content, and the display effect of the current component and its children is frequently updated, setting **excludeFromRenderGroup** helps optimize the drawing performance. If this attribute is not set, the current component and its children are not removed from the render group of the ancestor component by default. > **NOTE：**> > The drawing content of the component with **excludeFromRenderGroup** set to **true** and its children cannot the > component's own boundary range. Otherwise, the displayed content may be clipped. For example, if the child > component exceeds the boundary range of the current component due to attributes such as > [translate](arkts-arkui-commonmethod-c.md#translate) or > [scale](arkts-arkui-commonmethod-c.md#scale), or the drawing content extend beyond its boundaries > because the current component has attributes such as > [shadow](arkts-arkui-commonmethod-c.md#shadow) and > [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelStretchEffect), the displayed > content may be clipped. In such scenarios, **excludeFromRenderGroup** should not be set to **true**.
+Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the [renderGroup](arkts-arkui-commonmethod-c.md#rendergroup) attribute of the ancestor component. Removing the current component and its children from the render group does not affect the offscreen canvas of the ancestor component, and the cache of the render group is still valid. In this way, the render group cache can be reused. If the display area of the current component occupies only a part of the display area of the render group drawing content, and the display effect of the current component and its children is frequently updated, setting **excludeFromRenderGroup** helps optimize the drawing performance. If this attribute is not set, the current component and its children are not removed from the render group of the ancestor component by default. > **NOTE：**> > The drawing content of the component with **excludeFromRenderGroup** set to **true** and its children cannot the > component's own boundary range. Otherwise, the displayed content may be clipped. For example, if the child > component exceeds the boundary range of the current component due to attributes such as > [translate](arkts-arkui-commonmethod-c.md#translate) or > [scale](arkts-arkui-commonmethod-c.md#scale), or the drawing content extend beyond its boundaries > because the current component has attributes such as > [shadow](arkts-arkui-commonmethod-c.md#shadow) and > [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect), the displayed > content may be clipped. In such scenarios, **excludeFromRenderGroup** should not be set to **true**.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,10 +129,6 @@ Applies a spatial effect to component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -181,13 +157,9 @@ Applies a spatial effect to component.
 systemMaterial(material: SystemUiMaterial | undefined): T
 ```
 
-Sets the system material for a component. Different system materials have different attribute effects. This API affects the background color ([backgroundColor](arkts-arkui-commonmethod-c.md#backgroundColor)), border color ([borderColor](arkts-arkui-commonmethod-c.md#borderColor)), border width ([borderWidth](arkts-arkui-commonmethod-c.md#borderWidth) ), and shadow ([shadow](arkts-arkui-commonmethod-c.md#shadow)). You are advised not to use this API together with the aforementioned APIs. For details about the example, see [Setting the System Material](../../../reference/apis-arkui/arkts-apis-uimaterial-sys.md#example-1-setting-the-system-material).
+Sets the system material for a component. Different system materials have different attribute effects. This API affects the background color ([backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)), border color ([borderColor](arkts-arkui-commonmethod-c.md#bordercolor)), border width ([borderWidth](arkts-arkui-commonmethod-c.md#borderwidth) ), and shadow ([shadow](arkts-arkui-commonmethod-c.md#shadow)). You are advised not to use this API together with the aforementioned APIs. For details about the example, see [Setting the System Material](../../../reference/apis-arkui/arkts-apis-uimaterial-sys.md#example-1-setting-the-system-material).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -223,10 +195,6 @@ Specify whether the current component participates in the fusion effect of the a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CommonMethod-useUnionEffect(value: boolean | undefined): T--><!--Device-CommonMethod-useUnionEffect(value: boolean | undefined): T-End-->
@@ -256,10 +224,6 @@ useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T
 Specify whether the current component participates in the fusion effect of the ancestor component UnionEffectContainer
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,11 +4,9 @@ Defines the options for creating an image or video asset.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PhotoCreateOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#PhotoCreateOptions-(System-API))
+**Substitutes:** [PhotoCreateOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#photocreateoptions-system-api)
 
 <!--Device-userFileManager-interface PhotoCreateOptions--><!--Device-userFileManager-interface PhotoCreateOptions-End-->
 
@@ -34,11 +32,9 @@ Key for the Ultra Snapshot feature. This parameter is available only for the sys
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [cameraShotKey](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#cameraShotKey)
+**Substitutes:** [cameraShotKey](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#camerashotkey)
 
 <!--Device-PhotoCreateOptions-cameraShotKey?: string--><!--Device-PhotoCreateOptions-cameraShotKey?: string-End-->
 
@@ -57,8 +53,6 @@ Subtype of the image or video.
 **Type:** [PhotoSubType](arkts-corefile-userfilemanager-photosubtype-e-sys.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 26.0.0
 

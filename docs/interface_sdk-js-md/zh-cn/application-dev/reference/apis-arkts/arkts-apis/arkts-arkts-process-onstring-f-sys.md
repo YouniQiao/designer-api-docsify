@@ -10,10 +10,6 @@ function on(type: string, listener: EventListener): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-process-function on(type: string, listener: EventListener): void--><!--Device-process-function on(type: string, listener: EventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

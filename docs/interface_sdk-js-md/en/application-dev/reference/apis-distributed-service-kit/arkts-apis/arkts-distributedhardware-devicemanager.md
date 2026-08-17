@@ -1,14 +1,12 @@
 # @ohos.distributedHardware.deviceManager
 
-The APIs of this module are deprecated. You are advised to use [@ohos.distributedDeviceManager](arkts-distributeddevicemanager.md#@ohos.distributedDeviceManager). The **deviceManager** module provides APIs for distributed device management. System applications can call the APIs to do the following: - Subscribe to or unsubscribe from device state changes. - Discover devices nearby. - Authenticate or deauthenticate a device. - Query the trusted device list. - Query local device information, including the device name, type, and ID. - Publishes device information for discovery purposes.
+The APIs of this module are deprecated. You are advised to use [@ohos.distributedDeviceManager](arkts-distributeddevicemanager.md#ohosdistributeddevicemanager). The **deviceManager** module provides APIs for distributed device management. System applications can call the APIs to do the following: - Subscribe to or unsubscribe from device state changes. - Discover devices nearby. - Authenticate or deauthenticate a device. - Query the trusted device list. - Query local device information, including the device name, type, and ID. - Publishes device information for discovery purposes.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [distributedDeviceManager](arkts-distributeddevicemanager.md#@ohos.distributedDeviceManager)
+**Substitutes:** [distributedDeviceManager](arkts-distributeddevicemanager.md#ohosdistributeddevicemanager)
 
 <!--Device-unnamed-declare namespace deviceManager--><!--Device-unnamed-declare namespace deviceManager-End-->
 
@@ -27,7 +25,7 @@ import { deviceManager } from 'deviceManager';
 
 | Name | Description |
 | --- | --- |
-| [createDeviceManager](arkts-distributedservice-devicemanager-createdevicemanager-f-sys.md#createDeviceManager) | Creates a **DeviceManager** instance. |
+| [createDeviceManager](arkts-distributedservice-devicemanager-createdevicemanager-f-sys.md#createdevicemanager) | Creates a **DeviceManager** instance. |
 <!--DelEnd-->
 
 <!--Del-->

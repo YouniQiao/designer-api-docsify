@@ -4,11 +4,9 @@ Defines a **BarometerResponse** object.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md#BarometerResponse)
+**Substitutes:** [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md#barometerresponse)
 
 <!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
 
@@ -51,8 +49,6 @@ Pressure, in pascal.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 

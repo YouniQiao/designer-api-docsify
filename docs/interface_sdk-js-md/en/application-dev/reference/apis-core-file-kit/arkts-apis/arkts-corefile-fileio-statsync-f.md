@@ -10,11 +10,9 @@ Obtains file information. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [statSync](arkts-corefile-file-fs-statsync-f.md#statSync)
+**Substitutes:** [statSync](arkts-corefile-file-fs-statsync-f.md#statsync)
 
 <!--Device-unnamed-declare function statSync(path: string): Stat--><!--Device-unnamed-declare function statSync(path: string): Stat-End-->
 

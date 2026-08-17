@@ -4,10 +4,6 @@ Defines the information about an auto-fill request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface FillRequest--><!--Device-unnamed-export interface FillRequest-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -25,10 +21,6 @@ Custom data.
 **Type:** [CustomData](arkts-ability-customdata-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Whether a dialog box is displayed for the auto-fill request. **true**: A dialog 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FillRequest-isPopup: boolean--><!--Device-FillRequest-isPopup: boolean-End-->
@@ -73,10 +61,6 @@ Trigger type for the autofill service.
 **Type:** [AutoFillTriggerType](arkts-ability-autofilltriggertype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,10 +84,6 @@ Type of the element to be automatically filled in.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -125,10 +105,6 @@ Page data.
 **Type:** [ViewData](arkts-ability-viewdata-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

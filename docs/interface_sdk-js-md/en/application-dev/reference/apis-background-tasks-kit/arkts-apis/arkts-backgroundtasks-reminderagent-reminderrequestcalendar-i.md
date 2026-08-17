@@ -2,15 +2,13 @@
 
 Defines a reminder for a calendar event.
 
-**Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#ReminderRequest)
+**Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#reminderrequest)
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md#ReminderRequestCalendar)
+**Substitutes:** [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md#reminderrequestcalendar)
 
 <!--Device-reminderAgent-interface ReminderRequestCalendar--><!--Device-reminderAgent-interface ReminderRequestCalendar-End-->
 
@@ -34,8 +32,6 @@ Reminder time.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** dateTime
@@ -56,8 +52,6 @@ Date on which the reminder repeats.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** repeatDays
@@ -77,8 +71,6 @@ Month in which the reminder repeats.
 **Type:** Array&lt;number&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

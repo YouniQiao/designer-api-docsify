@@ -16,10 +16,6 @@ Add a form. You can use this method to create a theme form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 **Model restriction:** This API can be used only in the stage model.

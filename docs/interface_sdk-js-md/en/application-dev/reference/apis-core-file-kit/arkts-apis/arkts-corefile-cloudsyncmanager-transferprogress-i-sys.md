@@ -4,10 +4,6 @@ Defines the TransferProgress data structure.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-cloudSyncManager-interface TransferProgress--><!--Device-cloudSyncManager-interface TransferProgress-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
@@ -32,10 +28,6 @@ failed count in TransferProgress. The value should be an integer. <br>Unit:Pcs.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TransferProgress-failedCount: int--><!--Device-TransferProgress-failedCount: int-End-->
@@ -55,10 +47,6 @@ Describes the state type of transfer task.
 **Type:** [TransferState](arkts-corefile-cloudsyncmanager-transferstate-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Describes the state type of transfer stop reason.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TransferProgress-stopReason: TransferStopReason--><!--Device-TransferProgress-stopReason: TransferStopReason-End-->
@@ -103,10 +87,6 @@ successful count in TransferProgress. The value should be an integer. <br>Unit:P
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ total count in TransferProgress. The value should be an integer. <br>Unit:Pcs.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TransferProgress-totalCount: int--><!--Device-TransferProgress-totalCount: int-End-->
@@ -152,10 +128,6 @@ Total size in TransferProgress. <br>Unit:Byte.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TransferProgress-totalSize: long--><!--Device-TransferProgress-totalSize: long-End-->
@@ -175,10 +147,6 @@ transferred size in TransferProgress. <br>Unit:Byte.
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Defines the options of the **Refresh** component. > **Supplementary Notes** > > 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface RefreshOptions--><!--Device-unnamed-interface RefreshOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Custom content in the refreshing area. NOTE In API version 10 and earlier versio
 **Type:** CustomBuilder
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +40,6 @@ Coefficient of friction, which indicates the component's sensitivity to the pull
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
 **Substitutes:** pullDownRatio
@@ -70,8 +60,6 @@ Distance from the pull-down starting point to the top of the component. Default 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
 <!--Device-RefreshOptions-offset?: number | string--><!--Device-RefreshOptions-offset?: number | string-End-->
@@ -89,10 +77,6 @@ Custom text displayed at the bottom of the refreshing area. NOTE When setting th
 **Type:** ResourceStr
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,10 +98,6 @@ Whether the component is being refreshed. The value **true** means that the comp
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RefreshOptions-refreshing: boolean--><!--Device-RefreshOptions-refreshing: boolean-End-->
@@ -135,10 +115,6 @@ Custom content in the refreshing area. NOTE If this parameter and the **builder*
 **Type:** ComponentContent
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

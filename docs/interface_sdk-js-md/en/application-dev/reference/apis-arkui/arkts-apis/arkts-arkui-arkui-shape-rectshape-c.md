@@ -1,14 +1,10 @@
 # RectShape
 
-Represents a rectangle shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-baseshape-c.md#BaseShape).
+Represents a rectangle shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-baseshape-c.md#baseshape).
 
 **Inheritance/Implementation:** RectShape extends BaseShape<RectShape>
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class RectShape--><!--Device-unnamed-export declare class RectShape-End-->
 
@@ -32,10 +28,6 @@ constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 A constructor used to create a **RectShape** object.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,10 +54,6 @@ radius(radius: number | string | Array<number | string>): RectShape
 Sets the radius of the rectangle border corners.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,10 +87,6 @@ Sets the radius height of the rectangle border corners.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -134,10 +118,6 @@ radiusWidth(rWidth: number | string): RectShape
 Sets the radius width of the rectangle border corners.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

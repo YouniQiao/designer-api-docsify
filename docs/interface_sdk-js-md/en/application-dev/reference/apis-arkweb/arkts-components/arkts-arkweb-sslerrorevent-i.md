@@ -1,12 +1,8 @@
 # SslErrorEvent
 
-Defines the ssl error event.
+Callback details triggered when an SSL error occurs during resource loading by the user, including the URL, error type, and certificate chain. It is suitable for scenarios where detailed analysis of SSL errors is required, improving security issue diagnosis and troubleshooting efficiency.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface SslErrorEvent--><!--Device-unnamed-declare interface SslErrorEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the ssl error event.
 certChainData?: Array<Uint8Array>
 ```
 
-Certificate chain data in DER format.
+Certificate chain data.
 
 **Type:** Array&lt;Uint8Array&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-SslErrorEvent-certChainData?: Array<Uint8Array>--><!--Device-SslErrorEvent-certChainData?: Array<Uint8Array>-End-->
 
@@ -38,15 +30,11 @@ Certificate chain data in DER format.
 error: SslError
 ```
 
-Error codes.
+Error code.
 
 **Type:** [SslError](arkts-arkweb-sslerror-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,15 +48,11 @@ Error codes.
 handler: SslErrorHandler
 ```
 
-Notifies the user of the operation behavior of the web component.
+User operation.
 
 **Type:** [SslErrorHandler](arkts-arkweb-sslerrorhandler-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,15 +66,11 @@ Notifies the user of the operation behavior of the web component.
 isFatalError: boolean
 ```
 
-Whether the error is fatal.
+Whether the error is a fatal error. A fatal error prevents the page from loading and rendering properly (for example, certificate verification failure or protocol error), while a non-fatal error affects only the loading of some resources (for example, image loading failure). The value **true** indicates a fatal error, and **false** indicates a non-fatal error.
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,15 +84,11 @@ Whether the error is fatal.
 isMainFrame: boolean
 ```
 
-Whether the request is main frame.
+Whether the resource is a main resource. The value **true** indicates a main resource, and **false** indicates a non-main resource.
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -126,15 +102,11 @@ Whether the request is main frame.
 originalUrl: string
 ```
 
-Original url.
+Original URL of the request.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -148,15 +120,11 @@ Original url.
 referrer: string
 ```
 
-Referrer.
+Referrer URL.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -170,15 +138,11 @@ Referrer.
 url: string
 ```
 
-Request url.
+URL.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

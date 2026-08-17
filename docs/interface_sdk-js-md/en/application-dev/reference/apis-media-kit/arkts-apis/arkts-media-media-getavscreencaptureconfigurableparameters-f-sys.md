@@ -16,10 +16,6 @@ get Configurations which user can changes from AVScreenCapture server
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>--><!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -45,7 +41,7 @@ get Configurations which user can changes from AVScreenCapture server
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
 | [5400109](../errorcode-media.md#5400109-session-id-does-not-exist) | Sessions not exist. Return by promise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

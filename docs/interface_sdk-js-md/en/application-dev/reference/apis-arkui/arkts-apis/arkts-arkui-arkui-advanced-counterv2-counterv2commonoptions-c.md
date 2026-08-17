@@ -4,10 +4,6 @@ Defines the common options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class CounterV2CommonOptions--><!--Device-unnamed-declare class CounterV2CommonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,10 +31,6 @@ Set the focusable of the counter component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -59,10 +51,6 @@ Trigger a mouse hover event at the decrease button.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -82,10 +70,6 @@ Trigger a mouse hover event at the increase button.
 **Type:** [OnCounterV2HoverCallback](arkts-arkui-oncounterv2hovercallback-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,10 +92,6 @@ Set the step of the counter component, ranges greater than or equal to 1
 **Default:** 1
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

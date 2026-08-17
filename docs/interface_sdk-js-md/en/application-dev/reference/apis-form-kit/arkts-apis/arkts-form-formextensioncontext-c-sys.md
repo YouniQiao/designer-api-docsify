@@ -1,14 +1,10 @@
 # FormExtensionContext
 
-The FormExtensionContext module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext), provides the context environment for the [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md#FormExtensionAbility). You can use the APIs of this module to start a FormExtensionAbility. > **NOTE：**> - The APIs of this module can be used only in the stage model.
+The FormExtensionContext module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext), provides the context environment for the [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md#formextensionability). You can use the APIs of this module to start a FormExtensionAbility. > **NOTE：**> - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** FormExtensionContext extends ExtensionContext
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class FormExtensionContext--><!--Device-unnamed-declare class FormExtensionContext-End-->
 
@@ -23,10 +19,6 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 Connects this ability to a ServiceExtensionAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +58,7 @@ Connects this ability to a ServiceExtensionAbility.
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -122,10 +114,6 @@ Disconnects this ability from a **ServiceExtensionAbility** and after the succes
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void--><!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void-End-->
@@ -138,7 +126,7 @@ Disconnects this ability from a **ServiceExtensionAbility** and after the succes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | long | Yes | Number returned after [connectServiceExtensionAbility](#connectServiceExtensionAbility) is called. |
+| connection | long | Yes | Number returned after [connectServiceExtensionAbility](#connectserviceextensionability) is called. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is disconnected, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -149,7 +137,7 @@ Disconnects this ability from a **ServiceExtensionAbility** and after the succes
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FormExtensionAbility } from '@kit.FormKit';
@@ -194,10 +182,6 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
@@ -210,7 +194,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | long | Yes | Number returned after [connectServiceExtensionAbility](#connectServiceExtensionAbility) is called. |
+| connection | long | Yes | Number returned after [connectServiceExtensionAbility](#connectserviceextensionability) is called. |
 
 **Return value:**
 
@@ -226,7 +210,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FormExtensionAbility } from '@kit.FormKit';
@@ -272,10 +256,6 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-FormExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
@@ -302,7 +282,7 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | 16500101 | The application is not a system application.<br>**Applicable version:** 9 - 11 |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FormExtensionAbility } from '@kit.FormKit';
@@ -342,10 +322,6 @@ Starts an ability. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-FormExtensionContext-startAbility(want: Want): Promise<void>-End-->
@@ -377,7 +353,7 @@ Starts an ability. This API uses a promise to return the result.
 | 16500101 | The application is not a system application.<br>**Applicable version:** 9 - 11 |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FormExtensionAbility } from '@kit.FormKit';

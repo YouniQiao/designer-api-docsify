@@ -14,9 +14,7 @@ export declare function ArcScrollBar(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-@ComponentBuilderexport declare function ArcScrollBar(    options: ArcScrollBarOptions,     content_?: CustomBuilder,): ArcScrollBarAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ArcScrollBar(    options: ArcScrollBarOptions,     content_?: CustomBuilder,): ArcScrollBarAttribute-End-->
 
@@ -26,7 +24,7 @@ export declare function ArcScrollBar(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcScrollBarOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 |  |
+| options | [ArcScrollBarOptions](arkts-na-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 |  |
 | content_ | CustomBuilder | 否 |  |
 
 **返回值：**
@@ -50,9 +48,7 @@ export declare function ArcScrollBar(
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

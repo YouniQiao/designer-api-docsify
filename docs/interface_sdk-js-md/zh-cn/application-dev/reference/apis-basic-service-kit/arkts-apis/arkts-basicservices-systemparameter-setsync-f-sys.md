@@ -10,8 +10,6 @@ function setSync(key: string, value: string): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** etSync
@@ -38,7 +36,7 @@ function setSync(key: string, value: string): void
 | [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-操作因权限被拒绝) | The operation on the system permission is denied. |
 | [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) | System internal error such as out memory or deadlock. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

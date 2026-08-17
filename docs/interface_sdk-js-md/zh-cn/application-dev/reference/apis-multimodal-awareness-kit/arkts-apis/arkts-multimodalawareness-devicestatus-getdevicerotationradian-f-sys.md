@@ -10,10 +10,6 @@ function getDeviceRotationRadian(): Promise<DeviceRotationRadian>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-deviceStatus-function getDeviceRotationRadian(): Promise<DeviceRotationRadian>--><!--Device-deviceStatus-function getDeviceRotationRadian(): Promise<DeviceRotationRadian>-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
@@ -34,7 +30,7 @@ function getDeviceRotationRadian(): Promise<DeviceRotationRadian>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
 | [32500001](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-服务异常) | Service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

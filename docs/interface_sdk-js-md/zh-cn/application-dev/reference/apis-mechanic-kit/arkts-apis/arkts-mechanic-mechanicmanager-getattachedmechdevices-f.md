@@ -10,10 +10,6 @@ function getAttachedMechDevices(): MechInfo[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]--><!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -30,7 +26,7 @@ function getAttachedMechDevices(): MechInfo[]
 | --- | --- |
 | [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
 
-## 示例
+**示例**
 
 ```TypeScript
 console.info('Query device list');

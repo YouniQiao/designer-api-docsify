@@ -8,9 +8,7 @@ The callback reports the time required for the first screen painting of the curr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export type OnFirstScreenPaintCallback = (firstScreenPaint: FirstScreenPaint) => void--><!--Device-unnamed-export type OnFirstScreenPaintCallback = (firstScreenPaint: FirstScreenPaint) => void-End-->
 

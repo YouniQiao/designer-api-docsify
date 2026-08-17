@@ -4,10 +4,6 @@ The XmlDynamicSerializer interface is used to dynamically generate an xml file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-xml-class XmlDynamicSerializer--><!--Device-xml-class XmlDynamicSerializer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ Add an empty element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void--><!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void-End-->
@@ -51,7 +43,7 @@ Add an empty element.
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -74,10 +66,6 @@ A parameterized constructor used to create a new XmlDynamicSerializer instance. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-constructor(encoding?: string)--><!--Device-XmlDynamicSerializer-constructor(encoding?: string)-End-->
@@ -96,7 +84,7 @@ A parameterized constructor used to create a new XmlDynamicSerializer instance. 
 | --- | --- |
 | [10200066](../errorcode-utils.md#10200066-incorrect-encoding-format) | Incorrect encoding format, only support utf-8. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let serializer = new xml.XmlDynamicSerializer('utf-8');
@@ -112,10 +100,6 @@ Writes end tag of the element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-endElement(): void--><!--Device-XmlDynamicSerializer-endElement(): void-End-->
@@ -129,7 +113,7 @@ Writes end tag of the element.
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 | [10200065](../errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) | There is no match between the startElement and the endElement. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -154,10 +138,6 @@ Get an ArrayBuffer from a XmlDynamicSerializer instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer--><!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer-End-->
@@ -170,7 +150,7 @@ Get an ArrayBuffer from a XmlDynamicSerializer instance.
 | --- | --- |
 | ArrayBuffer | Returns ArrayBuffer result from a XmlDynamicSerializer instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -195,10 +175,6 @@ Write an attribute to xml element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void--><!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void-End-->
@@ -220,7 +196,7 @@ Write an attribute to xml element.
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -245,10 +221,6 @@ Writes the CDATA.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setCdata(text: string): void--><!--Device-XmlDynamicSerializer-setCdata(text: string): void-End-->
@@ -268,7 +240,7 @@ Writes the CDATA.
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -291,10 +263,6 @@ Writes the comment to xml.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setComment(text: string): void--><!--Device-XmlDynamicSerializer-setComment(text: string): void-End-->
@@ -314,7 +282,7 @@ Writes the comment to xml.
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -337,10 +305,6 @@ Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encodi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setDeclaration(): void--><!--Device-XmlDynamicSerializer-setDeclaration(): void-End-->
@@ -354,7 +318,7 @@ Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encodi
 | [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -377,10 +341,6 @@ Writes the DOCTYPE.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setDocType(text: string): void--><!--Device-XmlDynamicSerializer-setDocType(text: string): void-End-->
@@ -400,7 +360,7 @@ Writes the DOCTYPE.
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -423,10 +383,6 @@ Writes the namespace of the current element tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void--><!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void-End-->
@@ -447,7 +403,7 @@ Writes the namespace of the current element tag.
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -472,10 +428,6 @@ Writes the text to xml element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setText(text: string): void--><!--Device-XmlDynamicSerializer-setText(text: string): void-End-->
@@ -495,7 +447,7 @@ Writes the text to xml element.
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -521,10 +473,6 @@ Writes a element start tag with the given name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-startElement(name: string): void--><!--Device-XmlDynamicSerializer-startElement(name: string): void-End-->
@@ -544,7 +492,7 @@ Writes a element start tag with the given name.
 | [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';

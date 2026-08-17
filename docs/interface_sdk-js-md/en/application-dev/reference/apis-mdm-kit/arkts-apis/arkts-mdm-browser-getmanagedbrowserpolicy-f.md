@@ -16,10 +16,6 @@ Obtains the policy of a specified browser based on the application bundle name. 
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-browser-function getManagedBrowserPolicy(admin: Want, bundleName: string): ArrayBuffer--><!--Device-browser-function getManagedBrowserPolicy(admin: Want, bundleName: string): ArrayBuffer-End-->
@@ -46,7 +42,7 @@ Obtains the policy of a specified browser based on the application bundle name. 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';

@@ -1,14 +1,12 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) to create an GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#creategattclientdevice) to create an GattClientDevice instance.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md#GattClientDevice)
+**Substitutes:** [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md#gattclientdevice)
 
 <!--Device-bluetoothManager-interface GattClientDevice--><!--Device-bluetoothManager-interface GattClientDevice-End-->
 
@@ -29,8 +27,6 @@ close(): void
 Disables a BLE peripheral device. This method unregisters the device and clears the registered callbacks and handles. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -54,7 +50,7 @@ Disables a BLE peripheral device. This method unregisters the device and clears 
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -75,8 +71,6 @@ connect(): void
 Connects to a BLE peripheral device. The 'BLEConnectionStateChange' event is subscribed to return the connection state. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -100,7 +94,7 @@ Connects to a BLE peripheral device. The 'BLEConnectionStateChange' event is sub
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -121,8 +115,6 @@ disconnect(): void
 Disconnects from or stops an ongoing connection to a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -146,7 +138,7 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device. On A
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -168,11 +160,9 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getDeviceName](arkts-connectivity-ble-gattclientdevice-i.md#getDeviceName)
+**Substitutes:** [getDeviceName](arkts-connectivity-ble-gattclientdevice-i.md#getdevicename)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -198,7 +188,7 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -225,11 +215,9 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getDeviceName](arkts-connectivity-ble-gattclientdevice-i.md#getDeviceName)
+**Substitutes:** [getDeviceName](arkts-connectivity-ble-gattclientdevice-i.md#getdevicename)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -255,7 +243,7 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -281,11 +269,9 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getRssiValue](arkts-connectivity-ble-gattclientdevice-i.md#getRssiValue)
+**Substitutes:** [getRssiValue](arkts-connectivity-ble-gattclientdevice-i.md#getrssivalue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -310,7 +296,7 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -337,11 +323,9 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getRssiValue](arkts-connectivity-ble-gattclientdevice-i.md#getRssiValue)
+**Substitutes:** [getRssiValue](arkts-connectivity-ble-gattclientdevice-i.md#getrssivalue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -366,7 +350,7 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -391,11 +375,9 @@ Starts discovering services. On API 10 and above, the permission required by thi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getServices](arkts-connectivity-ble-gattclientdevice-i.md#getServices)
+**Substitutes:** [getServices](arkts-connectivity-ble-gattclientdevice-i.md#getservices)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -421,7 +403,7 @@ Starts discovering services. On API 10 and above, the permission required by thi
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -457,11 +439,9 @@ Starts discovering services. On API 10 and above, the permission required by thi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getServices](arkts-connectivity-ble-gattclientdevice-i.md#getServices)
+**Substitutes:** [getServices](arkts-connectivity-ble-gattclientdevice-i.md#getservices)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -487,7 +467,7 @@ Starts discovering services. On API 10 and above, the permission required by thi
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -512,8 +492,6 @@ off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): vo
 Unsubscribe characteristic value changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -541,7 +519,7 @@ Unsubscribe characteristic value changed event. On API 10 and above, the permiss
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -562,8 +540,6 @@ off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState
 Unsubscribe client connection state changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -591,7 +567,7 @@ Unsubscribe client connection state changed event. On API 10 and above, the perm
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -612,8 +588,6 @@ on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 Subscribe characteristic value changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -641,7 +615,7 @@ Subscribe characteristic value changed event. On API 10 and above, the permissio
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -667,8 +641,6 @@ on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectChangedState>)
 Subscribe client connection state changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -696,7 +668,7 @@ Subscribe client connection state changed event. On API 10 and above, the permis
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -722,11 +694,9 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [readCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#readCharacteristicValue)
+**Substitutes:** [readCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#readcharacteristicvalue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -754,7 +724,7 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -801,11 +771,9 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [readCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#readCharacteristicValue)
+**Substitutes:** [readCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#readcharacteristicvalue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -838,7 +806,7 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -876,11 +844,9 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [readDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#readDescriptorValue)
+**Substitutes:** [readDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#readdescriptorvalue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -908,7 +874,7 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -947,11 +913,9 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [readDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#readDescriptorValue)
+**Substitutes:** [readDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#readdescriptorvalue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -984,7 +948,7 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1015,11 +979,9 @@ Set the mtu size of a BLE peripheral device. On API 10 and above, the permission
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [setBLEMtuSize](arkts-connectivity-ble-gattclientdevice-i.md#setBLEMtuSize)
+**Substitutes:** [setBLEMtuSize](arkts-connectivity-ble-gattclientdevice-i.md#setblemtusize)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -1045,7 +1007,7 @@ Set the mtu size of a BLE peripheral device. On API 10 and above, the permission
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1067,11 +1029,9 @@ Enables or disables notification of a characteristic when value changed. On API 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [setCharacteristicChangeNotification](arkts-connectivity-ble-gattclientdevice-i.md#setCharacteristicChangeNotification)
+**Substitutes:** [setCharacteristicChangeNotification](arkts-connectivity-ble-gattclientdevice-i.md#setcharacteristicchangenotification)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -1098,7 +1058,7 @@ Enables or disables notification of a characteristic when value changed. On API 
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1136,11 +1096,9 @@ Writes the characteristic of a BLE peripheral device. On API 10 and above, the p
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [writeCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#writeCharacteristicValue)
+**Substitutes:** [writeCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#writecharacteristicvalue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -1167,7 +1125,7 @@ Writes the characteristic of a BLE peripheral device. On API 10 and above, the p
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1204,11 +1162,9 @@ Writes the descriptor of a BLE peripheral device. On API 10 and above, the permi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [writeDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#writeDescriptorValue)
+**Substitutes:** [writeDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#writedescriptorvalue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -1235,7 +1191,7 @@ Writes the descriptor of a BLE peripheral device. On API 10 and above, the permi
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

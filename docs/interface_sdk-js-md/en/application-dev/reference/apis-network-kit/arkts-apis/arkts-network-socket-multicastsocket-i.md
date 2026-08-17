@@ -2,13 +2,9 @@
 
 Defines a UDP MulticastSocket connection.
 
-**Inheritance/Implementation:** MulticastSocket extends [UDPSocket](arkts-network-socket-udpsocket-i.md#UDPSocket)
+**Inheritance/Implementation:** MulticastSocket extends [UDPSocket](arkts-network-socket-udpsocket-i.md#udpsocket)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-socket-export interface MulticastSocket--><!--Device-socket-export interface MulticastSocket-End-->
 
@@ -29,10 +25,6 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 Add the socket to the multicast group.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -57,7 +49,7 @@ Add the socket to the multicast group.
 | 2301098 | Address in use. |
 | 2301022 | Invalid argument. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -86,10 +78,6 @@ Add the socket to the multicast group.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>-End-->
@@ -117,7 +105,7 @@ Add the socket to the multicast group.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -144,10 +132,6 @@ Drop the socket from the multicast group.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
@@ -170,7 +154,7 @@ Drop the socket from the multicast group.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -199,10 +183,6 @@ Drop the socket from the multicast group.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>-End-->
@@ -230,7 +210,7 @@ Drop the socket from the multicast group.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -257,10 +237,6 @@ Get the loopback mode of the socket.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void--><!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -278,7 +254,7 @@ Get the loopback mode of the socket.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -303,10 +279,6 @@ Get the loopback mode of the socket.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>--><!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -324,7 +296,7 @@ Get the loopback mode of the socket.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -347,10 +319,6 @@ Get the TTL value of socket multicast packet.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<number>): void--><!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -368,7 +336,7 @@ Get the TTL value of socket multicast packet.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -393,10 +361,6 @@ Get the TTL value of socket multicast packet.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-MulticastSocket-getMulticastTTL(): Promise<number>--><!--Device-MulticastSocket-getMulticastTTL(): Promise<number>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -414,7 +378,7 @@ Get the TTL value of socket multicast packet.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -437,10 +401,6 @@ Obtains the file descriptor of the MulticastSocket.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Model restriction:** This API can be used only in the stage model.
@@ -461,7 +421,7 @@ Obtains the file descriptor of the MulticastSocket.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -495,10 +455,6 @@ Set the loopback mode for the socket.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -517,7 +473,7 @@ Set the loopback mode for the socket.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -542,10 +498,6 @@ Set the loopback mode for the socket.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -569,7 +521,7 @@ Set the loopback mode for the socket.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -592,10 +544,6 @@ Set the TTL value for socket multicast packets.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-MulticastSocket-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -615,7 +563,7 @@ Set the TTL value for socket multicast packets.
 | 2301088 | Not a socket. |
 | 2301022 | Invalid argument. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -641,10 +589,6 @@ Set the TTL value for socket multicast packet.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-MulticastSocket-setMulticastTTL(ttl: number): Promise<void>--><!--Device-MulticastSocket-setMulticastTTL(ttl: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -669,7 +613,7 @@ Set the TTL value for socket multicast packet.
 | 2301088 | Not a socket. |
 | 2301022 | Invalid argument. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -691,10 +635,6 @@ setReuseAddress(reuse: boolean): void
 Sets whether the multicast socket supports address reuse.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

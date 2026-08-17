@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-display-interface CutoutInfo--><!--Device-display-interface CutoutInfo-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -23,10 +19,6 @@ readonly boundingRects: Array<Rect>
 **类型：** Array&lt;Rect&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ readonly waterfallDisplayAreaRects: WaterfallDisplayAreaRects
 **类型：** [WaterfallDisplayAreaRects](arkts-arkui-display-waterfalldisplayarearects-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -4,10 +4,6 @@ Provides security event management and security model management. Based on event
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace securityGuard--><!--Device-unnamed-declare namespace securityGuard-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -27,14 +23,14 @@ import { securityGuard } from 'securityGuard';
 
 | Name | Description |
 | --- | --- |
-| [getModelResult](arkts-securityguard-securityguard-getmodelresult-f-sys.md#getModelResult) | Request security model result from security guard. |
-| [off_securityEventOccur](arkts-securityguard-securityguard-offsecurityeventoccur-f-sys.md#off_securityEventOccur) | Unsubscribe the security event. |
-| [on_securityEventOccur](arkts-securityguard-securityguard-onsecurityeventoccur-f-sys.md#on_securityEventOccur) | Subscribe the security event. |
-| [querySecurityEvent](arkts-securityguard-securityguard-querysecurityevent-f-sys.md#querySecurityEvent) | Query security event information from security guard. |
-| [reportSecurityEvent](arkts-securityguard-securityguard-reportsecurityevent-f-sys.md#reportSecurityEvent) | Report security information to the security guard. |
-| [startSecurityEventCollector](arkts-securityguard-securityguard-startsecurityeventcollector-f-sys.md#startSecurityEventCollector) | start the collector to collect data |
-| [stopSecurityEventCollector](arkts-securityguard-securityguard-stopsecurityeventcollector-f-sys.md#stopSecurityEventCollector) | stop the collector. |
-| [updatePolicyFile](arkts-securityguard-securityguard-updatepolicyfile-f-sys.md#updatePolicyFile) | Update the policy file. |
+| [getModelResult](arkts-securityguard-securityguard-getmodelresult-f-sys.md#getmodelresult) | Request security model result from security guard. |
+| [off_securityEventOccur](arkts-securityguard-securityguard-offsecurityeventoccur-f-sys.md#offsecurityeventoccur) | Unsubscribe the security event. |
+| [on_securityEventOccur](arkts-securityguard-securityguard-onsecurityeventoccur-f-sys.md#onsecurityeventoccur) | Subscribe the security event. |
+| [querySecurityEvent](arkts-securityguard-securityguard-querysecurityevent-f-sys.md#querysecurityevent) | Query security event information from security guard. |
+| [reportSecurityEvent](arkts-securityguard-securityguard-reportsecurityevent-f-sys.md#reportsecurityevent) | Report security information to the security guard. |
+| [startSecurityEventCollector](arkts-securityguard-securityguard-startsecurityeventcollector-f-sys.md#startsecurityeventcollector) | start the collector to collect data |
+| [stopSecurityEventCollector](arkts-securityguard-securityguard-stopsecurityeventcollector-f-sys.md#stopsecurityeventcollector) | stop the collector. |
+| [updatePolicyFile](arkts-securityguard-securityguard-updatepolicyfile-f-sys.md#updatepolicyfile) | Update the policy file. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -4,10 +4,6 @@ An abstract definition of the data content supported by the UDMF. A **UnifiedRec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unifiedDataChannel-class UnifiedRecord--><!--Device-unifiedDataChannel-class UnifiedRecord-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -28,10 +24,6 @@ Adds data of a specified data type and content to the current data record. You c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -44,7 +36,7 @@ Adds data of a specified data type and content to the current data record. You c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the data to add. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType). |
+| type | string | Yes | Type of the data to add. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
 | value | ValueType | Yes | Value of the data to add. |
 
 **Error codes:**
@@ -53,7 +45,7 @@ Adds data of a specified data type and content to the current data record. You c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -90,10 +82,6 @@ Defines a constructor used to create a **UnfiedRecord** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -102,7 +90,7 @@ Defines a constructor used to create a **UnfiedRecord** object.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
@@ -114,13 +102,9 @@ let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
 constructor(type: string, value: ValueType)
 ```
 
-Defines a constructor used to create a data record with the specified type and value. If **value** is of the [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image) type, **type** must be the value of **OPENHARMONY_PIXEL_MAP** in [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType). If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want) type, **type** must be the value of **OPENHARMONY_WANT** in [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
+Defines a constructor used to create a data record with the specified type and value. If **value** is of the [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#ohosmultimediaimage) type, **type** must be the value of **OPENHARMONY_PIXEL_MAP** in [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#want) type, **type** must be the value of **OPENHARMONY_WANT** in [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -143,7 +127,7 @@ Defines a constructor used to create a data record with the specified type and v
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -182,10 +166,6 @@ Obtains all the data in the current data record.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -200,7 +180,7 @@ Obtains all the data in the current data record.
 | --- | --- |
 | Record&lt;string, ValueType&gt; | Values and types obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -259,10 +239,6 @@ Obtains data of the specified type from the data record.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -275,7 +251,7 @@ Obtains data of the specified type from the data record.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the data to obtain. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType). |
+| type | string | Yes | Type of the data to obtain. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
 
 **Return value:**
 
@@ -289,7 +265,7 @@ Obtains data of the specified type from the data record.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -343,13 +319,9 @@ for (let i = 0; i < records.length; i++) {
 getType(): string
 ```
 
-Obtains the type of this **UnfiedRecord**. The data obtained by [getRecords](arkts-arkdata-unifieddatachannel-unifieddata-c.md#getRecords) from the **UnifiedData** object is a **UnifiedRecord** object. You need to use this API to obtain the specific type of the record, convert the **UnifiedRecord** object to its child class, and call the child class interfaces.
+Obtains the type of this **UnfiedRecord**. The data obtained by [getRecords](arkts-arkdata-unifieddatachannel-unifieddata-c.md#getrecords) from the **UnifiedData** object is a **UnifiedRecord** object. You need to use this API to obtain the specific type of the record, convert the **UnifiedRecord** object to its child class, and call the child class interfaces.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -365,7 +337,7 @@ Obtains the type of this **UnfiedRecord**. The data obtained by [getRecords](ark
 | --- | --- |
 | string | Data type obtained. For details, see [UniformDataType]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -391,13 +363,9 @@ if (records[0].getType() == uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) {
 getTypes(): Array<string>
 ```
 
-Obtains all the data types in the data record. This API can be called using the **UnifiedRecord** object to query all data types in the record, including the data types added using the [addEntry](#addEntry) function.
+Obtains all the data types in the data record. This API can be called using the **UnifiedRecord** object to query all data types in the record, including the data types added using the [addEntry](#addentry) function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -413,7 +381,7 @@ Obtains all the data types in the data record. This API can be called using the 
 | --- | --- |
 | Array&lt;string&gt; | Array of [UniformDataType]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -467,10 +435,6 @@ Obtains the value of this data record.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -485,7 +449,7 @@ Obtains the value of this data record.
 | --- | --- |
 | ValueType | Value obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';

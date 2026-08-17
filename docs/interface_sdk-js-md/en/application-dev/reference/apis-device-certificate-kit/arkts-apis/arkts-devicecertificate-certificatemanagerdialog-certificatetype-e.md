@@ -4,10 +4,6 @@ Enumerates the types of the certificate to be installed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-certificateManagerDialog-export enum CertificateType--><!--Device-certificateManagerDialog-export enum CertificateType-End-->
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
@@ -21,10 +17,6 @@ CA_CERT = 1
 CA certificate.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ User public credential.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CertificateType-CREDENTIAL_USER = 2--><!--Device-CertificateType-CREDENTIAL_USER = 2-End-->
@@ -61,10 +49,6 @@ CREDENTIAL_APP = 3
 Private credential of an application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ USB Key credential.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CertificateType-CREDENTIAL_UKEY = 4--><!--Device-CertificateType-CREDENTIAL_UKEY = 4-End-->
@@ -101,10 +81,6 @@ CREDENTIAL_SYSTEM = 5
 System credential.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Check permissions for the path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CHECK_SANDBOX_POLICY
 
 <!--Device-fileShare-function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>--><!--Device-fileShare-function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>-End-->
@@ -52,7 +48,7 @@ Check permissions for the path.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
 | 13900042 | Out of memory. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileShare } from '@kit.CoreFileKit';

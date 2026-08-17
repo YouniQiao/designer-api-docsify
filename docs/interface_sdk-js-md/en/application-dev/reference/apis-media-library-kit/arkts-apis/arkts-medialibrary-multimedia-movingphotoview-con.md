@@ -10,10 +10,6 @@ Defines MovingPhotoView Component.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-declare const MovingPhotoView: MovingPhotoViewInterface--><!--Device-unnamed-declare const MovingPhotoView: MovingPhotoViewInterface-End-->
@@ -29,10 +25,6 @@ declare const MovingPhotoViewInstance: MovingPhotoViewAttribute
 Defines MovingPhotoView Component instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

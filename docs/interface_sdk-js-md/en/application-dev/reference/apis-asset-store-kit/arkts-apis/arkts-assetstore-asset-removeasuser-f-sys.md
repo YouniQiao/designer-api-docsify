@@ -16,10 +16,6 @@ Removes one or more assets in the specified user space. This API uses a promise 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-asset-function removeAsUser(userId: number, query: AssetMap): Promise<void>--><!--Device-asset-function removeAsUser(userId: number, query: AssetMap): Promise<void>-End-->
@@ -59,7 +55,7 @@ Removes one or more assets in the specified user space. This API uses a promise 
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

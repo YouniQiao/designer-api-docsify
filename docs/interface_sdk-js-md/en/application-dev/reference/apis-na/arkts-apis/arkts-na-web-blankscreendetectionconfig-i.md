@@ -4,9 +4,7 @@ The strategy of blank screen detection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface BlankScreenDetectionConfig--><!--Device-unnamed-export declare interface BlankScreenDetectionConfig-End-->
 
@@ -24,9 +22,7 @@ When using the specific detection method of detecting contentful nodes, the thre
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BlankScreenDetectionConfig-contentfulNodesCountThreshold?: int--><!--Device-BlankScreenDetectionConfig-contentfulNodesCountThreshold?: int-End-->
 
@@ -44,9 +40,7 @@ The combination of blank screen detection methods.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BlankScreenDetectionConfig-detectionMethods?: BlankScreenDetectionMethod[]--><!--Device-BlankScreenDetectionConfig-detectionMethods?: BlankScreenDetectionMethod[]-End-->
 
@@ -64,9 +58,7 @@ The settings of the timing when web try to detect current page is blank or not. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BlankScreenDetectionConfig-detectionTiming?: double[]--><!--Device-BlankScreenDetectionConfig-detectionTiming?: double[]-End-->
 
@@ -84,9 +76,7 @@ Enable blank screen detection or not.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BlankScreenDetectionConfig-enable: boolean--><!--Device-BlankScreenDetectionConfig-enable: boolean-End-->
 

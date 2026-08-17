@@ -10,10 +10,6 @@ Subscribe to the callDisconnectedCause event.
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function onCallDisconnectedCause(callback: Callback<DisconnectedDetails>): void--><!--Device-call-function onCallDisconnectedCause(callback: Callback<DisconnectedDetails>): void-End-->
@@ -26,7 +22,7 @@ Subscribe to the callDisconnectedCause event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | 是 | Indicates the callback for getting the call disconnection reason. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | 是 | Indicates the callback for getting the call disconnection reason. |
 
 **错误码：**
 

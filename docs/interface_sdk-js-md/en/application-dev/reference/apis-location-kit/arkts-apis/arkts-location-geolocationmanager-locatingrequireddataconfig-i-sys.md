@@ -4,10 +4,6 @@ Describes the request parameters for obtaining the data required for locating.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface LocatingRequiredDataConfig--><!--Device-geoLocationManager-export interface LocatingRequiredDataConfig-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -32,10 +28,6 @@ Indicates absolute radio frequency channel number (ARFCN). Querying Cell Informa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LocatingRequiredDataConfig-arfcn?: int[]--><!--Device-LocatingRequiredDataConfig-arfcn?: int[]-End-->
@@ -56,10 +48,6 @@ Indicates whether to start scanning.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocatingRequiredDataConfig-needStartScan: boolean--><!--Device-LocatingRequiredDataConfig-needStartScan: boolean-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -77,10 +65,6 @@ Indicates PLMN number of the SIM card.
 **Type:** int[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,10 +86,6 @@ Indicates the interval between scans. The unit is millisecond. This parameter ne
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocatingRequiredDataConfig-scanInterval?: int--><!--Device-LocatingRequiredDataConfig-scanInterval?: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -124,10 +104,6 @@ Indicates the timeout period of a single scan. The unit is millisecond. The defa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocatingRequiredDataConfig-scanTimeout?: int--><!--Device-LocatingRequiredDataConfig-scanTimeout?: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -145,10 +121,6 @@ Indicates SIM card slot number. The value should be an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -169,10 +141,6 @@ Indicates the type of locating required data.
 **Type:** [LocatingRequiredDataType](arkts-location-geolocationmanager-locatingrequireddatatype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataConfig-type: LocatingRequiredDataType--><!--Device-LocatingRequiredDataConfig-type: LocatingRequiredDataType-End-->
 

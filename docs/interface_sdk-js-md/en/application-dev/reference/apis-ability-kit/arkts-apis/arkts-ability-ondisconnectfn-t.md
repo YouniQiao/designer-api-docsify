@@ -8,10 +8,6 @@ Callback invoked when a connection is interrupted.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-type OnDisconnectFn = (elementName: ElementName) => void--><!--Device-unnamed-type OnDisconnectFn = (elementName: ElementName) => void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

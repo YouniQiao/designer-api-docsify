@@ -4,11 +4,9 @@ Defines the response of ShowDialog.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md#ShowDialogSuccessResponse)
+**Substitutes:** [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md#showdialogsuccessresponse)
 
 <!--Device-prompt-interface ShowDialogSuccessResponse--><!--Device-prompt-interface ShowDialogSuccessResponse-End-->
 
@@ -31,8 +29,6 @@ Defines the index of data.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

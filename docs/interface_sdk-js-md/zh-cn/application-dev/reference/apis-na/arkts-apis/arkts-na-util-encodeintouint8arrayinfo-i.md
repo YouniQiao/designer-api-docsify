@@ -4,9 +4,7 @@ Return encoded text.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-util-interface EncodeIntoUint8ArrayInfo--><!--Device-util-interface EncodeIntoUint8ArrayInfo-End-->
 
@@ -24,9 +22,7 @@ The read represents the number of characters that have been encoded.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-EncodeIntoUint8ArrayInfo-read: int--><!--Device-EncodeIntoUint8ArrayInfo-read: int-End-->
 
@@ -44,9 +40,7 @@ The written represents the number of bytes occupied by the encoded characters.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-EncodeIntoUint8ArrayInfo-written: int--><!--Device-EncodeIntoUint8ArrayInfo-written: int-End-->
 

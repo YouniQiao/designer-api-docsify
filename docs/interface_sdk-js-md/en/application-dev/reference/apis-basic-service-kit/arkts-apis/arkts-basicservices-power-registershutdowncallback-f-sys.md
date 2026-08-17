@@ -16,10 +16,6 @@ Registers a callback to be invoked when the device is shut down or rebooted. Thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REBOOT
 
 <!--Device-power-function registerShutdownCallback(callback: Callback<boolean>): void--><!--Device-power-function registerShutdownCallback(callback: Callback<boolean>): void-End-->
@@ -42,7 +38,7 @@ Registers a callback to be invoked when the device is shut down or rebooted. Thi
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

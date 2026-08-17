@@ -10,10 +10,6 @@ function offCCallStateChange(callback?: Callback<CCallStateInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_CALL_FOR_DEVICES
 
 <!--Device-observer-function offCCallStateChange(callback?: Callback<CCallStateInfo>): void--><!--Device-observer-function offCCallStateChange(callback?: Callback<CCallStateInfo>): void-End-->
@@ -24,7 +20,7 @@ function offCCallStateChange(callback?: Callback<CCallStateInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | 否 | 回调函数，返回通话状态信息对象。<br/>应用可获取到CCallState。<br/> |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | 否 | 回调函数，返回通话状态信息对象。<br/>应用可获取到CCallState。<br/> |
 
 **错误码：**
 
@@ -36,7 +32,7 @@ function offCCallStateChange(callback?: Callback<CCallStateInfo>): void
 | [8800001](../errorcode-telephony.md#8800001-输入参数不在处理范围内) | Invalid parameter value. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { observer } from '@kit.TelephonyKit';

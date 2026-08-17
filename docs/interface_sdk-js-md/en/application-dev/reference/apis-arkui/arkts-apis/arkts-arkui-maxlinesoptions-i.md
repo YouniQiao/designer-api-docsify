@@ -4,10 +4,6 @@ Configures the display effect of the **TextArea** component when the text exceed
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface MaxLinesOptions--><!--Device-unnamed-declare interface MaxLinesOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ overflowMode?: MaxLinesMode
 **Type:** [MaxLinesMode](arkts-arkui-maxlinesmode-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

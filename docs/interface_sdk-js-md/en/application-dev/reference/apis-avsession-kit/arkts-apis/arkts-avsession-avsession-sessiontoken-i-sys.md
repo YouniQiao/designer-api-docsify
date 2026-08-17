@@ -4,10 +4,6 @@ Session token. Used to judge the legitimacy of the session.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface SessionToken--><!--Device-avSession-interface SessionToken-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
@@ -32,10 +28,6 @@ Process id of session
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-SessionToken-pid?: long--><!--Device-SessionToken-pid?: long-End-->
@@ -56,10 +48,6 @@ The unique session id of the avsession object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-SessionToken-sessionId: string--><!--Device-SessionToken-sessionId: string-End-->
@@ -79,10 +67,6 @@ User id
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 

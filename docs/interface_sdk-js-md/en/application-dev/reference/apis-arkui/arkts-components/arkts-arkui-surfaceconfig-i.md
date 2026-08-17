@@ -4,10 +4,6 @@ Describes whether the surface held by the **XComponent** is treated as opaque du
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface SurfaceConfig--><!--Device-unnamed-declare interface SurfaceConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Whether the surface held by the **XComponent** is treated as opaque during rende
 **Default:** false
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

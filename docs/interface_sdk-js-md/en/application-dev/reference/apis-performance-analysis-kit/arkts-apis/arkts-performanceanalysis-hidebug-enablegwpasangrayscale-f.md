@@ -16,10 +16,6 @@ Enable the GWP-ASAN grayscale of your application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void--><!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -37,7 +33,7 @@ Enable the GWP-ASAN grayscale of your application.
 | --- | --- |
 | [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwpasan) | The number of GWP-ASAN applications of this device overflowed after last boot. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

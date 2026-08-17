@@ -4,10 +4,6 @@ Enumerates the authentication token types. They are used to identify the source 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-userAccessCtrl-enum AuthTokenType--><!--Device-userAccessCtrl-enum AuthTokenType-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -23,10 +19,6 @@ TOKEN_TYPE_LOCAL_AUTH = 0
 Local authentication token. It is an authentication token issued based on the local authentication result, indicating that the user has been authenticated on the local device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthTokenType-TOKEN_TYPE_LOCAL_AUTH = 0--><!--Device-AuthTokenType-TOKEN_TYPE_LOCAL_AUTH = 0-End-->
 
@@ -44,10 +36,6 @@ Local resigning token. It is an authentication token signed based on the reused 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthTokenType-TOKEN_TYPE_LOCAL_RESIGN = 1--><!--Device-AuthTokenType-TOKEN_TYPE_LOCAL_RESIGN = 1-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -63,10 +51,6 @@ TOKEN_TYPE_COAUTH = 2
 Collaborative authentication token. It is an authentication token issued based on multiple device collaboration authentication results, indicating that the user has completed authentication through multi-device collaboration.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthTokenType-TOKEN_TYPE_COAUTH = 2--><!--Device-AuthTokenType-TOKEN_TYPE_COAUTH = 2-End-->
 

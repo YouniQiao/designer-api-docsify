@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-interface AuthStatusInfo--><!--Device-osAccount-interface AuthStatusInfo-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -26,10 +22,6 @@ freezingTime: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AuthStatusInfo-freezingTime: int--><!--Device-AuthStatusInfo-freezingTime: int-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -47,10 +39,6 @@ remainTimes: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthStatusInfo-remainTimes: int--><!--Device-AuthStatusInfo-remainTimes: int-End-->
 

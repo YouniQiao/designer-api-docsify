@@ -4,10 +4,6 @@ This module provides device control capabilities for enterprise device managemen
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace deviceControl--><!--Device-unnamed-declare namespace deviceControl-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,18 +22,18 @@ import { deviceControl } from 'deviceControl';
 
 | Name | Description |
 | --- | --- |
-| [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operateDevice) | Allows administrators to perform operations such as factory reset, restart, shutdown, and screen lock on devices. For example, in enterprise device management scenarios, administrators can remotely control employee devices to perform factory reset, restart, shutdown, or screen lock operations. |
-| [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operateDevice) | Allows the administrator to operate devices, for example, erasing disks. |
+| [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice) | Allows administrators to perform operations such as factory reset, restart, shutdown, and screen lock on devices. For example, in enterprise device management scenarios, administrators can remotely control employee devices to perform factory reset, restart, shutdown, or screen lock operations. |
+| [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice) | Allows the administrator to operate devices, for example, erasing disks. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [lockScreen](arkts-mdm-devicecontrol-lockscreen-f-sys.md#lockScreen) | Locks the device screen immediately. |
+| [lockScreen](arkts-mdm-devicecontrol-lockscreen-f-sys.md#lockscreen) | Locks the device screen immediately. |
 | [reboot](arkts-mdm-devicecontrol-reboot-f-sys.md#reboot) | Reboots the device. |
-| [resetFactory](arkts-mdm-devicecontrol-resetfactory-f-sys.md#resetFactory) | Restores factory settings. This API uses an asynchronous callback to return the result. |
-| [resetFactory](arkts-mdm-devicecontrol-resetfactory-f-sys.md#resetFactory-(System-API)) | Restores factory settings. This API uses a promise to return the result. |
+| [resetFactory](arkts-mdm-devicecontrol-resetfactory-f-sys.md#resetfactory) | Restores factory settings. This API uses an asynchronous callback to return the result. |
+| [resetFactory](arkts-mdm-devicecontrol-resetfactory-f-sys.md#resetfactory-system-api) | Restores factory settings. This API uses a promise to return the result. |
 | [shutdown](arkts-mdm-devicecontrol-shutdown-f-sys.md#shutdown) | Shuts down the device. |
 <!--DelEnd-->
 

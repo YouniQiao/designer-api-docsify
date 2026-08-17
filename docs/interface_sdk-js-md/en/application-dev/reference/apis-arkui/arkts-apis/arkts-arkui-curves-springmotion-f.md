@@ -16,10 +16,6 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-curves-function springMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve--><!--Device-curves-function springMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve-End-->
@@ -40,7 +36,7 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 | --- | --- |
 | ICurve | Curve. <br>**NOTE：**<br>The spring animation curve is physics-based. Its duration depends on the **springMotion** parameters and the previous velocity, rather than the **duration** parameter in [animation]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { curves } from '@kit.ArkUI'

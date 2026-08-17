@@ -10,11 +10,9 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setDate（系统接口）)
+**替代接口：** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate系统接口)
 
 **需要权限：** ohos.permission.SET_TIME
 
@@ -27,7 +25,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | date | Date | 是 | 目标日期。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -35,7 +33,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -66,11 +64,9 @@ function setDate(date: Date): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setDate（系统接口）)
+**替代接口：** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate系统接口)
 
 **需要权限：** ohos.permission.SET_TIME
 
@@ -96,7 +92,7 @@ function setDate(date: Date): Promise<void>
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

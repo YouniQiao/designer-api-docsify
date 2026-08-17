@@ -16,10 +16,6 @@ Subscribe to gravity sensor data, {@code SensorId.GRAVITY}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onGravityChange(callback: Callback<GravityResponse>, options?: Options): void--><!--Device-sensor-function onGravityChange(callback: Callback<GravityResponse>, options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

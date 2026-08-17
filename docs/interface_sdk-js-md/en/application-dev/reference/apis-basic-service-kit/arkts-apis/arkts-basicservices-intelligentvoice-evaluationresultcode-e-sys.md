@@ -4,10 +4,6 @@ Enumerates evaluation result code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-enum EvaluationResultCode--><!--Device-intelligentVoice-enum EvaluationResultCode-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -23,10 +19,6 @@ UNKNOWN = 0
 Unknown.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-UNKNOWN = 0--><!--Device-EvaluationResultCode-UNKNOWN = 0-End-->
 
@@ -44,10 +36,6 @@ Pass.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EvaluationResultCode-PASS = 1--><!--Device-EvaluationResultCode-PASS = 1-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -63,10 +51,6 @@ WORD_EMPTY = 2
 Word is empty.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-WORD_EMPTY = 2--><!--Device-EvaluationResultCode-WORD_EMPTY = 2-End-->
 
@@ -84,10 +68,6 @@ Only chinese is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EvaluationResultCode-CHINESE_ONLY = 3--><!--Device-EvaluationResultCode-CHINESE_ONLY = 3-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -103,10 +83,6 @@ INVALID_LENGTH = 4
 Invalid length.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-INVALID_LENGTH = 4--><!--Device-EvaluationResultCode-INVALID_LENGTH = 4-End-->
 
@@ -124,10 +100,6 @@ Unusual word.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EvaluationResultCode-UNUSUAL_WORD = 5--><!--Device-EvaluationResultCode-UNUSUAL_WORD = 5-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -143,10 +115,6 @@ CONSECUTIVE_SAME_WORD = 6
 Consecutive same word.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-CONSECUTIVE_SAME_WORD = 6--><!--Device-EvaluationResultCode-CONSECUTIVE_SAME_WORD = 6-End-->
 
@@ -164,10 +132,6 @@ Too few phonemes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EvaluationResultCode-TOO_FEW_PHONEMES = 7--><!--Device-EvaluationResultCode-TOO_FEW_PHONEMES = 7-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -183,10 +147,6 @@ TOO_MANY_PHONEMES = 8
 Too many phonemes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-TOO_MANY_PHONEMES = 8--><!--Device-EvaluationResultCode-TOO_MANY_PHONEMES = 8-End-->
 
@@ -204,10 +164,6 @@ Contain common instruction.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EvaluationResultCode-COMMON_INSTRUCTION = 9--><!--Device-EvaluationResultCode-COMMON_INSTRUCTION = 9-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -223,10 +179,6 @@ COMMON_SPOKEN_LANGUAGE = 10
 Contain common spoken language.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-COMMON_SPOKEN_LANGUAGE = 10--><!--Device-EvaluationResultCode-COMMON_SPOKEN_LANGUAGE = 10-End-->
 
@@ -244,10 +196,6 @@ Contain sensitive word.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EvaluationResultCode-SENSITIVE_WORD = 11--><!--Device-EvaluationResultCode-SENSITIVE_WORD = 11-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -264,10 +212,6 @@ Two consecutive words without initial consonant.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EvaluationResultCode-NO_INITIAL_CONSONANT = 12--><!--Device-EvaluationResultCode-NO_INITIAL_CONSONANT = 12-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -283,10 +227,6 @@ REPEATED_PHONEME = 13
 Contain repeated phoneme.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-REPEATED_PHONEME = 13--><!--Device-EvaluationResultCode-REPEATED_PHONEME = 13-End-->
 

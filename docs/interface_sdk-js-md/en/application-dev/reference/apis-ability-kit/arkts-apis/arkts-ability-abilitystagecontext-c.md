@@ -6,10 +6,6 @@ The AbilityStageContext module implements the context of an ability stage. It in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class AbilityStageContext--><!--Device-unnamed-declare class AbilityStageContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -25,10 +21,6 @@ Environment variables.
 **Type:** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ ModuleInfo object corresponding to the ability stage.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -73,10 +61,6 @@ Indicates launch ElementName object of the abilityStage.
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

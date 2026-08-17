@@ -4,10 +4,6 @@ Enumerates the camera portrait theme types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum PortraitThemeType--><!--Device-camera-enum PortraitThemeType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ NATURAL = 0
 Natural portrait theme type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PortraitThemeType-NATURAL = 0--><!--Device-PortraitThemeType-NATURAL = 0-End-->
 
@@ -44,10 +36,6 @@ Delicate portrait theme type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PortraitThemeType-DELICATE = 1--><!--Device-PortraitThemeType-DELICATE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -63,10 +51,6 @@ STYLISH = 2
 Stylish portrait theme type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PortraitThemeType-STYLISH = 2--><!--Device-PortraitThemeType-STYLISH = 2-End-->
 

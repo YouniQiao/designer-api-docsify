@@ -1,12 +1,8 @@
 # OverlayModuleInfo
 
-The module provides information about a module with the overlay feature. An application can obtain such information through [overlay.getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getOverlayModuleInfo).
+The module provides information about a module with the overlay feature. An application can obtain such information through [overlay.getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface OverlayModuleInfo--><!--Device-unnamed-export interface OverlayModuleInfo-End-->
 
@@ -24,10 +20,6 @@ Bundle name of the application to which the module with the overlay feature belo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OverlayModuleInfo-readonly bundleName: string--><!--Device-OverlayModuleInfo-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -43,10 +35,6 @@ Name of the module with the overlay feature.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OverlayModuleInfo-readonly moduleName: string--><!--Device-OverlayModuleInfo-readonly moduleName: string-End-->
 
@@ -64,10 +52,6 @@ Priority of the module with the overlay feature. The value is an integer ranging
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OverlayModuleInfo-readonly priority: int--><!--Device-OverlayModuleInfo-readonly priority: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -78,15 +62,11 @@ Priority of the module with the overlay feature. The value is an integer ranging
 readonly state: int
 ```
 
-Whether the module with the overlay feature is [disabled](arkts-ability-overlay-setoverlayenabled-f.md#setOverlayEnabled). The value **0** means that the module with the overlay feature is disabled, and **1** means the opposite.
+Whether the module with the overlay feature is [disabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled). The value **0** means that the module with the overlay feature is disabled, and **1** means the opposite.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OverlayModuleInfo-readonly state: int--><!--Device-OverlayModuleInfo-readonly state: int-End-->
 
@@ -103,10 +83,6 @@ Name of the target module specified by the overlay feature, that is, the name of
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OverlayModuleInfo-readonly targetModuleName: string--><!--Device-OverlayModuleInfo-readonly targetModuleName: string-End-->
 

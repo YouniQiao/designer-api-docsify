@@ -16,10 +16,6 @@ Get the ethernet mac address list.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_ETHERNET_LOCAL_MAC
 
 <!--Device-ethernet-function getMacAddress(): Promise<Array<MacAddressInfo>>--><!--Device-ethernet-function getMacAddress(): Promise<Array<MacAddressInfo>>-End-->
@@ -40,7 +36,7 @@ Get the ethernet mac address list.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';

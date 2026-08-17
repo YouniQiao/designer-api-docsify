@@ -16,10 +16,6 @@ Obtains the SQL statement used to delete data. This API returns the result synch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo--><!--Device-relationalStore-function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -42,7 +38,7 @@ Obtains the SQL statement used to delete data. This API returns the result synch
 | --- | --- |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const predicates = new relationalStore.RdbPredicates("users");

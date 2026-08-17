@@ -16,10 +16,6 @@ Obtains **SystemPasteboard** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-pasteboard-function getSystemPasteboard(): SystemPasteboard--><!--Device-pasteboard-function getSystemPasteboard(): SystemPasteboard-End-->
@@ -32,7 +28,7 @@ Obtains **SystemPasteboard** object.
 | --- | --- |
 | [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md) | SystemPasteboard** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();

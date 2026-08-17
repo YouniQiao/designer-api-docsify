@@ -10,8 +10,6 @@ Specifies whether real-time text (RTT) calling is enabled. If enabled, incoming 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-phone-const RTT_CALLING_STATUS: string--><!--Device-phone-const RTT_CALLING_STATUS: string-End-->

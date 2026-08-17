@@ -10,10 +10,6 @@ function stopAppTraceCapture(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function stopAppTraceCapture(): void--><!--Device-hidebug-function stopAppTraceCapture(): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -25,7 +21,7 @@ function stopAppTraceCapture(): void
 | [11400105](../errorcode-hiviewdfx-hidebug-trace.md#11400105-未开启trace采集) | No capture trace running |
 | [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | The status of the trace is abnormal |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

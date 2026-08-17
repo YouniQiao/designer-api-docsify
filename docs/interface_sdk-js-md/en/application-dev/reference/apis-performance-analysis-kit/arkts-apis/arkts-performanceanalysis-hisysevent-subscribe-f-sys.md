@@ -16,10 +16,6 @@ Subscribes to real-time system events that occur occasionally or occur in a low 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_DFX_SYSEVENT
 
 <!--Device-hiSysEvent-function subscribe(rules: QueryRule[]): long--><!--Device-hiSysEvent-function subscribe(rules: QueryRule[]): long-End-->
@@ -50,7 +46,7 @@ Subscribes to real-time system events that occur occasionally or occur in a low 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo } from '@kit.CoreFileKit';

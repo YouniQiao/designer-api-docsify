@@ -10,10 +10,6 @@ Maximum reuse duration of the authentication result, in milliseconds. The value 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-userAuth-const MAX_ALLOWABLE_REUSE_DURATION: int--><!--Device-userAuth-const MAX_ALLOWABLE_REUSE_DURATION: int-End-->
@@ -29,10 +25,6 @@ const PERMANENT_LOCKOUT_DURATION: int
 Permanent lockout duration, in milliseconds. The value is 0x7fffffff. The value range is all integers.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

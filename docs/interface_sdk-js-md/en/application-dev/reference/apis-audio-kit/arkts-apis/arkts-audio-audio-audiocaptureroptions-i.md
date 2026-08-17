@@ -4,10 +4,6 @@ Describes audio capturer configurations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioCapturerOptions--><!--Device-audio-interface AudioCapturerOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -30,10 +26,6 @@ Audio capturer information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -50,8 +42,6 @@ Defines configuration for capturing played audio. This API is supported since AP
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 12
 
 **Substitutes:** OH_AVScreenCapture in native interface.
@@ -66,15 +56,11 @@ Defines configuration for capturing played audio. This API is supported since AP
 playbackCaptureMode?: AudioPlaybackCaptureMode
 ```
 
-The playback capture mode for audio capturer. This can be a combination of the available [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md#AudioPlaybackCaptureMode).
+The playback capture mode for audio capturer. This can be a combination of the available [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md#audioplaybackcapturemode).
 
 **Type:** [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,10 +79,6 @@ Audio stream information.
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo--><!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo-End-->
 

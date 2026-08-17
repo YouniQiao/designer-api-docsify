@@ -4,10 +4,6 @@ Defines the parameter information used to update the database. The data provider
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-interface DataShareUpdate--><!--Device-reminderAgentManager-interface DataShareUpdate-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -32,10 +28,6 @@ Filter criteria. Currently, only **equalTo** is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>--><!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -54,10 +46,6 @@ URI of the data, which is the unique identifier for cross-application data acces
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataShareUpdate-uri: string--><!--Device-DataShareUpdate-uri: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -75,10 +63,6 @@ New data.
 **Type:** [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataShareUpdate-value: ValuesBucket--><!--Device-DataShareUpdate-value: ValuesBucket-End-->
 

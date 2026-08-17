@@ -4,10 +4,6 @@ Enumerates the playback metric keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum PlaybackMetricsKey--><!--Device-media-enum PlaybackMetricsKey-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -21,10 +17,6 @@ PREPARE_DURATION = 'prepare_duration'
 Preparation duration, in milliseconds.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PlaybackMetricsKey-PREPARE_DURATION = 'prepare_duration'--><!--Device-PlaybackMetricsKey-PREPARE_DURATION = 'prepare_duration'-End-->
 
@@ -40,10 +32,6 @@ Duration for establishing a resource connection, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlaybackMetricsKey-RESOURCE_CONNECTION_DURATION = 'resource_connection_duration'--><!--Device-PlaybackMetricsKey-RESOURCE_CONNECTION_DURATION = 'resource_connection_duration'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -57,10 +45,6 @@ FIRST_FRAME_DECAPSULATION_DURATION = 'first_frame_decapsulation_duration'
 Duration for decapsulating the first frame, in milliseconds.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PlaybackMetricsKey-FIRST_FRAME_DECAPSULATION_DURATION = 'first_frame_decapsulation_duration'--><!--Device-PlaybackMetricsKey-FIRST_FRAME_DECAPSULATION_DURATION = 'first_frame_decapsulation_duration'-End-->
 
@@ -76,10 +60,6 @@ Total playback duration, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlaybackMetricsKey-TOTAL_PLAYING_TIME = 'total_playback_time'--><!--Device-PlaybackMetricsKey-TOTAL_PLAYING_TIME = 'total_playback_time'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -93,10 +73,6 @@ DOWNLOAD_REQUESTS_COUNT  = 'loading_requests_count'
 Total number of requests.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,10 +90,6 @@ Total loading duration, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_TIME  = 'total_loading_time'--><!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_TIME  = 'total_loading_time'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -131,10 +103,6 @@ TOTAL_DOWNLOAD_SIZE  = 'total_loading_bytes'
 Total loading size, in bytes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,10 +120,6 @@ Total number of stalling times.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlaybackMetricsKey-STALLING_COUNT  = 'stalling_count'--><!--Device-PlaybackMetricsKey-STALLING_COUNT  = 'stalling_count'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -170,10 +134,6 @@ Total stalling duration, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlaybackMetricsKey-TOTAL_STALLING_TIME  = 'total_stalling_time'--><!--Device-PlaybackMetricsKey-TOTAL_STALLING_TIME  = 'total_stalling_time'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -187,10 +147,6 @@ LIP_ASYNC_COUNT  = 'lip_async_count'
 Cumulative lip async count.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -207,10 +163,6 @@ TOTAL_LIP_ASYNC_TIME  = 'total_lip_async_time'
 Total lip async duration during the playback, in milliseconds.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

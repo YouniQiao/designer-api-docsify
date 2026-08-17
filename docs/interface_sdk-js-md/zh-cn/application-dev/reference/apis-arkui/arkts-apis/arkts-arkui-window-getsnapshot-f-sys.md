@@ -6,13 +6,9 @@
 function getSnapshot(windowId: int): Promise<image.PixelMap>
 ```
 
-获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过 [setWindowPrivacyMode](arkts-arkui-window-window-i.md#setWindowPrivacyMode) 接口设置），截图结果为白屏。
+获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过 [setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode) 接口设置），截图结果为白屏。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-window-function getSnapshot(windowId: int): Promise<image.PixelMap>--><!--Device-window-function getSnapshot(windowId: int): Promise<image.PixelMap>-End-->
 
@@ -24,7 +20,7 @@ function getSnapshot(windowId: int): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | int | 是 | 窗口Id。可通过[getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties) 接口获取到相关窗口属性，其中属性id即对应为窗口ID。 |
+| windowId | int | 是 | 窗口Id。可通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties) 接口获取到相关窗口属性，其中属性id即对应为窗口ID。 |
 
 **返回值：**
 
@@ -41,7 +37,7 @@ function getSnapshot(windowId: int): Promise<image.PixelMap>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Internal task error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

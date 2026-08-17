@@ -16,10 +16,6 @@ Obtains a PhotoAccessHelper instance for accessing and modifying media files in 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -46,7 +42,7 @@ Obtains a PhotoAccessHelper instance for accessing and modifying media files in 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The phAccessHelper instance obtained is a global object. It is used by default in subsequent operations. If the code snippet is not added, an error will be reported indicating that phAccessHelper is not defined.
@@ -78,10 +74,6 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper | null
 Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

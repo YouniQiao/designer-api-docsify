@@ -4,10 +4,6 @@ Represents the cloud service information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface ServiceInfo--><!--Device-cloudExtension-export interface ServiceInfo-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -32,10 +28,6 @@ Whether the cloud service is enabled. The value true means that the cloud servic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ServiceInfo-enableCloud: boolean--><!--Device-ServiceInfo-enableCloud: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -53,10 +45,6 @@ Cloud account ID generated using SHA-256.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ServiceInfo-id: string--><!--Device-ServiceInfo-id: string-End-->
 
@@ -76,10 +64,6 @@ Available account space on the server, in KB.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ServiceInfo-remainingSpace: long--><!--Device-ServiceInfo-remainingSpace: long-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -98,10 +82,6 @@ Total account space on the server, in KB.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ServiceInfo-totalSpace: long--><!--Device-ServiceInfo-totalSpace: long-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -119,10 +99,6 @@ Current user ID of the device.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ServiceInfo-user: int--><!--Device-ServiceInfo-user: int-End-->
 

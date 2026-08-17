@@ -1,12 +1,8 @@
 # JsMessageType
 
-Enum type supplied to [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runJavaScriptExt) for indicating the result of JavaScript code execution.
+Enumerates the data types of the results returned after the [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext) API is executed.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum JsMessageType--><!--Device-webview-enum JsMessageType-End-->
 
@@ -22,10 +18,6 @@ Unsupported data type.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-JsMessageType-NOT_SUPPORT = 0--><!--Device-JsMessageType-NOT_SUPPORT = 0-End-->
@@ -38,13 +30,9 @@ Unsupported data type.
 STRING = 1
 ```
 
-The string data type.
+String type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ The string data type.
 NUMBER = 2
 ```
 
-The number data type.
+Number type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +62,9 @@ The number data type.
 BOOLEAN = 3
 ```
 
-The boolean data type.
+Boolean type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,13 +78,9 @@ The boolean data type.
 ARRAY_BUFFER = 4
 ```
 
-The arraybuffer data type.
+Raw binary data buffer.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,13 +94,9 @@ The arraybuffer data type.
 ARRAY = 5
 ```
 
-The array data type.
+Array type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

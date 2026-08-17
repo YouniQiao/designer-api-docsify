@@ -4,13 +4,9 @@
 type OnSslErrorEventCallback = (sslErrorEvent: SslErrorEvent) => void
 ```
 
-SSL错误事件的回调函数。
+用户加载资源时发生SSL错误时触发的回调，返回SSL错误详细信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -22,5 +18,5 @@ SSL错误事件的回调函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sslErrorEvent | [SslErrorEvent](arkts-arkweb-sslerrorevent-i.md) | 是 | callback information of onSslErrorEvent. |
+| sslErrorEvent | [SslErrorEvent](arkts-arkweb-sslerrorevent-i.md) | 是 | 用户加载资源时发生SSL错误时传递的详细信息。 |
 

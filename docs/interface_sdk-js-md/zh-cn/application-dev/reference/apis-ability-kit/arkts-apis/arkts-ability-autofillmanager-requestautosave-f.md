@@ -10,10 +10,6 @@ export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -26,7 +22,7 @@ export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | UI context in which the auto-save operation will be performed. |
+| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI context in which the auto-save operation will be performed. |
 | callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | 否 | Implements callbacks triggered when auto-save is complete. |
 
 **错误码：**
@@ -36,7 +32,7 @@ export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback)
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Get instance id failed; <br>2. Parse instance id failed; 3. The second parameter is not of type callback. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

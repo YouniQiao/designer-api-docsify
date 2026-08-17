@@ -16,10 +16,6 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-emitter-function once(eventId: string, callback: Callback<EventData>): void--><!--Device-emitter-function once(eventId: string, callback: Callback<EventData>): void-End-->
@@ -33,7 +29,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -56,10 +52,6 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-emitter-function once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-emitter-function once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
@@ -73,7 +65,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

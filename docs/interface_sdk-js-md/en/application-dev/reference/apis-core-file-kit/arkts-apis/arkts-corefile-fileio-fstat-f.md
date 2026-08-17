@@ -10,8 +10,6 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md#stat)
@@ -42,8 +40,6 @@ declare function fstat(fd: number, callback: AsyncCallback<Stat>): void
 Obtains file status based on the file descriptor. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

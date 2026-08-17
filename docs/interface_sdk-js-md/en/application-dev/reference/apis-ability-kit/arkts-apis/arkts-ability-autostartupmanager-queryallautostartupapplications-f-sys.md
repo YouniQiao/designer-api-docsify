@@ -16,10 +16,6 @@ Obtains information about all auto-startup application components. This API uses
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_APP_BOOT
 
 **Model restriction:** This API can be used only in the stage model.
@@ -34,7 +30,7 @@ Obtains information about all auto-startup application components. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the information is obtained, **err** is **undefined** and **data** is **Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md#AutoStartupInfo-(System-API))&gt;**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the information is obtained, **err** is **undefined** and **data** is **Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md#autostartupinfo-system-api)&gt;**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -55,10 +51,6 @@ function queryAllAutoStartupApplications(): Promise<Array<AutoStartupInfo>>
 Obtains information about all auto-startup application components. This API uses a promise to return the result. Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on other device types, error code 16000050 is returned. For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000050 is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_APP_BOOT
 

@@ -1,12 +1,8 @@
 # Calendar
 
-In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createCalendar) or getCalendar() to obtain a **Calendar** object before calling related APIs.
+In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain a **Calendar** object before calling related APIs.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-calendarManager-export interface Calendar--><!--Device-calendarManager-export interface Calendar-End-->
 
@@ -27,10 +23,6 @@ addEvent(event: Event): Promise<number>
 Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
@@ -61,7 +53,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -99,10 +91,6 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.WRITE_CALENDAR
@@ -127,7 +115,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -165,10 +153,6 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.WRITE_CALENDAR
@@ -196,7 +180,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -241,10 +225,6 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.WRITE_CALENDAR
@@ -267,7 +247,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -314,10 +294,6 @@ Deletes an event with the specified ID. This API uses a promise to return the re
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Calendar-deleteEvent(id: number): Promise<void>--><!--Device-Calendar-deleteEvent(id: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -334,7 +310,7 @@ Deletes an event with the specified ID. This API uses a promise to return the re
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -379,10 +355,6 @@ Deletes an event with the specified ID. This API uses an asynchronous callback t
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void-End-->
@@ -396,7 +368,7 @@ Deletes an event with the specified ID. This API uses an asynchronous callback t
 | id | number | Yes | Event ID, which is the unique identifier of an event. If the input event ID is an integer, the event is created. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -443,10 +415,6 @@ Deletes a batch of events with the specified IDs. This API uses a promise to ret
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>--><!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -463,7 +431,7 @@ Deletes a batch of events with the specified IDs. This API uses a promise to ret
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -520,10 +488,6 @@ Deletes a batch of events with the specified IDs. This API uses an asynchronous 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void-End-->
@@ -537,7 +501,7 @@ Deletes a batch of events with the specified IDs. This API uses an asynchronous 
 | ids | number[] | Yes | Array of event IDs. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -596,10 +560,6 @@ Obtains the calendar account information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Calendar-getAccount(): CalendarAccount--><!--Device-Calendar-getAccount(): CalendarAccount-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -610,7 +570,7 @@ Obtains the calendar account information.
 | --- | --- |
 | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Calendar account information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { calendarMgr } from '../entryability/EntryAbility';
@@ -639,10 +599,6 @@ Obtains the calendar configuration information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Calendar-getConfig(): CalendarConfig--><!--Device-Calendar-getConfig(): CalendarConfig-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -653,7 +609,7 @@ Obtains the calendar configuration information.
 | --- | --- |
 | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Calendar configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { calendarMgr } from '../entryability/EntryAbility';
@@ -681,10 +637,6 @@ getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[
 Obtains all events in a calendar that match the filter criteria. This API uses a promise to return the result. If there is only one input parameter, the filter criteria, corresponding to the type EventFilter, must be set as the parameter. If no input parameter is specified, all events under the specified calendar account can be queried.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
@@ -714,7 +666,7 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -760,10 +712,6 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.READ_CALENDAR
@@ -787,7 +735,7 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -845,10 +793,6 @@ Obtains all events in the current calendar. This API uses an asynchronous callba
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API version 10-20: ohos.permission.READ_CALENDAR
@@ -870,7 +814,7 @@ Obtains all events in the current calendar. This API uses an asynchronous callba
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -903,10 +847,6 @@ openEventEditPage(id: number): Promise<void>
 Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID. This API uses a promise to return the result. This API can be used to view and edit calendar events in the system calendar.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -945,10 +885,6 @@ Queries the event instance with a specified event key in a calendar. This API us
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API version 18-20: ohos.permission.READ_CALENDAR
@@ -981,7 +917,7 @@ Queries the event instance with a specified event key in a calendar. This API us
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1026,10 +962,6 @@ Sets the calendar configuration information. This API uses a promise to return t
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>--><!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -1052,7 +984,7 @@ Sets the calendar configuration information. This API uses a promise to return t
 | --- | --- |
 | [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1088,10 +1020,6 @@ Sets the calendar configuration information. This API uses an asynchronous callb
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void--><!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -1109,7 +1037,7 @@ Sets the calendar configuration information. This API uses an asynchronous callb
 | --- | --- |
 | [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1147,10 +1075,6 @@ Updates an event, with the ID of the updated event specified in Event. This API 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Calendar-updateEvent(event: Event): Promise<void>--><!--Device-Calendar-updateEvent(event: Event): Promise<void>-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -1167,7 +1091,7 @@ Updates an event, with the ID of the updated event specified in Event. This API 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1214,10 +1138,6 @@ Updates an event. The ID of the updated event must be specified in Event. If not
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void--><!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -1229,7 +1149,7 @@ Updates an event. The ID of the updated event must be specified in Event. If not
 | event | Event | Yes | Event object. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of updateEvent. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1279,10 +1199,6 @@ Calendar account ID, which is the unique identifier of a calendar account and is
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

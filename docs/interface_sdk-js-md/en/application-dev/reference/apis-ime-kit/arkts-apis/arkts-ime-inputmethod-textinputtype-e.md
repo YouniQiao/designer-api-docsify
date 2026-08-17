@@ -4,10 +4,6 @@ Enumerates the text input type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-export enum TextInputType--><!--Device-inputMethod-export enum TextInputType-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -21,10 +17,6 @@ NONE = -1
 The text input type is NONE.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextInputType-NONE = -1--><!--Device-TextInputType-NONE = -1-End-->
 
@@ -40,10 +32,6 @@ The text input type is TEXT.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextInputType-TEXT = 0--><!--Device-TextInputType-TEXT = 0-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -57,10 +45,6 @@ MULTILINE
 The text input type is MULTILINE.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextInputType-MULTILINE--><!--Device-TextInputType-MULTILINE-End-->
 
@@ -76,10 +60,6 @@ The text input type is NUMBER.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextInputType-NUMBER--><!--Device-TextInputType-NUMBER-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -93,10 +73,6 @@ PHONE
 The text input type is PHONE.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextInputType-PHONE--><!--Device-TextInputType-PHONE-End-->
 
@@ -112,10 +88,6 @@ The text input type is DATETIME.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextInputType-DATETIME--><!--Device-TextInputType-DATETIME-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -129,10 +101,6 @@ EMAIL_ADDRESS
 The text input type is EMAIL_ADDRESS.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextInputType-EMAIL_ADDRESS--><!--Device-TextInputType-EMAIL_ADDRESS-End-->
 
@@ -148,10 +116,6 @@ The text input type is URL.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextInputType-URL--><!--Device-TextInputType-URL-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -165,10 +129,6 @@ VISIBLE_PASSWORD
 The text input type is VISIBLE_PASSWORD.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextInputType-VISIBLE_PASSWORD--><!--Device-TextInputType-VISIBLE_PASSWORD-End-->
 
@@ -184,10 +144,6 @@ The text input type is NUMBER_PASSWORD.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextInputType-NUMBER_PASSWORD--><!--Device-TextInputType-NUMBER_PASSWORD-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -201,10 +157,6 @@ SCREEN_LOCK_PASSWORD
 The text input type is SCREEN_LOCK_PASSWORD.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextInputType-SCREEN_LOCK_PASSWORD--><!--Device-TextInputType-SCREEN_LOCK_PASSWORD-End-->
 
@@ -220,10 +172,6 @@ The text input type is USER_NAME.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextInputType-USER_NAME--><!--Device-TextInputType-USER_NAME-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -237,10 +185,6 @@ NEW_PASSWORD
 The text input type is NEW_PASSWORD.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextInputType-NEW_PASSWORD--><!--Device-TextInputType-NEW_PASSWORD-End-->
 
@@ -256,10 +200,6 @@ The text input type is NUMBER_DECIMAL.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextInputType-NUMBER_DECIMAL--><!--Device-TextInputType-NUMBER_DECIMAL-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -273,10 +213,6 @@ ONE_TIME_CODE
 The text input type is ONE_TIME_CODE.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextInputType-ONE_TIME_CODE--><!--Device-TextInputType-ONE_TIME_CODE-End-->
 

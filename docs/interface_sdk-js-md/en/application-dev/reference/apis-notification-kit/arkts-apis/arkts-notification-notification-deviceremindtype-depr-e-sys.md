@@ -4,11 +4,9 @@ Defines the notification reminder type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#DeviceRemindType-(System-API))
+**Substitutes:** [DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#deviceremindtype-system-api)
 
 <!--Device-notification-export enum DeviceRemindType--><!--Device-notification-export enum DeviceRemindType-End-->
 
@@ -26,11 +24,9 @@ The device is not in use. No notification is required.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IDLE_DONOT_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#IDLE_DONOT_REMIND)
+**Substitutes:** [IDLE_DONOT_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#idledonotremind)
 
 <!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0--><!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0-End-->
 
@@ -48,11 +44,9 @@ The device is not in use.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IDLE_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#IDLE_REMIND)
+**Substitutes:** [IDLE_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#idleremind)
 
 <!--Device-DeviceRemindType-IDLE_REMIND = 1--><!--Device-DeviceRemindType-IDLE_REMIND = 1-End-->
 
@@ -70,11 +64,9 @@ The device is in use. No notification is required.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ACTIVE_DONOT_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#ACTIVE_DONOT_REMIND)
+**Substitutes:** [ACTIVE_DONOT_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#activedonotremind)
 
 <!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2--><!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2-End-->
 
@@ -92,11 +84,9 @@ The device is in use.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ACTIVE_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#ACTIVE_REMIND)
+**Substitutes:** [ACTIVE_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#activeremind)
 
 <!--Device-DeviceRemindType-ACTIVE_REMIND = 3--><!--Device-DeviceRemindType-ACTIVE_REMIND = 3-End-->
 

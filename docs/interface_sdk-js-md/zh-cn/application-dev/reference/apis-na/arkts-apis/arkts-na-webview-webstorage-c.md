@@ -4,9 +4,7 @@ Implements a WebStorage object to manage the Web SQL database and HTML5 Web Stor
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-webview-class WebStorage--><!--Device-webview-class WebStorage-End-->
 
@@ -22,9 +20,7 @@ Deletes all data in the Web SQL Database.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebStorage-static deleteAllData(incognito?: boolean): void--><!--Device-WebStorage-static deleteAllData(incognito?: boolean): void-End-->
 
@@ -46,9 +42,7 @@ Deletes all data in the specified origin.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebStorage-static deleteOrigin(origin: string): void--><!--Device-WebStorage-static deleteOrigin(origin: string): void-End-->
 
@@ -58,7 +52,7 @@ Deletes all data in the specified origin.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| origin | string | 是 | Index of the origin, which is obtained through [getOrigins](#getOrigins). |
+| origin | string | 是 | Index of the origin, which is obtained through [getOrigins](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webstorage-c.md#getorigins). |
 
 **错误码：**
 
@@ -77,9 +71,7 @@ Get the web storage quota with the origin.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebStorage-static getOriginQuota(origin: string): Promise<double>--><!--Device-WebStorage-static getOriginQuota(origin: string): Promise<double>-End-->
 
@@ -114,9 +106,7 @@ Get the web storage quota with the origin.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<double>): void--><!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<double>): void-End-->
 
@@ -127,7 +117,7 @@ Get the web storage quota with the origin.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | origin | string | 是 | The origin which to be inquired. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | the callback of getOriginQuota. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | 是 | the callback of getOriginQuota. |
 
 **错误码：**
 
@@ -146,9 +136,7 @@ Get the web amount of storage with the origin.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebStorage-static getOriginUsage(origin: string): Promise<double>--><!--Device-WebStorage-static getOriginUsage(origin: string): Promise<double>-End-->
 
@@ -183,9 +171,7 @@ Get the web amount of storage with the origin.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<double>): void--><!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<double>): void-End-->
 
@@ -196,7 +182,7 @@ Get the web amount of storage with the origin.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | origin | string | 是 | The origin which to be inquired. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | the callback of getOriginUsage. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | 是 | the callback of getOriginUsage. |
 
 **错误码：**
 
@@ -215,9 +201,7 @@ Obtains information about all origins that are currently using the Web SQL Datab
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>--><!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>-End-->
 
@@ -227,7 +211,7 @@ Obtains information about all origins that are currently using the Web SQL Datab
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[WebStorageOrigin](arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. For details, see { |
+| Promise&lt;Array&lt;[WebStorageOrigin](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. For details, see { |
 
 **错误码：**
 
@@ -246,9 +230,7 @@ Obtains information about all origins that are currently using the Web SQL Datab
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void--><!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void-End-->
 
@@ -258,7 +240,7 @@ Obtains information about all origins that are currently using the Web SQL Datab
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | 是 | Callback used to return the information about the origins. For details, see [WebStorageOrigin](arkts-na-webview-webstorageorigin-i.md#WebStorageOrigin). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | 是 | Callback used to return the information about the origins. For details, see [WebStorageOrigin](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webstorageorigin-i.md#webstorageorigin). |
 
 **错误码：**
 

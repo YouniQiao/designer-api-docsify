@@ -4,8 +4,6 @@ Defines the options used in get().
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileGetOption--><!--Device-unnamed-export interface FileGetOption-End-->
@@ -23,8 +21,6 @@ Callback invoked when the API call is complete.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ Callback invoked when the API call fails. **data** indicates the error informati
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileGetOption-fail?: (data: string, code: number) => void--><!--Device-FileGetOption-fail?: (data: string, code: number) => void-End-->
@@ -64,8 +58,6 @@ Indicates whether to recursively obtain the file list in a subdirectory. The val
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileGetOption-recursive?: boolean--><!--Device-FileGetOption-recursive?: boolean-End-->
@@ -78,13 +70,11 @@ Indicates whether to recursively obtain the file list in a subdirectory. The val
 success?: (file: FileResponse) => void
 ```
 
-Callback invoked when the API call is successful. **file** is [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md#FileResponse).
+Callback invoked when the API call is successful. **file** is [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md#fileresponse).
 
 **Type:** (file: FileResponse) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -103,8 +93,6 @@ URI of the file. Restricted by the underlying file system of lite wearables, the
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

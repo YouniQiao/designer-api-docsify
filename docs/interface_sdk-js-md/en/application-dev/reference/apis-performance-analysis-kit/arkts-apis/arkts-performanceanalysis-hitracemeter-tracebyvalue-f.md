@@ -12,13 +12,9 @@ import { hiTraceMeter } from 'hiTraceMeter';
 function traceByValue(name: string, count: long): void
 ```
 
-Traces the value changes of an integer variable. Since API version 19, you are advised to use the [traceByValue](#traceByValue) API to specify the trace output level.
+Traces the value changes of an integer variable. Since API version 19, you are advised to use the [traceByValue](#tracebyvalue) API to specify the trace output level.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -33,7 +29,7 @@ Traces the value changes of an integer variable. Since API version 19, you are a
 | name | string | Yes | Name of the integer variable to trace. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
 | count | long | Yes | Value of an integer variable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let traceCount = 3;
@@ -54,10 +50,6 @@ Traces an integer with the trace output level specified. It is used to mark the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void--><!--Device-hiTraceMeter-function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void-End-->
@@ -72,7 +64,7 @@ Traces an integer with the trace output level specified. It is used to mark the 
 | name | string | Yes | Name of the integer variable to trace. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
 | count | long | Yes | Value of an integer variable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;

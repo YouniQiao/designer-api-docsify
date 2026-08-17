@@ -10,10 +10,6 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-commonEventManager-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void--><!--Device-commonEventManager-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void-End-->
@@ -25,7 +21,7 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数。当取消公共事件订阅成功时，err为undefined；取消失败时， err为错误对象。不传该参数时，默认取消订阅且不返回结果。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 否 | 回调函数。当取消公共事件订阅成功时，err为undefined；取消失败时， err为错误对象。不传该参数时，默认取消订阅且不返回结果。 |
 
 **错误码：**
 
@@ -36,7 +32,7 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 | [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) | Failed to send the message to the common event service. |
 | [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) | Failed to initialize the common event service. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -16,10 +16,6 @@ Remove a specified candidate hotspot configuration, only the configuration which
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -50,7 +46,7 @@ Remove a specified candidate hotspot configuration, only the configuration which
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
@@ -78,10 +74,6 @@ Remove a specified candidate hotspot configuration, only the configuration which
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -107,7 +99,7 @@ Remove a specified candidate hotspot configuration, only the configuration which
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

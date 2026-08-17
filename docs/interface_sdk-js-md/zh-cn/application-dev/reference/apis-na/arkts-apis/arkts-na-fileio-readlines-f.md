@@ -10,9 +10,7 @@ function readLines(filePath: string, options?: Options): Promise<ReaderIterator>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function readLines(filePath: string, options?: Options): Promise<ReaderIterator>--><!--Device-fileIo-function readLines(filePath: string, options?: Options): Promise<ReaderIterator>-End-->
 
@@ -60,9 +58,7 @@ function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void--><!--Device-fileIo-function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void-End-->
 
@@ -73,7 +69,7 @@ function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 | 回调函数，返回文件读取迭代器。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReaderIterator](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 | 回调函数，返回文件读取迭代器。 |
 
 **错误码：**
 
@@ -103,9 +99,7 @@ function readLines(filePath: string, options: Options, callback: AsyncCallback<R
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void--><!--Device-fileIo-function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void-End-->
 
@@ -117,7 +111,7 @@ function readLines(filePath: string, options: Options, callback: AsyncCallback<R
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
 | options | [Options](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-options-i.md) | 是 | 读取选项。支持以下选项：<br/>- encoding，string类型，当数据是 string 类型时有效，表示数据的编码方式， 默认 'utf-8'，仅支持 'utf-8'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 | 回调函数，返回文件读取迭代器。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReaderIterator](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 | 回调函数，返回文件读取迭代器。 |
 
 **错误码：**
 

@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ReadonlyArray--><!--Device-unnamed-interface ReadonlyArray-End-->
 
 ## flat
@@ -20,10 +16,6 @@ flat<A, D extends number = 1>(
 Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReadonlyArray-flat<A, D extends number = 1>(        this: A,        depth?: D    ): FlatArray<A, D>[]--><!--Device-ReadonlyArray-flat<A, D extends number = 1>(        this: A,        depth?: D    ): FlatArray<A, D>[]-End-->
 
@@ -52,10 +44,6 @@ flatMap<U, This = undefined> (
 Calls a defined callback function on each element of an array. Then, flattens the result into a new array. This is identical to a map followed by flat with depth 1.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReadonlyArray-flatMap<U, This = undefined> (        callback: (this: This, value: T, index: number, array: T[]) => U | ReadonlyArray<U>,        thisArg?: This    ): U[]--><!--Device-ReadonlyArray-flatMap<U, This = undefined> (        callback: (this: This, value: T, index: number, array: T[]) => U | ReadonlyArray<U>,        thisArg?: This    ): U[]-End-->
 

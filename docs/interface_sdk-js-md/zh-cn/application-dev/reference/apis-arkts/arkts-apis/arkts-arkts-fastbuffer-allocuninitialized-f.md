@@ -10,10 +10,6 @@ function allocUninitialized(size: number): FastBuffer
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-fastbuffer-function allocUninitialized(size: number): FastBuffer--><!--Device-fastbuffer-function allocUninitialized(size: number): FastBuffer-End-->
@@ -32,7 +28,7 @@ function allocUninitialized(size: number): FastBuffer
 | --- | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 未初始化的FastBuffer实例。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

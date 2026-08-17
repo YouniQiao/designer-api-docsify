@@ -4,10 +4,6 @@ Enumerates the viewport types available for **viewport-fit** in the web page **\
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum ViewportFit--><!--Device-unnamed-declare enum ViewportFit-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -18,13 +14,9 @@ Enumerates the viewport types available for **viewport-fit** in the web page **\
 AUTO = 0
 ```
 
-The entire web page is visible. Default value.
+Default value. The entire web page is visible. This is suitable for scenarios where the web page needs to be fully displayed within the visible area, and is recommended for most common web pages.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,13 +30,9 @@ The entire web page is visible. Default value.
 CONTAINS = 1
 ```
 
-The initial layout viewport and the visual viewport are confined within the bounding rectangle of the device's physical screen.
+The initial layout viewport and visual viewport are within the largest rectangle that fits the device display. This is suitable for scenarios where content must be completely within the safe area, such as preventing important content from being obscured by a notch.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -58,13 +46,9 @@ The initial layout viewport and the visual viewport are confined within the boun
 COVER = 2
 ```
 
-The initial layout viewport and the visual viewport are confined within the bounding rectangle of the device's physical screen.
+The initial layout viewport and visual viewport are within the bounding rectangle of the device's physical screen. This is suitable for scenarios where web page content needs to extend to the screen edges, such as full-screen background effects or immersive experiences.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

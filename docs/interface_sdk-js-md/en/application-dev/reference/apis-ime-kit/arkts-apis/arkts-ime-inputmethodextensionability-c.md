@@ -4,10 +4,6 @@ The **InputMethodExtensionAbility** module provides APIs for developing input me
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class InputMethodExtensionAbility--><!--Device-unnamed-declare class InputMethodExtensionAbility-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -28,10 +24,6 @@ Called when the **InputMethodExtensionAbility** is started to implement initiali
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputMethodExtensionAbility-onCreate(want: Want): void--><!--Device-InputMethodExtensionAbility-onCreate(want: Want): void-End-->
@@ -44,7 +36,7 @@ Called when the **InputMethodExtensionAbility** is started to implement initiali
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information related to the **InputMethodExtensionAbility**, including the ability name and bundle name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InputMethodExtensionAbility } from '@kit.IMEKit';
@@ -67,17 +59,13 @@ Called when this **InputMethodExtensionAbility** is destroyed to clear resources
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputMethodExtensionAbility-onDestroy(): void--><!--Device-InputMethodExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InputMethodExtensionAbility } from '@kit.IMEKit';
@@ -100,10 +88,6 @@ Context of the **InputMethodExtension**, which is inherited from **ExtensionCont
 **Type:** [InputMethodExtensionContext](arkts-ime-inputmethodextensioncontext-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

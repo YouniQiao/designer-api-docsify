@@ -4,10 +4,6 @@ Defines the parameters for continuous vibration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-interface ContinuousParam--><!--Device-vibrator-interface ContinuousParam-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -30,10 +26,6 @@ Vibration frequency. This parameter is optional. The value range is [0,100]. If 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ContinuousParam-frequency?: int--><!--Device-ContinuousParam-frequency?: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -49,10 +41,6 @@ Channel number. This parameter is optional. The value range is [0,2]. If this pa
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousParam-index?: int--><!--Device-ContinuousParam-index?: int-End-->
 
@@ -70,10 +58,6 @@ Vibration intensity. This parameter is optional. The value range is [0,100]. If 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ContinuousParam-intensity?: int--><!--Device-ContinuousParam-intensity?: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -89,10 +73,6 @@ Adjustment points of the vibration curve.
 **Type:** [VibratorCurvePoint](arkts-sensorservice-vibrator-vibratorcurvepoint-i.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousParam-points?: VibratorCurvePoint[]--><!--Device-ContinuousParam-points?: VibratorCurvePoint[]-End-->
 

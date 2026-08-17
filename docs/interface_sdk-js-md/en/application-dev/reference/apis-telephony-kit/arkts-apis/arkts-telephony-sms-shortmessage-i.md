@@ -4,10 +4,6 @@ Defines an SMS message instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-export interface ShortMessage--><!--Device-sms-export interface ShortMessage-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -30,10 +26,6 @@ Whether the received SMS contains **TP-Reply-Path**. The default value is **fals
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortMessage-hasReplyPath: boolean--><!--Device-ShortMessage-hasReplyPath: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -49,10 +41,6 @@ Whether the received SMS message is a **replace short message**. The default val
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortMessage-isReplaceMessage: boolean--><!--Device-ShortMessage-isReplaceMessage: boolean-End-->
 
@@ -70,10 +58,6 @@ Whether the received SMS message is an SMS delivery report. The default value is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortMessage-isSmsStatusReportMessage: boolean--><!--Device-ShortMessage-isSmsStatusReportMessage: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -89,10 +73,6 @@ Enumerates SMS message types.
 **Type:** [ShortMessageClass](arkts-telephony-sms-shortmessageclass-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortMessage-messageClass: ShortMessageClass--><!--Device-ShortMessage-messageClass: ShortMessageClass-End-->
 
@@ -110,10 +90,6 @@ PDU in the SMS message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortMessage-pdu: Array<int>--><!--Device-ShortMessage-pdu: Array<int>-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -129,10 +105,6 @@ Protocol identifier used for delivering the SMS message.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortMessage-protocolId: int--><!--Device-ShortMessage-protocolId: int-End-->
 
@@ -150,10 +122,6 @@ SMSC address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortMessage-scAddress: string--><!--Device-ShortMessage-scAddress: string-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -169,10 +137,6 @@ SMSC timestamp.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortMessage-scTimestamp: long--><!--Device-ShortMessage-scTimestamp: long-End-->
 
@@ -190,10 +154,6 @@ SMS message status sent by the SMSC in the **SMS-STATUS-REPORT** message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortMessage-status: int--><!--Device-ShortMessage-status: int-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -210,10 +170,6 @@ SMS message body.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShortMessage-visibleMessageBody: string--><!--Device-ShortMessage-visibleMessageBody: string-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -229,10 +185,6 @@ Sender address.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ShortMessage-visibleRawAddress: string--><!--Device-ShortMessage-visibleRawAddress: string-End-->
 

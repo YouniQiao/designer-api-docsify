@@ -1,12 +1,8 @@
 # SecurityParams
 
-Security feature option configuration.
+Security feature option configuration. This class provides a set of boolean switches for controlling the enablement status of specific Web features in the ArkWeb kernel. By disabling non-essential high-risk modules (such as JIT compilation, WebAssembly, and WebGL), you can reduce the attack surface and lower potential exploit risks. All properties are optional, with the default value false (not disabled). Configure them based on your specific business scenarios.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-webview-interface SecurityParams--><!--Device-webview-interface SecurityParams-End-->
 
@@ -30,10 +26,6 @@ Whether to disable JIT compilation. true means disabled, and false means the opp
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityParams-disableJITCompilation?: boolean--><!--Device-SecurityParams-disableJITCompilation?: boolean-End-->
@@ -51,10 +43,6 @@ Whether to disable MathML. true means disabled, and false means the opposite. De
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Whether to disable non-proxy UDP for WebRTC. true means disabled, and false mean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityParams-disableNonProxyUDP?: boolean--><!--Device-SecurityParams-disableNonProxyUDP?: boolean-End-->
@@ -95,10 +79,6 @@ Whether to disable the PDF viewer. true means disabled, and false means the oppo
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ Whether to disable Service Worker. true means disabled, and false means the oppo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityParams-disableServiceWorker?: boolean--><!--Device-SecurityParams-disableServiceWorker?: boolean-End-->
@@ -140,10 +116,6 @@ Whether to disable WebAssembly. true means disabled, and false means the opposit
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityParams-disableWebAssembly?: boolean--><!--Device-SecurityParams-disableWebAssembly?: boolean-End-->
@@ -156,15 +128,11 @@ Whether to disable WebAssembly. true means disabled, and false means the opposit
 disableWebGL?: boolean
 ```
 
-Whether to disable WebGL. true means disabled, and false means the opposite. Default value: false. WebGL allows JavaScript to directly invoke the GPU driver for rendering. Attackers may exploit underlying driver vulnerabilities to implement sandbox escape or remote code execution. In addition, WebGL may be used for user fingerprint identification attacks. Disabling it prevents 3D rendering and causes some 2D canvases to fall back to CPU rendering, which may result in a lower frame rate. It is recommended that this feature be disabled for sensitive services such as financial payment, instant messaging, and government systems.
+Whether to disable WebGL. true means disabled, and false means the opposite. Default value: false. WebGL allows JavaScript to directly invoke the GPU driver for rendering. Attackers may exploit underlying driver vulnerabilities to implement sandbox escape or remote code execution. In addition, WebGL may be used for user fingerprint identification attacks. Disabling it prevents 3D rendering and causes some 2D canvases to fall back to CPU rendering, which may result in a lower frame rate.It is recommended that this feature be disabled for sensitive services such as financial payment, instant messaging, and government systems.
 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,8 @@
 # AVPlayer
 
-AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use [createAVPlayer()](arkts-media-media-createavplayer-f.md#createAVPlayer) to create an AVPlayer instance. When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](#on_mediaKeySystemInfoUpdate): listens for AVPlayer state changes. [on('error')](#on_mediaKeySystemInfoUpdate): listens for error events. Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the system might terminate applications to free up resources. For details about the audio and video playback demo, see [Audio Playback](../../../media/media/using-avplayer-for-playback.md) and [Video Playback](../../../media/media/video-playback.md).
+AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer) to create an AVPlayer instance. When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](#onmediakeysysteminfoupdate): listens for AVPlayer state changes. [on('error')](#onmediakeysysteminfoupdate): listens for error events. Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the system might terminate applications to free up resources. For details about the audio and video playback demo, see [Audio Playback](../../../media/media/using-avplayer-for-playback.md) and [Video Playback](../../../media/media/video-playback.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-interface AVPlayer--><!--Device-media-interface AVPlayer-End-->
 
@@ -27,10 +23,6 @@ addPlaybackMediaSource(src: MediaSource, id?: string): Promise<string>
 Add a new playback source to the player's playlist.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,10 +62,6 @@ Adds an external subtitle to a video based on the FD. Currently, the external su
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVPlayer-addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>--><!--Device-AVPlayer-addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>-End-->
@@ -84,7 +72,7 @@ Adds an external subtitle to a video based on the FD. Currently, the external su
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | int | Yes | Resource handle, which is obtained by calling [resourceManager.getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getRawFd). |
+| fd | int | Yes | Resource handle, which is obtained by calling [resourceManager.getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd). |
 | offset | long | No | Resource offset, which needs to be entered based on the preset asset information. An invalid value causes a failure to parse subtitle assets. The default value is **0**.unit:Byte. |
 | length | long | No | Resource length, which needs to be entered based on the preset asset information. The default value is the remaining bytes from the offset in the file. An invalid value causes a failure to parse subtitle assets. The default value is **0**. |
 
@@ -110,10 +98,6 @@ addSubtitleFromUrl(url: string): Promise<void>
 Adds an external subtitle to a video based on the URL. Currently, the external subtitle must be set after **fdSrc** of the video resource is set in an AVPlayer instance. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -149,10 +133,6 @@ advanceToMediaSource(id: string): Promise<void>
 Ends playback of the current mediasource and starts playback of the specified mediasource in the mediasource list.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -191,10 +171,6 @@ Ends playback of the current mediasource and starts playback of the next mediaso
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -225,10 +201,6 @@ advanceToPrevMediaSource(): Promise<void>
 Ends playback of the current mediasource and starts playback of the previous mediasource in the mediasource list.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -261,10 +233,6 @@ Clears all the items in the player's playlist. Currently playing media will be t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -295,10 +263,6 @@ Deselects the specified track when the AVPlayer plays multimedia resources with 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVPlayer-deselectTrack(index: int): Promise<void>--><!--Device-AVPlayer-deselectTrack(index: int): Promise<void>-End-->
@@ -309,7 +273,7 @@ Deselects the specified track when the AVPlayer plays multimedia resources with 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Track index, which is obtained from [MediaDescription](arkts-media-media-mediadescription-i.md#MediaDescription) by calling [getTrackDescription](#getTrackDescription). |
+| index | int | Yes | Track index, which is obtained from [MediaDescription](arkts-media-media-mediadescription-i.md#mediadescription) by calling [getTrackDescription](#gettrackdescription). |
 
 **Return value:**
 
@@ -333,10 +297,6 @@ getCurrentMediaSource(): MediaSource | undefined
 Return the current mediasource.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -368,10 +328,6 @@ Obtains the current playback time. This API can be called only when the AVPlayer
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -401,10 +357,6 @@ getCurrentTrack(trackType: MediaType): Promise<int>
 Obtains the selected track by the specified media type. This API can be called only when the AVPlayer is in the prepared, playing, or paused state. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -443,10 +395,6 @@ Obtains the list of loaded time ranges. This API uses a promise to return the re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVPlayer-getLoadedTimeRanges(): Promise<Array<Range>>--><!--Device-AVPlayer-getLoadedTimeRanges(): Promise<Array<Range>>-End-->
@@ -465,13 +413,9 @@ Obtains the list of loaded time ranges. This API uses a promise to return the re
 getMediaKeySystemInfos(): Array<drm.MediaKeySystemInfo>
 ```
 
-Obtains the media key system information of the media asset that is being played. This API can be called only after the [on('mediaKeySystemInfoUpdate')](#on_mediaKeySystemInfoUpdate) event is successfully triggered.
+Obtains the media key system information of the media asset that is being played. This API can be called only after the [on('mediaKeySystemInfoUpdate')](#onmediakeysysteminfoupdate) event is successfully triggered.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -494,10 +438,6 @@ getMediaSources(): Array<MediaSource | undefined>
 Return the array of mediasources in the playlist.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -529,10 +469,6 @@ Obtains the playback information. This API can be called only when the AVPlayer 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-getPlaybackInfo(): Promise<PlaybackInfo>--><!--Device-AVPlayer-getPlaybackInfo(): Promise<PlaybackInfo>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -552,10 +488,6 @@ getPlaybackPosition() : int
 Obtains the current playback position. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -585,10 +517,6 @@ Obtains the playback speed of an AVPlayer. This API uses a promise to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-getPlaybackRate(): Promise<double>--><!--Device-AVPlayer-getPlaybackRate(): Promise<double>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -609,10 +537,6 @@ Obtains the statistic metrics of the current player. This API can be called when
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>--><!--Device-AVPlayer-getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -632,10 +556,6 @@ getSeekableTimeRanges(): Promise<Array<Range>>
 Obtains the list of seekable time ranges. This API uses a promise to return the result. > **NOTE：**> > - For local media resources and media resources that support segment-based requests, the time range is from 0 > to the entire media duration. > > - For media resources that support only chunk-based transmission, there is no seekable time range.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -658,10 +578,6 @@ getSelectedTracks(): Promise<Array<int>>
 Obtains the indexes of the selected audio or video tracks. This API can be called only when the AVPlayer is in the prepared, playing, or paused state. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -691,10 +607,6 @@ Obtains the audio and video track information. This API can be called only when 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-AVPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
@@ -722,10 +634,6 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 Obtains the audio and video track information. This API can be called only when the AVPlayer is in the prepared, playing, or paused state. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -755,10 +663,6 @@ Obtains the track selection filter configured for the player. This API uses a pr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVPlayer-getTrackSelectionFilter(): Promise<TrackSelectionFilter>--><!--Device-AVPlayer-getTrackSelectionFilter(): Promise<TrackSelectionFilter>-End-->
@@ -783,13 +687,9 @@ Obtains the track selection filter configured for the player. This API uses a pr
 isSeekContinuousSupported() : boolean
 ```
 
-Checks whether the media source supports [seek](#seek) in SEEK_CONTINUOUS mode (specified by [SeekMode](arkts-media-media-seekmode-e.md#SeekMode)). The actual value is returned when this API is called in the prepared, playing, paused, or completed state. The value **false** is returned if it is called in other states. For devices that do not support the seek operation in SEEK_CONTINUOUS mode, **false** is returned.
+Checks whether the media source supports [seek](#seek) in SEEK_CONTINUOUS mode (specified by [SeekMode](arkts-media-media-seekmode-e.md#seekmode)). The actual value is returned when this API is called in the prepared, playing, paused, or completed state. The value **false** is returned if it is called in other states. For devices that do not support the seek operation in SEEK_CONTINUOUS mode, **false** is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -813,10 +713,6 @@ Unsubscribes from update events of the maximum amplitude. The event is triggered
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offAmplitudeUpdate(callback?: Callback<Array<double>>): void--><!--Device-AVPlayer-offAmplitudeUpdate(callback?: Callback<Array<double>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -833,13 +729,9 @@ Unsubscribes from update events of the maximum amplitude. The event is triggered
 offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void
 ```
 
-Unregister listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#InterruptEvent)
+Unregister listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#interruptevent)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void--><!--Device-AVPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void-End-->
 
@@ -860,10 +752,6 @@ offAudioOutputDeviceChangeWithInfo(callback?: Callback<audio.AudioStreamDeviceCh
 Unsubscribes from audio stream output device changes and reasons. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-offAudioOutputDeviceChangeWithInfo(callback?: Callback<audio.AudioStreamDeviceChangeInfo>): void--><!--Device-AVPlayer-offAudioOutputDeviceChangeWithInfo(callback?: Callback<audio.AudioStreamDeviceChangeInfo>): void-End-->
 
@@ -891,10 +779,6 @@ Unregister listens for available bitrate list collect completed events for HLS p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offAvailableBitrates(callback?: Callback<Array<int>>): void--><!--Device-AVPlayer-offAvailableBitrates(callback?: Callback<Array<int>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -914,10 +798,6 @@ offBitrateDone(callback?: Callback<int>): void
 Unsubscribes from the event that checks whether the bit rate is successfully set.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-offBitrateDone(callback?: Callback<int>): void--><!--Device-AVPlayer-offBitrateDone(callback?: Callback<int>): void-End-->
 
@@ -939,10 +819,6 @@ Unsubscribes from audio and video buffer changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offBufferingUpdate(callback?: OnBufferingUpdateHandler): void--><!--Device-AVPlayer-offBufferingUpdate(callback?: OnBufferingUpdateHandler): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -962,10 +838,6 @@ offDurationUpdate(callback?: Callback<int>): void
 Unsubscribes from media asset duration changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-offDurationUpdate(callback?: Callback<int>): void--><!--Device-AVPlayer-offDurationUpdate(callback?: Callback<int>): void-End-->
 
@@ -987,10 +859,6 @@ Unregister listens for media playback endOfStream event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offEndOfStream(callback?: Callback<void>): void--><!--Device-AVPlayer-offEndOfStream(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1010,10 +878,6 @@ offError(callback?: ErrorCallback): void
 Unsubscribes from AVPlayer errors.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-offError(callback?: ErrorCallback): void--><!--Device-AVPlayer-offError(callback?: ErrorCallback): void-End-->
 
@@ -1035,10 +899,6 @@ Unregister listens for mediaKeySystemInfoUpdate events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offMediaKeySystemInfoUpdate(callback?: Callback<Array<drm.MediaKeySystemInfo>>): void--><!--Device-AVPlayer-offMediaKeySystemInfoUpdate(callback?: Callback<Array<drm.MediaKeySystemInfo>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1059,10 +919,6 @@ Unsubscribes from metric events during playback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offMetricsEvent(callback?: Callback<Array<AVMetricsEvent>>): void--><!--Device-AVPlayer-offMetricsEvent(callback?: Callback<Array<AVMetricsEvent>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1082,10 +938,6 @@ offPlaybackContentChanged(callback?: Callback<string>):void
 Unregisters listener to detect when changes occur in the playback content.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1111,10 +963,6 @@ Unregister listens for media playbackRateDone event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offPlaybackRateDone(callback?: OnPlaybackRateDone): void--><!--Device-AVPlayer-offPlaybackRateDone(callback?: OnPlaybackRateDone): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1135,10 +983,6 @@ Unsubscribes from the event that checks whether the seek operation takes effect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offSeekDone(callback?: Callback<int>): void--><!--Device-AVPlayer-offSeekDone(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1158,10 +1002,6 @@ offSeiMessageReceived(payloadTypes?: Array<int>, callback?: OnSeiMessageHandle):
 Unsubscribes from the events indicating that an SEI message is received. The event is triggered when an SEI message is received.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-offSeiMessageReceived(payloadTypes?: Array<int>, callback?: OnSeiMessageHandle): void--><!--Device-AVPlayer-offSeiMessageReceived(payloadTypes?: Array<int>, callback?: OnSeiMessageHandle): void-End-->
 
@@ -1184,10 +1024,6 @@ Unsubscribes from the event that checks whether the playback speed is successful
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offSpeedDone(callback?: Callback<int>): void--><!--Device-AVPlayer-offSpeedDone(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1207,10 +1043,6 @@ offStartRenderFrame(callback?: Callback<void>): void
 Unregister listens for start render video frame events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-offStartRenderFrame(callback?: Callback<void>): void--><!--Device-AVPlayer-offStartRenderFrame(callback?: Callback<void>): void-End-->
 
@@ -1232,10 +1064,6 @@ Unregister listens for media playback stateChange event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offStateChange(callback?: OnAVPlayerStateChangeHandle): void--><!--Device-AVPlayer-offStateChange(callback?: OnAVPlayerStateChangeHandle): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1255,10 +1083,6 @@ offSubtitleUpdate(callback?: Callback<SubtitleInfo>): void
 Unsubscribes from subtitle update events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-offSubtitleUpdate(callback?: Callback<SubtitleInfo>): void--><!--Device-AVPlayer-offSubtitleUpdate(callback?: Callback<SubtitleInfo>): void-End-->
 
@@ -1280,10 +1104,6 @@ Unsubscribes from the event indicating that super resolution is enabled or disab
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offSuperResolutionChanged(callback?: OnSuperResolutionChanged): void--><!--Device-AVPlayer-offSuperResolutionChanged(callback?: OnSuperResolutionChanged): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1304,10 +1124,6 @@ Unsubscribes from playback position changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offTimeUpdate(callback?: Callback<int>): void--><!--Device-AVPlayer-offTimeUpdate(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1327,10 +1143,6 @@ offTimedMetaData(callback?: Callback<AVTimedMetaData>): void
 Unregister listener to detect time-based metadata, Currently, only the #EXT-X-DATERANGE data of HLS and the Event Streams information of DASH are supported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1356,10 +1168,6 @@ Unsubscribes from track change events. The event is triggered when the track cha
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offTrackChange(callback?: OnTrackChangeHandler): void--><!--Device-AVPlayer-offTrackChange(callback?: OnTrackChangeHandler): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1379,10 +1187,6 @@ offTrackInfoUpdate(callback?: Callback<Array<MediaDescription>>): void
 Unsubscribes from track information update events. The event is triggered when the track information is updated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-offTrackInfoUpdate(callback?: Callback<Array<MediaDescription>>): void--><!--Device-AVPlayer-offTrackInfoUpdate(callback?: Callback<Array<MediaDescription>>): void-End-->
 
@@ -1404,10 +1208,6 @@ Unsubscribes from video size changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-offVideoSizeChange(callback?: OnVideoSizeChangeHandler): void--><!--Device-AVPlayer-offVideoSizeChange(callback?: OnVideoSizeChangeHandler): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1427,10 +1227,6 @@ offVolumeChange(callback?: Callback<double>): void
 Unsubscribes from the event that checks whether the volume is successfully set.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-offVolumeChange(callback?: Callback<double>): void--><!--Device-AVPlayer-offVolumeChange(callback?: Callback<double>): void-End-->
 
@@ -1452,10 +1248,6 @@ Unsubscribes from update events of the maximum amplitude.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-off(type: 'amplitudeUpdate', callback?: Callback<Array<double>>): void--><!--Device-AVPlayer-off(type: 'amplitudeUpdate', callback?: Callback<Array<double>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -1476,10 +1268,6 @@ off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
 Unsubscribes from the audio interruption event.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1503,10 +1291,6 @@ off(type: 'audioOutputDeviceChangeWithInfo', callback?: Callback<audio.AudioStre
 Unsubscribes from audio stream output device changes and reasons. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1537,10 +1321,6 @@ Unsubscribes from available bitrates of HLS/DASH streams. This event is reported
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-off(type: 'availableBitrates', callback?: Callback<Array<int>>): void--><!--Device-AVPlayer-off(type: 'availableBitrates', callback?: Callback<Array<int>>): void-End-->
@@ -1563,10 +1343,6 @@ off(type: 'bitrateDone', callback?: Callback<int>): void
 Unsubscribes from the event that checks whether the bitrate is successfully set.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -1591,10 +1367,6 @@ Unsubscribes from audio and video buffer changes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-off(type: 'bufferingUpdate', callback?: OnBufferingUpdateHandler): void--><!--Device-AVPlayer-off(type: 'bufferingUpdate', callback?: OnBufferingUpdateHandler): void-End-->
@@ -1617,10 +1389,6 @@ off(type: 'durationUpdate', callback?: Callback<int>): void
 Unsubscribes from media asset duration changes.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -1645,10 +1413,6 @@ Unsubscribes from the event that indicates the end of the stream being played.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-AVPlayer-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AVPlayer-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
@@ -1671,10 +1435,6 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from AVPlayer errors.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1699,10 +1459,6 @@ Unsubscribes from media key system information changes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-off(type: 'mediaKeySystemInfoUpdate', callback?: Callback<Array<drm.MediaKeySystemInfo>>): void--><!--Device-AVPlayer-off(type: 'mediaKeySystemInfoUpdate', callback?: Callback<Array<drm.MediaKeySystemInfo>>): void-End-->
@@ -1722,13 +1478,9 @@ Unsubscribes from media key system information changes.
 off(type: 'playbackRateDone', callback?: OnPlaybackRateDone): void
 ```
 
-Unsubscribes from the event indicating that the playback rate set by calling [setPlaybackRate](#setPlaybackRate) is applied.
+Unsubscribes from the event indicating that the playback rate set by calling [setPlaybackRate](#setplaybackrate) is applied.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1753,10 +1505,6 @@ Unsubscribes from the event that checks whether the seek operation takes effect.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-off(type: 'seekDone', callback?: Callback<int>): void--><!--Device-AVPlayer-off(type: 'seekDone', callback?: Callback<int>): void-End-->
@@ -1768,7 +1516,7 @@ Unsubscribes from the event that checks whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md#SeekMode) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md#seekmode) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
 
 ## off_seiMessageReceived
 
@@ -1779,10 +1527,6 @@ off(type: 'seiMessageReceived', payloadTypes?: Array<int>, callback?: OnSeiMessa
 Unsubscribes from the events indicating that an SEI message is received.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1808,10 +1552,6 @@ Unsubscribes from the event that checks whether the playback speed is successful
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-AVPlayer-off(type: 'speedDone', callback?: Callback<int>): void--><!--Device-AVPlayer-off(type: 'speedDone', callback?: Callback<int>): void-End-->
@@ -1823,7 +1563,7 @@ Unsubscribes from the event that checks whether the playback speed is successful
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'speedDone' | Yes | Event type, which is **'speedDone'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#PlaybackSpeed). If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **speedDone** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#playbackspeed). If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **speedDone** event will be unregistered.<br>**Since:** 12 |
 
 ## off_startRenderFrame
 
@@ -1834,10 +1574,6 @@ off(type: 'startRenderFrame', callback?: Callback<void>): void
 Unsubscribes from the event that indicates rendering starts for the first frame.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -1858,13 +1594,9 @@ Unsubscribes from the event that indicates rendering starts for the first frame.
 off(type: 'stateChange', callback?: OnAVPlayerStateChangeHandle): void
 ```
 
-Unsubscribes from [AVPlayerState](arkts-media-media-avplayerstate-t.md#AVPlayerState) state changes.
+Unsubscribes from [AVPlayerState](arkts-media-media-avplayerstate-t.md#avplayerstate) state changes.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1889,10 +1621,6 @@ Unsubscribes from subtitle update events.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-off(type: 'subtitleUpdate', callback?: Callback<SubtitleInfo>): void--><!--Device-AVPlayer-off(type: 'subtitleUpdate', callback?: Callback<SubtitleInfo>): void-End-->
@@ -1915,10 +1643,6 @@ off(type:'superResolutionChanged', callback?: OnSuperResolutionChanged): void
 Unsubscribes from the event indicating that super resolution is enabled or disabled.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1943,10 +1667,6 @@ Unsubscribes from playback position changes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-off(type: 'timeUpdate', callback?: Callback<int>): void--><!--Device-AVPlayer-off(type: 'timeUpdate', callback?: Callback<int>): void-End-->
@@ -1969,10 +1689,6 @@ off(type: 'trackChange', callback?: OnTrackChangeHandler): void
 Unsubscribes from track change events.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1997,10 +1713,6 @@ Unsubscribes from track information update events.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-off(type: 'trackInfoUpdate', callback?: Callback<Array<MediaDescription>>): void--><!--Device-AVPlayer-off(type: 'trackInfoUpdate', callback?: Callback<Array<MediaDescription>>): void-End-->
@@ -2023,10 +1735,6 @@ off(type: 'videoSizeChange', callback?: OnVideoSizeChangeHandler): void
 Unsubscribes from video size changes.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2051,10 +1759,6 @@ Unsubscribes from the event that checks whether the volume is successfully set.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-AVPlayer-off(type: 'volumeChange', callback?: Callback<double>): void--><!--Device-AVPlayer-off(type: 'volumeChange', callback?: Callback<double>): void-End-->
@@ -2078,10 +1782,6 @@ Subscribes to update events of the maximum audio level value, which is periodica
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onAmplitudeUpdate(callback: Callback<Array<double>>): void--><!--Device-AVPlayer-onAmplitudeUpdate(callback: Callback<Array<double>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2098,13 +1798,9 @@ Subscribes to update events of the maximum audio level value, which is periodica
 onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
 ```
 
-Register listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#InterruptEvent). The application needs to perform corresponding processing based on different audio interruption events. For details, see Handling Audio Interruption Events.
+Register listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#interruptevent). The application needs to perform corresponding processing based on different audio interruption events. For details, see Handling Audio Interruption Events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-AVPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
 
@@ -2125,10 +1821,6 @@ onAudioOutputDeviceChangeWithInfo(callback: Callback<audio.AudioStreamDeviceChan
 Subscribes to audio stream output device changes and reasons. This API uses an asynchronous callback to return the result. When subscribing to this event, you are advised to implement the player behavior when the device is connected or disconnected by referring to Responding to Audio Output Device Changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-onAudioOutputDeviceChangeWithInfo(callback: Callback<audio.AudioStreamDeviceChangeInfo>): void--><!--Device-AVPlayer-onAudioOutputDeviceChangeWithInfo(callback: Callback<audio.AudioStreamDeviceChangeInfo>): void-End-->
 
@@ -2156,10 +1848,6 @@ Register listens for available bitrate list collect completed events for HLS pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onAvailableBitrates(callback: Callback<Array<int>>): void--><!--Device-AVPlayer-onAvailableBitrates(callback: Callback<Array<int>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2179,10 +1867,6 @@ onBitrateDone(callback: Callback<int>): void
 Subscribes to the event to check whether the bit rate is successfully set.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-onBitrateDone(callback: Callback<int>): void--><!--Device-AVPlayer-onBitrateDone(callback: Callback<int>): void-End-->
 
@@ -2204,10 +1888,6 @@ Subscribes to audio and video buffer changes. This subscription is supported onl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onBufferingUpdate(callback: OnBufferingUpdateHandler): void--><!--Device-AVPlayer-onBufferingUpdate(callback: OnBufferingUpdateHandler): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2227,10 +1907,6 @@ onDurationUpdate(callback: Callback<int>): void
 Subscribes to media asset duration changes. It is used to refresh the length of the progress bar. By default, this event is reported once in the prepared state. However, it can be repeatedly reported for special streams that trigger duration changes. The **'durationUpdate'** event is not supported in live mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-onDurationUpdate(callback: Callback<int>): void--><!--Device-AVPlayer-onDurationUpdate(callback: Callback<int>): void-End-->
 
@@ -2252,10 +1928,6 @@ Subscribes to the event that indicates the end of the stream being played. If lo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onEndOfStream(callback: Callback<void>): void--><!--Device-AVPlayer-onEndOfStream(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2275,10 +1947,6 @@ onError(callback: ErrorCallback): void
 Register listens for playback error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-onError(callback: ErrorCallback): void--><!--Device-AVPlayer-onError(callback: ErrorCallback): void-End-->
 
@@ -2326,10 +1994,6 @@ Register listens for mediaKeySystemInfoUpdate events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onMediaKeySystemInfoUpdate( callback: Callback<Array<drm.MediaKeySystemInfo>>): void--><!--Device-AVPlayer-onMediaKeySystemInfoUpdate( callback: Callback<Array<drm.MediaKeySystemInfo>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2350,10 +2014,6 @@ Subscribes to metric events during playback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onMetricsEvent(callback: Callback<Array<AVMetricsEvent>>): void--><!--Device-AVPlayer-onMetricsEvent(callback: Callback<Array<AVMetricsEvent>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2373,10 +2033,6 @@ onPlaybackContentChanged(callback: Callback<string>):void
 Registers a listener to detect when the playback content has changed. The value carried in the callback function is the ID of the media source that is being played in the playlist.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2402,10 +2058,6 @@ Register listens for media playbackRateDone event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onPlaybackRateDone(callback: OnPlaybackRateDone): void--><!--Device-AVPlayer-onPlaybackRateDone(callback: OnPlaybackRateDone): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2426,10 +2078,6 @@ Subscribes to the event to check whether the seek operation takes effect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onSeekDone(callback: Callback<int>): void--><!--Device-AVPlayer-onSeekDone(callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2449,10 +2097,6 @@ onSeiMessageReceived(payloadTypes: Array<int>, callback: OnSeiMessageHandle): vo
 Subscribes to events indicating that a Supplemental Enhancement Information (SEI) message is received. This applies only to HTTP-FLV live streaming and is triggered when SEI messages are present in the video stream. You must initiate the subscription before calling prepare. If you initiate multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-onSeiMessageReceived(payloadTypes: Array<int>, callback: OnSeiMessageHandle): void--><!--Device-AVPlayer-onSeiMessageReceived(payloadTypes: Array<int>, callback: OnSeiMessageHandle): void-End-->
 
@@ -2475,10 +2119,6 @@ Subscribes to the event to check whether the playback speed is successfully set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onSpeedDone(callback: Callback<int>): void--><!--Device-AVPlayer-onSpeedDone(callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2498,10 +2138,6 @@ onStartRenderFrame(callback: Callback<void>): void
 Subscribes to the event that indicates rendering starts for the first frame. This subscription is supported only in video playback scenarios. This event only means that the playback service sends the first frame to the display module. The actual rendering effect depends on the rendering performance of the display service.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-onStartRenderFrame(callback: Callback<void>): void--><!--Device-AVPlayer-onStartRenderFrame(callback: Callback<void>): void-End-->
 
@@ -2523,10 +2159,6 @@ Register listens for media playback stateChange event. This event can be trigger
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onStateChange(callback: OnAVPlayerStateChangeHandle): void--><!--Device-AVPlayer-onStateChange(callback: OnAVPlayerStateChangeHandle): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2546,10 +2178,6 @@ onSubtitleUpdate(callback: Callback<SubtitleInfo>): void
 Subscribes to subtitle update events. When external subtitles exist, the system notifies the application through the subscribed-to callback. An application can subscribe to only one subtitle update event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when the external subtitle is updated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-onSubtitleUpdate(callback: Callback<SubtitleInfo>): void--><!--Device-AVPlayer-onSubtitleUpdate(callback: Callback<SubtitleInfo>): void-End-->
 
@@ -2571,10 +2199,6 @@ Subscribes to the event indicating that super resolution is enabled or disabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onSuperResolutionChanged(callback: OnSuperResolutionChanged): void--><!--Device-AVPlayer-onSuperResolutionChanged(callback: OnSuperResolutionChanged): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2595,10 +2219,6 @@ Subscribes to playback position changes. It is used to refresh the current posit
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onTimeUpdate(callback: Callback<int>): void--><!--Device-AVPlayer-onTimeUpdate(callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2618,10 +2238,6 @@ onTimedMetaData(callback: Callback<AVTimedMetaData>): void
 Register listener to detect time-based metadata, Currently, only the #EXT-X-DATERANGE data of HLS and the Event Streams information of DASH are supported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2647,10 +2263,6 @@ Subscribes to track change events. When the track changes, the system notifies t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onTrackChange(callback: OnTrackChangeHandler): void--><!--Device-AVPlayer-onTrackChange(callback: OnTrackChangeHandler): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2670,10 +2282,6 @@ onTrackInfoUpdate(callback: Callback<Array<MediaDescription>>): void
 Subscribes to track information update events. When the track information is updated, the system notifies the application through the subscribed-to callback. An application can subscribe to only one track change event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when the track information is updated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-onTrackInfoUpdate(callback: Callback<Array<MediaDescription>>): void--><!--Device-AVPlayer-onTrackInfoUpdate(callback: Callback<Array<MediaDescription>>): void-End-->
 
@@ -2695,10 +2303,6 @@ Subscribes to video size (width and height) changes. This subscription is suppor
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-onVideoSizeChange(callback: OnVideoSizeChangeHandler): void--><!--Device-AVPlayer-onVideoSizeChange(callback: OnVideoSizeChangeHandler): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2718,10 +2322,6 @@ onVolumeChange(callback: Callback<double>): void
 Subscribes to the event to check whether the volume is successfully set.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-onVolumeChange(callback: Callback<double>): void--><!--Device-AVPlayer-onVolumeChange(callback: Callback<double>): void-End-->
 
@@ -2743,10 +2343,6 @@ Subscribes to update events of the maximum audio level value, which is periodica
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 <!--Device-AVPlayer-on(type: 'amplitudeUpdate', callback: Callback<Array<double>>): void--><!--Device-AVPlayer-on(type: 'amplitudeUpdate', callback: Callback<Array<double>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -2764,13 +2360,9 @@ Subscribes to update events of the maximum audio level value, which is periodica
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event. When multiple audio and video assets are played at the same time, this event is triggered based on the audio interruption mode [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md#InterruptMode). The application needs to perform corresponding processing based on different audio interruption events. For details, see [Handling Audio Interruption Events](../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event. When multiple audio and video assets are played at the same time, this event is triggered based on the audio interruption mode [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md#interruptmode). The application needs to perform corresponding processing based on different audio interruption events. For details, see [Handling Audio Interruption Events](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2794,10 +2386,6 @@ on(type: 'audioOutputDeviceChangeWithInfo', callback: Callback<audio.AudioStream
 Subscribes to audio stream output device changes and reasons. This API uses an asynchronous callback to return the result. When subscribing to this event, you are advised to implement the player behavior when the device is connected or disconnected by referring to [Handling Output Device Changes Gracefully](../../../media/audio/audio-output-device-change.md).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2828,10 +2416,6 @@ Subscribes to available bitrates of HLS/DASH streams. This event is reported onl
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-on(type: 'availableBitrates', callback: Callback<Array<int>>): void--><!--Device-AVPlayer-on(type: 'availableBitrates', callback: Callback<Array<int>>): void-End-->
@@ -2854,10 +2438,6 @@ on(type: 'bitrateDone', callback: Callback<int>): void
 Subscribes to the event to check whether the bitrate is successfully set.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2882,10 +2462,6 @@ Subscribes to audio and video buffer changes. This subscription is supported onl
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-on(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler): void--><!--Device-AVPlayer-on(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler): void-End-->
@@ -2909,10 +2485,6 @@ Subscribes to media asset duration changes. It is used to refresh the length of 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-on(type: 'durationUpdate', callback: Callback<int>): void--><!--Device-AVPlayer-on(type: 'durationUpdate', callback: Callback<int>): void-End-->
@@ -2932,13 +2504,9 @@ Subscribes to media asset duration changes. It is used to refresh the length of 
 on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-Subscribes to the event that indicates the end of the stream being played. If **[loop](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties) = true** is set, the AVPlayer seeks to the beginning of the stream and plays the stream again. If **loop** is not set, the completed state is reported through the [stateChange](#on_mediaKeySystemInfoUpdate) event.
+Subscribes to the event that indicates the end of the stream being played. If **[loop](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties) = true** is set, the AVPlayer seeks to the beginning of the stream and plays the stream again. If **loop** is not set, the completed state is reported through the [stateChange](#onmediakeysysteminfoupdate) event.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2959,13 +2527,9 @@ Subscribes to the event that indicates the end of the stream being played. If **
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to [AVPlayer](arkts-multimedia-media.md#@ohos.multimedia.media) errors. This event is used only for error prompt and does not require the user to stop playback control. If the [AVPlayerState](arkts-media-media-avplayerstate-t.md#AVPlayerState) is also switched to error, call [reset()](#reset) or [release()](#release) to exit the playback. If the playback remains in the error state after the [reset()](#reset) method is called, you are advised to directly invoke the [release()](#release) method to exit the playback operation.
+Subscribes to [AVPlayer](arkts-multimedia-media.md#ohosmultimediamedia) errors. This event is used only for error prompt and does not require the user to stop playback control. If the [AVPlayerState](arkts-media-media-avplayerstate-t.md#avplayerstate) is also switched to error, call [reset()](#reset) or [release()](#release) to exit the playback. If the playback remains in the error state after the [reset()](#reset) method is called, you are advised to directly invoke the [release()](#release) method to exit the playback operation.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3017,10 +2581,6 @@ Subscribes to media key system information changes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-on(type: 'mediaKeySystemInfoUpdate', callback: Callback<Array<drm.MediaKeySystemInfo>>): void--><!--Device-AVPlayer-on(type: 'mediaKeySystemInfoUpdate', callback: Callback<Array<drm.MediaKeySystemInfo>>): void-End-->
@@ -3040,13 +2600,9 @@ Subscribes to media key system information changes.
 on(type: 'playbackRateDone', callback: OnPlaybackRateDone): void
 ```
 
-Subscribes to the event indicating that the playback rate set by calling [setPlaybackRate](#setPlaybackRate) is applied.
+Subscribes to the event indicating that the playback rate set by calling [setPlaybackRate](#setplaybackrate) is applied.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -3071,10 +2627,6 @@ Subscribes to the event to check whether the seek operation takes effect.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-on(type: 'seekDone', callback: Callback<int>): void--><!--Device-AVPlayer-on(type: 'seekDone', callback: Callback<int>): void-End-->
@@ -3086,7 +2638,7 @@ Subscribes to the event to check whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. This event is triggered each time **seek()** is called, except in SEEK_CONTINUOUS mode. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md#SeekMode) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md#seekmode) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. |
 
 ## on_seiMessageReceived
 
@@ -3097,10 +2649,6 @@ on(type: 'seiMessageReceived', payloadTypes: Array<int>, callback: OnSeiMessageH
 Subscribes to events indicating that a Supplemental Enhancement Information (SEI) message is received. This applies only to HTTP-FLV live streaming and is triggered when SEI messages are present in the video stream. You must initiate the subscription before calling **prepare**. If you initiate multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -3126,10 +2674,6 @@ Subscribes to the event to check whether the playback speed is successfully set.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-on(type: 'speedDone', callback: Callback<int>): void--><!--Device-AVPlayer-on(type: 'speedDone', callback: Callback<int>): void-End-->
@@ -3141,7 +2685,7 @@ Subscribes to the event to check whether the playback speed is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'speedDone' | Yes | Event type, which is **'speedDone'** in this case. This event is triggered each time **setSpeed()** is called. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#PlaybackSpeed). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#playbackspeed). |
 
 ## on_startRenderFrame
 
@@ -3152,10 +2696,6 @@ on(type: 'startRenderFrame', callback: Callback<void>): void
 Subscribes to the event that indicates rendering starts for the first frame. This subscription is supported only in video playback scenarios. This event only means that the playback service sends the first frame to the display module. The actual rendering effect depends on the rendering performance of the display service.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3180,10 +2720,6 @@ Subscribes to AVPlayer state changes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle): void--><!--Device-AVPlayer-on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle): void-End-->
@@ -3206,10 +2742,6 @@ on(type: 'subtitleUpdate', callback: Callback<SubtitleInfo>): void
 Subscribes to subtitle update events. When external subtitles exist, the system notifies the application through the subscribed-to callback. An application can subscribe to only one subtitle update event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3234,10 +2766,6 @@ Subscribes to the event indicating that super resolution is enabled or disabled.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AVPlayer-on(type:'superResolutionChanged', callback: OnSuperResolutionChanged): void--><!--Device-AVPlayer-on(type:'superResolutionChanged', callback: OnSuperResolutionChanged): void-End-->
@@ -3260,10 +2788,6 @@ on(type: 'timeUpdate', callback: Callback<int>): void
 Subscribes to playback position changes. It is used to refresh the current position of the progress bar. By default, this event is reported every 100 ms. However, it is reported immediately upon a successful seek operation. > **NOTE：**> > - The **'timeUpdate'** event is not supported in live streaming scenarios. > > - When a seek operation is performed, the progress bar can be updated based on the **'timeUpdate'** event only > after the seek operation is complete (**'seekdone'** received). > > - In the **pause** state, the player reports the timeUpdate event when the buffering ends.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3288,10 +2812,6 @@ Subscribes to track change events. When the track changes, the system notifies t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-on(type: 'trackChange', callback: OnTrackChangeHandler): void--><!--Device-AVPlayer-on(type: 'trackChange', callback: OnTrackChangeHandler): void-End-->
@@ -3314,10 +2834,6 @@ on(type: 'trackInfoUpdate', callback: Callback<Array<MediaDescription>>): void
 Subscribes to track information update events. When the track information is updated, the system notifies the application through the subscribed-to callback. An application can subscribe to only one track change event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3342,10 +2858,6 @@ Subscribes to video size (width and height) changes. This subscription is suppor
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-on(type: 'videoSizeChange', callback: OnVideoSizeChangeHandler): void--><!--Device-AVPlayer-on(type: 'videoSizeChange', callback: OnVideoSizeChangeHandler): void-End-->
@@ -3369,10 +2881,6 @@ Subscribes to the event to check whether the volume is successfully set.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-on(type: 'volumeChange', callback: Callback<double>): void--><!--Device-AVPlayer-on(type: 'volumeChange', callback: Callback<double>): void-End-->
@@ -3395,10 +2903,6 @@ pause(callback: AsyncCallback<void>): void
 Pauses audio and video playback. This API can be called only when the AVPlayer is in the playing state. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3428,10 +2932,6 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-pause(): Promise<void>--><!--Device-AVPlayer-pause(): Promise<void>-End-->
@@ -3459,10 +2959,6 @@ play(callback: AsyncCallback<void>): void
 Starts to play an audio and video asset. This API can be called only when the AVPlayer is in the prepared, paused, or completed state. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3492,10 +2988,6 @@ Starts to play an audio and video asset. This API can be called only when the AV
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-play(): Promise<void>--><!--Device-AVPlayer-play(): Promise<void>-End-->
@@ -3520,13 +3012,9 @@ Starts to play an audio and video asset. This API can be called only when the AV
 prepare(callback: AsyncCallback<void>): void
 ```
 
-Prepares for audio and video playback. This API can be called only when the AVPlayer is in the initialized state. The state changes can be detected by subscribing to the [stateChange](#on_mediaKeySystemInfoUpdate) event. This API uses an asynchronous callback to return the result.
+Prepares for audio and video playback. This API can be called only when the AVPlayer is in the initialized state. The state changes can be detected by subscribing to the [stateChange](#onmediakeysysteminfoupdate) event. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3553,13 +3041,9 @@ Prepares for audio and video playback. This API can be called only when the AVPl
 prepare(): Promise<void>
 ```
 
-Prepares for audio and video playback. This API can be called only when the AVPlayer is in the initialized state. The state changes can be detected by subscribing to the [stateChange](#on_mediaKeySystemInfoUpdate) event. This API uses a promise to return the result. If your application frequently switches between short videos, you can create multiple AVPlayer objects to prepare the next video in advance, thereby improving the switching performance. For details, see [Smooth Switchover Between Online Short Videos](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-smooth-switching).
+Prepares for audio and video playback. This API can be called only when the AVPlayer is in the initialized state. The state changes can be detected by subscribing to the [stateChange](#onmediakeysysteminfoupdate) event. This API uses a promise to return the result. If your application frequently switches between short videos, you can create multiple AVPlayer objects to prepare the next video in advance, thereby improving the switching performance. For details, see [Smooth Switchover Between Online Short Videos](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-smooth-switching).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3590,10 +3074,6 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-release(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-release(callback: AsyncCallback<void>): void-End-->
@@ -3622,10 +3102,6 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-release(): Promise<void>--><!--Device-AVPlayer-release(): Promise<void>-End-->
@@ -3653,10 +3129,6 @@ removePlaybackMediaSource(id: string): Promise<void>
 Removes the specified playback media source from the player's playlist. If the id does not exist in the current playlist, the method returns immediately.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3695,10 +3167,6 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-reset(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-reset(callback: AsyncCallback<void>): void-End-->
@@ -3727,10 +3195,6 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-reset(): Promise<void>--><!--Device-AVPlayer-reset(): Promise<void>-End-->
@@ -3755,13 +3219,9 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 seek(timeMs: int, mode?: SeekMode): void
 ```
 
-Seeks to the specified playback position. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the seek operation takes effect by subscribing to the [on('seekDone')](#on_mediaKeySystemInfoUpdate) event. > **NOTE：**> > Since API version 24, **seek** is supported in live streaming scenarios.
+Seeks to the specified playback position. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the seek operation takes effect by subscribing to the [on('seekDone')](#onmediakeysysteminfoupdate) event. > **NOTE：**> > Since API version 24, **seek** is supported in live streaming scenarios.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3775,7 +3235,7 @@ Seeks to the specified playback position. This API can be called only when the A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeMs | int | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties)].<br>When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md#SeekMode), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
+| timeMs | int | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties)].<br>When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md#seekmode), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
 | mode | SeekMode | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. **Set this parameter only for video playback. |
 
 ## seekToDefaultPosition
@@ -3787,10 +3247,6 @@ seekToDefaultPosition(): void
 Seeks to the default access point of the playback source. For live streams, the latest recommended access point is used. For on-demand videos, the start position of the video is used (equivalent to **seek(0)**).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3814,10 +3270,6 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -3830,7 +3282,7 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the track. You can call [getTrackDescription](#getTrackDescription) to obtain all track information [MediaDescription](arkts-media-media-mediadescription-i.md#MediaDescription) of the current resource. |
+| index | int | Yes | Index of the track. You can call [getTrackDescription](#gettrackdescription) to obtain all track information [MediaDescription](arkts-media-media-mediadescription-i.md#mediadescription) of the current resource. |
 | mode | [SwitchMode](arkts-media-media-switchmode-e.md) | No | Video track mode. The default mode is **SMOOTH**. This parameter takes effect only for DASH/HLS network stream video track switching.<br>HLS network stream video is supported since API version 24.<br>**Since:** 26.0.0 |
 
 **Return value:**
@@ -3852,13 +3304,9 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 setBitrate(bitrate: int): void
 ```
 
-Sets the bitrate for the streaming media. This API is valid only for HLS/DASH streams. By default, the AVPlayer selects a proper bitrate based on the network connection speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the setting takes effect by subscribing to the [bitrateDone](#on_mediaKeySystemInfoUpdate) event.
+Sets the bitrate for the streaming media. This API is valid only for HLS/DASH streams. By default, the AVPlayer selects a proper bitrate based on the network connection speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the setting takes effect by subscribing to the [bitrateDone](#onmediakeysysteminfoupdate) event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3870,7 +3318,7 @@ Sets the bitrate for the streaming media. This API is valid only for HLS/DASH st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bitrate | int | Yes | Bitrate to set. You can obtain the available bitrates of the current HLS/DASH stream by subscribing to the [availableBitrates](#on_mediaKeySystemInfoUpdate) event. If the bitrate to set is not in the list of the available bitrates, the AVPlayer selects from the list the bitrate that is closed to the bitrate to set. If the length of the available bitrate list obtained through the event is 0, no bitrate can be set and the **bitrateDone** callback will not be triggered. |
+| bitrate | int | Yes | Bitrate to set. You can obtain the available bitrates of the current HLS/DASH stream by subscribing to the [availableBitrates](#onmediakeysysteminfoupdate) event. If the bitrate to set is not in the list of the available bitrates, the AVPlayer selects from the list the bitrate that is closed to the bitrate to set. If the length of the available bitrate list obtained through the event is 0, no bitrate can be set and the **bitrateDone** callback will not be triggered. |
 
 ## setDecryptionConfig
 
@@ -3878,13 +3326,9 @@ Sets the bitrate for the streaming media. This API is valid only for HLS/DASH st
 setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boolean): void
 ```
 
-Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpdate')](#on_mediaKeySystemInfoUpdate) event, create the related configuration and set the decryption configuration based on the information in the reported event. Otherwise, the playback fails.
+Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpdate')](#onmediakeysysteminfoupdate) event, create the related configuration and set the decryption configuration based on the information in the reported event. Otherwise, the playback fails.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3911,13 +3355,9 @@ Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpda
 setLoudnessGain(loudnessGain: double): Promise<void>
 ```
 
-Sets the loudness gain of the AVPlayer. After this API is called, the loudness gain takes effect immediately. This API uses a promise to return the result. > **NOTE：**> > - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state. > > - Before calling this API, ensure that the audio rendering information has been set in > **AVPlayer.audioRendererInfo** and the **usage** parameter in **audioRendererInfo** has been set to > [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#StreamUsage), > [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#StreamUsage), or > [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#StreamUsage).
+Sets the loudness gain of the AVPlayer. After this API is called, the loudness gain takes effect immediately. This API uses a promise to return the result. > **NOTE：**> > - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state. > > - Before calling this API, ensure that the audio rendering information has been set in > **AVPlayer.audioRendererInfo** and the **usage** parameter in **audioRendererInfo** has been set to > [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#streamusage), > [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#streamusage), or > [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#streamusage).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVPlayer-setLoudnessGain(loudnessGain: double): Promise<void>--><!--Device-AVPlayer-setLoudnessGain(loudnessGain: double): Promise<void>-End-->
 
@@ -3944,10 +3384,6 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 Mutes or unmutes the audio. Since API version 20, this API also supports whether to display the video image. This API uses a promise to return the result. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3985,10 +3421,6 @@ Sets a source of streaming media that can be pre-downloaded, downloads the media
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVPlayer-setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>--><!--Device-AVPlayer-setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>-End-->
@@ -4021,13 +3453,9 @@ Sets a source of streaming media that can be pre-downloaded, downloads the media
 setPlaybackRange(startTimeMs: int, endTimeMs: int, mode?: SeekMode) : Promise<void>
 ```
 
-Sets the playback range and seeks to the start position of the range based on the specified [SeekMode](arkts-media-media-seekmode-e.md#SeekMode). After the setting, only the content in the specified range of the audio or video file is played. This API uses a promise to return the result. It can be used in the initialized, prepared, paused, stopped, or completed state.
+Sets the playback range and seeks to the start position of the range based on the specified [SeekMode](arkts-media-media-seekmode-e.md#seekmode). After the setting, only the content in the specified range of the audio or video file is played. This API uses a promise to return the result. It can be used in the initialized, prepared, paused, stopped, or completed state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -4066,10 +3494,6 @@ Set playback rate. Sets the playback rate. This API can be called only when the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVPlayer-setPlaybackRate(rate: double): void--><!--Device-AVPlayer-setPlaybackRate(rate: double): void-End-->
@@ -4098,10 +3522,6 @@ setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>
 Sets a playback strategy. This API can be called only when the AVPlayer is in the initialized state. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -4134,13 +3554,9 @@ Sets a playback strategy. This API can be called only when the AVPlayer is in th
 setSpeed(speed: PlaybackSpeed): void
 ```
 
-Sets the playback speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the speed setting takes effect by subscribing to the [on('speedDone')](#on_mediaKeySystemInfoUpdate) event. > **NOTE：**> > This method is not supported in live streaming scenarios.
+Sets the playback speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the speed setting takes effect by subscribing to the [on('speedDone')](#onmediakeysysteminfoupdate) event. > **NOTE：**> > This method is not supported in live streaming scenarios.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -4160,13 +3576,9 @@ Sets the playback speed. This API can be called only when the AVPlayer is in the
 setSuperResolution(enabled: boolean) : Promise<void>
 ```
 
-Enables or disables super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#PlaybackStrategy).
+Enables or disables super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#playbackstrategy).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -4192,7 +3604,7 @@ Enables or disables super resolution. This API can be called when the AVPlayer i
 | --- | --- |
 | [5410003](../errorcode-media.md#5410003-super-resolution-is-not-supported) | Super-resolution not supported. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#PlaybackStrategy). Return by promise. |
+| [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#playbackstrategy). Return by promise. |
 
 ## setTrackSelectionFilter
 
@@ -4203,10 +3615,6 @@ setTrackSelectionFilter(filter : TrackSelectionFilter): Promise<void>
 Sets a track selection filter for the player. The player will use this filter to select available tracks for playback. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4238,13 +3646,9 @@ Sets a track selection filter for the player. The player will use this filter to
 setVideoWindowSize(width: int, height: int) : Promise<void>
 ```
 
-Sets the resolution of the output video after super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. The input parameter values must be in the range of 320 × 320 to 1920 × 1080 (in px). Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#PlaybackStrategy).
+Sets the resolution of the output video after super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. The input parameter values must be in the range of 320 × 320 to 1920 × 1080 (in px). Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#playbackstrategy).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -4272,7 +3676,7 @@ Sets the resolution of the output video after super resolution. This API can be 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Return by promise. |
 | [5410003](../errorcode-media.md#5410003-super-resolution-is-not-supported) | Super-resolution not supported. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#PlaybackStrategy). Return by promise. |
+| [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#playbackstrategy). Return by promise. |
 
 ## setVolume
 
@@ -4280,13 +3684,9 @@ Sets the resolution of the output video after super resolution. This API can be 
 setVolume(volume: double): void
 ```
 
-Sets the playback volume. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the volume setting takes effect by subscribing to the [on('volumeChange')](#on_mediaKeySystemInfoUpdate) event.
+Sets the playback volume. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the volume setting takes effect by subscribing to the [on('volumeChange')](#onmediakeysysteminfoupdate) event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -4309,10 +3709,6 @@ stop(callback: AsyncCallback<void>): void
 Stops audio and video playback. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4341,10 +3737,6 @@ stop(): Promise<void>
 Stops audio and video playback. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4376,10 +3768,6 @@ Audio effect mode. The audio effect mode is a dynamic property and is restored t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-audioEffectMode ?: audio.AudioEffectMode--><!--Device-AVPlayer-audioEffectMode ?: audio.AudioEffectMode-End-->
@@ -4398,10 +3786,6 @@ Audio interruption mode. The default value is **SHARE_MODE**. It is a dynamic pr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-AVPlayer-audioInterruptMode?: audio.InterruptMode-End-->
@@ -4414,15 +3798,11 @@ Audio interruption mode. The default value is **SHARE_MODE**. It is a dynamic pr
 audioRendererInfo?: audio.AudioRendererInfo
 ```
 
-Audio renderer information. If the media source contains videos, the default value of **usage** is **STREAM_USAGE_MOVIE**. Otherwise, the default value of **usage** is **STREAM_USAGE_MUSIC**. The default value of **rendererFlags** is 0. If the default value of **usage** does not meet the requirements, configure [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md#AudioRendererInfo). This parameter can be set only when the AVPlayer is in the initialized state. To take effect, this property must be set before [prepare()](#prepare) is called for the first time.
+Audio renderer information. If the media source contains videos, the default value of **usage** is **STREAM_USAGE_MOVIE**. Otherwise, the default value of **usage** is **STREAM_USAGE_MUSIC**. The default value of **rendererFlags** is 0. If the default value of **usage** does not meet the requirements, configure [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md#audiorendererinfo). This parameter can be set only when the AVPlayer is in the initialized state. To take effect, this property must be set before [prepare()](#prepare) is called for the first time.
 
 **Type:** audio.AudioRendererInfo
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -4442,10 +3822,6 @@ Current video playback position, in ms. It can be used as a query parameter when
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-readonly currentTime: int--><!--Device-AVPlayer-readonly currentTime: int-End-->
@@ -4463,10 +3839,6 @@ Descriptor of a streaming media asset. It can be set only when the AVPlayer is i
 **Type:** [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4486,10 +3858,6 @@ Video duration, in ms. It can be used as a query parameter when the AVPlayer is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-readonly duration: int--><!--Device-AVPlayer-readonly duration: int-End-->
@@ -4507,10 +3875,6 @@ FD of the media asset. It can be set only when the AVPlayer is in the idle state
 **Type:** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4530,10 +3894,6 @@ Video height, in px. It can be used as a query parameter when the AVPlayer is in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-readonly height: int--><!--Device-AVPlayer-readonly height: int-End-->
@@ -4551,10 +3911,6 @@ Whether to loop playback. **true** to loop, **false** otherwise. The default val
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -4574,10 +3930,6 @@ Set the loop mode when playing the media source playlist. <br>Default value:PLAY
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -4592,15 +3944,11 @@ Set the loop mode when playing the media source playlist. <br>Default value:PLAY
 privacyType?: audio.AudioPrivacyType
 ```
 
-Audio privacy configuration. For more information, see [AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md#AudioPrivacyType). Default value: PRIVACY_TYPE_PUBLIC.
+Audio privacy configuration. For more information, see [AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md#audioprivacytype). Default value: PRIVACY_TYPE_PUBLIC.
 
 **Type:** audio.AudioPrivacyType
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4620,10 +3968,6 @@ AVPlayer state. It can be used as a query parameter when the AVPlayer is in any 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-readonly state: AVPlayerState--><!--Device-AVPlayer-readonly state: AVPlayerState-End-->
@@ -4636,15 +3980,11 @@ AVPlayer state. It can be used as a query parameter when the AVPlayer is in any 
 surfaceId?: string
 ```
 
-Video window ID. By default, there is no video window. This property can be set for the first time only when the AVPlayer is in the initialized state. It can be updated when the AVPlayer is in the prepared, playing, paused, completed, or stopped state. After the reset, the video is played in the new window. **Use scenario**: It is used to render the window for video playback (not involved in audio-only playback scenarios). [Create a surface ID through XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getXComponentSurfaceId).
+Video window ID. By default, there is no video window. This property can be set for the first time only when the AVPlayer is in the initialized state. It can be updated when the AVPlayer is in the prepared, playing, paused, completed, or stopped state. After the reset, the video is played in the new window. **Use scenario**: It is used to render the window for video playback (not involved in audio-only playback scenarios). [Create a surface ID through XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid).
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4664,10 +4004,6 @@ URL of the media asset. It can be set only when the AVPlayer is in the idle stat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-url?: string--><!--Device-AVPlayer-url?: string-End-->
@@ -4686,10 +4022,6 @@ Video scale type. The default value is **VIDEO_SCALE_TYPE_FIT**. It is a dynamic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-videoScaleType?: VideoScaleType--><!--Device-AVPlayer-videoScaleType?: VideoScaleType-End-->
@@ -4707,10 +4039,6 @@ Video width, in px. It can be used as a query parameter when the AVPlayer is in 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

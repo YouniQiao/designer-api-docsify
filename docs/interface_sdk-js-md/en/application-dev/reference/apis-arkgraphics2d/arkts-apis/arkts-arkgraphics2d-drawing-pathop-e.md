@@ -4,10 +4,6 @@ Enumerates the path operation types. It is often used in path combination and cl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-enum PathOp--><!--Device-drawing-enum PathOp-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ DIFFERENCE = 0
 Difference operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PathOp-DIFFERENCE = 0--><!--Device-PathOp-DIFFERENCE = 0-End-->
 
@@ -40,10 +32,6 @@ Intersection operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PathOp-INTERSECT = 1--><!--Device-PathOp-INTERSECT = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -57,10 +45,6 @@ UNION = 2
 Union operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PathOp-UNION = 2--><!--Device-PathOp-UNION = 2-End-->
 
@@ -76,10 +60,6 @@ XOR operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PathOp-XOR = 3--><!--Device-PathOp-XOR = 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -93,10 +73,6 @@ REVERSE_DIFFERENCE = 4
 Reverse difference operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PathOp-REVERSE_DIFFERENCE = 4--><!--Device-PathOp-REVERSE_DIFFERENCE = 4-End-->
 

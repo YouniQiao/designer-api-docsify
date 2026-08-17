@@ -1,12 +1,8 @@
 # AppForegroundStateObserver (System API)
 
-The module defines the listener used to listen for application startup and exit state changes. It can be used as an input parameter of [appManager.on('appForegroundState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) to listen for the state changes of all applications.
+The module defines the listener used to listen for application startup and exit state changes. It can be used as an input parameter of [appManager.on('appForegroundState')](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) to listen for the state changes of all applications.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export default class AppForegroundStateObserver--><!--Device-unnamed-export default class AppForegroundStateObserver-End-->
 
@@ -24,10 +20,6 @@ Called when the application launch or exit state changes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AppForegroundStateObserver-onAppStateChanged(appStateData: AppStateData): void--><!--Device-AppForegroundStateObserver-onAppStateChanged(appStateData: AppStateData): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -40,7 +32,7 @@ Called when the application launch or exit state changes.
 | --- | --- | --- | --- |
 | appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | Application state data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

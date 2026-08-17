@@ -4,10 +4,6 @@ Enumerates the types of the highlights album information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum HighlightAlbumInfoType--><!--Device-photoAccessHelper-enum HighlightAlbumInfoType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -23,10 +19,6 @@ COVER_INFO = 0
 Cover information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HighlightAlbumInfoType-COVER_INFO = 0--><!--Device-HighlightAlbumInfoType-COVER_INFO = 0-End-->
 
@@ -44,10 +36,6 @@ Music information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HighlightAlbumInfoType-PLAY_INFO = 1--><!--Device-HighlightAlbumInfoType-PLAY_INFO = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -63,10 +51,6 @@ ALBUM_INFO = 2
 Album information.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-HighlightAlbumInfoType-ALBUM_INFO = 2--><!--Device-HighlightAlbumInfoType-ALBUM_INFO = 2-End-->
 

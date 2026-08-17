@@ -1,12 +1,8 @@
 # OnContextMenuShowEvent
 
-定义调用时触发的回调，以允许自定义显示上下文菜单。
+定义调用时触发的回调信息，以允许自定义显示上下文菜单。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface OnContextMenuShowEvent--><!--Device-unnamed-declare interface OnContextMenuShowEvent-End-->
 
@@ -23,10 +19,6 @@ param: WebContextMenuParam
 **类型：** [WebContextMenuParam](arkts-arkweb-webcontextmenuparam-c.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ result: WebContextMenuResult
 **类型：** [WebContextMenuResult](arkts-arkweb-webcontextmenuresult-c.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

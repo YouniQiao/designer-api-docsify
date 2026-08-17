@@ -16,10 +16,6 @@ Unregister the callback for the status of the device's screen content is being c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-function offCaptureStatusChange(callback?: Callback<boolean>): void--><!--Device-display-function offCaptureStatusChange(callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager

@@ -16,8 +16,6 @@ Unregisters a listener for wallpaper color changes.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-wallpaper-function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void--><!--Device-wallpaper-function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void-End-->
@@ -31,7 +29,7 @@ Unregisters a listener for wallpaper color changes.
 | type | 'colorChange' | Yes | incoming colorChange table delete receiver to pick up a color change wallpaper wallpaper color changes |
 | callback | (colors: Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;, wallpaperType: WallpaperType) =&gt; void | No | provides dominant colors of the wallpaper. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let listener = (colors: Array<wallpaper.RgbaColor>, wallpaperType: wallpaper.WallpaperType): void => {

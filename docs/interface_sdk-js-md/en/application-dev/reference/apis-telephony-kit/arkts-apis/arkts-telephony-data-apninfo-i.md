@@ -4,10 +4,6 @@ Defines the APN info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-data-interface ApnInfo--><!--Device-data-interface ApnInfo-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -30,10 +26,6 @@ Indicates APN.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ApnInfo-apn: string--><!--Device-ApnInfo-apn: string-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -49,10 +41,6 @@ Indicates APN name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApnInfo-apnName: string--><!--Device-ApnInfo-apnName: string-End-->
 
@@ -70,10 +58,6 @@ Indicates APN mcc.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ApnInfo-mcc: string--><!--Device-ApnInfo-mcc: string-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -89,10 +73,6 @@ Indicates APN mmsproxy.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApnInfo-mmsproxy?: string--><!--Device-ApnInfo-mmsproxy?: string-End-->
 
@@ -110,10 +90,6 @@ Indicates APN mcc.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ApnInfo-mnc: string--><!--Device-ApnInfo-mnc: string-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -129,10 +105,6 @@ Indicates APN proxy.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApnInfo-proxy?: string--><!--Device-ApnInfo-proxy?: string-End-->
 
@@ -150,10 +122,6 @@ Indicates APN type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ApnInfo-type?: string--><!--Device-ApnInfo-type?: string-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -169,10 +137,6 @@ Indicates APN user.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApnInfo-user?: string--><!--Device-ApnInfo-user?: string-End-->
 

@@ -4,11 +4,9 @@ Provides the child component layout information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md#Layoutable)
+**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md#layoutable)
 
 <!--Device-unnamed-declare interface LayoutInfo--><!--Device-unnamed-declare interface LayoutInfo-End-->
 
@@ -26,11 +24,9 @@ Constraint size of the child component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md#Layoutable)
+**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md#layoutable)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -50,11 +46,9 @@ Position coordinates of the child component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md#Layoutable)
+**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md#layoutable)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

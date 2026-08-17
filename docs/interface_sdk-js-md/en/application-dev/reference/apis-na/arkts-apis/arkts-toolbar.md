@@ -6,8 +6,8 @@
 
 | Name | Description |
 | --- | --- |
-| [ToolBarItem](arkts-na-toolbar-toolbaritem-f.md#ToolBarItem) | Defines ToolBarItem Component. |
-| [ToolBarItem](arkts-na-toolbar-toolbaritem-f.md#ToolBarItem) | Defines ToolBarItem Component.It requires call setToolBarItemOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
+| [ToolBarItem](arkts-na-toolbar-toolbaritem-f.md#toolbaritem) | Defines ToolBarItem Component. |
+| [ToolBarItem](arkts-na-toolbar-toolbaritem-f.md#toolbaritem) | Defines ToolBarItem Component.It requires call setToolBarItemOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
 
 ### Interfaces
 

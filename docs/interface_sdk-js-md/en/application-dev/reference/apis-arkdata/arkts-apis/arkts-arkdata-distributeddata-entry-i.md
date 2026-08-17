@@ -4,8 +4,6 @@ Defines the KV pairs stored in the KV store.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** Entry
@@ -26,8 +24,6 @@ Key of the KV pair stored in the KV store.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** key
@@ -47,8 +43,6 @@ Value of the KV pair stored in the KV store.
 **Type:** Value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

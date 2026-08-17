@@ -16,10 +16,6 @@ Updates a SIM message. This API uses an asynchronous callback to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
 <!--Device-sms-function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallback<void>): void--><!--Device-sms-function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallback<void>): void-End-->
@@ -47,7 +43,7 @@ Updates a SIM message. This API uses an asynchronous callback to return the resu
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -75,10 +71,6 @@ function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>
 Updates a SIM message. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -112,7 +104,7 @@ Updates a SIM message. This API uses a promise to return the result.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

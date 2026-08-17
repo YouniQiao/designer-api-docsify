@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-thermal-export enum ThermalLevel--><!--Device-thermal-export enum ThermalLevel-End-->
 
 **系统能力：** SystemCapability.PowerManager.ThermalManager
@@ -21,10 +17,6 @@ COOL = 0
 表明设备处于清凉状态，业务执行不受热控的限制。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ThermalLevel-COOL = 0--><!--Device-ThermalLevel-COOL = 0-End-->
 
@@ -40,10 +32,6 @@ NORMAL = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ThermalLevel-NORMAL = 1--><!--Device-ThermalLevel-NORMAL = 1-End-->
 
 **系统能力：** SystemCapability.PowerManager.ThermalManager
@@ -57,10 +45,6 @@ WARM = 2
 表明设备进入温热状态，无感知业务应暂停或延迟运行。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ThermalLevel-WARM = 2--><!--Device-ThermalLevel-WARM = 2-End-->
 
@@ -76,10 +60,6 @@ HOT = 3
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ThermalLevel-HOT = 3--><!--Device-ThermalLevel-HOT = 3-End-->
 
 **系统能力：** SystemCapability.PowerManager.ThermalManager
@@ -93,10 +73,6 @@ OVERHEATED = 4
 表明设备发热严重，无感知业务与非关键业务应停止，前台关键业务应降低规格及负载。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ThermalLevel-OVERHEATED = 4--><!--Device-ThermalLevel-OVERHEATED = 4-End-->
 
@@ -112,10 +88,6 @@ WARNING = 5
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ThermalLevel-WARNING = 5--><!--Device-ThermalLevel-WARNING = 5-End-->
 
 **系统能力：** SystemCapability.PowerManager.ThermalManager
@@ -130,10 +102,6 @@ EMERGENCY = 6
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ThermalLevel-EMERGENCY = 6--><!--Device-ThermalLevel-EMERGENCY = 6-End-->
 
 **系统能力：** SystemCapability.PowerManager.ThermalManager
@@ -147,10 +115,6 @@ ESCAPE = 7
 表明设备即将进入热逃生状态，所有业务将被强制停止，业务需做好逃生措施，例如保存重要数据等。 **说明：**: 从API version 11开始支持。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ThermalLevel-ESCAPE = 7--><!--Device-ThermalLevel-ESCAPE = 7-End-->
 

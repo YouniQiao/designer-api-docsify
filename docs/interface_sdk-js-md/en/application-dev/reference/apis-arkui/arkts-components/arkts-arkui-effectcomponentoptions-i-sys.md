@@ -4,10 +4,6 @@ Sets the construction parameters of the current EffectComponent, including the r
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface EffectComponentOptions--><!--Device-unnamed-declare interface EffectComponentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Rendering layer of the EffectComponent. Default value: EffectLayer.NONE
 **Type:** [EffectLayer](arkts-arkui-effectlayer-e-sys.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

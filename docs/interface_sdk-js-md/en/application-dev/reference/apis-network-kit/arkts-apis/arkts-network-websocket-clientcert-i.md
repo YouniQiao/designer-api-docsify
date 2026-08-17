@@ -4,10 +4,6 @@ The clientCert field of the client certificate, which includes three attributes:
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-webSocket-export interface ClientCert--><!--Device-webSocket-export interface ClientCert-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,10 +26,6 @@ The path to the client certificate file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ClientCert-certPath: string--><!--Device-ClientCert-certPath: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -50,10 +42,6 @@ Client certificate password.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ClientCert-keyPassword?: string--><!--Device-ClientCert-keyPassword?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -69,10 +57,6 @@ The path of the client certificate private key file.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ClientCert-keyPath: string--><!--Device-ClientCert-keyPath: string-End-->
 

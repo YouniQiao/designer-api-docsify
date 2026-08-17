@@ -1,14 +1,12 @@
 # ModuleInfo
 
-The ModuleInfo module provides module information of an application. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md#HapModuleInfo) instead.
+The ModuleInfo module provides module information of an application. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md#hapmoduleinfo) instead.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md#HapModuleInfo)
+**Substitutes:** [HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md#hapmoduleinfo)
 
 <!--Device-unnamed-export interface ModuleInfo--><!--Device-unnamed-export interface ModuleInfo-End-->
 
@@ -27,8 +25,6 @@ The module name.
 **Default:** Indicates the name of the .hap package to which the capability belongs
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -51,8 +47,6 @@ The module source path.
 **Default:** Indicates the module source dir of this module
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

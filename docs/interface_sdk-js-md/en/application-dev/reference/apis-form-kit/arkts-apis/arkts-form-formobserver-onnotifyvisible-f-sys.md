@@ -16,10 +16,6 @@ Listens to the event of notifyVisible type change. &lt;p&gt;You can use this met
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 <!--Device-formObserver-function onNotifyVisible(observerCallback: Callback<Array<formInfo.RunningFormInfo>>): void--><!--Device-formObserver-function onNotifyVisible(observerCallback: Callback<Array<formInfo.RunningFormInfo>>): void-End-->
@@ -55,10 +51,6 @@ function onNotifyVisible(
 Listens to the event of notifyVisible type change. &lt;p&gt;You can use this method to listen to the event of notifyVisible type change for a particular card host.&lt;/p&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 

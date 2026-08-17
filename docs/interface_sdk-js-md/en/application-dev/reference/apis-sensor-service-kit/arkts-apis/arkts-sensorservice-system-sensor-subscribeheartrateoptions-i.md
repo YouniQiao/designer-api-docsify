@@ -4,11 +4,9 @@ Defines the type of data to return for a subscription to data changes of the hea
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#HEART_RATE)
+**Substitutes:** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#heartrate)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -54,11 +52,9 @@ Callback invoked when an API call fails.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -80,11 +76,9 @@ Callback invoked when the heart rate sensor data changes. This callback is invok
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 

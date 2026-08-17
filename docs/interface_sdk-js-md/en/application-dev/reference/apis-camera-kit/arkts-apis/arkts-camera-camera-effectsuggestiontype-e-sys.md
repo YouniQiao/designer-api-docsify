@@ -4,10 +4,6 @@ Enum for effect suggestion.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum EffectSuggestionType--><!--Device-camera-enum EffectSuggestionType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ EFFECT_SUGGESTION_NONE = 0
 None.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_NONE = 0--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_NONE = 0-End-->
 
@@ -44,10 +36,6 @@ Portrait.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_PORTRAIT = 1--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_PORTRAIT = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -63,10 +51,6 @@ EFFECT_SUGGESTION_FOOD = 2
 Food.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_FOOD = 2--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_FOOD = 2-End-->
 
@@ -84,10 +68,6 @@ Sky.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SKY = 3--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SKY = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -104,10 +84,6 @@ Sunrise and sunset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SUNRISE_SUNSET = 4--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SUNRISE_SUNSET = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -123,10 +99,6 @@ EFFECT_SUGGESTION_STAGE = 5
 Stage.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EffectSuggestionType-EFFECT_SUGGESTION_STAGE = 5--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_STAGE = 5-End-->
 

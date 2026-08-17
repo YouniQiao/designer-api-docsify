@@ -1,12 +1,8 @@
 # BlanklessLoadingParam
 
-Defines the blankless loading parameter. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Loading parameters of the White-Screen-Free Loading frame interpolation scheme.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-webview-interface BlanklessLoadingParam--><!--Device-webview-interface BlanklessLoadingParam-End-->
 
@@ -24,15 +20,11 @@ import { webview } from 'webview';
 callback?: Callback<BlanklessFrameInterpolationInfo>
 ```
 
-Callback for the blankless frame interpolation, which is used to return the blankless frame interpolation information. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Callback invoked after frame interpolation succeeds, fails, or is removed. This takes effect only when **enable** is **true**. This parameter is optional. If not set, no operation is performed.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,15 +38,11 @@ Callback for the blankless frame interpolation, which is used to return the blan
 duration?: number
 ```
 
-Duration of the frame interpolation. The valid range is the union of {0} and [200, 2000]. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. The value must be an integer. <br>Unit: ms.
+Duration of frame interpolation. The value range is the union of **[200, 2000]** and **{0}**, where **0** indicates that the duration is not specified and the system automatically sets a proper duration. Unit: ms.
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,15 +56,11 @@ Duration of the frame interpolation. The valid range is the union of {0} and [20
 enable: boolean
 ```
 
-Whether to enable frame interpolation. The value true indicates to enable frame interpolation, and false indicates the opposite. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Whether to enable the white-screen-free loading frame interpolation scheme. The value **true** means enabled, and **false** means disabled.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,15 +74,11 @@ Whether to enable frame interpolation. The value true indicates to enable frame 
 expirationTime?: number
 ```
 
-Expiration time of the historical frame, in ms (UTC time). T indicates the current UTC time. If the expiration time is 30 days, the value is 2592000000 ms. The value range is the union of (T, T + 2592000000] and {0}. 0 indicates that the expiration time is not specified and the default expiration time (7 days) is used. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+Expiration time of the historical frame, in UTC time. **T** indicates the current UTC time. If the expiration time is 30 days, the value is 2592000000 ms. The value range is the union of **(T, T + 2592000000]** and **{0}**. **0** indicates that the expiration time is not specified and the default expiration time (7 days) is used. Unit: ms.
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

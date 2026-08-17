@@ -15,11 +15,9 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API))
+**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -49,11 +47,9 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API))
+**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -88,11 +84,9 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API))
+**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -106,7 +100,7 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode** in the [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest) object of [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#SubscribeCallbackData-(System-API)) used in the [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onConsume) callback. |
+| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode** in the [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest) object of [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#subscribecallbackdata-system-api) used in the [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume) callback. |
 | reason | RemoveReason | Yes | Reason for deleting a notification. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -121,11 +115,9 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API))
+**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

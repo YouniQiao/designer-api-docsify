@@ -4,10 +4,6 @@ Enumerates predicates used as query conditions. Use the enum name rather than th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-enum Field--><!--Device-relationalStore-enum Field-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -21,10 +17,6 @@ CURSOR_FIELD = '#_cursor'
 Field name used for cursor-based search.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Field-CURSOR_FIELD = '#_cursor'--><!--Device-Field-CURSOR_FIELD = '#_cursor'-End-->
 
@@ -40,10 +32,6 @@ Field name used to specify the data source in cursor-based search.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Field-ORIGIN_FIELD = '#_origin'--><!--Device-Field-ORIGIN_FIELD = '#_origin'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -57,10 +45,6 @@ DELETED_FLAG_FIELD = '#_deleted_flag'
 Whether the dirty data (data deleted from the cloud) is cleared from the local device. It fills in the result set returned upon the cursor-based search. The value **true** means the dirty data is cleared; the value **false** means the opposite.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Field-DELETED_FLAG_FIELD = '#_deleted_flag'--><!--Device-Field-DELETED_FLAG_FIELD = '#_deleted_flag'-End-->
 
@@ -76,10 +60,6 @@ Data status in the cursor-based search result set. The value **0** indicates nor
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Field-DATA_STATUS_FIELD = '#_data_status'--><!--Device-Field-DATA_STATUS_FIELD = '#_data_status'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -93,10 +73,6 @@ OWNER_FIELD = '#_cloud_owner'
 Party who shares the data. It fills in the result set returned when the owner of the shared data is searched.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Field-OWNER_FIELD = '#_cloud_owner'--><!--Device-Field-OWNER_FIELD = '#_cloud_owner'-End-->
 
@@ -112,10 +88,6 @@ Operation permission on the shared data. It fills in the result set returned whe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Field-PRIVILEGE_FIELD = '#_cloud_privilege'--><!--Device-Field-PRIVILEGE_FIELD = '#_cloud_privilege'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -129,10 +101,6 @@ SHARING_RESOURCE_FIELD = '#_sharing_resource_field'
 Resource shared. It fills in the result set returned when the shared resource is searched.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Field-SHARING_RESOURCE_FIELD = '#_sharing_resource_field'--><!--Device-Field-SHARING_RESOURCE_FIELD = '#_sharing_resource_field'-End-->
 

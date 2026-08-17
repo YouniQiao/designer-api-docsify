@@ -8,10 +8,6 @@ Defines the callback for an auto-fill request, which is used to automatically fi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-autoFillManager-export type FillRequestCallback = _FillRequestCallback--><!--Device-autoFillManager-export type FillRequestCallback = _FillRequestCallback-End-->

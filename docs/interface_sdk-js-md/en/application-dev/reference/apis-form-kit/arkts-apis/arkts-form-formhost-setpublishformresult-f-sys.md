@@ -16,10 +16,6 @@ Sets the result for the operation of adding a widget to the home screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 **Model restriction:** This API can be used only in the stage model.

@@ -4,10 +4,6 @@ Enumerates USB port mode types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usbManager-export enum PortModeType--><!--Device-usbManager-export enum PortModeType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -23,10 +19,6 @@ NONE = 0
 No function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PortModeType-NONE = 0--><!--Device-PortModeType-NONE = 0-End-->
 
@@ -44,10 +36,6 @@ Upstream facing port, which functions as the sink of power supply
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PortModeType-UFP = 1--><!--Device-PortModeType-UFP = 1-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -63,10 +51,6 @@ DFP = 2
 Downstream facing port, which functions as the source of power supply
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PortModeType-DFP = 2--><!--Device-PortModeType-DFP = 2-End-->
 
@@ -84,10 +68,6 @@ Dynamic reconfiguration port (DRP), which can function as the DFP (host) or UFP 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PortModeType-DRP = 3--><!--Device-PortModeType-DRP = 3-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -103,10 +83,6 @@ NUM_MODES = 4
 Not supported currently
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PortModeType-NUM_MODES = 4--><!--Device-PortModeType-NUM_MODES = 4-End-->
 

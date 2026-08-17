@@ -4,10 +4,6 @@ Implements a plugin component manager.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace pluginComponentManager--><!--Device-unnamed-declare namespace pluginComponentManager-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,15 +22,15 @@ import { PluginComponentTemplate } from 'PluginComponentTemplate';
 | --- | --- |
 | [push](arkts-arkui-plugincomponentmanager-push-f.md#push) | Pushes the component and data to the component user. |
 | [request](arkts-arkui-plugincomponentmanager-request-f.md#request) | Requests the component from the component provider. |
-| [on_string](arkts-arkui-plugincomponentmanager-onstring-f.md#on_string) | Listens for events of the request type and returns the requested data, or listens for events of the push type and receives the data pushed by the provider. |
+| [on_string](arkts-arkui-plugincomponentmanager-onstring-f.md#onstring) | Listens for events of the request type and returns the requested data, or listens for events of the push type and receives the data pushed by the provider. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md#push-(System-API)) | Plugin component push method used to send the information of the template it provides. |
-| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md#request-(System-API)) | Plugin component request method used to send a request for the information of the template it wants. |
+| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md#push-system-api) | Plugin component push method used to send the information of the template it provides. |
+| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md#request-system-api) | Plugin component request method used to send a request for the information of the template it wants. |
 <!--DelEnd-->
 
 ### Interfaces

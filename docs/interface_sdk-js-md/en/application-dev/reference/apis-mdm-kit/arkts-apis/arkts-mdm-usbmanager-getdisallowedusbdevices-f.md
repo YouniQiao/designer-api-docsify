@@ -16,10 +16,6 @@ Obtains the disallowed USB device types.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB
 
 **Model restriction:** This API can be used only in the stage model.
@@ -49,7 +45,7 @@ Obtains the disallowed USB device types.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { usbManager } from '@kit.MDMKit';
@@ -78,10 +74,6 @@ function getDisallowedUsbDevices(admin: Want | null): Array<UsbDeviceType>
 Obtains the disallowed USB device types. Use cases: - Retrieve the current list of disallowed USB device types for review by the device administrator. - Obtain the existing blocklist for comparison before making any modifications. - Display the current USB device type restriction policy configuration on the management page.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB
 

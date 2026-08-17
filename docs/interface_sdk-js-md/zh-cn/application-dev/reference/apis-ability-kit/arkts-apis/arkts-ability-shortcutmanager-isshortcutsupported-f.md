@@ -10,10 +10,6 @@ function isShortcutSupported(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-shortcutManager-function isShortcutSupported(): boolean--><!--Device-shortcutManager-function isShortcutSupported(): boolean-End-->
@@ -26,7 +22,7 @@ function isShortcutSupported(): boolean
 | --- | --- |
 | boolean | 表示当前设备是否支持快捷方式。<br/>返回值为true表示当前设备支持快捷方式；返回值为false表示当前设备不支持快捷方式。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';

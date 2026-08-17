@@ -4,11 +4,9 @@ The enum of a2dp playing state.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [PlayingState](arkts-connectivity-a2dp-playingstate-e.md#PlayingState)
+**Substitutes:** [PlayingState](arkts-connectivity-a2dp-playingstate-e.md#playingstate)
 
 <!--Device-bluetoothManager-enum PlayingState--><!--Device-bluetoothManager-enum PlayingState-End-->
 
@@ -24,11 +22,9 @@ Not playing.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STATE_NOT_PLAYING](arkts-connectivity-a2dp-playingstate-e.md#STATE_NOT_PLAYING)
+**Substitutes:** [STATE_NOT_PLAYING](arkts-connectivity-a2dp-playingstate-e.md#statenotplaying)
 
 <!--Device-PlayingState-STATE_NOT_PLAYING = 0--><!--Device-PlayingState-STATE_NOT_PLAYING = 0-End-->
 
@@ -44,11 +40,9 @@ Playing.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STATE_PLAYING](arkts-connectivity-a2dp-playingstate-e.md#STATE_PLAYING)
+**Substitutes:** [STATE_PLAYING](arkts-connectivity-a2dp-playingstate-e.md#stateplaying)
 
 <!--Device-PlayingState-STATE_PLAYING = 1--><!--Device-PlayingState-STATE_PLAYING = 1-End-->
 

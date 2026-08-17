@@ -1,12 +1,10 @@
-# DownloadRequestOptions
+# DownloadRequestOptions(上传下载)
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
-**替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
+**替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#uploadconfig)
 
 <!--Device-unnamed-export interface DownloadRequestOptions--><!--Device-unnamed-export interface DownloadRequestOptions-End-->
 
@@ -23,8 +21,6 @@ complete?: () => void
 **类型：** () =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
@@ -46,8 +42,6 @@ Download description. The default value is the file name.
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** description
@@ -67,8 +61,6 @@ Called when downloading fails.
 **类型：** (data: any, code: number) =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
@@ -90,8 +82,6 @@ Name of the file to downloaded. The value is obtained from the current request o
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** saveas
@@ -111,8 +101,6 @@ Request header.
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
@@ -134,8 +122,6 @@ Called when the files are successfully downloaded.
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** on
@@ -155,8 +141,6 @@ Resource URL.
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 

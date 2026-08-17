@@ -4,10 +4,6 @@ Interface for device rotation radian
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-deviceStatus-export interface DeviceRotationRadian--><!--Device-deviceStatus-export interface DeviceRotationRadian-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
@@ -32,10 +28,6 @@ indicates X-RotationRadian
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceRotationRadian-x: double--><!--Device-DeviceRotationRadian-x: double-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
@@ -54,10 +46,6 @@ indicates Y-RotationRadian
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceRotationRadian-y: double--><!--Device-DeviceRotationRadian-y: double-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
@@ -75,10 +63,6 @@ indicates Z-RotationRadian
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceRotationRadian-z: double--><!--Device-DeviceRotationRadian-z: double-End-->
 

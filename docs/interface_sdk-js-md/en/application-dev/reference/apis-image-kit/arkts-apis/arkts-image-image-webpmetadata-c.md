@@ -4,10 +4,6 @@ WebP metadata.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-image-class WebPMetadata--><!--Device-image-class WebPMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ Canvas Height. Unit: px, The value should be an integer.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebPMetadata-readonly canvasHeight?: int--><!--Device-WebPMetadata-readonly canvasHeight?: int-End-->
@@ -51,10 +43,6 @@ Canvas Width. Unit: px, The value should be an integer.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Delay of each frame. Unit: ms, The value should be an integer.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebPMetadata-readonly delayTime?: int--><!--Device-WebPMetadata-readonly delayTime?: int-End-->
@@ -96,10 +80,6 @@ Loop count.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebPMetadata-readonly loopCount?: int--><!--Device-WebPMetadata-readonly loopCount?: int-End-->
@@ -117,10 +97,6 @@ Unclamped delay of each frame. Unit: ms, The value should be an integer.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

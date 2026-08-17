@@ -4,8 +4,6 @@ Flag indicating whether a module is associated with a widget or shortcut when it
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 <!--Device-bundle-export enum ModuleRemoveFlag--><!--Device-bundle-export enum ModuleRemoveFlag-End-->
@@ -23,8 +21,6 @@ FLAG_MODULE_NOT_USED_BY_FORM = 0
 Not used by a widget.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ Used by a widget.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 <!--Device-ModuleRemoveFlag-FLAG_MODULE_USED_BY_FORM = 1--><!--Device-ModuleRemoveFlag-FLAG_MODULE_USED_BY_FORM = 1-End-->
@@ -64,8 +58,6 @@ Not used by a shortcut.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 <!--Device-ModuleRemoveFlag-FLAG_MODULE_NOT_USED_BY_SHORTCUT = 2--><!--Device-ModuleRemoveFlag-FLAG_MODULE_NOT_USED_BY_SHORTCUT = 2-End-->
@@ -83,8 +75,6 @@ FLAG_MODULE_USED_BY_SHORTCUT = 3
 Used by a shortcut.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

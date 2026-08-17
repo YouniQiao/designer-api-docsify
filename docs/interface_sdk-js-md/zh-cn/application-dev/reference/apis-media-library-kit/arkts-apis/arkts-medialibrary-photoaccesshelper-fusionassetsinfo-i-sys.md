@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-photoAccessHelper-interface FusionAssetsInfo--><!--Device-photoAccessHelper-interface FusionAssetsInfo-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -25,10 +21,6 @@ assetsCount: int
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-FusionAssetsInfo-assetsCount: int--><!--Device-FusionAssetsInfo-assetsCount: int-End-->
 
@@ -48,10 +40,6 @@ assetsPath: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-FusionAssetsInfo-assetsPath: string--><!--Device-FusionAssetsInfo-assetsPath: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -69,10 +57,6 @@ assetsType: FusionAssetType
 **类型：** [FusionAssetType](arkts-medialibrary-photoaccesshelper-fusionassettype-e-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-FusionAssetsInfo-assetsType: FusionAssetType--><!--Device-FusionAssetsInfo-assetsType: FusionAssetType-End-->
 

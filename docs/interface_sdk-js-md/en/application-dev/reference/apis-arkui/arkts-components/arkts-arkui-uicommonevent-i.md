@@ -4,10 +4,6 @@ Implements a common event callback. Passing **undefined** as the input parameter
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface UICommonEvent--><!--Device-unnamed-declare interface UICommonEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,13 +14,9 @@ Implements a common event callback. Passing **undefined** as the input parameter
 setOnAppear(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onAppear) event.
+Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onappear) event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,13 +38,9 @@ Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onAppear) eve
 setOnBlur(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onBlur) event.
+Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur) event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,10 +66,6 @@ Set the callback for the click event.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -102,13 +86,9 @@ Set the callback for the click event.
 setOnDisappear(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#onDisAppear) event.
+Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear) event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,13 +110,9 @@ Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#onDisAppea
 setOnFocus(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onFocus) event.
+Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onfocus) event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,13 +134,9 @@ Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onFocus) event
 setOnHover(callback: HoverCallback | undefined): void
 ```
 
-Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onHover) event.
+Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onhover) event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,10 +162,6 @@ Sets the callback for the key event.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -214,13 +182,9 @@ Sets the callback for the key event.
 setOnMouse(callback: Callback<MouseEvent> | undefined): void
 ```
 
-Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onMouse) event.
+Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse) event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,13 +206,9 @@ Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onMouse) event
 setOnSizeChange(callback: SizeChangeCallback | undefined): void
 ```
 
-Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onSizeChange) event, which is triggered when the component's size changes.
+Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizechange) event, which is triggered when the component's size changes.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -274,10 +234,6 @@ Sets the callback for the touch event.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -298,13 +254,9 @@ Sets the callback for the touch event.
 setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): void
 ```
 
-Sets the callback for the [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onVisibleAreaChange) visible area change event.
+Sets the callback for the [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) visible area change event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

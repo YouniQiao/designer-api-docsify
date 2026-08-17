@@ -4,13 +4,9 @@
 type OnCreateAISession = (id: string, params: string, result: OnAISessionCallback) => boolean
 ```
 
-Triggered when an AI session is created. Allows custom model initialization and result handling. Return `true` to bypass the default system behavior; return `false` to proceed with the default logic.
+AI session creation callback function type. Allows custom model initialization and result processing.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,5 +26,5 @@ Triggered when an AI session is created. Allows custom model initialization and 
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to use custom logic. `true` = use custom, `false` = proceed with default. |
+| boolean | The value **true** indicates that custom logic is used, skipping the system default behavior; **false** indicates that the system default logic continues to be executed. |
 

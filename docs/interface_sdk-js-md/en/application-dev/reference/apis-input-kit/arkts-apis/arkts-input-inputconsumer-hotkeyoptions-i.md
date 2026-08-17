@@ -4,10 +4,6 @@ Defines shortcut key options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputConsumer-interface HotkeyOptions--><!--Device-inputConsumer-interface HotkeyOptions-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -24,15 +20,11 @@ import { inputConsumer } from 'inputConsumer';
 finalKey: int
 ```
 
-Modified key, which can be any key except the modifier keys and Meta key. For details about the keys, see [@ohos.multimodalInput.keyCode (Keycode)](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). For example, in **Ctrl+Shift+Esc**, **Esc** is the modifier key.
+Modified key, which can be any key except the modifier keys and Meta key. For details about the keys, see [@ohos.multimodalInput.keyCode (Keycode)](arkts-input-multimodalinput-keycode-keycode-e.md#keycode). For example, in **Ctrl+Shift+Esc**, **Esc** is the modifier key.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HotkeyOptions-finalKey: int--><!--Device-HotkeyOptions-finalKey: int-End-->
 
@@ -50,10 +42,6 @@ Whether to report repeated key events. The value **true** means to report repeat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HotkeyOptions-isRepeat?: boolean--><!--Device-HotkeyOptions-isRepeat?: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -69,10 +57,6 @@ Modifier key set (including Ctrl, Shift, and Alt). One to four modifier keys are
 **Type:** Array&lt;int&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HotkeyOptions-preKeys: Array<int>--><!--Device-HotkeyOptions-preKeys: Array<int>-End-->
 

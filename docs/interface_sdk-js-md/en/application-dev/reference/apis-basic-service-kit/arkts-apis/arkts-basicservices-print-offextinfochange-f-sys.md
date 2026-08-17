@@ -16,10 +16,6 @@ Unregister event callback for the information change of print extension.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function offExtInfoChange(callback?: Callback<boolean>): void--><!--Device-print-function offExtInfoChange(callback?: Callback<boolean>): void-End-->

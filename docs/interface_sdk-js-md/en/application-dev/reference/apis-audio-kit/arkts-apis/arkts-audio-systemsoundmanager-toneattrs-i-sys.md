@@ -4,10 +4,6 @@ Tone attributes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemSoundManager-interface ToneAttrs--><!--Device-systemSoundManager-interface ToneAttrs-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -30,10 +26,6 @@ Gets tone category.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToneAttrs-getCategory(): int--><!--Device-ToneAttrs-getCategory(): int-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -52,7 +44,7 @@ Gets tone category.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 toneAttrs.getCategory();
@@ -67,10 +59,6 @@ getCustomizedType(): ToneCustomizedType
 Gets customized type of tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneAttrs-getCustomizedType(): ToneCustomizedType--><!--Device-ToneAttrs-getCustomizedType(): ToneCustomizedType-End-->
 
@@ -90,7 +78,7 @@ Gets customized type of tone.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 toneAttrs.getCustomizedType();
@@ -105,10 +93,6 @@ getFileName(): string
 Gets file name of tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneAttrs-getFileName(): string--><!--Device-ToneAttrs-getFileName(): string-End-->
 
@@ -128,7 +112,7 @@ Gets file name of tone.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 toneAttrs.getFileName();
@@ -140,13 +124,9 @@ toneAttrs.getFileName();
 getMediaType(): MediaType
 ```
 
-Gets media type. This function returns [AUDIO](arkts-audio-systemsoundmanager-mediatype-e-sys.md#AUDIO) if the media type has not been changed by [setMediaType](#setMediaType).
+Gets media type. This function returns [AUDIO](arkts-audio-systemsoundmanager-mediatype-e-sys.md#audio) if the media type has not been changed by [setMediaType](#setmediatype).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneAttrs-getMediaType(): MediaType--><!--Device-ToneAttrs-getMediaType(): MediaType-End-->
 
@@ -166,7 +146,7 @@ Gets media type. This function returns [AUDIO](arkts-audio-systemsoundmanager-me
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 toneAttrs.getMediaType();
@@ -181,10 +161,6 @@ getTitle(): string
 Gets title of tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneAttrs-getTitle(): string--><!--Device-ToneAttrs-getTitle(): string-End-->
 
@@ -204,7 +180,7 @@ Gets title of tone.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 toneAttrs.getTitle();
@@ -219,10 +195,6 @@ getUri(): string
 Gets uri of tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneAttrs-getUri(): string--><!--Device-ToneAttrs-getUri(): string-End-->
 
@@ -242,7 +214,7 @@ Gets uri of tone.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 toneAttrs.getUri();
@@ -258,10 +230,6 @@ Sets tone category.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToneAttrs-setCategory(category: int): void--><!--Device-ToneAttrs-setCategory(category: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -272,7 +240,7 @@ Sets tone category.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| category | int | Yes | tone category. This parameter can be one of [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#TONE_CATEGORY_RINGTONE), [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#TONE_CATEGORY_TEXT_MESSAGE), [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#TONE_CATEGORY_NOTIFICATION), [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#TONE_CATEGORY_ALARM). In addition, this parameter can be result of OR logical operator of these constants. |
+| category | int | Yes | tone category. This parameter can be one of [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#tonecategoryringtone), [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#tonecategorytextmessage), [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#tonecategorynotification), [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#tonecategoryalarm). In addition, this parameter can be result of OR logical operator of these constants. |
 
 **Error codes:**
 
@@ -281,7 +249,7 @@ Sets tone category.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let toneAttrs = systemSoundManager.createCustomizedToneAttrs();
@@ -298,10 +266,6 @@ setFileName(name: string): void
 Sets file name of tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneAttrs-setFileName(name: string): void--><!--Device-ToneAttrs-setFileName(name: string): void-End-->
 
@@ -322,7 +286,7 @@ Sets file name of tone.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let toneAttrs = systemSoundManager.createCustomizedToneAttrs();
@@ -339,10 +303,6 @@ setMediaType(type: MediaType): void
 Sets media type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneAttrs-setMediaType(type: MediaType): void--><!--Device-ToneAttrs-setMediaType(type: MediaType): void-End-->
 
@@ -362,7 +322,7 @@ Sets media type.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let type: systemSoundManager.MediaType = systemSoundManager.MediaType.VIDEO; // Use the required type.
@@ -379,10 +339,6 @@ setTitle(title: string): void
 Sets title of tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToneAttrs-setTitle(title: string): void--><!--Device-ToneAttrs-setTitle(title: string): void-End-->
 
@@ -403,7 +359,7 @@ Sets title of tone.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let toneAttrs = systemSoundManager.createCustomizedToneAttrs();

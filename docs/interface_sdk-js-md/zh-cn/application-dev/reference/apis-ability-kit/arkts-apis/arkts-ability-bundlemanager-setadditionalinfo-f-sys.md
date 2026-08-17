@@ -10,10 +10,6 @@ function setAdditionalInfo(bundleName: string, additionalInfo: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function setAdditionalInfo(bundleName: string, additionalInfo: string): void--><!--Device-bundleManager-function setAdditionalInfo(bundleName: string, additionalInfo: string): void-End-->
@@ -39,7 +35,7 @@ function setAdditionalInfo(bundleName: string, additionalInfo: string): void
 | [17700053](../errorcode-bundle.md#17700053-非应用市场调用) | The caller is not AppGallery. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ ASR AEC mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum AsrAecMode--><!--Device-audio-enum AsrAecMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -24,10 +20,6 @@ Bypass AEC.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AsrAecMode-BYPASS = 0--><!--Device-AsrAecMode-BYPASS = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -43,10 +35,6 @@ STANDARD = 1
 Using standard AEC.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AsrAecMode-STANDARD = 1--><!--Device-AsrAecMode-STANDARD = 1-End-->
 

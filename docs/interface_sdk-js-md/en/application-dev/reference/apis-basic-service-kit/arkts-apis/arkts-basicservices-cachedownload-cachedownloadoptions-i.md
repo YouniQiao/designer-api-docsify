@@ -4,10 +4,6 @@ Provides configuration options for download and cache, including HTTP options, t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cacheDownload-interface CacheDownloadOptions--><!--Device-cacheDownload-interface CacheDownloadOptions-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -30,10 +26,6 @@ CA certificate path. Currently, only the .pem certificate is supported. The CA c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CacheDownloadOptions-caPath?: string--><!--Device-CacheDownloadOptions-caPath?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -49,10 +41,6 @@ Cache update strategies, including **FORCE** or **LAZY**. The **FORCE** policy i
 **Type:** [CacheStrategy](arkts-basicservices-cachedownload-cachestrategy-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy--><!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy-End-->
 
@@ -70,10 +58,6 @@ Request header used by a download task during HTTP transfer. The default value i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CacheDownloadOptions-headers?: Record<string, string>--><!--Device-CacheDownloadOptions-headers?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -89,10 +73,6 @@ Task retry configuration.
 **Type:** [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,10 +92,6 @@ Secure communication protocol, such as TSL or TLCP. TLS is used by default. Curr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CacheDownloadOptions-sslType?: SslType--><!--Device-CacheDownloadOptions-sslType?: SslType-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -131,10 +107,6 @@ Task timeout configuration.
 **Type:** [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

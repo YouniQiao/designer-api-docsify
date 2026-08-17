@@ -16,10 +16,6 @@ Starts call chain trace. This API returns the result synchronously. If the curre
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiTraceChain-function begin(name: string, flags?: int): HiTraceId--><!--Device-hiTraceChain-function begin(name: string, flags?: int): HiTraceId-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -29,7 +25,7 @@ Starts call chain trace. This API returns the result synchronously. If the curre
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Traced service name. It is recommended that the length of this parameter be less than or equal to 63 bytes. The excess part will be truncated. |
-| flags | int | No | Trace flag combination. For details, see [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md#HiTraceFlag). The default value is **0**. |
+| flags | int | No | Trace flag combination. For details, see [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md#hitraceflag). The default value is **0**. |
 
 **Return value:**
 
@@ -37,7 +33,7 @@ Starts call chain trace. This API returns the result synchronously. If the curre
 | --- | --- |
 | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId** instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Start tracing. The trace flag is the union of INCLUDE_ASYNC and DONOT_CREATE_SPAN.

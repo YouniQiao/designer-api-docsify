@@ -4,8 +4,6 @@ The **fileExtensionInfo** module defines attributes in **RootInfo** and **FileIn
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 <!--Device-unnamed-declare namespace fileExtensionInfo--><!--Device-unnamed-declare namespace fileExtensionInfo-End-->

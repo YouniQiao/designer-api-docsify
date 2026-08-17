@@ -269,7 +269,7 @@ Inserts a batch of data into the target table.A maximum of 32766 parameters can 
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | const char *table | Represents the target table. |
-| const OH_Data_VBuckets *rows | Represents the rows data to be inserted into the table. |
+| [const OH_Data_VBuckets](capi-rdb-oh-data-vbuckets.md) *rows | Represents the rows data to be inserted into the table. |
 | Rdb_ConflictResolution resolution | Represents the resolution when conflict occurs. |
 | int64_t *changes | Represents the number of successful insertions. |
 
@@ -540,7 +540,7 @@ Inserts a batch of data into the target table and output change info to context.
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | const char *table | Represents the target table. |
-| const OH_Data_VBuckets *rows | Represents the rows data to be inserted into the table. |
+| [const OH_Data_VBuckets](capi-rdb-oh-data-vbuckets.md) *rows | Represents the rows data to be inserted into the table. |
 | Rdb_ConflictResolution resolution | Represents the resolution when conflict occurs. |
 | OH_RDB_ReturningContext *context | Represents a pointer to a pointer to an [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) instance. |
 

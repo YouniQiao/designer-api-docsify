@@ -14,8 +14,6 @@ Navigator(value?: { target: string; type?: NavigationType })
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 13
 
 **替代接口：** NavPathInfo
@@ -41,8 +39,6 @@ Navigator()
 在使用Navigator时调用。 NavigationAttribute为Navigation组件的属性。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 13
 

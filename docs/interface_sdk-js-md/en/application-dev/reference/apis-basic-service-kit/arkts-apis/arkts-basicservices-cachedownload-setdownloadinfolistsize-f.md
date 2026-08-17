@@ -16,10 +16,6 @@ Sets the size of the download information list. - The download information list 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cacheDownload-function setDownloadInfoListSize(size: long): void--><!--Device-cacheDownload-function setDownloadInfoListSize(size: long): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -30,7 +26,7 @@ Sets the size of the download information list. - The download information list 
 | --- | --- | --- | --- |
 | size | long | Yes | Size of the download information list. The value ranges from 0 to 8192. The default value is **0**, indicating that no download information is stored. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';

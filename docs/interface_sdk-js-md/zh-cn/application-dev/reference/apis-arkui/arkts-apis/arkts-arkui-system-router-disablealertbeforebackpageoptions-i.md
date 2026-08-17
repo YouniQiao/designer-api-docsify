@@ -1,10 +1,8 @@
-# DisableAlertBeforeBackPageOptions
+# DisableAlertBeforeBackPageOptions(页面路由)
 
 定义DisableAlertBeforeBackPage参数选项。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 8
 
@@ -26,8 +24,6 @@ cancel?: (errMsg: string) => void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** RouterOptions
@@ -48,8 +44,6 @@ complete?: () => void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** RouterOptions
@@ -69,8 +63,6 @@ success?: (errMsg: string) => void
 **类型：** (errMsg: string) =&gt; void
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 8
 

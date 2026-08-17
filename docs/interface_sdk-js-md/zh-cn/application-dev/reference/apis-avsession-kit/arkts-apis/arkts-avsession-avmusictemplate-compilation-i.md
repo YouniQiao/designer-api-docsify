@@ -1,14 +1,10 @@
 # Compilation
 
-合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。
+合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)。
 
-**继承/实现关系：** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
+**继承/实现关系：** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-avMusicTemplate-interface Compilation--><!--Device-avMusicTemplate-interface Compilation-End-->
 
@@ -25,10 +21,6 @@ hasMoreData: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,10 +40,6 @@ id: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Compilation-id: string--><!--Device-Compilation-id: string-End-->
@@ -69,10 +57,6 @@ memberMediaType: EntityType
 **类型：** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,10 +76,6 @@ title: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Compilation-title: string--><!--Device-Compilation-title: string-End-->
@@ -114,10 +94,6 @@ topElements: MediaEntity[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Compilation-topElements: MediaEntity[]--><!--Device-Compilation-topElements: MediaEntity[]-End-->
@@ -135,10 +111,6 @@ totalSize: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

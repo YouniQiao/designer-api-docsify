@@ -16,10 +16,6 @@ Checks whether the application has the permission to access the device. Checks w
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usbManager-function hasRight(deviceName: string): boolean--><!--Device-usbManager-function hasRight(deviceName: string): boolean-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -28,7 +24,7 @@ Checks whether the application has the permission to access the device. Checks w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceName | string | Yes | Device name, which is name of USBDevice, obtained from the device list returned by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getDevices). |
+| deviceName | string | Yes | Device name, which is name of USBDevice, obtained from the device list returned by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices). |
 
 **Return value:**
 
@@ -43,7 +39,7 @@ Checks whether the application has the permission to access the device. Checks w
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  <br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function hasRight(): boolean {

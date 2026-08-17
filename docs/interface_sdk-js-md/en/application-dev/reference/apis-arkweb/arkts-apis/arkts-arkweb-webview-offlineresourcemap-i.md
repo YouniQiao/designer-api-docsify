@@ -1,12 +1,8 @@
 # OfflineResourceMap
 
-Implements an **OfflineResourceMap** object, which is used to set information related to local offline resources that will be injected into memory cache through the [injectOfflineResources](arkts-arkweb-webview-webviewcontroller-c.md#injectOfflineResources) API. The ArkWeb engine will generate resource caches based on this information and control the validity period of the cache accordingly.
+Implements an **OfflineResourceMap** object, which is used to set information related to local offline resources that will be injected into memory cache through the [injectOfflineResources](arkts-arkweb-webview-webviewcontroller-c.md#injectofflineresources) API. The ArkWeb engine will generate resource caches based on this information and control the validity period of the cache accordingly.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-webview-interface OfflineResourceMap--><!--Device-webview-interface OfflineResourceMap-End-->
 
@@ -30,10 +26,6 @@ Content of a local offline resource.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-OfflineResourceMap-resource: Uint8Array--><!--Device-OfflineResourceMap-resource: Uint8Array-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -44,15 +36,11 @@ Content of a local offline resource.
 responseHeaders: Array<WebHeader>
 ```
 
-HTTP response headers corresponding to the resources. The **Cache-Control** or **Expires** response header is used to control the validity period of the resource in the memory cache. If neither of the headers is provided, a default validity time of 86400 seconds (1 day) will be applied. The **Content-Type** response header is used to define the MIME type of the resource. For resources of type MODULE_JS, a valid MIME type must be provided. For other types, the MIME type is optional, with no default value. A non-standard MIME type can lead to the resource being invalidated in the memory cache. If a **script** tag on the web page uses the **crossorigin** attribute, the **Cross-Origin** response header must be set in the **responseHeaders** parameter of the API. The value for this header should be **anonymous** or **use-credentials**.
+HTTP response headers corresponding to the resources. The Cache-Control or Expires response header provided is used to control the validity period of the resources in the memory cache. If not provided, the default validity period is 86400 seconds, that is, 1 day. The Content-Type response header provided is used to define the MIME type of the resources. MODULE_JS must provide a valid MIME type. Other types may not provide one, and there is no default value. A non-standard MIME type will cause the memory cache to become invalid. If the script tag in the service web page uses the crossorigin attribute, the Cross-Origin response header must be set to **anonymous** or **use-credentials** in the responseHeaders parameter of this API. Otherwise, the memory cache may become invalid.
 
 **Type:** Array&lt;WebHeader&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-OfflineResourceMap-responseHeaders: Array<WebHeader>--><!--Device-OfflineResourceMap-responseHeaders: Array<WebHeader>-End-->
 
@@ -64,15 +52,11 @@ HTTP response headers corresponding to the resources. The **Cache-Control** or *
 type: OfflineResourceType
 ```
 
-Resource type. Currently, only the JavaScript, image, and CSS types are supported.
+Type of the resources. Currently, only JavaScript, image, and CSS resources are supported.
 
 **Type:** [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-OfflineResourceMap-type: OfflineResourceType--><!--Device-OfflineResourceMap-type: OfflineResourceType-End-->
 
@@ -84,15 +68,11 @@ Resource type. Currently, only the JavaScript, image, and CSS types are supporte
 urlList: Array<string>
 ```
 
-List of network addresses of the local offline resources. The first item in the list is used as the resources' origin. If only one network address is provided, this single address is used for the resources' origin. The URL supports only the HTTP and HTTPS protocols and contains a maximum of 2048 characters.
+List of network addresses corresponding to the local offline resources. The first item in the list serves as the origin of the resources. If only one network address is provided, it is used as the origin of the resources. The URL supports only HTTP or HTTPS and cannot exceed 2048 characters. If the preceding restrictions are not met, the resource injection fails.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-OfflineResourceMap-urlList: Array<string>--><!--Device-OfflineResourceMap-urlList: Array<string>-End-->
 

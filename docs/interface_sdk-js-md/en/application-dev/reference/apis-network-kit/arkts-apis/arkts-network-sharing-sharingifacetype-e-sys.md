@@ -4,10 +4,6 @@ Enumerates the network sharing types of an NIC.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sharing-export enum SharingIfaceType--><!--Device-sharing-export enum SharingIfaceType-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
@@ -23,10 +19,6 @@ SHARING_WIFI = 0
 Network sharing type for Wi-Fi.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SharingIfaceType-SHARING_WIFI = 0--><!--Device-SharingIfaceType-SHARING_WIFI = 0-End-->
 
@@ -44,10 +36,6 @@ Network sharing type for USB.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SharingIfaceType-SHARING_USB = 1--><!--Device-SharingIfaceType-SHARING_USB = 1-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
@@ -63,10 +51,6 @@ SHARING_BLUETOOTH = 2
 Network sharing type for BLUETOOTH.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SharingIfaceType-SHARING_BLUETOOTH = 2--><!--Device-SharingIfaceType-SHARING_BLUETOOTH = 2-End-->
 

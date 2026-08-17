@@ -12,15 +12,13 @@ import { usb } from 'usb';
 function closePipe(pipe: USBDevicePipe): number
 ```
 
-Closes a USB device pipe. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter.
+Closes a USB device pipe. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [closePipe](arkts-basicservices-usbmanager-closepipe-f.md#closePipe)
+**Substitutes:** [closePipe](arkts-basicservices-usbmanager-closepipe-f.md#closepipe)
 
 <!--Device-usb-function closePipe(pipe: USBDevicePipe): number--><!--Device-usb-function closePipe(pipe: USBDevicePipe): number-End-->
 
@@ -38,7 +36,7 @@ Closes a USB device pipe. Before you do this, call [usb.getDevices](arkts-basics
 | --- | --- |
 | number | Returns **0** if the USB device pipe is closed successfully; returns an error code otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ret = usb.closePipe(devicepipe);

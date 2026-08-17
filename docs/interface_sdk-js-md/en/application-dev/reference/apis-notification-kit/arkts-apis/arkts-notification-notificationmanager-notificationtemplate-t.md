@@ -8,10 +8,6 @@ Describes the notification template.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export type NotificationTemplate = _NotificationTemplate--><!--Device-notificationManager-export type NotificationTemplate = _NotificationTemplate-End-->
 
 **System capability:** SystemCapability.Notification.Notification

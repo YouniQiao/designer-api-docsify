@@ -4,10 +4,6 @@ Enumerates the results of the dialog box for redirection to the settings page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityAccessCtrl-export enum SelectedResult--><!--Device-abilityAccessCtrl-export enum SelectedResult-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -21,10 +17,6 @@ REJECTED = -1
 The user chooses not to go to the settings.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ The user chooses to go to the settings.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SelectedResult-OPENED = 0--><!--Device-SelectedResult-OPENED = 0-End-->
@@ -61,10 +49,6 @@ GRANTED = 1
 The permission has been granted and no dialog box is displayed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

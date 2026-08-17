@@ -16,10 +16,6 @@ Get the specified network interface information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-ethernet-function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfiguration>): void--><!--Device-ethernet-function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfiguration>): void-End-->
@@ -47,7 +43,7 @@ Get the specified network interface information.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';
@@ -77,10 +73,6 @@ function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>
 Get the specified network interface information.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -114,7 +106,7 @@ Get the specified network interface information.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';

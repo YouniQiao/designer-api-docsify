@@ -8,10 +8,6 @@ Defines the ability state data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appManager-export type AbilityStateData = _AbilityStateData--><!--Device-appManager-export type AbilityStateData = _AbilityStateData-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

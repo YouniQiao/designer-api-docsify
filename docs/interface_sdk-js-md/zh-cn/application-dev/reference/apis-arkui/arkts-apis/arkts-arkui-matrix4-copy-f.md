@@ -10,8 +10,6 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。 > **说明：
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [copy](arkts-arkui-matrix4-matrix4transit-i.md#copy)
@@ -26,7 +24,7 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。 > **说明：
 | --- | --- |
 | Matrix4Transit | 当前矩阵的拷贝对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.ets

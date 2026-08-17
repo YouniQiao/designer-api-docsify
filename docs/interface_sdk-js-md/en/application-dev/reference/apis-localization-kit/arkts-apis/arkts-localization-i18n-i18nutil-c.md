@@ -4,10 +4,6 @@ Internationalization utility class, which provides the capabilities of unit conv
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class I18NUtil--><!--Device-i18n-export class I18NUtil-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -27,10 +23,6 @@ static convertCanonicalLocaleIdentifier(locale: string): string
 Adjusts a locale ID to a format that complies with the [BCP47](https://www.rfc-editor.org/info/bcp47) standard.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,10 +54,6 @@ Obtains the locale that best matches a region from the specified locale list.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-I18NUtil-static getBestMatchLocale(locale: string, localeList: string[]): string--><!--Device-I18NUtil-static getBestMatchLocale(locale: string, localeList: string[]): string-End-->
@@ -92,7 +80,7 @@ Obtains the locale that best matches a region from the specified locale list.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -117,10 +105,6 @@ Obtains the sequence of the year, month, and day in the specified locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-I18NUtil-static getDateOrder(locale: string): string--><!--Device-I18NUtil-static getDateOrder(locale: string): string-End-->
@@ -139,7 +123,7 @@ Obtains the sequence of the year, month, and day in the specified locale.
 | --- | --- |
 | string | Sequence of the year, month, and day in the locale. **y** indicates the year, **L** indicates the month, and **d** indicates the day. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -156,10 +140,6 @@ static getThreeLetterLanguage(locale: string): string
 Converts a language code from two letters to three letters. For example, the two-letter language code of Chinese is **zh**, and the corresponding three-letter language code is **zho**. For details, see [ISO 639](https://www.iso.org/iso-639-language-code).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -186,7 +166,7 @@ Converts a language code from two letters to three letters. For example, the two
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -209,10 +189,6 @@ static getThreeLetterRegion(locale: string): string
 Converts a region code from two letters to three letters. For example, the two-letter region code of China is **CN**, and the corresponding three-letter region code is **CHN**. For details, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -239,7 +215,7 @@ Converts a region code from two letters to three letters. For example, the two-l
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -262,10 +238,6 @@ static getTimePeriodName(hour:int, locale?: string): string
 Obtains the localized expression of the specified time in the specified locale.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -293,7 +265,7 @@ Obtains the localized expression of the specified time in the specified locale.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -316,10 +288,6 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl
 Localizes a file path for the specified locale. For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -347,7 +315,7 @@ Localizes a file path for the specified locale. For example, "/data/out/tmp" is 
 | --- | --- |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -375,11 +343,9 @@ Localizes a file path for the specified locale. For example, "/data/out/tmp" is 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getUnicodeWrappedFilePath](../../apis-na/arkts-apis/arkts-na-i18n-i18nutil-c.md#getUnicodeWrappedFilePath)(path: string, delimiter?: string, locale?: Intl.Locale)
+**Substitutes:** [getUnicodeWrappedFilePath](#getunicodewrappedfilepath)(path: string, delimiter?: string, locale?: Intl.Locale)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -407,7 +373,7 @@ Localizes a file path for the specified locale. For example, "/data/out/tmp" is 
 | --- | --- |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -434,10 +400,6 @@ static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): s
 Sets the text direction for certain text within a paragraph, including RTL (right-to-left) and LTR (left-to-right). NOTE: The setting does not take effect within strong characters (characters with an intrinsic, unambiguous writing direction).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -470,10 +432,6 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-I18NUtil-static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-I18NUtil-static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
@@ -484,8 +442,8 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | [UnitInfo](../../apis-na/arkts-apis/arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
-| toUnit | [UnitInfo](../../apis-na/arkts-apis/arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
+| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
+| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
 | value | double | Yes | Value of the measurement unit to be converted. |
 | locale | string | Yes | [Locale ID](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region, for example, **zh-Hans-CN**. |
 | style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. The default value is **short**. For details about the meaning or display effect of different values, see [Number and Unit of Measurement Formatting](../../../internationalization/i18n-numbers-weights-measures.md). |
@@ -496,7 +454,7 @@ Converts one measurement unit into another and formats the unit based on the spe
 | --- | --- |
 | string | String converted to the measurement unit after formatting. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

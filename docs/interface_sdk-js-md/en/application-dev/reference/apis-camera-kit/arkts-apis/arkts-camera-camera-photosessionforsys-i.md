@@ -1,14 +1,10 @@
 # PhotoSessionForSys (System API)
 
-Implements a photo session for system applications, which sets the parameters of the normal photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
+Implements a photo session for system applications, which sets the parameters of the normal photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#session).
 
-**Inheritance/Implementation:** PhotoSessionForSys extends [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession), [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty-(System-API)), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect-(System-API)), [ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement), [Macro](arkts-camera-camera-macro-i-sys.md#Macro-(System-API)), [SceneDetection](arkts-camera-camera-scenedetection-i-sys.md#SceneDetection-(System-API)), [EffectSuggestion](arkts-camera-camera-effectsuggestion-i-sys.md#EffectSuggestion-(System-API)), [DepthFusion](arkts-camera-camera-depthfusion-i-sys.md#DepthFusion-(System-API)), [ImagingMode](arkts-camera-camera-imagingmode-i-sys.md#ImagingMode-(System-API))
+**Inheritance/Implementation:** PhotoSessionForSys extends [PhotoSession](arkts-camera-camera-photosession-i.md#photosession), [Beauty](arkts-camera-camera-beauty-i-sys.md#beauty-system-api), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#coloreffect-system-api), [ColorManagement](arkts-camera-camera-colormanagement-i.md#colormanagement), [Macro](arkts-camera-camera-macro-i-sys.md#macro-system-api), [SceneDetection](arkts-camera-camera-scenedetection-i-sys.md#scenedetection-system-api), [EffectSuggestion](arkts-camera-camera-effectsuggestion-i-sys.md#effectsuggestion-system-api), [DepthFusion](arkts-camera-camera-depthfusion-i-sys.md#depthfusion-system-api), [ImagingMode](arkts-camera-camera-imagingmode-i-sys.md#imagingmode-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface PhotoSessionForSys--><!--Device-camera-interface PhotoSessionForSys-End-->
 

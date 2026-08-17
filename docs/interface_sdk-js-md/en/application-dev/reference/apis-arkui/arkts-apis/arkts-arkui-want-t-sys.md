@@ -1,4 +1,4 @@
-# Want (System API)
+# Want(System API) (System API)
 
 ```TypeScript
 declare type Want = import('../api/@ohos.app.ability.Want').default
@@ -7,10 +7,6 @@ declare type Want = import('../api/@ohos.app.ability.Want').default
 Indicates want.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,14 +1,12 @@
 # CustomizeData
 
-The CustomizeData module provides custom metadata. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [Metadata](arkts-ability-metadata-i.md#Metadata) instead.
+The CustomizeData module provides custom metadata. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [Metadata](arkts-ability-metadata-i.md#metadata) instead.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Metadata](arkts-ability-metadata-i.md#Metadata)
+**Substitutes:** [Metadata](arkts-ability-metadata-i.md#metadata)
 
 <!--Device-unnamed-export interface CustomizeData--><!--Device-unnamed-export interface CustomizeData-End-->
 
@@ -27,8 +25,6 @@ Custom format of the data element. The value is an index to the resource that id
 **Default:** Indicates the custom metadata resource
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Key that identifies a data element.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** name
@@ -75,8 +69,6 @@ Value of the data element.
 **Default:** Indicates the custom metadata value
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

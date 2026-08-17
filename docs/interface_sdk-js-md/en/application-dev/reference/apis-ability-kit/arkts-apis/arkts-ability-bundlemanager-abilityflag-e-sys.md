@@ -4,10 +4,6 @@ Enumerates the ability flags, which indicate the type of ability information to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-enum AbilityFlag--><!--Device-bundleManager-enum AbilityFlag-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -20,13 +16,9 @@ Enumerates the ability flags, which indicate the type of ability information to 
 GET_ABILITY_INFO_DEFAULT = 0x00000000
 ```
 
-Used to obtain the default ability information, which does not contain permissions, metadata, or ability information of disabled abilities. &lt;!--Del--&gt;You can use [setAbilityEnabled](arkts-ability-bundlemanager-setabilityenabled-f-sys.md#setAbilityEnabled-(System-API)) to set the ability enabling status and use [isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isAbilityEnabled-(System-API)) to obtain the ability enabling status.&lt;!--DelEnd--&gt;
+Used to obtain the default ability information, which does not contain permissions, metadata, or ability information of disabled abilities. &lt;!--Del--&gt;You can use [setAbilityEnabled](arkts-ability-bundlemanager-setabilityenabled-f-sys.md#setabilityenabled-system-api) to set the ability enabling status and use [isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled-system-api) to obtain the ability enabling status.&lt;!--DelEnd--&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -46,10 +38,6 @@ Used to obtain the ability information containing permissions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001-End-->
@@ -67,10 +55,6 @@ GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002
 Used to obtain the ability information containing application information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -90,10 +74,6 @@ Used to obtain the ability information containing metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004-End-->
@@ -111,10 +91,6 @@ GET_ABILITY_INFO_WITH_DISABLE = 0x00000008
 Used to obtain the ability information of disabled abilities.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -134,10 +110,6 @@ Used to obtain the ability information of system applications.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AbilityFlag-GET_ABILITY_INFO_ONLY_SYSTEM_APP = 0x00000010--><!--Device-AbilityFlag-GET_ABILITY_INFO_ONLY_SYSTEM_APP = 0x00000010-End-->
@@ -156,10 +128,6 @@ Used to obtain the ability information that passes &lt;!--RP3--&gt; [domain name
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040-End-->
@@ -177,10 +145,6 @@ GET_ABILITY_INFO_WITH_SKILL = 0x00000080
 Used to obtain the ability information containing skills.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

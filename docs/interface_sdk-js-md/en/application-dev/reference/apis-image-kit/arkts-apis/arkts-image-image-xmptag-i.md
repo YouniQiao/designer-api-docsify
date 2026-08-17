@@ -4,10 +4,6 @@ Describes XMP Tag parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface XMPTag--><!--Device-image-interface XMPTag-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ The name of XMP tag.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-XMPTag-name: string--><!--Device-XMPTag-name: string-End-->
@@ -51,10 +43,6 @@ The type of XMP tag.
 **Type:** [XMPTagType](arkts-image-image-xmptagtype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ The value of XMP tag.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-XMPTag-value?: string--><!--Device-XMPTag-value?: string-End-->
@@ -95,10 +79,6 @@ The namespace of XMP tag.
 **Type:** [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

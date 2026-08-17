@@ -16,11 +16,9 @@ Deregisters a mission status listener. This API uses an asynchronous callback to
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** off(type: 'mission', listenerId: long, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [off](arkts-ability-missionmanager-offmission-f-sys.md#offmission)(type: 'mission', listenerId: long, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -58,11 +56,9 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** off(type: 'mission', listenerId: long)
+**Substitutes:** [off](arkts-ability-missionmanager-offmission-f-sys.md#offmission)(type: 'mission', listenerId: long)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

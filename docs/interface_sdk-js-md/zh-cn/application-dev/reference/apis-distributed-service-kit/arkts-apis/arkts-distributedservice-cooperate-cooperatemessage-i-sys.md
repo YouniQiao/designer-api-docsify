@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cooperate-interface CooperateMessage--><!--Device-cooperate-interface CooperateMessage-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
@@ -26,10 +22,6 @@ networkId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CooperateMessage-networkId: string--><!--Device-CooperateMessage-networkId: string-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
@@ -47,10 +39,6 @@ state: CooperateState
 **类型：** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CooperateMessage-state: CooperateState--><!--Device-CooperateMessage-state: CooperateState-End-->
 

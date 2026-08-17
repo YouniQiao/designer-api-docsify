@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-enum CredentialChangeType--><!--Device-osAccount-enum CredentialChangeType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ ADD_CREDENTIAL = 1
 表示添加凭据的变更类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CredentialChangeType-ADD_CREDENTIAL = 1--><!--Device-CredentialChangeType-ADD_CREDENTIAL = 1-End-->
 
@@ -44,10 +36,6 @@ UPDATE_CREDENTIAL = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CredentialChangeType-UPDATE_CREDENTIAL = 2--><!--Device-CredentialChangeType-UPDATE_CREDENTIAL = 2-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -63,10 +51,6 @@ DELETE_CREDENTIAL = 3
 表示删除凭据的变更类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CredentialChangeType-DELETE_CREDENTIAL = 3--><!--Device-CredentialChangeType-DELETE_CREDENTIAL = 3-End-->
 

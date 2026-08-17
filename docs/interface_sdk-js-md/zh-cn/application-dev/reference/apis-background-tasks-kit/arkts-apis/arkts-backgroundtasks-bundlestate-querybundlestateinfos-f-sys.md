@@ -10,8 +10,6 @@ Queries usage information about each bundle within a specified period. This meth
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
@@ -28,9 +26,9 @@ Queries usage information about each bundle within a specified period. This meth
 | --- | --- | --- | --- |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | 是 | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md#BundleActiveInfoResponse) objects containing the usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | 是 | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md#bundleactiveinforesponse) objects containing the usage information about each bundle. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,8 +56,6 @@ Queries usage information about each bundle within a specified period. This meth
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
@@ -83,7 +79,7 @@ Queries usage information about each bundle within a specified period. This meth
 | --- | --- |
 | Promise&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | the promise returned by queryBundleStatsInfos. the { |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

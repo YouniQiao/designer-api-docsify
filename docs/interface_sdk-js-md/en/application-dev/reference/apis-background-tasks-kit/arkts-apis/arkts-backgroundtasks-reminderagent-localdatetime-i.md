@@ -4,11 +4,9 @@ Sets the time information for a calendar reminder.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#LocalDateTime)
+**Substitutes:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#localdatetime)
 
 <!--Device-reminderAgent-interface LocalDateTime--><!--Device-reminderAgent-interface LocalDateTime-End-->
 
@@ -32,8 +30,6 @@ Date.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** day
@@ -53,8 +49,6 @@ Hour.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,8 +70,6 @@ Minute.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** minute
@@ -97,8 +89,6 @@ Month.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -120,8 +110,6 @@ Second.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** second
@@ -141,8 +129,6 @@ Year.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

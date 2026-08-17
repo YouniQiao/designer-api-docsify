@@ -4,10 +4,6 @@ SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-distributedKVStore-interface SingleKVStore--><!--Device-distributedKVStore-interface SingleKVStore-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -18,13 +14,9 @@ SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据�
 backup(file: string, callback: AsyncCallback<void>): void
 ```
 
-以指定名称备份数据库到默认路径（context.databaseDir），使用callback异步回调。如需备份到自定义路径，请使用 [backupEx](#backupEx)接口。
+以指定名称备份数据库到默认路径（context.databaseDir），使用callback异步回调。如需备份到自定义路径，请使用 [backupEx](#backupex)接口。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,7 +29,7 @@ backup(file: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | file | string | 是 | 备份数据库的指定名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当以指定名称备份数据库成功，err为undefined，否则为错误对象。 [ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当以指定名称备份数据库成功，err为undefined，否则为错误对象。 [ |
 
 **错误码：**
 
@@ -45,7 +37,7 @@ backup(file: string, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -92,13 +84,9 @@ try {
 backup(file: string): Promise<void>
 ```
 
-以指定名称备份数据库到默认路径（context.databaseDir），使用Promise异步回调。如需备份到自定义路径，请使用 [backupEx](#backupEx)接口。
+以指定名称备份数据库到默认路径（context.databaseDir），使用Promise异步回调。如需备份到自定义路径，请使用 [backupEx](#backupex)接口。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,7 +112,7 @@ backup(file: string): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -171,10 +159,6 @@ backupEx(backupConfig: BackupConfig): Promise<void>
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-backupEx(backupConfig: BackupConfig): Promise<void>--><!--Device-SingleKVStore-backupEx(backupConfig: BackupConfig): Promise<void>-End-->
@@ -199,7 +183,7 @@ backupEx(backupConfig: BackupConfig): Promise<void>
 | --- | --- |
 | [15100000](../errorcode-distributedKVStore.md#15100000-无效的参数) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -249,13 +233,9 @@ try {
 closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-关闭由[SingleKVStore.getResultSet](#getResultSet)返回的 KVStoreResultSet对象，使用callback异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
+关闭由[SingleKVStore.getResultSet](#getresultset)返回的 KVStoreResultSet对象，使用callback异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -268,7 +248,7 @@ closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resultSet | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | 是 | 表示要关闭的KVStoreResultSet对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。关闭KVStoreResultSet对象成功，err为undefined，否则为错误对象。 [ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。关闭KVStoreResultSet对象成功，err为undefined，否则为错误对象。 [ |
 
 **错误码：**
 
@@ -276,7 +256,7 @@ closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -345,13 +325,9 @@ try {
 closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 ```
 
-关闭由[SingleKVStore.getResultSet](#getResultSet)返回的 KVStoreResultSet对象，使用Promise异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
+关闭由[SingleKVStore.getResultSet](#getresultset)返回的 KVStoreResultSet对象，使用Promise异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -377,7 +353,7 @@ closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -439,13 +415,9 @@ try {
 commit(callback: AsyncCallback<void>): void
 ```
 
-提交SingleKVStore数据库中的事务，使用callback异步回调。需先调用 [startTransaction](#startTransaction)启动事务后再调 用本接口提交事务。提交成功后，事务期间的所有数据变更将永久生效并写入数据库。
+提交SingleKVStore数据库中的事务，使用callback异步回调。需先调用 [startTransaction](#starttransaction)启动事务后再调 用本接口提交事务。提交成功后，事务期间的所有数据变更将永久生效并写入数据库。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -457,7 +429,7 @@ commit(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。提交SingleKVStore数据库中的事务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。提交SingleKVStore数据库中的事务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -465,7 +437,7 @@ commit(callback: AsyncCallback<void>): void
 | --- | --- |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -517,13 +489,9 @@ try {
 commit(): Promise<void>
 ```
 
-提交SingleKVStore数据库中的事务，使用Promise异步回调。需先调用 [startTransaction](#startTransaction)启动事务后再调 用本接口提交事务。提交成功后，事务期间的所有数据变更将永久生效并写入数据库。
+提交SingleKVStore数据库中的事务，使用Promise异步回调。需先调用 [startTransaction](#starttransaction)启动事务后再调 用本接口提交事务。提交成功后，事务期间的所有数据变更将永久生效并写入数据库。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -543,7 +511,7 @@ commit(): Promise<void>
 | --- | --- |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -595,10 +563,6 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-delete(key: string, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-delete(key: string, callback: AsyncCallback<void>): void-End-->
@@ -609,8 +573,8 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要删除数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。删除指定的数据成功，err为undefined，否则为错误对象。 [ |
+| key | string | 是 | 要删除数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。删除指定的数据成功，err为undefined，否则为错误对象。 [ |
 
 **错误码：**
 
@@ -619,7 +583,7 @@ delete(key: string, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -691,10 +655,6 @@ delete(key: string): Promise<void>
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-delete(key: string): Promise<void>--><!--Device-SingleKVStore-delete(key: string): Promise<void>-End-->
@@ -705,7 +665,7 @@ delete(key: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要删除数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
+| key | string | 是 | 要删除数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
 
 **返回值：**
 
@@ -720,7 +680,7 @@ delete(key: string): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -780,13 +740,9 @@ try {
 deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, int]>>): void
 ```
 
-根据指定名称从默认路径（context.databaseDir）删除备份文件，使用callback异步回调。删除备份文件后，将无法再通过 [restore](#restore)接口恢复该备份文件中的数据。如需从自定义路径删除备份，请使用 [deleteBackupEx](#deleteBackupEx)接口。
+根据指定名称从默认路径（context.databaseDir）删除备份文件，使用callback异步回调。删除备份文件后，将无法再通过 [restore](#restore)接口恢复该备份文件中的数据。如需从自定义路径删除备份，请使用 [deleteBackupEx](#deletebackupex)接口。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -799,7 +755,7 @@ deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, int]>>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | files | Array&lt;string&gt; | 是 | 删除备份文件所指定的名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | 是 | 回调函数，返回删除备份的文件名及其处理结果。 [ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[string, int]&gt;&gt; | 是 | 回调函数，返回删除备份的文件名及其处理结果。 [ |
 
 **错误码：**
 
@@ -807,7 +763,7 @@ deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, int]>>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -863,13 +819,9 @@ try {
 deleteBackup(files: Array<string>): Promise<Array<[string, int]>>
 ```
 
-根据指定名称从默认路径（context.databaseDir）删除备份文件，使用Promise异步回调。删除备份文件后，将无法再通过 [restore](#restore)接口恢复该备份文件中的 数据。如需从自定义路径删除备份，请使用[deleteBackupEx](#deleteBackupEx)接口。
+根据指定名称从默认路径（context.databaseDir）删除备份文件，使用Promise异步回调。删除备份文件后，将无法再通过 [restore](#restore)接口恢复该备份文件中的 数据。如需从自定义路径删除备份，请使用[deleteBackupEx](#deletebackupex)接口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -895,7 +847,7 @@ deleteBackup(files: Array<string>): Promise<Array<[string, int]>>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -951,10 +903,6 @@ deleteBackupEx(backupConfig: BackupConfig): Promise<void>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-deleteBackupEx(backupConfig: BackupConfig): Promise<void>--><!--Device-SingleKVStore-deleteBackupEx(backupConfig: BackupConfig): Promise<void>-End-->
@@ -979,7 +927,7 @@ deleteBackupEx(backupConfig: BackupConfig): Promise<void>
 | --- | --- |
 | [15100000](../errorcode-distributedKVStore.md#15100000-无效的参数) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1033,10 +981,6 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void-End-->
@@ -1047,8 +991,8 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | string[] | 是 | 表示要批量删除的键名列表，不能为空，数组中每个元素的长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。批量删除指定的数据成功，err为undefined，否则为错误对象。 [ |
+| keys | string[] | 是 | 表示要批量删除的键名列表，不能为空，数组中每个元素的长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。批量删除指定的数据成功，err为undefined，否则为错误对象。 [ |
 
 **错误码：**
 
@@ -1057,7 +1001,7 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1155,10 +1099,6 @@ deleteBatch(keys: string[]): Promise<void>
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-deleteBatch(keys: string[]): Promise<void>--><!--Device-SingleKVStore-deleteBatch(keys: string[]): Promise<void>-End-->
@@ -1169,7 +1109,7 @@ deleteBatch(keys: string[]): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | string[] | 是 | 表示要批量删除的键名列表，不能为空，数组中每个元素的长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
+| keys | string[] | 是 | 表示要批量删除的键名列表，不能为空，数组中每个元素的长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
 
 **返回值：**
 
@@ -1184,7 +1124,7 @@ deleteBatch(keys: string[]): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1274,10 +1214,6 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void-End-->
@@ -1289,7 +1225,7 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enabled | boolean | 是 | 设定是否开启端端同步，true表示开启端端同步，false表示不启用端端同步。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。设定成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。设定成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1297,7 +1233,7 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1346,10 +1282,6 @@ enableSync(enabled: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-enableSync(enabled: boolean): Promise<void>--><!--Device-SingleKVStore-enableSync(enabled: boolean): Promise<void>-End-->
@@ -1374,7 +1306,7 @@ enableSync(enabled: boolean): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1419,10 +1351,6 @@ get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void--><!--Device-SingleKVStore-get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void-End-->
@@ -1433,8 +1361,8 @@ get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | 是 | 回调函数。返回获取查询的值，值的类型取决于存储时的数据类型。 [ |
+| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | 是 | 回调函数。返回获取查询的值，值的类型取决于存储时的数据类型。 [ |
 
 **错误码：**
 
@@ -1453,10 +1381,6 @@ get(key: string): Promise<boolean | string | long | double | Uint8Array>
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-get(key: string): Promise<boolean | string | long | double | Uint8Array>--><!--Device-SingleKVStore-get(key: string): Promise<boolean | string | long | double | Uint8Array>-End-->
@@ -1467,7 +1391,7 @@ get(key: string): Promise<boolean | string | long | double | Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
+| key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
 
 **返回值：**
 
@@ -1492,10 +1416,6 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void--><!--Device-SingleKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void-End-->
@@ -1506,8 +1426,8 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回匹配指定前缀的键值对列表。 [ |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | 是 | 回调函数。返回匹配指定前缀的键值对列表。 [ |
 
 **错误码：**
 
@@ -1516,7 +1436,7 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1616,10 +1536,6 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>-End-->
@@ -1630,7 +1546,7 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -1645,7 +1561,7 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1733,10 +1649,6 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void-End-->
@@ -1748,7 +1660,7 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | query | Query | 是 | 表示要查询的对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回与指定Query对象匹配的键值对列表。 [ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | 是 | 回调函数。返回与指定Query对象匹配的键值对列表。 [ |
 
 **错误码：**
 
@@ -1757,7 +1669,7 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1855,10 +1767,6 @@ getEntries(query: Query): Promise<Entry[]>
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>-End-->
@@ -1884,7 +1792,7 @@ getEntries(query: Query): Promise<Entry[]>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1974,13 +1882,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-从SingleKVStore数据库中获取具有指定前缀的结果集，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeResultSet) 关闭结果集释放资源。
+从SingleKVStore数据库中获取具有指定前缀的结果集，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeresultset) 关闭结果集释放资源。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1992,8 +1896,8 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回具有指定前缀的结果集。 [ |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回具有指定前缀的结果集。 [ |
 
 **错误码：**
 
@@ -2002,7 +1906,7 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2112,13 +2016,9 @@ try {
 getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-从SingleKVStore数据库中获取具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeResultSet) 关闭结果集释放资源。
+从SingleKVStore数据库中获取具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeresultset) 关闭结果集释放资源。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2130,7 +2030,7 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
@@ -2145,7 +2045,7 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2239,13 +2139,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-获取与指定Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeResultSet) 关闭结果集释放资源。
+获取与指定Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeresultset) 关闭结果集释放资源。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2258,7 +2154,7 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数，获取与指定Query对象匹配的KVStoreResultSet对象。 [ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数，获取与指定Query对象匹配的KVStoreResultSet对象。 [ |
 
 **错误码：**
 
@@ -2267,7 +2163,7 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2361,13 +2257,9 @@ try {
 getResultSet(query: Query): Promise<KVStoreResultSet>
 ```
 
-获取与指定Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeResultSet) 关闭结果集释放资源。
+获取与指定Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeresultset) 关闭结果集释放资源。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2394,7 +2286,7 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2481,10 +2373,6 @@ getResultSize(query: Query, callback: AsyncCallback<int>): void
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-getResultSize(query: Query, callback: AsyncCallback<int>): void--><!--Device-SingleKVStore-getResultSize(query: Query, callback: AsyncCallback<int>): void-End-->
@@ -2496,7 +2384,7 @@ getResultSize(query: Query, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。返回与指定Query对象匹配的结果数。 [ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。返回与指定Query对象匹配的结果数。 [ |
 
 **错误码：**
 
@@ -2505,7 +2393,7 @@ getResultSize(query: Query, callback: AsyncCallback<int>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2593,10 +2481,6 @@ getResultSize(query: Query): Promise<int>
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-getResultSize(query: Query): Promise<int>--><!--Device-SingleKVStore-getResultSize(query: Query): Promise<int>-End-->
@@ -2622,7 +2506,7 @@ getResultSize(query: Query): Promise<int>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2706,10 +2590,6 @@ getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void--><!--Device-SingleKVStore-getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void-End-->
@@ -2720,7 +2600,7 @@ getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SecurityLevel&gt; | 是 | 回调函数。返回数据库的安全级别。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;SecurityLevel&gt; | 是 | 回调函数。返回数据库的安全级别。 |
 
 **错误码：**
 
@@ -2728,7 +2608,7 @@ getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void
 | --- | --- |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2777,10 +2657,6 @@ getSecurityLevel(): Promise<SecurityLevel>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>--><!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>-End-->
@@ -2799,7 +2675,7 @@ getSecurityLevel(): Promise<SecurityLevel>
 | --- | --- |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2844,10 +2720,6 @@ offDataChange(listener?: Callback<ChangeNotification>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-offDataChange(listener?: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-offDataChange(listener?: Callback<ChangeNotification>): void-End-->
@@ -2858,7 +2730,7 @@ offDataChange(listener?: Callback<ChangeNotification>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 否 |  |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | 否 |  |
 
 **错误码：**
 
@@ -2866,7 +2738,7 @@ offDataChange(listener?: Callback<ChangeNotification>): void
 | --- | --- |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2892,10 +2764,6 @@ offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void--><!--Device-SingleKVStore-offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void-End-->
@@ -2906,9 +2774,9 @@ offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | 否 |  |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, int]&gt;&gt; | 否 |  |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2930,13 +2798,9 @@ try {
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 ```
 
-取消订阅数据变更通知。必须先调用 [on('dataChange')](#on_dataChange) 订阅后，才能调用off取消订阅。
+取消订阅数据变更通知。必须先调用 [on('dataChange')](#ondatachange) 订阅后，才能调用off取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 <!--Device-SingleKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
 
@@ -2947,7 +2811,7 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有已订阅的函数。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有已订阅的函数。 |
 
 **错误码：**
 
@@ -2956,7 +2820,7 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2996,13 +2860,9 @@ class KvstoreModel {
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
 ```
 
-取消订阅端端同步完成事件回调通知。必须先调用 [on('syncComplete')](#on_dataChange) 订阅后，才能调用off取消订阅。
+取消订阅端端同步完成事件回调通知。必须先调用 [on('syncComplete')](#ondatachange) 订阅后，才能调用off取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 <!--Device-SingleKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-SingleKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
 
@@ -3013,7 +2873,7 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | 是 | 取消订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
-| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 否 | 取消订阅的同步完成回调函数。如果该参数不填，则取消所有已订阅的同步完成回调函数。需要注意的是：如果同一个数 据库存在多个ArkTS实例（通过 getKVStore 接口获取），且这些实例分别注册了同步完成事件回调，那么当任意一个实例调用off('syncComplete')且不传入syncCallback参数（即取消该实例的所有回调）时，其他实例已订阅的同步完成回调函数也会被一并 取消。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | 否 | 取消订阅的同步完成回调函数。如果该参数不填，则取消所有已订阅的同步完成回调函数。需要注意的是：如果同一个数 据库存在多个ArkTS实例（通过 getKVStore 接口获取），且这些实例分别注册了同步完成事件回调，那么当任意一个实例调用off('syncComplete')且不传入syncCallback参数（即取消该实例的所有回调）时，其他实例已订阅的同步完成回调函数也会被一并 取消。 |
 
 **错误码：**
 
@@ -3021,7 +2881,7 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3065,10 +2925,6 @@ onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
@@ -3080,7 +2936,7 @@ onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SubscribeType | 是 | 表示订阅的类型。. |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。成功返回数据变更时通知的对象。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | 是 | 回调函数。成功返回数据变更时通知的对象。 |
 
 **错误码：**
 
@@ -3089,7 +2945,7 @@ onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3113,10 +2969,6 @@ onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void--><!--Device-SingleKVStore-onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void-End-->
@@ -3127,9 +2979,9 @@ onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | 是 | 回调函数。用于向调用方发送同步结果的回调。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, int]&gt;&gt; | 是 | 回调函数。用于向调用方发送同步结果的回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 kvStore.onSyncComplete((data: [string, int][]): void => {
@@ -3143,13 +2995,9 @@ kvStore.onSyncComplete((data: [string, int][]): void => {
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
 ```
 
-订阅指定类型的数据变更通知。调用on订阅后，在不需要监听时必须调用 [off('dataChange')](#off_dataChange) 取消订阅。
+订阅指定类型的数据变更通知。调用on订阅后，在不需要监听时必须调用 [off('dataChange')](#offdatachange) 取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 <!--Device-SingleKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
 
@@ -3161,7 +3009,7 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
 | type | SubscribeType | 是 | 表示订阅的类型。 |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。成功返回数据变更时通知的对象。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | 是 | 回调函数。成功返回数据变更时通知的对象。 |
 
 **错误码：**
 
@@ -3171,7 +3019,7 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3192,13 +3040,9 @@ try {
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 ```
 
-订阅端端同步完成事件回调通知。调用on订阅后，在不需要监听时必须调用 [off('syncComplete')](#off_dataChange) 取消订阅。
+订阅端端同步完成事件回调通知。调用on订阅后，在不需要监听时必须调用 [off('syncComplete')](#offdatachange) 取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 <!--Device-SingleKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-SingleKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
 
@@ -3209,7 +3053,7 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | 是 | 订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
-| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 是 | 回调函数。用于向调用方发送同步结果的回调。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | 是 | 回调函数。用于向调用方发送同步结果的回调。 |
 
 **错误码：**
 
@@ -3217,7 +3061,7 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3250,10 +3094,6 @@ put(key: string, value: Uint8Array | string | long | double | boolean, callback:
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-put(key: string, value: Uint8Array | string | long | double | boolean, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-put(key: string, value: Uint8Array | string | long | double | boolean, callback: AsyncCallback<void>): void-End-->
@@ -3264,9 +3104,9 @@ put(key: string, value: Uint8Array | string | long | double | boolean, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要添加数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
-| value | Uint8Array \| string \| long \| double \| boolean | 是 | 要添加数据的value，支持Uint8Array、string、number、boolean， Uint8Array、string的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。数据添加成功，err为undefined，否则为错误对象。 |
+| key | string | 是 | 要添加数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
+| value | Uint8Array \| string \| long \| double \| boolean | 是 | 要添加数据的value，支持Uint8Array、string、number、boolean， Uint8Array、string的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。数据添加成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -3287,10 +3127,6 @@ put(key: string, value: Uint8Array | string | long | double | boolean): Promise<
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-put(key: string, value: Uint8Array | string | long | double | boolean): Promise<void>--><!--Device-SingleKVStore-put(key: string, value: Uint8Array | string | long | double | boolean): Promise<void>-End-->
@@ -3301,8 +3137,8 @@ put(key: string, value: Uint8Array | string | long | double | boolean): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要添加数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
-| value | Uint8Array \| string \| long \| double \| boolean | 是 | 要添加数据的value，支持Uint8Array、string、number、boolean， Uint8Array、string的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#Constants)。 |
+| key | string | 是 | 要添加数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
+| value | Uint8Array \| string \| long \| double \| boolean | 是 | 要添加数据的value，支持Uint8Array、string、number、boolean， Uint8Array、string的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants)。 |
 
 **返回值：**
 
@@ -3329,10 +3165,6 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void-End-->
@@ -3344,7 +3176,7 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | entries | Entry[] | 是 | 表示要批量插入的键值对。一个entries对象中允许的最大数据量为512MB。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。数据批量插入成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。数据批量插入成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -3355,7 +3187,7 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3392,8 +3224,6 @@ try {
         console.info(`entries.length: ${entries.length}`);
         console.info(`entries[0]: ${entries[0]}`);
       });
-    } else {
-      console.error('KvStore is null'); // 后续示例代码与此处保持一致
     }
   });
 } catch (err) {
@@ -3438,8 +3268,6 @@ try {
                   console.info(`entries[0]: ${entries[0]}`);
               }
           });
-      } else {
-          console.error('KvStore is null'); // 后续示例代码与此处保持一致
       }
   });
 } catch (err) {
@@ -3457,10 +3285,6 @@ putBatch(entries: Entry[]): Promise<void>
 批量插入键值对到SingleKVStore数据库中，使用Promise异步回调。若Key已存在则更新对应Value；若已订阅数据变更通知，将触发变更通知回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3489,7 +3313,7 @@ putBatch(entries: Entry[]): Promise<void>
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3577,10 +3401,6 @@ rekey(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-rekey(): Promise<void>--><!--Device-SingleKVStore-rekey(): Promise<void>-End-->
@@ -3607,13 +3427,9 @@ rekey(): Promise<void>
 removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-删除指定设备的数据，使用callback异步回调。删除成功后，指定设备的所有数据将从本地数据库中永久移除，无法再通过get等方法查询该设备的数据。 > **说明：** > > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)中的 > networkId，通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](#sync)。
+删除指定设备的数据，使用callback异步回调。删除成功后，指定设备的所有数据将从本地数据库中永久移除，无法再通过get等方法查询该设备的数据。 > **说明：** > > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo)中的 > networkId，通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](#sync)。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3626,7 +3442,7 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要删除其数据的设备，不能为空。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。删除指定设备的数据成功，err为undefined，否则为错误对象。 [ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。删除指定设备的数据成功，err为undefined，否则为错误对象。 [ |
 
 **错误码：**
 
@@ -3634,7 +3450,7 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3714,13 +3530,9 @@ try {
 removeDeviceData(deviceId: string): Promise<void>
 ```
 
-删除指定设备的数据，使用Promise异步回调。删除成功后，指定设备的所有数据将从本地数据库中永久移除，无法再通过get等方法查询该设备的数据。 > **说明：** > > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)中的 > networkId，通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](#sync)。
+删除指定设备的数据，使用Promise异步回调。删除成功后，指定设备的所有数据将从本地数据库中永久移除，无法再通过get等方法查询该设备的数据。 > **说明：** > > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo)中的 > networkId，通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](#sync)。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3746,7 +3558,7 @@ removeDeviceData(deviceId: string): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3814,13 +3626,9 @@ try {
 restore(file: string, callback: AsyncCallback<void>): void
 ```
 
-从数据库默认路径（context.databaseDir）下指定名称的备份文件恢复数据库，使用callback异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。如需从自定义路径恢复，请 使用[restoreEx](#restoreEx)接口。
+从数据库默认路径（context.databaseDir）下指定名称的备份文件恢复数据库，使用callback异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。如需从自定义路径恢复，请 使用[restoreEx](#restoreex)接口。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3833,7 +3641,7 @@ restore(file: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | file | string | 是 | 指定的数据库文件名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当从指定的数据库文件恢复数据库成功，err为undefined，否则为错误对象。 [ |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当从指定的数据库文件恢复数据库成功，err为undefined，否则为错误对象。 [ |
 
 **错误码：**
 
@@ -3841,7 +3649,7 @@ restore(file: string, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3895,13 +3703,9 @@ try {
 restore(file: string): Promise<void>
 ```
 
-从数据库默认路径（context.databaseDir）下指定名称的备份文件恢复数据库，使用Promise异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。如需从自定义路径恢复，请使 用[restoreEx](#restoreEx)接口。
+从数据库默认路径（context.databaseDir）下指定名称的备份文件恢复数据库，使用Promise异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。如需从自定义路径恢复，请使 用[restoreEx](#restoreex)接口。
 
 **起始版本：** -1
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3927,7 +3731,7 @@ restore(file: string): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3981,10 +3785,6 @@ restoreEx(backupConfig: BackupConfig): Promise<void>
 
 **起始版本：** -1
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-restoreEx(backupConfig: BackupConfig): Promise<void>--><!--Device-SingleKVStore-restoreEx(backupConfig: BackupConfig): Promise<void>-End-->
@@ -4009,7 +3809,7 @@ restoreEx(backupConfig: BackupConfig): Promise<void>
 | --- | --- |
 | [15100000](../errorcode-distributedKVStore.md#15100000-无效的参数) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. [ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4059,13 +3859,9 @@ try {
 rollback(callback: AsyncCallback<void>): void
 ```
 
-在SingleKVStore数据库中回滚事务，使用callback异步回调。需先调用 [startTransaction](#startTransaction)启动事务后再调 用本接口回滚事务。回滚成功后，事务期间的所有数据变更将被丢弃，不会写入数据库。
+在SingleKVStore数据库中回滚事务，使用callback异步回调。需先调用 [startTransaction](#starttransaction)启动事务后再调 用本接口回滚事务。回滚成功后，事务期间的所有数据变更将被丢弃，不会写入数据库。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4077,7 +3873,7 @@ rollback(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。SingleKVStore数据库中回滚事务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。SingleKVStore数据库中回滚事务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -4085,7 +3881,7 @@ rollback(callback: AsyncCallback<void>): void
 | --- | --- |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4137,13 +3933,9 @@ try {
 rollback(): Promise<void>
 ```
 
-在SingleKVStore数据库中回滚事务，使用Promise异步回调。需先调用 [startTransaction](#startTransaction)启动事务后再调 用本接口回滚事务。回滚成功后，事务期间的所有数据变更将被丢弃，不会写入数据库。
+在SingleKVStore数据库中回滚事务，使用Promise异步回调。需先调用 [startTransaction](#starttransaction)启动事务后再调 用本接口回滚事务。回滚成功后，事务期间的所有数据变更将被丢弃，不会写入数据库。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4163,7 +3955,7 @@ rollback(): Promise<void>
 | --- | --- |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4215,10 +4007,6 @@ setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void-End-->
@@ -4230,7 +4018,7 @@ setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | defaultAllowedDelayMs | int | 是 | 表示一个延时时间，单位为毫秒（ms），取值范围为0或[100, 86400000]。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。设置成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。设置成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -4238,7 +4026,7 @@ setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4289,10 +4077,6 @@ setSyncParam(defaultAllowedDelayMs: int): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: int): Promise<void>--><!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: int): Promise<void>-End-->
@@ -4317,7 +4101,7 @@ setSyncParam(defaultAllowedDelayMs: int): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4364,10 +4148,6 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void-End-->
@@ -4380,7 +4160,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 | --- | --- | --- | --- |
 | localLabels | string[] | 是 | 表示本地设备的同步标签，用于标识本设备可参与同步的范围。 |
 | remoteSupportLabels | string[] | 是 | 表示期望同步数据的对端设备的同步标签，用于标识允许同步的对端设备范围。当本端的remoteSupportLabels与对端的 localLabels存在交集时，设备间才允许数据同步。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。设置成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。设置成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -4388,7 +4168,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4441,10 +4221,6 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>--><!--Device-SingleKVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>-End-->
@@ -4470,7 +4246,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4519,10 +4295,6 @@ startTransaction(callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-startTransaction(callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-startTransaction(callback: AsyncCallback<void>): void-End-->
@@ -4533,7 +4305,7 @@ startTransaction(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。启动SingleKVStore数据库中的事务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。启动SingleKVStore数据库中的事务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -4542,7 +4314,7 @@ startTransaction(callback: AsyncCallback<void>): void
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4622,10 +4394,6 @@ startTransaction(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SingleKVStore-startTransaction(): Promise<void>--><!--Device-SingleKVStore-startTransaction(): Promise<void>-End-->
@@ -4645,7 +4413,7 @@ startTransaction(): Promise<void>
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4691,13 +4459,9 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: int): void
 ```
 
-在手动同步方式下，触发数据库端端同步。同步结果可通过订阅 [on('syncComplete')](#on_dataChange) 事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。 > **说明：** > > 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)中的 > networkId, 通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。
+在手动同步方式下，触发数据库端端同步。同步结果可通过订阅 [on('syncComplete')](#ondatachange) 事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。 > **说明：** > > 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo)中的 > networkId, 通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4713,7 +4477,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: int): void
 | --- | --- | --- | --- |
 | deviceIds | string[] | 是 | 同一组网环境下，需要同步的设备的networkId列表。 |
 | mode | SyncMode | 是 | 同步模式。 |
-| delayMs | int | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。设置delayMs后，调用sync接口时延时时间为delayMs。未设置时以 [setSyncParam](#setSyncParam) 设置的时长为准。 |
+| delayMs | int | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。设置delayMs后，调用sync接口时延时时间为delayMs。未设置时以 [setSyncParam](#setsyncparam) 设置的时长为准。 |
 
 **错误码：**
 
@@ -4723,7 +4487,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: int): void
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4735,7 +4499,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let devManager: distributedDeviceManager.DeviceManager;
 const KEY_TEST_SYNC_ELEMENT = 'key_test_sync';
 const VALUE_TEST_SYNC_ELEMENT = 'value-string-001';
-// create deviceManager
+
 export default class EntryAbility extends UIAbility {
   onCreate() {
     let context = this.context;
@@ -4829,13 +4593,9 @@ class EntryAbility extends UIAbility {
 sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void
 ```
 
-在手动同步方式下，触发数据库端端同步，支持按查询条件过滤同步数据。同步结果可通过订阅 [on('syncComplete')](#on_dataChange) 事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。 > **说明：** > > 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)中的 > networkId, 通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。
+在手动同步方式下，触发数据库端端同步，支持按查询条件过滤同步数据。同步结果可通过订阅 [on('syncComplete')](#ondatachange) 事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。 > **说明：** > > 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo)中的 > networkId, 通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4852,7 +4612,7 @@ sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void
 | deviceIds | string[] | 是 | 同一组网环境下，需要同步的设备的networkId列表。 |
 | query | Query | 是 | 表示数据库的查询谓词条件。 |
 | mode | SyncMode | 是 | 同步模式。 |
-| delayMs | int | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。设置delayMs后，调用sync接口时延时时间为delayMs。未设置时以 [setSyncParam](#setSyncParam) 设置的时长为准。 |
+| delayMs | int | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。设置delayMs后，调用sync接口时延时时间为delayMs。未设置时以 [setSyncParam](#setsyncparam) 设置的时长为准。 |
 
 **错误码：**
 
@@ -4862,7 +4622,7 @@ sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4873,7 +4633,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 const KEY_TEST_SYNC_ELEMENT = 'key_test_sync';
 const VALUE_TEST_SYNC_ELEMENT = 'value-string-001';
-// create deviceManager
+
 export default class EntryAbility extends UIAbility {
   onCreate() {
     let context = this.context;

@@ -4,11 +4,9 @@ Describes the parameters of the Gatt client's characteristic write request.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md#DescriptorWriteRequest)
+**Substitutes:** [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md#descriptorwriterequest)
 
 <!--Device-bluetoothManager-interface DescriptorWriteRequest--><!--Device-bluetoothManager-interface DescriptorWriteRequest-End-->
 
@@ -32,11 +30,9 @@ The UUID of the characteristic to which the descriptor belongs
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicUuid](arkts-connectivity-ble-descriptorwriterequest-i.md#characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-ble-descriptorwriterequest-i.md#characteristicuuid)
 
 <!--Device-DescriptorWriteRequest-characteristicUuid: string--><!--Device-DescriptorWriteRequest-characteristicUuid: string-End-->
 
@@ -54,11 +50,9 @@ The UUID of a DescriptorWriteRequest instance
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [descriptorUuid](arkts-connectivity-ble-descriptorwriterequest-i.md#descriptorUuid)
+**Substitutes:** [descriptorUuid](arkts-connectivity-ble-descriptorwriterequest-i.md#descriptoruuid)
 
 <!--Device-DescriptorWriteRequest-descriptorUuid: string--><!--Device-DescriptorWriteRequest-descriptorUuid: string-End-->
 
@@ -76,11 +70,9 @@ Indicates the address of the client that initiates the write request
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](arkts-connectivity-ble-descriptorwriterequest-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-ble-descriptorwriterequest-i.md#deviceid)
 
 <!--Device-DescriptorWriteRequest-deviceId: string--><!--Device-DescriptorWriteRequest-deviceId: string-End-->
 
@@ -98,11 +90,9 @@ Whether this request should be pending for later operation
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [isPrepared](arkts-connectivity-ble-descriptorwriterequest-i.md#isPrepared)
+**Substitutes:** [isPrepared](arkts-connectivity-ble-descriptorwriterequest-i.md#isprepared)
 
 <!--Device-DescriptorWriteRequest-isPrep: boolean--><!--Device-DescriptorWriteRequest-isPrep: boolean-End-->
 
@@ -120,11 +110,9 @@ Whether the remote client need a response
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [needRsp](arkts-connectivity-ble-descriptorwriterequest-i.md#needRsp)
+**Substitutes:** [needRsp](arkts-connectivity-ble-descriptorwriterequest-i.md#needrsp)
 
 <!--Device-DescriptorWriteRequest-needRsp: boolean--><!--Device-DescriptorWriteRequest-needRsp: boolean-End-->
 
@@ -141,8 +129,6 @@ Indicates the byte offset of the start position for writing characteristic value
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -164,11 +150,9 @@ The UUID of the service to which the descriptor belongs
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuid](arkts-connectivity-ble-descriptorwriterequest-i.md#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-descriptorwriterequest-i.md#serviceuuid)
 
 <!--Device-DescriptorWriteRequest-serviceUuid: string--><!--Device-DescriptorWriteRequest-serviceUuid: string-End-->
 
@@ -186,11 +170,9 @@ The Id of the write request
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [transId](arkts-connectivity-ble-descriptorwriterequest-i.md#transId)
+**Substitutes:** [transId](arkts-connectivity-ble-descriptorwriterequest-i.md#transid)
 
 <!--Device-DescriptorWriteRequest-transId: number--><!--Device-DescriptorWriteRequest-transId: number-End-->
 
@@ -207,8 +189,6 @@ Indicates the value to be written
 **Type:** ArrayBuffer
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

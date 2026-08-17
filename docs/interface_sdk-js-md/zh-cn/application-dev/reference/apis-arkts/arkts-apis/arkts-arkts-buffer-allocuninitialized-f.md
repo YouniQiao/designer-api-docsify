@@ -10,10 +10,6 @@ function allocUninitialized(size: int): Buffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-buffer-function allocUninitialized(size: int): Buffer--><!--Device-buffer-function allocUninitialized(size: int): Buffer-End-->
@@ -32,7 +28,7 @@ function allocUninitialized(size: int): Buffer
 | --- | --- |
 | [Buffer](arkts-arkts-buffer-buffer-c.md) | 未初始化的Buffer实例。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

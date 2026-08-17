@@ -16,10 +16,6 @@ Obtains a RDB store. You can set parameters of the RDB store as required. This i
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-relationalStore-function getRdbStoreSync(context: Context, config: StoreConfig): RdbStore--><!--Device-relationalStore-function getRdbStoreSync(context: Context, config: StoreConfig): RdbStore-End-->
@@ -31,7 +27,7 @@ Obtains a RDB store. You can set parameters of the RDB store as required. This i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of an application or ability. |
-| config | StoreConfig | Yes | Indicates the [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) configuration of the database related to this RDB store. |
+| config | StoreConfig | Yes | Indicates the [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#storeconfig) configuration of the database related to this RDB store. |
 
 **Return value:**
 

@@ -16,10 +16,6 @@ Listens to the event of formOverflow. You can use this method to listen to the e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formHost-function onFormOverflow(callback: Callback<formInfo.OverflowRequest>): void--><!--Device-formHost-function onFormOverflow(callback: Callback<formInfo.OverflowRequest>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form

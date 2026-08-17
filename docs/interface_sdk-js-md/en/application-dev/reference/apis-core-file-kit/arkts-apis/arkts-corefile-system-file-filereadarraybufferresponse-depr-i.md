@@ -4,8 +4,6 @@ Returns the file read, including the file content.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileReadArrayBufferResponse--><!--Device-unnamed-export interface FileReadArrayBufferResponse-End-->
@@ -23,8 +21,6 @@ Data read.
 **Type:** Uint8Array
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

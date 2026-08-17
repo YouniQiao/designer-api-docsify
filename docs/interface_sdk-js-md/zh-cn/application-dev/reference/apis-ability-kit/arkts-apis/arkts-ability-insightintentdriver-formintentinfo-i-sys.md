@@ -4,10 +4,6 @@ FormIntentInfo用于描述 @InsightIntentForm 装饰器支持的参数，例如�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-insightIntentDriver-interface FormIntentInfo--><!--Device-insightIntentDriver-interface FormIntentInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -26,10 +22,6 @@ Ability名称。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FormIntentInfo-readonly abilityName: string--><!--Device-FormIntentInfo-readonly abilityName: string-End-->
@@ -44,15 +36,11 @@ Ability名称。
 readonly formName: string
 ```
 
-表示FormExtensionAbility绑定的卡片名称。
+表示[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#formextensionability)绑定的卡片名称。
 
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

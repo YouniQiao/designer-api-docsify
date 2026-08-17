@@ -1,12 +1,8 @@
-# IsolatedOptions (System API)
+# IsolatedOptions(System API) (System API)
 
 Describes the optional construction parameters during **IsolatedComponent** construction.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface IsolatedOptions--><!--Device-unnamed-declare interface IsolatedOptions-End-->
 
@@ -25,10 +21,6 @@ want: Want
 **Type:** [Want](arkts-arkui-want-t-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Restricted Worker thread where the .abc file is running.
 **Type:** [RestrictedWorker](arkts-arkui-restrictedworker-t-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

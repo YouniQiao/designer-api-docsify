@@ -16,11 +16,9 @@ Starts scanning for specified BLE devices with filters. On API 10 and above, the
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [startBLEScan](#startBLEScan)
+**Substitutes:** [startBLEScan](#startblescan)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -35,7 +33,7 @@ Starts scanning for specified BLE devices with filters. On API 10 and above, the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filters | Array&lt;ScanFilter&gt; | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
-| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-bluetoothmanager-scanoptions-i.md#interval) set to 0, [dutyMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#dutyMode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-bluetoothmanager-scanduty-e.md#SCAN_MODE_LOW_POWER) and [matchMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#matchMode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-bluetoothmanager-matchmode-e.md#MATCH_MODE_AGGRESSIVE). |
+| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-bluetoothmanager-scanoptions-i.md#interval) set to 0, [dutyMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#dutymode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-bluetoothmanager-scanduty-e.md#scanmodelowpower) and [matchMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#matchmode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-bluetoothmanager-matchmode-e.md#matchmodeaggressive). |
 
 **Error codes:**
 
@@ -48,7 +46,7 @@ Starts scanning for specified BLE devices with filters. On API 10 and above, the
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

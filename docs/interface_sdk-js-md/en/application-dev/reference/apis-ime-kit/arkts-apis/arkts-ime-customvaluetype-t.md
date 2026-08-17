@@ -1,4 +1,4 @@
-# CustomValueType
+# CustomValueType(The extra config of edit box.)
 
 ```TypeScript
 export type CustomValueType = int | string | boolean
@@ -7,10 +7,6 @@ export type CustomValueType = int | string | boolean
 Represents the extension information type. The specific type of the parameter depends on its functionality.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export type CustomValueType = int | string | boolean--><!--Device-unnamed-export type CustomValueType = int | string | boolean-End-->
 

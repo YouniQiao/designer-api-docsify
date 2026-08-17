@@ -1,10 +1,8 @@
-# RouterOptions
+# RouterOptions(Page Routing)
 
 Defines the page routing parameters.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 
@@ -36,8 +34,6 @@ Data that needs to be passed to the target page during redirection. The target p
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** params
@@ -57,8 +53,6 @@ URI of the target page, in either of the following formats: 1. Absolute path, wh
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 

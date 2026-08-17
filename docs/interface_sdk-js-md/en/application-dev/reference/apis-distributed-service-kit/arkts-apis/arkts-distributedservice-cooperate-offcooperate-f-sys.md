@@ -16,11 +16,9 @@ Disables listening for screen hopping status change events.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [off](#off_cooperate)(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;)
+**Substitutes:** [off](#offcooperate)(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;)
 
 <!--Device-cooperate-function off(type: 'cooperate', callback?: Callback<void>): void--><!--Device-cooperate-function off(type: 'cooperate', callback?: Callback<void>): void-End-->
 

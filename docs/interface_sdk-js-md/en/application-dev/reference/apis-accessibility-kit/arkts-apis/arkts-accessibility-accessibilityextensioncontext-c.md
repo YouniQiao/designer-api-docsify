@@ -6,10 +6,6 @@ The **AccessibilityExtensionContext** module, inherited from **ExtensionContext*
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class AccessibilityExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,8 +19,6 @@ getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback<Accessibi
 Obtains the focus element. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 12
 
@@ -46,7 +40,7 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -75,8 +69,6 @@ Obtains the focus element. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionContext-getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>--><!--Device-AccessibilityExtensionContext-getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>-End-->
@@ -102,7 +94,7 @@ Obtains the focus element. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -128,8 +120,6 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionContext-getFocusElement(callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityExtensionContext-getFocusElement(callback: AsyncCallback<AccessibilityElement>): void-End-->
@@ -149,7 +139,7 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -177,8 +167,6 @@ Obtains the root element of the specified window. This API uses an asynchronous 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionContext-getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityExtensionContext-getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement>): void-End-->
@@ -199,7 +187,7 @@ Obtains the root element of the specified window. This API uses an asynchronous 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -228,8 +216,6 @@ Obtains the root element of the specified window. This API uses a promise to ret
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionContext-getWindowRootElement(windowId?: int): Promise<AccessibilityElement>--><!--Device-AccessibilityExtensionContext-getWindowRootElement(windowId?: int): Promise<AccessibilityElement>-End-->
@@ -255,7 +241,7 @@ Obtains the root element of the specified window. This API uses a promise to ret
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -281,8 +267,6 @@ Obtains the root element of the currently active window. This API uses an asynch
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionContext-getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityExtensionContext-getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void-End-->
@@ -302,7 +286,7 @@ Obtains the root element of the currently active window. This API uses an asynch
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -330,8 +314,6 @@ Obtains all windows on the specified display. This API uses an asynchronous call
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionContext-getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>): void--><!--Device-AccessibilityExtensionContext-getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>): void-End-->
@@ -352,7 +334,7 @@ Obtains all windows on the specified display. This API uses an asynchronous call
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -377,8 +359,6 @@ getWindows(displayId?: long): Promise<Array<AccessibilityElement>>
 Obtains all windows on the specified display. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 12
 
@@ -405,7 +385,7 @@ Obtains all windows on the specified display. This API uses a promise to return 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -428,8 +408,6 @@ Obtains all windows on the default main display. This API uses an asynchronous c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionContext-getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void--><!--Device-AccessibilityExtensionContext-getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void-End-->
@@ -449,7 +427,7 @@ Obtains all windows on the default main display. This API uses an asynchronous c
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -474,11 +452,9 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [injectGestureSync](#injectGestureSync)
+**Substitutes:** [injectGestureSync](#injectgesturesync)
 
 <!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void--><!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void-End-->
 
@@ -498,7 +474,7 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
@@ -528,11 +504,9 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [injectGestureSync](#injectGestureSync)
+**Substitutes:** [injectGestureSync](#injectgesturesync)
 
 <!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath): Promise<void>--><!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath): Promise<void>-End-->
 
@@ -557,7 +531,7 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
@@ -586,8 +560,6 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionContext-injectGestureSync(gesturePath: GesturePath): void--><!--Device-AccessibilityExtensionContext-injectGestureSync(gesturePath: GesturePath): void-End-->
@@ -607,7 +579,7 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
@@ -630,8 +602,6 @@ Sets the bundle name of the concerned app. This API uses an asynchronous callbac
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionContext-setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): void--><!--Device-AccessibilityExtensionContext-setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): void-End-->
@@ -651,7 +621,7 @@ Sets the bundle name of the concerned app. This API uses an asynchronous callbac
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -680,8 +650,6 @@ Sets the bundle name of the concerned app. This API uses a promise to return the
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityExtensionContext-setTargetBundleName(targetNames: Array<string>): Promise<void>--><!--Device-AccessibilityExtensionContext-setTargetBundleName(targetNames: Array<string>): Promise<void>-End-->
@@ -706,7 +674,7 @@ Sets the bundle name of the concerned app. This API uses a promise to return the
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

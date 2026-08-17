@@ -4,10 +4,6 @@ Provides APIs for observing events. listening for the distributed file system st
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface DfsListeners--><!--Device-unnamed-export interface DfsListeners-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -41,10 +37,6 @@ onStatus(networkId: string, status: number): void
 Called to return the specified status. Its parameters are passed in by connectDfs.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-DfsListeners-onStatus(networkId: string, status: number): void--><!--Device-DfsListeners-onStatus(networkId: string, status: number): void-End-->
 

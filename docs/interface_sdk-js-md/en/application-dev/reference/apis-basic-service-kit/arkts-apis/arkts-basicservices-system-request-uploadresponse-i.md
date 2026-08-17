@@ -1,12 +1,10 @@
-# UploadResponse
+# UploadResponse(Upload and Download)
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
+**Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#uploadconfig)
 
 <!--Device-unnamed-export interface UploadResponse--><!--Device-unnamed-export interface UploadResponse-End-->
 
@@ -37,8 +35,6 @@ HTTP status code returned by the server.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** statusCode
@@ -59,8 +55,6 @@ Content returned by the server. The value type is determined by the type in the 
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** extras
@@ -80,8 +74,6 @@ Headers returned by the server.
 **Type:** Object
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

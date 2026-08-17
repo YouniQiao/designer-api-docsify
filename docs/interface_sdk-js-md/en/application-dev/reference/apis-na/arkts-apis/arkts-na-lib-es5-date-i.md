@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Date--><!--Device-unnamed-interface Date-End-->
 
 ## getDate
@@ -17,10 +13,6 @@ getDate(): number
 Gets the day-of-the-month, using local time.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-getDate(): number--><!--Device-Date-getDate(): number-End-->
 
@@ -40,10 +32,6 @@ Gets the day of the week, using local time.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-getDay(): number--><!--Device-Date-getDay(): number-End-->
 
 **Return value:**
@@ -61,10 +49,6 @@ getFullYear(): number
 Gets the year, using local time.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-getFullYear(): number--><!--Device-Date-getFullYear(): number-End-->
 
@@ -84,10 +68,6 @@ Gets the hours in a date, using local time.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-getHours(): number--><!--Device-Date-getHours(): number-End-->
 
 **Return value:**
@@ -105,10 +85,6 @@ getMilliseconds(): number
 Gets the milliseconds of a Date, using local time.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-getMilliseconds(): number--><!--Device-Date-getMilliseconds(): number-End-->
 
@@ -128,10 +104,6 @@ Gets the minutes of a Date object, using local time.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-getMinutes(): number--><!--Device-Date-getMinutes(): number-End-->
 
 **Return value:**
@@ -149,10 +121,6 @@ getMonth(): number
 Gets the month, using local time.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-getMonth(): number--><!--Device-Date-getMonth(): number-End-->
 
@@ -172,10 +140,6 @@ Gets the seconds of a Date object, using local time.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-getSeconds(): number--><!--Device-Date-getSeconds(): number-End-->
 
 **Return value:**
@@ -193,10 +157,6 @@ getTime(): number
 Gets the time value in milliseconds.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-getTime(): number--><!--Device-Date-getTime(): number-End-->
 
@@ -216,10 +176,6 @@ Gets the difference in minutes between the time on the local computer and Univer
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-getTimezoneOffset(): number--><!--Device-Date-getTimezoneOffset(): number-End-->
 
 **Return value:**
@@ -237,10 +193,6 @@ getUTCDate(): number
 Gets the day-of-the-month, using Universal Coordinated Time (UTC).
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-getUTCDate(): number--><!--Device-Date-getUTCDate(): number-End-->
 
@@ -260,10 +212,6 @@ Gets the day of the week using Universal Coordinated Time (UTC).
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-getUTCDay(): number--><!--Device-Date-getUTCDay(): number-End-->
 
 **Return value:**
@@ -281,10 +229,6 @@ getUTCFullYear(): number
 Gets the year using Universal Coordinated Time (UTC).
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-getUTCFullYear(): number--><!--Device-Date-getUTCFullYear(): number-End-->
 
@@ -304,10 +248,6 @@ Gets the hours value in a Date object using Universal Coordinated Time (UTC).
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-getUTCHours(): number--><!--Device-Date-getUTCHours(): number-End-->
 
 **Return value:**
@@ -325,10 +265,6 @@ getUTCMilliseconds(): number
 Gets the milliseconds of a Date object using Universal Coordinated Time (UTC).
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-getUTCMilliseconds(): number--><!--Device-Date-getUTCMilliseconds(): number-End-->
 
@@ -348,10 +284,6 @@ Gets the minutes of a Date object using Universal Coordinated Time (UTC).
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-getUTCMinutes(): number--><!--Device-Date-getUTCMinutes(): number-End-->
 
 **Return value:**
@@ -369,10 +301,6 @@ getUTCMonth(): number
 Gets the month of a Date object using Universal Coordinated Time (UTC).
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-getUTCMonth(): number--><!--Device-Date-getUTCMonth(): number-End-->
 
@@ -392,10 +320,6 @@ Gets the seconds of a Date object using Universal Coordinated Time (UTC).
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-getUTCSeconds(): number--><!--Device-Date-getUTCSeconds(): number-End-->
 
 **Return value:**
@@ -413,10 +337,6 @@ setDate(date: number): number
 Sets the numeric day-of-the-month value of the Date object using local time.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-setDate(date: number): number--><!--Device-Date-setDate(date: number): number-End-->
 
@@ -441,10 +361,6 @@ setFullYear(year: number, month?: number, date?: number): number
 Sets the year of the Date object using local time.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-setFullYear(year: number, month?: number, date?: number): number--><!--Device-Date-setFullYear(year: number, month?: number, date?: number): number-End-->
 
@@ -471,10 +387,6 @@ setHours(hours: number, min?: number, sec?: number, ms?: number): number
 Sets the hour value in the Date object using local time.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-setHours(hours: number, min?: number, sec?: number, ms?: number): number--><!--Device-Date-setHours(hours: number, min?: number, sec?: number, ms?: number): number-End-->
 
@@ -503,10 +415,6 @@ Sets the milliseconds value in the Date object using local time.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-setMilliseconds(ms: number): number--><!--Device-Date-setMilliseconds(ms: number): number-End-->
 
 **Parameters:**
@@ -530,10 +438,6 @@ setMinutes(min: number, sec?: number, ms?: number): number
 Sets the minutes value in the Date object using local time.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-setMinutes(min: number, sec?: number, ms?: number): number--><!--Device-Date-setMinutes(min: number, sec?: number, ms?: number): number-End-->
 
@@ -561,10 +465,6 @@ Sets the month value in the Date object using local time.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-setMonth(month: number, date?: number): number--><!--Device-Date-setMonth(month: number, date?: number): number-End-->
 
 **Parameters:**
@@ -589,10 +489,6 @@ setSeconds(sec: number, ms?: number): number
 Sets the seconds value in the Date object using local time.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-setSeconds(sec: number, ms?: number): number--><!--Device-Date-setSeconds(sec: number, ms?: number): number-End-->
 
@@ -619,10 +515,6 @@ Sets the date and time value in the Date object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-setTime(time: number): number--><!--Device-Date-setTime(time: number): number-End-->
 
 **Parameters:**
@@ -647,10 +539,6 @@ Sets the numeric day of the month in the Date object using Universal Coordinated
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-setUTCDate(date: number): number--><!--Device-Date-setUTCDate(date: number): number-End-->
 
 **Parameters:**
@@ -674,10 +562,6 @@ setUTCFullYear(year: number, month?: number, date?: number): number
 Sets the year value in the Date object using Universal Coordinated Time (UTC).
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-setUTCFullYear(year: number, month?: number, date?: number): number--><!--Device-Date-setUTCFullYear(year: number, month?: number, date?: number): number-End-->
 
@@ -704,10 +588,6 @@ setUTCHours(hours: number, min?: number, sec?: number, ms?: number): number
 Sets the hours value in the Date object using Universal Coordinated Time (UTC).
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-setUTCHours(hours: number, min?: number, sec?: number, ms?: number): number--><!--Device-Date-setUTCHours(hours: number, min?: number, sec?: number, ms?: number): number-End-->
 
@@ -736,10 +616,6 @@ Sets the milliseconds value in the Date object using Universal Coordinated Time 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-setUTCMilliseconds(ms: number): number--><!--Device-Date-setUTCMilliseconds(ms: number): number-End-->
 
 **Parameters:**
@@ -763,10 +639,6 @@ setUTCMinutes(min: number, sec?: number, ms?: number): number
 Sets the minutes value in the Date object using Universal Coordinated Time (UTC).
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-setUTCMinutes(min: number, sec?: number, ms?: number): number--><!--Device-Date-setUTCMinutes(min: number, sec?: number, ms?: number): number-End-->
 
@@ -794,10 +666,6 @@ Sets the month value in the Date object using Universal Coordinated Time (UTC).
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-setUTCMonth(month: number, date?: number): number--><!--Device-Date-setUTCMonth(month: number, date?: number): number-End-->
 
 **Parameters:**
@@ -822,10 +690,6 @@ setUTCSeconds(sec: number, ms?: number): number
 Sets the seconds value in the Date object using Universal Coordinated Time (UTC).
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-setUTCSeconds(sec: number, ms?: number): number--><!--Device-Date-setUTCSeconds(sec: number, ms?: number): number-End-->
 
@@ -852,10 +716,6 @@ Returns a date as a string value.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-toDateString(): string--><!--Device-Date-toDateString(): string-End-->
 
 **Return value:**
@@ -874,10 +734,6 @@ Returns a date as a string value in ISO format.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-toISOString(): string--><!--Device-Date-toISOString(): string-End-->
 
 **Return value:**
@@ -895,10 +751,6 @@ toJSON(key?: any): string
 Used by the JSON.stringify method to enable the transformation of an object's data for JavaScript Object Notation (JSON) serialization.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-toJSON(key?: any): string--><!--Device-Date-toJSON(key?: any): string-End-->
 
@@ -923,10 +775,6 @@ toLocaleDateString(locales?: string | string[], options?: Intl.DateTimeFormatOpt
 Converts a date to a string by using the current or specified locale.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-toLocaleDateString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string--><!--Device-Date-toLocaleDateString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string-End-->
 
@@ -953,10 +801,6 @@ Converts a date and time to a string by using the current or specified locale.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-toLocaleString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string--><!--Device-Date-toLocaleString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string-End-->
 
 **Parameters:**
@@ -981,10 +825,6 @@ toLocaleTimeString(locales?: string | string[], options?: Intl.DateTimeFormatOpt
 Converts a time to a string by using the current or specified locale.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-toLocaleTimeString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string--><!--Device-Date-toLocaleTimeString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string-End-->
 
@@ -1011,10 +851,6 @@ Returns a string representation of a date. The format of the string depends on t
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-toString(): string--><!--Device-Date-toString(): string-End-->
 
 **Return value:**
@@ -1032,10 +868,6 @@ toTimeString(): string
 Returns a time as a string value.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-toTimeString(): string--><!--Device-Date-toTimeString(): string-End-->
 
@@ -1055,10 +887,6 @@ Returns a date converted to a string using Universal Coordinated Time (UTC).
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Date-toUTCString(): string--><!--Device-Date-toUTCString(): string-End-->
 
 **Return value:**
@@ -1076,10 +904,6 @@ valueOf(): number
 Returns the stored time value in milliseconds since midnight, January 1, 1970 UTC.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Date-valueOf(): number--><!--Device-Date-valueOf(): number-End-->
 

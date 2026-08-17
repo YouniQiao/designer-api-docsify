@@ -16,10 +16,6 @@ Set rtt capability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PLACE_CALL
 
 <!--Device-call-function setRttCapability(accountId: int, isEnable: boolean): Promise<void>--><!--Device-call-function setRttCapability(accountId: int, isEnable: boolean): Promise<void>-End-->

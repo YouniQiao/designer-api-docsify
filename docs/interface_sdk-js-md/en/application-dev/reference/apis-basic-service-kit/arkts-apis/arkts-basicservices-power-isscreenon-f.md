@@ -16,11 +16,9 @@ Checks the screen status of the current device. This API uses an asynchronous ca
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isActive)
+**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isactive)
 
 <!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void--><!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void-End-->
 
@@ -32,7 +30,7 @@ Checks the screen status of the current device. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the screen status obtained, where the value **true** indicates on and the value **false** indicates off. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 power.isScreenOn((err: Error, data: boolean) => {
@@ -55,11 +53,9 @@ Checks the screen status of the current device. This API uses a promise to retur
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isActive)
+**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isactive)
 
 <!--Device-power-function isScreenOn(): Promise<boolean>--><!--Device-power-function isScreenOn(): Promise<boolean>-End-->
 
@@ -71,7 +67,7 @@ Checks the screen status of the current device. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;boolean&gt; | Returns true if the screen is on; returns false otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 power.isScreenOn()

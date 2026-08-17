@@ -7,8 +7,8 @@
 
 | Name | Description |
 | --- | --- |
-| [DistortionComponent](arkts-na-distortioncomponent-distortioncomponent-f-sys.md#DistortionComponent-(System-API)) | Defines a DistortionComponent that provides spatial distortion visual effects. |
-| [DistortionComponent](arkts-na-distortioncomponent-distortioncomponent-f-sys.md#DistortionComponent-(System-API)) | Defines a DistortionComponent that provides spatial distortion visual effects. |
+| [DistortionComponent](arkts-na-distortioncomponent-distortioncomponent-f-sys.md#distortioncomponent-system-api) | Defines a DistortionComponent that provides spatial distortion visual effects. |
+| [DistortionComponent](arkts-na-distortioncomponent-distortioncomponent-f-sys.md#distortioncomponent-system-api) | Defines a DistortionComponent that provides spatial distortion visual effects. |
 <!--DelEnd-->
 
 ### Interfaces

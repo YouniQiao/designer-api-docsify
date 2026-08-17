@@ -4,10 +4,6 @@ Information about an embedded profile (subscription) on an eUICC.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-eSIM-export interface EuiccProfile--><!--Device-eSIM-export interface EuiccProfile-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -32,10 +28,6 @@ Optional access rules that specify which apps can manage this profile. Default p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EuiccProfile-accessRules: Array<AccessRule>--><!--Device-EuiccProfile-accessRules: Array<AccessRule>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -53,10 +45,6 @@ The iccid of the profile.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EuiccProfile-iccid: string--><!--Device-EuiccProfile-iccid: string-End-->
 
@@ -76,10 +64,6 @@ An optional nickname for the profile.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EuiccProfile-nickName: string--><!--Device-EuiccProfile-nickName: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -97,10 +81,6 @@ The operator Id of the profile.
 **Type:** [OperatorId](arkts-telephony-esim-operatorid-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EuiccProfile-operatorId: OperatorId--><!--Device-EuiccProfile-operatorId: OperatorId-End-->
 
@@ -120,10 +100,6 @@ The policy rules of the profile.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EuiccProfile-policyRules: PolicyRules--><!--Device-EuiccProfile-policyRules: PolicyRules-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -141,10 +117,6 @@ Profile class for the profile.
 **Type:** [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EuiccProfile-profileClass: ProfileClass--><!--Device-EuiccProfile-profileClass: ProfileClass-End-->
 
@@ -164,10 +136,6 @@ The profile name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EuiccProfile-profileName: string--><!--Device-EuiccProfile-profileName: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -186,10 +154,6 @@ The service provider name for the profile.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EuiccProfile-serviceProviderName: string--><!--Device-EuiccProfile-serviceProviderName: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -207,10 +171,6 @@ The profile state.
 **Type:** [ProfileState](arkts-telephony-esim-profilestate-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EuiccProfile-state: ProfileState--><!--Device-EuiccProfile-state: ProfileState-End-->
 

@@ -8,10 +8,6 @@ Defines a onWillNewWant function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-type OnWillNewWantFn = (ability: UIAbility) => void--><!--Device-unnamed-type OnWillNewWantFn = (ability: UIAbility) => void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore

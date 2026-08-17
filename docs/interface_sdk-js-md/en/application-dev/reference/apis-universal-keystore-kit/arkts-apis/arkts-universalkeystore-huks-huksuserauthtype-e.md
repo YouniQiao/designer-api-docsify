@@ -4,10 +4,6 @@ Enumerates the user authentication types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-huks-export enum HuksUserAuthType--><!--Device-huks-export enum HuksUserAuthType-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -21,10 +17,6 @@ HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0
 Fingerprint authentication.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Facial authentication.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_FACE = 1 << 1--><!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_FACE = 1 << 1-End-->
@@ -62,10 +50,6 @@ PIN authentication.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_PIN = 1 << 2--><!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_PIN = 1 << 2-End-->
@@ -81,10 +65,6 @@ HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5
 TUI PIN authentication. &lt;!--Del--&gt;(Currently not supported.)&lt;!--DelEnd--&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

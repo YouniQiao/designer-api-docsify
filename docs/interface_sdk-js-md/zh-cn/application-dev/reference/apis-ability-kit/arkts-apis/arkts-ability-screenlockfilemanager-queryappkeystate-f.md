@@ -10,10 +10,6 @@ function queryAppKeyState(): KeyStatus
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus-End-->
 
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
@@ -31,7 +27,7 @@ function queryAppKeyState(): KeyStatus
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found. |
 | [29300002](../errorcode-screenLockFileManager.md#29300002-系统服务工作异常) | The system ability works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

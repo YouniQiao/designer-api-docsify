@@ -10,10 +10,6 @@ Cancels the interval set by " setInterval()".
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-export declare function clearInterval(intervalID?: number): void--><!--Device-unnamed-export declare function clearInterval(intervalID?: number): void-End-->

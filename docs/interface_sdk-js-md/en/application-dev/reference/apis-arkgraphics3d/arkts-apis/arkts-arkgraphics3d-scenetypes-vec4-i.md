@@ -4,10 +4,6 @@ A four-dimensional vector used to represent a point, a direction, or a vector tr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Vec4--><!--Device-unnamed-export interface Vec4-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -23,10 +19,6 @@ Component on the W axis. The value is a real number.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Vec4-w: double--><!--Device-Vec4-w: double-End-->
 
@@ -44,10 +36,6 @@ Component on the X axis. The value is a real number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Vec4-x: double--><!--Device-Vec4-x: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -64,10 +52,6 @@ Component on the Y axis. The value is a real number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Vec4-y: double--><!--Device-Vec4-y: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -83,10 +67,6 @@ Component on the Z axis. The value is a real number.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Vec4-z: double--><!--Device-Vec4-z: double-End-->
 

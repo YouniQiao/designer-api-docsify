@@ -12,13 +12,9 @@ import { proxyChannelManager } from 'proxyChannelManager';
 function sendData(channelId: int, data: ArrayBuffer): Promise<void>
 ```
 
-Sends data to the peer end. This API uses a promise to return the result.
+Sends data to the peer end. This API uses a promise to return the result. This is applicable to scenarios where the phone-side app sends instructions or data to the wearable device-side app through the proxy channel, such as sending configuration updates or notification messages. This method can be called to send data only after [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md#openproxychannel) successfully opens a proxy channel. When the proxy channel is in an unavailable state (such as [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md#channelstate). CHANNEL_WAIT_RESUME, CHANNEL_EXCEPTION_SOFTWARE_FAILED, or CHANNEL_BR_NO_PAIRED), calling this method will fail. It is recommended to subscribe to the [on('channelStateChange')](arkts-distributedservice-proxychannelmanager-onreceivedata-f.md#onreceivedata) event to monitor the channel state, pause data sending when the channel is unavailable, and resume sending after the channel recovers. Data is transmitted to the peer device through the established proxy channel via the Bluetooth BR link. The maximum data length is 4096 bytes. Exceeding this limit will return error code 32390103.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -32,8 +28,8 @@ Sends data to the peer end. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| channelId | int | Yes | Channel ID obtained when the proxy channel is opened. |
-| data | ArrayBuffer | Yes | Byte message sent to the peer end. The maximum length is 4096 bytes. |
+| channelId | int | Yes | Channel ID obtained when opening the proxy channel. The value range is 1 to 2147483647. Using an invalid or closed channelId returns error code 32390004, and exceeding the value range returns error code 32390006. The channelId takes effect only when the proxy channel is available and becomes unavailable after the channel is closed or disconnected. |
+| data | ArrayBuffer | Yes | Binary data to send to the peer end. The data format is defined by the app layer, with a maximum length of 4096 bytes. Exceeding the length limit returns error code 32390103. |
 
 **Return value:**
 
@@ -54,7 +50,7 @@ Sends data to the peer end. This API uses a promise to return the result.
 | [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
 | [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { proxyChannelManager } from '@kit.DistributedServiceKit';

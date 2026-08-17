@@ -16,11 +16,9 @@ Replaces the current page with another one in the application and destroys the c
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceUrl)(options: router.RouterOptions)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions)
 
 <!--Device-router-function replace(options: RouterOptions): void--><!--Device-router-function replace(options: RouterOptions): void-End-->
 
@@ -32,7 +30,7 @@ Replaces the current page with another one in the application and destroys the c
 | --- | --- | --- | --- |
 | options | RouterOptions | Yes | Description of the new page. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class RouterParams {

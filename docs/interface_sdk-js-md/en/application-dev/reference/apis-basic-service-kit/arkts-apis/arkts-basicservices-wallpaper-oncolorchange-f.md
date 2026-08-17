@@ -16,8 +16,6 @@ Registers a listener for wallpaper color changes to receive notifications about 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-wallpaper-function on(type: 'colorChange', callback: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void--><!--Device-wallpaper-function on(type: 'colorChange', callback: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void-End-->
@@ -31,7 +29,7 @@ Registers a listener for wallpaper color changes to receive notifications about 
 | type | 'colorChange' | Yes | the incoming colorChange table open receiver pick a color change wallpaper wallpaper color changes. |
 | callback | (colors: Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;, wallpaperType: WallpaperType) =&gt; void | Yes | provides dominant colors of the wallpaper. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

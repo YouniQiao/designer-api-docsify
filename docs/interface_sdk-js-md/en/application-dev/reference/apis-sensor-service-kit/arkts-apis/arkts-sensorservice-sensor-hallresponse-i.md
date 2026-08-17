@@ -1,14 +1,10 @@
 # HallResponse
 
-Describes the Hall effect sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
+Describes the Hall effect sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
 
-**Inheritance/Implementation:** HallResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**Inheritance/Implementation:** HallResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-interface HallResponse--><!--Device-sensor-interface HallResponse-End-->
 
@@ -31,10 +27,6 @@ Hall effect sensor status. This parameter specifies whether a magnetic field exi
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HallResponse-status: double--><!--Device-HallResponse-status: double-End-->
 

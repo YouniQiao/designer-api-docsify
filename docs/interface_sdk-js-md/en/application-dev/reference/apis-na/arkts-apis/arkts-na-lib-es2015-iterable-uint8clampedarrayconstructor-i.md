@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Uint8ClampedArrayConstructor--><!--Device-unnamed-interface Uint8ClampedArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new (elements: Iterable<number>): Uint8ClampedArray
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ClampedArrayConstructor-new (elements: Iterable<number>): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-new (elements: Iterable<number>): Uint8ClampedArray-End-->
 
@@ -43,10 +35,6 @@ from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, this
 Creates an array from an array-like or iterable object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ClampedArrayConstructor-from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8ClampedArray-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface VersionComponent--><!--Device-update-export interface VersionComponent-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -25,10 +21,6 @@ componentId: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VersionComponent-componentId: string--><!--Device-VersionComponent-componentId: string-End-->
 
@@ -48,10 +40,6 @@ componentType: ComponentType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VersionComponent-componentType: ComponentType--><!--Device-VersionComponent-componentType: ComponentType-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -69,10 +57,6 @@ descriptionInfo: DescriptionInfo
 **类型：** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VersionComponent-descriptionInfo: DescriptionInfo--><!--Device-VersionComponent-descriptionInfo: DescriptionInfo-End-->
 
@@ -92,10 +76,6 @@ displayVersion: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VersionComponent-displayVersion: string--><!--Device-VersionComponent-displayVersion: string-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -113,10 +93,6 @@ effectiveMode: EffectiveMode
 **类型：** [EffectiveMode](arkts-basicservices-update-effectivemode-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VersionComponent-effectiveMode: EffectiveMode--><!--Device-VersionComponent-effectiveMode: EffectiveMode-End-->
 
@@ -136,10 +112,6 @@ innerVersion: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VersionComponent-innerVersion: string--><!--Device-VersionComponent-innerVersion: string-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -157,10 +129,6 @@ otaMode?: OtaMode
 **类型：** [OtaMode](arkts-basicservices-update-otamode-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VersionComponent-otaMode?: OtaMode--><!--Device-VersionComponent-otaMode?: OtaMode-End-->
 
@@ -180,10 +148,6 @@ size: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VersionComponent-size: int--><!--Device-VersionComponent-size: int-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -201,10 +165,6 @@ upgradeAction: UpgradeAction
 **类型：** [UpgradeAction](arkts-basicservices-update-upgradeaction-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VersionComponent-upgradeAction: UpgradeAction--><!--Device-VersionComponent-upgradeAction: UpgradeAction-End-->
 

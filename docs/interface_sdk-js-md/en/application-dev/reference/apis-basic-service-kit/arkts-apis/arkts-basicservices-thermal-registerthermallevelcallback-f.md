@@ -16,10 +16,6 @@ Registers a callback to be invoked when the thermal level changes. This API uses
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-thermal-function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void--><!--Device-thermal-function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void-End-->
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
@@ -36,7 +32,7 @@ Registers a callback to be invoked when the thermal level changes. This API uses
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

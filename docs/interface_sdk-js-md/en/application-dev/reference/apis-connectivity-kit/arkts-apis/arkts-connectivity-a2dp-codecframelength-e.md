@@ -4,10 +4,6 @@ Describes the codec frame length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-a2dp-enum CodecFrameLength--><!--Device-a2dp-enum CodecFrameLength-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -22,10 +18,6 @@ Codec frame length 5ms.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_5MS = 0--><!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_5MS = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -39,10 +31,6 @@ CODEC_FRAME_LENGTH_10MS = 1
 Codec frame length 10ms.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_10MS = 1--><!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_10MS = 1-End-->
 

@@ -16,10 +16,6 @@ Listens to the event of add form. &lt;p&gt;You can use this method to listen to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 <!--Device-formObserver-function onFormAdd(observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function onFormAdd(observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
@@ -52,10 +48,6 @@ function onFormAdd(hostBundleName: string, observerCallback: Callback<formInfo.R
 Listens to the event of add form. &lt;p&gt;You can use this method to listen to the event of add form for a particular card host.&lt;/p&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 

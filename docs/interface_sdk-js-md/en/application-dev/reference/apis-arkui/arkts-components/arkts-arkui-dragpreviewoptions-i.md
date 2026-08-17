@@ -4,10 +4,6 @@ Preview image processing mode and badge count during dragging.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface DragPreviewOptions--><!--Device-unnamed-declare interface DragPreviewOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ How the background image is processed when the component is dragged. Default val
 **Type:** [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) \| Array&lt;[DragPreviewMode](arkts-arkui-dragpreviewmode-e.md)&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ Whether to display the number badge or the number displayed on the badge. For a 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -71,10 +59,6 @@ Transition effect between the floating image and drag preview. Default value: **
 **Type:** [DraggingSizeChangeEffect](arkts-arkui-draggingsizechangeeffect-e.md)
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

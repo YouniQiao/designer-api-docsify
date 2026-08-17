@@ -1,12 +1,8 @@
 # RenderResourceFactory
 
-The render resource factory. RenderResourceFactory is used to create resources that can be shared across Scenes that share a RenderContext
+Creates rendering resources that can be shared in multiple scenes ([Scene](arkts-arkgraphics3d-scene-c.md#scene)) that share RenderContext.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
 
@@ -21,10 +17,6 @@ createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
 Create a new scene from a SceneLoadParams.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,9 +10,7 @@ Reads a file text line by line synchronously. Only the files in UTF-8 format are
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function readLinesSync(filePath: string, options?: Options): ReaderIterator--><!--Device-fileIo-function readLinesSync(filePath: string, options?: Options): ReaderIterator-End-->
 
@@ -23,7 +21,7 @@ Reads a file text line by line synchronously. Only the files in UTF-8 format are
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](arkts-na-file-fs-options-i.md) | No | Options for reading the text. The options are as follows: <br>- **encoding** (string): format of the data to be encoded. <br>It is valid only when the data is of the string type. <br>The default value is **'utf-8'**, which is the only value supported. |
+| options | [Options](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-options-i.md) | No | Options for reading the text. The options are as follows: <br>- **encoding** (string): format of the data to be encoded. <br>It is valid only when the data is of the string type. <br>The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 

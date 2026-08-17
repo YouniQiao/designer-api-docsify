@@ -16,10 +16,6 @@ Requests print preview data. This API uses a callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void--><!--Device-print-function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void-End-->
@@ -43,7 +39,7 @@ Requests print preview data. This API uses a callback to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -82,10 +78,6 @@ Requests print preview data. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function requestPrintPreview(jobInfo: PrintJob): Promise<int>--><!--Device-print-function requestPrintPreview(jobInfo: PrintJob): Promise<int>-End-->
@@ -114,7 +106,7 @@ Requests print preview data. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

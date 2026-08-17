@@ -4,10 +4,6 @@ Defines the Contact selection options, which specifies whether one contact or mu
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-contact-interface ContactSelectionOptions--><!--Device-contact-interface ContactSelectionOptions-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -30,10 +26,6 @@ Contact selection filter. This API can be used in atomic services since API vers
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ContactSelectionOptions-filter?: ContactSelectionFilter--><!--Device-ContactSelectionOptions-filter?: ContactSelectionFilter-End-->
@@ -51,10 +43,6 @@ Whether to allow automatic dismissal of the picker when the page that launched i
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,10 +64,6 @@ Whether to display contacts by name. The value **true** indicates that contacts 
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ContactSelectionOptions-isDisplayedByName?: boolean--><!--Device-ContactSelectionOptions-isDisplayedByName?: boolean-End-->
@@ -98,10 +82,6 @@ Whether multiple contacts can be selected. The value **true** indicates that mul
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ContactSelectionOptions-isMultiSelect?: boolean--><!--Device-ContactSelectionOptions-isMultiSelect?: boolean-End-->
@@ -119,10 +99,6 @@ Maximum number of contacts. The default value is **10000**. If the value exceeds
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

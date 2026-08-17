@@ -16,10 +16,6 @@ Checks whether notification is enabled for the specified application. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
@@ -47,7 +43,7 @@ Checks whether notification is enabled for the specified application. This API u
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -77,10 +73,6 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 Checks whether notification is enabled for the specified application. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -114,7 +106,7 @@ Checks whether notification is enabled for the specified application. This API u
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -139,10 +131,6 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 Queries the notification authorization status of the current application. This API uses an asynchronous callback to return the result. This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.NOTIFICATION_CONTROLLER
@@ -172,7 +160,7 @@ Queries the notification authorization status of the current application. This A
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -198,10 +186,6 @@ function isNotificationEnabled(): Promise<boolean>
 Queries the notification authorization status of the current application. This API uses a promise to return the result. This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.NOTIFICATION_CONTROLLER
@@ -230,7 +214,7 @@ Queries the notification authorization status of the current application. This A
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -252,10 +236,6 @@ function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): v
 Checks whether notification is enabled for a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -284,7 +264,7 @@ Checks whether notification is enabled for a specified user. This API uses an as
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -313,10 +293,6 @@ function isNotificationEnabled(userId: int): Promise<boolean>
 Checks whether notification is enabled for a specified user. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -350,7 +326,7 @@ Checks whether notification is enabled for a specified user. This API uses a pro
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@ Describe the context of GATT responses.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-ble-interface GattRspContext--><!--Device-ble-interface GattRspContext-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -31,10 +27,6 @@ Timestamp of when Bluetooth received the response command.
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Set the indicator item's icon for a specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface IndicatorIconInfo--><!--Device-unnamed-declare interface IndicatorIconInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +16,9 @@ icon: ResourceStr | SymbolGlyphModifier
 
 Icon that needs to be set.
 
-**Type:** ResourceStr \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** ResourceStr \| SymbolGlyphModifier
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ The specified index. The value should be an integer.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

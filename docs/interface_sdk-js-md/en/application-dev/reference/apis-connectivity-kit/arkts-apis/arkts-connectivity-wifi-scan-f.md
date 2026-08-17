@@ -16,8 +16,6 @@ Scans Wi-Fi hotspot. &lt;p&gt;This API works in asynchronous mode.&lt;/p&gt;
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [scan](arkts-connectivity-wifimanager-scan-f.md#scan)
@@ -34,7 +32,7 @@ Scans Wi-Fi hotspot. &lt;p&gt;This API works in asynchronous mode.&lt;/p&gt;
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

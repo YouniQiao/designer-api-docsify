@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace intelligence--><!--Device-unnamed-declare namespace intelligence-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -36,10 +32,10 @@ import { intelligence } from 'intelligence';
 
 | Name | Description |
 | --- | --- |
-| [getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md#getImageEmbeddingModel) | Obtains an image embedding model. |
-| [getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getSupportedCloudModel) | Obtains the supported cloud embedding models. |
-| [getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#getTextEmbeddingModel) | Obtains a text embedding model. |
-| [splitText](arkts-arkdata-intelligence-splittext-f.md#splitText) | Splits text. |
+| [getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md#getimageembeddingmodel) | Obtains an image embedding model. |
+| [getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getsupportedcloudmodel) | Obtains the supported cloud embedding models. |
+| [getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#gettextembeddingmodel) | Obtains a text embedding model. |
+| [splitText](arkts-arkdata-intelligence-splittext-f.md#splittext) | Splits text. |
 
 ### Interfaces
 

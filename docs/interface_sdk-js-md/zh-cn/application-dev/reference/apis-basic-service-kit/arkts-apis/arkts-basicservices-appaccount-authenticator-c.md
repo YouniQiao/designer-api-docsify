@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-appAccount-class Authenticator--><!--Device-appAccount-class Authenticator-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -23,15 +19,13 @@ addAccountImplicitly(
     ): void
 ```
 
-根据指定的鉴权类型和可选项，隐式地添加应用账号。使用callback异步回调。 > **说明：** > > 从API version 8开始支持, 从API version 9开始废弃。建议使用[createAccountImplicitly](#createAccountImplicitly)替代。
+根据指定的鉴权类型和可选项，隐式地添加应用账号。使用callback异步回调。 > **说明：** > > 从API version 8开始支持, 从API version 9开始废弃。建议使用[createAccountImplicitly](#createaccountimplicitly)替代。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [createAccountImplicitly](#createAccountImplicitly)(options: CreateAccountImplicitlyOptions, callback: AuthCallback)
+**替代接口：** [createAccountImplicitly](#createaccountimplicitly)(options: CreateAccountImplicitlyOptions, callback: AuthCallback)
 
 <!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -56,10 +50,6 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void--><!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -82,10 +72,6 @@ auth(name: string, authType: string, options: Record<string, RecordData>, callba
 对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, RecordData>, callback: AuthCallback): void--><!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, RecordData>, callback: AuthCallback): void-End-->
 
@@ -116,8 +102,6 @@ authenticate(
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [auth](#auth)(name: string, authType: string, options: Record&lt;string, Object&gt;, callback: AuthCallback)
@@ -146,10 +130,6 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -162,9 +142,9 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 | labels | Array&lt;string&gt; | 是 | 标签数组。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
-## 示例
+**示例**
 
-接口需组合使用，请查看[getRemoteObject](#getRemoteObject)中的示例。
+接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
 
 ## checkAccountRemovable
 
@@ -175,10 +155,6 @@ checkAccountRemovable(name: string, callback: AuthCallback): void
 判断账号是否可以删除。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void-End-->
 
@@ -191,9 +167,9 @@ checkAccountRemovable(name: string, callback: AuthCallback): void
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
-## 示例
+**示例**
 
-接口需组合使用，请查看[getRemoteObject](#getRemoteObject)中的示例。
+接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
 
 ## createAccountImplicitly
 
@@ -204,10 +180,6 @@ createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthC
 根据指定的账号所有者隐式地创建应用账号。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
 
@@ -230,10 +202,6 @@ getRemoteObject(): rpc.RemoteObject
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject--><!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -244,7 +212,7 @@ getRemoteObject(): rpc.RemoteObject
 | --- | --- |
 | rpc.RemoteObject | 认证器Authenticator的远程对象。用于跨进程通信。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -417,10 +385,6 @@ setProperties(options: SetPropertiesOptions, callback: AuthCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -432,9 +396,9 @@ setProperties(options: SetPropertiesOptions, callback: AuthCallback): void
 | options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | 是 | 设置属性的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
-## 示例
+**示例**
 
-接口需组合使用，请查看[getRemoteObject](#getRemoteObject)中的示例。
+接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
 
 ## verifyCredential
 
@@ -445,10 +409,6 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 验证应用账号的凭据。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
 
@@ -462,7 +422,7 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 | options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | 是 | 验证凭据的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
-## 示例
+**示例**
 
-接口需组合使用，请查看[getRemoteObject](#getRemoteObject)中的示例。
+接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
 

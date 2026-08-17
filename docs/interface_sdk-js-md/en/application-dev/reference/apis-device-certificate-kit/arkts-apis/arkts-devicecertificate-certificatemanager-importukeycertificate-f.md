@@ -16,10 +16,6 @@ Import the certificate to the USB Key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -32,7 +28,7 @@ Import the certificate to the USB Key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyUri | string | Yes | Indicates the USB Key credentials URI. <br>The maximum length is 256 and cannot be empty. <br> The keyUri parameter identifies a certificate entity, which can be obtained <br>by calling the [getUkeyCertificateList](arkts-devicecertificate-certificatemanager-getukeycertificatelist-f.md#getUkeyCertificateList) interface. |
+| keyUri | string | Yes | Indicates the USB Key credentials URI. <br>The maximum length is 256 and cannot be empty. <br> The keyUri parameter identifies a certificate entity, which can be obtained <br>by calling the [getUkeyCertificateList](arkts-devicecertificate-certificatemanager-getukeycertificatelist-f.md#getukeycertificatelist) interface. |
 | cert | Uint8Array | Yes | Indicates the certificate data to be imported. <br>The maximum length is 10240 and cannot be empty. <br>The certificate data format complies with the Smart Key Framework (SKF) specifications. |
 | ukeyInfo | [UkeyInfo](arkts-devicecertificate-certificatemanager-ukeyinfo-i.md) | Yes | Indicates USB Key certificate attribute information. <br>UkeyInfo.CertificatePurpose can only be set to PURPOSE_SIGN, PURPOSE_ENCRYPT or PURPOSE_DEFAULT. |
 

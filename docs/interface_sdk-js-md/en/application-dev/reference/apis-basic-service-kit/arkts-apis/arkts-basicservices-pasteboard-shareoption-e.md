@@ -4,10 +4,6 @@ Enumerates the pasteable ranges of PasteData.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-pasteboard-enum ShareOption--><!--Device-pasteboard-enum ShareOption-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -21,10 +17,6 @@ INAPP = 0
 Only intra-application pasting is allowed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Paste is allowed in any application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ShareOption-LOCALDEVICE = 1--><!--Device-ShareOption-LOCALDEVICE = 1-End-->
@@ -61,8 +49,6 @@ CROSSDEVICE = 2
 Paste is allowed in any application across devices. This API is deprecated since API version 12 without any alternative API or method.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 12
 

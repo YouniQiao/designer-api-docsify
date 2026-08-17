@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface AsyncGeneratorFunction--><!--Device-unnamed-interface AsyncGeneratorFunction-End-->
 
 ## constructor
@@ -17,10 +13,6 @@ new (...args: any[]): AsyncGenerator
 Creates a new AsyncGenerator object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-AsyncGeneratorFunction-new (...args: any[]): AsyncGenerator--><!--Device-AsyncGeneratorFunction-new (...args: any[]): AsyncGenerator-End-->
 
@@ -45,10 +37,6 @@ Creates a new AsyncGenerator object.
 Creates a new AsyncGenerator object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-AsyncGeneratorFunction-(...args: any[]): AsyncGenerator--><!--Device-AsyncGeneratorFunction-(...args: any[]): AsyncGenerator-End-->
 
@@ -76,10 +64,6 @@ The length of the arguments.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-AsyncGeneratorFunction-readonly length: number--><!--Device-AsyncGeneratorFunction-readonly length: number-End-->
 
 ## name
@@ -94,10 +78,6 @@ Returns the name of the function.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-AsyncGeneratorFunction-readonly name: string--><!--Device-AsyncGeneratorFunction-readonly name: string-End-->
 
 ## prototype
@@ -111,10 +91,6 @@ A reference to the prototype.
 **Type:** [AsyncGenerator](arkts-na-lib-es2018-asyncgenerator-asyncgenerator-i.md)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-AsyncGeneratorFunction-readonly prototype: AsyncGenerator--><!--Device-AsyncGeneratorFunction-readonly prototype: AsyncGenerator-End-->
 

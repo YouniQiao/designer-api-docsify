@@ -4,10 +4,6 @@ Describes the basic text notification, which is used to display the title and bo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationBasicContent--><!--Device-unnamed-export interface NotificationBasicContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -23,10 +19,6 @@ Structured notification. Currently, only service reminder messages can be displa
 **Type:** Map&lt;string, string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationBasicContent-structuredText?: Map<string, string>--><!--Device-NotificationBasicContent-structuredText?: Map<string, string>-End-->
 

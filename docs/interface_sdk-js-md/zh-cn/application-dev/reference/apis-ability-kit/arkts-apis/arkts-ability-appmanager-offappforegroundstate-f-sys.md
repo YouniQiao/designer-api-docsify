@@ -10,10 +10,6 @@ function off(type: 'appForegroundState', observer?: AppForegroundStateObserver):
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
 <!--Device-appManager-function off(type: 'appForegroundState', observer?: AppForegroundStateObserver): void--><!--Device-appManager-function off(type: 'appForegroundState', observer?: AppForegroundStateObserver): void-End-->
@@ -38,7 +34,7 @@ function off(type: 'appForegroundState', observer?: AppForegroundStateObserver):
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ Describe the type of Bluetooth address.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-common-export interface BluetoothAddress--><!--Device-common-export interface BluetoothAddress-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ The string of the Bluetooth address.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-BluetoothAddress-address: string--><!--Device-BluetoothAddress-address: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -50,10 +42,6 @@ The type of the Bluetooth address.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-BluetoothAddress-addressType: BluetoothAddressType--><!--Device-BluetoothAddress-addressType: BluetoothAddressType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -64,15 +52,11 @@ The type of the Bluetooth address.
 rawAddressType?: BluetoothRawAddressType
 ```
 
-Address type defined by the Bluetooth Core Specification. It is used only when the [addressType](#addressType) is [REAL](arkts-connectivity-common-bluetoothaddresstype-e.md#REAL).
+Address type defined by the Bluetooth Core Specification. It is used only when the [addressType](#addresstype) is [REAL](arkts-connectivity-common-bluetoothaddresstype-e.md#real).
 
 **Type:** [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-BluetoothAddress-rawAddressType?: BluetoothRawAddressType--><!--Device-BluetoothAddress-rawAddressType?: BluetoothRawAddressType-End-->
 

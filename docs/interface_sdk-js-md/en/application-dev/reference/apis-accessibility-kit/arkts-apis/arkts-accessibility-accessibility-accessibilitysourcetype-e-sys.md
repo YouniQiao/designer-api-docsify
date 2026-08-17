@@ -4,10 +4,6 @@ Enumerates the source types of accessibility nodes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum AccessibilitySourceType--><!--Device-unnamed-export enum AccessibilitySourceType-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,10 +19,6 @@ DEFAULT = 1
 Default node type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ The current node is a newly added virtual node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilitySourceType-ADDED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 2--><!--Device-AccessibilitySourceType-ADDED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 2-End-->
@@ -67,10 +55,6 @@ UPDATED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 3
 The current node is a node with modified properties.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

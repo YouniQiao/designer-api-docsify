@@ -4,10 +4,6 @@ Defines a simple animation parameter object. Unlike **AnimatorOptions**, this ob
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class SimpleAnimatorOptions--><!--Device-unnamed-export declare class SimpleAnimatorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,10 +26,6 @@ A constructor used to create a **SimpleAnimatorOptions** instance.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -49,7 +41,7 @@ A constructor used to create a **SimpleAnimatorOptions** instance.
 | begin | number | Yes | Start point of the animation interpolation. |
 | end | number | Yes | End point of animation interpolation. |
 
-## Examples
+**Examples**
 
 See ArkTS-based Declarative Development Paradigm.
 
@@ -82,10 +74,6 @@ Sets the playback delay for this animation.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -104,9 +92,9 @@ Sets the playback delay for this animation.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
-## Examples
+**Examples**
 
 See ArkTS-based Declarative Development Paradigm.
 
@@ -139,10 +127,6 @@ Sets the playback direction for this animator animation.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -161,7 +145,7 @@ Sets the playback direction for this animator animation.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
 ## duration
 
@@ -172,10 +156,6 @@ duration(duration: number): SimpleAnimatorOptions
 Sets the animation duration.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -195,9 +175,9 @@ Sets the animation duration.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
-## Examples
+**Examples**
 
 See ArkTS-based Declarative Development Paradigm.
 
@@ -230,10 +210,6 @@ Sets the interpolation curve for this animation.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -246,15 +222,15 @@ Sets the interpolation curve for this animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md#AnimatorOptions).<br> Default value: **"ease" |
+| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md#animatoroptions).<br> Default value: **"ease" |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
-## Examples
+**Examples**
 
 See ArkTS-based Declarative Development Paradigm.
 
@@ -287,10 +263,6 @@ Sets the fill mode for this animation.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -309,7 +281,7 @@ Sets the fill mode for this animation.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
 ## iterations
 
@@ -320,10 +292,6 @@ iterations(iterations: number): SimpleAnimatorOptions
 Sets the number of times that this animation is played.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -343,9 +311,9 @@ Sets the number of times that this animation is played.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
-## Examples
+**Examples**
 
 See ArkTS-based Declarative Development Paradigm.
 

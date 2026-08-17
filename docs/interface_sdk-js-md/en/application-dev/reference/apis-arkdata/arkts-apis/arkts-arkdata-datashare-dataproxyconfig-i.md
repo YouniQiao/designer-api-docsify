@@ -4,10 +4,6 @@ Defines a struct for the data proxy configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface DataProxyConfig--><!--Device-dataShare-interface DataProxyConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -30,10 +26,6 @@ Sets the maximum length of the data proxy value. The default value is MAX_LENGTH
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataProxyConfig-maxValueLength?: DataProxyMaxValueLength--><!--Device-DataProxyConfig-maxValueLength?: DataProxyMaxValueLength-End-->
@@ -51,10 +43,6 @@ Type of the data proxy.
 **Type:** [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

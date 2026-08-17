@@ -4,10 +4,6 @@ Provide methods for adding long or short vibration events and generate VibratorP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-class VibratorPatternBuilder--><!--Device-vibrator-class VibratorPatternBuilder-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -27,10 +23,6 @@ addContinuousEvent(time: int, duration: int, options?: ContinuousParam): Vibrato
 Adds a long vibration event as a **VibratorPattern** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VibratorPatternBuilder-addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder--><!--Device-VibratorPatternBuilder-addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder-End-->
 
@@ -56,7 +48,7 @@ Adds a long vibration event as a **VibratorPattern** object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';
@@ -102,10 +94,6 @@ Adds a short vibration event as a **VibratorPattern** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VibratorPatternBuilder-addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder--><!--Device-VibratorPatternBuilder-addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -129,7 +117,7 @@ Adds a short vibration event as a **VibratorPattern** object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';
@@ -161,10 +149,6 @@ Constructor used to create a **VibratorPattern** object, which determines the vi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VibratorPatternBuilder-build(): VibratorPattern--><!--Device-VibratorPatternBuilder-build(): VibratorPattern-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -175,7 +159,7 @@ Constructor used to create a **VibratorPattern** object, which determines the vi
 | --- | --- |
 | [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) | VibratorPattern** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

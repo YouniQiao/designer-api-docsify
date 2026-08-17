@@ -6,13 +6,9 @@
 function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>): void
 ```
 
-取消监听DLP沙箱卸载事件。调用成功后，应用不再接收DLP沙箱卸载事件的回调通知。 必须在调用[on](arkts-dataprotection-dlppermission-onopendlpfile-f.md#on_openDLPFile)注册监听后才能调用此方法取消 监听。 DLP管理应用退出或不再需要追踪沙箱状态变化时，取消事件订阅以释放监听资源。
+取消监听DLP沙箱卸载事件。调用成功后，应用不再接收DLP沙箱卸载事件的回调通知。 必须在调用[on](arkts-dataprotection-dlppermission-onopendlpfile-f.md#onopendlpfile)注册监听后才能调用此方法取消 监听。 DLP管理应用退出或不再需要追踪沙箱状态变化时，取消事件订阅以释放监听资源。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -27,7 +23,7 @@ function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'uninstallDLPSandbox' | 是 | 监听事件类型。固定值为'uninstallDLPSandbox'：DLP沙箱卸载事件。 |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DLPSandboxState](arkts-dataprotection-dlppermission-dlpsandboxstate-i-sys.md)&gt; | 否 | 沙箱应用卸载事件的回调。默认为空，表示取消该类型事件的所有回调。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DLPSandboxState](arkts-dataprotection-dlppermission-dlpsandboxstate-i-sys.md)&gt; | 否 | 沙箱应用卸载事件的回调。默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -39,7 +35,7 @@ function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>):
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

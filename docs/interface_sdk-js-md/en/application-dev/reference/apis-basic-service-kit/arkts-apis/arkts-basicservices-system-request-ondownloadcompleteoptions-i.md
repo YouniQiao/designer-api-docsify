@@ -1,8 +1,6 @@
-# OnDownloadCompleteOptions
+# OnDownloadCompleteOptions(Upload and Download)
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -37,8 +35,6 @@ Called when API call is complete.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** on
@@ -58,8 +54,6 @@ Called when API call has failed. Header information and HTTP status code returne
 **Type:** (data: any, code: number) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -81,8 +75,6 @@ Called when API call is successful.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** on
@@ -102,8 +94,6 @@ Result token returned by the download API.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

@@ -10,10 +10,6 @@ export function generateControlledDevicePackage(permissionQuery: PermissionQuery
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 <!--Device-abilityToolAccessCtrl-export function generateControlledDevicePackage(permissionQuery: PermissionQuery[]): Promise<RemoteAuthPackage[]>--><!--Device-abilityToolAccessCtrl-export function generateControlledDevicePackage(permissionQuery: PermissionQuery[]): Promise<RemoteAuthPackage[]>-End-->
@@ -45,7 +41,7 @@ export function generateControlledDevicePackage(permissionQuery: PermissionQuery
 | [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) | Invalid parameter. Permission exceeds 256 characters, specificied tokenId is invalid, etc. |
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { abilityToolAccessCtrl } from '@kit.AbilityKit';

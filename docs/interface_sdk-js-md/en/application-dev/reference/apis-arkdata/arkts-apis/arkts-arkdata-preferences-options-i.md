@@ -4,10 +4,6 @@ Represents the configuration of a **Preferences** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-preferences-interface Options--><!--Device-preferences-interface Options-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -30,10 +26,6 @@ Application group ID. &lt;!--RP1--&gt;Currently, this parameter is not supported
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -54,10 +46,6 @@ Name of the **Preferences** instance. It must be longer than 0 bytes and less th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Options-name: string--><!--Device-Options-name: string-End-->
@@ -75,10 +63,6 @@ Storage mode to be used by the **Preferences** instance. This parameter is optio
 **Type:** [StorageType](arkts-arkdata-preferences-storagetype-e.md) \| null \| undefined
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

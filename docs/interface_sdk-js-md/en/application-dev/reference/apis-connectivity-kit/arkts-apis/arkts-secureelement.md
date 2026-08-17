@@ -4,10 +4,6 @@ Provides APIs for mobile applications to access different SEs in mobile devices,
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace omapi--><!--Device-unnamed-declare namespace omapi-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -24,10 +20,10 @@ import { omapi } from 'omapi';
 
 | Name | Description |
 | --- | --- |
-| [createService](arkts-connectivity-omapi-createservice-f.md#createService) | Establish a new connection that can be used to connect to all the SEs available in the system. The connection process can be quite long, so it happens in an asynchronous way. It is usable only if isConnected() returns true. |
-| [newSEService](arkts-connectivity-omapi-newseservice-f.md#newSEService) | Establish a new connection that can be used to connect to all the SEs available in the system. The connection process can be quite long, so it happens in an asynchronous way. It is usable only if the specified callback is called or if isConnected() returns true. |
-| [off_stateChanged](arkts-connectivity-omapi-offstatechanged-f.md#off_stateChanged) | Unsubscribe the service state changed event. |
-| [on_stateChanged](arkts-connectivity-omapi-onstatechanged-f.md#on_stateChanged) | Register the service state changed event. |
+| [createService](arkts-connectivity-omapi-createservice-f.md#createservice) | Establish a new connection that can be used to connect to all the SEs available in the system. The connection process can be quite long, so it happens in an asynchronous way. It is usable only if isConnected() returns true. |
+| [newSEService](arkts-connectivity-omapi-newseservice-f.md#newseservice) | Establish a new connection that can be used to connect to all the SEs available in the system. The connection process can be quite long, so it happens in an asynchronous way. It is usable only if the specified callback is called or if isConnected() returns true. |
+| [off_stateChanged](arkts-connectivity-omapi-offstatechanged-f.md#offstatechanged) | Unsubscribe the service state changed event. |
+| [on_stateChanged](arkts-connectivity-omapi-onstatechanged-f.md#onstatechanged) | Register the service state changed event. |
 
 ### Interfaces
 

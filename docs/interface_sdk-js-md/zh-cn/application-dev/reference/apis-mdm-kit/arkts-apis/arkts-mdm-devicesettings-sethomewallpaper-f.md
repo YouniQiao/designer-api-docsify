@@ -10,10 +10,6 @@ function setHomeWallpaper(admin: Want, fd: number):  Promise<void>
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_SET_WALLPAPER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -27,7 +23,7 @@ function setHomeWallpaper(admin: Want, fd: number):  Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| fd | number | 是 | 需要设置为桌面壁纸图片的文件描述符，可以通过file.fs的[openSync](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-opensync-f.md#openSync)接口获取应用沙箱目录下的图片文件描述符。壁纸 图片大小不能超过100MB。 |
+| fd | number | 是 | 需要设置为桌面壁纸图片的文件描述符，可以通过file.fs的[openSync](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-opensync-f.md#opensync)接口获取应用沙箱目录下的图片文件描述符。壁纸 图片大小不能超过100MB。 |
 
 **返回值：**
 
@@ -44,13 +40,13 @@ function setHomeWallpaper(admin: Want, fd: number):  Promise<void>
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { deviceSettings } from '@kit.MDMKit';
 import { common, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo }  from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit';
 
 let wantTemp: Want = {
   // 请根据实际情况修改

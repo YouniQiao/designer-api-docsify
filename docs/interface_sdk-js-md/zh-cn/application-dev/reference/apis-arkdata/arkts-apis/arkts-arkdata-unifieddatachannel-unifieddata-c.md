@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unifiedDataChannel-class UnifiedData--><!--Device-unifiedDataChannel-class UnifiedData-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -21,10 +17,6 @@ addRecord(record: UnifiedRecord): void
 在当前统一数据对象中添加一条数据记录。调用成功后，指定的数据记录被添加到当前统一数据对象中。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,7 +38,7 @@ addRecord(record: UnifiedRecord): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -102,10 +94,6 @@ constructor(record: UnifiedRecord)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -126,7 +114,7 @@ constructor(record: UnifiedRecord)
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -165,10 +153,6 @@ constructor()
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -177,7 +161,7 @@ constructor()
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-## 示例
+**示例**
 
 ```TypeScript
 let unifiedData = new unifiedDataChannel.UnifiedData();
@@ -189,13 +173,9 @@ let unifiedData = new unifiedDataChannel.UnifiedData();
 getRecords(): Array<UnifiedRecord>
 ```
 
-将当前统一数据对象中的所有数据记录取出。通过本接口取出的数据为UnifiedRecord类型，需通过[getType](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#getType)获取数据类型 后转为子类再使用。
+将当前统一数据对象中的所有数据记录取出。通过本接口取出的数据为UnifiedRecord类型，需通过[getType](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#gettype)获取数据类型 后转为子类再使用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -211,7 +191,7 @@ getRecords(): Array<UnifiedRecord>
 | --- | --- |
 | Array&lt;[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)&gt; | 当前统一数据对象中包含的所有数据记录数组，每条记录可通过getType获取类型后转换为具体子类使用，用于读取和处理统一数据中的各种类型数据。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -293,10 +273,6 @@ getTypes(): Array<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -311,7 +287,7 @@ getTypes(): Array<string>
 | --- | --- |
 | Array&lt;string&gt; | [UniformDataType]{ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -367,13 +343,9 @@ let types = unifiedData.getTypes();
 hasType(type: string): boolean
 ```
 
-检查当前统一数据对象中是否有指定的数据类型，检查范围包括使用[addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addEntry)函数添加的数据类型。 针对文件类型，若UnifiedData的类型集合中包含"general.jpeg"，在调用hasType接口判断是否包括"general.image"类型时，结果返回true（类型"general.jpeg"归属于类型" general.image"）。
+检查当前统一数据对象中是否有指定的数据类型，检查范围包括使用[addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addentry)函数添加的数据类型。 针对文件类型，若UnifiedData的类型集合中包含"general.jpeg"，在调用hasType接口判断是否包括"general.image"类型时，结果返回true（类型"general.jpeg"归属于类型" general.image"）。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -387,7 +359,7 @@ hasType(type: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要查询的数据类型，见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。 |
+| type | string | 是 | 要查询的数据类型，见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)。 |
 
 **返回值：**
 
@@ -401,7 +373,7 @@ hasType(type: string): boolean
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

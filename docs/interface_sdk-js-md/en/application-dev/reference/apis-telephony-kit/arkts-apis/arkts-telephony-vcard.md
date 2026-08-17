@@ -4,10 +4,6 @@ Provides applications with APIs for obtaining vcard.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace vcard--><!--Device-unnamed-declare namespace vcard-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -24,12 +20,12 @@ import { vcard } from 'vcard';
 
 | Name | Description |
 | --- | --- |
-| [exportVCard](arkts-telephony-vcard-exportvcard-f.md#exportVCard) | Export contact data to a vcf file. |
-| [exportVCard](arkts-telephony-vcard-exportvcard-f.md#exportVCard) | Export contact data to a vcf file. |
-| [exportVCard](arkts-telephony-vcard-exportvcard-f.md#exportVCard) | Export contact data to a vcf file. |
-| [importVCard](arkts-telephony-vcard-importvcard-f.md#importVCard) | Import contacts from the specified vcf file. |
-| [importVCard](arkts-telephony-vcard-importvcard-f.md#importVCard) | Import contacts from the specified vcf file. |
-| [importVCard](arkts-telephony-vcard-importvcard-f.md#importVCard) | Import contacts from the specified vcf file. |
+| [exportVCard](arkts-telephony-vcard-exportvcard-f.md#exportvcard) | Export contact data to a vcf file. |
+| [exportVCard](arkts-telephony-vcard-exportvcard-f.md#exportvcard) | Export contact data to a vcf file. |
+| [exportVCard](arkts-telephony-vcard-exportvcard-f.md#exportvcard) | Export contact data to a vcf file. |
+| [importVCard](arkts-telephony-vcard-importvcard-f.md#importvcard) | Import contacts from the specified vcf file. |
+| [importVCard](arkts-telephony-vcard-importvcard-f.md#importvcard) | Import contacts from the specified vcf file. |
+| [importVCard](arkts-telephony-vcard-importvcard-f.md#importvcard) | Import contacts from the specified vcf file. |
 
 ### Interfaces
 

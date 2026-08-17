@@ -4,8 +4,6 @@ Provides constants that define the names of all predefined events. | Name | Type
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** Event
@@ -20,7 +18,7 @@ Provides constants that define the names of all predefined events. | Name | Type
 
 | Name | Description |
 | --- | --- |
-| [USER_LOGIN](arkts-performanceanalysis-event-depr-con.md#USER_LOGIN) | User login event. |
-| [USER_LOGOUT](arkts-performanceanalysis-event-depr-con.md#USER_LOGOUT) | User logout event. |
-| [DISTRIBUTED_SERVICE_START](arkts-performanceanalysis-event-depr-con.md#DISTRIBUTED_SERVICE_START) | Distributed service event. |
+| [USER_LOGIN](arkts-performanceanalysis-event-depr-con.md#userlogin) | User login event. |
+| [USER_LOGOUT](arkts-performanceanalysis-event-depr-con.md#userlogout) | User logout event. |
+| [DISTRIBUTED_SERVICE_START](arkts-performanceanalysis-event-depr-con.md#distributedservicestart) | Distributed service event. |
 

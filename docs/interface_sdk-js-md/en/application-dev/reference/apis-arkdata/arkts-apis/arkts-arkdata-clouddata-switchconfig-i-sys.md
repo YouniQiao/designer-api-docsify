@@ -4,10 +4,6 @@ Defines the switch configuration of a device-cloud synergy database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudData-interface SwitchConfig--><!--Device-cloudData-interface SwitchConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -31,10 +27,6 @@ Switch configuration information of a database. The key is the database name, an
 **Type:** Record&lt;string, [DBSwitchInfo](arkts-arkdata-clouddata-dbswitchinfo-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SwitchConfig-dbInfo: Record<string, DBSwitchInfo>--><!--Device-SwitchConfig-dbInfo: Record<string, DBSwitchInfo>-End-->
 

@@ -4,10 +4,6 @@ Defines the contact filter criteria. Multiple filter criteria are ORed. If the p
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-contact-interface FilterClause--><!--Device-contact-interface FilterClause-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -30,10 +26,6 @@ Contact data filter item.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FilterClause-dataItem?: DataFilter--><!--Device-FilterClause-dataItem?: DataFilter-End-->
@@ -51,10 +43,6 @@ Focus mode list.
 **Type:** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -74,10 +62,6 @@ Contact ID.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FilterClause-id?: Array<FilterOptions>--><!--Device-FilterClause-id?: Array<FilterOptions>-End-->
@@ -95,10 +79,6 @@ Contact name.
 **Type:** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

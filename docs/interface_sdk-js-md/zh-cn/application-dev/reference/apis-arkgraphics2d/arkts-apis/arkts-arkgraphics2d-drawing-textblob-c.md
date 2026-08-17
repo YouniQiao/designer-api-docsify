@@ -4,10 +4,6 @@ TextBlob是由一个或多个具有相同字型的字符组成的字块。支持
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-drawing-class TextBlob--><!--Device-drawing-class TextBlob-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ bounds(): common2D.Rect
 获取文字边界框的矩形区域。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-TextBlob-bounds(): common2D.Rect--><!--Device-TextBlob-bounds(): common2D.Rect-End-->
 
@@ -46,10 +38,6 @@ bounds(): common2D.Rect | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TextBlob-bounds(): common2D.Rect | undefined--><!--Device-TextBlob-bounds(): common2D.Rect | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -70,10 +58,6 @@ static makeFromPosText(text: string, len: number, points: common2D.Point[], font
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-TextBlob-static makeFromPosText(text: string, len: number, points: common2D.Point[], font: Font): TextBlob--><!--Device-TextBlob-static makeFromPosText(text: string, len: number, points: common2D.Point[], font: Font): TextBlob-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -83,7 +67,7 @@ static makeFromPosText(text: string, len: number, points: common2D.Point[], font
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 绘制字形的文本内容。 |
-| len | number | 是 | 字形个数，由[countText](arkts-arkgraphics2d-drawing-font-c.md#countText)获取，该参数为整数。 |
+| len | number | 是 | 字形个数，由[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取，该参数为整数。 |
 | points | common2D.Point[] | 是 | 点数组，用于指定每个字形的坐标，长度必须为len。 |
 | font | Font | 是 | 字型对象。 |
 
@@ -109,10 +93,6 @@ static makeFromPosText(text: string, len: int, points: common2D.Point[], font: F
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TextBlob-static makeFromPosText(text: string, len: int, points: common2D.Point[], font: Font): TextBlob | undefined--><!--Device-TextBlob-static makeFromPosText(text: string, len: int, points: common2D.Point[], font: Font): TextBlob | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -122,7 +102,7 @@ static makeFromPosText(text: string, len: int, points: common2D.Point[], font: F
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 绘制字形的文本内容。 |
-| len | int | 是 | 字形个数，由[countText](arkts-arkgraphics2d-drawing-font-c.md#countText)获取，该参数为整数。 |
+| len | int | 是 | 字形个数，由[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取，该参数为整数。 |
 | points | common2D.Point[] | 是 | 点数组，用于指定每个字形的坐标，长度必须为len。 |
 | font | Font | 是 | 字型对象。 |
 
@@ -147,10 +127,6 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 基于RunBuffer信息创建TextBlob对象。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-TextBlob-static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: common2D.Rect): TextBlob--><!--Device-TextBlob-static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: common2D.Rect): TextBlob-End-->
 
@@ -186,10 +162,6 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TextBlob-static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: common2D.Rect): TextBlob | undefined--><!--Device-TextBlob-static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: common2D.Rect): TextBlob | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -223,10 +195,6 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 根据指定的编码类型和字型，使用string类型的值创建TextBlob对象。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-TextBlob-static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBlob--><!--Device-TextBlob-static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBlob-End-->
 
@@ -262,10 +230,6 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TextBlob-static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBlob | undefined--><!--Device-TextBlob-static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBlob | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -299,10 +263,6 @@ uniqueID(): long
 获取该TextBlob对象的唯一非零标识符。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TextBlob-uniqueID(): long--><!--Device-TextBlob-uniqueID(): long-End-->
 

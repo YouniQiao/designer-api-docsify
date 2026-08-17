@@ -16,10 +16,6 @@ Stops BLE advertising.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -40,7 +36,7 @@ Stops BLE advertising.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -60,10 +56,6 @@ function stopAdvertising(advertisingId: int, callback: AsyncCallback<void>): voi
 Stops BLE advertising. Completely stop the advertising corresponding to the ID.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -92,7 +84,7 @@ Stops BLE advertising. Completely stop the advertising corresponding to the ID.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let manufactureValueBuffer = new Uint8Array(4);
@@ -169,10 +161,6 @@ Stops BLE advertising. Completely stop the advertising corresponding to the ID.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -205,7 +193,7 @@ Stops BLE advertising. Completely stop the advertising corresponding to the ID.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let manufactureValueBuffer = new Uint8Array(4);

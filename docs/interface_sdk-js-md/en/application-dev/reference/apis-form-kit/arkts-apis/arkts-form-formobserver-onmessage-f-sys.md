@@ -16,10 +16,6 @@ Message event listening in registered form. &lt;p&gt;This interface requires per
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 <!--Device-formObserver-function onMessage(observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function onMessage(observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
@@ -52,10 +48,6 @@ function onMessage(hostBundleName: string, observerCallback: Callback<formInfo.R
 Message event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 

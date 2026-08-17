@@ -4,10 +4,6 @@ Defines a data processor for reporting and managing events. You can customize pr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiAppEvent-interface Processor--><!--Device-hiAppEvent-interface Processor-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -30,10 +26,6 @@ Application ID. It is left empty by default. The length of the input string cann
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Processor-appId?: string--><!--Device-Processor-appId?: string-End-->
@@ -51,10 +43,6 @@ Event reporting threshold. When the number of events reaches the threshold, an e
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -74,10 +62,6 @@ Configuration ID for data processor. The input value must be greater than or equ
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Processor-configId?: int--><!--Device-Processor-configId?: int-End-->
@@ -95,10 +79,6 @@ Name of the data processor configuration, which can be loaded from the configura
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -118,10 +98,6 @@ Custom extended parameters. If the input parameter name and value do not meet th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Processor-customConfigs?: Record<string, string>--><!--Device-Processor-customConfigs?: Record<string, string>-End-->
@@ -139,10 +115,6 @@ Whether to enable the debug mode. The default value is **false**. The value **tr
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -162,10 +134,6 @@ Event description configuration array that can be reported by the data processor
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Processor-eventConfigs?: AppEventReportConfig[]--><!--Device-Processor-eventConfigs?: AppEventReportConfig[]-End-->
@@ -183,10 +151,6 @@ Name of a data processor. The value is string that contains a maximum of 256 cha
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -206,10 +170,6 @@ Whether to report an event when an application switches to the background. The d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Processor-onBackgroundReport?: boolean--><!--Device-Processor-onBackgroundReport?: boolean-End-->
@@ -227,10 +187,6 @@ Whether to report an event when the data processor starts. The default value is 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -250,10 +206,6 @@ Interval for event reporting, in seconds. The input value must be greater than o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Processor-periodReport?: int--><!--Device-Processor-periodReport?: int-End-->
@@ -272,10 +224,6 @@ Server location information. It is left empty by default. The length of the inpu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Processor-routeInfo?: string--><!--Device-Processor-routeInfo?: string-End-->
@@ -288,15 +236,11 @@ Server location information. It is left empty by default. The length of the inpu
 userIds?: string[]
 ```
 
-Name array of user IDs that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setUserId) API. The default value is an empty array. **Atomic service API**: This parameter can be used in atomic services since API version 11.
+Name array of user IDs that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setuserid) API. The default value is an empty array. **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -310,15 +254,11 @@ Name array of user IDs that can be reported by the data processor. **name** corr
 userProperties?: string[]
 ```
 
-Name array of user properties that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setUserProperty) API. The default value is an empty array. **Atomic service API**: This parameter can be used in atomic services since API version 11.
+Name array of user properties that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setuserproperty) API. The default value is an empty array. **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

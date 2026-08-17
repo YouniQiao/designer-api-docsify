@@ -16,11 +16,9 @@ Checks whether a UID belongs to this application.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isAppUid](arkts-arkts-process-processmanager-c.md#isAppUid)
+**Substitutes:** [isAppUid](arkts-arkts-process-processmanager-c.md#isappuid)
 
 <!--Device-process-function isAppUid(v: number): boolean--><!--Device-process-function isAppUid(v: number): boolean-End-->
 
@@ -38,7 +36,7 @@ Checks whether a UID belongs to this application.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the UID belongs to the application; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let result = process.isAppUid(688);

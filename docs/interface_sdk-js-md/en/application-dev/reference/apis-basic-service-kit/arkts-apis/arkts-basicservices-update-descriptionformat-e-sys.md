@@ -4,10 +4,6 @@ Enumerates description file formats.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export enum DescriptionFormat--><!--Device-update-export enum DescriptionFormat-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -24,10 +20,6 @@ Standard format. This format is applicable to scenarios where complete descripti
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DescriptionFormat-STANDARD = 0--><!--Device-DescriptionFormat-STANDARD = 0-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -43,10 +35,6 @@ SIMPLIFIED = 1
 Simple format. This format is applicable to scenarios where only simplified description is required.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DescriptionFormat-SIMPLIFIED = 1--><!--Device-DescriptionFormat-SIMPLIFIED = 1-End-->
 

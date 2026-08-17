@@ -4,13 +4,9 @@
 export type Rotation3 = Vec3
 ```
 
-3D rotation info as euler angles, the unit is radian.
+Rotation of an object in 3D space. The type is a three-dimensional vector in the unit of radian (rad). The value can be any value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export type Rotation3 = Vec3--><!--Device-unnamed-export type Rotation3 = Vec3-End-->
 

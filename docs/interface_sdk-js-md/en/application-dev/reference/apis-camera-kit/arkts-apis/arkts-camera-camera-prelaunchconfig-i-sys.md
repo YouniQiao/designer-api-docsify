@@ -4,10 +4,6 @@ Defines the camera prelaunch configuration. Currently, the configuration is used
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface PrelaunchConfig--><!--Device-camera-interface PrelaunchConfig-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -32,10 +28,6 @@ Activation time, in minutes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrelaunchConfig-activeTime?: int--><!--Device-PrelaunchConfig-activeTime?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -53,10 +45,6 @@ Camera device.
 **Type:** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrelaunchConfig-cameraDevice: CameraDevice--><!--Device-PrelaunchConfig-cameraDevice: CameraDevice-End-->
 
@@ -76,10 +64,6 @@ Type of the parameter used for prelaunch.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrelaunchConfig-restoreParamType?: RestoreParamType--><!--Device-PrelaunchConfig-restoreParamType?: RestoreParamType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -97,10 +81,6 @@ Setting parameter.
 **Type:** [SettingParam](arkts-camera-camera-settingparam-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrelaunchConfig-settingParam?: SettingParam--><!--Device-PrelaunchConfig-settingParam?: SettingParam-End-->
 

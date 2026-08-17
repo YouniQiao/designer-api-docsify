@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-unnamed-export interface SetStorageOptions--><!--Device-unnamed-export interface SetStorageOptions-End-->
@@ -21,8 +19,6 @@ Called when the execution is completed.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 
@@ -44,8 +40,6 @@ Called when the stored content fails to be modified.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
@@ -65,8 +59,6 @@ Index of the stored content to be modified. the value contains a maximum of 32 c
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 
@@ -88,8 +80,6 @@ Called when the stored content is modified successfully.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
@@ -109,8 +99,6 @@ Target storage content.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 

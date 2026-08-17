@@ -16,10 +16,6 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_USB_CONFIG
 
 <!--Device-usbManager-function getStringFromFunctions(funcs: FunctionType): string--><!--Device-usbManager-function getStringFromFunctions(funcs: FunctionType): string-End-->
@@ -59,10 +55,6 @@ function getStringFromFunctions(funcs: int): string
 Converts the numeric mask combination of a given USB function list to a string descriptor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USB_CONFIG
 

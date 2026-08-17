@@ -8,10 +8,6 @@ Describes the properties of the application that the permission to send notifica
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationSubscribe-export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData--><!--Device-notificationSubscribe-export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData-End-->
 
 **System capability:** SystemCapability.Notification.Notification

@@ -4,10 +4,6 @@ An **ImageData** object stores pixel data rendered on a canvas. > **NOTE：**> >
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ImageData--><!--Device-unnamed-declare class ImageData-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ constructor(width: number, height: number, data?: Uint8ClampedArray)
 Creates an **ImageData** object with the specified width, height, and color. If data is not defined, it is populated with a one-dimensional array of 0s.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,10 +44,6 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -73,7 +61,7 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 | width | number | Yes | Width of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
 | height | number | Yes | Height of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
 | data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.<br> If the value specified is **undefined**, **data** is **undefined**.<br> Default value: a one-dimensional array of all 0s |
-| unit | LengthMetricsUnit | No | Unit mode of the **ImageData** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).<br> Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT**. |
+| unit | LengthMetricsUnit | No | Unit mode of the **ImageData** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d).<br> Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT**. |
 
 ## data
 
@@ -86,10 +74,6 @@ A one-dimensional array of color values. The values range from 0 to 255.
 **Type:** Uint8ClampedArray
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -111,10 +95,6 @@ Actual height of the rectangle on the canvas. The unit is px.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -134,10 +114,6 @@ Actual width of the rectangle on the canvas. The unit is px. > **NOTE：**> > Th
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -7,7 +7,7 @@
 
 | Name | Description |
 | --- | --- |
-| [SecurityUIExtensionComponent](arkts-na-securityuiextensioncomponent-securityuiextensioncomponent-f-sys.md#SecurityUIExtensionComponent-(System-API)) | Defines SecurityUIExtensionComponent Component. |
+| [SecurityUIExtensionComponent](arkts-na-securityuiextensioncomponent-securityuiextensioncomponent-f-sys.md#securityuiextensioncomponent-system-api) | Defines SecurityUIExtensionComponent Component. |
 <!--DelEnd-->
 
 <!--Del-->

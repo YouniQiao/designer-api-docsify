@@ -4,10 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-taskpool-interface TaskResult--><!--Device-taskpool-interface TaskResult-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -23,10 +19,6 @@ error?: Error | Object
 **类型：** Error \| Object
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ result?: Object
 **类型：** Object
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

@@ -8,10 +8,6 @@ ContinueCallback registered for notify continue result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-distributedMissionManager-export type ContinueCallback = _ContinueCallback--><!--Device-distributedMissionManager-export type ContinueCallback = _ContinueCallback-End-->

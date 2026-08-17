@@ -25,6 +25,6 @@ import { LazyColumnLayoutAttribute } from 'LazyColumnLayoutAttribute';
 
 | Name | Description |
 | --- | --- |
-| [LazyColumnLayout](arkts-arkui-arkui-components-arklazycolumnlayout-con.md#LazyColumnLayout) | Defines the lazy column layout component. |
-| [LazyColumnLayoutInstance](arkts-arkui-arkui-components-arklazycolumnlayout-con.md#LazyColumnLayoutInstance) | Defines the lazy column layout component instance. |
+| [LazyColumnLayout](arkts-arkui-arkui-components-arklazycolumnlayout-con.md#lazycolumnlayout) | Defines the lazy column layout component. |
+| [LazyColumnLayoutInstance](arkts-arkui-arkui-components-arklazycolumnlayout-con.md#lazycolumnlayoutinstance) | Defines the lazy column layout component instance. |
 

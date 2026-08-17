@@ -1962,7 +1962,7 @@ Sets the **OH_AVMediaSource** to the AVPlayer.
 | Parameter | Description |
 | -- | -- |
 | OH_AVPlayer *player | Pointer to the OH_AVPlayer instance. |
-| [OH_AVMediaSource](capi-avmediasource-oh-avmediasource.md) *source | Media source. |
+| [OH_AVMediaSource](capi-avmedia-source-oh-avmediasource.md) *source | Media source. |
 
 **Returns**:
 

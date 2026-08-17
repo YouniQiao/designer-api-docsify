@@ -4,10 +4,6 @@ Defines the options for creating a **Collator** object. Since API version 9, the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intl-export interface CollatorOptions--><!--Device-intl-export interface CollatorOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -30,10 +26,6 @@ Whether case is taken into account for the locale's collation rules. The value c
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CollatorOptions-caseFirst?: string--><!--Device-CollatorOptions-caseFirst?: string-End-->
@@ -51,10 +43,6 @@ Collation rules for the locale. The value can be: **big5han**: Pinyin sorting fo
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Whether to ignore punctuation. The value **true** means to ignore punctuation, a
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CollatorOptions-ignorePunctuation?: boolean--><!--Device-CollatorOptions-ignorePunctuation?: boolean-End-->
@@ -95,10 +79,6 @@ Locale matching algorithm. The options are as follows: **lookup**: fuzzy match. 
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,10 +98,6 @@ Whether numeric sorting is used. The options are as follows: - **true**: Numeric
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CollatorOptions-numeric?: boolean--><!--Device-CollatorOptions-numeric?: boolean-End-->
@@ -140,10 +116,6 @@ Differences in the strings that lead to non-zero return values. The options are 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CollatorOptions-sensitivity?: string--><!--Device-CollatorOptions-sensitivity?: string-End-->
@@ -161,10 +133,6 @@ Purpose of comparison. The options are as follows: - **sort**: sorting. - **sear
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

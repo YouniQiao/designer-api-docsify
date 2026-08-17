@@ -4,10 +4,6 @@ Buffer对象是处理二进制数据的缓冲区。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-buffer-class Buffer--><!--Device-buffer-class Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ compare(
 比较当前Buffer对象与目标Buffer或Uint8Array对象，并返回在排序中的结果。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -60,7 +52,7 @@ compare(
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and &lt;= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -92,10 +84,6 @@ compare(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: int,      targetEnd?: int,      sourceStart?: int,      sourceEnd?: int    ): int--><!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: int,      targetEnd?: int,      sourceStart?: int,      sourceEnd?: int    ): int-End-->
@@ -124,7 +112,7 @@ compare(
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and &lt;= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -149,10 +137,6 @@ copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEn
 将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -181,7 +165,7 @@ copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEn
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -208,10 +192,6 @@ entries(): IterableIterator<[int, long]>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-entries(): IterableIterator<[int, long]>--><!--Device-Buffer-entries(): IterableIterator<[int, long]>-End-->
@@ -225,7 +205,7 @@ entries(): IterableIterator<[int, long]>
 | IterableIterator&lt;[number, number]&gt; | 包含key和value的迭代器，同时两者皆为number类型。<br>**适用版本：** 9 - 10 |
 | IterableIterator&lt;[int, long]&gt; | <br>**适用版本：** 11+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -257,10 +237,6 @@ equals(otherBuffer: Uint8Array | Buffer): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean--><!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean-End-->
@@ -279,7 +255,7 @@ equals(otherBuffer: Uint8Array | Buffer): boolean
 | --- | --- |
 | boolean | 相等则返回true，否则返回false。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -308,10 +284,6 @@ fill(
 使用value填充当前对象指定位置的数据，当value的长度小于需要填充的范围时会重复value进行填充，并返回填充后的Buffer对象。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -350,10 +322,6 @@ includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?:
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean--><!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean-End-->
@@ -383,10 +351,6 @@ indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: 
 返回当前对象中首次出现value的索引，如果不包含value，则返回-1。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -418,10 +382,6 @@ keys(): IterableIterator<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-keys(): IterableIterator<int>--><!--Device-Buffer-keys(): IterableIterator<int>-End-->
@@ -434,7 +394,7 @@ keys(): IterableIterator<int>
 | --- | --- |
 | IterableIterator&lt;int&gt; | 返回包含Buffer中每个字节值的迭代器。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -463,10 +423,6 @@ lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffse
 返回this实例中最后一次出现value的索引，如果对象不包含value，则返回-1。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -498,10 +454,6 @@ readBigInt64BE(offset?: int): bigint
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-readBigInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigInt64BE(offset?: int): bigint-End-->
@@ -526,7 +478,7 @@ readBigInt64BE(offset?: int): bigint
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -552,10 +504,6 @@ readBigInt64LE(offset?: int): bigint
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-readBigInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigInt64LE(offset?: int): bigint-End-->
@@ -580,7 +528,7 @@ readBigInt64LE(offset?: int): bigint
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -606,10 +554,6 @@ readBigUInt64BE(offset?: int): bigint
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-readBigUInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64BE(offset?: int): bigint-End-->
@@ -634,7 +578,7 @@ readBigUInt64BE(offset?: int): bigint
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -658,10 +602,6 @@ readBigUInt64LE(offset?: int): bigint
 从指定的`offset`处读取无符号的小端序64位整数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -687,7 +627,7 @@ readBigUInt64LE(offset?: int): bigint
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -713,10 +653,6 @@ readDoubleBE(offset?: int): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-readDoubleBE(offset?: int): double--><!--Device-Buffer-readDoubleBE(offset?: int): double-End-->
@@ -741,7 +677,7 @@ readDoubleBE(offset?: int): double
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -764,10 +700,6 @@ readDoubleLE(offset?: int): double
 从指定的`offset`处读取64位小端序双精度值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -793,7 +725,7 @@ readDoubleLE(offset?: int): double
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -816,10 +748,6 @@ readFloatBE(offset?: int): double
 从指定的`offset`处读取32位大端序浮点数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -845,7 +773,7 @@ readFloatBE(offset?: int): double
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -868,10 +796,6 @@ readFloatLE(offset?: int): double
 从指定的`offset`处读取32位小端序浮点数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -897,7 +821,7 @@ readFloatLE(offset?: int): double
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -920,10 +844,6 @@ readInt16BE(offset?: int): long
 从指定的`offset`处读取有符号的大端序16位整数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -949,7 +869,7 @@ readInt16BE(offset?: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -972,10 +892,6 @@ readInt16LE(offset?: int): long
 从指定的`offset`处读取有符号的小端序16位整数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1001,7 +917,7 @@ readInt16LE(offset?: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1024,10 +940,6 @@ readInt32BE(offset?: int): long
 从指定的`offset`处读取有符号的大端序32位整数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1053,7 +965,7 @@ readInt32BE(offset?: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1076,10 +988,6 @@ readInt32LE(offset?: int): long
 从指定的`offset`处读取有符号的小端序32位整数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1105,7 +1013,7 @@ readInt32LE(offset?: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1128,10 +1036,6 @@ readInt8(offset?: int): long
 从指定的`offset`处读取有符号的8位整数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1157,7 +1061,7 @@ readInt8(offset?: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 1 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1182,10 +1086,6 @@ readIntBE(offset: int, byteLength: int): long
 从指定的`offset`处读取byteLength个字节，并将结果解释为支持最高48位精度的大端序、二进制补码有符号值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1212,7 +1112,7 @@ readIntBE(offset: int, byteLength: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1236,10 +1136,6 @@ readIntLE(offset: int, byteLength: int): long
 从指定的`offset`处读取`byteLength`个字节，并将结果解释为支持最高48位精度的小端序、二进制补码有符号值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1266,7 +1162,7 @@ readIntLE(offset: int, byteLength: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1289,10 +1185,6 @@ readUInt16BE(offset?: int): long
 从指定的`offset`处读取无符号的大端序16位整数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1318,7 +1210,7 @@ readUInt16BE(offset?: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1344,10 +1236,6 @@ readUInt16LE(offset?: int): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-readUInt16LE(offset?: int): long--><!--Device-Buffer-readUInt16LE(offset?: int): long-End-->
@@ -1372,7 +1260,7 @@ readUInt16LE(offset?: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1398,10 +1286,6 @@ readUInt32BE(offset?: int): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-readUInt32BE(offset?: int): long--><!--Device-Buffer-readUInt32BE(offset?: int): long-End-->
@@ -1426,7 +1310,7 @@ readUInt32BE(offset?: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1449,10 +1333,6 @@ readUInt32LE(offset?: int): long
 从指定的`offset`处的buf读取无符号的小端序32位整数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1478,7 +1358,7 @@ readUInt32LE(offset?: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1501,10 +1381,6 @@ readUInt8(offset?: int): long
 从指定的`offset`处读取8位无符号整型数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1530,7 +1406,7 @@ readUInt8(offset?: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 1 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1555,10 +1431,6 @@ readUIntBE(offset: int, byteLength: int): long
 从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号大端序整数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1585,7 +1457,7 @@ readUIntBE(offset: int, byteLength: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1608,10 +1480,6 @@ readUIntLE(offset: int, byteLength: int): long
 从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号小端序整数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1638,7 +1506,7 @@ readUIntLE(offset: int, byteLength: int): long
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1662,10 +1530,6 @@ subarray(start?: int, end?: int): Buffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-subarray(start?: int, end?: int): Buffer--><!--Device-Buffer-subarray(start?: int, end?: int): Buffer-End-->
@@ -1685,7 +1549,7 @@ subarray(start?: int, end?: int): Buffer
 | --- | --- |
 | [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回新的Buffer对象。当start &lt; 0或end &lt; 0时返回空Buffer。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1710,10 +1574,6 @@ swap16(): Buffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-swap16(): Buffer--><!--Device-Buffer-swap16(): Buffer-End-->
@@ -1732,7 +1592,7 @@ swap16(): Buffer
 | --- | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The buffer size must be a multiple of 16-bits |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1755,10 +1615,6 @@ swap32(): Buffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-swap32(): Buffer--><!--Device-Buffer-swap32(): Buffer-End-->
@@ -1777,7 +1633,7 @@ swap32(): Buffer
 | --- | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The buffer size must be a multiple of 32-bits |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1800,10 +1656,6 @@ swap64(): Buffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-swap64(): Buffer--><!--Device-Buffer-swap64(): Buffer-End-->
@@ -1822,7 +1674,7 @@ swap64(): Buffer
 | --- | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The buffer size must be a multiple of 64-bits |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1845,10 +1697,6 @@ toJSON(): Object
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-toJSON(): Object--><!--Device-Buffer-toJSON(): Object-End-->
@@ -1861,7 +1709,7 @@ toJSON(): Object
 | --- | --- |
 | Object | JSON对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1882,10 +1730,6 @@ toJSON(): jsonx.JsonElement
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-toJSON(): jsonx.JsonElement--><!--Device-Buffer-toJSON(): jsonx.JsonElement-End-->
@@ -1898,7 +1742,7 @@ toJSON(): jsonx.JsonElement
 | --- | --- |
 | jsonx.JsonElement | 新的JsonElement对象，包含此Buffer的内容。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1918,10 +1762,6 @@ toString(encoding?: string, start?: number, end?: number): string
 将当前对象中指定位置的数据转成指定编码格式的字符串并返回。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1943,7 +1783,7 @@ toString(encoding?: string, start?: number, end?: number): string
 | --- | --- |
 | string | 字符串。当start >= Buffer.length或start > end时返回空字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -1965,10 +1805,6 @@ toString(): string
 按照encoding指定的字符编码将buf解码为字符串。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1994,10 +1830,6 @@ toString(encoding?: BufferEncoding, start?: int, end?: int): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -2020,7 +1852,7 @@ toString(encoding?: BufferEncoding, start?: int, end?: int): string
 | --- | --- |
 | string | 解码后的字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2043,10 +1875,6 @@ values(): IterableIterator<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-values(): IterableIterator<long>--><!--Device-Buffer-values(): IterableIterator<long>-End-->
@@ -2059,7 +1887,7 @@ values(): IterableIterator<long>
 | --- | --- |
 | IterableIterator&lt;long&gt; | 迭代器。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2091,10 +1919,6 @@ write(str: string, offset?: int, length?: int, encoding?: string): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int--><!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int-End-->
@@ -2122,7 +1946,7 @@ write(str: string, offset?: int, length?: int, encoding?: string): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[offset/length]" is out of range. It must be >= 0 and &lt;= buf.length. Received value is: [offset/length] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2147,10 +1971,6 @@ writeBigInt64BE(value: bigint, offset?: int): int
 在Buffer对象的offset偏移处写入有符号的大端序64位BigInt型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2177,7 +1997,7 @@ writeBigInt64BE(value: bigint, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2197,10 +2017,6 @@ writeBigInt64LE(value: bigint, offset?: int): int
 在Buffer对象的offset偏移处写入有符号的小端序64位BigInt型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2227,7 +2043,7 @@ writeBigInt64LE(value: bigint, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2247,10 +2063,6 @@ writeBigUInt64BE(value: bigint, offset?: int): int
 在Buffer对象的offset偏移处写入无符号的大端序64位BigUInt型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2277,7 +2089,7 @@ writeBigUInt64BE(value: bigint, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2297,10 +2109,6 @@ writeBigUInt64LE(value: bigint, offset?: int): int
 在Buffer对象的offset偏移处写入无符号的小端序64位BigUInt型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2327,7 +2135,7 @@ writeBigUInt64LE(value: bigint, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2347,10 +2155,6 @@ writeDoubleBE(value: double, offset?: int): int
 在Buffer对象的offset偏移处写入大端序的64位双浮点型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2377,7 +2181,7 @@ writeDoubleBE(value: double, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2397,10 +2201,6 @@ writeDoubleLE(value: double, offset?: int): int
 在Buffer对象的offset偏移处写入小端序的64位双浮点型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2427,7 +2227,7 @@ writeDoubleLE(value: double, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2447,10 +2247,6 @@ writeFloatBE(value: double, offset?: int): int
 在Buffer对象的offset偏移处写入大端序的32位浮点型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2477,7 +2273,7 @@ writeFloatBE(value: double, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2497,10 +2293,6 @@ writeFloatLE(value: double, offset?: int): int
 在Buffer对象的offset偏移处写入小端序的32位浮点型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2527,7 +2319,7 @@ writeFloatLE(value: double, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4 . Received value is: [offset] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2547,10 +2339,6 @@ writeInt16BE(value: long, offset?: int): int
 在Buffer对象的offset偏移处写入大端序的16位有符号整型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2577,7 +2365,7 @@ writeInt16BE(value: long, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2597,10 +2385,6 @@ writeInt16LE(value: long, offset?: int): int
 在Buffer对象的offset偏移处写入小端序的16位有符号整型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2627,7 +2411,7 @@ writeInt16LE(value: long, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2647,10 +2431,6 @@ writeInt32BE(value: long, offset?: int): int
 在Buffer对象的offset偏移处写入大端序的32位有符号整型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2677,7 +2457,7 @@ writeInt32BE(value: long, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2697,10 +2477,6 @@ writeInt32LE(value: long, offset?: int): int
 在Buffer对象的offset偏移处写入小端序的32位有符号整型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2727,7 +2503,7 @@ writeInt32LE(value: long, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2747,10 +2523,6 @@ writeInt8(value: long, offset?: int): int
 在Buffer对象的offset偏移处写入8位有符号整型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2777,7 +2549,7 @@ writeInt8(value: long, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2800,10 +2572,6 @@ writeIntBE(value: long, offset: int, byteLength: int): int
 在Buffer对象的offset偏移处写入大端序的有符号数据，字节长度为byteLength。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2831,7 +2599,7 @@ writeIntBE(value: long, offset: int, byteLength: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2851,10 +2619,6 @@ writeIntLE(value: long, offset: int, byteLength: int): int
 在Buffer对象的offset偏移处写入小端序的有符号数据，字节长度为byteLength。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2882,7 +2646,7 @@ writeIntLE(value: long, offset: int, byteLength: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2902,10 +2666,6 @@ writeUInt16BE(value: long, offset?: int): int
 在Buffer对象的offset偏移处写入大端序的16位无符号整型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2932,7 +2692,7 @@ writeUInt16BE(value: long, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -2955,10 +2715,6 @@ writeUInt16LE(value: long, offset?: int): int
 在Buffer对象的offset偏移处写入小端序的16位无符号整型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2985,7 +2741,7 @@ writeUInt16LE(value: long, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3008,10 +2764,6 @@ writeUInt32BE(value: long, offset?: int): int
 在Buffer对象的offset偏移处写入大端序的32位无符号整型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3038,7 +2790,7 @@ writeUInt32BE(value: long, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3058,10 +2810,6 @@ writeUInt32LE(value: long, offset?: int): int
 在Buffer对象的offset偏移处写入小端序的32位无符号整型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3088,7 +2836,7 @@ writeUInt32LE(value: long, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3108,10 +2856,6 @@ writeUInt8(value: long, offset?: int): int
 在Buffer对象的offset偏移处写入8位无符号整型数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3138,7 +2882,7 @@ writeUInt8(value: long, offset?: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3168,10 +2912,6 @@ writeUIntBE(value: long, offset: int, byteLength: int): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int-End-->
@@ -3198,7 +2938,7 @@ writeUIntBE(value: long, offset: int, byteLength: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3218,10 +2958,6 @@ writeUIntLE(value: long, offset: int, byteLength: int): int
 在Buffer对象的offset偏移处写入小端序的无符号数据，字节长度为byteLength。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3249,7 +2985,7 @@ writeUIntLE(value: long, offset: int, byteLength: int): int
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -3272,10 +3008,6 @@ ArrayBuffer对象。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Buffer-buffer: ArrayBuffer--><!--Device-Buffer-buffer: ArrayBuffer-End-->
@@ -3288,15 +3020,11 @@ ArrayBuffer对象。
 byteOffset: number
 ```
 
-当前Buffer所在内存池的偏移量。<br>- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocUninitializedFromPool)创 建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。<br>- 当Buffer直接分配内存时（如使用 [alloc](arkts-arkts-buffer-alloc-f.md#alloc)），返回值为0。
+当前Buffer所在内存池的偏移量。<br>- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool)创 建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。<br>- 当Buffer直接分配内存时（如使用 [alloc](arkts-arkts-buffer-alloc-f.md#alloc)），返回值为0。
 
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3315,10 +3043,6 @@ Buffer对象的字节长度。
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -4,10 +4,6 @@ This module provides the capability of displaying ads, covering native, roll, sp
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare struct AdComponent--><!--Device-unnamed-declare struct AdComponent-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -28,10 +24,6 @@ A constructor used to create an **AdComponent** object.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdComponent-build(): void--><!--Device-AdComponent-build(): void-End-->
@@ -51,10 +43,6 @@ Application self-rendered ad style. The application self-rendered ad style is a 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AdComponent-@BuilderParam  adRenderer?: () => void--><!--Device-AdComponent-@BuilderParam  adRenderer?: () => void-End-->
@@ -72,10 +60,6 @@ Array of ad objects. NOTE: For non-roll ad types, the component only displays th
 **Type:** advertising.Advertisement[]
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -95,10 +79,6 @@ Ad display parameters.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AdComponent-displayOptions: advertising.AdDisplayOptions-End-->
@@ -116,10 +96,6 @@ Callback for ad status changes.
 **Type:** advertising.AdInteractionListener
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -139,10 +115,6 @@ Used to provide the playback status of roll ads externally. Set to 1 for playing
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

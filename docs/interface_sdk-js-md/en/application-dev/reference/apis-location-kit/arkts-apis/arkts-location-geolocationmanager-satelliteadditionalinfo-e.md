@@ -4,10 +4,6 @@ Enum for satellite additional information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export enum SatelliteAdditionalInfo--><!--Device-geoLocationManager-export enum SatelliteAdditionalInfo-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
@@ -21,10 +17,6 @@ SATELLITES_ADDITIONAL_INFO_NULL = 0
 Default value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_NULL = 0--><!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_NULL = 0-End-->
 
@@ -40,10 +32,6 @@ Ephemeris data exist.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_EPHEMERIS_DATA_EXIST = 1--><!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_EPHEMERIS_DATA_EXIST = 1-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
@@ -57,10 +45,6 @@ SATELLITES_ADDITIONAL_INFO_ALMANAC_DATA_EXIST = 2
 Almanac data exist.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_ALMANAC_DATA_EXIST = 2--><!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_ALMANAC_DATA_EXIST = 2-End-->
 
@@ -76,10 +60,6 @@ This satellite is being used in location fix.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_USED_IN_FIX = 4--><!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_USED_IN_FIX = 4-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
@@ -93,10 +73,6 @@ SATELLITES_ADDITIONAL_INFO_CARRIER_FREQUENCY_EXIST = 8
 Carrier frequency exist.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_CARRIER_FREQUENCY_EXIST = 8--><!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_CARRIER_FREQUENCY_EXIST = 8-End-->
 

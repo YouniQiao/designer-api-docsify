@@ -4,10 +4,6 @@ Defines the options for implicitly creating an application account.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appAccount-interface CreateAccountImplicitlyOptions--><!--Device-appAccount-interface CreateAccountImplicitlyOptions-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -30,10 +26,6 @@ Authentication type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CreateAccountImplicitlyOptions-authType?: string--><!--Device-CreateAccountImplicitlyOptions-authType?: string-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -50,10 +42,6 @@ Custom parameter object. By default, no value is passed in.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, RecordData>--><!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -69,10 +57,6 @@ Required labels. By default, no value is passed in.
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>--><!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>-End-->
 

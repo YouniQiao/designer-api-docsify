@@ -2,13 +2,11 @@
 
 Defines event info for long press gesture.
 
-**Inheritance/Implementation:** LongPressGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md#BaseGestureEvent)
+**Inheritance/Implementation:** LongPressGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md#basegestureevent)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export interface LongPressGestureEvent--><!--Device-unnamed-export interface LongPressGestureEvent-End-->
 
@@ -26,9 +24,7 @@ Indicates whether an event is triggered repeatedly.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

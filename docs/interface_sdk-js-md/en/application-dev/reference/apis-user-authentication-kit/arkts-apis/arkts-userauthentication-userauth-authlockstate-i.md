@@ -4,10 +4,6 @@ Enumerates the lockout status of an identity authentication type. This API is us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-userAuth-interface AuthLockState--><!--Device-userAuth-interface AuthLockState-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -30,10 +26,6 @@ Whether the authentication is locked. The value **true** indicates that the auth
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AuthLockState-isLocked: boolean--><!--Device-AuthLockState-isLocked: boolean-End-->
@@ -46,15 +38,11 @@ Whether the authentication is locked. The value **true** indicates that the auth
 lockoutDuration: int
 ```
 
-Remaining lockout duration, in milliseconds. This parameter is valid only when **isLocked** is set to **true**. If the authenticator is permanently locked, the value is [PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#PERMANENT_LOCKOUT_DURATION), indicating that the authenticator has been permanently locked. The user needs to perform PIN authentication before using the authentication type again. If the authenticator is temporarily locked, the value is the actual remaining lockout duration. After the lockout period ends, the user can continue to attempt authentication.
+Remaining lockout duration, in milliseconds. This parameter is valid only when **isLocked** is set to **true**. If the authenticator is permanently locked, the value is [PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#permanentlockoutduration), indicating that the authenticator has been permanently locked. The user needs to perform PIN authentication before using the authentication type again. If the authenticator is temporarily locked, the value is the actual remaining lockout duration. After the lockout period ends, the user can continue to attempt authentication.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -73,10 +61,6 @@ Number of remaining attempts before the authentication is locked. The maximum va
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

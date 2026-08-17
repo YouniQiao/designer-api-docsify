@@ -16,10 +16,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare namespace charger--><!--Device-unnamed-declare namespace charger-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core

@@ -4,9 +4,7 @@ Represents a time zone and city combination item.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export interface TimeZoneCityItem--><!--Device-i18n-export interface TimeZoneCityItem-End-->
 
@@ -26,9 +24,7 @@ City display name in the system locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-TimeZoneCityItem-cityDisplayName: string--><!--Device-TimeZoneCityItem-cityDisplayName: string-End-->
 
@@ -48,9 +44,7 @@ City ID, for example, "Shanghai".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-TimeZoneCityItem-cityId: string--><!--Device-TimeZoneCityItem-cityId: string-End-->
 
@@ -70,9 +64,7 @@ Latitude info of time zone city in decimal degrees (°).
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,9 +86,7 @@ Longitude info of time zone city in decimal degrees (°).
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,9 +108,7 @@ Offset of the time zone ID. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-TimeZoneCityItem-offset: int--><!--Device-TimeZoneCityItem-offset: int-End-->
 
@@ -140,9 +128,7 @@ Fixed offset of the time zone ID. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-TimeZoneCityItem-rawOffset?: int--><!--Device-TimeZoneCityItem-rawOffset?: int-End-->
 
@@ -162,9 +148,7 @@ Time zone display name in the system locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-TimeZoneCityItem-zoneDisplayName: string--><!--Device-TimeZoneCityItem-zoneDisplayName: string-End-->
 
@@ -184,9 +168,7 @@ Time zone ID, for example, "Asia/Shanghai".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-TimeZoneCityItem-zoneId: string--><!--Device-TimeZoneCityItem-zoneId: string-End-->
 

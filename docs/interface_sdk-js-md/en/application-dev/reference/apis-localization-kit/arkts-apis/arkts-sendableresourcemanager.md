@@ -1,12 +1,8 @@
 # @ohos.sendableResourceManager
 
-This module provides the mutual conversion between [Resource](arkts-localization-sendableresourcemanager-resource-t.md#Resource) objects and [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md#SendableResource) objects. `SendableResource` implements the [ISendable](../../../arkts-utils/arkts-sendable.md#isendable) API and supports cross-thread transmission. After cross-thread transmission, the `SendableResource` object can be converted back to a `Resource` object and passed as a parameter to the [resource management](arkts-resourcemanager.md#@ohos.resourceManager) APIs to obtain resources.
+This module provides the mutual conversion between [Resource](arkts-localization-sendableresourcemanager-resource-t.md#resource) objects and [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md#sendableresource) objects. `SendableResource` implements the [ISendable](../../../arkts-utils/arkts-sendable.md#isendable) API and supports cross-thread transmission. After cross-thread transmission, the `SendableResource` object can be converted back to a `Resource` object and passed as a parameter to the [resource management](arkts-resourcemanager.md#ohosresourcemanager) APIs to obtain resources.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace sendableResourceManager--><!--Device-unnamed-declare namespace sendableResourceManager-End-->
 
@@ -24,8 +20,8 @@ import { sendableResourceManager } from 'sendableResourceManager';
 
 | Name | Description |
 | --- | --- |
-| [resourceToSendableResource](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md#resourceToSendableResource) | Converts a `Resource` object to a `SendableResource` object that can be used for cross-thread transmission. |
-| [sendableResourceToResource](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md#sendableResourceToResource) | Converts a `SendableResource` object transmitted across threads to a `Resource` object. |
+| [resourceToSendableResource](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md#resourcetosendableresource) | Converts a `Resource` object to a `SendableResource` object that can be used for cross-thread transmission. |
+| [sendableResourceToResource](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md#sendableresourcetoresource) | Converts a `SendableResource` object transmitted across threads to a `Resource` object. |
 
 ### Types
 

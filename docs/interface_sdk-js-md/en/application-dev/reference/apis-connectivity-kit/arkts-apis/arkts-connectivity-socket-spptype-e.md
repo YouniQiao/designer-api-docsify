@@ -4,10 +4,6 @@ The enum of SPP type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-socket-enum SppType--><!--Device-socket-enum SppType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ SPP_RFCOMM = 0
 RFCOMM
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-SppType-SPP_RFCOMM = 0--><!--Device-SppType-SPP_RFCOMM = 0-End-->
 
@@ -40,10 +32,6 @@ L2CAP of the BR type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-SppType-SPP_L2CAP = 1--><!--Device-SppType-SPP_L2CAP = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -57,10 +45,6 @@ SPP_L2CAP_BLE = 2
 L2CAP of the BLE type
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-SppType-SPP_L2CAP_BLE = 2--><!--Device-SppType-SPP_L2CAP_BLE = 2-End-->
 

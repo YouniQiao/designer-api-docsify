@@ -4,10 +4,6 @@ Describes the window movement configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface MoveConfiguration--><!--Device-window-interface MoveConfiguration-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -29,10 +25,6 @@ Target display ID. The value must be an integer. If a non-integer is passed in, 
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

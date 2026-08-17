@@ -11,9 +11,7 @@ export declare function SelectionContainer(content_?: CustomBuilder): SelectionC
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -31,7 +29,7 @@ export declare function SelectionContainer(content_?: CustomBuilder): SelectionC
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |
+| [SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |  |
 
 
 ## SelectionContainer
@@ -47,9 +45,7 @@ export declare function SelectionContainer(
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,11 +57,11 @@ export declare function SelectionContainer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | CustomBuilderT&lt;[SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md)&gt; | 是 | 设置SelectionContainer属性的回调。 |
+| style | CustomBuilderT&lt;[SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md)&gt; | 是 | 设置SelectionContainer属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 

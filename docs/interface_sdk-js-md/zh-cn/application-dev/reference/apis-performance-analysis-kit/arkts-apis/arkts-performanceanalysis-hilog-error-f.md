@@ -10,10 +10,6 @@ function error(domain: number, tag: string, format: string, ...args: any[]): voi
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hilog-function error(domain: number, tag: string, format: string, ...args: any[]): void--><!--Device-hilog-function error(domain: number, tag: string, format: string, ...args: any[]): void-End-->
@@ -29,7 +25,7 @@ function error(domain: number, tag: string, format: string, ...args: any[]): voi
 | format | string | 是 | 格式字符串，用于日志的格式化输出。格式字符串中可以设置多个参数，参数需要包含参数类型、隐私标识。<br/>隐私标识分为{public}和{private}，缺省为{ private}。标识{public}的内容明文输出，标识{private}的内容以&lt;private&gt;过滤回显。 |
 | args | any[] | 是 | 与格式字符串format对应的可变长度参数列表。参数数目、参数类型必须与格式字符串中的标识一一对应。 |
 
-## 示例
+**示例**
 
 输出一条ERROR信息，格式字符串为。其中变参为明文显示的字符串；为隐私的整型数。
 
@@ -53,10 +49,6 @@ function error(domain: int, tag: string, format: string, ...args: RecordData[]):
 打印ERROR级别的日志。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

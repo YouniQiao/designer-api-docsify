@@ -16,10 +16,6 @@ Compares two **Buffer** objects. This API is used for sorting **Buffer** objects
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 | 1--><!--Device-buffer-function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 | 1-End-->
@@ -39,7 +35,7 @@ Compares two **Buffer** objects. This API is used for sorting **Buffer** objects
 | --- | --- |
 | -1 | Returns **0** if **buf1** is the same as **buf2**. <br>Returns **1** if **buf1** comes after **buf2** when sorted. <br>Returns **-1** if **buf1** comes before **buf2** when sorted. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -62,10 +58,6 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): int
 Compares buf1 to buf2
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

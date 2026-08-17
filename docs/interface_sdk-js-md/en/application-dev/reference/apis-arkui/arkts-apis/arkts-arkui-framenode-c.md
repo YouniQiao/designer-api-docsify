@@ -1,12 +1,8 @@
 # FrameNode
 
-**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md#NodeController) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md#RenderNode) to another FrameNode.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; > **NOTE：**> > - **FrameNode** is not available in DevEco Studio Previewer. > > - FrameNodes cannot be dragged. > > - FrameNode objects do not support JSON serialization. > > - When the API of the [FrameNode](#FrameNode) object is invoked in the scenario of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runScopedTask) API of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to specify the UI context. For details, see > [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance). > > - In the FrameNode APIs, only the mandatory parameters of the Optional type can be set to null or > undefined.
+**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md#nodecontroller) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md#rendernode) to another FrameNode.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; > **NOTE：**> > - **FrameNode** is not available in DevEco Studio Previewer. > > - FrameNodes cannot be dragged. > > - FrameNode objects do not support JSON serialization. > > - When the API of the [FrameNode](#framenode) object is invoked in the scenario of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) API of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to specify the UI context. For details, see > [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance). > > - In the FrameNode APIs, only the mandatory parameters of the Optional type can be set to null or > undefined.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class FrameNode--><!--Device-unnamed-export class FrameNode-End-->
 
@@ -18,13 +14,9 @@
 addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent<T>): void
 ```
 
-Adds component content. The current node must be modifiable, which means the return value of [isModifiable](#isModifiable) must be **true**. If the node is not modifiable, an exception is thrown.
+Adds component content. The current node must be modifiable, which means the return value of [isModifiable](#ismodifiable) must be **true**. If the node is not modifiable, an exception is thrown.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,10 +48,6 @@ Adds the polymorphic style states supported by the component.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -76,7 +64,7 @@ Adds the polymorphic style states supported by the component.
 | statesChangeHandler | [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | Yes | Callback invoked when the state changes. |
 | excludeInner | boolean | No | Whether to disable the default state style processing. Default value: **false**. <br> **true**: Disable default state style processing. **false**: Enable default state style processing. |
 
-## Examples
+**Examples**
 
 See Example of Setting and Deleting a Polymorphic Style State.
 
@@ -89,10 +77,6 @@ adoptChild(child: FrameNode): void
 Adopts the target node as an affiliated node. The adopted node must not have an existing parent. This API is not used to add a node as a child node. Instead, it only allows the node to receive lifecycle callbacks of the corresponding child node.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -114,7 +98,7 @@ Adopts the target node as an affiliated node. The adopted node must not have an 
 | [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be disposed." |
 | [100026](../errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
 
-## Examples
+**Examples**
 
 See Example of Adopting a Node as an Affiliate.
 
@@ -124,13 +108,9 @@ See Example of Adopting a Node as an Affiliate.
 appendChild(node: FrameNode): void
 ```
 
-Appends a child node to the end of this FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **appendChild** is called, [typeNode](#typeNode) validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](#typeNode).
+Appends a child node to the end of this FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **appendChild** is called, [typeNode](#typenode) validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](#typenode).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -153,7 +133,7 @@ Appends a child node to the end of this FrameNode. If this FrameNode is not modi
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 | [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted. "<br>**Applicable version:** 22 and later |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -166,10 +146,6 @@ cancelAnimations(properties: AnimationPropertyType[]): boolean
 Cancels all animations for specified properties on the FrameNode. This API executes synchronously in the node's owning thread and blocks until cancellation completes. Upon successful cancellation, the node's property values revert to their current display state at the time of cancellation.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -191,7 +167,7 @@ Cancels all animations for specified properties on the FrameNode. This API execu
 | --- | --- |
 | boolean | Animation cancellation status. <br>**true**: successful. <br>**false**: failed. <br>The possible causes are as follows: <br>Additional notes: <br> 1. The node has been released (the [dispose]{ |
 
-## Examples
+**Examples**
 
 See Example of Creating and Canceling an Animation.
 
@@ -204,10 +180,6 @@ clearChildren(): void
 Clears all child nodes of this FrameNode. If this FrameNode is not modifiable, an exception is thrown.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -223,7 +195,7 @@ Clears all child nodes of this FrameNode. If this FrameNode is not modifiable, a
 | --- | --- |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -236,10 +208,6 @@ constructor(uiContext: UIContext)
 A constructor used to create a FrameNode.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -264,10 +232,6 @@ convertPosition(position: Position, targetNode: FrameNode): Position
 Converts a coordinate point from this node's coordinate system to the target node's coordinate system.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -297,7 +261,7 @@ Converts a coordinate point from this node's coordinate system to the target nod
 | [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'targetNode' is invalid: it cannot be disposed." |
 | [100024](../errorcode-node.md#100024-no-common-ancestor-node-between-nodes) | The current FrameNode and the target FrameNode do not have a common ancestor node. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Entry
@@ -378,10 +342,6 @@ Converts the coordinates of a point from the coordinate system of the window whe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -409,7 +369,7 @@ Converts the coordinates of a point from the coordinate system of the window whe
 | [100026](../errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
 | [100028](../errorcode-node.md#100028-current-node-is-not-on-the-main-node-tree) | The current FrameNode is not on the main tree. |
 
-## Examples
+**Examples**
 
 For details, see Example of Converting Between Local Coordinates and Window Coordinates.
 
@@ -422,10 +382,6 @@ convertPositionToWindow(positionByLocal: Position): Position
 Converts the coordinates of a point from the coordinate system of the current node to the coordinate system of the window where the current node is located.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -454,7 +410,7 @@ Converts the coordinates of a point from the coordinate system of the current no
 | [100026](../errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
 | [100028](../errorcode-node.md#100028-current-node-is-not-on-the-main-node-tree) | The current FrameNode is not on the main tree. |
 
-## Examples
+**Examples**
 
 For details, see Example of Converting Between Local Coordinates and Window Coordinates.
 
@@ -467,10 +423,6 @@ createAnimation(property: AnimationPropertyType, startValue: Optional<number[]>,
 Creates a property animation for the FrameNode.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -495,7 +447,7 @@ Creates a property animation for the FrameNode.
 | --- | --- |
 | boolean | Whether the animation is created successfully. <br>Returns **true** if the animation is created successfully. If an end callback is specified in the animation parameters, it will be invoked upon animation completion. <br>Returns **false** if the animation creation fails. The end callback will not be invoked even if specified. <br>Possible failure reasons: <br>Additional notes: <br> 1. The node has been released (the [dispose]{ |
 
-## Examples
+**Examples**
 
 See Example of Creating and Canceling an Animation.
 
@@ -508,10 +460,6 @@ static createFrameNodes(uiContext: UIContext, count: number): FrameNode[]
 Creates a specified number of FrameNodes in batches and returns a FrameNode array.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -540,13 +488,9 @@ Creates a specified number of FrameNodes in batches and returns a FrameNode arra
 dispose(): void
 ```
 
-Immediately releases the reference to the underlying FrameNode entity. > **NOTE：**> > - After the **dispose** API is called, the FrameNode object no longer corresponds to any entity FrameNode. In > this case, attempts to call certain query APIs, such as [getMeasuredSize](#getMeasuredSize) and > [getLayoutPosition](#getLayoutPosition), will result in a JS crash in the application. > > - To check whether the current FrameNode object corresponds to an entity FrameNode, you can use > [getUniqueId](#getUniqueId) API. A **UniqueId** value greater than 0 indicates that the object is > associated with an entity FrameNode.
+Immediately releases the reference to the underlying FrameNode entity. > **NOTE：**> > - After the **dispose** API is called, the FrameNode object no longer corresponds to any entity FrameNode. In > this case, attempts to call certain query APIs, such as [getMeasuredSize](#getmeasuredsize) and > [getLayoutPosition](#getlayoutposition), will result in a JS crash in the application. > > - To check whether the current FrameNode object corresponds to an entity FrameNode, you can use > [getUniqueId](#getuniqueid) API. A **UniqueId** value greater than 0 indicates that the object is > associated with an entity FrameNode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -556,7 +500,7 @@ Immediately releases the reference to the underlying FrameNode entity. > **NOTE�
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, BuilderNode } from '@kit.ArkUI';
@@ -654,10 +598,6 @@ Traverses down the tree and recursively releases the subtree with this node as t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -666,7 +606,7 @@ Traverses down the tree and recursively releases the subtree with this node as t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, BuilderNode } from '@kit.ArkUI';
@@ -855,10 +795,6 @@ Obtains the child node in the specified position of this node.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -879,7 +815,7 @@ Obtains the child node in the specified position of this node.
 | --- | --- |
 | [FrameNode](arkts-arkui-framenode-c.md) | Child node obtained. If the FrameNode does not contain the specified child node, null is returned. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -892,10 +828,6 @@ getChild(index: number, expandMode?: ExpandMode): FrameNode | null
 Obtains a child node at a specified index from this FrameNode, with optional support for specifying the expansion mode of the child node.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -918,7 +850,7 @@ Obtains a child node at a specified index from this FrameNode, with optional sup
 | --- | --- |
 | [FrameNode](arkts-arkui-framenode-c.md) | Child node obtained. If the FrameNode does not contain the specified child node, null is returned. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations in the LazyForEach Scenario.
 
@@ -931,10 +863,6 @@ getChildrenCount(): number
 Obtains the number of child nodes of this FrameNode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -950,7 +878,7 @@ Obtains the number of child nodes of this FrameNode.
 | --- | --- |
 | number | Number of child nodes of the current FrameNode. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -963,10 +891,6 @@ getChildrenCount(countMode?: ChildrenCountMode): int
 Obtains the number of child nodes of this FrameNode based on the specified counting mode.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -998,10 +922,6 @@ Obtains the cross-language access options for this FrameNode. For example, for n
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -1016,7 +936,7 @@ Obtains the cross-language access options for this FrameNode. For example, for n
 | --- | --- |
 | [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) | Cross-ArkTS language access options. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1029,10 +949,6 @@ getCustomProperty(name: string): Object | undefined
 Obtains the component's custom property by its name.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1054,7 +970,7 @@ Obtains the component's custom property by its name.
 | --- | --- |
 | Object | Value of the custom property. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1067,10 +983,6 @@ getFirstChild(): FrameNode | null
 Obtains the first child node of this FrameNode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1086,7 +998,7 @@ Obtains the first child node of this FrameNode.
 | --- | --- |
 | [FrameNode](arkts-arkui-framenode-c.md) | First child node. If the FrameNode does not contain any child node, null is returned. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1099,10 +1011,6 @@ getFirstChildIndexWithoutExpand(): number
 Obtains the sequence number of the first child node of this node that is in the main node tree. The child node sequence numbers are calculated based on all child nodes.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1118,7 +1026,7 @@ Obtains the sequence number of the first child node of this node that is in the 
 | --- | --- |
 | number | Sequence number of the first child node of this node that is in the main node tree. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations in the LazyForEach Scenario.
 
@@ -1131,10 +1039,6 @@ getFrameNodeById(id: string): FrameNode | null
 Searches for all child nodes layer by layer from the current node (which is used as the root node) and returns the first node that matches the specified ID. The search sequence is as follows: Search for direct child nodes first, then level-2 child nodes, and so on. The search stops as soon as a matching node is found.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1162,13 +1066,9 @@ Searches for all child nodes layer by layer from the current node (which is used
 getFrameNodeByUniqueId(id: int): FrameNode | null
 ```
 
-Searches for and returns the child node with the specified unique ID (which can be obtained using the [getUniqueId](#getUniqueId) API) under the current node (which is used as the root node).
+Searches for and returns the child node with the specified unique ID (which can be obtained using the [getUniqueId](#getuniqueid) API) under the current node (which is used as the root node).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1200,10 +1100,6 @@ Obtains the position offset of this FrameNode relative to the global display, in
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1218,7 +1114,7 @@ Obtains the position offset of this FrameNode relative to the global display, in
 | --- | --- |
 | [Position](arkts-arkui-position-t.md) | Position offset of the node relative to the global display, in vp. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1231,10 +1127,6 @@ getId(): string
 Obtains the node ID set by the user, which is the same as the value of the component ID.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1250,7 +1142,7 @@ Obtains the node ID set by the user, which is the same as the value of the compo
 | --- | --- |
 | string | Node ID set by the user, which is the same as the value of the [component ID]{ |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1263,10 +1155,6 @@ getInspectorInfo(): Object
 Obtains the structure information of the node, which is consistent with what is found in DevEco Studio's built-in &lt; !--RP1--&gt;ArkUI Inspector &lt;!--RP1End--&gt;tool. > **NOTE：**> > The **getInspectorInfo** API is designed for debugging purposes to obtain information about all nodes. Frequent > calls to this API may cause performance degradation.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1282,7 +1170,7 @@ Obtains the structure information of the node, which is consistent with what is 
 | --- | --- |
 | Object | Structure information of the node. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1295,10 +1183,6 @@ getInteractionEventBindingInfo(eventType: EventQueryType): InteractionEventBindi
 Obtains the event binding information for the target node. Returns **undefined** if the specified interaction event type is not bound to the component node.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1320,7 +1204,7 @@ Obtains the event binding information for the target node. Returns **undefined**
 | --- | --- |
 | [InteractionEventBindingInfo](arkts-arkui-framenode-interactioneventbindinginfo-i.md) | Returns an **InteractionEventBindingInfo** object containing event binding details if the interaction event is bound to the current node; returns **undefined** otherwise. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1333,10 +1217,6 @@ getLastChildIndexWithoutExpand(): number
 Obtains the sequence number of the last child node of this node that is in the main node tree. The child node sequence numbers are calculated based on all child nodes.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1352,7 +1232,7 @@ Obtains the sequence number of the last child node of this node that is in the m
 | --- | --- |
 | number | Sequence number of the last child node of this node that is in the main node tree. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations in the LazyForEach Scenario.
 
@@ -1365,10 +1245,6 @@ getLayoutPosition(): Position
 Obtains the position offset of this FrameNode relative to the parent component after layout, in px. The offset is the result of the parent component's layout on this node; therefore, the **offset** attribute that takes effect after layout and the **position** attribute that does not participate in layout do not affect this offset value.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1384,7 +1260,7 @@ Obtains the position offset of this FrameNode relative to the parent component a
 | --- | --- |
 | [Position](arkts-arkui-position-t.md) | Position offset of the current FrameNode relative to the parent component after layout, in px. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1397,10 +1273,6 @@ getMeasuredSize(): Size
 Obtains the measured size of this FrameNode, in px.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1416,7 +1288,7 @@ Obtains the measured size of this FrameNode, in px.
 | --- | --- |
 | [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md) | Measured size of the node, in px. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1429,10 +1301,6 @@ getNextSibling(): FrameNode | null
 Obtains the next sibling node of this FrameNode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1448,7 +1316,7 @@ Obtains the next sibling node of this FrameNode.
 | --- | --- |
 | [FrameNode](arkts-arkui-framenode-c.md) | Next sibling node of the current FrameNode. If the FrameNode does not have the next sibling node, null is returned. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1461,10 +1329,6 @@ getNodePropertyValue(property: AnimationPropertyType): number[]
 Obtains the property value of the FrameNode.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1486,7 +1350,7 @@ Obtains the property value of the FrameNode.
 | --- | --- |
 | number[] | Current property value from the render node. The array length corresponds to the property type. <br>The return value format varies by property: <br>- An empty array (length 0) is returned if the node has been disposed, the [dispose]{ |
 
-## Examples
+**Examples**
 
 See Example of Creating and Canceling an Animation.
 
@@ -1499,10 +1363,6 @@ getNodeType(): string
 Obtains the type of the node. For built-in components, the node type corresponds to the component name. For example, the node type of the Button component is **Button**. For custom components that implement rendering, the node type is **__Common__**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1518,7 +1378,7 @@ Obtains the type of the node. For built-in components, the node type corresponds
 | --- | --- |
 | string | Type of the node. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1531,10 +1391,6 @@ getOpacity(): number
 Obtains the opacity of the node. The minimum value is 0, and the maximum value is 1.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1550,7 +1406,7 @@ Obtains the opacity of the node. The minimum value is 0, and the maximum value i
 | --- | --- |
 | number | Opacity of the node. Value range: [0, 1]. A larger value indicates lower opacity. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -1563,10 +1419,6 @@ getParent(): FrameNode | null
 Obtains the parent node of this FrameNode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1582,7 +1434,7 @@ Obtains the parent node of this FrameNode.
 | --- | --- |
 | [FrameNode](arkts-arkui-framenode-c.md) | Parent node of the current FrameNode. If the FrameNode does not contain a parent node, null is returned. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations and Example of Obtaining the Root Node.
 
@@ -1595,10 +1447,6 @@ getPositionToParent(): Position
 Obtains the position offset of this FrameNode relative to the parent component, in vp.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1614,7 +1462,7 @@ Obtains the position offset of this FrameNode relative to the parent component, 
 | --- | --- |
 | [Position](arkts-arkui-position-t.md) | Position offset of the node relative to the parent component, in vp. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, UIContext } from '@kit.ArkUI';
@@ -1689,10 +1537,6 @@ Obtains the position offset of a FrameNode relative to its drawing-enabled paren
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1707,7 +1551,7 @@ Obtains the position offset of a FrameNode relative to its drawing-enabled paren
 | --- | --- |
 | [Position](arkts-arkui-position-t.md) | Position offset of the node relative to the parent component, in vp. If other drawing attributes (such as **transform** and **translate**) are set, the return value may slightly deviate due to the precision of floating point numbers. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, UIContext } from '@kit.ArkUI';
@@ -1782,10 +1626,6 @@ Obtains the position offset of this FrameNode relative to the screen, in vp.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1800,7 +1640,7 @@ Obtains the position offset of this FrameNode relative to the screen, in vp.
 | --- | --- |
 | [Position](arkts-arkui-position-t.md) | Position offset of the node relative to the screen, in vp. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, UIContext } from '@kit.ArkUI';
@@ -1875,10 +1715,6 @@ Obtains the position offset of a FrameNode relative to the drawing-enabled scree
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1893,7 +1729,7 @@ Obtains the position offset of a FrameNode relative to the drawing-enabled scree
 | --- | --- |
 | [Position](arkts-arkui-position-t.md) | Position offset of the node relative to the screen, in vp. If other drawing attributes (such as **transform** and **translate**) are set, the return value may slightly deviate due to the precision of floating point numbers. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, UIContext } from '@kit.ArkUI';
@@ -1968,10 +1804,6 @@ Obtains the position offset of this FrameNode relative to the window, in vp.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1986,7 +1818,7 @@ Obtains the position offset of this FrameNode relative to the window, in vp.
 | --- | --- |
 | [Position](arkts-arkui-position-t.md) | Position offset of the node relative to the window, in vp. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, UIContext } from '@kit.ArkUI';
@@ -2060,10 +1892,6 @@ Obtains the position offset of a FrameNode relative to the drawing-enabled windo
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -2078,7 +1906,7 @@ Obtains the position offset of a FrameNode relative to the drawing-enabled windo
 | --- | --- |
 | [Position](arkts-arkui-position-t.md) | Position offset of the node relative to the window, in vp. If other drawing attributes (such as **transform** and **translate**) are set, the return value may slightly deviate due to the precision of floating point numbers. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, UIContext } from '@kit.ArkUI';
@@ -2152,10 +1980,6 @@ Obtains the previous sibling node of this FrameNode.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -2170,7 +1994,7 @@ Obtains the previous sibling node of this FrameNode.
 | --- | --- |
 | [FrameNode](arkts-arkui-framenode-c.md) | Previous sibling node of the current FrameNode. If the FrameNode does not have the previous sibling node, null is returned. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -2180,13 +2004,9 @@ See Example of Node Operations.
 getRenderNode(): RenderNode | null
 ```
 
-Obtains the [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md#RenderNode) held by the FrameNode.
+Obtains the [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md#rendernode) held by the FrameNode.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2202,7 +2022,7 @@ Obtains the [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md#Rende
 | --- | --- |
 | [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | RenderNode** instance. If the current FrameNode does not hold any RenderNode, **null** is returned. If the current FrameNode is a node created by a declarative component, **null** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode } from '@kit.ArkUI';
@@ -2248,10 +2068,6 @@ Obtains the system-assigned unique ID of the node.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -2266,7 +2082,7 @@ Obtains the system-assigned unique ID of the node.
 | --- | --- |
 | number | System-assigned unique ID of the node. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -2279,10 +2095,6 @@ getUserConfigBorderWidth(): Edges<LengthMetrics>
 Obtains the border width set by the user.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2298,7 +2110,7 @@ Obtains the border width set by the user.
 | --- | --- |
 | [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Border width set by the user. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -2311,10 +2123,6 @@ getUserConfigMargin(): Edges<LengthMetrics>
 Obtains the margin set by the user.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2330,7 +2138,7 @@ Obtains the margin set by the user.
 | --- | --- |
 | [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Margin set by the user. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -2343,10 +2151,6 @@ getUserConfigPadding(): Edges<LengthMetrics>
 Obtains the padding set by the user.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2362,7 +2166,7 @@ Obtains the padding set by the user.
 | --- | --- |
 | [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Padding set by the user. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -2375,10 +2179,6 @@ getUserConfigSize(): SizeT<LengthMetrics>
 Obtains the width and height set by the user.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2394,7 +2194,7 @@ Obtains the width and height set by the user.
 | --- | --- |
 | [SizeT](../../apis-na/arkts-apis/arkts-na-graphics-sizet-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Width and height set by the user. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -2407,10 +2207,6 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 Inserts a child node after the specified child node of this FrameNode. If this FrameNode is not modifiable, an exception is thrown.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2434,7 +2230,7 @@ Inserts a child node after the specified child node of this FrameNode. If this F
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 | [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted. "<br>**Applicable version:** 22 and later |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -2447,10 +2243,6 @@ invalidate(): void
 Invalidates this FrameNode to trigger a re-rendering of the self-drawing content.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2470,10 +2262,6 @@ Forces immediate node property updates in this frame. By default, property modif
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -2482,7 +2270,7 @@ Forces immediate node property updates in this frame. By default, property modif
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 Starting from API version 21, when dynamically switching between nodes using if/else statements, you can call invalidateAttributes during node creation to trigger immediate attribute updates, preventing visual flickering during component switching.
 
@@ -2596,10 +2384,6 @@ Obtains whether the node is mounted to the main node tree.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -2614,7 +2398,7 @@ Obtains whether the node is mounted to the main node tree.
 | --- | --- |
 | boolean | Whether the node is mounted to the main node tree. <br>The value **true** means that the node is mounted to the main node tree, and **false** means the opposite. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -2627,10 +2411,6 @@ isClipToFrame(): boolean
 Checks whether the node is clipped to the component area. This API returns **true** after the [dispose](#dispose) API is called to release the reference to the FrameNode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2646,7 +2426,7 @@ Checks whether the node is clipped to the component area. This API returns **tru
 | --- | --- |
 | boolean | Whether the node is clipped to the component area. <br>The value **true** means that the node is clipped to the component area, and **false** means the opposite. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -2659,10 +2439,6 @@ isDisposed(): boolean
 Checks whether this FrameNode object has released its reference to its backend entity node. Frontend nodes maintain references to corresponding backend entity nodes. After a node calls the **dispose** API to release this reference, subsequent API calls may cause crashes or return default values. This API facilitates validation of node validity prior to operations, thereby mitigating risks in scenarios where calls after disposal are required.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2678,7 +2454,7 @@ Checks whether this FrameNode object has released its reference to its backend e
 | --- | --- |
 | boolean | Whether the reference to the backend node is released. The value **true** means that the reference to backend node is released, and **false** means the opposite. |
 
-## Examples
+**Examples**
 
 See FrameNode Validity Check Example.
 
@@ -2691,10 +2467,6 @@ isInRenderState(): boolean
 Checks whether this node is in render state. A node is considered to be in render state when its corresponding RenderNode is present in the render tree.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2710,7 +2482,7 @@ Checks whether this node is in render state. A node is considered to be in rende
 | --- | --- |
 | boolean | Whether the node is in render state. <br>**true**: The node is in render state. **false**: The node is not in render state. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -2787,10 +2559,6 @@ Checks whether this FrameNode is modifiable.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -2805,7 +2573,7 @@ Checks whether this FrameNode is modifiable.
 | --- | --- |
 | boolean | Whether this FrameNode is modifiable. <br>The value **true** means that the FrameNode is modifiable, and **false** means the opposite. <br>Returns **false** if the node is a system component proxy node in a [custom component node](../../../ui/arkts-user-defined-node.md#custom-component-node-framenode) or the node has been [disposed]{ |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -2818,10 +2586,6 @@ isOnMainTree(): boolean
 Queries whether a node is mounted to the main node tree.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2843,7 +2607,7 @@ Queries whether a node is mounted to the main node tree.
 | --- | --- |
 | [100026](../errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, UIContext, typeNode } from '@kit.ArkUI';
@@ -3374,10 +3138,6 @@ Returns a flag indicating whether the current FrameNode was obtained through dyn
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -3402,10 +3162,6 @@ Obtains whether the node is visible. > **NOTE：**> > The visibility of a node i
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -3420,7 +3176,7 @@ Obtains whether the node is visible. > **NOTE：**> > The visibility of a node i
 | --- | --- |
 | boolean | Whether the node is visible. <br>The value **true** means that the node is visible, and **false** means the opposite. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -3430,13 +3186,9 @@ See Example of Node Operations.
 layout(position: Position): void
 ```
 
-Lays out this FrameNode, specifying the layout positions for the FrameNode and its child nodes. If the layout method is overridden, the overridden method is called. It is recommended that this API be called in [onLayout](#onLayout).
+Lays out this FrameNode, specifying the layout positions for the FrameNode and its child nodes. If the layout method is overridden, the overridden method is called. It is recommended that this API be called in [onLayout](#onlayout).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3452,7 +3204,7 @@ Lays out this FrameNode, specifying the layout positions for the FrameNode and i
 | --- | --- | --- | --- |
 | position | [Position](arkts-arkui-position-t.md) | Yes | Position information used in layout. |
 
-## Examples
+**Examples**
 
 See Example of Customizing a Node.
 
@@ -3462,13 +3214,9 @@ See Example of Customizing a Node.
 measure(constraint: LayoutConstraint): void
 ```
 
-Measures this FrameNode and calculates its size based on the layout constraints of the parent container. If the measurement method is overridden, the overridden method is called. It is recommended that this API be called in [onMeasure](#onMeasure).
+Measures this FrameNode and calculates its size based on the layout constraints of the parent container. If the measurement method is overridden, the overridden method is called. It is recommended that this API be called in [onMeasure](#onmeasure).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3484,7 +3232,7 @@ Measures this FrameNode and calculates its size based on the layout constraints 
 | --- | --- | --- | --- |
 | constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | Parent container layout constraints used for measurement. |
 
-## Examples
+**Examples**
 
 See Example of Customizing a Node.
 
@@ -3494,13 +3242,9 @@ See Example of Customizing a Node.
 moveTo(targetParent: FrameNode, index?: number): void
 ```
 
-Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](#typeNode), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](#typeNode). > **NOTE：**> > Currently, only the following types of [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md#TypedFrameNode) are supported for the movement > operations: [Stack](arkts-arkui-typenode-stack-t.md#Stack), [XComponent](arkts-arkui-typenode-xcomponent-t.md#XComponent). This API does not work for > other node types. > > This API only supports [BuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#BuilderNode) with root components of these types: > Stack, XComponent, > EmbeddedComponent. This API does not work for other > component types.
+Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](#typenode), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](#typenode). > **NOTE：**> > Currently, only the following types of [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md#typedframenode) are supported for the movement > operations: [Stack](arkts-arkui-typenode-stack-t.md#stack), [XComponent](arkts-arkui-typenode-xcomponent-t.md#xcomponent). This API does not work for > other node types. > > This API only supports [BuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#buildernode) with root components of these types: > Stack, XComponent, > EmbeddedComponent. This API does not work for other > component types.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3524,7 +3268,7 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 | [100027](../errorcode-node.md#100027-the-current-node-has-been-adopted-as-a-child-node) | The current node has been adopted.<br>**Applicable version:** 22 and later |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -3534,13 +3278,9 @@ See Example of Node Operations.
 onDraw?(context: DrawContext): void
 ```
 
-Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering. Note: The Canvas provided in the [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md#DrawContext) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
+Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering. Note: The Canvas provided in the [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md#drawcontext) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3556,7 +3296,7 @@ Implements custom drawing for the FrameNode. This API overrides the default draw
 | --- | --- | --- | --- |
 | context | [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md) | Yes | Graphics drawing context. The self-drawing area cannot exceed the component's own size. |
 
-## Examples
+**Examples**
 
 See Example of Customizing a Node.
 
@@ -3569,10 +3309,6 @@ onLayout(position: Position): void
 Called when this FrameNode needs to determine its layout. This API provides custom layout and overrides the default layout method. It can be used to specify how the FrameNode and its child nodes are positioned and sized within the layout.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3588,7 +3324,7 @@ Called when this FrameNode needs to determine its layout. This API provides cust
 | --- | --- | --- | --- |
 | position | [Position](arkts-arkui-position-t.md) | Yes | Position information used in layout. |
 
-## Examples
+**Examples**
 
 See Example of Customizing a Node.
 
@@ -3601,10 +3337,6 @@ onMeasure(constraint: LayoutConstraint): void
 Called when this FrameNode needs to determine its size. This API provides custom measurement and overrides the default measurement method.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3620,7 +3352,7 @@ Called when this FrameNode needs to determine its size. This API provides custom
 | --- | --- | --- | --- |
 | constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | Layout constraints used by the component for measurement. |
 
-## Examples
+**Examples**
 
 See Example of Customizing a Node.
 
@@ -3634,10 +3366,6 @@ Triggers child component recycling in global reuse scenarios and fully releases 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -3646,7 +3374,7 @@ Triggers child component recycling in global reuse scenarios and fully releases 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 See Example of Reusing and Recycling Nodes.
 
@@ -3659,10 +3387,6 @@ removeAdoptedChild(child: FrameNode): void
 Removes a previously-adopted affiliated node.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -3684,7 +3408,7 @@ Removes a previously-adopted affiliated node.
 | [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be null." |
 | [100026](../errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
 
-## Examples
+**Examples**
 
 See Example of Adopting a Node as an Affiliate.
 
@@ -3697,10 +3421,6 @@ removeChild(node: FrameNode): void
 Deletes the specified child node from this FrameNode. If this FrameNode is not modifiable, an exception is thrown.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3722,7 +3442,7 @@ Deletes the specified child node from this FrameNode. If this FrameNode is not m
 | --- | --- |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -3735,10 +3455,6 @@ removeSupportedUIStates(uiStates: number): void
 Removes the state processing registration from the component.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3754,7 +3470,7 @@ Removes the state processing registration from the component.
 | --- | --- | --- | --- |
 | uiStates | number | Yes | UI states to be removed. <br>Multiple states can be specified simultaneously using bitwise OR operations, for example, **targetUIStates = UIState.PRESSED  \|  UIState.FOCUSED**. |
 
-## Examples
+**Examples**
 
 See Example of Setting and Deleting a Polymorphic Style State.
 
@@ -3768,10 +3484,6 @@ Triggers child component reuse in global reuse scenarios to recycle FrameNode ba
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -3780,7 +3492,7 @@ Triggers child component reuse in global reuse scenarios to recycle FrameNode ba
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 See Example of Reusing and Recycling Nodes.
 
@@ -3790,13 +3502,9 @@ See Example of Reusing and Recycling Nodes.
 setCrossLanguageOptions(options: CrossLanguageOptions): void
 ```
 
-Sets the cross-language access options for this FrameNode. For example, for nodes created using ArkTS, this API can set whether non-ArkTS languages are allowed to set the attributes of these nodes. Since API version 26.0.0, this API can set whether non-ArkTS languages are allowed to perform operations on the component tree. If the current FrameNode is not modifiable or does not support setting cross-language access options, an exception will be thrown. > **NOTE：**> > Currently, the cross-ArkTS language access option can only be configured for the following components: > [Scroll](arkts-arkui-typenode-scroll-t.md#Scroll), [Swiper](arkts-arkui-typenode-swiper-t.md#Swiper), [List](arkts-arkui-typenode-list-t.md#List), > [ListItem](arkts-arkui-typenode-listitem-t.md#ListItem), [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md#ListItemGroup), > [WaterFlow](arkts-arkui-typenode-waterflow-t.md#WaterFlow), [FlowItem](arkts-arkui-typenode-flowitem-t.md#FlowItem), [Grid](arkts-arkui-typenode-grid-t.md#Grid), > [GridItem](arkts-arkui-typenode-griditem-t.md#GridItem), [TextInput](arkts-arkui-typenode-textinput-t.md#TextInput), [TextArea](arkts-arkui-typenode-textarea-t.md#TextArea), > [Column](arkts-arkui-typenode-column-t.md#Column), [Row](arkts-arkui-typenode-row-t.md#Row), [Stack](arkts-arkui-typenode-stack-t.md#Stack), > [Flex](arkts-arkui-typenode-flex-t.md#Flex), [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md#RelativeContainer), > [Progress](arkts-arkui-typenode-progress-t.md#Progress), [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md#LoadingProgress), > [Image](arkts-arkui-typenode-image-t.md#Image), [Button](arkts-arkui-typenode-button-t.md#Button), [CheckBox](arkts-arkui-typenode-checkbox-t.md#Checkbox), > [Radio](arkts-arkui-typenode-radio-t.md#Radio), [Slider](arkts-arkui-typenode-slider-t.md#Slider), [Toggle](arkts-arkui-typenode-toggle-t.md#Toggle), and > [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md#TypedFrameNode) of the [XComponent](arkts-arkui-typenode-xcomponent-t.md#XComponent) type.
+Sets the cross-language access options for this FrameNode. For example, for nodes created using ArkTS, this API can set whether non-ArkTS languages are allowed to set the attributes of these nodes. Since API version 26.0.0, this API can set whether non-ArkTS languages are allowed to perform operations on the component tree. If the current FrameNode is not modifiable or does not support setting cross-language access options, an exception will be thrown. > **NOTE：**> > Currently, the cross-ArkTS language access option can only be configured for the following components: > [Scroll](arkts-arkui-typenode-scroll-t.md#scroll), [Swiper](arkts-arkui-typenode-swiper-t.md#swiper), [List](arkts-arkui-typenode-list-t.md#list), > [ListItem](arkts-arkui-typenode-listitem-t.md#listitem), [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md#listitemgroup), > [WaterFlow](arkts-arkui-typenode-waterflow-t.md#waterflow), [FlowItem](arkts-arkui-typenode-flowitem-t.md#flowitem), [Grid](arkts-arkui-typenode-grid-t.md#grid), > [GridItem](arkts-arkui-typenode-griditem-t.md#griditem), [TextInput](arkts-arkui-typenode-textinput-t.md#textinput), [TextArea](arkts-arkui-typenode-textarea-t.md#textarea), > [Column](arkts-arkui-typenode-column-t.md#column), [Row](arkts-arkui-typenode-row-t.md#row), [Stack](arkts-arkui-typenode-stack-t.md#stack), > [Flex](arkts-arkui-typenode-flex-t.md#flex), [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md#relativecontainer), > [Progress](arkts-arkui-typenode-progress-t.md#progress), [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md#loadingprogress), > [Image](arkts-arkui-typenode-image-t.md#image), [Button](arkts-arkui-typenode-button-t.md#button), [CheckBox](arkts-arkui-typenode-checkbox-t.md#checkbox), > [Radio](arkts-arkui-typenode-radio-t.md#radio), [Slider](arkts-arkui-typenode-slider-t.md#slider), [Toggle](arkts-arkui-typenode-toggle-t.md#toggle), and > [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md#typedframenode) of the [XComponent](arkts-arkui-typenode-xcomponent-t.md#xcomponent) type.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3818,7 +3526,7 @@ Sets the cross-language access options for this FrameNode. For example, for node
 | --- | --- |
 | [100022](../errorcode-node.md#100022-crosslanguage-common-attribute-configuration-not-supported) | The FrameNode cannot be set whether to support cross-language common attribute setting. |
 
-## Examples
+**Examples**
 
 See Example of Node Operations.
 
@@ -3831,10 +3539,6 @@ setLayoutPosition(position: Position): void
 Sets the position of this FrameNode after layout. The default unit is PX.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3850,7 +3554,7 @@ Sets the position of this FrameNode after layout. The default unit is PX.
 | --- | --- | --- | --- |
 | position | [Position](arkts-arkui-position-t.md) | Yes | Position of the FrameNode after layout. |
 
-## Examples
+**Examples**
 
 See Example of Customizing a Node.
 
@@ -3863,10 +3567,6 @@ setMeasuredSize(size: Size): void
 Sets the measured size of this FrameNode. The default unit is PX. If the configured width or height values are negative, they are automatically set to 0.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3882,7 +3582,7 @@ Sets the measured size of this FrameNode. The default unit is PX. If the configu
 | --- | --- | --- | --- |
 | size | [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md) | Yes | Measured size of the FrameNode. |
 
-## Examples
+**Examples**
 
 See Example of Customizing a Node.
 
@@ -3896,10 +3596,6 @@ Marks this FrameNode as needing layout, so that it will be relaid out in the nex
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -3908,7 +3604,7 @@ Marks this FrameNode as needing layout, so that it will be relaid out in the nex
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 See Example of Customizing a Node.
 

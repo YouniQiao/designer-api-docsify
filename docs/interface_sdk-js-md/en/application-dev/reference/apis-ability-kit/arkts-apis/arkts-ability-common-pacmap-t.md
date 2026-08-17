@@ -8,10 +8,6 @@ Defines the container of basic data types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** 
 - API version 11 and later: This API can be used in both the stage model and FA model.
 

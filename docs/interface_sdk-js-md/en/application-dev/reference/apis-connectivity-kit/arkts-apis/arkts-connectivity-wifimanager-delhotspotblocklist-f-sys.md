@@ -16,10 +16,6 @@ Delete the station from block list, the station can access the hotspot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
 
 <!--Device-wifiManager-function delHotspotBlockList(stationInfo: StationInfo): void--><!--Device-wifiManager-function delHotspotBlockList(stationInfo: StationInfo): void-End-->
@@ -44,7 +40,7 @@ Delete the station from block list, the station can access the hotspot.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
 | [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

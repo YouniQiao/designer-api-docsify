@@ -10,10 +10,6 @@ function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-sendableRelationalStore-function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket--><!--Device-sendableRelationalStore-function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -37,7 +33,7 @@ function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const asset1: sendableRelationalStore.NonSendableAsset = {

@@ -16,10 +16,6 @@ Sets the authorization information of a continuous task.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_BACKGROUND_TASK_STATE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -45,7 +41,7 @@ Sets the authorization information of a continuous task.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

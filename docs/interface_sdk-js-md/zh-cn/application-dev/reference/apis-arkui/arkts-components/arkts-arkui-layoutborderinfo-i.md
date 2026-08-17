@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** Measurable/Layoutable
@@ -25,8 +23,6 @@ borderWidth: EdgeWidths
 **类型：** EdgeWidths
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 10
 
@@ -50,8 +46,6 @@ margin: Margin
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** getMargin
@@ -73,8 +67,6 @@ padding: Padding
 **类型：** Padding
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 10
 

@@ -16,10 +16,6 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-function createIncrementalSource(buf: ArrayBuffer): ImageSource | undefined--><!--Device-image-function createIncrementalSource(buf: ArrayBuffer): ImageSource | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -47,10 +43,6 @@ function createIncrementalSource(buf: ArrayBuffer,
 Creates an ImageSource instance based on the buffer in incremental.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createIncrementalSource(buf: ArrayBuffer,       options?: SourceOptions): ImageSource | undefined--><!--Device-image-function createIncrementalSource(buf: ArrayBuffer,       options?: SourceOptions): ImageSource | undefined-End-->
 

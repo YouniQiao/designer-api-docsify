@@ -16,10 +16,6 @@ Obtains the type of the SIM card installed in a specified slot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-function getCardType(slotId: int, callback: AsyncCallback<CardType>): void--><!--Device-sim-function getCardType(slotId: int, callback: AsyncCallback<CardType>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -42,7 +38,7 @@ Obtains the type of the SIM card installed in a specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,10 +59,6 @@ function getCardType(slotId: int): Promise<CardType>
 Obtains the type of the SIM card installed in a specified slot.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sim-function getCardType(slotId: int): Promise<CardType>--><!--Device-sim-function getCardType(slotId: int): Promise<CardType>-End-->
 
@@ -95,7 +87,7 @@ Obtains the type of the SIM card installed in a specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

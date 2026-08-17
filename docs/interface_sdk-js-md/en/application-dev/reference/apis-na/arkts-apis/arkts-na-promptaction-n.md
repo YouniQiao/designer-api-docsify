@@ -4,9 +4,7 @@ Defines promptAction
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -20,8 +18,8 @@ Defines promptAction
 
 | Name | Description |
 | --- | --- |
-| [openToast](arkts-na-promptaction-opentoast-f.md#openToast) | Displays the notification text. |
-| [closeToast](arkts-na-promptaction-closetoast-f.md#closeToast) | Close the notification text. |
+| [openToast](arkts-na-promptaction-opentoast-f.md#opentoast) | Displays the notification text. |
+| [closeToast](arkts-na-promptaction-closetoast-f.md#closetoast) | Close the notification text. |
 
 ### Classes
 

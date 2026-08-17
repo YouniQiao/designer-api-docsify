@@ -1,12 +1,8 @@
 # ReferenceErrorConstructor
 
-**Inheritance/Implementation:** ReferenceErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md#ErrorConstructor)
+**Inheritance/Implementation:** ReferenceErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md#errorconstructor)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface ReferenceErrorConstructor--><!--Device-unnamed-interface ReferenceErrorConstructor-End-->
 
@@ -17,10 +13,6 @@ new(message?: string): ReferenceError
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReferenceErrorConstructor-new(message?: string): ReferenceError--><!--Device-ReferenceErrorConstructor-new(message?: string): ReferenceError-End-->
 
@@ -43,10 +35,6 @@ new(message?: string): ReferenceError
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReferenceErrorConstructor-(message?: string): ReferenceError--><!--Device-ReferenceErrorConstructor-(message?: string): ReferenceError-End-->
 
@@ -71,10 +59,6 @@ readonly prototype: ReferenceError
 **Type:** [ReferenceError](arkts-na-lib-es5-referenceerror-i.md)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReferenceErrorConstructor-readonly prototype: ReferenceError--><!--Device-ReferenceErrorConstructor-readonly prototype: ReferenceError-End-->
 

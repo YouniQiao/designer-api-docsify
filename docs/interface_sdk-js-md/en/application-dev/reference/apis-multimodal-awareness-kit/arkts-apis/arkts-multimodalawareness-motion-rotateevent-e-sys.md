@@ -4,10 +4,6 @@ Enum for rotate event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-motion-export enum RotateEvent--><!--Device-motion-export enum RotateEvent-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
@@ -23,10 +19,6 @@ UNCHANGED = -1
 Indicates the device has rotated, but the movement is insufficient to change the current orientation. The orientation remains the same as before.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Indicates the device is upright.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RotateEvent-UPRIGHT = 0--><!--Device-RotateEvent-UPRIGHT = 0-End-->
@@ -67,10 +55,6 @@ LEFT = 1
 Indicates the device is rotated left.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ Indicates the device is inverted.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RotateEvent-INVERTED = 2--><!--Device-RotateEvent-INVERTED = 2-End-->
@@ -111,10 +91,6 @@ RIGHT = 3
 Indicates the device is rotated right.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,11 +16,9 @@ Sets whether to enable distributed notification on this device. This API uses an
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDistributedEnabled](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md#setDistributedEnabled)(enable: boolean, deviceType: string)
+**Substitutes:** [setDistributedEnabled](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md#setdistributedenabled)(enable: boolean, deviceType: string)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -50,7 +48,7 @@ Sets whether to enable distributed notification on this device. This API uses an
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -77,11 +75,9 @@ Sets whether to enable distributed notification on this device. This API uses a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDistributedEnabled](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md#setDistributedEnabled)(enable: boolean, deviceType: string)
+**Substitutes:** [setDistributedEnabled](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md#setdistributedenabled)(enable: boolean, deviceType: string)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -116,7 +112,7 @@ Sets whether to enable distributed notification on this device. This API uses a 
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

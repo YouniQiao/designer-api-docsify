@@ -4,8 +4,6 @@ Customize spring properties.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 22
 
 <!--Device-unnamed-declare class SpringProp--><!--Device-unnamed-declare class SpringProp-End-->
@@ -23,8 +21,6 @@ constructor(mass: number, stiffness: number, damping: number)
 Constructor parameters
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 22
 

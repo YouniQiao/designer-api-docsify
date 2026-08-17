@@ -1,14 +1,10 @@
 # RichEditorStyledStringController
 
-Represents the controller of the **RichEditor** component constructed using the styled string. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController).
+Represents the controller of the **RichEditor** component constructed using the styled string. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#richeditorbasecontroller).
 
-**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController) and implements StyledStringController
+**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#richeditorbasecontroller) and implements StyledStringController
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class RichEditorStyledStringController--><!--Device-unnamed-declare class RichEditorStyledStringController-End-->
 
@@ -23,10 +19,6 @@ getSelection(): RichEditorRange
 Obtains the current selection range of the **RichEditor** component.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Obtains the styled string displayed in the **RichEditor** component.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -76,13 +64,9 @@ Obtains the styled string displayed in the **RichEditor** component.
 onContentChanged(listener: StyledStringChangedListener): void
 ```
 
-Registers the callback for the text content change. This callback is triggered only when the text content is changed by backend programs, and is not triggered when [setStyledString](#setStyledString) is called.
+Registers the callback for the text content change. This callback is triggered only when the text content is changed by backend programs, and is not triggered when [setStyledString](#setstyledstring) is called.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,10 +92,6 @@ Sets the styled string displayed in the **RichEditor** component. > **NOTE：**>
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -124,5 +104,5 @@ Sets the styled string displayed in the **RichEditor** component. > **NOTE：**>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | StyledString | Yes | Styled string.<br>**NOTE：**<br>The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md#MutableStyledString) of **StyledString** can also serve as the argument. |
+| styledString | StyledString | Yes | Styled string.<br>**NOTE：**<br>The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md#mutablestyledstring) of **StyledString** can also serve as the argument. |
 

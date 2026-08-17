@@ -4,10 +4,6 @@ Enumerates the resolutions used when a conflict occurs during data insertion or 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-enum ConflictResolution--><!--Device-relationalStore-enum ConflictResolution-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -21,10 +17,6 @@ ON_CONFLICT_NONE = 0
 No operation is performed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConflictResolution-ON_CONFLICT_NONE = 0--><!--Device-ConflictResolution-ON_CONFLICT_NONE = 0-End-->
 
@@ -40,10 +32,6 @@ Abort the SQL statement and roll back the current transaction.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConflictResolution-ON_CONFLICT_ROLLBACK = 1--><!--Device-ConflictResolution-ON_CONFLICT_ROLLBACK = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -57,10 +45,6 @@ ON_CONFLICT_ABORT = 2
 Abort the current SQL statement and revert any changes made by the current SQL statement. However, the changes made by the previous SQL statement in the same transaction are retained and the transaction remains active.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConflictResolution-ON_CONFLICT_ABORT = 2--><!--Device-ConflictResolution-ON_CONFLICT_ABORT = 2-End-->
 
@@ -76,10 +60,6 @@ Abort the current SQL statement. The **FAIL** resolution does not revert previou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConflictResolution-ON_CONFLICT_FAIL = 3--><!--Device-ConflictResolution-ON_CONFLICT_FAIL = 3-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -94,10 +74,6 @@ Skip the rows that contain constraint violations and continue to process the sub
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConflictResolution-ON_CONFLICT_IGNORE = 4--><!--Device-ConflictResolution-ON_CONFLICT_IGNORE = 4-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -111,10 +87,6 @@ ON_CONFLICT_REPLACE = 5
 Delete pre-existing rows that cause the constraint violation before inserting or updating the current row, and continue to execute the command normally.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConflictResolution-ON_CONFLICT_REPLACE = 5--><!--Device-ConflictResolution-ON_CONFLICT_REPLACE = 5-End-->
 

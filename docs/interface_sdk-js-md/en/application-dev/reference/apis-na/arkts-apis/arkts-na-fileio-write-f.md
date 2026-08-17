@@ -14,9 +14,7 @@ Writes data to a file and returns the number of bytes written. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function write(  fd: int,  buffer: ArrayBuffer | string,  options?: WriteOptions): Promise<long>--><!--Device-fileIo-function write(  fd: int,  buffer: ArrayBuffer | string,  options?: WriteOptions): Promise<long>-End-->
 
@@ -28,7 +26,7 @@ Writes data to a file and returns the number of bytes written. This API uses a p
 | --- | --- | --- | --- |
 | fd | int | Yes | FD of the file. |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-na-file-fs-writeoptions-i.md) | No | The options are as follows: <br> - **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. Bydefault, data is written from the current position. <br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default valueis the buffer length.<br> - **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported currently. |
+| options | [WriteOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows: <br> - **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. Bydefault, data is written from the current position. <br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default valueis the buffer length.<br> - **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported currently. |
 
 **Return value:**
 
@@ -64,9 +62,7 @@ Writes data to a file and returns the number of bytes written. This API uses an 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function write(fd: int, buffer: ArrayBuffer | string, callback: AsyncCallback<long>): void--><!--Device-fileIo-function write(fd: int, buffer: ArrayBuffer | string, callback: AsyncCallback<long>): void-End-->
 
@@ -113,9 +109,7 @@ Writes data to a file. Write options (such as the offset position and length of 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function write(  fd: int,  buffer: ArrayBuffer | string,  options: WriteOptions,  callback: AsyncCallback<long>): void--><!--Device-fileIo-function write(  fd: int,  buffer: ArrayBuffer | string,  options: WriteOptions,  callback: AsyncCallback<long>): void-End-->
 
@@ -127,7 +121,7 @@ Writes data to a file. Write options (such as the offset position and length of 
 | --- | --- | --- | --- |
 | fd | int | Yes | FD of the file. |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-na-file-fs-writeoptions-i.md) | Yes | The options are as follows: <br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. Bydefault, data is written from the current position. <br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default valueis the buffer length. <br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is**'utf-8'**, which is the only value supported currently. |
+| options | [WriteOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-writeoptions-i.md) | Yes | The options are as follows: <br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. Bydefault, data is written from the current position. <br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default valueis the buffer length. <br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is**'utf-8'**, which is the only value supported currently. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
 
 **Error codes:**

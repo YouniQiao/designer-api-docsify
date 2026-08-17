@@ -1,10 +1,8 @@
 # HuksHandle
 
-huks Handle结构体。 > **说明：** > > 从API version 9开始废弃，建议使用[HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md#HuksSessionHandle)替代。
+huks Handle结构体。 > **说明：** > > 从API version 9开始废弃，建议使用[HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md#hukssessionhandle)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -26,8 +24,6 @@ errorCode: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-HuksHandle-errorCode: number--><!--Device-HuksHandle-errorCode: number-End-->
@@ -46,8 +42,6 @@ handle: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 <!--Device-HuksHandle-handle: number--><!--Device-HuksHandle-handle: number-End-->
@@ -65,8 +59,6 @@ token?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 

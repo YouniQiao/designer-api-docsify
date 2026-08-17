@@ -16,10 +16,6 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 <!--Device-formHost-function requestForm(formId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function requestForm(formId: string, callback: AsyncCallback<void>): void-End-->
@@ -58,10 +54,6 @@ function requestForm(formId: string): Promise<void>
 Requests a widget update. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

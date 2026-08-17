@@ -4,10 +4,6 @@ Indicates the info of the rtt event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface RttEventInfo--><!--Device-call-export interface RttEventInfo-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -32,10 +28,6 @@ Indicates the id of rtt.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RttEventInfo-callId: int--><!--Device-RttEventInfo-callId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -54,10 +46,6 @@ Indicates the type of rtt event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RttEventInfo-eventType: int--><!--Device-RttEventInfo-eventType: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -75,10 +63,6 @@ Indicates the reason of rtt event.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RttEventInfo-reason: int--><!--Device-RttEventInfo-reason: int-End-->
 

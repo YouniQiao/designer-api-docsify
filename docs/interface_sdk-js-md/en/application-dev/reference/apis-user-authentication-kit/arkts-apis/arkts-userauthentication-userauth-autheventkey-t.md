@@ -8,8 +8,6 @@ Defines the keyword of the authentication event type. It is used as a parameter 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
 <!--Device-userAuth-type AuthEventKey = 'result' | 'tip'--><!--Device-userAuth-type AuthEventKey = 'result' | 'tip'-End-->

@@ -4,10 +4,6 @@ Supported skip intervals definition
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-enum SkipIntervals--><!--Device-avSession-enum SkipIntervals-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -21,10 +17,6 @@ SECONDS_10 = 10
 10 seconds
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SkipIntervals-SECONDS_10 = 10--><!--Device-SkipIntervals-SECONDS_10 = 10-End-->
 
@@ -40,10 +32,6 @@ SECONDS_15 = 15
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SkipIntervals-SECONDS_15 = 15--><!--Device-SkipIntervals-SECONDS_15 = 15-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -57,10 +45,6 @@ SECONDS_30 = 30
 30 seconds
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SkipIntervals-SECONDS_30 = 30--><!--Device-SkipIntervals-SECONDS_30 = 30-End-->
 

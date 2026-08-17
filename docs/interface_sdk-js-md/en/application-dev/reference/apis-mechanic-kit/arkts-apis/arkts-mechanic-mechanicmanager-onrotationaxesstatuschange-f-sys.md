@@ -16,10 +16,6 @@ Register a listener for axis state changes. The status of the rotation axis chan
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-function onRotationAxesStatusChange(callback: Callback<RotationAxesStateChangeInfo>): void--><!--Device-mechanicManager-function onRotationAxesStatusChange(callback: Callback<RotationAxesStateChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Mechanic.Core

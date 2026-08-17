@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface AsyncIterator--><!--Device-unnamed-interface AsyncIterator-End-->
 
 ## next
@@ -15,10 +11,6 @@ next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-AsyncIterator-next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>--><!--Device-AsyncIterator-next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>-End-->
 
@@ -42,10 +34,6 @@ return?(value?: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TRetu
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-AsyncIterator-return?(value?: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn>>--><!--Device-AsyncIterator-return?(value?: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn>>-End-->
 
 **Parameters:**
@@ -67,10 +55,6 @@ throw?(e?: any): Promise<IteratorResult<T, TReturn>>
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-AsyncIterator-throw?(e?: any): Promise<IteratorResult<T, TReturn>>--><!--Device-AsyncIterator-throw?(e?: any): Promise<IteratorResult<T, TReturn>>-End-->
 

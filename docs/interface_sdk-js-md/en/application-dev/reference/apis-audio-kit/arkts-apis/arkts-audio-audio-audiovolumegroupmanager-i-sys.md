@@ -1,12 +1,8 @@
 # AudioVolumeGroupManager
 
-This interface implements volume management for an audio group. Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getVolumeGroupManager) to obtain an AudioVolumeGroupManager instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 9.
+This interface implements volume management for an audio group. Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) to obtain an AudioVolumeGroupManager instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
 
@@ -27,10 +23,6 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 Adjusts system volume by step for target volume type. This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -57,7 +49,7 @@ Adjusts system volume by step for target volume type. This method uses an asynch
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -80,10 +72,6 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 Adjusts system volume by step for target volume type. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -115,7 +103,7 @@ Adjusts system volume by step for target volume type. This method uses a promise
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -136,10 +124,6 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 Adjusts system volume by step, volume type is decided by system. This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -165,7 +149,7 @@ Adjusts system volume by step, volume type is decided by system. This method use
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -189,10 +173,6 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 Adjusts system volume by step, volume type is decided by system. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -223,7 +203,7 @@ Adjusts system volume by step, volume type is decided by system. This method use
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -244,10 +224,6 @@ getActiveVolumeTypeSync(uid: int): AudioVolumeType
 Obtains the active volume type in the calling moment. This method returns in sync mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-getActiveVolumeTypeSync(uid: int): AudioVolumeType--><!--Device-AudioVolumeGroupManager-getActiveVolumeTypeSync(uid: int): AudioVolumeType-End-->
 
@@ -275,7 +251,7 @@ Obtains the active volume type in the calling moment. This method returns in syn
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let uid: number = 20010041; // Application ID.
@@ -292,10 +268,6 @@ isPersistentMicMute(): boolean
 Checks whether the persistent microphone status is muted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MICROPHONE_CONTROL
 
@@ -318,7 +290,7 @@ Checks whether the persistent microphone status is muted.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let value: boolean = audioVolumeGroupManager.isPersistentMicMute();
@@ -333,10 +305,6 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 Mutes a stream. This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -354,7 +322,7 @@ Mutes a stream. This method uses an asynchronous callback to return the result.
 | mute | boolean | Yes | Mute status to set. The value true means to mute the stream, and false means the opposite. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -378,10 +346,6 @@ Mutes a stream. This method uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
@@ -403,7 +367,7 @@ Mutes a stream. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
@@ -420,10 +384,6 @@ setMicMute(mute: boolean): Promise<void>
 Mutes or unmutes the microphone. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
 
@@ -454,7 +414,7 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 audioVolumeGroupManager.setMicMute(true).then(() => {
@@ -471,10 +431,6 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 Mutes or unmutes the microphone. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MICROPHONE_CONTROL
 
@@ -506,7 +462,7 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 audioVolumeGroupManager.setMicMutePersistent(true, audio.PolicyType.PRIVACY).then(() => {
@@ -524,10 +480,6 @@ Sets the ringer mode. This method uses an asynchronous callback to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void-End-->
@@ -543,7 +495,7 @@ Sets the ringer mode. This method uses an asynchronous callback to return the re
 | mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | Yes | Ringer mode. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -567,10 +519,6 @@ Sets the ringer mode. This method uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode): Promise<void>--><!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode): Promise<void>-End-->
@@ -591,7 +539,7 @@ Sets the ringer mode. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
@@ -609,10 +557,6 @@ Sets the volume for a stream. This method uses an asynchronous callback to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int, callback: AsyncCallback<void>): void-End-->
@@ -629,7 +573,7 @@ Sets the volume for a stream. This method uses an asynchronous callback to retur
 | volume | int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -653,10 +597,6 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int): Promise<void>--><!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int): Promise<void>-End-->
@@ -678,7 +618,7 @@ Sets the volume for a stream. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
@@ -696,10 +636,6 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
 <!--Device-AudioVolumeGroupManager-setVolumeWithFlag(volumeType: AudioVolumeType, volume: int, flags: int): Promise<void>--><!--Device-AudioVolumeGroupManager-setVolumeWithFlag(volumeType: AudioVolumeType, volume: int, flags: int): Promise<void>-End-->
@@ -714,7 +650,7 @@ Sets the volume for a stream. This method uses a promise to return the result.
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream type. |
 | volume | int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| flags | int | Yes | volume flags used to enable different operations, can be union of [VolumeFlag](arkts-audio-audio-volumeflag-e-sys.md#VolumeFlag-(System-API)) |
+| flags | int | Yes | volume flags used to enable different operations, can be union of [VolumeFlag](arkts-audio-audio-volumeflag-e-sys.md#volumeflag-system-api) |
 
 **Return value:**
 
@@ -729,7 +665,7 @@ Sets the volume for a stream. This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 audioVolumeGroupManager.setVolumeWithFlag(audio.AudioVolumeType.MEDIA, 10, 1).then(() => {

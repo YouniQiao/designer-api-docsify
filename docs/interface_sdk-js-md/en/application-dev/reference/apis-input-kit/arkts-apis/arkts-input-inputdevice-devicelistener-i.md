@@ -4,10 +4,6 @@ Provides hot swap information about an input device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputDevice-interface DeviceListener--><!--Device-inputDevice-interface DeviceListener-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -30,10 +26,6 @@ Unique ID of the input device. If a physical device is repeatedly reinstalled or
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceListener-deviceId: int--><!--Device-DeviceListener-deviceId: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -49,10 +41,6 @@ Device change type, which indicates whether an input device is inserted or remov
 **Type:** [ChangedType](arkts-input-inputdevice-changedtype-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceListener-type: ChangedType--><!--Device-DeviceListener-type: ChangedType-End-->
 

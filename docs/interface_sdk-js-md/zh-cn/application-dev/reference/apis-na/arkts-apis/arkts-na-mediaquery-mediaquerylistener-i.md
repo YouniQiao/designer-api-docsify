@@ -1,14 +1,12 @@
 # MediaQueryListener
 
-媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句， 比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。 继承自[MediaQueryResult](../../apis-arkui/arkts-apis/arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult)。
+媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句， 比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。 继承自[MediaQueryResult](../../apis-arkui/arkts-apis/arkts-arkui-mediaquery-mediaqueryresult-i.md#mediaqueryresult)。
 
-**继承/实现关系：** MediaQueryListener extends [MediaQueryResult](../../apis-arkui/arkts-apis/arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult)
+**继承/实现关系：** MediaQueryListener extends [MediaQueryResult](../../apis-arkui/arkts-apis/arkts-arkui-mediaquery-mediaqueryresult-i.md#mediaqueryresult)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-mediaquery-export interface MediaQueryListener--><!--Device-mediaquery-export interface MediaQueryListener-End-->
 
@@ -24,9 +22,7 @@ offChange(callback?: Callback<MediaQueryResult>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,7 +34,7 @@ offChange(callback?: Callback<MediaQueryResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](../../apis-arkui/arkts-apis/arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaQueryResult](../../apis-arkui/arkts-apis/arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 否 |  |
 
 ## onChange
 
@@ -50,9 +46,7 @@ onChange(callback: Callback<MediaQueryResult>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,5 +58,5 @@ onChange(callback: Callback<MediaQueryResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](../../apis-arkui/arkts-apis/arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaQueryResult](../../apis-arkui/arkts-apis/arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 是 |  |
 

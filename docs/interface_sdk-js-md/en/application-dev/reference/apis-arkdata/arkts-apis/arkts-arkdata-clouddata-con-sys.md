@@ -10,10 +10,6 @@ ID of the event, which indicates the change of the data in the cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-cloudData-const DATA_CHANGE_EVENT_ID: string--><!--Device-cloudData-const DATA_CHANGE_EVENT_ID: string-End-->

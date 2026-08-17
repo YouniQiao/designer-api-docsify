@@ -4,10 +4,6 @@ Describes the physical aperture object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface PhysicalAperture--><!--Device-camera-interface PhysicalAperture-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -32,10 +28,6 @@ Supported physical aperture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-PhysicalAperture-apertures: Array<double>--><!--Device-PhysicalAperture-apertures: Array<double>-End-->
@@ -55,10 +47,6 @@ Zoom range of a given physical aperture.
 **Type:** [ZoomRange](arkts-camera-camera-zoomrange-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

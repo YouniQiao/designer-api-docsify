@@ -16,8 +16,6 @@ Subscribe the event reported when a remote Bluetooth device is bonded.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** bondStateChange
@@ -33,9 +31,9 @@ Subscribe the event reported when a remote Bluetooth device is bonded.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | Yes | Type of the bond state event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | Yes | Callback used to listen for the bond state event, [BondStateParam](arkts-connectivity-bluetooth-bondstateparam-i.md#BondStateParam). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | Yes | Callback used to listen for the bond state event, [BondStateParam](arkts-connectivity-bluetooth-bondstateparam-i.md#bondstateparam). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function onReceiveEvent(data : bluetooth.BondStateParam) { // data, as the input parameter of the callback, indicates the pairing state.

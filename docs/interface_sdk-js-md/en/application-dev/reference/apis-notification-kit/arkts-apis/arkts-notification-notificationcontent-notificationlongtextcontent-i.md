@@ -2,13 +2,9 @@
 
 Describes the long text notification. This API is inherited from NotificationBasicContent. > **NOTE：**> > - When this notification type forms a group notification with other notifications, its display effect defaults > to the collapsed state, and the displayed title and body are the **title** and **text** inherited from > NotificationBasicContent. When this notification type is displayed alone and does not form a group notification > with other notifications, its display effect defaults to the expanded state, where the displayed title is the > expanded title **expandedTitle**, and the displayed body content is the long text **longText**. > > - When a user taps a group notification to view the notification details, the display effect of this > notification changes to the expanded state. > > - The actual display effect depends on the device capabilities and the notification center UI style.
 
-**Inheritance/Implementation:** NotificationLongTextContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
+**Inheritance/Implementation:** NotificationLongTextContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#notificationbasiccontent)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationLongTextContent--><!--Device-unnamed-export interface NotificationLongTextContent-End-->
 
@@ -26,10 +22,6 @@ Notification summary content, which is a summary of the notification content and
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationLongTextContent-briefText: string--><!--Device-NotificationLongTextContent-briefText: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -46,10 +38,6 @@ Title when the notification is expanded. It cannot be an empty string. The size 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationLongTextContent-expandedTitle: string--><!--Device-NotificationLongTextContent-expandedTitle: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -65,10 +53,6 @@ Full long text content displayed after the notification is expanded. It cannot b
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationLongTextContent-longText: string--><!--Device-NotificationLongTextContent-longText: string-End-->
 

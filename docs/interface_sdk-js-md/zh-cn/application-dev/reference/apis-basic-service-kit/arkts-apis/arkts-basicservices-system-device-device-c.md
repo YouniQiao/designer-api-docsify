@@ -4,8 +4,6 @@ getInfo interface
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 6
 
 <!--Device-unnamed-export default class Device--><!--Device-unnamed-export default class Device-End-->
@@ -22,8 +20,6 @@ Obtains the device information.
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 6
 
 <!--Device-Device-static getInfo(options?: GetDeviceOptions): void--><!--Device-Device-static getInfo(options?: GetDeviceOptions): void-End-->
@@ -36,7 +32,7 @@ Obtains the device information.
 | --- | --- | --- | --- |
 | options | [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) | 否 | Options |
 
-## 示例
+**示例**
 
 ArkTS（方舟编程语言）示例：
 

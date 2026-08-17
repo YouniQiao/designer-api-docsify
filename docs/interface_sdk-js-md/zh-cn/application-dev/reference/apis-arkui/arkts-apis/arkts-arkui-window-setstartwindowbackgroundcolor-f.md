@@ -10,10 +10,6 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-window-function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>--><!--Device-window-function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>-End-->
@@ -42,7 +38,7 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setStartWindowBackgroundColor can not work correctly due to limited device capabilities. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Parameter exceeds the allowed length. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

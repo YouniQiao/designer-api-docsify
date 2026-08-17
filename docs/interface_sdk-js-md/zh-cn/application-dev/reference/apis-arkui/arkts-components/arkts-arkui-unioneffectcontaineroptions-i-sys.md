@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface UnionEffectContainerOptions--><!--Device-unnamed-declare interface UnionEffectContainerOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -27,10 +23,6 @@ spacing表示后代组件发生融合形变的程度。它不代表实际的间�
 **默认值：** 0
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

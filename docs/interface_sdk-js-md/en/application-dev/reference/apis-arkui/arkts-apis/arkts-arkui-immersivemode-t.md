@@ -1,4 +1,4 @@
-# ImmersiveMode
+# ImmersiveMode(ActionSheet)
 
 ```TypeScript
 declare type ImmersiveMode = import('../api/@ohos.promptAction').ImmersiveMode
@@ -7,10 +7,6 @@ declare type ImmersiveMode = import('../api/@ohos.promptAction').ImmersiveMode
 Defines the overlay effect for the dialog box.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

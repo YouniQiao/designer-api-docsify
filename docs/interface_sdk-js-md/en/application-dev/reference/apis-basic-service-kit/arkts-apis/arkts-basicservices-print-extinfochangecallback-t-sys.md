@@ -8,10 +8,6 @@ Defines the callback type used in registering to listen for extension change. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-type ExtInfoChangeCallback = (extensionId: string, info: string) => void--><!--Device-print-type ExtInfoChangeCallback = (extensionId: string, info: string) => void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework

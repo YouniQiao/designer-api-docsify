@@ -4,10 +4,6 @@ Enumerates the font widths.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-enum FontWidth--><!--Device-text-enum FontWidth-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ ULTRA_CONDENSED = 1
 Ultra condensed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,10 +34,6 @@ Extra condensed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontWidth-EXTRA_CONDENSED = 2--><!--Device-FontWidth-EXTRA_CONDENSED = 2-End-->
@@ -61,10 +49,6 @@ CONDENSED = 3
 Condensed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -82,10 +66,6 @@ Semi condensed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontWidth-SEMI_CONDENSED = 4--><!--Device-FontWidth-SEMI_CONDENSED = 4-End-->
@@ -101,10 +81,6 @@ NORMAL = 5
 Normal.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -122,10 +98,6 @@ Semi expanded.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontWidth-SEMI_EXPANDED = 6--><!--Device-FontWidth-SEMI_EXPANDED = 6-End-->
@@ -141,10 +113,6 @@ EXPANDED = 7
 Expanded.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -162,10 +130,6 @@ Extra expanded.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontWidth-EXTRA_EXPANDED = 8--><!--Device-FontWidth-EXTRA_EXPANDED = 8-End-->
@@ -181,10 +145,6 @@ ULTRA_EXPANDED = 9
 Ultra expanded.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

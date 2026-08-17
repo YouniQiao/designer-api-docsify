@@ -1,12 +1,8 @@
-# DeviceEncryptionStatus（系统接口）
+# DeviceEncryptionStatus(安全管理)（系统接口）
 
 设备管理应用的文件系统加密状态。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-securityManager-export interface DeviceEncryptionStatus--><!--Device-securityManager-export interface DeviceEncryptionStatus-End-->
 
@@ -25,10 +21,6 @@ isEncrypted: boolean
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

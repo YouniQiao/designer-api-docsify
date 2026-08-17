@@ -16,8 +16,6 @@ Initializes Connected Tag.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [initialize](arkts-connectivity-connectedtag-initialize-f.md#initialize)

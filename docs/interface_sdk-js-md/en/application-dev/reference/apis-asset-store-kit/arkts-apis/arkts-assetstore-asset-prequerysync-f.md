@@ -12,13 +12,9 @@ import { asset } from 'asset';
 function preQuerySync(query: AssetMap): Uint8Array
 ```
 
-Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.querySync](arkts-assetstore-asset-querysync-f.md#querySync) and [asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postQuerySync). This API returns the result synchronously.
+Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.querySync](arkts-assetstore-asset-querysync-f.md#querysync) and [asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postquerysync). This API returns the result synchronously.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -57,7 +53,7 @@ Performs preprocessing for the asset query. This API is used when user authentic
 | [24000016](../errorcode-asset.md#24000016-cached-assets-reaches-the-limit) | The cache exceeds the limit. |
 | [24000017](../errorcode-asset.md#24000017-function-not-supported) | The capability is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

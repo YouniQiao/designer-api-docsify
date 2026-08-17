@@ -30,10 +30,6 @@ Duplicates the file descriptor and returns the corresponding **File** object.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function dup(fd: number): File--><!--Device-unnamed-declare function dup(fd: number): File-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

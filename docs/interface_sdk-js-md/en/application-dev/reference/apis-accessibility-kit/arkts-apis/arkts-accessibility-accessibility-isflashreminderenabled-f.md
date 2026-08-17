@@ -16,10 +16,6 @@ Checks whether flash alerts mode is enabled. This API uses a promise to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-accessibility-function isFlashReminderEnabled(): Promise<boolean>--><!--Device-accessibility-function isFlashReminderEnabled(): Promise<boolean>-End-->
@@ -32,7 +28,7 @@ Checks whether flash alerts mode is enabled. This API uses a promise to return t
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if flash alerts mode is enabled; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
 <!--Device-unnamed-export interface CheckPackageHasInstalledResponse--><!--Device-unnamed-export interface CheckPackageHasInstalledResponse-End-->
@@ -23,8 +21,6 @@ result: boolean
 **类型：** boolean
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 

@@ -4,10 +4,6 @@ The basic data structure of the smart rotate sensor event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-motion-interface SmartRotateEvent--><!--Device-motion-interface SmartRotateEvent-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
@@ -32,10 +28,6 @@ The logical orientation adjusted by smart algorithms.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SmartRotateEvent-logicalOrientation?: LogicalOrientation--><!--Device-SmartRotateEvent-logicalOrientation?: LogicalOrientation-End-->
@@ -55,10 +47,6 @@ The physical orientation reported by the gravity sensor.
 **Type:** [PhysicalOrientation](arkts-multimodalawareness-motion-physicalorientation-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

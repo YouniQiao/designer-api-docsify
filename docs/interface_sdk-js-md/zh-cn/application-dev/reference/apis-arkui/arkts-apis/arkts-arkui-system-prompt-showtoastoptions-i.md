@@ -1,14 +1,12 @@
-# ShowToastOptions
+# ShowToastOptions(弹窗)
 
 定义ShowToast的选项。
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [ShowToastOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#ShowToastOptions)
+**替代接口：** [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md#showtoastoptions)
 
 <!--Device-unnamed-export interface ShowToastOptions--><!--Device-unnamed-export interface ShowToastOptions-End-->
 
@@ -26,11 +24,9 @@ bottom?: string | number
 
 **起始版本：** 5
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为5。
-
 **废弃版本：** 8
 
-**替代接口：** [bottom](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#bottom)
+**替代接口：** [bottom](arkts-arkui-promptaction-showtoastoptions-i.md#bottom)
 
 <!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
 
@@ -48,11 +44,9 @@ duration?: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [duration](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#duration)
+**替代接口：** [duration](arkts-arkui-promptaction-showtoastoptions-i.md#duration)
 
 <!--Device-ShowToastOptions-duration?: number--><!--Device-ShowToastOptions-duration?: number-End-->
 
@@ -70,11 +64,9 @@ message: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [message](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#message)
+**替代接口：** [message](arkts-arkui-promptaction-showtoastoptions-i.md#message)
 
 <!--Device-ShowToastOptions-message: string--><!--Device-ShowToastOptions-message: string-End-->
 

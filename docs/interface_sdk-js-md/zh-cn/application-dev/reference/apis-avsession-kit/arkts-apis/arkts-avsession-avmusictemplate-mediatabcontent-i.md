@@ -1,14 +1,10 @@
 # MediaTabContent
 
-媒体标签页内容的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。
+媒体标签页内容的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)。
 
-**继承/实现关系：** MediaTabContent extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
+**继承/实现关系：** MediaTabContent extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-avMusicTemplate-interface MediaTabContent--><!--Device-avMusicTemplate-interface MediaTabContent-End-->
 
@@ -25,10 +21,6 @@ compilations: Compilation[]
 **类型：** [Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,10 +39,6 @@ tabId: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

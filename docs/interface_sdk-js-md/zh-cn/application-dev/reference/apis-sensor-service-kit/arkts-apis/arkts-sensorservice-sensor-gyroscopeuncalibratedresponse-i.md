@@ -1,14 +1,10 @@
 # GyroscopeUncalibratedResponse
 
-未校准陀螺仪传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#Response)。
+未校准陀螺仪传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#response)。
 
-**继承/实现关系：** GyroscopeUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**继承/实现关系：** GyroscopeUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-sensor-interface GyroscopeUncalibratedResponse--><!--Device-sensor-interface GyroscopeUncalibratedResponse-End-->
 
@@ -26,10 +22,6 @@ biasX: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-GyroscopeUncalibratedResponse-biasX: double--><!--Device-GyroscopeUncalibratedResponse-biasX: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -45,10 +37,6 @@ biasY: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-GyroscopeUncalibratedResponse-biasY: double--><!--Device-GyroscopeUncalibratedResponse-biasY: double-End-->
 
@@ -66,10 +54,6 @@ biasZ: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-GyroscopeUncalibratedResponse-biasZ: double--><!--Device-GyroscopeUncalibratedResponse-biasZ: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -85,10 +69,6 @@ x: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-GyroscopeUncalibratedResponse-x: double--><!--Device-GyroscopeUncalibratedResponse-x: double-End-->
 
@@ -106,10 +86,6 @@ y: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-GyroscopeUncalibratedResponse-y: double--><!--Device-GyroscopeUncalibratedResponse-y: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -125,10 +101,6 @@ z: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-GyroscopeUncalibratedResponse-z: double--><!--Device-GyroscopeUncalibratedResponse-z: double-End-->
 

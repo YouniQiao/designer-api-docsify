@@ -1,12 +1,8 @@
 # BoidsSimGravityParameters (System API)
 
-Boids simulation gravity field parameters.
+Attraction field parameters, used to configure the attraction field in the scene.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BoidsSimGravityParameters--><!--Device-unnamed-export interface BoidsSimGravityParameters-End-->
 
@@ -20,15 +16,11 @@ Boids simulation gravity field parameters.
 accelerationMag?: double
 ```
 
-Magnitude of gravitational acceleration applied toward the entity. Range: [0, +inf). Default: 0.0 If a value exceeding the valid range is assigned, it will be clamped.
+The magnitude of the attraction acceleration applied to the individual, with the direction pointing toward the attraction field entity. Value >= 0. Default value: 0.0.
 
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,15 +36,11 @@ Magnitude of gravitational acceleration applied toward the entity. Range: [0, +i
 radius?: double
 ```
 
-Radius of influence. Boids strictly within this distance from the entity are attracted (force is zero at the boundary). Range: [0, +inf). Default: 0.0 If a value exceeding the valid range is assigned, it will be clamped.
+The radius of the attraction field. Only individuals strictly within this distance are attracted (boundary force is 0). Value >= 0. Default value: 0.0.
 
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

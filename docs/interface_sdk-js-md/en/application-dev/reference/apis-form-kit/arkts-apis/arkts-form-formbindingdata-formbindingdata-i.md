@@ -4,10 +4,6 @@ Defines the createFormBindingData result interface.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formBindingData-interface FormBindingData--><!--Device-formBindingData-interface FormBindingData-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -30,10 +26,6 @@ Data for updating.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormBindingData-data: RecordData--><!--Device-FormBindingData-data: RecordData-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -49,10 +41,6 @@ proxies for updating.
 **Type:** Array&lt;ProxyData&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Declare CustomDialog LoadingDialogV2
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct LoadingDialogV2--><!--Device-unnamed-export declare struct LoadingDialogV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,10 +38,6 @@ Sets the LoadingDialogV2 content.
 **Type:** ResourceStr
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

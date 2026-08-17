@@ -4,10 +4,6 @@ Enumerates the camera concurrency types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum CameraConcurrentType--><!--Device-camera-enum CameraConcurrentType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -21,10 +17,6 @@ CAMERA_FULL_CAPABILITY = 1
 Full camera concurrency.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -41,10 +33,6 @@ CAMERA_LIMITED_CAPABILITY = 0
 Limited camera concurrency.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

@@ -1,14 +1,10 @@
 # TimeOptions
 
-TimeOptions defines options for the time picker. Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions).
+TimeOptions defines options for the time picker. Inherits from [CommonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions).
 
-**Inheritance/Implementation:** TimeOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)
+**Inheritance/Implementation:** TimeOptions extends [CommonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class TimeOptions--><!--Device-unnamed-export declare class TimeOptions-End-->
 
@@ -33,15 +29,11 @@ format?: TimeFormat
 
 Defines the format of the time picker. Default value: TimeFormat.HOUR_MINUTE
 
-**Type:** [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
+**Type:** [TimeFormat](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-timeformat-e.md)
 
 **Default:** TimeFormat.HOUR_MINUTE
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,10 +56,6 @@ Specifies whether to display time in 24-hour format. - true: Time is displayed i
 **Default:** false
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

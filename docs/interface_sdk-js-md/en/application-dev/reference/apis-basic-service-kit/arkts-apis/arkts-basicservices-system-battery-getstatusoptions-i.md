@@ -4,8 +4,6 @@ Object that contains the API calling result.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-unnamed-export interface GetStatusOptions--><!--Device-unnamed-export interface GetStatusOptions-End-->
@@ -31,8 +29,6 @@ Called when an API call is complete.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-GetStatusOptions-complete?: () => void--><!--Device-GetStatusOptions-complete?: () => void-End-->
@@ -51,8 +47,6 @@ Called when an API call has failed. **data** indicates the error information, an
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-GetStatusOptions-fail?: (data: string, code: number) => void--><!--Device-GetStatusOptions-fail?: (data: string, code: number) => void-End-->
@@ -65,13 +59,11 @@ Called when an API call has failed. **data** indicates the error information, an
 success?: (data: BatteryResponse) => void
 ```
 
-Called when an API call is successful. **data** is a return value of the [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md#BatteryResponse) type.
+Called when an API call is successful. **data** is a return value of the [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md#batteryresponse) type.
 
 **Type:** (data: BatteryResponse) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 

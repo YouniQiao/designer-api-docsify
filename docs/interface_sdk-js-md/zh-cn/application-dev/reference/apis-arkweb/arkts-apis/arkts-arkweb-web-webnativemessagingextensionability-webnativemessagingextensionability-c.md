@@ -6,10 +6,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export default class WebNativeMessagingExtensionAbility--><!--Device-unnamed-export default class WebNativeMessagingExtensionAbility-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -24,10 +20,6 @@ Web原生消息连接建立时回调此方法。在此回调中，可以获取�
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WebNativeMessagingExtensionAbility-onConnectNative(info: ConnectionInfo): void--><!--Device-WebNativeMessagingExtensionAbility-onConnectNative(info: ConnectionInfo): void-End-->
@@ -40,7 +32,7 @@ Web原生消息连接建立时回调此方法。在此回调中，可以获取�
 | --- | --- | --- | --- |
 | info | [ConnectionInfo](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -84,17 +76,13 @@ WebNativeMessagingExtensionAbility销毁时回调。在此回调中，可以释�
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void--><!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -133,10 +121,6 @@ Web原生消息连接断开时回调此方法。在此回调中，可以释放�
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WebNativeMessagingExtensionAbility-onDisconnectNative(info: ConnectionInfo): void--><!--Device-WebNativeMessagingExtensionAbility-onDisconnectNative(info: ConnectionInfo): void-End-->
@@ -149,7 +133,7 @@ Web原生消息连接断开时回调此方法。在此回调中，可以释放�
 | --- | --- | --- | --- |
 | info | [ConnectionInfo](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -192,10 +176,6 @@ context: WebNativeMessagingExtensionContext
 **类型：** [WebNativeMessagingExtensionContext](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

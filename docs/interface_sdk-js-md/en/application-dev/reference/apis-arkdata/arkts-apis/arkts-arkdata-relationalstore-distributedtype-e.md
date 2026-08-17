@@ -4,10 +4,6 @@ Enumerates the distributed database table types. Use the enum name rather than t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-enum DistributedType--><!--Device-relationalStore-enum DistributedType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -22,10 +18,6 @@ Distributed database table synced between devices. SystemCapability.DistributedD
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedType-DISTRIBUTED_DEVICE = 0--><!--Device-DistributedType-DISTRIBUTED_DEVICE = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -39,10 +31,6 @@ DISTRIBUTED_CLOUD = 1
 Distributed database table synced between a device and the cloud. SystemCapability.DistributedDataManager.CloudSync.Client
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC

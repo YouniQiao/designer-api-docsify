@@ -4,10 +4,6 @@ Preferences实例配置选项。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-sendablePreferences-interface Options--><!--Device-sendablePreferences-interface Options-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -23,10 +19,6 @@ dataGroupId?: string | null
 **类型：** string \| null
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,10 +39,6 @@ Preferences实例的名称。名称长度需大于零且小于等于255字节，
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

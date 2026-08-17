@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface ResumeDownloadOptions--><!--Device-update-export interface ResumeDownloadOptions-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -25,10 +21,6 @@ allowNetwork: NetType
 **类型：** [NetType](arkts-basicservices-update-nettype-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ResumeDownloadOptions-allowNetwork: NetType--><!--Device-ResumeDownloadOptions-allowNetwork: NetType-End-->
 

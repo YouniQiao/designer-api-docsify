@@ -1,14 +1,10 @@
 # Image
 
-Image resource.
+Image resource, which inherits from SceneResource.
 
-**Inheritance/Implementation:** Image extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
+**Inheritance/Implementation:** Image extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#sceneresource)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Image--><!--Device-unnamed-export interface Image-End-->
 
@@ -20,15 +16,11 @@ Image resource.
 readonly height: int
 ```
 
-The height of the image, the unit is pixel.
+Image height, in px. The value must be greater than 0.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Image-readonly height: int--><!--Device-Image-readonly height: int-End-->
 
@@ -40,15 +32,11 @@ The height of the image, the unit is pixel.
 readonly width: int
 ```
 
-The width of the image, the unit is pixel.
+Image width, in px. The value must be greater than 0.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Image-readonly width: int--><!--Device-Image-readonly width: int-End-->
 

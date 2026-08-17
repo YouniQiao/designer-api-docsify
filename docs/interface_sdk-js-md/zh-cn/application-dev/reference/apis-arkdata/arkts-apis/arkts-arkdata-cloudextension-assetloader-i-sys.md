@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudExtension-export interface AssetLoader--><!--Device-cloudExtension-export interface AssetLoader-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -23,10 +19,6 @@ download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>):
 通过该接口实现资产的下载。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AssetLoader-download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>--><!--Device-AssetLoader-download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>-End-->
 
@@ -49,7 +41,7 @@ download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>):
 | --- | --- |
 | Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise对象，返回资产下载结果，包含资产ID和资产哈希值。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -91,10 +83,6 @@ upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Res
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AssetLoader-upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>--><!--Device-AssetLoader-upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -115,7 +103,7 @@ upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Res
 | --- | --- |
 | Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise对象，返回资产上云的结果，包含资产ID和资产哈希值。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

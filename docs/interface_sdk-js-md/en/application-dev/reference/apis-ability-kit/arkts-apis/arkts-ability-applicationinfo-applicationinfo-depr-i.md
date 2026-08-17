@@ -1,14 +1,12 @@
 # ApplicationInfo
 
-The module provides application information. Unless otherwise specified, the information is obtained through [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo) . > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-ApplicationInfo](#ApplicationInfo) instead.
+The module provides application information. Unless otherwise specified, the information is obtained through [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo) . > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-ApplicationInfo](#applicationinfo) instead.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ApplicationInfo](#ApplicationInfo)
+**Substitutes:** [ApplicationInfo](#applicationinfo)
 
 <!--Device-unnamed-export interface ApplicationInfo--><!--Device-unnamed-export interface ApplicationInfo-End-->
 
@@ -28,8 +26,6 @@ Access token ID of the application.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** accessTokenId
@@ -44,15 +40,13 @@ Access token ID of the application.
 readonly codePath: string
 ```
 
-Installation directory of the application. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager) instead.
+Installation directory of the application. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#ohosresourcemanager) instead.
 
 **Type:** string
 
 **Default:** Indicates the application source code path
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,8 +70,6 @@ Application description.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** description
@@ -99,8 +91,6 @@ ID of the application description.
 **Default:** Indicates the description id of the application
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -124,8 +114,6 @@ Whether the application is enabled. **true** if enabled, **false** otherwise.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** enabled
@@ -148,8 +136,6 @@ Type of the application, for example, gaming, social networking, movies, and new
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-ApplicationInfo-readonly entityType: string--><!--Device-ApplicationInfo-readonly entityType: string-End-->
@@ -162,15 +148,13 @@ Type of the application, for example, gaming, social networking, movies, and new
 readonly entryDir: string
 ```
 
-Path for storing application files. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager) instead.
+Path for storing application files. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#ohosresourcemanager) instead.
 
 **Type:** string
 
 **Default:** Indicates the path where the {@code Entry.hap} file of the application is saved
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -191,8 +175,6 @@ Application icon.
 **Default:** Indicates the icon of the application
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -216,8 +198,6 @@ ID of the application icon.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** iconId
@@ -239,8 +219,6 @@ Application label.
 **Default:** Indicates the label of the application
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -264,8 +242,6 @@ ID of the application label.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -280,15 +256,13 @@ ID of the application label.
 readonly metaData: Map<string, Array<CustomizeData>>
 ```
 
-Custom metadata of the application. The value is obtained by passing in GET_APPLICATION_INFO_WITH_METADATA to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo) .
+Custom metadata of the application. The value is obtained by passing in GET_APPLICATION_INFO_WITH_METADATA to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo) .
 
 **Type:** Map&lt;string, Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;&gt;
 
 **Default:** Indicates the metadata of module
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -312,8 +286,6 @@ Application module information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** hapModulesInfo
@@ -328,15 +300,13 @@ Application module information.
 readonly moduleSourceDirs: Array<string>
 ```
 
-Relative paths for storing application resources. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager) instead.
+Relative paths for storing application resources. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#ohosresourcemanager) instead.
 
 **Type:** Array&lt;string&gt;
 
 **Default:** Indicates the path storing the module resources of the application
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -358,8 +328,6 @@ Application name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** name
@@ -374,15 +342,13 @@ Application name.
 readonly permissions: Array<string>
 ```
 
-Permissions required for accessing the application. The value is obtained by passing in GET_APPLICATION_INFO_WITH_PERMISSION to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo) .
+Permissions required for accessing the application. The value is obtained by passing in GET_APPLICATION_INFO_WITH_PERMISSION to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo) .
 
 **Type:** Array&lt;string&gt;
 
 **Default:** Indicates the permissions required for accessing the application.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -406,8 +372,6 @@ Process name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** process
@@ -429,8 +393,6 @@ Whether the application is removable. **true** if removable, **false** otherwise
 **Default:** Indicates whether or not this application may be removable
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -454,8 +416,6 @@ Modes supported by the application. Currently, only the **drive** mode is define
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-ApplicationInfo-readonly supportedModes: number--><!--Device-ApplicationInfo-readonly supportedModes: number-End-->
@@ -475,8 +435,6 @@ Whether the application is a system application. **true** if yes, **false** othe
 **Default:** Indicates whether the application is a system application
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -499,8 +457,6 @@ UID of the application.
 **Default:** Indicates the uid of the application
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

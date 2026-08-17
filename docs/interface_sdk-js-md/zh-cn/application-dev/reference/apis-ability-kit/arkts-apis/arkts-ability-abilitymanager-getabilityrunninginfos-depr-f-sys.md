@@ -10,11 +10,9 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getAbilityRunningInfos)
+**替代接口：** [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getabilityrunninginfos)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -41,11 +39,9 @@ function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getAbilityRunningInfos)
+**替代接口：** [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getabilityrunninginfos)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -59,5 +55,5 @@ function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; | 是 | 回调函数，返回Ability运行相关信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; | 是 | 回调函数，返回Ability运行相关信息。 |
 

@@ -1,12 +1,8 @@
-# NotificationFlags
+# NotificationFlags(Some states and flags for notifications)
 
 Defines the notification flags.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationFlags--><!--Device-unnamed-export interface NotificationFlags-End-->
 
@@ -24,10 +20,6 @@ Settings of banner for the notification. The default value is **TYPE_NONE**. Onl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationFlags-bannerEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-bannerEnabled?: NotificationFlagStatus-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -43,10 +35,6 @@ Settings of screen lock for the notification. The default value is **TYPE_NONE**
 **Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationFlags-lockScreenEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-lockScreenEnabled?: NotificationFlagStatus-End-->
 
@@ -64,10 +52,6 @@ Settings of sound for the notification. The default value is **TYPE_NONE**. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationFlags-soundEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-soundEnabled?: NotificationFlagStatus-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -83,10 +67,6 @@ Settings of vibration for the notification. The default value is **TYPE_NONE**. 
 **Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationFlags-vibrationEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-vibrationEnabled?: NotificationFlagStatus-End-->
 

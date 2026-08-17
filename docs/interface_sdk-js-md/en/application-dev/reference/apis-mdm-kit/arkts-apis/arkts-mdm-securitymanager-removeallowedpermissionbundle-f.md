@@ -12,13 +12,9 @@ import { securityManager } from 'securityManager';
 function removeAllowedPermissionBundle(admin: Want, permission: string, applicationInstance: common.ApplicationInstance): void
 ```
 
-Removes an application from the permission usage exception list. After the application is removed, it cannot use the corresponding permission any more. > **NOTE：**> > The permission must first be disabled via the > [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md#setDisallowedPermission) API before an application can be removed > from the permission usage exception list. Otherwise, error code 9201044 is returned.
+Removes an application from the permission usage exception list. After the application is removed, it cannot use the corresponding permission any more. > **NOTE：**> > The permission must first be disabled via the > [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md#setdisallowedpermission) API before an application can be removed > from the permission usage exception list. Otherwise, error code 9201044 is returned.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 

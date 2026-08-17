@@ -10,10 +10,6 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>--><!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -33,7 +29,7 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let screenCaptureMonitor: media.ScreenCaptureMonitor;
@@ -54,10 +50,6 @@ function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>
 Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return the result.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>--><!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>-End-->
 

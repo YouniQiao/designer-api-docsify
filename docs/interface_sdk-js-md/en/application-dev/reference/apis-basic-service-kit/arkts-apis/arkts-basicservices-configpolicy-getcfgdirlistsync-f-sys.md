@@ -16,10 +16,6 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-configPolicy-function getCfgDirListSync(): Array<string>--><!--Device-configPolicy-function getCfgDirListSync(): Array<string>-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy

@@ -4,10 +4,6 @@ Enumerates the callbacks used for the request for loading multiple ads.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-advertising-export interface MultiSlotsAdLoadListener--><!--Device-advertising-export interface MultiSlotsAdLoadListener-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -28,10 +24,6 @@ Called when an ad request fails.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MultiSlotsAdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void--><!--Device-MultiSlotsAdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void-End-->
@@ -45,7 +37,7 @@ Called when an ad request fails.
 | errorCode | number | Yes | Error code for the ad request failure. |
 | errorMsg | string | Yes | Error message for the ad request failure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';
@@ -71,10 +63,6 @@ Called when a request for loading multiple ads is successful.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MultiSlotsAdLoadListener-onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void--><!--Device-MultiSlotsAdLoadListener-onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void-End-->
@@ -87,7 +75,7 @@ Called when a request for loading multiple ads is successful.
 | --- | --- | --- | --- |
 | adsMap | Map&lt;string, Array&lt;Advertisement&gt;&gt; | Yes | Ad data, which is a mapping set that uses ad slot IDs as keys to store the requested ad content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

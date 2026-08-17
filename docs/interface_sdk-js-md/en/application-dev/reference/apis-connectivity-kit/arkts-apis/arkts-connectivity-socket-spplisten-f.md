@@ -16,10 +16,6 @@ Creates a Bluetooth server listening socket.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 <!--Device-socket-function sppListen(name: string, options: SppOptions, callback: AsyncCallback<int>): void--><!--Device-socket-function sppListen(name: string, options: SppOptions, callback: AsyncCallback<int>): void-End-->
@@ -46,7 +42,7 @@ Creates a Bluetooth server listening socket.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -16,11 +16,9 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md#setPortRoles-(System-API))
+**Substitutes:** [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md#setportroles-system-api)
 
 <!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>--><!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>-End-->
 
@@ -42,7 +40,7 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let portId = 1;

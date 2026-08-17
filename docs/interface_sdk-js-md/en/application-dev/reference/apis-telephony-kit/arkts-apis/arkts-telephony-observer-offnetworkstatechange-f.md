@@ -16,10 +16,6 @@ Cancel callback when the network state is updated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function offNetworkStateChange(callback?: Callback<NetworkState>): void--><!--Device-observer-function offNetworkStateChange(callback?: Callback<NetworkState>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry

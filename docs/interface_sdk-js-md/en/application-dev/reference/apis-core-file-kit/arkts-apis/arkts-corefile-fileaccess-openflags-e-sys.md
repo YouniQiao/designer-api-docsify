@@ -4,11 +4,9 @@ Enumerates the file open modes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [OpenMode](../../apis-na/arkts-apis/arkts-na-fileio-openmode-n.md#OpenMode)
+**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
 
 <!--Device-fileAccess-enum OPENFLAGS--><!--Device-fileAccess-enum OPENFLAGS-End-->
 
@@ -26,11 +24,9 @@ Read mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [OpenMode](../../apis-na/arkts-apis/arkts-na-fileio-openmode-n.md#OpenMode)
+**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,11 +46,9 @@ Write mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [OpenMode](../../apis-na/arkts-apis/arkts-na-fileio-openmode-n.md#OpenMode)
+**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,11 +68,9 @@ Read/Write mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [OpenMode](../../apis-na/arkts-apis/arkts-na-fileio-openmode-n.md#OpenMode)
+**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,13 +2,9 @@
 
 ImageStream resource.
 
-**Inheritance/Implementation:** ImageStream extends [Image](arkts-arkgraphics3d-sceneresources-image-i.md#Image)
+**Inheritance/Implementation:** ImageStream extends [Image](arkts-arkgraphics3d-sceneresources-image-i.md#image)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ImageStream--><!--Device-unnamed-export interface ImageStream-End-->
 
@@ -25,10 +21,6 @@ The surfaceId of the imageStream.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

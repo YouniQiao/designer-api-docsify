@@ -4,10 +4,6 @@ Parameters for target searching.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export interface SearchParams--><!--Device-mechanicManager-export interface SearchParams-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -31,10 +27,6 @@ Search direction.
 **Type:** [SearchDirection](arkts-mechanic-mechanicmanager-searchdirection-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SearchParams-direction: SearchDirection--><!--Device-SearchParams-direction: SearchDirection-End-->
 

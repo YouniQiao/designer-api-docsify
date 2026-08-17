@@ -4,10 +4,6 @@ Format options for partition formatting.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-volumeManager-export interface FormatParams--><!--Device-volumeManager-export interface FormatParams-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -32,10 +28,6 @@ File system type, Common file systems are **ext4**, **vfat**, and **exfat**.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormatParams-fsType: string--><!--Device-FormatParams-fsType: string-End-->
@@ -56,10 +48,6 @@ Whether to perform quick format, default value is true.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormatParams-quickFormat?: boolean--><!--Device-FormatParams-quickFormat?: boolean-End-->
@@ -79,10 +67,6 @@ Volume name after formatting.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

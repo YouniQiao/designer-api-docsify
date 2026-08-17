@@ -16,10 +16,6 @@ Creates the context of a plugin under the current application based on the conte
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-application-export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>--><!--Device-application-export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>-End-->
@@ -40,7 +36,7 @@ Creates the context of a plugin under the current application based on the conte
 | --- | --- |
 | Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise used to return the context created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, common, Want } from '@kit.AbilityKit';

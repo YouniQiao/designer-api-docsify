@@ -1,4 +1,4 @@
-# AssertionError
+# AssertionError(Defines the commonly used Errors for ArkTS)
 
 Represents an error that occurs when assertion fails.
 
@@ -6,9 +6,7 @@ Represents an error that occurs when assertion fails.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class AssertionError--><!--Device-unnamed-export class AssertionError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new AssertionError instance with provided message and error specifi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

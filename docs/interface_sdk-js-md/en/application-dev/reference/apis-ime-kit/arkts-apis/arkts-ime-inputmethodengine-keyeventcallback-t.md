@@ -8,10 +8,6 @@ The callback of 'keyDown' or 'keyUp' event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-export type KeyEventCallback = (event: KeyEvent) => boolean--><!--Device-inputMethodEngine-export type KeyEventCallback = (event: KeyEvent) => boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

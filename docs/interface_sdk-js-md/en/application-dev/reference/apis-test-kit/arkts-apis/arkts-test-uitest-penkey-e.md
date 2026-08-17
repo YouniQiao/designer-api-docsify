@@ -4,10 +4,6 @@ Pen key type enum.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum PenKey--><!--Device-unnamed-declare enum PenKey-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -21,10 +17,6 @@ HANDWRITING = 0
 Handwriting key.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -42,10 +34,6 @@ Smart key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PenKey-SMART = 1--><!--Device-PenKey-SMART = 1-End-->
@@ -61,10 +49,6 @@ AIR_MOUSE = 2
 Air mouse key.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

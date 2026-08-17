@@ -1,14 +1,12 @@
 # AbilityInfo
 
-The module provides information about an ability. Unless otherwise specified, the information is obtained through [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo). > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-AbilityInfo](#AbilityInfo) instead.
+The module provides information about an ability. Unless otherwise specified, the information is obtained through [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo). > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-AbilityInfo](#abilityinfo) instead.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AbilityInfo](#AbilityInfo)
+**Substitutes:** [AbilityInfo](#abilityinfo)
 
 <!--Device-unnamed-export interface AbilityInfo--><!--Device-unnamed-export interface AbilityInfo-End-->
 
@@ -20,15 +18,13 @@ The module provides information about an ability. Unless otherwise specified, th
 readonly applicationInfo: ApplicationInfo
 ```
 
-Application configuration information. The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo).
+Application configuration information. The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo).
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
 **Default:** Obtains configuration information about an application
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Background service mode of the ability. **Model restriction**: This API can be u
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -75,8 +69,6 @@ Bundle name.
 **Default:** Indicates the name of the bundle containing the ability
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -100,8 +92,6 @@ Ability description.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** description
@@ -123,8 +113,6 @@ ID of the ability description.
 **Default:** Indicates the description id of the ability
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -148,8 +136,6 @@ Device capabilities required for the ability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-AbilityInfo-readonly deviceCapabilities: Array<string>--><!--Device-AbilityInfo-readonly deviceCapabilities: Array<string>-End-->
@@ -169,8 +155,6 @@ Device types supported by the ability.
 **Default:** The device types that this ability can run on
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -194,8 +178,6 @@ Whether the ability is enabled. **true** if enabled, **false** otherwise.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** enabled
@@ -217,8 +199,6 @@ Whether the ability provides the service widget capability. **true** if the abil
 **Default:** Indicates whether the ability provides the embedded card capability
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -242,8 +222,6 @@ Index of the ability icon resource file.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** icon
@@ -265,8 +243,6 @@ ID of the ability icon.
 **Default:** Indicates the icon id of the ability
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -290,8 +266,6 @@ Whether the ability can be called by other applications. **true** if the ability
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** exported
@@ -313,8 +287,6 @@ Ability name visible to users.
 **Default:** Indicates the label of the ability
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -338,8 +310,6 @@ ID of the ability label.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -362,8 +332,6 @@ Ability launch mode.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** launchType
@@ -378,15 +346,13 @@ Ability launch mode.
 readonly metaData: Array<CustomizeData>
 ```
 
-Metadata of the ability. The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo).
+Metadata of the ability. The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo).
 
 **Type:** Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;
 
 **Default:** Indicates the metadata of ability
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -410,8 +376,6 @@ Name of the HAP file to which the ability belongs.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** moduleName
@@ -433,8 +397,6 @@ Ability name.
 **Default:** Ability simplified class name
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -458,8 +420,6 @@ Ability display orientation.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** orientation
@@ -474,15 +434,13 @@ Ability display orientation.
 readonly permissions: Array<string>
 ```
 
-Permissions required for other applications to call the ability. The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo).
+Permissions required for other applications to call the ability. The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo).
 
 **Type:** Array&lt;string&gt;
 
 **Default:** The permissions that others need to launch this ability
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -506,8 +464,6 @@ Process name of the ability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** process
@@ -529,8 +485,6 @@ Permission required for reading the ability data. **Model restriction**: This AP
 **Default:** Indicates the permission required for reading ability data
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -554,8 +508,6 @@ Subtype of the template that can be used by the ability. **Model restriction**: 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -577,8 +529,6 @@ Target ability that the ability alias points to. **Model restriction**: This API
 **Default:** Info about which ability is this nick point to
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -602,8 +552,6 @@ Ability type. **Model restriction**: This API can be used only in the FA model.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -626,8 +574,6 @@ URI of the ability. **Model restriction**: This API can be used only in the FA m
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -649,8 +595,6 @@ Permission required for writing data to the ability. **Model restriction**: This
 **Default:** Indicates the permission required for writing data to the ability
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

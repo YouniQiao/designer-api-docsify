@@ -1,14 +1,10 @@
 # ReadStream
 
-Defines a readable stream. You need to use fileIo.createReadStream to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md#ReadableOptions). The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
+Defines a readable stream. You need to use fileIo.createReadStream to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md#readableoptions). The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
 
-**Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#Readable)
+**Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#readable)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ReadStream--><!--Device-unnamed-declare class ReadStream-End-->
 
@@ -44,10 +40,6 @@ Closes this readable stream.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ReadStream-close(): void--><!--Device-ReadStream-close(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -63,7 +55,7 @@ Closes this readable stream.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
@@ -81,10 +73,6 @@ The ReadStream constructor.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ReadStream-constructor()--><!--Device-ReadStream-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -98,10 +86,6 @@ seek(offset: number, whence?: WhenceType): number
 Adjusts the position of the readable stream offset pointer.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ReadStream-seek(offset: number, whence?: WhenceType): number--><!--Device-ReadStream-seek(offset: number, whence?: WhenceType): number-End-->
 
@@ -129,7 +113,7 @@ Adjusts the position of the readable stream offset pointer.
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
@@ -151,10 +135,6 @@ Number of bytes read by the readable stream.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ReadStream-readonly bytesRead: number--><!--Device-ReadStream-readonly bytesRead: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -170,10 +150,6 @@ Path of the file corresponding to the readable stream.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ReadStream-readonly path: string--><!--Device-ReadStream-readonly path: string-End-->
 

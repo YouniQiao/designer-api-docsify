@@ -10,8 +10,6 @@ Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)

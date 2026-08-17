@@ -16,10 +16,6 @@ Obtains the storage statistics of this user, in bytes. This API uses a promise t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 <!--Device-storageStatistics-function getUserStorageStats(): Promise<StorageStats>--><!--Device-storageStatistics-function getUserStorageStats(): Promise<StorageStats>-End-->
@@ -44,7 +40,7 @@ Obtains the storage statistics of this user, in bytes. This API uses a promise t
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,10 +61,6 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 Obtains the storage statistics of this user, in bytes. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -94,7 +86,7 @@ Obtains the storage statistics of this user, in bytes. This API uses an asynchro
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -118,10 +110,6 @@ function getUserStorageStats(userId: long): Promise<StorageStats>
 Obtains the storage statistics of the specified user, in bytes. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -154,7 +142,7 @@ Obtains the storage statistics of the specified user, in bytes. This API uses a 
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -176,10 +164,6 @@ function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>
 Obtains the storage statistics of the specified user, in bytes. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -207,7 +191,7 @@ Obtains the storage statistics of the specified user, in bytes. This API uses an
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

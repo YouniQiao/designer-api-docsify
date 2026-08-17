@@ -4,10 +4,6 @@ AtomicFile is a class used to perform atomic read and write operations on files.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export class AtomicFile--><!--Device-unnamed-export class AtomicFile-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -42,10 +38,6 @@ Creates an **AtomicFile** class for a file in a specified path.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-AtomicFile-constructor(path: string)--><!--Device-AtomicFile-constructor(path: string)-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -72,10 +64,6 @@ Deletes the **AtomicFile** class, including the original files and temporary fil
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-AtomicFile-delete(): void--><!--Device-AtomicFile-delete(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -90,7 +78,7 @@ Deletes the **AtomicFile** class, including the original files and temporary fil
 | 13900042 | Internal error |
 | 13900027 | Read-only file system |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -129,10 +117,6 @@ Rolls back the file after the file fails to be written.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-AtomicFile-failWrite(): void--><!--Device-AtomicFile-failWrite(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -143,7 +127,7 @@ Rolls back the file after the file fails to be written.
 | --- | --- |
 | 13900042 | Internal error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -175,10 +159,6 @@ Finishes writing file data when the write operation is complete.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-AtomicFile-finishWrite(): void--><!--Device-AtomicFile-finishWrite(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -189,7 +169,7 @@ Finishes writing file data when the write operation is complete.
 | --- | --- |
 | 13900042 | Internal error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -220,10 +200,6 @@ Obtains the file object through the **AtomicFile** object. The FD needs to be cl
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-AtomicFile-getBaseFile(): File--><!--Device-AtomicFile-getBaseFile(): File-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -243,7 +219,7 @@ Obtains the file object through the **AtomicFile** object. The FD needs to be cl
 | 13900012 | Permission denied |
 | 13900042 | Internal error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -276,10 +252,6 @@ Creates a **ReadStream** instance.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-AtomicFile-openRead(): ReadStream--><!--Device-AtomicFile-openRead(): ReadStream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -299,7 +271,7 @@ Creates a **ReadStream** instance.
 | 13900012 | Permission denied |
 | 13900042 | Internal error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -341,10 +313,6 @@ Reads all content of a file.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-AtomicFile-readFully(): ArrayBuffer--><!--Device-AtomicFile-readFully(): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -362,7 +330,7 @@ Reads all content of a file.
 | 13900005 | I/O error |
 | 13900042 | Internal error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -400,10 +368,6 @@ Starts to write new file data in the **WriteStream** object returned. If the fil
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-AtomicFile-startWrite(): WriteStream--><!--Device-AtomicFile-startWrite(): WriteStream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -424,7 +388,7 @@ Starts to write new file data in the **WriteStream** object returned. If the fil
 | 13900042 | Internal error |
 | 13900027 | Read-only file system |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

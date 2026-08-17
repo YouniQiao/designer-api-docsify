@@ -4,10 +4,6 @@ Defines a touch target consisting of an input tool type, touch position, and siz
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ResponseRegion--><!--Device-unnamed-declare interface ResponseRegion-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Height of the touch target. Default value: **LengthMetrics.percent(1)**
 **Default:** LengthMetrics.percent(1)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Type of the input tool applicable to the touch target. Default value: **Response
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -77,10 +65,6 @@ Width of the touch target. Default value: **LengthMetrics.percent(1)**
 **Default:** LengthMetrics.percent(1)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,10 +88,6 @@ X coordinate of the touch point relative to the upper left corner of the compone
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -129,10 +109,6 @@ Y coordinate of the touch point relative to the upper left corner of the compone
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

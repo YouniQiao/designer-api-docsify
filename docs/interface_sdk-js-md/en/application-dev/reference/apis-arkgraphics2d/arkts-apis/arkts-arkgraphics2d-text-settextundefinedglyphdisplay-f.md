@@ -16,10 +16,6 @@ Sets the glyph type to be used when characters are mapped to the .notdef (undefi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-text-function setTextUndefinedGlyphDisplay(noGlyphShow: TextUndefinedGlyphDisplay): void--><!--Device-text-function setTextUndefinedGlyphDisplay(noGlyphShow: TextUndefinedGlyphDisplay): void-End-->
@@ -32,7 +28,7 @@ Sets the glyph type to be used when characters are mapped to the .notdef (undefi
 | --- | --- | --- | --- |
 | noGlyphShow | [TextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-textundefinedglyphdisplay-e.md) | Yes | Display mode of characters that cannot be shaped. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 text.setTextUndefinedGlyphDisplay(text.TextUndefinedGlyphDisplay.USE_TOFU)

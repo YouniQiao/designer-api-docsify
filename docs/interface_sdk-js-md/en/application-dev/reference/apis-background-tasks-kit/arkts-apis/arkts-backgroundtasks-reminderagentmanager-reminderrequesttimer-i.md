@@ -2,13 +2,9 @@
 
 ReminderRequestTimer extends ReminderRequest Defines a reminder for a scheduled timer.
 
-**Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest)
+**Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#reminderrequest)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-interface ReminderRequestTimer--><!--Device-reminderAgentManager-interface ReminderRequestTimer-End-->
 
@@ -32,10 +28,6 @@ Number of repetitions. The default value is **0**, indicating infinite repetitio
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReminderRequestTimer-repeatCount?: int--><!--Device-ReminderRequestTimer-repeatCount?: int-End-->
@@ -54,10 +46,6 @@ Repeat interval. There is no default value. If no value is set, there is no repe
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReminderRequestTimer-repeatInterval?: long--><!--Device-ReminderRequestTimer-repeatInterval?: long-End-->
@@ -75,10 +63,6 @@ Number of seconds in the countdown timer. Unit: s
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReminderRequestTimer-triggerTimeInSeconds: long--><!--Device-ReminderRequestTimer-triggerTimeInSeconds: long-End-->
 

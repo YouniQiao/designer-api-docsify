@@ -4,10 +4,6 @@ Defines progress bar options.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ProgressOptions--><!--Device-unnamed-declare interface ProgressOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,8 +19,6 @@ Style of the progress indicator. This parameter is deprecated since API version 
 **Type:** [ProgressStyle](arkts-arkui-progressstyle-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 8
 
@@ -46,10 +40,6 @@ Total progress. If this parameter is set to a value less than or equal to 0, the
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -66,13 +56,9 @@ type?: Type
 
 Style of the progress indicator. Default value: **ProgressType.Linear**
 
-**Type:** [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)
+**Type:** [Type](../../apis-na/arkts-apis/arkts-na-util-type-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,10 +79,6 @@ Current progress. Values less than 0 are adjusted to **0**, and values greater t
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

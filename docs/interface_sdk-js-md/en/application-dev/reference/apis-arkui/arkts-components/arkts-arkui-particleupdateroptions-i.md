@@ -4,10 +4,6 @@ Defines the particle updater options. > **NOTE：**> > To standardize anonymous 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ParticleUpdaterOptions--><!--Device-unnamed-interface ParticleUpdaterOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +14,11 @@ Defines the particle updater options. > **NOTE：**> > To standardize anonymous 
 config: ParticlePropertyUpdaterConfigs<TYPE>[UPDATER]
 ```
 
-How the property is updated. The available options of **type** are as follows: 1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.NONE]. 2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.RANDOM]. 3. **ParticleUpdater.CURVE**: The property changes with the animation curve. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.CURVE].
+How the property is updated. The available options of **type** are as follows: 1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#particlepropertyupdaterconfigs)[ParticleUpdater.NONE]. 2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#particlepropertyupdaterconfigs)[ParticleUpdater.RANDOM]. 3. **ParticleUpdater.CURVE**: The property changes with the animation curve. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#particlepropertyupdaterconfigs)[ParticleUpdater.CURVE].
 
 **Type:** [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)&lt;TYPE&gt;[UPDATER]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Particle updater type.
 **Type:** UPDATER
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

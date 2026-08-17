@@ -16,10 +16,6 @@ Unregister one or more type descriptors from the system by the given type IDs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_DYNAMIC_UTD_TYPE
 
 **Model restriction:** This API can be used only in the stage model.

@@ -4,10 +4,6 @@ Describes the event received by the application when the audio stream volume is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface StreamVolumeEvent--><!--Device-audio-interface StreamVolumeEvent-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -30,10 +26,6 @@ Volume level before change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StreamVolumeEvent-previousVolume?: int--><!--Device-StreamVolumeEvent-previousVolume?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -49,10 +41,6 @@ Audio stream for which the volume changes.
 **Type:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StreamVolumeEvent-streamUsage: StreamUsage--><!--Device-StreamVolumeEvent-streamUsage: StreamUsage-End-->
 
@@ -70,10 +58,6 @@ Whether to show the volume change in UI. **true** to show, **false** otherwise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StreamVolumeEvent-updateUi: boolean--><!--Device-StreamVolumeEvent-updateUi: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -89,10 +73,6 @@ Volume.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StreamVolumeEvent-volume: int--><!--Device-StreamVolumeEvent-volume: int-End-->
 

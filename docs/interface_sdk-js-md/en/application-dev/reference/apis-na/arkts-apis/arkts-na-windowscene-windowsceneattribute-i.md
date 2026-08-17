@@ -6,9 +6,7 @@ The WindowSceneAttribute
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface WindowSceneAttribute--><!--Device-unnamed-export declare interface WindowSceneAttribute-End-->
 
@@ -24,9 +22,7 @@ attractionEffect(destination: Position | undefined, fraction: double | undefined
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-WindowSceneAttribute-attractionEffect(destination: Position | undefined, fraction: double | undefined): this--><!--Device-WindowSceneAttribute-attractionEffect(destination: Position | undefined, fraction: double | undefined): this-End-->
 
@@ -52,9 +48,7 @@ attributeModifier(modifier:
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-WindowSceneAttribute-attributeModifier(modifier:    AttributeModifier<WindowSceneAttribute> | AttributeModifier<CommonMethod> | undefined) : this--><!--Device-WindowSceneAttribute-attributeModifier(modifier:    AttributeModifier<WindowSceneAttribute> | AttributeModifier<CommonMethod> | undefined) : this-End-->
 

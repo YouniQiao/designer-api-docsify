@@ -10,10 +10,6 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INPUT_KEYBOARD_CONTROLLER
 
 <!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>-End-->
@@ -42,7 +38,7 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [3900002](../errorcode-inputdevice.md#3900002-键盘设备没有连接) | There is currently no keyboard device connected. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

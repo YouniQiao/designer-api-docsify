@@ -4,10 +4,6 @@ Sets the upgrade policy to control the upgrade behavior.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface UpgradePolicy--><!--Device-update-export interface UpgradePolicy-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Automatic update period. This parameter is optional and is used when the automat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UpgradePolicy-autoUpgradePeriods: Array<UpgradePeriod>--><!--Device-UpgradePolicy-autoUpgradePeriods: Array<UpgradePeriod>-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -54,10 +46,6 @@ Automatic upgrade policy. The value **true** indicates that automatic upgrade is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UpgradePolicy-autoUpgradeStrategy: boolean--><!--Device-UpgradePolicy-autoUpgradeStrategy: boolean-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -75,10 +63,6 @@ Automatic download policy. The value **true** indicates that automatic download 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UpgradePolicy-downloadStrategy: boolean--><!--Device-UpgradePolicy-downloadStrategy: boolean-End-->
 

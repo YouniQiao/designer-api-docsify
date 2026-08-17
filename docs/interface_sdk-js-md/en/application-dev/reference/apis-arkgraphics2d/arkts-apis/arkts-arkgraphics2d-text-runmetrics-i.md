@@ -4,10 +4,6 @@ Describes the layout information and measurement information of a run of text in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface RunMetrics--><!--Device-text-interface RunMetrics-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Font measurement information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RunMetrics-fontMetrics: drawing.FontMetrics--><!--Device-RunMetrics-fontMetrics: drawing.FontMetrics-End-->
@@ -51,10 +43,6 @@ Text style.
 **Type:** TextStyle
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -1,12 +1,8 @@
 # WebCaptureMode
 
-Enum type supplied to [captureMode](arkts-arkweb-screencaptureconfig-i.md#captureMode) for setting the web capture mode.
+Web屏幕捕获模式。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 10
 
 <!--Device-unnamed-declare enum WebCaptureMode--><!--Device-unnamed-declare enum WebCaptureMode-End-->
 
@@ -18,13 +14,9 @@ Enum type supplied to [captureMode](arkts-arkweb-screencaptureconfig-i.md#captur
 HOME_SCREEN = 0
 ```
 
-The home screen.
+主屏捕获模式。
 
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
+**起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

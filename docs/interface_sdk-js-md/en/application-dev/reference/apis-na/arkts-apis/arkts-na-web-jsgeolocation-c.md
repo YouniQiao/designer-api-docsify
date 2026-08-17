@@ -4,9 +4,7 @@ Defines the js geolocation request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class JsGeolocation--><!--Device-unnamed-export declare class JsGeolocation-End-->
 
@@ -22,9 +20,7 @@ Constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JsGeolocation-constructor()--><!--Device-JsGeolocation-constructor()-End-->
 
@@ -40,9 +36,7 @@ Sets the geolocation permission status of a web page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JsGeolocation-invoke(origin: string, allow: boolean, retain: boolean): void--><!--Device-JsGeolocation-invoke(origin: string, allow: boolean, retain: boolean): void-End-->
 
@@ -54,5 +48,5 @@ Sets the geolocation permission status of a web page.
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
 | allow | boolean | Yes | Geolocation permission status. {@code true} means to allow geolocation permission; {@code false} means to disallow geolocation permission. |
-| retain | boolean | Yes | Whether the geolocation permission status can be saved to the system. {@code true} means to allow the geolocation permission status to be saved to the system; {@code false} means to disallow the geolocation permission status to be saved to the system. You can manage the geolocation permissions saved to the system through [GeolocationPermissions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-geolocationpermissions-c.md#GeolocationPermissions). |
+| retain | boolean | Yes | Whether the geolocation permission status can be saved to the system. {@code true} means to allow the geolocation permission status to be saved to the system; {@code false} means to disallow the geolocation permission status to be saved to the system. You can manage the geolocation permissions saved to the system through [GeolocationPermissions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-geolocationpermissions-c.md#geolocationpermissions). |
 

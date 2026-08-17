@@ -4,10 +4,6 @@ Configuring parameters in reverse geocode requests.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface ReverseGeoCodeRequest--><!--Device-geoLocationManager-export interface ReverseGeoCodeRequest-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -30,10 +26,6 @@ Indicates the country information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReverseGeoCodeRequest-country?: string--><!--Device-ReverseGeoCodeRequest-country?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -49,10 +41,6 @@ Latitude for reverse geocoding query.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReverseGeoCodeRequest-latitude: double--><!--Device-ReverseGeoCodeRequest-latitude: double-End-->
 
@@ -70,10 +58,6 @@ Indicates the language area information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReverseGeoCodeRequest-locale?: string--><!--Device-ReverseGeoCodeRequest-locale?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -90,10 +74,6 @@ Longitude for reverse geocoding query.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ReverseGeoCodeRequest-longitude: double--><!--Device-ReverseGeoCodeRequest-longitude: double-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -109,10 +89,6 @@ Indicates the maximum number of addresses returned by reverse geocoding query.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ReverseGeoCodeRequest-maxItems?: int--><!--Device-ReverseGeoCodeRequest-maxItems?: int-End-->
 

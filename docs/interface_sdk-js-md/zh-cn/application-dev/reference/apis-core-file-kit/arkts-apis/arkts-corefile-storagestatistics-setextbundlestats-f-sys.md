@@ -10,10 +10,6 @@ function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -47,7 +43,7 @@ function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

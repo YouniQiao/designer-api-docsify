@@ -4,10 +4,6 @@ Provides the APIs for loading ads.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-advertising-export class AdLoader--><!--Device-advertising-export class AdLoader-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -28,10 +24,6 @@ Constructor.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdLoader-constructor(context: common.Context)--><!--Device-AdLoader-constructor(context: common.Context)-End-->
@@ -44,7 +36,7 @@ Constructor.
 | --- | --- | --- | --- |
 | context | common.Context | Yes | Context of the ability or application. |
 
-## Examples
+**Examples**
 
 For details about how to obtain the context, see [Acquisition of Various Contexts](../../../application-models/application-context-stage.md#acquisition-of-context).
 
@@ -67,10 +59,6 @@ loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener)
 Loads an ad.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -95,7 +83,7 @@ Loads an ad.
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
 
-## Examples
+**Examples**
 
 For details about how to obtain the context, see [Acquisition of Various Contexts](../../../application-models/application-context-stage.md#acquisition-of-context).
 
@@ -136,10 +124,6 @@ Loads multiple ads.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void--><!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void-End-->
@@ -163,7 +147,7 @@ Loads multiple ads.
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
 
-## Examples
+**Examples**
 
 For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
 

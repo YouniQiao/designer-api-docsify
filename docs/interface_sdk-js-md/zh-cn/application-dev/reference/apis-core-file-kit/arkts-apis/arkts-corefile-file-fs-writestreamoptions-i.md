@@ -4,10 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface WriteStreamOptions--><!--Device-unnamed-export interface WriteStreamOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -24,10 +20,6 @@ mode?: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-WriteStreamOptions-mode?: number--><!--Device-WriteStreamOptions-mode?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -43,10 +35,6 @@ start?: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WriteStreamOptions-start?: number--><!--Device-WriteStreamOptions-start?: number-End-->
 

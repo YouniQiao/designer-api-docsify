@@ -16,8 +16,6 @@ Obtains a **CaptionsManager** instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 12
 
 <!--Device-accessibility-function getCaptionsManager(): CaptionsManager--><!--Device-accessibility-function getCaptionsManager(): CaptionsManager-End-->
@@ -30,7 +28,7 @@ Obtains a **CaptionsManager** instance.
 | --- | --- |
 | [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | Captions configuration. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

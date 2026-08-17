@@ -10,8 +10,6 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** getPreferences
@@ -35,8 +33,6 @@ function getStorage(path: string): Promise<Storage>
 Reads the specified file and loads its data to the **Storage** instance for data operations. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

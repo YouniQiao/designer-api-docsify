@@ -16,10 +16,6 @@ Cancel listening touchPad four finger swipe events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function offFourFingersSwipe(receiver?: Callback<FourFingersSwipe>): void--><!--Device-inputMonitor-function offFourFingersSwipe(receiver?: Callback<FourFingersSwipe>): void-End-->

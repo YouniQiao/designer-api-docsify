@@ -16,10 +16,6 @@ Obtains the information about the UIAbility components of an application that is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
 <!--Device-abilityManager-function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData>>): void--><!--Device-abilityManager-function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData>>): void-End-->
@@ -43,7 +39,7 @@ Obtains the information about the UIAbility components of an application that is
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';
@@ -69,10 +65,6 @@ Obtains the information about the UIAbility components of an application that is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
 <!--Device-abilityManager-function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>--><!--Device-abilityManager-function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>-End-->
@@ -95,7 +87,7 @@ Obtains the information about the UIAbility components of an application that is
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ Provides parameter name constants. | Name | Type | Read Only | Description | | -
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiAppEvent-namespace param--><!--Device-hiAppEvent-namespace param-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -24,7 +20,7 @@ import { hiAppEvent } from 'hiAppEvent';
 
 | Name | Description |
 | --- | --- |
-| [USER_ID](arkts-performanceanalysis-param-con.md#USER_ID) | Custom user ID. |
-| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-con.md#DISTRIBUTED_SERVICE_NAME) | Distributed service name. |
-| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-con.md#DISTRIBUTED_SERVICE_INSTANCE_ID) | Distributed service instance ID. |
+| [USER_ID](arkts-performanceanalysis-param-con.md#userid) | Custom user ID. |
+| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-con.md#distributedservicename) | Distributed service name. |
+| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-con.md#distributedserviceinstanceid) | Distributed service instance ID. |
 

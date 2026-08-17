@@ -4,10 +4,6 @@ Describes the rectangular area of the window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface Rect--><!--Device-window-interface Rect-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -30,10 +26,6 @@ Height of the rectangle, in px. The value must be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Rect-height: int--><!--Device-Rect-height: int-End-->
@@ -51,10 +43,6 @@ Left boundary of the rectangle, in px. The value must be an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Top boundary of the rectangle, in px. The value must be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Rect-top: int--><!--Device-Rect-top: int-End-->
@@ -95,10 +79,6 @@ Width of the rectangle, in px. The value must be an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

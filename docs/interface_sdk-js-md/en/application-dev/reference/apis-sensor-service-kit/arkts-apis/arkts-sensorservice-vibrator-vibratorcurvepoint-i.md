@@ -4,10 +4,6 @@ Defines the gain relative to the vibration intensity.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-interface VibratorCurvePoint--><!--Device-vibrator-interface VibratorCurvePoint-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -30,10 +26,6 @@ Change relative to the vibration frequency. This parameter is optional. The valu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VibratorCurvePoint-frequency?: int--><!--Device-VibratorCurvePoint-frequency?: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -50,10 +42,6 @@ Gain relative to the vibration intensity. This parameter is optional. The value 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VibratorCurvePoint-intensity?: double--><!--Device-VibratorCurvePoint-intensity?: double-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -69,10 +57,6 @@ Start time offset, in ms.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VibratorCurvePoint-time: int--><!--Device-VibratorCurvePoint-time: int-End-->
 

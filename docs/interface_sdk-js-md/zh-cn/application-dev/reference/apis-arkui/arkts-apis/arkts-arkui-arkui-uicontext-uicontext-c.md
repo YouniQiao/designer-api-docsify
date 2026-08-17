@@ -1,12 +1,8 @@
 # UIContext
 
-UIContext实例对象。 > **说明：** > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 > > - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的 > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定 > 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext > 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getCallingScopeUIContext)获取UIContext实例。本文中 > UIContext对象以uiContext表示。
+UIContext实例对象。 > **说明：** > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 > > - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的 > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定 > 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext > 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](#getcallingscopeuicontext)获取UIContext实例。本文中 > UIContext对象以uiContext表示。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export class UIContext--><!--Device-unnamed-export class UIContext-End-->
 
@@ -21,10 +17,6 @@ addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEv
 注册本地输入事件监视器。 接口名中的“Local”表示监视器只在当前UIContext内有效。 并且不影响其他UIContext实例。每个UIContext都维护自己独立的监视器列表。 > **说明：**> >性能警告：不要在回调中执行耗时操作！ > >监控对象注释： > > > -返回的Monitor对象是系统创建的唯一标识符。 > > > -开发人员不能主动构造或伪造此对象。 > > > -必须保存返回的监控对象引用，以便后续取消。 > > > -建议使用变量来保存，以免丢失引用。 > >使用示例： > >。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,10 +49,6 @@ animateTo(value: AnimateParam, event: () => void): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -85,10 +73,6 @@ bindTabsToNestedScrollable(tabsController: TabsController, parentScroller: Scrol
 Bind tabs to nested scrollable container components to automatically hide tab bar.
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,10 +100,6 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -144,10 +124,6 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 关闭bindSheetContent对应的半模态页面，使用Promise异步回调。 > **说明：** > > 使用此接口关闭半模态页面时，不会触发shouldDismiss回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -187,10 +163,6 @@ constructor()
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -208,10 +180,6 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 定义Animator类。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -245,13 +213,9 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-创建animator动画结果对象（AnimatorResult）。与[createAnimator](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#createAnimator)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions)类型入参的支持。
+创建animator动画结果对象（AnimatorResult）。与[createAnimator](#createanimator)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#simpleanimatoroptions)类型入参的支持。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -289,10 +253,6 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 **起始版本：** 17
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -305,13 +265,13 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext \| common.ExtensionContext | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)或 [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)所对应的上下文环境。 |
+| context | common.UIAbilityContext \| common.ExtensionContext | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability)或 [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md#extensionability)所对应的上下文环境。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | Context of the created UI instance, or **undefined** if creation fails. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Context of the created UI instance, or **undefined** if creation fails. |
 
 **错误码：**
 
@@ -326,13 +286,9 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 static destroyUIContextWithoutWindow(): void
 ```
 
-销毁[createUIContextWithoutWindow](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#createUIContextWithoutWindow)创建的UI实例。
+销毁[createUIContextWithoutWindow](#createuicontextwithoutwindow)创建的UI实例。
 
 **起始版本：** 17
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -351,10 +307,6 @@ dispatchKeyEvent(node: number | string, event: KeyEvent): boolean
 Dispach keyboard event to the frameNode with inspector key.
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -387,10 +339,6 @@ enableEventPassthrough(enabled: boolean, eventType: RawInputEventType): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -416,10 +364,6 @@ whether to enable or disable swipe to back event.
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UIContext-enableSwipeBack(enabled: Optional<boolean>): void--><!--Device-UIContext-enableSwipeBack(enabled: Optional<boolean>): void-End-->
@@ -438,13 +382,9 @@ whether to enable or disable swipe to back event.
 fp2px(value: number): number
 ```
 
-将fp单位的数值转换为以px为单位的数值。 转换公式为：px值 = fp值 × 像素密度 × 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#VirtualScreenConfig).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
+将fp单位的数值转换为以px为单位的数值。 转换公式为：px值 = fp值 × 像素密度 × 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#virtualscreenconfig).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -474,10 +414,6 @@ static getAllUIContexts(): UIContext[]
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -490,7 +426,7 @@ static getAllUIContexts(): UIContext[]
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)[] | Array of all currently valid UIContext instances. Returns an empty array if no valid UIContext instance exists. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] | Array of all currently valid UIContext instances. Returns an empty array if no valid UIContext instance exists. |
 
 ## getAtomicServiceBar
 
@@ -501,10 +437,6 @@ getAtomicServiceBar(): Nullable<AtomicServiceBar>
 Get AtomicServiceBar.
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -518,7 +450,7 @@ Get AtomicServiceBar.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Nullable](../../apis-na/arkts-apis/arkts-na-nullable-t.md)&lt;[AtomicServiceBar](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
+| [Nullable](../../apis-na/arkts-apis/arkts-na-nullable-t.md)&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
 
 ## getAttachedFrameNodeById
 
@@ -529,10 +461,6 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 通过组件的id获取当前窗口上的实体节点。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -560,13 +488,9 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 static getCallingScopeUIContext(): UIContext | undefined
 ```
 
-获取当前[调用作用域](../../../ui/arkts-global-interface.md#基本概念)的UIContext，调用作用域不明确时返回undefined。 > **说明：** > > 返回的UIContext对象可能指向一个已销毁的UI实例，通常在由已销毁的实例抛出异步任务时出现。建议通过[isAvailable](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#isAvailable)接口判断其有效性。
+获取当前[调用作用域](../../../ui/arkts-global-interface.md#基本概念)的UIContext，调用作用域不明确时返回undefined。 > **说明：** > > 返回的UIContext对象可能指向一个已销毁的UI实例，通常在由已销毁的实例抛出异步任务时出现。建议通过[isAvailable](#isavailable)接口判断其有效性。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -580,7 +504,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
 
 ## getComponentSnapshot
 
@@ -591,10 +515,6 @@ getComponentSnapshot(): ComponentSnapshot
 获取组件快照。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -608,7 +528,7 @@ getComponentSnapshot(): ComponentSnapshot
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-componentsnapshot-c.md) | 组件快照。 |
+| [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md) | 组件快照。 |
 
 ## getComponentUtils
 
@@ -619,10 +539,6 @@ getComponentUtils(): ComponentUtils
 get object ComponentUtils.
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -636,7 +552,7 @@ get object ComponentUtils.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentUtils](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
+| [ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
 
 ## getContextMenuController
 
@@ -647,10 +563,6 @@ getContextMenuController(): ContextMenuController
 Get object context menu controller.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -664,7 +576,7 @@ Get object context menu controller.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContextMenuController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
+| [ContextMenuController](arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
 
 ## getCursorController
 
@@ -675,10 +587,6 @@ getCursorController(): CursorController
 Get object cursor controller.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -692,7 +600,7 @@ Get object cursor controller.
 
 | 类型 | 说明 |
 | --- | --- |
-| [CursorController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
+| [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
 
 ## getDialogPresenter
 
@@ -703,10 +611,6 @@ getDialogPresenter(): DialogPresenter
 获取Dialog对象。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -720,7 +624,7 @@ getDialogPresenter(): DialogPresenter
 
 | 类型 | 说明 |
 | --- | --- |
-| [DialogPresenter](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dialogpresenter-c.md) | Dialog对象。 |
+| [DialogPresenter](arkts-arkui-arkui-uicontext-dialogpresenter-c.md) | Dialog对象。 |
 
 ## getDragController
 
@@ -731,10 +635,6 @@ getDragController(): DragController
 Get DragController.
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -748,7 +648,7 @@ Get DragController.
 
 | 类型 | 说明 |
 | --- | --- |
-| [DragController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dragcontroller-c.md) | the DragController |
+| [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) | the DragController |
 
 ## getFilteredInspectorTree
 
@@ -759,10 +659,6 @@ getFilteredInspectorTree(filters?: Array<string>): string
 get the filtered attributes of the component tree.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -799,10 +695,6 @@ getFilteredInspectorTreeById(id: string, depth: number, filters?: Array<string>)
 get the filtered attributes of the component tree with the specified id and depth
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -842,10 +734,6 @@ getFocusController(): FocusController
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -858,7 +746,7 @@ getFocusController(): FocusController
 
 | 类型 | 说明 |
 | --- | --- |
-| [FocusController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-focuscontroller-c.md) | 焦点控制器 |
+| [FocusController](arkts-arkui-arkui-uicontext-focuscontroller-c.md) | 焦点控制器 |
 
 ## getFont
 
@@ -869,10 +757,6 @@ getFont(): Font
 获取Font对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -886,7 +770,7 @@ getFont(): Font
 
 | 类型 | 说明 |
 | --- | --- |
-| [Font](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-font-c.md) | Font实例对象。 |
+| [Font](arkts-arkui-arkui-uicontext-font-c.md) | Font实例对象。 |
 
 ## getFrameNodeById
 
@@ -897,10 +781,6 @@ getFrameNodeById(id: string): FrameNode | null
 通过组件的id获取组件树的实体节点。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -932,10 +812,6 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -966,10 +842,6 @@ getHostContext(): Context | undefined
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -982,7 +854,7 @@ getHostContext(): Context | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-na/arkts-apis/arkts-na-context-t.md) | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
+| [Context](arkts-arkui-context-t.md) | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
 
 ## getId
 
@@ -993,10 +865,6 @@ getId(): number
 获取UI实例对象唯一标识，多实例场景下，开发者可使用此唯一标识区分多个UI实例对象，便于管理。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1022,10 +890,6 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1038,7 +902,7 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [KeyboardAvoidMode](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-keyboardavoidmode-e.md) | 返回虚拟键盘抬起时的页面避让模式。 |
+| [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | 返回虚拟键盘抬起时的页面避让模式。 |
 
 ## getLastFocusedUIContext
 
@@ -1049,10 +913,6 @@ static getLastFocusedUIContext(): UIContext | undefined
 获取最近一次切换到获焦状态的UI实例的UIContext。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1066,7 +926,7 @@ static getLastFocusedUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
 
 ## getLastForegroundUIContext
 
@@ -1077,10 +937,6 @@ static getLastForegroundUIContext(): UIContext | undefined
 获取最近一次切换到前台状态的UI实例的UIContext。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1094,7 +950,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
 
 ## getMagnifier
 
@@ -1102,13 +958,9 @@ static getLastForegroundUIContext(): UIContext | undefined
 getMagnifier(): Magnifier
 ```
 
-获取[Magnifier](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-magnifier-c.md#Magnifier)对象，可控制放大镜显示和隐藏。
+获取[Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md#magnifier)对象，可控制放大镜显示和隐藏。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1122,7 +974,7 @@ getMagnifier(): Magnifier
 
 | 类型 | 说明 |
 | --- | --- |
-| [Magnifier](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-magnifier-c.md) | Magnifier对象，可用于控制放大镜的显示和隐藏。 |
+| [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier对象，可用于控制放大镜的显示和隐藏。 |
 
 ## getMaxFontScale
 
@@ -1133,10 +985,6 @@ getMaxFontScale(): number
 Get the max font scale.
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1162,10 +1010,6 @@ getMeasureUtils(): MeasureUtils
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1178,7 +1022,7 @@ getMeasureUtils(): MeasureUtils
 
 | 类型 | 说明 |
 | --- | --- |
-| [MeasureUtils](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-measureutils-c.md) | 提供文本宽度、高度等相关计算。 |
+| [MeasureUtils](arkts-arkui-arkui-uicontext-measureutils-c.md) | 提供文本宽度、高度等相关计算。 |
 
 ## getMediaQuery
 
@@ -1189,10 +1033,6 @@ getMediaQuery(): MediaQuery
 get object mediaQuery.
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1206,7 +1046,7 @@ get object mediaQuery.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaQuery](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
+| [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
 
 ## getNavigationInfoByUniqueId
 
@@ -1217,10 +1057,6 @@ getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined
 Get navigation information of the frameNode with uniqueId.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1252,10 +1088,6 @@ Obtains the OverlayManager object.
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1268,7 +1100,7 @@ Obtains the OverlayManager object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [OverlayManager](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-overlaymanager-c.md) | OverlayManager instance obtained. |
+| [OverlayManager](arkts-arkui-arkui-uicontext-overlaymanager-c.md) | OverlayManager instance obtained. |
 
 ## getOverlayManagerOptions
 
@@ -1279,10 +1111,6 @@ getOverlayManagerOptions(): OverlayManagerOptions
 Get object OverlayManagerOptions.
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1296,7 +1124,7 @@ Get object OverlayManagerOptions.
 
 | 类型 | 说明 |
 | --- | --- |
-| [OverlayManagerOptions](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
+| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
 
 ## getPageInfoByUniqueId
 
@@ -1307,10 +1135,6 @@ getPageInfoByUniqueId(id: number): PageInfo
 通过组件的uniqueId获取该节点对应的Router和NavDestination页面信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1330,7 +1154,7 @@ getPageInfoByUniqueId(id: number): PageInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PageInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
+| [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
 
 ## getPageRootNode
 
@@ -1341,10 +1165,6 @@ getPageRootNode(): FrameNode | null
 获取UIContext对应页面的根节点。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -1374,10 +1194,6 @@ getPixelRoundMode(): PixelRoundMode
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1402,10 +1218,6 @@ get object PromptAction.
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1418,7 +1230,7 @@ get object PromptAction.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PromptAction](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md) | PromptAction object. |
+| [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md) | PromptAction object. |
 
 ## getRouter
 
@@ -1429,10 +1241,6 @@ getRouter(): Router
 Obtains a Router object.
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1446,7 +1254,7 @@ Obtains a Router object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md) | Router object. |
+| [Router](arkts-arkui-arkui-uicontext-router-c.md) | Router object. |
 
 ## getSharedLocalStorage
 
@@ -1457,10 +1265,6 @@ getSharedLocalStorage(): LocalStorage | undefined
 获取当前stage共享的LocalStorage实例。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1486,10 +1290,6 @@ getSmartGestureController(): SmartGestureController
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1502,7 +1302,7 @@ getSmartGestureController(): SmartGestureController
 
 | 类型 | 说明 |
 | --- | --- |
-| [SmartGestureController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-smartgesturecontroller-c.md) | 智能手势控制器对象。 |
+| [SmartGestureController](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md) | 智能手势控制器对象。 |
 
 ## getTextMenuController
 
@@ -1510,13 +1310,9 @@ getSmartGestureController(): SmartGestureController
 getTextMenuController(): TextMenuController
 ```
 
-获取[TextMenuController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#TextMenuController)对象，可通过该对象控制文本选择菜单。
+获取[TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md#textmenucontroller)对象，可通过该对象控制文本选择菜单。
 
 **起始版本：** 16
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为16。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1530,7 +1326,7 @@ getTextMenuController(): TextMenuController
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextMenuController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md) | TextMenuController对象。 |
+| [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | TextMenuController对象。 |
 
 ## getUIInspector
 
@@ -1541,10 +1337,6 @@ getUIInspector(): UIInspector
 获取UIInspector对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1558,7 +1350,7 @@ getUIInspector(): UIInspector
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIInspector](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uiinspector-c.md) | 返回UIInspector实例对象。 |
+| [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md) | 返回UIInspector实例对象。 |
 
 ## getUIObserver
 
@@ -1569,10 +1361,6 @@ getUIObserver(): UIObserver
 获取UIObserver对象。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1586,7 +1374,7 @@ getUIObserver(): UIObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIObserver](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uiobserver-c.md) | 返回UIObserver实例对象。 |
+| [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md) | 返回UIObserver实例对象。 |
 
 ## getWindowHeightBreakpoint
 
@@ -1597,10 +1385,6 @@ getWindowHeightBreakpoint(): HeightBreakpoint
 获取当前实例所在窗口的高度断点。具体枚举值根据窗口高宽比确定，详见 HeightBreakpoint。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1622,13 +1406,9 @@ getWindowHeightBreakpoint(): HeightBreakpoint
 getWindowId(): number | undefined
 ```
 
-获取当前应用实例所属的窗口ID。 > **说明：** > > 若UIContext位于主应用程序进程中的[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)内，则返回主应用程 > 序的顶层窗口ID。
+获取当前应用实例所属的窗口ID。 > **说明：** > > 若UIContext位于主应用程序进程中的[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)内，则返回主应用程 > 序的顶层窗口ID。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1654,10 +1434,6 @@ getWindowName(): string | undefined
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1681,10 +1457,6 @@ getWindowWidthBreakpoint(): WidthBreakpoint
 获取当前实例所在窗口的宽度断点枚举值。具体枚举值根据窗口宽度vp值确定，详见 WidthBreakpoint。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1710,10 +1482,6 @@ isAvailable(): boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1737,10 +1505,6 @@ isEasySplit(): boolean
 检查当前UI实例是否处于分栏模式。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1766,10 +1530,6 @@ Checks whether current font scale follows the system.
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -1793,10 +1553,6 @@ keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>):
 产生关键帧动画。该接口的使用说明请参考keyframeAnimateTo。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1823,10 +1579,6 @@ lpx2px(value: number): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1851,13 +1603,9 @@ lpx2px(value: number): number
 openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions?: SheetOptions, targetId?: number): Promise<void>
 ```
 
-创建并弹出以bindSheetContent作为内容的半模态页面，使用Promise异步回调。通过该接口弹出的半模态页面样式完全按照bindSheetContent中设置的样式显示。 > **说明：** > > 1. 使用该接口时，若未传入有效的targetId，则不支持设置SheetOptions.preferType为POPUP模式、不支持设置SheetOptions.mode为EMBEDDED模式。 > > 2. 由于[updateBindSheet](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#updateBindSheet)和[closeBindSheet](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#closeBindSheet)依赖 > bindSheetContent去更新或者关闭指定的半模态页面，开发者需自行维护传入的bindSheetContent。 > > 3. 不支持设置SheetOptions.UIContext。
+创建并弹出以bindSheetContent作为内容的半模态页面，使用Promise异步回调。通过该接口弹出的半模态页面样式完全按照bindSheetContent中设置的样式显示。 > **说明：** > > 1. 使用该接口时，若未传入有效的targetId，则不支持设置SheetOptions.preferType为POPUP模式、不支持设置SheetOptions.mode为EMBEDDED模式。 > > 2. 由于[updateBindSheet](#updatebindsheet)和[closeBindSheet](#closebindsheet)依赖 > bindSheetContent去更新或者关闭指定的半模态页面，开发者需自行维护传入的bindSheetContent。 > > 3. 不支持设置SheetOptions.UIContext。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1902,10 +1650,6 @@ postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1918,7 +1662,7 @@ postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-framecallback-c.md) | 是 | 下一帧需要执行的回调。 |
+| frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | 是 | 下一帧需要执行的回调。 |
 | delayTime | number | 是 | 延迟的时间，以毫秒为单位。传入null、undefined或小于0的值，会按0处理。 |
 
 ## postFrameCallback
@@ -1930,10 +1674,6 @@ postFrameCallback(frameCallback: FrameCallback): void
 注册一个回调，仅在下一帧渲染时调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1947,7 +1687,7 @@ postFrameCallback(frameCallback: FrameCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-framecallback-c.md) | 是 | 下一帧需要执行的回调。 |
+| frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | 是 | 下一帧需要执行的回调。 |
 
 ## px2fp
 
@@ -1955,13 +1695,9 @@ postFrameCallback(frameCallback: FrameCallback): void
 px2fp(value: number): number
 ```
 
-将px单位的数值转换为以fp为单位的数值。 转换公式为：fp值 = px值 ÷ 像素密度 ÷ 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#VirtualScreenConfig).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
+将px单位的数值转换为以fp为单位的数值。 转换公式为：fp值 = px值 ÷ 像素密度 ÷ 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#virtualscreenconfig).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1991,10 +1727,6 @@ px2lpx(value: number): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -2019,13 +1751,9 @@ px2lpx(value: number): number
 px2vp(value: number): number
 ```
 
-将px单位的数值转换为以vp为单位的数值。 转换公式为：vp值 = px值 ÷ 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#VirtualScreenConfig).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，像素单位中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
+将px单位的数值转换为以vp为单位的数值。 转换公式为：vp值 = px值 ÷ 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#virtualscreenconfig).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，像素单位中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2055,10 +1783,6 @@ removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -2083,10 +1807,6 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -2105,7 +1825,7 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[DynamicSyncScene](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
+| Array&lt;[DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
 
 ## resolveUIContext
 
@@ -2116,10 +1836,6 @@ static resolveUIContext(): ResolvedUIContext
 使用优先级策略获取带有解析策略的UIContext实例对象。 > **说明：** > > 按照预定义的优先级顺序解析并返回UIContext实例和UIContext的解析策略。 > > 解析规则按顺序如下： > > 1. 当前调用作用域中的UIContext。 > > 2. 如果只存在一个UI实例，则返回其UIContext。 > > 3. 如果存在UI实例切换到获焦状态，且最近一次切换到获焦状态的UI实例未销毁，则返回最近一次获焦UI实例的UIContext。 > > 4. 如果存在UI实例切换到前台状态，且最近一次切换到前台状态的UI实例未销毁，则返回最近一次切换到前台状态的UI实例的UIContext。 > > 5. 如果存在多个UI实例，则返回实例唯一标识的ID最大的UIContext。 > > 6. 如果以上条件均不满足，则返回一个无效的UIContext实例。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2133,7 +1849,7 @@ static resolveUIContext(): ResolvedUIContext
 
 | 类型 | 说明 |
 | --- | --- |
-| [ResolvedUIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-resolveduicontext-c.md) | 返回带有解析策略的UIContext实例对象。 |
+| [ResolvedUIContext](arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | 返回带有解析策略的UIContext实例对象。 |
 
 ## runScopedTask
 
@@ -2144,10 +1860,6 @@ runScopedTask(callback: () => void): void
 在当前UIContext对应的UI实例作用域内执行传入的回调函数。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2173,10 +1885,6 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -2189,7 +1897,7 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| feature | [CustomKeyboardContinueFeature](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 | 自定义键盘接续特性。 |
+| feature | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 | 自定义键盘接续特性。 |
 
 ## setImageCacheCount
 
@@ -2200,10 +1908,6 @@ setImageCacheCount(value: number): void
 设置内存中缓存解码后图片的数量上限，提升再次加载同源图片的加载速度。如果不设置则默认为0，不进行缓存。缓存采用内置的LRU策略，新图片加载后，如果超过缓存上限，会删除最久未再次加载的缓存。 建议根据应用内存需求，设置合理缓存数量，数字过大可能导致内存使用过高。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2229,10 +1933,6 @@ setImageRawDataCacheSize(value: number): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -2257,10 +1957,6 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -2273,7 +1969,7 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-keyboardavoidmode-e.md) | 是 | 配置虚拟键盘抬起时页面的避让模式。&lt;br /&gt;默认值：KeyboardAvoidMode.OFFSET，键盘抬起时默认避让模式为上抬。&lt;br /&gt;setKeyboardAvoidMode传入异常值时，该属性设置不生效。 |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | 是 | 配置虚拟键盘抬起时页面的避让模式。&lt;br /&gt;默认值：KeyboardAvoidMode.OFFSET，键盘抬起时默认避让模式为上抬。&lt;br /&gt;setKeyboardAvoidMode传入异常值时，该属性设置不生效。 |
 
 ## setOverlayManagerOptions
 
@@ -2284,10 +1980,6 @@ setOverlayManagerOptions(options: OverlayManagerOptions): boolean
 Init OverlayManager.
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2301,7 +1993,7 @@ Init OverlayManager.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OverlayManagerOptions](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-overlaymanageroptions-i.md) | 是 | Options. |
+| options | [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | 是 | Options. |
 
 **返回值：**
 
@@ -2318,10 +2010,6 @@ setPixelRoundMode(mode: PixelRoundMode): void
 设置当前页面的像素取整模式。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2346,10 +2034,6 @@ static setResourceManagerCacheMaxCountForHSP(count: number): void
 设置HSP资源管理对象的缓存数量上限。 如果缓存的上限设置得过高，可能会导致内存开销过大，存在内存过载的风险。 建议根据实际需求进行配置。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2383,10 +2067,6 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -2399,7 +2079,7 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | [TextSelectionClearPolicy](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textselectionclearpolicy-e.md) | 是 | 文本选择清除策略。 |
+| policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | 是 | 文本选择清除策略。 |
 
 ## showActionSheet
 
@@ -2410,10 +2090,6 @@ showActionSheet(value: ActionSheetOptions): void
 Shows an action sheet in the given settings.
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2439,10 +2115,6 @@ alertDialog display.
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -2466,10 +2138,6 @@ showDatePickerDialog(options: DatePickerDialogOptions): void
 datePickerDialog display.
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2495,10 +2163,6 @@ textPickerDialog display.
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -2522,10 +2186,6 @@ showTextPickerDialog(style: TextPickerDialogOptions | TextPickerDialogOptionsExt
 textPickerDialog display.
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2551,10 +2211,6 @@ timePickerDialog display.
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -2578,10 +2234,6 @@ unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: S
 Unbind tabs from nested scrollable container components.
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2609,10 +2261,6 @@ Unbind tabs from scrollable container component.
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -2637,10 +2285,6 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 更新bindSheetContent对应的半模态页面的样式，使用Promise异步回调。 > **说明：** > > 不支持更新SheetOptions.UIContext、SheetOptions.mode、回调函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2678,13 +2322,9 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 vp2px(value: number): number
 ```
 
-将vp单位的数值转换为以px为单位的数值。 转换公式为：px值 = vp值 × 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#VirtualScreenConfig).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，像素单位中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
+将vp单位的数值转换为以px为单位的数值。 转换公式为：px值 = vp值 × 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#virtualscreenconfig).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，像素单位中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

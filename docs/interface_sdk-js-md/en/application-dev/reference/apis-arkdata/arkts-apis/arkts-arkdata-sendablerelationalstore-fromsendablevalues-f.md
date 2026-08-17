@@ -16,10 +16,6 @@ Converts the array data that can be passed across threads into the data that can
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-sendableRelationalStore-function fromSendableValues(values: collections.Array<ValueType>): NonSendableValues--><!--Device-sendableRelationalStore-function fromSendableValues(values: collections.Array<ValueType>): NonSendableValues-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -42,7 +38,7 @@ Converts the array data that can be passed across threads into the data that can
 | --- | --- |
 | [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableRelationalStore } from '@kit.ArkData';

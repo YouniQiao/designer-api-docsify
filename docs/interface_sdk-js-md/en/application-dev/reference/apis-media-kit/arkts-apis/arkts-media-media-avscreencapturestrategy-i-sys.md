@@ -4,10 +4,6 @@ Provides the media AVScreenCaptureStrategy definition.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface AVScreenCaptureStrategy--><!--Device-media-interface AVScreenCaptureStrategy-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -31,10 +27,6 @@ Defines whether to enable device-level content recording
 **Default:** false
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureStrategy-enableDeviceLevelCapture?: boolean--><!--Device-AVScreenCaptureStrategy-enableDeviceLevelCapture?: boolean-End-->
 

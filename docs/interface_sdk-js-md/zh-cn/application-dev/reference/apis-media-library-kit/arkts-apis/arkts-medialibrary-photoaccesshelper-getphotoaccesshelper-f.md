@@ -10,10 +10,6 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -40,7 +36,7 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 此处获取的phAccessHelper实例为全局对象，后续使用到phAccessHelper的地方默认为使用此处获取的对象，如未添加此段代码报phAccessHelper未定义的错误请自行添加。
@@ -72,10 +68,6 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper | null
 获取相册管理模块的实例，用于访问和修改相册中的媒体文件。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

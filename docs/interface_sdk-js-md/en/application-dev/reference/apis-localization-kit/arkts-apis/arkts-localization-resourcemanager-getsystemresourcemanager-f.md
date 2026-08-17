@@ -16,11 +16,9 @@ Obtains a system resource management object for accessing preset system resource
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getSysResourceManager)
+**Substitutes:** [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,7 +38,7 @@ Obtains a system resource management object for accessing preset system resource
 | --- | --- |
 | [9001009](../errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';

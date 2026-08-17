@@ -1,14 +1,10 @@
 # RotationRecognizer
 
-Implements a rotation gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer).
+Implements a rotation gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer).
 
-**Inheritance/Implementation:** RotationRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer)
+**Inheritance/Implementation:** RotationRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class RotationRecognizer--><!--Device-unnamed-declare class RotationRecognizer-End-->
 
@@ -23,10 +19,6 @@ getAngle(): number
 Obtains the minimum angle change required for the rotation gesture to be recognized.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

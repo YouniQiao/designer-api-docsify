@@ -1,12 +1,8 @@
 # PromptAction
 
-Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups. > **NOTE：**> > - The initial APIs of this class are supported since API version 10. > > - In the following API examples, you must first use [getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction) in > **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
+Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups. > **NOTE：**> > - The initial APIs of this class are supported since API version 10. > > - In the following API examples, you must first use [getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) in > **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class PromptAction--><!--Device-unnamed-export class PromptAction-End-->
 
@@ -47,6 +43,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## closeCustomDialog
@@ -58,10 +56,6 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 Closes a custom dialog box corresponding to **dialogContent**. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,10 +95,6 @@ Closes the specified custom dialog box.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -135,10 +125,6 @@ closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 Closes the menu corresponding to the provided content. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +164,6 @@ Closes the popup corresponding to the provided **content**. This API uses a prom
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -220,10 +202,6 @@ Closes the specified toast.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -256,10 +234,6 @@ This API returns the order of the dialog box currently at the bottom layer. This
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -283,10 +257,6 @@ getTopOrder(): LevelOrder
 Obtains the order of the topmost dialog box. This API returns the order of the dialog box currently at the top layer. This information can be used to specify the desired order for subsequent dialog boxes.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -312,10 +282,6 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -329,7 +295,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | No | Dialog box style.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.BaseDialogOptions | No | Dialog box style.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -351,13 +317,9 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 ```
 
-Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**. + * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.<br> + * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + * @returns { Promise&lt;number&gt; } Promise that returns the dialog box ID for use with **closeCustomDialog**.
+Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**. + * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.<br> + * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + * @returns { Promise&lt;number&gt; } Promise that returns the dialog box ID for use with **closeCustomDialog**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -371,7 +333,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)+ and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) in **BaseDialogOptions** are set to **true**,+ only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ |
+| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)+ and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**,+ only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ |
 
 **Return value:**
 
@@ -397,10 +359,6 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -415,7 +373,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | Yes | Controller of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -437,13 +395,9 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-Opens a menu with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the menu will not be displayed. > > - You must maintain the provided **content**, on which [updateMenu](#updateMenu) and > [closeMenu](#closeMenu) rely to identify the target menu. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#Chip)), the [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md#ComponentContent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**. > > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openMenu) has > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
+Opens a menu with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the menu will not be displayed. > > - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and > [closeMenu](#closemenu) rely to identify the target menu. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#chip)), the [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md#componentcontent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**. > > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openmenu) has > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -483,13 +437,9 @@ Opens a menu with the specified content. This API uses a promise to return the r
 openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>
 ```
 
-Creates and displays a popup with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the popup will not be displayed. > > - You must maintain the provided **content**, on which [updatePopup](#updatePopup) and > [closePopup](#closePopup) rely to identify the target popup. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#Chip)), the [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md#ComponentContent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**.
+Creates and displays a popup with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the popup will not be displayed. > > - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and > [closePopup](#closepopup) rely to identify the target popup. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#chip)), the [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md#componentcontent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -533,10 +483,6 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -575,10 +521,6 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -593,7 +535,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 | --- | --- | --- | --- |
 | builder | CustomBuilder \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | No | Controller of the custom dialog box. |
-| options | promptAction.DialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.DialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -618,11 +560,9 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [showActionMenu](#showActionMenu)
+**Substitutes:** [showActionMenu](#showactionmenu)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -653,10 +593,6 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 Creates and displays an action menu. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -689,10 +625,6 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 Creates and displays an action menu. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -731,10 +663,6 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -766,10 +694,6 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 Creates and displays a dialog box. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -808,10 +732,6 @@ Creates and displays a toast.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -842,10 +762,6 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 Updates a custom dialog box corresponding to **dialogContent**. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -886,10 +802,6 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -929,10 +841,6 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 Updates the style of the popup corresponding to the provided **content**. This API uses a promise to return the result. > **NOTE：**> > Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

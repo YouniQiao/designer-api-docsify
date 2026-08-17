@@ -4,10 +4,6 @@ Defines the callback of the authentication widget. The authentication widget use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-userAuth-interface IAuthWidgetCallback--><!--Device-userAuth-interface IAuthWidgetCallback-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -30,10 +26,6 @@ Triggered to receive commands from the user authentication framework. The user a
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-IAuthWidgetCallback-sendCommand(cmdData: string): void--><!--Device-IAuthWidgetCallback-sendCommand(cmdData: string): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -46,7 +38,7 @@ Triggered to receive commands from the user authentication framework. The user a
 | --- | --- | --- | --- |
 | cmdData | string | Yes | Command data, which is a JSON string containing the command content sent by the user authentication framework to the authentication widget. The JSON structure includes corresponding fields based on different command types. Common fields include: **commandType** (string, command type), **authType** ( array, list of authentication types), **result** (number, authentication result code), etc. The widget must parse this data and perform corresponding operations based on the command type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -79,10 +71,6 @@ Called to return the command sent from the user authentication framework to the 
 **Type:** [AuthWidgetCallbackSendCommandFunc](arkts-userauthentication-userauth-authwidgetcallbacksendcommandfunc-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IAuthWidgetCallback-sendCommand: AuthWidgetCallbackSendCommandFunc--><!--Device-IAuthWidgetCallback-sendCommand: AuthWidgetCallbackSendCommandFunc-End-->
 

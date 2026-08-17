@@ -4,10 +4,6 @@ This module provides file descriptor information of the HAP where the `rawfile` 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface RawFileDescriptor--><!--Device-unnamed-export interface RawFileDescriptor-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -23,10 +19,6 @@ File descriptor.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ File length, indicating the size of the `rawfile` file. The unit is bytes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RawFileDescriptor-length: long--><!--Device-RawFileDescriptor-length: long-End-->
@@ -67,10 +55,6 @@ Start offset, indicating the start position of the `rawfile` file in the HAP. Th
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

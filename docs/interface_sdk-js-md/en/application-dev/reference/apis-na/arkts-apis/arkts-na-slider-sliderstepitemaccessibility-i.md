@@ -4,9 +4,7 @@ Defines the accessibility information of slider step point.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface SliderStepItemAccessibility--><!--Device-unnamed-export declare interface SliderStepItemAccessibility-End-->
 
@@ -24,9 +22,7 @@ Set the accessibility text of the slider step point. The default value is an emp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

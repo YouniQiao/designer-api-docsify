@@ -4,10 +4,6 @@ Enumerates the photo quality prioritization strategies.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum PhotoQualityPrioritization--><!--Device-camera-enum PhotoQualityPrioritization-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -21,10 +17,6 @@ HIGH_QUALITY = 0
 Focuses on image quality, which may increase the time required for capturing photos to ensure high-quality output.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -41,10 +33,6 @@ SPEED = 1
 Focuses on performance, trading off image quality for faster capture times.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

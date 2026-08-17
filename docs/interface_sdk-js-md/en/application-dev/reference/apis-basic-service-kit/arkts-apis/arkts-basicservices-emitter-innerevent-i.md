@@ -4,10 +4,6 @@ Describes an event to subscribe to or emit. The **EventPriority** settings do no
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-export interface InnerEvent--><!--Device-emitter-export interface InnerEvent-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -30,10 +26,6 @@ Event ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-InnerEvent-eventId: long--><!--Device-InnerEvent-eventId: long-End-->
@@ -51,10 +43,6 @@ Event priority. The default value is **EventPriority.LOW**.
 **Type:** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

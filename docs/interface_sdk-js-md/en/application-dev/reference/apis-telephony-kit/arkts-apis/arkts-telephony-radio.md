@@ -4,10 +4,6 @@ Provides interfaces for applications to obtain the network state, cell informati
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace radio--><!--Device-unnamed-declare namespace radio-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -24,93 +20,93 @@ import { radio } from 'radio';
 
 | Name | Description |
 | --- | --- |
-| [getISOCountryCodeForNetwork](arkts-telephony-radio-getisocountrycodefornetwork-f.md#getISOCountryCodeForNetwork) | Obtains the ISO-defined country code of the country where the registered network is deployed. |
-| [getISOCountryCodeForNetwork](arkts-telephony-radio-getisocountrycodefornetwork-f.md#getISOCountryCodeForNetwork) | Obtains the ISO-defined country code of the country where the registered network is deployed. |
-| [getISOCountryCodeForNetworkSync](arkts-telephony-radio-getisocountrycodefornetworksync-f.md#getISOCountryCodeForNetworkSync) | Obtains the ISO-defined country code of the country where the registered network is deployed. |
-| [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md#getNetworkSelectionMode) | Obtains the network search mode of the SIM card in a specified slot. |
-| [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md#getNetworkSelectionMode) | Obtains the network search mode of the SIM card in a specified slot. |
-| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md#getNetworkState) | Obtains the network state of the registered network. |
-| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md#getNetworkState) | Obtains the network state of the registered network. |
-| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md#getNetworkState) | Obtains the network state of the registered network. |
-| [getOperatorName](arkts-telephony-radio-getoperatorname-f.md#getOperatorName) | Get the operator name of the specified SIM card slot. |
-| [getOperatorName](arkts-telephony-radio-getoperatorname-f.md#getOperatorName) | Get the operator name of the specified SIM card slot. |
-| [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md#getOperatorNameSync) | Get the operator name of the specified SIM card slot. |
-| [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md#getPrimarySlotId) | Obtains the index number of the card slot where the primary card is located if multiple SIM cards are inserted. The primary card is the SIM card inserted in the card slot that uses data services by default. |
-| [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md#getPrimarySlotId) | Obtains the index number of the card slot where the primary card is located if multiple SIM cards are inserted. The primary card is the SIM card inserted in the card slot that uses data services by default. |
-| [getRadioTech](arkts-telephony-radio-getradiotech-f.md#getRadioTech) | Obtains radio access technology (RAT) of the registered network. The system returns RAT of the packet service (PS) and circuit service (CS) domain. |
-| [getRadioTech](arkts-telephony-radio-getradiotech-f.md#getRadioTech) | Obtains radio access technology (RAT) of the registered network. The system returns RAT of the packet service (PS) and circuit service (CS) domain. |
-| [getRadioTechSync](arkts-telephony-radio-getradiotechsync-f.md#getRadioTechSync) | Obtains radio access technology (RAT) of the registered network. |
-| [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md#getSignalInformation) | Obtains the list of signal strength information of the registered network corresponding to a specified SIM card. |
-| [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md#getSignalInformation) | Obtains the list of signal strength information of the registered network corresponding to a specified SIM card. |
-| [getSignalInformationSync](arkts-telephony-radio-getsignalinformationsync-f.md#getSignalInformationSync) | Obtains the list of signal strength information of the registered network corresponding to a specified SIM card. |
-| [isNRSupported](arkts-telephony-radio-isnrsupported-f.md#isNRSupported) | Checks whether the device supports 5G New Radio (NR). |
-| [isNRSupported](arkts-telephony-radio-isnrsupported-f.md#isNRSupported) | Checks whether the device supports 5G New Radio (NR) by according card slot. |
-| [isNrSupported](arkts-telephony-radio-isnrsupported-f.md#isNRSupported) | Checks whether the device supports 5G New Radio (NR). |
-| [isNrSupported](arkts-telephony-radio-isnrsupported-f.md#isNRSupported) | Checks whether the device supports 5G New Radio (NR) by according card slot. |
-| [isRadioOn](arkts-telephony-radio-isradioon-f.md#isRadioOn) | Checks whether the radio service is enabled. |
-| [isRadioOn](arkts-telephony-radio-isradioon-f.md#isRadioOn) | Checks whether the radio service is enabled. |
-| [isRadioOn](arkts-telephony-radio-isradioon-f.md#isRadioOn) | Checks whether the radio service is enabled. |
+| [getISOCountryCodeForNetwork](arkts-telephony-radio-getisocountrycodefornetwork-f.md#getisocountrycodefornetwork) | Obtains the ISO-defined country code of the country where the registered network is deployed. |
+| [getISOCountryCodeForNetwork](arkts-telephony-radio-getisocountrycodefornetwork-f.md#getisocountrycodefornetwork) | Obtains the ISO-defined country code of the country where the registered network is deployed. |
+| [getISOCountryCodeForNetworkSync](arkts-telephony-radio-getisocountrycodefornetworksync-f.md#getisocountrycodefornetworksync) | Obtains the ISO-defined country code of the country where the registered network is deployed. |
+| [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md#getnetworkselectionmode) | Obtains the network search mode of the SIM card in a specified slot. |
+| [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md#getnetworkselectionmode) | Obtains the network search mode of the SIM card in a specified slot. |
+| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md#getnetworkstate) | Obtains the network state of the registered network. |
+| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md#getnetworkstate) | Obtains the network state of the registered network. |
+| [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md#getnetworkstate) | Obtains the network state of the registered network. |
+| [getOperatorName](arkts-telephony-radio-getoperatorname-f.md#getoperatorname) | Get the operator name of the specified SIM card slot. |
+| [getOperatorName](arkts-telephony-radio-getoperatorname-f.md#getoperatorname) | Get the operator name of the specified SIM card slot. |
+| [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md#getoperatornamesync) | Get the operator name of the specified SIM card slot. |
+| [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md#getprimaryslotid) | Obtains the index number of the card slot where the primary card is located if multiple SIM cards are inserted. The primary card is the SIM card inserted in the card slot that uses data services by default. |
+| [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md#getprimaryslotid) | Obtains the index number of the card slot where the primary card is located if multiple SIM cards are inserted. The primary card is the SIM card inserted in the card slot that uses data services by default. |
+| [getRadioTech](arkts-telephony-radio-getradiotech-f.md#getradiotech) | Obtains radio access technology (RAT) of the registered network. The system returns RAT of the packet service (PS) and circuit service (CS) domain. |
+| [getRadioTech](arkts-telephony-radio-getradiotech-f.md#getradiotech) | Obtains radio access technology (RAT) of the registered network. The system returns RAT of the packet service (PS) and circuit service (CS) domain. |
+| [getRadioTechSync](arkts-telephony-radio-getradiotechsync-f.md#getradiotechsync) | Obtains radio access technology (RAT) of the registered network. |
+| [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md#getsignalinformation) | Obtains the list of signal strength information of the registered network corresponding to a specified SIM card. |
+| [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md#getsignalinformation) | Obtains the list of signal strength information of the registered network corresponding to a specified SIM card. |
+| [getSignalInformationSync](arkts-telephony-radio-getsignalinformationsync-f.md#getsignalinformationsync) | Obtains the list of signal strength information of the registered network corresponding to a specified SIM card. |
+| [isNRSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported) | Checks whether the device supports 5G New Radio (NR). |
+| [isNRSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported) | Checks whether the device supports 5G New Radio (NR) by according card slot. |
+| [isNrSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported) | Checks whether the device supports 5G New Radio (NR). |
+| [isNrSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported) | Checks whether the device supports 5G New Radio (NR) by according card slot. |
+| [isRadioOn](arkts-telephony-radio-isradioon-f.md#isradioon) | Checks whether the radio service is enabled. |
+| [isRadioOn](arkts-telephony-radio-isradioon-f.md#isradioon) | Checks whether the radio service is enabled. |
+| [isRadioOn](arkts-telephony-radio-isradioon-f.md#isradioon) | Checks whether the radio service is enabled. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [factoryReset](arkts-telephony-radio-factoryreset-f-sys.md#factoryReset) | Reset all network settings of telephony. |
-| [getBasebandVersion](arkts-telephony-radio-getbasebandversion-f-sys.md#getBasebandVersion) | Get the version of Baseband. |
-| [getBasebandVersion](arkts-telephony-radio-getbasebandversion-f-sys.md#getBasebandVersion-(System-API)) | Get the version of Baseband. |
-| [getCellInformation](arkts-telephony-radio-getcellinformation-f-sys.md#getCellInformation) | Get the current cell information. |
-| [getCellInformation](arkts-telephony-radio-getcellinformation-f-sys.md#getCellInformation-(System-API)) | Get the current cell information. |
-| [getCellInformation](arkts-telephony-radio-getcellinformation-f-sys.md#getCellInformation-(System-API)) | Get the current cell information. |
-| [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getIMEI) | Obtains the IMEI of a specified card slot of the device. |
-| [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getIMEI-(System-API)) | Obtains the IMEI of a specified card slot of the device. |
-| [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getIMEI-(System-API)) | Obtains the IMEI of a specified card slot of the device. |
-| [getIMEISV](arkts-telephony-radio-getimeisv-f-sys.md#getIMEISV) | Obtains the software version number of a specified card slot of the device. |
-| [getImsRegInfo](arkts-telephony-radio-getimsreginfo-f-sys.md#getImsRegInfo) | Get the IMS registration state info of specified IMS service type. |
-| [getImsRegInfo](arkts-telephony-radio-getimsreginfo-f-sys.md#getImsRegInfo-(System-API)) | Get the IMS registration state info of specified IMS service type. |
-| [getMEID](arkts-telephony-radio-getmeid-f-sys.md#getMEID) | Obtains the MEID of a specified card slot of the device. |
-| [getMEID](arkts-telephony-radio-getmeid-f-sys.md#getMEID-(System-API)) | Obtains the MEID of a specified card slot of the device. |
-| [getMEID](arkts-telephony-radio-getmeid-f-sys.md#getMEID-(System-API)) | Obtains the MEID of a specified card slot of the device. |
-| [getNROptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getNROptionMode) | Get the option mode of NR. |
-| [getNROptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getNROptionMode) | Get the option mode of NR. |
-| [getNetworkCapability](arkts-telephony-radio-getnetworkcapability-f-sys.md#getNetworkCapability) | Get the network capability state according to the specified capability type. |
-| [getNetworkCapability](arkts-telephony-radio-getnetworkcapability-f-sys.md#getNetworkCapability-(System-API)) | Get the network capability state according to the specified capability type. |
-| [getNetworkSearchInformation](arkts-telephony-radio-getnetworksearchinformation-f-sys.md#getNetworkSearchInformation) | Get network search information. |
-| [getNetworkSearchInformation](arkts-telephony-radio-getnetworksearchinformation-f-sys.md#getNetworkSearchInformation-(System-API)) | Get network search information. |
-| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getNROptionMode) | Get the option mode of NR. |
-| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getNROptionMode) | Get the option mode of NR. |
-| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getNROptionMode) | Get the option mode of NR. |
-| [getPreferredNetwork](arkts-telephony-radio-getpreferrednetwork-f-sys.md#getPreferredNetwork) | Get the preferred network for the specified SIM card slot. |
-| [getPreferredNetwork](arkts-telephony-radio-getpreferrednetwork-f-sys.md#getPreferredNetwork-(System-API)) | Get the preferred network for the specified SIM card slot. |
-| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getUniqueDeviceId) | Obtains the unique device ID of a specified card slot of the device. If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned. |
-| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getUniqueDeviceId-(System-API)) | Obtains the unique device ID of a specified card slot of the device. If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned. |
-| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getUniqueDeviceId-(System-API)) | Obtains the unique device ID of a specified card slot of the device. If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned. |
-| [isManualNetworkScanning](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md#isManualNetworkScanning) | Determine whether the current manual network scan is in progress. |
-| [offImsRegStateChange](arkts-telephony-radio-offimsregstatechange-f-sys.md#offImsRegStateChange) | Unsubscribe from imsRegStateChange event. |
-| off_imsRegStateChange | Unsubscribe from imsRegStateChange event. |
-| [onImsRegStateChange](arkts-telephony-radio-onimsregstatechange-f-sys.md#onImsRegStateChange) | Called when the IMS registration state of specified IMS service type corresponding to a monitored {@code slotId} updates. |
-| on_imsRegStateChange | Called when the IMS registration state of specified IMS service type corresponding to a monitored {@code slotId} updates. |
-| [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md#sendUpdateCellLocationRequest) | Actively requests to update location information. |
-| [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md#sendUpdateCellLocationRequest-(System-API)) | Actively requests to update location information. |
-| [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md#sendUpdateCellLocationRequest-(System-API)) | Actively requests to update location information. |
-| [setNROptionMode](arkts-telephony-radio-setnroptionmode-f-sys.md#setNROptionMode) | Set the NR option mode. |
-| [setNROptionMode](arkts-telephony-radio-setnroptionmode-f-sys.md#setNROptionMode-(System-API)) | Set the NR option mode. |
-| [setNetworkCapability](arkts-telephony-radio-setnetworkcapability-f-sys.md#setNetworkCapability) | Set the type and state for the specified network capability. |
-| [setNetworkCapability](arkts-telephony-radio-setnetworkcapability-f-sys.md#setNetworkCapability-(System-API)) | Set the type and state for the specified network capability. |
-| [setNetworkSelectionMode](arkts-telephony-radio-setnetworkselectionmode-f-sys.md#setNetworkSelectionMode) | Set the current network selection mode. |
-| [setNetworkSelectionMode](arkts-telephony-radio-setnetworkselectionmode-f-sys.md#setNetworkSelectionMode-(System-API)) | Set the current network selection mode. |
-| [setPreferredNetwork](arkts-telephony-radio-setpreferrednetwork-f-sys.md#setPreferredNetwork) | Set the preferred network for the specified SIM card slot. |
-| [setPreferredNetwork](arkts-telephony-radio-setpreferrednetwork-f-sys.md#setPreferredNetwork-(System-API)) | Set the preferred network for the specified SIM card slot. |
-| [setPrimarySlotId](arkts-telephony-radio-setprimaryslotid-f-sys.md#setPrimarySlotId) | Set the index number of the main SIM card slot. |
-| [setPrimarySlotId](arkts-telephony-radio-setprimaryslotid-f-sys.md#setPrimarySlotId-(System-API)) | Set the index number of the main SIM card slot. |
-| [startManualNetworkScan](arkts-telephony-radio-startmanualnetworkscan-f-sys.md#startManualNetworkScan) | start ManualNetworkScan , Real-time report. |
-| [stopManualNetworkScan](arkts-telephony-radio-stopmanualnetworkscan-f-sys.md#stopManualNetworkScan) | Stop ManualNetworkScan. |
-| [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnOffRadio) | Turn off the radio service. |
-| [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnOffRadio-(System-API)) | Turn off the radio service. |
-| [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnOffRadio-(System-API)) | Turn off the radio service. |
-| [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnOnRadio) | Turn on the radio service. |
-| [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnOnRadio-(System-API)) | Turn on the radio service. |
-| [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnOnRadio-(System-API)) | Turn on the radio service. |
+| [factoryReset](arkts-telephony-radio-factoryreset-f-sys.md#factoryreset) | Reset all network settings of telephony. |
+| [getBasebandVersion](arkts-telephony-radio-getbasebandversion-f-sys.md#getbasebandversion) | Get the version of Baseband. |
+| [getBasebandVersion](arkts-telephony-radio-getbasebandversion-f-sys.md#getbasebandversion-system-api) | Get the version of Baseband. |
+| [getCellInformation](arkts-telephony-radio-getcellinformation-f-sys.md#getcellinformation) | Get the current cell information. |
+| [getCellInformation](arkts-telephony-radio-getcellinformation-f-sys.md#getcellinformation-system-api) | Get the current cell information. |
+| [getCellInformation](arkts-telephony-radio-getcellinformation-f-sys.md#getcellinformation-system-api) | Get the current cell information. |
+| [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getimei) | Obtains the IMEI of a specified card slot of the device. |
+| [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getimei-system-api) | Obtains the IMEI of a specified card slot of the device. |
+| [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getimei-system-api) | Obtains the IMEI of a specified card slot of the device. |
+| [getIMEISV](arkts-telephony-radio-getimeisv-f-sys.md#getimeisv) | Obtains the software version number of a specified card slot of the device. |
+| [getImsRegInfo](arkts-telephony-radio-getimsreginfo-f-sys.md#getimsreginfo) | Get the IMS registration state info of specified IMS service type. |
+| [getImsRegInfo](arkts-telephony-radio-getimsreginfo-f-sys.md#getimsreginfo-system-api) | Get the IMS registration state info of specified IMS service type. |
+| [getMEID](arkts-telephony-radio-getmeid-f-sys.md#getmeid) | Obtains the MEID of a specified card slot of the device. |
+| [getMEID](arkts-telephony-radio-getmeid-f-sys.md#getmeid-system-api) | Obtains the MEID of a specified card slot of the device. |
+| [getMEID](arkts-telephony-radio-getmeid-f-sys.md#getmeid-system-api) | Obtains the MEID of a specified card slot of the device. |
+| [getNROptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode) | Get the option mode of NR. |
+| [getNROptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode) | Get the option mode of NR. |
+| [getNetworkCapability](arkts-telephony-radio-getnetworkcapability-f-sys.md#getnetworkcapability) | Get the network capability state according to the specified capability type. |
+| [getNetworkCapability](arkts-telephony-radio-getnetworkcapability-f-sys.md#getnetworkcapability-system-api) | Get the network capability state according to the specified capability type. |
+| [getNetworkSearchInformation](arkts-telephony-radio-getnetworksearchinformation-f-sys.md#getnetworksearchinformation) | Get network search information. |
+| [getNetworkSearchInformation](arkts-telephony-radio-getnetworksearchinformation-f-sys.md#getnetworksearchinformation-system-api) | Get network search information. |
+| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode) | Get the option mode of NR. |
+| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode) | Get the option mode of NR. |
+| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode) | Get the option mode of NR. |
+| [getPreferredNetwork](arkts-telephony-radio-getpreferrednetwork-f-sys.md#getpreferrednetwork) | Get the preferred network for the specified SIM card slot. |
+| [getPreferredNetwork](arkts-telephony-radio-getpreferrednetwork-f-sys.md#getpreferrednetwork-system-api) | Get the preferred network for the specified SIM card slot. |
+| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getuniquedeviceid) | Obtains the unique device ID of a specified card slot of the device. If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned. |
+| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getuniquedeviceid-system-api) | Obtains the unique device ID of a specified card slot of the device. If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned. |
+| [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getuniquedeviceid-system-api) | Obtains the unique device ID of a specified card slot of the device. If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned. |
+| [isManualNetworkScanning](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md#ismanualnetworkscanning) | Determine whether the current manual network scan is in progress. |
+| [offImsRegStateChange](arkts-telephony-radio-offimsregstatechange-f-sys.md#offimsregstatechange) | Unsubscribe from imsRegStateChange event. |
+| [off_imsRegStateChange](arkts-telephony-radio-offimsregstatechange-f-sys.md#offimsregstatechange) | Unsubscribe from imsRegStateChange event. |
+| [onImsRegStateChange](arkts-telephony-radio-onimsregstatechange-f-sys.md#onimsregstatechange) | Called when the IMS registration state of specified IMS service type corresponding to a monitored {@code slotId} updates. |
+| [on_imsRegStateChange](arkts-telephony-radio-onimsregstatechange-f-sys.md#onimsregstatechange) | Called when the IMS registration state of specified IMS service type corresponding to a monitored {@code slotId} updates. |
+| [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md#sendupdatecelllocationrequest) | Actively requests to update location information. |
+| [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md#sendupdatecelllocationrequest-system-api) | Actively requests to update location information. |
+| [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md#sendupdatecelllocationrequest-system-api) | Actively requests to update location information. |
+| [setNROptionMode](arkts-telephony-radio-setnroptionmode-f-sys.md#setnroptionmode) | Set the NR option mode. |
+| [setNROptionMode](arkts-telephony-radio-setnroptionmode-f-sys.md#setnroptionmode-system-api) | Set the NR option mode. |
+| [setNetworkCapability](arkts-telephony-radio-setnetworkcapability-f-sys.md#setnetworkcapability) | Set the type and state for the specified network capability. |
+| [setNetworkCapability](arkts-telephony-radio-setnetworkcapability-f-sys.md#setnetworkcapability-system-api) | Set the type and state for the specified network capability. |
+| [setNetworkSelectionMode](arkts-telephony-radio-setnetworkselectionmode-f-sys.md#setnetworkselectionmode) | Set the current network selection mode. |
+| [setNetworkSelectionMode](arkts-telephony-radio-setnetworkselectionmode-f-sys.md#setnetworkselectionmode-system-api) | Set the current network selection mode. |
+| [setPreferredNetwork](arkts-telephony-radio-setpreferrednetwork-f-sys.md#setpreferrednetwork) | Set the preferred network for the specified SIM card slot. |
+| [setPreferredNetwork](arkts-telephony-radio-setpreferrednetwork-f-sys.md#setpreferrednetwork-system-api) | Set the preferred network for the specified SIM card slot. |
+| [setPrimarySlotId](arkts-telephony-radio-setprimaryslotid-f-sys.md#setprimaryslotid) | Set the index number of the main SIM card slot. |
+| [setPrimarySlotId](arkts-telephony-radio-setprimaryslotid-f-sys.md#setprimaryslotid-system-api) | Set the index number of the main SIM card slot. |
+| [startManualNetworkScan](arkts-telephony-radio-startmanualnetworkscan-f-sys.md#startmanualnetworkscan) | start ManualNetworkScan , Real-time report. |
+| [stopManualNetworkScan](arkts-telephony-radio-stopmanualnetworkscan-f-sys.md#stopmanualnetworkscan) | Stop ManualNetworkScan. |
+| [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnoffradio) | Turn off the radio service. |
+| [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnoffradio-system-api) | Turn off the radio service. |
+| [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnoffradio-system-api) | Turn off the radio service. |
+| [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnonradio) | Turn on the radio service. |
+| [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnonradio-system-api) | Turn on the radio service. |
+| [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnonradio-system-api) | Turn on the radio service. |
 <!--DelEnd-->
 
 ### Interfaces

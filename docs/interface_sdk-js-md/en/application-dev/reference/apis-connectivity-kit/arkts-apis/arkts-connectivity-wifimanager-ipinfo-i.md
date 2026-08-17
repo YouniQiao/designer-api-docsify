@@ -4,10 +4,6 @@ Wi-Fi IP information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface IpInfo--><!--Device-wifiManager-interface IpInfo-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -30,10 +26,6 @@ The gateway of the Wi-Fi connection
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IpInfo-gateway: int--><!--Device-IpInfo-gateway: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -49,10 +41,6 @@ The IP address of the Wi-Fi connection
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IpInfo-ipAddress: int--><!--Device-IpInfo-ipAddress: int-End-->
 
@@ -70,10 +58,6 @@ The IP address lease duration of the Wi-Fi connection
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IpInfo-leaseDuration: int--><!--Device-IpInfo-leaseDuration: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -89,10 +73,6 @@ The network mask of the Wi-Fi connection
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IpInfo-netmask: int--><!--Device-IpInfo-netmask: int-End-->
 
@@ -110,10 +90,6 @@ The primary DNS server IP address of the Wi-Fi connection
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IpInfo-primaryDns: int--><!--Device-IpInfo-primaryDns: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -130,10 +106,6 @@ The secondary DNS server IP address of the Wi-Fi connection
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IpInfo-secondDns: int--><!--Device-IpInfo-secondDns: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -149,10 +121,6 @@ The DHCP server IP address of the Wi-Fi connection
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IpInfo-serverIp: int--><!--Device-IpInfo-serverIp: int-End-->
 

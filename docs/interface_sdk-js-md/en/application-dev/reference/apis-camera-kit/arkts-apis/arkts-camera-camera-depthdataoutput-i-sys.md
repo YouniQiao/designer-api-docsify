@@ -1,14 +1,10 @@
 # DepthDataOutput (System API)
 
-Implements depth data output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
+Implements depth data output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput).
 
-**Inheritance/Implementation:** DepthDataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
+**Inheritance/Implementation:** DepthDataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface DepthDataOutput--><!--Device-camera-interface DepthDataOutput-End-->
 
@@ -31,10 +27,6 @@ offDepthDataAvailable(callback?: AsyncCallback<DepthData>): void
 Unsubscribes from depth data objects available event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DepthDataOutput-offDepthDataAvailable(callback?: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-offDepthDataAvailable(callback?: AsyncCallback<DepthData>): void-End-->
 
@@ -64,10 +56,6 @@ Unsubscribes from error events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DepthDataOutput-offError(callback?: ErrorCallback): void--><!--Device-DepthDataOutput-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -96,10 +84,6 @@ Unsubscribes from depth data availability events.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 <!--Device-DepthDataOutput-off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -119,7 +103,7 @@ Unsubscribes from depth data availability events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -146,10 +130,6 @@ Unsubscribes from DepthDataOutput error events.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 <!--Device-DepthDataOutput-off(type: 'error', callback?: ErrorCallback): void--><!--Device-DepthDataOutput-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -169,7 +149,7 @@ Unsubscribes from DepthDataOutput error events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterDepthDataOutputError(depthDataOutput: camera.DepthDataOutput): void {
@@ -186,10 +166,6 @@ onDepthDataAvailable(callback: AsyncCallback<DepthData>): void
 Subscribes to depth data objects available event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DepthDataOutput-onDepthDataAvailable(callback: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-onDepthDataAvailable(callback: AsyncCallback<DepthData>): void-End-->
 
@@ -219,10 +195,6 @@ Subscribes to error events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DepthDataOutput-onError(callback: ErrorCallback): void--><!--Device-DepthDataOutput-onError(callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -251,10 +223,6 @@ Subscribes to depth data availability events. This API uses an asynchronous call
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 <!--Device-DepthDataOutput-on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -274,7 +242,7 @@ Subscribes to depth data availability events. This API uses an asynchronous call
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -301,10 +269,6 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 <!--Device-DepthDataOutput-on(type: 'error', callback: ErrorCallback): void--><!--Device-DepthDataOutput-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -316,7 +280,7 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a depthDataOutput instance is created. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 **Error codes:**
 
@@ -324,7 +288,7 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -348,10 +312,6 @@ Starts depth data output. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DepthDataOutput-start(): Promise<void>--><!--Device-DepthDataOutput-start(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -372,7 +332,7 @@ Starts depth data output. This API uses a promise to return the result.
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -396,10 +356,6 @@ Stops depth data output. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DepthDataOutput-stop(): Promise<void>--><!--Device-DepthDataOutput-stop(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -420,7 +376,7 @@ Stops depth data output. This API uses a promise to return the result.
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

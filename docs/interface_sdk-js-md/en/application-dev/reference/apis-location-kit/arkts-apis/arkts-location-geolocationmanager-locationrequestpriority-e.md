@@ -4,10 +4,6 @@ Enum for location priority.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export enum LocationRequestPriority--><!--Device-geoLocationManager-export enum LocationRequestPriority-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -21,10 +17,6 @@ UNSET = 0x200
 Default priority.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Preferentially ensure the locating accuracy.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocationRequestPriority-ACCURACY = 0x201--><!--Device-LocationRequestPriority-ACCURACY = 0x201-End-->
@@ -62,10 +50,6 @@ Preferentially ensure low power consumption for locating.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocationRequestPriority-LOW_POWER = 0x202--><!--Device-LocationRequestPriority-LOW_POWER = 0x202-End-->
@@ -81,10 +65,6 @@ FIRST_FIX = 0x203
 Preferentially ensure that the first location is time-consuming.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,11 +4,9 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [RequestResult](arkts-ipc-rpc-requestresult-i.md#RequestResult)
+**替代接口：** [RequestResult](arkts-ipc-rpc-requestresult-i.md#requestresult)
 
 <!--Device-rpc-interface SendRequestResult--><!--Device-rpc-interface SendRequestResult-End-->
 
@@ -25,8 +23,6 @@ code: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -48,8 +44,6 @@ data: MessageParcel
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [data](arkts-ipc-rpc-requestresult-i.md#data)
@@ -70,11 +64,9 @@ errCode: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [errCode](arkts-ipc-rpc-requestresult-i.md#errCode)
+**替代接口：** [errCode](arkts-ipc-rpc-requestresult-i.md#errcode)
 
 <!--Device-SendRequestResult-errCode: number--><!--Device-SendRequestResult-errCode: number-End-->
 
@@ -91,8 +83,6 @@ reply: MessageParcel
 **类型：** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 

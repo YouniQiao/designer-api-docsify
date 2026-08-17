@@ -4,10 +4,6 @@ Enumerates the module types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export enum ModuleType--><!--Device-bundleManager-export enum ModuleType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -21,10 +17,6 @@ ENTRY = 1
 Main module of and entry to the application, providing the basic application functionality.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Dynamic feature module of the application, extending the application functionali
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ModuleType-FEATURE = 2--><!--Device-ModuleType-FEATURE = 2-End-->
@@ -61,10 +49,6 @@ SHARED = 3
 [Dynamic shared library](../../../quick-start/in-app-hsp.md) of the application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -10,10 +10,6 @@ function getSystemMemInfo(): SystemMemInfo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo--><!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -24,7 +20,7 @@ function getSystemMemInfo(): SystemMemInfo
 | --- | --- |
 | [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | 系统内存信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

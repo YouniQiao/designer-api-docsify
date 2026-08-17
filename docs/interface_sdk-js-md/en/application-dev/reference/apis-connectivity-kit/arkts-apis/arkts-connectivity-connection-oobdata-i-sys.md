@@ -4,10 +4,6 @@ Out Of Band data used in Bluetooth device pairing.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-connection-interface OobData--><!--Device-connection-interface OobData-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -32,10 +28,6 @@ Confirmation data in OOB pairing, with a size of 16 octets.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OobData-confirmationHash: Uint8Array--><!--Device-OobData-confirmationHash: Uint8Array-End-->
@@ -55,10 +47,6 @@ The address of remote Bluetooth device.
 **Type:** BluetoothAddress
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ The name of the remote Bluetooth device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OobData-deviceName?: string--><!--Device-OobData-deviceName?: string-End-->
@@ -104,10 +88,6 @@ The role of the remote Bluetooth device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OobData-deviceRole?: DeviceRole--><!--Device-OobData-deviceRole?: DeviceRole-End-->
@@ -127,10 +107,6 @@ Randomizer data in OOB pairing, with a size of 16 octets.
 **Type:** Uint8Array
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,9 +4,7 @@ Provides APIs for observing the changes of files or directories. Before using th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-interface Watcher--><!--Device-fileIo-interface Watcher-End-->
 
@@ -22,9 +20,7 @@ Starts listening.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Watcher-start(): void--><!--Device-Watcher-start(): void-End-->
 
@@ -58,9 +54,7 @@ Stops listening and removes the Watcher object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Watcher-stop(): void--><!--Device-Watcher-stop(): void-End-->
 

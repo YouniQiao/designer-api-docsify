@@ -4,10 +4,6 @@ Defines the SIM message options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sms-export interface SimMessageOptions--><!--Device-sms-export interface SimMessageOptions-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -32,10 +28,6 @@ Protocol data unit.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SimMessageOptions-pdu: string--><!--Device-SimMessageOptions-pdu: string-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -53,10 +45,6 @@ Card slot ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SimMessageOptions-slotId: int--><!--Device-SimMessageOptions-slotId: int-End-->
 
@@ -76,10 +64,6 @@ Short message service center.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SimMessageOptions-smsc: string--><!--Device-SimMessageOptions-smsc: string-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
@@ -97,10 +81,6 @@ Status.
 **Type:** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SimMessageOptions-status: SimMessageStatus--><!--Device-SimMessageOptions-status: SimMessageStatus-End-->
 

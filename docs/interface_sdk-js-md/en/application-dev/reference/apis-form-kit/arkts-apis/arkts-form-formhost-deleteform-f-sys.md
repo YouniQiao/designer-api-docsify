@@ -16,10 +16,6 @@ Deletes a widget. After this API is called, the application can no longer use th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 <!--Device-formHost-function deleteForm(formId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function deleteForm(formId: string, callback: AsyncCallback<void>): void-End-->
@@ -58,10 +54,6 @@ function deleteForm(formId: string): Promise<void>
 Deletes a widget. After this API is called, the application can no longer use the widget, and the Widget Manager will not retain the widget information. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

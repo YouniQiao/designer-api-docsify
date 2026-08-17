@@ -12,13 +12,9 @@ import { image } from 'image';
 function createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions): PixelMap
 ```
 
-Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md#createPixelMapFromPixelsSync) instead for better exception handling capabilities.
+Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md#createpixelmapfrompixelssync) instead for better exception handling capabilities.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions): PixelMap--><!--Device-image-function createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions): PixelMap-End-->
 
@@ -43,7 +39,7 @@ Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to u
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function CreatePixelMapSync() {
@@ -61,13 +57,9 @@ function CreatePixelMapSync() {
 function createPixelMapSync(options: InitializationOptions): PixelMap
 ```
 
-Create an empty pixelmap. Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md#createEmptyPixelMap) instead for better exception handling capabilities.
+Create an empty pixelmap. Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md#createemptypixelmap) instead for better exception handling capabilities.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createPixelMapSync(options: InitializationOptions): PixelMap--><!--Device-image-function createPixelMapSync(options: InitializationOptions): PixelMap-End-->
 
@@ -91,7 +83,7 @@ Create an empty pixelmap. Starting from API 26.0.0, it is recommended to use [cr
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function CreatePixelMapSync() {

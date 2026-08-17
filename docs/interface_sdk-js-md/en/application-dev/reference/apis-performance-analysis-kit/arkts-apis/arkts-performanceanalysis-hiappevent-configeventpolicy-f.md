@@ -16,10 +16,6 @@ Sets a system event configuration policy. This API uses a promise to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiAppEvent-function configEventPolicy(policy: EventPolicy): Promise<void>--><!--Device-hiAppEvent-function configEventPolicy(policy: EventPolicy): Promise<void>-End-->
@@ -38,7 +34,7 @@ Sets a system event configuration policy. This API uses a promise to return the 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. <br>For details about the event configuration policy, see [EventPolicy]{ |
 
-## Examples
+**Examples**
 
 The following example shows how to configure a policy for the MAIN_THREAD_JANK event:
 

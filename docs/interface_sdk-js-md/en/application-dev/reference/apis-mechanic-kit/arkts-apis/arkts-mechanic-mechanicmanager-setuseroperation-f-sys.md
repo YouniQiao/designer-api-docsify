@@ -16,10 +16,6 @@ Sets a user operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECT_MECHANIC_HARDWARE
 
 <!--Device-mechanicManager-function setUserOperation(operation: Operation, mac: string, params: string): void--><!--Device-mechanicManager-function setUserOperation(operation: Operation, mac: string, params: string): void-End-->
@@ -44,7 +40,7 @@ Sets a user operation.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 console.info('User operate');

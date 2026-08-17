@@ -16,11 +16,9 @@ Remove a paired remote device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [cancelPairedDevice](arkts-connectivity-bluetoothmanager-cancelpaireddevice-f-sys.md#cancelPairedDevice-(System-API))
+**Substitutes:** [cancelPairedDevice](arkts-connectivity-bluetoothmanager-cancelpaireddevice-f-sys.md#cancelpaireddevice-system-api)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -42,7 +40,7 @@ Remove a paired remote device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let result : boolean = bluetooth.cancelPairedDevice("XX:XX:XX:XX:XX:XX");

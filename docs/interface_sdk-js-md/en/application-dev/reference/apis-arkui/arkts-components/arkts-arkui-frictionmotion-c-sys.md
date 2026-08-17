@@ -4,8 +4,6 @@ Friction animation model. You can build friction animation by friction force, in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 22
 
 <!--Device-unnamed-declare class FrictionMotion--><!--Device-unnamed-declare class FrictionMotion-End-->
@@ -23,8 +21,6 @@ constructor(friction: number, position: number, velocity: number)
 Constructor parameters
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 22
 

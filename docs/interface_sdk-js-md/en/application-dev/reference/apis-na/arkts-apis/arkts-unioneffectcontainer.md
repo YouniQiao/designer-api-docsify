@@ -7,8 +7,8 @@
 
 | Name | Description |
 | --- | --- |
-| [UnionEffectContainer](arkts-na-unioneffectcontainer-unioneffectcontainer-f-sys.md#UnionEffectContainer-(System-API)) | Provides a UnionEffectContainer Component that generates a component fusion effect for descendant components with "useUnionEffect(true)" set inside it, when their distance is less than a certain threshold. |
-| [UnionEffectContainer](arkts-na-unioneffectcontainer-unioneffectcontainer-f-sys.md#UnionEffectContainer-(System-API)) | Defines UnionEffectContainer |
+| [UnionEffectContainer](arkts-na-unioneffectcontainer-unioneffectcontainer-f-sys.md#unioneffectcontainer-system-api) | Provides a UnionEffectContainer Component that generates a component fusion effect for descendant components with "useUnionEffect(true)" set inside it, when their distance is less than a certain threshold. |
+| [UnionEffectContainer](arkts-na-unioneffectcontainer-unioneffectcontainer-f-sys.md#unioneffectcontainer-system-api) | Defines UnionEffectContainer |
 <!--DelEnd-->
 
 ### Interfaces

@@ -4,13 +4,9 @@
 type OnInputmethodAttachedCallback = () => void
 ```
 
-The callback will be triggered when inputmethod is attached.
+This callback is triggered when the input method is detected to be successfully attached.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

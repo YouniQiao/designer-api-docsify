@@ -11,10 +11,6 @@ function setHapModuleUpgradeFlag(bundleName: string,
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
 <!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string,     moduleName: string, upgradeFlag: UpgradeFlag, callback: AsyncCallback<void>): void--><!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string,     moduleName: string, upgradeFlag: UpgradeFlag, callback: AsyncCallback<void>): void-End-->
@@ -30,7 +26,7 @@ function setHapModuleUpgradeFlag(bundleName: string,
 | bundleName | string | 是 | 应用Bundle名称。 |
 | moduleName | string | 是 | 应用程序模块名称。 |
 | upgradeFlag | [UpgradeFlag](arkts-ability-freeinstall-upgradeflag-e-sys.md) | 是 | 仅供内部系统使用标志位。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)。当函数调用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)。当函数调用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -43,7 +39,7 @@ function setHapModuleUpgradeFlag(bundleName: string,
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { freeInstall } from '@kit.AbilityKit';
@@ -74,10 +70,6 @@ function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgrade
 设置指定模块是否升级。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -112,7 +104,7 @@ function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgrade
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

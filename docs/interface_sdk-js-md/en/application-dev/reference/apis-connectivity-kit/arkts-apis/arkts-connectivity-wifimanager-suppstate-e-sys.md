@@ -4,10 +4,6 @@ The state of the supplicant enumeration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-export enum SuppState--><!--Device-wifiManager-export enum SuppState-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -23,10 +19,6 @@ DISCONNECTED
 The supplicant is not associated with or is disconnected from the AP.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SuppState-DISCONNECTED--><!--Device-SuppState-DISCONNECTED-End-->
 
@@ -44,10 +36,6 @@ The network interface is disabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SuppState-INTERFACE_DISABLED--><!--Device-SuppState-INTERFACE_DISABLED-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -63,10 +51,6 @@ INACTIVE
 The supplicant is disabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SuppState-INACTIVE--><!--Device-SuppState-INACTIVE-End-->
 
@@ -84,10 +68,6 @@ The supplicant is scanning for a Wi-Fi connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SuppState-SCANNING--><!--Device-SuppState-SCANNING-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -103,10 +83,6 @@ AUTHENTICATING
 The supplicant is authenticating with a specified AP.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SuppState-AUTHENTICATING--><!--Device-SuppState-AUTHENTICATING-End-->
 
@@ -124,10 +100,6 @@ The supplicant is associating with a specified AP.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SuppState-ASSOCIATING--><!--Device-SuppState-ASSOCIATING-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -143,10 +115,6 @@ ASSOCIATED
 The supplicant is associated with a specified AP.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SuppState-ASSOCIATED--><!--Device-SuppState-ASSOCIATED-End-->
 
@@ -164,10 +132,6 @@ The four-way handshake is ongoing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SuppState-FOUR_WAY_HANDSHAKE--><!--Device-SuppState-FOUR_WAY_HANDSHAKE-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -183,10 +147,6 @@ GROUP_HANDSHAKE
 The group handshake is ongoing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SuppState-GROUP_HANDSHAKE--><!--Device-SuppState-GROUP_HANDSHAKE-End-->
 
@@ -204,10 +164,6 @@ All authentication is completed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SuppState-COMPLETED--><!--Device-SuppState-COMPLETED-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -224,10 +180,6 @@ Failed to establish a connection to the supplicant.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SuppState-UNINITIALIZED--><!--Device-SuppState-UNINITIALIZED-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -243,10 +195,6 @@ INVALID
 The supplicant is in an unknown or invalid state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SuppState-INVALID--><!--Device-SuppState-INVALID-End-->
 

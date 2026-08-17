@@ -16,10 +16,6 @@ Generates IR signals at the specified frequency and level.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
 <!--Device-infraredEmitter-function transmitInfrared(infraredFrequency: long, pattern: Array<long>): void--><!--Device-infraredEmitter-function transmitInfrared(infraredFrequency: long, pattern: Array<long>): void-End-->
@@ -43,7 +39,7 @@ Generates IR signals at the specified frequency and level.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application.<br>**Applicable version:** 12 - 14 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { infraredEmitter } from '@kit.InputKit';

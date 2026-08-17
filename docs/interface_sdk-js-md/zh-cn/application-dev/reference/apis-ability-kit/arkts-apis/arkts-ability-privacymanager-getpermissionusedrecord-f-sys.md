@@ -10,10 +10,6 @@ function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<Permis
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 <!--Device-privacyManager-function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<PermissionUsedResponse>--><!--Device-privacyManager-function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<PermissionUsedResponse>-End-->
@@ -44,7 +40,7 @@ function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<Permis
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -108,10 +104,6 @@ function getPermissionUsedRecord(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 <!--Device-privacyManager-function getPermissionUsedRecord(    request: PermissionUsedRequest,    callback: AsyncCallback<PermissionUsedResponse>): void--><!--Device-privacyManager-function getPermissionUsedRecord(    request: PermissionUsedRequest,    callback: AsyncCallback<PermissionUsedResponse>): void-End-->
@@ -125,7 +117,7 @@ function getPermissionUsedRecord(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | request | [PermissionUsedRequest](arkts-ability-privacymanager-permissionusedrequest-i-sys.md) | 是 | 查询权限使用记录的请求。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionUsedResponse](arkts-ability-privacymanager-permissionusedresponse-i-sys.md)&gt; | 是 | 回调函数。当查询记录成功，err为undefined，data为获取到的权限使用记录；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionUsedResponse](arkts-ability-privacymanager-permissionusedresponse-i-sys.md)&gt; | 是 | 回调函数。当查询记录成功，err为undefined，data为获取到的权限使用记录；否则为错误对象。 |
 
 **错误码：**
 
@@ -137,7 +129,7 @@ function getPermissionUsedRecord(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

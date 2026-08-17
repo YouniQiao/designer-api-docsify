@@ -16,10 +16,6 @@ Unsubscribe from the rtt modify indication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function offRttModifyInd(callback?: Callback<RttEventInfo>): void--><!--Device-call-function offRttModifyInd(callback?: Callback<RttEventInfo>): void-End-->

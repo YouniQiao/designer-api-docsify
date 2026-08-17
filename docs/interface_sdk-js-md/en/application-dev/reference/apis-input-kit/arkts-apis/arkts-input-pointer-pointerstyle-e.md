@@ -4,10 +4,6 @@ Mouse pointer style types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-pointer-enum PointerStyle--><!--Device-pointer-enum PointerStyle-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -21,10 +17,6 @@ DEFAULT = 0
 Default
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-DEFAULT = 0--><!--Device-PointerStyle-DEFAULT = 0-End-->
 
@@ -40,10 +32,6 @@ East arrow
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-EAST = 1--><!--Device-PointerStyle-EAST = 1-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -57,10 +45,6 @@ WEST = 2
 West arrow
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-WEST = 2--><!--Device-PointerStyle-WEST = 2-End-->
 
@@ -76,10 +60,6 @@ South arrow
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-SOUTH = 3--><!--Device-PointerStyle-SOUTH = 3-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -93,10 +73,6 @@ NORTH = 4
 North arrow
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-NORTH = 4--><!--Device-PointerStyle-NORTH = 4-End-->
 
@@ -112,10 +88,6 @@ West-east arrow
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-WEST_EAST = 5--><!--Device-PointerStyle-WEST_EAST = 5-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -129,10 +101,6 @@ NORTH_SOUTH = 6
 North-south arrow
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-NORTH_SOUTH = 6--><!--Device-PointerStyle-NORTH_SOUTH = 6-End-->
 
@@ -148,10 +116,6 @@ North-east arrow
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-NORTH_EAST = 7--><!--Device-PointerStyle-NORTH_EAST = 7-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -165,10 +129,6 @@ NORTH_WEST = 8
 North-west arrow
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-NORTH_WEST = 8--><!--Device-PointerStyle-NORTH_WEST = 8-End-->
 
@@ -184,10 +144,6 @@ South-east arrow
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-SOUTH_EAST = 9--><!--Device-PointerStyle-SOUTH_EAST = 9-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -201,10 +157,6 @@ SOUTH_WEST = 10
 South-west arrow
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-SOUTH_WEST = 10--><!--Device-PointerStyle-SOUTH_WEST = 10-End-->
 
@@ -220,10 +172,6 @@ North-east and south-west adjustment
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11--><!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -237,10 +185,6 @@ NORTH_WEST_SOUTH_EAST = 12
 North-west and south-east adjustment
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12--><!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12-End-->
 
@@ -256,10 +200,6 @@ Cross (accurate selection)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-CROSS = 13--><!--Device-PointerStyle-CROSS = 13-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -273,10 +213,6 @@ CURSOR_COPY = 14
 Copy
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-CURSOR_COPY = 14--><!--Device-PointerStyle-CURSOR_COPY = 14-End-->
 
@@ -292,10 +228,6 @@ Forbid
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-CURSOR_FORBID = 15--><!--Device-PointerStyle-CURSOR_FORBID = 15-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -309,10 +241,6 @@ COLOR_SUCKER = 16
 Color picker
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-COLOR_SUCKER = 16--><!--Device-PointerStyle-COLOR_SUCKER = 16-End-->
 
@@ -328,10 +256,6 @@ Grabbing hand
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-HAND_GRABBING = 17--><!--Device-PointerStyle-HAND_GRABBING = 17-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -345,10 +269,6 @@ HAND_OPEN = 18
 Opening hand
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-HAND_OPEN = 18--><!--Device-PointerStyle-HAND_OPEN = 18-End-->
 
@@ -364,10 +284,6 @@ Hand-shaped pointer
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-HAND_POINTING = 19--><!--Device-PointerStyle-HAND_POINTING = 19-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -381,10 +297,6 @@ HELP = 20
 Help
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-HELP = 20--><!--Device-PointerStyle-HELP = 20-End-->
 
@@ -400,10 +312,6 @@ Move
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-MOVE = 21--><!--Device-PointerStyle-MOVE = 21-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -417,10 +325,6 @@ RESIZE_LEFT_RIGHT = 22
 Left and right resizing
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22--><!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22-End-->
 
@@ -436,10 +340,6 @@ Up and down resizing
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-RESIZE_UP_DOWN = 23--><!--Device-PointerStyle-RESIZE_UP_DOWN = 23-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -453,10 +353,6 @@ SCREENSHOT_CHOOSE = 24
 Screenshot crosshair
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24--><!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24-End-->
 
@@ -472,10 +368,6 @@ Screenshot
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-SCREENSHOT_CURSOR = 25--><!--Device-PointerStyle-SCREENSHOT_CURSOR = 25-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -489,10 +381,6 @@ TEXT_CURSOR = 26
 Text selection
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-TEXT_CURSOR = 26--><!--Device-PointerStyle-TEXT_CURSOR = 26-End-->
 
@@ -508,10 +396,6 @@ Zoom in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-ZOOM_IN = 27--><!--Device-PointerStyle-ZOOM_IN = 27-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -525,10 +409,6 @@ ZOOM_OUT = 28
 Zoom out
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-ZOOM_OUT = 28--><!--Device-PointerStyle-ZOOM_OUT = 28-End-->
 
@@ -544,10 +424,6 @@ Scrolling east
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-MIDDLE_BTN_EAST = 29--><!--Device-PointerStyle-MIDDLE_BTN_EAST = 29-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -561,10 +437,6 @@ MIDDLE_BTN_WEST = 30
 Scrolling west
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_WEST = 30--><!--Device-PointerStyle-MIDDLE_BTN_WEST = 30-End-->
 
@@ -580,10 +452,6 @@ Scrolling south
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -597,10 +465,6 @@ MIDDLE_BTN_NORTH = 32
 Scrolling north
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32--><!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32-End-->
 
@@ -616,10 +480,6 @@ Scrolling north-south
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -633,10 +493,6 @@ MIDDLE_BTN_NORTH_EAST = 34
 Scrolling north-east
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34-End-->
 
@@ -652,10 +508,6 @@ Scrolling north-west
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -669,10 +521,6 @@ MIDDLE_BTN_SOUTH_EAST = 36
 Scrolling south-east
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36-End-->
 
@@ -688,10 +536,6 @@ Scrolling south-west
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -705,10 +549,6 @@ MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38
 Moving as a cone in four directions
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38-End-->
 
@@ -724,10 +564,6 @@ Horizontal text selection
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-HORIZONTAL_TEXT_CURSOR = 39--><!--Device-PointerStyle-HORIZONTAL_TEXT_CURSOR = 39-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -741,10 +577,6 @@ CURSOR_CROSS = 40
 Cross
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-CURSOR_CROSS = 40--><!--Device-PointerStyle-CURSOR_CROSS = 40-End-->
 
@@ -760,10 +592,6 @@ Circle
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-CURSOR_CIRCLE = 41--><!--Device-PointerStyle-CURSOR_CIRCLE = 41-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -777,10 +605,6 @@ LOADING = 42
 Animation loading
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -798,10 +622,6 @@ Animation running in the background
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PointerStyle-RUNNING = 43--><!--Device-PointerStyle-RUNNING = 43-End-->
@@ -818,10 +638,6 @@ Scrolling east-west
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44--><!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -835,10 +651,6 @@ RUNNING_LEFT = 45
 Running in the background (extension 1)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-RUNNING_LEFT = 45--><!--Device-PointerStyle-RUNNING_LEFT = 45-End-->
 
@@ -854,10 +666,6 @@ Running in the background (extension 2)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-RUNNING_RIGHT = 46--><!--Device-PointerStyle-RUNNING_RIGHT = 46-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -871,10 +679,6 @@ AECH_DEVELOPER_DEFINED_ICON = 47
 Custom circular pointer
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47--><!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47-End-->
 
@@ -890,10 +694,6 @@ Screen recording
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48--><!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -907,10 +707,6 @@ LASER_CURSOR = 49
 Floating This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set. In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-LASER_CURSOR = 49--><!--Device-PointerStyle-LASER_CURSOR = 49-End-->
 
@@ -926,10 +722,6 @@ Click This pointer can be used only when the stylus enters the air mouse mode an
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-LASER_CURSOR_DOT = 50--><!--Device-PointerStyle-LASER_CURSOR_DOT = 50-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -944,10 +736,6 @@ Laser pointer This pointer can be used only when the stylus enters the air mouse
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PointerStyle-LASER_CURSOR_DOT_RED = 51--><!--Device-PointerStyle-LASER_CURSOR_DOT_RED = 51-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -958,13 +746,9 @@ Laser pointer This pointer can be used only when the stylus enters the air mouse
 DEVELOPER_DEFINED_ICON = -100
 ```
 
-Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md#setCustomCursor) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setPointerStyle).
+Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md#setcustomcursor) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setpointerstyle).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100--><!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100-End-->
 

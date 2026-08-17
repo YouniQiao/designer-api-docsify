@@ -4,10 +4,6 @@ Return codes for the compression/decompression functions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-zlib-export enum ReturnStatus--><!--Device-zlib-export enum ReturnStatus-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -21,10 +17,6 @@ OK = 0
 The API is successfully called. This API is supported for use in atomic services.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ The API is successfully called, indicating that the entire data has been process
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ReturnStatus-STREAM_END = 1--><!--Device-ReturnStatus-STREAM_END = 1-End-->
@@ -61,10 +49,6 @@ NEED_DICT = 2
 The API is successfully called, indicating that a preset dictionary is required to continue decompression.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -82,10 +66,6 @@ The API fails to be called, indicating that the file operation is incorrect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ReturnStatus-ERRNO = -1--><!--Device-ReturnStatus-ERRNO = -1-End-->
@@ -101,10 +81,6 @@ STREAM_ERROR = -2
 The API fails to be called, indicating that the compression or decompression stream is incorrect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -122,10 +98,6 @@ The API fails to be called, indicating that the input data is incorrect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ReturnStatus-DATA_ERROR = -3--><!--Device-ReturnStatus-DATA_ERROR = -3-End-->
@@ -142,10 +114,6 @@ The API fails to be called, indicating that the memory allocation fails.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ReturnStatus-MEM_ERROR = -4--><!--Device-ReturnStatus-MEM_ERROR = -4-End-->
@@ -161,10 +129,6 @@ BUF_ERROR = -5
 The API fails to be called, indicating that the input buffer is incorrect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

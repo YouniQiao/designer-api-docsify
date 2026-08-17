@@ -4,10 +4,6 @@ The ComponentObserver is used to listen for layout, draw and drawChildren events
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-inspector-interface ComponentObserver--><!--Device-inspector-interface ComponentObserver-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,10 +23,6 @@ offDrawChildren(callback?: Callback<int[]>): void
 Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the child of component draw complete.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,10 +48,6 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -83,10 +71,6 @@ off(type: 'draw', callback?: () => void): void
 Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the component draw complete.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,10 +97,6 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -141,10 +121,6 @@ off(type: 'layout', callback?: () => void): void
 Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the component layout complete.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -171,10 +147,6 @@ Registers a callback with the corresponding query condition by using the handle.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -199,10 +171,6 @@ Registers a callback with the corresponding query condition by using the handle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -226,10 +194,6 @@ on(type: 'draw', callback: () => void): void
 Registers a callback with the corresponding query condition by using the handle. This callback is triggered when the component draw complete.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -256,10 +220,6 @@ Registers a callback with the corresponding query condition by using the handle.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -284,10 +244,6 @@ on(type: 'layout', callback: () => void): void
 Registers a callback with the corresponding query condition by using the handle. This callback is triggered when the component layout complete.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Unsubscribe Wi-Fi hotspot sta leave events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
 <!--Device-wifiManager-function offHotspotStaLeave(callback?: Callback<StationInfo>): void--><!--Device-wifiManager-function offHotspotStaLeave(callback?: Callback<StationInfo>): void-End-->

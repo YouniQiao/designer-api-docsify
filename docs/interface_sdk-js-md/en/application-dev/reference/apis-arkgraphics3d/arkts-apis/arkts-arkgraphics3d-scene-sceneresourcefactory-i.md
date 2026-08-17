@@ -1,14 +1,10 @@
 # SceneResourceFactory
 
-The scene resource factory.
+Provides APIs for creating resources, such as cameras and light sources, used in 3D scenes. This class inherits from RenderResourceFactory.
 
-**Inheritance/Implementation:** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md#RenderResourceFactory)
+**Inheritance/Implementation:** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md#renderresourcefactory)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SceneResourceFactory--><!--Device-unnamed-export interface SceneResourceFactory-End-->
 
@@ -20,13 +16,9 @@ The scene resource factory.
 createCamera(params: SceneNodeParameters): Promise<Camera>
 ```
 
-Create a camera.
+Creates a camera based on scene node parameters. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters): Promise<Camera>--><!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters): Promise<Camera>-End-->
 
@@ -36,15 +28,15 @@ Create a camera.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | the param of creating a camera |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | Scene node parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; | promise a camera |
+| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; | Promise used to return the Camera object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { SceneNodeParameters, Camera, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
@@ -73,13 +65,9 @@ function createCameraPromise(): Promise<Camera> {
 createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>
 ```
 
-Create a camera.
+Creates a camera based on scene node parameters and camera parameters. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>--><!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>-End-->
 
@@ -89,16 +77,16 @@ Create a camera.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | the param of creating a camera |
-| cameraParams | [CameraParameters](arkts-arkgraphics3d-scene-cameraparameters-i.md) | Yes | camera specific extra parameters |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | Scene node parameters. |
+| cameraParams | [CameraParameters](arkts-arkgraphics3d-scene-cameraparameters-i.md) | Yes | Camera parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; | promise a camera |
+| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; | Promise used to return the Camera object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { SceneNodeParameters, Camera, SceneResourceFactory, Scene, CameraParameters,
@@ -129,13 +117,9 @@ function createCameraPromise(): Promise<Camera> {
 createEffect(params: EffectParameters): Promise<Effect>
 ```
 
-Create an effect.
+Creates an effect object based on the effect parameters. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceFactory-createEffect(params: EffectParameters): Promise<Effect>--><!--Device-SceneResourceFactory-createEffect(params: EffectParameters): Promise<Effect>-End-->
 
@@ -145,15 +129,15 @@ Create an effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [EffectParameters](arkts-arkgraphics3d-scene-effectparameters-i.md) | Yes | the params of creating an effect. |
+| params | [EffectParameters](arkts-arkgraphics3d-scene-effectparameters-i.md) | Yes | Effect parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt; | promise an effect. |
+| Promise&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt; | Promise used to return the Environment object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { SceneResourceFactory, Scene, Effect, EffectParameters } from '@kit.ArkGraphics3D';
@@ -184,13 +168,9 @@ function createEffect() : Promise<Effect> {
 createEnvironment(params: SceneResourceParameters): Promise<Environment>
 ```
 
-Create an environment.
+Creates an environment based on the scene resource parameters. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceFactory-createEnvironment(params: SceneResourceParameters): Promise<Environment>--><!--Device-SceneResourceFactory-createEnvironment(params: SceneResourceParameters): Promise<Environment>-End-->
 
@@ -200,15 +180,15 @@ Create an environment.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating an environment object |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | Scene resource parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)&gt; | promise an environment |
+| Promise&lt;[Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)&gt; | Promise used to return the Environment object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Environment, SceneResourceParameters, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
@@ -238,13 +218,9 @@ function createEnvironmentPromise(): Promise<Environment> {
 createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>
 ```
 
-Create a geometry node.
+Creates a geometry object based on the scene node parameters and mesh data. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceFactory-createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>--><!--Device-SceneResourceFactory-createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>-End-->
 
@@ -254,16 +230,16 @@ Create a geometry node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | the param of creating a geometry |
-| mesh | [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) | Yes | resource - The mesh data for the geometry |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | Scene node parameters. |
+| mesh | [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) | Yes | resource - Mesh data parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Geometry](arkts-arkgraphics3d-scenenodes-geometry-i.md)&gt; | promise a geometry |
+| Promise&lt;[Geometry](arkts-arkgraphics3d-scenenodes-geometry-i.md)&gt; | Promise used to return the Geometry object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { SceneResourceFactory, Scene, Geometry, CubeGeometry } from '@kit.ArkGraphics3D';
@@ -296,13 +272,9 @@ function createGeometryPromise() : Promise<Geometry> {
 createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>
 ```
 
-Create a light.
+Creates a light based on the scene node parameters and light type. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceFactory-createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>--><!--Device-SceneResourceFactory-createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>-End-->
 
@@ -312,16 +284,16 @@ Create a light.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | the param of creating a light |
-| lightType | [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md) | Yes | the type of the light |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | Scene node parameters. |
+| lightType | [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md) | Yes | Light type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Light](arkts-arkgraphics3d-scenenodes-light-i.md)&gt; | promise a light |
+| Promise&lt;[Light](arkts-arkgraphics3d-scenenodes-light-i.md)&gt; | Promise used to return the Light object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { SceneNodeParameters, LightType, Light, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
@@ -350,13 +322,9 @@ function createLightPromise() : Promise<Light> {
 createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>
 ```
 
-Create a material.
+Creates a material based on the scene resource parameters and material type. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceFactory-createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>--><!--Device-SceneResourceFactory-createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>-End-->
 
@@ -366,16 +334,16 @@ Create a material.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating a material |
-| materialType | [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | Yes | the type of the material |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | Scene resource parameters. |
+| materialType | [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | Yes | Material type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Material](arkts-arkgraphics3d-sceneresources-material-i.md)&gt; | promise a material |
+| Promise&lt;[Material](arkts-arkgraphics3d-sceneresources-material-i.md)&gt; | Promise used to return the Material object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { MaterialType, Material, SceneResourceParameters, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
@@ -404,13 +372,9 @@ function createMaterialPromise() : Promise<Material> {
 createNode(params: SceneNodeParameters): Promise<Node>
 ```
 
-Create a node.
+Creates a node. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SceneResourceFactory-createNode(params: SceneNodeParameters): Promise<Node>--><!--Device-SceneResourceFactory-createNode(params: SceneNodeParameters): Promise<Node>-End-->
 
@@ -420,15 +384,15 @@ Create a node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | the param of creating a node |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | Scene node parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt; | promise a node |
+| Promise&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt; | Promise object, which returns the node object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { SceneNodeParameters, SceneResourceFactory, Scene, Node } from '@kit.ArkGraphics3D';

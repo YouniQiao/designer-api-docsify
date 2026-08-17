@@ -2,13 +2,11 @@
 
 Definition of base custom dialog class.
 
-**Inheritance/Implementation:** BaseCustomDialog extends [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md#ExtendableComponent)
+**Inheritance/Implementation:** BaseCustomDialog extends [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md#extendablecomponent)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare abstract class BaseCustomDialog--><!--Device-unnamed-export declare abstract class BaseCustomDialog-End-->
 
@@ -29,9 +27,7 @@ Implementation for creating a custom dialog
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,9 +53,7 @@ Constructor to use to create a custom dialog instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

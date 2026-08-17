@@ -4,9 +4,7 @@ Defines the options for a DateTimeOptions object. Since API version 9, the DateT
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-intl-export interface DateTimeOptions--><!--Device-intl-export interface DateTimeOptions-End-->
 
@@ -24,9 +22,7 @@ Date display format. The value can be: "long", "short", "medium", "full", or "au
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-dateStyle?: string--><!--Device-DateTimeOptions-dateStyle?: string-End-->
 
@@ -44,9 +40,7 @@ Day display format. The value can be: "numeric" or "2-digit".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-day?: string--><!--Device-DateTimeOptions-day?: string-End-->
 
@@ -64,9 +58,7 @@ Time period display format. The value can be: "long", "short", "narrow", or "aut
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-dayPeriod?: string--><!--Device-DateTimeOptions-dayPeriod?: string-End-->
 
@@ -84,9 +76,7 @@ Epoch display format. The value can be: "long", "short", "narrow", or "auto".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-era?: string--><!--Device-DateTimeOptions-era?: string-End-->
 
@@ -104,9 +94,7 @@ Format matching algorithm. The value can be: "basic": exact match. "best fit": b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-formatMatcher?: string--><!--Device-DateTimeOptions-formatMatcher?: string-End-->
 
@@ -124,9 +112,7 @@ Hour display format. The value can be: "numeric" or "2-digit".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-hour?: string--><!--Device-DateTimeOptions-hour?: string-End-->
 
@@ -144,9 +130,7 @@ Whether to use the 12-hour clock. The value true means to use the 12-hour clock,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-hour12?: boolean--><!--Device-DateTimeOptions-hour12?: boolean-End-->
 
@@ -164,9 +148,7 @@ Hour cycle. The value can be: "h11", "h12", "h23", or "h24".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-hourCycle?: string--><!--Device-DateTimeOptions-hourCycle?: string-End-->
 
@@ -184,9 +166,7 @@ Valid locale ID, for example, "zh-Hans-CN". The default value is the current sys
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-locale?: string--><!--Device-DateTimeOptions-locale?: string-End-->
 
@@ -204,9 +184,7 @@ Locale matching algorithm. The value can be: "lookup": exact match. "best fit": 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-localeMatcher?: string--><!--Device-DateTimeOptions-localeMatcher?: string-End-->
 
@@ -224,9 +202,7 @@ Minute display format. The value can be: "numeric" or "2-digit".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-minute?: string--><!--Device-DateTimeOptions-minute?: string-End-->
 
@@ -244,9 +220,7 @@ Month display format. The value can be: "numeric", "2-digit", "long", "short", "
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-month?: string--><!--Device-DateTimeOptions-month?: string-End-->
 
@@ -264,9 +238,7 @@ Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-numberingSystem?: string--><!--Device-DateTimeOptions-numberingSystem?: string-End-->
 
@@ -284,9 +256,7 @@ Second display format. The value can be: "numeric" or "2-digit".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-second?: string--><!--Device-DateTimeOptions-second?: string-End-->
 
@@ -304,9 +274,7 @@ Time display format. The value can be: "long", "short", "medium", "full", or "au
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-timeStyle?: string--><!--Device-DateTimeOptions-timeStyle?: string-End-->
 
@@ -324,9 +292,7 @@ Time zone in use. The value is a valid IANA time zone ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-timeZone?: string--><!--Device-DateTimeOptions-timeZone?: string-End-->
 
@@ -344,9 +310,7 @@ Localized representation of a time zone name. The value can be: "long", "short",
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-timeZoneName?: string--><!--Device-DateTimeOptions-timeZoneName?: string-End-->
 
@@ -364,9 +328,7 @@ Week display format. The value can be: "long", "short", "narrow", or "auto".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-weekday?: string--><!--Device-DateTimeOptions-weekday?: string-End-->
 
@@ -384,9 +346,7 @@ Year display format. The value can be: "numeric" or "2-digit".
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DateTimeOptions-year?: string--><!--Device-DateTimeOptions-year?: string-End-->
 

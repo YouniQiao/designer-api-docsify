@@ -16,10 +16,6 @@ Controls whether a watermark image is displayed on the screen. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<void>--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -30,7 +26,7 @@ Controls whether a watermark image is displayed on the screen. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createPixelMap) . |
+| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createpixelmap) . |
 | enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
 
 **Return value:**
@@ -47,7 +43,7 @@ Controls whether a watermark image is displayed on the screen. This API uses a p
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -88,10 +84,6 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: 
 Set watermark image.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,10 +126,6 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback<void>): void--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -148,7 +136,7 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createPixelMap) . |
+| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createpixelmap) . |
 | enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -160,7 +148,7 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';

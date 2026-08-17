@@ -10,10 +10,6 @@ function updatePrinterState(printerId: string, state: PrinterState, callback: As
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function updatePrinterState(printerId: string, state: PrinterState, callback: AsyncCallback<void>): void--><!--Device-print-function updatePrinterState(printerId: string, state: PrinterState, callback: AsyncCallback<void>): void-End-->
@@ -28,7 +24,7 @@ function updatePrinterState(printerId: string, state: PrinterState, callback: As
 | --- | --- | --- | --- |
 | printerId | string | 是 | 表示打印机ID。 |
 | state | [PrinterState](arkts-basicservices-print-printerstate-e.md) | 是 | 表示打印机状态。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步更新打印机状态之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步更新打印机状态之后的回调。 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function updatePrinterState(printerId: string, state: PrinterState, callback: As
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -65,10 +61,6 @@ function updatePrinterState(printerId: string, state: PrinterState): Promise<voi
 更新打印机状态，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -99,7 +91,7 @@ function updatePrinterState(printerId: string, state: PrinterState): Promise<voi
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

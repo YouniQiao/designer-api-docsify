@@ -1,12 +1,8 @@
-# TabBarPosition
+# TabBarPosition(Provides an advanced struct of tabs for atomic services)
 
 Position of the tab bar. The default value is **TabBarPosition.BOTTOM**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum TabBarPosition--><!--Device-unnamed-export declare enum TabBarPosition-End-->
 
@@ -21,10 +17,6 @@ LEFT = 0
 The tab bar is on the left side of the screen.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,10 +33,6 @@ BOTTOM = 1
 The tab bar is at the bottom of the screen.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

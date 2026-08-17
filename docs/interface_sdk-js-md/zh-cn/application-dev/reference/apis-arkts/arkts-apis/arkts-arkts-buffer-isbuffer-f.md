@@ -10,10 +10,6 @@ function isBuffer(obj: Object): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-buffer-function isBuffer(obj: Object): boolean--><!--Device-buffer-function isBuffer(obj: Object): boolean-End-->
@@ -32,7 +28,7 @@ function isBuffer(obj: Object): boolean
 | --- | --- |
 | boolean | 如果obj是Buffer，则返回true，否则返回false。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

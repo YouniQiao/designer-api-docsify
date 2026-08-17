@@ -4,10 +4,6 @@ Describes spatial device state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioSpatialDeviceState--><!--Device-audio-interface AudioSpatialDeviceState-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -32,10 +28,6 @@ Spatial device address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSpatialDeviceState-address: string--><!--Device-AudioSpatialDeviceState-address: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -53,10 +45,6 @@ Whether the spatial device supports head tracking.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSpatialDeviceState-isHeadTrackingSupported: boolean--><!--Device-AudioSpatialDeviceState-isHeadTrackingSupported: boolean-End-->
 
@@ -76,10 +64,6 @@ Whether the spatial device supports spatial rendering.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSpatialDeviceState-isSpatializationSupported: boolean--><!--Device-AudioSpatialDeviceState-isSpatializationSupported: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -97,10 +81,6 @@ Spatial device type.
 **Type:** [AudioSpatialDeviceType](arkts-audio-audio-audiospatialdevicetype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSpatialDeviceState-spatialDeviceType: AudioSpatialDeviceType--><!--Device-AudioSpatialDeviceState-spatialDeviceType: AudioSpatialDeviceType-End-->
 

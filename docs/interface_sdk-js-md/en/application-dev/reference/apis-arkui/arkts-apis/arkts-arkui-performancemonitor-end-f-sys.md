@@ -16,10 +16,6 @@ Marks the end of a user scene. Call this API when the scene ends.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-performanceMonitor-function end(scene: string): void--><!--Device-performanceMonitor-function end(scene: string): void-End-->
@@ -34,7 +30,7 @@ Marks the end of a user scene. Call this API when the scene ends.
 | --- | --- | --- | --- |
 | scene | string | Yes | User scene ID, which must be strictly consistent with that in **begin**; otherwise, the monitoring will be invalid. |
 
-## Examples
+**Examples**
 
 End point of the user scene where the user taps an icon to launch an application.
 

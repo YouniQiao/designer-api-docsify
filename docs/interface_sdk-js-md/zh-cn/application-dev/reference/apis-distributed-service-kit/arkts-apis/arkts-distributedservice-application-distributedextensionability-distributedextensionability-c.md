@@ -4,10 +4,6 @@ DistributedExtensionAbility模块提供分布式相关扩展能力，提供分�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class DistributedExtensionAbility--><!--Device-unnamed-declare class DistributedExtensionAbility-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
@@ -21,10 +17,6 @@ onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateRes
 多设备协作场景下返回协作结果的回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,7 +36,7 @@ onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateRes
 | --- | --- |
 | AbilityConstant.CollaborateResult | 协同方应用是否接受协同。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -102,10 +94,6 @@ Extension生命周期回调，在创建时回调，执行初始化业务逻辑�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DistributedExtensionAbility-onCreate(want: Want): void--><!--Device-DistributedExtensionAbility-onCreate(want: Want): void-End-->
@@ -118,7 +106,7 @@ Extension生命周期回调，在创建时回调，执行初始化业务逻辑�
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -160,17 +148,13 @@ Extension生命周期回调，在销毁时回调，执行资源清理等操作�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DistributedExtensionAbility-onDestroy(): void--><!--Device-DistributedExtensionAbility-onDestroy(): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -208,10 +192,6 @@ DistributedExtension的上下文环境，继承自ExtensionContext。
 **类型：** [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

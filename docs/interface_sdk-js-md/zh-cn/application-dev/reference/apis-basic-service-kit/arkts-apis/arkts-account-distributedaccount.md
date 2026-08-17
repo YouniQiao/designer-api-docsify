@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare namespace distributedAccount--><!--Device-unnamed-declare namespace distributedAccount-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -18,7 +14,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md#getDistributedAccountAbility) | 获取分布式账号单实例对象。 |
+| [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md#getdistributedaccountability) | 获取分布式账号单实例对象。 |
 
 ### 接口
 

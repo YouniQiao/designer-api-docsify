@@ -8,10 +8,6 @@ Array of VolumeGroupInfos, which is read-only.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-type VolumeGroupInfos = Array<Readonly<VolumeGroupInfo>>--><!--Device-audio-type VolumeGroupInfos = Array<Readonly<VolumeGroupInfo>>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume

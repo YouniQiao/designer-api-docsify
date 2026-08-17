@@ -4,10 +4,6 @@ Describes the information about the application reminder.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export interface NotificationReminderInfo--><!--Device-notificationManager-export interface NotificationReminderInfo-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -32,10 +28,6 @@ Bundle information of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationReminderInfo-bundle: BundleOption--><!--Device-NotificationReminderInfo-bundle: BundleOption-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -54,10 +46,6 @@ Notification reminder mode flags.<br>- bit0: sound prompt. The value **0** indic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationReminderInfo-reminderFlags: long--><!--Device-NotificationReminderInfo-reminderFlags: long-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -75,10 +63,6 @@ Whether the silent reminder is enabled. The value **true** indicates that the si
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationReminderInfo-silentReminderEnabled: boolean--><!--Device-NotificationReminderInfo-silentReminderEnabled: boolean-End-->
 

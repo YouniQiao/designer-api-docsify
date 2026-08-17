@@ -1,12 +1,8 @@
 # ResourceManager
 
-Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources. > **NOTE：**> > - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative > development paradigm. > > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object. > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through > `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`. > > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are > in different HAPs or HSPs, you first need to use > [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createModuleContext) to create the context > of the corresponding module and then call the API with **resName** or **resId** specified. For more information, > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). > > - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code > HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate- > code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see > [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
+Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources. > **NOTE：**> > - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative > development paradigm. > > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object. > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through > `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`. > > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are > in different HAPs or HSPs, you first need to use > [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createmodulecontext) to create the context > of the corresponding module and then call the API with **resName** or **resId** specified. For more information, > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). > > - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code > HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate- > code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see > [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-resourceManager-export interface ResourceManager--><!--Device-resourceManager-export interface ResourceManager-End-->
 
@@ -28,10 +24,6 @@ Loads the specified overlay resource during application runtime to implement the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-addResource(path: string) : void--><!--Device-ResourceManager-addResource(path: string) : void-End-->
@@ -51,7 +43,7 @@ Loads the specified overlay resource during application runtime to implement the
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001010](../errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -82,10 +74,6 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-closeRawFd(path: string, callback: _AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFd(path: string, callback: _AsyncCallback<void>): void-End-->
@@ -106,7 +94,7 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -144,10 +132,6 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-closeRawFd(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFd(path: string): Promise<void>-End-->
@@ -173,7 +157,7 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -206,10 +190,6 @@ Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-closeRawFdSync(path: string): void--><!--Device-ResourceManager-closeRawFdSync(path: string): void-End-->
@@ -229,7 +209,7 @@ Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -263,11 +243,9 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [closeRawFd](#closeRawFd)(path: string, callback: _AsyncCallback&lt;void&gt;)
+**Substitutes:** [closeRawFd](#closerawfd)(path: string, callback: _AsyncCallback&lt;void&gt;)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -280,7 +258,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -304,11 +282,9 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [closeRawFd](#closeRawFd)(path: string)
+**Substitutes:** [closeRawFd](#closerawfd)(path: string)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
 
@@ -326,7 +302,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -345,10 +321,6 @@ getBoolean(resId: long): boolean
 Obtains a Boolean value based on the specified resource ID. This API returns the result synchronously.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -377,7 +349,7 @@ Obtains a Boolean value based on the specified resource ID. This API returns the
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/boolean.json
@@ -421,11 +393,9 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getBoolean](#getBoolean)(resId: long)
+**Substitutes:** [getBoolean](#getboolean)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -456,7 +426,7 @@ Obtains a Boolean value based on the specified resource object. This API returns
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/boolean.json
@@ -500,10 +470,6 @@ Obtains a Boolean value based on the specified resource name. This API returns t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getBooleanByName(resName: string): boolean--><!--Device-ResourceManager-getBooleanByName(resName: string): boolean-End-->
@@ -531,7 +497,7 @@ Obtains a Boolean value based on the specified resource name. This API returns t
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/boolean.json
@@ -575,10 +541,6 @@ Obtains the color value corresponding to the specified resource ID. This API use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getColor(resId: long, callback: _AsyncCallback<long>): void--><!--Device-ResourceManager-getColor(resId: long, callback: _AsyncCallback<long>): void-End-->
@@ -611,10 +573,6 @@ Obtains the color value corresponding to the specified resource ID. This API use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getColor(resId: long): Promise<long>--><!--Device-ResourceManager-getColor(resId: long): Promise<long>-End-->
@@ -642,7 +600,7 @@ Obtains the color value corresponding to the specified resource ID. This API use
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/color.json
@@ -685,11 +643,9 @@ Obtains the color value corresponding to the specified resource object. This API
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getColor](#getColor)(resId: long, callback: _AsyncCallback&lt;long&gt;)
+**Substitutes:** [getColor](#getcolor)(resId: long, callback: _AsyncCallback&lt;long&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -715,7 +671,7 @@ Obtains the color value corresponding to the specified resource object. This API
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/color.json
@@ -758,11 +714,9 @@ Obtains the color value corresponding to the specified resource object. This API
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getColor](#getColor)(resId: long)
+**Substitutes:** [getColor](#getcolor)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -793,7 +747,7 @@ Obtains the color value corresponding to the specified resource object. This API
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/color.json
@@ -836,10 +790,6 @@ Obtains the color value corresponding to the specified resource name. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getColorByName(resName: string, callback: _AsyncCallback<long>): void--><!--Device-ResourceManager-getColorByName(resName: string, callback: _AsyncCallback<long>): void-End-->
@@ -862,7 +812,7 @@ Obtains the color value corresponding to the specified resource name. This API u
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/color.json
@@ -905,10 +855,6 @@ Obtains the color value corresponding to the specified resource name. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getColorByName(resName: string): Promise<long>--><!--Device-ResourceManager-getColorByName(resName: string): Promise<long>-End-->
@@ -936,7 +882,7 @@ Obtains the color value corresponding to the specified resource name. This API u
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/color.json
@@ -979,10 +925,6 @@ Obtains a color value based on the specified resource name. This API returns the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getColorByNameSync(resName: string) : long--><!--Device-ResourceManager-getColorByNameSync(resName: string) : long-End-->
@@ -1010,7 +952,7 @@ Obtains a color value based on the specified resource name. This API returns the
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/color.json
@@ -1054,10 +996,6 @@ Obtains a color value based on the specified resource ID. This API returns the r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getColorSync(resId: long) : long--><!--Device-ResourceManager-getColorSync(resId: long) : long-End-->
@@ -1085,7 +1023,7 @@ Obtains a color value based on the specified resource ID. This API returns the r
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/color.json
@@ -1129,11 +1067,9 @@ Obtains a color value based on the specified resource object. This API returns t
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getColorSync](#getColorSync)(resId: long)
+**Substitutes:** [getColorSync](#getcolorsync)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1164,7 +1100,7 @@ Obtains a color value based on the specified resource object. This API returns t
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/color.json
@@ -1208,10 +1144,6 @@ Obtains the configuration of a device. This API uses an asynchronous callback to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getConfiguration(callback: _AsyncCallback<Configuration>): void--><!--Device-ResourceManager-getConfiguration(callback: _AsyncCallback<Configuration>): void-End-->
@@ -1224,7 +1156,7 @@ Obtains the configuration of a device. This API uses an asynchronous callback to
 | --- | --- | --- | --- |
 | callback | _AsyncCallback&lt;Configuration&gt; | Yes | Callback used to return the device configuration. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -1259,10 +1191,6 @@ Obtains the configuration of a device. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getConfiguration(): Promise<Configuration>--><!--Device-ResourceManager-getConfiguration(): Promise<Configuration>-End-->
@@ -1275,7 +1203,7 @@ Obtains the configuration of a device. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;Configuration&gt; | Promise used to return the device configuration. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -1308,10 +1236,6 @@ Obtains the device configuration. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getConfigurationSync(): Configuration--><!--Device-ResourceManager-getConfigurationSync(): Configuration-End-->
@@ -1324,7 +1248,7 @@ Obtains the device configuration. This API returns the result synchronously.
 | --- | --- |
 | Configuration | Device configuration. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -1352,10 +1276,6 @@ Obtains the device capabilities of a device. This API uses an asynchronous callb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void--><!--Device-ResourceManager-getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void-End-->
@@ -1368,7 +1288,7 @@ Obtains the device capabilities of a device. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | callback | _AsyncCallback&lt;DeviceCapability&gt; | Yes | Callback used to return the device capability. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -1403,10 +1323,6 @@ Obtains the device capabilities of a device. This API uses a promise to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getDeviceCapability(): Promise<DeviceCapability>--><!--Device-ResourceManager-getDeviceCapability(): Promise<DeviceCapability>-End-->
@@ -1419,7 +1335,7 @@ Obtains the device capabilities of a device. This API uses a promise to return t
 | --- | --- |
 | Promise&lt;DeviceCapability&gt; | Promise used to return the device capability. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -1452,10 +1368,6 @@ Obtains the device capability. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getDeviceCapabilitySync(): DeviceCapability--><!--Device-ResourceManager-getDeviceCapabilitySync(): DeviceCapability-End-->
@@ -1468,7 +1380,7 @@ Obtains the device capability. This API returns the result synchronously.
 | --- | --- |
 | DeviceCapability | Device capability. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -1495,10 +1407,6 @@ getDouble(resId: long): double
 Obtains an float number based on the specified resource ID. This API returns the result synchronously.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1536,10 +1444,6 @@ Obtains an float number based on the specified resource name. This API returns t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getDoubleByName(resName: string): double--><!--Device-ResourceManager-getDoubleByName(resName: string): double-End-->
@@ -1576,10 +1480,6 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string-End-->
@@ -1609,7 +1509,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 | [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -1664,10 +1564,6 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string | double)[]): string--><!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string | double)[]): string-End-->
@@ -1707,10 +1603,6 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ResourceManager-getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string-End-->
@@ -1740,7 +1632,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -1795,10 +1687,6 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | double)[]): string--><!--Device-ResourceManager-getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | double)[]): string-End-->
@@ -1838,11 +1726,9 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getDoublePluralStringValueSync](#getDoublePluralStringValueSync)(resId: number, num: number, ...args: Array&lt;string | number&gt;)
+**Substitutes:** [getDoublePluralStringValueSync](#getdoublepluralstringvaluesync)(resId: number, num: number, ...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1875,7 +1761,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -1931,10 +1817,6 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor-End-->
@@ -1946,7 +1828,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 | type | int | No | Icon type. The default value is **0**. <br>**0**: Icon resource of the application. <br>**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
@@ -1963,7 +1845,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -2010,11 +1892,9 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getDrawableDescriptor](#getDrawableDescriptor)(resId: long, density?: int, type?: int)
+**Substitutes:** [getDrawableDescriptor](#getdrawabledescriptor)(resId: long, density?: int, type?: int)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2029,7 +1909,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 | type | number | No | Icon type. The default value is **0**. <br>**0**: Icon resource of the application. <br>**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
@@ -2046,7 +1926,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -2091,10 +1971,6 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor-End-->
@@ -2106,7 +1982,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 | type | int | No | Icon type. The default value is **0**. <br>**0**: Icon resource of the application. <br>**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
@@ -2123,7 +1999,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -2170,10 +2046,6 @@ Obtains an integer number based on the specified resource ID. This API returns t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getInt(resId: long): int--><!--Device-ResourceManager-getInt(resId: long): int-End-->
@@ -2209,10 +2081,6 @@ getIntByName(resName: string): int
 Obtains an integer number based on the specified resource name. This API returns the result synchronously.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2250,10 +2118,6 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string-End-->
@@ -2283,7 +2147,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 | [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -2338,10 +2202,6 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | double)[]): string--><!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | double)[]): string-End-->
@@ -2381,10 +2241,6 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ResourceManager-getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string-End-->
@@ -2414,7 +2270,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -2469,10 +2325,6 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]): string--><!--Device-ResourceManager-getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]): string-End-->
@@ -2512,11 +2364,9 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2549,7 +2399,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -2605,10 +2455,6 @@ Obtains the language list of an application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>--><!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>-End-->
@@ -2633,7 +2479,7 @@ Obtains the language list of an application.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -2679,11 +2525,9 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMediaContent](#getMediaContent)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
+**Substitutes:** [getMediaContent](#getmediacontent)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 <!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -2696,7 +2540,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 | resId | number | Yes | Resource ID. |
 | callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 resourceManager.getResourceManager((error, mgr) => {
@@ -2720,11 +2564,9 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMediaContent](#getMediaContent)(resId: long)
+**Substitutes:** [getMediaContent](#getmediacontent)(resId: long)
 
 <!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>-End-->
 
@@ -2742,7 +2584,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2766,11 +2608,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long, callback: _AsyncCallback&lt;string&gt;)
+**Substitutes:** [getMediaContentBase64](#getmediacontentbase64)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void-End-->
 
@@ -2783,7 +2623,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | resId | number | Yes | Resource ID. |
 | callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 resourceManager.getResourceManager((error, mgr) => {
@@ -2807,11 +2647,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long)
+**Substitutes:** [getMediaContentBase64](#getmediacontentbase64)(resId: long)
 
 <!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>--><!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>-End-->
 
@@ -2829,7 +2667,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2853,10 +2691,6 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void-End-->
@@ -2878,7 +2712,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -2914,10 +2748,6 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void-End-->
@@ -2929,7 +2759,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
@@ -2940,7 +2770,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -2976,10 +2806,6 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaBase64ByName(resName: string): Promise<string>--><!--Device-ResourceManager-getMediaBase64ByName(resName: string): Promise<string>-End-->
@@ -3006,7 +2832,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3040,10 +2866,6 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int): Promise<string>--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int): Promise<string>-End-->
@@ -3055,7 +2877,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -3071,7 +2893,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3105,10 +2927,6 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaBase64ByNameSync(resName: string, density?: int): string--><!--Device-ResourceManager-getMediaBase64ByNameSync(resName: string, density?: int): string-End-->
@@ -3120,7 +2938,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -3136,7 +2954,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3175,10 +2993,6 @@ Obtains the content of the media file corresponding to the specified resource na
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void-End-->
@@ -3200,7 +3014,7 @@ Obtains the content of the media file corresponding to the specified resource na
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3236,10 +3050,6 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void-End-->
@@ -3251,7 +3061,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
@@ -3262,7 +3072,7 @@ Obtains the media file content for the specified screen density based on the spe
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3298,10 +3108,6 @@ Obtains the content of the media file corresponding to the specified resource na
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaByName(resName: string): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaByName(resName: string): Promise<Uint8Array>-End-->
@@ -3328,7 +3134,7 @@ Obtains the content of the media file corresponding to the specified resource na
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3362,10 +3168,6 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaByName(resName: string, density: int): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaByName(resName: string, density: int): Promise<Uint8Array>-End-->
@@ -3377,7 +3179,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -3393,7 +3195,7 @@ Obtains the media file content for the specified screen density based on the spe
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3427,10 +3229,6 @@ Obtains the media file content for the default or specified screen density based
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaByNameSync(resName: string, density?: int): Uint8Array--><!--Device-ResourceManager-getMediaByNameSync(resName: string, density?: int): Uint8Array-End-->
@@ -3442,7 +3240,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -3458,7 +3256,7 @@ Obtains the media file content for the default or specified screen density based
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3497,11 +3295,9 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContent](#getMediaContent)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
+**Substitutes:** [getMediaContent](#getmediacontent)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3526,7 +3322,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -3562,11 +3358,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContent](#getMediaContent)(resId: long, density: int, callback: _AsyncCallback&lt;Uint8Array&gt;)
+**Substitutes:** [getMediaContent](#getmediacontent)(resId: long, density: int, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3581,7 +3375,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
@@ -3592,7 +3386,7 @@ Obtains the media file content for the specified screen density based on the spe
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -3628,11 +3422,9 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContent](#getMediaContent)(resId: long)
+**Substitutes:** [getMediaContent](#getmediacontent)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3662,7 +3454,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -3696,11 +3488,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContent](#getMediaContent)(resId: long, density: int)
+**Substitutes:** [getMediaContent](#getmediacontent)(resId: long, density: int)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3715,7 +3505,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -3731,7 +3521,7 @@ Obtains the media file content for the specified screen density based on the spe
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -3765,10 +3555,6 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void-End-->
@@ -3790,7 +3576,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3827,10 +3613,6 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void-End-->
@@ -3842,7 +3624,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
@@ -3853,7 +3635,7 @@ Obtains the media file content for the specified screen density based on the spe
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3889,10 +3671,6 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaContent(resId: long): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resId: long): Promise<Uint8Array>-End-->
@@ -3919,7 +3697,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -3953,10 +3731,6 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaContent(resId: long, density: int): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resId: long, density: int): Promise<Uint8Array>-End-->
@@ -3968,7 +3742,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -3984,7 +3758,7 @@ Obtains the media file content for the specified screen density based on the spe
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -4018,11 +3792,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long, callback: _AsyncCallback&lt;string&gt;)
+**Substitutes:** [getMediaContentBase64](#getmediacontentbase64)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4047,7 +3819,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -4083,11 +3855,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long, density: int, callback: _AsyncCallback&lt;string&gt;)
+**Substitutes:** [getMediaContentBase64](#getmediacontentbase64)(resId: long, density: int, callback: _AsyncCallback&lt;string&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4102,7 +3872,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
@@ -4113,7 +3883,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -4149,11 +3919,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long)
+**Substitutes:** [getMediaContentBase64](#getmediacontentbase64)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4183,7 +3951,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -4217,11 +3985,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long, density: int)
+**Substitutes:** [getMediaContentBase64](#getmediacontentbase64)(resId: long, density: int)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4236,7 +4002,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -4252,7 +4018,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -4286,10 +4052,6 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void-End-->
@@ -4311,7 +4073,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -4347,10 +4109,6 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void-End-->
@@ -4362,7 +4120,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
@@ -4373,7 +4131,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -4409,10 +4167,6 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaContentBase64(resId: long): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resId: long): Promise<string>-End-->
@@ -4439,7 +4193,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -4473,10 +4227,6 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int): Promise<string>-End-->
@@ -4488,7 +4238,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -4504,7 +4254,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -4538,10 +4288,6 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaContentBase64Sync(resId: long, density?: int): string--><!--Device-ResourceManager-getMediaContentBase64Sync(resId: long, density?: int): string-End-->
@@ -4553,7 +4299,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -4569,7 +4315,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -4608,11 +4354,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentBase64Sync](#getMediaContentBase64Sync)(resId: long, density?: int)
+**Substitutes:** [getMediaContentBase64Sync](#getmediacontentbase64sync)(resId: long, density?: int)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4627,7 +4371,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -4643,7 +4387,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -4681,10 +4425,6 @@ Obtains the media file content for the default or specified screen density based
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getMediaContentSync(resId: long, density?: int): Uint8Array--><!--Device-ResourceManager-getMediaContentSync(resId: long, density?: int): Uint8Array-End-->
@@ -4696,7 +4436,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -4712,7 +4452,7 @@ Obtains the media file content for the default or specified screen density based
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -4751,11 +4491,9 @@ Obtains the media file content for the default or specified screen density based
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentSync](#getMediaContentSync)(resId: long, density?: int)
+**Substitutes:** [getMediaContentSync](#getmediacontentsync)(resId: long, density?: int)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4770,7 +4508,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
 
 **Return value:**
 
@@ -4786,7 +4524,7 @@ Obtains the media file content for the default or specified screen density based
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -4824,10 +4562,6 @@ Obtains an integer or float number based on the specified resource ID. This API 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getNumber(resId: number): number--><!--Device-ResourceManager-getNumber(resId: number): number-End-->
@@ -4855,7 +4589,7 @@ Obtains an integer or float number based on the specified resource ID. This API 
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/integer.json
@@ -4925,11 +4659,9 @@ Obtains an integer or float number based on the specified resource object. This 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getNumber](#getNumber)(resId: number)
+**Substitutes:** [getNumber](#getnumber)(resId: number)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4960,7 +4692,7 @@ Obtains an integer or float number based on the specified resource object. This 
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/integer.json
@@ -5005,10 +4737,6 @@ Obtains an integer or float number based on the specified resource name. This AP
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getNumberByName(resName: string): number--><!--Device-ResourceManager-getNumberByName(resName: string): number-End-->
@@ -5036,7 +4764,7 @@ Obtains an integer or float number based on the specified resource name. This AP
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/integer.json
@@ -5102,13 +4830,9 @@ export default class EntryAbility extends UIAbility {
 getOverrideConfiguration(): Configuration
 ```
 
-Obtains the configuration of differentiated resources. This API returns the result synchronously. For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](#getOverrideResourceManager) API, this API returns the same configuration information.
+Obtains the configuration of differentiated resources. This API returns the result synchronously. For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](#getoverrideresourcemanager) API, this API returns the same configuration information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -5122,7 +4846,7 @@ Obtains the configuration of differentiated resources. This API returns the resu
 | --- | --- |
 | Configuration | Configuration of differentiated resources. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -5155,10 +4879,6 @@ Obtains a **ResourceManager** object for loading differentiated resources. This 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager--><!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager-End-->
@@ -5169,7 +4889,7 @@ Obtains a **ResourceManager** object for loading differentiated resources. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | Configuration | No | Resource configuration. <br>After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getOverrideConfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. <br>If no configuration is specified, the current system configuration is used. |
+| configuration | Configuration | No | Resource configuration. <br>After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. <br>If no configuration is specified, the current system configuration is used. |
 
 **Return value:**
 
@@ -5183,7 +4903,7 @@ Obtains a **ResourceManager** object for loading differentiated resources. This 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -5216,11 +4936,9 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getPluralStringValue](#getPluralStringValue)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
+**Substitutes:** [getPluralStringValue](#getpluralstringvalue)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
 
@@ -5234,7 +4952,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -5260,11 +4978,9 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getPluralStringValue](#getPluralStringValue)(resId: number, num: number)
+**Substitutes:** [getPluralStringValue](#getpluralstringvalue)(resId: number, num: number)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
 
@@ -5283,7 +4999,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the obtained singular/plural string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -5307,11 +5023,9 @@ Obtains the plural string based on the specified resource name and the specified
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringByNameSync](#getIntPluralStringByNameSync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringByNameSync](#getintpluralstringbynamesync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5336,7 +5050,7 @@ Obtains the plural string based on the specified resource name and the specified
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -5384,11 +5098,9 @@ Obtains the plural string based on the specified resource name and the specified
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringByNameSync](#getIntPluralStringByNameSync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringByNameSync](#getintpluralstringbynamesync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5418,7 +5130,7 @@ Obtains the plural string based on the specified resource name and the specified
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -5466,11 +5178,9 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringByNameSync](#getIntPluralStringByNameSync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringByNameSync](#getintpluralstringbynamesync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5500,7 +5210,7 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -5549,11 +5259,9 @@ Obtains the plural string based on the specified resource information and the sp
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5580,7 +5288,7 @@ Obtains the plural string based on the specified resource information and the sp
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -5635,11 +5343,9 @@ Obtains the plural string based on the specified resource information and the sp
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5671,7 +5377,7 @@ Obtains the plural string based on the specified resource information and the sp
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -5725,11 +5431,9 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5754,7 +5458,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -5803,11 +5507,9 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5837,7 +5539,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -5885,11 +5587,9 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5919,7 +5619,7 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -5968,11 +5668,9 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6004,7 +5702,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/plural.json
@@ -6055,13 +5753,9 @@ try {
 getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 ```
 
-Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or > [closeRawFd](#closeRawFd) > to close the fd after use.
+Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or > [closeRawFd](#closerawfd) > to close the fd after use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6083,7 +5777,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6118,13 +5812,9 @@ export default class EntryAbility extends UIAbility {
 getRawFd(path: string): Promise<RawFileDescriptor>
 ```
 
-Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or > [closeRawFd](#closeRawFd) > to close the fd after use.
+Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or > [closeRawFd](#closerawfd) > to close the fd after use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6151,7 +5841,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6184,13 +5874,9 @@ export default class EntryAbility extends UIAbility {
 getRawFdSync(path: string): RawFileDescriptor
 ```
 
-Obtains the file descriptor (fd) of the HAP where the rawfile file in the resources/rawfile directory is located. This API is called in synchronous mode. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or > [closeRawFd](#closeRawFd) > to close the fd after use.
+Obtains the file descriptor (fd) of the HAP where the rawfile file in the resources/rawfile directory is located. This API is called in synchronous mode. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or > [closeRawFd](#closerawfd) > to close the fd after use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6217,7 +5903,7 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6247,11 +5933,9 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFileContent](#getRawFileContent)(path: string, callback: _AsyncCallback&lt;Uint8Array&gt;)
+**Substitutes:** [getRawFileContent](#getrawfilecontent)(path: string, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 <!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -6264,7 +5948,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 | callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the rawfile content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -6290,11 +5974,9 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFileContent](#getRawFileContent)(path: string)
+**Substitutes:** [getRawFileContent](#getrawfilecontent)(path: string)
 
 <!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
@@ -6312,7 +5994,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | Promise used to return the rawfile content. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -6336,10 +6018,6 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void-End-->
@@ -6360,7 +6038,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6396,10 +6074,6 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>-End-->
@@ -6425,7 +6099,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6459,10 +6133,6 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array--><!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array-End-->
@@ -6488,7 +6158,7 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6518,11 +6188,9 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFd](#getRawFd)(path: string, callback: _AsyncCallback&lt;RawFileDescriptor&gt;)
+**Substitutes:** [getRawFd](#getrawfd)(path: string, callback: _AsyncCallback&lt;RawFileDescriptor&gt;)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void-End-->
 
@@ -6535,7 +6203,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 | callback | AsyncCallback&lt;RawFileDescriptor&gt; | Yes | Callback used to return the obtained fd. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -6563,11 +6231,9 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFd](#getRawFd)(path: string)
+**Substitutes:** [getRawFd](#getrawfd)(path: string)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 
@@ -6585,7 +6251,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 | --- | --- |
 | Promise&lt;RawFileDescriptor&gt; | Promise used to return the obtained fd. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -6611,10 +6277,6 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void-End-->
@@ -6635,7 +6297,7 @@ Obtains the list of directories and files in the specified subdirectory under **
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6667,10 +6329,6 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getRawFileList(path: string): Promise<Array<string>>--><!--Device-ResourceManager-getRawFileList(path: string): Promise<Array<string>>-End-->
@@ -6696,7 +6354,7 @@ Obtains the list of directories and files in the specified subdirectory under **
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6728,10 +6386,6 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getRawFileListSync(path: string): Array<string>--><!--Device-ResourceManager-getRawFileListSync(path: string): Array<string>-End-->
@@ -6757,7 +6411,7 @@ Obtains the list of directories and files in the specified subdirectory under **
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6789,10 +6443,6 @@ getResourceName(resId: long): string
 Obtains the resource name corresponding to the specified resource ID.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6830,11 +6480,9 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getStringValue](#getStringValue)(resId: long, callback: _AsyncCallback&lt;string&gt;)
+**Substitutes:** [getStringValue](#getstringvalue)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void-End-->
 
@@ -6847,7 +6495,7 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 | resId | number | Yes | Resource ID. |
 | callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 resourceManager.getResourceManager((error, mgr) => {
@@ -6871,11 +6519,9 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getStringValue](#getStringValue)(resId: long)
+**Substitutes:** [getStringValue](#getstringvalue)(resId: long)
 
 <!--Device-ResourceManager-getString(resId: number): Promise<string>--><!--Device-ResourceManager-getString(resId: number): Promise<string>-End-->
 
@@ -6893,7 +6539,7 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the obtained string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -6917,11 +6563,9 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getStringArrayValue](#getStringArrayValue)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
+**Substitutes:** [getStringArrayValue](#getstringarrayvalue)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 <!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -6934,7 +6578,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | resId | number | Yes | Resource ID. |
 | callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 resourceManager.getResourceManager((error, mgr) => {
@@ -6958,11 +6602,9 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getStringArrayValue](#getStringArrayValue)(resId: long)
+**Substitutes:** [getStringArrayValue](#getstringarrayvalue)(resId: long)
 
 <!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>--><!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>-End-->
 
@@ -6980,7 +6622,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained string array. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -7004,10 +6646,6 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void-End-->
@@ -7030,7 +6668,7 @@ Obtains the string array corresponding to the specified resource name. This API 
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/strarray.json
@@ -7078,10 +6716,6 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringArrayByName(resName: string): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayByName(resName: string): Promise<Array<string>>-End-->
@@ -7109,7 +6743,7 @@ Obtains the string array corresponding to the specified resource name. This API 
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/strarray.json
@@ -7156,10 +6790,6 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringArrayByNameSync(resName: string): Array<string>--><!--Device-ResourceManager-getStringArrayByNameSync(resName: string): Array<string>-End-->
@@ -7187,7 +6817,7 @@ Obtains the string array corresponding to the specified resource name. This API 
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/strarray.json
@@ -7235,11 +6865,9 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getStringArrayValue](#getStringArrayValue)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
+**Substitutes:** [getStringArrayValue](#getstringarrayvalue)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7265,7 +6893,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/strarray.json
@@ -7312,11 +6940,9 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getStringArrayValue](#getStringArrayValue)(resId: long)
+**Substitutes:** [getStringArrayValue](#getstringarrayvalue)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7347,7 +6973,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/strarray.json
@@ -7394,10 +7020,6 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void-End-->
@@ -7420,7 +7042,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/strarray.json
@@ -7468,10 +7090,6 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringArrayValue(resId: long): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayValue(resId: long): Promise<Array<string>>-End-->
@@ -7499,7 +7117,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/strarray.json
@@ -7546,10 +7164,6 @@ Obtains the string array corresponding to the specified resource ID. This API re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringArrayValueSync(resId: long): Array<string>--><!--Device-ResourceManager-getStringArrayValueSync(resId: long): Array<string>-End-->
@@ -7577,7 +7191,7 @@ Obtains the string array corresponding to the specified resource ID. This API re
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/strarray.json
@@ -7625,11 +7239,9 @@ Obtains a string array based on the specified resource object. This API returns 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getStringArrayValueSync](#getStringArrayValueSync)(resId: long)
+**Substitutes:** [getStringArrayValueSync](#getstringarrayvaluesync)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7660,7 +7272,7 @@ Obtains a string array based on the specified resource object. This API returns 
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/strarray.json
@@ -7708,10 +7320,6 @@ Obtains the string corresponding to the specified resource name. This API uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringByName(resName: string, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringByName(resName: string, callback: _AsyncCallback<string>): void-End-->
@@ -7734,7 +7342,7 @@ Obtains the string corresponding to the specified resource name. This API uses a
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json
@@ -7777,10 +7385,6 @@ Obtains the string corresponding to the specified resource name. This API uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringByName(resName: string): Promise<string>--><!--Device-ResourceManager-getStringByName(resName: string): Promise<string>-End-->
@@ -7808,7 +7412,7 @@ Obtains the string corresponding to the specified resource name. This API uses a
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json
@@ -7849,10 +7453,6 @@ Obtains the string corresponding to the specified resource name. This API return
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringByNameSync(resName: string): string--><!--Device-ResourceManager-getStringByNameSync(resName: string): string-End-->
@@ -7880,7 +7480,7 @@ Obtains the string corresponding to the specified resource name. This API return
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json
@@ -7924,10 +7524,6 @@ Obtains the string corresponding to the specified resource name, and replaces th
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string-End-->
@@ -7957,7 +7553,7 @@ Obtains the string corresponding to the specified resource name, and replaces th
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 | [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json
@@ -8001,10 +7597,6 @@ Obtains the string corresponding to the specified resource name, and replaces th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: (string | double)[]): string--><!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: (string | double)[]): string-End-->
@@ -8043,10 +7635,6 @@ Obtains the string corresponding to the specified resource ID. This API returns 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringSync(resId: long): string--><!--Device-ResourceManager-getStringSync(resId: long): string-End-->
@@ -8074,7 +7662,7 @@ Obtains the string corresponding to the specified resource ID. This API returns 
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json
@@ -8118,10 +7706,6 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string-End-->
@@ -8151,7 +7735,7 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 | [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json
@@ -8195,10 +7779,6 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getStringSync(resId: long, ...args: (string | double)[]): string--><!--Device-ResourceManager-getStringSync(resId: long, ...args: (string | double)[]): string-End-->
@@ -8237,11 +7817,9 @@ Obtains a string based on the specified resource object. This API returns the re
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getStringSync](#getStringSync)(resId: long)
+**Substitutes:** [getStringSync](#getstringsync)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8272,7 +7850,7 @@ Obtains a string based on the specified resource object. This API returns the re
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json
@@ -8316,11 +7894,9 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getStringSync](#getStringSync)(resId: number, ...args: Array&lt;string | number&gt;)
+**Substitutes:** [getStringSync](#getstringsync)(resId: number, ...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8353,7 +7929,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 | [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json
@@ -8397,11 +7973,9 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getStringValue](#getStringValue)(resId: long, callback: _AsyncCallback&lt;string&gt;)
+**Substitutes:** [getStringValue](#getstringvalue)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8427,7 +8001,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json
@@ -8470,11 +8044,9 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getStringValue](#getStringValue)(resId: long)
+**Substitutes:** [getStringValue](#getstringvalue)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8505,7 +8077,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -8535,10 +8107,6 @@ getStringValue(resId: long, callback: _AsyncCallback<string>): void
 Obtains the string corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8572,10 +8140,6 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringValue(resId: long): Promise<string>--><!--Device-ResourceManager-getStringValue(resId: long): Promise<string>-End-->
@@ -8603,7 +8167,7 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Resource file path: src/main/resources/base/element/string.json
@@ -8644,10 +8208,6 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getSymbol(resId: long) : long--><!--Device-ResourceManager-getSymbol(resId: long) : long-End-->
@@ -8675,7 +8235,7 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -8707,11 +8267,9 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getSymbol](#getSymbol)(resId: long)
+**Substitutes:** [getSymbol](#getsymbol)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8742,7 +8300,7 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
@@ -8774,10 +8332,6 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getSymbolByName(resName: string) : long--><!--Device-ResourceManager-getSymbolByName(resName: string) : long-End-->
@@ -8805,7 +8359,7 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -8837,10 +8391,6 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-isRawDir(path: string): boolean--><!--Device-ResourceManager-isRawDir(path: string): boolean-End-->
@@ -8866,7 +8416,7 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -8905,8 +8455,6 @@ Releases an **resourceManager **object. This API is not supported currently. Cal
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -8915,7 +8463,7 @@ Releases an **resourceManager **object. This API is not supported currently. Cal
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -8934,10 +8482,6 @@ removeResource(path: string) : void
 Removes the specified overlay resource during application runtime and restores the original resource before the override. > **NOTE：**> > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8958,7 +8502,7 @@ Removes the specified overlay resource during application runtime and restores t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001010](../errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -8985,13 +8529,9 @@ export default class EntryAbility extends UIAbility {
 updateOverrideConfiguration(configuration: Configuration): void
 ```
 
-Updates the configuration of a differentiated resource management object. This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via [getOverrideResourceManager](#getOverrideResourceManager).
+Updates the configuration of a differentiated resource management object. This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via [getOverrideResourceManager](#getoverrideresourcemanager).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -9003,7 +8543,7 @@ Updates the configuration of a differentiated resource management object. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | Configuration | Yes | Configuration of differentiated resources. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getOverrideConfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. |
+| configuration | Configuration | Yes | Configuration of differentiated resources. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. |
 
 **Error codes:**
 
@@ -9011,7 +8551,7 @@ Updates the configuration of a differentiated resource management object. This A
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

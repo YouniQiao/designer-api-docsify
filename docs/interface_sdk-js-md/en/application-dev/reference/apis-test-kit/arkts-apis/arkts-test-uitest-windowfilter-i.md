@@ -4,10 +4,6 @@ Provides the flag attributes of this window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface WindowFilter--><!--Device-unnamed-declare interface WindowFilter-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -58,10 +54,6 @@ Whether the window is interacting with the user. The value **true** indicates th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowFilter-active?: boolean--><!--Device-WindowFilter-active?: boolean-End-->
@@ -79,8 +71,6 @@ Whether the window is interacting with the user. The value **true** indicates th
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 11
 
@@ -102,10 +92,6 @@ Bundle name of the application to which the window belongs, which is used to fil
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowFilter-bundleName?: string--><!--Device-WindowFilter-bundleName?: string-End-->
@@ -123,10 +109,6 @@ ID of the display to which the window belongs. The value is an integer greater t
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -146,10 +128,6 @@ Whether the window is focused. The value **true** indicates that the window is f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowFilter-focused?: boolean--><!--Device-WindowFilter-focused?: boolean-End-->
@@ -167,10 +145,6 @@ Window title, which is used to filter the target window in multi-window scenario
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

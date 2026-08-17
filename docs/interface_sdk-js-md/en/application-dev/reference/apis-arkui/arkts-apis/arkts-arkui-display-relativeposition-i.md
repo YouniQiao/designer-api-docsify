@@ -4,10 +4,6 @@ Describes a coordinate position in the relative coordinate system, with the orig
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-interface RelativePosition--><!--Device-display-interface RelativePosition-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Display ID for the relative coordinates. Only integers are supported, and the va
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RelativePosition-displayId: long--><!--Device-RelativePosition-displayId: long-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -49,10 +41,6 @@ Coordinates with the top-left corner of the screen specified by **displayId** as
 **Type:** Position
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RelativePosition-position: Position--><!--Device-RelativePosition-position: Position-End-->
 

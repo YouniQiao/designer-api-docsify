@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-inputMethod-export interface InputAttribute--><!--Device-inputMethod-export interface InputAttribute-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -24,10 +20,6 @@ abilityName?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-InputAttribute-abilityName?: string--><!--Device-InputAttribute-abilityName?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -38,17 +30,13 @@ abilityName?: string
 consumeKeyEvents?: boolean
 ```
 
-编辑框是否具有完整处理字母、字符、功能等按键的能力。默认值为false。 - 值为true，表示具备此能力。 - 值为false，表示不具备此能力。 - 该字段在调用 [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) / [InputAttribute](#InputAttribute)时提供给输入法应用。
+编辑框是否具有完整处理字母、字符、功能等按键的能力。默认值为false。 - 值为true，表示具备此能力。 - 值为false，表示不具备此能力。 - 该字段在调用 [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) / [InputAttribute](#inputattribute)时提供给输入法应用。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,10 +56,6 @@ Enter键功能类型。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-InputAttribute-enterKeyType: EnterKeyType--><!--Device-InputAttribute-enterKeyType: EnterKeyType-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -88,10 +72,6 @@ placeholder?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-InputAttribute-placeholder?: string--><!--Device-InputAttribute-placeholder?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -107,10 +87,6 @@ textInputType: TextInputType
 **类型：** [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-InputAttribute-textInputType: TextInputType--><!--Device-InputAttribute-textInputType: TextInputType-End-->
 

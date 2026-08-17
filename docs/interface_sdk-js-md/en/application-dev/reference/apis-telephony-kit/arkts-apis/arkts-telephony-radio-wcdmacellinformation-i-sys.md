@@ -4,10 +4,6 @@ Obtains WCDMA cell information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export interface WcdmaCellInformation--><!--Device-radio-export interface WcdmaCellInformation-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -32,10 +28,6 @@ Indicates the cell ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WcdmaCellInformation-cellId: int--><!--Device-WcdmaCellInformation-cellId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -53,10 +45,6 @@ Indicates the location area code.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WcdmaCellInformation-lac: int--><!--Device-WcdmaCellInformation-lac: int-End-->
 
@@ -76,10 +64,6 @@ Indicates the mobile country code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WcdmaCellInformation-mcc: string--><!--Device-WcdmaCellInformation-mcc: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -97,10 +81,6 @@ Indicates the mobile network code.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WcdmaCellInformation-mnc: string--><!--Device-WcdmaCellInformation-mnc: string-End-->
 
@@ -120,10 +100,6 @@ Indicates the primary scrambling code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WcdmaCellInformation-psc: int--><!--Device-WcdmaCellInformation-psc: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -141,10 +117,6 @@ Indicates the absolute radio frequency number.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WcdmaCellInformation-uarfcn: int--><!--Device-WcdmaCellInformation-uarfcn: int-End-->
 

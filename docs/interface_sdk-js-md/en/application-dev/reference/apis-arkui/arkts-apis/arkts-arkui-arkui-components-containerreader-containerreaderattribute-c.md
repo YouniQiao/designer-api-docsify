@@ -6,10 +6,6 @@ Defines the ContainerReader attribute functions. Provides methods for configurin
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class ContainerReaderAttribute--><!--Device-unnamed-export declare class ContainerReaderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -32,10 +28,6 @@ Sets the breakpoint configuration for container dimension analysis. Defines a se
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -50,11 +42,11 @@ Sets the breakpoint configuration for container dimension analysis. Defines a se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | No | An array of breakpoint values in vp |
+| value | [BreakpointOptions](../../apis-na/arkts-apis/arkts-na-arkui-components-containerreader-breakpointoptions-i.md) | No | An array of breakpoint values in vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |
+| [ContainerReaderAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-containerreader-containerreaderattribute-i.md) |  |
 

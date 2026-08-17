@@ -10,10 +10,6 @@ function isArkChildProcessSupported(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-childProcessManager-function isArkChildProcessSupported(): boolean--><!--Device-childProcessManager-function isArkChildProcessSupported(): boolean-End-->
@@ -26,7 +22,7 @@ function isArkChildProcessSupported(): boolean
 | --- | --- |
 | boolean | 是否允许调用者创建ArkTS子进程。<br>true：允许创建ArkTS子进程。<br>false：不允许创建ArkTS子进程。<br>默认值：false。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

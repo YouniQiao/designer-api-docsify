@@ -1,12 +1,8 @@
-# InputEvent
+# InputEvent(Input Event)
 
 The **inputEvent** module provides the basic events reported by the device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface InputEvent--><!--Device-unnamed-export declare interface InputEvent-End-->
 
@@ -30,10 +26,6 @@ Time when an input event is reported, in microseconds (μs) since the system sta
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InputEvent-actionTime: long--><!--Device-InputEvent-actionTime: long-End-->
@@ -51,10 +43,6 @@ Unique ID of the input device. If a physical device is repeatedly reinstalled or
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Enumerates event IDs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InputEvent-id: int--><!--Device-InputEvent-id: int-End-->
@@ -96,10 +80,6 @@ Target screen ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InputEvent-screenId: int--><!--Device-InputEvent-screenId: int-End-->
@@ -117,10 +97,6 @@ Target window ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

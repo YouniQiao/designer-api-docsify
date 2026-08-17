@@ -8,9 +8,7 @@ type OnResultFn = (parameter: AbilityResult) => void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-type OnResultFn = (parameter: AbilityResult) => void--><!--Device-unnamed-type OnResultFn = (parameter: AbilityResult) => void-End-->
 
@@ -20,5 +18,5 @@ type OnResultFn = (parameter: AbilityResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-abilityresult-i.md) | 是 | 当调用 [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#terminateSelfWithResult) 方法终止UIExtensionAbility时返回的结果。 |
+| parameter | [AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-abilityresult-i.md) | 是 | 当调用 [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#terminateselfwithresult) 方法终止UIExtensionAbility时返回的结果。 |
 

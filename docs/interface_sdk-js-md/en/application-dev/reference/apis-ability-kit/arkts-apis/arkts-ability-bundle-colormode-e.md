@@ -4,8 +4,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** null
@@ -24,11 +22,9 @@ Auto mode.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_NOT_SET](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_NOT_SET)
+**Substitutes:** [COLOR_MODE_NOT_SET](arkts-ability-configurationconstant-colormode-e.md#colormodenotset)
 
 <!--Device-ColorMode-AUTO_MODE = -1--><!--Device-ColorMode-AUTO_MODE = -1-End-->
 
@@ -44,11 +40,9 @@ Dark mode.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_DARK)
+**Substitutes:** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#colormodedark)
 
 <!--Device-ColorMode-DARK_MODE = 0--><!--Device-ColorMode-DARK_MODE = 0-End-->
 
@@ -64,11 +58,9 @@ Light mode.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_LIGHT](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_LIGHT)
+**Substitutes:** [COLOR_MODE_LIGHT](arkts-ability-configurationconstant-colormode-e.md#colormodelight)
 
 <!--Device-ColorMode-LIGHT_MODE = 1--><!--Device-ColorMode-LIGHT_MODE = 1-End-->
 

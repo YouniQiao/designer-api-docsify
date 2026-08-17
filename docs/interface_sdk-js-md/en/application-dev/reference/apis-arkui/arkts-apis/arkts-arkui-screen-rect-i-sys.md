@@ -4,10 +4,6 @@ Describes the rectangle information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screen-interface Rect--><!--Device-screen-interface Rect-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -32,10 +28,6 @@ Height of the rectangle, in px. The value must be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Rect-height: long--><!--Device-Rect-height: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -53,10 +45,6 @@ X coordinate of the vertex in the top-left corner of the rectangle, in px. The v
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Rect-left: long--><!--Device-Rect-left: long-End-->
 
@@ -76,10 +64,6 @@ Y coordinate of the vertex in the top-left corner of the rectangle, in px. The v
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Rect-top: long--><!--Device-Rect-top: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -97,10 +81,6 @@ Width of the rectangle, in px. The value must be an integer.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Rect-width: long--><!--Device-Rect-width: long-End-->
 

@@ -4,10 +4,6 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct Filter--><!--Device-unnamed-export declare struct Filter-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -33,10 +29,6 @@ FilterParams, Additional filter item parameter. The filter item name is displaye
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -56,10 +48,6 @@ Container in the user-defined filtering result display area.
 **Type:** () =&gt; void
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,10 +69,6 @@ FilterType, Filter display style type.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -105,10 +89,6 @@ Multi-dimensional filtering parameters.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -128,10 +108,6 @@ FilterParams, Callback method after a user clicks a filter item.
 **Type:** (filterResults: Array&lt;[FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt;) =&gt; void
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

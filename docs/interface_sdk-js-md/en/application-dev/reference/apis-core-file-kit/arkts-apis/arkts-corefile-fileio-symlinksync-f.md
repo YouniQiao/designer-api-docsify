@@ -10,11 +10,9 @@ Creates a symbolic link based on the file path. This API returns the result sync
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [symlinkSync](arkts-corefile-file-fs-symlinksync-f.md#symlinkSync)
+**Substitutes:** [symlinkSync](arkts-corefile-file-fs-symlinksync-f.md#symlinksync)
 
 <!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void--><!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void-End-->
 

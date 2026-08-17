@@ -4,10 +4,6 @@ Provides interfaces to get system capability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace systemCapability--><!--Device-unnamed-declare namespace systemCapability-End-->
 
 **System capability:** SystemCapability.Developtools.Syscap
@@ -27,7 +23,7 @@ import { systemCapability } from 'systemCapability';
 
 | Name | Description |
 | --- | --- |
-| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querySystemCapabilities) | Get System Capability. |
-| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querySystemCapabilities-(System-API)) | Get System Capability. |
+| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querysystemcapabilities) | Get System Capability. |
+| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querysystemcapabilities-system-api) | Get System Capability. |
 <!--DelEnd-->
 

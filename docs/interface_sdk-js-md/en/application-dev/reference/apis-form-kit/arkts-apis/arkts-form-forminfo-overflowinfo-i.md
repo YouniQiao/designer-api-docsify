@@ -4,10 +4,6 @@ Provides OverflowInfo about funInteraction or sceneAnimation form
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-interface OverflowInfo--><!--Device-formInfo-interface OverflowInfo-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -30,10 +26,6 @@ The overflow animation area
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-OverflowInfo-area: Rect--><!--Device-OverflowInfo-area: Rect-End-->
@@ -52,10 +44,6 @@ The overflow animation duration, unit is ms Unit: milliseconds, The value must b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-OverflowInfo-duration: int--><!--Device-OverflowInfo-duration: int-End-->
@@ -73,10 +61,6 @@ Whether use default animation, default is true
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

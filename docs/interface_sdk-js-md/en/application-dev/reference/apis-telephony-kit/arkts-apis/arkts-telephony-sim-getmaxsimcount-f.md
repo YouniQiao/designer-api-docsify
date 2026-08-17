@@ -16,10 +16,6 @@ Obtains the maximum number of SIM cards that can be used simultaneously on the d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-function getMaxSimCount(): int--><!--Device-sim-function getMaxSimCount(): int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -30,7 +26,7 @@ Obtains the maximum number of SIM cards that can be used simultaneously on the d
 | --- | --- |
 | int | Returns the maximum number of SIM card slots. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

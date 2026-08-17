@@ -16,10 +16,6 @@ Obtains all [valid (not yet expired) reminders](../../../task-management/agent-p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-function getAllValidReminders(): Promise<Array<ReminderInfo>>--><!--Device-reminderAgentManager-function getAllValidReminders(): Promise<Array<ReminderInfo>>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -36,7 +32,7 @@ Obtains all [valid (not yet expired) reminders](../../../task-management/agent-p
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

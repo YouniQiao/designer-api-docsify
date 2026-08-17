@@ -16,10 +16,6 @@ Obtains the data security level of a file or directory. If no data security leve
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-securityLabel-function getSecurityLabel(path: string): Promise<string>--><!--Device-securityLabel-function getSecurityLabel(path: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -49,7 +45,7 @@ Obtains the data security level of a file or directory. If no data security leve
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,10 +67,6 @@ function getSecurityLabel(path: string, callback: AsyncCallback<string>): void
 Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned by default. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-securityLabel-function getSecurityLabel(path: string, callback: AsyncCallback<string>): void--><!--Device-securityLabel-function getSecurityLabel(path: string, callback: AsyncCallback<string>): void-End-->
 
@@ -100,7 +92,7 @@ Obtains the data security level of a file or directory. If no data security leve
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

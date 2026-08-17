@@ -9,10 +9,6 @@ Defines the types of the value in a KV pair. The type varies with the parameter 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendableRelationalStore-type ValueType = null | number | string | boolean | collections.Uint8Array | Asset | Assets |    collections.Float32Array | bigint--><!--Device-sendableRelationalStore-type ValueType = null | number | string | boolean | collections.Uint8Array | Asset | Assets |    collections.Float32Array | bigint-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-inputMethod-export interface Range--><!--Device-inputMethod-export interface Range-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -24,10 +20,6 @@ end: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Range-end: int--><!--Device-Range-end: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -43,10 +35,6 @@ start: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Range-start: int--><!--Device-Range-start: int-End-->
 

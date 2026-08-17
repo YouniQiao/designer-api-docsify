@@ -10,10 +10,6 @@ function enableSelfDeviceAdmin(admin: Want, credential: string): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_ACTIVATE_DEVICE_ADMIN
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -41,7 +37,7 @@ function enableSelfDeviceAdmin(admin: Want, credential: string): void
 | [9200018](../errorcode-enterpriseDeviceManager.md#9200018-该设备非企业设备) | This device is not an enterprise device. |
 | [9200003](../errorcode-enterpriseDeviceManager.md#9200003-指定的设备管理器元能力组件无效) | The administrator ability component is invalid. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -58,7 +54,7 @@ let credential: string = '{"enterpriseId": "123456", "appIdentifier": "123456", 
 
 try {
   adminManager.enableSelfDeviceAdmin(wantTemp, credential);
-  console.info(`succeed in enable self device admin.`);
+  console.info(`succeed in enabling self device admin.`);
 } catch (err) {
   console.error(`Failed to enable self device admin. Code: ${err.code}, message: ${err.message}`);
 }

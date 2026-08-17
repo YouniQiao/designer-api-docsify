@@ -15,6 +15,6 @@ Profiler tools for inspectors.
 
 | Name | Description |
 | --- | --- |
-| [setAppBgColor](arkts-na-inspector-setappbgcolor-f-sys.md#setAppBgColor-(System-API)) | Set app background color. |
+| [setAppBgColor](arkts-na-inspector-setappbgcolor-f-sys.md#setappbgcolor-system-api) | Set app background color. |
 <!--DelEnd-->
 

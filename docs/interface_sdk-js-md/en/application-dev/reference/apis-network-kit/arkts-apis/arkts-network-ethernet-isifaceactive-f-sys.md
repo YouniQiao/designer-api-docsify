@@ -16,10 +16,6 @@ Check whether the specified network is active.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<number>): void--><!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<number>): void-End-->
@@ -47,7 +43,7 @@ Check whether the specified network is active.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';
@@ -72,10 +68,6 @@ function isIfaceActive(iface: string): Promise<number>
 Check whether the specified network is active.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -109,7 +101,7 @@ Check whether the specified network is active.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ethernet } from '@kit.NetworkKit';

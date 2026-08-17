@@ -10,11 +10,9 @@ Opens a directory. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFileSync](arkts-corefile-file-fs-listfilesync-f.md#listFileSync)
+**Substitutes:** [listFileSync](arkts-corefile-file-fs-listfilesync-f.md#listfilesync)
 
 <!--Device-unnamed-declare function opendirSync(path: string): Dir--><!--Device-unnamed-declare function opendirSync(path: string): Dir-End-->
 

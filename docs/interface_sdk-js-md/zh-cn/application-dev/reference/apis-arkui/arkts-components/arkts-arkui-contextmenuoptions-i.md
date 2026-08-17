@@ -1,12 +1,8 @@
 # ContextMenuOptions
 
-菜单项的信息。 **表1：同时设置offset与placement时菜单的偏移位置** | placement设置的值 | 菜单的偏移量说明 | | ------------------------------------------------------------ | ------------------------------------------------------------ | | Placement.TopLeft、Placement.Top、Placement.TopRight | offset的x为正数，菜单相对组件向右进行偏移，offset的y为正数，菜单相对组件向上进行偏移。 | | Placement.BottomLeft、Placement.Bottom、Placement.BottomRight | offset的x为正数，菜单相对组件向左进行偏移，offset的y为正数，菜单相对组件向下进行偏移。 | | Placement.RightTop、Placement.Right、Placement.RightBottom | offset的x为正数，菜单相对组件向右进行偏移，offset的y为正数，菜单相对组件向下进行偏移。 | **表2：同时设置arrowOffset与placement时菜单箭头的默认位置** | placement设置的值 | 菜单箭头的位置说明 | | ------------------------------------------- | ------------------------------------------------------------ | | Placement.Top、Placement.Bottom | 箭头显示在水平方向且默认居中，且距离菜单左侧边缘距离为箭头安全距离。 | | Placement.Left、Placement.Right | 箭头显示在垂直方向且默认居中，且距离菜单上侧距离为箭头安全距离。 | | Placement.TopLeft、Placement.BottomLeft | 箭头默认显示在水平方向，且距离菜单左侧边缘距离为箭头安全距离。 | | Placement.TopRight、Placement.BottomRight | 箭头默认显示在水平方向，且距离菜单右侧距离为箭头安全距离。 | | Placement.LeftTop、Placement.RightTop | 箭头默认显示在垂直方向，且距离菜单上侧距离为箭头安全距离。 | | Placement.LeftBottom、Placement.RightBottom | 箭头默认显示在垂直方向，且距离菜单下侧距离为箭头安全距离。 | **表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置** | 接口 | 菜单默认位置 | |------|-------------| | [bindMenu](arkts-arkui-commonmethod-c.md#bindMenu) | Placement.BottomLeft | | [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindMenu) | Placement.BottomLeft | | [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu) | Placement.Top | | [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu) | Placement.BottomLeft | | [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenuWithResponse) | Placement.Top |
+菜单项的信息。 **表1：同时设置offset与placement时菜单的偏移位置** | placement设置的值 | 菜单的偏移量说明 | | ------------------------------------------------------------ | ------------------------------------------------------------ | | Placement.TopLeft、Placement.Top、Placement.TopRight | offset的x为正数，菜单相对组件向右进行偏移，offset的y为正数，菜单相对组件向上进行偏移。 | | Placement.BottomLeft、Placement.Bottom、Placement.BottomRight | offset的x为正数，菜单相对组件向左进行偏移，offset的y为正数，菜单相对组件向下进行偏移。 | | Placement.RightTop、Placement.Right、Placement.RightBottom | offset的x为正数，菜单相对组件向右进行偏移，offset的y为正数，菜单相对组件向下进行偏移。 | **表2：同时设置arrowOffset与placement时菜单箭头的默认位置** | placement设置的值 | 菜单箭头的位置说明 | | ------------------------------------------- | ------------------------------------------------------------ | | Placement.Top、Placement.Bottom | 箭头显示在水平方向且默认居中，且距离菜单左侧边缘距离为箭头安全距离。 | | Placement.Left、Placement.Right | 箭头显示在垂直方向且默认居中，且距离菜单上侧距离为箭头安全距离。 | | Placement.TopLeft、Placement.BottomLeft | 箭头默认显示在水平方向，且距离菜单左侧边缘距离为箭头安全距离。 | | Placement.TopRight、Placement.BottomRight | 箭头默认显示在水平方向，且距离菜单右侧距离为箭头安全距离。 | | Placement.LeftTop、Placement.RightTop | 箭头默认显示在垂直方向，且距离菜单上侧距离为箭头安全距离。 | | Placement.LeftBottom、Placement.RightBottom | 箭头默认显示在垂直方向，且距离菜单下侧距离为箭头安全距离。 | **表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置** | 接口 | 菜单默认位置 | |------|-------------| | [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft | | [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft | | [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.Top | | [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.BottomLeft | | [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) | Placement.Top |
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface ContextMenuOptions--><!--Device-unnamed-declare interface ContextMenuOptions-End-->
 
@@ -23,10 +19,6 @@ aboutToAppear?: () => void
 **类型：** () =&gt; void
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,10 +39,6 @@ aboutToDisappear?: () => void
 **类型：** () =&gt; void
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,10 +62,6 @@ anchorPosition?: Position
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -100,10 +84,6 @@ arrowOffset?: Length
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -123,10 +103,6 @@ availableLayoutArea?: AvailableLayoutArea
 **类型：** [AvailableLayoutArea](arkts-arkui-availablelayoutarea-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -150,10 +126,6 @@ backgroundBlurStyle?: BlurStyle
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -173,10 +145,6 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 **类型：** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,10 +168,6 @@ backgroundColor?: ResourceColor
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -223,10 +187,6 @@ backgroundEffect?: BackgroundEffectOptions
 **类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -250,10 +210,6 @@ borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -275,10 +231,6 @@ colorMode?: AnchoredColorMode
 **默认值：** AnchoredColorMode.FOLLOW_TARGET
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -302,10 +254,6 @@ enableArrow?: boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -328,10 +276,6 @@ enableHoverMode?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -346,15 +290,11 @@ enableHoverMode?: boolean
 gridStyle?: MenuGridStyleOptions
 ```
 
-设置菜单的栅格样式。仅固定样式菜单生效，例如在 [bindMenu](arkts-arkui-commonmethod-c.md#bindMenu)、 [bindContextMenu](arkts-arkui-commonmethod-c.md#bindContextMenu) 、[bindContextMenuByResponseType](arkts-arkui-commonmethod-c.md#bindContextMenuByResponseType)、 [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindContextMenuByIsShow)、 [bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindContextMenuWithResponse) 中使用[MenuElement](arkts-arkui-menuelement-i.md#MenuElement)或在MenuItem中使用MenuItemOptions。
+设置菜单的栅格样式。仅固定样式菜单生效，例如在 [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu)、 [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) 、[bindContextMenuByResponseType](arkts-arkui-commonmethod-c.md#bindcontextmenubyresponsetype)、 [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow)、 [bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) 中使用[MenuElement](arkts-arkui-menuelement-i.md#menuelement)或在MenuItem中使用MenuItemOptions。
 
 **类型：** [MenuGridStyleOptions](arkts-arkui-menugridstyleoptions-i.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -378,10 +318,6 @@ hapticFeedbackMode?: HapticFeedbackMode
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -403,10 +339,6 @@ keyboardAvoidMode?: MenuKeyboardAvoidMode
 **默认值：** MenuKeyboardAvoidMode.NONE
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -430,10 +362,6 @@ layoutRegionMargin?: Margin
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -456,10 +384,6 @@ mask?: boolean | MenuMaskType
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -480,10 +404,6 @@ maxHeight?: LengthMetrics
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -503,10 +423,6 @@ minKeyboardAvoidDistance?: LengthMetrics
 **类型：** LengthMetrics
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -530,10 +446,6 @@ modalMode?: ModalMode
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -556,10 +468,6 @@ offset?: Position
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -579,10 +487,6 @@ onAppear?: () => void
 **类型：** () =&gt; void
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -604,10 +508,6 @@ onDidAppear?: Callback<void>
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -627,10 +527,6 @@ onDidDisappear?: Callback<void>
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -652,10 +548,6 @@ onDisappear?: () => void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -676,10 +568,6 @@ onWillAppear?: Callback<void>
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -699,10 +587,6 @@ onWillDisappear?: Callback<void>
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -726,10 +610,6 @@ outlineColor?: ResourceColor | EdgeColors
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -752,10 +632,6 @@ outlineWidth?: Dimension | EdgeOutlineWidths
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -770,17 +646,13 @@ outlineWidth?: Dimension | EdgeOutlineWidths
 placement?: Placement
 ```
 
-菜单组件优先显示的位置，当前位置显示不下时，会自动调整位置。 **说明：** 1. 作为[bindMenu](arkts-arkui-commonmethod-c.md#bindMenu)入参时，默认值为Placement.BottomLeft。 2. 作为[bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu)或[bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenuWithResponse)入参时，默认效果为菜单跟随点击位置弹出。 3. 作为[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu)入参时，默认值为Placement.BottomLeft。 4. placement值设置为undefined、null或缺省时，按默认值处理。
+菜单组件优先显示的位置，当前位置显示不下时，会自动调整位置。 **说明：** 1. 作为[bindMenu](arkts-arkui-commonmethod-c.md#bindmenu)入参时，默认值为Placement.BottomLeft。 2. 作为[bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)或[bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse)入参时，默认效果为菜单跟随点击位置弹出。 3. 作为[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)入参时，默认值为Placement.BottomLeft。 4. placement值设置为undefined、null或缺省时，按默认值处理。
 
 **类型：** Placement
 
 **默认值：** - [since 10 - 10] @default Placement.BottomLeft [since 11]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -796,17 +668,13 @@ placement?: Placement
 preview?: MenuPreviewMode | CustomBuilder
 ```
 
-长按悬浮菜单或使用 [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu) 显示菜单的预览内容样式，可以为目标组件的截图，也可以为用户自定义的内容。 默认值：MenuPreviewMode.NONE，无预览内容。 **说明：** - 不支持responseType为ResponseType.RightClick时触发，如果responseType为ResponseType.RightClick，则不会显示预览内容。 - 当未设置preview参数或preview参数设置为MenuPreviewMode.NONE时，enableArrow参数生效。 - 当preview参数设置为MenuPreviewMode.IMAGE或CustomBuilder时，enableArrow为true时也不显示箭头。
+长按悬浮菜单或使用 [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) 显示菜单的预览内容样式，可以为目标组件的截图，也可以为用户自定义的内容。 默认值：MenuPreviewMode.NONE，无预览内容。 **说明：** - 不支持responseType为ResponseType.RightClick时触发，如果responseType为ResponseType.RightClick，则不会显示预览内容。 - 当未设置preview参数或preview参数设置为MenuPreviewMode.NONE时，enableArrow参数生效。 - 当preview参数设置为MenuPreviewMode.IMAGE或CustomBuilder时，enableArrow为true时也不显示箭头。
 
 **类型：** [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **默认值：** MenuPreviewMode.NONE
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -830,10 +698,6 @@ previewAnimationOptions?: ContextMenuAnimationOptions
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -855,10 +719,6 @@ previewBorderRadius?: BorderRadiusType
 **默认值：** 16vp
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -882,10 +742,6 @@ previewScaleMode?: PreviewScaleMode
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -908,10 +764,6 @@ scrollBar?: BarState
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -932,10 +784,6 @@ targetSpace?: LengthMetrics
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -950,15 +798,11 @@ targetSpace?: LengthMetrics
 transition?: TransitionEffect
 ```
 
-设置菜单显示和退出的过渡效果。 **说明：** 菜单退出动效过程中，进行横竖屏切换，菜单会避让。二级菜单不继承自定义动效。弹出过程可以点击二级菜单，退出动效执行过程不允许点击二级菜单。 详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect)对象说明。 动效曲线使用弹簧曲线，在动效退出时，由于弹簧曲线的回弹震荡，菜单消失后有较长的拖尾，使得其他事件无法响应。 当设置transition自定义动效时，菜单的默认显示和退出动效不生效。
+设置菜单显示和退出的过渡效果。 **说明：** 菜单退出动效过程中，进行横竖屏切换，菜单会避让。二级菜单不继承自定义动效。弹出过程可以点击二级菜单，退出动效执行过程不允许点击二级菜单。 详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect)对象说明。 动效曲线使用弹簧曲线，在动效退出时，由于弹簧曲线的回弹震荡，菜单消失后有较长的拖尾，使得其他事件无法响应。 当设置transition自定义动效时，菜单的默认显示和退出动效不生效。
 
 **类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

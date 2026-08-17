@@ -16,10 +16,6 @@ Uninstalls a private credential. This API uses an asynchronous callback to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function uninstallPrivateCertificate(keyUri: string, callback: AsyncCallback<void>): void--><!--Device-certificateManager-function uninstallPrivateCertificate(keyUri: string, callback: AsyncCallback<void>): void-End-->
@@ -42,7 +38,7 @@ Uninstalls a private credential. This API uses an asynchronous callback to retur
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -72,10 +68,6 @@ Uninstalls a private credential. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function uninstallPrivateCertificate(keyUri: string): Promise<void>--><!--Device-certificateManager-function uninstallPrivateCertificate(keyUri: string): Promise<void>-End-->
@@ -103,7 +95,7 @@ Uninstalls a private credential. This API uses a promise to return the result.
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

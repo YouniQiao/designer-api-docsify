@@ -1,14 +1,10 @@
 # ScrollableTargetInfo
 
-手势识别器对应的滚动类容器组件的信息，继承于[EventTargetInfo](arkts-arkui-eventtargetinfo-c.md#EventTargetInfo)。
+手势识别器对应的滚动类容器组件的信息，继承于[EventTargetInfo](arkts-arkui-eventtargetinfo-c.md#eventtargetinfo)。
 
-**继承/实现关系：** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md#EventTargetInfo)
+**继承/实现关系：** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md#eventtargetinfo)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class ScrollableTargetInfo--><!--Device-unnamed-declare class ScrollableTargetInfo-End-->
 
@@ -23,10 +19,6 @@ isBegin(): boolean
 返回当前滚动类容器组件是否在顶部，如果为Swiper组件且在循环模式下返回false。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,10 +43,6 @@ isEnd(): boolean
 返回当前滚动类容器组件是否在底部，如果为Swiper组件且在循环模式下返回false。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

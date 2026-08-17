@@ -2,8 +2,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-bundleState-interface BundleActiveState--><!--Device-bundleState-interface BundleActiveState-End-->
@@ -28,8 +26,6 @@ The usage priority group of the application.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-BundleActiveState-appUsagePriorityGroup?: number--><!--Device-BundleActiveState-appUsagePriorityGroup?: number-End-->
@@ -47,8 +43,6 @@ The bundle name.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -68,8 +62,6 @@ The shortcut ID.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-BundleActiveState-indexOfLink?: string--><!--Device-BundleActiveState-indexOfLink?: string-End-->
@@ -87,8 +79,6 @@ The class name.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -108,8 +98,6 @@ The time when this state occurred, in milliseconds. <br> Unit:ms
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-BundleActiveState-stateOccurredTime?: number--><!--Device-BundleActiveState-stateOccurredTime?: number-End-->
@@ -127,8 +115,6 @@ The state type.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

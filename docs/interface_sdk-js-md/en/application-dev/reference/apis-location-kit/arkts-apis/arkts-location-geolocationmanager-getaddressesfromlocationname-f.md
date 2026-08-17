@@ -16,10 +16,6 @@ Obtain latitude and longitude info from location address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void--><!--Device-geoLocationManager-function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -40,7 +36,7 @@ Obtain latitude and longitude info from location address.
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 | [3301400](../errorcode-geoLocationManager.md#3301400-query-failed-during-geocoding) | Geocoding query failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';
@@ -71,10 +67,6 @@ Obtain latitude and longitude info from location address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<GeoAddress>>--><!--Device-geoLocationManager-function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<GeoAddress>>-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -100,7 +92,7 @@ Obtain latitude and longitude info from location address.
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 | [3301400](../errorcode-geoLocationManager.md#3301400-query-failed-during-geocoding) | Geocoding query failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

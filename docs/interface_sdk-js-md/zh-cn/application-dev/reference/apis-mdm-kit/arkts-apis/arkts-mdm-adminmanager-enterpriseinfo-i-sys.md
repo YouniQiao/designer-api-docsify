@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-adminManager-export interface EnterpriseInfo--><!--Device-adminManager-export interface EnterpriseInfo-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,10 +22,6 @@ description: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EnterpriseInfo-description: string--><!--Device-EnterpriseInfo-description: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -47,10 +39,6 @@ name: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EnterpriseInfo-name: string--><!--Device-EnterpriseInfo-name: string-End-->
 

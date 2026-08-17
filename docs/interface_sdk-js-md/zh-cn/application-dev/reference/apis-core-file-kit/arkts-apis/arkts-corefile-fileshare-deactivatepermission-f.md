@@ -10,10 +10,6 @@ function deactivatePermission(policies: Array<PolicyInfo>): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.FILE_ACCESS_PERSIST
 
 <!--Device-fileShare-function deactivatePermission(policies: Array<PolicyInfo>): Promise<void>--><!--Device-fileShare-function deactivatePermission(policies: Array<PolicyInfo>): Promise<void>-End-->
@@ -42,7 +38,7 @@ function deactivatePermission(policies: Array<PolicyInfo>): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | 13900042 | Out of memory |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,9 +4,7 @@ Enumerates the web screen capture modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum WebCaptureMode--><!--Device-unnamed-export declare enum WebCaptureMode-End-->
 
@@ -22,9 +20,7 @@ Home screen capture mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebCaptureMode-HOME_SCREEN = 0--><!--Device-WebCaptureMode-HOME_SCREEN = 0-End-->
 

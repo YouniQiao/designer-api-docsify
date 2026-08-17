@@ -4,10 +4,6 @@ SEService realizes the communication to available SEs on the device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-omapi-export interface SEService--><!--Device-omapi-export interface SEService-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -28,10 +24,6 @@ Returns the list of available SE readers. There must be no duplicated objects in
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-SEService-getReaders(): Reader[]--><!--Device-SEService-getReaders(): Reader[]-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -48,7 +40,7 @@ Returns the list of available SE readers. There must be no duplicated objects in
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';
@@ -84,10 +76,6 @@ Returns the version of the Open Mobile API Specification this implementation is 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-SEService-getVersion(): string--><!--Device-SEService-getVersion(): string-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -104,7 +92,7 @@ Returns the version of the Open Mobile API Specification this implementation is 
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';
@@ -133,10 +121,6 @@ Checks whether or not the service is connected.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-SEService-isConnected(): boolean--><!--Device-SEService-isConnected(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -153,7 +137,7 @@ Checks whether or not the service is connected.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';
@@ -186,10 +170,6 @@ Releases all SE resources allocated by this SEService. As a result isConnected()
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-SEService-shutdown(): void--><!--Device-SEService-shutdown(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -200,7 +180,7 @@ Releases all SE resources allocated by this SEService. As a result isConnected()
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';

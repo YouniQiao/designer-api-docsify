@@ -4,10 +4,6 @@ Provides methods to manage NearLink devices.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace manager--><!--Device-unnamed-declare namespace manager-End-->
@@ -26,12 +22,12 @@ import { manager } from 'manager';
 
 | Name | Description |
 | --- | --- |
-| [getLocalName](arkts-connectivity-manager-getlocalname-f.md#getLocalName) | Gets the local device's name. |
-| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md#getPairedDevices) | Gets the list of devices that have been paired with the current device. If the user has the ohos.permission.GET_NEARLINK_PEER_MAC permission, the real device address is returned. Otherwise, a random device address is returned. |
-| [getState](arkts-connectivity-manager-getstate-f.md#getState) | Gets the NearLink state. |
-| [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md#isNearLinkSupported) | Check whether the current device supports NearLink. |
-| [offStateChange](arkts-connectivity-manager-offstatechange-f.md#offStateChange) | Unsubscribes from state change events. |
-| [onStateChange](arkts-connectivity-manager-onstatechange-f.md#onStateChange) | Subscribes to state change events. |
+| [getLocalName](arkts-connectivity-manager-getlocalname-f.md#getlocalname) | Gets the local device's name. |
+| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md#getpaireddevices) | Gets the list of devices that have been paired with the current device. If the user has the ohos.permission.GET_NEARLINK_PEER_MAC permission, the real device address is returned. Otherwise, a random device address is returned. |
+| [getState](arkts-connectivity-manager-getstate-f.md#getstate) | Gets the NearLink state. |
+| [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md#isnearlinksupported) | Check whether the current device supports NearLink. |
+| [offStateChange](arkts-connectivity-manager-offstatechange-f.md#offstatechange) | Unsubscribes from state change events. |
+| [onStateChange](arkts-connectivity-manager-onstatechange-f.md#onstatechange) | Subscribes to state change events. |
 
 <!--Del-->
 ### Functions（系统接口）
@@ -40,9 +36,9 @@ import { manager } from 'manager';
 | --- | --- |
 | [disable](arkts-connectivity-manager-disable-f-sys.md#disable) | Turns off NearLink. |
 | [enable](arkts-connectivity-manager-enable-f-sys.md#enable) | Turns on NearLink. |
-| [factoryReset](arkts-connectivity-manager-factoryreset-f-sys.md#factoryReset) | Restores NearLink settings. |
-| [getLocalAddress](arkts-connectivity-manager-getlocaladdress-f-sys.md#getLocalAddress) | Gets the MAC address of the local device. |
-| [setConnectionMode](arkts-connectivity-manager-setconnectionmode-f-sys.md#setConnectionMode) | Sets the NearLink connection mode for a device. |
+| [factoryReset](arkts-connectivity-manager-factoryreset-f-sys.md#factoryreset) | Restores NearLink settings. |
+| [getLocalAddress](arkts-connectivity-manager-getlocaladdress-f-sys.md#getlocaladdress) | Gets the MAC address of the local device. |
+| [setConnectionMode](arkts-connectivity-manager-setconnectionmode-f-sys.md#setconnectionmode) | Sets the NearLink connection mode for a device. |
 <!--DelEnd-->
 
 ### Enums

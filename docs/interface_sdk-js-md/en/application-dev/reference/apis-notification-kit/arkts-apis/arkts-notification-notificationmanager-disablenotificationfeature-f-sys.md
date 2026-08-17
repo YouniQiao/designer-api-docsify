@@ -16,10 +16,6 @@ Disables the application from publishing notifications by adding the application
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.MANAGE_EDM_POLICY
 
 <!--Device-notificationManager-function disableNotificationFeature(disabled:boolean, bundleList: Array<string>): Promise<void>--><!--Device-notificationManager-function disableNotificationFeature(disabled:boolean, bundleList: Array<string>): Promise<void>-End-->
@@ -52,7 +48,7 @@ Disables the application from publishing notifications by adding the application
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -81,10 +77,6 @@ function disableNotificationFeature(disabled: boolean, bundleList: Array<string>
 Disables the application from publishing notifications by adding the application bundle name to the permission control list. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.MANAGE_EDM_POLICY
 
@@ -117,7 +109,7 @@ Disables the application from publishing notifications by adding the application
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

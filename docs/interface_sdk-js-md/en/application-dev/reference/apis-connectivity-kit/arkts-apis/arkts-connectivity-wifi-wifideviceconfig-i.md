@@ -4,11 +4,9 @@ Wi-Fi device configuration information.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md#WifiDeviceConfig)
+**Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md#wifideviceconfig)
 
 <!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
 
@@ -32,8 +30,6 @@ Wi-Fi bssid(MAC): the length is 6
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [bssid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#bssid)
@@ -54,11 +50,9 @@ Hide SSID or not, false(default): not hide
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isHiddenSsid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#isHiddenSsid)
+**Substitutes:** [isHiddenSsid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#ishiddenssid)
 
 <!--Device-WifiDeviceConfig-isHiddenSsid: boolean--><!--Device-WifiDeviceConfig-isHiddenSsid: boolean-End-->
 
@@ -76,11 +70,9 @@ Wi-Fi key: maximum length is 64
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [preSharedKey](arkts-connectivity-wifimanager-wifideviceconfig-i.md#preSharedKey)
+**Substitutes:** [preSharedKey](arkts-connectivity-wifimanager-wifideviceconfig-i.md#presharedkey)
 
 <!--Device-WifiDeviceConfig-preSharedKey: string--><!--Device-WifiDeviceConfig-preSharedKey: string-End-->
 
@@ -98,11 +90,9 @@ Security type: reference definition of WifiSecurityType
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [securityType](arkts-connectivity-wifimanager-wifideviceconfig-i.md#securityType)
+**Substitutes:** [securityType](arkts-connectivity-wifimanager-wifideviceconfig-i.md#securitytype)
 
 <!--Device-WifiDeviceConfig-securityType: WifiSecurityType--><!--Device-WifiDeviceConfig-securityType: WifiSecurityType-End-->
 
@@ -119,8 +109,6 @@ Wi-Fi SSID: the maximum length is 32
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

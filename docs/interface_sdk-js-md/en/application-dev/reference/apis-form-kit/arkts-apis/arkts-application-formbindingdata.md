@@ -16,11 +16,9 @@
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [formBindingData](arkts-app-form-formbindingdata.md#@ohos.app.form.formBindingData)
+**Substitutes:** [formBindingData](arkts-app-form-formbindingdata.md#ohosappformformbindingdata)
 
 <!--Device-unnamed-declare namespace formBindingData--><!--Device-unnamed-declare namespace formBindingData-End-->
 
@@ -32,7 +30,7 @@
 
 | Name | Description |
 | --- | --- |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createFormBindingData) | Creates a **FormBindingData** object. |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) | Creates a **FormBindingData** object. |
 
 ### Interfaces
 

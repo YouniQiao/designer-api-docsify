@@ -1,12 +1,10 @@
 # DetectedBlankScreenReason
 
-Enum type supplied to [BlankScreenDetectionEventInfo](arkts-na-web-blankscreendetectioneventinfo-i.md#BlankScreenDetectionEventInfo) when onDetectedBlankScreen being called.
+Enum type supplied to [BlankScreenDetectionEventInfo](arkts-na-web-blankscreendetectioneventinfo-i.md#blankscreendetectioneventinfo) when onDetectedBlankScreen being called.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum DetectedBlankScreenReason--><!--Device-unnamed-export declare enum DetectedBlankScreenReason-End-->
 
@@ -22,9 +20,7 @@ None of any contentful nodes have been detected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DetectedBlankScreenReason-NO_CONTENTFUL_NODES = 0--><!--Device-DetectedBlankScreenReason-NO_CONTENTFUL_NODES = 0-End-->
 
@@ -40,9 +36,7 @@ Web has detected a few of contentful nodes but below the threshold.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-DetectedBlankScreenReason-SUB_THRESHOLD_CONTENTFUL_NODES = 1--><!--Device-DetectedBlankScreenReason-SUB_THRESHOLD_CONTENTFUL_NODES = 1-End-->
 

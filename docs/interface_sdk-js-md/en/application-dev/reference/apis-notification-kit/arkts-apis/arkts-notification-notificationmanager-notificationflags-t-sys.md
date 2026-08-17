@@ -8,10 +8,6 @@ Defines the notification flags.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export type NotificationFlags = _NotificationFlags--><!--Device-notificationManager-export type NotificationFlags = _NotificationFlags-End-->
 
 **System capability:** SystemCapability.Notification.Notification

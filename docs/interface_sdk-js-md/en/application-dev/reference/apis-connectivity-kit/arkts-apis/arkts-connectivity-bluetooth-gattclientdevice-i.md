@@ -1,14 +1,12 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) to create an GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#creategattclientdevice) to create an GattClientDevice instance.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GattClientDevice](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#GattClientDevice)
+**Substitutes:** [GattClientDevice](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#gattclientdevice)
 
 <!--Device-bluetooth-interface GattClientDevice--><!--Device-bluetooth-interface GattClientDevice-End-->
 
@@ -30,8 +28,6 @@ Disables a BLE peripheral device. This method unregisters the device and clears 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [close](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#close)
@@ -48,7 +44,7 @@ Disables a BLE peripheral device. This method unregisters the device and clears 
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -64,8 +60,6 @@ connect(): boolean
 Connects to a BLE peripheral device. The 'BLEConnectionStateChange' event is subscribed to return the connection state.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -83,7 +77,7 @@ Connects to a BLE peripheral device. The 'BLEConnectionStateChange' event is sub
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -99,8 +93,6 @@ disconnect(): boolean
 Disconnects from or stops an ongoing connection to a BLE peripheral device.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -118,7 +110,7 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -135,11 +127,9 @@ Obtains the name of BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceName](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getDeviceName)
+**Substitutes:** [getDeviceName](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getdevicename)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -153,7 +143,7 @@ Obtains the name of BLE peripheral device.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -175,11 +165,9 @@ Obtains the name of BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceName](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getDeviceName)
+**Substitutes:** [getDeviceName](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getdevicename)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -193,7 +181,7 @@ Obtains the name of BLE peripheral device.
 | --- | --- |
 | Promise&lt;string&gt; | Returns a string representation of the name if obtained; returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // promise
@@ -213,11 +201,9 @@ Get the RSSI value of this BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRssiValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getRssiValue)
+**Substitutes:** [getRssiValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getrssivalue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -231,7 +217,7 @@ Get the RSSI value of this BLE peripheral device.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -254,11 +240,9 @@ Get the RSSI value of this BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRssiValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getRssiValue)
+**Substitutes:** [getRssiValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getrssivalue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -272,7 +256,7 @@ Get the RSSI value of this BLE peripheral device.
 | --- | --- |
 | Promise&lt;number&gt; | Returns the RSSI value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // promise
@@ -292,11 +276,9 @@ Starts discovering services.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getServices](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getServices)
+**Substitutes:** [getServices](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getservices)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -310,7 +292,7 @@ Starts discovering services.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -341,11 +323,9 @@ Starts discovering services.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getServices](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getServices)
+**Substitutes:** [getServices](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getservices)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -359,7 +339,7 @@ Starts discovering services.
 | --- | --- |
 | Promise&lt;Array&lt;GattService&gt;&gt; | Returns the list of services { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Promise
@@ -380,8 +360,6 @@ Unsubscribe characteristic value changed event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** BLECharacteristicChange
@@ -399,7 +377,7 @@ Unsubscribe characteristic value changed event.
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -415,8 +393,6 @@ off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState
 Unsubscribe client connection state changed event.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -435,7 +411,7 @@ Unsubscribe client connection state changed event.
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -451,8 +427,6 @@ on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 Subscribe characteristic value changed event.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -471,7 +445,7 @@ Subscribe characteristic value changed event.
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function CharacteristicChange(CharacteristicChangeReq : bluetooth.BLECharacteristic) {
@@ -493,8 +467,6 @@ Subscribe client connection state changed event.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** BLEConnectionStateChange
@@ -512,7 +484,7 @@ Subscribe client connection state changed event.
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function ConnectStateChanged(state : bluetooth.BLEConnectChangedState) {
@@ -533,11 +505,9 @@ Reads the characteristic of a BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readCharacteristicValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#readCharacteristicValue)
+**Substitutes:** [readCharacteristicValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#readcharacteristicvalue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -552,7 +522,7 @@ Reads the characteristic of a BLE peripheral device.
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -594,11 +564,9 @@ Reads the characteristic of a BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readCharacteristicValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#readCharacteristicValue)
+**Substitutes:** [readCharacteristicValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#readcharacteristicvalue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -618,7 +586,7 @@ Reads the characteristic of a BLE peripheral device.
 | --- | --- |
 | Promise&lt;BLECharacteristic&gt; | Promise used to return the characteristic value read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -651,11 +619,9 @@ Reads the descriptor of a BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readDescriptorValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#readDescriptorValue)
+**Substitutes:** [readDescriptorValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#readdescriptorvalue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -670,7 +636,7 @@ Reads the descriptor of a BLE peripheral device.
 | descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -702,11 +668,9 @@ Reads the descriptor of a BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readDescriptorValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#readDescriptorValue)
+**Substitutes:** [readDescriptorValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#readdescriptorvalue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -726,7 +690,7 @@ Reads the descriptor of a BLE peripheral device.
 | --- | --- |
 | Promise&lt;BLEDescriptor&gt; | Promise used to return the descriptor read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -749,11 +713,9 @@ Set the mtu size of a BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setBLEMtuSize](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#setBLEMtuSize)
+**Substitutes:** [setBLEMtuSize](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#setblemtusize)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -773,7 +735,7 @@ Set the mtu size of a BLE peripheral device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -790,11 +752,9 @@ Enables or disables notification of a characteristic when value changed.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setNotifyCharacteristicChanged](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#setNotifyCharacteristicChanged)
+**Substitutes:** [setNotifyCharacteristicChanged](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#setnotifycharacteristicchanged)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -815,7 +775,7 @@ Enables or disables notification of a characteristic when value changed.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Create descriptors.
@@ -844,11 +804,9 @@ Writes the characteristic of a BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeCharacteristicValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#writeCharacteristicValue)
+**Substitutes:** [writeCharacteristicValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#writecharacteristicvalue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -868,7 +826,7 @@ Writes the characteristic of a BLE peripheral device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -905,11 +863,9 @@ Writes the descriptor of a BLE peripheral device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeDescriptorValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#writeDescriptorValue)
+**Substitutes:** [writeDescriptorValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#writedescriptorvalue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -929,7 +885,7 @@ Writes the descriptor of a BLE peripheral device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');

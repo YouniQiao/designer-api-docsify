@@ -1,12 +1,8 @@
 # BlankScreenDetectionConfig
 
-Defines the configuration options of the blank screen detection policy.
+Provides the policy configuration options for blank screen detection, including the detection timing, method, and threshold. It is suitable for scenarios where custom blank screen detection behavior is required, improving blank screen monitoring flexibility and accuracy.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface BlankScreenDetectionConfig--><!--Device-unnamed-declare interface BlankScreenDetectionConfig-End-->
 
@@ -18,15 +14,11 @@ Defines the configuration options of the blank screen detection policy.
 contentfulNodesCountThreshold?: number
 ```
 
-Threshold for number of detected contentful nodes. This parameter takes effect only when the contentful node detection policy is used. The value ranges from 0 to the maximum number of nodes in the detection policy. If the value is less than or equal to the threshold, the near-blank screen is triggered. Default value: **0**.
+This parameter takes effect only when the contentful node detection strategy is used. The value ranges from 0 to \${maximum nodes of the detection strategy}. If the value is less than or equal to the threshold, a near-white screen is triggered. Default value: 0. Note: The maximum nodes of the detection strategy depend on the selected detection strategy.
 
 **Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-BlankScreenDetectionConfig-contentfulNodesCountThreshold?: number--><!--Device-BlankScreenDetectionConfig-contentfulNodesCountThreshold?: number-End-->
 
@@ -44,10 +36,6 @@ Methods of the detection policy. The value is an array. **NOTE：**1. Duplicate 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-BlankScreenDetectionConfig-detectionMethods?: BlankScreenDetectionMethod[]--><!--Device-BlankScreenDetectionConfig-detectionMethods?: BlankScreenDetectionMethod[]-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -58,15 +46,11 @@ Methods of the detection policy. The value is an array. **NOTE：**1. Duplicate 
 detectionTiming?: number[]
 ```
 
-The settings of the timing when web try to detect current page is blank or not. The timing is the duration after web navigation. <br>Length range:[0,+∞).Default value:[1.0,3.0,5.0]. <br>1. Duplicate values are ignored. 2. The value must be greater than 0. If the value is less than 0, the value is ignored.Unit: second.
+Sets the timing (in seconds after loading) at which to detect whether a white screen occurs. Unit: second. Note: 1. Duplicate values are ignored. 2. The value must be greater than 0. Values less than 0 are ignored. Default value: [1.0, 3.0, 5.0].
 
 **Type:** number[]
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-BlankScreenDetectionConfig-detectionTiming?: number[]--><!--Device-BlankScreenDetectionConfig-detectionTiming?: number[]-End-->
 
@@ -78,15 +62,11 @@ The settings of the timing when web try to detect current page is blank or not. 
 enable: boolean
 ```
 
-Whether to enable the blank screen policy.
+Whether to enable the white screen policy feature. The value **true** indicates enabled, and **false** indicates disabled.
 
 **Type:** boolean
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-BlankScreenDetectionConfig-enable: boolean--><!--Device-BlankScreenDetectionConfig-enable: boolean-End-->
 

@@ -4,10 +4,6 @@ The continueManager module provides capabilities for managing cross-device appli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace continueManager--><!--Device-unnamed-declare namespace continueManager-End-->
@@ -26,10 +22,10 @@ import { continueManager } from 'continueManager';
 
 | Name | Description |
 | --- | --- |
-| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md#offPrepareContinue) | Unregister prepareContinue event. |
-| off_prepareContinue | Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
-| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md#onPrepareContinue) | Register prepareContinue event, when the ability is configured with 'ContinueQuickStart' in the continueType, then can get the result of LaunchReason.PREPARE_CONTINUATION. |
-| on_prepareContinue | Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
+| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md#offpreparecontinue) | Unregister prepareContinue event. |
+| [off_prepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md#offpreparecontinue) | Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
+| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md#onpreparecontinue) | Register prepareContinue event, when the ability is configured with 'ContinueQuickStart' in the continueType, then can get the result of LaunchReason.PREPARE_CONTINUATION. |
+| [on_prepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md#onpreparecontinue) | Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
 
 ### Interfaces
 

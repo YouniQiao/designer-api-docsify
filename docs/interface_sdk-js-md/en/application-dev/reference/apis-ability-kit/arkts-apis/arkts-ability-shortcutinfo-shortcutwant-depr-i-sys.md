@@ -1,14 +1,12 @@
 # ShortcutWant (System API)
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-ShortcutWant](#ShortcutWant-(System-API)) instead.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-ShortcutWant](#shortcutwant-system-api) instead.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ShortcutWant](#ShortcutWant-(System-API))
+**Substitutes:** [ShortcutWant](#shortcutwant-system-api)
 
 <!--Device-unnamed-export interface ShortcutWant--><!--Device-unnamed-export interface ShortcutWant-End-->
 
@@ -27,8 +25,6 @@ Target bundle of the shortcut.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -51,8 +47,6 @@ Target class required by the shortcut.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

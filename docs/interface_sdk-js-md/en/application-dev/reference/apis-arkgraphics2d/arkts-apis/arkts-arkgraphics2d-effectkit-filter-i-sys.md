@@ -4,10 +4,6 @@ An image effect class used to add a specified effect to the effect chain through
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-effectKit-interface Filter--><!--Device-effectKit-interface Filter-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -28,10 +24,6 @@ ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,
 Adds the elliptical gradient blur effect to the filter linked list, and returns the head node of the linked list.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,7 +54,7 @@ Adds the elliptical gradient blur effect to the filter linked list, and returns 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';	

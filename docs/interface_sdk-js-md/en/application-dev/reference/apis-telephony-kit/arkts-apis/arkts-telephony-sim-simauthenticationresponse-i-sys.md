@@ -4,10 +4,6 @@ Defines the SIM card authentication response.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-export interface SimAuthenticationResponse--><!--Device-sim-export interface SimAuthenticationResponse-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -32,10 +28,6 @@ Indicates the response of authentication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SimAuthenticationResponse-response: string--><!--Device-SimAuthenticationResponse-response: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -54,10 +46,6 @@ Status word 1 of the SIM card, which is returned by the SIM card after command e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SimAuthenticationResponse-simStatusWord1: int--><!--Device-SimAuthenticationResponse-simStatusWord1: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -75,10 +63,6 @@ Status word 2 of the SIM card, which is returned by the SIM card after command e
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SimAuthenticationResponse-simStatusWord2: int--><!--Device-SimAuthenticationResponse-simStatusWord2: int-End-->
 

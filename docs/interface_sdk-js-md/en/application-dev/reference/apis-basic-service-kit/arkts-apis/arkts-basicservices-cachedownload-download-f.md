@@ -16,10 +16,6 @@ Downloads a task from a specified URL. If the transfer is successful, the data i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-cacheDownload-function download(url: string, options: CacheDownloadOptions): void--><!--Device-cacheDownload-function download(url: string, options: CacheDownloadOptions): void-End-->
@@ -40,7 +36,7 @@ Downloads a task from a specified URL. If the transfer is successful, the data i
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';

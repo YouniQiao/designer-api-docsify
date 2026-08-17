@@ -4,8 +4,6 @@ Date object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 <!--Device-unnamed-interface MonthData--><!--Device-unnamed-interface MonthData-End-->
@@ -25,8 +23,6 @@ CalendarDay.
 **Type:** [CalendarDay](arkts-arkui-calendarday-i-sys.md)[]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 
@@ -50,8 +46,6 @@ Gregorian calendar month.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -73,8 +67,6 @@ Gregorian calendar year.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 

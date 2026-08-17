@@ -4,10 +4,6 @@ Indicates the info of the rtt error.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface RttErrorInfo--><!--Device-call-export interface RttErrorInfo-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -32,10 +28,6 @@ Indicates the id of rtt.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RttErrorInfo-callId: int--><!--Device-RttErrorInfo-callId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -53,10 +45,6 @@ Indicates the code of rtt cause.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RttErrorInfo-causeCode: int--><!--Device-RttErrorInfo-causeCode: int-End-->
 
@@ -76,10 +64,6 @@ Indicates the type of rtt operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RttErrorInfo-operationType: int--><!--Device-RttErrorInfo-operationType: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -97,10 +81,6 @@ Indicates the text of rtt fail reason.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RttErrorInfo-reasonText: string--><!--Device-RttErrorInfo-reasonText: string-End-->
 

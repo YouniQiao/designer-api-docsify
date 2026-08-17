@@ -4,10 +4,6 @@ Enumerates the white balance modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum WhiteBalanceMode--><!--Device-camera-enum WhiteBalanceMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ AUTO = 0
 Automatic.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -46,10 +38,6 @@ Cloudy.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalanceMode-CLOUDY = 1--><!--Device-WhiteBalanceMode-CLOUDY = 1-End-->
@@ -67,10 +55,6 @@ INCANDESCENT =2
 Incandescent light.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -90,10 +74,6 @@ Fluorescence light.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalanceMode-FLUORESCENT =3--><!--Device-WhiteBalanceMode-FLUORESCENT =3-End-->
@@ -111,10 +91,6 @@ DAYLIGHT = 4
 Daylight.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -134,10 +110,6 @@ Manual.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalanceMode-MANUAL = 5--><!--Device-WhiteBalanceMode-MANUAL = 5-End-->
@@ -155,10 +127,6 @@ LOCKED = 6
 Locked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

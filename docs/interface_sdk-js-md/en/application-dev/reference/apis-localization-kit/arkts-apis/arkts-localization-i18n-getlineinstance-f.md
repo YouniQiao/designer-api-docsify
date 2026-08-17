@@ -16,10 +16,6 @@ Obtains a **BreakIterator** object. The **BreakIterator** object maintains an in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-i18n-export function getLineInstance(locale: string): BreakIterator--><!--Device-i18n-export function getLineInstance(locale: string): BreakIterator-End-->
@@ -30,15 +26,15 @@ Obtains a **BreakIterator** object. The **BreakIterator** object maintains an in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. The generated [BreakIterator](../../apis-na/arkts-apis/arkts-na-i18n-breakiterator-c.md#BreakIterator) object calculates the positions of line breaks based on the rules of the specified locale. |
+| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. The generated [BreakIterator](arkts-localization-i18n-breakiterator-c.md#breakiterator) object calculates the positions of line breaks based on the rules of the specified locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BreakIterator](../../apis-na/arkts-apis/arkts-na-i18n-breakiterator-c.md) | BreakIterator** object. |
+| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | BreakIterator** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

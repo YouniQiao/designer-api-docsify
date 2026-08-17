@@ -4,10 +4,6 @@ Defines the shared album asset
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface SharedAlbumAsset--><!--Device-photoAccessHelper-interface SharedAlbumAsset-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -32,10 +28,6 @@ album id of album asset
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SharedAlbumAsset-albumId: int--><!--Device-SharedAlbumAsset-albumId: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -53,10 +45,6 @@ album name
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-albumName: string--><!--Device-SharedAlbumAsset-albumName: string-End-->
 
@@ -76,10 +64,6 @@ subtype of album asset
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SharedAlbumAsset-albumSubType: AlbumSubtype--><!--Device-SharedAlbumAsset-albumSubType: AlbumSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -97,10 +81,6 @@ type of album asset
 **Type:** AlbumType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-albumType: AlbumType--><!--Device-SharedAlbumAsset-albumType: AlbumType-End-->
 
@@ -120,10 +100,6 @@ number of assets in this album
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SharedAlbumAsset-count: int--><!--Device-SharedAlbumAsset-count: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -141,10 +117,6 @@ uri of album cover
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-coverUri: string--><!--Device-SharedAlbumAsset-coverUri: string-End-->
 
@@ -164,10 +136,6 @@ number of photo assets in this album
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SharedAlbumAsset-imageCount: int--><!--Device-SharedAlbumAsset-imageCount: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -185,10 +153,6 @@ number of video assets in this album
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-videoCount: int--><!--Device-SharedAlbumAsset-videoCount: int-End-->
 

@@ -16,10 +16,6 @@ Obtains the bundle information based on the given HAP file path and bundle flags
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): BundleInfo--><!--Device-bundleManager-function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): BundleInfo-End-->
@@ -50,7 +46,7 @@ Obtains the bundle information based on the given HAP file path and bundle flags
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

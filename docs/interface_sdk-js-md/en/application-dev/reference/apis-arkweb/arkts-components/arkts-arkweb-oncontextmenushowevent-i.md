@@ -1,12 +1,8 @@
 # OnContextMenuShowEvent
 
-Represents the callback invoked during a call to allow for the display of a custom context menu.
+Defines the callback information triggered during a call to allow for the display of a custom context menu.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnContextMenuShowEvent--><!--Device-unnamed-declare interface OnContextMenuShowEvent-End-->
 
@@ -23,10 +19,6 @@ Parameters related to the context menu.
 **Type:** [WebContextMenuParam](arkts-arkweb-webcontextmenuparam-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -45,10 +37,6 @@ Result of the context menu.
 **Type:** [WebContextMenuResult](arkts-arkweb-webcontextmenuresult-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

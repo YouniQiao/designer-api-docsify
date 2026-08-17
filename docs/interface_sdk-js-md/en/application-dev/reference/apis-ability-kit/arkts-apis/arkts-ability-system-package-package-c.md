@@ -4,8 +4,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-export default class Package--><!--Device-unnamed-export default class Package-End-->
@@ -29,11 +27,9 @@ Checks whether an application exists, or whether a native application has been i
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md#canOpenLink)
+**Substitutes:** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md#canopenlink)
 
 <!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void--><!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void-End-->
 

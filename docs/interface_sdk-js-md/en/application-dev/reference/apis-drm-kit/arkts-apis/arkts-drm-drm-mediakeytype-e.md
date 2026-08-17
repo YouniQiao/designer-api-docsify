@@ -1,12 +1,8 @@
-# MediaKeyType
+# MediaKeyType(Defines the DRM capability.)
 
 Enumerates the types of media keys.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-drm-enum MediaKeyType--><!--Device-drm-enum MediaKeyType-End-->
 
@@ -21,10 +17,6 @@ MEDIA_KEY_TYPE_OFFLINE = 0
 Offline media key.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -41,10 +33,6 @@ MEDIA_KEY_TYPE_ONLINE = 1
 Online media key.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

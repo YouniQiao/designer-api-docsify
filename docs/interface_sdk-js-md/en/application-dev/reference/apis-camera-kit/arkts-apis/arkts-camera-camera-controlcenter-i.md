@@ -1,14 +1,10 @@
 # ControlCenter
 
-**ControlCenter** inherits from [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md#ControlCenterQuery). It is used to enable the camera controller.
+**ControlCenter** inherits from [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md#controlcenterquery). It is used to enable the camera controller.
 
-**Inheritance/Implementation:** ControlCenter extends [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md#ControlCenterQuery)
+**Inheritance/Implementation:** ControlCenter extends [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md#controlcenterquery)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface ControlCenter--><!--Device-camera-interface ControlCenter-End-->
 
@@ -29,10 +25,6 @@ enableControlCenter(enabled: boolean): void
 Enables the camera controller.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -16,10 +16,6 @@ Notify bluetooth the result of bluetooth dialog.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 <!--Device-access-function notifyDialogResult(notifyDialogResultParams: NotifyDialogResultParams): Promise<void>--><!--Device-access-function notifyDialogResult(notifyDialogResultParams: NotifyDialogResultParams): Promise<void>-End-->
@@ -50,7 +46,7 @@ Notify bluetooth the result of bluetooth dialog.
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

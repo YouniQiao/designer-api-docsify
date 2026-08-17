@@ -4,10 +4,6 @@ Provides APIs to obtain the manual exposure range supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface ManualExposureQuery--><!--Device-camera-interface ManualExposureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -29,10 +25,6 @@ getExposureBiasStep(): double
 Get exposure bias step.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,10 +56,6 @@ getSupportedExposureDurationRange(): Array<int>
 Gets the supported manual exposure duration range, units: microseconds.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

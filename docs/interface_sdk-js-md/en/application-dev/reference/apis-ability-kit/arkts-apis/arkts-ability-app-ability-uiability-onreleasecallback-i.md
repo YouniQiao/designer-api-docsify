@@ -4,10 +4,6 @@ Defines the callback that is invoked when the stub on the target UIAbility is di
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface OnReleaseCallback--><!--Device-unnamed-export interface OnReleaseCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -31,10 +27,6 @@ import { OnRemoteStateChangeCallback } from 'OnRemoteStateChangeCallback';
 Defines the callback of OnRelease.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

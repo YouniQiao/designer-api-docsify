@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-interface Config--><!--Device-agent-interface Config-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -23,10 +19,6 @@ action: Action
 **类型：** Action
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ begins?: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Config-begins?: long--><!--Device-Config-begins?: long-End-->
@@ -62,15 +50,11 @@ begins?: long
 data?: string | Array<FormItem>
 ```
 
-- 下载时，data为字符串类型，通常情况下使用json格式（object将被转换为json文本），默认为空。 - 上传时，data是表单项数组Array&lt; [FormItem](arkts-basicservices-agent-formitem-i.md#FormItem)&gt;。从API version 15开始，创建单个任务可以上传最多100个文件。默认为空。
+- 下载时，data为字符串类型，通常情况下使用json格式（object将被转换为json文本），默认为空。 - 上传时，data是表单项数组Array&lt; [FormItem](arkts-basicservices-agent-formitem-i.md#formitem)&gt;。从API version 15开始，创建单个任务可以上传最多100个文件。默认为空。
 
 **类型：** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,10 +74,6 @@ description?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Config-description?: string--><!--Device-Config-description?: string-End-->
@@ -111,10 +91,6 @@ ends?: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -134,10 +110,6 @@ The extras for the configuration.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Config-extras?: Record<string, string>--><!--Device-Config-extras?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -153,10 +125,6 @@ gauge?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -176,10 +144,6 @@ The HTTP headers. For upload request, the `Content-Type` is forced to `multipart
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Config-headers?: Record<string, string>--><!--Device-Config-headers?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -195,10 +159,6 @@ index?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -220,10 +180,6 @@ metered?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Config-metered?: boolean--><!--Device-Config-metered?: boolean-End-->
@@ -241,10 +197,6 @@ method?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -264,10 +216,6 @@ minSpeed?: MinSpeed
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Config-minSpeed?: MinSpeed--><!--Device-Config-minSpeed?: MinSpeed-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -283,10 +231,6 @@ mode?: Mode
 **类型：** [Mode](arkts-basicservices-agent-mode-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -306,10 +250,6 @@ multipart?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Config-multipart?: boolean--><!--Device-Config-multipart?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -327,10 +267,6 @@ network?: Network
 **默认值：** Network.ANY
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -350,10 +286,6 @@ notification?: Notification
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Config-notification?: Notification--><!--Device-Config-notification?: Notification-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -369,10 +301,6 @@ overwrite?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -392,10 +320,6 @@ precise?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Config-precise?: boolean--><!--Device-Config-precise?: boolean-End-->
@@ -414,10 +338,6 @@ priority?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Config-priority?: int--><!--Device-Config-priority?: int-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -434,10 +354,6 @@ proxy?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Config-proxy?: string--><!--Device-Config-proxy?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -453,10 +369,6 @@ redirect?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -476,10 +388,6 @@ retry?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Config-retry?: boolean--><!--Device-Config-retry?: boolean-End-->
@@ -497,10 +405,6 @@ roaming?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -522,10 +426,6 @@ saveas?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Config-saveas?: string--><!--Device-Config-saveas?: string-End-->
@@ -538,15 +438,11 @@ saveas?: string
 timeout?: Timeout
 ```
 
-超时时间自定义设置，连接超时时间默认60秒，总超时时间默认604800秒（1周）。当retry参数为true时， [timeout](arkts-basicservices-agent-timeout-i.md#Timeout)事件会触发立即重试，导致 [timeout](arkts-basicservices-agent-timeout-i.md#Timeout)在外部观察中被重试动作所掩盖，但 内部[timeout](arkts-basicservices-agent-timeout-i.md#Timeout)条件已实际触发。若需显性观察 [timeout](arkts-basicservices-agent-timeout-i.md#Timeout)事件，需关闭retry参数。
+超时时间自定义设置，连接超时时间默认60秒，总超时时间默认604800秒（1周）。当retry参数为true时， [timeout](arkts-basicservices-agent-timeout-i.md#timeout)事件会触发立即重试，导致 [timeout](arkts-basicservices-agent-timeout-i.md#timeout)在外部观察中被重试动作所掩盖，但 内部[timeout](arkts-basicservices-agent-timeout-i.md#timeout)条件已实际触发。若需显性观察 [timeout](arkts-basicservices-agent-timeout-i.md#timeout)事件，需关闭retry参数。
 
 **类型：** [Timeout](arkts-basicservices-agent-timeout-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Config-timeout?: Timeout--><!--Device-Config-timeout?: Timeout-End-->
 
@@ -563,10 +459,6 @@ title?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -586,10 +478,6 @@ token?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Config-token?: string--><!--Device-Config-token?: string-End-->
@@ -607,10 +495,6 @@ url: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

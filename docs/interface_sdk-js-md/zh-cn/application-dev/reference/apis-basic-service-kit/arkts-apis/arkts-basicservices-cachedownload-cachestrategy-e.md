@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cacheDownload-enum CacheStrategy--><!--Device-cacheDownload-enum CacheStrategy-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -22,10 +18,6 @@ FORCE = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CacheStrategy-FORCE = 0--><!--Device-CacheStrategy-FORCE = 0-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -39,10 +31,6 @@ LAZY = 1
 延迟更新缓存，只有当缓存不存在时才会更新。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CacheStrategy-LAZY = 1--><!--Device-CacheStrategy-LAZY = 1-End-->
 

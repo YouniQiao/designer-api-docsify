@@ -1,12 +1,8 @@
 # AISessionEvent
 
-自定义AI会话配置对象，用于定义AI会话的生命周期回调。
+自定义AI会话配置对象，用于定义AI会话的生命周期回调，包括创建、执行和销毁。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface AISessionEvent--><!--Device-unnamed-declare interface AISessionEvent-End-->
 
@@ -23,10 +19,6 @@ AI会话类型。
 **类型：** [AISessionType](arkts-arkweb-aisessiontype-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ AI会话创建时触发的回调函数。返回`true`跳过系统默认行为，
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AISessionEvent-onCreateAISession: OnCreateAISession--><!--Device-AISessionEvent-onCreateAISession: OnCreateAISession-End-->
@@ -68,10 +56,6 @@ AI会话销毁时触发的回调函数，用于清理与自定义AI模型关联�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AISessionEvent-onDestroyAISession: OnDestroyAISession--><!--Device-AISessionEvent-onDestroyAISession: OnDestroyAISession-End-->
@@ -89,10 +73,6 @@ AI会话执行操作时触发的回调函数。
 **类型：** [OnExecuteAIAction](arkts-arkweb-onexecuteaiaction-t.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

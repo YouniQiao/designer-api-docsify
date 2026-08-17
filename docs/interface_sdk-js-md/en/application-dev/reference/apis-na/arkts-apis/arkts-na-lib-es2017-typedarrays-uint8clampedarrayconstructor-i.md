@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Uint8ClampedArrayConstructor--><!--Device-unnamed-interface Uint8ClampedArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new (): Uint8ClampedArray
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ClampedArrayConstructor-new (): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-new (): Uint8ClampedArray-End-->
 

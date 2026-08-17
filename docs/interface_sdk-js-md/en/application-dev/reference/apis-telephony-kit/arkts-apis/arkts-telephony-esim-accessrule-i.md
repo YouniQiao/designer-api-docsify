@@ -4,10 +4,6 @@ Establishes a single UICC access rule pursuant to the GlobalPlatform Secure Elem
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-eSIM-export interface AccessRule--><!--Device-eSIM-export interface AccessRule-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -30,10 +26,6 @@ The type of access.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessRule-accessType: int--><!--Device-AccessRule-accessType: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -50,10 +42,6 @@ Certificate hash hexadecimal string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessRule-certificateHashHexStr: string--><!--Device-AccessRule-certificateHashHexStr: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
@@ -69,10 +57,6 @@ The name of package.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessRule-packageName: string--><!--Device-AccessRule-packageName: string-End-->
 

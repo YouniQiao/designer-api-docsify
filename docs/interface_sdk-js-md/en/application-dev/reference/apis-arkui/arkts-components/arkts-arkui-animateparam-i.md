@@ -4,10 +4,6 @@ Defines parameters related to animation effects.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface AnimateParam--><!--Device-unnamed-declare interface AnimateParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,17 +14,13 @@ Defines parameters related to animation effects.
 curve?: Curve | string | ICurve
 ```
 
-Animation curve. You are advised to specify the curve using the **Curve** or **ICurve** type. When the type is string, it represents an animation interpolation curve, supporting only the following options: **"linear"**: Changes linearly. **"ease"**: Slow at both the start and end of an animation; equivalent to cubic-bezier(0.25, 0.1, 0.25, 1.0). **"ease-in"**: Starts slowly and then accelerates; equivalent to cubic-bezier(0.42, 0.0, 1.0, 1.0). **"ease-out"**: Starts quickly and then decelerates; equivalent to cubic-bezier(0.0, 0.0, 0.58, 1.0). **"ease-in-out"**: Accelerates and then decelerates; equivalent to cubic-bezier(0.42, 0.0, 0.58, 1.0). **"fast-out-slow-in"**: Standard curve, **cubic-bezier(0.4, 0.0, 0.2, 1.0)** **"linear-out-slow-in"**: Deceleration curve, **cubic-bezier(0.0, 0.0, 0.2, 1.0)** **"fast-out-linear-in"**: Acceleration curve, **cubic-bezier(0.4, 0.0, 1.0, 1.0)** **"friction"**: Damping curve, **cubic-bezier(0.2, 0.0, 0.2, 1.0)** **"extreme-deceleration"**: Extreme deceleration curve, **cubic-bezier(0.0, 0.0, 0.0, 1.0) curve** **"rhythm"**: Rhythm curve, **cubic-bezier(0.7, 0.0, 0.2, 1.0)** **"sharp"**: Sharp curve, **cubic-bezier(0.33, 0.0, 0.67, 1.0)** **"smooth"**: Smooth curve, **cubic-bezier(0.4, 0.0, 0.4, 1.0)** **"cubic-bezier(x1, y1, x2, y2)"**: Cubic Bezier curve. The values of **x1** and **x2** must be within the range of [0, 1], as in **"cubic-bezier(0.42, 0.0, 0.58, 1.0)"**. **"steps(number, step-position)"**: Step curve. **number** is required and must be a positive integer. **step-position** is optional and the values **start** and **end** are supported; defaults to end, as in **"steps(3, start)"**. **"interpolating-spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see [curves.interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md#interpolatingSpring). **"responsive-spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see [curves.responsiveSpringMotion](../../apis-na/arkts-apis/arkts-na-curves-responsivespringmotion-f.md#responsiveSpringMotion). **"spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see [curves.springCurve](../../apis-na/arkts-apis/arkts-na-curves-springcurve-f.md#springCurve). **"spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see [curves.springMotion](../../apis-na/arkts-apis/arkts-na-curves-springmotion-f.md#springMotion). Default value: **Curve.EaseInOut**
+Animation curve. You are advised to specify the curve using the **Curve** or **ICurve** type. When the type is string, it represents an animation interpolation curve, supporting only the following options: **"linear"**: Changes linearly. **"ease"**: Slow at both the start and end of an animation; equivalent to cubic-bezier(0.25, 0.1, 0.25, 1.0). **"ease-in"**: Starts slowly and then accelerates; equivalent to cubic-bezier(0.42, 0.0, 1.0, 1.0). **"ease-out"**: Starts quickly and then decelerates; equivalent to cubic-bezier(0.0, 0.0, 0.58, 1.0). **"ease-in-out"**: Accelerates and then decelerates; equivalent to cubic-bezier(0.42, 0.0, 0.58, 1.0). **"fast-out-slow-in"**: Standard curve, **cubic-bezier(0.4, 0.0, 0.2, 1.0)** **"linear-out-slow-in"**: Deceleration curve, **cubic-bezier(0.0, 0.0, 0.2, 1.0)** **"fast-out-linear-in"**: Acceleration curve, **cubic-bezier(0.4, 0.0, 1.0, 1.0)** **"friction"**: Damping curve, **cubic-bezier(0.2, 0.0, 0.2, 1.0)** **"extreme-deceleration"**: Extreme deceleration curve, **cubic-bezier(0.0, 0.0, 0.0, 1.0) curve** **"rhythm"**: Rhythm curve, **cubic-bezier(0.7, 0.0, 0.2, 1.0)** **"sharp"**: Sharp curve, **cubic-bezier(0.33, 0.0, 0.67, 1.0)** **"smooth"**: Smooth curve, **cubic-bezier(0.4, 0.0, 0.4, 1.0)** **"cubic-bezier(x1, y1, x2, y2)"**: Cubic Bezier curve. The values of **x1** and **x2** must be within the range of [0, 1], as in **"cubic-bezier(0.42, 0.0, 0.58, 1.0)"**. **"steps(number, step-position)"**: Step curve. **number** is required and must be a positive integer. **step-position** is optional and the values **start** and **end** are supported; defaults to end, as in **"steps(3, start)"**. **"interpolating-spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see [curves.interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md#interpolatingspring). **"responsive-spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see [curves.responsiveSpringMotion](../../apis-na/arkts-apis/arkts-na-curves-responsivespringmotion-f.md#responsivespringmotion). **"spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see [curves.springCurve](../../apis-na/arkts-apis/arkts-na-curves-springcurve-f.md#springcurve). **"spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see [curves.springMotion](../../apis-na/arkts-apis/arkts-na-curves-springmotion-f.md#springmotion). Default value: **Curve.EaseInOut**
 
 **Type:** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.EaseInOut
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,10 +44,6 @@ Delay of animation playback, in ms. By default, the playback is not delayed. Def
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AnimateParam-delay?: number--><!--Device-AnimateParam-delay?: number-End-->
@@ -68,17 +56,13 @@ Delay of animation playback, in ms. By default, the playback is not delayed. Def
 duration?: number
 ```
 
-Animation duration, in ms. Default value: **1000** Note: 1. Before API 26.0.0, the maximum animation duration for an ArkTS widget is 1,000 ms; values exceeding this limit are clamped to 1,000 ms. Starting from API version 26.0.0, the maximum animation duration for an ArkTS widget is adjusted to 2,000 ms. 2. To stop the animation of a property, change the property value in an animation closure with a duration of 0. 3. Values less than 0 are clamped to **0**. 4. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used. 5. The **duration** parameter does not take effect when [springMotion](../../apis-na/arkts-apis/arkts-na-curves-springmotion-f.md#springMotion), [responsiveSpringMotion](../../apis-na/arkts-apis/arkts-na-curves-responsivespringmotion-f.md#responsiveSpringMotion), and [interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md#interpolatingSpring) are configured for **curve**.
+Animation duration, in ms. Default value: **1000** Note: 1. Before API 26.0.0, the maximum animation duration for an ArkTS widget is 1,000 ms; values exceeding this limit are clamped to 1,000 ms. Starting from API version 26.0.0, the maximum animation duration for an ArkTS widget is adjusted to 2,000 ms. 2. To stop the animation of a property, change the property value in an animation closure with a duration of 0. 3. Values less than 0 are clamped to **0**. 4. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used. 5. The **duration** parameter does not take effect when [springMotion](../../apis-na/arkts-apis/arkts-na-curves-springmotion-f.md#springmotion), [responsiveSpringMotion](../../apis-na/arkts-apis/arkts-na-curves-responsivespringmotion-f.md#responsivespringmotion), and [interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md#interpolatingspring) are configured for **curve**.
 
 **Type:** number
 
 **Default:** 1000
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -100,10 +84,6 @@ Expected frame rate range of the animation.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -123,10 +103,6 @@ Type of the **onFinish** callback. Default value: **FinishCallbackType.REMOVED**
 **Type:** [FinishCallbackType](arkts-arkui-finishcallbacktype-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,10 +128,6 @@ Number of times that the animation is played. By default, the animation is playe
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AnimateParam-iterations?: number--><!--Device-AnimateParam-iterations?: number-End-->
@@ -173,10 +145,6 @@ Callback invoked when the animation playback is complete. If the UIAbility moves
 **Type:** () =&gt; void
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -200,10 +168,6 @@ Playback mode. By default, the animation is played from the beginning after the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -225,10 +189,6 @@ Animation playback speed. A larger value indicates faster animation playback, an
 **Default:** 1.0
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

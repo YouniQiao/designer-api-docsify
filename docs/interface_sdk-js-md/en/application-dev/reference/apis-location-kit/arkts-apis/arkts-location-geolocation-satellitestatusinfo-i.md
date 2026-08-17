@@ -4,11 +4,9 @@ Satellite status information
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SatelliteStatusInfo](arkts-location-geolocationmanager-satellitestatusinfo-i.md#SatelliteStatusInfo)
+**Substitutes:** [SatelliteStatusInfo](arkts-location-geolocationmanager-satellitestatusinfo-i.md#satellitestatusinfo)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,8 +30,6 @@ altitudes: Array<number>
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [altitudes](arkts-location-geolocationmanager-satellitestatusinfo-i.md#altitudes)
@@ -51,8 +47,6 @@ azimuths: Array<number>
 **Type:** Array&lt;number&gt;
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -72,11 +66,9 @@ carrierFrequencies: Array<number>
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [carrierFrequencies](arkts-location-geolocationmanager-satellitestatusinfo-i.md#carrierFrequencies)
+**Substitutes:** [carrierFrequencies](arkts-location-geolocationmanager-satellitestatusinfo-i.md#carrierfrequencies)
 
 <!--Device-SatelliteStatusInfo-carrierFrequencies: Array<number>--><!--Device-SatelliteStatusInfo-carrierFrequencies: Array<number>-End-->
 
@@ -92,11 +84,9 @@ carrierToNoiseDensitys: Array<number>
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [carrierToNoiseDensitys](arkts-location-geolocationmanager-satellitestatusinfo-i.md#carrierToNoiseDensitys)
+**Substitutes:** [carrierToNoiseDensitys](arkts-location-geolocationmanager-satellitestatusinfo-i.md#carriertonoisedensitys)
 
 <!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<number>--><!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<number>-End-->
 
@@ -112,11 +102,9 @@ satelliteIds: Array<number>
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [satelliteIds](arkts-location-geolocationmanager-satellitestatusinfo-i.md#satelliteIds)
+**Substitutes:** [satelliteIds](arkts-location-geolocationmanager-satellitestatusinfo-i.md#satelliteids)
 
 <!--Device-SatelliteStatusInfo-satelliteIds: Array<number>--><!--Device-SatelliteStatusInfo-satelliteIds: Array<number>-End-->
 
@@ -132,11 +120,9 @@ satellitesNumber: number
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [satellitesNumber](arkts-location-geolocationmanager-satellitestatusinfo-i.md#satellitesNumber)
+**Substitutes:** [satellitesNumber](arkts-location-geolocationmanager-satellitestatusinfo-i.md#satellitesnumber)
 
 <!--Device-SatelliteStatusInfo-satellitesNumber: number--><!--Device-SatelliteStatusInfo-satellitesNumber: number-End-->
 

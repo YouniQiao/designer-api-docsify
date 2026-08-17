@@ -16,10 +16,6 @@ Cancel to receive an ICC account change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function offIccAccountInfoChange(callback?: Callback<void>): void--><!--Device-observer-function offIccAccountInfoChange(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry

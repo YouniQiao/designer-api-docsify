@@ -10,10 +10,6 @@ function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-huks-function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>--><!--Device-huks-function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>-End-->
@@ -43,7 +39,7 @@ function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 
-## 示例
+**示例**
 
 ```TypeScript
 /* 以查询DE类密钥的别名集为例 */

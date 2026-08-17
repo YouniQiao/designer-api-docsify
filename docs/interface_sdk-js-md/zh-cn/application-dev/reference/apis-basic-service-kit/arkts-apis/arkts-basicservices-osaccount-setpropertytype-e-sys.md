@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-enum SetPropertyType--><!--Device-osAccount-enum SetPropertyType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ INIT_ALGORITHM = 1
 初始化算法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SetPropertyType-INIT_ALGORITHM = 1--><!--Device-SetPropertyType-INIT_ALGORITHM = 1-End-->
 

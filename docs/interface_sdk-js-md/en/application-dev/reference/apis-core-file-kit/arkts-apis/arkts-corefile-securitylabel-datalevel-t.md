@@ -8,10 +8,6 @@ Represents the data security level.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-securityLabel-type DataLevel = 's0' | 's1' | 's2' | 's3' | 's4'--><!--Device-securityLabel-type DataLevel = 's0' | 's1' | 's2' | 's3' | 's4'-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

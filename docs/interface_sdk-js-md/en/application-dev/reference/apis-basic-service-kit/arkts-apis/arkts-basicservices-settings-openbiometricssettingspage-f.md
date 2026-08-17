@@ -16,10 +16,6 @@ Open the biometrics and password settings page.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function openBiometricsSettingsPage(context: Context): void--><!--Device-settings-function openBiometricsSettingsPage(context: Context): void-End-->
@@ -39,7 +35,7 @@ Open the biometrics and password settings page.
 | [16900020](../../apis-basic-services-kit/errorcode-settings.md#16900020-failed-to-open-the-settings-page) | Failed to open the settings page via redirection. |
 | [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

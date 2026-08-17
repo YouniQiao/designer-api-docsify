@@ -4,11 +4,9 @@ The enum of profile id.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md#ProfileId)
+**Substitutes:** [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md#profileid)
 
 <!--Device-bluetooth-enum ProfileId--><!--Device-bluetooth-enum ProfileId-End-->
 
@@ -24,11 +22,9 @@ A2DP profile.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PROFILE_A2DP_SOURCE](arkts-connectivity-bluetoothmanager-profileid-e.md#PROFILE_A2DP_SOURCE)
+**Substitutes:** [PROFILE_A2DP_SOURCE](arkts-connectivity-bluetoothmanager-profileid-e.md#profilea2dpsource)
 
 <!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1--><!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1-End-->
 
@@ -44,11 +40,9 @@ HFP profile.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PROFILE_HANDS_FREE_AUDIO_GATEWAY](arkts-connectivity-bluetoothmanager-profileid-e.md#PROFILE_HANDS_FREE_AUDIO_GATEWAY)
+**Substitutes:** [PROFILE_HANDS_FREE_AUDIO_GATEWAY](arkts-connectivity-bluetoothmanager-profileid-e.md#profilehandsfreeaudiogateway)
 
 <!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4--><!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4-End-->
 

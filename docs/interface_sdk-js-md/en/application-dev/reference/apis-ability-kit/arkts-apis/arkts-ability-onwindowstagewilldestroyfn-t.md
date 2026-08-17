@@ -8,10 +8,6 @@ Defines a onWindowStageWillDestroy function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-type OnWindowStageWillDestroyFn = (ability: UIAbility, windowStage: window.WindowStage) => void--><!--Device-unnamed-type OnWindowStageWillDestroyFn = (ability: UIAbility, windowStage: window.WindowStage) => void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore

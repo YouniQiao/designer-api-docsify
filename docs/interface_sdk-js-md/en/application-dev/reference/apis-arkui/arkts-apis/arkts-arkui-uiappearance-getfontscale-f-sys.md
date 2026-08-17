@@ -16,10 +16,6 @@ Obtains the current font size scale factor. &lt;!--Del--&gt; > **NOTE：**> This
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 12 - 19: ohos.permission.UPDATE_CONFIGURATION
 
@@ -43,7 +39,7 @@ Obtains the current font size scale factor. &lt;!--Del--&gt; > **NOTE：**> This
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 - 19 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 - 19 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiAppearance } from '@kit.ArkUI';

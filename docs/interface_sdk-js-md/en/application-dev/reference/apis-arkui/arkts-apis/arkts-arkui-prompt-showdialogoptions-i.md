@@ -4,11 +4,9 @@ Defines the option of show dialog.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md#ShowDialogOptions)
+**Substitutes:** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md#showdialogoptions)
 
 <!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
 
@@ -32,8 +30,6 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [buttons](arkts-arkui-promptaction-showdialogoptions-i.md#buttons)
@@ -54,8 +50,6 @@ Text body.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [message](arkts-arkui-promptaction-showdialogoptions-i.md#message)
@@ -75,8 +69,6 @@ Title of the text to display.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

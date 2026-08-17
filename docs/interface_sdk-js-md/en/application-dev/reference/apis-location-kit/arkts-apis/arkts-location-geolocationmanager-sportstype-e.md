@@ -4,10 +4,6 @@ Enum for sports type
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export enum SportsType--><!--Device-geoLocationManager-export enum SportsType-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -21,10 +17,6 @@ RUNNING = 1
 Indicates running.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ Indicates walking.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SportsType-WALKING = 2--><!--Device-SportsType-WALKING = 2-End-->
@@ -62,10 +50,6 @@ Indicates cycling.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SportsType-CYCLING = 3--><!--Device-SportsType-CYCLING = 3-End-->
@@ -81,10 +65,6 @@ SKIING = 4
 Indicates Skiing.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

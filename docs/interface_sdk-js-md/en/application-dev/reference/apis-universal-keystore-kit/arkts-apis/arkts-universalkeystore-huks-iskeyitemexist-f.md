@@ -16,10 +16,6 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-huks-function isKeyItemExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void--><!--Device-huks-function isKeyItemExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -29,7 +25,7 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#HuksAuthStorageLevel) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the key exists, the value of **data** is **true**. If the key does not exist, **data** is **undefined**, and the error code in **err** is **12000011** with the error description attached. |
 
 **Error codes:**
@@ -46,7 +42,7 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
-## Examples
+**Examples**
 
 ArkTS sample code:
 
@@ -160,10 +156,6 @@ Checks whether a key exists. This API uses a promise to return the result. If th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-huks-function isKeyItemExist(keyAlias: string, options: HuksOptions): Promise<boolean>--><!--Device-huks-function isKeyItemExist(keyAlias: string, options: HuksOptions): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -173,7 +165,7 @@ Checks whether a key exists. This API uses a promise to return the result. If th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#HuksAuthStorageLevel) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
 
 **Return value:**
 
@@ -195,7 +187,7 @@ Checks whether a key exists. This API uses a promise to return the result. If th
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

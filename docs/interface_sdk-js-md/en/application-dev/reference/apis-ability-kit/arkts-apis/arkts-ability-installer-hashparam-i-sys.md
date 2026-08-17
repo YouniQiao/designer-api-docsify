@@ -4,10 +4,6 @@ Defines the hash parameters for bundle installation and uninstall.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-installer-export interface HashParam--><!--Device-installer-export interface HashParam-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -32,10 +28,6 @@ Hash value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HashParam-hashValue: string--><!--Device-HashParam-hashValue: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -53,10 +45,6 @@ Module name of the bundle.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HashParam-moduleName: string--><!--Device-HashParam-moduleName: string-End-->
 

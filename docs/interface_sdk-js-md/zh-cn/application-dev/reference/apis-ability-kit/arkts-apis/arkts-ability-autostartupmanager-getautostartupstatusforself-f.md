@@ -10,10 +10,6 @@ function getAutoStartupStatusForSelf(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-autoStartupManager-function getAutoStartupStatusForSelf(): Promise<boolean>--><!--Device-autoStartupManager-function getAutoStartupStatusForSelf(): Promise<boolean>-End-->
@@ -33,7 +29,7 @@ function getAutoStartupStatusForSelf(): Promise<boolean>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { autoStartupManager, UIAbility } from '@kit.AbilityKit';

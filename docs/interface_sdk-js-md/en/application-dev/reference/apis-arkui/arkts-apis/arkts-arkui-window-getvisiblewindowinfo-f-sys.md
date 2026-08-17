@@ -16,10 +16,6 @@ Obtains information about visible main windows on the current screen. Visible ma
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 18+: ohos.permission.VISIBLE_WINDOW_INFO
 
@@ -44,7 +40,7 @@ Obtains information about visible main windows on the current screen. Visible ma
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. Possible cause: Need ohos.permission.VISIBLE_WINDOW_INFO permission.<br>**Applicable version:** 18 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API.<br>**Applicable version:** 12 - 17 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';

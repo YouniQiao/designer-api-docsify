@@ -4,11 +4,9 @@ Defines the response to the request.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [RequestResult](arkts-ipc-rpc-requestresult-i.md#RequestResult)
+**Substitutes:** [RequestResult](arkts-ipc-rpc-requestresult-i.md#requestresult)
 
 <!--Device-rpc-interface SendRequestResult--><!--Device-rpc-interface SendRequestResult-End-->
 
@@ -32,8 +30,6 @@ Message code.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [code](arkts-ipc-rpc-requestresult-i.md#code)
@@ -53,8 +49,6 @@ data: MessageParcel
 **Type:** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,11 +70,9 @@ Error code.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [errCode](arkts-ipc-rpc-requestresult-i.md#errCode)
+**Substitutes:** [errCode](arkts-ipc-rpc-requestresult-i.md#errcode)
 
 <!--Device-SendRequestResult-errCode: number--><!--Device-SendRequestResult-errCode: number-End-->
 
@@ -97,8 +89,6 @@ reply: MessageParcel
 **Type:** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

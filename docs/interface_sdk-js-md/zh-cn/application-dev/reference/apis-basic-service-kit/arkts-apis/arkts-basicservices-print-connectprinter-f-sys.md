@@ -10,10 +10,6 @@ function connectPrinter(printerId: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API版本10 - 19：ohos.permission.MANAGE_PRINT_JOB
@@ -29,7 +25,7 @@ function connectPrinter(printerId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printerId | string | 是 | 打印机ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 通过打印机ID异步连接打印机的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 通过打印机ID异步连接打印机的回调。 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function connectPrinter(printerId: string, callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 19 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -64,10 +60,6 @@ function connectPrinter(printerId: string): Promise<void>
 通过打印机ID连接打印机，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
@@ -98,7 +90,7 @@ function connectPrinter(printerId: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 19 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

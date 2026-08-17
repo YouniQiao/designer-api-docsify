@@ -16,10 +16,6 @@ Obtains system memory information. This API is implemented by reading data from 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo--><!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ Obtains system memory information. This API is implemented by reading data from 
 | --- | --- |
 | [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | System memory information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

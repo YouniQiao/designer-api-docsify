@@ -16,9 +16,7 @@ Battery temperature of the device, in unit of 0.1°C.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-batteryInfo-function batteryTemperature(): int--><!--Device-batteryInfo-function batteryTemperature(): int-End-->
 

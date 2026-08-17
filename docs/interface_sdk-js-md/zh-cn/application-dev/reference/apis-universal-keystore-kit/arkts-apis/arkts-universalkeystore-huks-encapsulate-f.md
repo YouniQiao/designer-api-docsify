@@ -11,10 +11,6 @@ function encapsulate(keyAlias: string, params: HuksParam[],
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-huks-function encapsulate(keyAlias: string, params: HuksParam[],      sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function encapsulate(keyAlias: string, params: HuksParam[],      sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>-End-->
@@ -56,7 +52,7 @@ function encapsulate(keyAlias: string, params: HuksParam[],
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameters are abnormal. |
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried key does not exist, please check the key-related parameters. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

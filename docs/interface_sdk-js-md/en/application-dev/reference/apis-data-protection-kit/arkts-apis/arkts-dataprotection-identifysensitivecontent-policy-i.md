@@ -1,12 +1,8 @@
-# Policy
+# Policy(Identify sensitive file)
 
 Defines the policy for sensitive content identification. In a single policy, keywords and regular expressions are combined in sequence, and two-level matching is performed. First, keyword matching is performed. If a keyword is matched, regular expression matching is performed within a scope of 100 bytes: from the position 50 bytes before the matched position of the keyword to that 50 bytes after the matched position. If only keywords are set, only keyword matching is performed. If only regular expressions are set, only regular expression matching is performed. Multiple policies are independent of each other, and each policy is applied separately during scanning. sensitiveLabel is used to mark the matching result to identify the specific policy matched.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-identifySensitiveContent-export interface Policy--><!--Device-identifySensitiveContent-export interface Policy-End-->
 
@@ -30,10 +26,6 @@ Keyword set, which is used to match sensitive keywords in a file. The system sea
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-Policy-keywords: Array<string>--><!--Device-Policy-keywords: Array<string>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -50,10 +42,6 @@ Regular expression used to match sensitive content. The system performs pattern 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-Policy-regex: string--><!--Device-Policy-regex: string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -69,10 +57,6 @@ Label of an identification policy, which is used to identify and classify matchi
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-Policy-sensitiveLabel: string--><!--Device-Policy-sensitiveLabel: string-End-->
 

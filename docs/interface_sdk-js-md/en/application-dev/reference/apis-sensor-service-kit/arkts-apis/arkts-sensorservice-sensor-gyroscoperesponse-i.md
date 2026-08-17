@@ -1,14 +1,10 @@
 # GyroscopeResponse
 
-Describes the gyroscope sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
+Describes the gyroscope sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
 
-**Inheritance/Implementation:** GyroscopeResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**Inheritance/Implementation:** GyroscopeResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-interface GyroscopeResponse--><!--Device-sensor-interface GyroscopeResponse-End-->
 
@@ -32,10 +28,6 @@ Angular velocity of rotation around the x-axis of the device, in rad/s. The valu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GyroscopeResponse-x: double--><!--Device-GyroscopeResponse-x: double-End-->
@@ -54,10 +46,6 @@ Angular velocity of rotation around the y-axis of the device, in rad/s. The valu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GyroscopeResponse-y: double--><!--Device-GyroscopeResponse-y: double-End-->
@@ -75,10 +63,6 @@ Angular velocity of rotation around the z-axis of the device, in rad/s. The valu
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

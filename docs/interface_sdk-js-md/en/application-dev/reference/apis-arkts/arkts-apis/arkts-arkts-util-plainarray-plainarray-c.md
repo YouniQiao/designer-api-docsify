@@ -4,10 +4,6 @@ PlainArray stores key-value (KV) pairs. Each key must be unique, be of the numbe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class PlainArray--><!--Device-unnamed-declare class PlainArray-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<[int, T]>
 returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-[Symbol.iterator](): IterableIterator<[number, T]>--><!--Device-PlainArray-[Symbol.iterator](): IterableIterator<[number, T]>-End-->
@@ -76,7 +64,7 @@ returns an iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -112,10 +100,6 @@ Adds an element to this PlainArray.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-add(key: int, value: T): void--><!--Device-PlainArray-add(key: int, value: T): void-End-->
@@ -135,7 +119,7 @@ Adds an element to this PlainArray.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -153,10 +137,6 @@ Clears this PlainArray and sets its length to **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-clear(): void--><!--Device-PlainArray-clear(): void-End-->
@@ -169,7 +149,7 @@ Clears this PlainArray and sets its length to **0**.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -190,10 +170,6 @@ Clones this PlainArray and returns a copy. The modification to the copy does not
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-clone(): PlainArray<T>--><!--Device-PlainArray-clone(): PlainArray<T>-End-->
@@ -212,7 +188,7 @@ Clones this PlainArray and returns a copy. The modification to the copy does not
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clone method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -232,10 +208,6 @@ A constructor used to create a **PlainArray** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-constructor()--><!--Device-PlainArray-constructor()-End-->
@@ -248,7 +220,7 @@ A constructor used to create a **PlainArray** instance.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The PlainArray's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -263,10 +235,6 @@ forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => vo
 Uses a callback to traverse each element in the **PlainArray** instance.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -287,7 +255,7 @@ Uses a callback to traverse each element in the **PlainArray** instance.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -322,10 +290,6 @@ Executes a provided function once for each value in the PlainArray object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlainArray-forEach(callbackFn: PlainArrayForEachCb<T>): void--><!--Device-PlainArray-forEach(callbackFn: PlainArrayForEachCb<T>): void-End-->
@@ -347,10 +311,6 @@ get(key: number): T
 Obtains the value of the specified key in this PlainArray.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -376,7 +336,7 @@ Obtains the value of the specified key in this PlainArray.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -395,10 +355,6 @@ get(key: int): T | undefined
 Queries the value associated with the specified key
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -434,10 +390,6 @@ Obtains the index of the element with the specified key in this PlainArray.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-getIndexOfKey(key: int): int--><!--Device-PlainArray-getIndexOfKey(key: int): int-End-->
@@ -462,7 +414,7 @@ Obtains the index of the element with the specified key in this PlainArray.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfKey method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -481,10 +433,6 @@ getIndexOfValue(value: T): int
 Obtains the index of the first occurrence of an element with the specified value in this PlainArray.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -510,7 +458,7 @@ Obtains the index of the first occurrence of an element with the specified value
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfValue method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -529,10 +477,6 @@ getKeyAt(index: int): int
 Obtains the key of the element at the specified position in this PlainArray.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -558,7 +502,7 @@ Obtains the key of the element at the specified position in this PlainArray.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getKeyAt method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -577,10 +521,6 @@ getValueAt(index: int): T
 Obtains the value of an element at the specified position in this PlainArray.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -607,7 +547,7 @@ Obtains the value of an element at the specified position in this PlainArray.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -626,10 +566,6 @@ has(key: int): boolean
 Checks whether PlainArray has the specified key.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -655,7 +591,7 @@ Checks whether PlainArray has the specified key.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -673,10 +609,6 @@ isEmpty(): boolean
 Checks whether this PlainArray is empty.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -696,7 +628,7 @@ Checks whether this PlainArray is empty.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const plainArray = new PlainArray<string>();
@@ -713,10 +645,6 @@ remove(key: number): T
 Removes a key-value pair with the specified key.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -742,7 +670,7 @@ Removes a key-value pair with the specified key.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -761,10 +689,6 @@ remove(key: int): T | undefined
 Remove the key-value pair based on a specified key if it exists and return the value
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -800,10 +724,6 @@ Removes an element at the specified position from this PlainArray.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-removeAt(index: number): T--><!--Device-PlainArray-removeAt(index: number): T-End-->
@@ -828,7 +748,7 @@ Removes an element at the specified position from this PlainArray.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -847,10 +767,6 @@ removeAt(index: int): T | undefined
 Remove the key-value pair at a specified index if it exists and return the value
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -886,10 +802,6 @@ Removes elements within the specified range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-removeRangeFrom(index: int, size: int): int--><!--Device-PlainArray-removeRangeFrom(index: int, size: int): int-End-->
@@ -916,7 +828,7 @@ Removes elements within the specified range.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeRangeFrom method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -935,10 +847,6 @@ setValueAt(index: int, value: T): void
 Sets a value for an element at the specified position in this PlainArray.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -960,7 +868,7 @@ Sets a value for an element at the specified position in this PlainArray.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setValueAt method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string | number>();
@@ -981,10 +889,6 @@ Obtains a string that contains all elements in this PlainArray.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-toString(): String--><!--Device-PlainArray-toString(): String-End-->
@@ -1003,7 +907,7 @@ Obtains a string that contains all elements in this PlainArray.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let plainArray = new PlainArray<string>();
@@ -1024,10 +928,6 @@ Number of elements in a PlainArray.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

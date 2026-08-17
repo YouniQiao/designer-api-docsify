@@ -4,10 +4,6 @@ Sets the color and direction of the linear gradient for the outlines.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface PopupBorderLinearGradient--><!--Device-unnamed-declare interface PopupBorderLinearGradient-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Array of color stops, each of which consists of a color and its stop position. I
 **Type:** Array&lt;[ResourceColor, number]&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Direction of the linear gradient. Default value: **GradientDirection.Bottom** **
 **Type:** GradientDirection
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

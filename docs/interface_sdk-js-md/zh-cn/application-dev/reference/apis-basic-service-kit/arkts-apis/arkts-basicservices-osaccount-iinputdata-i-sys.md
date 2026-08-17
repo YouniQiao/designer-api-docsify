@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-interface IInputData--><!--Device-osAccount-interface IInputData-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ onSetData(authSubType: AuthSubType, data: Uint8Array): void
 通知设置数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-IInputData-onSetData(authSubType: AuthSubType, data: Uint8Array): void--><!--Device-IInputData-onSetData(authSubType: AuthSubType, data: Uint8Array): void-End-->
 
@@ -49,7 +41,7 @@ onSetData(authSubType: AuthSubType, data: Uint8Array): void
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid pinSubType. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0, 0]);

@@ -1,12 +1,8 @@
-# AtomicServiceMenuBar (System API)
+# AtomicServiceMenuBar(System API) (System API)
 
 Creates an **AtomicServiceMenuBar** object based on the context of the current atomic service. The object is used to control the display of the menu function capsule in the upper right corner.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class AtomicServiceMenuBar--><!--Device-unnamed-export declare class AtomicServiceMenuBar-End-->
 
@@ -29,10 +25,6 @@ constructor(uiContext: UIContext)
 A constructor used to create an **AtomicServiceMenuBar** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,10 +51,6 @@ public setVisible(visible: boolean): void
 Sets whether to display or hide the menu function capsule of the current atomic service.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

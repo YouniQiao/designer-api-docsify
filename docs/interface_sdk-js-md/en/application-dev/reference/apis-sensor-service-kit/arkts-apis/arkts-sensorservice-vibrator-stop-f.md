@@ -16,11 +16,9 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration)(stopMode: VibratorStopMode)
+**Substitutes:** [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)(stopMode: VibratorStopMode)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -40,7 +38,7 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';
@@ -73,11 +71,9 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration)(stopMode: VibratorStopMode, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)(stopMode: VibratorStopMode, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -92,7 +88,7 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 | stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Yes | Mode to stop the vibration. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the vibration stops, **err** is **undefined**; otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

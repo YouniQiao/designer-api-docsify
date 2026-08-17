@@ -4,10 +4,6 @@ EffectSuggestion object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface EffectSuggestion--><!--Device-camera-interface EffectSuggestion-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -29,10 +25,6 @@ enableEffectSuggestion(enabled: boolean): void
 Enable effect suggestion for session.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EffectSuggestion-enableEffectSuggestion(enabled: boolean): void--><!--Device-EffectSuggestion-enableEffectSuggestion(enabled: boolean): void-End-->
 
@@ -64,10 +56,6 @@ Gets supported effect suggestion types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EffectSuggestion-getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>--><!--Device-EffectSuggestion-getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -96,10 +84,6 @@ isEffectSuggestionSupported(): boolean
 Checks whether effect suggestion is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EffectSuggestion-isEffectSuggestionSupported(): boolean--><!--Device-EffectSuggestion-isEffectSuggestionSupported(): boolean-End-->
 
@@ -130,10 +114,6 @@ Set the range of effect suggestion type and enable status. The application shoul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EffectSuggestion-setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void--><!--Device-EffectSuggestion-setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -163,10 +143,6 @@ updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void
 Update the enable status of the effect suggestion type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EffectSuggestion-updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void--><!--Device-EffectSuggestion-updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void-End-->
 

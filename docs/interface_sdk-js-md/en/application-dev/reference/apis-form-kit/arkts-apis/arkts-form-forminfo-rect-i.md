@@ -4,10 +4,6 @@ Indicates rectangle, unit is vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-interface Rect--><!--Device-formInfo-interface Rect-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -30,10 +26,6 @@ The height of Rect Unit: vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Rect-height: double--><!--Device-Rect-height: double-End-->
@@ -51,10 +43,6 @@ The left position of Rect Unit: vp.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -74,10 +62,6 @@ The top position of Rect Unit: vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Rect-top: double--><!--Device-Rect-top: double-End-->
@@ -95,10 +79,6 @@ The width of Rect Unit: vp.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

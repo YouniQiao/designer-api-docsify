@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface ComponentDescription--><!--Device-update-export interface ComponentDescription-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -26,10 +22,6 @@ componentId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ComponentDescription-componentId: string--><!--Device-ComponentDescription-componentId: string-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -47,10 +39,6 @@ descriptionInfo: DescriptionInfo
 **类型：** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ComponentDescription-descriptionInfo: DescriptionInfo--><!--Device-ComponentDescription-descriptionInfo: DescriptionInfo-End-->
 

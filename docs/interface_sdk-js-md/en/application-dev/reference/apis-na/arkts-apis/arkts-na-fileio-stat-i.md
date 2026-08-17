@@ -4,9 +4,7 @@ Obtains detailed information of a file, including attributes such as the file si
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-interface Stat--><!--Device-fileIo-interface Stat-End-->
 
@@ -22,9 +20,7 @@ Checks whether this file is a block special file. A block special file supports 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
@@ -53,9 +49,7 @@ Checks whether this file is a character special file. A character special device
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
 
@@ -84,9 +78,7 @@ Checks whether this file is a directory.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
 
@@ -115,9 +107,7 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
 
@@ -146,9 +136,7 @@ Checks whether this file is a regular file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
 
@@ -177,9 +165,7 @@ Checks whether this file is a socket.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
 
@@ -208,9 +194,7 @@ Checks whether this file is a symbolic link.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
@@ -241,9 +225,7 @@ Time when the file was last accessed. The value is the number of seconds elapsed
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly atime: long--><!--Device-Stat-readonly atime: long-End-->
 
@@ -261,9 +243,7 @@ Time of the last access to the file. The value is the number of nanoseconds elap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly atimeNs?:bigint--><!--Device-Stat-readonly atimeNs?:bigint-End-->
 
@@ -281,9 +261,7 @@ Time when the file metadata was last modified. The value is the number of second
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly ctime: long--><!--Device-Stat-readonly ctime: long-End-->
 
@@ -301,9 +279,7 @@ Time of the last status change of the file. The value is the number of nanosecon
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly ctimeNs?:bigint--><!--Device-Stat-readonly ctimeNs?:bigint-End-->
 
@@ -321,9 +297,7 @@ ID of the user group of the file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly gid: long--><!--Device-Stat-readonly gid: long-End-->
 
@@ -341,9 +315,7 @@ File ID. Different files on the same device have different **ino**s.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly ino: bigint--><!--Device-Stat-readonly ino: bigint-End-->
 
@@ -361,9 +333,7 @@ File location, which indicates whether the file is stored in a local device or i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly location: LocationType--><!--Device-Stat-readonly location: LocationType-End-->
 
@@ -381,9 +351,7 @@ File permissions. The meaning of each bit is as follows: Note: The following val
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly mode: long--><!--Device-Stat-readonly mode: long-End-->
 
@@ -401,9 +369,7 @@ Time when the file content was last modified. The value is the number of seconds
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly mtime: long--><!--Device-Stat-readonly mtime: long-End-->
 
@@ -421,9 +387,7 @@ Time of the last modification to the file. The value is the number of nanosecond
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly mtimeNs?:bigint--><!--Device-Stat-readonly mtimeNs?:bigint-End-->
 
@@ -441,9 +405,7 @@ File size, in bytes. This parameter is valid only for regular files.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly size: long--><!--Device-Stat-readonly size: long-End-->
 
@@ -461,9 +423,7 @@ ID of the file owner.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-Stat-readonly uid: long--><!--Device-Stat-readonly uid: long-End-->
 

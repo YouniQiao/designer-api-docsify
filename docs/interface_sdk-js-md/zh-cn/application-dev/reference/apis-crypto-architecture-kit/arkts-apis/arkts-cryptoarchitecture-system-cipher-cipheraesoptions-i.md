@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -25,8 +23,6 @@ action: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 
@@ -48,8 +44,6 @@ complete: () => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -69,8 +63,6 @@ fail: (data: string, code: number) => void
 **类型：** (data: string, code: number) =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 
@@ -92,8 +84,6 @@ AES加解密的初始向量，经过base64编码后的字符串，默认值为ke
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -113,8 +103,6 @@ AES加解密的初始向量字节长度，当前为预留字段，默认值16，
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 
@@ -136,8 +124,6 @@ AES加解密的初始向量偏移，默认值0，仅支持0。
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -157,8 +143,6 @@ key: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 
@@ -180,8 +164,6 @@ success: (data: CipherResponse) => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -202,8 +184,6 @@ text: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -223,8 +203,6 @@ AES算法的加密模式和填充项，默认AES/CBC/PKCS5Padding。
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 

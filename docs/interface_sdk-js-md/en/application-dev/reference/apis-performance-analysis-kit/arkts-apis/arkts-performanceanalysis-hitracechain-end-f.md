@@ -16,10 +16,6 @@ Stops call chain trace. This API works in synchronous manner. If the given HiTra
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiTraceChain-function end(id: HiTraceId): void--><!--Device-hiTraceChain-function end(id: HiTraceId): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -30,7 +26,7 @@ Stops call chain trace. This API works in synchronous manner. If the given HiTra
 | --- | --- | --- | --- |
 | id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Start tracing. The tracing flag is DEFAULT.

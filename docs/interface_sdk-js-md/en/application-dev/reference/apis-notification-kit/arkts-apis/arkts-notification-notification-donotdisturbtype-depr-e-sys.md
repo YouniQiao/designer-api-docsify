@@ -4,11 +4,9 @@ Defines the DND time type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#DoNotDisturbType-(System-API))
+**Substitutes:** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#donotdisturbtype-system-api)
 
 <!--Device-notification-export enum DoNotDisturbType--><!--Device-notification-export enum DoNotDisturbType-End-->
 
@@ -26,11 +24,9 @@ Non-DND.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_NONE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#TYPE_NONE)
+**Substitutes:** [TYPE_NONE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#typenone)
 
 <!--Device-DoNotDisturbType-TYPE_NONE = 0--><!--Device-DoNotDisturbType-TYPE_NONE = 0-End-->
 
@@ -48,11 +44,9 @@ One-shot DND at the specified time segment (only considering the hour and minute
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_ONCE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#TYPE_ONCE)
+**Substitutes:** [TYPE_ONCE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#typeonce)
 
 <!--Device-DoNotDisturbType-TYPE_ONCE = 1--><!--Device-DoNotDisturbType-TYPE_ONCE = 1-End-->
 
@@ -70,11 +64,9 @@ Daily DND at the specified time segment (only considering the hour and minute).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_DAILY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#TYPE_DAILY)
+**Substitutes:** [TYPE_DAILY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#typedaily)
 
 <!--Device-DoNotDisturbType-TYPE_DAILY = 2--><!--Device-DoNotDisturbType-TYPE_DAILY = 2-End-->
 
@@ -92,11 +84,9 @@ DND at the specified time segment (considering the year, month, day, hour, and m
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_CLEARLY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#TYPE_CLEARLY)
+**Substitutes:** [TYPE_CLEARLY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#typeclearly)
 
 <!--Device-DoNotDisturbType-TYPE_CLEARLY = 3--><!--Device-DoNotDisturbType-TYPE_CLEARLY = 3-End-->
 

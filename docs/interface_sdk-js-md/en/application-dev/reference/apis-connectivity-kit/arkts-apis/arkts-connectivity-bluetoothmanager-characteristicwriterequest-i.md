@@ -4,11 +4,9 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md#CharacteristicWriteRequest)
+**Substitutes:** [CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md#characteristicwriterequest)
 
 <!--Device-bluetoothManager-interface CharacteristicWriteRequest--><!--Device-bluetoothManager-interface CharacteristicWriteRequest-End-->
 
@@ -32,11 +30,9 @@ The UUID of a CharacteristicWriteRequest instance
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicUuid](arkts-connectivity-ble-characteristicwriterequest-i.md#characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-ble-characteristicwriterequest-i.md#characteristicuuid)
 
 <!--Device-CharacteristicWriteRequest-characteristicUuid: string--><!--Device-CharacteristicWriteRequest-characteristicUuid: string-End-->
 
@@ -54,11 +50,9 @@ Indicates the address of the client that initiates the write request
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](arkts-connectivity-ble-characteristicwriterequest-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-ble-characteristicwriterequest-i.md#deviceid)
 
 <!--Device-CharacteristicWriteRequest-deviceId: string--><!--Device-CharacteristicWriteRequest-deviceId: string-End-->
 
@@ -76,11 +70,9 @@ Whether this request should be pending for later operation
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [isPrepared](arkts-connectivity-ble-characteristicwriterequest-i.md#isPrepared)
+**Substitutes:** [isPrepared](arkts-connectivity-ble-characteristicwriterequest-i.md#isprepared)
 
 <!--Device-CharacteristicWriteRequest-isPrep: boolean--><!--Device-CharacteristicWriteRequest-isPrep: boolean-End-->
 
@@ -98,11 +90,9 @@ Whether the remote client need a response
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [needRsp](arkts-connectivity-ble-characteristicwriterequest-i.md#needRsp)
+**Substitutes:** [needRsp](arkts-connectivity-ble-characteristicwriterequest-i.md#needrsp)
 
 <!--Device-CharacteristicWriteRequest-needRsp: boolean--><!--Device-CharacteristicWriteRequest-needRsp: boolean-End-->
 
@@ -119,8 +109,6 @@ Indicates the byte offset of the start position for writing characteristic value
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -142,11 +130,9 @@ The UUID of the service to which the characteristic belongs
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuid](arkts-connectivity-ble-characteristicwriterequest-i.md#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-characteristicwriterequest-i.md#serviceuuid)
 
 <!--Device-CharacteristicWriteRequest-serviceUuid: string--><!--Device-CharacteristicWriteRequest-serviceUuid: string-End-->
 
@@ -164,11 +150,9 @@ The Id of the write request
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [transId](arkts-connectivity-ble-characteristicwriterequest-i.md#transId)
+**Substitutes:** [transId](arkts-connectivity-ble-characteristicwriterequest-i.md#transid)
 
 <!--Device-CharacteristicWriteRequest-transId: number--><!--Device-CharacteristicWriteRequest-transId: number-End-->
 
@@ -185,8 +169,6 @@ Indicates the value to be written
 **Type:** ArrayBuffer
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

@@ -10,10 +10,6 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-application-export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>--><!--Device-application-export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>-End-->
@@ -34,7 +30,7 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 | --- | --- |
 | Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise对象。返回创建的Context。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, common, Want, Context } from '@kit.AbilityKit';

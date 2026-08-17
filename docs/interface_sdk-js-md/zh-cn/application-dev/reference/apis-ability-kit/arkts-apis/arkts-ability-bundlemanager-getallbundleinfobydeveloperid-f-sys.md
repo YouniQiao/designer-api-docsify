@@ -10,10 +10,6 @@ function getAllBundleInfoByDeveloperId(developerId: string): Array<BundleInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function getAllBundleInfoByDeveloperId(developerId: string): Array<BundleInfo>--><!--Device-bundleManager-function getAllBundleInfoByDeveloperId(developerId: string): Array<BundleInfo>-End-->
@@ -43,7 +39,7 @@ function getAllBundleInfoByDeveloperId(developerId: string): Array<BundleInfo>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ Transition Controller
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiExtensionHost-interface UIExtensionHostWindowProxy--><!--Device-uiExtensionHost-interface UIExtensionHostWindowProxy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,10 +25,6 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 Creates a subwindow for this **UIExtensionHostWindowProxy** instance. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +56,7 @@ Creates a subwindow for this **UIExtensionHostWindowProxy** instance. This API u
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -122,10 +114,6 @@ Create subwindow.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
@@ -156,7 +144,7 @@ Create subwindow.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -213,10 +201,6 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionHostWindowProxy-getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea--><!--Device-UIExtensionHostWindowProxy-getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea-End-->
@@ -243,7 +227,7 @@ Obtains the area where this window cannot be displayed, for example, the system 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -270,10 +254,6 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 Sets whether to hide non-secure windows. This API uses a promise to return the result. > **NOTE：**> > - A non-secure window refers to any window that may obstruct the > EmbeddedComponent or > UIExtensionComponent, such as global floating windows > , host subwindows, and dialog box windows created by the host application (excluding windows of these types > created by system applications). > > - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this > API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear > when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed. > > - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when > **hideNonSecureWindows(true)** is called.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 12+: ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS
@@ -307,7 +287,7 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. Permission denied. Interface caller does not have permission "ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS". 2. The UIExtension window proxy is abnormal.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -343,13 +323,9 @@ export default class EntryAbility extends UIExtensionAbility {
 hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 ```
 
-Sets whether to enable privacy protection for the UIExtension component during non-system screenshots. This API uses a promise to return the result. > **NOTE：**> > When privacy protection is enabled, neither > window.snapshot nor > [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getComponentSnapshot) > will capture the content of the current component (excluding subwindows created under this component).
+Sets whether to enable privacy protection for the UIExtension component during non-system screenshots. This API uses a promise to return the result. > **NOTE：**> > When privacy protection is enabled, neither > window.snapshot nor > [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot) > will capture the content of the current component (excluding subwindows created under this component).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -379,7 +355,7 @@ Sets whether to enable privacy protection for the UIExtension component during n
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The UIExtension window proxy is abnormal. 2. Not the UIExtensionAbility process calling. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -408,10 +384,6 @@ offAvoidAreaChange(callback?: Callback<uiExtension.AvoidAreaInfo>): void
 Unregister the callback of avoidAreaChange
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -443,10 +415,6 @@ Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionHostWindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void-End-->
@@ -477,10 +445,6 @@ Unsubscribes from events of system avoidance area changes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionHostWindowProxy-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void--><!--Device-UIExtensionHostWindowProxy-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void-End-->
@@ -503,7 +467,7 @@ Unsubscribes from events of system avoidance area changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -528,10 +492,6 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionHostWindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void-End-->
@@ -554,7 +514,7 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -578,10 +538,6 @@ onAvoidAreaChange(callback: Callback<uiExtension.AvoidAreaInfo>): void
 Register the callback of avoidAreaChange
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -613,10 +569,6 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionHostWindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void-End-->
@@ -647,10 +599,6 @@ Subscribes to events of system avoidance area changes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionHostWindowProxy-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void--><!--Device-UIExtensionHostWindowProxy-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void-End-->
@@ -673,7 +621,7 @@ Subscribes to events of system avoidance area changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -700,10 +648,6 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionHostWindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void-End-->
@@ -726,7 +670,7 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -752,10 +696,6 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 Adds or deletes the watermark flag for this window. This API uses a promise to return the result. > **NOTE：**> > With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground > , regardless of whether the window is displayed in full screen, floating, and split screen mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -785,7 +725,7 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | The UIExtension window proxy is abnormal. |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -820,15 +760,11 @@ export default class EntryAbility extends UIExtensionAbility {
 properties: UIExtensionHostWindowProxyProperties
 ```
 
-Information about the host application window and the **UIExtensionComponent**. Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#on_avoidAreaChange) callback.
+Information about the host application window and the **UIExtensionComponent**. Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#onavoidareachange) callback.
 
 **Type:** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,14 +1,10 @@
 # DigitIndicator
 
-A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md#Indicator). > **NOTE：**> > When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count > placeholder nodes. > > The maximum value of maxFontScale for the digit-style navigation indicator is > **2**. > > The mirror display of the page number depends on the RTL status of the system.
+A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md#indicator). > **NOTE：**> > When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count > placeholder nodes. > > The maximum value of maxFontScale for the digit-style navigation indicator is > **2**. > > The mirror display of the page number depends on the RTL status of the system.
 
 **Inheritance/Implementation:** DigitIndicator extends Indicator<DigitIndicator>
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class DigitIndicator--><!--Device-unnamed-declare class DigitIndicator-End-->
 
@@ -23,10 +19,6 @@ constructor()
 A constructor used to create a **DotIndicator** object. > **NOTE：**> > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain > distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state. > The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and > **selectedItemHeight**. > > - If there are too many pages and dot-style indicators exceed the page, you are advised to use the > **maxDisplayCount** parameter to set the number of dots to be displayed.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ digitFont(value: Font): DigitIndicator
 Sets the font style of the digit-style navigation indicator.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,10 +72,6 @@ Sets the font color of the digit-style navigation indicator.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -120,10 +104,6 @@ Sets the font style of the selected digit-style navigation indicator.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -155,10 +135,6 @@ selectedFontColor(value: ResourceColor): DigitIndicator
 Sets the font color of the selected digit-style navigation indicator.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,8 +16,6 @@ Obtains the list of clients that are connected to a Wi-Fi hotspot. &lt;p&gt;This
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** getHotspotStations
@@ -36,7 +34,7 @@ Obtains the list of clients that are connected to a Wi-Fi hotspot. &lt;p&gt;This
 | --- | --- |
 | Array&lt;StationInfo&gt; | Returns the list of clients that are connected to the Wi-Fi hotspot. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

@@ -6,10 +6,6 @@ Interactive widget extension class. It provides APIs for the widget provider to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class LiveFormExtensionAbility--><!--Device-unnamed-declare class LiveFormExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -30,10 +26,6 @@ Called after the UI content of **LiveFormExtensionAbility** is created.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -49,7 +41,7 @@ Called after the UI content of **LiveFormExtensionAbility** is created.
 | liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | Yes | Interactive widget information, including the widget ID. |
 | session | [UIExtensionContentSession](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UI information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
@@ -74,10 +66,6 @@ Called to clear resources when this **LiveFormExtensionAbility** is destroyed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -92,7 +80,7 @@ Called to clear resources when this **LiveFormExtensionAbility** is destroyed.
 | --- | --- | --- | --- |
 | liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | Yes | Interactive widget information, including the widget ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
@@ -112,15 +100,11 @@ export default class LiveFormExtAbility extends LiveFormExtensionAbility {
 context: LiveFormExtensionContext
 ```
 
-Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
+Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext).
 
 **Type:** [LiveFormExtensionContext](arkts-form-liveformextensioncontext-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,15 +120,11 @@ Context of the **LiveFormExtensionAbility**. This context is inherited from [Ext
 liveFormContext: LiveFormExtensionContext
 ```
 
-Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
+Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext).
 
 **Type:** [LiveFormExtensionContext](arkts-form-liveformextensioncontext-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

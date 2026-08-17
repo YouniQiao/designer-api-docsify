@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface JSON--><!--Device-unnamed-interface JSON-End-->
 
 ## parse
@@ -17,10 +13,6 @@ parse(text: string, reviver?: (this: any, key: string, value: any) => any): any
 Converts a JavaScript Object Notation (JSON) string into an object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-JSON-parse(text: string, reviver?: (this: any, key: string, value: any) => any): any--><!--Device-JSON-parse(text: string, reviver?: (this: any, key: string, value: any) => any): any-End-->
 
@@ -47,10 +39,6 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-JSON-stringify(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string--><!--Device-JSON-stringify(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string-End-->
 
 **Parameters:**
@@ -76,10 +64,6 @@ stringify(value: any, replacer?: (number | string)[] | null, space?: string | nu
 Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-JSON-stringify(value: any, replacer?: (number | string)[] | null, space?: string | number): string--><!--Device-JSON-stringify(value: any, replacer?: (number | string)[] | null, space?: string | number): string-End-->
 

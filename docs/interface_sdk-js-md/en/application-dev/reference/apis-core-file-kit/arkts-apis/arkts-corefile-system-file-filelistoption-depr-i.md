@@ -4,8 +4,6 @@ Defines the options used in list().
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileListOption--><!--Device-unnamed-export interface FileListOption-End-->
@@ -23,8 +21,6 @@ Callback invoked when the API call is complete.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ Callback invoked when the API call fails. **data** indicates the error informati
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileListOption-fail?: (data: string, code: number) => void--><!--Device-FileListOption-fail?: (data: string, code: number) => void-End-->
@@ -58,13 +52,11 @@ Callback invoked when the API call fails. **data** indicates the error informati
 success?: (data: FileListResponse) => void
 ```
 
-Callback invoked when the API call is successful. **data** is [FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md#FileListResponse).
+Callback invoked when the API call is successful. **data** is [FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md#filelistresponse).
 
 **Type:** (data: FileListResponse) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -83,8 +75,6 @@ URI of the directory. Restricted by the underlying file system of lite wearables
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

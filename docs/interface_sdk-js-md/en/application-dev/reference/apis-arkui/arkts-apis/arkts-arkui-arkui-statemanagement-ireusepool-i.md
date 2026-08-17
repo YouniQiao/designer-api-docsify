@@ -4,10 +4,6 @@ The **IReusePool** API provides the features related to the global reuse pool of
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare interface IReusePool--><!--Device-unnamed-export declare interface IReusePool-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -51,10 +47,6 @@ Obtains the information about the recycling instance of a given reusable compone
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -85,10 +77,6 @@ preRender(builder: WrappedBuilder<[]>, times: number): Promise<void>
 Pre-creates @Reusable/@ReusableV2 decorated components and places them in this reuse pool.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

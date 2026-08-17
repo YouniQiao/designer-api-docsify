@@ -4,10 +4,6 @@ HashMap is a map implemented based on the array, linked list, and red-black tree
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class HashMap--><!--Device-unnamed-declare class HashMap-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<[K, V]>
 Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-HashMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
@@ -76,7 +64,7 @@ Obtains an iterator, each item of which is a JavaScript object.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -129,10 +117,6 @@ Clears this HashMap and sets its length to **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashMap-clear(): void--><!--Device-HashMap-clear(): void-End-->
@@ -145,7 +129,7 @@ Clears this HashMap and sets its length to **0**.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -166,10 +150,6 @@ A constructor used to create a **HashMap** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashMap-constructor()--><!--Device-HashMap-constructor()-End-->
@@ -182,7 +162,7 @@ A constructor used to create a **HashMap** instance.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The HashMap's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -197,10 +177,6 @@ entries(): IterableIterator<[K, V]>
 Returns an iterator that contains all the elements in this HashMap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -220,7 +196,7 @@ Returns an iterator that contains all the elements in this HashMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -257,10 +233,6 @@ Uses a callback to traverse each element.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashMap-forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void--><!--Device-HashMap-forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void-End-->
@@ -280,7 +252,7 @@ Uses a callback to traverse each element.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -315,10 +287,6 @@ Uses a callback to traverse the elements in this container and obtain their posi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HashMap-forEach(callbackFn: HashMapCbFn<K, V>): void--><!--Device-HashMap-forEach(callbackFn: HashMapCbFn<K, V>): void-End-->
@@ -340,10 +308,6 @@ get(key: K): V
 Obtains the value of the specified key in this HashMap. If nothing is obtained, **undefined** is returned.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -369,7 +333,7 @@ Obtains the value of the specified key in this HashMap. If nothing is obtained, 
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const hashMap = new HashMap<string, number>();
@@ -388,10 +352,6 @@ get(key: K): V | undefined
 Obtains the value of the specified key in this container. If nothing is obtained, undefined is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -421,10 +381,6 @@ Checks whether this HashMap has the specified key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashMap-hasKey(key: K): boolean--><!--Device-HashMap-hasKey(key: K): boolean-End-->
@@ -449,7 +405,7 @@ Checks whether this HashMap has the specified key.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasKey method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const hashMap = new HashMap<string, number>();
@@ -467,10 +423,6 @@ hasValue(value: V): boolean
 Checks whether this HashMap has the specified value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -496,7 +448,7 @@ Checks whether this HashMap has the specified value.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasValue method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const hashMap = new HashMap<string, number>();
@@ -514,10 +466,6 @@ isEmpty(): boolean
 Checks whether this HashMap is empty (contains no element).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -537,7 +485,7 @@ Checks whether this HashMap is empty (contains no element).
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const hashMap = new HashMap<string, number>();
@@ -554,10 +502,6 @@ keys(): IterableIterator<K>
 Returns an iterator that contains all the keys in this HashMap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -577,7 +521,7 @@ Returns an iterator that contains all the keys in this HashMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -600,10 +544,6 @@ remove(key: K): V
 Removes an element with the specified key from this HashMap.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -629,7 +569,7 @@ Removes an element with the specified key from this HashMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -648,10 +588,6 @@ remove(key: K): V | undefined
 Removes an element with the specified key from this container.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -681,10 +617,6 @@ Replaces the value of a specified key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashMap-replace(key: K, newValue: V): boolean--><!--Device-HashMap-replace(key: K, newValue: V): boolean-End-->
@@ -710,7 +642,7 @@ Replaces the value of a specified key.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replace method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -728,10 +660,6 @@ set(key: K, value: V): Object
 Adds or updates an element in this HashMap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -758,7 +686,7 @@ Adds or updates an element in this HashMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -775,10 +703,6 @@ setAll(map: HashMap<K, V>): void
 Adds all elements in a **HashMap** instance to this HashMap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -798,7 +722,7 @@ Adds all elements in a **HashMap** instance to this HashMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAll method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const hashMap = new HashMap<string, number>();
@@ -821,10 +745,6 @@ Returns an iterator that contains all the values in this HashMap.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashMap-values(): IterableIterator<V>--><!--Device-HashMap-values(): IterableIterator<V>-End-->
@@ -843,7 +763,7 @@ Returns an iterator that contains all the values in this HashMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let hashMap = new HashMap<string, number>();
@@ -868,10 +788,6 @@ Number of elements in a HashMap.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,10 +4,6 @@ Provides index management capabilities, such as obtaining the locale index list 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class IndexUtil--><!--Device-i18n-export class IndexUtil-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Adds the index list of a new locale to the index list of the current locale to f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IndexUtil-addLocale(locale: string): void--><!--Device-IndexUtil-addLocale(locale: string): void-End-->
@@ -44,7 +36,7 @@ Adds the index list of a new locale to the index list of the current locale to f
 | --- | --- | --- | --- |
 | locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -62,10 +54,6 @@ getIndex(text: string): string
 Obtains the index of the **text** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -85,7 +73,7 @@ Obtains the index of the **text** object.
 | --- | --- |
 | string | Index of the **text** object. If no proper index is found, an empty string is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -104,10 +92,6 @@ Obtains the index list of the current locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IndexUtil-getIndexList(): Array<string>--><!--Device-IndexUtil-getIndexList(): Array<string>-End-->
@@ -120,7 +104,7 @@ Obtains the index list of the current locale.
 | --- | --- |
 | Array&lt;string&gt; | Index list of the current locale. The first and last elements are **...**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

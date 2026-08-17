@@ -16,10 +16,6 @@ Stops synchronizing the remote mission list. This API uses an asynchronous callb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -44,7 +40,7 @@ Stops synchronizing the remote mission list. This API uses an asynchronous callb
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
@@ -78,10 +74,6 @@ Stops synchronizing the remote mission list. This API uses a promise to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -111,7 +103,7 @@ Stops synchronizing the remote mission list. This API uses a promise to return t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';

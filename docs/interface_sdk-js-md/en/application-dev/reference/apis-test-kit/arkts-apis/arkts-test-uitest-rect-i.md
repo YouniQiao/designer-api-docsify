@@ -4,10 +4,6 @@ Represents the rectangle area on the device screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface Rect--><!--Device-unnamed-declare interface Rect-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -58,10 +54,6 @@ Y coordinate of the lower right corner of the component border, in pixels. The v
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Rect-bottom: int--><!--Device-Rect-bottom: int-End-->
@@ -79,10 +71,6 @@ ID of the display to which the component border belongs. The value is an integer
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -102,10 +90,6 @@ X coordinate of the upper left corner of the component border, in pixels. The va
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Rect-left: int--><!--Device-Rect-left: int-End-->
@@ -124,10 +108,6 @@ X coordinate of the lower right corner of the component border, in pixels. The v
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Rect-right: int--><!--Device-Rect-right: int-End-->
@@ -145,10 +125,6 @@ Y coordinate of the upper left corner of the component border, in pixels. The va
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

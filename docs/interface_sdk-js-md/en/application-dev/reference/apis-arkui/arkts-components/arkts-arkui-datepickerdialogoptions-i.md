@@ -1,14 +1,10 @@
 # DatePickerDialogOptions
 
-Defines the configuration options of the date picker dialog box. Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions).
+Defines the configuration options of the date picker dialog box. Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#datepickeroptions).
 
-**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions)
+**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#datepickeroptions)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface DatePickerDialogOptions--><!--Device-unnamed-declare interface DatePickerDialogOptions-End-->
 
@@ -25,10 +21,6 @@ Style of the accept button. **NOTE：**1. In **acceptButtonStyle** and **cancelB
 **Type:** PickerDialogButtonStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Alignment mode of the dialog box in the vertical direction. Default value: **Dia
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -78,10 +66,6 @@ Background blur style of the dialog box. Default value: **BlurStyle.COMPONENT_UL
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -101,10 +85,6 @@ Options for customizing the background blur style.
 **Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Backplane color of the dialog box. Default value: **Color.Transparent** **NOTE�
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -151,10 +127,6 @@ Options for customizing the background effect.
 **Type:** BackgroundEffectOptions
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +150,6 @@ Whether to enable cyclic scrolling. Default value: **true** **NOTE：****true**:
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -201,10 +169,6 @@ Style of the cancel button. **NOTE：**1. In **acceptButtonStyle** and **cancelB
 **Type:** PickerDialogButtonStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,10 +192,6 @@ Whether to display a leading zero for the hours and minutes. Currently only the 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -253,10 +213,6 @@ Text color, font size, and font weight of edge items (the second item above or b
 **Default:** { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -280,10 +236,6 @@ Whether to enable haptic feedback. - **true**: Enable haptic feedback. - **false
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -305,10 +257,6 @@ Whether to respond when the device is in semi-folded mode. - **true**: Respond w
 **Default:** false - meaning not to enable the hover mode.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -332,10 +280,6 @@ Display area of the dialog box when the device is in semi-folded mode. Default v
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -358,10 +302,6 @@ Whether to display dates in lunar calendar format. - **true**: Display dates in 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DatePickerDialogOptions-lunar?: boolean--><!--Device-DatePickerDialogOptions-lunar?: boolean-End-->
@@ -381,10 +321,6 @@ Whether to display the lunar calendar switch. - **true**: Display the lunar cale
 **Default:** false [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -408,10 +344,6 @@ Style of the lunar calendar switch. Default value: { selectedColor: `\$r('sys.co
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -433,10 +365,6 @@ Mask area of the dialog box. Events outside the mask area are transparently tran
 **Default:** { x: 0, y: 0, width: '100%', height: '100%' } [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -460,10 +388,6 @@ Offset of the dialog box based on the **alignment** settings. Default value: **{
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -484,11 +408,9 @@ Callback invoked when the OK button in the dialog box is clicked. **NOTE：**Thi
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 10
 
-**Substitutes:** [onDateAccept](../../apis-na/arkts-apis/arkts-na-datepicker-datepickerdialogoptions-i.md#onDateAccept)
+**Substitutes:** [onDateAccept](../../apis-na/arkts-apis/arkts-na-datepicker-datepickerdialogoptions-i.md#ondateaccept)
 
 <!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void-End-->
 
@@ -505,10 +427,6 @@ Callback invoked when the Cancel button in the dialog box is clicked.
 **Type:** VoidCallback
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -528,11 +446,9 @@ Callback invoked when the selected item in the picker changes. **NOTE：**This A
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 10
 
-**Substitutes:** [onDateChange](../../apis-na/arkts-apis/arkts-na-datepicker-datepickerdialogoptions-i.md#onDateChange)
+**Substitutes:** [onDateChange](../../apis-na/arkts-apis/arkts-na-datepicker-datepickerdialogoptions-i.md#ondatechange)
 
 <!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void-End-->
 
@@ -549,10 +465,6 @@ Callback invoked when the OK button in the dialog box is clicked. **NOTE：**Whe
 **Type:** Callback&lt;Date&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -574,10 +486,6 @@ Callback triggered when date selection changes through scrolling in the dialog b
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -597,10 +505,6 @@ Event callback after the dialog box appears. **NOTE：**1. The normal timing seq
 **Type:** VoidCallback
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -622,10 +526,6 @@ Event callback after the dialog box disappears. **NOTE：**1. The normal timing 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -646,10 +546,6 @@ Event callback when the dialog box is about to appear. **NOTE：**1. The normal 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -669,10 +565,6 @@ Event callback when the dialog box is about to disappear. **NOTE：**1. The norm
 **Type:** VoidCallback
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -696,10 +588,6 @@ Text color, font size, and font weight of the selected item. Default value: { co
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -719,10 +607,6 @@ Shadow of the dialog box. Default value on 2-in-1 devices: **ShadowStyle.OUTER_F
 **Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -746,10 +630,6 @@ Whether to display the time picker in the dialog box. - **true**: Display the ti
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -769,10 +649,6 @@ Set system-styled materials for dialog. Different materials have different effec
 **Type:** SystemUiMaterial
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -796,10 +672,6 @@ Text color, font size, and font weight of candidate items (the first item immedi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -821,10 +693,6 @@ Whether the time picker in the dialog box is in 24-hour format. This parameter h
 **Default:** false [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

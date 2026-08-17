@@ -10,10 +10,6 @@ Provide the domain name for device shared Key. &lt;p&gt;This constants is a doma
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-domainName-const DEVICE_SHARED: string--><!--Device-domainName-const DEVICE_SHARED: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -27,10 +23,6 @@ const USER_PROPERTY: string
 Provide the domain name for user property. &lt;p&gt;This constants is a domain name for user level key.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-domainName-const USER_PROPERTY: string--><!--Device-domainName-const USER_PROPERTY: string-End-->
 

@@ -4,10 +4,6 @@ P2P device information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface WifiP2pDevice--><!--Device-wifiManager-interface WifiP2pDevice-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -30,10 +26,6 @@ Device mac address
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiP2pDevice-deviceAddress: string--><!--Device-WifiP2pDevice-deviceAddress: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -49,10 +41,6 @@ Device mac address type
 **Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiP2pDevice-deviceAddressType?: DeviceAddressType--><!--Device-WifiP2pDevice-deviceAddressType?: DeviceAddressType-End-->
 
@@ -70,10 +58,6 @@ Device name
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiP2pDevice-deviceName: string--><!--Device-WifiP2pDevice-deviceName: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -89,10 +73,6 @@ Device status
 **Type:** P2pDeviceStatus
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus--><!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus-End-->
 
@@ -110,10 +90,6 @@ Device group capabilities
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiP2pDevice-groupCapabilities: int--><!--Device-WifiP2pDevice-groupCapabilities: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -129,10 +105,6 @@ Primary device type
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiP2pDevice-primaryDeviceType: string--><!--Device-WifiP2pDevice-primaryDeviceType: string-End-->
 

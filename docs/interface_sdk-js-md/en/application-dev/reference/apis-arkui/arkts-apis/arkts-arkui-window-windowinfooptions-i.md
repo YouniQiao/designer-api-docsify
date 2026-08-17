@@ -4,10 +4,6 @@ Filter criteria for window information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface WindowInfoOptions--><!--Device-window-interface WindowInfoOptions-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -32,10 +28,6 @@ Whether the result excludes system windows. If true, the result list does not in
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -58,10 +50,6 @@ Only include windows with a higher z-order than the specified window ID. When th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -83,10 +71,6 @@ Only include windows with a lower z-order than the specified window ID. When thi
 **Default:** 0
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

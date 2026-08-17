@@ -1,12 +1,8 @@
-# Advertisement
+# Advertisement(Defines the advertisement data model)
 
 This module provides the requested ad content.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Advertisement--><!--Device-unnamed-export interface Advertisement-End-->
 
@@ -23,10 +19,6 @@ Ad type. - 1: Splash ad. - 3: Native ad. - 7: Rewarded ad. - 8: Banner ad. - 12:
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,10 +38,6 @@ Whether the ad is clicked. - **true**: The ad is clicked. - **false**: The ad is
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Advertisement-clicked: boolean--><!--Device-Advertisement-clicked: boolean-End-->
@@ -67,10 +55,6 @@ Server verification parameters. { customData: "test", userId: "12345" }
 **Type:** Map&lt;string, string&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,10 +74,6 @@ Whether users get rewarded for watching or clicking the ad. - **true**: Users ge
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Advertisement-rewarded: boolean--><!--Device-Advertisement-rewarded: boolean-End-->
@@ -112,10 +92,6 @@ Whether the ad is shown. - **true**: The ad is shown. - **false**: The ad is not
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Advertisement-shown: boolean--><!--Device-Advertisement-shown: boolean-End-->
@@ -133,10 +109,6 @@ Unique ID of the ad.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,12 +1,8 @@
 # AvoidArea
 
-窗口内容的避让区域。 窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照 [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)对应的AvoidArea做窗口内容避让。 在避让区域内，应用窗口内容被遮挡且无法响应用户点击事件。 > **说明：** > > 示意图展示了leftRect、topRect、rightRect、bottomRect的含义。 > > 
+窗口内容的避让区域。 窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照 [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)对应的AvoidArea做窗口内容避让。 在避让区域内，应用窗口内容被遮挡且无法响应用户点击事件。 > **说明：** > > 示意图展示了leftRect、topRect、rightRect、bottomRect的含义。 > > 
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-window-interface AvoidArea--><!--Device-window-interface AvoidArea-End-->
 
@@ -23,10 +19,6 @@ bottomRect: Rect
 **类型：** Rect
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ leftRect: Rect
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AvoidArea-leftRect: Rect--><!--Device-AvoidArea-leftRect: Rect-End-->
@@ -67,10 +55,6 @@ rightRect: Rect
 **类型：** Rect
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,10 +74,6 @@ topRect: Rect
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AvoidArea-topRect: Rect--><!--Device-AvoidArea-topRect: Rect-End-->
@@ -111,10 +91,6 @@ visible: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

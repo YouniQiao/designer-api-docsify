@@ -10,10 +10,6 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_SELF_SKILLS
 
 <!--Device-bundleManager-function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void--><!--Device-bundleManager-function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void-End-->
@@ -28,7 +24,7 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 表示模块的名称。 |
 | abilityName | string | 是 | 表示UIAbility组件的名称。 |
-| fileTypes | Array&lt;string&gt; | 是 | 表示文件类型。fileTypes数组长度不能超过1024，每个元素不能超过512个字符，元素取值为 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)中的值，元素不能为空、通配符、 general.object。 |
+| fileTypes | Array&lt;string&gt; | 是 | 表示文件类型。fileTypes数组长度不能超过1024，每个元素不能超过512个字符，元素取值为 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)中的值，元素不能为空、通配符、 general.object。 |
 
 **错误码：**
 
@@ -40,7 +36,7 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

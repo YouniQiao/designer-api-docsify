@@ -1,14 +1,10 @@
 # Focus
 
-**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery). It provides APIs related to focus operations.
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md#focusquery). It provides APIs related to focus operations.
 
-**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery)
+**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md#focusquery)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface Focus--><!--Device-camera-interface Focus-End-->
 
@@ -29,10 +25,6 @@ getFocalLength(): double
 Obtains the focal length in use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -62,10 +54,6 @@ Obtains the focus mode in use.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-Focus-getFocusMode(): FocusMode--><!--Device-Focus-getFocusMode(): FocusMode-End-->
@@ -93,10 +81,6 @@ getFocusPoint(): Point
 Obtains the focal point in use.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -126,10 +110,6 @@ Lock focus tracking.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -157,13 +137,9 @@ Lock focus tracking.
 setFocusMode(afMode: FocusMode): void
 ```
 
-Sets a focus mode. Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isFocusModeSupported) to check whether the focus mode is supported.
+Sets a focus mode. Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported) to check whether the focus mode is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -193,10 +169,6 @@ Sets the focal point. The focal point must be in the coordinate system (0-1), wh
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-Focus-setFocusPoint(point: Point): void--><!--Device-Focus-setFocusPoint(point: Point): void-End-->
@@ -224,10 +196,6 @@ unlockFocusTracking(): void
 Unlock focus tracking.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

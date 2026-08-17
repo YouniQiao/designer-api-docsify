@@ -10,10 +10,6 @@ function getTask(context: BaseContext, id: string, token?: string): Promise<Task
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-function getTask(context: BaseContext, id: string, token?: string): Promise<Task>--><!--Device-agent-function getTask(context: BaseContext, id: string, token?: string): Promise<Task>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -40,7 +36,7 @@ function getTask(context: BaseContext, id: string, token?: string): Promise<Task
 | [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-操作不存在的任务错误) | Task removed or not found. |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
-## 示例
+**示例**
 
 ArkTS-Sta示例：
 

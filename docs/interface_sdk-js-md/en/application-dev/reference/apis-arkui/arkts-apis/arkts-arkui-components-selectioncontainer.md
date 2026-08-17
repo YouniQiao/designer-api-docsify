@@ -48,6 +48,6 @@ import { SelectionContainerController } from 'SelectionContainerController';
 
 | Name | Description |
 | --- | --- |
-| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md#SelectionContainer) | Defines SelectionContainer component. |
-| [SelectionContainerInstance](arkts-arkui-arkui-components-selectioncontainer-con.md#SelectionContainerInstance) | Defines SelectionContainer component instance. |
+| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainer) | Defines SelectionContainer component. |
+| [SelectionContainerInstance](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainerinstance) | Defines SelectionContainer component instance. |
 

@@ -16,8 +16,6 @@ Unsubscribe Wi-Fi status change events. &lt;p&gt;All callback functions will be 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** wifiStateChange
@@ -35,7 +33,7 @@ Unsubscribe Wi-Fi status change events. &lt;p&gt;All callback functions will be 
 | type | 'wifiStateChange' | Yes | event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

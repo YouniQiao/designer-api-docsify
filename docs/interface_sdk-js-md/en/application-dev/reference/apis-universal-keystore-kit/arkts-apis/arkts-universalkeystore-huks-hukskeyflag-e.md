@@ -4,10 +4,6 @@ Enumerates the key generation modes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-huks-export enum HuksKeyFlag--><!--Device-huks-export enum HuksKeyFlag-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -21,10 +17,6 @@ HUKS_KEY_FLAG_IMPORT_KEY = 1
 Import a key using an API.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Generate a key by using an API.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyFlag-HUKS_KEY_FLAG_GENERATE_KEY = 2--><!--Device-HuksKeyFlag-HUKS_KEY_FLAG_GENERATE_KEY = 2-End-->
@@ -62,10 +50,6 @@ Generate a key by using a key agreement API.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyFlag-HUKS_KEY_FLAG_AGREE_KEY = 3--><!--Device-HuksKeyFlag-HUKS_KEY_FLAG_AGREE_KEY = 3-End-->
@@ -81,10 +65,6 @@ HUKS_KEY_FLAG_DERIVE_KEY = 4
 Derive a key by using an API.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

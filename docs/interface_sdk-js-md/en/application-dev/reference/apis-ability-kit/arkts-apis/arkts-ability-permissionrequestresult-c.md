@@ -1,12 +1,8 @@
 # PermissionRequestResult
 
-PermissionRequestResult is the result object of a permission request. Developers need to first create an atManager instance, and then call the requestPermissionsFromUser method to request permissions. This method returns a PermissionRequestResult object, through which developers can determine the permission request result based on its properties. For details about the overall permission request process and atManager, see [@ohos.abilityAccessCtrl (Application Access Control)](arkts-ability-abilityaccessctrl-n.md#abilityAccessCtrl).
+PermissionRequestResult is the result object of a permission request. Developers need to first create an atManager instance, and then call the requestPermissionsFromUser method to request permissions. This method returns a PermissionRequestResult object, through which developers can determine the permission request result based on its properties. For details about the overall permission request process and atManager, see [@ohos.abilityAccessCtrl (Application Access Control)](arkts-ability-abilityaccessctrl-n.md#abilityaccessctrl).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class PermissionRequestResult--><!--Device-unnamed-declare class PermissionRequestResult-End-->
 
@@ -23,10 +19,6 @@ Authorization result corresponding to each requested permission. - -1: Not autho
 **Type:** Array&lt;int&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ Indicates whether an authorization dialog was actually shown for each permission
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -72,10 +60,6 @@ Reason code corresponding to each permission request. Mainly used to explain the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -95,10 +79,6 @@ Array of permissions to be requested this time. **Atomic service API:** Starting
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

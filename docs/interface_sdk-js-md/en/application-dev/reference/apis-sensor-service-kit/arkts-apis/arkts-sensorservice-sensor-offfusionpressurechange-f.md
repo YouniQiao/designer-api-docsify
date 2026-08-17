@@ -16,10 +16,6 @@ Unsubscribe to fusion pressure sensor data, {@code SensorId.FUSION_PRESSURE}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function offFusionPressureChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<FusionPressureResponse>): void--><!--Device-sensor-function offFusionPressureChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<FusionPressureResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

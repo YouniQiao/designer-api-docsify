@@ -1,12 +1,8 @@
 # VerifyPinEvent
 
-Defines the event for PIN verification.
+Defines the callback triggered to notify the user of PIN verification.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface VerifyPinEvent--><!--Device-unnamed-declare interface VerifyPinEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the event for PIN verification.
 handler: VerifyPinHandler
 ```
 
-Handle the result of PIN verification.
+User operation.
 
 **Type:** [VerifyPinHandler](arkts-arkweb-verifypinhandler-c.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-VerifyPinEvent-handler: VerifyPinHandler--><!--Device-VerifyPinEvent-handler: VerifyPinHandler-End-->
 
@@ -38,15 +30,11 @@ Handle the result of PIN verification.
 identity: string
 ```
 
-The identity of the Credential.
+Certificate credential ID used for verification.
 
 **Type:** string
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-VerifyPinEvent-identity: string--><!--Device-VerifyPinEvent-identity: string-End-->
 

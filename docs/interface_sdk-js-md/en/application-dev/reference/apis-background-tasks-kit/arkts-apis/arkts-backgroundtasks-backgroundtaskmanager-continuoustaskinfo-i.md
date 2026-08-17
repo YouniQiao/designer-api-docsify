@@ -4,10 +4,6 @@ Describes the continuous task information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backgroundTaskManager-interface ContinuousTaskInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -30,10 +26,6 @@ UIAbility ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ContinuousTaskInfo-abilityId: int--><!--Device-ContinuousTaskInfo-abilityId: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -49,10 +41,6 @@ UIAbility name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousTaskInfo-abilityName: string--><!--Device-ContinuousTaskInfo-abilityName: string-End-->
 
@@ -70,10 +58,6 @@ Index of an application clone.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-ContinuousTaskInfo-appIndex?: int--><!--Device-ContinuousTaskInfo-appIndex?: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -84,15 +68,11 @@ Index of an application clone.
 backgroundModes: string[]
 ```
 
-[Type of a continuous task](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#BackgroundMode).
+[Type of a continuous task](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#backgroundmode).
 
 **Type:** string[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousTaskInfo-backgroundModes: string[]--><!--Device-ContinuousTaskInfo-backgroundModes: string[]-End-->
 
@@ -104,15 +84,11 @@ backgroundModes: string[]
 backgroundSubModes: string[]
 ```
 
-[Subtype of a continuous task](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md#BackgroundSubMode).
+[Subtype of a continuous task](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md#backgroundsubmode).
 
 **Type:** string[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousTaskInfo-backgroundSubModes: string[]--><!--Device-ContinuousTaskInfo-backgroundSubModes: string[]-End-->
 
@@ -130,10 +106,6 @@ Application bundle name.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-ContinuousTaskInfo-bundleName?: string--><!--Device-ContinuousTaskInfo-bundleName?: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -149,10 +121,6 @@ Continuous task ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousTaskInfo-continuousTaskId: int--><!--Device-ContinuousTaskInfo-continuousTaskId: int-End-->
 
@@ -170,10 +138,6 @@ Whether to request a continuous task in WebView mode, that is, whether to reques
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ContinuousTaskInfo-isFromWebView: boolean--><!--Device-ContinuousTaskInfo-isFromWebView: boolean-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -189,10 +153,6 @@ Notification ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousTaskInfo-notificationId: int--><!--Device-ContinuousTaskInfo-notificationId: int-End-->
 
@@ -210,10 +170,6 @@ Application PID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ContinuousTaskInfo-pid: int--><!--Device-ContinuousTaskInfo-pid: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -229,10 +185,6 @@ Whether the requested continuous task is suspended. The value **true** indicates
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousTaskInfo-suspendState: boolean--><!--Device-ContinuousTaskInfo-suspendState: boolean-End-->
 
@@ -250,10 +202,6 @@ Application UID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ContinuousTaskInfo-uid: int--><!--Device-ContinuousTaskInfo-uid: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -264,15 +212,11 @@ Application UID.
 wantAgentAbilityName: string
 ```
 
-Ability name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md#wantAgent). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
+Ability name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md#wantagent). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousTaskInfo-wantAgentAbilityName: string--><!--Device-ContinuousTaskInfo-wantAgentAbilityName: string-End-->
 
@@ -284,15 +228,11 @@ Ability name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-a
 wantAgentBundleName: string
 ```
 
-Bundle name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md#wantAgent). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
+Bundle name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md#wantagent). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousTaskInfo-wantAgentBundleName: string--><!--Device-ContinuousTaskInfo-wantAgentBundleName: string-End-->
 

@@ -1,12 +1,8 @@
 # NativeEmbedTouchInfo
 
-Provides touch information of the same-layer tag.
+Provides detailed information about finger touch on a same-layer tag, including the tag ID and touch event. It is suitable for scenarios where handling same-layer element touch interaction is required, improving touch experience customization and flexibility.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface NativeEmbedTouchInfo--><!--Device-unnamed-declare interface NativeEmbedTouchInfo-End-->
 
@@ -23,10 +19,6 @@ Unique ID of the same-layer tag.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ Gesture event consumption result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeEmbedTouchInfo-result?: EventResult--><!--Device-NativeEmbedTouchInfo-result?: EventResult-End-->
@@ -67,10 +55,6 @@ Touch action information.
 **Type:** TouchEvent
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

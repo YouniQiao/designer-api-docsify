@@ -16,10 +16,6 @@ Converts relative coordinates (based on the top-left corner of the screen) into 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-display-function convertRelativeToGlobalCoordinate(relativePosition: RelativePosition): Position--><!--Device-display-function convertRelativeToGlobalCoordinate(relativePosition: RelativePosition): Position-End-->
@@ -45,7 +41,7 @@ Converts relative coordinates (based on the top-left corner of the screen) into 
 | [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { display } from '@kit.ArkUI';

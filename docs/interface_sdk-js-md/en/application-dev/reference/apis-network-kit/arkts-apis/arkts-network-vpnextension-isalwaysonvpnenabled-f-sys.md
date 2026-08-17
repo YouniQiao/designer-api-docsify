@@ -16,10 +16,6 @@ Get the Always on VPN mode status for a device.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 **Model restriction:** This API can be used only in the stage model.

@@ -16,10 +16,6 @@ Checks whether DND mode is supported. This API uses an asynchronous callback to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void-End-->
@@ -46,7 +42,7 @@ Checks whether DND mode is supported. This API uses an asynchronous callback to 
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,10 +69,6 @@ Checks whether DND mode is supported. This API uses a promise to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function isSupportDoNotDisturbMode(): Promise<boolean>--><!--Device-notificationManager-function isSupportDoNotDisturbMode(): Promise<boolean>-End-->
@@ -102,7 +94,7 @@ Checks whether DND mode is supported. This API uses a promise to return the resu
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

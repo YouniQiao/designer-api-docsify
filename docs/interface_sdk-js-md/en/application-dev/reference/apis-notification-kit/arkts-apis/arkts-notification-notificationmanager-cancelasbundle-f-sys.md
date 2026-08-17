@@ -21,10 +21,6 @@ Cancels a notification published through the reminder agent. This API uses an as
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
 <!--Device-notificationManager-function cancelAsBundle(    id: int,    representativeBundle: string,    userId: int,    callback: AsyncCallback<void>  ): void--><!--Device-notificationManager-function cancelAsBundle(    id: int,    representativeBundle: string,    userId: int,    callback: AsyncCallback<void>  ): void-End-->
@@ -56,7 +52,7 @@ Cancels a notification published through the reminder agent. This API uses an as
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -86,10 +82,6 @@ function cancelAsBundle(id: int, representativeBundle: string, userId: int): Pro
 Cancels a notification published through the reminder agent. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -127,7 +119,7 @@ Cancels a notification published through the reminder agent. This API uses a pro
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -153,10 +145,6 @@ function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<vo
 Cancels a notification published through the reminder agent. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -194,7 +182,7 @@ Cancels a notification published through the reminder agent. This API uses a pro
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

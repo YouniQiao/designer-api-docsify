@@ -16,8 +16,6 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
@@ -71,7 +69,7 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -102,8 +100,6 @@ function getFileAccessAbilityInfo(): Promise<Array<Want>>
 Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -158,7 +154,7 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

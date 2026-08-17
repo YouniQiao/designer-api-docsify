@@ -16,10 +16,6 @@ Destroys a timer. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemTimer-function destroyTimer(timer: long, callback: AsyncCallback<void>): void--><!--Device-systemTimer-function destroyTimer(timer: long, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -40,7 +36,7 @@ Destroys a timer. This API uses an asynchronous callback to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -84,10 +80,6 @@ Destroys a timer. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemTimer-function destroyTimer(timer: long): Promise<void>--><!--Device-systemTimer-function destroyTimer(timer: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -113,7 +105,7 @@ Destroys a timer. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

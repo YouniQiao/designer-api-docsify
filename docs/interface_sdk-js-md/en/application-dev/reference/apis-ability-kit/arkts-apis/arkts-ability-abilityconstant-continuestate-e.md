@@ -1,12 +1,8 @@
 # ContinueState
 
-Enumerates the mission continuation states of the application. It is used in the [setMissionContinueState](arkts-ability-uiabilitycontext-c.md#setMissionContinueState) API of [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#UIAbilityContext).
+Enumerates the mission continuation states of the application. It is used in the [setMissionContinueState](arkts-ability-uiabilitycontext-c.md#setmissioncontinuestate) API of [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#uiabilitycontext).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AbilityConstant-export enum ContinueState--><!--Device-AbilityConstant-export enum ContinueState-End-->
 
@@ -21,10 +17,6 @@ ACTIVE = 0
 Mission continuation is activated for the current application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ INACTIVE = 1
 Mission continuation is not activated for the current application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,11 +10,9 @@ function registerMissionListener(listener: MissionListener): number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** on
+**替代接口：** [on](arkts-ability-missionmanager-onmission-f-sys.md#onmission)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -36,7 +34,7 @@ function registerMissionListener(listener: MissionListener): number
 | --- | --- |
 | number | 监听器的index值，由系统创建，在注册系统任务状态监听器时分配，和监听器一一对应 。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

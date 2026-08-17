@@ -1,12 +1,10 @@
-# RequestData
+# RequestData(Upload and Download)
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [RequestData](arkts-basicservices-request-requestdata-i.md#RequestData)
+**Substitutes:** [RequestData](arkts-basicservices-request-requestdata-i.md#requestdata)
 
 <!--Device-unnamed-export interface RequestData--><!--Device-unnamed-export interface RequestData-End-->
 
@@ -37,8 +35,6 @@ Name of the form element.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** name
@@ -58,8 +54,6 @@ Value of the form element.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

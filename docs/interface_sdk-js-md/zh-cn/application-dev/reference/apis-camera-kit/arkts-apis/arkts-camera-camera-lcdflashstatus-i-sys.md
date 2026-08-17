@@ -4,10 +4,6 @@ Describes the LCD flash information.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-camera-interface LcdFlashStatus--><!--Device-camera-interface LcdFlashStatus-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -26,10 +22,6 @@ Whether the LCD flash is required. **true** if required, **false** otherwise.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-LcdFlashStatus-readonly isLcdFlashNeeded: boolean--><!--Device-LcdFlashStatus-readonly isLcdFlashNeeded: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -47,10 +39,6 @@ LCD flash compensation.
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-LcdFlashStatus-readonly lcdCompensation: int--><!--Device-LcdFlashStatus-readonly lcdCompensation: int-End-->
 

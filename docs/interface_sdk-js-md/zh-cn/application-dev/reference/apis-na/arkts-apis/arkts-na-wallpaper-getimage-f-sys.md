@@ -10,10 +10,6 @@ function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.Pi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_WALLPAPER
 
 <!--Device-wallpaper-function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void--><!--Device-wallpaper-function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void-End-->
@@ -27,7 +23,7 @@ function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.Pi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-na-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数，调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | 回调函数，调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
 
 **错误码：**
 
@@ -37,7 +33,7 @@ function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.Pi
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -62,10 +58,6 @@ function getImage(wallpaperType: WallpaperType): Promise<image.PixelMap>
 获取壁纸图片的像素图，且只能获取使用setImage设置的静态壁纸。使用promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_WALLPAPER
 
@@ -95,7 +87,7 @@ function getImage(wallpaperType: WallpaperType): Promise<image.PixelMap>
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

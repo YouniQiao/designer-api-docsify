@@ -17,11 +17,9 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformRotationMatrix)(inRotationVector: Array&lt;double&gt;, coordinates: CoordinatesOptions, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
+**Substitutes:** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformrotationmatrix)(inRotationVector: Array&lt;double&gt;, coordinates: CoordinatesOptions, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
 
 <!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions,    callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions,    callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -35,7 +33,7 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 | coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | Yes | Direction of the coordinate system. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation vector after being rotated. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -65,11 +63,9 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformRotationMatrix)(inRotationVector: Array&lt;double&gt;, coordinates: CoordinatesOptions)
+**Substitutes:** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformrotationmatrix)(inRotationVector: Array&lt;double&gt;, coordinates: CoordinatesOptions)
 
 <!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions): Promise<Array<number>>--><!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions): Promise<Array<number>>-End-->
 
@@ -88,7 +84,7 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 | --- | --- |
 | Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the rotation vector after being rotated. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

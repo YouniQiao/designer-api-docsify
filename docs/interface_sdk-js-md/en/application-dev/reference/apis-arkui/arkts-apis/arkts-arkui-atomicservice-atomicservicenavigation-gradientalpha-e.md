@@ -4,10 +4,6 @@ Enumerates the opacity levels of the navigation bar background.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum GradientAlpha--><!--Device-unnamed-export declare enum GradientAlpha-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ OPACITY_20 = 1
 0.2 opacity.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -42,10 +34,6 @@ OPACITY_60 = 2
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-GradientAlpha-OPACITY_60 = 2--><!--Device-GradientAlpha-OPACITY_60 = 2-End-->
@@ -62,10 +50,6 @@ OPACITY_80 = 3
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-GradientAlpha-OPACITY_80 = 3--><!--Device-GradientAlpha-OPACITY_80 = 3-End-->
@@ -81,10 +65,6 @@ OPACITY_100 = 4
 1.0 opacity.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

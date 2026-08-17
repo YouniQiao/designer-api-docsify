@@ -2,9 +2,7 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-unnamed-class Animator--><!--Device-unnamed-class Animator-End-->
 
@@ -18,9 +16,7 @@ Create an animator object for custom animation. This interface depends on the UI
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,13 +28,13 @@ Create an animator object for custom animation. This interface depends on the UI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Options. |
+| options | [AnimatorOptions](arkts-na-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](../../apis-arkui/arkts-apis/arkts-arkui-animator-animatorresult-i.md) | animator result |
+| [AnimatorResult](arkts-na-animator-animatorresult-i.md) | animator result |
 
 **Error codes:**
 

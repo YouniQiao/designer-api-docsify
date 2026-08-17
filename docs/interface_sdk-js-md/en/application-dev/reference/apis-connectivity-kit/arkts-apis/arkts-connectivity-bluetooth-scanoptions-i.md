@@ -4,11 +4,9 @@ Describes the parameters for scan.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md#ScanOptions)
+**Substitutes:** [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md#scanoptions)
 
 <!--Device-bluetooth-interface ScanOptions--><!--Device-bluetooth-interface ScanOptions-End-->
 
@@ -32,11 +30,9 @@ Bluetooth LE scan mode
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [dutyMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#dutyMode)
+**Substitutes:** [dutyMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#dutymode)
 
 <!--Device-ScanOptions-dutyMode?: ScanDuty--><!--Device-ScanOptions-dutyMode?: ScanDuty-End-->
 
@@ -53,8 +49,6 @@ Time of delay for reporting the scan result
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,11 +70,9 @@ Match mode for Bluetooth LE scan filters hardware match
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [matchMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#matchMode)
+**Substitutes:** [matchMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#matchmode)
 
 <!--Device-ScanOptions-matchMode?: MatchMode--><!--Device-ScanOptions-matchMode?: MatchMode-End-->
 

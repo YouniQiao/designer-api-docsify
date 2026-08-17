@@ -8,10 +8,6 @@ The callback was called when both ability and window stage are registered for li
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-type WindowStageCallbackFn = (ability: Any, windowStage: window.WindowStage) => void--><!--Device-unnamed-type WindowStageCallbackFn = (ability: Any, windowStage: window.WindowStage) => void-End-->

@@ -1,12 +1,8 @@
 # VibratorCurvePoint
 
-相对事件振动强度的增益。用于[ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md#ContinuousParam)和[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md#VibratorEvent)的 points字段，精细控制振动强度和频率的变化趋势。
+相对事件振动强度的增益。用于[ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md#continuousparam)和[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md#vibratorevent)的 points字段，精细控制振动强度和频率的变化趋势。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-vibrator-interface VibratorCurvePoint--><!--Device-vibrator-interface VibratorCurvePoint-End-->
 
@@ -24,10 +20,6 @@ frequency?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VibratorCurvePoint-frequency?: int--><!--Device-VibratorCurvePoint-frequency?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
@@ -44,10 +36,6 @@ intensity?: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VibratorCurvePoint-intensity?: double--><!--Device-VibratorCurvePoint-intensity?: double-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
@@ -63,10 +51,6 @@ time: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VibratorCurvePoint-time: int--><!--Device-VibratorCurvePoint-time: int-End-->
 

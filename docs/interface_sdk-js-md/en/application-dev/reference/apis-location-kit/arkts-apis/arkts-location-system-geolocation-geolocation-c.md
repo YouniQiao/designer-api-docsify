@@ -2,11 +2,9 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [geoLocationManager/geoLocationManager](arkts-geolocationmanager.md#@ohos.geoLocationManager)
+**Substitutes:** [geoLocationManager/geoLocationManager](arkts-geolocationmanager.md#ohosgeolocationmanager)
 
 <!--Device-unnamed-export default class Geolocation--><!--Device-unnamed-export default class Geolocation-End-->
 
@@ -32,11 +30,9 @@ Obtains the geographic location.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getCurrentLocation)
+**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -62,8 +58,6 @@ Obtains the location types supported by the system.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -88,8 +82,6 @@ Obtains the supported coordinate system types.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -113,8 +105,6 @@ static subscribe(options: SubscribeLocationOption): void
 Listens to the geographical location. If this method is called multiple times, the last call takes effect.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -143,8 +133,6 @@ static unsubscribe(): void
 Cancels listening to the geographical location.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

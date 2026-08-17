@@ -6,10 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface LayoutManager--><!--Device-unnamed-declare interface LayoutManager-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +16,9 @@
 getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | undefined
 ```
 
-获取距离指定坐标最近的字符的位置信息。 > **说明：** > > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用 > [getGlyphPositionAtCoordinate](#getGlyphPositionAtCoordinate)方法。 > > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
+获取距离指定坐标最近的字符的位置信息。 > **说明：** > > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用 > [getGlyphPositionAtCoordinate](#getglyphpositionatcoordinate)方法。 > > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,10 +52,6 @@ getCharacterPositionAtCoordinate(
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -96,10 +84,6 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -130,10 +114,6 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -161,13 +141,9 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 ```
 
-获取较为接近给定坐标的字形的位置信息。 > **说明：** > > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用 > [getCharacterPositionAtCoordinate](#getCharacterPositionAtCoordinate)方法。 > > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
+获取较为接近给定坐标的字形的位置信息。 > **说明：** > > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用 > [getCharacterPositionAtCoordinate](#getcharacterpositionatcoordinate)方法。 > > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,10 +176,6 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -233,10 +205,6 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 根据指定编码类型和文本字符范围，获取字形范围以及实际的字符范围。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -269,10 +237,6 @@ getLineCount(): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -296,10 +260,6 @@ getLineMetrics(lineNumber: number): LineMetrics
 获取指定行的行信息、文本样式信息、以及字体属性信息。 > **说明：** > > 文本内容变更后，需等待布局完成才可获取到最新的行信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -330,10 +290,6 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 根据给定的矩形区域宽度样式和高度样式，获取文本中任意区间范围内的字符或占位符所占的绘制区域信息。 > **说明：** > > 文本内容变更后，需等待布局完成才可获取到最新的绘制区域信息。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

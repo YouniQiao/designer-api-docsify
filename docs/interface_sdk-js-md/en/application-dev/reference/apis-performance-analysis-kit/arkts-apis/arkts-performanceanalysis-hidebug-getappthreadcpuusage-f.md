@@ -16,10 +16,6 @@ Obtains the CPU usage of application threads. > **NOTE：**> > This API involves
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]--><!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ Obtains the CPU usage of application threads. > **NOTE：**> > This API involves
 | --- | --- |
 | [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] | CPU usage of all threads of the current application process. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

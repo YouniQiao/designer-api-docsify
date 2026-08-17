@@ -12,11 +12,9 @@ import { componentSnapshot } from 'componentSnapshot';
 function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: SnapshotOptions): void
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot) > API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot) > object associated with the current UI context. > > - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
+Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) > API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#componentsnapshot) > object associated with the current UI context. > > - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 18
 
@@ -45,7 +43,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { componentSnapshot } from '@kit.ArkUI';
@@ -95,11 +93,9 @@ struct SnapshotExample {
 function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses a promise to return the result. > **NOTE：**> > - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot) > API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot) > object associated with the current UI context. > > - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
+Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses a promise to return the result. > **NOTE：**> > - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot) > API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#componentsnapshot) > object associated with the current UI context. > > - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 18
 
@@ -133,7 +129,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { componentSnapshot } from '@kit.ArkUI';

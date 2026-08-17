@@ -4,10 +4,6 @@ Control class for backup procedure.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backup-class SessionBackup--><!--Device-backup-class SessionBackup-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -29,10 +25,6 @@ appendBundles(bundlesToBackup: string[], infos?: string[]): Promise<void>
 Append new bundles and backupInfos to backup.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -67,7 +59,7 @@ Append new bundles and backupInfos to backup.
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -182,10 +174,6 @@ Append new bundles to backup.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionBackup-appendBundles(bundlesToBackup: string[], callback: AsyncCallback<void>): void--><!--Device-SessionBackup-appendBundles(bundlesToBackup: string[], callback: AsyncCallback<void>): void-End-->
@@ -213,7 +201,7 @@ Append new bundles to backup.
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -287,10 +275,6 @@ cancel the application being backup.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionBackup-cancel(bundleName: string): int--><!--Device-SessionBackup-cancel(bundleName: string): int-End-->
@@ -319,7 +303,7 @@ cancel the application being backup.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -383,10 +367,6 @@ Provides an interface for the tool to clear temporary directories
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionBackup-cleanBundleTempDir(bundleName: string): Promise<boolean>--><!--Device-SessionBackup-cleanBundleTempDir(bundleName: string): Promise<boolean>-End-->
@@ -414,7 +394,7 @@ Provides an interface for the tool to clear temporary directories
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';
@@ -490,10 +470,6 @@ Constructor for obtaining the instance of the SessionBackup class.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionBackup-constructor(callbacks: GeneralCallbacks)--><!--Device-SessionBackup-constructor(callbacks: GeneralCallbacks)-End-->
@@ -508,7 +484,7 @@ Constructor for obtaining the instance of the SessionBackup class.
 | --- | --- | --- | --- |
 | callbacks | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | Yes | Callbacks to be registered for the backup. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -567,10 +543,6 @@ Obtain application data size to be backed up.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionBackup-getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>): Promise<void>--><!--Device-SessionBackup-getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>): Promise<void>-End-->
@@ -604,7 +576,7 @@ Obtain application data size to be backed up.
 | 13600001 | IPC error |
 | 13900042 | Internal error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -719,10 +691,6 @@ Provides an interface for the tool to get compatibility info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionBackup-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>--><!--Device-SessionBackup-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>-End-->
@@ -751,7 +719,7 @@ Provides an interface for the tool to get compatibility info.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo, backup } from '@kit.CoreFileKit';
@@ -826,10 +794,6 @@ Obtain a Json file that describes local capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionBackup-getLocalCapabilities(): Promise<FileData>--><!--Device-SessionBackup-getLocalCapabilities(): Promise<FileData>-End-->
@@ -855,7 +819,7 @@ Obtain a Json file that describes local capabilities.
 | 13600001 | IPC error |
 | 13900042 | Internal error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -992,10 +956,6 @@ End Backup process
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionBackup-release(): Promise<void>--><!--Device-SessionBackup-release(): Promise<void>-End-->
@@ -1022,7 +982,7 @@ End Backup process
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

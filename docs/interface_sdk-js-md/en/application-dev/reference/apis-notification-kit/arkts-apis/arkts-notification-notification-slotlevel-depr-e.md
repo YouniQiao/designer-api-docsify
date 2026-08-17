@@ -4,11 +4,9 @@ Enumerates the notification level.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel)
+**Substitutes:** [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#slotlevel)
 
 <!--Device-notification-export enum SlotLevel--><!--Device-notification-export enum SlotLevel-End-->
 
@@ -24,11 +22,9 @@ The notification function is disabled.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_NONE](arkts-notification-notificationmanager-slotlevel-e.md#LEVEL_NONE)
+**Substitutes:** [LEVEL_NONE](arkts-notification-notificationmanager-slotlevel-e.md#levelnone)
 
 <!--Device-SlotLevel-LEVEL_NONE = 0--><!--Device-SlotLevel-LEVEL_NONE = 0-End-->
 
@@ -44,11 +40,9 @@ The notification function is enabled, but the notification icon is not displayed
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_MIN](arkts-notification-notificationmanager-slotlevel-e.md#LEVEL_MIN)
+**Substitutes:** [LEVEL_MIN](arkts-notification-notificationmanager-slotlevel-e.md#levelmin)
 
 <!--Device-SlotLevel-LEVEL_MIN = 1--><!--Device-SlotLevel-LEVEL_MIN = 1-End-->
 
@@ -64,11 +58,9 @@ The notification function is enabled, and the notification icon is displayed in 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md#LEVEL_LOW)
+**Substitutes:** [LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md#levellow)
 
 <!--Device-SlotLevel-LEVEL_LOW = 2--><!--Device-SlotLevel-LEVEL_LOW = 2-End-->
 
@@ -84,11 +76,9 @@ The notification feature is enabled, and the notification icon is displayed in t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_DEFAULT](arkts-notification-notificationmanager-slotlevel-e.md#LEVEL_DEFAULT)
+**Substitutes:** [LEVEL_DEFAULT](arkts-notification-notificationmanager-slotlevel-e.md#leveldefault)
 
 <!--Device-SlotLevel-LEVEL_DEFAULT = 3--><!--Device-SlotLevel-LEVEL_DEFAULT = 3-End-->
 
@@ -104,11 +94,9 @@ The notification feature is enabled, and the notification icon is displayed in t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_HIGH](arkts-notification-notificationmanager-slotlevel-e.md#LEVEL_HIGH)
+**Substitutes:** [LEVEL_HIGH](arkts-notification-notificationmanager-slotlevel-e.md#levelhigh)
 
 <!--Device-SlotLevel-LEVEL_HIGH = 4--><!--Device-SlotLevel-LEVEL_HIGH = 4-End-->
 

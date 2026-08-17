@@ -16,10 +16,6 @@ Queries the task details based on the task ID. This API uses an asynchronous cal
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-function show(id: string, callback: AsyncCallback<TaskInfo>): void--><!--Device-agent-function show(id: string, callback: AsyncCallback<TaskInfo>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -49,10 +45,6 @@ function show(id: string): Promise<TaskInfo>
 Queries the task details based on the task ID. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-agent-function show(id: string): Promise<TaskInfo>--><!--Device-agent-function show(id: string): Promise<TaskInfo>-End-->
 

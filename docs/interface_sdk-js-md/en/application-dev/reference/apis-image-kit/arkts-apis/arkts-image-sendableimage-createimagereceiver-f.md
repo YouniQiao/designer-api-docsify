@@ -16,10 +16,6 @@ Creates an ImageReceiver instance based on the specified image size, format, and
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendableImage-function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver--><!--Device-sendableImage-function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -44,7 +40,7 @@ Creates an ImageReceiver instance based on the specified image size, format, and
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

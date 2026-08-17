@@ -1,14 +1,12 @@
 # ReadStream
 
-Defines a readable stream. You need to use [fileIo.createReadStream](arkts-na-fileio-createreadstream-f.md#createReadStream) to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#Readable). The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
+Defines a readable stream. You need to use [fileIo.createReadStream](arkts-na-fileio-createreadstream-f.md#createreadstream) to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#readable). The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
 
-**Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#Readable)
+**Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#readable)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-class ReadStream--><!--Device-fileIo-class ReadStream-End-->
 
@@ -24,9 +22,7 @@ Closes this readable stream.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ReadStream-close(): void--><!--Device-ReadStream-close(): void-End-->
 
@@ -53,9 +49,7 @@ The ReadStream constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ReadStream-constructor()--><!--Device-ReadStream-constructor()-End-->
 
@@ -71,9 +65,7 @@ Adjusts the position of the readable stream offset pointer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ReadStream-seek(offset: long, whence?: WhenceType): long--><!--Device-ReadStream-seek(offset: long, whence?: WhenceType): long-End-->
 
@@ -113,9 +105,7 @@ Number of bytes read by the readable stream.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ReadStream-readonly bytesRead: long--><!--Device-ReadStream-readonly bytesRead: long-End-->
 
@@ -133,9 +123,7 @@ Path of the file corresponding to the readable stream.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ReadStream-readonly path: string--><!--Device-ReadStream-readonly path: string-End-->
 

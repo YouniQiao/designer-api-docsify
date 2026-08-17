@@ -4,10 +4,6 @@ Represents the authorization request information of the credentials.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-certificateManagerDialog-export interface AuthorizeRequest--><!--Device-certificateManagerDialog-export interface AuthorizeRequest-End-->
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
@@ -30,10 +26,6 @@ Certificate usage. If the **certTypes** parameter contains the **CertificateType
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AuthorizeRequest-certPurpose?: certificateManager.CertificatePurpose--><!--Device-AuthorizeRequest-certPurpose?: certificateManager.CertificatePurpose-End-->
@@ -51,10 +43,6 @@ List of certificate types.
 **Type:** Array&lt;[CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Indicates the certificate issuer, which is encoded in DER format. This parameter
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AuthorizeRequest-issuers?: Array<Uint8Array>--><!--Device-AuthorizeRequest-issuers?: Array<Uint8Array>-End-->
@@ -96,10 +80,6 @@ Indicates the algorithm type of the public key of the certificate. It is used to
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AuthorizeRequest-keyAlgIDs?: Array<string>--><!--Device-AuthorizeRequest-keyAlgIDs?: Array<string>-End-->
@@ -117,10 +97,6 @@ This URI is displayed in the authorization dialog box and is used to provide the
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

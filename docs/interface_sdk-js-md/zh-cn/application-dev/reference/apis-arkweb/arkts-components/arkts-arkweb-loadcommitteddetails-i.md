@@ -1,12 +1,8 @@
 # LoadCommittedDetails
 
-提供已提交跳转的网页的详细信息。
+提供已提交跳转的网页详细信息，包括是否主文档、导航类型等。适用于需要监控页面导航行为的场景，提升导航状态管理的准确性和用户体验。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface LoadCommittedDetails--><!--Device-unnamed-declare interface LoadCommittedDetails-End-->
 
@@ -18,15 +14,11 @@
 didReplaceEntry: boolean
 ```
 
-true表示提交的新节点替换了已有的节点。 另外在一些子文档跳转的场景，虽然没有实际替换已有节点，但是有一些属性发生了变更。
+是否提交的新节点替换了已有的节点。 true表示提交的新节点替换了已有的节点，false表示提交的新节点未替换已有的节点。 另外在一些子文档跳转的场景，虽然没有实际替换已有节点，但是有一些属性发生了变更。
 
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,15 +32,11 @@ true表示提交的新节点替换了已有的节点。 另外在一些子文档
 isMainFrame: boolean
 ```
 
-是否是主文档。
+是否是主文档。 true表示主文档，false表示非主文档。
 
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -62,15 +50,11 @@ isMainFrame: boolean
 isSameDocument: boolean
 ```
 
-是否在不更改文档的情况下进行的网页跳转。 在同文档跳转的示例：1.参考片段跳转；2.pushState或replaceState触发的跳转；3.同一页面历史跳转。
+是否在不更改文档的情况下进行的网页跳转。 true表示在不更改文档的情况下进行的网页跳转，false表示在更改文档的情况下进行的网页跳转。 同文档跳转示例：1.参考片段跳转；2.pushState或replaceState触发的跳转；3.同一页面历史跳转。
 
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,10 +74,6 @@ navigationType: WebNavigationType
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LoadCommittedDetails-navigationType: WebNavigationType--><!--Device-LoadCommittedDetails-navigationType: WebNavigationType-End-->
@@ -106,15 +86,11 @@ navigationType: WebNavigationType
 url: string
 ```
 
-当前跳转网页的URL。
+跳转到的网页的URL。
 
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
 
 ## trimEnd
@@ -17,10 +13,6 @@ trimEnd(): string
 Removes the trailing white space and line terminator characters from a string.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-trimEnd(): string--><!--Device-String-trimEnd(): string-End-->
 
@@ -39,8 +31,6 @@ trimLeft(): string
 Removes the leading white space and line terminator characters from a string.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility. Use `trimStart` instead
 
@@ -62,8 +52,6 @@ Removes the trailing white space and line terminator characters from a string.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility. Use `trimEnd` instead
 
 <!--Device-String-trimRight(): string--><!--Device-String-trimRight(): string-End-->
@@ -83,10 +71,6 @@ trimStart(): string
 Removes the leading white space and line terminator characters from a string.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-trimStart(): string--><!--Device-String-trimStart(): string-End-->
 

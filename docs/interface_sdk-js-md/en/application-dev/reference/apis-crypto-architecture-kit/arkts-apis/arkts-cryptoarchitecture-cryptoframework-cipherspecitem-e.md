@@ -1,12 +1,8 @@
 # CipherSpecItem
 
-Enumerates encryption and decryption parameters, which can be set by using [setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setCipherSpec) and obtained by using [getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getCipherSpec). <br>Currently, only RSA and SM2 are supported. For details, see Asymmetric Key Encryption and Decryption Algorithm Specifications .
+Enumerates encryption and decryption parameters, which can be set by using [setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setcipherspec) and obtained by using [getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getcipherspec). <br>Currently, only RSA and SM2 are supported. For details, see Asymmetric Key Encryption and Decryption Algorithm Specifications .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-cryptoFramework-enum CipherSpecItem--><!--Device-cryptoFramework-enum CipherSpecItem-End-->
 
@@ -23,10 +19,6 @@ OAEP_MD_NAME_STR = 100
 Message digest algorithm used with the PKCS1_OAEP padding mode in RSA.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,10 +38,6 @@ Mask generation algorithm used with the PKCS1_OAEP padding mode in RSA. Currentl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101--><!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101-End-->
@@ -67,10 +55,6 @@ OAEP_MGF1_MD_STR = 102
 Message digest algorithm for the MGF1 mask generation used with the PKCS1_OAEP padding mode in RSA.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,10 +74,6 @@ OAEP_MGF1_PSRC_UINT8ARR = 103
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CipherSpecItem-OAEP_MGF1_PSRC_UINT8ARR = 103--><!--Device-CipherSpecItem-OAEP_MGF1_PSRC_UINT8ARR = 103-End-->
@@ -111,10 +91,6 @@ SM2_MD_NAME_STR = 104
 Message digest algorithm used in SM2.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

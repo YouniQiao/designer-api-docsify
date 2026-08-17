@@ -16,11 +16,9 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#isKeyItemExist)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void-End-->
 
@@ -34,7 +32,7 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Options for checking the key. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the key exists; the value **false** means the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
@@ -59,11 +57,9 @@ Checks whether a key exists. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#isKeyItemExist)(keyAlias: string, options: HuksOptions)
+**Substitutes:** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist)(keyAlias: string, options: HuksOptions)
 
 <!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>-End-->
 
@@ -82,7 +78,7 @@ Checks whether a key exists. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the key exists; the value **false** means the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

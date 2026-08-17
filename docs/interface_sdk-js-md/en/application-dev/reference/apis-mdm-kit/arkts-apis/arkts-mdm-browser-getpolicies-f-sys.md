@@ -16,11 +16,9 @@ Obtains the policy of the specified browser. This API uses an asynchronous callb
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getPoliciesSync)
+**Substitutes:** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +44,7 @@ Obtains the policy of the specified browser. This API uses an asynchronous callb
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';
@@ -79,11 +77,9 @@ Obtains the policy of the specified browser. This API uses a promise to return t
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getPoliciesSync)
+**Substitutes:** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,7 +110,7 @@ Obtains the policy of the specified browser. This API uses a promise to return t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';

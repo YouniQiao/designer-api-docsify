@@ -4,10 +4,6 @@ pixelmap object with release function.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface PixelMapMock--><!--Device-unnamed-declare interface PixelMapMock-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ release(): void
 release function.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-PixelMapMock-release(): void--><!--Device-PixelMapMock-release(): void-End-->
 

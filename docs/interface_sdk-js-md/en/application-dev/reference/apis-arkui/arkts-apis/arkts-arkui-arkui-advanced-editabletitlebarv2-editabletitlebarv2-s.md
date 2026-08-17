@@ -4,10 +4,6 @@ Declaration of the editable title bar.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct EditableTitleBarV2--><!--Device-unnamed-export declare struct EditableTitleBarV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -40,13 +36,9 @@ import { EditableTitleBarStyleV2Options } from 'EditableTitleBarStyleV2Options';
 
 Image item configuration, displayed on the left side of the title.
 
-**Type:** [EditableTitleBarItemV2](arkts-arkui-editabletitlebaritemv2-t.md)
+**Type:** [EditableTitleBarItemV2](../../apis-na/arkts-apis/arkts-na-editabletitlebaritemv2-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,13 +57,9 @@ Image item configuration, displayed on the left side of the title.
 
 Left icon configuration.
 
-**Type:** [EditableLeftIconV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md)
+**Type:** [EditableLeftIconV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,13 +78,9 @@ Left icon configuration.
 
 Custom menu items array, maximum 2-3 items.
 
-**Type:** Array&lt;[EditableTitleBarMenuItemV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2-c.md)&gt;
+**Type:** Array&lt;[EditableTitleBarMenuItemV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2-c.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,13 +99,9 @@ Custom menu items array, maximum 2-3 items.
 
 Style and layout configuration.
 
-**Type:** [EditableTitleBarStyleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2-c.md)
+**Type:** [EditableTitleBarStyleV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,13 +120,9 @@ Style and layout configuration.
 
 Save button configuration.
 
-**Type:** [EditableSaveButtonV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2-c.md)
+**Type:** [EditableSaveButtonV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editablesavebuttonv2-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,13 +141,9 @@ Save button configuration.
 
 Title configuration, supports string or object form.
 
-**Type:** ResourceStr \| [EditableTitleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
+**Type:** ResourceStr \| [EditableTitleV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

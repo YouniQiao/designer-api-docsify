@@ -4,10 +4,6 @@ Indicates the resource type of the wallpaper.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wallpaper-enum WallpaperResourceType--><!--Device-wallpaper-enum WallpaperResourceType-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
@@ -23,10 +19,6 @@ DEFAULT
 Indicates the default wallpaper resource.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WallpaperResourceType-DEFAULT--><!--Device-WallpaperResourceType-DEFAULT-End-->
 
@@ -44,10 +36,6 @@ Indicates the picture wallpaper resource.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WallpaperResourceType-PICTURE--><!--Device-WallpaperResourceType-PICTURE-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
@@ -64,10 +52,6 @@ Indicates the video wallpaper resource.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WallpaperResourceType-VIDEO--><!--Device-WallpaperResourceType-VIDEO-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
@@ -83,10 +67,6 @@ PACKAGE
 Indicates the package wallpaper resource.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WallpaperResourceType-PACKAGE--><!--Device-WallpaperResourceType-PACKAGE-End-->
 

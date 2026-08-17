@@ -4,10 +4,6 @@ Wi-Fi WAPI config.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface WifiWapiConfig--><!--Device-wifiManager-interface WifiWapiConfig-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -30,10 +26,6 @@ WAPI AS certification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiWapiConfig-wapiAsCert: string--><!--Device-WifiWapiConfig-wapiAsCert: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -50,10 +42,6 @@ WAPI pre-shared key type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiWapiConfig-wapiPskType: WapiPskType--><!--Device-WifiWapiConfig-wapiPskType: WapiPskType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -69,10 +57,6 @@ WAPI user certification.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiWapiConfig-wapiUserCert: string--><!--Device-WifiWapiConfig-wapiUserCert: string-End-->
 

@@ -16,10 +16,6 @@ Obtains the preset vibration effect based on the device ID and vibrator ID to de
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo--><!--Device-vibrator-function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -43,7 +39,7 @@ Obtains the preset vibration effect based on the device ID and vibrator ID to de
 | --- | --- |
 | [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

@@ -4,8 +4,6 @@ Provides APIs for obtaining locale information.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
@@ -30,8 +28,6 @@ Creates a **Locale** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale)
@@ -44,7 +40,7 @@ Creates a **Locale** object.
 
 **System capability:** SystemCapability.Global.I18n
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -65,8 +61,6 @@ Creates a **Locale** object.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale)
@@ -86,7 +80,7 @@ Creates a **Locale** object.
 | locale | string | Yes | Locale information, which consists of the language, script, and country/region. |
 | options | LocaleOptions | No | Options for creating the **Locale** object.<br>**Since:** 12 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -106,8 +100,6 @@ Maximizes locale information by supplementing the missing script and country/reg
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.maximize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize)
@@ -126,7 +118,7 @@ Maximizes locale information by supplementing the missing script and country/reg
 | --- | --- |
 | Locale | Locale** object with the script and country/region information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -154,8 +146,6 @@ Minimizes locale information by removing the script and country/region informati
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.minimize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize)
@@ -174,7 +164,7 @@ Minimizes locale information by removing the script and country/region informati
 | --- | --- |
 | Locale | Locale** object without the script and country/region information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -202,8 +192,6 @@ Obtains the string that represents a **Locale** object.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString)
@@ -222,7 +210,7 @@ Obtains the string that represents a **Locale** object.
 | --- | --- |
 | string | String that represents the **Locale** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -243,8 +231,6 @@ Locale information, which consists of the language, script, and country/region, 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -270,8 +256,6 @@ Calendar for the locale. The value can be: The value can be any of the following
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar)
@@ -295,8 +279,6 @@ Whether case is taken into account for the locale's collation rules. The value c
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -322,8 +304,6 @@ Collation rules for the locale. The value can be: **big5han**: Pinyin sorting fo
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation)
@@ -347,8 +327,6 @@ Time system for the locale. The value can be: "h11", "h12", "h23", or "h24". For
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -374,8 +352,6 @@ Language associated with the locale, for example, **zh**. The value complies wit
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.language](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language)
@@ -399,8 +375,6 @@ Numbering system for the locale. The value can be: **adlm**, **ahom**, **arab**,
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -426,8 +400,6 @@ Whether to use special sorting rules for digits. The value **true** means to use
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric)
@@ -452,8 +424,6 @@ Country/region associated with the locale, for example, **CN**. The value compli
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.region](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region)
@@ -477,8 +447,6 @@ Script type of the language, for example, **Hans**. The value complies with the 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 

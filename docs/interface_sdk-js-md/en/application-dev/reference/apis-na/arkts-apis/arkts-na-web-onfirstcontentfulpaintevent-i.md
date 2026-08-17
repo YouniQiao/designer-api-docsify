@@ -4,9 +4,7 @@ Defines triggered when the first content rendering of web page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnFirstContentfulPaintEvent--><!--Device-unnamed-export declare interface OnFirstContentfulPaintEvent-End-->
 
@@ -24,9 +22,7 @@ The time it takes to draw content for the first time from navigation, expressed 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnFirstContentfulPaintEvent-firstContentfulPaintMs: long--><!--Device-OnFirstContentfulPaintEvent-firstContentfulPaintMs: long-End-->
 
@@ -44,9 +40,7 @@ The time at which navigation begins, expressed in microseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnFirstContentfulPaintEvent-navigationStartTick: long--><!--Device-OnFirstContentfulPaintEvent-navigationStartTick: long-End-->
 

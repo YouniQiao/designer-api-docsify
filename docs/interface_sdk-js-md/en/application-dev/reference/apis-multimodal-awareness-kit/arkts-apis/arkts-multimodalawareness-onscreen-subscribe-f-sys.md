@@ -18,10 +18,6 @@ Enables proactive awareness on screen content and subscribes to a screen awarene
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
 - API version 23 - 24: ohos.permission.GET_SCREEN_CONTENT

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface LocalUpdater--><!--Device-update-export interface LocalUpdater-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -24,10 +20,6 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void--><!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void-End-->
@@ -41,7 +33,7 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | 是 | 升级文件数组，用于指定要安装的本地升级包列表。必须先调用verifyUpgradePackage校验升级包并校验通过后才能使用此参数安 装。每个元素包含fileType(文件类型)和filePath(文件路径)字段，filePath长度范围[1，255]，单位：字符。超出范围时抛出异常，由开发者提供升级包文件路径。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收安装升级包结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收安装升级包结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
 
 **错误码：**
 
@@ -52,7 +44,7 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const upgradeFiles: Array<update.UpgradeFile> = [{
@@ -79,10 +71,6 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 安装升级包。升级过程中设备会重启，应用需做好状态保存。使用Promise异步回调。 **原理说明**： 该方法执行本地升级包安装流程：读取升级包文件 → 解压升级包内容 → 验证包完整性（校验签名和版本兼容性，依赖verifyUpgradePackage的校验结果） → 写入系统分区（覆盖或更新系统文件） → 更新版本标识 → 准备重启环境 → 设备重启应用新版本。安装过程中维护任务状态，可通过on方法监听安装进度和状态变化。安装成功后，设备重启并加载新版本系统，升级完成。 调用顺序说明： - 必须先调用verifyUpgradePackage校验升级包并校验通过后，才能调用本方法安装升级包。 - 未校验直接调用本方法可能导致安装失败或系统损坏，必须先调用verifyUpgradePackage校验升级包。 - 调用成功后，系统将解压并写入升级包内容到系统分区，准备重启以应用新版本，可通过监听事件跟踪安装进度。 - 通过安装升级包可以完成系统版本更新。 使用场景：从本地存储设备(如SD卡)进行系统升级、完成本地升级流程。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -113,7 +101,7 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -145,10 +133,6 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void--><!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -168,7 +152,7 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
@@ -198,10 +182,6 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void--><!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -221,7 +201,7 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
@@ -251,10 +231,6 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void--><!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void-End-->
@@ -269,7 +245,7 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 | --- | --- | --- | --- |
 | upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | 是 | 升级文件（UpgradeFile），包含文件类型和文件路径，用于指定要校验的本地升级包。 |
 | certsFile | string | 是 | 证书文件路径，用于校验升级包签名。证书文件必须从设备厂商官网下载，确保来源可信。支持绝对路径或相对路径，路径长度范围[1，255]，单位：字符。仅支持字母、数字、下划 线、连字符、点号和斜杠等路径合法字符。超出长度范围或包含无效字符时抛出异常。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收校验结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收校验结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
 
 **错误码：**
 
@@ -280,7 +256,7 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const upgradeFile: update.UpgradeFile = {
@@ -307,10 +283,6 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 校验升级包的数字签名、文件完整性和版本兼容性，验证升级包是否为官方发布且未被篡改。调用成功且校验通过后，升级包被视为可信，可用于后续安装；若校验失败，将返回错误信息并阻止安装。使用Promise异步回调。 使用场景：用户从本地存储设备获取升级包、需要验证来源可信，以及确保完整性、防止恶意包攻击。 **原理说明**： 该方法执行升级包安全校验流程：读取升级包文件和证书文件 → 使用证书验证升级包的数字签名（验证签名算法、签名值、证书有效性）→ 计算升级包的哈希值并与包内哈希校验值比对验证文件完整性 → 检查升级包版本号与当前系统版本兼容性 → 返回校验结果。数字签名验证确保升级包来源可信（由官方签名），完整性验证确保升级包未被篡改，版本兼容性验证确保升级包适用于当前设备。校验通过后升级包标记为可信状态，方可用于后续安装流程。 **调用顺序说明**： - 升级包必须从设备厂商官网或官方渠道下载，确保来源可信。使用非官方渠道下载的升级包可能存在安全风险。 - 必须先调用verifyUpgradePackage校验升级包并校验通过后，才能调用applyNewVersion安装升级包。 - 未校验直接调用applyNewVersion会导致安装失败，可能造成系统损坏。 - 校验通过后的升级包可用于后续安装流程。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
@@ -342,7 +314,7 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

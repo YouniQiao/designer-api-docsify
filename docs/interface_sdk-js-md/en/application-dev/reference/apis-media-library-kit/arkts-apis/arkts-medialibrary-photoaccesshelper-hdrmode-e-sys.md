@@ -4,10 +4,6 @@ Enumerates the HDR modes of media assets.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum HdrMode--><!--Device-photoAccessHelper-enum HdrMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -23,10 +19,6 @@ DEFAULT = 0
 Default type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-HdrMode-DEFAULT = 0--><!--Device-HdrMode-DEFAULT = 0-End-->
 
@@ -44,10 +36,6 @@ Single-layer HDR image that complies with ISO specifications.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-HdrMode-HDR_ISO_SINGLE = 1--><!--Device-HdrMode-HDR_ISO_SINGLE = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -63,10 +51,6 @@ HDR_ISO_DUAL = 2
 Dual-layer HDR images that comply with ISO specifications.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-HdrMode-HDR_ISO_DUAL = 2--><!--Device-HdrMode-HDR_ISO_DUAL = 2-End-->
 
@@ -84,10 +68,6 @@ HDR image taken by a legacy device or camera.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-HdrMode-HDR_CUVA = 3--><!--Device-HdrMode-HDR_CUVA = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -104,10 +84,6 @@ Single-layer image that complies with the HDR Vivid standard.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-HdrMode-HDR_VIVID_SINGLE = 4--><!--Device-HdrMode-HDR_VIVID_SINGLE = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -123,10 +99,6 @@ HDR_VIVID_DUAL = 5
 Dual-layer image that complies with the HDR Vivid standard.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-HdrMode-HDR_VIVID_DUAL = 5--><!--Device-HdrMode-HDR_VIVID_DUAL = 5-End-->
 

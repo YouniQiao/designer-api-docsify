@@ -4,8 +4,6 @@ The module provides APIs for querying and adjusting the screen brightness and mo
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-unnamed-export default class Brightness--><!--Device-unnamed-export default class Brightness-End-->
@@ -34,8 +32,6 @@ Obtains the screen brightness adjustment mode.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-Brightness-static getMode(options?: GetBrightnessModeOptions): void--><!--Device-Brightness-static getMode(options?: GetBrightnessModeOptions): void-End-->
@@ -58,8 +54,6 @@ Obtains the current screen brightness.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-Brightness-static getValue(options?: GetBrightnessOptions): void--><!--Device-Brightness-static getValue(options?: GetBrightnessOptions): void-End-->
@@ -78,11 +72,9 @@ Obtains the current screen brightness.
 static setKeepScreenOn(options?: SetKeepScreenOnOptions): void
 ```
 
-Sets whether to always keep the screen on. Call this API in **onShow()**. **NOTE：**- This API is no longer maintained since API version 7 except for lite wearables. You are advised to use [window.setWindowKeepScreenOn()](../../../reference/apis-arkui/arkts-apis-window-Window.md#setWindowKeepScreenOn) instead. - On Lite Wearables, this API can only prevent the system from turning off the screen due to inactivity timeout (automatic). It cannot prevent screen-off caused by user actions (such as covering the screen) or the end of the keep-screen-on period.
+Sets whether to always keep the screen on. Call this API in **onShow()**. **NOTE：**- This API is no longer maintained since API version 7 except for lite wearables. You are advised to use [window.setWindowKeepScreenOn()](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowkeepscreenon) instead. - On Lite Wearables, this API can only prevent the system from turning off the screen due to inactivity timeout (automatic). It cannot prevent screen-off caused by user actions (such as covering the screen) or the end of the keep-screen-on period.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 7
 
@@ -108,8 +100,6 @@ Sets the screen brightness adjustment mode.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-Brightness-static setMode(options?: SetBrightnessModeOptions): void--><!--Device-Brightness-static setMode(options?: SetBrightnessModeOptions): void-End-->
@@ -132,11 +122,9 @@ Sets the screen brightness.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
-**Substitutes:** [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setValue-(System-API))
+**Substitutes:** [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue-system-api)
 
 <!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void--><!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void-End-->
 

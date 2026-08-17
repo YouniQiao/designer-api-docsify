@@ -1,12 +1,8 @@
 # MissionListener (System API)
 
-The module defines the listeners used to observe the mission status. The listeners can be registered by using on.
+The module defines the listeners used to observe the mission status. The listeners can be registered by using [on](arkts-ability-missionmanager-onmission-f-sys.md#onmission).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MissionListener--><!--Device-unnamed-export interface MissionListener-End-->
 
@@ -24,10 +20,6 @@ Called when the system closes a mission.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MissionListener-onMissionClosed(mission: int): void--><!--Device-MissionListener-onMissionClosed(mission: int): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
@@ -40,7 +32,7 @@ Called when the system closes a mission.
 | --- | --- | --- | --- |
 | mission | int | Yes | Mission ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
@@ -88,10 +80,6 @@ Called when the system creates a mission.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MissionListener-onMissionCreated(mission: int): void--><!--Device-MissionListener-onMissionCreated(mission: int): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
@@ -104,9 +92,9 @@ Called when the system creates a mission.
 | --- | --- | --- | --- |
 | mission | int | Yes | Mission ID. |
 
-## Examples
+**Examples**
 
-For details, see [onMissionClosed](#onMissionClosed).
+For details, see [onMissionClosed](#onmissionclosed).
 
 ## onMissionDestroyed
 
@@ -117,10 +105,6 @@ onMissionDestroyed(mission: int): void
 Called when the system destroys a mission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionDestroyed(mission: int): void--><!--Device-MissionListener-onMissionDestroyed(mission: int): void-End-->
 
@@ -134,9 +118,9 @@ Called when the system destroys a mission.
 | --- | --- | --- | --- |
 | mission | int | Yes | Mission ID. |
 
-## Examples
+**Examples**
 
-For details, see [onMissionClosed](#onMissionClosed).
+For details, see [onMissionClosed](#onmissionclosed).
 
 ## onMissionIconUpdated
 
@@ -147,10 +131,6 @@ onMissionIconUpdated(mission: int, icon: image.PixelMap): void
 Called when the system updates the icon of a mission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionIconUpdated(mission: int, icon: image.PixelMap): void--><!--Device-MissionListener-onMissionIconUpdated(mission: int, icon: image.PixelMap): void-End-->
 
@@ -165,9 +145,9 @@ Called when the system updates the icon of a mission.
 | mission | int | Yes | Mission ID. |
 | icon | image.PixelMap | Yes | New mission icon. |
 
-## Examples
+**Examples**
 
-For details, see [onMissionClosed](#onMissionClosed).
+For details, see [onMissionClosed](#onmissionclosed).
 
 ## onMissionLabelUpdated
 
@@ -178,10 +158,6 @@ onMissionLabelUpdated(mission: int): void
 Called when the system updates the label of a mission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionLabelUpdated(mission: int): void--><!--Device-MissionListener-onMissionLabelUpdated(mission: int): void-End-->
 
@@ -195,9 +171,9 @@ Called when the system updates the label of a mission.
 | --- | --- | --- | --- |
 | mission | int | Yes | Mission ID. |
 
-## Examples
+**Examples**
 
-For details, see [onMissionClosed](#onMissionClosed).
+For details, see [onMissionClosed](#onmissionclosed).
 
 ## onMissionMovedToFront
 
@@ -208,10 +184,6 @@ onMissionMovedToFront(mission: int): void
 Called when the system moves a mission to the foreground.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionMovedToFront(mission: int): void--><!--Device-MissionListener-onMissionMovedToFront(mission: int): void-End-->
 
@@ -225,9 +197,9 @@ Called when the system moves a mission to the foreground.
 | --- | --- | --- | --- |
 | mission | int | Yes | Mission ID. |
 
-## Examples
+**Examples**
 
-For details, see [onMissionClosed](#onMissionClosed).
+For details, see [onMissionClosed](#onmissionclosed).
 
 ## onMissionSnapshotChanged
 
@@ -238,10 +210,6 @@ onMissionSnapshotChanged(mission: int): void
 Called when the system updates the snapshot of a mission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionSnapshotChanged(mission: int): void--><!--Device-MissionListener-onMissionSnapshotChanged(mission: int): void-End-->
 
@@ -255,7 +223,7 @@ Called when the system updates the snapshot of a mission.
 | --- | --- | --- | --- |
 | mission | int | Yes | Mission ID. |
 
-## Examples
+**Examples**
 
-For details, see [onMissionClosed](#onMissionClosed).
+For details, see [onMissionClosed](#onmissionclosed).
 

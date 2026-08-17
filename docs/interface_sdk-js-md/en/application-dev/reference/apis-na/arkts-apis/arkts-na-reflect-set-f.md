@@ -15,10 +15,6 @@ Sets the property of target, equivalent to `target[propertyKey] = value` when `r
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Reflect-function set<T extends object, P extends PropertyKey>(        target: T,        propertyKey: P,        value: P extends keyof T ? T[P] : any,        receiver?: any,    ): boolean--><!--Device-Reflect-function set<T extends object, P extends PropertyKey>(        target: T,        propertyKey: P,        value: P extends keyof T ? T[P] : any,        receiver?: any,    ): boolean-End-->
 
 **Parameters:**
@@ -44,10 +40,6 @@ function set(target: object, propertyKey: PropertyKey, value: any, receiver?: an
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Reflect-function set(target: object, propertyKey: PropertyKey, value: any, receiver?: any): boolean--><!--Device-Reflect-function set(target: object, propertyKey: PropertyKey, value: any, receiver?: any): boolean-End-->
 

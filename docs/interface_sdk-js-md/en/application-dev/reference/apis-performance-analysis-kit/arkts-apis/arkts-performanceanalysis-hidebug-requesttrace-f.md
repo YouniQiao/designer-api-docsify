@@ -16,10 +16,6 @@ Requests trace collection with the specified configuration.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -48,7 +44,7 @@ Requests trace collection with the specified configuration.
 | [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Remote service exception. |
 | [11400120](../errorcode-hiviewdfx-hidebug-trace.md#11400120-trace-file-storage-limit-reached) | Trace storage limit reached. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug, hilog } from '@kit.PerformanceAnalysisKit';

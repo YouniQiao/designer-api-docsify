@@ -4,11 +4,9 @@ Wi-Fi IP configuration information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md#IpConfig-(System-API))
+**Substitutes:** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md#ipconfig-system-api)
 
 <!--Device-wifi-interface IpConfig--><!--Device-wifi-interface IpConfig-End-->
 
@@ -34,11 +32,9 @@ DNS servers.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [dnsServers](arkts-connectivity-wifimanager-ipconfig-i-sys.md#dnsServers)
+**Substitutes:** [dnsServers](arkts-connectivity-wifimanager-ipconfig-i-sys.md#dnsservers)
 
 <!--Device-IpConfig-dnsServers: number[]--><!--Device-IpConfig-dnsServers: number[]-End-->
 
@@ -57,8 +53,6 @@ Domains.
 **Type:** Array&lt;string&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -82,8 +76,6 @@ Gate way.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [gateway](arkts-connectivity-wifimanager-ipconfig-i-sys.md#gateway)
@@ -106,11 +98,9 @@ IP address.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ipAddress](arkts-connectivity-wifimanager-ipconfig-i-sys.md#ipAddress)
+**Substitutes:** [ipAddress](arkts-connectivity-wifimanager-ipconfig-i-sys.md#ipaddress)
 
 <!--Device-IpConfig-ipAddress: number--><!--Device-IpConfig-ipAddress: number-End-->
 

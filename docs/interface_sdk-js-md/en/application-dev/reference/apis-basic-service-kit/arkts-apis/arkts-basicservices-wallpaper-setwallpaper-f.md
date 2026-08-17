@@ -20,8 +20,6 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
@@ -38,7 +36,7 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setWallpaper. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -86,8 +84,6 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
@@ -109,7 +105,7 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

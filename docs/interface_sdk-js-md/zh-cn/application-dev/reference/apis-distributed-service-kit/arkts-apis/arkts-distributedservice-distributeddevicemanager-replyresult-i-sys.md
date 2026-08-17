@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-distributedDeviceManager-interface ReplyResult--><!--Device-distributedDeviceManager-interface ReplyResult-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -25,10 +21,6 @@ param: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ReplyResult-param: string--><!--Device-ReplyResult-param: string-End-->
 

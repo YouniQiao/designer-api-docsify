@@ -2,11 +2,9 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md#LocationRequest)
+**Substitutes:** [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md#locationrequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -36,8 +34,6 @@ Coordinate system type. Available types can be obtained using getSupportedCoordT
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -58,8 +54,6 @@ Called when the listening fails.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
@@ -79,8 +73,6 @@ Called whenever the geographical location changes.
 **Type:** (data: GeolocationResponse) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

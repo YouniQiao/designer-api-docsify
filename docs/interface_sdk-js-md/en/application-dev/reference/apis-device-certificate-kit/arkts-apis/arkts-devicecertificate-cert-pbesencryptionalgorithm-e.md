@@ -4,10 +4,6 @@ Enumerates password-based encryption scheme (PBES) algorithms.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-enum PbesEncryptionAlgorithm--><!--Device-cert-enum PbesEncryptionAlgorithm-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -21,10 +17,6 @@ AES_128_CBC = 0
 AES-128-CBC.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ AES-192-CBC.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PbesEncryptionAlgorithm-AES_192_CBC = 1--><!--Device-PbesEncryptionAlgorithm-AES_192_CBC = 1-End-->
@@ -61,10 +49,6 @@ AES_256_CBC = 2
 AES-256-CBC.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -10,10 +10,6 @@ function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
 
 <!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>-End-->
@@ -44,7 +40,7 @@ function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [3900001](../errorcode-inputdevice.md#3900001-指定的设备不存在) | The specified device does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

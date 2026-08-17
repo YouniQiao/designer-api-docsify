@@ -4,10 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-window-interface SubWindowAttachOptions--><!--Device-window-interface SubWindowAttachOptions-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -25,10 +21,6 @@ currentLayoutMode?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,10 +44,6 @@ isIntersectedHeightLimit?: boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubWindowAttachOptions-isIntersectedHeightLimit?: boolean--><!--Device-SubWindowAttachOptions-isIntersectedHeightLimit?: boolean-End-->
@@ -78,10 +66,6 @@ isIntersectedWidthLimit?: boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubWindowAttachOptions-isIntersectedWidthLimit?: boolean--><!--Device-SubWindowAttachOptions-isIntersectedWidthLimit?: boolean-End-->
@@ -102,10 +86,6 @@ parentWindowSizeChangeCallback?: Callback<Size>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubWindowAttachOptions-parentWindowSizeChangeCallback?: Callback<Size>--><!--Device-SubWindowAttachOptions-parentWindowSizeChangeCallback?: Callback<Size>-End-->
@@ -125,10 +105,6 @@ parentWindowStatusChangeCallback?: Callback<WindowStatusType>
 **类型：** [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

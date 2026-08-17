@@ -6,9 +6,7 @@ Defines the lazy column layout attribute.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare interface LazyColumnLayoutAttribute--><!--Device-unnamed-export declare interface LazyColumnLayoutAttribute-End-->
 
@@ -22,9 +20,7 @@ alignItems(value: HorizontalAlign | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LazyColumnLayoutAttribute-alignItems(value: HorizontalAlign | undefined): this--><!--Device-LazyColumnLayoutAttribute-alignItems(value: HorizontalAlign | undefined): this-End-->
 
@@ -48,9 +44,7 @@ attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | Attri
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LazyColumnLayoutAttribute-attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LazyColumnLayoutAttribute-attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -58,7 +52,7 @@ attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | Attri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md)&gt; \| [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-na-common-commonmethod-i.md)&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; \| [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-na-common-commonmethod-i.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -74,9 +68,7 @@ footer(builder: CustomBuilder | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LazyColumnLayoutAttribute-footer(builder: CustomBuilder | undefined): this--><!--Device-LazyColumnLayoutAttribute-footer(builder: CustomBuilder | undefined): this-End-->
 
@@ -100,9 +92,7 @@ header(builder: CustomBuilder | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LazyColumnLayoutAttribute-header(builder: CustomBuilder | undefined): this--><!--Device-LazyColumnLayoutAttribute-header(builder: CustomBuilder | undefined): this-End-->
 
@@ -126,9 +116,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): th
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LazyColumnLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this--><!--Device-LazyColumnLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this-End-->
 
@@ -152,9 +140,7 @@ setLazyColumnLayoutOptions(): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LazyColumnLayoutAttribute-setLazyColumnLayoutOptions(): this--><!--Device-LazyColumnLayoutAttribute-setLazyColumnLayoutOptions(): this-End-->
 
@@ -172,9 +158,7 @@ space(space: LengthMetrics | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LazyColumnLayoutAttribute-space(space: LengthMetrics | undefined): this--><!--Device-LazyColumnLayoutAttribute-space(space: LengthMetrics | undefined): this-End-->
 
@@ -198,9 +182,7 @@ sticky(sticky: StickyStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-LazyColumnLayoutAttribute-sticky(sticky: StickyStyle | undefined): this--><!--Device-LazyColumnLayoutAttribute-sticky(sticky: StickyStyle | undefined): this-End-->
 
@@ -226,9 +208,7 @@ Sets the attribute modifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,11 +16,9 @@ Obtains the IP information of a Wi-Fi connection. &lt;p&gt;The IP information in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getIpInfo](arkts-connectivity-wifimanager-getipinfo-f.md#getIpInfo)
+**Substitutes:** [getIpInfo](arkts-connectivity-wifimanager-getipinfo-f.md#getipinfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -34,7 +32,7 @@ Obtains the IP information of a Wi-Fi connection. &lt;p&gt;The IP information in
 | --- | --- |
 | IpInfo | Returns the IP information of the Wi-Fi connection. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

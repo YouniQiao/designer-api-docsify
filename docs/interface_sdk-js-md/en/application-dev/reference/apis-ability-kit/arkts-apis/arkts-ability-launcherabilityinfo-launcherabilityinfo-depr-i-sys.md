@@ -1,14 +1,12 @@
 # LauncherAbilityInfo (System API)
 
-The LauncherAbilityInfo module provides information about the launcher ability, which is obtained through innerBundleManager.getLauncherAbilityInfos . > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-LauncherAbilityInfo](#LauncherAbilityInfo-(System-API)) instead. > > The APIs provided by this module are system APIs.
+The LauncherAbilityInfo module provides information about the launcher ability, which is obtained through innerBundleManager.getLauncherAbilityInfos . > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-LauncherAbilityInfo](#launcherabilityinfo-system-api) instead. > > The APIs provided by this module are system APIs.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LauncherAbilityInfo](#LauncherAbilityInfo-(System-API))
+**Substitutes:** [LauncherAbilityInfo](#launcherabilityinfo-system-api)
 
 <!--Device-unnamed-export interface LauncherAbilityInfo--><!--Device-unnamed-export interface LauncherAbilityInfo-End-->
 
@@ -27,8 +25,6 @@ Application information of the launcher ability.
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Element name of the launcher ability.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** elementName
@@ -75,8 +69,6 @@ ID of the launcher ability icon.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -100,8 +92,6 @@ Timestamp when the launcher ability was installed, in milliseconds.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** installTime
@@ -124,8 +114,6 @@ ID of the launcher ability label.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -147,8 +135,6 @@ User ID of the launcher ability.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

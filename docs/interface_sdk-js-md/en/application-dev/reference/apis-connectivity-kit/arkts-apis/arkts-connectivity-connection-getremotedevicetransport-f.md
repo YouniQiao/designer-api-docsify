@@ -16,10 +16,6 @@ Get the transport of the bluetooth device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-connection-function getRemoteDeviceTransport(deviceId: string): BluetoothTransport--><!--Device-connection-function getRemoteDeviceTransport(deviceId: string): BluetoothTransport-End-->
@@ -47,7 +43,7 @@ Get the transport of the bluetooth device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Get transport failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

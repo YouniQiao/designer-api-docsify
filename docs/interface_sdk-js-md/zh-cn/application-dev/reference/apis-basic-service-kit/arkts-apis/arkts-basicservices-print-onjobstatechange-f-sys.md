@@ -10,10 +10,6 @@ Register event callback for the state change of print job.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function onJobStateChange(callback: PrintJobStateChangeCallback): void--><!--Device-print-function onJobStateChange(callback: PrintJobStateChangeCallback): void-End-->

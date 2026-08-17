@@ -4,10 +4,6 @@ List scroll to options
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ListScrollToOptions--><!--Device-unnamed-export interface ListScrollToOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -23,10 +19,6 @@ specified position.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -4,10 +4,6 @@ P2P group information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface WifiP2pGroupInfo--><!--Device-wifiManager-interface WifiP2pGroupInfo-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -30,10 +26,6 @@ Client list
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]--><!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -49,10 +41,6 @@ Frequency
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-frequency: int--><!--Device-WifiP2pGroupInfo-frequency: int-End-->
 
@@ -70,10 +58,6 @@ Group owner IP address
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiP2pGroupInfo-goIpAddress: string--><!--Device-WifiP2pGroupInfo-goIpAddress: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -89,10 +73,6 @@ Group name
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-groupName: string--><!--Device-WifiP2pGroupInfo-groupName: string-End-->
 
@@ -110,10 +90,6 @@ Interface name
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-WifiP2pGroupInfo-interface: string--><!--Device-WifiP2pGroupInfo-interface: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -129,10 +105,6 @@ Interface name
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-interfaceName: string--><!--Device-WifiP2pGroupInfo-interfaceName: string-End-->
 
@@ -150,10 +122,6 @@ Indicates whether it is group owner
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiP2pGroupInfo-isP2pGo: boolean--><!--Device-WifiP2pGroupInfo-isP2pGo: boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -169,10 +137,6 @@ Network ID
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-networkId: int--><!--Device-WifiP2pGroupInfo-networkId: int-End-->
 
@@ -190,10 +154,6 @@ Group owner information
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice--><!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -209,10 +169,6 @@ The group passphrase
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-passphrase: string--><!--Device-WifiP2pGroupInfo-passphrase: string-End-->
 

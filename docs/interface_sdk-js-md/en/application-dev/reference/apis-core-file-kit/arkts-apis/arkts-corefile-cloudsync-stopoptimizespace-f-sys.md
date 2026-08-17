@@ -16,10 +16,6 @@ Synchronously stops optimizing cloud resource space. This method is used with **
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-cloudSync-function stopOptimizeSpace(): void--><!--Device-cloudSync-function stopOptimizeSpace(): void-End-->
@@ -37,7 +33,7 @@ Synchronously stops optimizing cloud resource space. This method is used with **
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

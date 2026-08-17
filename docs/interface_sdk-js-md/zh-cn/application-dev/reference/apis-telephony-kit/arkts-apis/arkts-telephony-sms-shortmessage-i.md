@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sms-export interface ShortMessage--><!--Device-sms-export interface ShortMessage-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -23,10 +19,6 @@ hasReplyPath: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ShortMessage-hasReplyPath: boolean--><!--Device-ShortMessage-hasReplyPath: boolean-End-->
 
@@ -44,10 +36,6 @@ isReplaceMessage: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ShortMessage-isReplaceMessage: boolean--><!--Device-ShortMessage-isReplaceMessage: boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -63,10 +51,6 @@ isSmsStatusReportMessage: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ShortMessage-isSmsStatusReportMessage: boolean--><!--Device-ShortMessage-isSmsStatusReportMessage: boolean-End-->
 
@@ -84,10 +68,6 @@ messageClass: ShortMessageClass
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ShortMessage-messageClass: ShortMessageClass--><!--Device-ShortMessage-messageClass: ShortMessageClass-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -103,10 +83,6 @@ SMS消息中的协议数据单元 (PDU)。
 **类型：** Array&lt;int&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ShortMessage-pdu: Array<int>--><!--Device-ShortMessage-pdu: Array<int>-End-->
 
@@ -124,10 +100,6 @@ protocolId: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ShortMessage-protocolId: int--><!--Device-ShortMessage-protocolId: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -143,10 +115,6 @@ scAddress: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ShortMessage-scAddress: string--><!--Device-ShortMessage-scAddress: string-End-->
 
@@ -164,10 +132,6 @@ SMSC时间戳。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ShortMessage-scTimestamp: long--><!--Device-ShortMessage-scTimestamp: long-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -183,10 +147,6 @@ SMS-STATUS-REPORT消息中的短信状态指示短信服务中心(SMSC)发送的
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ShortMessage-status: int--><!--Device-ShortMessage-status: int-End-->
 
@@ -204,10 +164,6 @@ visibleMessageBody: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ShortMessage-visibleMessageBody: string--><!--Device-ShortMessage-visibleMessageBody: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -223,10 +179,6 @@ visibleRawAddress: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ShortMessage-visibleRawAddress: string--><!--Device-ShortMessage-visibleRawAddress: string-End-->
 

@@ -4,10 +4,6 @@ Defines the subscription/unsubscription result of the changes in the published d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface PublishedDataChangeNode--><!--Device-dataShare-interface PublishedDataChangeNode-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -32,10 +28,6 @@ Bundle name of the callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PublishedDataChangeNode-bundleName: string--><!--Device-PublishedDataChangeNode-bundleName: string-End-->
@@ -55,10 +47,6 @@ Data of the callback.
 **Type:** Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

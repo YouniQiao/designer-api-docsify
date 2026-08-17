@@ -1,14 +1,10 @@
 # UIServiceExtensionAbility (System API)
 
-UIServiceExtensionAbility provides extended capabilities related to the floating window component. It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility). It is mainly used to provide services with UIs for third-party applications. > **NOTE：**> > The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
+UIServiceExtensionAbility provides extended capabilities related to the floating window component. It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#extensionability). It is mainly used to provide services with UIs for third-party applications. > **NOTE：**> > The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
 **Inheritance/Implementation:** UIServiceExtensionAbility extends ExtensionAbility
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class UIServiceExtensionAbility--><!--Device-unnamed-declare class UIServiceExtensionAbility-End-->
 
@@ -28,13 +24,9 @@ import { UIServiceExtensionAbility } from 'UIServiceExtensionAbility';
 onConnect(want: Want, proxy: UIServiceHostProxy): void
 ```
 
-Called when the connection to a [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)) is established. If the UIServiceExtensionAbility is started by calling [connectUIServiceExtensionAbility()](arkts-ability-uiextensioncontext-c.md#connectUIServiceExtensionAbility) , this callback will be invoked after [onCreate()](#onCreate). This callback receives a [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md#UIServiceHostProxy-(System-API)) object for communication between the client and server.
+Called when the connection to a [UIServiceExtensionAbility](#uiserviceextensionability-system-api) is established. If the UIServiceExtensionAbility is started by calling [connectUIServiceExtensionAbility()](arkts-ability-uiextensioncontext-c.md#connectuiserviceextensionability) , this callback will be invoked after [onCreate()](#oncreate). This callback receives a [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md#uiservicehostproxy-system-api) object for communication between the client and server.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,10 @@ Called when the connection to a [UIServiceExtensionAbility](#UIServiceExtensionA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#Want) information about the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)), including the ability name and bundle name. |
-| proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md#UIServiceHostProxy-(System-API)) object, used for communication between the client and server. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#want) information about the [UIServiceExtensionAbility](#uiserviceextensionability-system-api), including the ability name and bundle name. |
+| proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md#uiservicehostproxy-system-api) object, used for communication between the client and server. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIServiceExtensionAbility, Want, common} from '@kit.AbilityKit';
@@ -73,10 +65,6 @@ Called to initialize the service logic.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIServiceExtensionAbility-onCreate(want: Want): void--><!--Device-UIServiceExtensionAbility-onCreate(want: Want): void-End-->
@@ -89,9 +77,9 @@ Called to initialize the service logic.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#Want) information about the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)), including the ability name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#want) information about the [UIServiceExtensionAbility](#uiserviceextensionability-system-api), including the ability name and bundle name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIServiceExtensionAbility, Want } from '@kit.AbilityKit';
@@ -114,10 +102,6 @@ Callback invoked when data is received.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIServiceExtensionAbility-onData(proxy: UIServiceHostProxy, data: Record<string, Object>): void--><!--Device-UIServiceExtensionAbility-onData(proxy: UIServiceHostProxy, data: Record<string, Object>): void-End-->
@@ -133,7 +117,7 @@ Callback invoked when data is received.
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes | Proxy that sends data to the client. |
 | data | Record&lt;string, Object&gt; | Yes | Data received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIServiceExtensionAbility, common} from '@kit.AbilityKit';
@@ -154,10 +138,6 @@ onData(proxy: UIServiceHostProxy, data: Record<string, RecordData>): void
 Called back when data is sent.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,13 +160,9 @@ Called back when data is sent.
 onDestroy(): void
 ```
 
-Called to clear resources when this [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)) is destroyed.
+Called to clear resources when this [UIServiceExtensionAbility](#uiserviceextensionability-system-api) is destroyed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,7 +172,7 @@ Called to clear resources when this [UIServiceExtensionAbility](#UIServiceExtens
 
 **System API:** This is a system API.
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIServiceExtensionAbility } from '@kit.AbilityKit';
@@ -214,13 +190,9 @@ class ServiceExt extends UIServiceExtensionAbility {
 onDisconnect(want: Want, proxy: UIServiceHostProxy): void
 ```
 
-Called when the connection to a [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)) is interrupted.
+Called when the connection to a [UIServiceExtensionAbility](#uiserviceextensionability-system-api) is interrupted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -234,10 +206,10 @@ Called when the connection to a [UIServiceExtensionAbility](#UIServiceExtensionA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#Want) information about the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)), including the ability name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#want) information about the [UIServiceExtensionAbility](#uiserviceextensionability-system-api), including the ability name and bundle name. |
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes | Proxy that sends data to the sender. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIServiceExtensionAbility, Want, common } from '@kit.AbilityKit';
@@ -255,13 +227,9 @@ class UIServiceExt extends UIServiceExtensionAbility {
 onRequest(want: Want, startId: int): void
 ```
 
-Called to request to start a [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)). If the UIServiceExtensionAbility is started by calling [startAbility](arkts-ability-uiabilitycontext-c.md#startAbility) or [startUIServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#startUIServiceExtensionAbility) , this callback will be invoked after [onCreate](#onCreate). The value of **startId** is incremented for each UIServiceExtensionAbility that is started.
+Called to request to start a [UIServiceExtensionAbility](#uiserviceextensionability-system-api). If the UIServiceExtensionAbility is started by calling [startAbility](arkts-ability-uiabilitycontext-c.md#startability) or [startUIServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#startuiserviceextensionability) , this callback will be invoked after [onCreate](#oncreate). The value of **startId** is incremented for each UIServiceExtensionAbility that is started.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -275,10 +243,10 @@ Called to request to start a [UIServiceExtensionAbility](#UIServiceExtensionAbil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#Want) information about the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)), including the ability name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#want) information about the [UIServiceExtensionAbility](#uiserviceextensionability-system-api), including the ability name and bundle name. |
 | startId | int | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIServiceExtensionAbility, Want} from '@kit.AbilityKit';
@@ -296,13 +264,9 @@ class UIServiceExt extends UIServiceExtensionAbility {
 onWindowDidCreate(window: window.Window): void
 ```
 
-Called when a window is created for the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)). Through this callback, the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)) passes the created window object to the foreground application.
+Called when a window is created for the [UIServiceExtensionAbility](#uiserviceextensionability-system-api). Through this callback, the [UIServiceExtensionAbility](#uiserviceextensionability-system-api) passes the created window object to the foreground application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -318,7 +282,7 @@ Called when a window is created for the [UIServiceExtensionAbility](#UIServiceEx
 | --- | --- | --- | --- |
 | window | window.Window | Yes | Window object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIServiceExtensionAbility } from '@kit.AbilityKit';
@@ -337,13 +301,9 @@ class ServiceExt extends UIServiceExtensionAbility {
 onWindowWillCreate(config: window.ExtensionWindowConfig): void
 ```
 
-Called when a window will be created for the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)). Through **window.ExtensionWindowConfig** in the callback, the foreground application sends the parameters for creating the window to the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)).
+Called when a window will be created for the [UIServiceExtensionAbility](#uiserviceextensionability-system-api). Through **window.ExtensionWindowConfig** in the callback, the foreground application sends the parameters for creating the window to the [UIServiceExtensionAbility](#uiserviceextensionability-system-api).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -359,7 +319,7 @@ Called when a window will be created for the [UIServiceExtensionAbility](#UIServ
 | --- | --- | --- | --- |
 | config | window.ExtensionWindowConfig | Yes | Window configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIServiceExtensionAbility } from '@kit.AbilityKit';
@@ -378,15 +338,11 @@ class UIServiceExt extends UIServiceExtensionAbility {
 context: UIServiceExtensionContext
 ```
 
-Context environment for a [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)). This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
+Context environment for a [UIServiceExtensionAbility](#uiserviceextensionability-system-api). This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext).
 
 **Type:** [UIServiceExtensionContext](arkts-ability-uiserviceextensioncontext-c-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

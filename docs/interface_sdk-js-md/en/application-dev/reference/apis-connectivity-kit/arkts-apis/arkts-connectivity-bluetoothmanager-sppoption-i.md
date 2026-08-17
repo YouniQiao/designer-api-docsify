@@ -4,11 +4,9 @@ Describes the spp parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [SppOptions](arkts-connectivity-socket-sppoptions-i.md#SppOptions)
+**Substitutes:** [SppOptions](arkts-connectivity-socket-sppoptions-i.md#sppoptions)
 
 <!--Device-bluetoothManager-interface SppOption--><!--Device-bluetoothManager-interface SppOption-End-->
 
@@ -32,8 +30,6 @@ Indicates secure channel or not
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [secure](arkts-connectivity-socket-sppoptions-i.md#secure)
@@ -48,13 +44,11 @@ Indicates secure channel or not
 type: SppType
 ```
 
-Spp link type [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md#SppType)
+Spp link type [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md#spptype)
 
 **Type:** SppType
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -75,8 +69,6 @@ Indicates the UUID in the SDP record.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

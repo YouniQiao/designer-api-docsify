@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-unnamed-export interface FileReadTextResponse--><!--Device-unnamed-export interface FileReadTextResponse-End-->
@@ -23,8 +21,6 @@ text: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 

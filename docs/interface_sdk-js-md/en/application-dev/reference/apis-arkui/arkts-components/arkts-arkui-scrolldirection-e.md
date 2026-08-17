@@ -4,10 +4,6 @@ Enumerates the scrolling directions.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum ScrollDirection--><!--Device-unnamed-declare enum ScrollDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ Vertical
 Only vertical scrolling is supported.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Only horizontal scrolling is supported.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScrollDirection-Horizontal--><!--Device-ScrollDirection-Horizontal-End-->
@@ -62,11 +50,9 @@ Vertical or horizontal scrolling is supported.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FREE](#FREE)
+**Substitutes:** [FREE](#free)
 
 <!--Device-ScrollDirection-Free--><!--Device-ScrollDirection-Free-End-->
 
@@ -81,10 +67,6 @@ None
 Scrolling is disabled.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -101,10 +83,6 @@ FREE = 4
 Free scrolling is supported.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

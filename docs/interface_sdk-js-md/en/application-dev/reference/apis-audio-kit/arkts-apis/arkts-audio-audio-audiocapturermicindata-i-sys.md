@@ -4,10 +4,6 @@ Describes audio capturer data that contains processed audio data and microphone 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioCapturerMicInData--><!--Device-audio-interface AudioCapturerMicInData-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -32,10 +28,6 @@ Processed audio data buffer.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioCapturerMicInData-data: ArrayBuffer--><!--Device-AudioCapturerMicInData-data: ArrayBuffer-End-->
@@ -50,15 +42,11 @@ Processed audio data buffer.
 ecData?: ArrayBuffer
 ```
 
-Echo reference audio data buffer. If capturer config does not set ecStreamInfo, this buffer will be null. See [AudioCapturerMicInConfig](arkts-audio-audio-audiocapturermicinconfig-i-sys.md#AudioCapturerMicInConfig-(System-API)) for details.
+Echo reference audio data buffer. If capturer config does not set ecStreamInfo, this buffer will be null. See [AudioCapturerMicInConfig](arkts-audio-audio-audiocapturermicinconfig-i-sys.md#audiocapturermicinconfig-system-api) for details.
 
 **Type:** ArrayBuffer
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,10 +67,6 @@ Microphone input audio data buffer.
 **Type:** ArrayBuffer
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

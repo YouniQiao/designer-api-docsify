@@ -4,11 +4,9 @@ Describes input parameters of audio interruption events.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md#AudioRendererOptions)
+**Substitutes:** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md#audiorendereroptions)
 
 <!--Device-audio-interface AudioInterrupt--><!--Device-audio-interface AudioInterrupt-End-->
 
@@ -32,8 +30,6 @@ Audio content type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** rendererInfo
@@ -54,11 +50,9 @@ Whether audio playback can be paused during an audio interruption. **true** if a
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hintType)
+**Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
 
 <!--Device-AudioInterrupt-pauseWhenDucked: boolean--><!--Device-AudioInterrupt-pauseWhenDucked: boolean-End-->
 
@@ -75,8 +69,6 @@ Audio stream usage.
 **Type:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

@@ -16,10 +16,6 @@ Obtains the current Wi-Fi power mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManagerExt-function getPowerMode(): Promise<PowerMode>--><!--Device-wifiManagerExt-function getPowerMode(): Promise<PowerMode>-End-->
@@ -40,7 +36,7 @@ Obtains the current Wi-Fi power mode.
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManagerExt } from '@kit.ConnectivityKit';
@@ -64,10 +60,6 @@ Obtains the current Wi-Fi power mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManagerExt-function getPowerMode(callback: AsyncCallback<PowerMode>): void--><!--Device-wifiManagerExt-function getPowerMode(callback: AsyncCallback<PowerMode>): void-End-->
@@ -88,7 +80,7 @@ Obtains the current Wi-Fi power mode.
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManagerExt } from '@kit.ConnectivityKit';

@@ -16,10 +16,6 @@ Removes a specified notification slot. This API uses an asynchronous callback to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -37,7 +33,7 @@ Removes a specified notification slot. This API uses an asynchronous callback to
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
@@ -65,10 +61,6 @@ Removes a specified notification slot. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>--><!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -91,7 +83,7 @@ Removes a specified notification slot. This API uses a promise to return the res
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';

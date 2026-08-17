@@ -1,14 +1,10 @@
 # OrientationResponse
 
-Describes the orientation sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
+Describes the orientation sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
 
-**Inheritance/Implementation:** OrientationResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**Inheritance/Implementation:** OrientationResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-interface OrientationResponse--><!--Device-sensor-interface OrientationResponse-End-->
 
@@ -32,10 +28,6 @@ Rotation angle of the device around the z-axis, in degrees. The value ranges fro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-OrientationResponse-alpha: double--><!--Device-OrientationResponse-alpha: double-End-->
@@ -54,10 +46,6 @@ Rotation angle of the device around the x-axis, in degrees. The value ranges fro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-OrientationResponse-beta: double--><!--Device-OrientationResponse-beta: double-End-->
@@ -75,10 +63,6 @@ Rotation angle of the device around the y-axis, in degrees. The value ranges fro
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

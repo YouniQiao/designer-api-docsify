@@ -1,12 +1,8 @@
 # AudioLoopback
 
-This interface provides APIs for audio monitoring. Before calling any API in AudioLoopback, you must use [audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback) to create an AudioLoopback instance. When audio loopback is enabled, the system creates a low-latency renderer and capturer to implement low-latency in- ear monitoring. The audio captured is routed back to the renderer through an internal path. The renderer follows the audio focus strategy for [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#StreamUsage), whereas the capturer follows the strategy for [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#SourceType). The system automatically chooses the input and output devices. If these devices do not support low latency, audio loopback does not work. If another audio stream takes over the audio focus or if the input or output device changes to the one that does not support low latency, the system disables audio loopback automatically. > **NOTE：**> > - The initial APIs of this interface are supported since API version 20.
+This interface provides APIs for audio monitoring. Before calling any API in AudioLoopback, you must use [audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback) to create an AudioLoopback instance. When audio loopback is enabled, the system creates a low-latency renderer and capturer to implement low-latency in- ear monitoring. The audio captured is routed back to the renderer through an internal path. The renderer follows the audio focus strategy for [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#streamusage), whereas the capturer follows the strategy for [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#sourcetype). The system automatically chooses the input and output devices. If these devices do not support low latency, audio loopback does not work. If another audio stream takes over the audio focus or if the input or output device changes to the one that does not support low latency, the system disables audio loopback automatically. > **NOTE：**> > - The initial APIs of this interface are supported since API version 20.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audio-interface AudioLoopback--><!--Device-audio-interface AudioLoopback-End-->
 
@@ -24,13 +20,9 @@ import { audio } from 'audio';
 enable(enable: boolean): Promise<boolean>
 ```
 
-Enable or disable audio loopback. When audio loopback is enabled, the system automatically creates fast playback and recording streams to implement low-latency in-ear monitoring. When audio loopback is disabled, the audio stream is destroyed. If enabling audio loopback fails, you can use [getStatus](#getStatus) to query the cause. After audio loopback is enabled, you can subscribe to the statusChange event to listen for audio loopback status changes.
+Enable or disable audio loopback. When audio loopback is enabled, the system automatically creates fast playback and recording streams to implement low-latency in-ear monitoring. When audio loopback is disabled, the audio stream is destroyed. If enabling audio loopback fails, you can use [getStatus](#getstatus) to query the cause. After audio loopback is enabled, you can subscribe to the statusChange event to listen for audio loopback status changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MICROPHONE
 
@@ -63,13 +55,9 @@ Enable or disable audio loopback. When audio loopback is enabled, the system aut
 getEqualizerPreset(): AudioLoopbackEqualizerPreset
 ```
 
-Gets the current equalizer preset. The default equalizer preset of audio loopback is [FULL](arkts-audio-audio-audioloopbackequalizerpreset-e.md#FULL) if users do not modify the preset.
+Gets the current equalizer preset. The default equalizer preset of audio loopback is [FULL](arkts-audio-audio-audioloopbackequalizerpreset-e.md#full) if users do not modify the preset.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset--><!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset-End-->
 
@@ -91,10 +79,6 @@ Gets the preferred audio device pair in current device connection situation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioLoopback-getPreferredDevicePair(): AudioDevicePair | null--><!--Device-AudioLoopback-getPreferredDevicePair(): AudioDevicePair | null-End-->
@@ -113,13 +97,9 @@ Gets the preferred audio device pair in current device connection situation.
 getReverbPreset(): AudioLoopbackReverbPreset
 ```
 
-Get the current reverberation. The default reverberation preset of audio loopback is [THEATER](arkts-audio-audio-audioloopbackreverbpreset-e.md#THEATER) if users do not modify the preset.
+Get the current reverberation. The default reverberation preset of audio loopback is [THEATER](arkts-audio-audio-audioloopbackreverbpreset-e.md#theater) if users do not modify the preset.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset--><!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset-End-->
 
@@ -141,10 +121,6 @@ Obtains the audio loopback status. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>--><!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -164,10 +140,6 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 Gets supported audio device pairs in current device connection situation.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -191,10 +163,6 @@ Gets the output volume for audio loopback.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioLoopback-getVolume(): double--><!--Device-AudioLoopback-getVolume(): double-End-->
@@ -216,10 +184,6 @@ offStatusChange(callback?: Callback<AudioLoopbackStatus>): void
 Unsubscribes audio loopback status change event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void-End-->
 
@@ -246,10 +210,6 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 Unsubscribes from the audio loopback status event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void-End-->
 
@@ -278,10 +238,6 @@ Subscribes to audio loopback status changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -307,10 +263,6 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 Subscribes to the audio loopback status change event, which is triggered when the status of the audio loopback is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void-End-->
 
@@ -338,10 +290,6 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 Sets the equalizer preset of the audio loopback.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean--><!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean-End-->
 
@@ -375,10 +323,6 @@ Sets the reverberation of the audio loopback.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean--><!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -410,10 +354,6 @@ setVolume(volume: double): Promise<void>
 Sets the volume for audio loopback. This volume does not affect other audio streams or the system volume.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopback-setVolume(volume: double): Promise<void>--><!--Device-AudioLoopback-setVolume(volume: double): Promise<void>-End-->
 

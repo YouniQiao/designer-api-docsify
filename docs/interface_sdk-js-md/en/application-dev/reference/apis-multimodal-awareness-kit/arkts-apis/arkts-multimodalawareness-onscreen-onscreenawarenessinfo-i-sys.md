@@ -4,10 +4,6 @@ Returns the list of onscreen awareness information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-onScreen-export interface OnscreenAwarenessInfo--><!--Device-onScreen-export interface OnscreenAwarenessInfo-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -32,10 +28,6 @@ Application index.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OnscreenAwarenessInfo-appIndex?: int--><!--Device-OnscreenAwarenessInfo-appIndex?: int-End-->
@@ -55,10 +47,6 @@ Application name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Application bundle name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OnscreenAwarenessInfo-bundleName?: string--><!--Device-OnscreenAwarenessInfo-bundleName?: string-End-->
@@ -103,10 +87,6 @@ Page collection policy, which is the bitwise OR operation combination of <br> Co
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Display ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OnscreenAwarenessInfo-displayId?: long--><!--Device-OnscreenAwarenessInfo-displayId?: long-End-->
@@ -151,10 +127,6 @@ Entity information.
 **Type:** EntityInfo[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +148,6 @@ Data item information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OnscreenAwarenessInfo-items?: AwarenessItem[]--><!--Device-OnscreenAwarenessInfo-items?: AwarenessItem[]-End-->
@@ -199,10 +167,6 @@ Page language information.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,10 +188,6 @@ Applet ID, for example, the ID of WeChat or Alipay.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OnscreenAwarenessInfo-miniProgramId?: string--><!--Device-OnscreenAwarenessInfo-miniProgramId?: string-End-->
@@ -247,10 +207,6 @@ Name of a third-party mini program.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,10 +228,6 @@ Application page ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OnscreenAwarenessInfo-pageId?: string--><!--Device-OnscreenAwarenessInfo-pageId?: string-End-->
@@ -295,10 +247,6 @@ Page tag information.
 **Type:** string[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -320,10 +268,6 @@ Return code. The default value **0** indicates success.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OnscreenAwarenessInfo-resultCode: int--><!--Device-OnscreenAwarenessInfo-resultCode: int-End-->
@@ -343,10 +287,6 @@ Collection record ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -368,10 +308,6 @@ Timestamp for accessing a specified page, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OnscreenAwarenessInfo-timestamp: long--><!--Device-OnscreenAwarenessInfo-timestamp: long-End-->
@@ -392,10 +328,6 @@ Application UID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OnscreenAwarenessInfo-uid?: string--><!--Device-OnscreenAwarenessInfo-uid?: string-End-->
@@ -415,10 +347,6 @@ Window ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ The **DriverExtensionAbility** module provides the ExtensionAbility related to d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class DriverExtensionAbility--><!--Device-unnamed-declare class DriverExtensionAbility-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -28,10 +24,6 @@ Called following **onCreate()** when a DriverExtensionAbility is started by call
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DriverExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>--><!--Device-DriverExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>-End-->
@@ -50,7 +42,7 @@ Called following **onCreate()** when a DriverExtensionAbility is started by call
 | --- | --- |
 | rpc.RemoteObject | RemoteObject** object used for communication between the server and client, or promise used to return the value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -113,10 +105,6 @@ Called when a client is disconnected from this DriverExtensionAbility.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DriverExtensionAbility-onDisconnect(want: Want): void | Promise<void>--><!--Device-DriverExtensionAbility-onDisconnect(want: Want): void | Promise<void>-End-->
@@ -129,7 +117,7 @@ Called when a client is disconnected from this DriverExtensionAbility.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -166,10 +154,6 @@ Called back when all abilities connected to a driver extension are disconnected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DriverExtensionAbility-onDisconnect(want: Want): undefined | Promise<void>--><!--Device-DriverExtensionAbility-onDisconnect(want: Want): undefined | Promise<void>-End-->
@@ -198,10 +182,6 @@ Dumps client information. It is recommended that developers don't DUMP sensitive
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DriverExtensionAbility-onDump(params: Array<string>): Array<string>--><!--Device-DriverExtensionAbility-onDump(params: Array<string>): Array<string>-End-->
@@ -220,7 +200,7 @@ Dumps client information. It is recommended that developers don't DUMP sensitive
 | --- | --- |
 | Array&lt;string&gt; | String array used to dump client information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class DriverExt extends DriverExtensionAbility {
@@ -241,10 +221,6 @@ Called when a DriverExtensionAbility is created to initialize the service logic.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DriverExtensionAbility-onInit(want: Want): void--><!--Device-DriverExtensionAbility-onInit(want: Want): void-End-->
@@ -257,7 +233,7 @@ Called when a DriverExtensionAbility is created to initialize the service logic.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -280,17 +256,13 @@ Called when this DriverExtensionAbility is destroyed to clear resources.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DriverExtensionAbility-onRelease(): void--><!--Device-DriverExtensionAbility-onRelease(): void-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
-## Examples
+**Examples**
 
 ```TypeScript
 class DriverExt extends DriverExtensionAbility {
@@ -311,10 +283,6 @@ Context of the **DriverExtension**. This context is inherited from **ExtensionCo
 **Type:** [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

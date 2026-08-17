@@ -4,10 +4,6 @@ Deferred video enhancement info.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-camera-interface DeferredVideoEnhancementInfo--><!--Device-camera-interface DeferredVideoEnhancementInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -26,10 +22,6 @@ Check whether deferred video enhancement available.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean--><!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -47,10 +39,6 @@ Video identifier.
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string--><!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string-End-->
 

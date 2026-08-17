@@ -16,10 +16,6 @@ Opens the Certificate Management dialog box to display the certificate details. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -52,7 +48,7 @@ Opens the Certificate Management dialog box to display the certificate details. 
 | [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) | Show the certificate detail dialog failed, such as the certificate is in an invalid format. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';

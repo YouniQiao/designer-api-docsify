@@ -4,10 +4,6 @@ Enumerates the intent execution modes. It specifies the mode of execution passed
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntent-enum ExecuteMode--><!--Device-insightIntent-enum ExecuteMode-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -21,10 +17,6 @@ SERVICE_EXTENSION_ABILITY = 3
 Starts a ServiceExtensionAbility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

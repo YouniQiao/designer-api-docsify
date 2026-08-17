@@ -4,10 +4,6 @@ Describes an audio effect property.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioEffectProperty--><!--Device-audio-interface AudioEffectProperty-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -32,10 +28,6 @@ Effect category this effect property belongs to.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioEffectProperty-category: string--><!--Device-AudioEffectProperty-category: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -54,10 +46,6 @@ Effect flag of this effect property.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioEffectProperty-flag: EffectFlag--><!--Device-AudioEffectProperty-flag: EffectFlag-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -75,10 +63,6 @@ Name of effect property.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioEffectProperty-name: string--><!--Device-AudioEffectProperty-name: string-End-->
 

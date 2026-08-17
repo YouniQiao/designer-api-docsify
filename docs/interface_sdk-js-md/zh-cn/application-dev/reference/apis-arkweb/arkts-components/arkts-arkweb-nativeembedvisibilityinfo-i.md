@@ -1,12 +1,8 @@
 # NativeEmbedVisibilityInfo
 
-提供同层标签的可见性信息。
+提供同层标签的可见性信息，包括可见状态和标签ID。适用于需要监控同层元素可见性的场景，提升渲染状态管理的准确性和用户体验。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface NativeEmbedVisibilityInfo--><!--Device-unnamed-declare interface NativeEmbedVisibilityInfo-End-->
 
@@ -24,10 +20,6 @@ embedId: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-NativeEmbedVisibilityInfo-embedId: string--><!--Device-NativeEmbedVisibilityInfo-embedId: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -43,10 +35,6 @@ visibility: boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-NativeEmbedVisibilityInfo-visibility: boolean--><!--Device-NativeEmbedVisibilityInfo-visibility: boolean-End-->
 

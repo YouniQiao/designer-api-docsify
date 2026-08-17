@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-userAuth-interface IAuthCallback--><!--Device-userAuth-interface IAuthCallback-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -22,10 +18,6 @@ onResult(result: UserAuthResult): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-IAuthCallback-onResult(result: UserAuthResult): void--><!--Device-IAuthCallback-onResult(result: UserAuthResult): void-End-->
@@ -38,7 +30,7 @@ onResult(result: UserAuthResult): void
 | --- | --- | --- | --- |
 | result | UserAuthResult | 是 | 认证结果。包含认证结果码、认证令牌（成功时）、认证类型和凭据状态等信息。应用应检查result.result字段判断认证是否成功： <br>- 若result.result为SUCCESS(12500000)，表示认证通过，可使用result.token进行后续操作。 <br>- 若result.result为其他值，表示认证不通过，应根据具体错误码进行处理。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -320,10 +312,6 @@ onResult: AuthCallbackOnResultFunc
 **类型：** [AuthCallbackOnResultFunc](arkts-userauthentication-userauth-authcallbackonresultfunc-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-IAuthCallback-onResult: AuthCallbackOnResultFunc--><!--Device-IAuthCallback-onResult: AuthCallbackOnResultFunc-End-->
 

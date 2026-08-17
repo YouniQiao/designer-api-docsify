@@ -4,10 +4,6 @@ class of vpn extension ability.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class VpnExtensionAbility--><!--Device-unnamed-export default class VpnExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -28,10 +24,6 @@ Called back when a vpn extension is started for initialization.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VpnExtensionAbility-onCreate(want: Want): void--><!--Device-VpnExtensionAbility-onCreate(want: Want): void-End-->
@@ -44,7 +36,7 @@ Called back when a vpn extension is started for initialization.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want of created service extension. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { VpnExtensionAbility } from '@kit.NetworkKit';
@@ -67,17 +59,13 @@ Called back before a vpn extension is destroyed.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VpnExtensionAbility-onDestroy(): void--><!--Device-VpnExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { VpnExtensionAbility } from '@kit.NetworkKit';
@@ -100,10 +88,6 @@ Indicates service extension ability context.
 **Type:** [VpnExtensionContext](arkts-network-vpnextensioncontext-c.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

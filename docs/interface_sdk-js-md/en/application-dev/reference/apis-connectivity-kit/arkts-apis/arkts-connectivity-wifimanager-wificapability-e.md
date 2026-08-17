@@ -4,10 +4,6 @@ Wi-Fi Capability
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-enum WifiCapability--><!--Device-wifiManager-enum WifiCapability-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -21,10 +17,6 @@ WIFI_AUTO_ENABLE = 0
 Wi-Fi auto enable capability
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

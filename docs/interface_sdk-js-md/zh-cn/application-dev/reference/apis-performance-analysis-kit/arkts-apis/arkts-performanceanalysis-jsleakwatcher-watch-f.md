@@ -10,10 +10,6 @@ function watch(obj: object, msg: string): void
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 <!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void--><!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
@@ -25,7 +21,7 @@ function watch(obj: object, msg: string): void
 | obj | object | 是 | 需要检测的对象。<br>**说明：**可传入任何非null的ArkTS对象，不支持undefined和基本类型。 |
 | msg | string | 是 | 自定义对象信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let obj:Object = new Object();

@@ -2,13 +2,9 @@
 
 Corresponds to a file, including its metadata and data and the file's manifest data. Files are useful as IPC and backup services.
 
-**Inheritance/Implementation:** File extends [FileMeta](arkts-corefile-backup-filemeta-i-sys.md#FileMeta-(System-API)), [FileData](arkts-corefile-backup-filedata-i-sys.md#FileData-(System-API)), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md#FileManifestData-(System-API))
+**Inheritance/Implementation:** File extends [FileMeta](arkts-corefile-backup-filemeta-i-sys.md#filemeta-system-api), [FileData](arkts-corefile-backup-filedata-i-sys.md#filedata-system-api), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md#filemanifestdata-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-backup-interface File--><!--Device-backup-interface File-End-->
 

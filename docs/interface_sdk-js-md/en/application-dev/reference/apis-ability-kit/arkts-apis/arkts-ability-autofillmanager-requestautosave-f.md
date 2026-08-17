@@ -16,10 +16,6 @@ Requests to automatically save the widget data. This API uses an asynchronous ca
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -42,7 +38,7 @@ Requests to automatically save the widget data. This API uses an asynchronous ca
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Get instance id failed; <br>2. Parse instance id failed; 3. The second parameter is not of type callback. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -135,10 +131,6 @@ export function requestAutoSave(context: UIContext, request: SaveRequest, callba
 Trigger an auto save request.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

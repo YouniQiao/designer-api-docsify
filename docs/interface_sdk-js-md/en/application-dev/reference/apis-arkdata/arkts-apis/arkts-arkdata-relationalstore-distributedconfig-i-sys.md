@@ -4,10 +4,6 @@ Defines a struct for distributed configuration of a table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-interface DistributedConfig--><!--Device-relationalStore-interface DistributedConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -29,10 +25,6 @@ Specifies the reference relationships between tables.
 **Type:** Array&lt;[Reference](arkts-arkdata-relationalstore-reference-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedConfig-references?: Array<Reference>--><!--Device-DistributedConfig-references?: Array<Reference>-End-->
 

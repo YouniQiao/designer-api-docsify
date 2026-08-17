@@ -4,8 +4,6 @@ Defines a response that returns the screen brightness.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-unnamed-export interface BrightnessResponse--><!--Device-unnamed-export interface BrightnessResponse-End-->
@@ -35,8 +33,6 @@ Screen brightness. The value ranges from **1** to **255**.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 7
 

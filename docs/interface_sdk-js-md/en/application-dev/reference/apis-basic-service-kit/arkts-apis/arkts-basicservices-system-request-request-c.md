@@ -1,8 +1,6 @@
-# Request
+# Request(Upload and Download)
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -35,11 +33,9 @@ Downloads a file. This API returns no value.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig)
+**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)(context: BaseContext, config: DownloadConfig)
 
 <!--Device-Request-static download(options: DownloadRequestOptions): void--><!--Device-Request-static download(options: DownloadRequestOptions): void-End-->
 
@@ -60,8 +56,6 @@ static onDownloadComplete(options: OnDownloadCompleteOptions): void
 Listens for download task status. This API returns no value.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -87,11 +81,9 @@ Uploads a file. This API returns no value.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile)(context: BaseContext, config: UploadConfig)
+**Substitutes:** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)(context: BaseContext, config: UploadConfig)
 
 <!--Device-Request-static upload(options: UploadRequestOptions): void--><!--Device-Request-static upload(options: UploadRequestOptions): void-End-->
 

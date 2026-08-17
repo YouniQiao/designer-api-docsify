@@ -4,10 +4,6 @@ Enumerates the modes for saving documents.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-picker-export enum DocumentPickerMode--><!--Device-picker-export enum DocumentPickerMode-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -21,10 +17,6 @@ DEFAULT = 0
 Standard mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -41,10 +33,6 @@ DOWNLOAD = 1
 Download mode. **Note：**: The directories created in DOWNLOAD mode are used only to save files. There is no access isolation between directories. You are advised not to save sensitive application data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

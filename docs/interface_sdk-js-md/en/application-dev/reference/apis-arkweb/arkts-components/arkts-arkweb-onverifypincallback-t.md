@@ -4,13 +4,9 @@
 type OnVerifyPinCallback = (verifyPinEvent: VerifyPinEvent) => void
 ```
 
-The callback of verify pin.
+Callback triggered to notify the user of PIN authentication.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-type OnVerifyPinCallback = (verifyPinEvent: VerifyPinEvent) => void--><!--Device-unnamed-type OnVerifyPinCallback = (verifyPinEvent: VerifyPinEvent) => void-End-->
 
@@ -20,5 +16,5 @@ The callback of verify pin.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| verifyPinEvent | [VerifyPinEvent](arkts-arkweb-verifypinevent-i.md) | Yes | The event of verify PIN. |
+| verifyPinEvent | [VerifyPinEvent](arkts-arkweb-verifypinevent-i.md) | Yes | Details of the callback triggered to notify the user of PIN authentication. |
 

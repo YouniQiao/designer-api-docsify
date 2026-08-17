@@ -4,10 +4,6 @@ Used to mix colors.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ColorMetrics--><!--Device-unnamed-declare class ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,10 +18,6 @@ Sets whether the **ColorMetrics** object automatically updates with system confi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -38,7 +30,7 @@ Sets whether the **ColorMetrics** object automatically updates with system confi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the **ColorMetrics** object constructed using [resourceColor](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#resourceColor) automatically refreshes the color value when the system configuration changes. <br>**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. <br>**false**: The object does not proactively listen to the system configuration changes. |
+| value | boolean | Yes | Whether the **ColorMetrics** object constructed using [resourceColor](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#resourcecolor) automatically refreshes the color value when the system configuration changes. <br>**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. <br>**false**: The object does not proactively listen to the system configuration changes. |
 
 **Return value:**
 
@@ -55,10 +47,6 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 Blends a specified color (**overlayColor**) with the current color and returns the resulting color.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,10 +84,6 @@ Creates a **ColorMetrics** instance using specified ColorSpace and RGBA values. 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -112,7 +96,7 @@ Creates a **ColorMetrics** instance using specified ColorSpace and RGBA values. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | ColorSpace | Yes | Color space used to specify the color. If ColorSpace.DISPLAY_P3 is used, the [setWindowColorSpace](arkts-arkui-window-window-i.md#setWindowColorSpace) API must be called to set the current window to the wide color gamut mode. |
+| colorSpace | ColorSpace | Yes | Color space used to specify the color. If ColorSpace.DISPLAY_P3 is used, the [setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace) API must be called to set the current window to the wide color gamut mode. |
 | red | number | Yes | Red component of the color. The value is a floating point number ranging from 0 to 1. |
 | green | number | Yes | Green component of the color. The value is a floating point number ranging from 0 to 1. |
 | blue | number | Yes | Blue component of the color. The value is a floating point number ranging from 0 to 1. |
@@ -133,10 +117,6 @@ static numeric(value: number): ColorMetrics
 Instantiates the **ColorMetrics** class using a color in HEX format.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,10 +147,6 @@ static resourceColor(color: ResourceColor): ColorMetrics
 Instantiates the **ColorMetrics** class using a color in resource reference format.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,10 +184,6 @@ static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetr
 Instantiates the **ColorMetrics** class using colors in RGB or RGBA format.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

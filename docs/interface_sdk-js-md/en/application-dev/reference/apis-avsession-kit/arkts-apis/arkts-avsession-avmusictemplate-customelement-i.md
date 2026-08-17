@@ -2,13 +2,9 @@
 
 Custom elements of mine page.
 
-**Inheritance/Implementation:** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
+**Inheritance/Implementation:** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-avMusicTemplate-interface CustomElement--><!--Device-avMusicTemplate-interface CustomElement-End-->
 
@@ -32,10 +28,6 @@ Compilations of categories
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CustomElement-customCompilations?: Compilation[]--><!--Device-CustomElement-customCompilations?: Compilation[]-End-->
@@ -53,10 +45,6 @@ Settings information
 **Type:** [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,10 +64,6 @@ Tab pages information
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CustomElement-tabs?: MediaTab[]--><!--Device-CustomElement-tabs?: MediaTab[]-End-->
@@ -97,10 +81,6 @@ User information
 **Type:** UserInfo
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

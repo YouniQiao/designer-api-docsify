@@ -1,12 +1,8 @@
 # Metadata
 
-The **Metadata** class provides APIs for storing image metadata. For details about the supported metadata types, see [MetadataType](arkts-image-image-metadatatype-e.md#MetadataType).
+The **Metadata** class provides APIs for storing image metadata. For details about the supported metadata types, see [MetadataType](arkts-image-image-metadatatype-e.md#metadatatype).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-interface Metadata--><!--Device-image-interface Metadata-End-->
 
@@ -28,10 +24,6 @@ Clones the metadata. This API uses a promise to return the result.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 <!--Device-Metadata-clone(): Promise<Metadata>--><!--Device-Metadata-clone(): Promise<Metadata>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -52,10 +44,6 @@ Obtains a clone of metadata. This method uses a promise to return the metadata.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Metadata-clone(): Promise<Metadata | undefined>--><!--Device-Metadata-clone(): Promise<Metadata | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -72,13 +60,9 @@ Obtains a clone of metadata. This method uses a promise to return the metadata.
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and values from the image's metadata. This API uses a promise to return the result. For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
+Obtains all properties and values from the image's metadata. This API uses a promise to return the result. For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md#propertykey), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#fragmentmappropertykey), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md#gifpropertykey), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#heifspropertykey).
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 <!--Device-Metadata-getAllProperties(): Promise<Record<string, string | null>>--><!--Device-Metadata-getAllProperties(): Promise<Record<string, string | null>>-End-->
 
@@ -100,10 +84,6 @@ Obtains the value of all properties in an image. This method uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Metadata-getAllProperties(): Promise<Record<string, string|null> | undefined>--><!--Device-Metadata-getAllProperties(): Promise<Record<string, string|null> | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -124,10 +104,6 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Metadata-getBlob(): Promise<ArrayBuffer>--><!--Device-Metadata-getBlob(): Promise<ArrayBuffer>-End-->
@@ -146,13 +122,9 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-Obtains the values of properties from the image's metadata. This API uses a promise to return the result. For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
+Obtains the values of properties from the image's metadata. This API uses a promise to return the result. For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md#propertykey), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#fragmentmappropertykey), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md#gifpropertykey), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#heifspropertykey).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Metadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>--><!--Device-Metadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>-End-->
 
@@ -187,10 +159,6 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Metadata-setBlob(blob: ArrayBuffer): Promise<void>--><!--Device-Metadata-setBlob(blob: ArrayBuffer): Promise<void>-End-->
@@ -221,13 +189,9 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of properties for the image's metadata. This API uses a promise to return the result. For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
+Sets the values of properties for the image's metadata. This API uses a promise to return the result. For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md#propertykey), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#fragmentmappropertykey), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md#gifpropertykey), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#heifspropertykey).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Metadata-setProperties(records: Record<string, string | null>): Promise<void>--><!--Device-Metadata-setProperties(records: Record<string, string | null>): Promise<void>-End-->
 

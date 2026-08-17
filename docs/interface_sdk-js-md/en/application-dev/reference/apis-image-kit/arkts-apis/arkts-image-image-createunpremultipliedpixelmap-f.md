@@ -16,10 +16,6 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -41,7 +37,7 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 | [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
 | [62980248](../errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -81,10 +77,6 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -111,7 +103,7 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 | [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
 | [62980248](../errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

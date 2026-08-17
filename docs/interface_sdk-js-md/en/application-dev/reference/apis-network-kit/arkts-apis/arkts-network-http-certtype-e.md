@@ -4,10 +4,6 @@ Enum for certificate types
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-http-export enum CertType--><!--Device-http-export enum CertType-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -21,10 +17,6 @@ PEM = 'PEM'
 PEM format certificate
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CertType-PEM = 'PEM'--><!--Device-CertType-PEM = 'PEM'-End-->
 
@@ -40,10 +32,6 @@ DER format certificate
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CertType-DER = 'DER'--><!--Device-CertType-DER = 'DER'-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -57,10 +45,6 @@ P12 = 'P12'
 P12 format certificate
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CertType-P12 = 'P12'--><!--Device-CertType-P12 = 'P12'-End-->
 

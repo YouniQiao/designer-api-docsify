@@ -4,11 +4,9 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md#AccelerometerResponse)
+**替代接口：** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md#accelerometerresponse)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -27,8 +25,6 @@ x: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 8
 
@@ -54,8 +50,6 @@ y: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** [y](arkts-sensorservice-sensor-accelerometerresponse-i.md#y)
@@ -79,8 +73,6 @@ z: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 8
 

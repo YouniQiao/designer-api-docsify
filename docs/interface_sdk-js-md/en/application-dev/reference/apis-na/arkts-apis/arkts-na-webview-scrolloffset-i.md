@@ -1,12 +1,10 @@
 # ScrollOffset
 
-Defines the scroll offset of the webpage in view port, the unit is virtual pixel. Related to [getScrollOffset](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getScrollOffset) method.
+Defines the scroll offset of the webpage in view port, the unit is virtual pixel. Related to [getScrollOffset](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getscrolloffset) method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
 
@@ -24,9 +22,7 @@ Get the horizontal offset. The unit is vp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScrollOffset-x: double--><!--Device-ScrollOffset-x: double-End-->
 
@@ -44,9 +40,7 @@ Get the vertical offset. The unit is vp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ScrollOffset-y: double--><!--Device-ScrollOffset-y: double-End-->
 

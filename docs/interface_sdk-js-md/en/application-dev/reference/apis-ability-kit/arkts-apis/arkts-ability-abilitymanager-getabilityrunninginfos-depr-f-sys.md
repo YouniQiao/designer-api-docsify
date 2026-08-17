@@ -10,11 +10,9 @@ Obtains the ability running information. This API uses a promise to return the r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getAbilityRunningInfos)
+**Substitutes:** [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getabilityrunninginfos)
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -41,11 +39,9 @@ Obtains the ability running information. This API uses an asynchronous callback 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getAbilityRunningInfos)
+**Substitutes:** [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getabilityrunninginfos)
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 

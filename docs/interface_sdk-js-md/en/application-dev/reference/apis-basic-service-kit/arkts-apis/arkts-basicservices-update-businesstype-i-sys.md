@@ -4,10 +4,6 @@ Represents an upgrade service type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface BusinessType--><!--Device-update-export interface BusinessType-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Upgrade type, which is used to specify the target object to be upgraded. Use sce
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BusinessType-subType: BusinessSubType--><!--Device-BusinessType-subType: BusinessSubType-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ Vendor type, which is used to identify the vendor of the upgrade package. Use sc
 **Type:** [BusinessVendor](arkts-basicservices-update-businessvendor-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BusinessType-vendor: BusinessVendor--><!--Device-BusinessType-vendor: BusinessVendor-End-->
 

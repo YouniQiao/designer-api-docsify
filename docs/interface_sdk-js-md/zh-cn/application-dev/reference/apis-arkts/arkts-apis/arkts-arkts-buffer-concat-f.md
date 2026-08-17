@@ -10,10 +10,6 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-buffer-function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer--><!--Device-buffer-function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer-End-->
@@ -39,7 +35,7 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "length" is out of range. It must be >= 0 and &lt;= uint32 max. Received value is: [length] |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

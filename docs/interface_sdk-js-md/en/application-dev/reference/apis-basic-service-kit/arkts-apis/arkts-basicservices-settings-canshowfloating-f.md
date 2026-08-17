@@ -16,8 +16,6 @@ Checks whether a specified application can show as a floating window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-settings-function canShowFloating(callback: AsyncCallback<boolean>): void--><!--Device-settings-function canShowFloating(callback: AsyncCallback<boolean>): void-End-->
@@ -30,7 +28,7 @@ Checks whether a specified application can show as a floating window.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of canShowFloating result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 settings.canShowFloating((err:Error, status: boolean) => {
@@ -53,8 +51,6 @@ Checks whether a specified application can show as a floating window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-settings-function canShowFloating(): Promise<boolean>--><!--Device-settings-function canShowFloating(): Promise<boolean>-End-->
@@ -67,7 +63,7 @@ Checks whether a specified application can show as a floating window.
 | --- | --- |
 | Promise&lt;boolean&gt; | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 settings.canShowFloating().then((status:boolean) => {

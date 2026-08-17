@@ -1,14 +1,10 @@
 # BadgeParamWithString
 
-Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam) and has all attributes of **BadgeParam**.
+Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#badgeparam) and has all attributes of **BadgeParam**.
 
-**Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam)
+**Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](arkts-arkui-badgeparam-i.md#badgeparam)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface BadgeParamWithString--><!--Device-unnamed-declare interface BadgeParamWithString-End-->
 
@@ -25,10 +21,6 @@ Text string of the badge content. **NOTE：**The ResourceStr type is supported s
 **Type:** ResourceStr
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -16,10 +16,6 @@ Obtains a collection of thread, process, and alarm rules that have been added.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hichecker-function getRule() : bigint--><!--Device-hichecker-function getRule() : bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -30,7 +26,7 @@ Obtains a collection of thread, process, and alarm rules that have been added.
 | --- | --- |
 | bigint | Collection of added rules. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Add a rule.

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-emitter-export class Emitter--><!--Device-emitter-export class Emitter-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -22,17 +18,13 @@ constructor()
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-constructor()--><!--Device-Emitter-constructor()-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
-## 示例
+**示例**
 
 ```TypeScript
 let emitter1 = new emitter.Emitter();
@@ -48,10 +40,6 @@ emit(eventId: string, data?: EventData): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-emit(eventId: string, data?: EventData): void--><!--Device-Emitter-emit(eventId: string, data?: EventData): void-End-->
@@ -65,7 +53,7 @@ emit(eventId: string, data?: EventData): void
 | eventId | string | 是 | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 | 事件携带的数据，默认为空。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -109,10 +97,6 @@ emit<T>(eventId: string, data?: GenericEventData<T>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-emit<T>(eventId: string, data?: GenericEventData<T>): void--><!--Device-Emitter-emit<T>(eventId: string, data?: GenericEventData<T>): void-End-->
@@ -126,7 +110,7 @@ emit<T>(eventId: string, data?: GenericEventData<T>): void
 | eventId | string | 是 | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 | 事件携带的数据，默认为空。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 @Sendable
@@ -159,10 +143,6 @@ emit(eventId: string, options: Options, data?: EventData): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-emit(eventId: string, options: Options, data?: EventData): void--><!--Device-Emitter-emit(eventId: string, options: Options, data?: EventData): void-End-->
@@ -177,7 +157,7 @@ emit(eventId: string, options: Options, data?: EventData): void
 | options | Options | 是 | 事件优先级。 |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 | 事件携带的数据，默认为空。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -227,10 +207,6 @@ emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void--><!--Device-Emitter-emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void-End-->
@@ -245,7 +221,7 @@ emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void
 | options | Options | 是 | 事件优先级。 |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 | 事件携带的数据，默认为空。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Sample {
@@ -280,10 +256,6 @@ getListenerCount(eventId: string): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-getListenerCount(eventId: string): long--><!--Device-Emitter-getListenerCount(eventId: string): long-End-->
@@ -302,7 +274,7 @@ getListenerCount(eventId: string): long
 | --- | --- |
 | long | 指定事件的订阅数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
@@ -315,13 +287,9 @@ let count = emitter1.getListenerCount("eventId");
 offEventData(eventId: string, callback: Callback<EventData>): void
 ```
 
-取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用 [onEventData](arkts-basicservices-emitter-oneventdata-f.md#onEventData)或 [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md#onceEventData)接口订阅callback时，该接口才生效。 使用该接口取消某个事件订阅后，已通过emit接口发布但尚未被执行的事件将被取消。
+取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用 [onEventData](arkts-basicservices-emitter-oneventdata-f.md#oneventdata)或 [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md#onceeventdata)接口订阅callback时，该接口才生效。 使用该接口取消某个事件订阅后，已通过emit接口发布但尚未被执行的事件将被取消。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void-End-->
 
@@ -332,9 +300,9 @@ offEventData(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 事件的回调处理函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 事件的回调处理函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -358,10 +326,6 @@ offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -371,9 +335,9 @@ offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 事件的回调处理函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 事件的回调处理函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -411,10 +375,6 @@ off(eventId: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-off(eventId: string): void--><!--Device-Emitter-off(eventId: string): void-End-->
@@ -427,7 +387,7 @@ off(eventId: string): void
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
@@ -441,13 +401,9 @@ emitter1.off("eventId");
 off(eventId: string, callback: Callback<EventData>): void
 ```
 
-取消订阅当前Emitter类实例的事件。仅当已使用[on](#on_string)或 once接口订阅了事件ID为eventId且回调处理函数为 callback的事件时，该接口才生效。 使用该接口取消事件订阅后，已通过emit接口发布但尚未被执行的事件将被取消。
+取消订阅当前Emitter类实例的事件。仅当已使用[on](#onstring)或 once接口订阅了事件ID为eventId且回调处理函数为 callback的事件时，该接口才生效。 使用该接口取消事件订阅后，已通过emit接口发布但尚未被执行的事件将被取消。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -460,9 +416,9 @@ off(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -486,10 +442,6 @@ off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
@@ -501,9 +453,9 @@ off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -541,10 +493,6 @@ onEventData(eventId: string, callback: Callback<EventData>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -554,9 +502,9 @@ onEventData(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -580,10 +528,6 @@ onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>):
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -593,9 +537,9 @@ onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -633,10 +577,6 @@ on(eventId: string, callback: Callback<EventData>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-on(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-on(eventId: string, callback: Callback<EventData>): void-End-->
@@ -648,9 +588,9 @@ on(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 持续订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，在接收到该事件时被调用。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，在接收到该事件时被调用。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -674,10 +614,6 @@ on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
@@ -689,9 +625,9 @@ on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 持续订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，在接收到该事件时被调用。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，在接收到该事件时被调用。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -729,10 +665,6 @@ onceEventData(eventId: string, callback: Callback<EventData>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -742,9 +674,9 @@ onceEventData(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -768,10 +700,6 @@ onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -781,9 +709,9 @@ onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -821,10 +749,6 @@ once(eventId: string, callback: Callback<EventData>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-once(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-once(eventId: string, callback: Callback<EventData>): void-End-->
@@ -836,9 +760,9 @@ once(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 单次订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，在接收到该事件时被调用。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，在接收到该事件时被调用。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -862,10 +786,6 @@ once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Emitter-once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
@@ -877,9 +797,9 @@ once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 单次订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，在接收到该事件时被调用。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，在接收到该事件时被调用。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

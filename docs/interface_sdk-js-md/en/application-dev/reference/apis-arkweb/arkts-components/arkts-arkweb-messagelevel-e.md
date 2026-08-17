@@ -1,12 +1,8 @@
 # MessageLevel
 
-Enum type supplied to [getMessageLevel](arkts-arkweb-consolemessage-c.md#getMessageLevel) for receiving the console log level of JavaScript.
+Enumerates the information levels of the console messages. > **NOTE：**> > On the HTML5 side, calling console.log or console.info both correspond to the console message level of > MessageLevel.Info.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum MessageLevel--><!--Device-unnamed-declare enum MessageLevel-End-->
 
@@ -22,10 +18,6 @@ Debug level.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MessageLevel-Debug = 1--><!--Device-MessageLevel-Debug = 1-End-->
@@ -38,13 +30,9 @@ Debug level.
 Info = 2
 ```
 
-Info level.
+Information level.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ Info level.
 Warn = 3
 ```
 
-Warn level.
+Warning level.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ Error level.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MessageLevel-Error = 4--><!--Device-MessageLevel-Error = 4-End-->
@@ -101,8 +81,6 @@ Log = 5
 Log level.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 26.0.0
 

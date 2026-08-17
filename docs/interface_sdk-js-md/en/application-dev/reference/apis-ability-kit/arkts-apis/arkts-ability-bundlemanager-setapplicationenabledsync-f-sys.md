@@ -16,10 +16,6 @@ Enables or disables an application. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 <!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void--><!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void-End-->
@@ -44,7 +40,7 @@ Enables or disables an application. This API returns the result synchronously.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -72,10 +68,6 @@ function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled:
 Set whether an application is enabled or disabled, with control over whether the process is killed when disabled.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 

@@ -4,10 +4,6 @@ The proxy of the UIExtension window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiExtension-interface WindowProxy--><!--Device-uiExtension-interface WindowProxy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,10 +23,6 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 Creates a subwindow for this window proxy. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,7 +54,7 @@ Creates a subwindow for this window proxy. This API uses a promise to return the
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -120,10 +112,6 @@ Create subwindow.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-WindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
@@ -152,7 +140,7 @@ Create subwindow.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -209,10 +197,6 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -239,7 +223,7 @@ Obtains the area where this window cannot be displayed, for example, the system 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -266,10 +250,6 @@ Sets the events that the component (**EmbeddedComponent** or **UIExtensionCompon
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -282,7 +262,7 @@ Sets the events that the component (**EmbeddedComponent** or **UIExtensionCompon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventFlags | int | Yes | Type of events to occupy. For details about the available values, see [EventFlag](arkts-arkui-uiextension-eventflag-e.md#EventFlag). |
+| eventFlags | int | Yes | Type of events to occupy. For details about the available values, see [EventFlag](arkts-arkui-uiextension-eventflag-e.md#eventflag). |
 
 **Return value:**
 
@@ -298,7 +278,7 @@ Sets the events that the component (**EmbeddedComponent** or **UIExtensionCompon
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -337,10 +317,6 @@ Unsubscribes from the event indicating changes to the area where the window cann
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowProxy-offAvoidAreaChange(callback?: Callback<AvoidAreaInfo>): void--><!--Device-WindowProxy-offAvoidAreaChange(callback?: Callback<AvoidAreaInfo>): void-End-->
@@ -368,10 +344,6 @@ offRectChange(callback?: Callback<RectChangeOptions>): void
 Unsubscribes from changes in the position and size of the component (EmbeddedComponent or UIExtensionComponent). This API can be used only on 2-in-1 devices.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -402,10 +374,6 @@ Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void--><!--Device-WindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void-End-->
@@ -434,10 +402,6 @@ Unsubscribes from events of system avoidance area changes.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -460,7 +424,7 @@ Unsubscribes from events of system avoidance area changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -485,10 +449,6 @@ Unsubscribes from position and size change events of the component (**EmbeddedCo
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -512,7 +472,7 @@ Unsubscribes from position and size change events of the component (**EmbeddedCo
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -537,10 +497,6 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -563,7 +519,7 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -587,10 +543,6 @@ onAvoidAreaChange(callback: Callback<AvoidAreaInfo>): void
 Subscribes to the event indicating changes to the area where the window cannot be displayed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -619,10 +571,6 @@ onRectChange(reasons: int, callback: Callback<RectChangeOptions>): void
 Subscribes to changes in the position and size of the component (EmbeddedComponent or UIExtensionComponent). This API can be used only on 2-in-1 devices.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -654,10 +602,6 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void--><!--Device-WindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void-End-->
@@ -686,10 +630,6 @@ Subscribes to events of system avoidance area changes.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -712,7 +652,7 @@ Subscribes to events of system avoidance area changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -740,10 +680,6 @@ Subscribes to position and size change events of the component (**EmbeddedCompon
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -757,7 +693,7 @@ Subscribes to position and size change events of the component (**EmbeddedCompon
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rectChange' | Yes | Event type. The value is fixed at **'rectChange'**, indicating the rectangle change event for the component (**EmbeddedComponent** or **UIExtensionComponent**). |
-| reasons | number | Yes | Reason why the position and size of the component (**EmbeddedComponent** or **UIExtensionComponent**) change. For details about the values, see [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md#RectChangeReason). |
+| reasons | number | Yes | Reason why the position and size of the component (**EmbeddedComponent** or **UIExtensionComponent**) change. For details about the values, see [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md#rectchangereason). |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | Yes | Callback used to return the current rectangle change values and the reason for the change of the component (**EmbeddedComponent** or **UIExtensionComponent**). |
 
 **Error codes:**
@@ -768,7 +704,7 @@ Subscribes to position and size change events of the component (**EmbeddedCompon
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -796,10 +732,6 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -822,7 +754,7 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // ExtensionProvider.ts
@@ -846,15 +778,11 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 properties: WindowProxyProperties
 ```
 
-Information about the component (**EmbeddedComponent** or **UIExtensionComponent**). Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#on_avoidAreaChange) callback.
+Information about the component (**EmbeddedComponent** or **UIExtensionComponent**). Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#onavoidareachange) callback.
 
 **Type:** [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

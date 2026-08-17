@@ -4,10 +4,6 @@ Enumerates the anti-aliasing levels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-enum AntiAliasingLevel--><!--Device-image-enum AntiAliasingLevel-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -21,10 +17,6 @@ NONE = 0
 Nearest neighbor interpolation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -42,10 +34,6 @@ Bilinear interpolation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-AntiAliasingLevel-LOW = 1--><!--Device-AntiAliasingLevel-LOW = 1-End-->
@@ -62,10 +50,6 @@ Bilinear interpolation with mipmap enabled. You are advised to use this value wh
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-AntiAliasingLevel-MEDIUM = 2--><!--Device-AntiAliasingLevel-MEDIUM = 2-End-->
@@ -81,10 +65,6 @@ HIGH = 3
 Cubic interpolation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

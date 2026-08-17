@@ -10,10 +10,6 @@ Cast all the media audio to the remote devices or cast back local device
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-avSession-function castAudioSessionAll(audioDevices: Array<audio.AudioDeviceDescriptor>): Promise<void>--><!--Device-avSession-function castAudioSessionAll(audioDevices: Array<audio.AudioDeviceDescriptor>): Promise<void>-End-->
@@ -44,7 +40,7 @@ Cast all the media audio to the remote devices or cast back local device
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [6600104](../errorcode-avsession.md#6600104-远端会话连接失败) | The remote session connection failed. |
 
-## 示例
+**示例**
 
 ArkTS-Sta示例：
 

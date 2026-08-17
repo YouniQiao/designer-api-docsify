@@ -1,0 +1,40 @@
+# @ohos.application.formError(formError)
+
+/*
+ Copyright (c) 2026 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+ ###### 权限
+ 无
+
+
+**起始版本：** 23
+
+<!--Device-unnamed-declare namespace formError--><!--Device-unnamed-declare namespace formError-End-->
+
+**系统能力：** SystemCapability.Ability.Form
+
+## 汇总
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [FormError](arkts-form-formerror-formerror-e.md) | 枚举，卡片错误码。 |
+
+<!--Del-->
+### 枚举（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [FormError](arkts-form-formerror-formerror-e-sys.md) | 枚举，卡片错误码。 |
+<!--DelEnd-->
+

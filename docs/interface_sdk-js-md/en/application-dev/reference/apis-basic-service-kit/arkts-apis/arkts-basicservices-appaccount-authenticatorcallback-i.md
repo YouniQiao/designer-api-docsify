@@ -1,14 +1,12 @@
 # AuthenticatorCallback
 
-Provides OAuth authenticator callbacks. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md#AuthCallback) instead.
+Provides OAuth authenticator callbacks. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md#authcallback) instead.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md#AuthCallback)
+**Substitutes:** [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md#authcallback)
 
 <!--Device-appAccount-interface AuthenticatorCallback--><!--Device-appAccount-interface AuthenticatorCallback-End-->
 
@@ -26,13 +24,11 @@ import { appAccount } from 'appAccount';
 onRequestRedirected: (request: Want) => void
 ```
 
-Called to redirect a request. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use [onRequestRedirected](#onRequestRedirected) instead.
+Called to redirect a request. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use [onRequestRedirected](#onrequestredirected) instead.
 
 **Type:** (request: Want) =&gt; void
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -48,13 +44,11 @@ Called to redirect a request. > **NOTE：**> > This API is supported since API v
 onResult: (code: number, result: { [key: string]: any }) => void
 ```
 
-Called to return the result of an authentication request. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use [onResult](#onResult) instead.
+Called to return the result of an authentication request. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use [onResult](#onresult) instead.
 
 **Type:** (code: number, result: { [key: string]: any }) =&gt; void
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

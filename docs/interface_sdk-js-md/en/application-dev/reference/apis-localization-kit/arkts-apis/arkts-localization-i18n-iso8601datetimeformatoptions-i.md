@@ -4,10 +4,6 @@ Represents optional configuration items for the ISO8601DateTimeFormat object. Th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export interface ISO8601DateTimeFormatOptions--><!--Device-i18n-export interface ISO8601DateTimeFormatOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -30,10 +26,6 @@ The ISO 8601 date format to format. The value can be: "calendar", the format is 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -53,10 +45,6 @@ Check if need to show time zone part. Default value is true that show time zone.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,10 +66,6 @@ The date time separator style. The value can be: "extended": with -/:, "basic": 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -102,10 +86,6 @@ The ISO 8601 time precision to format. The value can be: "dateOnly", "hours", "m
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -122,13 +102,9 @@ timeZone?: TimeZone
 
 TimeZone object used to format date, default value UTC.
 
-**Type:** [TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md)
+**Type:** [TimeZone](arkts-localization-i18n-timezone-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

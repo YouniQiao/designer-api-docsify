@@ -1,4 +1,4 @@
-# PromptActionCommonState
+# PromptActionCommonState(CustomDialog)
 
 ```TypeScript
 declare type PromptActionCommonState = import('../api/@ohos.promptAction').promptAction.CommonState
@@ -7,10 +7,6 @@ declare type PromptActionCommonState = import('../api/@ohos.promptAction').promp
 Defines the state of the custom dialog box.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

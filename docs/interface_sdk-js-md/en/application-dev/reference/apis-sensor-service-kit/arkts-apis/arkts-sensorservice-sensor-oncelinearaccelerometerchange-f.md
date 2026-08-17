@@ -16,10 +16,6 @@ Subscribe to linear acceleration sensor data once, {@code SensorId.LINEAR_ACCELE
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 <!--Device-sensor-function onceLinearAccelerometerChange(callback: Callback<LinearAccelerometerResponse>): void--><!--Device-sensor-function onceLinearAccelerometerChange(callback: Callback<LinearAccelerometerResponse>): void-End-->

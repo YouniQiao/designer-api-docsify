@@ -1,14 +1,12 @@
 # PermissionDef (System API)
 
-The module provides permission details defined in the configuration file. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef-(System-API)) instead. > > The APIs provided by this module are system APIs.
+The module provides permission details defined in the configuration file. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md#permissiondef-system-api) instead. > > The APIs provided by this module are system APIs.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef-(System-API))
+**Substitutes:** [PermissionDef](arkts-ability-permissiondef-i-sys.md#permissiondef-system-api)
 
 <!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
 
@@ -29,8 +27,6 @@ ID of the permission description.
 **Default:** Indicates the descriptionId of this permission
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -56,8 +52,6 @@ Grant mode of the permission. The value **0** means that the system automaticall
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** grantMode
@@ -82,8 +76,6 @@ ID of the permission label.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -107,8 +99,6 @@ Name of the permission.
 **Default:** Indicates the name of this permission
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

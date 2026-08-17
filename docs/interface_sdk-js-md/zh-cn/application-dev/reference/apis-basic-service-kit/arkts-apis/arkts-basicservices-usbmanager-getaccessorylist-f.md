@@ -10,10 +10,6 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-usbManager-function getAccessoryList(): Array<Readonly<USBAccessory>>--><!--Device-usbManager-function getAccessoryList(): Array<Readonly<USBAccessory>>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -31,7 +27,7 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes:  <br>1. No accessory is plugged in. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {

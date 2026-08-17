@@ -4,8 +4,6 @@ getInfo interface
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-unnamed-export default class Device--><!--Device-unnamed-export default class Device-End-->
@@ -28,8 +26,6 @@ static getInfo(options?: GetDeviceOptions): void
 Obtains the device information.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 

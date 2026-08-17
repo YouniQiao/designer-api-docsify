@@ -10,11 +10,9 @@ function getDate(callback: AsyncCallback<Date>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getDate)
+**替代接口：** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getdate)
 
 <!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void-End-->
 
@@ -24,7 +22,7 @@ function getDate(callback: AsyncCallback<Date>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | 是 | 回调函数，返回当前系统日期。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Date&gt; | 是 | 回调函数，返回当前系统日期。 |
 
 **错误码：**
 
@@ -32,7 +30,7 @@ function getDate(callback: AsyncCallback<Date>): void
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -62,11 +60,9 @@ function getDate(): Promise<Date>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getDate)
+**替代接口：** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getdate)
 
 <!--Device-systemTime-function getDate(): Promise<Date>--><!--Device-systemTime-function getDate(): Promise<Date>-End-->
 
@@ -84,7 +80,7 @@ function getDate(): Promise<Date>
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

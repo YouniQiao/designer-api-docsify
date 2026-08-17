@@ -16,10 +16,6 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-function getISOCountryCodeForSim(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getISOCountryCodeForSim(slotId: int, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -42,7 +38,7 @@ Obtains the ISO country code of the SIM card in a specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,10 +59,6 @@ function getISOCountryCodeForSim(slotId: int): Promise<string>
 Obtains the ISO country code of the SIM card in a specified slot.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sim-function getISOCountryCodeForSim(slotId: int): Promise<string>--><!--Device-sim-function getISOCountryCodeForSim(slotId: int): Promise<string>-End-->
 
@@ -95,7 +87,7 @@ Obtains the ISO country code of the SIM card in a specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

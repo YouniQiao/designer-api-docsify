@@ -16,10 +16,6 @@ Creates a distributed data object. The object properties support basic types (nu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDataObject-function create(context: Context, source: object): DataObject--><!--Device-distributedDataObject-function create(context: Context, source: object): DataObject-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -43,7 +39,7 @@ Creates a distributed data object. The object properties support basic types (nu
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 FA model:
 

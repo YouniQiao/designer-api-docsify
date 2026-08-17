@@ -10,10 +10,6 @@ Creates a FrameNode of the **Text** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -35,7 +31,7 @@ Creates a FrameNode of the **Text** type.
 | --- | --- |
 | Text | FrameNode of the **Text** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -82,10 +78,6 @@ Creates a FrameNode of the **Column** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -107,7 +99,7 @@ Creates a FrameNode of the **Column** type.
 | --- | --- |
 | Column | FrameNode of the **Column** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -153,10 +145,6 @@ Creates a FrameNode of the Row type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -178,7 +166,7 @@ Creates a FrameNode of the Row type.
 | --- | --- |
 | Row | FrameNode of the **Row** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -224,10 +212,6 @@ Creates a FrameNode of the **Stack** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -249,7 +233,7 @@ Creates a FrameNode of the **Stack** type.
 | --- | --- |
 | Stack | FrameNode of the **Stack** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -299,10 +283,6 @@ Creates a FrameNode of the **GridRow** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -324,7 +304,7 @@ Creates a FrameNode of the **GridRow** type.
 | --- | --- |
 | GridRow | FrameNode of the **GridRow** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -377,10 +357,6 @@ Creates a FrameNode of the **GridCol** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -402,7 +378,7 @@ Creates a FrameNode of the **GridCol** type.
 | --- | --- |
 | GridCol | FrameNode of the **GridCol** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -455,10 +431,6 @@ Creates a FrameNode of the Flex type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -480,7 +452,7 @@ Creates a FrameNode of the Flex type.
 | --- | --- |
 | Flex | FrameNode of the **Flex** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -526,10 +498,6 @@ Creates a FrameNode of the **Swiper** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -551,7 +519,7 @@ Creates a FrameNode of the **Swiper** type.
 | --- | --- |
 | Swiper | FrameNode of the **Swiper** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -616,10 +584,6 @@ Creates a FrameNode of the **Progress** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -641,7 +605,7 @@ Creates a FrameNode of the **Progress** type.
 | --- | --- |
 | Progress | FrameNode of the **Progress** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -690,10 +654,6 @@ Creates a FrameNode of the **Scroll** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -715,7 +675,7 @@ Creates a FrameNode of the **Scroll** type.
 | --- | --- |
 | Scroll | FrameNode of the **Scroll** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -778,10 +738,6 @@ Creates a FrameNode of the **RelativeContainer** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -803,7 +759,7 @@ Creates a FrameNode of the **RelativeContainer** type.
 | --- | --- |
 | RelativeContainer | FrameNode of the **RelativeContainer** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -849,10 +805,6 @@ Creates a FrameNode of the **Divider** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -874,7 +826,7 @@ Creates a FrameNode of the **Divider** type.
 | --- | --- |
 | Divider | FrameNode of the **Divider** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -926,10 +878,6 @@ Creates a FrameNode of the **LoadingProgress** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -951,7 +899,7 @@ Creates a FrameNode of the **LoadingProgress** type.
 | --- | --- |
 | LoadingProgress | FrameNode of the **LoadingProgress** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -998,10 +946,6 @@ Creates a FrameNode of the **Search** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1023,7 +967,7 @@ Creates a FrameNode of the **Search** type.
 | --- | --- |
 | Search | FrameNode of the **Search** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -1071,10 +1015,6 @@ Creates a FrameNode of the **Blank** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1096,7 +1036,7 @@ Creates a FrameNode of the **Blank** type.
 | --- | --- |
 | Blank | FrameNode of the **Blank** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1149,10 +1089,6 @@ Creates a FrameNode of the **Image** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1174,7 +1110,7 @@ Creates a FrameNode of the **Image** type.
 | --- | --- |
 | Image | FrameNode of the **Image** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -1231,10 +1167,6 @@ Creates a FrameNode of the **List** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1256,7 +1188,7 @@ Creates a FrameNode of the **List** type.
 | --- | --- |
 | List | FrameNode of the **List** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1326,10 +1258,6 @@ Creates a FrameNode of the **ListItem** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1351,7 +1279,7 @@ Creates a FrameNode of the **ListItem** type.
 | --- | --- |
 | ListItem | FrameNode of the **ListItem** type. |
 
-## Examples
+**Examples**
 
 See the example for createNode('List').
 
@@ -1365,10 +1293,6 @@ function createNode(context: UIContext, nodeType: 'TextInput'): TextInput
 Creates a FrameNode of the **TextInput** type.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1391,7 +1315,7 @@ Creates a FrameNode of the **TextInput** type.
 | --- | --- |
 | TextInput | FrameNode of the **TextInput** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -1437,10 +1361,6 @@ Creates a FrameNode of the **Button** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1462,7 +1382,7 @@ Creates a FrameNode of the **Button** type.
 | --- | --- |
 | Button | FrameNode of the **Button** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1515,10 +1435,6 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1540,7 +1456,7 @@ Creates a FrameNode of the **ListItemGroup** type.
 | --- | --- |
 | ListItemGroup | FrameNode of the **ListItemGroup** type. |
 
-## Examples
+**Examples**
 
 See the example for createNode('List').
 
@@ -1554,10 +1470,6 @@ function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow
 Creates a FrameNode of the **WaterFlow** type.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1580,7 +1492,7 @@ Creates a FrameNode of the **WaterFlow** type.
 | --- | --- |
 | WaterFlow | FrameNode of the **WaterFlow** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1654,10 +1566,6 @@ Creates a FrameNode of the **FlowItem** type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1679,7 +1587,7 @@ Creates a FrameNode of the **FlowItem** type.
 | --- | --- |
 | FlowItem | FrameNode of the **FlowItem** type. |
 
-## Examples
+**Examples**
 
 See the example for createNode('WaterFlow').
 
@@ -1693,10 +1601,6 @@ function createNode(context: UIContext, nodeType: 'XComponent'): XComponent
 Creates a FrameNode of the **XComponent** type.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1719,7 +1623,7 @@ Creates a FrameNode of the **XComponent** type.
 | --- | --- |
 | XComponent | FrameNode of the **XComponent** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1766,10 +1670,6 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1792,7 +1692,7 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 | --- | --- |
 | XComponent | FrameNode of the **XComponent** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1845,10 +1745,6 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -1871,7 +1767,7 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 | --- | --- |
 | XComponent | FrameNode of the **XComponent** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1922,10 +1818,6 @@ Creates a FrameNode of the **Checkbox** type.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1947,7 +1839,7 @@ Creates a FrameNode of the **Checkbox** type.
 | --- | --- |
 | Checkbox | FrameNode of the **Checkbox** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -2002,10 +1894,6 @@ Creates a FrameNode of the **CheckboxGroup** type.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2027,7 +1915,7 @@ Creates a FrameNode of the **CheckboxGroup** type.
 | --- | --- |
 | CheckboxGroup | FrameNode of the **CheckboxGroup** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -2084,10 +1972,6 @@ Creates a FrameNode of the **Radio** type.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2109,7 +1993,7 @@ Creates a FrameNode of the **Radio** type.
 | --- | --- |
 | Radio | FrameNode of the **Radio** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -2163,10 +2047,6 @@ Creates a FrameNode of the **Rating** type.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2188,7 +2068,7 @@ Creates a FrameNode of the **Rating** type.
 | --- | --- |
 | Rating | FrameNode of the **Rating** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -2238,10 +2118,6 @@ Creates a FrameNode of the **Select** type.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2263,7 +2139,7 @@ Creates a FrameNode of the **Select** type.
 | --- | --- |
 | Select | FrameNode of the **Select** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -2311,10 +2187,6 @@ Creates a FrameNode of the **Slider** type.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2336,7 +2208,7 @@ Creates a FrameNode of the **Slider** type.
 | --- | --- |
 | Slider | FrameNode of the **Slider** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -2385,10 +2257,6 @@ Creates a FrameNode of the **Toggle** type.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2411,7 +2279,7 @@ Creates a FrameNode of the **Toggle** type.
 | --- | --- |
 | Toggle | FrameNode of the **Toggle** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -2461,10 +2329,6 @@ Creates a FrameNode of the **Marquee** type.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2486,7 +2350,7 @@ Creates a FrameNode of the **Marquee** type.
 | --- | --- |
 | Marquee | FrameNode of the **Marquee** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -2533,10 +2397,6 @@ Creates a FrameNode of the **TextArea** type.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2558,7 +2418,7 @@ Creates a FrameNode of the **TextArea** type.
 | --- | --- |
 | TextArea | FrameNode of the **TextArea** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -2604,10 +2464,6 @@ Creates a FrameNode of the **SymbolGlyph** type.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2629,7 +2485,7 @@ Creates a FrameNode of the **SymbolGlyph** type.
 | --- | --- |
 | SymbolGlyph | FrameNode of the **SymbolGlyph** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -2675,10 +2531,6 @@ Creates a FrameNode of the **QRCode** type.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2700,7 +2552,7 @@ Creates a FrameNode of the **QRCode** type.
 | --- | --- |
 | QRCode | FrameNode of the **QRCode** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 typeNode.createNode(uiContext, 'QRCode');
@@ -2716,10 +2568,6 @@ function createNode(context: UIContext, nodeType: 'Badge'): Badge
 Creates a FrameNode of the **Badge** type.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2742,7 +2590,7 @@ Creates a FrameNode of the **Badge** type.
 | --- | --- |
 | Badge | FrameNode of the **Badge** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 typeNode.createNode(uiContext, 'Badge');
@@ -2758,10 +2606,6 @@ function createNode(context: UIContext, nodeType: 'TextClock'): TextClock
 Creates a FrameNode of the **TextClock** type.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2784,7 +2628,7 @@ Creates a FrameNode of the **TextClock** type.
 | --- | --- |
 | TextClock | FrameNode of the **TextClock** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 typeNode.createNode(uiContext, 'TextClock');
@@ -2800,10 +2644,6 @@ function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer
 Creates a FrameNode of the **TextTimer** type.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2826,7 +2666,7 @@ Creates a FrameNode of the **TextTimer** type.
 | --- | --- |
 | TextTimer | FrameNode of the **TextTimer** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 typeNode.createNode(uiContext, 'TextTimer');
@@ -2842,10 +2682,6 @@ function createNode(context: UIContext, nodeType: 'Grid'): Grid
 Creates a FrameNode of the **Grid** type.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2868,7 +2704,7 @@ Creates a FrameNode of the **Grid** type.
 | --- | --- |
 | Grid | FrameNode of the **Grid** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -2937,10 +2773,6 @@ Creates a FrameNode of the **GridItem** type.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2962,7 +2794,7 @@ Creates a FrameNode of the **GridItem** type.
 | --- | --- |
 | GridItem | FrameNode of the **GridItem** type. |
 
-## Examples
+**Examples**
 
 See the example for createNode('Grid').
 

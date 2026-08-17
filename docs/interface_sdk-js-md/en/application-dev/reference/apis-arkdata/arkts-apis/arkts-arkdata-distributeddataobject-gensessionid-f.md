@@ -16,10 +16,6 @@ Creates a random session ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDataObject-function genSessionId(): string--><!--Device-distributedDataObject-function genSessionId(): string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -30,7 +26,7 @@ Creates a random session ID.
 | --- | --- |
 | string | Session ID created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let sessionId: string = distributedDataObject.genSessionId();

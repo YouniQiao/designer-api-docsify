@@ -4,10 +4,6 @@ The callback of start vertical panel.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-verticalPanelManager-interface PanelStartCallback--><!--Device-verticalPanelManager-interface PanelStartCallback-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
@@ -32,10 +28,6 @@ Called when some error occurred except disconnected from UIAbility or UIExtensio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanelStartCallback-onError: OnErrorFn--><!--Device-PanelStartCallback-onError: OnErrorFn-End-->
@@ -55,10 +47,6 @@ Called when UIExtensionAbility terminate with result.
 **Type:** [OnResultFn](arkts-ability-onresultfn-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

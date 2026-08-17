@@ -4,10 +4,6 @@ The **systemTimer** module provides system timer features. You can use the APIs 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace systemTimer--><!--Device-unnamed-declare namespace systemTimer-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -27,14 +23,14 @@ import { systemTimer } from 'systemTimer';
 
 | Name | Description |
 | --- | --- |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createTimer) | Creates a timer. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)). Otherwise > , memory leakage occurs. |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createTimer-(System-API)) | Creates a timer. This API uses a promise to return the timer ID. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)). Otherwise > , memory leakage occurs. |
-| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer) | Destroys a timer. This API uses an asynchronous callback to return the result. |
-| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)) | Destroys a timer. This API uses a promise to return the result. |
-| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#startTimer) | Starts a timer. This API uses an asynchronous callback to return the result. |
-| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#startTimer-(System-API)) | Starts a timer. This API uses a promise to return the result. |
-| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stopTimer) | Stops the timer. This API uses an asynchronous callback to return the result. |
-| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stopTimer-(System-API)) | Stops a timer. This API uses a promise to return the result. |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer) | Creates a timer. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-system-api). Otherwise > , memory leakage occurs. |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer-system-api) | Creates a timer. This API uses a promise to return the timer ID. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-system-api). Otherwise > , memory leakage occurs. |
+| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer) | Destroys a timer. This API uses an asynchronous callback to return the result. |
+| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-system-api) | Destroys a timer. This API uses a promise to return the result. |
+| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer) | Starts a timer. This API uses an asynchronous callback to return the result. |
+| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer-system-api) | Starts a timer. This API uses a promise to return the result. |
+| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stoptimer) | Stops the timer. This API uses an asynchronous callback to return the result. |
+| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stoptimer-system-api) | Stops a timer. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -50,9 +46,9 @@ import { systemTimer } from 'systemTimer';
 
 | Name | Description |
 | --- | --- |
-| [TIMER_TYPE_EXACT](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_EXACT) | Exact type. (If the system time is changed, the offset may be 1s at most.) |
-| [TIMER_TYPE_IDLE](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_IDLE) | Idle timer type (supported only for system services). |
-| [TIMER_TYPE_REALTIME](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_REALTIME) | CPU time type. (The start time of the timer cannot be later than the current system time.) |
-| [TIMER_TYPE_WAKEUP](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_WAKEUP) | Wakeup type. (If the wakeup type is not set, the system does not wake up until it exits the sleep state.) |
+| [TIMER_TYPE_EXACT](arkts-basicservices-systemtimer-con-sys.md#timertypeexact) | Exact type. (If the system time is changed, the offset may be 1s at most.) |
+| [TIMER_TYPE_IDLE](arkts-basicservices-systemtimer-con-sys.md#timertypeidle) | Idle timer type (supported only for system services). |
+| [TIMER_TYPE_REALTIME](arkts-basicservices-systemtimer-con-sys.md#timertyperealtime) | CPU time type. (The start time of the timer cannot be later than the current system time.) |
+| [TIMER_TYPE_WAKEUP](arkts-basicservices-systemtimer-con-sys.md#timertypewakeup) | Wakeup type. (If the wakeup type is not set, the system does not wake up until it exits the sleep state.) |
 <!--DelEnd-->
 

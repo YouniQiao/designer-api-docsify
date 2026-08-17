@@ -1,4 +1,4 @@
-# ParamsInterface
+# ParamsInterface(Page Routing)
 
 ```TypeScript
 type ParamsInterface = {
@@ -9,8 +9,6 @@ type ParamsInterface = {
 List of routing parameters.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 8
 

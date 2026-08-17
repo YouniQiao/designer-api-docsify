@@ -4,9 +4,7 @@ Defines chip options class.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class ChipV2Options--><!--Device-unnamed-export class ChipV2Options-End-->
 
@@ -22,9 +20,7 @@ The constructor of ChipV2Options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,5 +32,5 @@ The constructor of ChipV2Options
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [IChipV2OptionsConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | config of the ChipV2Options |
+| config | [IChipV2OptionsConfig](arkts-na-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | config of the ChipV2Options |
 

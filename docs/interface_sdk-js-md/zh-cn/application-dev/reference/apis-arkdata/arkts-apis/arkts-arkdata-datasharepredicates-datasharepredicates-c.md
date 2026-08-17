@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-dataSharePredicates-class DataSharePredicates--><!--Device-dataSharePredicates-class DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -24,10 +20,6 @@ and(): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -42,7 +34,7 @@ and(): DataSharePredicates
 | --- | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有和条件的谓词。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
@@ -60,10 +52,6 @@ equalTo(field: string, value: ValueType): DataSharePredicates
 该接口用于配置谓词以匹配值等于指定值的字段。 目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,7 +74,7 @@ equalTo(field: string, value: ValueType): DataSharePredicates
 | --- | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
@@ -102,10 +90,6 @@ in(field: string, value: Array<ValueType>): DataSharePredicates
 该接口用于配置谓词以匹配值在指定范围内的字段。 目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,7 +112,7 @@ in(field: string, value: Array<ValueType>): DataSharePredicates
 | --- | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
@@ -144,10 +128,6 @@ inValues(field: string, value: Array<ValueType>): DataSharePredicates
 Configure {@code DataSharePredicates} to match the specified field whose data type is ValueType array and values are within a given range. Currently only used for RDB and KVDB(schema).
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -168,7 +148,7 @@ Configure {@code DataSharePredicates} to match the specified field whose data ty
 | --- | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Returns DataSharePredicates that matches the specified field. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
@@ -185,10 +165,6 @@ limit(total: int, offset: int): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -201,8 +177,8 @@ limit(total: int, offset: int): DataSharePredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| total | int | 是 | 最大数据记录数。当使用键值型数据库且total为undefined或null时，会限制最大记录数为0。当使用关系型数据库且total为undefined或 null时，不会限制最大记录数。当使用键值型数据库时，取值范围参考 [键值型数据库limit接口](arkts-arkdata-distributedkvstore-query-c.md#limit)中的total参数说明。当使用关系型数据库 时，取值范围参考[关系型数据库limitAs接口](arkts-arkdata-relationalstore-rdbpredicates-c.md#limitAs)中的value参数说明。 |
-| offset | int | 是 | 指定查询结果的起始位置。当offset为undefined或null时，起始位置为结果集的最前端。当使用键值型数据库时，取值范围参考 [键值型数据库limit接口](arkts-arkdata-distributedkvstore-query-c.md#limit)中的offset参数说明。当使用关系型数据 库时，取值范围参考[关系型数据库offsetAs接口](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetAs)中的 rowOffset参数说明。 |
+| total | int | 是 | 最大数据记录数。当使用键值型数据库且total为undefined或null时，会限制最大记录数为0。当使用关系型数据库且total为undefined或 null时，不会限制最大记录数。当使用键值型数据库时，取值范围参考 [键值型数据库limit接口](arkts-arkdata-distributedkvstore-query-c.md#limit)中的total参数说明。当使用关系型数据库 时，取值范围参考[关系型数据库limitAs接口](arkts-arkdata-relationalstore-rdbpredicates-c.md#limitas)中的value参数说明。 |
+| offset | int | 是 | 指定查询结果的起始位置。当offset为undefined或null时，起始位置为结果集的最前端。当使用键值型数据库时，取值范围参考 [键值型数据库limit接口](arkts-arkdata-distributedkvstore-query-c.md#limit)中的offset参数说明。当使用关系型数据 库时，取值范围参考[关系型数据库offsetAs接口](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetas)中的 rowOffset参数说明。 |
 
 **返回值：**
 
@@ -210,7 +186,7 @@ limit(total: int, offset: int): DataSharePredicates
 | --- | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
@@ -226,10 +202,6 @@ notInValues(field: string, value: Array<ValueType>): DataSharePredicates
 Configure {@code DataSharePredicates} to match the specified field whose data type is String array and values are out of a given range. Currently only used for RDB and KVDB(schema).
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -250,7 +222,7 @@ Configure {@code DataSharePredicates} to match the specified field whose data ty
 | --- | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Returns DataSharePredicates that matches the specified field. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
@@ -266,10 +238,6 @@ orderByAsc(field: string): DataSharePredicates
 该接口用于配置谓词以匹配其值按升序排序的列。 目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -291,7 +259,7 @@ orderByAsc(field: string): DataSharePredicates
 | --- | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
@@ -307,10 +275,6 @@ orderByDesc(field: string): DataSharePredicates
 该接口用于配置谓词以匹配其值按降序排序的列。 目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -332,7 +296,7 @@ orderByDesc(field: string): DataSharePredicates
 | --- | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();

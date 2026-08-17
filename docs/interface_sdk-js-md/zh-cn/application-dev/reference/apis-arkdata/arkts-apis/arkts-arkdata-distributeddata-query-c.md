@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** Query
@@ -24,8 +22,6 @@ and(): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** and
@@ -40,7 +36,7 @@ and(): Query
 | --- | --- |
 | Query | 返回查询对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -65,8 +61,6 @@ beginGroup(): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** beginGroup
@@ -81,7 +75,7 @@ beginGroup(): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -106,8 +100,6 @@ constructor()
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** constructor
@@ -122,11 +114,9 @@ constructor()
 deviceId(deviceId: string): Query
 ```
 
-添加设备ID作为key的前缀。 > **说明：** > > 其中deviceId通过调用&lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync) > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
+添加设备ID作为key的前缀。 > **说明：** > > 其中deviceId通过调用&lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -148,7 +138,7 @@ deviceId(deviceId: string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -170,8 +160,6 @@ endGroup(): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** endGroup
@@ -186,7 +174,7 @@ endGroup(): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -211,8 +199,6 @@ equalTo(field: string, value: number | string | boolean): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** equalTo
@@ -234,7 +220,7 @@ equalTo(field: string, value: number | string | boolean): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -257,8 +243,6 @@ getSqlLike(): string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** getSqlLike
@@ -273,7 +257,7 @@ getSqlLike(): string
 | --- | --- |
 | string | 返回一个字段列中包含对应子串的结果。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -294,8 +278,6 @@ greaterThan(field: string, value: number | string | boolean): Query
 构造一个Query对象以查询具有大于指定值的指定字段的条目。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -318,7 +300,7 @@ greaterThan(field: string, value: number | string | boolean): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -341,8 +323,6 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** greaterThanOrEqualTo
@@ -364,7 +344,7 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -387,8 +367,6 @@ inNumber(field: string, valueList: number[]): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** inNumber
@@ -410,7 +388,7 @@ inNumber(field: string, valueList: number[]): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -433,8 +411,6 @@ inString(field: string, valueList: string[]): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** inString
@@ -456,7 +432,7 @@ inString(field: string, valueList: string[]): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -479,8 +455,6 @@ isNotNull(field: string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** isNotNull
@@ -501,7 +475,7 @@ isNotNull(field: string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -524,8 +498,6 @@ isNull(field: string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** isNull
@@ -546,7 +518,7 @@ isNull(field: string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -569,8 +541,6 @@ lessThan(field: string, value: number | string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** lessThan
@@ -592,7 +562,7 @@ lessThan(field: string, value: number | string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -615,8 +585,6 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** lessThanOrEqualTo
@@ -638,7 +606,7 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -661,8 +629,6 @@ like(field: string, value: string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** like
@@ -684,7 +650,7 @@ like(field: string, value: string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -707,8 +673,6 @@ limit(total: number, offset: number): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** limit
@@ -730,7 +694,7 @@ limit(total: number, offset: number): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let total = 10;
@@ -756,8 +720,6 @@ notEqualTo(field: string, value: number | string | boolean): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** notEqualTo
@@ -779,7 +741,7 @@ notEqualTo(field: string, value: number | string | boolean): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -802,8 +764,6 @@ notInNumber(field: string, valueList: number[]): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** notInNumber
@@ -825,7 +785,7 @@ notInNumber(field: string, valueList: number[]): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -848,8 +808,6 @@ notInString(field: string, valueList: string[]): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** notInString
@@ -871,7 +829,7 @@ notInString(field: string, valueList: string[]): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -894,8 +852,6 @@ or(): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** or
@@ -910,7 +866,7 @@ or(): Query
 | --- | --- |
 | Query | 返回查询对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -935,8 +891,6 @@ orderByAsc(field: string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** orderByAsc
@@ -957,7 +911,7 @@ orderByAsc(field: string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -981,8 +935,6 @@ orderByDesc(field: string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** orderByDesc
@@ -1003,7 +955,7 @@ orderByDesc(field: string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -1027,8 +979,6 @@ prefixKey(prefix: string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** prefixKey
@@ -1049,7 +999,7 @@ prefixKey(prefix: string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -1073,8 +1023,6 @@ reset(): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** reset
@@ -1089,7 +1037,7 @@ reset(): Query
 | --- | --- |
 | Query | 返回重置的Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -1114,8 +1062,6 @@ setSuggestIndex(index: string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** setSuggestIndex
@@ -1136,7 +1082,7 @@ setSuggestIndex(index: string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -1160,8 +1106,6 @@ unlike(field: string, value: string): Query
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** unlike
@@ -1183,7 +1127,7 @@ unlike(field: string, value: string): Query
 | --- | --- |
 | Query | 返回Query对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {

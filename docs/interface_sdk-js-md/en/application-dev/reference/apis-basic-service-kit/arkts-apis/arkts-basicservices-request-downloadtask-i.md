@@ -1,12 +1,8 @@
 # DownloadTask
 
-Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile) .
+Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-interface DownloadTask--><!--Device-request-interface DownloadTask-End-->
 
@@ -28,10 +24,6 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void-End-->
@@ -50,7 +42,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -87,10 +79,6 @@ Deletes the download task. This API uses a promise to return the result. > **NOT
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-delete(): Promise<boolean>--><!--Device-DownloadTask-delete(): Promise<boolean>-End-->
@@ -109,7 +97,7 @@ Deletes the download task. This API uses a promise to return the result. > **NOT
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -143,10 +131,6 @@ Obtains the information about this download task. This API uses an asynchronous 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void--><!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void-End-->
@@ -165,7 +149,7 @@ Obtains the information about this download task. This API uses an asynchronous 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -202,10 +186,6 @@ Obtains the information about this download task. This API uses a promise to ret
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>--><!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>-End-->
@@ -224,7 +204,7 @@ Obtains the information about this download task. This API uses a promise to ret
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -259,10 +239,6 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void--><!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void-End-->
@@ -281,7 +257,7 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -318,10 +294,6 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-getTaskMimeType(): Promise<string>--><!--Device-DownloadTask-getTaskMimeType(): Promise<string>-End-->
@@ -340,7 +312,7 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -375,10 +347,6 @@ Called when the current download session complete.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void--><!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -398,10 +366,6 @@ offFail(callback?: DownloadFailCallback): void
 Called when the current download session fails.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void--><!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void-End-->
 
@@ -423,10 +387,6 @@ Called when the current download session pause.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void--><!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -446,10 +406,6 @@ offProgress(callback?: DownloadProgressCallback): void
 Called when the current download session is in process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void--><!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void-End-->
 
@@ -471,10 +427,6 @@ Called when the current download session remove.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void--><!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -495,10 +447,6 @@ Unsubscribes from download events.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -516,7 +464,7 @@ Unsubscribes from download events.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -584,10 +532,6 @@ Unsubscribes from download failure events.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void--><!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -597,7 +541,7 @@ Unsubscribes from download failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Event type.<br>- **'fail'**: download task failure. |
-| callback | (err: int) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](arkts-basicservices-request-n.md#Constants) . |
+| callback | (err: int) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](arkts-basicservices-request-n.md#constants) . |
 
 **Error codes:**
 
@@ -605,7 +549,7 @@ Unsubscribes from download failure events.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -647,10 +591,6 @@ Unsubscribes from download events.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -668,7 +608,7 @@ Unsubscribes from download events.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -736,10 +676,6 @@ Unsubscribes from download progress events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -757,7 +693,7 @@ Unsubscribes from download progress events.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -799,10 +735,6 @@ Unsubscribes from download events.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -820,7 +752,7 @@ Unsubscribes from download events.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -888,10 +820,6 @@ Called when the current download session complete.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void--><!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -911,10 +839,6 @@ onFail(callback: DownloadFailCallback): void
 Called when the current download session fails.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void--><!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void-End-->
 
@@ -936,10 +860,6 @@ Called when the current download session pause.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void--><!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -959,10 +879,6 @@ onProgress(callback: DownloadProgressCallback): void
 Called when the current download session is in process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void--><!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void-End-->
 
@@ -984,10 +900,6 @@ Called when the current download session remove.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void--><!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -1008,10 +920,6 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -1029,7 +937,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1073,10 +981,6 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void--><!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -1086,7 +990,7 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Event type.<br>- **'fail'**: download task failure. |
-| callback | (err: int) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes, see [Download Error Codes](arkts-basicservices-request-n.md#Constants) . |
+| callback | (err: int) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes, see [Download Error Codes](arkts-basicservices-request-n.md#constants) . |
 
 **Error codes:**
 
@@ -1094,7 +998,7 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1128,10 +1032,6 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -1149,7 +1049,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1193,10 +1093,6 @@ Subscribes to download progress events. This API uses an asynchronous callback t
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -1214,7 +1110,7 @@ Subscribes to download progress events. This API uses an asynchronous callback t
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1248,10 +1144,6 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -1269,7 +1161,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1313,8 +1205,6 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [suspend](#suspend)(callback: AsyncCallback&lt;boolean&gt;)
@@ -1337,7 +1227,7 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 downloadTask.pause((err: BusinessError) => {
@@ -1358,8 +1248,6 @@ pause(): Promise<void>
 Pauses this download task. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -1383,7 +1271,7 @@ Pauses this download task. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 downloadTask.pause().then(() => {    
@@ -1403,11 +1291,9 @@ Queries this download task. This API uses an asynchronous callback to return the
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTaskInfo](#getTaskInfo)(callback: AsyncCallback&lt;DownloadInfo&gt;)
+**Substitutes:** [getTaskInfo](#gettaskinfo)(callback: AsyncCallback&lt;DownloadInfo&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1427,7 +1313,7 @@ Queries this download task. This API uses an asynchronous callback to return the
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
@@ -1449,11 +1335,9 @@ Queries this download task. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTaskInfo](#getTaskInfo)()
+**Substitutes:** [getTaskInfo](#gettaskinfo)()
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1473,7 +1357,7 @@ Queries this download task. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 downloadTask.query().then((downloadInfo) => {    
@@ -1493,11 +1377,9 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTaskMimeType](#getTaskMimeType)(callback: AsyncCallback&lt;string&gt;)
+**Substitutes:** [getTaskMimeType](#gettaskmimetype)(callback: AsyncCallback&lt;string&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1517,7 +1399,7 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 downloadTask.queryMimeType((err: BusinessError, data: string)=>{
@@ -1539,11 +1421,9 @@ Queries the MIME type of this download task. This API uses a promise to return t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTaskMimeType](#getTaskMimeType)()
+**Substitutes:** [getTaskMimeType](#gettaskmimetype)()
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1563,7 +1443,7 @@ Queries the MIME type of this download task. This API uses a promise to return t
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 downloadTask.queryMimeType().then((data: string) => {    
@@ -1582,8 +1462,6 @@ remove(callback: AsyncCallback<boolean>): void
 Deletes the download task. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -1607,7 +1485,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 downloadTask.remove((err, result)=>{
@@ -1628,8 +1506,6 @@ remove(): Promise<boolean>
 Deletes the download task. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -1653,7 +1529,7 @@ Deletes the download task. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 downloadTask.remove().then((result) => {
@@ -1673,10 +1549,6 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void-End-->
@@ -1695,7 +1567,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1732,10 +1604,6 @@ Restores the download task. This API uses a promise to return the result. > **NO
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-restore(): Promise<boolean>--><!--Device-DownloadTask-restore(): Promise<boolean>-End-->
@@ -1754,7 +1622,7 @@ Restores the download task. This API uses a promise to return the result. > **NO
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1789,8 +1657,6 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [restore](#restore)(callback: AsyncCallback&lt;boolean&gt;)
@@ -1813,7 +1679,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 downloadTask.resume((err: BusinessError) => {
@@ -1834,8 +1700,6 @@ resume(): Promise<void>
 Restores the download task. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -1859,7 +1723,7 @@ Restores the download task. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 downloadTask.resume().then(() => {
@@ -1879,10 +1743,6 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void-End-->
@@ -1901,7 +1761,7 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1938,10 +1798,6 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-DownloadTask-suspend(): Promise<boolean>--><!--Device-DownloadTask-suspend(): Promise<boolean>-End-->
@@ -1960,7 +1816,7 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

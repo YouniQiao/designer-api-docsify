@@ -4,10 +4,6 @@ Implements a path effect. > **NOTE：**> > - The initial APIs of this class are 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class PathEffect--><!--Device-drawing-class PathEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -27,10 +23,6 @@ static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect
 Creates a path effect by sequentially applying the inner effect and then the outer effect.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-PathEffect-static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect--><!--Device-PathEffect-static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect-End-->
 
@@ -59,10 +51,6 @@ Creates a path effect by sequentially applying the inner effect and then the out
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PathEffect-static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect | undefined--><!--Device-PathEffect-static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -89,10 +77,6 @@ static createCornerPathEffect(radius: number): PathEffect
 Creates a path effect that transforms the sharp angle between line segments into a rounded corner with the specified radius.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-PathEffect-static createCornerPathEffect(radius: number): PathEffect--><!--Device-PathEffect-static createCornerPathEffect(radius: number): PathEffect-End-->
 
@@ -126,10 +110,6 @@ Creates a path effect that transforms the sharp angle between line segments into
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PathEffect-static createCornerPathEffect(radius: double): PathEffect | undefined--><!--Device-PathEffect-static createCornerPathEffect(radius: double): PathEffect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -161,10 +141,6 @@ static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect
 Creates a **PathEffect** object that converts a path into a dotted line.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-PathEffect-static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect--><!--Device-PathEffect-static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect-End-->
 
@@ -199,10 +175,6 @@ Creates a PathEffect object that converts a path into a dotted line.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PathEffect-static createDashPathEffect(intervals: Array<double>, phase: double): PathEffect | undefined--><!--Device-PathEffect-static createDashPathEffect(intervals: Array<double>, phase: double): PathEffect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -236,10 +208,6 @@ Creates an effect that segments the path and scatters the segments in an irregul
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-PathEffect-static createDiscretePathEffect(segLength: number, dev: number, seedAssist?: number): PathEffect--><!--Device-PathEffect-static createDiscretePathEffect(segLength: number, dev: number, seedAssist?: number): PathEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -268,10 +236,6 @@ Creates an effect that segments the path and scatters the segments in an irregul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PathEffect-static createDiscretePathEffect(segLength: double, dev: double, seedAssist?: int): PathEffect | undefined--><!--Device-PathEffect-static createDiscretePathEffect(segLength: double, dev: double, seedAssist?: int): PathEffect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -299,10 +263,6 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 Creates a dashed path effect based on the shape described by a path.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-PathEffect-static createPathDashEffect(path: Path, advance: number, phase: number, style: PathDashStyle): PathEffect--><!--Device-PathEffect-static createPathDashEffect(path: Path, advance: number, phase: number, style: PathDashStyle): PathEffect-End-->
 
@@ -339,10 +299,6 @@ Creates a dashed path effect based on the shape described by a path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PathEffect-static createPathDashEffect(path: Path, advance: double, phase: double, style: PathDashStyle): PathEffect | undefined--><!--Device-PathEffect-static createPathDashEffect(path: Path, advance: double, phase: double, style: PathDashStyle): PathEffect | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -378,10 +334,6 @@ Creates an overlay path effect based on two distinct path effects. Different fro
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-PathEffect-static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEffect): PathEffect--><!--Device-PathEffect-static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEffect): PathEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -408,10 +360,6 @@ static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEf
 Creates an overlay path effect based on two distinct path effects. Different from createComposePathEffect, this API applies each effect separately and then displays them as a simple overlay.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PathEffect-static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEffect): PathEffect | undefined--><!--Device-PathEffect-static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEffect): PathEffect | undefined-End-->
 

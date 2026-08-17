@@ -1,12 +1,8 @@
 # ICurve
 
-Represents a curve object. Different types of curve objects can be created using APIs in this module, including [curves.cubicBezierCurve](../../apis-na/arkts-apis/arkts-na-curves-cubicbeziercurve-f.md#cubicBezierCurve) and [curves.interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md#interpolatingSpring). The curve object provides interpolation functionality through its member method [interpolate](../../apis-na/arkts-apis/arkts-na-curves-icurve-i.md#interpolate).
+Represents a curve object. Different types of curve objects can be created using APIs in this module, including [curves.cubicBezierCurve](../../apis-na/arkts-apis/arkts-na-curves-cubicbeziercurve-f.md#cubicbeziercurve) and [curves.interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md#interpolatingspring). The curve object provides interpolation functionality through its member method [interpolate](../../apis-na/arkts-apis/arkts-na-curves-icurve-i.md#interpolate).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-curves-interface ICurve--><!--Device-curves-interface ICurve-End-->
 
@@ -28,10 +24,6 @@ Calculates the interpolated value along the curve at the specified normalized ti
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ICurve-interpolate(fraction : number) : number--><!--Device-ICurve-interpolate(fraction : number) : number-End-->
@@ -50,7 +42,7 @@ Calculates the interpolated value along the curve at the specified normalized ti
 | --- | --- |
 | number | Curve interpolation corresponding to the normalized time point. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { curves } from '@kit.ArkUI'

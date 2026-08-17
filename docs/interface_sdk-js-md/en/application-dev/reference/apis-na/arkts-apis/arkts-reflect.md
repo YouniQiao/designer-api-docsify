@@ -16,9 +16,7 @@
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,8 +30,8 @@
 
 | Name | Description |
 | --- | --- |
-| [getInstanceFieldsRecursive](arkts-na-reflect-getinstancefieldsrecursive-f.md#getInstanceFieldsRecursive) | Returns public instance fields of a class and its parents. |
-| [getInstanceGettersRecursive](arkts-na-reflect-getinstancegettersrecursive-f.md#getInstanceGettersRecursive) | Returns public instance getters of a class and its parents. |
-| [isFuncObjAsync](arkts-na-reflect-isfuncobjasync-f.md#isFuncObjAsync) | Determines if a functional object was lowered from an async function. |
-| [isLiteralInitializedInterface](arkts-na-reflect-isliteralinitializedinterface-f.md#isLiteralInitializedInterface) | Determines whether an object is an interface initialized with a literal. |
+| [getInstanceFieldsRecursive](arkts-na-reflect-getinstancefieldsrecursive-f.md#getinstancefieldsrecursive) | Returns public instance fields of a class and its parents. |
+| [getInstanceGettersRecursive](arkts-na-reflect-getinstancegettersrecursive-f.md#getinstancegettersrecursive) | Returns public instance getters of a class and its parents. |
+| [isFuncObjAsync](arkts-na-reflect-isfuncobjasync-f.md#isfuncobjasync) | Determines if a functional object was lowered from an async function. |
+| [isLiteralInitializedInterface](arkts-na-reflect-isliteralinitializedinterface-f.md#isliteralinitializedinterface) | Determines whether an object is an interface initialized with a literal. |
 

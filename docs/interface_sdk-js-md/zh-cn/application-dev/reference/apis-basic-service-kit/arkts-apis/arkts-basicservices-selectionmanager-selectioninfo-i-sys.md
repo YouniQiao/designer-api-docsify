@@ -4,10 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-selectionManager-interface SelectionInfo--><!--Device-selectionManager-interface SelectionInfo-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
@@ -25,10 +21,6 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,10 +42,6 @@ displayID: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SelectionInfo-displayID: int--><!--Device-SelectionInfo-displayID: int-End-->
@@ -73,10 +61,6 @@ endDisplayX: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,10 +82,6 @@ endDisplayY: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SelectionInfo-endDisplayY: int--><!--Device-SelectionInfo-endDisplayY: int-End-->
@@ -122,10 +102,6 @@ endWindowX: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SelectionInfo-endWindowX: int--><!--Device-SelectionInfo-endWindowX: int-End-->
@@ -145,10 +121,6 @@ endWindowY: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -172,10 +144,6 @@ selectionType: SelectionType
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SelectionInfo-selectionType: SelectionType--><!--Device-SelectionInfo-selectionType: SelectionType-End-->
@@ -195,10 +163,6 @@ startDisplayX: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -220,10 +184,6 @@ startDisplayY: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SelectionInfo-startDisplayY: int--><!--Device-SelectionInfo-startDisplayY: int-End-->
@@ -243,10 +203,6 @@ startWindowX: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -268,10 +224,6 @@ startWindowY: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SelectionInfo-startWindowY: int--><!--Device-SelectionInfo-startWindowY: int-End-->
@@ -291,10 +243,6 @@ windowID: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

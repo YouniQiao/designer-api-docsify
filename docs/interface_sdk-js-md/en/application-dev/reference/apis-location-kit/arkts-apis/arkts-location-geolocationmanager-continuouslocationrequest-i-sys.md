@@ -4,10 +4,6 @@ Configuring parameters in continuous location requests.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface ContinuousLocationRequest--><!--Device-geoLocationManager-export interface ContinuousLocationRequest-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -29,10 +25,6 @@ Indicates the type of sports. This parameter is valid only when locationScenario
 **Type:** [SportsType](arkts-location-geolocationmanager-sportstype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

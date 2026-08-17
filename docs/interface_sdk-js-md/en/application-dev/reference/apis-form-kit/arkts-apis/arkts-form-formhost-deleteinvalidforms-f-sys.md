@@ -16,10 +16,6 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 <!--Device-formHost-function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<int>): void--><!--Device-formHost-function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<int>): void-End-->
@@ -56,10 +52,6 @@ function deleteInvalidForms(formIds: Array<string>): Promise<int>
 Deletes invalid widgets from the list. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

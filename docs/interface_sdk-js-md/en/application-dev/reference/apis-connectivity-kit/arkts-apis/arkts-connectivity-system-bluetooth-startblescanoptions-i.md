@@ -2,10 +2,6 @@
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface StartBLEScanOptions--><!--Device-unnamed-export interface StartBLEScanOptions-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
@@ -32,10 +28,6 @@ StartBLEScanOptions completed
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-StartBLEScanOptions-complete: () => void--><!--Device-StartBLEScanOptions-complete: () => void-End-->
@@ -53,10 +45,6 @@ StartBLEScanOptions failed
 **Type:** (data: string, code: number) =&gt; void
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -76,10 +64,6 @@ Time of delay for reporting the scan result
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-StartBLEScanOptions-interval: number--><!--Device-StartBLEScanOptions-interval: number-End-->
@@ -97,10 +81,6 @@ StartBLEScanOptions success
 **Type:** () =&gt; void
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

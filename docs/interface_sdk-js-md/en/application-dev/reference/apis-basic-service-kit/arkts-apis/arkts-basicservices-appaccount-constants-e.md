@@ -4,10 +4,6 @@ Enumerates the constants.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appAccount-enum Constants--><!--Device-appAccount-enum Constants-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -22,11 +18,9 @@ Operation of adding an account implicitly. Note: This API is supported since API
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ACTION_CREATE_ACCOUNT_IMPLICITLY](#ACTION_CREATE_ACCOUNT_IMPLICITLY)
+**Substitutes:** [ACTION_CREATE_ACCOUNT_IMPLICITLY](#actioncreateaccountimplicitly)
 
 <!--Device-Constants-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'--><!--Device-Constants-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'-End-->
 
@@ -42,11 +36,9 @@ Authentication operation. Note: This API is supported since API version 8 and de
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ACTION_AUTH](#ACTION_AUTH)
+**Substitutes:** [ACTION_AUTH](#actionauth)
 
 <!--Device-Constants-ACTION_AUTHENTICATE = 'authenticate'--><!--Device-Constants-ACTION_AUTHENTICATE = 'authenticate'-End-->
 
@@ -62,10 +54,6 @@ Operation of creating an account implicitly.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Constants-ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"--><!--Device-Constants-ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -79,10 +67,6 @@ ACTION_AUTH = "auth"
 Authentication operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Constants-ACTION_AUTH = "auth"--><!--Device-Constants-ACTION_AUTH = "auth"-End-->
 
@@ -98,10 +82,6 @@ Operation of verifying credentials.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Constants-ACTION_VERIFY_CREDENTIAL = "verifyCredential"--><!--Device-Constants-ACTION_VERIFY_CREDENTIAL = "verifyCredential"-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -115,10 +95,6 @@ ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"
 Operation of setting authenticator properties.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Constants-ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"--><!--Device-Constants-ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"-End-->
 
@@ -134,10 +110,6 @@ Name of the application account.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Constants-KEY_NAME = "name"--><!--Device-Constants-KEY_NAME = "name"-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -151,10 +123,6 @@ KEY_OWNER = "owner"
 Bundle name of the application account owner.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Constants-KEY_OWNER = "owner"--><!--Device-Constants-KEY_OWNER = "owner"-End-->
 
@@ -170,10 +138,6 @@ Token.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Constants-KEY_TOKEN = "token"--><!--Device-Constants-KEY_TOKEN = "token"-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -187,10 +151,6 @@ KEY_ACTION = "action"
 Operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Constants-KEY_ACTION = "action"--><!--Device-Constants-KEY_ACTION = "action"-End-->
 
@@ -206,10 +166,6 @@ Authentication type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Constants-KEY_AUTH_TYPE = "authType"--><!--Device-Constants-KEY_AUTH_TYPE = "authType"-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -223,10 +179,6 @@ KEY_SESSION_ID = "sessionId"
 Session ID.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Constants-KEY_SESSION_ID = "sessionId"--><!--Device-Constants-KEY_SESSION_ID = "sessionId"-End-->
 
@@ -242,10 +194,6 @@ PID of the caller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Constants-KEY_CALLER_PID = "callerPid"--><!--Device-Constants-KEY_CALLER_PID = "callerPid"-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -259,10 +207,6 @@ KEY_CALLER_UID = "callerUid"
 UID of the caller.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Constants-KEY_CALLER_UID = "callerUid"--><!--Device-Constants-KEY_CALLER_UID = "callerUid"-End-->
 
@@ -278,10 +222,6 @@ Bundle name of the caller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Constants-KEY_CALLER_BUNDLE_NAME = "callerBundleName"--><!--Device-Constants-KEY_CALLER_BUNDLE_NAME = "callerBundleName"-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -296,10 +236,6 @@ Required labels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Constants-KEY_REQUIRED_LABELS = "requiredLabels"--><!--Device-Constants-KEY_REQUIRED_LABELS = "requiredLabels"-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -313,10 +249,6 @@ KEY_BOOLEAN_RESULT = "booleanResult"
 Return value of the Boolean type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Constants-KEY_BOOLEAN_RESULT = "booleanResult"--><!--Device-Constants-KEY_BOOLEAN_RESULT = "booleanResult"-End-->
 

@@ -10,10 +10,6 @@ function getKioskStatus(): Promise<KioskStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-kioskManager-function getKioskStatus(): Promise<KioskStatus>--><!--Device-kioskManager-function getKioskStatus(): Promise<KioskStatus>-End-->
@@ -36,7 +32,7 @@ function getKioskStatus(): Promise<KioskStatus>
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { kioskManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-notificationManager-export interface DoNotDisturbDate--><!--Device-notificationManager-export interface DoNotDisturbDate-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -32,10 +28,6 @@ begin: Date
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DoNotDisturbDate-begin: Date--><!--Device-DoNotDisturbDate-begin: Date-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -54,10 +46,6 @@ end: Date
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DoNotDisturbDate-end: Date--><!--Device-DoNotDisturbDate-end: Date-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -75,10 +63,6 @@ type: DoNotDisturbType
 **类型：** DoNotDisturbType
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DoNotDisturbDate-type: DoNotDisturbType--><!--Device-DoNotDisturbDate-type: DoNotDisturbType-End-->
 

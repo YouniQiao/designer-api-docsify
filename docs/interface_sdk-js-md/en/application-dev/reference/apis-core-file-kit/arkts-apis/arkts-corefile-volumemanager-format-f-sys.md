@@ -16,10 +16,6 @@ Formats a volume. This API uses an asynchronous callback to return the result. C
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 
 <!--Device-volumeManager-function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void-End-->
@@ -59,10 +55,6 @@ function format(volumeId: string, fsType: string): Promise<void>
 Formats a volume. This API uses a promise to return the result. Currently, only the virtual file allocation table ( VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After a volume is formatted, the UUID, mounting path, and description of the volume will change.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 

@@ -4,10 +4,6 @@ This interface is used to receive cli event when the cli tool process is running
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ToolEventCallback--><!--Device-unnamed-export interface ToolEventCallback-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -25,10 +21,6 @@ Callback when a CLI event is triggered.
 **Type:** [OnEventFn](arkts-ability-oneventfn-t-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

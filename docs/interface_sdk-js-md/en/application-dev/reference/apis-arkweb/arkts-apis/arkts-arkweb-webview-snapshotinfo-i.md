@@ -4,10 +4,6 @@ Provides information used to obtain a full drawing result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-webview-interface SnapshotInfo--><!--Device-webview-interface SnapshotInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,15 +20,11 @@ import { webview } from 'webview';
 id?: string
 ```
 
-Snapshot ID.
+ID of the snapshot, used to identify this full rendering request so that the corresponding full rendering data can be matched in the callback result. If not passed, no ID is specified and the system handles it automatically.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,15 +38,11 @@ Snapshot ID.
 size?: SizeOptions
 ```
 
-Size for web rendering. The maximum size is 16000 px × 16000 px. The length unit can be px, vp, or %. The length unit must be the consistent across parameters. The default unit is vp. If the size exceeds the specifications, the maximum size is returned. Example: **width: '100px', height: '200px'** or **width: '20%', height'30%'**. If only digits are written, the unit is vp.
+Size of the Web rendering. The maximum supported size is 16000px * 16000px. The supported length units are px, vp, and %. The length units passed in different parameters must be consistent; otherwise, the rendering size may not meet expectations. The default unit is vp. If the specified size exceeds the specification, the maximum specification is returned. If not passed, the rendering is performed at the actual size of the screenshot area. ( Example: width:'100px', height:'200px'. Or width:'20%', height:'30%'. If only a number is specified, the unit is vp.)
 
 **Type:** SizeOptions
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

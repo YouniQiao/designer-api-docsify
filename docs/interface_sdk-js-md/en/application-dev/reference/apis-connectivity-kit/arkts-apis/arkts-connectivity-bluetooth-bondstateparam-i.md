@@ -4,11 +4,9 @@ Describes the class of a bluetooth device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md#BondStateParam)
+**Substitutes:** [BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md#bondstateparam)
 
 <!--Device-bluetooth-interface BondStateParam--><!--Device-bluetooth-interface BondStateParam-End-->
 
@@ -32,11 +30,9 @@ Address of a Bluetooth device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-bondstateparam-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-bondstateparam-i.md#deviceid)
 
 <!--Device-BondStateParam-deviceId: string--><!--Device-BondStateParam-deviceId: string-End-->
 
@@ -53,8 +49,6 @@ Profile connection state of the device.
 **Type:** BondState
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

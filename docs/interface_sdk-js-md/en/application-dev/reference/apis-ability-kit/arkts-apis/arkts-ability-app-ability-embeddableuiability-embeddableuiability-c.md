@@ -1,14 +1,10 @@
 # EmbeddableUIAbility
 
-EmbeddableUIAbility is an embeddable UIAbility component provided for atomic services. It inherits from [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility). You can implement EmbeddableUIAbility to enable atomic services to be launched by other applications either as a standalone window or embedded within the host application's UI. For details about the inheritance relationship of each ability, see Inheritance Relationship .
+EmbeddableUIAbility is an embeddable UIAbility component provided for atomic services. It inherits from [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability). You can implement EmbeddableUIAbility to enable atomic services to be launched by other applications either as a standalone window or embedded within the host application's UI. For details about the inheritance relationship of each ability, see Inheritance Relationship .
 
-**Inheritance/Implementation:** EmbeddableUIAbility extends [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)
+**Inheritance/Implementation:** EmbeddableUIAbility extends [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export default class EmbeddableUIAbility--><!--Device-unnamed-export default class EmbeddableUIAbility-End-->
 
@@ -31,10 +27,6 @@ Context of the EmbeddableUIAbility.
 **Type:** [EmbeddableUIAbilityContext](arkts-ability-embeddableuiabilitycontext-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

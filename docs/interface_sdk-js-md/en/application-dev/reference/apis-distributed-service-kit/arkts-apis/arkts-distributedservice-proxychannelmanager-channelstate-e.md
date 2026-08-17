@@ -4,10 +4,6 @@ Enumerates the connection states of the proxy channel.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-proxyChannelManager-enum ChannelState--><!--Device-proxyChannelManager-enum ChannelState-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -21,10 +17,6 @@ CHANNEL_WAIT_RESUME = 0
 The connection is disconnected, and the channel is unavailable.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ The connection is restored, and the channel is available.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChannelState-CHANNEL_RESUME = 1--><!--Device-ChannelState-CHANNEL_RESUME = 1-End-->
@@ -58,13 +46,9 @@ The connection is restored, and the channel is available.
 CHANNEL_EXCEPTION_SOFTWARE_FAILED = 2
 ```
 
-The channel is unavailable due to other software errors.
+The channel is unavailable due to a software exception, for example, an internal protocol stack error or resource allocation failure. Check the logs to locate the specific cause.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,10 +65,6 @@ CHANNEL_BR_NO_PAIRED = 3
 The Bluetooth pairing relationship is deleted, and the channel is unavailable.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

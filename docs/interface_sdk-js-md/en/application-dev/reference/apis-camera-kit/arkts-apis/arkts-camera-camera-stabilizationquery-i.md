@@ -4,10 +4,6 @@ StabilizationQuery provides APIs to check the support for video stabilization. >
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface StabilizationQuery--><!--Device-camera-interface StabilizationQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -27,10 +23,6 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 Checks whether a video stabilization mode is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

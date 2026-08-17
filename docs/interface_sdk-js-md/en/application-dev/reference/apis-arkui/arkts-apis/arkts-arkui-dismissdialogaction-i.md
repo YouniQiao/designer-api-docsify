@@ -1,12 +1,8 @@
-# DismissDialogAction
+# DismissDialogAction(CustomDialog)
 
 Provides information about the action to dismiss the dialog box.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface DismissDialogAction--><!--Device-unnamed-declare interface DismissDialogAction-End-->
 
@@ -23,10 +19,6 @@ Callback for dismissing the dialog box. This API is called only when the dialog 
 **Type:** Callback&lt;void&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Reason why the dialog box cannot be dismissed. You must specify whether to close
 **Type:** DismissReason
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Sets the input switch status of an input device. Take the touchscreen as an exam
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_DEVICE_CONTROLLER
 
 <!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>-End-->
@@ -50,7 +46,7 @@ Sets the input switch status of an input device. Take the touchscreen as an exam
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [3900001](../errorcode-inputdevice.md#3900001-device-not-exist) | The specified device does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';

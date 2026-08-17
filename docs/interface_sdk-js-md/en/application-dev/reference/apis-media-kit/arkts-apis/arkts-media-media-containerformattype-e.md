@@ -4,10 +4,6 @@ Enumerates the container format types (CFTs).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum ContainerFormatType--><!--Device-media-enum ContainerFormatType-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -21,10 +17,6 @@ CFT_MPEG_4 = 'mp4'
 Video container format MP4.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,10 +34,6 @@ Audio container format M4A.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ContainerFormatType-CFT_MPEG_4A = 'm4a'--><!--Device-ContainerFormatType-CFT_MPEG_4A = 'm4a'-End-->
@@ -62,10 +50,6 @@ Audio container format MP3.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ContainerFormatType-CFT_MP3 = 'mp3'--><!--Device-ContainerFormatType-CFT_MP3 = 'mp3'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -79,10 +63,6 @@ CFT_WAV = 'wav'
 Audio container format WAV.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContainerFormatType-CFT_WAV = 'wav'--><!--Device-ContainerFormatType-CFT_WAV = 'wav'-End-->
 
@@ -98,10 +78,6 @@ Audio container format AMR.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ContainerFormatType-CFT_AMR = 'amr'--><!--Device-ContainerFormatType-CFT_AMR = 'amr'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -115,10 +91,6 @@ CFT_AAC = 'aac'
 Audio container format AAC. The default format is ADTS frame header.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContainerFormatType-CFT_AAC = 'aac'--><!--Device-ContainerFormatType-CFT_AAC = 'aac'-End-->
 

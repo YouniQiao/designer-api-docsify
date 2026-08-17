@@ -10,11 +10,9 @@ Requests delayed suspension after the application switches to the background. Th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestSuspendDelay)
+**Substitutes:** [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestsuspenddelay)
 
 <!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo--><!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo-End-->
 
@@ -33,7 +31,7 @@ Requests delayed suspension after the application switches to the background. Th
 | --- | --- |
 | DelaySuspendInfo | Information about the suspension delay. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import backgroundTaskManager from '@ohos.backgroundTaskManager';

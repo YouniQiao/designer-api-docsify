@@ -16,10 +16,6 @@ Get System Capability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemCapability-function querySystemCapabilities(callback: AsyncCallback<string>): void--><!--Device-systemCapability-function querySystemCapabilities(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Developtools.Syscap
@@ -32,7 +28,7 @@ Get System Capability.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -58,10 +54,6 @@ Get System Capability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemCapability-function querySystemCapabilities(): Promise<string>--><!--Device-systemCapability-function querySystemCapabilities(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Developtools.Syscap
@@ -74,7 +66,7 @@ Get System Capability.
 | --- | --- |
 | Promise&lt;string&gt; | system capability string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

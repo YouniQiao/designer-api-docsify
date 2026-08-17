@@ -4,10 +4,6 @@ Defines the privilege (permissions) on the shared data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sharing-interface Privilege--><!--Device-sharing-interface Privilege-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -32,10 +28,6 @@ Whether the participant can create data to share. The value true means the parti
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Privilege-creatable?: boolean--><!--Device-Privilege-creatable?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -53,10 +45,6 @@ Whether the participant can delete the shared data. The value true means the par
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Privilege-deletable?: boolean--><!--Device-Privilege-deletable?: boolean-End-->
 
@@ -76,10 +64,6 @@ Whether the participant can read the shared data. The value true means the parti
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Privilege-readable?: boolean--><!--Device-Privilege-readable?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -98,10 +82,6 @@ Whether the participant can share the data to others. The value true means the p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Privilege-shareable?: boolean--><!--Device-Privilege-shareable?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -119,10 +99,6 @@ Whether the participant can modify the shared data. The value true means the par
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Privilege-writable?: boolean--><!--Device-Privilege-writable?: boolean-End-->
 

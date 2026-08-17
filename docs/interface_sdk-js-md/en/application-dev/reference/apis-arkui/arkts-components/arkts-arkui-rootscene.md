@@ -12,10 +12,6 @@ Called when the RootScene is used.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RootSceneInterface-(session: RootSceneSession): RootSceneAttribute--><!--Device-RootSceneInterface-(session: RootSceneSession): RootSceneAttribute-End-->

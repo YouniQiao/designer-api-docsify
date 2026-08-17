@@ -1,12 +1,8 @@
 # Scene
 
-Defines the 3d scene.
+Describes a scene.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class Scene--><!--Device-unnamed-export declare class Scene-End-->
 
@@ -21,10 +17,6 @@ cloneNode(node: Node, parent: Node, name: string): Node | null
 Clones a node in the current scene. Cross-scene node cloning is not supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Scene-cloneNode(node: Node, parent: Node, name: string): Node | null--><!--Device-Scene-cloneNode(node: Node, parent: Node, name: string): Node | null-End-->
 
@@ -44,7 +36,7 @@ Clones a node in the current scene. Cross-scene node cloning is not supported.
 | --- | --- |
 | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Returns the cloned node. If the operation fails, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, Node } from '@kit.ArkGraphics3D';
@@ -74,13 +66,9 @@ function CloneNode() {
 createComponent(node: Node, name: string): Promise<SceneComponent>
 ```
 
-Create a new component.
+Creates a component and attaches it to a node. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Scene-createComponent(node: Node, name: string): Promise<SceneComponent>--><!--Device-Scene-createComponent(node: Node, name: string): Promise<SceneComponent>-End-->
 
@@ -90,16 +78,16 @@ Create a new component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | The node the component is attached to |
-| name | string | Yes | The name of the component to load. Valid names are defined by each plugin. |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to which the component will be attached. |
+| name | string | Yes | Name of the component to create, which is defined by individual plugins. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md)&gt; | The newly added component. |
+| Promise&lt;[SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md)&gt; | Promise used to return the SceneComponent object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, SceneComponent } from '@kit.ArkGraphics3D';
@@ -133,15 +121,11 @@ Destroys this scene and releases all scene resources.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Scene-destroy(): void--><!--Device-Scene-destroy(): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene } from '@kit.ArkGraphics3D';
@@ -168,10 +152,6 @@ Obtains the component instance from a node based on the component name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Scene-getComponent(node: Node, name: string): SceneComponent | null--><!--Device-Scene-getComponent(node: Node, name: string): SceneComponent | null-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -189,7 +169,7 @@ Obtains the component instance from a node based on the component name.
 | --- | --- |
 | [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) | SceneComponent object corresponding to the given name, or null if not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene } from '@kit.ArkGraphics3D';
@@ -219,13 +199,9 @@ function getComponentTest() {
 static getDefaultRenderContext(): RenderContext | null
 ```
 
-Get default render context
+Obtains the rendering context associated with the current graphics object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Scene-static getDefaultRenderContext(): RenderContext | null--><!--Device-Scene-static getDefaultRenderContext(): RenderContext | null-End-->
 
@@ -235,9 +211,9 @@ Get default render context
 
 | Type | Description |
 | --- | --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | The default RenderContext instance |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | Rendering context associated with the current object, or null if no rendering context is associated. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, RenderContext } from '@kit.ArkGraphics3D';
@@ -263,10 +239,6 @@ Obtains a node by path.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Scene-getNodeByPath(path: string, type?: NodeType): Node | null--><!--Device-Scene-getNodeByPath(path: string, type?: NodeType): Node | null-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -284,7 +256,7 @@ Obtains a node by path.
 | --- | --- |
 | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Returns the instance of the requested node. Returns null if not found or if the type of the found node does not match the passed parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, Node } from '@kit.ArkGraphics3D';
@@ -311,10 +283,6 @@ Obtains the scene resource factory.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Scene-getResourceFactory(): SceneResourceFactory--><!--Device-Scene-getResourceFactory(): SceneResourceFactory-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -325,7 +293,7 @@ Obtains the scene resource factory.
 | --- | --- |
 | [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | Scene resource factory. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
@@ -348,13 +316,9 @@ function getFactory(): void {
 importNode(name: string, node: Node, parent: Node | null): Node
 ```
 
-Import node into the scene. The original node may come from separate Scene. The node will be cloned and any modifications to the old node will not be visible after the import.
+Generally used for importing nodes from other scenes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Scene-importNode(name: string, node: Node, parent: Node | null): Node--><!--Device-Scene-importNode(name: string, node: Node, parent: Node | null): Node-End-->
 
@@ -364,17 +328,17 @@ Import node into the scene. The original node may come from separate Scene. The 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | The name of the newly created node. |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | The node to be imported. |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | The parent node or null for root |
+| name | string | Yes | Name of the imported node, which can be customized and has no special requirements. |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to be imported. |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | Parent node of the imported node in the new scene. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | The newly created node. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Node to be imported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene } from '@kit.ArkGraphics3D';
@@ -404,13 +368,9 @@ function ImportNodeTest() {
 importScene(name: string, scene: Scene, parent: Node | null): Node
 ```
 
-Import scene into the scene as a node. The node hierarchy will appear under the parent node. All animations from the scene will be duplicated in the scene.
+Imports another scene into the current one.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Scene-importScene(name: string, scene: Scene, parent: Node | null): Node--><!--Device-Scene-importScene(name: string, scene: Scene, parent: Node | null): Node-End-->
 
@@ -420,17 +380,17 @@ Import scene into the scene as a node. The node hierarchy will appear under the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | The name of the newly created node |
-| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes | The scene to be imported. |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | The parent node or null for root |
+| name | string | Yes | Name of the root node of the imported scene, which can be customized and has no special requirements. |
+| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes | Scene to import. |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | Parent node of the imported scene in the new scene. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | The newly created node. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Root node of the imported scene. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene } from '@kit.ArkGraphics3D';
@@ -458,10 +418,6 @@ Loads a resource by path. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Scene-static load(uri? : ResourceStr): Promise<Scene>--><!--Device-Scene-static load(uri? : ResourceStr): Promise<Scene>-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -478,7 +434,7 @@ Loads a resource by path. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise used to return the Scene object created. |
 
-## Examples
+**Examples**
 
 Example 1: Load resources via rawfile (a relative path).
 
@@ -531,13 +487,9 @@ async loadModelFromAbsolutePath(): Promise<void> {
 renderFrame(params?: RenderParameters): boolean
 ```
 
-A new frame is rendered for all active camera.
+Renders frames on demand, such as controlling the frame rate.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Scene-renderFrame(params?: RenderParameters): boolean--><!--Device-Scene-renderFrame(params?: RenderParameters): boolean-End-->
 
@@ -547,15 +499,15 @@ A new frame is rendered for all active camera.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | No | Rendering parameters |
+| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | No | Rendering parameters. The default value is undefined. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | True if rendering was scheduled, false otherwise |
+| boolean | Rendering result. The value true is returned if rendering is successfully scheduled; returns false otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene } from '@kit.ArkGraphics3D';

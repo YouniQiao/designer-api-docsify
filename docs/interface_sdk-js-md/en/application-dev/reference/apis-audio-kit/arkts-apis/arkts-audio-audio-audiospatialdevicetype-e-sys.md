@@ -4,10 +4,6 @@ Describes a spatial device type group.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum AudioSpatialDeviceType--><!--Device-audio-enum AudioSpatialDeviceType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -23,10 +19,6 @@ SPATIAL_DEVICE_TYPE_NONE = 0
 Audio Spatial Device Type none.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_NONE = 0--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_NONE = 0-End-->
 
@@ -44,10 +36,6 @@ Audio Spatial Device Type in-ear headphone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE = 1--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -63,10 +51,6 @@ SPATIAL_DEVICE_TYPE_HALF_IN_EAR_HEADPHONE = 2
 Audio Spatial Device Type half-in-ear headphone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_HALF_IN_EAR_HEADPHONE = 2--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_HALF_IN_EAR_HEADPHONE = 2-End-->
 
@@ -84,10 +68,6 @@ Audio Spatial Device Type over-ear headphone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_OVER_EAR_HEADPHONE = 3--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_OVER_EAR_HEADPHONE = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -104,10 +84,6 @@ Audio Spatial Device Type glasses.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_GLASSES = 4--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_GLASSES = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -123,10 +99,6 @@ SPATIAL_DEVICE_TYPE_OTHERS = 5
 Audio Spatial Device Type others.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_OTHERS = 5--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_OTHERS = 5-End-->
 

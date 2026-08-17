@@ -12,13 +12,9 @@ import { connection } from 'connection';
 function getNetCapabilitiesSync(netHandle: NetHandle): NetCapabilities
 ```
 
-Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -32,7 +28,7 @@ Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapab
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. See [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle). |
+| netHandle | NetHandle | Yes | Indicates the handle. See [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
 
 **Return value:**
 
@@ -50,7 +46,7 @@ Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapab
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

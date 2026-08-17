@@ -1,14 +1,12 @@
-# USBDevicePipe
+# USBDevicePipe(USB Manager)
 
 Represents a USB device pipe, which is used to determine a USB device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#USBDevicePipe)
+**Substitutes:** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#usbdevicepipe)
 
 <!--Device-usb-interface USBDevicePipe--><!--Device-usb-interface USBDevicePipe-End-->
 
@@ -32,11 +30,9 @@ Bus address.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [busNum](arkts-basicservices-usbmanager-usbdevicepipe-i.md#busNum)
+**Substitutes:** [busNum](arkts-basicservices-usbmanager-usbdevicepipe-i.md#busnum)
 
 <!--Device-USBDevicePipe-busNum: number--><!--Device-USBDevicePipe-busNum: number-End-->
 
@@ -54,11 +50,9 @@ Device address.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [devAddress](arkts-basicservices-usbmanager-usbdevicepipe-i.md#devAddress)
+**Substitutes:** [devAddress](arkts-basicservices-usbmanager-usbdevicepipe-i.md#devaddress)
 
 <!--Device-USBDevicePipe-devAddress: number--><!--Device-USBDevicePipe-devAddress: number-End-->
 

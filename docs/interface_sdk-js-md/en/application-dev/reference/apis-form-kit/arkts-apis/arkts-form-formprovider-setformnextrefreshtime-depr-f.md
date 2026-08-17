@@ -10,11 +10,9 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md#setFormNextRefreshTime)
+**Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md#setformnextrefreshtime)
 
 <!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number, callback: AsyncCallback<void>): void--><!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number, callback: AsyncCallback<void>): void-End-->
 
@@ -28,7 +26,7 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 | minute | number | Yes | Time for the next refresh. The value must be greater than or equal to 5, in minutes. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -53,11 +51,9 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md#setFormNextRefreshTime)
+**Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md#setformnextrefreshtime)
 
 <!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number): Promise<void>--><!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number): Promise<void>-End-->
 
@@ -76,7 +72,7 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

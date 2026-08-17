@@ -4,10 +4,6 @@ Enumerates USB port roles.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usbManager-interface USBPortStatus--><!--Device-usbManager-interface USBPortStatus-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -32,10 +28,6 @@ Current data role.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBPortStatus-currentDataRole: int--><!--Device-USBPortStatus-currentDataRole: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -54,10 +46,6 @@ Current USB mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBPortStatus-currentMode: int--><!--Device-USBPortStatus-currentMode: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -75,10 +63,6 @@ Current power role.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBPortStatus-currentPowerRole: int--><!--Device-USBPortStatus-currentPowerRole: int-End-->
 

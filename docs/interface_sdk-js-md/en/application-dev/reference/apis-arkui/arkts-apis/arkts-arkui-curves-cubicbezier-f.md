@@ -16,11 +16,9 @@ Creates a cubic Bézier curve. The curve values must be between 0 and 1.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [cubicBezierCurve](../../apis-na/arkts-apis/arkts-na-curves-cubicbeziercurve-f.md#cubicBezierCurve)
+**Substitutes:** [cubicBezierCurve](../../apis-na/arkts-apis/arkts-na-curves-cubicbeziercurve-f.md#cubicbeziercurve)
 
 <!--Device-curves-function cubicBezier(x1: number, y1: number, x2: number, y2: number): string--><!--Device-curves-function cubicBezier(x1: number, y1: number, x2: number, y2: number): string-End-->
 

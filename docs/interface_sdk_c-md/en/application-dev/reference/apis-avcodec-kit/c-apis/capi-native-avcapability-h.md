@@ -1026,6 +1026,6 @@ Get the properties of the specified feature. It should be noted that the life cy
 
 | Type | Description |
 | -- | -- |
-| OH_AVFormat * | Returns a pointer to an OH_AVFormat instance |
+| [OH_AVFormat *](capi-core-oh-avformat.md) | Returns a pointer to an OH_AVFormat instance |
 
 

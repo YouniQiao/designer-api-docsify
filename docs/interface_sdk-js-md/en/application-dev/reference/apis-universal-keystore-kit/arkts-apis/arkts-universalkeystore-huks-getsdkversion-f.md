@@ -16,8 +16,6 @@ Obtains the SDK version of the current system. > **NOTE：**> > This API is supp
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
 <!--Device-huks-function getSdkVersion(options: HuksOptions): string--><!--Device-huks-function getSdkVersion(options: HuksOptions): string-End-->
@@ -36,7 +34,7 @@ Obtains the SDK version of the current system. > **NOTE：**> > This API is supp
 | --- | --- |
 | string | SDK version obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

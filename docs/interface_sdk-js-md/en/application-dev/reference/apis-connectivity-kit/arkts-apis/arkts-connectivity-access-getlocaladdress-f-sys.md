@@ -16,10 +16,6 @@ Obtaining the MAC address of the local device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_LOCAL_MAC
 
 <!--Device-access-function getLocalAddress(): string--><!--Device-access-function getLocalAddress(): string-End-->
@@ -44,7 +40,7 @@ Obtaining the MAC address of the local device.
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

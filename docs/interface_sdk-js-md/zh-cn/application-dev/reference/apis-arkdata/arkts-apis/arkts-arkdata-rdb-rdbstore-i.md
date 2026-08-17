@@ -1,14 +1,12 @@
 # RdbStore
 
-提供管理关系数据库（RDB）方法的接口。 在使用以下相关接口前，请使用 [executeSql](#executeSql) 接口初始化数据库表结构和相关数据。
+提供管理关系数据库（RDB）方法的接口。 在使用以下相关接口前，请使用 [executeSql](#executesql) 接口初始化数据库表结构和相关数据。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md#RdbStore)
+**替代接口：** [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md#rdbstore)
 
 <!--Device-rdb-interface RdbStore--><!--Device-rdb-interface RdbStore-End-->
 
@@ -24,11 +22,9 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert)
+**替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void-End-->
 
@@ -40,9 +36,9 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
 | values | Array&lt;ValuesBucket&gt; | 是 | 表示要插入到表中的一组数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为插入的数据个数；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为插入的数据个数；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ValuesBucket } from '@ohos.data.ValuesBucket';
@@ -102,11 +98,9 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert)
+**替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>-End-->
 
@@ -125,7 +119,7 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象。如果操作成功，返回插入的数据个数，否则返回-1。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ValuesBucket } from '@ohos.data.ValuesBucket';
@@ -184,17 +178,15 @@ beginTransaction(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#beginTransaction)
+**替代接口：** [beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)
 
 <!--Device-RdbStore-beginTransaction(): void--><!--Device-RdbStore-beginTransaction(): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-## 示例
+**示例**
 
 ```TypeScript
 import featureAbility from '@ohos.ability.featureAbility';
@@ -233,8 +225,6 @@ commit(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)
@@ -243,7 +233,7 @@ commit(): void
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ValuesBucket } from '@ohos.data.ValuesBucket';
@@ -282,8 +272,6 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
@@ -297,9 +285,9 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | predicates | RdbPredicates | 是 | RdbPredicates的实例对象指定的删除条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为受影响的行数；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为受影响的行数；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -323,8 +311,6 @@ delete(predicates: RdbPredicates): Promise<number>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
@@ -345,7 +331,7 @@ delete(predicates: RdbPredicates): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象。返回受影响的行数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -368,11 +354,9 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executeSql)
+**替代接口：** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void-End-->
 
@@ -384,9 +368,9 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 | --- | --- | --- | --- |
 | sql | string | 是 | 指定要执行的SQL语句，不能为空字符串。 |
 | bindArgs | Array&lt;ValueType&gt; | 是 | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数需为空数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当操作成功，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当操作成功，err为undefined；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 const SQL_DELETE_TABLE = "DELETE FROM test WHERE name = ?"
@@ -409,11 +393,9 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executeSql)
+**替代接口：** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>--><!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>-End-->
 
@@ -432,7 +414,7 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 const SQL_DELETE_TABLE = "DELETE FROM test WHERE name = 'zhangsan'"
@@ -454,8 +436,6 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
@@ -470,9 +450,9 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
 | values | ValuesBucket | 是 | 表示要插入到表中的数据行。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为行ID；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为行ID；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ValuesBucket } from '@ohos.data.ValuesBucket';
@@ -511,8 +491,6 @@ insert(table: string, values: ValuesBucket): Promise<number>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
@@ -534,7 +512,7 @@ insert(table: string, values: ValuesBucket): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象。如果操作成功，返回行ID；否则返回-1。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ValuesBucket } from '@ohos.data.ValuesBucket';
@@ -568,15 +546,13 @@ promise.then((rowId: BusinessError) => {
 obtainDistributedTableName(device: string, table: string, callback: AsyncCallback<string>): void
 ```
 
-根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用callback异步回调。 > **说明：** > > 其中device通过调用&lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync) > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用callback异步回调。 > **说明：** > > 其中device通过调用&lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtainDistributedTableName)
+**替代接口：** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -590,9 +566,9 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 | --- | --- | --- | --- |
 | device | string | 是 | 远程设备ID 。 |
 | table | string | 是 | 远程设备的本地表名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当操作成功，err为undefined，data为远程设备的分布式表名；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当操作成功，err为undefined，data为远程设备的分布式表名；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -624,15 +600,13 @@ rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE", (err: BusinessError, t
 obtainDistributedTableName(device: string, table: string): Promise<string>
 ```
 
-根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用Promise异步回调。 > **说明：** > > 其中device通过调用&lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync) > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用Promise异步回调。 > **说明：** > > 其中device通过调用&lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtainDistributedTableName)
+**替代接口：** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -653,7 +627,7 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象。如果操作成功，返回远程设备的分布式表名。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -688,11 +662,9 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [off](arkts-arkdata-relationalstore-rdbstore-i.md#off_dataChange)
+**替代接口：** [off](arkts-arkdata-relationalstore-rdbstore-i.md#offdatachange)
 
 <!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -704,9 +676,9 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取值为'dataChange'，表示数据更改。 |
 | type | SubscribeType | 是 | 订阅类型。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 指已注册的数据更改观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 指已注册的数据更改观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let devices: Array<string>;
@@ -732,11 +704,9 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [on](arkts-arkdata-relationalstore-rdbstore-i.md#on_dataChange)
+**替代接口：** [on](arkts-arkdata-relationalstore-rdbstore-i.md#ondatachange)
 
 <!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -748,9 +718,9 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取值为'dataChange'，表示数据更改。 |
 | type | SubscribeType | 是 | 订阅类型。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 指分布式数据库中数据更改事件的观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 指分布式数据库中数据更改事件的观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let devices: Array<string>;
@@ -776,8 +746,6 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
@@ -792,9 +760,9 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 | --- | --- | --- | --- |
 | predicates | RdbPredicates | 是 | RdbPredicates的实例对象指定的查询条件。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查询的列。如果值为空，则查询应用于所有列。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。当操作成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | 是 | 回调函数。当操作成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -819,8 +787,6 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
@@ -842,7 +808,7 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 | --- | --- |
 | Promise&lt;ResultSet&gt; | Promise对象。如果操作成功，则返回ResultSet对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -866,11 +832,9 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)
+**替代接口：** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -882,9 +846,9 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 | --- | --- | --- | --- |
 | sql | string | 是 | 指定要执行的SQL语句，不能为空字符串。 |
 | bindArgs | Array&lt;ValueType&gt; | 是 | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数需为空数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。当操作成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | 是 | 回调函数。当操作成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = ?", ['sanguo'], (err: BusinessError, resultSet: void) => {
@@ -907,11 +871,9 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)
+**替代接口：** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>--><!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>-End-->
 
@@ -930,7 +892,7 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 | --- | --- |
 | Promise&lt;ResultSet&gt; | Promise对象。如果操作成功，则返回ResultSet对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let promise: void = rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'")
@@ -952,17 +914,15 @@ rollBack(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** rollBack
+**替代接口：** [rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollback)
 
 <!--Device-RdbStore-rollBack(): void--><!--Device-RdbStore-rollBack(): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ValuesBucket } from '@ohos.data.ValuesBucket';
@@ -1006,11 +966,9 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setDistributedTables)
+**替代接口：** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1023,9 +981,9 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tables | Array&lt;string&gt; | 是 | 要设置的分布式列表表名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当操作成功，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当操作成功，err为undefined；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 rdbStore.setDistributedTables(["EMPLOYEE"], (err: BusinessError) => {
@@ -1047,11 +1005,9 @@ setDistributedTables(tables: Array<string>): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setDistributedTables)
+**替代接口：** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1071,7 +1027,7 @@ setDistributedTables(tables: Array<string>): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let promise: void = rdbStore.setDistributedTables(["EMPLOYEE"])
@@ -1092,8 +1048,6 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
@@ -1110,9 +1064,9 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 | --- | --- | --- | --- |
 | mode | SyncMode | 是 | 指同步模式。该值可以是推、拉。 |
 | predicates | RdbPredicates | 是 | 约束同步数据和设备。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 是 | 回调函数。当操作成功，err为undefined，data为同步结果，其中string为设备ID， number为每个设备同步状态，0表示成功，其他值表示失败；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | 是 | 回调函数。当操作成功，err为undefined，data为同步结果，其中string为设备ID， number为每个设备同步状态，0表示成功，其他值表示失败；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -1155,8 +1109,6 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
@@ -1180,7 +1132,7 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 | --- | --- |
 | Promise&lt;Array&lt;[string, number]&gt;&gt; | Promise对象，用于向调用者发送同步结果。string：设备ID；number：每个设备同步状态，0表示成功，其他值表示失败。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -1222,8 +1174,6 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
@@ -1238,9 +1188,9 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | values | ValuesBucket | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
 | predicates | RdbPredicates | 是 | RdbPredicates的实例对象指定的更新条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为受影响的行数；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为受影响的行数；否则为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ValuesBucket } from '@ohos.data.ValuesBucket';
@@ -1281,8 +1231,6 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
@@ -1304,7 +1252,7 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | 指定的Promise回调方法。返回受影响的行数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ValuesBucket } from '@ohos.data.ValuesBucket';

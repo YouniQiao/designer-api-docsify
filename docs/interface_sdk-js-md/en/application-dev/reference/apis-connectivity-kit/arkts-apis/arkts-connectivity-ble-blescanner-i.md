@@ -1,12 +1,8 @@
 # BleScanner
 
-Manages the ble scanner. Before calling a ble scanner method, you must use [createBleScanner](arkts-connectivity-ble-createblescanner-f.md#createBleScanner) to create an BleScanner instance.
+Manages the ble scanner. Before calling a ble scanner method, you must use [createBleScanner](arkts-connectivity-ble-createblescanner-f.md#createblescanner) to create an BleScanner instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ble-interface BleScanner--><!--Device-ble-interface BleScanner-End-->
 
@@ -27,10 +23,6 @@ offBLEDeviceFind(callback?: Callback<ScanReport>): void
 Unsubscribe BLE scan result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -64,10 +56,6 @@ Unsubscribe BLE scan result.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -94,7 +82,7 @@ Unsubscribe BLE scan result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -120,10 +108,6 @@ onBLEDeviceFind(callback: Callback<ScanReport>): void
 Subscribe BLE scan result. If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
 
@@ -157,10 +141,6 @@ Subscribe BLE scan result. On API 26.0.0 and above, if the application has ohos.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
 - API version 15 - 24: ohos.permission.ACCESS_BLUETOOTH
@@ -189,7 +169,7 @@ Subscribe BLE scan result. On API 26.0.0 and above, if the application has ohos.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -215,10 +195,6 @@ Starts scanning for specified BLE devices with filters.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -234,7 +210,7 @@ Starts scanning for specified BLE devices with filters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filters | Array&lt;ScanFilter&gt; | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
-| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutyMode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#SCAN_MODE_LOW_POWER) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchMode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#MATCH_MODE_AGGRESSIVE). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phyType) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#PHY_LE_ALL_SUPPORTED). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportMode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#NORMAL). |
+| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutymode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#scanmodelowpower) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchmode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#matchmodeaggressive). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phytype) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#phyleallsupported). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportmode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#normal). |
 
 **Return value:**
 
@@ -255,7 +231,7 @@ Starts scanning for specified BLE devices with filters.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
@@ -297,10 +273,6 @@ Starts scanning for specified BLE devices with filters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -314,7 +286,7 @@ Starts scanning for specified BLE devices with filters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filters | Array&lt;ScanFilter&gt; \| null | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
-| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutyMode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#SCAN_MODE_LOW_POWER) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchMode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#MATCH_MODE_AGGRESSIVE). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phyType) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#PHY_LE_ALL_SUPPORTED). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportMode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#NORMAL). |
+| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutymode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#scanmodelowpower) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchmode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#matchmodeaggressive). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phytype) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#phyleallsupported). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportmode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#normal). |
 
 **Return value:**
 
@@ -344,10 +316,6 @@ Stops BLE scanning.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -374,7 +342,7 @@ Stops BLE scanning.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';

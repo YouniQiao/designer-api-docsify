@@ -4,10 +4,6 @@ Version: the bundle version class.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Version--><!--Device-unnamed-export interface Version-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -25,10 +21,6 @@ Version number of the bundle used only for bundle management. The value is a 32-
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Version-readonly code: int--><!--Device-Version-readonly code: int-End-->
 
@@ -48,10 +40,6 @@ Minimum compatible version of the bundle. It is used to check whether the bundle
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Version-readonly minCompatibleVersionCode: int--><!--Device-Version-readonly minCompatibleVersionCode: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -69,10 +57,6 @@ Version number of the bundle visible to users.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Version-readonly name: string--><!--Device-Version-readonly name: string-End-->
 

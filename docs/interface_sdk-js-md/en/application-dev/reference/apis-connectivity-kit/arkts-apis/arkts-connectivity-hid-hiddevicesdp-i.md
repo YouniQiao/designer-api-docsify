@@ -4,10 +4,6 @@ Describe the HID device capability fields of this endpoint being queried.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-hid-interface HidDeviceSdp--><!--Device-hid-interface HidDeviceSdp-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ description for this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HidDeviceSdp-description: string--><!--Device-HidDeviceSdp-description: string-End-->
@@ -51,10 +43,6 @@ descriptors identifies the descriptors associated with the bluetooth hid device.
 **Type:** Uint8Array
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ name of this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HidDeviceSdp-name: string--><!--Device-HidDeviceSdp-name: string-End-->
@@ -96,10 +80,6 @@ provider of this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HidDeviceSdp-provider: string--><!--Device-HidDeviceSdp-provider: string-End-->
@@ -117,10 +97,6 @@ Subclass of this Bluetooth HID device. Subclass represents the specific HID devi
 **Type:** [Subclass](arkts-connectivity-hid-subclass-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Cancels listening to the event of formOverflow. You can use this method to cance
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formHost-function offFormOverflow(callback?: Callback<formInfo.OverflowRequest>): void--><!--Device-formHost-function offFormOverflow(callback?: Callback<formInfo.OverflowRequest>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form

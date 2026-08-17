@@ -2,13 +2,9 @@
 
 Define configuration of the l2tp VPN network.
 
-**Inheritance/Implementation:** L2tpVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#SysVpnConfig-(System-API))
+**Inheritance/Implementation:** L2tpVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#sysvpnconfig-system-api)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-vpn-export interface L2tpVpnConfig--><!--Device-vpn-export interface L2tpVpnConfig-End-->
 
@@ -34,10 +30,6 @@ The ca cert config for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-L2tpVpnConfig-ipsecCaCertConfig?: string--><!--Device-L2tpVpnConfig-ipsecCaCertConfig?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -55,10 +47,6 @@ The ca cert file path for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-L2tpVpnConfig-ipsecCaCertFilePath?: string--><!--Device-L2tpVpnConfig-ipsecCaCertFilePath?: string-End-->
 
@@ -78,10 +66,6 @@ The config for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-L2tpVpnConfig-ipsecConfig?: string--><!--Device-L2tpVpnConfig-ipsecConfig?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -99,10 +83,6 @@ The identifier for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-L2tpVpnConfig-ipsecIdentifier?: string--><!--Device-L2tpVpnConfig-ipsecIdentifier?: string-End-->
 
@@ -122,10 +102,6 @@ The pre share key for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-L2tpVpnConfig-ipsecPreSharedKey?: string--><!--Device-L2tpVpnConfig-ipsecPreSharedKey?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -143,10 +119,6 @@ The private server cert config for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-L2tpVpnConfig-ipsecPrivateServerCertConfig?: string--><!--Device-L2tpVpnConfig-ipsecPrivateServerCertConfig?: string-End-->
 
@@ -166,10 +138,6 @@ The private server cert file path for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-L2tpVpnConfig-ipsecPrivateServerCertFilePath?: string--><!--Device-L2tpVpnConfig-ipsecPrivateServerCertFilePath?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -187,10 +155,6 @@ The private user cert config for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-L2tpVpnConfig-ipsecPrivateUserCertConfig?: string--><!--Device-L2tpVpnConfig-ipsecPrivateUserCertConfig?: string-End-->
 
@@ -210,10 +174,6 @@ The private user cert file path for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-L2tpVpnConfig-ipsecPrivateUserCertFilePath?: string--><!--Device-L2tpVpnConfig-ipsecPrivateUserCertFilePath?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -231,10 +191,6 @@ The public server cert config for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-L2tpVpnConfig-ipsecPublicServerCertConfig?: string--><!--Device-L2tpVpnConfig-ipsecPublicServerCertConfig?: string-End-->
 
@@ -254,10 +210,6 @@ The public server cert file path for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-L2tpVpnConfig-ipsecPublicServerCertFilePath?: string--><!--Device-L2tpVpnConfig-ipsecPublicServerCertFilePath?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -275,10 +227,6 @@ The public user cert config for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-L2tpVpnConfig-ipsecPublicUserCertConfig?: string--><!--Device-L2tpVpnConfig-ipsecPublicUserCertConfig?: string-End-->
 
@@ -298,10 +246,6 @@ The public user cert file path for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-L2tpVpnConfig-ipsecPublicUserCertFilePath?: string--><!--Device-L2tpVpnConfig-ipsecPublicUserCertFilePath?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -319,10 +263,6 @@ The secrets for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-L2tpVpnConfig-ipsecSecrets?: string--><!--Device-L2tpVpnConfig-ipsecSecrets?: string-End-->
 
@@ -342,10 +282,6 @@ The shared key for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-L2tpVpnConfig-l2tpSharedKey?: string--><!--Device-L2tpVpnConfig-l2tpSharedKey?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -363,10 +299,6 @@ The client options for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-L2tpVpnConfig-optionsL2tpdClient?: string--><!--Device-L2tpVpnConfig-optionsL2tpdClient?: string-End-->
 
@@ -386,10 +318,6 @@ The strongSwan config for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-L2tpVpnConfig-strongSwanConfig?: string--><!--Device-L2tpVpnConfig-strongSwanConfig?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -407,10 +335,6 @@ The xl2tpd config for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-L2tpVpnConfig-xl2tpdConfig?: string--><!--Device-L2tpVpnConfig-xl2tpdConfig?: string-End-->
 

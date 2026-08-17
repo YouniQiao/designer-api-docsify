@@ -1,12 +1,8 @@
 # UrlRegexRule
 
-Defines the regular expression rule.
+定义Url正则表达式规则。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface UrlRegexRule--><!--Device-unnamed-declare interface UrlRegexRule-End-->
 
@@ -18,15 +14,11 @@ Defines the regular expression rule.
 rule : string
 ```
 
-Full URL regular expression.
+url正则表达式。 在secondLevelDomain匹配成功后，才进行url正则匹配。
 
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,15 +32,11 @@ Full URL regular expression.
 secondLevelDomain : string
 ```
 
-Exact match of the second-level domain. For example, the second-level domain of https://www.example.com is example.com, and the second-level domain of https://www.example.com.cn is example.com.cn. If the URL is an IP address, the full IP is matched against the secondLevelDomain.
+二级域名的精确匹配。例如，"https://www.example.com"的二级域名为example.com；"https://www.example.com.cn"二级域名为example.com.cn。网址没有二级域名则为 空。
 
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

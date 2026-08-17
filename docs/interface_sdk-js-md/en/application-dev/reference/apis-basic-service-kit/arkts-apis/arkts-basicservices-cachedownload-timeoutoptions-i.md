@@ -4,10 +4,6 @@ Task timeout configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-cacheDownload-interface TimeoutOptions--><!--Device-cacheDownload-interface TimeoutOptions-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -30,10 +26,6 @@ Complete HTTP request-response cycle timeout, in seconds. The default value is 6
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TimeoutOptions-httpTotalTimeout?: int--><!--Device-TimeoutOptions-httpTotalTimeout?: int-End-->
@@ -51,10 +43,6 @@ Network availability check timeout, in seconds. The default value is 20. The min
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

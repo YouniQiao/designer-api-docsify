@@ -4,13 +4,9 @@
 export type Position3 = Vec3
 ```
 
-3D position information, the unit is the scene unit in the world coordinate system (e.g., cm, m, km).
+Position of an object in 3D space. The type is a three-dimensional vector. The unit is the scene unit in the world coordinate system (such as cm, m, and km). The value can be any value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export type Position3 = Vec3--><!--Device-unnamed-export type Position3 = Vec3-End-->
 

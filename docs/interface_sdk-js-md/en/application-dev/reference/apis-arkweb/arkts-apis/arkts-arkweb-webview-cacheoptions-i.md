@@ -4,10 +4,6 @@ Represents a configuration object for precompiling JavaScript in the **Web** com
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-webview-interface CacheOptions--><!--Device-webview-interface CacheOptions-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,15 +20,11 @@ import { webview } from 'webview';
 responseHeaders: Array<WebHeader>
 ```
 
-Array of response headers from the server when a JavaScript file is requested. They include information such as E -Tag or Last-Modified to identify the file version and determine whether the bytecode cache needs to be refreshed.
+Response headers returned by the server when requesting this JavaScript file. ETag or Last-Modified is used to identify the file version and determine whether an update is needed.
 
 **Type:** Array&lt;WebHeader&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-CacheOptions-responseHeaders: Array<WebHeader>--><!--Device-CacheOptions-responseHeaders: Array<WebHeader>-End-->
 

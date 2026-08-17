@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [rememberVariable](arkts-na-remember-remembervariable-f.md#rememberVariable) | Create variable within @Builder functions or build(). |
+| [rememberVariable](arkts-na-remember-remembervariable-f.md#remembervariable) | Create variable within @Builder functions or build(). |
 
 ### Interfaces
 

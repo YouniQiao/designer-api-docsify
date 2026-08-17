@@ -10,8 +10,6 @@ Renames a file. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [rename](arkts-corefile-file-fs-rename-f.md#rename)
@@ -43,8 +41,6 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 Renames a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

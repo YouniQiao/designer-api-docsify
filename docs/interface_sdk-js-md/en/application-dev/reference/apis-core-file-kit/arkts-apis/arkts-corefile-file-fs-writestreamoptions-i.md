@@ -4,10 +4,6 @@ Defines the options used in **createWriteStream()**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface WriteStreamOptions--><!--Device-unnamed-export interface WriteStreamOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -44,10 +40,6 @@ Option for creating the writeable stream. You must specify one of the following 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-WriteStreamOptions-mode?: number--><!--Device-WriteStreamOptions-mode?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -63,10 +55,6 @@ Start position to write the data, in bytes. This parameter is optional. By defau
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-WriteStreamOptions-start?: number--><!--Device-WriteStreamOptions-start?: number-End-->
 

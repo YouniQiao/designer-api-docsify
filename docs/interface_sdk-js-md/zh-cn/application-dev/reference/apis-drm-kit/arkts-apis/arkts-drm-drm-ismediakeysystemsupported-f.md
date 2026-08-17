@@ -10,10 +10,6 @@ Judge whether a system that specifies name, mimetype and content protection leve
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-drm-function isMediaKeySystemSupported(name: string, mimeType: string, level: ContentProtectionLevel): boolean--><!--Device-drm-function isMediaKeySystemSupported(name: string, mimeType: string, level: ContentProtectionLevel): boolean-End-->
@@ -42,7 +38,7 @@ Judge whether a system that specifies name, mimetype and content protection leve
 | [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';
@@ -61,10 +57,6 @@ function isMediaKeySystemSupported(name: string, mimeType: string): boolean
 Judge whether a system that specifies name, mimetype is supported.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -93,7 +85,7 @@ Judge whether a system that specifies name, mimetype is supported.
 | [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';
@@ -112,10 +104,6 @@ function isMediaKeySystemSupported(name: string): boolean
 Judge whether a system that specifies name is supported.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -143,7 +131,7 @@ Judge whether a system that specifies name is supported.
 | [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';

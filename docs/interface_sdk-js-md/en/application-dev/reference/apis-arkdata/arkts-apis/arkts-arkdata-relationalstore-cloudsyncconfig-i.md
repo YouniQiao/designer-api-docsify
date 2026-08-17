@@ -4,10 +4,6 @@ Cloud sync configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-interface CloudSyncConfig--><!--Device-relationalStore-interface CloudSyncConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -30,10 +26,6 @@ Indicates the table-level synchronization switch.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CloudSyncConfig-enablePredicate?: boolean--><!--Device-CloudSyncConfig-enablePredicate?: boolean-End-->
@@ -52,10 +44,6 @@ Indicates the database synchronization mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CloudSyncConfig-mode: SyncMode--><!--Device-CloudSyncConfig-mode: SyncMode-End-->
@@ -73,10 +61,6 @@ Indicates the table-level synchronization predicate.
 **Type:** RdbPredicates
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

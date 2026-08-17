@@ -1,12 +1,8 @@
 # ConsoleMessage
 
-Encompassed message information as parameters to onConsole method.
+ConsoleMessage是Web组件中封装JavaScript控制台输出信息的对象。当网页通过`console.log()`、`console.warn()`、`console.error()`等方法输出日志时，该对象通过 `onConsole`事件回调提供给应用，用于监控和检查网页调试输出。示例代码参考[onConsole事件](arkts-arkweb-web-attribute.md#onconsole)。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class ConsoleMessage--><!--Device-unnamed-declare class ConsoleMessage-End-->
 
@@ -18,11 +14,9 @@ Encompassed message information as parameters to onConsole method.
 constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)
 ```
 
-Constructor.
+ConsoleMessage的构造函数。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 
@@ -51,10 +45,6 @@ ConsoleMessage的构造函数。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ConsoleMessage-constructor()--><!--Device-ConsoleMessage-constructor()-End-->
@@ -67,13 +57,9 @@ ConsoleMessage的构造函数。
 getLineNumber(): number
 ```
 
-获取ConsoleMessage的行数。
+获取控制台输出在网页源文件中的行号。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -85,7 +71,7 @@ getLineNumber(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回ConsoleMessage的行数。 |
+| number | 返回控制台输出在网页源文件中的行号。 |
 
 ## getMessage
 
@@ -93,13 +79,9 @@ getLineNumber(): number
 getMessage(): string
 ```
 
-获取ConsoleMessage的日志信息。
+获取控制台输出的日志信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -111,7 +93,7 @@ getMessage(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回ConsoleMessage的日志信息。 |
+| string | 返回控制台输出的日志信息。 |
 
 ## getMessageLevel
 
@@ -122,10 +104,6 @@ getMessageLevel(): MessageLevel
 获取ConsoleMessage的信息级别。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -149,10 +127,6 @@ getSource() : ConsoleMessageSource
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ConsoleMessage-getSource() : ConsoleMessageSource--><!--Device-ConsoleMessage-getSource() : ConsoleMessageSource-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -172,10 +146,6 @@ getSourceId(): string
 获取网页源文件路径和文件名。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

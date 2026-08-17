@@ -16,10 +16,6 @@ Get the profile connection state of the current device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -32,7 +28,7 @@ Get the profile connection state of the current device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | ProfileId | No | Indicate the profile id. This is an optional parameter. With profileId, returns the current connection state of this profile, [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md#ProfileConnectionState). Without profileId, if any profile is connected, STATE_CONNECTED is returned. Otherwise, STATE_DISCONNECTED is returned. |
+| profileId | ProfileId | No | Indicate the profile id. This is an optional parameter. With profileId, returns the current connection state of this profile, [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md#profileconnectionstate). Without profileId, if any profile is connected, STATE_CONNECTED is returned. Otherwise, STATE_DISCONNECTED is returned. |
 
 **Return value:**
 
@@ -52,7 +48,7 @@ Get the profile connection state of the current device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

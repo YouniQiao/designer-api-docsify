@@ -19,8 +19,6 @@ Writes data into a file. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [write](arkts-corefile-file-fs-write-f.md#write)
@@ -53,8 +51,6 @@ declare function write(fd: number, buffer: ArrayBuffer | string, callback: Async
 Writes data to a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -92,8 +88,6 @@ declare function write(
 Writes data to a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

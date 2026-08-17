@@ -10,10 +10,6 @@ function getUserTrustedCertificate(certUri: string): Promise<CMResult>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function getUserTrustedCertificate(certUri: string): Promise<CMResult>--><!--Device-certificateManager-function getUserTrustedCertificate(certUri: string): Promise<CMResult>-End-->
@@ -41,7 +37,7 @@ function getUserTrustedCertificate(certUri: string): Promise<CMResult>
 | [17500002](../errorcode-certManager.md#17500002-证书不存在) | The certificate does not exist. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

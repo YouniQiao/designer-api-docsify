@@ -6,10 +6,6 @@ Defines the gesture event information. Inherits from BaseEvent.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface GestureEvent--><!--Device-unnamed-interface GestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Rotation angle for the **RotationGesture** event, in deg. Angle of the swipe ges
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,10 +39,6 @@ Information about touch points of the gesture event. For gesture events initiate
 **Type:** [FingerInfo](arkts-arkui-fingerinfo-i.md)[]
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,10 +60,6 @@ List of touch points of the gesture event. If the event input device is touchscr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GestureEvent-fingerList: FingerInfo[]--><!--Device-GestureEvent-fingerList: FingerInfo[]-End-->
@@ -93,10 +77,6 @@ X-axis offset of the gesture event relative to the finger press position, in vp.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -116,10 +96,6 @@ Y-axis offset of the gesture event relative to the finger press position, in vp.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GestureEvent-offsetY: number--><!--Device-GestureEvent-offsetY: number-End-->
@@ -137,10 +113,6 @@ X-coordinate of the center of the pinch gesture, in vp, relative to the original
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -160,10 +132,6 @@ Y-coordinate of the center of the pinch gesture, in vp, relative to the original
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GestureEvent-pinchCenterY: number--><!--Device-GestureEvent-pinchCenterY: number-End-->
@@ -181,10 +149,6 @@ Whether the event is a repeated trigger event, used in the **LongPressGesture** 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -204,10 +168,6 @@ Scale ratio. This attribute is used for the pinch gesture. Value range: [0, +∞
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GestureEvent-scale: number--><!--Device-GestureEvent-scale: number-End-->
@@ -225,10 +185,6 @@ Swipe gesture speed, that is, the average swipe speed of all fingers relative to
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -248,10 +204,6 @@ Coordinate information of the current tap gesture. For non-tap gestures, the ret
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -266,15 +218,11 @@ Coordinate information of the current tap gesture. For non-tap gestures, the ret
 velocity: number
 ```
 
-Velocity along the main axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#PanGesture). The value is the arithmetic square root of the sum of squares of the velocity along the x- and y-axis. The unit is vp/s. Value range: [0, +∞)
+Velocity along the main axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#pangesture). The value is the arithmetic square root of the sum of squares of the velocity along the x- and y-axis. The unit is vp/s. Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,15 +238,11 @@ Velocity along the main axis. This parameter is used in [PanGesture](arkts-arkui
 velocityX: number
 ```
 
-Velocity along the x-axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#PanGesture). The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. The unit is vp/s. Value range: (-∞, +∞)
+Velocity along the x-axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#pangesture). The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. The unit is vp/s. Value range: (-∞, +∞)
 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,15 +258,11 @@ Velocity along the x-axis. This parameter is used in [PanGesture](arkts-arkui-ge
 velocityY: number
 ```
 
-Velocity along the y-axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#PanGesture). The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. The unit is vp/s. Value range: (-∞, +∞)
+Velocity along the y-axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#pangesture). The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. The unit is vp/s. Value range: (-∞, +∞)
 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

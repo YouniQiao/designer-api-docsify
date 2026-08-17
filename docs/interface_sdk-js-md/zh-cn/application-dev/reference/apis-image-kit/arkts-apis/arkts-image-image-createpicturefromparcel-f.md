@@ -10,10 +10,6 @@ function createPictureFromParcel(sequence: rpc.MessageSequence): Picture
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-image-function createPictureFromParcel(sequence: rpc.MessageSequence): Picture--><!--Device-image-function createPictureFromParcel(sequence: rpc.MessageSequence): Picture-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -37,7 +33,7 @@ function createPictureFromParcel(sequence: rpc.MessageSequence): Picture
 | [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

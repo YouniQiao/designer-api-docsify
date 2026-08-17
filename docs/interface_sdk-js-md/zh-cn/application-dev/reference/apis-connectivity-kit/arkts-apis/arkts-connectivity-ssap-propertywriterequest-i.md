@@ -4,10 +4,6 @@ SSAP客户端属性写请求参数说明。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-ssap-interface PropertyWriteRequest--><!--Device-ssap-interface PropertyWriteRequest-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -23,10 +19,6 @@ address: string
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ propertyUuid: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PropertyWriteRequest-propertyUuid: string--><!--Device-PropertyWriteRequest-propertyUuid: string-End-->
@@ -68,10 +56,6 @@ requestId: int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PropertyWriteRequest-requestId: int--><!--Device-PropertyWriteRequest-requestId: int-End-->
@@ -84,15 +68,11 @@ requestId: int
 serviceUuid: string
 ```
 
-属性所属的[Service](arkts-connectivity-ssap-service-i.md#Service)实例的UUID 长度必须为32，禁止使用星闪标准服务UUID。 <br>不允许使用NearLink标准UUID。
+属性所属的[Service](arkts-connectivity-ssap-service-i.md#service)实例的UUID 长度必须为32，禁止使用星闪标准服务UUID。 <br>不允许使用NearLink标准UUID。
 
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,10 +92,6 @@ value: ArrayBuffer
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PropertyWriteRequest-value: ArrayBuffer--><!--Device-PropertyWriteRequest-value: ArrayBuffer-End-->
@@ -133,10 +109,6 @@ writeType: PropertyWriteType
 **类型：** [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

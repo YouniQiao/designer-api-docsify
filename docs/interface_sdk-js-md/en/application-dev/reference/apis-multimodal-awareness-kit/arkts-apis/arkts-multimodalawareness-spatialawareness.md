@@ -4,10 +4,6 @@ This module provides the capability to subscribe to report the distance measurem
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace spatialAwareness--><!--Device-unnamed-declare namespace spatialAwareness-End-->
@@ -29,10 +25,10 @@ import { spatialAwareness } from 'spatialAwareness';
 
 | Name | Description |
 | --- | --- |
-| [offDistanceMeasure](arkts-multimodalawareness-spatialawareness-offdistancemeasure-f-sys.md#offDistanceMeasure) | Unsubscribe from distance measurement result data. |
-| [offIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-offindoororoutdooridentify-f-sys.md#offIndoorOrOutdoorIdentify) | Unsubscribe from the results of indoor and outdoor recognition. |
-| [onDistanceMeasure](arkts-multimodalawareness-spatialawareness-ondistancemeasure-f-sys.md#onDistanceMeasure) | Subscribe to distance measurement result data. |
-| [onIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-onindoororoutdooridentify-f-sys.md#onIndoorOrOutdoorIdentify) | Subscribe to the results of indoorand outdoor identification. |
+| [offDistanceMeasure](arkts-multimodalawareness-spatialawareness-offdistancemeasure-f-sys.md#offdistancemeasure) | Unsubscribe from distance measurement result data. |
+| [offIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-offindoororoutdooridentify-f-sys.md#offindoororoutdooridentify) | Unsubscribe from the results of indoor and outdoor recognition. |
+| [onDistanceMeasure](arkts-multimodalawareness-spatialawareness-ondistancemeasure-f-sys.md#ondistancemeasure) | Subscribe to distance measurement result data. |
+| [onIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-onindoororoutdooridentify-f-sys.md#onindoororoutdooridentify) | Subscribe to the results of indoorand outdoor identification. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -4,10 +4,6 @@ Control backup and restore priority sequence
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backup-interface BackupPriority--><!--Device-backup-interface BackupPriority-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -31,10 +27,6 @@ Indicates the priority of a bundle.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BackupPriority-priority?: int--><!--Device-BackupPriority-priority?: int-End-->
 

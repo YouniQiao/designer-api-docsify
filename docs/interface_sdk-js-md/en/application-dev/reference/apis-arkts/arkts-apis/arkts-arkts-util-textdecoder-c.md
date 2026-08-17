@@ -4,10 +4,6 @@ Provides APIs to decode byte arrays into strings. It supports multiple formats, 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-util-class TextDecoder--><!--Device-util-class TextDecoder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,17 +24,13 @@ A constructor used to create a **TextDecoder** object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TextDecoder-constructor()--><!--Device-TextDecoder-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textDecoder = new util.TextDecoder();
@@ -57,11 +49,9 @@ A constructor used to create a **TextDecoder** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [create](#create)
+**Substitutes:** [create](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#create)
 
 <!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })--><!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })-End-->
 
@@ -74,7 +64,7 @@ A constructor used to create a **TextDecoder** object.
 | encoding | string | No | Encoding format. The default format is **'utf-8'**. |
 | options | { fatal?: boolean; ignoreBOM?: boolean } | No | Decoding-related options, which include **fatal** and **ignoreBOM**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
@@ -90,10 +80,6 @@ Creates a **TextDecoder** object. It provides the same function as the deprecate
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextDecoder-static create(encoding?: string, options?: TextDecoderOptions): TextDecoder--><!--Device-TextDecoder-static create(encoding?: string, options?: TextDecoderOptions): TextDecoder-End-->
@@ -105,15 +91,15 @@ Creates a **TextDecoder** object. It provides the same function as the deprecate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | encoding | string | No | Encoding format. The default format is **'utf-8'**.<br>**Since:** 11 |
-| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | No | Decoding-related options, which include **fatal** and **ignoreBOM**.<br>**Since:** 11 |
+| options | [TextDecoderOptions](../../apis-na/arkts-apis/arkts-na-util-textdecoderoptions-i.md) | No | Decoding-related options, which include **fatal** and **ignoreBOM**.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | TextDecoder** object created. |
+| [TextDecoder](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md) | TextDecoder** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textDecoderOptions: util.TextDecoderOptions = {
@@ -136,11 +122,9 @@ Decodes the input content into a string.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [decodeToString](#decodeToString)
+**Substitutes:** [decodeToString](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#decodetostring)
 
 <!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
 
@@ -159,7 +143,7 @@ Decodes the input content into a string.
 | --- | --- |
 | string | String obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
@@ -186,10 +170,6 @@ Decodes the input content into a string.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string--><!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string-End-->
@@ -201,7 +181,7 @@ Decodes the input content into a string.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | input | Uint8Array | Yes | Uint8Array object to decode. |
-| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | No | Decoding-related options. The default value is **undefined**. |
+| options | [DecodeToStringOptions](../../apis-na/arkts-apis/arkts-na-util-decodetostringoptions-i.md) | No | Decoding-related options. The default value is **undefined**. |
 
 **Return value:**
 
@@ -209,7 +189,7 @@ Decodes the input content into a string.
 | --- | --- |
 | string | String obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textDecoderOptions: util.TextDecoderOptions = {
@@ -236,11 +216,9 @@ Decodes the input content into a string. If **input** is an empty array, **undef
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [decodeToString](#decodeToString)
+**Substitutes:** [decodeToString](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#decodetostring)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -261,7 +239,7 @@ Decodes the input content into a string. If **input** is an empty array, **undef
 | --- | --- |
 | string | String obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textDecoderOptions: util.TextDecoderOptions = {
@@ -297,10 +275,6 @@ Encoding format.<br>The following formats are supported: utf-8, ibm866, iso-8859
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TextDecoder-readonly encoding: string--><!--Device-TextDecoder-readonly encoding: string-End-->
@@ -319,10 +293,6 @@ Whether to display fatal errors. The value **true** means to display fatal error
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TextDecoder-readonly fatal: boolean--><!--Device-TextDecoder-readonly fatal: boolean-End-->
@@ -340,10 +310,6 @@ Whether to ignore the byte order marker (BOM). The default value is **false**, w
 **Type:** false
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -17,10 +17,6 @@ Subscribe to changes in WiFi/BT scanning information, and use the WiFi/BT scanni
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function onLocatingRequiredDataChange(config: LocatingRequiredDataConfig,       callback: Callback<Array<LocatingRequiredData>>): void--><!--Device-geoLocationManager-function onLocatingRequiredDataChange(config: LocatingRequiredDataConfig,       callback: Callback<Array<LocatingRequiredData>>): void-End-->

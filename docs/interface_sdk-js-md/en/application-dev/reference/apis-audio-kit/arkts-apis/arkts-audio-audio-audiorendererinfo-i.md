@@ -4,10 +4,6 @@ Describes audio renderer information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioRendererInfo--><!--Device-audio-interface AudioRendererInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -30,8 +26,6 @@ Audio content type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 10
 
 **Substitutes:** usage
@@ -52,10 +46,6 @@ Flags that control the renderer behavior. Set this parameter to **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AudioRendererInfo-rendererFlags: int--><!--Device-AudioRendererInfo-rendererFlags: int-End-->
@@ -74,10 +64,6 @@ Audio stream usage.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AudioRendererInfo-usage: StreamUsage--><!--Device-AudioRendererInfo-usage: StreamUsage-End-->
@@ -90,15 +76,11 @@ Audio stream usage.
 volumeMode?: AudioVolumeMode
 ```
 
-Audio volume mode config. If volumeMode is set to [APP_INDIVIDUAL](arkts-audio-audio-audiovolumemode-e.md#APP_INDIVIDUAL), this audio renderer will be affected by app volume percentage set by [setAppVolumePercentage](arkts-audio-audio-audiovolumemanager-i.md#setAppVolumePercentage)
+Audio volume mode config. If volumeMode is set to [APP_INDIVIDUAL](arkts-audio-audio-audiovolumemode-e.md#appindividual), this audio renderer will be affected by app volume percentage set by [setAppVolumePercentage](arkts-audio-audio-audiovolumemanager-i.md#setappvolumepercentage)
 
 **Type:** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode--><!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode-End-->
 

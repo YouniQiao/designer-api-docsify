@@ -16,10 +16,6 @@ Obtains the maximum rotation angles relative to the reference point for the spec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-function getRotationLimits(mechId: int): RotationLimits--><!--Device-mechanicManager-function getRotationLimits(mechId: int): RotationLimits-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -46,7 +42,7 @@ Obtains the maximum rotation angles relative to the reference point for the spec
 | [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 console.info('Query rotation limit information');

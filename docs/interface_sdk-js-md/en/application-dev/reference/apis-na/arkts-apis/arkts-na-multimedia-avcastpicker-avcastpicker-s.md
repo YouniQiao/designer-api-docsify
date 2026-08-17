@@ -4,9 +4,7 @@ A picker view to show availale streaming device list.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
 
@@ -23,9 +21,7 @@ The method to build component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AVCastPicker-@Builder  build(): void--><!--Device-AVCastPicker-@Builder  build(): void-End-->
 
@@ -44,9 +40,7 @@ Assigns the color of picker component at active state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AVCastPicker-@PropRef  activeColor?: Color | int | string--><!--Device-AVCastPicker-@PropRef  activeColor?: Color | int | string-End-->
 
@@ -65,9 +59,7 @@ Set the picker color mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AVCastPicker-@PropRef  colorMode?: AVCastPickerColorMode--><!--Device-AVCastPicker-@PropRef  colorMode?: AVCastPickerColorMode-End-->
 
@@ -86,9 +78,7 @@ Set the custom builder for the picker appearance. If not set, system will show t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AVCastPicker-@BuilderParam  customPicker?: CustomBuilder--><!--Device-AVCastPicker-@BuilderParam  customPicker?: CustomBuilder-End-->
 
@@ -107,9 +97,7 @@ Assigns the color of picker component at normal state .
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AVCastPicker-@PropRef  normalColor?: Color | int | string--><!--Device-AVCastPicker-@PropRef  normalColor?: Color | int | string-End-->
 
@@ -127,9 +115,7 @@ Picker state change callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AVCastPicker-onStateChange?: OnPickerStateCallback--><!--Device-AVCastPicker-onStateChange?: OnPickerStateCallback-End-->
 
@@ -148,9 +134,7 @@ Set the picker style.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AVCastPicker-@PropRef  pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPicker-@PropRef  pickerStyle?: AVCastPickerStyle-End-->
 
@@ -169,9 +153,7 @@ Set the session type used by current picker component which can refer to AVSessi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AVCastPicker-@PropRef  sessionType?: string--><!--Device-AVCastPicker-@PropRef  sessionType?: string-End-->
 

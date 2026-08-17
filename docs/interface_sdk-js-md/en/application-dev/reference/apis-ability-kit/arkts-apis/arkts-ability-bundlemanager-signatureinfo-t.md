@@ -8,10 +8,6 @@ Defines the signature information of the bundle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type SignatureInfo = _SignatureInfo--><!--Device-bundleManager-export type SignatureInfo = _SignatureInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

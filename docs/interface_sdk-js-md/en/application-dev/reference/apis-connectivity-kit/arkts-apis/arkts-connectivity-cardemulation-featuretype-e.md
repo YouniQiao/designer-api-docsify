@@ -4,11 +4,9 @@ Defines the capability type.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability)
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability)
 
 <!--Device-cardEmulation-enum FeatureType--><!--Device-cardEmulation-enum FeatureType-End-->
 
@@ -24,11 +22,9 @@ This constant is used to check whether HCE card emulation is supported.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability)
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,11 +42,9 @@ This constant is used to check whether SIM card emulation is supported.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability)
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,11 +62,9 @@ This constant is used to check whether eSE card emulation is supported.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability)
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability)
 
 **Model restriction:** This API can be used only in the stage model.
 

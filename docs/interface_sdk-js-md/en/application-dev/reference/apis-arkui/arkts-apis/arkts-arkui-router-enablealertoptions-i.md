@@ -4,10 +4,6 @@ Describes the page routing state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-router-interface EnableAlertOptions--><!--Device-router-interface EnableAlertOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,10 +25,6 @@ Content displayed in the confirm dialog box.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

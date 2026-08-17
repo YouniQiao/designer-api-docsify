@@ -4,10 +4,6 @@ PopupOptions定义Popup的具体样式参数。
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface PopupOptions--><!--Device-unnamed-export interface PopupOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ buttons?: [PopupButtonOptions?, PopupButtonOptions?]
 **类型：** [PopupButtonOptions?, PopupButtonOptions?]
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,10 +40,6 @@ direction?: Direction
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -68,13 +56,9 @@ icon?: PopupIconOptions
 
 设置Popup图标。 **说明：** 当width和height设置异常值或0时不显示。 默认不显示图标。
 
-**类型：** [PopupIconOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popupiconoptions-i.md)
+**类型：** [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,10 +80,6 @@ maxWidth?: Dimension
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -116,13 +96,9 @@ message: PopupTextOptions
 
 设置Popup内容文本。 **说明：** message不支持设置fontWeight。 默认不显示内容文本。
 
-**类型：** [PopupTextOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
+**类型：** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -144,10 +120,6 @@ onClose?: () => void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -168,10 +140,6 @@ showClose?: boolean | Resource
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -188,13 +156,9 @@ title?: PopupTextOptions
 
 设置Popup标题文本。 默认不显示标题文本。
 
-**类型：** [PopupTextOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
+**类型：** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

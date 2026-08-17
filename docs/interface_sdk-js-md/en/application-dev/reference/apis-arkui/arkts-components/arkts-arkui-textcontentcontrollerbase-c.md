@@ -4,10 +4,6 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare abstract class TextContentControllerBase--><!--Device-unnamed-declare abstract class TextContentControllerBase-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ addText(text: string, textOperationOptions?: TextContentControllerOptions): numb
 Inserts text at a specified position in the editable content. If no position is specified, the text is appended to the end of the existing content. This API does not work when the text is being dragged. **addText** only affects the UI performance within the application and has no effect on the internal logic of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,10 +49,6 @@ Notifies the input method to clear the current preview text. > **NOTE：**> > Wh
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -79,10 +67,6 @@ Deletes the character before the text cursor in the text box bound to the basic 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -100,10 +84,6 @@ deleteText(range?: TextRange): void
 Deletes text within a specified range in the editable content. > **NOTE：**> > - This API does not work when the text is being dragged. > > - **deleteText** only affects the UI performance within the application and has no effect on the internal logic > of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,10 +109,6 @@ Obtains the position information of the caret. > **NOTE：**> > - If this API is
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -156,10 +132,6 @@ getSelection(): TextRange
 Obtains the current text selection range.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -185,10 +157,6 @@ Obtains the number of lines of the edited text.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -212,10 +180,6 @@ getTextContentRect() : RectResult
 Obtains the position of the edited text area relative to the component and its size. The unit of the return value is pixel.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -241,10 +205,6 @@ Passes the start and end indexes to the bound text box components (**TextInput**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -268,10 +228,6 @@ setStyledPlaceholder(styledString: StyledString): void
 Binds or updates the styled placeholder string. > **NOTE：**> > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

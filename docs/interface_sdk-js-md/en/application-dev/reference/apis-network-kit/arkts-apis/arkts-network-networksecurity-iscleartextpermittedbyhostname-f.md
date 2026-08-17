@@ -16,10 +16,6 @@ Checks whether the Cleartext traffic for a specified hostname is permitted. To i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-networkSecurity-export function isCleartextPermittedByHostName(hostName: string): boolean--><!--Device-networkSecurity-export function isCleartextPermittedByHostName(hostName: string): boolean-End-->
@@ -44,7 +40,7 @@ Checks whether the Cleartext traffic for a specified hostname is permitted. To i
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { networkSecurity } from '@kit.NetworkKit';

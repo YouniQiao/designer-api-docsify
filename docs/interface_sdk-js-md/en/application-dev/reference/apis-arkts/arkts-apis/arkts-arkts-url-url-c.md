@@ -4,10 +4,6 @@ The interface of URL is used to parse, construct, normalize, and encode URLs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-url-class URL--><!--Device-url-class URL-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,11 +24,9 @@ URL constructor, which is used to instantiate a URL object. url: Absolute or rel
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [parseURL](#parseURL)
+**Substitutes:** [parseURL](#parseurl)
 
 <!--Device-URL-constructor(url: string, base?: string | URL)--><!--Device-URL-constructor(url: string, base?: string | URL)-End-->
 
@@ -55,10 +49,6 @@ A no-argument constructor used to create a URL. It returns a URL object after pa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-constructor()--><!--Device-URL-constructor()-End-->
@@ -74,10 +64,6 @@ static parseURL(url: string, base?: string | URL): URL
 Parses a URL.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -104,7 +90,7 @@ Parses a URL.
 | --- | --- |
 | [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid url string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let mm = 'https://username:password@host:8080/test/test1/test3';
@@ -131,10 +117,6 @@ Converts the parsed URL into a JSON string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-toJSON(): string--><!--Device-URL-toJSON(): string-End-->
@@ -147,7 +129,7 @@ Converts the parsed URL into a JSON string.
 | --- | --- |
 | string | Returns the serialized URL as a string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
@@ -164,10 +146,6 @@ Converts the parsed URL into a string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-toString(): string--><!--Device-URL-toString(): string-End-->
@@ -180,7 +158,7 @@ Converts the parsed URL into a string.
 | --- | --- |
 | string | Returns the serialized URL as a string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
@@ -198,10 +176,6 @@ Gets and sets the fragment portion of the URL.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -221,10 +195,6 @@ Gets and sets the host portion of the URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-host: string--><!--Device-URL-host: string-End-->
@@ -242,10 +212,6 @@ Gets and sets the host name portion of the URL，not include the port.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -265,10 +231,6 @@ Gets and sets the serialized URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-href: string--><!--Device-URL-href: string-End-->
@@ -286,10 +248,6 @@ Gets the read-only serialization of the URL's origin.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -309,10 +267,6 @@ Gets the URLParams object that represents the URL query parameter. This property
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-readonly params: URLParams--><!--Device-URL-readonly params: URLParams-End-->
@@ -330,10 +284,6 @@ Gets and sets the password portion of the URL.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -353,10 +303,6 @@ Gets and sets the path portion of the URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-pathname: string--><!--Device-URL-pathname: string-End-->
@@ -374,10 +320,6 @@ Gets and sets the port portion of the URL.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -397,10 +339,6 @@ Gets and sets the protocol portion of the URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-protocol: string--><!--Device-URL-protocol: string-End-->
@@ -419,10 +357,6 @@ Gets and sets the serialized query portion of the URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-search: string--><!--Device-URL-search: string-End-->
@@ -440,8 +374,6 @@ Gets the URLSearchParams object that represents the URL query parameter. This pr
 **Type:** [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -462,10 +394,6 @@ Gets and sets the username portion of the URL.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

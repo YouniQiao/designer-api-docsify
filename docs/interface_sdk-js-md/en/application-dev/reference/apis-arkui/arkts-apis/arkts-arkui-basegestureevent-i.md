@@ -6,10 +6,6 @@ Defines the basic gesture event type. Inherits from BaseEvent.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface BaseGestureEvent--><!--Device-unnamed-interface BaseGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Information about touch points of the gesture event. For gesture events initiate
 **Type:** [FingerInfo](arkts-arkui-fingerinfo-i.md)[]
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Information about all fingers triggering the event.
 **Type:** [FingerInfo](arkts-arkui-fingerinfo-i.md)[]
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

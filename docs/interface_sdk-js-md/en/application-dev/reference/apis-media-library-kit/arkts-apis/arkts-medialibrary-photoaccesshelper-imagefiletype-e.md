@@ -4,10 +4,6 @@ Enumerates the types of image files to save.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum ImageFileType--><!--Device-photoAccessHelper-enum ImageFileType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -22,10 +18,6 @@ JPEG.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageFileType-JPEG = 1--><!--Device-ImageFileType-JPEG = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -39,10 +31,6 @@ HEIF = 2
 HEIF.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImageFileType-HEIF = 2--><!--Device-ImageFileType-HEIF = 2-End-->
 

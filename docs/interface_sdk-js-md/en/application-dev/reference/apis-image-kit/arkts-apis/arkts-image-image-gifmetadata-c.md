@@ -4,10 +4,6 @@ Gif metadata.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-image-class GifMetadata--><!--Device-image-class GifMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ Canvas height. Unit: px, The value should be an integer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GifMetadata-readonly canvasHeight?: int--><!--Device-GifMetadata-readonly canvasHeight?: int-End-->
@@ -51,10 +43,6 @@ Canvas width. Unit: px, The value should be an integer.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GifMetadata-readonly delayTime?: int--><!--Device-GifMetadata-readonly delayTime?: int-End-->
@@ -95,10 +79,6 @@ Disposal type of each frame in the image. 0 - No disposal specified. 1 - Do not 
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ whether the GIF image has a global color map.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GifMetadata-readonly hasGlobalColorMap?: boolean--><!--Device-GifMetadata-readonly hasGlobalColorMap?: boolean-End-->
@@ -140,10 +116,6 @@ Loop count. The value range is all integers.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GifMetadata-readonly loopCount?: int--><!--Device-GifMetadata-readonly loopCount?: int-End-->
@@ -161,10 +133,6 @@ Unclamped delay of each frame in milliseconds. Unit: ms, The value should be an 
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

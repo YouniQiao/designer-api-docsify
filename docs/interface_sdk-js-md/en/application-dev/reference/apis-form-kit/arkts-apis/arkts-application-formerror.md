@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace formError--><!--Device-unnamed-declare namespace formError-End-->
 
 **System capability:** SystemCapability.Ability.Form

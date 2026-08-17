@@ -18,11 +18,9 @@ Reads data from a file. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readSync](arkts-corefile-file-fs-readsync-f.md#readSync)
+**Substitutes:** [readSync](arkts-corefile-file-fs-readsync-f.md#readsync)
 
 <!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number--><!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number-End-->
 

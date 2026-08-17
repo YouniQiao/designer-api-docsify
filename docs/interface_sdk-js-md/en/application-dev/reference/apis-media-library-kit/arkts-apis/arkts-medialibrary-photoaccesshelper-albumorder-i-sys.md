@@ -4,10 +4,6 @@ Describes the album sorting order.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface AlbumOrder--><!--Device-photoAccessHelper-interface AlbumOrder-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -32,10 +28,6 @@ Album ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AlbumOrder-albumId: int--><!--Device-AlbumOrder-albumId: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -53,10 +45,6 @@ Sorting value of the album.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AlbumOrder-albumOrder: int--><!--Device-AlbumOrder-albumOrder: int-End-->
 
@@ -76,10 +64,6 @@ Sorting section of the album.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AlbumOrder-orderSection: int--><!--Device-AlbumOrder-orderSection: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -98,10 +82,6 @@ Sorting status of the album.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AlbumOrder-orderStatus: int--><!--Device-AlbumOrder-orderStatus: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -119,10 +99,6 @@ Sorting type of the album.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AlbumOrder-orderType: int--><!--Device-AlbumOrder-orderType: int-End-->
 

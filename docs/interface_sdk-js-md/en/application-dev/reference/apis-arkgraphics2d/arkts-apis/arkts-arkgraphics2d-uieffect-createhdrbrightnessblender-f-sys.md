@@ -16,10 +16,6 @@ Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness ef
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender--><!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -44,7 +40,7 @@ Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness ef
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiEffect } from "@kit.ArkGraphics2D"

@@ -4,10 +4,6 @@ Defines a LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-socket-export interface LocalSocket--><!--Device-socket-export interface LocalSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -28,10 +24,6 @@ Binds the Local address.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-bind(address: LocalAddress): Promise<void>--><!--Device-LocalSocket-bind(address: LocalAddress): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -40,7 +32,7 @@ Binds the Local address.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | [LocalAddress](arkts-network-socket-localaddress-i.md) | Yes | Destination address. [LocalAddress](arkts-network-socket-localaddress-i.md#LocalAddress) |
+| address | [LocalAddress](arkts-network-socket-localaddress-i.md) | Yes | Destination address. [LocalAddress](arkts-network-socket-localaddress-i.md#localaddress) |
 
 **Return value:**
 
@@ -57,7 +49,7 @@ Binds the Local address.
 | 2301098 | Address already in use. |
 | 2301022 | Invalid argument. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -88,10 +80,6 @@ Closes a LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-close(): Promise<void>--><!--Device-LocalSocket-close(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -108,7 +96,7 @@ Closes a LocalSocket connection.
 | --- | --- |
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -132,10 +120,6 @@ Sets up a connection to the specified Local address .
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-connect(options: LocalConnectOptions): Promise<void>--><!--Device-LocalSocket-connect(options: LocalConnectOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -144,7 +128,7 @@ Sets up a connection to the specified Local address .
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md) | Yes | Optional parameters [LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md#LocalConnectOptions). |
+| options | [LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md) | Yes | Optional parameters [LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md#localconnectoptions). |
 
 **Return value:**
 
@@ -162,7 +146,7 @@ Sets up a connection to the specified Local address .
 | 2301099 | Cannot assign requested address. |
 | 2301022 | Invalid argument. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -197,10 +181,6 @@ Gets other attributes of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-getExtraOptions(): Promise<ExtraOptionsBase>--><!--Device-LocalSocket-getExtraOptions(): Promise<ExtraOptionsBase>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -217,7 +197,7 @@ Gets other attributes of the LocalSocket connection.
 | --- | --- |
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -257,10 +237,6 @@ Obtains the local address of a LocalSocket connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-getLocalAddress(): Promise<string>--><!--Device-LocalSocket-getLocalAddress(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -279,7 +255,7 @@ Obtains the local address of a LocalSocket connection.
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -316,10 +292,6 @@ Obtains the file descriptor of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-getSocketFd(): Promise<number>--><!--Device-LocalSocket-getSocketFd(): Promise<number>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -330,7 +302,7 @@ Obtains the file descriptor of the LocalSocket connection.
 | --- | --- |
 | Promise&lt;number&gt; | The promise returns the file descriptor of the LocalSocket connection. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -370,10 +342,6 @@ Obtains the status of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-getState(): Promise<SocketStateBase>--><!--Device-LocalSocket-getState(): Promise<SocketStateBase>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -384,7 +352,7 @@ Obtains the status of the LocalSocket connection.
 | --- | --- |
 | Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -424,10 +392,6 @@ Cancels listening for close events of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-off(type: 'close', callback?: Callback<void>): void--><!--Device-LocalSocket-off(type: 'close', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -445,7 +409,7 @@ Cancels listening for close events of the LocalSocket connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -470,10 +434,6 @@ Cancels listening for connection events of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-off(type: 'connect', callback?: Callback<void>): void--><!--Device-LocalSocket-off(type: 'connect', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -491,7 +451,7 @@ Cancels listening for connection events of the LocalSocket connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -516,10 +476,6 @@ Cancels listening for error events of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-LocalSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -537,7 +493,7 @@ Cancels listening for error events of the LocalSocket connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -562,10 +518,6 @@ Cancels listening for message receiving events of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void--><!--Device-LocalSocket-off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -583,7 +535,7 @@ Cancels listening for message receiving events of the LocalSocket connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -613,10 +565,6 @@ Listens for close events of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-on(type: 'close', callback: Callback<void>): void--><!--Device-LocalSocket-on(type: 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -634,7 +582,7 @@ Listens for close events of the LocalSocket connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -656,10 +604,6 @@ Listens for connection events of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-on(type: 'connect', callback: Callback<void>): void--><!--Device-LocalSocket-on(type: 'connect', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -677,7 +621,7 @@ Listens for connection events of the LocalSocket connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -698,10 +642,6 @@ Listens for error events of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-LocalSocket-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -719,7 +659,7 @@ Listens for error events of the LocalSocket connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -740,10 +680,6 @@ Listens for message receiving events of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void--><!--Device-LocalSocket-on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -761,7 +697,7 @@ Listens for message receiving events of the LocalSocket connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -788,10 +724,6 @@ Sends data over a LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-send(options: LocalSendOptions): Promise<void>--><!--Device-LocalSocket-send(options: LocalSendOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -800,7 +732,7 @@ Sends data over a LocalSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LocalSendOptions](arkts-network-socket-localsendoptions-i.md) | Yes | Optional parameters [LocalSendOptions](arkts-network-socket-localsendoptions-i.md#LocalSendOptions). |
+| options | [LocalSendOptions](arkts-network-socket-localsendoptions-i.md) | Yes | Optional parameters [LocalSendOptions](arkts-network-socket-localsendoptions-i.md#localsendoptions). |
 
 **Return value:**
 
@@ -815,7 +747,7 @@ Sends data over a LocalSocket connection.
 | 2301011 | Operation would block. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -858,10 +790,6 @@ Sets other attributes of the LocalSocket connection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-LocalSocket-setExtraOptions(options: ExtraOptionsBase): Promise<void>--><!--Device-LocalSocket-setExtraOptions(options: ExtraOptionsBase): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -870,7 +798,7 @@ Sets other attributes of the LocalSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md) | Yes | Optional parameters [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md#ExtraOptionsBase). |
+| options | [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md) | Yes | Optional parameters [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md#extraoptionsbase). |
 
 **Return value:**
 
@@ -885,7 +813,7 @@ Sets other attributes of the LocalSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 

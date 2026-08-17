@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-dataShare-interface DataProxyGetResult--><!--Device-dataShare-interface DataProxyGetResult-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -23,10 +19,6 @@ allowList: string[] | undefined
 **类型：** string[] \| undefined
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ result: DataProxyErrorCode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DataProxyGetResult-result: DataProxyErrorCode--><!--Device-DataProxyGetResult-result: DataProxyErrorCode-End-->
@@ -68,10 +56,6 @@ uri: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DataProxyGetResult-uri: string--><!--Device-DataProxyGetResult-uri: string-End-->
@@ -89,10 +73,6 @@ value: ValueType | undefined
 **类型：** [ValueType](arkts-arkdata-valuetype-t.md) \| undefined
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

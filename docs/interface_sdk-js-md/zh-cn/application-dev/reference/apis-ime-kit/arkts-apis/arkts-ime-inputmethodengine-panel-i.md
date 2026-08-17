@@ -1,12 +1,8 @@
 # Panel
 
-Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的 [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel) 接口获取，使用完毕后需调用 [destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroyPanel) 销毁以释放资源。createPanel与destroyPanel必须配对调用。 **核心功能概述：** - **页面加载**：通过 [setUiContent](#setUiContent)为面板加载键盘页面内容， 支持加载普通页面和与LocalStorage关联的页面。 - **显示与隐藏**：通过[show](#show)显示面板，通过 [hide](#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件 监听状态变化。 - **尺寸与位置调整**：通过 [resize](#resize)调整面板尺寸，通过 [moveTo](#moveTo)移动面板位置，通过 [startMoving](#startMoving)拖拽移动面板，通过 [adjustPanelRect](#adjustPanelRect)/ [updatePanelRect](#updatePanelRect)/ [updateRegion](#updateRegion)调整面板区域。 - **模式设置**：通过[changeFlag](#changeFlag)切换面板固定态/浮动态，通过 [setPrivacyMode](#setPrivacyMode)设置隐私模式，通过 [setImmersiveMode](#setImmersiveMode)/ [getImmersiveMode](#getImmersiveMode)设置/获取沉浸模式。 - **事件监听**：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。 **面板生命周期：** 1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel)中创建Panel实例并指定面板类型和标志位。 2. 调用[setUiContent](#setUiContent)加载键盘页面内容。 3. 调用[show](#show)显示面板，用户可交互。 4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。 5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroyPanel)销毁面板，释放资源。 下列API均需使用 [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel) 获取到Panel实例后，通过实例调用。
+Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的 [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) 接口获取，使用完毕后需调用 [destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel) 销毁以释放资源。createPanel与destroyPanel必须配对调用。 **核心功能概述：** - **页面加载**：通过 [setUiContent](#setuicontent)为面板加载键盘页面内容， 支持加载普通页面和与LocalStorage关联的页面。 - **显示与隐藏**：通过[show](#show)显示面板，通过 [hide](#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件 监听状态变化。 - **尺寸与位置调整**：通过 [resize](#resize)调整面板尺寸，通过 [moveTo](#moveto)移动面板位置，通过 [startMoving](#startmoving)拖拽移动面板，通过 [adjustPanelRect](#adjustpanelrect)/ [updatePanelRect](#updatepanelrect)/ [updateRegion](#updateregion)调整面板区域。 - **模式设置**：通过[changeFlag](#changeflag)切换面板固定态/浮动态，通过 [setPrivacyMode](#setprivacymode)设置隐私模式，通过 [setImmersiveMode](#setimmersivemode)/ [getImmersiveMode](#getimmersivemode)设置/获取沉浸模式。 - **事件监听**：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。 **面板生命周期：** 1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)中创建Panel实例并指定面板类型和标志位。 2. 调用[setUiContent](#setuicontent)加载键盘页面内容。 3. 调用[show](#show)显示面板，用户可交互。 4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。 5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁面板，释放资源。 下列API均需使用 [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) 获取到Panel实例后，通过实例调用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface Panel--><!--Device-inputMethodEngine-interface Panel-End-->
 
@@ -21,10 +17,6 @@ adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: PanelRect): void--><!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: PanelRect): void-End-->
 
@@ -44,7 +36,7 @@ adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -86,10 +78,6 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void--><!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -109,7 +97,7 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 | [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -148,13 +136,9 @@ panel.adjustPanelRect(panelFlag, panelRect);
 changeFlag(flag: PanelFlag): void
 ```
 
-将输入法应用的面板状态改变为其他[PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag)形态，仅对 [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#PanelType)生效。
+将输入法应用的面板状态改变为其他[PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md#panelflag)形态，仅对 [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#paneltype)生效。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Panel-changeFlag(flag: PanelFlag): void--><!--Device-Panel-changeFlag(flag: PanelFlag): void-End-->
 
@@ -172,7 +156,7 @@ changeFlag(flag: PanelFlag): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
@@ -188,10 +172,6 @@ getDisplayId(): Promise<long>
 获取当前窗口的所在id，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Panel-getDisplayId(): Promise<long>--><!--Device-Panel-getDisplayId(): Promise<long>-End-->
 
@@ -210,7 +190,7 @@ getDisplayId(): Promise<long>
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -246,10 +226,6 @@ getImmersiveMode(): ImmersiveMode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-getImmersiveMode(): ImmersiveMode--><!--Device-Panel-getImmersiveMode(): ImmersiveMode-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -260,7 +236,7 @@ getImmersiveMode(): ImmersiveMode
 | --- | --- |
 | ImmersiveMode | 沉浸模式。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let mode: inputMethodEngine.ImmersiveMode = panel.getImmersiveMode();
@@ -276,10 +252,6 @@ getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 <!--Device-Panel-getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>--><!--Device-Panel-getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -288,7 +260,7 @@ getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | number | 是 | 输入法键盘所在屏幕的displayId，可通过[getDisplayId](#getDisplayId)获取 |
+| displayId | number | 是 | 输入法键盘所在屏幕的displayId，可通过[getDisplayId](#getdisplayid)获取 |
 
 **返回值：**
 
@@ -304,7 +276,7 @@ getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 | [12800022](../errorcode-inputmethod-framework.md#12800022-无效的displayid) | invalid displayId. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -364,10 +336,6 @@ getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>--><!--Device-Panel-getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -402,10 +370,6 @@ hide(callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-hide(callback: AsyncCallback<void>): void--><!--Device-Panel-hide(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -414,9 +378,9 @@ hide(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板隐藏成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板隐藏成功，err为undefined，否则err为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -440,10 +404,6 @@ hide(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-hide(): Promise<void>--><!--Device-Panel-hide(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -454,7 +414,7 @@ hide(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -472,13 +432,9 @@ panel.hide().then(() => {
 moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 ```
 
-移动面板位置，使用callback异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag)为固定态时，不产生实际移动效果。
+移动面板位置，使用callback异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md#panelflag)为固定态时，不产生实际移动效果。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Panel-moveTo(x: int, y: int, callback: AsyncCallback<void>): void--><!--Device-Panel-moveTo(x: int, y: int, callback: AsyncCallback<void>): void-End-->
 
@@ -490,7 +446,7 @@ moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | x | int | 是 | 横轴方向移动的值，单位为px。该参数应为整数。值大于0表示右移，小于0表示左移。超出屏幕范围时返回错误码401。 |
 | y | int | 是 | 纵轴方向移动的值，单位为px。该参数应为整数。值大于0表示下移，小于0表示上移。超出屏幕范围时返回错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板位置移动成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板位置移动成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
@@ -498,7 +454,7 @@ moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -519,13 +475,9 @@ panel.moveTo(300, 300, (err: BusinessError) => {
 moveTo(x: int, y: int): Promise<void>
 ```
 
-移动面板位置，使用promise异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag)为固定态时，不产生实际移动效果。
+移动面板位置，使用promise异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md#panelflag)为固定态时，不产生实际移动效果。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Panel-moveTo(x: int, y: int): Promise<void>--><!--Device-Panel-moveTo(x: int, y: int): Promise<void>-End-->
 
@@ -550,7 +502,7 @@ moveTo(x: int, y: int): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -573,10 +525,6 @@ offHide(callback?: Callback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-offHide(callback?: Callback<void>): void--><!--Device-Panel-offHide(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -585,9 +533,9 @@ offHide(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 panel.offHide();
@@ -603,10 +551,6 @@ offShow(callback?: Callback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-offShow(callback?: Callback<void>): void--><!--Device-Panel-offShow(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -615,9 +559,9 @@ offShow(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 panel.offShow();
@@ -633,10 +577,6 @@ offSizeChange(callback?: SizeChangeCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-offSizeChange(callback?: SizeChangeCallback): void--><!--Device-Panel-offSizeChange(callback?: SizeChangeCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -647,7 +587,7 @@ offSizeChange(callback?: SizeChangeCallback): void
 | --- | --- | --- | --- |
 | callback | SizeChangeCallback | 否 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -667,10 +607,6 @@ off(type: 'hide', callback?: () => void): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-Panel-off(type: 'hide', callback?: () => void): void--><!--Device-Panel-off(type: 'hide', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -688,7 +624,7 @@ off(type: 'hide', callback?: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 panel.off('hide');
@@ -703,10 +639,6 @@ off(type: 'show', callback?: () => void): void
 取消监听当前面板的显示状态，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-Panel-off(type: 'show', callback?: () => void): void--><!--Device-Panel-off(type: 'show', callback?: () => void): void-End-->
 
@@ -725,7 +657,7 @@ off(type: 'show', callback?: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 panel.off('show');
@@ -741,10 +673,6 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-Panel-off(type: 'sizeChange', callback?: SizeChangeCallback): void--><!--Device-Panel-off(type: 'sizeChange', callback?: SizeChangeCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -756,7 +684,7 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 | type | 'sizeChange' | 是 | 监听当前面板的大小是否产生变化，固定取值为'sizeChange'。 |
 | callback | SizeChangeCallback | 否 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。参数不填写时，取消订阅type对应的所有回调事件。<br>**起始版本：** 15 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -776,10 +704,6 @@ onHide(callback: Callback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-onHide(callback: Callback<void>): void--><!--Device-Panel-onHide(callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -788,9 +712,9 @@ onHide(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 panel!.onHide(() => {
@@ -808,10 +732,6 @@ onShow(callback: Callback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-onShow(callback: Callback<void>): void--><!--Device-Panel-onShow(callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -820,9 +740,9 @@ onShow(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 panel.onShow(() => {
@@ -840,10 +760,6 @@ onSizeChange(callback: SizeChangeCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-onSizeChange(callback: SizeChangeCallback): void--><!--Device-Panel-onSizeChange(callback: SizeChangeCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -854,7 +770,7 @@ onSizeChange(callback: SizeChangeCallback): void
 | --- | --- | --- | --- |
 | callback | SizeChangeCallback | 是 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -877,10 +793,6 @@ on(type: 'hide', callback: () => void): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-Panel-on(type: 'hide', callback: () => void): void--><!--Device-Panel-on(type: 'hide', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -892,7 +804,7 @@ on(type: 'hide', callback: () => void): void
 | type | 'hide' | 是 | 监听当前面板的状态类型，固定取值为'hide'。 |
 | callback | () =&gt; void | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 panel.on('hide', () => {
@@ -910,10 +822,6 @@ on(type: 'show', callback: () => void): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-Panel-on(type: 'show', callback: () => void): void--><!--Device-Panel-on(type: 'show', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -925,7 +833,7 @@ on(type: 'show', callback: () => void): void
 | type | 'show' | 是 | 监听当前面板的状态类型，固定取值为'show'。 |
 | callback | () =&gt; void | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 panel.on('show', () => {
@@ -943,10 +851,6 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-Panel-on(type: 'sizeChange', callback: SizeChangeCallback): void--><!--Device-Panel-on(type: 'sizeChange', callback: SizeChangeCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -958,7 +862,7 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 | type | 'sizeChange' | 是 | 监听当前面板的大小是否产生变化，固定值为'sizeChange'。 |
 | callback | SizeChangeCallback | 是 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。<br>**起始版本：** 15 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -985,10 +889,6 @@ resize(width: long, height: long, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-resize(width: long, height: long, callback: AsyncCallback<void>): void--><!--Device-Panel-resize(width: long, height: long, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -999,7 +899,7 @@ resize(width: long, height: long, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | width | long | 是 | 目标面板的宽度，单位为vp。该参数应为大于或等于0的整数，不超出屏幕宽度。超出范围时返回错误码401。 |
 | height | long | 是 | 目标面板的高度，单位为vp。该参数应为大于或等于0的整数，不高于屏幕高度的0.7倍。超出范围时返回错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板大小改变成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板大小改变成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
@@ -1007,7 +907,7 @@ resize(width: long, height: long, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1032,10 +932,6 @@ resize(width: long, height: long): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-resize(width: long, height: long): Promise<void>--><!--Device-Panel-resize(width: long, height: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1059,7 +955,7 @@ resize(width: long, height: long): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1078,13 +974,9 @@ panel.resize(500, 1000).then(() => {
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-设置输入法应用的沉浸效果。 - 只有在[启用沉浸式模式](#setImmersiveMode)时，才能使用渐变模式和流光模式。 - 只有在启用渐变模式时，才能使用流光模式。 - 未启用渐变模式时，渐变高度必须为0px。 - 只有系统应用才能设置流光模式。 - 必须先调用以下任一接口，才能调用当前接口： - [adjustPanelRect](#adjustPanelRect)(支持API version 12) - [adjustPanelRect](#adjustPanelRect)(支持 API version 15) - [resize](#resize)(支持API version 10)
+设置输入法应用的沉浸效果。 - 只有在[启用沉浸式模式](#setimmersivemode)时，才能使用渐变模式和流光模式。 - 只有在启用渐变模式时，才能使用流光模式。 - 未启用渐变模式时，渐变高度必须为0px。 - 只有系统应用才能设置流光模式。 - 必须先调用以下任一接口，才能调用当前接口： - [adjustPanelRect](#adjustpanelrect)(支持API version 12) - [adjustPanelRect](#adjustpanelrect)(支持 API version 15) - [resize](#resize)(支持API version 10)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Panel-setImmersiveEffect(effect: ImmersiveEffect): void--><!--Device-Panel-setImmersiveEffect(effect: ImmersiveEffect): void-End-->
 
@@ -1106,7 +998,7 @@ setImmersiveEffect(effect: ImmersiveEffect): void
 | [12800020](../errorcode-inputmethod-framework.md#12800020-沉浸效果参数配置错误) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let effect: inputMethodEngine.ImmersiveEffect = {
@@ -1126,10 +1018,6 @@ setImmersiveMode(mode: ImmersiveMode): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-setImmersiveMode(mode: ImmersiveMode): void--><!--Device-Panel-setImmersiveMode(mode: ImmersiveMode): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1148,7 +1036,7 @@ setImmersiveMode(mode: ImmersiveMode): void
 | [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
@@ -1163,10 +1051,6 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 设置屏幕常亮。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Panel-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>--><!--Device-Panel-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>-End-->
 
@@ -1190,7 +1074,7 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1212,10 +1096,6 @@ setPrivacyMode(isPrivacyMode: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.PRIVACY_WINDOW
 
 <!--Device-Panel-setPrivacyMode(isPrivacyMode: boolean): void--><!--Device-Panel-setPrivacyMode(isPrivacyMode: boolean): void-End-->
@@ -1235,7 +1115,7 @@ setPrivacyMode(isPrivacyMode: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let isPrivacyMode: boolean = true;
@@ -1251,10 +1131,6 @@ setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string
 设置当前面板功能键颜色和功能键的背景颜色。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Panel-setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>--><!--Device-Panel-setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>-End-->
 
@@ -1273,7 +1149,7 @@ setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1303,10 +1179,6 @@ setUiContent(path: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-setUiContent(path: string, callback: AsyncCallback<void>): void--><!--Device-Panel-setUiContent(path: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1316,7 +1188,7 @@ setUiContent(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 具体页面的路径。路径长度建议不超过1024字符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
@@ -1324,7 +1196,7 @@ setUiContent(path: string, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1350,10 +1222,6 @@ setUiContent(path: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-setUiContent(path: string): Promise<void>--><!--Device-Panel-setUiContent(path: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1376,7 +1244,7 @@ setUiContent(path: string): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1398,10 +1266,6 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void--><!--Device-Panel-setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1412,7 +1276,7 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 | --- | --- | --- | --- |
 | path | string | 是 | LocalStorage相关联的具体页面的路径。路径长度建议不超过1024字符。 |
 | storage | LocalStorage | 是 | 存储单元，为应用程序范围内的可变和不可变状态属性提供存储。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
@@ -1420,7 +1284,7 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1447,10 +1311,6 @@ setUiContent(path: string, storage: LocalStorage): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-setUiContent(path: string, storage: LocalStorage): Promise<void>--><!--Device-Panel-setUiContent(path: string, storage: LocalStorage): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1474,7 +1334,7 @@ setUiContent(path: string, storage: LocalStorage): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1499,10 +1359,6 @@ show(callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-show(callback: AsyncCallback<void>): void--><!--Device-Panel-show(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1511,9 +1367,9 @@ show(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板显示成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板显示成功，err为undefined，否则err为错误对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1537,10 +1393,6 @@ show(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-show(): Promise<void>--><!--Device-Panel-show(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1551,7 +1403,7 @@ show(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1573,10 +1425,6 @@ startMoving(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-startMoving(): void--><!--Device-Panel-startMoving(): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1590,7 +1438,7 @@ startMoving(): void
 | [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 panel.startMoving();
@@ -1605,10 +1453,6 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 预设置输入法应用横竖屏大小。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1635,7 +1479,7 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -1674,10 +1518,6 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Panel-updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>--><!--Device-Panel-updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>-End-->
@@ -1704,7 +1544,7 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 | [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -1747,10 +1587,6 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void--><!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void-End-->
@@ -1770,7 +1606,7 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -1809,10 +1645,6 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void--><!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void-End-->
@@ -1833,7 +1665,7 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 | [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -1876,10 +1708,6 @@ updateRegion(inputRegion: Array<window.Rect>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Panel-updateRegion(inputRegion: Array<window.Rect>): void--><!--Device-Panel-updateRegion(inputRegion: Array<window.Rect>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -1898,7 +1726,7 @@ updateRegion(inputRegion: Array<window.Rect>): void
 | [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

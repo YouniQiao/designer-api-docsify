@@ -10,10 +10,6 @@ function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>): void-End-->
@@ -25,7 +21,7 @@ function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyUri | string | 是 | 表示待获取凭据的唯一标识符，长度限制256字节以内。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | 是 | 回调函数。当获取私有凭据的详细信息成功时，err为null，data为 [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md#CMResult)对象中的credential属性；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | 是 | 回调函数。当获取私有凭据的详细信息成功时，err为null，data为 [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md#cmresult)对象中的credential属性；否则为错误对象。 |
 
 **错误码：**
 
@@ -36,7 +32,7 @@ function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>
 | [17500002](../errorcode-certManager.md#17500002-证书不存在) | The certificate does not exist. Possible causes: 1. The certificate URI is incorrect; 2. The certificate has been uninstalled. Please check the certificate URI. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -71,10 +67,6 @@ function getPrivateCertificate(keyUri: string): Promise<CMResult>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function getPrivateCertificate(keyUri: string): Promise<CMResult>--><!--Device-certificateManager-function getPrivateCertificate(keyUri: string): Promise<CMResult>-End-->
@@ -102,7 +94,7 @@ function getPrivateCertificate(keyUri: string): Promise<CMResult>
 | [17500002](../errorcode-certManager.md#17500002-证书不存在) | The certificate does not exist. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

@@ -12,15 +12,13 @@ import { usb } from 'usb';
 function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 ```
 
-Connects to a USB device. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, and then call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission.
+Connects to a USB device. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list, and then call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice)
+**Substitutes:** [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)
 
 <!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>--><!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>-End-->
 
@@ -38,7 +36,7 @@ Connects to a USB device. Before you do this, call [usb.getDevices](arkts-basics
 | --- | --- |
 | [Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;USBDevicePipe&gt; | USB device pipe for data transfer. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let devicepipe= usb.connectDevice(device);

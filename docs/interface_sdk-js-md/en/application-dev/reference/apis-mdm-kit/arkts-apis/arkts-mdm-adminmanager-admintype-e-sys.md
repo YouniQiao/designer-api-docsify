@@ -4,10 +4,6 @@ Enumerates the types of device administrator applications.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-adminManager-export enum AdminType--><!--Device-adminManager-export enum AdminType-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,10 +17,6 @@ ADMIN_TYPE_NORMAL = 0x00
 After a common device administrator application is enabled, it can be uninstalled. Its [EnterpriseAdminExtensionAbility](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability) component will automatically start upon device startup and can be restarted after the component process dies.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-AdminType-ADMIN_TYPE_NORMAL = 0x00--><!--Device-AdminType-ADMIN_TYPE_NORMAL = 0x00-End-->
 
@@ -41,10 +33,6 @@ ADMIN_TYPE_SUPER = 0x01
 After a super device administrator application is enabled, it cannot be uninstalled. Its [EnterpriseAdminExtensionAbility](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability) component will automatically start upon device startup and can be restarted after the component process dies.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-AdminType-ADMIN_TYPE_SUPER = 0x01--><!--Device-AdminType-ADMIN_TYPE_SUPER = 0x01-End-->
 

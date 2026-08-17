@@ -16,10 +16,6 @@
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace json--><!--Device-unnamed-declare namespace json-End-->
 
 **System capability:** SystemCapability.Utils.Lang

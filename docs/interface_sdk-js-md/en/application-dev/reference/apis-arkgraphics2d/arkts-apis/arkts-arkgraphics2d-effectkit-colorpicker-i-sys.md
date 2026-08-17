@@ -4,10 +4,6 @@ A color picker class used to obtain the main color from image data. It is suitab
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-effectKit-interface ColorPicker--><!--Device-effectKit-interface ColorPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -27,10 +23,6 @@ discriminatePictureLightDegree(): PictureLightDegree
 Discriminates the light and dark degree of the picture. When the light and dark degree cannot be determined, UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE is returned.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,10 +50,6 @@ Obtains the proportion of fully transparent pixels with alpha=0 in the image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double--><!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double-End-->
@@ -82,7 +70,7 @@ Obtains the proportion of fully transparent pixels with alpha=0 in the image.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -120,10 +108,6 @@ Obtains the complexity degree of the image. When the complexity degree cannot be
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree--><!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree-End-->
@@ -144,7 +128,7 @@ Obtains the complexity degree of the image. When the complexity degree cannot be
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -182,10 +166,6 @@ Generates a stronger immersion color that merges with the background color and i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -211,10 +191,6 @@ getImmersiveBackgroundColor(): Color
 Generates an immersive background color that creates an immersive visual effect, and writes the result to a Color instance. This API generates a color value suitable for use as an immersive background based on the dominant color.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,10 +218,6 @@ Generates an immersive foreground color that creates an immersive visual effect 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -271,10 +243,6 @@ getMorandiShadowColor(): Color
 Obtains the Morandi shadow color from the dominant color of the image and writes the result to a Color instance. This API uses a specific color conversion algorithm to convert the dominant color into a Morandi style shadow tone.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -302,10 +270,6 @@ Generates a reverse color based on the image brightness discrimination result, a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -332,10 +296,6 @@ Obtains the shade degree of the image. When the shade degree cannot be determine
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree--><!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree-End-->
@@ -356,7 +316,7 @@ Obtains the shade degree of the image. When the shade degree cannot be determine
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -394,10 +354,6 @@ Synchronously returns the top proportion colors and their corresponding percenta
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>--><!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>-End-->
@@ -424,7 +380,7 @@ Synchronously returns the top proportion colors and their corresponding percenta
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";

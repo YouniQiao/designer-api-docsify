@@ -4,10 +4,6 @@ Describes the start animation configuration. This API works only for full-screen
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface StartAnimationSystemParams--><!--Device-window-interface StartAnimationSystemParams-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -32,10 +28,6 @@ Configuration for the window animation. The default animation curve is **WindowA
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StartAnimationSystemParams-animationConfig?: WindowAnimationConfig--><!--Device-StartAnimationSystemParams-animationConfig?: WindowAnimationConfig-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -53,10 +45,6 @@ Type of the window animation.
 **Type:** [AnimationType](arkts-arkui-window-animationtype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StartAnimationSystemParams-type: AnimationType--><!--Device-StartAnimationSystemParams-type: AnimationType-End-->
 

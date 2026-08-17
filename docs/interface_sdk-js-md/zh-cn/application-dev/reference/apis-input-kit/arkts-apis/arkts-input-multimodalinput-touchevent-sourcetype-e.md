@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export declare enum SourceType--><!--Device-unnamed-export declare enum SourceType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
@@ -21,10 +17,6 @@ TOUCH_SCREEN = 0
 触摸屏。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SourceType-TOUCH_SCREEN = 0--><!--Device-SourceType-TOUCH_SCREEN = 0-End-->
 
@@ -40,10 +32,6 @@ PEN = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SourceType-PEN = 1--><!--Device-SourceType-PEN = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
@@ -57,10 +45,6 @@ TOUCH_PAD = 2
 触控板。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SourceType-TOUCH_PAD = 2--><!--Device-SourceType-TOUCH_PAD = 2-End-->
 

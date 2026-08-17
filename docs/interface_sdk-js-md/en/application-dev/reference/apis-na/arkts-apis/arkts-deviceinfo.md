@@ -16,9 +16,7 @@
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +30,7 @@
 
 | Name | Description |
 | --- | --- |
-| [apiAvailable](arkts-na-deviceinfo-apiavailable-f.md#apiAvailable) | Checks whether a specified API version is available on the current device. This API provides compatibility check across different OpenHarmony/Distribution OS versions. A suitable version check method is automatically selected based on the input format and supported API versions. |
+| [apiAvailable](arkts-na-deviceinfo-apiavailable-f.md#apiavailable) | Checks whether a specified API version is available on the current device. This API provides compatibility check across different OpenHarmony/Distribution OS versions. A suitable version check method is automatically selected based on the input format and supported API versions. |
 
 ### Enums
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-zlib-interface Zip--><!--Device-zlib-interface Zip-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -21,10 +17,6 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipO
 将源缓冲区压缩到目标缓冲区。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -53,7 +45,7 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipO
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -84,10 +76,6 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>--><!--Device-Zip-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>-End-->
@@ -100,7 +88,7 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 | --- | --- | --- | --- |
 | dest | ArrayBuffer | 是 | 目标缓冲区。 |
 | source | ArrayBuffer | 是 | 源数据缓冲区。 |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel)。 |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#compresslevel)。 |
 | sourceLen | long | 否 | 源数据长度。默认值为0。 |
 
 **返回值：**
@@ -127,10 +115,6 @@ compressBound(sourceLen: int): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-compressBound(sourceLen: int): Promise<int>--><!--Device-Zip-compressBound(sourceLen: int): Promise<int>-End-->
@@ -155,7 +139,7 @@ compressBound(sourceLen: int): Promise<int>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -187,10 +171,6 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-Zip-deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>-End-->
@@ -201,8 +181,8 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 参考[CompressFlushMode定义](arkts-basicservices-zlib-compressflushmode-e.md#CompressFlushMode)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 参考[CompressFlushMode定义](arkts-basicservices-zlib-compressflushmode-e.md#compressflushmode)。 |
 
 **返回值：**
 
@@ -218,7 +198,7 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 | [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -261,10 +241,6 @@ deflateBound(strm: ZStream, sourceLength: long): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateBound(strm: ZStream, sourceLength: long): Promise<int>--><!--Device-Zip-deflateBound(strm: ZStream, sourceLength: long): Promise<int>-End-->
@@ -275,7 +251,7 @@ deflateBound(strm: ZStream, sourceLength: long): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | sourceLength | long | 是 | 源数据长度。 |
 
 **返回值：**
@@ -290,7 +266,7 @@ deflateBound(strm: ZStream, sourceLength: long): Promise<int>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -333,10 +309,6 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateCopy(source: Zip): Promise<ReturnStatus>--><!--Device-Zip-deflateCopy(source: Zip): Promise<ReturnStatus>-End-->
@@ -347,7 +319,7 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [Zip](arkts-basicservices-zlib-zip-i.md) | 是 | 参考[Zip定义](#Zip)。 |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | 是 | 参考[Zip定义](#zip)。 |
 
 **返回值：**
 
@@ -362,7 +334,7 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -405,10 +377,6 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateEnd(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -419,7 +387,7 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -434,7 +402,7 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -482,10 +450,6 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>--><!--Device-Zip-deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>-End-->
@@ -496,7 +460,7 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | dictionary | ArrayBuffer | 是 | 接收压缩字典的实际内容。 |
 
 **返回值：**
@@ -512,7 +476,7 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -560,10 +524,6 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>--><!--Device-Zip-deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>-End-->
@@ -574,8 +534,8 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#compresslevel)。 |
 
 **返回值：**
 
@@ -590,7 +550,7 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -629,10 +589,6 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
@@ -643,12 +599,12 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel)。 |
-| method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | 是 | 参考[CompressMethod枚举定义](arkts-basicservices-zlib-compressmethod-e.md#CompressMethod)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#compresslevel)。 |
+| method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | 是 | 参考[CompressMethod枚举定义](arkts-basicservices-zlib-compressmethod-e.md#compressmethod)。 |
 | windowBits | int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
-| memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | 是 | 参考[MemLevel枚举定义](arkts-basicservices-zlib-memlevel-e.md#MemLevel)。 |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md#CompressStrategy)。 |
+| memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | 是 | 参考[MemLevel枚举定义](arkts-basicservices-zlib-memlevel-e.md#memlevel)。 |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md#compressstrategy)。 |
 
 **返回值：**
 
@@ -663,7 +619,7 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -702,10 +658,6 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
@@ -716,9 +668,9 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel)。 |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md#CompressStrategy)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#compresslevel)。 |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md#compressstrategy)。 |
 
 **返回值：**
 
@@ -733,7 +685,7 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -776,10 +728,6 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>--><!--Device-Zip-deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>-End-->
@@ -790,7 +738,7 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -805,7 +753,7 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -848,10 +796,6 @@ deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>--><!--Device-Zip-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>-End-->
@@ -862,7 +806,7 @@ deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | bits | int | 是 | 要插入的位数，取值范围在0~16。 |
 | value | int | 是 | 与位数相对应的位值。 |
 
@@ -879,7 +823,7 @@ deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -922,10 +866,6 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateReset(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateReset(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -936,7 +876,7 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -951,7 +891,7 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -994,10 +934,6 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateResetKeep(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateResetKeep(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -1008,7 +944,7 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -1023,7 +959,7 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1066,10 +1002,6 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>-End-->
@@ -1080,7 +1012,7 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | dictionary | ArrayBuffer | 是 | 字典数据。 |
 
 **返回值：**
@@ -1096,7 +1028,7 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1139,10 +1071,6 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>--><!--Device-Zip-deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>-End-->
@@ -1153,7 +1081,7 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | head | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | 是 | 从压缩数据流中提取的gzip头信息。 |
 
 **返回值：**
@@ -1169,7 +1097,7 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1213,10 +1141,6 @@ deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxCh
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>--><!--Device-Zip-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>-End-->
@@ -1227,7 +1151,7 @@ deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxCh
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | goodLength | int | 是 | 匹配的长度阈值。 |
 | maxLazy | int | 是 | 压缩算法在构建哈夫曼树时的延迟匹配策略，取值范围为0到4的整数。1到4，值越大，算法越‘懒’，匹配过程越慢，但可能生成更优的压缩结果。0：禁用懒惰匹配， 算法会尽快构建哈夫曼树，压缩速度快，但压缩率低。 |
 | niceLength | int | 是 | 适合的延迟长度阈值。 |
@@ -1246,7 +1170,7 @@ deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxCh
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1289,10 +1213,6 @@ getZStream(): Promise<ZStream>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-getZStream(): Promise<ZStream>--><!--Device-Zip-getZStream(): Promise<ZStream>-End-->
@@ -1305,7 +1225,7 @@ getZStream(): Promise<ZStream>
 | --- | --- |
 | Promise&lt;[ZStream](arkts-basicservices-zlib-zstream-i.md)&gt; | Promise对象。返回ZStream流。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1326,10 +1246,6 @@ getZStream(): Promise<ZStream | undefined>
 输出流，使用Promise异步返回。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -1353,10 +1269,6 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-Zip-inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>-End-->
@@ -1367,8 +1279,8 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 参考[CompressFlushMode定义](arkts-basicservices-zlib-compressflushmode-e.md#CompressFlushMode)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 参考[CompressFlushMode定义](arkts-basicservices-zlib-compressflushmode-e.md#compressflushmode)。 |
 
 **返回值：**
 
@@ -1384,7 +1296,7 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 | [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1448,10 +1360,6 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>--><!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>-End-->
@@ -1462,7 +1370,7 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | 是 | 一种函数，用于从末尾解压缩数据，以从输入源读取原始压缩数据。 |
 | inDesc | object | 是 | 通用对象。 |
 | backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | 是 | 将解压缩的数据写入目标输出。 |
@@ -1481,7 +1389,7 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1628,10 +1536,6 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData,
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData, backOut: InflateBackOutputCallback, outDesc: RecordData): Promise<ReturnStatus>--><!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData, backOut: InflateBackOutputCallback, outDesc: RecordData): Promise<ReturnStatus>-End-->
@@ -1642,7 +1546,7 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | 是 | 一种函数，用于从末尾解压缩数据，以从输入源读取原始压缩数据。 |
 | inDesc | [RecordData](arkts-basicservices-recorddata-t.md) | 是 | 通用对象。 |
 | backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | 是 | 将解压缩的数据写入目标输出。 |
@@ -1671,10 +1575,6 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateBackEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateBackEnd(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -1685,7 +1585,7 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -1700,9 +1600,9 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
-参考[inflateBack](#inflateBack)中的示例代码。
+参考[inflateBack](#inflateback)中的示例代码。
 
 ## inflateBackInit
 
@@ -1714,10 +1614,6 @@ inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<R
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>-End-->
@@ -1728,7 +1624,7 @@ inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<R
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | windowBits | long | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于1 5。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
 | window | ArrayBuffer | 是 | 预设的窗口缓冲区。 |
 
@@ -1745,9 +1641,9 @@ inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<R
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
-参考[inflateBack](#inflateBack)中的示例代码。
+参考[inflateBack](#inflateback)中的示例代码。
 
 ## inflateCodesUsed
 
@@ -1759,10 +1655,6 @@ inflateCodesUsed(strm: ZStream): Promise<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateCodesUsed(strm: ZStream): Promise<long>--><!--Device-Zip-inflateCodesUsed(strm: ZStream): Promise<long>-End-->
@@ -1773,7 +1665,7 @@ inflateCodesUsed(strm: ZStream): Promise<long>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -1787,7 +1679,7 @@ inflateCodesUsed(strm: ZStream): Promise<long>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1825,10 +1717,6 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateCopy(source: Zip): Promise<ReturnStatus>--><!--Device-Zip-inflateCopy(source: Zip): Promise<ReturnStatus>-End-->
@@ -1839,7 +1727,7 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [Zip](arkts-basicservices-zlib-zip-i.md) | 是 | 参考[Zip定义](#Zip)。 |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | 是 | 参考[Zip定义](#zip)。 |
 
 **返回值：**
 
@@ -1854,7 +1742,7 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1893,10 +1781,6 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateEnd(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -1907,7 +1791,7 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -1922,7 +1806,7 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1965,10 +1849,6 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>--><!--Device-Zip-inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>-End-->
@@ -1979,7 +1859,7 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | dictionary | ArrayBuffer | 是 | 接收解压缩字典的实际内容。 |
 
 **返回值：**
@@ -1995,7 +1875,7 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2033,10 +1913,6 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>--><!--Device-Zip-inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>-End-->
@@ -2047,7 +1923,7 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | header | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | 是 | 从压缩数据流中提取的gzip头信息。 |
 
 **返回值：**
@@ -2063,7 +1939,7 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2101,10 +1977,6 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateInit(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateInit(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -2115,7 +1987,7 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -2129,7 +2001,7 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2163,10 +2035,6 @@ inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>--><!--Device-Zip-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>-End-->
@@ -2177,7 +2045,7 @@ inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | windowBits | int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
 
 **返回值：**
@@ -2193,7 +2061,7 @@ inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2227,10 +2095,6 @@ inflateMark(strm: ZStream): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateMark(strm: ZStream): Promise<int>--><!--Device-Zip-inflateMark(strm: ZStream): Promise<int>-End-->
@@ -2241,7 +2105,7 @@ inflateMark(strm: ZStream): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -2255,7 +2119,7 @@ inflateMark(strm: ZStream): Promise<int>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2293,10 +2157,6 @@ inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>--><!--Device-Zip-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>-End-->
@@ -2307,7 +2167,7 @@ inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | bits | int | 是 | 指定要写入比特缓冲区的比特数。 |
 | value | int | 是 | 用于填充比特缓冲区的比特值。 |
 
@@ -2324,7 +2184,7 @@ inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2362,10 +2222,6 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateReset(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateReset(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -2376,7 +2232,7 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -2391,7 +2247,7 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2429,10 +2285,6 @@ inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>--><!--Device-Zip-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>-End-->
@@ -2443,7 +2295,7 @@ inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | windowBits | int | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
 
 **返回值：**
@@ -2459,7 +2311,7 @@ inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2497,10 +2349,6 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateResetKeep(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateResetKeep(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -2511,7 +2359,7 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -2526,7 +2374,7 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2564,10 +2412,6 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>-End-->
@@ -2578,7 +2422,7 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | dictionary | ArrayBuffer | 是 | 字典数据。 |
 
 **返回值：**
@@ -2595,7 +2439,7 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 | [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2670,10 +2514,6 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateSync(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateSync(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -2684,7 +2524,7 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -2701,7 +2541,7 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 | [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2770,10 +2610,6 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -2784,7 +2620,7 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 
 **返回值：**
 
@@ -2799,7 +2635,7 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2837,10 +2673,6 @@ inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>--><!--Device-Zip-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>-End-->
@@ -2851,7 +2683,7 @@ inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#ZStream)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md#zstream)。 |
 | check | int | 是 | 预期的校验和。 |
 
 **返回值：**
@@ -2867,7 +2699,7 @@ inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2905,10 +2737,6 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<Zip
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>--><!--Device-Zip-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>-End-->
@@ -2937,7 +2765,7 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<Zip
 | [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 | [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2974,10 +2802,6 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<D
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>--><!--Device-Zip-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>-End-->
@@ -3006,7 +2830,7 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<D
 | [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 | [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -3043,10 +2867,6 @@ zlibCompileFlags(): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-zlibCompileFlags(): Promise<int>--><!--Device-Zip-zlibCompileFlags(): Promise<int>-End-->
@@ -3059,7 +2879,7 @@ zlibCompileFlags(): Promise<int>
 | --- | --- |
 | Promise&lt;int&gt; | Promise对象。返回指示编译时选项的标志。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -3081,10 +2901,6 @@ zlibVersion(): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Zip-zlibVersion(): Promise<string>--><!--Device-Zip-zlibVersion(): Promise<string>-End-->
@@ -3097,7 +2913,7 @@ zlibVersion(): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象。返回当前zlib库的版本信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

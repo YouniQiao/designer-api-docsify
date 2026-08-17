@@ -10,11 +10,9 @@ Requests notification to be enabled for this application. This API uses an async
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification)
+**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)
 
 <!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void--><!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void-End-->
 
@@ -37,11 +35,9 @@ Requests notification to be enabled for this application. This API uses a promis
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification)
+**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)
 
 <!--Device-notification-function requestEnableNotification(): Promise<void>--><!--Device-notification-function requestEnableNotification(): Promise<void>-End-->
 

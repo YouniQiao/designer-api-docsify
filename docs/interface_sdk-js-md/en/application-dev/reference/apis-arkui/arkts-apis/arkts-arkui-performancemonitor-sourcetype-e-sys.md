@@ -4,10 +4,6 @@ Enumerates the trigger source types of user scenes.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-performanceMonitor-export enum SourceType--><!--Device-performanceMonitor-export enum SourceType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ PERF_TOUCH_EVENT = 0
 Touchscreen event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Mouse event.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SourceType-PERF_MOUSE_EVENT = 1--><!--Device-SourceType-PERF_MOUSE_EVENT = 1-End-->
@@ -67,10 +55,6 @@ PERF_TOUCHPAD_EVENT = 2
 Touchpad event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ Joystick event.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SourceType-PERF_JOYSTICK_EVENT = 3--><!--Device-SourceType-PERF_JOYSTICK_EVENT = 3-End-->
@@ -111,10 +91,6 @@ PERF_KEY_EVENT = 4
 Keyboard event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

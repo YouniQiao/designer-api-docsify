@@ -10,10 +10,6 @@ function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON
 
 <!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void>--><!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void>-End-->
@@ -47,7 +43,7 @@ function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void
 | [17700304](../errorcode-bundle.md#17700304-动态图标使能失败) | Failed to enable the dynamic icon. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -79,10 +75,6 @@ function enableDynamicIcon(bundleName: string, moduleName: string, option?: Bund
 根据给定的bundleName、moduleName和option使能动态图标。使用Promise异步回调。 使能当前用户下的动态图标信息时需要申请权限ohos.permission.ACCESS_DYNAMIC_ICON。 使能其他用户下的动态图标信息时需要申请权限ohos.permission.ACCESS_DYNAMIC_ICON 和 ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON or (ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -119,7 +111,7 @@ function enableDynamicIcon(bundleName: string, moduleName: string, option?: Bund
 | [17700304](../errorcode-bundle.md#17700304-动态图标使能失败) | Failed to enable the dynamic icon. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

@@ -16,11 +16,9 @@ Creates a child window. This API uses an asynchronous callback to return the res
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createWindow)(config: Configuration, callback: AsyncCallback&lt;Window&gt;)
+**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config: Configuration, callback: AsyncCallback&lt;Window&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -32,11 +30,11 @@ Creates a child window. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#Configuration). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). |
 | type | WindowType | Yes | Window type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -64,11 +62,9 @@ Creates a child window. This API uses a promise to return the result. The child 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createWindow)(config: Configuration)
+**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config: Configuration)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -80,7 +76,7 @@ Creates a child window. This API uses a promise to return the result. The child 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#Configuration). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). |
 | type | WindowType | Yes | Window type. |
 
 **Return value:**
@@ -89,7 +85,7 @@ Creates a child window. This API uses a promise to return the result. The child 
 | --- | --- |
 | Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Promise used to return the child window created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -115,11 +111,9 @@ Creates a system window. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createWindow)(config: Configuration)
+**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config: Configuration)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>-End-->
 
@@ -130,7 +124,7 @@ Creates a system window. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#Configuration). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). |
 | type | WindowType | Yes | Window type. |
 
 **Return value:**
@@ -139,7 +133,7 @@ Creates a system window. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Promise used to return the child window created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -165,11 +159,9 @@ Creates a system window. This API uses an asynchronous callback to return the re
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createWindow)(config: Configuration, callback: AsyncCallback&lt;Window&gt;)
+**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config: Configuration, callback: AsyncCallback&lt;Window&gt;)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void-End-->
 
@@ -180,11 +172,11 @@ Creates a system window. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#Configuration). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). |
 | type | WindowType | Yes | Window type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

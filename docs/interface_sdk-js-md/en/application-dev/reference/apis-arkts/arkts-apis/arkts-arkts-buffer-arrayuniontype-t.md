@@ -22,10 +22,6 @@ ArrayUnionType features and methods
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-buffer-type ArrayUnionType =  Array<Int8Array>    | Array<Uint8Array>    | Array<Uint8ClampedArray>    | Array<Int16Array>    | Array<Uint16Array>    | Array<Int32Array>    | Array<Uint32Array>    | Array<Float32Array>    | Array<Float64Array>    | Array<BigInt64Array>    | Array<BigUint64Array>    | Array<string>    | Array<ArrayBuffer>    | Array<DataView>    | Array<Blob>--><!--Device-buffer-type ArrayUnionType =  Array<Int8Array>    | Array<Uint8Array>    | Array<Uint8ClampedArray>    | Array<Int16Array>    | Array<Uint16Array>    | Array<Int32Array>    | Array<Uint32Array>    | Array<Float32Array>    | Array<Float64Array>    | Array<BigInt64Array>    | Array<BigUint64Array>    | Array<string>    | Array<ArrayBuffer>    | Array<DataView>    | Array<Blob>-End-->

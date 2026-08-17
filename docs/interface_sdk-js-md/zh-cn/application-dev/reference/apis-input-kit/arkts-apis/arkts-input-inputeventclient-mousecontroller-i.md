@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-inputEventClient-interface MouseController--><!--Device-inputEventClient-interface MouseController-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -21,10 +17,6 @@ beginAxis(axis: Axis, value: int): Promise<void>
 开始轴事件。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
@@ -55,7 +47,7 @@ beginAxis(axis: Axis, value: int): Promise<void>
 | [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { inputEventClient, Axis } from '@kit.InputKit';
@@ -102,10 +94,6 @@ endAxis(axis: Axis): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -134,9 +122,9 @@ endAxis(axis: Axis): Promise<void>
 | [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
-参见[beginAxis](#beginAxis)示例。
+参见[beginAxis](#beginaxis)示例。
 
 ## moveTo
 
@@ -147,10 +135,6 @@ moveTo(displayId: int, displayX: int, displayY: int): Promise<void>
 将鼠标光标移动到指定的显示器坐标。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
@@ -182,7 +166,7 @@ moveTo(displayId: int, displayX: int, displayY: int): Promise<void>
 | [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';
@@ -221,10 +205,6 @@ pressButton(button: Button): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -253,7 +233,7 @@ pressButton(button: Button): Promise<void>
 | [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { inputEventClient, Button } from '@kit.InputKit';
@@ -296,10 +276,6 @@ releaseButton(button: Button): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -328,9 +304,9 @@ releaseButton(button: Button): Promise<void>
 | [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
-参见[pressButton](#pressButton)示例。
+参见[pressButton](#pressbutton)示例。
 
 ## updateAxis
 
@@ -341,10 +317,6 @@ updateAxis(axis: Axis, value: int): Promise<void>
 更新轴事件。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
@@ -375,7 +347,7 @@ updateAxis(axis: Axis, value: int): Promise<void>
 | [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
-参见[beginAxis](#beginAxis)示例。
+参见[beginAxis](#beginaxis)示例。
 

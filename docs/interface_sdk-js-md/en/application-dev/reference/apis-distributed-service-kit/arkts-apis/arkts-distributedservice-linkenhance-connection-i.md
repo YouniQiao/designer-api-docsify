@@ -4,10 +4,6 @@ Represents a **Connection** object, which provides methods for connecting to and
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-linkEnhance-interface Connection--><!--Device-linkEnhance-interface Connection-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -24,13 +20,9 @@ import { linkEnhance } from 'linkEnhance';
 close(): void
 ```
 
-Destroys the **Connection** object to release resources. If the device needs to interact with the peer device again, create a **Connection** object again and call `connect()` to initiate a connection.
+Destroys the **Connection** object to release resources. If the device needs to interact with the peer device again, create a **Connection** object again and call **connect()** to initiate a connection. **close()** is called to destroy the **Connection** object and release resources. If the call is successful, the **Connection** object needs to be re-created when it is needed again. **disconnect()** is called for disconnection. If the call is successful, the **Connection** object can still be connected. If the connection needs to be re-established, call **disconnect()**. If the service is no longer needed, call **close()**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -46,7 +38,7 @@ Destroys the **Connection** object to release resources. If the device needs to 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -78,13 +70,9 @@ try {
 connect(): void
 ```
 
-Connects to the server on the client. A maximum number of 10 connections are supported.
+Connects to the server on the client after the **Connection** object is successfully created. A maximum number of 10 connections are supported. You are advised to register a callback listener using **on('connectResult')** and then call this method to obtain the connection result. After the connection is successful, you can call **sendData()** to send data. When the connection is no longer needed, call **disconnect()** to disconnect from the server.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -102,7 +90,7 @@ Connects to the server on the client. A maximum number of 10 connections are sup
 | [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 After creating a Connection object, the application on the client device calls connect() to connect to the target device (that is, the server).
 
@@ -139,10 +127,6 @@ Disconnects from the peer device. The created **Connection** object remains vali
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -157,7 +141,7 @@ Disconnects from the peer device. The created **Connection** object remains vali
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -193,10 +177,6 @@ Obtains the device ID of the peer device. This API is called when the connection
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -217,7 +197,7 @@ Obtains the device ID of the peer device. This API is called when the connection
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -247,10 +227,6 @@ offConnectResult(callback?: Callback<ConnectResult>): void
 Unregisters the listener for **connectResult** events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -283,10 +259,6 @@ Unregisters the listener for **dataReceived** events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -317,10 +289,6 @@ offDisconnected(callback?: Callback<int>): void
 Unregisters the listener for **disconnected** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -353,10 +321,6 @@ Unregisters the listener for **connectResult** events.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -369,8 +333,8 @@ Unregisters the listener for **connectResult** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when `connect() ` is called. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | No | Registered callback. |
+| type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when `connect()` is called. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | No | Registered callback. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -379,7 +343,7 @@ Unregisters the listener for **connectResult** events.
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -415,10 +379,6 @@ Unregisters the listener for **dataReceived** events.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -432,7 +392,7 @@ Unregisters the listener for **dataReceived** events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceived' | Yes | Event type, which is **dataReceived**. This event is triggered when data is received. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Registered callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to receive data from the peer device. The callback parameter **data** is the received data, which is of the ArrayBuffer type. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -441,7 +401,7 @@ Unregisters the listener for **dataReceived** events.
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -478,10 +438,6 @@ Unregisters the listener for **disconnected** events. This API uses an asynchron
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -494,8 +450,8 @@ Unregisters the listener for **disconnected** events. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when the connection is passively terminated or encounters an exception. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. |
+| type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when the connection is passively terminated or an exception occurs. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. This event is triggered when the connection is passively terminated or an exception occurs. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -504,7 +460,7 @@ Unregisters the listener for **disconnected** events. This API uses an asynchron
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -540,10 +496,6 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -574,10 +526,6 @@ onDataReceived(callback: Callback<ArrayBuffer>): void
 Registers a listener for the **dataReceived** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -610,10 +558,6 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -641,13 +585,9 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 on(type: 'connectResult', callback: Callback<ConnectResult>): void
 ```
 
-Registers a listener for **connectResult** events. This API uses an asynchronous callback to return the result.
+Registers a listener for **connectResult** events. This API uses an asynchronous callback to return the result. You must register this listener before calling **connect()**. Otherwise, the connection result cannot be obtained. When the listener is no longer needed, you are advised to call **off('connectResult')** to unregister the listener to prevent memory leak.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -661,7 +601,7 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when `connect() ` is called. |
+| type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when `connect()` is called. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | Yes | Registered callback. |
 
 **Error codes:**
@@ -671,7 +611,7 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -707,10 +647,6 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -724,7 +660,7 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceived' | Yes | Event type, which is **dataReceived**. This event is triggered when data is received. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Registered callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to receive data from the peer device. The callback parameter **data** is the received data, which is of the **ArrayBuffer** type. |
 
 **Error codes:**
 
@@ -733,7 +669,7 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -768,10 +704,6 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -784,8 +716,8 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when the connection is passively terminated or encounters an exception. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. |
+| type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when the connection is passively terminated or an exception occurs. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. This event is triggered when the connection is passively terminated or an exception occurs. |
 
 **Error codes:**
 
@@ -794,7 +726,7 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -827,10 +759,6 @@ Sends data to the server after a connection is established successfully. When th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -843,7 +771,7 @@ Sends data to the server after a connection is established successfully. When th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Data to send. The maximum length is 1024 bytes. |
+| data | ArrayBuffer | Yes | Data to send. The maximum length is 1024 bytes. If the length exceeds the upper limit, error code 32390206 is returned. |
 
 **Error codes:**
 
@@ -854,7 +782,7 @@ Sends data to the server after a connection is established successfully. When th
 | [32390205](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390205-connection-unavailable) | Connection is not ready. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';

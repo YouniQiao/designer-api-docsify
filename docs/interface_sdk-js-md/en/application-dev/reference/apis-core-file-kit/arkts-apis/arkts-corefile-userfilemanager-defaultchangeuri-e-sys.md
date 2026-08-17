@@ -4,11 +4,9 @@ Enumerates the **DefaultChangeUri** subtypes.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DefaultChangeUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#DefaultChangeUri)
+**Substitutes:** [DefaultChangeUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#defaultchangeuri)
 
 <!--Device-userFileManager-enum DefaultChangeUri--><!--Device-userFileManager-enum DefaultChangeUri-End-->
 
@@ -26,11 +24,9 @@ Default **PhotoAsset** URI. The **PhotoAsset** change notifications are received
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DEFAULT_PHOTO_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#DEFAULT_PHOTO_URI)
+**Substitutes:** [DEFAULT_PHOTO_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#defaultphotouri)
 
 <!--Device-DefaultChangeUri-DEFAULT_PHOTO_URI--><!--Device-DefaultChangeUri-DEFAULT_PHOTO_URI-End-->
 
@@ -48,11 +44,9 @@ Default album URI. Album change notifications are received based on this paramet
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DEFAULT_ALBUM_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#DEFAULT_ALBUM_URI)
+**Substitutes:** [DEFAULT_ALBUM_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#defaultalbumuri)
 
 <!--Device-DefaultChangeUri-DEFAULT_ALBUM_URI--><!--Device-DefaultChangeUri-DEFAULT_ALBUM_URI-End-->
 
@@ -69,8 +63,6 @@ DEFAULT_AUDIO_URI
 Default **AudioAsset** URI. The **AudioAsset** change notifications are received based on this parameter and **forSubUri{true}**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 26.0.0
 

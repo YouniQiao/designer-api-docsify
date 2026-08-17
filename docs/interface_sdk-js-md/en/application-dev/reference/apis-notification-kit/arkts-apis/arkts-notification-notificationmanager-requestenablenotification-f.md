@@ -16,11 +16,9 @@ Requests notification to be enabled for this application. This API uses an async
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [requestEnableNotification](#requestEnableNotification)
+**Substitutes:** [requestEnableNotification](#requestenablenotification)
 
 <!--Device-notificationManager-function requestEnableNotification(callback: AsyncCallback<void>): void--><!--Device-notificationManager-function requestEnableNotification(callback: AsyncCallback<void>): void-End-->
 
@@ -43,7 +41,7 @@ Requests notification to be enabled for this application. This API uses an async
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,13 +63,9 @@ notificationManager.requestEnableNotification(requestEnableNotificationCallback)
 function requestEnableNotification(context: UIAbilityContext, callback: AsyncCallback<void>): void
 ```
 
-Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses an asynchronous callback to return the result. > **NOTE：**> > - This API can be called only after the application UI is loaded (that is, > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadContent) is > successfully called). > > - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization > and the user rejects the authorization, the application cannot use this API to open the dialog box again. However > , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#openNotificationSettingsWithResult) > to open the notification management dialog box.
+Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses an asynchronous callback to return the result. > **NOTE：**> > - This API can be called only after the application UI is loaded (that is, > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is > successfully called). > > - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization > and the user rejects the authorization, the application cannot use this API to open the dialog box again. However > , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#opennotificationsettingswithresult) > to open the notification management dialog box.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,7 +99,7 @@ openNotificationSettings opens the
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -146,11 +140,9 @@ Requests notification to be enabled for this application. This API uses a promis
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [requestEnableNotification](#requestEnableNotification)
+**Substitutes:** [requestEnableNotification](#requestenablenotification)
 
 <!--Device-notificationManager-function requestEnableNotification(): Promise<void>--><!--Device-notificationManager-function requestEnableNotification(): Promise<void>-End-->
 
@@ -172,7 +164,7 @@ Requests notification to be enabled for this application. This API uses a promis
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -191,13 +183,9 @@ notificationManager.requestEnableNotification().then(() => {
 function requestEnableNotification(context: UIAbilityContext): Promise<void>
 ```
 
-Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses a promise to return the result. > **NOTE：**> > - This API can be called only after the application UI is loaded (that is, > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadContent) is > successfully called). > > - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization > and the user rejects the authorization, the application cannot use this API to open the dialog box again. However > , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#openNotificationSettingsWithResult) > to open the notification management dialog box.
+Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses a promise to return the result. > **NOTE：**> > - This API can be called only after the application UI is loaded (that is, > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is > successfully called). > > - When an application uses **requestEnableNotification()** to display a dialog box for notification authorization > and the user rejects the authorization, the application cannot use this API to open the dialog box again. However > , it can call [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md#opennotificationsettingswithresult) > to open the notification management dialog box.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -236,7 +224,7 @@ openNotificationSettings opens the
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600004](../errorcode-notification.md#1600004-notification-disabled) | Notification disabled.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

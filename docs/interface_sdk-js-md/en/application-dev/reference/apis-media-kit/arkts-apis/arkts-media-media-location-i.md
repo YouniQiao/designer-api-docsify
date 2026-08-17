@@ -4,10 +4,6 @@ Provides the geographical location definitions for media resources.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface Location--><!--Device-media-interface Location-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -30,10 +26,6 @@ Latitude.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Location-latitude: double--><!--Device-Location-latitude: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -49,10 +41,6 @@ Longitude.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Location-longitude: double--><!--Device-Location-longitude: double-End-->
 

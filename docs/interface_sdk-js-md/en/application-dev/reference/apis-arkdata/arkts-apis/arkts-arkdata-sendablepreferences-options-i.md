@@ -4,10 +4,6 @@ Represents the configuration options of a **Preferences** instance.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-sendablePreferences-interface Options--><!--Device-sendablePreferences-interface Options-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -30,10 +26,6 @@ Application group ID. &lt;!--RP1--&gt;Currently, this parameter is not supported
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -53,10 +45,6 @@ Name of the **Preferences** instance.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

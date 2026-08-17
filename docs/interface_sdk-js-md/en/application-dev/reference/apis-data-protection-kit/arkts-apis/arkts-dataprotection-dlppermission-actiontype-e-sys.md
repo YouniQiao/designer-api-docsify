@@ -4,10 +4,6 @@ Enumerates the actions to be performed when the file's permission expiration tim
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-dlpPermission-export enum ActionType--><!--Device-dlpPermission-export enum ActionType-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -24,10 +20,6 @@ Users are not allowed to open the DLP file when the file's permission expiration
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-ActionType-NOT_OPEN = 0--><!--Device-ActionType-NOT_OPEN = 0-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -43,10 +35,6 @@ OPEN = 1
 Logged-in accounts can still open and edit the DLP file when the file's permission expiration time is reached.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-ActionType-OPEN = 1--><!--Device-ActionType-OPEN = 1-End-->
 

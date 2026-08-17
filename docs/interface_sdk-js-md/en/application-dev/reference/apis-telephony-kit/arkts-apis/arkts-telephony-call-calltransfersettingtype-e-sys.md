@@ -4,10 +4,6 @@ Enumerates call transfer setting types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export enum CallTransferSettingType--><!--Device-call-export enum CallTransferSettingType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -23,10 +19,6 @@ CALL_TRANSFER_DISABLE = 0
 Disabling of call transfer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallTransferSettingType-CALL_TRANSFER_DISABLE = 0--><!--Device-CallTransferSettingType-CALL_TRANSFER_DISABLE = 0-End-->
 
@@ -44,10 +36,6 @@ Enabling of call transfer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallTransferSettingType-CALL_TRANSFER_ENABLE = 1--><!--Device-CallTransferSettingType-CALL_TRANSFER_ENABLE = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -64,10 +52,6 @@ Registration of call transfer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallTransferSettingType-CALL_TRANSFER_REGISTRATION = 3--><!--Device-CallTransferSettingType-CALL_TRANSFER_REGISTRATION = 3-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -83,10 +67,6 @@ CALL_TRANSFER_ERASURE = 4
 Erasing of call transfer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallTransferSettingType-CALL_TRANSFER_ERASURE = 4--><!--Device-CallTransferSettingType-CALL_TRANSFER_ERASURE = 4-End-->
 

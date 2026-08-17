@@ -1,12 +1,8 @@
 # WindowStage
 
-Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md#window) instance. Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) to create a WindowStage instance.
+Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md#window) instance. Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-window-interface WindowStage--><!--Device-window-interface WindowStage-End-->
 
@@ -24,13 +20,9 @@ import { window } from 'window';
 disableWindowDecor(): void
 ```
 
-Disables window decorators. When window decorators are disabled and the main window transitions into full-screen mode, hovering the cursor over the hot zone of the top window's title bar will cause a floating title bar to appear. To prevent the floating title bar from appearing, call [setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#setTitleAndDockHoverShown).
+Disables window decorators. When window decorators are disabled and the main window transitions into full-screen mode, hovering the cursor over the hot zone of the top window's title bar will cause a floating title bar to appear. To prevent the floating title bar from appearing, call [setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +40,7 @@ Disables window decorators. When window decorators are disabled and the main win
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -73,10 +65,6 @@ removeImageForRecent(): Promise<void>
 Removes the image that the application has set to be displayed in the multitasking view and on dock hover. The change will be effective the next time you check the application widget in the multitasking view. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.MANAGE_RECENT_SNAPSHOT
@@ -105,7 +93,7 @@ Removes the image that the application has set to be displayed in the multitaski
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 22 - 24 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -137,13 +125,9 @@ export default class EntryAbility extends UIAbility {
 setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promise<void>
 ```
 
-Sets the image displayed in the multitasking view and on dock hover. This API uses a promise to return the result. > **NOTE：**> > Before calling this API, you are advised to complete page loading via > [loadContent](arkts-arkui-window-window-i.md#loadContent) or > [setUIContent](arkts-arkui-window-window-i.md#setUIContent). If this API is called before the application > completes page loading, the intended functionality does not take effect. As a result, only the application's > launch page is displayed in the multitasking view.
+Sets the image displayed in the multitasking view and on dock hover. This API uses a promise to return the result. > **NOTE：**> > Before calling this API, you are advised to complete page loading via > [loadContent](arkts-arkui-window-window-i.md#loadcontent) or > [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If this API is called before the application > completes page loading, the intended functionality does not take effect. As a result, only the application's > launch page is displayed in the multitasking view.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.MANAGE_RECENT_SNAPSHOT
@@ -180,7 +164,7 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 22 - 24 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -238,10 +222,6 @@ Sets the image displayed in the multitasking view. This API uses a promise to re
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowStage-setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>--><!--Device-WindowStage-setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>-End-->
@@ -273,7 +253,7 @@ Sets the image displayed in the multitasking view. This API uses a promise to re
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. 3. Incorrect parameter format. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -309,10 +289,6 @@ Sets whether to display the window of the application on the lock screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowStage-setShowOnLockScreen(showOnLockScreen: boolean): void--><!--Device-WindowStage-setShowOnLockScreen(showOnLockScreen: boolean): void-End-->
@@ -336,7 +312,7 @@ Sets whether to display the window of the application on the lock screen.
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets

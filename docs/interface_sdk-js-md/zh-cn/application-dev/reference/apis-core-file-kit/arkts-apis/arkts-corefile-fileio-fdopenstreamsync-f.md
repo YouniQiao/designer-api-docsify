@@ -10,11 +10,9 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md#fdopenStreamSync)
+**替代接口：** [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md#fdopenstreamsync)
 
 <!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream--><!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream-End-->
 

@@ -4,10 +4,6 @@ Enum for fusion fence type.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export enum FusionFenceType--><!--Device-geoLocationManager-export enum FusionFenceType-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -23,10 +19,6 @@ GNSS = 1
 Indicates the GNSS fence.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Indicates the cellular fence.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceType-CELLULAR = 2--><!--Device-FusionFenceType-CELLULAR = 2-End-->
@@ -68,10 +56,6 @@ Indicates the Wi-Fi fence.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceType-WIFI = 4--><!--Device-FusionFenceType-WIFI = 4-End-->
@@ -89,10 +73,6 @@ BLUETOOTH = 8
 Indicates the Bluetooth fence.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

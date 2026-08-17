@@ -4,10 +4,6 @@ Defines the call transfer result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface CallTransferResult--><!--Device-call-export interface CallTransferResult-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -32,10 +28,6 @@ Hour in the end time.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallTransferResult-endHour: int--><!--Device-CallTransferResult-endHour: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -53,10 +45,6 @@ Minute in the end time.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallTransferResult-endMinute: int--><!--Device-CallTransferResult-endMinute: int-End-->
 
@@ -76,10 +64,6 @@ Call transfer number.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-CallTransferResult-number: string--><!--Device-CallTransferResult-number: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -97,10 +81,6 @@ Hour in the start time.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallTransferResult-startHour: int--><!--Device-CallTransferResult-startHour: int-End-->
 
@@ -120,10 +100,6 @@ Minute in the start time.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallTransferResult-startMinute: int--><!--Device-CallTransferResult-startMinute: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -142,10 +118,6 @@ Enumerates call transfer states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallTransferResult-status: TransferStatus--><!--Device-CallTransferResult-status: TransferStatus-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -163,10 +135,6 @@ Indicates the phone number of call forwarding.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallTransferResult-teleNumber: string--><!--Device-CallTransferResult-teleNumber: string-End-->
 

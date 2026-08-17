@@ -16,10 +16,6 @@ function openNotificationSettings(context: UIAbilityContext): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-notificationManager-function openNotificationSettings(context: UIAbilityContext): Promise<void>--><!--Device-notificationManager-function openNotificationSettings(context: UIAbilityContext): Promise<void>-End-->
@@ -55,7 +51,7 @@ getNotificationSetting 获取应用的通知设置状态。
 | [1600018](../errorcode-notification.md#1600018-通知设置页面已经拉起) | The notification settings window is already displayed. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

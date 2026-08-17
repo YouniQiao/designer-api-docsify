@@ -11,10 +11,6 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -41,7 +37,7 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 | [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
 | [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -101,10 +97,6 @@ Create an empty pixelmap by data buffer based on opts, the memory type used by t
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -129,7 +121,7 @@ Create an empty pixelmap by data buffer based on opts, the memory type used by t
 | [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
 | [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

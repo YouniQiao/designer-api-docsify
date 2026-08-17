@@ -4,10 +4,6 @@ Represents the font variable axis information.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface FontVariationAxis--><!--Device-text-interface FontVariationAxis-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Default value of the font variable axis.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariationAxis-defaultValue: double--><!--Device-FontVariationAxis-defaultValue: double-End-->
@@ -51,10 +43,6 @@ Flag of the font variable axis, which is used to indicate whether a variable axi
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -74,10 +62,6 @@ Keyword identifier of the font variable axis.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariationAxis-key: string--><!--Device-FontVariationAxis-key: string-End-->
@@ -95,10 +79,6 @@ Localized name of the font variable axis, which can be empty.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -118,10 +98,6 @@ Maximum value of the font variable axis.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariationAxis-maxValue: double--><!--Device-FontVariationAxis-maxValue: double-End-->
@@ -140,10 +116,6 @@ Minimum value of the font variable axis.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariationAxis-minValue: double--><!--Device-FontVariationAxis-minValue: double-End-->
@@ -161,10 +133,6 @@ English name of the font variable axis.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

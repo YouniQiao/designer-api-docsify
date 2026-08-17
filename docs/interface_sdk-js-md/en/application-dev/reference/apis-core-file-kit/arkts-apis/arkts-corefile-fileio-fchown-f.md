@@ -10,8 +10,6 @@ Changes the file owner based on the file descriptor. This API uses a promise to 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-declare function fchown(fd: number, uid: number, gid: number): Promise<void>--><!--Device-unnamed-declare function fchown(fd: number, uid: number, gid: number): Promise<void>-End-->
@@ -42,8 +40,6 @@ declare function fchown(fd: number, uid: number, gid: number, callback: AsyncCal
 Changes the file owner based on the file descriptor. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

@@ -4,10 +4,6 @@ Describes the information returned by the application during window rotation cha
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface RotationChangeResult--><!--Device-window-interface RotationChangeResult-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Type of window rectangle coordinate system.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RotationChangeResult-rectType: RectType--><!--Device-RotationChangeResult-rectType: RectType-End-->
@@ -51,10 +43,6 @@ Information about the window's rectangle relative to the screen or parent window
 **Type:** Rect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

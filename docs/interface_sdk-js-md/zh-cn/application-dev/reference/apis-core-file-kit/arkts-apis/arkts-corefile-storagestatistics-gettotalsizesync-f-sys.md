@@ -10,10 +10,6 @@ function getTotalSizeSync(): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本10 - 14：ohos.permission.STORAGE_MANAGER
 
@@ -38,7 +34,7 @@ function getTotalSizeSync(): long
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

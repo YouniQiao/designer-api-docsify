@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface CheckResult--><!--Device-update-export interface CheckResult-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -26,10 +22,6 @@ isExistNewVersion: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CheckResult-isExistNewVersion: boolean--><!--Device-CheckResult-isExistNewVersion: boolean-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -47,10 +39,6 @@ newVersionInfo: NewVersionInfo
 **类型：** [NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CheckResult-newVersionInfo: NewVersionInfo--><!--Device-CheckResult-newVersionInfo: NewVersionInfo-End-->
 

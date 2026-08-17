@@ -16,10 +16,6 @@ Obtains the visible status of the mouse pointer. This API uses an asynchronous c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-pointer-function isPointerVisible(callback: AsyncCallback<boolean>): void--><!--Device-pointer-function isPointerVisible(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -36,7 +32,7 @@ Obtains the visible status of the mouse pointer. This API uses an asynchronous c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -77,10 +73,6 @@ Obtains the visible status of the mouse pointer. This API uses a promise to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-pointer-function isPointerVisible(): Promise<boolean>--><!--Device-pointer-function isPointerVisible(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -91,7 +83,7 @@ Obtains the visible status of the mouse pointer. This API uses a promise to retu
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if the mouse pointer is visible; **false** is returned if the mouse pointer is hidden. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';

@@ -4,10 +4,6 @@ Represents the optional parameter set for using a permission.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-privacyManager-interface PermissionUsingOptions--><!--Device-privacyManager-interface PermissionUsingOptions-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -26,15 +22,11 @@ import { privacyManager } from 'privacyManager';
 enhancedIdentity?: string
 ```
 
-Extension identity, used to identify additional identity information of the caller. This field is passed in when it is necessary to distinguish permission usage records from different call sources within the same application. The length must not exceed 48 characters. Passing an excessively long value when calling [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission-(System-API)) or [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission-(System-API)) will return error code 12100001. Default value: empty string.
+Extension identity, used to identify additional identity information of the caller. This field is passed in when it is necessary to distinguish permission usage records from different call sources within the same application. The length must not exceed 48 characters. Passing an excessively long value when calling [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission-system-api) or [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission-system-api) will return error code 12100001. Default value: empty string.
 
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

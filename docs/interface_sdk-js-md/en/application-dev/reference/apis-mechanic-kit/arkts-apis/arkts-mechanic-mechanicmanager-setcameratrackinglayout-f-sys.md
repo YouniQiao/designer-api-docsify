@@ -16,10 +16,6 @@ Sets the camera tracking layout for this mechanical device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void--><!--Device-mechanicManager-function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -41,7 +37,7 @@ Sets the camera tracking layout for this mechanical device.
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 | [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 console.info('Set layout');

@@ -16,8 +16,6 @@ Obtains all BundleInfo for a specified user in the system. This API uses an asyn
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** getAllBundleInfo
@@ -34,7 +32,7 @@ Obtains all BundleInfo for a specified user in the system. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
+| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
 | userId | number | Yes | User ID. Value range: greater than or equal to 0. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and the BundleInfo of all bundles under the specified user as the input parameter at program startup. Otherwise, **err** is an error object. |
 
@@ -48,8 +46,6 @@ function getBundleInfos(bundleFlag: BundleFlag, callback: AsyncCallback<Array<Bu
 Obtains all BundleInfo for the current user. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 8
 
@@ -67,7 +63,7 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
+| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and all available BundleInfo as the input parameter at program startup. Otherwise, **err** is an error object. |
 
 
@@ -80,8 +76,6 @@ function getBundleInfos(bundleFlag: BundleFlag, userId?: number): Promise<Array<
 Obtains all BundleInfo for a specified user. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 8
 
@@ -99,7 +93,7 @@ Obtains all BundleInfo for a specified user. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
+| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
 | userId | number | No | User ID.Default value: the user to which the caller belongs. Value range: greater than or equal to 0. |
 
 **Return value:**

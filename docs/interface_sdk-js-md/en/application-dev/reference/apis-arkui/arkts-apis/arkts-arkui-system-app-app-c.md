@@ -4,10 +4,6 @@ Defines static functions of App class
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class App--><!--Device-unnamed-export default class App-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -26,13 +22,9 @@ import { ScreenOnVisibleOptions } from 'ScreenOnVisibleOptions';
 static getInfo(): AppResponse
 ```
 
-Obtains the declared information in the **config.json** file of an application. In the stage model, this API returns **null**. This API is deprecated since API version 9. You are advised to use [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf) instead.
+Obtains the declared information in the **config.json** file of an application. In the stage model, this API returns **null**. This API is deprecated since API version 9. You are advised to use [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself) instead.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,7 +38,7 @@ Obtains the declared information in the **config.json** file of an application. 
 | --- | --- |
 | [AppResponse](arkts-arkui-system-app-appresponse-i.md) | Application response information. |
 
-## Examples
+**Examples**
 
 ArkTS example:
 
@@ -171,8 +163,6 @@ Requests the application to run in full window. In some scenarios, such as semi-
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** startAbility
@@ -187,7 +177,7 @@ Requests the application to run in full window. In some scenarios, such as semi-
 | --- | --- | --- | --- |
 | options | [RequestFullWindowOptions](arkts-arkui-system-app-requestfullwindowoptions-i.md) | No | Transition time from non-full window to full window, in milliseconds. By default, the value is in direct proportion to the distance between the non-full window and the full window. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import app, { AppResponse } from '@system.app';
@@ -209,8 +199,6 @@ static screenOnVisible(options?: ScreenOnVisibleOptions): void
 Defines whether to keep the application visible when the screen is woken up. This API is deprecated since API version 8.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 
@@ -234,10 +222,6 @@ Set image cache capacity of decoded image count. if not set, the application wil
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-App-static setImageCacheCount(value: number): void--><!--Device-App-static setImageCacheCount(value: number): void-End-->
@@ -250,7 +234,7 @@ Set image cache capacity of decoded image count. if not set, the application wil
 | --- | --- | --- | --- |
 | value | number | Yes | capacity of decoded image count. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.ets
@@ -289,10 +273,6 @@ Set image file cache size in bytes on disk before decode. if not set, the applic
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-App-static setImageFileCacheSize(value: number): void--><!--Device-App-static setImageFileCacheSize(value: number): void-End-->
@@ -305,7 +285,7 @@ Set image file cache size in bytes on disk before decode. if not set, the applic
 | --- | --- | --- | --- |
 | value | number | Yes | capacity of raw image data size in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // app.ets
@@ -333,10 +313,6 @@ Set image cache capacity of raw image data size in bytes before decode. if not s
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-App-static setImageRawDataCacheSize(value: number): void--><!--Device-App-static setImageRawDataCacheSize(value: number): void-End-->
@@ -349,7 +325,7 @@ Set image cache capacity of raw image data size in bytes before decode. if not s
 | --- | --- | --- | --- |
 | value | number | Yes | capacity of raw image data size in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.ets
@@ -384,13 +360,9 @@ struct Index {
 static terminate(): void
 ```
 
-Terminates the current ability. In the stage model, this API has no effect. This API is deprecated since API version 7. You are advised to use [@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md#@ohos.ability.featureAbility) instead.
+Terminates the current ability. In the stage model, this API has no effect. This API is deprecated since API version 7. You are advised to use [@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md#ohosabilityfeatureability) instead.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -398,7 +370,7 @@ Terminates the current ability. In the stage model, this API has no effect. This
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-## Examples
+**Examples**
 
 ArkTS example:
 

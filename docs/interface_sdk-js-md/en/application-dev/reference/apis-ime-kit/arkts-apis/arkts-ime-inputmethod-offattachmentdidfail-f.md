@@ -16,10 +16,6 @@ Unsubscribe the attachment failure event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void--><!--Device-inputMethod-function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -30,7 +26,7 @@ Unsubscribe the attachment failure event.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | No | the callback is invoked only when the attachment triggered by the registrant's process fails. When subscriber unsubscribes all callback, this parameter can be left blank. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

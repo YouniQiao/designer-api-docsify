@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface NotificationButton--><!--Device-unnamed-export interface NotificationButton-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -18,15 +14,11 @@
 icons?: Array<image.PixelMap>
 ```
 
-按钮图标列表，与names一一对应，每个图标显示在对应按钮上。最多支持3个。 图标像素的总字节数不超过192KB（图标像素的总字节数通过 [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getPixelBytesNumber)获取）， 建议图标像素长宽为128*128。默认为空。该属性与iconsResource互斥，只使用其中一个即可。
+按钮图标列表，与names一一对应，每个图标显示在对应按钮上。最多支持3个。 图标像素的总字节数不超过192KB（图标像素的总字节数通过 [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取）， 建议图标像素长宽为128*128。默认为空。该属性与iconsResource互斥，只使用其中一个即可。
 
 **类型：** Array&lt;image.PixelMap&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-NotificationButton-icons?: Array<image.PixelMap>--><!--Device-NotificationButton-icons?: Array<image.PixelMap>-End-->
 
@@ -44,10 +36,6 @@ iconsResource?: Array<Resource>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-NotificationButton-iconsResource?: Array<Resource>--><!--Device-NotificationButton-iconsResource?: Array<Resource>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -63,10 +51,6 @@ names?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-NotificationButton-names?: Array<string>--><!--Device-NotificationButton-names?: Array<string>-End-->
 

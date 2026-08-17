@@ -4,10 +4,6 @@ Provides the context for the transition animation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface TransitionContext--><!--Device-window-interface TransitionContext-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -30,10 +26,6 @@ Completes the transition. This API can be called only after animateTo() is execu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TransitionContext-completeTransition(isCompleted: boolean): void--><!--Device-TransitionContext-completeTransition(isCompleted: boolean): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -53,7 +45,7 @@ Completes the transition. This API can be called only after animateTo() is execu
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 (context: window.TransitionContext) => {
@@ -95,10 +87,6 @@ The target window with animation
 **Type:** [Window](arkts-arkui-window-window-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TransitionContext-toWindow: Window--><!--Device-TransitionContext-toWindow: Window-End-->
 

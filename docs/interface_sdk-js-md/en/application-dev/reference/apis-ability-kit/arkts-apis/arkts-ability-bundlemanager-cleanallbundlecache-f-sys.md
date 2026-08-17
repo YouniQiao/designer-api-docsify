@@ -16,10 +16,6 @@ Clears the global cache. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
 <!--Device-bundleManager-function cleanAllBundleCache(): Promise<void>--><!--Device-bundleManager-function cleanAllBundleCache(): Promise<void>-End-->
@@ -41,7 +37,7 @@ Clears the global cache. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ The basic data structure of the hover hand detection area.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-motion-export interface HoverHandDetectionArea--><!--Device-motion-export interface HoverHandDetectionArea-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
@@ -32,10 +28,6 @@ Height of the rectangle. Unit: px. The value must be an integer within [1,214748
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HoverHandDetectionArea-height: int--><!--Device-HoverHandDetectionArea-height: int-End-->
@@ -55,10 +47,6 @@ Left boundary of the rectangle. Unit: px. The value must be an integer within [-
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Top boundary of the rectangle. Unit: px. The value must be an integer within [-2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HoverHandDetectionArea-top: int--><!--Device-HoverHandDetectionArea-top: int-End-->
@@ -103,10 +87,6 @@ Width of the rectangle. Unit: px. The value must be an integer within [1,2147483
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

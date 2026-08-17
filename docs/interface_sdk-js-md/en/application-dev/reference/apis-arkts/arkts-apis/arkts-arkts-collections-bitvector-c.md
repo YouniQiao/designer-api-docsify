@@ -4,10 +4,6 @@ A linear data structure that is implemented on arrays. A bit vector stores bit v
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-collections-class BitVector--><!--Device-collections-class BitVector-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ import { collections } from 'collections';
 Returns an iterator that iterates over bit vector.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,10 +52,6 @@ Constructor used to create a bit vector.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BitVector-constructor(length: number)--><!--Device-BitVector-constructor(length: number)-End-->
@@ -85,10 +73,6 @@ flipBitByIndex(index: number): void
 Flips the bit value (from 0 to 1 or from 1 to 0) at a given index in this bit vector.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -120,10 +104,6 @@ Flips the bit values (from 0 to 1 or from 1 to 0) in a given range in this bit v
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BitVector-flipBitsByRange(fromIndex: number, toIndex: number): void--><!--Device-BitVector-flipBitsByRange(fromIndex: number, toIndex: number): void-End-->
@@ -154,10 +134,6 @@ getBitCountByRange(element: number, fromIndex: number, toIndex: number): number
 Counts the number of bit values in a given range of this bit vector.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -197,10 +173,6 @@ Obtains bit values within a given range of this bit vector.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BitVector-getBitsByRange(fromIndex: number, toIndex: number): BitVector--><!--Device-BitVector-getBitsByRange(fromIndex: number, toIndex: number): BitVector-End-->
@@ -218,7 +190,7 @@ Obtains bit values within a given range of this bit vector.
 
 | Type | Description |
 | --- | --- |
-| [BitVector](arkts-arkts-collections-bitvector-c.md) | Bit vector containing the bit values obtained. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [BitVector](../../apis-na/arkts-apis/arkts-na-collections-bitvector-c.md) | Bit vector containing the bit values obtained. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
@@ -237,10 +209,6 @@ getIndexOf(element: number, fromIndex: number, toIndex: number): number
 Returns the index of the first occurrence of a bit value in this bit vector. If the bit value is not found, **-1** is returned.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -280,10 +248,6 @@ Returns the index of the last occurrence of a bit value in this bit vector. If t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BitVector-getLastIndexOf(element: number, fromIndex: number, toIndex: number): number--><!--Device-BitVector-getLastIndexOf(element: number, fromIndex: number, toIndex: number): number-End-->
@@ -321,10 +285,6 @@ has(element: number, fromIndex: number, toIndex: number): boolean
 Checks whether a bit value is included in a given range of this bit vector.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -364,10 +324,6 @@ Removes the last element from this bit vector.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BitVector-pop(): number--><!--Device-BitVector-pop(): number-End-->
@@ -396,10 +352,6 @@ push(element: number): boolean
 Adds an element at the end of this bit vector.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -436,10 +388,6 @@ Resizes this bit vector. If **size** is greater than the length of the existing 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BitVector-resize(size: number): void--><!--Device-BitVector-resize(size: number): void-End-->
@@ -469,10 +417,6 @@ Sets all elements in this bit vector to a bit value.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BitVector-setAllBits(element: number): void--><!--Device-BitVector-setAllBits(element: number): void-End-->
@@ -501,10 +445,6 @@ setBitsByRange(element: number, fromIndex: number, toIndex: number): void
 Sets elements in a given range in this bit vector to a bit value.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -538,10 +478,6 @@ Returns an iterator object that contains the value of each element in this bit v
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BitVector-values(): IterableIterator<number>--><!--Device-BitVector-values(): IterableIterator<number>-End-->
@@ -572,10 +508,6 @@ Number of elements in a bit vector.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

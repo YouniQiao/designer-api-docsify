@@ -4,9 +4,7 @@ Defines the triggered function when the web page receives a JavaScript console m
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnConsoleEvent--><!--Device-unnamed-export declare interface OnConsoleEvent-End-->
 
@@ -24,9 +22,7 @@ Console message information of the event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnConsoleEvent-message: ConsoleMessage--><!--Device-OnConsoleEvent-message: ConsoleMessage-End-->
 

@@ -4,11 +4,9 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 11
 
-**替代接口：** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md#UserAuthResult)
+**替代接口：** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md#userauthresult)
 
 <!--Device-userAuth-interface AuthResultInfo--><!--Device-userAuth-interface AuthResultInfo-End-->
 
@@ -26,11 +24,9 @@ lockoutDuration?: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 11
 
-**替代接口：** [lockoutDuration](arkts-userauthentication-userauth-authlockstate-i.md#lockoutDuration)
+**替代接口：** [lockoutDuration](arkts-userauthentication-userauth-authlockstate-i.md#lockoutduration)
 
 <!--Device-AuthResultInfo-lockoutDuration?: number--><!--Device-AuthResultInfo-lockoutDuration?: number-End-->
 
@@ -48,11 +44,9 @@ remainAttempts?: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 11
 
-**替代接口：** [remainingAuthAttempts](arkts-userauthentication-userauth-authlockstate-i.md#remainingAuthAttempts)
+**替代接口：** [remainingAuthAttempts](arkts-userauthentication-userauth-authlockstate-i.md#remainingauthattempts)
 
 <!--Device-AuthResultInfo-remainAttempts?: number--><!--Device-AuthResultInfo-remainAttempts?: number-End-->
 
@@ -69,8 +63,6 @@ result: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 11
 
@@ -91,8 +83,6 @@ token?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 11
 

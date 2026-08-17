@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-call-export interface DisconnectedDetails--><!--Device-call-export interface DisconnectedDetails-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -26,10 +22,6 @@ message: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DisconnectedDetails-message: string--><!--Device-DisconnectedDetails-message: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -44,13 +36,9 @@ reason: DisconnectedReason
 
 通话结束原因。
 
-**类型：** [DisconnectedReason](arkts-telephony-call-disconnectedreason-e-sys.md)
+**类型：** DisconnectedReason
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DisconnectedDetails-reason: DisconnectedReason--><!--Device-DisconnectedDetails-reason: DisconnectedReason-End-->
 

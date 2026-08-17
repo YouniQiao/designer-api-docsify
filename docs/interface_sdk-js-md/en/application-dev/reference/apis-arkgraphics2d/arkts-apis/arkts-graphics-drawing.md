@@ -4,10 +4,6 @@ During application development, you often need to draw different elements. Typic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace drawing--><!--Device-unnamed-declare namespace drawing-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -44,7 +40,7 @@ import { drawing } from 'drawing';
 | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Implements the shader effect. After a shader effect is set for a pen or brush, the shader effect instead of the color attribute is used for drawing. In this case, the alpha value set for the pen or brush still takes effect. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
 | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | Implements a shadow layer. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
 | [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | Defines a block consisting of one or more characters with the same font. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
-| [Tool](arkts-arkgraphics2d-drawing-tool-c.md) | A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md#@ohos.graphics.common2D). > **NOTE：**> > - The initial APIs of this class are supported since API version 15. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
+| [Tool](arkts-arkgraphics2d-drawing-tool-c.md) | A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md#ohosgraphicscommon2d). > **NOTE：**> > - The initial APIs of this class are supported since API version 15. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Describes the style of a typeface, such as SimSun or KaiTi. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
 | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | This module defines a struct for setting typeface arguments. > **NOTE：**> > - The initial APIs of this class are supported since API version 20. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
 
@@ -68,7 +64,7 @@ import { drawing } from 'drawing';
 | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Enumerates the filter modes. |
 | [FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md) | Enumerates the font edging types. |
 | [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) | Enumerates the font hinting types. |
-| [FontMetricsFlags](arkts-arkgraphics2d-drawing-fontmetricsflags-e.md) | Enumerates the font measurement flags, which is used to specify whether a field in the [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#FontMetrics) struct is valid. |
+| [FontMetricsFlags](arkts-arkgraphics2d-drawing-fontmetricsflags-e.md) | Enumerates the font measurement flags, which is used to specify whether a field in the [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#fontmetrics) struct is valid. |
 | [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) | Enumerates the join styles of a pen. The join style defines the shape of the joints of a polyline segment drawn by the pen. |
 | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Enumerates the drawing styles for path effects. \| Name \| Value\| Description \| \| ------ \| - \| ------------------ \| \| TRANSLATE \| 0 \| Translates only, not rotating with the path.\| \| ROTATE \| 1 \| Rotates with the path.\| \| MORPH \| 2 \| Rotates with the path and stretches or compresses at turns to enhance smoothness.\| |
 | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | Enumerates the directions of a closed contour. |
@@ -77,7 +73,7 @@ import { drawing } from 'drawing';
 | [PathMeasureMatrixFlags](arkts-arkgraphics2d-drawing-pathmeasurematrixflags-e.md) | Enumerates the dimensions of matrix information in path measurement. It is often used in animation scenarios where objects move along a path. |
 | [PathOp](arkts-arkgraphics2d-drawing-pathop-e.md) | Enumerates the path operation types. It is often used in path combination and clipping scenarios. |
 | [PointMode](arkts-arkgraphics2d-drawing-pointmode-e.md) | Enumerates the modes for drawing multiple points in an array. |
-| [RectType](arkts-arkgraphics2d-drawing-recttype-e.md) | Enumerates the types of rectangles used to fill the lattices. Used only in [Lattice](#@ohos.graphics.drawing). |
+| [RectType](arkts-arkgraphics2d-drawing-recttype-e.md) | Enumerates the types of rectangles used to fill the lattices. Used only in [Lattice](#ohosgraphicsdrawing). |
 | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | Enumerates the operations for combining two regions. > **NOTE：**> > The schematic diagram shows the result obtained by combining a red region with a blue region at different > operation mode. The green region is the region obtained. |
 | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | Enumerates the modes of scaling a source rectangle into a destination rectangle. |
 | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | Enumerates the shadow drawing behaviors. |

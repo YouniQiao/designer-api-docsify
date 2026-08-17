@@ -1,12 +1,8 @@
 # ConsoleMessage
 
-Encompassed message information as parameters to onConsole method.
+ConsoleMessage is an object that encapsulates JavaScript console output information in the **Web** component. When a web page outputs logs through methods such as `console.log()`, `console.warn()`, and `console.error()`, this object is provided to the app through the `onConsole` event callback for monitoring and inspecting web page debug output. For sample code, see [onConsole event](arkts-arkweb-web-attribute.md#onconsole).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ConsoleMessage--><!--Device-unnamed-declare class ConsoleMessage-End-->
 
@@ -18,11 +14,9 @@ Encompassed message information as parameters to onConsole method.
 constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)
 ```
 
-Constructor.
+Constructs a **ConsoleMessage** object.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -36,10 +30,10 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | The console message. |
-| sourceId | string | Yes | The Web source file's path and name. |
-| lineNumber | number | Yes | The line number of the console message. |
-| messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | Yes | The console log level. |
+| message | string | Yes | Log output information of **ConsoleMessage**. |
+| sourceId | string | Yes | Path and name of the web page source file. |
+| lineNumber | number | Yes | Line number of **ConsoleMessage**. |
+| messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | Yes | Log level of **ConsoleMessage**. |
 
 ## constructor
 
@@ -47,13 +41,9 @@ Constructor.
 constructor()
 ```
 
-Constructor.
+Constructs a **ConsoleMessage** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -67,13 +57,9 @@ Constructor.
 getLineNumber(): number
 ```
 
-Gets the line number of a console message.
+Obtains the line number of the console output in the web source file.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -85,7 +71,7 @@ Gets the line number of a console message.
 
 | Type | Description |
 | --- | --- |
-| number | Return the line number of a console message. |
+| number | Line number of the console output in the web source file. |
 
 ## getMessage
 
@@ -93,13 +79,9 @@ Gets the line number of a console message.
 getMessage(): string
 ```
 
-Gets the message of a console message.
+Obtains the log message of the console output.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -111,7 +93,7 @@ Gets the message of a console message.
 
 | Type | Description |
 | --- | --- |
-| string | Return the message of a console message. |
+| string | Log information output to the console. |
 
 ## getMessageLevel
 
@@ -119,13 +101,9 @@ Gets the message of a console message.
 getMessageLevel(): MessageLevel
 ```
 
-Gets the message level of a console message.
+Obtains the level of this console message.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -137,23 +115,19 @@ Gets the message level of a console message.
 
 | Type | Description |
 | --- | --- |
-| [MessageLevel](arkts-arkweb-messagelevel-e.md) | Return the message level of a console message, which can be { |
+| [MessageLevel](arkts-arkweb-messagelevel-e.md) | Level of the console message. |
 
 ## getSource
 
 ```TypeScript
-getSource(): ConsoleMessageSource
+getSource() : ConsoleMessageSource
 ```
 
-Gets the source of a console message.
+Obtains the log source of this console message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
-<!--Device-ConsoleMessage-getSource(): ConsoleMessageSource--><!--Device-ConsoleMessage-getSource(): ConsoleMessageSource-End-->
+<!--Device-ConsoleMessage-getSource() : ConsoleMessageSource--><!--Device-ConsoleMessage-getSource() : ConsoleMessageSource-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -161,7 +135,7 @@ Gets the source of a console message.
 
 | Type | Description |
 | --- | --- |
-| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) | Return the source of a console message. |
+| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) | Log source of the console message. |
 
 ## getSourceId
 
@@ -169,13 +143,9 @@ Gets the source of a console message.
 getSourceId(): string
 ```
 
-Gets the Web source file's path and name of a console message.
+Obtains the path and file name of the web source file.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -187,5 +157,5 @@ Gets the Web source file's path and name of a console message.
 
 | Type | Description |
 | --- | --- |
-| string | Return the Web source file's path and name of a console message. |
+| string | Path and file name of the web source file. |
 

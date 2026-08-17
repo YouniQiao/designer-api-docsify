@@ -4,10 +4,6 @@ Enum for media type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemSoundManager-enum MediaType--><!--Device-systemSoundManager-enum MediaType-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -24,10 +20,6 @@ Media type for audio.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MediaType-AUDIO = 0--><!--Device-MediaType-AUDIO = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -43,10 +35,6 @@ VIDEO = 1
 Media type for vide.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MediaType-VIDEO = 1--><!--Device-MediaType-VIDEO = 1-End-->
 

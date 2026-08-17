@@ -10,10 +10,6 @@ function createPkcs12(data: Pkcs12Data, config: Pkcs12CreationConfig): Promise<U
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-cert-function createPkcs12(data: Pkcs12Data, config: Pkcs12CreationConfig): Promise<Uint8Array>--><!--Device-cert-function createPkcs12(data: Pkcs12Data, config: Pkcs12CreationConfig): Promise<Uint8Array>-End-->
@@ -37,12 +33,12 @@ function createPkcs12(data: Pkcs12Data, config: Pkcs12CreationConfig): Promise<U
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： <br>1. 内存拷贝失败； <br>2. 系统内部出现空指针； <br>3. 获取Native对象失败或参数转换失败。 |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： <br>1. 密码过短或过长； <br>2. 私钥与证书不匹配； <br>3. 加密算法参数无效。 |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The password is too short or too long; <br>2. The private key does not match the certificate; <br>3. Invalid encryption algorithm parameters. |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -78,7 +74,7 @@ let priKey = '-----BEGIN PRIVATE KEY-----\n' +
   'a20rj9HG4sb8tUIHPBv0dgY=\n' +
   '-----END PRIVATE KEY-----\n';
 
-let othercert = '-----BEGIN CERTIFICATE-----\n' +
+let otherCert = '-----BEGIN CERTIFICATE-----\n' +
   'MIIDZTCCAk0CFAoqA7Irtoo7/3+sfOHy0s91pKkiMA0GCSqGSIb3DQEBCwUAMG8x\n' +
   'CzAJBgNVBAYTAkVOMQ0wCwYDVQQIDARURVNUMQ0wCwYDVQQHDAR4aWFuMQ8wDQYD\n' +
   'VQQKDAZodWF3ZWkxDTALBgNVBAsMBHhpYW4xDTALBgNVBAMMBHhpYW4xEzARBgkq\n' +
@@ -149,7 +145,7 @@ async function createX509Cert(certData: string): Promise<cert.X509Cert> {
 }
 
 async function doTestCreatePkcs12() {
-  const caCert = await createX509Cert(othercert);
+  const caCert = await createX509Cert(otherCert);
   const x509Cert = await createX509Cert(certData);
 
   let data: cert.Pkcs12Data = {

@@ -4,10 +4,6 @@ Enumerates the operations that can be performed on a database. Use the enum name
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export enum Flag--><!--Device-cloudExtension-export enum Flag-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -23,10 +19,6 @@ INSERT = 0
 Insert data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Flag-INSERT = 0--><!--Device-Flag-INSERT = 0-End-->
 
@@ -44,10 +36,6 @@ Update data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Flag-UPDATE = 1--><!--Device-Flag-UPDATE = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -63,10 +51,6 @@ DELETE = 2
 Delete data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Flag-DELETE = 2--><!--Device-Flag-DELETE = 2-End-->
 

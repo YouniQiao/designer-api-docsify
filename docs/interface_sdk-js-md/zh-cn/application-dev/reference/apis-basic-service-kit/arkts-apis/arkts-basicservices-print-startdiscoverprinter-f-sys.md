@@ -10,10 +10,6 @@ function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallb
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API版本10 - 19：ohos.permission.MANAGE_PRINT_JOB
@@ -28,8 +24,8 @@ function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md#PrintExtensionAbility（系统接口）)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步开始发现打印机之后的回调。 |
+| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md#printextensionability系统接口)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步开始发现打印机之后的回调。 |
 
 **错误码：**
 
@@ -38,7 +34,7 @@ function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallb
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 19 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -68,10 +64,6 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API版本10 - 19：ohos.permission.MANAGE_PRINT_JOB
@@ -86,7 +78,7 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md#PrintExtensionAbility（系统接口）)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
+| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md#printextensionability系统接口)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
 
 **返回值：**
 
@@ -101,7 +93,7 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 19 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

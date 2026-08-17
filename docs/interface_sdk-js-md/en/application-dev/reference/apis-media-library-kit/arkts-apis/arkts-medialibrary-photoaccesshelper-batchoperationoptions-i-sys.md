@@ -4,10 +4,6 @@ Batch operation options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface BatchOperationOptions--><!--Device-photoAccessHelper-interface BatchOperationOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -32,10 +28,6 @@ count progress of batch operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BatchOperationOptions-countProgressListener?: ProgressListener--><!--Device-BatchOperationOptions-countProgressListener?: ProgressListener-End-->
@@ -55,10 +47,6 @@ the mode of Automatic renaming.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ the result of batch operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BatchOperationOptions-resultListener?: ResultListener--><!--Device-BatchOperationOptions-resultListener?: ResultListener-End-->
@@ -104,10 +88,6 @@ size progress of batch operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BatchOperationOptions-sizeProgressListener?: ProgressListener--><!--Device-BatchOperationOptions-sizeProgressListener?: ProgressListener-End-->
@@ -127,10 +107,6 @@ interrupting of batch operations.
 **Type:** TaskSignal
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

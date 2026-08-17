@@ -16,10 +16,6 @@ Disables the dynamic icon based on the given bundle name. This API uses a promis
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_DYNAMIC_ICON
 
 <!--Device-bundleManager-function disableDynamicIcon(bundleName: string): Promise<void>--><!--Device-bundleManager-function disableDynamicIcon(bundleName: string): Promise<void>-End-->
@@ -50,7 +46,7 @@ Disables the dynamic icon based on the given bundle name. This API uses a promis
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700305](../errorcode-bundle.md#17700305-failed-to-disable-the-dynamic-icon) | Failed to disable the dynamic icon. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -81,10 +77,6 @@ function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise
 Disables the dynamic icon based on the given bundle name and bundle options. This API uses a promise to return the result. To disable the dynamic icon for the current user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON permission. To disable the dynamic icon for another user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DYNAMIC_ICON or (ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -118,7 +110,7 @@ Disables the dynamic icon based on the given bundle name and bundle options. Thi
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700305](../errorcode-bundle.md#17700305-failed-to-disable-the-dynamic-icon) | Failed to disable the dynamic icon. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

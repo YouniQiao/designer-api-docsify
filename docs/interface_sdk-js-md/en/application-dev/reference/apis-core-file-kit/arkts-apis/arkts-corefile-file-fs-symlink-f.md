@@ -30,10 +30,6 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>--><!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -80,10 +76,6 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result. > **NOTE：**> > Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void-End-->
 

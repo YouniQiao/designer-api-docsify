@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
@@ -21,10 +17,6 @@ getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 在应用备份阶段，调用方获取应用自定义兼容性信息时执行，由应用实现返回。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,10 +48,6 @@ getBackupInfo(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BackupExtensionAbility-getBackupInfo(): string--><!--Device-BackupExtensionAbility-getBackupInfo(): string-End-->
@@ -83,10 +71,6 @@ getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 在应用恢复阶段，调用方获取应用自定义兼容性信息时执行，由应用实现返回。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

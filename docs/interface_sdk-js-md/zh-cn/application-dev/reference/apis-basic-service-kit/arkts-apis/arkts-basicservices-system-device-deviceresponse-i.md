@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 6
 
 <!--Device-unnamed-export interface DeviceResponse--><!--Device-unnamed-export interface DeviceResponse-End-->
@@ -23,8 +21,6 @@ apiVersion: number
 **类型：** number
 
 **起始版本：** 4
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为4。
 
 **废弃版本：** 6
 
@@ -44,8 +40,6 @@ brand: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 6
 
 <!--Device-DeviceResponse-brand: string--><!--Device-DeviceResponse-brand: string-End-->
@@ -63,8 +57,6 @@ deviceType: string
 **类型：** string
 
 **起始版本：** 4
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为4。
 
 **废弃版本：** 6
 
@@ -84,8 +76,6 @@ language: string
 
 **起始版本：** 4
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为4。
-
 **废弃版本：** 6
 
 <!--Device-DeviceResponse-language: string--><!--Device-DeviceResponse-language: string-End-->
@@ -103,8 +93,6 @@ manufacturer: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 6
 
@@ -124,8 +112,6 @@ model: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 6
 
 <!--Device-DeviceResponse-model: string--><!--Device-DeviceResponse-model: string-End-->
@@ -143,8 +129,6 @@ product: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 6
 
@@ -164,8 +148,6 @@ region: string
 
 **起始版本：** 4
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为4。
-
 **废弃版本：** 6
 
 <!--Device-DeviceResponse-region: string--><!--Device-DeviceResponse-region: string-End-->
@@ -183,8 +165,6 @@ screenDensity: number
 **类型：** number
 
 **起始版本：** 4
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为4。
 
 **废弃版本：** 6
 
@@ -204,8 +184,6 @@ screenShape: 'rect' | 'circle'
 
 **起始版本：** 4
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为4。
-
 **废弃版本：** 6
 
 <!--Device-DeviceResponse-screenShape: 'rect' | 'circle'--><!--Device-DeviceResponse-screenShape: 'rect' | 'circle'-End-->
@@ -224,8 +202,6 @@ windowHeight: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 6
 
 <!--Device-DeviceResponse-windowHeight: number--><!--Device-DeviceResponse-windowHeight: number-End-->
@@ -243,8 +219,6 @@ windowWidth: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 6
 

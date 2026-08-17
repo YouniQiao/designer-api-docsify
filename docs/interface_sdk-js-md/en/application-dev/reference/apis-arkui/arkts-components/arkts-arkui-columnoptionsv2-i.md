@@ -4,10 +4,6 @@ Sets the spacing between child components of the **Column** component. > **NOTEï
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ColumnOptionsV2--><!--Device-unnamed-interface ColumnOptionsV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Vertical spacing between two adjacent child components. This parameter has no ef
 **Type:** [SpaceType](arkts-arkui-spacetype-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Enumerates USB device function types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usbManager-export enum FunctionType--><!--Device-usbManager-export enum FunctionType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -23,10 +19,6 @@ NONE = 0
 No function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FunctionType-NONE = 0--><!--Device-FunctionType-NONE = 0-End-->
 
@@ -44,10 +36,6 @@ ACM function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FunctionType-ACM = 1--><!--Device-FunctionType-ACM = 1-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -63,10 +51,6 @@ ECM = 2
 ECM function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FunctionType-ECM = 2--><!--Device-FunctionType-ECM = 2-End-->
 
@@ -84,10 +68,6 @@ HDC function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FunctionType-HDC = 4--><!--Device-FunctionType-HDC = 4-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -103,10 +83,6 @@ MTP = 8
 Media transmission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FunctionType-MTP = 8--><!--Device-FunctionType-MTP = 8-End-->
 
@@ -124,10 +100,6 @@ Image transmission.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FunctionType-PTP = 16--><!--Device-FunctionType-PTP = 16-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -143,10 +115,6 @@ RNDIS = 32
 Network sharing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FunctionType-RNDIS = 32--><!--Device-FunctionType-RNDIS = 32-End-->
 
@@ -164,10 +132,6 @@ MIDI function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FunctionType-MIDI = 64--><!--Device-FunctionType-MIDI = 64-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -184,10 +148,6 @@ Audio function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FunctionType-AUDIO_SOURCE = 128--><!--Device-FunctionType-AUDIO_SOURCE = 128-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -203,10 +163,6 @@ NCM = 256
 NCM transmission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FunctionType-NCM = 256--><!--Device-FunctionType-NCM = 256-End-->
 

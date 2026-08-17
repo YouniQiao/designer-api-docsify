@@ -4,10 +4,6 @@ Describes the activation information of a continuous task.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backgroundTaskManager-interface ContinuousTaskActiveInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskActiveInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -29,10 +25,6 @@ ID of the activated continuous task.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ContinuousTaskActiveInfo-id: int--><!--Device-ContinuousTaskActiveInfo-id: int-End-->
 

@@ -1,12 +1,8 @@
 # ParagraphStyle
 
-Represents a paragraph style, which controls the overall layout behavior of a paragraph, including attributes such as alignment, line break strategy, and maximum number of lines. ParagraphStyle serves as a required parameter of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) constructor, and works together with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle) (which controls text-level styles) to determine the final typesetting result of the paragraph.
+Represents a paragraph style, which controls the overall layout behavior of a paragraph, including attributes such as alignment, line break strategy, and maximum number of lines. ParagraphStyle serves as a required parameter of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder) constructor, and works together with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle) (which controls text-level styles) to determine the final typesetting result of the paragraph.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-text-interface ParagraphStyle--><!--Device-text-interface ParagraphStyle-End-->
 
@@ -30,10 +26,6 @@ Text alignment mode. The default value is **START**. This parameter is invalid w
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphStyle-align?: TextAlign--><!--Device-ParagraphStyle-align?: TextAlign-End-->
@@ -51,10 +43,6 @@ Sets whether to enable automatic spacing during text typography. **true** indica
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -74,10 +62,6 @@ Text break strategy. The default value is **GREEDY**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphStyle-breakStrategy?: BreakStrategy--><!--Device-ParagraphStyle-breakStrategy?: BreakStrategy-End-->
@@ -90,15 +74,11 @@ Text break strategy. The default value is **GREEDY**.
 compressHeadPunctuation?: boolean
 ```
 
-Sets whether to use punctuation compression at the beginning of a line in text layout. **true** means yes; **false** otherwise. The default value is **false**. **NOTE：**1. The font file must support the ss08 feature in [FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md#FontFeature). Otherwise, compression cannot be performed. 2. Only the punctuations within the punctuation compression range at the beginning of a line are in the scope of this feature. Punctuation range at the beginning of a line. | Punctuation| Unicode Code Point| Unicode Name| |---------|---------|-------------| | 「| U+300C | LEFT CORNER BRACKET | | 『| U+300E | LEFT WHITE CORNER BRACKET | | " | U+201C | LEFT DOUBLE QUOTATION MARK | | ' | U+2018 | LEFT SINGLE QUOTATION MARK | | （| U+FF08 | FULLWIDTH LEFT PARENTHESIS | | 《| U+300A | LEFT DOUBLE ANGLE BRACKET | | 〈| U+3008 | LEFT ANGLE BRACKET | | 【| U+3010 | LEFT BLACK LENTICULAR BRACKET | | 〖| U+3016 | LEFT WHITE LENTICULAR BRACKET | | 〔| U+3014 | LEFT TORTOISE SHELL BRACKET | | ［| U+FF3B | FULLWIDTH LEFT SQUARE BRACKET | | ｛| U+FF5B | FULLWIDTH LEFT CURLY BRACKET |
+Sets whether to use punctuation compression at the beginning of a line in text layout. **true** means yes; **false** otherwise. The default value is **false**. **NOTE：**1. The font file must support the ss08 feature in [FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md#fontfeature). Otherwise, compression cannot be performed. 2. Only the punctuations within the punctuation compression range at the beginning of a line are in the scope of this feature. Punctuation range at the beginning of a line. | Punctuation| Unicode Code Point| Unicode Name| |---------|---------|-------------| | 「| U+300C | LEFT CORNER BRACKET | | 『| U+300E | LEFT WHITE CORNER BRACKET | | " | U+201C | LEFT DOUBLE QUOTATION MARK | | ' | U+2018 | LEFT SINGLE QUOTATION MARK | | （| U+FF08 | FULLWIDTH LEFT PARENTHESIS | | 《| U+300A | LEFT DOUBLE ANGLE BRACKET | | 〈| U+3008 | LEFT ANGLE BRACKET | | 【| U+3010 | LEFT BLACK LENTICULAR BRACKET | | 〖| U+3016 | LEFT WHITE LENTICULAR BRACKET | | 〔| U+3014 | LEFT TORTOISE SHELL BRACKET | | ［| U+FF3B | FULLWIDTH LEFT SQUARE BRACKET | | ｛| U+FF5B | FULLWIDTH LEFT CURLY BRACKET |
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -118,10 +98,6 @@ Sets whether to enable line height rollback during text layout. If the set line 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ParagraphStyle-fallbackLineSpacing?: boolean--><!--Device-ParagraphStyle-fallbackLineSpacing?: boolean-End-->
@@ -139,10 +115,6 @@ First line indent of the paragraph. The indent value must be greater than or equ
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,10 +136,6 @@ Array of head indents. Each element in the array represents the indent value of 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -188,10 +156,6 @@ Sets whether to use padding at the beginning and end of a line in text layout. *
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ParagraphStyle-includeFontPadding?: boolean--><!--Device-ParagraphStyle-includeFontPadding?: boolean-End-->
@@ -204,15 +168,11 @@ Sets whether to use padding at the beginning and end of a line in text layout. *
 lineSpacing?: double
 ```
 
-Line spacing, in physical pixels (px). The default value is **0**. lineSpacing is not restricted by lineHeightMaximum and lineHeightMinimum in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle). The last line retains line spacing by default. You can disable line spacing for the last line by setting [ParagraphStyle](#ParagraphStyle)'s textHeightBehavior to DISABLE_ALL or DISABLE_LAST_ASCENT.
+Line spacing, in physical pixels (px). The default value is **0**. lineSpacing is not restricted by lineHeightMaximum and lineHeightMinimum in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle). The last line retains line spacing by default. You can disable line spacing for the last line by setting [ParagraphStyle](#paragraphstyle)'s textHeightBehavior to DISABLE_ALL or DISABLE_LAST_ASCENT.
 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -232,10 +192,6 @@ Maximum number of lines. The value is an integer. The default value is **1e9**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphStyle-maxLines?: int--><!--Device-ParagraphStyle-maxLines?: int-End-->
@@ -248,15 +204,11 @@ Maximum number of lines. The value is an integer. The default value is **1e9**.
 orphanCharOptimization?: boolean
 ```
 
-Whether to enable orphan character optimization during text typesetting. Orphan character optimization improves text layout by handling isolated characters (the first character of the last line of a paragraph) more efficiently. When enabled, it adjusts line break points to avoid isolated characters as much as possible. The orphan character optimization feature takes effect only when [wordBreak](arkts-arkgraphics2d-text-wordbreak-e.md#WordBreak) is not BREAK_ALL and the locale of the first [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle) of the text to be typeset is "zh-Hans" or "zh-Hant" . The value **true** enables orphan character optimization, and **false** disables it. The default value is **false**.
+Whether to enable orphan character optimization during text typesetting. Orphan character optimization improves text layout by handling isolated characters (the first character of the last line of a paragraph) more efficiently. When enabled, it adjusts line break points to avoid isolated characters as much as possible. The orphan character optimization feature takes effect only when [wordBreak](arkts-arkgraphics2d-text-wordbreak-e.md#wordbreak) is not BREAK_ALL and the locale of the first [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle) of the text to be typeset is "zh-Hans" or "zh-Hant" . The value **true** enables orphan character optimization, and **false** disables it. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -278,10 +230,6 @@ Whether to enable end-of-line punctuation hanging during text typesetting. The v
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -302,10 +250,6 @@ Strut style. The default value is the initial **StrutStyle** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphStyle-strutStyle?: StrutStyle--><!--Device-ParagraphStyle-strutStyle?: StrutStyle-End-->
@@ -318,15 +262,11 @@ Strut style. The default value is the initial **StrutStyle** object.
 tab?: TextTab
 ```
 
-Alignment mode and position of the text after the tab character in a paragraph. By default, the tab character is replaced with a space. This parameter is invalid when it is used together with the **align** parameter or the **ellipsis** parameter in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle).
+Alignment mode and position of the text after the tab character in a paragraph. By default, the tab character is replaced with a space. This parameter is invalid when it is used together with the **align** parameter or the **ellipsis** parameter in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle).
 
 **Type:** [TextTab](arkts-arkgraphics2d-text-texttab-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -345,10 +285,6 @@ Array of tail indents. Each element in the array represents the indent value of 
 **Type:** Array&lt;double&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -370,10 +306,6 @@ Text direction. The default value is **LTR**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphStyle-textDirection?: TextDirection--><!--Device-ParagraphStyle-textDirection?: TextDirection-End-->
@@ -391,10 +323,6 @@ Text height modifier pattern. The default value is **ALL**.
 **Type:** [TextHeightBehavior](arkts-arkgraphics2d-text-textheightbehavior-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -414,10 +342,6 @@ Text style applied to the paragraph. The default value is the initial text style
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphStyle-textStyle?: TextStyle--><!--Device-ParagraphStyle-textStyle?: TextStyle-End-->
@@ -436,10 +360,6 @@ Whether to consider the alignment impact of trailing spaces during text layout. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphStyle-trailingSpaceOptimized?: boolean--><!--Device-ParagraphStyle-trailingSpaceOptimized?: boolean-End-->
@@ -452,15 +372,11 @@ Whether to consider the alignment impact of trailing spaces during text layout. 
 verticalAlign?: TextVerticalAlign
 ```
 
-Text vertical alignment mode. The default value is BASELINE, which means text baseline alignment. This attribute takes effect when line height scaling is enabled (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)'s heightScale is set) or when text in different font sizes is mixed in a line (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)'s fontSize is set). If there is superscript or subscript text in the line (that is, text with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)'s badgeType attribute set), the superscript or subscript text participates in vertical alignment in the same way as normal text.
+Text vertical alignment mode. The default value is BASELINE, which means text baseline alignment. This attribute takes effect when line height scaling is enabled (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle)'s heightScale is set) or when text in different font sizes is mixed in a line (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle)'s fontSize is set). If there is superscript or subscript text in the line (that is, text with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle)'s badgeType attribute set), the superscript or subscript text participates in vertical alignment in the same way as normal text.
 
 **Type:** TextVerticalAlign
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -479,10 +395,6 @@ Word break type. The default value is **BREAK_WORD**.
 **Type:** WordBreak
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

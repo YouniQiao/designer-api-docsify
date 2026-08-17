@@ -4,9 +4,7 @@ Implements the **FullScreenExitHandler** object to notify you that the **Web** c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class FullScreenExitHandler--><!--Device-unnamed-export declare class FullScreenExitHandler-End-->
 
@@ -22,9 +20,7 @@ Constructs a **FullScreenExitHandler** API.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-FullScreenExitHandler-constructor()--><!--Device-FullScreenExitHandler-constructor()-End-->
 
@@ -40,9 +36,7 @@ Exits full screen mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-FullScreenExitHandler-exitFullScreen(): void--><!--Device-FullScreenExitHandler-exitFullScreen(): void-End-->
 

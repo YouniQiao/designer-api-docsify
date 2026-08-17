@@ -4,10 +4,6 @@ Implements a PiP controller that starts, stops, or updates a PiP window and regi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-PiPWindow-interface PiPController--><!--Device-PiPWindow-interface PiPController-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -27,10 +23,6 @@ isPiPSupported(): boolean
 Returns a Boolean value that indicates whether picture-in-picture is supported
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-PiPController-isPiPSupported(): boolean--><!--Device-PiPController-isPiPSupported(): boolean-End-->
 

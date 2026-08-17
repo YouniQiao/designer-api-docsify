@@ -4,10 +4,6 @@ Enumerates accessibility event types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum AccessibilityEventType--><!--Device-unnamed-export enum AccessibilityEventType-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,10 +19,6 @@ TYPE_ACCESSIBILITY_FOCUS = 0
 Event of gaining an accessibility focus.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_ACCESSIBILITY_FOCUS = 0--><!--Device-AccessibilityEventType-TYPE_ACCESSIBILITY_FOCUS = 0-End-->
 
@@ -44,10 +36,6 @@ Event of clearing an accessibility focus.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_ACCESSIBILITY_FOCUS_CLEAR = 1--><!--Device-AccessibilityEventType-TYPE_ACCESSIBILITY_FOCUS_CLEAR = 1-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -63,10 +51,6 @@ TYPE_CLICK = 2
 Event of clicking a component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_CLICK = 2--><!--Device-AccessibilityEventType-TYPE_CLICK = 2-End-->
 
@@ -84,10 +68,6 @@ Long press component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_LONG_CLICK = 3--><!--Device-AccessibilityEventType-TYPE_LONG_CLICK = 3-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -103,10 +83,6 @@ TYPE_SELECT = 4
 Event of selecting a component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SELECT = 4--><!--Device-AccessibilityEventType-TYPE_SELECT = 4-End-->
 
@@ -124,10 +100,6 @@ Event indicating the mouse pointer enters a component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_HOVER_ENTER = 5--><!--Device-AccessibilityEventType-TYPE_HOVER_ENTER = 5-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -143,10 +115,6 @@ TYPE_HOVER_EXIT = 6
 Event indicating the mouse pointer exits a component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_HOVER_EXIT = 6--><!--Device-AccessibilityEventType-TYPE_HOVER_EXIT = 6-End-->
 
@@ -164,10 +132,6 @@ Event indicating the component gains a focus.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_FOCUS = 7--><!--Device-AccessibilityEventType-TYPE_FOCUS = 7-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -183,10 +147,6 @@ TYPE_TEXT_UPDATE = 8
 Event indicating the component text has been updated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_TEXT_UPDATE = 8--><!--Device-AccessibilityEventType-TYPE_TEXT_UPDATE = 8-End-->
 
@@ -204,10 +164,6 @@ Event indicating the selected text has been updated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_TEXT_SELECTION_UPDATE = 9--><!--Device-AccessibilityEventType-TYPE_TEXT_SELECTION_UPDATE = 9-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -223,10 +179,6 @@ TYPE_SCROLL = 10
 Event of scrolling the view.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SCROLL = 10--><!--Device-AccessibilityEventType-TYPE_SCROLL = 10-End-->
 
@@ -244,10 +196,6 @@ Event of auto-focusing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY = 11--><!--Device-AccessibilityEventType-TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY = 11-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -263,10 +211,6 @@ TYPE_ANNOUNCE_FOR_ACCESSIBILITY = 12
 Event of auto-broadcasting.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_ANNOUNCE_FOR_ACCESSIBILITY = 12--><!--Device-AccessibilityEventType-TYPE_ANNOUNCE_FOR_ACCESSIBILITY = 12-End-->
 
@@ -284,10 +228,6 @@ Active focus, and the focus request will not be interrupted.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY_NOT_INTERRUPT = 13--><!--Device-AccessibilityEventType-TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY_NOT_INTERRUPT = 13-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -303,10 +243,6 @@ TYPE_ANNOUNCE_FOR_ACCESSIBILITY_NOT_INTERRUPT = 14
 Active announcement, and the announcement will not be interrupted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_ANNOUNCE_FOR_ACCESSIBILITY_NOT_INTERRUPT = 14--><!--Device-AccessibilityEventType-TYPE_ANNOUNCE_FOR_ACCESSIBILITY_NOT_INTERRUPT = 14-End-->
 
@@ -324,10 +260,6 @@ Event indicating the component information changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_ELEMENT_INFO_CHANGE = 15--><!--Device-AccessibilityEventType-TYPE_ELEMENT_INFO_CHANGE = 15-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -343,10 +275,6 @@ TYPE_SCROLLING = 16
 Event indicating an item is scrolled out of the screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SCROLLING = 16--><!--Device-AccessibilityEventType-TYPE_SCROLLING = 16-End-->
 
@@ -364,10 +292,6 @@ Event of adding windows.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_WINDOW_ADD = 17--><!--Device-AccessibilityEventType-TYPE_WINDOW_ADD = 17-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -383,10 +307,6 @@ TYPE_WINDOW_REMOVE = 18
 Event of deleting windows.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_WINDOW_REMOVE = 18--><!--Device-AccessibilityEventType-TYPE_WINDOW_REMOVE = 18-End-->
 
@@ -404,10 +324,6 @@ Event indicating the window boundary changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_WINDOW_BOUNDS = 19--><!--Device-AccessibilityEventType-TYPE_WINDOW_BOUNDS = 19-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -423,10 +339,6 @@ TYPE_WINDOW_ACTIVE = 20
 Window active state changed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_WINDOW_ACTIVE = 20--><!--Device-AccessibilityEventType-TYPE_WINDOW_ACTIVE = 20-End-->
 
@@ -444,10 +356,6 @@ Event indicating the window focus changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_WINDOW_FOCUS = 21--><!--Device-AccessibilityEventType-TYPE_WINDOW_FOCUS = 21-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -463,10 +371,6 @@ TYPE_WINDOW_PROPERTY = 22
 Event indicating the window properties change, such as opacity, size, and so on.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_WINDOW_PROPERTY = 22--><!--Device-AccessibilityEventType-TYPE_WINDOW_PROPERTY = 22-End-->
 
@@ -484,10 +388,6 @@ Event indicating the window layer changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_WINDOW_LAYER = 23--><!--Device-AccessibilityEventType-TYPE_WINDOW_LAYER = 23-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -503,10 +403,6 @@ TYPE_TOUCH_BEGIN = 24
 Event indicating a touch begins.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_TOUCH_BEGIN = 24--><!--Device-AccessibilityEventType-TYPE_TOUCH_BEGIN = 24-End-->
 
@@ -524,10 +420,6 @@ Event indicating a touch ends.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_TOUCH_END = 25--><!--Device-AccessibilityEventType-TYPE_TOUCH_END = 25-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -543,10 +435,6 @@ TYPE_PAGE_CONTENT_UPDATE = 26
 Page content updated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_PAGE_CONTENT_UPDATE = 26--><!--Device-AccessibilityEventType-TYPE_PAGE_CONTENT_UPDATE = 26-End-->
 
@@ -564,10 +452,6 @@ Page state updated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_PAGE_STATE_UPDATE = 27--><!--Device-AccessibilityEventType-TYPE_PAGE_STATE_UPDATE = 27-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -583,10 +467,6 @@ TYPE_PAGE_OPEN = 28
 Event of opening a page.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_PAGE_OPEN = 28--><!--Device-AccessibilityEventType-TYPE_PAGE_OPEN = 28-End-->
 
@@ -604,10 +484,6 @@ Event of closing a page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_PAGE_CLOSE = 29--><!--Device-AccessibilityEventType-TYPE_PAGE_CLOSE = 29-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -623,10 +499,6 @@ TYPE_SWIPE_LEFT = 30
 Swipe left gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SWIPE_LEFT = 30--><!--Device-AccessibilityEventType-TYPE_SWIPE_LEFT = 30-End-->
 
@@ -644,10 +516,6 @@ Event indicating the swipe-left-then-right gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_SWIPE_LEFT_THEN_RIGHT = 31--><!--Device-AccessibilityEventType-TYPE_SWIPE_LEFT_THEN_RIGHT = 31-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -663,10 +531,6 @@ TYPE_SWIPE_LEFT_THEN_UP = 32
 Event indicating the swipe-left-then-up gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SWIPE_LEFT_THEN_UP = 32--><!--Device-AccessibilityEventType-TYPE_SWIPE_LEFT_THEN_UP = 32-End-->
 
@@ -684,10 +548,6 @@ Event indicating the swipe-left-then-down gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_SWIPE_LEFT_THEN_DOWN = 33--><!--Device-AccessibilityEventType-TYPE_SWIPE_LEFT_THEN_DOWN = 33-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -703,10 +563,6 @@ TYPE_SWIPE_RIGHT = 34
 Swipe right gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SWIPE_RIGHT = 34--><!--Device-AccessibilityEventType-TYPE_SWIPE_RIGHT = 34-End-->
 
@@ -724,10 +580,6 @@ Event indicating the swipe-right-then-left gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_SWIPE_RIGHT_THEN_LEFT = 35--><!--Device-AccessibilityEventType-TYPE_SWIPE_RIGHT_THEN_LEFT = 35-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -743,10 +595,6 @@ TYPE_SWIPE_RIGHT_THEN_UP = 36
 Event indicating the swipe-right-then-up gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SWIPE_RIGHT_THEN_UP = 36--><!--Device-AccessibilityEventType-TYPE_SWIPE_RIGHT_THEN_UP = 36-End-->
 
@@ -764,10 +612,6 @@ Event indicating the swipe-right-then-down gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_SWIPE_RIGHT_THEN_DOWN = 37--><!--Device-AccessibilityEventType-TYPE_SWIPE_RIGHT_THEN_DOWN = 37-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -783,10 +627,6 @@ TYPE_SWIPE_UP = 38
 Swipe up gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SWIPE_UP = 38--><!--Device-AccessibilityEventType-TYPE_SWIPE_UP = 38-End-->
 
@@ -804,10 +644,6 @@ Event indicating the swipe-up-then-left gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_SWIPE_UP_THEN_LEFT = 39--><!--Device-AccessibilityEventType-TYPE_SWIPE_UP_THEN_LEFT = 39-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -823,10 +659,6 @@ TYPE_SWIPE_UP_THEN_RIGHT = 40
 Event indicating the swipe-up-then-right gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SWIPE_UP_THEN_RIGHT = 40--><!--Device-AccessibilityEventType-TYPE_SWIPE_UP_THEN_RIGHT = 40-End-->
 
@@ -844,10 +676,6 @@ Event indicating the swipe-up-then-down gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_SWIPE_UP_THEN_DOWN = 41--><!--Device-AccessibilityEventType-TYPE_SWIPE_UP_THEN_DOWN = 41-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -863,10 +691,6 @@ TYPE_SWIPE_DOWN = 42
 Swipe down gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SWIPE_DOWN = 42--><!--Device-AccessibilityEventType-TYPE_SWIPE_DOWN = 42-End-->
 
@@ -884,10 +708,6 @@ Event indicating the swipe-down-then-left gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_SWIPE_DOWN_THEN_LEFT = 43--><!--Device-AccessibilityEventType-TYPE_SWIPE_DOWN_THEN_LEFT = 43-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -903,10 +723,6 @@ TYPE_SWIPE_DOWN_THEN_RIGHT = 44
 Event indicating the swipe-down-then-right gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_SWIPE_DOWN_THEN_RIGHT = 44--><!--Device-AccessibilityEventType-TYPE_SWIPE_DOWN_THEN_RIGHT = 44-End-->
 
@@ -924,10 +740,6 @@ Event indicating the swipe-down-then-up gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_SWIPE_DOWN_THEN_UP = 45--><!--Device-AccessibilityEventType-TYPE_SWIPE_DOWN_THEN_UP = 45-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -943,10 +755,6 @@ TYPE_TWO_FINGER_SINGLE_TAP = 46
 Event indicating the two-finger single-tap gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_TWO_FINGER_SINGLE_TAP = 46--><!--Device-AccessibilityEventType-TYPE_TWO_FINGER_SINGLE_TAP = 46-End-->
 
@@ -964,10 +772,6 @@ Event indicating the two-finger double-tap gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_TWO_FINGER_DOUBLE_TAP = 47--><!--Device-AccessibilityEventType-TYPE_TWO_FINGER_DOUBLE_TAP = 47-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -983,10 +787,6 @@ TYPE_TWO_FINGER_DOUBLE_TAP_AND_HOLD = 48
 Event indicating the two-finger double-tap-and-hold gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_TWO_FINGER_DOUBLE_TAP_AND_HOLD = 48--><!--Device-AccessibilityEventType-TYPE_TWO_FINGER_DOUBLE_TAP_AND_HOLD = 48-End-->
 
@@ -1004,10 +804,6 @@ Event indicating the two-finger triple-tap gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_TWO_FINGER_TRIPLE_TAP = 49--><!--Device-AccessibilityEventType-TYPE_TWO_FINGER_TRIPLE_TAP = 49-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1023,10 +819,6 @@ TYPE_TWO_FINGER_TRIPLE_TAP_AND_HOLD = 50
 Event indicating the two-finger triple-tap-and-hold gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_TWO_FINGER_TRIPLE_TAP_AND_HOLD = 50--><!--Device-AccessibilityEventType-TYPE_TWO_FINGER_TRIPLE_TAP_AND_HOLD = 50-End-->
 
@@ -1044,10 +836,6 @@ Event indicating the three-finger single-tap gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_THREE_FINGER_SINGLE_TAP = 51--><!--Device-AccessibilityEventType-TYPE_THREE_FINGER_SINGLE_TAP = 51-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1063,10 +851,6 @@ TYPE_THREE_FINGER_DOUBLE_TAP = 52
 Event indicating the three-finger double-tap gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_THREE_FINGER_DOUBLE_TAP = 52--><!--Device-AccessibilityEventType-TYPE_THREE_FINGER_DOUBLE_TAP = 52-End-->
 
@@ -1084,10 +868,6 @@ Event indicating the three-finger double-tap-and-hold gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_THREE_FINGER_DOUBLE_TAP_AND_HOLD = 53--><!--Device-AccessibilityEventType-TYPE_THREE_FINGER_DOUBLE_TAP_AND_HOLD = 53-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1103,10 +883,6 @@ TYPE_THREE_FINGER_TRIPLE_TAP = 54
 Event indicating the three-finger triple-tap gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_THREE_FINGER_TRIPLE_TAP = 54--><!--Device-AccessibilityEventType-TYPE_THREE_FINGER_TRIPLE_TAP = 54-End-->
 
@@ -1124,10 +900,6 @@ Event indicating the three-finger triple-tap-and-hold gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_THREE_FINGER_TRIPLE_TAP_AND_HOLD = 55--><!--Device-AccessibilityEventType-TYPE_THREE_FINGER_TRIPLE_TAP_AND_HOLD = 55-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1143,10 +915,6 @@ TYPE_FOUR_FINGER_SINGLE_TAP = 56
 Event indicating the four-finger single-tap gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_SINGLE_TAP = 56--><!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_SINGLE_TAP = 56-End-->
 
@@ -1164,10 +932,6 @@ Event indicating the four-finger double-tap gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_DOUBLE_TAP = 57--><!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_DOUBLE_TAP = 57-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1183,10 +947,6 @@ TYPE_FOUR_FINGER_DOUBLE_TAP_AND_HOLD = 58
 Event indicating the four-finger double-tap-and-hold gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_DOUBLE_TAP_AND_HOLD = 58--><!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_DOUBLE_TAP_AND_HOLD = 58-End-->
 
@@ -1204,10 +964,6 @@ Event indicating the four-finger triple-tap gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_TRIPLE_TAP = 59--><!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_TRIPLE_TAP = 59-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1223,10 +979,6 @@ TYPE_FOUR_FINGER_TRIPLE_TAP_AND_HOLD = 60
 Event indicating the four-finger triple-tap-and-hold gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_TRIPLE_TAP_AND_HOLD = 60--><!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_TRIPLE_TAP_AND_HOLD = 60-End-->
 
@@ -1244,10 +996,6 @@ Event indicating the three-finger swipe-up gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_THREE_FINGER_SWIPE_UP = 61--><!--Device-AccessibilityEventType-TYPE_THREE_FINGER_SWIPE_UP = 61-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1263,10 +1011,6 @@ TYPE_THREE_FINGER_SWIPE_DOWN = 62
 Event indicating the three-finger swipe-down gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_THREE_FINGER_SWIPE_DOWN = 62--><!--Device-AccessibilityEventType-TYPE_THREE_FINGER_SWIPE_DOWN = 62-End-->
 
@@ -1284,10 +1028,6 @@ Event indicating the three-finger swipe-left gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_THREE_FINGER_SWIPE_LEFT = 63--><!--Device-AccessibilityEventType-TYPE_THREE_FINGER_SWIPE_LEFT = 63-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1303,10 +1043,6 @@ TYPE_THREE_FINGER_SWIPE_RIGHT = 64
 Event indicating the three-finger swipe-right gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_THREE_FINGER_SWIPE_RIGHT = 64--><!--Device-AccessibilityEventType-TYPE_THREE_FINGER_SWIPE_RIGHT = 64-End-->
 
@@ -1324,10 +1060,6 @@ Event indicating the four-finger swipe-up gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_SWIPE_UP = 65--><!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_SWIPE_UP = 65-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1343,10 +1075,6 @@ TYPE_FOUR_FINGER_SWIPE_DOWN = 66
 Event indicating the four-finger swipe-down gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_SWIPE_DOWN = 66--><!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_SWIPE_DOWN = 66-End-->
 
@@ -1364,10 +1092,6 @@ Event indicating the four-finger swipe-left gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_SWIPE_LEFT = 67--><!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_SWIPE_LEFT = 67-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1383,10 +1107,6 @@ TYPE_FOUR_FINGER_SWIPE_RIGHT = 68
 Event indicating the four-finger swipe-right gesture.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_SWIPE_RIGHT = 68--><!--Device-AccessibilityEventType-TYPE_FOUR_FINGER_SWIPE_RIGHT = 68-End-->
 
@@ -1404,10 +1124,6 @@ Page active state changed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityEventType-TYPE_PAGE_ACTIVE = 69--><!--Device-AccessibilityEventType-TYPE_PAGE_ACTIVE = 69-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1423,10 +1139,6 @@ TYPE_NOTIFICATION_UPDATE = 70
 Notification content or state updated.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1446,10 +1158,6 @@ Focus becomes invisible.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityEventType-TYPE_FOCUS_INVISIBLE = 71--><!--Device-AccessibilityEventType-TYPE_FOCUS_INVISIBLE = 71-End-->
@@ -1468,10 +1176,6 @@ Single-finger double tap gesture.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityEventType-TYPE_ONE_FINGER_DOUBLE_TAP = 72--><!--Device-AccessibilityEventType-TYPE_ONE_FINGER_DOUBLE_TAP = 72-End-->
@@ -1489,10 +1193,6 @@ TYPE_TOUCH_GUIDE_GESTURE = 73
 Touch browsing gesture event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

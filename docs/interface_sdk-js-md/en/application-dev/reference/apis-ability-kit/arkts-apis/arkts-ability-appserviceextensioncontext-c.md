@@ -1,14 +1,10 @@
 # AppServiceExtensionContext
 
-The AppServiceExtensionContext module provides the context environment for the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext). AppServiceExtensionContext provides APIs to connect to and disconnect from a ServiceExtensionAbility (an ExtensionAbility for system application background services), as well as to terminate an AppServiceExtensionAbility. Note that a ServiceExtensionAbility can only be developed by system applications and supports connections from third- party applications. > **NOTE：**> > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
+The AppServiceExtensionContext module provides the context environment for the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#appserviceextensionability). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext). AppServiceExtensionContext provides APIs to connect to and disconnect from a ServiceExtensionAbility (an ExtensionAbility for system application background services), as well as to terminate an AppServiceExtensionAbility. Note that a ServiceExtensionAbility can only be developed by system applications and supports connections from third- party applications. > **NOTE：**> > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
 **Inheritance/Implementation:** AppServiceExtensionContext extends ExtensionContext
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class AppServiceExtensionContext--><!--Device-unnamed-declare class AppServiceExtensionContext-End-->
 
@@ -23,10 +19,6 @@ connectServiceExtensionAbility(want: Want, callback: ConnectOptions): long
 Connects this AppServiceExtensionAbility to a ServiceExtensionAbility. It enables communication with the ServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the ServiceExtensionAbility. This API can be called only by the main thread.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +52,7 @@ Connects this AppServiceExtensionAbility to a ServiceExtensionAbility. It enable
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AppServiceExtensionAbility, Want, common } from '@kit.AbilityKit';
@@ -127,10 +119,6 @@ Disconnects this AppServiceExtensionAbility from a ServiceExtensionAbility. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AppServiceExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-AppServiceExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
@@ -141,7 +129,7 @@ Disconnects this AppServiceExtensionAbility from a ServiceExtensionAbility. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | long | Yes | Connection ID returned by [connectServiceExtensionAbility](#connectServiceExtensionAbility). |
+| connection | long | Yes | Connection ID returned by [connectServiceExtensionAbility](#connectserviceextensionability). |
 
 **Return value:**
 
@@ -156,9 +144,9 @@ Disconnects this AppServiceExtensionAbility from a ServiceExtensionAbility. This
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
-For details, see [connectServiceExtensionAbility](#connectServiceExtensionAbility).
+For details, see [connectServiceExtensionAbility](#connectserviceextensionability).
 
 ## startAbility
 
@@ -169,10 +157,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 Starts the UIAbility. This API can be called only by the main thread. It uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,7 +204,7 @@ Starts the UIAbility. This API can be called only by the main thread. It uses a 
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AppServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -266,10 +250,6 @@ Terminates this AppServiceExtensionAbility. This API can be called only by the m
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AppServiceExtensionContext-terminateSelf(): Promise<void>--><!--Device-AppServiceExtensionContext-terminateSelf(): Promise<void>-End-->
@@ -290,7 +270,7 @@ Terminates this AppServiceExtensionAbility. This API can be called only by the m
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';

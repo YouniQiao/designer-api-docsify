@@ -16,10 +16,6 @@ Allocates a new un-pooled FastBuffer for a fixed size bytes. The FastBuffer will
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function allocUninitialized(size: number): FastBuffer--><!--Device-fastbuffer-function allocUninitialized(size: number): FastBuffer-End-->
@@ -38,7 +34,7 @@ Allocates a new un-pooled FastBuffer for a fixed size bytes. The FastBuffer will
 | --- | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new allocated FastBuffer |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

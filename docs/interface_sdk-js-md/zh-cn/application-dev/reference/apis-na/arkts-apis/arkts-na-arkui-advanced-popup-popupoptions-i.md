@@ -4,9 +4,7 @@ PopupOptions定义Popup的具体样式参数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export interface PopupOptions--><!--Device-unnamed-export interface PopupOptions-End-->
 
@@ -27,9 +25,7 @@ buttons?: [
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,9 +47,7 @@ direction?: Direction
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,13 +63,11 @@ icon?: PopupIconOptions
 
 设置popup图标。 **说明：** 当width和height设置异常值或0时不显示。 默认不显示图标。
 
-**类型：** [PopupIconOptions](arkts-na-arkui-advanced-popup-popupiconoptions-i.md)
+**类型：** [PopupIconOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,9 +89,7 @@ maxWidth?: Dimension
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,13 +105,11 @@ message?: PopupTextOptions
 
 设置popup内容文本。 **说明：** message不支持设置fontWeight。 默认不显示内容文本。 **ArkTS模式：** 该接口仅适用于ArkTS-Sta。 **ArkTS-Sta起始版本：** 23
 
-**类型：** [PopupTextOptions](arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
+**类型：** [PopupTextOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -141,9 +129,7 @@ onClose?: VoidCallback
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -165,9 +151,7 @@ showClose?: boolean | Resource
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -183,13 +167,11 @@ title?: PopupTextOptions
 
 设置popup标题文本。 默认不显示标题文本。
 
-**类型：** [PopupTextOptions](arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
+**类型：** [PopupTextOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

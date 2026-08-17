@@ -4,10 +4,6 @@ Describes the measurement information of a single line of text in the text layou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface LineMetrics--><!--Device-text-interface LineMetrics-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Text ascent height, which refers to the distance from the baseline to the top of
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-LineMetrics-ascent: double--><!--Device-LineMetrics-ascent: double-End-->
@@ -51,10 +43,6 @@ Y coordinate of the baseline in the line relative to the top of the paragraph, i
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -74,10 +62,6 @@ Text descent height, which refers to the distance from the baseline to the botto
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-LineMetrics-descent: double--><!--Device-LineMetrics-descent: double-End-->
@@ -95,10 +79,6 @@ End index of the line in the text buffer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -118,10 +98,6 @@ Height of the current line, in physical pixels (px). The calculation method is `
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-LineMetrics-height: double--><!--Device-LineMetrics-height: double-End-->
@@ -139,10 +115,6 @@ Left edge position of a line, in physical pixels (px). The right edge is the val
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -162,10 +134,6 @@ Line number, starting from 0.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-LineMetrics-lineNumber: int--><!--Device-LineMetrics-lineNumber: int-End-->
@@ -183,10 +151,6 @@ Mapping between the text index range and the associated font measurement informa
 **Type:** Map&lt;int, [RunMetrics](arkts-arkgraphics2d-text-runmetrics-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -206,10 +170,6 @@ Start index of the line in the text buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-LineMetrics-startIndex: int--><!--Device-LineMetrics-startIndex: int-End-->
@@ -228,10 +188,6 @@ Height from the top to the current line, in physical pixels (px).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-LineMetrics-topHeight: double--><!--Device-LineMetrics-topHeight: double-End-->
@@ -249,10 +205,6 @@ Width of a line, in physical pixels (px).
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

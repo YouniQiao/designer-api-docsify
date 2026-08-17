@@ -10,10 +10,6 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void--><!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -31,7 +27,7 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void
 | --- | --- |
 | [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) | The number of GWP-ASAN applications of this device overflowed after last boot. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
@@ -68,10 +64,6 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void--><!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -89,7 +81,7 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 | --- | --- |
 | [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) | The number of GWP-ASAN applications of this device overflowed after last boot. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

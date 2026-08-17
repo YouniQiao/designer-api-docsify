@@ -4,10 +4,6 @@ Provides character attribute management capabilities, such as checking whether a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class Unicode--><!--Device-i18n-export class Unicode-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Detects the encoding information of the input byte stream.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -50,7 +42,7 @@ Detects the encoding information of the input byte stream.
 
 | Type | Description |
 | --- | --- |
-| [EncodingInfo](../../apis-na/arkts-apis/arkts-na-i18n-encodinginfo-i.md) | An object containing the detected encoding name and detection confidence level. |
+| [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) | An object containing the detected encoding name and detection confidence level. |
 
 ## getType
 
@@ -61,10 +53,6 @@ static getType(ch: string): string
 Obtains the type of the input character.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,7 +72,7 @@ Obtains the type of the input character.
 | --- | --- |
 | string | Type of the input character.U_UNASSIGNED： Non-category for unassigned and non-character code points. The value can be |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -101,10 +89,6 @@ static isDigit(ch: string): boolean
 Checks whether the input character is a digit.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -124,7 +108,7 @@ Checks whether the input character is a digit.
 | --- | --- |
 | boolean | true** if the input character is a digit, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -141,10 +125,6 @@ static isIdeograph(ch: string): boolean
 Checks whether the input character is an ideographic character.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -164,7 +144,7 @@ Checks whether the input character is an ideographic character.
 | --- | --- |
 | boolean | true** if the input character an ideographic character, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -181,10 +161,6 @@ static isLetter(ch: string): boolean
 Checks whether the input character is a letter.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -204,7 +180,7 @@ Checks whether the input character is a letter.
 | --- | --- |
 | boolean | true** if the input character a letter, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -221,10 +197,6 @@ static isLowerCase(ch: string): boolean
 Checks whether the input character is a lowercase letter.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -244,7 +216,7 @@ Checks whether the input character is a lowercase letter.
 | --- | --- |
 | boolean | true** if the input character a lowercase letter, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -261,10 +233,6 @@ static isRTL(ch: string): boolean
 Checks whether the input character is of the right to left (RTL) language.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -284,7 +252,7 @@ Checks whether the input character is of the right to left (RTL) language.
 | --- | --- |
 | boolean | true** if the input character is of the RTL language, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -301,10 +269,6 @@ static isSpaceChar(ch: string): boolean
 Checks whether the input character is a space.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -324,7 +288,7 @@ Checks whether the input character is a space.
 | --- | --- |
 | boolean | true** if the input character is a space, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -341,10 +305,6 @@ static isUpperCase(ch: string): boolean
 Checks whether the input character is an uppercase letter.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -364,7 +324,7 @@ Checks whether the input character is an uppercase letter.
 | --- | --- |
 | boolean | true** if the input character an uppercase letter, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -381,10 +341,6 @@ static isWhitespace(ch: string): boolean
 Checks whether the input character is a whitespace.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -404,7 +360,7 @@ Checks whether the input character is a whitespace.
 | --- | --- |
 | boolean | true** if the input character is a white space, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

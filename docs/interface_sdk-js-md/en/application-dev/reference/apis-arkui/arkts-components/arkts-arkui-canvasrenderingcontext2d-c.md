@@ -1,14 +1,10 @@
 # CanvasRenderingContext2D
 
-After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component. > **NOTE：**> > * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent > lifecycle between them. > > * When you call drawing APIs in this module, the commands are stored in the associated **Canvas** > component's command queue. These commands are only executed when the current frame enters the > rendering phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** > component is invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent > command queue buildup and excessive memory usage. For best practices, see > [Controlling Canvas Rendering Based on Component Visibility](../../../ui/arkts-drawing-customization-on-canvas.md#controlling-canvas-rendering-based-on-component-visibility). > > * The following path-related APIs apply only to paths created within **CanvasRenderingContext2D** > and do not affect paths defined in > [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#OffscreenCanvasRenderingContext2D) > or [Path2D](arkts-arkui-path2d-c.md#Path2D): > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath), > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc), > [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20). > > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU > causes significant performance degradation.
+After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component. > **NOTE：**> > * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent > lifecycle between them. > > * When you call drawing APIs in this module, the commands are stored in the associated **Canvas** > component's command queue. These commands are only executed when the current frame enters the > rendering phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** > component is invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent > command queue buildup and excessive memory usage. For best practices, see > [Controlling Canvas Rendering Based on Component Visibility](../../../ui/arkts-drawing-customization-on-canvas.md#controlling-canvas-rendering-based-on-component-visibility). > > * The following path-related APIs apply only to paths created within **CanvasRenderingContext2D** > and do not affect paths defined in > [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#offscreencanvasrenderingcontext2d) > or [Path2D](arkts-arkui-path2d-c.md#path2d): > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath), > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc), > [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20). > > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU > causes significant performance degradation.
 
-**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#CanvasRenderer)
+**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#canvasrenderer)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class CanvasRenderingContext2D--><!--Device-unnamed-declare class CanvasRenderingContext2D-End-->
 
@@ -23,10 +19,6 @@ constructor(settings?: RenderingContextSettings)
 Constructs a canvas object, which supports configuration of parameters for the **CanvasRenderingContext2D** object.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,10 +43,6 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 Creates a **CanvasRenderingContext2D** object, allowing for initial configuration of rendering parameters and unit mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +70,6 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext** object. This **CanvasRenderingContext2D** object is bound to the same **Canvas** component as the input **DrawingRenderingContext** object. > **NOTE：**> > - The **CanvasRenderingContext2D** object obtained via this API cannot be used as a > parameter to create a Canvas > component. Otherwise, the application crashes. > > - If the input **DrawingRenderingContext** object is not bound to a **Canvas** component, > an error code is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,10 +108,6 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound 
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -158,10 +138,6 @@ off(type: 'onDetach', callback?: Callback<void>): void
 Unsubscribes from the event when a **CanvasRenderingContext2D** object is unbound from a **Canvas** component.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,10 +170,6 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -229,10 +201,6 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -263,10 +231,6 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set enableAnalyzer to **true** to enable the image AI analyzer.<br>Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.<br> Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**. > **NOTE：**> > The image analysis type cannot be dynamically modified. > When image changes are detected, the analysis result is automatically destroyed. You can > call this API again to start analysis. > This API depends on device capabilities. If it is called on an incompatible device, an > error code is returned.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -306,10 +270,6 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -327,10 +287,6 @@ toDataURL(type?: string, quality?: any): string
 Creates a data URL that contains a representation of an image. This API involves time-consuming memory copy. Therefore, avoid frequent calls to it.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -365,10 +321,6 @@ FrameNode instance of the **Canvas** component associated with **CanvasRendering
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -389,10 +341,6 @@ Component height. Default unit: vp
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -412,10 +360,6 @@ Component width. Default unit: vp
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

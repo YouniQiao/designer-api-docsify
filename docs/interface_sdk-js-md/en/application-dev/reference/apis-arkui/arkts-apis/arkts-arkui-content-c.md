@@ -1,12 +1,8 @@
 # Content
 
-Defines the base class for ComponentContent and [NodeContent](../../apis-na/arkts-apis/arkts-na-nodecontent-c.md#NodeContent).
+Defines the base class for ComponentContent and [NodeContent](../../apis-na/arkts-apis/arkts-na-nodecontent-c.md#nodecontent).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

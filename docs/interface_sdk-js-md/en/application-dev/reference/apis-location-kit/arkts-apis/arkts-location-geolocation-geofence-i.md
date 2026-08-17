@@ -4,11 +4,9 @@ Circular fence information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Geofence](arkts-location-geolocationmanager-geofence-i.md#Geofence)
+**Substitutes:** [Geofence](arkts-location-geolocationmanager-geofence-i.md#geofence)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,8 +30,6 @@ expiration: number
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [expiration](arkts-location-geolocationmanager-geofence-i.md#expiration)
@@ -51,8 +47,6 @@ latitude: number
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -72,8 +66,6 @@ longitude: number
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [longitude](arkts-location-geolocationmanager-geofence-i.md#longitude)
@@ -91,8 +83,6 @@ radius: number
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

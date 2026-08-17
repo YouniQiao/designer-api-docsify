@@ -1,14 +1,10 @@
 # FormEditExtensionContext
 
-**FormEditExtensionContext**, inherited from [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#UIExtensionContext), is the context of [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md#FormEditExtensionAbility). > **NOTE：**> - The APIs of this module can be used only in the stage model.
+**FormEditExtensionContext**, inherited from [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#uiextensioncontext), is the context of [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md#formeditextensionability). > **NOTE：**> - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** FormEditExtensionContext extends UIExtensionContext
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class FormEditExtensionContext--><!--Device-unnamed-declare class FormEditExtensionContext-End-->
 
@@ -23,10 +19,6 @@ startSecondPage(want: Want): Promise<AbilityResult>
 Starts the widget provider page to be edited. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,10 +57,6 @@ Starts UIAbility of the application to which a widget belongs. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormEditExtensionContext-startUIAbility(want: Want): Promise<void>--><!--Device-FormEditExtensionContext-startUIAbility(want: Want): Promise<void>-End-->
@@ -97,7 +85,7 @@ Starts UIAbility of the application to which a widget belongs. This API uses a p
 | [16000121](../../apis-ability-kit/errorcode-ability.md#16000121-target-component-is-not-a-uiability) | The target component type is not a UIAbility. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FormEditExtensionAbility } from '@kit.FormKit'

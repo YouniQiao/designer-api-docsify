@@ -4,8 +4,6 @@ Represents the configuration of a **KVManager** instance, including the bundle n
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** KVManagerConfig
@@ -26,8 +24,6 @@ Bundle name of the caller.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** bundleName
@@ -47,8 +43,6 @@ User information.
 **Type:** UserInfo
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

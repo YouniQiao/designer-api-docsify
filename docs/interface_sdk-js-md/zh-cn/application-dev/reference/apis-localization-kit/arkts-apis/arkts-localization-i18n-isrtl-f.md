@@ -10,10 +10,6 @@ export function isRTL(locale: string): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-i18n-export function isRTL(locale: string): boolean--><!--Device-i18n-export function isRTL(locale: string): boolean-End-->
@@ -32,7 +28,7 @@ export function isRTL(locale: string): boolean
 | --- | --- |
 | boolean | true表示该语言是镜像语言，false表示该语言不是镜像语言。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

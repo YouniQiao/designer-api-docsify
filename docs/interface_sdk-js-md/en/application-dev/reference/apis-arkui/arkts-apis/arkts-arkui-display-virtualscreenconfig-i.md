@@ -4,10 +4,6 @@ Describes the virtual screen parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-interface VirtualScreenConfig--><!--Device-display-interface VirtualScreenConfig-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Density of the virtual screen, in px. The value is a floating-point number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VirtualScreenConfig-density: double--><!--Device-VirtualScreenConfig-density: double-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -49,10 +41,6 @@ Height of the virtual screen, in px. The value must be a positive integer.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VirtualScreenConfig-height: long--><!--Device-VirtualScreenConfig-height: long-End-->
 
@@ -70,10 +58,6 @@ Name of the virtual screen, which can be customized.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VirtualScreenConfig-name: string--><!--Device-VirtualScreenConfig-name: string-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -89,10 +73,6 @@ Whether the virtual screen is focusable. **true** if focusable, **false** otherw
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VirtualScreenConfig-supportsFocus?: boolean--><!--Device-VirtualScreenConfig-supportsFocus?: boolean-End-->
 
@@ -110,10 +90,6 @@ Surface ID of the virtual screen, which can be customized. The maximum length fo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VirtualScreenConfig-surfaceId: string--><!--Device-VirtualScreenConfig-surfaceId: string-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -129,10 +105,6 @@ Width of the virtual screen, in px. The value must be a positive integer.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VirtualScreenConfig-width: long--><!--Device-VirtualScreenConfig-width: long-End-->
 

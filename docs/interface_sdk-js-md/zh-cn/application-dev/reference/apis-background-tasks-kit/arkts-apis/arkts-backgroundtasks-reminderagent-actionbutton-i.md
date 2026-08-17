@@ -4,11 +4,9 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#ActionButton)
+**替代接口：** [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#actionbutton)
 
 <!--Device-reminderAgent-interface ActionButton--><!--Device-reminderAgent-interface ActionButton-End-->
 
@@ -25,8 +23,6 @@ title: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -47,8 +43,6 @@ type: ActionButtonType
 **类型：** ActionButtonType
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 

@@ -10,11 +10,9 @@ function deleteId(uri: string): string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteId)
+**替代接口：** [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteid)
 
 <!--Device-dataUriUtils-function deleteId(uri: string): string--><!--Device-dataUriUtils-function deleteId(uri: string): string-End-->
 
@@ -32,7 +30,7 @@ function deleteId(uri: string): string
 | --- | --- |
 | string | 返回删除ID之后的uri对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import dataUriUtils from '@ohos.ability.dataUriUtils';

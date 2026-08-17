@@ -16,10 +16,6 @@ Set the specified network interface parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
 <!--Device-eap-function startEthEap(netId: number, profile: EthEapProfile): void--><!--Device-eap-function startEthEap(netId: number, profile: EthEapProfile): void-End-->
@@ -44,7 +40,7 @@ Set the specified network interface parameters.
 | [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
 | [33200001](../errorcode-net-eap.md#33200001-invalid-netid) | Invalid netId |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {eap} from '@kit.NetworkKit';

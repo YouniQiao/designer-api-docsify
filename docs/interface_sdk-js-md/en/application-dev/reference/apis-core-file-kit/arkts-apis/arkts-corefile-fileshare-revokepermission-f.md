@@ -16,10 +16,6 @@ Revoke persistence permissions for the URI
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.FILE_ACCESS_PERSIST
 
 <!--Device-fileShare-function revokePermission(policies: Array<PolicyInfo>): Promise<void>--><!--Device-fileShare-function revokePermission(policies: Array<PolicyInfo>): Promise<void>-End-->
@@ -48,7 +44,7 @@ Revoke persistence permissions for the URI
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | 13900042 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

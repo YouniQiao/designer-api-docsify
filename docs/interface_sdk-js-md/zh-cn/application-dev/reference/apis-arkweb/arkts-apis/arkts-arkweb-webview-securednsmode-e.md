@@ -4,10 +4,6 @@ Web组件使用HTTPDNS的模式。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-webview-enum SecureDnsMode--><!--Device-webview-enum SecureDnsMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -18,13 +14,9 @@ Web组件使用HTTPDNS的模式。
 OFF = 0
 ```
 
-不使用HTTPDNS， 可以用于撤销之前使用的HTTPDNS配置。
+不使用HTTPDNS，可以用于撤销之前使用的HTTPDNS配置。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,13 +30,9 @@ OFF = 0
 AUTO = 1
 ```
 
-自动模式，HttpDns的用户设置用于DNS解析，若解析失败，则使用系统DNS进行解析。
+自动模式，用于解析的设定DNS服务器不可用时，可自动回落至系统DNS。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -58,13 +46,9 @@ AUTO = 1
 SECURE_ONLY = 2
 ```
 
-强制使用设定的HTTPDNS服务器进行域名解析。如果解析失败，将不会回退到系统 DNS，这将直接导致页面加载失败。
+强制使用设定的HTTPDNS服务器进行域名解析。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -4,10 +4,6 @@ Describes data carried by the emitted event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-export interface EventData--><!--Device-emitter-export interface EventData-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -29,10 +25,6 @@ Data carried by the event.
 **Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; \| ESValue
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EventData-data?: Record<string, RecordData> | ESValue--><!--Device-EventData-data?: Record<string, RecordData> | ESValue-End-->
 

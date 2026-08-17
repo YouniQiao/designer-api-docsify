@@ -16,10 +16,6 @@ Obtains the device types that enable cross-device notification. This API uses a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function getDistributedDeviceList(): Promise<Array<string>>--><!--Device-notificationManager-function getDistributedDeviceList(): Promise<Array<string>>-End-->
@@ -41,7 +37,7 @@ Obtains the device types that enable cross-device notification. This API uses a 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

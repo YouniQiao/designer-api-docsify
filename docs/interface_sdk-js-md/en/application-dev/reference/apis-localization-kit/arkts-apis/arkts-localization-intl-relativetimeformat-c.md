@@ -4,8 +4,6 @@ Provides the relative time formatting capability.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
@@ -30,8 +28,6 @@ Creates a **RelativeTimeFormat** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
@@ -42,7 +38,7 @@ Creates a **RelativeTimeFormat** object.
 
 **System capability:** SystemCapability.Global.I18n
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -61,8 +57,6 @@ Creates a **RelativeTimeFormat** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
@@ -80,7 +74,7 @@ Creates a **RelativeTimeFormat** object.
 | locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
 | options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | No | Options for creating a **RelativeTimeFormat** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -102,8 +96,6 @@ format(value: double, unit: string): string
 Formats a relative time.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 20
 
@@ -128,7 +120,7 @@ Formats a relative time.
 | --- | --- |
 | string | Relative time after formatting. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -148,8 +140,6 @@ formatToParts(value: double, unit: string): Array<object>
 Formats the relative time
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 20
 
@@ -174,7 +164,7 @@ Formats the relative time
 | --- | --- |
 | Array&lt;object&gt; | Components of the formatted result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -194,8 +184,6 @@ Defines the formatting options for a **RelativeTimeFormat** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.RelativeTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions)
@@ -212,7 +200,7 @@ Defines the formatting options for a **RelativeTimeFormat** object.
 | --- | --- |
 | [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md) | Options for the **RelativeTimeFormat** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

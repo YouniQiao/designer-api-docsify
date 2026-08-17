@@ -10,10 +10,6 @@ Callback when the cellular data link connection state corresponding to the defau
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-observer-function onCellularDataConnectionStateChange(callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function onCellularDataConnectionStateChange(callback: Callback<DataConnectionStateInfo>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
@@ -22,7 +18,7 @@ Callback when the cellular data link connection state corresponding to the defau
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 是 | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 是 | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
 
 **错误码：**
 
@@ -34,7 +30,7 @@ Callback when the cellular data link connection state corresponding to the defau
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 observer.onCellularDataConnectionStateChange((data: observer.DataConnectionStateInfo) => {
@@ -56,10 +52,6 @@ Callback when the cellular data link connection state corresponding to the monit
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-observer-function onCellularDataConnectionStateChange(options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function onCellularDataConnectionStateChange(options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
@@ -69,7 +61,7 @@ Callback when the cellular data link connection state corresponding to the monit
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | ObserverOptions | 是 | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 是 | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 是 | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
 
 **错误码：**
 
@@ -81,7 +73,7 @@ Callback when the cellular data link connection state corresponding to the monit
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 observer.onCellularDataConnectionStateChange((data: observer.DataConnectionStateInfo) => {

@@ -1,12 +1,8 @@
 # SweepGradientOptions
 
-Defines the sweep gradient parameters. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. > **NOTE：**> > When using the **metricsColors** parameter, take note of the following: > > [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#ColorMetrics) represents the fill color, which can be constructed with a specified > color gamut attribute using the [colorWithSpace](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#colorWithSpace) API. **number** > represents the position of the specified color, with a value range of [0, 1.0]. **0** indicates the start of the > container where the gradient color is set, and **1.0** indicates the end of the container. To achieve multi-color > gradients, the **number** parameters in the array should be set in ascending order. If a later number is less than > a previous one, it is treated as equal to the previous value.
+Defines the sweep gradient parameters. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. > **NOTE：**> > When using the **metricsColors** parameter, take note of the following: > > [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#colormetrics) represents the fill color, which can be constructed with a specified > color gamut attribute using the [colorWithSpace](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#colorwithspace) API. **number** > represents the position of the specified color, with a value range of [0, 1.0]. **0** indicates the start of the > container where the gradient color is set, and **1.0** indicates the end of the container. To achieve multi-color > gradients, the **number** parameters in the array should be set in ascending order. If a later number is less than > a previous one, it is treated as equal to the previous value.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface SweepGradientOptions--><!--Device-unnamed-declare interface SweepGradientOptions-End-->
 
@@ -23,10 +19,6 @@ Center of the sweep gradient, that is, the coordinates relative to the upper lef
 **Type:** [Length, Length]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,10 +39,6 @@ Array of color stops, each of which consists of a color and its stop position. I
 **Type:** Array&lt;[ResourceColor, number]&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ End point of the sweep gradient. Default value: **0**. When specified as a strin
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -97,10 +81,6 @@ Array of color stops, each of which consists of a color and its stop position. I
 **Type:** Array&lt;[ColorMetrics, number]&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,10 +104,6 @@ Whether the colors are repeated. Default value: **false**. **true**: The colors 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -150,10 +126,6 @@ Rotation angle of the sweep gradient. Default value: **0**. When specified as a 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -175,10 +147,6 @@ Start point of the sweep gradient. Default value: **0**. When specified as a str
 **Default:** 0 [since 18]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

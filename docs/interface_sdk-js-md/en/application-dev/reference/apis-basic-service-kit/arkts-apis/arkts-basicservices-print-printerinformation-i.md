@@ -4,10 +4,6 @@ Defines the printer information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PrinterInformation--><!--Device-print-interface PrinterInformation-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -30,10 +26,6 @@ Printer alias.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterInformation-alias?: string--><!--Device-PrinterInformation-alias?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -49,10 +41,6 @@ Printer capabilities.
 **Type:** [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterInformation-capability?: PrinterCapabilities--><!--Device-PrinterInformation-capability?: PrinterCapabilities-End-->
 
@@ -70,10 +58,6 @@ Printer description.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterInformation-description?: string--><!--Device-PrinterInformation-description?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -89,10 +73,6 @@ Printer details.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterInformation-options?: string--><!--Device-PrinterInformation-options?: string-End-->
 
@@ -110,10 +90,6 @@ Printer preferences.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterInformation-preferences?: PrinterPreferences--><!--Device-PrinterInformation-preferences?: PrinterPreferences-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -129,10 +105,6 @@ Printer ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterInformation-printerId: string--><!--Device-PrinterInformation-printerId: string-End-->
 
@@ -150,10 +122,6 @@ Printer model.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterInformation-printerMake?: string--><!--Device-PrinterInformation-printerMake?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -169,10 +137,6 @@ Printer name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterInformation-printerName: string--><!--Device-PrinterInformation-printerName: string-End-->
 
@@ -190,10 +154,6 @@ Printer state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterInformation-printerStatus: PrinterStatus--><!--Device-PrinterInformation-printerStatus: PrinterStatus-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -209,10 +169,6 @@ Information about the selected driver when adding the printer.
 **Type:** [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -232,10 +188,6 @@ Protocol used when adding the printer.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrinterInformation-selectedProtocol?: string--><!--Device-PrinterInformation-selectedProtocol?: string-End-->
@@ -253,10 +205,6 @@ Printer URI.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterInformation-uri?: string--><!--Device-PrinterInformation-uri?: string-End-->
 

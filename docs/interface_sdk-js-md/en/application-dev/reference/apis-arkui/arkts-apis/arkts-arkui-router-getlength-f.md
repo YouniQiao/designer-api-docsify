@@ -12,15 +12,13 @@ import { router } from 'router';
 function getLength(): string
 ```
 
-Obtains the number of pages in the current stack. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
+Obtains the number of pages in the current stack. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getLength](arkts-arkui-arkui-uicontext-router-c.md#getLength)
+**Substitutes:** [getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,7 +32,7 @@ Obtains the number of pages in the current stack. > **NOTE：**> > - Since API v
 | --- | --- |
 | string | Number of pages in the stack. The maximum value is **32**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let size = this.getUIContext().getRouter().getLength();

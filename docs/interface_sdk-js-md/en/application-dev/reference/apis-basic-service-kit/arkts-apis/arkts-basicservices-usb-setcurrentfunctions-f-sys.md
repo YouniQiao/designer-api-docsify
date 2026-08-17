@@ -16,11 +16,9 @@ Sets the current USB function list in Device mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md#setCurrentFunctions-(System-API))
+**Substitutes:** [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md#setcurrentfunctions-system-api)
 
 <!--Device-usb-function setCurrentFunctions(funcs: FunctionType): Promise<boolean>--><!--Device-usb-function setCurrentFunctions(funcs: FunctionType): Promise<boolean>-End-->
 
@@ -40,7 +38,7 @@ Sets the current USB function list in Device mode.
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let funcs : number = usb.FunctionType.HDC;

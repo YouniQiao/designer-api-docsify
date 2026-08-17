@@ -10,10 +10,6 @@ function getSmscAddr(slotId: int, callback: AsyncCallback<string>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-sms-function getSmscAddr(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sms-function getSmscAddr(slotId: int, callback: AsyncCallback<string>): void-End-->
@@ -27,7 +23,7 @@ function getSmscAddr(slotId: int, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 指示用于获取SMSC地址的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 指示用于获取SMSC地址的回调函数。 |
 
 **错误码：**
 
@@ -41,7 +37,7 @@ function getSmscAddr(slotId: int, callback: AsyncCallback<string>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -63,10 +59,6 @@ function getSmscAddr(slotId: int): Promise<string>
 获取短信服务中心（SMSC）地址。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -100,7 +92,7 @@ function getSmscAddr(slotId: int): Promise<string>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

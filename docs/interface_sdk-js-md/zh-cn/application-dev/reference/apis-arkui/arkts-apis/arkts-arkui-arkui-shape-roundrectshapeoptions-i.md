@@ -1,14 +1,12 @@
 # RoundRectShapeOptions
 
-RectShape 带有半径的构造函数参数。 继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#ShapeSize)。
+RectShape 带有半径的构造函数参数。 继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#shapesize)。
 
-**继承/实现关系：** RoundRectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#ShapeSize)
+**继承/实现关系：** RoundRectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#shapesize)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export interface RoundRectShapeOptions--><!--Device-unnamed-export interface RoundRectShapeOptions-End-->
 
@@ -26,9 +24,7 @@ radiusHeight?: double | string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,9 +44,7 @@ radiusWidth?: double | string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

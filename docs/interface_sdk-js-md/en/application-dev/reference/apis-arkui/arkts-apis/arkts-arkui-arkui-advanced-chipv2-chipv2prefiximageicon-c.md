@@ -2,13 +2,9 @@
 
 Defines prefix icon.
 
-**Inheritance/Implementation:** ChipV2PrefixImageIcon extends [ChipV2ImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2imageicon-c.md#ChipV2ImageIcon)
+**Inheritance/Implementation:** ChipV2PrefixImageIcon extends [ChipV2ImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2imageicon-c.md#chipv2imageicon)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ChipV2PrefixImageIcon--><!--Device-unnamed-export declare class ChipV2PrefixImageIcon-End-->
 
@@ -54,10 +50,6 @@ constructor(config: ChipV2PrefixImageIconConfig)
 The constructor of ChipV2PrefixImageIcon
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

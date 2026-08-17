@@ -16,10 +16,6 @@ Stop WiFi/BT scanning and unsubscribe from WiFi/BT scanning information changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function offLocatingRequiredDataChange(callback?: Callback<Array<LocatingRequiredData>>): void--><!--Device-geoLocationManager-function offLocatingRequiredDataChange(callback?: Callback<Array<LocatingRequiredData>>): void-End-->

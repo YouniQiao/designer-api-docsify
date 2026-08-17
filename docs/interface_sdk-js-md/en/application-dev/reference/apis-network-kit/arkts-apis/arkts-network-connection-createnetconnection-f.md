@@ -16,10 +16,6 @@ Create a network connection with optional netSpecifier and timeout.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection--><!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection-End-->
@@ -30,7 +26,7 @@ Create a network connection with optional netSpecifier and timeout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | No | Indicates the network specifier. See [NetSpecifier](arkts-network-connection-netspecifier-i.md#NetSpecifier). |
+| netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | No | Indicates the network specifier. See [NetSpecifier](arkts-network-connection-netspecifier-i.md#netspecifier). |
 | timeout | int | No | The time in milliseconds to attempt looking for a suitable network before netUnavailable is called. |
 
 **Return value:**
@@ -39,7 +35,7 @@ Create a network connection with optional netSpecifier and timeout.
 | --- | --- |
 | [NetConnection](arkts-network-connection-netconnection-i.md) | the NetConnection of the NetSpecifier. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

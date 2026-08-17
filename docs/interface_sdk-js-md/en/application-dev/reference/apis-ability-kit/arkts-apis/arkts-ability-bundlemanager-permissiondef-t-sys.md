@@ -8,10 +8,6 @@ Defines the detailed information about the permissions defined in the [module.js
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type PermissionDef = _PermissionDef--><!--Device-bundleManager-export type PermissionDef = _PermissionDef-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

@@ -4,10 +4,6 @@ NotificationSubscriberExtensionAbility is the base class for notification subscr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class NotificationSubscriberExtensionAbility--><!--Device-unnamed-declare class NotificationSubscriberExtensionAbility-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -28,10 +24,6 @@ Called when notifications are canceled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NotificationSubscriberExtensionAbility-onCancelMessages(hashCodes: Array<string>): void--><!--Device-NotificationSubscriberExtensionAbility-onCancelMessages(hashCodes: Array<string>): void-End-->
@@ -44,7 +36,7 @@ Called when notifications are canceled.
 | --- | --- | --- | --- |
 | hashCodes | Array&lt;string&gt; | Yes | List of hash codes of the notifications to cancel, obtained through onReceiveMessage. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
@@ -66,17 +58,13 @@ Called when the notification subscription extension is destroyed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NotificationSubscriberExtensionAbility-onDestroy(): void--><!--Device-NotificationSubscriberExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
-## Examples
+**Examples**
 
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
@@ -98,10 +86,6 @@ Called when a notification is received.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NotificationSubscriberExtensionAbility-onReceiveMessage(notificationInfo: NotificationInfo): void--><!--Device-NotificationSubscriberExtensionAbility-onReceiveMessage(notificationInfo: NotificationInfo): void-End-->
@@ -114,7 +98,7 @@ Called when a notification is received.
 | --- | --- | --- | --- |
 | notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | Yes | Callback information about the notification received in the notification subscription extension capability. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
@@ -137,10 +121,6 @@ Context for the NotificationSubscriberExtensionAbility.
 **Type:** [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

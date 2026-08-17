@@ -10,9 +10,7 @@ Synchronizes the data of a file. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function fdatasyncSync(fd: int): void--><!--Device-fileIo-function fdatasyncSync(fd: int): void-End-->
 

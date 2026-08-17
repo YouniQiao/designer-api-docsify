@@ -1,12 +1,8 @@
 # ImageReceiver
 
-ImageReceiver类，用于获取组件surface id、接收最新的图片和读取下一张图片以及释放ImageReceiver实例。ImageReceiver作为图片的接收方和消费者，其参数属性实际上不会对接收到的图片产生影响。 图片属性的配置应在发送方和生产者上进行，如相机预览流 [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput) 。 在调用以下方法前需要先通过[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createImageReceiver)创建ImageReceiver实例。 从API version 23开始，更推荐使用[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createImageReceiver)，通过传入 [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md#ImageReceiverOptions)创建ImageReceiver实例。 由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](#release) 方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
+ImageReceiver类，用于获取组件surface id、接收最新的图片和读取下一张图片以及释放ImageReceiver实例。ImageReceiver作为图片的接收方和消费者，其参数属性实际上不会对接收到的图片产生影响。 图片属性的配置应在发送方和生产者上进行，如相机预览流 [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput) 。 在调用以下方法前需要先通过[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver)创建ImageReceiver实例。 从API version 23开始，更推荐使用[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver)，通过传入 [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md#imagereceiveroptions)创建ImageReceiver实例。 由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](#release) 方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-image-interface ImageReceiver--><!--Device-image-interface ImageReceiver-End-->
 
@@ -22,10 +18,6 @@ getReceivingSurfaceId(callback: AsyncCallback<string>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ImageReceiver-getReceivingSurfaceId(callback: AsyncCallback<string>): void--><!--Device-ImageReceiver-getReceivingSurfaceId(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
@@ -34,7 +26,7 @@ getReceivingSurfaceId(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，当获取surface id成功，err为undefined，data为获取到的surface id；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，当获取surface id成功，err为undefined，data为获取到的surface id；否则为错误对象。 |
 
 ## getReceivingSurfaceId
 
@@ -45,10 +37,6 @@ getReceivingSurfaceId(): Promise<string>
 用于获取一个surface id供Camera或其他组件使用。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>--><!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>-End-->
 
@@ -70,10 +58,6 @@ Remove callback subscriptions when releasing buffer.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ImageReceiver-offImageArrival(callback?: AsyncCallback<void>): void--><!--Device-ImageReceiver-offImageArrival(callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
@@ -82,7 +66,7 @@ Remove callback subscriptions when releasing buffer.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback to be removed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 否 | Callback to be removed. |
 
 ## off_imageArrival
 
@@ -94,10 +78,6 @@ off(type: 'imageArrival', callback?: AsyncCallback<void>): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 <!--Device-ImageReceiver-off(type: 'imageArrival', callback?: AsyncCallback<void>): void--><!--Device-ImageReceiver-off(type: 'imageArrival', callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
@@ -107,7 +87,7 @@ off(type: 'imageArrival', callback?: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | 是 | 注册事件的类型，固定为'imageArrival'，释放buffer时触发。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 移除的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 否 | 移除的回调函数。 |
 
 ## onImageArrival
 
@@ -119,10 +99,6 @@ Subscribe callback when receiving an image.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ImageReceiver-onImageArrival(callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-onImageArrival(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
@@ -131,7 +107,7 @@ Subscribe callback when receiving an image.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return image. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return image. |
 
 ## on_imageArrival
 
@@ -143,10 +119,6 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
@@ -156,7 +128,7 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | 是 | 注册事件的类型，固定为'imageArrival'，接收图片到达时触发。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当注册事件触发成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当注册事件触发成功，err为undefined，否则为错误对象。 |
 
 ## readLatestImage
 
@@ -164,13 +136,9 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 readLatestImage(callback: AsyncCallback<Image>): void
 ```
 
-从ImageReceiver读取最新的图片。使用callback异步回调。 > **注意**： > > 此接口需要在[on](#on_imageArrival)回调触发后调用，才能正常的接收到数 > 据。且此接口返回的[Image](arkts-image-image-image-i.md#Image)对象使用完毕后需要调用 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
+从ImageReceiver读取最新的图片。使用callback异步回调。 > **注意**： > > 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数 > 据。且此接口返回的[Image](arkts-image-image-image-i.md#image)对象使用完毕后需要调用 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ImageReceiver-readLatestImage(callback: AsyncCallback<Image>): void--><!--Device-ImageReceiver-readLatestImage(callback: AsyncCallback<Image>): void-End-->
 
@@ -180,7 +148,7 @@ readLatestImage(callback: AsyncCallback<Image>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | 是 | 回调函数，当读取最新图片成功，err为undefined，data为获取到的最新图片；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Image&gt; | 是 | 回调函数，当读取最新图片成功，err为undefined，data为获取到的最新图片；否则为错误对象。 |
 
 ## readLatestImage
 
@@ -188,13 +156,9 @@ readLatestImage(callback: AsyncCallback<Image>): void
 readLatestImage(): Promise<Image>
 ```
 
-从ImageReceiver读取最新的图片。使用Promise异步回调。 > **注意**： > > 此接口需要在[on](#on_imageArrival)回调触发后调用，才能正常的接收到数 > 据。且此接口返回的[Image](arkts-image-image-image-i.md#Image)对象使用完毕后需要调用 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
+从ImageReceiver读取最新的图片。使用Promise异步回调。 > **注意**： > > 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数 > 据。且此接口返回的[Image](arkts-image-image-image-i.md#image)对象使用完毕后需要调用 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ImageReceiver-readLatestImage(): Promise<Image>--><!--Device-ImageReceiver-readLatestImage(): Promise<Image>-End-->
 
@@ -212,13 +176,9 @@ readLatestImage(): Promise<Image>
 readNextImage(callback: AsyncCallback<Image>): void
 ```
 
-从ImageReceiver读取下一张图片。使用callback异步回调。 > **注意**： > > 此接口需要在[on](#on_imageArrival)回调触发后调用，才能正常的接收到数 > 据。且此接口返回的[Image](arkts-image-image-image-i.md#Image)对象使用完毕后需要调用 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
+从ImageReceiver读取下一张图片。使用callback异步回调。 > **注意**： > > 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数 > 据。且此接口返回的[Image](arkts-image-image-image-i.md#image)对象使用完毕后需要调用 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ImageReceiver-readNextImage(callback: AsyncCallback<Image>): void--><!--Device-ImageReceiver-readNextImage(callback: AsyncCallback<Image>): void-End-->
 
@@ -228,7 +188,7 @@ readNextImage(callback: AsyncCallback<Image>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | 是 | 回调函数，当获取下一张图片成功，err为undefined，data为获取到的下一张图片；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Image&gt; | 是 | 回调函数，当获取下一张图片成功，err为undefined，data为获取到的下一张图片；否则为错误对象。 |
 
 ## readNextImage
 
@@ -236,13 +196,9 @@ readNextImage(callback: AsyncCallback<Image>): void
 readNextImage(): Promise<Image>
 ```
 
-从ImageReceiver读取下一张图片。使用Promise异步回调。 > **注意**： > > 此接口需要在[on](#on_imageArrival)回调触发后调用，才能正常的接收到数 > 据。且此接口返回的[Image](arkts-image-image-image-i.md#Image)对象使用完毕后需要调用 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
+从ImageReceiver读取下一张图片。使用Promise异步回调。 > **注意**： > > 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数 > 据。且此接口返回的[Image](arkts-image-image-image-i.md#image)对象使用完毕后需要调用 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ImageReceiver-readNextImage(): Promise<Image>--><!--Device-ImageReceiver-readNextImage(): Promise<Image>-End-->
 
@@ -264,10 +220,6 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ImageReceiver-release(callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-release(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
@@ -276,7 +228,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当释放ImageReceiver实例成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当释放ImageReceiver实例成功，err为undefined，否则为错误对象。 |
 
 ## release
 
@@ -287,10 +239,6 @@ release(): Promise<void>
 释放ImageReceiver实例。使用Promise异步回调。 由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用该方法，及时释放内存。 释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ImageReceiver-release(): Promise<void>--><!--Device-ImageReceiver-release(): Promise<void>-End-->
 
@@ -314,10 +262,6 @@ readonly capacity: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ImageReceiver-readonly capacity: int--><!--Device-ImageReceiver-readonly capacity: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
@@ -328,15 +272,11 @@ readonly capacity: int
 readonly format: ImageFormat
 ```
 
-图像格式，取值为[ImageFormat](arkts-image-image-imageformat-e.md#ImageFormat)常量（目前仅支持 ImageFormat:JPEG，实际返回格式由生产者决定，如相机）。
+图像格式，取值为[ImageFormat](arkts-image-image-imageformat-e.md#imageformat)常量（目前仅支持 ImageFormat:JPEG，实际返回格式由生产者决定，如相机）。
 
 **类型：** [ImageFormat](arkts-image-image-imageformat-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ImageReceiver-readonly format: ImageFormat--><!--Device-ImageReceiver-readonly format: ImageFormat-End-->
 
@@ -353,10 +293,6 @@ readonly size: Size
 **类型：** Size
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ImageReceiver-readonly size: Size--><!--Device-ImageReceiver-readonly size: Size-End-->
 

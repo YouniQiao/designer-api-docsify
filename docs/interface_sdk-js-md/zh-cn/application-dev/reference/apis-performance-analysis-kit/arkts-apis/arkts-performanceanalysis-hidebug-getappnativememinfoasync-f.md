@@ -10,10 +10,6 @@ function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>--><!--Device-hidebug-function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -24,7 +20,7 @@ function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 | --- | --- |
 | Promise&lt;[NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md)&gt; | promise对象，返回应用进程内存信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 hidebug.getAppNativeMemInfoAsync().then((nativeMemInfo: hidebug.NativeMemInfo)=>{

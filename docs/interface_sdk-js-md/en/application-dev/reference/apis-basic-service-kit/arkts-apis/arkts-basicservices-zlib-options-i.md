@@ -4,10 +4,6 @@ Defines options used to compress or decompress a ZIP file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-zlib-interface Options--><!--Device-zlib-interface Options-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -30,10 +26,6 @@ Indicates whether to keep the top-level source folder in the compressed file.The
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -54,10 +46,6 @@ Compression level specified for compression or decompression.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Options-level?: CompressLevel--><!--Device-Options-level?: CompressLevel-End-->
@@ -75,10 +63,6 @@ Memory level specified for compression.
 **Type:** [MemLevel](arkts-basicservices-zlib-memlevel-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,10 +82,6 @@ Serial or parallel strategy specified for compression or decompression.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Options-parallel?: ParallelStrategy--><!--Device-Options-parallel?: ParallelStrategy-End-->
@@ -120,10 +100,6 @@ Separator strategy for the file path in the compressed package specified for dec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Options-pathSeparatorStrategy?: PathSeparatorStrategy--><!--Device-Options-pathSeparatorStrategy?: PathSeparatorStrategy-End-->
@@ -141,10 +117,6 @@ Compression strategy specified for compression.
 **Type:** [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

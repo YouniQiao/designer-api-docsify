@@ -4,10 +4,6 @@ Defines the options of the **List** component. > **NOTE：**> > To standardize a
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ListOptions--><!--Device-unnamed-interface ListOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Index of the item to be displayed at the start when the list is initially loaded
 **Default:** 0 [since 18]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,10 +41,6 @@ Scroller, which can be bound to scrollable components. Anonymous Object Rectific
 **Type:** Scroller
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -76,10 +64,6 @@ Spacing between list items along the main axis. <br>Default value: **0** <br>If 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -101,10 +85,6 @@ Spacing between list items along the main axis. &lt;p&gt;&lt;strong&gt;NOTE&lt;/
 **Default:** 0
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

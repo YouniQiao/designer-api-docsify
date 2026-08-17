@@ -4,10 +4,6 @@ Sets the key event consumption configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputConsumer-interface KeyPressedConfig--><!--Device-inputConsumer-interface KeyPressedConfig-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -30,10 +26,6 @@ Subscription type. **Note：**: Since API version 21, the value of this paramete
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyPressedConfig-action: int--><!--Device-KeyPressedConfig-action: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -50,10 +42,6 @@ Whether to report repeated key events. The value **true** means to report repeat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyPressedConfig-isRepeat: boolean--><!--Device-KeyPressedConfig-isRepeat: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -64,15 +52,11 @@ Whether to report repeated key events. The value **true** means to report repeat
 key: int
 ```
 
-Key value. **Note:** Since API version 26.0.0, the [KEYCODE_FINGERPRINT_SLIDE_UP](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode) and [KEYCODE_FINGERPRINT_SLIDE_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode) keys are supported. The keys are not universal device keys. Before using them, check whether the current device supports the reporting of related key events. For details, see [Preferential Response of System Function Keys](../../../device/input/keypressed-guidelines.md). Since API version 21, the [KEYCODE_MEDIA_PLAY_PAUSE](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode), [KEYCODE_MEDIA_NEXT](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode), and [KEYCODE_MEDIA_PREVIOUS](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode) keys are supported. In API version 20 or earlier versions, only the [KEYCODE_VOLUME_UP](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode) and [KEYCODE_VOLUME_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode) keys are supported.
+Key value. **Note:** Since API version 26.0.0, the [KEYCODE_FINGERPRINT_SLIDE_UP](arkts-input-multimodalinput-keycode-keycode-e.md#keycode) and [KEYCODE_FINGERPRINT_SLIDE_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md#keycode) keys are supported. The keys are not universal device keys. Before using them, check whether the current device supports the reporting of related key events. For details, see [Preferential Response of System Function Keys](../../../device/input/keypressed-guidelines.md). Since API version 21, the [KEYCODE_MEDIA_PLAY_PAUSE](arkts-input-multimodalinput-keycode-keycode-e.md#keycode), [KEYCODE_MEDIA_NEXT](arkts-input-multimodalinput-keycode-keycode-e.md#keycode), and [KEYCODE_MEDIA_PREVIOUS](arkts-input-multimodalinput-keycode-keycode-e.md#keycode) keys are supported. In API version 20 or earlier versions, only the [KEYCODE_VOLUME_UP](arkts-input-multimodalinput-keycode-keycode-e.md#keycode) and [KEYCODE_VOLUME_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md#keycode) keys are supported.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyPressedConfig-key: int--><!--Device-KeyPressedConfig-key: int-End-->
 

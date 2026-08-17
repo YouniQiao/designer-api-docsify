@@ -16,10 +16,6 @@ Obtains the list of signal strength information of the registered network corres
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-function getSignalInformationSync(slotId: int): Array<SignalInformation>--><!--Device-radio-function getSignalInformationSync(slotId: int): Array<SignalInformation>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -36,7 +32,7 @@ Obtains the list of signal strength information of the registered network corres
 | --- | --- |
 | Array&lt;SignalInformation&gt; | Returns the callback for getting the instance list of the child classes derived from { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let slotId: number = 0;

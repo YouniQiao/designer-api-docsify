@@ -16,10 +16,6 @@ Cancels the listener for senior mode state change events of all apps. This API u
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
 **Model restriction:** This API can be used only in the stage model.
@@ -34,7 +30,7 @@ Cancels the listener for senior mode state change events of all apps. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | No | Callback function used to cancel the event response of the specified callback object. The value must be the same as the value of **callback** in [config.onSeniorModeStateChangeForApp](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md#onSeniorModeStateChangeForApp-(System-API)). If this parameter is not specified, all registered events will be unregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | No | Callback function used to cancel the event response of the specified callback object. The value must be the same as the value of **callback** in [config.onSeniorModeStateChangeForApp](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md#onseniormodestatechangeforapp-system-api). If this parameter is not specified, all registered events will be unregistered. |
 
 **Error codes:**
 

@@ -4,10 +4,6 @@ TIFF metadata.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-image-class TiffMetadata--><!--Device-image-class TiffMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ Name of the image creator or artist.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly artist?: string--><!--Device-TiffMetadata-readonly artist?: string-End-->
@@ -51,10 +43,6 @@ Compression scheme used for image data (e.g., None, LZW, JPEG, Deflate). The val
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Copyright notice for the image.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly copyright?: string--><!--Device-TiffMetadata-readonly copyright?: string-End-->
@@ -95,10 +79,6 @@ Date and time associated with the image (typically last modification).
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ Name of the document or image.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly documentName?: string--><!--Device-TiffMetadata-readonly documentName?: string-End-->
@@ -139,10 +115,6 @@ Host computer/system used for image processing.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +134,6 @@ Description of the image content.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly imageDescription?: string--><!--Device-TiffMetadata-readonly imageDescription?: string-End-->
@@ -183,10 +151,6 @@ Manufacturer of the capture device.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,10 +170,6 @@ Model name/number of the capture device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly model?: string--><!--Device-TiffMetadata-readonly model?: string-End-->
@@ -227,10 +187,6 @@ Indicates image orientation for correct display rotation/flip.
 **Type:** Orientation
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,10 +206,6 @@ Defines how pixel colors are interpreted (e.g., RGB, grayscale). The value shoul
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly photometricInterpretation?: int--><!--Device-TiffMetadata-readonly photometricInterpretation?: int-End-->
@@ -271,10 +223,6 @@ Chromaticity coordinates of the RGB primaries.
 **Type:** double[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -294,10 +242,6 @@ Unit for X/Y resolution. The value should be an integer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly resolutionUnit?: int--><!--Device-TiffMetadata-readonly resolutionUnit?: int-End-->
@@ -315,10 +259,6 @@ Software used to create or process the image.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,10 +278,6 @@ Height of each image tile in pixels. The value should be an integer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly tileLength?: int--><!--Device-TiffMetadata-readonly tileLength?: int-End-->
@@ -359,10 +295,6 @@ Width of each image tile in pixels. The value should be an integer.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -382,10 +314,6 @@ Tone transfer curve mapping pixel values to output intensity.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly transferFunction?: string--><!--Device-TiffMetadata-readonly transferFunction?: string-End-->
@@ -403,10 +331,6 @@ Chromaticity coordinates of the reference white point.
 **Type:** double[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -426,10 +350,6 @@ Horizontal resolution (pixels per resolution unit).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TiffMetadata-readonly xResolution?: double--><!--Device-TiffMetadata-readonly xResolution?: double-End-->
@@ -447,10 +367,6 @@ Vertical resolution (pixels per resolution unit).
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

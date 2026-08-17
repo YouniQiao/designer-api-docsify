@@ -16,10 +16,6 @@ Obtains the application context. This API provides context access independent of
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -40,7 +36,7 @@ Obtains the application context. This API provides context access independent of
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Memory operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want, common } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-backgroundTaskManager-export interface BackgroundTaskSubscriber--><!--Device-backgroundTaskManager-export interface BackgroundTaskSubscriber-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -24,10 +20,6 @@ onContinuousTaskStart(info: ContinuousTaskInfo): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BackgroundTaskSubscriber-onContinuousTaskStart(info: ContinuousTaskInfo): void--><!--Device-BackgroundTaskSubscriber-onContinuousTaskStart(info: ContinuousTaskInfo): void-End-->
@@ -42,7 +34,7 @@ onContinuousTaskStart(info: ContinuousTaskInfo): void
 | --- | --- | --- | --- |
 | info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -70,10 +62,6 @@ onContinuousTaskStop(info: ContinuousTaskInfo): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BackgroundTaskSubscriber-onContinuousTaskStop(info: ContinuousTaskInfo): void--><!--Device-BackgroundTaskSubscriber-onContinuousTaskStop(info: ContinuousTaskInfo): void-End-->
@@ -88,7 +76,7 @@ onContinuousTaskStop(info: ContinuousTaskInfo): void
 | --- | --- | --- | --- |
 | info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
@@ -116,10 +104,6 @@ onContinuousTaskUpdate(info: ContinuousTaskInfo): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BackgroundTaskSubscriber-onContinuousTaskUpdate(info: ContinuousTaskInfo): void--><!--Device-BackgroundTaskSubscriber-onContinuousTaskUpdate(info: ContinuousTaskInfo): void-End-->
@@ -134,7 +118,7 @@ onContinuousTaskUpdate(info: ContinuousTaskInfo): void
 | --- | --- | --- | --- |
 | info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

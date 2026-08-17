@@ -16,10 +16,6 @@ Cancels the notification of other applications of the user. This API uses a prom
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-function cancel(representativeBundle: BundleOption, id: int): Promise<void>--><!--Device-notificationManager-function cancel(representativeBundle: BundleOption, id: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -52,7 +48,7 @@ Cancels the notification of other applications of the user. This API uses a prom
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

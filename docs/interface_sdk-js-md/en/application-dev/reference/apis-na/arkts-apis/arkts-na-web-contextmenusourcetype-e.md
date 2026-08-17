@@ -4,9 +4,7 @@ Defines the context menu source type, related to onContextMenuShow method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum ContextMenuSourceType--><!--Device-unnamed-export declare enum ContextMenuSourceType-End-->
 
@@ -22,9 +20,7 @@ Other non-image media types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuSourceType-NONE = 0--><!--Device-ContextMenuSourceType-NONE = 0-End-->
 
@@ -40,9 +36,7 @@ Mouse event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuSourceType-MOUSE = 1--><!--Device-ContextMenuSourceType-MOUSE = 1-End-->
 
@@ -58,9 +52,7 @@ Long press event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuSourceType-LONG_PRESS = 2--><!--Device-ContextMenuSourceType-LONG_PRESS = 2-End-->
 

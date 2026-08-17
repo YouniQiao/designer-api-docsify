@@ -1,14 +1,10 @@
 # HashStream
 
-HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md#createHash) 接口获得。
+HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md#createhash) 接口获得。
 
-**继承/实现关系：** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md#Transform)
+**继承/实现关系：** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md#transform)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-hash-class HashStream--><!--Device-hash-class HashStream-End-->
 
@@ -23,10 +19,6 @@ digest(): string
 计算传递给哈希处理的所有数据的摘要。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-HashStream-digest(): string--><!--Device-HashStream-digest(): string-End-->
 
@@ -45,7 +37,7 @@ digest(): string
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 创建哈希流
@@ -67,10 +59,6 @@ update(data: ArrayBuffer): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-HashStream-update(data: ArrayBuffer): void--><!--Device-HashStream-update(data: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -88,7 +76,7 @@ update(data: ArrayBuffer): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 创建哈希流

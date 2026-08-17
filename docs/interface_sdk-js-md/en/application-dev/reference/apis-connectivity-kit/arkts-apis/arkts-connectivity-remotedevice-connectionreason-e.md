@@ -4,10 +4,6 @@ Enum for the connection reason.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-remoteDevice-enum ConnectionReason--><!--Device-remoteDevice-enum ConnectionReason-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -21,10 +17,6 @@ CONNECTION_SUCCESS = 0
 Connection succeeded.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Connection failed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionReason-CONNECTION_FAILURE = 1--><!--Device-ConnectionReason-CONNECTION_FAILURE = 1-End-->
@@ -61,10 +49,6 @@ CONNECTION_LOCAL_DISCONNECT = 2
 Local device initiated disconnection.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ Remote device initiated disconnection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionReason-CONNECTION_REMOTE_DISCONNECT = 3--><!--Device-ConnectionReason-CONNECTION_REMOTE_DISCONNECT = 3-End-->
@@ -101,10 +81,6 @@ CONNECTION_FAIL_ACB_CONNECTION = 4
 Connection failed: ACB connection failed. The remote device may be powered off or out of range.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,10 +98,6 @@ Connection failed: Service discovery failed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionReason-CONNECTION_FAIL_SERVICE_DISCOVERY = 5--><!--Device-ConnectionReason-CONNECTION_FAIL_SERVICE_DISCOVERY = 5-End-->
@@ -142,10 +114,6 @@ Connection failed: No available services found on the remote device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionReason-CONNECTION_FAIL_NO_AVAILABLE_SERVICE = 6--><!--Device-ConnectionReason-CONNECTION_FAIL_NO_AVAILABLE_SERVICE = 6-End-->
@@ -161,10 +129,6 @@ CONNECTION_FAIL_CONNECTION_NUM_LIMITED = 7
 Connection failed: Connection limit exceeded.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

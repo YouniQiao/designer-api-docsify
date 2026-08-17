@@ -4,10 +4,6 @@ Provides APIs for performing cloud database operations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface CloudDB--><!--Device-cloudExtension-export interface CloudDB-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -33,10 +29,6 @@ Deletes data from a cloud database table. This API uses a promise to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudDB-delete(      table: string,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-delete(      table: string,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -56,7 +48,7 @@ Deletes data from a cloud database table. This API uses a promise to return the 
 | --- | --- |
 | Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the deleted data and operation result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {
@@ -82,10 +74,6 @@ Generates IDs for the data records inserted to the cloud database. The IDs are u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudDB-generateId(count: int): Promise<Result<Array<string>>>--><!--Device-CloudDB-generateId(count: int): Promise<Result<Array<string>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -104,7 +92,7 @@ Generates IDs for the data records inserted to the cloud database. The IDs are u
 | --- | --- |
 | Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; | Promise used to return the generated IDs in Result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {
@@ -132,10 +120,6 @@ Extends the lock period of the database. This API uses a promise to return the r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudDB-heartbeat(lockId: int): Promise<Result<LockInfo>>--><!--Device-CloudDB-heartbeat(lockId: int): Promise<Result<LockInfo>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -154,7 +138,7 @@ Extends the lock period of the database. This API uses a promise to return the r
 | --- | --- |
 | Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise used to return the lock ID and lock period. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let test_lockId: number = 1;
@@ -192,10 +176,6 @@ Inserts data to a cloud database table. This API uses a promise to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudDB-insert(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-insert(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -216,7 +196,7 @@ Inserts data to a cloud database table. This API uses a promise to return the re
 | --- | --- |
 | Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the inserted data and operation result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {
@@ -242,10 +222,6 @@ Locks this cloud database. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudDB-lock(): Promise<Result<LockInfo>>--><!--Device-CloudDB-lock(): Promise<Result<LockInfo>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -258,7 +234,7 @@ Locks this cloud database. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise used to return the lock ID and lock period. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let test_time: number = 10;
@@ -292,10 +268,6 @@ Queries data in a cloud database table. This API uses a promise to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudDB-query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>--><!--Device-CloudDB-query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -317,7 +289,7 @@ Queries data in a cloud database table. This API uses a promise to return the re
 | --- | --- |
 | Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; | Promise used to return the data and operation result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {
@@ -350,10 +322,6 @@ Unlocks a cloud database. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudDB-unlock(lockId: int): Promise<Result<boolean>>--><!--Device-CloudDB-unlock(lockId: int): Promise<Result<boolean>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -372,7 +340,7 @@ Unlocks a cloud database. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;Result&lt;boolean&gt;&gt; | Promise used to return the result. The value true means the operation is successful; the value false means the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {
@@ -405,10 +373,6 @@ Updates data in the cloud. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CloudDB-update(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-update(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -429,7 +393,7 @@ Updates data in the cloud. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the update result and updated data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class MyCloudDB implements cloudExtension.CloudDB {

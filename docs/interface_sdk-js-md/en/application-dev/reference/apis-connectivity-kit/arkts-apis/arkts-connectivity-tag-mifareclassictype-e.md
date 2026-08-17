@@ -4,10 +4,6 @@ MifareClassic Type definition
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tag-enum MifareClassicType--><!--Device-tag-enum MifareClassicType-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -21,10 +17,6 @@ TYPE_UNKNOWN = 0
 Mifare Type unknown
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ Mifare Classic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MifareClassicType-TYPE_CLASSIC = 1--><!--Device-MifareClassicType-TYPE_CLASSIC = 1-End-->
@@ -62,10 +50,6 @@ Mifare Plus
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MifareClassicType-TYPE_PLUS = 2--><!--Device-MifareClassicType-TYPE_PLUS = 2-End-->
@@ -81,10 +65,6 @@ TYPE_PRO = 3
 Mifare Pro
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

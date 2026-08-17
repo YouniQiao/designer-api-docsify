@@ -4,10 +4,6 @@ Enumerates the device-cloud sync states. Use the enum name rather than the enum 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export enum ErrorCode--><!--Device-cloudExtension-export enum ErrorCode-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -23,10 +19,6 @@ SUCCESS = 0
 The device-cloud sync is successful.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ErrorCode-SUCCESS = 0--><!--Device-ErrorCode-SUCCESS = 0-End-->
 
@@ -44,10 +36,6 @@ An unknown error occurs during the device-cloud sync process.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ErrorCode-UNKNOWN_ERROR = 1--><!--Device-ErrorCode-UNKNOWN_ERROR = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -63,10 +51,6 @@ NETWORK_ERROR = 2
 A network error occurs during the device-cloud sync process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ErrorCode-NETWORK_ERROR = 2--><!--Device-ErrorCode-NETWORK_ERROR = 2-End-->
 
@@ -84,10 +68,6 @@ Cloud sync is disabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ErrorCode-CLOUD_DISABLED = 3--><!--Device-ErrorCode-CLOUD_DISABLED = 3-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -103,10 +83,6 @@ LOCKED_BY_OTHERS = 4
 The device-cloud sync of another device is being performed. The sync of the local device can be performed only when the device-cloud resources are available.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ErrorCode-LOCKED_BY_OTHERS = 4--><!--Device-ErrorCode-LOCKED_BY_OTHERS = 4-End-->
 
@@ -124,10 +100,6 @@ The number of records or size of the data to be synced exceeds the maximum. The 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ErrorCode-RECORD_LIMIT_EXCEEDED = 5--><!--Device-ErrorCode-RECORD_LIMIT_EXCEEDED = 5-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -143,10 +115,6 @@ NO_SPACE_FOR_ASSET = 6
 The remaining cloud space is less than the size of the data to be synced.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ErrorCode-NO_SPACE_FOR_ASSET = 6--><!--Device-ErrorCode-NO_SPACE_FOR_ASSET = 6-End-->
 

@@ -2,13 +2,9 @@
 
 Defines the options of backgroundBlurStyle
 
-**Inheritance/Implementation:** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#BlurStyleOptions)
+**Inheritance/Implementation:** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#blurstyleoptions)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface BackgroundBlurStyleOptions--><!--Device-unnamed-declare interface BackgroundBlurStyleOptions-End-->
 
@@ -27,10 +23,6 @@ Background color when the blur effect does not take effect. This parameter must 
 **Default:** Color.Transparent
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,10 +45,6 @@ Blur activation policy.
 **Default:** BlurStyleActivePolicy.ALWAYS_ACTIVE
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

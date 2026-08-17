@@ -2,10 +2,6 @@
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface BluetoothDevice--><!--Device-unnamed-export interface BluetoothDevice-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
@@ -32,10 +28,6 @@ Address of BluetoothDevice
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-BluetoothDevice-addr: string--><!--Device-BluetoothDevice-addr: string-End-->
@@ -53,10 +45,6 @@ The addrType of address, may be public or random
 **Type:** 'public' \| 'random'
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -76,10 +64,6 @@ The data of BluetoothDevice
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-BluetoothDevice-data: string--><!--Device-BluetoothDevice-data: string-End-->
@@ -98,10 +82,6 @@ RSSI of the remote device
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-BluetoothDevice-rssi: number--><!--Device-BluetoothDevice-rssi: number-End-->
@@ -119,10 +99,6 @@ Transmission power level for advertising
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

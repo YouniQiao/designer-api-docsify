@@ -4,10 +4,6 @@ Defines an HTTP Interceptor. User can implement this interface to define the han
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-http-export interface HttpInterceptor--><!--Device-http-export interface HttpInterceptor-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -28,10 +24,6 @@ Intercept an HTTP process and do changes as disired.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>--><!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>-End-->
@@ -51,7 +43,7 @@ Intercept an HTTP process and do changes as disired.
 | --- | --- |
 | Promise&lt;[ChainContinue](arkts-network-http-chaincontinue-t.md)&gt; | Continue the HTTP process or terminate then return the HTTP response. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -100,10 +92,6 @@ The type of this interceptor. It defines when this intercptor would be called.
 **Type:** [InterceptorType](arkts-network-http-interceptortype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

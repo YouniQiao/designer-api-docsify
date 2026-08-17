@@ -2,13 +2,9 @@
 
 ScaleSymbolEffect继承自父类SymbolEffect。
 
-**继承/实现关系：** ScaleSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
+**继承/实现关系：** ScaleSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#symboleffect)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class ScaleSymbolEffect--><!--Device-unnamed-declare class ScaleSymbolEffect-End-->
 
@@ -23,10 +19,6 @@ constructor(scope?: EffectScope, direction?: EffectDirection)
 ScaleSymbolEffect的构造函数，缩放动效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,10 +49,6 @@ direction?: EffectDirection
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -82,10 +70,6 @@ scope?: EffectScope
 **类型：** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

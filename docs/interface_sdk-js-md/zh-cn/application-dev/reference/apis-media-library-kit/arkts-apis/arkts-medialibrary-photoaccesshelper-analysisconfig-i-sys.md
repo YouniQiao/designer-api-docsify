@@ -4,10 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-photoAccessHelper-interface AnalysisConfig--><!--Device-photoAccessHelper-interface AnalysisConfig-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -26,10 +22,6 @@ JSON字符串格式的扩展信息。 长度范围：(0, 500]。
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AnalysisConfig-extraInfos?: string--><!--Device-AnalysisConfig-extraInfos?: string-End-->
@@ -44,15 +36,11 @@ JSON字符串格式的扩展信息。 长度范围：(0, 500]。
 types: AnalysisType[]
 ```
 
-智慧分析类型数组，数组大小上限为[AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md#AnalysisType（系统接口）)枚举定义成员数量。
+智慧分析类型数组，数组大小上限为[AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md#analysistype系统接口)枚举定义成员数量。
 
 **类型：** [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md)[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,10 +61,6 @@ uris: string[]
 **类型：** string[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface WeakMap--><!--Device-unnamed-interface WeakMap-End-->
 
 ## delete
@@ -17,10 +13,6 @@ delete(key: K): boolean
 Removes the specified element from the WeakMap.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-WeakMap-delete(key: K): boolean--><!--Device-WeakMap-delete(key: K): boolean-End-->
 
@@ -44,10 +36,6 @@ get(key: K): V | undefined
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-WeakMap-get(key: K): V | undefined--><!--Device-WeakMap-get(key: K): V | undefined-End-->
 
 **Parameters:**
@@ -69,10 +57,6 @@ has(key: K): boolean
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-WeakMap-has(key: K): boolean--><!--Device-WeakMap-has(key: K): boolean-End-->
 
@@ -97,10 +81,6 @@ set(key: K, value: V): this
 Adds a new element with a specified key and value.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-WeakMap-set(key: K, value: V): this--><!--Device-WeakMap-set(key: K, value: V): this-End-->
 

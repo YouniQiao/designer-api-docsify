@@ -4,10 +4,6 @@ The **ArcList** component is a circular layout container that displays a series 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ArcListInterface--><!--Device-unnamed-export interface ArcListInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -30,10 +26,6 @@ import { ArcListItemAttribute } from 'ArcListItemAttribute';
 Creates an **ArcList** component instance with specified configuration options.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

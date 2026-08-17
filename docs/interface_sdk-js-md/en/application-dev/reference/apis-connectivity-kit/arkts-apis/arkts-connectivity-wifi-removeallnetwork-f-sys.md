@@ -16,8 +16,6 @@ Removes all the saved Wi-Fi configurations.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** removeAllDeviceConfigs
@@ -36,7 +34,7 @@ Removes all the saved Wi-Fi configurations.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

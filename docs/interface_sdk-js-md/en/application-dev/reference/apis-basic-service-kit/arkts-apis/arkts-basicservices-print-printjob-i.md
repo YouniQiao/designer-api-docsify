@@ -4,10 +4,6 @@ Defines a print job.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PrintJob--><!--Device-print-interface PrintJob-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -31,10 +27,6 @@ Vendor-specific job options in JSON format.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

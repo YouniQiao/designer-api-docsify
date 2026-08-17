@@ -8,10 +8,6 @@ Level-2 module ServiceExtensionContext.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-common-export type ServiceExtensionContext = _ServiceExtensionContext--><!--Device-common-export type ServiceExtensionContext = _ServiceExtensionContext-End-->

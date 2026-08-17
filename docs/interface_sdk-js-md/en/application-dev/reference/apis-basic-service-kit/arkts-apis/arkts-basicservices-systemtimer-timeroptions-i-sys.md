@@ -4,10 +4,6 @@ Defines the initialization options for the system timer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemTimer-interface TimerOptions--><!--Device-systemTimer-interface TimerOptions-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -32,10 +28,6 @@ Whether the timer is restored after the device is restarted. The value **true** 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimerOptions-autoRestore?: boolean--><!--Device-TimerOptions-autoRestore?: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -53,10 +45,6 @@ Callback to be executed by the user. The default value is empty.
 **Type:** () =&gt; void
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimerOptions-callback?: () => void--><!--Device-TimerOptions-callback?: () => void-End-->
 
@@ -76,10 +64,6 @@ Interval between two consecutive timers, in milliseconds. For a repeating timer,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimerOptions-interval?: long--><!--Device-TimerOptions-interval?: long-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -97,10 +81,6 @@ Timer name, with a maximum length of 64 bytes. A UID cannot contain two timers w
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimerOptions-name?: string--><!--Device-TimerOptions-name?: string-End-->
 
@@ -120,10 +100,6 @@ Whether the timer is a repeating timer. The value **true** means that the timer 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimerOptions-repeat: boolean--><!--Device-TimerOptions-repeat: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -142,10 +118,6 @@ Timer types. Use pipe (|) symbol
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimerOptions-type: int--><!--Device-TimerOptions-type: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -163,10 +135,6 @@ wantAgent?: WantAgent
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimerOptions-wantAgent?: WantAgent--><!--Device-TimerOptions-wantAgent?: WantAgent-End-->
 

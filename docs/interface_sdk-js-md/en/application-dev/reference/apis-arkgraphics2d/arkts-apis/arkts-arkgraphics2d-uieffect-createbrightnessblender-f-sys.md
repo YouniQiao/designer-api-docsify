@@ -16,10 +16,6 @@ Creates a BrightnessBlender instance for adding a brightness effect to a compone
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
 <!--Device-uiEffect-function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender--><!--Device-uiEffect-function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender-End-->
@@ -40,7 +36,7 @@ Creates a BrightnessBlender instance for adding a brightness effect to a compone
 | --- | --- |
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | Returns the brightness blender. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let blender : uiEffect.BrightnessBlender =

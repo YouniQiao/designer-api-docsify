@@ -4,10 +4,6 @@ Enumerates type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum PolicyType--><!--Device-audio-enum PolicyType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -24,10 +20,6 @@ EDM type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PolicyType-EDM = 0--><!--Device-PolicyType-EDM = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -43,10 +35,6 @@ PRIVACY = 1
 PRIVACY type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PolicyType-PRIVACY = 1--><!--Device-PolicyType-PRIVACY = 1-End-->
 

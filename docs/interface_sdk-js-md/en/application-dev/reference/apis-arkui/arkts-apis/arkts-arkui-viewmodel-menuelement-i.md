@@ -2,13 +2,9 @@
 
 The &lt;menu&gt; component provides menus as temporary pop-up windows to display operations that can be performed by users.
 
-**Inheritance/Implementation:** MenuElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
+**Inheritance/Implementation:** MenuElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MenuElement--><!--Device-unnamed-export interface MenuElement-End-->
 
@@ -23,10 +19,6 @@ show(position: { x: number; y: number }): void
 Displays the menu. x and y specify the position of the displayed menu. x indicates the X-axis coordinate from the left edge of the visible area, and does not include any scrolling offset. y indicates the Y-axis coordinate from the upper edge of the visible area, and does not include any scrolling offset or a status bar. The menu is preferentially displayed in the lower right corner. When the visible space on the right is insufficient, the menu is moved leftward. When the visible space in the lower part is insufficient, the menu is moved upward.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

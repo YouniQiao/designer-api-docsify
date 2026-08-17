@@ -16,11 +16,9 @@ Obtains the system language.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSystemLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getSystemLanguage)
+**Substitutes:** [getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage)
 
 <!--Device-i18n-export function getSystemLanguage(): string--><!--Device-i18n-export function getSystemLanguage(): string-End-->
 
@@ -32,7 +30,7 @@ Obtains the system language.
 | --- | --- |
 | string | System language ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

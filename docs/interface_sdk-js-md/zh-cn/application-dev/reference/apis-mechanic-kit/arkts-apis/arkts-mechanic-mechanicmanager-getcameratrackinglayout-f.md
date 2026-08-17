@@ -10,10 +10,6 @@ function getCameraTrackingLayout(): CameraTrackingLayout
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-mechanicManager-function getCameraTrackingLayout(): CameraTrackingLayout--><!--Device-mechanicManager-function getCameraTrackingLayout(): CameraTrackingLayout-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -31,7 +27,7 @@ function getCameraTrackingLayout(): CameraTrackingLayout
 | [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
 | [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
 
-## 示例
+**示例**
 
 ```TypeScript
 console.info('Query layout');

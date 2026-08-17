@@ -10,8 +10,6 @@ Configures the application event logging function, such as setting the event log
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [configure](arkts-performanceanalysis-hiappevent-configure-f.md#configure)
@@ -32,7 +30,7 @@ Configures the application event logging function, such as setting the event log
 | --- | --- |
 | boolean | Returns **true** if the configuration is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Set the application event logging switch.

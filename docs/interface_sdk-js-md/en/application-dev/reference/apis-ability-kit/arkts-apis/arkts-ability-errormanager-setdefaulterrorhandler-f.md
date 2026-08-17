@@ -16,10 +16,6 @@ Returns the previously registered handler when a JavaScript crash exception occu
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-errorManager-function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler--><!--Device-errorManager-function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler-End-->
@@ -44,7 +40,7 @@ Returns the previously registered handler when a JavaScript crash exception occu
 | --- | --- |
 | [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';

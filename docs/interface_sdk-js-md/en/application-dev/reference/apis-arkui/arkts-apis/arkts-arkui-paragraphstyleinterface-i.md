@@ -4,10 +4,6 @@ ParagraphStyleInterface
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ParagraphStyleInterface--><!--Device-unnamed-declare interface ParagraphStyleInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Indent of the text paragraph. The value cannot be in percentage. Default value: 
 **Type:** LengthMetrics \| LeadingMarginPlaceholder
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ Custom indentation information for text paragraphs. The value cannot be in perce
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -71,10 +59,6 @@ Maximum number of lines in the text paragraph. By default, the number of lines i
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,10 +80,6 @@ Display mode when the text is too long in the text paragraph. Default value: **T
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -120,10 +100,6 @@ Paragraph spacing of the styled string text. Default value: **0**. The value can
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -138,15 +114,11 @@ Paragraph spacing of the styled string text. Default value: **0**. The value can
 shaderStyle?: ShaderStyle
 ```
 
-Text shader effect. This API does not take effect when used together with [TextStyleInterface](arkts-arkui-textstyleinterface-i.md#TextStyleInterface) **strokeWidth**. **shaderStyle** has a higher priority than [TextStyleInterface](arkts-arkui-textstyleinterface-i.md#TextStyleInterface) **fontColor**. **Since**: 26.0.0.
+Text shader effect. This API does not take effect when used together with [TextStyleInterface](arkts-arkui-textstyleinterface-i.md#textstyleinterface) **strokeWidth**. **shaderStyle** has a higher priority than [TextStyleInterface](arkts-arkui-textstyleinterface-i.md#textstyleinterface) **fontColor**. **Since**: 26.0.0.
 
 **Type:** ShaderStyle
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,10 +140,6 @@ Specify the tail indentation for each line in a paragraph. &lt;p&gt;&lt;strong&g
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -191,10 +159,6 @@ Horizontal alignment of the text paragraph. Default value: **TextAlign.Start**.
 **Type:** TextAlign
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -216,10 +180,6 @@ Text direction. Default value: **TextDirection.DEFAULT**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -239,10 +199,6 @@ First line indent of the text paragraph. The value cannot be in percentage. Defa
 **Type:** LengthMetrics
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -264,10 +220,6 @@ Vertical alignment mode of text paragraphs. Default value: **TextVerticalAlign.B
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -287,10 +239,6 @@ Word break rule of the text paragraph. Default value: **WordBreak.NORMAL**.
 **Type:** WordBreak
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

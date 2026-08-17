@@ -8,10 +8,6 @@ The query compilation by keyword event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-avMusicTemplate-type QueryCompilationByKeywordEvent = (keyword: string) => Promise<Compilation[]>--><!--Device-avMusicTemplate-type QueryCompilationByKeywordEvent = (keyword: string) => Promise<Compilation[]>-End-->

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-interface PrinterInformation--><!--Device-print-interface PrinterInformation-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -23,10 +19,6 @@ alias?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterInformation-alias?: string--><!--Device-PrinterInformation-alias?: string-End-->
 
@@ -44,10 +36,6 @@ capability?: PrinterCapabilities
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterInformation-capability?: PrinterCapabilities--><!--Device-PrinterInformation-capability?: PrinterCapabilities-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -63,10 +51,6 @@ description?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterInformation-description?: string--><!--Device-PrinterInformation-description?: string-End-->
 
@@ -84,10 +68,6 @@ options?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterInformation-options?: string--><!--Device-PrinterInformation-options?: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -103,10 +83,6 @@ preferences?: PrinterPreferences
 **类型：** [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterInformation-preferences?: PrinterPreferences--><!--Device-PrinterInformation-preferences?: PrinterPreferences-End-->
 
@@ -124,10 +100,6 @@ printerId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterInformation-printerId: string--><!--Device-PrinterInformation-printerId: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -143,10 +115,6 @@ printerMake?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterInformation-printerMake?: string--><!--Device-PrinterInformation-printerMake?: string-End-->
 
@@ -164,10 +132,6 @@ printerName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterInformation-printerName: string--><!--Device-PrinterInformation-printerName: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -184,10 +148,6 @@ printerStatus: PrinterStatus
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterInformation-printerStatus: PrinterStatus--><!--Device-PrinterInformation-printerStatus: PrinterStatus-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -203,10 +163,6 @@ selectedDriver?: PpdInfo
 **类型：** [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -226,10 +182,6 @@ selectedProtocol?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrinterInformation-selectedProtocol?: string--><!--Device-PrinterInformation-selectedProtocol?: string-End-->
@@ -247,10 +199,6 @@ uri?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterInformation-uri?: string--><!--Device-PrinterInformation-uri?: string-End-->
 

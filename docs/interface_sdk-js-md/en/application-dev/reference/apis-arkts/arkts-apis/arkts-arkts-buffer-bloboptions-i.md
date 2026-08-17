@@ -4,10 +4,6 @@ Defines the Blob related options parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-buffer-interface BlobOptions--><!--Device-buffer-interface BlobOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -30,10 +26,6 @@ How to output a string ending with '\ n' as' transparent or native . The default
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BlobOptions-endings?: string--><!--Device-BlobOptions-endings?: string-End-->
@@ -51,10 +43,6 @@ Blob content type. The default parameter is' '.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

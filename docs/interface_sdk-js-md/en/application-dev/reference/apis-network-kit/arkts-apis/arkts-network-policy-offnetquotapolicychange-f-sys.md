@@ -16,10 +16,6 @@ Unregister quota policies change listener.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 <!--Device-policy-function off(type: 'netQuotaPolicyChange', callback?: Callback<Array<NetQuotaPolicy>>): void--><!--Device-policy-function off(type: 'netQuotaPolicyChange', callback?: Callback<Array<NetQuotaPolicy>>): void-End-->

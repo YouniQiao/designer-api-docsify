@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface BusinessType--><!--Device-update-export interface BusinessType-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -26,10 +22,6 @@ subType: BusinessSubType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-BusinessType-subType: BusinessSubType--><!--Device-BusinessType-subType: BusinessSubType-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -47,10 +39,6 @@ vendor: BusinessVendor
 **类型：** [BusinessVendor](arkts-basicservices-update-businessvendor-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-BusinessType-vendor: BusinessVendor--><!--Device-BusinessType-vendor: BusinessVendor-End-->
 

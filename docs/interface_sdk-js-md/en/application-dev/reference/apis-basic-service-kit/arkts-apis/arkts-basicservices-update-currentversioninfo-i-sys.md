@@ -4,10 +4,6 @@ Represents information about the current version.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface CurrentVersionInfo--><!--Device-update-export interface CurrentVersionInfo-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Device name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CurrentVersionInfo-deviceName: string--><!--Device-CurrentVersionInfo-deviceName: string-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -54,10 +46,6 @@ System version number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CurrentVersionInfo-osVersion: string--><!--Device-CurrentVersionInfo-osVersion: string-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -75,10 +63,6 @@ Version components.
 **Type:** Array&lt;[VersionComponent](arkts-basicservices-update-versioncomponent-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CurrentVersionInfo-versionComponents: Array<VersionComponent>--><!--Device-CurrentVersionInfo-versionComponents: Array<VersionComponent>-End-->
 

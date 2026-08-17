@@ -16,11 +16,9 @@ Write data through the socket.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [sppWrite](arkts-connectivity-bluetoothmanager-sppwrite-f.md#sppWrite)
+**Substitutes:** [sppWrite](arkts-connectivity-bluetoothmanager-sppwrite-f.md#sppwrite)
 
 <!--Device-bluetooth-function sppWrite(clientSocket: number, data: ArrayBuffer): boolean--><!--Device-bluetooth-function sppWrite(clientSocket: number, data: ArrayBuffer): boolean-End-->
 
@@ -30,7 +28,7 @@ Write data through the socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md#sppAccept) or [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md#sppConnect). |
+| clientSocket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md#sppaccept) or [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md#sppconnect). |
 | data | ArrayBuffer | Yes | Indicates the data to write. |
 
 **Return value:**
@@ -39,7 +37,7 @@ Write data through the socket.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

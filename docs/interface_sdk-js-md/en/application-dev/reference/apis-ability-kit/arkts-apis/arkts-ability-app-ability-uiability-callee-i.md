@@ -4,10 +4,6 @@ Background communication object created by the system for the UIAbility, known a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Callee--><!--Device-unnamed-export interface Callee-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -32,10 +28,6 @@ Unregisters a caller notification callback, which is invoked when the target UIA
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Callee-off(method: string): void--><!--Device-Callee-off(method: string): void-End-->
@@ -56,7 +48,7 @@ Unregisters a caller notification callback, which is invoked when the target UIA
 | [16200005](../errorcode-ability.md#16200005-method-not-registered) | The method has not been registered. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
@@ -85,10 +77,6 @@ Registers a caller notification callback, which is invoked when the target UIAbi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Callee-on(method: string, callback: CalleeCallback): void--><!--Device-Callee-on(method: string, callback: CalleeCallback): void-End-->
@@ -100,7 +88,7 @@ Registers a caller notification callback, which is invoked when the target UIAbi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
-| callback | [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md) | Yes | JS notification synchronization callback of the [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md#MessageSequence) type. The callback must return at least one empty [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md#Parcelable) object. Otherwise, the function execution fails. |
+| callback | [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md) | Yes | JS notification synchronization callback of the [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md#messagesequence) type. The callback must return at least one empty [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md#parcelable) object. Otherwise, the function execution fails. |
 
 **Error codes:**
 
@@ -110,7 +98,7 @@ Registers a caller notification callback, which is invoked when the target UIAbi
 | [16200004](../errorcode-ability.md#16200004-method-registered) | The method has been registered. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';

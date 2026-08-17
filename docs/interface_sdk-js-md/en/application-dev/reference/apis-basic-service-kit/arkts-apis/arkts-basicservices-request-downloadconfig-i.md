@@ -4,10 +4,6 @@ Defines the download task configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-interface DownloadConfig--><!--Device-request-interface DownloadConfig-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -30,10 +26,6 @@ Whether to enable the background task notification. When this parameter is enabl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadConfig-background?: boolean--><!--Device-DownloadConfig-background?: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -49,10 +41,6 @@ Description of the download session. The default value is an empty string.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadConfig-description?: string--><!--Device-DownloadConfig-description?: string-End-->
 
@@ -70,10 +58,6 @@ Whether download is allowed on a metered connection. The value **true** means th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadConfig-enableMetered?: boolean--><!--Device-DownloadConfig-enableMetered?: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -90,10 +74,6 @@ Whether download is allowed on a roaming network. The value **true** means the d
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadConfig-enableRoaming?: boolean--><!--Device-DownloadConfig-enableRoaming?: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -104,15 +84,11 @@ Whether download is allowed on a roaming network. The value **true** means the d
 filePath?: string
 ```
 
-Path where the downloaded file is stored. The default value is the cache directory of the caller (that is, the input **context**). The default file name is the part truncated from the last slash (/) in the URL. - In the FA model, use the Context.getCacheDir method to obtain the application storage path. - In the Stage model, use the **AbilityContext** class in [Context (Context Base Class of the Stage Model)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context) to obtain the file path.
+Path where the downloaded file is stored. The default value is the cache directory of the caller (that is, the input **context**). The default file name is the part truncated from the last slash (/) in the URL. - In the FA model, use the Context.getCacheDir method to obtain the application storage path. - In the Stage model, use the **AbilityContext** class in [Context (Context Base Class of the Stage Model)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context) to obtain the file path.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadConfig-filePath?: string--><!--Device-DownloadConfig-filePath?: string-End-->
 
@@ -130,10 +106,6 @@ Adds an HTTP or HTTPS header to be included with the download request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadConfig-header?: Record<string, string>--><!--Device-DownloadConfig-header?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -144,15 +116,11 @@ Adds an HTTP or HTTPS header to be included with the download request.
 networkType?: int
 ```
 
-Network type that can be used for download. The allowed network type is determined by bitwise operation of [network type constants](arkts-basicservices-request-n.md#Constants) . The following settings are supported: - Only the cellular network is supported. The parameter is **NETWORK_MOBILE** or **0x00000001**. - Only WLAN is supported. The parameter is **NETWORK_WIFI** or **0x00010000**. - Both cellular network and WLAN are supported, which is the default settings. The parameter is **NETWORK_MOBILE **
+Network type that can be used for download. The allowed network type is determined by bitwise operation of [network type constants](arkts-basicservices-request-n.md#constants) . The following settings are supported: - Only the cellular network is supported. The parameter is **NETWORK_MOBILE** or **0x00000001**. - Only WLAN is supported. The parameter is **NETWORK_WIFI** or **0x00010000**. - Both cellular network and WLAN are supported, which is the default settings. The parameter is **NETWORK_MOBILE **
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadConfig-networkType?: int--><!--Device-DownloadConfig-networkType?: int-End-->
 
@@ -170,10 +138,6 @@ Download task name. The default value is **download**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DownloadConfig-title?: string--><!--Device-DownloadConfig-title?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -189,10 +153,6 @@ Resource URL. From API version 6 to 14, the value contains a maximum of 2048 cha
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DownloadConfig-url: string--><!--Device-DownloadConfig-url: string-End-->
 

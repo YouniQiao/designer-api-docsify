@@ -2,10 +2,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usageStatistics-interface BundleEvents--><!--Device-usageStatistics-interface BundleEvents-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -30,10 +26,6 @@ The usage group of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleEvents-appGroup?: int--><!--Device-BundleEvents-appGroup?: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -51,10 +43,6 @@ The bundle name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundleEvents-bundleName?: string--><!--Device-BundleEvents-bundleName?: string-End-->
 
@@ -74,10 +62,6 @@ The event id.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleEvents-eventId?: int--><!--Device-BundleEvents-eventId?: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -95,10 +79,6 @@ The time when this state occurred, in milliseconds. <br> Unit:ms
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundleEvents-eventOccurredTime?: long--><!--Device-BundleEvents-eventOccurredTime?: long-End-->
 
@@ -118,10 +98,6 @@ The shortcut ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleEvents-indexOfLink?: string--><!--Device-BundleEvents-indexOfLink?: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -139,10 +115,6 @@ The class name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundleEvents-nameOfClass?: string--><!--Device-BundleEvents-nameOfClass?: string-End-->
 

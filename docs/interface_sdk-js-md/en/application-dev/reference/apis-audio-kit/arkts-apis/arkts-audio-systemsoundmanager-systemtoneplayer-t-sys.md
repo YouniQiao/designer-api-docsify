@@ -8,10 +8,6 @@ SystemTone player object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemSoundManager-type SystemTonePlayer = _SystemTonePlayer--><!--Device-systemSoundManager-type SystemTonePlayer = _SystemTonePlayer-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core

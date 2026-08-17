@@ -4,10 +4,6 @@ Color in RGBA format. It consists of four components: red, green, blue, and alph
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Color--><!--Device-unnamed-export interface Color-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -23,10 +19,6 @@ Alpha component. The value range is [0, 1].
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Color-a: double--><!--Device-Color-a: double-End-->
 
@@ -44,10 +36,6 @@ Blue component. The value range is [0, 1].
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Color-b: double--><!--Device-Color-b: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -64,10 +52,6 @@ Green component. The value range is [0, 1].
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Color-g: double--><!--Device-Color-g: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -83,10 +67,6 @@ Red component. The value range is [0, 1].
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Color-r: double--><!--Device-Color-r: double-End-->
 

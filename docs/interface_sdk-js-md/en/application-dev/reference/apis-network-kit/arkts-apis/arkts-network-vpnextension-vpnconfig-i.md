@@ -4,10 +4,6 @@ Define configuration of the VPN network.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-vpnExtension-export interface VpnConfig--><!--Device-vpnExtension-export interface VpnConfig-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -30,10 +26,6 @@ The array of addresses for VPN interface.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConfig-addresses: Array<LinkAddress>--><!--Device-VpnConfig-addresses: Array<LinkAddress>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -49,10 +41,6 @@ The array of blocklist for the VPN network. The string indicates package name.
 **Type:** Array&lt;string&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-VpnConfig-blockedApplications?: Array<string>--><!--Device-VpnConfig-blockedApplications?: Array<string>-End-->
 
@@ -70,10 +58,6 @@ The array of DNS servers for the VPN network.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConfig-dnsAddresses?: Array<string>--><!--Device-VpnConfig-dnsAddresses?: Array<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -89,10 +73,6 @@ Whether the VPN interface's file descriptor is in blocking/non-blocking mode. Th
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-VpnConfig-isBlocking?: boolean--><!--Device-VpnConfig-isBlocking?: boolean-End-->
 
@@ -110,10 +90,6 @@ Whether ipv4 is supported. The default value is true.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConfig-isIPv4Accepted?: boolean--><!--Device-VpnConfig-isIPv4Accepted?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -129,10 +105,6 @@ Whether ipv6 is supported. The default value is false.
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-VpnConfig-isIPv6Accepted?: boolean--><!--Device-VpnConfig-isIPv6Accepted?: boolean-End-->
 
@@ -150,10 +122,6 @@ Whether to use the built-in VPN. The default value is false.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConfig-isInternal?: boolean--><!--Device-VpnConfig-isInternal?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -169,10 +137,6 @@ The maximum transmission unit (MTU) for the VPN interface.
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-VpnConfig-mtu?: number--><!--Device-VpnConfig-mtu?: number-End-->
 
@@ -190,10 +154,6 @@ The array of routes for VPN interface.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConfig-routes?: Array<RouteInfo>--><!--Device-VpnConfig-routes?: Array<RouteInfo>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -209,10 +169,6 @@ The array of search domains for the DNS resolver.
 **Type:** Array&lt;string&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-VpnConfig-searchDomains?: Array<string>--><!--Device-VpnConfig-searchDomains?: Array<string>-End-->
 
@@ -230,10 +186,6 @@ The array of trustlist for the VPN network. The string indicates package name.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-VpnConfig-trustedApplications?: Array<string>--><!--Device-VpnConfig-trustedApplications?: Array<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -249,10 +201,6 @@ The uuid for the VPN network.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-VpnConfig-vpnId?: string--><!--Device-VpnConfig-vpnId?: string-End-->
 

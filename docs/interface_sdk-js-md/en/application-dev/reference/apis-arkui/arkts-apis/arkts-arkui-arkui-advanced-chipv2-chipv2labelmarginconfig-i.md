@@ -4,10 +4,6 @@ Defines label margin.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ChipV2LabelMarginConfig--><!--Device-unnamed-export interface ChipV2LabelMarginConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -55,10 +51,6 @@ Left label margin length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -78,10 +70,6 @@ Right label margin length.
 **Type:** LengthMetrics
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

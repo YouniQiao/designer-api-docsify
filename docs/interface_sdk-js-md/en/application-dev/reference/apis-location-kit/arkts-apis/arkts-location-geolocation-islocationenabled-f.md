@@ -16,11 +16,9 @@ Obtain current location switch status
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#isLocationEnabled)
+**Substitutes:** [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#islocationenabled)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -34,7 +32,7 @@ Obtain current location switch status
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -59,11 +57,9 @@ Obtain current location switch status
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#isLocationEnabled)
+**Substitutes:** [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#islocationenabled)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -77,7 +73,7 @@ Obtain current location switch status
 | --- | --- |
 | Promise&lt;boolean&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

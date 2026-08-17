@@ -4,10 +4,6 @@ Defines the ICC account information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -30,10 +26,6 @@ Indicates the iccId for card.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IccAccountInfo-iccId: string--><!--Device-IccAccountInfo-iccId: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -49,10 +41,6 @@ Indicates the active status for card.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IccAccountInfo-isActive: boolean--><!--Device-IccAccountInfo-isActive: boolean-End-->
 
@@ -70,10 +58,6 @@ Indicates the mark card is eSim or not.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IccAccountInfo-isEsim: boolean--><!--Device-IccAccountInfo-isEsim: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -89,10 +73,6 @@ Indicates the display name for card.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IccAccountInfo-showName: string--><!--Device-IccAccountInfo-showName: string-End-->
 
@@ -110,10 +90,6 @@ Indicates the display number for card.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IccAccountInfo-showNumber: string--><!--Device-IccAccountInfo-showNumber: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -130,10 +106,6 @@ Indicates the sim Id for card.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IccAccountInfo-simId: int--><!--Device-IccAccountInfo-simId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -149,10 +121,6 @@ Indicates the card slot index number, ranging from 0 to the maximum card slot in
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IccAccountInfo-slotIndex: int--><!--Device-IccAccountInfo-slotIndex: int-End-->
 

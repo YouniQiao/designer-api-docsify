@@ -4,10 +4,6 @@ Obtains network information status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export enum NetworkInformationState--><!--Device-radio-export enum NetworkInformationState-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -23,10 +19,6 @@ NETWORK_UNKNOWN = 0
 Indicates that the network state is unknown.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkInformationState-NETWORK_UNKNOWN = 0--><!--Device-NetworkInformationState-NETWORK_UNKNOWN = 0-End-->
 
@@ -44,10 +36,6 @@ Indicates that the network is available for registration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetworkInformationState-NETWORK_AVAILABLE = 1--><!--Device-NetworkInformationState-NETWORK_AVAILABLE = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -64,10 +52,6 @@ Indicates that you have already registered with the network.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetworkInformationState-NETWORK_CURRENT = 2--><!--Device-NetworkInformationState-NETWORK_CURRENT = 2-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -83,10 +67,6 @@ NETWORK_FORBIDDEN = 3
 Indicates that the network is unavailable for registration.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkInformationState-NETWORK_FORBIDDEN = 3--><!--Device-NetworkInformationState-NETWORK_FORBIDDEN = 3-End-->
 

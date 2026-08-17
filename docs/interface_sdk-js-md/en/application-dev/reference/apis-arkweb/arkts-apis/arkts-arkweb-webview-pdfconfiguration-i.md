@@ -1,12 +1,8 @@
 # PdfConfiguration
 
-Specifies the input parameters of **createPdf()**. > **NOTE：**> > The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
+Input parameter of the [createPdf](arkts-arkweb-webview-webviewcontroller-c.md#createpdf) function. > **NOTE：**> > The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 <!--Device-webview-interface PdfConfiguration--><!--Device-webview-interface PdfConfiguration-End-->
 
@@ -24,15 +20,11 @@ import { webview } from 'webview';
 height: number
 ```
 
-Page height, in inches. Recommended value: 11.69 inches of A4 paper height.
+Page Height. Value range: greater than or equal to 0. If the value is out of range, it is set to 0. Unit: inch. Recommended value: A4 paper page height 11.69 inches.
 
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -52,10 +44,6 @@ Bottom margin. The value range is [0.0, half of the page height). If the value i
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-PdfConfiguration-marginBottom: number--><!--Device-PdfConfiguration-marginBottom: number-End-->
@@ -73,10 +61,6 @@ Left margin. The value range is [0.0, half of the page width). If the value is n
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -96,10 +80,6 @@ Right margin. The value range is [0.0, half of the page width). If the value is 
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-PdfConfiguration-marginRight: number--><!--Device-PdfConfiguration-marginRight: number-End-->
@@ -118,10 +98,6 @@ Top margin. The value range is [0.0, half of the page height). If the value is n
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-PdfConfiguration-marginTop: number--><!--Device-PdfConfiguration-marginTop: number-End-->
@@ -134,15 +110,11 @@ Top margin. The value range is [0.0, half of the page height). If the value is n
 scale?: number
 ```
 
-Scale multiple. The value range is [0.0, 2.0]. If the value is less than 0.0, set it to **0.0**. If the value is greater than 2.0, set it to **2.0**. Default value: **1.0**
+Scale multiple. The value range is [0.0, 2.0]. If the value is less than 0.0, set it to **0.0**. If the value is greater than 2. 0, set it to **2.0**. Default value: **1.0**
 
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -162,10 +134,6 @@ Whether to print the background color. The value **true** means to print the bac
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-PdfConfiguration-shouldPrintBackground?: boolean--><!--Device-PdfConfiguration-shouldPrintBackground?: boolean-End-->
@@ -178,15 +146,11 @@ Whether to print the background color. The value **true** means to print the bac
 width: number
 ```
 
-Page width, in inches. Recommended value: 8.27 inches of A4 paper width.
+Page Width. Value range: greater than or equal to 0. If the value is out of range, it is set to 0. Unit: inch. Recommended value: A4 paper page width 8.27 inches.
 
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

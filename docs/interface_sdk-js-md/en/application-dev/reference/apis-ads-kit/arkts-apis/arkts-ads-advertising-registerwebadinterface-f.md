@@ -16,10 +16,6 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void-End-->
@@ -40,7 +36,7 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 | [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -81,10 +77,6 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn only, since version 16.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 16.
 
 <!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void-End-->
@@ -106,7 +98,7 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 | [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

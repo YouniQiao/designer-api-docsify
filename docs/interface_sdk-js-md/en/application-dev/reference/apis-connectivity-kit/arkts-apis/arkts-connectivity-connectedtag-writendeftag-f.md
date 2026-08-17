@@ -16,8 +16,6 @@ Writes the NDEF Data.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [write](arkts-connectivity-connectedtag-write-f.md#write)
@@ -40,7 +38,7 @@ Writes the NDEF Data.
 | --- | --- |
 | Promise&lt;void&gt; | The void. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connectedTag } from '@kit.ConnectivityKit';
@@ -65,8 +63,6 @@ Writes the NDEF Data.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [write](arkts-connectivity-connectedtag-write-f.md#write)
@@ -84,7 +80,7 @@ Writes the NDEF Data.
 | data | string | Yes | The Data to write. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connectedTag } from '@kit.ConnectivityKit';

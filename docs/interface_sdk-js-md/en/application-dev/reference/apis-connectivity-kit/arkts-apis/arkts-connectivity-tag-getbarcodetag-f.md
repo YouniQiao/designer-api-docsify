@@ -12,13 +12,9 @@ import { tag } from 'tag';
 function getBarcodeTag(tagInfo: TagInfo): BarcodeTag
 ```
 
-Obtains an [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md#BarcodeTag) object based on the tag information. During tag reading, if the tag supports the NfcBarcode technology, an [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md#BarcodeTag) object will be created.
+Obtains an [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md#barcodetag) object based on the tag information. During tag reading, if the tag supports the NfcBarcode technology, an [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md#barcodetag) object will be created.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

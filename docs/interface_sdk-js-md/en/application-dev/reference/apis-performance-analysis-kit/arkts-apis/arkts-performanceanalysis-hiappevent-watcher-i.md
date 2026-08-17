@@ -1,12 +1,8 @@
 # Watcher
 
-Defines parameters for a **Watcher** object. This API is used to configure and manage event watchers to subscribe to and process specified events. > **NOTE：**> > You are not advised to call [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removeWatcher) in the callback. Once a watcher is > removed, the subscription callback of the watcher becomes invalid, and the callback may not be triggered when an > event occurs.
+Defines parameters for a **Watcher** object. This API is used to configure and manage event watchers to subscribe to and process specified events. > **NOTE：**> > You are not advised to call [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher) in the callback. Once a watcher is > removed, the subscription callback of the watcher becomes invalid, and the callback may not be triggered when an > event occurs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hiAppEvent-interface Watcher--><!--Device-hiAppEvent-interface Watcher-End-->
 
@@ -30,10 +26,6 @@ Subscription filtering condition. This parameter is passed only when subscriptio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Watcher-appEventFilters?: AppEventFilter[]--><!--Device-Watcher-appEventFilters?: AppEventFilter[]-End-->
@@ -51,10 +43,6 @@ Unique name of a watcher. The value contains a maximum of 32 characters, includi
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Real-time subscription callback. Only this callback function is triggered if it 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Watcher-onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void--><!--Device-Watcher-onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void-End-->
@@ -96,10 +80,6 @@ Subscription callback. This parameter takes effect only when it is passed togeth
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Watcher-onTrigger?: (curRow: int, curSize: int, holder: AppEventPackageHolder) => void--><!--Device-Watcher-onTrigger?: (curRow: int, curSize: int, holder: AppEventPackageHolder) => void-End-->
@@ -117,10 +97,6 @@ Subscription callback triggering condition. This parameter takes effect only whe
 **Type:** [TriggerCondition](arkts-performanceanalysis-hiappevent-triggercondition-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -10,9 +10,7 @@ function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>--><!--Device-fileIo-function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>-End-->
 
@@ -74,9 +72,7 @@ function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void-End-->
 
@@ -88,7 +84,7 @@ function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): v
 | --- | --- | --- | --- |
 | srcUri | string | 是 | 待复制文件或目录的URI。 |
 | destUri | string | 是 | 目标文件或目录的URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拷贝成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当拷贝成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -131,9 +127,7 @@ function copy(srcUri: string, destUri: string, options: CopyOptions, callback: A
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -146,7 +140,7 @@ function copy(srcUri: string, destUri: string, options: CopyOptions, callback: A
 | srcUri | string | 是 | 待复制文件或目录的URI。 |
 | destUri | string | 是 | 目标文件或目录的URI。 |
 | options | [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-copyoptions-i.md) | 是 | 拷贝进度回调。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拷贝成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当拷贝成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

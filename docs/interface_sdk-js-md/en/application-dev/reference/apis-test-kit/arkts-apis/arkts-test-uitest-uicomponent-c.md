@@ -4,11 +4,9 @@ In **UiTest**, the **UiComponent** class represents a component on the UI and pr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Component](arkts-test-uitest-component-c.md#Component)
+**Substitutes:** [Component](arkts-test-uitest-component-c.md#component)
 
 <!--Device-unnamed-declare class UiComponent--><!--Device-unnamed-declare class UiComponent-End-->
 
@@ -58,8 +56,6 @@ Clicks this component. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [click](arkts-test-uitest-component-c.md#click)
@@ -74,7 +70,7 @@ Clicks this component. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -97,11 +93,9 @@ Double-clicks this component. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [doubleClick](arkts-test-uitest-component-c.md#doubleClick)
+**Substitutes:** [doubleClick](arkts-test-uitest-component-c.md#doubleclick)
 
 <!--Device-UiComponent-doubleClick(): Promise<void>--><!--Device-UiComponent-doubleClick(): Promise<void>-End-->
 
@@ -113,7 +107,7 @@ Double-clicks this component. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -136,11 +130,9 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getId](arkts-test-uitest-component-c.md#getId)
+**Substitutes:** [getId](arkts-test-uitest-component-c.md#getid)
 
 <!--Device-UiComponent-getId(): Promise<number>--><!--Device-UiComponent-getId(): Promise<number>-End-->
 
@@ -152,7 +144,7 @@ Obtains the ID of this component. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the component ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -175,11 +167,9 @@ Obtains the key of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getId](arkts-test-uitest-component-c.md#getId)
+**Substitutes:** [getId](arkts-test-uitest-component-c.md#getid)
 
 <!--Device-UiComponent-getKey(): Promise<string>--><!--Device-UiComponent-getKey(): Promise<string>-End-->
 
@@ -191,7 +181,7 @@ Obtains the key of this component. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the key value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -214,11 +204,9 @@ Obtains the text information of this component. This API uses a promise to retur
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getText](arkts-test-uitest-component-c.md#getText)
+**Substitutes:** [getText](arkts-test-uitest-component-c.md#gettext)
 
 <!--Device-UiComponent-getText(): Promise<string>--><!--Device-UiComponent-getText(): Promise<string>-End-->
 
@@ -230,7 +218,7 @@ Obtains the text information of this component. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the text information of the component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -253,11 +241,9 @@ Obtains the type of this component. This API uses a promise to return the result
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getType](arkts-test-uitest-component-c.md#getType)
+**Substitutes:** [getType](arkts-test-uitest-component-c.md#gettype)
 
 <!--Device-UiComponent-getType(): Promise<string>--><!--Device-UiComponent-getType(): Promise<string>-End-->
 
@@ -269,7 +255,7 @@ Obtains the type of this component. This API uses a promise to return the result
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the component type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -292,11 +278,9 @@ Inputs text to a component. This API takes effect only for editable text compone
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [inputText](arkts-test-uitest-component-c.md#inputText)(text: string)
+**Substitutes:** [inputText](arkts-test-uitest-component-c.md#inputtext)(text: string)
 
 <!--Device-UiComponent-inputText(text: string): Promise<void>--><!--Device-UiComponent-inputText(text: string): Promise<void>-End-->
 
@@ -314,7 +298,7 @@ Inputs text to a component. This API takes effect only for editable text compone
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -337,11 +321,9 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isClickable](arkts-test-uitest-component-c.md#isClickable)
+**Substitutes:** [isClickable](arkts-test-uitest-component-c.md#isclickable)
 
 <!--Device-UiComponent-isClickable(): Promise<boolean>--><!--Device-UiComponent-isClickable(): Promise<boolean>-End-->
 
@@ -353,7 +335,7 @@ Obtains the clickable status of this component. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return whether the component is clickable. The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -380,11 +362,9 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isEnabled](arkts-test-uitest-component-c.md#isEnabled)
+**Substitutes:** [isEnabled](arkts-test-uitest-component-c.md#isenabled)
 
 <!--Device-UiComponent-isEnabled(): Promise<boolean>--><!--Device-UiComponent-isEnabled(): Promise<boolean>-End-->
 
@@ -396,7 +376,7 @@ Obtains the enabled status of this component. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return whether the component is enabled. The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -423,11 +403,9 @@ Obtains the focused status of this component. This API uses a promise to return 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isFocused](arkts-test-uitest-component-c.md#isFocused)
+**Substitutes:** [isFocused](arkts-test-uitest-component-c.md#isfocused)
 
 <!--Device-UiComponent-isFocused(): Promise<boolean>--><!--Device-UiComponent-isFocused(): Promise<boolean>-End-->
 
@@ -439,7 +417,7 @@ Obtains the focused status of this component. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return whether the component is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -466,11 +444,9 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isScrollable](arkts-test-uitest-component-c.md#isScrollable)
+**Substitutes:** [isScrollable](arkts-test-uitest-component-c.md#isscrollable)
 
 <!--Device-UiComponent-isScrollable(): Promise<boolean>--><!--Device-UiComponent-isScrollable(): Promise<boolean>-End-->
 
@@ -482,7 +458,7 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return whether the component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -509,11 +485,9 @@ Obtains the selected status of this component. This API uses a promise to return
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isSelected](arkts-test-uitest-component-c.md#isSelected)
+**Substitutes:** [isSelected](arkts-test-uitest-component-c.md#isselected)
 
 <!--Device-UiComponent-isSelected(): Promise<boolean>--><!--Device-UiComponent-isSelected(): Promise<boolean>-End-->
 
@@ -525,7 +499,7 @@ Obtains the selected status of this component. This API uses a promise to return
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return whether the component is selected. The value **true** indicates that the component is selected, and **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -552,11 +526,9 @@ Long-clicks this component. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [longClick](arkts-test-uitest-component-c.md#longClick)
+**Substitutes:** [longClick](arkts-test-uitest-component-c.md#longclick)
 
 <!--Device-UiComponent-longClick(): Promise<void>--><!--Device-UiComponent-longClick(): Promise<void>-End-->
 
@@ -568,7 +540,7 @@ Long-clicks this component. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -591,11 +563,9 @@ Scrolls on this component to search for the target component (applicable to comp
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [scrollSearch](arkts-test-uitest-component-c.md#scrollSearch)(on: On)
+**Substitutes:** [scrollSearch](arkts-test-uitest-component-c.md#scrollsearch)(on: On)
 
 <!--Device-UiComponent-scrollSearch(by: By): Promise<UiComponent>--><!--Device-UiComponent-scrollSearch(by: By): Promise<UiComponent>-End-->
 
@@ -613,7 +583,7 @@ Scrolls on this component to search for the target component (applicable to comp
 | --- | --- |
 | Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; | Promise used to return the target component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets

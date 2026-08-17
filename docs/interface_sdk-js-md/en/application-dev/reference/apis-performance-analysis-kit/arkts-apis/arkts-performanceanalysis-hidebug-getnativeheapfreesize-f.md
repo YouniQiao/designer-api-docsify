@@ -16,10 +16,6 @@ Obtains the total number of bytes occupied by the total free space (**fordblks**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getNativeHeapFreeSize() : bigint--><!--Device-hidebug-function getNativeHeapFreeSize() : bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ Obtains the total number of bytes occupied by the total free space (**fordblks**
 | --- | --- |
 | bigint | Size of the memory occupied by the total free space held by the process, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

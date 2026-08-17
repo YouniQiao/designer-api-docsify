@@ -12,13 +12,9 @@ import { uiObserver } from 'uiObserver';
 export function on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback<NavDestinationInfo>): void
 ```
 
-Subscribes to status changes of the **NavDestination** component. Compared with [uiObserver.on](#on_navDestinationUpdate), this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe.
+Subscribes to status changes of the **NavDestination** component. Compared with [uiObserver.on](#onnavdestinationupdate), this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +32,7 @@ Subscribes to status changes of the **NavDestination** component. Compared with 
 | options | { navigationId: ResourceStr } | Yes | ID of the target **Navigation** component. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | Yes | Callback used to return the result. It provides the current state of the **NavDestination** component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets
@@ -103,10 +99,6 @@ Subscribes to status changes of the **NavDestination** component.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -122,7 +114,7 @@ Subscribes to status changes of the **NavDestination** component.
 | type | 'navDestinationUpdate' | Yes | Event type. Set to **'navDestinationUpdate'** for **NavDestination** component status change events. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | Yes | Callback used to return the result. It provides the current state of the **NavDestination** component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets

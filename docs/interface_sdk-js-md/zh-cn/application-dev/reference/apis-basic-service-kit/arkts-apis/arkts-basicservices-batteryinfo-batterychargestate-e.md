@@ -4,9 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-batteryInfo-export enum BatteryChargeState--><!--Device-batteryInfo-export enum BatteryChargeState-End-->
 
@@ -22,9 +20,7 @@ NONE
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BatteryChargeState-NONE--><!--Device-BatteryChargeState-NONE-End-->
 
@@ -40,9 +36,7 @@ ENABLE
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BatteryChargeState-ENABLE--><!--Device-BatteryChargeState-ENABLE-End-->
 
@@ -58,9 +52,7 @@ DISABLE
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BatteryChargeState-DISABLE--><!--Device-BatteryChargeState-DISABLE-End-->
 
@@ -76,9 +68,7 @@ FULL
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BatteryChargeState-FULL--><!--Device-BatteryChargeState-FULL-End-->
 

@@ -11,9 +11,7 @@ Defines SelectionContainer component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -31,7 +29,7 @@ Defines SelectionContainer component.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |  |
+| [SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |
 
 
 ## SelectionContainer
@@ -47,9 +45,7 @@ Defines SelectionContainer component. It requires calling setSelectionContainerO
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,11 +57,11 @@ Defines SelectionContainer component. It requires calling setSelectionContainerO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | CustomBuilderT&lt;[SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md)&gt; | Yes | the callback to set up SelectionContainer's attributes. |
+| style | CustomBuilderT&lt;[SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md)&gt; | Yes | the callback to set up SelectionContainer's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 

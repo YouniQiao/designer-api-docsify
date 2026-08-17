@@ -4,9 +4,7 @@ Provides the API for transliterate text from one format to another.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export class Transliterator--><!--Device-i18n-export class Transliterator-End-->
 
@@ -22,9 +20,7 @@ Obtains a list of IDs supported by the Transliterator object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -48,9 +44,7 @@ Creates a Transliterator object based on the specified ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -68,7 +62,7 @@ Creates a Transliterator object based on the specified ID.
 
 | Type | Description |
 | --- | --- |
-| [Transliterator](arkts-na-i18n-transliterator-c.md) | Transliterator object. |
+| [Transliterator](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-transliterator-c.md) | Transliterator object. |
 
 ## transform
 
@@ -80,9 +74,7 @@ Converts the input text from the source format to the target format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

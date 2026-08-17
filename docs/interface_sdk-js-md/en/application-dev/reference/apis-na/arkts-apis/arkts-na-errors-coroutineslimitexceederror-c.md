@@ -1,4 +1,4 @@
-# CoroutinesLimitExceedError
+# CoroutinesLimitExceedError(Defines the commonly used Errors for ArkTS)
 
 Represents error that is thrown when coroutines limit is reached
 
@@ -6,9 +6,7 @@ Represents error that is thrown when coroutines limit is reached
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class CoroutinesLimitExceedError--><!--Device-unnamed-export class CoroutinesLimitExceedError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new CoroutinesLimitExceedError instance with provided message and e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

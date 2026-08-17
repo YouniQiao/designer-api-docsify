@@ -4,10 +4,6 @@ The parameters of heat distortion effect.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-interface HeatDistortionEffectParam--><!--Device-uiEffect-interface HeatDistortionEffectParam-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -32,10 +28,6 @@ The intensity of the heat distortion. The value range is [0, 1], and values outs
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HeatDistortionEffectParam-intensity: double--><!--Device-HeatDistortionEffectParam-intensity: double-End-->
@@ -55,10 +47,6 @@ The noise scale of the heat distortion, controlling the fineness of the noise te
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ The animation progress of the heat distortion. The value range is [0, 1], and va
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HeatDistortionEffectParam-progress: double--><!--Device-HeatDistortionEffectParam-progress: double-End-->
@@ -103,10 +87,6 @@ The rise weight of the heat distortion, controlling the rising speed of bubbles.
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

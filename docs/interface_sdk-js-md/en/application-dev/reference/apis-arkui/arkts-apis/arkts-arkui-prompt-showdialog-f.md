@@ -16,8 +16,6 @@ Displays the dialog box.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** showDialog
@@ -33,7 +31,7 @@ Displays the dialog box.
 | options | ShowDialogOptions | Yes | Options. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | Yes |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import prompt from '@ohos.prompt'
@@ -70,8 +68,6 @@ Displays the dialog box.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** showDialog
@@ -92,7 +88,7 @@ Displays the dialog box.
 | --- | --- |
 | Promise&lt;ShowDialogSuccessResponse&gt; |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import prompt from '@ohos.prompt'

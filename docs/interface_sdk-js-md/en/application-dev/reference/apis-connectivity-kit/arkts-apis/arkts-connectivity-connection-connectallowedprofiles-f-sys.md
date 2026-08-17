@@ -16,10 +16,6 @@ Connects all allowed bluetooth profiles between the local and remote device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 16+: ohos.permission.ACCESS_BLUETOOTH
 - API version 11 - 15: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
@@ -51,7 +47,7 @@ Connects all allowed bluetooth profiles between the local and remote device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -78,10 +74,6 @@ function connectAllowedProfiles(deviceId: string): Promise<void>
 Connects all allowed bluetooth profiles between the local and remote device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 16+: ohos.permission.ACCESS_BLUETOOTH
@@ -119,7 +111,7 @@ Connects all allowed bluetooth profiles between the local and remote device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

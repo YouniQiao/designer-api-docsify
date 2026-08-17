@@ -10,11 +10,9 @@ Obtains information about all missions. This API uses an asynchronous callback t
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getMissionInfos-(System-API))
+**Substitutes:** [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getmissioninfos-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -32,7 +30,7 @@ Obtains information about all missions. This API uses an asynchronous callback t
 | numMax | number | Yes | Maximum number of missions whose information can be obtained. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -58,11 +56,9 @@ Obtains information about all missions. This API uses a promise to return the re
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getMissionInfos-(System-API))
+**Substitutes:** [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getmissioninfos-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -85,7 +81,7 @@ Obtains information about all missions. This API uses a promise to return the re
 | --- | --- |
 | Promise&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Promise used to return the array of mission information obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

@@ -4,10 +4,6 @@ The parameters of blur bubbles rise effect.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-interface BlurBubblesRiseEffectParam--><!--Device-uiEffect-interface BlurBubblesRiseEffectParam-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -32,10 +28,6 @@ The Gaussian blur intensity of the blur bubbles rise effect. The value range is 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BlurBubblesRiseEffectParam-blurIntensity: double--><!--Device-BlurBubblesRiseEffectParam-blurIntensity: double-End-->
@@ -55,10 +47,6 @@ The mask image for the blur bubbles rise effect, controlling the blur bubbles ar
 **Type:** image.PixelMap
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ The mixing strength between the original and blurred images. The value range is 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BlurBubblesRiseEffectParam-mixStrength: double--><!--Device-BlurBubblesRiseEffectParam-mixStrength: double-End-->
@@ -103,10 +87,6 @@ The animation progress of the blur bubbles rise effect. The value range is [0, 1
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,13 +12,9 @@ import { bundleManager } from 'bundleManager';
 function installForResult(admin: Want, hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-Installs the application bundle in the specified path and returns the installation result. This API uses a promise to return the result. This API can be used to install only applications of the **enterprise_mdm** (MDM application) or **enterprise_normal** (common enterprise application) distribution type. You can call the [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf) API to query the BundleInfo of an application, where **BundleInfo.appInfo.appDistributionType** indicates the distribution type. > **NOTE：**> > This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait > for the asynchronous return of this API.
+Installs the application bundle in the specified path and returns the installation result. This API uses a promise to return the result. This API can be used to install only applications of the **enterprise_mdm** (MDM application) or **enterprise_normal** (common enterprise application) distribution type. You can call the [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself) API to query the BundleInfo of an application, where **BundleInfo.appInfo.appDistributionType** indicates the distribution type. > **NOTE：**> > This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait > for the asynchronous return of this API.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 

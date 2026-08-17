@@ -4,10 +4,6 @@ Defines a text selection controller.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface TextBaseController--><!--Device-unnamed-declare interface TextBaseController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ closeSelectionMenu(): void
 Closes the custom or default text selection menu.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ getLayoutManager(): LayoutManager
 Obtains a **LayoutManager** object.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,10 +59,6 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 Sets the range of content selection. The selected content is highlighted. If both **selectionStart** and **selectionEnd** are set to **-1**, the entire content is selected. The component must be focused for the API call to have effect. Since API version 12, on 2-in-1 devices, regardless of the value of **options**, calling the **setSelection** API will not display a menu; if a menu is already open, calling the API will close it. On non-2-in-1 devices, when **options** is set to **MenuPolicy.DEFAULT**, the following rules apply after the API is called: 1. If the component has a menu with a selection handle, the menu remains open and is relocated according to the selection. 2. If the component has a menu without a selection handle, the menu remains open and its position remains unchanged. 3. If there is no menu open, no menu will appear after the selection.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

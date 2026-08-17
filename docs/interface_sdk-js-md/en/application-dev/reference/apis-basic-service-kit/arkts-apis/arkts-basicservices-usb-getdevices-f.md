@@ -16,11 +16,9 @@ Obtains the USB device list.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getDevices)
+**Substitutes:** [getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)
 
 <!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>-End-->
 
@@ -32,7 +30,7 @@ Obtains the USB device list.
 | --- | --- |
 | Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;USBDevice&gt;&gt; | USB device list. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let devicesList = usb.getDevices();

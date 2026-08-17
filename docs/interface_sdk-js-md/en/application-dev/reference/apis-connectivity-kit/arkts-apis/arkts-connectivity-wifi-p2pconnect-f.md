@@ -16,11 +16,9 @@ Initiates a P2P connection to a device with the specified configuration.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md#p2pConnect)
+**Substitutes:** [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md#p2pconnect)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
@@ -40,7 +38,7 @@ Initiates a P2P connection to a device with the specified configuration.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

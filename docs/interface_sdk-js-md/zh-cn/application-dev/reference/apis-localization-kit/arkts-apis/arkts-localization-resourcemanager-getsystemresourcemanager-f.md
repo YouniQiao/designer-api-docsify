@@ -10,11 +10,9 @@ export function getSystemResourceManager(): ResourceManager
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 20
 
-**替代接口：** [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getSysResourceManager)
+**替代接口：** [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +32,7 @@ export function getSystemResourceManager(): ResourceManager
 | --- | --- |
 | [9001009](../errorcode-resource-manager.md#9001009-获取系统资源管理对象失败) | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';

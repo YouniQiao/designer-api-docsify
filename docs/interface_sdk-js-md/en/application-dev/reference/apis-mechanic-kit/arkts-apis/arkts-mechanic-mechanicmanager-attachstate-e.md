@@ -4,10 +4,6 @@ Device attach states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export enum AttachState--><!--Device-mechanicManager-export enum AttachState-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -22,10 +18,6 @@ Device attached.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AttachState-ATTACHED = 0--><!--Device-AttachState-ATTACHED = 0-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -39,10 +31,6 @@ DETACHED = 1
 Device detached.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AttachState-DETACHED = 1--><!--Device-AttachState-DETACHED = 1-End-->
 

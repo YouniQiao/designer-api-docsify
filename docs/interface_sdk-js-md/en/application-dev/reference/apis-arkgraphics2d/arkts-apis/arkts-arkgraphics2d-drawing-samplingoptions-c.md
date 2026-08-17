@@ -4,10 +4,6 @@ Implements sampling options. > **NOTE：**> > - The initial APIs of this class a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class SamplingOptions--><!--Device-drawing-class SamplingOptions-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -24,13 +20,9 @@ import { drawing } from 'drawing';
 constructor()
 ```
 
-Creates a **SamplingOptions** object, where the default value of [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md#FilterMode) is **FILTER_MODE_NEAREST**.
+Creates a **SamplingOptions** object, where the default value of [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md#filtermode) is **FILTER_MODE_NEAREST**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SamplingOptions-constructor()--><!--Device-SamplingOptions-constructor()-End-->
 
@@ -45,10 +37,6 @@ constructor(filterMode: FilterMode)
 Creates a **SamplingOptions** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SamplingOptions-constructor(filterMode: FilterMode)--><!--Device-SamplingOptions-constructor(filterMode: FilterMode)-End-->
 

@@ -4,9 +4,7 @@ Defining interface of LayoutCallbacks for custom component, when decorate with @
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export interface LayoutCallbacks--><!--Device-unnamed-export interface LayoutCallbacks-End-->
 
@@ -22,9 +20,7 @@ Custom component override this method to layout each of its sub components.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

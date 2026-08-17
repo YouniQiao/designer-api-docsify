@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace customConfig--><!--Device-unnamed-declare namespace customConfig-End-->
 
 **System capability:** SystemCapability.Customization.CustomConfig
@@ -36,5 +32,5 @@ import { customConfig } from 'customConfig';
 
 | Name | Description |
 | --- | --- |
-| [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md#getChannelId) | Obtains a pre-installed channel ID of this application. |
+| [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md#getchannelid) | Obtains a pre-installed channel ID of this application. |
 

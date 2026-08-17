@@ -4,10 +4,6 @@ Enumerates the blinking scenarios.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-config-export enum BlinkingScenario--><!--Device-config-export enum BlinkingScenario-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,10 +19,6 @@ ALARM = 1
 Blinking triggered by an alarm.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Blinking triggered by a notification.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BlinkingScenario-NOTIFICATION = 2--><!--Device-BlinkingScenario-NOTIFICATION = 2-End-->
@@ -68,10 +56,6 @@ Blinking triggered by an incoming call.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BlinkingScenario-CALL = 3--><!--Device-BlinkingScenario-CALL = 3-End-->
@@ -89,10 +73,6 @@ TESTING = 4
 Blinking triggered by a test scenario.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

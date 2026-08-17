@@ -4,8 +4,6 @@ Defines the size type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
@@ -23,8 +21,6 @@ Auto
 Select a value based on the device type.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ Extra Small width type device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
@@ -63,8 +57,6 @@ SM
 Small width type device.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -84,8 +76,6 @@ Medium width type device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
@@ -103,8 +93,6 @@ LG
 Large width type device.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

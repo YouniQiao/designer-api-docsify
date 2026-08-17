@@ -4,10 +4,6 @@ The **NodeController** module provides APIs for managing custom nodes, such as c
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export abstract class NodeController--><!--Device-unnamed-export abstract class NodeController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ aboutToAppear?(): void
 Called after the NodeContainer component bound to this **NodeController** instance is attached and about to appear. > **NOTE：**> > For details about the callback timing, see onAppear.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,10 +53,6 @@ aboutToResize?(size: Size): void
 Called when the NodeContainer component bound to this **NodeController** instance is resized.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,13 +74,9 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 abstract makeNode(uiContext: UIContext): FrameNode | null
 ```
 
-Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**. This callback can also be invoked through the **rebuild()** method of **NodeController**. > **NOTE：**> > NodeContainer does not support cross-instance reuse. If > NodeContainer is reused across instances and > [NodeController](#NodeController) of NodeContainer > triggers the [makeNode](#makeNode) callback method, the > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object in the input parameter may be undefined. In this case, you need > to check whether the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object in the input parameter is undefined, which > prevents the [invalid UIContext](../../../ui/arkts-wrong-uicontext-debug.md#identifying-uicontext-errors) when > the input parameter is used.
+Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**. This callback can also be invoked through the **rebuild()** method of **NodeController**. > **NOTE：**> > NodeContainer does not support cross-instance reuse. If > NodeContainer is reused across instances and > [NodeController](#nodecontroller) of NodeContainer > triggers the [makeNode](#makenode) callback method, the > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object in the input parameter may be undefined. In this case, you need > to check whether the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object in the input parameter is undefined, which > prevents the [invalid UIContext](../../../ui/arkts-wrong-uicontext-debug.md#identifying-uicontext-errors) when > the input parameter is used.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -149,10 +125,6 @@ onBind?(containerId: number): void
 Called after this **NodeController** instance is bound to a NodeContainer component.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +150,6 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -199,10 +167,6 @@ onTouchEvent?(event: TouchEvent): void
 Called when the NodeContainer component bound to this **NodeController** instance receives a touch event.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,10 +192,6 @@ Called after this **NodeController** instance is unbound from a NodeContainer co
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -255,10 +215,6 @@ onWillBind?(containerId: number): void
 Called when this **NodeController** instance is about to be bound to a NodeContainer component.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -284,10 +240,6 @@ Called when this **NodeController** instance is about to be unbound from a NodeC
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -308,13 +260,9 @@ Called when this **NodeController** instance is about to be unbound from a NodeC
 rebuild(): void
 ```
 
-Instructs the NodeContainer component bound to this **NodeController** instance to call the [makeNode](#makeNode) API again to change child nodes. > **NOTE：**> > Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that > the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound > NodeContainer. > > In cases where the [UI context is unclear](../../../ui/arkts-global-interface.md#ambiguous-ui-context), for > example, during event callbacks, you can use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runScopedTask) method of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to explicitly define the UI context at the time of the call.
+Instructs the NodeContainer component bound to this **NodeController** instance to call the [makeNode](#makenode) API again to change child nodes. > **NOTE：**> > Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that > the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound > NodeContainer. > > In cases where the [UI context is unclear](../../../ui/arkts-global-interface.md#ambiguous-ui-context), for > example, during event callbacks, you can use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) method of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to explicitly define the UI context at the time of the call.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

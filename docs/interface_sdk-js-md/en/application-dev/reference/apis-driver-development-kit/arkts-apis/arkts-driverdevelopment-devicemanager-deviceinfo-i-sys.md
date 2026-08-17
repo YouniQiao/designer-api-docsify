@@ -4,10 +4,6 @@ Defines the detailed information about a device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-deviceManager-interface DeviceInfo--><!--Device-deviceManager-interface DeviceInfo-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -32,10 +28,6 @@ Device ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceInfo-deviceId: long--><!--Device-DeviceInfo-deviceId: long-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -54,10 +46,6 @@ UID of the driver matching the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceInfo-driverUid?: string--><!--Device-DeviceInfo-driverUid?: string-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -75,10 +63,6 @@ Whether the device matches the driver. The value `true` indicates the device mat
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceInfo-isDriverMatched: boolean--><!--Device-DeviceInfo-isDriverMatched: boolean-End-->
 

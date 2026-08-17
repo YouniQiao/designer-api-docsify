@@ -1,10 +1,8 @@
 # ContinuationExtraParams
 
-The ContinuationExtraParams module provides the filter parameters required by the device selection module in the continuation management entry. These filter parameters can be used as an input parameter of [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startContinuationDeviceManager) .
+The ContinuationExtraParams module provides the filter parameters required by the device selection module in the continuation management entry. These filter parameters can be used as an input parameter of [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startcontinuationdevicemanager) .
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 
@@ -23,8 +21,6 @@ Authentication information.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 
@@ -48,8 +44,6 @@ Continuation mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -71,8 +65,6 @@ Device filtering description.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 
@@ -96,8 +88,6 @@ Device type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -120,8 +110,6 @@ Device filtering parameter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -143,8 +131,6 @@ Name of the target bundle.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 

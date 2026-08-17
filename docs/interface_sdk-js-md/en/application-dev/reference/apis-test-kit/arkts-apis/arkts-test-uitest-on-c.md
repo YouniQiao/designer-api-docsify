@@ -1,12 +1,8 @@
 # On
 
-Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the **On** class to filter and match components. The APIs provided by the **On** class exhibit the following features: 1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component. 2. Provide multiple match patterns for component attributes. 3. Support absolute positioning and relative positioning for components. APIs such as [ON.isBefore](#isBefore) and [ON.isAfter](#isAfter) can be used to specify the features of adjacent components to assist positioning. All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode.
+Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the **On** class to filter and match components. The APIs provided by the **On** class exhibit the following features: 1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component. 2. Provide multiple match patterns for component attributes. 3. Support absolute positioning and relative positioning for components. APIs such as [ON.isBefore](#isbefore) and [ON.isAfter](#isafter) can be used to specify the features of adjacent components to assist positioning. All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class On--><!--Device-unnamed-declare class On-End-->
 
@@ -52,13 +48,9 @@ import { PenKeyOperationOptions } from 'PenKeyOperationOptions';
 afterComponent(com: Component): On
 ```
 
-Requires that the target Component which is after another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component) object,used to locate Component relatively.
+Requires that the target Component which is after another Component that specified by the given [Component](arkts-test-uitest-component-c.md#component) object,used to locate Component relatively.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -90,13 +82,9 @@ Requires that the target Component which is after another Component that specifi
 beforeComponent(com: Component): On
 ```
 
-Requires that the target Component which is before another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component) object,used to locate Component relatively.
+Requires that the target Component which is before another Component that specified by the given [Component](arkts-test-uitest-component-c.md#component) object,used to locate Component relatively.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -132,10 +120,6 @@ Specifies the display to which the target component belongs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-belongingDisplay(displayId: int): On--><!--Device-On-belongingDisplay(displayId: int): On-End-->
@@ -146,7 +130,7 @@ Specifies the display to which the target component belongs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | int | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. <br>**Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getAllDisplays) to obtain all current **display** objects and use them to obtain the corresponding display IDs.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
+| displayId | int | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. <br>**Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getalldisplays) to obtain all current **display** objects and use them to obtain the corresponding display IDs.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
 
 **Return value:**
 
@@ -160,7 +144,7 @@ Specifies the display to which the target component belongs.
 | --- | --- |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -178,10 +162,6 @@ checkable(b?: boolean): On
 Specifies the checkable attribute of the target component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -207,7 +187,7 @@ Specifies the checkable attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -225,10 +205,6 @@ checked(b?: boolean): On
 Specifies the checked attribute of the target component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -254,7 +230,7 @@ Specifies the checked attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -272,10 +248,6 @@ clickable(b?: boolean): On
 Specifies the clickable attribute of the target component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -301,7 +273,7 @@ Specifies the clickable attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -320,10 +292,6 @@ Specifies the description of the target component. Multiple match patterns are s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-description(val: string, pattern?: MatchPattern): On--><!--Device-On-description(val: string, pattern?: MatchPattern): On-End-->
@@ -335,7 +303,7 @@ Specifies the description of the target component. Multiple match patterns are s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | string | Yes | Description of the component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) . <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern) . <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
@@ -349,7 +317,7 @@ Specifies the description of the target component. Multiple match patterns are s
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -367,10 +335,6 @@ enabled(b?: boolean): On
 Specifies the enabled attribute of the target component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -396,7 +360,7 @@ Specifies the enabled attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -414,10 +378,6 @@ focused(b?: boolean): On
 Specifies the focused attribute of the target component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -443,7 +403,7 @@ Specifies the focused attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -462,10 +422,6 @@ Specifies the hint text attribute of the target component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-hint(val: string, pattern?: MatchPattern): On--><!--Device-On-hint(val: string, pattern?: MatchPattern): On-End-->
@@ -477,7 +433,7 @@ Specifies the hint text attribute of the target component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | string | Yes | The specified hint text of the component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
@@ -491,7 +447,7 @@ Specifies the hint text attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -509,10 +465,6 @@ id(id: string): On
 Specifies the ID attribute of the target component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -538,7 +490,7 @@ Specifies the ID attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -557,10 +509,6 @@ Specifies the **id** attribute and match pattern of the target component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-id(id: string, pattern: MatchPattern): On--><!--Device-On-id(id: string, pattern: MatchPattern): On-End-->
@@ -572,7 +520,7 @@ Specifies the **id** attribute and match pattern of the target component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Component ID.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | Text matching pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern). |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | Text matching pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern). |
 
 **Return value:**
 
@@ -586,7 +534,7 @@ Specifies the **id** attribute and match pattern of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -604,10 +552,6 @@ inWindow(bundleName: string): On
 Specifies that the target component is located within the given application window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -633,7 +577,7 @@ Specifies that the target component is located within the given application wind
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -651,10 +595,6 @@ isAfter(on: On): On
 Specifies that the target component is located after the given attribute component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -680,7 +620,7 @@ Specifies that the target component is located after the given attribute compone
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -699,10 +639,6 @@ isBefore(on: On): On
 Specifies that the target component is located before the given attribute component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -728,7 +664,7 @@ Specifies that the target component is located before the given attribute compon
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -747,10 +683,6 @@ longClickable(b?: boolean): On
 Specifies the long-clickable attribute of the target component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -776,7 +708,7 @@ Specifies the long-clickable attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -791,13 +723,9 @@ let on: On = ON.longClickable(true); // Use the static constructor ON to create 
 originalText(text: string, pattern?: MatchPattern): On
 ```
 
-Specifies the text content and text matching pattern of the component. > **NOTE：**> > If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel) > of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of > the target component for searching for the component. In this case, the [On.text()](#text) API does not > take effect.
+Specifies the text content and text matching pattern of the component. > **NOTE：**> > If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel) > of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of > the target component for searching for the component. In this case, the [On.text()](#text) API does not > take effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -810,7 +738,7 @@ Specifies the text content and text matching pattern of the component. > **NOTE�
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Component text, used to match the target component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
@@ -824,7 +752,7 @@ Specifies the text content and text matching pattern of the component. > **NOTE�
 | --- | --- |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -842,10 +770,6 @@ scrollable(b?: boolean): On
 Specifies the scrollable attribute of the target component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -871,7 +795,7 @@ Specifies the scrollable attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -889,10 +813,6 @@ selected(b?: boolean): On
 Specifies the selected attribute of the target component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -918,7 +838,7 @@ Specifies the selected attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -933,13 +853,9 @@ let on: On = ON.selected(true); // Use the static constructor ON to create an On
 text(txt: string, pattern?: MatchPattern): On
 ```
 
-Specifies the text attribute of the target component. Multiple match patterns are supported. > **NOTE：**> > If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel) > of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute > of the target component for searching for the component. In this case, you can use the > [On.originalText()](#originalText) API.
+Specifies the text attribute of the target component. Multiple match patterns are supported. > **NOTE：**> > If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel) > of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute > of the target component for searching for the component. In this case, you can use the > [On.originalText()](#originaltext) API.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -952,7 +868,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | Component text, used to match the target component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) . <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern) . <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
@@ -966,7 +882,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -984,10 +900,6 @@ type(tp: string): On
 Specifies the type attribute of the target component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1013,7 +925,7 @@ Specifies the type attribute of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1032,10 +944,6 @@ Specifies the **type** attribute and match pattern of the target component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-type(tp: string, pattern: MatchPattern): On--><!--Device-On-type(tp: string, pattern: MatchPattern): On-End-->
@@ -1047,7 +955,7 @@ Specifies the **type** attribute and match pattern of the target component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tp | string | Yes | Component type.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | Text matching pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern). |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | Text matching pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern). |
 
 **Return value:**
 
@@ -1061,7 +969,7 @@ Specifies the **type** attribute and match pattern of the target component.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1079,10 +987,6 @@ within(on: On): On
 Specifies that the target component is located within the given attribute component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1108,7 +1012,7 @@ Specifies that the target component is located within the given attribute compon
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1124,13 +1028,9 @@ let on: On = ON.text('java').within(ON.type('Scroll')); // Search for the child 
 withinComponent(com: Component): On
 ```
 
-Requires that the target Component which is inside of another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component) object,used to locate Component relatively.
+Requires that the target Component which is inside of another Component that specified by the given [Component](arkts-test-uitest-component-c.md#component) object,used to locate Component relatively.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

@@ -4,10 +4,6 @@ XML解析选项，用于配置XmlPullParser的解析行为。开发者可通过s
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-xml-interface ParseOptions--><!--Device-xml-interface ParseOptions-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -23,10 +19,6 @@ attributeValueCallbackFunction?: (name: string, value: string) => boolean
 **类型：** (name: string, value: string) =&gt; boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ attributeWithTagCallbackFunction?: AttributeWithTagCb
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseOptions-attributeWithTagCallbackFunction?: AttributeWithTagCb--><!--Device-ParseOptions-attributeWithTagCallbackFunction?: AttributeWithTagCb-End-->
@@ -67,10 +55,6 @@ ignoreNameSpace?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,10 +74,6 @@ supportDoctype?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseOptions-supportDoctype?: boolean--><!--Device-ParseOptions-supportDoctype?: boolean-End-->
@@ -112,10 +92,6 @@ tagValueCallbackFunction?: (name: string, value: string) => boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParseOptions-tagValueCallbackFunction?: (name: string, value: string) => boolean--><!--Device-ParseOptions-tagValueCallbackFunction?: (name: string, value: string) => boolean-End-->
@@ -128,15 +104,11 @@ tagValueCallbackFunction?: (name: string, value: string) => boolean
 tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 ```
 
-解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md#EventType))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md#ParseInfo)属性，默认值undefined，表示不解析。
+解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md#eventtype))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md#parseinfo)属性，默认值undefined，表示不解析。
 
 **类型：** (eventType: EventType, value: ParseInfo) =&gt; boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

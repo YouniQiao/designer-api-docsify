@@ -4,10 +4,6 @@ Enumerates call restriction modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export enum CallRestrictionMode--><!--Device-call-export enum CallRestrictionMode-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -24,10 +20,6 @@ Call restriction deactivated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallRestrictionMode-RESTRICTION_MODE_DEACTIVATION = 0--><!--Device-CallRestrictionMode-RESTRICTION_MODE_DEACTIVATION = 0-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -43,10 +35,6 @@ RESTRICTION_MODE_ACTIVATION = 1
 Call restriction activated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallRestrictionMode-RESTRICTION_MODE_ACTIVATION = 1--><!--Device-CallRestrictionMode-RESTRICTION_MODE_ACTIVATION = 1-End-->
 

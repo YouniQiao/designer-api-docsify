@@ -4,10 +4,6 @@ Defines the PacMap type used for data storage.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** 
 - API version 11 and later: This API can be used in both the stage model and FA model.
 

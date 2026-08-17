@@ -12,13 +12,9 @@ import { connection } from 'connection';
 function getNetExtAttributeSync(netHandle: NetHandle): string
 ```
 
-Get the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Get the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -30,7 +26,7 @@ Get the network extended attribute for a [NetHandle](arkts-network-connection-ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be queried. See [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle). |
+| netHandle | NetHandle | Yes | Indicates the network to be queried. See [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
 
 **Return value:**
 
@@ -47,7 +43,7 @@ Get the network extended attribute for a [NetHandle](arkts-network-connection-ne
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

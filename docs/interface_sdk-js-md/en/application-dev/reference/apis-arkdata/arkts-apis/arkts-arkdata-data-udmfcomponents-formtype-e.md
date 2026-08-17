@@ -4,10 +4,6 @@ Enumerates the form card types.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum FormType--><!--Device-unnamed-declare enum FormType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -21,10 +17,6 @@ TYPE_BIG = 0
 Big form card, with fixed size of 4 x 4.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Medium-sized form card, with fixed size of 4 x 2.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormType-TYPE_MID = 1--><!--Device-FormType-TYPE_MID = 1-End-->
@@ -61,10 +49,6 @@ TYPE_SMALL = 2
 Small form card, with fixed size of 2 x 1.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

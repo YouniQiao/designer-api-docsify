@@ -4,10 +4,6 @@ Represents the current scrolling offset of a web page.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 <!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,15 +20,11 @@ import { webview } from 'webview';
 x: number
 ```
 
-Horizontal scrolling offset of a web page. The value is the difference between the x-coordinate of the left boundary of the web page and that of the left boundary of the **Web** component. When the web page is scrolled rightwards, the value is negative. When the web page is not scrolled or scrolled leftwards, the value is **0** or positive. Unit: vp
+Horizontal scroll offset of the web page. The value is the difference between the x-coordinate of the left edge of the web page and the x-coordinate of the left edge of the Web component. When the web page is over-scrolled to the right, the value is negative. When the web page is not over-scrolled or is over-scrolled to the left, the value is 0 or positive. Unit: vp.
 
 **Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -46,15 +38,11 @@ Horizontal scrolling offset of a web page. The value is the difference between t
 y: number
 ```
 
-Vertical scrolling offset of a web page. The value is the difference between the y-coordinate of the upper boundary of the web page and that of the upper boundary of the **Web** component. When the web page is scrolled downwards, the value is negative. When the web page is not scrolled or scrolled upwards, the value is **0** or positive. Unit: vp
+Vertical scroll offset of the web page. The value is the difference between the y-coordinate of the top edge of the web page and the y-coordinate of the top edge of the Web component. When the web page is over-scrolled downward, the value is negative. When the web page is not over-scrolled or is over-scrolled upward, the value is 0 or positive. Unit: vp.
 
 **Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 

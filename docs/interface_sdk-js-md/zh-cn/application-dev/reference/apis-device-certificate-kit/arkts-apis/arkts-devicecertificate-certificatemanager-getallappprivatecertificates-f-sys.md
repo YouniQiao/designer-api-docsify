@@ -10,10 +10,6 @@ function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 <!--Device-certificateManager-function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void-End-->
@@ -26,7 +22,7 @@ function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | 是 | 回调函数。当获取所有私有凭据列表成功时，err为null，data为 [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md#CMResult)对象中的credentialList属性；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | 是 | 回调函数。当获取所有私有凭据列表成功时，err为null，data为 [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md#cmresult)对象中的credentialList属性；否则为错误对象。 |
 
 **错误码：**
 
@@ -37,7 +33,7 @@ function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -73,10 +69,6 @@ function getAllAppPrivateCertificates(): Promise<CMResult>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 <!--Device-certificateManager-function getAllAppPrivateCertificates(): Promise<CMResult>--><!--Device-certificateManager-function getAllAppPrivateCertificates(): Promise<CMResult>-End-->
@@ -99,7 +91,7 @@ function getAllAppPrivateCertificates(): Promise<CMResult>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

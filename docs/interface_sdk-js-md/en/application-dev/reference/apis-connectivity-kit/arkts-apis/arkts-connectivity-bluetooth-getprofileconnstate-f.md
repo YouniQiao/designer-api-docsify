@@ -16,11 +16,9 @@ Obtains the connection state of profile.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getProfileConnectionState](arkts-connectivity-bluetoothmanager-getprofileconnectionstate-f.md#getProfileConnectionState)
+**Substitutes:** [getProfileConnectionState](arkts-connectivity-bluetoothmanager-getprofileconnectionstate-f.md#getprofileconnectionstate)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -40,7 +38,7 @@ Obtains the connection state of profile.
 | --- | --- |
 | ProfileConnectionState | Returns the connection state. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let result : bluetooth.ProfileConnectionState = bluetooth.getProfileConnState(bluetooth.ProfileId.PROFILE_A2DP_SOURCE);

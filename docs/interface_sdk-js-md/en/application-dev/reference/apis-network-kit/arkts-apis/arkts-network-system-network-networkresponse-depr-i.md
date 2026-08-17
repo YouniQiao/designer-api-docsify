@@ -4,10 +4,6 @@ This module provides the Network Response.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NetworkResponse--><!--Device-unnamed-export interface NetworkResponse-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -24,10 +20,6 @@ Whether the billing is based on the data volume.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
-
 <!--Device-NetworkResponse-metered: boolean--><!--Device-NetworkResponse-metered: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -43,10 +35,6 @@ Network type. The values can be 2G, 3G, 4G, WiFi, or none.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkResponse-type: string--><!--Device-NetworkResponse-type: string-End-->
 

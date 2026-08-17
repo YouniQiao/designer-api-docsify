@@ -10,10 +10,6 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-taskpool-function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>-End-->
@@ -44,7 +40,7 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 // import BusinessError
@@ -76,10 +72,6 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 <!--Device-taskpool-function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
@@ -108,7 +100,7 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 | [10200028](../errorcode-utils.md#10200028-延时时间小于零) | The delayTime is less than zero. |
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // import BusinessError

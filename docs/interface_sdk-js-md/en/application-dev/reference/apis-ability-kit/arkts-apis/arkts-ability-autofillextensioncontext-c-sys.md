@@ -1,14 +1,10 @@
 # AutoFillExtensionContext (System API)
 
-The AutoFillExtensionContext module provides the context environment for the AutoFillExtensionAbility. It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
+The AutoFillExtensionContext module provides the context environment for the AutoFillExtensionAbility. It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext).
 
 **Inheritance/Implementation:** AutoFillExtensionContext extends ExtensionContext
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class AutoFillExtensionContext--><!--Device-unnamed-declare class AutoFillExtensionContext-End-->
 
@@ -25,10 +21,6 @@ reloadInModal(customData: CustomData): Promise<void>
 Reload autoFillExtension in modal window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,7 +51,7 @@ Reload autoFillExtension in modal window.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 When an account is selected, reloadInModal is called to trigger the autofill service again, and a modal page is started in the onFillRequest lifecycle of the AutoFillExtensionAbility.
 

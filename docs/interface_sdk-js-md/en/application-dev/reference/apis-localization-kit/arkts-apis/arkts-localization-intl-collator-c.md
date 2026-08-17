@@ -4,10 +4,6 @@ Provides the string collation capability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intl-export class Collator--><!--Device-intl-export class Collator-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Compares two strings based on the specified collation rules.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Collator-compare(first: string, second: string): int--><!--Device-Collator-compare(first: string, second: string): int-End-->
@@ -51,7 +43,7 @@ Compares two strings based on the specified collation rules.
 | --- | --- |
 | int | Comparison result. - If the value is a negative number, the first string comes before the second string. - If the value is **0**, the first and second strings are in the same sequence. - If the value is a positive number, the first string is comes after the second string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -72,17 +64,13 @@ Creates a **Collator** object for the current system locale.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Collator-constructor()--><!--Device-Collator-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -101,10 +89,6 @@ Creates a **Collator** object based on the specified locale and options.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)--><!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)-End-->
@@ -118,7 +102,7 @@ Creates a **Collator** object based on the specified locale and options.
 | locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
 | options | CollatorOptions | No | Options for creating a **Collator** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -137,10 +121,6 @@ Obtains the options for creating a **Collator** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Collator-resolvedOptions(): CollatorOptions--><!--Device-Collator-resolvedOptions(): CollatorOptions-End-->
@@ -153,7 +133,7 @@ Obtains the options for creating a **Collator** object.
 | --- | --- |
 | CollatorOptions | Options for creating a **Collator** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

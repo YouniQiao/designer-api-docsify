@@ -4,10 +4,6 @@ ColorManagementQuery provides the APIs for color space query.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface ColorManagementQuery--><!--Device-camera-interface ColorManagementQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -27,10 +23,6 @@ getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 Obtains the supported color spaces.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

@@ -1,12 +1,8 @@
 # HistoryItem
 
-Provides information for history item in BackForwardList.
+Describes a historical page record.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-webview-interface HistoryItem--><!--Device-webview-interface HistoryItem-End-->
 
@@ -24,15 +20,11 @@ import { webview } from 'webview';
 historyRawUrl: string
 ```
 
-Original request url of this history item.
+Original URL of the historical page.
 
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,15 +38,11 @@ Original request url of this history item.
 historyUrl: string
 ```
 
-Url of this history item.
+URL of the historical page.
 
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,15 +56,11 @@ Url of this history item.
 icon: image.PixelMap
 ```
 
-Pixelmap of icon.
+**PixelMap** object of the icon on the historical page.
 
 **Type:** image.PixelMap
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,15 +74,11 @@ Pixelmap of icon.
 title: string
 ```
 
-Title of this history item.
+Title of the historical page.
 
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

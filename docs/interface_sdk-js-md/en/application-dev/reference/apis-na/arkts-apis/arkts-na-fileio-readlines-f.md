@@ -10,9 +10,7 @@ Reads a file text line by line. Only the files in UTF-8 format are supported. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function readLines(filePath: string, options?: Options): Promise<ReaderIterator>--><!--Device-fileIo-function readLines(filePath: string, options?: Options): Promise<ReaderIterator>-End-->
 
@@ -23,7 +21,7 @@ Reads a file text line by line. Only the files in UTF-8 format are supported. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](arkts-na-file-fs-options-i.md) | No | Options for reading the text. The options are as follows: <br>- **encoding** (string): format of the data to be encoded. <br>It is valid only when the data is of the string type. <br>The default value is **'utf-8'**, which is the only value supported. |
+| options | [Options](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-options-i.md) | No | Options for reading the text. The options are as follows: <br>- **encoding** (string): format of the data to be encoded. <br>It is valid only when the data is of the string type. <br>The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
@@ -60,9 +58,7 @@ Reads a file text line by line. Only the files in UTF-8 format are supported. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void--><!--Device-fileIo-function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void-End-->
 
@@ -103,9 +99,7 @@ Reads a file text line by line. Read options can be configured. Only the files i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void--><!--Device-fileIo-function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void-End-->
 
@@ -116,7 +110,7 @@ Reads a file text line by line. Read options can be configured. Only the files i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](arkts-na-file-fs-options-i.md) | Yes | Read options. The options are as follows: <br>- **encoding** (string): format of the data to be encoded. <br>It is valid only when the data is of the string type. <br>The default value is **'utf-8'**, which is the only value supported. |
+| options | [Options](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-options-i.md) | Yes | Read options. The options are as follows: <br>- **encoding** (string): format of the data to be encoded. <br>It is valid only when the data is of the string type. <br>The default value is **'utf-8'**, which is the only value supported. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return a **ReaderIterator** object. |
 
 **Error codes:**

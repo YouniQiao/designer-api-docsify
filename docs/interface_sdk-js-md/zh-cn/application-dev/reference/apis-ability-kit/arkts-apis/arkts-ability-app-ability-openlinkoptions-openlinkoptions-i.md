@@ -1,12 +1,8 @@
 # OpenLinkOptions
 
-OpenLinkOptions可以作为[openLink()](arkts-ability-uiabilitycontext-c.md#openLink)的入参，用于标识是否仅打开 AppLinking和传递键值对可选参数。
+OpenLinkOptions可以作为[openLink()](arkts-ability-uiabilitycontext-c.md#openlink)的入参，用于标识是否仅打开 AppLinking和传递键值对可选参数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export default interface OpenLinkOptions--><!--Device-unnamed-export default interface OpenLinkOptions-End-->
 
@@ -23,10 +19,6 @@ appLinkingOnly?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,10 +39,6 @@ completionHandler?: CompletionHandler
 **类型：** [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,10 +62,6 @@ hideFailureTipDialog?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -97,10 +81,6 @@ parameters?: Record<string, RecordData>
 **类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

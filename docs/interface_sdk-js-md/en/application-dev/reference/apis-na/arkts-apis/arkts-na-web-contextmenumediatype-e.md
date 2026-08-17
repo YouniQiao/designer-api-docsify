@@ -4,9 +4,7 @@ Defines the context menu media type, related to onContextMenuShow method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum ContextMenuMediaType--><!--Device-unnamed-export declare enum ContextMenuMediaType-End-->
 
@@ -22,9 +20,7 @@ Default value, indicating that the current context menu is not associated with a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuMediaType-NONE = 0--><!--Device-ContextMenuMediaType-NONE = 0-End-->
 
@@ -40,9 +36,7 @@ Image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuMediaType-IMAGE = 1--><!--Device-ContextMenuMediaType-IMAGE = 1-End-->
 

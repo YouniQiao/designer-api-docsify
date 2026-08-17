@@ -4,10 +4,6 @@ Represents the configuration for saving images or videos to the media library, i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-export interface CreationSetting--><!--Device-photoAccessHelper-export interface CreationSetting-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -30,10 +26,6 @@ File name extension, for example, **'jpg'**.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -48,15 +40,11 @@ File name extension, for example, **'jpg'**.
 photoType: PhotoType
 ```
 
-[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#PhotoType) of the created media file, which can be **IMAGE** or **VIDEO**.
+[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#phototype) of the created media file, which can be **IMAGE** or **VIDEO**.
 
 **Type:** PhotoType
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,10 +65,6 @@ Title of the image or video. If this parameter is not passed, the system generat
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

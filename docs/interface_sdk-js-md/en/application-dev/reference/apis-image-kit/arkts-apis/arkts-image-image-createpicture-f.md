@@ -16,10 +16,6 @@ Creates a Picture object based on a main PixelMap. Images occupy a large amount 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture--><!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -42,7 +38,7 @@ Creates a Picture object based on a main PixelMap. Images occupy a large amount 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function CreatePicture(context: Context) {

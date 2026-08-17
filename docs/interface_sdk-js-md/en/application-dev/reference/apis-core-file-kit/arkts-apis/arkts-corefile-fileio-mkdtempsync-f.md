@@ -10,11 +10,9 @@ Creates a temporary directory. This API returns the result synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [mkdtempSync](arkts-corefile-file-fs-mkdtempsync-f.md#mkdtempSync)
+**Substitutes:** [mkdtempSync](arkts-corefile-file-fs-mkdtempsync-f.md#mkdtempsync)
 
 <!--Device-unnamed-declare function mkdtempSync(prefix: string): string--><!--Device-unnamed-declare function mkdtempSync(prefix: string): string-End-->
 

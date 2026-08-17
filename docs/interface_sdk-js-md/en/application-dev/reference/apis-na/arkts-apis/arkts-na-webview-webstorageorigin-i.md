@@ -4,9 +4,7 @@ Provides usage information of the Web SQL Database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-interface WebStorageOrigin--><!--Device-webview-interface WebStorageOrigin-End-->
 
@@ -24,9 +22,7 @@ Index of the origin.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebStorageOrigin-origin: string--><!--Device-WebStorageOrigin-origin: string-End-->
 
@@ -44,9 +40,7 @@ Storage quota of the origin.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebStorageOrigin-quota: double--><!--Device-WebStorageOrigin-quota: double-End-->
 
@@ -64,9 +58,7 @@ Storage usage of the origin.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebStorageOrigin-usage: double--><!--Device-WebStorageOrigin-usage: double-End-->
 

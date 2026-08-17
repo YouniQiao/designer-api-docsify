@@ -12,13 +12,9 @@ import { notificationManager } from 'notificationManager';
 function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>
 ```
 
-Obtains some information about the **wantAgent** field in [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest). This API uses a promise to return the result.
+Obtains some information about the **wantAgent** field in [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest). This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +44,7 @@ Obtains some information about the **wantAgent** field in [NotificationRequest](
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,13 +65,9 @@ notificationManager.getNotificationParameters(id, label).then((data: notificatio
 function getNotificationParameters(id: int, label?: string): Promise<NotificationParameters | null>
 ```
 
-Obtains some information about the **wantAgent** field in [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest). This API uses a promise to return the result.
+Obtains some information about the **wantAgent** field in [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest). This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

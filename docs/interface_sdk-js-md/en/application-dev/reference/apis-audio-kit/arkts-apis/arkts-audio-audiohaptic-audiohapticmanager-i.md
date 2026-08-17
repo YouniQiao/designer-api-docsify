@@ -1,12 +1,8 @@
 # AudioHapticManager
 
-Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getAudioHapticManager) to create an AudioHapticManager instance.
+Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getaudiohapticmanager) to create an AudioHapticManager instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audioHaptic-interface AudioHapticManager--><!--Device-audioHaptic-interface AudioHapticManager-End-->
 
@@ -27,10 +23,6 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 Create an audio haptic player. This method uses a promise to return the result. If haptics is needed, caller should have the permission of ohos.permission.VIBRATE.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -61,7 +53,7 @@ Create an audio haptic player. This method uses a promise to return the result. 
 | [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -88,10 +80,6 @@ createPlayer(id: int, options?: AudioHapticPlayerOptions): Promise<AudioHapticPl
 Create an audio haptic player. This method uses a promise to return the result. If haptics is needed, caller should have the permission of ohos.permission.VIBRATE.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -131,10 +119,6 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>--><!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -143,8 +127,8 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| audioUri | string | Yes | URI of the audio source.<br>- For details about the supported audio resource formats and path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md#@ohos.multimedia.media).<br>- For details about the supported audio resource formats in the low-latency mode, see SoundPool. The path format must meet the requirements described in fileIo.open.<br>- In both modes, you are advised to pass in the absolute path of the file. |
-| hapticUri | string | Yes | URI of the haptic source.<br>For details about the supported haptic resource formats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md#HapticFileDescriptor). The path format must meet the requirements described in fileIo.open.<br>You are advised to pass in the absolute path of the file. |
+| audioUri | string | Yes | URI of the audio source.<br>- For details about the supported audio resource formats and path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md#ohosmultimediamedia).<br>- For details about the supported audio resource formats in the low-latency mode, see SoundPool. The path format must meet the requirements described in fileIo.open.<br>- In both modes, you are advised to pass in the absolute path of the file. |
+| hapticUri | string | Yes | URI of the haptic source.<br>For details about the supported haptic resource formats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md#hapticfiledescriptor). The path format must meet the requirements described in fileIo.open.<br>You are advised to pass in the absolute path of the file. |
 
 **Return value:**
 
@@ -158,7 +142,7 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -185,10 +169,6 @@ Registers audio and haptic resources via file descriptors. This API uses a promi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>--><!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -206,7 +186,7 @@ Registers audio and haptic resources via file descriptors. This API uses a promi
 | --- | --- |
 | Promise&lt;int&gt; | Promise, which returns the registered resource ID. <br>In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -248,10 +228,6 @@ Sets the latency mode for an audio-haptic source.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void--><!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -270,7 +246,7 @@ Sets the latency mode for an audio-haptic source.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -292,10 +268,6 @@ Sets the stream usage for an audio-haptic source.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void--><!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -314,7 +286,7 @@ Sets the stream usage for an audio-haptic source.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -336,10 +308,6 @@ unregisterSource(id: int): Promise<void>
 Unregisters an audio-haptic source. This API uses a promise to return the result. > **NOTE：**> > For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues > such as resource leaks or the number of resources exceeding the upper limit.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>--><!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>-End-->
 
@@ -363,7 +331,7 @@ Unregisters an audio-haptic source. This API uses a promise to return the result
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

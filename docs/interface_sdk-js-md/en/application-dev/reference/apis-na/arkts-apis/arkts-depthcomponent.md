@@ -7,8 +7,8 @@
 
 | Name | Description |
 | --- | --- |
-| [DepthComponent](arkts-na-depthcomponent-depthcomponent-f-sys.md#DepthComponent-(System-API)) | Defines DepthComponent Component |
-| [DepthComponent](arkts-na-depthcomponent-depthcomponent-f-sys.md#DepthComponent-(System-API)) | Defines DepthComponent |
+| [DepthComponent](arkts-na-depthcomponent-depthcomponent-f-sys.md#depthcomponent-system-api) | Defines DepthComponent Component |
+| [DepthComponent](arkts-na-depthcomponent-depthcomponent-f-sys.md#depthcomponent-system-api) | Defines DepthComponent |
 <!--DelEnd-->
 
 ### Interfaces

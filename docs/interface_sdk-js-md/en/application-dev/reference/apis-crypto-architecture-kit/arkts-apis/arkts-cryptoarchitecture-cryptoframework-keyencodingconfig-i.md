@@ -4,10 +4,6 @@ Represents the RSA private key encoding parameters. You can use it to generate a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-interface KeyEncodingConfig--><!--Device-cryptoFramework-interface KeyEncodingConfig-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -30,10 +26,6 @@ Symmetric cipher algorithm used for encoding the private key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-KeyEncodingConfig-cipherName: string--><!--Device-KeyEncodingConfig-cipherName: string-End-->
@@ -51,10 +43,6 @@ Password used for encoding the private key.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

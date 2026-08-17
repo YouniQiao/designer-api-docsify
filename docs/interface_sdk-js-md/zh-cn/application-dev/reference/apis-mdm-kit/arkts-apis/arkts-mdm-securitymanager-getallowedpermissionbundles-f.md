@@ -10,10 +10,6 @@ function getAllowedPermissionBundles(admin: Want | null, permission: string, acc
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -28,7 +24,7 @@ function getAllowedPermissionBundles(admin: Want | null, permission: string, acc
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。当admin为null时，表示获取所有企业设备管理 应用下发的权限使用例外应用名单，返回合并后的结果。 |
 | permission | string | 是 | 权限名称。 |
-| accountId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
+| accountId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
 
 **返回值：**
 
@@ -45,7 +41,7 @@ function getAllowedPermissionBundles(admin: Want | null, permission: string, acc
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { securityManager, common } from '@kit.MDMKit';
@@ -60,7 +56,8 @@ let wantTemp: Want = {
 let permission: string = 'ohos.permission.CAMERA';
 let accountId: number = 100;
 try {
-  let result: Array<common.ApplicationInstance> = securityManager.getAllowedPermissionBundles(wantTemp, permission, accountId);
+  let result: Array<common.ApplicationInstance> =
+    securityManager.getAllowedPermissionBundles(wantTemp, permission, accountId);
   console.info(`Succeeded in getting allowed permission bundles, result : ${JSON.stringify(result)}`);
 } catch (err) {
   console.error(`Failed to get allowed permission bundles. Code: ${err.code}, message: ${err.message}`);

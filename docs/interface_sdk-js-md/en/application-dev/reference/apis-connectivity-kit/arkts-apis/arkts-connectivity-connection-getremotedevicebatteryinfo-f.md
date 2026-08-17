@@ -16,10 +16,6 @@ Get remote device battery information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -49,7 +45,7 @@ Get remote device battery information.
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

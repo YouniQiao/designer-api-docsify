@@ -2,13 +2,9 @@
 
 The RestrictedWorker class contains all Worker functions.
 
-**Inheritance/Implementation:** RestrictedWorker extends [ThreadWorker](arkts-arkts-worker-threadworker-c.md#ThreadWorker)
+**Inheritance/Implementation:** RestrictedWorker extends [ThreadWorker](arkts-arkts-worker-threadworker-c.md#threadworker)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-worker-class RestrictedWorker--><!--Device-worker-class RestrictedWorker-End-->
 
@@ -44,10 +40,6 @@ constructor(scriptURL: string, options?: WorkerOptions)
 Creates a worker instance
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
 

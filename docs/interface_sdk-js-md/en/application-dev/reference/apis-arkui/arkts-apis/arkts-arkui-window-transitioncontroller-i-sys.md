@@ -4,10 +4,6 @@ Implements the transition animation controller. Before calling any API, you must
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface TransitionController--><!--Device-window-interface TransitionController-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -30,10 +26,6 @@ Customizes the animation for the scenario when the window is hidden.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-TransitionController-animationForHidden(context: TransitionContext): void--><!--Device-TransitionController-animationForHidden(context: TransitionContext): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -53,7 +45,7 @@ Customizes the animation for the scenario when the window is hidden.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.ts
@@ -121,10 +113,6 @@ Customizes the animation for the scenario when the window is shown.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-TransitionController-animationForShown(context: TransitionContext): void--><!--Device-TransitionController-animationForShown(context: TransitionContext): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -144,7 +132,7 @@ Customizes the animation for the scenario when the window is shown.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.ts
@@ -216,10 +204,6 @@ Animation configuration when hiding window
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TransitionController-animationForHidden?: TransitionControllerCallback--><!--Device-TransitionController-animationForHidden?: TransitionControllerCallback-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -239,10 +223,6 @@ Animation configuration when showing window
 **Default:** undefined
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TransitionController-animationForShown?: TransitionControllerCallback--><!--Device-TransitionController-animationForShown?: TransitionControllerCallback-End-->
 

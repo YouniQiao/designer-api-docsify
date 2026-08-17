@@ -4,10 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-contact-class Holder--><!--Device-contact-class Holder-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -23,10 +19,6 @@ Bundle名称，默认值为com.ohos.contacts。
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 <!--Device-Holder-readonly bundleName: string--><!--Device-Holder-readonly bundleName: string-End-->
 
@@ -44,10 +36,6 @@ readonly displayName?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-Holder-readonly displayName?: string--><!--Device-Holder-readonly displayName?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -63,10 +51,6 @@ holderId?: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 <!--Device-Holder-holderId?: number--><!--Device-Holder-holderId?: number-End-->
 

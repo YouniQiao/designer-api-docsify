@@ -4,10 +4,6 @@ Describes wakeup source file information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-interface WakeupSourceFile--><!--Device-intelligentVoice-interface WakeupSourceFile-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -32,10 +28,6 @@ File content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WakeupSourceFile-fileContent: ArrayBuffer--><!--Device-WakeupSourceFile-fileContent: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -53,10 +45,6 @@ File path.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WakeupSourceFile-filePath: string--><!--Device-WakeupSourceFile-filePath: string-End-->
 

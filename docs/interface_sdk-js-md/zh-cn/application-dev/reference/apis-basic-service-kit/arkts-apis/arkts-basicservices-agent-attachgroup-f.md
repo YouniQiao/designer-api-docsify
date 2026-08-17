@@ -10,10 +10,6 @@ function attachGroup(gid: string, tids: string[]): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-agent-function attachGroup(gid: string, tids: string[]): Promise<void>--><!--Device-agent-function attachGroup(gid: string, tids: string[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -42,7 +38,7 @@ function attachGroup(gid: string, tids: string[]): Promise<void>
 | [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode. |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
-## 示例
+**示例**
 
 ArkTS-Sta示例：
 

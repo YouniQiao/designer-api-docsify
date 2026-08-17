@@ -16,10 +16,6 @@ Sets call transfer information. This API uses an asynchronous callback to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function setCallTransfer(slotId: int, info: CallTransferInfo, callback: AsyncCallback<void>): void--><!--Device-call-function setCallTransfer(slotId: int, info: CallTransferInfo, callback: AsyncCallback<void>): void-End-->
@@ -48,7 +44,7 @@ Sets call transfer information. This API uses an asynchronous callback to return
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -77,10 +73,6 @@ function setCallTransfer(slotId: int, info: CallTransferInfo): Promise<void>
 Sets call transfer information. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -115,7 +107,7 @@ Sets call transfer information. This API uses a promise to return the result.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

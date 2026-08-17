@@ -4,10 +4,6 @@ Describes audio stream information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioStreamInfo--><!--Device-audio-interface AudioStreamInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -30,10 +26,6 @@ Audio channel layout. The default value is **0x0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout--><!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -49,10 +41,6 @@ Number of audio channels.
 **Type:** [AudioChannel](arkts-audio-audio-audiochannel-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioStreamInfo-channels: AudioChannel--><!--Device-AudioStreamInfo-channels: AudioChannel-End-->
 
@@ -70,10 +58,6 @@ Audio encoding type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioStreamInfo-encodingType: AudioEncodingType--><!--Device-AudioStreamInfo-encodingType: AudioEncodingType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -90,10 +74,6 @@ Audio sample format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat--><!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -109,10 +89,6 @@ Audio sampling rate.
 **Type:** [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 26.0.0 and later: This API can be used in both the stage model and FA model.

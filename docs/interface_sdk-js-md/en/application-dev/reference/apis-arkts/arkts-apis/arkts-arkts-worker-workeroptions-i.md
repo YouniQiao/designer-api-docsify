@@ -4,10 +4,6 @@ Provides options that can be set for the Worker instance to create.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface WorkerOptions--><!--Device-unnamed-export interface WorkerOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -43,10 +39,6 @@ Name of the Worker thread. The default value is undefined.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WorkerOptions-name?: string--><!--Device-WorkerOptions-name?: string-End-->
@@ -64,10 +56,6 @@ Priority of the Worker thread.
 **Type:** [ThreadWorkerPriority](arkts-arkts-worker-threadworkerpriority-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -87,10 +75,6 @@ Whether sharing of the Worker instance is enabled. Currently, sharing is not sup
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WorkerOptions-shared?: boolean--><!--Device-WorkerOptions-shared?: boolean-End-->
@@ -108,10 +92,6 @@ Mode in which the Worker instance executes the script. The module type is not su
 **Type:** 'classic' \| 'module'
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

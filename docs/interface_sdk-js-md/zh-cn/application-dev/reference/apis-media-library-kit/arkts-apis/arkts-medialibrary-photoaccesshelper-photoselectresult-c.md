@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-photoAccessHelper-class PhotoSelectResult--><!--Device-photoAccessHelper-class PhotoSelectResult-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -23,10 +19,6 @@ contextRecoveryInfo: ContextRecoveryInfo
 **类型：** [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ isOriginalPhoto: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhotoSelectResult-isOriginalPhoto: boolean--><!--Device-PhotoSelectResult-isOriginalPhoto: boolean-End-->
@@ -68,10 +56,6 @@ movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PhotoSelectResult-movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>--><!--Device-PhotoSelectResult-movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>-End-->
@@ -84,15 +68,11 @@ movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>
 photoUris: Array<string>
 ```
 
-返回图库选择后的媒体文件的URI数组。 此URI数组只能通过临时授权的方式调用 [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets) 接口去使用，具体使用方式请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 **注意：** 当资源为连拍照片类型时，则返回该连拍组的所有资源，判断是否为连拍图的方式请参考 [通过URI判断连拍图资源](../../../media/medialibrary/medialibrary-faqs/medialibrary-asset-judgment-faq.md#通过uri判断连拍图资源)。
+返回图库选择后的媒体文件的URI数组。 此URI数组只能通过临时授权的方式调用 [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) 接口去使用，具体使用方式请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 **注意：** 当资源为连拍照片类型时，则返回该连拍组的所有资源，判断是否为连拍图的方式请参考 [通过URI判断连拍图资源](../../../media/medialibrary/medialibrary-faqs/medialibrary-asset-judgment-faq.md#通过uri判断连拍图资源)。
 
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

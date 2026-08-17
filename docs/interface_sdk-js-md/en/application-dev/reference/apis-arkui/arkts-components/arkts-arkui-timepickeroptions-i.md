@@ -4,10 +4,6 @@ Describes the parameters of the time picker. Property modifications made to **Ti
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface TimePickerOptions--><!--Device-unnamed-declare interface TimePickerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ End time of the time picker. Default value: **Date(0, 0, 0, 23, 59, 59)**. **NOT
 **Type:** Date
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Time format. Default value: **TimePickerFormat.HOUR_MINUTE**
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -74,10 +62,6 @@ Time of the selected item. Default value: current system time Since API version 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TimePickerOptions-selected?: Date--><!--Device-TimePickerOptions-selected?: Date-End-->
@@ -95,10 +79,6 @@ Start time of the time picker. Default value: **Date(0, 0, 0, 0, 0, 0)** **NOTEï
 **Type:** Date
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

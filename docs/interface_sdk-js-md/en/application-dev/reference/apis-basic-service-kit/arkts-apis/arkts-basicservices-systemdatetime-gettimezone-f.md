@@ -16,10 +16,6 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemDateTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemDateTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -30,7 +26,7 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see Supported System Time Zones . |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -60,10 +56,6 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemDateTime-function getTimezone(): Promise<string>--><!--Device-systemDateTime-function getTimezone(): Promise<string>-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -74,7 +66,7 @@ Obtains the system time zone. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the system time zone. For details, see Supported System Time Zones . |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -16,13 +16,9 @@ function getKeyItemProperties(
   ): void
 ```
 
-Obtains key properties. This API uses an asynchronous callback to return the result. > **NOTE：**> > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Obtains key properties. This API uses an asynchronous callback to return the result. > **NOTE：**> > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -59,7 +55,7 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
@@ -86,13 +82,9 @@ huks.getKeyItemProperties(keyAlias, emptyOptions, (error, data) => {
 function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Obtains key properties. This API uses a promise to return the result. > **NOTE：**> > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#HuksKeySecurityLevel) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Obtains key properties. This API uses a promise to return the result. > **NOTE：**> > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -132,7 +124,7 @@ Obtains key properties. This API uses a promise to return the result. > **NOTE�
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

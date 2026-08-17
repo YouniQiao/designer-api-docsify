@@ -1,12 +1,8 @@
 # CdsmClient
 
-管理CDSM客户端实例。在调用任何CDSM客户端方法之前， 您必须使用[createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createCdsmClient)来创建CDSM客户端实例。
+管理CDSM客户端实例。在调用任何CDSM客户端方法之前， 您必须使用[createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient)来创建CDSM客户端实例。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-cdsm-interface CdsmClient--><!--Device-cdsm-interface CdsmClient-End-->
 
@@ -21,10 +17,6 @@ getCdsmInfo(): CdsmInfo
 获取合作设备集合信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -58,10 +50,6 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CdsmClient-offCdsmInfoChange(callback?: Callback<CdsmInfo>): void--><!--Device-CdsmClient-offCdsmInfoChange(callback?: Callback<CdsmInfo>): void-End-->
@@ -72,7 +60,7 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 否 | 用于监听合作设备集信息的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 否 | 用于监听合作设备集信息的回调。 |
 
 ## onCdsmInfoChange
 
@@ -84,10 +72,6 @@ onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CdsmClient-onCdsmInfoChange(callback: Callback<CdsmInfo>): void--><!--Device-CdsmClient-onCdsmInfoChange(callback: Callback<CdsmInfo>): void-End-->
@@ -98,5 +82,5 @@ onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 是 | 用于监听合作设备集信息的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 是 | 用于监听合作设备集信息的回调。 |
 

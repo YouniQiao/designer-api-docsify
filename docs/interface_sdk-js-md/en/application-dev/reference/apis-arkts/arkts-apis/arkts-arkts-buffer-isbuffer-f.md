@@ -16,10 +16,6 @@ Checks whether the specified object is a **Buffer** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function isBuffer(obj: Object): boolean--><!--Device-buffer-function isBuffer(obj: Object): boolean-End-->
@@ -38,7 +34,7 @@ Checks whether the specified object is a **Buffer** object.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the object is a **Buffer** object; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

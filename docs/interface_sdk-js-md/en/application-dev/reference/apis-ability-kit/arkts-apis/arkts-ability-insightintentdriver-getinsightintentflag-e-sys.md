@@ -1,12 +1,8 @@
 # GetInsightIntentFlag (System API)
 
-Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo-(System-API))). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getInsightIntentInfoByBundleName-(System-API)), [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getInsightIntentInfoByBundleName-(System-API)), and [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md#getInsightIntentInfoByIntentName-(System-API)). > **NOTE：**> > - For intents developed using a configuration file, the full and brief information queried through the preceding > APIs are the same. > > - For intents developed using a decorator, the full and brief information queried through the preceding APIs are > different, as described below. > > Table 1 Differences between full intent information and brief intent information > > | Name| Included in Full Intent Information| Included in Brief Intent Information| > | -------- | -------- | -------- | > | bundleName | Yes| Yes| > | moduleName | Yes| Yes| > | intentName | Yes| Yes| > | domain | Yes| No| > | intentVersion | Yes| No| > | displayName | Yes| Yes| > | displayDescription | Yes| No| > | schema | Yes| No| > | icon | Yes| No| > | llmDescription | Yes| No| > | keywords | Yes| No| > | intentType | Yes| Yes| > | subIntentInfo | Yes| Yes| > | parameters | Yes| Yes| > | entities | No| No| > | developType&lt;sup&gt;23+&lt;/sup&gt; | Yes| Yes| > | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup&gt; | No| No|
+Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#insightintentinfo-system-api)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename-system-api), [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename-system-api), and [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md#getinsightintentinfobyintentname-system-api). > **NOTE：**> > - For intents developed using a configuration file, the full and brief information queried through the preceding > APIs are the same. > > - For intents developed using a decorator, the full and brief information queried through the preceding APIs are > different, as described below. > > Table 1 Differences between full intent information and brief intent information > > | Name| Included in Full Intent Information| Included in Brief Intent Information| > | -------- | -------- | -------- | > | bundleName | Yes| Yes| > | moduleName | Yes| Yes| > | intentName | Yes| Yes| > | domain | Yes| No| > | intentVersion | Yes| No| > | displayName | Yes| Yes| > | displayDescription | Yes| No| > | schema | Yes| No| > | icon | Yes| No| > | llmDescription | Yes| No| > | keywords | Yes| No| > | intentType | Yes| Yes| > | subIntentInfo | Yes| Yes| > | parameters | Yes| Yes| > | entities | No| No| > | developType&lt;sup&gt;23+&lt;/sup&gt; | Yes| Yes| > | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup&gt; | No| No|
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-insightIntentDriver-enum GetInsightIntentFlag--><!--Device-insightIntentDriver-enum GetInsightIntentFlag-End-->
 
@@ -20,13 +16,9 @@ Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-in
 GET_FULL_INSIGHT_INTENT = 0x00000001
 ```
 
-Used to query all intent information (except entities) in [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo-(System-API)). To query entities information, use **GET_ENTITY_INFO**.
+Used to query all intent information (except entities) in [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#insightintentinfo-system-api). To query entities information, use **GET_ENTITY_INFO**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +34,9 @@ Used to query all intent information (except entities) in [InsightIntentInfo](ar
 GET_SUMMARY_INSIGHT_INTENT = 0x00000002
 ```
 
-Used to query brief intent information in [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo-(System-API)).
+Used to query brief intent information in [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#insightintentinfo-system-api).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,13 +52,9 @@ Used to query brief intent information in [InsightIntentInfo](arkts-ability-insi
 GET_ENTITY_INFO = 0x00000004
 ```
 
-Used to query [EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md#EntityInfo-(System-API)). It must be used together with **GET_FULL_INSIGHT_INTENT** or **GET_SUMMARY_INSIGHT_INTENT**. Example usage: `GET_FULL_INSIGHT_INTENT | GET_ENTITY_INFO`.
+Used to query [EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md#entityinfo-system-api). It must be used together with **GET_FULL_INSIGHT_INTENT** or **GET_SUMMARY_INSIGHT_INTENT**. Example usage: `GET_FULL_INSIGHT_INTENT | GET_ENTITY_INFO`.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

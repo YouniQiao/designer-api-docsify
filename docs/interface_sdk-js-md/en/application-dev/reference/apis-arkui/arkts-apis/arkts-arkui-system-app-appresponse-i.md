@@ -4,10 +4,6 @@ Defines the application response information.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AppResponse--><!--Device-unnamed-export interface AppResponse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -32,10 +28,6 @@ Bundle name of an application. It uniquely identifies the application.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AppResponse-appID: string--><!--Device-AppResponse-appID: string-End-->
@@ -53,10 +45,6 @@ Application name.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -76,10 +64,6 @@ Application version number.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AppResponse-versionCode: number--><!--Device-AppResponse-versionCode: number-End-->
@@ -97,10 +81,6 @@ Application version name.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

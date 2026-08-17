@@ -16,11 +16,9 @@ Enables a Wi-Fi hotspot. &lt;p&gt;This method is asynchronous. After the Wi-Fi h
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [enableHotspot](arkts-connectivity-wifimanager-enablehotspot-f-sys.md#enableHotspot-(System-API))
+**Substitutes:** [enableHotspot](arkts-connectivity-wifimanager-enablehotspot-f-sys.md#enablehotspot-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -36,7 +34,7 @@ Enables a Wi-Fi hotspot. &lt;p&gt;This method is asynchronous. After the Wi-Fi h
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

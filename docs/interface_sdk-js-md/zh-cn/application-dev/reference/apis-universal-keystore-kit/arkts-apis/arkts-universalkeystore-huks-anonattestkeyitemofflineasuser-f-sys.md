@@ -11,10 +11,6 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -59,7 +55,7 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 | [12000012](../errorcode-huks.md#12000012-外部错误) | The device environment or input parameter is abnormal. |
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried entity does not exist. |
 
-## 示例
+**示例**
 
 以下代码示例接口调用的前置条件同上文generateKeyItemAsUser的前置条件
 

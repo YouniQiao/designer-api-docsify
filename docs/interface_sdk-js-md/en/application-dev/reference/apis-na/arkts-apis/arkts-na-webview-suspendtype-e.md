@@ -4,9 +4,7 @@ Enumerates the suspension types of the player.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-enum SuspendType--><!--Device-webview-enum SuspendType-End-->
 
@@ -22,9 +20,7 @@ The page enters the BFCache.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SuspendType-ENTER_BACK_FORWARD_CACHE = 0--><!--Device-SuspendType-ENTER_BACK_FORWARD_CACHE = 0-End-->
 
@@ -40,9 +36,7 @@ The page is displayed in the background.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SuspendType-ENTER_BACKGROUND = 1--><!--Device-SuspendType-ENTER_BACKGROUND = 1-End-->
 
@@ -58,9 +52,7 @@ The page is automatically cleaned up by the system.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-SuspendType-AUTO_CLEANUP = 2--><!--Device-SuspendType-AUTO_CLEANUP = 2-End-->
 

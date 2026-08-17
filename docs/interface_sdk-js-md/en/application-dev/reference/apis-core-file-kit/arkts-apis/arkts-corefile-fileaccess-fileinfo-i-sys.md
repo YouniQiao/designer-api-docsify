@@ -4,8 +4,6 @@ Provides APIs for managing file or directory attribute information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 <!--Device-fileAccess-interface FileInfo--><!--Device-fileAccess-interface FileInfo-End-->
@@ -26,15 +24,13 @@ import { fileAccess } from 'fileAccess';
 listFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](#FileInfo-(System-API)) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, only built-in storage devices support the file filter.
+Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](#fileinfo-system-api) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, only built-in storage devices support the file filter.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [listFile](../../apis-na/arkts-apis/arkts-na-fileio-listfile-f.md#listFile)
+**Substitutes:** [listFile](../../apis-na/arkts-apis/arkts-na-fileio-listfile-f.md#listfile)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -50,7 +46,7 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
@@ -97,7 +93,7 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -135,11 +131,9 @@ try {
 scanFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](#FileInfo-(System-API)) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, this API supports only built-in storage devices.
+Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](#fileinfo-system-api) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, this API supports only built-in storage devices.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -157,7 +151,7 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
@@ -204,7 +198,7 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -248,8 +242,6 @@ Name of the file or directory.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -273,8 +265,6 @@ Multipurpose Internet Mail Extensions (MIME) type of the file or directory.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -300,8 +290,6 @@ Permissions on the file or directory.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -325,8 +313,6 @@ Time when the file or directory was last modified. <br>Unit: ms.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -352,8 +338,6 @@ Relative path of the file or directory.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -378,8 +362,6 @@ Size of the file or directory. <br>Unit: Byte.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -403,8 +385,6 @@ URI of the file or directory.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 

@@ -18,10 +18,6 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **Model restriction:** This API can be used only in the stage model.
@@ -68,10 +64,6 @@ function getRunningFormInfosByFilter(
 Obtains the RunningFormInfo objects by FormProviderFilter.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 

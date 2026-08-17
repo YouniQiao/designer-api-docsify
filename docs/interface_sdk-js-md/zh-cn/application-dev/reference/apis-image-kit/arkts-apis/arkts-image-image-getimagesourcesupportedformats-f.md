@@ -10,10 +10,6 @@ function getImageSourceSupportedFormats(): string[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-image-function getImageSourceSupportedFormats(): string[]--><!--Device-image-function getImageSourceSupportedFormats(): string[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
@@ -24,7 +20,7 @@ function getImageSourceSupportedFormats(): string[]
 | --- | --- |
 | string[] | 支持解码的图片格式（mime type）列表。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 async function GetImageSourceSupportedFormats() {

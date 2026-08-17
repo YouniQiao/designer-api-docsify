@@ -10,10 +10,6 @@ Generates an **edgeColors** object with the specified edge color for all edges.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -34,7 +30,7 @@ Generates an **edgeColors** object with the specified edge color for all edges.
 | --- | --- |
 | [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt; | edgeColors** object whose edge colors are all at the specified value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, edgeColors } from '@kit.ArkUI';

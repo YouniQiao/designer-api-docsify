@@ -4,10 +4,6 @@ Defines the time information for a calendar reminder.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-interface LocalDateTime--><!--Device-reminderAgentManager-interface LocalDateTime-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -30,10 +26,6 @@ Day. The value ranges from 1 to 31.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocalDateTime-day: int--><!--Device-LocalDateTime-day: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -49,10 +41,6 @@ Hour. The value ranges from 0 to 23.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LocalDateTime-hour: int--><!--Device-LocalDateTime-hour: int-End-->
 
@@ -70,10 +58,6 @@ Minute. The value ranges from 0 to 59.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocalDateTime-minute: int--><!--Device-LocalDateTime-minute: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -89,10 +73,6 @@ Month. The value ranges from 1 to 12.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LocalDateTime-month: int--><!--Device-LocalDateTime-month: int-End-->
 
@@ -110,10 +90,6 @@ Second. The value ranges from 0 to 59.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocalDateTime-second?: int--><!--Device-LocalDateTime-second?: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -129,10 +105,6 @@ Year.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LocalDateTime-year: int--><!--Device-LocalDateTime-year: int-End-->
 

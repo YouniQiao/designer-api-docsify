@@ -4,10 +4,6 @@ Enumerates SIM card types and states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-export interface SimStateData--><!--Device-observer-export interface SimStateData-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -30,10 +26,6 @@ SIM card lock type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SimStateData-reason: LockReason--><!--Device-SimStateData-reason: LockReason-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -50,10 +42,6 @@ SIM card state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SimStateData-state: SimState--><!--Device-SimStateData-state: SimState-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -69,10 +57,6 @@ SIM card type.
 **Type:** CardType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SimStateData-type: CardType--><!--Device-SimStateData-type: CardType-End-->
 

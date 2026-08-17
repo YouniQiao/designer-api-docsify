@@ -1,12 +1,8 @@
-# SheetInfo
+# SheetInfo(ActionSheet)
 
 Defines the option content in the dialog box. You can configure the text, icon, and callback for each option.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface SheetInfo--><!--Device-unnamed-interface SheetInfo-End-->
 
@@ -23,10 +19,6 @@ Callback when the sheet is selected.
 **Type:** VoidCallback
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ Sheet icon. By default, no icon is displayed. The string type can be used to loa
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SheetInfo-icon?: string | Resource--><!--Device-SheetInfo-icon?: string | Resource-End-->
@@ -67,10 +55,6 @@ Sheet text. If the text is too long to display, a scrollbar is displayed.
 **Type:** string \| Resource
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

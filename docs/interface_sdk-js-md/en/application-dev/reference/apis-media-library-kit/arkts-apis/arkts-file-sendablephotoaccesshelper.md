@@ -4,10 +4,6 @@ The module provides APIs for album management, including creating an album and a
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace sendablePhotoAccessHelper--><!--Device-unnamed-declare namespace sendablePhotoAccessHelper-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -24,14 +20,14 @@ import { sendablePhotoAccessHelper } from 'sendablePhotoAccessHelper';
 
 | Name | Description |
 | --- | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f.md#getPhotoAccessHelper) | Obtains a PhotoAccessHelper instance, which can be used for accessing and modifying media files in an album. |
+| [getPhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper) | Obtains a PhotoAccessHelper instance, which can be used for accessing and modifying media files in an album. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f-sys.md#getPhotoAccessHelper-(System-API)) | Obtains a PhotoAccessHelper instance for the specified user, letting you access and modify media files in an album. |
+| [getPhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f-sys.md#getphotoaccesshelper-system-api) | Obtains a PhotoAccessHelper instance for the specified user, letting you access and modify media files in an album. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -63,7 +59,7 @@ import { sendablePhotoAccessHelper } from 'sendablePhotoAccessHelper';
 | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | Enumerate the album subtypes. |
 | [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e.md) | Enumerates the album types. |
 | [DynamicRangeType](arkts-medialibrary-sendablephotoaccesshelper-dynamicrangetype-e.md) | Enumerates the dynamic range types of media assets. |
-| [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e.md) | Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md#PhotoAsset) types. |
+| [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e.md) | Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md#photoasset) types. |
 | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Enumerates media file types. |
 
 <!--Del-->
@@ -74,7 +70,7 @@ import { sendablePhotoAccessHelper } from 'sendablePhotoAccessHelper';
 | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e-sys.md) | Enumerate the album subtypes. |
 | [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md) | Enumerates the album types. |
 | [MovingPhotoEffectMode](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md) | Enumeration of moving photo effect mode. |
-| [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md) | Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md#PhotoAsset) types. |
+| [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md) | Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md#photoasset) types. |
 | [PositionType](arkts-medialibrary-sendablephotoaccesshelper-positiontype-e-sys.md) | Photo asset position |
 | [ThumbnailVisibility](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md) | Ability to access thumbnail |
 <!--DelEnd-->

@@ -10,10 +10,6 @@ function setSecurityLabel(path: string, type: DataLevel): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel): Promise<void>--><!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -44,7 +40,7 @@ function setSecurityLabel(path: string, type: DataLevel): Promise<void>
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,10 +63,6 @@ function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void--><!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -81,7 +73,7 @@ function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
 | type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置数据安全等级之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设置数据安全等级之后的回调。 |
 
 **错误码：**
 
@@ -96,7 +88,7 @@ function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

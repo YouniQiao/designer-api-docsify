@@ -1,12 +1,8 @@
 # WebDarkMode
 
-Enumerates whether to enable web dark mode.
+Configures the web dark mode, which controls the dark theme display of web content and helps developers improve visual experience and readability based on user preferences and system themes.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum WebDarkMode--><!--Device-unnamed-declare enum WebDarkMode-End-->
 
@@ -21,10 +17,6 @@ Off = 0
 The web dark mode is disabled.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ The web dark mode is enabled.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDarkMode-On = 1--><!--Device-WebDarkMode-On = 1-End-->
@@ -58,13 +46,9 @@ The web dark mode is enabled.
 Auto = 2
 ```
 
-The web dark mode setting follows the system setting.
+The Web dark mode follows the system. This mode is applicable to scenarios where the Web component theme needs to stay consistent with the system. It is recommended to use this mode to provide a consistent user experience.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

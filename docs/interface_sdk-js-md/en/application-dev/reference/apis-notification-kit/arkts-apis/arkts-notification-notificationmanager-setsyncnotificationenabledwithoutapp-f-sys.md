@@ -16,8 +16,6 @@ Sets whether to enable the notification sync feature for devices where the appli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
@@ -49,7 +47,7 @@ Sets whether to enable the notification sync feature for devices where the appli
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -77,8 +75,6 @@ function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean): Pro
 Sets whether to enable the notification sync feature for devices where the application is not installed. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -116,7 +112,7 @@ Sets whether to enable the notification sync feature for devices where the appli
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -10,10 +10,6 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
 <!--Device-abilityManager-function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>--><!--Device-abilityManager-function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>-End-->
@@ -32,7 +28,7 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';

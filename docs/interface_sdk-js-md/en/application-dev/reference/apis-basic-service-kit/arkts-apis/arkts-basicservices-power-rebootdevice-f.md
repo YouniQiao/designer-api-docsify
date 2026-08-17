@@ -16,11 +16,9 @@ Restarts the system.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [reboot](arkts-basicservices-power-reboot-f-sys.md#reboot-(System-API))
+**Substitutes:** [reboot](arkts-basicservices-power-reboot-f-sys.md#reboot-system-api)
 
 **Required permissions:** ohos.permission.REBOOT
 
@@ -34,7 +32,7 @@ Restarts the system.
 | --- | --- | --- | --- |
 | reason | string | Yes | Indicates the restart reason. For example, "updater" indicates entering the updater mode after the restart. If the parameter is not specified, the system enters the normal mode after the restart. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 power.rebootDevice('reboot_test');

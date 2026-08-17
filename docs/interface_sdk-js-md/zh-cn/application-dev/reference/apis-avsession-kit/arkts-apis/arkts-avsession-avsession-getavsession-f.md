@@ -10,10 +10,6 @@ function getAVSession(context: Context): Promise<AVSession>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-avSession-function getAVSession(context: Context): Promise<AVSession>--><!--Device-avSession-function getAVSession(context: Context): Promise<AVSession>-End-->
@@ -39,7 +35,7 @@ function getAVSession(context: Context): Promise<AVSession>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';

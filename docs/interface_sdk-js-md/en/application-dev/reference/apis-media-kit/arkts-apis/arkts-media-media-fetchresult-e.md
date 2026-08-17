@@ -4,10 +4,6 @@ Enumerates the results of obtaining thumbnails in batches.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum FetchResult--><!--Device-media-enum FetchResult-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -21,10 +17,6 @@ FETCH_FAILED = 0
 Failed to obtain the thumbnail from the video.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Succeeded in obtaining the thumbnail from the video.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FetchResult-FETCH_SUCCEEDED = 1--><!--Device-FetchResult-FETCH_SUCCEEDED = 1-End-->
@@ -61,10 +49,6 @@ FETCH_CANCELED = 2
 The operation of obtaining the thumbnail from the video is canceled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

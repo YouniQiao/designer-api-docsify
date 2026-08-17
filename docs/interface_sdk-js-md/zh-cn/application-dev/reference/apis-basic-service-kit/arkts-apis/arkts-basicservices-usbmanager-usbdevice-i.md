@@ -4,10 +4,6 @@ USB设备信息。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-usbManager-interface USBDevice--><!--Device-usbManager-interface USBDevice-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -23,10 +19,6 @@ busNum: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBDevice-busNum: int--><!--Device-USBDevice-busNum: int-End-->
 
@@ -44,10 +36,6 @@ clazz: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBDevice-clazz: int--><!--Device-USBDevice-clazz: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -63,10 +51,6 @@ configs: Array<USBConfiguration>
 **类型：** Array&lt;[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBDevice-configs: Array<USBConfiguration>--><!--Device-USBDevice-configs: Array<USBConfiguration>-End-->
 
@@ -84,10 +68,6 @@ devAddress: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBDevice-devAddress: int--><!--Device-USBDevice-devAddress: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -103,10 +83,6 @@ manufacturerName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBDevice-manufacturerName: string--><!--Device-USBDevice-manufacturerName: string-End-->
 
@@ -124,10 +100,6 @@ name: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBDevice-name: string--><!--Device-USBDevice-name: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -143,10 +115,6 @@ productId: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBDevice-productId: int--><!--Device-USBDevice-productId: int-End-->
 
@@ -164,10 +132,6 @@ productName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBDevice-productName: string--><!--Device-USBDevice-productName: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -183,10 +147,6 @@ protocol: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBDevice-protocol: int--><!--Device-USBDevice-protocol: int-End-->
 
@@ -204,10 +164,6 @@ serial: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBDevice-serial: string--><!--Device-USBDevice-serial: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -223,10 +179,6 @@ subClass: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBDevice-subClass: int--><!--Device-USBDevice-subClass: int-End-->
 
@@ -244,10 +196,6 @@ vendorId: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-USBDevice-vendorId: int--><!--Device-USBDevice-vendorId: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -263,10 +211,6 @@ version: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-USBDevice-version: string--><!--Device-USBDevice-version: string-End-->
 

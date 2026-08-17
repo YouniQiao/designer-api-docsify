@@ -4,10 +4,6 @@ Enumerates the capitalization mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-export enum CapitalizeMode--><!--Device-inputMethod-export enum CapitalizeMode-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -21,10 +17,6 @@ NONE = 0
 Capitalize nothing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CapitalizeMode-NONE = 0--><!--Device-CapitalizeMode-NONE = 0-End-->
 
@@ -40,10 +32,6 @@ Capitalize the first letter of each sentence.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CapitalizeMode-SENTENCES--><!--Device-CapitalizeMode-SENTENCES-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -58,10 +46,6 @@ Capitalize the first letter of each word.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CapitalizeMode-WORDS--><!--Device-CapitalizeMode-WORDS-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -75,10 +59,6 @@ CHARACTERS
 Capitalize each letter.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CapitalizeMode-CHARACTERS--><!--Device-CapitalizeMode-CHARACTERS-End-->
 

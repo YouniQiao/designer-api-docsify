@@ -16,8 +16,6 @@ Obtains the Want object that launches the specified application. This API uses a
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
@@ -43,8 +41,6 @@ function getLaunchWantForBundle(bundleName: string): Promise<Want>
 Obtains the Want object that launches the specified application. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

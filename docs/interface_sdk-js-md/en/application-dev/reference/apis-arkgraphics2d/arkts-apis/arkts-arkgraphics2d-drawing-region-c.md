@@ -4,10 +4,6 @@ Describes a region, which is used to describe the region where the shape can be 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class Region--><!--Device-drawing-class Region-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -28,10 +24,6 @@ Constructs a **Region** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Region-constructor()--><!--Device-Region-constructor()-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -45,10 +37,6 @@ constructor(region: Region)
 Copies a **Region** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Region-constructor(region: Region)--><!--Device-Region-constructor(region: Region)-End-->
 
@@ -69,10 +57,6 @@ constructor(left: int, top: int, right: int, bottom: int)
 Constructs a rectangular region.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)--><!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)-End-->
 
@@ -97,10 +81,6 @@ Obtains a new path that is the boundary of the existing region.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-Region-getBoundaryPath(): Path--><!--Device-Region-getBoundaryPath(): Path-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -120,10 +100,6 @@ getBoundaryPath(): Path | undefined
 Gets the boundary of the region, which represents by a path. Gets the bounds of the region.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-Region-getBoundaryPath(): Path | undefined--><!--Device-Region-getBoundaryPath(): Path | undefined-End-->
 
@@ -145,10 +121,6 @@ Obtains the boundaries of the existing region.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-Region-getBounds(): common2D.Rect--><!--Device-Region-getBounds(): common2D.Rect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -168,10 +140,6 @@ getBounds(): common2D.Rect | undefined
 Gets the bounds of the region.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-Region-getBounds(): common2D.Rect | undefined--><!--Device-Region-getBounds(): common2D.Rect | undefined-End-->
 
@@ -193,10 +161,6 @@ Checks whether this region contains multiple rectangles.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Region-isComplex(): boolean--><!--Device-Region-isComplex(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -217,10 +181,6 @@ Checks whether the existing region is empty.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Region-isEmpty(): boolean--><!--Device-Region-isEmpty(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -240,10 +200,6 @@ isEqual(other: Region): boolean
 Checks whether another region is equal to this region.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-Region-isEqual(other: Region): boolean--><!--Device-Region-isEqual(other: Region): boolean-End-->
 
@@ -270,10 +226,6 @@ isPointContained(x: int, y:int): boolean
 Checks whether a point is contained in this region.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Region-isPointContained(x: int, y:int): boolean--><!--Device-Region-isPointContained(x: int, y:int): boolean-End-->
 
@@ -308,10 +260,6 @@ Checks whether this region is the same as a single rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Region-isRect(): boolean--><!--Device-Region-isRect(): boolean-End-->
@@ -333,10 +281,6 @@ isRegionContained(other: Region): boolean
 Checks whether another region is contained in this region.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Region-isRegionContained(other: Region): boolean--><!--Device-Region-isRegionContained(other: Region): boolean-End-->
 
@@ -370,10 +314,6 @@ Translates a region.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Region-offset(dx: int, dy: int): void--><!--Device-Region-offset(dx: int, dy: int): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -394,10 +334,6 @@ op(region: Region, regionOp: RegionOp): boolean
 Performs an operation on this region and another region, and stores the resulting region in this **Region** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Region-op(region: Region, regionOp: RegionOp): boolean--><!--Device-Region-op(region: Region, regionOp: RegionOp): boolean-End-->
 
@@ -432,10 +368,6 @@ Checks whether this region is the same as a single rectangle and contains the sp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Region-quickContains(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickContains(left: int, top: int, right: int, bottom: int): boolean-End-->
@@ -466,10 +398,6 @@ quickReject(left: int, top: int, right: int, bottom: int): boolean
 Checks whether a rectangle do not intersect with this region. Actually, this API determines whether the rectangle does not intersect with the bounding rectangle of the region, and therefore the result may not be accurate.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean-End-->
 
@@ -506,10 +434,6 @@ Checks whether the existing region does not intersect with another region. Actua
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Region-quickRejectRegion(region: Region): boolean--><!--Device-Region-quickRejectRegion(region: Region): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -536,10 +460,6 @@ Set the existing region to empty.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Region-setEmpty(): void--><!--Device-Region-setEmpty(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -553,10 +473,6 @@ setPath(path: Path, clip: Region): boolean
 Sets a region that matches the outline of a path within the cropping area.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Region-setPath(path: Path, clip: Region): boolean--><!--Device-Region-setPath(path: Path, clip: Region): boolean-End-->
 
@@ -590,10 +506,6 @@ setRect(left: int, top: int, right: int, bottom: int): boolean
 Sets a rectangle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean-End-->
 
@@ -629,10 +541,6 @@ setRegion(region: Region): void
 Sets the existing region to another region.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-Region-setRegion(region: Region): void--><!--Device-Region-setRegion(region: Region): void-End-->
 

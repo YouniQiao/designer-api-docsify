@@ -1,14 +1,12 @@
 # LaunchMode
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md#LaunchType) instead. Enumerates the ability launch modes.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md#launchtype) instead. Enumerates the ability launch modes.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LaunchType](arkts-ability-bundlemanager-launchtype-e.md#LaunchType)
+**Substitutes:** [LaunchType](arkts-ability-bundlemanager-launchtype-e.md#launchtype)
 
 <!--Device-bundle-export enum LaunchMode--><!--Device-bundle-export enum LaunchMode-End-->
 
@@ -24,11 +22,9 @@ The ability has only one instance.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SINGLETON](arkts-ability-bundlemanager-launchtype-e.md#SINGLETON)
+**Substitutes:** [SINGLETON](arkts-ability-bundlemanager-launchtype-e.md#singleton)
 
 <!--Device-LaunchMode-SINGLETON = 0--><!--Device-LaunchMode-SINGLETON = 0-End-->
 
@@ -44,11 +40,9 @@ The ability can have multiple instances.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MULTITON](arkts-ability-bundlemanager-launchtype-e.md#MULTITON)
+**Substitutes:** [MULTITON](arkts-ability-bundlemanager-launchtype-e.md#multiton)
 
 <!--Device-LaunchMode-STANDARD = 1--><!--Device-LaunchMode-STANDARD = 1-End-->
 

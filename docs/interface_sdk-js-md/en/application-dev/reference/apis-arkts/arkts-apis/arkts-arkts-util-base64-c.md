@@ -4,11 +4,9 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Base64Helper](arkts-arkts-util-base64helper-c.md#Base64Helper)
+**Substitutes:** [Base64Helper](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#base64helper)
 
 <!--Device-util-class Base64--><!--Device-util-class Base64-End-->
 
@@ -30,17 +28,15 @@ A constructor used to create a **Base64** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](arkts-arkts-util-base64helper-c.md#constructor)
+**Substitutes:** [constructor](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#constructor)
 
 <!--Device-Base64-constructor()--><!--Device-Base64-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64 = new  util.Base64();
@@ -56,11 +52,9 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [decode](arkts-arkts-util-base64helper-c.md#decode)
+**Substitutes:** [decode](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#decode)
 
 <!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>--><!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>-End-->
 
@@ -78,7 +72,7 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64 = new util.Base64();
@@ -99,11 +93,9 @@ Decodes the input content into a Uint8Array object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [decodeSync](arkts-arkts-util-base64helper-c.md#decodeSync)
+**Substitutes:** [decodeSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#decodesync)
 
 <!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array--><!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array-End-->
 
@@ -121,7 +113,7 @@ Decodes the input content into a Uint8Array object.
 | --- | --- |
 | Uint8Array | Uint8Array object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64 = new util.Base64();
@@ -141,11 +133,9 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [encode](arkts-arkts-util-base64helper-c.md#encode)
+**Substitutes:** [encode](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encode)
 
 <!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>--><!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>-End-->
 
@@ -163,7 +153,7 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64 = new util.Base64();
@@ -184,11 +174,9 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [encodeSync](arkts-arkts-util-base64helper-c.md#encodeSync)
+**Substitutes:** [encodeSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodesync)
 
 <!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array--><!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array-End-->
 
@@ -206,7 +194,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 | --- | --- |
 | Uint8Array | Uint8Array object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64 = new util.Base64();
@@ -226,11 +214,9 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [encodeToString](arkts-arkts-util-base64helper-c.md#encodeToString)
+**Substitutes:** [encodeToString](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodetostring)
 
 <!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>--><!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>-End-->
 
@@ -248,7 +234,7 @@ Encodes the input content into a string. This API uses a promise to return the r
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the string obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64 = new util.Base64();
@@ -269,11 +255,9 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [encodeToStringSync](arkts-arkts-util-base64helper-c.md#encodeToStringSync)
+**Substitutes:** [encodeToStringSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodetostringsync)
 
 <!--Device-Base64-encodeToStringSync(src: Uint8Array): string--><!--Device-Base64-encodeToStringSync(src: Uint8Array): string-End-->
 
@@ -291,7 +275,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 | --- | --- |
 | string | String obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let base64 = new util.Base64();

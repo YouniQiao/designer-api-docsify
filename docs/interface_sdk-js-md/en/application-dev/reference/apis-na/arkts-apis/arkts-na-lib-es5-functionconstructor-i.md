@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface FunctionConstructor--><!--Device-unnamed-interface FunctionConstructor-End-->
 
 ## constructor
@@ -17,10 +13,6 @@ new(...args: string[]): Function
 Creates a new function.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-FunctionConstructor-new(...args: string[]): Function--><!--Device-FunctionConstructor-new(...args: string[]): Function-End-->
 
@@ -43,10 +35,6 @@ Creates a new function.
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-FunctionConstructor-(...args: string[]): Function--><!--Device-FunctionConstructor-(...args: string[]): Function-End-->
 
@@ -71,10 +59,6 @@ readonly prototype: Function
 **Type:** Function
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-FunctionConstructor-readonly prototype: Function--><!--Device-FunctionConstructor-readonly prototype: Function-End-->
 

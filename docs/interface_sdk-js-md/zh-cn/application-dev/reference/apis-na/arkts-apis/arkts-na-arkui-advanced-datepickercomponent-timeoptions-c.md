@@ -1,14 +1,12 @@
 # TimeOptions
 
-TimeOptions定义时间选择器的选项。 继承于[CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)。
+TimeOptions定义时间选择器的选项。 继承于[CommonOptions](arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)。
 
-**继承/实现关系：** TimeOptions extends [CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)
+**继承/实现关系：** TimeOptions extends [CommonOptions](arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 <!--Device-unnamed-export declare class TimeOptions--><!--Device-unnamed-export declare class TimeOptions-End-->
 
@@ -22,15 +20,13 @@ format?: TimeFormat
 
 定义时间选择器的格式。 默认值：TimeFormat.HOUR_MINUTE
 
-**类型：** [TimeFormat](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
+**类型：** [TimeFormat](arkts-na-arkui-advanced-datepickercomponent-timeformat-e.md)
 
 **默认值：** TimeFormat.HOUR_MINUTE
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,9 +48,7 @@ useMilitaryTime?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

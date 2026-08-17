@@ -1,14 +1,10 @@
 # SignificantMotionResponse
 
-Describes the significant motion sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
+Describes the significant motion sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
 
-**Inheritance/Implementation:** SignificantMotionResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**Inheritance/Implementation:** SignificantMotionResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-interface SignificantMotionResponse--><!--Device-sensor-interface SignificantMotionResponse-End-->
 
@@ -31,10 +27,6 @@ Intensity of a motion. This parameter specifies whether a device has a significa
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SignificantMotionResponse-scalar: double--><!--Device-SignificantMotionResponse-scalar: double-End-->
 

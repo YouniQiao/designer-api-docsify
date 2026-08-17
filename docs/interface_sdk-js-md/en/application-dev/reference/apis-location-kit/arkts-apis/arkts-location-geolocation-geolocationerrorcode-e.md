@@ -4,8 +4,6 @@ Enum for error code
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
@@ -23,8 +21,6 @@ INPUT_PARAMS_ERROR
 Indicates input parameter error.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ Indicates reverse geocode query failed.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
@@ -63,8 +57,6 @@ GEOCODE_ERROR
 Indicates geocode query failed.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -84,8 +76,6 @@ Indicates positioning failed.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
@@ -103,8 +93,6 @@ LOCATION_SWITCH_ERROR
 Indicates operation failure caused by abnormal location switch.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -124,8 +112,6 @@ Indicates failed to get the last known location.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
@@ -143,8 +129,6 @@ LOCATION_REQUEST_TIMEOUT_ERROR
 Indicates location request timeout.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

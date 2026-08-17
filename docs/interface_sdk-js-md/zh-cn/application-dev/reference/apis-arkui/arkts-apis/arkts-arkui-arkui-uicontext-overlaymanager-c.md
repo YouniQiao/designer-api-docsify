@@ -4,10 +4,6 @@ class OverlayManager
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export class OverlayManager--><!--Device-unnamed-export class OverlayManager-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ addComponentContent(content: ComponentContent, index?: number): void
 Adds a specified ComponentContent node to the OverlayManager.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,10 +43,6 @@ Creates a floating layer node with the specified display order. This API allows 
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -68,7 +56,7 @@ Creates a floating layer node with the specified display order. This API allows 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent | 是 | Content to add to the target node on the **OverlayManager**. <br>**NOTE：**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
-| levelOrder | [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md) | 否 |  |
+| levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 否 |  |
 
 ## hideAllComponentContents
 
@@ -79,10 +67,6 @@ hideAllComponentContents(): void
 Hide all ComponentContents on the OverlayManager.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,10 +85,6 @@ hideComponentContent(content: ComponentContent): void
 Hide the ComponentContent.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,10 +110,6 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -147,7 +123,7 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent | 是 | OverlayManager新增节点需要添加的内容。 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：。 <br>默认情况下，新节点在页面中居中，并根据其堆叠级别进行堆叠。 &lt;/p&gt; |
-| options | [OrderOverlayOptions](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-orderoverlayoptions-i.md) | 否 |  |
+| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 否 |  |
 
 **返回值：**
 
@@ -170,10 +146,6 @@ removeComponentContent(content: ComponentContent): void
 Removes a specified ComponentContent node from the OverlayManager
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -199,10 +171,6 @@ Show all ComponentContents on the OverlayManager.
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -220,10 +188,6 @@ showComponentContent(content: ComponentContent): void
 Show the ComponentContent.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

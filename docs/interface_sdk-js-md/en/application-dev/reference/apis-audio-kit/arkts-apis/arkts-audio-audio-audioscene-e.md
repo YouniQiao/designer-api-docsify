@@ -4,10 +4,6 @@ Enumerates the audio scenes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum AudioScene--><!--Device-audio-enum AudioScene-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -21,10 +17,6 @@ AUDIO_SCENE_DEFAULT = 0
 Default audio scene.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioScene-AUDIO_SCENE_DEFAULT = 0--><!--Device-AudioScene-AUDIO_SCENE_DEFAULT = 0-End-->
 
@@ -40,10 +32,6 @@ Ringing audio scene.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioScene-AUDIO_SCENE_RINGING = 1--><!--Device-AudioScene-AUDIO_SCENE_RINGING = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -58,10 +46,6 @@ Phone call audio scene.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioScene-AUDIO_SCENE_PHONE_CALL = 2--><!--Device-AudioScene-AUDIO_SCENE_PHONE_CALL = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -75,10 +59,6 @@ AUDIO_SCENE_VOICE_CHAT = 3
 Voice chat audio scene.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioScene-AUDIO_SCENE_VOICE_CHAT = 3--><!--Device-AudioScene-AUDIO_SCENE_VOICE_CHAT = 3-End-->
 

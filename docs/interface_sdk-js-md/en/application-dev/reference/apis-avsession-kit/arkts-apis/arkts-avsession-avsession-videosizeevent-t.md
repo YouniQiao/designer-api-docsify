@@ -8,10 +8,6 @@ The video size event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-type VideoSizeEvent = (width: int, height: int) => void--><!--Device-avSession-type VideoSizeEvent = (width: int, height: int) => void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core

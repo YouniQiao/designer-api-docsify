@@ -4,10 +4,6 @@ Enumerates intelligent voice error code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-enum IntelligentVoiceErrorCode--><!--Device-intelligentVoice-enum IntelligentVoiceErrorCode-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -23,10 +19,6 @@ INTELLIGENT_VOICE_NO_MEMORY = 22700101
 No memory.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_NO_MEMORY = 22700101--><!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_NO_MEMORY = 22700101-End-->
 
@@ -44,10 +36,6 @@ Invalid parameter.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_INVALID_PARAM = 22700102--><!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_INVALID_PARAM = 22700102-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -63,10 +51,6 @@ INTELLIGENT_VOICE_INIT_FAILED = 22700103
 Init failed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_INIT_FAILED = 22700103--><!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_INIT_FAILED = 22700103-End-->
 
@@ -84,10 +68,6 @@ Failed to commit the enrollment.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_COMMIT_ENROLL_FAILED = 22700104--><!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_COMMIT_ENROLL_FAILED = 22700104-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -103,10 +83,6 @@ INTELLIGENT_VOICE_START_CAPTURER_FAILED = 22700105
 Start capturer failed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_START_CAPTURER_FAILED = 22700105--><!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_START_CAPTURER_FAILED = 22700105-End-->
 
@@ -124,10 +100,6 @@ Read failed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_READ_FAILED = 22700106--><!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_READ_FAILED = 22700106-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -143,10 +115,6 @@ INTELLIGENT_VOICE_SYSTEM_ERROR = 22700107
 System error.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_SYSTEM_ERROR = 22700107--><!--Device-IntelligentVoiceErrorCode-INTELLIGENT_VOICE_SYSTEM_ERROR = 22700107-End-->
 

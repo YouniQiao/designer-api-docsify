@@ -6,10 +6,6 @@ FileUri represents the uri of the file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-fileUri-class FileUri--><!--Device-fileUri-class FileUri-End-->
 
 **System capability:** SystemCapability.FileManagement.AppFileService
@@ -29,10 +25,6 @@ constructor(uriOrPath: string)
 Constructor for obtaining the instance of the FileUri class.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -55,7 +47,7 @@ Constructor for obtaining the instance of the FileUri class.
 | 14300002 | Invalid uri |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let path = pathDir + '/test';
@@ -73,10 +65,6 @@ getFullDirectoryUri(): string
 Get the full directory uri where the file URI is located
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -98,7 +86,7 @@ Get the full directory uri where the file URI is located
 | 13900012 | Permission denied |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -122,10 +110,6 @@ Check whether the incoming URI is a remote URI
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FileUri-isRemoteUri(): boolean--><!--Device-FileUri-isRemoteUri(): boolean-End-->
@@ -144,7 +128,7 @@ Check whether the incoming URI is a remote URI
 | --- | --- |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -168,10 +152,6 @@ Converts this URI into an encoded string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileUri-toString(): string--><!--Device-FileUri-toString(): string-End-->
@@ -184,7 +164,7 @@ Converts this URI into an encoded string.
 | --- | --- |
 | string | URI in a serialized string. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let path = pathDir + '/test';

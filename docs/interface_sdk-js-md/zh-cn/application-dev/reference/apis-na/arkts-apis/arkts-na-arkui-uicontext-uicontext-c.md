@@ -4,9 +4,7 @@ UIContext类
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare class UIContext--><!--Device-unnamed-export declare class UIContext-End-->
 
@@ -22,9 +20,7 @@ addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEv
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,9 +51,7 @@ Defining animation function
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,9 +76,7 @@ animateToImmediately(param: AnimateParam, processor: VoidCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -109,9 +101,7 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -137,9 +127,7 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,9 +152,7 @@ closeBindSheet(bindSheetContent: ComponentContentBase): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -204,9 +190,7 @@ UIContext 构造函数
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -224,9 +208,7 @@ Create an animator object for custom animation.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -262,9 +244,7 @@ Create a UI instance singleton without window and get its UIContext object.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -282,7 +262,7 @@ Create a UI instance singleton without window and get its UIContext object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | object UIContext, or undefined when failed. |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | object UIContext, or undefined when failed. |
 
 **错误码：**
 
@@ -301,9 +281,7 @@ Destroy the UI instance singleton without window.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -321,9 +299,7 @@ Dispach keyboard event to the frameNode with inspector key.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -354,9 +330,7 @@ enableEventPassthrough(enabled: boolean | undefined, eventType: RawInputEventTyp
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -381,9 +355,7 @@ enableSwipeBack(enabled: boolean | undefined): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -407,9 +379,7 @@ Converts a value in fp units to a value in px.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -439,9 +409,7 @@ static getAllUIContexts(): UIContext[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -453,7 +421,7 @@ static getAllUIContexts(): UIContext[]
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md)[] | An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)[] | An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
 
 ## getAtomicServiceBar
 
@@ -465,9 +433,7 @@ getAtomicServiceBar(): Nullable<AtomicServiceBar>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -479,7 +445,7 @@ getAtomicServiceBar(): Nullable<AtomicServiceBar>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Nullable](arkts-na-nullable-t.md)&lt;[AtomicServiceBar](arkts-na-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
+| [Nullable](arkts-na-nullable-t.md)&lt;[AtomicServiceBar](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
 
 ## getAttachedFrameNodeById
 
@@ -491,9 +457,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -523,9 +487,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -537,7 +499,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
 
 ## getComponentSnapshot
 
@@ -549,9 +511,7 @@ getComponentSnapshot(): ComponentSnapshot
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -563,7 +523,7 @@ getComponentSnapshot(): ComponentSnapshot
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentSnapshot](arkts-na-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
+| [ComponentSnapshot](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
 
 ## getComponentUtils
 
@@ -575,9 +535,7 @@ get object ComponentUtils.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -589,7 +547,7 @@ get object ComponentUtils.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentUtils](arkts-na-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
+| [ComponentUtils](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
 
 ## getContextMenuController
 
@@ -601,9 +559,7 @@ getContextMenuController(): ContextMenuController
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -615,7 +571,7 @@ getContextMenuController(): ContextMenuController
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContextMenuController](arkts-na-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
+| [ContextMenuController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
 
 ## getCursorController
 
@@ -627,9 +583,7 @@ getCursorController(): CursorController
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -641,7 +595,7 @@ getCursorController(): CursorController
 
 | 类型 | 说明 |
 | --- | --- |
-| [CursorController](arkts-na-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
+| [CursorController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
 
 ## getDialogPresenter
 
@@ -653,9 +607,7 @@ getDialogPresenter(): DialogPresenter
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.1.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -667,7 +619,7 @@ getDialogPresenter(): DialogPresenter
 
 | 类型 | 说明 |
 | --- | --- |
-| [DialogPresenter](arkts-na-arkui-uicontext-dialogpresenter-c.md) | Dialog object. |
+| [DialogPresenter](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dialogpresenter-c.md) | Dialog object. |
 
 ## getDragController
 
@@ -679,9 +631,7 @@ getDragController(): DragController
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -693,7 +643,7 @@ getDragController(): DragController
 
 | 类型 | 说明 |
 | --- | --- |
-| [DragController](arkts-na-arkui-uicontext-dragcontroller-c.md) | the DragController |
+| [DragController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md) | the DragController |
 
 ## getFilteredInspectorTree
 
@@ -705,9 +655,7 @@ getFilteredInspectorTree(filters?: Array<string>): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -743,9 +691,7 @@ getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): s
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -784,9 +730,7 @@ getFocusController(): FocusController
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -798,7 +742,7 @@ getFocusController(): FocusController
 
 | 类型 | 说明 |
 | --- | --- |
-| [FocusController](arkts-na-arkui-uicontext-focuscontroller-c.md) | the FocusController |
+| [FocusController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md) | the FocusController |
 
 ## getFont
 
@@ -810,9 +754,7 @@ get object font.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -824,7 +766,7 @@ get object font.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Font](arkts-na-arkui-uicontext-font-c.md) | object Font. |
+| [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | object Font. |
 
 ## getFrameNodeById
 
@@ -836,9 +778,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -868,9 +808,7 @@ getFrameNodeByUniqueId(id: int): FrameNode | null
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -900,9 +838,7 @@ getHostContext(): Context | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -914,7 +850,7 @@ getHostContext(): Context | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](arkts-na-context-t.md) |  |
+| [Context](../../apis-arkui/arkts-apis/arkts-arkui-context-t.md) |  |
 
 ## getId
 
@@ -926,9 +862,7 @@ getId(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -952,9 +886,7 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -966,7 +898,7 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [KeyboardAvoidMode](arkts-na-arkui-uicontext-keyboardavoidmode-e.md) | The mode of keyboard avoid. |
+| [KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | The mode of keyboard avoid. |
 
 ## getLastFocusedUIContext
 
@@ -978,9 +910,7 @@ static getLastFocusedUIContext(): UIContext | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -992,7 +922,7 @@ static getLastFocusedUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext of the last focused UI instance or undefined if no one exists. |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext of the last focused UI instance or undefined if no one exists. |
 
 ## getLastForegroundUIContext
 
@@ -1004,9 +934,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1018,7 +946,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext of the last foregrounded UI instance or undefined if no one exists |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext of the last foregrounded UI instance or undefined if no one exists |
 
 ## getMagnifier
 
@@ -1030,9 +958,7 @@ getMagnifier(): Magnifier
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1044,7 +970,7 @@ getMagnifier(): Magnifier
 
 | 类型 | 说明 |
 | --- | --- |
-| [Magnifier](arkts-na-arkui-uicontext-magnifier-c.md) | Magnifier instance obtained. |
+| [Magnifier](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier instance obtained. |
 
 ## getMaxFontScale
 
@@ -1056,9 +982,7 @@ getMaxFontScale(): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1082,9 +1006,7 @@ getMeasureUtils(): MeasureUtils
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1096,7 +1018,7 @@ getMeasureUtils(): MeasureUtils
 
 | 类型 | 说明 |
 | --- | --- |
-| [MeasureUtils](arkts-na-arkui-uicontext-measureutils-c.md) | the MeasureUtils |
+| [MeasureUtils](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-measureutils-c.md) | the MeasureUtils |
 
 ## getMediaQuery
 
@@ -1108,9 +1030,7 @@ get object mediaQuery.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1122,7 +1042,7 @@ get object mediaQuery.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaQuery](arkts-na-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
+| [MediaQuery](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
 
 ## getNavigationInfoByUniqueId
 
@@ -1134,9 +1054,7 @@ getNavigationInfoByUniqueId(id: int): observer.NavigationInfo | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1166,9 +1084,7 @@ getOverlayManager(): OverlayManager
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1180,7 +1096,7 @@ getOverlayManager(): OverlayManager
 
 | 类型 | 说明 |
 | --- | --- |
-| [OverlayManager](arkts-na-arkui-uicontext-overlaymanager-c.md) | object OverlayManager. |
+| [OverlayManager](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-overlaymanager-c.md) | object OverlayManager. |
 
 ## getOverlayManagerOptions
 
@@ -1192,9 +1108,7 @@ getOverlayManagerOptions(): OverlayManagerOptions
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1206,7 +1120,7 @@ getOverlayManagerOptions(): OverlayManagerOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [OverlayManagerOptions](arkts-na-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
+| [OverlayManagerOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
 
 ## getPageInfoByUniqueId
 
@@ -1218,9 +1132,7 @@ getPageInfoByUniqueId(id: int): PageInfo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1238,7 +1150,7 @@ getPageInfoByUniqueId(id: int): PageInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PageInfo](arkts-na-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
+| [PageInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
 
 ## getPageRootNode
 
@@ -1250,9 +1162,7 @@ getPageRootNode(): FrameNode | null
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1282,9 +1192,7 @@ getPixelRoundMode(): PixelRoundMode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1308,9 +1216,7 @@ get object PromptAction.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1322,7 +1228,7 @@ get object PromptAction.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PromptAction](arkts-na-arkui-uicontext-promptaction-c.md) | object PromptAction. |
+| [PromptAction](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md) | object PromptAction. |
 
 ## getRouter
 
@@ -1334,9 +1240,7 @@ get object router.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1348,7 +1252,7 @@ get object router.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Router](arkts-na-arkui-uicontext-router-c.md) | object Router. |
+| [Router](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md) | object Router. |
 
 ## getSharedLocalStorage
 
@@ -1360,9 +1264,7 @@ getSharedLocalStorage(): LocalStorage | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1386,9 +1288,7 @@ getSmartGestureController(): SmartGestureController
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1400,7 +1300,7 @@ getSmartGestureController(): SmartGestureController
 
 | 类型 | 说明 |
 | --- | --- |
-| [SmartGestureController](arkts-na-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
+| [SmartGestureController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
 
 ## getTextMenuController
 
@@ -1412,9 +1312,7 @@ getTextMenuController(): TextMenuController
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1426,7 +1324,7 @@ getTextMenuController(): TextMenuController
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextMenuController](arkts-na-arkui-uicontext-textmenucontroller-c.md) | object text menu controller. |
+| [TextMenuController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | object text menu controller. |
 
 ## getUIInspector
 
@@ -1438,9 +1336,7 @@ getUIInspector(): UIInspector
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1452,7 +1348,7 @@ getUIInspector(): UIInspector
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIInspector](arkts-na-arkui-uicontext-uiinspector-c.md) | 返回UIInspector实例对象。 |
+| [UIInspector](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uiinspector-c.md) | 返回UIInspector实例对象。 |
 
 ## getUIObserver
 
@@ -1464,9 +1360,7 @@ getUIObserver(): UIObserver
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1478,7 +1372,7 @@ getUIObserver(): UIObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIObserver](arkts-na-arkui-uicontext-uiobserver-c.md) | The UI observer. |
+| [UIObserver](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uiobserver-c.md) | The UI observer. |
 
 ## getWindowHeightBreakpoint
 
@@ -1490,9 +1384,7 @@ getWindowHeightBreakpoint(): HeightBreakpoint
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1516,9 +1408,7 @@ getWindowId(): int | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1542,9 +1432,7 @@ getWindowName(): string | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1568,9 +1456,7 @@ getWindowWidthBreakpoint(): WidthBreakpoint
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1594,9 +1480,7 @@ isAvailable(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1620,9 +1504,7 @@ isEasySplit(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1646,9 +1528,7 @@ Checks whether current font scale follows the system.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1672,9 +1552,7 @@ Defining keyframe animation function.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1699,9 +1577,7 @@ Converts a value in lpx units to a value in px.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1731,9 +1607,7 @@ Open the BindSheet.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1776,9 +1650,7 @@ Post a frame callback to run on the next frame after the specified delay.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1790,7 +1662,7 @@ Post a frame callback to run on the next frame after the specified delay.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](arkts-na-arkui-uicontext-framecallback-c.md) | 是 | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-framecallback-c.md) | 是 | The frame callback to run on the next frame. |
 | delayTime | long | 是 | The delay time in milliseconds, |
 
 ## postFrameCallback
@@ -1803,9 +1675,7 @@ Post a frame callback to run on the next frame.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1817,7 +1687,7 @@ Post a frame callback to run on the next frame.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](arkts-na-arkui-uicontext-framecallback-c.md) | 是 | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-framecallback-c.md) | 是 | The frame callback to run on the next frame. |
 
 ## px2fp
 
@@ -1829,9 +1699,7 @@ Converts a value in px units to a value in fp.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1861,9 +1729,7 @@ Converts a value in px units to a value in lpx.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1893,9 +1759,7 @@ Converts a value in px units to a value in vp.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1925,9 +1789,7 @@ removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1951,9 +1813,7 @@ Require DynamicSyncScene by id.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1971,7 +1831,7 @@ Require DynamicSyncScene by id.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[DynamicSyncScene](arkts-na-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
+| Array&lt;[DynamicSyncScene](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
 
 ## resolveUIContext
 
@@ -1983,9 +1843,7 @@ static resolveUIContext(): ResolvedUIContext
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1997,7 +1855,7 @@ static resolveUIContext(): ResolvedUIContext
 
 | 类型 | 说明 |
 | --- | --- |
-| [ResolvedUIContext](arkts-na-arkui-uicontext-resolveduicontext-c.md) | ResolvedUIContext实例 |
+| [ResolvedUIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | ResolvedUIContext实例 |
 
 ## runScopedTask
 
@@ -2009,9 +1867,7 @@ Run custom functions inside the UIContext scope.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2035,9 +1891,7 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2049,7 +1903,7 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| feature | [CustomKeyboardContinueFeature](arkts-na-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 | 自定义键盘接续特性。 |
+| feature | [CustomKeyboardContinueFeature](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 | 自定义键盘接续特性。 |
 
 ## setImageCacheCount
 
@@ -2061,9 +1915,7 @@ setImageCacheCount(value: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2087,9 +1939,7 @@ setImageRawDataCacheSize(value: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2113,9 +1963,7 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2127,7 +1975,7 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](arkts-na-arkui-uicontext-keyboardavoidmode-e.md) | 是 | The mode of keyboard avoid. |
+| value | [KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | 是 | The mode of keyboard avoid. |
 
 ## setOverlayManagerOptions
 
@@ -2139,9 +1987,7 @@ Init OverlayManager.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2153,7 +1999,7 @@ Init OverlayManager.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OverlayManagerOptions](arkts-na-arkui-uicontext-overlaymanageroptions-i.md) | 是 | Options. |
+| options | [OverlayManagerOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | 是 | Options. |
 
 **返回值：**
 
@@ -2171,9 +2017,7 @@ setPixelRoundMode(mode: PixelRoundMode): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2197,9 +2041,7 @@ static setResourceManagerCacheMaxCountForHSP(count: int): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2231,9 +2073,7 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2245,7 +2085,7 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | [TextSelectionClearPolicy](arkts-na-arkui-uicontext-textselectionclearpolicy-e.md) | 是 | 文本选择清除策略。 |
+| policy | [TextSelectionClearPolicy](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | 是 | 文本选择清除策略。 |
 
 ## setUIStates
 
@@ -2257,9 +2097,7 @@ setUIStates(callback: VoidCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2283,9 +2121,7 @@ actionSheet display.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2309,9 +2145,7 @@ alertDialog display.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2335,9 +2169,7 @@ datePickerDialog display.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2361,9 +2193,7 @@ textPickerDialog display.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2387,9 +2217,7 @@ timePickerDialog display.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2413,9 +2241,7 @@ Unbind tabs from nested scrollable container components.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2441,9 +2267,7 @@ Unbind tabs from scrollable container component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2468,9 +2292,7 @@ Update the BindSheet with sheetOptions.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2510,9 +2332,7 @@ Converts a value in vp units to a value in px.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

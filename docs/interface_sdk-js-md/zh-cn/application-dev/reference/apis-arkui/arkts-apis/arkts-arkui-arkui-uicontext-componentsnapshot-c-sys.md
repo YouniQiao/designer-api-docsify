@@ -1,12 +1,8 @@
 # ComponentSnapshot
 
-提供获取组件截图的能力，包括已加载的组件的截图和没有加载的组件的截图。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 以下API需先使用UIContext中的[getComponentSnapshot()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法获取ComponentSnapshot对象，再通过此实例调用对应方法。 > > - 缩放、平移、旋转等图形变换属性只对被截图组件的子组件生效；对目标组件本身应用图形变换属性不生效，显示的还是图形变换前的效果。
+提供获取组件截图的能力，包括已加载的组件的截图和没有加载的组件的截图。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 以下API需先使用UIContext中的[getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法获取ComponentSnapshot对象，再通过此实例调用对应方法。 > > - 缩放、平移、旋转等图形变换属性只对被截图组件的子组件生效；对目标组件本身应用图形变换属性不生效，显示的还是图形变换前的效果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export class ComponentSnapshot--><!--Device-unnamed-export class ComponentSnapshot-End-->
 
@@ -23,10 +19,6 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ComponentSnapshot-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,    options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,    options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
@@ -39,8 +31,8 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | [NodeIdentity](../../apis-na/arkts-apis/arkts-na-nodeidentity-t.md) | 是 | 范围开始的组件的ID。 |
-| end | [NodeIdentity](../../apis-na/arkts-apis/arkts-na-nodeidentity-t.md) | 是 | 范围结束的组件的ID。 |
+| start | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 是 | 范围开始的组件的ID。 |
+| end | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 是 | 范围结束的组件的ID。 |
 | isStartRect | boolean | 是 | 范围是否以开始组件的外接矩形为准。<br/>true表示以开始组件的外接矩形为准，false表示以结束组件的外接矩形为准。<br/>默认值为true。 |
 | options | componentSnapshot.SnapshotOptions | 否 | 截图相关的自定义参数，不支持region参数。 |
 
@@ -58,7 +50,7 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 | [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { image } from '@kit.ImageKit';

@@ -10,10 +10,6 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
 <!--Device-dlpPermission-function getDLPGatheringPolicy(): Promise<GatheringPolicyType>--><!--Device-dlpPermission-function getDLPGatheringPolicy(): Promise<GatheringPolicyType>-End-->
@@ -37,15 +33,15 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getDLPGatheringPolicy().then((gatheringPolicy: dlpPermission.GatheringPolicyType) => {
   console.info('gatheringPolicy: ', JSON.stringify(gatheringPolicy));
-}).catch((error: BusinessError)=> {
-  console.error(error.message);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get DLPGatheringPolicy. Code: ${error.code}, message: ${error.message}`);
 }); // 获取沙箱聚合策略。
 ```
 
@@ -60,10 +56,6 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
 <!--Device-dlpPermission-function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): void--><!--Device-dlpPermission-function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): void-End-->
@@ -76,7 +68,7 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GatheringPolicyType](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GatheringPolicyType](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 
@@ -88,14 +80,14 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
   if (err) {
-    console.error('getDLPGatheringPolicy error,', err.code, err.message);
+    console.error(`Failed to get DLPGatheringPolicy. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('gatheringPolicy：', JSON.stringify(gatheringPolicy));
   }

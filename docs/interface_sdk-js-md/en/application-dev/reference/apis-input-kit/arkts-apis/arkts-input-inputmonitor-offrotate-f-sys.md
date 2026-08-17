@@ -16,10 +16,6 @@ Cancel listening for touchPad fingers rotate events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function offRotate(fingers: int, receiver?: Callback<Rotate>): void--><!--Device-inputMonitor-function offRotate(fingers: int, receiver?: Callback<Rotate>): void-End-->

@@ -10,10 +10,6 @@ function setPowerConfig(sceneName: string, value: string): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.POWER_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -41,7 +37,7 @@ function setPowerConfig(sceneName: string, value: string): void
 | [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-接口入参无效) | Invalid parameter. Possible causes: 1. The sceneName or value parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes; 3. The length of value parameter exceeds 128 bytes. |
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {

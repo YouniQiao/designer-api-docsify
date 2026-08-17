@@ -16,11 +16,9 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall-(System-API))
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialcall-system-api)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -36,7 +34,7 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 | options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Yes | Call option, which indicates whether the call is a voice call or video call. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -60,11 +58,9 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall-(System-API))
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialcall-system-api)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -85,7 +81,7 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -111,11 +107,9 @@ Initiates a call. This API uses an asynchronous callback to return the result. >
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall-(System-API))
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialcall-system-api)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -130,7 +124,7 @@ Initiates a call. This API uses an asynchronous callback to return the result. >
 | phoneNumber | string | Yes | Phone number. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

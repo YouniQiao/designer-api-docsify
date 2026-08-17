@@ -2,15 +2,13 @@
 
 Defines a reminder for a scheduled timer.
 
-**Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#ReminderRequest)
+**Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#reminderrequest)
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md#ReminderRequestTimer)
+**Substitutes:** [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md#reminderrequesttimer)
 
 <!--Device-reminderAgent-interface ReminderRequestTimer--><!--Device-reminderAgent-interface ReminderRequestTimer-End-->
 
@@ -33,8 +31,6 @@ Number of seconds in the countdown timer. Unit: s.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

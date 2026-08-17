@@ -16,10 +16,6 @@ Unsubscribe to ambient light sensor data, {@code SensorId.AMBIENT_LIGHT}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function offAmbientLightChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<LightResponse>): void--><!--Device-sensor-function offAmbientLightChange(sensorInfoParam?: SensorInfoParam, callback?: Callback<LightResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

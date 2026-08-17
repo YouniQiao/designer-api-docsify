@@ -4,10 +4,6 @@ This interface is used to define the output image size.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface OutputSize--><!--Device-media-interface OutputSize-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
@@ -30,10 +26,6 @@ The expected output frame image height. If the value is less than 0, the height 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OutputSize-height?: int--><!--Device-OutputSize-height?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
@@ -49,10 +41,6 @@ The expected output frame image width. If the value is less than 0, the width wi
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OutputSize-width?:int--><!--Device-OutputSize-width?:int-End-->
 

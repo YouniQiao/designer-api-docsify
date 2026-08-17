@@ -4,11 +4,9 @@ Enumerates the notification slot types.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SlotType](arkts-notification-notificationmanager-slottype-e.md#SlotType)
+**Substitutes:** [SlotType](arkts-notification-notificationmanager-slottype-e.md#slottype)
 
 <!--Device-notification-export enum SlotType--><!--Device-notification-export enum SlotType-End-->
 
@@ -24,11 +22,9 @@ Unknown type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UNKNOWN_TYPE](arkts-notification-notificationmanager-slottype-e.md#UNKNOWN_TYPE)
+**Substitutes:** [UNKNOWN_TYPE](arkts-notification-notificationmanager-slottype-e.md#unknowntype)
 
 <!--Device-SlotType-UNKNOWN_TYPE = 0--><!--Device-SlotType-UNKNOWN_TYPE = 0-End-->
 
@@ -44,11 +40,9 @@ Notification slot for social communication.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#SOCIAL_COMMUNICATION)
+**Substitutes:** [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#socialcommunication)
 
 <!--Device-SlotType-SOCIAL_COMMUNICATION = 1--><!--Device-SlotType-SOCIAL_COMMUNICATION = 1-End-->
 
@@ -64,11 +58,9 @@ Notification slot for service information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SERVICE_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#SERVICE_INFORMATION)
+**Substitutes:** [SERVICE_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#serviceinformation)
 
 <!--Device-SlotType-SERVICE_INFORMATION = 2--><!--Device-SlotType-SERVICE_INFORMATION = 2-End-->
 
@@ -84,11 +76,9 @@ Notification slot for content consultation.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [CONTENT_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#CONTENT_INFORMATION)
+**Substitutes:** [CONTENT_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#contentinformation)
 
 <!--Device-SlotType-CONTENT_INFORMATION = 3--><!--Device-SlotType-CONTENT_INFORMATION = 3-End-->
 
@@ -104,11 +94,9 @@ Notification slot for other purposes.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [OTHER_TYPES](arkts-notification-notificationmanager-slottype-e.md#OTHER_TYPES)
+**Substitutes:** [OTHER_TYPES](arkts-notification-notificationmanager-slottype-e.md#othertypes)
 
 <!--Device-SlotType-OTHER_TYPES = 0xFFFF--><!--Device-SlotType-OTHER_TYPES = 0xFFFF-End-->
 

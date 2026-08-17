@@ -4,9 +4,7 @@ Defines the user touch info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface NativeEmbedTouchInfo--><!--Device-unnamed-export declare interface NativeEmbedTouchInfo-End-->
 
@@ -24,9 +22,7 @@ The native embed id.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NativeEmbedTouchInfo-embedId?: string--><!--Device-NativeEmbedTouchInfo-embedId?: string-End-->
 
@@ -44,9 +40,7 @@ Gesture event consumption result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NativeEmbedTouchInfo-result?: EventResult--><!--Device-NativeEmbedTouchInfo-result?: EventResult-End-->
 
@@ -64,9 +58,7 @@ Touch action information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NativeEmbedTouchInfo-touchEvent?: TouchEvent--><!--Device-NativeEmbedTouchInfo-touchEvent?: TouchEvent-End-->
 

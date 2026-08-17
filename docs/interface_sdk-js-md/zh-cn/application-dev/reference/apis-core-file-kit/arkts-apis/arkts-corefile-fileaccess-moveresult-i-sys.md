@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
 **废弃版本：** 23
 
 <!--Device-fileAccess-interface MoveResult--><!--Device-fileAccess-interface MoveResult-End-->
@@ -25,8 +23,6 @@ destUri: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
 **废弃版本：** 23
 
@@ -52,8 +48,6 @@ errCode: number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
@@ -78,8 +72,6 @@ errMsg: string
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
@@ -103,8 +95,6 @@ sourceUri: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
 **废弃版本：** 23
 

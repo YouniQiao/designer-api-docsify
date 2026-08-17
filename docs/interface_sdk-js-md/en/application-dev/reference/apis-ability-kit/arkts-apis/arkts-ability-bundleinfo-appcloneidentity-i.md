@@ -4,10 +4,6 @@ Describes the identity information of an application clone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AppCloneIdentity--><!--Device-unnamed-export interface AppCloneIdentity-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -24,10 +20,6 @@ Clone index information of the app package. The value is an integer ranging from
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AppCloneIdentity-readonly appIndex: int--><!--Device-AppCloneIdentity-readonly appIndex: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -43,10 +35,6 @@ Bundle name of the application.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AppCloneIdentity-readonly bundleName: string--><!--Device-AppCloneIdentity-readonly bundleName: string-End-->
 

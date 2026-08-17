@@ -4,10 +4,6 @@ Defines the configuration policy for the high CPU usage event. > **NOTE：**> > 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiAppEvent-interface CpuUsageHighPolicy--><!--Device-hiAppEvent-interface CpuUsageHighPolicy-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -30,10 +26,6 @@ High CPU usage threshold of the application background, in percentage. The value
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CpuUsageHighPolicy-backgroundLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-backgroundLoadThreshold?: int-End-->
@@ -51,10 +43,6 @@ High CPU usage threshold of the application foreground, in percentage. The value
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -74,10 +62,6 @@ Number of log collection times per day. Once the system detects that the number 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CpuUsageHighPolicy-perfLogCaptureCount?: int--><!--Device-CpuUsageHighPolicy-perfLogCaptureCount?: int-End-->
@@ -96,10 +80,6 @@ Interval for detecting high CPU usage of application threads, in seconds. The va
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CpuUsageHighPolicy-threadLoadInterval?: int--><!--Device-CpuUsageHighPolicy-threadLoadInterval?: int-End-->
@@ -117,10 +97,6 @@ High CPU usage threshold of the application thread, in percentage. The value ran
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

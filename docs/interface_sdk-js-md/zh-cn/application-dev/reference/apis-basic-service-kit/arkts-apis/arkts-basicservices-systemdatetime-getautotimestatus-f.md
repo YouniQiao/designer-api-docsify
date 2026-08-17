@@ -10,10 +10,6 @@ function getAutoTimeStatus(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-systemDateTime-function getAutoTimeStatus(): boolean--><!--Device-systemDateTime-function getAutoTimeStatus(): boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -30,7 +26,7 @@ function getAutoTimeStatus(): boolean
 | --- | --- |
 | [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-网络或操作系统异常) | Network connection error or OS error. Possible causes: 1.System memory is insufficient; 2.Calls the underlying system interface failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

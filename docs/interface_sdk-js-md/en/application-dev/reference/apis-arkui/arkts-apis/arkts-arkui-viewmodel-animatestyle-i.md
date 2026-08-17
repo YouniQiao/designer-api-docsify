@@ -4,10 +4,6 @@ AnimateStyle
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AnimateStyle--><!--Device-unnamed-export interface AnimateStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Background color applied to the component after the animation is executed. The d
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,10 +38,6 @@ The value format is "x y", in percentage or pixels. The first value indicates th
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimateStyle-backgroundPosition: string--><!--Device-AnimateStyle-backgroundPosition: string-End-->
@@ -67,10 +55,6 @@ bottom offset applied to the component after the animation is executed.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -90,10 +74,6 @@ Height value applied to the component after the animation is executed.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimateStyle-height: number--><!--Device-AnimateStyle-height: number-End-->
@@ -111,10 +91,6 @@ left offset applied to the component after the animation is executed.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -134,10 +110,6 @@ The value of offset must be within (0.0,1.0] and sorted in ascending order if it
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimateStyle-offset?: number--><!--Device-AnimateStyle-offset?: number-End-->
@@ -155,10 +127,6 @@ Opacity applied to the component. The value ranges from 0 to 1. The default valu
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -178,10 +146,6 @@ right offset applied to the component after the animation is executed.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimateStyle-right: number--><!--Device-AnimateStyle-right: number-End-->
@@ -199,10 +163,6 @@ top offset applied to the component after the animation is executed.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -222,10 +182,6 @@ Transformation type applied to an element.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimateStyle-transform: "none" | TransformObject--><!--Device-AnimateStyle-transform: "none" | TransformObject-End-->
@@ -244,10 +200,6 @@ Origin position of the transformed element. The first value indicates the x-axis
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimateStyle-transformOrigin: string--><!--Device-AnimateStyle-transformOrigin: string-End-->
@@ -265,10 +217,6 @@ Width value applied to the component after the animation is executed.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

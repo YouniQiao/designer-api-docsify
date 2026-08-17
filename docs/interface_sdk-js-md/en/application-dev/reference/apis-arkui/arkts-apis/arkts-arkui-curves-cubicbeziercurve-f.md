@@ -16,10 +16,6 @@ Creates a cubic Bezier curve, with x-coordinates automatically normalized betwee
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-curves-function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurve--><!--Device-curves-function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurve-End-->
@@ -41,7 +37,7 @@ Creates a cubic Bezier curve, with x-coordinates automatically normalized betwee
 | --- | --- |
 | ICurve | Interpolation curve. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { curves } from '@kit.ArkUI';

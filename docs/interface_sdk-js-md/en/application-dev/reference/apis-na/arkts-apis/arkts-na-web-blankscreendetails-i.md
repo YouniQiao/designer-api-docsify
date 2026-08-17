@@ -4,9 +4,7 @@ The details of this blank screen detection result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface BlankScreenDetails--><!--Device-unnamed-export declare interface BlankScreenDetails-End-->
 
@@ -24,9 +22,7 @@ The count of detected contentful nodes. This value only exists when developers c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-BlankScreenDetails-detectedContentfulNodesCount?: int--><!--Device-BlankScreenDetails-detectedContentfulNodesCount?: int-End-->
 

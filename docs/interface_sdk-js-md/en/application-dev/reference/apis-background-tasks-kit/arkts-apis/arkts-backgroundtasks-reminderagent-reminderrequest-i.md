@@ -4,11 +4,9 @@ Defines the reminder to publish.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest)
+**Substitutes:** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#reminderrequest)
 
 <!--Device-reminderAgent-interface ReminderRequest--><!--Device-reminderAgent-interface ReminderRequest-End-->
 
@@ -32,8 +30,6 @@ Button displayed in the reminder notification. (The parameter is optional. Up to
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** actionButton
@@ -53,8 +49,6 @@ Reminder content.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,8 +70,6 @@ Content to be displayed after the reminder expires.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** expiredContent
@@ -97,8 +89,6 @@ Information about the ability that is automatically started when the reminder ar
 **Type:** MaxScreenWantAgent
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -120,8 +110,6 @@ Notification ID used by the reminder. If there are reminders with the same notif
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** notificationId
@@ -141,8 +129,6 @@ Type of the reminder.
 **Type:** ReminderType
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -164,8 +150,6 @@ Ringing duration, in seconds. The default value is **1**. Unit: s.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** ringDuration
@@ -185,8 +169,6 @@ Type of the slot used by the reminder.
 **Type:** notification.SlotType
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -208,8 +190,6 @@ Content to be displayed when the reminder is snoozing.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** snoozeContent
@@ -229,8 +209,6 @@ Number of reminder snooze times. The default value is **0**.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -252,8 +230,6 @@ Reminder snooze interval, in seconds. The default value is **0**. Unit: s.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** timeInterval
@@ -274,8 +250,6 @@ Reminder title.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** title
@@ -295,8 +269,6 @@ Information about the ability that is redirected to when the notification is cli
 **Type:** WantAgent
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

@@ -1,12 +1,8 @@
-# CommonEventSubscribeInfo
+# CommonEventSubscribeInfo(The CommonEventSubscribeInfo module provides APIs for providing subscriber information.)
 
 This module provides APIs for providing subscriber information. It allows you to configure parameters such as the subscribed common event type, publisher permission, publisher device ID, user ID, and subscription priority. This module is applicable to scenarios where an app needs to subscribe to system common events or custom common events and requires refined control over event sources. > **NOTE：**> > After users subscribing to custom common events, any application can send potential > malicious common events to subscribers. The **publisherPermission** and > **publisherBundleName** parameters of this module can be used to restrict the publisher > scope of common events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface CommonEventSubscribeInfo--><!--Device-unnamed-export interface CommonEventSubscribeInfo-End-->
 
@@ -23,10 +19,6 @@ Common events to subscribe to.
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ Subscriber priority. A larger value indicates a higher priority, and the subscri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscribeInfo-priority?: int--><!--Device-CommonEventSubscribeInfo-priority?: int-End-->
@@ -68,10 +56,6 @@ Bundle name of the publisher to be subscribed to. This parameter is used to rest
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CommonEventSubscribeInfo-publisherBundleName?: string--><!--Device-CommonEventSubscribeInfo-publisherBundleName?: string-End-->
@@ -84,15 +68,11 @@ Bundle name of the publisher to be subscribed to. This parameter is used to rest
 publisherDeviceId?: string
 ```
 
-Device ID, which is used to restrict the subscriber to receive only public events published by the specified device. Use [@ohos.deviceInfo](arkts-deviceinfo.md#@ohos.deviceInfo) to obtain the UDID as the device ID of the publisher. Not supported currently.
+Device ID, which is used to restrict the subscriber to receive only public events published by the specified device. Use [@ohos.deviceInfo](arkts-deviceinfo.md#ohosdeviceinfo) to obtain the UDID as the device ID of the publisher. Not supported currently.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -112,10 +92,6 @@ Permission of the publisher. The value is an array of permission names defined b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscribeInfo-publisherPermission?: string--><!--Device-CommonEventSubscribeInfo-publisherPermission?: string-End-->
@@ -128,15 +104,11 @@ Permission of the publisher. The value is an array of permission names defined b
 userId?: int
 ```
 
-User ID, which is used to restrict the subscriber to receive only public events related to the specified user ID. If this parameter is not specified, the default value, which is the ID of the current user, will be used. The value must be an existing user ID in the system. Use [getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) to obtain the system user ID and use it as the user ID of the publisher.
+User ID, which is used to restrict the subscriber to receive only public events related to the specified user ID. If this parameter is not specified, the default value, which is the ID of the current user, will be used. The value must be an existing user ID in the system. Use [getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) to obtain the system user ID and use it as the user ID of the publisher.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

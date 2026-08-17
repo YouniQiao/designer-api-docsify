@@ -16,10 +16,6 @@ Obtains the Want corresponding to the ability to start. This API uses an asynchr
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void--><!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void-End-->
@@ -32,7 +28,7 @@ Obtains the Want corresponding to the ability to start. This API uses an asynchr
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
@@ -57,10 +53,6 @@ Obtains the Want corresponding to the ability to start. This API uses a promise 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function getWant(): Promise<Want>--><!--Device-featureAbility-function getWant(): Promise<Want>-End-->
@@ -73,7 +65,7 @@ Obtains the Want corresponding to the ability to start. This API uses a promise 
 | --- | --- |
 | Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Promise used to return the Want. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

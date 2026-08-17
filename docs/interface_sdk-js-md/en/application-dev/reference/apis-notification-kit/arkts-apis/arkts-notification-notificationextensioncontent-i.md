@@ -4,10 +4,6 @@ The **NotificationExtensionContent** module describes the notification extension
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationExtensionContent--><!--Device-unnamed-export interface NotificationExtensionContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -24,10 +20,6 @@ Notification body content. It cannot be an empty string. The size cannot exceed 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationExtensionContent-text: string--><!--Device-NotificationExtensionContent-text: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -43,10 +35,6 @@ Notification title. It cannot be an empty string. The size cannot exceed 1024 by
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationExtensionContent-title: string--><!--Device-NotificationExtensionContent-title: string-End-->
 

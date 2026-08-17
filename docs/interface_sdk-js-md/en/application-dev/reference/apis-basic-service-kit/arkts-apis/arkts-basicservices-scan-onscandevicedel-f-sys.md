@@ -16,10 +16,6 @@ Register event callback for scanner device delete (system API).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-scan-function onScanDeviceDel(callback: Callback<ScannerDevice>): void--><!--Device-scan-function onScanDeviceDel(callback: Callback<ScannerDevice>): void-End-->

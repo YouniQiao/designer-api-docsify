@@ -16,10 +16,6 @@ Router event listening in registered form. &lt;p&gt;This interface requires perm
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 <!--Device-formObserver-function onRouter(observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function onRouter(observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
@@ -52,10 +48,6 @@ function onRouter(hostBundleName: string, observerCallback: Callback<formInfo.Ru
 Router event listening in registered form. &lt;p&gt;This interface requires permission to receive callback.&lt;/p&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 

@@ -4,9 +4,7 @@ Plugin component manager interface.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -22,15 +20,15 @@ Plugin component manager interface.
 | --- | --- |
 | [push](arkts-na-plugincomponentmanager-push-f.md#push) | Plugin component push method. |
 | [request](arkts-na-plugincomponentmanager-request-f.md#request) | Plugin component request method. |
-| [on_string](arkts-na-plugincomponentmanager-onstring-f.md#on_string) | Plugin component event listener. |
+| [on_string](arkts-na-plugincomponentmanager-onstring-f.md#onstring) | Plugin component event listener. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [push](arkts-na-plugincomponentmanager-push-f-sys.md#push-(System-API)) | Plugin component push method used to send the information of the template it provides. |
-| [request](arkts-na-plugincomponentmanager-request-f-sys.md#request-(System-API)) | Plugin component request method used to send a request for the information of the template it wants. |
+| [push](arkts-na-plugincomponentmanager-push-f-sys.md#push-system-api) | Plugin component push method used to send the information of the template it provides. |
+| [request](arkts-na-plugincomponentmanager-request-f-sys.md#request-system-api) | Plugin component request method used to send a request for the information of the template it wants. |
 <!--DelEnd-->
 
 ### Interfaces

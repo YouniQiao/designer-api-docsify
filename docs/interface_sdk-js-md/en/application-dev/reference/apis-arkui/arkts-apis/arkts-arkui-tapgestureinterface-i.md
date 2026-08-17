@@ -6,10 +6,6 @@ TapGesture is used to trigger a tap gesture with one, two, or more taps. > **NOT
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface TapGestureInterface--><!--Device-unnamed-interface TapGestureInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +16,9 @@ TapGesture is used to trigger a tap gesture with one, two, or more taps. > **NOT
 (value?: TapGestureParameters): TapGestureInterface
 ```
 
-Creates a tap gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface). When triggered by keyboard or gamepad input, the gesture event's SourceTool is **Unknown**, and SourceType is **KEY** or **JOYSTICK**.
+Creates a tap gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#gestureinterface). When triggered by keyboard or gamepad input, the gesture event's SourceTool is **Unknown**, and SourceType is **KEY** or **JOYSTICK**.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,10 +47,6 @@ onAction(event: (event: GestureEvent) => void): TapGestureInterface
 Triggered when the tap gesture is recognized.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

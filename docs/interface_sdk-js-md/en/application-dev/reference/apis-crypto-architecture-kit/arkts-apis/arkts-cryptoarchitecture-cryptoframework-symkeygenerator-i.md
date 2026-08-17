@@ -1,12 +1,8 @@
 # SymKeyGenerator
 
-Symmetric key generator interface, defining methods for generating symmetric keys. Before use, you must create a **SymKeyGenerator** instance by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createSymKeyGenerator).
+Symmetric key generator interface, defining methods for generating symmetric keys. Before use, you must create a **SymKeyGenerator** instance by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface SymKeyGenerator--><!--Device-cryptoFramework-interface SymKeyGenerator-End-->
 
@@ -29,10 +25,6 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 Converts specified data into a symmetric key. This API uses an asynchronous callback to return the result. > **NOTE：**> > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified > when the symmetric key generator is created, the binary key data passed in must match the hash length (for > example, a 256-bit key for SHA256). If no hash algorithm is specified when the symmetric key generator is created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -57,7 +49,7 @@ Converts specified data into a symmetric key. This API uses an asynchronous call
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -90,10 +82,6 @@ Converts specified data into a symmetric key. This API uses a promise to return 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SymKeyGenerator-convertKey(key: DataBlob): Promise<SymKey>--><!--Device-SymKeyGenerator-convertKey(key: DataBlob): Promise<SymKey>-End-->
@@ -122,7 +110,7 @@ Converts specified data into a symmetric key. This API uses a promise to return 
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -159,10 +147,6 @@ Converts specified data into a symmetric key. > **NOTE：**> > For symmetric key
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SymKeyGenerator-convertKeySync(key: DataBlob): SymKey--><!--Device-SymKeyGenerator-convertKeySync(key: DataBlob): SymKey-End-->
@@ -189,7 +173,7 @@ Converts specified data into a symmetric key. > **NOTE：**> > For symmetric key
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -214,13 +198,9 @@ function testConvertKeySync() {
 generateSymKey(callback: AsyncCallback<SymKey>): void
 ```
 
-Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the result. <br>OpenSSL RAND_priv_bytes() is currently used to generate random keys. > **NOTE：**> > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified > when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key) > will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random > symmetric key generation is not supported. You can generate symmetric key data using > [convertKey](#convertKey).
+Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the result. <br>OpenSSL RAND_priv_bytes() is currently used to generate random keys. > **NOTE：**> > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified > when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key) > will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random > symmetric key generation is not supported. You can generate symmetric key data using > [convertKey](#convertkey).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -243,7 +223,7 @@ Generates a random key using this symmetric key generator. This API uses an asyn
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -263,10 +243,6 @@ generateSymKey(): Promise<SymKey>
 Generates a random key using this symmetric key generator. This API uses a promise to return the result. <br>OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -289,7 +265,7 @@ Generates a random key using this symmetric key generator. This API uses a promi
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -310,13 +286,9 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
 generateSymKeySync(): SymKey
 ```
 
-Generates a random key using this symmetric key generator. This API returns the result synchronously. <br>OpenSSL RAND_priv_bytes() is currently used to generate random keys. > **NOTE：**> > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified > when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key) > will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random symmetric key generation is not supported. You can generate symmetric key data using [convertKeySync](#convertKeySync). <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generateSymKey](#generateSymKey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a random key using this symmetric key generator. This API returns the result synchronously. <br>OpenSSL RAND_priv_bytes() is currently used to generate random keys. > **NOTE：**> > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified > when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key) > will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random symmetric key generation is not supported. You can generate symmetric key data using [convertKeySync](#convertkeysync). <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generateSymKey](#generatesymkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -337,7 +309,7 @@ Generates a random key using this symmetric key generator. This API returns the 
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -363,10 +335,6 @@ Indicates the algorithm name of the SymKeyGenerator object.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

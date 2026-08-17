@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export enum NetType--><!--Device-update-export enum NetType-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -23,10 +19,6 @@ CELLULAR = 1
 数据网络。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-NetType-CELLULAR = 1--><!--Device-NetType-CELLULAR = 1-End-->
 
@@ -44,10 +36,6 @@ METERED_WIFI = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-NetType-METERED_WIFI = 2--><!--Device-NetType-METERED_WIFI = 2-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -63,10 +51,6 @@ NOT_METERED_WIFI = 4
 非热点WIFI。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-NetType-NOT_METERED_WIFI = 4--><!--Device-NetType-NOT_METERED_WIFI = 4-End-->
 
@@ -84,10 +68,6 @@ WIFI。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-NetType-WIFI = 6--><!--Device-NetType-WIFI = 6-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -103,10 +83,6 @@ CELLULAR_AND_WIFI = 7
 数据网络和WIFI。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-NetType-CELLULAR_AND_WIFI = 7--><!--Device-NetType-CELLULAR_AND_WIFI = 7-End-->
 

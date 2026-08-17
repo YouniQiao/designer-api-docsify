@@ -16,10 +16,6 @@ Creates a Filter instance based on the input PixelMap. You can then add various 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -40,7 +36,7 @@ Creates a Filter instance based on the input PixelMap. You can then add various 
 | --- | --- |
 | Filter | Returns a Filter instance with no effects added, or null if the operation fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";

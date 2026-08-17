@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-image-interface XMPTag--><!--Device-image-interface XMPTag-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -23,10 +19,6 @@ XMP标签名称。
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ XMP标签类型。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-XMPTag-type: XMPTagType--><!--Device-XMPTag-type: XMPTagType-End-->
@@ -68,10 +56,6 @@ XMP标签值。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-XMPTag-value?: string--><!--Device-XMPTag-value?: string-End-->
@@ -89,10 +73,6 @@ XMP命名空间。
 **类型：** [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

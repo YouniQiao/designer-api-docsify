@@ -10,9 +10,7 @@ Disconnects the connection of a specified web native message extension.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.WEB_NATIVE_MESSAGING
 

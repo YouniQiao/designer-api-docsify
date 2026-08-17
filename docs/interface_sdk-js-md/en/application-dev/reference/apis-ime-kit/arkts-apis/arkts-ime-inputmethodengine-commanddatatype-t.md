@@ -8,10 +8,6 @@ Defines the private data type, which varies depending on its function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-type CommandDataType = int | string | boolean--><!--Device-inputMethodEngine-type CommandDataType = int | string | boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

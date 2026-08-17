@@ -4,10 +4,6 @@ Represents the optional parameter used to create an OS account.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface CreateOsAccountOptions--><!--Device-osAccount-interface CreateOsAccountOptions-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -32,10 +28,6 @@ Trustlist of the preinstalled applications, which can be installed on the device
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CreateOsAccountOptions-allowedPreinstalledBundles?: Array<string>--><!--Device-CreateOsAccountOptions-allowedPreinstalledBundles?: Array<string>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -53,10 +45,6 @@ Forbidden list of the preinstalled applications, which cannot be installed on th
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CreateOsAccountOptions-disallowedPreinstalledBundles?: Array<string>--><!--Device-CreateOsAccountOptions-disallowedPreinstalledBundles?: Array<string>-End-->
 
@@ -76,10 +64,6 @@ Short name of the account (used as the name of the personal folder). **The short
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CreateOsAccountOptions-shortName?: string--><!--Device-CreateOsAccountOptions-shortName?: string-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -97,10 +81,6 @@ Token obtained from the authentication management API. The value is left empty b
 **Type:** Uint8Array
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-CreateOsAccountOptions-token?: Uint8Array--><!--Device-CreateOsAccountOptions-token?: Uint8Array-End-->
 

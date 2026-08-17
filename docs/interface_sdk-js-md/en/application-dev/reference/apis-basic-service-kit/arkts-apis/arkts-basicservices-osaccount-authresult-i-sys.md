@@ -4,10 +4,6 @@ Defines the authentication result information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface AuthResult--><!--Device-osAccount-interface AuthResult-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -32,10 +28,6 @@ OS account ID, which is **undefined** by default.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthResult-accountId?: int--><!--Device-AuthResult-accountId?: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -53,10 +45,6 @@ Credential ID, which is left blank by default.
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthResult-credentialId?: Uint8Array--><!--Device-AuthResult-credentialId?: Uint8Array-End-->
 
@@ -76,10 +64,6 @@ Freezing time, in milliseconds. The default value is **-1**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthResult-freezingTime?: int--><!--Device-AuthResult-freezingTime?: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -97,10 +81,6 @@ Next freezing time, in milliseconds. The default value is **undefined**.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthResult-nextPhaseFreezingTime?: int--><!--Device-AuthResult-nextPhaseFreezingTime?: int-End-->
 
@@ -120,10 +100,6 @@ Authentication validity period, in milliseconds. The default value is **undefine
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthResult-pinValidityPeriod?: long--><!--Device-AuthResult-pinValidityPeriod?: long-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -142,10 +118,6 @@ Number of remaining authentication times, which is **-1** by default.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthResult-remainTimes?: int--><!--Device-AuthResult-remainTimes?: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -163,10 +135,6 @@ Authentication token, which is left blank by default.
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthResult-token?: Uint8Array--><!--Device-AuthResult-token?: Uint8Array-End-->
 

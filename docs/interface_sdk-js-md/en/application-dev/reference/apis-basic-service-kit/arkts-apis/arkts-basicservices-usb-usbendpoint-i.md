@@ -1,14 +1,12 @@
-# USBEndpoint
+# USBEndpoint(USB Manager)
 
-Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usb-usbinterface-i.md#USBInterface).
+Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usb-usbinterface-i.md#usbinterface).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md#USBEndpoint)
+**Substitutes:** [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md#usbendpoint)
 
 <!--Device-usb-interface USBEndpoint--><!--Device-usb-interface USBEndpoint-End-->
 
@@ -32,8 +30,6 @@ Endpoint address.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [address](arkts-basicservices-usbmanager-usbendpoint-i.md#address)
@@ -53,8 +49,6 @@ Endpoint attributes.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,8 +70,6 @@ Endpoint direction.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [direction](arkts-basicservices-usbmanager-usbendpoint-i.md#direction)
@@ -98,11 +90,9 @@ Unique ID of the interface to which the endpoint belongs.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [interfaceId](arkts-basicservices-usbmanager-usbendpoint-i.md#interfaceId)
+**Substitutes:** [interfaceId](arkts-basicservices-usbmanager-usbendpoint-i.md#interfaceid)
 
 <!--Device-USBEndpoint-interfaceId: number--><!--Device-USBEndpoint-interfaceId: number-End-->
 
@@ -119,8 +109,6 @@ Endpoint interval.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -142,11 +130,9 @@ Maximum size of data packets on the endpoint.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [maxPacketSize](arkts-basicservices-usbmanager-usbendpoint-i.md#maxPacketSize)
+**Substitutes:** [maxPacketSize](arkts-basicservices-usbmanager-usbendpoint-i.md#maxpacketsize)
 
 <!--Device-USBEndpoint-maxPacketSize: number--><!--Device-USBEndpoint-maxPacketSize: number-End-->
 
@@ -163,8 +149,6 @@ Endpoint number.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -185,8 +169,6 @@ Endpoint type.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

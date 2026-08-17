@@ -4,10 +4,6 @@ The module defines the environment variables for the application runtime, includ
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -30,10 +26,6 @@ Dark/Light color mode of the application. The light color mode is used by defaul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
@@ -46,15 +38,11 @@ Dark/Light color mode of the application. The light color mode is used by defaul
 direction?: ConfigurationConstant.Direction
 ```
 
-Screen orientation of the application. The options are as follows: - **DIRECTION_NOT_SET**: The screen orientation is not set. - **DIRECTION_HORIZONTAL**: horizontal direction. - **DIRECTION_VERTICAL**: vertical direction. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md#ApplicationContext) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage).
+Screen orientation of the application. The options are as follows: - **DIRECTION_NOT_SET**: The screen orientation is not set. - **DIRECTION_HORIZONTAL**: horizontal direction. - **DIRECTION_VERTICAL**: vertical direction. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage).
 
 **Type:** ConfigurationConstant.Direction
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,15 +56,11 @@ Screen orientation of the application. The options are as follows: - **DIRECTION
 displayId?: long
 ```
 
-ID of the display where the application is located. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md#ApplicationContext) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage).
+ID of the display where the application is located. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage).
 
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,10 +80,6 @@ Unique ID of the font.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Configuration-fontId?: string--><!--Device-Configuration-fontId?: string-End-->
@@ -117,10 +97,6 @@ Font size scale ratio. The value is a non-negative number. The default value is 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -140,10 +116,6 @@ Font weight scale ratio. The value is a non-negative number. The default value i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Configuration-fontWeightScale?: double--><!--Device-Configuration-fontWeightScale?: double-End-->
@@ -161,10 +133,6 @@ Whether a pointer device, such as a keyboard, mouse, or touchpad, is connected. 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -184,10 +152,6 @@ Current language of the application, for example, **zh** (Chinese) or **en** (En
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Configuration-language?: string--><!--Device-Configuration-language?: string-End-->
@@ -205,10 +169,6 @@ Locale. The application automatically adjusts its behavior based on the current 
 **Type:** Intl.Locale
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -228,10 +188,6 @@ Mobile country code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Configuration-mcc?: string--><!--Device-Configuration-mcc?: string-End-->
@@ -250,10 +206,6 @@ Mobile network code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Configuration-mnc?: string--><!--Device-Configuration-mnc?: string-End-->
@@ -266,15 +218,11 @@ Mobile network code.
 screenDensity?: ConfigurationConstant.ScreenDensity
 ```
 
-Screen density. The options are as follows: - **SCREEN_DENSITY_NOT_SET**: The pixel density is not set. - **SCREEN_DENSITY_SDPI**: 120. - **SCREEN_DENSITY_MDPI**: 160. - **SCREEN_DENSITY_LDPI**: 240. - **SCREEN_DENSITY_XLDPI**: 320. - **SCREEN_DENSITY_XXLDPI**: 480. - **SCREEN_DENSITY_XXXLDPI**: 640. The font size is positively correlated with the screen pixel density. By monitoring changes in the screen pixel density, you can detect adjustments in the font size. Typically, for the same physical size, the higher the screen pixel density, the larger the font display effect. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md#ApplicationContext) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage).
+Screen density. The options are as follows: - **SCREEN_DENSITY_NOT_SET**: The pixel density is not set. - **SCREEN_DENSITY_SDPI**: 120. - **SCREEN_DENSITY_MDPI**: 160. - **SCREEN_DENSITY_LDPI**: 240. - **SCREEN_DENSITY_XLDPI**: 320. - **SCREEN_DENSITY_XXLDPI**: 480. - **SCREEN_DENSITY_XXXLDPI**: 640. The font size is positively correlated with the screen pixel density. By monitoring changes in the screen pixel density, you can detect adjustments in the font size. Typically, for the same physical size, the higher the screen pixel density, the larger the font display effect. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage).
 
 **Type:** ConfigurationConstant.ScreenDensity
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

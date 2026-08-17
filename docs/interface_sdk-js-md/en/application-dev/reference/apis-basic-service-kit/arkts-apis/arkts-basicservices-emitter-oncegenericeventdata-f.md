@@ -16,10 +16,6 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-function onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-emitter-function onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -31,7 +27,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

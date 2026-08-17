@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-backgroundTaskManager-interface EfficiencyResourcesInfo--><!--Device-backgroundTaskManager-interface EfficiencyResourcesInfo-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
@@ -25,10 +21,6 @@ cpuLevel?: EfficiencyResourcesCpuLevel
 **类型：** [EfficiencyResourcesCpuLevel](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcescpulevel-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,10 +42,6 @@ isForProcess: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EfficiencyResourcesInfo-isForProcess: boolean--><!--Device-EfficiencyResourcesInfo-isForProcess: boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
@@ -71,10 +59,6 @@ isPersistent: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EfficiencyResourcesInfo-isPersistent: boolean--><!--Device-EfficiencyResourcesInfo-isPersistent: boolean-End-->
 
@@ -94,10 +78,6 @@ pid: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EfficiencyResourcesInfo-pid: int--><!--Device-EfficiencyResourcesInfo-pid: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
@@ -115,10 +95,6 @@ reason: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EfficiencyResourcesInfo-reason: string--><!--Device-EfficiencyResourcesInfo-reason: string-End-->
 
@@ -138,10 +114,6 @@ resourceTypes: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EfficiencyResourcesInfo-resourceTypes: int--><!--Device-EfficiencyResourcesInfo-resourceTypes: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
@@ -160,10 +132,6 @@ timeout: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EfficiencyResourcesInfo-timeout: int--><!--Device-EfficiencyResourcesInfo-timeout: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
@@ -181,10 +149,6 @@ uid: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EfficiencyResourcesInfo-uid: int--><!--Device-EfficiencyResourcesInfo-uid: int-End-->
 

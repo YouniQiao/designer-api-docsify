@@ -16,10 +16,6 @@ Open the network manager settings page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-settings-function openNetworkManagerSettings(context: Context): Promise<boolean>--><!--Device-settings-function openNetworkManagerSettings(context: Context): Promise<boolean>-End-->
@@ -43,7 +39,7 @@ Open the network manager settings page.
 | [14800000](../../apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) | Parameter error. |
 | [14800010](../../apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) | Original service error. @atomicservice |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

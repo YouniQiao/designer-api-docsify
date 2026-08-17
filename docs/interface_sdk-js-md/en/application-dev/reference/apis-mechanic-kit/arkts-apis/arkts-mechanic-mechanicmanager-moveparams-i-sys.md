@@ -4,10 +4,6 @@ Parameters for moving the target.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export interface MoveParams--><!--Device-mechanicManager-export interface MoveParams-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -32,10 +28,6 @@ Turning angle, unit degree.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-MoveParams-angle: double--><!--Device-MoveParams-angle: double-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -53,10 +45,6 @@ Moving distance, unit cm. The value should be an integer.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-MoveParams-distance: int--><!--Device-MoveParams-distance: int-End-->
 
@@ -76,10 +64,6 @@ Movement mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-MoveParams-mode?: MarchingMode--><!--Device-MoveParams-mode?: MarchingMode-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -97,10 +81,6 @@ Speed gear.
 **Type:** [SpeedGear](arkts-mechanic-mechanicmanager-speedgear-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-MoveParams-speedGear?: SpeedGear--><!--Device-MoveParams-speedGear?: SpeedGear-End-->
 

@@ -16,8 +16,6 @@ Unsubscribe Wi-Fi scan status change events. &lt;p&gt;All callback functions wil
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** wifiScanStateChange
@@ -35,7 +33,7 @@ Unsubscribe Wi-Fi scan status change events. &lt;p&gt;All callback functions wil
 | type | 'wifiScanStateChange' | Yes | event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: scan fail, 1: scan success |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

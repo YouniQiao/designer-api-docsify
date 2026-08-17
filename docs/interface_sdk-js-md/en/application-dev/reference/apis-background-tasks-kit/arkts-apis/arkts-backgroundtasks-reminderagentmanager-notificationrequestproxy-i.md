@@ -4,10 +4,6 @@ Notification request proxy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-interface NotificationRequestProxy--><!--Device-reminderAgentManager-interface NotificationRequestProxy-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -24,15 +20,11 @@ import { reminderAgentManager } from 'reminderAgentManager';
 appMessageId?: string
 ```
 
-Unique ID carried in a notification sent by an application, which is used for notification deduplication. This parameter is left empty by default. For details, see [NotificationRequest.appMessageId](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest).
+Unique ID carried in a notification sent by an application, which is used for notification deduplication. This parameter is left empty by default. For details, see [NotificationRequest.appMessageId](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest).
 
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,15 +38,11 @@ Unique ID carried in a notification sent by an application, which is used for no
 isAlertOnce?: boolean
 ```
 
-Whether to send a notification alert only once when a notification is published or updated. The default value is **false**. For details, see [NotificationRequest.isAlertOnce](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest). - **true**: An alert is sent only when the notification is published for the first time. For subsequent update, the alert mode is changed to [LEVEL_LOW](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel). - **false**: The alert is sent in the configured alert mode.
+Whether to send a notification alert only once when a notification is published or updated. The default value is **false**. For details, see [NotificationRequest.isAlertOnce](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest). - **true**: An alert is sent only when the notification is published for the first time. For subsequent update, the alert mode is changed to [LEVEL_LOW](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-slotlevel-e.md#slotlevel). - **false**: The alert is sent in the configured alert mode.
 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

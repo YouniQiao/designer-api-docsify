@@ -4,10 +4,6 @@ Enumerates the network types that trigger deferred task callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-workScheduler-export enum NetworkType--><!--Device-workScheduler-export enum NetworkType-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -21,10 +17,6 @@ NETWORK_TYPE_ANY = 0
 Any network type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Mobile network.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NetworkType-NETWORK_TYPE_MOBILE = 1--><!--Device-NetworkType-NETWORK_TYPE_MOBILE = 1-End-->
@@ -61,10 +49,6 @@ NETWORK_TYPE_WIFI = 2
 Wi-Fi network.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ Bluetooth network.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NetworkType-NETWORK_TYPE_BLUETOOTH = 3--><!--Device-NetworkType-NETWORK_TYPE_BLUETOOTH = 3-End-->
@@ -102,10 +82,6 @@ Wi-Fi P2P network.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NetworkType-NETWORK_TYPE_WIFI_P2P = 4--><!--Device-NetworkType-NETWORK_TYPE_WIFI_P2P = 4-End-->
@@ -121,10 +97,6 @@ NETWORK_TYPE_ETHERNET = 5
 Ethernet.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

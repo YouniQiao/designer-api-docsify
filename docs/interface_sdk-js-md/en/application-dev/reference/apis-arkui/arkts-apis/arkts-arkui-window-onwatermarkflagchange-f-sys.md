@@ -16,10 +16,6 @@ Subscribes to the watermark status change event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-function onWaterMarkFlagChange(callback: Callback<boolean>): void--><!--Device-window-function onWaterMarkFlagChange(callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

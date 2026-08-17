@@ -16,11 +16,9 @@ Checks whether a specified type of card emulation is supported. &lt;p&gt;This me
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability)
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +38,7 @@ Checks whether a specified type of card emulation is supported. &lt;p&gt;This me
 | --- | --- |
 | boolean | Returns true if the specified type of card emulation is supported; returns false otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Applicable to devices other than lite wearables

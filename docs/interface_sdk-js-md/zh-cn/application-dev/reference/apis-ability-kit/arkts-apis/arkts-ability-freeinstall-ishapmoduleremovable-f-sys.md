@@ -10,10 +10,6 @@ function isHapModuleRemovable(bundleName: string, moduleName: string, callback: 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-freeInstall-function isHapModuleRemovable(bundleName: string, moduleName: string, callback: AsyncCallback<boolean>): void--><!--Device-freeInstall-function isHapModuleRemovable(bundleName: string, moduleName: string, callback: AsyncCallback<boolean>): void-End-->
@@ -28,7 +24,7 @@ function isHapModuleRemovable(bundleName: string, moduleName: string, callback: 
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | moduleName | string | 是 | 应用程序模块名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)。当获取成功时，err为undefined，data为bool值 ，true表示可以移除；false表示不可移除；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)。当获取成功时，err为undefined，data为bool值 ，true表示可以移除；false表示不可移除；否则为错误对象。 |
 
 **错误码：**
 
@@ -41,7 +37,7 @@ function isHapModuleRemovable(bundleName: string, moduleName: string, callback: 
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { freeInstall } from '@kit.AbilityKit';
@@ -71,10 +67,6 @@ function isHapModuleRemovable(bundleName: string, moduleName: string): Promise<b
 查询指定模块是否可以被移除。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -108,7 +100,7 @@ function isHapModuleRemovable(bundleName: string, moduleName: string): Promise<b
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module name is not found. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

@@ -16,10 +16,6 @@ Subscribes to the notification extension. You can subscribe to the notification 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
 
 <!--Device-notificationExtensionSubscription-function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>--><!--Device-notificationExtensionSubscription-function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>-End-->
@@ -53,7 +49,7 @@ getSubscribeInfo obtains all
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600023](../errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) | The application does not implement the NotificationSubscriberExtensionAbility. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let infos: notificationExtensionSubscription.NotificationExtensionSubscriptionInfo[] = [

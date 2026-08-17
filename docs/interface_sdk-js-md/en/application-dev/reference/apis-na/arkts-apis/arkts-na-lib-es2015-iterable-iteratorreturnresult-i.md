@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface IteratorReturnResult--><!--Device-unnamed-interface IteratorReturnResult-End-->
 
 ## done
@@ -18,10 +14,6 @@ done: true
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-IteratorReturnResult-done: true--><!--Device-IteratorReturnResult-done: true-End-->
 
 ## value
@@ -33,10 +25,6 @@ value: TReturn
 **Type:** TReturn
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-IteratorReturnResult-value: TReturn--><!--Device-IteratorReturnResult-value: TReturn-End-->
 

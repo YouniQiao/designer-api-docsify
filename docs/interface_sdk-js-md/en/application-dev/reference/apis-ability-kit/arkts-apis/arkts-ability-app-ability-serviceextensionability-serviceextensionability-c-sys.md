@@ -4,10 +4,6 @@ The ServiceExtensionAbility module provides extended capabilities for background
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ServiceExtensionAbility--><!--Device-unnamed-declare class ServiceExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -30,10 +26,6 @@ Called when the configuration of this ServiceExtensionAbility is updated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void--><!--Device-ServiceExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void-End-->
@@ -48,7 +40,7 @@ Called when the configuration of this ServiceExtensionAbility is updated.
 | --- | --- | --- | --- |
 | newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | New configuration. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ServiceExtensionAbility, Configuration } from '@kit.AbilityKit';
@@ -70,10 +62,6 @@ Called following **onCreate()** when a ServiceExtensionAbility is started by cal
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>--><!--Device-ServiceExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>-End-->
@@ -94,7 +82,7 @@ Called following **onCreate()** when a ServiceExtensionAbility is started by cal
 | --- | --- |
 | rpc.RemoteObject | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
@@ -151,10 +139,6 @@ Called to initialize the service logic when a ServiceExtensionAbility is being c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onCreate(want: Want): void--><!--Device-ServiceExtensionAbility-onCreate(want: Want): void-End-->
@@ -169,7 +153,7 @@ Called to initialize the service logic when a ServiceExtensionAbility is being c
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
@@ -191,10 +175,6 @@ Called to clear resources when this ServiceExtensionAbility is being destroyed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onDestroy(): void--><!--Device-ServiceExtensionAbility-onDestroy(): void-End-->
@@ -203,7 +183,7 @@ Called to clear resources when this ServiceExtensionAbility is being destroyed.
 
 **System API:** This is a system API.
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ServiceExtensionAbility } from '@kit.AbilityKit';
@@ -225,10 +205,6 @@ Called when a client is disconnected from this ServiceExtensionAbility. This API
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onDisconnect(want: Want): void | Promise<void>--><!--Device-ServiceExtensionAbility-onDisconnect(want: Want): void | Promise<void>-End-->
@@ -243,7 +219,7 @@ Called when a client is disconnected from this ServiceExtensionAbility. This API
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
-## Examples
+**Examples**
 
 A synchronous callback example is as follows:
 
@@ -280,10 +256,6 @@ Called when a client is disconnected from this ServiceExtensionAbility. This API
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onDisconnect(want: Want): Promise<void> | undefined--><!--Device-ServiceExtensionAbility-onDisconnect(want: Want): Promise<void> | undefined-End-->
@@ -314,10 +286,6 @@ Dumps the client information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onDump(params: Array<string>): Array<string>--><!--Device-ServiceExtensionAbility-onDump(params: Array<string>): Array<string>-End-->
@@ -338,7 +306,7 @@ Dumps the client information.
 | --- | --- |
 | Array&lt;string&gt; | Array of client information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ServiceExtensionAbility } from '@kit.AbilityKit';
@@ -361,10 +329,6 @@ Called when a new client attempts to connect to this ServiceExtensionAbility aft
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onReconnect(want: Want): void--><!--Device-ServiceExtensionAbility-onReconnect(want: Want): void-End-->
@@ -379,7 +343,7 @@ Called when a new client attempts to connect to this ServiceExtensionAbility aft
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
@@ -401,10 +365,6 @@ Called following **onCreate()** when a ServiceExtensionAbility is started by cal
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onRequest(want: Want, startId: int): void--><!--Device-ServiceExtensionAbility-onRequest(want: Want, startId: int): void-End-->
@@ -420,7 +380,7 @@ Called following **onCreate()** when a ServiceExtensionAbility is started by cal
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 | startId | int | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
@@ -443,10 +403,6 @@ Context of the ServiceExtensionAbility. This context inherits from **ExtensionCo
 **Type:** [ServiceExtensionContext](arkts-ability-serviceextensioncontext-c-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

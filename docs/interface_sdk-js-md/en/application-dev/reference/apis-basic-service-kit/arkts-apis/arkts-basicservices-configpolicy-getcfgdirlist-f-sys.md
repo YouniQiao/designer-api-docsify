@@ -16,10 +16,6 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-configPolicy-function getCfgDirList(callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgDirList(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
@@ -48,10 +44,6 @@ function getCfgDirList(): Promise<Array<string>>
 Obtains a list of configuration level directories, in ascending order of priority. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-configPolicy-function getCfgDirList(): Promise<Array<string>>--><!--Device-configPolicy-function getCfgDirList(): Promise<Array<string>>-End-->
 

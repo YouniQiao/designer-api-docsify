@@ -4,9 +4,7 @@ Declare interface of LinkIntentParamMapping.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare interface LinkIntentParamMapping--><!--Device-unnamed-export declare interface LinkIntentParamMapping-End-->
 
@@ -20,13 +18,11 @@ paramCategory?: LinkParamCategory
 
 The parameter category.
 
-**Type:** [LinkParamCategory](arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md)
+**Type:** [LinkParamCategory](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,9 +42,7 @@ The parameter mapping name.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,9 +62,7 @@ The parameter name.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

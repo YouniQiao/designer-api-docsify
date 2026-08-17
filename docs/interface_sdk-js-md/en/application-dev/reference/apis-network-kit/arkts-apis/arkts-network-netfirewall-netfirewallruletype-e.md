@@ -4,10 +4,6 @@ Indicates the firewall rule type.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-netFirewall-enum NetFirewallRuleType--><!--Device-netFirewall-enum NetFirewallRuleType-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -21,10 +17,6 @@ RULE_IP = 1
 IP type rules.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-NetFirewallRuleType-RULE_IP = 1--><!--Device-NetFirewallRuleType-RULE_IP = 1-End-->
 
@@ -40,10 +32,6 @@ Domain type rules.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-NetFirewallRuleType-RULE_DOMAIN = 2--><!--Device-NetFirewallRuleType-RULE_DOMAIN = 2-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -57,10 +45,6 @@ RULE_DNS = 3
 DNS type rules.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-NetFirewallRuleType-RULE_DNS = 3--><!--Device-NetFirewallRuleType-RULE_DNS = 3-End-->
 

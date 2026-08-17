@@ -1,14 +1,10 @@
 # ForegroundBlurStyleOptions
 
-Inherits from [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#BlurStyleOptions) to define the foreground blur options.
+Inherits from [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#blurstyleoptions) to define the foreground blur options.
 
-**Inheritance/Implementation:** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#BlurStyleOptions)
+**Inheritance/Implementation:** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#blurstyleoptions)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

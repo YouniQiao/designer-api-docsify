@@ -16,10 +16,6 @@ Remove a beacon fence.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 20 - 24: ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -49,7 +45,7 @@ Remove a beacon fence.
 | [3501602](../errorcode-geoLocationManager.md#3501602-failed-to-delete-a-beacon-fence-because-of-incorrect-information) | Failed to delete the fence due to incorrect beacon fence information. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 20 - 24 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

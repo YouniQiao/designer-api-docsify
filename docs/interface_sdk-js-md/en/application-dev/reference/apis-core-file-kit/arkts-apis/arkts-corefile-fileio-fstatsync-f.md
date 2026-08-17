@@ -10,11 +10,9 @@ Obtains file status based on the file descriptor. This API returns the result sy
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [statSync](arkts-corefile-file-fs-statsync-f.md#statSync)
+**Substitutes:** [statSync](arkts-corefile-file-fs-statsync-f.md#statsync)
 
 <!--Device-unnamed-declare function fstatSync(fd: number): Stat--><!--Device-unnamed-declare function fstatSync(fd: number): Stat-End-->
 

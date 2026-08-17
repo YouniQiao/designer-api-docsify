@@ -4,10 +4,6 @@ Describes the scanned Wi-Fi information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface WifiScanInfo--><!--Device-wifiManager-interface WifiScanInfo-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -30,10 +26,6 @@ Frequency band, 1: 2.4G, 2: 5G
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiScanInfo-band: int--><!--Device-WifiScanInfo-band: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -49,10 +41,6 @@ Wi-Fi bssid(MAC): the length is 6
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -72,10 +60,6 @@ Wi-Fi bssid type
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WifiScanInfo-bssidType: DeviceAddressType--><!--Device-WifiScanInfo-bssidType: DeviceAddressType-End-->
@@ -94,10 +78,6 @@ Hotspot capability
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiScanInfo-capabilities: string--><!--Device-WifiScanInfo-capabilities: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -113,10 +93,6 @@ Center frequency 0.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiScanInfo-centerFrequency0: int--><!--Device-WifiScanInfo-centerFrequency0: int-End-->
 
@@ -134,10 +110,6 @@ Center frequency 1.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiScanInfo-centerFrequency1: int--><!--Device-WifiScanInfo-centerFrequency1: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -154,10 +126,6 @@ Channel width
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiScanInfo-channelWidth: int--><!--Device-WifiScanInfo-channelWidth: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -173,10 +141,6 @@ Frequency
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -196,10 +160,6 @@ Information elements.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiScanInfo-infoElems: Array<WifiInfoElem>--><!--Device-WifiScanInfo-infoElems: Array<WifiInfoElem>-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -216,10 +176,6 @@ Whether the Wi-Fi hotspot is HiLink network.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiScanInfo-isHiLinkNetwork: boolean--><!--Device-WifiScanInfo-isHiLinkNetwork: boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -235,10 +191,6 @@ Received signal strength indicator (RSSI)
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -258,10 +210,6 @@ Security type: reference definition of WifiSecurityType
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WifiScanInfo-securityType: WifiSecurityType--><!--Device-WifiScanInfo-securityType: WifiSecurityType-End-->
@@ -279,10 +227,6 @@ Wi-Fi SSID: the maximum length is 32
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -302,10 +246,6 @@ Supported wifi category
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiScanInfo-supportedWifiCategory: WifiCategory--><!--Device-WifiScanInfo-supportedWifiCategory: WifiCategory-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -321,10 +261,6 @@ Time stamp
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiScanInfo-timestamp: long--><!--Device-WifiScanInfo-timestamp: long-End-->
 

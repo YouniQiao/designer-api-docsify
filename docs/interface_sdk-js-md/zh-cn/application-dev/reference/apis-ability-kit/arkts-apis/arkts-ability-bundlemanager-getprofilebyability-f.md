@@ -6,13 +6,9 @@
 function getProfileByAbility(moduleName: string, abilityName: string, metadataName: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用callback异步回调。 > 说明： > > 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager)的相 > 关接口，来获取引用的资源。
+根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用callback异步回调。 > 说明： > > 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#ohosresourcemanager)的相 > 关接口，来获取引用的资源。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -27,7 +23,7 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 | moduleName | string | 是 | 表示Module名称。 |
 | abilityName | string | 是 | 表示UIAbility组件的名称。 |
 | metadataName | string | 是 | 表示UIAbility组件的 [元信息名称](../../../quick-start/module-configuration-file.md#metadata标签)，即module.json5配置文件中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，当获取成功时，err为 undefined，data为获取到的Array&lt;string&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当获取成功时，err为 undefined，data为获取到的Array&lt;string&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -39,7 +35,7 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not existed. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not existed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -71,13 +67,9 @@ try {
 function getProfileByAbility(moduleName: string, abilityName: string, metadataName?: string): Promise<Array<string>>
 ```
 
-根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用Promise异步回调。 > 说明： > > 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager)的相 > 关接口，来获取引用的资源。
+根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用Promise异步回调。 > 说明： > > 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#ohosresourcemanager)的相 > 关接口，来获取引用的资源。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -109,7 +101,7 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not existed. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not existed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

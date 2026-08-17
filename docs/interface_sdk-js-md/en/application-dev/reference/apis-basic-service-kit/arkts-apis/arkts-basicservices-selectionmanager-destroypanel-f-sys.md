@@ -12,13 +12,9 @@ import { selectionManager } from 'selectionManager';
 function destroyPanel(panel: Panel): Promise<void>
 ```
 
-Destroys the word selection panel. This API is used together with [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)) to destroy the panel object created by **createPanel()**. This API uses a promise to return the result.
+Destroys the word selection panel. This API is used together with [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api) to destroy the panel object created by **createPanel()**. This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +42,7 @@ Destroys the word selection panel. This API is used together with [createPanel](
 | --- | --- |
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 

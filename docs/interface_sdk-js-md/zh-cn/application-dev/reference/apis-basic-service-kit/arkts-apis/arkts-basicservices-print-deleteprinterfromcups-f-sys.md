@@ -10,10 +10,6 @@ function deletePrinterFromCups(printerName: string): Promise<void>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -43,7 +39,7 @@ function deletePrinterFromCups(printerName: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

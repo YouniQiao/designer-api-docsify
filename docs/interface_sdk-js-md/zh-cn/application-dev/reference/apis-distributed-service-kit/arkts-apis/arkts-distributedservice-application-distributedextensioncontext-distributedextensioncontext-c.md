@@ -6,10 +6,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class DistributedExtensionContext--><!--Device-unnamed-declare class DistributedExtensionContext-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
@@ -23,10 +19,6 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 连接到远程服务扩展能力。 此方法连接到远程设备上的服务扩展能力。 必须实现ConnectOptions接口才能获取目标的代理 连接时的服务扩展。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,10 +66,6 @@ disconnectServiceExtensionAbility(connection: long): Promise<void>
 断开与远程服务扩展功能的连接。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

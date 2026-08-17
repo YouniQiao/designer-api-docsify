@@ -4,10 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-interface DomainAccountAuthOptions--><!--Device-osAccount-interface DomainAccountAuthOptions-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -25,10 +21,6 @@ serverParams?: Record<string, RecordData>
 **类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-DomainAccountAuthOptions-serverParams?: Record<string, RecordData>--><!--Device-DomainAccountAuthOptions-serverParams?: Record<string, RecordData>-End-->
 

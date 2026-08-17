@@ -1,14 +1,10 @@
 # LinkIntentDecoratorInfo
 
-LinkIntentDecoratorInfo inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo) and describes the parameters supported by the @InsightIntentLink decorator, such as the URI information required for application redirection.
+LinkIntentDecoratorInfo inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo) and describes the parameters supported by the @InsightIntentLink decorator, such as the URI information required for application redirection.
 
-**Inheritance/Implementation:** LinkIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo)
+**Inheritance/Implementation:** LinkIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface LinkIntentDecoratorInfo--><!--Device-unnamed-declare interface LinkIntentDecoratorInfo-End-->
 
@@ -35,13 +31,9 @@ paramMappings?: LinkIntentParamMapping[]
 
 Mapping between intent parameters and URI information.
 
-**Type:** [LinkIntentParamMapping](../../apis-na/arkts-apis/arkts-na-app-ability-insightintentdecorator-linkintentparammapping-i.md)[]
+**Type:** [LinkIntentParamMapping](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md)[]
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,10 +54,6 @@ URI information associated with the intent.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

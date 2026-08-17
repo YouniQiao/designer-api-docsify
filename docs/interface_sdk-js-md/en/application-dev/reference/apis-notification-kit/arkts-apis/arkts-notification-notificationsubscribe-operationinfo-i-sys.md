@@ -4,10 +4,6 @@ Defines cross-device collaborative operation information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationSubscribe-export interface OperationInfo--><!--Device-notificationSubscribe-export interface OperationInfo-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -26,15 +22,11 @@ import { notificationSubscribe } from 'notificationSubscribe';
 actionName?: string
 ```
 
-Operation button displayed in the notification. The value must be the same as that of **title** in [NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton).
+Operation button displayed in the notification. The value must be the same as that of **title** in [NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#notificationactionbutton).
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OperationInfo-actionName?: string--><!--Device-OperationInfo-actionName?: string-End-->
 
@@ -54,10 +46,6 @@ Index of the non-live view button or live view auxiliary area that the user taps
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OperationInfo-buttonIndex?: int--><!--Device-OperationInfo-buttonIndex?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -76,10 +64,6 @@ Operation type. - **0**: The user taps the non-live view. - **1**: The user taps
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OperationInfo-operationType?: int--><!--Device-OperationInfo-operationType?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -92,15 +76,11 @@ Operation type. - **0**: The user taps the non-live view. - **1**: The user taps
 userInput?: string
 ```
 
-User input, used to apply quick reply across devices. The value must be the same as that of **inputKey** in [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md#NotificationUserInput).
+User input, used to apply quick reply across devices. The value must be the same as that of **inputKey** in [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md#notificationuserinput).
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OperationInfo-userInput?: string--><!--Device-OperationInfo-userInput?: string-End-->
 

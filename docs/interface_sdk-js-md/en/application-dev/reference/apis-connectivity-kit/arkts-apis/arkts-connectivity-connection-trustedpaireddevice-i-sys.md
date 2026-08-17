@@ -4,10 +4,6 @@ Describes device of cloud pair.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-interface TrustedPairedDevice--><!--Device-connection-interface TrustedPairedDevice-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -32,10 +28,6 @@ Indicates the bluetoothClass of the peripheral.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrustedPairedDevice-bluetoothClass: int--><!--Device-TrustedPairedDevice-bluetoothClass: int-End-->
@@ -55,10 +47,6 @@ The local name of the device
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Indicates the deviceNameTime of the peripheral.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrustedPairedDevice-deviceNameTime: long--><!--Device-TrustedPairedDevice-deviceNameTime: long-End-->
@@ -103,10 +87,6 @@ Indicates the device type of the peripheral.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Indicates the HiLink version of the peripheral.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrustedPairedDevice-hiLinkVersion: string--><!--Device-TrustedPairedDevice-hiLinkVersion: string-End-->
@@ -151,10 +127,6 @@ Indicates the macAddress of the peripheral.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +148,6 @@ Indicates the manufactory of the peripheral.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrustedPairedDevice-manufactory: string--><!--Device-TrustedPairedDevice-manufactory: string-End-->
@@ -199,10 +167,6 @@ Indicates the modelId of the peripheral.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,10 +188,6 @@ Indicates the pairState of the peripheral.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrustedPairedDevice-pairState: int--><!--Device-TrustedPairedDevice-pairState: int-End-->
@@ -247,10 +207,6 @@ Indicates the productId of the peripheral.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,10 +228,6 @@ Indicates the securityAdvInfo of the peripheral.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrustedPairedDevice-secureAdvertisingInfo: ArrayBuffer--><!--Device-TrustedPairedDevice-secureAdvertisingInfo: ArrayBuffer-End-->
@@ -295,10 +247,6 @@ Indicates the service id of the peripheral.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -320,10 +268,6 @@ Indicates the service type of the peripheral.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrustedPairedDevice-serviceType: string--><!--Device-TrustedPairedDevice-serviceType: string-End-->
@@ -343,10 +287,6 @@ Indicates the device identify.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -368,10 +308,6 @@ Indicates the token of the peripheral.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TrustedPairedDevice-token: ArrayBuffer--><!--Device-TrustedPairedDevice-token: ArrayBuffer-End-->
@@ -391,10 +327,6 @@ Indicates the uuid of the peripheral.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

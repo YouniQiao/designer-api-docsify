@@ -16,11 +16,9 @@ Obtains the supported power model.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md#getSupportedPowerMode)
+**Substitutes:** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md#getsupportedpowermode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -45,11 +43,9 @@ Obtains the supported power model.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md#getSupportedPowerMode)
+**Substitutes:** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md#getsupportedpowermode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

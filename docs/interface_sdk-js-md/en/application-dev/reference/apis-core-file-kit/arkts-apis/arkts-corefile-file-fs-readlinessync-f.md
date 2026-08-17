@@ -30,10 +30,6 @@ Reads the text content of a file line by line. This API returns the result synch
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function readLinesSync(filePath: string, options?: Options): ReaderIterator--><!--Device-unnamed-declare function readLinesSync(filePath: string, options?: Options): ReaderIterator-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -43,7 +39,7 @@ Reads the text content of a file line by line. This API returns the result synch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md) | No | Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported. |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | No | Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 

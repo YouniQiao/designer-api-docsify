@@ -4,10 +4,6 @@ Beacon fence details.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface BeaconFence--><!--Device-geoLocationManager-export interface BeaconFence-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -30,10 +26,6 @@ Beacon fence information type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BeaconFence-beaconFenceInfoType: BeaconFenceInfoType--><!--Device-BeaconFence-beaconFenceInfoType: BeaconFenceInfoType-End-->
@@ -52,10 +44,6 @@ Identifier of the beacon fence.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BeaconFence-identifier: string--><!--Device-BeaconFence-identifier: string-End-->
@@ -73,10 +61,6 @@ Beacon equipment manufacture data.
 **Type:** [BeaconManufactureData](arkts-location-geolocationmanager-beaconmanufacturedata-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

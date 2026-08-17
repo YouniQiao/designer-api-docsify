@@ -16,10 +16,6 @@ Batch sets whether to display badges for specified applications. This API uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function setBadgeDisplayStatusByBundles(badges: Map<BundleOption, boolean>) : Promise<void>--><!--Device-notificationManager-function setBadgeDisplayStatusByBundles(badges: Map<BundleOption, boolean>) : Promise<void>-End-->
@@ -51,7 +47,7 @@ Batch sets whether to display badges for specified applications. This API uses a
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

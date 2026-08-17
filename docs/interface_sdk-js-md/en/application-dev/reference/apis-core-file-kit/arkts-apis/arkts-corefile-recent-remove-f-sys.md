@@ -16,8 +16,6 @@ Removes the file of the specified URI from the recent file list.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -44,7 +42,7 @@ Removes the file of the specified URI from the recent file list.
 | 13900002 | No such file or directory |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let uri = 'file://docs/storage/Users/currentUser/<publicPath>';

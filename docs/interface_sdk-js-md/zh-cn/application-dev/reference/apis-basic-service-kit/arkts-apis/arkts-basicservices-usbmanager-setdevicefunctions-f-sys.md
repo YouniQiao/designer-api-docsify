@@ -10,10 +10,6 @@ function setDeviceFunctions(funcs: FunctionType): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
 <!--Device-usbManager-function setDeviceFunctions(funcs: FunctionType): Promise<void>--><!--Device-usbManager-function setDeviceFunctions(funcs: FunctionType): Promise<void>-End-->
@@ -55,10 +51,6 @@ function setDeviceFunctions(funcs: int): Promise<void>
 Sets the current USB function list in Device mode.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_USB_CONFIG
 

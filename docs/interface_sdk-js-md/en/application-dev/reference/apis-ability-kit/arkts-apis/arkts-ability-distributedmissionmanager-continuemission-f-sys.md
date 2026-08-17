@@ -16,10 +16,6 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -52,7 +48,7 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 | [16300502](../errorcode-DistributedSchedule.md#16300502-failed-to-get-the-missioninfo-of-the-specified-missionid) | Failed to get the missionInfo of the specified missionId. |
 | [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) | The application is not installed on the remote end and installation-free isnot supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
@@ -95,10 +91,6 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -136,7 +128,7 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 | [16300502](../errorcode-DistributedSchedule.md#16300502-failed-to-get-the-missioninfo-of-the-specified-missionid) | Failed to get the missionInfo of the specified missionId. |
 | [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) | The application is not installed on the remote end and installation-free isnot supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
@@ -176,10 +168,6 @@ Continues a mission on a remote device, with the bundle name specified. This API
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -211,7 +199,7 @@ Continues a mission on a remote device, with the bundle name specified. This API
 | [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | The system ability work abnormally. |
 | [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) | The application is not installed on the remote end and installation-free isnot supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
@@ -247,10 +235,6 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 Continues a mission on a remote device, with the bundle name specified. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -288,7 +272,7 @@ Continues a mission on a remote device, with the bundle name specified. This API
 | [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | The system ability work abnormally. |
 | [16300503](../errorcode-DistributedSchedule.md#16300503-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-not-supported) | The application is not installed on the remote end and installation-free isnot supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';

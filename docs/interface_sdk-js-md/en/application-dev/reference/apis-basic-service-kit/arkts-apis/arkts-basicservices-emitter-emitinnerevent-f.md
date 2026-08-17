@@ -16,10 +16,6 @@ Emits a specified event. This API can be used to emit data objects across thread
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-emitter-function emit(event: InnerEvent, data?: EventData): void--><!--Device-emitter-function emit(event: InnerEvent, data?: EventData): void-End-->
@@ -30,10 +26,10 @@ Emits a specified event. This API can be used to emit data objects across thread
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | Event to emit, where [EventPriority](arkts-basicservices-emitter-eventpriority-e.md#EventPriority) specifies the emit priority of the event. |
+| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | Event to emit, where [EventPriority](arkts-basicservices-emitter-eventpriority-e.md#eventpriority) specifies the emit priority of the event. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 

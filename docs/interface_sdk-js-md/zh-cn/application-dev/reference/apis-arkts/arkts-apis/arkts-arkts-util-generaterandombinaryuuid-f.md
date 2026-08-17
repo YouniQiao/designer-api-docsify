@@ -10,10 +10,6 @@ function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array--><!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array-End-->
@@ -32,7 +28,7 @@ function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array
 | --- | --- |
 | Uint8Array | 表示此UUID的Uint8Array值。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let uuid = util.generateRandomBinaryUUID(true);

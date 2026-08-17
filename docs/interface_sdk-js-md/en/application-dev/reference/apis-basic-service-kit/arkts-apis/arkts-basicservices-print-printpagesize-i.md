@@ -4,10 +4,6 @@ Defines the size of the printed page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PrintPageSize--><!--Device-print-interface PrintPageSize-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -30,10 +26,6 @@ Page height, in millimeters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintPageSize-height: int--><!--Device-PrintPageSize-height: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -49,10 +41,6 @@ Paper size ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintPageSize-id: string--><!--Device-PrintPageSize-id: string-End-->
 
@@ -70,10 +58,6 @@ Paper size name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintPageSize-name: string--><!--Device-PrintPageSize-name: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -89,10 +73,6 @@ Page width, in millimeters.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintPageSize-width: int--><!--Device-PrintPageSize-width: int-End-->
 

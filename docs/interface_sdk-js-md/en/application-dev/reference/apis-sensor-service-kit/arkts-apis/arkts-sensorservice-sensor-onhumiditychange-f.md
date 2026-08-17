@@ -16,10 +16,6 @@ Subscribe to humidity sensor data, {@code SensorId.HUMIDITY}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onHumidityChange(callback: Callback<HumidityResponse>, options?: Options): void--><!--Device-sensor-function onHumidityChange(callback: Callback<HumidityResponse>, options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

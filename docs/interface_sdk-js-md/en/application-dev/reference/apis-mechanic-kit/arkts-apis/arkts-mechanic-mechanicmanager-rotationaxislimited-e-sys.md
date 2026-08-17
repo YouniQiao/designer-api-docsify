@@ -4,10 +4,6 @@ Enumerates the rotation axis limit states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export enum RotationAxisLimited--><!--Device-mechanicManager-export enum RotationAxisLimited-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -23,10 +19,6 @@ NOT_LIMITED = 0
 Not limited.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotationAxisLimited-NOT_LIMITED = 0--><!--Device-RotationAxisLimited-NOT_LIMITED = 0-End-->
 
@@ -44,10 +36,6 @@ Negative limited.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotationAxisLimited-NEGATIVE_LIMITED = 1--><!--Device-RotationAxisLimited-NEGATIVE_LIMITED = 1-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -63,10 +51,6 @@ POSITIVE_LIMITED = 2
 Positive limited.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotationAxisLimited-POSITIVE_LIMITED = 2--><!--Device-RotationAxisLimited-POSITIVE_LIMITED = 2-End-->
 

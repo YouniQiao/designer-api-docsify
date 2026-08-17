@@ -4,10 +4,6 @@ Defines the type of the element on the right of the **ComposeListItem** componen
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class OperateItem--><!--Device-unnamed-export declare class OperateItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -36,10 +32,6 @@ Arrow with a size of 12 x 24 vp. If this parameter is not set or is set to **und
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -59,10 +51,6 @@ Button. If this parameter is not set or is set to **undefined**, the button is n
 **Type:** [OperateButton](arkts-arkui-arkui-advanced-composelistitem-operatebutton-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,10 +72,6 @@ Check box with a size of 24 x 24 vp. If this parameter is not set or is set to *
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -107,10 +91,6 @@ First icon with a size of 24 x 24 vp. If this parameter is not set or is set to 
 **Type:** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,10 +112,6 @@ Image with a size of 48 x 48 vp. If this parameter is not set or is set to **und
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -155,10 +131,6 @@ Radio button with a size of 24 x 24 vp. If this parameter is not set or is set t
 **Type:** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,10 +152,6 @@ Second icon with a size of 24 x 24 vp. If this parameter is not set or is set to
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -204,10 +172,6 @@ Switch. If this parameter is not set or is set to **undefined**, the switch is n
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -224,13 +188,9 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol icon with a size of 48 x 48 vp. If this parameter is not set or is set to **undefined**, the symbol icon is not displayed.
 
-**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** SymbolGlyphModifier
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,10 +211,6 @@ Text. If this parameter is not set or is set to **undefined**, the text is not d
 **Type:** ResourceStr
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

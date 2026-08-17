@@ -4,10 +4,6 @@ The module defines the result code and data returned to the caller when a starte
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AbilityResult--><!--Device-unnamed-export interface AbilityResult-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -23,10 +19,6 @@ Indicates the result code returned after the ability is destroyed. You can defin
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,10 +37,6 @@ Indicates the data returned after the ability is destroyed. You can define the d
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

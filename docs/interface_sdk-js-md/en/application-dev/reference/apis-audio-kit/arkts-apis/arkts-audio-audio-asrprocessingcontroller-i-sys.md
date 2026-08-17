@@ -4,10 +4,6 @@ ASR processing controller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AsrProcessingController--><!--Device-audio-interface AsrProcessingController-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -30,10 +26,6 @@ Get ASR AEC mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode--><!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -53,7 +45,7 @@ Get ASR AEC mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let mode = asrProcessingController.getAsrAecMode();
@@ -68,10 +60,6 @@ getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode
 Get ASR noise suppression mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode--><!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode-End-->
 
@@ -92,7 +80,7 @@ Get ASR noise suppression mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let mode = asrProcessingController.getAsrNoiseSuppressionMode();
@@ -107,10 +95,6 @@ getAsrWhisperDetectionMode(): AsrWhisperDetectionMode
 Get ASR whisper detection mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode--><!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode-End-->
 
@@ -131,7 +115,7 @@ Get ASR whisper detection mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let mode = asrProcessingController.getAsrWhisperDetectionMode();
@@ -146,10 +130,6 @@ isWhispering(): boolean
 Query whether user is whispering.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-isWhispering(): boolean--><!--Device-AsrProcessingController-isWhispering(): boolean-End-->
 
@@ -170,7 +150,7 @@ Query whether user is whispering.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let flag = asrProcessingController.isWhispering();
@@ -185,10 +165,6 @@ setAsrAecMode(mode: AsrAecMode): boolean
 Set ASR AEC mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean--><!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean-End-->
 
@@ -217,7 +193,7 @@ Set ASR AEC mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let flag = asrProcessingController.setAsrAecMode(audio.AsrAecMode.BYPASS);
@@ -232,10 +208,6 @@ setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean
 Set ASR noise suppression mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean--><!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean-End-->
 
@@ -264,7 +236,7 @@ Set ASR noise suppression mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let flag = asrProcessingController.setAsrNoiseSuppressionMode(audio.AsrNoiseSuppressionMode.BYPASS);
@@ -279,10 +251,6 @@ setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean
 Set ASR voice control mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean-End-->
 
@@ -312,7 +280,7 @@ Set ASR voice control mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let flag = asrProcessingController.setAsrVoiceControlMode(audio.AsrVoiceControlMode.AUDIO_2_VOICE_TX, true);
@@ -327,10 +295,6 @@ setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean
 Set ASR voice mute mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean-End-->
 
@@ -360,7 +324,7 @@ Set ASR voice mute mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let flag = asrProcessingController.setAsrVoiceMuteMode(audio.AsrVoiceMuteMode.OUTPUT_MUTE, true);
@@ -375,10 +339,6 @@ setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean
 Set ASR whisper detection mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean--><!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean-End-->
 
@@ -407,7 +367,7 @@ Set ASR whisper detection mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let flag = asrProcessingController.setAsrWhisperDetectionMode(audio.AsrWhisperDetectionMode.BYPASS);

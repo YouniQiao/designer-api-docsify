@@ -4,10 +4,6 @@ Defines the finger information type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface FingerInfo--><!--Device-unnamed-interface FingerInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ getCurrentLocalPosition?(): Coordinate2D
 Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ X-coordinate relative to the upper left corner of the screen, in vp. Value range
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -75,10 +63,6 @@ Y-coordinate relative to the upper left corner of the screen, in vp. Value range
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,10 +84,6 @@ X-coordinate relative to the upper left corner of the global display, in vp. Val
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -123,10 +103,6 @@ Y-coordinate relative to the upper left corner of the global display, in vp. Val
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,10 +124,6 @@ X-coordinate relative to the upper left corner of the application window, in vp.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FingerInfo-globalX: number--><!--Device-FingerInfo-globalX: number-End-->
@@ -170,10 +142,6 @@ Y-coordinate relative to the upper left corner of the application window, in vp.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FingerInfo-globalY: number--><!--Device-FingerInfo-globalY: number-End-->
@@ -191,10 +159,6 @@ Whether the event is triggered by a left-hand or right-hand tap.
 **Type:** InteractionHand
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -216,10 +180,6 @@ Index of the finger, determined by the number of fingers pressed. The first pres
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FingerInfo-id: number--><!--Device-FingerInfo-id: number-End-->
@@ -238,10 +198,6 @@ X-coordinate relative to the upper left corner of the current component's origin
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FingerInfo-localX: number--><!--Device-FingerInfo-localX: number-End-->
@@ -259,10 +215,6 @@ Y-coordinate relative to the upper left corner of the current component's origin
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

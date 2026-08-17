@@ -12,13 +12,9 @@ import { dlpPermission } from 'dlpPermission';
 function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>): void
 ```
 
-Unsubscribes from the DLP sandbox uninstall event. After the API is successfully called, the application will no longer receive callback notifications for the DLP sandbox uninstall event. This API can be called only after a listener is registered using [on](arkts-dataprotection-dlppermission-onopendlpfile-f.md#on_openDLPFile). When the DLP management application exits or no longer needs to track sandbox status changes, unregister the listener to release resources.
+Unsubscribes from the DLP sandbox uninstall event. After the API is successfully called, the application will no longer receive callback notifications for the DLP sandbox uninstall event. This API can be called only after a listener is registered using [on](arkts-dataprotection-dlppermission-onopendlpfile-f.md#onopendlpfile). When the DLP management application exits or no longer needs to track sandbox status changes, unregister the listener to release resources.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -46,7 +42,7 @@ Unsubscribes from the DLP sandbox uninstall event. After the API is successfully
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

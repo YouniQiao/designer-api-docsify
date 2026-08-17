@@ -4,10 +4,6 @@ Describes the parameters supported by the @InsightIntentLink decorator, such as 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntentDriver-interface LinkIntentInfo--><!--Device-insightIntentDriver-interface LinkIntentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -31,10 +27,6 @@ URI of an intent.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

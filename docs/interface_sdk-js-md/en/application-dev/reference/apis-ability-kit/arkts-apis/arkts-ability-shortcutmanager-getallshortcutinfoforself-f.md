@@ -16,10 +16,6 @@ Obtains all the shortcut information defined in the [configuration](../../../qui
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>--><!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -30,7 +26,7 @@ Obtains all the shortcut information defined in the [configuration](../../../qui
 | --- | --- |
 | Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise that returns all the shortcut information defined in the configuration file. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';

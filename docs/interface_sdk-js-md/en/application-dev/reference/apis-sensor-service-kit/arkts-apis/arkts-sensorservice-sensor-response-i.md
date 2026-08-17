@@ -4,10 +4,6 @@ Describes the timestamp of the sensor data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-interface Response--><!--Device-sensor-interface Response-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -30,10 +26,6 @@ Accuracy of the sensor data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Response-accuracy: SensorAccuracy--><!--Device-Response-accuracy: SensorAccuracy-End-->
@@ -51,10 +43,6 @@ Timestamp when the sensor reports data. Time from device startup to data reporti
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

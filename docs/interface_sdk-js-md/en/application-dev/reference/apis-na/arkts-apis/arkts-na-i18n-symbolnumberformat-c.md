@@ -6,9 +6,7 @@ Provide a Number formatting interface that supports custom symbols. This interfa
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-i18n-export class SymbolNumberFormat--><!--Device-i18n-export class SymbolNumberFormat-End-->
 
@@ -24,9 +22,7 @@ A constructor used to create a SymbolNumberFormat object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,7 +37,7 @@ A constructor used to create a SymbolNumberFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. |
-| options | [SymbolNumberFormatOptions](arkts-na-i18n-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace. Such as zero, nan, positiveInfinity, etc. |
+| options | [SymbolNumberFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace. Such as zero, nan, positiveInfinity, etc. |
 
 ## parse
 
@@ -53,9 +49,7 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,9 +88,7 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,5 +102,5 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 
 | Type | Description |
 | --- | --- |
-| [ResolvedSymbolNumberFormatOptions](arkts-na-i18n-resolvedsymbolnumberformatoptions-i.md) | Symbol options for SymbolNumberFormat. |
+| [ResolvedSymbolNumberFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | Symbol options for SymbolNumberFormat. |
 

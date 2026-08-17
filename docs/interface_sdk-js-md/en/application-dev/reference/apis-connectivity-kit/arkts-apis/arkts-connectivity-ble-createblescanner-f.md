@@ -16,10 +16,6 @@ Create a ble scanner instance. Each ble scanner instance can be independently st
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -34,7 +30,7 @@ Create a ble scanner instance. Each ble scanner instance can be independently st
 | --- | --- |
 | [BleScanner](arkts-connectivity-ble-blescanner-i.md) | Returns the promise object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';

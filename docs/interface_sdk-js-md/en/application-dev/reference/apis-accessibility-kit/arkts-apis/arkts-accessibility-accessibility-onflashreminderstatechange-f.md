@@ -12,13 +12,9 @@ import { accessibility } from 'accessibility';
 function onFlashReminderStateChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes of flash alerts mode. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [accessibility.offFlashReminderStateChange](arkts-accessibility-accessibility-offflashreminderstatechange-f.md#offFlashReminderStateChange) is used to > unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle > callback). Otherwise, a crash may occur.
+Subscribes to the state changes of flash alerts mode. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [accessibility.offFlashReminderStateChange](arkts-accessibility-accessibility-offflashreminderstatechange-f.md#offflashreminderstatechange) is used to > unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle > callback). Otherwise, a crash may occur.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +28,7 @@ Subscribes to the state changes of flash alerts mode. This API uses an asynchron
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. It notifies the state when the flashing reminder mode enabled state changes. The value **true** indicates that the flashing reminder mode is enabled, and **false** indicates that the flashing reminder mode is disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

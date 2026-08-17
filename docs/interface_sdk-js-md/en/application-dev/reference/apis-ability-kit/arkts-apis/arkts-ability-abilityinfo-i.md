@@ -4,10 +4,6 @@ The module defines the ability information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AbilityInfo--><!--Device-unnamed-export interface AbilityInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -24,10 +20,6 @@ Index of an application clone. It takes effect only for [application clones](../
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AbilityInfo-readonly appIndex: int--><!--Device-AbilityInfo-readonly appIndex: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -38,15 +30,11 @@ Index of an application clone. It takes effect only for [application clones](../
 readonly applicationInfo: ApplicationInfo | null
 ```
 
-Application configuration information &lt;!--Del--&gt;. The information can be obtained by passing in **GET_ABILITY_INFO_WITH_APPLICATION** to the **abilityFlags** parameter of [queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md#queryAbilityInfo-(System-API)) &lt;!--DelEnd--&gt;. This field is not returned when the [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf) or [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getBundleInfo) is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md#BundleInfo).appInfo object.
+Application configuration information &lt;!--Del--&gt;. The information can be obtained by passing in **GET_ABILITY_INFO_WITH_APPLICATION** to the **abilityFlags** parameter of [queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md#queryabilityinfo-system-api) &lt;!--DelEnd--&gt;. This field is not returned when the [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself) or [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo) is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md#bundleinfo).appInfo object.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md) \| null
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo | null--><!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo | null-End-->
 
@@ -63,10 +51,6 @@ Bundle name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -86,10 +70,6 @@ Ability description, which describes the content and functions of the current ab
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly description: string--><!--Device-AbilityInfo-readonly description: string-End-->
@@ -107,10 +87,6 @@ Resource ID of the ability description. It is automatically generated during com
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,10 +106,6 @@ Device types supported by the ability. The value is derived from that of [device
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly deviceTypes: Array<string>--><!--Device-AbilityInfo-readonly deviceTypes: Array<string>-End-->
@@ -146,15 +118,11 @@ Device types supported by the ability. The value is derived from that of [device
 readonly enabled: boolean
 ```
 
-Whether the ability is available, that is, whether it can be started or queried. **true** if available, **false** otherwise. If the ability is unavailable, you must call [getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getAbilityInfo) with **AbilityFlag** set to **GET_ABILITY_INFO_WITH_DISABLE** to query the ability.
+Whether the ability is available, that is, whether it can be started or queried. **true** if available, **false** otherwise. If the ability is unavailable, you must call [getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getabilityinfo) with **AbilityFlag** set to **GET_ABILITY_INFO_WITH_DISABLE** to query the ability.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -174,10 +142,6 @@ Whether the ability icon can be hidden in the dock area. **true** if the ability
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AbilityInfo-readonly excludeFromDock: boolean--><!--Device-AbilityInfo-readonly excludeFromDock: boolean-End-->
@@ -195,10 +159,6 @@ Whether the ability can be launched by other applications. **true** if the abili
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -218,10 +178,6 @@ Resource descriptor of the ability icon. It corresponds to the **icon** field un
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly icon: string--><!--Device-AbilityInfo-readonly icon: string-End-->
@@ -240,10 +196,6 @@ Resource ID of the ability icon. It is automatically generated during compilatio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly iconId: long--><!--Device-AbilityInfo-readonly iconId: long-End-->
@@ -256,15 +208,11 @@ Resource ID of the ability icon. It is automatically generated during compilatio
 readonly label: string
 ```
 
-Resource descriptor of the ability name visible to users. It corresponds to the **label** field under **abilities** in the [module.json5](../../../quick-start/module-configuration-file.md) file. Note: Starting from API version 20, if [bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getAbilityInfo) is used to obtain ability information, this field is the ability name visible to users.
+Resource descriptor of the ability name visible to users. It corresponds to the **label** field under **abilities** in the [module.json5](../../../quick-start/module-configuration-file.md) file. Note: Starting from API version 20, if [bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getabilityinfo) is used to obtain ability information, this field is the ability name visible to users.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -284,10 +232,6 @@ Resource ID of the ability label. It is automatically generated during compilati
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly labelId: long--><!--Device-AbilityInfo-readonly labelId: long-End-->
@@ -300,15 +244,11 @@ Resource ID of the ability label. It is automatically generated during compilati
 readonly launchType: bundleManager.LaunchType
 ```
 
-Ability launch mode, that is, whether it can be started in multiton mode. For details, see [LaunchType](arkts-ability-bundlemanager-launchtype-e.md#LaunchType).
+Ability launch mode, that is, whether it can be started in multiton mode. For details, see [LaunchType](arkts-ability-bundlemanager-launchtype-e.md#launchtype).
 
 **Type:** bundleManager.LaunchType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -322,15 +262,11 @@ Ability launch mode, that is, whether it can be started in multiton mode. For de
 readonly metadata: Array<Metadata>
 ```
 
-Metadata of the ability. You can configure the system-defined parameters to use the capabilities provided by the system, for example, [shortcuts](../../../quick-start/module-configuration-file.md#shortcuts) and [window metadata configuration](../../../windowmanager/window-config-m.md). You can also customize the parameters and call [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf) to obtain the parameters by passing **GET_BUNDLE_INFO_WITH_HAP_MODULE**, **GET_BUNDLE_INFO_WITH_ABILITY**, and **GET_BUNDLE_INFO_WITH_METADATA** to **bundleFlags**.
+Metadata of the ability. You can configure the system-defined parameters to use the capabilities provided by the system, for example, [shortcuts](../../../quick-start/module-configuration-file.md#shortcuts) and [window metadata configuration](../../../windowmanager/window-config-m.md). You can also customize the parameters and call [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself) to obtain the parameters by passing **GET_BUNDLE_INFO_WITH_HAP_MODULE**, **GET_BUNDLE_INFO_WITH_ABILITY**, and **GET_BUNDLE_INFO_WITH_METADATA** to **bundleFlags**.
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -350,10 +286,6 @@ Module name to which the ability belongs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly moduleName: string--><!--Device-AbilityInfo-readonly moduleName: string-End-->
@@ -372,10 +304,6 @@ Ability name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly name: string--><!--Device-AbilityInfo-readonly name: string-End-->
@@ -388,15 +316,11 @@ Ability name.
 readonly orientation: bundleManager.DisplayOrientation
 ```
 
-Ability display orientation. It is derived from the **orientation** field under **abilities** in the [module.json5](../../../quick-start/module-configuration-file.md) file. If **orientation** in the file is set to an enumerated value, this property is a non-zero value. For details about the available values, see [displayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#DisplayOrientation). If **orientation** in the file is set to a resource index, the value of this property is **0**.
+Ability display orientation. It is derived from the **orientation** field under **abilities** in the [module.json5](../../../quick-start/module-configuration-file.md) file. If **orientation** in the file is set to an enumerated value, this property is a non-zero value. For details about the available values, see [displayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#displayorientation). If **orientation** in the file is set to a resource index, the value of this property is **0**.
 
 **Type:** bundleManager.DisplayOrientation
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -416,10 +340,6 @@ Resource ID of the ability display mode. It is derived from the **orientation** 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AbilityInfo-readonly orientationId: long--><!--Device-AbilityInfo-readonly orientationId: long-End-->
@@ -437,10 +357,6 @@ Array of permissions that other applications must request to start or access thi
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -460,10 +376,6 @@ Process name of the ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly process: string--><!--Device-AbilityInfo-readonly process: string-End-->
@@ -481,10 +393,6 @@ Permission required for reading the ability data. **Model restriction**: This AP
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -504,10 +412,6 @@ Skills information of the ability. It represents the feature set of [wants](../.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AbilityInfo-readonly skills: Array<Skill>--><!--Device-AbilityInfo-readonly skills: Array<Skill>-End-->
@@ -525,10 +429,6 @@ Window modes supported by the ability.
 **Type:** Array&lt;bundleManager.SupportWindowMode&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -548,10 +448,6 @@ Ability type. **Model restriction**: This API can be used only in the FA model.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AbilityInfo-readonly type: bundleManager.AbilityType--><!--Device-AbilityInfo-readonly type: bundleManager.AbilityType-End-->
@@ -569,10 +465,6 @@ URI of the ability. **Model restriction**: This API can be used only in the FA m
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -592,10 +484,6 @@ Window size.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly windowSize: WindowSize--><!--Device-AbilityInfo-readonly windowSize: WindowSize-End-->
@@ -613,10 +501,6 @@ Permission required for writing data to the ability. **Model restriction**: This
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

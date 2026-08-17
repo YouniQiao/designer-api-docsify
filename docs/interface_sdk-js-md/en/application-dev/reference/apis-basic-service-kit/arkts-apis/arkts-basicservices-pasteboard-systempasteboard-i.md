@@ -1,12 +1,8 @@
 # SystemPasteboard
 
-Provides **SystemPasteboard** APIs. Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getSystemPasteboard).
+Provides **SystemPasteboard** APIs. Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-pasteboard-interface SystemPasteboard--><!--Device-pasteboard-interface SystemPasteboard-End-->
 
@@ -28,11 +24,9 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clearData](#clearData)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [clearData](#cleardata)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void-End-->
 
@@ -50,7 +44,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -73,11 +67,9 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clearData](#clearData)()
+**Substitutes:** [clearData](#cleardata)()
 
 <!--Device-SystemPasteboard-clear(): Promise<void>--><!--Device-SystemPasteboard-clear(): Promise<void>-End-->
 
@@ -89,7 +81,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -112,10 +104,6 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SystemPasteboard-clearData(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clearData(callback: AsyncCallback<void>): void-End-->
@@ -134,7 +122,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -157,10 +145,6 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SystemPasteboard-clearData(): Promise<void>--><!--Device-SystemPasteboard-clearData(): Promise<void>-End-->
@@ -173,7 +157,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -196,10 +180,6 @@ Clears the system pasteboard. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-clearDataSync(): void--><!--Device-SystemPasteboard-clearDataSync(): void-End-->
@@ -212,7 +192,7 @@ Clears the system pasteboard. This API returns the result synchronously.
 | --- | --- |
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -230,13 +210,9 @@ try {
 detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 ```
 
-Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md#Pattern) in the system pasteboard. This API uses a promise to return the result.
+Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md#pattern) in the system pasteboard. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemPasteboard-detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>--><!--Device-SystemPasteboard-detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>-End-->
 
@@ -260,7 +236,7 @@ Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md#Pattern) in the s
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { pasteboard } from '@kit.BasicServicesKit'
@@ -289,13 +265,9 @@ systemPasteboard.detectPatterns(patterns).then((data: Array<pasteboard.Pattern>)
 getChangeCount(): long
 ```
 
-Obtains the number of pasteboard content changes. Returns the number of pasteboard content changes if this API is called successfully; returns **0** otherwise. Even though the PasteData expires, or the data becomes empty because of the called [clearDataSync](#clearDataSync) API, the number of data changes remains. When the system is restarted, or the pasteboard service is restarted due to an exception, the number of PasteData changes counts from 0. In addition, copying the same data repeatedly is considered to change the data for multiple times. Therefore, each time the data is copied, the number of data changes increases.
+Obtains the number of pasteboard content changes. Returns the number of pasteboard content changes if this API is called successfully; returns **0** otherwise. Even though the PasteData expires, or the data becomes empty because of the called [clearDataSync](#cleardatasync) API, the number of data changes remains. When the system is restarted, or the pasteboard service is restarted due to an exception, the number of PasteData changes counts from 0. In addition, copying the same data repeatedly is considered to change the data for multiple times. Therefore, each time the data is copied, the number of data changes increases.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -309,7 +281,7 @@ Obtains the number of pasteboard content changes. Returns the number of pasteboa
 | --- | --- |
 | long | The number of pasteboard content changes obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError, pasteboard } from '@kit.BasicServicesKit';
@@ -332,10 +304,6 @@ getData(callback: AsyncCallback<PasteData>): void
 Obtains a **PasteData** object from the pasteboard. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 12+: ohos.permission.READ_PASTEBOARD
@@ -360,7 +328,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -385,10 +353,6 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 12+: ohos.permission.READ_PASTEBOARD
 
@@ -411,7 +375,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -434,10 +398,6 @@ Obtains the name of the application that provides data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-getDataSource(): string--><!--Device-SystemPasteboard-getDataSource(): string-End-->
@@ -456,7 +416,7 @@ Obtains the name of the application that provides data.
 | --- | --- |
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -477,10 +437,6 @@ getDataSync(): PasteData
 Obtains a **PasteData** object from the pasteboard. This API returns the result synchronously.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 12+: ohos.permission.READ_PASTEBOARD
@@ -504,7 +460,7 @@ Obtains a **PasteData** object from the pasteboard. This API returns the result 
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -525,10 +481,6 @@ getDataWithProgress(params: GetDataParams): Promise<PasteData>
 Obtains the PasteData from the system pasteboard with system progress. This API uses a promise to return the result. Folders cannot be copied.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_PASTEBOARD
 
@@ -562,7 +514,7 @@ Obtains the PasteData from the system pasteboard with system progress. This API 
 | [12900009](../../apis-basic-services-kit/errorcode-pasteboard.md#12900009-progress-reporting-exception) | Progress exits abnormally. |
 | [12900010](../../apis-basic-services-kit/errorcode-pasteboard.md#12900010-data-obtaining-failure) | System error occurred during paste execution. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError, pasteboard } from '@kit.BasicServicesKit';
@@ -614,10 +566,6 @@ Obtains the types of PasteData in the system pasteboard. This API uses a promise
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-getMimeTypes(): Promise<Array<string>>--><!--Device-SystemPasteboard-getMimeTypes(): Promise<Array<string>>-End-->
@@ -630,7 +578,7 @@ Obtains the types of PasteData in the system pasteboard. This API uses a promise
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { pasteboard, BusinessError } from '@kit.BasicServicesKit'
@@ -653,11 +601,9 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getData](#getData)(callback: AsyncCallback&lt;PasteData&gt;)
+**Substitutes:** [getData](#getdata)(callback: AsyncCallback&lt;PasteData&gt;)
 
 <!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void-End-->
 
@@ -675,7 +621,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -700,11 +646,9 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getData](#getData)()
+**Substitutes:** [getData](#getdata)()
 
 <!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>--><!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>-End-->
 
@@ -716,7 +660,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 | --- | --- |
 | Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise used to return the system PasteData. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -739,10 +683,6 @@ Obtains a **PasteData** object from the system pasteboard. This API uses a promi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_PASTEBOARD
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -764,7 +704,7 @@ Obtains a **PasteData** object from the system pasteboard. This API uses a promi
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -794,10 +734,6 @@ Obtains a **UnifiedData** object from the system pasteboard. This API returns th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_PASTEBOARD
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -819,7 +755,7 @@ Obtains a **UnifiedData** object from the system pasteboard. This API returns th
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
@@ -843,10 +779,6 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SystemPasteboard-hasData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasData(callback: AsyncCallback<boolean>): void-End-->
@@ -865,7 +797,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -890,10 +822,6 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SystemPasteboard-hasData(): Promise<boolean>--><!--Device-SystemPasteboard-hasData(): Promise<boolean>-End-->
@@ -906,7 +834,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 | --- | --- |
 | Promise&lt;boolean&gt; | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -929,10 +857,6 @@ Checks whether the system pasteboard contains data. This API returns the result 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-hasDataSync(): boolean--><!--Device-SystemPasteboard-hasDataSync(): boolean-End-->
@@ -951,7 +875,7 @@ Checks whether the system pasteboard contains data. This API returns the result 
 | --- | --- |
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -972,10 +896,6 @@ hasDataType(mimeType: string): boolean
 Checks whether the pasteboard contains data of the specified type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1002,7 +922,7 @@ Checks whether the pasteboard contains data of the specified type.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -1024,11 +944,9 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hasData](#hasData)(callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [hasData](#hasdata)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1046,7 +964,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1071,11 +989,9 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hasData](#hasData)()
+**Substitutes:** [hasData](#hasdata)()
 
 <!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>--><!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>-End-->
 
@@ -1087,7 +1003,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 | --- | --- |
 | Promise&lt;boolean&gt; | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1110,10 +1026,6 @@ Checks whether the PasteData is on a remote device. Transferring data across dev
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-SystemPasteboard-hasRemoteData(): boolean--><!--Device-SystemPasteboard-hasRemoteData(): boolean-End-->
@@ -1126,7 +1038,7 @@ Checks whether the PasteData is on a remote device. Transferring data across dev
 | --- | --- |
 | boolean | Returns the check result. The value **true** indicates that the PasteData is in a remote device, and **false** indicates the opposite. Default value: **false**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -1144,10 +1056,6 @@ isRemoteData(): boolean
 Checks whether the data in the pasteboard is from another device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1167,7 +1075,7 @@ Checks whether the data in the pasteboard is from another device.
 | --- | --- |
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -1189,10 +1097,6 @@ Remove a callback invoked when remote pasteboard content changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemPasteboard-offRemoteUpdate(callback?: UpdateCallback): void--><!--Device-SystemPasteboard-offRemoteUpdate(callback?: UpdateCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -1203,7 +1107,7 @@ Remove a callback invoked when remote pasteboard content changes.
 | --- | --- | --- | --- |
 | callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -1222,10 +1126,6 @@ offUpdate(callback?: UpdateCallback): void
 Remove a callback invoked when pasteboard content changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemPasteboard-offUpdate(callback?: UpdateCallback): void--><!--Device-SystemPasteboard-offUpdate(callback?: UpdateCallback): void-End-->
 
@@ -1247,10 +1147,6 @@ Unsubscribes the content change event of the system pasteboard.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void--><!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -1268,7 +1164,7 @@ Unsubscribes the content change event of the system pasteboard.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -1288,10 +1184,6 @@ Add a callback invoked when remote pasteboard content changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemPasteboard-onRemoteUpdate(callback: UpdateCallback): void--><!--Device-SystemPasteboard-onRemoteUpdate(callback: UpdateCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -1302,7 +1194,7 @@ Add a callback invoked when remote pasteboard content changes.
 | --- | --- | --- | --- |
 | callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | Yes | the callback to add. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -1321,10 +1213,6 @@ onUpdate(callback: UpdateCallback): void
 Add a callback invoked when pasteboard content changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemPasteboard-onUpdate(callback: UpdateCallback): void--><!--Device-SystemPasteboard-onUpdate(callback: UpdateCallback): void-End-->
 
@@ -1346,10 +1234,6 @@ Subscribes the content change event of the system pasteboard.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void--><!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -1367,7 +1251,7 @@ Subscribes the content change event of the system pasteboard.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -1386,10 +1270,6 @@ setData(data: PasteData, callback: AsyncCallback<void>): void
 Writes a **PasteData** object to the pasteboard. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1412,7 +1292,7 @@ Writes a **PasteData** object to the pasteboard. This API uses an asynchronous c
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 | [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) | Replication is prohibited. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'content');
@@ -1435,10 +1315,6 @@ setData(data: PasteData): Promise<void>
 Writes a **PasteData** object to the system pasteboard. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1466,7 +1342,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 | [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) | Replication is prohibited. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1490,10 +1366,6 @@ Writes data to the system system pasteboard. This API returns the result synchro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-setDataSync(data: PasteData): void--><!--Device-SystemPasteboard-setDataSync(data: PasteData): void-End-->
@@ -1513,7 +1385,7 @@ Writes data to the system system pasteboard. This API returns the result synchro
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -1536,11 +1408,9 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setData](#setData)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setData](#setdata)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void-End-->
 
@@ -1559,7 +1429,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
@@ -1583,11 +1453,9 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setData](#setData)(data: PasteData)
+**Substitutes:** [setData](#setdata)(data: PasteData)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
 
@@ -1605,7 +1473,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1628,10 +1496,6 @@ setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 Writes a **PasteData** object to the system pasteboard. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1659,7 +1523,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 | [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) | Replication is prohibited. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1692,10 +1556,6 @@ Writes data to the system pasteboard. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void--><!--Device-SystemPasteboard-setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void-End-->
@@ -1715,7 +1575,7 @@ Writes data to the system pasteboard. This API returns the result synchronously.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';

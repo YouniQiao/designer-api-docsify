@@ -1,18 +1,4 @@
-# SceneTypes(Defines 3D basic types)
-
-/*
- Copyright (c) 2024-2024 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+# SceneTypes
 
 ## Summary
 
@@ -20,12 +6,12 @@
 
 | Name | Description |
 | --- | --- |
-| [CubeGeometry](arkts-arkgraphics3d-scenetypes-cubegeometry-c.md) | Define a rectangular cuboid. |
-| [CustomGeometry](arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | An array of vertices and their data defining a custom geometric shape. |
-| [CylinderGeometry](arkts-arkgraphics3d-scenetypes-cylindergeometry-c.md) | A cylinder geometry type that inherits from [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition). > **NOTE：**> > You must ensure that all three parameters are set correctly. > Invalid values may prevent cylinder creation or cause undefined behavior. |
-| [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md) | Define a geometric shape for mesh creation. |
-| [PlaneGeometry](arkts-arkgraphics3d-scenetypes-planegeometry-c.md) | Define a plane. |
-| [SphereGeometry](arkts-arkgraphics3d-scenetypes-spheregeometry-c.md) | Define a sphere. |
+| [CubeGeometry](arkts-arkgraphics3d-scenetypes-cubegeometry-c.md) | A cube geometry type that inherits from GeometryDefinition. |
+| [CustomGeometry](arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | A custom geometry type that inherits from GeometryDefinition. |
+| [CylinderGeometry](arkts-arkgraphics3d-scenetypes-cylindergeometry-c.md) | A cylinder geometry type that inherits from GeometryDefinition. > **NOTE：**> > You must ensure that all three parameters are set correctly. > Invalid values may prevent cylinder creation or cause undefined behavior. |
+| [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md) | An abstract class used to define the properties of specific geometry types. |
+| [PlaneGeometry](arkts-arkgraphics3d-scenetypes-planegeometry-c.md) | A plane geometry type that inherits from GeometryDefinition. |
+| [SphereGeometry](arkts-arkgraphics3d-scenetypes-spheregeometry-c.md) | A sphere geometry type that inherits from GeometryDefinition. |
 
 ### Interfaces
 
@@ -44,16 +30,16 @@
 
 | Name | Description |
 | --- | --- |
-| [GeometryType](arkts-arkgraphics3d-scenetypes-geometrytype-e.md) | Types of geometric shapes. |
-| [PrimitiveTopology](arkts-arkgraphics3d-scenetypes-primitivetopology-e.md) | How vertices in a sequence form triangles. |
-| [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md) | The enum of rendering pipeline type. |
+| [GeometryType](arkts-arkgraphics3d-scenetypes-geometrytype-e.md) | Enumerates the geometry types. |
+| [PrimitiveTopology](arkts-arkgraphics3d-scenetypes-primitivetopology-e.md) | Enumerates the vertex processing methods. |
+| [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md) | Enumerates the rendering pipeline types. |
 | [ShadowAlgorithmType](arkts-arkgraphics3d-scenetypes-shadowalgorithmtype-e.md) | the type of shadow algorithm |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [Position3](arkts-arkgraphics3d-position3-t.md) | 3D position information, the unit is the scene unit in the world coordinate system (e.g., cm, m, km). |
-| [Rotation3](arkts-arkgraphics3d-rotation3-t.md) | 3D rotation info as euler angles, the unit is radian. |
-| [Scale3](arkts-arkgraphics3d-scale3-t.md) | 3D scale information. |
+| [Position3](arkts-arkgraphics3d-position3-t.md) | Position of an object in 3D space. The type is a three-dimensional vector. The unit is the scene unit in the world coordinate system (such as cm, m, and km). The value can be any value. |
+| [Rotation3](arkts-arkgraphics3d-rotation3-t.md) | Rotation of an object in 3D space. The type is a three-dimensional vector in the unit of radian (rad). The value can be any value. |
+| [Scale3](arkts-arkgraphics3d-scale3-t.md) | Scaling of an object in 3D space. The value is of the Vec3 type. Any 3D vector. |
 

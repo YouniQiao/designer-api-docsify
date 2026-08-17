@@ -4,9 +4,7 @@ Enumerates system material types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-uiMaterial-export enum MaterialType--><!--Device-uiMaterial-export enum MaterialType-End-->
 
@@ -20,13 +18,11 @@ Enumerates system material types.
 IMMERSIVE = 2
 ```
 
-Immersive material type. It is used only by the **type** attribute of the [MaterialInfo](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialinfo-i.md#MaterialInfo) API to identify the current material type and does not map to underlying features. The actual material effect is implemented by the [ImmersiveMaterial](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial) class.
+Immersive material type. It is used only by the **type** attribute of the [MaterialInfo](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialinfo-i.md#materialinfo) API to identify the current material type and does not map to underlying features. The actual material effect is implemented by the [ImmersiveMaterial](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md#immersivematerial) class.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

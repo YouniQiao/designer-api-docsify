@@ -2,10 +2,6 @@
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface LocaleResponse--><!--Device-unnamed-export interface LocaleResponse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -28,10 +24,6 @@ Country or region. Example: CN.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LocaleResponse-countryOrRegion: string--><!--Device-LocaleResponse-countryOrRegion: string-End-->
@@ -50,10 +42,6 @@ Text layout direction. Available values are as follows: ltr: The text direction 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LocaleResponse-dir: "ltr" | "rtl"--><!--Device-LocaleResponse-dir: "ltr" | "rtl"-End-->
@@ -71,10 +59,6 @@ Current language of the application. Example: zh.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,11 +4,9 @@
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [bundleMonitor/bundleMonitor](arkts-bundle-bundlemonitor.md#@ohos.bundle.bundleMonitor)
+**Substitutes:** [bundleMonitor/bundleMonitor](arkts-bundle-bundlemonitor.md#ohosbundlebundlemonitor)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -30,11 +28,9 @@ Used to obtain information when a bundle is installed.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo-(System-API))
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#bundlechangedinfo-system-api)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -56,11 +52,9 @@ Used to obtain information when a bundle is uninstalled.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo-(System-API))
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#bundlechangedinfo-system-api)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -82,11 +76,9 @@ Used to obtain information when a bundle is updated.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo-(System-API))
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#bundlechangedinfo-system-api)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 

@@ -4,9 +4,7 @@ Defines the struct of AccessibilityActionOptions that can affect operation under
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface AccessibilityActionOptions--><!--Device-unnamed-export declare interface AccessibilityActionOptions-End-->
 
@@ -24,9 +22,7 @@ scrollStep - the step when the component is scrolled by accessibility.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

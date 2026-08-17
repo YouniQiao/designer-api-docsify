@@ -16,10 +16,6 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
 - API version 10 - 24: ohos.permission.ACCESS_BLUETOOTH
@@ -48,7 +44,7 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

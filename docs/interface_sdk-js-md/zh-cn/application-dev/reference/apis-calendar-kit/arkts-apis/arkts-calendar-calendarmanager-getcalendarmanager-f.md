@@ -10,10 +10,6 @@ function getCalendarManager(context: Context) : CalendarManager
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -34,7 +30,7 @@ function getCalendarManager(context: Context) : CalendarManager
 | --- | --- |
 | [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) | 返回创建的CalendarManager对象。 |
 
-## 示例
+**示例**
 
 示例中的mContext的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 

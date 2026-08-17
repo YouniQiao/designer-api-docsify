@@ -4,10 +4,6 @@ Enumerates data change types. Use the enum name rather than the enum value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-enum ChangeType--><!--Device-relationalStore-enum ChangeType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -21,10 +17,6 @@ DATA_CHANGE = 0
 Data change.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
@@ -42,10 +34,6 @@ ASSET_CHANGE = 1
 Asset change.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC

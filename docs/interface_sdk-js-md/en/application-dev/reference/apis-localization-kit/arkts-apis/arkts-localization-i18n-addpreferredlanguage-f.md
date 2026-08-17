@@ -16,8 +16,6 @@ Adds a preferred language to the specified position on the preferred language li
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
@@ -39,7 +37,7 @@ Adds a preferred language to the specified position on the preferred language li
 | --- | --- |
 | boolean | true** if the operation is successful, and **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

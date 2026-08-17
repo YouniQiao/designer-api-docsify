@@ -16,10 +16,6 @@ Opens a serial port device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-serialManager-function open(portId: int): void--><!--Device-serialManager-function open(portId: int): void-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -28,7 +24,7 @@ Opens a serial port device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getPortList). |
+| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 
 **Error codes:**
 
@@ -40,7 +36,7 @@ Opens a serial port device.
 | [31400002](../../apis-basic-services-kit/errorcode-usb.md#31400002-no-serial-port-device-access-permission) | Access denied. Call requestSerialRight to request user authorization first. |
 | [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
 
-## Examples
+**Examples**
 
 The following sample code shows the basic process for calling the open API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 

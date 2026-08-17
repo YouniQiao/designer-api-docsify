@@ -1,12 +1,8 @@
 # SmartGestureController
 
-Provides the capability to enable smart gestures, monitor them, control the selection state, and dynamically determine smart gesture behavior. > **NOTE：**> > The following APIs must be called using a **SmartGestureController** instance obtained via > [getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getSmartGestureController) in **UIContext**.
+Provides the capability to enable smart gestures, monitor them, control the selection state, and dynamically determine smart gesture behavior. > **NOTE：**> > The following APIs must be called using a **SmartGestureController** instance obtained via > [getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getsmartgesturecontroller) in **UIContext**.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class SmartGestureController--><!--Device-unnamed-export class SmartGestureController-End-->
 
@@ -47,6 +43,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## clearMonitors
@@ -58,10 +56,6 @@ clearMonitors(): void
 Clears all monitoring callbacks registered for the current **UIContext**.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,10 +75,6 @@ Clears the currently selected node of smart gestures.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -102,10 +92,6 @@ enableSmartTapAndSlideGestures(enabled: boolean): void
 Sets whether to enable the tap and slide operations of smart gestures. > **NOTE：**> > - This API affects only the tap and slide smart gestures, not the wrist-turn gesture. > > - When disabled, the smartGestureShortcut > attribute on the component side is retained, but the tap and slide smart gestures will not be responded to.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,13 +113,9 @@ Sets whether to enable the tap and slide operations of smart gestures. > **NOTE�
 registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void
 ```
 
-Registers a smart gesture monitoring callback. Before the system processes the current smart gesture, the application can receive the default action handling of the current gesture and apply custom intervention. The callback is used for asynchronous callbacks. > **NOTE：**> > - This API enables the application to receive the system's handling intent for the current smart gesture event > before it is processed by the system and apply custom intervention. > > - Users can customize the behavior of the current smart gesture through this callback. > > - Multiple monitoring callbacks can be registered. They are triggered in the reverse order of registration (the > last registered one is executed first). When a monitoring callback consumes the smart gesture event, that is, > when the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution).isConsumed is **true**, > subsequent monitoring callbacks will not be executed. > > - If the same callback is registered repeatedly, only the first registration takes effect; duplicate > registrations are ignored. > > - The return value of the callback must be a valid [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution) > instance; otherwise, the modification will not take effect.
+Registers a smart gesture monitoring callback. Before the system processes the current smart gesture, the application can receive the default action handling of the current gesture and apply custom intervention. The callback is used for asynchronous callbacks. > **NOTE：**> > - This API enables the application to receive the system's handling intent for the current smart gesture event > before it is processed by the system and apply custom intervention. > > - Users can customize the behavior of the current smart gesture through this callback. > > - Multiple monitoring callbacks can be registered. They are triggered in the reverse order of registration (the > last registered one is executed first). When a monitoring callback consumes the smart gesture event, that is, > when the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#gesturehandlingresolution).isConsumed is **true**, > subsequent monitoring callbacks will not be executed. > > - If the same callback is registered repeatedly, only the first registration takes effect; duplicate > registrations are ignored. > > - The return value of the callback must be a valid [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#gesturehandlingresolution) > instance; otherwise, the modification will not take effect.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,10 +141,6 @@ Requests to set the specified component as the current smart gesture selected no
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -186,10 +164,6 @@ unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, Gesture
 Unregisters a smart gesture monitoring callback.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

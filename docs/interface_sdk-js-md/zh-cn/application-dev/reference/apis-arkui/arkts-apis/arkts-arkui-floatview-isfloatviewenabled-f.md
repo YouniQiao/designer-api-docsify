@@ -10,10 +10,6 @@ function isFloatViewEnabled(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-floatView-function isFloatViewEnabled(): boolean--><!--Device-floatView-function isFloatViewEnabled(): boolean-End-->
@@ -26,7 +22,7 @@ function isFloatViewEnabled(): boolean
 | --- | --- |
 | boolean | 当前设备是否支持标准悬浮窗功能。true表示支持，false则表示不支持。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let enable: boolean = floatView.isFloatViewEnabled();

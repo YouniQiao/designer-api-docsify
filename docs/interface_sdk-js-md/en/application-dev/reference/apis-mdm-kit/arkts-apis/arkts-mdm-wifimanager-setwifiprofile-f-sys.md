@@ -16,11 +16,9 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setWifiProfileSync)
+**Substitutes:** [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setwifiprofilesync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_WIFI
 
@@ -50,7 +48,7 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
@@ -88,11 +86,9 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setWifiProfileSync)
+**Substitutes:** [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setwifiprofilesync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_WIFI
 
@@ -127,7 +123,7 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';

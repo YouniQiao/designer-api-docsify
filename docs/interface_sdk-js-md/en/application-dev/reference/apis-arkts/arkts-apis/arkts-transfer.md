@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace transfer--><!--Device-unnamed-declare namespace transfer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -36,6 +32,6 @@ import { transfer } from 'transfer';
 
 | Name | Description |
 | --- | --- |
-| [transferDynamic](arkts-arkts-transfer-transferdynamic-f.md#transferDynamic) | Converting the 1.2 object to a 1.0 object. |
-| [transferStatic](arkts-arkts-transfer-transferstatic-f.md#transferStatic) | Converting the 1.0 object to a 1.2 object. |
+| [transferDynamic](arkts-arkts-transfer-transferdynamic-f.md#transferdynamic) | Converting the 1.2 object to a 1.0 object. |
+| [transferStatic](arkts-arkts-transfer-transferstatic-f.md#transferstatic) | Converting the 1.0 object to a 1.2 object. |
 

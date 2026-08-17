@@ -4,10 +4,6 @@ Defines Close contextMenu.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ContextMenu--><!--Device-unnamed-declare class ContextMenu-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,8 +17,6 @@ static close()
 Invoking method close.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Deprecated since:** 18
 

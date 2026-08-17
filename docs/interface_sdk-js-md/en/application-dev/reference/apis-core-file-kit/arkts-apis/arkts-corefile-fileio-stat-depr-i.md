@@ -4,11 +4,9 @@ Provides detailed file information. Before calling a method of the **Stat** clas
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Stat](arkts-corefile-file-fs-stat-i.md#Stat)
+**Substitutes:** [Stat](arkts-corefile-file-fs-stat-i.md#stat)
 
 <!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 
@@ -24,11 +22,9 @@ Checks whether this file is a block special file. A block special file supports 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isBlockDevice](arkts-corefile-file-fs-stat-i.md#isBlockDevice)
+**Substitutes:** [isBlockDevice](arkts-corefile-file-fs-stat-i.md#isblockdevice)
 
 <!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
@@ -40,7 +36,7 @@ Checks whether this file is a block special file. A block special file supports 
 | --- | --- |
 | boolean | Returns **true** if it is a block special file; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -57,11 +53,9 @@ Checks whether this file is a character special file. A character special file s
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isCharacterDevice](arkts-corefile-file-fs-stat-i.md#isCharacterDevice)
+**Substitutes:** [isCharacterDevice](arkts-corefile-file-fs-stat-i.md#ischaracterdevice)
 
 <!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
 
@@ -73,7 +67,7 @@ Checks whether this file is a character special file. A character special file s
 | --- | --- |
 | boolean | Returns **true** if it is a character special file; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -90,11 +84,9 @@ Checks whether this file is a directory.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isDirectory](arkts-corefile-file-fs-stat-i.md#isDirectory)
+**Substitutes:** [isDirectory](arkts-corefile-file-fs-stat-i.md#isdirectory)
 
 <!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
 
@@ -106,7 +98,7 @@ Checks whether this file is a directory.
 | --- | --- |
 | boolean | Returns **true** if it is a directory; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dirPath = pathDir + "/test";
@@ -123,11 +115,9 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isFIFO](arkts-corefile-file-fs-stat-i.md#isFIFO)
+**Substitutes:** [isFIFO](arkts-corefile-file-fs-stat-i.md#isfifo)
 
 <!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
 
@@ -139,7 +129,7 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 | --- | --- |
 | boolean | Returns **true** if it is a named pipe; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -156,11 +146,9 @@ Checks whether this file is a regular file.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isFile](arkts-corefile-file-fs-stat-i.md#isFile)
+**Substitutes:** [isFile](arkts-corefile-file-fs-stat-i.md#isfile)
 
 <!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
 
@@ -172,7 +160,7 @@ Checks whether this file is a regular file.
 | --- | --- |
 | boolean | Returns **true** if it is a regular file; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -189,11 +177,9 @@ Checks whether this file is a socket.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isSocket](arkts-corefile-file-fs-stat-i.md#isSocket)
+**Substitutes:** [isSocket](arkts-corefile-file-fs-stat-i.md#issocket)
 
 <!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
 
@@ -205,7 +191,7 @@ Checks whether this file is a socket.
 | --- | --- |
 | boolean | Returns **true** if it is a socket; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -222,11 +208,9 @@ Checks whether this file is a symbolic link.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isSymbolicLink](arkts-corefile-file-fs-stat-i.md#isSymbolicLink)
+**Substitutes:** [isSymbolicLink](arkts-corefile-file-fs-stat-i.md#issymboliclink)
 
 <!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
@@ -238,7 +222,7 @@ Checks whether this file is a symbolic link.
 | --- | --- |
 | boolean | Returns **true** if it is a symbolic link; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test";
@@ -256,8 +240,6 @@ Time when the file was last accessed. The value is the number of seconds elapsed
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -279,8 +261,6 @@ Number of blocks occupied by a file. Each block is 512 bytes.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-Stat-readonly blocks: number--><!--Device-Stat-readonly blocks: number-End-->
@@ -298,8 +278,6 @@ Time of the last status change of the file. The value is the number of seconds e
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -321,8 +299,6 @@ Major device number.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-Stat-readonly dev: number--><!--Device-Stat-readonly dev: number-End-->
@@ -340,8 +316,6 @@ ID of the user group of the file.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -363,8 +337,6 @@ File identifier, which varies with files on the same device.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** ino
@@ -384,8 +356,6 @@ File type and permissions. The first four bits indicate the file type, and the l
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -407,8 +377,6 @@ Time when the file content was last modified. The value is the number of seconds
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [mtime](arkts-corefile-file-fs-stat-i.md#mtime)
@@ -429,8 +397,6 @@ Number of hard links in the file.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-Stat-readonly nlink: number--><!--Device-Stat-readonly nlink: number-End-->
@@ -449,8 +415,6 @@ Minor device number.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-Stat-readonly rdev: number--><!--Device-Stat-readonly rdev: number-End-->
@@ -468,8 +432,6 @@ File size, in bytes. This parameter is valid only for regular files.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -490,8 +452,6 @@ ID of the file owner.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

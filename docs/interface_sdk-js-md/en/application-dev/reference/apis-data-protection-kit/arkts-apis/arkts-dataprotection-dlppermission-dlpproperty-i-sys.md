@@ -4,10 +4,6 @@ Represents the authorization information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-dlpPermission-export interface DLPProperty--><!--Device-dlpPermission-export interface DLPProperty-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -32,10 +28,6 @@ Whether the file can be opened after the permission expires (with the editing pe
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-DLPProperty-actionUponExpiry?: ActionType--><!--Device-DLPProperty-actionUponExpiry?: ActionType-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -53,10 +45,6 @@ List of users who are authorized to access the DLP file. By default, this parame
 **Type:** Array&lt;[AuthUser](arkts-dataprotection-dlppermission-authuser-i-sys.md)&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-DLPProperty-authUserList?: Array<AuthUser>--><!--Device-DLPProperty-authUserList?: Array<AuthUser>-End-->
 
@@ -76,10 +64,6 @@ Account of the contact. The value contains 1 to 255 bytes. If the value is out o
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-DLPProperty-contactAccount: string--><!--Device-DLPProperty-contactAccount: string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -97,10 +81,6 @@ Permission granted to everyone. This parameter is left blank by default.
 **Type:** Array&lt;[DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-DLPProperty-everyoneAccessList?: Array<DLPFileAccess>--><!--Device-DLPProperty-everyoneAccessList?: Array<DLPFileAccess>-End-->
 
@@ -120,10 +100,6 @@ Timestamp when the file permission has expired. This parameter is left blank by 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-DLPProperty-expireTime?: number--><!--Device-DLPProperty-expireTime?: number-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -141,10 +117,6 @@ Whether the file can be accessed offline. **true**: yes; **false**: no.
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-DLPProperty-offlineAccess: boolean--><!--Device-DLPProperty-offlineAccess: boolean-End-->
 
@@ -164,10 +136,6 @@ Account of the owner who can set the permission. The value contains 1 to 255 byt
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-DLPProperty-ownerAccount: string--><!--Device-DLPProperty-ownerAccount: string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -186,10 +154,6 @@ Account ID of the owner. The value contains a maximum of 255 bytes. If the value
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-DLPProperty-ownerAccountID: string--><!--Device-DLPProperty-ownerAccountID: string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -207,10 +171,6 @@ Account type of the owner.
 **Type:** [AccountType](arkts-dataprotection-dlppermission-accounttype-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-DLPProperty-ownerAccountType: AccountType--><!--Device-DLPProperty-ownerAccountType: AccountType-End-->
 

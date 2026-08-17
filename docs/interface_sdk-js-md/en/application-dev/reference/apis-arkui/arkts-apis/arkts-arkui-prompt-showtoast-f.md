@@ -16,8 +16,6 @@ Displays the notification text.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** showToast
@@ -32,7 +30,7 @@ Displays the notification text.
 | --- | --- | --- | --- |
 | options | ShowToastOptions | Yes | Options. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import prompt from '@ohos.prompt'

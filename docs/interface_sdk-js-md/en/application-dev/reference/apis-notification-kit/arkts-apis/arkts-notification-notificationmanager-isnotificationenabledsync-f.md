@@ -16,10 +16,6 @@ Synchronously queries the notification authorization status of the current appli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-function isNotificationEnabledSync(): boolean--><!--Device-notificationManager-function isNotificationEnabledSync(): boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -42,7 +38,7 @@ requestEnableNotification requests notification
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let enabled: boolean = notificationManager.isNotificationEnabledSync();

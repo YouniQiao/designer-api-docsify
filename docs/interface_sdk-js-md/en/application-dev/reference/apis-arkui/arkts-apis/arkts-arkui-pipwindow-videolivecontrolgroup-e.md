@@ -1,12 +1,8 @@
 # VideoLiveControlGroup
 
-Enumerates the live video component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#PiPTemplateType) is set to **VIDEO_LIVE**.
+Enumerates the live video component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#piptemplatetype) is set to **VIDEO_LIVE**.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-PiPWindow-enum VideoLiveControlGroup--><!--Device-PiPWindow-enum VideoLiveControlGroup-End-->
 
@@ -21,10 +17,6 @@ VIDEO_PLAY_PAUSE = 401
 Play/Pause component group for live video.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -41,10 +33,6 @@ MUTE_SWITCH = 402
 Mute/Unmute component group.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

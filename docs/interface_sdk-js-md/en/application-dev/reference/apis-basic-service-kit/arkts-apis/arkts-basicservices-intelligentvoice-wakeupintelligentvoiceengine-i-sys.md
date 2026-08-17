@@ -4,10 +4,6 @@ Implements wakeup intelligent voice engine.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngine--><!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngine-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -29,10 +25,6 @@ getParameter(key: string, callback: AsyncCallback<string>): void
 Obtains the value of an intelligent voice parameter. This method uses an asynchronous callback to return the query result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -58,7 +50,7 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -84,10 +76,6 @@ getParameter(key: string): Promise<string>
 Obtains the value of an intelligent voice parameter. This method uses a promise to return the query result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -118,7 +106,7 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -143,10 +131,6 @@ Gets pulse-code modulation audio. This method uses a promise to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-WakeupIntelligentVoiceEngine-getPcm(): Promise<ArrayBuffer>--><!--Device-WakeupIntelligentVoiceEngine-getPcm(): Promise<ArrayBuffer>-End-->
@@ -170,7 +154,7 @@ Gets pulse-code modulation audio. This method uses a promise to return the resul
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700101](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -195,10 +179,6 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-WakeupIntelligentVoiceEngine-getSupportedRegions(callback: AsyncCallback<Array<string>>): void--><!--Device-WakeupIntelligentVoiceEngine-getSupportedRegions(callback: AsyncCallback<Array<string>>): void-End-->
@@ -220,7 +200,7 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -247,10 +227,6 @@ Obtains the supported regions, This method uses a promise to return the query re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-WakeupIntelligentVoiceEngine-getSupportedRegions(): Promise<Array<string>>--><!--Device-WakeupIntelligentVoiceEngine-getSupportedRegions(): Promise<Array<string>>-End-->
@@ -272,7 +248,7 @@ Obtains the supported regions, This method uses a promise to return the query re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -296,10 +272,6 @@ offWakeupIntelligentVoiceEvent(callback?: Callback<WakeupIntelligentVoiceEngineC
 Unsubscribes wakeup intelligent voice events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -332,10 +304,6 @@ Unsubscribes wakeup intelligent voice events.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-WakeupIntelligentVoiceEngine-off(type: 'wakeupIntelligentVoiceEvent', callback?: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void--><!--Device-WakeupIntelligentVoiceEngine-off(type: 'wakeupIntelligentVoiceEvent', callback?: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void-End-->
@@ -358,7 +326,7 @@ Unsubscribes wakeup intelligent voice events.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 if (wakeupIntelligentVoiceEngine != null) {
@@ -375,10 +343,6 @@ onWakeupIntelligentVoiceEvent(callback: Callback<WakeupIntelligentVoiceEngineCal
 Subscribes wakeup intelligent voice events. When wakeup intelligent voice events reach, the callback is invoked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -411,10 +375,6 @@ Subscribes wakeup intelligent voice events. When wakeup intelligent voice events
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-WakeupIntelligentVoiceEngine-on(type: 'wakeupIntelligentVoiceEvent', callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void--><!--Device-WakeupIntelligentVoiceEngine-on(type: 'wakeupIntelligentVoiceEvent', callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void-End-->
@@ -437,7 +397,7 @@ Subscribes wakeup intelligent voice events. When wakeup intelligent voice events
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 if (wakeupIntelligentVoiceEngine != null) {
@@ -458,10 +418,6 @@ read(): Promise<ArrayBuffer>
 Reads the buffer from wakeup engine. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -487,7 +443,7 @@ Reads the buffer from wakeup engine. This method uses a promise to return the re
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700101](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -512,10 +468,6 @@ Releases the engine, This method uses an asynchronous callback to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-WakeupIntelligentVoiceEngine-release(callback: AsyncCallback<void>): void--><!--Device-WakeupIntelligentVoiceEngine-release(callback: AsyncCallback<void>): void-End-->
@@ -537,7 +489,7 @@ Releases the engine, This method uses an asynchronous callback to return the res
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -563,10 +515,6 @@ Releases the engine, This method uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-WakeupIntelligentVoiceEngine-release(): Promise<void>--><!--Device-WakeupIntelligentVoiceEngine-release(): Promise<void>-End-->
@@ -588,7 +536,7 @@ Releases the engine, This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -611,10 +559,6 @@ setParameter(key: string, value: string, callback: AsyncCallback<void>): void
 Sets an intelligent voice parameter. This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -641,7 +585,7 @@ Sets an intelligent voice parameter. This method uses an asynchronous callback t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -666,10 +610,6 @@ setParameter(key: string, value: string): Promise<void>
 Sets an intelligent voice parameter. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -701,7 +641,7 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -724,10 +664,6 @@ setSensibility(sensibility: SensibilityType, callback: AsyncCallback<void>): voi
 Sets sensibility, This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -753,7 +689,7 @@ Sets sensibility, This method uses an asynchronous callback to return the result
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -778,10 +714,6 @@ setSensibility(sensibility: SensibilityType): Promise<void>
 Sets sensibility, This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -812,7 +744,7 @@ Sets sensibility, This method uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -835,10 +767,6 @@ setWakeupHapInfo(info: WakeupHapInfo, callback: AsyncCallback<void>): void
 Sets wakeup hap information, This method uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -864,7 +792,7 @@ Sets wakeup hap information, This method uses an asynchronous callback to return
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -895,10 +823,6 @@ Sets wakeup hap information, This method uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-WakeupIntelligentVoiceEngine-setWakeupHapInfo(info: WakeupHapInfo): Promise<void>--><!--Device-WakeupIntelligentVoiceEngine-setWakeupHapInfo(info: WakeupHapInfo): Promise<void>-End-->
@@ -928,7 +852,7 @@ Sets wakeup hap information, This method uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -955,10 +879,6 @@ startCapturer(channels: int): Promise<void>
 Starts the capturer. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE and ohos.permission.MICROPHONE
 
@@ -991,7 +911,7 @@ Starts the capturer. This method uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700102](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1015,10 +935,6 @@ Stops the capturer. This method uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 <!--Device-WakeupIntelligentVoiceEngine-stopCapturer(): Promise<void>--><!--Device-WakeupIntelligentVoiceEngine-stopCapturer(): Promise<void>-End-->
@@ -1041,7 +957,7 @@ Stops the capturer. This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

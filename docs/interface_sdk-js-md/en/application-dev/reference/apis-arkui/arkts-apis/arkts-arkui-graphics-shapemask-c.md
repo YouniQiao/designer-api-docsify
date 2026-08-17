@@ -4,10 +4,6 @@ Describes the shape mask.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class ShapeMask--><!--Device-unnamed-export declare class ShapeMask-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ constructor()
 A constructor used to create a **ShapeMask** instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Sets a round mask.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -62,7 +50,7 @@ Sets a round mask.
 | --- | --- | --- | --- |
 | circle | [Circle](../../apis-na/arkts-apis/arkts-na-graphics-circle-i.md) | Yes | Round shape. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
@@ -119,10 +107,6 @@ Sets the command for drawing a path.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -137,7 +121,7 @@ Sets the command for drawing a path.
 | --- | --- | --- | --- |
 | path | [CommandPath](../../apis-na/arkts-apis/arkts-na-graphics-commandpath-i.md) | Yes | Command for drawing a path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
@@ -195,10 +179,6 @@ Sets an oval mask.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -213,7 +193,7 @@ Sets an oval mask.
 | --- | --- | --- | --- |
 | oval | [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md) | Yes | Oval shape. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
@@ -265,10 +245,6 @@ Sets a rectangle mask.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -283,7 +259,7 @@ Sets a rectangle mask.
 | --- | --- | --- | --- |
 | rect | [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md) | Yes | Shape of the rectangle. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
@@ -345,10 +321,6 @@ Sets the mask in the shape of a rectangle with rounded corners.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -363,7 +335,7 @@ Sets the mask in the shape of a rectangle with rounded corners.
 | --- | --- | --- | --- |
 | roundRect | [RoundRect](../../apis-na/arkts-apis/arkts-na-graphics-roundrect-i.md) | Yes | Shape of the rectangle with rounded corners. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { RenderNode, FrameNode, NodeController, ShapeMask,RoundRect} from '@kit.ArkUI';
@@ -420,17 +392,13 @@ struct Index {
 fillColor: number
 ```
 
-Describes the fill color of the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **fillColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode) API to generate the final color.
+Describes the fill color of the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **fillColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#blendmode) API to generate the final color.
 
 **Type:** number
 
 **Default:** 0XFF000000
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -446,17 +414,13 @@ Describes the fill color of the mask, in ARGB format. The default value is **0XF
 strokeColor: number
 ```
 
-Sets the stroke color for the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **strokeColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode) API to generate the final color.
+Sets the stroke color for the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **strokeColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#blendmode) API to generate the final color.
 
 **Type:** number
 
 **Default:** 0XFF000000
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -479,10 +443,6 @@ Sets the stroke width for the mask, in px. The default value is **0**.
 **Default:** 0
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

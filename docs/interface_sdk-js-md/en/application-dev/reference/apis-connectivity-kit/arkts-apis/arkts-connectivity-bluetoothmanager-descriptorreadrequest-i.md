@@ -4,11 +4,9 @@ Describes the parameters of the Gatt client's descriptor read request.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md#DescriptorReadRequest)
+**Substitutes:** [DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md#descriptorreadrequest)
 
 <!--Device-bluetoothManager-interface DescriptorReadRequest--><!--Device-bluetoothManager-interface DescriptorReadRequest-End-->
 
@@ -32,11 +30,9 @@ The UUID of the characteristic to which the descriptor belongs
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#characteristicuuid)
 
 <!--Device-DescriptorReadRequest-characteristicUuid: string--><!--Device-DescriptorReadRequest-characteristicUuid: string-End-->
 
@@ -54,11 +50,9 @@ The UUID of a DescriptorReadRequest instance
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [descriptorUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#descriptorUuid)
+**Substitutes:** [descriptorUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#descriptoruuid)
 
 <!--Device-DescriptorReadRequest-descriptorUuid: string--><!--Device-DescriptorReadRequest-descriptorUuid: string-End-->
 
@@ -76,11 +70,9 @@ Indicates the address of the client that initiates the read request
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](arkts-connectivity-ble-descriptorreadrequest-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-ble-descriptorreadrequest-i.md#deviceid)
 
 <!--Device-DescriptorReadRequest-deviceId: string--><!--Device-DescriptorReadRequest-deviceId: string-End-->
 
@@ -97,8 +89,6 @@ Indicates the byte offset of the start position for reading characteristic value
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -120,11 +110,9 @@ The UUID of the service to which the descriptor belongs
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#serviceuuid)
 
 <!--Device-DescriptorReadRequest-serviceUuid: string--><!--Device-DescriptorReadRequest-serviceUuid: string-End-->
 
@@ -142,11 +130,9 @@ The Id of the read request
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [transId](arkts-connectivity-ble-descriptorreadrequest-i.md#transId)
+**Substitutes:** [transId](arkts-connectivity-ble-descriptorreadrequest-i.md#transid)
 
 <!--Device-DescriptorReadRequest-transId: number--><!--Device-DescriptorReadRequest-transId: number-End-->
 

@@ -4,9 +4,7 @@ Describe the types for expanding the safe area in layout.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum LayoutSafeAreaType--><!--Device-unnamed-export declare enum LayoutSafeAreaType-End-->
 
@@ -22,9 +20,7 @@ Default non-safe area of the system, including the status bar and navigation bar
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

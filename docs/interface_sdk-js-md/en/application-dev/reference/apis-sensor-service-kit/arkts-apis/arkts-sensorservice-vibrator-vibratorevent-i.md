@@ -4,10 +4,6 @@ Vibration event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-interface VibratorEvent--><!--Device-vibrator-interface VibratorEvent-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -30,10 +26,6 @@ Vibration duration. This parameter is optional, in ms. The value range is (0,500
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VibratorEvent-duration?: int--><!--Device-VibratorEvent-duration?: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -49,10 +41,6 @@ Vibration event type.
 **Type:** [VibratorEventType](arkts-sensorservice-vibrator-vibratoreventtype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VibratorEvent-eventType: VibratorEventType--><!--Device-VibratorEvent-eventType: VibratorEventType-End-->
 
@@ -70,10 +58,6 @@ Vibration frequency. This parameter is optional. The value range is [0,100]. If 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VibratorEvent-frequency?: int--><!--Device-VibratorEvent-frequency?: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -89,10 +73,6 @@ Channel number. This parameter is optional. The value range is [0,2]. If this pa
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VibratorEvent-index?: int--><!--Device-VibratorEvent-index?: int-End-->
 
@@ -110,10 +90,6 @@ Vibration intensity. This parameter is optional. The value range is [0,100]. If 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VibratorEvent-intensity?: int--><!--Device-VibratorEvent-intensity?: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -130,10 +106,6 @@ Adjustment points of the vibration curve.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VibratorEvent-points?: Array<VibratorCurvePoint>--><!--Device-VibratorEvent-points?: Array<VibratorCurvePoint>-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -149,10 +121,6 @@ Vibration start time, in ms. The value range is [0,1800000].
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VibratorEvent-time: int--><!--Device-VibratorEvent-time: int-End-->
 

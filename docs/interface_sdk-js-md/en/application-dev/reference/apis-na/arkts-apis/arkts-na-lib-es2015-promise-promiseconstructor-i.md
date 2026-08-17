@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface PromiseConstructor--><!--Device-unnamed-interface PromiseConstructor-End-->
 
 ## all
@@ -17,10 +13,6 @@ all<T extends readonly unknown[] | []>(values: T): Promise<{ -readonly [P in key
 Creates a Promise that is resolved with an array of results when all of the provided Promises resolve, or rejected when any Promise is rejected.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-PromiseConstructor-all<T extends readonly unknown[] | []>(values: T): Promise<{ -readonly [P in keyof T]: Awaited<T[P]> }>--><!--Device-PromiseConstructor-all<T extends readonly unknown[] | []>(values: T): Promise<{ -readonly [P in keyof T]: Awaited<T[P]> }>-End-->
 
@@ -46,10 +38,6 @@ Creates a new Promise.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-PromiseConstructor-new <T>(executor: (resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void): Promise<T>--><!--Device-PromiseConstructor-new <T>(executor: (resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void): Promise<T>-End-->
 
 **Parameters:**
@@ -73,10 +61,6 @@ race<T extends readonly unknown[] | []>(values: T): Promise<Awaited<T[number]>>
 Creates a Promise that is resolved or rejected when any of the provided Promises are resolved or rejected.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-PromiseConstructor-race<T extends readonly unknown[] | []>(values: T): Promise<Awaited<T[number]>>--><!--Device-PromiseConstructor-race<T extends readonly unknown[] | []>(values: T): Promise<Awaited<T[number]>>-End-->
 
@@ -102,10 +86,6 @@ Creates a new rejected promise for the provided reason.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-PromiseConstructor-reject<T = never>(reason?: any): Promise<T>--><!--Device-PromiseConstructor-reject<T = never>(reason?: any): Promise<T>-End-->
 
 **Parameters:**
@@ -130,10 +110,6 @@ Creates a new resolved promise.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-PromiseConstructor-resolve(): Promise<void>--><!--Device-PromiseConstructor-resolve(): Promise<void>-End-->
 
 **Return value:**
@@ -151,10 +127,6 @@ resolve<T>(value: T): Promise<Awaited<T>>
 Creates a new resolved promise for the provided value.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-PromiseConstructor-resolve<T>(value: T): Promise<Awaited<T>>--><!--Device-PromiseConstructor-resolve<T>(value: T): Promise<Awaited<T>>-End-->
 
@@ -179,10 +151,6 @@ resolve<T>(value: T | PromiseLike<T>): Promise<Awaited<T>>
 Creates a new resolved promise for the provided value.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-PromiseConstructor-resolve<T>(value: T | PromiseLike<T>): Promise<Awaited<T>>--><!--Device-PromiseConstructor-resolve<T>(value: T | PromiseLike<T>): Promise<Awaited<T>>-End-->
 
@@ -209,10 +177,6 @@ A reference to the prototype.
 **Type:** Promise&lt;any&gt;
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-PromiseConstructor-readonly prototype: Promise<any>--><!--Device-PromiseConstructor-readonly prototype: Promise<any>-End-->
 

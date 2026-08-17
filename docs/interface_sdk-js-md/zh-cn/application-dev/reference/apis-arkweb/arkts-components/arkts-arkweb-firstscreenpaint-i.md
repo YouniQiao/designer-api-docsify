@@ -1,12 +1,8 @@
 # FirstScreenPaint
 
-检测到首屏渲染时的事件信息。
+提供首屏渲染事件的信息，包括URL和绘制时间。适用于需要监控页面首屏渲染性能的场景，提升性能优化的准确性和用户体验。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface FirstScreenPaint--><!--Device-unnamed-declare interface FirstScreenPaint-End-->
 
@@ -24,10 +20,6 @@ url所指页面首屏绘制完成的时刻。 单位：毫秒。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-FirstScreenPaint-firstScreenPaintTime: number--><!--Device-FirstScreenPaint-firstScreenPaintTime: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -44,10 +36,6 @@ url所指页面开始导航的时刻。 单位：毫秒。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-FirstScreenPaint-navigationStartTime: number--><!--Device-FirstScreenPaint-navigationStartTime: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -63,10 +51,6 @@ url: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FirstScreenPaint-url: string--><!--Device-FirstScreenPaint-url: string-End-->
 

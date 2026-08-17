@@ -4,11 +4,9 @@ Enum for location priority
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md#LocationRequestPriority)
+**Substitutes:** [LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md#locationrequestpriority)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -24,11 +22,9 @@ UNSET = 0x200
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UNSET](arkts-location-geolocationmanager-locationrequestpriority-e.md#UNSET)
+**Substitutes:** [UNSET](arkts-location-geolocationmanager-locationrequestpriority-e.md#unset)
 
 <!--Device-LocationRequestPriority-UNSET = 0x200--><!--Device-LocationRequestPriority-UNSET = 0x200-End-->
 
@@ -42,11 +38,9 @@ ACCURACY
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ACCURACY](arkts-location-geolocationmanager-locationrequestpriority-e.md#ACCURACY)
+**Substitutes:** [ACCURACY](arkts-location-geolocationmanager-locationrequestpriority-e.md#accuracy)
 
 <!--Device-LocationRequestPriority-ACCURACY--><!--Device-LocationRequestPriority-ACCURACY-End-->
 
@@ -60,11 +54,9 @@ LOW_POWER
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LOW_POWER](arkts-location-geolocationmanager-locationrequestpriority-e.md#LOW_POWER)
+**Substitutes:** [LOW_POWER](arkts-location-geolocationmanager-locationrequestpriority-e.md#lowpower)
 
 <!--Device-LocationRequestPriority-LOW_POWER--><!--Device-LocationRequestPriority-LOW_POWER-End-->
 
@@ -78,11 +70,9 @@ FIRST_FIX
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FIRST_FIX](arkts-location-geolocationmanager-locationrequestpriority-e.md#FIRST_FIX)
+**Substitutes:** [FIRST_FIX](arkts-location-geolocationmanager-locationrequestpriority-e.md#firstfix)
 
 <!--Device-LocationRequestPriority-FIRST_FIX--><!--Device-LocationRequestPriority-FIRST_FIX-End-->
 

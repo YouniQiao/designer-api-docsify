@@ -4,10 +4,6 @@ Provide a DateTime formatting interface which could format DateTime to StyleStri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class StyledDateTimeFormat--><!--Device-i18n-export class StyledDateTimeFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -29,10 +25,6 @@ Creates an object for formatting the time and date that need to be displayed in 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,        options?: StyledDateTimeFormatOptions)--><!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,        options?: StyledDateTimeFormatOptions)-End-->
@@ -43,10 +35,10 @@ Creates an object for formatting the time and date that need to be displayed in 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md) | Yes | Object used to format the date and time. |
-| options | [StyledDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-styleddatetimeformatoptions-i.md) | No |  |
+| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | Yes | Object used to format the date and time. |
+| options | [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | No |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -93,10 +85,6 @@ Formats the date and time as a rich text object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledDateTimeFormat-format(date: Date): StyledString--><!--Device-StyledDateTimeFormat-format(date: Date): StyledString-End-->
@@ -115,7 +103,7 @@ Formats the date and time as a rich text object.
 | --- | --- |
 | [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-styledstring-c.md) | Rich text object after formatting. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

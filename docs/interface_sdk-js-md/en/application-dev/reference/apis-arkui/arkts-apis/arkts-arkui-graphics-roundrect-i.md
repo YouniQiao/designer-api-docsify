@@ -4,10 +4,6 @@ Describes a rectangle with rounded corners.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface RoundRect--><!--Device-unnamed-export interface RoundRect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Attributes of rounded corners.
 **Type:** [CornerRadius](../../apis-na/arkts-apis/arkts-na-cornerradius-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Attributes of the rectangle.
 **Type:** [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,13 +2,11 @@
 
 Defines the AlertDialog with confirm button.
 
-**Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md#AlertDialogParam)
+**Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md#alertdialogparam)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface AlertDialogParamWithConfirm--><!--Device-unnamed-export declare interface AlertDialogParamWithConfirm-End-->
 
@@ -26,9 +24,7 @@ Invoke the commit function. Anonymous Object Rectification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,7 +12,7 @@ import { CompletionHandler } from 'CompletionHandler';
 
 | Name | Description |
 | --- | --- |
-| [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md) | CompletionHandler provides two callback functions, [onRequestSuccess](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onRequestSuccess) and [onRequestFailure](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onRequestFailure), to handle the results of successful and failed application launch requests, respectively. |
+| [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md) | CompletionHandler provides two callback functions, [onRequestSuccess](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestsuccess) and [onRequestFailure](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestfailure), to handle the results of successful and failed application launch requests, respectively. |
 
 ### Types
 

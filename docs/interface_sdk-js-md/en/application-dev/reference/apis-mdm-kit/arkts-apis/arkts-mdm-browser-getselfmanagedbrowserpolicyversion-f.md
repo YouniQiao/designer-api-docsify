@@ -16,10 +16,6 @@ Obtains the browser policy version of the current device.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string--><!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string-End-->
@@ -32,7 +28,7 @@ Obtains the browser policy version of the current device.
 | --- | --- |
 | string | Browser policy version. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';

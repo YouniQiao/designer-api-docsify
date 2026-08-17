@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sharing-interface Privilege--><!--Device-sharing-interface Privilege-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -25,10 +21,6 @@ creatable?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Privilege-creatable?: boolean--><!--Device-Privilege-creatable?: boolean-End-->
 
@@ -48,10 +40,6 @@ deletable?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Privilege-deletable?: boolean--><!--Device-Privilege-deletable?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -69,10 +57,6 @@ readable?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Privilege-readable?: boolean--><!--Device-Privilege-readable?: boolean-End-->
 
@@ -92,10 +76,6 @@ shareable?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Privilege-shareable?: boolean--><!--Device-Privilege-shareable?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -113,10 +93,6 @@ writable?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Privilege-writable?: boolean--><!--Device-Privilege-writable?: boolean-End-->
 

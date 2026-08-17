@@ -1,12 +1,8 @@
 # BlankScreenDetectionConfig
 
-定义白屏检测的策略配置选项。
+提供白屏检测的策略配置选项，包括检测时机、方法和阈值。适用于需要自定义白屏检测行为的场景，提升白屏监控的灵活性和准确性。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface BlankScreenDetectionConfig--><!--Device-unnamed-declare interface BlankScreenDetectionConfig-End-->
 
@@ -18,15 +14,11 @@
 contentfulNodesCountThreshold?: number
 ```
 
-在使用到检测有内容的节点检测策略时，才会生效。 可以设置0-\${检测策略最大节点}，如果小于等于阈值则会触发近似白屏。 默认值：0。
+在使用到检测有内容的节点检测策略时，才会生效。 可以设置0-\${检测策略最大节点}，如果小于等于阈值则会触发近似白屏。 默认值：0。 注：检测策略最大节点依赖于所选择的检测策略。
 
 **类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 <!--Device-BlankScreenDetectionConfig-contentfulNodesCountThreshold?: number--><!--Device-BlankScreenDetectionConfig-contentfulNodesCountThreshold?: number-End-->
 
@@ -44,10 +36,6 @@ detectionMethods?: BlankScreenDetectionMethod[]
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 <!--Device-BlankScreenDetectionConfig-detectionMethods?: BlankScreenDetectionMethod[]--><!--Device-BlankScreenDetectionConfig-detectionMethods?: BlankScreenDetectionMethod[]-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -64,10 +52,6 @@ detectionTiming?: number[]
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 <!--Device-BlankScreenDetectionConfig-detectionTiming?: number[]--><!--Device-BlankScreenDetectionConfig-detectionTiming?: number[]-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -78,15 +62,11 @@ detectionTiming?: number[]
 enable: boolean
 ```
 
-是否使能白屏策略功能。
+是否启用白屏策略功能。true表示启用，false表示不启用。
 
 **类型：** boolean
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 <!--Device-BlankScreenDetectionConfig-enable: boolean--><!--Device-BlankScreenDetectionConfig-enable: boolean-End-->
 

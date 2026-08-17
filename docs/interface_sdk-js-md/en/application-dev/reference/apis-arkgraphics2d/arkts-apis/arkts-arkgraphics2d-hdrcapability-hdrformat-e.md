@@ -4,10 +4,6 @@ Enumerates the HDR formats.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hdrCapability-enum HDRFormat--><!--Device-hdrCapability-enum HDRFormat-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -21,10 +17,6 @@ NONE = 0
 Unsupported HDR type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Videos in Hybrid Log-Gamma (HLG) format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HDRFormat-VIDEO_HLG = 1--><!--Device-HDRFormat-VIDEO_HLG = 1-End-->
@@ -61,10 +49,6 @@ VIDEO_HDR10 = 2
 Videos in HDR10 format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +66,6 @@ Videos in HDR_VIVID format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HDRFormat-VIDEO_HDR_VIVID = 3--><!--Device-HDRFormat-VIDEO_HDR_VIVID = 3-End-->
@@ -101,10 +81,6 @@ IMAGE_HDR_VIVID_DUAL = 4
 Images in HDR_VIVID format, stored in dual JPEG format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,10 +98,6 @@ Images in HDR_VIVID format, stored in single HEIF format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HDRFormat-IMAGE_HDR_VIVID_SINGLE = 5--><!--Device-HDRFormat-IMAGE_HDR_VIVID_SINGLE = 5-End-->
@@ -141,10 +113,6 @@ IMAGE_HDR_ISO_DUAL = 6
 Images in HDR_ISO format, stored in dual JPEG format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,10 +130,6 @@ Images in HDR_ISO format, stored in single HEIF format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HDRFormat-IMAGE_HDR_ISO_SINGLE = 7--><!--Device-HDRFormat-IMAGE_HDR_ISO_SINGLE = 7-End-->
@@ -181,10 +145,6 @@ VIDEO_AIHDR = 8
 Videos in AIHDR format.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

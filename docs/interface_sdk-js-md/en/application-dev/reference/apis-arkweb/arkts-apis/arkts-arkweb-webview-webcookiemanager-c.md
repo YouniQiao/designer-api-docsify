@@ -1,12 +1,8 @@
 # WebCookieManager
 
-Provides methods for managing the web cookies.
+WebCookieManager is the cookie manager for Web components, providing global management capabilities for cookies in Web components. With this class, developers can obtain, set, save, and clear cookies, as well as control cookie permissions. All methods of this class are static, and all Web components in an app share a single WebCookieManager instance. The cookie format complies with the [RFC6265](https://www.rfc-editor.org/info/rfc6265/) standard. When browsing web pages in Privacy Mode, data such as cookies and caches are not written to local persistent storage. After the Web component in Privacy Mode is destroyed, this data is cleared and not retained. > **NOTE：**> > - Static methods must be used on the user interface (UI) thread.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class WebCookieManager--><!--Device-webview-class WebCookieManager-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 static clearAllCookies(): Promise<void>
 ```
 
-Remove all cookies Asynchronously.
+Clears all cookies, including session cookies and persistent cookies. This API uses a promise to return the result. To clear only session cookies, use [clearSessionCookie](#clearsessioncookie).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +34,7 @@ Remove all cookies Asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise resolved after the cookies have been deleted. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -56,13 +48,9 @@ Remove all cookies Asynchronously.
 static clearAllCookies(callback: AsyncCallback<void>): void
 ```
 
-Remove all cookies Asynchronously.
+Clears all cookies, including session cookies and persistent cookies. This API uses an asynchronous callback to return the result. To clear only session cookies, use [clearSessionCookie](#clearsessioncookie).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,7 +62,7 @@ Remove all cookies Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Called after the cookies have been deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result, indicating whether all cookies are cleared successfully. |
 
 **Error codes:**
 
@@ -88,13 +76,9 @@ Remove all cookies Asynchronously.
 static clearAllCookiesSync(incognito?: boolean): void
 ```
 
-Remove all cookies.
+Clears all cookies, including session cookies and persistent cookies. To clear only session cookies, use [clearSessionCookieSync](#clearsessioncookiesync).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -106,7 +90,7 @@ Remove all cookies.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | {@code true} remove all cookies in incognito mode; {@code false} otherwise. |
+| incognito | boolean | No | Whether to clear all cookies in incognito mode. The value **true** means to clear all cookies in incognito mode, and **false** means the opposite. <br>The default value is **false**. <br>If **undefined** or **null** is passed, cookies are not cleared. |
 
 ## clearSessionCookie
 
@@ -114,13 +98,9 @@ Remove all cookies.
 static clearSessionCookie(): Promise<void>
 ```
 
-Delete the session cookies Asynchronously.
+Clears all session cookies. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -132,7 +112,7 @@ Delete the session cookies Asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise resolved after the cookies have been deleted. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -146,13 +126,9 @@ Delete the session cookies Asynchronously.
 static clearSessionCookie(callback: AsyncCallback<void>): void
 ```
 
-Delete the session cookies Asynchronously.
+Clears all session cookies. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -164,7 +140,7 @@ Delete the session cookies Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Called after the cookies have been deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function used to return whether all session cookies are cleared successfully. |
 
 **Error codes:**
 
@@ -178,13 +154,9 @@ Delete the session cookies Asynchronously.
 static clearSessionCookieSync(): void
 ```
 
-Delete the session cookies.
+Deletes all session cookies.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -198,13 +170,9 @@ Delete the session cookies.
 static configCookie(url: string, value: string): Promise<void>
 ```
 
-Set a single cookie (key-value pair) for the given URL Asynchronously.
+Sets a single cookie value for a specified URL. This API uses a promise to return the result. > **NOTE：**> > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol. > > - To overwrite HttpOnly cookies, specify the HttpOnly attribute in the value.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -216,14 +184,14 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookie is to be set. |
-| value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
+| url | string | Yes | URL of the cookie to set. A complete URL is recommended. |
+| value | string | Yes | Cookie value to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise resolved after the cookies of given URL have been set. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -239,13 +207,9 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>
 ```
 
-Set a single cookie (key-value pair) for the given URL Asynchronously.
+Sets a single cookie value for a specified URL. This API uses a promise to return the result. > **NOTE：**> > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>--><!--Device-WebCookieManager-static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>-End-->
 
@@ -255,16 +219,16 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookie is to be set. |
-| value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| incognito | boolean | Yes | {@code true} set a single cookie (key-value pair) for the given URL in incognito mode; {@code false} otherwise. |
-| includeHttpOnly | boolean | Yes | {@code true} HTTP-only cookies can also be overwritten; {@code false} otherwise. |
+| url | string | Yes | URL to which the cookie to set belongs. A complete URL is recommended. |
+| value | string | Yes | Cookie value to set. |
+| incognito | boolean | Yes | Whether to set the cookies in incognito mode. The value **true** means to set the cookies in incognito mode, and **false** means the opposite. |
+| includeHttpOnly | boolean | Yes | Whether to overwrite cookies containing **HttpOnly**. The value **true** means to overwrite cookies containing **HttpOnly**, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise resolved after the cookies of given URL have been set. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -280,13 +244,9 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 static configCookie(url: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Set a single cookie (key-value pair) for the given URL Asynchronously.
+Sets a single cookie value for a specified URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol. > > - To overwrite HttpOnly cookies, specify the HttpOnly attribute in the value.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -298,9 +258,9 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookie is to be set. |
-| value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Called after the cookies have been set. |
+| url | string | Yes | URL of the cookie to set. A complete URL is recommended. |
+| value | string | Yes | Cookie value to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of setting the cookie. |
 
 **Error codes:**
 
@@ -316,13 +276,9 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 static configCookieSync(url: string, value: string, incognito?: boolean): void
 ```
 
-Set a single cookie (key-value pair) for the given URL. > **NOTE：**> > You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on > the page. > > Cookies are periodically saved to the disk every 30s. You can also use the > **saveCookieAsync** API to forcibly save cookies to the disk. > > The **value** parameter must comply with the format of the Set-Cookie HTTP response header. The value is in the > format of "key=value", followed by a list of cookie attributes separated by semicolons, for example, > **"key=value;Max-Age=100"**. > > If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie has > expired, it will not be stored. To set multiple cookies, call this method multiple times. > > If **configCookieSync()** is used to set cookies for two or more times, the cookies set each time are separated > by semicolons. > > If the specified value contains the **Secure** attribute, the URL must use the **https://** protocol. > > To override HttpOnly cookies, the HttpOnly attribute must be specified in the value.
+Sets a cookie for the specified URL. > **NOTE：**> > - In configCookieSync, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookieSync is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol. > > - To overwrite HttpOnly cookies, specify the HttpOnly attribute in the value.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -334,9 +290,9 @@ Set a single cookie (key-value pair) for the given URL. > **NOTE：**> > You can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookie is to be set. |
-| value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| incognito | boolean | No | {@code true} set a single cookie (key-value pair) for the given URL in incognito mode; {@code false} otherwise. |
+| url | string | Yes | URL of the cookie to set. A complete URL is recommended. |
+| value | string | Yes | Cookie value to set. |
+| incognito | boolean | No | Whether to set the cookies in incognito mode. The value **true** means to set the cookies in incognito mode, and **false** means the opposite. <br>The default value is **false**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Error codes:**
 
@@ -352,13 +308,9 @@ Set a single cookie (key-value pair) for the given URL. > **NOTE：**> > You can
 static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void
 ```
 
-Set a single cookie (key-value pair) for the given URL. > **NOTE：**> > You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on > the page. > > It is recommended that cookie syncing be completed before the **Web** component is loaded. > > Cookies are periodically saved to the disk every 30s. You can also use the > **saveCookieAsync** API to forcibly save cookies to the disk. > > The **value** parameter must comply with the format of the Set-Cookie HTTP response header. The value is in the > format of "key=value", followed by a list of cookie attributes separated by semicolons, for example, > **"key=value;Max-Age=100"**. > > If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie has > expired, it will not be stored. To set multiple cookies, call this method multiple times. > > If **configCookieSync()** is used to set cookies for two or more times, the cookies set each time are separated > by semicolons. > > If the specified value contains the **Secure** attribute, the URL must use the **https://** protocol.
+Sets a single cookie value for a specified URL. > **NOTE：**> > - In configCookieSync, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookieSync is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void--><!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void-End-->
 
@@ -368,10 +320,10 @@ Set a single cookie (key-value pair) for the given URL. > **NOTE：**> > You can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookie is to be set. |
-| value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| incognito | boolean | Yes | {@code true} set a single cookie (key-value pair) for the given URL in incognito mode; {@code false} otherwise. |
-| includeHttpOnly | boolean | Yes | {@code true} HTTP-only cookies can also be overwritten; {@code false} otherwise. |
+| url | string | Yes | URL of the cookie to set. A complete URL is recommended. |
+| value | string | Yes | Cookie value to set. |
+| incognito | boolean | Yes | Whether to set the cookies in incognito mode. The value **true** means to set the cookies in incognito mode, and **false** means the opposite. |
+| includeHttpOnly | boolean | Yes | Whether to overwrite cookies containing **HttpOnly**. The value **true** means to overwrite cookies containing **HttpOnly**, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -387,15 +339,13 @@ Set a single cookie (key-value pair) for the given URL. > **NOTE：**> > You can
 static deleteEntireCookie(): void
 ```
 
-Remove all cookies.
+Deletes all cookies.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [clearAllCookiesSync](#clearAllCookiesSync)
+**Substitutes:** [clearAllCookiesSync](#clearallcookiessync)
 
 <!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
 
@@ -407,15 +357,13 @@ Remove all cookies.
 static deleteSessionCookie(): void
 ```
 
-Delete the session cookies.
+Deletes all session cookies.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [clearSessionCookieSync](#clearSessionCookieSync)
+**Substitutes:** [clearSessionCookieSync](#clearsessioncookiesync)
 
 <!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
 
@@ -427,13 +375,9 @@ Delete the session cookies.
 static existCookie(incognito?: boolean): boolean
 ```
 
-Check whether exists any cookies.
+Checks whether cookies exist.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -445,13 +389,13 @@ Check whether exists any cookies.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | {@code true} check whether exists any cookies. in incognito mode; {@code false} otherwise.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to check for cookies in incognito mode. The value **true** means to check for cookies in incognito mode, and **false** means the opposite. <br>The default value is **false**. <br>If **undefined** or **null** is passed, **undefined** is returned.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | True if exists more than one cookie else false; |
+| boolean | Whether cookies exist. The value **true** means that cookies exist, and **false** means the opposite. |
 
 ## fetchAllCookies
 
@@ -459,13 +403,9 @@ Check whether exists any cookies.
 static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>
 ```
 
-Fetches all stored cookies asynchronously.
+Obtains all cookies. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>--><!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>-End-->
 
@@ -481,7 +421,7 @@ Fetches all stored cookies asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | A promise resolved after the cookies gotten. |
+| Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | Promise used to obtain all cookies and their corresponding field values. |
 
 ## fetchCookie
 
@@ -489,13 +429,9 @@ Fetches all stored cookies asynchronously.
 static fetchCookie(url: string): Promise<string>
 ```
 
-Gets all cookies for the given URL Asynchronously.
+Obtains the cookie value of a specified URL. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -507,13 +443,13 @@ Gets all cookies for the given URL Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookies are requested. |
+| url | string | Yes | URL for which the cookie is to be obtained. It is recommended to use a complete URL. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | A promise resolved after the cookies of given URL have been gotten. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -528,13 +464,9 @@ Gets all cookies for the given URL Asynchronously.
 static fetchCookie(url: string, incognito: boolean): Promise<string>
 ```
 
-Gets all cookies for the given URL Asynchronously.
+Obtains the cookie value of a specified URL. This API uses a promise to return the result.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean): Promise<string>-End-->
 
@@ -544,48 +476,14 @@ Gets all cookies for the given URL Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookies are requested. |
-| incognito | boolean | Yes | {@code true} gets all cookies for the given URL in incognito mode; {@code false} otherwise. |
+| url | string | Yes | URL for which the cookie is to be obtained. A complete URL is recommended. |
+| incognito | boolean | Yes | Whether to obtain the cookie in incognito mode. The value **true** means to obtain the cookie in incognito mode, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | A promise resolved after the cookies of given URL have been gotten. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
-
-## fetchCookie
-
-```TypeScript
-static fetchCookie(url: string, callback: AsyncCallback<string>): void
-```
-
-Gets all cookies for the given URL Asynchronously.
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WebCookieManager-static fetchCookie(url: string, callback: AsyncCallback<string>): void--><!--Device-WebCookieManager-static fetchCookie(url: string, callback: AsyncCallback<string>): void-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookies are requested. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Called after the cookies of given URL have been gotten. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -600,13 +498,9 @@ Gets all cookies for the given URL Asynchronously.
 static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: boolean): Promise<string>
 ```
 
-Gets all cookies for the given URL Asynchronously.
+Obtains the cookies corresponding to a specified URL. The parameter incognito specifies whether to obtain cookies in Privacy Mode, and the parameter includePartitionedCookies specifies whether to obtain first-party partitioned cookies. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -618,20 +512,50 @@ Gets all cookies for the given URL Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which to fetch cookies. |
-| incognito | boolean | Yes | Whether to fetch cookies in incognito mode. |
-| includePartitionedCookies | boolean | Yes | If true, allows fetching first-party partitioned cookies. |
+| url | string | Yes | URL of the cookie to obtain. A complete URL is recommended. |
+| incognito | boolean | Yes | Whether to obtain the in-memory cookies of the Web component in Privacy Mode. The value **true** indicates Privacy Mode, and **false** indicates Non-Privacy Mode. <br>Passing **undefined** or **null** throws error code 401. |
+| includePartitionedCookies | boolean | Yes | Whether to allow obtaining first-party partitioned cookies. The value **true** indicates that first-party partitioned cookies are allowed, and **false** indicates that they are not allowed. <br>Passing **undefined** or **null** throws error code 401. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | A promise resolved with the cookie string. |
+| Promise&lt;string&gt; | Promise used to obtain the cookies corresponding to the specified URL. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
+
+## fetchCookie
+
+```TypeScript
+static fetchCookie(url: string, callback: AsyncCallback<string>): void
+```
+
+Obtains the cookie value of a specified URL. This API uses an asynchronous callback to return the result.
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebCookieManager-static fetchCookie(url: string, callback: AsyncCallback<string>): void--><!--Device-WebCookieManager-static fetchCookie(url: string, callback: AsyncCallback<string>): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | URL for which the cookie is to be obtained. A complete URL is recommended. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to obtain the cookie. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 
 ## fetchCookieSync
@@ -640,13 +564,9 @@ Gets all cookies for the given URL Asynchronously.
 static fetchCookieSync(url: string, incognito?: boolean): string
 ```
 
-Gets all cookies for the given URL. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> **fetchCookieSync()** is used to obtain all cookie values. Cookie values are separated by semicolons. However, a specific cookie value cannot be obtained separately. &lt;/p&gt;
+Obtains the cookie value of the specified URL. > **NOTE：**> > - The system automatically deletes expired cookies. For data with the same key name, the new data overwrites > the previous data. > > - To obtain a usable cookie value, you are advised to pass a complete URL to fetchCookieSync. > > - fetchCookieSync is used to obtain all cookie values. Each cookie value is separated by "; ", but a specific > cookie value cannot be obtained individually.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -658,14 +578,14 @@ Gets all cookies for the given URL. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookies are requested. |
-| incognito | boolean | No | {@code true} gets all cookies for the given URL in incognito mode; {@code false} otherwise. |
+| url | string | Yes | URL for which the cookie is to be obtained. A complete URL is recommended. |
+| incognito | boolean | No | Whether to obtain the cookie in incognito mode. The value **true** means to obtain the cookie in incognito mode, and **false** means the opposite. <br>The default value is **false**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | The cookie value for the given URL. |
+| string | Cookie value corresponding to the specified URL. |
 
 **Error codes:**
 
@@ -680,13 +600,9 @@ Gets all cookies for the given URL. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&g
 static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCookies?: boolean): string
 ```
 
-Gets all cookies for the given URL. &lt;strong&gt;API Note&lt;/strong&gt;:<br> **fetchCookieSync()** is used to obtain all cookie values. Cookie values are separated by semicolons. However, a specific cookie value cannot be obtained separately.
+Obtains the cookies corresponding to a specified URL. The optional parameter incognito specifies whether to obtain cookies in Privacy Mode, and the optional parameter includePartitionedCookies specifies whether to obtain first-party partitioned cookies. > **NOTE：**> > - The system automatically deletes expired cookies. For data with the same key name, the new data overwrites > the previous data. > > - To obtain a usable cookie value, you are advised to pass a complete URL to fetchCookieSync. > > - fetchCookieSync is used to obtain all cookie values. Each cookie value is separated by "; ", but a specific > cookie value cannot be obtained individually.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -698,15 +614,15 @@ Gets all cookies for the given URL. &lt;strong&gt;API Note&lt;/strong&gt;:<br> *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookies are requested. |
-| incognito | boolean | No | {@code true} gets all cookies for the given URL in incognito mode; {@code false} otherwise. Default is false. |
-| includePartitionedCookies | boolean | No | If true, allows fetching first-party partitioned cookies. Default is false. |
+| url | string | Yes | URL of the cookie to obtain. A complete URL is recommended. |
+| incognito | boolean | No | Whether to obtain the in-memory cookies of the Web component in Privacy Mode. The value **true** indicates Privacy Mode, and **false** indicates Non-Privacy Mode. <br>Default value: **false**. <br>Passing **undefined** or **null** throws error code 401. |
+| includePartitionedCookies | boolean | No | Whether to allow obtaining first-party partitioned cookies. The value **true** indicates that first-party partitioned cookies are allowed, and **false** indicates that they are not allowed. <br>Default value: **false**. <br>Passing **undefined** or **null** throws error code 401. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | The cookie value for the given URL. |
+| string | Cookies corresponding to the specified URL. |
 
 **Error codes:**
 
@@ -720,15 +636,13 @@ Gets all cookies for the given URL. &lt;strong&gt;API Note&lt;/strong&gt;:<br> *
 static getCookie(url: string): string
 ```
 
-Gets all cookies for the given URL.
+Obtains the cookie value of the specified URL.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [fetchCookieSync](#fetchCookieSync)
+**Substitutes:** [fetchCookieSync](#fetchcookiesync)
 
 <!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
 
@@ -738,13 +652,13 @@ Gets all cookies for the given URL.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookies are requested. |
+| url | string | Yes | URL for which the cookie is to be obtained. A complete URL is recommended. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | The cookie value for the given URL. |
+| string | Cookie value corresponding to the specified URL. |
 
 **Error codes:**
 
@@ -759,13 +673,9 @@ Gets all cookies for the given URL.
 static isCookieAllowed(): boolean
 ```
 
-Get whether the instance can send and accept cookies.
+Checks whether the **WebCookieManager** instance has the permission to send and receive cookies.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -777,7 +687,7 @@ Get whether the instance can send and accept cookies.
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the instance can send and accept cookies else false. |
+| boolean | Whether the **WebCookieManager** instance has the permission to send and receive cookies. <br>The value **true** indicates that the **WebCookieManager** instance has the permission to send and receive cookies, and **false** indicates the opposite. <br>Default value: **true**. |
 
 ## isThirdPartyCookieAllowed
 
@@ -785,13 +695,9 @@ Get whether the instance can send and accept cookies.
 static isThirdPartyCookieAllowed(): boolean
 ```
 
-Get whether the instance can send and accept thirdparty cookies.
+Checks whether the **WebCookieManager** instance has the permission to send and receive third-party cookies.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -803,7 +709,7 @@ Get whether the instance can send and accept thirdparty cookies.
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the instance can send and accept thirdparty cookies else false. |
+| boolean | Whether the **WebCookieManager** instance has the permission to send and receive third-party cookies. <br>The value **true** indicates that the **WebCookieManager** instance has the permission to send and receive third-party cookies, and **false** indicates the opposite. <br>The default value is **false**. |
 
 ## putAcceptCookieEnabled
 
@@ -811,13 +717,9 @@ Get whether the instance can send and accept thirdparty cookies.
 static putAcceptCookieEnabled(accept: boolean): void
 ```
 
-Set whether the instance should send and accept cookies. By default this is set to be true.
+Sets whether the **WebCookieManager** instance has the permission to send and receive cookies.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -829,7 +731,7 @@ Set whether the instance should send and accept cookies. By default this is set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accept | boolean | Yes | Whether the instance should send and accept cookies. |
+| accept | boolean | Yes | Whether to have the permission to send and receive cookies. The default value is **true**, indicating that the app has the permission to send and receive cookies. The value **false** indicates that the app does not have the permission to send and receive cookies. |
 
 **Error codes:**
 
@@ -843,13 +745,9 @@ Set whether the instance should send and accept cookies. By default this is set 
 static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 ```
 
-Set whether the instance should send and accept thirdparty cookies. By default this is set to be false.
+Sets whether the **WebCookieManager** instance has the permission to send and receive third-party cookies.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -861,7 +759,7 @@ Set whether the instance should send and accept thirdparty cookies. By default t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accept | boolean | Yes | Whether the instance should send and accept thirdparty cookies. |
+| accept | boolean | Yes | Whether to allow sending and receiving third-party cookies. <br>The value **true** means allowed, and **false** means not allowed. |
 
 **Error codes:**
 
@@ -875,13 +773,9 @@ Set whether the instance should send and accept thirdparty cookies. By default t
 static saveCookieAsync(): Promise<void>
 ```
 
-Save the cookies Asynchronously.
+Saves all cookies that can be obtained through fetchCookie and need to be persisted to the disk. This API uses a promise to return the result. > **NOTE：**> > - saveCookieAsync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are > not persisted on PC/2-in-1 and tablet devices. Even if saveCookieAsync is called, session cookies are not > written to the disk.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -893,7 +787,7 @@ Save the cookies Asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise resolved after the cookies have been saved. |
+| Promise&lt;void&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 
@@ -907,13 +801,9 @@ Save the cookies Asynchronously.
 static saveCookieAsync(callback: AsyncCallback<void>): void
 ```
 
-Save the cookies Asynchronously.
+Asynchronously saves all cookies (that can be obtained through **fetchCookie** and need to be persisted) to the disk. > **NOTE：**> > - saveCookieAsync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are > not persisted on PC/2-in-1 and tablet devices. Even if saveCookieAsync is called, session cookies are not > written to the disk.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -925,7 +815,7 @@ Save the cookies Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Called after the cookies have been saved. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to indicate whether the cookie is saved successfully. |
 
 **Error codes:**
 
@@ -939,13 +829,9 @@ Save the cookies Asynchronously.
 static saveCookieSync(): void
 ```
 
-Save the cookies synchronously. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> **saveCookieSync** is used to forcibly write cookies that need to be persisted to disks. Session cookies are not persisted on PCs, 2-in-1 devices, or tablets, even if **saveCookieSync** is invoked. **saveCookieSync** blocks the caller until the operation is complete. During this period, I/O operations may be performed. &lt;/p&gt;
+Synchronously saves all cookies (that can be obtained through **fetchCookie** and need to be persisted) to the disk. > **NOTE：**> > - saveCookieSync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are > not persisted on PC/2-in-1 and tablet devices. Even if saveCookieSync is called, session cookies are not > written to the disk. > > - saveCookieSync blocks the caller until the operation is complete, during which I/O operations may be > performed.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static saveCookieSync(): void--><!--Device-WebCookieManager-static saveCookieSync(): void-End-->
 
@@ -957,15 +843,13 @@ Save the cookies synchronously. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<
 static setCookie(url: string, value: string): void
 ```
 
-Set a single cookie (key-value pair) for the given URL.
+Sets a cookie for the specified URL.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [configCookieSync](#configCookieSync)
+**Substitutes:** [configCookieSync](#configcookiesync)
 
 <!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
 
@@ -975,8 +859,8 @@ Set a single cookie (key-value pair) for the given URL.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The URL for which the cookie is to be set. |
-| value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
+| url | string | Yes | URL of the cookie to set. A complete URL is recommended. |
+| value | string | Yes | Cookie value to set. |
 
 **Error codes:**
 
@@ -992,13 +876,9 @@ Set a single cookie (key-value pair) for the given URL.
 static setLazyInitializeWebEngine(lazy: boolean): void
 ```
 
-Delays the initialization of the web engine. By default, the web engine is initialized when the CookieManager interface is called. By setting the 'lazy' parameter to true, the web engine will not be initialized when the CookieManager interface is called. Instead, the web engine will be initialized either when the web component is created or when initializeWebEngine is called.
+Sets whether to delay the initialization of the ArkWeb kernel. If this method is not called, the ArkWeb kernel is not delayed by default. > **NOTE：**> > - This API is a global static method. It must be called before using ArkWeb components and initializing the > ArkWeb kernel. Otherwise, the setting does not take effect. > > - This API applies only to APIs that initialize CookieManager when called, such as other APIs of this class > WebCookieManager. After this API is called and set to **true**, calling applicable APIs skips the > initialization of the ArkWeb kernel when initializing CookieManager. You need to initialize the ArkWeb kernel > separately afterwards.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-WebCookieManager-static setLazyInitializeWebEngine(lazy: boolean): void--><!--Device-WebCookieManager-static setLazyInitializeWebEngine(lazy: boolean): void-End-->
 

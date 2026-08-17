@@ -16,8 +16,6 @@ Enables or disables airplane mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-settings-function enableAirplaneMode(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-settings-function enableAirplaneMode(enable: boolean, callback: AsyncCallback<void>): void-End-->
@@ -31,7 +29,7 @@ Enables or disables airplane mode.
 | enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enable airplane mode, and {@code false} means to disable airplane mode. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of enableAirplaneMode result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let isEnabled :boolean = true;
@@ -55,8 +53,6 @@ Enables or disables airplane mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-settings-function enableAirplaneMode(enable: boolean): Promise<void>--><!--Device-settings-function enableAirplaneMode(enable: boolean): Promise<void>-End-->
@@ -75,7 +71,7 @@ Enables or disables airplane mode.
 | --- | --- |
 | Promise&lt;void&gt; | Return Promise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let isEnabled :boolean = true;

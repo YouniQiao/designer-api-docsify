@@ -16,10 +16,6 @@ Obtain the backupVersion.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-backup-function getBackupVersion(): string--><!--Device-backup-function getBackupVersion(): string-End-->
@@ -41,7 +37,7 @@ Obtain the backupVersion.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

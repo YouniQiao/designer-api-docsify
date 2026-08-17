@@ -4,10 +4,6 @@ Enumerates dialup types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export enum DialType--><!--Device-call-export enum DialType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -23,10 +19,6 @@ DIAL_CARRIER_TYPE = 0
 Carrier.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DialType-DIAL_CARRIER_TYPE = 0--><!--Device-DialType-DIAL_CARRIER_TYPE = 0-End-->
 
@@ -44,10 +36,6 @@ Voice mail.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DialType-DIAL_VOICE_MAIL_TYPE = 1--><!--Device-DialType-DIAL_VOICE_MAIL_TYPE = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -64,10 +52,6 @@ OTT.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DialType-DIAL_OTT_TYPE = 2--><!--Device-DialType-DIAL_OTT_TYPE = 2-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -83,10 +67,6 @@ DIAL_XCALL_TYPE = 3
 X-Call.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-DialType-DIAL_XCALL_TYPE = 3--><!--Device-DialType-DIAL_XCALL_TYPE = 3-End-->
 

@@ -16,10 +16,6 @@ Subscribes to agent-powered reminder state changes. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -47,7 +43,7 @@ Subscribes to agent-powered reminder state changes. This API uses a promise to r
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';

@@ -4,10 +4,6 @@ Enumerates the complexity degree of the image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-effectKit-enum PictureComplexityDegree--><!--Device-effectKit-enum PictureComplexityDegree-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -23,10 +19,6 @@ UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0
 Default value. The complexity degree of the image is unknown.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PictureComplexityDegree-UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0--><!--Device-PictureComplexityDegree-UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0-End-->
 
@@ -44,10 +36,6 @@ The complexity degree of the image is pure.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PictureComplexityDegree-PURE_PICTURE = 1--><!--Device-PictureComplexityDegree-PURE_PICTURE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -64,10 +52,6 @@ The complexity degree of the image is moderate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PictureComplexityDegree-MODERATE_COMPLEXITY_PICTURE = 2--><!--Device-PictureComplexityDegree-MODERATE_COMPLEXITY_PICTURE = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -83,10 +67,6 @@ VERY_FLOWERY_PICTURE = 3
 The complexity degree of the image is very flowery.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PictureComplexityDegree-VERY_FLOWERY_PICTURE = 3--><!--Device-PictureComplexityDegree-VERY_FLOWERY_PICTURE = 3-End-->
 

@@ -4,10 +4,6 @@ Flag of the bundle package.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-freeInstall-export enum BundlePackFlag--><!--Device-freeInstall-export enum BundlePackFlag-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -23,10 +19,6 @@ GET_PACK_INFO_ALL = 0x00000000
 All information in the **pack.info** file.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundlePackFlag-GET_PACK_INFO_ALL = 0x00000000--><!--Device-BundlePackFlag-GET_PACK_INFO_ALL = 0x00000000-End-->
 
@@ -44,10 +36,6 @@ Package information in the **pack.info** file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundlePackFlag-GET_PACKAGES = 0x00000001--><!--Device-BundlePackFlag-GET_PACKAGES = 0x00000001-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -64,10 +52,6 @@ Bundle summary information in the **pack.info** file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundlePackFlag-GET_BUNDLE_SUMMARY = 0x00000002--><!--Device-BundlePackFlag-GET_BUNDLE_SUMMARY = 0x00000002-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -83,10 +67,6 @@ GET_MODULE_SUMMARY = 0x00000004
 Module summary information in the **pack.info** file.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundlePackFlag-GET_MODULE_SUMMARY = 0x00000004--><!--Device-BundlePackFlag-GET_MODULE_SUMMARY = 0x00000004-End-->
 

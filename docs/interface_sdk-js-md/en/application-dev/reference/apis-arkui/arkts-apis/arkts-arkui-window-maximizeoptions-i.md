@@ -4,10 +4,6 @@ Optional configuration for maximizing.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface MaximizeOptions--><!--Device-window-interface MaximizeOptions-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -32,10 +28,6 @@ The parameter controls the across-display mode policy of main windows. This para
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MaximizeOptions-acrossDisplayPresentation?: AcrossDisplayPresentation--><!--Device-MaximizeOptions-acrossDisplayPresentation?: AcrossDisplayPresentation-End-->
@@ -56,10 +48,6 @@ Layout when the window is maximized.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MaximizeOptions-maximizePresentation?: MaximizePresentation--><!--Device-MaximizeOptions-maximizePresentation?: MaximizePresentation-End-->
@@ -77,10 +65,6 @@ The configuration of snapshot animation. If not specified, the system default an
 **Type:** [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

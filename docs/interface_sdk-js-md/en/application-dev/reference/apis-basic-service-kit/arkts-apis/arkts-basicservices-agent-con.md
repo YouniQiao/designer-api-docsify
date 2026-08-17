@@ -10,10 +10,6 @@ Indicates to show completion notification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-agent-const VISIBILITY_COMPLETION: int--><!--Device-agent-const VISIBILITY_COMPLETION: int-End-->
@@ -29,10 +25,6 @@ const VISIBILITY_PROGRESS: int
 Indicates to show progress notification.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

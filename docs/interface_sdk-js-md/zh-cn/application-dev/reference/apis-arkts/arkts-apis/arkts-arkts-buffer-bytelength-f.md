@@ -13,10 +13,6 @@ function byteLength(
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-buffer-function byteLength(    string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer,    encoding?: BufferEncoding  ): number--><!--Device-buffer-function byteLength(    string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer,    encoding?: BufferEncoding  ): number-End-->
@@ -36,7 +32,7 @@ function byteLength(
 | --- | --- |
 | number | 返回指定字符串的字节数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -60,10 +56,6 @@ function byteLength(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-buffer-function byteLength(    doc: string | Buffer | TypedArray | DataView | ArrayBuffer,    encoding?: BufferEncoding  ): int--><!--Device-buffer-function byteLength(    doc: string | Buffer | TypedArray | DataView | ArrayBuffer,    encoding?: BufferEncoding  ): int-End-->
@@ -83,7 +75,7 @@ function byteLength(
 | --- | --- |
 | int | 返回指定字符串的字节数 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

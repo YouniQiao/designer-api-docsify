@@ -1,12 +1,8 @@
 # PlaybackCaptureStartState
 
-Defines the playback capture start state, which is returned asynchronously after calling [requestPlaybackCaptureStart](arkts-audio-audio-audiocapturer-i.md#requestPlaybackCaptureStart) function.
+Defines the playback capture start state, which is returned asynchronously after calling [requestPlaybackCaptureStart](arkts-audio-audio-audiocapturer-i.md#requestplaybackcapturestart) function.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-audio-enum PlaybackCaptureStartState--><!--Device-audio-enum PlaybackCaptureStartState-End-->
 
@@ -21,10 +17,6 @@ STATE_SUCCESS = 0
 Start playback capture success state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Start playback capture failed state, because the request for interrupt is denied
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlaybackCaptureStartState-STATE_FAILED = 1--><!--Device-PlaybackCaptureStartState-STATE_FAILED = 1-End-->
@@ -61,10 +49,6 @@ STATE_NOT_AUTHORIZED = 2
 Start playback capture but user not authorized state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

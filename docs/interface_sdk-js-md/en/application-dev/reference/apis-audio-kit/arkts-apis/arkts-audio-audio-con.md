@@ -10,10 +10,6 @@ Define default interrupt group id for audio.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-const DEFAULT_INTERRUPT_GROUP_ID: int--><!--Device-audio-const DEFAULT_INTERRUPT_GROUP_ID: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
@@ -27,10 +23,6 @@ const DEFAULT_VOLUME_GROUP_ID: int
 Define default volume group id for audio.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audio-const DEFAULT_VOLUME_GROUP_ID: int--><!--Device-audio-const DEFAULT_VOLUME_GROUP_ID: int-End-->
 

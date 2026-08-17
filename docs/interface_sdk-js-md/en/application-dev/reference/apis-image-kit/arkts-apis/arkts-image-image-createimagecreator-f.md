@@ -16,11 +16,9 @@ Creates an ImageCreator instance by specifying the image width, height, format, 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [createImageCreator](#createImageCreator)(size: Size, format: ImageFormat, capacity: int)
+**Substitutes:** [createImageCreator](#createimagecreator)(size: Size, format: ImageFormat, capacity: int)
 
 <!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator--><!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator-End-->
 
@@ -41,7 +39,7 @@ Creates an ImageCreator instance by specifying the image width, height, format, 
 | --- | --- |
 | [ImageCreator](arkts-image-image-imagecreator-i.md) | ImageCreator instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let creator: image.ImageCreator = image.createImageCreator(8192, 8192, image.ImageFormat.JPEG, 8);
@@ -57,10 +55,6 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: int): Ima
 Creates an ImageCreator instance by specifying the image size, format, and capacity. Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator--><!--Device-image-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator-End-->
 
@@ -86,7 +80,7 @@ Creates an ImageCreator instance by specifying the image size, format, and capac
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let size: image.Size = {

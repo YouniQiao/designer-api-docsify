@@ -16,10 +16,6 @@ Disable Wi-Fi hotspot function. This method is asynchronous. If Wi-Fi is enabled
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
 <!--Device-wifiManager-function disableHotspot(): void--><!--Device-wifiManager-function disableHotspot(): void-End-->
@@ -37,7 +33,7 @@ Disable Wi-Fi hotspot function. This method is asynchronous. If Wi-Fi is enabled
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
 | [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

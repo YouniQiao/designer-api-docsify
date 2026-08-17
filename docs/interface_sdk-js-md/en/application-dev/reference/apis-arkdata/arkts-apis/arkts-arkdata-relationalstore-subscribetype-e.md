@@ -4,10 +4,6 @@ Enumerates the subscription types. Use the enum name rather than the enum value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-enum SubscribeType--><!--Device-relationalStore-enum SubscribeType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -22,10 +18,6 @@ Subscribe to remote data changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 0--><!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -39,10 +31,6 @@ SUBSCRIBE_TYPE_CLOUD = 1
 Subscribe to cloud data changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
@@ -61,10 +49,6 @@ Subscribe to detailed information about cloud data changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -81,10 +65,6 @@ SUBSCRIBE_TYPE_LOCAL_DETAILS
 Subscribe to detailed information about local data changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL_DETAILS--><!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL_DETAILS-End-->
 

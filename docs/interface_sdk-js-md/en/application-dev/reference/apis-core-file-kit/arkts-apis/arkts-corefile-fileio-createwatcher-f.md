@@ -10,11 +10,9 @@ Listens for file or directory changes. This API uses an asynchronous callback to
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [createWatcher](arkts-corefile-file-fs-createwatcher-f.md#createWatcher)
+**Substitutes:** [createWatcher](arkts-corefile-file-fs-createwatcher-f.md#createwatcher)
 
 <!--Device-unnamed-declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher--><!--Device-unnamed-declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher-End-->
 

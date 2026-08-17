@@ -4,10 +4,6 @@ The enum of ranging stopped causes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-ranging-enum RangingStoppedCause--><!--Device-ranging-enum RangingStoppedCause-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -21,10 +17,6 @@ NO_ERROR = 0
 No error.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ An internal error occurred.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RangingStoppedCause-INTERNAL_ERROR = 1--><!--Device-RangingStoppedCause-INTERNAL_ERROR = 1-End-->
@@ -62,10 +50,6 @@ A service conflict occurs.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RangingStoppedCause-BUSINESS_CONFLICT = 2--><!--Device-RangingStoppedCause-BUSINESS_CONFLICT = 2-End-->
@@ -81,10 +65,6 @@ BACKGROUND_PAUSED = 3
 Ranging is stopped when the app goes to background.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

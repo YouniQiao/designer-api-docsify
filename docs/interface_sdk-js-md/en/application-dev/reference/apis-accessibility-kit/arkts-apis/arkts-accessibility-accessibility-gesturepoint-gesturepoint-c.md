@@ -1,12 +1,8 @@
-# GesturePoint
+# GesturePoint(Gesture Point)
 
 GesturePoint represents a gesture touch point and is the basic unit that constitutes a gesture path (GesturePath). This module is used to create touch point information for gesture paths, for use by accessibility applications to inject gestures.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class GesturePoint--><!--Device-unnamed-export declare class GesturePoint-End-->
 
@@ -28,8 +24,6 @@ Creates a **GesturePoint** instance based on the given X and Y coordinates.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-GesturePoint-constructor(positionX: double, positionY: double)--><!--Device-GesturePoint-constructor(positionX: double, positionY: double)-End-->
@@ -43,7 +37,7 @@ Creates a **GesturePoint** instance based on the given X and Y coordinates.
 | positionX | double | Yes | X coordinate of the touch point, in pixels (px). |
 | positionY | double | Yes | Y coordinate of the touch point, in pixels (px). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { GesturePoint } from '@kit.AccessibilityKit';
@@ -63,10 +57,6 @@ X coordinate of the touch point, in pixels (px).
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-GesturePoint-positionX: double--><!--Device-GesturePoint-positionX: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -82,10 +72,6 @@ Y coordinate of the touch point, in pixels (px).
 **Type:** double
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-GesturePoint-positionY: double--><!--Device-GesturePoint-positionY: double-End-->
 

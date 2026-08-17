@@ -2,13 +2,11 @@
 
 Error thrown when attempting to access a JSON element with an incompatible type. For example, trying to get a string value from a number element.
 
-**Inheritance/Implementation:** JsonTypeError extends [JsonError](arkts-na-jsonx-jsonerror-c.md#JsonError)
+**Inheritance/Implementation:** JsonTypeError extends [JsonError](arkts-na-jsonx-jsonerror-c.md#jsonerror)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-jsonx-export class JsonTypeError--><!--Device-jsonx-export class JsonTypeError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new JsonTypeError with the specified message.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

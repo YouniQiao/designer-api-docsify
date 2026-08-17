@@ -12,13 +12,9 @@ import { power } from 'power';
 function setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void
 ```
 
-Sets the power key filtering strategy. After the power service subscribes to the power key event, this API is used to configure the processing mode of this event. For details about the power key filtering strategy, see [power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md#PowerKeyFilteringStrategy).
+Sets the power key filtering strategy. After the power service subscribes to the power key event, this API is used to configure the processing mode of this event. For details about the power key filtering strategy, see [power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md#powerkeyfilteringstrategy).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.POWER_MANAGER
 
@@ -42,7 +38,7 @@ Sets the power key filtering strategy. After the power service subscribes to the
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

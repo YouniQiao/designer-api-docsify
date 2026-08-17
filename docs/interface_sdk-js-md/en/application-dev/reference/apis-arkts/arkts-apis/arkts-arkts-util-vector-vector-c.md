@@ -1,14 +1,12 @@
 # Vector
 
-Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the current memory area is reclaimed. Vector can be used to efficiently access elements. Both Vector and [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#ArrayList) are implemented based on arrays, but Vector provides more interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity each time, whereas ArrayList increases the capacity by 50%. **Recommended use case**: Use Vector when the data volume is large. This topic uses the following to identify the use of generics: - T: Type > **NOTE：**> > - The APIs provided by this module are deprecated since API version 9. You are advised to use > [@ohos.util.ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#ArrayList).
+Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the current memory area is reclaimed. Vector can be used to efficiently access elements. Both Vector and [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#arraylist) are implemented based on arrays, but Vector provides more interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity each time, whereas ArrayList increases the capacity by 50%. **Recommended use case**: Use Vector when the data volume is large. This topic uses the following to identify the use of generics: - T: Type > **NOTE：**> > - The APIs provided by this module are deprecated since API version 9. You are advised to use > [@ohos.util.ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#arraylist).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#ArrayList)
+**Substitutes:** [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#arraylist)
 
 <!--Device-unnamed-declare class Vector--><!--Device-unnamed-declare class Vector-End-->
 
@@ -30,8 +28,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-[Symbol.iterator](): IterableIterator<T>--><!--Device-Vector-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -44,7 +40,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | IterableIterator&lt;T&gt; |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -77,8 +73,6 @@ Adds an element at the end of this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-add(element: T): boolean--><!--Device-Vector-add(element: T): boolean-End-->
@@ -97,7 +91,7 @@ Adds an element at the end of this Vector.
 | --- | --- |
 | boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class C1 {
@@ -123,15 +117,13 @@ Clears all elements in this Vector and sets its length to **0**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-clear(): void--><!--Device-Vector-clear(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -152,8 +144,6 @@ Clones this Vector and returns a copy. The modification to the copy does not aff
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-clone(): Vector<T>--><!--Device-Vector-clone(): Vector<T>-End-->
@@ -166,7 +156,7 @@ Clones this Vector and returns a copy. The modification to the copy does not aff
 | --- | --- |
 | [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | New **Vector** instance obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -187,15 +177,13 @@ A constructor used to create a **Vector** instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-constructor()--><!--Device-Vector-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<string | number | Array<number>> = new Vector();
@@ -211,8 +199,6 @@ Converts this Vector into an array.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-convertToArray(): Array<T>--><!--Device-Vector-convertToArray(): Array<T>-End-->
@@ -225,7 +211,7 @@ Converts this Vector into an array.
 | --- | --- |
 | Array&lt;T&gt; | Array obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -245,8 +231,6 @@ copyToArray(array: Array<T>): void
 Copies elements in this Vector into an array to overwrite elements of the same position indexes.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -270,8 +254,6 @@ Uses a callback to traverse the elements in this Vector and obtain their positio
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void--><!--Device-Vector-forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void-End-->
@@ -285,7 +267,7 @@ Uses a callback to traverse the elements in this Vector and obtain their positio
 | callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | Yes | Callback invoked for replacement. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -308,8 +290,6 @@ Obtains an element at the specified position in this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-get(index: number): T--><!--Device-Vector-get(index: number): T-End-->
@@ -328,7 +308,7 @@ Obtains an element at the specified position in this Vector.
 | --- | --- |
 | T | Element obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -349,8 +329,6 @@ Obtains the capacity of this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-getCapacity(): number--><!--Device-Vector-getCapacity(): number-End-->
@@ -363,7 +341,7 @@ Obtains the capacity of this Vector.
 | --- | --- |
 | number | Capacity obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -384,8 +362,6 @@ Obtains the first element in this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-getFirstElement(): T--><!--Device-Vector-getFirstElement(): T-End-->
@@ -398,7 +374,7 @@ Obtains the first element in this Vector.
 | --- | --- |
 | T | The first element obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -419,8 +395,6 @@ Searches for an element forward from the specified position index and returns th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-getIndexFrom(element: T, index: number): number--><!--Device-Vector-getIndexFrom(element: T, index: number): number-End-->
@@ -440,7 +414,7 @@ Searches for an element forward from the specified position index and returns th
 | --- | --- |
 | number | Index of the element. If no match is found, **-1** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -461,8 +435,6 @@ Obtains the index of the first occurrence of the specified element in this Vecto
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-getIndexOf(element: T): number--><!--Device-Vector-getIndexOf(element: T): number-End-->
@@ -481,7 +453,7 @@ Obtains the index of the first occurrence of the specified element in this Vecto
 | --- | --- |
 | number | Index of the element. If no match is found, **-1** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -505,8 +477,6 @@ Obtains the last element in this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-getLastElement(): T--><!--Device-Vector-getLastElement(): T-End-->
@@ -519,7 +489,7 @@ Obtains the last element in this Vector.
 | --- | --- |
 | T | The last element obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -540,8 +510,6 @@ Searches for an element backward from the specified position index and returns t
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-getLastIndexFrom(element: T, index: number): number--><!--Device-Vector-getLastIndexFrom(element: T, index: number): number-End-->
@@ -561,7 +529,7 @@ Searches for an element backward from the specified position index and returns t
 | --- | --- |
 | number | Index of the element. If no match is found, **-1** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -582,8 +550,6 @@ Obtains the index of the last occurrence of the specified element in this Vector
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-getLastIndexOf(element: T): number--><!--Device-Vector-getLastIndexOf(element: T): number-End-->
@@ -602,7 +568,7 @@ Obtains the index of the last occurrence of the specified element in this Vector
 | --- | --- |
 | number | Index of the element. If no match is found, **-1** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -626,8 +592,6 @@ Checks whether this Vector has the specified element.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-has(element: T): boolean--><!--Device-Vector-has(element: T): boolean-End-->
@@ -646,7 +610,7 @@ Checks whether this Vector has the specified element.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the Vector has the specified element; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<string> = new Vector();
@@ -665,8 +629,6 @@ Increases the capacity of this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-increaseCapacityTo(newCapacity: number): void--><!--Device-Vector-increaseCapacityTo(newCapacity: number): void-End-->
@@ -679,7 +641,7 @@ Increases the capacity of this Vector.
 | --- | --- | --- | --- |
 | newCapacity | number | Yes | New capacity. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -701,8 +663,6 @@ Inserts an element within the length range and moves its subsequent elements rig
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-insert(element: T, index: number): void--><!--Device-Vector-insert(element: T, index: number): void-End-->
@@ -716,7 +676,7 @@ Inserts an element within the length range and moves its subsequent elements rig
 | element | T | Yes | Target element. |
 | index | number | Yes | Index of the position where the element is to be inserted. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<string | number | Object | Array<number>> = new Vector();
@@ -735,8 +695,6 @@ Checks whether this Vector is empty (contains no elements).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-isEmpty(): boolean--><!--Device-Vector-isEmpty(): boolean-End-->
@@ -749,7 +707,7 @@ Checks whether this Vector is empty (contains no elements).
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the Vector is empty; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -770,8 +728,6 @@ Removes the first occurrence of the specified element from this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-remove(element: T): boolean--><!--Device-Vector-remove(element: T): boolean-End-->
@@ -790,7 +746,7 @@ Removes the first occurrence of the specified element from this Vector.
 | --- | --- |
 | boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -811,8 +767,6 @@ Searches for an element based on its index, removes the element after returning 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-removeByIndex(index: number): T--><!--Device-Vector-removeByIndex(index: number): T-End-->
@@ -831,7 +785,7 @@ Searches for an element based on its index, removes the element after returning 
 | --- | --- |
 | T | Element removed. If the Vector is empty, **undefined** is returned. If the index is out of range, an exception is thrown. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -853,8 +807,6 @@ Removes from this Vector all of the elements within a range, including the eleme
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-removeByRange(fromIndex: number, toIndex: number): void--><!--Device-Vector-removeByRange(fromIndex: number, toIndex: number): void-End-->
@@ -868,7 +820,7 @@ Removes from this Vector all of the elements within a range, including the eleme
 | fromIndex | number | Yes | Index of the start position. |
 | toIndex | number | Yes | Index of the end position. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -889,8 +841,6 @@ Replaces all elements in this Vector with new elements, and returns the new ones
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void--><!--Device-Vector-replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void-End-->
@@ -904,7 +854,7 @@ Replaces all elements in this Vector with new elements, and returns the new ones
 | callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | Yes | Callback invoked for replacement. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -927,8 +877,6 @@ set(index: number, element: T): T
 Replaces an element at the specified position in this Vector with a given element.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -959,8 +907,6 @@ Sets a new length for this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-setLength(newSize: number): void--><!--Device-Vector-setLength(newSize: number): void-End-->
@@ -973,7 +919,7 @@ Sets a new length for this Vector.
 | --- | --- | --- | --- |
 | newSize | number | Yes | New length to set. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -995,8 +941,6 @@ Sorts elements in this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-sort(comparator?: (firstValue: T, secondValue: T) => number): void--><!--Device-Vector-sort(comparator?: (firstValue: T, secondValue: T) => number): void-End-->
@@ -1009,7 +953,7 @@ Sorts elements in this Vector.
 | --- | --- | --- | --- |
 | comparator | (firstValue: T, secondValue: T) =&gt; number | No | Callback invoked for sorting. The default value is this instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -1032,8 +976,6 @@ Obtains elements within a range in this Vector, including the element at the sta
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-subVector(fromIndex: number, toIndex: number): Vector<T>--><!--Device-Vector-subVector(fromIndex: number, toIndex: number): Vector<T>-End-->
@@ -1053,7 +995,7 @@ Obtains elements within a range in this Vector, including the element at the sta
 | --- | --- |
 | [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | New **Vector** instance obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -1077,8 +1019,6 @@ Uses commas (,) to concatenate elements in this Vector into a string.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-toString(): string--><!--Device-Vector-toString(): string-End-->
@@ -1091,7 +1031,7 @@ Uses commas (,) to concatenate elements in this Vector into a string.
 | --- | --- |
 | string | String obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -1112,15 +1052,13 @@ Trims the capacity of this Vector into its current length.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-Vector-trimToCurrentLength(): void--><!--Device-Vector-trimToCurrentLength(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let vector : Vector<number> = new Vector();
@@ -1142,8 +1080,6 @@ Number of elements in a Vector.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

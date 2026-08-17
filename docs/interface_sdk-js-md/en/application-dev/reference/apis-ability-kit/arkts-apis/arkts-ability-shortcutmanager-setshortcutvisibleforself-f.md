@@ -16,10 +16,6 @@ Sets whether to display the specified shortcut for the current application. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>--><!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -43,7 +39,7 @@ Sets whether to display the specified shortcut for the current application. This
 | --- | --- |
 | [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';

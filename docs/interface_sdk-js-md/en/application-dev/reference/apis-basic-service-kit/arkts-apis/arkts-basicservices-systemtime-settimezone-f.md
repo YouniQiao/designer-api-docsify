@@ -16,11 +16,9 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#setTimezone-(System-API))
+**Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#settimezone-system-api)
 
 **Required permissions:** ohos.permission.SET_TIME_ZONE
 
@@ -41,7 +39,7 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,11 +69,9 @@ Sets the system time zone. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#setTimezone-(System-API))
+**Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#settimezone-system-api)
 
 **Required permissions:** ohos.permission.SET_TIME_ZONE
 
@@ -101,7 +97,7 @@ Sets the system time zone. This API uses a promise to return the result.
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

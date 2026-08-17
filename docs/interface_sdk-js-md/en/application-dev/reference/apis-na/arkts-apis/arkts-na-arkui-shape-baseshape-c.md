@@ -2,13 +2,11 @@
 
 Base shape class
 
-**Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](arkts-na-arkui-shape-commonshapemethod-c.md#CommonShapeMethod)
+**Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](arkts-na-arkui-shape-commonshapemethod-c.md#commonshapemethod)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class BaseShape--><!--Device-unnamed-export declare class BaseShape-End-->
 
@@ -24,9 +22,7 @@ Sets the height of the shape.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,9 +52,7 @@ Sets the size of the shape.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,9 +82,7 @@ Sets the width of the shape.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

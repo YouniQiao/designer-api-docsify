@@ -4,11 +4,9 @@ Enumerates the album types.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#AlbumType)
+**Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#albumtype)
 
 <!--Device-userFileManager-enum AlbumType--><!--Device-userFileManager-enum AlbumType-End-->
 
@@ -26,11 +24,9 @@ User album.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [USER](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#USER)
+**Substitutes:** [USER](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#user)
 
 <!--Device-AlbumType-USER = 0--><!--Device-AlbumType-USER = 0-End-->
 
@@ -48,11 +44,9 @@ System album.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [SYSTEM](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#SYSTEM)
+**Substitutes:** [SYSTEM](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#system)
 
 <!--Device-AlbumType-SYSTEM = 1024--><!--Device-AlbumType-SYSTEM = 1024-End-->
 

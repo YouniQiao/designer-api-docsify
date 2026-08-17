@@ -16,10 +16,6 @@ Resets a USB peripheral. > **NOTE：**> > Previous configurations and APIs will 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean--><!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -28,7 +24,7 @@ Resets a USB peripheral. > **NOTE：**> > Previous configurations and APIs will 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice) to obtain its value. |
+| pipe | USBDevicePipe | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
 
 **Return value:**
 
@@ -47,7 +43,7 @@ Resets a USB peripheral. > **NOTE：**> > Previous configurations and APIs will 
 | [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
 | [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) | Service exception. Possible causes: 1. No accessory is plugged in. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function resetUsbDevice() {

@@ -16,10 +16,6 @@ Unsuppresses the child process. In this case, the child process follows the sche
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backgroundProcessManager-function resetProcessPriority(pid: int): Promise<void>--><!--Device-backgroundProcessManager-function resetProcessPriority(pid: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Resourceschedule.BackgroundProcessManager
@@ -36,7 +32,7 @@ Unsuppresses the child process. In this case, the child process follows the sche
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

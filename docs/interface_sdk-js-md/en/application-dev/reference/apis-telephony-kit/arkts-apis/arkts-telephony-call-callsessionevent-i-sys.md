@@ -4,10 +4,6 @@ Defines the video call event information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface CallSessionEvent--><!--Device-call-export interface CallSessionEvent-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -32,10 +28,6 @@ Call ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallSessionEvent-callId: int--><!--Device-CallSessionEvent-callId: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -53,10 +45,6 @@ Video call event.
 **Type:** [CallSessionEventId](arkts-telephony-call-callsessioneventid-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallSessionEvent-eventId: CallSessionEventId--><!--Device-CallSessionEvent-eventId: CallSessionEventId-End-->
 

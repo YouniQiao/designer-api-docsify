@@ -10,11 +10,9 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** off
+**Substitutes:** [off](arkts-form-formhost-offformuninstall-f-sys.md#offformuninstall)
 
 <!--Device-formHost-function off(type: 'formUninstall', callback?: Callback<string>): void--><!--Device-formHost-function off(type: 'formUninstall', callback?: Callback<string>): void-End-->
 

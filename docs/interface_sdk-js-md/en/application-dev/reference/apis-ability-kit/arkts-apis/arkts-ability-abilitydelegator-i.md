@@ -1,12 +1,8 @@
 # AbilityDelegator
 
-The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getAbilityDelegator). > **NOTE：**> > The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
+The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator). > **NOTE：**> > The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AbilityDelegator--><!--Device-unnamed-export interface AbilityDelegator-End-->
 
@@ -22,10 +18,6 @@ Adds an **AbilityMonitor** instance. This API uses an asynchronous callback to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-addAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): void--><!--Device-AbilityDelegator-addAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): void-End-->
@@ -36,7 +28,7 @@ Adds an **AbilityMonitor** instance. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is added, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -46,7 +38,7 @@ Adds an **AbilityMonitor** instance. This API uses an asynchronous callback to r
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -79,10 +71,6 @@ Adds an **AbilityMonitor** instance. This API uses a promise to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-addAbilityMonitor(monitor: AbilityMonitor): Promise<void>--><!--Device-AbilityDelegator-addAbilityMonitor(monitor: AbilityMonitor): Promise<void>-End-->
@@ -93,7 +81,7 @@ Adds an **AbilityMonitor** instance. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
 
 **Return value:**
 
@@ -108,7 +96,7 @@ Adds an **AbilityMonitor** instance. This API uses a promise to return the resul
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -139,10 +127,6 @@ Adds an **AbilityMonitor** instance. This API returns the result synchronously. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-addAbilityMonitorSync(monitor: AbilityMonitor): void--><!--Device-AbilityDelegator-addAbilityMonitorSync(monitor: AbilityMonitor): void-End-->
@@ -153,7 +137,7 @@ Adds an **AbilityMonitor** instance. This API returns the result synchronously. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
 
 **Error codes:**
 
@@ -162,7 +146,7 @@ Adds an **AbilityMonitor** instance. This API returns the result synchronously. 
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitorSync failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -193,10 +177,6 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-addAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<void>): void--><!--Device-AbilityDelegator-addAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<void>): void-End-->
@@ -207,7 +187,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is added, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -217,7 +197,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -244,10 +224,6 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-addAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>--><!--Device-AbilityDelegator-addAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>-End-->
@@ -258,7 +234,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
 
 **Return value:**
 
@@ -273,7 +249,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -299,10 +275,6 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-addAbilityStageMonitorSync(monitor: AbilityStageMonitor): void--><!--Device-AbilityDelegator-addAbilityStageMonitorSync(monitor: AbilityStageMonitor): void-End-->
@@ -313,7 +285,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
 
 **Error codes:**
 
@@ -322,7 +294,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitorSync failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -345,10 +317,6 @@ addInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 Add an InteropAbilityMonitor object for monitoring the lifecycle state changes of the specified ability in this process.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -380,10 +348,6 @@ Schedules the lifecycle state of an ability to **Background**. This API uses an 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-doAbilityBackground(ability: UIAbility, callback: AsyncCallback<void>): void--><!--Device-AbilityDelegator-doAbilityBackground(ability: UIAbility, callback: AsyncCallback<void>): void-End-->
@@ -404,7 +368,7 @@ Schedules the lifecycle state of an ability to **Background**. This API uses an 
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityBackground failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -434,10 +398,6 @@ Schedules the lifecycle state of an ability to **Background**. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-doAbilityBackground(ability: UIAbility): Promise<void>--><!--Device-AbilityDelegator-doAbilityBackground(ability: UIAbility): Promise<void>-End-->
@@ -463,7 +423,7 @@ Schedules the lifecycle state of an ability to **Background**. This API uses a p
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityBackground failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -493,10 +453,6 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses an 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-doAbilityForeground(ability: UIAbility, callback: AsyncCallback<void>): void--><!--Device-AbilityDelegator-doAbilityForeground(ability: UIAbility, callback: AsyncCallback<void>): void-End-->
@@ -517,7 +473,7 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses an 
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityForeground failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -547,10 +503,6 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-doAbilityForeground(ability: UIAbility): Promise<void>--><!--Device-AbilityDelegator-doAbilityForeground(ability: UIAbility): Promise<void>-End-->
@@ -576,7 +528,7 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses a p
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityForeground failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -606,10 +558,6 @@ Executes a shell command. This API uses an asynchronous callback to return the r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-executeShellCommand(cmd: string, callback: AsyncCallback<ShellCmdResult>): void--><!--Device-AbilityDelegator-executeShellCommand(cmd: string, callback: AsyncCallback<ShellCmdResult>): void-End-->
@@ -623,7 +571,7 @@ Executes a shell command. This API uses an asynchronous callback to return the r
 | cmd | string | Yes | Shell command string. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -648,10 +596,6 @@ Executes a shell command with the timeout period specified. This API uses an asy
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-executeShellCommand(cmd: string, timeoutSecs: long, callback: AsyncCallback<ShellCmdResult>): void--><!--Device-AbilityDelegator-executeShellCommand(cmd: string, timeoutSecs: long, callback: AsyncCallback<ShellCmdResult>): void-End-->
@@ -666,7 +610,7 @@ Executes a shell command with the timeout period specified. This API uses an asy
 | timeoutSecs | long | Yes | Command timeout period, in seconds. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -692,10 +636,6 @@ Executes a shell command with the timeout period specified. This API uses a prom
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-executeShellCommand(cmd: string, timeoutSecs?: long): Promise<ShellCmdResult>--><!--Device-AbilityDelegator-executeShellCommand(cmd: string, timeoutSecs?: long): Promise<ShellCmdResult>-End-->
@@ -715,7 +655,7 @@ Executes a shell command with the timeout period specified. This API uses a prom
 | --- | --- |
 | Promise&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Promise used to return a [ShellCmdResult]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -740,10 +680,6 @@ Finishes the test and prints log information to the unit test console. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-finishTest(msg: string, code: long, callback: AsyncCallback<void>): void--><!--Device-AbilityDelegator-finishTest(msg: string, code: long, callback: AsyncCallback<void>): void-End-->
@@ -765,7 +701,7 @@ Finishes the test and prints log information to the unit test console. This API 
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling FinishTest failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -789,10 +725,6 @@ finishTest(msg: string, code: long): Promise<void>
 Finishes the test and prints log information to the unit test console. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -820,7 +752,7 @@ Finishes the test and prints log information to the unit test console. This API 
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling FinishTest failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -843,10 +775,6 @@ getAbilityState(ability: UIAbility): int
 Obtains the lifecycle state of an ability.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -872,7 +800,7 @@ Obtains the lifecycle state of an ability.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -901,10 +829,6 @@ Obtains the application context.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-getAppContext(): Context--><!--Device-AbilityDelegator-getAppContext(): Context-End-->
@@ -917,7 +841,7 @@ Obtains the application context.
 | --- | --- |
 | [Context](arkts-ability-context-c.md) | [Context]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -939,10 +863,6 @@ Obtains the top ability of this application. This API uses an asynchronous callb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-getCurrentTopAbility(callback: AsyncCallback<UIAbility>): void--><!--Device-AbilityDelegator-getCurrentTopAbility(callback: AsyncCallback<UIAbility>): void-End-->
@@ -962,7 +882,7 @@ Obtains the top ability of this application. This API uses an asynchronous callb
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling GetCurrentTopAbility failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -989,10 +909,6 @@ Obtains the top ability of this application. This API uses a promise to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-getCurrentTopAbility(): Promise<UIAbility>--><!--Device-AbilityDelegator-getCurrentTopAbility(): Promise<UIAbility>-End-->
@@ -1011,7 +927,7 @@ Obtains the top ability of this application. This API uses a promise to return t
 | --- | --- |
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling GetCurrentTopAbility failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1037,10 +953,6 @@ Prints log information to the unit test console. This API uses an asynchronous c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-print(msg: string, callback: AsyncCallback<void>): void--><!--Device-AbilityDelegator-print(msg: string, callback: AsyncCallback<void>): void-End-->
@@ -1054,7 +966,7 @@ Prints log information to the unit test console. This API uses an asynchronous c
 | msg | string | Yes | Log string. The value contains a maximum of 10,000 characters. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the log information is printed to the unit test console, **err** is **undefined**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1079,10 +991,6 @@ Prints log information to the unit test console. This API uses a promise to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-print(msg: string): Promise<void>--><!--Device-AbilityDelegator-print(msg: string): Promise<void>-End-->
@@ -1101,7 +1009,7 @@ Prints log information to the unit test console. This API uses a promise to retu
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1125,10 +1033,6 @@ Prints log information to the unit test console.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-printSync(msg: string): void--><!--Device-AbilityDelegator-printSync(msg: string): void-End-->
@@ -1147,7 +1051,7 @@ Prints log information to the unit test console.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1169,10 +1073,6 @@ Removes an **AbilityMonitor** instance. This API uses an asynchronous callback t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-removeAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): void--><!--Device-AbilityDelegator-removeAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): void-End-->
@@ -1183,7 +1083,7 @@ Removes an **AbilityMonitor** instance. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1193,7 +1093,7 @@ Removes an **AbilityMonitor** instance. This API uses an asynchronous callback t
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1227,10 +1127,6 @@ Removes an **AbilityMonitor** instance. This API uses a promise to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-removeAbilityMonitor(monitor: AbilityMonitor): Promise<void>--><!--Device-AbilityDelegator-removeAbilityMonitor(monitor: AbilityMonitor): Promise<void>-End-->
@@ -1241,7 +1137,7 @@ Removes an **AbilityMonitor** instance. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
 
 **Return value:**
 
@@ -1256,7 +1152,7 @@ Removes an **AbilityMonitor** instance. This API uses a promise to return the re
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1288,10 +1184,6 @@ Removes an **AbilityMonitor** instance. This API returns the result synchronousl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-removeAbilityMonitorSync(monitor: AbilityMonitor): void--><!--Device-AbilityDelegator-removeAbilityMonitorSync(monitor: AbilityMonitor): void-End-->
@@ -1302,7 +1194,7 @@ Removes an **AbilityMonitor** instance. This API returns the result synchronousl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
 
 **Error codes:**
 
@@ -1311,7 +1203,7 @@ Removes an **AbilityMonitor** instance. This API returns the result synchronousl
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitorSync failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1341,10 +1233,6 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-removeAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<void>): void--><!--Device-AbilityDelegator-removeAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<void>): void-End-->
@@ -1355,7 +1243,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is removed, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1365,7 +1253,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1392,10 +1280,6 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-removeAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>--><!--Device-AbilityDelegator-removeAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>-End-->
@@ -1406,7 +1290,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
 
 **Return value:**
 
@@ -1421,7 +1305,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1447,10 +1331,6 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-removeAbilityStageMonitorSync(monitor: AbilityStageMonitor): void--><!--Device-AbilityDelegator-removeAbilityStageMonitorSync(monitor: AbilityStageMonitor): void-End-->
@@ -1461,7 +1341,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
 
 **Error codes:**
 
@@ -1470,7 +1350,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitorSync failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1493,10 +1373,6 @@ removeInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 Remove a specified InteropAbilityMonitor object from the application memory.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1528,10 +1404,6 @@ Sets a list of mock data.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-setMockList(mockList: Record<string, string>): void--><!--Device-AbilityDelegator-setMockList(mockList: Record<string, string>): void-End-->
@@ -1551,7 +1423,7 @@ Sets a list of mock data.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1575,10 +1447,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 Starts an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1614,7 +1482,7 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1642,10 +1510,6 @@ startAbility(want: Want): Promise<void>
 Starts an ability. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1686,7 +1550,7 @@ Starts an ability. This API uses a promise to return the result.
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1714,10 +1578,6 @@ Waits for the **Ability** instance that matches the **AbilityMonitor** instance 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<UIAbility>): void--><!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<UIAbility>): void-End-->
@@ -1728,7 +1588,7 @@ Waits for the **Ability** instance that matches the **AbilityMonitor** instance 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1738,7 +1598,7 @@ Waits for the **Ability** instance that matches the **AbilityMonitor** instance 
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1775,10 +1635,6 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void--><!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void-End-->
@@ -1789,7 +1645,7 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
 | timeout | long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. |
 
@@ -1800,7 +1656,7 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1838,10 +1694,6 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout?: long): Promise<UIAbility>--><!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout?: long): Promise<UIAbility>-End-->
@@ -1852,7 +1704,7 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
 | timeout | long | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 
 **Return value:**
@@ -1868,7 +1720,7 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1900,10 +1752,6 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-waitAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<AbilityStage>): void--><!--Device-AbilityDelegator-waitAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<AbilityStage>): void-End-->
@@ -1914,8 +1762,8 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage) instance obtained. Otherwise, **err** is an error object. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage) instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1924,7 +1772,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -1952,10 +1800,6 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout: long, callback: AsyncCallback<AbilityStage>): void--><!--Device-AbilityDelegator-waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout: long, callback: AsyncCallback<AbilityStage>): void-End-->
@@ -1966,9 +1810,9 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
 | timeout | long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage) instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage) instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1977,7 +1821,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
@@ -2006,10 +1850,6 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityDelegator-waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: long): Promise<AbilityStage>--><!--Device-AbilityDelegator-waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: long): Promise<AbilityStage>-End-->
@@ -2020,7 +1860,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
 | timeout | long | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 
 **Return value:**
@@ -2036,7 +1876,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 | [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-enum ConstraintSourceType--><!--Device-osAccount-enum ConstraintSourceType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ CONSTRAINT_NOT_EXIST = 0
 约束不存在。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ConstraintSourceType-CONSTRAINT_NOT_EXIST = 0--><!--Device-ConstraintSourceType-CONSTRAINT_NOT_EXIST = 0-End-->
 
@@ -44,10 +36,6 @@ CONSTRAINT_TYPE_BASE = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ConstraintSourceType-CONSTRAINT_TYPE_BASE = 1--><!--Device-ConstraintSourceType-CONSTRAINT_TYPE_BASE = 1-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -64,10 +52,6 @@ CONSTRAINT_TYPE_DEVICE_OWNER = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ConstraintSourceType-CONSTRAINT_TYPE_DEVICE_OWNER = 2--><!--Device-ConstraintSourceType-CONSTRAINT_TYPE_DEVICE_OWNER = 2-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -83,10 +67,6 @@ CONSTRAINT_TYPE_PROFILE_OWNER = 3
 约束源自资料所有者设置。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ConstraintSourceType-CONSTRAINT_TYPE_PROFILE_OWNER = 3--><!--Device-ConstraintSourceType-CONSTRAINT_TYPE_PROFILE_OWNER = 3-End-->
 

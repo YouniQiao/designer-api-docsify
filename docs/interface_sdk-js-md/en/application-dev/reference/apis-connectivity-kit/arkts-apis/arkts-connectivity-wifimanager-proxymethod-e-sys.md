@@ -4,10 +4,6 @@ Wi-Fi Proxy method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-enum ProxyMethod--><!--Device-wifiManager-enum ProxyMethod-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -23,10 +19,6 @@ METHOD_NONE = 0
 No proxy is to be used.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ProxyMethod-METHOD_NONE = 0--><!--Device-ProxyMethod-METHOD_NONE = 0-End-->
 
@@ -44,10 +36,6 @@ Use auto configured proxy.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ProxyMethod-METHOD_AUTO = 1--><!--Device-ProxyMethod-METHOD_AUTO = 1-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -63,10 +51,6 @@ METHOD_MANUAL = 2
 Use manual configured proxy.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ProxyMethod-METHOD_MANUAL = 2--><!--Device-ProxyMethod-METHOD_MANUAL = 2-End-->
 

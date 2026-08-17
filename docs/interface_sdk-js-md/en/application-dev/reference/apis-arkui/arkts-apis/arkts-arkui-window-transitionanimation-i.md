@@ -4,10 +4,6 @@ Describes the window transition animation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface TransitionAnimation--><!--Device-window-interface TransitionAnimation-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Transition animation configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TransitionAnimation-config: WindowAnimationConfig--><!--Device-TransitionAnimation-config: WindowAnimationConfig-End-->
@@ -51,10 +43,6 @@ Opacity of the window during the transition animation. If this parameter is set 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

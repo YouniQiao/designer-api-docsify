@@ -18,10 +18,6 @@ Obtains information about how a sensitive permission is used by an application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
 <!--Device-privacyManager-function getPermissionUsedTypeInfos(    tokenId?: int | null,    permissionName?: Permissions): Promise<Array<PermissionUsedTypeInfo>>--><!--Device-privacyManager-function getPermissionUsedTypeInfos(    tokenId?: int | null,    permissionName?: Permissions): Promise<Array<PermissionUsedTypeInfo>>-End-->
@@ -34,7 +30,7 @@ Obtains information about how a sensitive permission is used by an application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenId | int \| null | No | Application identity identifier for accessing sensitive permissions. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field of ApplicationInfo. Pass a specific tokenId when querying the access type information of sensitive permissions for a particular app; 0 or null indicates querying the access type information of sensitive permissions for all apps. Starting from API version 20, the null type is newly supported. <br>Default value: 0. |
+| tokenId | int \| null | No | Application identity identifier for accessing sensitive permissions. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field of ApplicationInfo. Pass a specific tokenId when querying the access type information of sensitive permissions for a particular app; 0 or null indicates querying the access type information of sensitive permissions for all apps. Starting from API version 20, the null type is newly supported. <br>Default value: 0. |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | No | Name of the sensitive permission being accessed. Pass a specific permission name when querying the access type information of a particular sensitive permission; empty indicates querying the access type information of all sensitive permissions. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. Default value: Empty string. |
 
 **Return value:**
@@ -54,7 +50,7 @@ Obtains information about how a sensitive permission is used by an application.
 | [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The input tokenId does not exist. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The input permissionName does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { privacyManager, Permissions } from '@kit.AbilityKit';

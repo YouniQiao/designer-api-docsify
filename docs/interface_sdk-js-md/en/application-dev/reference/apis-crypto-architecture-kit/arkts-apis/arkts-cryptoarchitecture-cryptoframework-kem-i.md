@@ -1,12 +1,8 @@
 # Kem
 
-Key encapsulation mechanism (KEM) interface, defining methods for key encapsulation and decapsulation based on KEM. Before use, you must create a **Kem** instance by using [createKem(algNameId: KemAlgNameId): Kem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createKem).
+Key encapsulation mechanism (KEM) interface, defining methods for key encapsulation and decapsulation based on KEM. Before use, you must create a **Kem** instance by using [createKem(algNameId: KemAlgNameId): Kem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createkem).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface Kem--><!--Device-cryptoFramework-interface Kem-End-->
 
@@ -27,10 +23,6 @@ decapsulate(priKey: PriKey, wrappedKey: Uint8Array): Promise<Uint8Array>
 Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,10 +64,6 @@ Key decapsulation operation. Using the receiver's private key, executed by the r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -116,10 +104,6 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -159,10 +143,6 @@ encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult
 Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and encapsulate a shared key. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [encapsulate](#encapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

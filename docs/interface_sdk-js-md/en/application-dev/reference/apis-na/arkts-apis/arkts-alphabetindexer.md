@@ -6,8 +6,8 @@
 
 | Name | Description |
 | --- | --- |
-| [AlphabetIndexer](arkts-na-alphabetindexer-alphabetindexer-f.md#AlphabetIndexer) | Defines AlphabetIndexer Component |
-| [AlphabetIndexer](arkts-na-alphabetindexer-alphabetindexer-f.md#AlphabetIndexer) | Defines AlphabetIndexer Component |
+| [AlphabetIndexer](arkts-na-alphabetindexer-alphabetindexer-f.md#alphabetindexer) | Defines AlphabetIndexer Component |
+| [AlphabetIndexer](arkts-na-alphabetindexer-alphabetindexer-f.md#alphabetindexer) | Defines AlphabetIndexer Component |
 
 ### Interfaces
 

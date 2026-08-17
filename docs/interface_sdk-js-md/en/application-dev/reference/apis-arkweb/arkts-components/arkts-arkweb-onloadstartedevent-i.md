@@ -1,12 +1,8 @@
 # OnLoadStartedEvent
 
-Defines the triggered function at the begin of web page loading.
+Defines the callback information triggered when the web page loading begins, including the page URL. It is suitable for scenarios where monitoring page loading start is required, improving page lifecycle management capabilities.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnLoadStartedEvent--><!--Device-unnamed-declare interface OnLoadStartedEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered function at the begin of web page loading.
 url: string
 ```
 
-The url to be loaded.
+URL of the page.
 
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-OnLoadStartedEvent-url: string--><!--Device-OnLoadStartedEvent-url: string-End-->
 

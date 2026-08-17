@@ -30,10 +30,6 @@ Changes the time when the file was last modified.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function utimes(path: string, mtime: number): void--><!--Device-unnamed-declare function utimes(path: string, mtime: number): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

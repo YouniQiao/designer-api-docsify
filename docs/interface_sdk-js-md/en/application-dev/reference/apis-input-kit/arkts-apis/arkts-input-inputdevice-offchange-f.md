@@ -16,10 +16,6 @@ Stops listening for an input device event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputDevice-function offChange(listener?: Callback<DeviceListener>): void--><!--Device-inputDevice-function offChange(listener?: Callback<DeviceListener>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice

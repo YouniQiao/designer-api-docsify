@@ -12,13 +12,9 @@ import { connection } from 'connection';
 function setAppHttpProxy(httpProxy: HttpProxy): void
 ```
 
-Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy).
+Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-connection-function setAppHttpProxy(httpProxy: HttpProxy): void--><!--Device-connection-function setAppHttpProxy(httpProxy: HttpProxy): void-End-->
 
@@ -28,7 +24,7 @@ Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | HttpProxy | Yes | Indicates the application level proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy). |
+| httpProxy | HttpProxy | Yes | Indicates the application level proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy). |
 
 **Error codes:**
 
@@ -37,7 +33,7 @@ Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid http proxy. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

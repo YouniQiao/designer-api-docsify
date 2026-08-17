@@ -4,10 +4,6 @@ Circular fence information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface Geofence--><!--Device-geoLocationManager-export interface Geofence-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -30,10 +26,6 @@ Coordinate system type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Geofence-coordinateSystemType?: CoordinateSystemType--><!--Device-Geofence-coordinateSystemType?: CoordinateSystemType-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -49,10 +41,6 @@ Expiration of the circular fence.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Geofence-expiration: double--><!--Device-Geofence-expiration: double-End-->
 
@@ -70,10 +58,6 @@ Latitude of the center point of the circular fence.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Geofence-latitude: double--><!--Device-Geofence-latitude: double-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -90,10 +74,6 @@ Longitude of the center point of the circular fence.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Geofence-longitude: double--><!--Device-Geofence-longitude: double-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -109,10 +89,6 @@ Radius of the circular fence.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Geofence-radius: double--><!--Device-Geofence-radius: double-End-->
 

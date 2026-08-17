@@ -4,10 +4,6 @@ Declare the options of ToolBarV2SymbolGlyph
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ToolBarV2SymbolGlyphOptions--><!--Device-unnamed-export interface ToolBarV2SymbolGlyphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -38,13 +34,9 @@ activated?: SymbolGlyphModifier
 
 Modifier of toolbarV2's activated symbol.
 
-**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** SymbolGlyphModifier
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,13 +54,9 @@ normal: SymbolGlyphModifier
 
 Modifier of toolbarV2's normal symbol.
 
-**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** SymbolGlyphModifier
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

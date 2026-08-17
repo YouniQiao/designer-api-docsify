@@ -12,13 +12,9 @@ import { tag } from 'tag';
 function getTagInfo(want: Want): TagInfo
 ```
 
-Parse a [TagInfo](arkts-connectivity-tag-taginfo-i.md#TagInfo) object from Want.
+Parse a [TagInfo](arkts-connectivity-tag-taginfo-i.md#taginfo) object from Want.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -6,9 +6,7 @@ rect attribute declaration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface RectAttribute--><!--Device-unnamed-export declare interface RectAttribute-End-->
 
@@ -22,9 +20,7 @@ attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-RectAttribute-attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-RectAttribute-attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,9 +44,7 @@ radius(value: Length | Array<RadiusItem> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-RectAttribute-radius(value: Length | Array<RadiusItem> | undefined): this--><!--Device-RectAttribute-radius(value: Length | Array<RadiusItem> | undefined): this-End-->
 
@@ -74,9 +68,7 @@ radiusHeight(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-RectAttribute-radiusHeight(value: Length | undefined): this--><!--Device-RectAttribute-radiusHeight(value: Length | undefined): this-End-->
 
@@ -100,9 +92,7 @@ radiusWidth(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-RectAttribute-radiusWidth(value: Length | undefined): this--><!--Device-RectAttribute-radiusWidth(value: Length | undefined): this-End-->
 
@@ -126,9 +116,7 @@ setRectOptions(options?: RectOptions | RoundedRectOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-RectAttribute-setRectOptions(options?: RectOptions | RoundedRectOptions): this--><!--Device-RectAttribute-setRectOptions(options?: RectOptions | RoundedRectOptions): this-End-->
 
@@ -154,9 +142,7 @@ Call attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

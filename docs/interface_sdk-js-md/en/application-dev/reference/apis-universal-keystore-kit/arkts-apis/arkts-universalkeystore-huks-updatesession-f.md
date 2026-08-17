@@ -16,10 +16,6 @@ Updates the key operation. This API uses an asynchronous callback to return the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-huks-function updateSession(handle: long, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void--><!--Device-huks-function updateSession(handle: long, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void-End-->
@@ -75,10 +71,6 @@ Updates the key operation by segment. The **updateSession** operation is used fo
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-huks-function updateSession(    handle: long,    options: HuksOptions,    token: Uint8Array,    callback: AsyncCallback<HuksReturnResult>  ): void--><!--Device-huks-function updateSession(    handle: long,    options: HuksOptions,    token: Uint8Array,    callback: AsyncCallback<HuksReturnResult>  ): void-End-->
@@ -125,10 +117,6 @@ function updateSession(handle: long, options: HuksOptions, token?: Uint8Array): 
 Updates the key operation. This API uses a promise to return the result. The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

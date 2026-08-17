@@ -16,10 +16,6 @@ Queries the number of all contacts. This API uses a promise to return the result
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_CONTACTS
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -47,7 +43,7 @@ Queries the number of all contacts. This API uses a promise to return the result
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

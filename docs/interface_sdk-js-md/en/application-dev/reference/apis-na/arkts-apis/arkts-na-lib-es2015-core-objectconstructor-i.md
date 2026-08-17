@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ObjectConstructor--><!--Device-unnamed-interface ObjectConstructor-End-->
 
 ## assign
@@ -17,10 +13,6 @@ assign<T extends {}, U>(target: T, source: U): T & U
 Copy the values of all of the enumerable own properties from one or more source objects to a target object. Returns the target object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-assign<T extends {}, U>(target: T, source: U): T & U--><!--Device-ObjectConstructor-assign<T extends {}, U>(target: T, source: U): T & U-End-->
 
@@ -47,10 +39,6 @@ Copy the values of all of the enumerable own properties from one or more source 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-assign<T extends {}, U, V>(target: T, source1: U, source2: V): T & U & V--><!--Device-ObjectConstructor-assign<T extends {}, U, V>(target: T, source1: U, source2: V): T & U & V-End-->
 
 **Parameters:**
@@ -76,10 +64,6 @@ assign<T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T 
 Copy the values of all of the enumerable own properties from one or more source objects to a target object. Returns the target object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-assign<T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T & U & V & W--><!--Device-ObjectConstructor-assign<T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T & U & V & W-End-->
 
@@ -108,10 +92,6 @@ Copy the values of all of the enumerable own properties from one or more source 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-assign(target: object, ...sources: any[]): any--><!--Device-ObjectConstructor-assign(target: object, ...sources: any[]): any-End-->
 
 **Parameters:**
@@ -137,10 +117,6 @@ Returns an array of all symbol properties found directly on object o.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-getOwnPropertySymbols(o: any): symbol[]--><!--Device-ObjectConstructor-getOwnPropertySymbols(o: any): symbol[]-End-->
 
 **Parameters:**
@@ -164,10 +140,6 @@ is(value1: any, value2: any): boolean
 Returns true if the values are the same value, false otherwise.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-is(value1: any, value2: any): boolean--><!--Device-ObjectConstructor-is(value1: any, value2: any): boolean-End-->
 
@@ -194,10 +166,6 @@ Returns the names of the enumerable string properties and methods of an object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-keys(o: {}): string[]--><!--Device-ObjectConstructor-keys(o: {}): string[]-End-->
 
 **Parameters:**
@@ -221,10 +189,6 @@ setPrototypeOf(o: any, proto: object | null): any
 Sets the prototype of a specified object o to object proto or null. Returns the object o.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-setPrototypeOf(o: any, proto: object | null): any--><!--Device-ObjectConstructor-setPrototypeOf(o: any, proto: object | null): any-End-->
 

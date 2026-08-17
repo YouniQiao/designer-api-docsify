@@ -16,10 +16,6 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>--><!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -39,7 +35,7 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let screenCaptureMonitor: media.ScreenCaptureMonitor;
@@ -60,10 +56,6 @@ function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>
 Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>--><!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>-End-->
 

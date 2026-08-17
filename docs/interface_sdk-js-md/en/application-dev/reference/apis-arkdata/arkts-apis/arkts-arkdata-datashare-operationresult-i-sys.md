@@ -4,10 +4,6 @@ Defines the result of the operation for subscribing to or unsubscribing from the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface OperationResult--><!--Device-dataShare-interface OperationResult-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -32,10 +28,6 @@ Key of the operation result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperationResult-key: string--><!--Device-OperationResult-key: string-End-->
@@ -55,10 +47,6 @@ Operation result. If the operation is successful, **0** is returned; otherwise, 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

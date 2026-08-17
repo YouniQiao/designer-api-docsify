@@ -6,10 +6,6 @@ DatePickerComponent组件用于选择日期（年月日）和时间（时分秒�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export declare struct DatePickerComponent--><!--Device-unnamed-export declare struct DatePickerComponent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,13 +19,9 @@ DatePickerComponent组件用于选择日期（年月日）和时间（时分秒�
 
 定义日期时间选择器组件的选项。
 
-**类型：** [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
+**类型：** [DatePickerComponentOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

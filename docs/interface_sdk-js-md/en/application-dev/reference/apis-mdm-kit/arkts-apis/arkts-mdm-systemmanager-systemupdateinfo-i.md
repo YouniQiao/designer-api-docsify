@@ -4,10 +4,6 @@ Represents information about the system version to update.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-systemManager-export interface SystemUpdateInfo--><!--Device-systemManager-export interface SystemUpdateInfo-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,10 +26,6 @@ Time when the system update package is received for the first time, in seconds.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemUpdateInfo-firstReceivedTime: number--><!--Device-SystemUpdateInfo-firstReceivedTime: number-End-->
@@ -52,10 +44,6 @@ Type of the system update package to update. The value can be **normal** or **pa
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemUpdateInfo-packageType: string--><!--Device-SystemUpdateInfo-packageType: string-End-->
@@ -73,10 +61,6 @@ System version to update.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

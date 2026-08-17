@@ -7,8 +7,8 @@
 
 | Name | Description |
 | --- | --- |
-| [UIExtensionComponent](arkts-na-uiextensioncomponent-uiextensioncomponent-f-sys.md#UIExtensionComponent-(System-API)) | Defines UIExtensionComponent Component. |
-| [UIExtensionComponent](arkts-na-uiextensioncomponent-uiextensioncomponent-f-sys.md#UIExtensionComponent-(System-API)) | Defines UIExtensionComponent Component.It requires call setUIExtensionComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
+| [UIExtensionComponent](arkts-na-uiextensioncomponent-uiextensioncomponent-f-sys.md#uiextensioncomponent-system-api) | Defines UIExtensionComponent Component. |
+| [UIExtensionComponent](arkts-na-uiextensioncomponent-uiextensioncomponent-f-sys.md#uiextensioncomponent-system-api) | Defines UIExtensionComponent Component.It requires call setUIExtensionComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
 <!--DelEnd-->
 
 <!--Del-->

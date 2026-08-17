@@ -4,10 +4,6 @@ Describes the system notification button.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationIconButton--><!--Device-unnamed-export interface NotificationIconButton-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -25,10 +21,6 @@ Whether to hide the notification panel when the button is tapped. The default va
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationIconButton-hidePanel?: boolean--><!--Device-NotificationIconButton-hidePanel?: boolean-End-->
 
@@ -48,10 +40,6 @@ Background image of a button.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationIconButton-iconResource: IconType--><!--Device-NotificationIconButton-iconResource: IconType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -70,10 +58,6 @@ Button identifier, used to distinguish multiple different buttons for the same n
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationIconButton-name: string--><!--Device-NotificationIconButton-name: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -91,10 +75,6 @@ Text displayed on the button, which defaults to empty. The string length cannot 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationIconButton-text?: string--><!--Device-NotificationIconButton-text?: string-End-->
 

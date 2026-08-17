@@ -4,10 +4,6 @@ Defines the readonly system environment key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ReadonlyEnvKey--><!--Device-unnamed-declare class ReadonlyEnvKey-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ System environment avoidarea key that is used to obtain the avoid area of the wi
 **Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.UIEnvWindowAvoidAreaInfoVP&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ System environment avoidarea key that is used to obtain the avoid area of the wi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -71,10 +59,6 @@ System environmental displayid key that is used to obtain the display id of the 
 **Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;long&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,10 +80,6 @@ System environment windowisfocused key that is used to obtain whether the window
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReadonlyEnvKey-static readonly WINDOW_IS_FOCUSED: ReadonlySystemEnvKey<boolean>--><!--Device-ReadonlyEnvKey-static readonly WINDOW_IS_FOCUSED: ReadonlySystemEnvKey<boolean>-End-->
@@ -118,10 +98,6 @@ System environment windowishighlighted key that is used to obtain whether the wi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ReadonlyEnvKey-static readonly WINDOW_IS_HIGHLIGHTED: ReadonlySystemEnvKey<boolean>--><!--Device-ReadonlyEnvKey-static readonly WINDOW_IS_HIGHLIGHTED: ReadonlySystemEnvKey<boolean>-End-->
@@ -139,10 +115,6 @@ System environment windowsize key that is used to obtain the size of the window,
 **Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.SizeInVP&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,10 +136,6 @@ System environment windowsize key that is used to obtain the size of the window,
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -187,10 +155,6 @@ System environmental system density key that is used to obtain the system densit
 **Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;double&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

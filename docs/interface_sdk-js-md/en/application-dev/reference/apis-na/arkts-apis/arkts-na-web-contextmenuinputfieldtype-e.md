@@ -4,9 +4,7 @@ Defines the context menu input field type, related to onContextMenuShow method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum ContextMenuInputFieldType--><!--Device-unnamed-export declare enum ContextMenuInputFieldType-End-->
 
@@ -22,9 +20,7 @@ Non-input field.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuInputFieldType-NONE = 0--><!--Device-ContextMenuInputFieldType-NONE = 0-End-->
 
@@ -40,9 +36,7 @@ Plain text field, such as the text, search, or email field
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuInputFieldType-PLAIN_TEXT = 1--><!--Device-ContextMenuInputFieldType-PLAIN_TEXT = 1-End-->
 
@@ -58,9 +52,7 @@ Password field.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuInputFieldType-PASSWORD = 2--><!--Device-ContextMenuInputFieldType-PASSWORD = 2-End-->
 
@@ -76,9 +68,7 @@ Number field.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuInputFieldType-NUMBER_DATA = 3--><!--Device-ContextMenuInputFieldType-NUMBER_DATA = 3-End-->
 
@@ -94,9 +84,7 @@ Phone number field.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuInputFieldType-TELEPHONE = 4--><!--Device-ContextMenuInputFieldType-TELEPHONE = 4-End-->
 
@@ -112,9 +100,7 @@ Field of any other type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ContextMenuInputFieldType-OTHER = 5--><!--Device-ContextMenuInputFieldType-OTHER = 5-End-->
 

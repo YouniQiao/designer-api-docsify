@@ -1,12 +1,8 @@
 # Window
 
-Represents a window instance, which is the basic unit managed by the window manager. In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getLastWindow), [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow), or [findWindow()](arkts-arkui-window-findwindow-f.md#findWindow) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+Represents a window instance, which is the basic unit managed by the window manager. In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow), [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow), or [findWindow()](arkts-arkui-window-findwindow-f.md#findwindow) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-window-interface Window--><!--Device-window-interface Window-End-->
 
@@ -24,13 +20,9 @@ import { window } from 'window';
 attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWindowAttachOptions): Promise<void>
 ```
 
-Attaches a first-level child window to the main window to maintain a fixed relative position. This API uses a promise to return the result. The relative position is represented by the anchor point offset between the child window and the parent window. The child window and the parent window use the same window anchor point. > **NOTE：**> > - Only first-level child windows can call this API. The child window must be in floating window mode > (that is, the window mode is **window.WindowStatusType.FLOATING**). > > - After the child window calls this API, the display position of the child window immediately follows the > main window and the relative position remains unchanged. In addition, the size and mode changes of the main > window can be listened to. The effect will persist unless the > [detachLayoutToParentWindow()](#detachLayoutToParentWindow) API is called for detaching. > > -After the child window calls this API, calling APIs such as > [moveWindowTo()](arkts-arkui-window-window-i.md#moveWindowTo), > [maximize()](arkts-arkui-window-window-i.md#maximize), and > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setFollowParentWindowLayoutEnabled) > to change the window position, or dragging and moving or dragging and resizing the child window through mouse > or touch operations will not take effect.
+Attaches a first-level child window to the main window to maintain a fixed relative position. This API uses a promise to return the result. The relative position is represented by the anchor point offset between the child window and the parent window. The child window and the parent window use the same window anchor point. > **NOTE：**> > - Only first-level child windows can call this API. The child window must be in floating window mode > (that is, the window mode is **window.WindowStatusType.FLOATING**). > > - After the child window calls this API, the display position of the child window immediately follows the > main window and the relative position remains unchanged. In addition, the size and mode changes of the main > window can be listened to. The effect will persist unless the > [detachLayoutToParentWindow()](#detachlayouttoparentwindow) API is called for detaching. > > -After the child window calls this API, calling APIs such as > [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto), > [maximize()](arkts-arkui-window-window-i.md#maximize), and > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled) > to change the window position, or dragging and moving or dragging and resizing the child window through mouse > or touch operations will not take effect.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +36,7 @@ Attaches a first-level child window to the main window to maintain a fixed relat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| anchorInfo | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) | No | Anchor point information used to attach the first-level child window to the main window to maintain the fixed relative position. If this parameter is not passed, the default logic is the same as that of [WindowAnchorInfo] [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md#WindowAnchorInfo-(System-API)). |
+| anchorInfo | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) | No | Anchor point information used to attach the first-level child window to the main window to maintain the fixed relative position. If this parameter is not passed, the default logic is the same as that of [WindowAnchorInfo] [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md#windowanchorinfo-system-api). |
 | attachOptions | [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md) | No | Additional parameters for setting the child window layout. If this parameter is not passed, the default logic is the same as that of [SubWindowAttachOptions] SubWindoWattachOptions. |
 
 **Return value:**
@@ -74,10 +66,6 @@ Binds the modal window to the target window. After the binding is successful, th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promise<void>--><!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -106,7 +94,7 @@ Binds the modal window to the target window. After the binding is successful, th
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -168,10 +156,6 @@ Binds the modal window to the target window. After the binding is successful, th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callback: AsyncCallback<void>): void--><!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -195,7 +179,7 @@ Binds the modal window to the target window. After the binding is successful, th
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -259,10 +243,6 @@ Binds the modal window to the target window. After the binding is successful, th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>): Promise<void>--><!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -291,7 +271,7 @@ Binds the modal window to the target window. After the binding is successful, th
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dialogRequest, Want, ServiceExtensionAbility } from '@kit.AbilityKit';
@@ -341,10 +321,6 @@ Binds the modal window to the target window. After the binding is successful, th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>, callback: AsyncCallback<void>): void--><!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -368,7 +344,7 @@ Binds the modal window to the target window. After the binding is successful, th
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dialogRequest, Want, ServiceExtensionAbility } from '@kit.AbilityKit';
@@ -416,13 +392,9 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 detachLayoutToParentWindow(): Promise<void>
 ```
 
-Detach a first-level child window from the main window to cancel a fixed relative position. This API uses a promise to return the result. > **NOTE：**> > - When the child window calls this API, the child window must be in the attached state. > > - After detached by calling this API, the child window retains its position during attaching. > You can drag the child window to change its size and position. > > - After the detaching, calling APIs such as > [moveWindowTo()](arkts-arkui-window-window-i.md#moveWindowTo) or > [maximize()](arkts-arkui-window-window-i.md#maximize), and > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setFollowParentWindowLayoutEnabled) > to change the window position, or dragging and moving or dragging and resizing the child window through mouse > or touch operations will take effect.
+Detach a first-level child window from the main window to cancel a fixed relative position. This API uses a promise to return the result. > **NOTE：**> > - When the child window calls this API, the child window must be in the attached state. > > - After detached by calling this API, the child window retains its position during attaching. > You can drag the child window to change its size and position. > > - After the detaching, calling APIs such as > [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto) or > [maximize()](arkts-arkui-window-window-i.md#maximize), and > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled) > to change the window position, or dragging and moving or dragging and resizing the child window through mouse > or touch operations will take effect.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -458,10 +430,6 @@ enableDrag(enable: boolean): Promise<void>
 Enables or disables window dragging. This API takes effect only for system windows, application child windows, global floating windows, and modal windows. This API uses a promise to return the result. After window dragging is enabled, the window can be resized using the mouse or touch operations.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-enableDrag(enable: boolean): Promise<void>--><!--Device-Window-enableDrag(enable: boolean): Promise<void>-End-->
 
@@ -501,10 +469,6 @@ Checks whether the [system window](../../../windowmanager/window-terminology.md#
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-getRotationLocked(): boolean--><!--Device-Window-getRotationLocked(): boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -527,7 +491,7 @@ Checks whether the [system window](../../../windowmanager/window-terminology.md#
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | 1300029 | This window type is invalid. Possible cause: A non-system window calls this API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -547,10 +511,6 @@ getTransitionController(): TransitionController
 Obtains the transition animation controller.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-getTransitionController(): TransitionController--><!--Device-Window-getTransitionController(): TransitionController-End-->
 
@@ -572,7 +532,7 @@ Obtains the transition animation controller.
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let controller = windowClass.getTransitionController(); // Obtain the transition animation controller.
@@ -587,10 +547,6 @@ hide (callback: AsyncCallback<void>): void
 Hides this window. This API uses an asynchronous callback to return the result. This API takes effect only for a system window or an application child window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-hide (callback: AsyncCallback<void>): void--><!--Device-Window-hide (callback: AsyncCallback<void>): void-End-->
 
@@ -611,7 +567,7 @@ Hides this window. This API uses an asynchronous callback to return the result. 
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -636,10 +592,6 @@ Hides this window. This API uses a promise to return the result. This API takes 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-hide(): Promise<void>--><!--Device-Window-hide(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -659,7 +611,7 @@ Hides this window. This API uses a promise to return the result. This API takes 
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -678,13 +630,9 @@ promise.then(() => {
 hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md#WindowType) is **TYPE_FLOAT**). This API uses an asynchronous callback to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
+Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md#windowtype) is **TYPE_FLOAT**). This API uses an asynchronous callback to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -710,7 +658,7 @@ Sets whether to hide non-system floating windows (where [windowType](arkts-arkui
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -761,13 +709,9 @@ export default class EntryAbility extends UIAbility {
 hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 ```
 
-Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md#WindowType) is **TYPE_FLOAT**). This API uses a promise to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
+Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md#windowtype) is **TYPE_FLOAT**). This API uses a promise to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>--><!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>-End-->
 
@@ -798,7 +742,7 @@ Sets whether to hide non-system floating windows (where [windowType](arkts-arkui
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -853,10 +797,6 @@ Hides this window and plays an animation during the process. This API uses an as
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-hideWithAnimation(callback: AsyncCallback<void>): void--><!--Device-Window-hideWithAnimation(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -878,7 +818,7 @@ Hides this window and plays an animation during the process. This API uses an as
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -903,10 +843,6 @@ Hides this window and plays an animation during the process. This API uses a pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-hideWithAnimation(): Promise<void>--><!--Device-Window-hideWithAnimation(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -928,7 +864,7 @@ Hides this window and plays an animation during the process. This API uses a pro
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -950,10 +886,6 @@ isMainWindowFullScreenAcrossDisplays(): Promise<boolean>
 Checks whether the main window is in full-screen mode across multiple displays. This API uses a promise to return the result. It takes effect only for the main window and child windows.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-isMainWindowFullScreenAcrossDisplays(): Promise<boolean>--><!--Device-Window-isMainWindowFullScreenAcrossDisplays(): Promise<boolean>-End-->
 
@@ -977,7 +909,7 @@ Checks whether the main window is in full-screen mode across multiple displays. 
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1003,10 +935,6 @@ offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void
 Unsubscribes from events indicating whether the main window is in full-screen mode across multiple displays.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void--><!--Device-Window-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void-End-->
 
@@ -1040,10 +968,6 @@ Unsubscribes from events indicating whether the main window is in full-screen mo
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-Window-off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boolean>): void--><!--Device-Window-off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -1067,7 +991,7 @@ Unsubscribes from events indicating whether the main window is in full-screen mo
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const callback = (mainWindowFullScreenAcrossDisplaysChanged: boolean) => {
@@ -1094,10 +1018,6 @@ onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void
 Subscribes to events indicating whether the main window is in full-screen mode across multiple displays.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void--><!--Device-Window-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void-End-->
 
@@ -1131,10 +1051,6 @@ Subscribes to events indicating whether the main window is in full-screen mode a
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-Window-on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean>): void--><!--Device-Window-on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -1158,7 +1074,7 @@ Subscribes to events indicating whether the main window is in full-screen mode a
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const callback = (mainWindowFullScreenAcrossDisplaysChanged: boolean) => {
@@ -1181,10 +1097,6 @@ Sets the opacity for this window. This API can be used only when you [customize 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-opacity(opacity: double): void--><!--Device-Window-opacity(opacity: double): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -1206,7 +1118,7 @@ Sets the opacity for this window. This API can be used only when you [customize 
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1222,13 +1134,9 @@ try {
 raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void
 ```
 
-Raises a child window above a target child window. This API uses an asynchronous callback to return the result. Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed for each.
+Raises a child window above a target child window. This API uses an asynchronous callback to return the result. Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void--><!--Device-Window-raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void-End-->
 
@@ -1240,7 +1148,7 @@ Raises a child window above a target child window. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | ID of the target child window, which is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md#WindowProperties) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties). |
+| windowId | int | Yes | ID of the target child window, which is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md#windowproperties) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -1255,7 +1163,7 @@ Raises a child window above a target child window. This API uses an asynchronous
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: The parent window does not exist or has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -1303,13 +1211,9 @@ export default class EntryAbility extends UIAbility {
 raiseAboveTarget(windowId: int): Promise<void>
 ```
 
-Raises a child window above a target child window. This API uses a promise to return the result. Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed for each.
+Raises a child window above a target child window. This API uses a promise to return the result. Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-raiseAboveTarget(windowId: int): Promise<void>--><!--Device-Window-raiseAboveTarget(windowId: int): Promise<void>-End-->
 
@@ -1321,7 +1225,7 @@ Raises a child window above a target child window. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | ID of the target child window, which is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md#WindowProperties) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties). |
+| windowId | int | Yes | ID of the target child window, which is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md#windowproperties) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties). |
 
 **Return value:**
 
@@ -1341,7 +1245,7 @@ Raises a child window above a target child window. This API uses a promise to re
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: The parent window does not exist or has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -1391,10 +1295,6 @@ Moves the main window above another main window within the same application, wit
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-raiseMainWindowAboveTarget(windowId: int): Promise<void>--><!--Device-Window-raiseMainWindowAboveTarget(windowId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -1405,7 +1305,7 @@ Moves the main window above another main window within the same application, wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | ID of the target main window. The value is an integer. It is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md#WindowProperties) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties). |
+| windowId | int | Yes | ID of the target main window. The value is an integer. It is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md#windowproperties) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties). |
 
 **Return value:**
 
@@ -1424,7 +1324,7 @@ Moves the main window above another main window within the same application, wit
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported, and target must not be modal or topmost. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -1552,13 +1452,9 @@ export default class RaiseMainWindowAbility extends UIAbility {
 raiseToAppTop(callback: AsyncCallback<void>): void
 ```
 
-Raises the application child window to the top layer of the application. This API uses an asynchronous callback to return the result. Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed.
+Raises the application child window to the top layer of the application. This API uses an asynchronous callback to return the result. Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-raiseToAppTop(callback: AsyncCallback<void>): void--><!--Device-Window-raiseToAppTop(callback: AsyncCallback<void>): void-End-->
 
@@ -1582,7 +1478,7 @@ Raises the application child window to the top layer of the application. This AP
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: The parent window does not exist or has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -1621,13 +1517,9 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use [on('windowEvent')](arkts-arkui-window-window-i.md#on_rotationChange) to listen for the focus status of the window. When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed). Conversely, once a blur request is sent, the window will lose focus without any conditions.
+Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) to listen for the focus status of the window. When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed). Conversely, once a blur request is sent, the window will lose focus without any conditions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-requestFocus(isFocused: boolean): Promise<void>--><!--Device-Window-requestFocus(isFocused: boolean): Promise<void>-End-->
 
@@ -1657,7 +1549,7 @@ Allows this window to proactively request to gain or lose focus. This API uses a
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1681,10 +1573,6 @@ Sets the rotation parameters for this window. This API can be used only when you
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-rotate(rotateOptions: RotateOptions): void--><!--Device-Window-rotate(rotateOptions: RotateOptions): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -1706,7 +1594,7 @@ Sets the rotation parameters for this window. This API can be used only when you
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let obj: window.RotateOptions = {
@@ -1733,10 +1621,6 @@ Sets the scale parameters for this window. This API can be used only when you [c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-scale(scaleOptions: ScaleOptions): void--><!--Device-Window-scale(scaleOptions: ScaleOptions): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -1758,7 +1642,7 @@ Sets the scale parameters for this window. This API can be used only when you [c
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let obj: window.ScaleOptions = {
@@ -1780,13 +1664,9 @@ try {
 setBackdropBlur(radius: double): void
 ```
 
-Blurs the background of this window. The window background refers to the lower-layer area covered by the window, which is the same as the window size. To make the blur effect visible, you must set the window background transparent by calling [setWindowBackgroundColor](arkts-arkui-window-window-i.md#setWindowBackgroundColor).
+Blurs the background of this window. The window background refers to the lower-layer area covered by the window, which is the same as the window size. To make the blur effect visible, you must set the window background transparent by calling [setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setBackdropBlur(radius: double): void--><!--Device-Window-setBackdropBlur(radius: double): void-End-->
 
@@ -1809,7 +1689,7 @@ Blurs the background of this window. The window background refers to the lower-l
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1829,10 +1709,6 @@ setBackdropBlurStyle(blurStyle: BlurStyle): void
 Sets the blur style for the background of this window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setBackdropBlurStyle(blurStyle: BlurStyle): void--><!--Device-Window-setBackdropBlurStyle(blurStyle: BlurStyle): void-End-->
 
@@ -1855,7 +1731,7 @@ Sets the blur style for the background of this window.
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1874,10 +1750,6 @@ setBlur(radius: double): void
 Blurs this window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setBlur(radius: double): void--><!--Device-Window-setBlur(radius: double): void-End-->
 
@@ -1900,7 +1772,7 @@ Blurs this window.
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1919,10 +1791,6 @@ setCornerRadius(cornerRadius: double): void
 Sets the radius of the rounded corners for this window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setCornerRadius(cornerRadius: double): void--><!--Device-Window-setCornerRadius(cornerRadius: double): void-End-->
 
@@ -1945,7 +1813,7 @@ Sets the radius of the rounded corners for this window.
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Invalid window type. Only subwindows and float windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1961,13 +1829,9 @@ try {
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadContent) or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent). If this API is not called, the default density is not used. If this API, [setDefaultDensityEnabled(true)](arkts-arkui-window-windowstage-i.md#setDefaultDensityEnabled) , and [setCustomDensity](arkts-arkui-window-windowstage-i.md#setCustomDensity) are all called, the setting from the last called API will be applied.
+Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent). If this API is not called, the default density is not used. If this API, [setDefaultDensityEnabled(true)](arkts-arkui-window-windowstage-i.md#setdefaultdensityenabled) , and [setCustomDensity](arkts-arkui-window-windowstage-i.md#setcustomdensity) are all called, the setting from the last called API will be applied.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setDefaultDensityEnabled(enabled: boolean): void--><!--Device-Window-setDefaultDensityEnabled(enabled: boolean): void-End-->
 
@@ -1989,7 +1853,7 @@ Sets whether the window uses the default density of the current screen. In the s
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -2009,8 +1873,6 @@ setForbidSplitMove(isForbidSplitMove: boolean, callback: AsyncCallback<void>): v
 Sets whether the main window is forbidden to move in split-screen mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -2036,7 +1898,7 @@ Sets whether the main window is forbidden to move in split-screen mode. This API
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -2083,8 +1945,6 @@ Sets whether the main window is forbidden to move in split-screen mode. This API
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-Window-setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>--><!--Device-Window-setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>-End-->
@@ -2114,7 +1974,7 @@ Sets whether the main window is forbidden to move in split-screen mode. This API
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -2159,10 +2019,6 @@ Adds or deletes the handwriting flag for this window. After this flag is added, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-setHandwritingFlag(enable: boolean): Promise<void>--><!--Device-Window-setHandwritingFlag(enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -2191,7 +2047,7 @@ Adds or deletes the handwriting flag for this window. After this flag is added, 
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2218,10 +2074,6 @@ setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>
 Sets whether to enable the main window to raise itself by click. This API uses a promise to return the result. By default, clicking the main window raises both the main window and its associated child windows. Disabling this feature (by passing **false**) prevents the main window and its child windows from being raised when the main window is clicked, preserving their current state. However, clicking on a child window still raises both the child window and the main window together.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>--><!--Device-Window-setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>-End-->
 
@@ -2251,7 +2103,7 @@ Sets whether to enable the main window to raise itself by click. This API uses a
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -2290,13 +2142,9 @@ export default class EntryAbility extends UIAbility {
 setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable a child window to raise itself by click. This API uses an asynchronous callback to return the result. Generally, when a user clicks a child window, the child window is displayed on the top. If the **enable** parameter is set to **false**, the child window is not displayed on the top when being clicked. Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed.
+Sets whether to enable a child window to raise itself by click. This API uses an asynchronous callback to return the result. Generally, when a user clicks a child window, the child window is displayed on the top. If the **enable** parameter is set to **false**, the child window is not displayed on the top when being clicked. Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -2323,7 +2171,7 @@ Sets whether to enable a child window to raise itself by click. This API uses an
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: The parent window does not exist or has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -2366,13 +2214,9 @@ export default class EntryAbility extends UIAbility {
 setRotationLocked(locked: boolean): Promise<void>
 ```
 
-Allows a [system window](../../../windowmanager/window-terminology.md#system-window) to lock or unlock its own screen-rotation behavior. When locked, the window's orientation remains unchanged. When unlocked, the window's orientation follows the main window's orientation, the system rotation-lock button, and the device's physical rotation sensor. If this API is called by a non-system window, error code 1300029 is thrown. This API uses a promise to return the result. > **NOTE：**> > - If the main window sets the display orientation via > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > while rotation is locked, the window restores the last orientation request when brought to the foreground after > unlocking. > > - If the system window sets the display orientation via > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > while rotation is locked, the window restores the last orientation request when brought to the foreground with > the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked** > does not hinder the system window at a higher level to set the display orientation by calling > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > . > > - If the sensor orientation changes while rotation is locked, the last sensor orientation is restored after > unlocking. > > - If the application calls > [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setOrientation) > to set the screen orientation while rotation is locked, that screen?orientation setting is ignored. > > - When rotation is unlocked, the application's display orientation is determined based on the main window's > display orientation set via > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > , the sensor orientation, and more. For details, see > [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview). > > - The API does not affect the launch orientation set by the **orientation** under > [**abilities** in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities) of the > application.
+Allows a [system window](../../../windowmanager/window-terminology.md#system-window) to lock or unlock its own screen-rotation behavior. When locked, the window's orientation remains unchanged. When unlocked, the window's orientation follows the main window's orientation, the system rotation-lock button, and the device's physical rotation sensor. If this API is called by a non-system window, error code 1300029 is thrown. This API uses a promise to return the result. > **NOTE：**> > - If the main window sets the display orientation via > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) > while rotation is locked, the window restores the last orientation request when brought to the foreground after > unlocking. > > - If the system window sets the display orientation via > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) > while rotation is locked, the window restores the last orientation request when brought to the foreground with > the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked** > does not hinder the system window at a higher level to set the display orientation by calling > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) > . > > - If the sensor orientation changes while rotation is locked, the last sensor orientation is restored after > unlocking. > > - If the application calls > [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation) > to set the screen orientation while rotation is locked, that screen?orientation setting is ignored. > > - When rotation is unlocked, the application's display orientation is determined based on the main window's > display orientation set via > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) > , the sensor orientation, and more. For details, see > [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview). > > - The API does not affect the launch orientation set by the **orientation** under > [**abilities** in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities) of the > application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setRotationLocked(locked: boolean): Promise<void>--><!--Device-Window-setRotationLocked(locked: boolean): Promise<void>-End-->
 
@@ -2402,7 +2246,7 @@ Allows a [system window](../../../windowmanager/window-terminology.md#system-win
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | 1300029 | This window type is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2425,10 +2269,6 @@ setShadow(radius: double, color?: string, offsetX?: double, offsetY?: double): v
 Sets the shadow for the window borders.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setShadow(radius: double, color?: string, offsetX?: double, offsetY?: double): void--><!--Device-Window-setShadow(radius: double, color?: string, offsetX?: double, offsetY?: double): void-End-->
 
@@ -2454,7 +2294,7 @@ Sets the shadow for the window borders.
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, modal windows and subwindows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -2473,10 +2313,6 @@ setSingleFrameComposerEnabled(enable: boolean): Promise<void>
 Enables or disables the single-frame composer. This API uses a promise to return the result. The single-frame composer is mainly used in scenarios that require extremely low interaction latency. It reduces the screen display latency of the rendering node.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setSingleFrameComposerEnabled(enable: boolean): Promise<void>--><!--Device-Window-setSingleFrameComposerEnabled(enable: boolean): Promise<void>-End-->
 
@@ -2505,7 +2341,7 @@ Enables or disables the single-frame composer. This API uses a promise to return
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2529,13 +2365,9 @@ try {
 setSnapshotSkip(isSkip: boolean): void
 ```
 
-Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting. If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using [on('windowEvent')](arkts-arkui-window-window-i.md#on_rotationChange) . Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
+Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting. If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) . Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setSnapshotSkip(isSkip: boolean): void--><!--Device-Window-setSnapshotSkip(isSkip: boolean): void-End-->
 
@@ -2567,10 +2399,6 @@ Shows or hides the maximize, minimize, and split-screen buttons on the title bar
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, isSplitVisible: boolean): void--><!--Device-Window-setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, isSplitVisible: boolean): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -2595,7 +2423,7 @@ Shows or hides the maximize, minimize, and split-screen buttons on the title bar
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -2643,10 +2471,6 @@ Called by the main window to place the window above all the other windows. This 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-setTopmost(isTopmost: boolean): Promise<void>--><!--Device-Window-setTopmost(isTopmost: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -2676,7 +2500,7 @@ Called by the main window to place the window above all the other windows. This 
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -2708,10 +2532,6 @@ setTouchableAreas(rects: Array<Rect>): Promise<void>
 Sets the touchable areas for this window. By default, the entire window is touchable. If a touchable area is set, touch events outside this area are transparently transmitted. The setting becomes invalid after the window rectangle changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.SET_WINDOW_TOUCH_AREAS
@@ -2756,10 +2576,6 @@ Wakes up the screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-setWakeUpScreen(wakeUp: boolean): void--><!--Device-Window-setWakeUpScreen(wakeUp: boolean): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -2781,7 +2597,7 @@ Wakes up the screen.
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let wakeUp: boolean = true;
@@ -2801,10 +2617,6 @@ setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void
 Adds or deletes the watermark flag for this window. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Window-setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -2829,7 +2641,7 @@ Adds or deletes the watermark flag for this window. This API uses an asynchronou
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2859,10 +2671,6 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-setWaterMarkFlag(enable: boolean): Promise<void>--><!--Device-Window-setWaterMarkFlag(enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -2891,7 +2699,7 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2915,13 +2723,9 @@ try {
 setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 ```
 
-Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadContent) or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent). The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setWindowBackgroundColor), the content area shows the window background color, whereas the title bar shows the container background color.
+Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent). The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.SET_WINDOW_ALPHA
@@ -2949,7 +2753,7 @@ Sets the background color of the main window container for both when it has focu
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 24 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -2998,10 +2802,6 @@ Sets the mode of the main window. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-setWindowMode(mode: WindowMode): Promise<void>--><!--Device-Window-setWindowMode(mode: WindowMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -3029,7 +2829,7 @@ Sets the mode of the main window. This API uses a promise to return the result.
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Invalid window type. Only main windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -3074,10 +2874,6 @@ Sets the mode of the main window. This API uses an asynchronous callback to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -3100,7 +2896,7 @@ Sets the mode of the main window. This API uses an asynchronous callback to retu
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Invalid window type. Only main windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets
@@ -3147,8 +2943,6 @@ Sets the type of this window. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-Window-setWindowType(type: WindowType): Promise<void>--><!--Device-Window-setWindowType(type: WindowType): Promise<void>-End-->
@@ -3169,7 +2963,7 @@ Sets the type of this window. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3193,8 +2987,6 @@ Sets the type of this window. This API uses an asynchronous callback to return t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-Window-setWindowType(type: WindowType, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowType(type: WindowType, callback: AsyncCallback<void>): void-End-->
@@ -3210,7 +3002,7 @@ Sets the type of this window. This API uses an asynchronous callback to return t
 | type | WindowType | Yes | Window type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3236,10 +3028,6 @@ Shows this window and plays an animation during the process. This API uses an as
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-showWithAnimation(callback: AsyncCallback<void>): void--><!--Device-Window-showWithAnimation(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -3261,7 +3049,7 @@ Shows this window and plays an animation during the process. This API uses an as
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3286,10 +3074,6 @@ Shows this window and plays an animation during the process. This API uses a pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-showWithAnimation(): Promise<void>--><!--Device-Window-showWithAnimation(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -3311,7 +3095,7 @@ Shows this window and plays an animation during the process. This API uses a pro
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3333,10 +3117,6 @@ startMovingWithOptions(startMovingOptions?: StartMovingOptions): Promise<void>
 Starts moving this window. The window moves along with the cursor only when this API is called in the callback function of onTouch, where the event type is TouchType.Down.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3380,10 +3160,6 @@ Sets the translation parameters for this window. This API can be used only when 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Window-translate(translateOptions: TranslateOptions): void--><!--Device-Window-translate(translateOptions: TranslateOptions): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -3405,7 +3181,7 @@ Sets the translation parameters for this window. This API can be used only when 
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let obj: window.TranslateOptions = {

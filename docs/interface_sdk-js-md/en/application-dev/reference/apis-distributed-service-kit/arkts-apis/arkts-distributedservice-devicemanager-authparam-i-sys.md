@@ -4,8 +4,6 @@ Defines the authentication parameters.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-deviceManager-interface AuthParam--><!--Device-deviceManager-interface AuthParam-End-->
@@ -32,8 +30,6 @@ Authentication type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-AuthParam-authType: number--><!--Device-AuthParam-authType: number-End-->
@@ -53,8 +49,6 @@ Extended field. Optional. The default value is **undefined**.
 **Type:** { [key: string]: any }
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 

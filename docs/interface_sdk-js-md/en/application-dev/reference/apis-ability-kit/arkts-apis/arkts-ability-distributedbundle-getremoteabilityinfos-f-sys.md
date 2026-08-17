@@ -17,8 +17,6 @@ Obtains the information about remote abilities that match the given element name
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** null
@@ -48,8 +46,6 @@ function getRemoteAbilityInfos(elementNames: Array<ElementName>): Promise<Array<
 Obtains the information about remote abilities that match the given element names. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

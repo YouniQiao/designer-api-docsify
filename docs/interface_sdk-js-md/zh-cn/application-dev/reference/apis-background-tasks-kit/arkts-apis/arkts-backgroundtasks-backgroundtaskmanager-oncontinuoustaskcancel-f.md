@@ -10,10 +10,6 @@ function onContinuousTaskCancel(callback: Callback<ContinuousTaskCancelInfo>): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
 <!--Device-backgroundTaskManager-function onContinuousTaskCancel(callback: Callback<ContinuousTaskCancelInfo>): void--><!--Device-backgroundTaskManager-function onContinuousTaskCancel(callback: Callback<ContinuousTaskCancelInfo>): void-End-->
@@ -24,7 +20,7 @@ function onContinuousTaskCancel(callback: Callback<ContinuousTaskCancelInfo>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ContinuousTaskCancelInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskcancelinfo-i.md)&gt; | 是 | the callback of continuous task cancel. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ContinuousTaskCancelInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskcancelinfo-i.md)&gt; | 是 | the callback of continuous task cancel. |
 
 **错误码：**
 
@@ -33,7 +29,7 @@ function onContinuousTaskCancel(callback: Callback<ContinuousTaskCancelInfo>): v
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Callback parameter error; 2. Register a exist callback type; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

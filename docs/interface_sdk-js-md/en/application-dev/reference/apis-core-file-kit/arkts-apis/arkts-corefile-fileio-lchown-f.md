@@ -10,8 +10,6 @@ Changes the file owner (owner of the symbolic link, not the file referred to by 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-declare function lchown(path: string, uid: number, gid: number): Promise<void>--><!--Device-unnamed-declare function lchown(path: string, uid: number, gid: number): Promise<void>-End-->
@@ -42,8 +40,6 @@ declare function lchown(path: string, uid: number, gid: number, callback: AsyncC
 Changes the file owner (owner of the symbolic link, not the file referred to by the symbolic link) based on a file path. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

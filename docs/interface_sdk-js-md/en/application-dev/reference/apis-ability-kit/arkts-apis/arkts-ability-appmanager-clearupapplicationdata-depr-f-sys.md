@@ -10,11 +10,9 @@ Clear up application data by bundle name
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearUpApplicationData-(System-API))
+**Substitutes:** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearupapplicationdata-system-api)
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 
@@ -36,7 +34,7 @@ Clear up application data by bundle name
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -63,11 +61,9 @@ Clear up application data by bundle name
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearUpApplicationData-(System-API))
+**Substitutes:** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearupapplicationdata-system-api)
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 
@@ -84,7 +80,7 @@ Clear up application data by bundle name
 | bundleName | string | Yes | bundle name. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

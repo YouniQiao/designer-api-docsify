@@ -4,10 +4,6 @@ Represents the properties of a form object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-http-export interface MultiFormData--><!--Device-http-export interface MultiFormData-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,10 +26,6 @@ Content type of the data field.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MultiFormData-contentType: string--><!--Device-MultiFormData-contentType: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -49,10 +41,6 @@ This parameter sets a mime part's body content from memory data.
 **Type:** string \| Object \| ArrayBuffer
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MultiFormData-data?: string | Object | ArrayBuffer--><!--Device-MultiFormData-data?: string | Object | ArrayBuffer-End-->
 
@@ -70,10 +58,6 @@ This parameter sets a mime part's body content from the file's contents. This is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MultiFormData-filePath?: string--><!--Device-MultiFormData-filePath?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -90,10 +74,6 @@ MIME name for the data field.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MultiFormData-name: string--><!--Device-MultiFormData-name: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -109,10 +89,6 @@ Remote file name for the data field.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MultiFormData-remoteFileName?: string--><!--Device-MultiFormData-remoteFileName?: string-End-->
 

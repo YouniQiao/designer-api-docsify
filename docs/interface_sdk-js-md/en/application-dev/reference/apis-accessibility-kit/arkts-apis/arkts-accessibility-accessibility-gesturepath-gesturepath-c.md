@@ -4,10 +4,6 @@ GesturePath represents gesture path information. This module is used to create g
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class GesturePath--><!--Device-unnamed-export declare class GesturePath-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -28,8 +24,6 @@ Creates a gesture path object by passing in the total gesture duration. After cr
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-GesturePath-constructor(durationTime: long)--><!--Device-GesturePath-constructor(durationTime: long)-End-->
@@ -42,7 +36,7 @@ Creates a gesture path object by passing in the total gesture duration. After cr
 | --- | --- | --- | --- |
 | durationTime | long | Yes | Total gesture duration, in ms. The value must be greater than 0. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { GesturePath } from '@kit.AccessibilityKit';
@@ -62,10 +56,6 @@ Total gesture duration, in ms. The value must be greater than 0.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-GesturePath-durationTime: long--><!--Device-GesturePath-durationTime: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -81,10 +71,6 @@ Sequence of touch points on the gesture path, used to form the movement trajecto
 **Type:** Array&lt;[GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-GesturePath-points: Array<GesturePoint>--><!--Device-GesturePath-points: Array<GesturePoint>-End-->
 

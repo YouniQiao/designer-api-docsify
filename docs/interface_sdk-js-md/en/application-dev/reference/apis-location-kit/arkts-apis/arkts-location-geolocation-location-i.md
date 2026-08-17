@@ -4,11 +4,9 @@ Provides information about geographic locations
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md#Location)
+**Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md#location)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -34,8 +32,6 @@ Indicates location accuracy, in meters.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [accuracy](arkts-location-geolocationmanager-location-i.md#accuracy)
@@ -58,11 +54,9 @@ Indicates the amount of additional descriptive information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [additionSize](arkts-location-geolocationmanager-location-i.md#additionSize)
+**Substitutes:** [additionSize](arkts-location-geolocationmanager-location-i.md#additionsize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -81,8 +75,6 @@ Indicates additional information.
 **Type:** Array&lt;string&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -106,8 +98,6 @@ Indicates location altitude, in meters.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [altitude](arkts-location-geolocationmanager-location-i.md#altitude)
@@ -129,8 +119,6 @@ Indicates direction information.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -154,8 +142,6 @@ Indicates latitude information. A positive value indicates north latitude, and a
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [latitude](arkts-location-geolocationmanager-location-i.md#latitude)
@@ -177,8 +163,6 @@ Indicates Longitude information. A positive value indicates east longitude , and
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -202,8 +186,6 @@ Indicates speed, in m/s.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [speed](arkts-location-geolocationmanager-location-i.md#speed)
@@ -226,11 +208,9 @@ Indicates location timestamp since boot.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [timeSinceBoot](arkts-location-geolocationmanager-location-i.md#timeSinceBoot)
+**Substitutes:** [timeSinceBoot](arkts-location-geolocationmanager-location-i.md#timesinceboot)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -250,11 +230,9 @@ Indicates location timestamp in the UTC format.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [timeStamp](arkts-location-geolocationmanager-location-i.md#timeStamp)
+**Substitutes:** [timeStamp](arkts-location-geolocationmanager-location-i.md#timestamp)
 
 **Required permissions:** ohos.permission.LOCATION
 

@@ -1,14 +1,12 @@
 # ProcessRunningInfo
 
-The module defines the running information of a process. The information can be obtained through [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getProcessRunningInfos) of appManager.
+The module defines the running information of a process. The information can be obtained through [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getprocessrunninginfos) of appManager.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md#ProcessInformation)
+**Substitutes:** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md#processinformation)
 
 <!--Device-unnamed-export interface ProcessRunningInfo--><!--Device-unnamed-export interface ProcessRunningInfo-End-->
 
@@ -28,11 +26,9 @@ Names of all running bundles in the process.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [bundleNames](arkts-ability-processinformation-i.md#bundleNames)
+**Substitutes:** [bundleNames](arkts-ability-processinformation-i.md#bundlenames)
 
 <!--Device-ProcessRunningInfo-bundleNames: Array<string>--><!--Device-ProcessRunningInfo-bundleNames: Array<string>-End-->
 
@@ -51,8 +47,6 @@ Process ID.
 **Default:** process id
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,11 +70,9 @@ Process name.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [processName](arkts-ability-processinformation-i.md#processName)
+**Substitutes:** [processName](arkts-ability-processinformation-i.md#processname)
 
 <!--Device-ProcessRunningInfo-processName: string--><!--Device-ProcessRunningInfo-processName: string-End-->
 
@@ -99,8 +91,6 @@ UID of the application.
 **Default:** user id
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

@@ -4,10 +4,6 @@ Enumerates the window visibility states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-enum OcclusionState--><!--Device-window-enum OcclusionState-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ NO_OCCLUSION = 0
 The window is entirely visible, with no parts obscured by other non-transparent windows.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OcclusionState-NO_OCCLUSION = 0--><!--Device-OcclusionState-NO_OCCLUSION = 0-End-->
 
@@ -40,10 +32,6 @@ The window is partially visible, with some parts obscured by other non-transpare
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OcclusionState-PARTIAL_OCCLUSION = 1--><!--Device-OcclusionState-PARTIAL_OCCLUSION = 1-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -57,10 +45,6 @@ FULL_OCCLUSION = 2
 The window is completely invisible, either fully obscured by other non-transparent windows, minimized, or hidden.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OcclusionState-FULL_OCCLUSION = 2--><!--Device-OcclusionState-FULL_OCCLUSION = 2-End-->
 

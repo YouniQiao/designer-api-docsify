@@ -1,12 +1,8 @@
 # ContinuableInfo (System API)
 
-The module provides the mission continuation information to be returned when the listener for listening for the mission continuation state is registered. For details about the registration, see on('continueStateChange').
+The module provides the mission continuation information to be returned when the listener for listening for the mission continuation state is registered. For details about the registration, see [on('continueStateChange')](arkts-ability-distributedmissionmanager-oncontinuestatechange-f-sys.md#oncontinuestatechange).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ContinuableInfo--><!--Device-unnamed-export interface ContinuableInfo-End-->
 
@@ -25,10 +21,6 @@ Bundle name of the target application to which the mission belongs.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Continuation type of the application to which the mission belongs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContinuableInfo-continueType?: string--><!--Device-ContinuableInfo-continueType?: string-End-->
@@ -73,10 +61,6 @@ Bundle name of the source application to which the mission belongs. The value is
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ ID of the source device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ContinuableInfo-srcDeviceId: string--><!--Device-ContinuableInfo-srcDeviceId: string-End-->
@@ -121,10 +101,6 @@ Target AppId list of the application to which the mission belongs.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

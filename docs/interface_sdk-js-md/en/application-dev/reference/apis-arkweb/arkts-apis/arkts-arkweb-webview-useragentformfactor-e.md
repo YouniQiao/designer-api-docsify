@@ -1,12 +1,8 @@
 # UserAgentFormFactor
 
-The form factors for User-Agent metadata.
+Enumerates the user device forms.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum UserAgentFormFactor--><!--Device-webview-enum UserAgentFormFactor-End-->
 
@@ -18,13 +14,9 @@ The form factors for User-Agent metadata.
 AUTOMOTIVE = 'Automotive'
 ```
 
-Form factor option: Automotive.
+Telematics device, which is a string.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +30,9 @@ Form factor option: Automotive.
 DESKTOP = 'Desktop'
 ```
 
-Form factor option: Desktop.
+PC, which is a string.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +46,9 @@ Form factor option: Desktop.
 MOBILE = 'Mobile'
 ```
 
-Form factor option: Mobile.
+Mobile phone, which is a string.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,13 +62,9 @@ Form factor option: Mobile.
 EINK = 'EInk'
 ```
 
-Form factor option: EInk.
+E-ink screen, which is a string.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,13 +78,9 @@ Form factor option: EInk.
 TABLET = 'Tablet'
 ```
 
-Form factor option: Tablet.
+Tablet, which is a string.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,13 +94,9 @@ Form factor option: Tablet.
 WATCH = 'Watch'
 ```
 
-Form factor option: Watch.
+Watch, a string type.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,13 +110,9 @@ Form factor option: Watch.
 XR = 'XR'
 ```
 
-Form factor option: XR.
+VR+AR device, a string type.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

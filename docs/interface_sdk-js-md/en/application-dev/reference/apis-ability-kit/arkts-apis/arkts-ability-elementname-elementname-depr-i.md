@@ -1,14 +1,12 @@
 # ElementName
 
-The module provides element name information, which can be obtained through Context.getElementName. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-ElementName](#ElementName) instead.
+The module provides element name information, which can be obtained through Context.getElementName. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-ElementName](#elementname) instead.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ElementName](#ElementName)
+**Substitutes:** [ElementName](#elementname)
 
 <!--Device-unnamed-export interface ElementName--><!--Device-unnamed-export interface ElementName-End-->
 
@@ -27,8 +25,6 @@ Ability name.
 **Default:** ability class name.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Bundle name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** bundleName
@@ -75,8 +69,6 @@ Device ID.
 **Default:** -
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -100,8 +92,6 @@ Short name of the ability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** shortName
@@ -123,8 +113,6 @@ Resource ID.
 **Default:** -
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

@@ -16,10 +16,6 @@ Registers a callback to listen for the continuous task change events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BACKGROUND_TASK_INFO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -45,7 +41,7 @@ Registers a callback to listen for the continuous task change events.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';

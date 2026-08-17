@@ -4,10 +4,6 @@ Pixel fill mode enumeration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-enum TileMode--><!--Device-uiEffect-enum TileMode-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -23,10 +19,6 @@ CLAMP = 0
 Clamp mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TileMode-CLAMP = 0--><!--Device-TileMode-CLAMP = 0-End-->
 
@@ -44,10 +36,6 @@ Repeat mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TileMode-REPEAT = 1--><!--Device-TileMode-REPEAT = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -64,10 +52,6 @@ Mirror mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TileMode-MIRROR = 2--><!--Device-TileMode-MIRROR = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -83,10 +67,6 @@ DECAL = 3
 Decal mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TileMode-DECAL = 3--><!--Device-TileMode-DECAL = 3-End-->
 

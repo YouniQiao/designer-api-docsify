@@ -30,10 +30,6 @@ Truncates a file. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function truncate(file: string | number, len?: number): Promise<void>--><!--Device-unnamed-declare function truncate(file: string | number, len?: number): Promise<void>-End-->
@@ -85,10 +81,6 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function truncate(file: string | number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function truncate(file: string | number, callback: AsyncCallback<void>): void-End-->
@@ -133,10 +125,6 @@ declare function truncate(file: string | number, len: number, callback: AsyncCal
 Truncates a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

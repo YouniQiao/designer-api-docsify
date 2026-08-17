@@ -16,10 +16,6 @@ Checks whether an effect ID is supported. This API uses an asynchronous callback
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): void--><!--Device-vibrator-function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -38,7 +34,7 @@ Checks whether an effect ID is supported. This API uses an asynchronous callback
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';
@@ -92,10 +88,6 @@ Checks whether an effect ID is supported. This API uses a promise to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-function isSupportEffect(effectId: string): Promise<boolean>--><!--Device-vibrator-function isSupportEffect(effectId: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -119,7 +111,7 @@ Checks whether an effect ID is supported. This API uses a promise to return the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

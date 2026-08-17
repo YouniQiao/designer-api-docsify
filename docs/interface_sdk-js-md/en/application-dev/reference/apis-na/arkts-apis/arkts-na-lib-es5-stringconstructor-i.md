@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface StringConstructor--><!--Device-unnamed-interface StringConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new(value?: any): String
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-StringConstructor-new(value?: any): String--><!--Device-StringConstructor-new(value?: any): String-End-->
 
@@ -42,10 +34,6 @@ new(value?: any): String
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-StringConstructor-(value?: any): string--><!--Device-StringConstructor-(value?: any): string-End-->
 
 **Parameters:**
@@ -67,10 +55,6 @@ fromCharCode(...codes: number[]): string
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-StringConstructor-fromCharCode(...codes: number[]): string--><!--Device-StringConstructor-fromCharCode(...codes: number[]): string-End-->
 
@@ -95,10 +79,6 @@ readonly prototype: String
 **Type:** String
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-StringConstructor-readonly prototype: String--><!--Device-StringConstructor-readonly prototype: String-End-->
 

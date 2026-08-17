@@ -8,10 +8,6 @@ Mission information corresponding to ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-missionManager-export type MissionInfo = _MissionInfo--><!--Device-missionManager-export type MissionInfo = _MissionInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission

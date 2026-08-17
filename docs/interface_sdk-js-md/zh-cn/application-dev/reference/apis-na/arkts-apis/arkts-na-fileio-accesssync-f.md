@@ -10,9 +10,7 @@ function accessSync(path: string, mode?: AccessModeType): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function accessSync(path: string, mode?: AccessModeType): boolean--><!--Device-fileIo-function accessSync(path: string, mode?: AccessModeType): boolean-End-->
 
@@ -59,9 +57,7 @@ function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): b
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-fileIo-function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean--><!--Device-fileIo-function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean-End-->
 

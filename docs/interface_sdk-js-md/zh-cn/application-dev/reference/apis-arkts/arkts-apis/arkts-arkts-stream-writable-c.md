@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-stream-class Writable--><!--Device-stream-class Writable-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -22,17 +18,13 @@ constructor()
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-constructor()--><!--Device-Writable-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 示例
+**示例**
 
 ```TypeScript
 let writableStream = new stream.Writable();
@@ -48,10 +40,6 @@ cork(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-cork(): boolean--><!--Device-Writable-cork(): boolean-End-->
@@ -64,7 +52,7 @@ cork(): boolean
 | --- | --- |
 | boolean | 返回设置cork状态是否成功。true表示成功，false表示失败。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -112,10 +100,6 @@ doInitialize(callback: Function): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-doInitialize(callback: Function): void--><!--Device-Writable-doInitialize(callback: Function): void-End-->
@@ -128,7 +112,7 @@ doInitialize(callback: Function): void
 | --- | --- | --- | --- |
 | callback | Function | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class MyWritable extends stream.Writable {
@@ -155,10 +139,6 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void--><!--Device-Writable-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void-End-->
@@ -173,7 +153,7 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 | encoding | string | 是 | 字符编码类型。当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 | callback | Function | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -221,10 +201,6 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-doWritev(chunks: string[] | Uint8Array[], callback: Function): void--><!--Device-Writable-doWritev(chunks: string[] | Uint8Array[], callback: Function): void-End-->
@@ -238,7 +214,7 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 | chunks | string[] \| Uint8Array[] | 是 | 待批量写出的数据块数组。 |
 | callback | Function | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -296,10 +272,6 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable--><!--Device-Writable-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable-End-->
@@ -326,7 +298,7 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 | --- | --- |
 | [10200035](../errorcode-utils.md#10200035-dowrite接口未实现) | The doWrite method has not been implemented. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -384,10 +356,6 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-off(event: string, callback?: Callback<emitter.EventData>): void--><!--Device-Writable-off(event: string, callback?: Callback<emitter.EventData>): void-End-->
@@ -399,9 +367,9 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。 - 'close'：完成end()调用，结束写入操作，触发该事件。 - 'drain'：在可写流缓冲区中数据清空时触发该事件。 - 'error'：在可写流发生异常时触发该事件。 - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -467,10 +435,6 @@ off(event: string, callback?: Function): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-off(event: string, callback?: Function): void--><!--Device-Writable-off(event: string, callback?: Function): void-End-->
@@ -494,10 +458,6 @@ on(event: string, callback: Callback<emitter.EventData>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-on(event: string, callback: Callback<emitter.EventData>): void--><!--Device-Writable-on(event: string, callback: Callback<emitter.EventData>): void-End-->
@@ -509,9 +469,9 @@ on(event: string, callback: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。 - 'close'：完成end()调用，结束写入操作，触发该事件。 - 'drain'：在可写流缓冲区中数据清空时触发该事件。 - 'error'：在可写流发生异常时触发该事件。 - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件传输的数据。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件传输的数据。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -567,10 +527,6 @@ on(event: string, callback: Function): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-on(event: string, callback: Function): void--><!--Device-Writable-on(event: string, callback: Function): void-End-->
@@ -594,10 +550,6 @@ setDefaultEncoding(encoding?: string): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-setDefaultEncoding(encoding?: string): boolean--><!--Device-Writable-setDefaultEncoding(encoding?: string): boolean-End-->
@@ -616,7 +568,7 @@ setDefaultEncoding(encoding?: string): boolean
 | --- | --- |
 | boolean | 返回是否设置成功。true表示成功，false表示失败。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -664,10 +616,6 @@ uncork(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-uncork(): boolean--><!--Device-Writable-uncork(): boolean-End-->
@@ -680,7 +628,7 @@ uncork(): boolean
 | --- | --- |
 | boolean | 返回解除cork状态是否成功。true表示成功，false表示失败。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -740,10 +688,6 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Writable-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean--><!--Device-Writable-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean-End-->
@@ -772,7 +716,7 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 | [10200037](../errorcode-utils.md#10200037-多次调用callback) | The callback is invoked multiple times consecutively. |
 | [10200036](../errorcode-utils.md#10200036-流已经结束仍进行写操作) | The stream has been ended. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

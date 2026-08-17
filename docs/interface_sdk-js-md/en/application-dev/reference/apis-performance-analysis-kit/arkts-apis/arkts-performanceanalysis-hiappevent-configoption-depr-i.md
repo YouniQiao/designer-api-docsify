@@ -4,11 +4,9 @@ Provides the configuration items for application event logging.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md#ConfigOption)
+**Substitutes:** [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md#configoption)
 
 <!--Device-hiAppEvent-interface ConfigOption--><!--Device-hiAppEvent-interface ConfigOption-End-->
 
@@ -25,8 +23,6 @@ Application event logging switch. The value **true** means to disable the applic
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -48,11 +44,9 @@ Maximum size of the event file storage directory. The default value is **10MB**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [maxStorage](arkts-performanceanalysis-hiappevent-configoption-i.md#maxStorage)
+**Substitutes:** [maxStorage](arkts-performanceanalysis-hiappevent-configoption-i.md#maxstorage)
 
 <!--Device-ConfigOption-maxStorage?: string--><!--Device-ConfigOption-maxStorage?: string-End-->
 

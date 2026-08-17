@@ -4,10 +4,6 @@ Provides attribute names and value types of a node element.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ElementAttributeValues--><!--Device-unnamed-export interface ElementAttributeValues-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,10 +19,6 @@ Whether the element is in the accessibility focus state. The value **true** indi
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-accessibilityFocused: boolean--><!--Device-ElementAttributeValues-accessibilityFocused: boolean-End-->
 
@@ -44,10 +36,6 @@ ID of the next component to be focused. This attribute value set by the user on 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-accessibilityNextFocusId?: long--><!--Device-ElementAttributeValues-accessibilityNextFocusId?: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -63,10 +51,6 @@ ID of the previously focused component. This attribute value set by the user on 
 **Type:** long
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-accessibilityPreviousFocusId?: long--><!--Device-ElementAttributeValues-accessibilityPreviousFocusId?: long-End-->
 
@@ -84,10 +68,6 @@ Whether the element is scrollable in accessibility mode. This attribute takes pr
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-accessibilityScrollable?: boolean--><!--Device-ElementAttributeValues-accessibilityScrollable?: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -103,10 +83,6 @@ Accessibility text information of an element.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-accessibilityText: string--><!--Device-ElementAttributeValues-accessibilityText: string-End-->
 
@@ -124,10 +100,6 @@ Bundle name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-bundleName: string--><!--Device-ElementAttributeValues-bundleName: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -143,10 +115,6 @@ Whether the element is checkable. The value **true** indicates that the element 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-checkable: boolean--><!--Device-ElementAttributeValues-checkable: boolean-End-->
 
@@ -164,10 +132,6 @@ Whether the element is checked. The value **true** indicates that the element is
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-checked: boolean--><!--Device-ElementAttributeValues-checked: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -183,10 +147,6 @@ All child elements.
 **Type:** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-children: Array<AccessibilityElement>--><!--Device-ElementAttributeValues-children: Array<AccessibilityElement>-End-->
 
@@ -204,10 +164,6 @@ Whether the element is clickable. The value **true** indicates that the element 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-clickable: boolean--><!--Device-ElementAttributeValues-clickable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -223,10 +179,6 @@ ID of the component to which the element belongs. Default value: **-1**.
 **Type:** long
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-componentId: long--><!--Device-ElementAttributeValues-componentId: long-End-->
 
@@ -244,10 +196,6 @@ Component type of the element, for example, 'Button' for the Button component an
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-componentType: string--><!--Device-ElementAttributeValues-componentType: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -263,10 +211,6 @@ List of contents. Set this parameter based on site requirements. No special rest
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-contents: Array<string>--><!--Device-ElementAttributeValues-contents: Array<string>-End-->
 
@@ -284,10 +228,6 @@ Index of the current item. The value range is greater than or equal to 0. The de
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-currentIndex: int--><!--Device-ElementAttributeValues-currentIndex: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -298,15 +238,11 @@ Index of the current item. The value range is greater than or equal to 0. The de
 customComponentType?: string
 ```
 
-Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#AccessibilityRoleType) of the element. The default value is an empty string.
+Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#accessibilityroletype) of the element. The default value is an empty string.
 
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-customComponentType?: string--><!--Device-ElementAttributeValues-customComponentType?: string-End-->
 
@@ -324,10 +260,6 @@ Description of the element. Set this parameter based on site requirements. No sp
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-description: string--><!--Device-ElementAttributeValues-description: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -343,10 +275,6 @@ Whether the element is editable. The value **true** indicates that the element i
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-editable: boolean--><!--Device-ElementAttributeValues-editable: boolean-End-->
 
@@ -364,10 +292,6 @@ List index of the last displayed item on the screen. The value range is greater 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-endIndex: int--><!--Device-ElementAttributeValues-endIndex: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -383,10 +307,6 @@ Error status.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-error: string--><!--Device-ElementAttributeValues-error: string-End-->
 
@@ -404,10 +324,6 @@ Extended attribute used to define properties of specific components. The default
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-extraInfo?: string--><!--Device-ElementAttributeValues-extraInfo?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -423,10 +339,6 @@ Whether the element is focusable. The value **true** indicates that the element 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-focusable: boolean--><!--Device-ElementAttributeValues-focusable: boolean-End-->
 
@@ -444,10 +356,6 @@ Hint text.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-hintText: string--><!--Device-ElementAttributeValues-hintText: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -463,10 +371,6 @@ Touchable area of an element.
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-hotArea: Rect--><!--Device-ElementAttributeValues-hotArea: Rect-End-->
 
@@ -484,10 +388,6 @@ Type of the input text. Different values correspond to different input modes: **
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-inputType: int--><!--Device-ElementAttributeValues-inputType: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -503,10 +403,6 @@ Alias of the element.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-inspectorKey: string--><!--Device-ElementAttributeValues-inspectorKey: string-End-->
 
@@ -524,10 +420,6 @@ Whether the element is active. The value **true** indicates that the element is 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-isActive: boolean--><!--Device-ElementAttributeValues-isActive: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -543,10 +435,6 @@ Whether the element is enabled. The value **true** indicates that the element is
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-isEnable: boolean--><!--Device-ElementAttributeValues-isEnable: boolean-End-->
 
@@ -564,10 +452,6 @@ Whether the element is focused. The value **true** indicates that the element is
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-isFocused: boolean--><!--Device-ElementAttributeValues-isFocused: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -583,10 +467,6 @@ Whether the element is a hint. The value **true** indicates that the element is 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-isHint: boolean--><!--Device-ElementAttributeValues-isHint: boolean-End-->
 
@@ -604,10 +484,6 @@ Whether the element is a password. The value **true** indicates that the element
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-isPassword: boolean--><!--Device-ElementAttributeValues-isPassword: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -623,10 +499,6 @@ Whether the element is visible. The value **true** indicates that the element is
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-isVisible: boolean--><!--Device-ElementAttributeValues-isVisible: boolean-End-->
 
@@ -644,10 +516,6 @@ Total number of items. The value range is greater than or equal to 0. The defaul
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-itemCount: int--><!--Device-ElementAttributeValues-itemCount: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -663,10 +531,6 @@ Content of the last item in a list or scrollable control.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-lastContent: string--><!--Device-ElementAttributeValues-lastContent: string-End-->
 
@@ -684,10 +548,6 @@ Display layer of the element. The value range is greater than or equal to 0. The
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-layer: int--><!--Device-ElementAttributeValues-layer: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -703,10 +563,6 @@ Whether the element is long-clickable. The value **true** indicates that the ele
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-longClickable: boolean--><!--Device-ElementAttributeValues-longClickable: boolean-End-->
 
@@ -724,10 +580,6 @@ For scrollable components such as **List** and **Grid**, this attribute indicate
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-offset: double--><!--Device-ElementAttributeValues-offset: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -743,10 +595,6 @@ Page ID. The default value is **-1**.
 **Type:** int
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-pageId: int--><!--Device-ElementAttributeValues-pageId: int-End-->
 
@@ -764,10 +612,6 @@ Parent element of the element.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-parent: AccessibilityElement--><!--Device-ElementAttributeValues-parent: AccessibilityElement-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -783,10 +627,6 @@ Whether the element supports multiple lines of text. The value **true** indicate
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-pluralLineSupported: boolean--><!--Device-ElementAttributeValues-pluralLineSupported: boolean-End-->
 
@@ -804,10 +644,6 @@ Rectangular area of the element, including position and size information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-rect: Rect--><!--Device-ElementAttributeValues-rect: Rect-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -823,10 +659,6 @@ Resource name of the element.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-resourceName: string--><!--Device-ElementAttributeValues-resourceName: string-End-->
 
@@ -844,10 +676,6 @@ Root node element of the window element.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-rootElement: AccessibilityElement--><!--Device-ElementAttributeValues-rootElement: AccessibilityElement-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -863,10 +691,6 @@ Display area of the element.
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-screenRect: Rect--><!--Device-ElementAttributeValues-screenRect: Rect-End-->
 
@@ -884,10 +708,6 @@ Whether the element is scrollable. The value **true** indicates that the element
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-scrollable: boolean--><!--Device-ElementAttributeValues-scrollable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -903,10 +723,6 @@ Whether the element is selected. The value **true** indicates that the element i
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-selected: boolean--><!--Device-ElementAttributeValues-selected: boolean-End-->
 
@@ -924,10 +740,6 @@ List index of the first item on the screen. The value range is greater than or e
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-startIndex: int--><!--Device-ElementAttributeValues-startIndex: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -943,10 +755,6 @@ Text of the element.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-text: string--><!--Device-ElementAttributeValues-text: string-End-->
 
@@ -964,10 +772,6 @@ Maximum length limit of the element text. The value range is greater than or equ
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-textLengthLimit: int--><!--Device-ElementAttributeValues-textLengthLimit: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -983,10 +787,6 @@ Granularity of movement when the text is read.
 **Type:** accessibility.TextMoveUnit
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-textMoveUnit: accessibility.TextMoveUnit--><!--Device-ElementAttributeValues-textMoveUnit: accessibility.TextMoveUnit-End-->
 
@@ -1004,10 +804,6 @@ Accessibility text type of an element, which is configured by the **accessibilit
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-textType: string--><!--Device-ElementAttributeValues-textType: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1023,10 +819,6 @@ Action that triggers the element event.
 **Type:** accessibility.Action
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-triggerAction: accessibility.Action--><!--Device-ElementAttributeValues-triggerAction: accessibility.Action-End-->
 
@@ -1044,10 +836,6 @@ Window type of the element.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-type: WindowType--><!--Device-ElementAttributeValues-type: WindowType-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1063,10 +851,6 @@ Maximum value. Default value: **0**.
 **Type:** double
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-valueMax: double--><!--Device-ElementAttributeValues-valueMax: double-End-->
 
@@ -1084,10 +868,6 @@ Minimum value. Default value: **0**.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-valueMin: double--><!--Device-ElementAttributeValues-valueMin: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1104,10 +884,6 @@ Current value. Default value: **0**.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ElementAttributeValues-valueNow: double--><!--Device-ElementAttributeValues-valueNow: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -1123,10 +899,6 @@ Window ID. Default value: **-1**.
 **Type:** int
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-ElementAttributeValues-windowId: int--><!--Device-ElementAttributeValues-windowId: int-End-->
 

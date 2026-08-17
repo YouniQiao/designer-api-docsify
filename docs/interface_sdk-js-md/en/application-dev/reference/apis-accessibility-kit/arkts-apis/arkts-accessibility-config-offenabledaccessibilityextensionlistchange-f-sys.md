@@ -16,10 +16,6 @@ Unregister listener that watches for changes in the enabled status of accessibil
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
 <!--Device-config-function offEnabledAccessibilityExtensionListChange(callback?: Callback<void>): void--><!--Device-config-function offEnabledAccessibilityExtensionListChange(callback?: Callback<void>): void-End-->

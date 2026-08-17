@@ -4,11 +4,9 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#PROXIMITY)
+**替代接口：** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#proximity)
 
 <!--Device-unnamed-export interface SubscribeProximityOptions--><!--Device-unnamed-export interface SubscribeProximityOptions-End-->
 
@@ -26,11 +24,9 @@ fail?: (data: string, code: number) => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -50,11 +46,9 @@ success: (data: ProximityResponse) => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

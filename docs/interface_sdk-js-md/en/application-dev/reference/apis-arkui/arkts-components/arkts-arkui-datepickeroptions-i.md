@@ -4,10 +4,6 @@ Describes the parameters of the date picker. > **NOTE：**> > - For details abou
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface DatePickerOptions--><!--Device-unnamed-declare interface DatePickerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,10 +22,6 @@ End date of the picker. Default value: **Date('2100-12-31')** Value range: [Date
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DatePickerOptions-end?: Date--><!--Device-DatePickerOptions-end?: Date-End-->
@@ -42,17 +34,13 @@ End date of the picker. Default value: **Date('2100-12-31')** Value range: [Date
 mode?: DatePickerMode
 ```
 
-Date display mode. Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day. In DatePickerDialog, when **showTime** in [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md#DatePickerDialogOptions) is **true**, this parameter is ignored and the year, month, day columns are always shown.
+Date display mode. Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day. In DatePickerDialog, when **showTime** in [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md#datepickerdialogoptions) is **true**, this parameter is ignored and the year, month, day columns are always shown.
 
 **Type:** [DatePickerMode](arkts-arkui-datepickermode-e.md)
 
 **Default:** DatePickerMode.DATE - which means to display three columns: year, month, and day. <br>Decimal values are rounded off.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,10 +64,6 @@ Date of the selected item. Default value: current system date. Value range: [Dat
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DatePickerOptions-selected?: Date--><!--Device-DatePickerOptions-selected?: Date-End-->
@@ -99,10 +83,6 @@ Start date of the picker. Default value: **Date('1970-1-1')** Value range: [Date
 **Default:** Date('1970-1-1') [since 11]
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

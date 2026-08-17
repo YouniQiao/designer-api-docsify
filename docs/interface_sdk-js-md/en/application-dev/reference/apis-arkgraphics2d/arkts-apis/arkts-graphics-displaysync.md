@@ -4,10 +4,6 @@ The displaySync module allows your application to draw its custom UI content at 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace displaySync--><!--Device-unnamed-declare namespace displaySync-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

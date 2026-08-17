@@ -10,10 +10,6 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sim-function isOperatorSimCard(slotId: int, operator: OperatorSimCard): boolean--><!--Device-sim-function isOperatorSimCard(slotId: int, operator: OperatorSimCard): boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
@@ -45,7 +41,7 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

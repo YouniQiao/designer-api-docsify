@@ -1,12 +1,8 @@
 # SecureDnsMode
 
-Defines the mode for using HttpDns.
+Enumerates the modes in which the **Web** component uses HTTPDNS.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum SecureDnsMode--><!--Device-webview-enum SecureDnsMode-End-->
 
@@ -18,13 +14,9 @@ Defines the mode for using HttpDns.
 OFF = 0
 ```
 
-Do not use HttpDns, can be used to revoke previously used HttpDns configuration.
+HTTPDNS is not used. It can be used to revoke the previously used HTTPDNS configuration.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ Do not use HttpDns, can be used to revoke previously used HttpDns configuration.
 AUTO = 1
 ```
 
-By default, the user-settings of HttpDns is used for dns resolution, and if it fails, the system dns is used for resolution.
+HTTPDNS is used in automatic mode. If the specified HTTPDNS server is unavailable for resolution, the component falls back to the system DNS server.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ By default, the user-settings of HttpDns is used for dns resolution, and if it f
 SECURE_ONLY = 2
 ```
 
-Use the user-settings of HttpDns for dns resolution. If it fails, it will not fall back to the system dns, which will directly cause the page to fail to load.
+The specified HTTPDNS server is forcibly used for DNS resolution.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

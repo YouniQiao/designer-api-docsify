@@ -16,11 +16,9 @@ Send extended commands to location subsystem.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendCommand)
+**Substitutes:** [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendcommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -35,7 +33,7 @@ Send extended commands to location subsystem.
 | command | LocationCommand | Yes | Indicates the extended Command Message Body. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -61,11 +59,9 @@ Send extended commands to location subsystem.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendCommand)
+**Substitutes:** [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendcommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -85,7 +81,7 @@ Send extended commands to location subsystem.
 | --- | --- |
 | Promise&lt;boolean&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

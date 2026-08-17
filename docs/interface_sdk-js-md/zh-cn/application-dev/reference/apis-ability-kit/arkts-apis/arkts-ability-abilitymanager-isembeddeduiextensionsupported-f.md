@@ -10,10 +10,6 @@ function isEmbeddedUIExtensionSupported(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-abilityManager-function isEmbeddedUIExtensionSupported(): boolean--><!--Device-abilityManager-function isEmbeddedUIExtensionSupported(): boolean-End-->
@@ -26,7 +22,7 @@ function isEmbeddedUIExtensionSupported(): boolean
 | --- | --- |
 | boolean | 当前设备是否支持[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)。返回 true表示当前设备支持；返回false表示当前设备不支持。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { abilityManager, UIAbility } from '@kit.AbilityKit';

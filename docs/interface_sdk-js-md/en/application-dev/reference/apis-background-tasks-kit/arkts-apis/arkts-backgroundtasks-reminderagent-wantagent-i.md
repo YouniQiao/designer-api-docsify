@@ -4,11 +4,9 @@ Sets the package and ability that are redirected to when the reminder notificati
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md#WantAgent)
+**Substitutes:** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md#wantagent)
 
 <!--Device-reminderAgent-interface WantAgent--><!--Device-reminderAgent-interface WantAgent-End-->
 
@@ -32,8 +30,6 @@ Name of the ability that is redirected to when the reminder notification is clic
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** abilityName
@@ -53,8 +49,6 @@ Name of the HAP that is redirected to when the reminder notification is clicked.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

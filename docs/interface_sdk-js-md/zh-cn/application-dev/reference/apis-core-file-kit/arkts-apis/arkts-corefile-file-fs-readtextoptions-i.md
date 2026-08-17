@@ -1,14 +1,10 @@
 # ReadTextOptions
 
-可选项类型，支持readText接口使用，ReadTextOptions继承至[ReadOptions](arkts-corefile-file-fs-readoptions-i.md#ReadOptions)。
+可选项类型，支持readText接口使用，ReadTextOptions继承至[ReadOptions](arkts-corefile-file-fs-readoptions-i.md#readoptions)。
 
-**继承/实现关系：** ReadTextOptions extends [ReadOptions](arkts-corefile-file-fs-readoptions-i.md#ReadOptions)
+**继承/实现关系：** ReadTextOptions extends [ReadOptions](arkts-corefile-file-fs-readoptions-i.md#readoptions)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export interface ReadTextOptions--><!--Device-unnamed-export interface ReadTextOptions-End-->
 
@@ -25,10 +21,6 @@ encoding?: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

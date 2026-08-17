@@ -10,10 +10,6 @@ export function exitMasterProcessRole(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-application-export function exitMasterProcessRole(): Promise<void>--><!--Device-application-export function exitMasterProcessRole(): Promise<void>-End-->
@@ -34,7 +30,7 @@ export function exitMasterProcessRole(): Promise<void>
 | [16000118](../errorcode-ability.md#16000118-当前进程非主控进程) | Not a master process. |
 | [16000119](../errorcode-ability.md#16000119-存在未完成的请求) | Cannot exit because there is an unfinished request. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';

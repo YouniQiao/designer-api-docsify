@@ -16,10 +16,6 @@ Cancels listening to the event of get form rect. You can use this method to canc
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formHost-function offGetFormRect(callback?: formInfo.GetFormRectInfoCallback): void--><!--Device-formHost-function offGetFormRect(callback?: formInfo.GetFormRectInfoCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.Form

@@ -4,10 +4,6 @@ Enumerates the types of the distributed hardware.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hardwareManager-enum DistributedHardwareType--><!--Device-hardwareManager-enum DistributedHardwareType-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
@@ -23,10 +19,6 @@ ALL = 0
 All distributed hardware.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-ALL = 0--><!--Device-DistributedHardwareType-ALL = 0-End-->
 
@@ -44,10 +36,6 @@ Distributed camera.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedHardwareType-CAMERA = 1--><!--Device-DistributedHardwareType-CAMERA = 1-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
@@ -63,10 +51,6 @@ SCREEN = 8
 Distributed screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-SCREEN = 8--><!--Device-DistributedHardwareType-SCREEN = 8-End-->
 
@@ -84,10 +68,6 @@ Distributed microphone for mobile calls.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedHardwareType-MODEM_MIC = 256--><!--Device-DistributedHardwareType-MODEM_MIC = 256-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
@@ -103,10 +83,6 @@ MODEM_SPEAKER = 512
 Distributed speaker for mobile calls.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-MODEM_SPEAKER = 512--><!--Device-DistributedHardwareType-MODEM_SPEAKER = 512-End-->
 
@@ -124,10 +100,6 @@ Distributed microphone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DistributedHardwareType-MIC = 1024--><!--Device-DistributedHardwareType-MIC = 1024-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
@@ -143,10 +115,6 @@ SPEAKER = 2048
 Distributed speaker.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DistributedHardwareType-SPEAKER = 2048--><!--Device-DistributedHardwareType-SPEAKER = 2048-End-->
 

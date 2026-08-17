@@ -16,10 +16,6 @@ Cancel listening for touchPad pinch events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function offPinch(receiver?: Callback<Pinch>): void--><!--Device-inputMonitor-function offPinch(receiver?: Callback<Pinch>): void-End-->
@@ -52,10 +48,6 @@ function offPinch(fingers: int, receiver?: Callback<Pinch>): void
 Cancel listening for touchPad fingers pinch events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 

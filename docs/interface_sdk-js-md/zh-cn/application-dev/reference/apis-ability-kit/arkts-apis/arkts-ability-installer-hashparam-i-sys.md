@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-installer-export interface HashParam--><!--Device-installer-export interface HashParam-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -26,10 +22,6 @@ hashValue: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-HashParam-hashValue: string--><!--Device-HashParam-hashValue: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -47,10 +39,6 @@ moduleName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-HashParam-moduleName: string--><!--Device-HashParam-moduleName: string-End-->
 

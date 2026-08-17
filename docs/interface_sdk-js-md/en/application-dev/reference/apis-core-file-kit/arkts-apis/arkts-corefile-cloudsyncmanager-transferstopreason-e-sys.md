@@ -4,10 +4,6 @@ Describes the state type of transfer stop reason.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-cloudSyncManager-enum TransferStopReason--><!--Device-cloudSyncManager-enum TransferStopReason-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
@@ -23,10 +19,6 @@ SWITCH_OFF = 0
 Indicates that the transfer task stopped by switch off.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Indicates that the transfer task stopped by account logout.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TransferStopReason-ACCOUNT_LOGOUT = 1--><!--Device-TransferStopReason-ACCOUNT_LOGOUT = 1-End-->
@@ -67,10 +55,6 @@ OTHER_REASON = 2
 Indicates that the transfer task stopped by other reason.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

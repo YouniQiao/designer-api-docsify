@@ -4,10 +4,6 @@ Device status change result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDeviceManager-interface DeviceStateChangeResult--><!--Device-distributedDeviceManager-interface DeviceStateChangeResult-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -30,10 +26,6 @@ The state of the nearby devices.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceStateChangeResult-action: DeviceStateChange--><!--Device-DeviceStateChangeResult-action: DeviceStateChange-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -49,10 +41,6 @@ Basic description information of a distributed device.
 **Type:** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceStateChangeResult-device: DeviceBasicInfo--><!--Device-DeviceStateChangeResult-device: DeviceBasicInfo-End-->
 

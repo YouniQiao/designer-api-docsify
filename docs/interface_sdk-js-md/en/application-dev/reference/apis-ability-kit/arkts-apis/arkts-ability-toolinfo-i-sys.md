@@ -4,10 +4,6 @@ ToolInfo describes the basic information of a cli tool.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ToolInfo--><!--Device-unnamed-export interface ToolInfo-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -25,10 +21,6 @@ The description of the CLI tool.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Schemas about custom event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly eventSchemas?: Record<string, Record<string, Object>>--><!--Device-ToolInfo-readonly eventSchemas?: Record<string, Record<string, Object>>-End-->
@@ -73,10 +61,6 @@ Supported event types for custom event.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ The executable path of the CLI tool.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly executablePath: string--><!--Device-ToolInfo-readonly executablePath: string-End-->
@@ -122,10 +102,6 @@ Whether this tool has subcommand.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly hasSubCommand?: boolean--><!--Device-ToolInfo-readonly hasSubCommand?: boolean-End-->
@@ -145,10 +121,6 @@ The input schema of the CLI tool.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,10 +144,6 @@ Whether the tool can be executed when the screen is locked.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly isLockScreenExecutionAllowed?: boolean--><!--Device-ToolInfo-readonly isLockScreenExecutionAllowed?: boolean-End-->
@@ -195,10 +163,6 @@ The name of the CLI tool.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,10 +184,6 @@ The output schema of the CLI tool.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly outputSchema: Record<string, Object>--><!--Device-ToolInfo-readonly outputSchema: Record<string, Object>-End-->
@@ -243,10 +203,6 @@ The require permissions of the CLI tool.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -268,10 +224,6 @@ SubCommandInfo list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolInfo-readonly subcommands?: Record<string, SubCommandInfo>--><!--Device-ToolInfo-readonly subcommands?: Record<string, SubCommandInfo>-End-->
@@ -291,10 +243,6 @@ The version of the CLI tool (format defined by provider, e.g., "1.0.0").
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

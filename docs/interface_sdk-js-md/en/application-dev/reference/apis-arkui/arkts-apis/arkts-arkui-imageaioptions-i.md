@@ -1,12 +1,8 @@
 # ImageAIOptions
 
-Provides the AI image analysis options. > **NOTE：**> > The **types** parameter of this API has a higher priority than that of > [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md#ImageAnalyzerConfig). This means that, if both parameters are set, the value set by > this API takes precedence. > > This API depends on device capabilities and must be used together with the > enableAnalyzer API of the corresponding component (for example, the > Image component).
+Provides the AI image analysis options. > **NOTE：**> > The **types** parameter of this API has a higher priority than that of > [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md#imageanalyzerconfig). This means that, if both parameters are set, the value set by > this API takes precedence. > > This API depends on device capabilities and must be used together with the > enableAnalyzer API of the corresponding component (for example, the > Image component).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ImageAIOptions--><!--Device-unnamed-declare interface ImageAIOptions-End-->
 
@@ -23,10 +19,6 @@ AI image analysis controller.
 **Type:** [ImageAnalyzerController](arkts-arkui-imageanalyzercontroller-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ AI image analysis types.
 **Type:** [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[]
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

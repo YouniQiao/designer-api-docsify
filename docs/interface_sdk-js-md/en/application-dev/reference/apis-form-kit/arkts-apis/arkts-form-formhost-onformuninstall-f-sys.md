@@ -16,10 +16,6 @@ Listens to the event of uninstall form. You can use this method to listen to the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formHost-function onFormUninstall(callback: Callback<string>): void--><!--Device-formHost-function onFormUninstall(callback: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form

@@ -1,14 +1,10 @@
 # TimeLapsePhotoSession (System API)
 
-TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
+TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#session).
 
-**Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Focus](arkts-camera-camera-focus-i.md#Focus), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md#ManualFocus-(System-API)), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [ManualExposure](arkts-camera-camera-manualexposure-i.md#ManualExposure-(System-API)), [ManualIso](arkts-camera-camera-manualiso-i-sys.md#ManualIso-(System-API)), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#WhiteBalance-(System-API)), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect-(System-API))
+**Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-camera-session-i.md#session), [Focus](arkts-camera-camera-focus-i.md#focus), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md#manualfocus-system-api), [AutoExposure](arkts-camera-camera-autoexposure-i.md#autoexposure), [ManualExposure](arkts-camera-camera-manualexposure-i.md#manualexposure-system-api), [ManualIso](arkts-camera-camera-manualiso-i-sys.md#manualiso-system-api), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#whitebalance-system-api), [Zoom](arkts-camera-camera-zoom-i.md#zoom), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#coloreffect-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface TimeLapsePhotoSession--><!--Device-camera-interface TimeLapsePhotoSession-End-->
 
@@ -32,10 +28,6 @@ Obtains the supported time-lapse shooting interval range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-getSupportedTimeLapseIntervalRange(): Array<int>--><!--Device-TimeLapsePhotoSession-getSupportedTimeLapseIntervalRange(): Array<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -55,7 +47,7 @@ Obtains the supported time-lapse shooting interval range.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -83,10 +75,6 @@ Obtains the current time-lapse shooting interval.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-getTimeLapseInterval(): int--><!--Device-TimeLapsePhotoSession-getTimeLapseInterval(): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -106,7 +94,7 @@ Obtains the current time-lapse shooting interval.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -134,10 +122,6 @@ Obtains the time-lapse preview type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-getTimeLapsePreviewType(): TimeLapsePreviewType--><!--Device-TimeLapsePhotoSession-getTimeLapsePreviewType(): TimeLapsePreviewType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -157,7 +141,7 @@ Obtains the time-lapse preview type.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -185,10 +169,6 @@ Obtains the time-lapse shooting state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-getTimeLapseRecordState(): TimeLapseRecordState--><!--Device-TimeLapsePhotoSession-getTimeLapseRecordState(): TimeLapseRecordState-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -208,7 +188,7 @@ Obtains the time-lapse shooting state.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -236,10 +216,6 @@ Checks whether Try AE is required.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-isTryAENeeded(): boolean--><!--Device-TimeLapsePhotoSession-isTryAENeeded(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -259,7 +235,7 @@ Checks whether Try AE is required.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -286,10 +262,6 @@ offError(callback?: ErrorCallback): void
 Unsubscribes from error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-offError(callback?: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-offError(callback?: ErrorCallback): void-End-->
 
@@ -319,10 +291,6 @@ Unsubscribes from exposure info event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -350,10 +318,6 @@ offFocusStateChange(callback?: AsyncCallback<FocusState>): void
 Unsubscribes from focus state change event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -383,10 +347,6 @@ Unsubscribes from ISO info event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -414,10 +374,6 @@ offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void
 Unsubscribes from lumination info event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void-End-->
 
@@ -447,10 +403,6 @@ Unsubscribes from try AE info event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -479,10 +431,6 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -502,7 +450,7 @@ Unsubscribes from HighResolutionPhotoSession error events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterSessionError(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
@@ -519,10 +467,6 @@ off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void
 Unsubscribes from exposure information change events.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void-End-->
 
@@ -543,7 +487,7 @@ Unsubscribes from exposure information change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterExposureInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
@@ -560,10 +504,6 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 Unsubscribes from focus state change events.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -584,7 +524,7 @@ Unsubscribes from focus state change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterFocusStateChange(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
@@ -601,10 +541,6 @@ off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void
 Unsubscribes from automatic ISO change events.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void-End-->
 
@@ -625,7 +561,7 @@ Unsubscribes from automatic ISO change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterIsoInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
@@ -642,10 +578,6 @@ off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): voi
 Unsubscribes from illumination change events.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void-End-->
 
@@ -666,7 +598,7 @@ Unsubscribes from illumination change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterLuminationInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
@@ -683,10 +615,6 @@ off(type: 'tryAEInfoChange', callback?: AsyncCallback<TryAEInfo>): void
 Unsubscribes from Try AE change events.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-off(type: 'tryAEInfoChange', callback?: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'tryAEInfoChange', callback?: AsyncCallback<TryAEInfo>): void-End-->
 
@@ -707,7 +635,7 @@ Unsubscribes from Try AE change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function unregisterTryAEInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
@@ -724,10 +652,6 @@ onError(callback: ErrorCallback): void
 Subscribes to error events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-onError(callback: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-onError(callback: ErrorCallback): void-End-->
 
@@ -757,10 +681,6 @@ Subscribes exposure info event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -788,10 +708,6 @@ onFocusStateChange(callback: AsyncCallback<FocusState>): void
 Subscribes focus state change event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
 
@@ -821,10 +737,6 @@ Subscribes ISO info event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -852,10 +764,6 @@ onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void
 Subscribes lumination info event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TimeLapsePhotoSession-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void-End-->
 
@@ -885,10 +793,6 @@ Subscribes try AE info event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -917,10 +821,6 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -931,8 +831,8 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-camera-session-i.md#beginConfig), [commitConfig](arkts-camera-camera-session-i.md#commitConfig), and [addInput](arkts-camera-camera-session-i.md#addInput). |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-camera-session-i.md#beginconfig), [commitConfig](arkts-camera-camera-session-i.md#commitconfig), and [addInput](arkts-camera-camera-session-i.md#addinput). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
 
 **Error codes:**
 
@@ -940,7 +840,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -964,10 +864,6 @@ Subscribes to exposure information change events to obtain the exposure informat
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -987,7 +883,7 @@ Subscribes to exposure information change events to obtain the exposure informat
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1015,10 +911,6 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -1038,7 +930,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1066,10 +958,6 @@ Subscribes to automatic ISO change events to obtain real-time ISO information. T
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -1089,7 +977,7 @@ Subscribes to automatic ISO change events to obtain real-time ISO information. T
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1117,10 +1005,6 @@ Subscribes to illumination change events to obtain real-time illumination inform
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -1140,7 +1024,7 @@ Subscribes to illumination change events to obtain real-time illumination inform
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1168,10 +1052,6 @@ Subscribes to Try AE change events to obtain real-time Try AE parameters. This A
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -1191,7 +1071,7 @@ Subscribes to Try AE change events to obtain real-time Try AE parameters. This A
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1219,10 +1099,6 @@ Sets a time-lapse shooting interval.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-setTimeLapseInterval(interval: int): void--><!--Device-TimeLapsePhotoSession-setTimeLapseInterval(interval: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -1233,7 +1109,7 @@ Sets a time-lapse shooting interval.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interval | int | Yes | Shooting interval, in units of ms, the supported range can be obtained by calling [getSupportedTimeLapseIntervalRange](#getSupportedTimeLapseIntervalRange) |
+| interval | int | Yes | Shooting interval, in units of ms, the supported range can be obtained by calling [getSupportedTimeLapseIntervalRange](#getsupportedtimelapseintervalrange) |
 
 **Error codes:**
 
@@ -1243,7 +1119,7 @@ Sets a time-lapse shooting interval.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1270,10 +1146,6 @@ Sets the time-lapse preview type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-setTimeLapsePreviewType(type: TimeLapsePreviewType): void--><!--Device-TimeLapsePhotoSession-setTimeLapsePreviewType(type: TimeLapsePreviewType): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -1294,7 +1166,7 @@ Sets the time-lapse preview type.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1320,10 +1192,6 @@ Sets the time-lapse shooting state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-setTimeLapseRecordState(state: TimeLapseRecordState): void--><!--Device-TimeLapsePhotoSession-setTimeLapseRecordState(state: TimeLapseRecordState): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -1344,7 +1212,7 @@ Sets the time-lapse shooting state.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1370,10 +1238,6 @@ Starts to execute Try AE.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-startTryAE(): void--><!--Device-TimeLapsePhotoSession-startTryAE(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -1388,7 +1252,7 @@ Starts to execute Try AE.
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1414,10 +1278,6 @@ Stops the execution of Try AE.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TimeLapsePhotoSession-stopTryAE(): void--><!--Device-TimeLapsePhotoSession-stopTryAE(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -1432,7 +1292,7 @@ Stops the execution of Try AE.
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

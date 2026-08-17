@@ -10,10 +10,6 @@ function removeCheckRule(rule: bigint) : void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hichecker-function removeCheckRule(rule: bigint) : void--><!--Device-hichecker-function removeCheckRule(rule: bigint) : void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
@@ -30,7 +26,7 @@ function removeCheckRule(rule: bigint) : void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | the parameter check failed, only one bigint type parameter is needed |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

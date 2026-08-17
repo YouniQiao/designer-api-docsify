@@ -4,9 +4,7 @@ Defines the information of param element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface NativeEmbedParamItem--><!--Device-unnamed-export declare interface NativeEmbedParamItem-End-->
 
@@ -24,9 +22,7 @@ The id attribute of the param element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NativeEmbedParamItem-id: string--><!--Device-NativeEmbedParamItem-id: string-End-->
 
@@ -44,9 +40,7 @@ The name attribute of the param element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NativeEmbedParamItem-name?: string--><!--Device-NativeEmbedParamItem-name?: string-End-->
 
@@ -64,9 +58,7 @@ The status of the param.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NativeEmbedParamItem-status: NativeEmbedParamStatus--><!--Device-NativeEmbedParamItem-status: NativeEmbedParamStatus-End-->
 
@@ -84,9 +76,7 @@ The value attribute of the param element.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-NativeEmbedParamItem-value?: string--><!--Device-NativeEmbedParamItem-value?: string-End-->
 

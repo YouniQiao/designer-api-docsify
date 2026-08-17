@@ -16,10 +16,6 @@ Send system control command.The system automatically selects the recipient.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-avSession-function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void--><!--Device-avSession-function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void-End-->
@@ -32,7 +28,7 @@ Send system control command.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md#AVControlCommand) |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md#avcontrolcommand) |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
@@ -46,7 +42,7 @@ Send system control command.The system automatically selects the recipient.
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let cmd : avSession.AVControlCommandType = 'play';
@@ -85,10 +81,6 @@ Send system control command.The system automatically selects the recipient.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-avSession-function sendSystemControlCommand(command: AVControlCommand): Promise<void>--><!--Device-avSession-function sendSystemControlCommand(command: AVControlCommand): Promise<void>-End-->
@@ -101,7 +93,7 @@ Send system control command.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md#AVControlCommand) |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md#avcontrolcommand) |
 
 **Return value:**
 
@@ -120,7 +112,7 @@ Send system control command.The system automatically selects the recipient.
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

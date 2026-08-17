@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface DataView--><!--Device-unnamed-interface DataView-End-->
 
 ## getFloat32
@@ -17,10 +13,6 @@ getFloat32(byteOffset: number, littleEndian?: boolean): number
 Gets the Float32 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DataView-getFloat32(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getFloat32(byteOffset: number, littleEndian?: boolean): number-End-->
 
@@ -47,10 +39,6 @@ Gets the Float64 value at the specified byte offset from the start of the view. 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-getFloat64(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getFloat64(byteOffset: number, littleEndian?: boolean): number-End-->
 
 **Parameters:**
@@ -75,10 +63,6 @@ getInt16(byteOffset: number, littleEndian?: boolean): number
 Gets the Int16 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DataView-getInt16(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getInt16(byteOffset: number, littleEndian?: boolean): number-End-->
 
@@ -105,10 +89,6 @@ Gets the Int32 value at the specified byte offset from the start of the view. Th
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-getInt32(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getInt32(byteOffset: number, littleEndian?: boolean): number-End-->
 
 **Parameters:**
@@ -134,10 +114,6 @@ Gets the Int8 value at the specified byte offset from the start of the view. The
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-getInt8(byteOffset: number): number--><!--Device-DataView-getInt8(byteOffset: number): number-End-->
 
 **Parameters:**
@@ -161,10 +137,6 @@ getUint16(byteOffset: number, littleEndian?: boolean): number
 Gets the Uint16 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DataView-getUint16(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getUint16(byteOffset: number, littleEndian?: boolean): number-End-->
 
@@ -191,10 +163,6 @@ Gets the Uint32 value at the specified byte offset from the start of the view. T
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-getUint32(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getUint32(byteOffset: number, littleEndian?: boolean): number-End-->
 
 **Parameters:**
@@ -220,10 +188,6 @@ Gets the Uint8 value at the specified byte offset from the start of the view. Th
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-getUint8(byteOffset: number): number--><!--Device-DataView-getUint8(byteOffset: number): number-End-->
 
 **Parameters:**
@@ -248,10 +212,6 @@ Stores an Float32 value at the specified byte offset from the start of the view.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-setFloat32(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setFloat32(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
 
 **Parameters:**
@@ -271,10 +231,6 @@ setFloat64(byteOffset: number, value: number, littleEndian?: boolean): void
 Stores an Float64 value at the specified byte offset from the start of the view.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DataView-setFloat64(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setFloat64(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
 
@@ -296,10 +252,6 @@ Stores an Int16 value at the specified byte offset from the start of the view.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-setInt16(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setInt16(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
 
 **Parameters:**
@@ -319,10 +271,6 @@ setInt32(byteOffset: number, value: number, littleEndian?: boolean): void
 Stores an Int32 value at the specified byte offset from the start of the view.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DataView-setInt32(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setInt32(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
 
@@ -344,10 +292,6 @@ Stores an Int8 value at the specified byte offset from the start of the view.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-setInt8(byteOffset: number, value: number): void--><!--Device-DataView-setInt8(byteOffset: number, value: number): void-End-->
 
 **Parameters:**
@@ -366,10 +310,6 @@ setUint16(byteOffset: number, value: number, littleEndian?: boolean): void
 Stores an Uint16 value at the specified byte offset from the start of the view.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DataView-setUint16(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setUint16(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
 
@@ -391,10 +331,6 @@ Stores an Uint32 value at the specified byte offset from the start of the view.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-setUint32(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setUint32(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
 
 **Parameters:**
@@ -415,10 +351,6 @@ Stores an Uint8 value at the specified byte offset from the start of the view.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-setUint8(byteOffset: number, value: number): void--><!--Device-DataView-setUint8(byteOffset: number, value: number): void-End-->
 
 **Parameters:**
@@ -438,10 +370,6 @@ readonly buffer: ArrayBuffer
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-readonly buffer: ArrayBuffer--><!--Device-DataView-readonly buffer: ArrayBuffer-End-->
 
 ## byteLength
@@ -454,10 +382,6 @@ readonly byteLength: number
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-DataView-readonly byteLength: number--><!--Device-DataView-readonly byteLength: number-End-->
 
 ## byteOffset
@@ -469,10 +393,6 @@ readonly byteOffset: number
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-DataView-readonly byteOffset: number--><!--Device-DataView-readonly byteOffset: number-End-->
 

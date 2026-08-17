@@ -16,10 +16,6 @@ Send system media key event.The system automatically selects the recipient.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-avSession-function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void--><!--Device-avSession-function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void-End-->
@@ -45,7 +41,7 @@ Send system media key event.The system automatically selects the recipient.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { KeyEvent } from '@kit.InputKit';
@@ -73,10 +69,6 @@ function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>
 Send system media key event.The system automatically selects the recipient.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -108,7 +100,7 @@ Send system media key event.The system automatically selects the recipient.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { KeyEvent } from '@kit.InputKit';

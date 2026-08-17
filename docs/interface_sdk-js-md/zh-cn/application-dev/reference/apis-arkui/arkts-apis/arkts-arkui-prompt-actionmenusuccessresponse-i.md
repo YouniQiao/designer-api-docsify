@@ -4,11 +4,9 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [ActionMenuSuccessResponse](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenusuccessresponse-i.md#ActionMenuSuccessResponse)
+**替代接口：** [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md#actionmenusuccessresponse)
 
 <!--Device-prompt-interface ActionMenuSuccessResponse--><!--Device-prompt-interface ActionMenuSuccessResponse-End-->
 
@@ -26,11 +24,9 @@ index: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [index](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenusuccessresponse-i.md#index)
+**替代接口：** [index](arkts-arkui-promptaction-actionmenusuccessresponse-i.md#index)
 
 <!--Device-ActionMenuSuccessResponse-index: number--><!--Device-ActionMenuSuccessResponse-index: number-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-volumeManager-export interface Volume--><!--Device-volumeManager-export interface Volume-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
@@ -25,10 +21,6 @@ description: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Volume-description: string--><!--Device-Volume-description: string-End-->
 
@@ -48,10 +40,6 @@ diskId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Volume-diskId: string--><!--Device-Volume-diskId: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
@@ -69,10 +57,6 @@ fsType: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Volume-fsType: string--><!--Device-Volume-fsType: string-End-->
 
@@ -92,10 +76,6 @@ id: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Volume-id: string--><!--Device-Volume-id: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
@@ -113,10 +93,6 @@ path: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Volume-path: string--><!--Device-Volume-path: string-End-->
 
@@ -136,10 +112,6 @@ removable: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Volume-removable: boolean--><!--Device-Volume-removable: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
@@ -158,10 +130,6 @@ state: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Volume-state: int--><!--Device-Volume-state: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
@@ -179,10 +147,6 @@ uuid: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Volume-uuid: string--><!--Device-Volume-uuid: string-End-->
 

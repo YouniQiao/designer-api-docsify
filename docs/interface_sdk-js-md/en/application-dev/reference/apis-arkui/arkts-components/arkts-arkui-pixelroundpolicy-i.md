@@ -4,10 +4,6 @@ Enumerates the directions of pixel rounding at the component level.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface PixelRoundPolicy--><!--Device-unnamed-declare interface PixelRoundPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Rounding alignment for the component's bottom edge. <br>Invalid values are round
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,10 +46,6 @@ Rounding alignment for the component's end edge. <br>Invalid values are rounded 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -82,10 +70,6 @@ Rounding alignment for the component's start edge. <br>Invalid values are rounde
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -109,10 +93,6 @@ Rounding alignment for the component's top edge. <br>Invalid values are rounded 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

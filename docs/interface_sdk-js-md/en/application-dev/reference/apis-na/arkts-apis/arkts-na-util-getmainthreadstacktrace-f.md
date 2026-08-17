@@ -10,9 +10,7 @@ Get stack trace of main thread.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-util-function getMainThreadStackTrace(): string--><!--Device-util-function getMainThreadStackTrace(): string-End-->
 

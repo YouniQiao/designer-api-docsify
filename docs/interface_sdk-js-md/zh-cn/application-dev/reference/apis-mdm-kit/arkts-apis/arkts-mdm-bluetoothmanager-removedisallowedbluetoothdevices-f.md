@@ -10,10 +10,6 @@ function removeDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -37,7 +33,7 @@ function removeDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>)
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bluetoothManager } from '@kit.MDMKit';
@@ -50,12 +46,12 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 // 定义蓝牙设备MAC地址数组（需根据实际情况进行替换）
-let deviceIds: Array<string> = ["00:1A:2B:3C:4D:5E","AA:BB:CC:DD:EE:FF"];
+let deviceIds: Array<string> = ["00:1A:2B:3C:4D:5E", "AA:BB:CC:DD:EE:FF"];
 try {
   // 移除蓝牙设备禁用名单
   bluetoothManager.removeDisallowedBluetoothDevices(wantTemp,deviceIds);
   console.info(`Succeeded in removing disallowed bluetooth devices.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to remove disallowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
 }
 ```

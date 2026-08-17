@@ -4,10 +4,6 @@ Represents the data change information, including the data change type, URI of t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface ChangeInfo--><!--Device-dataShare-interface ChangeInfo-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -32,10 +28,6 @@ Data change type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChangeInfo-type: ChangeType--><!--Device-ChangeInfo-type: ChangeType-End-->
@@ -56,10 +48,6 @@ URI of the data changed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ChangeInfo-uri: string--><!--Device-ChangeInfo-uri: string-End-->
@@ -79,10 +67,6 @@ Changed data.
 **Type:** Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

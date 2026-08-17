@@ -10,8 +10,6 @@ function finishTrace(name: string, taskId: number): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 8
 
 **替代接口：** finishTrace
@@ -27,7 +25,7 @@ function finishTrace(name: string, taskId: number): void
 | name | string | 是 | 时间片跟踪任务名称，必须与startTrace调用时的name参数值一致。 |
 | taskId | number | 是 | 时间片跟踪任务id，必须与startTrace调用时的taskId参数值一致。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 bytrace.finishTrace("myTestFunc", 1);

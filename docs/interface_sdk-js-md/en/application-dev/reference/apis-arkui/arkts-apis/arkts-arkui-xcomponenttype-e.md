@@ -4,10 +4,6 @@ The type of XComponent
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum XComponentType--><!--Device-unnamed-declare enum XComponentType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ SURFACE
 Surface type. The default type is used.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,11 +36,9 @@ Component type.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 12
 
-**Substitutes:** [Column](arkts-arkui-flexdirection-e.md#Column)
+**Substitutes:** [Column](arkts-arkui-flexdirection-e.md#column)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,10 +58,6 @@ Texture type. Supports EGL/OpenGLES and media data rendering. Custom drawing con
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -89,8 +75,6 @@ NODE
 Node type.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Deprecated since:** 20
 

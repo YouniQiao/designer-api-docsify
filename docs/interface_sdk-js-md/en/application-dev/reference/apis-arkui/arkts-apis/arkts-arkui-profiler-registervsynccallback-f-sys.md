@@ -10,10 +10,6 @@ Registers vsync callback for profiler.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-Profiler-function registerVsyncCallback(callback: (info: string) => void): void--><!--Device-Profiler-function registerVsyncCallback(callback: (info: string) => void): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

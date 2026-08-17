@@ -16,8 +16,6 @@ Registers the continuation management service and obtains a token. This API does
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -45,7 +43,7 @@ Registers the continuation management service and obtains a token. This API does
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) | The number of token registration times has reached the upper limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -76,8 +74,6 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -106,7 +102,7 @@ Registers the continuation management service and obtains a token. This API uses
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) | The number of token registration times has reached the upper limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -141,8 +137,6 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -176,7 +170,7 @@ Registers the continuation management service and obtains a token. This API uses
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) | The number of token registration times has reached the upper limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

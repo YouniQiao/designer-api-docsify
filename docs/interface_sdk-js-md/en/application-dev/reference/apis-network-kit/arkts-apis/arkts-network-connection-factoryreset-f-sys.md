@@ -16,10 +16,6 @@ factory reset network settings To invoke this method, you must have the {@code o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 <!--Device-connection-function factoryReset(): Promise<void>--><!--Device-connection-function factoryReset(): Promise<void>-End-->
@@ -43,7 +39,7 @@ factory reset network settings To invoke this method, you must have the {@code o
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

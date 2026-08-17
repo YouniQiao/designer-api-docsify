@@ -16,10 +16,6 @@ Updates the data for the signing or signature verification operation. It needs t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<void>): void--><!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<void>): void-End-->
@@ -42,7 +38,7 @@ Updates the data for the signing or signature verification operation. It needs t
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -78,10 +74,6 @@ Updates the data for the signing or signature verification operation. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array): Promise<void>--><!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array): Promise<void>-End-->
@@ -109,7 +101,7 @@ Updates the data for the signing or signature verification operation. This API u
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

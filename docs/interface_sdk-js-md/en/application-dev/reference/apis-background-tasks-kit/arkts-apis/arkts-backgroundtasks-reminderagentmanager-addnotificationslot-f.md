@@ -16,10 +16,6 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -37,7 +33,7 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
@@ -68,10 +64,6 @@ Adds a notification slot. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot): Promise<void>--><!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -94,7 +86,7 @@ Adds a notification slot. This API uses a promise to return the result.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';

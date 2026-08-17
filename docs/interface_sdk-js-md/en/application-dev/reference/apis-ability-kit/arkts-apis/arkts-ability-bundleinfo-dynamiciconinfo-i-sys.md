@@ -4,10 +4,6 @@ Obtains dynamic icon information about a bundle
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface DynamicIconInfo--><!--Device-unnamed-export interface DynamicIconInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -25,10 +21,6 @@ Indicates the index of the bundle.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DynamicIconInfo-readonly appIndex: int--><!--Device-DynamicIconInfo-readonly appIndex: int-End-->
 
@@ -48,10 +40,6 @@ Indicates the name of the bundle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DynamicIconInfo-readonly bundleName: string--><!--Device-DynamicIconInfo-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -70,10 +58,6 @@ Indicates the name of the dynamic icon.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DynamicIconInfo-readonly moduleName: string--><!--Device-DynamicIconInfo-readonly moduleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -91,10 +75,6 @@ Indicates the user id of the bundle.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DynamicIconInfo-readonly userId: int--><!--Device-DynamicIconInfo-readonly userId: int-End-->
 

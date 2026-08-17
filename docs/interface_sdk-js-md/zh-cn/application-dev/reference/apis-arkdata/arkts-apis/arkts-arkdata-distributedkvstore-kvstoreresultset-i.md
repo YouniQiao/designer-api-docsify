@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-distributedKVStore-interface KVStoreResultSet--><!--Device-distributedKVStore-interface KVStoreResultSet-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -22,10 +18,6 @@ getCount(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-getCount(): int--><!--Device-KVStoreResultSet-getCount(): int-End-->
@@ -38,7 +30,7 @@ getCount(): int
 | --- | --- |
 | int | 返回数据的总行数。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -92,10 +84,6 @@ getEntry(): Entry
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-getEntry(): Entry--><!--Device-KVStoreResultSet-getEntry(): Entry-End-->
@@ -108,7 +96,7 @@ getEntry(): Entry
 | --- | --- |
 | Entry | 返回键值对。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -156,13 +144,9 @@ try {
 getPosition(): int
 ```
 
-获取结果集中当前的读取位置。读取位置会因[moveToFirst](#moveToFirst)、 [moveToLast](#moveToLast)等操作而发生变化。
+获取结果集中当前的读取位置。读取位置会因[moveToFirst](#movetofirst)、 [moveToLast](#movetolast)等操作而发生变化。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -176,7 +160,7 @@ getPosition(): int
 | --- | --- |
 | int | 返回当前读取位置。取值范围>= -1，值为 -1 时表示还未开始读取，值为 0 时表示第一行。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -230,10 +214,6 @@ isAfterLast(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-isAfterLast(): boolean--><!--Device-KVStoreResultSet-isAfterLast(): boolean-End-->
@@ -246,7 +226,7 @@ isAfterLast(): boolean
 | --- | --- |
 | boolean | 返回true表示读取位置在最后一行之后；返回false表示读取位置不在最后一行之后。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -298,10 +278,6 @@ isBeforeFirst(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-isBeforeFirst(): boolean--><!--Device-KVStoreResultSet-isBeforeFirst(): boolean-End-->
@@ -314,7 +290,7 @@ isBeforeFirst(): boolean
 | --- | --- |
 | boolean | 返回true表示读取位置在第一行之前；返回false表示读取位置不在第一行之前。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -366,10 +342,6 @@ isFirst(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-isFirst(): boolean--><!--Device-KVStoreResultSet-isFirst(): boolean-End-->
@@ -382,7 +354,7 @@ isFirst(): boolean
 | --- | --- |
 | boolean | 返回true表示读取位置为第一行；返回false表示读取位置不是第一行。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -436,10 +408,6 @@ isLast(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-isLast(): boolean--><!--Device-KVStoreResultSet-isLast(): boolean-End-->
@@ -452,7 +420,7 @@ isLast(): boolean
 | --- | --- |
 | boolean | 返回true表示读取位置为最后一行；返回false表示读取位置不是最后一行。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -506,10 +474,6 @@ move(offset: int): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-move(offset: int): boolean--><!--Device-KVStoreResultSet-move(offset: int): boolean-End-->
@@ -534,7 +498,7 @@ move(offset: int): boolean
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -590,10 +554,6 @@ moveToFirst(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-moveToFirst(): boolean--><!--Device-KVStoreResultSet-moveToFirst(): boolean-End-->
@@ -606,7 +566,7 @@ moveToFirst(): boolean
 | --- | --- |
 | boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -660,10 +620,6 @@ moveToLast(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-moveToLast(): boolean--><!--Device-KVStoreResultSet-moveToLast(): boolean-End-->
@@ -676,7 +632,7 @@ moveToLast(): boolean
 | --- | --- |
 | boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -730,10 +686,6 @@ moveToNext(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-moveToNext(): boolean--><!--Device-KVStoreResultSet-moveToNext(): boolean-End-->
@@ -746,7 +698,7 @@ moveToNext(): boolean
 | --- | --- |
 | boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -804,10 +756,6 @@ moveToPosition(position: int): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-moveToPosition(position: int): boolean--><!--Device-KVStoreResultSet-moveToPosition(position: int): boolean-End-->
@@ -832,7 +780,7 @@ moveToPosition(position: int): boolean
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -888,10 +836,6 @@ moveToPrevious(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KVStoreResultSet-moveToPrevious(): boolean--><!--Device-KVStoreResultSet-moveToPrevious(): boolean-End-->
@@ -904,7 +848,7 @@ moveToPrevious(): boolean
 | --- | --- |
 | boolean | 返回true表示操作成功；返回false则表示操作失败。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

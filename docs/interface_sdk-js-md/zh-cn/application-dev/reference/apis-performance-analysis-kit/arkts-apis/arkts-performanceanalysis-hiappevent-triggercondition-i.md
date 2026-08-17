@@ -1,12 +1,8 @@
 # TriggerCondition
 
-提供设置[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#Watcher)的onTrigger回调触发条件的参数选项。
+提供设置[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#watcher)的onTrigger回调触发条件的参数选项。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-hiAppEvent-interface TriggerCondition--><!--Device-hiAppEvent-interface TriggerCondition-End-->
 
@@ -23,10 +19,6 @@ row?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ size?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TriggerCondition-size?: int--><!--Device-TriggerCondition-size?: int-End-->
@@ -67,10 +55,6 @@ timeOut?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

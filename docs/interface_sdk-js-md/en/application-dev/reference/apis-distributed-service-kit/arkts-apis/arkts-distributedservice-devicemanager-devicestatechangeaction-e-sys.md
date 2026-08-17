@@ -4,11 +4,9 @@ Enumerates the device states.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#DeviceStateChange)
+**Substitutes:** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#devicestatechange)
 
 <!--Device-deviceManager-enum DeviceStateChangeAction--><!--Device-deviceManager-enum DeviceStateChangeAction-End-->
 
@@ -26,11 +24,9 @@ The device is physically online.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [UNKNOWN](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#UNKNOWN)
+**Substitutes:** [UNKNOWN](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#unknown)
 
 <!--Device-DeviceStateChangeAction-ONLINE = 0--><!--Device-DeviceStateChangeAction-ONLINE = 0-End-->
 
@@ -48,11 +44,9 @@ The information between devices has been synchronized in the Distributed Data Se
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#AVAILABLE)
+**Substitutes:** [AVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#available)
 
 <!--Device-DeviceStateChangeAction-READY = 1--><!--Device-DeviceStateChangeAction-READY = 1-End-->
 
@@ -70,11 +64,9 @@ The device is physically offline.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [UNAVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#UNAVAILABLE)
+**Substitutes:** [UNAVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#unavailable)
 
 <!--Device-DeviceStateChangeAction-OFFLINE = 2--><!--Device-DeviceStateChangeAction-OFFLINE = 2-End-->
 
@@ -91,8 +83,6 @@ CHANGE = 3
 The device information is changed.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 

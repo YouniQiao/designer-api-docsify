@@ -4,10 +4,6 @@ The **Driver** class is the main entrance of the UiTest framework. This class pr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class Driver--><!--Device-unnamed-declare class Driver-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -56,10 +52,6 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-assertComponentExist(on: On): Promise<void>--><!--Device-Driver-assertComponentExist(on: On): Promise<void>-End-->
@@ -70,7 +62,7 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
 
 **Return value:**
 
@@ -86,7 +78,7 @@ Asserts whether a component matches the specified attributes exists on the curre
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -104,13 +96,9 @@ async function demo() {
 click(x: int, y: int): Promise<void>
 ```
 
-Clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [clickAt](#clickAt). This API uses a promise to return the result.
+Clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [clickAt](#clickat). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -138,7 +126,7 @@ Clicks the target coordinate point. This method can be used only on the default 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -159,10 +147,6 @@ clickAt(point: Point): Promise<void>
 Clicks the target coordinate point. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -189,7 +173,7 @@ Clicks the target coordinate point. This API uses a promise to return the result
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -210,10 +194,6 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 Click on the specified location on the screen, with optional touch options.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -251,10 +231,6 @@ Creates a **Driver** object and returns the object created. This API is a static
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-static create(): Driver--><!--Device-Driver-static create(): Driver-End-->
@@ -273,7 +249,7 @@ Creates a **Driver** object and returns the object created. This API is a static
 | --- | --- |
 | [17000001](../errorcode-uitest.md#17000001-initialization-failure) | Initialization failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -290,13 +266,9 @@ async function demo() {
 createUIEventObserver(): UIEventObserver
 ```
 
-Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-i.md#UIEventObserver).
+Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-i.md#uieventobserver).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -316,7 +288,7 @@ Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -337,10 +309,6 @@ crownRotate(d: int, speed?: int): Promise<void>
 Injects a crown rotation event. You can specify the rotation speed. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -369,7 +337,7 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -393,10 +361,6 @@ delayMs(duration: int): Promise<void>
 Delays a duration of time. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -423,7 +387,7 @@ Delays a duration of time. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -441,13 +405,9 @@ async function demo() {
 doubleClick(x: int, y: int): Promise<void>
 ```
 
-Double-clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [doubleClickAt](#doubleClickAt). This API uses a promise to return the result.
+Double-clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [doubleClickAt](#doubleclickat). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -475,7 +435,7 @@ Double-clicks the target coordinate point. This method can be used only on the d
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -496,10 +456,6 @@ doubleClickAt(point: Point): Promise<void>
 Double-clicks the target coordinate point. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -526,7 +482,7 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -544,13 +500,9 @@ async function demo() {
 drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
-Drags from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration before dragging cannot be customized. To specify a screen or long-click duration, use [dragBetween](#dragBetween). This API uses a promise to return the result.
+Drags from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration before dragging cannot be customized. To specify a screen or long-click duration, use [dragBetween](#dragbetween). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -581,7 +533,7 @@ Drags from the start coordinate point to the target coordinate point. This metho
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -602,10 +554,6 @@ dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 Drags from the start point to the target point. You can specify the drag speed and the click duration before dragging. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -635,7 +583,7 @@ Drags from the start point to the target point. You can specify the drag speed a
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -656,10 +604,6 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 Drag on the screen between the specified points with optional settings.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -698,10 +642,6 @@ Dumps the current layout information and saves it as a JSON file. This method is
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Driver-dumpLayout(savePath: string, displayId?: int): Promise<boolean>--><!--Device-Driver-dumpLayout(savePath: string, displayId?: int): Promise<boolean>-End-->
@@ -738,10 +678,6 @@ Searches for the target component based on the specified attributes. This API us
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-findComponent(on: On): Promise<Component>--><!--Device-Driver-findComponent(on: On): Promise<Component>-End-->
@@ -752,7 +688,7 @@ Searches for the target component based on the specified attributes. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
 
 **Return value:**
 
@@ -767,7 +703,7 @@ Searches for the target component based on the specified attributes. This API us
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -785,13 +721,9 @@ async function demo() {
 findComponent(on: On): Promise<Component | null>
 ```
 
-Find the first matched [Component](arkts-test-uitest-component-c.md#Component) on current UI.
+Find the first matched [Component](arkts-test-uitest-component-c.md#component) on current UI.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Driver-findComponent(on: On): Promise<Component | null>--><!--Device-Driver-findComponent(on: On): Promise<Component | null>-End-->
 
@@ -801,7 +733,7 @@ Find the first matched [Component](arkts-test-uitest-component-c.md#Component) o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#component). |
 
 **Return value:**
 
@@ -826,10 +758,6 @@ Searches for all matched components based on the specified attributes and saves 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-findComponents(on: On): Promise<Array<Component>>--><!--Device-Driver-findComponents(on: On): Promise<Array<Component>>-End-->
@@ -840,7 +768,7 @@ Searches for all matched components based on the specified attributes and saves 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
 
 **Return value:**
 
@@ -855,7 +783,7 @@ Searches for all matched components based on the specified attributes and saves 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -873,13 +801,9 @@ async function demo() {
 findComponents(on: On): Promise<Array<Component> | null>
 ```
 
-Find all the matched [Component](arkts-test-uitest-component-c.md#Component)s on current UI.
+Find all the matched [Component](arkts-test-uitest-component-c.md#component)s on current UI.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Driver-findComponents(on: On): Promise<Array<Component> | null>--><!--Device-Driver-findComponents(on: On): Promise<Array<Component> | null>-End-->
 
@@ -889,7 +813,7 @@ Find all the matched [Component](arkts-test-uitest-component-c.md#Component)s on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#component). |
 
 **Return value:**
 
@@ -914,10 +838,6 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow>--><!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow>-End-->
@@ -928,7 +848,7 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | Attributes of the target [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow). |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | Attributes of the target [UiWindow](arkts-test-uitest-uiwindow-c.md#uiwindow). |
 
 **Return value:**
 
@@ -943,7 +863,7 @@ Searches for a window based on the specified attributes. This API uses a promise
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -961,13 +881,9 @@ async function demo() {
 findWindow(filter: WindowFilter): Promise<UiWindow | null>
 ```
 
-Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow) window.
+Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#uiwindow) window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow | null>--><!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow | null>-End-->
 
@@ -977,7 +893,7 @@ Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow) wind
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | the filter condition of the target [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow). |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | the filter condition of the target [UiWindow](arkts-test-uitest-uiwindow-c.md#uiwindow). |
 
 **Return value:**
 
@@ -1001,10 +917,6 @@ fling(from: Point, to: Point, stepLen: int, speed: int): Promise<void>
 Simulates a fling operation. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1034,7 +946,7 @@ Simulates a fling operation. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1055,10 +967,6 @@ fling(direction: UiDirection, speed: int): Promise<void>
 Simulates a fling operation with the specified direction and speed. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1086,7 +994,7 @@ Simulates a fling operation with the specified direction and speed. This API use
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1107,10 +1015,6 @@ fling(direction: UiDirection, speed: int, displayId: int): Promise<void>
 Simulates a fling operation on a specified display with the specified direction and speed. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1139,7 +1043,7 @@ Simulates a fling operation on a specified display with the specified direction 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1157,13 +1061,9 @@ async function demo() {
 getDisplayDensity(): Promise<Point>
 ```
 
-Obtains the display density of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display density of the home screen. To obtain the display density > of a specified screen, use [getDisplayDensity](#getDisplayDensity)(displayId: number).
+Obtains the display density of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display density of the home screen. To obtain the display density > of a specified screen, use [getDisplayDensity](#getdisplaydensity)(displayId: number).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1183,7 +1083,7 @@ Obtains the display density of the current device. This API uses a promise to re
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1204,10 +1104,6 @@ getDisplayDensity(displayId: int): Promise<Point>
 Obtains the density of the specified display of the current device. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1234,7 +1130,7 @@ Obtains the density of the specified display of the current device. This API use
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1252,13 +1148,9 @@ async function demo() {
 getDisplayRotation(): Promise<DisplayRotation>
 ```
 
-Obtains the display rotation of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation > of a specified screen, use [getDisplayRotation](#getDisplayRotation)(displayId: number).
+Obtains the display rotation of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation > of a specified screen, use [getDisplayRotation](#getdisplayrotation)(displayId: number).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1278,7 +1170,7 @@ Obtains the display rotation of the current device. This API uses a promise to r
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1299,10 +1191,6 @@ getDisplayRotation(displayId: int): Promise<DisplayRotation>
 Obtains the display rotation of the specified device. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1329,7 +1217,7 @@ Obtains the display rotation of the specified device. This API uses a promise to
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1347,13 +1235,9 @@ async function demo() {
 getDisplaySize(): Promise<Point>
 ```
 
-Obtains the display size of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display size of the home screen. To obtain the display size of a > specified screen, use [getDisplaySize](#getDisplaySize)(displayId: number).
+Obtains the display size of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display size of the home screen. To obtain the display size of a > specified screen, use [getDisplaySize](#getdisplaysize)(displayId: number).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1373,7 +1257,7 @@ Obtains the display size of the current device. This API uses a promise to retur
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1394,10 +1278,6 @@ getDisplaySize(displayId: int): Promise<Point>
 Obtains the size of the specified display on the current device. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1424,7 +1304,7 @@ Obtains the size of the specified display on the current device. This API uses a
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1445,10 +1325,6 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1477,7 +1353,7 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1507,10 +1383,6 @@ Injects a multi-finger operation into a device. This method applies to test scen
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>--><!--Device-Driver-injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>-End-->
@@ -1537,7 +1409,7 @@ Injects a multi-finger operation into a device. This method applies to test scen
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1570,10 +1442,6 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>-End-->
@@ -1601,7 +1469,7 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1626,10 +1494,6 @@ inputText(p: Point, text: string): Promise<void>
 Inputs text at a specified coordinate without clearing the original text in the component. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1657,7 +1521,7 @@ Inputs text at a specified coordinate without clearing the original text in the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1681,10 +1545,6 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>-End-->
@@ -1697,7 +1557,7 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md#InputTextMode). **NOTE：**  If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md#InputTextMode).paste. |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md#inputtextmode). **NOTE：**  If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md#inputtextmode).paste. |
 
 **Return value:**
 
@@ -1713,7 +1573,7 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. function can not work correctly due to limited device capabilities. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1745,10 +1605,6 @@ Drags from the start point to the end point and checks whether the target compon
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>-End-->
@@ -1759,7 +1615,7 @@ Drags from the start point to the end point and checks whether the target compon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. <br> **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
 | speed | int | No | Drag speed. <br>Value range:[200, 40000] <br>Throws error code 17000007 if negative. <br>Default value: 600 |
@@ -1778,7 +1634,7 @@ Drags from the start point to the end point and checks whether the target compon
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1800,10 +1656,6 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>-End-->
@@ -1814,7 +1666,7 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
 | point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-clicked point. |
 | duration | int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
@@ -1831,7 +1683,7 @@ Long-clicks at the specified coordinates and checks whether the target component
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1852,10 +1704,6 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promis
 Swipes from the start point to the end point and checks whether the target component exists. This method is applicable to verifying the dynamic UI elements that appear during the swipe operation, for example, verifying whether the delete button appears when swiping is used to delete a list item. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1885,7 +1733,7 @@ Swipes from the start point to the end point and checks whether the target compo
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1906,10 +1754,6 @@ knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 Simulates a knuckle knock on the display. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1938,7 +1782,7 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -1958,13 +1802,9 @@ async function demo() {
 longClick(x: int, y: int): Promise<void>
 ```
 
-Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use [longClickAt](#longClickAt). This API uses a promise to return the result.
+Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use [longClickAt](#longclickat). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1992,7 +1832,7 @@ Long-clicks the target coordinate point. This method can be used only on the def
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2013,10 +1853,6 @@ longClickAt(point: Point, duration?: int): Promise<void>
 Long-clicks the target coordinate point for a specified duration. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2044,7 +1880,7 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2065,10 +1901,6 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 LongClick on the specified location on the screen, with optional touch settings.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -2106,10 +1938,6 @@ Injects a mouse click action at the specified coordinates, with the optional key
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>--><!--Device-Driver-mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>-End-->
@@ -2122,8 +1950,8 @@ Injects a mouse click action at the specified coordinates, with the optional key
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of the mouse click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2138,7 +1966,7 @@ Injects a mouse click action at the specified coordinates, with the optional key
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2160,10 +1988,6 @@ Injects a double-click action at the specified coordinates, with the optional ke
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>--><!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>-End-->
@@ -2176,8 +2000,8 @@ Injects a double-click action at the specified coordinates, with the optional ke
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the double-click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2192,7 +2016,7 @@ Injects a double-click action at the specified coordinates, with the optional ke
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2213,10 +2037,6 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 Drags the mouse pointer from the start point to the end point. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2245,7 +2065,7 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2266,10 +2086,6 @@ mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 Drags the mouse from the start point to the end point. You can specify the dragging speed and the duration before dragging. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2299,7 +2115,7 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2320,10 +2136,6 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 Hold down the left mouse button and drag on the screen between the specified points, with optional touch and key settings.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -2363,10 +2175,6 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>--><!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>-End-->
@@ -2379,8 +2187,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
-| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
+| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2395,7 +2203,7 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2417,10 +2225,6 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>-End-->
@@ -2433,8 +2237,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
 | duration | int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -2450,7 +2254,7 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2471,10 +2275,6 @@ mouseMoveTo(p: Point): Promise<void>
 Moves the mouse cursor to the target point. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2501,7 +2301,7 @@ Moves the mouse cursor to the target point. This API uses a promise to return th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2522,10 +2322,6 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>
 Moves the mouse pointer from the start point to the end point, with a visible movement track. This method is applicable to test scenarios that depend on the mouse movement track, such as verification of the mouse hover effect and selecting an area by dragging with the mouse. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2554,7 +2350,7 @@ Moves the mouse pointer from the start point to the end point, with a visible mo
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2576,10 +2372,6 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): Promise<void>--><!--Device-Driver-mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): Promise<void>-End-->
@@ -2593,8 +2385,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
 | d | number | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
-| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
-| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
+| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2609,7 +2401,7 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2631,10 +2423,6 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>--><!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>-End-->
@@ -2648,8 +2436,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
 | d | int | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
 | speed | int | No | Scroll speed of the mouse wheel. <br>Value range:[1, 500] <br>Unit: ticks/s <br>Throws error code 401 if negative. <br>Default value: 20 |
 
 **Return value:**
@@ -2665,7 +2453,7 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2686,10 +2474,6 @@ penClick(point: Point): Promise<void>
 Simulates a pen click operation. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2716,7 +2500,7 @@ Simulates a pen click operation. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2737,10 +2521,6 @@ penDoubleClick(point: Point): Promise<void>
 Simulates a pen double-click operation. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2767,7 +2547,7 @@ Simulates a pen double-click operation. This API uses a promise to return the re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2788,10 +2568,6 @@ penLongClick(point: Point, pressure?: double): Promise<void>
 Simulates a pen long-click operation. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2819,7 +2595,7 @@ Simulates a pen long-click operation. This API uses a promise to return the resu
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2840,10 +2616,6 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Pr
 Simulates a pen swipe operation. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2873,7 +2645,7 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2895,10 +2667,6 @@ Simulates pressing the Back button. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-pressBack(): Promise<void>--><!--Device-Driver-pressBack(): Promise<void>-End-->
@@ -2917,7 +2685,7 @@ Simulates pressing the Back button. This API uses a promise to return the result
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2938,10 +2706,6 @@ pressBack(displayId: int): Promise<void>
 Simulates pressing the Back button on a specified screen. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2968,7 +2732,7 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -2990,10 +2754,6 @@ Injects an operation of returning to the home screen on the device. This API use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-pressHome(): Promise<void>--><!--Device-Driver-pressHome(): Promise<void>-End-->
@@ -3012,7 +2772,7 @@ Injects an operation of returning to the home screen on the device. This API use
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3033,10 +2793,6 @@ pressHome(displayId: int): Promise<void>
 Injects an operation of returning to the home screen on the specified display. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3063,7 +2819,7 @@ Injects an operation of returning to the home screen on the specified display. T
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3084,10 +2840,6 @@ screenCap(savePath: string): Promise<boolean>
 Captures the current screen and saves it as a PNG image to the given save path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3114,7 +2866,7 @@ Captures the current screen and saves it as a PNG image to the given save path. 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3135,10 +2887,6 @@ screenCap(savePath: string, displayId: int): Promise<boolean>
 Captures the specified screen and saves it as a PNG image to the given save path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3166,7 +2914,7 @@ Captures the specified screen and saves it as a PNG image to the given save path
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3187,10 +2935,6 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 Captures the specified area of the current screen and saves the captured screenshot as a PNG image to the specified path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported. Unlike screenCap, this API allows you to specify the screenshot area using the **rect** parameter instead of capturing the entire screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3218,7 +2962,7 @@ Captures the specified area of the current screen and saves the captured screens
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3245,10 +2989,6 @@ Sets the display rotation of the current scene. This API uses a promise to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-setDisplayRotation(rotation: DisplayRotation): Promise<void>--><!--Device-Driver-setDisplayRotation(rotation: DisplayRotation): Promise<void>-End-->
@@ -3274,7 +3014,7 @@ Sets the display rotation of the current scene. This API uses a promise to retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3295,10 +3035,6 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 Enables or disables display rotation. This method is applicable to scenarios where the screen orientation needs to be locked during the test to maintain a specific display state, for example, testing the layout stability in landscape or portrait mode. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3325,7 +3061,7 @@ Enables or disables display rotation. This method is applicable to scenarios whe
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3343,13 +3079,9 @@ async function demo() {
 swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
-Swipes from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [swipeBetween](#swipeBetween). This API uses a promise to return the result.
+Swipes from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [swipeBetween](#swipebetween). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3380,7 +3112,7 @@ Swipes from the start coordinate point to the target coordinate point. This meth
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3401,10 +3133,6 @@ swipeBetween(from: Point, to: Point, speed?: int): Promise<void>
 Swipes from the start coordinate point to the target coordinate point. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3433,7 +3161,7 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3454,10 +3182,6 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 Swipe on the screen between the specified points with optional touch options.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -3496,10 +3220,6 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>--><!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>-End-->
@@ -3512,7 +3232,7 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 | --- | --- | --- | --- |
 | fingers | int | Yes | Number of fingers. The value can be 3 or 4. If the value is out of range, error code 401 is thrown. |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Swipe direction. |
-| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | No | Additional options for the multi-finger swipe gesture on the touchpad. The default values of the attributes in **[TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md#TouchPadSwipeOptions)** are used by default. This parameter is used to specify whether the multi-finger swipe gesture ends with a pause and the swipe speed. It is applicable to scenarios where multi-finger swipe gestures are simulated on the touchpad, for example, swiping up with three fingers to switch the task view. |
+| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | No | Additional options for the multi-finger swipe gesture on the touchpad. The default values of the attributes in **[TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md#touchpadswipeoptions)** are used by default. This parameter is used to specify whether the multi-finger swipe gesture ends with a pause and the swipe speed. It is applicable to scenarios where multi-finger swipe gestures are simulated on the touchpad, for example, swiping up with three fingers to switch the task view. |
 
 **Return value:**
 
@@ -3528,7 +3248,7 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3549,10 +3269,6 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: i
 Simulates a two-finger scroll gesture on the touchpad. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3583,7 +3299,7 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3605,10 +3321,6 @@ Triggers a combination key event based on the specified key code values. This AP
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>--><!--Device-Driver-triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>-End-->
@@ -3619,9 +3331,9 @@ Triggers a combination key event based on the specified key code values. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | number | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
-| key1 | number | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
-| key2 | number | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
+| key0 | number | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
+| key1 | number | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
+| key2 | number | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
 
 **Return value:**
 
@@ -3636,7 +3348,7 @@ Triggers a combination key event based on the specified key code values. This AP
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3658,10 +3370,6 @@ Triggers a combination key event based on the specified key code values on the s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>--><!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>-End-->
@@ -3672,9 +3380,9 @@ Triggers a combination key event based on the specified key code values on the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | int | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
-| key1 | int | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
-| key2 | int | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). <br>Default value: 0 |
+| key0 | int | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
+| key1 | int | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
+| key2 | int | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
 | displayId | int | No | Display ID. The value is an integer greater than or equal to 0. The default value is the default display ID of the device. |
 
 **Return value:**
@@ -3690,7 +3398,7 @@ Triggers a combination key event based on the specified key code values on the s
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3712,10 +3420,6 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-triggerKey(keyCode: int): Promise<void>--><!--Device-Driver-triggerKey(keyCode: int): Promise<void>-End-->
@@ -3726,7 +3430,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
+| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
 
 **Return value:**
 
@@ -3741,7 +3445,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3764,10 +3468,6 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>--><!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>-End-->
@@ -3778,7 +3478,7 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
+| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
 | displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. <br> **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**
@@ -3794,7 +3494,7 @@ Triggers a key event by passing the key code value on the specified screen. This
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3817,10 +3517,6 @@ Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITI
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Driver-triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>--><!--Device-Driver-triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>-End-->
@@ -3834,7 +3530,7 @@ Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITI
 | key | [PenKey](arkts-test-uitest-penkey-e.md) | Yes | Stylus key type, which specifies the stylus key to be used for the operation, such as the handwriting key, air mouse key, and smart key. |
 | mode | [PenMode](arkts-test-uitest-penmode-e.md) | Yes | Stylus mode, which specifies the current operation mode of the stylus, such as the handwriting mode or air mouse mode. |
 | operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | Yes | Stylus key operation mode, which specifies the operation mode of the key, such as single-tap or double-tap. |
-| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | No | Operation options, including optional coordinates. The default values are inherited from the default values of the properties in [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md#PenKeyOperationOptions). <br> **Note：**: When **mode** is set to [AIR_MOUSE](arkts-test-uitest-penmode-e.md#AIR_MOUSE) and **key** is set to [AIR_MOUSE](arkts-test-uitest-penkey-e.md#AIR_MOUSE), the **point** attribute in **options** must be set. Otherwise, error code 17000007 will be thrown. |
+| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | No | Operation options, including optional coordinates. The default values are inherited from the default values of the properties in [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md#penkeyoperationoptions). <br> **Note：**: When **mode** is set to [AIR_MOUSE](arkts-test-uitest-penmode-e.md#airmouse) and **key** is set to [AIR_MOUSE](arkts-test-uitest-penkey-e.md#airmouse), the **point** attribute in **options** must be set. Otherwise, error code 17000007 will be thrown. |
 
 **Return value:**
 
@@ -3860,10 +3556,6 @@ Searches for the target component based on the attributes within a specified tim
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-waitForComponent(on: On, time: number): Promise<Component>--><!--Device-Driver-waitForComponent(on: On, time: number): Promise<Component>-End-->
@@ -3874,8 +3566,8 @@ Searches for the target component based on the attributes within a specified tim
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
-| time | number | Yes | Duration for searching for the target [Component](arkts-test-uitest-component-c.md#Component), in ms. The value is an integer greater than or equal to 0. <br>Unit: ms <br>Value range: The value should be >= 0 |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
+| time | number | Yes | Duration for searching for the target [Component](arkts-test-uitest-component-c.md#component), in ms. The value is an integer greater than or equal to 0. <br>Unit: ms <br>Value range: The value should be >= 0 |
 
 **Return value:**
 
@@ -3890,7 +3582,7 @@ Searches for the target component based on the attributes within a specified tim
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -3908,13 +3600,9 @@ async function demo() {
 waitForComponent(on: On, time: int): Promise<Component | null>
 ```
 
-Find the first matched [Component](arkts-test-uitest-component-c.md#Component) on current UI during the time given.
+Find the first matched [Component](arkts-test-uitest-component-c.md#component) on current UI during the time given.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Driver-waitForComponent(on: On, time: int): Promise<Component | null>--><!--Device-Driver-waitForComponent(on: On, time: int): Promise<Component | null>-End-->
 
@@ -3924,7 +3612,7 @@ Find the first matched [Component](arkts-test-uitest-component-c.md#Component) o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#component). |
 | time | int | Yes | duration of finding in milliseconds. <br>Value range: The value should be >= 0 <br>Unit: ms |
 
 **Return value:**
@@ -3949,10 +3637,6 @@ waitForIdle(idleTime: int, timeout: int): Promise<boolean>
 Checks whether all components on the current UI are idle. This method is applicable to scenarios such as page redirection, animation playback, and loading. After calling this method, you can perform subsequent test operations only after the UI becomes stable. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3980,7 +3664,7 @@ Checks whether all components on the current UI are idle. This method is applica
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -4002,10 +3686,6 @@ Wakes up the current display. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-wakeUpDisplay(): Promise<void>--><!--Device-Driver-wakeUpDisplay(): Promise<void>-End-->
@@ -4024,7 +3704,7 @@ Wakes up the current display. This API uses a promise to return the result.
 | --- | --- |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets

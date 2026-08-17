@@ -4,10 +4,6 @@ Implements audio effect management.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioEffectManager--><!--Device-audio-interface AudioEffectManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -29,10 +25,6 @@ getAudioEffectProperty(): Array<AudioEffectProperty>
 Gets current audio effect properties.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -56,7 +48,7 @@ Gets current audio effect properties.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -80,10 +72,6 @@ Gets supported audio effect properties based on current devices.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 <!--Device-AudioEffectManager-getSupportedAudioEffectProperty(): Array<AudioEffectProperty>--><!--Device-AudioEffectManager-getSupportedAudioEffectProperty(): Array<AudioEffectProperty>-End-->
@@ -106,7 +94,7 @@ Gets supported audio effect properties based on current devices.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -129,10 +117,6 @@ isAudioSeparationEffectSupported(): boolean
 Checks whether the current device supports audio separation effect in system.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,10 +147,6 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 Unsubscribes from the system audio separation effect enabled state change event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -199,10 +179,6 @@ Subscribes to system audio separation effect enabled state change event. The aud
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioEffectManager-onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void--><!--Device-AudioEffectManager-onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void-End-->
@@ -233,10 +209,6 @@ Sets current audio effect properties.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 <!--Device-AudioEffectManager-setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void--><!--Device-AudioEffectManager-setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void-End-->
@@ -260,7 +232,7 @@ Sets current audio effect properties.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -285,10 +257,6 @@ Sets audio separation effect enable or disable for specific application process,
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -305,7 +273,7 @@ Sets audio separation effect enable or disable for specific application process,
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | The required effect state, true for enabled, false for disabled. |
 | uid | int | Yes | The uid of target application process to add effect. <br>The value should be an integer. |
-| streamId | long | No | The id of target audio playback stream to add effect, the playback application can use [getAudioStreamId](arkts-audio-audio-audiorenderer-i.md#getAudioStreamId) to obtain it. |
+| streamId | long | No | The id of target audio playback stream to add effect, the playback application can use [getAudioStreamId](arkts-audio-audio-audiorenderer-i.md#getaudiostreamid) to obtain it. |
 
 **Return value:**
 
@@ -332,10 +300,6 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double):
 Sets audio separation effect volume for specific volume type. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 

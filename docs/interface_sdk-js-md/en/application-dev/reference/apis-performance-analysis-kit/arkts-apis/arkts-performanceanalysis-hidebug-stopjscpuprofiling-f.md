@@ -16,15 +16,11 @@ Stops the VM profiling method. **stopJsCpuProfiling()** and **startJsCpuProfilin
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function stopJsCpuProfiling() : void--><!--Device-hidebug-function stopJsCpuProfiling() : void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

@@ -4,10 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-calendarManager-interface CalendarConfig--><!--Device-calendarManager-interface CalendarConfig-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -24,10 +20,6 @@ color?: number | string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-CalendarConfig-color?: number | string--><!--Device-CalendarConfig-color?: number | string-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
@@ -43,10 +35,6 @@ enableReminder?: boolean
 **类型：** boolean
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-CalendarConfig-enableReminder?: boolean--><!--Device-CalendarConfig-enableReminder?: boolean-End-->
 

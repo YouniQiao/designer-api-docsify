@@ -1,14 +1,10 @@
-# AlertDialogParamWithButtons
+# AlertDialogParamWithButtons(AlertDialog)
 
-Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam).
+Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#alertdialogparam).
 
-**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)
+**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#alertdialogparam)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface AlertDialogParamWithButtons--><!--Device-unnamed-declare interface AlertDialogParamWithButtons-End-->
 
@@ -25,10 +21,6 @@ Information about the primary button, including the enabling status, default foc
 **Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,10 +39,6 @@ Information about the secondary button, including the enabling status, default f
 **Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

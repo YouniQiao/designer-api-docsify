@@ -16,8 +16,6 @@ Get settingsdata uri (synchronous method)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-settings-function getUriSync(name: string): string--><!--Device-settings-function getUriSync(name: string): string-End-->
@@ -36,7 +34,7 @@ Get settingsdata uri (synchronous method)
 | --- | --- |
 | string | Returns settingsdata uri. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Obtain the URI of a data item.

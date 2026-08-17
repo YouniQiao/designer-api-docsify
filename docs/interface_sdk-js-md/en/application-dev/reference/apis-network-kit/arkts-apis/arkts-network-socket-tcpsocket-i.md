@@ -4,10 +4,6 @@ Defines a TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-socket-export interface TCPSocket--><!--Device-socket-export interface TCPSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -27,10 +23,6 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 Binds the IP address and port number. The port number can be specified or randomly allocated by the system.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -52,7 +44,7 @@ Binds the IP address and port number. The port number can be specified or random
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -82,10 +74,6 @@ Binds the IP address and port number. The port number can be specified or random
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-bind(address: NetAddress): Promise<void>--><!--Device-TCPSocket-bind(address: NetAddress): Promise<void>-End-->
@@ -111,7 +99,7 @@ Binds the IP address and port number. The port number can be specified or random
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -139,10 +127,6 @@ Closes a TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-close(callback: AsyncCallback<void>): void--><!--Device-TCPSocket-close(callback: AsyncCallback<void>): void-End-->
@@ -161,7 +145,7 @@ Closes a TCPSocket connection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -188,10 +172,6 @@ Closes a TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-close(): Promise<void>--><!--Device-TCPSocket-close(): Promise<void>-End-->
@@ -210,7 +190,7 @@ Closes a TCPSocket connection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -235,10 +215,6 @@ Sets up a connection to the specified IP address and port number.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void-End-->
@@ -249,7 +225,7 @@ Sets up a connection to the specified IP address and port number.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md) | Yes | Optional parameters [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md#TCPConnectOptions). |
+| options | [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md) | Yes | Optional parameters [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md#tcpconnectoptions). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of connect. |
 
 **Error codes:**
@@ -267,7 +243,7 @@ Sets up a connection to the specified IP address and port number.
 | [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
 | [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -336,10 +312,6 @@ Sets up a connection to the specified IP address and port number.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-connect(options: TCPConnectOptions): Promise<void>--><!--Device-TCPSocket-connect(options: TCPConnectOptions): Promise<void>-End-->
@@ -350,7 +322,7 @@ Sets up a connection to the specified IP address and port number.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md) | Yes | Optional parameters [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md#TCPConnectOptions). |
+| options | [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md) | Yes | Optional parameters [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md#tcpconnectoptions). |
 
 **Return value:**
 
@@ -373,7 +345,7 @@ Sets up a connection to the specified IP address and port number.
 | [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
 | [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -438,10 +410,6 @@ Obtains the local address of a TCPSocket connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-TCPSocket-getLocalAddress(): Promise<NetAddress>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -460,7 +428,7 @@ Obtains the local address of a TCPSocket connection.
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -493,10 +461,6 @@ Obtains the peer address of a TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TCPSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
@@ -515,7 +479,7 @@ Obtains the peer address of a TCPSocket connection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -552,10 +516,6 @@ Obtains the peer address of a TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-getRemoteAddress(): Promise<NetAddress>--><!--Device-TCPSocket-getRemoteAddress(): Promise<NetAddress>-End-->
@@ -574,7 +534,7 @@ Obtains the peer address of a TCPSocket connection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -611,10 +571,6 @@ Obtains the file descriptor of the TCPSocket connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-getSocketFd(callback: AsyncCallback<int>): void--><!--Device-TCPSocket-getSocketFd(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -625,7 +581,7 @@ Obtains the file descriptor of the TCPSocket connection.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | The callback returns the file descriptor of the TCPSocket connection. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -662,10 +618,6 @@ Obtains the file descriptor of the TCPSocket connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-getSocketFd(): Promise<int>--><!--Device-TCPSocket-getSocketFd(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -676,7 +628,7 @@ Obtains the file descriptor of the TCPSocket connection.
 | --- | --- |
 | Promise&lt;int&gt; | The promise returns the file descriptor of the TCPSocket connection. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -712,10 +664,6 @@ Obtains the status of the TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TCPSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
@@ -726,7 +674,7 @@ Obtains the status of the TCPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | the callback of getState. [SocketStateBase](arkts-network-socket-socketstatebase-i.md#SocketStateBase) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | the callback of getState. [SocketStateBase](arkts-network-socket-socketstatebase-i.md#socketstatebase) |
 
 **Error codes:**
 
@@ -734,7 +682,7 @@ Obtains the status of the TCPSocket connection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -771,10 +719,6 @@ Obtains the status of the TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-getState(): Promise<SocketStateBase>--><!--Device-TCPSocket-getState(): Promise<SocketStateBase>-End-->
@@ -793,7 +737,7 @@ Obtains the status of the TCPSocket connection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -830,10 +774,6 @@ Cancels listening for connection or close events of the TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TCPSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -845,7 +785,7 @@ Cancels listening for connection or close events of the TCPSocket connection.
 | type | 'connect' \| 'close' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -878,10 +818,6 @@ Cancels listening for connection or close events of the TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TCPSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -893,7 +829,7 @@ Cancels listening for connection or close events of the TCPSocket connection.
 | type | 'connect' \| 'close' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -926,10 +862,6 @@ Cancels listening for error events of the TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TCPSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -941,7 +873,7 @@ Cancels listening for error events of the TCPSocket connection.
 | type | 'error' | Yes | Indicates Event name. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -967,10 +899,6 @@ Cancels listening for message receiving events of the TCPSocket connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TCPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -982,7 +910,7 @@ Cancels listening for message receiving events of the TCPSocket connection.
 | type | 'message' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1016,10 +944,6 @@ Listens for connection or close events of the TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TCPSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1031,7 +955,7 @@ Listens for connection or close events of the TCPSocket connection.
 | type | 'connect' \| 'close' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1056,10 +980,6 @@ Listens for connection or close events of the TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TCPSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1071,7 +991,7 @@ Listens for connection or close events of the TCPSocket connection.
 | type | 'connect' \| 'close' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1096,10 +1016,6 @@ Listens for error events of the TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-TCPSocket-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1111,7 +1027,7 @@ Listens for error events of the TCPSocket connection.
 | type | 'error' | Yes | Indicates Event name. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1133,10 +1049,6 @@ Listens for message receiving events of the TCPSocket connection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-TCPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TCPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1148,7 +1060,7 @@ Listens for message receiving events of the TCPSocket connection.
 | type | 'message' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1178,10 +1090,6 @@ Sends data over a TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-send(options: TCPSendOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-send(options: TCPSendOptions, callback: AsyncCallback<void>): void-End-->
@@ -1192,7 +1100,7 @@ Sends data over a TCPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | Yes | Optional parameters [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md#TCPSendOptions). |
+| options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | Yes | Optional parameters [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md#tcpsendoptions). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of send. |
 
 **Error codes:**
@@ -1202,7 +1110,7 @@ Sends data over a TCPSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1242,10 +1150,6 @@ Sends data over a TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-send(options: TCPSendOptions): Promise<void>--><!--Device-TCPSocket-send(options: TCPSendOptions): Promise<void>-End-->
@@ -1256,7 +1160,7 @@ Sends data over a TCPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | Yes | Optional parameters [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md#TCPSendOptions). |
+| options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | Yes | Optional parameters [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md#tcpsendoptions). |
 
 **Return value:**
 
@@ -1271,7 +1175,7 @@ Sends data over a TCPSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1309,10 +1213,6 @@ Sets other attributes of the TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
@@ -1323,7 +1223,7 @@ Sets other attributes of the TCPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Optional parameters [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md#TCPExtraOptions). |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Optional parameters [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md#tcpextraoptions). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setExtraOptions. |
 
 **Error codes:**
@@ -1333,7 +1233,7 @@ Sets other attributes of the TCPSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1387,10 +1287,6 @@ Sets other attributes of the TCPSocket connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
@@ -1401,7 +1297,7 @@ Sets other attributes of the TCPSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Optional parameters [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md#TCPExtraOptions). |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Optional parameters [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md#tcpextraoptions). |
 
 **Return value:**
 
@@ -1416,7 +1312,7 @@ Sets other attributes of the TCPSocket connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

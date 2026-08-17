@@ -4,10 +4,6 @@ Defines the style of the lunar calendar switch in the **DatePickerDialog** compo
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface LunarSwitchStyle--><!--Device-unnamed-declare interface LunarSwitchStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Background color of the switch when it is on. Default value: **\$r('sys.color.oh
 **Default:** $r('sys.color.ohos_id_color_text_primary_actived')
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Color of the icon inside the switch. Default value: **Color.White**
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -77,10 +65,6 @@ Border color of the switch when it is off. Default value: **\$r('sys.color.ohos_
 **Default:** $r('sys.color.ohos_id_color_switch_outline_off')
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

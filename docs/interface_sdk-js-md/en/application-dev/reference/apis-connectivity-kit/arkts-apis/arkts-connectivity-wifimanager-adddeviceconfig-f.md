@@ -16,10 +16,6 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
 <!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig): Promise<int>--><!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig): Promise<int>-End-->
@@ -48,7 +44,7 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
@@ -80,10 +76,6 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
 <!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<int>): void--><!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<int>): void-End-->
@@ -107,7 +99,7 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

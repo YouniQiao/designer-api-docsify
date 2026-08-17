@@ -4,8 +4,6 @@ Provides an iterator object of the device root directory.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 <!--Device-fileAccess-interface RootIterator--><!--Device-fileAccess-interface RootIterator-End-->
@@ -29,8 +27,6 @@ next(): { value: RootInfo, done: boolean }
 Obtains the next-level root directory.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 

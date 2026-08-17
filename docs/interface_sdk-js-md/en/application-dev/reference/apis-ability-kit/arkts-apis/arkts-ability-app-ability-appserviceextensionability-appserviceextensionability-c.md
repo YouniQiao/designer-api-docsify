@@ -6,10 +6,6 @@ The AppServiceExtensionAbility module provides extended capabilities for backgro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class AppServiceExtensionAbility--><!--Device-unnamed-declare class AppServiceExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -26,13 +22,9 @@ import { AppServiceExtensionAbility } from 'AppServiceExtensionAbility';
 onConnect(want: Want): rpc.RemoteObject
 ```
 
-Called when an AppServiceExtensionAbility instance is connected by calling [connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectAppServiceExtensionAbility) .
+Called when an AppServiceExtensionAbility instance is connected by calling [connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,7 +44,7 @@ Called when an AppServiceExtensionAbility instance is connected by calling [conn
 | --- | --- |
 | rpc.RemoteObject | A RemoteObject used for communication between the server and client. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
@@ -88,10 +80,6 @@ Called when an AppServiceExtensionAbility instance is created. Applications can 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AppServiceExtensionAbility-onCreate(want: Want): void--><!--Device-AppServiceExtensionAbility-onCreate(want: Want): void-End-->
@@ -104,7 +92,7 @@ Called when an AppServiceExtensionAbility instance is created. Applications can 
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target AppServiceExtensionAbility instance, including the ability name and bundle name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
@@ -129,17 +117,13 @@ Called when an AppServiceExtensionAbility instance is destroyed. Applications ca
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AppServiceExtensionAbility-onDestroy(): void--><!--Device-AppServiceExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AppServiceExtensionAbility } from '@kit.AbilityKit';
@@ -164,10 +148,6 @@ Called when all connections to an AppServiceExtensionAbility instance are interr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AppServiceExtensionAbility-onDisconnect(want: Want): void--><!--Device-AppServiceExtensionAbility-onDisconnect(want: Want): void-End-->
@@ -180,7 +160,7 @@ Called when all connections to an AppServiceExtensionAbility instance are interr
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information passed by the caller when the AppServiceExtensionAbility instance was most recently started or connected. This includes information such as the ability name and bundle name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
@@ -201,13 +181,9 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 onRequest(want: Want, startId: int): void
 ```
 
-Called each time an AppServiceExtensionAbility instance is started by calling [startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startAppServiceExtensionAbility) .
+Called each time an AppServiceExtensionAbility instance is started by calling [startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,7 +198,7 @@ Called each time an AppServiceExtensionAbility instance is started by calling [s
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target AppServiceExtensionAbility instance, including the ability name and bundle name. |
 | startId | int | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
@@ -243,15 +219,11 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 context: AppServiceExtensionContext
 ```
 
-Context environment for an AppServiceExtensionAbility. This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
+Context environment for an AppServiceExtensionAbility. This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext).
 
 **Type:** [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

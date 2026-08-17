@@ -7,7 +7,7 @@
 
 | Name | Description |
 | --- | --- |
-| [RootScene](arkts-na-rootscene-rootscene-f-sys.md#RootScene-(System-API)) | Defines the RootScene Component. |
+| [RootScene](arkts-na-rootscene-rootscene-f-sys.md#rootscene-system-api) | Defines the RootScene Component. |
 <!--DelEnd-->
 
 ### Interfaces

@@ -16,10 +16,6 @@ Sets the data security level for a file or directory in synchronous mode. The le
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void--><!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -44,7 +40,7 @@ Sets the data security level for a file or directory in synchronous mode. The le
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + '/test.txt';

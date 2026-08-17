@@ -4,11 +4,9 @@ Provides the API for accessing unicode character properties. For example, determ
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Unicode](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#Unicode)
+**Substitutes:** [Unicode](arkts-localization-i18n-unicode-c.md#unicode)
 
 <!--Device-i18n-export class Character--><!--Device-i18n-export class Character-End-->
 
@@ -30,11 +28,9 @@ Obtains the type of the input character.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getType](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#getType)
+**Substitutes:** [getType](arkts-localization-i18n-unicode-c.md#gettype)
 
 <!--Device-Character-getType(ch: string): string--><!--Device-Character-getType(ch: string): string-End-->
 
@@ -62,11 +58,9 @@ Checks whether the input character is a digit.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isDigit](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isDigit)
+**Substitutes:** [isDigit](arkts-localization-i18n-unicode-c.md#isdigit)
 
 <!--Device-Character-isDigit(ch: string): boolean--><!--Device-Character-isDigit(ch: string): boolean-End-->
 
@@ -94,11 +88,9 @@ Checks whether the input character is an ideographic character.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isIdeograph](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isIdeograph)
+**Substitutes:** [isIdeograph](arkts-localization-i18n-unicode-c.md#isideograph)
 
 <!--Device-Character-isIdeograph(ch: string): boolean--><!--Device-Character-isIdeograph(ch: string): boolean-End-->
 
@@ -126,11 +118,9 @@ Checks whether the input character is a letter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isLetter](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isLetter)
+**Substitutes:** [isLetter](arkts-localization-i18n-unicode-c.md#isletter)
 
 <!--Device-Character-isLetter(ch: string): boolean--><!--Device-Character-isLetter(ch: string): boolean-End-->
 
@@ -158,11 +148,9 @@ Checks whether the input character is a lowercase letter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isLowerCase](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isLowerCase)
+**Substitutes:** [isLowerCase](arkts-localization-i18n-unicode-c.md#islowercase)
 
 <!--Device-Character-isLowerCase(ch: string): boolean--><!--Device-Character-isLowerCase(ch: string): boolean-End-->
 
@@ -190,11 +178,9 @@ Checks whether the input character is of the right to left (RTL) language.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isRTL](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isRTL)
+**Substitutes:** [isRTL](arkts-localization-i18n-unicode-c.md#isrtl)
 
 <!--Device-Character-isRTL(ch: string): boolean--><!--Device-Character-isRTL(ch: string): boolean-End-->
 
@@ -222,11 +208,9 @@ Checks whether the input character is a space.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isSpaceChar](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isSpaceChar)
+**Substitutes:** [isSpaceChar](arkts-localization-i18n-unicode-c.md#isspacechar)
 
 <!--Device-Character-isSpaceChar(ch: string): boolean--><!--Device-Character-isSpaceChar(ch: string): boolean-End-->
 
@@ -254,11 +238,9 @@ Checks whether the input character is an uppercase letter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isUpperCase](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isUpperCase)
+**Substitutes:** [isUpperCase](arkts-localization-i18n-unicode-c.md#isuppercase)
 
 <!--Device-Character-isUpperCase(ch: string): boolean--><!--Device-Character-isUpperCase(ch: string): boolean-End-->
 
@@ -286,11 +268,9 @@ Checks whether the input character is a whitespace.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isWhitespace](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isWhitespace)
+**Substitutes:** [isWhitespace](arkts-localization-i18n-unicode-c.md#iswhitespace)
 
 <!--Device-Character-isWhitespace(ch: string): boolean--><!--Device-Character-isWhitespace(ch: string): boolean-End-->
 

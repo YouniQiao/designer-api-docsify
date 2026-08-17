@@ -10,9 +10,7 @@ function batteryTemperature(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-batteryInfo-function batteryTemperature(): int--><!--Device-batteryInfo-function batteryTemperature(): int-End-->
 
@@ -24,7 +22,7 @@ function batteryTemperature(): int
 | --- | --- |
 | int | 返回当前设备电池的温度，单位0.1摄氏度。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // ArkTS-Sta示例

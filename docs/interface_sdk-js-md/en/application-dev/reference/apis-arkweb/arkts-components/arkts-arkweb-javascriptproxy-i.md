@@ -1,12 +1,8 @@
 # JavaScriptProxy
 
-Defines the JavaScript object to be injected.
+Defines the JavaScript object to be injected, including the object name, method list, and permission configuration. It is suitable for scenarios where JavaScript-to-native interaction is required, improving cross-language call flexibility and security.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface JavaScriptProxy--><!--Device-unnamed-declare interface JavaScriptProxy-End-->
 
@@ -18,15 +14,11 @@ Defines the JavaScript object to be injected.
 asyncMethodList?: Array<string>
 ```
 
-The async method of the application side JavaScript object participating in the registration.
+Asynchronous methods of the JavaScript object to be registered at the application side. Asynchronous methods cannot obtain return values.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ The async method of the application side JavaScript object participating in the 
 controller: WebController | WebviewController
 ```
 
-Controller.
+Controller. Since API version 9, WebController is no longer maintained. You are advised to use WebviewController instead.
 
 **Type:** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,15 +50,11 @@ Controller.
 methodList: Array<string>
 ```
 
-The method of the application side JavaScript object participating in the registration.
+Synchronous methods of the JavaScript object to be registered at the application side.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,15 +68,11 @@ The method of the application side JavaScript object participating in the regist
 name: string
 ```
 
-The name of the registered object, which is consistent with the object name called in the window.
+Name of the object to be registered, which is the same as that invoked in the window.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -106,15 +86,11 @@ The name of the registered object, which is consistent with the object name call
 object: object
 ```
 
-Objects participating in registration.
+Object participating in the registration. Only methods can be declared, not attributes. Methods must be of the function type.
 
 **Type:** object
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -128,15 +104,11 @@ Objects participating in registration.
 permission?: string
 ```
 
-permission configuration defining web page URLs that can access JavaScriptProxy methods. The configuration can be defined at two levels, object level and method level.
+JSON string, which is empty by default. This string is used to configure JSBridge permission control and define the URL trustlist at the object and method levels. The **permission** parameter of JavaScriptProxy supports the resource, HTTP, and HTTPS protocols, but does not support the file protocol. For the example, see [Invoking Application Functions on the Frontend Page](../../../web/web-in-page-app-function-invoking.md).
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

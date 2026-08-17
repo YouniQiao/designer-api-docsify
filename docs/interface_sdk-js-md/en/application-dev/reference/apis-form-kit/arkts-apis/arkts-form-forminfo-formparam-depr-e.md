@@ -4,11 +4,9 @@ Enumerates the widget parameters.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FormParam](arkts-form-forminfo-formparam-e.md#FormParam)
+**Substitutes:** [FormParam](arkts-form-forminfo-formparam-e.md#formparam)
 
 <!--Device-formInfo-enum FormParam--><!--Device-formInfo-enum FormParam-End-->
 
@@ -24,11 +22,9 @@ Widget dimension.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DIMENSION_KEY](arkts-form-forminfo-formparam-e.md#DIMENSION_KEY)
+**Substitutes:** [DIMENSION_KEY](arkts-form-forminfo-formparam-e.md#dimensionkey)
 
 <!--Device-FormParam-DIMENSION_KEY = 'ohos.extra.param.key.form_dimension'--><!--Device-FormParam-DIMENSION_KEY = 'ohos.extra.param.key.form_dimension'-End-->
 
@@ -44,11 +40,9 @@ Widget name.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NAME_KEY](arkts-form-forminfo-formparam-e.md#NAME_KEY)
+**Substitutes:** [NAME_KEY](arkts-form-forminfo-formparam-e.md#namekey)
 
 <!--Device-FormParam-NAME_KEY = 'ohos.extra.param.key.form_name'--><!--Device-FormParam-NAME_KEY = 'ohos.extra.param.key.form_name'-End-->
 
@@ -64,11 +58,9 @@ Name of the module to which the widget belongs.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MODULE_NAME_KEY](arkts-form-forminfo-formparam-e.md#MODULE_NAME_KEY)
+**Substitutes:** [MODULE_NAME_KEY](arkts-form-forminfo-formparam-e.md#modulenamekey)
 
 <!--Device-FormParam-MODULE_NAME_KEY = 'ohos.extra.param.key.module_name'--><!--Device-FormParam-MODULE_NAME_KEY = 'ohos.extra.param.key.module_name'-End-->
 
@@ -84,11 +76,9 @@ Widget width.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WIDTH_KEY](arkts-form-forminfo-formparam-e.md#WIDTH_KEY)
+**Substitutes:** [WIDTH_KEY](arkts-form-forminfo-formparam-e.md#widthkey)
 
 <!--Device-FormParam-WIDTH_KEY = 'ohos.extra.param.key.form_width'--><!--Device-FormParam-WIDTH_KEY = 'ohos.extra.param.key.form_width'-End-->
 
@@ -104,11 +94,9 @@ Widget height.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HEIGHT_KEY](arkts-form-forminfo-formparam-e.md#HEIGHT_KEY)
+**Substitutes:** [HEIGHT_KEY](arkts-form-forminfo-formparam-e.md#heightkey)
 
 <!--Device-FormParam-HEIGHT_KEY = 'ohos.extra.param.key.form_height'--><!--Device-FormParam-HEIGHT_KEY = 'ohos.extra.param.key.form_height'-End-->
 
@@ -124,11 +112,9 @@ Temporary widget.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TEMPORARY_KEY](arkts-form-forminfo-formparam-e.md#TEMPORARY_KEY)
+**Substitutes:** [TEMPORARY_KEY](arkts-form-forminfo-formparam-e.md#temporarykey)
 
 <!--Device-FormParam-TEMPORARY_KEY = 'ohos.extra.param.key.form_temporary'--><!--Device-FormParam-TEMPORARY_KEY = 'ohos.extra.param.key.form_temporary'-End-->
 

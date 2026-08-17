@@ -4,10 +4,6 @@ MifareClassic Tag size.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tag-enum MifareClassicSize--><!--Device-tag-enum MifareClassicSize-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -21,10 +17,6 @@ MC_SIZE_MINI = 320
 5 sectors per tag, 4 blocks per sector
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ MC_SIZE_1K = 1024
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MifareClassicSize-MC_SIZE_1K = 1024--><!--Device-MifareClassicSize-MC_SIZE_1K = 1024-End-->
@@ -62,10 +50,6 @@ MC_SIZE_2K = 2048
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MifareClassicSize-MC_SIZE_2K = 2048--><!--Device-MifareClassicSize-MC_SIZE_2K = 2048-End-->
@@ -81,10 +65,6 @@ MC_SIZE_4K = 4096
 40 sectors per tag, 4 blocks per sector
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

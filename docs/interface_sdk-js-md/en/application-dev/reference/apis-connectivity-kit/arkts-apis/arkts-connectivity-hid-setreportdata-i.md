@@ -4,10 +4,6 @@ Describe the SET_REPORT data is received from remote host.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-hid-interface SetReportData--><!--Device-hid-interface SetReportData-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ data of SET_REPORT data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SetReportData-data: Uint8Array--><!--Device-SetReportData-data: Uint8Array-End-->
@@ -52,10 +44,6 @@ id of SET_REPORT data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SetReportData-id: int--><!--Device-SetReportData-id: int-End-->
@@ -73,10 +61,6 @@ reportType of SET_REPORT data.
 **Type:** ReportType
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

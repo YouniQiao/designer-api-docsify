@@ -4,11 +4,9 @@ Describes a **FormBindingData** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md#FormBindingData)
+**Substitutes:** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md#formbindingdata)
 
 <!--Device-formBindingData-interface FormBindingData--><!--Device-formBindingData-interface FormBindingData-End-->
 
@@ -26,11 +24,9 @@ Data to be displayed on the JS widget. The value can be an object containing mul
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md#FormBindingData)
+**Substitutes:** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md#formbindingdata)
 
 <!--Device-FormBindingData-data: Object--><!--Device-FormBindingData-data: Object-End-->
 

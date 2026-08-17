@@ -16,10 +16,6 @@ Obtains the current system dark mode configuration. &lt;!--Del--&gt; > **NOTE：
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 10 - 19: ohos.permission.UPDATE_CONFIGURATION
 
@@ -42,7 +38,7 @@ Obtains the current system dark mode configuration. &lt;!--Del--&gt; > **NOTE：
 | [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 - 19 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiAppearance } from '@kit.ArkUI';

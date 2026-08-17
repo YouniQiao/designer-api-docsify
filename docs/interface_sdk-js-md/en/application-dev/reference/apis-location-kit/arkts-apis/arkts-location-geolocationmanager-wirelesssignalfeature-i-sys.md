@@ -4,10 +4,6 @@ Indicates wireless signal feature.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface WirelessSignalFeature--><!--Device-geoLocationManager-export interface WirelessSignalFeature-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -32,10 +28,6 @@ Indicates MAC array.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WirelessSignalFeature-mac: Array<string>--><!--Device-WirelessSignalFeature-mac: Array<string>-End-->
@@ -56,10 +48,6 @@ Indicates average RSSI value. The value range is all integers.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WirelessSignalFeature-rssiAvg: int--><!--Device-WirelessSignalFeature-rssiAvg: int-End-->
@@ -79,10 +67,6 @@ Indicates RSSI standard deviation.
 **Type:** double
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

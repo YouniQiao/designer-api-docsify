@@ -16,10 +16,6 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<NotificationSlot>>): void--><!--Device-notificationManager-function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<NotificationSlot>>): void-End-->
@@ -33,7 +29,7 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationSlot&gt;&gt; | 是 | 获取通知渠道回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;NotificationSlot&gt;&gt; | 是 | 获取通知渠道回调函数。 |
 
 **错误码：**
 
@@ -48,7 +44,7 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -98,10 +94,6 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>>--><!--Device-notificationManager-function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>>-End-->
@@ -135,7 +127,7 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

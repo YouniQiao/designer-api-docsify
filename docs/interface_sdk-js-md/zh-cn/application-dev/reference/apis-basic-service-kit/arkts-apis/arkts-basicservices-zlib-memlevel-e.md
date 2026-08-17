@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-zlib-export enum MemLevel--><!--Device-zlib-export enum MemLevel-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -21,10 +17,6 @@ MEM_LEVEL_MIN = 1
 zlib接口在压缩过程中最小使用内存。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,10 +34,6 @@ zlib接口在压缩过程中最大使用内存。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MemLevel-MEM_LEVEL_MAX = 9--><!--Device-MemLevel-MEM_LEVEL_MAX = 9-End-->
@@ -61,10 +49,6 @@ MEM_LEVEL_DEFAULT = 8
 zlib接口在压缩过程中默认使用内存。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -12,13 +12,9 @@ import { bundleManager } from 'bundleManager';
 function getSignatureInfo(uid: int): SignatureInfo
 ```
 
-Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md#SignatureInfo) of an application based on the given UID.
+Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md#signatureinfo) of an application based on the given UID.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SIGNATURE_INFO
 
@@ -45,7 +41,7 @@ Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md#
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [17700021](../errorcode-bundle.md#17700021-invalid-uid) | The uid is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

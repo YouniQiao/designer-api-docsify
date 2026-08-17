@@ -4,10 +4,6 @@ Detailed description of the material brightness parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-interface BrightnessParam--><!--Device-uiEffect-interface BrightnessParam-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -32,10 +28,6 @@ Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Va
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BrightnessParam-cubicCoeff : double--><!--Device-BrightnessParam-cubicCoeff : double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -53,10 +45,6 @@ Blending ratio for the brightness effect. The value range is [0, 1]. Values less
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BrightnessParam-fraction : double--><!--Device-BrightnessParam-fraction : double-End-->
 
@@ -76,10 +64,6 @@ Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BrightnessParam-lightUpDegree : double--><!--Device-BrightnessParam-lightUpDegree : double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -97,10 +81,6 @@ Negative adjustment coefficients based on the base saturation. The value range f
 **Type:** [double, double, double]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BrightnessParam-negRgb : [double, double, double]--><!--Device-BrightnessParam-negRgb : [double, double, double]-End-->
 
@@ -120,10 +100,6 @@ Positive adjustment coefficients based on the base saturation. The value range f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BrightnessParam-posRgb : [double, double, double]--><!--Device-BrightnessParam-posRgb : [double, double, double]-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -141,10 +117,6 @@ Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. V
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BrightnessParam-quadCoeff : double--><!--Device-BrightnessParam-quadCoeff : double-End-->
 
@@ -164,10 +136,6 @@ Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BrightnessParam-rate : double--><!--Device-BrightnessParam-rate : double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -185,10 +153,6 @@ Base saturation for brightness. The value range is [0, 1]. Values less than 0 ar
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BrightnessParam-saturation : double--><!--Device-BrightnessParam-saturation : double-End-->
 

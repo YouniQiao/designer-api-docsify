@@ -4,10 +4,6 @@ The FastBuffer object is a method of handling buffers dedicated to binary data.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-fastbuffer-class FastBuffer--><!--Device-fastbuffer-class FastBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 Compares buf with target and returns a number indicating whether buf comes before, after, or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each FastBuffer.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -61,7 +53,7 @@ Compares buf with target and returns a number indicating whether buf comes befor
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
 | [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -86,10 +78,6 @@ copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number
 Copies data from a region of buf to a region in target, even if the target memory region overlaps with buf. If sourceEnd is greater than the length of the target, the length of the target shall prevail, and the extra part will not be overwritten.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -119,7 +107,7 @@ Copies data from a region of buf to a region in target, even if the target memor
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
 | [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -149,10 +137,6 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-entries(): IterableIterator<[            number,            number        ]>--><!--Device-FastBuffer-entries(): IterableIterator<[            number,            number        ]>-End-->
@@ -165,7 +149,7 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 | --- | --- |
 | IterableIterator&lt;[             number, number         ]&gt; |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -197,10 +181,6 @@ Returns true if both buf and otherBuffer have exactly the same bytes, false othe
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean--><!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean-End-->
@@ -225,7 +205,7 @@ Returns true if both buf and otherBuffer have exactly the same bytes, false othe
 | --- | --- |
 | [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -249,10 +229,6 @@ fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: nu
 Fills buf with the specified value. If the offset and end are not given, the entire buf will be filled.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -282,7 +258,7 @@ Fills buf with the specified value. If the offset and end are not given, the ent
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
 | [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -301,10 +277,6 @@ includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, 
 Returns true if value was found in buf, false otherwise
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -326,7 +298,7 @@ Returns true if value was found in buf, false otherwise
 | --- | --- |
 | boolean | true or false |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -348,10 +320,6 @@ The index of the first occurrence of value in buf
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
@@ -372,7 +340,7 @@ The index of the first occurrence of value in buf
 | --- | --- |
 | number | The index of the first occurrence of value in buf, or -1 if buf does not contain value |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -394,10 +362,6 @@ Creates and returns an iterator of buf keys (indices).
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-keys(): IterableIterator<number>--><!--Device-FastBuffer-keys(): IterableIterator<number>-End-->
@@ -410,7 +374,7 @@ Creates and returns an iterator of buf keys (indices).
 | --- | --- |
 | IterableIterator&lt;number&gt; |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -440,10 +404,6 @@ The index of the last occurrence of value in buf
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
@@ -464,7 +424,7 @@ The index of the last occurrence of value in buf
 | --- | --- |
 | number | The index of the last occurrence of value in buf, or -1 if buf does not contain value |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -485,10 +445,6 @@ readBigInt64BE(offset?: number): bigint
 Reads a signed, big-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -514,7 +470,7 @@ Reads a signed, big-endian 64-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -534,10 +490,6 @@ readBigInt64LE(offset?: number): bigint
 Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -563,7 +515,7 @@ Reads a signed, little-endian 64-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -583,10 +535,6 @@ readBigUInt64BE(offset?: number): bigint
 Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -612,7 +560,7 @@ Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -632,10 +580,6 @@ readBigUInt64LE(offset?: number): bigint
 Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -661,7 +605,7 @@ Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -681,10 +625,6 @@ readDoubleBE(offset?: number): number
 Reads a 64-bit, big-endian double from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -710,7 +650,7 @@ Reads a 64-bit, big-endian double from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -729,10 +669,6 @@ readDoubleLE(offset?: number): number
 Reads a 64-bit, little-endian double from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -758,7 +694,7 @@ Reads a 64-bit, little-endian double from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -777,10 +713,6 @@ readFloatBE(offset?: number): number
 Reads a 32-bit, big-endian float from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -806,7 +738,7 @@ Reads a 32-bit, big-endian float from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -825,10 +757,6 @@ readFloatLE(offset?: number): number
 Reads a 32-bit, little-endian float from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -854,7 +782,7 @@ Reads a 32-bit, little-endian float from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -873,10 +801,6 @@ readInt16BE(offset?: number): number
 Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -902,7 +826,7 @@ Reads a signed, big-endian 16-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -921,10 +845,6 @@ readInt16LE(offset?: number): number
 Reads a signed, little-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -950,7 +870,7 @@ Reads a signed, little-endian 16-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -969,10 +889,6 @@ readInt32BE(offset?: number): number
 Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -998,7 +914,7 @@ Reads a signed, big-endian 32-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1017,10 +933,6 @@ readInt32LE(offset?: number): number
 Reads a signed, little-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1046,7 +958,7 @@ Reads a signed, little-endian 32-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1065,10 +977,6 @@ readInt8(offset?: number): number
 Reads a signed 8-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1094,7 +1002,7 @@ Reads a signed 8-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 1. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1115,10 +1023,6 @@ readIntBE(offset: number, byteLength: number): number
 Reads byteLength number of bytes from buf at the specified offset and interprets the result as a big-endian, two's complement signed value supporting up to 48 bits of accuracy
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1145,7 +1049,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1165,10 +1069,6 @@ readIntLE(offset: number, byteLength: number): number
 Reads byteLength number of bytes from buf at the specified offset and interprets the result as a little-endian, two's complement signed value supporting up to 48 bits of accuracy.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1195,7 +1095,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1214,10 +1114,6 @@ readUInt16BE(offset?: number): number
 Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1243,7 +1139,7 @@ Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1264,10 +1160,6 @@ readUInt16LE(offset?: number): number
 Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1293,7 +1185,7 @@ Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1314,10 +1206,6 @@ readUInt32BE(offset?: number): number
 Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1343,7 +1231,7 @@ Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1362,10 +1250,6 @@ readUInt32LE(offset?: number): number
 Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1391,7 +1275,7 @@ Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1410,10 +1294,6 @@ readUInt8(offset?: number): number
 Reads an unsigned 8-bit integer from buf at the specified offset
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1439,7 +1319,7 @@ Reads an unsigned 8-bit integer from buf at the specified offset
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 1. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1460,10 +1340,6 @@ readUIntBE(offset: number, byteLength: number): number
 Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned big-endian integer supporting up to 48 bits of accuracy.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1490,7 +1366,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1509,10 +1385,6 @@ readUIntLE(offset: number, byteLength: number): number
 Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned, little-endian integer supporting up to 48 bits of accuracy.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1539,7 +1411,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1558,10 +1430,6 @@ subarray(start?: number, end?: number): FastBuffer
 Returns a new FastBuffer that references the same memory as the original, but offset and cropped by the start and end indices.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1582,7 +1450,7 @@ Returns a new FastBuffer that references the same memory as the original, but of
 | --- | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Returns a new FastBuffer that references the same memory as the original |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1607,10 +1475,6 @@ Interprets buf as an array of unsigned 16-bit integers and swaps the byte order 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-swap16(): FastBuffer--><!--Device-FastBuffer-swap16(): FastBuffer-End-->
@@ -1629,7 +1493,7 @@ Interprets buf as an array of unsigned 16-bit integers and swaps the byte order 
 | --- | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 16-bits |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1652,10 +1516,6 @@ Interprets buf as an array of unsigned 32-bit integers and swaps the byte order 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-swap32(): FastBuffer--><!--Device-FastBuffer-swap32(): FastBuffer-End-->
@@ -1674,7 +1534,7 @@ Interprets buf as an array of unsigned 32-bit integers and swaps the byte order 
 | --- | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 32-bits |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1697,10 +1557,6 @@ Interprets buf as an array of unsigned 64-bit integers and swaps the byte order 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-swap64(): FastBuffer--><!--Device-FastBuffer-swap64(): FastBuffer-End-->
@@ -1719,7 +1575,7 @@ Interprets buf as an array of unsigned 64-bit integers and swaps the byte order 
 | --- | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 64-bits |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1742,10 +1598,6 @@ Returns a JSON representation of buf
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-toJSON(): Object--><!--Device-FastBuffer-toJSON(): Object-End-->
@@ -1758,7 +1610,7 @@ Returns a JSON representation of buf
 | --- | --- |
 | Object | Returns a JSON |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1778,10 +1630,6 @@ toString(encoding?: string, start?: number, end?: number): string
 Decodes buf to a string according to the specified character encoding in encoding
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1809,7 +1657,7 @@ Decodes buf to a string according to the specified character encoding in encodin
 | --- | --- |
 | [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1832,10 +1680,6 @@ Creates and returns an iterator for buf values (bytes).
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-values(): IterableIterator<number>--><!--Device-FastBuffer-values(): IterableIterator<number>-End-->
@@ -1848,7 +1692,7 @@ Creates and returns an iterator for buf values (bytes).
 | --- | --- |
 | IterableIterator&lt;number&gt; |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1880,10 +1724,6 @@ Writes string to buf at offset according to the character encoding in encoding
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number--><!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number-End-->
@@ -1912,7 +1752,7 @@ Writes string to buf at offset according to the character encoding in encoding
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
 | [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1937,10 +1777,6 @@ writeBigInt64BE(value: bigint, offset?: number): number
 Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -1967,7 +1803,7 @@ Writes value to buf at the specified offset as big-endian.
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -1987,10 +1823,6 @@ writeBigInt64LE(value: bigint, offset?: number): number
 Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2017,7 +1849,7 @@ Writes value to buf at the specified offset as little-endian.
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2037,10 +1869,6 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2067,7 +1895,7 @@ Writes value to buf at the specified offset as big-endian.
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2087,10 +1915,6 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2117,7 +1941,7 @@ Writes value to buf at the specified offset as little-endian.
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2137,10 +1961,6 @@ writeDoubleBE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2167,7 +1987,7 @@ Writes value to buf at the specified offset as big-endian.
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2187,10 +2007,6 @@ writeDoubleLE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2217,7 +2033,7 @@ Writes value to buf at the specified offset as little-endian.
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2237,10 +2053,6 @@ writeFloatBE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2267,7 +2079,7 @@ Writes value to buf at the specified offset as big-endian.
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2287,10 +2099,6 @@ writeFloatLE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2317,7 +2125,7 @@ Writes value to buf at the specified offset as little-endian.
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2337,10 +2145,6 @@ writeInt16BE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian. The value must be a valid signed 16-bit integer
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2367,7 +2171,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2387,10 +2191,6 @@ writeInt16LE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian. The value must be a valid signed 16-bit integer
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2417,7 +2217,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2437,10 +2237,6 @@ writeInt32BE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian. The value must be a valid signed 32-bit integer.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2467,7 +2263,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2487,10 +2283,6 @@ writeInt32LE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian. The value must be a valid signed 32-bit integer.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2517,7 +2309,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2537,10 +2329,6 @@ writeInt8(value: number, offset?: number): number
 Writes value to buf at the specified offset. value must be a valid signed 8-bit integer.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2567,7 +2355,7 @@ Writes value to buf at the specified offset. value must be a valid signed 8-bit 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2590,10 +2378,6 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2621,7 +2405,7 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2641,10 +2425,6 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2672,7 +2452,7 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2692,10 +2472,6 @@ writeUInt16BE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian. The value must be a valid unsigned 16-bit integer.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2722,7 +2498,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2745,10 +2521,6 @@ writeUInt16LE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian. The value must be a valid unsigned 16-bit integer.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2775,7 +2547,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2798,10 +2570,6 @@ writeUInt32BE(value: number, offset?: number): number
 Writes value to buf at the specified offset as big-endian. The value must be a valid unsigned 32-bit integer.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2828,7 +2596,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2848,10 +2616,6 @@ writeUInt32LE(value: number, offset?: number): number
 Writes value to buf at the specified offset as little-endian. The value must be a valid unsigned 32-bit integer.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2878,7 +2642,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2898,10 +2662,6 @@ writeUInt8(value: number, offset?: number): number
 Writes value to buf at the specified offset. value must be a valid unsigned 8-bit integer
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -2928,7 +2688,7 @@ Writes value to buf at the specified offset. value must be a valid unsigned 8-bi
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -2958,10 +2718,6 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number-End-->
@@ -2988,7 +2744,7 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -3008,10 +2764,6 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -3039,7 +2791,7 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
@@ -3062,10 +2814,6 @@ The arraybuffer underlying the FastBuffer object
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-buffer: ArrayBuffer--><!--Device-FastBuffer-buffer: ArrayBuffer-End-->
@@ -3084,10 +2832,6 @@ The byteOffset of the Buffers underlying ArrayBuffer object
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FastBuffer-byteOffset: number--><!--Device-FastBuffer-byteOffset: number-End-->
@@ -3105,10 +2849,6 @@ Returns the number of bytes in buf
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

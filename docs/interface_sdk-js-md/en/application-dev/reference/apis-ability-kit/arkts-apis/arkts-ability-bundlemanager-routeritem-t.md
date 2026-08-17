@@ -8,10 +8,6 @@ Defines the router table configuration of the module.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type RouterItem = _RouterItem--><!--Device-bundleManager-export type RouterItem = _RouterItem-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

@@ -16,10 +16,6 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -51,7 +47,7 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { osAccount, BusinessError } from '@kit.BasicServicesKit';

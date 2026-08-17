@@ -16,10 +16,6 @@ Cancels the auto-startup setting for an application component. This API uses an 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_APP_BOOT
 
 **Model restriction:** This API can be used only in the stage model.
@@ -58,10 +54,6 @@ function cancelApplicationAutoStartup(info: AutoStartupInfo): Promise<void>
 Cancels the auto-startup setting for an application component. This API uses a promise to return the result. Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on other device types, error code 16000050 is returned. For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000050 is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_APP_BOOT
 

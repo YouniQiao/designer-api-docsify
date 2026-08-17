@@ -1,12 +1,8 @@
 # ErrorObserver
 
-The ErrorObserver module defines an observer to listen for application errors. It can be used as an input parameter in [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#on_error) to listen for errors that occur in the current application.
+The ErrorObserver module defines an observer to listen for application errors. It can be used as an input parameter in [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#onerror) to listen for errors that occur in the current application.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export default class ErrorObserver--><!--Device-unnamed-export default class ErrorObserver-End-->
 
@@ -22,10 +18,6 @@ Called when the application encounters an exception and reports it to the JavaSc
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ErrorObserver-onException?(errObject: Error): void--><!--Device-ErrorObserver-onException?(errObject: Error): void-End-->
@@ -38,7 +30,7 @@ Called when the application encounters an exception and reports it to the JavaSc
 | --- | --- | --- | --- |
 | errObject | Error | Yes | Event name, message, and error stack of the exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
@@ -74,10 +66,6 @@ Called when an uncaught exception occurs in the application.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ErrorObserver-onUnhandledException(errMsg: string): void--><!--Device-ErrorObserver-onUnhandledException(errMsg: string): void-End-->
@@ -90,7 +78,7 @@ Called when an uncaught exception occurs in the application.
 | --- | --- | --- | --- |
 | errMsg | string | Yes | Message and error stack trace about the exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';

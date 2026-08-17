@@ -1,12 +1,8 @@
 # SceneLoadParams (System API)
 
-The parameters for loading a scene
+Scene load parameters object, used to specify additional configuration options when loading 3D model resources. A typical use case is loading an embedded glb model from an MP4 container file.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SceneLoadParams--><!--Device-unnamed-export interface SceneLoadParams-End-->
 
@@ -24,13 +20,9 @@ The offset of the start of the 3D model data in the resource Unit: byte, The val
 
 **Type:** long
 
-**Default:** { 0 }
+**Default:** 0
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

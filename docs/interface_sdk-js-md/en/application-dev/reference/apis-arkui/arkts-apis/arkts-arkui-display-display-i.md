@@ -1,12 +1,8 @@
 # Display
 
-Implements a Display instance, with attributes and APIs defined. Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getAllDisplays) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync) to obtain a Display instance.
+Implements a Display instance, with attributes and APIs defined. Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync) to obtain a Display instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-display-interface Display--><!--Device-display-interface Display-End-->
 
@@ -28,10 +24,6 @@ Obtains the available area of the display of the current device. This API uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-getAvailableArea(): Promise<Rect>--><!--Device-Display-getAvailableArea(): Promise<Rect>-End-->
@@ -51,7 +43,7 @@ Obtains the available area of the display of the current device. This API uses a
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -81,10 +73,6 @@ Obtains the cutout information of the display. This API uses an asynchronous cal
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void--><!--Device-Display-getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void-End-->
@@ -103,7 +91,7 @@ Obtains the cutout information of the display. This API uses an asynchronous cal
 | --- | --- |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -131,10 +119,6 @@ Obtains the cutout information of the display. This API uses a promise to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-getCutoutInfo(): Promise<CutoutInfo>--><!--Device-Display-getCutoutInfo(): Promise<CutoutInfo>-End-->
@@ -153,7 +137,7 @@ Obtains the cutout information of the display. This API uses a promise to return
 | --- | --- |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -177,10 +161,6 @@ getDisplayCapability(): string
 Get current display capability, including foldstatus, displaymode, rotation, and orientation information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -212,10 +192,6 @@ Obtains the live crease region of the foldable device in the current display mod
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Display-getLiveCreaseRegion(): FoldCreaseRegion--><!--Device-Display-getLiveCreaseRegion(): FoldCreaseRegion-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -233,7 +209,7 @@ Obtains the live crease region of the foldable device in the current display mod
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { display } from '@kit.ArkUI';
@@ -258,10 +234,6 @@ Obtains the rounded corner information of the display. The rounded corner inform
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-getRoundedCorner(): Array<RoundedCorner>--><!--Device-Display-getRoundedCorner(): Array<RoundedCorner>-End-->
@@ -282,7 +254,7 @@ Obtains the rounded corner information of the display. The rounded corner inform
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -306,10 +278,6 @@ offAvailableAreaChange(callback?: Callback<Rect>): void
 Unregister the callback for available area changes. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void--><!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void-End-->
 
@@ -337,10 +305,6 @@ Unsubscribes from changes of the available area on the display of the current de
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-off(type: 'availableAreaChange', callback?: Callback<Rect>): void--><!--Device-Display-off(type: 'availableAreaChange', callback?: Callback<Rect>): void-End-->
@@ -361,7 +325,7 @@ Unsubscribes from changes of the available area on the display of the current de
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -389,10 +353,6 @@ Register the callback for available area changes. This API can be properly calle
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void--><!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -419,10 +379,6 @@ Subscribes to changes of the available area on the display of the current device
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-on(type: 'availableAreaChange', callback: Callback<Rect>): void--><!--Device-Display-on(type: 'availableAreaChange', callback: Callback<Rect>): void-End-->
@@ -443,7 +399,7 @@ Subscribes to changes of the available area on the display of the current device
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -473,10 +429,6 @@ Whether the display is alive. The value **true** indicates that the display is a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-alive: boolean--><!--Device-Display-alive: boolean-End-->
@@ -494,10 +446,6 @@ eight of the available area, in px. The value is an integer greater than 0. This
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -517,10 +465,6 @@ Width of the available area, in px. The value is an integer greater than 0. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-availableWidth: long--><!--Device-Display-availableWidth: long-End-->
@@ -538,10 +482,6 @@ All color spaces supported by the display.
 **Type:** Array&lt;colorSpaceManager.ColorSpace&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -561,10 +501,6 @@ Physical pixel density of the display, that is, the number of pixels per inch. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-densityDPI: double--><!--Device-Display-densityDPI: double-End-->
@@ -582,10 +518,6 @@ Logical pixel density of the display, which is the scaling coefficient between p
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -605,10 +537,6 @@ All HDR formats supported by the display.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-hdrFormats: Array<hdrCapability.HDRFormat>--><!--Device-Display-hdrFormats: Array<hdrCapability.HDRFormat>-End-->
@@ -626,10 +554,6 @@ Height of the display, in px. The value is an integer.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -649,10 +573,6 @@ Display ID, which is an integer greater than or equal to 0.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-id: long--><!--Device-Display-id: long-End-->
@@ -670,10 +590,6 @@ Name of the display.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -693,10 +609,6 @@ Orientation of the display.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-orientation: Orientation--><!--Device-Display-orientation: Orientation-End-->
@@ -714,10 +626,6 @@ Refresh rate of the display, in Hz. The value is an integer.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -737,10 +645,6 @@ Clockwise rotation angle of the display. The value **0** indicates that the disp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Display-rotation: int--><!--Device-Display-rotation: int-End-->
@@ -758,10 +662,6 @@ Scaling factor for fonts displayed on the display. The value must be a floating 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -781,10 +681,6 @@ Screen shape of the display. The default value is **ScreenShape.RECTANGLE**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-screenShape?: ScreenShape--><!--Device-Display-screenShape?: ScreenShape-End-->
@@ -802,10 +698,6 @@ Display mode for screen content. The default value is **DisplaySourceMode.NONE**
 **Type:** [DisplaySourceMode](arkts-arkui-display-displaysourcemode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -825,10 +717,6 @@ State of the display.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-state: DisplayState--><!--Device-Display-state: DisplayState-End-->
@@ -846,10 +734,6 @@ All refresh rates supported by the display, sorted in ascending order. The refre
 **Type:** Array&lt;int&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -869,10 +753,6 @@ Width of the display, in px. The value is an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Display-width: long--><!--Device-Display-width: long-End-->
@@ -890,10 +770,6 @@ X coordinate of the top-left corner of the display relative to the origin, which
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -913,10 +789,6 @@ Exact physical pixels per inch of the display in the X axis. The value must be a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Display-xDPI: double--><!--Device-Display-xDPI: double-End-->
@@ -935,10 +807,6 @@ Y coordinate of the top-left corner of the display relative to the origin, which
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-y?: long--><!--Device-Display-y?: long-End-->
@@ -956,10 +824,6 @@ Exact physical pixels per inch of the display in the Y axis. The value must be a
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

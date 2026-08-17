@@ -14,13 +14,9 @@ import { LevelOrder } from 'LevelOrder';
 function openToast(options: ShowToastOptions): Promise<number>
 ```
 
-Shows a toast. This API uses a promise to return the toast ID. > **NOTE：**> > - Subwindows with **showMode** set to **TOP_MOST** or **SYSTEM_TOP_MOST** do not support **openToast** in input > method type windows. For details, see the constraints in the input method framework > [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel) > . > > - Directly using **openToast** can lead to the issue of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the > **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the > [openToast](arkts-arkui-arkui-uicontext-promptaction-c.md#openToast) API through this object.
+Shows a toast. This API uses a promise to return the toast ID. > **NOTE：**> > - Subwindows with **showMode** set to **TOP_MOST** or **SYSTEM_TOP_MOST** do not support **openToast** in input > method type windows. For details, see the constraints in the input method framework > [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) > . > > - Directly using **openToast** can lead to the issue of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the > **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the > [openToast](arkts-arkui-arkui-uicontext-promptaction-c.md#opentoast) API through this object.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,7 +45,7 @@ Shows a toast. This API uses a promise to return the toast ID. > **NOTE：**> > 
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

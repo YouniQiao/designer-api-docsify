@@ -4,10 +4,6 @@ Form update reason.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-enum FormUpdateReason--><!--Device-formInfo-enum FormUpdateReason-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -21,10 +17,6 @@ UNKNOWN = -1
 The reason for the form update is unknown.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ FORM_NODE_REUSE = 0
 The reason for the form update is node reuse.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

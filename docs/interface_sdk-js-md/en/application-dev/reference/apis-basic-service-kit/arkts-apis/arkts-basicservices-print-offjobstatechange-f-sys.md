@@ -16,10 +16,6 @@ Unregister event callback for the state change of print job.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function offJobStateChange(callback?: Callback<boolean>): void--><!--Device-print-function offJobStateChange(callback?: Callback<boolean>): void-End-->

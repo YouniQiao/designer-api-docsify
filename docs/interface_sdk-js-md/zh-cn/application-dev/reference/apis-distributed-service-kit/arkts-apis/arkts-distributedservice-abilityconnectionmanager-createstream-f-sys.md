@@ -10,10 +10,6 @@ Creating a Stream.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>--><!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>-End-->
@@ -45,7 +41,7 @@ Creating a Stream.
 | [32300001](../../apis-distributedservice-kit/errorcode-device-manager.md#32300001-重复创建传输流) | Only one stream can be created for the current session. |
 | [32300003](../../apis-distributedservice-kit/errorcode-device-manager.md#32300003-比特率不支持) | Bitrate not supported. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

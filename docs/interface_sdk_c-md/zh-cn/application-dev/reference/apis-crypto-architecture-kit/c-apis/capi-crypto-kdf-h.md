@@ -4,6 +4,8 @@
 
 定义密钥派生接口。
 
+**引用文件：** <CryptoArchitectureKit/crypto_kdf.h>
+
 **库：** libohcrypto.so
 
 **系统能力：** SystemCapability.Security.CryptoFramework

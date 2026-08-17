@@ -10,10 +10,6 @@ Subscribe to the mmiCodeResult event.
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function onMmiCodeResult(callback: Callback<MmiCodeResults>): void--><!--Device-call-function onMmiCodeResult(callback: Callback<MmiCodeResults>): void-End-->
@@ -26,7 +22,7 @@ Subscribe to the mmiCodeResult event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MmiCodeResults](arkts-telephony-call-mmicoderesults-i-sys.md)&gt; | 是 | Indicates the callback for getting the result of MMI code. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MmiCodeResults](arkts-telephony-call-mmicoderesults-i-sys.md)&gt; | 是 | Indicates the callback for getting the result of MMI code. |
 
 **错误码：**
 

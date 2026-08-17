@@ -16,10 +16,6 @@ Unregisters the observer used to listen for application state changes. This API 
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
 <!--Device-appManager-function off(type: 'applicationState', observerId: int, callback: AsyncCallback<void>): void--><!--Device-appManager-function off(type: 'applicationState', observerId: int, callback: AsyncCallback<void>): void-End-->
@@ -31,7 +27,7 @@ Unregisters the observer used to listen for application state changes. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
-| observerId | int | Yes | ID of the observer registered, which is the listener ID returned by [on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState). |
+| observerId | int | Yes | ID of the observer registered, which is the listener ID returned by [on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the application state observer is deregistered, **err** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -42,7 +38,7 @@ Unregisters the observer used to listen for application state changes. This API 
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -113,10 +109,6 @@ Unregisters the observer used to listen for application state changes. This API 
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
 <!--Device-appManager-function off(type: 'applicationState', observerId: int): Promise<void>--><!--Device-appManager-function off(type: 'applicationState', observerId: int): Promise<void>-End-->
@@ -128,7 +120,7 @@ Unregisters the observer used to listen for application state changes. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
-| observerId | int | Yes | ID of the observer registered, which is the listener ID returned by [on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState). |
+| observerId | int | Yes | ID of the observer registered, which is the listener ID returned by [on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate). |
 
 **Return value:**
 
@@ -144,7 +136,7 @@ Unregisters the observer used to listen for application state changes. This API 
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

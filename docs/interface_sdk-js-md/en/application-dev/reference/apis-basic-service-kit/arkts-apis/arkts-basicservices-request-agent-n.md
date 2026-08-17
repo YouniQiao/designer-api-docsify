@@ -4,10 +4,6 @@ The request agent api. Supports "background" and "frontend" tasks as while. Thou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-namespace agent--><!--Device-request-namespace agent-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -26,19 +22,19 @@ import { request } from 'request';
 | --- | --- |
 | [create](arkts-basicservices-agent-create-f.md#create) | Creates an upload or download task and adds it to the queue. This API uses an asynchronous callback to return the result. HTTP/HTTPS is supported. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > . |
 | [create](arkts-basicservices-agent-create-f.md#create) | Creates an upload or download task and adds it to the queue. This API uses a promise to return the result. HTTP/ HTTPS is supported. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > . |
-| [getTask](arkts-basicservices-agent-gettask-f.md#getTask) | Obtains task information based on the task ID. This API uses a promise to return the result. |
+| [getTask](arkts-basicservices-agent-gettask-f.md#gettask) | Obtains task information based on the task ID. This API uses a promise to return the result. |
 | [remove](arkts-basicservices-agent-remove-f.md#remove) | Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses an asynchronous callback to return the result. After this API is called, the **task** object and its callback function are released. |
 | [remove](arkts-basicservices-agent-remove-f.md#remove) | Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses a promise to return the result. After this API is called, the **task** object and its callback function are released. |
 | [show](arkts-basicservices-agent-show-f.md#show) | Queries the task details based on the task ID. This API uses an asynchronous callback to return the result. |
 | [show](arkts-basicservices-agent-show-f.md#show) | Queries the task details based on the task ID. This API uses a promise to return the result. |
 | [touch](arkts-basicservices-agent-touch-f.md#touch) | Queries the task details based on the task ID and token. This API uses an asynchronous callback to return the result. |
 | [touch](arkts-basicservices-agent-touch-f.md#touch) | Queries the task details based on the task ID and token. This API uses a promise to return the result. |
-| [search](arkts-basicservices-agent-search-f.md#search) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result. |
-| [search](arkts-basicservices-agent-search-f.md#search) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses an asynchronous callback to return the result. |
-| [search](arkts-basicservices-agent-search-f.md#search) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses a promise to return the result. |
-| [createGroup](arkts-basicservices-agent-creategroup-f.md#createGroup) | Creates a group based on [GroupConfig](arkts-basicservices-agent-groupconfig-i.md#GroupConfig). This API uses a promise to return the result. |
-| [attachGroup](arkts-basicservices-agent-attachgroup-f.md#attachGroup) | Attaches multiple download task IDs to a specified group ID. This API uses a promise to return the result. If any task ID does not meet the attachment conditions, all tasks in the list will not be added to the group. |
-| [deleteGroup](arkts-basicservices-agent-deletegroup-f.md#deleteGroup) | Deletes a specified group. No task ID can be added to the group. This API uses a promise to return the result. When all tasks in a group are succeeded, failed, or removed and the group is deleted, the completion and failure notifications of this group are displayed. |
+| [search](arkts-basicservices-agent-search-f.md#search) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#filter). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result. |
+| [search](arkts-basicservices-agent-search-f.md#search) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#filter). This API uses an asynchronous callback to return the result. |
+| [search](arkts-basicservices-agent-search-f.md#search) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#filter). This API uses a promise to return the result. |
+| [createGroup](arkts-basicservices-agent-creategroup-f.md#creategroup) | Creates a group based on [GroupConfig](arkts-basicservices-agent-groupconfig-i.md#groupconfig). This API uses a promise to return the result. |
+| [attachGroup](arkts-basicservices-agent-attachgroup-f.md#attachgroup) | Attaches multiple download task IDs to a specified group ID. This API uses a promise to return the result. If any task ID does not meet the attachment conditions, all tasks in the list will not be added to the group. |
+| [deleteGroup](arkts-basicservices-agent-deletegroup-f.md#deletegroup) | Deletes a specified group. No task ID can be added to the group. This API uses a promise to return the result. When all tasks in a group are succeeded, failed, or removed and the group is deleted, the completion and failure notifications of this group are displayed. |
 
 <!--Del-->
 ### Functions（系统接口）
@@ -46,7 +42,7 @@ import { request } from 'request';
 | Name | Description |
 | --- | --- |
 | [query](arkts-basicservices-agent-query-f-sys.md#query) | Queries specified task details. Creates a group based on GroupConfig |
-| [query](arkts-basicservices-agent-query-f-sys.md#query-(System-API)) | Queries specified task details. |
+| [query](arkts-basicservices-agent-query-f-sys.md#query-system-api) | Queries specified task details. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -56,8 +52,8 @@ import { request } from 'request';
 | [FileSpec](arkts-basicservices-agent-filespec-i.md) | Provides the file information of a table item. |
 | [FormItem](arkts-basicservices-agent-formitem-i.md) | Describes the form item of a task. |
 | [Notification](arkts-basicservices-agent-notification-i.md) | Describes the custom information of the notification bar. |
-| [MinSpeed](arkts-basicservices-agent-minspeed-i.md) | Defines the minimum speed of a task. If the task speed is lower than the preset value for a specified period of time, the task fails. The failure cause is [LOW_SPEED](arkts-basicservices-agent-faults-e.md#Faults). |
-| [Timeout](arkts-basicservices-agent-timeout-i.md) | Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see [WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md#WaitingReason) . |
+| [MinSpeed](arkts-basicservices-agent-minspeed-i.md) | Defines the minimum speed of a task. If the task speed is lower than the preset value for a specified period of time, the task fails. The failure cause is [LOW_SPEED](arkts-basicservices-agent-faults-e.md#faults). |
+| [Timeout](arkts-basicservices-agent-timeout-i.md) | Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see [WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md#waitingreason) . |
 | [Config](arkts-basicservices-agent-config-i.md) | Provides the configuration information of an upload or download task. |
 | [Progress](arkts-basicservices-agent-progress-i.md) | Describes the data structure of the task progress. |
 | [Filter](arkts-basicservices-agent-filter-i.md) | Defines the filter criteria. |
@@ -83,7 +79,7 @@ import { request } from 'request';
 | [Action](arkts-basicservices-agent-action-e.md) | Defines action options. |
 | [Mode](arkts-basicservices-agent-mode-e.md) | Defines mode options. After foreground tasks of an application are switched to the background for a period of time, background tasks are not affected but foreground tasks will fail or pause. |
 | [Network](arkts-basicservices-agent-network-e.md) | Defines network options. If the network does not meet the preset conditions, the tasks that have not been executed will await for execution, and the tasks that are being executed will fail or pause. |
-| [BroadcastEvent](arkts-basicservices-agent-broadcastevent-e.md) | Defines a custom system event. You can use a common event API to obtain the event. The upload and download SA has the **ohos.permission.SEND_TASK_COMPLETE_EVENT** permission. You can configure the level-2 configuration file to which the metadata of an event points to intercept other event senders. Use the **CommonEventData** type to transmit data related to common events. The members in **CommonEventData** are different from those described in [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md#CommonEventData). Specifically, **CommonEventData.code** indicates the task status, which is **0x40 COMPLETE** or **0x41 FAILED**, and **CommonEventData.data** indicates the task ID. &lt;!--Del--&gt; For details about how to obtain the event configuration and configure the level-2 configuration file, see [Subscribing to Common Events in Static Mode (for System Applications Only)](../../../basic-services/common-event/common-event-static-subscription-sys.md) .&lt;!--DelEnd--&gt; |
+| [BroadcastEvent](arkts-basicservices-agent-broadcastevent-e.md) | Defines a custom system event. You can use a common event API to obtain the event. The upload and download SA has the **ohos.permission.SEND_TASK_COMPLETE_EVENT** permission. You can configure the level-2 configuration file to which the metadata of an event points to intercept other event senders. Use the **CommonEventData** type to transmit data related to common events. The members in **CommonEventData** are different from those described in [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md#commoneventdata). Specifically, **CommonEventData.code** indicates the task status, which is **0x40 COMPLETE** or **0x41 FAILED**, and **CommonEventData.data** indicates the task ID. &lt;!--Del--&gt; For details about how to obtain the event configuration and configure the level-2 configuration file, see [Subscribing to Common Events in Static Mode (for System Applications Only)](../../../basic-services/common-event/common-event-static-subscription-sys.md) .&lt;!--DelEnd--&gt; |
 | [State](arkts-basicservices-agent-state-e.md) | Defines the current task status. |
 | [Faults](arkts-basicservices-agent-faults-e.md) | Defines the cause of a task failure. > **NOTE：**> > In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain > name is supported, and the connection time for a single IP address is not controllable. If the first IP address > returned by the DNS is blocked, a handshake timeout may occur, leading to a **TIMEOUT** error. |
 | [WaitingReason](arkts-basicservices-agent-waitingreason-e.md) | Enumerates the reasons why a task is waiting. |
@@ -98,6 +94,6 @@ import { request } from 'request';
 
 | Name | Description |
 | --- | --- |
-| [VISIBILITY_COMPLETION](arkts-basicservices-agent-con.md#VISIBILITY_COMPLETION) | Indicates to show completion notification. |
-| [VISIBILITY_PROGRESS](arkts-basicservices-agent-con.md#VISIBILITY_PROGRESS) | Indicates to show progress notification. |
+| [VISIBILITY_COMPLETION](arkts-basicservices-agent-con.md#visibilitycompletion) | Indicates to show completion notification. |
+| [VISIBILITY_PROGRESS](arkts-basicservices-agent-con.md#visibilityprogress) | Indicates to show progress notification. |
 

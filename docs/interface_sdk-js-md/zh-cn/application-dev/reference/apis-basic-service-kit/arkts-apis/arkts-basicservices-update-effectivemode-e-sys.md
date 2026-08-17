@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export enum EffectiveMode--><!--Device-update-export enum EffectiveMode-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -23,10 +19,6 @@ COLD = 1
 冷升级，需重启设备生效，适用于需要完整系统重置或固件升级的场景。详见[术语](../../../basic-services/update/update-kit-term.md)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EffectiveMode-COLD = 1--><!--Device-EffectiveMode-COLD = 1-End-->
 
@@ -44,10 +36,6 @@ LIVE = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EffectiveMode-LIVE = 2--><!--Device-EffectiveMode-LIVE = 2-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -63,10 +51,6 @@ LIVE_AND_COLD = 3
 融合升级，结合两者特性，适用于同时包含热升级和冷升级组件的场景。详见[术语](../../../basic-services/update/update-kit-term.md)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EffectiveMode-LIVE_AND_COLD = 3--><!--Device-EffectiveMode-LIVE_AND_COLD = 3-End-->
 

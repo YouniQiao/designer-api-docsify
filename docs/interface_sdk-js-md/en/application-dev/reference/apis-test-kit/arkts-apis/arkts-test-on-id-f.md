@@ -44,10 +44,6 @@ Specifies the id of the target Component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ON-export function id(id: string): On--><!--Device-ON-export function id(id: string): On-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -75,10 +71,6 @@ Specifies the id of the target Component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ON-export function id(id: string, pattern: MatchPattern): On--><!--Device-ON-export function id(id: string, pattern: MatchPattern): On-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -88,7 +80,7 @@ Specifies the id of the target Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | the id value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) of the text value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern) of the text value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 

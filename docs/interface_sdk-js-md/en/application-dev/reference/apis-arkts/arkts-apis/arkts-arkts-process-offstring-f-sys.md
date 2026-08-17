@@ -16,10 +16,6 @@ Remove registered event
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-process-function off(type: string): boolean--><!--Device-process-function off(type: string): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang

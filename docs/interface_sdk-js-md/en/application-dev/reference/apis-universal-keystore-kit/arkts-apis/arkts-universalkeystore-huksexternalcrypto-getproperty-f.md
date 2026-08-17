@@ -16,10 +16,6 @@ Obtains a property value. This API uses a promise to return the result. The **pr
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-huksExternalCrypto-function getProperty(resourceId: string, propertyId: string, params?: Array<HuksExternalCryptoParam>): Promise<Array<HuksExternalCryptoParam>>--><!--Device-huksExternalCrypto-function getProperty(resourceId: string, propertyId: string, params?: Array<HuksExternalCryptoParam>): Promise<Array<HuksExternalCryptoParam>>-End-->
@@ -30,9 +26,9 @@ Obtains a property value. This API uses a promise to return the result. The **pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openAuthorizeDialog) . The result contains **resourceId**. |
+| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) . The result contains **resourceId**. |
 | propertyId | string | Yes | Property name for the search operation, which is the SKF API name defined in GMT 001 6-2023. You need to make adaptation based on the API name. |
-| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | No | Parameters to be passed to [Extension Ability](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#CryptoExtensionAbility). If a non-system application passes [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType), the parameter is invalid. |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | No | Parameters to be passed to [Extension Ability](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#cryptoextensionability). If a non-system application passes [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype), the parameter is invalid. |
 
 **Return value:**
 
@@ -56,7 +52,7 @@ Obtains a property value. This API uses a promise to return the result. The **pr
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | If the cached resource ID is not found. |
 | [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | If the provider or UKey is busy. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';

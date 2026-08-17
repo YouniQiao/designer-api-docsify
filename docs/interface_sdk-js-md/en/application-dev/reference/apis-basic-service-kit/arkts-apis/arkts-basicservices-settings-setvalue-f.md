@@ -16,10 +16,6 @@ Set settingsdata value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SETTINGS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -37,7 +33,7 @@ Set settingsdata value.
 | value | string | Yes | Indicates the value of the character string. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of setValue result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
@@ -62,10 +58,6 @@ Set settingsdata value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SETTINGS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -88,7 +80,7 @@ Set settingsdata value.
 | --- | --- |
 | Promise&lt;boolean&gt; | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
@@ -112,10 +104,6 @@ function setValue(context: Context, name: string, value: string, domainName: str
 Set settingsdata value. [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS or ohos.permission.MANAGE_SETTINGS
 
@@ -146,7 +134,7 @@ Set settingsdata value. [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permissi
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

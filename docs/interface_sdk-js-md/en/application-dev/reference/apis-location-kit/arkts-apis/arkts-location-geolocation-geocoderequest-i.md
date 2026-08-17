@@ -4,11 +4,9 @@ Configuring parameters in geocode requests
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md#GeoCodeRequest)
+**Substitutes:** [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md#geocoderequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,8 +30,6 @@ description: string
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [description](arkts-location-geolocationmanager-geocoderequest-i.md#description)
@@ -51,8 +47,6 @@ locale?: string
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -72,11 +66,9 @@ maxItems?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [maxItems](arkts-location-geolocationmanager-geocoderequest-i.md#maxItems)
+**Substitutes:** [maxItems](arkts-location-geolocationmanager-geocoderequest-i.md#maxitems)
 
 <!--Device-GeoCodeRequest-maxItems?: number--><!--Device-GeoCodeRequest-maxItems?: number-End-->
 
@@ -92,11 +84,9 @@ maxLatitude?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [maxLatitude](arkts-location-geolocationmanager-geocoderequest-i.md#maxLatitude)
+**Substitutes:** [maxLatitude](arkts-location-geolocationmanager-geocoderequest-i.md#maxlatitude)
 
 <!--Device-GeoCodeRequest-maxLatitude?: number--><!--Device-GeoCodeRequest-maxLatitude?: number-End-->
 
@@ -112,11 +102,9 @@ maxLongitude?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [maxLongitude](arkts-location-geolocationmanager-geocoderequest-i.md#maxLongitude)
+**Substitutes:** [maxLongitude](arkts-location-geolocationmanager-geocoderequest-i.md#maxlongitude)
 
 <!--Device-GeoCodeRequest-maxLongitude?: number--><!--Device-GeoCodeRequest-maxLongitude?: number-End-->
 
@@ -132,11 +120,9 @@ minLatitude?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [minLatitude](arkts-location-geolocationmanager-geocoderequest-i.md#minLatitude)
+**Substitutes:** [minLatitude](arkts-location-geolocationmanager-geocoderequest-i.md#minlatitude)
 
 <!--Device-GeoCodeRequest-minLatitude?: number--><!--Device-GeoCodeRequest-minLatitude?: number-End-->
 
@@ -152,11 +138,9 @@ minLongitude?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [minLongitude](arkts-location-geolocationmanager-geocoderequest-i.md#minLongitude)
+**Substitutes:** [minLongitude](arkts-location-geolocationmanager-geocoderequest-i.md#minlongitude)
 
 <!--Device-GeoCodeRequest-minLongitude?: number--><!--Device-GeoCodeRequest-minLongitude?: number-End-->
 

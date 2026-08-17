@@ -16,11 +16,9 @@ Sets the Bluetooth scan mode for a device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setBluetoothScanMode](arkts-connectivity-bluetoothmanager-setbluetoothscanmode-f.md#setBluetoothScanMode)
+**Substitutes:** [setBluetoothScanMode](arkts-connectivity-bluetoothmanager-setbluetoothscanmode-f.md#setbluetoothscanmode)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -32,7 +30,7 @@ Sets the Bluetooth scan mode for a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | ScanMode | Yes | Indicates the Bluetooth scan mode to set, [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md#ScanMode). |
+| mode | ScanMode | Yes | Indicates the Bluetooth scan mode to set, [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md#scanmode). |
 | duration | number | Yes | Indicates the duration in seconds, in which the host is discoverable. |
 
 **Return value:**
@@ -41,7 +39,7 @@ Sets the Bluetooth scan mode for a device.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The device can be discovered and connected only when the discoverable and connectable mode is used.

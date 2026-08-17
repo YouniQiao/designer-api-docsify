@@ -16,8 +16,6 @@ Removes a preferred language from the specified position on the preferred langua
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
@@ -38,7 +36,7 @@ Removes a preferred language from the specified position on the preferred langua
 | --- | --- |
 | boolean | Whether the operation is successful. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

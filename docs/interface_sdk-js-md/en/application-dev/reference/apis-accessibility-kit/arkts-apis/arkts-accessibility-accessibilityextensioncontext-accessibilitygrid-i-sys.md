@@ -1,12 +1,8 @@
 # AccessibilityGrid (System API)
 
-Accessibility grid information. For details, see the property currentItem in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement).
+Accessibility grid information. For details, see the property currentItem in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#accessibilityelement).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface AccessibilityGrid--><!--Device-unnamed-interface AccessibilityGrid-End-->
 
@@ -26,10 +22,6 @@ Grid column index.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityGrid-columnIndex: int--><!--Device-AccessibilityGrid-columnIndex: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -47,10 +39,6 @@ Grid row index.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AccessibilityGrid-rowIndex: int--><!--Device-AccessibilityGrid-rowIndex: int-End-->
 

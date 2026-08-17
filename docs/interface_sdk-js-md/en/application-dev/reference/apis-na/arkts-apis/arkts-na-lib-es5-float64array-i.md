@@ -4,10 +4,6 @@ A typed array of 64-bit float values. The contents are initialized to 0. If the 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Float64Array--><!--Device-unnamed-interface Float64Array-End-->
 
 ## copyWithin
@@ -19,10 +15,6 @@ copyWithin(target: number, start: number, end?: number): this
 Returns the this object after copying a section of the array identified by start and end to the same array starting at position target
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-copyWithin(target: number, start: number, end?: number): this--><!--Device-Float64Array-copyWithin(target: number, start: number, end?: number): this-End-->
 
@@ -50,10 +42,6 @@ Determines whether all the members of an array satisfy the specified test.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-every(predicate: (value: number, index: number, array: Float64Array) => unknown, thisArg?: any): boolean--><!--Device-Float64Array-every(predicate: (value: number, index: number, array: Float64Array) => unknown, thisArg?: any): boolean-End-->
 
 **Parameters:**
@@ -78,10 +66,6 @@ fill(value: number, start?: number, end?: number): this
 Changes all array elements from `start` to `end` index to a static `value` and returns the modified array
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-fill(value: number, start?: number, end?: number): this--><!--Device-Float64Array-fill(value: number, start?: number, end?: number): this-End-->
 
@@ -109,10 +93,6 @@ Returns the elements of an array that meet the condition specified in a callback
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-filter(predicate: (value: number, index: number, array: Float64Array) => any, thisArg?: any): Float64Array--><!--Device-Float64Array-filter(predicate: (value: number, index: number, array: Float64Array) => any, thisArg?: any): Float64Array-End-->
 
 **Parameters:**
@@ -137,10 +117,6 @@ find(predicate: (value: number, index: number, obj: Float64Array) => boolean, th
 Returns the value of the first element in the array where predicate is true, and undefined otherwise.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-find(predicate: (value: number, index: number, obj: Float64Array) => boolean, thisArg?: any): number | undefined--><!--Device-Float64Array-find(predicate: (value: number, index: number, obj: Float64Array) => boolean, thisArg?: any): number | undefined-End-->
 
@@ -167,10 +143,6 @@ Returns the index of the first element in the array where predicate is true, and
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-findIndex(predicate: (value: number, index: number, obj: Float64Array) => boolean, thisArg?: any): number--><!--Device-Float64Array-findIndex(predicate: (value: number, index: number, obj: Float64Array) => boolean, thisArg?: any): number-End-->
 
 **Parameters:**
@@ -196,10 +168,6 @@ Performs the specified action for each element in an array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-forEach(callbackfn: (value: number, index: number, array: Float64Array) => void, thisArg?: any): void--><!--Device-Float64Array-forEach(callbackfn: (value: number, index: number, array: Float64Array) => void, thisArg?: any): void-End-->
 
 **Parameters:**
@@ -218,10 +186,6 @@ indexOf(searchElement: number, fromIndex?: number): number
 Returns the index of the first occurrence of a value in an array.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-indexOf(searchElement: number, fromIndex?: number): number--><!--Device-Float64Array-indexOf(searchElement: number, fromIndex?: number): number-End-->
 
@@ -248,10 +212,6 @@ Adds all the elements of an array separated by the specified separator string.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-join(separator?: string): string--><!--Device-Float64Array-join(separator?: string): string-End-->
 
 **Parameters:**
@@ -275,10 +235,6 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 Returns the index of the last occurrence of a value in an array.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-lastIndexOf(searchElement: number, fromIndex?: number): number--><!--Device-Float64Array-lastIndexOf(searchElement: number, fromIndex?: number): number-End-->
 
@@ -305,10 +261,6 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-map(callbackfn: (value: number, index: number, array: Float64Array) => number, thisArg?: any): Float64Array--><!--Device-Float64Array-map(callbackfn: (value: number, index: number, array: Float64Array) => number, thisArg?: any): Float64Array-End-->
 
 **Parameters:**
@@ -334,10 +286,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Float64Array) => number): number--><!--Device-Float64Array-reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Float64Array) => number): number-End-->
 
 **Parameters:**
@@ -359,10 +307,6 @@ reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: n
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Float64Array) => number, initialValue: number): number--><!--Device-Float64Array-reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Float64Array) => number, initialValue: number): number-End-->
 
@@ -389,10 +333,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Float64Array) => U, initialValue: U): U--><!--Device-Float64Array-reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Float64Array) => U, initialValue: U): U-End-->
 
 **Parameters:**
@@ -418,10 +358,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Float64Array) => number): number--><!--Device-Float64Array-reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Float64Array) => number): number-End-->
 
 **Parameters:**
@@ -443,10 +379,6 @@ reduceRight(callbackfn: (previousValue: number, currentValue: number, currentInd
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Float64Array) => number, initialValue: number): number--><!--Device-Float64Array-reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Float64Array) => number, initialValue: number): number-End-->
 
@@ -473,10 +405,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Float64Array) => U, initialValue: U): U--><!--Device-Float64Array-reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Float64Array) => U, initialValue: U): U-End-->
 
 **Parameters:**
@@ -502,10 +430,6 @@ Reverses the elements in an Array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-reverse(): Float64Array--><!--Device-Float64Array-reverse(): Float64Array-End-->
 
 **Return value:**
@@ -523,10 +447,6 @@ set(array: ArrayLike<number>, offset?: number): void
 Sets a value or an array of values.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-set(array: ArrayLike<number>, offset?: number): void--><!--Device-Float64Array-set(array: ArrayLike<number>, offset?: number): void-End-->
 
@@ -546,10 +466,6 @@ slice(start?: number, end?: number): Float64Array
 Returns a section of an array.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-slice(start?: number, end?: number): Float64Array--><!--Device-Float64Array-slice(start?: number, end?: number): Float64Array-End-->
 
@@ -576,10 +492,6 @@ Determines whether the specified callback function returns true for any element 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-some(predicate: (value: number, index: number, array: Float64Array) => unknown, thisArg?: any): boolean--><!--Device-Float64Array-some(predicate: (value: number, index: number, array: Float64Array) => unknown, thisArg?: any): boolean-End-->
 
 **Parameters:**
@@ -605,10 +517,6 @@ Sorts an array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-sort(compareFn?: (a: number, b: number) => number): this--><!--Device-Float64Array-sort(compareFn?: (a: number, b: number) => number): this-End-->
 
 **Parameters:**
@@ -633,10 +541,6 @@ at begin, inclusive, up to end, exclusive.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-subarray(begin?: number, end?: number): Float64Array--><!--Device-Float64Array-subarray(begin?: number, end?: number): Float64Array-End-->
 
 **Parameters:**
@@ -660,10 +564,6 @@ toString(): string
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-toString(): string--><!--Device-Float64Array-toString(): string-End-->
 
 **Return value:**
@@ -681,10 +581,6 @@ valueOf(): Float64Array
 Returns the primitive value of the specified object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-valueOf(): Float64Array--><!--Device-Float64Array-valueOf(): Float64Array-End-->
 
@@ -706,10 +602,6 @@ The size in bytes of each element in the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-readonly BYTES_PER_ELEMENT: number--><!--Device-Float64Array-readonly BYTES_PER_ELEMENT: number-End-->
 
 ## buffer
@@ -723,10 +615,6 @@ The ArrayBuffer instance referenced by the array.
 **Type:** [ArrayBufferLike](arkts-na-arraybufferlike-t.md)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-readonly buffer: ArrayBufferLike--><!--Device-Float64Array-readonly buffer: ArrayBufferLike-End-->
 
@@ -742,10 +630,6 @@ The length in bytes of the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-readonly byteLength: number--><!--Device-Float64Array-readonly byteLength: number-End-->
 
 ## byteOffset
@@ -760,10 +644,6 @@ The offset in bytes of the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Float64Array-readonly byteOffset: number--><!--Device-Float64Array-readonly byteOffset: number-End-->
 
 ## length
@@ -777,10 +657,6 @@ The length of the array.
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Float64Array-readonly length: number--><!--Device-Float64Array-readonly length: number-End-->
 

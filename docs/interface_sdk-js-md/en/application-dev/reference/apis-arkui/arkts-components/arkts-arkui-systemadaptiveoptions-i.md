@@ -4,10 +4,6 @@ Provides parameters for system adaptive adjustments. By default, the system perf
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface SystemAdaptiveOptions--><!--Device-unnamed-declare interface SystemAdaptiveOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Whether to disable system adaptive adjustment. Whenever possible, do not include
 **Type:** boolean
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

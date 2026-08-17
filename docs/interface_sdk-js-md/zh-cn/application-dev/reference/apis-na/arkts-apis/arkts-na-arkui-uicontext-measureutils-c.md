@@ -4,9 +4,7 @@ class MeasureUtils
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare class MeasureUtils--><!--Device-unnamed-export declare class MeasureUtils-End-->
 
@@ -22,9 +20,7 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,9 +51,7 @@ measureText(options: MeasureOptions): double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,7 +63,7 @@ measureText(options: MeasureOptions): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [MeasureOptions](../../apis-arkui/arkts-apis/arkts-arkui-measure-measureoptions-i.md) | 是 | Options. |
+| options | [MeasureOptions](arkts-na-measure-measureoptions-i.md) | 是 | Options. |
 
 **返回值：**
 
@@ -87,9 +81,7 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,7 +93,7 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [MeasureOptions](../../apis-arkui/arkts-apis/arkts-arkui-measure-measureoptions-i.md) | 是 | Options of measure area occupied by text. |
+| options | [MeasureOptions](arkts-na-measure-measureoptions-i.md) | 是 | Options of measure area occupied by text. |
 
 **返回值：**
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-scan-interface ScannerDevice--><!--Device-scan-interface ScannerDevice-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -23,10 +19,6 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ScannerDevice-deviceName: string--><!--Device-ScannerDevice-deviceName: string-End-->
 
@@ -44,10 +36,6 @@ discoveryMode: ScannerDiscoveryMode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ScannerDevice-discoveryMode: ScannerDiscoveryMode--><!--Device-ScannerDevice-discoveryMode: ScannerDiscoveryMode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -63,10 +51,6 @@ manufacturer: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ScannerDevice-manufacturer: string--><!--Device-ScannerDevice-manufacturer: string-End-->
 
@@ -84,10 +68,6 @@ model: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ScannerDevice-model: string--><!--Device-ScannerDevice-model: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -104,10 +84,6 @@ scannerId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ScannerDevice-scannerId: string--><!--Device-ScannerDevice-scannerId: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -123,10 +99,6 @@ uniqueId: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ScannerDevice-uniqueId: string--><!--Device-ScannerDevice-uniqueId: string-End-->
 

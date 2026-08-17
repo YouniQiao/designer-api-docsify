@@ -4,10 +4,6 @@ Defines the connection of the TLSSocket client and server.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-socket-export interface TLSSocketConnection--><!--Device-socket-export interface TLSSocketConnection-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -27,10 +23,6 @@ close(callback: AsyncCallback<void>): void
 Closes a TLSSocket client connection.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-close(callback: AsyncCallback<void>): void--><!--Device-TLSSocketConnection-close(callback: AsyncCallback<void>): void-End-->
 
@@ -52,7 +44,7 @@ Closes a TLSSocket client connection.
 | [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -105,10 +97,6 @@ Closes a TLSSocket client connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-close(): Promise<void>--><!--Device-TLSSocketConnection-close(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -128,7 +116,7 @@ Closes a TLSSocket client connection.
 | [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -178,10 +166,6 @@ Returns a list containing the negotiated cipher suite information. For example:{
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-getCipherSuite(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocketConnection-getCipherSuite(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -202,7 +186,7 @@ Returns a list containing the negotiated cipher suite information. For example:{
 | [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -254,10 +238,6 @@ Returns a list containing the negotiated cipher suite information. For example:{
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-getCipherSuite(): Promise<Array<string>>--><!--Device-TLSSocketConnection-getCipherSuite(): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -277,7 +257,7 @@ Returns a list containing the negotiated cipher suite information. For example:{
 | [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -327,10 +307,6 @@ Obtains the local address of a TLSSocketServer connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-getLocalAddress(): Promise<NetAddress>--><!--Device-TLSSocketConnection-getLocalAddress(): Promise<NetAddress>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -349,7 +325,7 @@ Obtains the local address of a TLSSocketServer connection.
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -400,10 +376,6 @@ Obtains the peer address of a TLSSocketServer connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TLSSocketConnection-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -422,7 +394,7 @@ Obtains the peer address of a TLSSocketServer connection.
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -474,10 +446,6 @@ Obtains the peer address of a TLSSocketServer connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-getRemoteAddress(): Promise<NetAddress>--><!--Device-TLSSocketConnection-getRemoteAddress(): Promise<NetAddress>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -495,7 +463,7 @@ Obtains the peer address of a TLSSocketServer connection.
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -545,10 +513,6 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocketConnection-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -577,10 +541,6 @@ getRemoteCertificate(): Promise<X509CertRawData>
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-getRemoteCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocketConnection-getRemoteCertificate(): Promise<X509CertRawData>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -608,10 +568,6 @@ getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocketConnection-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -630,7 +586,7 @@ getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -682,10 +638,6 @@ getSignatureAlgorithms(): Promise<Array<string>>
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-getSignatureAlgorithms(): Promise<Array<string>>--><!--Device-TLSSocketConnection-getSignatureAlgorithms(): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -703,7 +655,7 @@ getSignatureAlgorithms(): Promise<Array<string>>
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -753,10 +705,6 @@ Obtains the file descriptor of the TLSSocketConnection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TLSSocketConnection-getSocketFd(): Promise<int>--><!--Device-TLSSocketConnection-getSocketFd(): Promise<int>-End-->
@@ -775,7 +723,7 @@ Obtains the file descriptor of the TLSSocketConnection.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -825,10 +773,6 @@ Cancels listening for close events of the TLSSocketConnection.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-off(type: 'close', callback?: Callback<void>): void--><!--Device-TLSSocketConnection-off(type: 'close', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -846,7 +790,7 @@ Cancels listening for close events of the TLSSocketConnection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -899,10 +843,6 @@ Cancels listening for error events of the TLSSocketConnection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocketConnection-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -920,7 +860,7 @@ Cancels listening for error events of the TLSSocketConnection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -973,10 +913,6 @@ Cancels listening for message receiving events of the TLSSocketConnection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TLSSocketConnection-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -994,7 +930,7 @@ Cancels listening for message receiving events of the TLSSocketConnection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1055,10 +991,6 @@ Listens for close events of the TLSSocketConnection.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-on(type: 'close', callback: Callback<void>): void--><!--Device-TLSSocketConnection-on(type: 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1076,7 +1008,7 @@ Listens for close events of the TLSSocketConnection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1124,10 +1056,6 @@ Listens for error events of the TLSSocketConnection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocketConnection-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1145,7 +1073,7 @@ Listens for error events of the TLSSocketConnection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1194,10 +1122,6 @@ Listens for message receiving events of the TLSSocketConnection.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TLSSocketConnection-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1215,7 +1139,7 @@ Listens for message receiving events of the TLSSocketConnection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1272,10 +1196,6 @@ Sends data over a TLSSocketServer connection to client.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void--><!--Device-TLSSocketConnection-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1298,7 +1218,7 @@ Sends data over a TLSSocketServer connection to client.
 | [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1351,10 +1271,6 @@ Sends data over a TLSSocketServer connection to client.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-TLSSocketConnection-send(data: string | ArrayBuffer): Promise<void>--><!--Device-TLSSocketConnection-send(data: string | ArrayBuffer): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1382,7 +1298,7 @@ Sends data over a TLSSocketServer connection to client.
 | [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1434,10 +1350,6 @@ The id of a client connects to the TLSSocketServer.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-clientId: int--><!--Device-TLSSocketConnection-clientId: int-End-->
 

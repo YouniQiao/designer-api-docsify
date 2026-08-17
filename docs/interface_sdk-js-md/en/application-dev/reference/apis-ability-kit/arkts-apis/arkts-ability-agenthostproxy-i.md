@@ -4,10 +4,6 @@ The proxy object of the connected party for the AgentExtensionAbility, used to s
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AgentHostProxy--><!--Device-unnamed-export interface AgentHostProxy-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -21,10 +17,6 @@ authorize(handshakeData: string): void
 Send authentication to an agent service host.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,10 +47,6 @@ sendData(data: string): void
 Send data to an agent service host.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

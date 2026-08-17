@@ -4,10 +4,6 @@ Defines the device icon information filter options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions--><!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -32,10 +28,6 @@ Image type. This parameter has a fixed value of **ID**, indicating the product's
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceIconInfoFilterOptions-imageType: string--><!--Device-DeviceIconInfoFilterOptions-imageType: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -53,10 +45,6 @@ Internal product model. This parameter is left unspecified by default.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceIconInfoFilterOptions-internalModel?: string--><!--Device-DeviceIconInfoFilterOptions-internalModel?: string-End-->
 
@@ -76,10 +64,6 @@ Product ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceIconInfoFilterOptions-productId: string--><!--Device-DeviceIconInfoFilterOptions-productId: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -98,10 +82,6 @@ Image specification name. Value: - **lg**: large image (size: 1016064 pixels) - 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceIconInfoFilterOptions-specName: string--><!--Device-DeviceIconInfoFilterOptions-specName: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -119,10 +99,6 @@ Sub-product ID. This parameter is left unspecified by default.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceIconInfoFilterOptions-subProductId?: string--><!--Device-DeviceIconInfoFilterOptions-subProductId?: string-End-->
 

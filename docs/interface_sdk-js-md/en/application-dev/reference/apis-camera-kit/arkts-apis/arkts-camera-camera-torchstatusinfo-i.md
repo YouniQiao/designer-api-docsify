@@ -4,10 +4,6 @@ Describes the flashlight status information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface TorchStatusInfo--><!--Device-camera-interface TorchStatusInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -30,10 +26,6 @@ Whether the flashlight is activated. **true** if activated, **false** otherwise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-TorchStatusInfo-readonly isTorchActive: boolean--><!--Device-TorchStatusInfo-readonly isTorchActive: boolean-End-->
@@ -52,10 +44,6 @@ Whether the flashlight is available. **true** if available, **false** otherwise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-TorchStatusInfo-readonly isTorchAvailable: boolean--><!--Device-TorchStatusInfo-readonly isTorchAvailable: boolean-End-->
@@ -73,10 +61,6 @@ Flashlight brightness level. The value range is [0, 1]. A larger value indicates
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

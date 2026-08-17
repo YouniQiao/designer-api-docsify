@@ -1,12 +1,8 @@
-# MediaKeySystem
+# MediaKeySystem(Defines the DRM capability.)
 
-MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem) to create a MediaKeySystem instance.
+MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem) to create a MediaKeySystem instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-drm-interface MediaKeySystem--><!--Device-drm-interface MediaKeySystem-End-->
 
@@ -27,10 +23,6 @@ clearOfflineMediaKeys(mediaKeyId: Uint8Array): void
 Clears offline media keys with the specified IDs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -61,10 +53,6 @@ createMediaKeySession(level: ContentProtectionLevel): MediaKeySession
 Creates a MediaKeySession instance with the specified content protection level.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -103,10 +91,6 @@ Create a MediaKeySession instance with level.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined--><!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
@@ -142,10 +126,6 @@ Creates a MediaKeySession instance with the default content protection level.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession--><!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession-End-->
@@ -176,10 +156,6 @@ Create a MediaKeySession instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession | undefined--><!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
@@ -208,10 +184,6 @@ Destroys this MediaKeySystem instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-destroy(): void--><!--Device-MediaKeySystem-destroy(): void-End-->
@@ -234,10 +206,6 @@ generateKeySystemRequest(): Promise<ProvisionRequest>
 Generates a request to obtain a device certificate for the MediaKeySystem. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -268,10 +236,6 @@ Obtains the status of the device certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-getCertificateStatus(): CertificateStatus--><!--Device-MediaKeySystem-getCertificateStatus(): CertificateStatus-End-->
@@ -301,10 +265,6 @@ Obtains the value of a configuration item in the form of a byte array.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-getConfigurationByteArray(configName: string): Uint8Array--><!--Device-MediaKeySystem-getConfigurationByteArray(configName: string): Uint8Array-End-->
@@ -315,7 +275,7 @@ Obtains the value of a configuration item in the form of a byte array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#PreDefinedConfigName). |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname). |
 
 **Return value:**
 
@@ -341,10 +301,6 @@ Obtains the value of a configuration item in the form of a string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-getConfigurationString(configName: string): string--><!--Device-MediaKeySystem-getConfigurationString(configName: string): string-End-->
@@ -355,7 +311,7 @@ Obtains the value of a configuration item in the form of a string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#PreDefinedConfigName). |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname). |
 
 **Return value:**
 
@@ -380,10 +336,6 @@ getMaxContentProtectionLevel(): ContentProtectionLevel
 Obtains the maximum content protection level supported by the current DRM solution.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -414,10 +366,6 @@ Obtains the IDs of offline media keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-getOfflineMediaKeyIds(): Uint8Array[]--><!--Device-MediaKeySystem-getOfflineMediaKeyIds(): Uint8Array[]-End-->
@@ -446,10 +394,6 @@ getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus
 Obtains the status of offline media keys with the specified IDs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -487,10 +431,6 @@ Obtains the DRM metrics, including the number of active sessions, plugin version
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-getStatistics(): StatisticKeyValue[]--><!--Device-MediaKeySystem-getStatistics(): StatisticKeyValue[]-End-->
@@ -520,10 +460,6 @@ Unregister keySystemRequired events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
@@ -550,10 +486,6 @@ Unsubscribes from events indicating that the application requests a device certi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
@@ -564,7 +496,7 @@ Unsubscribes from events indicating that the application requests a device certi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem). |
+| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem). |
 | callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
@@ -583,10 +515,6 @@ onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void
 Register keySystemRequired events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void-End-->
 
@@ -614,10 +542,6 @@ Subscribes to events indicating that the application requests a device certifica
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void-End-->
@@ -628,7 +552,7 @@ Subscribes to events indicating that the application requests a device certifica
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem). It is triggered when a device certificate is required. |
+| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem). It is triggered when a device certificate is required. |
 | callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. The occurrence of this event signals the need to request a device certificate. |
 
 **Error codes:**
@@ -647,10 +571,6 @@ processKeySystemResponse(response: Uint8Array): Promise<void>
 Processes the response to a previously generated device certificate request. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -688,10 +608,6 @@ Sets a configuration item in the form of a byte array.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-setConfigurationByteArray(configName: string, value: Uint8Array): void--><!--Device-MediaKeySystem-setConfigurationByteArray(configName: string, value: Uint8Array): void-End-->
@@ -702,7 +618,7 @@ Sets a configuration item in the form of a byte array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#PreDefinedConfigName). |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname). |
 | value | Uint8Array | Yes | Value of the configuration item in the form of an array. The specific value is determined by the DRM solution on the device. |
 
 **Error codes:**
@@ -723,10 +639,6 @@ Sets a configuration item in the form of a string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-MediaKeySystem-setConfigurationString(configName: string, value: string): void--><!--Device-MediaKeySystem-setConfigurationString(configName: string, value: string): void-End-->
@@ -737,7 +649,7 @@ Sets a configuration item in the form of a string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#PreDefinedConfigName). |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname). |
 | value | string | Yes | Value of the configuration item. |
 
 **Error codes:**

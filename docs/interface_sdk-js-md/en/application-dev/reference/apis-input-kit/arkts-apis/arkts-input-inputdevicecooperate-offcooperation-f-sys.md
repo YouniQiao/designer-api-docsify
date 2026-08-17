@@ -16,11 +16,9 @@ Deregisters the listener for screen hopping status changes. This API uses an asy
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-offcooperate-f-sys.md#off_cooperate)
+**Substitutes:** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-offcooperate-f-sys.md#offcooperate)
 
 <!--Device-inputDeviceCooperate-function off(type: 'cooperation', callback?: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function off(type: 'cooperation', callback?: AsyncCallback<void>): void-End-->
 
@@ -42,7 +40,7 @@ Deregisters the listener for screen hopping status changes. This API uses an asy
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputDeviceCooperate } from '@kit.InputKit';

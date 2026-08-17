@@ -16,10 +16,6 @@ Subscribe P2P peer device change events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function onP2pPeerDeviceChange(callback: Callback<WifiP2pDevice[]>): void--><!--Device-wifiManager-function onP2pPeerDeviceChange(callback: Callback<WifiP2pDevice[]>): void-End-->

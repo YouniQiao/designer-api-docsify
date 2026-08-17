@@ -10,8 +10,6 @@ Converts a number in units of px to a number in units of vp. By default, the vir
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
 **废弃版本：** 18
 
 **替代接口：** px2vp

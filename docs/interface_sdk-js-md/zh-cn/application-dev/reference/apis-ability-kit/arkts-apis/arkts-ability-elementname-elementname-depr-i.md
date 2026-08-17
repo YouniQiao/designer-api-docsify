@@ -1,14 +1,12 @@
 # ElementName
 
-ElementName信息，通过接口 Context.getElementName获取。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[bundleManager-ElementName](#ElementName)替代。
+ElementName信息，通过接口 Context.getElementName获取。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[bundleManager-ElementName](#elementname)替代。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [ElementName](#ElementName)
+**替代接口：** [ElementName](#elementname)
 
 <!--Device-unnamed-export interface ElementName--><!--Device-unnamed-export interface ElementName-End-->
 
@@ -27,8 +25,6 @@ Ability的名称。
 **默认值：** ability class name.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -52,8 +48,6 @@ bundleName: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** bundleName
@@ -75,8 +69,6 @@ deviceId?: string
 **默认值：** -
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -100,8 +92,6 @@ Ability的短名称。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** shortName
@@ -123,8 +113,6 @@ uri?: string
 **默认值：** -
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 

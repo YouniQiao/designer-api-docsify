@@ -4,11 +4,9 @@ Provides APIs for reading and writing data in specific format. During RPC, the s
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md#MessageSequence)
+**Substitutes:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md#messagesequence)
 
 <!--Device-rpc-class MessageParcel--><!--Device-rpc-class MessageParcel-End-->
 
@@ -30,11 +28,9 @@ Closes a file descriptor. This API is a static method.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [closeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#closeFileDescriptor)(fd: int)
+**Substitutes:** [closeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#closefiledescriptor)(fd: int)
 
 <!--Device-MessageParcel-static closeFileDescriptor(fd: number): void--><!--Device-MessageParcel-static closeFileDescriptor(fd: number): void-End-->
 
@@ -46,7 +42,7 @@ Closes a file descriptor. This API is a static method.
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor to close. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -72,11 +68,9 @@ Checks whether this **MessageParcel** object contains file descriptors.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [containFileDescriptors](arkts-ipc-rpc-messagesequence-c.md#containFileDescriptors)()
+**Substitutes:** [containFileDescriptors](arkts-ipc-rpc-messagesequence-c.md#containfiledescriptors)()
 
 <!--Device-MessageParcel-containFileDescriptors(): boolean--><!--Device-MessageParcel-containFileDescriptors(): boolean-End-->
 
@@ -88,7 +82,7 @@ Checks whether this **MessageParcel** object contains file descriptors.
 | --- | --- |
 | boolean | Returns **true** if the **MessageParcel** object contains file descriptors; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -118,8 +112,6 @@ Creates a **MessageParcel** object. This method is a static method.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [create](arkts-ipc-rpc-messagesequence-c.md#create)()
@@ -134,7 +126,7 @@ Creates a **MessageParcel** object. This method is a static method.
 | --- | --- |
 | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | MessageParcel** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -161,11 +153,9 @@ Duplicates a file descriptor. This API is a static method.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [dupFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#dupFileDescriptor)(fd: int)
+**Substitutes:** [dupFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#dupfiledescriptor)(fd: int)
 
 <!--Device-MessageParcel-static dupFileDescriptor(fd: number): number--><!--Device-MessageParcel-static dupFileDescriptor(fd: number): number-End-->
 
@@ -183,7 +173,7 @@ Duplicates a file descriptor. This API is a static method.
 | --- | --- |
 | number | New file descriptor. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -209,11 +199,9 @@ Obtains the capacity of this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getCapacity](arkts-ipc-rpc-messagesequence-c.md#getCapacity)()
+**Substitutes:** [getCapacity](arkts-ipc-rpc-messagesequence-c.md#getcapacity)()
 
 <!--Device-MessageParcel-getCapacity(): number--><!--Device-MessageParcel-getCapacity(): number-End-->
 
@@ -225,7 +213,7 @@ Obtains the capacity of this **MessageParcel** object.
 | --- | --- |
 | number | MessageParcel** capacity obtained, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -250,11 +238,9 @@ Obtains the maximum amount of raw data that can be held by this **MessageParcel*
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRawDataCapacity](arkts-ipc-rpc-messagesequence-c.md#getRawDataCapacity)()
+**Substitutes:** [getRawDataCapacity](arkts-ipc-rpc-messagesequence-c.md#getrawdatacapacity)()
 
 <!--Device-MessageParcel-getRawDataCapacity(): number--><!--Device-MessageParcel-getRawDataCapacity(): number-End-->
 
@@ -266,7 +252,7 @@ Obtains the maximum amount of raw data that can be held by this **MessageParcel*
 | --- | --- |
 | number | Maximum amount of raw data that **MessageParcel** can hold, that is, 128 MB. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -291,11 +277,9 @@ Obtains the read position of this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getReadPosition](arkts-ipc-rpc-messagesequence-c.md#getReadPosition)()
+**Substitutes:** [getReadPosition](arkts-ipc-rpc-messagesequence-c.md#getreadposition)()
 
 <!--Device-MessageParcel-getReadPosition(): number--><!--Device-MessageParcel-getReadPosition(): number-End-->
 
@@ -307,7 +291,7 @@ Obtains the read position of this **MessageParcel** object.
 | --- | --- |
 | number | Current read position of the **MessageParcel** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -332,11 +316,9 @@ Obtains the readable capacity of this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getReadableBytes](arkts-ipc-rpc-messagesequence-c.md#getReadableBytes)()
+**Substitutes:** [getReadableBytes](arkts-ipc-rpc-messagesequence-c.md#getreadablebytes)()
 
 <!--Device-MessageParcel-getReadableBytes(): number--><!--Device-MessageParcel-getReadableBytes(): number-End-->
 
@@ -348,7 +330,7 @@ Obtains the readable capacity of this **MessageParcel** object.
 | --- | --- |
 | number | MessageParcel** object readable capacity, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -374,11 +356,9 @@ Obtains the data size of this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSize](arkts-ipc-rpc-messagesequence-c.md#getSize)()
+**Substitutes:** [getSize](arkts-ipc-rpc-messagesequence-c.md#getsize)()
 
 <!--Device-MessageParcel-getSize(): number--><!--Device-MessageParcel-getSize(): number-End-->
 
@@ -390,7 +370,7 @@ Obtains the data size of this **MessageParcel** object.
 | --- | --- |
 | number | Size of the **MessageParcel** object obtained, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -416,11 +396,9 @@ Obtains the writable capacity of this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getWritableBytes](arkts-ipc-rpc-messagesequence-c.md#getWritableBytes)()
+**Substitutes:** [getWritableBytes](arkts-ipc-rpc-messagesequence-c.md#getwritablebytes)()
 
 <!--Device-MessageParcel-getWritableBytes(): number--><!--Device-MessageParcel-getWritableBytes(): number-End-->
 
@@ -432,7 +410,7 @@ Obtains the writable capacity of this **MessageParcel** object.
 | --- | --- |
 | number | MessageParcel** writable capacity obtained, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -458,11 +436,9 @@ Obtains the write position of this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getWritePosition](arkts-ipc-rpc-messagesequence-c.md#getWritePosition)()
+**Substitutes:** [getWritePosition](arkts-ipc-rpc-messagesequence-c.md#getwriteposition)()
 
 <!--Device-MessageParcel-getWritePosition(): number--><!--Device-MessageParcel-getWritePosition(): number-End-->
 
@@ -474,7 +450,7 @@ Obtains the write position of this **MessageParcel** object.
 | --- | --- |
 | number | Current write position of the **MessageParcel** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -500,11 +476,9 @@ Reads the anonymous shared object from this **MessageParcel** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readAshmem](arkts-ipc-rpc-messagesequence-c.md#readAshmem)()
+**Substitutes:** [readAshmem](arkts-ipc-rpc-messagesequence-c.md#readashmem)()
 
 <!--Device-MessageParcel-readAshmem(): Ashmem--><!--Device-MessageParcel-readAshmem(): Ashmem-End-->
 
@@ -516,7 +490,7 @@ Reads the anonymous shared object from this **MessageParcel** object.
 | --- | --- |
 | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Anonymous share object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -544,11 +518,9 @@ Reads the Boolean value from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readBoolean](arkts-ipc-rpc-messagesequence-c.md#readBoolean)()
+**Substitutes:** [readBoolean](arkts-ipc-rpc-messagesequence-c.md#readboolean)()
 
 <!--Device-MessageParcel-readBoolean(): boolean--><!--Device-MessageParcel-readBoolean(): boolean-End-->
 
@@ -560,7 +532,7 @@ Reads the Boolean value from this **MessageParcel** object.
 | --- | --- |
 | boolean | Boolean value read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -587,11 +559,9 @@ Reads the Boolean array from this **MessageParcel** object and writes it to the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readBooleanArray)(dataIn: boolean[])
+**Substitutes:** [readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readbooleanarray)(dataIn: boolean[])
 
 <!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void-End-->
 
@@ -603,7 +573,7 @@ Reads the Boolean array from this **MessageParcel** object and writes it to the 
 | --- | --- | --- | --- |
 | dataIn | boolean[] | Yes | Boolean array to read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -631,11 +601,9 @@ Reads the Boolean array from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readBooleanArray)()
+**Substitutes:** [readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readbooleanarray)()
 
 <!--Device-MessageParcel-readBooleanArray(): boolean[]--><!--Device-MessageParcel-readBooleanArray(): boolean[]-End-->
 
@@ -647,7 +615,7 @@ Reads the Boolean array from this **MessageParcel** object.
 | --- | --- |
 | boolean[] | Boolean array read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -674,11 +642,9 @@ Reads the byte value from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readByte](arkts-ipc-rpc-messagesequence-c.md#readByte)()
+**Substitutes:** [readByte](arkts-ipc-rpc-messagesequence-c.md#readbyte)()
 
 <!--Device-MessageParcel-readByte(): number--><!--Device-MessageParcel-readByte(): number-End-->
 
@@ -690,7 +656,7 @@ Reads the byte value from this **MessageParcel** object.
 | --- | --- |
 | number | Byte value read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -717,11 +683,9 @@ Reads the byte array from this **MessageParcel** object and writes it to the cre
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readByteArray)(dataIn: int[])
+**Substitutes:** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readbytearray)(dataIn: int[])
 
 <!--Device-MessageParcel-readByteArray(dataIn: number[]): void--><!--Device-MessageParcel-readByteArray(dataIn: number[]): void-End-->
 
@@ -733,7 +697,7 @@ Reads the byte array from this **MessageParcel** object and writes it to the cre
 | --- | --- | --- | --- |
 | dataIn | number[] | Yes | Byte array to read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -761,11 +725,9 @@ Reads the byte array from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readByteArray)()
+**Substitutes:** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readbytearray)()
 
 <!--Device-MessageParcel-readByteArray(): number[]--><!--Device-MessageParcel-readByteArray(): number[]-End-->
 
@@ -777,7 +739,7 @@ Reads the byte array from this **MessageParcel** object.
 | --- | --- |
 | number[] | Byte array read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -805,11 +767,9 @@ Reads the single character value from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readChar](arkts-ipc-rpc-messagesequence-c.md#readChar)()
+**Substitutes:** [readChar](arkts-ipc-rpc-messagesequence-c.md#readchar)()
 
 <!--Device-MessageParcel-readChar(): number--><!--Device-MessageParcel-readChar(): number-End-->
 
@@ -821,7 +781,7 @@ Reads the single character value from this **MessageParcel** object.
 | --- | --- |
 | number | Char** value read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -848,11 +808,9 @@ Reads the character array from this **MessageParcel** object and writes it to th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readCharArray)(dataIn: int[])
+**Substitutes:** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readchararray)(dataIn: int[])
 
 <!--Device-MessageParcel-readCharArray(dataIn: number[]): void--><!--Device-MessageParcel-readCharArray(dataIn: number[]): void-End-->
 
@@ -864,7 +822,7 @@ Reads the character array from this **MessageParcel** object and writes it to th
 | --- | --- | --- | --- |
 | dataIn | number[] | Yes | Character array to read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -892,11 +850,9 @@ Reads the single character array from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readCharArray)()
+**Substitutes:** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readchararray)()
 
 <!--Device-MessageParcel-readCharArray(): number[]--><!--Device-MessageParcel-readCharArray(): number[]-End-->
 
@@ -908,7 +864,7 @@ Reads the single character array from this **MessageParcel** object.
 | --- | --- |
 | number[] | Character array read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -935,11 +891,9 @@ Reads the double value from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readDouble](arkts-ipc-rpc-messagesequence-c.md#readDouble)()
+**Substitutes:** [readDouble](arkts-ipc-rpc-messagesequence-c.md#readdouble)()
 
 <!--Device-MessageParcel-readDouble(): number--><!--Device-MessageParcel-readDouble(): number-End-->
 
@@ -951,7 +905,7 @@ Reads the double value from this **MessageParcel** object.
 | --- | --- |
 | number | Double value read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -978,11 +932,9 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readDoubleArray)(dataIn: double[])
+**Substitutes:** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readdoublearray)(dataIn: double[])
 
 <!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void--><!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void-End-->
 
@@ -994,7 +946,7 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 | --- | --- | --- | --- |
 | dataIn | number[] | Yes | Double array to read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1022,11 +974,9 @@ Reads the double array from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readDoubleArray)()
+**Substitutes:** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readdoublearray)()
 
 <!--Device-MessageParcel-readDoubleArray(): number[]--><!--Device-MessageParcel-readDoubleArray(): number[]-End-->
 
@@ -1038,7 +988,7 @@ Reads the double array from this **MessageParcel** object.
 | --- | --- |
 | number[] | Double array read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1065,17 +1015,15 @@ Reads the exception information from this **MessageParcel** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readException](arkts-ipc-rpc-messagesequence-c.md#readException)()
+**Substitutes:** [readException](arkts-ipc-rpc-messagesequence-c.md#readexception)()
 
 <!--Device-MessageParcel-readException(): void--><!--Device-MessageParcel-readException(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -1161,11 +1109,9 @@ Reads the file descriptor from this **MessageParcel** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#readFileDescriptor)()
+**Substitutes:** [readFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#readfiledescriptor)()
 
 <!--Device-MessageParcel-readFileDescriptor(): number--><!--Device-MessageParcel-readFileDescriptor(): number-End-->
 
@@ -1177,7 +1123,7 @@ Reads the file descriptor from this **MessageParcel** object.
 | --- | --- |
 | number | File descriptor read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1206,11 +1152,9 @@ Reads the double value from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readFloat](arkts-ipc-rpc-messagesequence-c.md#readFloat)()
+**Substitutes:** [readFloat](arkts-ipc-rpc-messagesequence-c.md#readfloat)()
 
 <!--Device-MessageParcel-readFloat(): number--><!--Device-MessageParcel-readFloat(): number-End-->
 
@@ -1222,7 +1166,7 @@ Reads the double value from this **MessageParcel** object.
 | --- | --- |
 | number | Double value read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1249,11 +1193,9 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readFloatArray)(dataIn: double[])
+**Substitutes:** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readfloatarray)(dataIn: double[])
 
 <!--Device-MessageParcel-readFloatArray(dataIn: number[]): void--><!--Device-MessageParcel-readFloatArray(dataIn: number[]): void-End-->
 
@@ -1265,7 +1207,7 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 | --- | --- | --- | --- |
 | dataIn | number[] | Yes | Double array to read. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1293,11 +1235,9 @@ Reads the double array from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readFloatArray)()
+**Substitutes:** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readfloatarray)()
 
 <!--Device-MessageParcel-readFloatArray(): number[]--><!--Device-MessageParcel-readFloatArray(): number[]-End-->
 
@@ -1309,7 +1249,7 @@ Reads the double array from this **MessageParcel** object.
 | --- | --- |
 | number[] | Double array read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1336,11 +1276,9 @@ Reads the integer from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readInt](arkts-ipc-rpc-messagesequence-c.md#readInt)()
+**Substitutes:** [readInt](arkts-ipc-rpc-messagesequence-c.md#readint)()
 
 <!--Device-MessageParcel-readInt(): number--><!--Device-MessageParcel-readInt(): number-End-->
 
@@ -1352,7 +1290,7 @@ Reads the integer from this **MessageParcel** object.
 | --- | --- |
 | number | Integer read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1379,11 +1317,9 @@ Reads the integer array from this **MessageParcel** object and writes it to the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readIntArray)(dataIn: int[])
+**Substitutes:** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readintarray)(dataIn: int[])
 
 <!--Device-MessageParcel-readIntArray(dataIn: number[]): void--><!--Device-MessageParcel-readIntArray(dataIn: number[]): void-End-->
 
@@ -1395,7 +1331,7 @@ Reads the integer array from this **MessageParcel** object and writes it to the 
 | --- | --- | --- | --- |
 | dataIn | number[] | Yes | Integer array to read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1423,11 +1359,9 @@ Reads the integer array from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readIntArray)()
+**Substitutes:** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readintarray)()
 
 <!--Device-MessageParcel-readIntArray(): number[]--><!--Device-MessageParcel-readIntArray(): number[]-End-->
 
@@ -1439,7 +1373,7 @@ Reads the integer array from this **MessageParcel** object.
 | --- | --- |
 | number[] | Integer array read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1466,11 +1400,9 @@ Reads the interface token from this **MessageParcel** object. The interface toke
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#readInterfaceToken)()
+**Substitutes:** [readInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#readinterfacetoken)()
 
 <!--Device-MessageParcel-readInterfaceToken(): string--><!--Device-MessageParcel-readInterfaceToken(): string-End-->
 
@@ -1482,7 +1414,7 @@ Reads the interface token from this **MessageParcel** object. The interface toke
 | --- | --- |
 | string | Interface token obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1508,11 +1440,9 @@ Reads the long int value from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readLong](arkts-ipc-rpc-messagesequence-c.md#readLong)()
+**Substitutes:** [readLong](arkts-ipc-rpc-messagesequence-c.md#readlong)()
 
 <!--Device-MessageParcel-readLong(): number--><!--Device-MessageParcel-readLong(): number-End-->
 
@@ -1524,7 +1454,7 @@ Reads the long int value from this **MessageParcel** object.
 | --- | --- |
 | number | Long integer read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1551,11 +1481,9 @@ Reads the long array from this **MessageParcel** object and writes it to the cre
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readLongArray)(dataIn: long[])
+**Substitutes:** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readlongarray)(dataIn: long[])
 
 <!--Device-MessageParcel-readLongArray(dataIn: number[]): void--><!--Device-MessageParcel-readLongArray(dataIn: number[]): void-End-->
 
@@ -1567,7 +1495,7 @@ Reads the long array from this **MessageParcel** object and writes it to the cre
 | --- | --- | --- | --- |
 | dataIn | number[] | Yes | Long array to read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1595,11 +1523,9 @@ Reads the long array from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readLongArray)()
+**Substitutes:** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readlongarray)()
 
 <!--Device-MessageParcel-readLongArray(): number[]--><!--Device-MessageParcel-readLongArray(): number[]-End-->
 
@@ -1611,7 +1537,7 @@ Reads the long array from this **MessageParcel** object.
 | --- | --- |
 | number[] | Long array read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1638,11 +1564,9 @@ Reads raw data from this **MessageParcel** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#readRawDataBuffer)(size: int)
+**Substitutes:** [readRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#readrawdatabuffer)(size: int)
 
 <!--Device-MessageParcel-readRawData(size: number): number[]--><!--Device-MessageParcel-readRawData(size: number): number[]-End-->
 
@@ -1660,7 +1584,7 @@ Reads raw data from this **MessageParcel** object.
 | --- | --- |
 | number[] | Raw data obtained, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1688,11 +1612,9 @@ Reads the remote object from this **MessageParcel** object. You can use this met
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readRemoteObject](arkts-ipc-rpc-messagesequence-c.md#readRemoteObject)()
+**Substitutes:** [readRemoteObject](arkts-ipc-rpc-messagesequence-c.md#readremoteobject)()
 
 <!--Device-MessageParcel-readRemoteObject(): IRemoteObject--><!--Device-MessageParcel-readRemoteObject(): IRemoteObject-End-->
 
@@ -1704,7 +1626,7 @@ Reads the remote object from this **MessageParcel** object. You can use this met
 | --- | --- |
 | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Remote object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1742,11 +1664,9 @@ Reads the **IRemoteObject** array from this **MessageParcel** object and writes 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readRemoteObjectArray)(objects: IRemoteObject[])
+**Substitutes:** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readremoteobjectarray)(objects: IRemoteObject[])
 
 <!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
@@ -1758,7 +1678,7 @@ Reads the **IRemoteObject** array from this **MessageParcel** object and writes 
 | --- | --- | --- | --- |
 | objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1798,11 +1718,9 @@ Reads the **IRemoteObject** array from this **MessageParcel** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readRemoteObjectArray)(objects: IRemoteObject[])
+**Substitutes:** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readremoteobjectarray)(objects: IRemoteObject[])
 
 <!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]-End-->
 
@@ -1814,7 +1732,7 @@ Reads the **IRemoteObject** array from this **MessageParcel** object.
 | --- | --- |
 | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | IRemoteObject** object array obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1854,11 +1772,9 @@ Reads member variables from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readParcelable](arkts-ipc-rpc-messagesequence-c.md#readParcelable)(dataIn: Parcelable)
+**Substitutes:** [readParcelable](arkts-ipc-rpc-messagesequence-c.md#readparcelable)(dataIn: Parcelable)
 
 <!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean--><!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean-End-->
 
@@ -1876,7 +1792,7 @@ Reads member variables from this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1924,11 +1840,9 @@ Reads the **Sequenceable** array from this **MessageParcel** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readParcelableArray](arkts-ipc-rpc-messagesequence-c.md#readParcelableArray)(parcelableArray: Parcelable[])
+**Substitutes:** [readParcelableArray](arkts-ipc-rpc-messagesequence-c.md#readparcelablearray)(parcelableArray: Parcelable[])
 
 <!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void--><!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void-End-->
 
@@ -1940,7 +1854,7 @@ Reads the **Sequenceable** array from this **MessageParcel** object.
 | --- | --- | --- | --- |
 | sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | Sequenceable** array to read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1990,11 +1904,9 @@ Reads the short integer from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readShort](arkts-ipc-rpc-messagesequence-c.md#readShort)()
+**Substitutes:** [readShort](arkts-ipc-rpc-messagesequence-c.md#readshort)()
 
 <!--Device-MessageParcel-readShort(): number--><!--Device-MessageParcel-readShort(): number-End-->
 
@@ -2006,7 +1918,7 @@ Reads the short integer from this **MessageParcel** object.
 | --- | --- |
 | number | Short integer read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2033,11 +1945,9 @@ Reads the short array from this **MessageParcel** object and writes it to the cr
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readShortArray)(dataIn: int[])
+**Substitutes:** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readshortarray)(dataIn: int[])
 
 <!--Device-MessageParcel-readShortArray(dataIn: number[]): void--><!--Device-MessageParcel-readShortArray(dataIn: number[]): void-End-->
 
@@ -2049,7 +1959,7 @@ Reads the short array from this **MessageParcel** object and writes it to the cr
 | --- | --- | --- | --- |
 | dataIn | number[] | Yes | Short array to read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2077,11 +1987,9 @@ Reads the short array from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readShortArray)()
+**Substitutes:** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readshortarray)()
 
 <!--Device-MessageParcel-readShortArray(): number[]--><!--Device-MessageParcel-readShortArray(): number[]-End-->
 
@@ -2093,7 +2001,7 @@ Reads the short array from this **MessageParcel** object.
 | --- | --- |
 | number[] | Short array read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2120,11 +2028,9 @@ Reads the string from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readString](arkts-ipc-rpc-messagesequence-c.md#readString)()
+**Substitutes:** [readString](arkts-ipc-rpc-messagesequence-c.md#readstring)()
 
 <!--Device-MessageParcel-readString(): string--><!--Device-MessageParcel-readString(): string-End-->
 
@@ -2136,7 +2042,7 @@ Reads the string from this **MessageParcel** object.
 | --- | --- |
 | string | String read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2163,11 +2069,9 @@ Reads the string array from this **MessageParcel** object and writes it to the c
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readStringArray](arkts-ipc-rpc-messagesequence-c.md#readStringArray)(dataIn: string[])
+**Substitutes:** [readStringArray](arkts-ipc-rpc-messagesequence-c.md#readstringarray)(dataIn: string[])
 
 <!--Device-MessageParcel-readStringArray(dataIn: string[]): void--><!--Device-MessageParcel-readStringArray(dataIn: string[]): void-End-->
 
@@ -2179,7 +2083,7 @@ Reads the string array from this **MessageParcel** object and writes it to the c
 | --- | --- | --- | --- |
 | dataIn | string[] | Yes | String array to read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2207,11 +2111,9 @@ Reads the string array from this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readStringArray](arkts-ipc-rpc-messagesequence-c.md#readStringArray)()
+**Substitutes:** [readStringArray](arkts-ipc-rpc-messagesequence-c.md#readstringarray)()
 
 <!--Device-MessageParcel-readStringArray(): string[]--><!--Device-MessageParcel-readStringArray(): string[]-End-->
 
@@ -2223,7 +2125,7 @@ Reads the string array from this **MessageParcel** object.
 | --- | --- |
 | string[] | String array read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2250,8 +2152,6 @@ Reclaims the **MessageParcel** object that is no longer used.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [reclaim](arkts-ipc-rpc-messagesequence-c.md#reclaim)()
@@ -2260,7 +2160,7 @@ Reclaims the **MessageParcel** object that is no longer used.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2284,11 +2184,9 @@ Moves the read pointer to the specified position.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [rewindRead](arkts-ipc-rpc-messagesequence-c.md#rewindRead)(pos: int)
+**Substitutes:** [rewindRead](arkts-ipc-rpc-messagesequence-c.md#rewindread)(pos: int)
 
 <!--Device-MessageParcel-rewindRead(pos: number): boolean--><!--Device-MessageParcel-rewindRead(pos: number): boolean-End-->
 
@@ -2306,7 +2204,7 @@ Moves the read pointer to the specified position.
 | --- | --- |
 | boolean | Returns **true** if the read position changes; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2336,11 +2234,9 @@ Moves the write pointer to the specified position.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [rewindWrite](arkts-ipc-rpc-messagesequence-c.md#rewindWrite)(pos: int)
+**Substitutes:** [rewindWrite](arkts-ipc-rpc-messagesequence-c.md#rewindwrite)(pos: int)
 
 <!--Device-MessageParcel-rewindWrite(pos: number): boolean--><!--Device-MessageParcel-rewindWrite(pos: number): boolean-End-->
 
@@ -2358,7 +2254,7 @@ Moves the write pointer to the specified position.
 | --- | --- |
 | boolean | Returns **true** if the write position changes; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2386,11 +2282,9 @@ Sets the storage capacity of this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setCapacity](arkts-ipc-rpc-messagesequence-c.md#setCapacity)(size: int)
+**Substitutes:** [setCapacity](arkts-ipc-rpc-messagesequence-c.md#setcapacity)(size: int)
 
 <!--Device-MessageParcel-setCapacity(size: number): boolean--><!--Device-MessageParcel-setCapacity(size: number): boolean-End-->
 
@@ -2408,7 +2302,7 @@ Sets the storage capacity of this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2433,11 +2327,9 @@ Sets the size of data contained in this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setSize](arkts-ipc-rpc-messagesequence-c.md#setSize)(size: int)
+**Substitutes:** [setSize](arkts-ipc-rpc-messagesequence-c.md#setsize)(size: int)
 
 <!--Device-MessageParcel-setSize(size: number): boolean--><!--Device-MessageParcel-setSize(size: number): boolean-End-->
 
@@ -2455,7 +2347,7 @@ Sets the size of data contained in this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2480,11 +2372,9 @@ Writes an anonymous shared object to this **MessageParcel** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeAshmem](arkts-ipc-rpc-messagesequence-c.md#writeAshmem)(ashmem: Ashmem)
+**Substitutes:** [writeAshmem](arkts-ipc-rpc-messagesequence-c.md#writeashmem)(ashmem: Ashmem)
 
 <!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean--><!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean-End-->
 
@@ -2502,7 +2392,7 @@ Writes an anonymous shared object to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2528,11 +2418,9 @@ Writes a Boolean value to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeBoolean](arkts-ipc-rpc-messagesequence-c.md#writeBoolean)(val: boolean)
+**Substitutes:** [writeBoolean](arkts-ipc-rpc-messagesequence-c.md#writeboolean)(val: boolean)
 
 <!--Device-MessageParcel-writeBoolean(val: boolean): boolean--><!--Device-MessageParcel-writeBoolean(val: boolean): boolean-End-->
 
@@ -2550,7 +2438,7 @@ Writes a Boolean value to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2575,11 +2463,9 @@ Writes a Boolean array to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeBooleanArray](arkts-ipc-rpc-messagesequence-c.md#writeBooleanArray)(booleanArray: boolean[])
+**Substitutes:** [writeBooleanArray](arkts-ipc-rpc-messagesequence-c.md#writebooleanarray)(booleanArray: boolean[])
 
 <!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean--><!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean-End-->
 
@@ -2597,7 +2483,7 @@ Writes a Boolean array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2622,11 +2508,9 @@ Writes a Byte value to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeByte](arkts-ipc-rpc-messagesequence-c.md#writeByte)(val: int)
+**Substitutes:** [writeByte](arkts-ipc-rpc-messagesequence-c.md#writebyte)(val: int)
 
 <!--Device-MessageParcel-writeByte(val: number): boolean--><!--Device-MessageParcel-writeByte(val: number): boolean-End-->
 
@@ -2644,7 +2528,7 @@ Writes a Byte value to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2669,11 +2553,9 @@ Writes a byte array to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeByteArray](arkts-ipc-rpc-messagesequence-c.md#writeByteArray)(byteArray: int[])
+**Substitutes:** [writeByteArray](arkts-ipc-rpc-messagesequence-c.md#writebytearray)(byteArray: int[])
 
 <!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean--><!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean-End-->
 
@@ -2691,7 +2573,7 @@ Writes a byte array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2717,11 +2599,9 @@ Writes a single character value to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeChar](arkts-ipc-rpc-messagesequence-c.md#writeChar)(val: int)
+**Substitutes:** [writeChar](arkts-ipc-rpc-messagesequence-c.md#writechar)(val: int)
 
 <!--Device-MessageParcel-writeChar(val: number): boolean--><!--Device-MessageParcel-writeChar(val: number): boolean-End-->
 
@@ -2739,7 +2619,7 @@ Writes a single character value to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2764,11 +2644,9 @@ Writes a single character array to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeCharArray](arkts-ipc-rpc-messagesequence-c.md#writeCharArray)(charArray: int[])
+**Substitutes:** [writeCharArray](arkts-ipc-rpc-messagesequence-c.md#writechararray)(charArray: int[])
 
 <!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean--><!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean-End-->
 
@@ -2786,7 +2664,7 @@ Writes a single character array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2811,11 +2689,9 @@ Writes a double value to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeDouble](arkts-ipc-rpc-messagesequence-c.md#writeDouble)(val: double)
+**Substitutes:** [writeDouble](arkts-ipc-rpc-messagesequence-c.md#writedouble)(val: double)
 
 <!--Device-MessageParcel-writeDouble(val: number): boolean--><!--Device-MessageParcel-writeDouble(val: number): boolean-End-->
 
@@ -2833,7 +2709,7 @@ Writes a double value to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2858,11 +2734,9 @@ Writes a double array to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeDoubleArray](arkts-ipc-rpc-messagesequence-c.md#writeDoubleArray)(doubleArray: double[])
+**Substitutes:** [writeDoubleArray](arkts-ipc-rpc-messagesequence-c.md#writedoublearray)(doubleArray: double[])
 
 <!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean--><!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean-End-->
 
@@ -2880,7 +2754,7 @@ Writes a double array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2905,11 +2779,9 @@ Writes a file descriptor to this **MessageParcel** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#writeFileDescriptor)(fd: int)
+**Substitutes:** [writeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#writefiledescriptor)(fd: int)
 
 <!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean--><!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean-End-->
 
@@ -2927,7 +2799,7 @@ Writes a file descriptor to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2955,11 +2827,9 @@ Writes a double value to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeFloat](arkts-ipc-rpc-messagesequence-c.md#writeFloat)(val: double)
+**Substitutes:** [writeFloat](arkts-ipc-rpc-messagesequence-c.md#writefloat)(val: double)
 
 <!--Device-MessageParcel-writeFloat(val: number): boolean--><!--Device-MessageParcel-writeFloat(val: number): boolean-End-->
 
@@ -2977,7 +2847,7 @@ Writes a double value to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3002,11 +2872,9 @@ Writes a double array to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeFloatArray](arkts-ipc-rpc-messagesequence-c.md#writeFloatArray)(floatArray: double[])
+**Substitutes:** [writeFloatArray](arkts-ipc-rpc-messagesequence-c.md#writefloatarray)(floatArray: double[])
 
 <!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean--><!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean-End-->
 
@@ -3024,7 +2892,7 @@ Writes a double array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3049,11 +2917,9 @@ Writes an int value to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeInt](arkts-ipc-rpc-messagesequence-c.md#writeInt)(val: int)
+**Substitutes:** [writeInt](arkts-ipc-rpc-messagesequence-c.md#writeint)(val: int)
 
 <!--Device-MessageParcel-writeInt(val: number): boolean--><!--Device-MessageParcel-writeInt(val: number): boolean-End-->
 
@@ -3071,7 +2937,7 @@ Writes an int value to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3096,11 +2962,9 @@ Writes an integer array to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeIntArray](arkts-ipc-rpc-messagesequence-c.md#writeIntArray)(intArray: int[])
+**Substitutes:** [writeIntArray](arkts-ipc-rpc-messagesequence-c.md#writeintarray)(intArray: int[])
 
 <!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean--><!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean-End-->
 
@@ -3118,7 +2982,7 @@ Writes an integer array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3143,11 +3007,9 @@ Writes an interface token to this **MessageParcel** object. The remote object ca
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#writeInterfaceToken)(token: string)
+**Substitutes:** [writeInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#writeinterfacetoken)(token: string)
 
 <!--Device-MessageParcel-writeInterfaceToken(token: string): boolean--><!--Device-MessageParcel-writeInterfaceToken(token: string): boolean-End-->
 
@@ -3165,7 +3027,7 @@ Writes an interface token to this **MessageParcel** object. The remote object ca
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3190,11 +3052,9 @@ Writes a long int value to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeLong](arkts-ipc-rpc-messagesequence-c.md#writeLong)(val: long)
+**Substitutes:** [writeLong](arkts-ipc-rpc-messagesequence-c.md#writelong)(val: long)
 
 <!--Device-MessageParcel-writeLong(val: number): boolean--><!--Device-MessageParcel-writeLong(val: number): boolean-End-->
 
@@ -3212,7 +3072,7 @@ Writes a long int value to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3237,11 +3097,9 @@ Writes a long array to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeLongArray](arkts-ipc-rpc-messagesequence-c.md#writeLongArray)(longArray: long[])
+**Substitutes:** [writeLongArray](arkts-ipc-rpc-messagesequence-c.md#writelongarray)(longArray: long[])
 
 <!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean--><!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean-End-->
 
@@ -3259,7 +3117,7 @@ Writes a long array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3284,17 +3142,15 @@ Writes information to this **MessageParcel** object indicating that no exception
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeNoException](arkts-ipc-rpc-messagesequence-c.md#writeNoException)()
+**Substitutes:** [writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception)()
 
 <!--Device-MessageParcel-writeNoException(): void--><!--Device-MessageParcel-writeNoException(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3333,11 +3189,9 @@ Writes raw data to this **MessageParcel** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writeRawDataBuffer)(rawData: ArrayBuffer, size: int)
+**Substitutes:** [writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writerawdatabuffer)(rawData: ArrayBuffer, size: int)
 
 <!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean--><!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean-End-->
 
@@ -3356,7 +3210,7 @@ Writes raw data to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3382,11 +3236,9 @@ Serializes a remote object and writes it to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeRemoteObject](arkts-ipc-rpc-messagesequence-c.md#writeRemoteObject)(obj: IRemoteObject)
+**Substitutes:** [writeRemoteObject](arkts-ipc-rpc-messagesequence-c.md#writeremoteobject)(obj: IRemoteObject)
 
 <!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean--><!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean-End-->
 
@@ -3404,7 +3256,7 @@ Serializes a remote object and writes it to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3439,11 +3291,9 @@ Writes an **IRemoteObject** array to this **MessageParcel** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#writeRemoteObjectArray)(objectArray: IRemoteObject[])
+**Substitutes:** [writeRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#writeremoteobjectarray)(objectArray: IRemoteObject[])
 
 <!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean--><!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean-End-->
 
@@ -3461,7 +3311,7 @@ Writes an **IRemoteObject** array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3498,11 +3348,9 @@ Writes a **Sequenceable** object to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeParcelable](arkts-ipc-rpc-messagesequence-c.md#writeParcelable)(val: Parcelable)
+**Substitutes:** [writeParcelable](arkts-ipc-rpc-messagesequence-c.md#writeparcelable)(val: Parcelable)
 
 <!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean--><!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean-End-->
 
@@ -3520,7 +3368,7 @@ Writes a **Sequenceable** object to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3565,11 +3413,9 @@ Writes a **Sequenceable** array to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeParcelableArray](arkts-ipc-rpc-messagesequence-c.md#writeParcelableArray)(parcelableArray: Parcelable[])
+**Substitutes:** [writeParcelableArray](arkts-ipc-rpc-messagesequence-c.md#writeparcelablearray)(parcelableArray: Parcelable[])
 
 <!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean--><!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean-End-->
 
@@ -3587,7 +3433,7 @@ Writes a **Sequenceable** array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3635,11 +3481,9 @@ Writes a short int value to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeShort](arkts-ipc-rpc-messagesequence-c.md#writeShort)(val: int)
+**Substitutes:** [writeShort](arkts-ipc-rpc-messagesequence-c.md#writeshort)(val: int)
 
 <!--Device-MessageParcel-writeShort(val: number): boolean--><!--Device-MessageParcel-writeShort(val: number): boolean-End-->
 
@@ -3657,7 +3501,7 @@ Writes a short int value to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3682,11 +3526,9 @@ Writes a short array to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeShortArray](arkts-ipc-rpc-messagesequence-c.md#writeShortArray)(shortArray: int[])
+**Substitutes:** [writeShortArray](arkts-ipc-rpc-messagesequence-c.md#writeshortarray)(shortArray: int[])
 
 <!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean--><!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean-End-->
 
@@ -3704,7 +3546,7 @@ Writes a short array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3729,11 +3571,9 @@ Writes a string to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeString](arkts-ipc-rpc-messagesequence-c.md#writeString)(val: string)
+**Substitutes:** [writeString](arkts-ipc-rpc-messagesequence-c.md#writestring)(val: string)
 
 <!--Device-MessageParcel-writeString(val: string): boolean--><!--Device-MessageParcel-writeString(val: string): boolean-End-->
 
@@ -3751,7 +3591,7 @@ Writes a string to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -3776,11 +3616,9 @@ Writes a string array to this **MessageParcel** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeStringArray](arkts-ipc-rpc-messagesequence-c.md#writeStringArray)(stringArray: string[])
+**Substitutes:** [writeStringArray](arkts-ipc-rpc-messagesequence-c.md#writestringarray)(stringArray: string[])
 
 <!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean--><!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean-End-->
 
@@ -3798,7 +3636,7 @@ Writes a string array to this **MessageParcel** object.
 | --- | --- |
 | boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

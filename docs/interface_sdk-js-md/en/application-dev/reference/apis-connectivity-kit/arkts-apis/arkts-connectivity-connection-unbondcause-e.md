@@ -4,10 +4,6 @@ Enum for cause of unbond.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-enum UnbondCause--><!--Device-connection-enum UnbondCause-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ USER_REMOVED = 0
 User proactively removed device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Remote device shut down.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UnbondCause-REMOTE_DEVICE_DOWN = 1--><!--Device-UnbondCause-REMOTE_DEVICE_DOWN = 1-End-->
@@ -61,10 +49,6 @@ AUTH_FAILURE = 2
 Wrong PIN code.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ Remote device rejected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UnbondCause-AUTH_REJECTED = 3--><!--Device-UnbondCause-AUTH_REJECTED = 3-End-->
@@ -101,10 +81,6 @@ INTERNAL_ERROR = 4
 Internal error.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

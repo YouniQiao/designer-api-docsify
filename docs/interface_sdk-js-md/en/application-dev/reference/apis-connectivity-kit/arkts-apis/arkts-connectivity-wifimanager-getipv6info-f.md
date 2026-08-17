@@ -16,10 +16,6 @@ Obtain the IPv6 information of the Wi-Fi connection. The IPv6 information includ
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function getIpv6Info(): Ipv6Info--><!--Device-wifiManager-function getIpv6Info(): Ipv6Info-End-->
@@ -40,7 +36,7 @@ Obtain the IPv6 information of the Wi-Fi connection. The IPv6 information includ
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

@@ -16,10 +16,6 @@ Registers a callback to notify whether the application trace capture is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int--><!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int-End-->
@@ -38,7 +34,7 @@ Registers a callback to notify whether the application trace capture is enabled.
 | --- | --- |
 | int | Callback registration status. >= 0: The registration is successful. The callback index for deregistration is returned. The index ranges from 0 to 9. **-1**: The maximum number of callbacks has been reached. **-2**: Invalid parameter. The parameter is not of the **TraceEventListener** type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Define the registered callback.

@@ -10,10 +10,6 @@ function setDefaultApplicationForAppClone(type: string, elementName: ElementName
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION or (ohos.permission.SET_DEFAULT_APPLICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
 <!--Device-defaultAppManager-function setDefaultApplicationForAppClone(type: string, elementName: ElementName, appIndex: int, userId?: int): void--><!--Device-defaultAppManager-function setDefaultApplicationForAppClone(type: string, elementName: ElementName, appIndex: int, userId?: int): void-End-->
@@ -26,10 +22,10 @@ function setDefaultApplicationForAppClone(type: string, elementName: ElementName
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要设置的应用类型，支持取值包括： [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md#ApplicationType)中的值、 [MIMEType](../../../database/uniform-data-type-list.md#基础类型)类型、或 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)类型。 |
+| type | string | 是 | 要设置的应用类型，支持取值包括： [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md#applicationtype)中的值、 [MIMEType](../../../database/uniform-data-type-list.md#基础类型)类型、或 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)类型。 |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | 是 | 要设置为默认应用的组件信息，仅使用其中的bundleName、abilityName、moduleName属性，且三个属性必须设置。 |
 | appIndex | int | 是 | 表示分身应用的索引。<br>取值范围：1、2、3、4、5。 |
-| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取。<br>默认值：调用方所在用户Id。 |
+| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。<br>默认值：调用方所在用户Id。 |
 
 **错误码：**
 
@@ -43,7 +39,7 @@ function setDefaultApplicationForAppClone(type: string, elementName: ElementName
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application is not allowed to call a system API. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user id is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { defaultAppManager } from '@kit.AbilityKit';

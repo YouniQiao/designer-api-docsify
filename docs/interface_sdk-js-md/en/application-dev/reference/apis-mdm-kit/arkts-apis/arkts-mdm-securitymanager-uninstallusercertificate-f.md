@@ -16,10 +16,6 @@ Uninstalls a user certificate. This API uses a promise to return the result. Thi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_CERTIFICATE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -33,7 +29,7 @@ Uninstalls a user certificate. This API uses a promise to return the result. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| certUri | string | Yes | Certificate URI, which is set and returned by the [installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md#installUserCertificate) API for installing a user certificate. |
+| certUri | string | Yes | Certificate URI, which is set and returned by the [installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md#installusercertificate) API for installing a user certificate. |
 
 **Return value:**
 
@@ -51,7 +47,7 @@ Uninstalls a user certificate. This API uses a promise to return the result. Thi
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { securityManager } from '@kit.MDMKit';

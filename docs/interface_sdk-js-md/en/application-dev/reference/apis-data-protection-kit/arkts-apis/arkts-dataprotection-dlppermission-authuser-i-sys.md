@@ -4,10 +4,6 @@ Represents the user authorization information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-dlpPermission-export interface AuthUser--><!--Device-dlpPermission-export interface AuthUser-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -32,10 +28,6 @@ Account of the user who can access the DLP file. The value contains a maximum of
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-AuthUser-authAccount: string--><!--Device-AuthUser-authAccount: string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -53,10 +45,6 @@ Type of the account.
 **Type:** [AccountType](arkts-dataprotection-dlppermission-accounttype-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-AuthUser-authAccountType: AccountType--><!--Device-AuthUser-authAccountType: AccountType-End-->
 
@@ -76,10 +64,6 @@ Permission granted to the user.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-AuthUser-dlpFileAccess: DLPFileAccess--><!--Device-AuthUser-dlpFileAccess: DLPFileAccess-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -97,10 +81,6 @@ Time when the authorization expires. The value must be greater than or equal to 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-AuthUser-permExpiryTime: number--><!--Device-AuthUser-permExpiryTime: number-End-->
 

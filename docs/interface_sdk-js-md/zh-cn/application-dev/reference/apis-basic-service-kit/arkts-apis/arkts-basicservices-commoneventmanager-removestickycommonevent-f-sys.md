@@ -10,10 +10,6 @@ function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.COMMONEVENT_STICKY
 
 <!--Device-commonEventManager-function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): void-End-->
@@ -27,7 +23,7 @@ function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 表示被移除的粘性公共事件。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移除粘性公共事件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当移除粘性公共事件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -40,7 +36,7 @@ function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): 
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) | Failed to initialize the common event service. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -81,10 +77,6 @@ function removeStickyCommonEvent(event: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.COMMONEVENT_STICKY
 
 <!--Device-commonEventManager-function removeStickyCommonEvent(event: string): Promise<void>--><!--Device-commonEventManager-function removeStickyCommonEvent(event: string): Promise<void>-End-->
@@ -116,7 +108,7 @@ function removeStickyCommonEvent(event: string): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) | Failed to initialize the common event service. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

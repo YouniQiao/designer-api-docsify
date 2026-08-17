@@ -4,10 +4,6 @@ Defines the options of geometry transition.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface GeometryTransitionOptions--><!--Device-unnamed-declare interface GeometryTransitionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Strategy for the hierarchical position movement of **in** / **out** components i
 **Default:** TransitionHierarchyStrategy.ADAPTIVE
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

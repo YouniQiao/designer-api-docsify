@@ -1,12 +1,8 @@
 # RdbStore
 
-Provides APIs for managing data in an RDB store. Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getRdbStore) method and then call the corresponding method through the instance. In addition, use [execute](#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
+Provides APIs for managing data in an RDB store. Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore) method and then call the corresponding method through the instance. In addition, use [execute](#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-relationalStore-interface RdbStore--><!--Device-relationalStore-interface RdbStore-End-->
 
@@ -27,10 +23,6 @@ attach(fullPath: string, attachName: string, waitTime?: int) : Promise<int>
 Attaches a database file to the currently linked database.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-attach(fullPath: string, attachName: string, waitTime?: int) : Promise<int>--><!--Device-RdbStore-attach(fullPath: string, attachName: string, waitTime?: int) : Promise<int>-End-->
 
@@ -87,10 +79,6 @@ Attaches a database file to the currently linked database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-attach(context: Context, config: StoreConfig, attachName: string, waitTime?: int) : Promise<int>--><!--Device-RdbStore-attach(context: Context, config: StoreConfig, attachName: string, waitTime?: int) : Promise<int>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -100,7 +88,7 @@ Attaches a database file to the currently linked database.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of an application or ability. |
-| config | StoreConfig | Yes | Indicates the [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) configuration of the database related to this RDB store. |
+| config | StoreConfig | Yes | Indicates the [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#storeconfig) configuration of the database related to this RDB store. |
 | attachName | string | Yes | Indicates the alias of the database. |
 | waitTime | int | No | Indicates the maximum time allowed for attaching the database file, in seconds. |
 
@@ -149,10 +137,6 @@ Backs up a database in a specified name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-backup(destName: string, callback: AsyncCallback<void>): void--><!--Device-RdbStore-backup(destName: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -198,10 +182,6 @@ backup(destName: string): Promise<void>
 Backs up a database in a specified name.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-backup(destName: string): Promise<void>--><!--Device-RdbStore-backup(destName: string): Promise<void>-End-->
 
@@ -249,13 +229,9 @@ Backs up a database in a specified name.
 batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<long>): void
 ```
 
-Inserts a batch of data into the target table. The data insertion fails if the API returns an error, or if it returns -1 without throwing an error. Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_REPLACE) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
+Inserts a batch of data into the target table. The data insertion fails if the API returns an error, or if it returns -1 without throwing an error. Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#onconflictreplace) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<long>): void--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<long>): void-End-->
 
@@ -266,7 +242,7 @@ Inserts a batch of data into the target table. The data insertion fails if the A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of values that were inserted if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
@@ -300,13 +276,9 @@ Inserts a batch of data into the target table. The data insertion fails if the A
 batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>
 ```
 
-Inserts a batch of data into the target table. The data insertion fails if the API returns an error, or if it returns -1 without throwing an error. Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_REPLACE) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
+Inserts a batch of data into the target table. The data insertion fails if the API returns an error, or if it returns -1 without throwing an error. Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#onconflictreplace) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>-End-->
 
@@ -317,7 +289,7 @@ Inserts a batch of data into the target table. The data insertion fails if the A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
 
 **Return value:**
 
@@ -356,13 +328,9 @@ Inserts a batch of data into the target table. The data insertion fails if the A
 batchInsertSync(table: string, values: Array<ValuesBucket>): long
 ```
 
-Inserts a batch of data into the target table. The data insertion fails if the API returns an error, or if it returns -1 without throwing an error. Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_REPLACE) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
+Inserts a batch of data into the target table. The data insertion fails if the API returns an error, or if it returns -1 without throwing an error. Write 32766 parameters per batch using the [ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#onconflictreplace) policy. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-batchInsertSync(table: string, values: Array<ValuesBucket>): long--><!--Device-RdbStore-batchInsertSync(table: string, values: Array<ValuesBucket>): long-End-->
 
@@ -373,7 +341,7 @@ Inserts a batch of data into the target table. The data insertion fails if the A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
 
 **Return value:**
 
@@ -420,10 +388,6 @@ Inserts a batch of data into the target table. A maximum of 32766 parameters can
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-batchInsertWithConflictResolution(        table: string,        values: Array<ValuesBucket>,         conflict: ConflictResolution    ): Promise<long>--><!--Device-RdbStore-batchInsertWithConflictResolution(        table: string,        values: Array<ValuesBucket>,         conflict: ConflictResolution    ): Promise<long>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -433,8 +397,8 @@ Inserts a batch of data into the target table. A maximum of 32766 parameters can
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
-| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
+| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. |
 
 **Return value:**
 
@@ -481,10 +445,6 @@ Inserts a batch of data into the target table. A maximum of 32766 parameters can
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-batchInsertWithConflictResolutionSync(        table: string,        values: Array<ValuesBucket>,        conflict: ConflictResolution    ): long--><!--Device-RdbStore-batchInsertWithConflictResolutionSync(        table: string,        values: Array<ValuesBucket>,        conflict: ConflictResolution    ): long-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -494,8 +454,8 @@ Inserts a batch of data into the target table. A maximum of 32766 parameters can
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
-| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
+| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. |
 
 **Return value:**
 
@@ -539,10 +499,6 @@ Inserts a batch of data into the target table and return a resultSet of changed 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>--><!--Device-RdbStore-batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>-End-->
@@ -554,9 +510,9 @@ Inserts a batch of data into the target table and return a resultSet of changed 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
 | config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
-| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. The default conflict resolution policy is [ON_CONFLICT_NONE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_NONE). |
+| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. The default conflict resolution policy is [ON_CONFLICT_NONE](arkts-arkdata-relationalstore-conflictresolution-e.md#onconflictnone). |
 
 **Return value:**
 
@@ -592,10 +548,6 @@ Inserts a batch of data into the target table and return a resultSet of changed 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Result--><!--Device-RdbStore-batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Result-End-->
@@ -607,9 +559,9 @@ Inserts a batch of data into the target table and return a resultSet of changed 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
 | config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
-| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. The default conflict resolution policy is [ON_CONFLICT_NONE](arkts-arkdata-relationalstore-conflictresolution-e.md#ON_CONFLICT_NONE). |
+| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. The default conflict resolution policy is [ON_CONFLICT_NONE](arkts-arkdata-relationalstore-conflictresolution-e.md#onconflictnone). |
 
 **Return value:**
 
@@ -643,10 +595,6 @@ beginTrans(): Promise<long>
 Begins a transaction before executing the SQL statement.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-beginTrans(): Promise<long>--><!--Device-RdbStore-beginTrans(): Promise<long>-End-->
 
@@ -694,10 +642,6 @@ BeginTransaction before execute your sql.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-beginTransaction(): void--><!--Device-RdbStore-beginTransaction(): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -736,10 +680,6 @@ cleanDirtyData(table: string, cursor: long, callback: AsyncCallback<void>): void
 Cleans the dirty data, which is the data deleted in the cloud. Data with a cursor smaller than the specified cursor will be cleaned up.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-cleanDirtyData(table: string, cursor: long, callback: AsyncCallback<void>): void--><!--Device-RdbStore-cleanDirtyData(table: string, cursor: long, callback: AsyncCallback<void>): void-End-->
 
@@ -788,10 +728,6 @@ Cleans all dirty data deleted in the cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-cleanDirtyData(table: string, callback: AsyncCallback<void>): void--><!--Device-RdbStore-cleanDirtyData(table: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -837,10 +773,6 @@ cleanDirtyData(table: string, cursor?: long): Promise<void>
 Cleans dirty data deleted in the cloud. If a cursor is specified, data with a cursor smaller than the specified cursor will be cleaned up. otherwise clean all.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-cleanDirtyData(table: string, cursor?: long): Promise<void>--><!--Device-RdbStore-cleanDirtyData(table: string, cursor?: long): Promise<void>-End-->
 
@@ -894,10 +826,6 @@ Close the RdbStore and all resultSets.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-close(): Promise<void>--><!--Device-RdbStore-close(): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -925,10 +853,6 @@ Sync data to cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -938,7 +862,7 @@ Sync data to cloud.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#ProgressDetails) result. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of cloudSync. |
 
 **Error codes:**
@@ -959,10 +883,6 @@ Sync data to cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>): Promise<void>--><!--Device-RdbStore-cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -972,7 +892,7 @@ Sync data to cloud.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#ProgressDetails) result. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
 
 **Return value:**
 
@@ -1003,10 +923,6 @@ Sync data to cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-cloudSync(      mode: SyncMode,      tables: string[],      progress: Callback<ProgressDetails>,      callback: AsyncCallback<void>    ): void--><!--Device-RdbStore-cloudSync(      mode: SyncMode,      tables: string[],      progress: Callback<ProgressDetails>,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -1017,7 +933,7 @@ Sync data to cloud.
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
 | tables | string[] | Yes | indicates the database synchronization mode. |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#ProgressDetails) result. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of cloudSync. |
 
 **Error codes:**
@@ -1038,10 +954,6 @@ Sync data to cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-cloudSync(mode: SyncMode, tables: string[], progress: Callback<ProgressDetails>): Promise<void>--><!--Device-RdbStore-cloudSync(mode: SyncMode, tables: string[], progress: Callback<ProgressDetails>): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -1052,7 +964,7 @@ Sync data to cloud.
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
 | tables | string[] | Yes | indicates the database synchronization mode. |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#ProgressDetails) result. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
 
 **Return value:**
 
@@ -1077,10 +989,6 @@ cloudSyncEx(config: CloudSyncConfig, progress: Callback<ProgressDetails>): Promi
 Synchronizes data to the cloud. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1116,10 +1024,6 @@ commit(): void
 Commit the the sql you have executed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-commit(): void--><!--Device-RdbStore-commit(): void-End-->
 
@@ -1158,10 +1062,6 @@ commit(txId : long): Promise<void>
 Commits the SQL statement executed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-commit(txId : long): Promise<void>--><!--Device-RdbStore-commit(txId : long): Promise<void>-End-->
 
@@ -1213,10 +1113,6 @@ create a transaction instance and begin.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-createTransaction(options?: TransactionOptions): Promise<Transaction>--><!--Device-RdbStore-createTransaction(options?: TransactionOptions): Promise<Transaction>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -1258,10 +1154,6 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<long>): void--><!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -1270,7 +1162,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
@@ -1308,10 +1200,6 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<long>--><!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<long>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -1320,7 +1208,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 
 **Return value:**
 
@@ -1363,10 +1251,6 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-deleteSync(predicates: RdbPredicates): long--><!--Device-RdbStore-deleteSync(predicates: RdbPredicates): long-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -1375,7 +1259,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 
 **Return value:**
 
@@ -1418,10 +1302,6 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise<Result>--><!--Device-RdbStore-deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise<Result>-End-->
@@ -1432,7 +1312,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
 
 **Return value:**
@@ -1468,10 +1348,6 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result--><!--Device-RdbStore-deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result-End-->
@@ -1482,7 +1358,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
 
 **Return value:**
@@ -1517,10 +1393,6 @@ detach(attachName: string, waitTime?: int) : Promise<int>
 Detaches a database from this database.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-detach(attachName: string, waitTime?: int) : Promise<int>--><!--Device-RdbStore-detach(attachName: string, waitTime?: int) : Promise<int>-End-->
 
@@ -1573,10 +1445,6 @@ Notifies the registered observers of a change to the data resource specified by 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-emit(event: string): void--><!--Device-RdbStore-emit(event: string): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -1607,10 +1475,6 @@ Executes a SQL statement that contains specified parameters and returns a value 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-execute(sql: string, args?: Array<ValueType>): Promise<ValueType>--><!--Device-RdbStore-execute(sql: string, args?: Array<ValueType>): Promise<ValueType>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -1620,7 +1484,7 @@ Executes a SQL statement that contains specified parameters and returns a value 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
-| args | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType) values of the parameters in the SQL statement. The values are strings. |
+| args | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype) values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
@@ -1664,10 +1528,6 @@ Executes a SQL statement that contains specified parameters and returns a value 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-execute(sql: string, txId: long, args?: Array<ValueType>): Promise<ValueType>--><!--Device-RdbStore-execute(sql: string, txId: long, args?: Array<ValueType>): Promise<ValueType>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -1678,7 +1538,7 @@ Executes a SQL statement that contains specified parameters and returns a value 
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
 | txId | long | Yes | Indicates the transaction ID which is obtained by beginTrans or 0. |
-| args | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType) values of the parameters in the SQL statement. The values are strings. |
+| args | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype) values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
@@ -1721,10 +1581,6 @@ executeSql(sql: string, callback: AsyncCallback<void>): void
 Executes a SQL statement that contains specified parameters but returns no value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-executeSql(sql: string, callback: AsyncCallback<void>): void--><!--Device-RdbStore-executeSql(sql: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1773,10 +1629,6 @@ Executes a SQL statement that contains specified parameters but returns no value
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -1786,7 +1638,7 @@ Executes a SQL statement that contains specified parameters but returns no value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
-| bindArgs | Array&lt;ValueType&gt; | Yes | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType) values of the parameters in the SQL statement. The values are strings. |
+| bindArgs | Array&lt;ValueType&gt; | Yes | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype) values of the parameters in the SQL statement. The values are strings. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of executeSql. |
 
 **Error codes:**
@@ -1825,10 +1677,6 @@ Executes a SQL statement that contains specified parameters but returns no value
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>--><!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -1838,7 +1686,7 @@ Executes a SQL statement that contains specified parameters but returns no value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
-| bindArgs | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType) values of the parameters in the SQL statement. The values are strings. |
+| bindArgs | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype) values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
@@ -1882,10 +1730,6 @@ Executes a SQL statement that contains specified parameters and returns a value 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-executeSync(sql: string, args?: Array<ValueType>): ValueType--><!--Device-RdbStore-executeSync(sql: string, args?: Array<ValueType>): ValueType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -1895,7 +1739,7 @@ Executes a SQL statement that contains specified parameters and returns a value 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
-| args | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType) values of the parameters in the SQL statement. The values are strings. |
+| args | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype) values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
@@ -1937,10 +1781,6 @@ getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[]): Pro
 Obtains the modify time of rows corresponding to the primary keys.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[]): Promise<ModifyTime>--><!--Device-RdbStore-getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[]): Promise<ModifyTime>-End-->
 
@@ -2000,10 +1840,6 @@ Obtains the modify time of rows corresponding to the primary keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-getModifyTime(      table: string,      columnName: string,      primaryKeys: PRIKeyType[],      callback: AsyncCallback<ModifyTime>    ): void--><!--Device-RdbStore-getModifyTime(      table: string,      columnName: string,      primaryKeys: PRIKeyType[],      callback: AsyncCallback<ModifyTime>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2015,7 +1851,7 @@ Obtains the modify time of rows corresponding to the primary keys.
 | table | string | Yes | Indicates the name of the table to check. |
 | columnName | string | Yes | Indicates the name of the column to check. |
 | primaryKeys | [PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md)[] | Yes | Indicates the primary keys of the rows to check. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ModifyTime](arkts-arkdata-relationalstore-modifytime-t.md)&gt; | Yes | The callback of getModifyTime. ModifyTime indicates the modify time of current row. If this table does not support cloud, the [ModifyTime](arkts-arkdata-relationalstore-modifytime-t.md#ModifyTime) will be empty. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ModifyTime](arkts-arkdata-relationalstore-modifytime-t.md)&gt; | Yes | The callback of getModifyTime. ModifyTime indicates the modify time of current row. If this table does not support cloud, the [ModifyTime](arkts-arkdata-relationalstore-modifytime-t.md#modifytime) will be empty. |
 
 **Error codes:**
 
@@ -2052,10 +1888,6 @@ Inserts a row of data into the target table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<long>): void--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2065,7 +1897,7 @@ Inserts a row of data into the target table.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
+| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The row ID if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
@@ -2103,10 +1935,6 @@ Inserts a row of data into the target table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callback: AsyncCallback<long>): void--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2116,8 +1944,8 @@ Inserts a row of data into the target table.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
-| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. |
+| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
+| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The row ID if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
@@ -2155,10 +1983,6 @@ Inserts a row of data into the target table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<long>--><!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<long>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2168,7 +1992,7 @@ Inserts a row of data into the target table.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
+| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
 
 **Return value:**
 
@@ -2211,10 +2035,6 @@ Inserts a row of data into the target table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket, conflict: ConflictResolution): Promise<long>--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, conflict: ConflictResolution): Promise<long>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2224,8 +2044,8 @@ Inserts a row of data into the target table.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
-| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. |
+| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
+| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. |
 
 **Return value:**
 
@@ -2268,10 +2088,6 @@ Inserts a row of data into the target table with sync interface.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): long--><!--Device-RdbStore-insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): long-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2281,8 +2097,8 @@ Inserts a row of data into the target table with sync interface.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket) to be inserted into the table. |
-| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. |
+| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
+| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. |
 
 **Return value:**
 
@@ -2325,10 +2141,6 @@ Inserts a row of data into the target table with sync interface.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict?: ConflictResolution): number--><!--Device-RdbStore-insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict?: ConflictResolution): number-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2339,7 +2151,7 @@ Inserts a row of data into the target table with sync interface.
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | values | sendableRelationalStore.ValuesBucket | Yes | Indicates the row of data ValuesBucket to be inserted into the table. |
-| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. |
+| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. |
 
 **Return value:**
 
@@ -2382,10 +2194,6 @@ Locks data from the database based on a specified instance object of RdbPredicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-lockRow(predicates: RdbPredicates): Promise<void>--><!--Device-RdbStore-lockRow(predicates: RdbPredicates): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2394,7 +2202,7 @@ Locks data from the database based on a specified instance object of RdbPredicat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified lock condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified lock condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 
 **Return value:**
 
@@ -2437,10 +2245,6 @@ Obtain distributed table name of specified remote device according to local tabl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-RdbStore-obtainDistributedTableName(device: string, table: string, callback: AsyncCallback<string>): void--><!--Device-RdbStore-obtainDistributedTableName(device: string, table: string, callback: AsyncCallback<string>): void-End-->
@@ -2473,10 +2277,6 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 Obtain distributed table name of specified remote device according to local table name. When query remote device database, distributed table name is needed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -2516,10 +2316,6 @@ Unregister the database auto synchronization callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-offAutoSyncProgress(progress?: Callback<ProgressDetails>): void--><!--Device-RdbStore-offAutoSyncProgress(progress?: Callback<ProgressDetails>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2528,7 +2324,7 @@ Unregister the database auto synchronization callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No | the specified sync condition by the instance object of [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#ProgressDetails). |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No | the specified sync condition by the instance object of [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails). |
 
 **Error codes:**
 
@@ -2547,10 +2343,6 @@ Remove specified observer of specified type from the database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-offDataChange(type: SubscribeType, observer?: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void--><!--Device-RdbStore-offDataChange(type: SubscribeType, observer?: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2559,7 +2351,7 @@ Remove specified observer of specified type from the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SubscribeType | Yes | indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#SubscribeType). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| type | SubscribeType | Yes | indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#subscribetype). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
 | observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ChangeInfo&gt;&gt; | No | {Array&lt;string&gt;}: the data change observer already registered. {Array&lt;ChangeInfo&gt;}: the change info already registered. |
 
 **Error codes:**
@@ -2579,10 +2371,6 @@ offPerfStat(observer?: Callback<SqlExecutionInfo>): void
 Unsubscribes from the SQL performance statistics.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-offPerfStat(observer?: Callback<SqlExecutionInfo>): void--><!--Device-RdbStore-offPerfStat(observer?: Callback<SqlExecutionInfo>): void-End-->
 
@@ -2611,10 +2399,6 @@ Unsubscribes from the SQL execution error logs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-offSqliteErrorOccurred(observer?: Callback<ExceptionMessage>): void--><!--Device-RdbStore-offSqliteErrorOccurred(observer?: Callback<ExceptionMessage>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2641,10 +2425,6 @@ offStatistics(observer?: Callback<SqlExecutionInfo> ): void
 Unsubscribes from the SQL statistics.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2675,10 +2455,6 @@ Unregister the database auto synchronization callback.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void--><!--Device-RdbStore-off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2688,7 +2464,7 @@ Unregister the database auto synchronization callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'autoSyncProgress' | Yes | indicates the event must be string 'autoSyncProgress'. |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#ProgressDetails) result. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
 
 **Error codes:**
 
@@ -2708,10 +2484,6 @@ Remove specified observer of specified type from the database.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2721,7 +2493,7 @@ Remove specified observer of specified type from the database.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
-| type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#SubscribeType). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#subscribetype). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
 | observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array&lt;string&gt;}: the data change observer already registered. |
 
 **Error codes:**
@@ -2746,10 +2518,6 @@ Remove specified observer of specified type from the database.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-off(      event: 'dataChange',      type: SubscribeType,      observer?: Callback<Array<string>> | Callback<Array<ChangeInfo>>    ): void--><!--Device-RdbStore-off(      event: 'dataChange',      type: SubscribeType,      observer?: Callback<Array<string>> | Callback<Array<ChangeInfo>>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2759,7 +2527,7 @@ Remove specified observer of specified type from the database.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | indicates the event must be string 'dataChange'. |
-| type | SubscribeType | Yes | indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#SubscribeType). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| type | SubscribeType | Yes | indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#subscribetype). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
 | observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ChangeInfo&gt;&gt; | No | {Array&lt;string&gt;}: the data change observer already registered. {Array&lt;ChangeInfo&gt;}: the change info already registered. |
 
 **Error codes:**
@@ -2780,10 +2548,6 @@ off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void
 Unsubscribes from the SQL performance statistics.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void--><!--Device-RdbStore-off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void-End-->
 
@@ -2813,10 +2577,6 @@ Unsubscribes from the SQL execution error logs.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void--><!--Device-RdbStore-off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2844,10 +2604,6 @@ off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void
 Unsubscribes from the SQL statistics.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void--><!--Device-RdbStore-off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void-End-->
 
@@ -2878,10 +2634,6 @@ off(event: string, interProcess: boolean, observer?: Callback<void>): void
 Remove specified observer of specified type from the database.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-off(event: string, interProcess: boolean, observer?: Callback<void>): void--><!--Device-RdbStore-off(event: string, interProcess: boolean, observer?: Callback<void>): void-End-->
 
@@ -2915,10 +2667,6 @@ Register an automatic synchronization callback to the database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-onAutoSyncProgress(progress: Callback<ProgressDetails>): void--><!--Device-RdbStore-onAutoSyncProgress(progress: Callback<ProgressDetails>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2927,7 +2675,7 @@ Register an automatic synchronization callback to the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#ProgressDetails) result. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
 
 **Error codes:**
 
@@ -2949,10 +2697,6 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-onDataChange(      type: SubscribeType,       observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>    ): void--><!--Device-RdbStore-onDataChange(      type: SubscribeType,       observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2961,7 +2705,7 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#SubscribeType). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#subscribetype). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
 | observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ChangeInfo&gt;&gt; | Yes | {Array&lt;string&gt;}: The observer of data change events in the distributed database. {Array&lt;ChangeInfo&gt;}: The change info of data change events in the distributed database. |
 
 **Error codes:**
@@ -2982,10 +2726,6 @@ Subscribes to the SQL performance statistics.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-onPerfStat(observer: Callback<SqlExecutionInfo>): void--><!--Device-RdbStore-onPerfStat(observer: Callback<SqlExecutionInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -2994,7 +2734,7 @@ Subscribes to the SQL performance statistics.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Callback used to return the SQL execution statistics [SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md#SqlExecutionInfo). |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Callback used to return the SQL execution statistics [SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md#sqlexecutioninfo). |
 
 **Error codes:**
 
@@ -3013,10 +2753,6 @@ Subscribes to the SQL execution error logs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-onSqliteErrorOccurred(observer: Callback<ExceptionMessage>): void--><!--Device-RdbStore-onSqliteErrorOccurred(observer: Callback<ExceptionMessage>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3025,7 +2761,7 @@ Subscribes to the SQL execution error logs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes | Callback used to return the SQL execution errorlog [ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md#ExceptionMessage). |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes | Callback used to return the SQL execution errorlog [ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md#exceptionmessage). |
 
 **Error codes:**
 
@@ -3043,10 +2779,6 @@ onStatistics(observer: Callback<SqlExecutionInfo> ): void
 Subscribes to the SQL statistics.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3079,10 +2811,6 @@ Register an automatic synchronization callback to the database.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void--><!--Device-RdbStore-on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3092,7 +2820,7 @@ Register an automatic synchronization callback to the database.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'autoSyncProgress' | Yes | Indicates the event must be string 'autoSyncProgress'. |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#ProgressDetails) result. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
 
 **Error codes:**
 
@@ -3112,10 +2840,6 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3125,7 +2849,7 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
-| type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#SubscribeType). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#subscribetype). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
 | observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array&lt;string&gt;}: the observer of data change events in the distributed database. |
 
 **Error codes:**
@@ -3146,10 +2870,6 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void--><!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3159,7 +2879,7 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
-| type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#SubscribeType). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#subscribetype). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
 | observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ChangeInfo&gt;&gt; | Yes | {Array&lt;string&gt;}: the observer of data change events in the distributed database. {Array&lt;ChangeInfo&gt;}: The change info of data change events in the distributed database. |
 
 **Error codes:**
@@ -3181,10 +2901,6 @@ Subscribes to the SQL performance statistics.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void--><!--Device-RdbStore-on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3194,7 +2910,7 @@ Subscribes to the SQL performance statistics.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'perfStat' | Yes | Event type, which must be 'perfStat'. |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Callback used to return the SQL execution statistics [SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md#SqlExecutionInfo). |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Callback used to return the SQL execution statistics [SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md#sqlexecutioninfo). |
 
 **Error codes:**
 
@@ -3213,10 +2929,6 @@ Subscribes to the SQL execution error logs.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void--><!--Device-RdbStore-on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3226,7 +2938,7 @@ Subscribes to the SQL execution error logs.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'sqliteErrorOccurred' | Yes | Event type, which must be 'sqliteErrorOccurred'. |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes | Callback used to return the SQL execution errorlog [ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md#ExceptionMessage). |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes | Callback used to return the SQL execution errorlog [ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md#exceptionmessage). |
 
 **Error codes:**
 
@@ -3244,10 +2956,6 @@ on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void
 Subscribes to the SQL statistics.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void--><!--Device-RdbStore-on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void-End-->
 
@@ -3278,10 +2986,6 @@ on(event: string, interProcess: boolean, observer: Callback<void>): void
 Registers an observer for the database.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-on(event: string, interProcess: boolean, observer: Callback<void>): void--><!--Device-RdbStore-on(event: string, interProcess: boolean, observer: Callback<void>): void-End-->
 
@@ -3315,10 +3019,6 @@ Queries data in the database based on specified conditions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-query(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3327,8 +3027,8 @@ Queries data in the database based on specified conditions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet) object if the operation is successful. |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) object if the operation is successful. |
 
 **Error codes:**
 
@@ -3349,10 +3049,6 @@ Queries data in the database based on specified conditions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3361,9 +3057,9 @@ Queries data in the database based on specified conditions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | Yes | The columns to query. If the value is empty array, the query applies to all columns. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) object if the operation is successful. |
 
 **Error codes:**
 
@@ -3384,10 +3080,6 @@ Queries data in the database based on specified conditions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3396,7 +3088,7 @@ Queries data in the database based on specified conditions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
@@ -3424,10 +3116,6 @@ Query data in the database step‑by‑step based on SQL statements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-queryByStep(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>--><!--Device-RdbStore-queryByStep(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>-End-->
@@ -3439,7 +3127,7 @@ Query data in the database step‑by‑step based on SQL statements.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. <br>Value range: (0, +∞) <br>A valid SQL statement must be used. Otherwise, an error code may be thrown when ResultSet is used. |
-| bindArgs | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType) values of the parameters in the SQL statement. <br>Default value:The default value is an empty array. <br>The value must be the same as the number of placeholders in the SQL statement. |
+| bindArgs | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype) values of the parameters in the SQL statement. <br>Default value:The default value is an empty array. <br>The value must be the same as the number of placeholders in the SQL statement. |
 
 **Return value:**
 
@@ -3463,10 +3151,6 @@ Queries data in the database step‑by‑step based on specified conditions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-queryByStep(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-queryByStep(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
@@ -3477,7 +3161,7 @@ Queries data in the database step‑by‑step based on specified conditions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. <br>Default value: empty array by default. <br>If an empty array is transferred, all columns are queried. |
 
 **Return value:**
@@ -3502,10 +3186,6 @@ Queries locked data in the database based on specified conditions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-queryLockedRow(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-queryLockedRow(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3514,7 +3194,7 @@ Queries locked data in the database based on specified conditions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
@@ -3557,10 +3237,6 @@ Queries data in the database based on SQL statement.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-querySql(sql: string, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySql(sql: string, callback: AsyncCallback<ResultSet>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3570,7 +3246,7 @@ Queries data in the database based on SQL statement.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) object if the operation is successful. |
 
 **Error codes:**
 
@@ -3591,10 +3267,6 @@ Queries data in the database based on SQL statement.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3604,8 +3276,8 @@ Queries data in the database based on SQL statement.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
-| bindArgs | Array&lt;ValueType&gt; | Yes | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType) values of the parameters in the SQL statement. The values are strings. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet) object if the operation is successful. |
+| bindArgs | Array&lt;ValueType&gt; | Yes | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype) values of the parameters in the SQL statement. The values are strings. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) object if the operation is successful. |
 
 **Error codes:**
 
@@ -3626,10 +3298,6 @@ Queries data in the database based on SQL statement.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>--><!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3639,7 +3307,7 @@ Queries data in the database based on SQL statement.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
-| bindArgs | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType) values of the parameters in the SQL statement. The values are strings. |
+| bindArgs | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype) values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
@@ -3666,10 +3334,6 @@ Queries data in the database based on SQL statement with sync interface.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-querySqlSync(sql: string, bindArgs?: Array<ValueType>): ResultSet--><!--Device-RdbStore-querySqlSync(sql: string, bindArgs?: Array<ValueType>): ResultSet-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3679,7 +3343,7 @@ Queries data in the database based on SQL statement with sync interface.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
-| bindArgs | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType) values of the parameters in the SQL statement. The values are strings. |
+| bindArgs | Array&lt;ValueType&gt; | No | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype) values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
@@ -3702,13 +3366,9 @@ Queries data in the database based on SQL statement with sync interface.
 querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteResultSet>
 ```
 
-Queries data from the RDB store based on specified conditions without calculating the row count. This API uses a promise to return the result and delivers better performance than the [querySql](arkts-arkdata-relationalstore-transaction-i.md#querySql) API. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000.
+Queries data from the RDB store based on specified conditions without calculating the row count. This API uses a promise to return the result and delivers better performance than the [querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql) API. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3742,13 +3402,9 @@ Queries data from the RDB store based on specified conditions without calculatin
 querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResultSet
 ```
 
-Queries data from the RDB store based on specified SQL statements without calculating the row count. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **querySqlWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#@ohos.taskpool) thread.
+Queries data from the RDB store based on specified SQL statements without calculating the row count. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **querySqlWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#ohostaskpool) thread.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3786,10 +3442,6 @@ Queries data in the database based on specified conditions with sync function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet--><!--Device-RdbStore-querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -3798,7 +3450,7 @@ Queries data in the database based on specified conditions with sync function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | No | The columns to query. If the value is empty array, the query applies to all columns. |
 
 **Return value:**
@@ -3826,10 +3478,6 @@ Queries data without rowCount in the database based on specified conditions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promise<LiteResultSet>--><!--Device-RdbStore-queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promise<LiteResultSet>-End-->
@@ -3840,7 +3488,7 @@ Queries data without rowCount in the database based on specified conditions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
@@ -3865,10 +3513,6 @@ Queries data without rowCount in the database based on specified conditions with
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): LiteResultSet--><!--Device-RdbStore-queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): LiteResultSet-End-->
@@ -3879,7 +3523,7 @@ Queries data without rowCount in the database based on specified conditions with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
@@ -3903,10 +3547,6 @@ rekey(cryptoParam?: CryptoParam): Promise<void>
 Changes the key used to encrypt the database.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-rekey(cryptoParam?: CryptoParam): Promise<void>--><!--Device-RdbStore-rekey(cryptoParam?: CryptoParam): Promise<void>-End-->
 
@@ -3950,10 +3590,6 @@ rekeyEx(cryptoParam: CryptoParam): Promise<void>
 Change the encryption parameters of the database.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-rekeyEx(cryptoParam: CryptoParam): Promise<void>--><!--Device-RdbStore-rekeyEx(cryptoParam: CryptoParam): Promise<void>-End-->
 
@@ -4003,10 +3639,6 @@ Queries remote data in the database based on specified conditions before Synchro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-remoteQuery(      device: string,      table: string,      predicates: RdbPredicates,      columns: Array<string>,      callback: AsyncCallback<ResultSet>    ): void--><!--Device-RdbStore-remoteQuery(      device: string,      table: string,      predicates: RdbPredicates,      columns: Array<string>,      callback: AsyncCallback<ResultSet>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -4017,9 +3649,9 @@ Queries remote data in the database based on specified conditions before Synchro
 | --- | --- | --- | --- |
 | device | string | Yes | Indicates specified remote device. |
 | table | string | Yes | Indicates the target table. |
-| predicates | RdbPredicates | Yes | The specified remote remote query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified remote remote query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | Yes | The columns to remote query. If the value is empty array, the remote query applies to all columns. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) object if the operation is successful. |
 
 **Error codes:**
 
@@ -4040,10 +3672,6 @@ Queries remote data in the database based on specified conditions before Synchro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: Array<string>): Promise<ResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -4054,7 +3682,7 @@ Queries remote data in the database based on specified conditions before Synchro
 | --- | --- | --- | --- |
 | device | string | Yes | Indicates specified remote device. |
 | table | string | Yes | Indicates the target table. |
-| predicates | RdbPredicates | Yes | The specified remote remote query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified remote remote query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | columns | Array&lt;string&gt; | Yes | The columns to remote query. If the value is empty array, the remote query applies to all columns. |
 
 **Return value:**
@@ -4081,10 +3709,6 @@ restore(srcName: string, callback: AsyncCallback<void>): void
 Restores a database from a specified database file.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-restore(srcName: string, callback: AsyncCallback<void>): void--><!--Device-RdbStore-restore(srcName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4130,10 +3754,6 @@ restore(srcName: string): Promise<void>
 Restores a database from a specified database file.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-restore(srcName: string): Promise<void>--><!--Device-RdbStore-restore(srcName: string): Promise<void>-End-->
 
@@ -4185,10 +3805,6 @@ Roll back the sql you have already executed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-rollBack(): void--><!--Device-RdbStore-rollBack(): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -4226,10 +3842,6 @@ rollback(txId : long): Promise<void>
 Rolls back the SQL statement executed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-rollback(txId : long): Promise<void>--><!--Device-RdbStore-rollback(txId : long): Promise<void>-End-->
 
@@ -4281,10 +3893,6 @@ Set table to be distributed table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-RdbStore-setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void-End-->
@@ -4316,10 +3924,6 @@ setDistributedTables(tables: Array<string>): Promise<void>
 Set table to be distributed table.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4358,10 +3962,6 @@ Set table to be distributed table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-RdbStore-setDistributedTables(tables: Array<string>, type: DistributedType, callback: AsyncCallback<void>): void--><!--Device-RdbStore-setDistributedTables(tables: Array<string>, type: DistributedType, callback: AsyncCallback<void>): void-End-->
@@ -4373,7 +3973,7 @@ Set table to be distributed table.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
-| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | Yes | Indicates the distributed type [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md#DistributedType). ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
+| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | Yes | Indicates the distributed type [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md#distributedtype). ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
 
 **Error codes:**
@@ -4401,10 +4001,6 @@ Set table to be distributed table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-RdbStore-setDistributedTables(      tables: Array<string>,      type: DistributedType,      config: DistributedConfig,      callback: AsyncCallback<void>    ): void--><!--Device-RdbStore-setDistributedTables(      tables: Array<string>,      type: DistributedType,      config: DistributedConfig,      callback: AsyncCallback<void>    ): void-End-->
@@ -4416,8 +4012,8 @@ Set table to be distributed table.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
-| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | Yes | Indicates the distributed type [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md#DistributedType). ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
-| config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | Yes | Indicates the distributed config of the tables. For details, see [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md#DistributedConfig). |
+| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | Yes | Indicates the distributed type [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md#distributedtype). ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
+| config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | Yes | Indicates the distributed config of the tables. For details, see [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md#distributedconfig). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
 
 **Error codes:**
@@ -4440,10 +4036,6 @@ Set table to be a distributed table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-RdbStore-setDistributedTables(tables: Array<string>, type?: DistributedType, config?: DistributedConfig): Promise<void>--><!--Device-RdbStore-setDistributedTables(tables: Array<string>, type?: DistributedType, config?: DistributedConfig): Promise<void>-End-->
@@ -4455,8 +4047,8 @@ Set table to be a distributed table.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
-| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | No | Indicates the distributed type [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md#DistributedType). ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
-| config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | No | Indicates the distributed config of the tables. For details, see [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md#DistributedConfig). |
+| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | No | Indicates the distributed type [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md#distributedtype). ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
+| config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | No | Indicates the distributed config of the tables. For details, see [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md#distributedconfig). |
 
 **Return value:**
 
@@ -4483,10 +4075,6 @@ setLocale(locale: string) : Promise<void>
 Support for collations in different languages.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-setLocale(locale: string) : Promise<void>--><!--Device-RdbStore-setLocale(locale: string) : Promise<void>-End-->
 
@@ -4525,10 +4113,6 @@ Stops synchronizing data with the cloud.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-stopCloudSync(): Promise<void>--><!--Device-RdbStore-stopCloudSync(): Promise<void>-End-->
@@ -4558,10 +4142,6 @@ Sync data between devices.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-RdbStore-sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[string, int]>>): void--><!--Device-RdbStore-sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[string, int]>>): void-End-->
@@ -4573,7 +4153,7 @@ Sync data between devices.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | Indicates the database synchronization mode. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | {Array&lt;[string, int]&gt;}: devices sync status array, {string}: device id, {int}: device sync status. |
 
 **Error codes:**
@@ -4595,10 +4175,6 @@ Sync data between devices.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-RdbStore-sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, int]>>--><!--Device-RdbStore-sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, int]>>-End-->
@@ -4610,7 +4186,7 @@ Sync data between devices.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | Indicates the database synchronization mode. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 
 **Return value:**
 
@@ -4637,10 +4213,6 @@ Sync data between devices. 1. The difference between the sync interface and the 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -4654,7 +4226,7 @@ Sync data between devices. 1. The difference between the sync interface and the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | Indicates the database synchronization mode. <br>Only SYNC_MODE_PUSH and SYNC_MODE_PULL are supported. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 
 **Return value:**
 
@@ -4680,10 +4252,6 @@ Unlocks data from the database based on a specified instance object of RdbPredic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-unlockRow(predicates: RdbPredicates): Promise<void>--><!--Device-RdbStore-unlockRow(predicates: RdbPredicates): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -4692,7 +4260,7 @@ Unlocks data from the database based on a specified instance object of RdbPredic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified Unlock condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | The specified Unlock condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 
 **Return value:**
 
@@ -4735,10 +4303,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<long>): void--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -4748,7 +4312,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
@@ -4791,10 +4355,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-update(      values: ValuesBucket,      predicates: RdbPredicates,      conflict: ConflictResolution,      callback: AsyncCallback<long>    ): void--><!--Device-RdbStore-update(      values: ValuesBucket,      predicates: RdbPredicates,      conflict: ConflictResolution,      callback: AsyncCallback<long>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -4804,8 +4364,8 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
-| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. |
+| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
+| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
@@ -4843,10 +4403,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<long>--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<long>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -4856,7 +4412,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 
 **Return value:**
 
@@ -4899,10 +4455,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolution): Promise<long>--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolution): Promise<long>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -4912,8 +4464,8 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
-| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. |
+| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
+| conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. |
 
 **Return value:**
 
@@ -4956,10 +4508,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): long--><!--Device-RdbStore-updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): long-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -4969,8 +4517,8 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
-| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to insert data into the table. |
+| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
+| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. |
 
 **Return value:**
 
@@ -5014,10 +4562,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>--><!--Device-RdbStore-updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>-End-->
@@ -5029,9 +4573,9 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
-| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to update data into the table. |
+| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to update data into the table. |
 
 **Return value:**
 
@@ -5067,10 +4611,6 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RdbStore-updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Result--><!--Device-RdbStore-updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Result-End-->
@@ -5082,9 +4622,9 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates). |
+| predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
 | config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
-| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution) to update data into the table. |
+| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to update data into the table. |
 
 **Return value:**
 
@@ -5121,10 +4661,6 @@ Set whether the database is rebuilt.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RdbStore-rebuilt: RebuildType--><!--Device-RdbStore-rebuilt: RebuildType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -5140,10 +4676,6 @@ Set RdbStore version. The version number must be an integer greater than 0. Obta
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RdbStore-version: int--><!--Device-RdbStore-version: int-End-->
 

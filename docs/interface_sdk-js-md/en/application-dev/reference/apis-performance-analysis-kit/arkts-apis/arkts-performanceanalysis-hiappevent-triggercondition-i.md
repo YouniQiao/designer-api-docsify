@@ -1,12 +1,8 @@
 # TriggerCondition
 
-Defines the triggering condition parameters of the **onTrigger** callback of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#Watcher).
+Defines the triggering condition parameters of the **onTrigger** callback of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#watcher).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-hiAppEvent-interface TriggerCondition--><!--Device-hiAppEvent-interface TriggerCondition-End-->
 
@@ -30,10 +26,6 @@ Total number of events that trigger callback. The value is a positive integer. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TriggerCondition-row?: int--><!--Device-TriggerCondition-row?: int-End-->
@@ -52,10 +44,6 @@ Total size of events that trigger callback. The value is a positive integer, in 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TriggerCondition-size?: int--><!--Device-TriggerCondition-size?: int-End-->
@@ -73,10 +61,6 @@ Timeout interval for triggering callback. The value is a positive integer, in un
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,10 +4,6 @@ ApiVersion: the bundle Api version class.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ApiVersion--><!--Device-unnamed-export interface ApiVersion-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -25,10 +21,6 @@ Minimum API version.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApiVersion-readonly compatible: int--><!--Device-ApiVersion-readonly compatible: int-End-->
 
@@ -48,10 +40,6 @@ Name of the API version.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ApiVersion-readonly releaseType: string--><!--Device-ApiVersion-readonly releaseType: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -69,10 +57,6 @@ Target API version.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApiVersion-readonly target: int--><!--Device-ApiVersion-readonly target: int-End-->
 

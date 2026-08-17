@@ -4,10 +4,6 @@ You can obtain the timestamp information from the event callback, including the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-displaySync-interface IntervalInfo--><!--Device-displaySync-interface IntervalInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,10 +26,6 @@ Expected arrival time of the next frame, in nanoseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IntervalInfo-targetTimestamp: long--><!--Device-IntervalInfo-targetTimestamp: long-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -49,10 +41,6 @@ Time when the current frame arrives, in nanoseconds.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IntervalInfo-timestamp: long--><!--Device-IntervalInfo-timestamp: long-End-->
 

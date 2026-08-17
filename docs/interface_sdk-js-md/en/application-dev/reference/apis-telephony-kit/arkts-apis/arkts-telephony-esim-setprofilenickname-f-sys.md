@@ -16,10 +16,6 @@ Adds or updates the given profile nickname.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
 <!--Device-eSIM-function setProfileNickname(slotId: int, iccid: string, nickname: string): Promise<ResultCode>--><!--Device-eSIM-function setProfileNickname(slotId: int, iccid: string, nickname: string): Promise<ResultCode>-End-->
@@ -53,7 +49,7 @@ Adds or updates the given profile nickname.
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

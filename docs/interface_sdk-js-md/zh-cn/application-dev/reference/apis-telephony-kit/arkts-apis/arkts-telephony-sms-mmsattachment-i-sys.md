@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sms-export interface MmsAttachment--><!--Device-sms-export interface MmsAttachment-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -25,10 +21,6 @@ charset?: MmsCharSets
 **类型：** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MmsAttachment-charset?: MmsCharSets--><!--Device-MmsAttachment-charset?: MmsCharSets-End-->
 
@@ -48,10 +40,6 @@ contentDisposition: DispositionType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MmsAttachment-contentDisposition: DispositionType--><!--Device-MmsAttachment-contentDisposition: DispositionType-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -69,10 +57,6 @@ contentId: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MmsAttachment-contentId: string--><!--Device-MmsAttachment-contentId: string-End-->
 
@@ -92,10 +76,6 @@ contentLocation: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MmsAttachment-contentLocation: string--><!--Device-MmsAttachment-contentLocation: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -113,10 +93,6 @@ contentTransferEncoding: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MmsAttachment-contentTransferEncoding: string--><!--Device-MmsAttachment-contentTransferEncoding: string-End-->
 
@@ -136,10 +112,6 @@ contentType: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MmsAttachment-contentType: string--><!--Device-MmsAttachment-contentType: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -157,10 +129,6 @@ fileName?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MmsAttachment-fileName?: string--><!--Device-MmsAttachment-fileName?: string-End-->
 
@@ -180,10 +148,6 @@ inBuff?: Array<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MmsAttachment-inBuff?: Array<int>--><!--Device-MmsAttachment-inBuff?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -202,10 +166,6 @@ isSmil: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MmsAttachment-isSmil: boolean--><!--Device-MmsAttachment-isSmil: boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -223,10 +183,6 @@ path?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MmsAttachment-path?: string--><!--Device-MmsAttachment-path?: string-End-->
 

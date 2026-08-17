@@ -4,10 +4,6 @@ Audio capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface AudioCapabilities--><!--Device-avSession-interface AudioCapabilities-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -29,10 +25,6 @@ Audio stream information.
 **Type:** Array&lt;audio.AudioStreamInfo&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

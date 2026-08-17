@@ -10,10 +10,6 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-sendableImage-function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver--><!--Device-sendableImage-function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
@@ -38,7 +34,7 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

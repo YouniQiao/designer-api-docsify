@@ -1,12 +1,8 @@
 # WebHttpCookie
 
-Defines the Web's HTTPCookie. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The maximum length allowed for each attribute value in a cookie string is 1024. &lt;/p&gt;
+Defines cookie-related fields.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-webview-interface WebHttpCookie--><!--Device-webview-interface WebHttpCookie-End-->
 
@@ -24,15 +20,11 @@ import { webview } from 'webview';
 domain: string
 ```
 
-Gets the domain of the cookie.
+Domain names that can access the cookie.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookie-domain: string--><!--Device-WebHttpCookie-domain: string-End-->
 
@@ -44,15 +36,11 @@ Gets the domain of the cookie.
 expiresDate: string
 ```
 
-Gets the cookie's expiration date.
+Expiration time of the cookie. For details about the time format, see [Date](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Date). If the time string passed in does not conform to this format, the cookie setting does not take effect.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookie-expiresDate: string--><!--Device-WebHttpCookie-expiresDate: string-End-->
 
@@ -64,15 +52,11 @@ Gets the cookie's expiration date.
 isHttpOnly: boolean
 ```
 
-Gets whether the current cookie is marked as HttpOnly.
+Whether the cookie can be accessed only through HTTP requests. The value **true** means the cookie can be accessed only through HTTP, not through JavaScript; **false** means the cookie can be accessed through JavaScript.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookie-isHttpOnly: boolean--><!--Device-WebHttpCookie-isHttpOnly: boolean-End-->
 
@@ -84,15 +68,11 @@ Gets whether the current cookie is marked as HttpOnly.
 isSecure: boolean
 ```
 
-Gets whether the current cookie is marked as Secure.
+Whether the cookie can be sent only through HTTPS. The value **true** means the cookie can be sent only through HTTPS, not through HTTP; **false** means the cookie can be sent through HTTP.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookie-isSecure: boolean--><!--Device-WebHttpCookie-isSecure: boolean-End-->
 
@@ -104,15 +84,11 @@ Gets whether the current cookie is marked as Secure.
 isSessionCookie: boolean
 ```
 
-Gets if the cookie is session cookie.
+Whether the cookie is a session cookie. The value **true** indicates that the cookie is a session cookie, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookie-isSessionCookie: boolean--><!--Device-WebHttpCookie-isSessionCookie: boolean-End-->
 
@@ -124,15 +100,11 @@ Gets if the cookie is session cookie.
 name: string
 ```
 
-Gets the cookie's name.
+Name of the cookie.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookie-name: string--><!--Device-WebHttpCookie-name: string-End-->
 
@@ -144,15 +116,11 @@ Gets the cookie's name.
 path: string
 ```
 
-Gets the cookie's path.
+Path of the cookie.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookie-path: string--><!--Device-WebHttpCookie-path: string-End-->
 
@@ -164,15 +132,11 @@ Gets the cookie's path.
 samesitePolicy: WebHttpCookieSameSitePolicy
 ```
 
-Gets the cookie's samesite policy.
+Same-site policy of the cookie.
 
 **Type:** [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookie-samesitePolicy: WebHttpCookieSameSitePolicy--><!--Device-WebHttpCookie-samesitePolicy: WebHttpCookieSameSitePolicy-End-->
 
@@ -184,15 +148,11 @@ Gets the cookie's samesite policy.
 value: string
 ```
 
-Gets the cookie's value.
+Value of the cookie.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WebHttpCookie-value: string--><!--Device-WebHttpCookie-value: string-End-->
 

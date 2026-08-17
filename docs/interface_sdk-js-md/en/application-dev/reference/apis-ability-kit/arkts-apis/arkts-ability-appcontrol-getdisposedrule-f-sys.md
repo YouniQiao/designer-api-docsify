@@ -16,10 +16,6 @@ Obtains the disposed rule of an application or an application clone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
 <!--Device-appControl-function getDisposedRule(appId: string, appIndex?: int): DisposedRule--><!--Device-appControl-function getDisposedRule(appId: string, appIndex?: int): DisposedRule-End-->
@@ -32,7 +28,7 @@ Obtains the disposed rule of an application or an application clone.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | appId or appIdentifier of the target application. If a rule is set using appId, it must be obtained using appId; the same principle applies to appIdentifier.<br>**NOTE：**<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see How do I obtain appId from application information .<br> [appIdentifier](arkts-ability-bundleinfo-signatureinfo-i.md#SignatureInfo) is also the unique identifier of an app. For details, see What is appIdentifier. For details about how to obtain **appIdentifier**, see How do I obtain appIdentifier from application information . |
+| appId | string | Yes | appId or appIdentifier of the target application. If a rule is set using appId, it must be obtained using appId; the same principle applies to appIdentifier.<br>**NOTE：**<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see How do I obtain appId from application information .<br> [appIdentifier](arkts-ability-bundleinfo-signatureinfo-i.md#signatureinfo) is also the unique identifier of an app. For details, see What is appIdentifier. For details about how to obtain **appIdentifier**, see How do I obtain appIdentifier from application information . |
 | appIndex | int | No | Index of the application clone. The default value is **0**.<br> The value **0** means to obtain the disposed rule of the main application. A value greater than 0 means to obtain the disposed rule of the application clone with the specified index.<br>**Since:** 12 |
 
 **Return value:**

@@ -4,11 +4,9 @@ Describes the parameters of a response send by the server to a specified read or
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [ServerResponse](arkts-connectivity-ble-serverresponse-i.md#ServerResponse)
+**Substitutes:** [ServerResponse](arkts-connectivity-ble-serverresponse-i.md#serverresponse)
 
 <!--Device-bluetoothManager-interface ServerResponse--><!--Device-bluetoothManager-interface ServerResponse-End-->
 
@@ -32,11 +30,9 @@ Indicates the address of the client to which to send the response
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](arkts-connectivity-ble-serverresponse-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-ble-serverresponse-i.md#deviceid)
 
 <!--Device-ServerResponse-deviceId: string--><!--Device-ServerResponse-deviceId: string-End-->
 
@@ -53,8 +49,6 @@ Indicates the byte offset of the start position for reading or writing operation
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -76,8 +70,6 @@ Indicates the status of the read or write request, set this parameter to '0' in 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [status](arkts-connectivity-ble-serverresponse-i.md#status)
@@ -98,11 +90,9 @@ The Id of the write request
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [transId](arkts-connectivity-ble-serverresponse-i.md#transId)
+**Substitutes:** [transId](arkts-connectivity-ble-serverresponse-i.md#transid)
 
 <!--Device-ServerResponse-transId: number--><!--Device-ServerResponse-transId: number-End-->
 
@@ -119,8 +109,6 @@ Indicates the value to be sent
 **Type:** ArrayBuffer
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

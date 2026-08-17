@@ -1,12 +1,8 @@
 # AvoidAreaType
 
-窗口内容的避让区域的类型枚举。 窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的 [AvoidArea](arkts-arkui-window-avoidarea-i.md#AvoidArea)做窗口内容避让。 &lt;!--RP13--&gt; &lt;!--RP13End--&gt;
+窗口内容的避让区域的类型枚举。 窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的 [AvoidArea](arkts-arkui-window-avoidarea-i.md#avoidarea)做窗口内容避让。 &lt;!--RP13--&gt; &lt;!--RP13End--&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-window-enum AvoidAreaType--><!--Device-window-enum AvoidAreaType-End-->
 
@@ -21,10 +17,6 @@ TYPE_SYSTEM = 0
 表示系统默认区域。&lt;!--RP11--&gt;包含状态栏和三键导航栏区域。&lt;!--RP11End--&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,10 +34,6 @@ TYPE_CUTOUT = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AvoidAreaType-TYPE_CUTOUT = 1--><!--Device-AvoidAreaType-TYPE_CUTOUT = 1-End-->
@@ -61,10 +49,6 @@ TYPE_SYSTEM_GESTURE = 2
 表示侧边返回手势区域。当前所有设备均无此类型避让区域。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -82,10 +66,6 @@ TYPE_KEYBOARD = 3
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AvoidAreaType-TYPE_KEYBOARD = 3--><!--Device-AvoidAreaType-TYPE_KEYBOARD = 3-End-->
@@ -102,10 +82,6 @@ TYPE_NAVIGATION_INDICATOR = 4
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AvoidAreaType-TYPE_NAVIGATION_INDICATOR = 4--><!--Device-AvoidAreaType-TYPE_NAVIGATION_INDICATOR = 4-End-->
@@ -121,10 +97,6 @@ TYPE_FLOAT_NAVIGATION = 5
 表示三键导航区域。&lt;!--RP12--&gt;OpenHarmony各设备不支持此能力。&lt;!--RP12End--&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

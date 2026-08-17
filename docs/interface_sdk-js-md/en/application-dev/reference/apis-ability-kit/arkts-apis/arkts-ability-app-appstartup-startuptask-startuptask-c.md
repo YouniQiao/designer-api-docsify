@@ -4,10 +4,6 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
@@ -28,10 +24,6 @@ Called when all the dependent startup tasks are complete. You can initialize the
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>--><!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>-End-->
@@ -42,7 +34,7 @@ Called when all the dependent startup tasks are complete. You can initialize the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | Context environment of the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage). |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | Context environment of the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage). |
 
 **Return value:**
 
@@ -50,7 +42,7 @@ Called when all the dependent startup tasks are complete. You can initialize the
 | --- | --- |
 | Promise&lt;Object \| void&gt; | Promise used to return the execution result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { StartupTask, common } from '@kit.AbilityKit';
@@ -84,10 +76,6 @@ Called when the dependent startup task is complete.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void--><!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void-End-->
@@ -99,9 +87,9 @@ Called when the dependent startup task is complete.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dependency | string | Yes | Name of the dependent startup task. |
-| result | Object | Yes | Execution result of [init](#init) of the dependent startup task. |
+| result | Object | Yes | Execution result of [init](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md#init) of the dependent startup task. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { StartupTask, common } from '@kit.AbilityKit';

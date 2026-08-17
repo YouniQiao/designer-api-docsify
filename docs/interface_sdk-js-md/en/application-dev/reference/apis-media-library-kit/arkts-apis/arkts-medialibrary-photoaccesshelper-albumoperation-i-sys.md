@@ -4,10 +4,6 @@ Album operation info.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface AlbumOperation--><!--Device-photoAccessHelper-interface AlbumOperation-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -32,10 +28,6 @@ The album operation attribute.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AlbumOperation-attr: AlbumAttribute--><!--Device-AlbumOperation-attr: AlbumAttribute-End-->
@@ -56,10 +48,6 @@ The album operation type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AlbumOperation-type: AlbumOperationType--><!--Device-AlbumOperation-type: AlbumOperationType-End-->
@@ -79,10 +67,6 @@ The album operation parameters. The maximum length is 20, The array can contain 
 **Type:** string[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

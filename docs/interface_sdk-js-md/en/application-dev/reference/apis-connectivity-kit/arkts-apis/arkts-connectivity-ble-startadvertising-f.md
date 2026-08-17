@@ -12,13 +12,9 @@ import { ble } from 'ble';
 function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void
 ```
 
-Starts BLE advertising. - If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+Starts BLE advertising. - If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
@@ -53,7 +49,7 @@ Starts BLE advertising. - If only [includeDeviceName](arkts-connectivity-ble-adv
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let manufactureValueBuffer = new Uint8Array(4);
@@ -108,13 +104,9 @@ try {
 function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void
 ```
 
-Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableAdvertising) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md#disableAdvertising). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopAdvertising) with ID. - If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableadvertising) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md#disableadvertising). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopadvertising) with ID. - If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
@@ -146,7 +138,7 @@ Starts BLE advertising. The API returns a advertising ID. The ID can be used to 
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let manufactureValueBuffer = new Uint8Array(4);
@@ -215,13 +207,9 @@ try {
 function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
 ```
 
-Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableAdvertising) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md#disableAdvertising). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopAdvertising) with ID. - If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableadvertising) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md#disableadvertising). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopadvertising) with ID. - If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
@@ -258,7 +246,7 @@ Starts BLE advertising. The API returns a advertising ID. The ID can be used to 
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let manufactureValueBuffer = new Uint8Array(4);

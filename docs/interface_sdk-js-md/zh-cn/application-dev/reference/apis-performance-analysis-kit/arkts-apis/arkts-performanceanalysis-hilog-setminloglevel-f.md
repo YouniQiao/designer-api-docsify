@@ -10,10 +10,6 @@ function setMinLogLevel(level: LogLevel): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hilog-function setMinLogLevel(level: LogLevel): void--><!--Device-hilog-function setMinLogLevel(level: LogLevel): void-End-->
@@ -26,7 +22,7 @@ function setMinLogLevel(level: LogLevel): void
 | --- | --- | --- | --- |
 | level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | 是 | 日志级别。 |
 
-## 示例
+**示例**
 
 以全局日志级别为INFO下，打印5条不同级别的hilog日志，在打印过程中调用两次setMinLogLevel接口为例：
 

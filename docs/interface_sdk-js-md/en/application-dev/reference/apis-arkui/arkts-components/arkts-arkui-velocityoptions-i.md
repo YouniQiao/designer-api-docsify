@@ -4,10 +4,6 @@ Defines velocity options. * > **NOTE：**> > To standardize anonymous object def
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface VelocityOptions--><!--Device-unnamed-declare interface VelocityOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Direction (in angles) in which the particle moves, with the geometric center of 
 **Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Time rate at which the particle moves.
 **Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

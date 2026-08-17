@@ -4,10 +4,6 @@ Represents the holding hand status. The holding hand status is returned if liste
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-motion-export enum HoldingHandStatus--><!--Device-motion-export enum HoldingHandStatus-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
@@ -21,10 +17,6 @@ NOT_HELD = 0
 No holding.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HoldingHandStatus-NOT_HELD = 0--><!--Device-HoldingHandStatus-NOT_HELD = 0-End-->
 
@@ -40,10 +32,6 @@ Holding with the left hand.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HoldingHandStatus-LEFT_HAND_HELD = 1--><!--Device-HoldingHandStatus-LEFT_HAND_HELD = 1-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
@@ -57,10 +45,6 @@ RIGHT_HAND_HELD = 2
 Holding with the right hand.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HoldingHandStatus-RIGHT_HAND_HELD = 2--><!--Device-HoldingHandStatus-RIGHT_HAND_HELD = 2-End-->
 
@@ -76,10 +60,6 @@ Holding with both hands.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-HoldingHandStatus-BOTH_HANDS_HELD = 3--><!--Device-HoldingHandStatus-BOTH_HANDS_HELD = 3-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
@@ -93,10 +73,6 @@ UNKNOWN_STATUS = 16
 Unknown status.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-HoldingHandStatus-UNKNOWN_STATUS = 16--><!--Device-HoldingHandStatus-UNKNOWN_STATUS = 16-End-->
 

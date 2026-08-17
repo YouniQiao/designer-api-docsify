@@ -4,10 +4,6 @@ Provides methods for setting information about text-to-speech (TTS) conversion, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-settings-namespace TTS--><!--Device-settings-namespace TTS-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -24,8 +20,8 @@ import { settings } from 'settings';
 
 | Name | Description |
 | --- | --- |
-| [DEFAULT_TTS_PITCH](arkts-basicservices-tts-con.md#DEFAULT_TTS_PITCH) | Indicates the default pitch of the text-to-speech (TTS) engine. &lt;p&gt;100 = 1x. If the value is set to {@code 200}, the frequency is twice the normal sound frequency. |
-| [DEFAULT_TTS_RATE](arkts-basicservices-tts-con.md#DEFAULT_TTS_RATE) | Indicates the default speech rate of the TTS engine. 100 = 1x. |
-| [DEFAULT_TTS_SYNTH](arkts-basicservices-tts-con.md#DEFAULT_TTS_SYNTH) | Indicates the default TTS engine. |
-| [ENABLED_TTS_PLUGINS](arkts-basicservices-tts-con.md#ENABLED_TTS_PLUGINS) | Indicates the list of activated plug-in packages used for TTS. Multiple plug-in packages are separated by spaces. |
+| [DEFAULT_TTS_PITCH](arkts-basicservices-tts-con.md#defaultttspitch) | Indicates the default pitch of the text-to-speech (TTS) engine. &lt;p&gt;100 = 1x. If the value is set to {@code 200}, the frequency is twice the normal sound frequency. |
+| [DEFAULT_TTS_RATE](arkts-basicservices-tts-con.md#defaultttsrate) | Indicates the default speech rate of the TTS engine. 100 = 1x. |
+| [DEFAULT_TTS_SYNTH](arkts-basicservices-tts-con.md#defaultttssynth) | Indicates the default TTS engine. |
+| [ENABLED_TTS_PLUGINS](arkts-basicservices-tts-con.md#enabledttsplugins) | Indicates the list of activated plug-in packages used for TTS. Multiple plug-in packages are separated by spaces. |
 

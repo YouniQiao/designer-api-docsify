@@ -12,15 +12,13 @@ import { router } from 'router';
 function getState(): RouterState
 ```
 
-Obtains state information about the page at the top of the navigation stack. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
+Obtains state information about the page at the top of the navigation stack. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
-**Substitutes:** [getState](arkts-arkui-arkui-uicontext-router-c.md#getState)
+**Substitutes:** [getState](arkts-arkui-arkui-uicontext-router-c.md#getstate)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,7 +32,7 @@ Obtains state information about the page at the top of the navigation stack. > *
 | --- | --- |
 | RouterState | Page routing state. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let page = this.getUIContext().getRouter().getState();

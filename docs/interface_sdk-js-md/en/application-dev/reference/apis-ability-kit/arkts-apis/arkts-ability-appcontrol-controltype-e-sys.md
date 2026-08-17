@@ -4,10 +4,6 @@ Enumerates the control type of application disposal.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appControl-export enum ControlType--><!--Device-appControl-export enum ControlType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -24,10 +20,6 @@ A trustlist is used, which means that the application components in the list are
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ControlType-ALLOWED_LIST = 1--><!--Device-ControlType-ALLOWED_LIST = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -43,10 +35,6 @@ DISALLOWED_LIST = 2
 A blocklist is used, which means that the application components in the list are forbidden to run.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ControlType-DISALLOWED_LIST = 2--><!--Device-ControlType-DISALLOWED_LIST = 2-End-->
 

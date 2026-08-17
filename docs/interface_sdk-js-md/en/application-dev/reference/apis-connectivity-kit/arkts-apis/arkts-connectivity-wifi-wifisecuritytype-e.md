@@ -4,11 +4,9 @@ Describes the wifi security type.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WifiSecurityType)
+**Substitutes:** [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisecuritytype)
 
 <!--Device-wifi-enum WifiSecurityType--><!--Device-wifi-enum WifiSecurityType-End-->
 
@@ -24,11 +22,9 @@ Invalid security type
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WIFI_SEC_TYPE_INVALID](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WIFI_SEC_TYPE_INVALID)
+**Substitutes:** [WIFI_SEC_TYPE_INVALID](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisectypeinvalid)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_INVALID = 0--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_INVALID = 0-End-->
 
@@ -44,11 +40,9 @@ Open
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WIFI_SEC_TYPE_OPEN](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WIFI_SEC_TYPE_OPEN)
+**Substitutes:** [WIFI_SEC_TYPE_OPEN](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisectypeopen)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1-End-->
 
@@ -64,11 +58,9 @@ Wired Equivalent Privacy (WEP)
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WIFI_SEC_TYPE_WEP](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WIFI_SEC_TYPE_WEP)
+**Substitutes:** [WIFI_SEC_TYPE_WEP](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisectypewep)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2-End-->
 
@@ -84,11 +76,9 @@ Pre-shared key (PSK)
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WIFI_SEC_TYPE_PSK](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WIFI_SEC_TYPE_PSK)
+**Substitutes:** [WIFI_SEC_TYPE_PSK](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisectypepsk)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_PSK = 3--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_PSK = 3-End-->
 
@@ -104,11 +94,9 @@ Simultaneous Authentication of Equals (SAE)
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WIFI_SEC_TYPE_SAE](arkts-connectivity-wifimanager-wifisecuritytype-e.md#WIFI_SEC_TYPE_SAE)
+**Substitutes:** [WIFI_SEC_TYPE_SAE](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisectypesae)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_SAE = 4--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_SAE = 4-End-->
 

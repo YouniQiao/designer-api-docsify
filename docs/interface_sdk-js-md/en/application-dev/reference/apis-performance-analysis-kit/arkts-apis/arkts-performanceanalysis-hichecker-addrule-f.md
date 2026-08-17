@@ -16,11 +16,9 @@ Adds one or more rules. HiChecker detects unexpected operations or gives feedbac
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addCheckRule)
+**Substitutes:** [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule)
 
 <!--Device-hichecker-function addRule(rule: bigint): void--><!--Device-hichecker-function addRule(rule: bigint): void-End-->
 
@@ -32,7 +30,7 @@ Adds one or more rules. HiChecker detects unexpected operations or gives feedbac
 | --- | --- | --- | --- |
 | rule | bigint | Yes | Rule to be added. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Add a rule.

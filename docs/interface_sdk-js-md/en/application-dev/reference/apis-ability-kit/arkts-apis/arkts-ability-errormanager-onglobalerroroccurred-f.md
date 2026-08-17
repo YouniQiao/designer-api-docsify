@@ -16,10 +16,6 @@ Registers a global error observer via the **errorManager.on** API within any thr
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-errorManager-function on(type: 'globalErrorOccurred', observer: GlobalObserver): void--><!--Device-errorManager-function on(type: 'globalErrorOccurred', observer: GlobalObserver): void-End-->
@@ -40,7 +36,7 @@ Registers a global error observer via the **errorManager.on** API within any thr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';

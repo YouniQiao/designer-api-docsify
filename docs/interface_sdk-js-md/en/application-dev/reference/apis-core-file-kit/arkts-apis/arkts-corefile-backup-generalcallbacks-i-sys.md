@@ -4,10 +4,6 @@ General callbacks for both backup and restore procedure. The backup service will
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backup-interface GeneralCallbacks--><!--Device-backup-interface GeneralCallbacks-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -29,10 +25,6 @@ onProcess(bundleName: string, process: string): void
 Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the bundle.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +66,6 @@ Callback called when the backup service return result information. The first ret
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneralCallbacks-onResultReport(bundleName: string, result: string): void--><!--Device-GeneralCallbacks-onResultReport(bundleName: string, result: string): void-End-->
@@ -117,10 +105,6 @@ Callback called when the all the bundles to backup/restore are done or aborted u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeneralCallbacks-onAllBundlesEnd: AsyncCallback<undefined>--><!--Device-GeneralCallbacks-onAllBundlesEnd: AsyncCallback<undefined>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -138,10 +122,6 @@ Callback called when the backup service dies unexpectedly.
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;undefined&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeneralCallbacks-onBackupServiceDied: Callback<undefined>--><!--Device-GeneralCallbacks-onBackupServiceDied: Callback<undefined>-End-->
 
@@ -161,10 +141,6 @@ Callback called when the backup_sa service return result information. The first 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport--><!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -182,10 +158,6 @@ Callback called when a backup/restore procedure for an bundle is started. The fi
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -207,10 +179,6 @@ Callback called when a backup/restore procedure for an bundle ends successfully 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, BundlePara>--><!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, BundlePara>-End-->
@@ -231,10 +199,6 @@ Callback called when the backup service tries to send files to the client. The F
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeneralCallbacks-onFileReady: AsyncCallback<File>--><!--Device-GeneralCallbacks-onFileReady: AsyncCallback<File>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -252,10 +216,6 @@ Callback called when the backup service tries to send files to the client. The F
 **Type:** [OnFileReadyBatch](arkts-corefile-backup-onfilereadybatch-t-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -277,10 +237,6 @@ Callback called when the migrate result is reported. The first return string par
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneralCallbacks-onMigrateResult?: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onMigrateResult?: AsyncCallback<string, void | string>-End-->
@@ -301,10 +257,6 @@ Callback called when the backup_sa service return result information. The first 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneralCallbacks-onProcess: OnProcess--><!--Device-GeneralCallbacks-onProcess: OnProcess-End-->
@@ -324,10 +276,6 @@ Callback called when the backup service return result information. The first ret
 **Type:** [OnResultReport](arkts-corefile-backup-onresultreport-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Enumerates whether the **Web** component loses focus when the soft keyboard is h
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum BlurOnKeyboardHideMode--><!--Device-unnamed-declare enum BlurOnKeyboardHideMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -18,13 +14,9 @@ Enumerates whether the **Web** component loses focus when the soft keyboard is h
 SILENT = 0
 ```
 
-The **Web** component does not lose focus when the soft keyboard is hidden.
+The blur function of the Web component is disabled when the soft keyboard is hidden. When the user manually hides the soft keyboard, the focus remains on the text box. This is applicable to scenarios where the input focus needs to be retained.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -38,13 +30,9 @@ The **Web** component does not lose focus when the soft keyboard is hidden.
 BLUR = 1
 ```
 
-The **Web** component loses focus when the soft keyboard is hidden, and the focus moves from the text box to the web body.
+The blur function of the Web component is enabled when the soft keyboard is hidden. When the user manually hides the soft keyboard, the focus moves from the text box to the body of the Web component, and the text box loses focus. This is applicable to scenarios where standard input box behavior is required.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

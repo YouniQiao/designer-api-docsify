@@ -16,10 +16,6 @@ Register the callback for display changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-function onChange(callback: Callback<long>): void--><!--Device-display-function onChange(callback: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

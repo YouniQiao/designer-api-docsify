@@ -16,10 +16,6 @@ Obtains the list of detailed information about peripherals. If the device has no
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
 <!--Device-deviceManager-function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>--><!--Device-deviceManager-function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>-End-->
@@ -32,7 +28,7 @@ Obtains the list of detailed information about peripherals. If the device has no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | long | No | Device ID, which is obtained through [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices). If no device ID is passed, all device information is obtained by default. If no external device is connected and no device ID is passed, an empty array is returned. |
+| deviceId | long | No | Device ID, which is obtained through [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices). If no device ID is passed, all device information is obtained by default. If no external device is connected and no device ID is passed, an empty array is returned. |
 
 **Return value:**
 
@@ -49,7 +45,7 @@ Obtains the list of detailed information about peripherals. If the device has no
 | [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application cannot call a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

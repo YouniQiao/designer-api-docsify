@@ -4,8 +4,6 @@ Performs date and time formatting.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
@@ -30,8 +28,6 @@ Creates a **DateTimeOptions** object for the specified locale.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
@@ -44,7 +40,7 @@ Creates a **DateTimeOptions** object for the specified locale.
 
 **System capability:** SystemCapability.Global.I18n
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -62,8 +58,6 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 Creates a **DateTimeOptions** object for the specified locale.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -84,7 +78,7 @@ Creates a **DateTimeOptions** object for the specified locale.
 | locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
 | options | DateTimeOptions | No | Options for creating the **DateTimeOptions** object. If no options are set, the default values of **year**, **month**, and **day** are **numeric**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -105,8 +99,6 @@ format(date: Date): string
 Formats the date and time.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -132,7 +124,7 @@ Formats the date and time.
 | --- | --- |
 | string | A string containing the formatted date and time. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -156,8 +148,6 @@ formatRange(startDate: Date, endDate: Date): string
 Formats date and time ranges.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 20
 
@@ -184,7 +174,7 @@ Formats date and time ranges.
 | --- | --- |
 | string | A string containing the formatted date and time ranges. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -206,8 +196,6 @@ Obtains the options for creating a **DateTimeOptions** object.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
@@ -226,7 +214,7 @@ Obtains the options for creating a **DateTimeOptions** object.
 | --- | --- |
 | DateTimeOptions | Options for the **DateTimeOptions** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

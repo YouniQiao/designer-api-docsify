@@ -2,13 +2,9 @@
 
 Implements the running environment of the Worker thread. The GlobalScope class inherits from WorkerEventTarget.
 
-**Inheritance/Implementation:** GlobalScope extends [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#WorkerEventTarget)
+**Inheritance/Implementation:** GlobalScope extends [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#workereventtarget)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface GlobalScope--><!--Device-unnamed-declare interface GlobalScope-End-->
 
@@ -45,10 +41,6 @@ Worker instance specified when there is a new Worker instance.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GlobalScope-readonly name: string--><!--Device-GlobalScope-readonly name: string-End-->
@@ -67,10 +59,6 @@ Called when an exception occurs during worker execution. The event handler is ex
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GlobalScope-onerror?: (ev: ErrorEvent) => void--><!--Device-GlobalScope-onerror?: (ev: ErrorEvent) => void-End-->
@@ -88,10 +76,6 @@ GlobalScope itself.
 **Type:** [GlobalScope](arkts-arkts-worker-globalscope-i.md) & typeof globalThis
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

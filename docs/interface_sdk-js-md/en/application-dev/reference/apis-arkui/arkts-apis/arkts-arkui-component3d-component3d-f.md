@@ -14,9 +14,7 @@ Defines Component3D.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-@ComponentBuilderexport declare function Component3D(    sceneOptions?: SceneOptions,    content_?: CustomBuilder,): Component3DAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Component3D(    sceneOptions?: SceneOptions,    content_?: CustomBuilder,): Component3DAttribute-End-->
 

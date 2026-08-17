@@ -4,9 +4,7 @@ Defines the triggered function at the end of web page loading.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnPageEndEvent--><!--Device-unnamed-export declare interface OnPageEndEvent-End-->
 
@@ -24,9 +22,7 @@ The url of page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnPageEndEvent-url: string--><!--Device-OnPageEndEvent-url: string-End-->
 

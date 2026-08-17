@@ -10,10 +10,6 @@ function setTextUndefinedGlyphDisplay(noGlyphShow: TextUndefinedGlyphDisplay): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-text-function setTextUndefinedGlyphDisplay(noGlyphShow: TextUndefinedGlyphDisplay): void--><!--Device-text-function setTextUndefinedGlyphDisplay(noGlyphShow: TextUndefinedGlyphDisplay): void-End-->
@@ -26,7 +22,7 @@ function setTextUndefinedGlyphDisplay(noGlyphShow: TextUndefinedGlyphDisplay): v
 | --- | --- | --- | --- |
 | noGlyphShow | [TextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-textundefinedglyphdisplay-e.md) | 是 | 无法塑形字符的显示方式。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 text.setTextUndefinedGlyphDisplay(text.TextUndefinedGlyphDisplay.USE_TOFU)

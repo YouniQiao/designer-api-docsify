@@ -10,10 +10,6 @@ function stopDeviceLogging(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-avSession-function stopDeviceLogging(): Promise<void>--><!--Device-avSession-function stopDeviceLogging(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -34,7 +30,7 @@ function stopDeviceLogging(): Promise<void>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
-## 示例
+**示例**
 
 ```TypeScript
 avSession.stopDeviceLogging().then(() => {

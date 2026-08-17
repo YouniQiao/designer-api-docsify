@@ -4,10 +4,6 @@ The **RPC** module implements communication between processes, including inter-p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace rpc--><!--Device-unnamed-declare namespace rpc-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -38,7 +34,7 @@ import { rpc } from 'rpc';
 
 | Name | Description |
 | --- | --- |
-| [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Subscribes to death notifications of a remote object. When the remote object is dead, the local end will receive a notification and **[onRemoteDied](arkts-ipc-rpc-deathrecipient-i.md#onRemoteDied)** will be called. A remote object is dead when the process holding the object is terminated or the device of the remote object is shut down or restarted. If the local and remote objects belong to different devices, the remote object is dead when the device holding the remote object is detached from the network. |
+| [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Subscribes to death notifications of a remote object. When the remote object is dead, the local end will receive a notification and **[onRemoteDied](arkts-ipc-rpc-deathrecipient-i.md#onremotedied)** will be called. A remote object is dead when the process holding the object is terminated or the device of the remote object is shut down or restarted. If the local and remote objects belong to different devices, the remote object is dead when the device holding the remote object is detached from the network. |
 | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Represents the holder of a remote proxy object. It is used to obtain a proxy object. |
 | [Parcelable](arkts-ipc-rpc-parcelable-i.md) | Writes an object to a **MessageSequence** and reads it from the **MessageSequence** during IPC. |
 | [RequestResult](arkts-ipc-rpc-requestresult-i.md) | Defines the response to the request. |
@@ -50,7 +46,7 @@ import { rpc } from 'rpc';
 | Name | Description |
 | --- | --- |
 | [ErrorCode](arkts-ipc-rpc-errorcode-e.md) | The APIs of this module return exceptions since API version 9. The following table lists the error codes. |
-| [TypeCode](arkts-ipc-rpc-typecode-e.md) | Since API version 12, [writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writeArrayBuffer) and [readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readArrayBuffer) are added to pass ArrayBuffer data. The specific TypedArray type is determined by the **TypeCode** defined as follows: |
+| [TypeCode](arkts-ipc-rpc-typecode-e.md) | Since API version 12, [writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writearraybuffer) and [readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readarraybuffer) are added to pass ArrayBuffer data. The specific TypedArray type is determined by the **TypeCode** defined as follows: |
 
 ### Types
 

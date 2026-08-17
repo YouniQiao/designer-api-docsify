@@ -4,11 +4,9 @@ P2P config.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md#WifiP2PConfig)
+**Substitutes:** [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md#wifip2pconfig)
 
 <!--Device-wifi-interface WifiP2PConfig--><!--Device-wifi-interface WifiP2PConfig-End-->
 
@@ -32,11 +30,9 @@ Device mac address s
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deviceAddress](arkts-connectivity-wifimanager-wifip2pconfig-i.md#deviceAddress)
+**Substitutes:** [deviceAddress](arkts-connectivity-wifimanager-wifip2pconfig-i.md#deviceaddress)
 
 <!--Device-WifiP2PConfig-deviceAddress: string--><!--Device-WifiP2PConfig-deviceAddress: string-End-->
 
@@ -54,11 +50,9 @@ Group owner band
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [goBand](arkts-connectivity-wifimanager-wifip2pconfig-i.md#goBand)
+**Substitutes:** [goBand](arkts-connectivity-wifimanager-wifip2pconfig-i.md#goband)
 
 <!--Device-WifiP2PConfig-goBand: GroupOwnerBand--><!--Device-WifiP2PConfig-goBand: GroupOwnerBand-End-->
 
@@ -76,11 +70,9 @@ Group name
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [groupName](arkts-connectivity-wifimanager-wifip2pconfig-i.md#groupName)
+**Substitutes:** [groupName](arkts-connectivity-wifimanager-wifip2pconfig-i.md#groupname)
 
 <!--Device-WifiP2PConfig-groupName: string--><!--Device-WifiP2PConfig-groupName: string-End-->
 
@@ -98,11 +90,9 @@ Group network ID. When creating a group, -1 indicates creates a temporary group,
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [netId](arkts-connectivity-wifimanager-wifip2pconfig-i.md#netId)
+**Substitutes:** [netId](arkts-connectivity-wifimanager-wifip2pconfig-i.md#netid)
 
 <!--Device-WifiP2PConfig-netId: number--><!--Device-WifiP2PConfig-netId: number-End-->
 
@@ -119,8 +109,6 @@ The passphrase of this {@code WifiP2pConfig} instance
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

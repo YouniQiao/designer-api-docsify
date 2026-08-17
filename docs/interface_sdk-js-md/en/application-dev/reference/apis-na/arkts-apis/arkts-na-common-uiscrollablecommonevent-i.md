@@ -2,13 +2,11 @@
 
 Defines a UIScrollableCommonEvent which is used to set event to target component.
 
-**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-na-common-uicommonevent-i.md#UICommonEvent)
+**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-na-common-uicommonevent-i.md#uicommonevent)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare interface UIScrollableCommonEvent--><!--Device-unnamed-export declare interface UIScrollableCommonEvent-End-->
 
@@ -24,9 +22,7 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +46,7 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,9 +70,7 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,9 +94,7 @@ Set or reset the callback which is triggered when the scrolling started.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,9 +118,7 @@ Set or reset the callback which is triggered when the scrolling stopped.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

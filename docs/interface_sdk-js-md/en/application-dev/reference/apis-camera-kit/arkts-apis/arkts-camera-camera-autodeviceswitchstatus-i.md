@@ -4,10 +4,6 @@ Describes the information about the automatic camera switch status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface AutoDeviceSwitchStatus--><!--Device-camera-interface AutoDeviceSwitchStatus-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -30,10 +26,6 @@ Whether the camera capability is changed after the camera is automatically switc
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-AutoDeviceSwitchStatus-readonly isDeviceCapabilityChanged: boolean--><!--Device-AutoDeviceSwitchStatus-readonly isDeviceCapabilityChanged: boolean-End-->
@@ -51,10 +43,6 @@ Whether the camera is automatically switched. **true** if auto-switched, **false
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

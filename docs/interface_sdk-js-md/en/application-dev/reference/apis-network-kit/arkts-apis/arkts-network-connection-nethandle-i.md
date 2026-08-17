@@ -4,10 +4,6 @@ Defines the handle of the data network.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-export interface NetHandle--><!--Device-connection-export interface NetHandle-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -24,13 +20,9 @@ import { connection } from 'connection';
 bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void
 ```
 
-&lt;p&gt;Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).&lt;/p&gt; Before using this method, ensure that the socket is disconnected.
+&lt;p&gt;Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to [setAppNet](arkts-network-connection-setappnet-f.md#setappnet).&lt;/p&gt; Before using this method, ensure that the socket is disconnected.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void-End-->
 
@@ -52,7 +44,7 @@ bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): v
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection, socket } from '@kit.NetworkKit';
@@ -120,13 +112,9 @@ interface Data {
 bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 ```
 
-&lt;p&gt;Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).&lt;/p&gt; Before using this method, ensure that the socket is disconnected.
+&lt;p&gt;Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to [setAppNet](arkts-network-connection-setappnet-f.md#setappnet).&lt;/p&gt; Before using this method, ensure that the socket is disconnected.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>-End-->
 
@@ -153,7 +141,7 @@ bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection, socket } from '@kit.NetworkKit';
@@ -220,10 +208,6 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-NetHandle-getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void--><!--Device-NetHandle-getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void-End-->
@@ -247,7 +231,7 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -279,10 +263,6 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-NetHandle-getAddressByName(host: string): Promise<NetAddress>--><!--Device-NetHandle-getAddressByName(host: string): Promise<NetAddress>-End-->
@@ -311,7 +291,7 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -338,10 +318,6 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -367,7 +343,7 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -399,10 +375,6 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -433,7 +405,7 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -459,10 +431,6 @@ getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Arra
 Resolves a host name to obtain all IP addresses based on the specified NetHandle with specified query option.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -494,7 +462,7 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -528,10 +496,6 @@ Network ID, a value of 0 means that there is no default network, and the other v
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

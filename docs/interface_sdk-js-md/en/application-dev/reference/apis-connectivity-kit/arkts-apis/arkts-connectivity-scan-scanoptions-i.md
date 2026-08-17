@@ -4,10 +4,6 @@ Describes the parameters for scan.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-scan-interface ScanOptions--><!--Device-scan-interface ScanOptions-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -30,10 +26,6 @@ Indicates the scan duration. If the "duration" is not set, the scanning is perfo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScanOptions-duration?: int--><!--Device-ScanOptions-duration?: int-End-->
@@ -51,10 +43,6 @@ Indicates the scan mode. If the "scanMode" is not set, the default value is "SCA
 **Type:** ScanMode
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

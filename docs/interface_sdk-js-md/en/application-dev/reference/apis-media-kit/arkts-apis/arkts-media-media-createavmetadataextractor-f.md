@@ -16,10 +16,6 @@ Creates an AVMetadataExtractor instance. This API uses a promise to return the r
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor>--><!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -36,7 +32,7 @@ Creates an AVMetadataExtractor instance. This API uses a promise to return the r
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,10 +61,6 @@ Creates an **AVMetadataExtractor** instance. This API uses a promise to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor | undefined>--><!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -96,10 +88,6 @@ Creates an AVMetadataExtractor instance. This API uses an asynchronous callback 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void--><!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -116,7 +104,7 @@ Creates an AVMetadataExtractor instance. This API uses an asynchronous callback 
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -142,10 +130,6 @@ function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor |
 Creates an **AVMetadataExtractor** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor | undefined>): void--><!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor | undefined>): void-End-->
 

@@ -1,14 +1,10 @@
 # LayeredDrawableDescriptor
 
-Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult). The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
+Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult). The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
 
-**Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
+**Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#drawabledescriptor)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class LayeredDrawableDescriptor--><!--Device-unnamed-export class LayeredDrawableDescriptor-End-->
 
@@ -43,10 +39,6 @@ A constructor used to create a **LayeredDrawableDescriptor** object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -73,10 +65,6 @@ Obtains the **DrawableDescriptor** object of the background.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -97,7 +85,7 @@ Obtains the **DrawableDescriptor** object of the background.
 | --- | --- |
 | [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';
@@ -146,10 +134,6 @@ Obtains the **DrawableDescriptor** object of the foreground.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -170,7 +154,7 @@ Obtains the **DrawableDescriptor** object of the foreground.
 | --- | --- |
 | [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';
@@ -224,10 +208,6 @@ Obtains the **DrawableDescriptor** object of the mask.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -248,7 +228,7 @@ Obtains the **DrawableDescriptor** object of the mask.
 | --- | --- |
 | [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';
@@ -297,10 +277,6 @@ Obtains the built-in clipping path parameters of the system. It is a static meth
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -315,7 +291,7 @@ Obtains the built-in clipping path parameters of the system. It is a static meth
 | --- | --- |
 | string | String of the clipping path. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.ets
@@ -351,10 +327,6 @@ Sets the blend mode of **LayeredDrawableDescriptor**. If this API is called for 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -369,7 +341,7 @@ Sets the blend mode of **LayeredDrawableDescriptor**. If this API is called for 
 | --- | --- | --- | --- |
 | mode | drawing.BlendMode | Yes | Blend mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';

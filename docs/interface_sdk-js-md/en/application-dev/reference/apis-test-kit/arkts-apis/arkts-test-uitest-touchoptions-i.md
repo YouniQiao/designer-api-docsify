@@ -4,10 +4,6 @@ Common options for touch operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface TouchOptions--><!--Device-unnamed-declare interface TouchOptions-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -58,10 +54,6 @@ Duration of the operation in milliseconds. <br>Value range: The value should be 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TouchOptions-duration?: int--><!--Device-TouchOptions-duration?: int-End-->
@@ -80,10 +72,6 @@ Pressure value of the touch. The value range is [0, 1]. The default value is **0
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TouchOptions-pressure?: double--><!--Device-TouchOptions-pressure?: double-End-->
@@ -101,10 +89,6 @@ Speed of touch action. <br>Value range:[200, 40000] <br>Unit: px/s. <br>If the v
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

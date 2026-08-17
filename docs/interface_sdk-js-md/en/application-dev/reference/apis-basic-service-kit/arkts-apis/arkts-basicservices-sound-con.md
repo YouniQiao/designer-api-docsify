@@ -10,8 +10,6 @@ Specifies which audio streams are affected by changes on the ringing mode and Do
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-sound-const AFFECTED_MODE_RINGER_STREAMS: string--><!--Device-sound-const AFFECTED_MODE_RINGER_STREAMS: string-End-->
@@ -27,8 +25,6 @@ const AFFECTED_MUTE_STREAMS: string
 Specifies which audio streams are affected by the mute mode. &lt;p&gt;If you want a specific audio stream to remain muted in mute mode, set the corresponding bit to {@code 1}.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 
@@ -46,8 +42,6 @@ Indicates the storage area of the system default alarm. &lt;p&gt;You can obtain 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-sound-const DEFAULT_ALARM_ALERT: string--><!--Device-sound-const DEFAULT_ALARM_ALERT: string-End-->
@@ -63,8 +57,6 @@ const DEFAULT_NOTIFICATION_SOUND: string
 Indicates the storage area of the system default notification tone. &lt;p&gt;You can obtain the URI of the system default notification tone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 
@@ -82,8 +74,6 @@ Indicates the storage area of the system default ringtone. &lt;p&gt;You can obta
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-sound-const DEFAULT_RINGTONE: string--><!--Device-sound-const DEFAULT_RINGTONE: string-End-->
@@ -99,8 +89,6 @@ const DTMF_TONE_TYPE_WHILE_DIALING: string
 Indicates the type of the dual-tone multifrequency (DTMF) tone played when dialing. &lt;p&gt;The value {@code 0} indicates the normal short sound effect, and {@code 1} indicates the long sound effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 
@@ -118,8 +106,6 @@ Specifies whether the DTMF tone is played when dialing. &lt;p&gt;If the value is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-sound-const DTMF_TONE_WHILE_DIALING: string--><!--Device-sound-const DTMF_TONE_WHILE_DIALING: string-End-->
@@ -135,8 +121,6 @@ const HAPTIC_FEEDBACK_STATUS: string
 Indicates whether the device enables haptic feedback. &lt;p&gt;The value is of the boolean type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 
@@ -154,8 +138,6 @@ Specifies whether the sound effects are enabled. &lt;p&gt;If the value is {@code
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-sound-const SOUND_EFFECTS_STATUS: string--><!--Device-sound-const SOUND_EFFECTS_STATUS: string-End-->
@@ -172,8 +154,6 @@ Specifies whether the device vibrates for an event. This parameter is used insid
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 21
 
 <!--Device-sound-const VIBRATE_STATUS: string--><!--Device-sound-const VIBRATE_STATUS: string-End-->
@@ -189,8 +169,6 @@ const VIBRATE_WHILE_RINGING: string
 Indicates whether the device vibrates when it is ringing for an incoming call. &lt;p&gt;This constant will be used by Phone and Settings applications. The value is of the boolean type. This constant affects only the scenario where the device rings for an incoming call. It does not affect any other application or scenario.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface UnifiedGroupInfo--><!--Device-unnamed-export interface UnifiedGroupInfo-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -25,10 +21,6 @@ content?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UnifiedGroupInfo-content?: string--><!--Device-UnifiedGroupInfo-content?: string-End-->
 
@@ -48,10 +40,6 @@ extraInfo?: Record<string, RecordData>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UnifiedGroupInfo-extraInfo?: Record<string, RecordData>--><!--Device-UnifiedGroupInfo-extraInfo?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -69,10 +57,6 @@ key?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UnifiedGroupInfo-key?: string--><!--Device-UnifiedGroupInfo-key?: string-End-->
 
@@ -92,10 +76,6 @@ sceneName?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UnifiedGroupInfo-sceneName?: string--><!--Device-UnifiedGroupInfo-sceneName?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -113,10 +93,6 @@ title?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UnifiedGroupInfo-title?: string--><!--Device-UnifiedGroupInfo-title?: string-End-->
 

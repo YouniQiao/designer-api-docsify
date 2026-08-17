@@ -8,10 +8,6 @@ Defines the custom data in the shortcut configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-shortcutManager-export type ParameterItem = _ParameterItem--><!--Device-shortcutManager-export type ParameterItem = _ParameterItem-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher

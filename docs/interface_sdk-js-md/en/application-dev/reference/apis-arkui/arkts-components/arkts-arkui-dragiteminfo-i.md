@@ -4,10 +4,6 @@ Defines the information about the dragged item during drag.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface DragItemInfo--><!--Device-unnamed-declare interface DragItemInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Custom component to display during dragging. If **pixelMap** is set, this parame
 **Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ Additional information about the dragged item, used to describe the item being d
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DragItemInfo-extraInfo?: string--><!--Device-DragItemInfo-extraInfo?: string-End-->
@@ -67,10 +55,6 @@ Image to be displayed during dragging.
 **Type:** [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

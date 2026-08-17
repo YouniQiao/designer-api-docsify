@@ -12,13 +12,9 @@ import { application } from 'application';
 export function createBundleContext(context: Context, bundleName: string): Promise<Context>
 ```
 
-Creates the context for an application. This API uses a promise to return the result. > **NOTE：**> > Starting from API version 18, the context can obtain the > [process name](arkts-ability-context-c.md#Context) of the current > application. The **processName** property in the context created by **createBundleContext** is the same as the > **processName** property in the input parameter **Context**. The values of other properties are obtained based on > the input parameters **Context**, **bundleName**, and **moduleName**.
+Creates the context for an application. This API uses a promise to return the result. > **NOTE：**> > Starting from API version 18, the context can obtain the > [process name](arkts-ability-context-c.md#context) of the current > application. The **processName** property in the context created by **createBundleContext** is the same as the > **processName** property in the input parameter **Context**. The values of other properties are obtained based on > the input parameters **Context**, **bundleName**, and **moduleName**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -51,7 +47,7 @@ Creates the context for an application. This API uses a promise to return the re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, application, common } from '@kit.AbilityKit';

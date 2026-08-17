@@ -6,10 +6,10 @@
 
 | Name | Description |
 | --- | --- |
-| [borderRadiuses](arkts-arkui-graphics-borderradiuses-f.md#borderRadiuses) | Generates a **borderRadiuses** object with the specified radius for all border corners. |
-| [borderStyles](arkts-arkui-graphics-borderstyles-f.md#borderStyles) | Generates a border style object with the specified border style color for all borders. |
-| [edgeColors](arkts-arkui-graphics-edgecolors-f.md#edgeColors) | Generates an **edgeColors** object with the specified edge color for all edges. |
-| [edgeWidths](arkts-arkui-graphics-edgewidths-f.md#edgeWidths) | Generates an **edgeWidths** object with the specified edge width for all edges. |
+| [borderRadiuses](arkts-arkui-graphics-borderradiuses-f.md#borderradiuses) | Generates a **borderRadiuses** object with the specified radius for all border corners. |
+| [borderStyles](arkts-arkui-graphics-borderstyles-f.md#borderstyles) | Generates a border style object with the specified border style color for all borders. |
+| [edgeColors](arkts-arkui-graphics-edgecolors-f.md#edgecolors) | Generates an **edgeColors** object with the specified edge color for all edges. |
+| [edgeWidths](arkts-arkui-graphics-edgewidths-f.md#edgewidths) | Generates an **edgeWidths** object with the specified edge width for all edges. |
 
 ### Classes
 

@@ -10,10 +10,6 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
 <!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>--><!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>-End-->
@@ -24,7 +20,7 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| busType | int | 否 | 由[BusType](arkts-driverdevelopment-devicemanager-bustype-e.md#BusType)约定的设备总线类型，不填则查找所有类型设备。 |
+| busType | int | 否 | 由[BusType](arkts-driverdevelopment-devicemanager-bustype-e.md#bustype)约定的设备总线类型，不填则查找所有类型设备。 |
 
 **返回值：**
 
@@ -39,7 +35,7 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
 | [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) | ExternalDeviceManager service exception or busType parameter error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

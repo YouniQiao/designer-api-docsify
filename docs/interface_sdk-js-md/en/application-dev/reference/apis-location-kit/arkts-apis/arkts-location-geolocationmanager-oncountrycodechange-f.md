@@ -16,10 +16,6 @@ Registering the callback function for listening to country code changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-function onCountryCodeChange(callback: Callback<CountryCode>): void--><!--Device-geoLocationManager-function onCountryCodeChange(callback: Callback<CountryCode>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Core

@@ -16,11 +16,9 @@ Disables NFC.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md#disableNfc)
+**Substitutes:** [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md#disablenfc)
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS
 

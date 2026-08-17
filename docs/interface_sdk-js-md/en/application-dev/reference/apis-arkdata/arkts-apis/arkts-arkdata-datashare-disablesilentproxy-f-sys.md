@@ -16,10 +16,6 @@ Disables silent access. This API uses a promise to return the result. Observe th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-dataShare-function disableSilentProxy(context: Context, uri?: string): Promise<void>--><!--Device-dataShare-function disableSilentProxy(context: Context, uri?: string): Promise<void>-End-->
@@ -49,7 +45,7 @@ Disables silent access. This API uses a promise to return the result. Observe th
 | [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

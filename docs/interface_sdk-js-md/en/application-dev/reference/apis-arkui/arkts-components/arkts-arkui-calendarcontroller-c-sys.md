@@ -4,8 +4,6 @@ Calendar controller.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 <!--Device-unnamed-declare class CalendarController--><!--Device-unnamed-declare class CalendarController-End-->
@@ -23,8 +21,6 @@ backToToday()
 Back to day.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 
@@ -46,8 +42,6 @@ Constructor.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -67,8 +61,6 @@ goTo(value: { year: number; month: number; day: number })
 To the specified element.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 20
 

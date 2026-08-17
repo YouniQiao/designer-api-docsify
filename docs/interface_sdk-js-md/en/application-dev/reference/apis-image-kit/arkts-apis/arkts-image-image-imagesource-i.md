@@ -1,12 +1,8 @@
 # ImageSource
 
-The **ImageSource** class provides APIs to obtain image information. Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) to create an ImageSource instance. All APIs in ImageSource cannot be called concurrently. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **ImageSource** class provides APIs to obtain image information. Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) to create an ImageSource instance. All APIs in ImageSource cannot be called concurrently. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-interface ImageSource--><!--Device-image-interface ImageSource-End-->
 
@@ -27,10 +23,6 @@ createImageRawData(): Promise<ImageRawData>
 Obtains raw data from an image.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,10 +52,6 @@ createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 Creates a Picture object based on decoding options. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture>--><!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture>-End-->
 
@@ -99,10 +87,6 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture | undefined>--><!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -134,10 +118,6 @@ createPictureAtIndex(index: int): Promise<Picture>
 Creates a **Picture** object using a specified image (only GIF and HEIF&lt;sup&gt;23+&lt;/sup&gt; images currently). This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-createPictureAtIndex(index: int): Promise<Picture>--><!--Device-ImageSource-createPictureAtIndex(index: int): Promise<Picture>-End-->
 
@@ -175,10 +155,6 @@ Decodes an image at the specified index into a Picture object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-createPictureAtIndex(index : int): Promise<Picture | undefined>--><!--Device-ImageSource-createPictureAtIndex(index : int): Promise<Picture | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -211,13 +187,9 @@ Decodes an image at the specified index into a Picture object.
 createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createPixelMapUsingAllocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
+Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#allocatortype) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -249,10 +221,6 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap | undefined>--><!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -275,13 +243,9 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 createPixelMap(callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createPixelMapUsingAllocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
+Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#allocatortype) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -307,10 +271,6 @@ Creates a PixelMap object. This method uses a callback to return the object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap | undefined>): void--><!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap | undefined>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -327,13 +287,9 @@ Creates a PixelMap object. This method uses a callback to return the object.
 createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createPixelMapUsingAllocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
+Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result. Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#allocatortype) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -360,10 +316,6 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap | undefined>): void--><!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap | undefined>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -384,10 +336,6 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 Creates an array of PixelMap objects based on decoding options. This API uses a promise to return the result. For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image. > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed. > > - This function decodes all frames at once. If the number of frames is high or the size of individual frames is > large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component > for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this > function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>--><!--Device-ImageSource-createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>-End-->
 
@@ -433,10 +381,6 @@ Creates an array of PixelMap objects based on the default parameters. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void--><!--Device-ImageSource-createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -475,10 +419,6 @@ Creates an array of PixelMap objects based on decoding options. This API uses an
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void--><!--Device-ImageSource-createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -514,13 +454,9 @@ Creates an array of PixelMap objects based on decoding options. This API uses an
 createPixelMapSync(options?: DecodingOptions): PixelMap
 ```
 
-Creates a PixelMap object based on decoding options. This API returns the result synchronously. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. Starting from API version 15, you are advised to use [createPixelMapUsingAllocatorSync](#createPixelMapUsingAllocatorSync) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > This API operates synchronously and will block the current thread during execution. It should not be invoked > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For > details, see > [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
+Creates a PixelMap object based on decoding options. This API returns the result synchronously. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. Starting from API version 15, you are advised to use [createPixelMapUsingAllocatorSync](#createpixelmapusingallocatorsync) . This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md#allocatortype) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > This API operates synchronously and will block the current thread during execution. It should not be invoked > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For > details, see > [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap--><!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap-End-->
 
@@ -548,10 +484,6 @@ Create a PixelMap object based on image decoding parameters synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap | undefined--><!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -577,10 +509,6 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 Creates a PixelMap object based on decoding options and memory type. This API uses a promise to return the result. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). > **NOTE：**> > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance. > > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call > [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. > > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have > finished and the instance is no longer needed.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>-End-->
 
@@ -623,10 +551,6 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType)      : Promise<PixelMap | undefined>--><!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType)      : Promise<PixelMap | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -665,10 +589,6 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 Creates a PixelMap object based on decoding options and memory type. This API returns the result synchronously. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md). Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. > **NOTE：**> > This API operates synchronously and will block the current thread during execution. It should not be invoked > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For > details, see > [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap-End-->
 
@@ -710,10 +630,6 @@ Creates a PixelMap based on decoding parameters synchronously, the memory type u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap | undefined--><!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -752,10 +668,6 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 Creates a thumbnail image based on image decoding parameters. This method uses a promise to return the PixelMap object, which represents the thumbnail.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -796,10 +708,6 @@ Synchronously creates a thumbnail image based on image decoding parameters. This
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageSource-createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined--><!--Device-ImageSource-createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined-End-->
@@ -839,10 +747,6 @@ Obtains an array of delay times. This API uses a promise to return the result. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-getDelayTimeList(): Promise<Array<int>>--><!--Device-ImageSource-getDelayTimeList(): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -875,10 +779,6 @@ getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 Obtains an array of delay times. This API uses an asynchronous callback to return the result. This API applies only to images in GIF or WebP format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-getDelayTimeList(callback: AsyncCallback<Array<int>>): void--><!--Device-ImageSource-getDelayTimeList(callback: AsyncCallback<Array<int>>): void-End-->
 
@@ -913,10 +813,6 @@ Obtains the list of disposal types. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-getDisposalTypeList(): Promise<Array<int>>--><!--Device-ImageSource-getDisposalTypeList(): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -945,10 +841,6 @@ getFrameCount(): Promise<int>
 Obtains the number of frames. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-getFrameCount(): Promise<int>--><!--Device-ImageSource-getFrameCount(): Promise<int>-End-->
 
@@ -984,10 +876,6 @@ Obtains the number of frames. This API uses an asynchronous callback to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-getFrameCount(callback: AsyncCallback<int>): void--><!--Device-ImageSource-getFrameCount(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1022,10 +910,6 @@ Obtains the image information with the specified index. This API uses an asynchr
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -1051,10 +935,6 @@ Obtains information about an image with the specified sequence number and uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo | undefined>): void--><!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo | undefined>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1075,10 +955,6 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 Obtains the image information. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1104,10 +980,6 @@ Obtains information about this image and uses a callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo | undefined>): void--><!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo | undefined>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1127,10 +999,6 @@ getImageInfo(index?: int): Promise<ImageInfo>
 Obtains the image information. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1162,10 +1030,6 @@ Get image information from image source.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo | undefined>--><!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1191,10 +1055,6 @@ getImageInfoSync(index?: int): ImageInfo
 Obtains the image information with the specified index. This API returns the result synchronously. > **NOTE：**> > This API operates synchronously and will block the current thread during execution. It should not be invoked > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For > details, see > [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo--><!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo-End-->
 
@@ -1222,10 +1082,6 @@ Get image information from image source synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo | undefined--><!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1251,10 +1107,6 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 Obtains the values of properties with the given names in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>--><!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>-End-->
 
@@ -1292,10 +1144,6 @@ Obtains the value of properties in an image. This method uses a promise to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<string, string|null>>--><!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<string, string|null>>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1330,10 +1178,6 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 Obtains the value of a property with the specified index in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/ sup&gt; format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>-End-->
 
@@ -1379,11 +1223,9 @@ Obtains the value of a property with the specified index in this image. This API
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty](#getImageProperty)(key: PropertyKey, options?: ImagePropertyOptions)
+**Substitutes:** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
 
 <!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>-End-->
 
@@ -1412,11 +1254,9 @@ Obtains the value of a property with the specified index in this image. This API
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty](#getImageProperty)(key: PropertyKey, options?: ImagePropertyOptions)
+**Substitutes:** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
 
 <!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -1439,11 +1279,9 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty](#getImageProperty)(key: PropertyKey, options?: ImagePropertyOptions)
+**Substitutes:** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
 
 <!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void-End-->
 
@@ -1466,10 +1304,6 @@ getImagePropertySync(key: PropertyKey): string
 Obtains the value of a specified Exif property. This API returns the result synchronously. > **NOTE：**> > - This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format > and contain Exif information. (The supported formats may vary depending on the hardware.) > > - Exif information is metadata of the image, including shooting time, camera model, aperture, focal length, and > ISO. > > - This API operates synchronously and will block the current thread during execution. It should not be invoked > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For > details, see > [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string--><!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string-End-->
 
@@ -1505,10 +1339,6 @@ Obtains the value of a property in the image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string | undefined--><!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string | undefined-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1542,10 +1372,6 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 Modifies the values of properties in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.) > **NOTE：**> > The property byte length is changed when the **modifyImageProperties** API is called to modify the values of > properties. Currently, you can call the API in an ImageSource instance created based on a file descriptor or > path, but not an ImageSource instance created based on buffers.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>-End-->
 
@@ -1582,10 +1408,6 @@ Modify the value of properties in an image with the specified keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-modifyImageProperties(records: Record<string, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageProperties(records: Record<string, string|null>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1616,13 +1438,9 @@ Modify the value of properties in an image with the specified keys.
 modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>
 ```
 
-Modifies image properties in batches. This API uses a promise to return the result. > **NOTE：**> > - Calling this API to modify properties alters the property byte length. You are advised to create an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) instance by passing a > file descriptor or an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) instance by > passing a URI. > > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more > efficient than > [modifyImageProperties](#modifyImageProperties) > . > > - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
+Modifies image properties in batches. This API uses a promise to return the result. > **NOTE：**> > - Calling this API to modify properties alters the property byte length. You are advised to create an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by passing a > file descriptor or an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by > passing a URI. > > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more > efficient than > [modifyImageProperties](#modifyimageproperties) > . > > - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>--><!--Device-ImageSource-modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>-End-->
 
@@ -1657,10 +1475,6 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 Modifies the value of a property in this image. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.) > **NOTE：**> > The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a > property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path > , but not an ImageSource instance created based on buffers.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-modifyImageProperty(key: PropertyKey, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: PropertyKey, value: string): Promise<void>-End-->
 
@@ -1699,11 +1513,9 @@ Modifies the value of a property in this image. This API uses a promise to retur
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [modifyImageProperty](#modifyImageProperty)(key: PropertyKey, value: string)
+**Substitutes:** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>-End-->
 
@@ -1732,11 +1544,9 @@ Modifies the value of a property in this image. This API uses an asynchronous ca
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [modifyImageProperty](#modifyImageProperty)(key: PropertyKey, value: string)
+**Substitutes:** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1756,13 +1566,9 @@ Modifies the value of a property in this image. This API uses an asynchronous ca
 readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 ```
 
-Reads image metadata. You can use **propertyKeys** to specify the keys of metadata. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format and contain Exif information. ( The supported formats may vary depending on the hardware.) > **NOTE：**> > When reading a DNG image, this API applies special handling to some **propertyKeys**. For details about the > values of the following properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey): > > - **NewSubfileType**, **ImageWidth**, **ImageLength**, **DefaultCropSize**, **Orientation**, **Compression**, > **PhotometricInterpretation**, **PlanarConfiguration**, **RowsPerStrip**, **StripOffsets**, **StripByteCounts** > , **SamplesPerPixel**, **BitsPerSample**, **YCbCrCoefficients**, **YCbCrSubSampling**, **YCbCrPositioning**, > **ReferenceBlackWhite**, **XResolution**, **YResolution**, and **ResolutionUnit**: For these properties, values > related to the main image are returned. > > - **ImageUniqueID**: The value is verified based on the specifications. If the value fails to comply with the > specifications, an empty string is returned. > > - **ExifVersion**, **FlashpixVersion**, and **ColorSpace**: If the image does not contain these properties, an > error code is returned. > > - **DNGVersion**: If the value is earlier than **1.0.0.0**, **1.0.0.0** is returned. > > - **GPSVersionID**: If there is no valid GPS data, the GPS version number is cleared and **0** is returned. > > - **GPSAltitudeRef**: If **GPSAltitude** is not set, this property is set to **0xFFFFFFFF**. > > - **ISOSpeedRatings**: If its value is **0** or **65535**, the recommended exposure index is used first. If the > recommended exposure index does not exist, the standard output sensitivity, ISO speed, and exposure index are > used in sequence.
+Reads image metadata. You can use **propertyKeys** to specify the keys of metadata. This API uses a promise to return the result. This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format and contain Exif information. ( The supported formats may vary depending on the hardware.) > **NOTE：**> > When reading a DNG image, this API applies special handling to some **propertyKeys**. For details about the > values of the following properties, see [PropertyKey](arkts-image-image-propertykey-e.md#propertykey): > > - **NewSubfileType**, **ImageWidth**, **ImageLength**, **DefaultCropSize**, **Orientation**, **Compression**, > **PhotometricInterpretation**, **PlanarConfiguration**, **RowsPerStrip**, **StripOffsets**, **StripByteCounts** > , **SamplesPerPixel**, **BitsPerSample**, **YCbCrCoefficients**, **YCbCrSubSampling**, **YCbCrPositioning**, > **ReferenceBlackWhite**, **XResolution**, **YResolution**, and **ResolutionUnit**: For these properties, values > related to the main image are returned. > > - **ImageUniqueID**: The value is verified based on the specifications. If the value fails to comply with the > specifications, an empty string is returned. > > - **ExifVersion**, **FlashpixVersion**, and **ColorSpace**: If the image does not contain these properties, an > error code is returned. > > - **DNGVersion**: If the value is earlier than **1.0.0.0**, **1.0.0.0** is returned. > > - **GPSVersionID**: If there is no valid GPS data, the GPS version number is cleared and **0** is returned. > > - **GPSAltitudeRef**: If **GPSAltitude** is not set, this property is set to **0xFFFFFFFF**. > > - **ISOSpeedRatings**: If its value is **0** or **65535**, the recommended exposure index is used first. If the > recommended exposure index does not exist, the standard output sensitivity, ISO speed, and exposure index are > used in sequence.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1801,10 +1607,6 @@ Reads the metadata of an image source. You can use **metadataTypes** to specify 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageSource-readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>--><!--Device-ImageSource-readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>-End-->
@@ -1842,10 +1644,6 @@ Releases this ImageSource instance. This API uses an asynchronous callback to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-release(callback: AsyncCallback<void>): void--><!--Device-ImageSource-release(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1866,10 +1664,6 @@ Releases this ImageSource instance. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-release(): Promise<void>--><!--Device-ImageSource-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1889,10 +1683,6 @@ updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Pro
 Updates incremental data. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>--><!--Device-ImageSource-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>-End-->
 
@@ -1929,10 +1719,6 @@ Updates incremental data. This API uses an asynchronous callback to return the r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void--><!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -1953,13 +1739,9 @@ Updates incremental data. This API uses an asynchronous callback to return the r
 writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 ```
 
-Modifies image properties in batches. This API uses a promise to return the result. > **NOTE：**> > - Calling this API to modify properties alters the property byte length. You are advised to create an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) instance by passing a > file descriptor or an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) instance by > passing a URI. > > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more > efficient than > [modifyImageProperties](#modifyImageProperties) > . > > - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information. > Before modifying properties, use the **supportedFormats** property to check whether the device supports Exif > information read/write in HEIF format.
+Modifies image properties in batches. This API uses a promise to return the result. > **NOTE：**> > - Calling this API to modify properties alters the property byte length. You are advised to create an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by passing a > file descriptor or an > [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by > passing a URI. > > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more > efficient than > [modifyImageProperties](#modifyimageproperties) > . > > - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information. > Before modifying properties, use the **supportedFormats** property to check whether the device supports Exif > information read/write in HEIF format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1998,10 +1780,6 @@ Supported image formats.
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImageSource-readonly supportedFormats: Array<string>--><!--Device-ImageSource-readonly supportedFormats: Array<string>-End-->
 

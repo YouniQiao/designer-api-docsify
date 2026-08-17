@@ -4,10 +4,6 @@ Defines a rectangle.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-webview-interface RectEvent--><!--Device-webview-interface RectEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -30,10 +26,6 @@ Height of the rectangle. Unit: px.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-RectEvent-height: number--><!--Device-RectEvent-height: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -50,10 +42,6 @@ Width of the rectangle. Unit: px.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-RectEvent-width: number--><!--Device-RectEvent-width: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -64,15 +52,11 @@ Width of the rectangle. Unit: px.
 x: number
 ```
 
-X-axis coordinate of the upper left corner of the rectangle.
+X-coordinate of the upper left corner of the rectangular area. Unit: px.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-RectEvent-x: number--><!--Device-RectEvent-x: number-End-->
 
@@ -84,15 +68,11 @@ X-axis coordinate of the upper left corner of the rectangle.
 y: number
 ```
 
-Y-axis coordinate of the upper left corner of the rectangle.
+Y-coordinate of the upper left corner of the rectangular area. Unit: px.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-RectEvent-y: number--><!--Device-RectEvent-y: number-End-->
 

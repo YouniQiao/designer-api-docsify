@@ -4,10 +4,6 @@ Declare class TreeListenerV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class TreeListenerV2--><!--Device-unnamed-export declare class TreeListenerV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -33,10 +29,6 @@ Destroy node add callback event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -49,7 +41,7 @@ Destroy node add callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | No |  |
 
 ## offNodeClick
 
@@ -60,10 +52,6 @@ offNodeClick(callback?: OnChangedCallback): void
 Destroy node click callback event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,7 +65,7 @@ Destroy node click callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | No |  |
 
 ## offNodeDelete
 
@@ -88,10 +76,6 @@ offNodeDelete(callback?: OnChangedCallback): void
 Destroy node delete callback event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,7 +89,7 @@ Destroy node delete callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | No |  |
 
 ## offNodeModify
 
@@ -116,10 +100,6 @@ offNodeModify(callback?: OnChangedCallback): void
 Destroy node modify callback event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,7 +113,7 @@ Destroy node modify callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | No |  |
 
 ## offNodeMove
 
@@ -144,10 +124,6 @@ offNodeMove(callback?: OnChangedCallback): void
 Destroy node move callback event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,7 +137,7 @@ Destroy node move callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | No |  |
 
 ## onNodeAdd
 
@@ -172,10 +148,6 @@ onNodeAdd(callback: OnChangedCallback): void
 Node add event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -189,7 +161,7 @@ Node add event registration and processing. The event will not be destroyed afte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeClick
 
@@ -200,10 +172,6 @@ onNodeClick(callback: OnChangedCallback): void
 Node click event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -217,7 +185,7 @@ Node click event registration and processing. The event will not be destroyed af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeDelete
 
@@ -228,10 +196,6 @@ onNodeDelete(callback: OnChangedCallback): void
 Node delete event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -245,7 +209,7 @@ Node delete event registration and processing. The event will not be destroyed a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeModify
 
@@ -256,10 +220,6 @@ onNodeModify(callback: OnChangedCallback): void
 Node modify event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -273,7 +233,7 @@ Node modify event registration and processing. The event will not be destroyed a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeMove
 
@@ -284,10 +244,6 @@ onNodeMove(callback: OnChangedCallback): void
 Node move event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -301,7 +257,7 @@ Node move event registration and processing. The event will not be destroyed aft
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeAdd
 
@@ -312,10 +268,6 @@ onceNodeAdd(callback: OnChangedCallback): void
 Node add event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -329,7 +281,7 @@ Node add event registration and processing. After the event is processed once, i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeClick
 
@@ -340,10 +292,6 @@ onceNodeClick(callback: OnChangedCallback): void
 Node click event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -357,7 +305,7 @@ Node click event registration and processing. After the event is processed once,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeDelete
 
@@ -368,10 +316,6 @@ onceNodeDelete(callback: OnChangedCallback): void
 Node delete event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -385,7 +329,7 @@ Node delete event registration and processing. After the event is processed once
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeModify
 
@@ -396,10 +340,6 @@ onceNodeModify(callback: OnChangedCallback): void
 Node modify event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -413,7 +353,7 @@ Node modify event registration and processing. After the event is processed once
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeMove
 
@@ -424,10 +364,6 @@ onceNodeMove(callback: OnChangedCallback): void
 Node move event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -441,5 +377,5 @@ Node move event registration and processing. After the event is processed once, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
 

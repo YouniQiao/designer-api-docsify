@@ -4,10 +4,6 @@ AnimationResult
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AnimationResult--><!--Device-unnamed-export interface AnimationResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ cancel(): void
 Cancels the animation.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,10 +34,6 @@ Ends the animation.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimationResult-finish(): void--><!--Device-AnimationResult-finish(): void-End-->
@@ -61,10 +49,6 @@ pause(): void
 Pauses the animation.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -82,10 +66,6 @@ Starts the animation.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimationResult-play(): void--><!--Device-AnimationResult-play(): void-End-->
@@ -101,10 +81,6 @@ reverse(): void
 Plays the animation in reverse direction.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -124,10 +100,6 @@ Read-only attribute, which indicates whether the animation playback is complete.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimationResult-finished: boolean--><!--Device-AnimationResult-finished: boolean-End-->
@@ -145,10 +117,6 @@ The animation is canceled.
 **Type:** () =&gt; void
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -168,10 +136,6 @@ The animation is finished.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimationResult-onfinish: () => void--><!--Device-AnimationResult-onfinish: () => void-End-->
@@ -189,10 +153,6 @@ The animation is repeated.
 **Type:** () =&gt; void
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -212,10 +172,6 @@ The animation is started.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimationResult-onstart: () => void--><!--Device-AnimationResult-onstart: () => void-End-->
@@ -233,10 +189,6 @@ Read-only attribute, which indicates whether an animation is waiting for the com
 **Type:** boolean
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -256,10 +208,6 @@ Animation running state: idle: The animation is not running (playback ended or n
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AnimationResult-playstate: string--><!--Device-AnimationResult-playstate: string-End-->
@@ -277,10 +225,6 @@ Animation start time. This attribute is similar to that of delay in the options 
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

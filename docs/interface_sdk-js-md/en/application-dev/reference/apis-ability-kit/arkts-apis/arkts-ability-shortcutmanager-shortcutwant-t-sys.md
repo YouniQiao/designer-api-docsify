@@ -8,10 +8,6 @@ Defines the target [wants](../../../quick-start/module-configuration-file.md#wan
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-shortcutManager-export type ShortcutWant = _ShortcutWant--><!--Device-shortcutManager-export type ShortcutWant = _ShortcutWant-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher

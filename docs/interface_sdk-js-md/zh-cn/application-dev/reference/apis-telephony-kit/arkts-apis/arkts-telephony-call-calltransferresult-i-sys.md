@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-call-export interface CallTransferResult--><!--Device-call-export interface CallTransferResult-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -25,10 +21,6 @@ endHour: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CallTransferResult-endHour: int--><!--Device-CallTransferResult-endHour: int-End-->
 
@@ -48,10 +40,6 @@ endMinute: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CallTransferResult-endMinute: int--><!--Device-CallTransferResult-endMinute: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -69,10 +57,6 @@ number: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 <!--Device-CallTransferResult-number: string--><!--Device-CallTransferResult-number: string-End-->
 
@@ -92,10 +76,6 @@ startHour: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CallTransferResult-startHour: int--><!--Device-CallTransferResult-startHour: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -113,10 +93,6 @@ startMinute: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CallTransferResult-startMinute: int--><!--Device-CallTransferResult-startMinute: int-End-->
 
@@ -136,10 +112,6 @@ status: TransferStatus
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CallTransferResult-status: TransferStatus--><!--Device-CallTransferResult-status: TransferStatus-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -157,10 +129,6 @@ Indicates the phone number of call forwarding.
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CallTransferResult-teleNumber: string--><!--Device-CallTransferResult-teleNumber: string-End-->
 

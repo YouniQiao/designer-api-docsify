@@ -16,10 +16,6 @@ Open the Certificate Management Uninstall Certificate dialog. The corresponding 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -48,13 +44,13 @@ Open the Certificate Management Uninstall Certificate dialog. The corresponding 
 | --- | --- |
 | [29700005](../errorcode-certManagerDialog.md#29700005-nonsecure-operation) | The operation does not comply with the device security policy, such as the device does not allow users to manage the CA certificate of the global user. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) | For security purposes, the current device does not support this API. You can use the [supportsCACertDialog](arkts-devicecertificate-certificatemanagerdialog-supportscacertdialog-f.md#supportsCACertDialog) to determine whether the device can open the dialog box for deleting a CA certificate with certType set to CA. |
+| [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) | For security purposes, the current device does not support this API. You can use the [supportsCACertDialog](arkts-devicecertificate-certificatemanagerdialog-supportscacertdialog-f.md#supportscacertdialog) to determine whether the device can open the dialog box for deleting a CA certificate with certType set to CA. |
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 | [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) | The user uninstall certificate failed in the certificate manager dialog, such as the certificate uri is not exist. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the uninstallation operation. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';

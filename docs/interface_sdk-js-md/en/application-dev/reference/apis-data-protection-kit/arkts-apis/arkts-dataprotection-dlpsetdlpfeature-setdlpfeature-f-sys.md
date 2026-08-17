@@ -16,10 +16,6 @@ Sets the DLP status. This API uses a promise to return the result. The system en
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-dlpSetDlpFeature-function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>--><!--Device-dlpSetDlpFeature-function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>-End-->

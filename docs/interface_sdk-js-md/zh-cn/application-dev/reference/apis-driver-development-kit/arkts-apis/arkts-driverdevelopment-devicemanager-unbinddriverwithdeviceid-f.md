@@ -10,10 +10,6 @@ function unbindDriverWithDeviceId(deviceId: long): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_DDK_DRIVERS
 
 <!--Device-deviceManager-function unbindDriverWithDeviceId(deviceId: long): Promise<int>--><!--Device-deviceManager-function unbindDriverWithDeviceId(deviceId: long): Promise<int>-End-->
@@ -24,7 +20,7 @@ function unbindDriverWithDeviceId(deviceId: long): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | long | 是 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)获得。 |
+| deviceId | long | 是 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获得。 |
 
 **返回值：**
 
@@ -40,7 +36,7 @@ function unbindDriverWithDeviceId(deviceId: long): Promise<int>
 | [26300003](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300003-驱动客户端未绑定任何驱动服务端) | There is no binding relationship. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

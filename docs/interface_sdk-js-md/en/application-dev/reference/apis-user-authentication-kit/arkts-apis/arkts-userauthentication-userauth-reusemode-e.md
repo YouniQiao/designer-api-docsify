@@ -4,10 +4,6 @@ Enumerates the modes for reusing authentication results. This enum defines four 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-userAuth-enum ReuseMode--><!--Device-userAuth-enum ReuseMode-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -21,10 +17,6 @@ AUTH_TYPE_RELEVANT = 1
 The device unlock authentication result can be reused within the validity period if the authentication type matches any of the authentication types specified for this authentication. For example, after a user uses face authentication to unlock the device, the authentication result can be reused within the validity period if the user initiates a service operation that requires face authentication. However, if the user initiates a service operation that requires fingerprint authentication, the authentication result cannot be reused.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ The device unlock authentication result can be reused within the validity period
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ReuseMode-AUTH_TYPE_IRRELEVANT = 2--><!--Device-ReuseMode-AUTH_TYPE_IRRELEVANT = 2-End-->
@@ -62,10 +50,6 @@ Any identity authentication result (including device unlock authentication resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3--><!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3-End-->
@@ -81,10 +65,6 @@ CALLER_IRRELEVANT_AUTH_TYPE_IRRELEVANT = 4
 Any identity authentication result (including device unlock authentication result) can be reused within the validity period regardless of the authentication type. For example, after a user uses face authentication to complete an operation in an application, the authentication result can be reused within the validity period if the user initiates an authentication operation of any type in another application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

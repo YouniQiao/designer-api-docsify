@@ -16,10 +16,6 @@ Obtains the list of USB Key credential . This API uses a promise to return the r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -51,7 +47,7 @@ Obtains the list of USB Key credential . This API uses a promise to return the r
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. <br>The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

@@ -8,10 +8,6 @@ The type of the priority key can be number or string
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-type PRIKeyType = long | double | string--><!--Device-relationalStore-type PRIKeyType = long | double | string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

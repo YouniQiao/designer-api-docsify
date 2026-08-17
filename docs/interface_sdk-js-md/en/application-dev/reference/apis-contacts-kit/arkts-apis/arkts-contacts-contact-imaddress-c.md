@@ -4,10 +4,6 @@ Enumerates IM addresses.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-contact-class ImAddress--><!--Device-contact-class ImAddress-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -30,10 +26,6 @@ Custom instant message type, the default value is **-1**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ImAddress-static readonly CUSTOM_LABEL: -1--><!--Device-ImAddress-static readonly CUSTOM_LABEL: -1-End-->
@@ -51,10 +43,6 @@ AIM, the default value is **0**.
 **Type:** 0
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ ICQ, the default value is **6**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ImAddress-static readonly IM_ICQ: 6--><!--Device-ImAddress-static readonly IM_ICQ: 6-End-->
@@ -95,10 +79,6 @@ JABBER, the default value is **7**.
 **Type:** 7
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,10 +98,6 @@ MSN, the default value is **1**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ImAddress-static readonly IM_MSN: 1--><!--Device-ImAddress-static readonly IM_MSN: 1-End-->
@@ -139,10 +115,6 @@ QQ, the default value is **4**.
 **Type:** 4
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,10 +134,6 @@ Skype, the default value is **3**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ImAddress-static readonly IM_SKYPE: 3--><!--Device-ImAddress-static readonly IM_SKYPE: 3-End-->
@@ -183,10 +151,6 @@ Yahoo, the default value is **2**.
 **Type:** 2
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -206,10 +170,6 @@ Invalid instant message type, the default value is **-2**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ImAddress-static readonly INVALID_LABEL_ID: -2--><!--Device-ImAddress-static readonly INVALID_LABEL_ID: -2-End-->
@@ -227,10 +187,6 @@ IM address.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -250,10 +206,6 @@ Instant message type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ImAddress-labelId?: number--><!--Device-ImAddress-labelId?: number-End-->
@@ -271,10 +223,6 @@ Name of the instant message type.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

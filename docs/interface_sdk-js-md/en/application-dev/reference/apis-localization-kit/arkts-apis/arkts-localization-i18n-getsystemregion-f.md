@@ -16,11 +16,9 @@ Obtains the system region.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSystemRegion](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getSystemRegion)
+**Substitutes:** [getSystemRegion](arkts-localization-i18n-system-c.md#getsystemregion)
 
 <!--Device-i18n-export function getSystemRegion(): string--><!--Device-i18n-export function getSystemRegion(): string-End-->
 
@@ -32,7 +30,7 @@ Obtains the system region.
 | --- | --- |
 | string | System region ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

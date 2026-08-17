@@ -4,10 +4,6 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export class DialogPresenter--><!--Device-unnamed-export class DialogPresenter-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ dismiss(target: int | ComponentContent<Object>): Promise<void>
 关闭对话框。 接受对话ID（由当前返回）或ComponentContent引用。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,10 +55,6 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -104,10 +92,6 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -120,7 +104,7 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | CustomBuilder \| [CustomBuilderWithId](../../apis-na/arkts-apis/arkts-na-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | 是 | 自定义对话框内容。 |
+| content | CustomBuilder \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | 是 | 自定义对话框内容。 |
 | options | dialog.DialogCustomOptions | 否 | 自定义对话框选项。 |
 
 **返回值：**
@@ -147,10 +131,6 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 更新已呈现的自定义对话框。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

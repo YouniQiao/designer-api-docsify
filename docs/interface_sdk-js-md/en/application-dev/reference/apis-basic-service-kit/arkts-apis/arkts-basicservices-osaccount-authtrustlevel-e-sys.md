@@ -4,10 +4,6 @@ Enumerates the trust levels of the authentication result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-enum AuthTrustLevel--><!--Device-osAccount-enum AuthTrustLevel-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ ATL1 = 10000
 Trust level 1.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthTrustLevel-ATL1 = 10000--><!--Device-AuthTrustLevel-ATL1 = 10000-End-->
 
@@ -44,10 +36,6 @@ Trust level 2.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthTrustLevel-ATL2 = 20000--><!--Device-AuthTrustLevel-ATL2 = 20000-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -64,10 +52,6 @@ Trust level 3.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AuthTrustLevel-ATL3 = 30000--><!--Device-AuthTrustLevel-ATL3 = 30000-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -83,10 +67,6 @@ ATL4 = 40000
 Trust level 4.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuthTrustLevel-ATL4 = 40000--><!--Device-AuthTrustLevel-ATL4 = 40000-End-->
 

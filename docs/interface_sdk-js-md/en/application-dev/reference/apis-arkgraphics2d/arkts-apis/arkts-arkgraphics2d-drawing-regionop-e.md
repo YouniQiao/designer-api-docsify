@@ -4,10 +4,6 @@ Enumerates the operations for combining two regions. > **NOTE：**> > The schema
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-enum RegionOp--><!--Device-drawing-enum RegionOp-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ DIFFERENCE = 0
 Difference operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RegionOp-DIFFERENCE = 0--><!--Device-RegionOp-DIFFERENCE = 0-End-->
 
@@ -40,10 +32,6 @@ Intersect operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RegionOp-INTERSECT = 1--><!--Device-RegionOp-INTERSECT = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -57,10 +45,6 @@ UNION = 2
 Union operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RegionOp-UNION = 2--><!--Device-RegionOp-UNION = 2-End-->
 
@@ -76,10 +60,6 @@ XOR operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RegionOp-XOR = 3--><!--Device-RegionOp-XOR = 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -94,10 +74,6 @@ Reverse difference operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RegionOp-REVERSE_DIFFERENCE = 4--><!--Device-RegionOp-REVERSE_DIFFERENCE = 4-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -111,10 +87,6 @@ REPLACE = 5
 Replace operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RegionOp-REPLACE = 5--><!--Device-RegionOp-REPLACE = 5-End-->
 

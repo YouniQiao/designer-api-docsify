@@ -8,10 +8,6 @@ Defines the plugin information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type PluginBundleInfo = _PluginBundleInfo--><!--Device-bundleManager-export type PluginBundleInfo = _PluginBundleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

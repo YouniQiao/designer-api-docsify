@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [WithEnv](arkts-na-arkui-withenv-withenv-f.md#WithEnv) | Define the WithEnv component that allows setting environment properties for child components. |
+| [WithEnv](arkts-na-arkui-withenv-withenv-f.md#withenv) | Define the WithEnv component that allows setting environment properties for child components. |
 
 ### Interfaces
 

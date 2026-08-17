@@ -8,10 +8,6 @@ Defines the information in the [HarmonyAppProvision configuration file](../../..
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type AppProvisionInfo = _AppProvisionInfo--><!--Device-bundleManager-export type AppProvisionInfo = _AppProvisionInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

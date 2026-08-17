@@ -4,10 +4,6 @@ Base options shared by all dialog types.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-dialog-declare interface DialogBaseOptions--><!--Device-dialog-declare interface DialogBaseOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -37,10 +33,6 @@ Sets the distortion animation Mode of the dialog.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogBaseOptions-distortionMode?: DistortionMode--><!--Device-DialogBaseOptions-distortionMode?: DistortionMode-End-->
@@ -62,10 +54,6 @@ Sets the edgeLight animation Mode of the dialog.
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [LazyColumnLayout](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayout-f.md#LazyColumnLayout) | Defines LazyColumnLayout Component. |
+| [LazyColumnLayout](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayout-f.md#lazycolumnlayout) | Defines LazyColumnLayout Component. |
 
 ### Interfaces
 

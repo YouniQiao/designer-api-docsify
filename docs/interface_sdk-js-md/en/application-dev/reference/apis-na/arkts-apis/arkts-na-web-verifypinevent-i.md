@@ -4,9 +4,7 @@ Defines the event for PIN verification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface VerifyPinEvent--><!--Device-unnamed-export declare interface VerifyPinEvent-End-->
 
@@ -24,9 +22,7 @@ Handle the result of PIN verification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-VerifyPinEvent-handler: VerifyPinHandler--><!--Device-VerifyPinEvent-handler: VerifyPinHandler-End-->
 
@@ -44,9 +40,7 @@ The identity of the Credential.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-VerifyPinEvent-identity: string--><!--Device-VerifyPinEvent-identity: string-End-->
 

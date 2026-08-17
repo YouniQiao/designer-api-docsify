@@ -16,11 +16,9 @@ Waits for a remote device to connect.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppAccept)
+**Substitutes:** [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppaccept)
 
 <!--Device-bluetoothManager-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void--><!--Device-bluetoothManager-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void-End-->
 
@@ -30,7 +28,7 @@ Waits for a remote device to connect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverSocket | number | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md#sppListen). |
+| serverSocket | number | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md#spplisten). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
 
 **Error codes:**
@@ -44,7 +42,7 @@ Waits for a remote device to connect.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

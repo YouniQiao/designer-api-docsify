@@ -10,10 +10,6 @@ function getAppThreadCpuUsage(): ThreadCpuUsage[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]--><!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -24,7 +20,7 @@ function getAppThreadCpuUsage(): ThreadCpuUsage[]
 | --- | --- |
 | [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] | 返回当前应用进程下所有ThreadCpuUsage数组。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

@@ -10,10 +10,6 @@ function getCallTransferInfo(slotId: int, type: CallTransferType, callback: Asyn
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-call-function getCallTransferInfo(slotId: int, type: CallTransferType, callback: AsyncCallback<CallTransferResult>): void--><!--Device-call-function getCallTransferInfo(slotId: int, type: CallTransferType, callback: AsyncCallback<CallTransferResult>): void-End-->
@@ -28,7 +24,7 @@ function getCallTransferInfo(slotId: int, type: CallTransferType, callback: Asyn
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 | type | [CallTransferType](arkts-telephony-call-calltransfertype-e-sys.md) | 是 | 呼叫转移类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i-sys.md)&gt; | 是 | 回调函数。返回呼叫转移信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i-sys.md)&gt; | 是 | 回调函数。返回呼叫转移信息。 |
 
 **错误码：**
 
@@ -42,7 +38,7 @@ function getCallTransferInfo(slotId: int, type: CallTransferType, callback: Asyn
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -66,10 +62,6 @@ function getCallTransferInfo(slotId: int, type: CallTransferType): Promise<CallT
 获取呼叫转移信息。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -104,7 +96,7 @@ function getCallTransferInfo(slotId: int, type: CallTransferType): Promise<CallT
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

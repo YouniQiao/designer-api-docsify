@@ -10,11 +10,9 @@ Obtains the ID attached to the end of a given URI.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getId](arkts-ability-datauriutils-getid-f.md#getId)
+**Substitutes:** [getId](arkts-ability-datauriutils-getid-f.md#getid)
 
 <!--Device-dataUriUtils-function getId(uri: string): number--><!--Device-dataUriUtils-function getId(uri: string): number-End-->
 
@@ -32,7 +30,7 @@ Obtains the ID attached to the end of a given URI.
 | --- | --- |
 | number | ID obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import dataUriUtils from '@ohos.ability.dataUriUtils';

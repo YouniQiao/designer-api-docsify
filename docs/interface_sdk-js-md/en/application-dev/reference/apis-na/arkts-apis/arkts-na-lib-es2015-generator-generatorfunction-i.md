@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface GeneratorFunction--><!--Device-unnamed-interface GeneratorFunction-End-->
 
 ## constructor
@@ -17,10 +13,6 @@ new (...args: any[]): Generator
 Creates a new Generator object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-GeneratorFunction-new (...args: any[]): Generator--><!--Device-GeneratorFunction-new (...args: any[]): Generator-End-->
 
@@ -45,10 +37,6 @@ Creates a new Generator object.
 Creates a new Generator object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-GeneratorFunction-(...args: any[]): Generator--><!--Device-GeneratorFunction-(...args: any[]): Generator-End-->
 
@@ -76,10 +64,6 @@ The length of the arguments.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-GeneratorFunction-readonly length: number--><!--Device-GeneratorFunction-readonly length: number-End-->
 
 ## name
@@ -94,10 +78,6 @@ Returns the name of the function.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-GeneratorFunction-readonly name: string--><!--Device-GeneratorFunction-readonly name: string-End-->
 
 ## prototype
@@ -111,10 +91,6 @@ A reference to the prototype.
 **Type:** Generator
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-GeneratorFunction-readonly prototype: Generator--><!--Device-GeneratorFunction-readonly prototype: Generator-End-->
 

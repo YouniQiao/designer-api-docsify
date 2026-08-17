@@ -1,12 +1,8 @@
 # Panel（系统接口）
 
-划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel（系统接口）)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。
+划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel系统接口)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-selectionManager-interface Panel--><!--Device-selectionManager-interface Panel-End-->
 
@@ -20,13 +16,9 @@
 moveToGlobalDisplay(x: int, y: int): Promise<void>
 ```
 
-移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel（系统接口）)获取到Panel实例后调用。使用Promise异步回调。
+移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel系统接口)获取到Panel实例后调用。使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,7 +46,7 @@ moveToGlobalDisplay(x: int, y: int): Promise<void>
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
 | [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -96,13 +88,9 @@ try {
 offDestroy(callback?: Callback<void>): void
 ```
 
-取消订阅划词面板销毁事件，与[onDestroy](#onDestroy)搭配使用。需通过 [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel（系统接口）)获取到Panel实例后调用。
+取消订阅划词面板销毁事件，与[onDestroy](#ondestroy)搭配使用。需通过 [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel系统接口)获取到Panel实例后调用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,9 +102,9 @@ offDestroy(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onDestroy方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onDestroy方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -135,13 +123,9 @@ try {
 offHide(callback?: Callback<void>): void
 ```
 
-取消订阅划词面板隐藏事件，与[onHide](#onHide)搭配使用。需通过 [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel（系统接口）)获取到Panel实例后调用。
+取消订阅划词面板隐藏事件，与[onHide](#onhide)搭配使用。需通过 [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel系统接口)获取到Panel实例后调用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -153,9 +137,9 @@ offHide(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onHide方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要取消的回调函数（即之前通过onHide方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -174,13 +158,9 @@ try {
 onDestroy(callback: Callback<void>): void
 ```
 
-订阅划词面板销毁事件，与[offDestroy](#offDestroy)搭配使用。需通过 [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel（系统接口）)获取到Panel实例后调用。
+订阅划词面板销毁事件，与[offDestroy](#offdestroy)搭配使用。需通过 [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel系统接口)获取到Panel实例后调用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -192,9 +172,9 @@ onDestroy(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md#destroyPanel（系统接口）)销毁面板时触发。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md#destroypanel系统接口)销毁面板时触发。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -215,13 +195,9 @@ try {
 onHide(callback: Callback<void>): void
 ```
 
-订阅划词面板隐藏事件，与[offHide](#offHide)搭配使用。需通过 [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel（系统接口）)获取到Panel实例后调用。
+订阅划词面板隐藏事件，与[offHide](#offhide)搭配使用。需通过 [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel系统接口)获取到Panel实例后调用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -233,9 +209,9 @@ onHide(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](arkts-basicservices-selectionmanager-panel-i-sys.md#hide)主动隐藏，或在失焦时自动隐藏。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](arkts-basicservices-selectionmanager-panel-i-sys.md#hide)主动隐藏，或在失焦时自动隐藏。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

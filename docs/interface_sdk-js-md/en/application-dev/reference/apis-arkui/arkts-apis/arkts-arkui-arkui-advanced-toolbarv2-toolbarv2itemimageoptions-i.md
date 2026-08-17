@@ -4,10 +4,6 @@ Declare the options of ToolBarV2ItemImage
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ToolBarV2ItemImageOptions--><!--Device-unnamed-export interface ToolBarV2ItemImageOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,10 +38,6 @@ Icon fillColor when the item is activated.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -66,10 +58,6 @@ Define icon fillColor.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -89,10 +77,6 @@ Define icon resource.
 **Type:** ResourceStr
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

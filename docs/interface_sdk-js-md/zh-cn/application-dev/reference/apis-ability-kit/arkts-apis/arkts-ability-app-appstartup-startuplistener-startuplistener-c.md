@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class StartupListener--><!--Device-unnamed-declare class StartupListener-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
@@ -22,10 +18,6 @@ onCompleted?(error: BusinessError<void>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void--><!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void-End-->
@@ -36,9 +28,9 @@ onCompleted?(error: BusinessError<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | 是 | 错误信息。 |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | 是 | 错误信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { StartupConfig, StartupConfigEntry, StartupListener } from '@kit.AbilityKit';
@@ -80,10 +72,6 @@ onCompleted?: OnCompletedFn
 **类型：** [OnCompletedFn](arkts-ability-oncompletedfn-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

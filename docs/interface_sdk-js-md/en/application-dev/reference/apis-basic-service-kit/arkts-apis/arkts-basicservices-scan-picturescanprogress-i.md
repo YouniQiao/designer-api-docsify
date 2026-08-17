@@ -4,10 +4,6 @@ Defines the progress of scanning pictures.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-scan-interface PictureScanProgress--><!--Device-scan-interface PictureScanProgress-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -30,10 +26,6 @@ Whether the picture is the last one to be scanned. The value **true** indicates 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PictureScanProgress-isFinal: boolean--><!--Device-PictureScanProgress-isFinal: boolean-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -50,10 +42,6 @@ File descriptor of the scanned picture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PictureScanProgress-pictureFd: int--><!--Device-PictureScanProgress-pictureFd: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -69,10 +57,6 @@ Progress percentage, whose value ranges from 0 to 100. Unit: %
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PictureScanProgress-progress: int--><!--Device-PictureScanProgress-progress: int-End-->
 

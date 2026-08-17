@@ -16,10 +16,6 @@ Connects the current ability to the specified web native message extension abili
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WEB_NATIVE_MESSAGING
 
 **Model restriction:** This API can be used only in the stage model.
@@ -34,7 +30,7 @@ Connects the current ability to the specified web native message extension abili
 | --- | --- | --- | --- |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | Context of the calling UIAbility. |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the Ability, whose parameters must include ' ohos.arkweb.messageReadPipe' (read pipe FD), 'ohos.arkweb.messageWritePipe' (write pipe FD), and ' ohos.arkweb.extensionOrigin' (extension URI). |
-| callback | [WebExtensionConnectionCallback](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | Yes | Callback object of the WebExtensionConnection status. |
+| callback | [WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | Yes | Callback object of the WebExtensionConnection status. |
 
 **Return value:**
 
@@ -48,7 +44,7 @@ Connects the current ability to the specified web native message extension abili
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';

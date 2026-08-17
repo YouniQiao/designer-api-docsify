@@ -16,10 +16,6 @@ Unregister form router event Listening.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 <!--Device-formObserver-function offRouter(hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function offRouter(hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void-End-->

@@ -4,10 +4,6 @@ Error of form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formError-enum FormError--><!--Device-formError-enum FormError-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -21,10 +17,6 @@ ERR_COMMON = 1
 A common internal error occurs during form processing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_COMMON = 1--><!--Device-FormError-ERR_COMMON = 1-End-->
 
@@ -40,10 +32,6 @@ The application does not have permission to use forms. Ensure that the applicati
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_PERMISSION_DENY = 2--><!--Device-FormError-ERR_PERMISSION_DENY = 2-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -57,10 +45,6 @@ ERR_GET_INFO_FAILED = 4
 Failed to obtain the configuration information about the form specified by the request parameters. Ensure that the parameters of the form to be added are consistent with those provided by the form provider.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_GET_INFO_FAILED = 4--><!--Device-FormError-ERR_GET_INFO_FAILED = 4-End-->
 
@@ -76,10 +60,6 @@ Failed to obtain the bundle to which the form belongs based on the request param
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_GET_BUNDLE_FAILED = 5--><!--Device-FormError-ERR_GET_BUNDLE_FAILED = 5-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -93,10 +73,6 @@ ERR_GET_LAYOUT_FAILED = 6
 Failed to initialize the form layout based on the request parameters. Ensure that the grid style of the form is supported by the form provider.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_GET_LAYOUT_FAILED = 6--><!--Device-FormError-ERR_GET_LAYOUT_FAILED = 6-End-->
 
@@ -112,10 +88,6 @@ Invalid input parameter during form operation. Ensure that all input parameters 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_ADD_INVALID_PARAM = 7--><!--Device-FormError-ERR_ADD_INVALID_PARAM = 7-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -129,10 +101,6 @@ ERR_CFG_NOT_MATCH_ID = 8
 The form configuration to be obtained using an existing form ID is different from that obtained for the first time.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_CFG_NOT_MATCH_ID = 8--><!--Device-FormError-ERR_CFG_NOT_MATCH_ID = 8-End-->
 
@@ -148,10 +116,6 @@ The ID of the form to be operated does not exist in the Form Manager Service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_NOT_EXIST_ID = 9--><!--Device-FormError-ERR_NOT_EXIST_ID = 9-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -165,10 +129,6 @@ ERR_BIND_PROVIDER_FAILED = 10
 Failed to bind the Form Manager Service to the provider service.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_BIND_PROVIDER_FAILED = 10--><!--Device-FormError-ERR_BIND_PROVIDER_FAILED = 10-End-->
 
@@ -184,10 +144,6 @@ The total number of added forms exceeds the maximum allowed by the system.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_MAX_SYSTEM_FORMS = 11--><!--Device-FormError-ERR_MAX_SYSTEM_FORMS = 11-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -201,10 +157,6 @@ ERR_MAX_INSTANCES_PER_FORM = 12
 The number of form instances generated using the same form configuration exceeds the maximum allowed by the system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_MAX_INSTANCES_PER_FORM = 12--><!--Device-FormError-ERR_MAX_INSTANCES_PER_FORM = 12-End-->
 
@@ -220,10 +172,6 @@ The form being requested was added by other applications and cannot be operated 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_OPERATION_FORM_NOT_SELF = 13--><!--Device-FormError-ERR_OPERATION_FORM_NOT_SELF = 13-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -237,10 +185,6 @@ ERR_PROVIDER_DEL_FAIL = 14
 The Form Manager Service failed to instruct the form provider to delete the form.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_PROVIDER_DEL_FAIL = 14--><!--Device-FormError-ERR_PROVIDER_DEL_FAIL = 14-End-->
 
@@ -256,10 +200,6 @@ The total number of added forms exceeds the maximum per client.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_MAX_FORMS_PER_CLIENT = 15--><!--Device-FormError-ERR_MAX_FORMS_PER_CLIENT = 15-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -273,10 +213,6 @@ ERR_MAX_SYSTEM_TEMP_FORMS = 16
 The total number of added temp forms exceeds the maximum in system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_MAX_SYSTEM_TEMP_FORMS = 16--><!--Device-FormError-ERR_MAX_SYSTEM_TEMP_FORMS = 16-End-->
 
@@ -292,10 +228,6 @@ The module can not be find in system.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_FORM_NO_SUCH_MODULE = 17--><!--Device-FormError-ERR_FORM_NO_SUCH_MODULE = 17-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -309,10 +241,6 @@ ERR_FORM_NO_SUCH_ABILITY = 18
 The ability can not be find in system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_FORM_NO_SUCH_ABILITY = 18--><!--Device-FormError-ERR_FORM_NO_SUCH_ABILITY = 18-End-->
 
@@ -328,10 +256,6 @@ The dimension is not exist in the form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_FORM_NO_SUCH_DIMENSION = 19--><!--Device-FormError-ERR_FORM_NO_SUCH_DIMENSION = 19-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -345,10 +269,6 @@ ERR_FORM_FA_NOT_INSTALLED = 20
 The ability is not installed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_FORM_FA_NOT_INSTALLED = 20--><!--Device-FormError-ERR_FORM_FA_NOT_INSTALLED = 20-End-->
 
@@ -364,10 +284,6 @@ Failed to obtain the RPC object of the Form Manager Service because the service 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_SYSTEM_RESPONSES_FAILED = 30--><!--Device-FormError-ERR_SYSTEM_RESPONSES_FAILED = 30-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -382,10 +298,6 @@ Failed to obtain the form requested by the client because another form with the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FormError-ERR_FORM_DUPLICATE_ADDED = 31--><!--Device-FormError-ERR_FORM_DUPLICATE_ADDED = 31-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -399,10 +311,6 @@ ERR_IN_RECOVERY = 36
 The form is being restored. Perform operations on the form only after the restoration is complete.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FormError-ERR_IN_RECOVERY = 36--><!--Device-FormError-ERR_IN_RECOVERY = 36-End-->
 

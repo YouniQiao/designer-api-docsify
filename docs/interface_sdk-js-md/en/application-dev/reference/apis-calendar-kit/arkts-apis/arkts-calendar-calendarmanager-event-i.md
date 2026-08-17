@@ -4,10 +4,6 @@ Describes an **Event** object, including the event title, start time, and end ti
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-calendarManager-interface Event--><!--Device-calendarManager-interface Event-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -30,10 +26,6 @@ Attendees in a meeting. If this parameter is not set, the default null value is 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-attendee?: Attendee[]--><!--Device-Event-attendee?: Attendee[]-End-->
@@ -51,10 +43,6 @@ Event description, with a maximum of 5,000 characters. If this parameter is not 
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ End time of an event. The value is a 13-digit timestamp. For an all-day event, t
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-endTime: number--><!--Device-Event-endTime: number-End-->
@@ -90,15 +74,11 @@ End time of an event. The value is a 13-digit timestamp. For an all-day event, t
 id?: number
 ```
 
-Event ID. This parameter does not need to be set in [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addEvent) or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addEvents). This is an auto-increment field of the database, which has no default value. When [deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteEvent) or [deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteEvents) is called to delete an event, the value must be an integer. If an invalid value is passed, an error will be reported. When getEvents() is called to query events, this field is queried by default.
+Event ID. This parameter does not need to be set in [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent) or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents). This is an auto-increment field of the database, which has no default value. When [deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteevent) or [deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteevents) is called to delete an event, the value must be an integer. If an invalid value is passed, an error will be reported. When getEvents() is called to query events, this field is queried by default.
 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,10 +98,6 @@ Unique ID of an event, with a maximum of 5,000 characters. If this parameter is 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Event-identifier?: string--><!--Device-Event-identifier?: string-End-->
@@ -134,15 +110,11 @@ Unique ID of an event, with a maximum of 5,000 characters. If this parameter is 
 instanceEndTime?: number
 ```
 
-End time of an event instance, which must be a 13-digit timestamp. The default value is undefined. This parameter is not required when [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addEvent) or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addEvents) is called to create an event or getEvents() is called to query an event.
+End time of an event instance, which must be a 13-digit timestamp. The default value is undefined. This parameter is not required when [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent) or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents) is called to create an event or getEvents() is called to query an event.
 
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -156,15 +128,11 @@ End time of an event instance, which must be a 13-digit timestamp. The default v
 instanceStartTime?: number
 ```
 
-Start time of an event instance, which must be a 13-digit timestamp. The default value is undefined. This parameter is not required when [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addEvent) or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addEvents) is called to create an event or getEvents() is called to query an event.
+Start time of an event instance, which must be a 13-digit timestamp. The default value is undefined. This parameter is not required when [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent) or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents) is called to create an event or getEvents() is called to query an event.
 
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -184,10 +152,6 @@ Whether the event is an all-day event. The value **true** means that the event i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-isAllDay?: boolean--><!--Device-Event-isAllDay?: boolean-End-->
@@ -205,10 +169,6 @@ Unique ID of an event, with a maximum of 5,000 characters. If this parameter is 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -228,10 +188,6 @@ Event location. If this parameter is not set, the default null value is used.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-location?: Location--><!--Device-Event-location?: Location-End-->
@@ -249,10 +205,6 @@ Recurrence rule of an event. The event is a recurring event if this parameter is
 **Type:** [RecurrenceRule](arkts-calendar-calendarmanager-recurrencerule-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -272,10 +224,6 @@ Reminder time of the event, in minutes. For example, if the value is 5, the remi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-reminderTime?: number[]--><!--Device-Event-reminderTime?: number[]-End-->
@@ -293,10 +241,6 @@ service?: EventService
 **Type:** [EventService](arkts-calendar-calendarmanager-eventservice-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -316,10 +260,6 @@ Start time of an event. The value is a 13-digit timestamp. For an all-day event,
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-startTime: number--><!--Device-Event-startTime: number-End-->
@@ -332,15 +272,11 @@ Start time of an event. The value is a 13-digit timestamp. For an all-day event,
 timeZone?: string
 ```
 
-Time zone of the event, with a maximum of 5,000 characters. If this parameter is not specified or set to an invalid value, the current time zone is used by default. If a different time zone is required, enter the corresponding time zone. You can call [systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md#getTimezone) to obtain the current system time zone.
+Time zone of the event, with a maximum of 5,000 characters. If this parameter is not specified or set to an invalid value, the current time zone is used by default. If a different time zone is required, enter the corresponding time zone. You can call [systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone) to obtain the current system time zone.
 
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -360,10 +296,6 @@ Event title, with a maximum of 5,000 characters. If this parameter is not specif
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-title?: string--><!--Device-Event-title?: string-End-->
@@ -381,10 +313,6 @@ Event type.When getEvents() is called to query events, this field is queried by 
 **Type:** EventType
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

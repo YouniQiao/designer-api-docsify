@@ -4,10 +4,6 @@ The clientCert field of the client certificate, which includes 4 attributes: cli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-http-export interface ClientCert--><!--Device-http-export interface ClientCert-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,10 +26,6 @@ The path to the client certificate file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ClientCert-certPath: string--><!--Device-ClientCert-certPath: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -49,10 +41,6 @@ The type of the client certificate.
 **Type:** CertType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ClientCert-certType?: CertType--><!--Device-ClientCert-certType?: CertType-End-->
 
@@ -70,10 +58,6 @@ Password required to use the client certificate private key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ClientCert-keyPassword?: string--><!--Device-ClientCert-keyPassword?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -89,10 +73,6 @@ The path of the client certificate private key file.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ClientCert-keyPath: string--><!--Device-ClientCert-keyPath: string-End-->
 

@@ -1,12 +1,10 @@
 # BackForwardList
 
-Provides back and forward history list information method. related to [HistoryItem](arkts-na-webview-historyitem-i.md#HistoryItem).
+Provides back and forward history list information method. related to [HistoryItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-historyitem-i.md#historyitem).
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-webview-interface BackForwardList--><!--Device-webview-interface BackForwardList-End-->
 
@@ -22,9 +20,7 @@ Get history entry at given index.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BackForwardList-getItemAtIndex(index: int): HistoryItem--><!--Device-BackForwardList-getItemAtIndex(index: int): HistoryItem-End-->
 
@@ -40,7 +36,7 @@ Get history entry at given index.
 
 | 类型 | 说明 |
 | --- | --- |
-| [HistoryItem](arkts-na-webview-historyitem-i.md) | HistoryItem at given index in back forward list. |
+| [HistoryItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-historyitem-i.md) | HistoryItem at given index in back forward list. |
 
 **错误码：**
 
@@ -60,9 +56,7 @@ Current index in BackForwardList.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BackForwardList-currentIndex: int--><!--Device-BackForwardList-currentIndex: int-End-->
 
@@ -80,9 +74,7 @@ Size of in BackForwardList.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-BackForwardList-size: int--><!--Device-BackForwardList-size: int-End-->
 

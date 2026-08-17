@@ -16,10 +16,6 @@ Opens the authorization page of the certificate management dialog box to grant a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -50,7 +46,7 @@ Opens the authorization page of the certificate management dialog box to grant a
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the authorization. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
@@ -82,10 +78,6 @@ function openAuthorizeDialog(context: common.Context, authorizeRequest: Authoriz
 Opens the Certificate Credential Authorization page of the Certificate Management dialog box. On the page that is displayed, you can authorize the application to use certificate credentials. After the API is called successfully, the app can use the URI of the authorization certificate returned by the API to sign, verify the signature, and query details. The types of certificates that can be authorized include application certificate credentials, user certificate credentials, and USB Key certificate credentials. Using Promise Asynchronous Callbacks.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -119,7 +111,7 @@ Opens the Certificate Credential Authorization page of the Certificate Managemen
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the authorization. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManagerDialog, certificateManager } from '@kit.DeviceCertificateKit';

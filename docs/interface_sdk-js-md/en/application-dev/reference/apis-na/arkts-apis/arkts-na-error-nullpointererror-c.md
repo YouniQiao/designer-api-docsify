@@ -2,13 +2,11 @@
 
 Represents an error that occurs when a null pointer is dereferenced.
 
-**Inheritance/Implementation:** NullPointerError extends [Error](arkts-na-error-c.md#Error)
+**Inheritance/Implementation:** NullPointerError extends [Error](arkts-na-error-c.md#error)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 <!--Device-unnamed-class NullPointerError--><!--Device-unnamed-class NullPointerError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new NullPointerError instance with provided message and error speci
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

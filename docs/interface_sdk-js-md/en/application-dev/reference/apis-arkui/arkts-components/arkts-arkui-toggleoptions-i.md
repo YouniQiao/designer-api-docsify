@@ -4,10 +4,6 @@ Options of the toggle. > **NOTE：**> > To standardize anonymous object definiti
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ToggleOptions--><!--Device-unnamed-declare interface ToggleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Whether the toggle is turned on. **true**: on. **false**: off. Default value: **
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,10 +39,6 @@ Type of the toggle. Default value: **ToggleType.Switch**
 **Type:** [ToggleType](arkts-arkui-toggletype-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

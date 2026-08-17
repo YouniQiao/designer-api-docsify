@@ -1,14 +1,12 @@
-# USBControlRequestType
+# USBControlRequestType(USB Manager)
 
 Enumerates control request types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USBControlRequestType](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md#USBControlRequestType)
+**Substitutes:** [USBControlRequestType](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md#usbcontrolrequesttype)
 
 <!--Device-usb-export enum USBControlRequestType--><!--Device-usb-export enum USBControlRequestType-End-->
 
@@ -24,11 +22,9 @@ Standard.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USB_REQUEST_TYPE_STANDARD](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md#USB_REQUEST_TYPE_STANDARD)
+**Substitutes:** [USB_REQUEST_TYPE_STANDARD](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md#usbrequesttypestandard)
 
 <!--Device-USBControlRequestType-USB_REQUEST_TYPE_STANDARD = 0--><!--Device-USBControlRequestType-USB_REQUEST_TYPE_STANDARD = 0-End-->
 
@@ -44,11 +40,9 @@ Class.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USB_REQUEST_TYPE_CLASS](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md#USB_REQUEST_TYPE_CLASS)
+**Substitutes:** [USB_REQUEST_TYPE_CLASS](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md#usbrequesttypeclass)
 
 <!--Device-USBControlRequestType-USB_REQUEST_TYPE_CLASS = 1--><!--Device-USBControlRequestType-USB_REQUEST_TYPE_CLASS = 1-End-->
 
@@ -64,11 +58,9 @@ Vendor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USB_REQUEST_TYPE_VENDOR](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md#USB_REQUEST_TYPE_VENDOR)
+**Substitutes:** [USB_REQUEST_TYPE_VENDOR](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md#usbrequesttypevendor)
 
 <!--Device-USBControlRequestType-USB_REQUEST_TYPE_VENDOR = 2--><!--Device-USBControlRequestType-USB_REQUEST_TYPE_VENDOR = 2-End-->
 

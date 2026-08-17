@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-interface VideoRecorderConfig--><!--Device-unnamed-interface VideoRecorderConfig-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -25,10 +21,6 @@ audioSourceType?: AudioSourceType
 **类型：** [AudioSourceType](arkts-media-multimedia-media-audiosourcetype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType--><!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType-End-->
 
@@ -48,10 +40,6 @@ location?: Location
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VideoRecorderConfig-location?: Location--><!--Device-VideoRecorderConfig-location?: Location-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -69,10 +57,6 @@ profile: VideoRecorderProfile
 **类型：** [VideoRecorderProfile](arkts-media-multimedia-media-videorecorderprofile-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VideoRecorderConfig-profile: VideoRecorderProfile--><!--Device-VideoRecorderConfig-profile: VideoRecorderProfile-End-->
 
@@ -92,10 +76,6 @@ rotation?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VideoRecorderConfig-rotation?: int--><!--Device-VideoRecorderConfig-rotation?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -114,10 +94,6 @@ url: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-VideoRecorderConfig-url: string--><!--Device-VideoRecorderConfig-url: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
@@ -135,10 +111,6 @@ videoSourceType: VideoSourceType
 **类型：** [VideoSourceType](arkts-media-multimedia-media-videosourcetype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType--><!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType-End-->
 

@@ -1,12 +1,10 @@
 # NativeMediaPlayerHandler
 
-[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#CreateNativeMediaPlayerCallback) 回调函数的参数。应用通过该对象，将播放器的状态通知给 ArkWeb 内核。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
+[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback) 回调函数的参数。应用通过该对象，将播放器的状态通知给 ArkWeb 内核。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-webview-interface NativeMediaPlayerHandler--><!--Device-webview-interface NativeMediaPlayerHandler-End-->
 
@@ -22,9 +20,7 @@ handleBufferedEndTimeChanged(bufferedEndTime: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleBufferedEndTimeChanged(bufferedEndTime: double): void--><!--Device-NativeMediaPlayerHandler-handleBufferedEndTimeChanged(bufferedEndTime: double): void-End-->
 
@@ -46,9 +42,7 @@ handleDurationChanged(duration: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: double): void--><!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: double): void-End-->
 
@@ -70,9 +64,7 @@ handleEnded(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleEnded(): void--><!--Device-NativeMediaPlayerHandler-handleEnded(): void-End-->
 
@@ -88,9 +80,7 @@ handleError(error: MediaError, errorMessage: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleError(error: MediaError, errorMessage: string): void--><!--Device-NativeMediaPlayerHandler-handleError(error: MediaError, errorMessage: string): void-End-->
 
@@ -100,7 +90,7 @@ handleError(error: MediaError, errorMessage: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| error | [MediaError](arkts-na-webview-mediaerror-e.md) | 是 | 错误类型。 |
+| error | [MediaError](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediaerror-e.md) | 是 | 错误类型。 |
 | errorMessage | string | 是 | 错误的详细描述。 |
 
 ## handleFullscreenChanged
@@ -113,9 +103,7 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void--><!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void-End-->
 
@@ -137,9 +125,7 @@ handleMutedChanged(muted: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleMutedChanged(muted: boolean): void--><!--Device-NativeMediaPlayerHandler-handleMutedChanged(muted: boolean): void-End-->
 
@@ -161,9 +147,7 @@ handleNetworkStateChanged(state: NetworkState): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleNetworkStateChanged(state: NetworkState): void--><!--Device-NativeMediaPlayerHandler-handleNetworkStateChanged(state: NetworkState): void-End-->
 
@@ -185,9 +169,7 @@ handlePlaybackRateChanged(playbackRate: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handlePlaybackRateChanged(playbackRate: double): void--><!--Device-NativeMediaPlayerHandler-handlePlaybackRateChanged(playbackRate: double): void-End-->
 
@@ -209,9 +191,7 @@ handleReadyStateChanged(state: ReadyState): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void--><!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void-End-->
 
@@ -221,7 +201,7 @@ handleReadyStateChanged(state: ReadyState): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [ReadyState](arkts-na-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
+| state | [ReadyState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
 
 ## handleSeekFinished
 
@@ -233,9 +213,7 @@ handleSeekFinished(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleSeekFinished(): void--><!--Device-NativeMediaPlayerHandler-handleSeekFinished(): void-End-->
 
@@ -251,9 +229,7 @@ handleSeeking(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleSeeking(): void--><!--Device-NativeMediaPlayerHandler-handleSeeking(): void-End-->
 
@@ -269,9 +245,7 @@ handleStatusChanged(status: PlaybackStatus): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleStatusChanged(status: PlaybackStatus): void--><!--Device-NativeMediaPlayerHandler-handleStatusChanged(status: PlaybackStatus): void-End-->
 
@@ -281,7 +255,7 @@ handleStatusChanged(status: PlaybackStatus): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| status | [PlaybackStatus](arkts-na-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
+| status | [PlaybackStatus](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
 
 ## handleTimeUpdate
 
@@ -293,9 +267,7 @@ handleTimeUpdate(currentPlayTime: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: double): void--><!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: double): void-End-->
 
@@ -317,9 +289,7 @@ handleVideoSizeChanged(width: double, height: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleVideoSizeChanged(width: double, height: double): void--><!--Device-NativeMediaPlayerHandler-handleVideoSizeChanged(width: double, height: double): void-End-->
 
@@ -342,9 +312,7 @@ handleVolumeChanged(volume: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-NativeMediaPlayerHandler-handleVolumeChanged(volume: double): void--><!--Device-NativeMediaPlayerHandler-handleVolumeChanged(volume: double): void-End-->
 

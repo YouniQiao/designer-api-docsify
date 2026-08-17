@@ -16,10 +16,6 @@ Subscribe to ambient temperature sensor data once, {@code SensorId.AMBIENT_TEMPE
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onceAmbientTemperatureChange(callback: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function onceAmbientTemperatureChange(callback: Callback<AmbientTemperatureResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

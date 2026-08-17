@@ -16,10 +16,6 @@ Queries the status of the caller app's sensitive data key under the lock screen 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus-End-->
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager
@@ -37,7 +33,7 @@ Queries the status of the caller app's sensitive data key under the lock screen 
 | [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found. |
 | [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Obtain the state of access permissions for sensitive data on the lock screen.

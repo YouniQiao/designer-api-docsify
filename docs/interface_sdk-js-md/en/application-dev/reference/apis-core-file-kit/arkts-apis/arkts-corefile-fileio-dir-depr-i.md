@@ -4,11 +4,9 @@ Manages directories. Before calling a method of the **Dir** class, use the **ope
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-unnamed-declare interface Dir--><!--Device-unnamed-declare interface Dir-End-->
 
@@ -24,11 +22,9 @@ Closes a directory. This API uses a promise to return the result. After a direct
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-close(): Promise<void>--><!--Device-Dir-close(): Promise<void>-End-->
 
@@ -40,7 +36,7 @@ Closes a directory. This API uses a promise to return the result. After a direct
 | --- | --- |
 | Promise&lt;void&gt; | return Promise |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -59,11 +55,9 @@ Closes a directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-close(callback: AsyncCallback<void>): void--><!--Device-Dir-close(callback: AsyncCallback<void>): void-End-->
 
@@ -75,7 +69,7 @@ Closes a directory. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | callback. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -94,17 +88,15 @@ Closes a directory. After a directory is closed, the file descriptor in **Dir** 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-closeSync(): void--><!--Device-Dir-closeSync(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
-## Examples
+**Examples**
 
 ```TypeScript
 dir.closeSync();
@@ -120,11 +112,9 @@ Reads the next directory entry. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-read(): Promise<Dirent>--><!--Device-Dir-read(): Promise<Dirent>-End-->
 
@@ -136,7 +126,7 @@ Reads the next directory entry. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[Dirent](arkts-corefile-fileio-dirent-depr-i.md)&gt; | Promise that returns the next directory entry. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -157,11 +147,9 @@ Reads the next directory entry. This API uses an asynchronous callback to return
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-read(callback: AsyncCallback<Dirent>): void--><!--Device-Dir-read(callback: AsyncCallback<Dirent>): void-End-->
 
@@ -173,7 +161,7 @@ Reads the next directory entry. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Dirent](arkts-corefile-fileio-dirent-depr-i.md)&gt; | Yes | Callback invoked when the next directory entry is asynchronously read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -195,11 +183,9 @@ Reads the next directory entry. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-readSync(): Dirent--><!--Device-Dir-readSync(): Dirent-End-->
 
@@ -211,7 +197,7 @@ Reads the next directory entry. This API returns the result synchronously.
 | --- | --- |
 | [Dirent](arkts-corefile-fileio-dirent-depr-i.md) | Directory entry read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dirent = dir.readSync();

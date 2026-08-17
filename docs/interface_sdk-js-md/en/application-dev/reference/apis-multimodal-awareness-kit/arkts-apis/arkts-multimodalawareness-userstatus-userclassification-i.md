@@ -4,8 +4,6 @@ Defines the user age group detection result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 24
 
 <!--Device-userStatus-export interface UserClassification--><!--Device-userStatus-export interface UserClassification-End-->
@@ -30,8 +28,6 @@ User age group, for example, child or adult.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
 **Deprecated since:** 24
 
 <!--Device-UserClassification-ageGroup?: UserAgeGroup--><!--Device-UserClassification-ageGroup?: UserAgeGroup-End-->
@@ -49,8 +45,6 @@ Confidence of the detection result. The value is a floating point number ranging
 **Type:** float
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 24
 

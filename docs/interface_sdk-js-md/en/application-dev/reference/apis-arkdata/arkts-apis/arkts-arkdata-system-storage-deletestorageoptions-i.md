@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-unnamed-export interface DeleteStorageOptions--><!--Device-unnamed-export interface DeleteStorageOptions-End-->
@@ -21,8 +19,6 @@ Called when the execution is completed.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 
@@ -44,8 +40,6 @@ Called when the stored content fails to be deleted.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
@@ -66,8 +60,6 @@ Content index. the value contains a maximum of 32 characters and cannot contain 
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
@@ -87,8 +79,6 @@ Called when the stored content is deleted successfully.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 

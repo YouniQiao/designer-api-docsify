@@ -12,13 +12,9 @@ import { hiTraceMeter } from 'hiTraceMeter';
 function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void
 ```
 
-Starts a synchronous trace with the trace output level specified. For details, see [finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishSyncTrace).
+Starts a synchronous trace with the trace output level specified. For details, see [finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishsynctrace).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -34,7 +30,7 @@ Starts a synchronous trace with the trace output level specified. For details, s
 | name | string | Yes | Name of the trace to start. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
 | customArgs | string | No | Key-value pair. The format is key=value. Multiple key-value pairs are separated by commas (,). The default value is an empty string. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;

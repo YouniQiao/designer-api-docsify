@@ -10,8 +10,6 @@ Publishes a notification to a specified user. This API uses an asynchronous call
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [publish](arkts-notification-notificationmanager-publish-f.md#publish)
@@ -42,8 +40,6 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 Publishes a notification to a specified user. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

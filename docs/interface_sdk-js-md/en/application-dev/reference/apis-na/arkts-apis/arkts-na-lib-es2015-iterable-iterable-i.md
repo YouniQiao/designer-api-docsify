@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Iterable--><!--Device-unnamed-interface Iterable-End-->
 
 ## [Symbol.iterator]
@@ -15,10 +11,6 @@
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Iterable-[Symbol.iterator](): Iterator<T>--><!--Device-Iterable-[Symbol.iterator](): Iterator<T>-End-->
 

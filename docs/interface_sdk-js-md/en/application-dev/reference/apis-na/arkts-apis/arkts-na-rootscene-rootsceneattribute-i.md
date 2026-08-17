@@ -6,9 +6,7 @@ Defines the attribute functions of RootScene.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface RootSceneAttribute--><!--Device-unnamed-export declare interface RootSceneAttribute-End-->
 
@@ -25,9 +23,7 @@ attributeModifier(modifier:
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-RootSceneAttribute-attributeModifier(modifier:    AttributeModifier<RootSceneAttribute> | AttributeModifier<CommonMethod> | undefined) : this--><!--Device-RootSceneAttribute-attributeModifier(modifier:    AttributeModifier<RootSceneAttribute> | AttributeModifier<CommonMethod> | undefined) : this-End-->
 

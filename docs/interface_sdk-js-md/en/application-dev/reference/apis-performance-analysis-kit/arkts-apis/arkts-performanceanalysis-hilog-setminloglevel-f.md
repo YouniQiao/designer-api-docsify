@@ -16,10 +16,6 @@ Sets the minimum log level. > **NOTE：**> > If the set log level is lower than 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hilog-function setMinLogLevel(level: LogLevel): void--><!--Device-hilog-function setMinLogLevel(level: LogLevel): void-End-->
@@ -32,7 +28,7 @@ Sets the minimum log level. > **NOTE：**> > If the set log level is lower than 
 | --- | --- | --- | --- |
 | level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Yes | Log level. |
 
-## Examples
+**Examples**
 
 The following example prints five HiLog logs of different levels and calls the setMinLogLevel API twice when the global log level is INFO:
 

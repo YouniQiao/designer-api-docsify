@@ -4,10 +4,6 @@ Defines the **Zip** instance. It provides APIs to zip or unzip data in Zlib, Def
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-zlib-interface Zip--><!--Device-zlib-interface Zip-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -27,10 +23,6 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipO
 Compresses the source buffer into the destination buffer. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -59,7 +51,7 @@ Compresses the source buffer into the destination buffer. This API uses a promis
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -90,10 +82,6 @@ Compresses the source buffer into the destination buffer. This API uses a promis
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>--><!--Device-Zip-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>-End-->
@@ -106,7 +94,7 @@ Compresses the source buffer into the destination buffer. This API uses a promis
 | --- | --- | --- | --- |
 | dest | ArrayBuffer | Yes | Destination buffer. |
 | source | ArrayBuffer | Yes | Source buffer. |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#compresslevel). |
 | sourceLen | long | No | Length of the source data. The default value is **0**. |
 
 **Return value:**
@@ -133,10 +121,6 @@ Calculates the maximum size of the compressed data to be returned. This API uses
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-compressBound(sourceLen: int): Promise<int>--><!--Device-Zip-compressBound(sourceLen: int): Promise<int>-End-->
@@ -161,7 +145,7 @@ Calculates the maximum size of the compressed data to be returned. This API uses
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -193,10 +177,6 @@ Deflates data. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-Zip-deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>-End-->
@@ -207,8 +187,8 @@ Deflates data. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | For details, see [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md#CompressFlushMode). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | For details, see [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md#compressflushmode). |
 
 **Return value:**
 
@@ -224,7 +204,7 @@ Deflates data. This API uses a promise to return the result.
 | [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -267,10 +247,6 @@ Calculates the maximum size of the compressed data. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateBound(strm: ZStream, sourceLength: long): Promise<int>--><!--Device-Zip-deflateBound(strm: ZStream, sourceLength: long): Promise<int>-End-->
@@ -281,7 +257,7 @@ Calculates the maximum size of the compressed data. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | sourceLength | long | Yes | Length of the source data. |
 
 **Return value:**
@@ -296,7 +272,7 @@ Calculates the maximum size of the compressed data. This API uses a promise to r
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -339,10 +315,6 @@ Copies a compression stream. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateCopy(source: Zip): Promise<ReturnStatus>--><!--Device-Zip-deflateCopy(source: Zip): Promise<ReturnStatus>-End-->
@@ -353,7 +325,7 @@ Copies a compression stream. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](#Zip). |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](#zip). |
 
 **Return value:**
 
@@ -368,7 +340,7 @@ Copies a compression stream. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -411,10 +383,6 @@ Releases all dynamically allocated data structs of a decompression stream. This 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateEnd(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -425,7 +393,7 @@ Releases all dynamically allocated data structs of a decompression stream. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -440,7 +408,7 @@ Releases all dynamically allocated data structs of a decompression stream. This 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -488,10 +456,6 @@ Obtains the content and length of the decompression dictionary used in a compres
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>--><!--Device-Zip-deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>-End-->
@@ -502,7 +466,7 @@ Obtains the content and length of the decompression dictionary used in a compres
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | dictionary | ArrayBuffer | Yes | Buffer that receives the actual contents of the decompression dictionary. |
 
 **Return value:**
@@ -518,7 +482,7 @@ Obtains the content and length of the decompression dictionary used in a compres
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -566,10 +530,6 @@ Initializes a compression stream with a specified compression level. This API us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>--><!--Device-Zip-deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>-End-->
@@ -580,8 +540,8 @@ Initializes a compression stream with a specified compression level. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#compresslevel). |
 
 **Return value:**
 
@@ -596,7 +556,7 @@ Initializes a compression stream with a specified compression level. This API us
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -635,10 +595,6 @@ Initializes a compression stream with the specified compression level, compressi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
@@ -649,12 +605,12 @@ Initializes a compression stream with the specified compression level, compressi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel). |
-| method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | Yes | For details, see [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md#CompressMethod). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#compresslevel). |
+| method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | Yes | For details, see [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md#compressmethod). |
 | windowBits | int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
-| memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | Yes | For details, see [MemLevel](arkts-basicservices-zlib-memlevel-e.md#MemLevel). |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md#CompressStrategy). |
+| memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | Yes | For details, see [MemLevel](arkts-basicservices-zlib-memlevel-e.md#memlevel). |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md#compressstrategy). |
 
 **Return value:**
 
@@ -669,7 +625,7 @@ Initializes a compression stream with the specified compression level, compressi
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -708,10 +664,6 @@ Dynamically updates the compression level and compression strategy. This API use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
@@ -722,9 +674,9 @@ Dynamically updates the compression level and compression strategy. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel). |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md#CompressStrategy). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#compresslevel). |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md#compressstrategy). |
 
 **Return value:**
 
@@ -739,7 +691,7 @@ Dynamically updates the compression level and compression strategy. This API use
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -782,10 +734,6 @@ Returns the number of bytes and bits of output that has been generated but not y
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>--><!--Device-Zip-deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>-End-->
@@ -796,7 +744,7 @@ Returns the number of bytes and bits of output that has been generated but not y
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -811,7 +759,7 @@ Returns the number of bytes and bits of output that has been generated but not y
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -854,10 +802,6 @@ Inserts bits and values into the compression stream. This API uses a promise to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>--><!--Device-Zip-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>-End-->
@@ -868,7 +812,7 @@ Inserts bits and values into the compression stream. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | bits | int | Yes | Number of bits to be inserted. The value ranges from 0 to 16. |
 | value | int | Yes | Bit value corresponding to the number of bits. |
 
@@ -885,7 +829,7 @@ Inserts bits and values into the compression stream. This API uses a promise to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -928,10 +872,6 @@ Equivalent to call the **deflateEnd** API and then the **deflateInit** API. Howe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateReset(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateReset(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -942,7 +882,7 @@ Equivalent to call the **deflateEnd** API and then the **deflateInit** API. Howe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -957,7 +897,7 @@ Equivalent to call the **deflateEnd** API and then the **deflateInit** API. Howe
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1000,10 +940,6 @@ Resets the initialized compression stream, but retains the compression parameter
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateResetKeep(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateResetKeep(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -1014,7 +950,7 @@ Resets the initialized compression stream, but retains the compression parameter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -1029,7 +965,7 @@ Resets the initialized compression stream, but retains the compression parameter
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1072,10 +1008,6 @@ Initializes the compression dictionary from a given sequence of bytes. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>-End-->
@@ -1086,7 +1018,7 @@ Initializes the compression dictionary from a given sequence of bytes. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | dictionary | ArrayBuffer | Yes | Dictionary data. |
 
 **Return value:**
@@ -1102,7 +1034,7 @@ Initializes the compression dictionary from a given sequence of bytes. This API 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1145,10 +1077,6 @@ Provides the header information of a gzip file when **deflateInit2()** requests 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>--><!--Device-Zip-deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>-End-->
@@ -1159,7 +1087,7 @@ Provides the header information of a gzip file when **deflateInit2()** requests 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | head | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Yes | Header information of a gzip file extracted from the compressed data stream. |
 
 **Return value:**
@@ -1175,7 +1103,7 @@ Provides the header information of a gzip file when **deflateInit2()** requests 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1219,10 +1147,6 @@ Fine-tunes the internal compression parameters of **deflate**. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>--><!--Device-Zip-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>-End-->
@@ -1233,7 +1157,7 @@ Fine-tunes the internal compression parameters of **deflate**. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | goodLength | int | Yes | Matched length threshold. |
 | maxLazy | int | Yes | Delay matching strategy used when the compression algorithm builds a Huffman tree. The value is an integer ranging from 0 to 4. **1**–**4**: A larger value indicates a lazier algorithm, which performs a slower matching process but generates a better compression result. **0**: Lazy matching is disabled. The algorithm builds a Huffman tree as soon as possible. The compression speed is fast, but the compression ratio is low. |
 | niceLength | int | Yes | Appropriate delay length threshold. |
@@ -1252,7 +1176,7 @@ Fine-tunes the internal compression parameters of **deflate**. This API uses a p
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1295,10 +1219,6 @@ Obtains this stream. This API uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Zip-getZStream(): Promise<ZStream>--><!--Device-Zip-getZStream(): Promise<ZStream>-End-->
@@ -1311,7 +1231,7 @@ Obtains this stream. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[ZStream](arkts-basicservices-zlib-zstream-i.md)&gt; | Promise used to return the **ZStream** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -1332,10 +1252,6 @@ getZStream(): Promise<ZStream | undefined>
 Get ZStream.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1359,10 +1275,6 @@ Inflates data. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-Zip-inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>-End-->
@@ -1373,8 +1285,8 @@ Inflates data. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | For details, see [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md#CompressFlushMode). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | For details, see [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md#compressflushmode). |
 
 **Return value:**
 
@@ -1390,7 +1302,7 @@ Inflates data. This API uses a promise to return the result.
 | [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1454,10 +1366,6 @@ Implements decompression and uses callbacks to process input and output data. Th
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>--><!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>-End-->
@@ -1468,7 +1376,7 @@ Implements decompression and uses callbacks to process input and output data. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | Yes | A function used to decompress data from the end of the array to read the original compressed data from the input source. |
 | inDesc | object | Yes | Common object. |
 | backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | Yes | Writes the decompressed data to the destination buffer. |
@@ -1487,7 +1395,7 @@ Implements decompression and uses callbacks to process input and output data. Th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1634,10 +1542,6 @@ Does a raw inflate with a single call using a call-back interface for input and 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData, backOut: InflateBackOutputCallback, outDesc: RecordData): Promise<ReturnStatus>--><!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData, backOut: InflateBackOutputCallback, outDesc: RecordData): Promise<ReturnStatus>-End-->
@@ -1676,10 +1580,6 @@ Releases all memory allocated by the **inflateBackInit()** function. This API us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateBackEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateBackEnd(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -1690,7 +1590,7 @@ Releases all memory allocated by the **inflateBackInit()** function. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -1705,9 +1605,9 @@ Releases all memory allocated by the **inflateBackInit()** function. This API us
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
-For details about the sample code, see [inflateBack](#inflateBack).
+For details about the sample code, see [inflateBack](#inflateback).
 
 ## inflateBackInit
 
@@ -1719,10 +1619,6 @@ Initializes the internal stream state for decompression before using the **infla
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>-End-->
@@ -1733,7 +1629,7 @@ Initializes the internal stream state for decompression before using the **infla
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | windowBits | long | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 | window | ArrayBuffer | Yes | Preset window buffer. |
 
@@ -1750,9 +1646,9 @@ Initializes the internal stream state for decompression before using the **infla
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
-For details about the sample code, see [inflateBack](#inflateBack).
+For details about the sample code, see [inflateBack](#inflateback).
 
 ## inflateCodesUsed
 
@@ -1764,10 +1660,6 @@ Describes the number of Huffman trees used in a decompression stream. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateCodesUsed(strm: ZStream): Promise<long>--><!--Device-Zip-inflateCodesUsed(strm: ZStream): Promise<long>-End-->
@@ -1778,7 +1670,7 @@ Describes the number of Huffman trees used in a decompression stream. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -1792,7 +1684,7 @@ Describes the number of Huffman trees used in a decompression stream. This API u
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1830,10 +1722,6 @@ Copies a decompression stream. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateCopy(source: Zip): Promise<ReturnStatus>--><!--Device-Zip-inflateCopy(source: Zip): Promise<ReturnStatus>-End-->
@@ -1844,7 +1732,7 @@ Copies a decompression stream. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](#Zip). |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](#zip). |
 
 **Return value:**
 
@@ -1859,7 +1747,7 @@ Copies a decompression stream. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1898,10 +1786,6 @@ Releases all dynamically allocated data structs of a decompression stream. This 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateEnd(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -1912,7 +1796,7 @@ Releases all dynamically allocated data structs of a decompression stream. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -1927,7 +1811,7 @@ Releases all dynamically allocated data structs of a decompression stream. This 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -1970,10 +1854,6 @@ Obtains the content and length of the decompression dictionary used in a decompr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>--><!--Device-Zip-inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>-End-->
@@ -1984,7 +1864,7 @@ Obtains the content and length of the decompression dictionary used in a decompr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | dictionary | ArrayBuffer | Yes | Receives the actual contents of the decompression dictionary. |
 
 **Return value:**
@@ -2000,7 +1880,7 @@ Obtains the content and length of the decompression dictionary used in a decompr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2038,10 +1918,6 @@ Obtains the header information of a gzip file before decompressing data. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>--><!--Device-Zip-inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>-End-->
@@ -2052,7 +1928,7 @@ Obtains the header information of a gzip file before decompressing data. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | header | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Yes | Header information of a gzip file extracted from the compressed data stream. |
 
 **Return value:**
@@ -2068,7 +1944,7 @@ Obtains the header information of a gzip file before decompressing data. This AP
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2106,10 +1982,6 @@ Initializes a decompression stream. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateInit(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateInit(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -2120,7 +1992,7 @@ Initializes a decompression stream. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -2134,7 +2006,7 @@ Initializes a decompression stream. This API uses a promise to return the result
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2168,10 +2040,6 @@ Initializes a decompression stream with the specified **windowBits**. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>--><!--Device-Zip-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>-End-->
@@ -2182,7 +2050,7 @@ Initializes a decompression stream with the specified **windowBits**. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | windowBits | int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 
 **Return value:**
@@ -2198,7 +2066,7 @@ Initializes a decompression stream with the specified **windowBits**. This API u
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2232,10 +2100,6 @@ Marks the location of the input data for random access. This API uses a promise 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateMark(strm: ZStream): Promise<int>--><!--Device-Zip-inflateMark(strm: ZStream): Promise<int>-End-->
@@ -2246,7 +2110,7 @@ Marks the location of the input data for random access. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -2260,7 +2124,7 @@ Marks the location of the input data for random access. This API uses a promise 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2298,10 +2162,6 @@ Sets the initial number of bits and bit value in the specified decompression str
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>--><!--Device-Zip-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>-End-->
@@ -2312,7 +2172,7 @@ Sets the initial number of bits and bit value in the specified decompression str
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | bits | int | Yes | Number of bits to be written to the bit buffer. |
 | value | int | Yes | Bit value used to fill the bit buffer. |
 
@@ -2329,7 +2189,7 @@ Sets the initial number of bits and bit value in the specified decompression str
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2367,10 +2227,6 @@ Resets the status of the specified decompression stream to the initial state to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateReset(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateReset(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -2381,7 +2237,7 @@ Resets the status of the specified decompression stream to the initial state to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -2396,7 +2252,7 @@ Resets the status of the specified decompression stream to the initial state to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2434,10 +2290,6 @@ Resets the status of the specified decompression stream and updates the window s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>--><!--Device-Zip-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>-End-->
@@ -2448,7 +2300,7 @@ Resets the status of the specified decompression stream and updates the window s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | windowBits | int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 
 **Return value:**
@@ -2464,7 +2316,7 @@ Resets the status of the specified decompression stream and updates the window s
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2502,10 +2354,6 @@ Resets the state of the decompression stream to retain the allocated Huffman tre
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateResetKeep(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateResetKeep(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -2516,7 +2364,7 @@ Resets the state of the decompression stream to retain the allocated Huffman tre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -2531,7 +2379,7 @@ Resets the state of the decompression stream to retain the allocated Huffman tre
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2569,10 +2417,6 @@ Initializes the dictionary content of a decompression stream based on the given 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>-End-->
@@ -2583,7 +2427,7 @@ Initializes the dictionary content of a decompression stream based on the given 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | dictionary | ArrayBuffer | Yes | Dictionary data. |
 
 **Return value:**
@@ -2600,7 +2444,7 @@ Initializes the dictionary content of a decompression stream based on the given 
 | [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2675,10 +2519,6 @@ Skips invalid compressed data until a possible complete refresh point is found. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateSync(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateSync(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -2689,7 +2529,7 @@ Skips invalid compressed data until a possible complete refresh point is found. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -2706,7 +2546,7 @@ Skips invalid compressed data until a possible complete refresh point is found. 
 | [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2775,10 +2615,6 @@ Finds the synchronization point of a decompression stream. This API uses a promi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>-End-->
@@ -2789,7 +2625,7 @@ Finds the synchronization point of a decompression stream. This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 
 **Return value:**
 
@@ -2804,7 +2640,7 @@ Finds the synchronization point of a decompression stream. This API uses a promi
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2842,10 +2678,6 @@ Validates the checksum inside the compression stream. This API uses a promise to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>--><!--Device-Zip-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>-End-->
@@ -2856,7 +2688,7 @@ Validates the checksum inside the compression stream. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#zstream). |
 | check | int | Yes | Expected checksum. |
 
 **Return value:**
@@ -2872,7 +2704,7 @@ Validates the checksum inside the compression stream. This API uses a promise to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2910,10 +2742,6 @@ Decompresses the compressed data into the raw data. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>--><!--Device-Zip-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>-End-->
@@ -2942,7 +2770,7 @@ Decompresses the compressed data into the raw data. This API uses a promise to r
 | [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 | [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -2979,10 +2807,6 @@ Decompresses the compressed data into the raw data. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>--><!--Device-Zip-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>-End-->
@@ -3011,7 +2835,7 @@ Decompresses the compressed data into the raw data. This API uses a promise to r
 | [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 | [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
@@ -3048,10 +2872,6 @@ Returns the flags indicating compile-time options. This API uses a promise to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-zlibCompileFlags(): Promise<int>--><!--Device-Zip-zlibCompileFlags(): Promise<int>-End-->
@@ -3064,7 +2884,7 @@ Returns the flags indicating compile-time options. This API uses a promise to re
 | --- | --- |
 | Promise&lt;int&gt; | Promise used to return the flags indicating compile-time options. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';
@@ -3086,10 +2906,6 @@ Obtains the version information of this zlib library connected. This API uses a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-zlibVersion(): Promise<string>--><!--Device-Zip-zlibVersion(): Promise<string>-End-->
@@ -3102,7 +2918,7 @@ Obtains the version information of this zlib library connected. This API uses a 
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the version of the current zlib library. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

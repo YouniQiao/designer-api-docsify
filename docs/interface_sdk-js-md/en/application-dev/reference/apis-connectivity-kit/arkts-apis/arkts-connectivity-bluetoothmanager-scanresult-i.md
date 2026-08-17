@@ -4,11 +4,9 @@ Describes the contents of the scan results.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [ScanResult](arkts-connectivity-ble-scanresult-i.md#ScanResult)
+**Substitutes:** [ScanResult](arkts-connectivity-ble-scanresult-i.md#scanresult)
 
 <!--Device-bluetoothManager-interface ScanResult--><!--Device-bluetoothManager-interface ScanResult-End-->
 
@@ -32,8 +30,6 @@ The raw data of broadcast packet
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [data](arkts-connectivity-ble-scanresult-i.md#data)
@@ -54,11 +50,9 @@ Address of the scanned device
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](arkts-connectivity-ble-scanresult-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-ble-scanresult-i.md#deviceid)
 
 <!--Device-ScanResult-deviceId: string--><!--Device-ScanResult-deviceId: string-End-->
 
@@ -75,8 +69,6 @@ RSSI of the remote device
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

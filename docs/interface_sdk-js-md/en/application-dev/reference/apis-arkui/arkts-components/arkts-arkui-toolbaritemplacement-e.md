@@ -1,12 +1,8 @@
-# ToolBarItemPlacement
+# ToolBarItemPlacement(Defines toolbar attributes.)
 
 Enumerates the placement options for toolbar items in the title bar.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum ToolBarItemPlacement--><!--Device-unnamed-declare enum ToolBarItemPlacement-End-->
 
@@ -21,10 +17,6 @@ TOP_BAR_LEADING = 0
 Places the item at the start of the top bar.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,10 +33,6 @@ TOP_BAR_TRAILING = 1
 Places the item at the end of the top bar.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

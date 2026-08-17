@@ -16,10 +16,6 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sharing-function changeConfirmation(sharingResource: string, state: State, callback: AsyncCallback<Result<void>>): void--><!--Device-sharing-function changeConfirmation(sharingResource: string, state: State, callback: AsyncCallback<Result<void>>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -42,7 +38,7 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -66,10 +62,6 @@ function changeConfirmation(sharingResource: string, state: State): Promise<Resu
 Changes the invitation confirmation state based on the shared resource ID. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sharing-function changeConfirmation(sharingResource: string, state: State): Promise<Result<void>>--><!--Device-sharing-function changeConfirmation(sharingResource: string, state: State): Promise<Result<void>>-End-->
 
@@ -98,7 +90,7 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

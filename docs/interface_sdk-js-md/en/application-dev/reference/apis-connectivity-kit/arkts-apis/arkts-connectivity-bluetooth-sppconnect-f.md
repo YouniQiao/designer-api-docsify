@@ -16,11 +16,9 @@ Connects to a remote device over the socket.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md#sppConnect)
+**Substitutes:** [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md#sppconnect)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -33,10 +31,10 @@ Connects to a remote device over the socket.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | device | string | Yes | The address of the remote device to connect. |
-| option | SppOption | Yes | Indicates the connect parameters [SppOption](arkts-connectivity-bluetooth-sppoption-i.md#SppOption). |
+| option | SppOption | Yes | Indicates the connect parameters [SppOption](arkts-connectivity-bluetooth-sppoption-i.md#sppoption). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

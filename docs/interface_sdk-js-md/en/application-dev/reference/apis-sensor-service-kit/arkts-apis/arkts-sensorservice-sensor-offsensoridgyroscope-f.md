@@ -16,10 +16,6 @@ Unsubscribes from data of the gyroscope sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -52,10 +48,6 @@ function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callba
 Unsubscribes from data of the gyroscope sensor.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GYROSCOPE
 

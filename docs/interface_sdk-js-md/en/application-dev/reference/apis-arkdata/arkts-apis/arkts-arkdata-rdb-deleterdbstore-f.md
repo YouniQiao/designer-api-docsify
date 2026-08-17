@@ -10,11 +10,9 @@ Deletes an RDB store. This API uses an asynchronous callback to return the resul
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleteRdbStore)
+**Substitutes:** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleterdbstore)
 
 <!--Device-rdb-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void--><!--Device-rdb-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -39,11 +37,9 @@ Deletes an RDB store. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleteRdbStore)
+**Substitutes:** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleterdbstore)
 
 <!--Device-rdb-function deleteRdbStore(context: Context, name: string): Promise<void>--><!--Device-rdb-function deleteRdbStore(context: Context, name: string): Promise<void>-End-->
 

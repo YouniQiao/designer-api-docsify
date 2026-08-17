@@ -1,14 +1,10 @@
 # ItemInfo
 
-It inherits from [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md#BaseItemInfo), adding the parameter **itemType**. Represents basic image and video information.
+It inherits from [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md#baseiteminfo), adding the parameter **itemType**. Represents basic image and video information.
 
-**Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md#BaseItemInfo)
+**Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md#baseiteminfo)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ItemInfo--><!--Device-unnamed-export declare class ItemInfo-End-->
 
@@ -69,10 +65,6 @@ Type of the item, which can be **THUMBNAIL** or **CAMERA**.
 **Type:** [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

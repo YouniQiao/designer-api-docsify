@@ -4,10 +4,6 @@ Describes information about controlling the Bluetooth peripheral.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-interface ControlDeviceActionParams--><!--Device-connection-interface ControlDeviceActionParams-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -32,10 +28,6 @@ Indicates the control object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ControlDeviceActionParams-controlObject: ControlObject--><!--Device-ControlDeviceActionParams-controlObject: ControlObject-End-->
@@ -55,10 +47,6 @@ Indicates the address of the peripheral.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Indicates the control type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ControlDeviceActionParams-type: ControlType--><!--Device-ControlDeviceActionParams-type: ControlType-End-->
@@ -103,10 +87,6 @@ Indicates the control value.
 **Type:** [ControlTypeValue](arkts-connectivity-connection-controltypevalue-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

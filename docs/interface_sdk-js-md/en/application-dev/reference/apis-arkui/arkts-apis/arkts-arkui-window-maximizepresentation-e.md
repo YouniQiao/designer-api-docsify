@@ -4,10 +4,6 @@ Enumerates the layout when the window is maximized.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-enum MaximizePresentation--><!--Device-window-enum MaximizePresentation-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ FOLLOW_APP_IMMERSIVE_SETTING = 0
 The window, when maximized, follows the application's full-screen mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ The window, when maximized, exits full-screen mode if it is set to full-screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MaximizePresentation-EXIT_IMMERSIVE = 1--><!--Device-MaximizePresentation-EXIT_IMMERSIVE = 1-End-->
@@ -62,10 +50,6 @@ The window, when maximized, transitions into the full-screen mode, and the windo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MaximizePresentation-ENTER_IMMERSIVE = 2--><!--Device-MaximizePresentation-ENTER_IMMERSIVE = 2-End-->
@@ -81,10 +65,6 @@ ENTER_IMMERSIVE_DISABLE_TITLE_AND_DOCK_HOVER = 3
 The window, when maximized, transitions into the full-screen mode, and the window title bar and dock bar are not displayed when the cursor hovers over the hot zone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

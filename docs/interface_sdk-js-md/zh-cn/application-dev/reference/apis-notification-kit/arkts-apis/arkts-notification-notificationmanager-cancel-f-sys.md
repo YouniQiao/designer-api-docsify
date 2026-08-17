@@ -16,10 +16,6 @@ function cancel(representativeBundle: BundleOption, id: int): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-notificationManager-function cancel(representativeBundle: BundleOption, id: int): Promise<void>--><!--Device-notificationManager-function cancel(representativeBundle: BundleOption, id: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -52,7 +48,7 @@ function cancel(representativeBundle: BundleOption, id: int): Promise<void>
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

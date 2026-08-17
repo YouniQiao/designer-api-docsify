@@ -4,13 +4,9 @@
 export type GlobalObserver = (reason: GlobalError) => void
 ```
 
-Defines an exception observer that can be used as an input parameter for [errorManager.on('globalErrorOccurred')](arkts-ability-errormanager-onerror-f.md#on_error) and [errorManager.on('globalUnhandledRejectionDetected')](arkts-ability-errormanager-onerror-f.md#on_error) to monitor event processing on the main thread of the current application.
+Defines an exception observer that can be used as an input parameter for [errorManager.on('globalErrorOccurred')](arkts-ability-errormanager-onerror-f.md#onerror) and [errorManager.on('globalUnhandledRejectionDetected')](arkts-ability-errormanager-onerror-f.md#onerror) to monitor event processing on the main thread of the current application.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

@@ -16,10 +16,6 @@ Unsubscribes from the property change event of the status bar and navigation bar
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-function offSystemBarTintChange(callback?: Callback<SystemBarTintState>): void--><!--Device-window-function offSystemBarTintChange(callback?: Callback<SystemBarTintState>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

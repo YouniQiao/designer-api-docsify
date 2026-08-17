@@ -4,10 +4,6 @@ The pre-defined display tag by system.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-enum DisplayTag--><!--Device-avSession-enum DisplayTag-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -21,10 +17,6 @@ TAG_AUDIO_VIVID = 1
 Indicate the AUDIO VIVID property of current media resource.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DisplayTag-TAG_AUDIO_VIVID = 1--><!--Device-DisplayTag-TAG_AUDIO_VIVID = 1-End-->
 

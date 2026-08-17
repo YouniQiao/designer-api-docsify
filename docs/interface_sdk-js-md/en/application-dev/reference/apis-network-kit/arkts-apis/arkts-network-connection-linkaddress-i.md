@@ -4,10 +4,6 @@ Defines network link information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-export interface LinkAddress--><!--Device-connection-export interface LinkAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -30,10 +26,6 @@ Link address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LinkAddress-address: NetAddress--><!--Device-LinkAddress-address: NetAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -49,10 +41,6 @@ The length of the link address prefix.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LinkAddress-prefixLength: int--><!--Device-LinkAddress-prefixLength: int-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudExtension-export interface SubscribeId--><!--Device-cloudExtension-export interface SubscribeId-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -26,10 +22,6 @@ databaseAlias: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SubscribeId-databaseAlias: string--><!--Device-SubscribeId-databaseAlias: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -47,10 +39,6 @@ id: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SubscribeId-id: string--><!--Device-SubscribeId-id: string-End-->
 

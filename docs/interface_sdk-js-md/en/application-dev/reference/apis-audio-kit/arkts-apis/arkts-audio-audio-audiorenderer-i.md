@@ -1,12 +1,8 @@
 # AudioRenderer
 
-This interface provides APIs for audio rendering. Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer) to create an AudioRenderer instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 8.
+This interface provides APIs for audio rendering. Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer) to create an AudioRenderer instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audio-interface AudioRenderer--><!--Device-audio-interface AudioRenderer-End-->
 
@@ -28,10 +24,6 @@ Drains the playback buffer. This API uses an asynchronous callback to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-drain(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-drain(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -52,10 +44,6 @@ Drains the playback buffer. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-drain(): Promise<void>--><!--Device-AudioRenderer-drain(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -72,13 +60,9 @@ Drains the playback buffer. This API uses a promise to return the result.
 flush(): Promise<void>
 ```
 
-Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-audiostate-e.md#AudioState) is **STATE_RUNNING**, **STATE_PAUSED**, or **STATE_STOPPED**. This API uses a promise to return the result.
+Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-audiostate-e.md#audiostate) is **STATE_RUNNING**, **STATE_PAUSED**, or **STATE_STOPPED**. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-flush(): Promise<void>--><!--Device-AudioRenderer-flush(): Promise<void>-End-->
 
@@ -106,10 +90,6 @@ Obtains the audio effect mode in use. This API uses an asynchronous callback to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void--><!--Device-AudioRenderer-getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -129,10 +109,6 @@ getAudioEffectMode(): Promise<AudioEffectMode>
 Obtains the audio effect mode in use. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioEffectMode(): Promise<AudioEffectMode>--><!--Device-AudioRenderer-getAudioEffectMode(): Promise<AudioEffectMode>-End-->
 
@@ -154,10 +130,6 @@ Obtains the stream ID of this audio renderer. This API uses an asynchronous call
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getAudioStreamId(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getAudioStreamId(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -177,10 +149,6 @@ getAudioStreamId(): Promise<long>
 Obtains the stream ID of this audio renderer. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioStreamId(): Promise<long>--><!--Device-AudioRenderer-getAudioStreamId(): Promise<long>-End-->
 
@@ -202,10 +170,6 @@ Obtains the stream ID of this audio renderer. This API returns the result synchr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getAudioStreamIdSync(): long--><!--Device-AudioRenderer-getAudioStreamIdSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -225,10 +189,6 @@ getAudioTime(callback: AsyncCallback<long>): void
 Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1 970). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioTime(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getAudioTime(callback: AsyncCallback<long>): void-End-->
 
@@ -250,10 +210,6 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getAudioTime(): Promise<long>--><!--Device-AudioRenderer-getAudioTime(): Promise<long>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -274,10 +230,6 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getAudioTimeSync(): long--><!--Device-AudioRenderer-getAudioTimeSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -297,10 +249,6 @@ getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API uses a promise to return the result. This information is commonly used for audio and video synchronization. Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called. Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>--><!--Device-AudioRenderer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>-End-->
 
@@ -328,10 +276,6 @@ Obtains the timestamp and position information of an output audio stream. It ada
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getAudioTimestampInfoSync(): AudioTimestampInfo--><!--Device-AudioRenderer-getAudioTimestampInfoSync(): AudioTimestampInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -358,10 +302,6 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getBufferSize(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getBufferSize(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -381,10 +321,6 @@ getBufferSize(): Promise<long>
 Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getBufferSize(): Promise<long>--><!--Device-AudioRenderer-getBufferSize(): Promise<long>-End-->
 
@@ -406,10 +342,6 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getBufferSizeSync(): long--><!--Device-AudioRenderer-getBufferSizeSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -429,10 +361,6 @@ getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void
 Obtains the output device information of the audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
 
@@ -454,10 +382,6 @@ Obtains the output device information of the audio stream. This API uses a promi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>--><!--Device-AudioRenderer-getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -478,10 +402,6 @@ Obtains the output device information of the audio stream. This API returns the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getCurrentOutputDevicesSync(): AudioDeviceDescriptors--><!--Device-AudioRenderer-getCurrentOutputDevicesSync(): AudioDeviceDescriptors-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -498,13 +418,9 @@ Obtains the output device information of the audio stream. This API returns the 
 getLatency(type: AudioLatencyType): int
 ```
 
-Obtains the estimated latency of the current audio route. > **NOTE：**> > - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only. > > - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the > audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching. > > - You are advised to use [getAudioTimestampInfo](#getAudioTimestampInfo) or > [getAudioTimestampInfoSync](#getAudioTimestampInfoSync) to implement audio and video > synchronization after the audio is output to the hardware.
+Obtains the estimated latency of the current audio route. > **NOTE：**> > - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only. > > - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the > audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching. > > - You are advised to use [getAudioTimestampInfo](#getaudiotimestampinfo) or > [getAudioTimestampInfoSync](#getaudiotimestampinfosync) to implement audio and video > synchronization after the audio is output to the hardware.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -542,10 +458,6 @@ Gets loudness gain of this stream.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getLoudnessGain(): double--><!--Device-AudioRenderer-getLoudnessGain(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -565,10 +477,6 @@ getMaxStreamVolume(callback: AsyncCallback<double>): void
 Obtains the maximum volume of the audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getMaxStreamVolume(callback: AsyncCallback<double>): void--><!--Device-AudioRenderer-getMaxStreamVolume(callback: AsyncCallback<double>): void-End-->
 
@@ -590,10 +498,6 @@ Obtains the maximum volume of the audio stream. This API uses a promise to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getMaxStreamVolume(): Promise<double>--><!--Device-AudioRenderer-getMaxStreamVolume(): Promise<double>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -613,10 +517,6 @@ getMaxStreamVolumeSync(): double
 Obtains the maximum volume of the audio stream. This API returns the result synchronously.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getMaxStreamVolumeSync(): double--><!--Device-AudioRenderer-getMaxStreamVolumeSync(): double-End-->
 
@@ -638,10 +538,6 @@ Obtains the minimum volume of the audio stream. This API uses an asynchronous ca
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getMinStreamVolume(callback: AsyncCallback<double>): void--><!--Device-AudioRenderer-getMinStreamVolume(callback: AsyncCallback<double>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -661,10 +557,6 @@ getMinStreamVolume(): Promise<double>
 Obtains the minimum volume of the audio stream. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getMinStreamVolume(): Promise<double>--><!--Device-AudioRenderer-getMinStreamVolume(): Promise<double>-End-->
 
@@ -686,10 +578,6 @@ Obtains the minimum volume of the audio stream. This API returns the result sync
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getMinStreamVolumeSync(): double--><!--Device-AudioRenderer-getMinStreamVolumeSync(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -710,11 +598,9 @@ Obtains the audio renderer rate. This API uses an asynchronous callback to retur
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getSpeed](#getSpeed)
+**Substitutes:** [getSpeed](#getspeed)
 
 <!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void--><!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void-End-->
 
@@ -736,11 +622,9 @@ Obtains the audio renderer rate. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getSpeed](#getSpeed)
+**Substitutes:** [getSpeed](#getspeed)
 
 <!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>--><!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>-End-->
 
@@ -762,11 +646,9 @@ Obtains the audio renderer rate. This API returns the result synchronously.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [getSpeed](#getSpeed)
+**Substitutes:** [getSpeed](#getspeed)
 
 <!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate--><!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate-End-->
 
@@ -788,10 +670,6 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void--><!--Device-AudioRenderer-getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -811,10 +689,6 @@ getRendererInfo(): Promise<AudioRendererInfo>
 Obtains the information about this audio renderer. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getRendererInfo(): Promise<AudioRendererInfo>--><!--Device-AudioRenderer-getRendererInfo(): Promise<AudioRendererInfo>-End-->
 
@@ -836,10 +710,6 @@ Obtains the information about this audio renderer. This API returns the result s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getRendererInfoSync(): AudioRendererInfo--><!--Device-AudioRenderer-getRendererInfoSync(): AudioRendererInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -859,10 +729,6 @@ getSilentModeAndMixWithOthers(): boolean
 Obtains the silent mode in concurrent playback for the audio stream.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getSilentModeAndMixWithOthers(): boolean--><!--Device-AudioRenderer-getSilentModeAndMixWithOthers(): boolean-End-->
 
@@ -884,10 +750,6 @@ Obtains the playback speed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getSpeed(): double--><!--Device-AudioRenderer-getSpeed(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -907,10 +769,6 @@ getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 Obtains the stream information of this audio renderer. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void--><!--Device-AudioRenderer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void-End-->
 
@@ -932,10 +790,6 @@ Obtains the stream information of this audio renderer. This API uses a promise t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getStreamInfo(): Promise<AudioStreamInfo>--><!--Device-AudioRenderer-getStreamInfo(): Promise<AudioStreamInfo>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -955,10 +809,6 @@ getStreamInfoSync(): AudioStreamInfo
 Obtains the stream information of this audio renderer. This API returns the result synchronously.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getStreamInfoSync(): AudioStreamInfo--><!--Device-AudioRenderer-getStreamInfoSync(): AudioStreamInfo-End-->
 
@@ -980,10 +830,6 @@ Obtains the number of underflow audio frames in the audio stream that is being p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getUnderflowCount(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getUnderflowCount(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1003,10 +849,6 @@ getUnderflowCount(): Promise<long>
 Obtains the number of underflow audio frames in the audio stream that is being played. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-getUnderflowCount(): Promise<long>--><!--Device-AudioRenderer-getUnderflowCount(): Promise<long>-End-->
 
@@ -1028,10 +870,6 @@ Obtains the number of underflow audio frames in the audio stream that is being p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getUnderflowCountSync(): long--><!--Device-AudioRenderer-getUnderflowCountSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1052,10 +890,6 @@ Obtains the volume of the audio stream. This API returns the result synchronousl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-getVolume(): double--><!--Device-AudioRenderer-getVolume(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1075,10 +909,6 @@ offAudioInterrupt(callback?: Callback<InterruptEvent>): void
 Unsubscribes audio interrupt events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-offAudioInterrupt(callback?: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-offAudioInterrupt(callback?: Callback<InterruptEvent>): void-End-->
 
@@ -1106,10 +936,6 @@ Unsubscribes from mark reached events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-offMarkReach(callback?: Callback<long>): void--><!--Device-AudioRenderer-offMarkReach(callback?: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1129,10 +955,6 @@ offOutputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void
 Unsubscribes output device change event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-offOutputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-offOutputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
@@ -1160,10 +982,6 @@ Unsubscribes output device change event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-offOutputDeviceChangeWithInfo(callback?: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-offOutputDeviceChangeWithInfo(callback?: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -1190,10 +1008,6 @@ Unsubscribes from period reached events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-offPeriodReach(callback?: Callback<long>): void--><!--Device-AudioRenderer-offPeriodReach(callback?: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1213,10 +1027,6 @@ offStateChange(callback?: Callback<AudioState>): void
 Unsubscribes audio state change event callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-offStateChange(callback?: Callback<AudioState>): void--><!--Device-AudioRenderer-offStateChange(callback?: Callback<AudioState>): void-End-->
 
@@ -1244,10 +1054,6 @@ Unsubscribes audio data callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-offWriteData(callback?: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-offWriteData(callback?: AudioRendererWriteDataCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1273,10 +1079,6 @@ off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void
 Unsubscribes from the audio interruption event. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void-End-->
 
@@ -1305,10 +1107,6 @@ Unsubscribes from the mark reached event. This API uses an asynchronous callback
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-off(type: 'markReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'markReach', callback?: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1329,10 +1127,6 @@ off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): vo
 Unsubscribes from the audio output device change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
@@ -1362,10 +1156,6 @@ Unsubscribes from the change event of audio output devices and reasons. This API
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -1394,10 +1184,6 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1418,10 +1204,6 @@ off(type: 'stateChange', callback?: Callback<AudioState>): void
 Unsubscribes from the audio renderer state change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void--><!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void-End-->
 
@@ -1450,10 +1232,6 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1463,7 +1241,7 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'writeData' | Yes | Event type. The event **'writeData'** is triggered when audio data needs to be written. |
-| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | No | Callback used to write the data to the buffer.<br>API version 11 does not support the return of the callback result. API version 12 and later support the return of the callback result [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#AudioDataCallbackResult) .<br>**Since:** 12 |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | No | Callback used to write the data to the buffer.<br>API version 11 does not support the return of the callback result. API version 12 and later support the return of the callback result [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#audiodatacallbackresult) .<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -1481,10 +1259,6 @@ onAudioInterrupt(callback: Callback<InterruptEvent>): void
 Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio playback is interrupted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-onAudioInterrupt(callback: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-onAudioInterrupt(callback: Callback<InterruptEvent>): void-End-->
 
@@ -1512,10 +1286,6 @@ Subscribes to mark reached events. When the number of frames rendered reaches th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-onMarkReach(frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-onMarkReach(frame: long, callback: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1536,10 +1306,6 @@ onOutputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void
 Subscribes output device change event callback. The event is triggered when output device change for this stream.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-onOutputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-onOutputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void-End-->
 
@@ -1567,10 +1333,6 @@ Subscribes output device change event callback. The event is triggered when outp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-onOutputDeviceChangeWithInfo(callback: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-onOutputDeviceChangeWithInfo(callback: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -1597,10 +1359,6 @@ Subscribes to period reached events. When the period of frame rendering reaches 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-onPeriodReach(frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-onPeriodReach(frame: long, callback: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1622,10 +1380,6 @@ Subscribes audio renderer state change event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-onStateChange(callback: Callback<AudioState>): void--><!--Device-AudioRenderer-onStateChange(callback: Callback<AudioState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1645,10 +1399,6 @@ onWriteData(callback: AudioRendererWriteDataCallback): void
 Subscribes audio data callback. The event is triggered when audio buffer is available for writing more data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-onWriteData(callback: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-onWriteData(callback: AudioRendererWriteDataCallback): void-End-->
 
@@ -1672,13 +1422,9 @@ Subscribes audio data callback. The event is triggered when audio buffer is avai
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus. After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md#InterruptEvent) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus. After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md#interruptevent) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void-End-->
 
@@ -1708,10 +1454,6 @@ Subscribes to the mark reached event, which is triggered (only once) when the nu
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-on(type: 'markReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'markReach', frame: long, callback: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1733,10 +1475,6 @@ on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 Subscribes to the audio output device change event, which is triggered when an audio output device is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void-End-->
 
@@ -1766,10 +1504,6 @@ Subscribes to the change event of audio output devices and reasons, which is tri
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -1798,10 +1532,6 @@ Subscribes to the period reached event, which is triggered each time the number 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1824,10 +1554,6 @@ Subscribes to the audio renderer state change event, which is triggered when the
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void--><!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1849,10 +1575,6 @@ Subscribes to the audio data write event, which is triggered when audio data nee
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-on(type: 'writeData', callback: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-on(type: 'writeData', callback: AudioRendererWriteDataCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1862,7 +1584,7 @@ Subscribes to the audio data write event, which is triggered when audio data nee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'writeData' | Yes | Event type. The event **'writeData'** is triggered when audio data needs to be written. |
-| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | Yes | Callback used to write the data to the buffer.<br>API version 11 does not support the return of the callback result. API version 12 and later support the return of the callback result [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#AudioDataCallbackResult) .<br>**Since:** 12 |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | Yes | Callback used to write the data to the buffer.<br>API version 11 does not support the return of the callback result. API version 12 and later support the return of the callback result [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#audiodatacallbackresult) .<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -1880,10 +1602,6 @@ pause(callback: AsyncCallback<void>): void
 Pauses this audio renderer. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-pause(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-pause(callback: AsyncCallback<void>): void-End-->
 
@@ -1905,10 +1623,6 @@ Pauses this audio renderer. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-pause(): Promise<void>--><!--Device-AudioRenderer-pause(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1928,10 +1642,6 @@ release(callback: AsyncCallback<void>): void
 Releases the renderer. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-release(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -1953,10 +1663,6 @@ Releases the renderer. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-release(): Promise<void>--><!--Device-AudioRenderer-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -1976,10 +1682,6 @@ setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void
 Sets an audio effect mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void-End-->
 
@@ -2008,10 +1710,6 @@ setAudioEffectMode(mode: AudioEffectMode): Promise<void>
 Sets an audio effect mode. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode): Promise<void>--><!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode): Promise<void>-End-->
 
@@ -2046,10 +1744,6 @@ Sets the audio channel blending mode. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-setChannelBlendMode(mode: ChannelBlendMode): void--><!--Device-AudioRenderer-setChannelBlendMode(mode: ChannelBlendMode): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -2077,10 +1771,6 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 Temporarily changes the current audio device This function applies on audiorenderers whose StreamUsage are STREAM_USAGE_VOICE_COMMUNICATION/STREAM_USAGE_VIDEO_COMMUNICATION/STREAM_USAGE_VOICE_MESSAGE. Setting the device will only takes effect if no other accessory such as headphones are in use
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioRenderer-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
@@ -2116,10 +1806,6 @@ Sets the independent audio session strategy and behavior parameters. > **NOTE：
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioRenderer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void--><!--Device-AudioRenderer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void-End-->
@@ -2131,7 +1817,7 @@ Sets the independent audio session strategy and behavior parameters. > **NOTE：
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | Yes | Audio session strategy. |
-| behavior | int | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags). |
+| behavior | int | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#audiosessionbehaviorflags). |
 
 **Error codes:**
 
@@ -2149,10 +1835,6 @@ setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void
 Sets the audio interruption mode for the application. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void-End-->
 
@@ -2174,10 +1856,6 @@ setInterruptMode(mode: InterruptMode): Promise<void>
 Sets the audio interruption mode for the application. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode): Promise<void>--><!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode): Promise<void>-End-->
 
@@ -2205,10 +1883,6 @@ Sets the audio interruption mode for the application. This API returns the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-setInterruptModeSync(mode: InterruptMode): void--><!--Device-AudioRenderer-setInterruptModeSync(mode: InterruptMode): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
@@ -2232,13 +1906,9 @@ Sets the audio interruption mode for the application. This API returns the resul
 setLoudnessGain(loudnessGain: double): Promise<void>
 ```
 
-Sets the loudness gain of this stream. The default loudness gain is 0.0dB. The stream usage of the audio renderer must be [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MUSIC), [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MOVIE) or [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_AUDIOBOOK). After calling this interface, the adjustment of loundness gain will take effect immediately.
+Sets the loudness gain of this stream. The default loudness gain is 0.0dB. The stream usage of the audio renderer must be [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#streamusagemusic), [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#streamusagemovie) or [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#streamusageaudiobook). After calling this interface, the adjustment of loundness gain will take effect immediately.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setLoudnessGain(loudnessGain: double): Promise<void>--><!--Device-AudioRenderer-setLoudnessGain(loudnessGain: double): Promise<void>-End-->
 
@@ -2261,7 +1931,7 @@ Sets the loudness gain of this stream. The default loudness gain is 0.0dB. The s
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation is not supported on this renderer, e.g. the stream usage of this renderer is not one of [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MUSIC), [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MOVIE) or [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_AUDIOBOOK), or this renderer is routed through the high-resolution playback path. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation is not supported on this renderer, e.g. the stream usage of this renderer is not one of [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#streamusagemusic), [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#streamusagemovie) or [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#streamusageaudiobook), or this renderer is routed through the high-resolution playback path. |
 
 ## setRenderRate
 
@@ -2272,8 +1942,6 @@ setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void
 Sets the render rate. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 11
 
@@ -2299,8 +1967,6 @@ setRenderRate(rate: AudioRendererRate): Promise<void>
 Sets the render rate. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 11
 
@@ -2332,10 +1998,6 @@ Sets the silent mode in concurrent playback for the audio stream. If the silent 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-setSilentModeAndMixWithOthers(on: boolean): void--><!--Device-AudioRenderer-setSilentModeAndMixWithOthers(on: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -2355,10 +2017,6 @@ setSpeed(speed: double): void
 Sets the playback speed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setSpeed(speed: double): void--><!--Device-AudioRenderer-setSpeed(speed: double): void-End-->
 
@@ -2387,10 +2045,6 @@ Sets the volume for the audio stream. This API uses an asynchronous callback to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-setVolume(volume: double, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setVolume(volume: double, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -2411,10 +2065,6 @@ setVolume(volume: double): Promise<void>
 Sets the volume for the audio stream. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setVolume(volume: double): Promise<void>--><!--Device-AudioRenderer-setVolume(volume: double): Promise<void>-End-->
 
@@ -2441,10 +2091,6 @@ setVolumeWithRamp(volume: double, duration: int): void
 Sets a volume ramp. This API returns the result synchronously.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-setVolumeWithRamp(volume: double, duration: int): void--><!--Device-AudioRenderer-setVolumeWithRamp(volume: double, duration: int): void-End-->
 
@@ -2474,10 +2120,6 @@ Starts this audio renderer. This API uses an asynchronous callback to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-start(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-start(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -2497,10 +2139,6 @@ start(): Promise<void>
 Starts this audio renderer. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-start(): Promise<void>--><!--Device-AudioRenderer-start(): Promise<void>-End-->
 
@@ -2522,10 +2160,6 @@ Stops this audio renderer. This API uses an asynchronous callback to return the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-stop(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-stop(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -2546,10 +2180,6 @@ Stops this audio renderer. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioRenderer-stop(): Promise<void>--><!--Device-AudioRenderer-stop(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -2569,8 +2199,6 @@ write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 Writes the buffer. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 11
 
@@ -2596,8 +2224,6 @@ write(buffer: ArrayBuffer): Promise<number>
 Writes the buffer. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 11
 
@@ -2630,10 +2256,6 @@ Audio renderer state.
 **Type:** AudioState
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioRenderer-readonly state: AudioState--><!--Device-AudioRenderer-readonly state: AudioState-End-->
 

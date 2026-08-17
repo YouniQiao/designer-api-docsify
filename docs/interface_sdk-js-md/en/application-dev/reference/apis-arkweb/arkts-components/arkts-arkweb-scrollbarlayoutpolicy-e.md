@@ -1,12 +1,8 @@
 # ScrollbarLayoutPolicy
 
-Defines the layout policy for scrollbars, used with scrollbarLayoutPolicy.
+Defines the enumeration type for scrollbar layout mode control parameters.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum ScrollbarLayoutPolicy--><!--Device-unnamed-declare enum ScrollbarLayoutPolicy-End-->
 
@@ -18,13 +14,9 @@ Defines the layout policy for scrollbars, used with scrollbarLayoutPolicy.
 CONTENT = 0
 ```
 
-Adheres to W3C standards (CSS/HTML/XHTML) for scrollbar layout.
+The left and right layout of the scrollbar follows the CSS settings.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +30,9 @@ Adheres to W3C standards (CSS/HTML/XHTML) for scrollbar layout.
 SYSTEM = 1
 ```
 
-Follows the system UI conventions for scrollbar layout in the system language.
+The left and right layout of the scrollbar follows the system language settings.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

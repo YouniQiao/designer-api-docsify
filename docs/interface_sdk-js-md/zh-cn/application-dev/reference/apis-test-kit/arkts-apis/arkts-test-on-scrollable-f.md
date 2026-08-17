@@ -10,10 +10,6 @@ Specifies the scrollable status of the target Component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ON-export function scrollable(b?: boolean): On--><!--Device-ON-export function scrollable(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest

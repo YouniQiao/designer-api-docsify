@@ -1,14 +1,10 @@
 # WriteOptions
 
-Defines the options used in **write()**. It inherits from [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md#Options).
+Defines the options used in **write()**. It inherits from [Options](arkts-corefile-file-fs-options-i.md#options).
 
-**Inheritance/Implementation:** WriteOptions extends [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md#Options)
+**Inheritance/Implementation:** WriteOptions extends [Options](arkts-corefile-file-fs-options-i.md#options)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface WriteOptions--><!--Device-unnamed-export interface WriteOptions-End-->
 
@@ -46,10 +42,6 @@ Length of the data to write, in bytes. This parameter is optional. The default v
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WriteOptions-length?: number--><!--Device-WriteOptions-length?: number-End-->
@@ -67,10 +59,6 @@ Start position of the file to write, in bytes. This parameter is optional. By de
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

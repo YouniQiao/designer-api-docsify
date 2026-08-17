@@ -2,11 +2,9 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [vibrator/vibrator](arkts-vibrator.md#@ohos.vibrator)
+**Substitutes:** [vibrator/vibrator](arkts-vibrator.md#ohosvibrator)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -26,15 +24,13 @@ import { VibrateOptions } from 'VibrateOptions';
 static vibrate(options?: VibrateOptions): void
 ```
 
-Triggers device vibration. > **NOTE：**> > Except for lite wearables. You are advised to use > [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) since API version 8.
+Triggers device vibration. > **NOTE：**> > Except for lite wearables. You are advised to use > [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startvibration) since API version 8.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -50,7 +46,7 @@ Triggers device vibration. > **NOTE：**> > Except for lite wearables. You are a
 | --- | --- | --- | --- |
 | options | [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) | No | Vibration options. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';

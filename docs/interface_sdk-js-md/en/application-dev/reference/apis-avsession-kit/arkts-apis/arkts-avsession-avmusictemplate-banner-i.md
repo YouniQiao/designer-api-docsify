@@ -2,13 +2,9 @@
 
 The definition of Banner.
 
-**Inheritance/Implementation:** Banner extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)
+**Inheritance/Implementation:** Banner extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#mediaentity)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-avMusicTemplate-interface Banner--><!--Device-avMusicTemplate-interface Banner-End-->
 
@@ -31,10 +27,6 @@ Is support one play
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

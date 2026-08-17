@@ -4,10 +4,6 @@ Serial port device information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-serial-interface SerialPortInfo--><!--Device-serial-interface SerialPortInfo-End-->
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -30,10 +26,6 @@ Manufacturer name of the USB virtual serial port device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SerialPortInfo-manufacturer?: string--><!--Device-SerialPortInfo-manufacturer?: string-End-->
@@ -51,10 +43,6 @@ Port name.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Product ID of the USB virtual serial port device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SerialPortInfo-productId?: int--><!--Device-SerialPortInfo-productId?: int-End-->
@@ -95,10 +79,6 @@ Vendor ID of the USB virtual serial port.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

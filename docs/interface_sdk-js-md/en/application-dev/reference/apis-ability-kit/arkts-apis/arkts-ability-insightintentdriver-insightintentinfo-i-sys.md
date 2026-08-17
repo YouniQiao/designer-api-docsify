@@ -4,10 +4,6 @@ Defines the intent information, which is the specific parameter configuration of
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntentDriver-interface InsightIntentInfo--><!--Device-insightIntentDriver-interface InsightIntentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -32,10 +28,6 @@ Bundle name of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfo-readonly bundleName: string--><!--Device-InsightIntentInfo-readonly bundleName: string-End-->
@@ -55,10 +47,6 @@ Development mode of the intent.
 **Type:** [DevelopType](arkts-ability-insightintentdriver-developtype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Description of the intent displayed in the InsightIntent framework.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfo-readonly displayDescription: string--><!--Device-InsightIntentInfo-readonly displayDescription: string-End-->
@@ -103,10 +87,6 @@ Name of the intent displayed in the InsightIntent framework.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Vertical domain of the intent. It is used to categorize intents by vertical fiel
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfo-readonly domain: string--><!--Device-InsightIntentInfo-readonly domain: string-End-->
@@ -151,10 +127,6 @@ Entity information contained in the intent.
 **Type:** Array&lt;EntityInfo&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +148,6 @@ Icon of the intent.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfo-readonly icon: string--><!--Device-InsightIntentInfo-readonly icon: string-End-->
@@ -199,10 +167,6 @@ Intent name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,10 +188,6 @@ Type of intent defined by the intent decorator. **NOTE：**For intents developed
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfo-readonly intentType: InsightIntentType--><!--Device-InsightIntentInfo-readonly intentType: InsightIntentType-End-->
@@ -247,10 +207,6 @@ Version number of the intent. It is used to distinguish and manage intents when 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,10 +228,6 @@ Search keywords for the intent.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfo-readonly keywords: string[]--><!--Device-InsightIntentInfo-readonly keywords: string[]-End-->
@@ -295,10 +247,6 @@ Function of an intent, which helps large language models understand the intent.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -320,10 +268,6 @@ Module name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfo-readonly moduleName: string--><!--Device-InsightIntentInfo-readonly moduleName: string-End-->
@@ -343,10 +287,6 @@ The insight intent parameters.
 **Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -368,10 +308,6 @@ The type definition of the result returned by intent call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfo-readonly result: Record<string, RecordData>--><!--Device-InsightIntentInfo-readonly result: Record<string, RecordData>-End-->
@@ -392,10 +328,6 @@ Standard intent name. If an intent in the standard intent list matches both the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfo-readonly schema: string--><!--Device-InsightIntentInfo-readonly schema: string-End-->
@@ -410,15 +342,11 @@ Standard intent name. If an intent in the standard intent list matches both the 
 readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo
 ```
 
-Intent information for specific intent decorators. **NOTE：**For intents developed using a configuration file, the return value of this field is [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md#EntryIntentInfo-(System-API)) by default.
+Intent information for specific intent decorators. **NOTE：**For intents developed using a configuration file, the return value of this field is [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md#entryintentinfo-system-api) by default.
 
 **Type:** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) \| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) \| [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) \| [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -439,10 +367,6 @@ Unique information about the intent developed using a configuration file.
 **Type:** [SubIntentInfoForConfiguration](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Enum for provides CPU thread affinity mode
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-export enum ThreadAffinityMode--><!--Device-mindSporeLite-export enum ThreadAffinityMode-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -21,10 +17,6 @@ NO_AFFINITIES = 0
 Thread affinity mode is no bind.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Thread affinity mode is big cores first
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ThreadAffinityMode-BIG_CORES_FIRST = 1--><!--Device-ThreadAffinityMode-BIG_CORES_FIRST = 1-End-->
@@ -61,10 +49,6 @@ LITTLE_CORES_FIRST = 2
 Thread affinity mode is little cores first
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

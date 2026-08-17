@@ -16,10 +16,6 @@ Checks whether application trace capture is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function isTraceEnabled(): boolean--><!--Device-hiTraceMeter-function isTraceEnabled(): boolean-End-->
@@ -32,7 +28,7 @@ Checks whether application trace capture is enabled.
 | --- | --- |
 | boolean | true** is returned when the trace capture is enabled using [hitrace](../../../dfx/hitrace.md). **false** is returned when it is disabled or stopped. In this case, calling the HiTraceMeter API does not take effect. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 if (hiTraceMeter.isTraceEnabled()) {

@@ -1,14 +1,10 @@
 # BarometerResponse
 
-Describes the barometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
+Describes the barometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
 
-**Inheritance/Implementation:** BarometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**Inheritance/Implementation:** BarometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-interface BarometerResponse--><!--Device-sensor-interface BarometerResponse-End-->
 
@@ -31,10 +27,6 @@ Atmospheric pressure, in units of hPa.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BarometerResponse-pressure: double--><!--Device-BarometerResponse-pressure: double-End-->
 

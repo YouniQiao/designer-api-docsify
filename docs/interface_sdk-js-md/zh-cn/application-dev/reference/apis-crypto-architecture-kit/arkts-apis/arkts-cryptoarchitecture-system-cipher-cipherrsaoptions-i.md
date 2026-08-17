@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -25,8 +23,6 @@ action: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 
@@ -48,8 +44,6 @@ complete: () => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -69,8 +63,6 @@ fail: (data: string, code: number) => void
 **类型：** (data: string, code: number) =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 
@@ -92,8 +84,6 @@ key: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -113,8 +103,6 @@ success: (data: CipherResponse) => void
 **类型：** (data: CipherResponse) =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 
@@ -136,8 +124,6 @@ text: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -157,8 +143,6 @@ RSA算法的填充项，默认为RSA/None/OAEPWithSHA256AndMGF1Padding。
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 11
 

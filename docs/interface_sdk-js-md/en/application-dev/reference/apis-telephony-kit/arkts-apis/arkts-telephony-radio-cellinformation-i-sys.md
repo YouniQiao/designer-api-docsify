@@ -4,10 +4,6 @@ Obtains current cell information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export interface CellInformation--><!--Device-radio-export interface CellInformation-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -31,10 +27,6 @@ Obtains signal strength under different network formats.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CellInformation-data: CdmaCellInformation | GsmCellInformation | LteCellInformation | NrCellInformation | TdscdmaCellInformation      | WcdmaCellInformation--><!--Device-CellInformation-data: CdmaCellInformation | GsmCellInformation | LteCellInformation | NrCellInformation | TdscdmaCellInformation      | WcdmaCellInformation-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -53,10 +45,6 @@ Obtains the camp-on status of the serving cell. Returns {@code true} if the user
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CellInformation-isCamped: boolean--><!--Device-CellInformation-isCamped: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -74,10 +62,6 @@ Obtains the timestamp when the cell information is obtained. Returns a timestamp
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CellInformation-timeStamp: int--><!--Device-CellInformation-timeStamp: int-End-->
 

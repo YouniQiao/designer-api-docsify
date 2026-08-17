@@ -4,10 +4,6 @@ Describes the size of the screen region to capture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screenshot-interface Size--><!--Device-screenshot-interface Size-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -32,10 +28,6 @@ Height of the screen region to capture, in px. The value must be a positive inte
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Size-height: long--><!--Device-Size-height: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -53,10 +45,6 @@ Width of the screen region to capture, in px. The value must be a positive integ
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Size-width: long--><!--Device-Size-width: long-End-->
 

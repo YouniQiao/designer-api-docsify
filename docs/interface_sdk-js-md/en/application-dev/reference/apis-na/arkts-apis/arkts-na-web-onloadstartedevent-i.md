@@ -4,9 +4,7 @@ Defines the triggered function at the begin of web page loading.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnLoadStartedEvent--><!--Device-unnamed-export declare interface OnLoadStartedEvent-End-->
 
@@ -24,9 +22,7 @@ The url to be loaded.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnLoadStartedEvent-url: string--><!--Device-OnLoadStartedEvent-url: string-End-->
 

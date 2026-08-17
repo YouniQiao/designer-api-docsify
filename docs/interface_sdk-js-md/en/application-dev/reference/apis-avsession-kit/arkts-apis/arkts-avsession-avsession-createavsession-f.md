@@ -16,10 +16,6 @@ Create an AVSession instance. An ability can only create one AVSession
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void--><!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -30,7 +26,7 @@ Create an AVSession instance. An ability can only create one AVSession
 | --- | --- | --- | --- |
 | context | Context | Yes | The context of application |
 | tag | string | Yes | A user-defined name for this session |
-| type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | The type of session [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md#AVSessionType) |
+| type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | The type of session [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md#avsessiontype) |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVSession](arkts-avsession-avsession-avsession-i.md)&gt; | Yes | async callback for AVSession. |
 
 **Error codes:**
@@ -40,7 +36,7 @@ Create an AVSession instance. An ability can only create one AVSession
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -87,10 +83,6 @@ Create an AVSession instance. An ability can only create one AVSession
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType): Promise<AVSession>--><!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType): Promise<AVSession>-End-->
@@ -103,7 +95,7 @@ Create an AVSession instance. An ability can only create one AVSession
 | --- | --- | --- | --- |
 | context | Context | Yes | The context of application |
 | tag | string | Yes | A user-defined name for this session |
-| type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | The type of session [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md#AVSessionType) |
+| type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | The type of session [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md#avsessiontype) |
 
 **Return value:**
 
@@ -118,7 +110,7 @@ Create an AVSession instance. An ability can only create one AVSession
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

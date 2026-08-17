@@ -1,12 +1,10 @@
 # BuilderNode
 
-class BuilderNode\&lt;T = undefined&gt; BuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有组件树的根节点。不支持定义为状态变量。 BuilderNode中持有的FrameNode仅用于将该BuilderNode作为子节点挂载到其他FrameNode上。对BuilderNode持有的FrameNode进行属性设置与子节点操作可能会产生未定义行为，因此不建议通过 BuilderNode的[getFrameNode](#getFrameNode)方法和FrameNode的 [getRenderNode](arkts-na-framenode-c.md#getRenderNode)方法获取RenderNode，并通过[RenderNode](arkts-na-rendernode-c.md#RenderNode)的接 口对其进行属性设置与子节点操作。
+class BuilderNode\&lt;T = undefined&gt; BuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有组件树的根节点。不支持定义为状态变量。 BuilderNode中持有的FrameNode仅用于将该BuilderNode作为子节点挂载到其他FrameNode上。对BuilderNode持有的FrameNode进行属性设置与子节点操作可能会产生未定义行为，因此不建议通过 BuilderNode的[getFrameNode](#getframenode)方法和FrameNode的 [getRenderNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getrendernode)方法获取RenderNode，并通过[RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md#rendernode)的接 口对其进行属性设置与子节点操作。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare class BuilderNode--><!--Device-unnamed-export declare class BuilderNode-End-->
 
@@ -22,9 +20,7 @@ build(builder: WrappedBuilder<CustomBuilder>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,9 +44,7 @@ build(builder: WrappedBuilder<CustomBuilderT<T>>, arg: T): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,9 +69,7 @@ build(builder: WrappedBuilder<CustomBuilderT<T>>, arg: T, options: BuildOptions)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -103,9 +95,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -117,7 +107,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。 |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。 |
 | options | [RenderOptions](arkts-na-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数。<br/>默认值：undefined |
 
 ## dispose
@@ -130,9 +120,7 @@ dispose(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -150,9 +138,7 @@ getFrameNode(): FrameNode | null
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,7 +150,7 @@ getFrameNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode inside the BuilderNode, or null if not contained. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns a FrameNode inside the BuilderNode, or null if not contained. |
 
 ## inheritFreezeOptions
 
@@ -176,9 +162,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -202,9 +186,7 @@ isDisposed(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -224,13 +206,11 @@ isDisposed(): boolean
 postInputEvent(event: InputEventType): boolean
 ```
 
-将事件分发到目标节点。 offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对于builderNode的偏移，offsetC为offsetA+offsetB，最终输入给postInputEvent中的window信息。  > **说明：** > > - 传入的坐标值需要转换为px，坐标转换示例可以参考下面示例代码。 > > - 鼠标左键点击事件将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，SourceType不会发生变化，规格可查看 > onTouch。 > > - 注入事件为轴事件（AxisEvent）时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发RotationGesture。 > > - 转发的事件会在被分发到的目标组件所在的子树里做touchtest，并触发对应手势，原始事件也会触发当前组件所在组件树中的手势。不保证两类手势的竞争结果。 > > - 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的TouchType中DOWN和UP字段都要 > 有，防止出现未定义行为。 > > - [webview](arkts-web-webview.md#@ohos.web.webview)已经处理过坐标系变换，可以将事件直接下发。 > > - postTouchEvent接口需要提供手势坐标相对于post事件对端内的局部坐标，postInputEvent接口需要提供手势坐标相对于post事件对端内的窗口坐标。 > > - 不建议同一个事件转发多次。&lt;!--Del--&gt;不支持UIExtensionComponent。&lt;!--DelEnd--&gt;
+将事件分发到目标节点。 offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对于builderNode的偏移，offsetC为offsetA+offsetB，最终输入给postInputEvent中的window信息。  > **说明：** > > - 传入的坐标值需要转换为px，坐标转换示例可以参考下面示例代码。 > > - 鼠标左键点击事件将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，SourceType不会发生变化，规格可查看 > onTouch。 > > - 注入事件为轴事件（AxisEvent）时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发RotationGesture。 > > - 转发的事件会在被分发到的目标组件所在的子树里做touchtest，并触发对应手势，原始事件也会触发当前组件所在组件树中的手势。不保证两类手势的竞争结果。 > > - 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的TouchType中DOWN和UP字段都要 > 有，防止出现未定义行为。 > > - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#ohoswebwebview)已经处理过坐标系变换，可以将事件直接下发。 > > - postTouchEvent接口需要提供手势坐标相对于post事件对端内的局部坐标，postInputEvent接口需要提供手势坐标相对于post事件对端内的窗口坐标。 > > - 不建议同一个事件转发多次。&lt;!--Del--&gt;不支持UIExtensionComponent。&lt;!--DelEnd--&gt;
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -260,9 +240,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -289,13 +267,11 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 postTouchEvent(event: TouchEvent): boolean
 ```
 
-将原始事件派发到某个BuilderNode创建出的FrameNode上。 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。 OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-na-framenode-c.md#getPositionToParent)获取。 OffsetB为point点相对于buildNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明) 获取。OffsetC为 OffsetA与OffsetB的和，是传给postTouchEvent的最终结果。  > **说明：** > > - 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。 > > - 在[webview](arkts-web-webview.md#@ohos.web.webview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。 > > - 同一时间戳，postTouchEvent只能调用一次。&lt;!--Del--&gt; > > - 不支持UIExtensionComponent。 &lt;!--DelEnd--&gt;
+将原始事件派发到某个BuilderNode创建出的FrameNode上。 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。 OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getpositiontoparent)获取。 OffsetB为point点相对于buildNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明) 获取。OffsetC为 OffsetA与OffsetB的和，是传给postTouchEvent的最终结果。  > **说明：** > > - 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。 > > - 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#ohoswebwebview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。 > > - 同一时间戳，postTouchEvent只能调用一次。&lt;!--Del--&gt; > > - 不支持UIExtensionComponent。 &lt;!--DelEnd--&gt;
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -325,9 +301,7 @@ recycle(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -345,9 +319,7 @@ reuse(param?: RecordData): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -369,9 +341,7 @@ update(arg: T): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -383,7 +353,7 @@ update(arg: T): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arg | T | 是 | 用于更新BuilderNode的参数，和[build](#BuilderNode)调用时传入的参数类型一致。 |
+| arg | T | 是 | 用于更新BuilderNode的参数，和[build](#buildernode)调用时传入的参数类型一致。 |
 
 ## updateConfiguration
 
@@ -391,13 +361,11 @@ update(arg: T): void
 updateConfiguration(): void
 ```
 
-传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md#Configuration)。 > **说明：** > > updateConfiguration接口用于通知对象更新，更新所使用的系统环境由应用当前的系统环境变化决定。
+传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md#configuration)。 > **说明：** > > updateConfiguration接口用于通知对象更新，更新所使用的系统环境由应用当前的系统环境变化决定。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

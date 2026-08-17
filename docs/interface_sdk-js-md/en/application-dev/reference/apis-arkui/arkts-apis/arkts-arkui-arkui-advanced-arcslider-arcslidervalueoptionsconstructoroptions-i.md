@@ -4,10 +4,6 @@ Defines the constructor information for **ArcSliderValueOptions**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ArcSliderValueOptionsConstructorOptions--><!--Device-unnamed-interface ArcSliderValueOptionsConstructorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -41,10 +37,6 @@ Maximum value. Default value: **100** **NOTE：**If the value of **min** is grea
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderValueOptionsConstructorOptions-max?: number--><!--Device-ArcSliderValueOptionsConstructorOptions-max?: number-End-->
@@ -65,10 +57,6 @@ Minimum value. Default value: **0**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderValueOptionsConstructorOptions-min?: number--><!--Device-ArcSliderValueOptionsConstructorOptions-min?: number-End-->
@@ -86,10 +74,6 @@ Current progress. Default value: same as the value of **min**.
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
 <!--Device-unnamed-export default class Package--><!--Device-unnamed-export default class Package-End-->
@@ -22,11 +20,9 @@ static hasInstalled(options: CheckPackageHasInstalledOptions): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
-**替代接口：** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md#canOpenLink)
+**替代接口：** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md#canopenlink)
 
 <!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void--><!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void-End-->
 

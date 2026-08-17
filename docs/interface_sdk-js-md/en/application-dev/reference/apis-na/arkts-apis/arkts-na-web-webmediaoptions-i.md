@@ -4,9 +4,7 @@ Describes the web media options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface WebMediaOptions--><!--Device-unnamed-export declare interface WebMediaOptions-End-->
 
@@ -24,9 +22,7 @@ Whether the audio of multiple **Web** instances in an application is exclusive. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebMediaOptions-audioExclusive?: boolean--><!--Device-WebMediaOptions-audioExclusive?: boolean-End-->
 
@@ -44,9 +40,7 @@ Web audio type in the application. The default value is [STREAM_USAGE_MUSIC](../
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebMediaOptions-audioSessionType?: AudioSessionType--><!--Device-WebMediaOptions-audioSessionType?: AudioSessionType-End-->
 
@@ -64,9 +58,7 @@ Validity period for automatically resuming a web audio paused by another applica
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WebMediaOptions-resumeInterval?: int--><!--Device-WebMediaOptions-resumeInterval?: int-End-->
 

@@ -6,13 +6,11 @@
 function fdopenStreamSync(fd: int, mode: string): Stream
 ```
 
-Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#Stream).
+Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#stream).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function fdopenStreamSync(fd: int, mode: string): Stream--><!--Device-fileIo-function fdopenStreamSync(fd: int, mode: string): Stream-End-->
 

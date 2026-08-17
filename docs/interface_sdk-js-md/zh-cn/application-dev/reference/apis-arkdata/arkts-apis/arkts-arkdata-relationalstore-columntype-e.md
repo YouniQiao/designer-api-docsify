@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-relationalStore-enum ColumnType--><!--Device-relationalStore-enum ColumnType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -22,10 +18,6 @@ NULL = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ColumnType-NULL = 0--><!--Device-ColumnType-NULL = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -36,13 +28,9 @@ NULL = 0
 INTEGER = 1
 ```
 
-表示列数据类型为64位整数。可用于保存8位（包括布尔值）、16位、32位、64位整数。如果64位整数大于2^53或小于-2^53，需使用 [getString](arkts-arkdata-relationalstore-resultset-i.md#getString)将64位整数转换为字符串。
+表示列数据类型为64位整数。可用于保存8位（包括布尔值）、16位、32位、64位整数。如果64位整数大于2^53或小于-2^53，需使用 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)将64位整数转换为字符串。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColumnType-INTEGER = 1--><!--Device-ColumnType-INTEGER = 1-End-->
 
@@ -58,10 +46,6 @@ REAL = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ColumnType-REAL = 2--><!--Device-ColumnType-REAL = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -75,10 +59,6 @@ TEXT = 3
 表示列类型为字符串。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColumnType-TEXT = 3--><!--Device-ColumnType-TEXT = 3-End-->
 
@@ -94,10 +74,6 @@ BLOB = 4
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ColumnType-BLOB = 4--><!--Device-ColumnType-BLOB = 4-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -108,13 +84,9 @@ BLOB = 4
 ASSET = 5
 ```
 
-表示列类型为[Asset](arkts-arkdata-relationalstore-asset-i.md#Asset)。
+表示列类型为[Asset](arkts-arkdata-relationalstore-asset-i.md#asset)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColumnType-ASSET = 5--><!--Device-ColumnType-ASSET = 5-End-->
 
@@ -126,13 +98,9 @@ ASSET = 5
 ASSETS = 6
 ```
 
-表示列类型为[Assets](arkts-arkdata-relationalstore-assets-t.md#Assets)。
+表示列类型为[Assets](arkts-arkdata-relationalstore-assets-t.md#assets)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColumnType-ASSETS = 6--><!--Device-ColumnType-ASSETS = 6-End-->
 
@@ -148,10 +116,6 @@ FLOAT_VECTOR = 7
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ColumnType-FLOAT_VECTOR = 7--><!--Device-ColumnType-FLOAT_VECTOR = 7-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -165,10 +129,6 @@ UNLIMITED_INT = 8
 表示列类型为bigint。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColumnType-UNLIMITED_INT = 8--><!--Device-ColumnType-UNLIMITED_INT = 8-End-->
 

@@ -4,10 +4,6 @@ Provides utilities for converting ECC/SM2 signature data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-class SignatureUtils--><!--Device-cryptoFramework-class SignatureUtils-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
@@ -27,10 +23,6 @@ static genEccSignature(spec: EccSignatureSpec): Uint8Array
 Converts an ECC/SM2 signature (r, s) to the ASN.1 DER encoding.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -59,7 +51,7 @@ Converts an ECC/SM2 signature (r, s) to the ASN.1 DER encoding.
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: <br>1. The r or s value of the spec parameter is 0 or too large. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -92,10 +84,6 @@ Generates r and s from the ECC/SM2 signature data in ASN.1 DER encoding.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec--><!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec-End-->
@@ -123,7 +111,7 @@ Generates r and s from the ECC/SM2 signature data in ASN.1 DER encoding.
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: <br>1. The length of the data parameter is 0 or too large. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';

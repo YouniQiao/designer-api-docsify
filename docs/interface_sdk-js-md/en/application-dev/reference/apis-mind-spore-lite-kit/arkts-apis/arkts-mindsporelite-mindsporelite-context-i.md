@@ -4,10 +4,6 @@ Provides the device configurations
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-interface Context--><!--Device-mindSporeLite-interface Context-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -30,10 +26,6 @@ The cpu device information
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Context-cpu?: CpuDevice--><!--Device-Context-cpu?: CpuDevice-End-->
@@ -52,10 +44,6 @@ The NNRT device information
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Context-nnrt?: NNRTDevice--><!--Device-Context-nnrt?: NNRTDevice-End-->
@@ -73,10 +61,6 @@ The target device
 **Type:** string[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

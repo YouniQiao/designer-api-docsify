@@ -1,14 +1,12 @@
-# UploadRequestOptions
+# UploadRequestOptions(Upload and Download)
 
-> **NOTE：**> > This API has been supported since API version 3 and deprecated since API version 9. You are advised to use > [UploadConfig](arkts-basicservices-agent-config-i.md#Config) instead.
+> **NOTE：**> > This API has been supported since API version 3 and deprecated since API version 9. You are advised to use > [UploadConfig](arkts-basicservices-agent-config-i.md#config) instead.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
+**Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#uploadconfig)
 
 <!--Device-unnamed-export interface UploadRequestOptions--><!--Device-unnamed-export interface UploadRequestOptions-End-->
 
@@ -39,8 +37,6 @@ Called when the execution is completed.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** on
@@ -60,8 +56,6 @@ Form data in the request body.
 **Type:** Array&lt;[RequestData](arkts-basicservices-system-request-requestdata-i.md)&gt;
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -83,8 +77,6 @@ Called when uploading fails.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** on
@@ -104,8 +96,6 @@ List of files to upload, which is submitted through multipart/form-data.
 **Type:** Array&lt;[RequestFile](arkts-basicservices-system-request-requestfile-i.md)&gt;
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -127,8 +117,6 @@ Request header.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** headers
@@ -148,8 +136,6 @@ Request methods available: POST and PUT. The default value is POST.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -171,8 +157,6 @@ Called when the files are uploaded successfully.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** on
@@ -192,8 +176,6 @@ Resource URL.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

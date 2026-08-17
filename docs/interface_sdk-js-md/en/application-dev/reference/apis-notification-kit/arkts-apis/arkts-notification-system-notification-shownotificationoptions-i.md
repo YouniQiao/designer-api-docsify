@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-unnamed-export interface ShowNotificationOptions--><!--Device-unnamed-export interface ShowNotificationOptions-End-->
@@ -29,8 +27,6 @@ Action triggered when the notification is clicked. This API is deprecated since 
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-ShowNotificationOptions-clickAction?: ActionResult--><!--Device-ShowNotificationOptions-clickAction?: ActionResult-End-->
@@ -49,8 +45,6 @@ Notification content.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-ShowNotificationOptions-contentText?: string--><!--Device-ShowNotificationOptions-contentText?: string-End-->
@@ -68,8 +62,6 @@ Notification title.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 7
 

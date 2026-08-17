@@ -4,10 +4,6 @@ System common events are events published by system services or system apps. Sub
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-commonEventManager-export enum Support--><!--Device-commonEventManager-export enum Support-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -21,10 +17,6 @@ COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'
 Indicates that the boot is complete and the system is loaded. When the specified user finishes the boot process on the device, the common event service is triggered to publish this event. To subscribe to this common event, your application must have the ohos.permission.RECEIVER_STARTUP_COMPLETED permission.(This permission is available only for system applications.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'--><!--Device-Support-COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'-End-->
 
@@ -40,10 +32,6 @@ COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'--><!--Device-Support-COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -57,10 +45,6 @@ COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'
 Indicates that the device is being shut down and the final shutdown will proceed. When the device is being shut down until it is powered off, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'--><!--Device-Support-COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'-End-->
 
@@ -76,10 +60,6 @@ Indicates that the charging state, level, and other information about the batter
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'--><!--Device-Support-COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -93,10 +73,6 @@ COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'
 Indicates that the battery level is low. When the battery level drops to lower than the low battery level set for the device, the event notification service is triggered to publish this event. &lt;!--Del--&gt;For details about how to set the low battery level percentage, see [Battery Level Customization](https://gitee.com/openharmony/docs/blob/master/en/device-dev/subsystems/subsys-power-battery-level-customization.md) .&lt;!--DelEnd--&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'--><!--Device-Support-COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'-End-->
 
@@ -112,10 +88,6 @@ Indicates that the battery level is normal. When the battery level increases fro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'--><!--Device-Support-COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -129,10 +101,6 @@ COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'
 Indicates that the device is connected to an external power supply. When the device connects to an external charger, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'--><!--Device-Support-COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'-End-->
 
@@ -148,10 +116,6 @@ Indicates that the device is disconnected from the external power supply. When t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'--><!--Device-Support-COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -165,10 +129,6 @@ COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'
 Indicates that a device screen-off initiated by the power service is complete. When the device screen-off initiated by the power service is complete, the event notification service is triggered to release this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'--><!--Device-Support-COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'-End-->
 
@@ -184,10 +144,6 @@ Indicates that a device screen-on initiated by the power service is complete. Wh
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'--><!--Device-Support-COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -201,10 +157,6 @@ COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'
 Indicates that the device's thermal level has changed. When the device's thermal level changes, the event notification service is triggered to publish this event. &lt;!-- Del--&gt;For details about how to configure the device thermal level, see [Thermal Level Customization](https://gitee.com/openharmony/docs/blob/master/en/device-dev/subsystems/subsys-thermal_level.md) .&lt;!--DelEnd--&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'--><!--Device-Support-COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'-End-->
 
@@ -220,10 +172,6 @@ Indicates that the device is about to enter the forced sleep mode. When the devi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_ENTER_FORCE_SLEEP = 'usual.event.ENTER_FORCE_SLEEP'--><!--Device-Support-COMMON_EVENT_ENTER_FORCE_SLEEP = 'usual.event.ENTER_FORCE_SLEEP'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -237,10 +185,6 @@ COMMON_EVENT_EXIT_FORCE_SLEEP = 'usual.event.EXIT_FORCE_SLEEP'
 Indicates that the device exits the forced sleep mode. When the device exits the forced sleep mode, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_EXIT_FORCE_SLEEP = 'usual.event.EXIT_FORCE_SLEEP'--><!--Device-Support-COMMON_EVENT_EXIT_FORCE_SLEEP = 'usual.event.EXIT_FORCE_SLEEP'-End-->
 
@@ -256,10 +200,6 @@ Indicates that the device is about to enter the hibernation mode. When the devic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_ENTER_HIBERNATE = 'usual.event.ENTER_HIBERNATE'--><!--Device-Support-COMMON_EVENT_ENTER_HIBERNATE = 'usual.event.ENTER_HIBERNATE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -273,10 +213,6 @@ COMMON_EVENT_EXIT_HIBERNATE = 'usual.event.EXIT_HIBERNATE'
 Indicates that the device exits the hibernation mode. When the device exits the hibernation mode, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_EXIT_HIBERNATE = 'usual.event.EXIT_HIBERNATE'--><!--Device-Support-COMMON_EVENT_EXIT_HIBERNATE = 'usual.event.EXIT_HIBERNATE'-End-->
 
@@ -292,11 +228,9 @@ Indicates the action of a common event that the user unlocks the device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [COMMON_EVENT_SCREEN_UNLOCKED](#COMMON_EVENT_SCREEN_UNLOCKED)
+**Substitutes:** [COMMON_EVENT_SCREEN_UNLOCKED](#commoneventscreenunlocked)
 
 <!--Device-Support-COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'--><!--Device-Support-COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'-End-->
 
@@ -312,10 +246,6 @@ Indicates that the system time has changed. When the system time in the unit of 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'--><!--Device-Support-COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -329,10 +259,6 @@ COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'
 Indicates that the system time is set. When the system time is set, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'--><!--Device-Support-COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'-End-->
 
@@ -348,10 +274,6 @@ COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'--><!--Device-Support-COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -365,10 +287,6 @@ COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'
 Indicates that the system time zone has changed. When the system time zone changes, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'--><!--Device-Support-COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'-End-->
 
@@ -384,10 +302,6 @@ COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'--><!--Device-Support-COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -401,10 +315,6 @@ COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'
 Indicates that a new application package has been installed on the device. When a new application is installed by a specified user on the device, the event notification service is triggered to publish this event. > **NOTE：**> > Third-party applications can only listen for the installation event of themselves.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'--><!--Device-Support-COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'-End-->
 
@@ -420,10 +330,6 @@ COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'--><!--Device-Support-COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -437,10 +343,6 @@ COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'
 (Reserved, not supported yet) Indicates the action of a common event that a new version of an installed application package has replaced the previous one on the device. This event does not contain additional data and is sent only to the replaced application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'--><!--Device-Support-COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'-End-->
 
@@ -456,10 +358,6 @@ Indicates that an installed bundle has been uninstalled from the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'--><!--Device-Support-COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -473,10 +371,6 @@ COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 (Reserved, not supported yet) Indicates that an installed bundle has been uninstalled from the device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'--><!--Device-Support-COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'-End-->
 
@@ -492,10 +386,6 @@ Indicates that an installed application has been completely uninstalled from the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'--><!--Device-Support-COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -509,10 +399,6 @@ COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 Indicates that an application package has been changed (for example, an ability in the package has been enabled or disabled). When an application package installed on the device is updated or an ability in the package is enabled or disabled, the event notification service is triggered to publish this event. > **NOTE：**> > Third-party applications can only listen for the change event of themselves.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'--><!--Device-Support-COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'-End-->
 
@@ -528,10 +414,6 @@ Indicates that the user has restarted the application package and killed all its
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'--><!--Device-Support-COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -545,10 +427,6 @@ COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 Indicates that the user has cleared the application package data. When the specified user clears the application package data on the device, the event notification service is triggered to publish this event. > **NOTE：**> > Third-party applications can only listen for the data clearance event of themselves.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'--><!--Device-Support-COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'-End-->
 
@@ -564,10 +442,6 @@ Indicates that the user cleared the application package cache. When the cache of
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_PACKAGE_CACHE_CLEARED = 'usual.event.PACKAGE_CACHE_CLEARED'--><!--Device-Support-COMMON_EVENT_PACKAGE_CACHE_CLEARED = 'usual.event.PACKAGE_CACHE_CLEARED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -581,10 +455,6 @@ COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 (Reserved, not supported yet) Indicates that the package has been suspended.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'--><!--Device-Support-COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'-End-->
 
@@ -600,10 +470,6 @@ COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'--><!--Device-Support-COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -617,10 +483,6 @@ COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 (Reserved, not supported yet) Indicates that application packages have been suspended by the system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'--><!--Device-Support-COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'-End-->
 
@@ -636,10 +498,6 @@ COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'--><!--Device-Support-COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -653,10 +511,6 @@ COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'
 (Reserved, not supported yet) Indicates that a user ID has been removed from the system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'--><!--Device-Support-COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'-End-->
 
@@ -672,10 +526,6 @@ COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'--><!--Device-Support-COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -689,10 +539,6 @@ COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATIO
 (Reserved, not supported yet) Indicates that a package is sent by the system verifier when the package needs verification.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATION'--><!--Device-Support-COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATION'-End-->
 
@@ -708,10 +554,6 @@ COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'--><!--Device-Support-COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -725,10 +567,6 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATION
 (Reserved, not supported yet) Indicates that applications installed on the external storage become available for the system.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_AVAILABLE'--><!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_AVAILABLE'-End-->
 
@@ -744,10 +582,6 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATI
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'--><!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -761,10 +595,6 @@ COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'
 (Reserved, not supported yet) Indicates that the device state (for example, orientation and locale) has changed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'--><!--Device-Support-COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'-End-->
 
@@ -780,10 +610,6 @@ Indicates that the system language is set. When the system language is set, the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'--><!--Device-Support-COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -797,10 +623,6 @@ COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'
 Notifies the low memory state and package management should be started.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'--><!--Device-Support-COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'-End-->
 
@@ -816,10 +638,6 @@ COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'--><!--Device-Support-COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -833,10 +651,6 @@ COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'
 (Reserved, not supported yet) Indicates that the system is in home mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'--><!--Device-Support-COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'-End-->
 
@@ -852,10 +666,6 @@ COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'--><!--Device-Support-COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -869,10 +679,6 @@ COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'
 (Reserved, not supported yet) Indicates that the user has been started.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'--><!--Device-Support-COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'-End-->
 
@@ -888,10 +694,6 @@ COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'--><!--Device-Support-COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -906,10 +708,6 @@ COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'--><!--Device-Support-COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -920,13 +718,9 @@ COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'
 ```
 
-Indicates that a user switchover is complete. When a system account is switched, the common event service is triggered to publish this event carrying the system account ID. The system API related to this common event is **activateOsAccount**. For details, see [@ohos.account.osAccount (System Account Management)](arkts-account-osaccount.md#@ohos.account.osAccount). To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission (before API version 21); ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission (since API version 21).
+Indicates that a user switchover is complete. When a system account is switched, the common event service is triggered to publish this event carrying the system account ID. The system API related to this common event is **activateOsAccount**. For details, see [@ohos.account.osAccount (System Account Management)](arkts-account-osaccount.md#ohosaccountosaccount). To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission (before API version 21); ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission (since API version 21).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'--><!--Device-Support-COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'-End-->
 
@@ -942,10 +736,6 @@ COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'--><!--Device-Support-COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -959,10 +749,6 @@ COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'
 Indicates that the credential-encrypted storage has been unlocked for the current user after the device is restarted. When the device is unlocked with the lock screen password the first time after user switching, the event notification service is triggered to publish this event carrying the system account ID that identifies the user.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'--><!--Device-Support-COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'-End-->
 
@@ -978,10 +764,6 @@ COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'--><!--Device-Support-COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -996,10 +778,6 @@ COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'--><!--Device-Support-COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1013,10 +791,6 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN = 'common.event.DISTRIBUTED_ACCOUNT_LOGIN
 Indicates a successful login from a distributed account. When a distributed account is successfully logged in, the event notification service is triggered to publish this event carrying the OS account ID and the sub-profile ID. APIs related to this event: **setOsAccountDistributedInfo** and **updateOsAccountDistributedInfo** (discarded), and **setOsAccountDistributedInfoByLocalId**. The first two are public APIs, and the last one is a system API. For details, see @ohos.account.distributedAccount (Distributed Account Management) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1034,10 +808,6 @@ Indicates a successful logout from a distributed account. When a distributed acc
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = 'common.event.DISTRIBUTED_ACCOUNT_LOGOUT'--><!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = 'common.event.DISTRIBUTED_ACCOUNT_LOGOUT'-End-->
@@ -1053,10 +823,6 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID = 'common.event.DISTRIBUTED_ACCOU
 Indicates that the token of a distributed account is invalid. When the token of a distributed account is invalid, the event notification service is triggered to publish this event carrying the OS account ID and the sub-profile ID. APIs related to this event: **setOsAccountDistributedInfo** and **updateOsAccountDistributedInfo** (discarded), and **setOsAccountDistributedInfoByLocalId**. The first two are public APIs, and the last one is a system API. For details, see @ohos.account.distributedAccount (Distributed Account Management) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1074,10 +840,6 @@ Indicates that a distributed account is deregistered. When a distributed account
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGOFF'--><!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGOFF'-End-->
@@ -1094,10 +856,6 @@ Indicates that the Wi-Fi state changes. When the Wi-Fi state changes (such as en
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'--><!--Device-Support-COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1111,10 +869,6 @@ COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'
 Indicates that a Wi-Fi access point is detected and proven to be available. When a Wi-Fi access point is detected and proven to be available, the event notification service is triggered to publish this event. To subscribe to this common event, your application must have the **ohos.permission.LOCATION** permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'--><!--Device-Support-COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'-End-->
 
@@ -1130,10 +884,6 @@ Indicates that the Wi-Fi signal strength (RSSI) has changed. When the Wi-Fi sign
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'--><!--Device-Support-COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1147,10 +897,6 @@ COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'
 Indicates that the Wi-Fi connection state has changed. When the Wi-Fi connection state changes, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'--><!--Device-Support-COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'-End-->
 
@@ -1166,10 +912,6 @@ Indicates that the Wi-Fi hotspot state has changed. When the Wi-Fi hotspot state
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'--><!--Device-Support-COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1183,10 +925,6 @@ COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'
 Indicates that a client has joined the Wi-Fi hotspot of the current device. When a client joins the Wi-Fi hotspot of the current device, the event notification service is triggered to publish this event. To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'--><!--Device-Support-COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'-End-->
 
@@ -1202,10 +940,6 @@ Indicates that the client is disconnected from the Wi-Fi hotspot of the current 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'--><!--Device-Support-COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1219,10 +953,6 @@ COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'
 Indicates that the state of MPLINK (an enhanced Wi-Fi feature) has changed. When the state of MPLINK changes, the event notification service is triggered to publish this event (not supported yet).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'-End-->
 
@@ -1238,10 +968,6 @@ Indicates that the Wi-Fi P2P connection state has changed. When the Wi-Fi P2P co
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1255,10 +981,6 @@ COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'
 Indicates that the Wi-Fi P2P state has changed. When the Wi-Fi P2P state changes, the event notification service is triggered to publish this event. State values: **2** indicates that the P2P is being enabled, **3** indicates that the P2P has been enabled; **4** indicates that the P2P is being disabled; **5** indicates that the P2P has been disabled. To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'-End-->
 
@@ -1274,10 +996,6 @@ Indicates that the state of the Wi-Fi P2P peer device has changed. When the stat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1291,10 +1009,6 @@ COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER
 Indicates that the Wi-Fi P2P discovery state has changed. When the Wi-Fi P2P discovery state changes, the event notification service is triggered to publish this event. To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER_DISCOVERY_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER_DISCOVERY_STATE_CHANGE'-End-->
 
@@ -1310,10 +1024,6 @@ Indicates that the state of the Wi-Fi P2P local device has changed. When the sta
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRENT_DEVICE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRENT_DEVICE_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1327,10 +1037,6 @@ COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CH
 Indicates that the Wi-Fi P2P group information has changed. When the Wi-Fi P2P group information changes, the event notification service is triggered to publish this event. To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CHANGED'-End-->
 
@@ -1347,11 +1053,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE](#commoneventbluetoothhandsfreeagconnectstatechange)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'-End-->
 
@@ -1367,8 +1071,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE =
 (Reserved, not supported yet) Indicates that the device connected to the Bluetooth handsfree is active. To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1387,8 +1089,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE =        'usual.event.bluetooth.handsfree.ag.AUDIO_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE =        'usual.event.bluetooth.handsfree.ag.AUDIO_STATE_UPDATE'-End-->
@@ -1406,11 +1106,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_CHANGE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_CHANGE](#commoneventbluetootha2dpsourceconnectstatechange)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'-End-->
 
@@ -1426,8 +1124,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE =
 (Reserved, not supported yet) Indicates that the device connected using Bluetooth A2DP is active. To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1446,8 +1142,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE =        'usual.event.bluetooth.a2dpsource.PLAYING_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE =        'usual.event.bluetooth.a2dpsource.PLAYING_STATE_UPDATE'-End-->
@@ -1465,11 +1159,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE](#commoneventbluetootha2dpsourceavrcpconnectstatechange)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'-End-->
 
@@ -1486,11 +1178,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE](#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE](#commoneventbluetootha2dpsourcecodecvaluechange)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE =        'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE =        'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'-End-->
 
@@ -1506,8 +1196,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED =
 (Reserved, not supported yet) Indicates that a remote Bluetooth device is discovered. To subscribe to this common event, your application must have the **ohos.permission.LOCATION** and **ohos.permission.USE_BLUETOOTH** permissions.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1526,8 +1214,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE =        'usual.event.bluetooth.remotedevice.CLASS_VALUE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE =        'usual.event.bluetooth.remotedevice.CLASS_VALUE_UPDATE'-End-->
@@ -1545,11 +1231,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE](#commoneventbluetoothremotedeviceaclstatechange)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED =        'usual.event.bluetooth.remotedevice.ACL_CONNECTED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED =        'usual.event.bluetooth.remotedevice.ACL_CONNECTED'-End-->
 
@@ -1566,11 +1250,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE](#commoneventbluetoothremotedeviceaclstatechange)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED =        'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED =        'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'-End-->
 
@@ -1586,8 +1268,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE =
 (Reserved, not supported yet) Indicates that the friendly name of a remote Bluetooth device is retrieved for the first time or has changed since the last retrieval. To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1606,11 +1286,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE](#commoneventbluetoothremotedevicepairstatechange)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE =        'usual.event.bluetooth.remotedevice.PAIR_STATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE =        'usual.event.bluetooth.remotedevice.PAIR_STATE'-End-->
 
@@ -1626,8 +1304,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE =
 (Reserved, not supported yet) Indicates that the battery level of a remote Bluetooth device is retrieved for the first time or has changed since the last retrieval. To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1646,8 +1322,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT =        'usual.event.bluetooth.remotedevice.SDP_RESULT'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT =        'usual.event.bluetooth.remotedevice.SDP_RESULT'-End-->
@@ -1664,8 +1338,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE =
 Indicates the action of a common event about the UUID connection state of a remote Bluetooth device. To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1684,8 +1356,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ =        'usual.event.bluetooth.remotedevice.PAIRING_REQ'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ =        'usual.event.bluetooth.remotedevice.PAIRING_REQ'-End-->
@@ -1702,8 +1372,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL =
 (Reserved, not supported yet) Indicates that Bluetooth pairing is canceled.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1722,8 +1390,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ =        'usual.event.bluetooth.remotedevice.CONNECT_REQ'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ =        'usual.event.bluetooth.remotedevice.CONNECT_REQ'-End-->
@@ -1740,8 +1406,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY =
 (Reserved, not supported yet) Indicates the common event about the response to the connection request from a remote Bluetooth device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1760,8 +1424,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL =        'usual.event.bluetooth.remotedevice.CONNECT_CANCEL'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL =        'usual.event.bluetooth.remotedevice.CONNECT_CANCEL'-End-->
@@ -1778,8 +1440,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE =
 (Reserved, not supported yet) Indicates that the connection state of a Bluetooth handsfree has changed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1798,8 +1458,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE =        'usual.event.bluetooth.handsfreeunit.AUDIO_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE =        'usual.event.bluetooth.handsfreeunit.AUDIO_STATE_UPDATE'-End-->
@@ -1816,8 +1474,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT =
 (Reserved, not supported yet) Indicates that the audio gateway state of a Bluetooth handsfree has changed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1836,8 +1492,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE =        'usual.event.bluetooth.handsfreeunit.AG_CALL_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE =        'usual.event.bluetooth.handsfreeunit.AG_CALL_STATE_UPDATE'-End-->
@@ -1854,8 +1508,6 @@ COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE =
 Indicates that the state of a Bluetooth adapter has been changed, for example, Bluetooth has been enabled or disabled.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1874,8 +1526,6 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE =        'usual.event.bluetooth.host.REQ_DISCOVERABLE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE =        'usual.event.bluetooth.host.REQ_DISCOVERABLE'-End-->
@@ -1891,8 +1541,6 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'
 (Reserved, not supported yet) Indicates the common event about the request for the user to enable Bluetooth. To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1911,8 +1559,6 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE =        'usual.event.bluetooth.host.REQ_DISABLE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE =        'usual.event.bluetooth.host.REQ_DISABLE'-End-->
@@ -1929,8 +1575,6 @@ COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE =
 (Reserved, not supported yet) Indicates that the Bluetooth scanning mode of a device has changed. To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1949,10 +1593,6 @@ Indicates that the Bluetooth scanning mode changes. When the Bluetooth scanning 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_CHANGE =        'usual.event.bluetooth.host.SCAN_MODE_CHANGE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_CHANGE =        'usual.event.bluetooth.host.SCAN_MODE_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1967,8 +1607,6 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED =
 Indicates that the Bluetooth scanning has been started on the device. To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -1987,8 +1625,6 @@ Indicates that the Bluetooth scanning is finished on the device. To subscribe to
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED =        'usual.event.bluetooth.host.DISCOVERY_FINISHED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED =        'usual.event.bluetooth.host.DISCOVERY_FINISHED'-End-->
@@ -2005,8 +1641,6 @@ COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE =
 Indicates that the Bluetooth adapter name of the device has changed. To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -2025,8 +1659,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.a2dpsink.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.a2dpsink.CONNECT_STATE_UPDATE'-End-->
@@ -2043,8 +1675,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE =
 (Reserved, not supported yet) Indicates that the playing state of Bluetooth A2DP has changed. To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -2063,8 +1693,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE =
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE =        'usual.event.bluetooth.a2dpsink.AUDIO_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE =        'usual.event.bluetooth.a2dpsink.AUDIO_STATE_UPDATE'-End-->
@@ -2081,10 +1709,6 @@ Indicates that the state of the device NFC adapter has changed. When the state o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_STATE_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2098,10 +1722,6 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_
 Indicates that the NFC RF field is on. When the NFC RF field becomes available, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_ON_DETECTED'--><!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_ON_DETECTED'-End-->
 
@@ -2117,10 +1737,6 @@ Indicates that the NFC RF field is off. When the NFC RF field becomes unavailabl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD_OFF_DETECTED'--><!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD_OFF_DETECTED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2134,10 +1750,6 @@ COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'
 Indicates that the system stops charging the battery. When the system stops charging the battery, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'--><!--Device-Support-COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'-End-->
 
@@ -2153,10 +1765,6 @@ Indicates that the system starts charging the battery. When the system starts ch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_CHARGING = 'usual.event.CHARGING'--><!--Device-Support-COMMON_EVENT_CHARGING = 'usual.event.CHARGING'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2170,10 +1778,6 @@ COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'
 Indicates that the system idle mode has changed. When the user does not use the device for the specified period of time and the screen is turned off, the system delays the CPU and network access by background applications, and the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'--><!--Device-Support-COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'-End-->
 
@@ -2189,10 +1793,6 @@ Indicates that the device enters the charging idle mode. When the device starts 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_CHARGE_IDLE_MODE_CHANGED = 'usual.event.CHARGE_IDLE_MODE_CHANGED'--><!--Device-Support-COMMON_EVENT_CHARGE_IDLE_MODE_CHANGED = 'usual.event.CHARGE_IDLE_MODE_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2207,10 +1807,6 @@ Indicates that the system power-saving mode has changed. When the system power s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'--><!--Device-Support-COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2221,13 +1817,9 @@ Indicates that the system power-saving mode has changed. When the system power s
 COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'
 ```
 
-Indicates that a user has been added to the system. When a system account is created, the common event service is triggered to publish this event carrying the system account ID. The system APIs related to this common event are **createOsAccount** and **createOsAccountForDomain**. For details, see [@ohos.account.osAccount (System Account Management)](arkts-account-osaccount.md#@ohos.account.osAccount). To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission.(This permission is available only for system applications.)
+Indicates that a user has been added to the system. When a system account is created, the common event service is triggered to publish this event carrying the system account ID. The system APIs related to this common event are **createOsAccount** and **createOsAccountForDomain**. For details, see [@ohos.account.osAccount (System Account Management)](arkts-account-osaccount.md#ohosaccountosaccount). To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission.(This permission is available only for system applications.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'--><!--Device-Support-COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'-End-->
 
@@ -2239,13 +1831,9 @@ Indicates that a user has been added to the system. When a system account is cre
 COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'
 ```
 
-Indicates that a user has been removed from the system. When a system account is removed, the common event service is triggered to publish this event carrying the system account ID. The system API related to this common event is **removeOsAccount**. For details, see [@ohos.account.osAccount (System Account Management)](arkts-account-osaccount.md#@ohos.account.osAccount). To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission.(This permission is available only for system applications.)
+Indicates that a user has been removed from the system. When a system account is removed, the common event service is triggered to publish this event carrying the system account ID. The system API related to this common event is **removeOsAccount**. For details, see [@ohos.account.osAccount (System Account Management)](arkts-account-osaccount.md#ohosaccountosaccount). To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission.(This permission is available only for system applications.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'--><!--Device-Support-COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'-End-->
 
@@ -2261,10 +1849,6 @@ COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'--><!--Device-Support-COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2278,10 +1862,6 @@ COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 (Reserved, not supported yet) Indicates that an ability has been removed. To subscribe to this common event, your application must have the **ohos.permission.LISTEN_BUNDLE_CHANGE** permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'--><!--Device-Support-COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'-End-->
 
@@ -2297,10 +1877,6 @@ COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'--><!--Device-Support-COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2314,10 +1890,6 @@ COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHAN
 (Reserved, not supported yet) Indicates that the location mode of the system has changed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHANGED'-End-->
 
@@ -2333,10 +1905,6 @@ COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'--><!--Device-Support-COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2350,10 +1918,6 @@ COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'
 (Reserved, not supported yet) Indicates that the IVI system of a vehicle has entered sleep mode and the playing application is instructed to stop playback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'--><!--Device-Support-COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'-End-->
 
@@ -2369,10 +1933,6 @@ COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'--><!--Device-Support-COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2386,10 +1946,6 @@ COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'
 (Reserved, not supported yet) Indicates that a third-party application is instructed to save its last mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'--><!--Device-Support-COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'-End-->
 
@@ -2405,10 +1961,6 @@ COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'--><!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2422,10 +1974,6 @@ COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'
 (Reserved, not supported yet) Indicates that the temperature of the IVI system is high.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'--><!--Device-Support-COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'-End-->
 
@@ -2441,10 +1989,6 @@ COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'--><!--Device-Support-COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2458,10 +2002,6 @@ COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'
 (Reserved, not supported yet) Indicates that the IVI system has an extreme temperature.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'--><!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'-End-->
 
@@ -2477,10 +2017,6 @@ COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'--><!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2494,10 +2030,6 @@ COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'
 (Reserved, not supported yet) Indicates that the temperature of the IVI system is restored to normal.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'--><!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'-End-->
 
@@ -2513,10 +2045,6 @@ COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'--><!--Device-Support-COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2530,10 +2058,6 @@ COMMON_EVENT_USB_STATE = 'usual.event.hardware.usb.action.USB_STATE'
 Indicates that the USB device state has changed. When a USB device is connected to or disconnected from the device, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USB_STATE = 'usual.event.hardware.usb.action.USB_STATE'--><!--Device-Support-COMMON_EVENT_USB_STATE = 'usual.event.hardware.usb.action.USB_STATE'-End-->
 
@@ -2549,10 +2073,6 @@ Indicates that the USB port state of the device has changed. When the USB port s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_USB_PORT_CHANGED = 'usual.event.hardware.usb.action.USB_PORT_CHANGED'--><!--Device-Support-COMMON_EVENT_USB_PORT_CHANGED = 'usual.event.hardware.usb.action.USB_PORT_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2566,10 +2086,6 @@ COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_A
 Indicates that a USB device has been attached to the device functioning as a USB host. When a USB device is attached, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_ATTACHED'--><!--Device-Support-COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_ATTACHED'-End-->
 
@@ -2585,10 +2101,6 @@ Indicates that a USB device has been detached from the device functioning as a U
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_DETACHED'--><!--Device-Support-COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_DETACHED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2602,10 +2114,6 @@ COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCES
 Indicates that a USB accessory has been attached.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_ATTACHED'--><!--Device-Support-COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_ATTACHED'-End-->
 
@@ -2621,10 +2129,6 @@ Indicates that a USB accessory has been detached.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_DETACHED'--><!--Device-Support-COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_DETACHED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2638,10 +2142,6 @@ COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 (Reserved, not supported yet) Indicates that an external storage device was removed. To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission. (This permission is available only for system applications.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'--><!--Device-Support-COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'-End-->
 
@@ -2657,10 +2157,6 @@ COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'--><!--Device-Support-COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2674,10 +2170,6 @@ COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 (Reserved, not supported yet) Indicates that an external storage device was mounted. To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission. (This permission is available only for system applications.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'--><!--Device-Support-COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'-End-->
 
@@ -2693,10 +2185,6 @@ COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'--><!--Device-Support-COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2710,10 +2198,6 @@ COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 (Reserved, not supported yet) Indicates that an external storage device becomes unmountable. To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission. (This permission is available only for system applications.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'--><!--Device-Support-COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'-End-->
 
@@ -2729,10 +2213,6 @@ COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'--><!--Device-Support-COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2746,10 +2226,6 @@ COMMON_EVENT_VOLUME_REMOVED = 'usual.event.data.VOLUME_REMOVED'
 Indicates that an external storage device was removed. This common event is triggered when an external storage device is removed. To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_VOLUME_REMOVED = 'usual.event.data.VOLUME_REMOVED'--><!--Device-Support-COMMON_EVENT_VOLUME_REMOVED = 'usual.event.data.VOLUME_REMOVED'-End-->
 
@@ -2765,10 +2241,6 @@ Indicates that an external storage device was unmounted. This common event is tr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_VOLUME_UNMOUNTED = 'usual.event.data.VOLUME_UNMOUNTED'--><!--Device-Support-COMMON_EVENT_VOLUME_UNMOUNTED = 'usual.event.data.VOLUME_UNMOUNTED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2782,10 +2254,6 @@ COMMON_EVENT_VOLUME_MOUNTED = 'usual.event.data.VOLUME_MOUNTED'
 Indicates that an external storage device was mounted. This common event is triggered when an external storage device is successfully mounted by calling the **mount** API or by inserting the device. To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_VOLUME_MOUNTED = 'usual.event.data.VOLUME_MOUNTED'--><!--Device-Support-COMMON_EVENT_VOLUME_MOUNTED = 'usual.event.data.VOLUME_MOUNTED'-End-->
 
@@ -2801,10 +2269,6 @@ Indicates that an external storage device was removed without being unmounted. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_VOLUME_BAD_REMOVAL = 'usual.event.data.VOLUME_BAD_REMOVAL'--><!--Device-Support-COMMON_EVENT_VOLUME_BAD_REMOVAL = 'usual.event.data.VOLUME_BAD_REMOVAL'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2818,10 +2282,6 @@ COMMON_EVENT_VOLUME_EJECT = 'usual.event.data.VOLUME_EJECT'
 Indicates that an external storage device is about to be ejected. This common event is triggered when the user calls the **unmount** API on a mounted external storage device or removes the device. To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_VOLUME_EJECT = 'usual.event.data.VOLUME_EJECT'--><!--Device-Support-COMMON_EVENT_VOLUME_EJECT = 'usual.event.data.VOLUME_EJECT'-End-->
 
@@ -2837,10 +2297,6 @@ COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDAT
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDATED'--><!--Device-Support-COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDATED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2854,10 +2310,6 @@ COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 (Reserved, not supported yet) Indicates that the account was deleted. To subscribe to this common event, your application must have the **ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS** permission.(This permission is available only for system applications.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'--><!--Device-Support-COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'-End-->
 
@@ -2873,10 +2325,6 @@ COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'--><!--Device-Support-COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2891,10 +2339,6 @@ Indicates that the airplane mode state has changed. When the airplane mode is en
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'--><!--Device-Support-COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2908,10 +2352,6 @@ COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'
 Indicates a screen splitting action. When any of the following actions is performed, the event notification service is triggered to publish this event : accessing the recent tasks screen, creating a split-screen bar, and destroying a split-screen bar.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2929,10 +2369,6 @@ Indicates that the notification slot or notification switch settings have change
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_SLOT_CHANGE = 'usual.event.SLOT_CHANGE'--><!--Device-Support-COMMON_EVENT_SLOT_CHANGE = 'usual.event.SLOT_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2946,10 +2382,6 @@ COMMON_EVENT_SPN_INFO_CHANGED = 'usual.event.SPN_INFO_CHANGED'
 Indicates that the SPN information had changed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SPN_INFO_CHANGED = 'usual.event.SPN_INFO_CHANGED'--><!--Device-Support-COMMON_EVENT_SPN_INFO_CHANGED = 'usual.event.SPN_INFO_CHANGED'-End-->
 
@@ -2965,10 +2397,6 @@ Indicates the result of applying a quick fix to the application. When the specif
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_QUICK_FIX_APPLY_RESULT = 'usual.event.QUICK_FIX_APPLY_RESULT'--><!--Device-Support-COMMON_EVENT_QUICK_FIX_APPLY_RESULT = 'usual.event.QUICK_FIX_APPLY_RESULT'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2983,10 +2411,6 @@ Indicates the result of revoking a quick fix to the application. When a quick fi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_QUICK_FIX_REVOKE_RESULT = 'usual.event.QUICK_FIX_REVOKE_RESULT'--><!--Device-Support-COMMON_EVENT_QUICK_FIX_REVOKE_RESULT = 'usual.event.QUICK_FIX_REVOKE_RESULT'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -2997,13 +2421,9 @@ Indicates the result of revoking a quick fix to the application. When a quick fi
 COMMON_EVENT_USER_INFO_UPDATED = 'usual.event.USER_INFO_UPDATED'
 ```
 
-Indicates that the user information has been updated. When the distributed account information, system account profile picture, or system account name is changed, the event notification service is triggered to publish this event carrying the system account ID. APIs related to this event: **setOsAccountName**, **setOsAccountProfilePhoto**, and **setOsAccountDistributedInfo**. The first two are system APIs, and the last is a public API. For details, see [@ohos.account.osAccount (System Account Management)](arkts-account-osaccount.md#@ohos.account.osAccount) and @ohos.account.distributedAccount (Distributed Account Management) .
+Indicates that the user information has been updated. When the distributed account information, system account profile picture, or system account name is changed, the event notification service is triggered to publish this event carrying the system account ID. APIs related to this event: **setOsAccountName**, **setOsAccountProfilePhoto**, and **setOsAccountDistributedInfo**. The first two are system APIs, and the last is a public API. For details, see [@ohos.account.osAccount (System Account Management)](arkts-account-osaccount.md#ohosaccountosaccount) and @ohos.account.distributedAccount (Distributed Account Management) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USER_INFO_UPDATED = 'usual.event.USER_INFO_UPDATED'--><!--Device-Support-COMMON_EVENT_USER_INFO_UPDATED = 'usual.event.USER_INFO_UPDATED'-End-->
 
@@ -3019,10 +2439,6 @@ Indicates that the HTTP proxy configuration has changed. When the configuration 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_HTTP_PROXY_CHANGE = 'usual.event.HTTP_PROXY_CHANGE'--><!--Device-Support-COMMON_EVENT_HTTP_PROXY_CHANGE = 'usual.event.HTTP_PROXY_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -3036,10 +2452,6 @@ COMMON_EVENT_SIM_STATE_CHANGED = 'usual.event.SIM_STATE_CHANGED'
 Indicates that the SIM card status has changed. When there is a change in the SIM card status of the device, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SIM_STATE_CHANGED = 'usual.event.SIM_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_SIM_STATE_CHANGED = 'usual.event.SIM_STATE_CHANGED'-End-->
 
@@ -3055,10 +2467,6 @@ Indicates that the call state has been updated. When the call state of the devic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_CALL_STATE_CHANGED = 'usual.event.CALL_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_CALL_STATE_CHANGED = 'usual.event.CALL_STATE_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -3072,10 +2480,6 @@ COMMON_EVENT_NETWORK_STATE_CHANGED = 'usual.event.NETWORK_STATE_CHANGED'
 Indicates that the network state has been updated. When the network state of the device is updated, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_NETWORK_STATE_CHANGED = 'usual.event.NETWORK_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_NETWORK_STATE_CHANGED = 'usual.event.NETWORK_STATE_CHANGED'-End-->
 
@@ -3091,10 +2495,6 @@ Indicates that the signal information has been updated. When the signal informat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_SIGNAL_INFO_CHANGED = 'usual.event.SIGNAL_INFO_CHANGED'--><!--Device-Support-COMMON_EVENT_SIGNAL_INFO_CHANGED = 'usual.event.SIGNAL_INFO_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -3108,10 +2508,6 @@ COMMON_EVENT_SCREEN_UNLOCKED = 'usual.event.SCREEN_UNLOCKED'
 Indicates that the screen has been unlocked. When the screen is unlocked, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3129,10 +2525,6 @@ Indicates that the screen has been locked. When the screen is locked, the event 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Support-COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'--><!--Device-Support-COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'-End-->
@@ -3148,10 +2540,6 @@ COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'
 Indicates that the network connection state has changed. When the (Ethernet, Wi-Fi, or cellular) network connection state changes (disconnected, connecting, or connected) , the event notification service is triggered to publish this event. The following table lists the enum values and their corresponding connection status. > **NOTE：**> The following table lists the enum values and their corresponding connection status > > | Value | Connection State | > | ------ | ---------- | > | 2 | Connecting. | > | 3 | Connected. | > | 4 | Disconnecting.| > | 5 | Disconnected. |.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3170,10 +2558,6 @@ Indicates that the Bluetooth HFP AG connection state changes. When the Bluetooth
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE =        'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE =        'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -3187,10 +2571,6 @@ COMMON_EVENT_MINORSMODE_ON = 'usual.event.MINORSMODE_ON'
 Indicates that the minor mode is enabled. When the minor mode is enabled on the device, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3208,10 +2588,6 @@ Indicates that the minor mode is disabled. When the minor mode is disabled on th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Support-COMMON_EVENT_MINORSMODE_OFF = 'usual.event.MINORSMODE_OFF'--><!--Device-Support-COMMON_EVENT_MINORSMODE_OFF = 'usual.event.MINORSMODE_OFF'-End-->
@@ -3227,10 +2603,6 @@ COMMON_EVENT_DATA_SHARE_READY = 'usual.event.DATA_SHARE_READY'
 Indicates that the DataShare service is available. After the DataShare service is started, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -3249,10 +2621,6 @@ Indicates that the Bluetooth A2DP source connection state changes. When the Blue
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_CHANGE =        'usual.event.bluetooth.a2dpsource.CONNECT_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_CHANGE =        'usual.event.bluetooth.a2dpsource.CONNECT_STATE_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -3267,10 +2635,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE =
 Indicates that the Bluetooth AVRCP connection state changes. When the Bluetooth AVRCP connection state changes, the event notification service is triggered to publish this event. To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE =        'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE =        'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_CHANGE'-End-->
 
@@ -3287,10 +2651,6 @@ Indicates that the Bluetooth media codec changes. When the Bluetooth media codec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE =        'usual.event.bluetooth.a2dpsource.CODEC_VALUE_CHANGE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE =        'usual.event.bluetooth.a2dpsource.CODEC_VALUE_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -3305,10 +2665,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAY_STATE_CHANGE =
 Indicates that the Bluetooth A2DP playback state changes. When the Bluetooth A2DP playback state changes, the event notification service is triggered to publish this event. To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3327,10 +2683,6 @@ Indicates that the Bluetooth SCO state changes. When the Bluetooth SCO state cha
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_SCO_CONNECT_STATE_CHANGE =         'usual.event.bluetooth.SCO_CONNECT_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_SCO_CONNECT_STATE_CHANGE =         'usual.event.bluetooth.SCO_CONNECT_STATE_CHANGE'-End-->
@@ -3348,10 +2700,6 @@ Indicates that the Bluetooth ACL connection state changes. When the Bluetooth AC
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE =         'usual.event.bluetooth.remotedevice.ACL_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE =         'usual.event.bluetooth.remotedevice.ACL_STATE_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -3367,10 +2715,6 @@ Indicates that the Bluetooth pairing state changes. When the Bluetooth pairing s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE =        'usual.event.bluetooth.remotedevice.PAIR_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE =        'usual.event.bluetooth.remotedevice.PAIR_STATE_CHANGE'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -3384,10 +2728,6 @@ COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED = 'usual.event.MANAGED_BROWSER_POLIC
 Indicates that the browser hosting policy has been changed. When the browser hosting policy changes, the event notification service is triggered to publish this system common event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED = 'usual.event.MANAGED_BROWSER_POLICY_CHANGED'--><!--Device-Support-COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED = 'usual.event.MANAGED_BROWSER_POLICY_CHANGED'-End-->
 
@@ -3403,10 +2743,6 @@ Indicates that the kiosk mode is enabled. When this mode is on, the common event
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_KIOSK_MODE_ON = 'usual.event.KIOSK_MODE_ON'--><!--Device-Support-COMMON_EVENT_KIOSK_MODE_ON = 'usual.event.KIOSK_MODE_ON'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -3420,10 +2756,6 @@ COMMON_EVENT_KIOSK_MODE_OFF = 'usual.event.KIOSK_MODE_OFF'
 Indicates that the kiosk mode is disabled. When this mode is off, the common event service is triggered to publish this system common event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_KIOSK_MODE_OFF = 'usual.event.KIOSK_MODE_OFF'--><!--Device-Support-COMMON_EVENT_KIOSK_MODE_OFF = 'usual.event.KIOSK_MODE_OFF'-End-->
 
@@ -3439,10 +2771,6 @@ Indicates that the tablet mode of a device (such as a tablet with bracket) has b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Support-COMMON_EVENT_TABLET_MODE_CHANGED = 'usual.event.TABLET_MODE_CHANGED'--><!--Device-Support-COMMON_EVENT_TABLET_MODE_CHANGED = 'usual.event.TABLET_MODE_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -3456,10 +2784,6 @@ COMMON_EVENT_VOLUME_DECRYPTED = 'usual.event.VOLUME_DECRYPTED'
 This common event indicates that specific volumes on the device have been decrypted.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3477,10 +2801,6 @@ This common event indicates that specific volumes on the device have been encryp
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Support-COMMON_EVENT_VOLUME_ENCRYPTED = 'usual.event.VOLUME_ENCRYPTED'--><!--Device-Support-COMMON_EVENT_VOLUME_ENCRYPTED = 'usual.event.VOLUME_ENCRYPTED'-End-->
@@ -3497,10 +2817,6 @@ This common event indicates that specific volumes on the device have had their e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Support-COMMON_EVENT_VOLUME_ENCRYPTION_POLICY_SET = 'usual.event.VOLUME_ENCRYPTION_POLICY_SET'--><!--Device-Support-COMMON_EVENT_VOLUME_ENCRYPTION_POLICY_SET = 'usual.event.VOLUME_ENCRYPTION_POLICY_SET'-End-->
@@ -3516,10 +2832,6 @@ COMMON_EVENT_SKILL_CHANGED = 'usual.event.SKILL_CHANGED'
 This common event indicates that the skill information of an application has been changed. To receive this common event, your application must have the ohos.permission.MANAGE_SKILL_PRIVILEGE permission.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3538,10 +2850,6 @@ COMMON_EVENT_LID_STATE_CHANGED = 'usual.event.LID_STATE_CHANGED'
 Indicates that the lid state of a device (such as a laptop) has been changed. When the lid state of a device has been changed, the event notification service is triggered to publish this event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_LID_STATE_CHANGED = 'usual.event.LID_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_LID_STATE_CHANGED = 'usual.event.LID_STATE_CHANGED'-End-->
 

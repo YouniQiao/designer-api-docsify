@@ -4,11 +4,9 @@ Provides a stream for file operations. Before calling any API of the **Stream** 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Stream](arkts-corefile-file-fs-stream-i.md#Stream)
+**Substitutes:** [Stream](arkts-corefile-file-fs-stream-i.md#stream)
 
 <!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
 
@@ -24,8 +22,6 @@ Closes the file stream. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [close](arkts-corefile-file-fs-stream-i.md#close)
@@ -40,7 +36,7 @@ Closes the file stream. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns the file stream closed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -63,8 +59,6 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [close](arkts-corefile-file-fs-stream-i.md#close)
@@ -79,7 +73,7 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file stream is closed asynchronously. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -100,17 +94,15 @@ Closes the file stream. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [closeSync](arkts-corefile-file-fs-stream-i.md#closeSync)
+**Substitutes:** [closeSync](arkts-corefile-file-fs-stream-i.md#closesync)
 
 <!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -128,8 +120,6 @@ Flushes the file stream. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [flush](arkts-corefile-file-fs-stream-i.md#flush)
@@ -144,7 +134,7 @@ Flushes the file stream. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns the file stream flushed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -167,8 +157,6 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [flush](arkts-corefile-file-fs-stream-i.md#flush)
@@ -183,7 +171,7 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file stream is asynchronously flushed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -204,17 +192,15 @@ Flushes the file stream. This API returns the result synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [flushSync](arkts-corefile-file-fs-stream-i.md#flushSync)
+**Substitutes:** [flushSync](arkts-corefile-file-fs-stream-i.md#flushsync)
 
 <!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -239,8 +225,6 @@ Reads data from a stream file. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [read](arkts-corefile-file-fs-stream-i.md#read)
@@ -262,7 +246,7 @@ Reads data from a stream file. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Promise that returns the data read. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -298,8 +282,6 @@ read.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [read](arkts-corefile-file-fs-stream-i.md#read)
@@ -333,8 +315,6 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [read](arkts-corefile-file-fs-stream-i.md#read)
@@ -351,7 +331,7 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 | options | {       position?: number;       offset?: number;       length?: number;     } | Yes | The options are as follows:<br>- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br> Constraints: offset + length &lt;= Buffer size |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | Callback invoked when data is read asynchronously from the stream file. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -394,11 +374,9 @@ Reads data from a stream file. This API returns the result synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readSync](arkts-corefile-file-fs-stream-i.md#readSync)
+**Substitutes:** [readSync](arkts-corefile-file-fs-stream-i.md#readsync)
 
 <!--Device-Stream-readSync(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): number--><!--Device-Stream-readSync(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): number-End-->
 
@@ -417,7 +395,7 @@ Reads data from a stream file. This API returns the result synchronously.
 | --- | --- |
 | number | Length of the data read, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -453,8 +431,6 @@ Writes data to a stream file. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [write](arkts-corefile-file-fs-stream-i.md#write)
@@ -476,7 +452,7 @@ Writes data to a stream file. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;number&gt; | Promise that returns the length of the data written, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -508,8 +484,6 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 Writes data to a stream file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -545,8 +519,6 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [write](arkts-corefile-file-fs-stream-i.md#write)
@@ -563,7 +535,7 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | Yes | The options are as follows:<br>- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.&lt;br &gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): start position to write the data into the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>Constraints: offset + length &lt;= Buffer size |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -605,11 +577,9 @@ Writes data to a stream file. This API returns the result synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeSync](arkts-corefile-file-fs-stream-i.md#writeSync)
+**Substitutes:** [writeSync](arkts-corefile-file-fs-stream-i.md#writesync)
 
 <!--Device-Stream-writeSync(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): number--><!--Device-Stream-writeSync(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): number-End-->
 
@@ -628,7 +598,7 @@ Writes data to a stream file. This API returns the result synchronously.
 | --- | --- |
 | number | Length of the data written in the file, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";

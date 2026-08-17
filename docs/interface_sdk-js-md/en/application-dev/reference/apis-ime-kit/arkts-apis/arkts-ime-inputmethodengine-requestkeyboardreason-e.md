@@ -4,10 +4,6 @@ Enumerates the reasons for requesting keyboard input.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-export enum RequestKeyboardReason--><!--Device-inputMethodEngine-export enum RequestKeyboardReason-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -21,10 +17,6 @@ NONE = 0
 The request keyboard reason is NONE.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RequestKeyboardReason-NONE = 0--><!--Device-RequestKeyboardReason-NONE = 0-End-->
 
@@ -40,10 +32,6 @@ The request keyboard reason is MOUSE.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RequestKeyboardReason-MOUSE = 1--><!--Device-RequestKeyboardReason-MOUSE = 1-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -58,10 +46,6 @@ The request keyboard reason is TOUCH.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RequestKeyboardReason-TOUCH = 2--><!--Device-RequestKeyboardReason-TOUCH = 2-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -75,10 +59,6 @@ OTHER = 20
 The request keyboard reason is OTHER.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RequestKeyboardReason-OTHER = 20--><!--Device-RequestKeyboardReason-OTHER = 20-End-->
 

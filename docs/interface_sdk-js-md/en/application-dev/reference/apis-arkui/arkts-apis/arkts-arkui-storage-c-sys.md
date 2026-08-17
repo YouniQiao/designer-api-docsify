@@ -4,10 +4,6 @@ Defines the base class of storage.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class Storage--><!--Device-unnamed-declare class Storage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,10 +20,6 @@ Called when data is cleared.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-Storage-clear(): void--><!--Device-Storage-clear(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -43,10 +35,6 @@ constructor(needCrossThread?: boolean, file?: string)
 Constructor parameters.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-Storage-constructor(needCrossThread?: boolean, file?: string)--><!--Device-Storage-constructor(needCrossThread?: boolean, file?: string)-End-->
 
@@ -71,10 +59,6 @@ Called when data is deleted.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-Storage-delete(key: string): void--><!--Device-Storage-delete(key: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -96,10 +80,6 @@ get(key: string): string | undefined
 Called when data is obtained.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-Storage-get(key: string): string | undefined--><!--Device-Storage-get(key: string): string | undefined-End-->
 
@@ -128,10 +108,6 @@ set(key: string, val: any): void
 Called when setting.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-Storage-set(key: string, val: any): void--><!--Device-Storage-set(key: string, val: any): void-End-->
 

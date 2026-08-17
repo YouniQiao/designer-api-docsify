@@ -4,10 +4,6 @@ This module provides skill query capabilities for applications.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace skillManager--><!--Device-unnamed-declare namespace skillManager-End-->
@@ -26,11 +22,11 @@ import { skillManager } from 'skillManager';
 
 | Name | Description |
 | --- | --- |
-| [getAllSkillInfos](arkts-ability-skillmanager-getallskillinfos-f.md#getAllSkillInfos) | Obtains all SkillInfo objects installed on the device. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
-| [getSkillInfo](arkts-ability-skillmanager-getskillinfo-f.md#getSkillInfo) | Obtains SkillInfo of a specified application based on bundleName, moduleName and skillName. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
-| [getSkillInfoForSelf](arkts-ability-skillmanager-getskillinfoforself-f.md#getSkillInfoForSelf) | Obtains SkillInfo of the calling application based on moduleName and skillName. |
-| [getSkillInfos](arkts-ability-skillmanager-getskillinfos-f.md#getSkillInfos) | Obtains all SkillInfo of a specified application based on bundleName. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
-| [getSkillInfosForSelf](arkts-ability-skillmanager-getskillinfosforself-f.md#getSkillInfosForSelf) | Obtains all SkillInfo objects of the calling application. |
+| [getAllSkillInfos](arkts-ability-skillmanager-getallskillinfos-f.md#getallskillinfos) | Obtains all SkillInfo objects installed on the device. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
+| [getSkillInfo](arkts-ability-skillmanager-getskillinfo-f.md#getskillinfo) | Obtains SkillInfo of a specified application based on bundleName, moduleName and skillName. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
+| [getSkillInfoForSelf](arkts-ability-skillmanager-getskillinfoforself-f.md#getskillinfoforself) | Obtains SkillInfo of the calling application based on moduleName and skillName. |
+| [getSkillInfos](arkts-ability-skillmanager-getskillinfos-f.md#getskillinfos) | Obtains all SkillInfo of a specified application based on bundleName. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted. |
+| [getSkillInfosForSelf](arkts-ability-skillmanager-getskillinfosforself-f.md#getskillinfosforself) | Obtains all SkillInfo objects of the calling application. |
 
 ### Enums
 

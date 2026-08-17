@@ -16,10 +16,6 @@ Obtains the identity information of an application, including the bundle name an
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity--><!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -38,7 +34,7 @@ Obtains the identity information of an application, including the bundle name an
 | --- | --- |
 | AppCloneIdentity | Bundle name and clone index of the application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

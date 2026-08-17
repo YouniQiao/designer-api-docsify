@@ -4,10 +4,6 @@ Describes the cellular data link connection state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-data-export enum DataConnectState--><!--Device-data-export enum DataConnectState-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -21,10 +17,6 @@ DATA_STATE_UNKNOWN = -1
 Indicates that a cellular data link is unknown.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataConnectState-DATA_STATE_UNKNOWN = -1--><!--Device-DataConnectState-DATA_STATE_UNKNOWN = -1-End-->
 
@@ -40,10 +32,6 @@ Indicates that a cellular data link is disconnected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataConnectState-DATA_STATE_DISCONNECTED = 0--><!--Device-DataConnectState-DATA_STATE_DISCONNECTED = 0-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -57,10 +45,6 @@ DATA_STATE_CONNECTING = 1
 Indicates that a cellular data link is being connected.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataConnectState-DATA_STATE_CONNECTING = 1--><!--Device-DataConnectState-DATA_STATE_CONNECTING = 1-End-->
 
@@ -76,10 +60,6 @@ Indicates that a cellular data link is connected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataConnectState-DATA_STATE_CONNECTED = 2--><!--Device-DataConnectState-DATA_STATE_CONNECTED = 2-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -93,10 +73,6 @@ DATA_STATE_SUSPENDED = 3
 Indicates that a cellular data link is suspended.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataConnectState-DATA_STATE_SUSPENDED = 3--><!--Device-DataConnectState-DATA_STATE_SUSPENDED = 3-End-->
 

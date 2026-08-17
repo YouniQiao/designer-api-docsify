@@ -16,10 +16,6 @@ Register uninstallation listener.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
 <!--Device-bundleMonitor-function onRemove(callback: Callback<BundleChangedInfo>): void--><!--Device-bundleMonitor-function onRemove(callback: Callback<BundleChangedInfo>): void-End-->

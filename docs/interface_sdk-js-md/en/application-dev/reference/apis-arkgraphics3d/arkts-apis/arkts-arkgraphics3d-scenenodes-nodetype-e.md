@@ -1,12 +1,8 @@
 # NodeType
 
-The enum of node type.
+Enumerates the node types.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export enum NodeType--><!--Device-unnamed-export enum NodeType-End-->
 
@@ -22,10 +18,6 @@ The node is an empty node.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NodeType-NODE = 1--><!--Device-NodeType-NODE = 1-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -36,13 +28,9 @@ The node is an empty node.
 GEOMETRY = 2
 ```
 
-The node is a geometry node.
+Geometric type node.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NodeType-GEOMETRY = 2--><!--Device-NodeType-GEOMETRY = 2-End-->
 
@@ -54,13 +42,9 @@ The node is a geometry node.
 CAMERA = 3
 ```
 
-The node is a camera node.
+Camera type node.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NodeType-CAMERA = 3--><!--Device-NodeType-CAMERA = 3-End-->
 
@@ -72,13 +56,9 @@ The node is a camera node.
 LIGHT = 4
 ```
 
-The node is a light node.
+Light type node.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NodeType-LIGHT = 4--><!--Device-NodeType-LIGHT = 4-End-->
 
@@ -90,13 +70,9 @@ The node is a light node.
 CUSTOM = 255
 ```
 
-The node is of custom type. Usually this means that the node is of a type defined in an extension plugin.
+Custom node, which is usually defined in an extension plugin.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NodeType-CUSTOM = 255--><!--Device-NodeType-CUSTOM = 255-End-->
 

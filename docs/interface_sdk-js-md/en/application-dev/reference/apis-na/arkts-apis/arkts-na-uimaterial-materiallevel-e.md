@@ -1,12 +1,10 @@
 # MaterialLevel
 
-Enumerates the material levels, which indicate the computing power level of the device. Use [getGlobalMaterialLevel](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-getglobalmateriallevel-f.md#getGlobalMaterialLevel) to obtain the material level of the current device.
+Enumerates the material levels, which indicate the computing power level of the device. Use [getGlobalMaterialLevel](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-getglobalmateriallevel-f.md#getglobalmateriallevel) to obtain the material level of the current device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-uiMaterial-export enum MaterialLevel--><!--Device-uiMaterial-export enum MaterialLevel-End-->
 
@@ -22,9 +20,7 @@ Material level of devices with high-level computing power.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,9 +38,7 @@ Material level of devices with mid-level computing power.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,9 +56,7 @@ Material level of devices with low-level computing power.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

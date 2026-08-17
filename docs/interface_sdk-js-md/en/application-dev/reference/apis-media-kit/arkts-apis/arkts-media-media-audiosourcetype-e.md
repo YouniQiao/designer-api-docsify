@@ -4,10 +4,6 @@ Enumerates the audio source types for video recording.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum AudioSourceType--><!--Device-media-enum AudioSourceType-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -22,10 +18,6 @@ Default audio input source.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_DEFAULT = 0--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -39,10 +31,6 @@ AUDIO_SOURCE_TYPE_MIC = 1
 Microphone audio input source.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,10 +48,6 @@ Audio source in speech recognition scenarios.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -77,10 +61,6 @@ AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION = 7
 Voice communication source.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION = 7--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION = 7-End-->
 
@@ -96,10 +76,6 @@ Voice message source.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_MESSAGE = 10--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_MESSAGE = 10-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
@@ -113,10 +89,6 @@ AUDIO_SOURCE_TYPE_CAMCORDER = 13
 Audio source in camera recording scenarios.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13-End-->
 

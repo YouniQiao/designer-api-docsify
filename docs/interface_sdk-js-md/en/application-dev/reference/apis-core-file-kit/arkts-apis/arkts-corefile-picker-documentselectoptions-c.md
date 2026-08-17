@@ -4,10 +4,6 @@ Defines the options for selecting documents.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-picker-class DocumentSelectOptions--><!--Device-picker-class DocumentSelectOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -30,10 +26,6 @@ Whether to support for selecting folders, Only 2-in-1 devices are supported. The
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSelectOptions-allowsMulFolderSelection?: boolean--><!--Device-DocumentSelectOptions-allowsMulFolderSelection?: boolean-End-->
@@ -51,10 +43,6 @@ Whether to start Picker. Default value: false. If authMode is true, defaultFileP
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Path of the document or directory to select. It is empty by default (the recentl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSelectOptions-defaultFilePathUri?: string--><!--Device-DocumentSelectOptions-defaultFilePathUri?: string-End-->
@@ -95,10 +79,6 @@ Document suffix of the document to select. The value is a string array. Each ele
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ Whether to support encryption (only files are supported). The default value is f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSelectOptions-isEncryptionSupported?: boolean--><!--Device-DocumentSelectOptions-isEncryptionSupported?: boolean-End-->
@@ -139,10 +115,6 @@ Maximum number of documents that can be selected. Value range: 1 to 500. Only th
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +134,6 @@ Whether to enable the aggregation view mode for a file management application. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSelectOptions-mergeMode?: MergeTypeMode--><!--Device-DocumentSelectOptions-mergeMode?: MergeTypeMode-End-->
@@ -183,10 +151,6 @@ Whether to enable the batch authorization mode. The value false (default) means 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,10 +170,6 @@ Whether to pass the URIs for batch authorization (only files are supported). Thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSelectOptions-multiUriArray?: Array<string>--><!--Device-DocumentSelectOptions-multiUriArray?: Array<string>-End-->
@@ -227,10 +187,6 @@ Selection mode. Only 2-in-1 devices are supported. The default value is FILE.
 **Type:** [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

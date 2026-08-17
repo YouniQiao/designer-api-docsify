@@ -4,10 +4,6 @@ Enumerates the user operations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export enum Operation--><!--Device-mechanicManager-export enum Operation-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -24,10 +20,6 @@ Connection operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Operation-CONNECT = 0--><!--Device-Operation-CONNECT = 0-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -43,10 +35,6 @@ DISCONNECT = 1
 Disconnection operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Operation-DISCONNECT = 1--><!--Device-Operation-DISCONNECT = 1-End-->
 

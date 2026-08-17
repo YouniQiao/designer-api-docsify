@@ -4,10 +4,6 @@ Defines the content for color filling.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ColorContent--><!--Device-unnamed-declare class ColorContent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Resets the fillColor API, effectively the same as not setting fillColor.
 **Type:** [ColorContent](arkts-arkui-colorcontent-c.md)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Defines detailed information about a driver.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-deviceManager-interface DriverInfo--><!--Device-deviceManager-interface DriverInfo-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -32,10 +28,6 @@ Bus type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DriverInfo-busType: BusType--><!--Device-DriverInfo-busType: BusType-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -53,10 +45,6 @@ Driver description.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DriverInfo-description: string--><!--Device-DriverInfo-description: string-End-->
 
@@ -76,10 +64,6 @@ Driver name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DriverInfo-driverName: string--><!--Device-DriverInfo-driverName: string-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -97,10 +81,6 @@ Driver size, in bytes.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DriverInfo-driverSize: string--><!--Device-DriverInfo-driverSize: string-End-->
 
@@ -120,10 +100,6 @@ Driver UID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DriverInfo-driverUid: string--><!--Device-DriverInfo-driverUid: string-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -141,10 +117,6 @@ Driver version.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DriverInfo-driverVersion: string--><!--Device-DriverInfo-driverVersion: string-End-->
 

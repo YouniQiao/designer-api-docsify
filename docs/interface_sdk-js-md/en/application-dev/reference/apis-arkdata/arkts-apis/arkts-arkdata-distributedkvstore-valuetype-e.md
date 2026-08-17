@@ -4,10 +4,6 @@ Indicates the {@code ValueType}. &lt;p&gt;{@code ValueType} is obtained based on
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedKVStore-enum ValueType--><!--Device-distributedKVStore-enum ValueType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -21,10 +17,6 @@ STRING = 0
 Indicates that the value type is string.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Indicates that the value type is int.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -60,10 +48,6 @@ Indicates that the value type is float.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -77,10 +61,6 @@ BYTE_ARRAY = 3
 Indicates that the value type is byte array.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +78,6 @@ Indicates that the value type is boolean.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ValueType-BOOLEAN = 4--><!--Device-ValueType-BOOLEAN = 4-End-->
@@ -118,10 +94,6 @@ Indicates that the value type is double.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ValueType-DOUBLE = 5--><!--Device-ValueType-DOUBLE = 5-End-->
@@ -137,10 +109,6 @@ LONG = 6
 Indicates that the value type is long.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

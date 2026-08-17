@@ -16,10 +16,6 @@ Creates P12. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-cert-function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array--><!--Device-cert-function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array-End-->
@@ -48,7 +44,7 @@ Creates P12. This API returns the result synchronously.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

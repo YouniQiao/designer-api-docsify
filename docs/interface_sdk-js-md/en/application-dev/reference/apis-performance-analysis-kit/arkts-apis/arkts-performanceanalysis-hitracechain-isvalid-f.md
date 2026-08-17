@@ -16,10 +16,6 @@ Checks whether a **HiTraceId** instance is valid. This API returns the result sy
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean--><!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -36,7 +32,7 @@ Checks whether a **HiTraceId** instance is valid. This API returns the result sy
 | --- | --- |
 | boolean | The value **true** indicates that **HiTraceId** is valid, and **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Start tracing. The tracing flag is DEFAULT.

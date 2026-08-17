@@ -16,10 +16,6 @@ Obtains the PIDs of processes that support quick startup after caching in a spec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -52,7 +48,7 @@ Obtains the PIDs of processes that support quick startup after caching in a spec
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

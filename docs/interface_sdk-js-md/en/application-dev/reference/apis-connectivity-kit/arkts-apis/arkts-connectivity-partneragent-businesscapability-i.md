@@ -4,10 +4,6 @@ Describes the business capabilities of the application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-partnerAgent-interface BusinessCapability--><!--Device-partnerAgent-interface BusinessCapability-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -30,10 +26,6 @@ Indicates whether the application supports media control capability.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BusinessCapability-supportMediaControl?: boolean--><!--Device-BusinessCapability-supportMediaControl?: boolean-End-->
@@ -51,10 +43,6 @@ Indicates whether the application supports telephony control capability.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

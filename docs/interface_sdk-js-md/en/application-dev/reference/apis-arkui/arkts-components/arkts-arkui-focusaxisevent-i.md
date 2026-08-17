@@ -1,14 +1,10 @@
 # FocusAxisEvent
 
-Describes the focus axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
+Describes the focus axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent).
 
-**Inheritance/Implementation:** FocusAxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
+**Inheritance/Implementation:** FocusAxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface FocusAxisEvent--><!--Device-unnamed-declare interface FocusAxisEvent-End-->
 
@@ -25,10 +21,6 @@ Axis value table of the focus axis event.
 **Type:** Map&lt;AxisModel, number&gt;
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,10 +41,6 @@ Blocks [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

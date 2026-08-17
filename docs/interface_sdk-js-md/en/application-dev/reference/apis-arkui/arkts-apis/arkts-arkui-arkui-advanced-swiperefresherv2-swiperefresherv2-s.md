@@ -4,10 +4,6 @@ Declare component SwipeRefresherV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct SwipeRefresherV2--><!--Device-unnamed-export declare struct SwipeRefresherV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -31,10 +27,6 @@ Sets the content when loading.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -56,10 +48,6 @@ Whether the component is loading.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

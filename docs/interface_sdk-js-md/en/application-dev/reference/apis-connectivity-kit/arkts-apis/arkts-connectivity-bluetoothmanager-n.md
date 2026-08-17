@@ -4,8 +4,6 @@ Provides methods to operate or manage Bluetooth.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-declare namespace bluetoothManager--><!--Device-unnamed-declare namespace bluetoothManager-End-->
@@ -30,46 +28,46 @@ import { bluetoothManager } from 'bluetoothManager';
 
 | Name | Description |
 | --- | --- |
-| [getState](arkts-connectivity-bluetoothmanager-getstate-f.md#getState) | Obtains the Bluetooth status of a device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [getBtConnectionState](arkts-connectivity-bluetoothmanager-getbtconnectionstate-f.md#getBtConnectionState) | Get the local device connection state to any profile of any remote device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [pairDevice](arkts-connectivity-bluetoothmanager-pairdevice-f.md#pairDevice) | Starts pairing with a remote Bluetooth device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [getRemoteDeviceName](arkts-connectivity-bluetoothmanager-getremotedevicename-f.md#getRemoteDeviceName) | Obtains the name of a peer Bluetooth device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [getRemoteDeviceClass](arkts-connectivity-bluetoothmanager-getremotedeviceclass-f.md#getRemoteDeviceClass) | Obtains the class of a peer Bluetooth device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [enableBluetooth](arkts-connectivity-bluetoothmanager-enablebluetooth-f.md#enableBluetooth) | Enables Bluetooth on a device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [disableBluetooth](arkts-connectivity-bluetoothmanager-disablebluetooth-f.md#disableBluetooth) | Disables Bluetooth on a device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [getLocalName](arkts-connectivity-bluetoothmanager-getlocalname-f.md#getLocalName) | Obtains the Bluetooth local name of a device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [getPairedDevices](arkts-connectivity-bluetoothmanager-getpaireddevices-f.md#getPairedDevices) | Obtains the list of Bluetooth devices that have been paired with the current device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [getProfileConnectionState](arkts-connectivity-bluetoothmanager-getprofileconnectionstate-f.md#getProfileConnectionState) | Obtains the connection state of profile. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [setDevicePairingConfirmation](arkts-connectivity-bluetoothmanager-setdevicepairingconfirmation-f.md#setDevicePairingConfirmation) | Sets the confirmation of pairing with a certain device. On API 10 and above, the permission required by this interface is changed from MANAGE_BLUETOOTH to ACCESS_BLUETOOTH and MANAGE_BLUETOOTH. |
-| [setLocalName](arkts-connectivity-bluetoothmanager-setlocalname-f.md#setLocalName) | Sets the Bluetooth friendly name of a device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [setBluetoothScanMode](arkts-connectivity-bluetoothmanager-setbluetoothscanmode-f.md#setBluetoothScanMode) | Sets the Bluetooth scan mode for a device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [getBluetoothScanMode](arkts-connectivity-bluetoothmanager-getbluetoothscanmode-f.md#getBluetoothScanMode) | Obtains the Bluetooth scanning mode of a device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [startBluetoothDiscovery](arkts-connectivity-bluetoothmanager-startbluetoothdiscovery-f.md#startBluetoothDiscovery) | Starts scanning Bluetooth devices. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH and LOCATION and APPROXIMATELY_LOCATION to ACCESS_BLUETOOTH. |
-| [stopBluetoothDiscovery](arkts-connectivity-bluetoothmanager-stopbluetoothdiscovery-f.md#stopBluetoothDiscovery) | Stops Bluetooth device scanning. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [on_bluetoothDeviceFind](arkts-connectivity-bluetoothmanager-onbluetoothdevicefind-f.md#on_bluetoothDeviceFind) | Subscribe the event reported when a remote Bluetooth device is discovered. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [off_bluetoothDeviceFind](arkts-connectivity-bluetoothmanager-offbluetoothdevicefind-f.md#off_bluetoothDeviceFind) | Unsubscribe the event reported when a remote Bluetooth device is discovered. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [on_bondStateChange](arkts-connectivity-bluetoothmanager-onbondstatechange-f.md#on_bondStateChange) | Subscribe the event reported when a remote Bluetooth device is bonded. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [off_bondStateChange](arkts-connectivity-bluetoothmanager-offbondstatechange-f.md#off_bondStateChange) | Unsubscribe the event reported when a remote Bluetooth device is bonded. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [on_pinRequired](arkts-connectivity-bluetoothmanager-onpinrequired-f.md#on_pinRequired) | Subscribe the event of a pairing request from a remote Bluetooth device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [off_pinRequired](arkts-connectivity-bluetoothmanager-offpinrequired-f.md#off_pinRequired) | Unsubscribe the event of a pairing request from a remote Bluetooth device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [on_stateChange](arkts-connectivity-bluetoothmanager-onstatechange-f.md#on_stateChange) | Subscribe the event reported when the Bluetooth state changes. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [off_stateChange](arkts-connectivity-bluetoothmanager-offstatechange-f.md#off_stateChange) | Unsubscribe the event reported when the Bluetooth state changes. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md#sppListen) | Creates a Bluetooth server listening socket. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md#sppAccept) | Waits for a remote device to connect. |
-| [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md#sppConnect) | Connects to a remote device over the socket. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
-| [sppCloseServerSocket](arkts-connectivity-bluetoothmanager-sppcloseserversocket-f.md#sppCloseServerSocket) | Disables an spp server socket and releases related resources. |
-| [sppCloseClientSocket](arkts-connectivity-bluetoothmanager-sppcloseclientsocket-f.md#sppCloseClientSocket) | Disables an spp client socket and releases related resources. |
-| [sppWrite](arkts-connectivity-bluetoothmanager-sppwrite-f.md#sppWrite) | Write data through the socket. |
-| [on_sppRead](arkts-connectivity-bluetoothmanager-onsppread-f.md#on_sppRead) | Subscribe the event reported when data is read from the socket. |
-| [off_sppRead](arkts-connectivity-bluetoothmanager-offsppread-f.md#off_sppRead) | Unsubscribe the event reported when data is read from the socket. |
-| [getProfileInstance](arkts-connectivity-bluetoothmanager-getprofileinstance-f.md#getProfileInstance) | Obtains the instance of profile. |
+| [getState](arkts-connectivity-bluetoothmanager-getstate-f.md#getstate) | Obtains the Bluetooth status of a device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [getBtConnectionState](arkts-connectivity-bluetoothmanager-getbtconnectionstate-f.md#getbtconnectionstate) | Get the local device connection state to any profile of any remote device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [pairDevice](arkts-connectivity-bluetoothmanager-pairdevice-f.md#pairdevice) | Starts pairing with a remote Bluetooth device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [getRemoteDeviceName](arkts-connectivity-bluetoothmanager-getremotedevicename-f.md#getremotedevicename) | Obtains the name of a peer Bluetooth device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [getRemoteDeviceClass](arkts-connectivity-bluetoothmanager-getremotedeviceclass-f.md#getremotedeviceclass) | Obtains the class of a peer Bluetooth device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [enableBluetooth](arkts-connectivity-bluetoothmanager-enablebluetooth-f.md#enablebluetooth) | Enables Bluetooth on a device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [disableBluetooth](arkts-connectivity-bluetoothmanager-disablebluetooth-f.md#disablebluetooth) | Disables Bluetooth on a device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [getLocalName](arkts-connectivity-bluetoothmanager-getlocalname-f.md#getlocalname) | Obtains the Bluetooth local name of a device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [getPairedDevices](arkts-connectivity-bluetoothmanager-getpaireddevices-f.md#getpaireddevices) | Obtains the list of Bluetooth devices that have been paired with the current device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [getProfileConnectionState](arkts-connectivity-bluetoothmanager-getprofileconnectionstate-f.md#getprofileconnectionstate) | Obtains the connection state of profile. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [setDevicePairingConfirmation](arkts-connectivity-bluetoothmanager-setdevicepairingconfirmation-f.md#setdevicepairingconfirmation) | Sets the confirmation of pairing with a certain device. On API 10 and above, the permission required by this interface is changed from MANAGE_BLUETOOTH to ACCESS_BLUETOOTH and MANAGE_BLUETOOTH. |
+| [setLocalName](arkts-connectivity-bluetoothmanager-setlocalname-f.md#setlocalname) | Sets the Bluetooth friendly name of a device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [setBluetoothScanMode](arkts-connectivity-bluetoothmanager-setbluetoothscanmode-f.md#setbluetoothscanmode) | Sets the Bluetooth scan mode for a device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [getBluetoothScanMode](arkts-connectivity-bluetoothmanager-getbluetoothscanmode-f.md#getbluetoothscanmode) | Obtains the Bluetooth scanning mode of a device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [startBluetoothDiscovery](arkts-connectivity-bluetoothmanager-startbluetoothdiscovery-f.md#startbluetoothdiscovery) | Starts scanning Bluetooth devices. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH and LOCATION and APPROXIMATELY_LOCATION to ACCESS_BLUETOOTH. |
+| [stopBluetoothDiscovery](arkts-connectivity-bluetoothmanager-stopbluetoothdiscovery-f.md#stopbluetoothdiscovery) | Stops Bluetooth device scanning. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [on_bluetoothDeviceFind](arkts-connectivity-bluetoothmanager-onbluetoothdevicefind-f.md#onbluetoothdevicefind) | Subscribe the event reported when a remote Bluetooth device is discovered. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [off_bluetoothDeviceFind](arkts-connectivity-bluetoothmanager-offbluetoothdevicefind-f.md#offbluetoothdevicefind) | Unsubscribe the event reported when a remote Bluetooth device is discovered. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [on_bondStateChange](arkts-connectivity-bluetoothmanager-onbondstatechange-f.md#onbondstatechange) | Subscribe the event reported when a remote Bluetooth device is bonded. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [off_bondStateChange](arkts-connectivity-bluetoothmanager-offbondstatechange-f.md#offbondstatechange) | Unsubscribe the event reported when a remote Bluetooth device is bonded. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [on_pinRequired](arkts-connectivity-bluetoothmanager-onpinrequired-f.md#onpinrequired) | Subscribe the event of a pairing request from a remote Bluetooth device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [off_pinRequired](arkts-connectivity-bluetoothmanager-offpinrequired-f.md#offpinrequired) | Unsubscribe the event of a pairing request from a remote Bluetooth device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [on_stateChange](arkts-connectivity-bluetoothmanager-onstatechange-f.md#onstatechange) | Subscribe the event reported when the Bluetooth state changes. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [off_stateChange](arkts-connectivity-bluetoothmanager-offstatechange-f.md#offstatechange) | Unsubscribe the event reported when the Bluetooth state changes. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md#spplisten) | Creates a Bluetooth server listening socket. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md#sppaccept) | Waits for a remote device to connect. |
+| [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md#sppconnect) | Connects to a remote device over the socket. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [sppCloseServerSocket](arkts-connectivity-bluetoothmanager-sppcloseserversocket-f.md#sppcloseserversocket) | Disables an spp server socket and releases related resources. |
+| [sppCloseClientSocket](arkts-connectivity-bluetoothmanager-sppcloseclientsocket-f.md#sppcloseclientsocket) | Disables an spp client socket and releases related resources. |
+| [sppWrite](arkts-connectivity-bluetoothmanager-sppwrite-f.md#sppwrite) | Write data through the socket. |
+| [on_sppRead](arkts-connectivity-bluetoothmanager-onsppread-f.md#onsppread) | Subscribe the event reported when data is read from the socket. |
+| [off_sppRead](arkts-connectivity-bluetoothmanager-offsppread-f.md#offsppread) | Unsubscribe the event reported when data is read from the socket. |
+| [getProfileInstance](arkts-connectivity-bluetoothmanager-getprofileinstance-f.md#getprofileinstance) | Obtains the instance of profile. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [cancelPairedDevice](arkts-connectivity-bluetoothmanager-cancelpaireddevice-f-sys.md#cancelPairedDevice) | Remove a paired remote device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
+| [cancelPairedDevice](arkts-connectivity-bluetoothmanager-cancelpaireddevice-f-sys.md#cancelpaireddevice) | Remove a paired remote device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -81,8 +79,8 @@ import { bluetoothManager } from 'bluetoothManager';
 | [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md) | Manager handsfree AG profile. |
 | [HidHostProfile](arkts-connectivity-bluetoothmanager-hidhostprofile-i.md) | Manager hid host profile. |
 | [PanProfile](arkts-connectivity-bluetoothmanager-panprofile-i.md) | Manager pan profile. |
-| [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md) | Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md#createGattServer) to create an GattServer instance. |
-| [GattClientDevice](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md) | Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) to create an GattClientDevice instance. |
+| [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md) | Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md#creategattserver) to create an GattServer instance. |
+| [GattClientDevice](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md) | Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#creategattclientdevice) to create an GattClientDevice instance. |
 | [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md) | Describes the Gatt service. |
 | [BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md) | Describes the Gatt characteristic. |
 | [BLEDescriptor](arkts-connectivity-bluetoothmanager-bledescriptor-i.md) | Describes the Gatt descriptor. |

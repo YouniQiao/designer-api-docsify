@@ -4,10 +4,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-http-export interface HttpRequest--><!--Device-http-export interface HttpRequest-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -28,17 +24,13 @@ Destroys an HTTP request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpRequest-destroy(): void--><!--Device-HttpRequest-destroy(): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -64,10 +56,6 @@ Sets whether to automatically reply with cookies.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HttpRequest-enableAutoCookie(enable: boolean): void--><!--Device-HttpRequest-enableAutoCookie(enable: boolean): void-End-->
@@ -89,10 +77,6 @@ offDataEnd(callback?: Callback<void>): void
 Unregisters an observer for receiving HTTP Response data ends events.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -116,10 +100,6 @@ Unregisters an observer for receiving HTTP Response data events continuously.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HttpRequest-offDataReceive(callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-offDataReceive(callback?: Callback<ArrayBuffer>): void-End-->
@@ -141,10 +121,6 @@ offDataReceiveProgress(callback?: Callback<DataReceiveProgressInfo>): void
 Unregisters an observer for progress of receiving HTTP Response data events.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -168,10 +144,6 @@ Unregisters an observer for progress of sendSize HTTP Response data events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HttpRequest-offDataSendProgress(callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-offDataSendProgress(callback?: Callback<DataSendProgressInfo>): void-End-->
@@ -193,10 +165,6 @@ offHeadersReceive(callback?: Callback<Record<string, string>>): void
 Unregisters the observer for HTTP Response Header events.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -220,10 +188,6 @@ Unregisters an observer for receiving HTTP Response data ends events.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void--><!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void-End-->
@@ -237,7 +201,7 @@ Unregisters an observer for receiving HTTP Response data ends events.
 | type | "dataEnd" | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -269,10 +233,6 @@ Unregisters an observer for receiving HTTP Response data events continuously.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void-End-->
@@ -286,7 +246,7 @@ Unregisters an observer for receiving HTTP Response data events continuously.
 | type | "dataReceive" | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -318,10 +278,6 @@ Unregisters an observer for progress of receiving HTTP Response data events.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void-End-->
@@ -335,7 +291,7 @@ Unregisters an observer for progress of receiving HTTP Response data events.
 | type | 'dataReceiveProgress' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -367,10 +323,6 @@ Unregisters an observer for progress of sendSize HTTP Response data events.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void-End-->
@@ -384,7 +336,7 @@ Unregisters an observer for progress of sendSize HTTP Response data events.
 | type | 'dataSendProgress' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | the callback of off. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -416,11 +368,9 @@ Unregisters the observer for HTTP Response Header events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [off_headersReceive](#off_headersReceive)
+**Substitutes:** [off_headersReceive](#offheadersreceive)
 
 <!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
 
@@ -433,7 +383,7 @@ Unregisters the observer for HTTP Response Header events.
 | type | "headerReceive" | Yes | Indicates Event name. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -459,10 +409,6 @@ Unregisters the observer for HTTP Response Header events.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void--><!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void-End-->
@@ -476,7 +422,7 @@ Unregisters the observer for HTTP Response Header events.
 | type | "headersReceive" | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -508,10 +454,6 @@ Registers an observer for receiving HTTP Response data ends events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HttpRequest-onDataEnd(callback: Callback<void>): void--><!--Device-HttpRequest-onDataEnd(callback: Callback<void>): void-End-->
@@ -533,10 +475,6 @@ onDataReceive(callback: Callback<ArrayBuffer>): void
 Registers an observer for receiving HTTP Response data events continuously.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -560,10 +498,6 @@ Registers an observer for progress of receiving HTTP Response data events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HttpRequest-onDataReceiveProgress(callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-onDataReceiveProgress(callback: Callback<DataReceiveProgressInfo>): void-End-->
@@ -585,10 +519,6 @@ onDataSendProgress(callback: Callback<DataSendProgressInfo>): void
 Registers an observer for progress of sendSize HTTP Response data events.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -612,10 +542,6 @@ Registers an observer for HTTP Response Header events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HttpRequest-onHeadersReceive(callback: Callback<Record<string, string>>): void--><!--Device-HttpRequest-onHeadersReceive(callback: Callback<Record<string, string>>): void-End-->
@@ -638,10 +564,6 @@ Registers an observer for receiving HTTP Response data ends events.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void--><!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void-End-->
@@ -655,7 +577,7 @@ Registers an observer for receiving HTTP Response data ends events.
 | type | "dataEnd" | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -687,10 +609,6 @@ Registers an observer for receiving HTTP Response data events continuously.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void-End-->
@@ -704,7 +622,7 @@ Registers an observer for receiving HTTP Response data events continuously.
 | type | "dataReceive" | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -736,10 +654,6 @@ Registers an observer for progress of receiving HTTP Response data events.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void-End-->
@@ -753,7 +667,7 @@ Registers an observer for progress of receiving HTTP Response data events.
 | type | 'dataReceiveProgress' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -785,10 +699,6 @@ Registers an observer for progress of sendSize HTTP Response data events.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void-End-->
@@ -802,7 +712,7 @@ Registers an observer for progress of sendSize HTTP Response data events.
 | type | 'dataSendProgress' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | the callback of on. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -834,11 +744,9 @@ Registers an observer for HTTP Response Header events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [on_headersReceive](#on_headersReceive)
+**Substitutes:** [on_headersReceive](#onheadersreceive)
 
 <!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
 
@@ -851,7 +759,7 @@ Registers an observer for HTTP Response Header events.
 | type | "headerReceive" | Yes | Indicates Event name. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -883,10 +791,6 @@ Registers an observer for HTTP Response Header events.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void-End-->
@@ -900,7 +804,7 @@ Registers an observer for HTTP Response Header events.
 | type | "headersReceive" | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -932,10 +836,6 @@ Registers a one-time observer for HTTP Response Header events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HttpRequest-onceHeadersReceive(callback: Callback<Record<string, string>>): void--><!--Device-HttpRequest-onceHeadersReceive(callback: Callback<Record<string, string>>): void-End-->
@@ -958,10 +858,6 @@ Registers a one-time observer for HTTP Response Header events.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void-End-->
@@ -975,7 +871,7 @@ Registers a one-time observer for HTTP Response Header events.
 | type | "headersReceive" | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -1001,13 +897,9 @@ httpRequest.once("headersReceive", (header: Object) => {
 request(url: string, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call > [requestInStream](#requestInStream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
+Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#httprequestoptions) or call > [requestInStream](#requestinstream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1063,7 +955,7 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 | [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
 | [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -1105,13 +997,9 @@ httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
 request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call > [requestInStream](#requestInStream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#httprequestoptions) or call > [requestInStream](#requestinstream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1126,8 +1014,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is an [HttpResponse](arkts-network-http-httpresponse-i.md#HttpResponse) object; otherwise, the callback content is undefined. |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#httprequestoptions). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is an [HttpResponse](arkts-network-http-httpresponse-i.md#httpresponse) object; otherwise, the callback content is undefined. |
 
 **Error codes:**
 
@@ -1168,7 +1056,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
 | [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -1256,13 +1144,9 @@ httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse
 request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call > [requestInStream](#requestInStream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
+Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#httprequestoptions) or call > [requestInStream](#requestinstream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1277,7 +1161,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions). |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#httprequestoptions). |
 
 **Return value:**
 
@@ -1324,7 +1208,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
 | [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -1398,10 +1282,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -1456,7 +1336,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
 | [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -1496,10 +1376,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -1513,8 +1389,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the [HTTP result code](arkts-network-http-responsecode-e.md#ResponseCode) is returned. Otherwise, **err** is an error object. |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#httprequestoptions). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the [HTTP result code](arkts-network-http-responsecode-e.md#responsecode) is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1555,7 +1431,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
 | [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -1639,10 +1515,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -1656,7 +1528,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions). |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#httprequestoptions). |
 
 **Return value:**
 
@@ -1703,7 +1575,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
 | [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -1761,13 +1633,9 @@ promise.then((data: number) => {
 requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 ```
 
-Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously. > **NOTE：**> > (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit** > parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions). > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request. > (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned. **Required permission**: ohos.permission.INTERNET
+Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously. > **NOTE：**> > (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit** > parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#httprequestoptions). > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request. > (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned. **Required permission**: ohos.permission.INTERNET
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1782,7 +1650,7 @@ Initiates an HTTP network request based on the URL and related configuration opt
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions). |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#httprequestoptions). |
 
 **Return value:**
 

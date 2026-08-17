@@ -10,10 +10,6 @@ function getPowerMode(): DevicePowerMode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-power-function getPowerMode(): DevicePowerMode--><!--Device-power-function getPowerMode(): DevicePowerMode-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
@@ -24,7 +20,7 @@ function getPowerMode(): DevicePowerMode
 | --- | --- |
 | [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | 电源模式。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let mode = power.getPowerMode();

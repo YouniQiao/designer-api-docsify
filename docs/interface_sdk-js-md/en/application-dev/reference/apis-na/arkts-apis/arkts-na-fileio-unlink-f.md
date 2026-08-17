@@ -10,9 +10,7 @@ Deletes a single file. This method cannot be used to delete a directory. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function unlink(path: string): Promise<void>--><!--Device-fileIo-function unlink(path: string): Promise<void>-End-->
 
@@ -61,9 +59,7 @@ Deletes a single file. This method cannot be used to delete a directory. This AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function unlink(path: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function unlink(path: string, callback: AsyncCallback<void>): void-End-->
 

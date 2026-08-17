@@ -8,10 +8,6 @@ Defines the module configuration information of the bundle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-freeInstall-export type ModuleConfigInfo = _ModuleConfigInfo--><!--Device-freeInstall-export type ModuleConfigInfo = _ModuleConfigInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall

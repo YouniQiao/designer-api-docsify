@@ -10,10 +10,6 @@ Capture mode: night view with front lens.The value is 7.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW : int--><!--Device-image-const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW : int-End-->
@@ -29,10 +25,6 @@ const CAPTURE_MODE_LIGHT_GRAFFITI : int
 Capture mode: light graffiti.The value is 10.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Capture mode: moving photos.The value is 20.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-const CAPTURE_MODE_MOVING_PHOTO : int--><!--Device-image-const CAPTURE_MODE_MOVING_PHOTO : int-End-->
@@ -69,10 +57,6 @@ const CAPTURE_MODE_PANORAMA : int
 Capture mode: panorama.The value is 8.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ Capture mode: portrait.The value is 23.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-const CAPTURE_MODE_PORTRAIT : int--><!--Device-image-const CAPTURE_MODE_PORTRAIT : int-End-->
@@ -109,10 +89,6 @@ const CAPTURE_MODE_PROFESSIONAL : int
 Capture mode: professional.The value is 2.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,10 +106,6 @@ Capture mode: night view with rear lens.The value is 42.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW : int--><!--Device-image-const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW : int-End-->
@@ -149,10 +121,6 @@ const CAPTURE_MODE_SILKY_WATER : int
 Capture mode: silky water.The value is 11.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,10 +138,6 @@ Capture mode: snap shot.The value is 62.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-const CAPTURE_MODE_SNAP_SHOT : int--><!--Device-image-const CAPTURE_MODE_SNAP_SHOT : int-End-->
@@ -189,10 +153,6 @@ const CAPTURE_MODE_STAR_TRACK : int
 Capture mode: star track.The value is 12.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,10 +170,6 @@ Capture mode: super macro.The value is 47.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-const CAPTURE_MODE_SUPER_MACRO : int--><!--Device-image-const CAPTURE_MODE_SUPER_MACRO : int-End-->
@@ -229,10 +185,6 @@ const CAPTURE_MODE_TAIL_LIGHT : int
 Capture mode: tail light.The value is 9.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,10 +202,6 @@ Capture mode: wide aperture.The value is 19.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-const CAPTURE_MODE_WIDEAPERTURE : int--><!--Device-image-const CAPTURE_MODE_WIDEAPERTURE : int-End-->
@@ -269,10 +217,6 @@ const DUBLIN_CORE: XMPNamespace
 XMP namespace: dublin core. Namespace uri: 'http://purl.org/dc/elements/1.1/', prefix: 'dc'
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,10 +234,6 @@ XMP namespace: exif. Namespace uri: 'http://ns.adobe.com/exif/1.0/', prefix: 'ex
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-const EXIF: XMPNamespace--><!--Device-image-const EXIF: XMPNamespace-End-->
@@ -309,10 +249,6 @@ const TIFF: XMPNamespace
 XMP namespace: tiff. Namespace uri: 'http://ns.adobe.com/tiff/1.0/', prefix: 'tiff'
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -330,10 +266,6 @@ The XMAGE watermark is at the bottom of the photo.The value is 9.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM : int--><!--Device-image-const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM : int-End-->
@@ -349,10 +281,6 @@ const XMAGE_WATERMARK_MODE_BORDER : int
 The XMAGE watermark is around the edges of the photo.The value is 10.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -370,10 +298,6 @@ XMP namespace: XMP basic. Namespace uri: 'http://ns.adobe.com/xap/1.0/', prefix:
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-const XMP_BASIC: XMPNamespace--><!--Device-image-const XMP_BASIC: XMPNamespace-End-->
@@ -389,10 +313,6 @@ const XMP_RIGHTS: XMPNamespace
 XMP namespace: XMP rights. Namespace uri: 'http://ns.adobe.com/xap/1.0/rights/', prefix: 'xmpRights'
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

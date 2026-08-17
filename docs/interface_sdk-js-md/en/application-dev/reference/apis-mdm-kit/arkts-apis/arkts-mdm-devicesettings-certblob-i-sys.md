@@ -4,11 +4,9 @@ Represents the certificate information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [CertBlob](arkts-mdm-securitymanager-certblob-i.md#CertBlob)
+**Substitutes:** [CertBlob](arkts-mdm-securitymanager-certblob-i.md#certblob)
 
 <!--Device-deviceSettings-export interface CertBlob--><!--Device-deviceSettings-export interface CertBlob-End-->
 
@@ -34,8 +32,6 @@ Certificate alias. The value length must be less than 40 characters.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** alias
@@ -59,8 +55,6 @@ Binary content of the certificate.
 **Type:** Uint8Array
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 26.0.0
 

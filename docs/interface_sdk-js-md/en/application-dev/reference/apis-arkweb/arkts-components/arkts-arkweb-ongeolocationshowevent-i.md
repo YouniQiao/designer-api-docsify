@@ -1,12 +1,8 @@
 # OnGeolocationShowEvent
 
-Represents the callback invoked when a request to obtain the geolocation information is received.
+Defines the callback information triggered when a request to obtain the geolocation information is received, including the origin information and geolocation object. It is suitable for scenarios where handling geolocation permissions is required.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnGeolocationShowEvent--><!--Device-unnamed-declare interface OnGeolocationShowEvent-End-->
 
@@ -24,10 +20,6 @@ User operation.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnGeolocationShowEvent-geolocation: JsGeolocation--><!--Device-OnGeolocationShowEvent-geolocation: JsGeolocation-End-->
@@ -40,15 +32,11 @@ User operation.
 origin: string
 ```
 
-Index of the origin.
+Origin of the web page that initiates the geolocation permission request, used to identify the source of the geolocation request from a specific website.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,10 +4,6 @@ Describes the scan filters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-scan-interface ScanFilters--><!--Device-scan-interface ScanFilters-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -30,10 +26,6 @@ Indicates the device address. The length must be 17, The value consists of hexad
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScanFilters-address?: string--><!--Device-ScanFilters-address?: string-End-->
@@ -51,10 +43,6 @@ Indicates the device name.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Indicates the manufacturer data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScanFilters-manufacturerData?: ArrayBuffer--><!--Device-ScanFilters-manufacturerData?: ArrayBuffer-End-->
@@ -95,10 +79,6 @@ Indicates the manufacturer data mask. If a manufacturer data mask is set in the 
 **Type:** ArrayBuffer
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ Indicates the manufacturer ID.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ScanFilters-manufacturerId?: int--><!--Device-ScanFilters-manufacturerId?: int-End-->
@@ -139,10 +115,6 @@ Indicates the RSSI. Unit: dBm, The value must be an integer within [-128,127].
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

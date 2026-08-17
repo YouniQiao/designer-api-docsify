@@ -4,10 +4,6 @@ Enumerates the ringtone parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface RingtoneOptions--><!--Device-unnamed-export interface RingtoneOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -26,10 +22,6 @@ Whether to enable loop playback. **true** to enable, **false** otherwise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RingtoneOptions-loop: boolean--><!--Device-RingtoneOptions-loop: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -47,10 +39,6 @@ Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicate
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RingtoneOptions-volume: double--><!--Device-RingtoneOptions-volume: double-End-->
 

@@ -16,10 +16,6 @@ Sets the upper limit of the memory cache size for the **cacheDownload** componen
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cacheDownload-function setMemoryCacheSize(bytes: long): void--><!--Device-cacheDownload-function setMemoryCacheSize(bytes: long): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -36,7 +32,7 @@ Sets the upper limit of the memory cache size for the **cacheDownload** componen
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';

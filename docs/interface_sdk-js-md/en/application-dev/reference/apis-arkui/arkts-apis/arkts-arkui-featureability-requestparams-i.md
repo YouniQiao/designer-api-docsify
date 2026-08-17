@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-unnamed-export interface RequestParams--><!--Device-unnamed-export interface RequestParams-End-->
@@ -21,8 +19,6 @@ Ability name, which is case sensitive.
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 
@@ -42,8 +38,6 @@ Without specifying the bundle name and ability name, you can start the applicati
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-RequestParams-action?: string--><!--Device-RequestParams-action?: string-End-->
@@ -61,8 +55,6 @@ The name of the bundle to start. It should be used with abilityname and case sen
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 
@@ -82,8 +74,6 @@ Data sent to the ability which need to be serializable.
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-RequestParams-data?: object--><!--Device-RequestParams-data?: object-End-->
@@ -101,8 +91,6 @@ If more than one FA meets the conditions, the user can select the device from th
 **Type:** number
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 
@@ -122,8 +110,6 @@ The list of entities to which the FA to be called. If it is not filled in, all e
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-RequestParams-entities?: Array<string>--><!--Device-RequestParams-entities?: Array<string>-End-->
@@ -142,8 +128,6 @@ Configuration switch when start FA.
 
 **Since:** 5
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
-
 **Deprecated since:** 8
 
 <!--Device-RequestParams-flag?: number--><!--Device-RequestParams-flag?: number-End-->
@@ -161,8 +145,6 @@ Specify the url of the page which the FA to be called. Use home page directly by
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
 
 **Deprecated since:** 8
 

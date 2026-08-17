@@ -6,13 +6,11 @@
 function mmap(file: int | File, mode: MappingMode, offset: long, size: int): Promise<FileMapping>
 ```
 
-Creates a file mapping object based on a file descriptor or file object for efficient read and write access to files. This API uses a promise to return the result. > **NOTE：**> > 1. Memory mapping can be performed only for regular files. Non-regular files, such as > pipeline, socket, and device > files, are not supported. You can use [statSync()](arkts-na-fileio-statsync-f.md#statSync) to obtain file attributes and then call > [Stat.isFile()](arkts-na-fileio-stat-i.md#isFile) to check whether the file is a regular file. > > 2. If the mapping range exceeds the raw file size and the write permission is granted for the file, the mapping > file size will be automatically expanded. > > 3. For files from external storage or network files, the establishment of mappings and access > to the mapped memory > are not guaranteed due to differences in the underlying file system. This may cause the application to terminate > unexpectedly. You are advised to use other file access APIs such as [read](arkts-na-fileio-read-f.md#read), > [write](arkts-na-fileio-write-f.md#write), or [Stream](arkts-na-fileio-stream-i.md#Stream) in this scenario.
+Creates a file mapping object based on a file descriptor or file object for efficient read and write access to files. This API uses a promise to return the result. > **NOTE：**> > 1. Memory mapping can be performed only for regular files. Non-regular files, such as > pipeline, socket, and device > files, are not supported. You can use [statSync()](arkts-na-fileio-statsync-f.md#statsync) to obtain file attributes and then call > [Stat.isFile()](arkts-na-fileio-stat-i.md#isfile) to check whether the file is a regular file. > > 2. If the mapping range exceeds the raw file size and the write permission is granted for the file, the mapping > file size will be automatically expanded. > > 3. For files from external storage or network files, the establishment of mappings and access > to the mapped memory > are not guaranteed due to differences in the underlying file system. This may cause the application to terminate > unexpectedly. You are advised to use other file access APIs such as [read](arkts-na-fileio-read-f.md#read), > [write](arkts-na-fileio-write-f.md#write), or [Stream](arkts-na-fileio-stream-i.md#stream) in this scenario.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

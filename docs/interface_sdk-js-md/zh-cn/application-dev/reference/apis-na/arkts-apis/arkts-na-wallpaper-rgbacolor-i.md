@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-wallpaper-interface RgbaColor--><!--Device-wallpaper-interface RgbaColor-End-->
@@ -23,8 +21,6 @@ alpha: long
 **类型：** long
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ blue: long
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-RgbaColor-blue: long--><!--Device-RgbaColor-blue: long-End-->
@@ -64,8 +58,6 @@ green: long
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-RgbaColor-green: long--><!--Device-RgbaColor-green: long-End-->
@@ -83,8 +75,6 @@ red: long
 **类型：** long
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 

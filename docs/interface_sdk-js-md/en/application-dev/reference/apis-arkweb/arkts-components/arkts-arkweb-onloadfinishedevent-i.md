@@ -1,12 +1,8 @@
 # OnLoadFinishedEvent
 
-Defines the triggered function at the end of web page loading.
+Defines the callback information triggered when the web page loading ends, including the page URL. It is suitable for scenarios where monitoring page loading completion is required, improving page lifecycle management capabilities.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnLoadFinishedEvent--><!--Device-unnamed-declare interface OnLoadFinishedEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered function at the end of web page loading.
 url: string
 ```
 
-The url to be loaded.
+URL of the page.
 
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-OnLoadFinishedEvent-url: string--><!--Device-OnLoadFinishedEvent-url: string-End-->
 

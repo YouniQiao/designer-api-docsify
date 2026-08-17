@@ -6,10 +6,6 @@ Provides methods for accessing Barcode tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface BarcodeTag--><!--Device-unnamed-export interface BarcodeTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -23,10 +19,6 @@ getBarcode(): Promise<ArrayBuffer>
 Returns the barcode of a Barcode tag.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 

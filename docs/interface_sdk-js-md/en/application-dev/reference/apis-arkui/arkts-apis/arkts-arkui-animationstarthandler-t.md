@@ -8,10 +8,6 @@ Defines the callback triggered when the page transition animation starts.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-unnamed-declare type AnimationStartHandler = (index: number, targetIndex: number, event: SwiperAnimationEvent) => void--><!--Device-unnamed-declare type AnimationStartHandler = (index: number, targetIndex: number, event: SwiperAnimationEvent) => void-End-->

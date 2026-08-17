@@ -4,10 +4,6 @@ Defines a contact's SIP address.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-contact-class SipAddress--><!--Device-contact-class SipAddress-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -30,10 +26,6 @@ Custom SIP address type, the default value is **0**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SipAddress-static readonly CUSTOM_LABEL: 0--><!--Device-SipAddress-static readonly CUSTOM_LABEL: 0-End-->
@@ -51,10 +43,6 @@ Invalid SIP address type, the default value is **-1**.
 **Type:** -1
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,10 +62,6 @@ Home SIP address, the default value is **1**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SipAddress-static readonly SIP_HOME: 1--><!--Device-SipAddress-static readonly SIP_HOME: 1-End-->
@@ -95,10 +79,6 @@ Other SIP address, the default value is **3**.
 **Type:** 3
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,10 +98,6 @@ Work SIP address, the default value is **2**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SipAddress-static readonly SIP_WORK: 2--><!--Device-SipAddress-static readonly SIP_WORK: 2-End-->
@@ -139,10 +115,6 @@ SIP address type.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,10 +134,6 @@ SIP address type name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SipAddress-labelName?: string--><!--Device-SipAddress-labelName?: string-End-->
@@ -183,10 +151,6 @@ SIP address.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

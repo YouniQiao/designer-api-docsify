@@ -4,10 +4,6 @@ Enumerates the text break strategies.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-enum BreakStrategy--><!--Device-text-enum BreakStrategy-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ GREEDY = 0
 Fills the current line as much as possible without adding hyphens.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,10 +34,6 @@ Optimizes layout and may add hyphens when necessary.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-BreakStrategy-HIGH_QUALITY = 1--><!--Device-BreakStrategy-HIGH_QUALITY = 1-End-->
@@ -61,10 +49,6 @@ BALANCED = 2
 Ensures consistent line width in a paragraph, adding hyphens if needed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

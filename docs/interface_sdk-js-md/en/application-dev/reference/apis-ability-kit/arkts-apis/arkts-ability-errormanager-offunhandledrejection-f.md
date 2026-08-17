@@ -16,10 +16,6 @@ Unregister unhandled rejection observer.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-errorManager-function offUnhandledRejection(observer?: UnhandledRejectionObserver): void--><!--Device-errorManager-function offUnhandledRejection(observer?: UnhandledRejectionObserver): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

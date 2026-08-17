@@ -16,10 +16,6 @@ Enables listening for mouse pointer position information on the specified device
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
 <!--Device-cooperate-function onCooperateMouseEvent(networkId: string, callback: Callback<MouseLocation>): void--><!--Device-cooperate-function onCooperateMouseEvent(networkId: string, callback: Callback<MouseLocation>): void-End-->

@@ -1,14 +1,12 @@
-# Router
+# Router(Page Routing)
 
 The **Router** module provides APIs to access pages through URIs.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [router](../../apis-na/arkts-apis/arkts-router.md#@ohos.router)
+**Substitutes:** [router](arkts-router.md#ohosrouter)
 
 <!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
 
@@ -34,8 +32,6 @@ Returns to the previous or a specified page. > **NOTE：**> > In the example, th
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** back
@@ -60,8 +56,6 @@ Clears all historical pages in the stack and retains only the current page at th
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** clear
@@ -79,8 +73,6 @@ static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): 
 Disables the display of a confirm dialog box before returning to the previous page.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 
@@ -106,8 +98,6 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** showAlertBeforeBackPage
@@ -131,8 +121,6 @@ static getLength(): string
 Obtains the number of pages in the current stack.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 
@@ -158,8 +146,6 @@ Obtains parameter information about the current page.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** getParams
@@ -183,8 +169,6 @@ static getState(): RouterState
 Obtains state information about the current page.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 
@@ -210,8 +194,6 @@ Navigates to a specified page in the application. > **NOTE：**> > The page rout
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** push
@@ -235,8 +217,6 @@ static replace(options: RouterOptions): void
 Replaces the current page with another one in the application and destroys the current page.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 

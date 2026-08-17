@@ -4,10 +4,6 @@ Defines font features, which are typesetting rules within a font that determine 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-interface FontFeature--><!--Device-drawing-interface FontFeature-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Name of a font feature. Common font feature names include **liga**, **frac**, an
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontFeature-name: string--><!--Device-FontFeature-name: string-End-->
@@ -51,10 +43,6 @@ Value of a font feature, which is a floating point number. You are advised to de
 **Type:** double
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

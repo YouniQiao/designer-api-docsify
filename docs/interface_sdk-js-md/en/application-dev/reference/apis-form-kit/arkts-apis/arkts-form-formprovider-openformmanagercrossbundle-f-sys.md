@@ -16,10 +16,6 @@ Open the view of forms belonging to the specified bundle. Client to communicatio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PUBLISH_FORM_CROSS_BUNDLE
 
 <!--Device-formProvider-function openFormManagerCrossBundle(want: Want): void--><!--Device-formProvider-function openFormManagerCrossBundle(want: Want): void-End-->

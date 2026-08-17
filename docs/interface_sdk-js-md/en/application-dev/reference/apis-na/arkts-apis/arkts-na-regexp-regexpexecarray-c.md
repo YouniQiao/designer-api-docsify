@@ -2,13 +2,11 @@
 
 Represents the return result of exec(), containing detailed information of a single match.
 
-**Inheritance/Implementation:** RegExpExecArray extends [RegExpResultArray](arkts-na-regexp-regexpresultarray-c.md#RegExpResultArray)
+**Inheritance/Implementation:** RegExpExecArray extends [RegExpResultArray](arkts-na-regexp-regexpresultarray-c.md#regexpresultarray)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class RegExpExecArray--><!--Device-unnamed-export class RegExpExecArray-End-->
 
@@ -24,9 +22,7 @@ Creates a RegExpExecArray instance containing match results.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,9 +49,7 @@ Creates a RegExpExecArray instance containing match results (without indices).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

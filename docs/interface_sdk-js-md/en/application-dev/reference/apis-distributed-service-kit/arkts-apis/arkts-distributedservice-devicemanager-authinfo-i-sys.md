@@ -4,8 +4,6 @@ Defines authentication information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-deviceManager-interface AuthInfo--><!--Device-deviceManager-interface AuthInfo-End-->
@@ -32,8 +30,6 @@ Authentication type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-AuthInfo-authType: number--><!--Device-AuthInfo-authType: number-End-->
@@ -54,8 +50,6 @@ Extended field. Optional. The default value is **undefined**.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-AuthInfo-extraInfo: { [key: string]: any }--><!--Device-AuthInfo-extraInfo: { [key: string]: any }-End-->
@@ -75,8 +69,6 @@ Authentication token.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 

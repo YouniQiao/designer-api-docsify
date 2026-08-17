@@ -4,10 +4,6 @@ Describes the badge configuration.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class BadgeConfig--><!--Device-unnamed-export declare class BadgeConfig-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -68,10 +64,6 @@ Badge type.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-BadgeConfig-badgeType?: BadgeType--><!--Device-BadgeConfig-badgeType?: BadgeType-End-->
@@ -89,10 +81,6 @@ URIs of the assets for the badge.
 **Type:** Array&lt;string&gt;
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 

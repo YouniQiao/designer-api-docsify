@@ -4,10 +4,6 @@ PackageConfig: the package info class.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface PackageConfig--><!--Device-unnamed-export interface PackageConfig-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -25,10 +21,6 @@ Whether it should be installed together with the application. **true** if it sho
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PackageConfig-readonly deliveryWithInstall: boolean--><!--Device-PackageConfig-readonly deliveryWithInstall: boolean-End-->
 
@@ -48,10 +40,6 @@ Device types supported by the bundle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PackageConfig-readonly deviceTypes: Array<string>--><!--Device-PackageConfig-readonly deviceTypes: Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -70,10 +58,6 @@ Module type of the bundle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PackageConfig-readonly moduleType: string--><!--Device-PackageConfig-readonly moduleType: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -91,10 +75,6 @@ Bundle name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PackageConfig-readonly name: string--><!--Device-PackageConfig-readonly name: string-End-->
 

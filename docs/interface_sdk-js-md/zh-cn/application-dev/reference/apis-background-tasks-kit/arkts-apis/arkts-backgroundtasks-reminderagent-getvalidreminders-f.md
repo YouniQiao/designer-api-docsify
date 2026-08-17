@@ -10,8 +10,6 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** getValidReminders
@@ -24,9 +22,9 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ReminderRequest&gt;&gt; | 是 | 异步回调，返回当前应用已设置的所有有效（未过期）的提醒。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ReminderRequest&gt;&gt; | 是 | 异步回调，返回当前应用已设置的所有有效（未过期）的提醒。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -68,8 +66,6 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** getValidReminders
@@ -84,7 +80,7 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 | --- | --- |
 | Promise&lt;Array&lt;ReminderRequest&gt;&gt; | 返回当前应用已设置的所有有效（未过期）的提醒。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import reminderAgent from '@ohos.reminderAgent';

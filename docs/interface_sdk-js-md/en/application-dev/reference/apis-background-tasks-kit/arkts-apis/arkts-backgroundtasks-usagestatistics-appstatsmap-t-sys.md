@@ -6,10 +6,6 @@ type AppStatsMap = Record<string, Array<BundleStatsInfo>>
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usageStatistics-type AppStatsMap = Record<string, Array<BundleStatsInfo>>--><!--Device-usageStatistics-type AppStatsMap = Record<string, Array<BundleStatsInfo>>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App

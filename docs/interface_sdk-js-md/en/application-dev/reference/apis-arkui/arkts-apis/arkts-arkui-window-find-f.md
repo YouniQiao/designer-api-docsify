@@ -16,11 +16,9 @@ Finds a window based on the ID. This API uses an asynchronous callback to return
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [findWindow](arkts-arkui-window-findwindow-f.md#findWindow)
+**Substitutes:** [findWindow](arkts-arkui-window-findwindow-f.md#findwindow)
 
 <!--Device-window-function find(id: string, callback: AsyncCallback<Window>): void--><!--Device-window-function find(id: string, callback: AsyncCallback<Window>): void-End-->
 
@@ -30,10 +28,10 @@ Finds a window based on the ID. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#Configuration). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the window found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -61,11 +59,9 @@ Finds a window based on the ID. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [findWindow](arkts-arkui-window-findwindow-f.md#findWindow)
+**Substitutes:** [findWindow](arkts-arkui-window-findwindow-f.md#findwindow)
 
 <!--Device-window-function find(id: string): Promise<Window>--><!--Device-window-function find(id: string): Promise<Window>-End-->
 
@@ -75,7 +71,7 @@ Finds a window based on the ID. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#Configuration). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). |
 
 **Return value:**
 
@@ -83,7 +79,7 @@ Finds a window based on the ID. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Promise used to return the window found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

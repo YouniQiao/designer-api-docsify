@@ -4,11 +4,9 @@ Defines the type of data to return for a subscription to data changes of the gyr
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#GYROSCOPE)
+**Substitutes:** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#gyroscope)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -54,11 +52,9 @@ Callback invoked when an API call fails.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -79,8 +75,6 @@ Interval at which the callback is invoked to return the gyroscope sensor data. T
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 
@@ -106,11 +100,9 @@ Callback invoked when the gyroscope sensor data changes.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 

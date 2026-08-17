@@ -6,10 +6,6 @@ The **AccessibilityExtensionContext** module, inherited from **ExtensionContext*
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class AccessibilityExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,10 +19,6 @@ addAccessibilityVirtualNodes(elementId: long, windowId: int, nodes: Array<Access
 Adds a virtual accessibility node tree. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -70,10 +62,6 @@ Obtains the element that currently has the accessibility focus. This API uses a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 <!--Device-AccessibilityExtensionContext-getAccessibilityFocusedElement(): Promise<AccessibilityElement>--><!--Device-AccessibilityExtensionContext-getAccessibilityFocusedElement(): Promise<AccessibilityElement>-End-->
@@ -97,7 +85,7 @@ Obtains the element that currently has the accessibility focus. This API uses a 
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {
@@ -151,10 +139,6 @@ Obtains the list of all accessibility-accessible windows on the current display 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 <!--Device-AccessibilityExtensionContext-getAccessibilityWindowsSync(displayId?: long): Array<AccessibilityElement>--><!--Device-AccessibilityExtensionContext-getAccessibilityWindowsSync(displayId?: long): Array<AccessibilityElement>-End-->
@@ -193,10 +177,6 @@ Queries the list of default focus element IDs customized by the app. This API us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityExtensionContext-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>--><!--Device-AccessibilityExtensionContext-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -223,7 +203,7 @@ Queries the list of default focus element IDs customized by the app. This API us
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {
@@ -278,10 +258,6 @@ Queries all descendant accessibility nodes in a specified window or under a spec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityExtensionContext-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityExtensionContext-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -309,7 +285,7 @@ Queries all descendant accessibility nodes in a specified window or under a spec
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {
@@ -366,10 +342,6 @@ Obtains the root element of the accessibility node tree of the active window. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 <!--Device-AccessibilityExtensionContext-getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>--><!--Device-AccessibilityExtensionContext-getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>-End-->
@@ -405,13 +377,9 @@ Obtains the root element of the accessibility node tree of the active window. Th
 holdRunningLockSync(): void
 ```
 
-Holds the RunningLock. After the lock is held, the screen will not automatically turn off. After this method is called, call [unholdRunningLockSync](#unholdRunningLockSync) to release the lock and restore the automatic screen-off mechanism when the screen no longer needs to stay on.
+Holds the RunningLock. After the lock is held, the screen will not automatically turn off. After this method is called, call [unholdRunningLockSync](#unholdrunninglocksync) to release the lock and restore the automatic screen-off mechanism when the screen no longer needs to stay on.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -428,7 +396,7 @@ Holds the RunningLock. After the lock is held, the screen will not automatically
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {
@@ -476,13 +444,9 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-Notifies the accessibility service that the accessibility extension service can be closed. This function must be used together with the pre-disconnection registration API [on('preDisconnect')](#on_preDisconnect). If the pre-disconnection registration function has not been called, calling this function directly has no effect.
+Notifies the accessibility service that the accessibility extension service can be closed. This function must be used together with the pre-disconnection registration API [on('preDisconnect')](#onpredisconnect). If the pre-disconnection registration function has not been called, calling this function directly has no effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -499,7 +463,7 @@ Notifies the accessibility service that the accessibility extension service can 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {
@@ -551,10 +515,6 @@ Unregister accessibilityExtensionAbility disconnect callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 <!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void-End-->
@@ -586,10 +546,6 @@ Unregisters the pre-disconnect callback registered with the accessibility servic
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 <!--Device-AccessibilityExtensionContext-off(type: 'preDisconnect', callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-off(type: 'preDisconnect', callback?: Callback<void>): void-End-->
@@ -603,7 +559,7 @@ Unregisters the pre-disconnect callback registered with the accessibility servic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | Yes | Event name, which is fixed to 'preDisconnect', indicating that the accessibility extension service is about to be closed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback for the event that the accessibility extension service is about to be closed. It must be the same as the callback in [on('preDisconnect')](#on_preDisconnect). If this parameter is not specified, all registered events are unregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback for the event that the accessibility extension service is about to be closed. It must be the same as the callback in [on('preDisconnect')](#onpredisconnect). If this parameter is not specified, all registered events are unregistered. |
 
 **Error codes:**
 
@@ -612,7 +568,7 @@ Unregisters the pre-disconnect callback registered with the accessibility servic
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {
@@ -666,10 +622,6 @@ Register accessibilityExtensionAbility disconnect callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 <!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void--><!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void-End-->
@@ -697,13 +649,9 @@ Register accessibilityExtensionAbility disconnect callback.
 on(type: 'preDisconnect', callback: Callback<void>): void
 ```
 
-Registers a callback with the accessibility service, which is invoked before the accessibility service closes this Accessibility Extension Service. This API uses an asynchronous callback to return the result. This registration function must be used together with [notifyDisconnect](#notifyDisconnect). If [notifyDisconnect](#notifyDisconnect) is not called, the Accessibility Extension Service is automatically closed after a default wait of 30 seconds.
+Registers a callback with the accessibility service, which is invoked before the accessibility service closes this Accessibility Extension Service. This API uses an asynchronous callback to return the result. This registration function must be used together with [notifyDisconnect](#notifydisconnect). If [notifyDisconnect](#notifydisconnect) is not called, the Accessibility Extension Service is automatically closed after a default wait of 30 seconds.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -727,7 +675,7 @@ Registers a callback with the accessibility service, which is invoked before the
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {
@@ -781,10 +729,6 @@ Deletes the added accessibility virtual node tree. This API uses a promise to re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -826,10 +770,6 @@ Starts a foreground page. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AccessibilityExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-AccessibilityExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -855,7 +795,7 @@ Starts a foreground page. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {
@@ -910,13 +850,9 @@ export default class AccessibilityManager {
 unholdRunningLockSync(): void
 ```
 
-Releases the RunningLock and restores automatic screen-off. Used in pair with [holdRunningLockSync](#holdRunningLockSync).
+Releases the RunningLock and restores automatic screen-off. Used in pair with [holdRunningLockSync](#holdrunninglocksync).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -933,7 +869,7 @@ Releases the RunningLock and restores automatic screen-off. Used in pair with [h
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {
@@ -984,10 +920,6 @@ updateAccessibilityElementProperty(elementId: long, windowId: int, node: Accessi
 Modifies the accessibility node property. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 

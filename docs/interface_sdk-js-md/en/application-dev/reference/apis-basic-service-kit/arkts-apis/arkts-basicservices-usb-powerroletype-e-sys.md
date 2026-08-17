@@ -1,14 +1,12 @@
-# PowerRoleType (System API)
+# PowerRoleType(USB Manager) (System API)
 
 Enumerates power role types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md#PowerRoleType-(System-API))
+**Substitutes:** [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md#powerroletype-system-api)
 
 <!--Device-usb-export enum PowerRoleType--><!--Device-usb-export enum PowerRoleType-End-->
 
@@ -26,11 +24,9 @@ None
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NONE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#NONE)
+**Substitutes:** [NONE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#none)
 
 <!--Device-PowerRoleType-NONE = 0--><!--Device-PowerRoleType-NONE = 0-End-->
 
@@ -48,11 +44,9 @@ External power supply.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SOURCE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#SOURCE)
+**Substitutes:** [SOURCE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#source)
 
 <!--Device-PowerRoleType-SOURCE = 1--><!--Device-PowerRoleType-SOURCE = 1-End-->
 
@@ -70,11 +64,9 @@ Internal power supply.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [SINK](arkts-basicservices-usbmanager-powerroletype-e-sys.md#SINK)
+**Substitutes:** [SINK](arkts-basicservices-usbmanager-powerroletype-e-sys.md#sink)
 
 <!--Device-PowerRoleType-SINK = 2--><!--Device-PowerRoleType-SINK = 2-End-->
 

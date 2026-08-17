@@ -4,10 +4,6 @@ Obtains NR cell information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export interface NrCellInformation--><!--Device-radio-export interface NrCellInformation-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -32,10 +28,6 @@ Indicates the mobile country code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NrCellInformation-mcc: string--><!--Device-NrCellInformation-mcc: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -53,10 +45,6 @@ Indicates the mobile network code.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NrCellInformation-mnc: string--><!--Device-NrCellInformation-mnc: string-End-->
 
@@ -76,10 +64,6 @@ Indicates the 5G network cell ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NrCellInformation-nci: int--><!--Device-NrCellInformation-nci: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -97,10 +81,6 @@ Indicates the NR-ARFCN(NR Absolute Radio Frequency Channel Number).
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NrCellInformation-nrArfcn: int--><!--Device-NrCellInformation-nrArfcn: int-End-->
 
@@ -120,10 +100,6 @@ Indicates the physical cell identification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NrCellInformation-pci: int--><!--Device-NrCellInformation-pci: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -141,10 +117,6 @@ Indicates the tracking area code.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NrCellInformation-tac: int--><!--Device-NrCellInformation-tac: int-End-->
 

@@ -12,13 +12,9 @@ import { config } from 'config';
 function onSeniorModeStateChangeForApp(callback: Callback<AppSeniorModeInfo>): void
 ```
 
-Listens for senior mode state change events of all apps. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registration should use a named function instead of an anonymous function, otherwise > a new underlying object will be created each time it is called, causing memory leaks. > > - After calling this method, be sure to use > [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offSeniorModeStateChangeForApp-(System-API)) > to cancel the listener before the component instance is destroyed (for example, in the aboutToDisappear lifecycle > ), otherwise crashes may occur.
+Listens for senior mode state change events of all apps. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registration should use a named function instead of an anonymous function, otherwise > a new underlying object will be created each time it is called, causing memory leaks. > > - After calling this method, be sure to use > [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offseniormodestatechangeforapp-system-api) > to cancel the listener before the component instance is destroyed (for example, in the aboutToDisappear lifecycle > ), otherwise crashes may occur.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 

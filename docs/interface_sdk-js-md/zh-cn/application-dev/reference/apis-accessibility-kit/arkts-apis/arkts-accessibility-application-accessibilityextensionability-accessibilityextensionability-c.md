@@ -4,10 +4,6 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class AccessibilityExtensionAbility--><!--Device-unnamed-declare class AccessibilityExtensionAbility-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -22,8 +18,6 @@ onAccessibilityEvent(event: AccessibilityEvent): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 12
 
 <!--Device-AccessibilityExtensionAbility-onAccessibilityEvent(event: AccessibilityEvent): void--><!--Device-AccessibilityExtensionAbility-onAccessibilityEvent(event: AccessibilityEvent): void-End-->
@@ -36,7 +30,7 @@ onAccessibilityEvent(event: AccessibilityEvent): void
 | --- | --- | --- | --- |
 | event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | 是 | 无障碍事件信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AccessibilityExtensionAbility, AccessibilityEvent } from '@kit.AccessibilityKit';
@@ -61,15 +55,13 @@ onConnect(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 12
 
 <!--Device-AccessibilityExtensionAbility-onConnect(): void--><!--Device-AccessibilityExtensionAbility-onConnect(): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -91,15 +83,13 @@ onDisconnect(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 12
 
 <!--Device-AccessibilityExtensionAbility-onDisconnect(): void--><!--Device-AccessibilityExtensionAbility-onDisconnect(): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -121,8 +111,6 @@ onKeyEvent(keyEvent: KeyEvent): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 12
 
 <!--Device-AccessibilityExtensionAbility-onKeyEvent(keyEvent: KeyEvent): boolean--><!--Device-AccessibilityExtensionAbility-onKeyEvent(keyEvent: KeyEvent): boolean-End-->
@@ -141,7 +129,7 @@ onKeyEvent(keyEvent: KeyEvent): boolean
 | --- | --- |
 | boolean | 返回true表示此事件被消费，不会继续传递。 <br>返回false表示此事件未被消费，会继续传递。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
@@ -170,10 +158,6 @@ context: AccessibilityExtensionContext
 **类型：** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext--><!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext-End-->
 

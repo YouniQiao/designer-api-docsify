@@ -1,12 +1,8 @@
 # Container
 
-Defines a scene object container.
+Container for defining scene nodes. It provides a way to group scene nodes into a hierarchy.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Container--><!--Device-unnamed-export interface Container-End-->
 
@@ -18,13 +14,9 @@ Defines a scene object container.
 append(item: T): void
 ```
 
-Append an item to the container.
+Appends a node to the container.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Container-append(item: T): void--><!--Device-Container-append(item: T): void-End-->
 
@@ -34,7 +26,7 @@ Append an item to the container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | the item append to the end of container |
+| item | T | Yes | Object of the T type. |
 
 ## clear
 
@@ -42,13 +34,9 @@ Append an item to the container.
 clear(): void
 ```
 
-Clear all children.
+Clears all nodes in the container.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Container-clear(): void--><!--Device-Container-clear(): void-End-->
 
@@ -63,10 +51,6 @@ count(): int
 Obtains the number of nodes in the container.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Container-count(): int--><!--Device-Container-count(): int-End-->
 
@@ -87,10 +71,6 @@ get(index: int): T | null
 Obtains a node of a given index. If no node is obtained, null is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Container-get(index: int): T | null--><!--Device-Container-get(index: int): T | null-End-->
 
@@ -114,13 +94,9 @@ Obtains a node of a given index. If no node is obtained, null is returned.
 insertAfter(item: T, sibling: T | null): void
 ```
 
-Insert an item.
+Inserts the object after the sibling node.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Container-insertAfter(item: T, sibling: T | null): void--><!--Device-Container-insertAfter(item: T, sibling: T | null): void-End-->
 
@@ -130,8 +106,8 @@ Insert an item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | the item insert to the container |
-| sibling | T \| null | Yes | insert after this item, insert to the head if sibling is null |
+| item | T | Yes | Node to be inserted. |
+| sibling | T \| null | Yes | Sibling node. |
 
 ## remove
 
@@ -139,13 +115,9 @@ Insert an item.
 remove(item: T): void
 ```
 
-Remove an item from Container's children.
+Removes a node.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Container-remove(item: T): void--><!--Device-Container-remove(item: T): void-End-->
 
@@ -155,5 +127,5 @@ Remove an item from Container's children.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | the item to be removed |
+| item | T | Yes | Node to remove. |
 

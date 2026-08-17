@@ -8,8 +8,6 @@ Enumerates the value types.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 <!--Device-storage-type ValueType = number | string | boolean--><!--Device-storage-type ValueType = number | string | boolean-End-->

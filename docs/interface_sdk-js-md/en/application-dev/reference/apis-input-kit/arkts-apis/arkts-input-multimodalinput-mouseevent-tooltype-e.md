@@ -4,10 +4,6 @@ Enumerates tool types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum ToolType--><!--Device-unnamed-export declare enum ToolType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -21,10 +17,6 @@ UNKNOWN = 0
 Unknown type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToolType-UNKNOWN = 0--><!--Device-ToolType-UNKNOWN = 0-End-->
 
@@ -40,10 +32,6 @@ Mouse.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToolType-MOUSE = 1--><!--Device-ToolType-MOUSE = 1-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -58,10 +46,6 @@ Joystick.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToolType-JOYSTICK = 2--><!--Device-ToolType-JOYSTICK = 2-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -75,10 +59,6 @@ TOUCHPAD = 3
 Touchpad.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToolType-TOUCHPAD = 3--><!--Device-ToolType-TOUCHPAD = 3-End-->
 

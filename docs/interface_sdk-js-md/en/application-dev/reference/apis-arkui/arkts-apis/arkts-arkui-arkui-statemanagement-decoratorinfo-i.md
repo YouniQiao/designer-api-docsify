@@ -4,10 +4,6 @@ Defines the decorator and component information associated with the observable o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface DecoratorInfo--><!--Device-unnamed-export interface DecoratorInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -46,15 +42,11 @@ import { IReusableInfo } from 'IReusableInfo';
 decoratorName: string
 ```
 
-Decorator name. For a V1 object, the value is the name of the decorator associated with the object. If the V1 object uses [@Track](../../../ui/state-management/arkts-track.md), the value is **'@Track'**. If the V2 object uses [@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md), the value is **'@Trace'**. If the V2 object uses [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeObserved), the value is **'MakeObserved'**. If the V2 object uses [enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enableV2Compatibility), the value is **'EnableV2Compatible'**. If the V2 object uses built-in data, the value is **'ProxyObservedV2'**.
+Decorator name. For a V1 object, the value is the name of the decorator associated with the object. If the V1 object uses [@Track](../../../ui/state-management/arkts-track.md), the value is **'@Track'**. If the V2 object uses [@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md), the value is **'@Trace'**. If the V2 object uses [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved), the value is **'MakeObserved'**. If the V2 object uses [enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility), the value is **'EnableV2Compatible'**. If the V2 object uses built-in data, the value is **'ProxyObservedV2'**.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,10 +68,6 @@ Information about the component that uses the observable object. If the object i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -99,10 +87,6 @@ Component ID. For a V1 object, the component ID is returned. For the V1 object w
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,10 +108,6 @@ Component or object name. For a V1 object, the component name is returned. For a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -147,10 +127,6 @@ Name of the attribute decorated by the decorator.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

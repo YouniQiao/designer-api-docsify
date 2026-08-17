@@ -10,10 +10,6 @@ function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): voi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): void--><!--Device-call-function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): void-End-->
@@ -27,7 +23,7 @@ function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | device | [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md) | 是 | 音频设备。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置通话音频设备的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置通话音频设备的结果。 |
 
 **错误码：**
 
@@ -41,7 +37,7 @@ function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): voi
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -68,10 +64,6 @@ function setAudioDevice(device: AudioDevice): Promise<void>
 设置通话音频设备。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -105,7 +97,7 @@ function setAudioDevice(device: AudioDevice): Promise<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

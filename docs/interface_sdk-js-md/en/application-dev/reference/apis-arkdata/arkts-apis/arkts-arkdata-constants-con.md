@@ -10,8 +10,6 @@ max batch operation size. Maximum number of batch operations.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** MAX_BATCH_SIZE
@@ -29,8 +27,6 @@ const MAX_KEY_LENGTH = 1024
 max key length. Maximum length of a key in the KV store, in bytes.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ max device coordinate key length. Maximum length of a device key, in bytes.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** MAX_KEY_LENGTH_DEVICEs
@@ -69,8 +63,6 @@ const MAX_QUERY_LENGTH = 512000
 max query length. Maximum query length, in bytes.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ max store id length. Maximum length of a KV store ID, in bytes.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** MAX_STORE_ID_LENGTH
@@ -109,8 +99,6 @@ const MAX_VALUE_LENGTH = 4194303
 max value length. Maximum length of a value in the KV store, in bytes.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

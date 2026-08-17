@@ -16,10 +16,6 @@ query bundleNames associated with domain.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_APP_DOMAIN_BUNDLE_INFO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -51,7 +47,7 @@ query bundleNames associated with domain.
 | [29900001](../errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) | Internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API accessed by non-system app. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appDomainVerify } from '@kit.AbilityKit';

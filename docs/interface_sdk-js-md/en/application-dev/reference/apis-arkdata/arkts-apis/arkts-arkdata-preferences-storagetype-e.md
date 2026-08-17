@@ -4,10 +4,6 @@ Enumerates the storage types of preferences. > **NOTE：**> > - Before using thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-preferences-enum StorageType--><!--Device-preferences-enum StorageType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -21,10 +17,6 @@ XML = 0
 [XML](../../../database/data-persistence-by-preferences.md#xml) format, which is the default storage type of **Preferences**. In this mode, data is stored in XML format. Data operations are performed in the memory. To persist data, call **flush()**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -41,10 +33,6 @@ GSKV
 [GSKV](../../../database/data-persistence-by-preferences.md#gskv) format. Data is stored in GSKV mode. Data operations are flushed on a real-time basis without calling **flush()**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

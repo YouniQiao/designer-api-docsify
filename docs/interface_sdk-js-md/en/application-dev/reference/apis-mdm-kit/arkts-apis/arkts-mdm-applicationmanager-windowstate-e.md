@@ -4,10 +4,6 @@ Enumerates application window states.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-applicationManager-enum WindowState--><!--Device-applicationManager-enum WindowState-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,10 +17,6 @@ DISCONNECT = 0
 The window has been created but is currently unavailable.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ The window has been created and is available for use.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowState-CONNECT = 1--><!--Device-WindowState-CONNECT = 1-End-->
@@ -61,10 +49,6 @@ FOREGROUND = 2
 Foreground state, indicating that the window has entered the foreground display. This is a transitional state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ Foreground active state, indicating that the window is currently displayed in th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowState-ACTIVE = 3--><!--Device-WindowState-ACTIVE = 3-End-->
@@ -102,10 +82,6 @@ Foreground inactive state, indicating that the window is about to enter the back
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowState-INACTIVE = 4--><!--Device-WindowState-INACTIVE = 4-End-->
@@ -121,10 +97,6 @@ BACKGROUND = 5
 Background state, indicating that the window has been moved to the background and is not visible.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

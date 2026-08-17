@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-userAuth-interface AuthParam--><!--Device-userAuth-interface AuthParam-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -23,10 +19,6 @@ credentialIdList?: Uint8Array[]
 **类型：** Uint8Array[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,10 +41,6 @@ userId?: int
 **默认值：** The ID of the current user. The value is a positive integer greater than or equal to 0.
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AuthParam-userId?: int--><!--Device-AuthParam-userId?: int-End-->
 

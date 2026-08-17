@@ -16,10 +16,6 @@ Checks whether the current device is active. - A device with a screen is active 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-power-function isActive(): boolean--><!--Device-power-function isActive(): boolean-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
@@ -30,7 +26,7 @@ Checks whether the current device is active. - A device with a screen is active 
 | --- | --- |
 | boolean | Return value **true** if the device is active; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let isActive = power.isActive();

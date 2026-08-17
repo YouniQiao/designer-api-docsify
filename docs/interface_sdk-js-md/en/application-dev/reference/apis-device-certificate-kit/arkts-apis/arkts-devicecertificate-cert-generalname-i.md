@@ -4,10 +4,6 @@ Represents an X.509 GeneralName as defined in RFC 5280, which can appear in Subj
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface GeneralName--><!--Device-cert-interface GeneralName-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -30,10 +26,6 @@ DER-encoded value of the GeneralName.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GeneralName-name?: Uint8Array--><!--Device-GeneralName-name?: Uint8Array-End-->
@@ -51,10 +43,6 @@ Type of the GeneralName.
 **Type:** [GeneralNameType](arkts-devicecertificate-cert-generalnametype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

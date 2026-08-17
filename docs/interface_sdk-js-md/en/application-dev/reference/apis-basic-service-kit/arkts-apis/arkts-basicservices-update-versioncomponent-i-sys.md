@@ -4,10 +4,6 @@ Represents a version component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface VersionComponent--><!--Device-update-export interface VersionComponent-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Component ID, which uniquely identifies a component in the upgrade package. The 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VersionComponent-componentId: string--><!--Device-VersionComponent-componentId: string-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ Component type.
 **Type:** ComponentType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VersionComponent-componentType: ComponentType--><!--Device-VersionComponent-componentType: ComponentType-End-->
 
@@ -76,10 +64,6 @@ Information about the version description file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VersionComponent-descriptionInfo: DescriptionInfo--><!--Device-VersionComponent-descriptionInfo: DescriptionInfo-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -97,10 +81,6 @@ Display version number.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VersionComponent-displayVersion: string--><!--Device-VersionComponent-displayVersion: string-End-->
 
@@ -120,10 +100,6 @@ Effective mode. The value **COLD** indicates the cold upgrade, which takes effec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VersionComponent-effectiveMode: EffectiveMode--><!--Device-VersionComponent-effectiveMode: EffectiveMode-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -141,10 +117,6 @@ Internal version number.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VersionComponent-innerVersion: string--><!--Device-VersionComponent-innerVersion: string-End-->
 
@@ -164,10 +136,6 @@ OTA mode. Pass this parameter to specify a specific upgrade mode, which is appli
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VersionComponent-otaMode?: OtaMode--><!--Device-VersionComponent-otaMode?: OtaMode-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -186,10 +154,6 @@ Size of the upgrade package, in bytes. The value range is [0, +∞]. An exceptio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VersionComponent-size: int--><!--Device-VersionComponent-size: int-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -207,10 +171,6 @@ Upgrade action. The value **UPGRADE** indicates that the upgrade package is a di
 **Type:** [UpgradeAction](arkts-basicservices-update-upgradeaction-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VersionComponent-upgradeAction: UpgradeAction--><!--Device-VersionComponent-upgradeAction: UpgradeAction-End-->
 

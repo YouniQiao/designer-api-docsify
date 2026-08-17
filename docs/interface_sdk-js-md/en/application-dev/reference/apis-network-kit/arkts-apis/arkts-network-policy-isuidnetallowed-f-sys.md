@@ -16,10 +16,6 @@ Get the status whether the uid app can access the metered network or non-metered
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 <!--Device-policy-function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallback<boolean>): void--><!--Device-policy-function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallback<boolean>): void-End-->
@@ -47,7 +43,7 @@ Get the status whether the uid app can access the metered network or non-metered
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -68,10 +64,6 @@ function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>
 Get the status whether the uid app can access the metered network or non-metered network.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -105,7 +97,7 @@ Get the status whether the uid app can access the metered network or non-metered
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -130,10 +122,6 @@ function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boo
 Get the status of whether the specified uid can access the specified network.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -162,7 +150,7 @@ Get the status of whether the specified uid can access the specified network.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -183,10 +171,6 @@ function isUidNetAllowed(uid: number, iface: string): Promise<boolean>
 Get the status of whether the specified uid can access the specified network.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -220,7 +204,7 @@ Get the status of whether the specified uid can access the specified network.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

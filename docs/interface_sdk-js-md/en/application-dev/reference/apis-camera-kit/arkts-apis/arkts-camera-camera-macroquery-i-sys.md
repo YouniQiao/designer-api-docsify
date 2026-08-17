@@ -4,10 +4,6 @@ MacroQuery provides the API to check the support for macro photography.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface MacroQuery--><!--Device-camera-interface MacroQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -26,13 +22,9 @@ import { camera } from 'camera';
 isMacroSupported(): boolean
 ```
 
-Checks whether macro photography is supported in the current state. This API must be called after [commitConfig](arkts-camera-camera-session-i.md#commitConfig).
+Checks whether macro photography is supported in the current state. This API must be called after [commitConfig](arkts-camera-camera-session-i.md#commitconfig).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

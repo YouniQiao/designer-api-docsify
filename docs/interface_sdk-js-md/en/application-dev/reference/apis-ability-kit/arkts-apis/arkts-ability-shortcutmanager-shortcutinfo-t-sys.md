@@ -8,10 +8,6 @@ Defines the shortcut information defined in the [module.json5](../../../quick-st
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-shortcutManager-export type ShortcutInfo = _ShortcutInfo--><!--Device-shortcutManager-export type ShortcutInfo = _ShortcutInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher

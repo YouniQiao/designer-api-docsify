@@ -10,10 +10,6 @@ function getMinHeightSync(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-wallpaper-function getMinHeightSync(): int--><!--Device-wallpaper-function getMinHeightSync(): int-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
@@ -32,7 +28,7 @@ function getMinHeightSync(): int
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {

@@ -4,10 +4,6 @@ Defines the constructor information for **ArcSliderStyleOptions**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ArcSliderStyleOptionsConstructorOptions--><!--Device-unnamed-interface ArcSliderStyleOptionsConstructorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -41,10 +37,6 @@ Stroke width of the arc slider when it is in an enlarged state, in vp. Default v
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-activeTrackThickness?: number--><!--Device-ArcSliderStyleOptionsConstructorOptions-activeTrackThickness?: number-End-->
@@ -64,10 +56,6 @@ Highlight color of the stroke. Default value: **#FF5EA1FF**
 **Default:** #FF5EA1FF
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -89,10 +77,6 @@ Blur effect applied to the stroke background, in vp. Default value: **20** If a 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-trackBlur?: number--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackBlur?: number-End-->
@@ -113,10 +97,6 @@ Background color of the stroke. Default value: **#33FFFFFF**
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-trackColor?: string--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackColor?: string-End-->
@@ -136,10 +116,6 @@ Stroke width of the arc slider in the normal state, in vp. Default value: **5** 
 **Default:** 5
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

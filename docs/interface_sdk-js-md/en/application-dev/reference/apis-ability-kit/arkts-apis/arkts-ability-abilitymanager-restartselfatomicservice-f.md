@@ -12,13 +12,9 @@ import { abilityManager } from 'abilityManager';
 function restartSelfAtomicService(context: Context): void
 ```
 
-Restarts the current atomic service. > **NOTE：**> > - Currently, atomic services can be started only in an independent window. > > - If you call this API, > ApplicationContext.restartApp(), or > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartApp) within 3 seconds > after a successful call to this API, the system returns error code 16000064.
+Restarts the current atomic service. > **NOTE：**> > - Currently, atomic services can be started only in an independent window. > > - If you call this API, > ApplicationContext.restartApp(), or > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds > after a successful call to this API, the system returns error code 16000064.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +28,7 @@ Restarts the current atomic service. > **NOTE：**> > - Currently, atomic servic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#UIAbilityContext) is supported.<br> |
+| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#uiabilitycontext) is supported.<br> |
 
 **Error codes:**
 
@@ -44,7 +40,7 @@ Restarts the current atomic service. > **NOTE：**> > - Currently, atomic servic
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
 | [16000090](../errorcode-ability.md#16000090-caller-is-not-an-atomic-service) | The caller is not an atomic service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, EmbeddableUIAbility, Want, abilityManager } from '@kit.AbilityKit';

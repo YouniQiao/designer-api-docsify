@@ -27,6 +27,6 @@ import { LazyWaterFlowLayoutAttribute } from 'LazyWaterFlowLayoutAttribute';
 
 | Name | Description |
 | --- | --- |
-| [LazyVWaterFlowLayout](arkts-arkui-arkui-components-arklazywaterflowlayout-con.md#LazyVWaterFlowLayout) | Defines LazyVWaterFlowLayout Component. |
-| [LazyVWaterFlowLayoutInstance](arkts-arkui-arkui-components-arklazywaterflowlayout-con.md#LazyVWaterFlowLayoutInstance) | Defines LazyVWaterFlowLayout Component instance. |
+| [LazyVWaterFlowLayout](arkts-arkui-arkui-components-arklazywaterflowlayout-con.md#lazyvwaterflowlayout) | Defines LazyVWaterFlowLayout Component. |
+| [LazyVWaterFlowLayoutInstance](arkts-arkui-arkui-components-arklazywaterflowlayout-con.md#lazyvwaterflowlayoutinstance) | Defines LazyVWaterFlowLayout Component instance. |
 

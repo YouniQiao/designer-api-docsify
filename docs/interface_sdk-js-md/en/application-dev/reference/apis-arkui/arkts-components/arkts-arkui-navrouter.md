@@ -14,8 +14,6 @@ Constructor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 13
 
 **Substitutes:** NavDestinationAttribute
@@ -35,8 +33,6 @@ NavRouter(value: RouteInfo)
 Provides route information so that clicking the **NavRouter** component redirects the user to the specified navigation destination page.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 13
 

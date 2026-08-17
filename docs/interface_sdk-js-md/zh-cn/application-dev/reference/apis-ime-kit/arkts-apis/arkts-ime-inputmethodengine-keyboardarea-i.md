@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-inputMethodEngine-export interface KeyboardArea--><!--Device-inputMethodEngine-export interface KeyboardArea-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -23,10 +19,6 @@ bottom: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-KeyboardArea-bottom: int--><!--Device-KeyboardArea-bottom: int-End-->
 
@@ -44,10 +36,6 @@ left: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-KeyboardArea-left: int--><!--Device-KeyboardArea-left: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -64,10 +52,6 @@ right: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-KeyboardArea-right: int--><!--Device-KeyboardArea-right: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -83,10 +67,6 @@ top: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-KeyboardArea-top: int--><!--Device-KeyboardArea-top: int-End-->
 

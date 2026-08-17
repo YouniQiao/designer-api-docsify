@@ -4,10 +4,6 @@ Enumerates the window modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-enum WindowMode--><!--Device-window-enum WindowMode-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -23,10 +19,6 @@ UNDEFINED = 1
 The window mode is not defined by the application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowMode-UNDEFINED = 1--><!--Device-WindowMode-UNDEFINED = 1-End-->
 
@@ -44,10 +36,6 @@ The application is displayed in full screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowMode-FULLSCREEN = 2--><!--Device-WindowMode-FULLSCREEN = 2-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -63,10 +51,6 @@ PRIMARY = 3
 The application is displayed in the primary window in split-screen mode. In top-bottom splits, the top screen is primary; in left-right splits, the left screen is primary.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowMode-PRIMARY = 3--><!--Device-WindowMode-PRIMARY = 3-End-->
 
@@ -84,10 +68,6 @@ The application is displayed in the secondary window in split-screen mode. In to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WindowMode-SECONDARY = 4--><!--Device-WindowMode-SECONDARY = 4-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -103,10 +83,6 @@ FLOATING = 5
 The application is displayed in a floating window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WindowMode-FLOATING = 5--><!--Device-WindowMode-FLOATING = 5-End-->
 

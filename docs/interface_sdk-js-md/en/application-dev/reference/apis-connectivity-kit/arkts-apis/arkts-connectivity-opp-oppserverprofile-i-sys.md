@@ -4,10 +4,6 @@ Manager OPP server profile.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-opp-interface OppServerProfile--><!--Device-opp-interface OppServerProfile-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -27,10 +23,6 @@ cancelTransfer(): Promise<void>
 cancel the current file transfer action.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -62,7 +54,7 @@ cancel the current file transfer action.
 | 2900003 | Bluetooth switch is off. |
 | 2900099 | Failed to cancel the current transfer. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -86,10 +78,6 @@ getCurrentTransferInformation(): Promise<OppTransferInformation>
 Obtains the information about the file that is being transferred. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -133,10 +121,6 @@ Unsubscribe to the event of receiving a file transfer request.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -174,10 +158,6 @@ offTransferStateChange(callback?: Callback<OppTransferInformation>): void
 Unsubscribe the event reported when the file transfer status changes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -217,10 +197,6 @@ Unsubscribe to the event of receiving a file transfer request.
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn only, since version 16.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -251,7 +227,7 @@ Unsubscribe to the event of receiving a file transfer request.
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -274,10 +250,6 @@ off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): v
 Unsubscribe the event reported when the file transfer status changes.
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn only, since version 16.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -309,7 +281,7 @@ Unsubscribe the event reported when the file transfer status changes.
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -333,10 +305,6 @@ onReceiveIncomingFile(callback: Callback<OppTransferInformation>): void
 Subscribe to the event of receiving a file transfer request. If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
 
@@ -376,10 +344,6 @@ Subscribe the event reported when the file transfer status changes. If the appli
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
 
 **Model restriction:** This API can be used only in the stage model.
@@ -418,10 +382,6 @@ Subscribe to the event of receiving a file transfer request. On API 26.0.0 and a
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn only, since version 16.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
 - API version 16 - 24: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
@@ -454,7 +414,7 @@ Subscribe to the event of receiving a file transfer request. On API 26.0.0 and a
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -486,10 +446,6 @@ on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): voi
 Subscribe the event reported when the file transfer status changes. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn only, since version 16.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -523,7 +479,7 @@ Subscribe the event reported when the file transfer status changes. On API 26.0.
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -555,10 +511,6 @@ sendFile(deviceId: string, fileHolds: Array<FileHolder>): Promise<void>
 Send files to the remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -600,7 +552,7 @@ Send files to the remote device.
 | 2900003 | Bluetooth switch is off. |
 | 2900099 | Failed to send file. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -641,10 +593,6 @@ Set the user confirmation information for incoming files.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -684,7 +632,7 @@ Set the user confirmation information for incoming files.
 | 2900003 | Bluetooth switch is off. |
 | 2900099 | Failed to confirm the received file information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -716,10 +664,6 @@ setLastReceivedFileUri(uri: string): Promise<void>
 Set the URI of the last received file.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -757,7 +701,7 @@ Set the URI of the last received file.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Failed to set the URI of the last file. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

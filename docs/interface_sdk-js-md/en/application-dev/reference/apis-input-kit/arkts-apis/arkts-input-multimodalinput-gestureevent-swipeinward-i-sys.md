@@ -4,10 +4,6 @@ Defines an inward swipe event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare interface SwipeInward--><!--Device-unnamed-export declare interface SwipeInward-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -39,10 +35,6 @@ Type of the inward swipe event. The value is fixed at **SwipeInward**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SwipeInward-type: ActionType--><!--Device-SwipeInward-type: ActionType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -61,10 +53,6 @@ X-coordinate of the swipe event trigger point, in pixels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SwipeInward-x: int--><!--Device-SwipeInward-x: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -82,10 +70,6 @@ Y-coordinate of the swipe event trigger point, in pixels.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SwipeInward-y: int--><!--Device-SwipeInward-y: int-End-->
 

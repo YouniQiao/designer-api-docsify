@@ -4,10 +4,6 @@ Enumerates the state types of the input method panel. > **NOTE：**> > Currently
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum PanelFlag--><!--Device-unnamed-export enum PanelFlag-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -21,10 +17,6 @@ FLAG_FIXED = 0
 Fixed state type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PanelFlag-FLAG_FIXED = 0--><!--Device-PanelFlag-FLAG_FIXED = 0-End-->
 
@@ -40,10 +32,6 @@ Floating state type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PanelFlag-FLAG_FLOATING--><!--Device-PanelFlag-FLAG_FLOATING-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -57,10 +45,6 @@ FLAG_CANDIDATE
 Candidate state type. - When in the candidate state type, the input method panel is a window displaying candidates based on user input. - The input method service does not proactively control the visibility of the candidate panel. You need to control the visibility on your own.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PanelFlag-FLAG_CANDIDATE--><!--Device-PanelFlag-FLAG_CANDIDATE-End-->
 

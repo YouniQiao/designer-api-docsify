@@ -16,11 +16,9 @@ Unbinds a peripheral device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 19
 
-**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbindDriverWithDeviceId)(deviceId: long)
+**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid)(deviceId: long)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -43,7 +41,7 @@ Unbinds a peripheral device.
 | [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
 | [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';
@@ -74,11 +72,9 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 19
 
-**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbindDriverWithDeviceId)(deviceId: long)
+**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid)(deviceId: long)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -106,7 +102,7 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
 | [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

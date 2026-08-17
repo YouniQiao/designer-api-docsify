@@ -14,9 +14,7 @@ Writes data to a file synchronously and returns the number of bytes written.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function writeSync(  fd: int,  buffer: ArrayBuffer | string,  options?: WriteOptions): long--><!--Device-fileIo-function writeSync(  fd: int,  buffer: ArrayBuffer | string,  options?: WriteOptions): long-End-->
 
@@ -28,7 +26,7 @@ Writes data to a file synchronously and returns the number of bytes written.
 | --- | --- | --- | --- |
 | fd | int | Yes | FD of the file. |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-na-file-fs-writeoptions-i.md) | No | The options are as follows: <br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. Bydefault, data is written from the current position. <br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default valueis the buffer length. <br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is**'utf-8'**, which is the only value supported currently. |
+| options | [WriteOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows: <br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. Bydefault, data is written from the current position. <br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default valueis the buffer length. <br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is**'utf-8'**, which is the only value supported currently. |
 
 **Return value:**
 

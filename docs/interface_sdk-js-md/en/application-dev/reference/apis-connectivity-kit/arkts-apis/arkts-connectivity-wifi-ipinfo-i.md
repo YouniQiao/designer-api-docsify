@@ -4,11 +4,9 @@ Wi-Fi IP information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [IpInfo](arkts-connectivity-wifimanager-ipinfo-i.md#IpInfo)
+**Substitutes:** [IpInfo](arkts-connectivity-wifimanager-ipinfo-i.md#ipinfo)
 
 <!--Device-wifi-interface IpInfo--><!--Device-wifi-interface IpInfo-End-->
 
@@ -32,8 +30,6 @@ The gateway of the Wi-Fi connection
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [gateway](arkts-connectivity-wifimanager-ipinfo-i.md#gateway)
@@ -54,11 +50,9 @@ The IP address of the Wi-Fi connection
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ipAddress](arkts-connectivity-wifimanager-ipinfo-i.md#ipAddress)
+**Substitutes:** [ipAddress](arkts-connectivity-wifimanager-ipinfo-i.md#ipaddress)
 
 <!--Device-IpInfo-ipAddress: number--><!--Device-IpInfo-ipAddress: number-End-->
 
@@ -76,11 +70,9 @@ The IP address lease duration of the Wi-Fi connection
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [leaseDuration](arkts-connectivity-wifimanager-ipinfo-i.md#leaseDuration)
+**Substitutes:** [leaseDuration](arkts-connectivity-wifimanager-ipinfo-i.md#leaseduration)
 
 <!--Device-IpInfo-leaseDuration: number--><!--Device-IpInfo-leaseDuration: number-End-->
 
@@ -97,8 +89,6 @@ The network mask of the Wi-Fi connection
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -120,11 +110,9 @@ The primary DNS server IP address of the Wi-Fi connection
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [primaryDns](arkts-connectivity-wifimanager-ipinfo-i.md#primaryDns)
+**Substitutes:** [primaryDns](arkts-connectivity-wifimanager-ipinfo-i.md#primarydns)
 
 <!--Device-IpInfo-primaryDns: number--><!--Device-IpInfo-primaryDns: number-End-->
 
@@ -142,11 +130,9 @@ T he secondary DNS server IP address of the Wi-Fi connection
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [secondDns](arkts-connectivity-wifimanager-ipinfo-i.md#secondDns)
+**Substitutes:** [secondDns](arkts-connectivity-wifimanager-ipinfo-i.md#seconddns)
 
 <!--Device-IpInfo-secondDns: number--><!--Device-IpInfo-secondDns: number-End-->
 
@@ -164,11 +150,9 @@ The DHCP server IP address of the Wi-Fi connection
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [serverIp](arkts-connectivity-wifimanager-ipinfo-i.md#serverIp)
+**Substitutes:** [serverIp](arkts-connectivity-wifimanager-ipinfo-i.md#serverip)
 
 <!--Device-IpInfo-serverIp: number--><!--Device-IpInfo-serverIp: number-End-->
 

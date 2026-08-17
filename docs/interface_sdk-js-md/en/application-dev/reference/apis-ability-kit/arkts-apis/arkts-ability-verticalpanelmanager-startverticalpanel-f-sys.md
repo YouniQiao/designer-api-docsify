@@ -21,10 +21,6 @@ Starts the vertical domain picker with panel config. If the target ability is vi
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-verticalPanelManager-function startVerticalPanel(      context: common.UIAbilityContext,      wantParam: Record<string, Object>,      panelConfig: PanelConfig,      panelStartCallback: PanelStartCallback  ): Promise<void>--><!--Device-verticalPanelManager-function startVerticalPanel(      context: common.UIAbilityContext,      wantParam: Record<string, Object>,      panelConfig: PanelConfig,      panelStartCallback: PanelStartCallback  ): Promise<void>-End-->
@@ -56,7 +52,7 @@ Starts the vertical domain picker with panel config. If the target ability is vi
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service or system server handle failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common, verticalPanelManager } from '@kit.AbilityKit';
@@ -150,10 +146,6 @@ function startVerticalPanel(
 Starts the vertical domain picker with panel config. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the caller application is in the background, it is not allowed to call this interface.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

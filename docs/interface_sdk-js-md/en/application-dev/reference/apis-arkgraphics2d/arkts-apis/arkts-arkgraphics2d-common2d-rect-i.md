@@ -4,10 +4,6 @@ Describes a rectangle, which can be defined by two coordinate points: upper left
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-common2D-interface Rect--><!--Device-common2D-interface Rect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Y coordinate of the lower right corner of the rectangle. The value is a floating
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Rect-bottom: double--><!--Device-Rect-bottom: double-End-->
@@ -51,10 +43,6 @@ X coordinate of the upper left corner of the rectangle. The value is a floating 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -74,10 +62,6 @@ X coordinate of the lower right corner of the rectangle. The value is a floating
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Rect-right: double--><!--Device-Rect-right: double-End-->
@@ -95,10 +79,6 @@ Y coordinate of the upper left corner of the rectangle. The value is a floating 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

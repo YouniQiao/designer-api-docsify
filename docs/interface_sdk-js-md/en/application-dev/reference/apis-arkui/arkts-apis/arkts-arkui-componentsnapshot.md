@@ -4,9 +4,7 @@ This module allows developers to export snapshot image from a component or a cus
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -26,7 +24,7 @@ import { componentSnapshot } from 'componentSnapshot';
 
 | Name | Description |
 | --- | --- |
-| [getSync](arkts-arkui-componentsnapshot-getsync-f.md#getSync) | Take a screenshot of the specified component in synchronous mode, this mode will block the main thread, please use it with caution, the maximum waiting time of the interface is 3s, if it does not return after 3s, an exception will be thrown. |
+| [getSync](arkts-arkui-componentsnapshot-getsync-f.md#getsync) | Take a screenshot of the specified component in synchronous mode, this mode will block the main thread, please use it with caution, the maximum waiting time of the interface is 3s, if it does not return after 3s, an exception will be thrown. |
 
 ### Interfaces
 

@@ -4,8 +4,6 @@ Defines a response that returns the charging status and remaining power of the d
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-unnamed-export interface BatteryResponse--><!--Device-unnamed-export interface BatteryResponse-End-->
@@ -31,11 +29,9 @@ Whether the battery is being charged. The value **true** indicates that the batt
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
-**Substitutes:** [chargingStatus](arkts-basicservices-batteryinfo-con.md#chargingStatus)
+**Substitutes:** [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md#chargingstatus)
 
 <!--Device-BatteryResponse-charging: boolean--><!--Device-BatteryResponse-charging: boolean-End-->
 
@@ -53,11 +49,9 @@ Current battery level in percent, which ranges from **0.00** to **1.00**. Note: 
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
-**Substitutes:** [batterySOC](arkts-basicservices-batteryinfo-con.md#batterySOC)
+**Substitutes:** [batterySOC](arkts-basicservices-batteryinfo-batterysoc-f.md#batterysoc)
 
 <!--Device-BatteryResponse-level: number--><!--Device-BatteryResponse-level: number-End-->
 

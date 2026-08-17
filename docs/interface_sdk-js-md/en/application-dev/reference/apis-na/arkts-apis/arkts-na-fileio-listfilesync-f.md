@@ -13,9 +13,7 @@ Lists the names of all files and directories in the current directory synchronou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function listFileSync(  path: string,  options?: ListFileOptions): string[]--><!--Device-fileIo-function listFileSync(  path: string,  options?: ListFileOptions): string[]-End-->
 
@@ -26,7 +24,7 @@ Lists the names of all files and directories in the current directory synchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileOptions](arkts-na-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
+| options | [ListFileOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
 
 **Return value:**
 

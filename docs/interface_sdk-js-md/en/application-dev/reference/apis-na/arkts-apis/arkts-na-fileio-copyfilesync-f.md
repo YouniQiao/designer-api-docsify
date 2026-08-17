@@ -10,9 +10,7 @@ Copies a file. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function copyFileSync(src: string | int, dest: string | int, mode?: int): void--><!--Device-fileIo-function copyFileSync(src: string | int, dest: string | int, mode?: int): void-End-->
 

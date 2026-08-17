@@ -4,10 +4,6 @@ Enumerates the modes of counting child nodes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum ChildrenCountMode--><!--Device-unnamed-export enum ChildrenCountMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ ALL_EXPAND = 0
 Counting all child node after expansion. When a lazy loading node (for example, LazyForEach) is encountered, the node is expanded and the number of all child nodes is returned. Whether to expand lazy loading nodes: yes Application scenario: A node needs to be expanded and the number of all child nodes needs to be returned.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Counting currently expanded child nodes. Lazy loading nodes are not expanded, an
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -65,10 +53,6 @@ ALL_NOT_EXPAND = 2
 Counting all child nodes. Lazy loading nodes are not expanded, but the total number of potential child nodes ( including both expanded and unexpanded lazy loading nodes) is returned. This counting mode provides the total number of potential child nodes without triggering any expansion. Whether to expand lazy loading nodes: yes Application scenario: This counting mode is used when the total number of all child nodes needs to be obtained. Unlike **ALL_EXPAND**, this mode does not expand child nodes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

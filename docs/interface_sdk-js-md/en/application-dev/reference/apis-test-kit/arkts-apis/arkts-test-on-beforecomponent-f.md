@@ -40,13 +40,9 @@ import { PenKeyOperationOptions } from 'PenKeyOperationOptions';
 export function beforeComponent(com: Component): On
 ```
 
-Requires that the target Component which is before another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component) object,used to locate Component relatively.
+Requires that the target Component which is before another Component that specified by the given [Component](arkts-test-uitest-component-c.md#component) object,used to locate Component relatively.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-ON-export function beforeComponent(com: Component): On--><!--Device-ON-export function beforeComponent(com: Component): On-End-->
 

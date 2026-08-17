@@ -10,10 +10,6 @@ Encodes a text string as a valid Uniform Resource Identifier (URI)
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare function encodeURI(uri: string): string--><!--Device-unnamed-declare function encodeURI(uri: string): string-End-->
 
 **Parameters:**

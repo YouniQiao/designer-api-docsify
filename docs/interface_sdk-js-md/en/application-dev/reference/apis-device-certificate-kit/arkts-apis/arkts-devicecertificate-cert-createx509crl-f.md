@@ -16,10 +16,6 @@ Creates an **X509CRL** instance. This API uses an asynchronous callback to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cert-function createX509CRL(inStream: EncodingBlob, callback: AsyncCallback<X509CRL>): void--><!--Device-cert-function createX509CRL(inStream: EncodingBlob, callback: AsyncCallback<X509CRL>): void-End-->
@@ -41,7 +37,7 @@ Creates an **X509CRL** instance. This API uses an asynchronous callback to retur
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
@@ -91,10 +87,6 @@ Creates an **X509CRL** instance. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cert-function createX509CRL(inStream: EncodingBlob): Promise<X509CRL>--><!--Device-cert-function createX509CRL(inStream: EncodingBlob): Promise<X509CRL>-End-->
@@ -121,7 +113,7 @@ Creates an **X509CRL** instance. This API uses a promise to return the result.
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';

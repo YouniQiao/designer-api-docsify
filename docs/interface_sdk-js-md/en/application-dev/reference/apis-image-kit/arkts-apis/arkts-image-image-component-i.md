@@ -4,10 +4,6 @@ Describes the color components of an image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface Component--><!--Device-image-interface Component-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -30,10 +26,6 @@ Component buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Component-readonly byteBuffer: ArrayBuffer--><!--Device-Component-readonly byteBuffer: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -49,10 +41,6 @@ Color component type.
 **Type:** ComponentType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Component-readonly componentType: ComponentType--><!--Device-Component-readonly componentType: ComponentType-End-->
 
@@ -70,10 +58,6 @@ Pixel stride.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Component-readonly pixelStride: int--><!--Device-Component-readonly pixelStride: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -89,10 +73,6 @@ Row stride. The camera preview stream data needs to be read by stride. For detai
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Component-readonly rowStride: int--><!--Device-Component-readonly rowStride: int-End-->
 

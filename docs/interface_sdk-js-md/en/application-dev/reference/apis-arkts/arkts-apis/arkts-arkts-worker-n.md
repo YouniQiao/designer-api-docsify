@@ -4,10 +4,6 @@ JS cross-thread communication tool
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace worker--><!--Device-unnamed-declare namespace worker-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -52,6 +48,6 @@ import { Priority } from 'Priority';
 
 | Name | Description |
 | --- | --- |
-| [parentPort](arkts-arkts-worker-con.md#parentPort) | The object used by the worker thread to communicate with the host thread. |
-| [workerPort](arkts-arkts-worker-con.md#workerPort) | The object used by the worker thread to communicate with the host thread. |
+| [parentPort](arkts-arkts-worker-con.md#parentport) | The object used by the worker thread to communicate with the host thread. |
+| [workerPort](arkts-arkts-worker-con.md#workerport) | The object used by the worker thread to communicate with the host thread. |
 

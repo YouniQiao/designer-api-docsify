@@ -16,11 +16,9 @@ Get value from settingsdata(synchronous method)
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getValueSync](#getValueSync)
+**Substitutes:** [getValueSync](#getvaluesync)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,7 +40,7 @@ Get value from settingsdata(synchronous method)
 | --- | --- |
 | string | Returns settingsdata value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import featureAbility from '@ohos.ability.featureAbility';
@@ -64,10 +62,6 @@ Get value from settingsdata(synchronous method)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function getValueSync(context: Context, name: string, defValue: string): string--><!--Device-settings-function getValueSync(context: Context, name: string, defValue: string): string-End-->
@@ -88,7 +82,7 @@ Get value from settingsdata(synchronous method)
 | --- | --- |
 | string | Returns settingsdata value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
@@ -111,10 +105,6 @@ Get value from settingsdata(synchronous method). [USER_SECURE] domain need ohos.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function getValueSync(context: Context, name: string, defValue: string, domainName: string): string--><!--Device-settings-function getValueSync(context: Context, name: string, defValue: string, domainName: string): string-End-->
@@ -136,7 +126,7 @@ Get value from settingsdata(synchronous method). [USER_SECURE] domain need ohos.
 | --- | --- |
 | string | Returns settingsdata value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

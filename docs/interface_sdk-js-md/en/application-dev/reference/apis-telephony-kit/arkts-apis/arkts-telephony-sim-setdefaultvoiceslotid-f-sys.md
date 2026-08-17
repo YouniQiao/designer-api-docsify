@@ -16,10 +16,6 @@ Set the card slot ID of the default voice service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-sim-function setDefaultVoiceSlotId(slotId: int, callback: AsyncCallback<void>): void--><!--Device-sim-function setDefaultVoiceSlotId(slotId: int, callback: AsyncCallback<void>): void-End-->
@@ -49,7 +45,7 @@ Set the card slot ID of the default voice service.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,10 +66,6 @@ function setDefaultVoiceSlotId(slotId: int): Promise<void>
 Set the card slot ID of the default voice service.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -109,7 +101,7 @@ Set the card slot ID of the default voice service.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -2,13 +2,9 @@
 
 &lt;canvas&gt; provides a rectangular canvas component for drawing graphics on the screen. You can control each pixel to draw on the canvas. &lt;canvas&gt; offers a variety of functions for drawing paths, rectangles, circles, text, and allows for adding images to it.
 
-**Inheritance/Implementation:** CanvasElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
+**Inheritance/Implementation:** CanvasElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface CanvasElement--><!--Device-unnamed-export interface CanvasElement-End-->
 
@@ -23,10 +19,6 @@ getContext(type: "2d", options?: ContextAttrOptions): CanvasRenderingContext2D
 Obtains the context of 2D canvas drawing. Only parameters related to 2D canvas drawing are supported. The return value is a 2D drawing object that provides specific 2D drawing operations.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -57,10 +49,6 @@ Obtains the context of webgl canvas drawing. Only parameters related to webgl ca
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasElement-getContext(type: "webgl", options?: WebGLContextAttributes): WebGLRenderingContext--><!--Device-CanvasElement-getContext(type: "webgl", options?: WebGLContextAttributes): WebGLRenderingContext-End-->
@@ -90,10 +78,6 @@ Obtains the context of webgl2 canvas drawing. Only parameters related to webgl2 
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasElement-getContext(type: "webgl2", options?: WebGLContextAttributes): WebGL2RenderingContext--><!--Device-CanvasElement-getContext(type: "webgl2", options?: WebGLContextAttributes): WebGL2RenderingContext-End-->
@@ -122,10 +106,6 @@ toDataURL(type?: string, quality?: number): string
 Creates a data URI that contains the image display.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -4,10 +4,6 @@ Provides APIs to encode strings into byte arrays. Multiple encoding formats are 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-util-class TextEncoder--><!--Device-util-class TextEncoder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,17 +24,13 @@ A constructor used to create a **TextEncoder** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextEncoder-constructor()--><!--Device-TextEncoder-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textEncoder = new util.TextEncoder();
@@ -54,10 +46,6 @@ A constructor used to create a **TextEncoder** object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextEncoder-constructor(encoding?: string)--><!--Device-TextEncoder-constructor(encoding?: string)-End-->
@@ -70,7 +58,7 @@ A constructor used to create a **TextEncoder** object.
 | --- | --- | --- | --- |
 | encoding | string | No | Encoding format. The default format is **'utf-8'**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textEncoder = new util.TextEncoder("utf-8");
@@ -85,10 +73,6 @@ static create(encoding?: string): TextEncoder
 Creates a **TextEncoder** object.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -106,9 +90,9 @@ Creates a **TextEncoder** object.
 
 | Type | Description |
 | --- | --- |
-| [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** object. |
+| [TextEncoder](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md) | TextEncoder** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textEncoder = util.TextEncoder.create("utf-8");
@@ -124,11 +108,9 @@ Encodes the input content in to a Uint8Array object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [encodeInto](#encodeInto)
+**Substitutes:** [encodeInto](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md#encodeinto)
 
 <!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
 
@@ -146,7 +128,7 @@ Encodes the input content in to a Uint8Array object.
 | --- | --- |
 | Uint8Array | Uint8Array object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textEncoder = new util.TextEncoder();
@@ -164,10 +146,6 @@ encodeInto(input?: string): Uint8Array
 Encodes the input content into a Uint8Array object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -187,7 +165,7 @@ Encodes the input content into a Uint8Array object.
 | --- | --- |
 | Uint8Array | Uint8Array object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textEncoder = new util.TextEncoder();
@@ -206,11 +184,9 @@ Writes the generated UTF-8 encoded text to an array.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [encodeIntoUint8Array](#encodeIntoUint8Array)
+**Substitutes:** [encodeIntoUint8Array](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md#encodeintouint8array)
 
 <!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
 
@@ -229,7 +205,7 @@ Writes the generated UTF-8 encoded text to an array.
 | --- | --- |
 | { read: number; written: number } | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textEncoder = new util.TextEncoder();
@@ -250,10 +226,6 @@ Encodes the input content and stores the result into a Uint8Array object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo--><!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo-End-->
@@ -272,9 +244,9 @@ Encodes the input content and stores the result into a Uint8Array object.
 | Type | Description |
 | --- | --- |
 | object | Return the object, where read represents the number of characters that have been encoded, and written represents the number of bytes occupied by the encoded characters.<br>**Applicable version:** 9 - 10 |
-| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
+| [EncodeIntoUint8ArrayInfo](../../apis-na/arkts-apis/arkts-na-util-encodeintouint8arrayinfo-i.md) | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let textEncoder = new util.TextEncoder();
@@ -300,10 +272,6 @@ Encoding format.<br>The following formats are supported: utf-8, gb2312, gb18030,
 **Type:** 'utf-8'
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

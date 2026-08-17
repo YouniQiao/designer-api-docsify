@@ -34,17 +34,17 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md) | 表示无障碍节点元素，请参考[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement)。 |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md) | 表示辅助功能扩展的上下文环境，请参考 [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md#AccessibilityExtensionContext)。 |
-| [ElementAttributeKeys](arkts-accessibility-elementattributekeys-t.md) | 表示[ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#ElementAttributeValues)的属性名称。 |
-| [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md) | 表示节点元素具备的属性名称及属性值类型信息，请参考 [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#ElementAttributeValues)。 |
-| [FocusDirection](arkts-accessibility-focusdirection-t.md) | 表示查询下一焦点元素的方向，请参考[FocusDirection](arkts-accessibility-focusdirection-t.md#FocusDirection)。 |
-| [FocusType](arkts-accessibility-focustype-t.md) | 表示查询焦点元素的类型，请参考[FocusType](arkts-accessibility-focustype-t.md#FocusType)。 |
+| [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md) | 表示无障碍节点元素，请参考[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#accessibilityelement)。 |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md) | 表示辅助功能扩展的上下文环境，请参考 [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md#accessibilityextensioncontext)。 |
+| [ElementAttributeKeys](arkts-accessibility-elementattributekeys-t.md) | 表示[ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#elementattributevalues)的属性名称。 |
+| [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md) | 表示节点元素具备的属性名称及属性值类型信息，请参考 [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#elementattributevalues)。 |
+| [FocusDirection](arkts-accessibility-focusdirection-t.md) | 表示查询下一焦点元素的方向，请参考[FocusDirection](arkts-accessibility-focusdirection-t.md#focusdirection)。 |
+| [FocusType](arkts-accessibility-focustype-t.md) | 表示查询焦点元素的类型，请参考[FocusType](arkts-accessibility-focustype-t.md#focustype)。 |
 | [GestureType](arkts-accessibility-gesturetype-t.md) | 手势事件类型。手势事件在用户执行特定手势操作时由无障碍服务触发，辅助功能扩展可通过onAccessibilityEvent回调接收并处理对应的手势事件。 |
 | [PageUpdateType](arkts-accessibility-pageupdatetype-t.md) | 页面更新类型。页面更新事件在页面内容或状态发生变化时由无障碍服务触发，辅助功能扩展可通过onAccessibilityEvent回调接收并处理对应的页面更新事件。 |
-| [Rect](arkts-accessibility-rect-t.md) | 表示矩形区域，请参考[Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md#Rect)。 |
+| [Rect](arkts-accessibility-rect-t.md) | 表示矩形区域，请参考[Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md#rect)。 |
 | [TouchGuideType](arkts-accessibility-touchguidetype-t.md) | 触摸浏览事件类型。触摸浏览是无障碍辅助功能中的一种交互模式，用户在该模式下通过触摸探索界面元素而非直接激活。 |
-| [WindowType](arkts-accessibility-windowtype-t.md) | 表示窗口的类型，请参考[WindowType](arkts-accessibility-windowtype-t.md#WindowType)。 |
+| [WindowType](arkts-accessibility-windowtype-t.md) | 表示窗口的类型，请参考[WindowType](arkts-accessibility-windowtype-t.md#windowtype)。 |
 
 <!--Del-->
 ### 类型（系统接口）

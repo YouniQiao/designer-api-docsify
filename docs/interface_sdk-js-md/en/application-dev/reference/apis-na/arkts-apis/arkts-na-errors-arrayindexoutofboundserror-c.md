@@ -1,14 +1,12 @@
-# ArrayIndexOutOfBoundsError
+# ArrayIndexOutOfBoundsError(Defines the commonly used Errors for ArkTS)
 
 Represents an error that occurs when array is oging to be indexed out of its bounds
 
-**Inheritance/Implementation:** ArrayIndexOutOfBoundsError extends [RangeError](arkts-na-errors-rangeerror-c.md#RangeError)
+**Inheritance/Implementation:** ArrayIndexOutOfBoundsError extends [RangeError](arkts-na-errors-rangeerror-c.md#rangeerror)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class ArrayIndexOutOfBoundsError--><!--Device-unnamed-export class ArrayIndexOutOfBoundsError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new ArrayIndexOutOfBoundsError instance with provided message and e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

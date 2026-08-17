@@ -4,10 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -21,10 +17,6 @@ close(): Promise<void>
 关闭文件流，使用promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -49,7 +41,7 @@ close(): Promise<void>
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -90,10 +82,6 @@ close(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
@@ -104,7 +92,7 @@ close(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步关闭文件流之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步关闭文件流之后的回调。 |
 
 **错误码：**
 
@@ -117,7 +105,7 @@ close(callback: AsyncCallback<void>): void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -161,10 +149,6 @@ closeSync(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
@@ -182,7 +166,7 @@ closeSync(): void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -199,10 +183,6 @@ flush(): Promise<void>
 刷新文件流，使用promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -233,7 +213,7 @@ flush(): Promise<void>
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -276,10 +256,6 @@ flush(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
@@ -290,7 +266,7 @@ flush(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步刷新文件流后的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步刷新文件流后的回调函数。 |
 
 **错误码：**
 
@@ -309,7 +285,7 @@ flush(callback: AsyncCallback<void>): void
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -355,10 +331,6 @@ flushSync(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
@@ -382,7 +354,7 @@ flushSync(): void
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -403,10 +375,6 @@ read(
 从流文件读取数据，使用promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -442,7 +410,7 @@ read(
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -502,10 +470,6 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
@@ -517,7 +481,7 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步读取完成后的回调。返回读取的结果，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 异步读取完成后的回调。返回读取的结果，单位为Byte。 |
 
 **错误码：**
 
@@ -533,7 +497,7 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -592,10 +556,6 @@ read(
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-read(      buffer: ArrayBuffer,      options: ReadOptions,      callback: AsyncCallback<number>  ): void--><!--Device-Stream-read(      buffer: ArrayBuffer,      options: ReadOptions,      callback: AsyncCallback<number>  ): void-End-->
@@ -608,7 +568,7 @@ read(
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
 | options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。<br>**起始版本：** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步读取完成后的回调。返回读取的结果，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 异步读取完成后的回调。返回读取的结果，单位为Byte。 |
 
 **错误码：**
 
@@ -624,7 +584,7 @@ read(
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -690,10 +650,6 @@ readSync(
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number--><!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number-End-->
@@ -728,7 +684,7 @@ readSync(
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { ReadOptions } from '@kit.CoreFileKit';
@@ -756,10 +712,6 @@ write(
 将数据写入流文件，使用promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -797,7 +749,7 @@ write(
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -852,10 +804,6 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
@@ -867,7 +815,7 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 异步写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -886,7 +834,7 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -942,10 +890,6 @@ write(
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-write(      buffer: ArrayBuffer | string,      options: WriteOptions,      callback: AsyncCallback<number>  ): void--><!--Device-Stream-write(      buffer: ArrayBuffer | string,      options: WriteOptions,      callback: AsyncCallback<number>  ): void-End-->
@@ -958,7 +902,7 @@ write(
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
 | options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持?' utf-8'。<br>**起始版本：** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 异步写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -977,7 +921,7 @@ write(
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1042,10 +986,6 @@ writeSync(
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Stream-writeSync(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): number--><!--Device-Stream-writeSync(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): number-End-->
@@ -1082,7 +1022,7 @@ writeSync(
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { WriteOptions } from '@kit.CoreFileKit';

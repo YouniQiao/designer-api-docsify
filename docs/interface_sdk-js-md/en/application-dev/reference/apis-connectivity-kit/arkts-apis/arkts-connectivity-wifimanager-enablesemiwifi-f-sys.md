@@ -16,10 +16,6 @@ Enable semi - Wifi.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
 <!--Device-wifiManager-function enableSemiWifi(): void--><!--Device-wifiManager-function enableSemiWifi(): void-End-->
@@ -38,7 +34,7 @@ Enable semi - Wifi.
 | [2501004](../errorcode-wifi.md#2501004-failed-to-close-the-service) | Operation failed because the service is being opened. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

@@ -16,10 +16,6 @@ Stop bluetooth scanning and unregister to listen to bluetooth scanning result ch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function offBluetoothScanResultChange(callback?: Callback<BluetoothScanResult>): void--><!--Device-geoLocationManager-function offBluetoothScanResultChange(callback?: Callback<BluetoothScanResult>): void-End-->

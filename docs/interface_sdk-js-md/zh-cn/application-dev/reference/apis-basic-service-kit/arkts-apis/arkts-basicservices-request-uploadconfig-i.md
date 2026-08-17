@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-request-interface UploadConfig--><!--Device-request-interface UploadConfig-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -23,10 +19,6 @@ begins?: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UploadConfig-begins?: long--><!--Device-UploadConfig-begins?: long-End-->
 
@@ -44,10 +36,6 @@ data: Array<RequestData>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadConfig-data: Array<RequestData>--><!--Device-UploadConfig-data: Array<RequestData>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -63,10 +51,6 @@ ends?: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UploadConfig-ends?: long--><!--Device-UploadConfig-ends?: long-End-->
 
@@ -84,10 +68,6 @@ files: Array<File>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadConfig-files: Array<File>--><!--Device-UploadConfig-files: Array<File>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -103,10 +83,6 @@ Adds an HTTP or HTTPS header to be included with the upload request.
 **类型：** Record&lt;string, string&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UploadConfig-header: Record<string, string>--><!--Device-UploadConfig-header: Record<string, string>-End-->
 
@@ -124,10 +100,6 @@ index?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadConfig-index?: int--><!--Device-UploadConfig-index?: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -144,10 +116,6 @@ HTTP请求方法：POST、PUT，缺省为POST。使用POST新增资源，使用P
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-UploadConfig-method: string--><!--Device-UploadConfig-method: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -163,10 +131,6 @@ url: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-UploadConfig-url: string--><!--Device-UploadConfig-url: string-End-->
 

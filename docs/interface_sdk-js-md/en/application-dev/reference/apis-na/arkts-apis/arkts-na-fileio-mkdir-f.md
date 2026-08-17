@@ -10,9 +10,7 @@ Creates a single-level directory. If the parent directory does not exist, an err
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function mkdir(path: string): Promise<void>--><!--Device-fileIo-function mkdir(path: string): Promise<void>-End-->
 
@@ -61,9 +59,7 @@ Creates a directory. This API uses a promise to return the result. The value **t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function mkdir(path: string, recursion: boolean): Promise<void>--><!--Device-fileIo-function mkdir(path: string, recursion: boolean): Promise<void>-End-->
 
@@ -113,9 +109,7 @@ Creates a single-level directory. If the parent directory does not exist, an err
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function mkdir(path: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function mkdir(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -159,9 +153,7 @@ Creates a directory. If **recursion** is set to **true**, a directory is created
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function mkdir(path: string, recursion: boolean, callback: AsyncCallback<void>): void--><!--Device-fileIo-function mkdir(path: string, recursion: boolean, callback: AsyncCallback<void>): void-End-->
 

@@ -15,8 +15,6 @@ Queries usage information about each bundle within a specified period at a speci
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
@@ -34,9 +32,9 @@ Queries usage information about each bundle within a specified period at a speci
 | byInterval | IntervalType | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | 是 | the callback of usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | 是 | the callback of usage information about each bundle. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,8 +68,6 @@ Queries usage information about each bundle within a specified period at a speci
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
@@ -96,7 +92,7 @@ Queries usage information about each bundle within a specified period at a speci
 | --- | --- |
 | Promise&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | the usage information about each bundle. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

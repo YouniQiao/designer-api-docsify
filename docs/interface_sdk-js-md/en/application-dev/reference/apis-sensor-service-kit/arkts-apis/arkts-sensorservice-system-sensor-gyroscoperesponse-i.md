@@ -4,11 +4,9 @@ Defines a **GyroscopeResponse** object.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
-**Substitutes:** [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md#GyroscopeResponse)
+**Substitutes:** [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md#gyroscoperesponse)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -54,8 +52,6 @@ Rotation angular velocity of the X axis.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [x](arkts-sensorservice-sensor-gyroscoperesponse-i.md#x)
@@ -80,8 +76,6 @@ Rotation angular velocity of the Y axis.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [y](arkts-sensorservice-sensor-gyroscoperesponse-i.md#y)
@@ -105,8 +99,6 @@ Rotation angular velocity of the Z axis.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 8
 

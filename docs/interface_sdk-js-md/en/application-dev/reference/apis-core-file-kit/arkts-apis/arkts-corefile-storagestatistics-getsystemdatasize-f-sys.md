@@ -16,10 +16,6 @@ Get the system data size.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -45,7 +41,7 @@ Get the system data size.
 | 13600018 | Failed to query the system data size. |
 | 13600001 | IPC error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { storageStatistics } from '@kit.CoreFileKit';

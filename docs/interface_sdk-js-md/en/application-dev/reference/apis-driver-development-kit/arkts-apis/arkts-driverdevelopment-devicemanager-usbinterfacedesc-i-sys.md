@@ -4,10 +4,6 @@ Defines the interface descriptor of a USB device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-deviceManager-interface USBInterfaceDesc--><!--Device-deviceManager-interface USBInterfaceDesc-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -32,10 +28,6 @@ Interface class.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBInterfaceDesc-bClass: int--><!--Device-USBInterfaceDesc-bClass: int-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -53,10 +45,6 @@ Interface ID.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBInterfaceDesc-bInterfaceNumber: int--><!--Device-USBInterfaceDesc-bInterfaceNumber: int-End-->
 
@@ -76,10 +64,6 @@ Interface protocol.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBInterfaceDesc-bProtocol: int--><!--Device-USBInterfaceDesc-bProtocol: int-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
@@ -97,10 +81,6 @@ Interface subclass.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBInterfaceDesc-bSubClass: int--><!--Device-USBInterfaceDesc-bSubClass: int-End-->
 

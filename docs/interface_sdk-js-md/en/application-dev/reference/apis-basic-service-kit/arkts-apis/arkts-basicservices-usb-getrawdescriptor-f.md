@@ -12,15 +12,13 @@ import { usb } from 'usb';
 function getRawDescriptor(pipe: USBDevicePipe): Uint8Array
 ```
 
-Obtains the raw USB descriptor. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter.
+Obtains the raw USB descriptor. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getRawDescriptor](arkts-basicservices-usbmanager-getrawdescriptor-f.md#getRawDescriptor)
+**Substitutes:** [getRawDescriptor](arkts-basicservices-usbmanager-getrawdescriptor-f.md#getrawdescriptor)
 
 <!--Device-usb-function getRawDescriptor(pipe: USBDevicePipe): Uint8Array--><!--Device-usb-function getRawDescriptor(pipe: USBDevicePipe): Uint8Array-End-->
 
@@ -38,7 +36,7 @@ Obtains the raw USB descriptor. Before you do this, call [usb.getDevices](arkts-
 | --- | --- |
 | Uint8Array | Returns the raw USB descriptor if the operation is successful; returns **undefined** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ret = usb.getRawDescriptor(devicepipe);

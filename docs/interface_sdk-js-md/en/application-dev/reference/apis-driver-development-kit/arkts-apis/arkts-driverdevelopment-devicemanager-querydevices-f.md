@@ -16,10 +16,6 @@ Queries the list of peripheral devices. If the device has no peripheral device c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
 <!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>--><!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>-End-->
@@ -30,7 +26,7 @@ Queries the list of peripheral devices. If the device has no peripheral device c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| busType | int | No | Device bus type specified by [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md#BusType). If this parameter is left empty, all types of devices are searched. |
+| busType | int | No | Device bus type specified by [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md#bustype). If this parameter is left empty, all types of devices are searched. |
 
 **Return value:**
 
@@ -45,7 +41,7 @@ Queries the list of peripheral devices. If the device has no peripheral device c
 | [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
 | [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception or busType parameter error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

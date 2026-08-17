@@ -4,13 +4,9 @@
 export type UidNetStatsInfo = Record<int, NetStatsInfo>
 ```
 
-[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#NetStatsInfo) for every UID. Key is UID.
+[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#netstatsinfo) for every UID. Key is UID.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-statistics-export type UidNetStatsInfo = Record<int, NetStatsInfo>--><!--Device-statistics-export type UidNetStatsInfo = Record<int, NetStatsInfo>-End-->
 

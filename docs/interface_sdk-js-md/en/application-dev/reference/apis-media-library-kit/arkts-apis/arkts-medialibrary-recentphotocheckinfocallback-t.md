@@ -8,10 +8,6 @@ Called to return whether the recent image or video exists and the information ab
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-unnamed-export type RecentPhotoCheckInfoCallback = (recentPhotoExists: boolean, info: RecentPhotoInfo) => void--><!--Device-unnamed-export type RecentPhotoCheckInfoCallback = (recentPhotoExists: boolean, info: RecentPhotoInfo) => void-End-->
@@ -23,5 +19,5 @@ Called to return whether the recent image or video exists and the information ab
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | recentPhotoExists | boolean | Yes | Whether the recent image or video exists. **true** if it exists, **false** otherwise. The default value is **true**. |
-| info | [RecentPhotoInfo](../../apis-na/arkts-apis/arkts-na-file-recentphotocomponent-recentphotoinfo-c.md) | Yes | Information about the recent image or video. |
+| info | [RecentPhotoInfo](arkts-medialibrary-file-recentphotocomponent-recentphotoinfo-c.md) | Yes | Information about the recent image or video. |
 

@@ -16,10 +16,6 @@ Finds a window based on the name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-window-function findWindow(name: string): Window--><!--Device-window-function findWindow(name: string): Window-End-->
@@ -30,7 +26,7 @@ Finds a window based on the name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Window name. When searching for a child window or system window, use the window name in [Configuration](arkts-arkui-window-configuration-i.md#Configuration). When searching for the main window, use [getWindowName](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getWindowName) to obtain the window name of the current instance. |
+| name | string | Yes | Window name. When searching for a child window or system window, use the window name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). When searching for the main window, use [getWindowName](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getwindowname) to obtain the window name of the current instance. |
 
 **Return value:**
 
@@ -45,7 +41,7 @@ Finds a window based on the name.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let windowClass: window.Window | undefined = undefined;

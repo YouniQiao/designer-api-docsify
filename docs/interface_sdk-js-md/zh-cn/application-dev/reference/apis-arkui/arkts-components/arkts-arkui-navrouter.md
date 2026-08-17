@@ -14,8 +14,6 @@ NavRouter()
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 13
 
 **替代接口：** NavDestinationAttribute
@@ -35,8 +33,6 @@ NavRouter(value: RouteInfo)
 提供路由信息，指定点击NavRouter时，要跳转的NavDestination页面。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **废弃版本：** 13
 

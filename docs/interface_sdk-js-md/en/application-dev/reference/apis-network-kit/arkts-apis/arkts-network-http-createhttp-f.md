@@ -16,10 +16,6 @@ Creates an HTTP request task.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-http-function createHttp(): HttpRequest--><!--Device-http-function createHttp(): HttpRequest-End-->
@@ -32,7 +28,7 @@ Creates an HTTP request task.
 | --- | --- |
 | HttpRequest | the HttpRequest of the createHttp. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

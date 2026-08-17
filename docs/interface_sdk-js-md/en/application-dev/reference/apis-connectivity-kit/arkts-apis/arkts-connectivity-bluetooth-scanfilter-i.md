@@ -4,11 +4,9 @@ Describes the criteria for filtering scanning results can be set.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ScanFilter](arkts-connectivity-bluetoothmanager-scanfilter-i.md#ScanFilter)
+**Substitutes:** [ScanFilter](arkts-connectivity-bluetoothmanager-scanfilter-i.md#scanfilter)
 
 <!--Device-bluetooth-interface ScanFilter--><!--Device-bluetooth-interface ScanFilter-End-->
 
@@ -32,11 +30,9 @@ The address of a BLE peripheral device
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-scanfilter-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-scanfilter-i.md#deviceid)
 
 <!--Device-ScanFilter-deviceId?: string--><!--Device-ScanFilter-deviceId?: string-End-->
 
@@ -53,8 +49,6 @@ The name of a BLE peripheral device
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,11 +70,9 @@ The service UUID of a BLE peripheral device
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-scanfilter-i.md#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-scanfilter-i.md#serviceuuid)
 
 <!--Device-ScanFilter-serviceUuid?: string--><!--Device-ScanFilter-serviceUuid?: string-End-->
 

@@ -2,13 +2,9 @@
 
 After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component. > **NOTE：**> > * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent > lifecycle between them. > > * When you call drawing APIs in this module, the commands are stored in the associated **Canvas** > component's command queue. These commands are only executed when the current frame enters the rendering > phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** component is > invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent command queue > buildup and excessive memory usage. > > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU causes > significant performance degradation.
 
-**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
+**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md#canvaspath)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class CanvasRenderer--><!--Device-unnamed-declare class CanvasRenderer-End-->
 
@@ -23,10 +19,6 @@ beginPath(): void
 Creates a drawing path.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,10 +37,6 @@ clearRect(x: number, y: number, w: number, h: number): void
 Clears the content in a rectangle on the canvas.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -77,10 +65,6 @@ Sets the current path to a clipping path.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -104,10 +88,6 @@ clip(path: Path2D, fillRule?: CanvasFillRule): void
 Sets a specified path as the clipping path.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -137,10 +117,6 @@ createConicGradient(
 Creates a conic gradient.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,10 +150,6 @@ Creates a blank ImageData object of a specified size. This API involves time-con
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -209,10 +181,6 @@ Creates an **ImageData** object with the same width and height of an existing **
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -242,10 +210,6 @@ createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGrad
 Creates a linear gradient.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -280,10 +244,6 @@ Creates a pattern for image filling based on a specified source image and repeti
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -314,10 +274,6 @@ createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number,
 Creates a radial gradient.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -354,10 +310,6 @@ Draws an image on the canvas.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -383,10 +335,6 @@ drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number, dw: number, dh:
 Draws an image by stretching or compressing it to the specified dimensions.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -426,10 +374,6 @@ Draws a cropped portion of an image by stretching or compressing it to the speci
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -462,10 +406,6 @@ Fills the current path.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -489,10 +429,6 @@ fill(path: Path2D, fillRule?: CanvasFillRule): void
 Fills a specified path.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -518,10 +454,6 @@ fillRect(x: number, y: number, w: number, h: number): void
 Fills a rectangle on the canvas.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -550,10 +482,6 @@ Draws filled text on the canvas.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -580,10 +508,6 @@ getImageData(sx: number, sy: number, sw: number, sh: number): ImageData
 Obtains the **ImageData** object created with the pixels within the specified area on the canvas. This API involves time-consuming memory copy. Therefore, avoid frequent calls to it.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -618,10 +542,6 @@ Obtains the dash line style.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -645,10 +565,6 @@ getPixelMap(sx: number, sy: number, sw: number, sh: number): PixelMap
 Obtains the **PixelMap** object created with the pixels within the specified area on the canvas. This API involves time-consuming memory copy. Therefore, avoid frequent calls to it.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -681,10 +597,6 @@ Obtains the current transformation matrix being applied to the context.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -708,10 +620,6 @@ measureText(text: string): TextMetrics
 Returns a **TextMetrics** object used to obtain the width of specified text. Note that the width obtained may vary by device.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -742,10 +650,6 @@ putImageData(imageData: ImageData, dx: number | string, dy: number | string): vo
 Puts an **ImageData** object onto a rectangular area on the canvas.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -781,10 +685,6 @@ Fills the new rectangular area with the **ImageData** data after cropping.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -815,10 +715,6 @@ Resets this **CanvasRenderingContext2D** object to its default state and clears 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -836,10 +732,6 @@ resetTransform(): void
 Resets the current transform to the identity matrix.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -859,10 +751,6 @@ Restores the saved drawing context. > **NOTE：**> > When the number of calls to
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -881,10 +769,6 @@ Restores the image transformation and cropping state to the state before **saveL
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -902,10 +786,6 @@ rotate(angle: number): void
 Rotates a canvas clockwise around its coordinate axes.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -931,10 +811,6 @@ Saves the current drawing context.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -953,10 +829,6 @@ Saves this layer.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -974,10 +846,6 @@ scale(x: number, y: number): void
 Scales the canvas based on the given scale factors.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1004,10 +872,6 @@ Sets the dash line style.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1032,10 +896,6 @@ Draws the input **PixelMap** object on the canvas. The example is the same as th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CanvasRenderer-setPixelMap(value?: PixelMap): void--><!--Device-CanvasRenderer-setPixelMap(value?: PixelMap): void-End-->
@@ -1057,10 +917,6 @@ setTransform(a: number, b: number, c: number, d: number, e: number, f: number): 
 Resets the existing transformation matrix and creates a new transformation matrix by using the same parameters as the **transform()** API. > **NOTE：**> > The coordinates of each point in the graph after transformation can be calculated > using the following formula: > > **x** and **y** represent coordinates before transformation, and **x'** and **y'** > represent coordinates after transformation. > > - x' = `a * x + c * y + e` > > - y' = `b * x + d * y + f`
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1091,10 +947,6 @@ Resets the current transformation to the identity matrix, and then creates a new
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1119,10 +971,6 @@ Strokes (outlines) this path.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1140,10 +988,6 @@ stroke(path: Path2D): void
 Strokes (outlines) a specified path.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1168,10 +1012,6 @@ strokeRect(x: number, y: number, w: number, h: number): void
 Draws an outlined rectangle on the canvas without filling its interior.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1200,10 +1040,6 @@ Draws stroked text on the canvas.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1231,10 +1067,6 @@ Displays the specified **ImageBitmap** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1258,10 +1090,6 @@ transform(a: number, b: number, c: number, d: number, e: number, f: number): voi
 Defines a transformation matrix. To transform a graph, you only need to set parameters of the matrix. The coordinates of the graph are multiplied by the matrix values to obtain new coordinates of the transformed graph. You can use the matrix to implement multiple transform effects. > **NOTE：**> > The coordinates of each point in the graph after transformation can be calculated > using the following formula: > > **x** and **y** represent coordinates before transformation, and **x'** and **y'** > represent coordinates after transformation. > > - x' = `a * x + c * y + e` > > - y' = `b * x + d * y + f`
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1292,10 +1120,6 @@ Moves the origin of the coordinate system.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1325,10 +1149,6 @@ Sets whether to enable anti-aliasing for drawing graphics and text. Setting this
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -1343,17 +1163,13 @@ Sets whether to enable anti-aliasing for drawing graphics and text. Setting this
 direction: CanvasDirection
 ```
 
-Sets the text direction. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasDirection](arkts-arkui-canvasdirection-t.md#CanvasDirection). Default value: **"inherit"**
+Sets the text direction. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasDirection](arkts-arkui-canvasdirection-t.md#canvasdirection). Default value: **"inherit"**
 
 **Type:** [CanvasDirection](arkts-arkui-canvasdirection-t.md)
 
 **Default:** inherit
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1369,17 +1185,13 @@ Sets the text direction. This attribute is write-only. You can set its value thr
 fillStyle: string | number | CanvasGradient | CanvasPattern
 ```
 
-Sets the fill color for rendering. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. - When the type is string, this attribute indicates the color of the fill area. For details about the color format, see the description for the string type in ResourceColor. - When the type is number, this attribute indicates the color of the fill area. Fully transparent colors are not supported. For details about the color format, see the description for the number type in ResourceColor. - When the type is **CanvasGradient**, this attribute indicates a gradient object, which is created via the [createLinearGradient](#createLinearGradient) API. - When the type is **CanvasPattern**, this attribute indicates a pattern, which is created via the [createPattern](#createPattern) API. Default value: **'#000000'** (black) Invalid values do not take effect. The effect before the setting is retained.
+Sets the fill color for rendering. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. - When the type is string, this attribute indicates the color of the fill area. For details about the color format, see the description for the string type in ResourceColor. - When the type is number, this attribute indicates the color of the fill area. Fully transparent colors are not supported. For details about the color format, see the description for the number type in ResourceColor. - When the type is **CanvasGradient**, this attribute indicates a gradient object, which is created via the [createLinearGradient](#createlineargradient) API. - When the type is **CanvasPattern**, this attribute indicates a pattern, which is created via the [createPattern](#createpattern) API. Default value: **'#000000'** (black) Invalid values do not take effect. The effect before the setting is retained.
 
 **Type:** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
 
 **Default:** #000000 (black)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1403,10 +1215,6 @@ Sets the filter for an image. Any number of filters can be combined. This attrib
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1421,17 +1229,13 @@ Sets the filter for an image. Any number of filters can be combined. This attrib
 font: string
 ```
 
-Sets the text font. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. Syntax: ctx.font = 'font-style font-weight font-size font-family' - (Optional) **font-style**: font style. Available values are **normal** and **italic**. - (Optional) **font-weight**: font weight. Available values are as follows: **normal**, **bold**, **bolder**, **lighter**, **100**, **200**, **300**, **400**, **500**, **600**, **700**, **800**, **900**. - (Optional) **font-size**: font size and line height. The unit can be px or vp and must be specified. - (Optional) **font-family**: font family. Available values are **sans-serif**, **serif**, and **monospace**. Starting from API version 20, this API is used to set registered custom fonts (the DevEco Studio Previewer does not support custom fonts). You can register a custom font in either of the following ways: Register a custom font by calling the asynchronous API this.uiContext.getFont().registerFont of ArkUI. Immediate rendering after calling this API may result in the custom font not taking effect. Directly call the fontCollection.[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync) API of the font engine to register the custom font. In this case, the **fontCollection** instance must be **text.FontCollection.getGlobalInstance()** because the component loads fonts from this instance by default. If you use another instance, the custom font may not take effect.
+Sets the text font. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. Syntax: ctx.font = 'font-style font-weight font-size font-family' - (Optional) **font-style**: font style. Available values are **normal** and **italic**. - (Optional) **font-weight**: font weight. Available values are as follows: **normal**, **bold**, **bolder**, **lighter**, **100**, **200**, **300**, **400**, **500**, **600**, **700**, **800**, **900**. - (Optional) **font-size**: font size and line height. The unit can be px or vp and must be specified. - (Optional) **font-family**: font family. Available values are **sans-serif**, **serif**, and **monospace**. Starting from API version 20, this API is used to set registered custom fonts (the DevEco Studio Previewer does not support custom fonts). You can register a custom font in either of the following ways: Register a custom font by calling the asynchronous API this.uiContext.getFont().registerFont of ArkUI. Immediate rendering after calling this API may result in the custom font not taking effect. Directly call the fontCollection.[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) API of the font engine to register the custom font. In this case, the **fontCollection** instance must be **text.FontCollection.getGlobalInstance()** because the component loads fonts from this instance by default. If you use another instance, the custom font may not take effect.
 
 **Type:** string
 
 **Default:** normal normal 14px sans-serif
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1452,10 +1256,6 @@ Sets the opacity. This attribute is write-only. You can set its value through an
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1479,10 +1279,6 @@ Sets the composite operation. This attribute is write-only. You can set its valu
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1505,10 +1301,6 @@ Indicates whether to apply image smoothing adjustments when drawing images. The 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1523,17 +1315,13 @@ Indicates whether to apply image smoothing adjustments when drawing images. The 
 imageSmoothingQuality: ImageSmoothingQuality
 ```
 
-Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md#ImageSmoothingQuality). Default value: **"low"** > **NOTE：**> > The resources used in this example are not located in the **src** > **main** > **resource** directory. Starting > from DevEco Studio 6.0.0 Beta2, the resources that are located outside the **resources** directory are not > packaged by default when a project or module is created. To package these resources, go to **buildOption** in the > module's **build-profile.json5** file > **resOptions** > **copyCodeResource**, and set **enable** to **true**. > For details, see the description of copyCodeResource in **resOptions**.
+Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md#imagesmoothingquality). Default value: **"low"** > **NOTE：**> > The resources used in this example are not located in the **src** > **main** > **resource** directory. Starting > from DevEco Studio 6.0.0 Beta2, the resources that are located outside the **resources** directory are not > packaged by default when a project or module is created. To package these resources, go to **buildOption** in the > module's **build-profile.json5** file > **resOptions** > **copyCodeResource**, and set **enable** to **true**. > For details, see the description of copyCodeResource in **resOptions**.
 
 **Type:** [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md)
 
 **Default:** low
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1557,10 +1345,6 @@ Sets the letter spacing. This attribute is write-only. You can set its value thr
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1582,10 +1366,6 @@ Sets the line caps. This attribute is write-only. You can set its value through 
 **Default:** butt
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1609,10 +1389,6 @@ Sets the dashed line offset of the canvas. The value is of the float type. This 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1627,17 +1403,13 @@ Sets the dashed line offset of the canvas. The value is of the float type. This 
 lineJoin: CanvasLineJoin
 ```
 
-Sets the line join. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md#CanvasLineJoin). <br>Available values are as follows: <br>- **'round'**: The shape used to join line segments is a sector, whose radius at the rounded corner is equal to the line width. <br>- **'bevel'**: The shape used to join line segments is a triangle. The rectangular corner of each line is independent. <br>- **'miter'**: The shape used to join line segments has a mitered corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in **miterLimit**. <br>Default value: **'miter'**
+Sets the line join. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md#canvaslinejoin). <br>Available values are as follows: <br>- **'round'**: The shape used to join line segments is a sector, whose radius at the rounded corner is equal to the line width. <br>- **'bevel'**: The shape used to join line segments is a triangle. The rectangular corner of each line is independent. <br>- **'miter'**: The shape used to join line segments has a mitered corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in **miterLimit**. <br>Default value: **'miter'**
 
 **Type:** [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md)
 
 **Default:** miter
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1661,10 +1433,6 @@ Sets the line width. This attribute is write-only. You can set its value through
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1686,10 +1454,6 @@ Sets the miter limit, which specifies the distance between the inner and outer a
 **Default:** 10(px)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1713,10 +1477,6 @@ Sets the blur level for drawing shadows. This attribute is write-only. You can s
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1738,10 +1498,6 @@ Sets the shadow color. This attribute is write-only. You can set its value throu
 **Default:** transparent black
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1765,10 +1521,6 @@ Sets the horizontal offset between the drawn shadow and the original object. Thi
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1791,10 +1543,6 @@ Sets the vertical offset between the drawn shadow and the original object. This 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1809,17 +1557,13 @@ Sets the vertical offset between the drawn shadow and the original object. This 
 strokeStyle: string | number | CanvasGradient | CanvasPattern
 ```
 
-Sets the stroke color. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. - When the type is string, this attribute indicates the stroke color. For details about the color format, see the description for the string type in ResourceColor. - When the type is number, this attribute indicates the stroke color. Fully transparent colors are not supported. For details about the color format, see the description for the number type in ResourceColor. - When the type is **CanvasGradient**, this attribute indicates a gradient object, which is created via the [createLinearGradient](#createLinearGradient) API. - When the type is **CanvasPattern**, this attribute indicates a pattern, which is created via the createPattern API. Default value: **'#000000'** (black) Invalid values do not take effect. The effect before the setting is retained.
+Sets the stroke color. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. - When the type is string, this attribute indicates the stroke color. For details about the color format, see the description for the string type in ResourceColor. - When the type is number, this attribute indicates the stroke color. Fully transparent colors are not supported. For details about the color format, see the description for the number type in ResourceColor. - When the type is **CanvasGradient**, this attribute indicates a gradient object, which is created via the [createLinearGradient](#createlineargradient) API. - When the type is **CanvasPattern**, this attribute indicates a pattern, which is created via the createPattern API. Default value: **'#000000'** (black) Invalid values do not take effect. The effect before the setting is retained.
 
 **Type:** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
 
 **Default:** #000000 (black)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1843,10 +1587,6 @@ Sets the text alignment type. This attribute is write-only. You can set its valu
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1868,10 +1608,6 @@ Sets the horizontal alignment baseline for text rendering. This attribute is wri
 **Default:** alphabetic
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

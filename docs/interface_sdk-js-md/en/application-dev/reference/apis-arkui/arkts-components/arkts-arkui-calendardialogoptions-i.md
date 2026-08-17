@@ -1,14 +1,10 @@
 # CalendarDialogOptions
 
-Defines the configuration options of the calendar picker dialog box. Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions). > **NOTE：**> > When the application window is resized, the width of the dialog box is continuously compressed. If the window width > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the > content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
+Defines the configuration options of the calendar picker dialog box. Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md#calendaroptions). > **NOTE：**> > When the application window is resized, the width of the dialog box is continuously compressed. If the window width > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the > content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
 
-**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions)
+**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md#calendaroptions)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface CalendarDialogOptions--><!--Device-unnamed-declare interface CalendarDialogOptions-End-->
 
@@ -25,10 +21,6 @@ Style of the accept button. **NOTE：**In the **acceptButtonStyle** and **cancel
 **Type:** PickerDialogButtonStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ Background blur style of the dialog box. Default value: **BlurStyle.COMPONENT_UL
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -75,10 +63,6 @@ Options for customizing the background blur style.
 **Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,10 +86,6 @@ Backplane color of the dialog box. Default value: **Color.Transparent** **NOTE�
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -126,10 +106,6 @@ Options for customizing the background effect.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -149,10 +125,6 @@ Style of the cancel button. **NOTE：**In the **acceptButtonStyle** and **cancel
 **Type:** PickerDialogButtonStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +148,6 @@ Whether to respond when the device is in semi-folded mode. - **true**: Respond w
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -201,10 +169,6 @@ Display area of the dialog box when the device is in semi-folded mode. Default v
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,10 +192,6 @@ Whether to highlight the current system date. - **true**: Highlight the current 
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -251,10 +211,6 @@ Triggered when the OK button in the dialog box is clicked. The callback paramete
 **Type:** Callback&lt;Date&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -276,10 +232,6 @@ Triggered when the Cancel button in the dialog box is clicked.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -299,10 +251,6 @@ Triggered when the selection in the picker changes the selected date. The callba
 **Type:** Callback&lt;Date&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -324,10 +272,6 @@ Event callback after the dialog box appears. **NOTE：**1. The normal timing seq
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -347,10 +291,6 @@ Event callback after the dialog box disappears. **NOTE：**1. The normal timing 
 **Type:** VoidCallback
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -372,10 +312,6 @@ Event callback when the dialog box is about to appear. **NOTE：**1. The normal 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -395,10 +331,6 @@ Event callback when the dialog box is about to disappear. **NOTE：**1. The norm
 **Type:** VoidCallback
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -420,10 +352,6 @@ Shadow of the dialog box. Default value on 2-in-1 devices: **ShadowStyle.OUTER_F
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -443,10 +371,6 @@ Set system-styled materials for dialog. Different materials have different effec
 **Type:** SystemUiMaterial
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

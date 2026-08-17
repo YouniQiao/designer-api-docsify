@@ -4,10 +4,6 @@ Enumerates the album keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum AlbumKeys--><!--Device-photoAccessHelper-enum AlbumKeys-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,10 +17,6 @@ URI = 'uri'
 URI of the album.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AlbumKeys-URI = 'uri'--><!--Device-AlbumKeys-URI = 'uri'-End-->
 
@@ -40,10 +32,6 @@ Name of the album.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AlbumKeys-ALBUM_NAME = 'album_name'--><!--Device-AlbumKeys-ALBUM_NAME = 'album_name'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -57,10 +45,6 @@ CHANGE_TIME = 'change_time'
 Time when the album is changed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AlbumKeys-CHANGE_TIME = 'change_time'--><!--Device-AlbumKeys-CHANGE_TIME = 'change_time'-End-->
 

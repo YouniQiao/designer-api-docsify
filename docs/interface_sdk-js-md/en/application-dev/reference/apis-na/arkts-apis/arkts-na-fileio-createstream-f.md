@@ -6,13 +6,11 @@
 function createStream(path: string, mode: string): Promise<Stream>
 ```
 
-Creates a stream based on a file path. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#Stream).
+Creates a stream based on a file path. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#stream).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function createStream(path: string, mode: string): Promise<Stream>--><!--Device-fileIo-function createStream(path: string, mode: string): Promise<Stream>-End-->
 
@@ -70,13 +68,11 @@ Creates a stream based on a file path. This API uses a promise to return the res
 function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void
 ```
 
-Creates a stream based on a file path. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#Stream). This API uses an asynchronous callback to return the result.
+Creates a stream based on a file path. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#stream). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-fileIo-function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void-End-->
 

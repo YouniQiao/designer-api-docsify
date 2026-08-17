@@ -10,10 +10,6 @@ function unregisterTypeDescriptors(typeIds: Array<string>): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DYNAMIC_UTD_TYPE
 
 **模型约束：** 此接口仅可在Stage模型下使用。

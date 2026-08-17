@@ -4,10 +4,6 @@ InflateGetDictionary and deflateGetDictionary return value information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-zlib-interface DictionaryOutputInfo--><!--Device-zlib-interface DictionaryOutputInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -30,10 +26,6 @@ Length of a dictionary.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DictionaryOutputInfo-dictionaryLength: int--><!--Device-DictionaryOutputInfo-dictionaryLength: int-End-->
@@ -46,15 +38,11 @@ Length of a dictionary.
 status: ReturnStatus
 ```
 
-For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md#ReturnStatus).
+For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md#returnstatus).
 
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -16,10 +16,6 @@ Releases exemption resources.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
 <!--Device-deviceStandby-function releaseExemptionResource(request: ResourceRequest): void--><!--Device-deviceStandby-function releaseExemptionResource(request: ResourceRequest): void-End-->
@@ -47,7 +43,7 @@ Releases exemption resources.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceStandby } from '@kit.BackgroundTasksKit';

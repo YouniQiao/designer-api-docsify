@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-backup-interface FileData--><!--Device-backup-interface FileData-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
@@ -25,10 +21,6 @@ fd: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-FileData-fd: int--><!--Device-FileData-fd: int-End-->
 

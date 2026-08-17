@@ -14,10 +14,6 @@ Creates an empty button.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -35,10 +31,6 @@ Button(options: ButtonOptions)
 Creates a button that can contain a single child component.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,10 +55,6 @@ Button(label: ResourceStr, options?: ButtonOptions)
 Creates a button based on text content. In this case, the component cannot contain child components. By default, the text content is displayed in a one line.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

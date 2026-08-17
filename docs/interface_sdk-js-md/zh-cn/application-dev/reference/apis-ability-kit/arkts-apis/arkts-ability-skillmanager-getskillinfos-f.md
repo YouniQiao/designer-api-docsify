@@ -10,10 +10,6 @@ function getSkillInfos(bundleName: string, flags: int, userId?: int): Promise<Ar
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_SKILL_PRIVILEGE or ohos.permission.MANAGE_SKILL
 
 **模型约束：** 此接口仅可在Stage模型下使用。

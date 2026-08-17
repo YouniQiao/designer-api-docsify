@@ -17,11 +17,9 @@ Reads the text content of a file. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readText)
+**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readtext)
 
 <!--Device-unnamed-declare function readText(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): Promise<string>--><!--Device-unnamed-declare function readText(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): Promise<string>-End-->
 
@@ -59,11 +57,9 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readText)
+**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readtext)
 
 <!--Device-unnamed-declare function readText(  filePath: string,  options: {    position?: number;    length?: number;    encoding?: string;  },  callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function readText(  filePath: string,  options: {    position?: number;    length?: number;    encoding?: string;  },  callback: AsyncCallback<string>): void-End-->
 

@@ -1,14 +1,10 @@
 # PixelMapDrawableDescriptor
 
-支持通过传入PixelMap创建PixelMapDrawableDescriptor对象。 继承自[DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult)。
+支持通过传入PixelMap创建PixelMapDrawableDescriptor对象。 继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult)。
 
-**继承/实现关系：** PixelMapDrawableDescriptor extends [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
+**继承/实现关系：** PixelMapDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#drawabledescriptor)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export class PixelMapDrawableDescriptor--><!--Device-unnamed-export class PixelMapDrawableDescriptor-End-->
 
@@ -23,10 +19,6 @@ constructor(src?: image.PixelMap)
 PixelMapDrawableDescriptor的构造函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,10 +44,6 @@ PixelMapDrawableDescriptor的构造函数，通过PixelMap类型或者ResourceSt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -70,7 +58,7 @@ PixelMapDrawableDescriptor的构造函数，通过PixelMap类型或者ResourceSt
 | --- | --- | --- | --- |
 | src | image.PixelMap \| ResourceStr | 否 | PixelMap类型参数，存储PixelMap图片数据。支持应用资源、系统资源、沙箱路径（file://&lt;bundleName&gt;/&lt;sandboxPath&gt;） 和Base64字符串用于创建PixelMapDrawableDescriptor。 |
 
-## 示例
+**示例**
 
 通过ResourceStr创建PixelMapDrawableDescriptor，示例代码如下。
 

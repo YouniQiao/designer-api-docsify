@@ -10,8 +10,6 @@ Checks whether this process can access a file. This API uses a promise to return
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [access](arkts-corefile-file-fs-access-f.md#access)
@@ -44,8 +42,6 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [access](arkts-corefile-file-fs-access-f.md#access)
@@ -71,8 +67,6 @@ declare function access(path: string, mode: number, callback: AsyncCallback<void
 Checks whether this process can access a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

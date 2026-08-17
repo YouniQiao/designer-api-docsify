@@ -10,10 +10,6 @@ function doAction(mechId: int, actionType: ActionType): Promise<Result>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-mechanicManager-function doAction(mechId: int, actionType: ActionType): Promise<Result>--><!--Device-mechanicManager-function doAction(mechId: int, actionType: ActionType): Promise<Result>-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core

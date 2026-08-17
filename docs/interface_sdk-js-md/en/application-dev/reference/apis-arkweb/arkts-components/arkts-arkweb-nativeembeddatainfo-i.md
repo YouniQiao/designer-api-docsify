@@ -1,12 +1,8 @@
 # NativeEmbedDataInfo
 
-Provides detailed information about the changes of the same-layer tag lifecycle.
+Provides detailed information about the changes of the same-layer tag lifecycle, including the status and tag information. It is suitable for scenarios where monitoring same-layer element lifecycle is required, improving rendering state management accuracy and user experience.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface NativeEmbedDataInfo--><!--Device-unnamed-declare interface NativeEmbedDataInfo-End-->
 
@@ -18,15 +14,11 @@ Provides detailed information about the changes of the same-layer tag lifecycle.
 embedId?: string
 ```
 
-ID of the same-layer tag.
+Unique ID of the same-layer tag.
 
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ Detailed information about the same-layer tag.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedDataInfo-info?: NativeEmbedInfo--><!--Device-NativeEmbedDataInfo-info?: NativeEmbedInfo-End-->
@@ -68,10 +56,6 @@ Lifecycle status of the same-layer tag.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedDataInfo-status?: NativeEmbedStatus--><!--Device-NativeEmbedDataInfo-status?: NativeEmbedStatus-End-->
@@ -84,15 +68,11 @@ Lifecycle status of the same-layer tag.
 surfaceId?: string
 ```
 
-Surface ID of the native image.
+SurfaceId of the NativeImage.
 
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

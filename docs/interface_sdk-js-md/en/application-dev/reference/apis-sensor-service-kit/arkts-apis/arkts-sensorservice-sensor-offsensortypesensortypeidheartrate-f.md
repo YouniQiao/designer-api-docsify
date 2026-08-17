@@ -16,11 +16,9 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR)(type: SensorId.HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#offsensoridcolor)(type: SensorId.HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
 
 **Required permissions:** ohos.permission.HEALTH_DATA
 

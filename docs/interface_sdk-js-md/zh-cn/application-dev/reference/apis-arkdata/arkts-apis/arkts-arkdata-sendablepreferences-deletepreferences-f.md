@@ -10,10 +10,6 @@ function deletePreferences(context: Context, options: Options): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-sendablePreferences-function deletePreferences(context: Context, options: Options): Promise<void>--><!--Device-sendablePreferences-function deletePreferences(context: Context, options: Options): Promise<void>-End-->
@@ -44,7 +40,7 @@ function deletePreferences(context: Context, options: Options): Promise<void>
 | [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';

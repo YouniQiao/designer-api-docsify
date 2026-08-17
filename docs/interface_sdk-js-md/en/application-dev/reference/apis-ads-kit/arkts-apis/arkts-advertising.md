@@ -4,10 +4,6 @@ The advertising module provides APIs for requesting and displaying ads. > **NOTE
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace advertising--><!--Device-unnamed-declare namespace advertising-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -24,12 +20,12 @@ import { advertising } from 'advertising';
 
 | Name | Description |
 | --- | --- |
-| [deleteWebAdInterface](arkts-ads-advertising-deletewebadinterface-f.md#deleteWebAdInterface) | Deletes the ad JavaScript object injected through **registerWebAdInterface** (this API is only open to some pre-installed system applications). |
-| [getAdRequestBody](arkts-ads-advertising-getadrequestbody-f.md#getAdRequestBody) | Obtains the body of an ad request. This API uses a promise to return the result (this API is only open to some pre-installed system applications). |
-| [parseAdResponse](arkts-ads-advertising-parseadresponse-f.md#parseAdResponse) | Parses and processes the body of an ad response (this API is only open to some pre-installed system applications). |
-| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md#registerWebAdInterface) | Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications). |
-| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md#registerWebAdInterface) | Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications). |
-| [showAd](arkts-ads-advertising-showad-f.md#showAd) | Shows a full-screen ad. > **NOTE：**> > 1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API. > > 2. This API only supports displaying rewarded ads and interstitial ads. |
+| [deleteWebAdInterface](arkts-ads-advertising-deletewebadinterface-f.md#deletewebadinterface) | Deletes the ad JavaScript object injected through **registerWebAdInterface** (this API is only open to some pre-installed system applications). |
+| [getAdRequestBody](arkts-ads-advertising-getadrequestbody-f.md#getadrequestbody) | Obtains the body of an ad request. This API uses a promise to return the result (this API is only open to some pre-installed system applications). |
+| [parseAdResponse](arkts-ads-advertising-parseadresponse-f.md#parseadresponse) | Parses and processes the body of an ad response (this API is only open to some pre-installed system applications). |
+| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md#registerwebadinterface) | Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications). |
+| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md#registerwebadinterface) | Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications). |
+| [showAd](arkts-ads-advertising-showad-f.md#showad) | Shows a full-screen ad. > **NOTE：**> > 1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API. > > 2. This API only supports displaying rewarded ads and interstitial ads. |
 
 ### Classes
 

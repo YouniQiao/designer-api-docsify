@@ -12,13 +12,9 @@ import { hiAppEvent } from 'hiAppEvent';
 function setUserId(name: string, value: string): void
 ```
 
-Sets a user ID, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md#Processor) is configured.
+Sets a user ID, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md#processor) is configured.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,7 +35,7 @@ Sets a user ID, which is used for association when a [Processor](arkts-performan
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

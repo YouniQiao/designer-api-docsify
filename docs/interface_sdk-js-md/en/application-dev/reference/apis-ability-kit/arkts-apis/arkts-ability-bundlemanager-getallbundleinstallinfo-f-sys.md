@@ -16,10 +16,6 @@ Obtains the extended install information about all applications in the system. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
 **Model restriction:** This API can be used only in the stage model.
@@ -53,10 +49,6 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, RecordData>>>
 Obtains the install information of all apps.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 

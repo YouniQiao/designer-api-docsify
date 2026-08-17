@@ -1,12 +1,8 @@
 # RemindType (System API)
 
-Specify the remind type, see [updateRemindPolicy](arkts-network-policy-updateremindpolicy-f-sys.md#updateRemindPolicy-(System-API)).
+Specify the remind type, see [updateRemindPolicy](arkts-network-policy-updateremindpolicy-f-sys.md#updateremindpolicy-system-api).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-policy-export enum RemindType--><!--Device-policy-export enum RemindType-End-->
 
@@ -24,10 +20,6 @@ Warning alerts when the limit is reached.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-RemindType-REMIND_TYPE_WARNING = 1--><!--Device-RemindType-REMIND_TYPE_WARNING = 1-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -43,10 +35,6 @@ REMIND_TYPE_LIMIT = 2
 Limit alerts when the limit is reached.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-RemindType-REMIND_TYPE_LIMIT = 2--><!--Device-RemindType-REMIND_TYPE_LIMIT = 2-End-->
 

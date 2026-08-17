@@ -1,12 +1,8 @@
 # OnOverScrollEvent
 
-Represents the callback invoked when the web page is overscrolled.
+Defines the callback information triggered when the web page is overscrolled, including the horizontal and vertical offsets.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnOverScrollEvent--><!--Device-unnamed-declare interface OnOverScrollEvent-End-->
 
@@ -23,10 +19,6 @@ Horizontal overscroll offset based on the leftmost edge of the web page. Unit: v
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -45,10 +37,6 @@ Vertical overscroll offset based on the top edge of the web page. Unit: vp.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

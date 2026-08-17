@@ -16,10 +16,6 @@ Obtains all SkillInfo objects installed on the device. To query information for 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SKILL_PRIVILEGE or ohos.permission.MANAGE_SKILL
 
 **Model restriction:** This API can be used only in the stage model.

@@ -10,9 +10,7 @@ Duplicates the file descriptor and returns the corresponding **File** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function dup(fd: int): File--><!--Device-fileIo-function dup(fd: int): File-End-->
 

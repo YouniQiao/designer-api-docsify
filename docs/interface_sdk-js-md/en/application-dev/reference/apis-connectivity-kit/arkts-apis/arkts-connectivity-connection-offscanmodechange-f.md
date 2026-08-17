@@ -16,10 +16,6 @@ Unsubscribe to an event indicating that the scanning mode of the local device ha
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -42,7 +38,7 @@ Unsubscribe to an event indicating that the scanning mode of the local device ha
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function ScanModeChangeEvent(scanMode: connection.ScanMode) {

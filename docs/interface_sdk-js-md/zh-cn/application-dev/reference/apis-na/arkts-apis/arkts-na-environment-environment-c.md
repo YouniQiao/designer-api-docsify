@@ -4,9 +4,7 @@ Environment具体使用说明，详见[Environment(设备环境查询)](../../..
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare class Environment--><!--Device-unnamed-export declare class Environment-End-->
 
@@ -22,9 +20,7 @@ static envProp<T>(key: string, value: T): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,13 +47,11 @@ static envProp<T>(key: string, value: T): boolean
 static envProps(props: EnvPropsOptions[]): void
 ```
 
-和[envProp](#envProp)类似，不同点在于参数为数组，可以一次性初始化多个数据。 建议在应用启动时调用，将系统环境变量批量存入AppStorage中。 需注意的是，如果传入的dafultValue为 ColorMode、 LayoutDirection类型， 或是数字，则需额外指定其具体类型。
+和[envProp](#envprop)类似，不同点在于参数为数组，可以一次性初始化多个数据。 建议在应用启动时调用，将系统环境变量批量存入AppStorage中。 需注意的是，如果传入的dafultValue为 ColorMode、 LayoutDirection类型， 或是数字，则需额外指定其具体类型。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,9 +75,7 @@ static keys(): Array<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,10 +4,6 @@ The **distributedAccount** module provides APIs for managing distributed account
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace distributedAccount--><!--Device-unnamed-declare namespace distributedAccount-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -24,7 +20,7 @@ import { distributedAccount } from 'distributedAccount';
 
 | Name | Description |
 | --- | --- |
-| [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md#getDistributedAccountAbility) | Obtains a **DistributedAccountAbility** instance. |
+| [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md#getdistributedaccountability) | Obtains a **DistributedAccountAbility** instance. |
 
 ### Interfaces
 

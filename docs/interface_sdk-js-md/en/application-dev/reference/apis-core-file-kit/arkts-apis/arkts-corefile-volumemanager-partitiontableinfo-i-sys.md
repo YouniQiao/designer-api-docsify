@@ -4,10 +4,6 @@ Partition table information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-volumeManager-export interface PartitionTableInfo--><!--Device-volumeManager-export interface PartitionTableInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -32,10 +28,6 @@ Alignment sector.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartitionTableInfo-alignSector: int--><!--Device-PartitionTableInfo-alignSector: int-End-->
@@ -55,10 +47,6 @@ Disk ID.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Number of partitions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartitionTableInfo-partitionCount: int--><!--Device-PartitionTableInfo-partitionCount: int-End-->
@@ -103,10 +87,6 @@ Array of partition information.
 **Type:** Array&lt;[PartitionInfo](arkts-corefile-volumemanager-partitioninfo-i-sys.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Sector size in bytes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartitionTableInfo-sectorSize: int--><!--Device-PartitionTableInfo-sectorSize: int-End-->
@@ -152,10 +128,6 @@ Partition table type, such as 'gpt' or 'mbr'.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartitionTableInfo-tableType: string--><!--Device-PartitionTableInfo-tableType: string-End-->
@@ -175,10 +147,6 @@ Total number of sectors.
 **Type:** long
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,8 @@
 # UiWindow
 
-UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口拖动、调整窗口大小等能力。该类对象可通过[findWindow](arkts-test-uitest-driver-c.md#findWindow)接口获取。 该类提供的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
+UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口拖动、调整窗口大小等能力。该类对象可通过[findWindow](arkts-test-uitest-driver-c.md#findwindow)接口获取。 该类提供的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class UiWindow--><!--Device-unnamed-declare class UiWindow-End-->
 
@@ -21,10 +17,6 @@ close(): Promise<void>
 将窗口关闭。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,7 +38,7 @@ close(): Promise<void>
 | [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -71,10 +63,6 @@ focus(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-focus(): Promise<void>--><!--Device-UiWindow-focus(): Promise<void>-End-->
@@ -94,7 +82,7 @@ focus(): Promise<void>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -119,10 +107,6 @@ getBounds(): Promise<Rect>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-getBounds(): Promise<Rect>--><!--Device-UiWindow-getBounds(): Promise<Rect>-End-->
@@ -142,7 +126,7 @@ getBounds(): Promise<Rect>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -167,10 +151,6 @@ getBundleName(): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-getBundleName(): Promise<string>--><!--Device-UiWindow-getBundleName(): Promise<string>-End-->
@@ -190,7 +170,7 @@ getBundleName(): Promise<string>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -215,10 +195,6 @@ getDisplayId(): Promise<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-getDisplayId(): Promise<int>--><!--Device-UiWindow-getDisplayId(): Promise<int>-End-->
@@ -238,7 +214,7 @@ getDisplayId(): Promise<int>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -263,10 +239,6 @@ getTitle(): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-getTitle(): Promise<string>--><!--Device-UiWindow-getTitle(): Promise<string>-End-->
@@ -286,7 +258,7 @@ getTitle(): Promise<string>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -311,10 +283,6 @@ getWindowMode(): Promise<WindowMode>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-getWindowMode(): Promise<WindowMode>--><!--Device-UiWindow-getWindowMode(): Promise<WindowMode>-End-->
@@ -334,7 +302,7 @@ getWindowMode(): Promise<WindowMode>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -359,10 +327,6 @@ isActive(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-isActive(): Promise<boolean>--><!--Device-UiWindow-isActive(): Promise<boolean>-End-->
@@ -382,7 +346,7 @@ isActive(): Promise<boolean>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -403,15 +367,13 @@ async function demo() {
 isActived(): Promise<boolean>
 ```
 
-判断窗口是否为用户正在交互窗口。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](#isActive)替代。
+判断窗口是否为用户正在交互窗口。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](#isactive)替代。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 11
 
-**替代接口：** [isActive](#isActive)
+**替代接口：** [isActive](#isactive)
 
 <!--Device-UiWindow-isActived(): Promise<boolean>--><!--Device-UiWindow-isActived(): Promise<boolean>-End-->
 
@@ -430,7 +392,7 @@ isActived(): Promise<boolean>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -455,10 +417,6 @@ isFocused(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-isFocused(): Promise<boolean>--><!--Device-UiWindow-isFocused(): Promise<boolean>-End-->
@@ -478,7 +436,7 @@ isFocused(): Promise<boolean>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -503,10 +461,6 @@ maximize(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-maximize(): Promise<void>--><!--Device-UiWindow-maximize(): Promise<void>-End-->
@@ -527,7 +481,7 @@ maximize(): Promise<void>
 | [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -552,10 +506,6 @@ minimize(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-minimize(): Promise<void>--><!--Device-UiWindow-minimize(): Promise<void>-End-->
@@ -576,7 +526,7 @@ minimize(): Promise<void>
 | [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -600,10 +550,6 @@ moveTo(x: int, y: int): Promise<void>
 将窗口移动到目标点。使用Promise异步回调。适用于支持移动的窗口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -633,7 +579,7 @@ moveTo(x: int, y: int): Promise<void>
 | [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -658,10 +604,6 @@ resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-resize(wide: int, height: int, direction: ResizeDirection): Promise<void>--><!--Device-UiWindow-resize(wide: int, height: int, direction: ResizeDirection): Promise<void>-End-->
@@ -674,7 +616,7 @@ resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 | --- | --- | --- | --- |
 | wide | int | 是 | 以number的形式传入调整后窗口的宽度，取值范围：大于等于0的整数。 |
 | height | int | 是 | 以number的形式传入调整后窗口的高度，取值范围：大于等于0的整数。 |
-| direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | 是 | 以[ResizeDirection](arkts-test-uitest-resizedirection-e.md#ResizeDirection)的形式传入窗口调整的方向。 |
+| direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | 是 | 以[ResizeDirection](arkts-test-uitest-resizedirection-e.md#resizedirection)的形式传入窗口调整的方向。 |
 
 **返回值：**
 
@@ -701,10 +643,6 @@ resume(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-resume(): Promise<void>--><!--Device-UiWindow-resume(): Promise<void>-End-->
@@ -725,7 +663,7 @@ resume(): Promise<void>
 | [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets
@@ -750,10 +688,6 @@ split(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UiWindow-split(): Promise<void>--><!--Device-UiWindow-split(): Promise<void>-End-->
@@ -774,7 +708,7 @@ split(): Promise<void>
 | [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.test.ets

@@ -2,13 +2,11 @@
 
 Defines paragraph style option of RichEditor.
 
-**Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md#RichEditorRange)
+**Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md#richeditorrange)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface RichEditorParagraphStyleOptions--><!--Device-unnamed-export declare interface RichEditorParagraphStyleOptions-End-->
 
@@ -26,9 +24,7 @@ Paragraph style.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Corresponding to a file's metadata. FileMeta is useful when doing IPC with the b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backup-interface FileMeta--><!--Device-backup-interface FileMeta-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -32,10 +28,6 @@ Indicates the name of a bundle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FileMeta-bundleName: string--><!--Device-FileMeta-bundleName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -54,10 +46,6 @@ Indicates a uri to a file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FileMeta-uri: string--><!--Device-FileMeta-uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -75,10 +63,6 @@ Indicates uris to files.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

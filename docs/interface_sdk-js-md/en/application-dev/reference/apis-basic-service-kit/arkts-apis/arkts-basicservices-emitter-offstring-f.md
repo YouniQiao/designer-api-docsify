@@ -16,10 +16,6 @@ Unsubscribes from all events with the specified event ID. After this API is used
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-emitter-function off(eventId: string): void--><!--Device-emitter-function off(eventId: string): void-End-->
@@ -32,7 +28,7 @@ Unsubscribes from all events with the specified event ID. After this API is used
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Unregister the callbacks of all events whose ID is eventId1.
@@ -46,13 +42,9 @@ emitter.off('eventId1');
 function off(eventId: string, callback: Callback<EventData>): void
 ```
 
-Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the [on](arkts-basicservices-emitter-oninnerevent-f.md#on_InnerEvent) or once API. Otherwise, no processing is performed. After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
+Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the [on](arkts-basicservices-emitter-oninnerevent-f.md#oninnerevent) or once API. Otherwise, no processing is performed. After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -67,7 +59,7 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister, which must be the same as the callback used during registration. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -91,10 +83,6 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-emitter-function off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-emitter-function off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
@@ -108,7 +96,7 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister, which must be the same as the callback used during registration. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

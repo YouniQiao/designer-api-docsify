@@ -16,10 +16,6 @@ Sets the IP address of a specific Ethernet interface. This API is suitable for e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -46,7 +42,7 @@ Sets the IP address of a specific Ethernet interface. This API is suitable for e
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9201010](../errorcode-enterpriseDeviceManager.md#9201010-failed-to-configure-the-ethernet-network-interface) | Ethernet configuration failed. Ethernet device not connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

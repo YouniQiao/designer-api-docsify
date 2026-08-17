@@ -4,10 +4,6 @@ Describes pairing request parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-remoteDevice-interface PairingRequestParam--><!--Device-remoteDevice-interface PairingRequestParam-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -30,10 +26,6 @@ Indicates the device address. The length must be 17, The value consists of hexad
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PairingRequestParam-address: string--><!--Device-PairingRequestParam-address: string-End-->
@@ -52,10 +44,6 @@ Indicates the pairing type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PairingRequestParam-pairingType: PairingType--><!--Device-PairingRequestParam-pairingType: PairingType-End-->
@@ -73,10 +61,6 @@ Key for the device pairing.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

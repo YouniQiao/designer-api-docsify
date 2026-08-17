@@ -4,8 +4,6 @@ Sets the initial state of the slidable panel.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 12
 
 <!--Device-unnamed-declare enum PanelMode--><!--Device-unnamed-declare enum PanelMode-End-->
@@ -21,8 +19,6 @@ Mini = 0
 Minimum state.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 
@@ -42,8 +38,6 @@ SHalf-screen-like status
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -61,8 +55,6 @@ Full
 Class Full Screen Status.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 12
 

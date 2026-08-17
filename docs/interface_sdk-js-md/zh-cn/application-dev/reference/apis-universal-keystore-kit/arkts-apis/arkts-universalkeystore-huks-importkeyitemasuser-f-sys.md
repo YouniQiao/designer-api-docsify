@@ -10,10 +10,6 @@ function importKeyItemAsUser(userId: number, keyAlias: string, huksOptions: Huks
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-huks-function importKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>--><!--Device-huks-function importKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>-End-->
@@ -57,7 +53,7 @@ function importKeyItemAsUser(userId: number, keyAlias: string, huksOptions: Huks
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 
-## 示例
+**示例**
 
 以下代码示例接口调用的前置条件同上文generateKeyItemAsUser的前置条件
 

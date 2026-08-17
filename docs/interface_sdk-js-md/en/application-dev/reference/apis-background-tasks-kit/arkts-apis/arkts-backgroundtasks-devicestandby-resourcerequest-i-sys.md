@@ -4,10 +4,6 @@ The request of standby resources.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-deviceStandby-export interface ResourceRequest--><!--Device-deviceStandby-export interface ResourceRequest-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
@@ -32,10 +28,6 @@ The exemption duration. <br>Unit:s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ResourceRequest-duration: int--><!--Device-ResourceRequest-duration: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
@@ -53,10 +45,6 @@ The application name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ResourceRequest-name: string--><!--Device-ResourceRequest-name: string-End-->
 
@@ -76,10 +64,6 @@ The reason for the request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ResourceRequest-reason: string--><!--Device-ResourceRequest-reason: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
@@ -98,10 +82,6 @@ The set of resource types that an application requests.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ResourceRequest-resourceTypes: int--><!--Device-ResourceRequest-resourceTypes: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
@@ -119,10 +99,6 @@ The application uid.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ResourceRequest-uid: int--><!--Device-ResourceRequest-uid: int-End-->
 

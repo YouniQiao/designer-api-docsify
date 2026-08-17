@@ -4,10 +4,6 @@ Enumerates the dynamic range types of media assets.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-export enum DynamicRangeType--><!--Device-photoAccessHelper-export enum DynamicRangeType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -22,10 +18,6 @@ Standard dynamic range (SDR).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DynamicRangeType-SDR = 0--><!--Device-DynamicRangeType-SDR = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -39,10 +31,6 @@ HDR = 1
 High dynamic range (HDR).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DynamicRangeType-HDR = 1--><!--Device-DynamicRangeType-HDR = 1-End-->
 

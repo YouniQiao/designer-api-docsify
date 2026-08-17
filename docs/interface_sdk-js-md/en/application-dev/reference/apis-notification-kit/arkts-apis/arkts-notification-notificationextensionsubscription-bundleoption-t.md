@@ -8,10 +8,6 @@ Describes the bundle information of an application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationExtensionSubscription-export type BundleOption = _BundleOption--><!--Device-notificationExtensionSubscription-export type BundleOption = _BundleOption-End-->
 
 **System capability:** SystemCapability.Notification.Notification

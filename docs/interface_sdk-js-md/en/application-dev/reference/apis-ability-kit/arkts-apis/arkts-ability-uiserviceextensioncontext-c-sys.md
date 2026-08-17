@@ -1,14 +1,10 @@
 # UIServiceExtensionContext (System API)
 
-The UIServiceExtensionContext module provides the context environment for a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#UIServiceExtensionAbility-(System-API)). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext). UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#UIServiceExtensionAbility-(System-API)) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability. > **NOTE：**> > - The APIs of this module must be used on the main thread, but not on child threads such as Worker and TaskPool.
+The UIServiceExtensionContext module provides the context environment for a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext). UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability. > **NOTE：**> > - The APIs of this module must be used on the main thread, but not on child threads such as Worker and TaskPool.
 
 **Inheritance/Implementation:** UIServiceExtensionContext extends ExtensionContext
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class UIServiceExtensionContext--><!--Device-unnamed-declare class UIServiceExtensionContext-End-->
 
@@ -22,13 +18,9 @@ The UIServiceExtensionContext module provides the context environment for a [UIS
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
-Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) and returns the connection ID. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) and returns the connection ID. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +62,7 @@ Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common, Want } from '@kit.AbilityKit';
@@ -133,13 +125,9 @@ struct Page_UIServiceExtensionAbility {
 disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 ```
 
-Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility). This API is opposite to [connectServiceExtensionAbility](#connectServiceExtensionAbility) . This API uses a promise to return the result.
+Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability). This API is opposite to [connectServiceExtensionAbility](#connectserviceextensionability) . This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -153,7 +141,7 @@ Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionabi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connectionId | long | Yes | Connection ID returned by [connectServiceExtensionAbility](#connectServiceExtensionAbility). |
+| connectionId | long | Yes | Connection ID returned by [connectServiceExtensionAbility](#connectserviceextensionability). |
 
 **Return value:**
 
@@ -169,7 +157,7 @@ Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionabi
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -222,10 +210,6 @@ Starts an ability. This API uses a promise to return the result. > **NOTE：**> 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIServiceExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIServiceExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
@@ -270,7 +254,7 @@ Starts an ability. This API uses a promise to return the result. > **NOTE：**> 
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -311,13 +295,9 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -333,7 +313,7 @@ Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbilit
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the target ability. |
 | wantParam | Record&lt;string, Object&gt; | Yes | Want parameter. |
-| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
+| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
 
 **Return value:**
 
@@ -348,7 +328,7 @@ Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbilit
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -416,13 +396,9 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -438,7 +414,7 @@ Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbilit
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the target ability. |
 | wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Want parameter. |
-| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
+| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
 
 **Return value:**
 
@@ -459,13 +435,9 @@ Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbilit
 terminateSelf(): Promise<void>
 ```
 
-Terminates this [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#UIServiceExtensionAbility-(System-API)). This API uses a promise to return the result.
+Terminates this [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -481,7 +453,7 @@ Terminates this [UIServiceExtensionAbility](arkts-ability-app-ability-uiservicee
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIServiceExtensionAbility } from '@kit.AbilityKit';

@@ -4,11 +4,9 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md#BarometerResponse)
+**替代接口：** [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md#barometerresponse)
 
 <!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
 
@@ -25,8 +23,6 @@ pressure: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 8
 

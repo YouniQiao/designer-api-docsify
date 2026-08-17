@@ -4,10 +4,6 @@ Provides methods for setting information about input methods, including automati
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-settings-namespace input--><!--Device-settings-namespace input-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -24,12 +20,12 @@ import { settings } from 'settings';
 
 | Name | Description |
 | --- | --- |
-| [DEFAULT_INPUT_METHOD](arkts-basicservices-input-con.md#DEFAULT_INPUT_METHOD) | Indicates the default input method and its ID. |
-| [ACTIVATED_INPUT_METHOD_SUB_MODE](arkts-basicservices-input-con.md#ACTIVATED_INPUT_METHOD_SUB_MODE) | Indicates the default input method keyboard type and its ID. |
-| [ACTIVATED_INPUT_METHODS](arkts-basicservices-input-con.md#ACTIVATED_INPUT_METHODS) | Indicates the list of input methods that have been activated. &lt;p&gt;The list is a string that contains the IDs of activated input methods. The IDs are separated by colons (:), and keyboardTypes of an input method are separated by semicolons (;). An example format is {@code ima0:keyboardType0;keyboardType1;ima1:ima2:keyboardTypes0}. The type of &lt;b&gt;imaID&lt;/b&gt; is ElementName, and the type of &lt;b&gt;keyboard&lt;/b&gt; is int. |
-| [SELECTOR_VISIBILITY_FOR_INPUT_METHOD](arkts-basicservices-input-con.md#SELECTOR_VISIBILITY_FOR_INPUT_METHOD) | Specifies whether the input method selector is visible. &lt;p&gt;If the value is {@code 1}, the input method selector is visible. If the value is {@code 0}, the input method selector is invisible. |
-| [AUTO_CAPS_TEXT_INPUT](arkts-basicservices-input-con.md#AUTO_CAPS_TEXT_INPUT) | Specifies whether automatic capitalization is enabled for the text editor. &lt;p&gt;If the value is {@code 0}, automatic capitalization is disabled. If the value {@code 1}, automatic capitalization is enabled. |
-| [AUTO_PUNCTUATE_TEXT_INPUT](arkts-basicservices-input-con.md#AUTO_PUNCTUATE_TEXT_INPUT) | Specifies whether automatic punctuation is enabled for the text editor. Automatic punctuation enables the text editor to convert two spaces into a period (.) and a space. &lt;p&gt;If the value is {@code 0}, automatic punctuation is disabled. If the value {@code 1}, automatic punctuation is enabled. |
-| [AUTO_REPLACE_TEXT_INPUT](arkts-basicservices-input-con.md#AUTO_REPLACE_TEXT_INPUT) | Specifies whether autocorrect is enabled for the text editor. Autocorrect enables the text editor to correct typos. &lt;p&gt;If the value is {@code 0}, autocorrect is disabled. If the value {@code 1}, autocorrect is enabled. |
-| [SHOW_PASSWORD_TEXT_INPUT](arkts-basicservices-input-con.md#SHOW_PASSWORD_TEXT_INPUT) | Specifies whether password presentation is enabled in the text editor. Password presentation enables the text editor to show password characters when the user types them. &lt;p&gt;If the value is {@code 0}, password presentation is disabled. If the value {@code 1}, password presentation is enabled. |
+| [DEFAULT_INPUT_METHOD](arkts-basicservices-input-con.md#defaultinputmethod) | Indicates the default input method and its ID. |
+| [ACTIVATED_INPUT_METHOD_SUB_MODE](arkts-basicservices-input-con.md#activatedinputmethodsubmode) | Indicates the default input method keyboard type and its ID. |
+| [ACTIVATED_INPUT_METHODS](arkts-basicservices-input-con.md#activatedinputmethods) | Indicates the list of input methods that have been activated. &lt;p&gt;The list is a string that contains the IDs of activated input methods. The IDs are separated by colons (:), and keyboardTypes of an input method are separated by semicolons (;). An example format is {@code ima0:keyboardType0;keyboardType1;ima1:ima2:keyboardTypes0}. The type of &lt;b&gt;imaID&lt;/b&gt; is ElementName, and the type of &lt;b&gt;keyboard&lt;/b&gt; is int. |
+| [SELECTOR_VISIBILITY_FOR_INPUT_METHOD](arkts-basicservices-input-con.md#selectorvisibilityforinputmethod) | Specifies whether the input method selector is visible. &lt;p&gt;If the value is {@code 1}, the input method selector is visible. If the value is {@code 0}, the input method selector is invisible. |
+| [AUTO_CAPS_TEXT_INPUT](arkts-basicservices-input-con.md#autocapstextinput) | Specifies whether automatic capitalization is enabled for the text editor. &lt;p&gt;If the value is {@code 0}, automatic capitalization is disabled. If the value {@code 1}, automatic capitalization is enabled. |
+| [AUTO_PUNCTUATE_TEXT_INPUT](arkts-basicservices-input-con.md#autopunctuatetextinput) | Specifies whether automatic punctuation is enabled for the text editor. Automatic punctuation enables the text editor to convert two spaces into a period (.) and a space. &lt;p&gt;If the value is {@code 0}, automatic punctuation is disabled. If the value {@code 1}, automatic punctuation is enabled. |
+| [AUTO_REPLACE_TEXT_INPUT](arkts-basicservices-input-con.md#autoreplacetextinput) | Specifies whether autocorrect is enabled for the text editor. Autocorrect enables the text editor to correct typos. &lt;p&gt;If the value is {@code 0}, autocorrect is disabled. If the value {@code 1}, autocorrect is enabled. |
+| [SHOW_PASSWORD_TEXT_INPUT](arkts-basicservices-input-con.md#showpasswordtextinput) | Specifies whether password presentation is enabled in the text editor. Password presentation enables the text editor to show password characters when the user types them. &lt;p&gt;If the value is {@code 0}, password presentation is disabled. If the value {@code 1}, password presentation is enabled. |
 

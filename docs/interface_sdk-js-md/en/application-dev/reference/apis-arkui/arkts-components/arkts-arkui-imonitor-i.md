@@ -4,10 +4,6 @@ Define IMonitor interface
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface IMonitor--><!--Device-unnamed-declare interface IMonitor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 Return the pair of the value before the most recent change and current value for given path. If path does not exist, return undefined; If path is not specified, return the value pair corresponding to the first path in dirty.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +40,7 @@ Return the pair of the value before the most recent change and current value for
 | --- | --- |
 | [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @ObservedV2
@@ -106,10 +98,6 @@ Array of changed paths(keys)
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

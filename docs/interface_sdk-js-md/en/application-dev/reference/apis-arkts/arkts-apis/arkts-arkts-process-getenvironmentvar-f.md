@@ -16,11 +16,9 @@ Obtains the value of an environment variable.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getEnvironmentVar](arkts-arkts-process-processmanager-c.md#getEnvironmentVar)
+**Substitutes:** [getEnvironmentVar](arkts-arkts-process-processmanager-c.md#getenvironmentvar)
 
 <!--Device-process-function getEnvironmentVar(name: string): string--><!--Device-process-function getEnvironmentVar(name: string): string-End-->
 
@@ -38,7 +36,7 @@ Obtains the value of an environment variable.
 | --- | --- |
 | string | Value of the environment variable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pres = process.getEnvironmentVar("PATH");

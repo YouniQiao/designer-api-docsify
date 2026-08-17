@@ -16,10 +16,6 @@ Calculates a hash value for a file. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-hash-function hash(path: string, algorithm: string): Promise<string>--><!--Device-hash-function hash(path: string, algorithm: string): Promise<string>-End-->
@@ -46,7 +42,7 @@ Calculates a hash value for a file. This API uses a promise to return the result
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,10 +65,6 @@ Calculates a hash value for a file. This API uses an asynchronous callback to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-hash-function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void--><!--Device-hash-function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void-End-->
@@ -94,7 +86,7 @@ Calculates a hash value for a file. This API uses an asynchronous callback to re
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

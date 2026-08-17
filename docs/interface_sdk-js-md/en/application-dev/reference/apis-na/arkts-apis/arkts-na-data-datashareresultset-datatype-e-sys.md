@@ -4,10 +4,6 @@ Enumerates the data types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum DataType--><!--Device-unnamed-export enum DataType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -23,10 +19,6 @@ TYPE_NULL = 0
 Null.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Long integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataType-TYPE_LONG = 1--><!--Device-DataType-TYPE_LONG = 1-End-->
@@ -67,10 +55,6 @@ TYPE_DOUBLE = 2
 Double-precision floating-point number.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ String.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataType-TYPE_STRING = 3--><!--Device-DataType-TYPE_STRING = 3-End-->
@@ -111,10 +91,6 @@ TYPE_BLOB = 4
 Byte array.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

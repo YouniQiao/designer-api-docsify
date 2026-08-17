@@ -4,10 +4,6 @@ Defines a DiscoveryService object for discovering mDNS services of the specified
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-mdns-export interface DiscoveryService--><!--Device-mdns-export interface DiscoveryService-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
@@ -28,10 +24,6 @@ Cancels listening for discoveryStart events of mDNS services.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DiscoveryService-off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void-End-->
@@ -45,7 +37,7 @@ Cancels listening for discoveryStart events of mDNS services.
 | type | 'discoveryStart' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -81,10 +73,6 @@ Cancels listening for discoveryStop events of mDNS services.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DiscoveryService-off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void-End-->
@@ -108,10 +96,6 @@ Cancels listening for serviceFound events of mDNS services.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DiscoveryService-off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void-End-->
@@ -125,7 +109,7 @@ Cancels listening for serviceFound events of mDNS services.
 | type | 'serviceFound' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -164,10 +148,6 @@ Cancels listening for serviceLost events of mDNS services.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DiscoveryService-off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void-End-->
@@ -181,7 +161,7 @@ Cancels listening for serviceLost events of mDNS services.
 | type | 'serviceLost' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -217,10 +197,6 @@ Enables listening for discoveryStart events of mDNS services.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DiscoveryService-on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void-End-->
@@ -234,7 +210,7 @@ Enables listening for discoveryStart events of mDNS services.
 | type | 'discoveryStart' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -266,10 +242,6 @@ Enables listening for discoveryStop events of mDNS services.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DiscoveryService-on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void-End-->
@@ -283,7 +255,7 @@ Enables listening for discoveryStop events of mDNS services.
 | type | 'discoveryStop' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -315,10 +287,6 @@ Enables listening for serviceFound events of mDNS services.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DiscoveryService-on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void-End-->
@@ -332,7 +300,7 @@ Enables listening for serviceFound events of mDNS services.
 | type | 'serviceFound' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -367,10 +335,6 @@ Enables listening for serviceLost events of mDNS services.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DiscoveryService-on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void-End-->
@@ -384,7 +348,7 @@ Enables listening for serviceLost events of mDNS services.
 | type | 'serviceLost' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -416,17 +380,13 @@ Starts searching for mDNS services on the LAN.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DiscoveryService-startSearchingMDNS(): void--><!--Device-DiscoveryService-startSearchingMDNS(): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
-## Examples
+**Examples**
 
 Stage model:
 
@@ -452,17 +412,13 @@ Stops searching for mDNS services on the LAN.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DiscoveryService-stopSearchingMDNS(): void--><!--Device-DiscoveryService-stopSearchingMDNS(): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
-## Examples
+**Examples**
 
 Stage model:
 

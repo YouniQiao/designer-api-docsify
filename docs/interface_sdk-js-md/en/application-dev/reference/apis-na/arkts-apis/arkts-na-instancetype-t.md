@@ -8,10 +8,6 @@ Obtain the return type of a constructor function type
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-type InstanceType<T extends abstract new (...args: any) => any> = T extends abstract new (...args: any) => infer R ? R : any--><!--Device-unnamed-type InstanceType<T extends abstract new (...args: any) => any> = T extends abstract new (...args: any) => infer R ? R : any-End-->
 
 **Property type:** T extends abstract new (...args: any) => infer R ? R : any

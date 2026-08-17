@@ -1,12 +1,8 @@
-# NotificationFlags
+# NotificationFlags(Some states and flags for notifications)
 
 Defines the notification flags.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationFlags--><!--Device-unnamed-export interface NotificationFlags-End-->
 
@@ -23,10 +19,6 @@ Settings of the input information reminder features. - Bit 0: sound alert. The v
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationFlags-readonly reminderFlags?: long--><!--Device-NotificationFlags-readonly reminderFlags?: long-End-->
 

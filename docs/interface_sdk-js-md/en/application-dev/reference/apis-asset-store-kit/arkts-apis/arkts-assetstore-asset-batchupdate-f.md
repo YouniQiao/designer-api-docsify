@@ -12,13 +12,9 @@ import { asset } from 'asset';
 function batchUpdate(sourceAttributes: Array<AssetMap>, destAttributes: Array<AssetMap>): Promise<BatchResult>
 ```
 
-Updates assets in batches based on an attributes array. Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) can be updated in batches.
+Updates assets in batches based on an attributes array. Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) can be updated in batches.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-asset-function batchUpdate(sourceAttributes: Array<AssetMap>, destAttributes: Array<AssetMap>): Promise<BatchResult>--><!--Device-asset-function batchUpdate(sourceAttributes: Array<AssetMap>, destAttributes: Array<AssetMap>): Promise<BatchResult>-End-->
 
@@ -28,8 +24,8 @@ Updates assets in batches based on an attributes array. Only assets with the sam
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to query. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) attributes of all assets must be the same. |
-| destAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to be updated. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) attributes of all assets must be the same. |
+| sourceAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to query. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) attributes of all assets must be the same. |
+| destAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to be updated. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) attributes of all assets must be the same. |
 
 **Return value:**
 
@@ -49,6 +45,6 @@ Updates assets in batches based on an attributes array. Only assets with the sam
 | [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
 | [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
 | [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
-| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) in the array is not consistent. |
+| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) in the array is not consistent. |
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 

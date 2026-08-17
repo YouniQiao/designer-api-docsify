@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-photoAccessHelper-class CloudEnhancement--><!--Device-photoAccessHelper-class CloudEnhancement-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -23,10 +19,6 @@ cancelAllCloudEnhancementTasks(): Promise<void>
 取消全部云增强任务。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -50,7 +42,7 @@ cancelAllCloudEnhancementTasks(): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -77,10 +69,6 @@ cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-CloudEnhancement-cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>--><!--Device-CloudEnhancement-cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>-End-->
@@ -93,7 +81,7 @@ cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoAssets | Array&lt;PhotoAsset&gt; | 是 | 需要取消云增强任务的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset)集合。 |
+| photoAssets | Array&lt;PhotoAsset&gt; | 是 | 需要取消云增强任务的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset)集合。 |
 
 **返回值：**
 
@@ -110,7 +98,7 @@ cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## 示例
+**示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 
@@ -149,10 +137,6 @@ static getCloudEnhancementInstance(context: Context): CloudEnhancement
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
-
-**废弃版本：** -1
-
 <!--Device-CloudEnhancement-static getCloudEnhancementInstance(context: Context): CloudEnhancement--><!--Device-CloudEnhancement-static getCloudEnhancementInstance(context: Context): CloudEnhancement-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -179,7 +163,7 @@ static getCloudEnhancementInstance(context: Context): CloudEnhancement
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -214,10 +198,6 @@ static getCloudEnhancementInstance(context: Context): CloudEnhancement | null
 获取云增强类实例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CloudEnhancement-static getCloudEnhancementInstance(context: Context): CloudEnhancement | null--><!--Device-CloudEnhancement-static getCloudEnhancementInstance(context: Context): CloudEnhancement | null-End-->
 
@@ -255,10 +235,6 @@ getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-CloudEnhancement-getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>--><!--Device-CloudEnhancement-getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>-End-->
@@ -271,7 +247,7 @@ getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| asset | PhotoAsset | 是 | 需要查询云增强配对照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset)。 |
+| asset | PhotoAsset | 是 | 需要查询云增强配对照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset)。 |
 
 **返回值：**
 
@@ -288,7 +264,7 @@ getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## 示例
+**示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 
@@ -328,10 +304,6 @@ prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-CloudEnhancement-prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>--><!--Device-CloudEnhancement-prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>-End-->
@@ -344,7 +316,7 @@ prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoAsset | PhotoAsset | 是 | 需要修改云增强优先级照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset)。 |
+| photoAsset | PhotoAsset | 是 | 需要修改云增强优先级照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset)。 |
 
 **返回值：**
 
@@ -361,7 +333,7 @@ prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## 示例
+**示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 
@@ -401,10 +373,6 @@ queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancement
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-CloudEnhancement-queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancementTaskState>--><!--Device-CloudEnhancement-queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancementTaskState>-End-->
@@ -417,7 +385,7 @@ queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancement
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoAsset | PhotoAsset | 是 | 需要查询云增强任务信息的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset)。 |
+| photoAsset | PhotoAsset | 是 | 需要查询云增强任务信息的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset)。 |
 
 **返回值：**
 
@@ -434,7 +402,7 @@ queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancement
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## 示例
+**示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 
@@ -500,10 +468,6 @@ submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: b
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-CloudEnhancement-submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: boolean): Promise<void>--><!--Device-CloudEnhancement-submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: boolean): Promise<void>-End-->
@@ -516,7 +480,7 @@ submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: b
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoAssets | Array&lt;PhotoAsset&gt; | 是 | 需要增强照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset)集合。 |
+| photoAssets | Array&lt;PhotoAsset&gt; | 是 | 需要增强照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset)集合。 |
 | hasCloudWatermark | boolean | 是 | 增强后图片是否添加云增强水印。 |
 
 **返回值：**
@@ -534,7 +498,7 @@ submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: b
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## 示例
+**示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 
@@ -576,10 +540,6 @@ submitCloudEnhancementTasks(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-CloudEnhancement-submitCloudEnhancementTasks(      photoAssets: Array<PhotoAsset>,      hasCloudWatermark: boolean,      triggerMode?: int    ): Promise<void>--><!--Device-CloudEnhancement-submitCloudEnhancementTasks(      photoAssets: Array<PhotoAsset>,      hasCloudWatermark: boolean,      triggerMode?: int    ): Promise<void>-End-->
@@ -592,7 +552,7 @@ submitCloudEnhancementTasks(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoAssets | Array&lt;PhotoAsset&gt; | 是 | 需要增强照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset)集合。 |
+| photoAssets | Array&lt;PhotoAsset&gt; | 是 | 需要增强照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset)集合。 |
 | hasCloudWatermark | boolean | 是 | 若为true，增强后图片添加云增强水印；若为false，增强后图片不添加云增强水印。 |
 | triggerMode | int | 否 | 云增强任务触发类型。<br>- 0：手动触发。<br>- 1：自动触发。<br>- 默认值为0。 |
 
@@ -611,7 +571,7 @@ submitCloudEnhancementTasks(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## 示例
+**示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 
@@ -650,10 +610,6 @@ syncCloudEnhancementTaskStatus(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-CloudEnhancement-syncCloudEnhancementTaskStatus(): Promise<void>--><!--Device-CloudEnhancement-syncCloudEnhancementTaskStatus(): Promise<void>-End-->
@@ -676,7 +632,7 @@ syncCloudEnhancementTaskStatus(): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | 14000011 | Internal system error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

@@ -8,10 +8,6 @@ Defines the callback function used to listen for screen brightness information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void--><!--Device-display-type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,5 +17,5 @@ Defines the callback function used to listen for screen brightness information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data1 | T1 | Yes | Display ID. The value is of the number type. |
-| data2 | T2 | Yes | Brightness information. The value is of the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#BrightnessInfo) type. |
+| data2 | T2 | Yes | Brightness information. The value is of the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#brightnessinfo) type. |
 

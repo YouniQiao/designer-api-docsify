@@ -4,10 +4,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-interface MessageHandler--><!--Device-inputMethod-interface MessageHandler-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -28,10 +24,6 @@ This method is called when a custom message is received.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void--><!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -43,7 +35,7 @@ This method is called when a custom message is received.
 | msgId | string | Yes | the identifier of the message. |
 | msgParam | ArrayBuffer | No | the parameter of the custom message. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
@@ -69,15 +61,11 @@ This method is called when a new message handler is set.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-MessageHandler-onTerminated(): void--><!--Device-MessageHandler-onTerminated(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
-## Examples
+**Examples**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
@@ -105,10 +93,6 @@ This method is called when a custom message is received.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MessageHandler-onMessage: OnMessageCallback--><!--Device-MessageHandler-onMessage: OnMessageCallback-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -124,10 +108,6 @@ This method is called when a new message handler is set.
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MessageHandler-onTerminated: Callback<void>--><!--Device-MessageHandler-onTerminated: Callback<void>-End-->
 

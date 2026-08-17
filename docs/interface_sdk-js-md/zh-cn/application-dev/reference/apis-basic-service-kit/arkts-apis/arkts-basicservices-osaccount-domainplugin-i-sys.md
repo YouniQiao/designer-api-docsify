@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-interface DomainPlugin--><!--Device-osAccount-interface DomainPlugin-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -24,10 +20,6 @@ auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUs
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -42,7 +34,7 @@ auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUs
 | credential | Uint8Array | 是 | 指示域账号的凭据。 |
 | callback | IUserAuthCallback | 是 | 指示认证结果回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -104,10 +96,6 @@ authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -121,7 +109,7 @@ authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback)
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
 | callback | IUserAuthCallback | 是 | 指示认证结果回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -167,10 +155,6 @@ authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback:
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback: IUserAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -185,7 +169,7 @@ authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback:
 | token | Uint8Array | 是 | 指示PIN码或生物识别认证成功时生成的授权令牌。 |
 | callback | IUserAuthCallback | 是 | 指示认证结果回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -231,10 +215,6 @@ bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: Asy
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: AsyncCallback<void>): void--><!--Device-DomainPlugin-bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -247,9 +227,9 @@ bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: Asy
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
 | localId | number | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 指示绑定结果回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 指示绑定结果回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -295,10 +275,6 @@ getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uin
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void--><!--Device-DomainPlugin-getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -310,9 +286,9 @@ getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uin
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [GetDomainAccessTokenOptions](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | 是 | 指示获取域访问令牌的选项。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -359,10 +335,6 @@ getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallba
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallback<DomainAccountInfo>): void--><!--Device-DomainPlugin-getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallback<DomainAccountInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -374,9 +346,9 @@ getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [GetDomainAccountInfoPluginOptions](arkts-basicservices-osaccount-getdomainaccountinfopluginoptions-i-sys.md) | 是 | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | 是 | 指示查询结果回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | 是 | 指示查询结果回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -427,10 +399,6 @@ getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<AuthStatusInfo>): void--><!--Device-DomainPlugin-getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<AuthStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -442,9 +410,9 @@ getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthStatusInfo&gt; | 是 | 指示查询结果回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;AuthStatusInfo&gt; | 是 | 指示查询结果回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -496,10 +464,6 @@ isAccountTokenValid(
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-isAccountTokenValid(      domainAccountInfo: DomainAccountInfo,      token: Uint8Array,      callback: AsyncCallback<boolean>    ): void--><!--Device-DomainPlugin-isAccountTokenValid(      domainAccountInfo: DomainAccountInfo,      token: Uint8Array,      callback: AsyncCallback<boolean>    ): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -512,9 +476,9 @@ isAccountTokenValid(
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
 | token | Uint8Array | 是 | 指示域账号令牌。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 指示检查结果回调。true表示指定的域账号令牌是有效的；false表示指定的域账号令牌是无效的。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 指示检查结果回调。true表示指定的域账号令牌是有效的；false表示指定的域账号令牌是无效的。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -560,10 +524,6 @@ unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void>): void--><!--Device-DomainPlugin-unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -575,9 +535,9 @@ unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 指示绑定结果回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 指示绑定结果回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -625,10 +585,6 @@ auth: DomainPluginAuthFunc
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-auth: DomainPluginAuthFunc--><!--Device-DomainPlugin-auth: DomainPluginAuthFunc-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -646,10 +602,6 @@ authWithPopup: DomainPluginAuthWithPopupFunc
 **类型：** [DomainPluginAuthWithPopupFunc](arkts-basicservices-osaccount-domainpluginauthwithpopupfunc-t-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DomainPlugin-authWithPopup: DomainPluginAuthWithPopupFunc--><!--Device-DomainPlugin-authWithPopup: DomainPluginAuthWithPopupFunc-End-->
 
@@ -669,10 +621,6 @@ authWithToken: DomainPluginAuthWithTokenFunc
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-authWithToken: DomainPluginAuthWithTokenFunc--><!--Device-DomainPlugin-authWithToken: DomainPluginAuthWithTokenFunc-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -690,10 +638,6 @@ bindAccount: DomainPluginBindAccountFunc
 **类型：** [DomainPluginBindAccountFunc](arkts-basicservices-osaccount-domainpluginbindaccountfunc-t-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DomainPlugin-bindAccount: DomainPluginBindAccountFunc--><!--Device-DomainPlugin-bindAccount: DomainPluginBindAccountFunc-End-->
 
@@ -713,10 +657,6 @@ getAccessToken: DomainPluginGetAccessTokenFunc
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-getAccessToken: DomainPluginGetAccessTokenFunc--><!--Device-DomainPlugin-getAccessToken: DomainPluginGetAccessTokenFunc-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -734,10 +674,6 @@ getAccountInfo: DomainPluginGetAccountInfoFunc
 **类型：** [DomainPluginGetAccountInfoFunc](arkts-basicservices-osaccount-domainplugingetaccountinfofunc-t-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DomainPlugin-getAccountInfo: DomainPluginGetAccountInfoFunc--><!--Device-DomainPlugin-getAccountInfo: DomainPluginGetAccountInfoFunc-End-->
 
@@ -757,10 +693,6 @@ getAuthStatusInfo: DomainPluginGetAuthStatusInfoFunc
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-getAuthStatusInfo: DomainPluginGetAuthStatusInfoFunc--><!--Device-DomainPlugin-getAuthStatusInfo: DomainPluginGetAuthStatusInfoFunc-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -779,10 +711,6 @@ isAccountTokenValid: DomainPluginIsAccountTokenValidFunc
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DomainPlugin-isAccountTokenValid: DomainPluginIsAccountTokenValidFunc--><!--Device-DomainPlugin-isAccountTokenValid: DomainPluginIsAccountTokenValidFunc-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -800,10 +728,6 @@ unbindAccount: DomainPluginUnbindAccountFunc
 **类型：** [DomainPluginUnbindAccountFunc](arkts-basicservices-osaccount-domainpluginunbindaccountfunc-t-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DomainPlugin-unbindAccount: DomainPluginUnbindAccountFunc--><!--Device-DomainPlugin-unbindAccount: DomainPluginUnbindAccountFunc-End-->
 

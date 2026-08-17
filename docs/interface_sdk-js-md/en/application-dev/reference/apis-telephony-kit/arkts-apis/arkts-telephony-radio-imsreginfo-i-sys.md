@@ -4,10 +4,6 @@ Indicates IMS registration information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export interface ImsRegInfo--><!--Device-radio-export interface ImsRegInfo-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -32,10 +28,6 @@ Indicates the registration status of the ims service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImsRegInfo-imsRegState: ImsRegState--><!--Device-ImsRegInfo-imsRegState: ImsRegState-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -53,10 +45,6 @@ Indicates the mode of ims radio technology.
 **Type:** [ImsRegTech](arkts-telephony-radio-imsregtech-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImsRegInfo-imsRegTech: ImsRegTech--><!--Device-ImsRegInfo-imsRegTech: ImsRegTech-End-->
 

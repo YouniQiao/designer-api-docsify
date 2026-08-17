@@ -4,10 +4,6 @@ Describes group configuration options for download tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-interface GroupConfig--><!--Device-agent-interface GroupConfig-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -30,10 +26,6 @@ Whether to send progress notifications. This parameter applies only to backgroun
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GroupConfig-gauge?: boolean--><!--Device-GroupConfig-gauge?: boolean-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -49,10 +41,6 @@ Custom settings for the notification bar. The default value is **{}**.
 **Type:** Notification
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GroupConfig-notification: Notification--><!--Device-GroupConfig-notification: Notification-End-->
 

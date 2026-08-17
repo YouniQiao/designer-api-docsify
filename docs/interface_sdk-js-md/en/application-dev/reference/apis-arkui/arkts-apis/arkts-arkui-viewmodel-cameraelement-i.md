@@ -2,13 +2,9 @@
 
 The &lt;camera&gt; component provides preview and photographing functions.
 
-**Inheritance/Implementation:** CameraElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
+**Inheritance/Implementation:** CameraElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface CameraElement--><!--Device-unnamed-export interface CameraElement-End-->
 
@@ -23,10 +19,6 @@ takePhoto(options: CameraTakePhotoOptions): void
 Take photos with specified parameters.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

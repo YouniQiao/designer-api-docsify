@@ -16,10 +16,6 @@ Switches the uninstall state of an application. This API is independent of EDM a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CHANGE_BUNDLE_UNINSTALL_STATE
 
 <!--Device-bundleManager-function switchUninstallState(bundleName: string, state: boolean): void--><!--Device-bundleManager-function switchUninstallState(bundleName: string, state: boolean): void-End-->
@@ -45,7 +41,7 @@ Switches the uninstall state of an application. This API is independent of EDM a
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

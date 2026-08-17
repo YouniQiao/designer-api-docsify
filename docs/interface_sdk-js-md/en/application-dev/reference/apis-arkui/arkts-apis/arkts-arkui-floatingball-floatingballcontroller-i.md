@@ -4,10 +4,6 @@ Implements a floating ball controller instance, which is used to start, update, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-floatingBall-interface FloatingBallController--><!--Device-floatingBall-interface FloatingBallController-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -27,10 +23,6 @@ getFloatingBallWindowInfo(): Promise<FloatingBallWindowInfo>
 Obtains the floating ball window information. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FloatingBallController-getFloatingBallWindowInfo(): Promise<FloatingBallWindowInfo>--><!--Device-FloatingBallController-getFloatingBallWindowInfo(): Promise<FloatingBallWindowInfo>-End-->
 
@@ -53,7 +45,7 @@ Obtains the floating ball window information. This API uses a promise to return 
 | [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible causes: <br>1. The floating ball controller has been destroyed. <br>2. The floating ball window is not created or has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -74,10 +66,6 @@ offClick(callback?: Callback<void>): void
 Unregister floating ball click event listener.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FloatingBallController-offClick(callback?: Callback<void>): void--><!--Device-FloatingBallController-offClick(callback?: Callback<void>): void-End-->
 
@@ -106,10 +94,6 @@ offDestroy(callback?: Callback<string>): void
 Unregister floating ball destroy event listener.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,10 +125,6 @@ Unregister floating ball stateChange event listener.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallController-offStateChange(callback?: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-offStateChange(callback?: Callback<FloatingBallState>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -173,10 +153,6 @@ Unregisters the listener for click events of the floating ball.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallController-off(type: 'click', callback?: Callback<void>): void--><!--Device-FloatingBallController-off(type: 'click', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -196,7 +172,7 @@ Unregisters the listener for click events of the floating ball.
 | [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let onClick = () => {
@@ -219,10 +195,6 @@ Unregisters the listener for lifecycle state changes of the floating ball.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallController-off(type: 'stateChange', callback?: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-off(type: 'stateChange', callback?: Callback<FloatingBallState>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -242,7 +214,7 @@ Unregisters the listener for lifecycle state changes of the floating ball.
 | [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let onStateChange = (state: floatingBall.FloatingBallState) => {
@@ -264,10 +236,6 @@ onClick(callback: Callback<void>): void
 Register floating ball click event listener.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FloatingBallController-onClick(callback: Callback<void>): void--><!--Device-FloatingBallController-onClick(callback: Callback<void>): void-End-->
 
@@ -297,10 +265,6 @@ onDestroy(callback: Callback<string>): void
 Register floating ball destroy event listener.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -333,10 +297,6 @@ Register floating ball stateChange event listener.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallController-onStateChange(callback: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-onStateChange(callback: Callback<FloatingBallState>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -366,10 +326,6 @@ Registers a listener for click events of the floating ball. To prevent memory le
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallController-on(type: 'click', callback: Callback<void>): void--><!--Device-FloatingBallController-on(type: 'click', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -390,7 +346,7 @@ Registers a listener for click events of the floating ball. To prevent memory le
 | [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let onClick = () => {
@@ -413,10 +369,6 @@ Registers a listener for lifecycle state changes of the floating ball. To preven
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallController-on(type: 'stateChange', callback: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-on(type: 'stateChange', callback: Callback<FloatingBallState>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -437,7 +389,7 @@ Registers a listener for lifecycle state changes of the floating ball. To preven
 | [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let onStateChange = (state: floatingBall.FloatingBallState) => {
@@ -459,10 +411,6 @@ restoreMainWindow(want: Want): Promise<void>
 Restores the main window of the application and loads the specified page. This API uses a promise to return the result. This API can be called only after the floating ball is tapped. If the application has the **ohos.permission.AUTO_RESTORE_MAIN_WINDOW** permission, this API can be called directly without tapping the floating ball.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_FLOAT_BALL
 
@@ -496,7 +444,7 @@ Restores the main window of the application and loads the specified page. This A
 | [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible causes: <br>1.The floating ball controller has been destroyed. <br>2.The floating ball window is not created or has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -526,10 +474,6 @@ setFloatingBallVisibilityInApp(isVisible: boolean): Promise<void>
 Sets whether the floating ball is visible in the application. This API uses a promise to return the result. - When the application is on the recent tasks screen (the [lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **PAUSED**), the floating ball is invisible. - By default (when this API is not called) or when this API is called with the value **true** passed in, the floating ball is visible except on the recent tasks screen. - When this API is called with the value **false** passed in, the floating ball is invisible when the application is in the foreground (the [lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **SHOWN** or **RESUMED**) and is visible when the application is in the background (the [lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **HIDDEN**).
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -567,10 +511,6 @@ Starts the floating ball. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_FLOAT_BALL
 
 <!--Device-FloatingBallController-startFloatingBall(params: FloatingBallParams): Promise<void>--><!--Device-FloatingBallController-startFloatingBall(params: FloatingBallParams): Promise<void>-End-->
@@ -603,7 +543,7 @@ Starts the floating ball. This API uses a promise to return the result.
 | [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball state is stopping. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -634,10 +574,6 @@ Stops the floating ball. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FloatingBallController-stopFloatingBall(): Promise<void>--><!--Device-FloatingBallController-stopFloatingBall(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -656,7 +592,7 @@ Stops the floating ball. This API uses a promise to return the result.
 | [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -677,10 +613,6 @@ updateFloatingBall(params: FloatingBallParams): Promise<void>
 Updates the floating ball. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FloatingBallController-updateFloatingBall(params: FloatingBallParams): Promise<void>--><!--Device-FloatingBallController-updateFloatingBall(params: FloatingBallParams): Promise<void>-End-->
 
@@ -712,7 +644,7 @@ Updates the floating ball. This API uses a promise to return the result.
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
 | [1300028](../errorcode-window.md#1300028-floating-ball-based-on-a-static-template-cannot-be-updated) | Updating static template-based floating balls is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

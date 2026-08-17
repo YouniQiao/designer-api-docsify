@@ -4,10 +4,6 @@ Describes the parameters for creating a window for a UI ServiceExtensionAbility.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface ExtensionWindowConfig--><!--Device-window-interface ExtensionWindowConfig-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -32,10 +28,6 @@ Parameters used for creating a child window. There is no default value. This par
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExtensionWindowConfig-subWindowOptions?: SubWindowOptions--><!--Device-ExtensionWindowConfig-subWindowOptions?: SubWindowOptions-End-->
@@ -55,10 +47,6 @@ Parameters for creating a system window. There is no default value. This paramet
 **Type:** [SystemWindowOptions](arkts-arkui-window-systemwindowoptions-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Window attribute. It specifies whether the created window is a child window or a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExtensionWindowConfig-windowAttribute: ExtensionWindowAttribute--><!--Device-ExtensionWindowConfig-windowAttribute: ExtensionWindowAttribute-End-->
@@ -104,10 +88,6 @@ Window name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExtensionWindowConfig-windowName: string--><!--Device-ExtensionWindowConfig-windowName: string-End-->
@@ -127,10 +107,6 @@ Rectangular area of the window.
 **Type:** Rect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

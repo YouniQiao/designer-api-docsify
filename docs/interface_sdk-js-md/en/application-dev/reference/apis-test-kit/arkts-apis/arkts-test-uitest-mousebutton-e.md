@@ -4,10 +4,6 @@ Describes the injected simulated mouse button.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum MouseButton--><!--Device-unnamed-declare enum MouseButton-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -21,10 +17,6 @@ MOUSE_BUTTON_LEFT = 0
 Left button on the mouse.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Right button on the mouse.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1--><!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1-End-->
@@ -61,10 +49,6 @@ MOUSE_BUTTON_MIDDLE = 2
 MIDDLE button on the mouse.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

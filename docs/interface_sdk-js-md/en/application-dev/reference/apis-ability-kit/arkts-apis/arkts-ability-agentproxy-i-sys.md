@@ -4,10 +4,6 @@ The proxy object of the AgentExtensionAbility, used to send messages to the Agen
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AgentProxy--><!--Device-unnamed-export interface AgentProxy-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -23,10 +19,6 @@ authorize(handshakeData: string): void
 Send authentication to the AgentExtensionAbility.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,10 +49,6 @@ sendData(data: string): void
 Send data to the AgentExtensionAbility.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

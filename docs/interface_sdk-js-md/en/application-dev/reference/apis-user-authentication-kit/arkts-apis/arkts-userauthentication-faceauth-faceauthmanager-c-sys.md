@@ -1,12 +1,8 @@
-# FaceAuthManager (System API)
+# FaceAuthManager(Facial Authentication) (System API)
 
 Provides APIs for facial authentication management. It provides management features during face enrollment, including setting the surface ID of the face preview page.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-faceAuth-class FaceAuthManager--><!--Device-faceAuth-class FaceAuthManager-End-->
 
@@ -30,17 +26,13 @@ Creates a face authentication manager object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FaceAuthManager-constructor()--><!--Device-FaceAuthManager-constructor()-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.FaceAuth
 
 **System API:** This is a system API.
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { faceAuth } from '@kit.UserAuthenticationKit';
@@ -54,13 +46,9 @@ let faceAuthManager = new faceAuth.FaceAuthManager();
 setSurfaceId(surfaceId: string): void
 ```
 
-Sets the surface ID of the face preview page during face enrollment. This API must be used together with [addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addCredential) to display the face preview page through the surface of the getXComponentSurfaceId component.
+Sets the surface ID of the face preview page during face enrollment. This API must be used together with [addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential) to display the face preview page through the surface of the getXComponentSurfaceId component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
@@ -84,7 +72,7 @@ Sets the surface ID of the face preview page during face enrollment. This API mu
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { faceAuth } from '@kit.UserAuthenticationKit';

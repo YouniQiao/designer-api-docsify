@@ -8,10 +8,6 @@ Defines a callback invoked when the rendering process does not respond.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingData) => void--><!--Device-unnamed-type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingData) => void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -20,5 +16,5 @@ Defines a callback invoked when the rendering process does not respond.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [RenderProcessNotRespondingData](arkts-arkweb-renderprocessnotrespondingdata-i.md) | Yes | details of onRenderProcessNotResponding. |
+| data | [RenderProcessNotRespondingData](arkts-arkweb-renderprocessnotrespondingdata-i.md) | Yes | Detailed information about the unresponsive rendering process. |
 

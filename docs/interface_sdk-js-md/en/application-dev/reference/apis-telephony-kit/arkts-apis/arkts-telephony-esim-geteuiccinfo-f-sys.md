@@ -16,10 +16,6 @@ Returns the eUICC Information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
 <!--Device-eSIM-function getEuiccInfo(slotId: int): Promise<EuiccInfo>--><!--Device-eSIM-function getEuiccInfo(slotId: int): Promise<EuiccInfo>-End-->
@@ -51,7 +47,7 @@ Returns the eUICC Information.
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

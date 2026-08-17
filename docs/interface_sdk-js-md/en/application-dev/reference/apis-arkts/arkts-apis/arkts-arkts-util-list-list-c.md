@@ -4,10 +4,6 @@ List is implemented based on the singly linked list. Each node has a reference p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class List--><!--Device-unnamed-declare class List-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<T>
 returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-[Symbol.iterator](): IterableIterator<T>--><!--Device-List-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -76,7 +64,7 @@ returns an iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>();
@@ -117,10 +105,6 @@ Adds an element at the end of this List.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-add(element: T): boolean--><!--Device-List-add(element: T): boolean-End-->
@@ -145,7 +129,7 @@ Adds an element at the end of this List.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<string | number | boolean | object>();
@@ -173,10 +157,6 @@ Clears this List and sets its length to **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-clear(): void--><!--Device-List-clear(): void-End-->
@@ -189,7 +169,7 @@ Clears this List and sets its length to **0**.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -212,10 +192,6 @@ A constructor used to create a **List** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-constructor()--><!--Device-List-constructor()-End-->
@@ -228,7 +204,7 @@ A constructor used to create a **List** instance.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The List's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<string | number | boolean | object>();
@@ -243,10 +219,6 @@ convertToArray(): Array<T>
 Converts this List into an array and returns the array.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -266,7 +238,7 @@ Converts this List into an array and returns the array.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The convertToArray method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -287,10 +259,6 @@ equal(obj: Object): boolean
 Compares whether a specified object is equal to this List.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -316,7 +284,7 @@ Compares whether a specified object is equal to this List.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -340,10 +308,6 @@ equal(obj: RecordData): boolean
 Compares the specified object with this list for equality.if the object are the same as this list return true, otherwise return false.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -379,10 +343,6 @@ Uses a callback to traverse each element in the **List** instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-forEach(callbackFn: (value: T, index?: number, List?: List<T>) => void, thisArg?: Object): void--><!--Device-List-forEach(callbackFn: (value: T, index?: number, List?: List<T>) => void, thisArg?: Object): void-End-->
@@ -402,7 +362,7 @@ Uses a callback to traverse each element in the **List** instance.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -429,10 +389,6 @@ Replaces each element of this list with the result of applying the operator to t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -457,10 +413,6 @@ Obtains the element at the specified position in this List.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-get(index: int): T--><!--Device-List-get(index: int): T-End-->
@@ -484,9 +436,9 @@ Obtains the element at the specified position in this List.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -511,10 +463,6 @@ Obtains the first element in this List.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-getFirst(): T--><!--Device-List-getFirst(): T-End-->
@@ -532,9 +480,9 @@ Obtains the first element in this List.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -555,10 +503,6 @@ getIndexOf(element: T): int
 Obtains the index of the first occurrence of the specified element in this List.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -584,7 +528,7 @@ Obtains the index of the first occurrence of the specified element in this List.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -609,10 +553,6 @@ Obtains the last element in this List.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-getLast(): T--><!--Device-List-getLast(): T-End-->
@@ -630,9 +570,9 @@ Obtains the last element in this List.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -653,10 +593,6 @@ getLastIndexOf(element: T): int
 Obtains the index of the last occurrence of the specified element in this List.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -682,7 +618,7 @@ Obtains the index of the last occurrence of the specified element in this List.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -706,10 +642,6 @@ getSubList(fromIndex: int, toIndex: int): List<T>
 Obtains elements within a range in this List, including the element at the start position but not that at the end position, and returns these elements as a new **List** instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -737,7 +669,7 @@ Obtains elements within a range in this List, including the element at the start
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getSubList method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -758,10 +690,6 @@ has(element: T): boolean
 Checks whether this List has the specified element.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -787,7 +715,7 @@ Checks whether this List has the specified element.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<string>();
@@ -805,10 +733,6 @@ insert(element: T, index: int): void
 Inserts an element at the specified position in this List.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -830,7 +754,7 @@ Inserts an element at the specified position in this List.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insert method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<string | number | boolean>();
@@ -850,10 +774,6 @@ Checks whether this List is empty (contains no element).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-isEmpty(): boolean--><!--Device-List-isEmpty(): boolean-End-->
@@ -872,7 +792,7 @@ Checks whether this List is empty (contains no element).
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -893,10 +813,6 @@ remove(element: T): boolean
 Removes the first occurrence of the specified element from this List.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -922,7 +838,7 @@ Removes the first occurrence of the specified element from this List.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -943,10 +859,6 @@ removeByIndex(index: number): T
 Searches for an element based on its index and then removes it.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -973,7 +885,7 @@ Searches for an element based on its index and then removes it.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByIndex method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -995,10 +907,6 @@ removeByIndex(index: int): T | undefined
 Find the corresponding element according to the index.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1034,10 +942,6 @@ Replaces all elements in this List with new elements, and returns the new ones.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-replaceAllElements(callbackFn: (value: T, index?: number, list?: List<T>) => T, thisArg?: Object): void--><!--Device-List-replaceAllElements(callbackFn: (value: T, index?: number, list?: List<T>) => T, thisArg?: Object): void-End-->
@@ -1057,7 +961,7 @@ Replaces all elements in this List with new elements, and returns the new ones.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replaceAllElements method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -1086,10 +990,6 @@ Replaces each element of this list with the result of applying the operator to t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -1113,10 +1013,6 @@ set(index: int, element: T): T
 Replaces an element at the specified position in this List with a given element.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1144,7 +1040,7 @@ Replaces an element at the specified position in this List with a given element.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number | string>();
@@ -1166,10 +1062,6 @@ Sorts elements in this List.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-sort(comparator: ListComparatorFn<T>): void--><!--Device-List-sort(comparator: ListComparatorFn<T>): void-End-->
@@ -1188,7 +1080,7 @@ Sorts elements in this List.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let list = new List<number>()
@@ -1214,10 +1106,6 @@ Number of elements in a List.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

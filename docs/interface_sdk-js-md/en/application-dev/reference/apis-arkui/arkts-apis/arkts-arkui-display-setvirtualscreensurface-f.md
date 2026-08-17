@@ -16,10 +16,6 @@ Sets a surface for a virtual screen. This API uses a promise to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_VIRTUAL_SCREEN
 
 <!--Device-display-function setVirtualScreenSurface(screenId: long, surfaceId: string): Promise<void>--><!--Device-display-function setVirtualScreenSurface(screenId: long, surfaceId: string): Promise<void>-End-->
@@ -30,7 +26,7 @@ Sets a surface for a virtual screen. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | long | Yes | Screen ID, which must match the ID of the virtual screen created by calling the [createVirtualScreen()](arkts-arkui-display-createvirtualscreen-f.md#createVirtualScreen) API. This parameter only accepts integer values. |
+| screenId | long | Yes | Screen ID, which must match the ID of the virtual screen created by calling the [createVirtualScreen()](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen) API. This parameter only accepts integer values. |
 | surfaceId | string | Yes | ID of the surface bound to the virtual screen. You can specify the ID of an existing surface. The maximum length for this parameter is 4096 bytes. If it goes beyond that, only the first 4096 bytes are used. |
 
 **Return value:**
@@ -48,7 +44,7 @@ Sets a surface for a virtual screen. This API uses a promise to return the resul
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets

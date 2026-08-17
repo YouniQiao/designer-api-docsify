@@ -10,10 +10,6 @@ export the const string of abilityName and provide it for sourceAppInfo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-verticalPanelManager-export const SOURCE_APP_ABILITY_NAME = 'abilityName'--><!--Device-verticalPanelManager-export const SOURCE_APP_ABILITY_NAME = 'abilityName'-End-->
@@ -31,10 +27,6 @@ export const SOURCE_APP_BUNDLE_NAME = 'bundleName'
 export the const string of bundleName and provide it for sourceAppInfo.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,10 +46,6 @@ export the const string of moduleName and provide it for sourceAppInfo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-verticalPanelManager-export const SOURCE_APP_MODULE_NAME = 'moduleName'--><!--Device-verticalPanelManager-export const SOURCE_APP_MODULE_NAME = 'moduleName'-End-->
@@ -76,10 +64,6 @@ export the const string of screenMode and provide it for sourceAppInfo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-verticalPanelManager-export const SOURCE_APP_SCREEN_MODE = 'screenMode'--><!--Device-verticalPanelManager-export const SOURCE_APP_SCREEN_MODE = 'screenMode'-End-->
@@ -97,10 +81,6 @@ export const SOURCE_APP_WINDOW_ID = 'windowId'
 export the const string of windowId and provide it for sourceAppInfo.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

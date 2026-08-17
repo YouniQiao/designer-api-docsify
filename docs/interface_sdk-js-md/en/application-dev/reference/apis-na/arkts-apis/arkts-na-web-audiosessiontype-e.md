@@ -4,9 +4,7 @@ Enumerates the web audio types in the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare enum AudioSessionType--><!--Device-unnamed-export declare enum AudioSessionType-End-->
 
@@ -22,9 +20,7 @@ Web game sounds and system music can be played at the same time. This value is a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AudioSessionType-AMBIENT = 3--><!--Device-AudioSessionType-AMBIENT = 3-End-->
 

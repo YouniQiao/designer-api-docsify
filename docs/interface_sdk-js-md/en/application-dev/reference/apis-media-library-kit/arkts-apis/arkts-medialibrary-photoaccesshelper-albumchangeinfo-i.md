@@ -4,10 +4,6 @@ Describes the information about an album.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-interface AlbumChangeInfo--><!--Device-photoAccessHelper-interface AlbumChangeInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -30,10 +26,6 @@ Album name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AlbumChangeInfo-albumName: string--><!--Device-AlbumChangeInfo-albumName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -49,10 +41,6 @@ Subtype of the album.
 **Type:** AlbumSubtype
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-albumSubtype: AlbumSubtype--><!--Device-AlbumChangeInfo-albumSubtype: AlbumSubtype-End-->
 
@@ -70,10 +58,6 @@ Type of the album.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AlbumChangeInfo-albumType: AlbumType--><!--Device-AlbumChangeInfo-albumType: AlbumType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -89,10 +73,6 @@ URI of the album.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-albumUri: string--><!--Device-AlbumChangeInfo-albumUri: string-End-->
 
@@ -110,10 +90,6 @@ Total number of assets in the album, including images and videos.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AlbumChangeInfo-count: int--><!--Device-AlbumChangeInfo-count: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -129,10 +105,6 @@ URI of the album cover asset.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-coverUri: string--><!--Device-AlbumChangeInfo-coverUri: string-End-->
 
@@ -150,10 +122,6 @@ Number of images in the album.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AlbumChangeInfo-imageCount: int--><!--Device-AlbumChangeInfo-imageCount: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -169,10 +137,6 @@ Number of videos in the album.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AlbumChangeInfo-videoCount: int--><!--Device-AlbumChangeInfo-videoCount: int-End-->
 

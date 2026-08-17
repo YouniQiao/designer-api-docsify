@@ -1,12 +1,8 @@
 # UpdatablePickerConfigs
 
-Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md#PickerOptions).
+Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md#pickeroptions).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class UpdatablePickerConfigs--><!--Device-unnamed-export declare class UpdatablePickerConfigs-End-->
 
@@ -68,10 +64,6 @@ Used to display only the album content corresponding to the specified bundle nam
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -91,10 +83,6 @@ Playback mode of the moving photo. The maximum array length is 2. If this limit 
 **Type:** Array&lt;photoAccessHelper.AutoPlayScene&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,10 +104,6 @@ Background color of the Picker grid page. The value is an 8-digit hexadecimal co
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UpdatablePickerConfigs-backgroundColor?: string--><!--Device-UpdatablePickerConfigs-backgroundColor?: string-End-->
@@ -137,10 +121,6 @@ Background opacity of the picker. The value range is [0, 1]. **0** indicates com
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +142,6 @@ Background color of the check box. The value is an 8-digit hexadecimal color cod
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UpdatablePickerConfigs-checkBoxColor?: string--><!--Device-UpdatablePickerConfigs-checkBoxColor?: string-End-->
@@ -184,10 +160,6 @@ Text color in the check box. The value is an 8-digit hexadecimal color code.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UpdatablePickerConfigs-checkboxTextColor?: string--><!--Device-UpdatablePickerConfigs-checkboxTextColor?: string-End-->
@@ -205,10 +177,6 @@ Scrolling effect when the Picker grid page reaches the edge. The default value i
 **Type:** EdgeEffect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,10 +198,6 @@ Margin of the component grid.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -254,10 +218,6 @@ Whether a single image can be repeatedly selected. **true** if supported, **fals
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UpdatablePickerConfigs-isRepeatSelectSupported?: boolean--><!--Device-UpdatablePickerConfigs-isRepeatSelectSupported?: boolean-End-->
@@ -275,10 +235,6 @@ Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true**
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -300,10 +256,6 @@ Maximum number of images that can be selected (unit: number). The maximum value 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UpdatablePickerConfigs-maxPhotoSelectNumber?: number--><!--Device-UpdatablePickerConfigs-maxPhotoSelectNumber?: number-End-->
@@ -321,10 +273,6 @@ Maximum number of media files that can be selected. The maximum value is 500, an
 **Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -344,10 +292,6 @@ Maximum number of videos that can be selected (unit: number). The maximum value 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UpdatablePickerConfigs-maxVideoSelectNumber?: number--><!--Device-UpdatablePickerConfigs-maxVideoSelectNumber?: number-End-->
@@ -365,10 +309,6 @@ MIME types. If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by 
 **Type:** photoAccessHelper.PhotoViewMIMETypes
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -388,10 +328,6 @@ Configuration for file type filtering. Multiple types can be specified. - When t
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UpdatablePickerConfigs-mimeTypeFilter?: photoAccessHelper.MimeTypeFilter--><!--Device-UpdatablePickerConfigs-mimeTypeFilter?: photoAccessHelper.MimeTypeFilter-End-->
@@ -410,10 +346,6 @@ Background color of the photo browser page. The options are **AUTO**, **LIGHT**,
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UpdatablePickerConfigs-photoBrowserBackgroundColorMode?: PickerColorMode--><!--Device-UpdatablePickerConfigs-photoBrowserBackgroundColorMode?: PickerColorMode-End-->
@@ -431,10 +363,6 @@ Margin of the component large image.
 **Type:** Margin
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -456,10 +384,6 @@ URIs of the selected images.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UpdatablePickerConfigs-preselectedUris?: Array<string>--><!--Device-UpdatablePickerConfigs-preselectedUris?: Array<string>-End-->
@@ -477,10 +401,6 @@ Picker selection mode. **SINGLE_SELECT** or **MULTI_SELECT**. The default value 
 **Type:** [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -500,10 +420,6 @@ Single selection mode. The default value is **SingleSelectionMode.BROWSER_MODE**
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-UpdatablePickerConfigs-singleSelectionMode?: photoAccessHelper.SingleSelectionMode--><!--Device-UpdatablePickerConfigs-singleSelectionMode?: photoAccessHelper.SingleSelectionMode-End-->
@@ -521,10 +437,6 @@ Color mode of the Picker UI component. Dark/Light color mode (excluding the back
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

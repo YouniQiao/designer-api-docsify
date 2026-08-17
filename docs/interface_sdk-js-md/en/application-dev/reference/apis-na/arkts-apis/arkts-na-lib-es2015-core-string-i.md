@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
 
 ## anchor
@@ -17,8 +13,6 @@ anchor(name: string): string
 Returns an `&lt;a&gt;` HTML anchor element and sets the name attribute to the text value
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -46,8 +40,6 @@ Returns a `&lt;big&gt;` HTML element
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-String-big(): string--><!--Device-String-big(): string-End-->
@@ -67,8 +59,6 @@ blink(): string
 Returns a `&lt;blink&gt;` HTML element
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -90,8 +80,6 @@ Returns a `&lt;b&gt;` HTML element
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-String-bold(): string--><!--Device-String-bold(): string-End-->
@@ -111,10 +99,6 @@ codePointAt(pos: number): number | undefined
 Returns a nonnegative integer Number less than 1114112 (0x110000) that is the code point value of the UTF-16 encoded code point starting at the string element at position pos in the String resulting from converting this object to a String. If there is no element at that position, the result is undefined. If a valid UTF-16 surrogate pair does not begin at pos, the result is the code unit at pos.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-codePointAt(pos: number): number | undefined--><!--Device-String-codePointAt(pos: number): number | undefined-End-->
 
@@ -139,10 +123,6 @@ endsWith(searchString: string, endPosition?: number): boolean
 Returns true if the sequence of elements of searchString converted to a String is the same as the corresponding elements of this object (converted to a String) starting at endPosition – length(this). Otherwise returns false.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-endsWith(searchString: string, endPosition?: number): boolean--><!--Device-String-endsWith(searchString: string, endPosition?: number): boolean-End-->
 
@@ -169,8 +149,6 @@ Returns a `&lt;tt&gt;` HTML element
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-String-fixed(): string--><!--Device-String-fixed(): string-End-->
@@ -190,8 +168,6 @@ fontcolor(color: string): string
 Returns a `&lt;font&gt;` HTML element and sets the color attribute value
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -219,8 +195,6 @@ Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-String-fontsize(size: number): string--><!--Device-String-fontsize(size: number): string-End-->
@@ -246,8 +220,6 @@ fontsize(size: string): string
 Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -275,10 +247,6 @@ Returns true if searchString appears as a substring of the result of converting 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-includes(searchString: string, position?: number): boolean--><!--Device-String-includes(searchString: string, position?: number): boolean-End-->
 
 **Parameters:**
@@ -304,8 +272,6 @@ Returns an `&lt;i&gt;` HTML element
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-String-italics(): string--><!--Device-String-italics(): string-End-->
@@ -325,8 +291,6 @@ link(url: string): string
 Returns an `&lt;a&gt;` HTML element and sets the href attribute value
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -354,10 +318,6 @@ Returns the String value result of normalizing the string into the normalization
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-normalize(form: "NFC" | "NFD" | "NFKC" | "NFKD"): string--><!--Device-String-normalize(form: "NFC" | "NFD" | "NFKC" | "NFKD"): string-End-->
 
 **Parameters:**
@@ -381,10 +341,6 @@ normalize(form?: string): string
 Returns the String value result of normalizing the string into the normalization form named by form as specified in Unicode Standard Annex #15, Unicode Normalization Forms.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-normalize(form?: string): string--><!--Device-String-normalize(form?: string): string-End-->
 
@@ -410,10 +366,6 @@ Returns a String value that is made from count copies appended together. If coun
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-String-repeat(count: number): string--><!--Device-String-repeat(count: number): string-End-->
 
 **Parameters:**
@@ -438,8 +390,6 @@ Returns a `&lt;small&gt;` HTML element
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-String-small(): string--><!--Device-String-small(): string-End-->
@@ -459,10 +409,6 @@ startsWith(searchString: string, position?: number): boolean
 Returns true if the sequence of elements of searchString converted to a String is the same as the corresponding elements of this object (converted to a String) starting at position. Otherwise returns false.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-String-startsWith(searchString: string, position?: number): boolean--><!--Device-String-startsWith(searchString: string, position?: number): boolean-End-->
 
@@ -489,8 +435,6 @@ Returns a `&lt;strike&gt;` HTML element
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-String-strike(): string--><!--Device-String-strike(): string-End-->
@@ -511,8 +455,6 @@ Returns a `&lt;sub&gt;` HTML element
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-String-sub(): string--><!--Device-String-sub(): string-End-->
@@ -532,8 +474,6 @@ sup(): string
 Returns a `&lt;sup&gt;` HTML element
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
 
 **Deprecated since:** legacy feature for browser compatibility
 

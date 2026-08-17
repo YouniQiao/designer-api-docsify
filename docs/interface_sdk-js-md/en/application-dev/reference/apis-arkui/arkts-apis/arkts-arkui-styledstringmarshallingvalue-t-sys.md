@@ -8,10 +8,6 @@ Defines a custom marshalling object for styled strings, which you need to define
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare type StyledStringMarshallingValue = UserDataSpan--><!--Device-unnamed-declare type StyledStringMarshallingValue = UserDataSpan-End-->

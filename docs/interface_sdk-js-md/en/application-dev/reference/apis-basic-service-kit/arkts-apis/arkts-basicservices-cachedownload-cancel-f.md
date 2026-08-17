@@ -16,10 +16,6 @@ Cancels an ongoing download task based on the URL. The saved memory cache and fi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cacheDownload-function cancel(url: string): void--><!--Device-cacheDownload-function cancel(url: string): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -36,7 +32,7 @@ Cancels an ongoing download task based on the URL. The saved memory cache and fi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';

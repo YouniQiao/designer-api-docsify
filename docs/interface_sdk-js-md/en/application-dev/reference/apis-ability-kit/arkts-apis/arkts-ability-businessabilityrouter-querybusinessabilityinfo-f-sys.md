@@ -19,10 +19,6 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-businessAbilityRouter-function queryBusinessAbilityInfo(    filter: BusinessAbilityFilter,    callback: AsyncCallback<Array<BusinessAbilityInfo>>  ): void--><!--Device-businessAbilityRouter-function queryBusinessAbilityInfo(    filter: BusinessAbilityFilter,    callback: AsyncCallback<Array<BusinessAbilityInfo>>  ): void-End-->
@@ -46,7 +42,7 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { businessAbilityRouter } from '@kit.AbilityKit';
@@ -79,10 +75,6 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-businessAbilityRouter-function queryBusinessAbilityInfo(filter: BusinessAbilityFilter): Promise<Array<BusinessAbilityInfo>>--><!--Device-businessAbilityRouter-function queryBusinessAbilityInfo(filter: BusinessAbilityFilter): Promise<Array<BusinessAbilityInfo>>-End-->
@@ -111,7 +103,7 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { businessAbilityRouter } from '@kit.AbilityKit';

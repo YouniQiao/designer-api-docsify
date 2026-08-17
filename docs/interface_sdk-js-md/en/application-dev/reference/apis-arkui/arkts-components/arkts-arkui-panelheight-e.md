@@ -4,8 +4,6 @@ Enum for custom content display area.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 12
 
 <!--Device-unnamed-declare enum PanelHeight--><!--Device-unnamed-declare enum PanelHeight-End-->
@@ -21,8 +19,6 @@ WRAP_CONTENT = 'wrapContent'
 The Panel adapts to the content height.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 12
 

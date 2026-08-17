@@ -8,10 +8,6 @@ Defines the version in the **pack.info** file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-freeInstall-export type Version = _Version--><!--Device-freeInstall-export type Version = _Version-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall

@@ -16,11 +16,9 @@ Creates a step curve.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [stepsCurve](../../apis-na/arkts-apis/arkts-na-curves-stepscurve-f.md#stepsCurve)
+**Substitutes:** [stepsCurve](../../apis-na/arkts-apis/arkts-na-curves-stepscurve-f.md#stepscurve)
 
 <!--Device-curves-function steps(count: number, end: boolean): string--><!--Device-curves-function steps(count: number, end: boolean): string-End-->
 

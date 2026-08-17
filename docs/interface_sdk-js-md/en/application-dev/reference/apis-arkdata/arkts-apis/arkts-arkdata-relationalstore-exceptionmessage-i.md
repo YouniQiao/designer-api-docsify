@@ -4,10 +4,6 @@ Represents an exception message about the SQL statement executed by the database
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-interface ExceptionMessage--><!--Device-relationalStore-interface ExceptionMessage-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -30,10 +26,6 @@ Error code returned by the executed SQL statement. For details about the values 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExceptionMessage-code: int--><!--Device-ExceptionMessage-code: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -50,10 +42,6 @@ Exception message returned by the executed SQL statement.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ExceptionMessage-message: string--><!--Device-ExceptionMessage-message: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -69,10 +57,6 @@ SQL statement that reports the error.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ExceptionMessage-sql: string--><!--Device-ExceptionMessage-sql: string-End-->
 

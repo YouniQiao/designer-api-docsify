@@ -4,11 +4,9 @@ Enum for location scenario
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md#LocationRequestScenario)
+**Substitutes:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md#locationrequestscenario)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -24,11 +22,9 @@ UNSET = 0x300
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [UNSET](arkts-location-geolocationmanager-locationrequestscenario-e.md#UNSET)
+**Substitutes:** [UNSET](arkts-location-geolocationmanager-locationrequestscenario-e.md#unset)
 
 <!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
 
@@ -42,11 +38,9 @@ NAVIGATION
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NAVIGATION](arkts-location-geolocationmanager-locationrequestscenario-e.md#NAVIGATION)
+**Substitutes:** [NAVIGATION](arkts-location-geolocationmanager-locationrequestscenario-e.md#navigation)
 
 <!--Device-LocationRequestScenario-NAVIGATION--><!--Device-LocationRequestScenario-NAVIGATION-End-->
 
@@ -60,11 +54,9 @@ TRAJECTORY_TRACKING
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [TRAJECTORY_TRACKING](arkts-location-geolocationmanager-locationrequestscenario-e.md#TRAJECTORY_TRACKING)
+**Substitutes:** [TRAJECTORY_TRACKING](arkts-location-geolocationmanager-locationrequestscenario-e.md#trajectorytracking)
 
 <!--Device-LocationRequestScenario-TRAJECTORY_TRACKING--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING-End-->
 
@@ -78,11 +70,9 @@ CAR_HAILING
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [CAR_HAILING](arkts-location-geolocationmanager-locationrequestscenario-e.md#CAR_HAILING)
+**Substitutes:** [CAR_HAILING](arkts-location-geolocationmanager-locationrequestscenario-e.md#carhailing)
 
 <!--Device-LocationRequestScenario-CAR_HAILING--><!--Device-LocationRequestScenario-CAR_HAILING-End-->
 
@@ -96,11 +86,9 @@ DAILY_LIFE_SERVICE
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [DAILY_LIFE_SERVICE](arkts-location-geolocationmanager-locationrequestscenario-e.md#DAILY_LIFE_SERVICE)
+**Substitutes:** [DAILY_LIFE_SERVICE](arkts-location-geolocationmanager-locationrequestscenario-e.md#dailylifeservice)
 
 <!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE--><!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE-End-->
 
@@ -114,11 +102,9 @@ NO_POWER
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NO_POWER](arkts-location-geolocationmanager-locationrequestscenario-e.md#NO_POWER)
+**Substitutes:** [NO_POWER](arkts-location-geolocationmanager-locationrequestscenario-e.md#nopower)
 
 <!--Device-LocationRequestScenario-NO_POWER--><!--Device-LocationRequestScenario-NO_POWER-End-->
 

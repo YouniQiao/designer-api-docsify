@@ -4,10 +4,6 @@ Controls tag read and write. &lt;p&gt;Classes for different types of tags inheri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface TagSession--><!--Device-unnamed-export interface TagSession-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -21,10 +17,6 @@ connect(): void
 Connects to a tag. Must be called before data is read from or written to the tag.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -42,7 +34,7 @@ Connects to a tag. Must be called before data is read from or written to the tag
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -68,8 +60,6 @@ Connects to a tag. &lt;p&gt;This method must be called before data is read from 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** connect
@@ -86,7 +76,7 @@ Connects to a tag. &lt;p&gt;This method must be called before data is read from 
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -108,11 +98,9 @@ Queries the maximum length of data that can be sent to a tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMaxTransmitSize](#getMaxTransmitSize)
+**Substitutes:** [getMaxTransmitSize](#getmaxtransmitsize)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -126,7 +114,7 @@ Queries the maximum length of data that can be sent to a tag.
 | --- | --- |
 | number | Returns the maximum length of the data to be sent to the tag. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -147,10 +135,6 @@ getMaxTransmitSize(): int
 Obtains the maximum length of data that can be sent to a tag.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -174,7 +158,7 @@ Obtains the maximum length of data that can be sent to a tag.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -200,11 +184,9 @@ Queries the timeout duration (ms) for sending data to a tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTimeout](#getTimeout)
+**Substitutes:** [getTimeout](#gettimeout)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -218,7 +200,7 @@ Queries the timeout duration (ms) for sending data to a tag.
 | --- | --- |
 | number | Returns the timeout duration. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -240,11 +222,9 @@ Obtains the tag information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md#getTagInfo)
+**Substitutes:** [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md#gettaginfo)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -258,7 +238,7 @@ Obtains the tag information.
 | --- | --- |
 | tag.TagInfo | Returns the tag information, which is a { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -279,10 +259,6 @@ getTimeout(): int
 Obtains the timeout duration (ms) for sending data to a tag.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -306,7 +282,7 @@ Obtains the timeout duration (ms) for sending data to a tag.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -332,10 +308,6 @@ Checks whether a connection has been set up with a tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TagSession-isConnected(): boolean--><!--Device-TagSession-isConnected(): boolean-End-->
@@ -354,7 +326,7 @@ Checks whether a connection has been set up with a tag.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -380,8 +352,6 @@ Checks whether a connection has been set up with a tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** isConnected
@@ -396,7 +366,7 @@ Checks whether a connection has been set up with a tag.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -418,11 +388,9 @@ Resets a connection with a tag and restores the default timeout duration for wri
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [resetConnection](#resetConnection)
+**Substitutes:** [resetConnection](#resetconnection)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -430,7 +398,7 @@ Resets a connection with a tag and restores the default timeout duration for wri
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -451,10 +419,6 @@ Resets a connection with a tag and restores the default timeout duration for wri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -471,7 +435,7 @@ Resets a connection with a tag and restores the default timeout duration for wri
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -497,8 +461,6 @@ Writes data to a tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** transmit
@@ -521,7 +483,7 @@ Writes data to a tag.
 | --- | --- |
 | Promise&lt;number[]&gt; | Returns bytes received in response. Or bytes with a length of 0 if the data fails to be written to the tag. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import tag from '@kit.ConnectivityKit';
@@ -558,8 +520,6 @@ Writes data to a tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** transmit
@@ -577,7 +537,7 @@ Writes data to a tag.
 | data | number[] | Yes | Indicates the data to be written to the tag. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | The callback. data fails to be written to the tag. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -615,8 +575,6 @@ Sets the timeout duration (ms) for sending data to a tag. &lt;p&gt;If data is no
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** setTimeout
@@ -639,7 +597,7 @@ Sets the timeout duration (ms) for sending data to a tag. &lt;p&gt;If data is no
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -661,10 +619,6 @@ setTimeout(timeout: int): void
 Sets the timeout duration (ms) for sending data to a tag.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -689,7 +643,7 @@ Sets the timeout duration (ms) for sending data to a tag.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -715,10 +669,6 @@ transmit(data: int[]): Promise<int[]>
 Writes data to a tag.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -750,7 +700,7 @@ Writes data to a tag.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
@@ -794,10 +744,6 @@ Writes data to a tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -823,7 +769,7 @@ Writes data to a tag.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';

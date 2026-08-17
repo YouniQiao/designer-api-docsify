@@ -4,10 +4,6 @@ Position definition of one component on which the menu will bind and popup.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface MenuPosition--><!--Device-avSession-interface MenuPosition-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -30,10 +26,6 @@ Component height, uint is vp.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-MenuPosition-height: int--><!--Device-MenuPosition-height: int-End-->
@@ -51,10 +43,6 @@ Component width, uint is vp.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -74,10 +62,6 @@ Coordinate x of the position of the component, uint is vp.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-MenuPosition-x: int--><!--Device-MenuPosition-x: int-End-->
@@ -95,10 +79,6 @@ Coordinate y of the position of the component, uint is vp.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

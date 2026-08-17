@@ -10,10 +10,6 @@ function openUninstallCertificateDialog(context: common.Context, certType: Certi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -42,13 +38,13 @@ function openUninstallCertificateDialog(context: common.Context, certType: Certi
 | --- | --- |
 | [29700005](../errorcode-certManagerDialog.md#29700005-操作不符合设备安全策略) | The operation does not comply with the device security policy, such as the device does not allow users to manage the CA certificate of the global user. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [29700004](../errorcode-certManagerDialog.md#29700004-设备类型不支持) | For security purposes, the current device does not support this API. You can use the [supportsCACertDialog](arkts-devicecertificate-certificatemanagerdialog-supportscacertdialog-f.md#supportsCACertDialog) to determine whether the device can open the dialog box for deleting a CA certificate with certType set to CA. |
+| [29700004](../errorcode-certManagerDialog.md#29700004-设备类型不支持) | For security purposes, the current device does not support this API. You can use the [supportsCACertDialog](arkts-devicecertificate-certificatemanagerdialog-supportscacertdialog-f.md#supportscacertdialog) to determine whether the device can open the dialog box for deleting a CA certificate with certType set to CA. |
 | [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 | [29700003](../errorcode-certManagerDialog.md#29700003-证书安装失败错误) | The user uninstall certificate failed in the certificate manager dialog, such as the certificate uri is not exist. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-操作取消) | The user cancels the uninstallation operation. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
@@ -61,7 +57,7 @@ let context: common.Context = new UIContext().getHostContext() as common.Context
 /* certificateType为证书类型，此处赋值CA_CERT，即删除CA证书 */
 let certificateType: certificateManagerDialog.CertificateType = certificateManagerDialog.CertificateType.CA_CERT;
 /* certUri为业务安装证书返回的唯一标识符，此处仅为示例 */
-let certUri: string = "test";
+let certUri: string = 'test';
 try {
   certificateManagerDialog.openUninstallCertificateDialog(context, certificateType, certUri).then(() => {
     console.info('Succeeded in opening uninstall certificate');

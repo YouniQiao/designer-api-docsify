@@ -10,10 +10,6 @@ function isPointerVisibleSync(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-pointer-function isPointerVisibleSync(): boolean--><!--Device-pointer-function isPointerVisibleSync(): boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
@@ -24,7 +20,7 @@ function isPointerVisibleSync(): boolean
 | --- | --- |
 | boolean | 返回鼠标光标显示或隐藏状态。true代表显示状态，false代表隐藏状态。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

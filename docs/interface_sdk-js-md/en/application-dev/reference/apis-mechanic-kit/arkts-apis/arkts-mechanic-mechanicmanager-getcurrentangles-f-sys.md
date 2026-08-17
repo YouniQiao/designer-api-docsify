@@ -16,10 +16,6 @@ Obtains the current angles of a mechanical device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-function getCurrentAngles(mechId: int): EulerAngles--><!--Device-mechanicManager-function getCurrentAngles(mechId: int): EulerAngles-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -46,7 +42,7 @@ Obtains the current angles of a mechanical device.
 | [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 console.info('Query current location');

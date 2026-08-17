@@ -2,13 +2,9 @@
 
 The definition of Singer/Radio/Banner.
 
-**Inheritance/Implementation:** MediaElement extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)
+**Inheritance/Implementation:** MediaElement extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#mediaentity)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

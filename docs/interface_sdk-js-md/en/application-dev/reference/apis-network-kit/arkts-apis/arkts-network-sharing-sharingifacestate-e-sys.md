@@ -4,10 +4,6 @@ Enumerates the network sharing states of an NIC.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sharing-export enum SharingIfaceState--><!--Device-sharing-export enum SharingIfaceState-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
@@ -23,10 +19,6 @@ SHARING_NIC_SERVING = 1
 Indicates the names of the NICs that are serving as network sharing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SharingIfaceState-SHARING_NIC_SERVING = 1--><!--Device-SharingIfaceState-SHARING_NIC_SERVING = 1-End-->
 
@@ -44,10 +36,6 @@ Indicates the names of the NICs that can serve as network sharing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SharingIfaceState-SHARING_NIC_CAN_SERVER = 2--><!--Device-SharingIfaceState-SHARING_NIC_CAN_SERVER = 2-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
@@ -63,10 +51,6 @@ SHARING_NIC_ERROR = 3
 Indicates the names of the NICs that serving error.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SharingIfaceState-SHARING_NIC_ERROR = 3--><!--Device-SharingIfaceState-SHARING_NIC_ERROR = 3-End-->
 

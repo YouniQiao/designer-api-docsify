@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-systemTimer-interface TimerOptions--><!--Device-systemTimer-interface TimerOptions-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -25,10 +21,6 @@ autoRestore?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TimerOptions-autoRestore?: boolean--><!--Device-TimerOptions-autoRestore?: boolean-End-->
 
@@ -48,10 +40,6 @@ callback?: () => void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TimerOptions-callback?: () => void--><!--Device-TimerOptions-callback?: () => void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -69,10 +57,6 @@ interval?: long
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TimerOptions-interval?: long--><!--Device-TimerOptions-interval?: long-End-->
 
@@ -92,10 +76,6 @@ name?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TimerOptions-name?: string--><!--Device-TimerOptions-name?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -113,10 +93,6 @@ repeat: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TimerOptions-repeat: boolean--><!--Device-TimerOptions-repeat: boolean-End-->
 
@@ -136,10 +112,6 @@ type: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TimerOptions-type: int--><!--Device-TimerOptions-type: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
@@ -157,10 +129,6 @@ wantAgent?: WantAgent
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TimerOptions-wantAgent?: WantAgent--><!--Device-TimerOptions-wantAgent?: WantAgent-End-->
 

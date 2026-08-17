@@ -4,11 +4,9 @@ Provides an asynchronous callback to return the authentication event information
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md#IAuthCallback)
+**Substitutes:** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md#iauthcallback)
 
 <!--Device-userAuth-interface AuthEvent--><!--Device-userAuth-interface AuthEvent-End-->
 
@@ -30,11 +28,9 @@ Called to return the authentication result or authentication tip information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [onResult](arkts-userauthentication-userauth-iauthcallback-i.md#onResult)(result: UserAuthResult)
+**Substitutes:** [onResult](arkts-userauthentication-userauth-iauthcallback-i.md#onresult)(result: UserAuthResult)
 
 <!--Device-AuthEvent-callback(result: EventInfo): void--><!--Device-AuthEvent-callback(result: EventInfo): void-End-->
 
@@ -46,7 +42,7 @@ Called to return the authentication result or authentication tip information.
 | --- | --- | --- | --- |
 | result | EventInfo | Yes | Authentication result or tip information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';

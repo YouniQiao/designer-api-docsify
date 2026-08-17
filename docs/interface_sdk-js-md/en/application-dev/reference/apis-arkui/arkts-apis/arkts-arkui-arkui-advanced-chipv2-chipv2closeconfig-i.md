@@ -2,13 +2,9 @@
 
 Defines config of default close icon.
 
-**Inheritance/Implementation:** ChipV2CloseConfig extends [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md#ChipV2AccessibilityConfig)
+**Inheritance/Implementation:** ChipV2CloseConfig extends [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md#chipv2accessibilityconfig)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ChipV2CloseConfig--><!--Device-unnamed-export interface ChipV2CloseConfig-End-->
 
@@ -56,10 +52,6 @@ Set font size for the close icon.
 **Type:** LengthMetrics
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Describes the control type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-enum ControlType--><!--Device-connection-enum ControlType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -23,10 +19,6 @@ PLAY = 0
 Indicates the control command of play.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Indicates the control command of vibration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ControlType-VIBRATE = 1--><!--Device-ControlType-VIBRATE = 1-End-->
@@ -67,10 +55,6 @@ FLASH = 2
 Indicates the control command of flash.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ Indicates the control command of lock.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ControlType-LOCK = 3--><!--Device-ControlType-LOCK = 3-End-->
@@ -111,10 +91,6 @@ ERASE = 4
 Indicates the control command of erase.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

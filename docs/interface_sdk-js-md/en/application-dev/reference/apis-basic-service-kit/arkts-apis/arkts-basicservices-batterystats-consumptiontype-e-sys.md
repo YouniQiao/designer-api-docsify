@@ -4,10 +4,6 @@ Enumerates power consumption types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-batteryStats-export enum ConsumptionType--><!--Device-batteryStats-export enum ConsumptionType-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
@@ -23,10 +19,6 @@ CONSUMPTION_TYPE_INVALID = -17
 Unknown type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_INVALID = -17--><!--Device-ConsumptionType-CONSUMPTION_TYPE_INVALID = -17-End-->
 
@@ -44,10 +36,6 @@ Power consumption of an application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_APP--><!--Device-ConsumptionType-CONSUMPTION_TYPE_APP-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
@@ -63,10 +51,6 @@ CONSUMPTION_TYPE_BLUETOOTH
 Power consumption of Bluetooth.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_BLUETOOTH--><!--Device-ConsumptionType-CONSUMPTION_TYPE_BLUETOOTH-End-->
 
@@ -84,10 +68,6 @@ Power consumption when the CPU is idle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_IDLE--><!--Device-ConsumptionType-CONSUMPTION_TYPE_IDLE-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
@@ -103,10 +83,6 @@ CONSUMPTION_TYPE_PHONE
 Power consumption of a phone call.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_PHONE--><!--Device-ConsumptionType-CONSUMPTION_TYPE_PHONE-End-->
 
@@ -124,10 +100,6 @@ Power consumption of wireless communication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_RADIO--><!--Device-ConsumptionType-CONSUMPTION_TYPE_RADIO-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
@@ -143,10 +115,6 @@ CONSUMPTION_TYPE_SCREEN
 Power consumption of the screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_SCREEN--><!--Device-ConsumptionType-CONSUMPTION_TYPE_SCREEN-End-->
 
@@ -164,10 +132,6 @@ Power consumption of the user.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_USER--><!--Device-ConsumptionType-CONSUMPTION_TYPE_USER-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
@@ -183,10 +147,6 @@ CONSUMPTION_TYPE_WIFI
 Power consumption of Wi-Fi.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_WIFI--><!--Device-ConsumptionType-CONSUMPTION_TYPE_WIFI-End-->
 

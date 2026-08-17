@@ -4,10 +4,6 @@ Describes the result of bluetooth dialog.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-access-interface NotifyDialogResultParams--><!--Device-access-interface NotifyDialogResultParams-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -32,10 +28,6 @@ The result of bluetooth dialog. The value true indicates that the user approves 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotifyDialogResultParams-dialogResult: boolean--><!--Device-NotifyDialogResultParams-dialogResult: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -53,10 +45,6 @@ The type of bluetooth dialog.
 **Type:** DialogType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotifyDialogResultParams-dialogType: DialogType--><!--Device-NotifyDialogResultParams-dialogType: DialogType-End-->
 

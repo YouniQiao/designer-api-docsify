@@ -1,12 +1,8 @@
 # EnvironmentBackgroundType
 
-The enum of environment background type.
+Enumerates the environment background types, which are used to define how the background of a scene is presented.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export enum EnvironmentBackgroundType--><!--Device-unnamed-export enum EnvironmentBackgroundType-End-->
 
@@ -18,13 +14,9 @@ The enum of environment background type.
 BACKGROUND_NONE = 0
 ```
 
-The background is none.
+No background.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0--><!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0-End-->
 
@@ -36,13 +28,9 @@ The background is none.
 BACKGROUND_IMAGE = 1
 ```
 
-The background is image.
+Image background.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1--><!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1-End-->
 
@@ -54,13 +42,9 @@ The background is image.
 BACKGROUND_CUBEMAP = 2
 ```
 
-The background is cubemap.
+Cubemap background.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EnvironmentBackgroundType-BACKGROUND_CUBEMAP = 2--><!--Device-EnvironmentBackgroundType-BACKGROUND_CUBEMAP = 2-End-->
 
@@ -72,13 +56,9 @@ The background is cubemap.
 BACKGROUND_EQUIRECTANGULAR = 3
 ```
 
-The background is equirectangular.
+Equirectangular projection background.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EnvironmentBackgroundType-BACKGROUND_EQUIRECTANGULAR = 3--><!--Device-EnvironmentBackgroundType-BACKGROUND_EQUIRECTANGULAR = 3-End-->
 

@@ -4,10 +4,6 @@ Defines a media data loader, which needs to be implemented by applications.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-interface MediaSourceLoader--><!--Device-unnamed-interface MediaSourceLoader-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
@@ -23,10 +19,6 @@ Callback function is implemented by application, which is used to handle resourc
 **类型：** [SourceCloseCallback](arkts-media-sourceclosecallback-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ Callback function is implemented by application, which is used to handle resourc
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaSourceLoader-open: SourceOpenCallback--><!--Device-MediaSourceLoader-open: SourceOpenCallback-End-->
@@ -67,10 +55,6 @@ Callback function is implemented by application, which is used to handle resourc
 **类型：** [SourceReadCallback](arkts-media-sourcereadcallback-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-distributedDeviceManager-interface DiscoverySuccessResult--><!--Device-distributedDeviceManager-interface DiscoverySuccessResult-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -23,10 +19,6 @@ device: DeviceBasicInfo
 **类型：** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DiscoverySuccessResult-device: DeviceBasicInfo--><!--Device-DiscoverySuccessResult-device: DeviceBasicInfo-End-->
 

@@ -1,12 +1,8 @@
 # OnSearchResultReceiveEvent
 
-Defines function Triggered when the host application call searchAllAsync.
+Defines the callback information for the search result on the web page, including the match ordinal and total count. It is suitable for scenarios where monitoring in-page search behavior is required, improving search interaction visibility and user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnSearchResultReceiveEvent--><!--Device-unnamed-declare interface OnSearchResultReceiveEvent-End-->
 
@@ -18,15 +14,11 @@ Defines function Triggered when the host application call searchAllAsync.
 activeMatchOrdinal: number
 ```
 
-The ordinal number of the currently matched lookup item (starting from 0).
+Sequence number of the current match, which starts from 0.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ The ordinal number of the currently matched lookup item (starting from 0).
 isDoneCounting: boolean
 ```
 
-Indicates whether the current in-page search operation is complete. The method may be called back multiple times until isDoneCounting is true.
+Whether the current in-page search operation is complete. The value **true** indicates that the current in-page search operation is complete, and **false** indicates the opposite. This method may be called back multiple times until isDoneCounting is **true**.
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,15 +50,11 @@ Indicates whether the current in-page search operation is complete. The method m
 numberOfMatches: number
 ```
 
-The number of all matched keywords.
+Total number of matches.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

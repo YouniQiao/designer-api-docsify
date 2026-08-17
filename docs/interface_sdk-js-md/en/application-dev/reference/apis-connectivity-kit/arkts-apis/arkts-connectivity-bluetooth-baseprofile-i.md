@@ -4,11 +4,9 @@ Base interface of profile.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#BaseProfile)
+**Substitutes:** [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#baseprofile)
 
 <!--Device-bluetooth-interface BaseProfile--><!--Device-bluetooth-interface BaseProfile-End-->
 
@@ -30,11 +28,9 @@ Obtains the connected devices list of profile.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getConnectionDevices](arkts-connectivity-bluetoothmanager-baseprofile-i.md#getConnectionDevices)
+**Substitutes:** [getConnectionDevices](arkts-connectivity-bluetoothmanager-baseprofile-i.md#getconnectiondevices)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -48,7 +44,7 @@ Obtains the connected devices list of profile.
 | --- | --- |
 | Array&lt;string&gt; | Returns the address of connected devices list. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
@@ -65,11 +61,9 @@ Obtains the profile state of device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceState](arkts-connectivity-bluetoothmanager-baseprofile-i.md#getDeviceState)
+**Substitutes:** [getDeviceState](arkts-connectivity-bluetoothmanager-baseprofile-i.md#getdevicestate)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -89,7 +83,7 @@ Obtains the profile state of device.
 | --- | --- |
 | ProfileConnectionState | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;

@@ -4,10 +4,6 @@ Channel represents an [ISO 7816-4] channel opened to a SE. It can be either a lo
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-omapi-export interface Channel--><!--Device-omapi-export interface Channel-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -28,10 +24,6 @@ Closes this channel to the SE. If the method is called when the channel is alrea
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Channel-close(): void--><!--Device-Channel-close(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -42,7 +34,7 @@ Closes this channel to the SE. If the method is called when the channel is alrea
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -68,10 +60,6 @@ Returns the data as received from the application select command, including the 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Channel-getSelectResponse(): number[]--><!--Device-Channel-getSelectResponse(): number[]-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -88,7 +76,7 @@ Returns the data as received from the application select command, including the 
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -115,10 +103,6 @@ Get the session that has opened this channel.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Channel-getSession(): Session--><!--Device-Channel-getSession(): Session-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -135,7 +119,7 @@ Get the session that has opened this channel.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -163,10 +147,6 @@ Checks whether this channel is the basic channel.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Channel-isBasicChannel(): boolean--><!--Device-Channel-isBasicChannel(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -183,7 +163,7 @@ Checks whether this channel is the basic channel.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -210,10 +190,6 @@ Checks if this channel is closed.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Channel-isClosed(): boolean--><!--Device-Channel-isClosed(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -230,7 +206,7 @@ Checks if this channel is closed.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -256,10 +232,6 @@ transmit(command: number[]): Promise<number[]>
 Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-Channel-transmit(command: number[]): Promise<number[]>--><!--Device-Channel-transmit(command: number[]): Promise<number[]>-End-->
 
@@ -287,7 +259,7 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session or channel that has been closed. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -318,10 +290,6 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void--><!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -343,7 +311,7 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session or channel that has been closed. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

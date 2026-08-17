@@ -10,11 +10,9 @@ Renames a file. This API returns the result synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [renameSync](arkts-corefile-file-fs-renamesync-f.md#renameSync)
+**Substitutes:** [renameSync](arkts-corefile-file-fs-renamesync-f.md#renamesync)
 
 <!--Device-unnamed-declare function renameSync(oldPath: string, newPath: string): void--><!--Device-unnamed-declare function renameSync(oldPath: string, newPath: string): void-End-->
 

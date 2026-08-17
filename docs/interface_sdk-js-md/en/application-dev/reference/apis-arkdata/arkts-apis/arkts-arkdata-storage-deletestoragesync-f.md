@@ -10,8 +10,6 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** deletePreferences

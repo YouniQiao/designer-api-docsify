@@ -8,10 +8,6 @@ Callback function called when converting the given URI into a normalized URI.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-type NormalizeUriFn = (uri: string, callback: AsyncCallback<string>) => void--><!--Device-unnamed-type NormalizeUriFn = (uri: string, callback: AsyncCallback<string>) => void-End-->

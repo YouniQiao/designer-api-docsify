@@ -1,8 +1,6 @@
-# OnDownloadCompleteOptions
+# OnDownloadCompleteOptions(上传下载)
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
@@ -24,8 +22,6 @@ complete?: () => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** on
@@ -45,8 +41,6 @@ fail?: (data: any, code: number) => void
 **类型：** (data: any, code: number) =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 
@@ -68,8 +62,6 @@ success?: (data: OnDownloadCompleteResponse) => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** on
@@ -89,8 +81,6 @@ download 接口返回的结果 token。
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 9
 

@@ -16,8 +16,6 @@ Unsubscribe gnss status changed
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** satelliteStatusChange
@@ -35,7 +33,7 @@ Unsubscribe gnss status changed
 | type | 'gnssStatusChange' | Yes | Indicates the location service event to be subscribed to. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SatelliteStatusInfo&gt; | No | Indicates the callback for reporting the gnss status change. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

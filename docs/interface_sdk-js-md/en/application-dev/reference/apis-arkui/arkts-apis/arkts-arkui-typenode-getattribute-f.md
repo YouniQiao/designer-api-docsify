@@ -10,10 +10,6 @@ Obtains the attributes of a **Text** node. If the node is not created using ArkT
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -35,7 +31,7 @@ Obtains the attributes of a **Text** node. If the node is not created using ArkT
 | --- | --- |
 | TextAttribute | Attributes of the **Text** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -87,10 +83,6 @@ Obtains the attributes of a **Column** node. If the node is not created using Ar
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -112,7 +104,7 @@ Obtains the attributes of a **Column** node. If the node is not created using Ar
 | --- | --- |
 | ColumnAttribute | Attributes of the **Column** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -163,10 +155,6 @@ Obtains the attributes of a **Row** node. If the node is not created using ArkTS
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -188,7 +176,7 @@ Obtains the attributes of a **Row** node. If the node is not created using ArkTS
 | --- | --- |
 | RowAttribute | Attributes of the **Row** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -239,10 +227,6 @@ Obtains the attributes of a **Stack** node. If the node is not created using Ark
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -264,7 +248,7 @@ Obtains the attributes of a **Stack** node. If the node is not created using Ark
 | --- | --- |
 | StackAttribute | Attributes of the **Stack** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -315,10 +299,6 @@ Obtains the Flex node attributes. If the node is not created using ArkTS, cross-
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -340,7 +320,7 @@ Obtains the Flex node attributes. If the node is not created using ArkTS, cross-
 | --- | --- |
 | FlexAttribute | Flex node type. If the operation fails, undefined is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -391,10 +371,6 @@ Obtains the attributes of a **Swiper** node. If the node is not created using Ar
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -416,7 +392,7 @@ Obtains the attributes of a **Swiper** node. If the node is not created using Ar
 | --- | --- |
 | SwiperAttribute | Properties of the **Swiper** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 See the example for createNode('Swiper')12+.
 
@@ -430,10 +406,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 Obtains the attributes of a **Progress** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -456,7 +428,7 @@ Obtains the attributes of a **Progress** node. If the node is not created using 
 | --- | --- |
 | ProgressAttribute | Properties of the **Progress** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -506,10 +478,6 @@ Obtains the attributes of a **Scroll** node. If the node is not created using Ar
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -531,7 +499,7 @@ Obtains the attributes of a **Scroll** node. If the node is not created using Ar
 | --- | --- |
 | ScrollAttribute | Attributes of the **Scroll** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 See the example for createNode('Scroll').
 
@@ -545,10 +513,6 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 Obtains the attributes of a **RelativeContainer** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -571,7 +535,7 @@ Obtains the attributes of a **RelativeContainer** node. If the node is not creat
 | --- | --- |
 | RelativeContainerAttribute | Attributes of the **RelativeContainer** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -622,10 +586,6 @@ Obtains the attributes of a LoadingProgress node. If the node is not created usi
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -647,7 +607,7 @@ Obtains the attributes of a LoadingProgress node. If the node is not created usi
 | --- | --- |
 | LoadingProgressAttribute | Properties of the **LoadingProgress** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -695,10 +655,6 @@ Obtains the attributes of an **Image** node. If the node is not created using Ar
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -720,7 +676,7 @@ Obtains the attributes of an **Image** node. If the node is not created using Ar
 | --- | --- |
 | ImageAttribute | Properties of the **Image** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -777,10 +733,6 @@ Obtains the attributes of a **List** node. If the node is not created using ArkT
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -802,7 +754,7 @@ Obtains the attributes of a **List** node. If the node is not created using ArkT
 | --- | --- |
 | ListAttribute | Attributes of the **List** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 See the example for createNode('List').
 
@@ -816,10 +768,6 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 Obtains the attributes of a **ListItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -842,7 +790,7 @@ Obtains the attributes of a **ListItem** node. If the node is not created using 
 | --- | --- |
 | ListItemAttribute | Attributes of the **ListItem** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 See the example for createNode('List').
 
@@ -856,10 +804,6 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 Obtains the attributes of a **TextInput** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -882,7 +826,7 @@ Obtains the attributes of a **TextInput** node. If the node is not created using
 | --- | --- |
 | TextInputAttribute | Properties of the **TextInput** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -930,10 +874,6 @@ Obtains the attributes of a **Button** node. If the node is not created using Ar
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -955,7 +895,7 @@ Obtains the attributes of a **Button** node. If the node is not created using Ar
 | --- | --- |
 | ButtonAttribute | Attributes of the **Button** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1009,10 +949,6 @@ Obtains the attributes of a **ListItemGroup** node. If the node is not created u
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1034,7 +970,7 @@ Obtains the attributes of a **ListItemGroup** node. If the node is not created u
 | --- | --- |
 | ListItemGroupAttribute | Attributes of the **ListItemGroup** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 typeNode.getAttribute(node, 'ListItemGroup');
@@ -1050,10 +986,6 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 Obtains the attributes of a **WaterFlow** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1076,7 +1008,7 @@ Obtains the attributes of a **WaterFlow** node. If the node is not created using
 | --- | --- |
 | WaterFlowAttribute | Properties of the **WaterFlow** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 See the example for createNode('WaterFlow').
 
@@ -1090,10 +1022,6 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 Obtains the attributes of a **FlowItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1116,7 +1044,7 @@ Obtains the attributes of a **FlowItem** node. If the node is not created using 
 | --- | --- |
 | FlowItemAttribute | Properties of the **FlowItem** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 See the example for createNode('WaterFlow').
 
@@ -1130,10 +1058,6 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 Obtain the attributes of an **XComponent** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1156,7 +1080,7 @@ Obtain the attributes of an **XComponent** node. If the node is not created usin
 | --- | --- |
 | XComponentAttribute | Properties of the **XComponent** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 typeNode.getAttribute(node, 'XComponent');
@@ -1172,10 +1096,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 Obtains the attributes of a **Checkbox** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1198,7 +1118,7 @@ Obtains the attributes of a **Checkbox** node. If the node is not created using 
 | --- | --- |
 | CheckboxAttribute | Attributes of the **Checkbox** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1254,10 +1174,6 @@ Obtains the attributes of a **Radio** node. If the node is not created using Ark
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1279,7 +1195,7 @@ Obtains the attributes of a **Radio** node. If the node is not created using Ark
 | --- | --- |
 | RadioAttribute | Properties of the **Radio** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1334,10 +1250,6 @@ Obtains the attributes of a **Slider** node. If the node is not created using Ar
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1359,7 +1271,7 @@ Obtains the attributes of a **Slider** node. If the node is not created using Ar
 | --- | --- |
 | SliderAttribute | Properties of the **Slider** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1409,10 +1321,6 @@ Obtains the attributes of a **Toggle** node. If the node is not created using Ar
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1434,7 +1342,7 @@ Obtains the attributes of a **Toggle** node. If the node is not created using Ar
 | --- | --- |
 | ToggleAttribute | Properties of the **Toggle** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1484,10 +1392,6 @@ Obtains the attributes of a **TextArea** node. If the node is not created using 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1509,7 +1413,7 @@ Obtains the attributes of a **TextArea** node. If the node is not created using 
 | --- | --- |
 | TextAreaAttribute | Properties of the **TextArea** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
@@ -1557,10 +1461,6 @@ Obtains the attributes of a **Grid** node. If the node is not created using ArkT
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1582,7 +1482,7 @@ Obtains the attributes of a **Grid** node. If the node is not created using ArkT
 | --- | --- |
 | GridAttribute | Properties of the **Grid** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 See the example for createNode('Grid').
 
@@ -1596,10 +1496,6 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 Obtains the attributes of a **GridItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1622,7 +1518,7 @@ Obtains the attributes of a **GridItem** node. If the node is not created using 
 | --- | --- |
 | GridItemAttribute | Properties of the **GridItem** node, or **undefined** if they fail to be obtained. |
 
-## Examples
+**Examples**
 
 See the example for createNode('Grid').
 

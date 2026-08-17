@@ -16,10 +16,6 @@ Checks whether the encoding format is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function isEncoding(encoding: string): boolean--><!--Device-buffer-function isEncoding(encoding: string): boolean-End-->
@@ -38,7 +34,7 @@ Checks whether the encoding format is supported.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the encoding format is supported; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

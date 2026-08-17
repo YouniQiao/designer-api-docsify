@@ -16,10 +16,6 @@ Attaches multiple download task IDs to a specified group ID. This API uses a pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-function attachGroup(gid: string, tids: string[]): Promise<void>--><!--Device-agent-function attachGroup(gid: string, tids: string[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent

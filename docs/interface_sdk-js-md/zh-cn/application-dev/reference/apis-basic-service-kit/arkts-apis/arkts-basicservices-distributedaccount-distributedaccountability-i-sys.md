@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -21,10 +17,6 @@ getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<Distr
 获取指定系统账号的分布式信息。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or (ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.GET_DISTRIBUTED_ACCOUNTS)
@@ -41,7 +33,7 @@ getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<Distr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -52,7 +44,7 @@ getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<Distr
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -109,10 +101,6 @@ getOsAccountDistributedInfoByLocalId(localId: int): Promise<DistributedInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or (ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.GET_DISTRIBUTED_ACCOUNTS)
 - API版本10 - 19：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
@@ -144,7 +132,7 @@ getOsAccountDistributedInfoByLocalId(localId: int): Promise<DistributedInfo>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -198,10 +186,6 @@ setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedI
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
 <!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
@@ -216,7 +200,7 @@ setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedI
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
 | distributedInfo | DistributedInfo | 是 | 分布式账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置指定系统账号的分布式信息成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置指定系统账号的分布式信息成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -231,7 +215,7 @@ setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedI
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300406](../../apis-basic-services-kit/errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**适用版本：** 26.0.0+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -290,10 +274,6 @@ setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedI
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
 <!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo): Promise<void>-End-->
@@ -328,7 +308,7 @@ setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedI
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300406](../../apis-basic-services-kit/errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**适用版本：** 26.0.0+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -4,9 +4,7 @@ Defines the triggered callback when needs ssl client certificate from the user.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnClientAuthenticationEvent--><!--Device-unnamed-export declare interface OnClientAuthenticationEvent-End-->
 
@@ -24,9 +22,7 @@ Notifies the user of the operation behavior of the web component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnClientAuthenticationEvent-handler: ClientAuthenticationHandler--><!--Device-OnClientAuthenticationEvent-handler: ClientAuthenticationHandler-End-->
 
@@ -44,9 +40,7 @@ The hostname of the requesting certificate server.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnClientAuthenticationEvent-host: string--><!--Device-OnClientAuthenticationEvent-host: string-End-->
 
@@ -64,9 +58,7 @@ Certificates that match the private key are acceptable to the issuer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnClientAuthenticationEvent-issuers: Array<string>--><!--Device-OnClientAuthenticationEvent-issuers: Array<string>-End-->
 
@@ -84,9 +76,7 @@ Acceptable asymmetric key types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnClientAuthenticationEvent-keyTypes: Array<string>--><!--Device-OnClientAuthenticationEvent-keyTypes: Array<string>-End-->
 
@@ -104,9 +94,7 @@ The port number of the request certificate server.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnClientAuthenticationEvent-port: int--><!--Device-OnClientAuthenticationEvent-port: int-End-->
 

@@ -1,12 +1,8 @@
 # ArkWebEngineVersion
 
-For details about the ArkWeb kernel version, see [Adaptation Guide for the M114 Kernel on OpenHarmony 6.0](https://gitcode.com/openharmony-tpc/chromium_src/blob/132_trunk/web/ReleaseNote/CompatibleWithLegacyWebEngine.md) .
+For ArkWeb kernel versions, see [Adaptation Guide for the M114 Kernel on OpenHarmony 6.0](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/web/ReleaseNote/CompatibleWithLegacyWebEngine_6.0.md) and [Adaptation Guide for the M132 Kernel on OpenHarmony 7.0](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/web/ReleaseNote/CompatibleWithLegacyWebEngine_7.0.md).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum ArkWebEngineVersion--><!--Device-webview-enum ArkWebEngineVersion-End-->
 
@@ -18,13 +14,9 @@ For details about the ArkWeb kernel version, see [Adaptation Guide for the M114 
 SYSTEM_DEFAULT = 0
 ```
 
-Default system kernel. For OpenHarmony 6.0, the default kernel is M132.
+System default kernel (see [Constraints](../../../web/web-component-overview.md#constraints)). The default kernel is M132 for OpenHarmony 6.0 and M144 for OpenHarmony 7.0.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-ArkWebEngineVersion-SYSTEM_DEFAULT = 0--><!--Device-ArkWebEngineVersion-SYSTEM_DEFAULT = 0-End-->
 
@@ -36,13 +28,9 @@ Default system kernel. For OpenHarmony 6.0, the default kernel is M132.
 M114 = 1
 ```
 
-Legacy kernel of OpenHarmony 6.0. You can select this legacy kernel. If it does not exist, the setting is invalid.
+Legacy kernel of OpenHarmony 6.0. Developers can select this legacy kernel. If this kernel does not exist on the system version, the setting does not take effect and the system default kernel is used.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-ArkWebEngineVersion-M114 = 1--><!--Device-ArkWebEngineVersion-M114 = 1-End-->
 
@@ -54,13 +42,9 @@ Legacy kernel of OpenHarmony 6.0. You can select this legacy kernel. If it does 
 M132 = 2
 ```
 
-Evergreen kernel of OpenHarmony 6.0, which is M132 by default. If it does not exist, the setting is invalid.
+Evergreen kernel of OpenHarmony 6.0 (legacy kernel of OpenHarmony 7.0). M132 is the default kernel of OpenHarmony 6.0. If this kernel does not exist on the system version, the setting does not take effect and the system default kernel is used.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-ArkWebEngineVersion-M132 = 2--><!--Device-ArkWebEngineVersion-M132 = 2-End-->
 
@@ -72,13 +56,9 @@ Evergreen kernel of OpenHarmony 6.0, which is M132 by default. If it does not ex
 M144 = 3
 ```
 
-ArkWeb M144 version.
+Evergreen kernel of OpenHarmony 7.0. M144 is the default kernel of OpenHarmony 7.0. If this kernel does not exist on the system version, the setting does not take effect and the system default kernel is used.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,13 +72,9 @@ ArkWeb M144 version.
 ARKWEB_EVERGREEN = 99999
 ```
 
-Evergreen kernel, which is the latest kernel of the system. You can choose to use the latest kernel for each system version. This setting takes effect for OpenHarmony 6.1 and later versions.
+The latest kernel (evergreen kernel) of the system. Developers can select this kernel to always use the latest kernel on each system version.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ArkWebEngineVersion-ARKWEB_EVERGREEN = 99999--><!--Device-ArkWebEngineVersion-ARKWEB_EVERGREEN = 99999-End-->
 

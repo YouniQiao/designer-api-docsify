@@ -4,10 +4,6 @@ Enumerates the media types that trigger the context menu.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum ContextMenuMediaType--><!--Device-unnamed-declare enum ContextMenuMediaType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,10 +17,6 @@ None = 0
 Other non-image media types.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -41,10 +33,6 @@ Image = 1
 Image.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

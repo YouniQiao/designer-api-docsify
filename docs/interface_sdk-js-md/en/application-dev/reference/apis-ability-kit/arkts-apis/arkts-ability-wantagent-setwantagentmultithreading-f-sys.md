@@ -16,10 +16,6 @@ Enables or disables the WantAgent multithreading feature.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-wantAgent-function setWantAgentMultithreading(isMultithreadingSupported: boolean) : void--><!--Device-wantAgent-function setWantAgentMultithreading(isMultithreadingSupported: boolean) : void-End-->

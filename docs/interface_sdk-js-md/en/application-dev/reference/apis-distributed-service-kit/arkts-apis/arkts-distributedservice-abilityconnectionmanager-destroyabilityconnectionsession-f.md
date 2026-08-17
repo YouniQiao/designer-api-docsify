@@ -16,10 +16,6 @@ Destroys a collaboration session between applications.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-abilityConnectionManager-function destroyAbilityConnectionSession(sessionId: int): void--><!--Device-abilityConnectionManager-function destroyAbilityConnectionSession(sessionId: int): void-End-->
@@ -32,7 +28,7 @@ Destroys a collaboration session between applications.
 | --- | --- | --- | --- |
 | sessionId | int | Yes | Collaboration session ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

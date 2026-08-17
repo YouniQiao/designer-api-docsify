@@ -4,10 +4,6 @@ Picker used to show available input devices.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct AVInputCastPicker--><!--Device-unnamed-export declare struct AVInputCastPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVInputCast
@@ -31,10 +27,6 @@ Custom picker.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AVInputCastPicker-@Prop  customPicker?: CustomBuilder--><!--Device-AVInputCastPicker-@Prop  customPicker?: CustomBuilder-End-->
@@ -52,10 +44,6 @@ Called when the component state changes.
 **Type:** [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

@@ -16,10 +16,6 @@ Creates a RemoteObject instance based on a ShareCenter instance. The system uses
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -38,7 +34,7 @@ Creates a RemoteObject instance based on a ShareCenter instance. The system uses
 | --- | --- |
 | Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

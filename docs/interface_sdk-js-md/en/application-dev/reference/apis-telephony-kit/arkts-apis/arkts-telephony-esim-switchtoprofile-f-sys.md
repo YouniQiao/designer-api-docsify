@@ -17,10 +17,6 @@ Switch to (enable) the given profile on the eUICC.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
 <!--Device-eSIM-function switchToProfile(slotId: int, portIndex: int, iccid: string,                           forceDisableProfile: boolean): Promise<ResultCode>--><!--Device-eSIM-function switchToProfile(slotId: int, portIndex: int, iccid: string,                           forceDisableProfile: boolean): Promise<ResultCode>-End-->
@@ -36,7 +32,7 @@ Switch to (enable) the given profile on the eUICC.
 | slotId | int | Yes | Indicates the card slot index number. |
 | portIndex | int | Yes | Index of the port for the slot. |
 | iccid | string | Yes | The iccid of the profile to switch to. |
-| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform the operation. Otherwise, the resultCode should return [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#RESULT_MUST_DISABLE_PROFILE) to allow the user to agree to this operation first. |
+| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform the operation. Otherwise, the resultCode should return [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#resultmustdisableprofile) to allow the user to agree to this operation first. |
 
 **Return value:**
 
@@ -55,7 +51,7 @@ Switch to (enable) the given profile on the eUICC.
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

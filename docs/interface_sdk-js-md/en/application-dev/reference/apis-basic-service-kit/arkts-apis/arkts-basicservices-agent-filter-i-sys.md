@@ -4,10 +4,6 @@ Defines the filter criteria.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -29,10 +25,6 @@ Specify the package name of an application. Only for advanced search, common sea
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Filter-bundle?: string--><!--Device-Filter-bundle?: string-End-->
 

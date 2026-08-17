@@ -16,11 +16,9 @@ Sets restrictions on user behaviors.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setUserRestriction](#setUserRestriction)(admin: Want, settingsItem: SettingsForDevice, restricted: boolean)
+**Substitutes:** [setUserRestriction](#setuserrestriction)(admin: Want, settingsItem: SettingsForDevice, restricted: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -46,7 +44,7 @@ Sets restrictions on user behaviors.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -77,10 +75,6 @@ function setUserRestriction(admin: Want, settingsItem: SettingsForDevice, restri
 Restricts users from modifying specified device setting items.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 

@@ -13,7 +13,7 @@ import { LazyDynamicLayoutAttribute } from 'LazyDynamicLayoutAttribute';
 
 | Name | Description |
 | --- | --- |
-| [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md#LazyDynamicLayout) | Defines LazyDynamicLayout Component. |
+| [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md#lazydynamiclayout) | Defines LazyDynamicLayout Component. |
 
 ### Classes
 
@@ -25,5 +25,5 @@ import { LazyDynamicLayoutAttribute } from 'LazyDynamicLayoutAttribute';
 
 | Name | Description |
 | --- | --- |
-| [LazyDynamicLayoutInstance](arkts-arkui-arkui-components-arklazydynamiclayout-con.md#LazyDynamicLayoutInstance) | Defines LazyDynamicLayout Component instance. |
+| [LazyDynamicLayoutInstance](arkts-arkui-arkui-components-arklazydynamiclayout-con.md#lazydynamiclayoutinstance) | Defines LazyDynamicLayout Component instance. |
 

@@ -6,10 +6,6 @@ Defines the lazy column layout attribute.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare class LazyColumnLayoutAttribute--><!--Device-unnamed-export declare class LazyColumnLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -31,10 +27,6 @@ Sets the horizontal alignment of the row content.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -53,7 +45,7 @@ Sets the horizontal alignment of the row content.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## footer
 
@@ -64,10 +56,6 @@ footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 Sets the footer of the lazy column layout.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,7 +75,7 @@ Sets the footer of the lazy column layout.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## header
 
@@ -98,10 +86,6 @@ header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 Sets the header of the lazy column layout.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,7 +105,7 @@ Sets the header of the lazy column layout.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## onVisibleIndexesChange
 
@@ -132,10 +116,6 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): La
 Triggered when the index of child components in the visible area changes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -155,7 +135,7 @@ Triggered when the index of child components in the visible area changes.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## space
 
@@ -166,10 +146,6 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 The spacing between rows.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -189,7 +165,7 @@ The spacing between rows.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 
 ## sticky
 
@@ -200,10 +176,6 @@ sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute
 Sets sticky style for header and footer.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -223,5 +195,5 @@ Sets sticky style for header and footer.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
 

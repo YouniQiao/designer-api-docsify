@@ -16,10 +16,6 @@ Obtains the number of uplink data bytes of the sharing network interfaces.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 <!--Device-sharing-function getStatsTxBytes(callback: AsyncCallback<int>): void--><!--Device-sharing-function getStatsTxBytes(callback: AsyncCallback<int>): void-End-->
@@ -44,7 +40,7 @@ Obtains the number of uplink data bytes of the sharing network interfaces.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';
@@ -66,10 +62,6 @@ function getStatsTxBytes(): Promise<int>
 Obtains the number of uplink data bytes of the sharing network interfaces.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -95,7 +87,7 @@ Obtains the number of uplink data bytes of the sharing network interfaces.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sharing } from '@kit.NetworkKit';

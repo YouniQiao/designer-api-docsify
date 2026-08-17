@@ -4,10 +4,6 @@ Defines the style of a grid item.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface GridItemOptions--><!--Device-unnamed-declare interface GridItemOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Style of the grid item. Default value: **GridItemStyle.NONE**. If this parameter
 **Type:** [GridItemStyle](arkts-arkui-griditemstyle-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

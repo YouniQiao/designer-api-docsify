@@ -16,11 +16,9 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)(callback: AsyncCallback&lt;Array&lt;Display&gt;&gt;)
+**Substitutes:** [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays)(callback: AsyncCallback&lt;Array&lt;Display&gt;&gt;)
 
 <!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void-End-->
 
@@ -32,7 +30,7 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | Yes | Callback used to return all the Display objects. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,11 +56,9 @@ Obtains all Display objects. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)()
+**Substitutes:** [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays)()
 
 <!--Device-display-function getAllDisplay(): Promise<Array<Display>>--><!--Device-display-function getAllDisplay(): Promise<Array<Display>>-End-->
 
@@ -74,7 +70,7 @@ Obtains all Display objects. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | Promise used to return all the Display objects. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

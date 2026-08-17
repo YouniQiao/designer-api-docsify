@@ -1,12 +1,8 @@
 # SslErrorEvent
 
-Defines the ssl error event.
+用户加载资源时发生SSL错误时触发的回调详情，包括URL、错误类型和证书链。适用于需要详细分析SSL错误的场景，提升安全问题的诊断和排查效率。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface SslErrorEvent--><!--Device-unnamed-declare interface SslErrorEvent-End-->
 
@@ -24,10 +20,6 @@ certChainData?: Array<Uint8Array>
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-SslErrorEvent-certChainData?: Array<Uint8Array>--><!--Device-SslErrorEvent-certChainData?: Array<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -43,10 +35,6 @@ error: SslError
 **类型：** [SslError](arkts-arkweb-sslerror-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -66,10 +54,6 @@ handler: SslErrorHandler
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SslErrorEvent-handler: SslErrorHandler--><!--Device-SslErrorEvent-handler: SslErrorHandler-End-->
@@ -82,15 +66,11 @@ handler: SslErrorHandler
 isFatalError: boolean
 ```
 
-是否是致命错误。
+是否是致命错误。致命错误会导致页面无法正常加载和渲染（如证书验证失败、协议错误），非致命错误只影响部分资源的加载（如图片加载失败）。 true表示致命错误，false表示非致命错误。
 
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -104,15 +84,11 @@ isFatalError: boolean
 isMainFrame: boolean
 ```
 
-是否是主资源。
+是否是主资源。 true表示主资源，false表示非主资源。
 
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -132,10 +108,6 @@ originalUrl: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SslErrorEvent-originalUrl: string--><!--Device-SslErrorEvent-originalUrl: string-End-->
@@ -154,10 +126,6 @@ referrer url地址。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SslErrorEvent-referrer: string--><!--Device-SslErrorEvent-referrer: string-End-->
@@ -175,10 +143,6 @@ url地址。
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

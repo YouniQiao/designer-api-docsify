@@ -16,10 +16,6 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-zlib-function decompressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void--><!--Device-zlib-function decompressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void-End-->
@@ -44,7 +40,7 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged.<br>**Applicable version:** 10 and later |
 | [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
@@ -83,10 +79,6 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-zlib-function decompressFile(inFile: string, outFile: string, callback: AsyncCallback<void>): void--><!--Device-zlib-function decompressFile(inFile: string, outFile: string, callback: AsyncCallback<void>): void-End-->
@@ -110,7 +102,7 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged. |
 | [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
@@ -145,10 +137,6 @@ Decompresses a file. This API uses a promise to return the result. > **NOTE：**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-zlib-function decompressFile(inFile: string, outFile: string, options?: Options): Promise<void>--><!--Device-zlib-function decompressFile(inFile: string, outFile: string, options?: Options): Promise<void>-End-->
@@ -178,7 +166,7 @@ Decompresses a file. This API uses a promise to return the result. > **NOTE：**
 | [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged.<br>**Applicable version:** 10 and later |
 | [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.

@@ -10,11 +10,9 @@ declare function mkdirSync(path: string, mode?: number): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
-**替代接口：** [mkdirSync](arkts-corefile-file-fs-mkdirsync-f.md#mkdirSync)
+**替代接口：** [mkdirSync](arkts-corefile-file-fs-mkdirsync-f.md#mkdirsync)
 
 <!--Device-unnamed-declare function mkdirSync(path: string, mode?: number): void--><!--Device-unnamed-declare function mkdirSync(path: string, mode?: number): void-End-->
 

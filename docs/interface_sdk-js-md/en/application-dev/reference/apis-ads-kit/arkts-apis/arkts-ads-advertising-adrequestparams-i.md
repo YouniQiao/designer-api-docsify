@@ -4,10 +4,6 @@ Defines the ad request parameters.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-advertising-export interface AdRequestParams--><!--Device-advertising-export interface AdRequestParams-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -30,10 +26,6 @@ Number of ads requested. If not set, the business logic prevails.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdRequestParams-adCount?: number--><!--Device-AdRequestParams-adCount?: number-End-->
@@ -51,10 +43,6 @@ Expected creative height when requesting an ad, in vp (mandatory for banner ads)
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Ad slot ID. Note: The getAdRequestBody API can omit this parameter.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdRequestParams-adId: string--><!--Device-AdRequestParams-adId: string-End-->
@@ -95,10 +79,6 @@ Ad keyword. Defaults to "" if not set. Note: Not supported for use currently.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,10 +98,6 @@ Requested ad type. - 1: Splash ad. - 3: Native ad. - 7: Rewarded ad. - 8: Banner
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdRequestParams-adType?: number--><!--Device-AdRequestParams-adType?: number-End-->
@@ -139,10 +115,6 @@ Expected creative width when requesting an ad, in vp (mandatory for banner ads).
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

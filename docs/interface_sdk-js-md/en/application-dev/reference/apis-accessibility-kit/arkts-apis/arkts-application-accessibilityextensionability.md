@@ -55,17 +55,17 @@ import { TouchPosition } from 'TouchPosition';
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md) | Indicates an accessibility element. For details, see [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement). |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md) | Indicates the context of the accessibility extension. For details, see [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md#AccessibilityExtensionContext). |
-| [ElementAttributeKeys](arkts-accessibility-elementattributekeys-t.md) | Describes the attribute name of [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#ElementAttributeValues). |
-| [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md) | Provides attribute names and value types of a node element. For details, see [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#ElementAttributeValues). |
-| [FocusDirection](arkts-accessibility-focusdirection-t.md) | Enumerates the focus directions. For details, see [FocusDirection](arkts-accessibility-focusdirection-t.md#FocusDirection). |
-| [FocusType](arkts-accessibility-focustype-t.md) | Enumerates the focus types. For details, see [FocusType](arkts-accessibility-focustype-t.md#FocusType). |
+| [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md) | Indicates an accessibility element. For details, see [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#accessibilityelement). |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md) | Indicates the context of the accessibility extension. For details, see [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md#accessibilityextensioncontext). |
+| [ElementAttributeKeys](arkts-accessibility-elementattributekeys-t.md) | Describes the attribute name of [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#elementattributevalues). |
+| [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md) | Provides attribute names and value types of a node element. For details, see [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#elementattributevalues). |
+| [FocusDirection](arkts-accessibility-focusdirection-t.md) | Enumerates the focus directions. For details, see [FocusDirection](arkts-accessibility-focusdirection-t.md#focusdirection). |
+| [FocusType](arkts-accessibility-focustype-t.md) | Enumerates the focus types. For details, see [FocusType](arkts-accessibility-focustype-t.md#focustype). |
 | [GestureType](arkts-accessibility-gesturetype-t.md) | Enumerates the gesture event types. A gesture event is triggered by the accessibility service when the user performs a specific gesture operation. The accessibility extension can receive and process the corresponding gesture event through the **onAccessibilityEvent** callback. |
 | [PageUpdateType](arkts-accessibility-pageupdatetype-t.md) | Enumerates the page update types. A page update event is triggered by the accessibility service when the page content or state changes. The accessibility extension can receive and process the corresponding page update event through the **onAccessibilityEvent** callback. |
-| [Rect](arkts-accessibility-rect-t.md) | Defines a rectangle. For details, see [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md#Rect). |
+| [Rect](arkts-accessibility-rect-t.md) | Defines a rectangle. For details, see [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md#rect). |
 | [TouchGuideType](arkts-accessibility-touchguidetype-t.md) | Enumerates the touch exploration event types. Touch exploration is an interaction mode in accessibility features, in which the user explores UI elements by touch without directly activating them. |
-| [WindowType](arkts-accessibility-windowtype-t.md) | Enumerates the window types. For details, see [WindowType](arkts-accessibility-windowtype-t.md#WindowType). |
+| [WindowType](arkts-accessibility-windowtype-t.md) | Enumerates the window types. For details, see [WindowType](arkts-accessibility-windowtype-t.md#windowtype). |
 
 <!--Del-->
 ### Types（系统接口）

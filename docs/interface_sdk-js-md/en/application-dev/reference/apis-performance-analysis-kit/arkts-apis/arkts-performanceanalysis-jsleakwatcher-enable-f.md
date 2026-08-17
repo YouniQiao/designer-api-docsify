@@ -16,10 +16,6 @@ Enables the detection for JS object leaks. This function is disabled by default.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-jsLeakWatcher-function enable(isEnable: boolean): void--><!--Device-jsLeakWatcher-function enable(isEnable: boolean): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -30,7 +26,7 @@ Enables the detection for JS object leaks. This function is disabled by default.
 | --- | --- | --- | --- |
 | isEnable | boolean | Yes | Whether to enable **jsLeakWatcher**. **true**: yes; **false**: no. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 jsLeakWatcher.enable(true);

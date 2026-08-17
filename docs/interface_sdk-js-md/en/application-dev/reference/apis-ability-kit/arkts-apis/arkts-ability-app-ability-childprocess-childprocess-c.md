@@ -1,12 +1,8 @@
 # ChildProcess
 
-ChildProcess is the base class for you to customize child processes. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md#@ohos.app.ability.childProcessManager), you must inherit this class and override the entrypoint method.
+ChildProcess is the base class for you to customize child processes. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md#ohosappabilitychildprocessmanager), you must inherit this class and override the entrypoint method.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ChildProcess--><!--Device-unnamed-declare class ChildProcess-End-->
 
@@ -24,13 +20,9 @@ import { ChildProcess } from 'ChildProcess';
 onStart(args?: ChildProcessArgs): void
 ```
 
-Entrypoint method of the child process. This callback is triggered when the child process is started through [childProcessManager](arkts-app-ability-childprocessmanager.md#@ohos.app.ability.childProcessManager).
+Entrypoint method of the child process. This callback is triggered when the child process is started through [childProcessManager](arkts-app-ability-childprocessmanager.md#ohosappabilitychildprocessmanager).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +36,7 @@ Entrypoint method of the child process. This callback is triggered when the chil
 | --- | --- | --- | --- |
 | args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | No | Parameters transferred to the child process. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';

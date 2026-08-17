@@ -4,10 +4,6 @@ Stack is implemented based on the array data structure. It follows the principle
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class Stack--><!--Device-unnamed-declare class Stack-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<T>
 returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Stack-[Symbol.iterator](): IterableIterator<T>--><!--Device-Stack-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -76,7 +64,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -117,10 +105,6 @@ A constructor used to create a **Stack** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Stack-constructor()--><!--Device-Stack-constructor()-End-->
@@ -133,7 +117,7 @@ A constructor used to create a **Stack** instance.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Stack's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let stack = new Stack<number | string | Object>();
@@ -148,10 +132,6 @@ forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisAr
 Uses a callback to traverse each element in the **Stack** instance.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -172,7 +152,7 @@ Uses a callback to traverse each element in the **Stack** instance.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -199,10 +179,6 @@ Executes a provided function once for each value in the Stack object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Stack-forEach(callbackfn: StackForEachCb<T>): void--><!--Device-Stack-forEach(callbackfn: StackForEachCb<T>): void-End-->
@@ -225,10 +201,6 @@ Checks whether this Stack is empty (contains no elements).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Stack-isEmpty(): boolean--><!--Device-Stack-isEmpty(): boolean-End-->
@@ -247,7 +219,7 @@ Checks whether this Stack is empty (contains no elements).
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -268,10 +240,6 @@ locate(element: T): int
 Obtains the index of the first occurrence of the specified element in this Stack.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -297,7 +265,7 @@ Obtains the index of the first occurrence of the specified element in this Stack
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The locate method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -319,10 +287,6 @@ Obtains the top element of this Stack. If the Stack is empty, **undefined** is r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Stack-peek(): T--><!--Device-Stack-peek(): T-End-->
@@ -340,9 +304,9 @@ Obtains the top element of this Stack. If the Stack is empty, **undefined** is r
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The peek method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -364,10 +328,6 @@ Removes the top element from this Stack.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Stack-pop(): T--><!--Device-Stack-pop(): T-End-->
@@ -385,9 +345,9 @@ Removes the top element from this Stack.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let stack = new Stack<number>();
@@ -409,10 +369,6 @@ push(item: T): T
 Adds an element at the top of this Stack.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -438,7 +394,7 @@ Adds an element at the top of this Stack.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The push method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class C1 {
@@ -464,10 +420,6 @@ Number of elements in a Stack.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

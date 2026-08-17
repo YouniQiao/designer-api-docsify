@@ -16,10 +16,6 @@ The set-type operations of the external crypto extension support calling custom 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-huksExternalCrypto-function setProperty(resourceId: string, propertyId: string, params?: HuksExternalCryptoParam[]): Promise<void>--><!--Device-huksExternalCrypto-function setProperty(resourceId: string, propertyId: string, params?: HuksExternalCryptoParam[]): Promise<void>-End-->

@@ -1,12 +1,8 @@
 # OnScrollEvent
 
-Represents the callback invoked when the scrollbar scrolls to a specified position.
+Defines the callback information triggered when the scrollbar scrolls to a specified position, including the horizontal and vertical offsets.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnScrollEvent--><!--Device-unnamed-declare interface OnScrollEvent-End-->
 
@@ -23,10 +19,6 @@ Position of the scrollbar on the x-axis relative to the leftmost of the web page
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -45,10 +37,6 @@ Position of the scrollbar on the y-axis relative to the top of the web page. Uni
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

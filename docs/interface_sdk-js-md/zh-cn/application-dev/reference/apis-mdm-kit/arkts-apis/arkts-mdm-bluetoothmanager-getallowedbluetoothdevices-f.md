@@ -10,10 +10,6 @@ function getAllowedBluetoothDevices(admin: Want): Array<string>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -43,6 +39,27 @@ function getAllowedBluetoothDevices(admin: Want): Array<string>
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
+**示例**
+
+```TypeScript
+import { bluetoothManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+// 创建企业设备管理扩展组件
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  // 获取蓝牙设备允许名单
+  let result: Array<string> = bluetoothManager.getAllowedBluetoothDevices(wantTemp);
+  console.info(`Succeeded in getting allowed bluetooth devices. Result: ${JSON.stringify(result)}`);
+} catch (err) {
+  console.error(`Failed to get allowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getAllowedBluetoothDevices
 
@@ -53,10 +70,6 @@ function getAllowedBluetoothDevices(admin: Want | null): Array<string>
 获取蓝牙设备可用名单。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -87,21 +100,16 @@ function getAllowedBluetoothDevices(admin: Want | null): Array<string>
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bluetoothManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
 
 // 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
 try {
   // 获取蓝牙设备允许名单
-  let result: Array<string> = bluetoothManager.getAllowedBluetoothDevices(wantTemp);
+  // 参数需根据实际情况进行替换
+  let result: Array<string> = bluetoothManager.getAllowedBluetoothDevices(null);
   console.info(`Succeeded in getting allowed bluetooth devices. Result: ${JSON.stringify(result)}`);
 } catch(err) {
   console.error(`Failed to get allowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);

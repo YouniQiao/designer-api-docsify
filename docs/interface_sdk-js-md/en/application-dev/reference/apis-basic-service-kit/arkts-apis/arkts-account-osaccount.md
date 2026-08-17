@@ -4,10 +4,6 @@ The **osAccount** module provides basic capabilities for managing system (OS) ac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace osAccount--><!--Device-unnamed-declare namespace osAccount-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -24,16 +20,16 @@ import { osAccount } from 'osAccount';
 
 | Name | Description |
 | --- | --- |
-| [getAccountManager](arkts-basicservices-osaccount-getaccountmanager-f.md#getAccountManager) | Obtains an **AccountManager** instance. |
-| [isDomainAccountSupported](arkts-basicservices-osaccount-isdomainaccountsupported-f.md#isDomainAccountSupported) | Checks whether this domain account is supported. This API uses a promise to return the result. |
+| [getAccountManager](arkts-basicservices-osaccount-getaccountmanager-f.md#getaccountmanager) | Obtains an **AccountManager** instance. |
+| [isDomainAccountSupported](arkts-basicservices-osaccount-isdomainaccountsupported-f.md#isdomainaccountsupported) | Checks whether this domain account is supported. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getAuthorizationManager](arkts-basicservices-osaccount-getauthorizationmanager-f-sys.md#getAuthorizationManager) | Obtains this OS account authorization manager. |
-| [getOsAccountSubProfileManager](arkts-basicservices-osaccount-getosaccountsubprofilemanager-f-sys.md#getOsAccountSubProfileManager) | Obtains an OS account sub-profile manager instance. |
+| [getAuthorizationManager](arkts-basicservices-osaccount-getauthorizationmanager-f-sys.md#getauthorizationmanager) | Obtains this OS account authorization manager. |
+| [getOsAccountSubProfileManager](arkts-basicservices-osaccount-getosaccountsubprofilemanager-f-sys.md#getosaccountsubprofilemanager) | Obtains an OS account sub-profile manager instance. |
 <!--DelEnd-->
 
 ### Classes
@@ -60,7 +56,7 @@ import { osAccount } from 'osAccount';
 | Name | Description |
 | --- | --- |
 | [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | Provides APIs for managing OS accounts. |
-| [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | Represents a set of optional parameters for creating an OS account bound to the specified domain account. It inherits from [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md#CreateOsAccountOptions-(System-API)). |
+| [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | Represents a set of optional parameters for creating an OS account bound to the specified domain account. It inherits from [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md#createosaccountoptions-system-api). |
 | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Represents the domain account information. |
 | [DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md) | Represents the configuration of a domain server. |
 | [OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md) | Represents information about an OS account. |
@@ -87,10 +83,10 @@ import { osAccount } from 'osAccount';
 | [DomainPlugin](arkts-basicservices-osaccount-domainplugin-i-sys.md) | Provides APIs for domain account authentication. |
 | [EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md) | Defines enrolled credential information. |
 | [ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md) | Defines the executor property. |
-| [GetAuthInfoOptions](arkts-basicservices-osaccount-getauthinfooptions-i-sys.md) | Represents a set of optional parameters for [GetAuthInfo](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getAuthInfo). |
+| [GetAuthInfoOptions](arkts-basicservices-osaccount-getauthinfooptions-i-sys.md) | Represents a set of optional parameters for [GetAuthInfo](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getauthinfo). |
 | [GetDomainAccessTokenOptions](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | Defines the options for obtaining a domain access token. |
 | [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md) | Defines the options for obtaining domain account information. |
-| [GetDomainAccountInfoPluginOptions](arkts-basicservices-osaccount-getdomainaccountinfopluginoptions-i-sys.md) | Defines the options for the domain plug-in to obtain the domain account information. The **GetDomainAccountInfoPluginOptions** class inherits from [**GetDomainAccountInfoOptions**](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md#GetDomainAccountInfoOptions-(System-API)). |
+| [GetDomainAccountInfoPluginOptions](arkts-basicservices-osaccount-getdomainaccountinfopluginoptions-i-sys.md) | Defines the options for the domain plug-in to obtain the domain account information. The **GetDomainAccountInfoPluginOptions** class inherits from [**GetDomainAccountInfoOptions**](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md#getdomainaccountinfooptions-system-api). |
 | [GetInputDataOptions](arkts-basicservices-osaccount-getinputdataoptions-i-sys.md) | Represents a set of optional parameters for onGetData. |
 | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | Defines the request for obtaining property information. |
 | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Provides callbacks for IDM. |

@@ -1,10 +1,8 @@
-# RouterState
+# RouterState(Page Routing)
 
 Defines the routing state.
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 
@@ -36,8 +34,6 @@ Index of the current page in the stack. The index starts from 1 from the bottom 
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** index
@@ -58,8 +54,6 @@ Name of the current page, that is, the file name.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** name
@@ -79,8 +73,6 @@ Path of the current page.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 

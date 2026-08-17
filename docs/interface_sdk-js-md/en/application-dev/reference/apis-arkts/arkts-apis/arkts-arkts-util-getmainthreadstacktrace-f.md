@@ -16,10 +16,6 @@ Obtains the stack trace information of the main thread. A maximum of 64 call fra
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-util-function getMainThreadStackTrace(): string--><!--Device-util-function getMainThreadStackTrace(): string-End-->
@@ -32,7 +28,7 @@ Obtains the stack trace information of the main thread. A maximum of 64 call fra
 | --- | --- |
 | string | Stack trace information of the main thread. If the main thread is not executing JavaScript code , an empty string is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let stack = util.getMainThreadStackTrace();

@@ -16,10 +16,6 @@ Checks whether the device supports floating balls.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-floatingBall-function isFloatingBallEnabled(): boolean--><!--Device-floatingBall-function isFloatingBallEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,7 +26,7 @@ Checks whether the device supports floating balls.
 | --- | --- |
 | boolean | Check result for the support of floating balls. **true** if supported, **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let enable: boolean = floatingBall.isFloatingBallEnabled();

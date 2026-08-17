@@ -16,10 +16,6 @@ Uses the specified camera to make a video call. If **cameraId** is left empty, t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function controlCamera(callId: int, cameraId: string): Promise<void>--><!--Device-call-function controlCamera(callId: int, cameraId: string): Promise<void>-End-->
@@ -33,7 +29,7 @@ Uses the specified camera to make a video call. If **cameraId** is left empty, t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
-| cameraId | string | Yes | Camera ID. For details about how to obtain the camera ID, see the [getSupportedCameras](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#getSupportedCameras) API in camera management. |
+| cameraId | string | Yes | Camera ID. For details about how to obtain the camera ID, see the [getSupportedCameras](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#getsupportedcameras) API in camera management. |
 
 **Return value:**
 
@@ -53,7 +49,7 @@ Uses the specified camera to make a video call. If **cameraId** is left empty, t
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

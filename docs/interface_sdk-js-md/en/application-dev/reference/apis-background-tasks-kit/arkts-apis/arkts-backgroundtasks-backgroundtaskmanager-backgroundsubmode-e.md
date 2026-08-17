@@ -4,10 +4,6 @@ Defines the subtype of a continuous task.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backgroundTaskManager-export enum BackgroundSubMode--><!--Device-backgroundTaskManager-export enum BackgroundSubMode-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -18,13 +14,9 @@ Defines the subtype of a continuous task.
 CAR_KEY = 1
 ```
 
-Car key. **NOTE：**1. The car key subtype takes effect only when a continuous task of the BLUETOOTH_INTERACTION type is requested. 2. Continuous tasks of this type cannot be updated through the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning) API.
+Car key. **NOTE：**1. The car key subtype takes effect only when a continuous task of the BLUETOOTH_INTERACTION type is requested. 2. Continuous tasks of this type cannot be updated through the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning) API.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BackgroundSubMode-CAR_KEY = 1--><!--Device-BackgroundSubMode-CAR_KEY = 1-End-->
 

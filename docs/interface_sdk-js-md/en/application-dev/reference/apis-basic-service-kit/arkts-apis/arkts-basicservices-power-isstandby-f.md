@@ -16,10 +16,6 @@ Checks whether the device is in standby mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-power-function isStandby(): boolean--><!--Device-power-function isStandby(): boolean-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
@@ -36,7 +32,7 @@ Checks whether the device is in standby mode.
 | --- | --- |
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

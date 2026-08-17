@@ -4,10 +4,6 @@ Wi-Fi information elements.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface WifiInfoElem--><!--Device-wifiManager-interface WifiInfoElem-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -30,10 +26,6 @@ Element content
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiInfoElem-content: Uint8Array--><!--Device-WifiInfoElem-content: Uint8Array-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -49,10 +41,6 @@ Element id
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiInfoElem-eid: int--><!--Device-WifiInfoElem-eid: int-End-->
 

@@ -16,10 +16,6 @@ Get all available shared hosts.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 **Model restriction:** This API can be used only in the stage model.

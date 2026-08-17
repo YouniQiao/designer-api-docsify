@@ -10,10 +10,6 @@ function registerShutdownCallback(callback: Callback<boolean>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.REBOOT
 
 <!--Device-power-function registerShutdownCallback(callback: Callback<boolean>): void--><!--Device-power-function registerShutdownCallback(callback: Callback<boolean>): void-End-->
@@ -26,7 +22,7 @@ function registerShutdownCallback(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示重启；返回false表示关机。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示重启；返回false表示关机。 |
 
 **错误码：**
 
@@ -36,7 +32,7 @@ function registerShutdownCallback(callback: Callback<boolean>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {

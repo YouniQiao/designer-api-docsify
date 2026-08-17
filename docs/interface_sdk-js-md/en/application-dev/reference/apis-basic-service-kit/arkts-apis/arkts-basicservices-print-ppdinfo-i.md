@@ -4,10 +4,6 @@ defines ppd info.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PpdInfo--><!--Device-print-interface PpdInfo-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -30,10 +26,6 @@ Manufacturer.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PpdInfo-manufacturer: string--><!--Device-PpdInfo-manufacturer: string-End-->
@@ -52,10 +44,6 @@ Nick name.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PpdInfo-nickName: string--><!--Device-PpdInfo-nickName: string-End-->
@@ -73,10 +61,6 @@ Ppd name.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

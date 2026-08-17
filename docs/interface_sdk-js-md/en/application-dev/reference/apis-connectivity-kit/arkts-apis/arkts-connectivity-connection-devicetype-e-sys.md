@@ -4,10 +4,6 @@ Enum for the custom type of remote device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-enum DeviceType--><!--Device-connection-enum DeviceType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -23,10 +19,6 @@ DEVICE_TYPE_DEFAULT = 0
 Default type, the type is consistent with COD.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Car bluetooth.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceType-DEVICE_TYPE_CAR = 1--><!--Device-DeviceType-DEVICE_TYPE_CAR = 1-End-->
@@ -67,10 +55,6 @@ DEVICE_TYPE_HEADSET = 2
 Headset bluetooth.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ Hearing Aid.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceType-DEVICE_TYPE_HEARING = 3--><!--Device-DeviceType-DEVICE_TYPE_HEARING = 3-End-->
@@ -111,10 +91,6 @@ DEVICE_TYPE_GLASSES = 4
 Glasses device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,10 +110,6 @@ Watch device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceType-DEVICE_TYPE_WATCH = 5--><!--Device-DeviceType-DEVICE_TYPE_WATCH = 5-End-->
@@ -156,10 +128,6 @@ Speaker device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceType-DEVICE_TYPE_SPEAKER = 6--><!--Device-DeviceType-DEVICE_TYPE_SPEAKER = 6-End-->
@@ -177,10 +145,6 @@ DEVICE_TYPE_OTHERS = 7
 Others bluetooth.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

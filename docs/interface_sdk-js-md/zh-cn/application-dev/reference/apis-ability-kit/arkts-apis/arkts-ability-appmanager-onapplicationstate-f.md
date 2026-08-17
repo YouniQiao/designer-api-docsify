@@ -10,10 +10,6 @@ function on(type: 'applicationState', observer: ApplicationStateObserver): int
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
 <!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver): int--><!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver): int-End-->
@@ -41,7 +37,7 @@ function on(type: 'applicationState', observer: ApplicationStateObserver): int
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -92,10 +88,6 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, bundle
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
 <!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver, bundleNameList: Array<string>): int--><!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver, bundleNameList: Array<string>): int-End-->
@@ -124,7 +116,7 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, bundle
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

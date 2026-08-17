@@ -16,10 +16,6 @@ Obtains the device posture data. The posture data contains the rotation angles o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-deviceStatus-function getDeviceRotationRadian(): Promise<DeviceRotationRadian>--><!--Device-deviceStatus-function getDeviceRotationRadian(): Promise<DeviceRotationRadian>-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
@@ -40,7 +36,7 @@ Obtains the device posture data. The posture data contains the rotation angles o
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
 | [32500001](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-abnormal-service) | Service exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceStatus } from '@kit.MultimodalAwarenessKit';

@@ -4,10 +4,6 @@ Provides accessibility text mapping for the slider step markers.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface SliderShowStepOptions--><!--Device-unnamed-declare interface SliderShowStepOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Step value-to-text mappings for assistive technologies (for example, screen read
 **Type:** Map&lt;number, [SliderStepItemAccessibility](arkts-arkui-sliderstepitemaccessibility-i.md)&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

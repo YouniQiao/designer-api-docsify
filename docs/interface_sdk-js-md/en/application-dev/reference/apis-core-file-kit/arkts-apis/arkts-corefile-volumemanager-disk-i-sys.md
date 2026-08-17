@@ -4,10 +4,6 @@ Disk information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-volumeManager-export interface Disk--><!--Device-volumeManager-export interface Disk-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -32,10 +28,6 @@ Disk ID, in the disk-{Primary device ID}-{Secondary device ID} format.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Disk-diskId: string--><!--Device-Disk-diskId: string-End-->
@@ -55,10 +47,6 @@ Disk type.
 **Type:** [DiskType](arkts-corefile-volumemanager-disktype-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Disk information extension field.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Disk-extraInfo: string--><!--Device-Disk-extraInfo: string-End-->
@@ -103,10 +87,6 @@ Indicates that the disk can be removed.The value true indicates that the disk ca
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,10 +108,6 @@ Disk total size. <br>Unit: Byte.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Disk-sizeBytes: long--><!--Device-Disk-sizeBytes: long-End-->
@@ -151,10 +127,6 @@ Indicates the volume of a disk. A disk may contain multiple volumes.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

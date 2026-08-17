@@ -1,12 +1,8 @@
 # DataAbilityHelper
 
-A DataAbilityHelper object is obtained through [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper).
+A DataAbilityHelper object is obtained through [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquiredataabilityhelper).
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DataAbilityHelper--><!--Device-unnamed-export interface DataAbilityHelper-End-->
 
@@ -22,10 +18,6 @@ Inserts multiple data records into the database. This API uses an asynchronous c
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void-End-->
@@ -40,7 +32,7 @@ Inserts multiple data records into the database. This API uses an asynchronous c
 | valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Data records to insert. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -72,10 +64,6 @@ Inserts multiple data records into the database. This API uses a promise to retu
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number>--><!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number>-End-->
@@ -95,7 +83,7 @@ Inserts multiple data records into the database. This API uses a promise to retu
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the number of inserted data records. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -123,10 +111,6 @@ Calls an extended method defined by the DataAbility. This API uses an asynchrono
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void--><!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void-End-->
@@ -143,7 +127,7 @@ Calls an extended method defined by the DataAbility. This API uses an asynchrono
 | extras | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Key-value pair parameter. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)&gt; | Yes | Callback used to return the extended parameters in the format of key-value pairs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -172,10 +156,6 @@ Calls an extended method defined by the DataAbility. This API uses a promise to 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>--><!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>-End-->
@@ -197,7 +177,7 @@ Calls an extended method defined by the DataAbility. This API uses a promise to 
 | --- | --- |
 | Promise&lt;[PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)&gt; | Promise used to return the extended parameters in the format of key-value pairs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -225,10 +205,6 @@ Deletes one or more data records from the database. This API uses an asynchronou
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void-End-->
@@ -243,7 +219,7 @@ Deletes one or more data records from the database. This API uses an asynchronou
 | predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -273,10 +249,6 @@ Deletes one or more data records from the database. This API uses a promise to r
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<number>--><!--Device-DataAbilityHelper-delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<number>-End-->
@@ -296,7 +268,7 @@ Deletes one or more data records from the database. This API uses a promise to r
 | --- | --- |
 | Promise&lt;number&gt; | Returns the number of data records deleted. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -322,10 +294,6 @@ Uses a custom processing logic to delete data records from the database. This AP
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-delete(uri: string, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-delete(uri: string, callback: AsyncCallback<number>): void-End-->
@@ -339,7 +307,7 @@ Uses a custom processing logic to delete data records from the database. This AP
 | uri | string | Yes | URI of the data to delete. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -367,10 +335,6 @@ Converts a normalized URI generated by normalizeUri to a denormalized one. This 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -384,7 +348,7 @@ Converts a normalized URI generated by normalizeUri to a denormalized one. This 
 | uri | string | Yes | URI object to denormalize. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the denormalized URI object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -412,10 +376,6 @@ Converts a normalized URI generated by normalizeUri to a denormalized one. This 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-denormalizeUri(uri: string): Promise<string>--><!--Device-DataAbilityHelper-denormalizeUri(uri: string): Promise<string>-End-->
@@ -434,7 +394,7 @@ Converts a normalized URI generated by normalizeUri to a denormalized one. This 
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the denormalized URI object |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -462,10 +422,6 @@ Operates data in the database in batches. This API uses an asynchronous callback
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-executeBatch(    uri: string,    operations: Array<DataAbilityOperation>,    callback: AsyncCallback<Array<DataAbilityResult>>  ): void--><!--Device-DataAbilityHelper-executeBatch(    uri: string,    operations: Array<DataAbilityOperation>,    callback: AsyncCallback<Array<DataAbilityResult>>  ): void-End-->
@@ -480,7 +436,7 @@ Operates data in the database in batches. This API uses an asynchronous callback
 | operations | Array&lt;[DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)&gt; | Yes | An array holding the data operations on the database. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Yes | Callback used to return the result of each operation in the DataAbilityResult array. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -510,10 +466,6 @@ Operates data in the database in batches. This API uses a promise to return the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Array<DataAbilityResult>>--><!--Device-DataAbilityHelper-executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Array<DataAbilityResult>>-End-->
@@ -533,7 +485,7 @@ Operates data in the database in batches. This API uses a promise to return the 
 | --- | --- |
 | Promise&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Promise used to return the result of each operation in the DataAbilityResult array. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -562,10 +514,6 @@ Obtains the supported media resource types of a specified file. This API uses an
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void--><!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void-End-->
@@ -580,7 +528,7 @@ Obtains the supported media resource types of a specified file. This API uses an
 | mimeTypeFilter | string | Yes | Media resource type of the file to obtain. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array holding the media resource types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -608,10 +556,6 @@ Obtains the supported media resource types of a specified file. This API uses a 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>--><!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>-End-->
@@ -631,7 +575,7 @@ Obtains the supported media resource types of a specified file. This API uses a 
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise used to return an array holding the media resource types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -655,10 +599,6 @@ Obtains the media resource type of the data specified by a given URI. This API u
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-getType(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-getType(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -672,7 +612,7 @@ Obtains the media resource type of the data specified by a given URI. This API u
 | uri | string | Yes | URI of the data. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the media resource type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -700,10 +640,6 @@ Obtains the media resource type of the data specified by a given URI. This API u
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-getType(uri: string): Promise<string>--><!--Device-DataAbilityHelper-getType(uri: string): Promise<string>-End-->
@@ -722,7 +658,7 @@ Obtains the media resource type of the data specified by a given URI. This API u
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the media resource type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -745,10 +681,6 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<numb
 Inserts a single data record into the database. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -773,10 +705,6 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>
 Inserts a single data record into the database. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -807,10 +735,6 @@ Converts the URI that refers to a DataAbility into a normalized URI. This API us
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -824,7 +748,7 @@ Converts the URI that refers to a DataAbility into a normalized URI. This API us
 | uri | string | Yes | URI object to normalize. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the normalized URI object if the DataAbility supports URI normalization. If the DataAbility does not support URI normalization, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -852,10 +776,6 @@ Converts a normalized URI generated by normalizeUri to a denormalized one. This 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-normalizeUri(uri: string): Promise<string>--><!--Device-DataAbilityHelper-normalizeUri(uri: string): Promise<string>-End-->
@@ -874,7 +794,7 @@ Converts a normalized URI generated by normalizeUri to a denormalized one. This 
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the normalized URI object if the DataAbility supports URI normalization. If the DataAbility does not support URI normalization, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -898,10 +818,6 @@ Notifies the registered observer of a change to the data specified by the URI. T
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void-End-->
@@ -915,7 +831,7 @@ Notifies the registered observer of a change to the data specified by the URI. T
 | uri | string | Yes | URI of the data that changes. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is registered, err is undefined. Otherwise, err is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -943,10 +859,6 @@ Notifies the registered observer of a change to the data specified by the URI. T
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-notifyChange(uri: string): Promise<void>--><!--Device-DataAbilityHelper-notifyChange(uri: string): Promise<void>-End-->
@@ -965,7 +877,7 @@ Notifies the registered observer of a change to the data specified by the URI. T
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -989,10 +901,6 @@ Deregisters the observer that listens for changes in the data specified by a giv
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void-End-->
@@ -1007,7 +915,7 @@ Deregisters the observer that listens for changes in the data specified by a giv
 | uri | string | Yes | URI of the data. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the observer is deregistered, err is undefined. Otherwise, err is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1040,10 +948,6 @@ Registers an observer to listen for changes in the data specified by a given URI
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void-End-->
@@ -1058,7 +962,7 @@ Registers an observer to listen for changes in the data specified by a given URI
 | uri | string | Yes | URI of the data. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is registered, err is undefined. Otherwise, err is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1087,10 +991,6 @@ Opens a file with a specified URI. This API uses an asynchronous callback to ret
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-openFile(uri: string, mode: string, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-openFile(uri: string, mode: string, callback: AsyncCallback<number>): void-End-->
@@ -1105,7 +1005,7 @@ Opens a file with a specified URI. This API uses an asynchronous callback to ret
 | mode | string | Yes | Mode for opening the file. The value r indicates read-only access, w indicates write-only access, and rw indicates read-write access. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the file descriptor. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1134,10 +1034,6 @@ Opens a file with a specified URI. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-openFile(uri: string, mode: string): Promise<number>--><!--Device-DataAbilityHelper-openFile(uri: string, mode: string): Promise<number>-End-->
@@ -1157,7 +1053,7 @@ Opens a file with a specified URI. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the file descriptor. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1187,10 +1083,6 @@ Queries data in the database. This API uses an asynchronous callback to return t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-query(    uri: string,    columns: Array<string>,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<ResultSet>  ): void--><!--Device-DataAbilityHelper-query(    uri: string,    columns: Array<string>,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<ResultSet>  ): void-End-->
@@ -1206,7 +1098,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1237,10 +1129,6 @@ Queries data in the database. This API uses an asynchronous callback to return t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-query(uri: string, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, callback: AsyncCallback<ResultSet>): void-End-->
@@ -1254,7 +1142,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | uri | string | Yes | URI of the data to query. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1282,10 +1170,6 @@ Queries data in the database. This API uses an asynchronous callback to return t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
@@ -1300,7 +1184,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is null, all columns will be queried. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1329,10 +1213,6 @@ Queries data in the database. This API uses an asynchronous callback to return t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void-End-->
@@ -1347,7 +1227,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1377,10 +1257,6 @@ Queries data in the database. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbilityPredicates): Promise<ResultSet>--><!--Device-DataAbilityHelper-query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbilityPredicates): Promise<ResultSet>-End-->
@@ -1401,7 +1277,7 @@ Queries data in the database. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Returns the query result { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1433,10 +1309,6 @@ Updates data in the database. This API uses an asynchronous callback to return t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-update(    uri: string,    valuesBucket: rdb.ValuesBucket,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<number>  ): void--><!--Device-DataAbilityHelper-update(    uri: string,    valuesBucket: rdb.ValuesBucket,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<number>  ): void-End-->
@@ -1452,7 +1324,7 @@ Updates data in the database. This API uses an asynchronous callback to return t
 | predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1489,10 +1361,6 @@ Updates data in the database. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.DataAbilityPredicates): Promise<number>--><!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.DataAbilityPredicates): Promise<number>-End-->
@@ -1513,7 +1381,7 @@ Updates data in the database. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the number of updated data records. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';
@@ -1546,10 +1414,6 @@ Uses a custom processing logic to update data records in the database. This API 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void-End-->
@@ -1564,7 +1428,7 @@ Uses a custom processing logic to update data records in the database. This API 
 | valuesBucket | rdb.ValuesBucket | Yes | New values. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import ability from '@ohos.ability.ability';

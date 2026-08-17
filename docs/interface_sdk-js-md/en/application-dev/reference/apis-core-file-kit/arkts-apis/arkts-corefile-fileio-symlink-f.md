@@ -10,8 +10,6 @@ Creates a symbolic link based on the file path. This API uses a promise to retur
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [symlink](arkts-corefile-file-fs-symlink-f.md#symlink)
@@ -43,8 +41,6 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

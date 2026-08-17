@@ -10,9 +10,7 @@ Creates a writeable stream. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream--><!--Device-fileIo-function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream-End-->
 
@@ -23,7 +21,7 @@ Creates a writeable stream. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the file. |
-| options | [WriteStreamOptions](arkts-na-file-fs-writestreamoptions-i.md) | No | The options are as follows: <br>- **start** (number): start position to write the data, in bytes. This parameter is optional. By default, data is written from the current position. <br>- **mode** (number): [OpenMode](arkts-na-fileio-openmode-n.md#OpenMode) for creating the writeable stream. This parameter is optional. The default value is the write-only mode. |
+| options | [WriteStreamOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-writestreamoptions-i.md) | No | The options are as follows: <br>- **start** (number): start position to write the data, in bytes. This parameter is optional. By default, data is written from the current position. <br>- **mode** (number): [OpenMode](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-openmode-n.md#openmode) for creating the writeable stream. This parameter is optional. The default value is the write-only mode. |
 
 **Return value:**
 

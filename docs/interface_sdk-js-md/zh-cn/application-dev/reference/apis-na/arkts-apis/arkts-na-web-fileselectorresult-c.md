@@ -1,12 +1,10 @@
 # FileSelectorResult
 
-Defines the file selector result, related to onFileSelectorShow method.
+Defines the file selector result, related to [onFileSelectorShow](../../apis-arkweb/arkts-components/arkts-arkweb-web-attribute.md#onfileselectorshow) method.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare class FileSelectorResult--><!--Device-unnamed-export declare class FileSelectorResult-End-->
 
@@ -22,9 +20,7 @@ Constructor.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-FileSelectorResult-constructor()--><!--Device-FileSelectorResult-constructor()-End-->
 
@@ -40,9 +36,7 @@ select a list of files.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-FileSelectorResult-handleFileList(fileList: Array<string>): void--><!--Device-FileSelectorResult-handleFileList(fileList: Array<string>): void-End-->
 

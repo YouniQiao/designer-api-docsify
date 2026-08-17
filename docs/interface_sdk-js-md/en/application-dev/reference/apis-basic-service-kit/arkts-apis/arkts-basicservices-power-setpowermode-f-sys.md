@@ -16,10 +16,6 @@ Sets the power mode of a device. This API uses an asynchronous callback to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.POWER_OPTIMIZATION
 
 <!--Device-power-function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): void--><!--Device-power-function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): void-End-->
@@ -44,7 +40,7 @@ Sets the power mode of a device. This API uses an asynchronous callback to retur
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE, (err: Error) => {
@@ -66,10 +62,6 @@ function setPowerMode(mode: DevicePowerMode): Promise<void>
 Sets the power mode of a device. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.POWER_OPTIMIZATION
 
@@ -100,7 +92,7 @@ Sets the power mode of a device. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE)

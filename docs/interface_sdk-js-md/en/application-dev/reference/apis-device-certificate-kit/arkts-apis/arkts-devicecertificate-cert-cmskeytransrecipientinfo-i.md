@@ -4,10 +4,6 @@ Represents KeyTrans recipient information for CMS enveloped data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface CmsKeyTransRecipientInfo--><!--Device-cert-interface CmsKeyTransRecipientInfo-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -29,10 +25,6 @@ RSA certificate.
 **Type:** X509Cert
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

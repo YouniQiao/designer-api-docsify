@@ -4,8 +4,6 @@ Options for obtaining the screen brightness mode.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-unnamed-export interface GetBrightnessModeOptions--><!--Device-unnamed-export interface GetBrightnessModeOptions-End-->
@@ -36,8 +34,6 @@ Called when an API call is complete.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-GetBrightnessModeOptions-complete?: () => void--><!--Device-GetBrightnessModeOptions-complete?: () => void-End-->
@@ -56,8 +52,6 @@ Called when an API call has failed. **data** indicates the error information, an
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 7
 
 <!--Device-GetBrightnessModeOptions-fail?: (data: string, code: number) => void--><!--Device-GetBrightnessModeOptions-fail?: (data: string, code: number) => void-End-->
@@ -70,13 +64,11 @@ Called when an API call has failed. **data** indicates the error information, an
 success?: (data: BrightnessModeResponse) => void
 ```
 
-Called when an API call is successful. **data** is a return value of the [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md#BrightnessModeResponse) type.
+Called when an API call is successful. **data** is a return value of the [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md#brightnessmoderesponse) type.
 
 **Type:** (data: BrightnessModeResponse) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 7
 

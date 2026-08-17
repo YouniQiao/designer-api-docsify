@@ -10,10 +10,6 @@ Obtains the SIM card label synchronously.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sim-function getSimLabelSync(slotId: int): SimLabel--><!--Device-sim-function getSimLabelSync(slotId: int): SimLabel-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
@@ -30,7 +26,7 @@ Obtains the SIM card label synchronously.
 | --- | --- |
 | [SimLabel](arkts-telephony-sim-simlabel-i.md) | SIM card label. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

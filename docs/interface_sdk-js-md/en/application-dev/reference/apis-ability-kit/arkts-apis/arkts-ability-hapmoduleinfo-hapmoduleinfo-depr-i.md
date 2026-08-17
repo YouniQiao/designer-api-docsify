@@ -1,14 +1,12 @@
 # HapModuleInfo
 
-The HapModuleInfo module provides information about an HAP module. Unless otherwise specified, the information is obtained through [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) . > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-HapModuleInfo](#HapModuleInfo) instead.
+The HapModuleInfo module provides information about an HAP module. Unless otherwise specified, the information is obtained through [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo) . > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-HapModuleInfo](#hapmoduleinfo) instead.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HapModuleInfo](#HapModuleInfo)
+**Substitutes:** [HapModuleInfo](#hapmoduleinfo)
 
 <!--Device-unnamed-export interface HapModuleInfo--><!--Device-unnamed-export interface HapModuleInfo-End-->
 
@@ -27,8 +25,6 @@ Ability information.
 **Default:** Obtains configuration information about ability
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Module background image.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-HapModuleInfo-readonly backgroundImg: string--><!--Device-HapModuleInfo-readonly backgroundImg: string-End-->
@@ -73,8 +67,6 @@ Module description.
 **Default:** Describes the hapmodule
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -98,8 +90,6 @@ Module description ID.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** descriptionId
@@ -121,8 +111,6 @@ Device types supported by the module.
 **Default:** The device types that this hapmodule can run on
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -146,8 +134,6 @@ Module icon.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** icon
@@ -169,8 +155,6 @@ Module icon ID.
 **Default:** Indicates the icon id of this hapmodule
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -194,8 +178,6 @@ Whether installation-free is supported. **true** if supported, **false** otherwi
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** installationFree
@@ -217,8 +199,6 @@ Module label.
 **Default:** Indicates the label of this hapmodule
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -242,8 +222,6 @@ Module label ID.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -266,8 +244,6 @@ Name of the main ability.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-HapModuleInfo-readonly mainAbilityName: string--><!--Device-HapModuleInfo-readonly mainAbilityName: string-End-->
@@ -287,8 +263,6 @@ Module name.
 **Default:** Indicates the name of the .hap package to which the capability belongs
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -312,8 +286,6 @@ Module name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** name
@@ -336,8 +308,6 @@ Capabilities required for module running.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-HapModuleInfo-readonly reqCapabilities: Array<string>--><!--Device-HapModuleInfo-readonly reqCapabilities: Array<string>-End-->
@@ -357,8 +327,6 @@ Running modes supported by the module.
 **Default:** Indicates the supported modes of this hapmodule
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

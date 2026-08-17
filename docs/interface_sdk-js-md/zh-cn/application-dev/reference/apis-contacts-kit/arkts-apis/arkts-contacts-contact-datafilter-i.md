@@ -4,10 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 <!--Device-contact-interface DataFilter--><!--Device-contact-interface DataFilter-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
@@ -23,10 +19,6 @@ field: DataField
 **类型：** [DataField](arkts-contacts-contact-datafield-e.md)
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -45,10 +37,6 @@ options: Array<FilterOptions>
 **类型：** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

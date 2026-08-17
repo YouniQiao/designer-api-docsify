@@ -1,12 +1,8 @@
 # Tool
 
-A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md#@ohos.graphics.common2D). > **NOTE：**> > - The initial APIs of this class are supported since API version 15. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md#ohosgraphicscommon2d). > **NOTE：**> > - The initial APIs of this class are supported since API version 15. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-drawing-class Tool--><!--Device-drawing-class Tool-End-->
 
@@ -28,10 +24,6 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color--><!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -40,7 +32,7 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceColor | ResourceColor | Yes | Color value of the **ResourceColor** type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md#Resource) supports only the construction method **\\$r('belonging.type.name')**. Ensure that the resource has been defined in the **main/resources/base/element** directory. (The types **color**, **string**, and **integer** are available for the belonging **app**, whereas only the type **color** is available for the belonging **sys**.) |
+| resourceColor | ResourceColor | Yes | Color value of the **ResourceColor** type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md#resource) supports only the construction method **\\$r('belonging.type.name')**. Ensure that the resource has been defined in the **main/resources/base/element** directory. (The types **color**, **string**, and **integer** are available for the belonging **app**, whereas only the type **color** is available for the belonging **sys**.) |
 
 **Return value:**
 
@@ -63,10 +55,6 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color 
 Converts a color value of the ResourceColor type to a common2D.Color object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color | undefined--><!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color | undefined-End-->
 

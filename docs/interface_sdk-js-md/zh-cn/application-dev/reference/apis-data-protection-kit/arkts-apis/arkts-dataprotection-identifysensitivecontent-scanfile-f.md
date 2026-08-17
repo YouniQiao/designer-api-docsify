@@ -10,10 +10,6 @@ function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Ar
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_DATA_IDENTIFY_FILE
 
 <!--Device-identifySensitiveContent-function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>--><!--Device-identifySensitiveContent-function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>-End-->
@@ -44,7 +40,7 @@ function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Ar
 | [19110004](../errorcode-dlp.md#19110004-系统功能运行异常) | A system error has occurred. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { identifySensitiveContent } from '@kit.DataProtectionKit';

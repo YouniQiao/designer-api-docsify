@@ -16,10 +16,6 @@ Enables or disables an application or an application clone. This API uses a prom
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 <!--Device-bundleManager-function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boolean): Promise<void>-End-->
@@ -52,7 +48,7 @@ Enables or disables an application or an application clone. This API uses a prom
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -83,10 +79,6 @@ function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boo
 Sets the enabled or disabled state of a specified application or application clone, and controls whether to exit the application process when the application is disabled. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -133,10 +125,6 @@ Enables or disables an application. This API uses an asynchronous callback to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 <!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
@@ -151,7 +139,7 @@ Enables or disables an application. This API uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -162,7 +150,7 @@ Enables or disables an application. This API uses an asynchronous callback to re
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -196,10 +184,6 @@ Enables or disables an application. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 <!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<void>-End-->
@@ -230,7 +214,7 @@ Enables or disables an application. This API uses a promise to return the result
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

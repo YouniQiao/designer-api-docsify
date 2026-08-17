@@ -4,11 +4,9 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 8
 
-**替代接口：** [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md#LightResponse)
+**替代接口：** [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md#lightresponse)
 
 <!--Device-unnamed-export interface LightResponse--><!--Device-unnamed-export interface LightResponse-End-->
 
@@ -25,8 +23,6 @@ intensity: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 8
 

@@ -4,10 +4,6 @@ Enumeration of permission level for an application to access asset.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum MediaAssetPermissionState--><!--Device-photoAccessHelper-enum MediaAssetPermissionState-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,10 +17,6 @@ URI_FORMAT_ERROR = 0
 Not media asset uri.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Asset not exists.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaAssetPermissionState-FILE_NOT_EXIST = 1--><!--Device-MediaAssetPermissionState-FILE_NOT_EXIST = 1-End-->
@@ -62,10 +50,6 @@ The application has read permission when accessing the asset.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaAssetPermissionState-READ_PERMISSION = 2--><!--Device-MediaAssetPermissionState-READ_PERMISSION = 2-End-->
@@ -81,10 +65,6 @@ NO_READ_PERMISSION = 3
 The application has no read permission when accessing the asset.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ A class used for cloud media asset management. It is used to manage download tas
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-class CloudMediaAssetManager--><!--Device-photoAccessHelper-class CloudMediaAssetManager-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -29,10 +25,6 @@ cancelDownloadCloudMedia(): Promise<void>
 Cancels a task that downloads cloud media assets.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -56,7 +48,7 @@ Cancels a task that downloads cloud media assets.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; 2 <br>. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(context: Context) {
@@ -80,10 +72,6 @@ cancelDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 Cancels a batch download for the specified cloud media assets. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -114,7 +102,7 @@ Cancels a batch download for the specified cloud media assets. This API uses a p
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The assetUris array size is bigger than 500. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(context: Context) {
@@ -140,10 +128,6 @@ static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManag
 Obtains a CloudMediaAssetManager instance.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 <!--Device-CloudMediaAssetManager-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager--><!--Device-CloudMediaAssetManager-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager-End-->
 
@@ -171,7 +155,7 @@ Obtains a CloudMediaAssetManager instance.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(context: Context) {
@@ -195,10 +179,6 @@ static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManag
 Obtains a CloudMediaAssetManager instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CloudMediaAssetManager-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager | null--><!--Device-CloudMediaAssetManager-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager | null-End-->
 
@@ -236,10 +216,6 @@ Obtains the status of a task that downloads cloud media assets.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-CloudMediaAssetManager-getCloudMediaAssetStatus(): Promise<CloudMediaAssetStatus>--><!--Device-CloudMediaAssetManager-getCloudMediaAssetStatus(): Promise<CloudMediaAssetStatus>-End-->
@@ -262,7 +238,7 @@ Obtains the status of a task that downloads cloud media assets.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(context: Context) {
@@ -292,10 +268,6 @@ Unregisters a callback to monitor changes in the progress of a batch download fo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-CloudMediaAssetManager-offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): void--><!--Device-CloudMediaAssetManager-offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): void-End-->
@@ -318,7 +290,7 @@ Unregisters a callback to monitor changes in the progress of a batch download fo
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(context: Context) {
@@ -343,10 +315,6 @@ Registers a callback to monitor changes in the progress of a batch download for 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-CloudMediaAssetManager-onDownloadProgressChange(callback: Callback<CloudAssetDownloadProgressInfo>): void--><!--Device-CloudMediaAssetManager-onDownloadProgressChange(callback: Callback<CloudAssetDownloadProgressInfo>): void-End-->
@@ -369,7 +337,7 @@ Registers a callback to monitor changes in the progress of a batch download for 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let onCallback = (changeData: photoAccessHelper.CloudAssetDownloadProgressInfo) => {
@@ -398,10 +366,6 @@ Suspends a task that downloads cloud media assets.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
 <!--Device-CloudMediaAssetManager-pauseDownloadCloudMedia(): Promise<void>--><!--Device-CloudMediaAssetManager-pauseDownloadCloudMedia(): Promise<void>-End-->
@@ -424,7 +388,7 @@ Suspends a task that downloads cloud media assets.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(context: Context) {
@@ -448,10 +412,6 @@ pauseDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 Pauses a batch download for the specified cloud media assets. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -482,7 +442,7 @@ Pauses a batch download for the specified cloud media assets. This API uses a pr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The assetUris array size is bigger than 500. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(context: Context) {
@@ -508,10 +468,6 @@ queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataShare
 Obtains the details of a batch download for cloud media assets. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -541,7 +497,7 @@ Obtains the details of a batch download for cloud media assets. This API uses a 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData'
@@ -571,10 +527,6 @@ Obtains the number of batch download tasks for cloud media assets. This API uses
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
@@ -603,7 +555,7 @@ Obtains the number of batch download tasks for cloud media assets. This API uses
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData'
@@ -632,10 +584,6 @@ resumeDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 Resumes a batch download for the specified cloud media assets. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -666,7 +614,7 @@ Resumes a batch download for the specified cloud media assets. This API uses a p
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The assetUris array size is bigger than 500. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(context: Context) {
@@ -692,10 +640,6 @@ retainCloudMediaAsset(retainType: CloudMediaRetainType): Promise<void>
 Deletes local metadata and files of cloud media assets.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -726,7 +670,7 @@ Deletes local metadata and files of cloud media assets.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(context: Context) {
@@ -750,10 +694,6 @@ startDownloadCloudMedia(downloadType: CloudMediaDownloadType): Promise<void>
 Starts or resumes a task to download cloud media assets.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -784,7 +724,7 @@ Starts or resumes a task to download cloud media assets.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function example(context: Context) {
@@ -808,10 +748,6 @@ startDownloadSpecificCloudMedia(assetUris: string[]): Promise<Map<string, CloudA
 Starts a batch download for the specified cloud media assets. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 

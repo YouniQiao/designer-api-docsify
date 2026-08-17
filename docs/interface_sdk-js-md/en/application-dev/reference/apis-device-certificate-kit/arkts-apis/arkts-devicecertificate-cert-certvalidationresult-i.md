@@ -4,10 +4,6 @@ Result of certificate validation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface CertValidationResult--><!--Device-cert-interface CertValidationResult-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -29,10 +25,6 @@ Indicates the authenticated certificate chain. Upon successful authentication, t
 **Type:** Array&lt;X509Cert&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

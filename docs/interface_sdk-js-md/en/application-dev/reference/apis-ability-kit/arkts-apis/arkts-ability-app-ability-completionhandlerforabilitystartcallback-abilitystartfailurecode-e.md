@@ -4,10 +4,6 @@ Enumerates the specific error codes for ability launch failures.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum AbilityStartFailureCode--><!--Device-unnamed-export enum AbilityStartFailureCode-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -21,10 +17,6 @@ FAILURE_CODE_SYSTEM_MALFUNCTION = 0
 The ability cannot be launched due to a system error (for example, a crash in starting the picker).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ FAILURE_CODE_USER_CANCEL = 1
 The user canceled the operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

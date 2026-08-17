@@ -8,9 +8,7 @@ The callback when camera capturing state of current page has been changed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) => void--><!--Device-unnamed-export type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) => void-End-->
 

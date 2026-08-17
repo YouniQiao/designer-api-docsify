@@ -4,10 +4,6 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-util-class LRUCache--><!--Device-util-class LRUCache-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ Specifies the default iterator for an object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LRUCache-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
@@ -44,7 +36,7 @@ Specifies the default iterator for an object.
 | --- | --- |
 | IterableIterator&lt;[K, V]&gt; | Returns a two - dimensional array in the form of key - value pairs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -65,13 +57,9 @@ for (let value of pro) {
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get&lt;sup&gt;9+&lt;/sup&gt;](#get), [put&lt;sup&gt;9+&lt;/sup&gt;](#put), [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove), [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear), and [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity). > **NOTE：**> > If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) and > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity) are called and the input **key** and > **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
+Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#get), [put&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#put), [remove&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#remove), [clear&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#clear), and [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#updatecapacity). > **NOTE：**> > If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#clear) and > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#updatecapacity) are called and the input **key** and > **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,17 +86,13 @@ Clears key-value pairs from this cache.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-clear(): void--><!--Device-LRUCache-clear(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -132,10 +116,6 @@ A constructor used to create a **LRUCache** instance. The default capacity of th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-constructor(capacity?: number)--><!--Device-LRUCache-constructor(capacity?: number)-End-->
@@ -148,7 +128,7 @@ A constructor used to create a **LRUCache** instance. The default capacity of th
 | --- | --- | --- | --- |
 | capacity | number | No | Capacity of the cache to create. The default value is **64**, and the maximum value is **2147483647**.<br>**Since:** 12 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -163,10 +143,6 @@ contains(key: K): boolean
 Checks whether this cache contains the specified key.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -186,7 +162,7 @@ Checks whether this cache contains the specified key.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the cache contains the specified key; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -206,10 +182,6 @@ Performs subsequent operations if no key is matched in the cache and returns the
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-createDefault(key: K): V--><!--Device-LRUCache-createDefault(key: K): V-End-->
@@ -228,7 +200,7 @@ Performs subsequent operations if no key is matched in the cache and returns the
 | --- | --- |
 | V | Value of the key. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -247,10 +219,6 @@ Returns an iterator object that traverses all key-value pairs ([key, value]) in 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-entries(): IterableIterator<[K, V]>--><!--Device-LRUCache-entries(): IterableIterator<[K, V]>-End-->
@@ -263,7 +231,7 @@ Returns an iterator object that traverses all key-value pairs ([key, value]) in 
 | --- | --- |
 | IterableIterator&lt;[K, V]&gt; | Iterable array. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -284,13 +252,9 @@ for (let value of pair) {
 get(key: K): V | undefined
 ```
 
-Obtains the value of a key. If the key is not in the cache, [createDefault&lt;sup&gt;9+&lt;/sup&gt;](#createDefault) is called to create the key. If the value specified in **createDefault** is not **undefined**, [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](#afterRemoval) is called to return the value specified in **createDefault**.
+Obtains the value of a key. If the key is not in the cache, [createDefault&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#createdefault) is called to create the key. If the value specified in **createDefault** is not **undefined**, [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#afterremoval) is called to return the value specified in **createDefault**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -310,7 +274,7 @@ Obtains the value of a key. If the key is not in the cache, [createDefault&lt;su
 | --- | --- |
 | V | Value of the key. If no match is found, the value specified in **createDefault** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -330,10 +294,6 @@ Obtains the capacity of this cache.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-getCapacity(): number--><!--Device-LRUCache-getCapacity(): number-End-->
@@ -346,7 +306,7 @@ Obtains the capacity of this cache.
 | --- | --- |
 | number | Capacity of the cache. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -365,10 +325,6 @@ Obtains the number of times that an object is created.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-getCreateCount(): number--><!--Device-LRUCache-getCreateCount(): number-End-->
@@ -381,7 +337,7 @@ Obtains the number of times that an object is created.
 | --- | --- |
 | number | Number of times that objects are created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Create the ChildLRUCache class that inherits LRUCache, and override createDefault() to return a non-undefined value.
@@ -413,10 +369,6 @@ Obtains the number of times that the queried values are matched.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-getMatchCount(): number--><!--Device-LRUCache-getMatchCount(): number-End-->
@@ -429,7 +381,7 @@ Obtains the number of times that the queried values are matched.
 | --- | --- |
 | number | Number of times that the queried values are matched. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -450,10 +402,6 @@ Obtains the number of times that the queried values are mismatched.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-getMissCount(): number--><!--Device-LRUCache-getMissCount(): number-End-->
@@ -466,7 +414,7 @@ Obtains the number of times that the queried values are mismatched.
 | --- | --- |
 | number | Number of times that the queried values are mismatched. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -487,10 +435,6 @@ Obtains the number of additions to this cache.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-getPutCount(): number--><!--Device-LRUCache-getPutCount(): number-End-->
@@ -503,7 +447,7 @@ Obtains the number of additions to this cache.
 | --- | --- |
 | number | Number of additions to the cache. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -523,10 +467,6 @@ Obtains the number of times that key-value pairs in the cache are recycled.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-getRemovalCount(): number--><!--Device-LRUCache-getRemovalCount(): number-End-->
@@ -539,7 +479,7 @@ Obtains the number of times that key-value pairs in the cache are recycled.
 | --- | --- |
 | number | Number of times that key-value pairs in the cache are recycled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -561,10 +501,6 @@ Checks whether this cache is empty.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-isEmpty(): boolean--><!--Device-LRUCache-isEmpty(): boolean-End-->
@@ -577,7 +513,7 @@ Checks whether this cache is empty.
 | --- | --- |
 | boolean | Returns **true** if the cache does not contain any value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -597,10 +533,6 @@ Obtains all keys in this cache, listed from the least to the most recently acces
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-keys(): K[]--><!--Device-LRUCache-keys(): K[]-End-->
@@ -613,7 +545,7 @@ Obtains all keys in this cache, listed from the least to the most recently acces
 | --- | --- |
 | K[] | The list of all keys in this cache, listed from the least to the most recently accessed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, string>();
@@ -643,10 +575,6 @@ Adds a key-value pair to this cache and returns the value associated with the ke
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-put(key: K, value: V): V--><!--Device-LRUCache-put(key: K, value: V): V-End-->
@@ -666,7 +594,7 @@ Adds a key-value pair to this cache and returns the value associated with the ke
 | --- | --- |
 | V | Value of the key-value pair added. If the key or value is empty, an exception is thrown. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -684,10 +612,6 @@ remove(key: K): V | undefined
 Removes a key and its associated value from this cache and returns the value associated with the key. If the key does not exist, **undefined** is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -707,7 +631,7 @@ Removes a key and its associated value from this cache and returns the value ass
 | --- | --- |
 | V | Returns an **Optional** object containing the removed key-value pair if the key exists in the cache; returns **undefined** if the key does not exist; throws an error if **null** is passed in for **key**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -727,10 +651,6 @@ Obtains the string representation of this cache.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-toString(): string--><!--Device-LRUCache-toString(): string-End-->
@@ -743,7 +663,7 @@ Obtains the string representation of this cache.
 | --- | --- |
 | string | String representation of this cache. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -765,10 +685,6 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-updateCapacity(newCapacity: number): void--><!--Device-LRUCache-updateCapacity(newCapacity: number): void-End-->
@@ -781,7 +697,7 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 | --- | --- | --- | --- |
 | newCapacity | number | Yes | New capacity of the cache. The maximum value is **2147483647**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
@@ -798,10 +714,6 @@ Obtains all values in this cache, listed from the least to the most recently acc
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-values(): V[]--><!--Device-LRUCache-values(): V[]-End-->
@@ -814,7 +726,7 @@ Obtains all values in this cache, listed from the least to the most recently acc
 | --- | --- |
 | V[] | The list of all values in this cache, listed from the least to the most recently accessed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new util.LRUCache<number, string>();
@@ -845,10 +757,6 @@ Total number of values in this cache.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -16,11 +16,9 @@ Establish a new connection that can be used to connect to all the SEs available 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 12
 
-**Substitutes:** [createService](arkts-connectivity-omapi-createservice-f.md#createService)
+**Substitutes:** [createService](arkts-connectivity-omapi-createservice-f.md#createservice)
 
 <!--Device-omapi-function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService--><!--Device-omapi-function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService-End-->
 
@@ -46,7 +44,7 @@ Establish a new connection that can be used to connect to all the SEs available 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { omapi } from '@kit.ConnectivityKit';

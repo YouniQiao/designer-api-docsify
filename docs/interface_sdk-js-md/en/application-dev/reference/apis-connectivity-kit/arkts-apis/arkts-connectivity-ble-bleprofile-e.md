@@ -4,10 +4,6 @@ The Profile of the BLE protocol.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-ble-enum BleProfile--><!--Device-ble-enum BleProfile-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ GATT = 1
 Indicates the profile type of the gatt, including gatt client and gatt server.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Indicates the profile type of the gatt client.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BleProfile-GATT_CLIENT = 2--><!--Device-BleProfile-GATT_CLIENT = 2-End-->
@@ -61,10 +49,6 @@ GATT_SERVER = 3
 Indicates the profile type of the gatt server.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

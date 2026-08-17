@@ -10,10 +10,6 @@ function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
 <!--Device-appManager-function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean): Promise<void>--><!--Device-appManager-function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean): Promise<void>-End-->
@@ -50,7 +46,7 @@ function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean)
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [16300005](../errorcode-ability.md#16300005-指定的包信息不存在) | The target bundle does not exist. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

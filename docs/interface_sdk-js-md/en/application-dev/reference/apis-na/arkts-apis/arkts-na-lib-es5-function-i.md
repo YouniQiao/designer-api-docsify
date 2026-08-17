@@ -4,10 +4,6 @@ Creates a new function.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Function--><!--Device-unnamed-interface Function-End-->
 
 ## apply
@@ -19,10 +15,6 @@ apply(this: Function, thisArg: any, argArray?: any): any
 Calls the function, substituting the specified object for the this value of the function, and the specified array for the arguments of the function.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Function-apply(this: Function, thisArg: any, argArray?: any): any--><!--Device-Function-apply(this: Function, thisArg: any, argArray?: any): any-End-->
 
@@ -50,10 +42,6 @@ For a given function, creates a bound function that has the same body as the ori
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Function-bind(this: Function, thisArg: any, ...argArray: any[]): any--><!--Device-Function-bind(this: Function, thisArg: any, ...argArray: any[]): any-End-->
 
 **Parameters:**
@@ -79,10 +67,6 @@ call(this: Function, thisArg: any, ...argArray: any[]): any
 Calls a method of an object, substituting another object for the current object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Function-call(this: Function, thisArg: any, ...argArray: any[]): any--><!--Device-Function-call(this: Function, thisArg: any, ...argArray: any[]): any-End-->
 
@@ -110,10 +94,6 @@ Returns a string representation of a function.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Function-toString(): string--><!--Device-Function-toString(): string-End-->
 
 **Return value:**
@@ -132,10 +112,6 @@ arguments: any
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Function-arguments: any--><!--Device-Function-arguments: any-End-->
 
 ## caller
@@ -147,10 +123,6 @@ caller: Function
 **Type:** Function
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Function-caller: Function--><!--Device-Function-caller: Function-End-->
 
@@ -164,10 +136,6 @@ readonly length: number
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Function-readonly length: number--><!--Device-Function-readonly length: number-End-->
 
 ## prototype
@@ -179,10 +147,6 @@ prototype: any
 **Type:** any
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Function-prototype: any--><!--Device-Function-prototype: any-End-->
 

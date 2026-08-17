@@ -4,9 +4,7 @@ Enumerates the file locations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-enum LocationType--><!--Device-fileIo-enum LocationType-End-->
 
@@ -22,9 +20,7 @@ The file is stored in a local device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LocationType-LOCAL = 1 << 0--><!--Device-LocationType-LOCAL = 1 << 0-End-->
 
@@ -40,9 +36,7 @@ The file is stored in the cloud.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LocationType-CLOUD = 1 << 1--><!--Device-LocationType-CLOUD = 1 << 1-End-->
 

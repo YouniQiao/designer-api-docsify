@@ -4,10 +4,6 @@ Describes the icons of the sidebar control button. > **NOTE：**> To standardize
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ButtonIconOptions--><!--Device-unnamed-declare interface ButtonIconOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Icon of the control button when the sidebar is hidden.
 **Type:** string \| PixelMap \| Resource
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ Icon of the control button when the sidebar is displayed.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ButtonIconOptions-shown: string | PixelMap | Resource--><!--Device-ButtonIconOptions-shown: string | PixelMap | Resource-End-->
@@ -67,10 +55,6 @@ Icon of the control button when the sidebar is switching between the shown and h
 **Type:** string \| PixelMap \| Resource
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

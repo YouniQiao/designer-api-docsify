@@ -4,10 +4,6 @@ Defines the information carried when the system recording controller state chang
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface SystemRecordControllerChangeInfo--><!--Device-audio-interface SystemRecordControllerChangeInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -32,10 +28,6 @@ Whether the system recording controller panel is enabled. The value true means t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemRecordControllerChangeInfo-enabled: boolean--><!--Device-SystemRecordControllerChangeInfo-enabled: boolean-End-->
@@ -56,10 +48,6 @@ The expected audio source type configured by the application when enabling the r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemRecordControllerChangeInfo-sourceType?: SourceType--><!--Device-SystemRecordControllerChangeInfo-sourceType?: SourceType-End-->
@@ -79,10 +67,6 @@ The UID of the application that triggers the system recording controller state c
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

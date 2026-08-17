@@ -4,10 +4,6 @@ FA模型的使用信息属性集合。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-usageStatistics-interface DeviceEventStats--><!--Device-usageStatistics-interface DeviceEventStats-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -25,10 +21,6 @@ count: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DeviceEventStats-count: int--><!--Device-DeviceEventStats-count: int-End-->
 
@@ -48,10 +40,6 @@ eventId: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DeviceEventStats-eventId: int--><!--Device-DeviceEventStats-eventId: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -69,10 +57,6 @@ name: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DeviceEventStats-name: string--><!--Device-DeviceEventStats-name: string-End-->
 

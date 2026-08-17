@@ -10,9 +10,7 @@ Synchronizes the cached data of a file to storage. This API uses a promise to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function fsync(fd: int): Promise<void>--><!--Device-fileIo-function fsync(fd: int): Promise<void>-End-->
 
@@ -53,9 +51,7 @@ Synchronizes the cached data of a file to storage. This API uses an asynchronous
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function fsync(fd: int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function fsync(fd: int, callback: AsyncCallback<void>): void-End-->
 

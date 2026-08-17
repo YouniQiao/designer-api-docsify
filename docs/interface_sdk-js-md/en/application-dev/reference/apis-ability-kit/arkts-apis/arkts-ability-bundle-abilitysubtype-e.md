@@ -4,8 +4,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-bundle-export enum AbilitySubType--><!--Device-bundle-export enum AbilitySubType-End-->
@@ -22,8 +20,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-AbilitySubType-UNSPECIFIED = 0--><!--Device-AbilitySubType-UNSPECIFIED = 0-End-->
@@ -39,8 +35,6 @@ CA = 1
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

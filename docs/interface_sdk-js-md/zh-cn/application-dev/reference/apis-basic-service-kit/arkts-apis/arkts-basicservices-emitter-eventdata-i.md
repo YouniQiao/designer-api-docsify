@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-emitter-export interface EventData--><!--Device-emitter-export interface EventData-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -23,10 +19,6 @@ data?: Record<string, RecordData> | ESValue
 **类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; \| ESValue
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EventData-data?: Record<string, RecordData> | ESValue--><!--Device-EventData-data?: Record<string, RecordData> | ESValue-End-->
 

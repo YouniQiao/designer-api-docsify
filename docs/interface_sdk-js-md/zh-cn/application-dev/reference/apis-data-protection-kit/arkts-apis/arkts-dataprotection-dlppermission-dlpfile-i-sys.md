@@ -1,12 +1,8 @@
 # DLPFile（系统接口）
 
-管理DLPFile的实例，表示一个DLP文件对象，需要通过 [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generateDLPFile) /[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#openDLPFile)获取DLPFile的实例。DLPFile对象代表一个已打开 的DLP文件句柄，封装了对DLP文件的所有操作接口。对象在使用完毕后必须调用[closeDLPFile](#closeDLPFile)方法释放资源，避免文件句柄泄漏。 DLPFile对象在跨进程传递时，需要进行授权。
+管理DLPFile的实例，表示一个DLP文件对象，需要通过 [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generatedlpfile) /[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile)获取DLPFile的实例。DLPFile对象代表一个已打开 的DLP文件句柄，封装了对DLP文件的所有操作接口。对象在使用完毕后必须调用[closeDLPFile](#closedlpfile)方法释放资源，避免文件句柄泄漏。 DLPFile对象在跨进程传递时，需要进行授权。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-dlpPermission-export interface DLPFile--><!--Device-dlpPermission-export interface DLPFile-End-->
 
@@ -20,13 +16,9 @@
 addDLPLinkFile(linkFileName: string): Promise<void>
 ```
 
-在FUSE文件系统(Filesystem in Userspace)添加link文件。FUSE是一种用户空间文件系统框架，允许在用户空间实现自定义文件系统逻辑。link文件是FUSE中映射到DLP密文的虚拟文件，对该文 件的读写操作会同步到实际DLP文件。使用Promise异步回调。 在调用addDLPLinkFile后需要调用 [deleteDLPLinkFile](#deleteDLPLinkFile)移除DLP link文件。 DLP应用需要通过标准文件接口访问加密文件内容时，先添加link文件将DLP文件映射为虚拟明文文件，应用可像操作普通文件一样读写该link文件。
+在FUSE文件系统(Filesystem in Userspace)添加link文件。FUSE是一种用户空间文件系统框架，允许在用户空间实现自定义文件系统逻辑。link文件是FUSE中映射到DLP密文的虚拟文件，对该文 件的读写操作会同步到实际DLP文件。使用Promise异步回调。 在调用addDLPLinkFile后需要调用 [deleteDLPLinkFile](#deletedlplinkfile)移除DLP link文件。 DLP应用需要通过标准文件接口访问加密文件内容时，先添加link文件将DLP文件映射为虚拟明文文件，应用可像操作普通文件一样读写该link文件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -59,14 +51,14 @@ addDLPLinkFile(linkFileName: string): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
 
-async function ExampleFunction() {
+async function exampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
   let file: number | undefined = undefined;
   let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
@@ -88,7 +80,7 @@ async function ExampleFunction() {
   }
 }
 
-ExampleFunction();
+exampleFunction();
 ```
 
 ## addDLPLinkFile
@@ -97,13 +89,9 @@ ExampleFunction();
 addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 ```
 
-在FUSE文件系统添加link文件。使用callback异步回调。调用成功后，在FUSE文件系统中创建一个映射到DLP文件密文的虚拟文件。 在调用addDLPLinkFile后需要调用 [deleteDLPLinkFile](#deleteDLPLinkFile)移除DLP link文件。 DLP应用需要通过标准文件接口访问加密文件内容时使用此接口。
+在FUSE文件系统添加link文件。使用callback异步回调。调用成功后，在FUSE文件系统中创建一个映射到DLP文件密文的虚拟文件。 在调用addDLPLinkFile后需要调用 [deleteDLPLinkFile](#deletedlplinkfile)移除DLP link文件。 DLP应用需要通过标准文件接口访问加密文件内容时使用此接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -118,7 +106,7 @@ addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | linkFileName | string | 是 | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收添加link文件的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收添加link文件的结果。 |
 
 **错误码：**
 
@@ -131,7 +119,7 @@ addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -154,7 +142,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
   dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
     if (err) {
-      console.error('addDLPLinkFile error,', err.code, err.message);
+      console.error(`Failed to add DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -172,13 +160,9 @@ ExampleFunction();
 closeDLPFile(): Promise<void>
 ```
 
-关闭DLPFile，释放对象。使用Promise异步回调。 调用[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#openDLPFile)成功后返回DLPFile对象，必须在使用完毕后调 用closeDLPFile()释放资源。 文件所有者决定关闭DLP文件时使用此接口。 > **说明：** > > dlpFile不再使用，应该关闭释放内存，且对象不应继续使用。
+关闭DLPFile，释放对象。使用Promise异步回调。 调用[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile)成功后返回DLPFile对象，必须在使用完毕后调 用closeDLPFile()释放资源。 文件所有者决定关闭DLP文件时使用此接口。 > **说明：** > > dlpFile不再使用，应该关闭释放内存，且对象不应继续使用。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -204,7 +188,7 @@ closeDLPFile(): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -245,10 +229,6 @@ closeDLPFile(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
 <!--Device-DLPFile-closeDLPFile(callback: AsyncCallback<void>): void--><!--Device-DLPFile-closeDLPFile(callback: AsyncCallback<void>): void-End-->
@@ -261,7 +241,7 @@ closeDLPFile(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收关闭DLPFile的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收关闭DLPFile的结果。 |
 
 **错误码：**
 
@@ -274,7 +254,7 @@ closeDLPFile(callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -297,7 +277,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
   dlpFile.closeDLPFile((err, res) => { // 关闭DLP文件。
     if (err) {
-      console.error('closeDLPFile error,', err.code, err.message);
+      console.error(`Failed to close DLPFile. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -314,13 +294,9 @@ ExampleFunction();
 deleteDLPLinkFile(linkFileName: string): Promise<void>
 ```
 
-删除FUSE文件系统中创建的link文件。使用Promise异步回调。调用成功后，从FUSE文件系统中移除指定的link文件。 在调用deleteDLPLinkFile前需要调用[addDLPLinkFile](#addDLPLinkFile)添加 DLP link文件。 DLP文件访问结束后清理link文件映射时使用此接口。
+删除FUSE文件系统中创建的link文件。使用Promise异步回调。调用成功后，从FUSE文件系统中移除指定的link文件。 在调用deleteDLPLinkFile前需要调用[addDLPLinkFile](#adddlplinkfile)添加 DLP link文件。 DLP文件访问结束后清理link文件映射时使用此接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -353,7 +329,7 @@ deleteDLPLinkFile(linkFileName: string): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -392,13 +368,9 @@ ExampleFunction();
 deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 ```
 
-删除FUSE文件系统中创建的link文件，使用callback异步回调。调用成功后，从FUSE文件系统中移除指定的link文件。 在调用deleteDLPLinkFile前需要调用[addDLPLinkFile](#addDLPLinkFile)添加 DLP link文件。 DLP文件访问结束后清理link文件映射时使用此接口。
+删除FUSE文件系统中创建的link文件，使用callback异步回调。调用成功后，从FUSE文件系统中移除指定的link文件。 在调用deleteDLPLinkFile前需要调用[addDLPLinkFile](#adddlplinkfile)添加 DLP link文件。 DLP文件访问结束后清理link文件映射时使用此接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -413,7 +385,7 @@ deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | linkFileName | string | 是 | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收删除link文件的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收删除link文件的结果。 |
 
 **错误码：**
 
@@ -426,7 +398,7 @@ deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -450,7 +422,7 @@ async function ExampleFunction() {
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
   dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // 删除link文件。
     if (err) {
-      console.error('deleteDLPLinkFile error,', err.code, err.message);
+      console.error(`Failed to delete DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -471,10 +443,6 @@ recoverDLPFile(plaintextFd: number): Promise<void>
 移除DLP文件的权限控制，恢复成明文文件。使用Promise异步回调。 文件所有者决定取消文件的DLP保护时使用此接口，将其转换为普通文件以便自由分享。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -513,7 +481,7 @@ recoverDLPFile(plaintextFd: number): Promise<void>
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 | [19100008](../errorcode-dlp.md#19100008-非dlp文件) | The file is not a DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -559,10 +527,6 @@ recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
 <!--Device-DLPFile-recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void--><!--Device-DLPFile-recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void-End-->
@@ -576,7 +540,7 @@ recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | plaintextFd | number | 是 | 目标明文文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup &gt;-1时，fd的值被截断。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复明文文件的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复明文文件的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
 
 **错误码：**
 
@@ -595,7 +559,7 @@ recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 | [19100008](../errorcode-dlp.md#19100008-非dlp文件) | The file is not a DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -620,7 +584,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
   dlpFile.recoverDLPFile(destFile, async (err, res) => { // 还原DLP文件。
     if (err) {
-      console.error('recoverDLPFile error,', err.code, err.message);
+      console.error(`Failed to recover DLPFile. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -642,10 +606,6 @@ replaceDLPLinkFile(linkFileName: string): Promise<void>
 替换link文件。使用Promise异步回调。调用成功后，使用新的link文件名替换当前link文件。需要先创建link文件并停止FUSE读写，才能执行此操作。 需要切换访问不同的DLP文件时，通过替换link文件实现文件映射的切换。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -678,7 +638,7 @@ replaceDLPLinkFile(linkFileName: string): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -723,10 +683,6 @@ replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
 <!--Device-DLPFile-replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void--><!--Device-DLPFile-replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void-End-->
@@ -740,7 +696,7 @@ replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | linkFileName | string | 是 | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收替换link文件的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收替换link文件的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
 
 **错误码：**
 
@@ -753,7 +709,7 @@ replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -778,7 +734,7 @@ async function ExampleFunction() {
   await dlpFile.stopFuseLink(); // 暂停link读写。
   dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // 替换link文件。
     if (err) {
-      console.error('replaceDLPLinkFile error,', err.code, err.message);
+      console.error(`Failed to replace DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
       await dlpFile?.resumeFuseLink(); // 恢复link读写。
@@ -797,13 +753,9 @@ ExampleFunction();
 resumeFuseLink(): Promise<void>
 ```
 
-恢复FUSE关联读写。使用Promise异步回调。调用成功后，恢复对link文件的读写操作。 必须在调用[stopFuseLink](#stopFuseLink)暂停读写后才能调用此方法恢复读写功能。 link文件替换完成后，需要恢复读写关联以继续正常的文件访问。
+恢复FUSE关联读写。使用Promise异步回调。调用成功后，恢复对link文件的读写操作。 必须在调用[stopFuseLink](#stopfuselink)暂停读写后才能调用此方法恢复读写功能。 link文件替换完成后，需要恢复读写关联以继续正常的文件访问。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -829,7 +781,7 @@ resumeFuseLink(): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -869,13 +821,9 @@ ExampleFunction();
 resumeFuseLink(callback: AsyncCallback<void>): void
 ```
 
-恢复FUSE关联读写，使用callback异步回调。调用成功后，恢复对link文件的读写操作。 必须在调用[stopFuseLink](#stopFuseLink)暂停读写后才能调用此方法恢复读写功能。 link文件替换完成后需要恢复读写关联。
+恢复FUSE关联读写，使用callback异步回调。调用成功后，恢复对link文件的读写操作。 必须在调用[stopFuseLink](#stopfuselink)暂停读写后才能调用此方法恢复读写功能。 link文件替换完成后需要恢复读写关联。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -889,7 +837,7 @@ resumeFuseLink(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复FUSE关联的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复FUSE关联的结果。 |
 
 **错误码：**
 
@@ -902,7 +850,7 @@ resumeFuseLink(callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -927,7 +875,7 @@ async function ExampleFunction() {
   await dlpFile.stopFuseLink(); // 暂停link读写。
   dlpFile.resumeFuseLink(async (err, res) => {
     if (err) {
-      console.error('resumeFuseLink error,', err.code, err.message);
+      console.error(`Failed to resume FuseLink. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -945,13 +893,9 @@ ExampleFunction();
 stopFuseLink(): Promise<void>
 ```
 
-停止FUSE关联读写。使用Promise异步回调。调用成功后，暂停对link文件的读写操作。 调用stopFuseLink暂停FUSE关联读写后，必须调用[resumeFuseLink](#resumeFuseLink)恢复读写功能。 在删除link文件前，需要先停止关联读写以确保文件操作安全。
+停止FUSE关联读写。使用Promise异步回调。调用成功后，暂停对link文件的读写操作。 调用stopFuseLink暂停FUSE关联读写后，必须调用[resumeFuseLink](#resumefuselink)恢复读写功能。 在删除link文件前，需要先停止关联读写以确保文件操作安全。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -977,7 +921,7 @@ stopFuseLink(): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -1015,13 +959,9 @@ ExampleFunction();
 stopFuseLink(callback: AsyncCallback<void>): void
 ```
 
-停止FUSE关联读写。使用callback异步回调。调用成功后，暂停对link文件的读写操作。 调用stopFuseLink暂停FUSE关联读写后，必须调用[resumeFuseLink](#resumeFuseLink)恢复读写功能。 删除link文件前需要暂停读写关联。
+停止FUSE关联读写。使用callback异步回调。调用成功后，暂停对link文件的读写操作。 调用stopFuseLink暂停FUSE关联读写后，必须调用[resumeFuseLink](#resumefuselink)恢复读写功能。 删除link文件前需要暂停读写关联。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -1035,7 +975,7 @@ stopFuseLink(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收停止FUSE关联的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收停止FUSE关联的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
 
 **错误码：**
 
@@ -1048,7 +988,7 @@ stopFuseLink(callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -1072,7 +1012,7 @@ async function ExampleFunction() {
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
   dlpFile.stopFuseLink(async (err, res) => {
     if (err) {
-      console.error('stopFuseLink error,', err.code, err.message);
+      console.error(`Failed to stop FuseLink. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('res', JSON.stringify(res));
     }
@@ -1095,10 +1035,6 @@ dlpProperty: DLPProperty
 **类型：** [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-DLPFile-dlpProperty: DLPProperty--><!--Device-DLPFile-dlpProperty: DLPProperty-End-->
 

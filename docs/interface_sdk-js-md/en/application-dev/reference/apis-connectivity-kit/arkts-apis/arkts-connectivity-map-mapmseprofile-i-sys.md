@@ -2,13 +2,9 @@
 
 Manager MAP MSE profile.
 
-**Inheritance/Implementation:** MapMseProfile extends [BaseProfile](arkts-connectivity-map-baseprofile-t.md#BaseProfile)
+**Inheritance/Implementation:** MapMseProfile extends [BaseProfile](arkts-connectivity-map-baseprofile-t.md#baseprofile)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-map-interface MapMseProfile--><!--Device-map-interface MapMseProfile-End-->
 
@@ -29,10 +25,6 @@ disconnect(deviceId: string): void
 Disconnect the map connection with the remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -70,10 +62,6 @@ getMessageAccessAuthorization(deviceId: string): Promise<AccessAuthorization>
 Get the message access authorization.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -117,10 +105,6 @@ setMessageAccessAuthorization(deviceId: string, authorization: AccessAuthorizati
 Set the message access authorization.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 

@@ -1,12 +1,8 @@
 # OnHttpErrorReceiveEvent
 
-Defines the triggered function when the web page receives a web resource loading HTTP error.
+Defines the callback information triggered when the web page receives an HTTP error during resource loading, including the request and response details. It is suitable for scenarios where monitoring and handling HTTP errors are required, improving network error diagnosis accuracy and user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnHttpErrorReceiveEvent--><!--Device-unnamed-declare interface OnHttpErrorReceiveEvent-End-->
 
@@ -23,10 +19,6 @@ The information of request.
 **Type:** [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -45,10 +37,6 @@ Web resource response of event.
 **Type:** [WebResourceResponse](arkts-arkweb-webresourceresponse-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

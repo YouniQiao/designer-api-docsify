@@ -4,10 +4,6 @@ Dng图像元数据类，用于存储图像的元数据。
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-image-class DngMetadata--><!--Device-image-class DngMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -23,10 +19,6 @@ readonly activeArea?: int[]
 **类型：** int[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ readonly analogBalance?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly analogBalance?: double[]--><!--Device-DngMetadata-readonly analogBalance?: double[]-End-->
@@ -67,10 +55,6 @@ readonly antiAliasStrength?: double
 **类型：** double
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,10 +74,6 @@ readonly asShotICCProfile?: ArrayBuffer
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly asShotICCProfile?: ArrayBuffer--><!--Device-DngMetadata-readonly asShotICCProfile?: ArrayBuffer-End-->
@@ -111,10 +91,6 @@ readonly asShotNeutral?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,10 +110,6 @@ readonly asShotPreProfileMatrix?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly asShotPreProfileMatrix?: double[]--><!--Device-DngMetadata-readonly asShotPreProfileMatrix?: double[]-End-->
@@ -155,10 +127,6 @@ readonly asShotProfileName?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -178,10 +146,6 @@ readonly asShotWhiteXY?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly asShotWhiteXY?: double[]--><!--Device-DngMetadata-readonly asShotWhiteXY?: double[]-End-->
@@ -199,10 +163,6 @@ readonly baselineExposure?: double
 **类型：** double
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -222,10 +182,6 @@ readonly baselineExposureOffset?: double
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly baselineExposureOffset?: double--><!--Device-DngMetadata-readonly baselineExposureOffset?: double-End-->
@@ -243,10 +199,6 @@ readonly baselineNoise?: double
 **类型：** double
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,10 +218,6 @@ readonly baselineSharpness?: double
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly baselineSharpness?: double--><!--Device-DngMetadata-readonly baselineSharpness?: double-End-->
@@ -287,10 +235,6 @@ Bayer图像中两个绿色通道的分离程度。
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -310,10 +254,6 @@ readonly bestQualityScale?: double
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly bestQualityScale?: double--><!--Device-DngMetadata-readonly bestQualityScale?: double-End-->
@@ -331,10 +271,6 @@ readonly blackLevel?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -354,10 +290,6 @@ readonly blackLevelDeltaH?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly blackLevelDeltaH?: double[]--><!--Device-DngMetadata-readonly blackLevelDeltaH?: double[]-End-->
@@ -375,10 +307,6 @@ readonly blackLevelDeltaV?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -398,10 +326,6 @@ readonly blackLevelRepeatDim?: int[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly blackLevelRepeatDim?: int[]--><!--Device-DngMetadata-readonly blackLevelRepeatDim?: int[]-End-->
@@ -419,10 +343,6 @@ readonly calibrationIlluminant1?: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -442,10 +362,6 @@ readonly calibrationIlluminant2?: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly calibrationIlluminant2?: int--><!--Device-DngMetadata-readonly calibrationIlluminant2?: int-End-->
@@ -463,10 +379,6 @@ readonly cameraCalibration1?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -486,10 +398,6 @@ readonly cameraCalibration2?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly cameraCalibration2?: double[]--><!--Device-DngMetadata-readonly cameraCalibration2?: double[]-End-->
@@ -507,10 +415,6 @@ readonly cameraCalibrationSignature?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -530,10 +434,6 @@ readonly cameraSerialNumber?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly cameraSerialNumber?: string--><!--Device-DngMetadata-readonly cameraSerialNumber?: string-End-->
@@ -551,10 +451,6 @@ CFA（Color Filter Array）布局类型。
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -574,10 +470,6 @@ CFA（Color Filter Array）各平面的颜色通道定义。
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly cfaPlaneColor?: int[]--><!--Device-DngMetadata-readonly cfaPlaneColor?: int[]-End-->
@@ -595,10 +487,6 @@ readonly chromaBlurRadius?: double
 **类型：** double
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -618,10 +506,6 @@ readonly colorMatrix1?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly colorMatrix1?: double[]--><!--Device-DngMetadata-readonly colorMatrix1?: double[]-End-->
@@ -639,10 +523,6 @@ readonly colorMatrix2?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -662,10 +542,6 @@ readonly colorimetricReference?: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly colorimetricReference?: int--><!--Device-DngMetadata-readonly colorimetricReference?: int-End-->
@@ -683,10 +559,6 @@ readonly currentICCProfile?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -706,10 +578,6 @@ readonly currentPreProfileMatrix?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly currentPreProfileMatrix?: double[]--><!--Device-DngMetadata-readonly currentPreProfileMatrix?: double[]-End-->
@@ -727,10 +595,6 @@ readonly defaultBlackRender?: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -750,10 +614,6 @@ readonly defaultCropOrigin?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly defaultCropOrigin?: double[]--><!--Device-DngMetadata-readonly defaultCropOrigin?: double[]-End-->
@@ -771,10 +631,6 @@ readonly defaultCropSize?: int[]
 **类型：** int[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -794,10 +650,6 @@ readonly defaultScale?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly defaultScale?: double[]--><!--Device-DngMetadata-readonly defaultScale?: double[]-End-->
@@ -815,10 +667,6 @@ readonly defaultUserCrop?: int[]
 **类型：** int[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -838,10 +686,6 @@ DNG文件向后兼容的最低版本号。
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly dngBackwardVersion?: int[]--><!--Device-DngMetadata-readonly dngBackwardVersion?: int[]-End-->
@@ -859,10 +703,6 @@ readonly dngPrivateData?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -882,10 +722,6 @@ DNG图片的版本号。
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly dngVersion?: int[]--><!--Device-DngMetadata-readonly dngVersion?: int[]-End-->
@@ -903,10 +739,6 @@ readonly extraCameraProfiles?: int[]
 **类型：** int[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -926,10 +758,6 @@ readonly forwardMatrix1?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly forwardMatrix1?: double[]--><!--Device-DngMetadata-readonly forwardMatrix1?: double[]-End-->
@@ -947,10 +775,6 @@ readonly forwardMatrix2?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -970,10 +794,6 @@ readonly lensInfo?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly lensInfo?: double[]--><!--Device-DngMetadata-readonly lensInfo?: double[]-End-->
@@ -991,10 +811,6 @@ readonly linearResponseLimit?: double
 **类型：** double
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1014,10 +830,6 @@ readonly linearizationTable?: int[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly linearizationTable?: int[]--><!--Device-DngMetadata-readonly linearizationTable?: int[]-End-->
@@ -1035,10 +847,6 @@ readonly localizedCameraModel?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1058,10 +866,6 @@ EXIF MakerNote是否安全可保留。true表示安全，false表示不安全。
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly makerNoteSafety?: boolean--><!--Device-DngMetadata-readonly makerNoteSafety?: boolean-End-->
@@ -1079,10 +883,6 @@ readonly maskedAreas?: int[]
 **类型：** int[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1102,10 +902,6 @@ readonly newRawImageDigest?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly newRawImageDigest?: string--><!--Device-DngMetadata-readonly newRawImageDigest?: string-End-->
@@ -1123,10 +919,6 @@ readonly noiseProfile?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1146,10 +938,6 @@ readonly noiseReductionApplied?: double
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly noiseReductionApplied?: double--><!--Device-DngMetadata-readonly noiseReductionApplied?: double-End-->
@@ -1167,10 +955,6 @@ readonly opcodeList1?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1190,10 +974,6 @@ readonly opcodeList2?: ArrayBuffer
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly opcodeList2?: ArrayBuffer--><!--Device-DngMetadata-readonly opcodeList2?: ArrayBuffer-End-->
@@ -1211,10 +991,6 @@ readonly opcodeList3?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1234,10 +1010,6 @@ readonly originalBestQualityFinalSize?: int[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly originalBestQualityFinalSize?: int[]--><!--Device-DngMetadata-readonly originalBestQualityFinalSize?: int[]-End-->
@@ -1255,10 +1027,6 @@ readonly originalDefaultCropSize?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1278,10 +1046,6 @@ readonly originalDefaultFinalSize?: int[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly originalDefaultFinalSize?: int[]--><!--Device-DngMetadata-readonly originalDefaultFinalSize?: int[]-End-->
@@ -1299,10 +1063,6 @@ readonly originalRawFileData?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1322,10 +1082,6 @@ readonly originalRawFileDigest?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly originalRawFileDigest?: string--><!--Device-DngMetadata-readonly originalRawFileDigest?: string-End-->
@@ -1343,10 +1099,6 @@ readonly originalRawFileName?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1366,10 +1118,6 @@ readonly previewApplicationName?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly previewApplicationName?: string--><!--Device-DngMetadata-readonly previewApplicationName?: string-End-->
@@ -1387,10 +1135,6 @@ readonly previewApplicationVersion?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1410,10 +1154,6 @@ readonly previewColorSpace?: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly previewColorSpace?: int--><!--Device-DngMetadata-readonly previewColorSpace?: int-End-->
@@ -1431,10 +1171,6 @@ readonly previewDateTime?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1454,10 +1190,6 @@ readonly previewSettingsDigest?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly previewSettingsDigest?: string--><!--Device-DngMetadata-readonly previewSettingsDigest?: string-End-->
@@ -1475,10 +1207,6 @@ readonly previewSettingsName?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1498,10 +1226,6 @@ readonly profileCalibrationSignature?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileCalibrationSignature?: string--><!--Device-DngMetadata-readonly profileCalibrationSignature?: string-End-->
@@ -1519,10 +1243,6 @@ readonly profileCopyright?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1542,10 +1262,6 @@ readonly profileEmbedPolicy?: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileEmbedPolicy?: int--><!--Device-DngMetadata-readonly profileEmbedPolicy?: int-End-->
@@ -1563,10 +1279,6 @@ readonly profileHueSatMapData1?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1586,10 +1298,6 @@ readonly profileHueSatMapData2?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileHueSatMapData2?: double[]--><!--Device-DngMetadata-readonly profileHueSatMapData2?: double[]-End-->
@@ -1607,10 +1315,6 @@ readonly profileHueSatMapDims?: int[]
 **类型：** int[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1630,10 +1334,6 @@ readonly profileHueSatMapEncoding?: int
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileHueSatMapEncoding?: int--><!--Device-DngMetadata-readonly profileHueSatMapEncoding?: int-End-->
@@ -1651,10 +1351,6 @@ readonly profileLookTableData?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1674,10 +1370,6 @@ ProfileLookTableData的维度。
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileLookTableDims?: int[]--><!--Device-DngMetadata-readonly profileLookTableDims?: int[]-End-->
@@ -1695,10 +1387,6 @@ readonly profileLookTableEncoding?: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1718,10 +1406,6 @@ readonly profileName?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly profileName?: string--><!--Device-DngMetadata-readonly profileName?: string-End-->
@@ -1739,10 +1423,6 @@ readonly profileToneCurve?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1762,10 +1442,6 @@ readonly rawDataUniqueID?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly rawDataUniqueID?: string--><!--Device-DngMetadata-readonly rawDataUniqueID?: string-End-->
@@ -1783,10 +1459,6 @@ readonly rawImageDigest?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1806,10 +1478,6 @@ readonly rawToPreviewGain?: double
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly rawToPreviewGain?: double--><!--Device-DngMetadata-readonly rawToPreviewGain?: double-End-->
@@ -1827,10 +1495,6 @@ readonly reductionMatrix1?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1850,10 +1514,6 @@ readonly reductionMatrix2?: double[]
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly reductionMatrix2?: double[]--><!--Device-DngMetadata-readonly reductionMatrix2?: double[]-End-->
@@ -1871,10 +1531,6 @@ readonly rowInterleaveFactor?: int
 **类型：** int
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1894,10 +1550,6 @@ readonly shadowScale?: double
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly shadowScale?: double--><!--Device-DngMetadata-readonly shadowScale?: double-End-->
@@ -1915,10 +1567,6 @@ readonly subTileBlockSize?: int[]
 **类型：** int[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1938,10 +1586,6 @@ readonly uniqueCameraModel?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly uniqueCameraModel?: string--><!--Device-DngMetadata-readonly uniqueCameraModel?: string-End-->
@@ -1959,10 +1603,6 @@ readonly whiteLevel?: double[]
 **类型：** double[]
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

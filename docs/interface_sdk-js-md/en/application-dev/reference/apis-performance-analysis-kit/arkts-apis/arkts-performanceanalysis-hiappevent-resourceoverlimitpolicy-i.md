@@ -4,10 +4,6 @@ Defines the resource leak event configuration policy.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-hiAppEvent-interface ResourceOverlimitPolicy--><!--Device-hiAppEvent-interface ResourceOverlimitPolicy-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -30,10 +26,6 @@ The policy for RESOURCE_OVERLIMIT event **event**: No heap snapshot is transferr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ResourceOverlimitPolicy-jsHeapLogtype?: string--><!--Device-ResourceOverlimitPolicy-jsHeapLogtype?: string-End-->
@@ -52,10 +44,6 @@ Whether to enable the page switching log for RESOURCE_OVERLIMIT event. **true**:
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-ResourceOverlimitPolicy-pageSwitchLogEnable?: boolean--><!--Device-ResourceOverlimitPolicy-pageSwitchLogEnable?: boolean-End-->
@@ -73,10 +61,6 @@ This parameter is used to control whether to output refined external log file na
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

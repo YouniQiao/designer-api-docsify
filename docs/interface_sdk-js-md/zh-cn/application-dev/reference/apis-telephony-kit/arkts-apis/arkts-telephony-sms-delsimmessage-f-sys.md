@@ -10,10 +10,6 @@ function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
 <!--Device-sms-function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>): void--><!--Device-sms-function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>): void-End-->
@@ -28,7 +24,7 @@ function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>
 | --- | --- | --- | --- |
 | slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
 | msgIndex | int | 是 | 消息索引。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除SIM卡消息的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 删除SIM卡消息的回调函数。 |
 
 **错误码：**
 
@@ -42,7 +38,7 @@ function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -65,10 +61,6 @@ function delSimMessage(slotId: int, msgIndex: int): Promise<void>
 删除SIM卡消息，msgIndex无效时，删除报错。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -103,7 +95,7 @@ function delSimMessage(slotId: int, msgIndex: int): Promise<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

@@ -1,14 +1,10 @@
 # EnterpriseAdminExtensionContext
 
-**EnterpriseAdminExtensionContext** is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#EnterpriseAdminExtensionAbility) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext). When an **EnterpriseAdminExtensionAbility** component is instantiated, the system automatically creates the corresponding **EnterpriseAdminExtensionContext**. You can use this **EnterpriseAdminExtensionContext** to obtain the sandbox path of the app and start other components. This context can only be used within the current **EnterpriseAdminExtensionAbility** and cannot be transferred to other components. > **NOTE：**> > - The APIs of this module can be used only in the stage model. > > - The APIs of this module can be called only by a device administrator application that is enabled. For details, > see [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
+**EnterpriseAdminExtensionContext** is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#enterpriseadminextensionability) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext). When an **EnterpriseAdminExtensionAbility** component is instantiated, the system automatically creates the corresponding **EnterpriseAdminExtensionContext**. You can use this **EnterpriseAdminExtensionContext** to obtain the sandbox path of the app and start other components. This context can only be used within the current **EnterpriseAdminExtensionAbility** and cannot be transferred to other components. > **NOTE：**> > - The APIs of this module can be used only in the stage model. > > - The APIs of this module can be called only by a device administrator application that is enabled. For details, > see [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Inheritance/Implementation:** EnterpriseAdminExtensionContext extends ExtensionContext
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class EnterpriseAdminExtensionContext--><!--Device-unnamed-declare class EnterpriseAdminExtensionContext-End-->
 
@@ -20,13 +16,9 @@
 startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 ```
 
-Directly starts another component within the [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#EnterpriseAdminExtensionAbility) component (without pop-up prompts on the page). Currently, [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and [AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility) are supported. This API uses a promise to return the result. > **NOTE：**> > - Only third-party app components are supported; system app components are not supported. > > - The component to start must be visible to external parties, that is, the **exported** field in the > **module.json5** file must be set to **true**. > > - [Implicit Want launch](../../../application-models/ability-terminology.md) is not supported. > > - If the **UIAbility** to start has permission protection, you need to apply for the corresponding permission.
+Directly starts another component within the [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#enterpriseadminextensionability) component (without pop-up prompts on the page). Currently, [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability) and [AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#appserviceextensionability) are supported. This API uses a promise to return the result. > **NOTE：**> > - Only third-party app components are supported; system app components are not supported. > > - The component to start must be visible to external parties, that is, the **exported** field in the > **module.json5** file must be set to **true**. > > - [Implicit Want launch](../../../application-models/ability-terminology.md) is not supported. > > - If the **UIAbility** to start has permission protection, you need to apply for the corresponding permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_START_ABILITIES
 

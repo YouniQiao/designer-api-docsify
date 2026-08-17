@@ -1,8 +1,6 @@
-# OnDownloadCompleteResponse
+# OnDownloadCompleteResponse(Upload and Download)
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -36,8 +34,6 @@ URI of the download file.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare interface FileMapping--><!--Device-unnamed-declare interface FileMapping-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -21,10 +17,6 @@ capacity(): number
 获取文件映射区的容量，单位为Byte。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,7 +38,7 @@ capacity(): number
 | 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -68,10 +60,6 @@ flip(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-flip(): void--><!--Device-FileMapping-flip(): void-End-->
@@ -86,7 +74,7 @@ flip(): void
 | 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -115,10 +103,6 @@ getLimit(): number
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-getLimit(): number--><!--Device-FileMapping-getLimit(): number-End-->
@@ -139,7 +123,7 @@ getLimit(): number
 | 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -161,10 +145,6 @@ getPosition(): number
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-getPosition(): number--><!--Device-FileMapping-getPosition(): number-End-->
@@ -185,7 +165,7 @@ getPosition(): number
 | 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -206,10 +186,6 @@ msync(): Promise<void>
 将整个文件映射区的脏页数据同步到磁盘文件，使用promise异步回调。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -234,7 +210,7 @@ msync(): Promise<void>
 | 13900014 | Device or resource busy |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -291,10 +267,6 @@ msync(position: number, length: number): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-msync(position: number, length: number): Promise<void>--><!--Device-FileMapping-msync(position: number, length: number): Promise<void>-End-->
@@ -325,7 +297,7 @@ msync(position: number, length: number): Promise<void>
 | 13900014 | Device or resource busy |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -382,10 +354,6 @@ msyncSync(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-msyncSync(): void--><!--Device-FileMapping-msyncSync(): void-End-->
@@ -403,7 +371,7 @@ msyncSync(): void
 | 13900014 | Device or resource busy |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -432,10 +400,6 @@ msyncSync(position: number, length: number): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-msyncSync(position: number, length: number): void--><!--Device-FileMapping-msyncSync(position: number, length: number): void-End-->
@@ -460,7 +424,7 @@ msyncSync(position: number, length: number): void
 | 13900014 | Device or resource busy |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -488,10 +452,6 @@ read(buffer: ArrayBuffer, length?: number): number
 从当前位置读取数据，并将位置后移实际读取的字节数。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -522,7 +482,7 @@ read(buffer: ArrayBuffer, length?: number): number
 | 13900050 | Internal resource error |
 | 13900051 | Buffer read/write out of bounds |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -546,10 +506,6 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 从指定位置读取数据，不影响当前位置。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -581,7 +537,7 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 | 13900050 | Internal resource error |
 | 13900051 | Buffer read/write out of bounds |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -606,10 +562,6 @@ remaining(): number
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-remaining(): number--><!--Device-FileMapping-remaining(): number-End-->
@@ -630,7 +582,7 @@ remaining(): number
 | 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -655,10 +607,6 @@ setLimit(limit: number): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-setLimit(limit: number): void--><!--Device-FileMapping-setLimit(limit: number): void-End-->
@@ -679,7 +627,7 @@ setLimit(limit: number): void
 | 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -701,10 +649,6 @@ setPosition(position: number): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-setPosition(position: number): void--><!--Device-FileMapping-setPosition(position: number): void-End-->
@@ -725,7 +669,7 @@ setPosition(position: number): void
 | 13900052 | Mmap buffer released |
 | 13900050 | Internal resource error |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -747,10 +691,6 @@ unmap(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-unmap(): Promise<void>--><!--Device-FileMapping-unmap(): Promise<void>-End-->
@@ -770,7 +710,7 @@ unmap(): Promise<void>
 | 13900020 | Invalid argument |
 | 13900050 | Internal resource error |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -823,10 +763,6 @@ unmapSync(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FileMapping-unmapSync(): void--><!--Device-FileMapping-unmapSync(): void-End-->
@@ -840,7 +776,7 @@ unmapSync(): void
 | 13900020 | Invalid argument |
 | 13900050 | Internal resource error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -863,10 +799,6 @@ write(data: ArrayBuffer, length?: number): number
 从当前位置写入数据，并将位置后移实际写入的字节数。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -898,7 +830,7 @@ write(data: ArrayBuffer, length?: number): number
 | 13900050 | Internal resource error |
 | 13900051 | Buffer read/write out of bounds |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -923,10 +855,6 @@ write(position: number, data: ArrayBuffer, length?: number): number
 从指定位置写入数据，不影响当前位置。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -959,7 +887,7 @@ write(position: number, data: ArrayBuffer, length?: number): number
 | 13900050 | Internal resource error |
 | 13900051 | Buffer read/write out of bounds |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";

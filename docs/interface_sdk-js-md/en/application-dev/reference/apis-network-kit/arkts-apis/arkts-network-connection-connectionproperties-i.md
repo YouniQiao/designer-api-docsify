@@ -4,10 +4,6 @@ Defines the network connection properties.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-export interface ConnectionProperties--><!--Device-connection-export interface ConnectionProperties-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -30,10 +26,6 @@ Network address, refer to [NetAddress].
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConnectionProperties-dnses: Array<NetAddress>--><!--Device-ConnectionProperties-dnses: Array<NetAddress>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -49,10 +41,6 @@ Domain. The default value is "".
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConnectionProperties-domains: string--><!--Device-ConnectionProperties-domains: string-End-->
 
@@ -70,10 +58,6 @@ Network card name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConnectionProperties-interfaceName: string--><!--Device-ConnectionProperties-interfaceName: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -89,10 +73,6 @@ Whether the IPv4 address of the interface is valid.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,10 +92,6 @@ Whether the IPv6 address of the interface is valid.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionProperties-isIPv6LinkValid?: boolean--><!--Device-ConnectionProperties-isIPv6LinkValid?: boolean-End-->
@@ -134,10 +110,6 @@ Link information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConnectionProperties-linkAddresses: Array<LinkAddress>--><!--Device-ConnectionProperties-linkAddresses: Array<LinkAddress>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -154,10 +126,6 @@ Maximum transmission unit.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ConnectionProperties-mtu: int--><!--Device-ConnectionProperties-mtu: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -173,10 +141,6 @@ Routing information.
 **Type:** Array&lt;RouteInfo&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ConnectionProperties-routes: Array<RouteInfo>--><!--Device-ConnectionProperties-routes: Array<RouteInfo>-End-->
 

@@ -1,12 +1,8 @@
 # EnrolledState
 
-Represents the state of a credential enrolled. This API is used to describe the current state of enrolled authentication credentials (such as face, fingerprint, and companion device), including the credential digest and quantity. The application can call the [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md#getEnrolledState) API to query the credential status, and check whether the user's credentials have changed (for example, whether a fingerprint, face, or companion device is added or deleted) to perform corresponding service processing.
+Represents the state of a credential enrolled. This API is used to describe the current state of enrolled authentication credentials (such as face, fingerprint, and companion device), including the credential digest and quantity. The application can call the [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md#getenrolledstate) API to query the credential status, and check whether the user's credentials have changed (for example, whether a fingerprint, face, or companion device is added or deleted) to perform corresponding service processing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-userAuth-interface EnrolledState--><!--Device-userAuth-interface EnrolledState-End-->
 
@@ -30,10 +26,6 @@ Number of enrolled credentials. This parameter indicates the number of credentia
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-EnrolledState-credentialCount: int--><!--Device-EnrolledState-credentialCount: int-End-->
@@ -51,10 +43,6 @@ Credential digest, which is randomly generated when a credential is added. This 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

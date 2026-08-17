@@ -1,12 +1,8 @@
 # OnScreenCaptureRequestEvent
 
-Represents the callback invoked when a screen capture request is received.
+Defines the callback information triggered when a screen capture request is received. It is suitable for scenarios where handling screen recording permissions is required, improving screen recording process controllability and security.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnScreenCaptureRequestEvent--><!--Device-unnamed-declare interface OnScreenCaptureRequestEvent-End-->
 
@@ -23,10 +19,6 @@ User operation.
 **Type:** [ScreenCaptureHandler](arkts-arkweb-screencapturehandler-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

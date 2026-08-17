@@ -16,10 +16,6 @@ Monitor unregister key(synchronous method) [USER_SECURE] domain need ohos.permis
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function unregisterKeyObserver(context: Context, name: string, domainName: string): boolean--><!--Device-settings-function unregisterKeyObserver(context: Context, name: string, domainName: string): boolean-End-->
@@ -40,7 +36,7 @@ Monitor unregister key(synchronous method) [USER_SECURE] domain need ohos.permis
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

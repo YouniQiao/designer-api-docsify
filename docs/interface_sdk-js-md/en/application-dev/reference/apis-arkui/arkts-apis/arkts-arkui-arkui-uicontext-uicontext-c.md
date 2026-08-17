@@ -1,12 +1,8 @@
 # UIContext
 
-Implements a **UIContext** instance. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a > **UIContext** instance: (1) using the > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from > ohos.window; (2) using the built-in method > [getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext) of a custom > component; (3) using static methods of the UIContext class such as > [getCallingScopeUIContext](#getCallingScopeUIContext). In this document, the **UIContext** instance > is represented by **uiContext**.
+Implements a **UIContext** instance. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a > **UIContext** instance: (1) using the > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from > ohos.window; (2) using the built-in method > [getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext) of a custom > component; (3) using static methods of the UIContext class such as > [getCallingScopeUIContext](#getcallingscopeuicontext). In this document, the **UIContext** instance > is represented by **uiContext**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class UIContext--><!--Device-unnamed-export class UIContext-End-->
 
@@ -47,6 +43,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## addLocalInputEventMonitor
@@ -58,10 +56,6 @@ addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEv
 Registers a local input event monitor. The "Local" in the interface name indicates that the monitor is only valid within the current UIContext, and does not affect other UIContext instances. Each UIContext maintains its own independent list of monitors. Performance Warning: Do not perform time-consuming operations in the callback! Monitor Object Notes: - The returned Monitor object is a unique identifier created by the system. - Developers cannot actively construct or forge this object. - Must save the returned monitor object reference for subsequent cancellation. - It is recommended to use a variable to save it to avoid losing the reference. Usage Examples: ```typescript // Monitor a single event type const monitor1 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) => { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent(); console.log(`Mouse: (\${mouseEvent.windowX}, \${mouseEvent.windowY})`); return { action: InputEventInterceptAction.CONTINUE }; // Allow event to continue } return { action: InputEventInterceptAction.BLOCK }; // Block event } ); // Monitor multiple event types (using bitwise operations) const monitor2 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN | InputEventSubTypeMask.RIGHT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) => { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent()!; console.log(`Mouse button: \${mouseEvent.button}`); return { action: InputEventInterceptAction.BLOCK }; } return { action: InputEventInterceptAction.CONTINUE }; } ); // When unregistering the monitor, use the returned Monitor object uiContext.removeLocalInputEventMonitor(monitor1); uiContext.removeLocalInputEventMonitor(monitor2); ```
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,10 +88,6 @@ Adds transition animations for state changes in closure code. > **NOTE：**> > -
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -122,10 +112,6 @@ bindTabsToNestedScrollable(tabsController: TabsController, parentScroller: Scrol
 Bind tabs to nested scrollable container components to automatically hide tab bar.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -153,10 +139,6 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -181,10 +163,6 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 Closes the sheet corresponding to **bindSheetContent**. This API uses a promise to return the result. > **NOTE：**> > Closing a sheet using this API will not invoke the **shouldDismiss** callback.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,10 +202,6 @@ Construct a **UIContext** object. > **NOTE：**> > A **UIContext** object create
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -246,10 +220,6 @@ Creates an **Animator** object.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -262,13 +232,13 @@ Creates an **Animator** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -282,13 +252,9 @@ Creates an **Animator** object.
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createAnimator) API, this API adds support for the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
+Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createanimator) API, this API adds support for the [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md#simpleanimatoroptions) type.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -302,13 +268,13 @@ Creates an **AnimatorResult** object for animations. Compared to the previous [c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -326,10 +292,6 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -342,7 +304,7 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext \| common.ExtensionContext | Yes | Context corresponding to [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) or [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility). |
+| context | common.UIAbilityContext \| common.ExtensionContext | Yes | Context corresponding to [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability) or [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md#extensionability). |
 
 **Return value:**
 
@@ -363,13 +325,9 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 static destroyUIContextWithoutWindow(): void
 ```
 
-Destroys the UI instance created using [createUIContextWithoutWindow](#createUIContextWithoutWindow).
+Destroys the UI instance created using [createUIContextWithoutWindow](#createuicontextwithoutwindow).
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn only, since version 17.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -388,10 +346,6 @@ dispatchKeyEvent(node: number | string, event: KeyEvent): boolean
 Dispach keyboard event to the frameNode with inspector key.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -424,10 +378,6 @@ Whether to enable or disable event passthrough.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -453,10 +403,6 @@ whether to enable or disable swipe to back event.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-UIContext-enableSwipeBack(enabled: Optional<boolean>): void--><!--Device-UIContext-enableSwipeBack(enabled: Optional<boolean>): void-End-->
@@ -478,10 +424,6 @@ fp2px(value: number): number
 Converts a value in fp units to a value in px.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -513,10 +455,6 @@ Obtains all currently valid UIContext instances.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -541,10 +479,6 @@ Get AtomicServiceBar.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -568,10 +502,6 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 Get the FrameNode attached to current window by id.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -599,13 +529,9 @@ Get the FrameNode attached to current window by id.
 static getCallingScopeUIContext(): UIContext | undefined
 ```
 
-Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). This API returns **undefined** if the calling scope is ambiguous. > **NOTE：**> > The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous > task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its > validity via the [isAvailable](#isAvailable) API.
+Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). This API returns **undefined** if the calling scope is ambiguous. > **NOTE：**> > The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous > task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its > validity via the [isAvailable](#isavailable) API.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -631,10 +557,6 @@ Get ComponentSnapshot.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -658,10 +580,6 @@ getComponentUtils(): ComponentUtils
 get object ComponentUtils.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -687,10 +605,6 @@ Get object context menu controller.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -714,10 +628,6 @@ getCursorController(): CursorController
 Get object cursor controller.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -743,10 +653,6 @@ Get the Dialog object.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -771,10 +677,6 @@ Get DragController.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -798,10 +700,6 @@ getFilteredInspectorTree(filters?: Array<string>): string
 Obtains the component tree and component attributes. This API has a long processing time and is intended for <br>testing scenarios only.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -838,10 +736,6 @@ getFilteredInspectorTreeById(id: string, depth: number, filters?: Array<string>)
 Obtains the attributes of the specified component and its child components. This API has a long processing time <br>and is intended for testing scenarios only.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -881,10 +775,6 @@ Get FocusController.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -909,10 +799,6 @@ Obtains a **Font** object.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -936,10 +822,6 @@ getFrameNodeById(id: string): FrameNode | null
 Get FrameNode by id.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -971,10 +853,6 @@ Get FrameNode by uniqueId. Obtains the entity node, FrameNode, of a component on
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1005,10 +883,6 @@ Obtains the context of this ability.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1032,10 +906,6 @@ getId(): number
 Obtains the unique ID of a UI instance object. In multi-instance scenarios, you can use this unique ID to distinguish between different UI instance objects for easier management.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1061,10 +931,6 @@ Obtains the avoidance mode of the virtual keyboard.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1088,10 +954,6 @@ static getLastFocusedUIContext(): UIContext | undefined
 Obtains the UIContext of the UI instance that most recently switched to the focused state.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1117,10 +979,6 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -1141,13 +999,9 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 getMagnifier(): Magnifier
 ```
 
-Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md#Magnifier) object, which can be used to control the display and hiding of a magnifier.
+Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md#magnifier) object, which can be used to control the display and hiding of a magnifier.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1173,10 +1027,6 @@ Get the max font scale.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -1200,10 +1050,6 @@ getMeasureUtils(): MeasureUtils
 Obtains a **MeasureUtils** object for text calculation.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1229,10 +1075,6 @@ get object mediaQuery.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1256,10 +1098,6 @@ getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined
 Get navigation information of the frameNode with uniqueId.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1291,10 +1129,6 @@ Obtains the OverlayManager object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1319,10 +1153,6 @@ Get object OverlayManagerOptions.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -1346,10 +1176,6 @@ getPageInfoByUniqueId(id: number): PageInfo
 Get page information of the frameNode with uniqueId.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1381,10 +1207,6 @@ Obtains the root node of the page corresponding to the UIContext.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-UIContext-getPageRootNode(): FrameNode | null--><!--Device-UIContext-getPageRootNode(): FrameNode | null-End-->
@@ -1413,10 +1235,6 @@ Obtains the pixel rounding mode for this page.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1440,10 +1258,6 @@ getPromptAction(): PromptAction
 Obtains a PromptAction object.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1469,10 +1283,6 @@ Obtains a Router object.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1496,10 +1306,6 @@ getSharedLocalStorage(): LocalStorage | undefined
 Obtains the **LocalStorage** instance shared by this stage.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1525,10 +1331,6 @@ Get object smart gesture controller.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -1549,13 +1351,9 @@ Get object smart gesture controller.
 getTextMenuController(): TextMenuController
 ```
 
-Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md#TextMenuController) object, which can be used to control the context menu on selection.
+Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md#textmenucontroller) object, which can be used to control the context menu on selection.
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn only, since version 16.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1581,10 +1379,6 @@ Obtains the **UIInspector** object.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1608,10 +1402,6 @@ getUIObserver(): UIObserver
 Obtains the **UIObserver** object.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1637,10 +1427,6 @@ Obtains the height breakpoint value of the window where this instance is located
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -1661,13 +1447,9 @@ Obtains the height breakpoint value of the window where this instance is located
 getWindowId(): number | undefined
 ```
 
-Obtains the ID of the window to which the current application instance belongs. > **NOTE：**> > If the UIContext resides inside a > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) that runs in the main > application process, the top-level window ID of the main application is returned.
+Obtains the ID of the window to which the current application instance belongs. > **NOTE：**> > If the UIContext resides inside a > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) that runs in the main > application process, the top-level window ID of the main application is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1693,10 +1475,6 @@ Obtains the name of the window where this instance is located.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1720,10 +1498,6 @@ getWindowWidthBreakpoint(): WidthBreakpoint
 Obtains the width breakpoint value of the window where this instance is located. The specific value is determined by the vp value of the window width. For details, see WidthBreakpoint.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1749,10 +1523,6 @@ Checks whether the UI instance corresponding to this **UIContext** object is val
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1776,10 +1546,6 @@ isEasySplit(): boolean
 Checks whether the current UI instance is in easy split mode.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1805,10 +1571,6 @@ Checks whether current font scale follows the system.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -1832,10 +1594,6 @@ keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>):
 Generates a key frame animation. For details about how to use this API, see keyframeAnimateTo.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1861,10 +1619,6 @@ lpx2px(value: number): number
 Converts a value in lpx units to a value in px.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1892,13 +1646,9 @@ Converts a value in lpx units to a value in px.
 openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions?: SheetOptions, targetId?: number): Promise<void>
 ```
 
-Creates a sheet whose content is as defined in **bindSheetContent** and displays the sheet. This API uses a promise to return the result. > **NOTE：**> > 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set > **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**. > > 2. Since [updateBindSheet](#updateBindSheet) and [closeBindSheet](#closeBindSheet) > depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself. > > 3. Setting **SheetOptions.UIContext** is not supported.
+Creates a sheet whose content is as defined in **bindSheetContent** and displays the sheet. This API uses a promise to return the result. > **NOTE：**> > 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set > **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**. > > 2. Since [updateBindSheet](#updatebindsheet) and [closeBindSheet](#closebindsheet) > depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself. > > 3. Setting **SheetOptions.UIContext** is not supported.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1943,10 +1693,6 @@ Post a frame callback to run on the next frame after the specified delay.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1972,10 +1718,6 @@ Post a frame callback to run on the next frame.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1999,10 +1741,6 @@ px2fp(value: number): number
 Converts a value in px units to a value in fp.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2034,10 +1772,6 @@ Converts a value in px units to a value in lpx.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -2067,10 +1801,6 @@ px2vp(value: number): number
 Converts a value in px units to a value in vp.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2102,10 +1832,6 @@ Removes a local input event monitor. **Important Notes**: - Only Monitor objects
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -2129,10 +1855,6 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 Require DynamicSyncScene by id.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2164,10 +1886,6 @@ Obtains a UIContext instance along with its resolution strategy using a predefin
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -2191,10 +1909,6 @@ runScopedTask(callback: () => void): void
 Run custom functions inside the UIContext scope.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2220,10 +1934,6 @@ Set custom keyboard continue feature.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -2247,10 +1957,6 @@ setImageCacheCount(value: number): void
 Set image cache capacity of decoded image count. if not set, the application will not cache any decoded image.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2276,10 +1982,6 @@ Set image cache capacity of raw image data size in bytes before decode. if not s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -2304,10 +2006,6 @@ Sets the avoidance mode for the virtual keyboard. > **NOTE：**> > With **Keyboa
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -2331,10 +2029,6 @@ setOverlayManagerOptions(options: OverlayManagerOptions): boolean
 Init OverlayManager.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2366,10 +2060,6 @@ Sets the pixel rounding mode for this page.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2393,10 +2083,6 @@ static setResourceManagerCacheMaxCountForHSP(count: number): void
 Set the upper limit for the cache count of HSP resource management objects. If the upper limit of the cache is set too high, there is a risk of excessive memory overhead. It is recommended to configure it according to actual needs.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2430,10 +2116,6 @@ Sets the text selection clear policy for text component. Default policy: **TextS
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -2457,10 +2139,6 @@ showActionSheet(value: ActionSheetOptions): void
 Shows an action sheet in the given settings.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2486,10 +2164,6 @@ Shows an alert dialog box.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -2513,10 +2187,6 @@ showDatePickerDialog(options: DatePickerDialogOptions): void
 datePickerDialog display.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2542,10 +2212,6 @@ textPickerDialog display.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -2569,10 +2235,6 @@ showTextPickerDialog(style: TextPickerDialogOptions | TextPickerDialogOptionsExt
 textPickerDialog display.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2598,10 +2260,6 @@ timePickerDialog display.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -2625,10 +2283,6 @@ unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: S
 Unbind tabs from nested scrollable container components.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2656,10 +2310,6 @@ Unbind tabs from scrollable container component.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -2684,10 +2334,6 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 Updates the style of the sheet corresponding to the provided **bindSheetContent**. This API uses a promise to return the result. > **NOTE：**> > **SheetOptions.UIContext**, **SheetOptions.mode**, and callback functions cannot be updated.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2728,10 +2374,6 @@ vp2px(value: number): number
 Converts a value in vp units to a value in px.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

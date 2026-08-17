@@ -16,10 +16,6 @@ Obtains the information about all sensors on the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>--><!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -28,7 +24,7 @@ Obtains the information about all sensors on the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | int | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getSensorList) or [sensorStatusChange](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) to obtain the device ID. |
+| deviceId | int | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist) or [sensorStatusChange](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor) to obtain the device ID. |
 
 **Return value:**
 
@@ -36,7 +32,7 @@ Obtains the information about all sensors on the device.
 | --- | --- |
 | Array&lt;Sensor&gt; | Sensor attribute list. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

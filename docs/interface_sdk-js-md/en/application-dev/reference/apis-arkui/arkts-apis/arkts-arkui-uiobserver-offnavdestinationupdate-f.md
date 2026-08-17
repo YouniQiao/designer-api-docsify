@@ -12,13 +12,9 @@ import { uiObserver } from 'uiObserver';
 export function off(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback?: Callback<NavDestinationInfo>): void
 ```
 
-Unsubscribes from status changes of the **NavDestination** component. Compared with [uiObserver.off](#off_navDestinationUpdate), this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe.
+Unsubscribes from status changes of the **NavDestination** component. Compared with [uiObserver.off](#offnavdestinationupdate), this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +42,6 @@ export function off(type: 'navDestinationUpdate', callback?: Callback<NavDestina
 Unsubscribes from status changes of the **NavDestination** component.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

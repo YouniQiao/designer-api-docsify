@@ -4,8 +4,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-export interface CheckPackageHasInstalledResponse--><!--Device-unnamed-export interface CheckPackageHasInstalledResponse-End-->
@@ -30,8 +28,6 @@ Check result for whether the bundle has been installed. **true** if installed, *
 **Type:** boolean
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 

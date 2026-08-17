@@ -10,10 +10,6 @@ function getProfileByAbilitySync(moduleName: string, abilityName: string, metada
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-bundleManager-function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>--><!--Device-bundleManager-function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>-End-->
@@ -44,7 +40,7 @@ function getProfileByAbilitySync(moduleName: string, abilityName: string, metada
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not existed. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not existed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

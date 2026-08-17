@@ -16,10 +16,6 @@ Obtains the total GPU memory size (**gl** + **graph**) of the application. This 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hidebug-function getGraphicsMemory(): Promise<int>--><!--Device-hidebug-function getGraphicsMemory(): Promise<int>-End-->
@@ -38,7 +34,7 @@ Obtains the total GPU memory size (**gl** + **graph**) of the application. This 
 | --- | --- |
 | [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Failed to get the application memory due to a remote exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug, hilog } from '@kit.PerformanceAnalysisKit';

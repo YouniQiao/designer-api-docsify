@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [CheckboxGroup](arkts-na-checkboxgroup-checkboxgroup-f.md#CheckboxGroup) | Defines CheckboxGroup Component. |
+| [CheckboxGroup](arkts-na-checkboxgroup-checkboxgroup-f.md#checkboxgroup) | Defines CheckboxGroup Component. |
 
 ### Interfaces
 

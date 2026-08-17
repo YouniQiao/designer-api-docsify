@@ -16,10 +16,6 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void--><!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void-End-->
@@ -32,7 +28,7 @@ Obtains the **ResourceManager** object of the current application. This API uses
 | --- | --- | --- | --- |
 | callback | AsyncCallback&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Yes | Callback used to return the **ResourceManager** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';
@@ -70,10 +66,6 @@ Obtains the **ResourceManager** object of the specified application. This API us
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-resourceManager-export function getResourceManager(bundleName: string, callback: AsyncCallback<ResourceManager>): void--><!--Device-resourceManager-export function getResourceManager(bundleName: string, callback: AsyncCallback<ResourceManager>): void-End-->
@@ -87,7 +79,7 @@ Obtains the **ResourceManager** object of the specified application. This API us
 | bundleName | string | Yes | Bundle name of the application. |
 | callback | AsyncCallback&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Yes | Callback used to return the **ResourceManager** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';
@@ -127,10 +119,6 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>--><!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>-End-->
@@ -143,7 +131,7 @@ Obtains the **ResourceManager** object of the current application. This API uses
 | --- | --- |
 | Promise&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Promise used to return the **ResourceManager** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';
@@ -177,10 +165,6 @@ Obtains the **ResourceManager** object of the specified application. This API us
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-resourceManager-export function getResourceManager(bundleName: string): Promise<ResourceManager>--><!--Device-resourceManager-export function getResourceManager(bundleName: string): Promise<ResourceManager>-End-->
@@ -199,7 +183,7 @@ Obtains the **ResourceManager** object of the specified application. This API us
 | --- | --- |
 | Promise&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Promise used to return the **ResourceManager** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';

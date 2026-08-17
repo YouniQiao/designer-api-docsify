@@ -4,10 +4,6 @@ Indicates the type of the returned data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-http-export enum HttpDataType--><!--Device-http-export enum HttpDataType-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -21,10 +17,6 @@ STRING
 The returned type is string.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ The returned type is Object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpDataType-OBJECT = 1--><!--Device-HttpDataType-OBJECT = 1-End-->
@@ -61,10 +49,6 @@ ARRAY_BUFFER = 2
 The returned type is ArrayBuffer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

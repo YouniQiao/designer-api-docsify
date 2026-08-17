@@ -1,4 +1,4 @@
-# TypeError
+# TypeError(Defines the commonly used Errors for ArkTS)
 
 Represents an error that occurs when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type
 
@@ -6,9 +6,7 @@ Represents an error that occurs when an operation could not be performed, typica
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class TypeError--><!--Device-unnamed-export class TypeError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new TypeError instance with provided message and error specific inf
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,9 +53,7 @@ Constructs a new TypeError instance with provided message and error specific inf
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

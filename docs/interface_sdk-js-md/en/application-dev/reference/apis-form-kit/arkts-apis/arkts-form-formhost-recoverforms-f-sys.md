@@ -16,10 +16,6 @@ Recovers recycled widgets and updates their status to non-recyclable, or updates
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -63,10 +59,6 @@ function recoverForms(formIds: Array<string>, callback: AsyncCallback<void>): vo
 Recovers widgets. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

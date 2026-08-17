@@ -4,10 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 <!--Device-dlpPermission-export class DlpConnManager--><!--Device-dlpPermission-export class DlpConnManager-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -18,13 +14,9 @@
 constructor()
 ```
 
-[DlpConnManager](#DlpConnManager) 实例化时的构造函数。
+[DlpConnManager](#dlpconnmanager) 实例化时的构造函数。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -40,7 +32,7 @@ constructor()
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -57,10 +49,6 @@ static registerPlugin(plugin: DlpConnPlugin): number
 该接口提供将回调注册到SA（System Ability）侧的功能。 > **说明：** > > registerPlugin将plugin注册到SA（System Ability）侧，待SA（System Ability）调用。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -92,7 +80,7 @@ static registerPlugin(plugin: DlpConnPlugin): number
 | [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -127,10 +115,6 @@ static unregisterPlugin(): void
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API版本21 - 24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
@@ -149,7 +133,7 @@ static unregisterPlugin(): void
 | [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

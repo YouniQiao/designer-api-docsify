@@ -1,14 +1,10 @@
 # Audio
 
-Represents audio data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md#File) and is used to describe an audio file.
+Represents audio data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md#file) and is used to describe an audio file.
 
-**Inheritance/Implementation:** Audio extends [File](arkts-arkdata-unifieddatachannel-file-c.md#File)
+**Inheritance/Implementation:** Audio extends [File](arkts-arkdata-unifieddatachannel-file-c.md#file)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

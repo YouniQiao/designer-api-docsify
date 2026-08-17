@@ -4,11 +4,9 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
-**替代接口：** [StreamUsage](arkts-audio-audio-streamusage-e.md#StreamUsage)
+**替代接口：** [StreamUsage](arkts-audio-audio-streamusage-e.md#streamusage)
 
 <!--Device-audio-enum ContentType--><!--Device-audio-enum ContentType-End-->
 
@@ -24,11 +22,9 @@ CONTENT_TYPE_UNKNOWN = 0
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
-**替代接口：** [STREAM_USAGE_UNKNOWN](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_UNKNOWN)
+**替代接口：** [STREAM_USAGE_UNKNOWN](arkts-audio-audio-streamusage-e.md#streamusageunknown)
 
 <!--Device-ContentType-CONTENT_TYPE_UNKNOWN = 0--><!--Device-ContentType-CONTENT_TYPE_UNKNOWN = 0-End-->
 
@@ -44,11 +40,9 @@ CONTENT_TYPE_SPEECH = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
-**替代接口：** [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_VOICE_COMMUNICATION)
+**替代接口：** [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#streamusagevoicecommunication)
 
 <!--Device-ContentType-CONTENT_TYPE_SPEECH = 1--><!--Device-ContentType-CONTENT_TYPE_SPEECH = 1-End-->
 
@@ -64,11 +58,9 @@ CONTENT_TYPE_MUSIC = 2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
-**替代接口：** [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MUSIC)
+**替代接口：** [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#streamusagemusic)
 
 <!--Device-ContentType-CONTENT_TYPE_MUSIC = 2--><!--Device-ContentType-CONTENT_TYPE_MUSIC = 2-End-->
 
@@ -84,11 +76,9 @@ CONTENT_TYPE_MOVIE = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
-**替代接口：** [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MOVIE)
+**替代接口：** [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#streamusagemovie)
 
 <!--Device-ContentType-CONTENT_TYPE_MOVIE = 3--><!--Device-ContentType-CONTENT_TYPE_MOVIE = 3-End-->
 
@@ -104,11 +94,9 @@ CONTENT_TYPE_SONIFICATION = 4
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
-**替代接口：** [STREAM_USAGE_NOTIFICATION](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_NOTIFICATION)
+**替代接口：** [STREAM_USAGE_NOTIFICATION](arkts-audio-audio-streamusage-e.md#streamusagenotification)
 
 <!--Device-ContentType-CONTENT_TYPE_SONIFICATION = 4--><!--Device-ContentType-CONTENT_TYPE_SONIFICATION = 4-End-->
 
@@ -124,11 +112,9 @@ CONTENT_TYPE_RINGTONE = 5
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 10
 
-**替代接口：** [STREAM_USAGE_RINGTONE](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_RINGTONE)
+**替代接口：** [STREAM_USAGE_RINGTONE](arkts-audio-audio-streamusage-e.md#streamusageringtone)
 
 <!--Device-ContentType-CONTENT_TYPE_RINGTONE = 5--><!--Device-ContentType-CONTENT_TYPE_RINGTONE = 5-End-->
 

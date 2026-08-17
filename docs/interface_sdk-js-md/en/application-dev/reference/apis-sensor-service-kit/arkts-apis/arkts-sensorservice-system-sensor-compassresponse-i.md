@@ -4,11 +4,9 @@ Defines a **CompassResponse** object.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#OrientationResponse)
+**Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#orientationresponse)
 
 <!--Device-unnamed-export interface CompassResponse--><!--Device-unnamed-export interface CompassResponse-End-->
 
@@ -51,8 +49,6 @@ Direction of the device, in degrees.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 

@@ -16,10 +16,6 @@ Subscribe to the peerDimensionsChange event.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function onPeerDimensionsChange(callback: Callback<PeerDimensionsDetail>): void--><!--Device-call-function onPeerDimensionsChange(callback: Callback<PeerDimensionsDetail>): void-End-->

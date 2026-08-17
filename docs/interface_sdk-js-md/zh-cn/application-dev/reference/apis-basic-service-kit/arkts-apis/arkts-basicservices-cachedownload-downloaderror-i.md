@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cacheDownload-interface DownloadError--><!--Device-cacheDownload-interface DownloadError-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -24,10 +20,6 @@ readonly errorCode: ErrorCode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DownloadError-readonly errorCode: ErrorCode--><!--Device-DownloadError-readonly errorCode: ErrorCode-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -43,10 +35,6 @@ readonly message: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DownloadError-readonly message: string--><!--Device-DownloadError-readonly message: string-End-->
 

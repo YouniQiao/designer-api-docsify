@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-zlib-export enum ErrorCode--><!--Device-zlib-export enum ErrorCode-End-->
@@ -20,8 +18,6 @@ ERROR_CODE_OK = 0
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-ErrorCode-ERROR_CODE_OK = 0--><!--Device-ErrorCode-ERROR_CODE_OK = 0-End-->
@@ -35,8 +31,6 @@ ERROR_CODE_ERRNO = -1
 ```
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 

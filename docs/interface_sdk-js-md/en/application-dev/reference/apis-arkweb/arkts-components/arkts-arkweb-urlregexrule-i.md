@@ -1,12 +1,8 @@
 # UrlRegexRule
 
-Defines the regular expression rule.
+Defines the URL regular expression rule.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface UrlRegexRule--><!--Device-unnamed-declare interface UrlRegexRule-End-->
 
@@ -15,44 +11,36 @@ Defines the regular expression rule.
 ## rule
 
 ```TypeScript
-rule: string
+rule : string
 ```
 
-Full URL regular expression.
+URL regular expression. URL regular expression matching is performed only after **secondLevelDomain** is matched successfully.
 
 **Type:** string
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UrlRegexRule-rule: string--><!--Device-UrlRegexRule-rule: string-End-->
+<!--Device-UrlRegexRule-rule : string--><!--Device-UrlRegexRule-rule : string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## secondLevelDomain
 
 ```TypeScript
-secondLevelDomain: string
+secondLevelDomain : string
 ```
 
-Exact match of the second-level domain. For example, the second-level domain of https://www.example.com is example.com, and the second-level domain of https://www.example.com.cn is example.com.cn. If the URL is an IP address, the full IP is matched against the secondLevelDomain.
+Exact match of the second-level domain. For example, the second-level domain name of "https://www.example.com" is **example.com**, and that of "https://www.example.com.cn" is **example.com.cn**. If the URL does not have a second- level domain name, the value is empty.
 
 **Type:** string
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UrlRegexRule-secondLevelDomain: string--><!--Device-UrlRegexRule-secondLevelDomain: string-End-->
+<!--Device-UrlRegexRule-secondLevelDomain : string--><!--Device-UrlRegexRule-secondLevelDomain : string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

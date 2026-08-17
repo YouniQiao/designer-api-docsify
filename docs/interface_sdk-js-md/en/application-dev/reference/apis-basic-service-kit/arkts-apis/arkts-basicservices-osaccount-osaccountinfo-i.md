@@ -4,10 +4,6 @@ Represents information about an OS account.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface OsAccountInfo--><!--Device-osAccount-interface OsAccountInfo-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -30,10 +26,6 @@ Constraints of the system account. By default, no value is passed in.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OsAccountInfo-constraints: Array<string>--><!--Device-OsAccountInfo-constraints: Array<string>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -49,10 +41,6 @@ OS account creation time. The value is a Unix timestamp (in seconds).
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-createTime: long--><!--Device-OsAccountInfo-createTime: long-End-->
 
@@ -70,10 +58,6 @@ Distributed account information. By default, no value is passed in.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OsAccountInfo-distributedInfo: distributedAccount.DistributedInfo--><!--Device-OsAccountInfo-distributedInfo: distributedAccount.DistributedInfo-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -89,10 +73,6 @@ Domain account information. By default, no value is passed in.
 **Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-domainInfo: DomainAccountInfo--><!--Device-OsAccountInfo-domainInfo: DomainAccountInfo-End-->
 
@@ -110,10 +90,6 @@ Whether the OS account is activated. The value **true** means the specified acco
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OsAccountInfo-isActivated: boolean--><!--Device-OsAccountInfo-isActivated: boolean-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -130,11 +106,9 @@ Whether the OS account is activated. The value **true** means the specified acco
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [isActivated](#isActivated)
+**Substitutes:** [isActivated](#isactivated)
 
 <!--Device-OsAccountInfo-isActived: boolean--><!--Device-OsAccountInfo-isActived: boolean-End-->
 
@@ -152,10 +126,6 @@ Whether the OS account information is complete. The value **true** means the spe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OsAccountInfo-isCreateCompleted: boolean--><!--Device-OsAccountInfo-isCreateCompleted: boolean-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -171,10 +141,6 @@ Whether the account is unlocked (whether the **el2/** directory is decrypted). T
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-isUnlocked: boolean--><!--Device-OsAccountInfo-isUnlocked: boolean-End-->
 
@@ -192,11 +158,9 @@ Whether the account has been verified. The value **true** means the specified ac
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [isUnlocked](#isUnlocked)
+**Substitutes:** [isUnlocked](#isunlocked)
 
 <!--Device-OsAccountInfo-isVerified: boolean--><!--Device-OsAccountInfo-isVerified: boolean-End-->
 
@@ -214,10 +178,6 @@ Last login time of the OS account. The value is a Unix timestamp (in seconds).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OsAccountInfo-lastLoginTime: long--><!--Device-OsAccountInfo-lastLoginTime: long-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -233,10 +193,6 @@ ID of the target OS account.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-localId: int--><!--Device-OsAccountInfo-localId: int-End-->
 
@@ -254,10 +210,6 @@ Name of the OS account.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OsAccountInfo-localName: string--><!--Device-OsAccountInfo-localName: string-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -273,10 +225,6 @@ Avatar of the OS account. By default, no value is passed in.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-photo: string--><!--Device-OsAccountInfo-photo: string-End-->
 
@@ -294,10 +242,6 @@ SN of the OS account.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OsAccountInfo-serialNumber: long--><!--Device-OsAccountInfo-serialNumber: long-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -313,10 +257,6 @@ Type of the OS account.
 **Type:** [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-type: OsAccountType--><!--Device-OsAccountInfo-type: OsAccountType-End-->
 

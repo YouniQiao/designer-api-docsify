@@ -10,8 +10,6 @@ Changes the file owner based on the file descriptor. This API returns the result
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-declare function fchownSync(fd: number, uid: number, gid: number): void--><!--Device-unnamed-declare function fchownSync(fd: number, uid: number, gid: number): void-End-->

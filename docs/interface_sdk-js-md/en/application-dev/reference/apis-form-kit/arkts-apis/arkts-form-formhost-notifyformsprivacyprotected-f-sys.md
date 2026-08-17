@@ -20,10 +20,6 @@ Notifies that the privacy protection status of the specified widgets changes. Th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 <!--Device-formHost-function notifyFormsPrivacyProtected(    formIds: Array<string>,    isProtected: boolean,    callback: AsyncCallback<void>  ): void--><!--Device-formHost-function notifyFormsPrivacyProtected(    formIds: Array<string>,    isProtected: boolean,    callback: AsyncCallback<void>  ): void-End-->
@@ -61,10 +57,6 @@ function notifyFormsPrivacyProtected(formIds: Array<string>, isProtected: boolea
 Notifies that the privacy protection status of the specified widgets changes. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

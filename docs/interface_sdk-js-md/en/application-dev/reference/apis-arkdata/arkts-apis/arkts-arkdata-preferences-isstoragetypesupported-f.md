@@ -16,10 +16,6 @@ Checks whether the specified storage type is supported. This API returns the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-preferences-function isStorageTypeSupported(type: StorageType): boolean--><!--Device-preferences-function isStorageTypeSupported(type: StorageType): boolean-End-->
@@ -44,7 +40,7 @@ Checks whether the specified storage type is supported. This API returns the res
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let xmlType = preferences.StorageType.XML;

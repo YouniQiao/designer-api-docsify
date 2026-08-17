@@ -10,10 +10,6 @@ function setDownloadInfoListSize(size: long): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cacheDownload-function setDownloadInfoListSize(size: long): void--><!--Device-cacheDownload-function setDownloadInfoListSize(size: long): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
@@ -24,7 +20,7 @@ function setDownloadInfoListSize(size: long): void
 | --- | --- | --- | --- |
 | size | long | 是 | 设置的下载信息列表大小。取值范围：[0, 8192]，默认为0，表示不会存储任何下载信息。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

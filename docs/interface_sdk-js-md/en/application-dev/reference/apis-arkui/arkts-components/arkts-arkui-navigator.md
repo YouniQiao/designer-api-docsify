@@ -14,8 +14,6 @@ Called when the route jumps.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 13
 
 **Substitutes:** NavPathInfo
@@ -41,8 +39,6 @@ Navigator()
 Called when using the navigator.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 13
 

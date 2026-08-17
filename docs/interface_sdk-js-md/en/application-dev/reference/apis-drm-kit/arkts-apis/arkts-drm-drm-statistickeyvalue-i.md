@@ -1,12 +1,8 @@
-# StatisticKeyValue
+# StatisticKeyValue(Defines the DRM capability.)
 
 Defines a key-value pair for DRM metrics.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-drm-interface StatisticKeyValue--><!--Device-drm-interface StatisticKeyValue-End-->
 
@@ -30,10 +26,6 @@ Name of the metric.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-StatisticKeyValue-name: string--><!--Device-StatisticKeyValue-name: string-End-->
@@ -51,10 +43,6 @@ Value of the metric.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

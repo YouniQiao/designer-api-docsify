@@ -16,10 +16,6 @@ Subscribe continuous location error changed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function onLocationError(callback: Callback<LocationError>): void--><!--Device-geoLocationManager-function onLocationError(callback: Callback<LocationError>): void-End-->

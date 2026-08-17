@@ -4,10 +4,6 @@ Defines the range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-scan-interface Range--><!--Device-scan-interface Range-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -30,10 +26,6 @@ Maximum value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Range-maxValue: int--><!--Device-Range-maxValue: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -50,10 +42,6 @@ Minimum value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Range-minValue: int--><!--Device-Range-minValue: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -69,10 +57,6 @@ Quantized value.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Range-quantValue: int--><!--Device-Range-quantValue: int-End-->
 

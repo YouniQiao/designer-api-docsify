@@ -4,10 +4,6 @@ Callback API type used during data migration, defining the callback methods for 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-fontManager-interface DataMigrationCallback--><!--Device-fontManager-interface DataMigrationCallback-End-->
 
 **System capability:** SystemCapability.Global.FontManager
@@ -30,17 +26,13 @@ Callback function that is periodically invoked during the execution of the data 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataMigrationCallback-onHeartBeat(): void--><!--Device-DataMigrationCallback-onHeartBeat(): void-End-->
 
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
@@ -77,10 +69,6 @@ Callback function that is periodically invoked during the execution of the data 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void--><!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void-End-->
 
 **System capability:** SystemCapability.Global.FontManager
@@ -93,7 +81,7 @@ Callback function that is periodically invoked during the execution of the data 
 | --- | --- | --- | --- |
 | progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | Yes | Data migration progress. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
@@ -130,10 +118,6 @@ Callback function that is invoked after the data migration task is completed (wh
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataMigrationCallback-onResult(result : int): void--><!--Device-DataMigrationCallback-onResult(result : int): void-End-->
 
 **System capability:** SystemCapability.Global.FontManager
@@ -146,7 +130,7 @@ Callback function that is invoked after the data migration task is completed (wh
 | --- | --- | --- | --- |
 | result | int | Yes | Data migration result. <br>**0**: Data migration succeeded. <br>**1**: No data migration is required. <br>**2**: Failed to obtain the user ID. <br>**3**: Failed to check the directory. <br>**4**: Failed to initialize the cache directory. <br>**5**: Failed to open the source file. <br>**6**: Failed to copy the file. <br>**7**: Failed to rename the file. <br>**8**: Failed to delete the file. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';

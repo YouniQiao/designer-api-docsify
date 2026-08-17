@@ -4,10 +4,6 @@ Enumerates the status code returned after data processing is complete.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-usbManager-export enum UsbTransferStatus--><!--Device-usbManager-export enum UsbTransferStatus-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -21,10 +17,6 @@ TRANSFER_COMPLETED = 0
 Transfer completed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_COMPLETED = 0--><!--Device-UsbTransferStatus-TRANSFER_COMPLETED = 0-End-->
 
@@ -40,10 +32,6 @@ Transfer failed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UsbTransferStatus-TRANSFER_ERROR = 1--><!--Device-UsbTransferStatus-TRANSFER_ERROR = 1-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -57,10 +45,6 @@ TRANSFER_TIMED_OUT = 2
 Transfer timeout.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_TIMED_OUT = 2--><!--Device-UsbTransferStatus-TRANSFER_TIMED_OUT = 2-End-->
 
@@ -76,10 +60,6 @@ Transfer canceled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UsbTransferStatus-TRANSFER_CANCELED = 3--><!--Device-UsbTransferStatus-TRANSFER_CANCELED = 3-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -93,10 +73,6 @@ TRANSFER_STALL = 4
 Transfer stalled (at bulk/interrupt endpoint).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_STALL = 4--><!--Device-UsbTransferStatus-TRANSFER_STALL = 4-End-->
 
@@ -112,10 +88,6 @@ Device disconnected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UsbTransferStatus-TRANSFER_NO_DEVICE = 5--><!--Device-UsbTransferStatus-TRANSFER_NO_DEVICE = 5-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -129,10 +101,6 @@ TRANSFER_OVERFLOW = 6
 Data overflow.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UsbTransferStatus-TRANSFER_OVERFLOW = 6--><!--Device-UsbTransferStatus-TRANSFER_OVERFLOW = 6-End-->
 

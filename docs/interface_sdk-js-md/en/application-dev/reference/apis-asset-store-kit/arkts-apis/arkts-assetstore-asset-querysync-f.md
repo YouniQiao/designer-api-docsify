@@ -12,13 +12,9 @@ import { asset } from 'asset';
 function querySync(query: AssetMap): Array<AssetMap>
 ```
 
-Queries one or more assets. If user authentication is required for the access to the asset, call [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#preQuerySync) before this API and call [asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postQuerySync) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API returns the result synchronously. If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
+Queries one or more assets. If user authentication is required for the access to the asset, call [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync) before this API and call [asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postquerysync) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API returns the result synchronously. If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -57,7 +53,7 @@ Queries one or more assets. If user authentication is required for the access to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [24000017](../errorcode-asset.md#24000017-function-not-supported) | The capability is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

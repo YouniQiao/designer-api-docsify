@@ -4,10 +4,6 @@ Enumerates the types of [Media error codes](../errorcode-media.md).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum AVErrorCode--><!--Device-media-enum AVErrorCode-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -21,10 +17,6 @@ AVERR_OK = 0
 The operation is successful.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ No permission to perform the operation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVErrorCode-AVERR_NO_PERMISSION = 201--><!--Device-AVErrorCode-AVERR_NO_PERMISSION = 201-End-->
@@ -61,10 +49,6 @@ AVERR_INVALID_PARAMETER = 401
 Invalid input parameter.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ Unsupported API.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVErrorCode-AVERR_UNSUPPORT_CAPABILITY = 801--><!--Device-AVErrorCode-AVERR_UNSUPPORT_CAPABILITY = 801-End-->
@@ -101,10 +81,6 @@ AVERR_NO_MEMORY = 5400101
 The system memory is insufficient or the number of services reaches the upper limit.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,10 +98,6 @@ The operation is not allowed in the current state or you do not have the permiss
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVErrorCode-AVERR_OPERATE_NOT_PERMIT = 5400102--><!--Device-AVErrorCode-AVERR_OPERATE_NOT_PERMIT = 5400102-End-->
@@ -141,10 +113,6 @@ AVERR_IO = 5400103
 The data stream is abnormal.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,10 +130,6 @@ The system or network response times out.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVErrorCode-AVERR_TIMEOUT = 5400104--><!--Device-AVErrorCode-AVERR_TIMEOUT = 5400104-End-->
@@ -181,10 +145,6 @@ AVERR_SERVICE_DIED = 5400105
 The service process is dead.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,10 +162,6 @@ The format of the media asset is not supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVErrorCode-AVERR_UNSUPPORT_FORMAT = 5400106--><!--Device-AVErrorCode-AVERR_UNSUPPORT_FORMAT = 5400106-End-->
@@ -221,10 +177,6 @@ AVERR_AUDIO_INTERRUPTED = 5400107
 The audio focus is interrupted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -242,10 +194,6 @@ Failed to parse the server address or connect to the server.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVErrorCode-AVERR_IO_HOST_NOT_FOUND = 5411001--><!--Device-AVErrorCode-AVERR_IO_HOST_NOT_FOUND = 5411001-End-->
@@ -261,10 +209,6 @@ AVERR_IO_CONNECTION_TIMEOUT = 5411002
 Network connection times out.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -282,10 +226,6 @@ Data or links are abnormal due to network exceptions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVErrorCode-AVERR_IO_NETWORK_ABNORMAL = 5411003--><!--Device-AVErrorCode-AVERR_IO_NETWORK_ABNORMAL = 5411003-End-->
@@ -301,10 +241,6 @@ AVERR_IO_NETWORK_UNAVAILABLE = 5411004
 The network is disabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -322,10 +258,6 @@ No access permission.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVErrorCode-AVERR_IO_NO_PERMISSION = 5411005--><!--Device-AVErrorCode-AVERR_IO_NO_PERMISSION = 5411005-End-->
@@ -341,10 +273,6 @@ AVERR_IO_REQUEST_DENIED = 5411006
 The client request parameter is incorrect or exceeds the processing capability.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -362,10 +290,6 @@ No network resource is available.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVErrorCode-AVERR_IO_RESOURCE_NOT_FOUND = 5411007--><!--Device-AVErrorCode-AVERR_IO_RESOURCE_NOT_FOUND = 5411007-End-->
@@ -381,10 +305,6 @@ AVERR_IO_SSL_CLIENT_CERT_NEEDED = 5411008
 The server fails to verify the client certificate.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -402,10 +322,6 @@ The SSL connection fails.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVErrorCode-AVERR_IO_SSL_CONNECTION_FAILED = 5411009--><!--Device-AVErrorCode-AVERR_IO_SSL_CONNECTION_FAILED = 5411009-End-->
@@ -421,10 +337,6 @@ AVERR_IO_SSL_SERVER_CERT_UNTRUSTED = 5411010
 The client fails to verify the server certificate.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -442,10 +354,6 @@ The request is not supported due to a network protocol error.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVErrorCode-AVERR_IO_UNSUPPORTED_REQUEST = 5411011--><!--Device-AVErrorCode-AVERR_IO_UNSUPPORTED_REQUEST = 5411011-End-->
@@ -461,10 +369,6 @@ AVERR_SEEK_CONTINUOUS_UNSUPPORTED = 5410002
 The seek operation in SEEK_CONTINUOUS mode is not supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -482,10 +386,6 @@ Super resolution is not supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVErrorCode-AVERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003--><!--Device-AVErrorCode-AVERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003-End-->
@@ -501,10 +401,6 @@ AVERR_SUPER_RESOLUTION_NOT_ENABLED = 5410004
 Super resolution is not enabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -522,10 +418,6 @@ HTTP plaintext access is not allowed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVErrorCode-AVERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012--><!--Device-AVErrorCode-AVERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012-End-->
@@ -541,10 +433,6 @@ AVERR_PARAMETER_OUT_OF_RANGE = 5400108
 The parameter value is out of range.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -14,13 +14,9 @@ function offActiveStateChange(
     callback?: Callback<ActiveChangeResponse>): void
 ```
 
-Unsubscribes from permission usage status change events for a specified permission list. After a successful unsubscription, status change notifications for the specified permission list will no longer be received. When unsubscribing, if no callback function is passed in, all callback functions under the permissionList are deleted in batch. > **NOTE：**> This API is typically used in conjunction with onActiveStateChange to cancel the listening relationship created by onActiveStateChange.
+Unsubscribes from permission usage status change events for a specified permission list. After a successful unsubscription, status change notifications for the specified permission list will no longer be received. When unsubscribing, if no callback function is passed in, all callback functions under the permissionList are deleted in batch. > **NOTE：**> This API is typically used in conjunction with [onActiveStateChange](arkts-ability-privacymanager-onactivestatechange-f-sys.md#onactivestatechange) to cancel the listening relationship created by onActiveStateChange.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 

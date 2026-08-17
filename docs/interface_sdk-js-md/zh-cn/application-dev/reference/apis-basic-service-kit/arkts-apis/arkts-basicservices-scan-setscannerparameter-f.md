@@ -10,10 +10,6 @@ function setScannerParameter(scannerId: string, optionIndex: int, value: Scanner
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.PRINT
 
 <!--Device-scan-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>--><!--Device-scan-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>-End-->
@@ -40,7 +36,7 @@ function setScannerParameter(scannerId: string, optionIndex: int, value: Scanner
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

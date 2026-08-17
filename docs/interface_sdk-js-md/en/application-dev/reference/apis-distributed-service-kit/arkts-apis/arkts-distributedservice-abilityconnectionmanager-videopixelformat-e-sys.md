@@ -4,10 +4,6 @@ Video pixelFormat Configuration Options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityConnectionManager-export enum VideoPixelFormat--><!--Device-abilityConnectionManager-export enum VideoPixelFormat-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -23,10 +19,6 @@ UNKNOWN = -1
 Unknown.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ NV12. yuv 420 semiplanar.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VideoPixelFormat-NV12 = 0--><!--Device-VideoPixelFormat-NV12 = 0-End-->
@@ -67,10 +55,6 @@ NV21 = 1
 NV21. yvu 420 semiplanar.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

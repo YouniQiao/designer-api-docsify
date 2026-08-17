@@ -2,13 +2,9 @@
 
 Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar, such as leap month.
 
-**Inheritance/Implementation:** ChineseCalendar extends [Calendar](../../apis-na/arkts-apis/arkts-na-i18n-calendar-c.md#Calendar)
+**Inheritance/Implementation:** ChineseCalendar extends [Calendar](arkts-localization-i18n-calendar-c.md#calendar)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-i18n-export class ChineseCalendar--><!--Device-i18n-export class ChineseCalendar-End-->
 
@@ -29,10 +25,6 @@ public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int):
 Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,10 +64,6 @@ Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCal
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -88,5 +76,5 @@ Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chineseCalendarTime | [ChineseCalendarTime](../../apis-na/arkts-apis/arkts-na-i18n-chinesecalendartime-i.md) | Yes | Indicates the time element used to set for ChineseCalendar. |
+| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | Yes | Indicates the time element used to set for ChineseCalendar. |
 

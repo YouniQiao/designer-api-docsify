@@ -4,10 +4,6 @@ SM2密文参数，使用SM2密文格式转换函数进行格式转换时，需�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cryptoFramework-interface SM2CipherTextSpec--><!--Device-cryptoFramework-interface SM2CipherTextSpec-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
@@ -23,10 +19,6 @@ cipherTextData: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ hashData: Uint8Array
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SM2CipherTextSpec-hashData: Uint8Array--><!--Device-SM2CipherTextSpec-hashData: Uint8Array-End-->
@@ -68,10 +56,6 @@ x分量。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SM2CipherTextSpec-xCoordinate: bigint--><!--Device-SM2CipherTextSpec-xCoordinate: bigint-End-->
@@ -89,10 +73,6 @@ y分量，也称为C1y。
 **类型：** bigint
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

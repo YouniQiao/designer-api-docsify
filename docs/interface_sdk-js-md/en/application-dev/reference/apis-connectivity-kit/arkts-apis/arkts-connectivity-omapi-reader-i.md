@@ -4,10 +4,6 @@ Reader represents the SE readers supported by this device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-omapi-export interface Reader--><!--Device-omapi-export interface Reader-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -28,10 +24,6 @@ Close all the sessions opened on this reader. All the channels opened by all the
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Reader-closeSessions(): void--><!--Device-Reader-closeSessions(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -43,7 +35,7 @@ Close all the sessions opened on this reader. All the channels opened by all the
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -85,10 +77,6 @@ Returns the name of this reader. If this reader is a SIM reader, then its name m
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Reader-getName(): string--><!--Device-Reader-getName(): string-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -105,7 +93,7 @@ Returns the name of this reader. If this reader is a SIM reader, then its name m
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -134,10 +122,6 @@ Checks if a SE is present in this reader.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Reader-isSecureElementPresent(): boolean--><!--Device-Reader-isSecureElementPresent(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -155,7 +139,7 @@ Checks if a SE is present in this reader.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -184,10 +168,6 @@ Connects to a SE in this reader. This method prepares (initializes) the SE for c
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-Reader-openSession(): Session--><!--Device-Reader-openSession(): Session-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -206,7 +186,7 @@ Connects to a SE in this reader. This method prepares (initializes) the SE for c
 | [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 | [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

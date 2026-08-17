@@ -4,10 +4,6 @@ Enumerates the types of audio streams played.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum StreamUsage--><!--Device-audio-enum StreamUsage-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -21,10 +17,6 @@ STREAM_USAGE_UNKNOWN = 0
 Unknown content.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,11 +34,9 @@ Media.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_AUDIOBOOK](#STREAM_USAGE_AUDIOBOOK)
+**Substitutes:** [STREAM_USAGE_AUDIOBOOK](#streamusageaudiobook)
 
 <!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1--><!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1-End-->
 
@@ -61,10 +51,6 @@ STREAM_USAGE_MUSIC = 1
 Music.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +68,6 @@ VoIP voice call. (The 3A algorithm is enabled when this stream starts.)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-StreamUsage-STREAM_USAGE_VOICE_COMMUNICATION = 2--><!--Device-StreamUsage-STREAM_USAGE_VOICE_COMMUNICATION = 2-End-->
@@ -101,10 +83,6 @@ STREAM_USAGE_VOICE_ASSISTANT = 3
 Voice assistant.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,10 +100,6 @@ Audio stream for alarming.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-StreamUsage-STREAM_USAGE_ALARM = 4--><!--Device-StreamUsage-STREAM_USAGE_ALARM = 4-End-->
@@ -141,10 +115,6 @@ STREAM_USAGE_VOICE_MESSAGE = 5
 Voice message.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,11 +132,9 @@ Notification or ringtone usage.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_RINGTONE](#STREAM_USAGE_RINGTONE)
+**Substitutes:** [STREAM_USAGE_RINGTONE](#streamusageringtone)
 
 <!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6--><!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6-End-->
 
@@ -181,10 +149,6 @@ STREAM_USAGE_RINGTONE = 6
 Ringtone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -202,10 +166,6 @@ Notification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION = 7--><!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION = 7-End-->
@@ -221,10 +181,6 @@ STREAM_USAGE_ACCESSIBILITY = 8
 Accessibility.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -242,10 +198,6 @@ Movie or video.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-StreamUsage-STREAM_USAGE_MOVIE = 10--><!--Device-StreamUsage-STREAM_USAGE_MOVIE = 10-End-->
@@ -261,10 +213,6 @@ STREAM_USAGE_GAME = 11
 Gaming.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -282,10 +230,6 @@ Audiobooks (including crosstalks and storytelling), news radio, and podcasts.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-StreamUsage-STREAM_USAGE_AUDIOBOOK = 12--><!--Device-StreamUsage-STREAM_USAGE_AUDIOBOOK = 12-End-->
@@ -302,10 +246,6 @@ Navigation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-StreamUsage-STREAM_USAGE_NAVIGATION = 13--><!--Device-StreamUsage-STREAM_USAGE_NAVIGATION = 13-End-->
@@ -321,10 +261,6 @@ STREAM_USAGE_VIDEO_COMMUNICATION = 17
 VoIP video call. (The 3A algorithm is enabled when this stream starts.)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

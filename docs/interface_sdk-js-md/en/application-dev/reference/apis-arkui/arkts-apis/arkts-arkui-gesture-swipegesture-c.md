@@ -2,13 +2,11 @@
 
 Defines SwipeGesture.
 
-**Inheritance/Implementation:** SwipeGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)
+**Inheritance/Implementation:** SwipeGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#gesture)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class SwipeGesture--><!--Device-unnamed-export declare class SwipeGesture-End-->
 
@@ -24,9 +22,7 @@ Set the value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,9 +53,7 @@ Slide gesture recognition success callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

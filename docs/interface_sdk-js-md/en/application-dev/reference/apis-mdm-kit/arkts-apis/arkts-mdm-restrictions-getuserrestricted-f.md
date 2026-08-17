@@ -16,11 +16,9 @@ Obtains the disabled status of a setting item.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getUserRestricted](#getUserRestricted)(admin: Want, settingsItem: SettingsForDevice)
+**Substitutes:** [getUserRestricted](#getuserrestricted)(admin: Want, settingsItem: SettingsForDevice)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -51,7 +49,7 @@ Obtains the disabled status of a setting item.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -82,10 +80,6 @@ function getUserRestricted(admin: Want | null, settingsItem: SettingsForDevice):
 Obtains the disabled status of the specified device setting item.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 

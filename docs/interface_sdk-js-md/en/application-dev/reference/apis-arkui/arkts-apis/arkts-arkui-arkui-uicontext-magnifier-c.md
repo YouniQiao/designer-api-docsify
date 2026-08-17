@@ -1,12 +1,8 @@
 # Magnifier
 
-Provides the capability of displaying and hiding of the magnifier. The magnifier enlarges the component content for you to view the component details. > **NOTE：**> > - In the following API examples, you must first use [getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getMagnifier) in **UIContext** > to obtain a **Magnifier** instance, and then call the APIs using the obtained instance. > > - The magnifier capability of this class does not affect that of text components. For text components, you are > advised to use the built-in magnifier capability.
+Provides the capability of displaying and hiding of the magnifier. The magnifier enlarges the component content for you to view the component details. > **NOTE：**> > - In the following API examples, you must first use [getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier) in **UIContext** > to obtain a **Magnifier** instance, and then call the APIs using the obtained instance. > > - The magnifier capability of this class does not affect that of text components. For text components, you are > advised to use the built-in magnifier capability.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class Magnifier--><!--Device-unnamed-export class Magnifier-End-->
 
@@ -47,6 +43,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## bind
@@ -58,10 +56,6 @@ bind(id: string): void
 Binds the magnifier to the component with the specified ID. > **NOTE：**> > Obtain the Magnifier instance by using the getMagnifier() method in UIContext.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,10 +81,6 @@ Sets the position of the component content displayed by the magnifier relative t
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -115,10 +105,6 @@ unbind(): void
 Unbinds the magnifier from the current component.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Enumerates the execution modes supported by an [intent developed using a configu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntentDriver-enum ExecuteModeForConfiguration--><!--Device-insightIntentDriver-enum ExecuteModeForConfiguration-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -23,10 +19,6 @@ FOREGROUND = 0
 The intent bound to the UIAbility can run in the foreground.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +37,6 @@ BACKGROUND = 1
 The intent bound to the UIAbility can run in the background.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

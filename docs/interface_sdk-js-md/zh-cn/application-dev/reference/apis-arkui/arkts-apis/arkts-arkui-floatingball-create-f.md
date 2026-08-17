@@ -10,10 +10,6 @@ function create(config: FloatingBallConfiguration): Promise<FloatingBallControll
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>--><!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -38,7 +34,7 @@ function create(config: FloatingBallConfiguration): Promise<FloatingBallControll
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible causes: <br>1.The application context or main window is invalid. <br>2.System internal error, such as null pointer or insufficient memory. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // xxx.ets

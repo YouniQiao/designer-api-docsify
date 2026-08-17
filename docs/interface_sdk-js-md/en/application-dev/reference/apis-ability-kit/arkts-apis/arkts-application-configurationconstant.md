@@ -16,11 +16,9 @@
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ConfigurationConstant/ConfigurationConstant](arkts-app-ability-configurationconstant.md#@ohos.app.ability.ConfigurationConstant)
+**Substitutes:** [ConfigurationConstant/ConfigurationConstant](arkts-app-ability-configurationconstant.md#ohosappabilityconfigurationconstant)
 
 <!--Device-unnamed-declare namespace ConfigurationConstant--><!--Device-unnamed-declare namespace ConfigurationConstant-End-->
 

@@ -1,12 +1,8 @@
 # BatchResult
 
-[batchAdd](arkts-assetstore-asset-batchadd-f.md#batchAdd)和[batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchUpdate)批量操作的结果。
+[batchAdd](arkts-assetstore-asset-batchadd-f.md#batchadd)和[batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchupdate)批量操作的结果。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-asset-interface BatchResult--><!--Device-asset-interface BatchResult-End-->
 
@@ -24,10 +20,6 @@ failedCount: number
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-BatchResult-failedCount: number--><!--Device-BatchResult-failedCount: number-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -43,10 +35,6 @@ failedErrorInfos: Array<BatchErrInfo>
 **类型：** Array&lt;[BatchErrInfo](arkts-assetstore-asset-batcherrinfo-i.md)&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-BatchResult-failedErrorInfos: Array<BatchErrInfo>--><!--Device-BatchResult-failedErrorInfos: Array<BatchErrInfo>-End-->
 

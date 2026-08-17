@@ -10,10 +10,6 @@ function unregisterProvider(providerName: string, params?: Array<HuksExternalCry
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.CRYPTO_EXTENSION_REGISTER
 
 <!--Device-huksExternalCrypto-function unregisterProvider(providerName: string, params?: Array<HuksExternalCryptoParam>): Promise<void>--><!--Device-huksExternalCrypto-function unregisterProvider(providerName: string, params?: Array<HuksExternalCryptoParam>): Promise<void>-End-->
@@ -25,7 +21,7 @@ function unregisterProvider(providerName: string, params?: Array<HuksExternalCry
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | providerName | string | 是 | provider名称，最大长度为128。建议包含厂商信息，全局唯一，不要包含个人联系方式等敏感数据。如果provider注册了多个扩展能力，则该provider下的 扩展能力都会被注销。 |
-| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 否 | 操作时需传入的参数。<br>可以在param参数中指定 [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType)，将根据“包名 + providerName + abilityName”注销对应的cryptoExtensionAbility。<br>如果未在params参数中指定 [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType)，或者未传入params参数，则注销对应的 providerName下的所有Provider。 |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 否 | 操作时需传入的参数。<br>可以在param参数中指定 [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype)，将根据“包名 + providerName + abilityName”注销对应的cryptoExtensionAbility。<br>如果未在params参数中指定 [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype)，或者未传入params参数，则注销对应的 providerName下的所有Provider。 |
 
 **返回值：**
 
@@ -45,7 +41,7 @@ function unregisterProvider(providerName: string, params?: Array<HuksExternalCry
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter is abnormal. This may happen for several reasons, such as the model already being unloaded. |
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | the provider is not found. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';

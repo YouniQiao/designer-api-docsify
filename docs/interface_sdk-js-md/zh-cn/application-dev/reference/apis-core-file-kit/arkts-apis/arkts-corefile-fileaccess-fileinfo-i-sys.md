@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 23
 
 <!--Device-fileAccess-interface FileInfo--><!--Device-fileAccess-interface FileInfo-End-->
@@ -20,15 +18,13 @@
 listFile(filter?: Filter): FileIterator
 ```
 
-以同步方法从某个目录，基于过滤器，获取下一级符合条件的文件(夹)信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回 [FileInfo](#FileInfo（系统接口）)。目前仅支持内置存储设备过滤，外置存储设备不支持过滤。
+以同步方法从某个目录，基于过滤器，获取下一级符合条件的文件(夹)信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回 [FileInfo](#fileinfo系统接口)。目前仅支持内置存储设备过滤，外置存储设备不支持过滤。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 23
 
-**替代接口：** [listFile](../../apis-na/arkts-apis/arkts-na-fileio-listfile-f.md#listFile)
+**替代接口：** [listFile](../../apis-na/arkts-apis/arkts-na-fileio-listfile-f.md#listfile)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -91,7 +87,7 @@ listFile(filter?: Filter): FileIterator
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -129,11 +125,9 @@ try {
 scanFile(filter?: Filter): FileIterator
 ```
 
-以同步方法从某个目录，基于过滤器，递归获取符合条件的文件信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回 [FileInfo](#FileInfo（系统接口）)。目前仅支持内置存储设备。
+以同步方法从某个目录，基于过滤器，递归获取符合条件的文件信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回 [FileInfo](#fileinfo系统接口)。目前仅支持内置存储设备。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 23
 
@@ -198,7 +192,7 @@ scanFile(filter?: Filter): FileIterator
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -242,8 +236,6 @@ fileName: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
@@ -267,8 +259,6 @@ mimeType: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 23
 
@@ -294,8 +284,6 @@ mode: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
@@ -319,8 +307,6 @@ mtime: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 23
 
@@ -346,8 +332,6 @@ relativePath: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
@@ -372,8 +356,6 @@ size: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
@@ -397,8 +379,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 23
 

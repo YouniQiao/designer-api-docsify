@@ -16,10 +16,6 @@ Unlock the screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screenLock-function unlock(callback: AsyncCallback<boolean>): void--><!--Device-screenLock-function unlock(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
@@ -41,7 +37,7 @@ Unlock the screen.
 | [13200003](../../apis-basic-services-kit/errorcode-screenlock.md#13200003-invalid-use) | Invalid use. |
 | [13200002](../../apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | the screenlock management service is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -66,10 +62,6 @@ Unlock the screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screenLock-function unlock(): Promise<boolean>--><!--Device-screenLock-function unlock(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
@@ -90,7 +82,7 @@ Unlock the screen.
 | [13200003](../../apis-basic-services-kit/errorcode-screenlock.md#13200003-invalid-use) | Invalid use. |
 | [13200002](../../apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | the screenlock management service is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

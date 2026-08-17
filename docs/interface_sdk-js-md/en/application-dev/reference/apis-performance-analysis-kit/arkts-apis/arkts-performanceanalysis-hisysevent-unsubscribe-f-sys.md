@@ -16,10 +16,6 @@ Unsubscribes from system events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_DFX_SYSEVENT
 
 <!--Device-hiSysEvent-function unsubscribe(): void--><!--Device-hiSysEvent-function unsubscribe(): void-End-->
@@ -37,7 +33,7 @@ Unsubscribes from system events.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
 | [11200305](../errorcode-hisysevent-sys.md#11200305-unsubscription-failed) | Unsubscription failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hiSysEvent } from '@kit.PerformanceAnalysisKit';

@@ -16,8 +16,6 @@ Unsubscribe Wi-Fi hotspot state change events. &lt;p&gt;All callback functions w
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** hotspotStateChange

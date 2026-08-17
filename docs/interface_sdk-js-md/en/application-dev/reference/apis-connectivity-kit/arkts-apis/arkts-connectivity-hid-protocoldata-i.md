@@ -4,10 +4,6 @@ Describe the protocol data is received from remote host.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-hid-interface ProtocolData--><!--Device-hid-interface ProtocolData-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -29,10 +25,6 @@ protocol of protocol data.
 **Type:** ProtocolType
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

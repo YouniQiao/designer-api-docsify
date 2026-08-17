@@ -4,10 +4,6 @@ Enumerates output type of hilog.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-hilog-enum OutputType--><!--Device-hilog-enum OutputType-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
@@ -21,10 +17,6 @@ DEFAULT = 0
 DEFAULT Default output type, equivalent to CONSOLE_ONLY.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -42,10 +34,6 @@ CONSOLE_ONLY Hilog is output to the console only, equivalent to DEFAULT.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OutputType-CONSOLE_ONLY = 0--><!--Device-OutputType-CONSOLE_ONLY = 0-End-->
@@ -61,10 +49,6 @@ PRIVATE_SANDBOX_ONLY = 1
 PRIVATE_SANDBOX_ONLY Hilog is output to files in its own private sandbox.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -82,10 +66,6 @@ SHARE_SANDBOX_ONLY Hilog is output to files in its own sandbox, accessible to it
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OutputType-SHARE_SANDBOX_ONLY = 2--><!--Device-OutputType-SHARE_SANDBOX_ONLY = 2-End-->
@@ -102,10 +82,6 @@ PRIVATE_SANDBOX_WITH_CONSOLE Enable both CONSOLE_ONLY and PRIVATE_SANDBOX_ONLY a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OutputType-PRIVATE_SANDBOX_WITH_CONSOLE = 3--><!--Device-OutputType-PRIVATE_SANDBOX_WITH_CONSOLE = 3-End-->
@@ -121,10 +97,6 @@ SHARE_SANDBOX_WITH_CONSOLE = 4
 SHARE_SANDBOX_WITH_CONSOLE Enable both CONSOLE_ONLY and SHARE_SANGBOX_ONLY at the same time.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

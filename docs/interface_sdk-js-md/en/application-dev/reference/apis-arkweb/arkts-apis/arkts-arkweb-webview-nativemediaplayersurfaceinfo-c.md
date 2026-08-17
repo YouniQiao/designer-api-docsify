@@ -1,12 +1,8 @@
 # NativeMediaPlayerSurfaceInfo
 
-Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface information used for same-layer rendering [when the application takes over the media playback of the web page] (../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12). > **NOTE：**> > - The sample effect is subject to the actual device.
+NativeMediaPlayerSurfaceInfo uses enableNativeMediaPlayer to configure the surface information for same-layer rendering. This class allows an app to take over the web media playback functionality, configuring the surface ID and position information to integrate web media content with the app UI through same-layer rendering and enhance the media playback experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class NativeMediaPlayerSurfaceInfo--><!--Device-webview-class NativeMediaPlayerSurfaceInfo-End-->
 
@@ -24,15 +20,11 @@ import { webview } from 'webview';
 id: string
 ```
 
-Surface ID, which is the **psurfaceid** of the native image used for rendering at the same layer. For details, see [NativeEmbedDataInfo](./arkts-basic-components-web-i.md#nativeembeddatainfo11).
+ID of the surface, which is the surfaceId of the NativeImage used for same-layer rendering. For details, see NativeEmbedDataInfo.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,15 +38,11 @@ Surface ID, which is the **psurfaceid** of the native image used for rendering a
 rect: RectEvent
 ```
 
-Position of the surface.
+Position information of the surface, used to specify the display position and size of the surface during same- layer rendering.
 
 **Type:** [RectEvent](arkts-arkweb-webview-rectevent-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-NativeMediaPlayerSurfaceInfo-rect: RectEvent--><!--Device-NativeMediaPlayerSurfaceInfo-rect: RectEvent-End-->
 

@@ -1,12 +1,8 @@
 # OnPermissionRequestEvent
 
-Represents the callback invoked when a permission request is received.
+Defines the callback information triggered when a permission request is received, including the request details. It is suitable for scenarios where handling permission grants is required, improving permission management flexibility and security.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnPermissionRequestEvent--><!--Device-unnamed-declare interface OnPermissionRequestEvent-End-->
 
@@ -23,10 +19,6 @@ User operation.
 **Type:** [PermissionRequest](arkts-arkweb-permissionrequest-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

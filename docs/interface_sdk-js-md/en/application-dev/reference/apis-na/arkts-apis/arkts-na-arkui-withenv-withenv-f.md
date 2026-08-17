@@ -13,9 +13,7 @@ Define the WithEnv component that allows setting environment properties for chil
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,5 +31,5 @@ Define the WithEnv component that allows setting environment properties for chil
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](arkts-na-arkui-withenv-withenvattribute-i.md) |  |
+| [WithEnvAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-withenv-withenvattribute-c.md) |  |
 

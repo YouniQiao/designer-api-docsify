@@ -4,10 +4,6 @@ Enumerates the types for expanding layout safe areas.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum LayoutSafeAreaType--><!--Device-unnamed-declare enum LayoutSafeAreaType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,13 +14,9 @@ Enumerates the types for expanding layout safe areas.
 SYSTEM = 0
 ```
 
-Default non-safe area of the system, including the status bar and navigation bar. The component's layout range can be expanded to include both component-level safe areas ([safeAreaPadding](arkts-arkui-commonmethod-c.md#safeAreaPadding)) and page-level safe areas (status bar, navigation bar, and cutout area).
+Default non-safe area of the system, including the status bar and navigation bar. The component's layout range can be expanded to include both component-level safe areas ([safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding)) and page-level safe areas (status bar, navigation bar, and cutout area).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,8 +10,6 @@ Changes file permissions based on the file descriptor. This API uses a promise t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-declare function fchmod(fd: number, mode: number): Promise<void>--><!--Device-unnamed-declare function fchmod(fd: number, mode: number): Promise<void>-End-->
@@ -41,8 +39,6 @@ declare function fchmod(fd: number, mode: number, callback: AsyncCallback<void>)
 Changes file permissions based on the file descriptor. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

@@ -2,13 +2,11 @@
 
 Inherits from BadgeParam and has all attributes of BadgeParam.
 
-**Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](arkts-na-badge-badgeparam-i.md#BadgeParam)
+**Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](arkts-na-badge-badgeparam-i.md#badgeparam)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface BadgeParamWithString--><!--Device-unnamed-export declare interface BadgeParamWithString-End-->
 
@@ -26,9 +24,7 @@ Text string of the prompt content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

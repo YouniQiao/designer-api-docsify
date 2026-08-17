@@ -6,10 +6,6 @@ The **InputMethodExtensionContext** module, inherited from **ExtensionContext**,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class InputMethodExtensionContext--><!--Device-unnamed-declare class InputMethodExtensionContext-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -29,8 +25,6 @@ connectAbility(want: Want, options: ConnectOptions): number
 Connects this ability to a ServiceExtensionAbility.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -80,8 +74,6 @@ connectAbilityWithAccount(want: Want, accountId: number): number
 Connects to a ServiceExtensionAbility with a specified account.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -136,8 +128,6 @@ Connects this ability to a ServiceExtensionAbility.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
@@ -187,8 +177,6 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
@@ -223,8 +211,6 @@ disconnectAbility(connection: number): Promise<void>
 Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -266,8 +252,6 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
@@ -302,8 +286,6 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API can be called only on the main thread. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -344,8 +326,6 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 Starts an ability with a specified account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -399,8 +379,6 @@ startAbilityWithAccount(want: Want, accountId: number): Promise<void>
 Starts an ability with a specified account. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -460,8 +438,6 @@ Destroys this input method extension. This API uses an asynchronous callback to 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [destroy](arkts-ime-inputmethodextensioncontext-c.md#destroy)(callback: AsyncCallback&lt;void&gt;)
@@ -489,8 +465,6 @@ terminateSelf(): Promise<void>
 Destroys this input method extension. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

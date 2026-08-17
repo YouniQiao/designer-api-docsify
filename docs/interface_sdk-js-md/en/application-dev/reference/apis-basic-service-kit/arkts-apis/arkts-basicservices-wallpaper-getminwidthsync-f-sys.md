@@ -16,10 +16,6 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wallpaper-function getMinWidthSync(): int--><!--Device-wallpaper-function getMinWidthSync(): int-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
@@ -38,7 +34,7 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

@@ -10,10 +10,6 @@ function getVisibleWindowInfo(): Promise<Array<WindowInfo>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本18+：ohos.permission.VISIBLE_WINDOW_INFO
 
@@ -38,7 +34,7 @@ function getVisibleWindowInfo(): Promise<Array<WindowInfo>>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. Possible cause: Need ohos.permission.VISIBLE_WINDOW_INFO permission.<br>**适用版本：** 18+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API.<br>**适用版本：** 12 - 17 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -16,8 +16,6 @@ Deletes a Wi-Fi network with a specified ID. &lt;p&gt;After a Wi-Fi network is d
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** removeDeviceConfig
@@ -42,7 +40,7 @@ Deletes a Wi-Fi network with a specified ID. &lt;p&gt;After a Wi-Fi network is d
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

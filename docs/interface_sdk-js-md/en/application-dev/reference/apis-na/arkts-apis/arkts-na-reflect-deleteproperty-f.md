@@ -10,10 +10,6 @@ Removes a property from an object, equivalent to `delete target[propertyKey]`, e
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Reflect-function deleteProperty(target: object, propertyKey: PropertyKey): boolean--><!--Device-Reflect-function deleteProperty(target: object, propertyKey: PropertyKey): boolean-End-->
 
 **Parameters:**

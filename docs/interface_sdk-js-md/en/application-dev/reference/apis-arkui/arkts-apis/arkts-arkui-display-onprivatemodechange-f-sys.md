@@ -16,10 +16,6 @@ Register the callback for private mode changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-function onPrivateModeChange(callback: Callback<boolean>): void--><!--Device-display-function onPrivateModeChange(callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

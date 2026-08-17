@@ -4,10 +4,6 @@ Parameters for obtaining detailed information on specified network traffic usage
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-statistics-export interface NetworkInfo--><!--Device-statistics-export interface NetworkInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -30,10 +26,6 @@ End time for querying traffic.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetworkInfo-endTime: int--><!--Device-NetworkInfo-endTime: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -49,10 +41,6 @@ SIM card id for querying traffic.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkInfo-simId?: int--><!--Device-NetworkInfo-simId?: int-End-->
 
@@ -70,10 +58,6 @@ Start time for querying traffic.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetworkInfo-startTime: int--><!--Device-NetworkInfo-startTime: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -89,10 +73,6 @@ Network type for querying traffic.
 **Type:** NetBearType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkInfo-type: NetBearType--><!--Device-NetworkInfo-type: NetBearType-End-->
 

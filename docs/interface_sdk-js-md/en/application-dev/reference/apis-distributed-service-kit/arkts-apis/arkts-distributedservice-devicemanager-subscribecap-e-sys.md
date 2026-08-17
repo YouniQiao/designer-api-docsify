@@ -4,8 +4,6 @@ Enumerates the discovery capabilities.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-deviceManager-enum SubscribeCap--><!--Device-deviceManager-enum SubscribeCap-End-->
@@ -24,8 +22,6 @@ DDMP capability. This will be deprecated later.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-SubscribeCap-SUBSCRIBE_CAPABILITY_DDMP = 0--><!--Device-SubscribeCap-SUBSCRIBE_CAPABILITY_DDMP = 0-End-->
@@ -43,8 +39,6 @@ SUBSCRIBE_CAPABILITY_OSD = 1
 OSD capability.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 

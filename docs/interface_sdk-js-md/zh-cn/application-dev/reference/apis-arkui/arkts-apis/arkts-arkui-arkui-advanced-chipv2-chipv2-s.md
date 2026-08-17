@@ -4,10 +4,6 @@ ChipV2是提供丰富样式和交互能力的操作块组件，支持前缀图�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export declare struct ChipV2--><!--Device-unnamed-export declare struct ChipV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ build(): void
 build函数用于构造ChipV2高级组件的UI结构。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,10 +39,6 @@ build函数用于构造ChipV2高级组件的UI结构。
 **类型：** [ChipV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chipv2-chipv2options-c.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

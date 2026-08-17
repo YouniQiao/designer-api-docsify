@@ -10,11 +10,9 @@ Creates a **FormBindingData** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md#createFormBindingData)
+**Substitutes:** [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md#createformbindingdata)
 
 <!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData--><!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData-End-->
 
@@ -32,7 +30,7 @@ Creates a **FormBindingData** object.
 | --- | --- |
 | FormBindingData | FormBindingData** object created based on the passed data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formBindingData } from '@kit.FormKit';

@@ -16,11 +16,9 @@ Creates a **PasteData** object of the Want type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createData](arkts-basicservices-pasteboard-createdata-f.md#createData)(mimeType: string, value: ValueType)
+**Substitutes:** [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createWantData(want: Want): PasteData--><!--Device-pasteboard-function createWantData(want: Want): PasteData-End-->
 
@@ -38,7 +36,7 @@ Creates a **PasteData** object of the Want type.
 | --- | --- |
 | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

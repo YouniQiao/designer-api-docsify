@@ -1,12 +1,8 @@
 # WebDownloadState
 
-Defines the state for download.
+Enumerates the states of a download task.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-webview-enum WebDownloadState--><!--Device-webview-enum WebDownloadState-End-->
 
@@ -18,13 +14,9 @@ Defines the state for download.
 IN_PROGRESS = 0
 ```
 
-The web download is in progress.
+The download task is in progress.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ The web download is in progress.
 COMPLETED
 ```
 
-The web download has been completed.
+The download task is completed.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ The web download has been completed.
 CANCELED
 ```
 
-The web download was canceled.
+The download task has been canceled.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +62,9 @@ The web download was canceled.
 INTERRUPTED
 ```
 
-The web download was interrupted.
+The download task is interrupted.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,13 +78,9 @@ The web download was interrupted.
 PENDING
 ```
 
-The web download is pending.
+The download task is pending.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,13 +94,9 @@ The web download is pending.
 PAUSED
 ```
 
-The web download has been paused.
+The download task is paused.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -138,13 +110,9 @@ The web download has been paused.
 UNKNOWN
 ```
 
-Unknown state.
+The state of the download task is unknown.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

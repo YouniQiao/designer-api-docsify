@@ -1,12 +1,8 @@
 # RenderResourceFactory
 
-The render resource factory. RenderResourceFactory is used to create resources that can be shared across Scenes that share a RenderContext
+Creates rendering resources that can be shared in multiple scenes ([Scene](arkts-arkgraphics3d-scene-c.md#scene)) that share RenderContext.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
 
@@ -18,13 +14,9 @@ The render resource factory. RenderResourceFactory is used to create resources t
 createImage(params: SceneResourceParameters): Promise<Image>
 ```
 
-Create an image.
+Creates an image based on the scene resource parameters. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RenderResourceFactory-createImage(params: SceneResourceParameters): Promise<Image>--><!--Device-RenderResourceFactory-createImage(params: SceneResourceParameters): Promise<Image>-End-->
 
@@ -34,15 +26,15 @@ Create an image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating an image |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | Parameters for creating the image. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | promise an image |
+| Promise&lt;[Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | Promise used to return the Image object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Image, SceneResourceParameters, Scene, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
@@ -72,10 +64,6 @@ Create an image stream.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RenderResourceFactory-createImageStream(params: SceneResourceParameters): Promise<ImageStream>--><!--Device-RenderResourceFactory-createImageStream(params: SceneResourceParameters): Promise<ImageStream>-End-->
@@ -100,13 +88,9 @@ Create an image stream.
 createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promise<MeshResource>
 ```
 
-Create a Mesh from an array of vertices.
+Creates a mesh based on the scene resource parameters and geometry definition. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RenderResourceFactory-createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promise<MeshResource>--><!--Device-RenderResourceFactory-createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promise<MeshResource>-End-->
 
@@ -116,16 +100,16 @@ Create a Mesh from an array of vertices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating a Mesh object |
-| geometry | [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md) | Yes | what sort of a geometric shape to create |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | Parameters for creating the mesh. |
+| geometry | [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md) | Yes | Geometry of the mesh to create. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md)&gt; | promise a Mesh |
+| Promise&lt;[MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md)&gt; | Promise used to return the Mesh object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { SceneResourceParameters, Scene, CustomGeometry, PrimitiveTopology, RenderContext, RenderResourceFactory,
@@ -202,13 +186,9 @@ function createMeshResource(): Promise<MeshResource> {
 createSampler(params:SceneResourceParameters): Promise<Sampler>
 ```
 
-Create a Sampler.
+Creates a sampler based on the scene resource parameters. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RenderResourceFactory-createSampler(params:SceneResourceParameters): Promise<Sampler>--><!--Device-RenderResourceFactory-createSampler(params:SceneResourceParameters): Promise<Sampler>-End-->
 
@@ -218,15 +198,15 @@ Create a Sampler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of create a sampler |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | Parameters for creating the sampler. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md)&gt; | promise a sampler |
+| Promise&lt;[Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md)&gt; | Promise used to return the Sampler object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { SceneResourceParameters, Scene, RenderContext, RenderResourceFactory, Sampler } from '@kit.ArkGraphics3D';
@@ -252,13 +232,9 @@ function createSamplerResource(): Promise<Sampler> {
 createScene(uri?: ResourceStr): Promise<Scene>
 ```
 
-Create a new scene from a Resource. If uri is not provided, will return an empty scene.
+Creates a scene from the specified resource URI. If no URI is specified, an empty scene is created. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RenderResourceFactory-createScene(uri?: ResourceStr): Promise<Scene>--><!--Device-RenderResourceFactory-createScene(uri?: ResourceStr): Promise<Scene>-End-->
 
@@ -268,15 +244,15 @@ Create a new scene from a Resource. If uri is not provided, will return an empty
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | ResourceStr | No | the resource of creating a scene |
+| uri | ResourceStr | No | Resource path used for creating the scene. If no resource path is passed, an empty scene is created. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | promise a scene |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise used to return the Scene object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
@@ -305,13 +281,9 @@ function createScenePromise(fromFile: boolean = false): Promise<Scene> {
 createShader(params: SceneResourceParameters): Promise<Shader>
 ```
 
-Create a shader.
+Creates a shader based on the scene resource parameters. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RenderResourceFactory-createShader(params: SceneResourceParameters): Promise<Shader>--><!--Device-RenderResourceFactory-createShader(params: SceneResourceParameters): Promise<Shader>-End-->
 
@@ -321,15 +293,15 @@ Create a shader.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating a shader |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | Parameters for creating the shader. For details about the .shader file format, see Requirements on the .shader File Format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)&gt; | promise a shader |
+| Promise&lt;[Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)&gt; | Promise used to return the Shader object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Shader, SceneResourceParameters, Scene, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';

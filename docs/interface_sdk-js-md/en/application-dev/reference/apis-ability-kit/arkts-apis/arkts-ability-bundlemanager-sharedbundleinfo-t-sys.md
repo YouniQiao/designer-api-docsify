@@ -8,10 +8,6 @@ Defines the shared bundle information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type SharedBundleInfo = _SharedBundleInfo--><!--Device-bundleManager-export type SharedBundleInfo = _SharedBundleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

@@ -4,10 +4,6 @@ Wi-Fi Ipv6 configuration information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface Ipv6Config--><!--Device-wifiManager-interface Ipv6Config-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -32,10 +28,6 @@ DNS servers.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Ipv6Config-dnsServers: Array<string>--><!--Device-Ipv6Config-dnsServers: Array<string>-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -53,10 +45,6 @@ Domains.
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Ipv6Config-domains: Array<string>--><!--Device-Ipv6Config-domains: Array<string>-End-->
 
@@ -76,10 +64,6 @@ Gate way.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Ipv6Config-gateway: string--><!--Device-Ipv6Config-gateway: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -98,10 +82,6 @@ IPv6 address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Ipv6Config-ipAddress: string--><!--Device-Ipv6Config-ipAddress: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -119,10 +99,6 @@ Prefix length.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Ipv6Config-prefixLength: int--><!--Device-Ipv6Config-prefixLength: int-End-->
 

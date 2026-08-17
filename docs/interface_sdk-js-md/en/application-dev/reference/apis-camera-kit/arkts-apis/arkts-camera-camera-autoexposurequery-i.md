@@ -4,10 +4,6 @@ AutoExposureQuery provides APIs to query the automatic exposure feature of a cam
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface AutoExposureQuery--><!--Device-camera-interface AutoExposureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -27,10 +23,6 @@ getExposureBiasRange(): Array<double>
 Obtains the exposure compensation values of the camera device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -59,10 +51,6 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 Checks whether an exposure mode is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

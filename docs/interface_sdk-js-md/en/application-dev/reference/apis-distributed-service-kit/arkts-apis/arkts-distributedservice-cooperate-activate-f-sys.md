@@ -16,11 +16,9 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate)(targetNetworkId: string, inputDeviceId: int, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate)(targetNetworkId: string, inputDeviceId: int, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -44,7 +42,7 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [20900001](../../apis-distributedservice-kit/errorcode-devicestatus.md#20900001-input-device-operation-failed) | Service exception. Possible causes: <br>1. A system error, such as null pointer, container-related exception, or IPC exception. <br>2. N-API invocation exception or invalid N-API status. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -75,11 +73,9 @@ Starts screen hopping. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate-(System-API))(targetNetworkId: string, inputDeviceId: int)
+**Substitutes:** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate-system-api)(targetNetworkId: string, inputDeviceId: int)
 
 <!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>-End-->
 
@@ -108,7 +104,7 @@ Starts screen hopping. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [20900001](../../apis-distributedservice-kit/errorcode-devicestatus.md#20900001-input-device-operation-failed) | Service exception. Possible causes: <br>1. A system error, such as null pointer, container-related exception, or IPC exception. <br>2. N-API invocation exception or invalid N-API status. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

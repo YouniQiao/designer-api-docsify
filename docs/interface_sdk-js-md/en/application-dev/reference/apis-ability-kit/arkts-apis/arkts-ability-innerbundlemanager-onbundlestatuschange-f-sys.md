@@ -13,11 +13,9 @@ function on(type: 'BundleStatusChange',
     bundleStatusCallback: BundleStatusCallback, callback: AsyncCallback<string>): void
 ```
 
-Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [on](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_BundleChangedEvent) > instead.
+Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [on](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#onbundlechangedevent) > instead.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -46,11 +44,9 @@ Registers a callback to receive bundle status changes. This API uses an asynchro
 function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallback): Promise<string>
 ```
 
-Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [on](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_BundleChangedEvent) > instead.
+Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [on](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#onbundlechangedevent) > instead.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

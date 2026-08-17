@@ -10,11 +10,9 @@ Obtains the widget information provided by a given application on the device. Th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getFormsInfo-(System-API))
+**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo-system-api)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -46,11 +44,9 @@ Obtains the widget information provided by a given application on the device. Th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getFormsInfo-(System-API))
+**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo-system-api)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -79,11 +75,9 @@ Obtains the widget information provided by a given application on the device. Th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getFormsInfo-(System-API))
+**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo-system-api)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

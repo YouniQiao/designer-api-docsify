@@ -10,10 +10,6 @@ function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityIn
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_ABILITY_INFO
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -27,7 +23,7 @@ function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示统一资源标识符URI，取值与 [module.json5配置文件中skills下的uris字段](../../../quick-start/module-configuration-file.md#skills标签)相对应。 |
-| abilityFlags | int | 是 | 表示[Ability组件信息标志](arkts-ability-bundlemanager-abilityflag-e-sys.md#AbilityFlag（系统接口）)，指示需要获取的 Ability组件信息的内容。 |
+| abilityFlags | int | 是 | 表示[Ability组件信息标志](arkts-ability-bundlemanager-abilityflag-e-sys.md#abilityflag系统接口)，指示需要获取的 Ability组件信息的内容。 |
 
 **返回值：**
 
@@ -42,7 +38,7 @@ function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityIn
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The ability is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

@@ -1,12 +1,8 @@
-# AVVolumePanel
+# AVVolumePanel(Defines a panel to set the system audio output volume.)
 
 A panel to set the system audio output volume.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct AVVolumePanel--><!--Device-unnamed-export declare struct AVVolumePanel-End-->
 
@@ -32,10 +28,6 @@ Sets the device volume through the volume panel. The value should be between min
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVVolumePanel-@Prop  volumeLevel?: number--><!--Device-AVVolumePanel-@Prop  volumeLevel?: number-End-->
@@ -51,13 +43,9 @@ Sets the device volume through the volume panel. The value should be between min
 
 Sets the custom parameters of volume panel.
 
-**Type:** [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
+**Type:** [AVVolumePanelParameter](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

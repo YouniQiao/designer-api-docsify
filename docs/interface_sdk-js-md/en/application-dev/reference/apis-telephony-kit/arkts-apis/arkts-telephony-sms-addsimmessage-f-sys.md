@@ -16,10 +16,6 @@ Adds a message to the SIM card. If the SIM card is full, an error is reported. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
 <!--Device-sms-function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>): void--><!--Device-sms-function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>): void-End-->
@@ -47,7 +43,7 @@ Adds a message to the SIM card. If the SIM card is full, an error is reported. T
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';
@@ -74,10 +70,6 @@ function addSimMessage(options: SimMessageOptions): Promise<void>
 Adds a message to the SIM card. If the SIM card is full, an error is reported. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -111,7 +103,7 @@ Adds a message to the SIM card. If the SIM card is full, an error is reported. T
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

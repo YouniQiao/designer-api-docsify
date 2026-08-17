@@ -16,10 +16,6 @@ Subscribe P2P connection change events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function onP2pConnectionChange(callback: Callback<WifiP2pLinkedInfo>): void--><!--Device-wifiManager-function onP2pConnectionChange(callback: Callback<WifiP2pLinkedInfo>): void-End-->

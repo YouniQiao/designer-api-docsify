@@ -1,12 +1,8 @@
-# CustomDialogControllerOptions
+# CustomDialogControllerOptions(CustomDialog)
 
 Defines the style of the custom dialog box. > **NOTE：**> > - Pressing the Back or ESC key closes the dialog box. > > - If the dialog box reaches its maximum allowable height on the screen when avoiding the soft keyboard, it reduces > its height to fit. > > It should be noted that this height adjustment is applied to the outermost container. If a child component > within this container has been assigned a larger fixed height, since the container does not clip its content by > default, parts of the dialog box may still be displayed off-screen. > > - Use the custom dialog box to contain simple alert messages only. Do not use it as a page. When the dialog box > avoids the soft keyboard, there is a 16 vp safe spacing between the two. > > - For optimal visual experience, dialog box display and closing include default animations, though the animation > duration may vary by device. > > Note: During animation playback, the page does not respond to touch, swipe, or click interactions. To disable > default dialog box animations, set **duration** of both **openAnimation** and **closeAnimation** to **0**. > > - In ArkUI, dialog boxes do not close automatically when you switch pages unless you manually call **close**. To > enable a dialog box to be dismissed during page navigation, consider using the > [navigation subpage displayed in dialog mode](../../../ui/arkts-navigation-navdestination.md#page-display-mode) or > [page-level dialog box](../../../ui/arkts-embedded-dialog.md).
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface CustomDialogControllerOptions--><!--Device-unnamed-declare interface CustomDialogControllerOptions-End-->
 
@@ -23,10 +19,6 @@ Alignment mode of the dialog box in the vertical direction. Default value: **Dia
 **Type:** DialogAlignment
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,10 +37,6 @@ Whether to close the dialog box when the mask is touched. The value **true** mea
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,10 +58,6 @@ Background blur style of the dialog box. Default value: **BlurStyle.COMPONENT_UL
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -93,10 +77,6 @@ Options for customizing the background blur style. For details about the default
 **Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ Background color of the dialog box. Default value: **Color.Transparent** **NOTE�
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -141,10 +117,6 @@ Options for customizing the background effect. For details about the default val
 **Type:** BackgroundEffectOptions
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,10 +138,6 @@ Border color of the dialog box. Default value: **Color.Black** **borderColor** m
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -189,10 +157,6 @@ Border style of the dialog box. Default value: **BorderStyle.Solid** **borderSty
 **Type:** BorderStyle \| EdgeStyles
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,10 +178,6 @@ Border width of the dialog box. You can set the width for all four sides or set 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -238,10 +198,6 @@ Builder of the custom dialog box content. **NOTE：**If the builder uses a callb
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CustomDialogControllerOptions-builder: any--><!--Device-CustomDialogControllerOptions-builder: any-End-->
@@ -260,10 +216,6 @@ Callback invoked when the dialog box is closed after the Back button or mask is 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CustomDialogControllerOptions-cancel?: () => void--><!--Device-CustomDialogControllerOptions-cancel?: () => void-End-->
@@ -281,10 +233,6 @@ Parameters for defining the close animation of the dialog box. **NOTE：****temp
 **Type:** AnimateParam
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -306,10 +254,6 @@ Rounded corner radius of the background. You can set separate radii for the four
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -330,10 +274,6 @@ Whether to use a custom style for the dialog box. **true** means a custom style 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CustomDialogControllerOptions-customStyle?: boolean--><!--Device-CustomDialogControllerOptions-customStyle?: boolean-End-->
@@ -353,10 +293,6 @@ Defines the dialog display mode when show in subwindow.
 **Default:** DialogDisplayMode.SCREEN_BASED
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -380,10 +316,6 @@ Whether to respond when the device is in semi-folded mode. The value **true** me
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -406,10 +338,6 @@ Whether the dialog box can gain focus. **true**: The dialog box can gain focus. 
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -430,10 +358,6 @@ Number of [grid columns](../../../ui/arkts-layout-development-grid-layout.md) oc
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CustomDialogControllerOptions-gridCount?: number--><!--Device-CustomDialogControllerOptions-gridCount?: number-End-->
@@ -451,10 +375,6 @@ Height of the dialog box. **NOTE：**- Default maximum height of the dialog box:
 **Type:** Dimension
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -478,10 +398,6 @@ Display area of the dialog box in the hover state. Default value: **HoverModeAre
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -503,10 +419,6 @@ Overlay effect for the page-level dialog box. **NOTE：**- Default value: **Imme
 **Default:** ImmersiveMode.DEFAULT
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -530,10 +442,6 @@ Whether the dialog box is a modal, which has a mask applied and does not allow f
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -553,10 +461,6 @@ Distance between the dialog box and the keyboard after keyboard avoidance is app
 **Type:** LengthMetrics
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -580,10 +484,6 @@ How the dialog box avoids the soft keyboard when it is brought up. Default value
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -605,10 +505,6 @@ Display level of the dialog box. **NOTE：**- Default value: **LevelMode.OVERLAY
 **Default:** LevelMode.OVERLAY
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -632,10 +528,6 @@ Display order of the dialog box. **NOTE：**- Default value: **LevelOrder.clamp(
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -650,15 +542,11 @@ Display order of the dialog box. **NOTE：**- Default value: **LevelOrder.clamp(
 levelUniqueId?: number
 ```
 
-[Unique ID](arkts-arkui-framenode-c.md#getUniqueId) of the node under the display level for the page-level dialog box. Value range: a number no less than 0 **NOTE：**- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+[Unique ID](arkts-arkui-framenode-c.md#getuniqueid) of the node under the display level for the page-level dialog box. Value range: a number no less than 0 **NOTE：**- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -680,10 +568,6 @@ Custom mask color. Default value: **0x33000000**.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -703,10 +587,6 @@ Mask area of the dialog box. Events outside the mask area are transparently tran
 **Type:** Rectangle
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -728,10 +608,6 @@ Offset of the dialog box relative to the alignment position. Default value: **{d
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CustomDialogControllerOptions-offset?: Offset--><!--Device-CustomDialogControllerOptions-offset?: Offset-End-->
@@ -749,10 +625,6 @@ Event callback after the dialog box appears. **NOTE：**1. The normal timing seq
 **Type:** Callback&lt;void&gt;
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -774,10 +646,6 @@ Event callback after the dialog box disappears. **NOTE：**1. The normal timing 
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -797,10 +665,6 @@ Event callback when the dialog box is about to appear. **NOTE：**1. The normal 
 **Type:** Callback&lt;void&gt;
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -822,10 +686,6 @@ Event callback when the dialog box is about to disappear. **NOTE：**1. The norm
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -845,10 +705,6 @@ Callback for interactive closure of the dialog box. **NOTE：**1. If this callba
 **Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -870,10 +726,6 @@ Parameters for defining the open animation of the dialog box. **NOTE：****tempo
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -893,10 +745,6 @@ Shadow of the dialog box. Default value on 2-in-1 devices: **ShadowStyle.OUTER_F
 **Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -920,10 +768,6 @@ Whether to show the dialog box in a subwindow when the dialog box needs to be di
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -944,10 +788,6 @@ System material of the dialog box. Different materials have different effects an
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -967,10 +807,6 @@ Width of the dialog box. **NOTE：**- Default maximum width of the dialog box: 4
 **Type:** Dimension
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

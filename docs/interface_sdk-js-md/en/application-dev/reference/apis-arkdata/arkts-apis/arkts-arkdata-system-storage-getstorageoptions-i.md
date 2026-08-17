@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 <!--Device-unnamed-export interface GetStorageOptions--><!--Device-unnamed-export interface GetStorageOptions-End-->
@@ -21,8 +19,6 @@ Called when the execution is completed.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 
@@ -44,8 +40,6 @@ Default value returned when the key does not exist. If this parameter is not spe
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
@@ -65,8 +59,6 @@ Called when the stored content fails to be read.
 **Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 
@@ -88,8 +80,6 @@ Content index. the value contains a maximum of 32 characters and cannot contain 
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
@@ -109,8 +99,6 @@ Called when the stored content is read successfully.
 **Type:** (data: any) =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 6
 

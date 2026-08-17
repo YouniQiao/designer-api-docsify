@@ -4,10 +4,6 @@ Process data as blob type
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-buffer-class Blob--><!--Device-buffer-class Blob-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ Puts the **Blob** data into an **ArrayBuffer** object. This API uses a promise t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Blob-arrayBuffer(): Promise<ArrayBuffer>--><!--Device-Blob-arrayBuffer(): Promise<ArrayBuffer>-End-->
@@ -44,7 +36,7 @@ Puts the **Blob** data into an **ArrayBuffer** object. This API uses a promise t
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -68,10 +60,6 @@ A constructor used to create a **Blob** object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Blob-constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob[], options?: Object)--><!--Device-Blob-constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob[], options?: Object)-End-->
@@ -85,7 +73,7 @@ A constructor used to create a **Blob** object.
 | sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| [Blob](arkts-arkts-buffer-blob-c.md)[] | Yes | Data sources of the **Blob** object. |
 | options | Object | No | options:<br>- **endings**: specifies how the terminator **'\n'** is output. The value can be **'native'** or **'transparent'**. **'native'** means that the terminator follows the system. **'transparent'** means that the terminator stored in the **Blob** object remains unchanged. The default value is **'transparent'**.<br>- **type**: type of the data in the **Blob** object. This type represents the MIME type of the data. However, it is not used for type format validation. The default value is **''**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -110,10 +98,6 @@ Creates a new Blob object containing a concatenation of the given sources.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Blob-constructor(sources: ArrayUnionType, options?: BlobOptions)--><!--Device-Blob-constructor(sources: ArrayUnionType, options?: BlobOptions)-End-->
@@ -137,10 +121,6 @@ Creates and returns a **Blob** object that contains specified data from this **B
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Blob-slice(start?: int, end?: int, type?: string): Blob--><!--Device-Blob-slice(start?: int, end?: int, type?: string): Blob-End-->
@@ -161,7 +141,7 @@ Creates and returns a **Blob** object that contains specified data from this **B
 | --- | --- |
 | [Blob](arkts-arkts-buffer-blob-c.md) |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -182,10 +162,6 @@ Decodes data using UTF-8 and returns a string. This API uses a promise to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Blob-text(): Promise<string>--><!--Device-Blob-text(): Promise<string>-End-->
@@ -198,7 +174,7 @@ Decodes data using UTF-8 and returns a string. This API uses a promise to return
 | --- | --- |
 | Promise&lt;string&gt; |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

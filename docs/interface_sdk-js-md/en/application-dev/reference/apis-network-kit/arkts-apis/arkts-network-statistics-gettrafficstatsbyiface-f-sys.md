@@ -16,10 +16,6 @@ Get the traffic usage details of the network interface in the specified time per
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
 <!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<NetStatsInfo>): void--><!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<NetStatsInfo>): void-End-->
@@ -32,8 +28,8 @@ Get the traffic usage details of the network interface in the specified time per
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | Detailed query content. See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#IfaceInfo-(System-API)). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt; | Yes | Returns the [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#NetStatsInfo) object; |
+| ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | Detailed query content. See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#ifaceinfo-system-api). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt; | Yes | Returns the [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#netstatsinfo) object; |
 
 **Error codes:**
 
@@ -47,7 +43,7 @@ Get the traffic usage details of the network interface in the specified time per
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) | Failed to read the database. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -88,10 +84,6 @@ Get the traffic usage details of the network interface in the specified time per
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
 <!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>-End-->
@@ -104,7 +96,7 @@ Get the traffic usage details of the network interface in the specified time per
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | Detailed query content. See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#IfaceInfo-(System-API)). |
+| ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | Detailed query content. See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#ifaceinfo-system-api). |
 
 **Return value:**
 
@@ -124,7 +116,7 @@ Get the traffic usage details of the network interface in the specified time per
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) | Failed to read the database. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { statistics } from '@kit.NetworkKit';

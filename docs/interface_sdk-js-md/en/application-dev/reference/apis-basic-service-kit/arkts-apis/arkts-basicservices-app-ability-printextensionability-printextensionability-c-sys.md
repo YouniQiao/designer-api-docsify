@@ -4,10 +4,6 @@ class of print extension ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class PrintExtensionAbility--><!--Device-unnamed-declare class PrintExtensionAbility-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -29,10 +25,6 @@ public onCancelPrintJob(jobInfo: print.PrintJob): void
 Called once to remove the print job has been started.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,10 +56,6 @@ Called once to request preview and send result to Print SA.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintExtensionAbility-onRequestPreview(jobInfo: print.PrintJob): string--><!--Device-PrintExtensionAbility-onRequestPreview(jobInfo: print.PrintJob): string-End-->
@@ -94,7 +82,7 @@ Called once to request preview and send result to Print SA.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
@@ -118,10 +106,6 @@ public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 Called once to request the printer's capabilities.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,10 +142,6 @@ public onStartPrintJob(jobInfo: print.PrintJob): void
 Called once to start print job.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

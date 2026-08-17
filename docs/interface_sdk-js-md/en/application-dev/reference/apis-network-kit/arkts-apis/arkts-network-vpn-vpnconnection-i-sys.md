@@ -4,10 +4,6 @@ Defines a VPN connection.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-vpn-export interface VpnConnection--><!--Device-vpn-export interface VpnConnection-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -29,10 +25,6 @@ destroy(callback: AsyncCallback<void>): void
 Destroy the VPN network.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
@@ -58,7 +50,7 @@ Destroy the VPN network.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -91,10 +83,6 @@ Destroy the VPN network.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 <!--Device-VpnConnection-destroy(): Promise<void>--><!--Device-VpnConnection-destroy(): Promise<void>-End-->
@@ -119,7 +107,7 @@ Destroy the VPN network.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -154,10 +142,6 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 <!--Device-VpnConnection-protect(socketFd: number, callback: AsyncCallback<void>): void--><!--Device-VpnConnection-protect(socketFd: number, callback: AsyncCallback<void>): void-End-->
@@ -185,7 +169,7 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -236,10 +220,6 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 <!--Device-VpnConnection-protect(socketFd: number): Promise<void>--><!--Device-VpnConnection-protect(socketFd: number): Promise<void>-End-->
@@ -272,7 +252,7 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -325,10 +305,6 @@ Create a VPN network using the VpnConfig.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 <!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<number>): void--><!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<number>): void-End-->
@@ -341,7 +317,7 @@ Create a VPN network using the VpnConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | Indicates the [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md#VpnConfig-(System-API)) configuration of the VPN network. |
+| config | VpnConfig | Yes | Indicates the [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md#vpnconfig-system-api) configuration of the VPN network. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The callback is used to return file descriptor of VPN interface. |
 
 **Error codes:**
@@ -357,7 +333,7 @@ Create a VPN network using the VpnConfig.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) | VPN already exists. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
@@ -402,10 +378,6 @@ Create a VPN network using the VpnConfig.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 <!--Device-VpnConnection-setUp(config: VpnConfig): Promise<number>--><!--Device-VpnConnection-setUp(config: VpnConfig): Promise<number>-End-->
@@ -418,7 +390,7 @@ Create a VPN network using the VpnConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | Indicates the [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md#VpnConfig-(System-API)) configuration of the VPN network. |
+| config | VpnConfig | Yes | Indicates the [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md#vpnconfig-system-api) configuration of the VPN network. |
 
 **Return value:**
 
@@ -439,7 +411,7 @@ Create a VPN network using the VpnConfig.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) | VPN already exists. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 

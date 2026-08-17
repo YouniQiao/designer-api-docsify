@@ -16,11 +16,9 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getInclination](arkts-sensorservice-sensor-getinclination-f.md#getInclination)(inclinationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;double&gt;)
+**Substitutes:** [getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)(inclinationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;double&gt;)
 
 <!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void-End-->
 
@@ -33,7 +31,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 | inclinationMatrix | Array&lt;number&gt; | Yes | Inclination matrix. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the magnetic dip, in radians. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';
@@ -59,11 +57,9 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getInclination](arkts-sensorservice-sensor-getinclination-f.md#getInclination)(inclinationMatrix: Array&lt;double&gt;)
+**Substitutes:** [getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)(inclinationMatrix: Array&lt;double&gt;)
 
 <!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>-End-->
 
@@ -81,7 +77,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the magnetic dip, in radians. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { sensor } from '@kit.SensorServiceKit';

@@ -16,10 +16,6 @@ Sets the z-level of a system window. This API uses a promise to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Promise<void>--><!--Device-window-function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -48,7 +44,7 @@ Sets the z-level of a system window. This API uses a promise to return the resul
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';

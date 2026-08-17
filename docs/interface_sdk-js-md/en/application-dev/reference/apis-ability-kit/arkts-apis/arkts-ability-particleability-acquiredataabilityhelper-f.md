@@ -16,10 +16,6 @@ Obtains a dataAbilityHelper object. > **NOTE：**> > For details about the start
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-particleAbility-function acquireDataAbilityHelper(uri: string): DataAbilityHelper--><!--Device-particleAbility-function acquireDataAbilityHelper(uri: string): DataAbilityHelper-End-->
@@ -38,7 +34,7 @@ Obtains a dataAbilityHelper object. > **NOTE：**> > For details about the start
 | --- | --- |
 | [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | A utility class used to help other abilities access a DataAbility. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';

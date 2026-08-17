@@ -4,11 +4,9 @@ Represents the authentication result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md#UserAuthResult)
+**Substitutes:** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md#userauthresult)
 
 <!--Device-userAuth-interface AuthResultInfo--><!--Device-userAuth-interface AuthResultInfo-End-->
 
@@ -32,11 +30,9 @@ Lock duration of the authentication operation, in ms.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [lockoutDuration](arkts-userauthentication-userauth-authlockstate-i.md#lockoutDuration)
+**Substitutes:** [lockoutDuration](arkts-userauthentication-userauth-authlockstate-i.md#lockoutduration)
 
 <!--Device-AuthResultInfo-lockoutDuration?: number--><!--Device-AuthResultInfo-lockoutDuration?: number-End-->
 
@@ -54,11 +50,9 @@ Number of remaining authentication attempts.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [remainingAuthAttempts](arkts-userauthentication-userauth-authlockstate-i.md#remainingAuthAttempts)
+**Substitutes:** [remainingAuthAttempts](arkts-userauthentication-userauth-authlockstate-i.md#remainingauthattempts)
 
 <!--Device-AuthResultInfo-remainAttempts?: number--><!--Device-AuthResultInfo-remainAttempts?: number-End-->
 
@@ -75,8 +69,6 @@ Authentication result.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 11
 
@@ -97,8 +89,6 @@ Token that has passed the user identity authentication.
 **Type:** Uint8Array
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 11
 

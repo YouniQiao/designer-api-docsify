@@ -4,11 +4,9 @@ Enumerates the media error codes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVErrorCode](arkts-media-media-averrorcode-e.md#AVErrorCode)
+**Substitutes:** [AVErrorCode](arkts-media-media-averrorcode-e.md#averrorcode)
 
 <!--Device-media-enum MediaErrorCode--><!--Device-media-enum MediaErrorCode-End-->
 
@@ -24,11 +22,9 @@ The operation is successful.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVERR_OK](arkts-media-media-averrorcode-e.md#AVERR_OK)
+**Substitutes:** [AVERR_OK](arkts-media-media-averrorcode-e.md#averrok)
 
 <!--Device-MediaErrorCode-MSERR_OK = 0--><!--Device-MediaErrorCode-MSERR_OK = 0-End-->
 
@@ -44,11 +40,9 @@ Failed to allocate memory. The system may have no available memory.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVERR_NO_MEMORY](arkts-media-media-averrorcode-e.md#AVERR_NO_MEMORY)
+**Substitutes:** [AVERR_NO_MEMORY](arkts-media-media-averrorcode-e.md#averrnomemory)
 
 <!--Device-MediaErrorCode-MSERR_NO_MEMORY = 1--><!--Device-MediaErrorCode-MSERR_NO_MEMORY = 1-End-->
 
@@ -64,11 +58,9 @@ No permission to perform the operation.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVERR_OPERATE_NOT_PERMIT](arkts-media-media-averrorcode-e.md#AVERR_OPERATE_NOT_PERMIT)
+**Substitutes:** [AVERR_OPERATE_NOT_PERMIT](arkts-media-media-averrorcode-e.md#averroperatenotpermit)
 
 <!--Device-MediaErrorCode-MSERR_OPERATION_NOT_PERMIT = 2--><!--Device-MediaErrorCode-MSERR_OPERATION_NOT_PERMIT = 2-End-->
 
@@ -84,11 +76,9 @@ Invalid input parameter.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
+**Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averrinvalidparameter)
 
 <!--Device-MediaErrorCode-MSERR_INVALID_VAL = 3--><!--Device-MediaErrorCode-MSERR_INVALID_VAL = 3-End-->
 
@@ -104,11 +94,9 @@ An I/O error occurs.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVERR_IO](arkts-media-media-averrorcode-e.md#AVERR_IO)
+**Substitutes:** [AVERR_IO](arkts-media-media-averrorcode-e.md#averrio)
 
 <!--Device-MediaErrorCode-MSERR_IO = 4--><!--Device-MediaErrorCode-MSERR_IO = 4-End-->
 
@@ -124,11 +112,9 @@ The operation times out.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVERR_TIMEOUT](arkts-media-media-averrorcode-e.md#AVERR_TIMEOUT)
+**Substitutes:** [AVERR_TIMEOUT](arkts-media-media-averrorcode-e.md#averrtimeout)
 
 <!--Device-MediaErrorCode-MSERR_TIMEOUT = 5--><!--Device-MediaErrorCode-MSERR_TIMEOUT = 5-End-->
 
@@ -144,11 +130,9 @@ An unknown error occurs.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
+**Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averrinvalidparameter)
 
 <!--Device-MediaErrorCode-MSERR_UNKNOWN = 6--><!--Device-MediaErrorCode-MSERR_UNKNOWN = 6-End-->
 
@@ -164,11 +148,9 @@ Invalid server.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVERR_SERVICE_DIED](arkts-media-media-averrorcode-e.md#AVERR_SERVICE_DIED)
+**Substitutes:** [AVERR_SERVICE_DIED](arkts-media-media-averrorcode-e.md#averrservicedied)
 
 <!--Device-MediaErrorCode-MSERR_SERVICE_DIED = 7--><!--Device-MediaErrorCode-MSERR_SERVICE_DIED = 7-End-->
 
@@ -184,11 +166,9 @@ The operation is not allowed in the current state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
+**Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averrinvalidparameter)
 
 <!--Device-MediaErrorCode-MSERR_INVALID_STATE = 8--><!--Device-MediaErrorCode-MSERR_INVALID_STATE = 8-End-->
 
@@ -204,11 +184,9 @@ The operation is not supported in the current version.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 11
 
-**Substitutes:** [AVERR_UNSUPPORT_CAPABILITY](arkts-media-media-averrorcode-e.md#AVERR_UNSUPPORT_CAPABILITY)
+**Substitutes:** [AVERR_UNSUPPORT_CAPABILITY](arkts-media-media-averrorcode-e.md#averrunsupportcapability)
 
 <!--Device-MediaErrorCode-MSERR_UNSUPPORTED = 9--><!--Device-MediaErrorCode-MSERR_UNSUPPORTED = 9-End-->
 

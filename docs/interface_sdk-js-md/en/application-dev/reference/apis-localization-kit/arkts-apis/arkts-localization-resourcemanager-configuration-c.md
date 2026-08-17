@@ -4,10 +4,6 @@ Defines the device configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-resourceManager-export class Configuration--><!--Device-resourceManager-export class Configuration-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -30,10 +26,6 @@ Color mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Configuration-colorMode: ColorMode--><!--Device-Configuration-colorMode: ColorMode-End-->
@@ -51,10 +43,6 @@ Device type.
 **Type:** DeviceType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -74,10 +62,6 @@ Screen orientation modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Configuration-direction: Direction--><!--Device-Configuration-direction: Direction-End-->
@@ -95,10 +79,6 @@ Language locale.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,10 +98,6 @@ Mobile country code (MCC).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Configuration-mcc : int--><!--Device-Configuration-mcc : int-End-->
@@ -140,10 +116,6 @@ Mobile network code (MNC).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Configuration-mnc : int--><!--Device-Configuration-mnc : int-End-->
@@ -161,10 +133,6 @@ Screen density
 **Type:** ScreenDensity
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

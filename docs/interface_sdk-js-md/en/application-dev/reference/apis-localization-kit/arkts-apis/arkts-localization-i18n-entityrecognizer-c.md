@@ -4,10 +4,6 @@ Provides entity recognition capabilities, which can be used to obtain the type a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class EntityRecognizer--><!--Device-i18n-export class EntityRecognizer-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Creates an **entityRecognizer** object. This object is used to recognize entitie
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-EntityRecognizer-constructor(locale?: string)--><!--Device-EntityRecognizer-constructor(locale?: string)-End-->
@@ -51,7 +43,7 @@ Creates an **entityRecognizer** object. This object is used to recognize entitie
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -75,10 +67,6 @@ Obtains entity information in the **text** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-EntityRecognizer-findEntityInfo(text: string): Array<EntityInfoItem>--><!--Device-EntityRecognizer-findEntityInfo(text: string): Array<EntityInfoItem>-End-->
@@ -95,7 +83,7 @@ Obtains entity information in the **text** object.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[EntityInfoItem](../../apis-na/arkts-apis/arkts-na-i18n-entityinfoitem-i.md)&gt; | List of entities in the text. |
+| Array&lt;[EntityInfoItem](arkts-localization-i18n-entityinfoitem-i.md)&gt; | List of entities in the text. |
 
 **Error codes:**
 
@@ -103,7 +91,7 @@ Obtains entity information in the **text** object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,14 +1,10 @@
 # Node
 
-The 3D scene consists of nodes in a tree hierarchy, where each node implements a Node interface.
+The 3D scene consists of nodes in a tree hierarchy, where each node implements a Node interface. This class inherits from SceneResource.
 
-**Inheritance/Implementation:** Node extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
+**Inheritance/Implementation:** Node extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#sceneresource)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Node--><!--Device-unnamed-export interface Node-End-->
 
@@ -23,10 +19,6 @@ getNodeByPath(path: string): Node | null
 Obtains a node by path. If no node is obtained, null is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Node-getNodeByPath(path: string): Node | null--><!--Device-Node-getNodeByPath(path: string): Node | null-End-->
 
@@ -44,7 +36,7 @@ Obtains a node by path. If no node is obtained, null is returned.
 | --- | --- |
 | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Returns the node object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, Node } from '@kit.ArkGraphics3D';
@@ -67,15 +59,11 @@ function getNode(): void {
 readonly children: Container<Node>
 ```
 
-Child node of the node and null if it does not exist. This is a read-only property, indicating that you cannot directly replace the entire children container. However, you can operate the child nodes using container methods like [append](arkts-arkgraphics3d-scenenodes-container-i.md#append), [insertAfter](arkts-arkgraphics3d-scenenodes-container-i.md#insertAfter), [remove](arkts-arkgraphics3d-scenenodes-container-i.md#remove), or [clear](arkts-arkgraphics3d-scenenodes-container-i.md#clear). If the node being appended or inserted already exists in the container, it is removed first and then reinserted. As a result, the total number of child nodes remains unchanged, making the operation seem ineffective. The count increases only when a new node is added.
+Child node of the node and null if it does not exist. This is a read-only property, indicating that you cannot directly replace the entire children container. However, you can operate the child nodes using container methods like append, insertAfter, remove, or clear. If the node being appended or inserted already exists in the container, it is removed first and then reinserted. As a result, the total number of child nodes remains unchanged, making the operation seem ineffective. The count increases only when a new node is added.
 
 **Type:** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Node-readonly children: Container<Node>--><!--Device-Node-readonly children: Container<Node>-End-->
 
@@ -93,10 +81,6 @@ Layer mask of a node.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Node-readonly layerMask: LayerMask--><!--Device-Node-readonly layerMask: LayerMask-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -112,10 +96,6 @@ Node type.
 **Type:** [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Node-readonly nodeType: NodeType--><!--Device-Node-readonly nodeType: NodeType-End-->
 
@@ -133,10 +113,6 @@ Parent node of the node and null if it does not exist.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Node-readonly parent: Node | null--><!--Device-Node-readonly parent: Node | null-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -152,10 +128,6 @@ Node path.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Node-readonly path: string--><!--Device-Node-readonly path: string-End-->
 
@@ -173,10 +145,6 @@ Node position, in scene units of the world coordinate system (for example, cm, m
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Node-position: Position3--><!--Device-Node-position: Position3-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -192,10 +160,6 @@ Rotation angle of a node.
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Node-rotation: Quaternion--><!--Device-Node-rotation: Quaternion-End-->
 
@@ -213,10 +177,6 @@ Node scale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Node-scale: Scale3--><!--Device-Node-scale: Scale3-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -232,10 +192,6 @@ Whether a node is visible. true if visible, false otherwise.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Node-visible: boolean--><!--Device-Node-visible: boolean-End-->
 

@@ -4,6 +4,8 @@
 
 Defines common data structures and error codes for crypto operations.
 
+**Include**: <CryptoArchitectureKit/crypto_common.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

@@ -10,8 +10,6 @@ Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效�
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [invert](arkts-arkui-matrix4-matrix4transit-i.md#invert)

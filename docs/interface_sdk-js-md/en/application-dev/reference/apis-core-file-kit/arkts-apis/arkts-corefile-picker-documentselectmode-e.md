@@ -4,10 +4,6 @@ Enumerates the types of documents selected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-picker-export enum DocumentSelectMode--><!--Device-picker-export enum DocumentSelectMode-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService.FolderSelection
@@ -21,10 +17,6 @@ FILE = 0
 File (default).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ Folder.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DocumentSelectMode-FOLDER = 1--><!--Device-DocumentSelectMode-FOLDER = 1-End-->
@@ -61,10 +49,6 @@ MIXED = 2
 Mixed type of files and folders.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

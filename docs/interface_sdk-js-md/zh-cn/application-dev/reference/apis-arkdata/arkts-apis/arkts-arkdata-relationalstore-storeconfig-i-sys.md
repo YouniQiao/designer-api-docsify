@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-relationalStore-interface StoreConfig--><!--Device-relationalStore-interface StoreConfig-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -18,15 +14,11 @@
 autoCleanDeviceDirtyData?: boolean
 ```
 
-指定本地设备是否自动清理远端设备删除后同步过来的数据，true表示自动清理，false表示手动清理，默认自动清理。若设置为false，需要主动调用 [cleanDeviceDirtyData](arkts-arkdata-relationalstore-rdbstore-i-sys.md#cleanDeviceDirtyData)进行脏数据清理。 [多设备协同表模式](../../../database/data-sync-of-rdb-store.md#数据同步存储机制)分布式数据表配置不生效。 **系统接口：** 此接口为系统接口。
+指定本地设备是否自动清理远端设备删除后同步过来的数据，true表示自动清理，false表示手动清理，默认自动清理。若设置为false，需要主动调用 [cleanDeviceDirtyData](arkts-arkdata-relationalstore-rdbstore-i-sys.md#cleandevicedirtydata)进行脏数据清理。 [多设备协同表模式](../../../database/data-sync-of-rdb-store.md#数据同步存储机制)分布式数据表配置不生效。 **系统接口：** 此接口为系统接口。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,10 +40,6 @@ haMode?: HAMode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-StoreConfig-haMode?: HAMode--><!--Device-StoreConfig-haMode?: HAMode-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -69,10 +57,6 @@ isSearchable?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StoreConfig-isSearchable?: boolean--><!--Device-StoreConfig-isSearchable?: boolean-End-->
 

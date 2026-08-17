@@ -4,10 +4,6 @@ Provides text transliteration capabilities, such as obtaining the supported lang
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class Transliterator--><!--Device-i18n-export class Transliterator-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Obtains a list of IDs supported by the **Transliterator** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Transliterator-static getAvailableIDs(): string[]--><!--Device-Transliterator-static getAvailableIDs(): string[]-End-->
@@ -44,7 +36,7 @@ Obtains a list of IDs supported by the **Transliterator** object.
 | --- | --- |
 | string[] | List of IDs supported by the **Transliterator** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -64,10 +56,6 @@ Creates a **Transliterator** object based on the specified ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Transliterator-static getInstance(id: string): Transliterator--><!--Device-Transliterator-static getInstance(id: string): Transliterator-End-->
@@ -84,9 +72,9 @@ Creates a **Transliterator** object based on the specified ID.
 
 | Type | Description |
 | --- | --- |
-| [Transliterator](../../apis-na/arkts-apis/arkts-na-i18n-transliterator-c.md) | Transliterator** object. |
+| [Transliterator](arkts-localization-i18n-transliterator-c.md) | Transliterator** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -103,10 +91,6 @@ transform(text: string): string
 Converts the input text from the source format to the target format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -126,7 +110,7 @@ Converts the input text from the source format to the target format.
 | --- | --- |
 | string | Text after conversion. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

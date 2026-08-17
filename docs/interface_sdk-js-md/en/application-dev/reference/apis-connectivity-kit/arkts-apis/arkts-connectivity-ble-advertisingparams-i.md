@@ -4,10 +4,6 @@ Describes the advertising parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ble-interface AdvertisingParams--><!--Device-ble-interface AdvertisingParams-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ Indicates the advertising data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AdvertisingParams-advertisingData: AdvertiseData--><!--Device-AdvertisingParams-advertisingData: AdvertiseData-End-->
@@ -51,10 +43,6 @@ Indicates the advertising response.
 **Type:** AdvertiseData
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Indicates the advertising settings.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AdvertisingParams-advertisingSettings: AdvertiseSetting--><!--Device-AdvertisingParams-advertisingSettings: AdvertiseSetting-End-->
@@ -95,10 +79,6 @@ Indicates the duration for advertising continuously. The duration, in 10ms unit.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

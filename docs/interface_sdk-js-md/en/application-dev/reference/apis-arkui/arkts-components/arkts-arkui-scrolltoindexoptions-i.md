@@ -4,10 +4,6 @@ Provides parameters for scrolling to a specific index.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ScrollToIndexOptions--><!--Device-unnamed-declare interface ScrollToIndexOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Extra offset for scrolling to a specified index.
 **Type:** LengthMetrics
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

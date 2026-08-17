@@ -16,10 +16,6 @@ Converts a SendableContext object to a UIAbilityContext object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -46,7 +42,7 @@ Converts a SendableContext object to a UIAbilityContext object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 Context passed by the main thread:
 

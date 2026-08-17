@@ -4,6 +4,8 @@
 
 Defines the message authentication code interfaces.
 
+**Include**: <CryptoArchitectureKit/crypto_mac.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

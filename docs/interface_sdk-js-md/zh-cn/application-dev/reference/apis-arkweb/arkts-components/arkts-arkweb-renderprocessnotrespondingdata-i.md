@@ -1,12 +1,8 @@
 # RenderProcessNotRespondingData
 
-Defines the render process not responding info.
+提供渲染进程无响应的详细信息。适用于需要诊断渲染进程异常的场景，提升故障排查的准确性和效率。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface RenderProcessNotRespondingData--><!--Device-unnamed-declare interface RenderProcessNotRespondingData-End-->
 
@@ -18,15 +14,11 @@ Defines the render process not responding info.
 jsStack: string
 ```
 
-JavaScript stack info of the webpage when render process not responding.
+网页的JavaScript调用栈信息。
 
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-RenderProcessNotRespondingData-jsStack: string--><!--Device-RenderProcessNotRespondingData-jsStack: string-End-->
 
@@ -38,15 +30,11 @@ JavaScript stack info of the webpage when render process not responding.
 pid: number
 ```
 
-Process id of render process not responding.
+网页的进程id。
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-RenderProcessNotRespondingData-pid: number--><!--Device-RenderProcessNotRespondingData-pid: number-End-->
 
@@ -58,15 +46,11 @@ Process id of render process not responding.
 reason: RenderProcessNotRespondingReason
 ```
 
-Reason for the render process not responding.
+触发渲染进程无响应回调的原因。
 
 **类型：** [RenderProcessNotRespondingReason](arkts-arkweb-renderprocessnotrespondingreason-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-RenderProcessNotRespondingData-reason: RenderProcessNotRespondingReason--><!--Device-RenderProcessNotRespondingData-reason: RenderProcessNotRespondingReason-End-->
 

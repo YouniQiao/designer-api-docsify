@@ -16,10 +16,6 @@ Creates a PixelMap object from surface id.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap--><!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -45,7 +41,7 @@ Creates a PixelMap object from surface id.
 | [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
 | [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function Demo(surfaceId: string) {
@@ -65,10 +61,6 @@ function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap
 Creates a PixelMap object from surface id.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap--><!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap-End-->
 
@@ -94,7 +86,7 @@ Creates a PixelMap object from surface id.
 | [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
 | [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function CreatePixelMapFromSurfaceSync(surfaceId: string) {

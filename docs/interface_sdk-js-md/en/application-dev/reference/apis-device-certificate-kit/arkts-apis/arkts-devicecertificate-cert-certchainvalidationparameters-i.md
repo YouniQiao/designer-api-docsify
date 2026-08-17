@@ -4,10 +4,6 @@ Represents the parameters for certificate chain validation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cert-interface CertChainValidationParameters--><!--Device-cert-interface CertChainValidationParameters-End-->
 
 **System capability:** SystemCapability.Security.Cert
@@ -32,10 +28,6 @@ Whether to allow the application to download the missing intermediate CA certifi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CertChainValidationParameters-allowDownloadIntermediateCa?: boolean--><!--Device-CertChainValidationParameters-allowDownloadIntermediateCa?: boolean-End-->
@@ -53,10 +45,6 @@ CRL collections used to check whether the certificate is revoked.
 **Type:** Array&lt;[CertCRLCollection](arkts-devicecertificate-cert-certcrlcollection-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -76,10 +64,6 @@ Date for checking certificate validity.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertChainValidationParameters-date?: string--><!--Device-CertChainValidationParameters-date?: string-End-->
@@ -97,10 +81,6 @@ Usage of the key in the certificate to be validated.
 **Type:** Array&lt;[KeyUsageType](arkts-devicecertificate-cert-keyusagetype-e.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -120,10 +100,6 @@ Type of the policy for certificate validation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CertChainValidationParameters-policy?: ValidationPolicyType--><!--Device-CertChainValidationParameters-policy?: ValidationPolicyType-End-->
@@ -141,10 +117,6 @@ Parameters for checking the certificate revocation status.
 **Type:** [RevocationCheckParameter](arkts-devicecertificate-cert-revocationcheckparameter-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -164,10 +136,6 @@ Host name in the certificate to be verified. This parameter must be used togethe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CertChainValidationParameters-sslHostname?: string--><!--Device-CertChainValidationParameters-sslHostname?: string-End-->
@@ -185,10 +153,6 @@ List of trusted anchors.
 **Type:** Array&lt;[X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -209,10 +173,6 @@ Whether to use the prebuilt CA certificate to validate the certificate chain. **
 **Default:** false
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

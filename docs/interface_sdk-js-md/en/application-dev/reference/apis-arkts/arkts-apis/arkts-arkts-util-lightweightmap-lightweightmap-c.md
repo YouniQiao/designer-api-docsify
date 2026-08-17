@@ -4,10 +4,6 @@ LightWeightMap stores key-value (KV) pairs. Each key must be unique and have onl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class LightWeightMap--><!--Device-unnamed-declare class LightWeightMap-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<[K, V]>
 returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LightWeightMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
@@ -76,7 +64,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -128,10 +116,6 @@ Clears this LightWeightMap and sets its length to **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightMap-clear(): void--><!--Device-LightWeightMap-clear(): void-End-->
@@ -144,7 +128,7 @@ Clears this LightWeightMap and sets its length to **0**.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -165,10 +149,6 @@ A constructor used to create a **LightWeightMap** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightMap-constructor()--><!--Device-LightWeightMap-constructor()-End-->
@@ -181,7 +161,7 @@ A constructor used to create a **LightWeightMap** instance.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The LightWeightMap's constructor cannot be directly invoked. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -196,10 +176,6 @@ entries(): IterableIterator<[K, V]>
 Returns an iterator that contains all the elements in this LightWeightMap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -219,7 +195,7 @@ Returns an iterator that contains all the elements in this LightWeightMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -255,10 +231,6 @@ Uses a callback to traverse the elements in this LightWeightMap and obtain their
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightMap-forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void--><!--Device-LightWeightMap-forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void-End-->
@@ -278,7 +250,7 @@ Uses a callback to traverse the elements in this LightWeightMap and obtain their
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -312,10 +284,6 @@ Iterates over all key-value pairs in the LightWeightMap and executes a callback 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LightWeightMap-forEach(callbackFn: LightWeightMapCbFn<K, V>): void--><!--Device-LightWeightMap-forEach(callbackFn: LightWeightMapCbFn<K, V>): void-End-->
@@ -337,10 +305,6 @@ get(key: K): V
 Obtains the value of the specified key in this LightWeightMap.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -366,7 +330,7 @@ Obtains the value of the specified key in this LightWeightMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -385,10 +349,6 @@ get(key: K): V | undefined
 Returns the value to which the specified key is mapped, or undefined if this map contains no mapping for the key
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -418,10 +378,6 @@ Obtains the index of the first occurrence of an element with the specified key i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightMap-getIndexOfKey(key: K): int--><!--Device-LightWeightMap-getIndexOfKey(key: K): int-End-->
@@ -446,7 +402,7 @@ Obtains the index of the first occurrence of an element with the specified key i
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfKey method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -465,10 +421,6 @@ getIndexOfValue(value: V): int
 Obtains the index of the first occurrence of an element with the specified value in this LightWeightMap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -494,7 +446,7 @@ Obtains the index of the first occurrence of an element with the specified value
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfValue method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -513,10 +465,6 @@ getKeyAt(index: number): K
 Obtains the key of an element at the specified position in this LightWeightMap.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -543,7 +491,7 @@ Obtains the key of an element at the specified position in this LightWeightMap.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getKeyAt method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -562,10 +510,6 @@ getKeyAt(index: int): K | undefined
 Obtains the key at the location identified by index in an LightWeightMap container
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -601,10 +545,6 @@ Obtains the value of an element at the specified position in this LightWeightMap
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightMap-getValueAt(index: number): V--><!--Device-LightWeightMap-getValueAt(index: number): V-End-->
@@ -630,7 +570,7 @@ Obtains the value of an element at the specified position in this LightWeightMap
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -649,10 +589,6 @@ getValueAt(index: int): V | undefined
 Obtains the value identified by index in an LightWeightMap container
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -688,10 +624,6 @@ Checks whether this LightWeightMap contains all elements of the specified **Ligh
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightMap-hasAll(map: LightWeightMap<K, V>): boolean--><!--Device-LightWeightMap-hasAll(map: LightWeightMap<K, V>): boolean-End-->
@@ -716,7 +648,7 @@ Checks whether this LightWeightMap contains all elements of the specified **Ligh
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasAll method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -737,10 +669,6 @@ hasKey(key: K): boolean
 Checks whether this LightWeightMap has the specified key.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -766,7 +694,7 @@ Checks whether this LightWeightMap has the specified key.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasKey method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -784,10 +712,6 @@ hasValue(value: V): boolean
 Checks whether this LightWeightMap has the specified value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -813,7 +737,7 @@ Checks whether this LightWeightMap has the specified value.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasValue method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -831,10 +755,6 @@ increaseCapacityTo(minimumCapacity: int): void
 Increases the capacity of this LightWeightMap. If the passed-in capacity is greater than or equal to the number of elements in this LightWeightMap, the capacity is changed to the new capacity. If the passed-in capacity is less than the number of elements in this LightWeightMap, the capacity is not changed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -854,7 +774,7 @@ Increases the capacity of this LightWeightMap. If the passed-in capacity is grea
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -870,10 +790,6 @@ isEmpty(): boolean
 Checks whether this LightWeightMap is empty (contains no element).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -893,7 +809,7 @@ Checks whether this LightWeightMap is empty (contains no element).
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const lightWeightMap = new LightWeightMap<string, number>();
@@ -910,10 +826,6 @@ keys(): IterableIterator<K>
 Returns an iterator that contains all the keys in this LightWeightMap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -933,7 +845,7 @@ Returns an iterator that contains all the keys in this LightWeightMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -956,10 +868,6 @@ remove(key: K): V
 Removes an element with the specified key from this LightWeightMap.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -985,7 +893,7 @@ Removes an element with the specified key from this LightWeightMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -1003,10 +911,6 @@ remove(key: K): V | undefined
 Remove the mapping for this key from this map if present
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1036,10 +940,6 @@ Removes an element at the specified position from this LightWeightMap.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightMap-removeAt(index: int): boolean--><!--Device-LightWeightMap-removeAt(index: int): boolean-End-->
@@ -1064,7 +964,7 @@ Removes an element at the specified position from this LightWeightMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -1083,10 +983,6 @@ set(key: K, value: V): Object
 Adds or updates an element in this LightWeightMap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1113,7 +1009,7 @@ Adds or updates an element in this LightWeightMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -1130,10 +1026,6 @@ setAll(map: LightWeightMap<K, V>): void
 Adds all elements in a LightWeightMap to this LightWeightMap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1153,7 +1045,7 @@ Adds all elements in a LightWeightMap to this LightWeightMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAll method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -1174,10 +1066,6 @@ setValueAt(index: int, newValue: V): boolean
 Sets a value for an element at the specified position in this LightWeightMap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1205,7 +1093,7 @@ Sets a value for an element at the specified position in this LightWeightMap.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setValueAt method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -1225,10 +1113,6 @@ Concatenates the elements in this LightWeightMap into a string and returns the s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightMap-toString(): String--><!--Device-LightWeightMap-toString(): String-End-->
@@ -1247,7 +1131,7 @@ Concatenates the elements in this LightWeightMap into a string and returns the s
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -1267,10 +1151,6 @@ Returns an iterator that contains all the values in this LightWeightMap.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightMap-values(): IterableIterator<V>--><!--Device-LightWeightMap-values(): IterableIterator<V>-End-->
@@ -1289,7 +1169,7 @@ Returns an iterator that contains all the values in this LightWeightMap.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -1314,10 +1194,6 @@ Number of elements in a LightWeightMap.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

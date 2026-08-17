@@ -1,12 +1,8 @@
 # PermissionRequest
 
-Implements the **PermissionRequest** object.For details about the sample code, see [onPermissionRequest](./arkts-basic-components-web-events.md#onpermissionrequest9). > **NOTE：**> > - The initial APIs of this component are supported since API version 8. > Updates will be marked with a superscript to indicate their earliest API version. > > - The initial APIs of this class are supported since API version 9. > > - The sample effect is subject to the actual device.
+PermissionRequest is an object used by the **Web** component to grant or deny permission requests. When a web page attempts to access protected system resources (such as camera, microphone, geolocation, etc.), the ArkWeb kernel sends a permission request to the app through the [onPermissionRequest](arkts-arkweb-web-attribute.md#onpermissionrequest) event callback. The app then uses the PermissionRequest object to decide whether to grant these requests. This object is applicable to scenarios where the app needs to manage web page access to sensitive resources, protect user privacy, and ensure secure and controllable resource access, helping developers flexibly handle web page permission requests. > **NOTE：**> > - The [grant](#grant)() and [deny](#deny)() methods are mutually > exclusive. For the same PermissionRequest object, only one of them can be called. > > - After grant() or deny() is called, the PermissionRequest object has completed its response and cannot be called > again. > > - A PermissionRequest object that has not been responded to by calling any method will cause the permission request > to time out. > > - The resources parameter of the grant() method typically uses the return value of the getAccessibleResource() > method. > > - Typical usage flow: Call getAccessibleResource() to obtain the list of requested resources, select the resources > to be authorized, and then call grant() for authorization.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class PermissionRequest--><!--Device-unnamed-declare class PermissionRequest-End-->
 
@@ -21,10 +17,6 @@ constructor()
 Constructs a **PermissionRequest** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Denies the permission requested by the web page.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PermissionRequest-deny(): void--><!--Device-PermissionRequest-deny(): void-End-->
@@ -58,13 +46,9 @@ Denies the permission requested by the web page.
 getAccessibleResource(): Array<string>
 ```
 
-Obtains the list of accessible resources requested for the web page. For details about the resource types, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#ProtectedResourceType).
+Obtains the list of permission resources requested by the web page. For details about the type, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#protectedresourcetype).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -76,7 +60,7 @@ Obtains the list of accessible resources requested for the web page. For details
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; |  |
+| Array&lt;string&gt; | List of accessible resources requested by the web page. |
 
 ## getOrigin
 
@@ -88,10 +72,6 @@ Obtains the origin of this web page.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PermissionRequest-getOrigin(): string--><!--Device-PermissionRequest-getOrigin(): string-End-->
@@ -102,7 +82,7 @@ Obtains the origin of this web page.
 
 | Type | Description |
 | --- | --- |
-| string |  |
+| string | Origin of the web page that requests the permission. |
 
 ## grant
 
@@ -110,13 +90,9 @@ Obtains the origin of this web page.
 grant(resources: Array<string>): void
 ```
 
-Grants the permission for resources requested by the web page.
+Grants the permission requested by the web page.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -128,5 +104,5 @@ Grants the permission for resources requested by the web page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resources | Array&lt;string&gt; | Yes | List of resources that can be requested by the web page with the permission to grant. |
+| resources | Array&lt;string&gt; | Yes | List of permission resources granted to the web page, which must be obtained through getAccessibleResource(). For the type, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#protectedresourcetype). After this parameter is passed in, the web page will obtain access to the specified resources. If an empty list is passed in, all permission requests are denied. |
 

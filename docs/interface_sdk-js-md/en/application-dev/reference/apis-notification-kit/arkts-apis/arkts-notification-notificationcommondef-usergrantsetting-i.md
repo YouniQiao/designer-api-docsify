@@ -1,12 +1,8 @@
-# UserGrantSetting
+# UserGrantSetting(Some common definitions)
 
 Describes the user authorization settings.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface UserGrantSetting--><!--Device-unnamed-export interface UserGrantSetting-End-->
 
@@ -23,10 +19,6 @@ List of apps for which the **Allow access to notifications on this device** swit
 **Type:** Array&lt;[GrantedBundleInfo](arkts-notification-notificationcommondef-grantedbundleinfo-i.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +37,6 @@ Whether the **Allow access to notifications on this device** switch is toggled o
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

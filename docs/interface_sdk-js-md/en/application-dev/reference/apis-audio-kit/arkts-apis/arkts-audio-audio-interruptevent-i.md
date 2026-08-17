@@ -4,10 +4,6 @@ Describes the interruption event received by the application when the audio is i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface InterruptEvent--><!--Device-audio-interface InterruptEvent-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -30,10 +26,6 @@ Whether the audio interruption has started or ended.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterruptEvent-eventType: InterruptType--><!--Device-InterruptEvent-eventType: InterruptType-End-->
@@ -52,10 +44,6 @@ Whether the audio interruption is forcibly taken by the system or taken by an ap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterruptEvent-forceType: InterruptForceType--><!--Device-InterruptEvent-forceType: InterruptForceType-End-->
@@ -73,10 +61,6 @@ Hint provided along the interruption to provide information related to the inter
 **Type:** [InterruptHint](arkts-audio-audio-interrupthint-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

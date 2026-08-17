@@ -12,13 +12,9 @@ import { asset } from 'asset';
 function postQuerySync(handle: AssetMap): void
 ```
 
-Performs postprocessing for the asset query. This API is used when user authentication is required for the access to the asset. This API must be used with [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#preQuerySync) together. This API returns the result synchronously.
+Performs postprocessing for the asset query. This API is used when user authentication is required for the access to the asset. This API must be used with [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync) together. This API returns the result synchronously.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -30,7 +26,7 @@ Performs postprocessing for the asset query. This API is used when user authenti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#preQuerySync). |
+| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync). |
 
 **Error codes:**
 
@@ -44,7 +40,7 @@ Performs postprocessing for the asset query. This API is used when user authenti
 | [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

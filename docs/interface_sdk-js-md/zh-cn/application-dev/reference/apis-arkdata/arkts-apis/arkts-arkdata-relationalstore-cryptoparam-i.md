@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-relationalStore-interface CryptoParam--><!--Device-relationalStore-interface CryptoParam-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -23,10 +19,6 @@ cryptoPageSize?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CryptoParam-cryptoPageSize?: int--><!--Device-CryptoParam-cryptoPageSize?: int-End-->
 
@@ -44,10 +36,6 @@ encryptionAlgo?: EncryptionAlgo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CryptoParam-encryptionAlgo?: EncryptionAlgo--><!--Device-CryptoParam-encryptionAlgo?: EncryptionAlgo-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -63,10 +51,6 @@ encryptionKey: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CryptoParam-encryptionKey: Uint8Array--><!--Device-CryptoParam-encryptionKey: Uint8Array-End-->
 
@@ -84,10 +68,6 @@ hmacAlgo?: HmacAlgo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CryptoParam-hmacAlgo?: HmacAlgo--><!--Device-CryptoParam-hmacAlgo?: HmacAlgo-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -104,10 +84,6 @@ iterationCount?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CryptoParam-iterationCount?: int--><!--Device-CryptoParam-iterationCount?: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -123,10 +99,6 @@ kdfAlgo?: KdfAlgo
 **类型：** [KdfAlgo](arkts-arkdata-relationalstore-kdfalgo-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CryptoParam-kdfAlgo?: KdfAlgo--><!--Device-CryptoParam-kdfAlgo?: KdfAlgo-End-->
 

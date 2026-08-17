@@ -4,10 +4,6 @@ Device Information Definition
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface DeviceInfo--><!--Device-avSession-interface DeviceInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -30,10 +26,6 @@ Define different authentication status. 0: Device not authenticated. 1: Device a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceInfo-authenticationStatus?: int--><!--Device-DeviceInfo-authenticationStatus?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -51,10 +43,6 @@ HiPlayDeviceInfo is used to obtain device-specific information for HiPlay. trans
 **Type:** [HiPlayDeviceInfo](arkts-avsession-avsession-hiplaydeviceinfo-i-sys.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,10 +64,6 @@ device ip address if available.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceInfo-ipAddress?: string--><!--Device-DeviceInfo-ipAddress?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -97,10 +81,6 @@ Indicates the current device is legacy or not.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceInfo-isLegacy?: boolean--><!--Device-DeviceInfo-isLegacy?: boolean-End-->
 
@@ -120,10 +100,6 @@ Medium types used to discover devices. 1: BLE 2: COAP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceInfo-mediumTypes?: int--><!--Device-DeviceInfo-mediumTypes?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -142,10 +118,6 @@ Network id.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceInfo-networkId?: string--><!--Device-DeviceInfo-networkId?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -163,10 +135,6 @@ device provider which supplies the route capability.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceInfo-providerId?: int--><!--Device-DeviceInfo-providerId?: int-End-->
 

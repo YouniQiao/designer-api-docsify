@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export enum Order--><!--Device-update-export enum Order-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -23,10 +19,6 @@ DOWNLOAD = 1
 下载。适合仅下载升级包场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Order-DOWNLOAD = 1--><!--Device-Order-DOWNLOAD = 1-End-->
 
@@ -44,10 +36,6 @@ INSTALL = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Order-INSTALL = 2--><!--Device-Order-INSTALL = 2-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -63,10 +51,6 @@ DOWNLOAD_AND_INSTALL = 3
 下载并安装。适合下载并安装场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Order-DOWNLOAD_AND_INSTALL = 3--><!--Device-Order-DOWNLOAD_AND_INSTALL = 3-End-->
 
@@ -84,10 +68,6 @@ APPLY = 4
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Order-APPLY = 4--><!--Device-Order-APPLY = 4-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -103,10 +83,6 @@ INSTALL_AND_APPLY = 6
 安装并生效，执行安装后设备将重启以应用新版本。适用于需要快速完成系统更新并立即生效的场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Order-INSTALL_AND_APPLY = 6--><!--Device-Order-INSTALL_AND_APPLY = 6-End-->
 

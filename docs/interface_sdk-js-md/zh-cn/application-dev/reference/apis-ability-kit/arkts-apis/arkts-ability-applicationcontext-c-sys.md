@@ -6,10 +6,6 @@ ApplicationContext作为应用上下文，继承自Context，提供了应用生�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class ApplicationContext--><!--Device-unnamed-declare class ApplicationContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -24,11 +20,9 @@ getProcessRunningInformation(): Promise<Array<ProcessInformation>>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
-**替代接口：** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getRunningProcessInformation)
+**替代接口：** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,11 +55,9 @@ getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
-**替代接口：** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getRunningProcessInformation)
+**替代接口：** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,10 +89,6 @@ preloadUIExtensionAbility(want: Want): Promise<void>
 预加载指定UIExtensionAbility实例。使用Promise异步回调。 被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。 被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -137,7 +125,7 @@ preloadUIExtensionAbility(want: Want): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -231,11 +219,9 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
-**替代接口：** [on](arkts-ability-applicationcontext-c.md#on_abilityLifecycle)(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)
+**替代接口：** [on](arkts-ability-applicationcontext-c.md#onabilitylifecycle)(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -267,11 +253,9 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
-**替代接口：** [on](arkts-ability-applicationcontext-c.md#on_abilityLifecycle)(type: 'environment', callback: EnvironmentCallback)
+**替代接口：** [on](arkts-ability-applicationcontext-c.md#onabilitylifecycle)(type: 'environment', callback: EnvironmentCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -285,7 +269,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | 是 | 系统环境变化时触发的回调方法。 |
+| environmentCallback | [EnvironmentCallback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -303,11 +287,9 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
-**替代接口：** [off](arkts-ability-applicationcontext-c.md#off_abilityLifecycle)(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback&lt;void&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -321,7 +303,7 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackId | number | 是 | 通过 [ApplicationContext.registerAbilityLifecycleCallback](#registerAbilityLifecycleCallback) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
+| callbackId | number | 是 | 通过 [ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
 | callback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消监听应用内生命周期成功，err为undefined，否则为错误对象。 |
 
 ## unregisterAbilityLifecycleCallback
@@ -333,8 +315,6 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 取消监听应用内UIAbility的生命周期。使用Promise异步回调。 &lt;p&gt;**说明：**: <br>仅支持主线程调用。 &lt;/p&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 10
 
@@ -352,7 +332,7 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackId | number | 是 | 通过 [ApplicationContext.registerAbilityLifecycleCallback](#registerAbilityLifecycleCallback) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
+| callbackId | number | 是 | 通过 [ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
 
 **返回值：**
 
@@ -376,11 +356,9 @@ unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<voi
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 10
 
-**替代接口：** [off](arkts-ability-applicationcontext-c.md#off_abilityLifecycle)(type: 'environment', callbackId: number, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'environment', callbackId: number, callback: AsyncCallback&lt;void&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -394,7 +372,7 @@ unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackId | number | 是 | 通过 [ApplicationContext.registerEnvironmentCallback](#registerEnvironmentCallback) 接口注册监听系统环境变化时返回的ID。 |
+| callbackId | number | 是 | 通过 [ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback) 接口注册监听系统环境变化时返回的ID。 |
 | envcallback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消对系统环境变化的监听成功，err为undefined，否则为错误对象。 |
 
 ## unregisterEnvironmentCallback
@@ -406,8 +384,6 @@ unregisterEnvironmentCallback(callbackId: number): Promise<void>
 取消对系统环境变化的监听。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 10
 
@@ -425,7 +401,7 @@ unregisterEnvironmentCallback(callbackId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackId | number | 是 | 通过 [ApplicationContext.registerEnvironmentCallback](#registerEnvironmentCallback) 接口注册监听系统环境变化时返回的ID。 |
+| callbackId | number | 是 | 通过 [ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback) 接口注册监听系统环境变化时返回的ID。 |
 
 **返回值：**
 

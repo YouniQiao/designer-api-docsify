@@ -10,11 +10,9 @@ Removes a directory. This API returns the result synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [rmdirSync](arkts-corefile-file-fs-rmdirsync-f.md#rmdirSync)
+**Substitutes:** [rmdirSync](arkts-corefile-file-fs-rmdirsync-f.md#rmdirsync)
 
 <!--Device-unnamed-declare function rmdirSync(path: string): void--><!--Device-unnamed-declare function rmdirSync(path: string): void-End-->
 

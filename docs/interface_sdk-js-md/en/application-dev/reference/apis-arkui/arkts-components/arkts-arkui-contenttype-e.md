@@ -4,10 +4,6 @@ Enumerates the content types for autofill.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum ContentType--><!--Device-unnamed-declare enum ContentType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ USER_NAME = 0
 Username. Password Vault, when enabled, can automatically save and fill in usernames.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,10 +36,6 @@ Password. Password Vault, when enabled, can automatically save and fill in passw
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,10 +53,6 @@ NEW_PASSWORD = 2
 New password. Password Vault, when enabled, can automatically generate a new password.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,10 +72,6 @@ Full street address. The scenario-based autofill feature, when enabled, can auto
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -109,10 +89,6 @@ HOUSE_NUMBER = 4
 House number. The scenario-based autofill feature, when enabled, can automatically save and fill in house numbers.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,10 +108,6 @@ District and county. The scenario-based autofill feature, when enabled, can auto
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -153,10 +125,6 @@ CITY_ADDRESS = 6
 City. The scenario-based autofill feature, when enabled, can automatically save and fill in cities.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,10 +144,6 @@ Province. The scenario-based autofill feature, when enabled, can automatically s
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -197,10 +161,6 @@ COUNTRY_ADDRESS = 8
 Country. The scenario-based autofill feature, when enabled, can automatically save and fill in countries.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,10 +180,6 @@ Full name. The scenario-based autofill feature, when enabled, can automatically 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -241,10 +197,6 @@ PERSON_LAST_NAME = 10
 Last name. The scenario-based autofill feature, when enabled, can automatically save and fill in last names.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -264,10 +216,6 @@ First name. The scenario-based autofill feature, when enabled, can automatically
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -285,10 +233,6 @@ PHONE_NUMBER = 12
 Phone number. The scenario-based autofill feature, when enabled, can automatically save and fill in phone numbers.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -308,10 +252,6 @@ Country code. The scenario-based autofill feature, when enabled, can automatical
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -329,10 +269,6 @@ FULL_PHONE_NUMBER = 14
 Phone number with country code. The scenario-based autofill feature, when enabled, can automatically save and fill in phone numbers with country codes.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -352,10 +288,6 @@ Email address. The scenario-based autofill feature, when enabled, can automatica
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -373,10 +305,6 @@ BANK_CARD_NUMBER = 16
 Bank card number. The scenario-based autofill feature, when enabled, can automatically save and fill in bank card numbers.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -396,10 +324,6 @@ ID card number. The scenario-based autofill feature, when enabled, can automatic
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -417,10 +341,6 @@ NICKNAME = 23
 Nickname. The scenario-based autofill feature, when enabled, can automatically save and fill in nicknames.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -440,10 +360,6 @@ Address information without street address. The scenario-based autofill feature,
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -461,10 +377,6 @@ FORMAT_ADDRESS = 25
 Standard address. The scenario-based autofill feature, when enabled, can automatically save and fill in standard addresses.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -484,10 +396,6 @@ Passport number. The scenario-based autofill feature, when enabled, can automati
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -505,10 +413,6 @@ VALIDITY = 27
 Passport validity period. The scenario-based autofill feature, when enabled, can automatically save and fill in passport validity periods.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -528,10 +432,6 @@ Passport place of issue. The scenario-based autofill feature, when enabled, can 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -549,10 +449,6 @@ ORGANIZATION = 29
 Invoice title. The scenario-based autofill feature, when enabled, can automatically save and fill in invoice titles.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -572,10 +468,6 @@ Tax ID. The scenario-based autofill feature, when enabled, can automatically sav
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -593,10 +485,6 @@ ADDRESS_CITY_AND_STATE = 31
 Location. The scenario-based autofill feature, when enabled, can automatically save and fill in locations.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -616,10 +504,6 @@ Flight number. Currently not supported for automatic saving and auto-filling.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -637,10 +521,6 @@ LICENSE_NUMBER = 33
 Driver's license number. Currently not supported for automatic saving and auto-filling.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -660,10 +540,6 @@ Driver's license file number. Currently not supported for automatic saving and a
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -681,10 +557,6 @@ LICENSE_PLATE = 35
 License plate number. The scenario-based autofill feature, when enabled, can automatically save and fill in license plate numbers.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -704,10 +576,6 @@ Vehicle registration engine number. Currently not supported for automatic saving
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -725,10 +593,6 @@ LICENSE_CHASSIS_NUMBER = 37
 Chassis number. Currently not supported for automatic saving and auto-filling.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

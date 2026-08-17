@@ -16,10 +16,6 @@ Opens the notification settings page of the application, which is displayed in s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-notificationManager-function openNotificationSettings(context: UIAbilityContext): Promise<void>--><!--Device-notificationManager-function openNotificationSettings(context: UIAbilityContext): Promise<void>-End-->
@@ -55,7 +51,7 @@ getNotificationSetting obtains the notification settings
 | [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) | The notification settings window is already displayed. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

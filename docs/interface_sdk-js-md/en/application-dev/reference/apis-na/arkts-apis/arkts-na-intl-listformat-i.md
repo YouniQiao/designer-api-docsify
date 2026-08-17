@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Intl-interface ListFormat--><!--Device-Intl-interface ListFormat-End-->
 
 ## format
@@ -17,10 +13,6 @@ format(list: Iterable<string>): string
 Returns a string with a language-specific representation of the list.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ListFormat-format(list: Iterable<string>): string--><!--Device-ListFormat-format(list: Iterable<string>): string-End-->
 
@@ -45,10 +37,6 @@ formatToParts(list: Iterable<string>): { type: "element" | "literal", value: str
 Returns an Array of objects representing the different components that can be used to format a list of values in a locale-aware fashion.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ListFormat-formatToParts(list: Iterable<string>): { type: "element" | "literal", value: string; }[]--><!--Device-ListFormat-formatToParts(list: Iterable<string>): { type: "element" | "literal", value: string; }[]-End-->
 

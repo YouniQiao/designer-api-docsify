@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-window-interface StartAnimationParams--><!--Device-window-interface StartAnimationParams-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -23,10 +19,6 @@ The type of window animation
 **类型：** [AnimationType](arkts-arkui-window-animationtype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-StartAnimationParams-type: AnimationType--><!--Device-StartAnimationParams-type: AnimationType-End-->
 

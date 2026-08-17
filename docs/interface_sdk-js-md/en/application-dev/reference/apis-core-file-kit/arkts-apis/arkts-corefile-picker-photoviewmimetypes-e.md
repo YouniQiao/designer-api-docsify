@@ -4,11 +4,9 @@ Enumerates the media file types that can be selected.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#PhotoViewMIMETypes)
+**Substitutes:** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#photoviewmimetypes)
 
 <!--Device-picker-export enum PhotoViewMIMETypes--><!--Device-picker-export enum PhotoViewMIMETypes-End-->
 
@@ -24,11 +22,9 @@ Image.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#IMAGE_TYPE)
+**Substitutes:** [IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#imagetype)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,11 +42,9 @@ Video.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#VIDEO_TYPE)
+**Substitutes:** [VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#videotype)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,11 +62,9 @@ Image and video.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#IMAGE_VIDEO_TYPE)
+**Substitutes:** [IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#imagevideotype)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

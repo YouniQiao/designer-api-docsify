@@ -4,10 +4,6 @@ The **UiWindow** class represents a window on the UI and provides APIs for obtai
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class UiWindow--><!--Device-unnamed-declare class UiWindow-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -56,10 +52,6 @@ Closes a window. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-close(): Promise<void>--><!--Device-UiWindow-close(): Promise<void>-End-->
@@ -80,7 +72,7 @@ Closes a window. This API uses a promise to return the result.
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -103,10 +95,6 @@ Focuses a window. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-focus(): Promise<void>--><!--Device-UiWindow-focus(): Promise<void>-End-->
@@ -126,7 +114,7 @@ Focuses a window. This API uses a promise to return the result.
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -149,10 +137,6 @@ Obtains the bounds information of a window. This API uses a promise to return th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-getBounds(): Promise<Rect>--><!--Device-UiWindow-getBounds(): Promise<Rect>-End-->
@@ -172,7 +156,7 @@ Obtains the bounds information of a window. This API uses a promise to return th
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -195,10 +179,6 @@ Obtains the bundle name of the application to which a window belongs. This API u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-getBundleName(): Promise<string>--><!--Device-UiWindow-getBundleName(): Promise<string>-End-->
@@ -218,7 +198,7 @@ Obtains the bundle name of the application to which a window belongs. This API u
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -241,10 +221,6 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UiWindow-getDisplayId(): Promise<int>--><!--Device-UiWindow-getDisplayId(): Promise<int>-End-->
@@ -264,7 +240,7 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -287,10 +263,6 @@ Obtains the window title. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-getTitle(): Promise<string>--><!--Device-UiWindow-getTitle(): Promise<string>-End-->
@@ -310,7 +282,7 @@ Obtains the window title. This API uses a promise to return the result.
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -333,10 +305,6 @@ Obtains the window mode. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-getWindowMode(): Promise<WindowMode>--><!--Device-UiWindow-getWindowMode(): Promise<WindowMode>-End-->
@@ -356,7 +324,7 @@ Obtains the window mode. This API uses a promise to return the result.
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -379,10 +347,6 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UiWindow-isActive(): Promise<boolean>--><!--Device-UiWindow-isActive(): Promise<boolean>-End-->
@@ -402,7 +366,7 @@ Checks whether a window is active. This API uses a promise to return the result.
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -425,11 +389,9 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 11
 
-**Substitutes:** [isActive](#isActive)
+**Substitutes:** [isActive](#isactive)
 
 <!--Device-UiWindow-isActived(): Promise<boolean>--><!--Device-UiWindow-isActived(): Promise<boolean>-End-->
 
@@ -448,7 +410,7 @@ Checks whether a window is active. This API uses a promise to return the result.
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -471,10 +433,6 @@ Checks whether a window is focused. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-isFocused(): Promise<boolean>--><!--Device-UiWindow-isFocused(): Promise<boolean>-End-->
@@ -494,7 +452,7 @@ Checks whether a window is focused. This API uses a promise to return the result
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -517,10 +475,6 @@ Maximizes a window. A window can be resumed to its previous mode using [resume](
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-maximize(): Promise<void>--><!--Device-UiWindow-maximize(): Promise<void>-End-->
@@ -541,7 +495,7 @@ Maximizes a window. A window can be resumed to its previous mode using [resume](
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -564,10 +518,6 @@ Minimizes a window. A window can be resumed to its previous mode using [resume](
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-minimize(): Promise<void>--><!--Device-UiWindow-minimize(): Promise<void>-End-->
@@ -588,7 +538,7 @@ Minimizes a window. A window can be resumed to its previous mode using [resume](
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -610,10 +560,6 @@ moveTo(x: int, y: int): Promise<void>
 Moves a window to the target point. This API uses a promise to return the result. This API is applicable to moveable windows.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -643,7 +589,7 @@ Moves a window to the target point. This API uses a promise to return the result
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -665,10 +611,6 @@ resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 Resizes a window based on the specified width, height, and direction. This API uses a promise to return the result. This API is applicable to resizable windows.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -699,7 +641,7 @@ Resizes a window based on the specified width, height, and direction. This API u
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -722,10 +664,6 @@ Resumes a window to its previous mode. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-resume(): Promise<void>--><!--Device-UiWindow-resume(): Promise<void>-End-->
@@ -746,7 +684,7 @@ Resumes a window to its previous mode. This API uses a promise to return the res
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -769,10 +707,6 @@ Switches to the split-screen mode. A window can be resumed to its previous mode 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiWindow-split(): Promise<void>--><!--Device-UiWindow-split(): Promise<void>-End-->
@@ -793,7 +727,7 @@ Switches to the split-screen mode. A window can be resumed to its previous mode 
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets

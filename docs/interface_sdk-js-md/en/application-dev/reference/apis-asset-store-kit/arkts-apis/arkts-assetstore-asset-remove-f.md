@@ -16,10 +16,6 @@ Removes one or more assets. This API uses a promise to return the result.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-asset-function remove(query: AssetMap): Promise<void>--><!--Device-asset-function remove(query: AssetMap): Promise<void>-End-->
@@ -54,7 +50,7 @@ Removes one or more assets. This API uses a promise to return the result.
 | [24000002](../errorcode-asset.md#24000002-asset-not-found) | The asset is not found. |
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

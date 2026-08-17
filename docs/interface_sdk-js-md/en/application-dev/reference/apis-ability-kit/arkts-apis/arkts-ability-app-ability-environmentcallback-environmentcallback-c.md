@@ -4,10 +4,6 @@ The EnvironmentCallback module provides capabilities to listen for system enviro
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class EnvironmentCallback--><!--Device-unnamed-export default class EnvironmentCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -24,13 +20,9 @@ import { EnvironmentCallback } from 'EnvironmentCallback';
 onConfigurationUpdated(config: Configuration): void
 ```
 
-Called when the system configuration changes, after [a listener has been registered for such events](arkts-ability-applicationcontext-c.md#on_abilityLifecycle) .
+Called when the system configuration changes, after [a listener has been registered for such events](arkts-ability-applicationcontext-c.md#onabilitylifecycle) .
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +38,7 @@ Called when the system configuration changes, after [a listener has been registe
 | --- | --- | --- | --- |
 | config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | Configuration object after the change. |
 
-## Examples
+**Examples**
 
 See Usage of EnvironmentCallback.
 
@@ -56,13 +48,9 @@ See Usage of EnvironmentCallback.
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-Called when the system memory level changes, after [a listener has been registered for such events](arkts-ability-applicationcontext-c.md#on_abilityLifecycle) .
+Called when the system memory level changes, after [a listener has been registered for such events](arkts-ability-applicationcontext-c.md#onabilitylifecycle) .
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +66,7 @@ Called when the system memory level changes, after [a listener has been register
 | --- | --- | --- | --- |
 | level | AbilityConstant.MemoryLevel | Yes | Memory level, indicating the available memory of the entire device. |
 
-## Examples
+**Examples**
 
 See Usage of EnvironmentCallback.
 

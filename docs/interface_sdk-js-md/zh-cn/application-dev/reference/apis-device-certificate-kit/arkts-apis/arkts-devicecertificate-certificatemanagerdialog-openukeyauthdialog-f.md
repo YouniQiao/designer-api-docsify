@@ -10,10 +10,6 @@ function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRe
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -46,7 +42,7 @@ function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRe
 | [29700002](../errorcode-certManagerDialog.md#29700002-操作取消) | The user cancels the authentication operation. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
@@ -57,7 +53,7 @@ import { UIContext } from '@kit.ArkUI';
 /* context为应用的上下文信息，调用方自行获取，此处仅为示例 */
 let context: common.Context = new UIContext().getHostContext() as common.Context;
 /* keyUri为证书凭据的唯一标识符，调用方自行获取，此处仅为示例 */
-let keyUri: string = "test";
+let keyUri: string = 'test';
 let ukeyAuthRequest: certificateManagerDialog.UkeyAuthRequest = { keyUri: keyUri };
 try {
   certificateManagerDialog.openUkeyAuthDialog(context, ukeyAuthRequest).then(() => {

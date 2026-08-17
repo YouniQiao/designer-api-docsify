@@ -4,10 +4,6 @@ Represents the information returned by the callback of revokeSave.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDataObject-interface RevokeSaveSuccessResponse--><!--Device-distributedDataObject-interface RevokeSaveSuccessResponse-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -29,10 +25,6 @@ Unique ID for multi-device collaboration.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RevokeSaveSuccessResponse-sessionId: string--><!--Device-RevokeSaveSuccessResponse-sessionId: string-End-->
 

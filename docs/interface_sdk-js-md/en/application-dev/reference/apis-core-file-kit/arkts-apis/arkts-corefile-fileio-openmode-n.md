@@ -4,10 +4,6 @@ Mode Indicates the open flags.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-fileIo-namespace OpenMode--><!--Device-fileIo-namespace OpenMode-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -38,15 +34,15 @@ import { TaskSignal } from 'TaskSignal';
 
 | Name | Description |
 | --- | --- |
-| [READ_ONLY](arkts-corefile-openmode-con.md#READ_ONLY) | Open the file in read-only mode. |
-| [WRITE_ONLY](arkts-corefile-openmode-con.md#WRITE_ONLY) | Open the file in write-only mode. |
-| [READ_WRITE](arkts-corefile-openmode-con.md#READ_WRITE) | Open the file in read/write mode. |
-| [CREATE](arkts-corefile-openmode-con.md#CREATE) | Create a file if the specified file does not exist. |
-| [TRUNC](arkts-corefile-openmode-con.md#TRUNC) | If the file exists and is opened in write-only or read/write mode, truncate the file length to 0. |
-| [APPEND](arkts-corefile-openmode-con.md#APPEND) | Open the file in append mode. New data will be written to the end of the file. |
-| [NONBLOCK](arkts-corefile-openmode-con.md#NONBLOCK) | If **path** points to a named pipe (FIFO), block special file, or character special file, perform non-blocking operations on the open file and in subsequent I/Os. |
-| [DIR](arkts-corefile-openmode-con.md#DIR) | If **path** does not point to a directory, throw an exception. |
-| [NOFOLLOW](arkts-corefile-openmode-con.md#NOFOLLOW) | If **path** points to a symbolic link, throw an exception. |
-| [SYNC](arkts-corefile-openmode-con.md#SYNC) | Open the file in synchronous I/O mode. |
-| [UNCACHE](arkts-corefile-openmode-con.md#UNCACHE) | UNCACHE IO. |
+| [READ_ONLY](arkts-corefile-openmode-con.md#readonly) | Open the file in read-only mode. |
+| [WRITE_ONLY](arkts-corefile-openmode-con.md#writeonly) | Open the file in write-only mode. |
+| [READ_WRITE](arkts-corefile-openmode-con.md#readwrite) | Open the file in read/write mode. |
+| [CREATE](arkts-corefile-openmode-con.md#create) | Create a file if the specified file does not exist. |
+| [TRUNC](arkts-corefile-openmode-con.md#trunc) | If the file exists and is opened in write-only or read/write mode, truncate the file length to 0. |
+| [APPEND](arkts-corefile-openmode-con.md#append) | Open the file in append mode. New data will be written to the end of the file. |
+| [NONBLOCK](arkts-corefile-openmode-con.md#nonblock) | If **path** points to a named pipe (FIFO), block special file, or character special file, perform non-blocking operations on the open file and in subsequent I/Os. |
+| [DIR](arkts-corefile-openmode-con.md#dir) | If **path** does not point to a directory, throw an exception. |
+| [NOFOLLOW](arkts-corefile-openmode-con.md#nofollow) | If **path** points to a symbolic link, throw an exception. |
+| [SYNC](arkts-corefile-openmode-con.md#sync) | Open the file in synchronous I/O mode. |
+| [UNCACHE](arkts-corefile-openmode-con.md#uncache) | UNCACHE IO. |
 

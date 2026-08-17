@@ -16,11 +16,9 @@ Obtains the numeric mask combination for the USB function list in Device mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentFunctions](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md#getCurrentFunctions-(System-API))
+**Substitutes:** [getCurrentFunctions](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md#getcurrentfunctions-system-api)
 
 <!--Device-usb-function getCurrentFunctions(): FunctionType--><!--Device-usb-function getCurrentFunctions(): FunctionType-End-->
 
@@ -34,7 +32,7 @@ Obtains the numeric mask combination for the USB function list in Device mode.
 | --- | --- |
 | FunctionType | Numeric mask combination for the USB function list. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ret = usb.getCurrentFunctions();

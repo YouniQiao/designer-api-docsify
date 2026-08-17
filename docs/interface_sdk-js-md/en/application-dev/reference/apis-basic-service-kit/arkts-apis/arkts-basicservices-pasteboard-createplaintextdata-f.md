@@ -16,11 +16,9 @@ Creates a **PasteData** object of the plain text type.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createData](arkts-basicservices-pasteboard-createdata-f.md#createData)(mimeType: string, value: ValueType)
+**Substitutes:** [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createPlainTextData(text: string): PasteData--><!--Device-pasteboard-function createPlainTextData(text: string): PasteData-End-->
 
@@ -38,7 +36,7 @@ Creates a **PasteData** object of the plain text type.
 | --- | --- |
 | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');

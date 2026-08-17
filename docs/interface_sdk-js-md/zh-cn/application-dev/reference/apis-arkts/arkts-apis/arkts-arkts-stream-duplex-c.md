@@ -1,14 +1,10 @@
 # Duplex
 
-既可读又可写的流。双工流允许数据双向传输，即可读可写。 **Duplex**类继承自[Readable](arkts-arkts-stream-readableoptions-i.md#ReadableOptions)，支持**Readable**中的所有API。
+既可读又可写的流。双工流允许数据双向传输，即可读可写。 **Duplex**类继承自[Readable](arkts-arkts-stream-readableoptions-i.md#readableoptions)，支持**Readable**中的所有API。
 
-**继承/实现关系：** Duplex extends [Readable](arkts-arkts-stream-readable-c.md#Readable)
+**继承/实现关系：** Duplex extends [Readable](arkts-arkts-stream-readable-c.md#readable)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-stream-class Duplex--><!--Device-stream-class Duplex-End-->
 
@@ -24,17 +20,13 @@ constructor()
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-constructor()--><!--Device-Duplex-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 示例
+**示例**
 
 ```TypeScript
 let duplex = new stream.Duplex();
@@ -50,10 +42,6 @@ cork(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-cork(): boolean--><!--Device-Duplex-cork(): boolean-End-->
@@ -66,7 +54,7 @@ cork(): boolean
 | --- | --- |
 | boolean | 返回设置cork状态是否成功。true表示设置成功，false表示设置失败。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let duplexStream = new stream.Duplex();
@@ -84,10 +72,6 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void--><!--Device-Duplex-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void-End-->
@@ -102,7 +86,7 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 | encoding | string | 是 | 字符编码类型。当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 | callback | Function | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -156,10 +140,6 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-doWritev(chunks: string[] | Uint8Array[], callback: Function): void--><!--Device-Duplex-doWritev(chunks: string[] | Uint8Array[], callback: Function): void-End-->
@@ -173,7 +153,7 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 | chunks | string[] \| Uint8Array[] | 是 | 待批量写出的数据块数组。 |
 | callback | Function | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -243,10 +223,6 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable--><!--Device-Duplex-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable-End-->
@@ -273,7 +249,7 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 | --- | --- |
 | [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) | The doTransform method has not been implemented for a class that inherits from Transform. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -331,10 +307,6 @@ setDefaultEncoding(encoding?: string): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-setDefaultEncoding(encoding?: string): boolean--><!--Device-Duplex-setDefaultEncoding(encoding?: string): boolean-End-->
@@ -353,7 +325,7 @@ setDefaultEncoding(encoding?: string): boolean
 | --- | --- |
 | boolean | 返回是否设置成功。true表示设置成功，false表示设置失败。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -407,10 +379,6 @@ uncork(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-uncork(): boolean--><!--Device-Duplex-uncork(): boolean-End-->
@@ -423,7 +391,7 @@ uncork(): boolean
 | --- | --- |
 | boolean | 返回解除cork状态是否成功。true表示成功，false表示失败。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -487,10 +455,6 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Duplex-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean--><!--Device-Duplex-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean-End-->
@@ -519,7 +483,7 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 | [10200037](../errorcode-utils.md#10200037-多次调用callback) | The callback is invoked multiple times consecutively. |
 | [10200036](../errorcode-utils.md#10200036-流已经结束仍进行写操作) | The stream has been ended. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -16,11 +16,9 @@ Set settingsdata value(synchronous method)
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setValueSync](#setValueSync)
+**Substitutes:** [setValueSync](#setvaluesync)
 
 **Required permissions:** ohos.permission.MANAGE_SETTINGS
 
@@ -44,7 +42,7 @@ Set settingsdata value(synchronous method)
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import featureAbility from '@ohos.ability.featureAbility';
@@ -65,10 +63,6 @@ function setValueSync(context: Context, name: string, value: string): boolean
 Set settingsdata value(synchronous method)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SETTINGS
 
@@ -92,7 +86,7 @@ Set settingsdata value(synchronous method)
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
@@ -114,10 +108,6 @@ function setValueSync(context: Context, name: string, value: string, domainName:
 Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS or ohos.permission.MANAGE_SETTINGS
 
@@ -148,7 +138,7 @@ Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domai
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

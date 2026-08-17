@@ -4,11 +4,9 @@ Defines information about the images or videos selected.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#PhotoSelectResult)
+**Substitutes:** [PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photoselectresult)
 
 <!--Device-picker-class PhotoSelectResult--><!--Device-picker-class PhotoSelectResult-End-->
 
@@ -32,11 +30,9 @@ Whether the selected image is the original one. The value **true** means the sel
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [isOriginalPhoto](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#isOriginalPhoto)
+**Substitutes:** [isOriginalPhoto](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#isoriginalphoto)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,17 +46,15 @@ Whether the selected image is the original one. The value **true** means the sel
 photoUris: Array<string>
 ```
 
-URIs of the media files selected. This URI array can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets) . For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+URIs of the media files selected. This URI array can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) . For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** [photoUris](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photoUris)
+**Substitutes:** [photoUris](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photouris)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

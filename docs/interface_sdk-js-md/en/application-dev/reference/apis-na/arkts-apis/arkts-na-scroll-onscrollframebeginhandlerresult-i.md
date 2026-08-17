@@ -4,9 +4,7 @@ The data returned by the event handler when onScrollFrameBegin.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export interface OnScrollFrameBeginHandlerResult--><!--Device-unnamed-export interface OnScrollFrameBeginHandlerResult-End-->
 
@@ -24,9 +22,7 @@ Actual scroll offset. Anonymous Object Rectification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

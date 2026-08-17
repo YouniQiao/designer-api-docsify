@@ -16,11 +16,9 @@ Subscribes to the thermal level changes. This API uses an asynchronous callback 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md#registerThermalLevelCallback)
+**Substitutes:** [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md#registerthermallevelcallback)
 
 <!--Device-thermal-function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void--><!--Device-thermal-function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void-End-->
 
@@ -32,7 +30,7 @@ Subscribes to the thermal level changes. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)&gt; | Yes | Callback used to return thermal level. This parameter is of the function type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 thermal.subscribeThermalLevel((err: Error, level: thermal.ThermalLevel) => {

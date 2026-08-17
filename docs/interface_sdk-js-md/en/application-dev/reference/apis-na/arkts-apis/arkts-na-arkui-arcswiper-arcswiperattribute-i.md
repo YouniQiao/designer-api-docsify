@@ -6,9 +6,7 @@ Defines the Arc swiper attribute functions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare interface ArcSwiperAttribute--><!--Device-unnamed-export declare interface ArcSwiperAttribute-End-->
 
@@ -22,9 +20,7 @@ customContentTransition(transition: ArcSwiperContentAnimatedTransition | undefin
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-customContentTransition(transition: ArcSwiperContentAnimatedTransition | undefined): this--><!--Device-ArcSwiperAttribute-customContentTransition(transition: ArcSwiperContentAnimatedTransition | undefined): this-End-->
 
@@ -48,9 +44,7 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this--><!--Device-ArcSwiperAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this-End-->
 
@@ -74,9 +68,7 @@ disableSwipe(disabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-disableSwipe(disabled: boolean | undefined): this--><!--Device-ArcSwiperAttribute-disableSwipe(disabled: boolean | undefined): this-End-->
 
@@ -100,9 +92,7 @@ disableTransitionAnimation(disabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-disableTransitionAnimation(disabled: boolean | undefined): this--><!--Device-ArcSwiperAttribute-disableTransitionAnimation(disabled: boolean | undefined): this-End-->
 
@@ -126,9 +116,7 @@ duration(duration: int | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-duration(duration: int | undefined): this--><!--Device-ArcSwiperAttribute-duration(duration: int | undefined): this-End-->
 
@@ -152,9 +140,7 @@ effectMode(edgeEffect: EdgeEffect | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-effectMode(edgeEffect: EdgeEffect | undefined): this--><!--Device-ArcSwiperAttribute-effectMode(edgeEffect: EdgeEffect | undefined): this-End-->
 
@@ -178,9 +164,7 @@ index(index: int | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-index(index: int | undefined): this--><!--Device-ArcSwiperAttribute-index(index: int | undefined): this-End-->
 
@@ -204,9 +188,7 @@ indicator(style: ArcDotIndicator | boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-indicator(style: ArcDotIndicator | boolean | undefined): this--><!--Device-ArcSwiperAttribute-indicator(style: ArcDotIndicator | boolean | undefined): this-End-->
 
@@ -230,9 +212,7 @@ onAnimationEnd(handler: AnimationEndHandler | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-onAnimationEnd(handler: AnimationEndHandler | undefined): this--><!--Device-ArcSwiperAttribute-onAnimationEnd(handler: AnimationEndHandler | undefined): this-End-->
 
@@ -240,7 +220,7 @@ onAnimationEnd(handler: AnimationEndHandler | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [AnimationEndHandler](../../apis-arkui/arkts-apis/arkts-arkui-animationendhandler-t.md) \| undefined | Yes |  |
+| handler | [AnimationEndHandler](arkts-na-animationendhandler-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -256,9 +236,7 @@ onAnimationStart(handler: AnimationStartHandler | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-onAnimationStart(handler: AnimationStartHandler | undefined): this--><!--Device-ArcSwiperAttribute-onAnimationStart(handler: AnimationStartHandler | undefined): this-End-->
 
@@ -266,7 +244,7 @@ onAnimationStart(handler: AnimationStartHandler | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [AnimationStartHandler](../../apis-arkui/arkts-apis/arkts-arkui-animationstarthandler-t.md) \| undefined | Yes |  |
+| handler | [AnimationStartHandler](arkts-na-animationstarthandler-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -282,9 +260,7 @@ onChange(handler: IndexChangedHandler | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-onChange(handler: IndexChangedHandler | undefined): this--><!--Device-ArcSwiperAttribute-onChange(handler: IndexChangedHandler | undefined): this-End-->
 
@@ -292,7 +268,7 @@ onChange(handler: IndexChangedHandler | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [IndexChangedHandler](../../apis-arkui/arkts-apis/arkts-arkui-indexchangedhandler-t.md) \| undefined | Yes |  |
+| handler | [IndexChangedHandler](arkts-na-indexchangedhandler-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -308,9 +284,7 @@ onGestureSwipe(handler: GestureSwipeHandler | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-onGestureSwipe(handler: GestureSwipeHandler | undefined): this--><!--Device-ArcSwiperAttribute-onGestureSwipe(handler: GestureSwipeHandler | undefined): this-End-->
 
@@ -318,7 +292,7 @@ onGestureSwipe(handler: GestureSwipeHandler | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [GestureSwipeHandler](../../apis-arkui/arkts-apis/arkts-arkui-gestureswipehandler-t.md) \| undefined | Yes |  |
+| handler | [GestureSwipeHandler](arkts-na-gestureswipehandler-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -334,9 +308,7 @@ setArcSwiperOptions(controller?: ArcSwiperController): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-setArcSwiperOptions(controller?: ArcSwiperController): this--><!--Device-ArcSwiperAttribute-setArcSwiperOptions(controller?: ArcSwiperController): this-End-->
 
@@ -344,7 +316,7 @@ setArcSwiperOptions(controller?: ArcSwiperController): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [ArcSwiperController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | No |  |
+| controller | [ArcSwiperController](arkts-na-arkui-arcswiper-arcswipercontroller-c.md) | No |  |
 
 **Return value:**
 
@@ -360,9 +332,7 @@ vertical(isVertical: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-ArcSwiperAttribute-vertical(isVertical: boolean | undefined): this--><!--Device-ArcSwiperAttribute-vertical(isVertical: boolean | undefined): this-End-->
 
@@ -388,9 +358,7 @@ Set arcSwiper options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

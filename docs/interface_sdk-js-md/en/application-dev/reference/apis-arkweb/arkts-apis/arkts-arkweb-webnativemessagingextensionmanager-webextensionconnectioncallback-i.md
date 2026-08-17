@@ -4,10 +4,6 @@ As an input parameter when connecting a web native messaging extension, it is us
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback--><!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -28,10 +24,6 @@ Called when a connection is set up.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebExtensionConnectionCallback-onConnect(connection: ConnectionNativeInfo): void--><!--Device-WebExtensionConnectionCallback-onConnect(connection: ConnectionNativeInfo): void-End-->
@@ -42,9 +34,9 @@ Called when a connection is set up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application bundle name, browser extension source URL, and extension process ID. |
+| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application bundle name, browser extension source URL, and extension process ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -99,10 +91,6 @@ Called when a connection is interrupted.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebExtensionConnectionCallback-onDisconnect(connection: ConnectionNativeInfo): void--><!--Device-WebExtensionConnectionCallback-onDisconnect(connection: ConnectionNativeInfo): void-End-->
@@ -113,9 +101,9 @@ Called when a connection is interrupted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application package name, browser extension source URL, and extension process ID. |
+| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application package name, browser extension source URL, and extension process ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -170,10 +158,6 @@ Called when the connection fails.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebExtensionConnectionCallback-onFailed(code: NmErrorCode, errMsg: string): void--><!--Device-WebExtensionConnectionCallback-onFailed(code: NmErrorCode, errMsg: string): void-End-->
@@ -184,10 +168,10 @@ Called when the connection fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [NmErrorCode](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | Error code. |
+| code | [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | Error code. |
 | errMsg | string | Yes | Error message. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';

@@ -10,10 +10,6 @@ function isDLPFile(fd: number): Promise<boolean>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-dlpPermission-function isDLPFile(fd: number): Promise<boolean>--><!--Device-dlpPermission-function isDLPFile(fd: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -38,20 +34,20 @@ function isDLPFile(fd: number): Promise<boolean>
 | [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 
-let uri = "file://docs/storage/Users/currentUser/Documents/test.txt.dlp";
+let uri = 'file://docs/storage/Users/currentUser/Documents/test.txt.dlp';
 let file: number | undefined = undefined;
 file = fileIo.openSync(uri).fd;
 dlpPermission.isDLPFile(file).then((isDLPFile: boolean) => {
     console.info(JSON.stringify(isDLPFile));
-}).catch((error: BusinessError)=> {
-    console.error(error.message);
-}).finally(()=> {
+}).catch((error: BusinessError) => {
+    console.error(`Failed to check if file is DLP file. Code: ${error.code}, message: ${error.message}`);
+}).finally(() => {
     if (file !== undefined) {
         fileIo.closeSync(file);
     }
@@ -69,10 +65,6 @@ function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-dlpPermission-function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void--><!--Device-dlpPermission-function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -82,7 +74,7 @@ function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fd | number | 是 | 待查询文件的fd（文件描述符）。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，抛出错误码19100001；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd 的值被截断。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，用于接收查询结果。回调参数包括：err（错误对象，查询成功时为undefined）和res（查询结果，返回true表示是DLP 文件，返回false表示非DLP文件）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数，用于接收查询结果。回调参数包括：err（错误对象，查询成功时为undefined）和res（查询结果，返回true表示是DLP 文件，返回false表示非DLP文件）。 |
 
 **错误码：**
 
@@ -92,7 +84,7 @@ function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void
 | [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

@@ -4,10 +4,6 @@ Definition of color mode of picker
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum AVCastPickerColorMode--><!--Device-unnamed-export declare enum AVCastPickerColorMode-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -21,10 +17,6 @@ AUTO
 Auto mode that follows the system definition.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ Dark mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVCastPickerColorMode-DARK--><!--Device-AVCastPickerColorMode-DARK-End-->
@@ -61,10 +49,6 @@ LIGHT
 Light mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

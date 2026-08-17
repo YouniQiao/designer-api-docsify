@@ -16,10 +16,6 @@ Obtains the sandbox path of the built-in card directory of the current user. Thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 <!--Device-Environment-function getUserHomeDir(): string--><!--Device-Environment-function getUserHomeDir(): string-End-->

@@ -10,10 +10,6 @@ function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本9 - 10：ohos.permission.CONNECT_IME_ABILITY
 
@@ -26,7 +22,7 @@ function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | target | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 是 | 目标输入法。<br/>**使用场景：**指定要切换到的目标输入法，通过name和id唯一确定。<br/>**说明：**只需填写name和id字段即可唯 一指定一个输入法，无需填写label、icon等可选字段。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当输入法切换成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当输入法切换成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
@@ -37,7 +33,7 @@ function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<
 | [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails.<br>**适用版本：** 9 - 10 |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 
@@ -89,10 +85,6 @@ function switchInputMethod(target: InputMethodProperty): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本9 - 10：ohos.permission.CONNECT_IME_ABILITY
 
@@ -121,7 +113,7 @@ function switchInputMethod(target: InputMethodProperty): Promise<boolean>
 | [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails.<br>**适用版本：** 9 - 10 |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

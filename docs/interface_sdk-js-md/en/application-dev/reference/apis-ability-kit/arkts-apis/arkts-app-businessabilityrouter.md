@@ -4,10 +4,6 @@ This module is used to obtain business ability information of various applicatio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace businessAbilityRouter--><!--Device-unnamed-declare namespace businessAbilityRouter-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -27,8 +23,8 @@ import { businessAbilityRouter } from 'businessAbilityRouter';
 
 | Name | Description |
 | --- | --- |
-| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md#queryBusinessAbilityInfo) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
-| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md#queryBusinessAbilityInfo-(System-API)) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
+| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md#querybusinessabilityinfo) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
+| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md#querybusinessabilityinfo-system-api) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
 <!--DelEnd-->
 
 <!--Del-->

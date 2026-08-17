@@ -4,10 +4,6 @@ Enumerates the number of data bits.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-serialManager-enum DataBits--><!--Device-serialManager-enum DataBits-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -21,10 +17,6 @@ DATABIT_8 = 8
 The number of data bits is 8.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataBits-DATABIT_8 = 8--><!--Device-DataBits-DATABIT_8 = 8-End-->
 
@@ -40,10 +32,6 @@ The number of data bits is 7.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataBits-DATABIT_7 = 7--><!--Device-DataBits-DATABIT_7 = 7-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -58,10 +46,6 @@ The number of data bits is 6.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataBits-DATABIT_6 = 6--><!--Device-DataBits-DATABIT_6 = 6-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -75,10 +59,6 @@ DATABIT_5 = 5
 The number of data bits is 5.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataBits-DATABIT_5 = 5--><!--Device-DataBits-DATABIT_5 = 5-End-->
 

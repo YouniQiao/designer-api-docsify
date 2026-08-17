@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export enum DescriptionType--><!--Device-update-export enum DescriptionType-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -24,10 +20,6 @@ CONTENT = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DescriptionType-CONTENT = 0--><!--Device-DescriptionType-CONTENT = 0-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -43,10 +35,6 @@ URI = 1
 链接。表示提供描述内容的链接地址，适用于描述内容较长或需要从外部资源获取的场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DescriptionType-URI = 1--><!--Device-DescriptionType-URI = 1-End-->
 

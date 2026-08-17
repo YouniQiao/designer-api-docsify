@@ -4,10 +4,6 @@ Defines a tool class for updating the local firmware, such as verifying the sign
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface LocalUpdater--><!--Device-update-export interface LocalUpdater-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -29,10 +25,6 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 Installs the upgrade package. During the upgrade, the device automatically restarts. The app status needs to be saved. This API uses an asynchronous callback to return the result. **Overview** The process is as follows: Read the upgrade package. Decompress the upgrade package. Verify the package integrity by verifying the signature and version compatibility based on the result of **verifyUpgradePackage**. Write the package to the system partition by overwriting or updating system files. Update the version ID. Prepare the environment for restart. The device restarts to apply the new version. Maintain the task status during the installation process. You can call **on** to monitor the installation progress and status changes. After the installation is successful, the device restarts and loads the new system version. The upgrade is complete. **Calling sequence** - You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling this method to install the upgrade package. - You must call **verifyUpgradePackage** to verify the upgrade package first. Failing to do so may cause installation failure or system damage. - After the API is successfully called, the system decompresses the upgrade package, writes its content to the system partition, and prepares for device restart to apply the new version. An event listener can be registered to track the installation progress. - You can install the upgrade package to update the system version. Use scenarios: This method is used to upgrade the system from a local storage device (such as an SD card).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -67,10 +59,6 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 Installs the upgrade package. During the upgrade, the device automatically restarts. The app status needs to be saved. This API uses a promise to return the result. **Overview** The process is as follows: Read the upgrade package. Decompress the upgrade package. Verify the package integrity by verifying the signature and version compatibility based on the result of **verifyUpgradePackage**. Write the package to the system partition by overwriting or updating system files. Update the version ID. Prepare the environment for restart. The device restarts to apply the new version. Maintain the task status during the installation process. You can call **on** to monitor the installation progress and status changes. After the installation is successful, the device restarts and loads the new system version. The upgrade is complete. **Calling sequence** - You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling this method to install the upgrade package. - You must call **verifyUpgradePackage** to verify the upgrade package first. Failing to do so may cause installation failure or system damage. - After the API is successfully called, the system decompresses the upgrade package, writes its content to the system partition, and prepares for device restart to apply the new version. An event listener can be registered to track the installation progress. - You can install the upgrade package to update the system version. Use scenarios: This method is used to upgrade the system from a local storage device (such as an SD card).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -111,10 +99,6 @@ Disables listening for update events. After the API is successfully called, no m
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void--><!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -134,7 +118,7 @@ Disables listening for update events. After the API is successfully called, no m
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
@@ -159,10 +143,6 @@ Registers an event listener to monitor the upgrade status in real time. After th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void--><!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -182,7 +162,7 @@ Registers an event listener to monitor the upgrade status in real time. After th
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
@@ -206,10 +186,6 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 Verifies the upgrade package, including its digital signature, file integrity, and version compatibility, to ensure that the upgrade package is officially released and has not been tampered with. If the API is called successfully and the verification is passed, the upgrade package is considered trusted and can be used for subsequent installation. If the verification fails, an error message is returned and the installation is blocked. This API uses an asynchronous callback to return the result. Use scenarios: When a user obtains an upgrade package from a local storage device, the source needs to be verified to ensure integrity and prevent malicious packet attacks. **Overview** The process is as follows: Read the upgrade package and certificate file. Use the certificate to verify the digital signature of the upgrade package, including the signature algorithm, signature value, and certificate validity. Calculate the hash value of the upgrade package and compare it with the hash value in the package to verify the file integrity. Check the compatibility between the upgrade package version and the current system version. Return the verification result. Digital signature verification ensures that the upgrade package is from a trusted source signed using the official signature. Integrity verification ensures that the upgrade package has not been tampered with. Version compatibility verification ensures that the upgrade package is applicable to the current device. After the verification is successful, the upgrade package is marked as trusted and can be used in the subsequent installation process. **Calling sequence** - The upgrade package must be downloaded from the official website of the vendor or from an official channel to ensure that the source is trusted. Using update packages downloaded from non-official channels may pose security risks. - You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling **applyNewVersion** to install the upgrade package. - If you call **applyNewVersion** without verifying the upgrade package first, the installation may fail and the system may be damaged. - The upgrade package that passes the verification can be used in the subsequent installation process. **Related methods** - **applyNewVersion()**: installs the upgrade package. This method can be called after the verification is successful.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -236,7 +212,7 @@ Verifies the upgrade package, including its digital signature, file integrity, a
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const upgradeFile: update.UpgradeFile = {
@@ -258,10 +234,6 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 Verifies the upgrade package, including its digital signature, file integrity, and version compatibility, to ensure that the upgrade package is officially released and has not been tampered with. If the API is called successfully and the verification is passed, the upgrade package is considered trusted and can be used for subsequent installation. If the verification fails, an error message is returned and the installation is blocked. This API uses a promise to return the result. Use scenarios: When a user obtains an upgrade package from a local storage device, the source needs to be verified to ensure integrity and prevent malicious packet attacks. **Overview** The process is as follows: Read the upgrade package and certificate file. Use the certificate to verify the digital signature of the upgrade package, including the signature algorithm, signature value, and certificate validity. Calculate the hash value of the upgrade package and compare it with the hash value in the package to verify the file integrity. Check the compatibility between the upgrade package version and the current system version. Return the verification result. Digital signature verification ensures that the upgrade package is from a trusted source signed using the official signature. Integrity verification ensures that the upgrade package has not been tampered with. Version compatibility verification ensures that the upgrade package is applicable to the current device. After the verification is successful, the upgrade package is marked as trusted and can be used in the subsequent installation process. **Calling sequence** - The upgrade package must be downloaded from the official website of the vendor or from an official channel to ensure that the source is trusted. Using update packages downloaded from non-official channels may pose security risks. - You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling **applyNewVersion** to install the upgrade package. - If you call **applyNewVersion** without verifying the upgrade package first, the installation may fail and the system may be damaged. - The upgrade package that passes the verification can be used in the subsequent installation process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -293,7 +265,7 @@ Verifies the upgrade package, including its digital signature, file integrity, a
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

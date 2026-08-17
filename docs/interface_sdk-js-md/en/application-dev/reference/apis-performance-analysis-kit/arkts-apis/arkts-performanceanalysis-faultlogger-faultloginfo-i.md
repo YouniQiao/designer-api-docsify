@@ -4,8 +4,6 @@ Defines the data structure of the fault log information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
 <!--Device-FaultLogger-interface FaultLogInfo--><!--Device-FaultLogger-interface FaultLogInfo-End-->
@@ -30,8 +28,6 @@ Full log text.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
 <!--Device-FaultLogInfo-fullLog: string--><!--Device-FaultLogInfo-fullLog: string-End-->
@@ -49,8 +45,6 @@ Module on which the fault occurred.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 18
 
@@ -70,8 +64,6 @@ Process ID of the faulty process.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
 <!--Device-FaultLogInfo-pid: number--><!--Device-FaultLogInfo-pid: number-End-->
@@ -89,8 +81,6 @@ Reason for the fault.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 18
 
@@ -110,8 +100,6 @@ Summary of the fault.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
 <!--Device-FaultLogInfo-summary: string--><!--Device-FaultLogInfo-summary: string-End-->
@@ -129,8 +117,6 @@ Millisecond-level timestamp when the log was generated.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 18
 
@@ -150,8 +136,6 @@ Fault type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 18
 
 <!--Device-FaultLogInfo-type: FaultType--><!--Device-FaultLogInfo-type: FaultType-End-->
@@ -169,8 +153,6 @@ User ID of the faulty process.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 18
 

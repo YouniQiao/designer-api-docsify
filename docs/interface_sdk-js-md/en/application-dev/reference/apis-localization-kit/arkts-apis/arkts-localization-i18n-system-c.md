@@ -4,10 +4,6 @@ Provides system attribute configuration functions, including translating languag
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class System--><!--Device-i18n-export class System-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Obtains the preferred language of an application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-System-static getAppPreferredLanguage(): string--><!--Device-System-static getAppPreferredLanguage(): string-End-->
@@ -44,7 +36,7 @@ Obtains the preferred language of an application.
 | --- | --- |
 | string | Preferred language of the application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -61,10 +53,6 @@ static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean
 Obtains the country/region display name in the specified language.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -93,7 +81,7 @@ Obtains the country/region display name in the specified language.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -116,10 +104,6 @@ static getDisplayLanguage(language: string, locale: string, sentenceCase?: boole
 Obtains the language display name in the specified language.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -148,7 +132,7 @@ Obtains the language display name in the specified language.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -173,10 +157,6 @@ Obtains the first day of a week in the system settings.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-System-static getFirstDayOfWeek(): WeekDay--><!--Device-System-static getFirstDayOfWeek(): WeekDay-End-->
@@ -187,9 +167,9 @@ Obtains the first day of a week in the system settings.
 
 | Type | Description |
 | --- | --- |
-| [WeekDay](../../apis-na/arkts-apis/arkts-na-i18n-weekday-e.md) | Start day of a week. |
+| [WeekDay](arkts-localization-i18n-weekday-e.md) | Start day of a week. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -207,10 +187,6 @@ Obtains the first language in the preferred language list.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-System-static getFirstPreferredLanguage(): string--><!--Device-System-static getFirstPreferredLanguage(): string-End-->
@@ -223,7 +199,7 @@ Obtains the first language in the preferred language list.
 | --- | --- |
 | string | First language in the preferred language list. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -241,10 +217,6 @@ Obtains the list of preferred languages.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-System-static getPreferredLanguageList(): Array<string>--><!--Device-System-static getPreferredLanguageList(): Array<string>-End-->
@@ -257,7 +229,7 @@ Obtains the list of preferred languages.
 | --- | --- |
 | Array&lt;string&gt; | List of preferred languages. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -274,10 +246,6 @@ static getSimplifiedLanguage(language?: string): string
 Obtains the simplified representation of a language. For example, the simplified representation of **en-Latn-US** is **en**, and that of **en-Latn-GB** is **en-GB**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -304,7 +272,7 @@ Obtains the simplified representation of a language. For example, the simplified
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -331,10 +299,6 @@ Obtains the list of countries/regions supported for the specified language.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-System-static getSystemCountries(language: string): Array<string>--><!--Device-System-static getSystemCountries(language: string): Array<string>-End-->
@@ -360,7 +324,7 @@ Obtains the list of countries/regions supported for the specified language.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -385,10 +349,6 @@ Obtains the current system language. To listen for system language changes, enab
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -403,7 +363,7 @@ Obtains the current system language. To listen for system language changes, enab
 | --- | --- |
 | string | Language ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -421,10 +381,6 @@ Obtains the list of system languages. Since API version 11, this API is supporte
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-System-static getSystemLanguages(): Array<string>--><!--Device-System-static getSystemLanguages(): Array<string>-End-->
@@ -437,7 +393,7 @@ Obtains the list of system languages. Since API version 11, this API is supporte
 | --- | --- |
 | Array&lt;string&gt; | List of system languages. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -456,11 +412,9 @@ Obtains the current system locale.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getSystemLocaleInstance](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getSystemLocaleInstance)
+**Substitutes:** [getSystemLocaleInstance](#getsystemlocaleinstance)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -474,7 +428,7 @@ Obtains the current system locale.
 | --- | --- |
 | string | Locale ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -492,10 +446,6 @@ Obtains the current system locale. To listen for system locale changes, enable l
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-System-static getSystemLocaleInstance(): Intl.Locale--><!--Device-System-static getSystemLocaleInstance(): Intl.Locale-End-->
@@ -508,7 +458,7 @@ Obtains the current system locale. To listen for system locale changes, enable l
 | --- | --- |
 | Intl.Locale | the locale object currently used by the system. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -526,10 +476,6 @@ Obtains the current system country/region. To listen for system region changes, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-System-static getSystemRegion(): string--><!--Device-System-static getSystemRegion(): string-End-->
@@ -542,7 +488,7 @@ Obtains the current system country/region. To listen for system region changes, 
 | --- | --- |
 | string | Country/region ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -560,10 +506,6 @@ Obtains the name of a temperature unit.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-System-static getTemperatureName(type: TemperatureType): string--><!--Device-System-static getTemperatureName(type: TemperatureType): string-End-->
@@ -574,7 +516,7 @@ Obtains the name of a temperature unit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TemperatureType](../../apis-na/arkts-apis/arkts-na-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
+| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
 
 **Return value:**
 
@@ -588,7 +530,7 @@ Obtains the name of a temperature unit.
 | --- | --- |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -613,10 +555,6 @@ Obtains the temperature unit of the system.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-System-static getTemperatureType(): TemperatureType--><!--Device-System-static getTemperatureType(): TemperatureType-End-->
@@ -627,9 +565,9 @@ Obtains the temperature unit of the system.
 
 | Type | Description |
 | --- | --- |
-| [TemperatureType](../../apis-na/arkts-apis/arkts-na-i18n-temperaturetype-e.md) | Temperature unit. |
+| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Temperature unit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -647,10 +585,6 @@ Checks whether use of local digits is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-System-static getUsingLocalDigit(): boolean--><!--Device-System-static getUsingLocalDigit(): boolean-End-->
@@ -663,7 +597,7 @@ Checks whether use of local digits is enabled.
 | --- | --- |
 | boolean | Whether use of local digits is enabled. The value **true** indicates that use of local digits is enabled, and the value **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -681,10 +615,6 @@ Checks whether the 24-hour clock is used. To listen for system time format chang
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -699,7 +629,7 @@ Checks whether the 24-hour clock is used. To listen for system time format chang
 | --- | --- |
 | boolean | Whether the 24-hour clock is used. The value **true** indicates that the 24-hour clock is used, the the value **false** means the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -716,10 +646,6 @@ static isSuggested(language: string, region?: string): boolean
 Checks whether a language is a suggested language in the specified region. It can be used for region-based language recommendation or language-based region recommendation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -747,7 +673,7 @@ Checks whether a language is a suggested language in the specified region. It ca
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -772,10 +698,6 @@ Sets the preferred language of the application. Resources are loaded in the pref
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-System-static setAppPreferredLanguage(language: string): void--><!--Device-System-static setAppPreferredLanguage(language: string): void-End-->
@@ -795,7 +717,7 @@ Sets the preferred language of the application. Resources are loaded in the pref
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

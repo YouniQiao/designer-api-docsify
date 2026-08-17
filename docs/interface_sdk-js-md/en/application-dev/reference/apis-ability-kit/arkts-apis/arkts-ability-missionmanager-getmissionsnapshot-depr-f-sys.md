@@ -10,11 +10,9 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getMissionSnapShot-(System-API))
+**Substitutes:** [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getmissionsnapshot-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -32,7 +30,7 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 | missionId | number | Yes | Mission ID. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Yes | Callback used to return the snapshot information obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
@@ -62,11 +60,9 @@ Obtains the snapshot of a given mission. This API uses a promise to return the r
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getMissionSnapShot-(System-API))
+**Substitutes:** [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getmissionsnapshot-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -89,7 +85,7 @@ Obtains the snapshot of a given mission. This API uses a promise to return the r
 | --- | --- |
 | Promise&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Promise used to return the snapshot information obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

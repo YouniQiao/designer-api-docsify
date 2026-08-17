@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Object--><!--Device-unnamed-interface Object-End-->
 
 ## hasOwnProperty
@@ -17,10 +13,6 @@ hasOwnProperty(v: PropertyKey): boolean
 Determines whether an object has a property with the specified name.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Object-hasOwnProperty(v: PropertyKey): boolean--><!--Device-Object-hasOwnProperty(v: PropertyKey): boolean-End-->
 
@@ -46,10 +38,6 @@ Determines whether an object exists in another object's prototype chain.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Object-isPrototypeOf(v: Object): boolean--><!--Device-Object-isPrototypeOf(v: Object): boolean-End-->
 
 **Parameters:**
@@ -73,10 +61,6 @@ propertyIsEnumerable(v: PropertyKey): boolean
 Determines whether a specified property is enumerable.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Object-propertyIsEnumerable(v: PropertyKey): boolean--><!--Device-Object-propertyIsEnumerable(v: PropertyKey): boolean-End-->
 
@@ -102,10 +86,6 @@ Returns a date converted to a string using the current locale.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Object-toLocaleString(): string--><!--Device-Object-toLocaleString(): string-End-->
 
 **Return value:**
@@ -124,10 +104,6 @@ Returns a string representation of an object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Object-toString(): string--><!--Device-Object-toString(): string-End-->
 
 **Return value:**
@@ -145,10 +121,6 @@ valueOf(): Object
 Returns the primitive value of the specified object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Object-valueOf(): Object--><!--Device-Object-valueOf(): Object-End-->
 
@@ -169,10 +141,6 @@ The initial value of Object.prototype.constructor is the standard built-in Objec
 **Type:** Function
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Object-constructor: Function--><!--Device-Object-constructor: Function-End-->
 

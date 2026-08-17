@@ -4,10 +4,6 @@ Enumerates the recommended actions to take after an output device changes. Commo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum OutputDeviceChangeRecommendedAction--><!--Device-audio-enum OutputDeviceChangeRecommendedAction-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -22,10 +18,6 @@ Suggests continuing playback. (This event serves as a playback maintenance indic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-OutputDeviceChangeRecommendedAction-DEVICE_CHANGE_RECOMMEND_TO_CONTINUE = 0--><!--Device-OutputDeviceChangeRecommendedAction-DEVICE_CHANGE_RECOMMEND_TO_CONTINUE = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -39,10 +31,6 @@ DEVICE_CHANGE_RECOMMEND_TO_STOP = 1
 Suggests stopping playback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-OutputDeviceChangeRecommendedAction-DEVICE_CHANGE_RECOMMEND_TO_STOP = 1--><!--Device-OutputDeviceChangeRecommendedAction-DEVICE_CHANGE_RECOMMEND_TO_STOP = 1-End-->
 

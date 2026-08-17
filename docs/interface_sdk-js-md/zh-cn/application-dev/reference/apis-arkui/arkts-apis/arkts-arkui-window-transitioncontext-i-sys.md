@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-window-interface TransitionContext--><!--Device-window-interface TransitionContext-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -23,10 +19,6 @@ completeTransition(isCompleted: boolean): void
 设置属性转换的最终完成状态。该函数需要在动画函数animateTo()执行后设置。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TransitionContext-completeTransition(isCompleted: boolean): void--><!--Device-TransitionContext-completeTransition(isCompleted: boolean): void-End-->
 
@@ -47,7 +39,7 @@ completeTransition(isCompleted: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 (context: window.TransitionContext) => {
@@ -89,10 +81,6 @@ toWindow: Window
 **类型：** [Window](arkts-arkui-window-window-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TransitionContext-toWindow: Window--><!--Device-TransitionContext-toWindow: Window-End-->
 

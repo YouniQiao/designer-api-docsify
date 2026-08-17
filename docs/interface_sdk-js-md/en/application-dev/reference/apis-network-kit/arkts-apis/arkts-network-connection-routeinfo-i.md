@@ -4,10 +4,6 @@ Defines network route information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-export interface RouteInfo--><!--Device-connection-export interface RouteInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -30,10 +26,6 @@ Destination Address
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RouteInfo-destination: LinkAddress--><!--Device-RouteInfo-destination: LinkAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -49,10 +41,6 @@ Gateway address.
 **Type:** NetAddress
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RouteInfo-gateway: NetAddress--><!--Device-RouteInfo-gateway: NetAddress-End-->
 
@@ -70,10 +58,6 @@ Whether a gateway is present.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RouteInfo-hasGateway: boolean--><!--Device-RouteInfo-hasGateway: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -89,10 +73,6 @@ Network card name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RouteInfo-iface: string--><!--Device-RouteInfo-iface: string-End-->
 
@@ -110,10 +90,6 @@ Network card name.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-RouteInfo-interface: string--><!--Device-RouteInfo-interface: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -130,10 +106,6 @@ Whether the route is the default route.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RouteInfo-isDefaultRoute: boolean--><!--Device-RouteInfo-isDefaultRoute: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -149,10 +121,6 @@ Whether the route is the excluded route.
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-RouteInfo-isExcludedRoute?: boolean--><!--Device-RouteInfo-isExcludedRoute?: boolean-End-->
 

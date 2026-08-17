@@ -4,10 +4,6 @@ Defines the return result of intent execution. The [generic type](../../../quick
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntent-interface IntentResult--><!--Device-insightIntent-interface IntentResult-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -29,10 +25,6 @@ Interaction information returned after the intent execution completes.
 **Type:** [InteractionInfo](arkts-ability-insightintent-interactioninfo-i-sys.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,11 +4,9 @@ Describes the image properties.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md#ImagePropertyOptions)
+**Substitutes:** [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md#imagepropertyoptions)
 
 <!--Device-image-interface GetImagePropertyOptions--><!--Device-image-interface GetImagePropertyOptions-End-->
 
@@ -32,11 +30,9 @@ Default property value. The default value is null.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
-**Substitutes:** [defaultValue](arkts-image-image-imagepropertyoptions-i.md#defaultValue)
+**Substitutes:** [defaultValue](arkts-image-image-imagepropertyoptions-i.md#defaultvalue)
 
 <!--Device-GetImagePropertyOptions-defaultValue?: string--><!--Device-GetImagePropertyOptions-defaultValue?: string-End-->
 
@@ -53,8 +49,6 @@ Index of the image. The default value is **0**.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 

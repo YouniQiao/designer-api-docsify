@@ -12,11 +12,9 @@ import { inputDevice } from 'inputDevice';
 function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void
 ```
 
-Obtains the information about the input device with the specified ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) instead.
+Obtains the information about the input device with the specified ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo) instead.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -33,7 +31,7 @@ Obtains the information about the input device with the specified ID. This API u
 | deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md)&gt; | Yes | Callback function. If the retrieval is successful, **err** is **undefined**, and **data** is the input device information. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -67,11 +65,9 @@ struct Index {
 function getDevice(deviceId: number): Promise<InputDeviceData>
 ```
 
-Obtains the information about the input device with the specified ID. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) instead.
+Obtains the information about the input device with the specified ID. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo) instead.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -93,7 +89,7 @@ Obtains the information about the input device with the specified ID. This API u
 | --- | --- |
 | Promise&lt;[InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md)&gt; | Promise used to return information about the input device, including device ID, name, supported source, physical address, version information, and product information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';

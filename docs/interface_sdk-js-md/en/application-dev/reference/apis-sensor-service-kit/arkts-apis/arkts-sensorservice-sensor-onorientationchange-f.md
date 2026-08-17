@@ -16,10 +16,6 @@ Subscribe to orientation sensor data, {@code SensorId.ORIENTATION}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onOrientationChange(callback: Callback<OrientationResponse>, options?: Options): void--><!--Device-sensor-function onOrientationChange(callback: Callback<OrientationResponse>, options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

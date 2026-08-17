@@ -4,10 +4,6 @@ Describes the placeholder style.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface PlaceholderSpan--><!--Device-text-interface PlaceholderSpan-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Vertical alignment of the placeholder relative to the surrounding text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-PlaceholderSpan-align: PlaceholderAlignment--><!--Device-PlaceholderSpan-align: PlaceholderAlignment-End-->
@@ -51,10 +43,6 @@ Type of the text baseline.
 **Type:** [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -74,10 +62,6 @@ Offset to the text baseline, in units of px. The value is a floating point numbe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-PlaceholderSpan-baselineOffset: double--><!--Device-PlaceholderSpan-baselineOffset: double-End-->
@@ -96,10 +80,6 @@ Height of the placeholder, in units of px. The value is a floating point number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-PlaceholderSpan-height: double--><!--Device-PlaceholderSpan-height: double-End-->
@@ -117,10 +97,6 @@ Width of the placeholder, in units of px. The value is a floating point number.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

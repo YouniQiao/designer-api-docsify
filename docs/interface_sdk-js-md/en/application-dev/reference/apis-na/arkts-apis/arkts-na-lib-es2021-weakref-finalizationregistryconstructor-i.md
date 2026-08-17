@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface FinalizationRegistryConstructor--><!--Device-unnamed-interface FinalizationRegistryConstructor-End-->
 
 ## constructor
@@ -17,10 +13,6 @@ new<T>(cleanupCallback: (heldValue: T) => void): FinalizationRegistry<T>
 Creates a finalization registry with an associated cleanup callback
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-FinalizationRegistryConstructor-new<T>(cleanupCallback: (heldValue: T) => void): FinalizationRegistry<T>--><!--Device-FinalizationRegistryConstructor-new<T>(cleanupCallback: (heldValue: T) => void): FinalizationRegistry<T>-End-->
 
@@ -45,10 +37,6 @@ readonly prototype: FinalizationRegistry<any>
 **Type:** [FinalizationRegistry](arkts-na-lib-es2021-weakref-finalizationregistry-i.md)&lt;any&gt;
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-FinalizationRegistryConstructor-readonly prototype: FinalizationRegistry<any>--><!--Device-FinalizationRegistryConstructor-readonly prototype: FinalizationRegistry<any>-End-->
 

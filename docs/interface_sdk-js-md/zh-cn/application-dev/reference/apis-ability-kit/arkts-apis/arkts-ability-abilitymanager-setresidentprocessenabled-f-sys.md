@@ -10,10 +10,6 @@ function setResidentProcessEnabled(bundleName: string, enable: boolean): Promise
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-abilityManager-function setResidentProcessEnabled(bundleName: string, enable: boolean): Promise<void>--><!--Device-abilityManager-function setResidentProcessEnabled(bundleName: string, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -42,7 +38,7 @@ function setResidentProcessEnabled(bundleName: string, enable: boolean): Promise
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not a system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';

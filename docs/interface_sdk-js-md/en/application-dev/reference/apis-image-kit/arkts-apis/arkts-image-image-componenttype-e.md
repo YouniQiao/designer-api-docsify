@@ -4,10 +4,6 @@ Enumerates the color component types of images.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-enum ComponentType--><!--Device-image-enum ComponentType-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -21,10 +17,6 @@ YUV_Y = 1
 Luminance component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ComponentType-YUV_Y = 1--><!--Device-ComponentType-YUV_Y = 1-End-->
 
@@ -40,10 +32,6 @@ Chrominance component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ComponentType-YUV_U = 2--><!--Device-ComponentType-YUV_U = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -58,10 +46,6 @@ Chrominance component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ComponentType-YUV_V = 3--><!--Device-ComponentType-YUV_V = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -75,10 +59,6 @@ JPEG = 4
 JPEG type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ComponentType-JPEG = 4--><!--Device-ComponentType-JPEG = 4-End-->
 

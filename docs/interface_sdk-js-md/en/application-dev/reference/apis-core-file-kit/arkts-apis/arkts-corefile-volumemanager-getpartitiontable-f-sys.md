@@ -16,10 +16,6 @@ Obtains partition table information based on the disk ID. This API uses a promis
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.

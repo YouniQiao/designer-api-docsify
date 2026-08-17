@@ -1,14 +1,10 @@
 # Effect
 
-Effect resource.
+Effect resource, which inherits from SceneResource. It is obtained from the createEffect API.
 
-**Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
+**Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#sceneresource)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Effect--><!--Device-unnamed-export interface Effect-End-->
 
@@ -20,13 +16,9 @@ Effect resource.
 getPropertyValue(propertyName: string): Object | null | undefined
 ```
 
-Get the value of a specific effect property.
+Obtains the value of the specified effect property.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +30,13 @@ Get the value of a specific effect property.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propertyName | string | Yes | the name of specific property |
+| propertyName | string | Yes | Name of a specified effect property. Currently, the following strings are supported: -'exposure': exposure level of an image. -'vibrance': natural saturation of an image. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | effect property value, return null if the "get" operation failed. |
+| Object | Effect property value. If the value fails to be obtained, null is returned. |
 
 ## setPropertyValue
 
@@ -52,13 +44,9 @@ Get the value of a specific effect property.
 setPropertyValue(propertyName: string, value: Object | undefined): boolean
 ```
 
-Set the value of a specific effect property
+Sets the value of a specified effect property.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,14 +58,14 @@ Set the value of a specific effect property
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propertyName | string | Yes | the name of specific property |
-| value | Object \| undefined | Yes | property value to be set |
+| propertyName | string | Yes | Name of a specified effect property. Currently, the following strings are supported: -'exposure': exposure level of an image. -'vibrance': natural saturation of an image. |
+| value | Object \| undefined | Yes | Value of the effect property to set. -'exposure': The value is of the number type. The recommended value range is [-5, 5]. A larger value indicates a brighter image. -'vibrance': The value is of the number type. The recommended value range is [-1, 1]. A larger value indicates more vivid image colors. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | return false if the "set" operation is failed |
+| boolean | Whether the operation of setting the effect property value is successful. true indicates that the setting is successful, and false indicates that the setting fails. |
 
 ## effectId
 
@@ -85,15 +73,11 @@ Set the value of a specific effect property
 readonly effectId: string
 ```
 
-The id of the effect. This is the id that was used to create the effect.
+Effect ID, which is in the format of 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', for example, 'e68a7f45-2d21-4a0d-9aef-7d9c825d3f12'. It is used to create an effect.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Effect-readonly effectId: string--><!--Device-Effect-readonly effectId: string-End-->
 
@@ -105,15 +89,11 @@ The id of the effect. This is the id that was used to create the effect.
 enabled: boolean
 ```
 
-Controls whether the effect is enabled or not.
+Enabled status of the effect. true if enabled, false otherwise.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Effect-enabled: boolean--><!--Device-Effect-enabled: boolean-End-->
 

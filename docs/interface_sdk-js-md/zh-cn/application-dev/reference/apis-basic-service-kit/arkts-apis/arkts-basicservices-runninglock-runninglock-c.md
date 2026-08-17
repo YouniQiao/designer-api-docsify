@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
@@ -21,10 +17,6 @@ hold(timeout: int): void
 锁定和持有RunningLock。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
@@ -45,7 +37,7 @@ hold(timeout: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 | [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // RunningLockTest.ets
@@ -86,10 +78,6 @@ isHolding(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-RunningLock-isHolding(): boolean--><!--Device-RunningLock-isHolding(): boolean-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
@@ -100,7 +88,7 @@ isHolding(): boolean
 | --- | --- |
 | boolean | 返回true表示当前RunningLock是持有状态，返回false表示当前RunningLock是释放状态。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // RunningLockTest.ets
@@ -137,11 +125,9 @@ isUsed(): boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [isHolding](#isHolding)
+**替代接口：** [isHolding](#isholding)
 
 <!--Device-RunningLock-isUsed(): boolean--><!--Device-RunningLock-isUsed(): boolean-End-->
 
@@ -153,7 +139,7 @@ isUsed(): boolean
 | --- | --- |
 | boolean | 返回true表示当前RunningLock是持有状态，返回false表示当前RunningLock是释放状态。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
@@ -176,8 +162,6 @@ lock(timeout: number): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [hold](#hold)
@@ -194,7 +178,7 @@ lock(timeout: number): void
 | --- | --- | --- | --- |
 | timeout | number | 是 | 锁定和持有RunningLock的时长，单位：毫秒。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
@@ -217,10 +201,6 @@ unhold(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RUNNING_LOCK
 
 <!--Device-RunningLock-unhold(): void--><!--Device-RunningLock-unhold(): void-End-->
@@ -233,7 +213,7 @@ unhold(): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // RunningLockTest.ets
@@ -276,8 +256,6 @@ unlock(): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [unhold](#unhold)
@@ -288,7 +266,7 @@ unlock(): void
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
-## 示例
+**示例**
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)

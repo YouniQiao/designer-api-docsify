@@ -16,10 +16,6 @@ Specifies whether to enable a function key (for example, **CapsLock**). This API
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_KEYBOARD_CONTROLLER
 
 <!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>-End-->
@@ -48,7 +44,7 @@ Specifies whether to enable a function key (for example, **CapsLock**). This API
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) | There is currently no keyboard device connected. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';

@@ -16,10 +16,6 @@ Obtains the switch status of the automatic time setting. This API returns the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemDateTime-function getAutoTimeStatus(): boolean--><!--Device-systemDateTime-function getAutoTimeStatus(): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -36,7 +32,7 @@ Obtains the switch status of the automatic time setting. This API returns the re
 | --- | --- |
 | [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. Possible causes: 1.System memory is insufficient; 2.Calls the underlying system interface failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

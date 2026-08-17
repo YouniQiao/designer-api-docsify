@@ -33,10 +33,6 @@ Lists all file names in a directory. This API returns the result synchronously. 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare function listFileExtSync(  path: string,  options?: ListFileExtOptions): string[]--><!--Device-unnamed-declare function listFileExtSync(  path: string,  options?: ListFileExtOptions): string[]-End-->
@@ -48,7 +44,7 @@ Lists all file names in a directory. This API returns the result synchronously. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileExtOptions](../../apis-na/arkts-apis/arkts-na-file-fs-listfileextoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
+| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
 
 **Return value:**
 

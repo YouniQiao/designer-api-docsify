@@ -4,10 +4,6 @@ Operation type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-abilityToolAccessCtrl-enum OperationType--><!--Device-abilityToolAccessCtrl-enum OperationType-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -24,10 +20,6 @@ CLI operation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-OperationType-CLI = 0x01--><!--Device-OperationType-CLI = 0x01-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -43,10 +35,6 @@ API = 0x02
 API operation.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-OperationType-API = 0x02--><!--Device-OperationType-API = 0x02-End-->
 

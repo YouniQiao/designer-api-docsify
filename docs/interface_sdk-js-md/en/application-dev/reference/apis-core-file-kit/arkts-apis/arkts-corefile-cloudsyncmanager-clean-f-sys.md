@@ -16,10 +16,6 @@ Callback used to clear the cloud data locally. This API uses a promise to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
 <!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>): Promise<void>--><!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>): Promise<void>-End-->
@@ -33,7 +29,7 @@ Callback used to clear the cloud data locally. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md#Action-(System-API)) specifies the action to perform. |
+| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md#action-system-api) specifies the action to perform. |
 
 **Return value:**
 
@@ -49,7 +45,7 @@ Callback used to clear the cloud data locally. This API uses a promise to return
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -77,10 +73,6 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
 <!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>, callback: AsyncCallback<void>): void--><!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>, callback: AsyncCallback<void>): void-End-->
@@ -94,7 +86,7 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md#Action-(System-API)) specifies the action to perform. |
+| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md#action-system-api) specifies the action to perform. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to clear the cloud data locally. |
 
 **Error codes:**
@@ -105,7 +97,7 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

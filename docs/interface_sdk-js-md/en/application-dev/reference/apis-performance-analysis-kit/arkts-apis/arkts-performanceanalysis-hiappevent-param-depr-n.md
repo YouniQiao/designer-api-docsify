@@ -4,8 +4,6 @@ Provides constants that define the names of all predefined event parameters. | N
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** Param
@@ -20,7 +18,7 @@ Provides constants that define the names of all predefined event parameters. | N
 
 | Name | Description |
 | --- | --- |
-| [USER_ID](arkts-performanceanalysis-param-depr-con.md#USER_ID) | User id. |
-| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-depr-con.md#DISTRIBUTED_SERVICE_NAME) | Distributed service name. |
-| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-depr-con.md#DISTRIBUTED_SERVICE_INSTANCE_ID) | Distributed service instance id. |
+| [USER_ID](arkts-performanceanalysis-param-depr-con.md#userid) | User id. |
+| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-depr-con.md#distributedservicename) | Distributed service name. |
+| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-depr-con.md#distributedserviceinstanceid) | Distributed service instance id. |
 

@@ -16,10 +16,6 @@ Cancels the listening on the carrier call status and obtaining of the call numbe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_CALL_FOR_DEVICES
 
 <!--Device-observer-function offCCallStateChange(callback?: Callback<CCallStateInfo>): void--><!--Device-observer-function offCCallStateChange(callback?: Callback<CCallStateInfo>): void-End-->
@@ -42,7 +38,7 @@ Cancels the listening on the carrier call status and obtaining of the call numbe
 | [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) | Invalid parameter value. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { call, observer } from '@kit.TelephonyKit';

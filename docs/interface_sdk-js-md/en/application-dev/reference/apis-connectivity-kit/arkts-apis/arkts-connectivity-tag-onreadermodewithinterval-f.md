@@ -21,10 +21,6 @@ Set reader mode enabled when the specific application is on foreground and set c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 <!--Device-tag-function onReaderModeWithInterval(    elementName: ElementName,    discTech: int[],    callback: Callback<TagInfo>,    interval: int  ): void--><!--Device-tag-function onReaderModeWithInterval(    elementName: ElementName,    discTech: int[],    callback: Callback<TagInfo>,    interval: int  ): void-End-->
@@ -36,7 +32,7 @@ Set reader mode enabled when the specific application is on foreground and set c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | The element name of application, must include the bundleName and abilityName. |
-| discTech | int[] | Yes | The technologies list to set for discovering. From [NFC_A](arkts-connectivity-tag-con.md#NFC_A) to [MIFARE_ULTRALIGHT](arkts-connectivity-tag-con.md#MIFARE_ULTRALIGHT). |
+| discTech | int[] | Yes | The technologies list to set for discovering. From [NFC_A](arkts-connectivity-tag-con.md#nfca) to [MIFARE_ULTRALIGHT](arkts-connectivity-tag-con.md#mifareultralight). |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TagInfo](arkts-connectivity-tag-taginfo-i.md)&gt; | Yes | The callback to dispatched the TagInfo object for application. |
 | interval | int | Yes | The interval for reader presence check. |
 

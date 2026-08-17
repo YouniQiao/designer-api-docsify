@@ -16,10 +16,6 @@ Create an image processing instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-videoProcessingEngine-function create(): ImageProcessor--><!--Device-videoProcessingEngine-function create(): ImageProcessor-End-->
@@ -40,7 +36,7 @@ Create an image processing instance.
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 | [29200003](../errorcode-videoprocessingengine.md#29200003-creation-failure) | Failed to create image processing instance. For example, <br>the number of instances exceeds the upper limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { videoProcessingEngine } from '@kit.ImageKit';

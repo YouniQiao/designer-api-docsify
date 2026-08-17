@@ -1,4 +1,4 @@
-# NonIntegralIndexError
+# NonIntegralIndexError(Defines the commonly used Errors for ArkTS)
 
 Represents an error that occurs when a numeric types conversion is performed on an index expression, and the fractional part differs from 0.
 
@@ -6,9 +6,7 @@ Represents an error that occurs when a numeric types conversion is performed on 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class NonIntegralIndexError--><!--Device-unnamed-export class NonIntegralIndexError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new NonIntegralIndexError instance with provided message and error 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,9 +53,7 @@ Constructs a new NonIntegralIndexError instance with provided message and error 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

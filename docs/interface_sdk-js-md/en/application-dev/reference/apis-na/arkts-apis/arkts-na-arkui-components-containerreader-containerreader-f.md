@@ -14,9 +14,7 @@ Defines ContainerReader Component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,14 +26,14 @@ Defines ContainerReader Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ContainerReaderInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | Yes | ContainerReader options. |
+| value | [ContainerReaderInfo](arkts-na-arkui-components-containerreader-containerreaderinfo-i.md) | Yes | ContainerReader options. |
 | content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContainerReaderAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |
+| [ContainerReaderAttribute](arkts-na-arkui-components-containerreader-containerreaderattribute-i.md) |  |
 
 
 ## ContainerReader
@@ -52,9 +50,7 @@ Defines ContainerReader Component.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,12 +62,12 @@ Defines ContainerReader Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ContainerReaderInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md)&gt; | Yes | The custom builder function for container content. |
+| style_ | CustomBuilderT&lt;[ContainerReaderInfo](arkts-na-arkui-components-containerreader-containerreaderinfo-i.md)&gt; | Yes | The custom builder function for container content. |
 | content_ | CustomBuilder | No | The configuration options for containerreader. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContainerReaderAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) | The attribute of the containerreader |
+| [ContainerReaderAttribute](arkts-na-arkui-components-containerreader-containerreaderattribute-i.md) | The attribute of the containerreader |
 

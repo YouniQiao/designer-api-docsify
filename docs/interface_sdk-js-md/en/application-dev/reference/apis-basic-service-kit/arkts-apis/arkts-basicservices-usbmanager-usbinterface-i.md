@@ -1,12 +1,8 @@
 # USBInterface
 
-Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration) object can contain multiple * *USBInterface** instances, each providing a specific function.
+Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#usbconfiguration) object can contain multiple * *USBInterface** instances, each providing a specific function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBInterface--><!--Device-usbManager-interface USBInterface-End-->
 
@@ -30,10 +26,6 @@ Settings for alternating between descriptors of the same USB interface. The valu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBInterface-alternateSetting: int--><!--Device-USBInterface-alternateSetting: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -49,10 +41,6 @@ Device type.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBInterface-clazz: int--><!--Device-USBInterface-clazz: int-End-->
 
@@ -70,10 +58,6 @@ Endpoints that belong to the USB interface.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBInterface-endpoints: Array<USBEndpoint>--><!--Device-USBInterface-endpoints: Array<USBEndpoint>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -89,10 +73,6 @@ Unique ID of the USB interface.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBInterface-id: int--><!--Device-USBInterface-id: int-End-->
 
@@ -110,10 +90,6 @@ Interface name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBInterface-name: string--><!--Device-USBInterface-name: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -130,10 +106,6 @@ Interface protocol.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBInterface-protocol: int--><!--Device-USBInterface-protocol: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -149,10 +121,6 @@ Device subclass.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBInterface-subClass: int--><!--Device-USBInterface-subClass: int-End-->
 

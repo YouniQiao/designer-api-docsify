@@ -16,11 +16,9 @@ Input method controller
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getController](arkts-ime-inputmethod-getcontroller-f.md#getController)
+**Substitutes:** [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller)
 
 <!--Device-inputMethod-function getInputMethodController(): InputMethodController--><!--Device-inputMethod-function getInputMethodController(): InputMethodController-End-->
 
@@ -32,7 +30,7 @@ Input method controller
 | --- | --- |
 | [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | the object of InputMethodController. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getInputMethodController();

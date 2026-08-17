@@ -16,10 +16,6 @@ Get this month traffic data of the cellular network.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
 **Model restriction:** This API can be used only in the stage model.

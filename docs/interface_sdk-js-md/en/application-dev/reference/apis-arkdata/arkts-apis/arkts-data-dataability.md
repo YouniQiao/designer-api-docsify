@@ -4,10 +4,6 @@ The **DataAbility** module provides APIs to create predicates for querying data 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace dataAbility--><!--Device-unnamed-declare namespace dataAbility-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -24,7 +20,7 @@ import { dataAbility } from 'dataAbility';
 
 | Name | Description |
 | --- | --- |
-| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md#createRdbPredicates) | Creates an **RdbPredicates** object with a table name and **DataAbilityPredicates** object. |
+| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md#createrdbpredicates) | Creates an **RdbPredicates** object with a table name and **DataAbilityPredicates** object. |
 
 ### Classes
 

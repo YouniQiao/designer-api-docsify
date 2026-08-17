@@ -4,10 +4,6 @@ Indicates the permission status.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-abilityAccessCtrl-interface PermissionStatusInfo--><!--Device-abilityAccessCtrl-interface PermissionStatusInfo-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -34,10 +30,6 @@ Permission flags. The value range is as follows: - 0: The permission is not set 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionStatusInfo-grantFlags: int--><!--Device-PermissionStatusInfo-grantFlags: int-End-->
@@ -57,10 +49,6 @@ Permission authorization status.
 **Type:** GrantStatus
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +70,6 @@ Timestamp of the authorization status change. This is an optional field and is r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionStatusInfo-grantTimestamp?: long--><!--Device-PermissionStatusInfo-grantTimestamp?: long-End-->
@@ -106,10 +90,6 @@ Permission name.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionStatusInfo-permissionName: Permissions--><!--Device-PermissionStatusInfo-permissionName: Permissions-End-->
@@ -129,10 +109,6 @@ Application ID. The value should be an integer.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

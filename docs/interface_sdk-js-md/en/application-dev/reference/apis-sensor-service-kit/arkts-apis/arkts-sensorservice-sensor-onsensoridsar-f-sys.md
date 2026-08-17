@@ -16,10 +16,6 @@ Subscribes to data of the Sodium Adsorption Ratio (SAR) sensor.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

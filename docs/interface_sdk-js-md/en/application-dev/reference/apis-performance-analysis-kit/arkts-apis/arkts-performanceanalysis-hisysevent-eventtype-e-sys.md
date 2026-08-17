@@ -4,10 +4,6 @@ Enumerate system event types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiSysEvent-enum EventType--><!--Device-hiSysEvent-enum EventType-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -23,10 +19,6 @@ FAULT = 1
 Error event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
@@ -44,10 +36,6 @@ Statistic event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -64,10 +52,6 @@ Security event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -83,10 +67,6 @@ BEHAVIOR = 4
 User behavior event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 

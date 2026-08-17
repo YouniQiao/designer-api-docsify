@@ -4,10 +4,6 @@ The definition of SearchPlayVideoInfo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avMusicTemplate-interface SearchPlayVideoInfo--><!--Device-avMusicTemplate-interface SearchPlayVideoInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -30,10 +26,6 @@ Unique id of the Media.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchPlayVideoInfo-entityId: string--><!--Device-SearchPlayVideoInfo-entityId: string-End-->
@@ -51,10 +43,6 @@ The episodeId of the video.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ The episodeNumber of the video.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchPlayVideoInfo-episodeNumber?: int--><!--Device-SearchPlayVideoInfo-episodeNumber?: int-End-->
@@ -95,10 +79,6 @@ The extras of the video.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

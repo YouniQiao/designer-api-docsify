@@ -4,10 +4,6 @@ Describes the Gatt service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ble-interface GattService--><!--Device-ble-interface GattService-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -24,15 +20,11 @@ import { ble } from 'ble';
 characteristics: Array<BLECharacteristic>
 ```
 
-The [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md#BLECharacteristic) list belongs to this GattService instance
+The [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md#blecharacteristic) list belongs to this GattService instance
 
 **Type:** Array&lt;BLECharacteristic&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,10 +46,6 @@ The list of GATT services contained in the service
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -78,10 +66,6 @@ Indicates whether the GattService instance is primary or secondary.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -101,10 +85,6 @@ The UUID of a GattService instance
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

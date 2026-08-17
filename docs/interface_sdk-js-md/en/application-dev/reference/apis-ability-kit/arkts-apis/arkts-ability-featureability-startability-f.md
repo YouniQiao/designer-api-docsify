@@ -16,10 +16,6 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<number>): void--><!--Device-featureAbility-function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<number>): void-End-->
@@ -33,7 +29,7 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 | parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | Ability to start. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **0**; otherwise, **err** is a non-zero value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { featureAbility, wantConstant } from '@kit.AbilityKit';
@@ -74,10 +70,6 @@ Starts an ability. This API uses a promise to return the result. > **NOTE：**> 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function startAbility(parameter: StartAbilityParameter): Promise<number>--><!--Device-featureAbility-function startAbility(parameter: StartAbilityParameter): Promise<number>-End-->
@@ -96,7 +88,7 @@ Starts an ability. This API uses a promise to return the result. > **NOTE：**> 
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, a non-zero value is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { featureAbility, wantConstant } from '@kit.AbilityKit';

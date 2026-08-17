@@ -16,8 +16,6 @@ Obtains the fault information about the current application. This API uses an as
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** query
@@ -33,7 +31,7 @@ Obtains the fault information about the current application. This API uses an as
 | faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Yes | Fault type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Yes | Callback used to return the fault information array.<br> **value** is the fault information array obtained. If **value** is **undefined**, an exception occurs during the information retrieval. In this case, an error string will be returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FaultLogger } from '@kit.PerformanceAnalysisKit';
@@ -72,8 +70,6 @@ Obtains the fault information about the current application. This API uses a pro
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** query
@@ -94,7 +90,7 @@ Obtains the fault information about the current application. This API uses a pro
 | --- | --- |
 | Promise&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Promise used to return the fault information array. You can obtain the fault information instance in its **then()** method or use **await**. <br>**value** is the fault information array obtained. If **value** is **undefined**, an exception occurs during the information retrieval. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FaultLogger } from '@kit.PerformanceAnalysisKit';

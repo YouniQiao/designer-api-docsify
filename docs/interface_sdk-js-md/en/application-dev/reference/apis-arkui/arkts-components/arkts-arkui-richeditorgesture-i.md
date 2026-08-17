@@ -4,10 +4,6 @@ User gesture event.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface RichEditorGesture--><!--Device-unnamed-declare interface RichEditorGesture-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +14,11 @@ User gesture event.
 onClick?: Callback<ClickEvent>
 ```
 
-Triggered when [ClickEvent](arkts-arkui-clickevent-i.md#ClickEvent) occurs. It is executed on completion of a single click. On a double-click, the first click triggers the callback event.
+Triggered when [ClickEvent](arkts-arkui-clickevent-i.md#clickevent) occurs. It is executed on completion of a single click. On a double-click, the first click triggers the callback event.
 
 **Type:** Callback&lt;ClickEvent&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Triggered when the user performs a long press. It is executed on completion of a
 **Type:** Callback&lt;GestureEvent&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

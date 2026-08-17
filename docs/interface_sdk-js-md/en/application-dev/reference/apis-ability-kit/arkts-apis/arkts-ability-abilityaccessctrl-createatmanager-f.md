@@ -18,10 +18,6 @@ Creates a program access control management instance for scenarios such as permi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-abilityAccessCtrl-function createAtManager(): AtManager--><!--Device-abilityAccessCtrl-function createAtManager(): AtManager-End-->
@@ -34,7 +30,7 @@ Creates a program access control management instance for scenarios such as permi
 | --- | --- |
 | [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | AtManager** instance obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();

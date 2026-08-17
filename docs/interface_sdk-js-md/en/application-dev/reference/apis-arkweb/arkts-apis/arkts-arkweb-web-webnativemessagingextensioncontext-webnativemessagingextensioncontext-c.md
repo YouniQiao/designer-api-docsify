@@ -1,14 +1,10 @@
 # WebNativeMessagingExtensionContext
 
-WebNativeMessagingExtensionContext is the runtime context of the native web message extension ( [WebNativeMessagingExtensionAbility](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#WebNativeMessagingExtensionAbility)). It inherits from ExtensionContext and provides lifecycle management, ability startup, and native message connection control capabilities for the extension ability. In an extension that inherits from WebNativeMessagingExtensionAbility, developers can obtain this context through `this.context` and then call [startAbility](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startAbility) to start another ability, call [startAbilityForResult](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startAbilityForResult) to start a UIAbility and receive the return result, call [terminateSelf](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#terminateSelf) to terminate the current extension, or call [stopNativeConnection](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#stopNativeConnection) to stop a specified native web message connection.
+WebNativeMessagingExtensionContext is the runtime context of the native web message extension ( [WebNativeMessagingExtensionAbility](arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#webnativemessagingextensionability)). It inherits from ExtensionContext and provides lifecycle management, ability startup, and native message connection control capabilities for the extension ability. In an extension that inherits from WebNativeMessagingExtensionAbility, developers can obtain this context through `this.context` and then call [startAbility](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startability) to start another ability, call [startAbilityForResult](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startabilityforresult) to start a UIAbility and receive the return result, call [terminateSelf](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#terminateself) to terminate the current extension, or call [stopNativeConnection](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#stopnativeconnection) to stop a specified native web message connection.
 
 **Inheritance/Implementation:** WebNativeMessagingExtensionContext extends ExtensionContext
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export default class WebNativeMessagingExtensionContext--><!--Device-unnamed-export default class WebNativeMessagingExtensionContext-End-->
 
@@ -26,13 +22,9 @@ import { WebNativeMessagingExtensionContext } from 'WebNativeMessagingExtensionC
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability. This API uses a promise to return the result. To obtain the return result when the started UIAbility exits, use [startAbilityForResult](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startAbilityForResult).
+Starts an ability. This API uses a promise to return the result. To obtain the return result when the started UIAbility exits, use [startAbilityForResult](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startabilityforresult).
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,7 +72,7 @@ Starts an ability. This API uses a promise to return the result. To obtain the r
 | [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
@@ -109,13 +101,9 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
 startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>
 ```
 
-Starts a UIAbility. This API uses a promise to return the result when the started UIAbility exits. After the UIAbility is started, the following situations may occur: - Under normal circumstances, [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult) can be called to terminate the UIAbility and return the result to the caller. - In abnormal cases, such as when the UIAbility is destroyed, exception information is returned to the caller, with resultCode set to -1. - Only UIAbilities of the current app can be started.
+Starts a UIAbility. This API uses a promise to return the result when the started UIAbility exits. After the UIAbility is started, the following situations may occur: - Under normal circumstances, [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) can be called to terminate the UIAbility and return the result to the caller. - In abnormal cases, such as when the UIAbility is destroyed, exception information is returned to the caller, with resultCode set to -1. - Only UIAbilities of the current app can be started.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,7 +116,7 @@ Starts a UIAbility. This API uses a promise to return the result when the starte
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the UIAbility to start, including attributes such as bundleName and abilityName, used to specify the target UIAbility. |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Start options for configuring the window mode of the UIAbility. Pass this parameter when custom start configuration is required; otherwise, the default system start configuration is used. For details about the default values of each field, see [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md#StartOptions). |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Start options for configuring the window mode of the UIAbility. Pass this parameter when custom start configuration is required; otherwise, the default system start configuration is used. For details about the default values of each field, see [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md#startoptions). |
 
 **Return value:**
 
@@ -173,10 +161,6 @@ Stops the specified native connection. This API uses a promise to return the res
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebNativeMessagingExtensionContext-stopNativeConnection(connectionId: number): Promise<void>--><!--Device-WebNativeMessagingExtensionContext-stopNativeConnection(connectionId: number): Promise<void>-End-->
@@ -203,7 +187,7 @@ Stops the specified native connection. This API uses a promise to return the res
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
@@ -232,10 +216,6 @@ Destroys the current native web message extension. This method returns a promise
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebNativeMessagingExtensionContext-terminateSelf(): Promise<void>--><!--Device-WebNativeMessagingExtensionContext-terminateSelf(): Promise<void>-End-->
@@ -256,7 +236,7 @@ Destroys the current native web message extension. This method returns a promise
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';

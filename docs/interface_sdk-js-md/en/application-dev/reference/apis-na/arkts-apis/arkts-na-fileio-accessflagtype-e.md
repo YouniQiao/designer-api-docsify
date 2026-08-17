@@ -4,9 +4,7 @@ Enumerates the locations of the file to verify.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-enum AccessFlagType--><!--Device-fileIo-enum AccessFlagType-End-->
 
@@ -22,9 +20,7 @@ The file is stored locally.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AccessFlagType-LOCAL = 0--><!--Device-AccessFlagType-LOCAL = 0-End-->
 

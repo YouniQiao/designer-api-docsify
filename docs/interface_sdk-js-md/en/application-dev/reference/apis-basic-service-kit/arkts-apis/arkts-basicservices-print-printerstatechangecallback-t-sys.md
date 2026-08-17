@@ -8,10 +8,6 @@ Defines the callback type used in registering to listen for PrinterState. The va
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-type PrinterStateChangeCallback = (state: PrinterState, info: PrinterInfo) => void--><!--Device-print-type PrinterStateChangeCallback = (state: PrinterState, info: PrinterInfo) => void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework

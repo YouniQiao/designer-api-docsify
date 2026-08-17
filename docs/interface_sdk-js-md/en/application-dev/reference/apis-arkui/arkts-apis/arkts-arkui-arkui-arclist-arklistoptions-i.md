@@ -4,9 +4,7 @@ Defines the arc list options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface ArkListOptions--><!--Device-unnamed-export declare interface ArkListOptions-End-->
 
@@ -33,9 +31,7 @@ Describes the header.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ArkListOptions-header?: ComponentContentBase--><!--Device-ArkListOptions-header?: ComponentContentBase-End-->
 
@@ -53,9 +49,7 @@ Describes the index of initial item, the default value is 0. The value should be
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ArkListOptions-initialIndex?: int--><!--Device-ArkListOptions-initialIndex?: int-End-->
 
@@ -73,9 +67,7 @@ Describes the controller for scrollable container.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ArkListOptions-scroller?: Scroller--><!--Device-ArkListOptions-scroller?: Scroller-End-->
 

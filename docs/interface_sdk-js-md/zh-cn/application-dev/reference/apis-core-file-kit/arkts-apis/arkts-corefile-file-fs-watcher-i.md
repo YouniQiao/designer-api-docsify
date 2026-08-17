@@ -4,10 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface Watcher--><!--Device-unnamed-export interface Watcher-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -21,10 +17,6 @@ start(): void
 开启监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-Watcher-start(): void--><!--Device-Watcher-start(): void-End-->
 
@@ -49,7 +41,7 @@ start(): void
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -67,10 +59,6 @@ stop(): void
 停止监听并移除Watcher对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-Watcher-stop(): void--><!--Device-Watcher-stop(): void-End-->
 
@@ -95,7 +83,7 @@ stop(): void
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";

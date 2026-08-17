@@ -4,10 +4,6 @@ Beacon equipment manufacturer data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface BeaconManufactureData--><!--Device-geoLocationManager-export interface BeaconManufactureData-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -30,10 +26,6 @@ Manufacture data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BeaconManufactureData-manufactureData: ArrayBuffer--><!--Device-BeaconManufactureData-manufactureData: ArrayBuffer-End-->
@@ -52,10 +44,6 @@ Manufacture data mask.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BeaconManufactureData-manufactureDataMask: ArrayBuffer--><!--Device-BeaconManufactureData-manufactureDataMask: ArrayBuffer-End-->
@@ -73,10 +61,6 @@ Manufacture id.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -1,12 +1,8 @@
 # Panel (System API)
 
-Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete.
+Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-selectionManager-interface Panel--><!--Device-selectionManager-interface Panel-End-->
 
@@ -26,13 +22,9 @@ import { selectionManager } from 'selectionManager';
 hide(): Promise<void>
 ```
 
-Hides the word selection panel. This API is used together with [show](#show). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)). This API uses a promise to return the result. If this API is not called proactively, the panel is automatically hidden when it loses focus.
+Hides the word selection panel. This API is used together with [show](#show). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api). This API uses a promise to return the result. If this API is not called proactively, the panel is automatically hidden when it loses focus.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-Panel-hide(): Promise<void>--><!--Device-Panel-hide(): Promise<void>-End-->
 
@@ -53,7 +45,7 @@ Hides the word selection panel. This API is used together with [show](#show). Th
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
 | [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -86,15 +78,13 @@ selectionPanel?.hide().then(() => {
 moveTo(x: int, y: int): Promise<void>
 ```
 
-Moves the word selection panel to the specified coordinates in the global coordinate system of the screen. The panel can be moved to an extended screen. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)). This API uses a promise to return the result.
+Moves the word selection panel to the specified coordinates in the global coordinate system of the screen. The panel can be moved to an extended screen. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api). This API uses a promise to return the result.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
 **Deprecated since:** 24
 
-**Substitutes:** [moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#moveToGlobalDisplay)
+**Substitutes:** [moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#movetoglobaldisplay)
 
 <!--Device-Panel-moveTo(x: int, y: int): Promise<void>--><!--Device-Panel-moveTo(x: int, y: int): Promise<void>-End-->
 
@@ -122,7 +112,7 @@ Moves the word selection panel to the specified coordinates in the global coordi
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
 | [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
@@ -144,13 +134,9 @@ try {
 off(type: 'destroyed', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the word selection panel destruction event. This API is used together with [on('destroyed')](#on_destroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)).
+Unsubscribes from the word selection panel destruction event. This API is used together with [on('destroyed')](#ondestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-Panel-off(type: 'destroyed', callback?: Callback<void>): void--><!--Device-Panel-off(type: 'destroyed', callback?: Callback<void>): void-End-->
 
@@ -165,7 +151,7 @@ Unsubscribes from the word selection panel destruction event. This API is used t
 | type | 'destroyed' | Yes | Type of the event to unsubscribe from. The value is fixed to **'destroyed'**. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to be unregistered, which the callback instance registered using **on**. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
@@ -183,13 +169,9 @@ try {
 off(type: 'hidden', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the word selection panel hiding event. This API is used together with [on('hidden')](#on_destroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)).
+Unsubscribes from the word selection panel hiding event. This API is used together with [on('hidden')](#ondestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-Panel-off(type: 'hidden', callback?: Callback<void>): void--><!--Device-Panel-off(type: 'hidden', callback?: Callback<void>): void-End-->
 
@@ -204,7 +186,7 @@ Unsubscribes from the word selection panel hiding event. This API is used togeth
 | type | 'hidden' | Yes | Type of the event to unsubscribe from. The value is fixed to **'hidden'**. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to be unregistered, which the callback instance registered using **on**. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
@@ -222,13 +204,9 @@ try {
 on(type: 'destroyed', callback: Callback<void>): void
 ```
 
-Subscribes to the word selection panel destruction event. This API is used together with [off('destroyed')](#off_destroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)).
+Subscribes to the word selection panel destruction event. This API is used together with [off('destroyed')](#offdestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-Panel-on(type: 'destroyed', callback: Callback<void>): void--><!--Device-Panel-on(type: 'destroyed', callback: Callback<void>): void-End-->
 
@@ -241,9 +219,9 @@ Subscribes to the word selection panel destruction event. This API is used toget
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'destroyed' | Yes | Event type, which is **'destroyed'**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result, which is triggered when [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md#destroyPanel-(System-API)) is called to destroy the panel. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result, which is triggered when [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md#destroypanel-system-api) is called to destroy the panel. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
@@ -263,13 +241,9 @@ try {
 on(type: 'hidden', callback: Callback<void>): void
 ```
 
-Subscribes to the word selection panel hiding event. This API is used together with [off('hidden')](#off_destroyed). This event is triggered when the panel is hidden by calling [hide](#hide) or automatically hidden when it loses focus. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)).
+Subscribes to the word selection panel hiding event. This API is used together with [off('hidden')](#offdestroyed). This event is triggered when the panel is hidden by calling [hide](#hide) or automatically hidden when it loses focus. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-Panel-on(type: 'hidden', callback: Callback<void>): void--><!--Device-Panel-on(type: 'hidden', callback: Callback<void>): void-End-->
 
@@ -284,7 +258,7 @@ Subscribes to the word selection panel hiding event. This API is used together w
 | type | 'hidden' | Yes | Event type, which is **'hidden'**. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result, which is triggered when the panel is hidden. The panel can be hidden by calling [hide](#hide) or automatically hidden when it loses focus. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
@@ -304,13 +278,9 @@ try {
 setUiContent(path: string): Promise<void>
 ```
 
-Sets the UI content for the current word selection panel, for example, to display translation results, search suggestions, or custom action buttons. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)). This API uses a promise to return the result.
+Sets the UI content for the current word selection panel, for example, to display translation results, search suggestions, or custom action buttons. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api). This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -339,7 +309,7 @@ Sets the UI content for the current word selection panel, for example, to displa
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
 | [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -380,13 +350,9 @@ try {
 show(): Promise<void>
 ```
 
-Shows the word selection panel. This API is used together with [hide](#hide). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)). This API uses a promise to return the result.
+Shows the word selection panel. This API is used together with [hide](#hide). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api). This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -409,7 +375,7 @@ Shows the word selection panel. This API is used together with [hide](#hide). Th
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
 | [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -442,13 +408,9 @@ selectionPanel?.show().then(() => {
 startMoving(): Promise<void>
 ```
 
-Sets whether the word selection panel can be dragged along with the mouse, touchpad, or touchscreen. The panel automatically stops moving after the pointer is released. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)). This API uses a promise to return the result. This API must be called in the **onTouch** callback, and the event type must be **TouchType.Down**.
+Sets whether the word selection panel can be dragged along with the mouse, touchpad, or touchscreen. The panel automatically stops moving after the pointer is released. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api). This API uses a promise to return the result. This API must be called in the **onTouch** callback, and the event type must be **TouchType.Down**.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -471,7 +433,7 @@ Sets whether the word selection panel can be dragged along with the mouse, touch
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
 | [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 

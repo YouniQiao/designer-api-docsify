@@ -17,10 +17,6 @@ Sets the enabling state of device notification access for the specified applicat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationExtensionSubscription-function setUserGrantedBundleState(targetBundle: BundleOption,    enabledBundles: BundleOption[], enabled: boolean): Promise<void>--><!--Device-notificationExtensionSubscription-function setUserGrantedBundleState(targetBundle: BundleOption,    enabledBundles: BundleOption[], enabled: boolean): Promise<void>-End-->
@@ -33,7 +29,7 @@ Sets the enabling state of device notification access for the specified applicat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetBundle | BundleOption | Yes | Information about the target application. The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#NotificationSubscriberExtensionAbility). Otherwise, error code 1600022 is returned. |
+| targetBundle | BundleOption | Yes | Information about the target application. The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#notificationsubscriberextensionability). Otherwise, error code 1600022 is returned. |
 | enabledBundles | BundleOption[] | Yes | Authorized applications. |
 | enabled | boolean | Yes | Whether the device notification access for the specified application is enabled. The value **true** indicates that this functionality is enabled, and **false** indicates the opposite. |
 
@@ -53,7 +49,7 @@ Sets the enabling state of device notification access for the specified applicat
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let targetBundle: notificationExtensionSubscription.BundleOption =

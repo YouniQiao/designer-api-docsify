@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-appAccount-interface AppAccountInfo--><!--Device-appAccount-interface AppAccountInfo-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -24,10 +20,6 @@ name: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AppAccountInfo-name: string--><!--Device-AppAccountInfo-name: string-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -43,10 +35,6 @@ owner: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AppAccountInfo-owner: string--><!--Device-AppAccountInfo-owner: string-End-->
 

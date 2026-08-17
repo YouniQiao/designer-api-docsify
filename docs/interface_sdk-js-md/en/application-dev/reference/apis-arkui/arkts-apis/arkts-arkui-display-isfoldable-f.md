@@ -16,10 +16,6 @@ Checks whether this device is foldable.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-display-function isFoldable(): boolean--><!--Device-display-function isFoldable(): boolean-End-->
@@ -38,7 +34,7 @@ Checks whether this device is foldable.
 | --- | --- |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { display } from '@kit.ArkUI';

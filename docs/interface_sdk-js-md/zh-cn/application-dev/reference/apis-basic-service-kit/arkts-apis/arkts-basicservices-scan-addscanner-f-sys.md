@@ -10,10 +10,6 @@ function addScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Prom
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-scan-function addScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise<void>--><!--Device-scan-function addScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise<void>-End-->
@@ -42,7 +38,7 @@ function addScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Prom
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

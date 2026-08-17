@@ -16,8 +16,6 @@ Starts the device selection module to show the list of available devices on the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -46,7 +44,7 @@ Starts the device selection module to show the list of available devices on the 
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -80,8 +78,6 @@ Starts the device selection module to show the list of available devices on the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -111,7 +107,7 @@ Starts the device selection module to show the list of available devices on the 
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';
@@ -145,8 +141,6 @@ function startContinuationDeviceManager(token: number, options?: ContinuationExt
 Starts the device selection module to show the list of available devices on the network. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 22
 
@@ -182,7 +176,7 @@ Starts the device selection module to show the list of available devices on the 
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { continuationManager } from '@kit.AbilityKit';

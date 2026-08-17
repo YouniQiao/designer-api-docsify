@@ -16,10 +16,6 @@ Checks whether the call forwarding time can be set. This API uses an asynchronou
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-call-function canSetCallTransferTime(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-call-function canSetCallTransferTime(slotId: int, callback: AsyncCallback<boolean>): void-End-->
@@ -47,7 +43,7 @@ Checks whether the call forwarding time can be set. This API uses an asynchronou
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -72,10 +68,6 @@ function canSetCallTransferTime(slotId: int): Promise<boolean>
 Checks whether the call forwarding time can be set. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -109,7 +101,7 @@ Checks whether the call forwarding time can be set. This API uses a promise to r
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

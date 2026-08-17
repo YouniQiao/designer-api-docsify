@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-enum PrintPageType--><!--Device-print-enum PrintPageType-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -21,10 +17,6 @@ PAGE_ISO_A3 = 0
 表示A3。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintPageType-PAGE_ISO_A3 = 0--><!--Device-PrintPageType-PAGE_ISO_A3 = 0-End-->
 
@@ -40,10 +32,6 @@ PAGE_ISO_A4 = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintPageType-PAGE_ISO_A4 = 1--><!--Device-PrintPageType-PAGE_ISO_A4 = 1-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -57,10 +45,6 @@ PAGE_ISO_A5 = 2
 表示A5。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintPageType-PAGE_ISO_A5 = 2--><!--Device-PrintPageType-PAGE_ISO_A5 = 2-End-->
 
@@ -76,10 +60,6 @@ PAGE_JIS_B5 = 3
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintPageType-PAGE_JIS_B5 = 3--><!--Device-PrintPageType-PAGE_JIS_B5 = 3-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -93,10 +73,6 @@ PAGE_ISO_C5 = 4
 表示C5。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintPageType-PAGE_ISO_C5 = 4--><!--Device-PrintPageType-PAGE_ISO_C5 = 4-End-->
 
@@ -112,10 +88,6 @@ PAGE_ISO_DL = 5
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintPageType-PAGE_ISO_DL = 5--><!--Device-PrintPageType-PAGE_ISO_DL = 5-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -129,10 +101,6 @@ PAGE_LETTER = 6
 表示Letter。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintPageType-PAGE_LETTER = 6--><!--Device-PrintPageType-PAGE_LETTER = 6-End-->
 
@@ -148,10 +116,6 @@ PAGE_LEGAL = 7
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintPageType-PAGE_LEGAL = 7--><!--Device-PrintPageType-PAGE_LEGAL = 7-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -165,10 +129,6 @@ PAGE_PHOTO_4X6 = 8
 表示4x6相纸。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintPageType-PAGE_PHOTO_4X6 = 8--><!--Device-PrintPageType-PAGE_PHOTO_4X6 = 8-End-->
 
@@ -184,10 +144,6 @@ PAGE_PHOTO_5X7 = 9
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintPageType-PAGE_PHOTO_5X7 = 9--><!--Device-PrintPageType-PAGE_PHOTO_5X7 = 9-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -202,10 +158,6 @@ PAGE_INT_DL_ENVELOPE = 10
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintPageType-PAGE_INT_DL_ENVELOPE = 10--><!--Device-PrintPageType-PAGE_INT_DL_ENVELOPE = 10-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -219,10 +171,6 @@ PAGE_B_TABLOID = 11
 表示B Tabloid。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintPageType-PAGE_B_TABLOID = 11--><!--Device-PrintPageType-PAGE_B_TABLOID = 11-End-->
 

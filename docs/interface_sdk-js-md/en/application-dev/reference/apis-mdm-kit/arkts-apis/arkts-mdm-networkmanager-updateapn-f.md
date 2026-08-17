@@ -16,10 +16,6 @@ Updates the APN. This API is suitable for enterprise mobile network configuratio
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APN
 
 **Model restriction:** This API can be used only in the stage model.
@@ -34,7 +30,7 @@ Updates the APN. This API is suitable for enterprise mobile network configuratio
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | apnInfo | Record&lt;string, string&gt; | Yes | APN information to be updated. After the setting, the system uses the updated parameters to modify the corresponding APN configuration, affecting the network connection mode and data transmission path. <br>- **apnName**: APN identifier, which is optional. <br>- **mcc**: 3-digit mobile country code (MCC), which is optional. <br>- **mnc**: 2-digit or 3-digit mobile network code (MNC), which is optional. <br>- **APN**: access point name, which is optional. <br>- **type**: APN service type, which is optional. <br>- **user**: user name for APN authentication, which is optional. <br>- **password**: password for APN authentication, which is optional. <br>- **proxy**: address of the proxy server for a common data connection, which is optional. <br>- **mmsproxy**: dedicated proxy address of the MMS service, which is optional. <br>- **authType**: authentication protocol type of the APN, which is optional. |
-| apnId | string | Yes | APN ID to be updated. You can obatin the device APN information via [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryApn). |
+| apnId | string | Yes | APN ID to be updated. You can obatin the device APN information via [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn). |
 
 **Error codes:**
 
@@ -44,7 +40,7 @@ Updates the APN. This API is suitable for enterprise mobile network configuratio
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

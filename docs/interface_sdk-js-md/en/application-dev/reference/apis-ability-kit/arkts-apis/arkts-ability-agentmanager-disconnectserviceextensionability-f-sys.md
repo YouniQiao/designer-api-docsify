@@ -12,13 +12,9 @@ import { agentManager } from 'agentManager';
 function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: long): Promise<void>
 ```
 
-Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to [connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md#connectServiceExtensionAbility-(System-API)).
+Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to [connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md#connectserviceextensionability-system-api).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

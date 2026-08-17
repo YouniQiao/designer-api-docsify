@@ -16,10 +16,6 @@ function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled: boolean): Promise<void>--><!--Device-notificationManager-function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled: boolean): Promise<void>-End-->
@@ -50,7 +46,7 @@ function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

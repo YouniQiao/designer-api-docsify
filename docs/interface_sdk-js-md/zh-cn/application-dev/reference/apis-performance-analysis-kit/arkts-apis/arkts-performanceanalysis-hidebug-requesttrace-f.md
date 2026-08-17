@@ -10,10 +10,6 @@ function requestTrace(config: RequestTraceConfig): Promise<string>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -42,7 +38,7 @@ function requestTrace(config: RequestTraceConfig): Promise<string>
 | [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Remote service exception. |
 | [11400120](../errorcode-hiviewdfx-hidebug-trace.md#11400120-trace文件存储达到限制) | Trace storage limit reached. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug, hilog } from '@kit.PerformanceAnalysisKit';

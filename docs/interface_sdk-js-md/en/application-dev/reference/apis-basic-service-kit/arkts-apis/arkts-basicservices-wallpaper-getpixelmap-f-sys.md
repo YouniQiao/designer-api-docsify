@@ -16,8 +16,6 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
@@ -35,7 +33,7 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | the callback of getPixelMap. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -61,8 +59,6 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
@@ -85,7 +81,7 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 | --- | --- |
 | Promise&lt;image.PixelMap&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

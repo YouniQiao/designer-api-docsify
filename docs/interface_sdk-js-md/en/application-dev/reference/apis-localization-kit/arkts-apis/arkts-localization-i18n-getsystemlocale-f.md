@@ -16,11 +16,9 @@ Obtains the system locale.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSystemLocale](arkts-localization-i18n-system-c.md#getSystemLocale)
+**Substitutes:** [getSystemLocale](arkts-localization-i18n-system-c.md#getsystemlocale)
 
 <!--Device-i18n-export function getSystemLocale(): string--><!--Device-i18n-export function getSystemLocale(): string-End-->
 
@@ -32,7 +30,7 @@ Obtains the system locale.
 | --- | --- |
 | string | System locale ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';

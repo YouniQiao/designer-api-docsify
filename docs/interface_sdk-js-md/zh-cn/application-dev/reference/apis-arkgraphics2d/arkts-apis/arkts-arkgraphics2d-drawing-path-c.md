@@ -1,12 +1,8 @@
 # Path
 
-Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥曲线、二阶贝塞尔、三阶贝塞尔等基本图元组成， 支持路径的构造、变换、布尔运算、SVG路径解析与转换、测量与片段截取等能力。 未设置填充类型时，默认填充类型为WINDING，可通过[setFillType](#setFillType)修改。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥曲线、二阶贝塞尔、三阶贝塞尔等基本图元组成， 支持路径的构造、变换、布尔运算、SVG路径解析与转换、测量与片段截取等能力。 未设置填充类型时，默认填充类型为WINDING，可通过[setFillType](#setfilltype)修改。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-drawing-class Path--><!--Device-drawing-class Path-End-->
 
@@ -18,13 +14,9 @@ Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥
 addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void
 ```
 
-向路径添加一段圆弧。与[arcTo](#arcTo)相比，addArc不会自动添加从路径最后点到弧线起点的连接线段，且通过common2D.Rect对象指定矩形边界。若需要自动连接弧线起点， 请使用arcTo；若仅需添加独立弧线，可使用addArc。
+向路径添加一段圆弧。与[arcTo](#arcto)相比，addArc不会自动添加从路径最后点到弧线起点的连接线段，且通过common2D.Rect对象指定矩形边界。若需要自动连接弧线起点， 请使用arcTo；若仅需添加独立弧线，可使用addArc。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void--><!--Device-Path-addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void-End-->
 
@@ -53,10 +45,6 @@ addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): 
 按指定方向，向路径添加圆形，圆的起点位于(x + radius, y)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): void--><!--Device-Path-addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): void-End-->
 
@@ -87,10 +75,6 @@ addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void--><!--Device-Path-addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -119,10 +103,6 @@ addPath(path: Path, matrix?: Matrix | null): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-addPath(path: Path, matrix?: Matrix | null): void--><!--Device-Path-addPath(path: Path, matrix?: Matrix | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -149,10 +129,6 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 通过坐标点列表添加多条连续的线段。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-addPolygon(points: Array<common2D.Point>, close: boolean): void--><!--Device-Path-addPolygon(points: Array<common2D.Point>, close: boolean): void-End-->
 
@@ -181,10 +157,6 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-addRect(rect: common2D.Rect, pathDirection?: PathDirection): void--><!--Device-Path-addRect(rect: common2D.Rect, pathDirection?: PathDirection): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -212,10 +184,6 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void--><!--Device-Path-addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -242,10 +210,6 @@ approximate(acceptableError: number): Array<number>
 将当前路径转化为由连续直线段构成的近似路径。 > **说明：** > > - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。 > > - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。 > > - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-Path-approximate(acceptableError: number): Array<number>--><!--Device-Path-approximate(acceptableError: number): Array<number>-End-->
 
@@ -279,10 +243,6 @@ approximate(acceptableError: double): Array<double> | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-Path-approximate(acceptableError: double): Array<double> | undefined--><!--Device-Path-approximate(acceptableError: double): Array<double> | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -311,13 +271,9 @@ approximate(acceptableError: double): Array<double> | undefined
 arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg: double): void
 ```
 
-给路径添加一段弧线。绘制弧线的方式为角度弧：首先指定一个矩形边界，取其内切椭圆；然后指定起始角度和扫描度数；最后从起始角度 扫描截取椭圆周长的一部分，即为绘制的弧线。另外会默认添加一条从路径最后点位置（若路径没有内容则默认值为 (0, 0)）到 弧线起始点位置的线段。若不需要自动添加连接线段，请使用[addArc](#addArc)。
+给路径添加一段弧线。绘制弧线的方式为角度弧：首先指定一个矩形边界，取其内切椭圆；然后指定起始角度和扫描度数；最后从起始角度 扫描截取椭圆周长的一部分，即为绘制的弧线。另外会默认添加一条从路径最后点位置（若路径没有内容则默认值为 (0, 0)）到 弧线起始点位置的线段。若不需要自动添加连接线段，请使用[addArc](#addarc)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -352,10 +308,6 @@ buildFromSvgString(str: string): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-buildFromSvgString(str: string): boolean--><!--Device-Path-buildFromSvgString(str: string): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -388,10 +340,6 @@ close(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-close(): void--><!--Device-Path-close(): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -402,13 +350,9 @@ close(): void
 conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void
 ```
 
-在当前路径上添加一条路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线，其控制点为 (ctrlX, ctrlY)， 目标点为 (endX, endY)。与[quadTo](#quadTo)相比，conicTo通过权重参数可更灵活地控制曲线形状： 权重为1时效果与quadTo相同，权重不为1时可精确表示圆弧、椭圆弧等圆锥曲线段。仅需标准二次贝塞尔 曲线时推荐使用quadTo，需要精确表示圆弧或灵活控制曲线形状时推荐使用conicTo。
+在当前路径上添加一条路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线，其控制点为 (ctrlX, ctrlY)， 目标点为 (endX, endY)。与[quadTo](#quadto)相比，conicTo通过权重参数可更灵活地控制曲线形状： 权重为1时效果与quadTo相同，权重不为1时可精确表示圆弧、椭圆弧等圆锥曲线段。仅需标准二次贝塞尔 曲线时推荐使用quadTo，需要精确表示圆弧或灵活控制曲线形状时推荐使用conicTo。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -424,7 +368,7 @@ conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double
 | ctrlY | double | 是 | 控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
 | endX | double | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
 | endY | double | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| weight | double | 是 | 表示曲线权重，决定了曲线的形状。值越大，曲线越接近控制点。 小于等于0时，效果与[lineTo](#lineTo)相同； 值为1时，效果与[quadTo](#quadTo)相同。该参数为浮点数。 |
+| weight | double | 是 | 表示曲线权重，决定了曲线的形状。值越大，曲线越接近控制点。 小于等于0时，效果与[lineTo](#lineto)相同； 值为1时，效果与[quadTo](#quadto)相同。该参数为浮点数。 |
 
 **错误码：**
 
@@ -442,10 +386,6 @@ constructor()
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Path-constructor()--><!--Device-Path-constructor()-End-->
@@ -461,10 +401,6 @@ constructor(path: Path)
 构造一个已有路径的副本。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -484,13 +420,9 @@ constructor(path: Path)
 contains(x: double, y: double): boolean
 ```
 
-判断指定坐标点是否被路径包含，判定规则参考[PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md#PathFillType)。
+判断指定坐标点是否被路径包含，判定规则参考[PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md#pathfilltype)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-contains(x: double, y: double): boolean--><!--Device-Path-contains(x: double, y: double): boolean-End-->
 
@@ -525,10 +457,6 @@ convertToSvgString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Path-convertToSvgString(): string--><!--Device-Path-convertToSvgString(): string-End-->
@@ -550,10 +478,6 @@ cubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: do
 添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -588,10 +512,6 @@ getBounds(): common2D.Rect
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-Path-getBounds(): common2D.Rect--><!--Device-Path-getBounds(): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -612,10 +532,6 @@ getBounds(): common2D.Rect | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-getBounds(): common2D.Rect | undefined--><!--Device-Path-getBounds(): common2D.Rect | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -632,13 +548,9 @@ getBounds(): common2D.Rect | undefined
 getConicWeightData(): Array<double>
 ```
 
-获取路径的圆锥曲线权重数据。 在路径（path）图元中，圆锥曲线数据采用有理贝塞尔曲线（Rational Bézier Curve）形式表示，其中每个控制点附带一个权重值（weight）。权重属于曲线定义的几何参数。 主要作用如下： 形状调控：权重值越大，曲线越靠近对应控制点；权重为1时退化为标准贝塞尔曲线；权重为0时该控制点不起作用。 精确表示圆锥曲线：通过组合权重与二次贝塞尔曲线，可以精确表示圆弧、椭圆弧、抛物线等圆锥曲线段，无需使用分段逼近或专用椭圆弧指令。 数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo](#conicTo)）配合使用。
+获取路径的圆锥曲线权重数据。 在路径（path）图元中，圆锥曲线数据采用有理贝塞尔曲线（Rational Bézier Curve）形式表示，其中每个控制点附带一个权重值（weight）。权重属于曲线定义的几何参数。 主要作用如下： 形状调控：权重值越大，曲线越靠近对应控制点；权重为1时退化为标准贝塞尔曲线；权重为0时该控制点不起作用。 精确表示圆锥曲线：通过组合权重与二次贝塞尔曲线，可以精确表示圆弧、椭圆弧、抛物线等圆锥曲线段，无需使用分段逼近或专用椭圆弧指令。 数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo](#conicto)）配合使用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -662,10 +574,6 @@ getFillType(): PathFillType
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-Path-getFillType(): PathFillType--><!--Device-Path-getFillType(): PathFillType-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -686,10 +594,6 @@ getFillType(): PathFillType | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-Path-getFillType(): PathFillType | undefined--><!--Device-Path-getFillType(): PathFillType | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -709,10 +613,6 @@ getLastPoint(): common2D.Point
 获取路径最后点位置的坐标。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -736,10 +636,6 @@ getLastPoint(): common2D.Point | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Path-getLastPoint(): common2D.Point | undefined--><!--Device-Path-getLastPoint(): common2D.Point | undefined-End-->
@@ -761,10 +657,6 @@ getLength(forceClosed: boolean): double
 获取路径长度。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-getLength(forceClosed: boolean): double--><!--Device-Path-getLength(forceClosed: boolean): double-End-->
 
@@ -791,10 +683,6 @@ getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMea
 在路径上距离起始点distance处，获取一个变换矩阵，用于表示该点的坐标和朝向。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMeasureMatrixFlags): boolean--><!--Device-Path-getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMeasureMatrixFlags): boolean-End-->
 
@@ -831,10 +719,6 @@ getPathIterator(): PathIterator
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
-
-**废弃版本：** -1
-
 <!--Device-Path-getPathIterator(): PathIterator--><!--Device-Path-getPathIterator(): PathIterator-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -855,10 +739,6 @@ getPathIterator(): PathIterator | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-getPathIterator(): PathIterator | undefined--><!--Device-Path-getPathIterator(): PathIterator | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -875,13 +755,9 @@ getPathIterator(): PathIterator | undefined
 getPointData(): Array<common2D.Point>
 ```
 
-获取路径的点数据。 在路径（path）图元中，点数据以数值序列的形式存在，与verb指令一一对应，用来精确指定绘图操作的几何坐标位置。 点数据的主要类型包括： 终点坐标：与[moveTo](#moveTo)、[lineTo](#lineTo)等指令配合，定义线段或移动的目标位置。 控制点坐标：与曲线指令配合，用于定义贝塞尔曲线的形状（如三次曲线需要两个控制点和一个终点）。 闭合点：通常不单独提供坐标，由[close](#close)指令隐式使用路径起点。
+获取路径的点数据。 在路径（path）图元中，点数据以数值序列的形式存在，与verb指令一一对应，用来精确指定绘图操作的几何坐标位置。 点数据的主要类型包括： 终点坐标：与[moveTo](#moveto)、[lineTo](#lineto)等指令配合，定义线段或移动的目标位置。 控制点坐标：与曲线指令配合，用于定义贝塞尔曲线的形状（如三次曲线需要两个控制点和一个终点）。 闭合点：通常不单独提供坐标，由[close](#close)指令隐式使用路径起点。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -904,10 +780,6 @@ getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D
 获取路径起始点指定距离处的坐标点和切线值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D.Point, tangent: common2D.Point): boolean--><!--Device-Path-getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D.Point, tangent: common2D.Point): boolean-End-->
 
@@ -944,10 +816,6 @@ getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: b
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: boolean, dst: Path): boolean--><!--Device-Path-getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: boolean, dst: Path): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -959,7 +827,7 @@ getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: b
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
 | start | double | 是 | 表示与路径起始点的距离，距离路径起始点start距离的位置即为截取路径片段的起始点， 小于0时会被视作0，大于等于stop时会截取失败。该参数为浮点数。单位为物理像素px。 |
 | stop | double | 是 | 表示与路径起始点的距离，距离路径起始点stop距离的位置即为截取路径片段的终点， 小于等于start时会截取失败，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
-| startWithMoveTo | boolean | 是 | 表示是否在目标路径执行[moveTo](#moveTo) 移动到截取路径片段的起始点位置。true表示执行moveTo；false表示不执行moveTo。 |
+| startWithMoveTo | boolean | 是 | 表示是否在目标路径执行[moveTo](#moveto) 移动到截取路径片段的起始点位置。true表示执行moveTo；false表示不执行moveTo。 |
 | dst | Path | 是 | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
 
 **返回值：**
@@ -974,13 +842,9 @@ getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: b
 getVerbData(): Array<PathIteratorVerb>
 ```
 
-获取路径的指令数据。 在路径（path）图元中，指令数据verb用于描述路径构造过程中的基本绘图动作。 指令数据以枚举的形式存在，每个取值对应一种几何操作类型，例如： [moveTo](#moveTo)：将当前绘图点移至指定坐标，不产生线段。 [lineTo](#lineTo)：从当前点向指定点绘制直线段。 [close](#close)：将当前点与路径起点相连，形成封闭区域。
+获取路径的指令数据。 在路径（path）图元中，指令数据verb用于描述路径构造过程中的基本绘图动作。 指令数据以枚举的形式存在，每个取值对应一种几何操作类型，例如： [moveTo](#moveto)：将当前绘图点移至指定坐标，不产生线段。 [lineTo](#lineto)：从当前点向指定点绘制直线段。 [close](#close)：将当前点与路径起点相连，形成封闭区域。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1003,10 +867,6 @@ interpolate(other: Path, weight: double, interpolatedPath: Path): boolean
 根据给定的权重，在当前路径和另一条路径之间进行插值，并将结果存储在目标路径对象中。两条路径点数相同即可插值成功，目标路径按照当前路径的指令结构进行创建。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-Path-interpolate(other: Path, weight: double, interpolatedPath: Path): boolean--><!--Device-Path-interpolate(other: Path, weight: double, interpolatedPath: Path): boolean-End-->
 
@@ -1042,10 +902,6 @@ isClosed(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-isClosed(): boolean--><!--Device-Path-isClosed(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -1066,10 +922,6 @@ isEmpty(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-Path-isEmpty(): boolean--><!--Device-Path-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -1089,10 +941,6 @@ isEqual(path: Path): boolean
 判断当前路径与另一条路径是否相等。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1122,10 +970,6 @@ isInterpolate(other: Path): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-Path-isInterpolate(other: Path): boolean--><!--Device-Path-isInterpolate(other: Path): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -1152,10 +996,6 @@ isInverseFillType(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-isInverseFillType(): boolean--><!--Device-Path-isInverseFillType(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -1175,10 +1015,6 @@ isRect(rect: common2D.Rect | null): boolean
 判断路径是否构成矩形。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-isRect(rect: common2D.Rect | null): boolean--><!--Device-Path-isRect(rect: common2D.Rect | null): boolean-End-->
 
@@ -1206,10 +1042,6 @@ lineTo(x: double, y: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Path-lineTo(x: double, y: double): void--><!--Device-Path-lineTo(x: double, y: double): void-End-->
@@ -1235,13 +1067,9 @@ lineTo(x: double, y: double): void
 moveTo(x: double, y: double): void
 ```
 
-设置自定义路径的起始点位置。与[rMoveTo](#rMoveTo)使用相对坐标不同，moveTo使用绝对坐标设置起始点。 当路径起点固定时，推荐使用moveTo；当路径需要基于当前位置动态构建时，推荐使用[rMoveTo](#rMoveTo)。
+设置自定义路径的起始点位置。与[rMoveTo](#rmoveto)使用相对坐标不同，moveTo使用绝对坐标设置起始点。 当路径起点固定时，推荐使用moveTo；当路径需要基于当前位置动态构建时，推荐使用[rMoveTo](#rmoveto)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1271,10 +1099,6 @@ offset(dx: number, dy: number): Path
 将路径沿x轴方向偏移dx距离、沿y轴方向偏移dy距离，并保存在返回的路径对象中。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-Path-offset(dx: number, dy: number): Path--><!--Device-Path-offset(dx: number, dy: number): Path-End-->
 
@@ -1309,10 +1133,6 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-offset(dx: double, dy: double): Path | undefined--><!--Device-Path-offset(dx: double, dy: double): Path | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -1345,10 +1165,6 @@ op(path: Path, pathOp: PathOp): boolean
 将当前路径与path按照指定的路径操作类型进行合并，并将合并结果保存在当前路径中。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-op(path: Path, pathOp: PathOp): boolean--><!--Device-Path-op(path: Path, pathOp: PathOp): boolean-End-->
 
@@ -1383,10 +1199,6 @@ quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Path-quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void--><!--Device-Path-quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void-End-->
@@ -1414,13 +1226,9 @@ quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void
 rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线。 与[conicTo](#conicTo)使用绝对坐标不同，rConicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加 圆锥曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线。 与[conicTo](#conicto)使用绝对坐标不同，rConicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加 圆锥曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1436,7 +1244,7 @@ rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: doubl
 | ctrlY | double | 是 | 控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 | endX | double | 是 | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 | endY | double | 是 | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| weight | double | 是 | 表示曲线权重，决定了曲线的形状，越大越接近控制点。 若小于等于0则等同于使用[rLineTo](#rLineTo)添加一条到结束点的线段， 若为1则等同于[rQuadTo](#rQuadTo)，该参数为浮点数。 |
+| weight | double | 是 | 表示曲线权重，决定了曲线的形状，越大越接近控制点。 若小于等于0则等同于使用[rLineTo](#rlineto)添加一条到结束点的线段， 若为1则等同于[rQuadTo](#rquadto)，该参数为浮点数。 |
 
 **错误码：**
 
@@ -1450,13 +1258,9 @@ rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: doubl
 rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: double, endY: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。 与[cubicTo](#cubicTo)使用绝对坐标不同，rCubicTo使用相对于当前路径最后点位置的偏移量在当前路径上 添加三阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。 与[cubicTo](#cubicto)使用绝对坐标不同，rCubicTo使用相对于当前路径最后点位置的偏移量在当前路径上 添加三阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1487,13 +1291,9 @@ rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: d
 rLineTo(dx: double, dy: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。 与[lineTo](#lineTo)使用绝对坐标不同，rLineTo使用相对于当前路径最后点位置的偏移量来指定目标点。 当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当目标点位置固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。 与[lineTo](#lineto)使用绝对坐标不同，rLineTo使用相对于当前路径最后点位置的偏移量来指定目标点。 当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当目标点位置固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1520,13 +1320,9 @@ rLineTo(dx: double, dy: double): void
 rMoveTo(dx: double, dy: double): void
 ```
 
-设置一个相对于当前路径最后点位置（若路径没有内容则默认为 (0, 0)）的路径起始点位置。 与[moveTo](#moveTo)使用绝对坐标不同，rMoveTo使用相对于当前路径最后点位置的偏移量。 当路径需要基于当前位置动态构建时，推荐使用相对坐标方法（如rMoveTo、rLineTo等）；当路径起点固定时，推荐使用绝对坐标方法。
+设置一个相对于当前路径最后点位置（若路径没有内容则默认为 (0, 0)）的路径起始点位置。 与[moveTo](#moveto)使用绝对坐标不同，rMoveTo使用相对于当前路径最后点位置的偏移量。 当路径需要基于当前位置动态构建时，推荐使用相对坐标方法（如rMoveTo、rLineTo等）；当路径起点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1553,13 +1349,9 @@ rMoveTo(dx: double, dy: double): void
 rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的二阶贝塞尔曲线。 与[quadTo](#quadTo)使用绝对坐标不同，rQuadTo使用相对于当前路径最后点位置的偏移量在当前路径上 添加二阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的二阶贝塞尔曲线。 与[quadTo](#quadto)使用绝对坐标不同，rQuadTo使用相对于当前路径最后点位置的偏移量在当前路径上 添加二阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1592,10 +1384,6 @@ reset(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-reset(): void--><!--Device-Path-reset(): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -1610,10 +1398,6 @@ rewind(): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-Path-rewind(): void--><!--Device-Path-rewind(): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -1627,10 +1411,6 @@ set(src: Path): void
 使用指定路径替换当前路径的内容，使当前路径与指定路径完全一致。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1653,10 +1433,6 @@ setFillType(pathFillType: PathFillType): void
 设置路径的填充类型，决定路径内部区域的定义方式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-setFillType(pathFillType: PathFillType): void--><!--Device-Path-setFillType(pathFillType: PathFillType): void-End-->
 
@@ -1684,10 +1460,6 @@ setLastPoint(x: double, y: double): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-Path-setLastPoint(x: double, y: double): void--><!--Device-Path-setLastPoint(x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -1709,10 +1481,6 @@ toggleInverseFillType(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Path-toggleInverseFillType(): void--><!--Device-Path-toggleInverseFillType(): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -1726,10 +1494,6 @@ transform(matrix: Matrix): void
 对路径进行矩阵变换。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Path-transform(matrix: Matrix): void--><!--Device-Path-transform(matrix: Matrix): void-End-->
 

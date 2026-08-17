@@ -4,10 +4,6 @@ Describes the screenshot options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screenshot-interface ScreenshotOptions--><!--Device-screenshot-interface ScreenshotOptions-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -26,15 +22,11 @@ import { screenshot } from 'screenshot';
 displayId?: long
 ```
 
-ID of the [display](arkts-arkui-display-displaystate-e.md#DisplayState) device on which the screen region is to be captured. The value must be an integer.
+ID of the [display](arkts-arkui-display-displaystate-e.md#displaystate) device on which the screen region is to be captured. The value must be an integer.
 
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScreenshotOptions-displayId?: long--><!--Device-ScreenshotOptions-displayId?: long-End-->
 
@@ -54,10 +46,6 @@ Region of the screen to capture. If no value is passed, the region of the logica
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScreenshotOptions-imageSize?: Size--><!--Device-ScreenshotOptions-imageSize?: Size-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -76,10 +64,6 @@ Whether to capture all displays on the current screen. If the screen contains mu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScreenshotOptions-isCaptureFullOfScreen?: boolean--><!--Device-ScreenshotOptions-isCaptureFullOfScreen?: boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -92,15 +76,11 @@ Whether to capture all displays on the current screen. If the screen contains mu
 isNotificationNeeded?: boolean
 ```
 
-Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through captureStatusChange.
+Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through [captureStatusChange](arkts-arkui-display-onadd-f.md#onadd).
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScreenshotOptions-isNotificationNeeded?: boolean--><!--Device-ScreenshotOptions-isNotificationNeeded?: boolean-End-->
 
@@ -120,10 +100,6 @@ Angle by which the captured image should be rotated. Currently, the value can be
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScreenshotOptions-rotation?: int--><!--Device-ScreenshotOptions-rotation?: int-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -141,10 +117,6 @@ Region of the screen to capture. If no value is passed, the region of the logica
 **Type:** Rect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScreenshotOptions-screenRect?: Rect--><!--Device-ScreenshotOptions-screenRect?: Rect-End-->
 

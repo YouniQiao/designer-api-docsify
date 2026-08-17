@@ -16,10 +16,6 @@ Obtains the actual time calculated based on the last updated NTP time. This API 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemDateTime-function getNtpTime(): long--><!--Device-systemDateTime-function getNtpTime(): long-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -39,7 +35,7 @@ Obtains the actual time calculated based on the last updated NTP time. This API 
 | [13000002](../../apis-basic-services-kit/errorcode-time.md#13000002-ntp-time-not-updated) | updateNtpTime() is not called successfully. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

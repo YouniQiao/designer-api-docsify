@@ -1,12 +1,8 @@
 # USBConfiguration
 
-Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md#USBDevice) can contain multiple **USBConfig** instances.
+Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md#usbdevice) can contain multiple **USBConfig** instances.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBConfiguration--><!--Device-usbManager-interface USBConfiguration-End-->
 
@@ -30,10 +26,6 @@ Configuration attributes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBConfiguration-attributes: int--><!--Device-USBConfiguration-attributes: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -49,10 +41,6 @@ Unique ID of the USB configuration.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBConfiguration-id: int--><!--Device-USBConfiguration-id: int-End-->
 
@@ -70,10 +58,6 @@ Supported interface attributes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBConfiguration-interfaces: Array<USBInterface>--><!--Device-USBConfiguration-interfaces: Array<USBInterface>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -89,10 +73,6 @@ Whether remote wakeup is supported. The value **true** indicates that the remote
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBConfiguration-isRemoteWakeup: boolean--><!--Device-USBConfiguration-isRemoteWakeup: boolean-End-->
 
@@ -110,10 +90,6 @@ Whether an independent power supply is supported. The value **true** indicates t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBConfiguration-isSelfPowered: boolean--><!--Device-USBConfiguration-isSelfPowered: boolean-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -130,10 +106,6 @@ Maximum power consumption.Unit: mA.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-USBConfiguration-maxPower: int--><!--Device-USBConfiguration-maxPower: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
@@ -149,10 +121,6 @@ Configuration name, which can be left empty.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-USBConfiguration-name: string--><!--Device-USBConfiguration-name: string-End-->
 

@@ -4,10 +4,6 @@ Audio render target.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum RenderTarget--><!--Device-audio-enum RenderTarget-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -24,10 +20,6 @@ Playback. Under this target, the audio renderer will be played out. This is the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RenderTarget-PLAYBACK = 0--><!--Device-RenderTarget-PLAYBACK = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -40,13 +32,9 @@ Playback. Under this target, the audio renderer will be played out. This is the 
 INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1
 ```
 
-Inject to voice communication capture. Under this target, the audio renderer will be injected to audio capture with source type of [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_COMMUNICATION) when the audio scene is [AUDIO_SCENE_VOICE_CHAT](arkts-audio-audio-audioscene-e.md#AUDIO_SCENE_VOICE_CHAT).
+Inject to voice communication capture. Under this target, the audio renderer will be injected to audio capture with source type of [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#sourcetypevoicecommunication) when the audio scene is [AUDIO_SCENE_VOICE_CHAT](arkts-audio-audio-audioscene-e.md#audioscenevoicechat).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RenderTarget-INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1--><!--Device-RenderTarget-INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1-End-->
 

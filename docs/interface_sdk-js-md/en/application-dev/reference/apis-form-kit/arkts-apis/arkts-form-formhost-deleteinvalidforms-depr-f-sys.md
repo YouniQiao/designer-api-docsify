@@ -10,11 +10,9 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md#deleteInvalidForms-(System-API))
+**Substitutes:** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md#deleteinvalidforms-system-api)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -42,11 +40,9 @@ Deletes invalid widgets from the list. This API uses a promise to return the res
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md#deleteInvalidForms-(System-API))
+**Substitutes:** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md#deleteinvalidforms-system-api)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

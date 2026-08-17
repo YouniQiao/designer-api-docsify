@@ -4,10 +4,6 @@ Defines the shared album asset
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-photoAccessHelper-interface SharedAlbumAsset--><!--Device-photoAccessHelper-interface SharedAlbumAsset-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -25,10 +21,6 @@ album id of album asset
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SharedAlbumAsset-albumId: int--><!--Device-SharedAlbumAsset-albumId: int-End-->
 
@@ -48,10 +40,6 @@ album name
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SharedAlbumAsset-albumName: string--><!--Device-SharedAlbumAsset-albumName: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -69,10 +57,6 @@ subtype of album asset
 **类型：** AlbumSubtype
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SharedAlbumAsset-albumSubType: AlbumSubtype--><!--Device-SharedAlbumAsset-albumSubType: AlbumSubtype-End-->
 
@@ -92,10 +76,6 @@ type of album asset
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SharedAlbumAsset-albumType: AlbumType--><!--Device-SharedAlbumAsset-albumType: AlbumType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -113,10 +93,6 @@ number of assets in this album
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SharedAlbumAsset-count: int--><!--Device-SharedAlbumAsset-count: int-End-->
 
@@ -136,10 +112,6 @@ uri of album cover
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SharedAlbumAsset-coverUri: string--><!--Device-SharedAlbumAsset-coverUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -158,10 +130,6 @@ number of photo assets in this album
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SharedAlbumAsset-imageCount: int--><!--Device-SharedAlbumAsset-imageCount: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -179,10 +147,6 @@ number of video assets in this album
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SharedAlbumAsset-videoCount: int--><!--Device-SharedAlbumAsset-videoCount: int-End-->
 

@@ -1,12 +1,8 @@
 # TreeSet
 
-TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md#TreeMap)实现，在TreeSet中，仅处理元素的值（value），不单独处理键（key）。 TreeSet的每个元素在底层TreeMap中同时作为key和value存储，因此元素中value唯一且有序。
+TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md#treemap)实现，在TreeSet中，仅处理元素的值（value），不单独处理键（key）。 TreeSet的每个元素在底层TreeMap中同时作为key和value存储，因此元素中value唯一且有序。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class TreeSet--><!--Device-unnamed-declare class TreeSet-End-->
 
@@ -22,10 +18,6 @@ $_iterator(): IterableIterator<T>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-$_iterator(): IterableIterator<T>--><!--Device-TreeSet-$_iterator(): IterableIterator<T>-End-->
@@ -38,7 +30,7 @@ $_iterator(): IterableIterator<T>
 | --- | --- |
 | IterableIterator&lt;T&gt; | TreeSet的迭代器。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet : TreeSet<string> = new TreeSet<string>();
@@ -67,10 +59,6 @@ while(temp != undefined) {
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -89,7 +77,7 @@ while(temp != undefined) {
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -134,10 +122,6 @@ add(value: T): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-add(value: T): boolean--><!--Device-TreeSet-add(value: T): boolean-End-->
@@ -162,7 +146,7 @@ add(value: T): boolean
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -180,10 +164,6 @@ clear(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-clear(): void--><!--Device-TreeSet-clear(): void-End-->
@@ -196,7 +176,7 @@ clear(): void
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -217,10 +197,6 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)--><!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)-End-->
@@ -239,7 +215,7 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The TreeSet's constructor cannot be directly invoked. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 默认构造
@@ -291,10 +267,6 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-constructor(comparator?: TreeSetComparator<T>)--><!--Device-TreeSet-constructor(comparator?: TreeSetComparator<T>)-End-->
@@ -307,7 +279,7 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 | --- | --- | --- | --- |
 | comparator | [TreeSetComparator](arkts-arkts-treesetcomparator-t.md)&lt;T&gt; | 否 | 比较函数。 comparator（可选）用户自定义的比较函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 默认构造
@@ -362,10 +334,6 @@ entries(): IterableIterator<[T, T]>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-entries(): IterableIterator<[T, T]>--><!--Device-TreeSet-entries(): IterableIterator<[T, T]>-End-->
@@ -384,7 +352,7 @@ entries(): IterableIterator<[T, T]>
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -450,10 +418,6 @@ forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Ob
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void--><!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void-End-->
@@ -473,7 +437,7 @@ forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Ob
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -508,10 +472,6 @@ forEach(callbackFn: TreeSetForEachCb<T>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-forEach(callbackFn: TreeSetForEachCb<T>): void--><!--Device-TreeSet-forEach(callbackFn: TreeSetForEachCb<T>): void-End-->
@@ -524,7 +484,7 @@ forEach(callbackFn: TreeSetForEachCb<T>): void
 | --- | --- | --- | --- |
 | callbackFn | [TreeSetForEachCb](arkts-arkts-treesetforeachcb-t.md)&lt;T&gt; | 是 | 遍历实例对象中每个元素时调用的回调函数，开发者可在回调中对元素及其下标进行自定义处理。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { TreeSetForEachCb } from '@kit.ArkTS';
@@ -548,10 +508,6 @@ getFirstValue(): T
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-getFirstValue(): T--><!--Device-TreeSet-getFirstValue(): T-End-->
@@ -569,9 +525,9 @@ getFirstValue(): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirstValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -590,10 +546,6 @@ getHigherValue(key: T): T
 获取容器中比传入元素排序靠后一位的元素，为空时返回undefined。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -619,7 +571,7 @@ getHigherValue(key: T): T
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getHigherValue method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -639,10 +591,6 @@ getHigherValue(key: T): T | undefined
 获取容器中比传入元素排序靠后一位的元素，如果key不存在，则返回undefined。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -668,7 +616,7 @@ getHigherValue(key: T): T | undefined
 | --- | --- |
 | [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet : TreeSet<string> = new TreeSet<string>();
@@ -688,10 +636,6 @@ getLastValue(): T
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-getLastValue(): T--><!--Device-TreeSet-getLastValue(): T-End-->
@@ -709,9 +653,9 @@ getLastValue(): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLastValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -730,10 +674,6 @@ getLowerValue(key: T): T
 获取容器中比传入元素排序靠前一位的元素，为空时返回undefined。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -759,7 +699,7 @@ getLowerValue(key: T): T
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLowerValue method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -779,10 +719,6 @@ getLowerValue(key: T): T | undefined
 获取容器中比传入元素排序靠前一位的元素，如果key不存在，则返回undefined。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -808,7 +744,7 @@ getLowerValue(key: T): T | undefined
 | --- | --- |
 | [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet : TreeSet<string> = new TreeSet<string>();
@@ -827,10 +763,6 @@ has(value: T): boolean
 判断容器中是否包含指定元素。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -856,7 +788,7 @@ has(value: T): boolean
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -887,10 +819,6 @@ isEmpty(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-isEmpty(): boolean--><!--Device-TreeSet-isEmpty(): boolean-End-->
@@ -909,7 +837,7 @@ isEmpty(): boolean
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -938,10 +866,6 @@ popFirst(): T
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-popFirst(): T--><!--Device-TreeSet-popFirst(): T-End-->
@@ -959,9 +883,9 @@ popFirst(): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -981,10 +905,6 @@ popLast(): T
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-popLast(): T--><!--Device-TreeSet-popLast(): T-End-->
@@ -1002,9 +922,9 @@ popLast(): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -1023,10 +943,6 @@ remove(value: T): boolean
 删除指定的元素。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1052,7 +968,7 @@ remove(value: T): boolean
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -1072,10 +988,6 @@ values(): IterableIterator<T>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-values(): IterableIterator<T>--><!--Device-TreeSet-values(): IterableIterator<T>-End-->
@@ -1094,7 +1006,7 @@ values(): IterableIterator<T>
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 不建议在values中使用add、remove方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
@@ -1120,10 +1032,6 @@ TreeSet的元素个数。
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

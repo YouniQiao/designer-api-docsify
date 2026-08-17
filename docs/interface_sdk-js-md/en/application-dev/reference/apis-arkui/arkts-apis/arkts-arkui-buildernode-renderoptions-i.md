@@ -4,10 +4,6 @@ Provides optional parameters for creating a BuilderNode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface RenderOptions--><!--Device-unnamed-export interface RenderOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Ideal size of the node. Default value: **{ width: 0, height: 0 }**.
 **Type:** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,10 +40,6 @@ Surface ID of the texture receiver. Typically, the texture receiver is [OH_Nativ
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -71,10 +59,6 @@ Rendering type of the node. Default value: **NodeRenderType.RENDER_TYPE_DISPLAY*
 **Type:** [NodeRenderType](../../apis-na/arkts-apis/arkts-na-buildernode-noderendertype-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

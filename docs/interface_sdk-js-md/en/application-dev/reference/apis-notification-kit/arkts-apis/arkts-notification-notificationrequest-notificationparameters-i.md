@@ -4,10 +4,6 @@ Describes part of the **wantAgent** information in NotificationRequest.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface NotificationParameters--><!--Device-unnamed-export interface NotificationParameters-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -18,15 +14,11 @@ Describes part of the **wantAgent** information in NotificationRequest.
 wantAction?:string
 ```
 
-**action** field passed in **want** when **wantAgent** is created. For details, see [action](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
+**action** field passed in **want** when **wantAgent** is created. For details, see [action](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#want).
 
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +32,11 @@ wantAction?:string
 wantParameters?:Record<string, RecordData>
 ```
 
-**parameters** field passed in **want** when **wantAgent** is created. For details, see [parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
+**parameters** field passed in **want** when **wantAgent** is created. For details, see [parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#want).
 
 **Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,15 +50,11 @@ wantParameters?:Record<string, RecordData>
 wantUri?:string
 ```
 
-**uri** field passed in **want** when **wantAgent** is created. For details, see [uri](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
+**uri** field passed in **want** when **wantAgent** is created. For details, see [uri](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#want).
 
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,10 +10,6 @@ function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<vo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<void>): void--><!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<void>): void-End-->
@@ -26,7 +22,7 @@ function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | handle | Uint8Array | 是 | 表示操作句柄，需先调用init方法获得 |
 | data | Uint8Array | 是 | 表示待签名、验签的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当签名、验签的数据更新操作成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当签名、验签的数据更新操作成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -36,7 +32,7 @@ function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<vo
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -72,10 +68,6 @@ function update(handle: Uint8Array, data: Uint8Array): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array): Promise<void>--><!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array): Promise<void>-End-->
@@ -103,7 +95,7 @@ function update(handle: Uint8Array, data: Uint8Array): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

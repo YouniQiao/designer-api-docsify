@@ -11,10 +11,6 @@ export function verifyControllerDevicePackage(ticketInfo: RemoteAuthPackage[], r
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 <!--Device-abilityToolAccessCtrl-export function verifyControllerDevicePackage(ticketInfo: RemoteAuthPackage[], remoteInfo: RemoteInfo):    Promise<boolean[]>--><!--Device-abilityToolAccessCtrl-export function verifyControllerDevicePackage(ticketInfo: RemoteAuthPackage[], remoteInfo: RemoteInfo):    Promise<boolean[]>-End-->
@@ -47,7 +43,7 @@ export function verifyControllerDevicePackage(ticketInfo: RemoteAuthPackage[], r
 | [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) | Invalid parameter. Format of ticketInfo or remoteInfo is invalid. |
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { abilityToolAccessCtrl } from '@kit.AbilityKit';

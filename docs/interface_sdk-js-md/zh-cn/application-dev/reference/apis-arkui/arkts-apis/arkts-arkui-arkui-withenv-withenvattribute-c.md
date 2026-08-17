@@ -1,12 +1,8 @@
-# WithEnvAttribute
+# WithEnvAttribute(定义WithEnv组件，允许为子组件设置环境属性。)
 
 定义WithEnv组件的属性功能。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export declare class WithEnvAttribute--><!--Device-unnamed-export declare class WithEnvAttribute-End-->
 
@@ -21,10 +17,6 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 设置作用域内可被后代自定义组件读取的自定义环境变量。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,7 +37,7 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute对象。 |
+| [WithEnvAttribute](../../apis-na/arkts-apis/arkts-na-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute对象。 |
 
 ## env
 
@@ -56,10 +48,6 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 设置作用域内的系统环境变量。当前正式支持的系统环境变量键为WritableEnvKey.FONT_SCALE、WritableEnvKey.DIRECTION。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,5 +68,5 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute对象。 |
+| [WithEnvAttribute](../../apis-na/arkts-apis/arkts-na-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute对象。 |
 

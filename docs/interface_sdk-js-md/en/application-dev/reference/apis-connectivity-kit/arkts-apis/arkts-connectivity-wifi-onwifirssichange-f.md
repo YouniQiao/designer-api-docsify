@@ -16,8 +16,6 @@ Subscribe Wi-Fi rssi change events.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** wifiRssiChange

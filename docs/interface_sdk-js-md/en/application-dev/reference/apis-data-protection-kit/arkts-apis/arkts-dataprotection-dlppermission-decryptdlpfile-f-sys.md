@@ -16,10 +16,6 @@ Decrypts a DLP file to generate a plaintext file. This API can be called only by
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 <!--Device-dlpPermission-function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>--><!--Device-dlpPermission-function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>-End-->
@@ -58,7 +54,7 @@ Decrypts a DLP file to generate a plaintext file. This API can be called only by
 | [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
 | [19100013](../errorcode-dlp.md#19100013-user-access-denied) | The user does not have the permission. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

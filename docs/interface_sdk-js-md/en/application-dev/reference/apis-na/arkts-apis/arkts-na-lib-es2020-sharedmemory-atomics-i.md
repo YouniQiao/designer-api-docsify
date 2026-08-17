@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Atomics--><!--Device-unnamed-interface Atomics-End-->
 
 ## add
@@ -17,10 +13,6 @@ add(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): b
 Adds a value to the value at the given position in the array, returning the original value. Until this atomic operation completes, any other read or write operation against the array will block.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Atomics-add(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint--><!--Device-Atomics-add(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint-End-->
 
@@ -48,10 +40,6 @@ Stores the bitwise AND of a value with the value at the given position in the ar
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Atomics-and(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint--><!--Device-Atomics-and(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint-End-->
 
 **Parameters:**
@@ -77,10 +65,6 @@ compareExchange(typedArray: BigInt64Array | BigUint64Array, index: number, expec
 Replaces the value at the given position in the array if the original value equals the given expected value, returning the original value. Until this atomic operation completes, any other read or write operation against the array will block.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Atomics-compareExchange(typedArray: BigInt64Array | BigUint64Array, index: number, expectedValue: bigint, replacementValue: bigint): bigint--><!--Device-Atomics-compareExchange(typedArray: BigInt64Array | BigUint64Array, index: number, expectedValue: bigint, replacementValue: bigint): bigint-End-->
 
@@ -109,10 +93,6 @@ Replaces the value at the given position in the array, returning the original va
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Atomics-exchange(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint--><!--Device-Atomics-exchange(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint-End-->
 
 **Parameters:**
@@ -139,10 +119,6 @@ Returns the value at the given position in the array. Until this atomic operatio
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Atomics-load(typedArray: BigInt64Array | BigUint64Array, index: number): bigint--><!--Device-Atomics-load(typedArray: BigInt64Array | BigUint64Array, index: number): bigint-End-->
 
 **Parameters:**
@@ -167,10 +143,6 @@ notify(typedArray: BigInt64Array, index: number, count?: number): number
 Wakes up sleeping agents that are waiting on the given index of the array, returning the number of agents that were awoken.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Atomics-notify(typedArray: BigInt64Array, index: number, count?: number): number--><!--Device-Atomics-notify(typedArray: BigInt64Array, index: number, count?: number): number-End-->
 
@@ -198,10 +170,6 @@ Stores the bitwise OR of a value with the value at the given position in the arr
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Atomics-or(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint--><!--Device-Atomics-or(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint-End-->
 
 **Parameters:**
@@ -227,10 +195,6 @@ store(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint):
 Stores a value at the given position in the array, returning the new value. Until this atomic operation completes, any other read or write operation against the array will block.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Atomics-store(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint--><!--Device-Atomics-store(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint-End-->
 
@@ -258,10 +222,6 @@ Subtracts a value from the value at the given position in the array, returning t
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Atomics-sub(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint--><!--Device-Atomics-sub(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint-End-->
 
 **Parameters:**
@@ -287,10 +247,6 @@ wait(typedArray: BigInt64Array, index: number, value: bigint, timeout?: number):
 If the value at the given position in the array is equal to the provided value, the current agent is put to sleep causing execution to suspend until the timeout expires (returning `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns `"not-equal"`.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Atomics-wait(typedArray: BigInt64Array, index: number, value: bigint, timeout?: number): "ok" | "not-equal" | "timed-out"--><!--Device-Atomics-wait(typedArray: BigInt64Array, index: number, value: bigint, timeout?: number): "ok" | "not-equal" | "timed-out"-End-->
 
@@ -318,10 +274,6 @@ xor(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): b
 Stores the bitwise XOR of a value with the value at the given position in the array, returning the original value. Until this atomic operation completes, any other read or write operation against the array will block.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Atomics-xor(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint--><!--Device-Atomics-xor(typedArray: BigInt64Array | BigUint64Array, index: number, value: bigint): bigint-End-->
 

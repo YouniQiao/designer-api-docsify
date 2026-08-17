@@ -4,10 +4,6 @@ LinkIntentInfo用于描述 @InsightIntentLink 装饰器支持的参数，例如�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-insightIntentDriver-interface LinkIntentInfo--><!--Device-insightIntentDriver-interface LinkIntentInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -25,10 +21,6 @@ readonly uri: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

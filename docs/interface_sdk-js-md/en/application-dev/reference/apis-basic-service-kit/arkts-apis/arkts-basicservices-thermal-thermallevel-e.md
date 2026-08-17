@@ -4,10 +4,6 @@ Enumerates thermal levels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-thermal-export enum ThermalLevel--><!--Device-thermal-export enum ThermalLevel-End-->
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
@@ -21,10 +17,6 @@ COOL = 0
 The device is cool, and services are not restricted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ThermalLevel-COOL = 0--><!--Device-ThermalLevel-COOL = 0-End-->
 
@@ -40,10 +32,6 @@ The device is in the normal temperature range but it is getting warm. You need t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ThermalLevel-NORMAL = 1--><!--Device-ThermalLevel-NORMAL = 1-End-->
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
@@ -57,10 +45,6 @@ WARM = 2
 The device is warm. You need to stop or delay some imperceptible services.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ThermalLevel-WARM = 2--><!--Device-ThermalLevel-WARM = 2-End-->
 
@@ -76,10 +60,6 @@ The device is heating up. You need to stop all imperceptible services and downgr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ThermalLevel-HOT = 3--><!--Device-ThermalLevel-HOT = 3-End-->
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
@@ -93,10 +73,6 @@ OVERHEATED = 4
 The device is overheated. You need to stop all imperceptible services and downgrade or reduce the load of major foreground services.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ThermalLevel-OVERHEATED = 4--><!--Device-ThermalLevel-OVERHEATED = 4-End-->
 
@@ -112,10 +88,6 @@ The device is overheated and is about to enter the emergency state. You need to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ThermalLevel-WARNING = 5--><!--Device-ThermalLevel-WARNING = 5-End-->
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
@@ -130,10 +102,6 @@ The device has entered the emergency state. You need to stop all services except
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ThermalLevel-EMERGENCY = 6--><!--Device-ThermalLevel-EMERGENCY = 6-End-->
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
@@ -147,10 +115,6 @@ ESCAPE = 7
 The device is about to enter the escape state. You need to stop all services and take necessary emergency measures such as data backup.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ThermalLevel-ESCAPE = 7--><!--Device-ThermalLevel-ESCAPE = 7-End-->
 

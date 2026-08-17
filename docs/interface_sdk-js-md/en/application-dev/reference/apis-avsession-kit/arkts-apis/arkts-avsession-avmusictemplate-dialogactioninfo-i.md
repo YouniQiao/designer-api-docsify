@@ -4,10 +4,6 @@ The definition of dialog action result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avMusicTemplate-interface DialogActionInfo--><!--Device-avMusicTemplate-interface DialogActionInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -30,10 +26,6 @@ Id of the button clicked by the user.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogActionInfo-clickedBtnId: string--><!--Device-DialogActionInfo-clickedBtnId: string-End-->
@@ -52,10 +44,6 @@ Unique ID of the dialog action.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogActionInfo-dialogId: string--><!--Device-DialogActionInfo-dialogId: string-End-->
@@ -73,10 +61,6 @@ Is the checkbox in the pop-up window selected.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

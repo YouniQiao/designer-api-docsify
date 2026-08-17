@@ -4,11 +4,9 @@ The ContinuationResult module describes the device information returned by the c
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
-**Substitutes:** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#@ohos.distributedDeviceManager)
+**Substitutes:** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#ohosdistributeddevicemanager)
 
 <!--Device-unnamed-export interface ContinuationResult--><!--Device-unnamed-export interface ContinuationResult-End-->
 
@@ -25,8 +23,6 @@ Device ID.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 
@@ -50,8 +46,6 @@ Device name.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -73,8 +67,6 @@ Device type.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 

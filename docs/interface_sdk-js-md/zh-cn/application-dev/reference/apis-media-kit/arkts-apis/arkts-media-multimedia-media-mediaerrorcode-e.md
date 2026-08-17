@@ -1,14 +1,12 @@
 # MediaErrorCode
 
-媒体服务错误类型枚举。 > **说明：** > > 从API version 8开始支持，从API version 11开始废弃，建议使用[AVErrorCode](arkts-media-media-averrorcode-e.md#AVErrorCode)替代。
+媒体服务错误类型枚举。 > **说明：** > > 从API version 8开始支持，从API version 11开始废弃，建议使用[AVErrorCode](arkts-media-media-averrorcode-e.md#averrorcode)替代。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVErrorCode](arkts-media-media-averrorcode-e.md#AVErrorCode)
+**替代接口：** [AVErrorCode](arkts-media-media-averrorcode-e.md#averrorcode)
 
 <!--Device-unnamed-enum MediaErrorCode--><!--Device-unnamed-enum MediaErrorCode-End-->
 
@@ -24,11 +22,9 @@ MSERR_OK = 0
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVERR_OK](arkts-media-media-averrorcode-e.md#AVERR_OK)
+**替代接口：** [AVERR_OK](arkts-media-media-averrorcode-e.md#averrok)
 
 <!--Device-MediaErrorCode-MSERR_OK = 0--><!--Device-MediaErrorCode-MSERR_OK = 0-End-->
 
@@ -44,11 +40,9 @@ MSERR_NO_MEMORY = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVERR_NO_MEMORY](arkts-media-media-averrorcode-e.md#AVERR_NO_MEMORY)
+**替代接口：** [AVERR_NO_MEMORY](arkts-media-media-averrorcode-e.md#averrnomemory)
 
 <!--Device-MediaErrorCode-MSERR_NO_MEMORY = 1--><!--Device-MediaErrorCode-MSERR_NO_MEMORY = 1-End-->
 
@@ -64,11 +58,9 @@ MSERR_OPERATION_NOT_PERMIT = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVERR_OPERATE_NOT_PERMIT](arkts-media-media-averrorcode-e.md#AVERR_OPERATE_NOT_PERMIT)
+**替代接口：** [AVERR_OPERATE_NOT_PERMIT](arkts-media-media-averrorcode-e.md#averroperatenotpermit)
 
 <!--Device-MediaErrorCode-MSERR_OPERATION_NOT_PERMIT = 2--><!--Device-MediaErrorCode-MSERR_OPERATION_NOT_PERMIT = 2-End-->
 
@@ -84,11 +76,9 @@ MSERR_INVALID_VAL = 3
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
+**替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averrinvalidparameter)
 
 <!--Device-MediaErrorCode-MSERR_INVALID_VAL = 3--><!--Device-MediaErrorCode-MSERR_INVALID_VAL = 3-End-->
 
@@ -104,11 +94,9 @@ MSERR_IO = 4
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVERR_IO](arkts-media-media-averrorcode-e.md#AVERR_IO)
+**替代接口：** [AVERR_IO](arkts-media-media-averrorcode-e.md#averrio)
 
 <!--Device-MediaErrorCode-MSERR_IO = 4--><!--Device-MediaErrorCode-MSERR_IO = 4-End-->
 
@@ -124,11 +112,9 @@ MSERR_TIMEOUT = 5
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVERR_TIMEOUT](arkts-media-media-averrorcode-e.md#AVERR_TIMEOUT)
+**替代接口：** [AVERR_TIMEOUT](arkts-media-media-averrorcode-e.md#averrtimeout)
 
 <!--Device-MediaErrorCode-MSERR_TIMEOUT = 5--><!--Device-MediaErrorCode-MSERR_TIMEOUT = 5-End-->
 
@@ -144,11 +130,9 @@ MSERR_UNKNOWN = 6
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
+**替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averrinvalidparameter)
 
 <!--Device-MediaErrorCode-MSERR_UNKNOWN = 6--><!--Device-MediaErrorCode-MSERR_UNKNOWN = 6-End-->
 
@@ -164,11 +148,9 @@ MSERR_SERVICE_DIED = 7
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVERR_SERVICE_DIED](arkts-media-media-averrorcode-e.md#AVERR_SERVICE_DIED)
+**替代接口：** [AVERR_SERVICE_DIED](arkts-media-media-averrorcode-e.md#averrservicedied)
 
 <!--Device-MediaErrorCode-MSERR_SERVICE_DIED = 7--><!--Device-MediaErrorCode-MSERR_SERVICE_DIED = 7-End-->
 
@@ -184,11 +166,9 @@ MSERR_INVALID_STATE = 8
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
+**替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averrinvalidparameter)
 
 <!--Device-MediaErrorCode-MSERR_INVALID_STATE = 8--><!--Device-MediaErrorCode-MSERR_INVALID_STATE = 8-End-->
 
@@ -204,11 +184,9 @@ MSERR_UNSUPPORTED = 9
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
-**替代接口：** [AVERR_UNSUPPORT_CAPABILITY](arkts-media-media-averrorcode-e.md#AVERR_UNSUPPORT_CAPABILITY)
+**替代接口：** [AVERR_UNSUPPORT_CAPABILITY](arkts-media-media-averrorcode-e.md#averrunsupportcapability)
 
 <!--Device-MediaErrorCode-MSERR_UNSUPPORTED = 9--><!--Device-MediaErrorCode-MSERR_UNSUPPORTED = 9-End-->
 

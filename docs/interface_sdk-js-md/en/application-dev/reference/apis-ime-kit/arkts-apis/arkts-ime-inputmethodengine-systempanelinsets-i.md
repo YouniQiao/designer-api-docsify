@@ -4,10 +4,6 @@ Defines the offset area between the input method soft keyboard and the system pa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-interface SystemPanelInsets--><!--Device-inputMethodEngine-interface SystemPanelInsets-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -30,10 +26,6 @@ Distance between the bottom border of the keyboard area and the bottom border of
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemPanelInsets-readonly bottom: int--><!--Device-SystemPanelInsets-readonly bottom: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -50,10 +42,6 @@ Distance between the left border of the keyboard area and the left border of the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemPanelInsets-readonly left: int--><!--Device-SystemPanelInsets-readonly left: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -69,10 +57,6 @@ Distance between the right border of the keyboard area and the right border of t
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemPanelInsets-readonly right: int--><!--Device-SystemPanelInsets-readonly right: int-End-->
 

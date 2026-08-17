@@ -16,10 +16,6 @@ Set the policy for the specified UID.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 <!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy, callback: AsyncCallback<void>): void--><!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy, callback: AsyncCallback<void>): void-End-->
@@ -33,7 +29,7 @@ Set the policy for the specified UID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | the specified UID of application. |
-| policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | the policy of the current UID of application.For details, see [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md#NetUidPolicy-(System-API)). |
+| policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | the policy of the current UID of application.For details, see [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md#netuidpolicy-system-api). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setPolicyByUid. |
 
 **Error codes:**
@@ -47,7 +43,7 @@ Set the policy for the specified UID.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -68,10 +64,6 @@ Set the policy for the specified UID.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 <!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy): Promise<void>--><!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy): Promise<void>-End-->
@@ -85,7 +77,7 @@ Set the policy for the specified UID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | the specified UID of application. |
-| policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | the policy of the current UID of application.For details, see [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md#NetUidPolicy-(System-API)). |
+| policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | the policy of the current UID of application.For details, see [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md#netuidpolicy-system-api). |
 
 **Return value:**
 
@@ -104,7 +96,7 @@ Set the policy for the specified UID.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -11,10 +11,6 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,    callback: AsyncCallback<WindowAnimationFinishedCallback>): void--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,    callback: AsyncCallback<WindowAnimationFinishedCallback>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -26,9 +22,9 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowTarget | WindowAnimationTarget | 是 | 动画目标窗口。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | 是 | 回调函数。当最小化动画目标窗口成功，err为undefined，data为获取到的 WindowAnimationFinishedCallback；否则返回err.code为-1，data为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | 是 | 回调函数。当最小化动画目标窗口成功，err为undefined，data为获取到的 WindowAnimationFinishedCallback；否则返回err.code为-1，data为undefined。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -103,10 +99,6 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -125,7 +117,7 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promi
 | --- | --- |
 | Promise&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Promise对象，返回动画完成的回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -12,13 +12,9 @@ import { connection } from 'connection';
 function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void
 ```
 
-Obtains the network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings.
+Obtains the network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-connection-function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void--><!--Device-connection-function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void-End-->
 
@@ -30,7 +26,7 @@ Obtains the network independent global [HttpProxy](arkts-network-connection-http
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpProxy&gt; | Yes | Returns the proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpProxy&gt; | Yes | Returns the proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy). |
 
 **Error codes:**
 
@@ -41,7 +37,7 @@ Obtains the network independent global [HttpProxy](arkts-network-connection-http
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -60,13 +56,9 @@ connection.getGlobalHttpProxy((error: BusinessError, data: connection.HttpProxy)
 function getGlobalHttpProxy(): Promise<HttpProxy>
 ```
 
-Obtains the network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings.
+Obtains the network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-connection-function getGlobalHttpProxy(): Promise<HttpProxy>--><!--Device-connection-function getGlobalHttpProxy(): Promise<HttpProxy>-End-->
 
@@ -88,7 +80,7 @@ Obtains the network independent global [HttpProxy](arkts-network-connection-http
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

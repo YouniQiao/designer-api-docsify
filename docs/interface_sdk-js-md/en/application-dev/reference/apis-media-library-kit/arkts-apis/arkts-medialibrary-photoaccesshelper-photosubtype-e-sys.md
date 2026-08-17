@@ -1,12 +1,8 @@
 # PhotoSubtype (System API)
 
-Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset) types.
+Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) types.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export enum PhotoSubtype--><!--Device-photoAccessHelper-export enum PhotoSubtype-End-->
 
@@ -23,10 +19,6 @@ DEFAULT = 0
 Photo, which is the default type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,10 +38,6 @@ Screenshot and screen recording file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PhotoSubtype-SCREENSHOT = 1--><!--Device-PhotoSubtype-SCREENSHOT = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -66,10 +54,6 @@ Slow-motion video file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PhotoSubtype-SLOW_MOTION_VIDEO = 6--><!--Device-PhotoSubtype-SLOW_MOTION_VIDEO = 6-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -85,10 +69,6 @@ SPATIAL_3DGS = 7
 Video file using the 3D Gaussian Splatting (3DGS) rendering format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PhotoSubtype-SPATIAL_3DGS = 7--><!--Device-PhotoSubtype-SPATIAL_3DGS = 7-End-->
 

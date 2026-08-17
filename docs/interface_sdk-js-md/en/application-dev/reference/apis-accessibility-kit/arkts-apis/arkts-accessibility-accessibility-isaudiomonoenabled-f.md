@@ -16,10 +16,6 @@ Checks whether mono audio mode is enabled. This API uses a promise to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-accessibility-function isAudioMonoEnabled(): Promise<boolean>--><!--Device-accessibility-function isAudioMonoEnabled(): Promise<boolean>-End-->
@@ -32,7 +28,7 @@ Checks whether mono audio mode is enabled. This API uses a promise to return the
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if mono audio mode is enabled; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

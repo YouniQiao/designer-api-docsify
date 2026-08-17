@@ -4,10 +4,6 @@ ArkTS JSON utils.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-utils-namespace ASON--><!--Device-utils-namespace ASON-End-->
 
 **System capability:** SystemCapability.Utils.Lang

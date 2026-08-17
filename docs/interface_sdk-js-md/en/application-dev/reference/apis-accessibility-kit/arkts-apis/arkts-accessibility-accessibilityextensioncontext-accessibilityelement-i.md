@@ -1,12 +1,8 @@
 # AccessibilityElement
 
-An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes. Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement).
+An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes. Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface AccessibilityElement--><!--Device-unnamed-export declare interface AccessibilityElement-End-->
 
@@ -22,8 +18,6 @@ Obtains the names of all actions supported by the node element. This API uses an
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-actionNames(callback: AsyncCallback<Array<string>>): void--><!--Device-AccessibilityElement-actionNames(callback: AsyncCallback<Array<string>>): void-End-->
@@ -36,7 +30,7 @@ Obtains the names of all actions supported by the node element. This API uses an
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the action names are obtained successfully, **err** is **undefined** and **data** contains all action names supported by the node element; otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // rootElement is an instance of AccessibilityElement.
@@ -59,8 +53,6 @@ Obtains the names of all actions supported by the node element. This API uses a 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-actionNames(): Promise<Array<string>>--><!--Device-AccessibilityElement-actionNames(): Promise<Array<string>>-End-->
@@ -73,7 +65,7 @@ Obtains the names of all actions supported by the node element. This API uses a 
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the names of all actions supported by the element. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -96,8 +88,6 @@ Obtains all attribute names of the node element. This API uses an asynchronous c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<Array<T>>): void--><!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<Array<T>>): void-End-->
@@ -110,7 +100,7 @@ Obtains all attribute names of the node element. This API uses an asynchronous c
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback invoked to return the result. If the attribute names are obtained successfully, **err** is undefined and **data** contains all attribute names of the node element; otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ElementAttributeKeys } from '@kit.AccessibilityKit';
@@ -136,8 +126,6 @@ Obtains all attribute names of the node element. This API uses a promise to retu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>--><!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>-End-->
@@ -150,7 +138,7 @@ Obtains all attribute names of the node element. This API uses a promise to retu
 | --- | --- |
 | Promise&lt;Array&lt;T&gt;&gt; | Promise used to return all attribute names of the element. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ElementAttributeKeys } from '@kit.AccessibilityKit';
@@ -177,8 +165,6 @@ Obtains the attribute value based on an attribute name. This API uses an asynchr
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(    attributeName: T,    callback: AsyncCallback<ElementAttributeValues[T]>  ): void--><!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(    attributeName: T,    callback: AsyncCallback<ElementAttributeValues[T]>  ): void-End-->
@@ -199,7 +185,7 @@ Obtains the attribute value based on an attribute name. This API uses an asynchr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300004](../errorcode-accessibility.md#9300004-attribute-does-not-exist) | This property does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ElementAttributeKeys } from '@kit.AccessibilityKit';
@@ -227,8 +213,6 @@ Obtains the attribute value based on the attribute name. This API uses a promise
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promise<ElementAttributeValues[T]>--><!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promise<ElementAttributeValues[T]>-End-->
@@ -254,7 +238,7 @@ Obtains the attribute value based on the attribute name. This API uses a promise
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300004](../errorcode-accessibility.md#9300004-attribute-does-not-exist) | This property does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { ElementAttributeKeys } from '@kit.AccessibilityKit';
@@ -280,8 +264,6 @@ Finds an element based on the content type. This API uses an asynchronous callba
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-findElement(type: 'content', condition: string, callback: AsyncCallback<Array<AccessibilityElement>>): void--><!--Device-AccessibilityElement-findElement(type: 'content', condition: string, callback: AsyncCallback<Array<AccessibilityElement>>): void-End-->
@@ -302,7 +284,7 @@ Finds an element based on the content type. This API uses an asynchronous callba
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -329,8 +311,6 @@ Finds all node elements based on the node content. This API uses a promise to re
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-findElement(type: 'content', condition: string): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-findElement(type: 'content', condition: string): Promise<Array<AccessibilityElement>>-End-->
@@ -356,7 +336,7 @@ Finds all node elements based on the node content. This API uses a promise to re
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -381,8 +361,6 @@ Finds a node element based on the focus element type. This API uses an asynchron
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<AccessibilityElement>): void-End-->
@@ -403,7 +381,7 @@ Finds a node element based on the focus element type. This API uses an asynchron
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FocusType } from '@kit.AccessibilityKit';
@@ -431,8 +409,6 @@ Finds a node element based on the focus element type. This API uses a promise to
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityElement>-End-->
@@ -458,7 +434,7 @@ Finds a node element based on the focus element type. This API uses a promise to
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FocusType } from '@kit.AccessibilityKit';
@@ -484,8 +460,6 @@ Finds a node element based on the next focus element direction. This API uses an
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCallback<AccessibilityElement>): void-End-->
@@ -506,7 +480,7 @@ Finds a node element based on the next focus element direction. This API uses an
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FocusDirection } from '@kit.AccessibilityKit';
@@ -534,8 +508,6 @@ Finds a node element based on the next focus element direction. This API uses a 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection): Promise<AccessibilityElement>-End-->
@@ -561,7 +533,7 @@ Finds a node element based on the next focus element direction. This API uses a 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FocusDirection } from '@kit.AccessibilityKit';
@@ -587,8 +559,6 @@ Performs the specified action on the accessibility node element. This API uses a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-performAction(actionName: string, parameters: object, callback: AsyncCallback<void>): void--><!--Device-AccessibilityElement-performAction(actionName: string, parameters: object, callback: AsyncCallback<void>): void-End-->
@@ -599,7 +569,7 @@ Performs the specified action on the accessibility node element. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
+| actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md#action). |
 | parameters | object | Yes | Parameters required for executing the action. Different action types require different parameter structures. For details about the parameter format, see the description of each Action. For example, setSelection requires the selectTextBegin, selectTextEnd, and selectTextInForWard parameters, and setCursorPosition requires the offset parameter. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the action is executed successfully, err is undefined; otherwise, err is an error object. |
 
@@ -610,7 +580,7 @@ Performs the specified action on the accessibility node element. This API uses a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -638,8 +608,6 @@ Performs the specified action on the accessibility node element. This API uses a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-performAction(actionName: string, parameters?: object): Promise<void>--><!--Device-AccessibilityElement-performAction(actionName: string, parameters?: object): Promise<void>-End-->
@@ -650,7 +618,7 @@ Performs the specified action on the accessibility node element. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
+| actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md#action). |
 | parameters | object | No | Parameters required for executing the action. Different actions require different parameter key names and value types. For details about the value principles, see the definition of each Action. For example, setSelection requires the selectTextBegin, selectTextEnd, and selectTextInForWard parameters, and setCursorPosition requires the offset parameter. If not passed, this parameter is empty by default. |
 
 **Return value:**
@@ -666,7 +634,7 @@ Performs the specified action on the accessibility node element. This API uses a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -737,8 +705,6 @@ Performs the specified action on the accessibility node element. This API uses a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
 <!--Device-AccessibilityElement-performAction(actionName: string, callback: AsyncCallback<void>): void--><!--Device-AccessibilityElement-performAction(actionName: string, callback: AsyncCallback<void>): void-End-->
@@ -749,7 +715,7 @@ Performs the specified action on the accessibility node element. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
+| actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md#action). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the operation is executed. If the operation succeeds, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -759,7 +725,7 @@ Performs the specified action on the accessibility node element. This API uses a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@ Represents the information object of the web native messaging connection.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ConnectionInfo--><!--Device-unnamed-export interface ConnectionInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -30,10 +26,6 @@ App package name of the caller, used for identity identification and permission 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-ConnectionInfo-bundleName: string--><!--Device-ConnectionInfo-bundleName: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -49,10 +41,6 @@ Unique identifier of the connection, used to distinguish and manage different We
 **Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-ConnectionInfo-connectionId: number--><!--Device-ConnectionInfo-connectionId: number-End-->
 
@@ -70,10 +58,6 @@ Original URL of the caller extension, used for security control and origin ident
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-ConnectionInfo-extensionOrigin: string--><!--Device-ConnectionInfo-extensionOrigin: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -90,10 +74,6 @@ Pipe file descriptor used for reading data. Messages can be read from the Web si
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-ConnectionInfo-fdRead: number--><!--Device-ConnectionInfo-fdRead: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -109,10 +89,6 @@ Pipe file descriptor used for writing data. Messages can be sent to the Web side
 **Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-ConnectionInfo-fdWrite: number--><!--Device-ConnectionInfo-fdWrite: number-End-->
 

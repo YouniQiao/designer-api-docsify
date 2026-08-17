@@ -10,10 +10,6 @@ function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, opt
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-childProcessManager-function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>--><!--Device-childProcessManager-function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>-End-->
@@ -44,7 +40,7 @@ function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, opt
 | [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
 | [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit. |
 
-## 示例
+**示例**
 
 子进程部分，详见[Native子进程开发指导（C/C++）- 创建支持参数传递的Native子进程](../../../application-models/capi-nativechildprocess-development-guideline.md#创建支持参数传递的native子进程)：
 

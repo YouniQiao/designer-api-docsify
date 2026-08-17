@@ -4,10 +4,6 @@ Info about the connection from each specific client.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-webSocket-export interface WebSocketConnection--><!--Device-webSocket-export interface WebSocketConnection-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,10 +26,6 @@ IP address of the client.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-WebSocketConnection-clientIP: string--><!--Device-WebSocketConnection-clientIP: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -49,10 +41,6 @@ Port of the client.
 **Type:** int
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-WebSocketConnection-clientPort: int--><!--Device-WebSocketConnection-clientPort: int-End-->
 

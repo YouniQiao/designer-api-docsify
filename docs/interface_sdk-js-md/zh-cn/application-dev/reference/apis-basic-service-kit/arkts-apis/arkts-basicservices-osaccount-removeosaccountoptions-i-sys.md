@@ -4,10 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-interface RemoveOsAccountOptions--><!--Device-osAccount-interface RemoveOsAccountOptions-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -25,10 +21,6 @@ token?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 <!--Device-RemoveOsAccountOptions-token?: Uint8Array--><!--Device-RemoveOsAccountOptions-token?: Uint8Array-End-->
 

@@ -4,10 +4,6 @@ Defines the carrier configuration.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sim-export interface OperatorConfig--><!--Device-sim-export interface OperatorConfig-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
@@ -26,10 +22,6 @@ Indicates the field.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-OperatorConfig-field: string--><!--Device-OperatorConfig-field: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
@@ -47,10 +39,6 @@ Indicates the value.
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-OperatorConfig-value: string--><!--Device-OperatorConfig-value: string-End-->
 

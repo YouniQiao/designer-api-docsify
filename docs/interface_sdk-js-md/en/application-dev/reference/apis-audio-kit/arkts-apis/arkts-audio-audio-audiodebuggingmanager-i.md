@@ -4,10 +4,6 @@ Provides audio debug management capabilities.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioDebuggingManager--><!--Device-audio-interface AudioDebuggingManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -27,10 +23,6 @@ printAppInfo(fd: int): void
 Prints full audio runtime snapshot for current app process. The snapshot will contain all audio renderers, capturers, audio session information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,10 +45,6 @@ printCapturerInfo(capturer: AudioCapturer, fd: int): void
 Prints full audio runtime snapshot for target audio capturer instance. The snapshot will contain the stream, pipe, volume and device information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,10 +69,6 @@ Prints full audio runtime snapshot for target audio loopback instance. The snaps
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioDebuggingManager-printLoopbackInfo(loopback: AudioLoopback, fd: int): void--><!--Device-AudioDebuggingManager-printLoopbackInfo(loopback: AudioLoopback, fd: int): void-End-->
@@ -108,10 +92,6 @@ Prints full audio runtime snapshot for target audio renderer instance. The snaps
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioDebuggingManager-printRendererInfo(renderer: AudioRenderer, fd: int): void--><!--Device-AudioDebuggingManager-printRendererInfo(renderer: AudioRenderer, fd: int): void-End-->
@@ -134,10 +114,6 @@ printSessionInfo(session: AudioSessionManager, fd: int): void
 Prints full audio runtime snapshot for target audio session manager instance. The snapshot will contain the session status, scene, strategy and device information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-display-function getAllDisplays(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplays(callback: AsyncCallback<Array<Display>>): void-End-->
@@ -38,7 +34,7 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 | --- | --- |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,10 +63,6 @@ Obtains all Display objects. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-display-function getAllDisplays(): Promise<Array<Display>>--><!--Device-display-function getAllDisplays(): Promise<Array<Display>>-End-->
@@ -89,7 +81,7 @@ Obtains all Display objects. This API uses a promise to return the result.
 | --- | --- |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

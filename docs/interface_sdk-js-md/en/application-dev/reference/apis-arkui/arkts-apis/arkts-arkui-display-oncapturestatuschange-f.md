@@ -16,10 +16,6 @@ Register the callback for the status of the device's screen content is being cap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-display-function onCaptureStatusChange(callback: Callback<boolean>): void--><!--Device-display-function onCaptureStatusChange(callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager

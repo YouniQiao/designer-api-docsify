@@ -10,10 +10,6 @@ function getPersistentPolicy(tokenID: int): Promise<Array<PolicyInfo>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_FILE_ACCESS_PERSIST
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -47,7 +43,7 @@ function getPersistentPolicy(tokenID: int): Promise<Array<PolicyInfo>>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

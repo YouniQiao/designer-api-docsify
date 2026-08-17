@@ -4,10 +4,6 @@ Defines the axis range of an input device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputDevice-interface AxisRange--><!--Device-inputDevice-interface AxisRange-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -30,10 +26,6 @@ Axis type of an input device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AxisRange-axis: AxisType--><!--Device-AxisRange-axis: AxisType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -49,10 +41,6 @@ Benchmark value of the axis.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AxisRange-flat: int--><!--Device-AxisRange-flat: int-End-->
 
@@ -70,10 +58,6 @@ Fuzzy value of the axis.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AxisRange-fuzz: int--><!--Device-AxisRange-fuzz: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -89,10 +73,6 @@ Maximum value of the axis.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AxisRange-max: int--><!--Device-AxisRange-max: int-End-->
 
@@ -110,10 +90,6 @@ Minimum value of the axis.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AxisRange-min: int--><!--Device-AxisRange-min: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -130,10 +106,6 @@ Resolution of the axis.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AxisRange-resolution: int--><!--Device-AxisRange-resolution: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
@@ -149,10 +121,6 @@ Input sources supported by the input device, including the keyboard, mouse, touc
 **Type:** SourceType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AxisRange-source: SourceType--><!--Device-AxisRange-source: SourceType-End-->
 

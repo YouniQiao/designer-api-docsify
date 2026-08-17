@@ -16,10 +16,6 @@ Adds a watcher for event subscription.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_DFX_SYSEVENT
 
 <!--Device-hiSysEvent-function addWatcher(watcher: Watcher): void--><!--Device-hiSysEvent-function addWatcher(watcher: Watcher): void-End-->
@@ -44,7 +40,7 @@ Adds a watcher for event subscription.
 | [11200102](../errorcode-hisysevent-sys.md#11200102-number-of-event-watcher-rules-exceeding-the-limit) | The number of watch rules exceeds the limit. |
 | [11200101](../errorcode-hisysevent-sys.md#11200101-number-of-event-watchers-exceeding-the-limit) | The number of watchers exceeds the limit. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hiSysEvent } from '@kit.PerformanceAnalysisKit';

@@ -1,14 +1,12 @@
-# USBConfig
+# USBConfig(USB Manager)
 
-Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdevice-i.md#USBDevice) can contain multiple **USBConfig** instances.
+Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdevice-i.md#usbdevice) can contain multiple **USBConfig** instances.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration)
+**Substitutes:** [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#usbconfiguration)
 
 <!--Device-usb-interface USBConfig--><!--Device-usb-interface USBConfig-End-->
 
@@ -32,8 +30,6 @@ Configuration attributes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [attributes](arkts-basicservices-usbmanager-usbconfiguration-i.md#attributes)
@@ -53,8 +49,6 @@ Unique ID of the USB configuration.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,8 +70,6 @@ Supported interface attributes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [interfaces](arkts-basicservices-usbmanager-usbconfiguration-i.md#interfaces)
@@ -98,11 +90,9 @@ Support for remote wakeup.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isRemoteWakeup)
+**Substitutes:** [isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isremotewakeup)
 
 <!--Device-USBConfig-isRemoteWakeup: boolean--><!--Device-USBConfig-isRemoteWakeup: boolean-End-->
 
@@ -120,11 +110,9 @@ Support for independent power supplies.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isSelfPowered](arkts-basicservices-usbmanager-usbconfiguration-i.md#isSelfPowered)
+**Substitutes:** [isSelfPowered](arkts-basicservices-usbmanager-usbconfiguration-i.md#isselfpowered)
 
 <!--Device-USBConfig-isSelfPowered: boolean--><!--Device-USBConfig-isSelfPowered: boolean-End-->
 
@@ -142,11 +130,9 @@ Maximum power consumption, in mA.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxPower)
+**Substitutes:** [maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxpower)
 
 <!--Device-USBConfig-maxPower: number--><!--Device-USBConfig-maxPower: number-End-->
 
@@ -163,8 +149,6 @@ Configuration name, which can be left empty.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

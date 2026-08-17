@@ -4,8 +4,6 @@ Enumerates the notification content types.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** ContentType
@@ -24,11 +22,9 @@ Normal text notification.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NOTIFICATION_CONTENT_BASIC_TEXT](arkts-notification-notificationmanager-contenttype-e.md#NOTIFICATION_CONTENT_BASIC_TEXT)
+**Substitutes:** [NOTIFICATION_CONTENT_BASIC_TEXT](arkts-notification-notificationmanager-contenttype-e.md#notificationcontentbasictext)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT-End-->
 
@@ -44,11 +40,9 @@ Long text notification.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NOTIFICATION_CONTENT_LONG_TEXT](arkts-notification-notificationmanager-contenttype-e.md#NOTIFICATION_CONTENT_LONG_TEXT)
+**Substitutes:** [NOTIFICATION_CONTENT_LONG_TEXT](arkts-notification-notificationmanager-contenttype-e.md#notificationcontentlongtext)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT-End-->
 
@@ -64,11 +58,9 @@ Picture-attached notification.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NOTIFICATION_CONTENT_PICTURE](arkts-notification-notificationmanager-contenttype-e.md#NOTIFICATION_CONTENT_PICTURE)
+**Substitutes:** [NOTIFICATION_CONTENT_PICTURE](arkts-notification-notificationmanager-contenttype-e.md#notificationcontentpicture)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE--><!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE-End-->
 
@@ -84,11 +76,9 @@ Conversation notification.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NOTIFICATION_CONTENT_CONVERSATION](arkts-notification-notificationmanager-contenttype-e.md#NOTIFICATION_CONTENT_CONVERSATION)
+**Substitutes:** [NOTIFICATION_CONTENT_CONVERSATION](arkts-notification-notificationmanager-contenttype-e.md#notificationcontentconversation)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION--><!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION-End-->
 
@@ -104,11 +94,9 @@ Multi-line text notification.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NOTIFICATION_CONTENT_MULTILINE](arkts-notification-notificationmanager-contenttype-e.md#NOTIFICATION_CONTENT_MULTILINE)
+**Substitutes:** [NOTIFICATION_CONTENT_MULTILINE](arkts-notification-notificationmanager-contenttype-e.md#notificationcontentmultiline)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE--><!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE-End-->
 

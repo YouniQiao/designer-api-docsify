@@ -16,11 +16,9 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#setTime)(time: long, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#settime)(time: long, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -45,7 +43,7 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -76,11 +74,9 @@ Sets the system date. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#setTime)(time: long, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#settime)(time: long, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -110,7 +106,7 @@ Sets the system date. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

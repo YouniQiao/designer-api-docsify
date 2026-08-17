@@ -16,10 +16,6 @@ Unsubscribe from the rtt message event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 <!--Device-call-function offReceiveRttMessage(callback?: Callback<RttMessageInfo>): void--><!--Device-call-function offReceiveRttMessage(callback?: Callback<RttMessageInfo>): void-End-->

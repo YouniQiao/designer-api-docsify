@@ -4,10 +4,6 @@ Defines the struct of an intent entity. It represents key information objects in
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-insightIntent-interface IntentEntity--><!--Device-insightIntent-interface IntentEntity-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -29,10 +25,6 @@ ID of the intent entity.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

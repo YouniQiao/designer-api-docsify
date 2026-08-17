@@ -4,10 +4,6 @@ Enumerates the distributed KV store types. | Name | Value| Description | | -----
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedKVStore-enum KVStoreType--><!--Device-distributedKVStore-enum KVStoreType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -21,10 +17,6 @@ DEVICE_COLLABORATION
 Device-collaboration database, as specified by {@code DeviceKVStore}
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,10 +33,6 @@ SINGLE_VERSION
 Single-version database, as specified by {@code SingleKVStore}
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,8 @@
-# DlpFeatureStatus (System API)
+# DlpFeatureStatus(DLP) (System API)
 
 Enumerates DLP statuses.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-dlpSetDlpFeature-export enum DlpFeatureStatus--><!--Device-dlpSetDlpFeature-export enum DlpFeatureStatus-End-->
 
@@ -23,10 +19,6 @@ NOT_ENABLED_FEATURE = 0
 DLP disabled.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +37,6 @@ ENABLED_FEATURE = 1
 DLP enabled.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

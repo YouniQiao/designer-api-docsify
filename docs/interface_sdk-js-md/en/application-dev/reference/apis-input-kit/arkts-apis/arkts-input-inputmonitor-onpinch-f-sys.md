@@ -16,10 +16,6 @@ Listens for touchPad pinch events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function onPinch(receiver: Callback<Pinch>): void--><!--Device-inputMonitor-function onPinch(receiver: Callback<Pinch>): void-End-->
@@ -52,10 +48,6 @@ function onPinch(fingers: int, receiver: Callback<Pinch>): void
 Listens for touchPad fingers pinch events.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 

@@ -16,10 +16,6 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-dataAbility-function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates--><!--Device-dataAbility-function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -37,7 +33,7 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 | --- | --- |
 | rdb.RdbPredicates | RdbPredicates** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let dataAbilityPredicates = new dataAbility.DataAbilityPredicates()

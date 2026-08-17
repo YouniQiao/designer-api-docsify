@@ -10,8 +10,6 @@ Closes a file. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [close](arkts-corefile-file-fs-close-f.md#close)
@@ -42,8 +40,6 @@ declare function close(fd: number, callback: AsyncCallback<void>): void
 Closes a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

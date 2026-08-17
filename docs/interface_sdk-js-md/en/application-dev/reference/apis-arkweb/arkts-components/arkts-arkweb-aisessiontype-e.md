@@ -1,12 +1,8 @@
 # AISessionType
 
-Enum representing the supported types of AI sessions.
+Defines the supported AI session types.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum AISessionType--><!--Device-unnamed-declare enum AISessionType-End-->
 
@@ -18,13 +14,9 @@ Enum representing the supported types of AI sessions.
 TRANSLATOR = 1
 ```
 
-Translator model
+Translation model.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +30,9 @@ Translator model
 LANGUAGE_DETECTOR = 2
 ```
 
-Language detector model
+Language detection model.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +46,9 @@ Language detector model
 SUMMARIZER = 3
 ```
 
-Summarization generator model
+Content summary generation model.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,13 +62,9 @@ Summarization generator model
 WRITER = 4
 ```
 
-Writing assistant model
+Writing assistant model.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,13 +78,9 @@ Writing assistant model
 REWRITER = 5
 ```
 
-Rewriting assistant model
+Content rewriting assistant model.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,13 +94,9 @@ Rewriting assistant model
 PROMPT = 6
 ```
 
-Prompt engineering model
+Prompt model.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,13 +110,9 @@ Prompt engineering model
 PROOFREADER = 7
 ```
 
-Proofreading assistant model
+Content proofreading assistant model.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Obtains the body of an ad request. This API uses a promise to return the result 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>--><!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -45,7 +41,7 @@ Obtains the body of an ad request. This API uses a promise to return the result 
 | [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

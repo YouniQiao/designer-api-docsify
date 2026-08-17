@@ -4,10 +4,6 @@ Enumerates touch tool types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum ToolType--><!--Device-unnamed-export declare enum ToolType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -21,10 +17,6 @@ FINGER = 0
 Finger.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToolType-FINGER = 0--><!--Device-ToolType-FINGER = 0-End-->
 
@@ -40,10 +32,6 @@ Stylus.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToolType-PEN = 1--><!--Device-ToolType-PEN = 1-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -57,10 +45,6 @@ RUBBER = 2
 Eraser.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToolType-RUBBER = 2--><!--Device-ToolType-RUBBER = 2-End-->
 
@@ -76,10 +60,6 @@ Brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToolType-BRUSH = 3--><!--Device-ToolType-BRUSH = 3-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -93,10 +73,6 @@ PENCIL = 4
 Pencil.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToolType-PENCIL = 4--><!--Device-ToolType-PENCIL = 4-End-->
 
@@ -112,10 +88,6 @@ Air brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToolType-AIRBRUSH = 5--><!--Device-ToolType-AIRBRUSH = 5-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -130,10 +102,6 @@ Mouse.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ToolType-MOUSE = 6--><!--Device-ToolType-MOUSE = 6-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -147,10 +115,6 @@ LENS = 7
 Lens.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ToolType-LENS = 7--><!--Device-ToolType-LENS = 7-End-->
 

@@ -4,10 +4,6 @@ Describes the patterns supported by the pasteboard.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-pasteboard-enum Pattern--><!--Device-pasteboard-enum Pattern-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -21,10 +17,6 @@ URL = 0
 URL.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Pattern-URL = 0--><!--Device-Pattern-URL = 0-End-->
 
@@ -40,10 +32,6 @@ Number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pattern-NUMBER = 1--><!--Device-Pattern-NUMBER = 1-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -58,10 +46,6 @@ Email address.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Pattern-EMAIL_ADDRESS = 2--><!--Device-Pattern-EMAIL_ADDRESS = 2-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -75,10 +59,6 @@ HTTP_URL = 3
 HTTP URL. This API can be used only in the stage model.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,10 +75,6 @@ FLIGHT_NUMBER = 4
 Flight number. This API can be used only in the stage model.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

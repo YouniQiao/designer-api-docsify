@@ -4,10 +4,6 @@ Defines a disposed rule.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appControl-export interface DisposedRule--><!--Device-appControl-export interface DisposedRule-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -32,10 +28,6 @@ Type of application component that functions as the displayed page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DisposedRule-componentType: ComponentType--><!--Device-DisposedRule-componentType: ComponentType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -53,10 +45,6 @@ Control type of application disposal.
 **Type:** ControlType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DisposedRule-controlType: ControlType--><!--Device-DisposedRule-controlType: ControlType-End-->
 
@@ -76,10 +64,6 @@ Type of application disposal.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DisposedRule-disposedType: DisposedType--><!--Device-DisposedRule-disposedType: DisposedType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -98,10 +82,6 @@ List of application components to be disposed of or exempted.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DisposedRule-elementList: Array<ElementName>--><!--Device-DisposedRule-elementList: Array<ElementName>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -114,15 +94,11 @@ List of application components to be disposed of or exempted.
 pageJump?: PageJumpMode
 ```
 
-Specifies whether to jump to another page when the target application is blocked. The default value is [PAGE_JUMP_WINDOW_SHOW](arkts-ability-appcontrol-pagejumpmode-e-sys.md#PAGE_JUMP_WINDOW_SHOW).
+Specifies whether to jump to another page when the target application is blocked. The default value is [PAGE_JUMP_WINDOW_SHOW](arkts-ability-appcontrol-pagejumpmode-e-sys.md#pagejumpwindowshow).
 
 **Type:** [PageJumpMode](arkts-ability-appcontrol-pagejumpmode-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,10 +120,6 @@ Priority of the disposed rule, which is used to sort the query results of the ru
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DisposedRule-priority: int--><!--Device-DisposedRule-priority: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -165,10 +137,6 @@ Page displayed when the application is disposed of.
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DisposedRule-want: Want--><!--Device-DisposedRule-want: Want-End-->
 

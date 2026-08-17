@@ -4,10 +4,6 @@ Parameters for obtaining detailed information on network interface traffic usage
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-statistics-export interface IfaceInfo--><!--Device-statistics-export interface IfaceInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -32,10 +28,6 @@ End time for querying traffic.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IfaceInfo-endTime: int--><!--Device-IfaceInfo-endTime: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -54,10 +46,6 @@ Network interface for querying traffic.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IfaceInfo-iface: string--><!--Device-IfaceInfo-iface: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -75,10 +63,6 @@ Start time for querying traffic.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IfaceInfo-startTime: int--><!--Device-IfaceInfo-startTime: int-End-->
 

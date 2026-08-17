@@ -16,10 +16,6 @@ Checks whether the silent reminder is enabled. This API uses a promise to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>--><!--Device-notificationManager-function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>-End-->
@@ -52,7 +48,7 @@ Checks whether the silent reminder is enabled. This API uses a promise to return
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

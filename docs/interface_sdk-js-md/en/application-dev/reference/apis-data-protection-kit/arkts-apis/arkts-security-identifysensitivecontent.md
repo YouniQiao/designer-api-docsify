@@ -16,10 +16,6 @@
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace identifySensitiveContent--><!--Device-unnamed-declare namespace identifySensitiveContent-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -36,7 +32,7 @@ import { identifySensitiveContent } from 'identifySensitiveContent';
 
 | Name | Description |
 | --- | --- |
-| [scanFile](arkts-dataprotection-identifysensitivecontent-scanfile-f.md#scanFile) | Identifies sensitive content in a specified file based on the configured policy and returns the identified result array, including the matched sensitivity labels, matched content, and number of matched items. This API uses a promise to return the result. |
+| [scanFile](arkts-dataprotection-identifysensitivecontent-scanfile-f.md#scanfile) | Identifies sensitive content in a specified file based on the configured policy and returns the identified result array, including the matched sensitivity labels, matched content, and number of matched items. This API uses a promise to return the result. |
 
 ### Interfaces
 

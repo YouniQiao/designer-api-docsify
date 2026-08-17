@@ -4,10 +4,6 @@ Defines a **LogEntry** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-logLibrary-interface LogEntry--><!--Device-logLibrary-interface LogEntry-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.LogLibrary
@@ -32,10 +28,6 @@ Time of the last modification to the file. The value is the number of seconds el
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LogEntry-mtime: long--><!--Device-LogEntry-mtime: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.LogLibrary
@@ -54,10 +46,6 @@ Log file name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LogEntry-name: string--><!--Device-LogEntry-name: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.LogLibrary
@@ -75,10 +63,6 @@ File size, in bytes.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LogEntry-size: long--><!--Device-LogEntry-size: long-End-->
 

@@ -16,10 +16,6 @@ Callback when the network state corresponding to the default sim card is updated
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-observer-function onNetworkStateChange(callback: Callback<NetworkState>): void--><!--Device-observer-function onNetworkStateChange(callback: Callback<NetworkState>): void-End-->
@@ -53,10 +49,6 @@ function onNetworkStateChange(options: ObserverOptions, callback: Callback<Netwo
 Callback when the network state corresponding to the monitored {@code slotId} is updated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 

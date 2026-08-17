@@ -4,10 +4,6 @@ Describes the typographic boundaries of a text line. These boundaries depend on 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-interface TypographicBounds--><!--Device-text-interface TypographicBounds-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -30,10 +26,6 @@ Ascent height of a text line, which is a floating-point value in physical pixels
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TypographicBounds-ascent: double--><!--Device-TypographicBounds-ascent: double-End-->
@@ -51,10 +43,6 @@ Descent height of a text line, which is a floating-point value in physical pixel
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -74,10 +62,6 @@ Leading of a text line, which is a floating-point value in physical pixels (px).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TypographicBounds-leading: double--><!--Device-TypographicBounds-leading: double-End-->
@@ -95,10 +79,6 @@ Total width of the layout boundary, which is a floating-point value in physical 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

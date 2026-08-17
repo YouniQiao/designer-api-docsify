@@ -10,10 +10,6 @@ function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEv
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-commonEventManager-function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEventSubscriber--><!--Device-commonEventManager-function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEventSubscriber-End-->
@@ -38,7 +34,7 @@ function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEv
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

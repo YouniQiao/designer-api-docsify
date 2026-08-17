@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 11
 
 <!--Device-deviceManager-interface PublishInfo--><!--Device-deviceManager-interface PublishInfo-End-->
@@ -25,8 +23,6 @@ freq: ExchangeFreq
 **类型：** [ExchangeFreq](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 11
 
@@ -48,8 +44,6 @@ mode: DiscoverMode
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 11
 
 <!--Device-PublishInfo-mode: DiscoverMode--><!--Device-PublishInfo-mode: DiscoverMode-End-->
@@ -70,8 +64,6 @@ publishId: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 11
 
 <!--Device-PublishInfo-publishId: number--><!--Device-PublishInfo-publishId: number-End-->
@@ -91,8 +83,6 @@ ranging: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 11
 

@@ -4,9 +4,7 @@ Defines the triggered callback to decision whether resend form data or not.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnDataResubmittedEvent--><!--Device-unnamed-export declare interface OnDataResubmittedEvent-End-->
 
@@ -24,9 +22,7 @@ Form data resubmission handle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnDataResubmittedEvent-handler: DataResubmissionHandler--><!--Device-OnDataResubmittedEvent-handler: DataResubmissionHandler-End-->
 

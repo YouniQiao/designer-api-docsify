@@ -1,12 +1,8 @@
 # TaskGroup
 
-表示任务组，一次执行一组任务，适用于执行一组有关联的任务。如果所有任务正常执行，异步执行完毕后返回所有任务结果的数组， 数组中元素的顺序与调用[addTask](#addTask)添加任务的顺序相同。如果任意任务失败， 则会抛出对应异常。如果任务组中存在多个任务失败的情况，则会抛出第一个失败任务的异常。任务组可以多次执行，但执行后不能新增任务。
+表示任务组，一次执行一组任务，适用于执行一组有关联的任务。如果所有任务正常执行，异步执行完毕后返回所有任务结果的数组， 数组中元素的顺序与调用[addTask](#addtask)添加任务的顺序相同。如果任意任务失败， 则会抛出对应异常。如果任务组中存在多个任务失败的情况，则会抛出第一个失败任务的异常。任务组可以多次执行，但执行后不能新增任务。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 <!--Device-taskpool-class TaskGroup--><!--Device-taskpool-class TaskGroup-End-->
 
@@ -21,10 +17,6 @@ addTask(func: Function, ...args: Object[]): void
 将待执行的函数添加到任务组中。使用该方法前需要先构造**TaskGroup**实例。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -45,7 +37,7 @@ addTask(func: Function, ...args: Object[]): void
 | --- | --- |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
-## 示例
+**示例**
 
 ```TypeScript
 @Concurrent
@@ -68,10 +60,6 @@ addTask(task: Task): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TaskGroup-addTask(task: Task): void--><!--Device-TaskGroup-addTask(task: Task): void-End-->
@@ -92,7 +80,7 @@ addTask(task: Task): void
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 @Concurrent
@@ -116,17 +104,13 @@ TaskGroup的构造函数。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TaskGroup-constructor()--><!--Device-TaskGroup-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 示例
+**示例**
 
 ```TypeScript
 let taskGroup = new taskpool.TaskGroup();
@@ -142,10 +126,6 @@ TaskGroup的构造函数，支持指定任务组名称。
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TaskGroup-constructor(name: string)--><!--Device-TaskGroup-constructor(name: string)-End-->
@@ -158,7 +138,7 @@ TaskGroup的构造函数，支持指定任务组名称。
 | --- | --- | --- | --- |
 | name | string | 是 | 任务组名称。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let taskGroupName: string = "groupName";
@@ -177,10 +157,6 @@ name: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

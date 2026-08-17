@@ -4,10 +4,6 @@
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface WatchEventListener--><!--Device-unnamed-export interface WatchEventListener-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -42,10 +38,6 @@ Specifies the callback function to be invoked.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-WatchEventListener-(event: WatchEvent): void--><!--Device-WatchEventListener-(event: WatchEvent): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -54,5 +46,5 @@ Specifies the callback function to be invoked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [WatchEvent](../../apis-na/arkts-apis/arkts-na-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
+| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
 

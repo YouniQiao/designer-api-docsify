@@ -4,10 +4,6 @@ Describes the codec information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-a2dp-interface CodecInfoList--><!--Device-a2dp-interface CodecInfoList-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -30,10 +26,6 @@ codec bit rate list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-CodecInfoList-codecBitRateArray: CodecBitRate[]--><!--Device-CodecInfoList-codecBitRateArray: CodecBitRate[]-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -49,10 +41,6 @@ codec bits per sample list.
 **Type:** [CodecBitsPerSample](arkts-connectivity-a2dp-codecbitspersample-e.md)[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-CodecInfoList-codecBitsPerSampleArray: CodecBitsPerSample[]--><!--Device-CodecInfoList-codecBitsPerSampleArray: CodecBitsPerSample[]-End-->
 
@@ -70,10 +58,6 @@ codec channel mode list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-CodecInfoList-codecChannelModeArray: CodecChannelMode[]--><!--Device-CodecInfoList-codecChannelModeArray: CodecChannelMode[]-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -89,10 +73,6 @@ codec frame length list.
 **Type:** [CodecFrameLength](arkts-connectivity-a2dp-codecframelength-e.md)[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-CodecInfoList-codecFrameLengthArray: CodecFrameLength[]--><!--Device-CodecInfoList-codecFrameLengthArray: CodecFrameLength[]-End-->
 
@@ -110,10 +90,6 @@ codec sample rate list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-CodecInfoList-codecSampleRateArray: CodecSampleRate[]--><!--Device-CodecInfoList-codecSampleRateArray: CodecSampleRate[]-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -129,10 +105,6 @@ codec type
 **Type:** [CodecType](arkts-connectivity-a2dp-codectype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-CodecInfoList-codecType: CodecType--><!--Device-CodecInfoList-codecType: CodecType-End-->
 

@@ -4,10 +4,6 @@ This module provides the capabilities of sending and processing inter- or intra-
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-emitter-export class Emitter--><!--Device-emitter-export class Emitter-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -28,17 +24,13 @@ Defines a constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-constructor()--><!--Device-Emitter-constructor()-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
-## Examples
+**Examples**
 
 ```TypeScript
 let emitter1 = new emitter.Emitter();
@@ -54,10 +46,6 @@ Emits a specified event to the Emitter class instance. This API can be used to e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-emit(eventId: string, data?: EventData): void--><!--Device-Emitter-emit(eventId: string, data?: EventData): void-End-->
@@ -71,7 +59,7 @@ Emits a specified event to the Emitter class instance. This API can be used to e
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -115,10 +103,6 @@ Emits a specified event to the Emitter class instance. This API can be used to e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-emit<T>(eventId: string, data?: GenericEventData<T>): void--><!--Device-Emitter-emit<T>(eventId: string, data?: GenericEventData<T>): void-End-->
@@ -132,7 +116,7 @@ Emits a specified event to the Emitter class instance. This API can be used to e
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Sendable
@@ -165,10 +149,6 @@ Emits an event of a specified priority to the Emitter instance. This API can be 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-emit(eventId: string, options: Options, data?: EventData): void--><!--Device-Emitter-emit(eventId: string, options: Options, data?: EventData): void-End-->
@@ -183,7 +163,7 @@ Emits an event of a specified priority to the Emitter instance. This API can be 
 | options | Options | Yes | Event emit priority. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -233,10 +213,6 @@ Emits an event of a specified priority to the Emitter instance. This API can be 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void--><!--Device-Emitter-emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void-End-->
@@ -251,7 +227,7 @@ Emits an event of a specified priority to the Emitter instance. This API can be 
 | options | Options | Yes | Event emit priority. |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 class Sample {
@@ -286,10 +262,6 @@ Obtains the number of subscriptions to a specified event of the Emitter instance
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-getListenerCount(eventId: string): long--><!--Device-Emitter-getListenerCount(eventId: string): long-End-->
@@ -308,7 +280,7 @@ Obtains the number of subscriptions to a specified event of the Emitter instance
 | --- | --- |
 | long | Number of subscriptions to a specified event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
@@ -325,10 +297,6 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -340,7 +308,7 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 | eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -364,10 +332,6 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -379,7 +343,7 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 | eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -417,10 +381,6 @@ Unsubscribes from all events with the specified event ID of the Emitter instance
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Emitter-off(eventId: string): void--><!--Device-Emitter-off(eventId: string): void-End-->
@@ -433,7 +393,7 @@ Unsubscribes from all events with the specified event ID of the Emitter instance
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
@@ -447,13 +407,9 @@ emitter1.off("eventId");
 off(eventId: string, callback: Callback<EventData>): void
 ```
 
-Unsubscribes from an event of the Emitter instance. This API takes effect only when the [on](#on_string) or once API is used to subscribe to the event with specified event ID and a callback is used to process the event. After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
+Unsubscribes from an event of the Emitter instance. This API takes effect only when the [on](#onstring) or once API is used to subscribe to the event with specified event ID and a callback is used to process the event. After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -468,7 +424,7 @@ Unsubscribes from an event of the Emitter instance. This API takes effect only w
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -492,10 +448,6 @@ Unsubscribes from an event of the Emitter instance. This API takes effect only w
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
@@ -509,7 +461,7 @@ Unsubscribes from an event of the Emitter instance. This API takes effect only w
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -547,10 +499,6 @@ Subscribes to an event in persistent manner and executes a callback after the ev
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -562,7 +510,7 @@ Subscribes to an event in persistent manner and executes a callback after the ev
 | eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -586,10 +534,6 @@ Subscribes to an event in persistent manner and executes a callback after the ev
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -601,7 +545,7 @@ Subscribes to an event in persistent manner and executes a callback after the ev
 | eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -639,10 +583,6 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-on(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-on(eventId: string, callback: Callback<EventData>): void-End-->
@@ -656,7 +596,7 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -680,10 +620,6 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
@@ -697,7 +633,7 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -735,10 +671,6 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -750,7 +682,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -774,10 +706,6 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
@@ -789,7 +717,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -827,10 +755,6 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-once(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-once(eventId: string, callback: Callback<EventData>): void-End-->
@@ -844,7 +768,7 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -868,10 +792,6 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
@@ -885,7 +805,7 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

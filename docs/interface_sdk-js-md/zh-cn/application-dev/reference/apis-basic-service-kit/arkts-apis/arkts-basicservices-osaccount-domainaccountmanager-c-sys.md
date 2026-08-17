@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-osAccount-class DomainAccountManager--><!--Device-osAccount-class DomainAccountManager-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -21,10 +17,6 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 认证指定的域账号。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -63,7 +55,7 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -123,10 +115,6 @@ static auth(
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 <!--Device-DomainAccountManager-static auth(      domainAccountInfo: DomainAccountInfo,      credential: Uint8Array,      options: DomainAccountAuthOptions,      callback: IUserAuthCallback): void--><!--Device-DomainAccountManager-static auth(      domainAccountInfo: DomainAccountInfo,      credential: Uint8Array,      options: DomainAccountAuthOptions,      callback: IUserAuthCallback): void-End-->
@@ -164,7 +152,7 @@ static auth(
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -234,10 +222,6 @@ static authWithPopup(callback: IUserAuthCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -272,7 +256,7 @@ static authWithPopup(callback: IUserAuthCallback): void
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -318,10 +302,6 @@ static authWithPopup(localId: int, callback: IUserAuthCallback): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -358,7 +338,7 @@ static authWithPopup(localId: int, callback: IUserAuthCallback): void
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -404,10 +384,6 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCallback<Uint8Array>): void--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -419,7 +395,7 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | businessParams | Record&lt;string, Object&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
 
 **错误码：**
 
@@ -437,7 +413,7 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -472,10 +448,6 @@ static getAccessToken(businessParams: Record<string, RecordData>, callback: Asyn
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, RecordData>, callback: AsyncCallback<Uint8Array>): void--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, RecordData>, callback: AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -487,7 +459,7 @@ static getAccessToken(businessParams: Record<string, RecordData>, callback: Asyn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | businessParams | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
 
 **错误码：**
 
@@ -504,7 +476,7 @@ static getAccessToken(businessParams: Record<string, RecordData>, callback: Asyn
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import osAccount from '@ohos.account.osAccount';
@@ -540,10 +512,6 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Array>--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -578,7 +546,7 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -610,10 +578,6 @@ static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8
 查询当前域账号的业务访问令牌。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8Array>--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8Array>-End-->
 
@@ -648,7 +612,7 @@ static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import osAccount from '@ohos.account.osAccount';
@@ -683,10 +647,6 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS
 
 <!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallback<DomainAccountInfo>): void--><!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallback<DomainAccountInfo>): void-End-->
@@ -700,7 +660,7 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md) | 是 | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | 是 | 指示查询结果回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | 是 | 指示查询结果回调。 |
 
 **错误码：**
 
@@ -718,7 +678,7 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -780,10 +740,6 @@ static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccou
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS
 
 <!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccountInfo>--><!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccountInfo>-End-->
@@ -820,7 +776,7 @@ static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccou
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -879,10 +835,6 @@ static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 <!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<boolean>): void--><!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<boolean>): void-End-->
@@ -896,7 +848,7 @@ static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 指示检查结果回调。true表示指定的域账号已存在；false表示指定的域账号不存在。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 指示检查结果回调。true表示指定的域账号已存在；false表示指定的域账号不存在。 |
 
 **错误码：**
 
@@ -914,7 +866,7 @@ static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -974,10 +926,6 @@ static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 <!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>--><!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>-End-->
@@ -1014,7 +962,7 @@ static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1071,10 +1019,6 @@ static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<bo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-DomainAccountManager-static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<boolean>--><!--Device-DomainAccountManager-static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<boolean>-End-->
@@ -1106,7 +1050,7 @@ static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<bo
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1159,10 +1103,6 @@ static registerPlugin(plugin: DomainPlugin): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 <!--Device-DomainAccountManager-static registerPlugin(plugin: DomainPlugin): void--><!--Device-DomainAccountManager-static registerPlugin(plugin: DomainPlugin): void-End-->
@@ -1186,7 +1126,7 @@ static registerPlugin(plugin: DomainPlugin): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1263,10 +1203,6 @@ static unregisterPlugin(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 <!--Device-DomainAccountManager-static unregisterPlugin(): void--><!--Device-DomainAccountManager-static unregisterPlugin(): void-End-->
@@ -1283,7 +1219,7 @@ static unregisterPlugin(): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1324,10 +1260,6 @@ static updateAccountToken(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 <!--Device-DomainAccountManager-static updateAccountToken(      domainAccountInfo: DomainAccountInfo,      token: Uint8Array,      callback: AsyncCallback<void>    ): void--><!--Device-DomainAccountManager-static updateAccountToken(      domainAccountInfo: DomainAccountInfo,      token: Uint8Array,      callback: AsyncCallback<void>    ): void-End-->
@@ -1342,7 +1274,7 @@ static updateAccountToken(
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
 | token | Uint8Array | 是 | 指示域账号的令牌。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果更新成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果更新成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -1355,7 +1287,7 @@ static updateAccountToken(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1419,10 +1351,6 @@ static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Arra
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 <!--Device-DomainAccountManager-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>--><!--Device-DomainAccountManager-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>-End-->
@@ -1455,7 +1383,7 @@ static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Arra
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

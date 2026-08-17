@@ -1,12 +1,8 @@
 # TaskState
 
-上传任务的任务信息，是 [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) 和 [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#off_progress) 接口的回调参数。
+上传任务的任务信息，是 [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) 和 [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#offprogress) 接口的回调参数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-request-interface TaskState--><!--Device-request-interface TaskState-End-->
 
@@ -24,10 +20,6 @@ message: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskState-message: string--><!--Device-TaskState-message: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -44,10 +36,6 @@ path: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TaskState-path: string--><!--Device-TaskState-path: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
@@ -63,10 +51,6 @@ responseCode: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TaskState-responseCode: int--><!--Device-TaskState-responseCode: int-End-->
 

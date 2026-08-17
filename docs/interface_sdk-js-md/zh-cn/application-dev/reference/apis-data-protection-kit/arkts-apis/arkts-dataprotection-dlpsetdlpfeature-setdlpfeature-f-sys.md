@@ -10,10 +10,6 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-dlpSetDlpFeature-function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>--><!--Device-dlpSetDlpFeature-function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>-End-->
@@ -42,7 +38,7 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpSetDlpFeature } from '@kit.DataProtectionKit';

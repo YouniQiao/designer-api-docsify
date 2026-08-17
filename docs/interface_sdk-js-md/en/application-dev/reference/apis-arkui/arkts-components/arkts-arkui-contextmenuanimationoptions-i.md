@@ -4,10 +4,6 @@ Defines the style for displaying a long-press preview.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ContextMenuAnimationOptions--><!--Device-unnamed-interface ContextMenuAnimationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +14,11 @@ Defines the style for displaying a long-press preview.
 hoverScale?: AnimationRange<number>
 ```
 
-In the custom preview (**preview** is of the CustomBuilder type) and menu displayed in long-press (**responseType** is set to **LongPress**) scenarios, **hoverScale** is used to set two parameters for the screenshot floating animation of the bound component: the start and end scale ratios relative to the original preview image. After **hoverScale** is set, the floating animation and preview image are switched with a transition effect. **NOTE：**If the value is less than or equal to **0**, this parameter does not take effect. This API does not take effect in [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu) scenarios. This API does not take effect when **transition** is set. If this API and the **scale** API are used at the same time, the start value of the **scale** API does not take effect. To ensure the optimal experience, it is not recommended that the final preview image size be smaller than the size of the original component snapshot. The width and height of the preview animation are affected by the component snapshot and the custom preview size. Verify the display effect based on the actual use case.
+In the custom preview (**preview** is of the CustomBuilder type) and menu displayed in long-press (**responseType** is set to **LongPress**) scenarios, **hoverScale** is used to set two parameters for the screenshot floating animation of the bound component: the start and end scale ratios relative to the original preview image. After **hoverScale** is set, the floating animation and preview image are switched with a transition effect. **NOTE：**If the value is less than or equal to **0**, this parameter does not take effect. This API does not take effect in [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) scenarios. This API does not take effect when **transition** is set. If this API and the **scale** API are used at the same time, the start value of the **scale** API does not take effect. To ensure the optimal experience, it is not recommended that the final preview image size be smaller than the size of the original component snapshot. The width and height of the preview animation are affected by the component snapshot and the custom preview size. Verify the display effect based on the actual use case.
 
 **Type:** [AnimationRange](arkts-arkui-animationrange-t.md)&lt;number&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Whether lifting the finger before triggering the drag effect allows preview menu
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -76,10 +64,6 @@ Relative scale ratio at the start and end of the animation compared to the origi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -94,15 +78,11 @@ Relative scale ratio at the start and end of the animation compared to the origi
 transition?: TransitionEffect
 ```
 
-Transition effect for the entrance and exit of the menu. **NOTE：**If the screen orientation is switched during the exit animation of a menu, the menu will avoid obstacles. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the display process, but not during the execution of the exit animation. For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect).
+Transition effect for the entrance and exit of the menu. **NOTE：**If the screen orientation is switched during the exit animation of a menu, the menu will avoid obstacles. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the display process, but not during the execution of the exit animation. For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect).
 
 **Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

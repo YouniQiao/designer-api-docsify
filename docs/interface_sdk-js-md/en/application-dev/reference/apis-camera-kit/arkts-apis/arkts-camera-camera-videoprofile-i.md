@@ -1,14 +1,10 @@
 # VideoProfile
 
-Describes the video configuration information. It inherits from [Profile](arkts-camera-camera-profile-i.md#Profile).
+Describes the video configuration information. It inherits from [Profile](arkts-camera-camera-profile-i.md#profile).
 
-**Inheritance/Implementation:** VideoProfile extends [Profile](arkts-camera-camera-profile-i.md#Profile)
+**Inheritance/Implementation:** VideoProfile extends [Profile](arkts-camera-camera-profile-i.md#profile)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface VideoProfile--><!--Device-camera-interface VideoProfile-End-->
 
@@ -31,10 +27,6 @@ Describes the frame rate range. Unit: FPS
 **Type:** [FrameRateRange](arkts-camera-camera-frameraterange-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

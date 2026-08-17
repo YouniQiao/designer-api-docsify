@@ -1,4 +1,4 @@
-# WithThemeInterface
+# WithThemeInterface(Defines WithTheme component.)
 
 ```TypeScript
 declare type WithThemeInterface = (options: WithThemeOptions) => WithThemeAttribute
@@ -7,10 +7,6 @@ declare type WithThemeInterface = (options: WithThemeOptions) => WithThemeAttrib
 Define the function of WithThemeInterface.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Defines the response to the request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-rpc-interface RequestResult--><!--Device-rpc-interface RequestResult-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -30,10 +26,6 @@ Message code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RequestResult-code: int--><!--Device-RequestResult-code: int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -49,10 +41,6 @@ data: MessageSequence
 **Type:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RequestResult-data: MessageSequence--><!--Device-RequestResult-data: MessageSequence-End-->
 
@@ -70,10 +58,6 @@ Error code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RequestResult-errCode: int--><!--Device-RequestResult-errCode: int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -89,10 +73,6 @@ reply: MessageSequence
 **Type:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RequestResult-reply: MessageSequence--><!--Device-RequestResult-reply: MessageSequence-End-->
 

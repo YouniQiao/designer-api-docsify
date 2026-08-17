@@ -8,10 +8,6 @@ Enumerates the window types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export type WindowType = 'application' | 'system'--><!--Device-unnamed-export type WindowType = 'application' | 'system'-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

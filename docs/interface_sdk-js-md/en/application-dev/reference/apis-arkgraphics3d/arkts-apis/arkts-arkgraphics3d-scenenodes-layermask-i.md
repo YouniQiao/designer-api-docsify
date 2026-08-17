@@ -1,12 +1,8 @@
 # LayerMask
 
-Defines the layer mask of the node.
+Defines the layer mask of a node.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface LayerMask--><!--Device-unnamed-export interface LayerMask-End-->
 
@@ -21,10 +17,6 @@ getEnabled(index: int): boolean
 Checks whether the mask is enabled for a layer of a given index.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LayerMask-getEnabled(index: int): boolean--><!--Device-LayerMask-getEnabled(index: int): boolean-End-->
 
@@ -42,7 +34,7 @@ Checks whether the mask is enabled for a layer of a given index.
 | --- | --- |
 | boolean | Check result for whether the layer mask is enabled. true if enabled, false otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, Node } from '@kit.ArkGraphics3D';
@@ -74,10 +66,6 @@ Enables the mask of a layer of a given index.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void--><!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -89,7 +77,7 @@ Enables the mask of a layer of a given index.
 | index | int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
 | enabled | boolean | Yes | Whether to enable the layer mask. true to enable, false otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Scene, Node } from '@kit.ArkGraphics3D';

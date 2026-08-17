@@ -4,10 +4,6 @@ Defines the heartbeat broadcast policy.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDeviceManager-enum StrategyForHeartbeat--><!--Device-distributedDeviceManager-enum StrategyForHeartbeat-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -24,10 +20,6 @@ Stops the heartbeat broadcast temporarily, and resumes it upon timeout expiratio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StrategyForHeartbeat-TEMP_STOP_HEARTBEAT = 100--><!--Device-StrategyForHeartbeat-TEMP_STOP_HEARTBEAT = 100-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -43,10 +35,6 @@ START_HEARTBEAT = 101
 Starts heartbeat broadcast.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StrategyForHeartbeat-START_HEARTBEAT = 101--><!--Device-StrategyForHeartbeat-START_HEARTBEAT = 101-End-->
 

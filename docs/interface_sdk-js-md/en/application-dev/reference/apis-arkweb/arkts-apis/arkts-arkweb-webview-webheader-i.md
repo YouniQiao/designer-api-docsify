@@ -1,12 +1,8 @@
 # WebHeader
 
-Defines the Web's request/response header.
+Describes the request/response header returned by the **Web** component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-webview-interface WebHeader--><!--Device-webview-interface WebHeader-End-->
 
@@ -24,15 +20,11 @@ import { webview } from 'webview';
 headerKey: string
 ```
 
-Gets the key of the request/response header.
+Key of the request/response header.
 
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,15 +38,11 @@ Gets the key of the request/response header.
 headerValue: string
 ```
 
-Gets the value of the request/response header.
+Value of the request/response header.
 
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

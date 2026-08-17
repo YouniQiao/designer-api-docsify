@@ -1,12 +1,8 @@
 # UploadTask
 
-Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile) .
+Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile) .
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-interface UploadTask--><!--Device-request-interface UploadTask-End-->
 
@@ -28,10 +24,6 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UploadTask-delete(callback: AsyncCallback<boolean>): void--><!--Device-UploadTask-delete(callback: AsyncCallback<boolean>): void-End-->
@@ -50,7 +42,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 uploadTask.delete((err: BusinessError, result: boolean) => {
@@ -72,10 +64,6 @@ Deletes the upload task. This API uses a promise to return the result. > **NOTEï
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-UploadTask-delete(): Promise<boolean>--><!--Device-UploadTask-delete(): Promise<boolean>-End-->
@@ -94,7 +82,7 @@ Deletes the upload task. This API uses a promise to return the result. > **NOTEï
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 uploadTask.delete().then((result: boolean) => {
@@ -113,10 +101,6 @@ offComplete(callback?: Callback<Array<TaskState>>): void
 Called when the current upload session complete.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void-End-->
 
@@ -138,10 +122,6 @@ Called when the current upload session fail.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -161,10 +141,6 @@ offHeaderReceive(callback?: UploadHeaderReceiveCallback): void
 Called when the header of the current upload session has been received.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void-End-->
 
@@ -186,10 +162,6 @@ Called when the current upload session is in process.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void--><!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -210,10 +182,6 @@ Unsubscribes from upload completion or failure events.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -231,7 +199,7 @@ Unsubscribes from upload completion or failure events.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | the parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
@@ -283,10 +251,6 @@ Unsubscribes from upload completion or failure events.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -304,7 +268,7 @@ Unsubscribes from upload completion or failure events.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | the parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
@@ -356,10 +320,6 @@ Unsubscribes from HTTP response events for the upload task.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-off(type: 'headerReceive', callback?: (header: object) => void): void--><!--Device-UploadTask-off(type: 'headerReceive', callback?: (header: object) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -377,7 +337,7 @@ Unsubscribes from HTTP response events for the upload task.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let headerCallback1 = (header: object) => {
@@ -404,10 +364,6 @@ Unsubscribes from upload progress events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -425,7 +381,7 @@ Unsubscribes from upload progress events.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let upProgressCallback1 = (uploadedSize: number, totalSize: number) => {
@@ -452,10 +408,6 @@ Called when the current upload session complete.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -475,10 +427,6 @@ onFail(callback: Callback<Array<TaskState>>): void
 Called when the current upload session fail.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void-End-->
 
@@ -500,10 +448,6 @@ Called when the header of the current upload session has been received.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -523,10 +467,6 @@ onProgress(callback: UploadProgressCallback): void
 Called when the current upload session is in process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void--><!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void-End-->
 
@@ -548,10 +488,6 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -569,7 +505,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
@@ -597,10 +533,6 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -618,7 +550,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
@@ -646,10 +578,6 @@ Subscribes to HTTP response events for the upload task.This API uses an asynchro
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-on(type: 'headerReceive', callback: (header: object) => void): void--><!--Device-UploadTask-on(type: 'headerReceive', callback: (header: object) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -667,7 +595,7 @@ Subscribes to HTTP response events for the upload task.This API uses an asynchro
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let headerCallback = (headers: object) => {
@@ -686,10 +614,6 @@ Subscribes to upload progress events. This API uses an asynchronous callback to 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
@@ -707,7 +631,7 @@ Subscribes to upload progress events. This API uses an asynchronous callback to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let upProgressCallback = (uploadedSize: number, totalSize: number) => {
@@ -725,8 +649,6 @@ remove(callback: AsyncCallback<boolean>): void
 Deletes the upload task. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -750,7 +672,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 uploadTask.remove((err: BusinessError, result: boolean) => {
@@ -774,8 +696,6 @@ Deletes the upload task. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [delete](#delete)()
@@ -798,7 +718,7 @@ Deletes the upload task. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 uploadTask.remove().then((result: boolean) => {

@@ -8,10 +8,6 @@ Indicates the accessibility virtual node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type AccessibilityVirtualNode = _AccessibilityVirtualNode--><!--Device-unnamed-export type AccessibilityVirtualNode = _AccessibilityVirtualNode-End-->

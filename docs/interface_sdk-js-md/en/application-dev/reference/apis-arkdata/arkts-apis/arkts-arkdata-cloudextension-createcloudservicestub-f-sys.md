@@ -16,10 +16,6 @@ Creates a RemoteObject instance based on a CloudService instance. The system use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -38,7 +34,7 @@ Creates a RemoteObject instance based on a CloudService instance. The system use
 | --- | --- |
 | Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudService. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want, ServiceExtensionAbility } from '@kit.AbilityKit';

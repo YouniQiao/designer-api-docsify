@@ -4,10 +4,6 @@ Enum for Tls version
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-http-export enum TlsVersion--><!--Device-http-export enum TlsVersion-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -21,10 +17,6 @@ TLS_V_1_0 = 4
 Tls version 1.0
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ Tls version 1.1
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TlsVersion-TLS_V_1_1 = 5--><!--Device-TlsVersion-TLS_V_1_1 = 5-End-->
@@ -62,10 +50,6 @@ Tls version 1.2
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-TlsVersion-TLS_V_1_2 = 6--><!--Device-TlsVersion-TLS_V_1_2 = 6-End-->
@@ -81,10 +65,6 @@ TLS_V_1_3 = 7
 Tls version 1.3
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

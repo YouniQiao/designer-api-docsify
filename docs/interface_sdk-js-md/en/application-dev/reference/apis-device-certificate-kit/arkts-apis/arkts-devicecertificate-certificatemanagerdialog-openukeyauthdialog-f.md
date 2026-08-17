@@ -16,10 +16,6 @@ Opens the PIN authentication dialog box of the USB Key credential. On the displa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -52,7 +48,7 @@ Opens the PIN authentication dialog box of the USB Key credential. On the displa
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the authentication operation. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';

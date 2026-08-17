@@ -16,8 +16,6 @@ Subscribe the event reported when data is read from the socket.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** sppRead
@@ -43,7 +41,7 @@ Subscribe the event reported when data is read from the socket.
 | 2901054 | IO error. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

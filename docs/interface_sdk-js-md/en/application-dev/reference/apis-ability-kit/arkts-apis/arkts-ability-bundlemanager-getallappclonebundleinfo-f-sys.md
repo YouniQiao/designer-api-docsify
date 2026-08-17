@@ -12,13 +12,9 @@ import { bundleManager } from 'bundleManager';
 function getAllAppCloneBundleInfo(bundleName: string, bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>
 ```
 
-Obtains all the bundle information of applications and application clones based on the given bundle name, [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag), and user ID. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
+Obtains all the bundle information of applications and application clones based on the given bundle name, [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#bundleflag), and user ID. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -34,7 +30,7 @@ Obtains all the bundle information of applications and application clones based 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | int | Yes | Type of the bundle information to obtain. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
@@ -53,7 +49,7 @@ Obtains all the bundle information of applications and application clones based 
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

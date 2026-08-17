@@ -4,10 +4,6 @@ Enum for fusion fence scene.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export enum FusionFenceScene--><!--Device-geoLocationManager-export enum FusionFenceScene-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -23,10 +19,6 @@ AIRPORT = 1
 Indicates the airport scene.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Indicates the train station scene.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceScene-TRAIN_STATION = 2--><!--Device-FusionFenceScene-TRAIN_STATION = 2-End-->
@@ -68,10 +56,6 @@ Indicates the subway scene.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FusionFenceScene-SUBWAY = 3--><!--Device-FusionFenceScene-SUBWAY = 3-End-->
@@ -89,10 +73,6 @@ SHOP = 4
 Indicates the shop scene.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

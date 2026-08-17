@@ -16,11 +16,9 @@ Stops Bluetooth device scanning.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [stopBluetoothDiscovery](arkts-connectivity-bluetoothmanager-stopbluetoothdiscovery-f.md#stopBluetoothDiscovery)
+**Substitutes:** [stopBluetoothDiscovery](arkts-connectivity-bluetoothmanager-stopbluetoothdiscovery-f.md#stopbluetoothdiscovery)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -34,7 +32,7 @@ Stops Bluetooth device scanning.
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let result : boolean = bluetooth.stopBluetoothDiscovery();

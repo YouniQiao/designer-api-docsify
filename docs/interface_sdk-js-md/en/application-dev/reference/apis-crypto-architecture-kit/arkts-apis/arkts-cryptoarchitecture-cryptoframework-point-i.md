@@ -4,10 +4,6 @@ Defines a point on the elliptic curve.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-interface Point--><!--Device-cryptoFramework-interface Point-End-->
 
 **System capability:** 
@@ -32,10 +28,6 @@ X coordinate of the point on an elliptic curve.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Point-x: bigint--><!--Device-Point-x: bigint-End-->
@@ -55,10 +47,6 @@ Y coordinate of the point on an elliptic curve.
 **Type:** bigint
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,12 +1,8 @@
-# OptionsData
+# OptionsData(Defines the DRM capability.)
 
 Defines optional parameters for a device certificate request.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-drm-interface OptionsData--><!--Device-drm-interface OptionsData-End-->
 
@@ -30,10 +26,6 @@ Name of the optional parameter.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OptionsData-name: string--><!--Device-OptionsData-name: string-End-->
@@ -51,10 +43,6 @@ Value of the optional parameter.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

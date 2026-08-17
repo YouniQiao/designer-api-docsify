@@ -4,10 +4,6 @@ Provides WebSocket APIs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace webSocket--><!--Device-unnamed-declare namespace webSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -24,8 +20,8 @@ import { webSocket } from 'webSocket';
 
 | Name | Description |
 | --- | --- |
-| [createWebSocket](arkts-network-websocket-createwebsocket-f.md#createWebSocket) | Creates a web socket connection. |
-| [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md#createWebSocketServer) | Creates a web socket Server. |
+| [createWebSocket](arkts-network-websocket-createwebsocket-f.md#createwebsocket) | Creates a web socket connection. |
+| [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md#createwebsocketserver) | Creates a web socket Server. |
 
 ### Interfaces
 

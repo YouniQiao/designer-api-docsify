@@ -2,13 +2,9 @@
 
 The definition of Album.
 
-**Inheritance/Implementation:** Album extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)
+**Inheritance/Implementation:** Album extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#mediaentity)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-avMusicTemplate-interface Album--><!--Device-avMusicTemplate-interface Album-End-->
 
@@ -32,10 +28,6 @@ Total number of episodes in the program
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Album-episodeCounts?: string--><!--Device-Album-episodeCounts?: string-End-->
@@ -53,10 +45,6 @@ Favorite/Subscribe information.
 **Type:** [FavoriteData](arkts-avsession-avmusictemplate-favoritedata-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,10 +64,6 @@ Play counts.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Album-playCounts: string--><!--Device-Album-playCounts: string-End-->
@@ -97,10 +81,6 @@ Singer name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

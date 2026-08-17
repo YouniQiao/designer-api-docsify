@@ -4,10 +4,6 @@ Describes thumbnail decoding parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface DecodingOptionsForThumbnail--><!--Device-image-interface DecodingOptionsForThumbnail-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -30,10 +26,6 @@ Flag to specify whether the thumbnail should be generated, if the image does not
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DecodingOptionsForThumbnail-generateThumbnailIfAbsent?: boolean--><!--Device-DecodingOptionsForThumbnail-generateThumbnailIfAbsent?: boolean-End-->
@@ -51,10 +43,6 @@ This parameter is valid only when generateThumbnailIfAbsent is set to true. The 
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

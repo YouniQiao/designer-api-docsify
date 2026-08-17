@@ -4,10 +4,6 @@ Enumerates the print job states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-enum PrintJobState--><!--Device-print-enum PrintJobState-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -21,10 +17,6 @@ PRINT_JOB_PREPARE = 0
 The printer is prepared for the print job.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintJobState-PRINT_JOB_PREPARE = 0--><!--Device-PrintJobState-PRINT_JOB_PREPARE = 0-End-->
 
@@ -40,10 +32,6 @@ The print job is on the print queue of the printer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintJobState-PRINT_JOB_QUEUED = 1--><!--Device-PrintJobState-PRINT_JOB_QUEUED = 1-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -57,10 +45,6 @@ PRINT_JOB_RUNNING = 2
 The print job is being executed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintJobState-PRINT_JOB_RUNNING = 2--><!--Device-PrintJobState-PRINT_JOB_RUNNING = 2-End-->
 
@@ -76,10 +60,6 @@ The print job is blocked.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3--><!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -93,10 +73,6 @@ PRINT_JOB_COMPLETED = 4
 The print job is complete.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4--><!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4-End-->
 

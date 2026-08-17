@@ -10,10 +10,6 @@ Returns the string and symbol keys of the own properties of an object. The own p
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Reflect-function ownKeys(target: object): (string | symbol)[]--><!--Device-Reflect-function ownKeys(target: object): (string | symbol)[]-End-->
 
 **Parameters:**

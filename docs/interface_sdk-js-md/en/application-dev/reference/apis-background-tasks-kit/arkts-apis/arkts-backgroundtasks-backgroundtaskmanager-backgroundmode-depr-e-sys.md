@@ -4,11 +4,9 @@ Defines the type of a continuous task.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#BackgroundMode)
+**Substitutes:** [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#backgroundmode)
 
 <!--Device-backgroundTaskManager-export enum BackgroundMode--><!--Device-backgroundTaskManager-export enum BackgroundMode-End-->
 
@@ -23,8 +21,6 @@ WIFI_INTERACTION = 7
 WLAN-related.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -45,8 +41,6 @@ VOIP = 8
 Audio and video calls.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

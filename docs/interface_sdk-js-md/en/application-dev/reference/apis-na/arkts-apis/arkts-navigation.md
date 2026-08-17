@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Navigation](arkts-na-navigation-navigation-f.md#Navigation) | Defines Navigation Component |
+| [Navigation](arkts-na-navigation-navigation-f.md#navigation) | Defines Navigation Component |
 
 ### Classes
 

@@ -4,10 +4,6 @@ Enumerates connection error codes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityConnectionManager-export enum ConnectErrorCode--><!--Device-abilityConnectionManager-export enum ConnectErrorCode-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -21,10 +17,6 @@ CONNECTED_SESSION_EXISTS = 0
 A session already exists between applications.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ The peer application rejects the collaboration request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectErrorCode-PEER_APP_REJECTED = 1--><!--Device-ConnectErrorCode-PEER_APP_REJECTED = 1-End-->
@@ -61,10 +49,6 @@ LOCAL_WIFI_NOT_OPEN = 2
 Wi-Fi is disabled at the local end.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ Wi-Fi is disabled at the peer end.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectErrorCode-PEER_WIFI_NOT_OPEN = 3--><!--Device-ConnectErrorCode-PEER_WIFI_NOT_OPEN = 3-End-->
@@ -102,10 +82,6 @@ The **onCollaborate** callback is not implemented.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectErrorCode-PEER_ABILITY_NO_ONCOLLABORATE = 4--><!--Device-ConnectErrorCode-PEER_ABILITY_NO_ONCOLLABORATE = 4-End-->
@@ -121,10 +97,6 @@ SYSTEM_INTERNAL_ERROR = 5
 An internal system error occurs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

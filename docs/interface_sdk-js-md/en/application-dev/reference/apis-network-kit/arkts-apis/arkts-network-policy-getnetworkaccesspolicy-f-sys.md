@@ -16,10 +16,6 @@ Query the network access policy of the specified application.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 <!--Device-policy-function getNetworkAccessPolicy(uid: number): Promise<NetworkAccessPolicy>--><!--Device-policy-function getNetworkAccessPolicy(uid: number): Promise<NetworkAccessPolicy>-End-->
@@ -51,7 +47,7 @@ Query the network access policy of the specified application.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -77,10 +73,6 @@ Query the network access policy of all applications.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 <!--Device-policy-function getNetworkAccessPolicy(): Promise<UidNetworkAccessPolicy>--><!--Device-policy-function getNetworkAccessPolicy(): Promise<UidNetworkAccessPolicy>-End-->
@@ -104,7 +96,7 @@ Query the network access policy of all applications.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@ CanvasRenderingContext2D allows you to draw rectangles, text, images, and other 
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface CanvasRenderingContext2D--><!--Device-unnamed-export interface CanvasRenderingContext2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, 
 Draws an arc on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -53,10 +45,6 @@ Draws an arc based on the radius and points on the arc.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void--><!--Device-CanvasRenderingContext2D-arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void-End-->
@@ -83,10 +71,6 @@ Creates a drawing path.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-beginPath(): void--><!--Device-CanvasRenderingContext2D-beginPath(): void-End-->
@@ -102,10 +86,6 @@ bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number,
 Draws a cubic bezier curve on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -134,10 +114,6 @@ Clears the content in a rectangle on the canvas.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-clearRect(x: number, y: number, width: number, height: number): void--><!--Device-CanvasRenderingContext2D-clearRect(x: number, y: number, width: number, height: number): void-End-->
@@ -163,10 +139,6 @@ Sets a path as the clipping path.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-clip(): void--><!--Device-CanvasRenderingContext2D-clip(): void-End-->
@@ -183,10 +155,6 @@ Draws a closed path.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-closePath(): void--><!--Device-CanvasRenderingContext2D-closePath(): void-End-->
@@ -202,10 +170,6 @@ createImageData(width: number, height: number): ImageData
 Creates an ImageData object.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -236,10 +200,6 @@ Creates an ImageData object.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-createImageData(imageData: ImageData): ImageData--><!--Device-CanvasRenderingContext2D-createImageData(imageData: ImageData): ImageData-End-->
@@ -267,10 +227,6 @@ createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGrad
 Creates a linear gradient color.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -303,10 +259,6 @@ Creates a path that is later used by the CanvasRenderingContext2D object.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-createPath2D(path?: Path2D): Path2D--><!--Device-CanvasRenderingContext2D-createPath2D(path?: Path2D): Path2D-End-->
@@ -334,10 +286,6 @@ createPath2D(cmds?: string): Path2D
 Creates a path that is later used by the CanvasRenderingContext2D object.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -367,10 +315,6 @@ Creates a pattern for image filling based on a specified source image and repeti
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-createPattern(image: Image, repetition: string): object--><!--Device-CanvasRenderingContext2D-createPattern(image: Image, repetition: string): object-End-->
@@ -399,10 +343,6 @@ createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number,
 Creates a radial gradient color.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -436,10 +376,6 @@ drawImage(image: Image, dx: number, dy: number, dWidth: number, dHeight: number)
 Draws an image.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -477,10 +413,6 @@ Draws an image.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-drawImage(    image: Image,    sx: number,    sy: number,    sWidth: number,    sHeight: number,    dx: number,    dy: number,    dWidth: number,    dHeight: number,  ): void--><!--Device-CanvasRenderingContext2D-drawImage(    image: Image,    sx: number,    sy: number,    sWidth: number,    sHeight: number,    dx: number,    dy: number,    dWidth: number,    dHeight: number,  ): void-End-->
@@ -510,10 +442,6 @@ drawImage(image: image.PixelMap, dx: number, dy: number, dWidth: number, dHeight
 Draws an image.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -550,10 +478,6 @@ drawImage(
 Draws an image.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -594,10 +518,6 @@ Draws an ellipse based on the coordinate and radius.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-ellipse(    x: number,    y: number,    radiusX: number,    radiusY: number,    rotation: number,    startAngle: number,    endAngle: number,    counterclockwise?: number,  ): void--><!--Device-CanvasRenderingContext2D-ellipse(    x: number,    y: number,    radiusX: number,    radiusY: number,    rotation: number,    startAngle: number,    endAngle: number,    counterclockwise?: number,  ): void-End-->
@@ -627,10 +547,6 @@ Fills the area inside a closed path.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-fill(): void--><!--Device-CanvasRenderingContext2D-fill(): void-End-->
@@ -646,10 +562,6 @@ fillRect(x: number, y: number, width: number, height: number): void
 Fills a rectangle on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -676,10 +588,6 @@ Draws filled text on the canvas.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-fillText(text: string, x: number, y: number): void--><!--Device-CanvasRenderingContext2D-fillText(text: string, x: number, y: number): void-End-->
@@ -703,10 +611,6 @@ getImageData(sx: number, sy: number, sw: number, sh: number): ImageData
 ImageData object created with pixels in the specified area on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -739,10 +643,6 @@ Obtains the dash line style.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-getLineDash(): Array<number>--><!--Device-CanvasRenderingContext2D-getLineDash(): Array<number>-End-->
@@ -764,10 +664,6 @@ getPixelMap(sx: number, sy: number, sw: number, sh: number): image.PixelMap
 Get an PixelMap object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -800,10 +696,6 @@ Connects the current point to a target position using a straight line.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-lineTo(x: number, y: number): void--><!--Device-CanvasRenderingContext2D-lineTo(x: number, y: number): void-End-->
@@ -826,10 +718,6 @@ measureText(text: string): TextMetrics
 Returns a TextMetrics object used to obtain the width of specified text.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -859,10 +747,6 @@ Moves a drawing path to a target position on the canvas.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-moveTo(x: number, y: number): void--><!--Device-CanvasRenderingContext2D-moveTo(x: number, y: number): void-End-->
@@ -885,10 +769,6 @@ putImageData(imageData: ImageData, dx: number, dy: number): void
 Puts the ImageData onto a rectangular area on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -922,10 +802,6 @@ Puts the ImageData onto a rectangular area on the canvas.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-putImageData(    imageData: ImageData,    dx: number,    dy: number,    dirtyX: number,    dirtyY: number,    dirtyWidth: number,    dirtyHeight: number,  ): void--><!--Device-CanvasRenderingContext2D-putImageData(    imageData: ImageData,    dx: number,    dy: number,    dirtyX: number,    dirtyY: number,    dirtyWidth: number,    dirtyHeight: number,  ): void-End-->
@@ -954,10 +830,6 @@ Draws a quadratic curve on the canvas.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void--><!--Device-CanvasRenderingContext2D-quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void-End-->
@@ -982,10 +854,6 @@ rect(x: number, y: number, width: number, height: number): void
 Creates a rectangular.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1012,10 +880,6 @@ Rotates a canvas clockwise around its coordinate axes.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-rotate(rotate: number): void--><!--Device-CanvasRenderingContext2D-rotate(rotate: number): void-End-->
@@ -1037,10 +901,6 @@ scale(x: number, y: number): void
 Scales a canvas based on scaling factors.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1064,10 +924,6 @@ setLineDash(segments: Array<number>): void
 Sets the dash line style.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1098,10 +954,6 @@ Uses same parameters as the transform() function to reset the existing transform
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-setTransform(    scaleX: number,    skewX: number,    skewY: number,    scaleY: number,    translateX: number,    translateY: number,  ): void--><!--Device-CanvasRenderingContext2D-setTransform(    scaleX: number,    skewX: number,    skewY: number,    scaleY: number,    translateX: number,    translateY: number,  ): void-End-->
@@ -1129,10 +981,6 @@ Draws a border stroke.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-stroke(): void--><!--Device-CanvasRenderingContext2D-stroke(): void-End-->
@@ -1148,10 +996,6 @@ stroke(path: Path2D): void
 Draws a path stroke.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1174,10 +1018,6 @@ strokeRect(x: number, y: number, width: number, height: number): void
 Draws a rectangle stroke on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1204,10 +1044,6 @@ Draws a text stroke on the canvas.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-strokeText(text: string, x: number, y: number): void--><!--Device-CanvasRenderingContext2D-strokeText(text: string, x: number, y: number): void-End-->
@@ -1232,10 +1068,6 @@ Draws the Bitmap to the current canvas.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-transferFromImageBitmap(bitmap: ImageBitmap): void--><!--Device-CanvasRenderingContext2D-transferFromImageBitmap(bitmap: ImageBitmap): void-End-->
@@ -1257,10 +1089,6 @@ transform(scaleX: number, skewX: number, skewY: number, scaleY: number, translat
 Defines a transformation matrix. To transform a graph, you only need to set parameters of the matrix. The coordinates of the corresponding graph are multiplied by the matrix values to obtain new coordinates of the transformed graph. You can use the matrix to implement multiple transform effects.
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1289,10 +1117,6 @@ Moves the origin of the coordinate system.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-translate(x: number, y: number): void--><!--Device-CanvasRenderingContext2D-translate(x: number, y: number): void-End-->
@@ -1318,10 +1142,6 @@ Sets the style of a paint to fill an area. Paint color used to fill the area. Ca
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-fillStyle?: string | CanvasGradient | CanvasPattern--><!--Device-CanvasRenderingContext2D-fillStyle?: string | CanvasGradient | CanvasPattern-End-->
@@ -1339,10 +1159,6 @@ Sets the font style. Font style. The default value is 10px sans-serif in tv, pho
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1362,10 +1178,6 @@ Sets the alpha value. Global alpha value to set. The value ranges from 0.0 (comp
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-globalAlpha: number--><!--Device-CanvasRenderingContext2D-globalAlpha: number-End-->
@@ -1383,10 +1195,6 @@ Sets the composite operation type. source-over Default value. Displays the new d
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1406,10 +1214,6 @@ Sets whether an image is smooth. default value is true.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-imageSmoothingEnabled: boolean--><!--Device-CanvasRenderingContext2D-imageSmoothingEnabled: boolean-End-->
@@ -1427,10 +1231,6 @@ Sets the style of line endpoints. Style of line endpoints. Available values incl
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1450,10 +1250,6 @@ Sets the dash line offset. Dash line offset. The value is a float number startin
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-lineDashOffset: number--><!--Device-CanvasRenderingContext2D-lineDashOffset: number-End-->
@@ -1471,10 +1267,6 @@ Sets the style for an intersection point where a line joins another. Style of th
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1494,10 +1286,6 @@ Sets the width of a line.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-lineWidth?: number--><!--Device-CanvasRenderingContext2D-lineWidth?: number-End-->
@@ -1515,10 +1303,6 @@ Sets the maximum miter length. The miter length is the distance between the inne
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1538,10 +1322,6 @@ Restores the saved drawing context.
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-restore: () => void--><!--Device-CanvasRenderingContext2D-restore: () => void-End-->
@@ -1559,10 +1339,6 @@ Saves the current drawing context.
 **Type:** () =&gt; void
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1582,10 +1358,6 @@ Sets the shadow blur degree. Shadow blur degree. A larger value indicates a more
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-shadowBlur: number--><!--Device-CanvasRenderingContext2D-shadowBlur: number-End-->
@@ -1603,10 +1375,6 @@ Sets the shadow color.
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1626,10 +1394,6 @@ Sets the x-axis shadow offset relative to the original object. X-axis shadow off
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-shadowOffsetX: number--><!--Device-CanvasRenderingContext2D-shadowOffsetX: number-End-->
@@ -1647,10 +1411,6 @@ Sets the y-axis shadow offset relative to the original object. Y-axis shadow off
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1670,10 +1430,6 @@ Sets the stroke paint style. Color of the stroke paint. Canvas gradient object u
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-strokeStyle?: string | CanvasGradient | CanvasPattern--><!--Device-CanvasRenderingContext2D-strokeStyle?: string | CanvasGradient | CanvasPattern-End-->
@@ -1692,10 +1448,6 @@ Sets the text alignment mode. Text alignment mode. Available values include: lef
 
 **Since:** 4
 
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CanvasRenderingContext2D-textAlign: "left" | "right" | "center" | "start" | "end"--><!--Device-CanvasRenderingContext2D-textAlign: "left" | "right" | "center" | "start" | "end"-End-->
@@ -1713,10 +1465,6 @@ Sets a text baseline in the horizontal direction for text alignment. Text baseli
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** ArkTS-Dyn only, since version 4.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

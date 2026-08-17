@@ -4,10 +4,6 @@ Defines the device icon information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDeviceManager-interface DeviceIconInfo--><!--Device-distributedDeviceManager-interface DeviceIconInfo-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -32,10 +28,6 @@ Icon.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceIconInfo-icon: ArrayBuffer--><!--Device-DeviceIconInfo-icon: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -53,10 +45,6 @@ Image type. This parameter has a fixed value of **ID**, indicating the product's
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceIconInfo-imageType: string--><!--Device-DeviceIconInfo-imageType: string-End-->
 
@@ -76,10 +64,6 @@ Internal product model. This parameter is left unspecified by default.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceIconInfo-internalModel?: string--><!--Device-DeviceIconInfo-internalModel?: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -97,10 +81,6 @@ Product ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceIconInfo-productId: string--><!--Device-DeviceIconInfo-productId: string-End-->
 
@@ -120,10 +100,6 @@ Image specification name. Value: - **lg**: large image (size: 1016064 pixels) - 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceIconInfo-specName: string--><!--Device-DeviceIconInfo-specName: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -142,10 +118,6 @@ Sub-product ID. This parameter is left unspecified by default.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DeviceIconInfo-subProductId?: string--><!--Device-DeviceIconInfo-subProductId?: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -163,10 +135,6 @@ URL.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DeviceIconInfo-url: string--><!--Device-DeviceIconInfo-url: string-End-->
 

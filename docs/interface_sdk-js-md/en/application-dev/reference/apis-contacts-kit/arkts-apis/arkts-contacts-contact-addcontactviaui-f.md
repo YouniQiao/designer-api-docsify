@@ -16,10 +16,6 @@ Calls the API for adding a contact to open the UI. This API uses a promise to re
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-contact-function addContactViaUI(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function addContactViaUI(context: Context, contact: Contact): Promise<number>-End-->
@@ -49,7 +45,7 @@ Calls the API for adding a contact to open the UI. This API uses a promise to re
 | [16700103](../errorcode-contacts.md#16700103-operation-canceled) | User cancel. |
 | [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 

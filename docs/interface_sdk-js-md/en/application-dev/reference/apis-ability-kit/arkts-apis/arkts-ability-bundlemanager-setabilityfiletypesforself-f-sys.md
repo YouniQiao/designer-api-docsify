@@ -16,10 +16,6 @@ Sets the file types that can be opened by the current application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SELF_SKILLS
 
 <!--Device-bundleManager-function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void--><!--Device-bundleManager-function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void-End-->
@@ -34,7 +30,7 @@ Sets the file types that can be opened by the current application.
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name. |
 | abilityName | string | Yes | Name of the UIAbility component. |
-| fileTypes | Array&lt;string&gt; | Yes | Array of file types. The array must contain no more than 1024 elements, and each element must not exceed 512 characters. Valid values must be from [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType). Empty values, wildcard characters, and **general.object** are not allowed. |
+| fileTypes | Array&lt;string&gt; | Yes | Array of file types. The array must contain no more than 1024 elements, and each element must not exceed 512 characters. Valid values must be from [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). Empty values, wildcard characters, and **general.object** are not allowed. |
 
 **Error codes:**
 
@@ -46,7 +42,7 @@ Sets the file types that can be opened by the current application.
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

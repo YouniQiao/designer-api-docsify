@@ -16,10 +16,6 @@ Send execute result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -48,7 +44,7 @@ Send execute result.
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
 | [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
 
-## Examples
+**Examples**
 
 Below is an example of setting the return mode of the intent execution result to FUNCTION.
 

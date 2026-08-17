@@ -4,10 +4,6 @@ Defines information about the components associated with the observable object, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ElementInfo--><!--Device-unnamed-export interface ElementInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -52,10 +48,6 @@ Component ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -75,10 +67,6 @@ Component name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

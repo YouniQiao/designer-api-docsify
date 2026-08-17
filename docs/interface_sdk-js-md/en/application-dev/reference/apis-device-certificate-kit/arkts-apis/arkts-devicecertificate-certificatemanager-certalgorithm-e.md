@@ -4,10 +4,6 @@ Enumerates the certificate algorithms.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-certificateManager-export enum CertAlgorithm--><!--Device-certificateManager-export enum CertAlgorithm-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
@@ -22,10 +18,6 @@ International cryptographic algorithm, such as RSA and NIST ECC.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CertAlgorithm-INTERNATIONAL = 1--><!--Device-CertAlgorithm-INTERNATIONAL = 1-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
@@ -39,10 +31,6 @@ SM = 2
 Indicates the commercial cryptographic algorithm, such as SM2 and SM4. Devices outside China do not support certificates using this algorithm.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CertAlgorithm-SM = 2--><!--Device-CertAlgorithm-SM = 2-End-->
 

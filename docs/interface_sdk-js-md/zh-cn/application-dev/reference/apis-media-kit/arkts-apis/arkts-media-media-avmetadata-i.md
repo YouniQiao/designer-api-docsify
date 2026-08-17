@@ -1,12 +1,8 @@
 # AVMetadata
 
-Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md#AVRecorderConfig) can be used as input parameters for recording of [AVRecorder](arkts-media-multimedia-media-avrecorder-i.md#AVRecorder).
+Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md#avrecorderconfig) can be used as input parameters for recording of [AVRecorder](arkts-media-multimedia-media-avrecorder-i.md#avrecorder).
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-media-interface AVMetadata--><!--Device-media-interface AVMetadata-End-->
 
@@ -24,10 +20,6 @@ Title of the album. This parameter is not supported in AVRecorder settings.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-album?: string--><!--Device-AVMetadata-album?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -43,10 +35,6 @@ Artist of the album. This parameter is not supported in AVRecorder settings.
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AVMetadata-albumArtist?: string--><!--Device-AVMetadata-albumArtist?: string-End-->
 
@@ -64,10 +52,6 @@ Artist of the media asset. This parameter is not supported in AVRecorder setting
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-artist?: string--><!--Device-AVMetadata-artist?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -83,10 +67,6 @@ Author of the media asset. This parameter is not supported in AVRecorder setting
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AVMetadata-author?: string--><!--Device-AVMetadata-author?: string-End-->
 
@@ -104,10 +84,6 @@ Composer of the media asset. This parameter is not supported in AVRecorder setti
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-composer?: string--><!--Device-AVMetadata-composer?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -123,10 +99,6 @@ Custom key-value mappings obtained from **moov.meta.list**.
 **类型：** Record&lt;string, string&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AVMetadata-customInfo?: Record<string, string>--><!--Device-AVMetadata-customInfo?: Record<string, string>-End-->
 
@@ -144,10 +116,6 @@ Time when the media asset is created. This parameter is not supported in AVRecor
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-dateTime?: string--><!--Device-AVMetadata-dateTime?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -163,10 +131,6 @@ Time when the media asset is created. The value is in the YYYY-MM-DD HH:mm:ss fo
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AVMetadata-dateTimeFormat?: string--><!--Device-AVMetadata-dateTimeFormat?: string-End-->
 
@@ -184,10 +148,6 @@ Description of the media asset. This parameter is not supported in AVRecorder se
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-description?: string--><!--Device-AVMetadata-description?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -204,10 +164,6 @@ Duration of the media asset. This parameter is not supported in AVRecorder setti
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-duration?: string--><!--Device-AVMetadata-duration?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -223,10 +179,6 @@ The identifier that represents the software or hardware and settings used for en
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -246,10 +198,6 @@ Type or genre of the media asset.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-genre?: string--><!--Device-AVMetadata-genre?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -265,10 +213,6 @@ Whether the media asset contains audio. This parameter is not supported in AVRec
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AVMetadata-hasAudio?: string--><!--Device-AVMetadata-hasAudio?: string-End-->
 
@@ -286,10 +230,6 @@ Whether the media asset contains a video. This parameter is not supported in AVR
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-hasVideo?: string--><!--Device-AVMetadata-hasVideo?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -305,10 +245,6 @@ HDR type of the media asset. This parameter is not supported in AVRecorder setti
 **类型：** HdrType
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AVMetadata-hdrType?: HdrType--><!--Device-AVMetadata-hdrType?: HdrType-End-->
 
@@ -326,10 +262,6 @@ Geographical location of the media asset.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-location?: Location--><!--Device-AVMetadata-location?: Location-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -345,10 +277,6 @@ MIME type of the media asset. This parameter is not supported in AVRecorder sett
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AVMetadata-mimeType?: string--><!--Device-AVMetadata-mimeType?: string-End-->
 
@@ -366,10 +294,6 @@ Audio sampling rate, in Hz. This parameter is not supported in AVRecorder settin
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-sampleRate?: string--><!--Device-AVMetadata-sampleRate?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -385,10 +309,6 @@ Title of the media asset. This parameter is not supported in AVRecorder settings
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AVMetadata-title?: string--><!--Device-AVMetadata-title?: string-End-->
 
@@ -406,10 +326,6 @@ Number of tracks of the media asset. This parameter is not supported in AVRecord
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-trackCount?: string--><!--Device-AVMetadata-trackCount?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -425,10 +341,6 @@ Tracks info of the media asset. This parameter is not supported in AVRecorder se
 **类型：** Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AVMetadata-tracks?: Array<MediaDescription>--><!--Device-AVMetadata-tracks?: Array<MediaDescription>-End-->
 
@@ -446,10 +358,6 @@ Video height, in px. This parameter is not supported in AVRecorder settings.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-videoHeight?: string--><!--Device-AVMetadata-videoHeight?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -466,10 +374,6 @@ Video rotation direction, in degrees.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVMetadata-videoOrientation?: string--><!--Device-AVMetadata-videoOrientation?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -485,10 +389,6 @@ Video width, in px. This parameter is not supported in AVRecorder settings.
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AVMetadata-videoWidth?: string--><!--Device-AVMetadata-videoWidth?: string-End-->
 

@@ -4,10 +4,6 @@ Describes the parameters used for creating a child window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface SubWindowOptions--><!--Device-window-interface SubWindowOptions-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -30,10 +26,6 @@ Whether decorations are displayed in the child window. **true** if displayed, **
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SubWindowOptions-decorEnabled: boolean--><!--Device-SubWindowOptions-decorEnabled: boolean-End-->
@@ -51,10 +43,6 @@ Whether the modal property is enabled for the child window. **true** if enabled,
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -74,10 +62,6 @@ Whether the child window supports maximization. **true** if supported, **false**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SubWindowOptions-maximizeSupported?: boolean--><!--Device-SubWindowOptions-maximizeSupported?: boolean-End-->
@@ -95,10 +79,6 @@ Modality type of the child window. This parameter takes effect only when the mod
 **Type:** [ModalityType](arkts-arkui-window-modalitytype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -118,10 +98,6 @@ Whether the child window displays an outline. **true** if displayed, **false** o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SubWindowOptions-outlineEnabled?: boolean--><!--Device-SubWindowOptions-outlineEnabled?: boolean-End-->
@@ -140,10 +116,6 @@ Title of the child window. The title display area should not go past the left si
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SubWindowOptions-title: string--><!--Device-SubWindowOptions-title: string-End-->
@@ -156,15 +128,11 @@ Title of the child window. The title display area should not go past the left si
 windowRect?: Rect
 ```
 
-Rectangle of the child window, and the size of the child window is limited. For details, see [resize()](arkts-arkui-window-window-i.md#resize). If this parameter is not set and [showWindow()](arkts-arkui-window-window-i.md#showWindow) is not called, the default value {left: 0, top: 0, width: 0, height: 0} is used. For details, see [Setting a Child Window of an Application](../../../windowmanager/application-window-stage.md#setting-a-child-window-of-an-application) .
+Rectangle of the child window, and the size of the child window is limited. For details, see [resize()](arkts-arkui-window-window-i.md#resize). If this parameter is not set and [showWindow()](arkts-arkui-window-window-i.md#showwindow) is not called, the default value {left: 0, top: 0, width: 0, height: 0} is used. For details, see [Setting a Child Window of an Application](../../../windowmanager/application-window-stage.md#setting-a-child-window-of-an-application) .
 
 **Type:** Rect
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -184,10 +152,6 @@ Z-level of the child window. This parameter is valid only when the modal propert
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SubWindowOptions-zLevel?: int--><!--Device-SubWindowOptions-zLevel?: int-End-->
@@ -205,10 +169,6 @@ Indicates whether loose the restriction of sub window z-level above parent.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

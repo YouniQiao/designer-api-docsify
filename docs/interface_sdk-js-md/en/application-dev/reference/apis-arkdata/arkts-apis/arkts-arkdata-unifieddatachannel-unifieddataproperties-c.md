@@ -4,10 +4,6 @@ Defines the properties of the data records in the unified data object, including
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unifiedDataChannel-class UnifiedDataProperties--><!--Device-unifiedDataChannel-class UnifiedDataProperties-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -30,10 +26,6 @@ extra property data. key-value pairs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UnifiedDataProperties-extras?: Record<string, RecordData>--><!--Device-UnifiedDataProperties-extras?: Record<string, RecordData>-End-->
@@ -52,10 +44,6 @@ Callback for obtaining the deferred data. Currently, it can be used only in the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -70,15 +58,11 @@ Callback for obtaining the deferred data. Currently, it can be used only in the 
 shareOptions?: ShareOptions
 ```
 
-Range, in which [UnifiedData](#UnifiedDataProperties) can be used. The default value is **CROSS_APP**.
+Range, in which [UnifiedData](#unifieddataproperties) can be used. The default value is **CROSS_APP**.
 
 **Type:** [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,10 +84,6 @@ Customized tag. The default value is an empty string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -118,15 +98,11 @@ Customized tag. The default value is an empty string.
 readonly timestamp?: Date
 ```
 
-Timestamp when [UnifiedData](#UnifiedDataProperties) is generated. The default value is January 1, 1970 (UTC).
+Timestamp when [UnifiedData](#unifieddataproperties) is generated. The default value is January 1, 1970 (UTC).
 
 **Type:** Date
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,10 +123,6 @@ Defines URI authorization policies for drag intention.
 **Type:** Array&lt;[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

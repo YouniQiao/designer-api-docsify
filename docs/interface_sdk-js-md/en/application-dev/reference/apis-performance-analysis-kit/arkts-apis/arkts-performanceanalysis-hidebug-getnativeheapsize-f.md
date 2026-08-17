@@ -16,10 +16,6 @@ Obtains the total number of bytes occupied by the total space (**uordblks** + **
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getNativeHeapSize() : bigint--><!--Device-hidebug-function getNativeHeapSize() : bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ Obtains the total number of bytes occupied by the total space (**uordblks** + **
 | --- | --- |
 | bigint | Size of the memory occupied by the total space held by the process, in bytes. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

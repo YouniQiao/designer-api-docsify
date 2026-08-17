@@ -16,10 +16,6 @@ Returns the information about the specified exempted application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
 <!--Device-deviceStandby-function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<ExemptedAppInfo>>): void--><!--Device-deviceStandby-function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<ExemptedAppInfo>>): void-End-->
@@ -32,7 +28,7 @@ Returns the information about the specified exempted application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceTypes | int | Yes | the combination of [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#ResourceType-(System-API)) values. |
+| resourceTypes | int | Yes | the combination of [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#resourcetype-system-api) values. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md)&gt;&gt; | Yes | the callback of getExemptedApps. |
 
 **Error codes:**
@@ -48,7 +44,7 @@ Returns the information about the specified exempted application.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -78,10 +74,6 @@ Returns the information about the specified exempted application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
 <!--Device-deviceStandby-function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>--><!--Device-deviceStandby-function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>-End-->
@@ -94,7 +86,7 @@ Returns the information about the specified exempted application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceTypes | int | Yes | the combination of [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#ResourceType-(System-API)) values. |
+| resourceTypes | int | Yes | the combination of [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#resourcetype-system-api) values. |
 
 **Return value:**
 
@@ -115,7 +107,7 @@ Returns the information about the specified exempted application.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

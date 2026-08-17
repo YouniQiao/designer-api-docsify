@@ -16,10 +16,6 @@ Obtains the bundle name based on the given UID. This API returns the result sync
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
 <!--Device-bundleManager-function getBundleNameByUidSync(uid: int): string--><!--Device-bundleManager-function getBundleNameByUidSync(uid: int): string-End-->
@@ -46,7 +42,7 @@ Obtains the bundle name based on the given UID. This API returns the result sync
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [17700021](../errorcode-bundle.md#17700021-invalid-uid) | The uid is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

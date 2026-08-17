@@ -1,12 +1,8 @@
 # NavigationPolicy
 
-Enumerates the modes of opening a new window in the WebView.
+Defines the modes of opening a new window in the WebView, including pop-up windows, new windows, foreground tabs, and background tabs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum NavigationPolicy--><!--Device-unnamed-declare enum NavigationPolicy-End-->
 
@@ -22,10 +18,6 @@ Open in a new pop-up window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NavigationPolicy-NEW_POPUP = 0--><!--Device-NavigationPolicy-NEW_POPUP = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -39,10 +31,6 @@ NEW_WINDOW = 1
 Open in a new window.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NavigationPolicy-NEW_WINDOW = 1--><!--Device-NavigationPolicy-NEW_WINDOW = 1-End-->
 
@@ -58,10 +46,6 @@ Open in a new tab in background.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NavigationPolicy-NEW_BACKGROUND_TAB = 2--><!--Device-NavigationPolicy-NEW_BACKGROUND_TAB = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -75,10 +59,6 @@ NEW_FOREGROUND_TAB = 3
 Open in a new tab in foreground.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NavigationPolicy-NEW_FOREGROUND_TAB = 3--><!--Device-NavigationPolicy-NEW_FOREGROUND_TAB = 3-End-->
 

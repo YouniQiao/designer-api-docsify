@@ -10,10 +10,6 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
 <!--Device-appManager-function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>--><!--Device-appManager-function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>-End-->
@@ -48,7 +44,7 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 | [16000202](../errorcode-ability.md#16000202-仅支持为appservice类型的extensionability设置保活) | Invalid main element type. |
 | [16000203](../errorcode-ability.md#16000203-无法更改appserviceextensionability保活状态) | Cannot change the keep-alive status. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

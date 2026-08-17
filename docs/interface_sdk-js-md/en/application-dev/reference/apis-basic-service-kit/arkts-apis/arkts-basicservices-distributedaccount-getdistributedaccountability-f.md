@@ -16,10 +16,6 @@ Obtains a **DistributedAccountAbility** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility--><!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -30,7 +26,7 @@ Obtains a **DistributedAccountAbility** instance.
 | --- | --- |
 | [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md) | DistributedAccountAbility** instance obtained. This instance provides APIs for querying and updating the login state of a distributed account. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();

@@ -1,12 +1,8 @@
 # BackForwardCacheOptions
 
-This class is used to set back forward cache options.
+Implements a **BackForwardCacheOptions** object to set back-forward cache options of the **Web** component.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class BackForwardCacheOptions--><!--Device-webview-class BackForwardCacheOptions-End-->
 
@@ -24,11 +20,9 @@ import { webview } from 'webview';
 constructor()
 ```
 
+Constructs a **BackForwardCacheOptions** object.
+
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-BackForwardCacheOptions-constructor()--><!--Device-BackForwardCacheOptions-constructor()-End-->
 
@@ -40,15 +34,11 @@ constructor()
 size: number
 ```
 
-Set the maximum size of pages that can cache. Default is 1, max is 50.
+The maximum number of pages that can be cached in a Web component. The default value is 1, and the maximum value is 50. If this parameter is set to 0 or a negative value, the back-forward cache is disabled. The Web component reclaims the cache for memory pressure.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-BackForwardCacheOptions-size: number--><!--Device-BackForwardCacheOptions-size: number-End-->
 
@@ -60,15 +50,11 @@ Set the maximum size of pages that can cache. Default is 1, max is 50.
 timeToLive: number
 ```
 
-Set the lifetime in seconds in the BackForwardCache. Unit: seconds. Default is 600.
+The time that a Web component allows a page to stay in the back-forward cache. If this parameter is set to 0 or a negative value, the back-forward cache is disabled. Default value: 600 Unit: second
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-BackForwardCacheOptions-timeToLive: number--><!--Device-BackForwardCacheOptions-timeToLive: number-End-->
 

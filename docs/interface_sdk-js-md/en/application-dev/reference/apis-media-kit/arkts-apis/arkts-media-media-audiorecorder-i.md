@@ -1,14 +1,12 @@
 # AudioRecorder
 
-AudioRecorder is a class for audio recording management. It provides APIs to record audio. Before calling any API in AudioRecorder, you must use [createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md#createAudioRecorder) to create an AudioRecorder instance.
+AudioRecorder is a class for audio recording management. It provides APIs to record audio. Before calling any API in AudioRecorder, you must use [createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md#createaudiorecorder) to create an AudioRecorder instance.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [media](arkts-multimedia-media.md#@ohos.multimedia.media)
+**Substitutes:** [media](arkts-multimedia-media.md#ohosmultimediamedia)
 
 <!--Device-media-interface AudioRecorder--><!--Device-media-interface AudioRecorder-End-->
 
@@ -30,11 +28,9 @@ Subscribes to audio recording error events. After an error event is reported, yo
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audioCapturerChange)(type: 'error', callback: ErrorCallback)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'error', callback: ErrorCallback)
 
 <!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -57,11 +53,9 @@ Subscribes to the audio recording events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audioCapturerChange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -84,11 +78,9 @@ Subscribes to the audio recording events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audioCapturerChange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -111,11 +103,9 @@ Subscribes to the audio recording events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audioCapturerChange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -138,11 +128,9 @@ Subscribes to the audio recording events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audioCapturerChange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -165,11 +153,9 @@ Subscribes to the audio recording events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audioCapturerChange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -192,11 +178,9 @@ Subscribes to the audio recording events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audioCapturerChange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -219,11 +203,9 @@ Subscribes to the audio recording events.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audioCapturerChange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -246,8 +228,6 @@ Pauses audio recording. This API can be called only after the **'start'** event 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [pause](arkts-media-media-avrecorder-i.md#pause)(callback: AsyncCallback&lt;void&gt;)
@@ -265,8 +245,6 @@ prepare(config: AudioRecorderConfig): void
 Prepares for recording.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -300,8 +278,6 @@ Releases the audio recording resources.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [release](arkts-media-media-avrecorder-i.md#release)(callback: AsyncCallback&lt;void&gt;)
@@ -319,8 +295,6 @@ reset(): void
 Resets audio recording. Before resetting audio recording, you must call **stop()** to stop recording. After audio recording is reset, you must call **prepare()** to set the recording configurations for another recording.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 
@@ -340,8 +314,6 @@ Resumes audio recording. This API can be called only after the **'pause'** event
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [resume](arkts-media-media-avrecorder-i.md#resume)(callback: AsyncCallback&lt;void&gt;)
@@ -360,8 +332,6 @@ Starts audio recording. This API can be called only after the **'prepare'** even
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [start](arkts-media-media-avrecorder-i.md#start)(callback: AsyncCallback&lt;void&gt;)
@@ -379,8 +349,6 @@ stop(): void
 Stops audio recording.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

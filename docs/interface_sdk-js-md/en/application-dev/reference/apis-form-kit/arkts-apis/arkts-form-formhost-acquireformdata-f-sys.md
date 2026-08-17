@@ -16,10 +16,6 @@ Requests data from the widget provider. This API uses an asynchronous callback t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -59,10 +55,6 @@ function acquireFormData(formId: string): Promise<Record<string, Object>>
 Requests data from the widget provider. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

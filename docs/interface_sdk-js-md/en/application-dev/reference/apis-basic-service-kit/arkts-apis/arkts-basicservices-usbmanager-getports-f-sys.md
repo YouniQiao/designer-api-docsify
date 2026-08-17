@@ -16,11 +16,9 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md#getPortList-(System-API))()
+**Substitutes:** [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md#getportlist-system-api)()
 
 <!--Device-usbManager-function getPorts(): Array<USBPort>--><!--Device-usbManager-function getPorts(): Array<USBPort>-End-->
 

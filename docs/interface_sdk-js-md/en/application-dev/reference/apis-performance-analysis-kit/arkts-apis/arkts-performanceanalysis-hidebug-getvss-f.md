@@ -16,10 +16,6 @@ Obtains the virtual set size used by the application process. This API is implem
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getVss(): bigint--><!--Device-hidebug-function getVss(): bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ Obtains the virtual set size used by the application process. This API is implem
 | --- | --- |
 | bigint | Virtual set size used by the application process, in KB. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

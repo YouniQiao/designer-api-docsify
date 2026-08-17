@@ -16,10 +16,6 @@ Sets the high contrast mode for text rendering. The setting of this API takes ef
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-text-function setTextHighContrast(action : TextHighContrast): void--><!--Device-text-function setTextHighContrast(action : TextHighContrast): void-End-->
@@ -32,7 +28,7 @@ Sets the high contrast mode for text rendering. The setting of this API takes ef
 | --- | --- | --- | --- |
 | action | [TextHighContrast](arkts-arkgraphics2d-text-texthighcontrast-e.md) | Yes | High contrast mode for text rendering. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 text.setTextHighContrast(text.TextHighContrast.TEXT_APP_DISABLE_HIGH_CONTRAST)

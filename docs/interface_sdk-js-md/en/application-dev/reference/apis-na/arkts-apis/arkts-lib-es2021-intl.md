@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace Intl--><!--Device-unnamed-declare namespace Intl-End-->
 
 ## Summary
@@ -34,5 +30,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ListFormat](arkts-na-intl-con.md#ListFormat) |  |
+| [ListFormat](arkts-na-intl-con.md#listformat) |  |
 

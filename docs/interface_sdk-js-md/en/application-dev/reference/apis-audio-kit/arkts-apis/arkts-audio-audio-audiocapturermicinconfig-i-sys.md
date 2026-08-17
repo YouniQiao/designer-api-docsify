@@ -4,10 +4,6 @@ Describes audio capturer configuration that can capture microphone input (mic-in
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioCapturerMicInConfig--><!--Device-audio-interface AudioCapturerMicInConfig-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -32,10 +28,6 @@ Capturer attribute information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioCapturerMicInConfig-capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerMicInConfig-capturerInfo: AudioCapturerInfo-End-->
@@ -55,10 +47,6 @@ Stream information that describes echo reference signal. If not set this attribu
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Stream information that describes Mic-In audio stream.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioCapturerMicInConfig-micInStreamInfo: AudioStreamInfo--><!--Device-AudioCapturerMicInConfig-micInStreamInfo: AudioStreamInfo-End-->
@@ -98,15 +82,11 @@ Stream information that describes Mic-In audio stream.
 preferredInputDevice?: AudioDeviceDescriptor
 ```
 
-Prefered input device for this audio capturer. The preferred device must be an input device, and the source type in captureInfo must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_RECOGNITION), [SOURCE_TYPE_VOICE_TRANSCRIPTION](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_VOICE_TRANSCRIPTION) or [SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT), otherwise this parameter will be ignored. If the user does not specify a device, the system will automatically select the recording device for the audio capturer. When the user specifies a preferred device: 1) If the preferred device is online, the current audio capturer may use the preferred device for recording. If the preferred device becomes offline during recording, the system will select another device. 2) If the preferred device is offline, the system will select a recording device. If the preferred device becomes online during recording, it may switch to the preferred device. The user can query the selected device by [getCurrentAudioCapturerChangeInfo](arkts-audio-audio-audiocapturer-i.md#getCurrentAudioCapturerChangeInfo).
+Prefered input device for this audio capturer. The preferred device must be an input device, and the source type in captureInfo must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#sourcetypevoicerecognition), [SOURCE_TYPE_VOICE_TRANSCRIPTION](arkts-audio-audio-sourcetype-e-sys.md#sourcetypevoicetranscription) or [SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT](arkts-audio-audio-sourcetype-e-sys.md#sourcetypeunprocessedvoiceassistant), otherwise this parameter will be ignored. If the user does not specify a device, the system will automatically select the recording device for the audio capturer. When the user specifies a preferred device: 1) If the preferred device is online, the current audio capturer may use the preferred device for recording. If the preferred device becomes offline during recording, the system will select another device. 2) If the preferred device is offline, the system will select a recording device. If the preferred device becomes online during recording, it may switch to the preferred device. The user can query the selected device by [getCurrentAudioCapturerChangeInfo](arkts-audio-audio-audiocapturer-i.md#getcurrentaudiocapturerchangeinfo).
 
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,10 +107,6 @@ Stream information that describes the processed audio stream.
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

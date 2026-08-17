@@ -4,10 +4,6 @@ Enum for ringtone type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemSoundManager-enum RingtoneType--><!--Device-systemSoundManager-enum RingtoneType-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -24,11 +20,9 @@ Default type.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [RINGTONE_TYPE_SIM_CARD_0](#RINGTONE_TYPE_SIM_CARD_0)
+**Substitutes:** [RINGTONE_TYPE_SIM_CARD_0](#ringtonetypesimcard0)
 
 <!--Device-RingtoneType-RINGTONE_TYPE_DEFAULT = 0--><!--Device-RingtoneType-RINGTONE_TYPE_DEFAULT = 0-End-->
 
@@ -46,10 +40,6 @@ Ringtone type for sim card 0.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RingtoneType-RINGTONE_TYPE_SIM_CARD_0 = 0--><!--Device-RingtoneType-RINGTONE_TYPE_SIM_CARD_0 = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -66,11 +56,9 @@ Multi-sim type.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 11
 
-**Substitutes:** [RINGTONE_TYPE_SIM_CARD_1](#RINGTONE_TYPE_SIM_CARD_1)
+**Substitutes:** [RINGTONE_TYPE_SIM_CARD_1](#ringtonetypesimcard1)
 
 <!--Device-RingtoneType-RINGTONE_TYPE_MULTISIM = 1--><!--Device-RingtoneType-RINGTONE_TYPE_MULTISIM = 1-End-->
 
@@ -88,10 +76,6 @@ Ringtone type for sim card 1.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RingtoneType-RINGTONE_TYPE_SIM_CARD_1 = 1--><!--Device-RingtoneType-RINGTONE_TYPE_SIM_CARD_1 = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -107,10 +91,6 @@ RINGTONE_TYPE_ESIM_CARD_0 = 2
 Ringtone type for esim card 0.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,10 +109,6 @@ RINGTONE_TYPE_ESIM_CARD_1 = 3
 Ringtone type for esim card 1.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

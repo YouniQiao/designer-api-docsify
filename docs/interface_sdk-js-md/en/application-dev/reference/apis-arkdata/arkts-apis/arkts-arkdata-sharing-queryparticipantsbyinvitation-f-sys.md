@@ -19,10 +19,6 @@ Queries the participants based on the sharing invitation code. This API uses an 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sharing-function queryParticipantsByInvitation(      invitationCode: string,      callback: AsyncCallback<Result<Array<Participant>>>    ): void--><!--Device-sharing-function queryParticipantsByInvitation(      invitationCode: string,      callback: AsyncCallback<Result<Array<Participant>>>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -44,7 +40,7 @@ Queries the participants based on the sharing invitation code. This API uses an 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -68,10 +64,6 @@ function queryParticipantsByInvitation(invitationCode: string): Promise<Result<A
 Queries the participants based on the sharing invitation code. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sharing-function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>--><!--Device-sharing-function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>-End-->
 
@@ -99,7 +91,7 @@ Queries the participants based on the sharing invitation code. This API uses a p
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

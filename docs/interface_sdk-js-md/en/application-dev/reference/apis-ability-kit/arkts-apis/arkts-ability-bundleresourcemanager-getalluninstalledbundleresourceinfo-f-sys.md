@@ -16,10 +16,6 @@ Obtains the bundle resource information of all uninstalled applications that hav
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_RESOURCES
 
 <!--Device-bundleResourceManager-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>--><!--Device-bundleResourceManager-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>-End-->
@@ -32,7 +28,7 @@ Obtains the bundle resource information of all uninstalled applications that hav
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceFlags | int | Yes | Type of the resource information to obtain. For details, see [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag-(System-API)). |
+| resourceFlags | int | Yes | Type of the resource information to obtain. For details, see [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#resourceflag-system-api). |
 
 **Return value:**
 
@@ -47,7 +43,7 @@ Obtains the bundle resource information of all uninstalled applications that hav
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';

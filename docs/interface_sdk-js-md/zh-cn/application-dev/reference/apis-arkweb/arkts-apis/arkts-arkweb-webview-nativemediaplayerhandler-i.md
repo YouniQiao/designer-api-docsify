@@ -1,12 +1,8 @@
 # NativeMediaPlayerHandler
 
-[CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback)回调函数的参数。应用通过该对象，将 播放器的状态通知给 ArkWeb 内核。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
+NativeMediaPlayerHandler 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#createnativemediaplayercallback)回调函数的参数。当 应用使用[NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md#nativemediaplayerbridge)接管网页媒体播放时，需要通过将播放器的各种状态变化实时同步给 ArkWeb 内核，确保网页 JavaScript 能够获取正确的播放器状态，ArkWeb 内核会将这些状态转换为标准的 HTML5 Media Events，触发网页中注册的事件监听器，从而保证网页功能的正常运行。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-webview-interface NativeMediaPlayerHandler--><!--Device-webview-interface NativeMediaPlayerHandler-End-->
 
@@ -22,10 +18,6 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleBufferedEndTimeChanged(bufferedEndTime: number): void--><!--Device-NativeMediaPlayerHandler-handleBufferedEndTimeChanged(bufferedEndTime: number): void-End-->
@@ -36,7 +28,7 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bufferedEndTime | number | 是 | 媒体缓冲的时长。<br>单位：秒，取值范围：[0, duration] |
+| bufferedEndTime | number | 是 | 媒体缓冲的时长。 <br>单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
 
 ## handleDurationChanged
 
@@ -48,10 +40,6 @@ handleDurationChanged(duration: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: number): void--><!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: number): void-End-->
@@ -62,7 +50,7 @@ handleDurationChanged(duration: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| duration | number | 是 | 媒体的总时长。<br>单位：秒，取值范围：[0, +∞) |
+| duration | number | 是 | 媒体的总时长。 <br>单位：秒，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将不会执行。 |
 
 ## handleEnded
 
@@ -73,10 +61,6 @@ handleEnded(): void
 当媒体播放结束时，调用该方法将播放结束事件通知给 ArkWeb 内核。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -90,13 +74,9 @@ handleEnded(): void
 handleError(error: MediaError, errorMessage: string): void
 ```
 
-当播放器发生错误时，调用该方法将错误通知 ArkWeb 内核。
+当播放器发生错误时，调用该方法将错误通知给 ArkWeb 内核。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -108,7 +88,7 @@ handleError(error: MediaError, errorMessage: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| error | [MediaError](../../apis-na/arkts-apis/arkts-na-webview-mediaerror-e.md) | 是 | 错误类型。 |
+| error | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | 是 | 错误类型。 |
 | errorMessage | string | 是 | 错误的详细描述。 |
 
 ## handleFullscreenChanged
@@ -121,10 +101,6 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void--><!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void-End-->
@@ -135,7 +111,7 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fullscreen | boolean | 是 | 是否全屏。<br>true表示全屏，false表示未全屏。 |
+| fullscreen | boolean | 是 | 是否全屏。 <br>true表示全屏，false表示未全屏。 |
 
 ## handleMutedChanged
 
@@ -147,10 +123,6 @@ handleMutedChanged(muted: boolean): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleMutedChanged(muted: boolean): void--><!--Device-NativeMediaPlayerHandler-handleMutedChanged(muted: boolean): void-End-->
@@ -161,7 +133,7 @@ handleMutedChanged(muted: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| muted | boolean | 是 | 当前播放器是否静音。<br>true表示当前播放器静音，false表示当前播放器未静音。 |
+| muted | boolean | 是 | 当前播放器是否静音。 <br>true表示当前播放器静音，false表示当前播放器未静音。 |
 
 ## handleNetworkStateChanged
 
@@ -172,10 +144,6 @@ handleNetworkStateChanged(state: NetworkState): void
 当播放器的网络状态发生变化时，调用该方法将播放器的网络状态通知给 ArkWeb 内核。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -199,10 +167,6 @@ handlePlaybackRateChanged(playbackRate: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handlePlaybackRateChanged(playbackRate: number): void--><!--Device-NativeMediaPlayerHandler-handlePlaybackRateChanged(playbackRate: number): void-End-->
@@ -213,7 +177,7 @@ handlePlaybackRateChanged(playbackRate: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| playbackRate | number | 是 | 播放速率，取值范围：[0, +∞) |
+| playbackRate | number | 是 | 播放速率，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将不会执行。 |
 
 ## handleReadyStateChanged
 
@@ -225,10 +189,6 @@ handleReadyStateChanged(state: ReadyState): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void--><!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void-End-->
@@ -239,7 +199,7 @@ handleReadyStateChanged(state: ReadyState): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [ReadyState](../../apis-na/arkts-apis/arkts-na-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
+| state | [ReadyState](arkts-arkweb-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
 
 ## handleSeekFinished
 
@@ -247,13 +207,9 @@ handleReadyStateChanged(state: ReadyState): void
 handleSeekFinished(): void
 ```
 
-当播放器seek完成后，调用该方法将seek完成事件通知 ArkWeb 内核。
+当播放器 seek 完成后，调用该方法将 seek 完成事件通知给 ArkWeb 内核。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -267,13 +223,9 @@ handleSeekFinished(): void
 handleSeeking(): void
 ```
 
-当播放器进入seek状态时，调用该方法将seek进入事件通知 ArkWeb 内核。
+当播放器进入 seek 状态时，调用该方法将 seek 进入事件通知 ArkWeb 内核。seek 完成后，应调用 handleSeekFinished 将 seek 完成事件通知 ArkWeb 内核。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -291,10 +243,6 @@ handleStatusChanged(status: PlaybackStatus): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleStatusChanged(status: PlaybackStatus): void--><!--Device-NativeMediaPlayerHandler-handleStatusChanged(status: PlaybackStatus): void-End-->
@@ -305,7 +253,7 @@ handleStatusChanged(status: PlaybackStatus): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| status | [PlaybackStatus](../../apis-na/arkts-apis/arkts-na-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
+| status | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
 
 ## handleTimeUpdate
 
@@ -317,10 +265,6 @@ handleTimeUpdate(currentPlayTime: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: number): void--><!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: number): void-End-->
@@ -331,7 +275,7 @@ handleTimeUpdate(currentPlayTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| currentPlayTime | number | 是 | 当前播放时间。<br>单位：秒，取值范围：[0, duration] |
+| currentPlayTime | number | 是 | 当前播放时间。 <br>单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
 
 ## handleVideoSizeChanged
 
@@ -339,13 +283,9 @@ handleTimeUpdate(currentPlayTime: number): void
 handleVideoSizeChanged(width: number, height: number): void
 ```
 
-当播放器解析出视频的尺寸时， 调用该方法将视频尺寸通知 ArkWeb 内核。
+当播放器解析出视频的尺寸时，调用该方法将视频尺寸通知给 ArkWeb 内核。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -357,8 +297,8 @@ handleVideoSizeChanged(width: number, height: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | number | 是 | 视频的宽，单位：像素，取值范围：[0, +∞) |
-| height | number | 是 | 视频的高，单位：像素，取值范围：[0, +∞) |
+| width | number | 是 | 视频的宽，单位：像素，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将忽略该值。 |
+| height | number | 是 | 视频的高，单位：像素，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将忽略该值。 |
 
 ## handleVolumeChanged
 
@@ -370,10 +310,6 @@ handleVolumeChanged(volume: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerHandler-handleVolumeChanged(volume: number): void--><!--Device-NativeMediaPlayerHandler-handleVolumeChanged(volume: number): void-End-->
@@ -384,5 +320,5 @@ handleVolumeChanged(volume: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volume | number | 是 | 播放器的音量，取值范围：[0, 1.0]。 |
+| volume | number | 是 | 播放器的音量，取值范围：[0, 1.0]。超出范围时，ArkWeb 内核将不会执行。 |
 

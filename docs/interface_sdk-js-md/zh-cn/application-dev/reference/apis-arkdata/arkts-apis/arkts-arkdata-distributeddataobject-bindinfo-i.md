@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-distributedDataObject-interface BindInfo--><!--Device-distributedDataObject-interface BindInfo-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -23,10 +19,6 @@ assetName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-BindInfo-assetName: string--><!--Device-BindInfo-assetName: string-End-->
 
@@ -44,10 +36,6 @@ field: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-BindInfo-field: string--><!--Device-BindInfo-field: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -63,10 +51,6 @@ primaryKey: commonType.ValuesBucket
 **类型：** commonType.ValuesBucket
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-BindInfo-primaryKey: commonType.ValuesBucket--><!--Device-BindInfo-primaryKey: commonType.ValuesBucket-End-->
 
@@ -84,10 +68,6 @@ storeName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-BindInfo-storeName: string--><!--Device-BindInfo-storeName: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
@@ -103,10 +83,6 @@ tableName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-BindInfo-tableName: string--><!--Device-BindInfo-tableName: string-End-->
 

@@ -1,14 +1,10 @@
 # AccelerometerUncalibratedResponse
 
-未校准加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#Response)。
+未校准加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#response)。
 
-**继承/实现关系：** AccelerometerUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**继承/实现关系：** AccelerometerUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-sensor-interface AccelerometerUncalibratedResponse--><!--Device-sensor-interface AccelerometerUncalibratedResponse-End-->
 
@@ -26,10 +22,6 @@ biasX: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AccelerometerUncalibratedResponse-biasX: double--><!--Device-AccelerometerUncalibratedResponse-biasX: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -45,10 +37,6 @@ biasY: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AccelerometerUncalibratedResponse-biasY: double--><!--Device-AccelerometerUncalibratedResponse-biasY: double-End-->
 
@@ -66,10 +54,6 @@ biasZ: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AccelerometerUncalibratedResponse-biasZ: double--><!--Device-AccelerometerUncalibratedResponse-biasZ: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -85,10 +69,6 @@ x: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AccelerometerUncalibratedResponse-x: double--><!--Device-AccelerometerUncalibratedResponse-x: double-End-->
 
@@ -106,10 +86,6 @@ y: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AccelerometerUncalibratedResponse-y: double--><!--Device-AccelerometerUncalibratedResponse-y: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -125,10 +101,6 @@ z: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AccelerometerUncalibratedResponse-z: double--><!--Device-AccelerometerUncalibratedResponse-z: double-End-->
 

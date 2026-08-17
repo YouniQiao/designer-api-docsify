@@ -4,10 +4,6 @@ Provides the capability of simulating touch operations. The simulated touch oper
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-inputEventClient-interface TouchController--><!--Device-inputEventClient-interface TouchController-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -27,10 +23,6 @@ touchDown(touch: TouchPoint): Promise<void>
 Presses down a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -71,10 +63,6 @@ Moves a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -112,10 +100,6 @@ touchUp(touch: TouchPoint): Promise<void>
 Releases a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 

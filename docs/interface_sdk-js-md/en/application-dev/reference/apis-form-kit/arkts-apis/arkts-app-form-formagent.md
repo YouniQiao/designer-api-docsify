@@ -4,10 +4,6 @@ The **FormAgent** module provides APIs related to the widget agent. Currently, y
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace formAgent--><!--Device-unnamed-declare namespace formAgent-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -27,8 +23,8 @@ import { formAgent } from 'formAgent';
 
 | Name | Description |
 | --- | --- |
-| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md#requestPublishForm) | Requests to publish a widget to the widget host. This API uses an asynchronous callback to return the result. The widget host is usually the home screen. |
-| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md#requestPublishForm-(System-API)) | Requests to publish a widget to the widget host. This API uses a promise to return the result. The widget host is usually the home screen. |
-| [updateFormCrossBundle](arkts-form-formagent-updateformcrossbundle-f-sys.md#updateFormCrossBundle) | Updates a widget by cross bundle. This API uses a promise to return the result. |
+| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md#requestpublishform) | Requests to publish a widget to the widget host. This API uses an asynchronous callback to return the result. The widget host is usually the home screen. |
+| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md#requestpublishform-system-api) | Requests to publish a widget to the widget host. This API uses a promise to return the result. The widget host is usually the home screen. |
+| [updateFormCrossBundle](arkts-form-formagent-updateformcrossbundle-f-sys.md#updateformcrossbundle) | Updates a widget by cross bundle. This API uses a promise to return the result. |
 <!--DelEnd-->
 

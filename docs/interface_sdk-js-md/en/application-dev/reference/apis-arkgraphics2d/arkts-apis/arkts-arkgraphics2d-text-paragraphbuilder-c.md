@@ -1,12 +1,8 @@
 # ParagraphBuilder
 
-Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) and [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection) to the constructor, then set the text style through [pushStyle](#pushStyle), add text content through [addText](#addText), and finally call [build()](#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) object for typesetting and drawing.
+Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle) and [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#fontcollection) to the constructor, then set the text style through [pushStyle](#pushstyle), add text content through [addText](#addtext), and finally call [build()](#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#paragraph) object for typesetting and drawing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-text-class ParagraphBuilder--><!--Device-text-class ParagraphBuilder-End-->
 
@@ -28,10 +24,6 @@ Inserts a placeholder when building a text paragraph. After insertion, the place
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphBuilder-addPlaceholder(placeholderSpan: PlaceholderSpan): void--><!--Device-ParagraphBuilder-addPlaceholder(placeholderSpan: PlaceholderSpan): void-End-->
@@ -44,7 +36,7 @@ Inserts a placeholder when building a text paragraph. After insertion, the place
 | --- | --- | --- | --- |
 | placeholderSpan | [PlaceholderSpan](arkts-arkgraphics2d-text-placeholderspan-i.md) | Yes | Placeholder span, which describes the size, alignment, baseline type, and baseline offset of the placeholder. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
@@ -92,10 +84,6 @@ Inserts a symbol into the paragraph being built.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphBuilder-addSymbol(symbolId: int): void--><!--Device-ParagraphBuilder-addSymbol(symbolId: int): void-End-->
@@ -108,7 +96,7 @@ Inserts a symbol into the paragraph being built.
 | --- | --- | --- | --- |
 | symbolId | int | Yes | Symbol code to insert. The value is a hexadecimal number in the range 0xF0000-0xF0C97. For details about the configurable symbol codes (unicode values in the list view), see [HarmonyOS Symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol/). |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -152,10 +140,6 @@ Inserts a text string into the paragraph being built.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphBuilder-addText(text: string): void--><!--Device-ParagraphBuilder-addText(text: string): void-End-->
@@ -168,7 +152,7 @@ Inserts a text string into the paragraph being built.
 | --- | --- | --- | --- |
 | text | string | Yes | Exact text string inserted into the paragraph. If an invalid Unicode character is provided, it is displayed as �. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
@@ -214,10 +198,6 @@ Builds a paragraph and generates a paragraph object that can be used for subsequ
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphBuilder-build(): Paragraph--><!--Device-ParagraphBuilder-build(): Paragraph-End-->
@@ -230,7 +210,7 @@ Builds a paragraph and generates a paragraph object that can be used for subsequ
 | --- | --- |
 | Paragraph | Paragraph** object that can be used for subsequent rendering. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { drawing, text, common2D } from '@kit.ArkGraphics2D'
@@ -275,10 +255,6 @@ Builds a line typesetter and generates a LineTypeset object that can be used for
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphBuilder-buildLineTypeset(): LineTypeset--><!--Device-ParagraphBuilder-buildLineTypeset(): LineTypeset-End-->
@@ -291,7 +267,7 @@ Builds a line typesetter and generates a LineTypeset object that can be used for
 | --- | --- |
 | [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) | LineTypeset** object that can be used for subsequent rendering. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -330,10 +306,6 @@ A constructor used to create a **ParagraphBuilder** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphBuilder-constructor(paragraphStyle: ParagraphStyle, fontCollection: FontCollection)--><!--Device-ParagraphBuilder-constructor(paragraphStyle: ParagraphStyle, fontCollection: FontCollection)-End-->
@@ -347,7 +319,7 @@ A constructor used to create a **ParagraphBuilder** object.
 | paragraphStyle | ParagraphStyle | Yes | Paragraph style. |
 | fontCollection | [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | Yes | Font collection object that provides font resources required for text typesetting, used for glyph matching and text rendering during paragraph construction. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -385,13 +357,9 @@ struct Index {
 popStyle(): void
 ```
 
-Restores the previous text style. > **NOTE：**> > This method must be called after [pushStyle()](#pushStyle). After it is called, > subsequently added text will use the text style before the pop operation. If the style stack is empty, the > textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) will be used as the default style.
+Restores the previous text style. > **NOTE：**> > This method must be called after [pushStyle()](#pushstyle). After it is called, > subsequently added text will use the text style before the pop operation. If the style stack is empty, the > textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle) will be used as the default style.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -399,7 +367,7 @@ Restores the previous text style. > **NOTE：**> > This method must be called af
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
@@ -446,10 +414,6 @@ Applies a new style to the current text blob. > **NOTE：**> > When you update t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ParagraphBuilder-pushStyle(textStyle: TextStyle): void--><!--Device-ParagraphBuilder-pushStyle(textStyle: TextStyle): void-End-->
@@ -462,7 +426,7 @@ Applies a new style to the current text blob. > **NOTE：**> > When you update t
 | --- | --- | --- | --- |
 | textStyle | TextStyle | Yes | Text style, which describes various visual attributes of text, such as font, font size, color, font weight, word spacing, line spacing, decoration (such as underline and strikethrough), and text shadow. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'

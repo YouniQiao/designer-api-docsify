@@ -4,10 +4,6 @@ Represents the enterprise information of a device administrator application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-adminManager-export interface EnterpriseInfo--><!--Device-adminManager-export interface EnterpriseInfo-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -32,10 +28,6 @@ Description of the enterprise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EnterpriseInfo-description: string--><!--Device-EnterpriseInfo-description: string-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -53,10 +45,6 @@ Name of the enterprise.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EnterpriseInfo-name: string--><!--Device-EnterpriseInfo-name: string-End-->
 

@@ -8,10 +8,6 @@ TLS1.3 cipher suite should include TLS1.2 cipher suite.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-http-export type TlsV13CipherSuite = TlsV12CipherSuite | TlsV13SpecificCipherSuite--><!--Device-http-export type TlsV13CipherSuite = TlsV12CipherSuite | TlsV13SpecificCipherSuite-End-->

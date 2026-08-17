@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface NotificationTemplate--><!--Device-unnamed-export interface NotificationTemplate-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -24,10 +20,6 @@ data: Record<string, RecordData>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-NotificationTemplate-data: Record<string, RecordData>--><!--Device-NotificationTemplate-data: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -43,10 +35,6 @@ name: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-NotificationTemplate-name: string--><!--Device-NotificationTemplate-name: string-End-->
 

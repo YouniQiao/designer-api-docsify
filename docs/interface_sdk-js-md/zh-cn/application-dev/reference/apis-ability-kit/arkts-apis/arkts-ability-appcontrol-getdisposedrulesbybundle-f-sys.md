@@ -10,10 +10,6 @@ function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfigu
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -44,7 +40,7 @@ function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfigu
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application is not allowed to call a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appControl } from '@kit.AbilityKit';

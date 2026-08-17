@@ -1,12 +1,8 @@
 # PinVerifyResult
 
-Enum type supplied to [PinVerifyResult](#PinVerifyResult) when VerifyPinHandler#confirm being called.
+Defines the PIN verification results, which identify the execution status of PIN verification.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum PinVerifyResult--><!--Device-unnamed-declare enum PinVerifyResult-End-->
 
@@ -18,13 +14,9 @@ Enum type supplied to [PinVerifyResult](#PinVerifyResult) when VerifyPinHandler#
 PIN_VERIFICATION_SUCCESS = 0
 ```
 
-SUCCESS.
+Verification successful.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-PinVerifyResult-PIN_VERIFICATION_SUCCESS = 0--><!--Device-PinVerifyResult-PIN_VERIFICATION_SUCCESS = 0-End-->
 
@@ -36,13 +28,9 @@ SUCCESS.
 PIN_VERIFICATION_FAILED = 1
 ```
 
-FAILED.
+Verification failed.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-PinVerifyResult-PIN_VERIFICATION_FAILED = 1--><!--Device-PinVerifyResult-PIN_VERIFICATION_FAILED = 1-End-->
 

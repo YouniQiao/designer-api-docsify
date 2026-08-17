@@ -10,11 +10,9 @@ Checks whether this process can access a file. This API returns the result synch
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [accessSync](arkts-corefile-file-fs-accesssync-f.md#accessSync)
+**Substitutes:** [accessSync](arkts-corefile-file-fs-accesssync-f.md#accesssync)
 
 <!--Device-unnamed-declare function accessSync(path: string, mode?: number): void--><!--Device-unnamed-declare function accessSync(path: string, mode?: number): void-End-->
 

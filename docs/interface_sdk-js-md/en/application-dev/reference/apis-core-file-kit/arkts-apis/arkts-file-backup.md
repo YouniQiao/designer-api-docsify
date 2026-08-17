@@ -4,10 +4,6 @@ Module providing backup and restore capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace backup--><!--Device-unnamed-declare namespace backup-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -27,14 +23,14 @@ import { backup } from 'backup';
 
 | Name | Description |
 | --- | --- |
-| [fileSystemServiceRequest](arkts-corefile-backup-filesystemservicerequest-f-sys.md#fileSystemServiceRequest) | Requests filesystem garbage collection with specified configuration. |
-| [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md#getBackupInfo) | Get Backup information from bundle. |
-| [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md#getBackupVersion) | Obtain the backupVersion. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getLocalCapabilities) | Obtain a Json file that describes local capabilities. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getLocalCapabilities-(System-API)) | Obtain a Json file that describes local capabilities. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getLocalCapabilities-(System-API)) | Obtain a json file that describes local capabilities. |
-| [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md#updateSendRate) | Update send file fd rate. |
-| [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md#updateTimer) | Update backup or restore timeout. |
+| [fileSystemServiceRequest](arkts-corefile-backup-filesystemservicerequest-f-sys.md#filesystemservicerequest) | Requests filesystem garbage collection with specified configuration. |
+| [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md#getbackupinfo) | Get Backup information from bundle. |
+| [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md#getbackupversion) | Obtain the backupVersion. |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities) | Obtain a Json file that describes local capabilities. |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-system-api) | Obtain a Json file that describes local capabilities. |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-system-api) | Obtain a json file that describes local capabilities. |
+| [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md#updatesendrate) | Update send file fd rate. |
+| [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md#updatetimer) | Update backup or restore timeout. |
 <!--DelEnd-->
 
 <!--Del-->

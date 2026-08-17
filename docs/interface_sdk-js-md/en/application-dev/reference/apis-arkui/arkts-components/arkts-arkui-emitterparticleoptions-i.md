@@ -4,10 +4,6 @@ Defines parameters of particles used by emitters. > **NOTE：**> > To standardiz
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface EmitterParticleOptions--><!--Device-unnamed-interface EmitterParticleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +14,11 @@ Defines parameters of particles used by emitters. > **NOTE：**> > To standardiz
 config: ParticleConfigs[PARTICLE]
 ```
 
-Configuration of the particle type. The value type of **config** is subject to the value of **type**. 1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md#PointParticleParameters). 2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md#ImageParticleParameters).
+Configuration of the particle type. The value type of **config** is subject to the value of **type**. 1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md#pointparticleparameters). 2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md#imageparticleparameters).
 
 **Type:** ParticleConfigs[PARTICLE]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Number of particles. The value is greater than or equal to -1. The value **-1** 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Lifetime of a single particle. The default value is **1000** (that is, 1000 ms, 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -100,10 +84,6 @@ Random integer within the range of [lifetime – lifetimeRange, lifetime + lifet
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -123,10 +103,6 @@ Particle type, which can be **IMAGE** or **POINT**.
 **Type:** PARTICLE
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

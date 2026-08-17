@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 <!--Device-unnamed-declare interface ReadOut--><!--Device-unnamed-declare interface ReadOut-End-->
@@ -23,8 +21,6 @@ buffer: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ bytesRead: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
 <!--Device-ReadOut-bytesRead: number--><!--Device-ReadOut-bytesRead: number-End-->
@@ -63,8 +57,6 @@ offset: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
 **废弃版本：** 9
 

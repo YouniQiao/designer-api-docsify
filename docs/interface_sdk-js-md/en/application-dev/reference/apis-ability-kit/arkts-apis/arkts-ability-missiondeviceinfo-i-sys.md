@@ -1,12 +1,8 @@
 # MissionDeviceInfo (System API)
 
-The module defines the parameters required for registering a listener. It can be used as an input parameter in [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registerMissionListener-(System-API))
+The module defines the parameters required for registering a listener. It can be used as an input parameter in [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MissionDeviceInfo--><!--Device-unnamed-export interface MissionDeviceInfo-End-->
 
@@ -25,10 +21,6 @@ Indicates the deviceId to start sync.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

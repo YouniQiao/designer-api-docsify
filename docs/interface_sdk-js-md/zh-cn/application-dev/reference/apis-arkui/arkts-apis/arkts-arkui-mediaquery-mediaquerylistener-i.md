@@ -1,14 +1,10 @@
 # MediaQueryListener
 
-媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。 继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult)。
+媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。 继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#mediaqueryresult)。
 
-**继承/实现关系：** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult)
+**继承/实现关系：** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#mediaqueryresult)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 <!--Device-mediaquery-interface MediaQueryListener--><!--Device-mediaquery-interface MediaQueryListener-End-->
 
@@ -24,10 +20,6 @@ off(type: 'change', callback?: Callback<MediaQueryResult>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -41,9 +33,9 @@ off(type: 'change', callback?: Callback<MediaQueryResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 必须填写字符串'change'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 否 | 需要取消注册的回调，如果参数缺省则注销该句柄下所有的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 否 | 需要取消注册的回调，如果参数缺省则注销该句柄下所有的回调。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { mediaquery } from '@kit.ArkUI';
@@ -70,10 +62,6 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -87,9 +75,9 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 必须填写字符串'change'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 是 | 向媒体查询注册的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 是 | 向媒体查询注册的回调。 |
 
-## 示例
+**示例**
 
-详见off('change')示例。
+详见[off('change')](#offchange)示例。
 

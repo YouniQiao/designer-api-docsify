@@ -4,10 +4,6 @@ Enumerates the device types. &lt;!--RP1--&gt; &lt;!--RP1End--&gt;
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-resourceManager-export enum DeviceType--><!--Device-resourceManager-export enum DeviceType-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -21,10 +17,6 @@ DEVICE_TYPE_PHONE = 0x00
 Phone
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Tablet
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DeviceType-DEVICE_TYPE_TABLET = 0x01--><!--Device-DeviceType-DEVICE_TYPE_TABLET = 0x01-End-->
@@ -61,10 +49,6 @@ DEVICE_TYPE_CAR = 0x02
 Head unit
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ Indicates a PC.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DeviceType-DEVICE_TYPE_PC = 0x03--><!--Device-DeviceType-DEVICE_TYPE_PC = 0x03-End-->
@@ -101,10 +81,6 @@ DEVICE_TYPE_TV = 0x04
 Smart TV
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,10 +98,6 @@ Wearable
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DeviceType-DEVICE_TYPE_WEARABLE = 0x06--><!--Device-DeviceType-DEVICE_TYPE_WEARABLE = 0x06-End-->
@@ -141,10 +113,6 @@ DEVICE_TYPE_2IN1 = 0x07
 PC/2-in-1 device
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

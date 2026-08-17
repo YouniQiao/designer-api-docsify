@@ -4,10 +4,6 @@ Implements an animation controller object. It provides APIs for playing, stoppin
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AnimationController--><!--Device-unnamed-export interface AnimationController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -37,10 +33,6 @@ Obtains the current animation playback status.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -55,7 +47,7 @@ Obtains the current animation playback status.
 | --- | --- |
 | AnimationStatus | Current animation state: initial, running, paused, or stopped. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
@@ -108,10 +100,6 @@ Pauses playback on the current frame.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -120,7 +108,7 @@ Pauses playback on the current frame.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
@@ -157,10 +145,6 @@ Resumes playback from the current frame.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -169,7 +153,7 @@ Resumes playback from the current frame.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
@@ -206,10 +190,6 @@ Starts playback from the first frame.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -218,7 +198,7 @@ Starts playback from the first frame.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
@@ -255,10 +235,6 @@ Stops playback and resets to the first frame.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -267,7 +243,7 @@ Stops playback and resets to the first frame.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';

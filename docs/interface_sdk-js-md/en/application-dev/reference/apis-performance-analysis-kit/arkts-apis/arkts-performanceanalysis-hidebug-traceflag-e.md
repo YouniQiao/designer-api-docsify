@@ -4,10 +4,6 @@ Describes types of trace collection threads, including the main thread and all t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-enum TraceFlag--><!--Device-hidebug-enum TraceFlag-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -22,10 +18,6 @@ The main thread of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TraceFlag-MAIN_THREAD = 1--><!--Device-TraceFlag-MAIN_THREAD = 1-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -39,10 +31,6 @@ ALL_THREADS = 2
 All threads of the application.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TraceFlag-ALL_THREADS = 2--><!--Device-TraceFlag-ALL_THREADS = 2-End-->
 

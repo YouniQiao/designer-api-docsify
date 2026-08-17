@@ -10,8 +10,6 @@ function getSdkVersion(options: HuksOptions): string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 11
 
 <!--Device-huks-function getSdkVersion(options: HuksOptions): string--><!--Device-huks-function getSdkVersion(options: HuksOptions): string-End-->
@@ -30,7 +28,7 @@ function getSdkVersion(options: HuksOptions): string
 | --- | --- |
 | string | 返回sdk版本。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

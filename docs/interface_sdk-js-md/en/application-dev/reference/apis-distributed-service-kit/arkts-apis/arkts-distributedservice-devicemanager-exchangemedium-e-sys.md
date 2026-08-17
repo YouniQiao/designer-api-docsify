@@ -4,8 +4,6 @@ Enumerates the media used for device discovery.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-deviceManager-enum ExchangeMedium--><!--Device-deviceManager-enum ExchangeMedium-End-->
@@ -23,8 +21,6 @@ AUTO = 0
 Automatic.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 
@@ -44,8 +40,6 @@ Bluetooth.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-ExchangeMedium-BLE = 1--><!--Device-ExchangeMedium-BLE = 1-End-->
@@ -64,8 +58,6 @@ Wi-Fi.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 11
 
 <!--Device-ExchangeMedium-COAP = 2--><!--Device-ExchangeMedium-COAP = 2-End-->
@@ -83,8 +75,6 @@ USB = 3
 USB.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 11
 

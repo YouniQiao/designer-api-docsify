@@ -16,11 +16,9 @@ Creates a **PasteDataRecord** object of the Want type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createRecord)(mimeType: string, value: ValueType)
+**Substitutes:** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord--><!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord-End-->
 
@@ -38,7 +36,7 @@ Creates a **PasteDataRecord** object of the Want type.
 | --- | --- |
 | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | New **PasteDataRecord** object of the Want type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';

@@ -16,10 +16,6 @@ Obtains the launcher ability resource information of each application correspond
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
 
 **Model restriction:** This API can be used only in the stage model.
@@ -35,7 +31,7 @@ Obtains the launcher ability resource information of each application correspond
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | optionsList | Array&lt;[BundleOptions](arkts-ability-bundleinfo-bundleoptions-i-sys.md)&gt; | Yes | Parameters of the applications to query.<br>**bundleName**, **moduleName**, and **abilityName** are mandatory parameters.<br>Value range of **appIndex**: [0, 5]. The default value is **0** if not specified.<br>**userId** is an invalid parameter. It does not need to be passed, and will not take effect if passed. |
-| resourceFlags | int | Yes | Resource information flags, which indicate the type of resource information to obtain. The value is an enumerated value of [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag-(System-API)), excluding [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag-(System-API)).GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL and [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag-(System-API)).GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY. |
+| resourceFlags | int | Yes | Resource information flags, which indicate the type of resource information to obtain. The value is an enumerated value of [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#resourceflag-system-api), excluding [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#resourceflag-system-api).GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL and [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#resourceflag-system-api).GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY. |
 
 **Return value:**
 
@@ -55,7 +51,7 @@ Obtains the launcher ability resource information of each application correspond
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability is not found. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager, bundleResourceManager } from '@kit.AbilityKit';

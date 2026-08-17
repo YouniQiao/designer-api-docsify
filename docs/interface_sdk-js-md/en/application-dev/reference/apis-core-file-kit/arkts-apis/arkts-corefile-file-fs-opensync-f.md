@@ -30,10 +30,6 @@ Opens a file or directory. This API returns the result synchronously. This API s
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function openSync(path: string, mode?: number): File--><!--Device-unnamed-declare function openSync(path: string, mode?: number): File-End-->

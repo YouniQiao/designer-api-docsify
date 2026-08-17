@@ -2,13 +2,9 @@
 
 Provides APIs to manage albums.
 
-**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md#AbsAlbum)
+**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md#absalbum)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-sendablePhotoAccessHelper-interface Album--><!--Device-sendablePhotoAccessHelper-interface Album-End-->
 
@@ -30,10 +26,6 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-Album-commitModify(): Promise<void>--><!--Device-Album-commitModify(): Promise<void>-End-->
@@ -53,7 +45,7 @@ Commits the modification on the album attributes to the database. This API uses 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
@@ -90,10 +82,6 @@ Converts this Sendable album to a non-Sendable album.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album--><!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -111,7 +99,7 @@ Converts this Sendable album to a non-Sendable album.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 14000011 | Internal system error |
 
-## Examples
+**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
@@ -154,10 +142,6 @@ Number of image assets in the album
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-Album-readonly imageCount?: number--><!--Device-Album-readonly imageCount?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -173,10 +157,6 @@ Number of video assets in the album
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-Album-readonly videoCount?: number--><!--Device-Album-readonly videoCount?: number-End-->
 

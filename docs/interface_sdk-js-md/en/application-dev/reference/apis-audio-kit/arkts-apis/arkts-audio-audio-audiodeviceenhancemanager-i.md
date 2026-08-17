@@ -4,10 +4,6 @@ Provides enhanced audio device management capabilities.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioDeviceEnhanceManager--><!--Device-audio-interface AudioDeviceEnhanceManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.DeviceEnhance
@@ -28,10 +24,6 @@ Queries whether the system supports the enhanced routing functions provided by t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioDeviceEnhanceManager-isEnhancedRoutingSupported(): boolean--><!--Device-AudioDeviceEnhanceManager-isEnhancedRoutingSupported(): boolean-End-->
@@ -50,13 +42,9 @@ Queries whether the system supports the enhanced routing functions provided by t
 selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-Selects the input device for your application. This setting applies to all recording streams created under your application, unless a specific input device is designated for a particular stream by [selectInputDeviceForAudioCapturer](#selectInputDeviceForAudioCapturer). When application implements its own UX for input device selection, it can obtain the list of available input devices through [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getAvailableDevices), and use the [getPreferredInputDeviceForCapturerInfo](arkts-audio-audio-audioroutingmanager-i.md#getPreferredInputDeviceForCapturerInfo) API to obtain the currently selected input device. The selection will become invalid when your application exits or the selected device goes offline. After your application restarts or the device comes back online, your application must re-issue the selection for it to take effect. If the system does not support this function, it will select a default input device for your application.
+Selects the input device for your application. This setting applies to all recording streams created under your application, unless a specific input device is designated for a particular stream by [selectInputDeviceForAudioCapturer](#selectinputdeviceforaudiocapturer). When application implements its own UX for input device selection, it can obtain the list of available input devices through [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices), and use the [getPreferredInputDeviceForCapturerInfo](arkts-audio-audio-audioroutingmanager-i.md#getpreferredinputdeviceforcapturerinfo) API to obtain the currently selected input device. The selection will become invalid when your application exits or the selected device goes offline. After your application restarts or the device comes back online, your application must re-issue the selection for it to take effect. If the system does not support this function, it will select a default input device for your application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,7 +56,7 @@ Selects the input device for your application. This setting applies to all recor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | Audio device descriptor in the array returned by [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getAvailableDevices). |
+| inputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | Audio device descriptor in the array returned by [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices). |
 
 **Return value:**
 
@@ -93,10 +81,6 @@ Selects the input device for the target AudioCapturer. Your application must ens
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioDeviceEnhanceManager-selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioDeviceEnhanceManager-selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDeviceDescriptor): Promise<void>-End-->
@@ -108,7 +92,7 @@ Selects the input device for the target AudioCapturer. Your application must ens
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | Yes | The instance of AudioCapturer. |
-| inputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | Audio device descriptor in the array returned by [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getAvailableDevices). |
+| inputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | Audio device descriptor in the array returned by [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices). |
 
 **Return value:**
 
@@ -129,13 +113,9 @@ Selects the input device for the target AudioCapturer. Your application must ens
 selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-Selects the output device for your application. This setting applies to all playback streams created under your application, unless a specific output device is designated for a particular stream by [selectOutputDeviceForAudioRenderer](#selectOutputDeviceForAudioRenderer). When application implements its own UX for output device selection, it can obtain the list of available output devices through [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getAvailableDevices), and use the [getPreferOutputDeviceForRendererInfo](arkts-audio-audio-audioroutingmanager-i.md#getPreferOutputDeviceForRendererInfo) API to obtain the currently selected output device. The selection will become invalid when your application exits or the selected device goes offline. After your application restarts or the device comes back online, your application must re-issue the selection for it to take effect. If the system does not support this function, it will select a default output device for your application.
+Selects the output device for your application. This setting applies to all playback streams created under your application, unless a specific output device is designated for a particular stream by [selectOutputDeviceForAudioRenderer](#selectoutputdeviceforaudiorenderer). When application implements its own UX for output device selection, it can obtain the list of available output devices through [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices), and use the [getPreferOutputDeviceForRendererInfo](arkts-audio-audio-audioroutingmanager-i.md#getpreferoutputdeviceforrendererinfo) API to obtain the currently selected output device. The selection will become invalid when your application exits or the selected device goes offline. After your application restarts or the device comes back online, your application must re-issue the selection for it to take effect. If the system does not support this function, it will select a default output device for your application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,7 +127,7 @@ Selects the output device for your application. This setting applies to all play
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | Audio device descriptor in the array returned by [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getAvailableDevices). |
+| outputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | Audio device descriptor in the array returned by [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices). |
 
 **Return value:**
 
@@ -172,10 +152,6 @@ Selects the output device for the target AudioRenderer. Your application must en
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioDeviceEnhanceManager-selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioDeviceEnhanceManager-selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioDeviceDescriptor): Promise<void>-End-->
@@ -187,7 +163,7 @@ Selects the output device for the target AudioRenderer. Your application must en
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | Yes | The instance of AudioRenderer. |
-| outputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | Audio device descriptor in the array returned by [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getAvailableDevices). |
+| outputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | Audio device descriptor in the array returned by [getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getavailabledevices). |
 
 **Return value:**
 

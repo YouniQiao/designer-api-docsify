@@ -10,10 +10,6 @@ function getBundleInstallerSync(): BundleInstaller
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-installer-function getBundleInstallerSync(): BundleInstaller--><!--Device-installer-function getBundleInstallerSync(): BundleInstaller-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -32,7 +28,7 @@ function getBundleInstallerSync(): BundleInstaller
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';

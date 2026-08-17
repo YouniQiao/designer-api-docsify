@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unifiedDataChannel-class UnifiedRecord--><!--Device-unifiedDataChannel-class UnifiedRecord-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -22,10 +18,6 @@ addEntry(type: string, value: ValueType): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -38,7 +30,7 @@ addEntry(type: string, value: ValueType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要创建的数据类型，见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。 |
+| type | string | 是 | 要创建的数据类型，见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)。 |
 | value | ValueType | 是 | 要创建的数据的值。 |
 
 **错误码：**
@@ -47,7 +39,7 @@ addEntry(type: string, value: ValueType): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -115,10 +107,6 @@ constructor()
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -127,7 +115,7 @@ constructor()
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-## 示例
+**示例**
 
 ```TypeScript
 let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
@@ -139,13 +127,9 @@ let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
 constructor(type: string, value: ValueType)
 ```
 
-用于创建指定类型和值的数据记录。调用成功后，返回包含指定类型和值的UnifiedRecord对象。 当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)中 OPENHARMONY_PIXEL_MAP的值； 当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)中OPENHARMONY_WANT的 值。
+用于创建指定类型和值的数据记录。调用成功后，返回包含指定类型和值的UnifiedRecord对象。 当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)中 OPENHARMONY_PIXEL_MAP的值； 当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#want)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)中OPENHARMONY_WANT的 值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -159,7 +143,7 @@ constructor(type: string, value: ValueType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要创建的数据记录的类型，用于标识数据记录的具体类型。取值见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)，如 'general.plain-text'、'general.hyperlink'等。 |
+| type | string | 是 | 要创建的数据记录的类型，用于标识数据记录的具体类型。取值见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)，如 'general.plain-text'、'general.hyperlink'等。 |
 | value | ValueType | 是 | 要创建的数据记录的值。 |
 
 **错误码：**
@@ -168,7 +152,7 @@ constructor(type: string, value: ValueType)
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -251,10 +235,6 @@ getEntries(): Record<string, ValueType>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -269,7 +249,7 @@ getEntries(): Record<string, ValueType>
 | --- | --- |
 | Record&lt;string, ValueType&gt; | 当前数据记录对应的类型和内容。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -381,10 +361,6 @@ getEntry(type: string): ValueType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -397,7 +373,7 @@ getEntry(type: string): ValueType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要获取数据的类型，见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。 |
+| type | string | 是 | 要获取数据的类型，见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)。 |
 
 **返回值：**
 
@@ -411,7 +387,7 @@ getEntry(type: string): ValueType
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -519,13 +495,9 @@ for (let i = 0; i < records.length; i++) {
 getType(): string
 ```
 
-获取当前数据记录的类型。由于从统一数据对象中调用[getRecords](arkts-arkdata-unifieddatachannel-unifieddata-c.md#getRecords)所取出的数据是UnifiedRecord对象，因此需要通 过本接口查询此记录的具体类型，再将该UnifiedRecord对象转换为其子类，调用子类接口。
+获取当前数据记录的类型。由于从统一数据对象中调用[getRecords](arkts-arkdata-unifieddatachannel-unifieddata-c.md#getrecords)所取出的数据是UnifiedRecord对象，因此需要通 过本接口查询此记录的具体类型，再将该UnifiedRecord对象转换为其子类，调用子类接口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -541,7 +513,7 @@ getType(): string
 | --- | --- |
 | string | 当前数据记录对应的具体数据类型，见 [UniformDataType]{ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -589,13 +561,9 @@ if (records[0].getType() == 'general.plain-text') {
 getTypes(): Array<string>
 ```
 
-获取数据记录中数据的所有类型集合。可通过UnifiedRecord数据记录对象调用本接口，查询出此记录中数据的所有类型集合，包括使用 [addEntry](#addEntry)函数添加的数据类型。
+获取数据记录中数据的所有类型集合。可通过UnifiedRecord数据记录对象调用本接口，查询出此记录中数据的所有类型集合，包括使用 [addEntry](#addentry)函数添加的数据类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -611,7 +579,7 @@ getTypes(): Array<string>
 | --- | --- |
 | Array&lt;string&gt; | [UniformDataType]{ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -711,10 +679,6 @@ getValue(): ValueType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -729,7 +693,7 @@ getValue(): ValueType
 | --- | --- |
 | ValueType | 当前数据记录对应的值。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';

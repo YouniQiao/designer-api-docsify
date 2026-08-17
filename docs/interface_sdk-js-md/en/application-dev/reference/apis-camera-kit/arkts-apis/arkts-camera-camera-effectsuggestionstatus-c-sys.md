@@ -4,10 +4,6 @@ Effect suggestion status
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-class EffectSuggestionStatus--><!--Device-camera-class EffectSuggestionStatus-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -32,10 +28,6 @@ Effect Suggestion type status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EffectSuggestionStatus-status: boolean--><!--Device-EffectSuggestionStatus-status: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -53,10 +45,6 @@ Effect Suggestion type.
 **Type:** [EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EffectSuggestionStatus-type: EffectSuggestionType--><!--Device-EffectSuggestionStatus-type: EffectSuggestionType-End-->
 

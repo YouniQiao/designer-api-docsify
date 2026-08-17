@@ -17,13 +17,9 @@ function bulkTransfer(
   ): Promise<int>
 ```
 
-Performs bulk transfer. This API uses a promise to return the result. > **NOTEï¼š**> > The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a > single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned. > > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface) > API to claim a communication interface.
+Performs bulk transfer. This API uses a promise to return the result. > **NOTEï¼š**> > The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a > single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned. > > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface) > API to claim a communication interface.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-usbManager-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: int  ): Promise<int>--><!--Device-usbManager-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: int  ): Promise<int>-End-->
 
@@ -33,8 +29,8 @@ Performs bulk transfer. This API uses a promise to return the result. > **NOTEï¼
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | USB device pipe. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice) to obtain its value. |
-| endpoint | USBEndpoint | Yes | USB endpoint, which is used to determine the USB interface for data transfer. You need to call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getDevices) to obtain the device information list and endpoint. Wherein, **address** is used to determine the endpoint address, **direction** is used to determine the endpoint direction, and **interfaceId** is used to determine the USB interface to which the endpoint belongs. Other parameters are passed transparently. |
+| pipe | USBDevicePipe | Yes | USB device pipe. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
+| endpoint | USBEndpoint | Yes | USB endpoint, which is used to determine the USB interface for data transfer. You need to call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices) to obtain the device information list and endpoint. Wherein, **address** is used to determine the endpoint address, **direction** is used to determine the endpoint direction, and **interfaceId** is used to determine the USB interface to which the endpoint belongs. Other parameters are passed transparently. |
 | buffer | Uint8Array | Yes | Buffer for writing or reading data. |
 | timeout | int | No | Timeout interval.Unit: milliseconds. This parameter is optional. If the bulk transfer is complete within the specified time, the size of the transferred or received data block is returned; otherwise, a timeout error is returned. The default value is **0**, indicating that the system waits infinitely until the control transfer is complete. Set this parameter as required. |
 
@@ -51,7 +47,7 @@ Performs bulk transfer. This API uses a promise to return the result. > **NOTEï¼
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  <br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
-## Examples
+**Examples**
 
 The following sample code is only a basic process for calling the bulkTransfer API. In actual calling, you must comply with the device-related protocols to ensure correct data transfer and device compatibility.
 

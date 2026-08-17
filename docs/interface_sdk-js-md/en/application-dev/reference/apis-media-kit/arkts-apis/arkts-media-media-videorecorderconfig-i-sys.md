@@ -4,10 +4,6 @@ Provides the video recorder configuration definitions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface VideoRecorderConfig--><!--Device-media-interface VideoRecorderConfig-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
@@ -32,10 +28,6 @@ audio source type, details see @AudioSourceType .
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType--><!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
@@ -53,10 +45,6 @@ geographical location information.
 **Type:** Location
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoRecorderConfig-location?: Location--><!--Device-VideoRecorderConfig-location?: Location-End-->
 
@@ -76,10 +64,6 @@ video recorder profile, can get by "getVideoRecorderProfile", details see @Video
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoRecorderConfig-profile: VideoRecorderProfile--><!--Device-VideoRecorderConfig-profile: VideoRecorderProfile-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
@@ -97,10 +81,6 @@ Sets the video rotation angle in output file, and for the file to playback, in d
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoRecorderConfig-rotation?: int--><!--Device-VideoRecorderConfig-rotation?: int-End-->
 
@@ -120,10 +100,6 @@ video output uri.support two kind of uri now. format like: scheme + "://" + "con
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VideoRecorderConfig-url: string--><!--Device-VideoRecorderConfig-url: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
@@ -141,10 +117,6 @@ video source type, details see @VideoSourceType .
 **Type:** [VideoSourceType](arkts-media-media-videosourcetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType--><!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType-End-->
 

@@ -6,10 +6,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-declare class UIPickerComponentAttribute--><!--Device-unnamed-declare class UIPickerComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,10 +20,6 @@ canLoop(isLoop: Optional<boolean>)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -40,7 +32,7 @@ canLoop(isLoop: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isLoop | Optional&lt;boolean&gt; | 是 | 是否可循环滚动。 <br>- true：可循环滚动。 <br>- false：不可循环滚动。 <br>默认值：true <br>当isLoop的值为undefined时，使用默认值。 <br>当子组件个数小于或等于可见选项数量 （由[displayedItemCount](#displayedItemCount)设置，默认为7）时，无论isLoop设置为true 还是false，都不会循环滚动。 |
+| isLoop | Optional&lt;boolean&gt; | 是 | 是否可循环滚动。 <br>- true：可循环滚动。 <br>- false：不可循环滚动。 <br>默认值：true <br>当isLoop的值为undefined时，使用默认值。 <br>当子组件个数小于或等于可见选项数量 （由[displayedItemCount](#displayeditemcount)设置，默认为7）时，无论isLoop设置为true 还是false，都不会循环滚动。 |
 
 ## displayedItemCount
 
@@ -48,13 +40,9 @@ canLoop(isLoop: Optional<boolean>)
 displayedItemCount(count: Optional<int>)
 ```
 
-设置UIPickerComponent容器可见选项的数量。未通过该接口设置时，可见选项的数量为7行。需要节省空间时减少可见项数量，需要提供更多预览信息时 增加可见项数量。此属性与[itemHeight](#itemHeight)共同影响组件的显示效果，建议结合组件 height属性进行调整以保证完整显示。
+设置UIPickerComponent容器可见选项的数量。未通过该接口设置时，可见选项的数量为7行。需要节省空间时减少可见项数量，需要提供更多预览信息时 增加可见项数量。此属性与[itemHeight](#itemheight)共同影响组件的显示效果，建议结合组件 height属性进行调整以保证完整显示。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,10 +68,6 @@ enableHapticFeedback(enable: Optional<boolean>)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -104,13 +88,9 @@ enableHapticFeedback(enable: Optional<boolean>)
 itemHeight(height: Optional<LengthMetrics>)
 ```
 
-设置UIPickerComponent容器每个选项的高度。未通过该接口设置时，每个选项的高度为40vp。选项内容较多或需要更大字体显示时可增大高度以避免内容 裁剪，选项内容简洁或需要紧凑显示时可减小高度。此属性与 [displayedItemCount](#displayedItemCount)共同影响组件的显示效果，建议结合组件 height属性进行调整以保证完整显示。
+设置UIPickerComponent容器每个选项的高度。未通过该接口设置时，每个选项的高度为40vp。选项内容较多或需要更大字体显示时可增大高度以避免内容 裁剪，选项内容简洁或需要紧凑显示时可减小高度。此属性与 [displayedItemCount](#displayeditemcount)共同影响组件的显示效果，建议结合组件 height属性进行调整以保证完整显示。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,7 +104,7 @@ itemHeight(height: Optional<LengthMetrics>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | Optional&lt;LengthMetrics&gt; | 是 | 选项高度。 <br>单位：与[LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics)一致。 <br>取值范围：[40vp, 64vp] <br>设置小于40vp或大于64vp时，使用默认值40vp。 <br>当height的值为undefined时，使用默认值40vp。 <br>不支持“百分比”类型。 |
+| height | Optional&lt;LengthMetrics&gt; | 是 | 选项高度。 <br>单位：与[LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#lengthmetrics)一致。 <br>取值范围：[40vp, 64vp] <br>设置小于40vp或大于64vp时，使用默认值40vp。 <br>当height的值为undefined时，使用默认值40vp。 <br>不支持“百分比”类型。 |
 
 ## onChange
 
@@ -132,13 +112,9 @@ itemHeight(height: Optional<LengthMetrics>)
 onChange(callback: Optional<OnUIPickerComponentCallback>)
 ```
 
-滑动选择器选项时，若选中项发生变化，触发该事件。适用于需要在选中项变化时实时更新界面、加载对应数据或执行相关逻辑的场景。 > **说明：** > > - 如果某个选项有一半以上的区域进入选中项区域内，则该选项成为选中项。 > > - 选中项区域可通过设置[selectionIndicator](#selectionIndicator)进行标识。 > 如果设置选中项指示器为背景，则背景区域即为选中项区域。如果设置选中项指示器为分割线，则上下分割线的中心线内的区域为选中项区域。
+滑动选择器选项时，若选中项发生变化，触发该事件。适用于需要在选中项变化时实时更新界面、加载对应数据或执行相关逻辑的场景。 > **说明：** > > - 如果某个选项有一半以上的区域进入选中项区域内，则该选项成为选中项。 > > - 选中项区域可通过设置[selectionIndicator](#selectionindicator)进行标识。 > 如果设置选中项指示器为背景，则背景区域即为选中项区域。如果设置选中项指示器为分割线，则上下分割线的中心线内的区域为选中项区域。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,10 +140,6 @@ onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -191,10 +163,6 @@ selectionIndicator(style: Optional<PickerIndicatorStyle>)
 设置选中项指示器的样式。需要突出显示选中区域时使用背景指示器，需要简洁轻量标识时使用分割线指示器。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

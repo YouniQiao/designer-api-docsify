@@ -1,12 +1,8 @@
 # OnSslErrorEventReceiveEvent
 
-Defines the triggered callback when the Web page receives an ssl Error.
+Defines the callback information triggered when the web page receives an SSL error, including the error code and certificate chain. It is suitable for scenarios where handling SSL errors is required, improving security exception monitoring and handling capabilities.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnSslErrorEventReceiveEvent--><!--Device-unnamed-declare interface OnSslErrorEventReceiveEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered callback when the Web page receives an ssl Error.
 certChainData?: Array<Uint8Array>
 ```
 
-Certificate chain data in DER format.
+Certificate chain data.
 
 **Type:** Array&lt;Uint8Array&gt;
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-OnSslErrorEventReceiveEvent-certChainData?: Array<Uint8Array>--><!--Device-OnSslErrorEventReceiveEvent-certChainData?: Array<Uint8Array>-End-->
 
@@ -38,15 +30,11 @@ Certificate chain data in DER format.
 error: SslError
 ```
 
-Error codes.
+Error code.
 
 **Type:** [SslError](arkts-arkweb-sslerror-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,15 +48,11 @@ Error codes.
 handler: SslErrorHandler
 ```
 
-Notifies the user of the operation behavior of the web component.
+User operation.
 
 **Type:** [SslErrorHandler](arkts-arkweb-sslerrorhandler-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

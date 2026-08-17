@@ -4,10 +4,6 @@ Enumerates thumbnail types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum ThumbnailType--><!--Device-photoAccessHelper-enum ThumbnailType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -24,10 +20,6 @@ LCD thumbnail.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ThumbnailType-LCD = 1--><!--Device-ThumbnailType-LCD = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -43,10 +35,6 @@ THM = 2
 THM thumbnail.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ThumbnailType-THM = 2--><!--Device-ThumbnailType-THM = 2-End-->
 

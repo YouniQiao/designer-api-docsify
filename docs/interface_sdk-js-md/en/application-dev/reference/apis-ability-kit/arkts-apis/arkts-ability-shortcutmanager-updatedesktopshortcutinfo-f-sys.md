@@ -16,10 +16,6 @@ Updates a shortcut for the given user. This API uses a promise to return the res
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SHORTCUTS or (ohos.permission.MANAGE_SHORTCUTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
 **Model restriction:** This API can be used only in the stage model.
@@ -35,7 +31,7 @@ Updates a shortcut for the given user. This API uses a promise to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | shortcutInfo | ShortcutInfo | Yes | Shortcut information. |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId). |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 
 **Return value:**
 

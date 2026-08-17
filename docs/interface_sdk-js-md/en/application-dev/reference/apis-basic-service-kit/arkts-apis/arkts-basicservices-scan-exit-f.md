@@ -16,10 +16,6 @@ Exits the scan service. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PRINT
 
 <!--Device-scan-function exit(): Promise<void>--><!--Device-scan-function exit(): Promise<void>-End-->
@@ -38,7 +34,7 @@ Exits the scan service. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

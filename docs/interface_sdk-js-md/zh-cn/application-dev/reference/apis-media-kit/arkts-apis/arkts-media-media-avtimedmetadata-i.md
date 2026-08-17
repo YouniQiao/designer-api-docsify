@@ -4,10 +4,6 @@ Interface for defining time base metadata
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-media-interface AVTimedMetaData--><!--Device-media-interface AVTimedMetaData-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
@@ -23,10 +19,6 @@ The classification label of the time base metadata.
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ Key-value pair set corresponding to time primitive information
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AVTimedMetaData-contents: Record<string, object>--><!--Device-AVTimedMetaData-contents: Record<string, object>-End-->
@@ -67,10 +55,6 @@ Duration of the time primitive information The value should be an integer. <br>U
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,10 +74,6 @@ Defines the unique token of the time base metadata, The tag must be unique in ot
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AVTimedMetaData-id?: string--><!--Device-AVTimedMetaData-id?: string-End-->
@@ -111,10 +91,6 @@ Defines the offset value of the time primitive information relative to the start
 **类型：** int
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

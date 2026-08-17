@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Uint8ClampedArray--><!--Device-unnamed-interface Uint8ClampedArray-End-->
 
 ## includes
@@ -17,10 +13,6 @@ includes(searchElement: number, fromIndex?: number): boolean
 Determines whether an array includes a certain element, returning true or false as appropriate.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ClampedArray-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Uint8ClampedArray-includes(searchElement: number, fromIndex?: number): boolean-End-->
 

@@ -16,10 +16,6 @@ Sets a smart reminder for cross-device collaboration. This API uses a promise to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<void>--><!--Device-notificationManager-function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<void>-End-->
@@ -56,7 +52,7 @@ Sets a smart reminder for cross-device collaboration. This API uses a promise to
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

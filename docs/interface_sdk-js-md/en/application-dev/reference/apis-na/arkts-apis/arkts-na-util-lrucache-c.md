@@ -4,9 +4,7 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-util-class LRUCache--><!--Device-util-class LRUCache-End-->
 
@@ -22,9 +20,7 @@ Specifies the default iterator for an object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-$_iterator(): IterableIterator<[K, V]>--><!--Device-LRUCache-$_iterator(): IterableIterator<[K, V]>-End-->
 
@@ -46,9 +42,7 @@ Executes subsequent operations after a value is deleted.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void--><!--Device-LRUCache-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void-End-->
 
@@ -73,9 +67,7 @@ Clears key-value pairs from the current buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-clear(): void--><!--Device-LRUCache-clear(): void-End-->
 
@@ -91,9 +83,7 @@ Default constructor used to create a new LruBuffer instance with the default cap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-constructor(capacity?: int)--><!--Device-LRUCache-constructor(capacity?: int)-End-->
 
@@ -115,9 +105,7 @@ Checks whether the current buffer contains a specified key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-contains(key: K): boolean--><!--Device-LRUCache-contains(key: K): boolean-End-->
 
@@ -145,9 +133,7 @@ Executes subsequent operations if miss to compute a value for the specific key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-createDefault(key: K): V | undefined--><!--Device-LRUCache-createDefault(key: K): V | undefined-End-->
 
@@ -175,9 +161,7 @@ Returns an array of key-value pairs of enumeratable properties of a given object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-entries(): IterableIterator<[K, V]>--><!--Device-LRUCache-entries(): IterableIterator<[K, V]>-End-->
 
@@ -199,9 +183,7 @@ Obtains the value associated with a specified key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-get(key: K): V | undefined--><!--Device-LRUCache-get(key: K): V | undefined-End-->
 
@@ -229,9 +211,7 @@ Obtains the capacity of the current buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-getCapacity(): int--><!--Device-LRUCache-getCapacity(): int-End-->
 
@@ -253,9 +233,7 @@ Obtains the number of times createDefault(Object) returned a value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-getCreateCount(): long--><!--Device-LRUCache-getCreateCount(): long-End-->
 
@@ -277,9 +255,7 @@ Obtains the number of times that the queried values are successfully matched.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-getMatchCount(): long--><!--Device-LRUCache-getMatchCount(): long-End-->
 
@@ -301,9 +277,7 @@ Obtains the number of times that the queried values are not matched.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-getMissCount(): long--><!--Device-LRUCache-getMissCount(): long-End-->
 
@@ -325,9 +299,7 @@ Obtains the number of times that values are added to the buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-getPutCount(): long--><!--Device-LRUCache-getPutCount(): long-End-->
 
@@ -349,9 +321,7 @@ Obtains the number of times that values are evicted from the buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-getRemovalCount(): long--><!--Device-LRUCache-getRemovalCount(): long-End-->
 
@@ -373,9 +343,7 @@ Checks whether the current buffer is empty.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-isEmpty(): boolean--><!--Device-LRUCache-isEmpty(): boolean-End-->
 
@@ -397,9 +365,7 @@ Obtains a list of keys for the values in the current buffer. since 9
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-keys(): Array<K>--><!--Device-LRUCache-keys(): Array<K>-End-->
 
@@ -421,9 +387,7 @@ Adds a key-value pair to the buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-put(key: K, value: V): V | undefined--><!--Device-LRUCache-put(key: K, value: V): V | undefined-End-->
 
@@ -452,9 +416,7 @@ Deletes a specified key and its associated value from the current buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-remove(key: K): V | undefined--><!--Device-LRUCache-remove(key: K): V | undefined-End-->
 
@@ -482,9 +444,7 @@ Returns a string representation of the object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-toString(): string--><!--Device-LRUCache-toString(): string-End-->
 
@@ -506,9 +466,7 @@ Updates the buffer capacity to a specified capacity.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-updateCapacity(newCapacity: int): void--><!--Device-LRUCache-updateCapacity(newCapacity: int): void-End-->
 
@@ -530,9 +488,7 @@ Obtains a list of all values in the current buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-LRUCache-values(): Array<V>--><!--Device-LRUCache-values(): Array<V>-End-->
 

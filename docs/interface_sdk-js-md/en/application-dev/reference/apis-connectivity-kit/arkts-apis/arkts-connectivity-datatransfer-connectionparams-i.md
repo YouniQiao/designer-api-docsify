@@ -4,10 +4,6 @@ Describes the parameters for connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-dataTransfer-interface ConnectionParams--><!--Device-dataTransfer-interface ConnectionParams-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -30,10 +26,6 @@ Indicates the connected device address. The length must be 17, The value consist
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionParams-address: string--><!--Device-ConnectionParams-address: string-End-->
@@ -52,10 +44,6 @@ Data transfer mode. The basic transfer mode is used by default Default value: BA
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionParams-transferMode?: TransferMode--><!--Device-ConnectionParams-transferMode?: TransferMode-End-->
@@ -73,10 +61,6 @@ Indicates the service UUID. The length must be 36, The value consists of 36 hexa
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,8 @@
 # DomainFilterRule
 
-Represents a domain name filtering rule. In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22. [LogType](arkts-mdm-networkmanager-logtype-e.md#LogType) is supported since API version 23.
+Represents a domain name filtering rule. In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22. [LogType](arkts-mdm-networkmanager-logtype-e.md#logtype) is supported since API version 23.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-networkManager-interface DomainFilterRule--><!--Device-networkManager-interface DomainFilterRule-End-->
 
@@ -24,15 +20,11 @@ import { networkManager } from 'networkManager';
 action?: Action
 ```
 
-Action to take, that is, receive or discard the data packets. This parameter is mandatory when a domain name filtering rule is added. This parameter is optional when a domain name filtering rule is removed. If this parameter is left empty, all [Action](arkts-mdm-networkmanager-action-e.md#Action) chains are cleared, and **domainName** and **appUid** must be also left empty.
+Action to take, that is, receive or discard the data packets. This parameter is mandatory when a domain name filtering rule is added. This parameter is optional when a domain name filtering rule is removed. If this parameter is left empty, all [Action](arkts-mdm-networkmanager-action-e.md#action) chains are cleared, and **domainName** and **appUid** must be also left empty.
 
 **Type:** Action
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +44,6 @@ UID of the application.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DomainFilterRule-appUid?: string--><!--Device-DomainFilterRule-appUid?: string-End-->
@@ -68,15 +56,11 @@ UID of the application.
 direction?: Direction
 ```
 
-Direction chains to which the rule applies. This parameter is optional when a domain name filtering rule is added. If this parameter is null or set to output chain or input chain, the output chain takes effect. If this parameter is set to a forward chain, **appUid** must be empty. Otherwise, error code 401 will be returned. This parameter is optional when a domain name filtering rule is removed. If the value is empty, all [Direction](arkts-mdm-networkmanager-direction-e.md#Direction) chains are cleared, and **domainName** and **appUid** must be empty.
+Direction chains to which the rule applies. This parameter is optional when a domain name filtering rule is added. If this parameter is null or set to output chain or input chain, the output chain takes effect. If this parameter is set to a forward chain, **appUid** must be empty. Otherwise, error code 401 will be returned. This parameter is optional when a domain name filtering rule is removed. If the value is empty, all [Direction](arkts-mdm-networkmanager-direction-e.md#direction) chains are cleared, and **domainName** and **appUid** must be empty.
 
 **Type:** Direction
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,10 +80,6 @@ Domain name. This parameter is mandatory when a domain name filtering rule is ad
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DomainFilterRule-domainName?: string--><!--Device-DomainFilterRule-domainName?: string-End-->
@@ -118,10 +98,6 @@ IP protocol version. The value can be **1** (IPv4) or **2** (IPv6).
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DomainFilterRule-family?: number--><!--Device-DomainFilterRule-family?: number-End-->
@@ -139,10 +115,6 @@ Log type. Currently, only **NFLOG** is supported. This parameter applies only to
 **Type:** [LogType](arkts-mdm-networkmanager-logtype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

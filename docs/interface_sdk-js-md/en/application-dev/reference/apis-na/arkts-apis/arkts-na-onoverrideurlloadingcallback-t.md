@@ -8,9 +8,7 @@ The callback of onOverrideUrlLoading. Should not call WebviewController.loadUrl 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export type OnOverrideUrlLoadingCallback = (webResourceRequest: WebResourceRequest) => boolean--><!--Device-unnamed-export type OnOverrideUrlLoadingCallback = (webResourceRequest: WebResourceRequest) => boolean-End-->
 

@@ -4,11 +4,9 @@ Configuring parameters in location requests
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md#LocationRequest)
+**Substitutes:** [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md#locationrequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,11 +30,9 @@ distanceInterval?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [distanceInterval](arkts-location-geolocationmanager-locationrequest-i.md#distanceInterval)
+**Substitutes:** [distanceInterval](arkts-location-geolocationmanager-locationrequest-i.md#distanceinterval)
 
 <!--Device-LocationRequest-distanceInterval?: number--><!--Device-LocationRequest-distanceInterval?: number-End-->
 
@@ -52,11 +48,9 @@ maxAccuracy?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [maxAccuracy](arkts-location-geolocationmanager-locationrequest-i.md#maxAccuracy)
+**Substitutes:** [maxAccuracy](arkts-location-geolocationmanager-locationrequest-i.md#maxaccuracy)
 
 <!--Device-LocationRequest-maxAccuracy?: number--><!--Device-LocationRequest-maxAccuracy?: number-End-->
 
@@ -71,8 +65,6 @@ priority?: LocationRequestPriority
 **Type:** LocationRequestPriority
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -92,8 +84,6 @@ scenario?: LocationRequestScenario
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [scenario](arkts-location-geolocationmanager-locationrequest-i.md#scenario)
@@ -112,11 +102,9 @@ timeInterval?: number
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [timeInterval](arkts-location-geolocationmanager-locationrequest-i.md#timeInterval)
+**Substitutes:** [timeInterval](arkts-location-geolocationmanager-locationrequest-i.md#timeinterval)
 
 <!--Device-LocationRequest-timeInterval?: number--><!--Device-LocationRequest-timeInterval?: number-End-->
 

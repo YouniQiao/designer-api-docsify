@@ -16,10 +16,6 @@ Subscribes to notifications. After the subscription, the new message is received
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_SYSTEM_SUBSCRIBER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -62,10 +58,6 @@ function subscribeNotification(subscriber: NotificationSubscriber, info: Notific
 Subscribes to notifications. After the subscription, the new message is received through the callback in the subscriber. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_SYSTEM_SUBSCRIBER
 

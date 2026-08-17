@@ -1,12 +1,8 @@
 # uiEffect
 
-This module provides basic capabilities for component effects, including blur, brightening, and more. Effects are categorized into the Filter and VisualEffect classes, and effects of the same class can be cascaded under an instance of that effect class. Using this module, you can quickly implement complex visual effects without needing to master underlying image processing algorithms, reducing development complexity and improving user experience. In actual development, blur can be used for background blurring, and brightening can be used for bright screen display, etc. - [Filter](arkts-arkgraphics2d-uieffect-filter-i.md#Filter): Used to add specified Filter effects to a component. - [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md#VisualEffect): Used to add specified VisualEffect effects to a component.
+This module provides basic capabilities for component effects, including blur, brightening, and more. Effects are categorized into the Filter and VisualEffect classes, and effects of the same class can be cascaded under an instance of that effect class. Using this module, you can quickly implement complex visual effects without needing to master underlying image processing algorithms, reducing development complexity and improving user experience. In actual development, blur can be used for background blurring, and brightening can be used for bright screen display, etc. - [Filter](arkts-arkgraphics2d-uieffect-filter-i.md#filter): Used to add specified Filter effects to a component. - [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md#visualeffect): Used to add specified VisualEffect effects to a component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace uiEffect--><!--Device-unnamed-declare namespace uiEffect-End-->
 
@@ -24,17 +20,17 @@ import { uiEffect } from 'uiEffect';
 
 | Name | Description |
 | --- | --- |
-| [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createFilter) | Creates a Filter instance for adding multiple filter effects to a component. |
-| [createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createEffect) | Creates a VisualEffect instance for adding multiple VisualEffect effects to a component. |
+| [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter) | Creates a Filter instance for adding multiple filter effects to a component. |
+| [createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createeffect) | Creates a VisualEffect instance for adding multiple VisualEffect effects to a component. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [createBrightnessBlender](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md#createBrightnessBlender) | Creates a BrightnessBlender instance for adding a brightness effect to a component. |
-| [createHdrBrightnessBlender](arkts-arkgraphics2d-uieffect-createhdrbrightnessblender-f-sys.md#createHdrBrightnessBlender) | Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness effect to a component. |
-| [createHdrDarkenBlender](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md#createHdrDarkenBlender) | Creates an HdrDarkenBlender instance for HDR layer darken blending effect. |
+| [createBrightnessBlender](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md#createbrightnessblender) | Creates a BrightnessBlender instance for adding a brightness effect to a component. |
+| [createHdrBrightnessBlender](arkts-arkgraphics2d-uieffect-createhdrbrightnessblender-f-sys.md#createhdrbrightnessblender) | Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness effect to a component. |
+| [createHdrDarkenBlender](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md#createhdrdarkenblender) | Creates an HdrDarkenBlender instance for HDR layer darken blending effect. |
 <!--DelEnd-->
 
 <!--Del-->

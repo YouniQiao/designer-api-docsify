@@ -4,10 +4,6 @@ Defines the ContainerReader Component. Used for reading and analyzing container 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ContainerReaderInterface--><!--Device-unnamed-export interface ContainerReaderInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,10 +26,6 @@ Sets the container reading configuration for ContainerReader component. Configur
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -48,11 +40,11 @@ Sets the container reading configuration for ContainerReader component. Configur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | Yes | The configuration options for container reading |
+| value | [ContainerReaderInfo](../../apis-na/arkts-apis/arkts-na-arkui-components-containerreader-containerreaderinfo-i.md) | Yes | The configuration options for container reading |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |
+| [ContainerReaderAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-containerreader-containerreaderattribute-i.md) |  |
 

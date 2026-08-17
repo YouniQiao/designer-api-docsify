@@ -10,8 +10,6 @@ function getMinWidth(callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-wallpaper-function getMinWidth(callback: AsyncCallback<number>): void--><!--Device-wallpaper-function getMinWidth(callback: AsyncCallback<number>): void-End-->
@@ -22,9 +20,9 @@ function getMinWidth(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 |  |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -49,8 +47,6 @@ function getMinWidth(): Promise<number>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-wallpaper-function getMinWidth(): Promise<number>--><!--Device-wallpaper-function getMinWidth(): Promise<number>-End-->
@@ -63,7 +59,7 @@ function getMinWidth(): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | 壁纸的最小宽度值，单位是像素。如果返回值等于0，说明没有设置壁纸，调用者应该使用默认显示的宽度值代替。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

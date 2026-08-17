@@ -1,14 +1,10 @@
 # PlainText
 
-Represents the plain text data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text).
+Represents the plain text data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md#text).
 
-**Inheritance/Implementation:** PlainText extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text)
+**Inheritance/Implementation:** PlainText extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#text)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unifiedDataChannel-class PlainText--><!--Device-unifiedDataChannel-class PlainText-End-->
 
@@ -31,10 +27,6 @@ Indicates the abstract of text
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

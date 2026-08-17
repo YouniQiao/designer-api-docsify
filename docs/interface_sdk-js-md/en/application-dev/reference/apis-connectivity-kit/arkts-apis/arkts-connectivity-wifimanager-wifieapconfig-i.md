@@ -4,10 +4,6 @@ Wi-Fi EAP config.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface WifiEapConfig--><!--Device-wifiManager-interface WifiEapConfig-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -30,10 +26,6 @@ Alternate subject match
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiEapConfig-altSubjectMatch: string--><!--Device-WifiEapConfig-altSubjectMatch: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -49,10 +41,6 @@ Anonymous identity
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiEapConfig-anonymousIdentity: string--><!--Device-WifiEapConfig-anonymousIdentity: string-End-->
 
@@ -70,10 +58,6 @@ CA certificate alias
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiEapConfig-caCertAlias: string--><!--Device-WifiEapConfig-caCertAlias: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -89,10 +73,6 @@ CA certificate path
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiEapConfig-caPath: string--><!--Device-WifiEapConfig-caPath: string-End-->
 
@@ -110,10 +90,6 @@ content of user's certificate
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiEapConfig-certEntry: Uint8Array--><!--Device-WifiEapConfig-certEntry: Uint8Array-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -129,10 +105,6 @@ Password of user's certificate
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiEapConfig-certPassword: string--><!--Device-WifiEapConfig-certPassword: string-End-->
 
@@ -150,10 +122,6 @@ Client certificate alias
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiEapConfig-clientCertAlias: string--><!--Device-WifiEapConfig-clientCertAlias: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -169,10 +137,6 @@ Domain suffix match
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiEapConfig-domainSuffixMatch: string--><!--Device-WifiEapConfig-domainSuffixMatch: string-End-->
 
@@ -190,10 +154,6 @@ EAP authentication method
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiEapConfig-eapMethod: EapMethod--><!--Device-WifiEapConfig-eapMethod: EapMethod-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -209,10 +169,6 @@ Sub ID of the SIM card
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiEapConfig-eapSubId: int--><!--Device-WifiEapConfig-eapSubId: int-End-->
 
@@ -230,10 +186,6 @@ The identity
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiEapConfig-identity: string--><!--Device-WifiEapConfig-identity: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -249,10 +201,6 @@ Password
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiEapConfig-password: string--><!--Device-WifiEapConfig-password: string-End-->
 
@@ -270,10 +218,6 @@ Phase 2 authentication method
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiEapConfig-phase2Method: Phase2Method--><!--Device-WifiEapConfig-phase2Method: Phase2Method-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -290,10 +234,6 @@ Public Land Mobile Network of the provider of Passpoint credential
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WifiEapConfig-plmn: string--><!--Device-WifiEapConfig-plmn: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -309,10 +249,6 @@ Realm for Passpoint credential
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WifiEapConfig-realm: string--><!--Device-WifiEapConfig-realm: string-End-->
 

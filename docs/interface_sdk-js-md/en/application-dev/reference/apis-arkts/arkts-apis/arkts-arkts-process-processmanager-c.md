@@ -4,10 +4,6 @@ Provides APIs for throwing exceptions during the addition of a process. Construc
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-process-export class ProcessManager--><!--Device-process-export class ProcessManager-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ Terminates this process. Exercise caution when using this API. After this API is
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ProcessManager-exit(code: number): void--><!--Device-ProcessManager-exit(code: number): void-End-->
@@ -44,7 +36,7 @@ Terminates this process. Exercise caution when using this API. After this API is
 | --- | --- | --- | --- |
 | code | number | Yes | Exit code of the process. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -60,10 +52,6 @@ getEnvironmentVar(name: string): string
 Obtains the value of an environment variable. > **NOTE：**> > Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is > returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -83,7 +71,7 @@ Obtains the value of an environment variable. > **NOTE：**> > Obtains the value
 | --- | --- |
 | string | Value of the environment variable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -99,10 +87,6 @@ getSystemConfig(name: number): number
 Obtains the system configuration.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,7 +106,7 @@ Obtains the system configuration.
 | --- | --- |
 | number | System configuration obtained. If the configuration does not exist, **-1** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -139,10 +123,6 @@ getThreadPriority(v: number): number
 Obtains the thread priority based on the specified TID.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,7 +142,7 @@ Obtains the thread priority based on the specified TID.
 | --- | --- |
 | number | Priority of the thread. The priority depends on the operating system. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -179,10 +159,6 @@ getUidForName(v: string): number
 Obtains the UID of a user from the user database of the system based on the specified user name.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,7 +178,7 @@ Obtains the UID of a user from the user database of the system based on the spec
 | --- | --- |
 | number | UID of the user. If the user does not exist, **-1** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -218,10 +194,6 @@ isAppUid(v: number): boolean
 Checks whether a UID belongs to this application.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -241,7 +213,7 @@ Checks whether a UID belongs to this application.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the UID belongs to the application; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -260,10 +232,6 @@ kill(signal: number, pid: number): boolean
 Sends a signal to the specified process to terminate it. Only the current process can be terminated.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -284,7 +252,7 @@ Sends a signal to the specified process to terminate it. Only the current proces
 | --- | --- |
 | boolean | Signal sending result. The value **true** is returned if the signal is sent successfully; otherwise, **false** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pro = new process.ProcessManager();

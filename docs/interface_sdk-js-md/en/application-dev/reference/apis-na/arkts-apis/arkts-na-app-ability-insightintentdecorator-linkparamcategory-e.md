@@ -1,12 +1,10 @@
 # LinkParamCategory
 
-Enum definition of the paramCategory [paramCategory](arkts-na-app-ability-insightintentdecorator-linkintentparammapping-i.md#paramCategory), paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink InsightIntentLink.
+Enum definition of the paramCategory [paramCategory](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md#paramcategory), paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink InsightIntentLink.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare enum LinkParamCategory--><!--Device-unnamed-export declare enum LinkParamCategory-End-->
 
@@ -22,9 +20,7 @@ The parameter will added to the end of link uri.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,9 +38,7 @@ The parameter will transferred to the application as parameters of want.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

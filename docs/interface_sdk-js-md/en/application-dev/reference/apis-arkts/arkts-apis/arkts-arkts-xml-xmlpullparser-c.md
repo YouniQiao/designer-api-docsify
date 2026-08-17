@@ -4,10 +4,6 @@ The XmlPullParser interface is used to parse the existing xml file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-xml-class XmlPullParser--><!--Device-xml-class XmlPullParser-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ Creates and returns an XmlPullParser object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-XmlPullParser-constructor(buffer: ArrayBuffer | DataView, encoding?: string)--><!--Device-XmlPullParser-constructor(buffer: ArrayBuffer | DataView, encoding?: string)-End-->
@@ -45,7 +37,7 @@ Creates and returns an XmlPullParser object.
 | buffer | ArrayBuffer \| DataView | Yes | A instance, the new XmlPullParser with. |
 | encoding | string | No | [encoding='utf8'] this is its encoding. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -66,11 +58,9 @@ Starts parsing the XML file.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 14
 
-**Substitutes:** [parseXml](#parseXml)
+**Substitutes:** [parseXml](#parsexml)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -84,7 +74,7 @@ Starts parsing the XML file.
 | --- | --- | --- | --- |
 | option | ParseOptions | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -125,10 +115,6 @@ parseXml(option: ParseOptions): void
 Parses XML information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

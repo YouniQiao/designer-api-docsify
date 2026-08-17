@@ -4,10 +4,6 @@ HiRetrieval functionality config.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-hiRetrieval-interface HiRetrievalConfig--><!--Device-hiRetrieval-interface HiRetrievalConfig-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiRetrieval
@@ -30,10 +26,6 @@ Custom device model set by developers. No restrictions on format or character ty
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HiRetrievalConfig-deviceModel: string--><!--Device-HiRetrievalConfig-deviceModel: string-End-->
@@ -52,10 +44,6 @@ Custom device type set by developers. No restrictions on format or character typ
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HiRetrievalConfig-deviceType: string--><!--Device-HiRetrievalConfig-deviceType: string-End-->
@@ -73,10 +61,6 @@ Custom user type set by developers. No restrictions on format or character types
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

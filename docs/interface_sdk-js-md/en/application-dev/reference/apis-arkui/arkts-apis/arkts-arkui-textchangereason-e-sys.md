@@ -4,10 +4,6 @@ Enumerates the reasons for component content changes.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum TextChangeReason--><!--Device-unnamed-declare enum TextChangeReason-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ UNKNOWN = 0
 Unknown reason.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ User input.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextChangeReason-INPUT = 1--><!--Device-TextChangeReason-INPUT = 1-End-->
@@ -67,10 +55,6 @@ PASTE = 2
 Paste operation.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ Cut operation.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextChangeReason-CUT = 3--><!--Device-TextChangeReason-CUT = 3-End-->
@@ -111,10 +91,6 @@ DRAG = 4
 Drag and drop operation.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,10 +110,6 @@ Auto-fill operation.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextChangeReason-AUTO_FILL = 5--><!--Device-TextChangeReason-AUTO_FILL = 5-End-->
@@ -155,10 +127,6 @@ AI_WRITE = 6
 AI-assisted writing.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,10 +146,6 @@ Redo operation.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextChangeReason-REDO = 7--><!--Device-TextChangeReason-REDO = 7-End-->
@@ -199,10 +163,6 @@ UNDO = 8
 Undo operation.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,10 +182,6 @@ Component API call.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextChangeReason-CONTROLLER = 9--><!--Device-TextChangeReason-CONTROLLER = 9-End-->
@@ -243,10 +199,6 @@ ACCESSIBILITY = 10
 Accessibility API.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,10 +218,6 @@ Cross-device photographing.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextChangeReason-COLLABORATION = 11--><!--Device-TextChangeReason-COLLABORATION = 11-End-->
@@ -287,10 +235,6 @@ STYLUS = 12
 Stylus input.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

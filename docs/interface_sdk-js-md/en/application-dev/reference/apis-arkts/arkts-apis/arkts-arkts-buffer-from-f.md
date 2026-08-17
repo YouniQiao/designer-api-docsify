@@ -16,10 +16,6 @@ Creates a **Buffer** object with the specified array.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function from(array: double[]): Buffer--><!--Device-buffer-function from(array: double[]): Buffer-End-->
@@ -38,7 +34,7 @@ Creates a **Buffer** object with the specified array.
 | --- | --- |
 | [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -58,10 +54,6 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 Creates a **Buffer** object of the specified length that shares memory with ArrayBuffer.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -89,7 +81,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer, JSON } from '@kit.ArkTS';
@@ -109,10 +101,6 @@ function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer
 This creates a view of the ArrayBuffer without copying the underlying memory.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -151,10 +139,6 @@ Copies the data of a passed **Buffer** object to create a new **Buffer** object 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function from(buffer: Buffer | Uint8Array): Buffer--><!--Device-buffer-function from(buffer: Buffer | Uint8Array): Buffer-End-->
@@ -173,7 +157,7 @@ Copies the data of a passed **Buffer** object to create a new **Buffer** object 
 | --- | --- |
 | [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
@@ -201,10 +185,6 @@ Creates a **Buffer** object based on the specified object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function from(object: Object, offsetOrEncoding: int | string, length: int): Buffer--><!--Device-buffer-function from(object: Object, offsetOrEncoding: int | string, length: int): Buffer-End-->
@@ -225,7 +205,7 @@ Creates a **Buffer** object based on the specified object.
 | --- | --- |
 | [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer, JSON } from '@kit.ArkTS';
@@ -244,10 +224,6 @@ function from(string: String, encoding?: BufferEncoding): Buffer
 Creates a **Buffer** object based on a string in the given encoding format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -268,7 +244,7 @@ Creates a **Buffer** object based on a string in the given encoding format.
 | --- | --- |
 | [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { buffer } from '@kit.ArkTS';

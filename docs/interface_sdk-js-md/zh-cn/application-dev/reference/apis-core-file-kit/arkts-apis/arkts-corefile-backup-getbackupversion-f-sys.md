@@ -10,10 +10,6 @@ function getBackupVersion(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.BACKUP
 
 <!--Device-backup-function getBackupVersion(): string--><!--Device-backup-function getBackupVersion(): string-End-->
@@ -35,7 +31,7 @@ function getBackupVersion(): string
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

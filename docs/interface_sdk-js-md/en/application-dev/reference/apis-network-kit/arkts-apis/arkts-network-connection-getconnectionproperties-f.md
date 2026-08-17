@@ -16,10 +16,6 @@ Queries the connection properties of a network. This method requires the {@code 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-connection-function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<ConnectionProperties>): void--><!--Device-connection-function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<ConnectionProperties>): void-End-->
@@ -31,7 +27,7 @@ Queries the connection properties of a network. This method requires the {@code 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | netHandle | NetHandle | Yes | Indicates the network to be queried. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ConnectionProperties](arkts-network-connection-connectionproperties-i.md)&gt; | Yes | the callback of getConnectionProperties.[ConnectionProperties](arkts-network-connection-connectionproperties-i.md#ConnectionProperties). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ConnectionProperties](arkts-network-connection-connectionproperties-i.md)&gt; | Yes | the callback of getConnectionProperties.[ConnectionProperties](arkts-network-connection-connectionproperties-i.md#connectionproperties). |
 
 **Error codes:**
 
@@ -43,7 +39,7 @@ Queries the connection properties of a network. This method requires the {@code 
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -76,10 +72,6 @@ Queries the connection properties of a network. This method requires the {@code 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-connection-function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>--><!--Device-connection-function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>-End-->
@@ -108,7 +100,7 @@ Queries the connection properties of a network. This method requires the {@code 
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

@@ -16,10 +16,6 @@ Obtains the layout information array of all windows visible on a display. The la
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-window-function getAllWindowLayoutInfo(displayId: long): Promise<Array<WindowLayoutInfo>>--><!--Device-window-function getAllWindowLayoutInfo(displayId: long): Promise<Array<WindowLayoutInfo>>-End-->
@@ -30,7 +26,7 @@ Obtains the layout information array of all windows visible on a display. The la
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | long | Yes | ID of the display where the windows are located. The value must be an integer and can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md#WindowProperties). |
+| displayId | long | Yes | ID of the display where the windows are located. The value must be an integer and can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md#windowproperties). |
 
 **Return value:**
 
@@ -57,10 +53,6 @@ function getAllWindowLayoutInfo(displayId: long, option?: WindowInfoOptions): Pr
 Obtains the array of window layout info visible on a specified screen. The width and height of each rect are calculated after scaling. The array is sorted by the current window level. The index of the array corresponding to the highest level is 0.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

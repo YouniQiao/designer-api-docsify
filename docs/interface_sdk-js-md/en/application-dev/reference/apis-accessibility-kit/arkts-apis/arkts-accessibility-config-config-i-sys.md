@@ -4,10 +4,6 @@ Implements configuration, acquisition, and listening for properties.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-config-interface Config--><!--Device-config-interface Config-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -30,10 +26,6 @@ Obtains the value of a property. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Config-get(): Promise<T>--><!--Device-Config-get(): Promise<T>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -53,7 +45,7 @@ Obtains the value of a property. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
@@ -76,10 +68,6 @@ Obtains the property value. This API uses an asynchronous callback to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Config-get(callback: AsyncCallback<T>): void--><!--Device-Config-get(callback: AsyncCallback<T>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -98,7 +86,7 @@ Obtains the property value. This API uses an asynchronous callback to return the
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
@@ -123,10 +111,6 @@ Cancels the listener for property changes. This API uses an asynchronous callbac
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
 <!--Device-Config-off(callback?: Callback<T>): void--><!--Device-Config-off(callback?: Callback<T>): void-End-->
@@ -148,7 +132,7 @@ Cancels the listener for property changes. This API uses an asynchronous callbac
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
@@ -164,13 +148,9 @@ config.highContrastText.off((data: boolean) => {
 on(callback: Callback<T>): void
 ```
 
-Adds a listener for property changes. This API uses an asynchronous callback to return the result. This API must be used together with [off](#off_Callback<T>). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
+Adds a listener for property changes. This API uses an asynchronous callback to return the result. This API must be used together with [off](#offcallbackt). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -194,7 +174,7 @@ Adds a listener for property changes. This API uses an asynchronous callback to 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
@@ -213,10 +193,6 @@ set(value: T): Promise<void>
 Sets the value of a property. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -246,7 +222,7 @@ Sets the value of a property. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
@@ -271,10 +247,6 @@ Sets the property value. This API uses an asynchronous callback to return the re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
 <!--Device-Config-set(value: T, callback: AsyncCallback<void>): void--><!--Device-Config-set(value: T, callback: AsyncCallback<void>): void-End-->
@@ -298,7 +270,7 @@ Sets the property value. This API uses an asynchronous callback to return the re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-window-interface SystemBarRegionTint--><!--Device-window-interface SystemBarRegionTint-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -25,10 +21,6 @@ backgroundColor?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemBarRegionTint-backgroundColor?: string--><!--Device-SystemBarRegionTint-backgroundColor?: string-End-->
 
@@ -48,10 +40,6 @@ contentColor?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemBarRegionTint-contentColor?: string--><!--Device-SystemBarRegionTint-contentColor?: string-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -69,10 +57,6 @@ isEnable?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemBarRegionTint-isEnable?: boolean--><!--Device-SystemBarRegionTint-isEnable?: boolean-End-->
 
@@ -92,10 +76,6 @@ region?: Rect
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SystemBarRegionTint-region?: Rect--><!--Device-SystemBarRegionTint-region?: Rect-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -113,10 +93,6 @@ type: WindowType
 **类型：** WindowType
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SystemBarRegionTint-type: WindowType--><!--Device-SystemBarRegionTint-type: WindowType-End-->
 

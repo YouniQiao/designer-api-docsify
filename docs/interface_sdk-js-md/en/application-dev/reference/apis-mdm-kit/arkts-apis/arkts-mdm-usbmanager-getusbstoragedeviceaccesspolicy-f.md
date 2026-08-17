@@ -16,10 +16,6 @@ Obtains the access policy of the USB storage device.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 - API version 12 - 24: ohos.permission.ENTERPRISE_MANAGE_USB
@@ -51,7 +47,7 @@ Obtains the access policy of the USB storage device.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { usbManager } from '@kit.MDMKit';
@@ -80,10 +76,6 @@ function getUsbStorageDeviceAccessPolicy(admin: Want | null): UsbPolicy
 Obtains the USB storage device (baseClass = 0x08) access policy.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 

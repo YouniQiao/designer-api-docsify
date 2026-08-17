@@ -16,10 +16,6 @@ Monitor registration key(synchronous method) [USER_SECURE] domain need ohos.perm
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function registerKeyObserver(context: Context, name: string, domainName: string, observer: AsyncCallback<void>): boolean--><!--Device-settings-function registerKeyObserver(context: Context, name: string, domainName: string, observer: AsyncCallback<void>): boolean-End-->
@@ -41,7 +37,7 @@ Monitor registration key(synchronous method) [USER_SECURE] domain need ohos.perm
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

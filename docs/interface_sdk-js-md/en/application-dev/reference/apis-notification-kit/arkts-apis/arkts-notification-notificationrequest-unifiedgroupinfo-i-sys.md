@@ -4,10 +4,6 @@ Describes the fields of notification intelligent unification information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface UnifiedGroupInfo--><!--Device-unnamed-export interface UnifiedGroupInfo-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -25,10 +21,6 @@ Unified group summary.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UnifiedGroupInfo-content?: string--><!--Device-UnifiedGroupInfo-content?: string-End-->
 
@@ -48,10 +40,6 @@ Other unification information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UnifiedGroupInfo-extraInfo?: Record<string, RecordData>--><!--Device-UnifiedGroupInfo-extraInfo?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -69,10 +57,6 @@ Unified group ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UnifiedGroupInfo-key?: string--><!--Device-UnifiedGroupInfo-key?: string-End-->
 
@@ -92,10 +76,6 @@ Name of a unification scene.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UnifiedGroupInfo-sceneName?: string--><!--Device-UnifiedGroupInfo-sceneName?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -113,10 +93,6 @@ Unified group title.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UnifiedGroupInfo-title?: string--><!--Device-UnifiedGroupInfo-title?: string-End-->
 

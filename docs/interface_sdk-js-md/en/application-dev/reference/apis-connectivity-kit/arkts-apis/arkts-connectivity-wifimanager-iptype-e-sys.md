@@ -4,10 +4,6 @@ Wi-Fi IP type enumeration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-enum IpType--><!--Device-wifiManager-enum IpType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -23,10 +19,6 @@ STATIC
 Use statically configured IP settings
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IpType-STATIC--><!--Device-IpType-STATIC-End-->
 
@@ -44,10 +36,6 @@ Use dynamically configured IP settings
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IpType-DHCP--><!--Device-IpType-DHCP-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -63,10 +51,6 @@ UNKNOWN
 No IP details are assigned
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IpType-UNKNOWN--><!--Device-IpType-UNKNOWN-End-->
 

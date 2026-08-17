@@ -4,10 +4,6 @@ Provides methods to create a **Query** object, which defines different data quer
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedKVStore-class Query--><!--Device-distributedKVStore-class Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -28,10 +24,6 @@ Creates a **Query** object with the AND condition.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Query-and(): Query--><!--Device-Query-and(): Query-End-->
@@ -44,7 +36,7 @@ Creates a **Query** object with the AND condition.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,10 +65,6 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Query-beginGroup(): Query--><!--Device-Query-beginGroup(): Query-End-->
@@ -89,7 +77,7 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -118,10 +106,6 @@ Defines a constructor used to create a **Query** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Query-constructor()--><!--Device-Query-constructor()-End-->
@@ -134,13 +118,9 @@ Defines a constructor used to create a **Query** instance.
 deviceId(deviceId: string): Query
 ```
 
-Creates a **Query** object with the device ID as the key prefix. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+Creates a **Query** object with the device ID as the key prefix. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#syncmode).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,7 +146,7 @@ Creates a **Query** object with the device ID as the key prefix. > **NOTE：**> 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -193,10 +173,6 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Query-endGroup(): Query--><!--Device-Query-endGroup(): Query-End-->
@@ -209,7 +185,7 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -234,13 +210,9 @@ try {
 equalTo(field: string, value: long | double | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is equal to the given value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is equal to the given value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -277,10 +249,6 @@ Obtains the query statement of the **Query** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Query-getSqlLike(): string--><!--Device-Query-getSqlLike(): string-End-->
@@ -293,7 +261,7 @@ Obtains the query statement of the **Query** object.
 | --- | --- |
 | string | Returns the query statement obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -315,13 +283,9 @@ try {
 greaterThan(field: string, value: long | double | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is greater than the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -354,13 +318,9 @@ Creates a **Query** object to match the specified field whose value is greater t
 greaterThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -393,13 +353,9 @@ Creates a **Query** object to match the specified field whose value is greater t
 inNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is within the specified list of numbers. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is within the specified list of numbers. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -432,13 +388,9 @@ Creates a **Query** object to match the specified field whose value is within th
 inString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is within the specified list of strings. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is within the specified list of strings. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -465,7 +417,7 @@ Creates a **Query** object to match the specified field whose value is within th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -489,13 +441,9 @@ try {
 isNotNull(field: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not **null**. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is not **null**. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -521,7 +469,7 @@ Creates a **Query** object to match the specified field whose value is not **nul
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -545,13 +493,9 @@ try {
 isNull(field: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is **null**. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is **null**. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -577,7 +521,7 @@ Creates a **Query** object to match the specified field whose value is **null**.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -601,13 +545,9 @@ try {
 lessThan(field: string, value: long | double | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is less than the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is less than the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -640,13 +580,9 @@ Creates a **Query** object to match the specified field whose value is less than
 lessThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is less than or equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is less than or equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -679,13 +615,9 @@ Creates a **Query** object to match the specified field whose value is less than
 like(field: string, value: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is similar to the specified string. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is similar to the specified string. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -712,7 +644,7 @@ Creates a **Query** object to match the specified field whose value is similar t
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -740,10 +672,6 @@ Creates a **Query** object to specify the number of records of the query result 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Query-limit(total: int, offset: int): Query--><!--Device-Query-limit(total: int, offset: int): Query-End-->
@@ -769,7 +697,7 @@ Creates a **Query** object to specify the number of records of the query result 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -796,13 +724,9 @@ try {
 notEqualTo(field: string, value: long | double | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is not equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -835,13 +759,9 @@ Creates a **Query** object to match the specified field whose value is not equal
 notInNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not within the specified list of numbers. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is not within the specified list of numbers. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -874,13 +794,9 @@ Creates a **Query** object to match the specified field whose value is not withi
 notInString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not within the specified list of strings. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is not within the specified list of strings. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -907,7 +823,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -935,10 +851,6 @@ Creates a **Query** object with the OR condition.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Query-or(): Query--><!--Device-Query-or(): Query-End-->
@@ -951,7 +863,7 @@ Creates a **Query** object with the OR condition.
 | --- | --- |
 | Query | Query** object created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -976,13 +888,9 @@ try {
 orderByAsc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in ascending order. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to sort the query results in ascending order. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1008,7 +916,7 @@ Creates a **Query** object to sort the query results in ascending order. > **NOT
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1033,13 +941,9 @@ try {
 orderByDesc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in descending order. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to sort the query results in descending order. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1065,7 +969,7 @@ Creates a **Query** object to sort the query results in descending order. > **NO
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1094,10 +998,6 @@ Creates a **Query** object with a specified key prefix.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Query-prefixKey(prefix: string): Query--><!--Device-Query-prefixKey(prefix: string): Query-End-->
@@ -1122,7 +1022,7 @@ Creates a **Query** object with a specified key prefix.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1151,10 +1051,6 @@ Resets the **Query** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Query-reset(): Query--><!--Device-Query-reset(): Query-End-->
@@ -1167,7 +1063,7 @@ Resets the **Query** object.
 | --- | --- |
 | Query | Query** object reset. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1196,10 +1092,6 @@ Creates a **Query** object with an index preferentially used for query.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Query-setSuggestIndex(index: string): Query--><!--Device-Query-setSuggestIndex(index: string): Query-End-->
@@ -1224,7 +1116,7 @@ Creates a **Query** object with an index preferentially used for query.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1249,13 +1141,9 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not similar to the specified string. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is not similar to the specified string. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1282,7 +1170,7 @@ Creates a **Query** object to match the specified field whose value is not simil
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@ Defines the vibration sequence.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-vibrator-interface VibratorPattern--><!--Device-vibrator-interface VibratorPattern-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -30,10 +26,6 @@ Vibration event array, which is the **VibratorPattern** object returned by **bui
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VibratorPattern-events: Array<VibratorEvent>--><!--Device-VibratorPattern-events: Array<VibratorEvent>-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -49,10 +41,6 @@ Absolute vibration start time, in ms.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VibratorPattern-time: int--><!--Device-VibratorPattern-time: int-End-->
 

@@ -1,12 +1,8 @@
-# WithThemeOptions
+# WithThemeOptions(Defines WithTheme component.)
 
 Defines the default theme and color mode for components within the **WithTheme** scope.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface WithThemeOptions--><!--Device-unnamed-declare interface WithThemeOptions-End-->
 
@@ -23,10 +19,6 @@ Color mode for components in the **WithTheme** scope. Default value: **ThemeColo
 **Type:** ThemeColorMode
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Default theme for components in the **WithTheme** scope. Default value: **undefi
 **Type:** [CustomTheme](arkts-arkui-customtheme-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

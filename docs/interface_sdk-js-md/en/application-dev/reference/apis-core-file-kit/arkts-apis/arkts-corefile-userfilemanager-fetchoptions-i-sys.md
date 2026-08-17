@@ -4,11 +4,9 @@ Defines the options for fetching file attributes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions)
+**Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#fetchoptions)
 
 <!--Device-userFileManager-interface FetchOptions--><!--Device-userFileManager-interface FetchOptions-End-->
 
@@ -28,17 +26,15 @@ import { userFileManager } from 'userFileManager';
 fetchColumns: Array<string>
 ```
 
-Options for fetching files based on the attributes in columns. If this parameter is left empty, files are fetched by URI, name, and type (the specific field names vary with the file asset or album object) by default. In addition, an error will be reported if [get](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getPhotoAssets) is called to obtain other attributes of this object. Example: fetchColumns: ['uri', 'title']
+Options for fetching files based on the attributes in columns. If this parameter is left empty, files are fetched by URI, name, and type (the specific field names vary with the file asset or album object) by default. In addition, an error will be reported if [get](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getphotoassets) is called to obtain other attributes of this object. Example: fetchColumns: ['uri', 'title']
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [fetchColumns](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#fetchColumns)
+**Substitutes:** [fetchColumns](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#fetchcolumns)
 
 <!--Device-FetchOptions-fetchColumns: Array<string>--><!--Device-FetchOptions-fetchColumns: Array<string>-End-->
 
@@ -57,8 +53,6 @@ Predicates that specify the fetch criteria.
 **Type:** dataSharePredicates.DataSharePredicates
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 26.0.0
 

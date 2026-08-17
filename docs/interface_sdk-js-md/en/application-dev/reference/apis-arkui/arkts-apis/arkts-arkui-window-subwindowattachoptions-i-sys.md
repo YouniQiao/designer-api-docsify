@@ -4,10 +4,6 @@ Describes the parameters used to maintain the relative position between the chil
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface SubWindowAttachOptions--><!--Device-window-interface SubWindowAttachOptions-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -32,10 +28,6 @@ Current layout mode of the child window, which is used to control the UI effect 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubWindowAttachOptions-currentLayoutMode?: string--><!--Device-SubWindowAttachOptions-currentLayoutMode?: string-End-->
@@ -57,10 +49,6 @@ Whether to use the intersection of the height limits of both windows in the atta
 **Default:** false
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,10 +72,6 @@ Whether to use the intersection of the width limits of both windows in the attac
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubWindowAttachOptions-isIntersectedWidthLimit?: boolean--><!--Device-SubWindowAttachOptions-isIntersectedWidthLimit?: boolean-End-->
@@ -108,10 +92,6 @@ Callback triggered when the parent window size changes. The callback is triggere
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubWindowAttachOptions-parentWindowSizeChangeCallback?: Callback<Size>--><!--Device-SubWindowAttachOptions-parentWindowSizeChangeCallback?: Callback<Size>-End-->
@@ -131,10 +111,6 @@ Callback triggered when the parent window mode changes. The callback is triggere
 **Type:** [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt;
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

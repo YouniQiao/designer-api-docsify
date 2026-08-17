@@ -4,10 +4,6 @@ Enumerates the types of authorized accounts.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-dlpPermission-export enum AccountType--><!--Device-dlpPermission-export enum AccountType-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -24,10 +20,6 @@ Cloud account.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-AccountType-CLOUD_ACCOUNT = 1--><!--Device-AccountType-CLOUD_ACCOUNT = 1-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -43,10 +35,6 @@ DOMAIN_ACCOUNT = 2
 Domain account.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-AccountType-DOMAIN_ACCOUNT = 2--><!--Device-AccountType-DOMAIN_ACCOUNT = 2-End-->
 

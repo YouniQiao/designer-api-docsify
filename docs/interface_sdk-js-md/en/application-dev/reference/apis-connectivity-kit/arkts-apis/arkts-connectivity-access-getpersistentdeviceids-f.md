@@ -16,10 +16,6 @@ Obtains the persistent randomized device address of the application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.PERSISTENT_BLUETOOTH_PEERS_MAC
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -43,7 +39,7 @@ Obtains the persistent randomized device address of the application.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Get persistent device address failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

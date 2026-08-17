@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface Updater--><!--Device-update-export interface Updater-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -24,10 +20,6 @@ checkNewVersion(callback: AsyncCallback<CheckResult>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-checkNewVersion(callback: AsyncCallback<CheckResult>): void--><!--Device-Updater-checkNewVersion(callback: AsyncCallback<CheckResult>): void-End-->
@@ -40,7 +32,7 @@ checkNewVersion(callback: AsyncCallback<CheckResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CheckResult](arkts-basicservices-update-checkresult-i-sys.md)&gt; | 是 | 回调函数，用于接收版本检查结果。回调参数包括err（错误对象，成功时为null）和checkResult（版本检查结果对象）。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CheckResult](arkts-basicservices-update-checkresult-i-sys.md)&gt; | 是 | 回调函数，用于接收版本检查结果。回调参数包括err（错误对象，成功时为null）和checkResult（版本检查结果对象）。 |
 
 **错误码：**
 
@@ -50,7 +42,7 @@ checkNewVersion(callback: AsyncCallback<CheckResult>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -81,10 +73,6 @@ checkNewVersion(): Promise<CheckResult>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-checkNewVersion(): Promise<CheckResult>--><!--Device-Updater-checkNewVersion(): Promise<CheckResult>-End-->
@@ -107,7 +95,7 @@ checkNewVersion(): Promise<CheckResult>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -142,10 +130,6 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, callback: AsyncCallback<void>): void--><!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, callback: AsyncCallback<void>): void-End-->
@@ -160,7 +144,7 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
 | clearOptions | [ClearOptions](arkts-basicservices-update-clearoptions-i-sys.md) | 是 | 清除选项（ClearOptions），用于指定要清除的异常状态类型。status字段仅支持UPGRADE_FAIL状态，当upgrade方法执行失败 (状态为UPGRADE_FAIL)后，系统会保留异常状态阻止重新升级，此时需要传入UPGRADE_FAIL清除异常状态，使系统恢复到初始状态以便重新开始升级流程。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收清除异常状态结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收清除异常状态结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **错误码：**
 
@@ -171,7 +155,7 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -212,10 +196,6 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Promise<void>--><!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Promise<void>-End-->
@@ -246,7 +226,7 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -293,10 +273,6 @@ download(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-download(      versionDigestInfo: VersionDigestInfo,      downloadOptions: DownloadOptions,      callback: AsyncCallback<void>    ): void--><!--Device-Updater-download(      versionDigestInfo: VersionDigestInfo,      downloadOptions: DownloadOptions,      callback: AsyncCallback<void>    ): void-End-->
@@ -311,7 +287,7 @@ download(
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
 | downloadOptions | [DownloadOptions](arkts-basicservices-update-downloadoptions-i-sys.md) | 是 | 下载选项（DownloadOptions），用于控制下载行为。allowNetwork字段设置允许下载的网络类型，建议根据升级包大小和网 络环境选择：升级包大小超过100MB建议使用WIFI避免流量消耗和提升下载速度；移动场景或无WIFI环境可使用CELLULAR；不确定网络环境建议使用CELLULAR_AND_WIFI。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收下载结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收下载结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **错误码：**
 
@@ -322,7 +298,7 @@ download(
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -364,10 +340,6 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions): Promise<void>--><!--Device-Updater-download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions): Promise<void>-End-->
@@ -398,7 +370,7 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -445,10 +417,6 @@ getCurrentVersionDescription(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getCurrentVersionDescription(      descriptionOptions: DescriptionOptions,      callback: AsyncCallback<Array<ComponentDescription>>    ): void--><!--Device-Updater-getCurrentVersionDescription(      descriptionOptions: DescriptionOptions,      callback: AsyncCallback<Array<ComponentDescription>>    ): void-End-->
@@ -462,7 +430,7 @@ getCurrentVersionDescription(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | 是 | 描述文件选项（DescriptionOptions），用于指定描述文件的格式和语言。format字段设置描述格式( STANDARD标准格式或SIMPLIFIED简易格式)。language字段设置语言类型，格式如'zh-cn'(中文)、'en-us'(英文)、'ja-jp'(日文)等，长度范围[2，10]，单位：字符。有效字符包括 字母（区分大小写）和连字符（-），建议使用小写格式。超出范围或包含无效字符时抛出异常。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | 是 | 回调函数，用于接收当前版本描述信息。回调参数包括： err(错误对象，成功时为null)和 info(当前版本描述信息数组，包含版本说明内容)。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | 是 | 回调函数，用于接收当前版本描述信息。回调参数包括： err(错误对象，成功时为null)和 info(当前版本描述信息数组，包含版本说明内容)。 |
 
 **错误码：**
 
@@ -473,7 +441,7 @@ getCurrentVersionDescription(
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 描述文件选项
@@ -510,10 +478,6 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Array<ComponentDescription>>--><!--Device-Updater-getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Array<ComponentDescription>>-End-->
@@ -543,7 +507,7 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -581,10 +545,6 @@ getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void--><!--Device-Updater-getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void-End-->
@@ -597,7 +557,7 @@ getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CurrentVersionInfo](arkts-basicservices-update-currentversioninfo-i-sys.md)&gt; | 是 | 回调函数，用于接收当前版本信息（CurrentVersionInfo）。回调参数包括： err（错误对象，成功时为 null）和currentInfo（当前版本信息对象，包含osVersion、deviceName和versionComponents字段）。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CurrentVersionInfo](arkts-basicservices-update-currentversioninfo-i-sys.md)&gt; | 是 | 回调函数，用于接收当前版本信息（CurrentVersionInfo）。回调参数包括： err（错误对象，成功时为 null）和currentInfo（当前版本信息对象，包含osVersion、deviceName和versionComponents字段）。 |
 
 **错误码：**
 
@@ -607,7 +567,7 @@ getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -641,10 +601,6 @@ getCurrentVersionInfo(): Promise<CurrentVersionInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getCurrentVersionInfo(): Promise<CurrentVersionInfo>--><!--Device-Updater-getCurrentVersionInfo(): Promise<CurrentVersionInfo>-End-->
@@ -667,7 +623,7 @@ getCurrentVersionInfo(): Promise<CurrentVersionInfo>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -706,10 +662,6 @@ getNewVersionDescription(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getNewVersionDescription(      versionDigestInfo: VersionDigestInfo,      descriptionOptions: DescriptionOptions,      callback: AsyncCallback<Array<ComponentDescription>>    ): void--><!--Device-Updater-getNewVersionDescription(      versionDigestInfo: VersionDigestInfo,      descriptionOptions: DescriptionOptions,      callback: AsyncCallback<Array<ComponentDescription>>    ): void-End-->
@@ -724,7 +676,7 @@ getNewVersionDescription(
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息对象，包含版本标识（versionDigest字段）。必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取。版本摘要作为服务器生成的版本唯一标识，用于后续的版本查询、下载和升级操 作。仅当isExistNewVersion为true时该参数有效。 |
 | descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | 是 | 描述文件选项（DescriptionOptions），用于指定描述文件的格式和语言。format字段设置描述格式( STANDARD标准格式或SIMPLIFIED简易格式)。language字段设置语言类型，格式如'zh-cn'(中文)、'en-us'(英文)、'ja-jp'(日文)等，长度范围[2，10]，单位：字符。有效字符包括 字母（区分大小写）和连字符（-），建议使用小写格式。超出范围或包含无效字符时抛出异常。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | 是 | 回调函数，用于接收新版本描述信息。回调参数包括： err（错误对象，成功时为null）和 descriptionInfo（新版本描述信息数组，包含各组件的版本说明内容）。调用前须先调用checkNewVersion检查新版本，且仅当isExistNewVersion为true时descriptionInfo 有效；若为false，则descriptionInfo为null。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | 是 | 回调函数，用于接收新版本描述信息。回调参数包括： err（错误对象，成功时为null）和 descriptionInfo（新版本描述信息数组，包含各组件的版本说明内容）。调用前须先调用checkNewVersion检查新版本，且仅当isExistNewVersion为true时descriptionInfo 有效；若为false，则descriptionInfo为null。 |
 
 **错误码：**
 
@@ -735,7 +687,7 @@ getNewVersionDescription(
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -782,10 +734,6 @@ getNewVersionDescription(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getNewVersionDescription(      versionDigestInfo: VersionDigestInfo,      descriptionOptions: DescriptionOptions    ): Promise<Array<ComponentDescription>>--><!--Device-Updater-getNewVersionDescription(      versionDigestInfo: VersionDigestInfo,      descriptionOptions: DescriptionOptions    ): Promise<Array<ComponentDescription>>-End-->
@@ -816,7 +764,7 @@ getNewVersionDescription(
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -862,10 +810,6 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void--><!--Device-Updater-getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void-End-->
@@ -878,7 +822,7 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)&gt; | 是 | 回调函数，用于接收新版本信息（NewVersionInfo）。回调参数包括：err（错误对象，成功时为null）和 newInfo（新版本信息对象）。调用前须先调用checkNewVersion检查新版本，且仅当isExistNewVersion为true时newInfo有效；若为false，则newInfo为null。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)&gt; | 是 | 回调函数，用于接收新版本信息（NewVersionInfo）。回调参数包括：err（错误对象，成功时为null）和 newInfo（新版本信息对象）。调用前须先调用checkNewVersion检查新版本，且仅当isExistNewVersion为true时newInfo有效；若为false，则newInfo为null。 |
 
 **错误码：**
 
@@ -888,7 +832,7 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -920,10 +864,6 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getNewVersionInfo(): Promise<NewVersionInfo>--><!--Device-Updater-getNewVersionInfo(): Promise<NewVersionInfo>-End-->
@@ -946,7 +886,7 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -980,10 +920,6 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getTaskInfo(callback: AsyncCallback<TaskInfo>): void--><!--Device-Updater-getTaskInfo(callback: AsyncCallback<TaskInfo>): void-End-->
@@ -996,7 +932,7 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | 是 | 回调函数，用于接收升级任务信息（TaskInfo）。回调参数包括： err（错误对象，成功时为null）和taskInfo（升级任务信 息对象，包含existTask和taskBody字段）。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;TaskInfo&gt; | 是 | 回调函数，用于接收升级任务信息（TaskInfo）。回调参数包括： err（错误对象，成功时为null）和taskInfo（升级任务信 息对象，包含existTask和taskBody字段）。 |
 
 **错误码：**
 
@@ -1006,7 +942,7 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1038,10 +974,6 @@ getTaskInfo(): Promise<TaskInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getTaskInfo(): Promise<TaskInfo>--><!--Device-Updater-getTaskInfo(): Promise<TaskInfo>-End-->
@@ -1064,7 +996,7 @@ getTaskInfo(): Promise<TaskInfo>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1098,10 +1030,6 @@ getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void--><!--Device-Updater-getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void-End-->
@@ -1114,7 +1042,7 @@ getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md)&gt; | 是 | 回调函数，用于接收升级策略信息（UpgradePolicy）。回调参数包括： err（错误对象，成功时为null）和 policy（升级策略信息对象，包含downloadStrategy、autoUpgradeStrategy和autoUpgradePeriods字段）。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md)&gt; | 是 | 回调函数，用于接收升级策略信息（UpgradePolicy）。回调参数包括： err（错误对象，成功时为null）和 policy（升级策略信息对象，包含downloadStrategy、autoUpgradeStrategy和autoUpgradePeriods字段）。 |
 
 **错误码：**
 
@@ -1124,7 +1052,7 @@ getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1156,10 +1084,6 @@ getUpgradePolicy(): Promise<UpgradePolicy>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-getUpgradePolicy(): Promise<UpgradePolicy>--><!--Device-Updater-getUpgradePolicy(): Promise<UpgradePolicy>-End-->
@@ -1182,7 +1106,7 @@ getUpgradePolicy(): Promise<UpgradePolicy>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1216,10 +1140,6 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Updater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void--><!--Device-Updater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -1239,7 +1159,7 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
@@ -1273,10 +1193,6 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Updater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void--><!--Device-Updater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -1296,7 +1212,7 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
@@ -1334,10 +1250,6 @@ pauseDownload(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-pauseDownload(      versionDigestInfo: VersionDigestInfo,      pauseDownloadOptions: PauseDownloadOptions,      callback: AsyncCallback<void>    ): void--><!--Device-Updater-pauseDownload(      versionDigestInfo: VersionDigestInfo,      pauseDownloadOptions: PauseDownloadOptions,      callback: AsyncCallback<void>    ): void-End-->
@@ -1352,7 +1264,7 @@ pauseDownload(
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
 | pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-update-pausedownloadoptions-i-sys.md) | 是 | 暂停下载选项（PauseDownloadOptions），用于控制暂停行为。如果没有正在进行的下载任务，使用此参数将 导致暂停操作失败或参数无效。isAllowAutoResume字段设置是否允许自动恢复，建议：网络不稳定场景建议设置true启用自动恢复，提升下载成功率；需要精确控制下载时机或避免在特定网络环境下恢复的场景建议设置 false，通过手动调用resumeDownload控制恢复时机。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收暂停下载结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收暂停下载结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
 
 **错误码：**
 
@@ -1363,7 +1275,7 @@ pauseDownload(
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1404,10 +1316,6 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseDownloadOptions): Promise<void>--><!--Device-Updater-pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseDownloadOptions): Promise<void>-End-->
@@ -1438,7 +1346,7 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1485,10 +1393,6 @@ resumeDownload(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-resumeDownload(      versionDigestInfo: VersionDigestInfo,      resumeDownloadOptions: ResumeDownloadOptions,      callback: AsyncCallback<void>    ): void--><!--Device-Updater-resumeDownload(      versionDigestInfo: VersionDigestInfo,      resumeDownloadOptions: ResumeDownloadOptions,      callback: AsyncCallback<void>    ): void-End-->
@@ -1503,7 +1407,7 @@ resumeDownload(
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
 | resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-update-resumedownloadoptions-i-sys.md) | 是 | 恢复下载选项（ResumeDownloadOptions），用于指定恢复下载的网络类型。仅当已调用 pauseDownload暂停下载后才生效。如果未调用pauseDownload暂停下载，使用此参数将导致恢复下载失败或参数无效。allowNetwork字段设置允许恢复下载的网络类型，建议根据升级包大小和网络环境选 择：升级包大小超过100MB建议使用WIFI避免流量消耗和提升下载速度；移动场景或无WIFI环境可使用CELLULAR；不确定网络环境建议使用CELLULAR_AND_WIFI。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复下载结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收恢复下载结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
 
 **错误码：**
 
@@ -1514,7 +1418,7 @@ resumeDownload(
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1555,10 +1459,6 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: ResumeDownloadOptions): Promise<void>--><!--Device-Updater-resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: ResumeDownloadOptions): Promise<void>-End-->
@@ -1589,7 +1489,7 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1632,10 +1532,6 @@ setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void--><!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void-End-->
@@ -1649,7 +1545,7 @@ setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | policy | [UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md) | 是 | 升级策略对象（UpgradePolicy），用于控制升级行为。包含downloadStrategy(自动下载策略)、autoUpgradeStrategy(自 动升级策略)和autoUpgradePeriods(自动升级时间段)三个字段。downloadStrategy字段设置是否允许自动下载，true表示可自动下载(适用于希望系统自动检测并下载新版本的场景)，false表示 不可自动下载(适用于需要用户手动确认下载的场景)。autoUpgradeStrategy字段设置是否允许自动升级，true表示可自动升级(适用于希望系统自动完成升级流程的场景)，false表示不可自动升级(适用于需要用 户手动确认升级的场景)。autoUpgradePeriods字段设置自动升级时间段(可选)，当需要在特定时间段内自动升级时传入此参数，如夜间时段；不传入时默认为空数组[]，表示不限制自动升级时间段。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收设置升级策略结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收设置升级策略结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **错误码：**
 
@@ -1659,7 +1555,7 @@ setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1696,10 +1592,6 @@ setUpgradePolicy(policy: UpgradePolicy): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy): Promise<void>--><!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy): Promise<void>-End-->
@@ -1728,7 +1620,7 @@ setUpgradePolicy(policy: UpgradePolicy): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1767,10 +1659,6 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-terminateUpgrade(callback: AsyncCallback<void>): void--><!--Device-Updater-terminateUpgrade(callback: AsyncCallback<void>): void-End-->
@@ -1783,7 +1671,7 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收终止升级结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收终止升级结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
 
 **错误码：**
 
@@ -1793,7 +1681,7 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1824,10 +1712,6 @@ terminateUpgrade(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-terminateUpgrade(): Promise<void>--><!--Device-Updater-terminateUpgrade(): Promise<void>-End-->
@@ -1850,7 +1734,7 @@ terminateUpgrade(): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1883,10 +1767,6 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, ca
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, callback: AsyncCallback<void>): void--><!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, callback: AsyncCallback<void>): void-End-->
@@ -1901,7 +1781,7 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, ca
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息（VersionDigestInfo），必须先调用checkNewVersion检查新版本并确认 isExistNewVersion为true后才能使用此参数。参数从checkNewVersion返回结果的newVersionInfo字段中获取，用于标识具体版本。仅当isExistNewVersion为true时该 参数有效。 |
 | upgradeOptions | [UpgradeOptions](arkts-basicservices-update-upgradeoptions-i-sys.md) | 是 | 升级选项（UpgradeOptions），用于指定升级操作类型。order字段设置升级指令，应根据当前升级状态和业务需求选择： DOWNLOAD仅下载升级包，适用于需要先下载后手动安装的场景；INSTALL仅安装已下载的升级包，适用于已下载完成需直接安装的场景；DOWNLOAD_AND_INSTALL下载并安装，适用于完整升级流程；APPLY仅 生效，适用于已安装需重启生效的场景；INSTALL_AND_APPLY安装并生效，适用于安装后立即重启生效的场景。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收升级安装结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收升级安装结果。回调参数包括err（错误对象，成功时为null，失败时为错误对象）。 |
 
 **错误码：**
 
@@ -1912,7 +1792,7 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, ca
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1953,10 +1833,6 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): P
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
 <!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): Promise<void>--><!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): Promise<void>-End-->
@@ -1987,7 +1863,7 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): P
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

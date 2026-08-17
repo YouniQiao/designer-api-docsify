@@ -16,10 +16,6 @@ Unregister the callback for screen disconnection events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-screen-function offDisconnect(callback?: Callback<long>): void--><!--Device-screen-function offDisconnect(callback?: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

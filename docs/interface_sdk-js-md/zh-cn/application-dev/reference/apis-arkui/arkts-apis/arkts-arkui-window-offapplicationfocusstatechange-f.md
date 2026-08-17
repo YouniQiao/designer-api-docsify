@@ -10,10 +10,6 @@ function offApplicationFocusStateChange(callback?: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-window-function offApplicationFocusStateChange(callback?: Callback<boolean>): void--><!--Device-window-function offApplicationFocusStateChange(callback?: Callback<boolean>): void-End-->
@@ -26,7 +22,7 @@ function offApplicationFocusStateChange(callback?: Callback<boolean>): void
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 | Callback used to return the result whether application process focused or not. If not provided, all callbacks for the given event type will be removed. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';

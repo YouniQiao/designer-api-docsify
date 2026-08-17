@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-unnamed-export interface FileListOption--><!--Device-unnamed-export interface FileListOption-End-->
@@ -23,8 +21,6 @@ complete?: () => void
 **类型：** () =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 
@@ -44,8 +40,6 @@ fail?: (data: string, code: number) => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-FileListOption-fail?: (data: string, code: number) => void--><!--Device-FileListOption-fail?: (data: string, code: number) => void-End-->
@@ -58,13 +52,11 @@ fail?: (data: string, code: number) => void
 success?: (data: FileListResponse) => void
 ```
 
-接口调用成功的回调函数。返回[FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md#FileListResponse)。
+接口调用成功的回调函数。返回[FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md#filelistresponse)。
 
 **类型：** (data: FileListResponse) =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 
@@ -83,8 +75,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 

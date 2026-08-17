@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-display-interface RelativePosition--><!--Device-display-interface RelativePosition-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -24,10 +20,6 @@ displayId: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-RelativePosition-displayId: long--><!--Device-RelativePosition-displayId: long-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -43,10 +35,6 @@ position: Position
 **类型：** Position
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-RelativePosition-position: Position--><!--Device-RelativePosition-position: Position-End-->
 

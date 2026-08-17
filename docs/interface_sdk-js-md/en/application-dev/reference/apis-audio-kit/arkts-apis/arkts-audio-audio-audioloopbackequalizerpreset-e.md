@@ -4,10 +4,6 @@ Enumerates the equalizer types of audio loopback.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-audio-enum AudioLoopbackEqualizerPreset--><!--Device-audio-enum AudioLoopbackEqualizerPreset-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -21,10 +17,6 @@ FLAT = 1
 Maintains the original sound without equalization.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopbackEqualizerPreset-FLAT = 1--><!--Device-AudioLoopbackEqualizerPreset-FLAT = 1-End-->
 
@@ -40,10 +32,6 @@ Enhances the fullness of vocals (default).
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-AudioLoopbackEqualizerPreset-FULL = 2--><!--Device-AudioLoopbackEqualizerPreset-FULL = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -57,10 +45,6 @@ BRIGHT = 3
 Enhances the brightness of vocals.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-AudioLoopbackEqualizerPreset-BRIGHT = 3--><!--Device-AudioLoopbackEqualizerPreset-BRIGHT = 3-End-->
 

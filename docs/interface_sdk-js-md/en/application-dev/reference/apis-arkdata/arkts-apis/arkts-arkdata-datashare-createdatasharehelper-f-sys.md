@@ -16,10 +16,6 @@ Creates a **DataShareHelper** instance. This API uses an asynchronous callback t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-dataShare-function createDataShareHelper(context: Context, uri: string, callback: AsyncCallback<DataShareHelper>): void--><!--Device-dataShare-function createDataShareHelper(context: Context, uri: string, callback: AsyncCallback<DataShareHelper>): void-End-->
@@ -44,7 +40,7 @@ Creates a **DataShareHelper** instance. This API uses an asynchronous callback t
 | [15700010](../errorcode-datashare.md#15700010-failed-to-create-a-datasharehelper) | The DataShareHelper fails to be initialized. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -89,10 +85,6 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-dataShare-function createDataShareHelper(    context: Context,    uri: string,    options: DataShareHelperOptions,    callback: AsyncCallback<DataShareHelper>  ): void--><!--Device-dataShare-function createDataShareHelper(    context: Context,    uri: string,    options: DataShareHelperOptions,    callback: AsyncCallback<DataShareHelper>  ): void-End-->
@@ -118,7 +110,7 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 | [15700010](../errorcode-datashare.md#15700010-failed-to-create-a-datasharehelper) | The DataShareHelper fails to be initialized. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -162,10 +154,6 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-dataShare-function createDataShareHelper(    context: Context,    uri: string,    options?: DataShareHelperOptions  ): Promise<DataShareHelper>--><!--Device-dataShare-function createDataShareHelper(    context: Context,    uri: string,    options?: DataShareHelperOptions  ): Promise<DataShareHelper>-End-->
@@ -180,7 +168,7 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the application. |
 | uri | string | Yes | URI of the server application to connect. |
-| options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | No | Optional configuration of the **DataShareHelper** instance. It specifies whether [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md#DataShareHelperOptions-(System-API)) is in proxy mode and the waiting time for starting the data provider process in non-silent access mode.If this parameter is not set, [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md#DataShareHelperOptions-(System-API)) is not in proxy mode and the waiting time for starting the data provider process in non-silent access mode is 2 seconds.If the URI starts with **datashareproxy**, the **isProxy** parameter in **options** must be set. Otherwise, **DataShareHelper** will fail to be created and an error will be returned.<br>**Since:** 10 |
+| options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | No | Optional configuration of the **DataShareHelper** instance. It specifies whether [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md#datasharehelperoptions-system-api) is in proxy mode and the waiting time for starting the data provider process in non-silent access mode.If this parameter is not set, [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md#datasharehelperoptions-system-api) is not in proxy mode and the waiting time for starting the data provider process in non-silent access mode is 2 seconds.If the URI starts with **datashareproxy**, the **isProxy** parameter in **options** must be set. Otherwise, **DataShareHelper** will fail to be created and an error will be returned.<br>**Since:** 10 |
 
 **Return value:**
 
@@ -196,7 +184,7 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 | [15700010](../errorcode-datashare.md#15700010-failed-to-create-a-datasharehelper) | The DataShareHelper fails to be initialized. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

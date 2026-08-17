@@ -4,10 +4,6 @@ Implements the controller of the **ArcSwiper** component. You can bind this obje
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export class ArcSwiperController--><!--Device-unnamed-export class ArcSwiperController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -32,10 +28,6 @@ A constructor used to create an **ArcSwiperController** instance.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSwiperController-constructor()--><!--Device-ArcSwiperController-constructor()-End-->
@@ -52,10 +44,6 @@ Stops an animation.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSwiperController-finishAnimation(handler?: FinishAnimationHandler)--><!--Device-ArcSwiperController-finishAnimation(handler?: FinishAnimationHandler)-End-->
@@ -66,7 +54,7 @@ Stops an animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.<br>If no value is provided, no callback is performed. |
+| handler | [FinishAnimationHandler](../../apis-na/arkts-apis/arkts-na-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.<br>If no value is provided, no callback is performed. |
 
 ## showNext
 
@@ -77,10 +65,6 @@ showNext()
 Turns to the next page. Page turning occurs with the animation, whose duration is specified by [duration](../../apis-na/arkts-apis/arkts-na-arkui-arcswiper-arcswiperattribute-i.md#duration).
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -97,10 +81,6 @@ showPrevious()
 Turns to the previous page. Page turning occurs with the animation, whose duration is specified by [duration](../../apis-na/arkts-apis/arkts-na-arkui-arcswiper-arcswiperattribute-i.md#duration).
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

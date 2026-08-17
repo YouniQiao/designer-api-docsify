@@ -4,10 +4,6 @@ Water ripple scene mode enumeration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-uiEffect-enum WaterRippleMode--><!--Device-uiEffect-enum WaterRippleMode-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -23,10 +19,6 @@ SMALL2MEDIUM_RECV = 0
 Phone tapping 2in1 device (receiving end).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WaterRippleMode-SMALL2MEDIUM_RECV = 0--><!--Device-WaterRippleMode-SMALL2MEDIUM_RECV = 0-End-->
 
@@ -44,10 +36,6 @@ Phone tapping 2in1 device (sending end).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WaterRippleMode-SMALL2MEDIUM_SEND = 1--><!--Device-WaterRippleMode-SMALL2MEDIUM_SEND = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -64,10 +52,6 @@ Phone tapping phone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-WaterRippleMode-SMALL2SMALL = 2--><!--Device-WaterRippleMode-SMALL2SMALL = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -83,10 +67,6 @@ MINI_RECV = 3
 2in1 device sharing with other devices (keyboard and mouse sharing scenario).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-WaterRippleMode-MINI_RECV = 3--><!--Device-WaterRippleMode-MINI_RECV = 3-End-->
 

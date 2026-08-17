@@ -4,10 +4,6 @@ Represents the subscriber of a common event. The **CommonEventSubscriber** modul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface CommonEventSubscriber--><!--Device-unnamed-export interface CommonEventSubscriber-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -18,13 +14,9 @@ Represents the subscriber of a common event. The **CommonEventSubscriber** modul
 abortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-Aborts an ordered common event. This API is used with [finishCommonEvent](#finishCommonEvent). After the abort, the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
+Aborts an ordered common event. This API is used with [finishCommonEvent](#finishcommonevent). After the abort, the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
@@ -42,7 +34,7 @@ Aborts an ordered common event. This API is used with [finishCommonEvent](#finis
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -88,13 +80,9 @@ subscriber.finishCommonEvent((err: BusinessError | null) => {
 abortCommonEvent(): Promise<void>
 ```
 
-Aborts an ordered common event. This API is used with [finishCommonEvent](#finishCommonEvent). After the abort, the common event is not sent to the next subscriber. This API uses a promise to return the result.
+Aborts an ordered common event. This API is used with [finishCommonEvent](#finishcommonevent). After the abort, the common event is not sent to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>-End-->
 
@@ -106,7 +94,7 @@ Aborts an ordered common event. This API is used with [finishCommonEvent](#finis
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -146,19 +134,15 @@ subscriber.finishCommonEvent().then(() => {
 abortCommonEventSync(): void
 ```
 
-Aborts an ordered common event when used with [finishCommonEvent](#finishCommonEvent). With the abort state, the common event is not sent to the next subscriber. This API returns the result synchronously.
+Aborts an ordered common event when used with [finishCommonEvent](#finishcommonevent). With the abort state, the common event is not sent to the next subscriber. This API returns the result synchronously.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-abortCommonEventSync(): void--><!--Device-CommonEventSubscriber-abortCommonEventSync(): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -189,13 +173,9 @@ subscriber.finishCommonEvent().then(() => {
 clearAbortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-Clears the abort state of an ordered common event. Use this API together with [finishCommonEvent](#finishCommonEvent), and the common event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
+Clears the abort state of an ordered common event. Use this API together with [finishCommonEvent](#finishcommonevent), and the common event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
@@ -213,7 +193,7 @@ Clears the abort state of an ordered common event. Use this API together with [f
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -259,13 +239,9 @@ subscriber.finishCommonEvent((err: BusinessError | null) => {
 clearAbortCommonEvent(): Promise<void>
 ```
 
-Clears the abort state of this ordered common event. Use this API together with [finishCommonEvent](#finishCommonEvent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
+Clears the abort state of this ordered common event. Use this API together with [finishCommonEvent](#finishcommonevent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>-End-->
 
@@ -277,7 +253,7 @@ Clears the abort state of this ordered common event. Use this API together with 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -317,19 +293,15 @@ subscriber.finishCommonEvent().then(() => {
 clearAbortCommonEventSync(): void
 ```
 
-Clears the abort state of an ordered common event when used with [finishCommonEvent](#finishCommonEvent). After the clearance, the common event is sent to the next subscriber. This API returns the result synchronously.
+Clears the abort state of an ordered common event when used with [finishCommonEvent](#finishcommonevent). After the clearance, the common event is sent to the next subscriber. This API returns the result synchronously.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void--><!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -364,10 +336,6 @@ Finishes this ordered common event. This API uses an asynchronous callback to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -384,7 +352,7 @@ Finishes this ordered common event. This API uses an asynchronous callback to re
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -420,10 +388,6 @@ Finishes this ordered common event. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -434,7 +398,7 @@ Finishes this ordered common event. This API uses a promise to return the result
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -467,10 +431,6 @@ Checks whether this ordered common event should be aborted. This API uses an asy
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -487,7 +447,7 @@ Checks whether this ordered common event should be aborted. This API uses an asy
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -523,10 +483,6 @@ Checks whether this ordered common event should be aborted. This API uses a prom
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -537,7 +493,7 @@ Checks whether this ordered common event should be aborted. This API uses a prom
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. The **true** indicates that the ordered common event is in the abort state; the value **false** indicates otherwise. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -570,10 +526,6 @@ Checks whether an ordered common event is aborted. This API returns the result s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -584,7 +536,7 @@ Checks whether an ordered common event is aborted. This API returns the result s
 | --- | --- |
 | boolean | The value **true** indicates that the ordered common event is in the abort state; the value **false** indicates otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let abortEvent: boolean = subscriber.getAbortCommonEventSync();
@@ -600,10 +552,6 @@ getCode(callback: AsyncCallback<int>): void
 Obtains the result code of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -623,7 +571,7 @@ Obtains the result code of an ordered common event. This API uses an asynchronou
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -659,10 +607,6 @@ Obtains the result code of an ordered common event. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-getCode(): Promise<int>--><!--Device-CommonEventSubscriber-getCode(): Promise<int>-End-->
@@ -675,7 +619,7 @@ Obtains the result code of an ordered common event. This API uses a promise to r
 | --- | --- |
 | Promise&lt;int&gt; | Promise used to return the result code. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -708,10 +652,6 @@ Obtains the result code of an ordered common event. This API returns the result 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-getCodeSync(): int--><!--Device-CommonEventSubscriber-getCodeSync(): int-End-->
@@ -724,7 +664,7 @@ Obtains the result code of an ordered common event. This API returns the result 
 | --- | --- |
 | int | Code delivered by the ordered common event. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -750,10 +690,6 @@ Obtains the data of an ordered common event. This API uses an asynchronous callb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-getData(callback: AsyncCallback<string>): void--><!--Device-CommonEventSubscriber-getData(callback: AsyncCallback<string>): void-End-->
@@ -772,7 +708,7 @@ Obtains the data of an ordered common event. This API uses an asynchronous callb
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -810,10 +746,6 @@ Obtains the data of an ordered common event. This API uses a promise to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-getData(): Promise<string>--><!--Device-CommonEventSubscriber-getData(): Promise<string>-End-->
@@ -826,7 +758,7 @@ Obtains the data of an ordered common event. This API uses a promise to return t
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the result data (string type) of an ordered common event. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -859,10 +791,6 @@ Obtains the data of an ordered common event. This API returns the result synchro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-getDataSync(): string--><!--Device-CommonEventSubscriber-getDataSync(): string-End-->
@@ -875,7 +803,7 @@ Obtains the data of an ordered common event. This API returns the result synchro
 | --- | --- |
 | string | Data delivered by the ordered common event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let data: string = subscriber.getDataSync();
@@ -891,10 +819,6 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 Obtains the subscriber information. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -914,7 +838,7 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -950,10 +874,6 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void--><!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -980,10 +900,6 @@ Obtains the subscriber information. This API uses a promise to return the result
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo>--><!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo>-End-->
@@ -996,7 +912,7 @@ Obtains the subscriber information. This API uses a promise to return the result
 | --- | --- |
 | Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1028,10 +944,6 @@ Obtains the subscriber information. This API uses a promise to return the result
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>--><!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1052,10 +964,6 @@ Obtains the subscriber information. This API returns the result synchronously.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo--><!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo-End-->
@@ -1068,7 +976,7 @@ Obtains the subscriber information. This API returns the result synchronously.
 | --- | --- |
 | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | Subscriber information. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1094,10 +1002,6 @@ Obtains the subscriber information. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo|null--><!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo|null-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1118,10 +1022,6 @@ Checks whether the current common event is an ordered common event. This API use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1138,7 +1038,7 @@ Checks whether the current common event is an ordered common event. This API use
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1174,10 +1074,6 @@ Checks whether the current common event is an ordered common event. This API use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1188,7 +1084,7 @@ Checks whether the current common event is an ordered common event. This API use
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1221,10 +1117,6 @@ Checks whether a common event is an ordered one. This API returns the result syn
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1235,7 +1127,7 @@ Checks whether a common event is an ordered one. This API returns the result syn
 | --- | --- |
 | boolean | Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let isOrdered: boolean = subscriber.isOrderedCommonEventSync();
@@ -1251,10 +1143,6 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 Checks whether the current common event is a sticky common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1272,7 +1160,7 @@ Checks whether the current common event is a sticky common event. This API uses 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1308,10 +1196,6 @@ Checks whether the current common event is a sticky common event. This API uses 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1322,7 +1206,7 @@ Checks whether the current common event is a sticky common event. This API uses 
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the common event is a sticky one; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1355,10 +1239,6 @@ Checks whether the current common event is a sticky common event. This API retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -1369,7 +1249,7 @@ Checks whether the current common event is a sticky common event. This API retur
 | --- | --- |
 | boolean | Returns **true** if the common event is a sticky one; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let isSticky: boolean = subscriber.isStickyCommonEventSync();
@@ -1385,10 +1265,6 @@ setCode(code: int, callback: AsyncCallback<void>): void
 Sets the code of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1409,7 +1285,7 @@ Sets the code of an ordered common event. This API uses an asynchronous callback
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1445,10 +1321,6 @@ Sets the result code of an ordered common event. This API uses a promise to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-setCode(code: int): Promise<void>--><!--Device-CommonEventSubscriber-setCode(code: int): Promise<void>-End-->
@@ -1473,7 +1345,7 @@ Sets the result code of an ordered common event. This API uses a promise to retu
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1506,10 +1378,6 @@ Sets the result code and data of an ordered common event. This API uses an async
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string, callback: AsyncCallback<void>): void-End-->
@@ -1530,7 +1398,7 @@ Sets the result code and data of an ordered common event. This API uses an async
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1566,10 +1434,6 @@ Sets the result code and data of an ordered common event. This API uses a promis
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string): Promise<void>--><!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string): Promise<void>-End-->
@@ -1595,7 +1459,7 @@ Sets the result code and data of an ordered common event. This API uses a promis
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1628,10 +1492,6 @@ Sets the code and data of an ordered common event. This API returns the result s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-setCodeAndDataSync(code: int, data: string): void--><!--Device-CommonEventSubscriber-setCodeAndDataSync(code: int, data: string): void-End-->
@@ -1651,7 +1511,7 @@ Sets the code and data of an ordered common event. This API returns the result s
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1672,10 +1532,6 @@ Sets the result code of an ordered common event. This API returns the result syn
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-setCodeSync(code: int): void--><!--Device-CommonEventSubscriber-setCodeSync(code: int): void-End-->
@@ -1694,7 +1550,7 @@ Sets the result code of an ordered common event. This API returns the result syn
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {
@@ -1715,10 +1571,6 @@ Sets the data of an ordered common event. This API uses an asynchronous callback
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-setData(data: string, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setData(data: string, callback: AsyncCallback<void>): void-End-->
@@ -1738,7 +1590,7 @@ Sets the data of an ordered common event. This API uses an asynchronous callback
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1774,10 +1626,6 @@ Sets the result data of an ordered common event. This API uses a promise to retu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-setData(data: string): Promise<void>--><!--Device-CommonEventSubscriber-setData(data: string): Promise<void>-End-->
@@ -1802,7 +1650,7 @@ Sets the result data of an ordered common event. This API uses a promise to retu
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -1835,10 +1683,6 @@ Sets the result data of an ordered common event. This API returns the result syn
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-setDataSync(data: string): void--><!--Device-CommonEventSubscriber-setDataSync(data: string): void-End-->
@@ -1857,7 +1701,7 @@ Sets the result data of an ordered common event. This API returns the result syn
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

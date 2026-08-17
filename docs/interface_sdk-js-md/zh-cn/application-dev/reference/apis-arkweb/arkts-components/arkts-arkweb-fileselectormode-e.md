@@ -1,12 +1,8 @@
 # FileSelectorMode
 
-文件选择器的模式。
+文件选择器的模式，用于控制文件选择器的打开方式和行为，帮助开发者实现文件上传等文件操作场景。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare enum FileSelectorMode--><!--Device-unnamed-declare enum FileSelectorMode-End-->
 
@@ -21,10 +17,6 @@ FileOpenMode = 0
 打开上传单个文件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,10 +34,6 @@ FileOpenMultipleMode = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FileSelectorMode-FileOpenMultipleMode = 1--><!--Device-FileSelectorMode-FileOpenMultipleMode = 1-End-->
@@ -62,10 +50,6 @@ FileOpenFolderMode = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FileSelectorMode-FileOpenFolderMode = 2--><!--Device-FileSelectorMode-FileOpenFolderMode = 2-End-->
@@ -81,10 +65,6 @@ FileSaveMode = 3
 文件保存模式。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

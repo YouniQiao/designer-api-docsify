@@ -4,10 +4,6 @@ Define different protocol capability
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-enum ProtocolType--><!--Device-avSession-enum ProtocolType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -21,10 +17,6 @@ TYPE_LOCAL = 0
 The default cast type "local", media can be routed on the same device, including internal speakers or audio jack on the device itself, A2DP devices.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ The Cast+ Stream indicating the media is presenting on a different device the ap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ProtocolType-TYPE_CAST_PLUS_STREAM = 2--><!--Device-ProtocolType-TYPE_CAST_PLUS_STREAM = 2-End-->
@@ -62,10 +50,6 @@ The DLNA type indicates the device supports DLNA protocol, the application needs
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ProtocolType-TYPE_DLNA = 4--><!--Device-ProtocolType-TYPE_DLNA = 4-End-->
@@ -81,10 +65,6 @@ TYPE_CAST_PLUS_AUDIO = 8
 This type indicates the device supports audio casting with high definition to get a better sound quality.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

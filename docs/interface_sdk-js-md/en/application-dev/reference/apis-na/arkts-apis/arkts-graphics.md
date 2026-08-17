@@ -6,10 +6,10 @@
 
 | Name | Description |
 | --- | --- |
-| [borderRadiuses](arkts-na-graphics-borderradiuses-f.md#borderRadiuses) | Obtain a BorderRadiuses object with all edges are set to the same radius. |
-| [borderStyles](arkts-na-graphics-borderstyles-f.md#borderStyles) | Obtain an object with all edges are set to the same style. |
-| [edgeColors](arkts-na-graphics-edgecolors-f.md#edgeColors) | Obtain an object with all edges are set to the same color. |
-| [edgeWidths](arkts-na-graphics-edgewidths-f.md#edgeWidths) | Obtain an object with all edges are set to the same width. |
+| [borderRadiuses](arkts-na-graphics-borderradiuses-f.md#borderradiuses) | Obtain a BorderRadiuses object with all edges are set to the same radius. |
+| [borderStyles](arkts-na-graphics-borderstyles-f.md#borderstyles) | Obtain an object with all edges are set to the same style. |
+| [edgeColors](arkts-na-graphics-edgecolors-f.md#edgecolors) | Obtain an object with all edges are set to the same color. |
+| [edgeWidths](arkts-na-graphics-edgewidths-f.md#edgewidths) | Obtain an object with all edges are set to the same width. |
 
 ### Classes
 

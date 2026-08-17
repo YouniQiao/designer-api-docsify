@@ -4,10 +4,6 @@ Enumerates the global scrollbar modes in the web page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-webview-enum ScrollbarMode--><!--Device-webview-enum ScrollbarMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -18,13 +14,9 @@ Enumerates the global scrollbar modes in the web page.
 OVERLAY_LAYOUT_SCROLLBAR = 0
 ```
 
-The scrollbar is not always displayed.
+Overlay scrollbar that can be dragged.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ScrollbarMode-OVERLAY_LAYOUT_SCROLLBAR = 0--><!--Device-ScrollbarMode-OVERLAY_LAYOUT_SCROLLBAR = 0-End-->
 
@@ -40,10 +32,6 @@ The scrollbar is always displayed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ScrollbarMode-FORCE_DISPLAY_SCROLLBAR = 1--><!--Device-ScrollbarMode-FORCE_DISPLAY_SCROLLBAR = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -54,13 +42,9 @@ The scrollbar is always displayed.
 OVERLAY_VISUAL_SCROLLBAR = 2
 ```
 
-Overlay VisualViewport scrollbars: appear on scroll, hide when idle. Rendered via Visual Viewport, non-draggable.
+Overlay scrollbar that cannot be dragged.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

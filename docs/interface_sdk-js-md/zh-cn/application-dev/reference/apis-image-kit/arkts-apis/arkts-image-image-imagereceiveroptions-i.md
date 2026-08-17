@@ -4,10 +4,6 @@ ImageReceiver的初始化选项。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-image-interface ImageReceiverOptions--><!--Device-image-interface ImageReceiverOptions-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
@@ -23,10 +19,6 @@ capacity?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,10 +37,6 @@ size?: Size
 **类型：** Size
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

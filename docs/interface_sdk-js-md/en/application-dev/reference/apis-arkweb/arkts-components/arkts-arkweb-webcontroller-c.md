@@ -1,10 +1,8 @@
 # WebController
 
-Defines the Web controller.
+WebController is the controller class of the ArkWeb component, used to control various behaviors of the Web component. A WebController object can be bound to only one Web component. After binding, developers can use the controller to perform operations on the Web component, such as page navigation (forward/backward/loading), focus control, zoom adjustment, page refresh and stop, cookie management, and JavaScript injection and execution. WebController is suitable for scenarios where active control of the embedded Web component is required on the app side, such as implementing browser-like forward and backward navigation, establishing a JavaScript interaction channel between the app side and the web page side, dynamically loading web page content, or managing cookie data.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -20,11 +18,9 @@ Defines the Web controller.
 accessBackward(): boolean
 ```
 
-Checks whether the web page can go back.
+Checks whether going to the previous page can be performed on the current page.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -38,7 +34,7 @@ Checks whether the web page can go back.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the web page can go back. |
+| boolean | true** is returned if going to the previous page can be performed on the current page; otherwise, **false** is returned. |
 
 ## accessForward
 
@@ -46,11 +42,9 @@ Checks whether the web page can go back.
 accessForward(): boolean
 ```
 
-Checks whether the web page can go forward.
+Checks whether going to the next page can be performed on the current page.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -64,7 +58,7 @@ Checks whether the web page can go forward.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
+| boolean | If going to the next page can be performed on the current page, **true** is returned; otherwise, **false** is returned. |
 
 ## accessStep
 
@@ -72,11 +66,9 @@ Checks whether the web page can go forward.
 accessStep(step: number): boolean
 ```
 
-Checks whether the web page can go back or forward the given number of steps.
+Checks whether the current page can move forward or backward by the given step.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,13 +82,13 @@ Checks whether the web page can go back or forward the given number of steps.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| step | number | Yes | The number of steps. |
+| step | number | Yes | Number of the steps to take. A positive number means to go forward, and a negative number means to go backward. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
+| boolean | Whether the page can go forward or backward by the given step. The value **true** means it can, and **false** means it cannot. |
 
 ## backward
 
@@ -104,11 +96,9 @@ Checks whether the web page can go back or forward the given number of steps.
 backward()
 ```
 
-Goes back in the history of the web page.
+Goes backward by one page in the history stack. You are advised to call [accessBackward&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessbackward) to check whether the current page can go backward before calling **backward**.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -124,11 +114,9 @@ Goes back in the history of the web page.
 clearHistory(): void
 ```
 
-Clears the history in the Web.
+Clears the browsing history.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -144,11 +132,9 @@ Clears the history in the Web.
 constructor()
 ```
 
-Constructor.
+Constructs a **WebController** object.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -164,11 +150,9 @@ Constructor.
 deleteJavaScriptRegister(name: string)
 ```
 
-Deletes a registered JavaScript object with given name.
+Deletes a specific application JavaScript object that is registered with the window through **registerJavaScriptProxy**. The deletion takes effect immediately, with no need for invoking the [refresh](#refresh) API.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -182,7 +166,7 @@ Deletes a registered JavaScript object with given name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | The name of a registered JavaScript object to be deleted. |
+| name | string | Yes | Name of the registered JavaScript object, which can be used to invoke the corresponding object on the application side from the web side. |
 
 ## forward
 
@@ -190,11 +174,9 @@ Deletes a registered JavaScript object with given name.
 forward()
 ```
 
-Goes forward in the history of the web page.
+Goes forward by one page in the history stack. You are advised to call [accessForward&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessforward) to check whether the current page can go forward before calling **forward**.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -210,15 +192,13 @@ Goes forward in the history of the web page.
 getCookieManager(): WebCookie
 ```
 
-Gets network cookie manager
+Obtains the cookie management object of the **Web** component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#WebCookieManager)
+**Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#webcookiemanager)
 
 <!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
 
@@ -228,7 +208,7 @@ Gets network cookie manager
 
 | Type | Description |
 | --- | --- |
-| [WebCookie](arkts-arkweb-webcookie-c.md) |  |
+| [WebCookie](arkts-arkweb-webcookie-c.md) | Cookie management object of the **Web** component. For details, see [WebCookie]{ |
 
 ## getHitTest
 
@@ -236,15 +216,13 @@ Gets network cookie manager
 getHitTest(): HitTestType
 ```
 
-Gets the type of HitTest.
+Obtains the element type of the area being clicked.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getHitTest](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getHitTest)
+**Substitutes:** [getHitTest](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#gethittest)
 
 <!--Device-WebController-getHitTest(): HitTestType--><!--Device-WebController-getHitTest(): HitTestType-End-->
 
@@ -254,7 +232,7 @@ Gets the type of HitTest.
 
 | Type | Description |
 | --- | --- |
-| [HitTestType](arkts-arkweb-hittesttype-e.md) | The type of HitTest. |
+| [HitTestType](arkts-arkweb-hittesttype-e.md) | Element type of the area being clicked. |
 
 ## loadData
 
@@ -262,11 +240,9 @@ Gets the type of HitTest.
 loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })
 ```
 
-Loads the data or URL.
+If **baseUrl** is empty, the specified character string will be loaded using the data protocol. If **baseUrl** is set to a data URL, the encoded data string will be loaded by the Web component using the data protocol. If **baseUrl** is set to an HTTP or HTTPS URL, the encoded data string will be processed by the Web component as a non-encoded string in a manner similar to **loadUrl**.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -288,11 +264,9 @@ Loads the data or URL.
 loadUrl(options: { url: string | Resource, headers?: Array<Header> })
 ```
 
-Loads the given URL.
+Loads the specified URL with the given HTTP headers. The object injected through **loadUrl** is valid only in the current document. It will be invalid on a new page navigated to through **loadUrl**. The object injected through **registerJavaScriptProxy** is still valid on a new page redirected through **loadUrl**.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -314,11 +288,9 @@ Loads the given URL.
 onActive(): void
 ```
 
-Called when the **Web** component enters the active state. This API is supported since API version 8 and deprecated since API version 9. You are advised to use [onActive&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#onActive) instead.
+Called when the **Web** component enters the active state.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -334,11 +306,9 @@ Called when the **Web** component enters the active state. This API is supported
 onInactive(): void
 ```
 
-Called when the **Web** component enters the inactive state. This API is supported since API version 8 and deprecated since API version 9. You are advised to use [onInactive&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#onInactive) instead.
+Called when the **Web** component enters the inactive state.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -354,11 +324,9 @@ Called when the **Web** component enters the inactive state. This API is support
 refresh()
 ```
 
-refreshes the current URL.
+Called when the **Web** component refreshes the web page.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -374,11 +342,9 @@ refreshes the current URL.
 registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })
 ```
 
-Registers the JavaScript object and method list.
+Injects a JavaScript object into the window object and calls the methods of the object in the window object. The injected object does not appear in JavaScript until the next (re)load of the page.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -400,11 +366,9 @@ Registers the JavaScript object and method list.
 requestFocus()
 ```
 
-Gets the request focus.
+Makes the current web page obtain focus.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -420,11 +384,9 @@ Gets the request focus.
 runJavaScript(options: { script: string, callback?: (result: string) => void })
 ```
 
-Asynchronously execute JavaScript in the context of the currently displayed page. The result of the script execution will be returned through an asynchronous callback. This method must be used on the UI thread, and the callback will also be invoked on the UI thread. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The state of JavaScript is no longer persisted across navigations like loadUrl. For example, global variables and functions defined before calling loadUrl will not exist in the loaded page. It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations. &lt;p&gt;
+Executes a JavaScript script. This API uses an asynchronous callback to return the script execution result. **runJavaScript** can be invoked only after **loadUrl** is executed. For example, it can be invoked in **onPageEnd**.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -446,11 +408,9 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 stop()
 ```
 
-Stops the current load.
+Stops page loading.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -466,11 +426,9 @@ Stops the current load.
 zoom(factor: number): void
 ```
 
-Let the Web zoom by.
+Sets a zoom factor for the current web page.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -484,5 +442,5 @@ Let the Web zoom by.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factor | number | Yes | The zoom factor. |
+| factor | number | Yes | Zoom factor. The value **1** indicates that the current zoom ratio remains unchanged. A value less than **1** indicates zooming out, and a value greater than **1** indicates zooming in. The value ranges from (0, 100]. |
 

@@ -16,10 +16,6 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-sim-function getOperatorConfigs(slotId: int, callback: AsyncCallback<Array<OperatorConfig>>): void--><!--Device-sim-function getOperatorConfigs(slotId: int, callback: AsyncCallback<Array<OperatorConfig>>): void-End-->
@@ -47,7 +43,7 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -68,10 +64,6 @@ function getOperatorConfigs(slotId: int): Promise<Array<OperatorConfig>>
 Obtains the operatorconfigs of the SIM card in a specified slot.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -105,7 +97,7 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@ Defines a brush, which is used to describe the style and color to fill in a shap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class Brush--><!--Device-drawing-class Brush-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -28,10 +24,6 @@ A constructor used to create a **Brush** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-constructor()--><!--Device-Brush-constructor()-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -45,10 +37,6 @@ constructor(brush: Brush)
 Copies a **Brush** object to create a new one.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-constructor(brush: Brush)--><!--Device-Brush-constructor(brush: Brush)-End-->
 
@@ -76,10 +64,6 @@ Obtains the alpha value of this brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-getAlpha(): int--><!--Device-Brush-getAlpha(): int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -99,10 +83,6 @@ getColor(): common2D.Color
 Obtains the color of this brush.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-getColor(): common2D.Color--><!--Device-Brush-getColor(): common2D.Color-End-->
 
@@ -124,10 +104,6 @@ Obtains the color of this brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-getColor(): common2D.Color | undefined--><!--Device-Brush-getColor(): common2D.Color | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -144,13 +120,9 @@ Obtains the color of this brush.
 getColor4f(): common2D.Color4f
 ```
 
-Obtains the brush color. The difference between this method and [getColor](#getColor) is that this method returns a floating point number.
+Obtains the brush color. The difference between this method and [getColor](#getcolor) is that this method returns a floating point number.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-getColor4f(): common2D.Color4f--><!--Device-Brush-getColor4f(): common2D.Color4f-End-->
 
@@ -172,10 +144,6 @@ Obtains the color of a brush. The color is used by the brush to outline a shape.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-getColor4f(): common2D.Color4f | undefined--><!--Device-Brush-getColor4f(): common2D.Color4f | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -195,10 +163,6 @@ getColorFilter(): ColorFilter
 Obtains the color filter of this brush.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-getColorFilter(): ColorFilter--><!--Device-Brush-getColorFilter(): ColorFilter-End-->
 
@@ -220,10 +184,6 @@ Obtains the color filter of this brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-getColorFilter(): ColorFilter | undefined--><!--Device-Brush-getColorFilter(): ColorFilter | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -243,10 +203,6 @@ getHexColor(): int
 Obtains the color of this brush.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-getHexColor(): int--><!--Device-Brush-getHexColor(): int-End-->
 
@@ -268,10 +224,6 @@ Checks whether anti-aliasing is enabled for this brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-isAntiAlias(): boolean--><!--Device-Brush-isAntiAlias(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -292,10 +244,6 @@ Resets this brush to the initial state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-reset(): void--><!--Device-Brush-reset(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -309,10 +257,6 @@ setAlpha(alpha: int): void
 Sets an alpha value for this brush.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-setAlpha(alpha: int): void--><!--Device-Brush-setAlpha(alpha: int): void-End-->
 
@@ -340,10 +284,6 @@ Enables anti-aliasing for this brush. Anti-aliasing makes the edges of the conte
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-setAntiAlias(aa: boolean): void--><!--Device-Brush-setAntiAlias(aa: boolean): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -369,10 +309,6 @@ setBlendMode(mode: BlendMode): void
 Sets a blend mode for this brush. If this API is not called, the default blend mode is **SRC_OVER**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-setBlendMode(mode: BlendMode): void--><!--Device-Brush-setBlendMode(mode: BlendMode): void-End-->
 
@@ -400,10 +336,6 @@ Sets a color for this brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-setColor(color: common2D.Color): void--><!--Device-Brush-setColor(color: common2D.Color): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -426,13 +358,9 @@ Sets a color for this brush.
 setColor(alpha: int, red: int, green: int, blue: int): void
 ```
 
-Sets a color for this brush. This API provides better performance than [setColor](#setColor) and is recommended.
+Sets a color for this brush. This API provides better performance than [setColor](#setcolor) and is recommended.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-setColor(alpha: int, red: int, green: int, blue: int): void--><!--Device-Brush-setColor(alpha: int, red: int, green: int, blue: int): void-End-->
 
@@ -463,10 +391,6 @@ Sets a color for this brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-setColor(color: int): void--><!--Device-Brush-setColor(color: int): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -489,13 +413,9 @@ Sets a color for this brush.
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-Sets the color and standard color gamut for this brush. The difference between this method and [setColor](#setColor) is that the color gamut can be set separately.
+Sets the color and standard color gamut for this brush. The difference between this method and [setColor](#setcolor) is that the color gamut can be set separately.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void--><!--Device-Brush-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void-End-->
 
@@ -517,10 +437,6 @@ setColorFilter(filter: ColorFilter | null): void
 Sets a color filter for this brush.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-setColorFilter(filter: ColorFilter | null): void--><!--Device-Brush-setColorFilter(filter: ColorFilter | null): void-End-->
 
@@ -548,10 +464,6 @@ Sets an image filter for this brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-setImageFilter(filter: ImageFilter | null): void--><!--Device-Brush-setImageFilter(filter: ImageFilter | null): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -577,10 +489,6 @@ setMaskFilter(filter: MaskFilter | null): void
 Adds a mask filter for this brush.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-setMaskFilter(filter: MaskFilter | null): void--><!--Device-Brush-setMaskFilter(filter: MaskFilter | null): void-End-->
 
@@ -608,10 +516,6 @@ Sets the shader effect for this brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Brush-setShaderEffect(shaderEffect: ShaderEffect | null): void--><!--Device-Brush-setShaderEffect(shaderEffect: ShaderEffect | null): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -637,10 +541,6 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 Sets a shadow layer for this brush. The shadow layer effect takes effect only when text is drawn.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Brush-setShadowLayer(shadowLayer: ShadowLayer | null): void--><!--Device-Brush-setShadowLayer(shadowLayer: ShadowLayer | null): void-End-->
 

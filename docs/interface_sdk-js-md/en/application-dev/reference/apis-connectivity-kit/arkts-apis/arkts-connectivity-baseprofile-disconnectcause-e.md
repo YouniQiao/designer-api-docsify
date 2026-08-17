@@ -4,10 +4,6 @@ Enum for cause of disconnect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-baseProfile-enum DisconnectCause--><!--Device-baseProfile-enum DisconnectCause-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ USER_DISCONNECT = 0
 User disconnect device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ The connection needs to be initiated from the keyboard side.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DisconnectCause-CONNECT_FROM_KEYBOARD = 1--><!--Device-DisconnectCause-CONNECT_FROM_KEYBOARD = 1-End-->
@@ -61,10 +49,6 @@ CONNECT_FROM_MOUSE = 2
 The connection needs to be initiated from the mouse side.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ The connection needs to be initiated from the car side.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DisconnectCause-CONNECT_FROM_CAR = 3--><!--Device-DisconnectCause-CONNECT_FROM_CAR = 3-End-->
@@ -102,10 +82,6 @@ Too many devices are currently connected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DisconnectCause-TOO_MANY_CONNECTED_DEVICES = 4--><!--Device-DisconnectCause-TOO_MANY_CONNECTED_DEVICES = 4-End-->
@@ -121,10 +97,6 @@ CONNECT_FAIL_INTERNAL = 5
 Connection failed due to an internal error.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

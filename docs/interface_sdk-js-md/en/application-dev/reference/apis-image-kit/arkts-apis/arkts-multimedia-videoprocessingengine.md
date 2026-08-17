@@ -4,10 +4,6 @@ This module provides the capability of content processing for images, including 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace videoProcessingEngine--><!--Device-unnamed-declare namespace videoProcessingEngine-End-->
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
@@ -25,8 +21,8 @@ import { videoProcessingEngine } from 'videoProcessingEngine';
 | Name | Description |
 | --- | --- |
 | [create](arkts-image-videoprocessingengine-create-f.md#create) | Create an image processing instance. |
-| [deinitializeEnvironment](arkts-image-videoprocessingengine-deinitializeenvironment-f.md#deinitializeEnvironment) | Deinitialize global environment for image processing. |
-| [initializeEnvironment](arkts-image-videoprocessingengine-initializeenvironment-f.md#initializeEnvironment) | Initialize global environment for image processing. |
+| [deinitializeEnvironment](arkts-image-videoprocessingengine-deinitializeenvironment-f.md#deinitializeenvironment) | Deinitialize global environment for image processing. |
+| [initializeEnvironment](arkts-image-videoprocessingengine-initializeenvironment-f.md#initializeenvironment) | Initialize global environment for image processing. |
 
 ### Interfaces
 

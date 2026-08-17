@@ -4,10 +4,6 @@ Options for **PhoneNumberFormat** object initialization.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export interface PhoneNumberFormatOptions--><!--Device-i18n-export interface PhoneNumberFormatOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -29,10 +25,6 @@ Type of the phone number. The value can be **E164**, **INTERNATIONAL**, **NATION
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

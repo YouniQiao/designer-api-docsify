@@ -12,13 +12,9 @@ import { request } from 'request';
 function search(callback: AsyncCallback<Array<string>>): void
 ```
 
-Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#filter). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -44,13 +40,9 @@ Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Fi
 function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 ```
 
-Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses an asynchronous callback to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#filter). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -77,13 +69,9 @@ Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Fi
 function search(filter?: Filter): Promise<Array<string>>
 ```
 
-Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses a promise to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#filter). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-agent-function search(filter?: Filter): Promise<Array<string>>--><!--Device-agent-function search(filter?: Filter): Promise<Array<string>>-End-->
 

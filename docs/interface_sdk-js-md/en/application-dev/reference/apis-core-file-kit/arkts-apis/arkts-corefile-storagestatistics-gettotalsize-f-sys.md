@@ -16,10 +16,6 @@ Obtains the total size (in bytes) of the built-in storage. This API uses an asyn
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 9 - 14: ohos.permission.STORAGE_MANAGER
 
@@ -45,7 +41,7 @@ Obtains the total size (in bytes) of the built-in storage. This API uses an asyn
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,6 +52,52 @@ storageStatistics.getTotalSize((error: BusinessError, number: number) => {
     // Do something.
     console.info("getTotalSize successfully:" + number);
   }
+});
+```
+
+
+## getTotalSize
+
+```TypeScript
+function getTotalSize(): Promise<long>
+```
+
+Obtains the total size (in bytes) of the built-in storage. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Required permissions:** 
+- API version 9 - 14: ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getTotalSize(): Promise<long>--><!--Device-storageStatistics-function getTotalSize(): Promise<long>-End-->
+
+**System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;long&gt; | Promise used to return the total built-in storage space obtained. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.<br>**Applicable version:** 9 - 14 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application.<br>**Applicable version:** 9 - 14 |
+| 13600001 | IPC error. |
+| 13900042 | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getTotalSize().then((number: number) => {
+  console.info("getTotalSize successfully:" + JSON.stringify(number));
+}).catch((err: BusinessError) => {
+  console.error("getTotalSize failed with error:"+ JSON.stringify(err));
 });
 ```
 

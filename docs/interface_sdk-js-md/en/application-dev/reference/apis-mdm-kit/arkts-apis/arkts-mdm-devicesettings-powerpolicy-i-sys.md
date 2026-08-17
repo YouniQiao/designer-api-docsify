@@ -4,10 +4,6 @@ Represents the power policy.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-deviceSettings-export interface PowerPolicy--><!--Device-deviceSettings-export interface PowerPolicy-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -32,10 +28,6 @@ Delay, in ms.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PowerPolicy-delayTime: number--><!--Device-PowerPolicy-delayTime: number-End-->
@@ -55,10 +47,6 @@ Action to apply the power policy.
 **Type:** [PowerPolicyAction](arkts-mdm-devicesettings-powerpolicyaction-e-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

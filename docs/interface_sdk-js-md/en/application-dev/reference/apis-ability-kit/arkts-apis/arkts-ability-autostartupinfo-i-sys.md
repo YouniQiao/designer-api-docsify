@@ -4,10 +4,6 @@ The module defines information about the application component that automaticall
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface AutoStartupInfo--><!--Device-unnamed-export interface AutoStartupInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -25,10 +21,6 @@ Ability name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Ability type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoStartupInfo-abilityTypeName?: string--><!--Device-AutoStartupInfo-abilityTypeName?: string-End-->
@@ -73,10 +61,6 @@ Index of an application clone.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ Bundle name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoStartupInfo-bundleName: string--><!--Device-AutoStartupInfo-bundleName: string-End-->
@@ -121,10 +101,6 @@ Whether the developer is allowed to modify the auto-startup status of this appli
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,10 +122,6 @@ Module name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoStartupInfo-moduleName?: string--><!--Device-AutoStartupInfo-moduleName?: string-End-->
@@ -170,10 +142,6 @@ User ID of the person who set the application to automatically start upon system
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AutoStartupInfo-readonly setterUserId?: int--><!--Device-AutoStartupInfo-readonly setterUserId?: int-End-->
@@ -193,10 +161,6 @@ User ID associated with the application, used to differentiate applications belo
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

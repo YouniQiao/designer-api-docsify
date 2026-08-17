@@ -4,10 +4,6 @@ Describes the camera output capability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-interface CameraOutputCapability--><!--Device-camera-interface CameraOutputCapability-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -30,10 +26,6 @@ Supported photo profiles.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraOutputCapability-readonly photoProfiles: Array<Profile>--><!--Device-CameraOutputCapability-readonly photoProfiles: Array<Profile>-End-->
@@ -51,10 +43,6 @@ Supported preview profiles.
 **Type:** Array&lt;[Profile](arkts-camera-camera-profile-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -74,10 +62,6 @@ Supported metadata object types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraOutputCapability-readonly supportedMetadataObjectTypes: Array<MetadataObjectType>--><!--Device-CameraOutputCapability-readonly supportedMetadataObjectTypes: Array<MetadataObjectType>-End-->
@@ -95,10 +79,6 @@ Supported video profiles.
 **Type:** Array&lt;[VideoProfile](arkts-camera-camera-videoprofile-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

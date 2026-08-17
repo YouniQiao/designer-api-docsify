@@ -1,12 +1,8 @@
 # ArkWebEngineVersion
 
-ArkWeb内核版本，请参考 [M114内核在OpenHarmony 6.0系统上的适配指导](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/web/ReleaseNote/CompatibleWithLegacyWebEngine_6.0.md) ， [M132内核在OpenHarmony 7.0系统上的适配指导](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/web/ReleaseNote/CompatibleWithLegacyWebEngine_7.0.md) 。
+ArkWeb内核版本，请参考 [M114内核在OpenHarmony 6.0系统上的适配指导](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/web/ReleaseNote/CompatibleWithLegacyWebEngine_6.0.md)， [M132内核在OpenHarmony 7.0系统上的适配指导](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/web/ReleaseNote/CompatibleWithLegacyWebEngine_7.0.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-webview-enum ArkWebEngineVersion--><!--Device-webview-enum ArkWebEngineVersion-End-->
 
@@ -18,13 +14,9 @@ ArkWeb内核版本，请参考 [M114内核在OpenHarmony 6.0系统上的适配�
 SYSTEM_DEFAULT = 0
 ```
 
-系统默认内核，OpenHarmony 6.0版本默认为M132，OpenHarmony 7.0版本默认为M144。
+系统默认内核（可参考[约束与限制](../../../web/web-component-overview.md#约束与限制)），OpenHarmony 6.0版本默认为M132，OpenHarmony 7.0版本默认为M 144。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-ArkWebEngineVersion-SYSTEM_DEFAULT = 0--><!--Device-ArkWebEngineVersion-SYSTEM_DEFAULT = 0-End-->
 
@@ -36,13 +28,9 @@ SYSTEM_DEFAULT = 0
 M114 = 1
 ```
 
-OpenHarmony 6.0版本的遗留内核。开发者可选择此遗留内核，若系统版本上不存在此内核则设置无效。
+OpenHarmony 6.0版本的遗留内核。开发者可选择此遗留内核，若系统版本上不存在此内核则设置无效，使用系统默认内核。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-ArkWebEngineVersion-M114 = 1--><!--Device-ArkWebEngineVersion-M114 = 1-End-->
 
@@ -54,13 +42,9 @@ OpenHarmony 6.0版本的遗留内核。开发者可选择此遗留内核，若�
 M132 = 2
 ```
 
-OpenHarmony 6.0版本的常青内核（OpenHarmony 7.0版本的遗留内核），M132为OpenHarmony 6.0版本的默认内核。若系统版本上不存在此内核则设置无效。
+OpenHarmony 6.0版本的常青内核（OpenHarmony 7.0版本的遗留内核），M132为OpenHarmony 6.0版本的默认内核。若系统版本上不存在此内核则设置无效，使用系统默认内核。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-ArkWebEngineVersion-M132 = 2--><!--Device-ArkWebEngineVersion-M132 = 2-End-->
 
@@ -72,13 +56,9 @@ OpenHarmony 6.0版本的常青内核（OpenHarmony 7.0版本的遗留内核）�
 M144 = 3
 ```
 
-OpenHarmony 7.0版本的常青内核，M144为OpenHarmony 7.0版本的默认内核。若系统版本上不存在此内核则设置无效。 26.0.0
+OpenHarmony 7.0版本的常青内核，M144为OpenHarmony 7.0版本的默认内核。若系统版本上不存在此内核则设置无效，使用系统默认内核。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,13 +72,9 @@ OpenHarmony 7.0版本的常青内核，M144为OpenHarmony 7.0版本的默认内�
 ARKWEB_EVERGREEN = 99999
 ```
 
-常青内核，系统的最新内核。开发者可选择在每个系统版本上都使用最新的内核，OpenHarmony开发套件（基于API 23）及之后所有系统版本都生效。
+系统的最新内核（常青内核）。开发者可选择在每个系统版本上都使用最新的内核。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ArkWebEngineVersion-ARKWEB_EVERGREEN = 99999--><!--Device-ArkWebEngineVersion-ARKWEB_EVERGREEN = 99999-End-->
 

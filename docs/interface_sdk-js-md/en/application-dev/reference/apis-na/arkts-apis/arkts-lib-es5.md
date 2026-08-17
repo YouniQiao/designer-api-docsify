@@ -12,16 +12,16 @@
 
 | Name | Description |
 | --- | --- |
-| [decodeURI](arkts-na-lib-es5-decodeuri-f.md#decodeURI) | Gets the unencoded version of an encoded Uniform Resource Identifier (URI). |
-| [decodeURIComponent](arkts-na-lib-es5-decodeuricomponent-f.md#decodeURIComponent) | Gets the unencoded version of an encoded component of a Uniform Resource Identifier (URI). |
-| [encodeURI](arkts-na-lib-es5-encodeuri-f.md#encodeURI) | Encodes a text string as a valid Uniform Resource Identifier (URI) |
-| [encodeURIComponent](arkts-na-lib-es5-encodeuricomponent-f.md#encodeURIComponent) | Encodes a text string as a valid component of a Uniform Resource Identifier (URI). |
+| [decodeURI](arkts-na-lib-es5-decodeuri-f.md#decodeuri) | Gets the unencoded version of an encoded Uniform Resource Identifier (URI). |
+| [decodeURIComponent](arkts-na-lib-es5-decodeuricomponent-f.md#decodeuricomponent) | Gets the unencoded version of an encoded component of a Uniform Resource Identifier (URI). |
+| [encodeURI](arkts-na-lib-es5-encodeuri-f.md#encodeuri) | Encodes a text string as a valid Uniform Resource Identifier (URI) |
+| [encodeURIComponent](arkts-na-lib-es5-encodeuricomponent-f.md#encodeuricomponent) | Encodes a text string as a valid component of a Uniform Resource Identifier (URI). |
 | [escape](arkts-na-lib-es5-escape-f.md#escape) | Computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. |
 | [eval](arkts-na-lib-es5-eval-f.md#eval) | Evaluates JavaScript code and executes it. |
-| [isFinite](arkts-na-lib-es5-isfinite-f.md#isFinite) | Determines whether a supplied number is finite. |
-| [isNaN](arkts-na-lib-es5-isnan-f.md#isNaN) | Returns a Boolean value that indicates whether a value is the reserved value NaN (not a number). |
-| [parseFloat](arkts-na-lib-es5-parsefloat-f.md#parseFloat) | Converts a string to a floating-point number. |
-| [parseInt](arkts-na-lib-es5-parseint-f.md#parseInt) | Converts a string to an integer. |
+| [isFinite](arkts-na-lib-es5-isfinite-f.md#isfinite) | Determines whether a supplied number is finite. |
+| [isNaN](arkts-na-lib-es5-isnan-f.md#isnan) | Returns a Boolean value that indicates whether a value is the reserved value NaN (not a number). |
+| [parseFloat](arkts-na-lib-es5-parsefloat-f.md#parsefloat) | Converts a string to a floating-point number. |
+| [parseInt](arkts-na-lib-es5-parseint-f.md#parseint) | Converts a string to an integer. |
 | [unescape](arkts-na-lib-es5-unescape-f.md#unescape) | Computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. |
 
 ### Interfaces

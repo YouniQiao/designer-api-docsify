@@ -1,14 +1,12 @@
 # BundleInfo
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-BundleInfo](#BundleInfo) instead.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-BundleInfo](#bundleinfo) instead.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [BundleInfo](#BundleInfo)
+**Substitutes:** [BundleInfo](#bundleinfo)
 
 <!--Device-unnamed-export interface BundleInfo--><!--Device-unnamed-export interface BundleInfo-End-->
 
@@ -20,15 +18,13 @@
 readonly abilityInfos: Array<AbilityInfo>
 ```
 
-Ability configuration information. The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) .
+Ability configuration information. The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo) .
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;
 
 **Default:** Obtains configuration information about an ability
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ ID of the application to which the bundle belongs.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** appId
@@ -75,8 +69,6 @@ Application configuration information.
 **Default:** Obtains configuration information about an application
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -100,8 +92,6 @@ Earliest SDK version required for running the bundle.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-BundleInfo-readonly compatibleVersion: number--><!--Device-BundleInfo-readonly compatibleVersion: number-End-->
@@ -121,8 +111,6 @@ CPU and ABI information of the bundle.
 **Default:** Indicates the cpuAbi information of this bundle.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -144,8 +132,6 @@ Whether installation-free is supported for the entry module. **true** if support
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-BundleInfo-readonly entryInstallationFree: boolean--><!--Device-BundleInfo-readonly entryInstallationFree: boolean-End-->
@@ -166,8 +152,6 @@ Name of the entry module.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-BundleInfo-readonly entryModuleName: string--><!--Device-BundleInfo-readonly entryModuleName: string-End-->
@@ -187,8 +171,6 @@ Module configuration information.
 **Default:** Obtains configuration information about a module
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -212,8 +194,6 @@ Time when the HAP file was installed.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** installTime
@@ -236,8 +216,6 @@ Whether the native libraries in the bundle are compressed. **true** if compresse
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-BundleInfo-readonly isCompressNativeLibs: boolean--><!--Device-BundleInfo-readonly isCompressNativeLibs: boolean-End-->
@@ -258,8 +236,6 @@ Whether the application can be installed in silent mode.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-BundleInfo-readonly isSilentInstallation: string--><!--Device-BundleInfo-readonly isSilentInstallation: string-End-->
@@ -279,8 +255,6 @@ Earliest version compatible with the bundle in the distributed scenario.
 **Default:** Indicates the earliest historical version compatible with the bundle
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -304,8 +278,6 @@ Bundle name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** name
@@ -320,15 +292,13 @@ Bundle name.
 readonly reqPermissionDetails: Array<ReqPermissionDetail>
 ```
 
-Detailed information of the permissions to request from the system. The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) .
+Detailed information of the permissions to request from the system. The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo) .
 
 **Type:** Array&lt;[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md)&gt;
 
 **Default:** Indicates the required permissions details defined in file config.json
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -352,8 +322,6 @@ Permission grant state. The value **0** means that the request is successful, an
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** permissionGrantStates
@@ -368,15 +336,13 @@ Permission grant state. The value **0** means that the request is successful, an
 readonly reqPermissions: Array<string>
 ```
 
-Permissions to request from the system for running the application. The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo) .
+Permissions to request from the system for running the application. The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo) .
 
 **Type:** Array&lt;string&gt;
 
 **Default:** Indicates the required permissions name defined in file config.json
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -400,8 +366,6 @@ Latest SDK version required for running the bundle.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** targetVersion
@@ -423,8 +387,6 @@ Bundle type.
 **Default:** Indicates the name of this original bundle
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -448,8 +410,6 @@ UID of the application to which the bundle belongs.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** uid
@@ -471,8 +431,6 @@ Time when the HAP file was updated.
 **Default:** Indicates the hap update time
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -496,8 +454,6 @@ Vendor of the bundle.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** vendor
@@ -520,8 +476,6 @@ Version number of the bundle.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** versionCode
@@ -543,8 +497,6 @@ Version description of the bundle.
 **Default:** Indicates the text description of the bundle version
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

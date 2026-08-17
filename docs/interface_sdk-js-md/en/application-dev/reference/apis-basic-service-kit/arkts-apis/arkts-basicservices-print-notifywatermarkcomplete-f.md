@@ -16,10 +16,6 @@ Notify watermark complete.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_PRINT
 
 **Model restriction:** This API can be used only in the stage model.

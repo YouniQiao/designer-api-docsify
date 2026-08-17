@@ -16,11 +16,9 @@ Initializes a session for a key operation. This API uses an asynchronous callbac
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [initSession](arkts-universalkeystore-huks-initsession-f.md#initSession)(keyAlias: string, options: HuksOptions)
+**Substitutes:** [initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)(keyAlias: string, options: HuksOptions)
 
 <!--Device-huks-function init(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksHandle>): void--><!--Device-huks-function init(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksHandle>): void-End-->
 
@@ -45,11 +43,9 @@ Initializes a session for a key operation. This API uses a promise to return the
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [initSession](arkts-universalkeystore-huks-initsession-f.md#initSession)(keyAlias: string, options: HuksOptions)
+**Substitutes:** [initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)(keyAlias: string, options: HuksOptions)
 
 <!--Device-huks-function init(keyAlias: string, options: HuksOptions): Promise<HuksHandle>--><!--Device-huks-function init(keyAlias: string, options: HuksOptions): Promise<HuksHandle>-End-->
 

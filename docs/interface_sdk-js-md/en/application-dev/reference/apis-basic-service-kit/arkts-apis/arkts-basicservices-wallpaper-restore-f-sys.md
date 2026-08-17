@@ -16,10 +16,6 @@ Removes a wallpaper of the specified type and restores the default one.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
 <!--Device-wallpaper-function restore(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void--><!--Device-wallpaper-function restore(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void-End-->
@@ -43,7 +39,7 @@ Removes a wallpaper of the specified type and restores the default one.
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,10 +63,6 @@ function restore(wallpaperType: WallpaperType): Promise<void>
 Removes a wallpaper of the specified type and restores the default one.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
@@ -100,7 +92,7 @@ Removes a wallpaper of the specified type and restores the default one.
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,12 +1,8 @@
 # ProxyConfig
 
-The ProxyConfig used by applyProxyOverride.
+ProxyConfig is a class in the ArkWeb framework used to configure network proxy rules. It works with [ProxyController](arkts-arkweb-webview-proxycontroller-c.md#proxycontroller) to implement proxy control over network requests of all Web components in an app. Through ProxyConfig, developers can flexibly define various proxy rules: specifying a particular proxy server for specific URLs, specifying direct server connections for certain URLs, defining rules to bypass the proxy, and more.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class ProxyConfig--><!--Device-webview-class ProxyConfig-End-->
 
@@ -24,13 +20,9 @@ import { webview } from 'webview';
 bypassHostnamesWithoutPeriod(): void
 ```
 
-Hostnames without a period in them (and that are not IP literals) will skip the proxy and connect the server directly. Examples: "abc", "local", "some-domain".
+Hostnames without a period character will bypass the proxy and directly connect to the server.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -44,13 +36,9 @@ Hostnames without a period in them (and that are not IP literals) will skip the 
 clearImplicitRules(): void
 ```
 
-By default, certain hostnames implicitly bypass the proxy if they are link-local IPs, or localhost addresses. For instance hostnames matching any of (non-exhaustive list): localhost *.localhost [::1] 127.0.0.1/8 169.254/16 [FE80::]/10 Call this function to override the default behavior and force localhost and link-local URLs to be sent through the proxy.
+Overrides the default behavior and forcibly sends the local host address or local IP address through the proxy. ( By default, if host names are local IP addresses or local host addresses, they bypass the proxy.)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -64,13 +52,9 @@ By default, certain hostnames implicitly bypass the proxy if they are link-local
 enableReverseBypass(reverse: boolean): void
 ```
 
-Reverse the bypass rules. If false all URLs will use proxy settings except URLs match the bypass rules. If true only URLs in the bypass list will use proxy, and all other URLs will be connected to directly.
+Reverses the bypass rule.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -82,7 +66,7 @@ Reverse the bypass rules. If false all URLs will use proxy settings except URLs 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reverse | boolean | Yes | If reverse the bypass rule. |
+| reverse | boolean | Yes | Whether to reverse the bypass rule. The default value is **false**, indicating the bypass rule set in [insertBypassRule](#insertbypassrule) is not reversed. The value **true** indicates the opposite. |
 
 **Error codes:**
 
@@ -96,13 +80,9 @@ Reverse the bypass rules. If false all URLs will use proxy settings except URLs 
 getBypassRules(): Array<string>
 ```
 
-Returns the bypass rules.
+Obtains the list of URLs that do not use the proxy.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -114,7 +94,7 @@ Returns the bypass rules.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | The bypass rules. |
+| Array&lt;string&gt; | List of URLs that do not use the proxy. |
 
 ## getProxyRules
 
@@ -122,13 +102,9 @@ Returns the bypass rules.
 getProxyRules(): Array<ProxyRule>
 ```
 
-Returns the proxy rules.
+Obtains proxy rules.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -140,7 +116,7 @@ Returns the proxy rules.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; | The proxy rules. |
+| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; | Proxy rule. Each ProxyRule object represents a configured proxy rule. |
 
 ## insertBypassRule
 
@@ -148,13 +124,9 @@ Returns the proxy rules.
 insertBypassRule(bypassRule: string): void
 ```
 
-Insert a bypass rule that indicates URLs that should skip the override proxy and connect the server directly instead. These maybe URLs or IP addresses and wildcards are supported. e.g. "*.example.com" means that requests to "https://www.example.com" and "http://test.example.com" will connect the server directly.
+Inserts a bypass rule, specifying which URLs should bypass the proxy and directly connect to the server. When [enableReverseBypass](#enablereversebypass) is set to true, URLs matching bypassRule will use the proxy instead of bypassing it.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -166,7 +138,7 @@ Insert a bypass rule that indicates URLs that should skip the override proxy and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bypassRule | string | Yes | The bypass rule. |
+| bypassRule | string | Yes | Bypass rule string that specifies the URL matching rule for bypassing the proxy. It supports host name or domain name formats (for example, "example.com" matches the domain and its subdomains). URLs matching the bypassRule bypass the proxy. |
 
 **Error codes:**
 
@@ -180,13 +152,9 @@ Insert a bypass rule that indicates URLs that should skip the override proxy and
 insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 ```
 
-Insert a proxy rule that indicates URLs that match the schemeFilter will connect the server directly.
+Inserts a direct rule, specifying that URLs matching the schemeFilter condition will directly connect to the server. > **NOTE：**> > - Both [insertBypassRule](#insertbypassrule) and > [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod) can also implement > direct URL connection. The difference lies in the matching dimension: this method matches by protocol type > through schemeFilter; insertBypassRule matches by URL pattern through a bypassRule string; > bypassHostnamesWithoutPeriod requires no parameters and automatically enables direct connection for hostnames > without a period. You can choose the appropriate method based on the URL range that needs direct connection.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -198,7 +166,7 @@ Insert a proxy rule that indicates URLs that match the schemeFilter will connect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No | The scheme filter for this rule. |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs to be directly connected to the server. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Error codes:**
 
@@ -212,13 +180,9 @@ Insert a proxy rule that indicates URLs that match the schemeFilter will connect
 insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 ```
 
-Insert a proxy rule which indicates that requests matching the schemeFilter should use an override proxy, all requests will use the proxy rule if schemeFilter is null. The format for proxy is [scheme://]host[:port]. Scheme is optional and must be HTTP, HTTPS, or SOCKS if present. Scheme defaults to HTTP. Host is an IPv6 literal with brackets, an IPv4 literal or one or more labels seperated by a period. Port number is optional and defaults to 80 for HTTP, 443 for HTTPS and 1080 for SOCKS. e.g. example.com host: example.com https://example.com scheme: https host: example.com example.com:8888 host: example.com port: 8888 https://example.com:8888 scheme:https host: example.com port:8888 192.168.1.1 host: 192.168.1.1 192.168.1.1:8888 host:192.168.1.1 port: 8888 [10:20:30:40:50:60:70:80]
+Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. If the schemeFilter parameter is not specified, the default value MATCH_ALL_SCHEMES will be used, and all URLs will use the specified proxy. The proxy format is [scheme://]host[:port]. The scheme is optional and must be HTTP, HTTPS, or SOCKS. The default value of scheme is HTTP. The host is a bracketed IPv6 literal, an IPv4 literal, or one or more labels separated by dots. The port number is optional. The default port is 80 for HTTP, 443 for HTTPS, and 1080 for SOCKS. For example: - example.com host: example.com - https://example.com scheme: https host: example.com - example.com:8888 host: example.com port: 8888 - https://example.com:8888 scheme: https host: example.com port: 8888 - 192.168.1.1 host: 192.168.1.1 - 192.168.1.1:8888 host: 192.168.1.1 port: 8888 - [10:20:30:40:50:60:70:80]
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -230,8 +194,8 @@ Insert a proxy rule which indicates that requests matching the schemeFilter shou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| proxyRule | string | Yes | The proxy rule. |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No | The scheme filter for this rule. |
+| proxyRule | string | Yes | The specified proxy. |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs that use the proxy. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Error codes:**
 
@@ -245,13 +209,9 @@ Insert a proxy rule which indicates that requests matching the schemeFilter shou
 isReverseBypassEnabled(): boolean
 ```
 
-Returns if reverse bypass rules.
+Obtains the value of [enableReverseBypass](#enablereversebypass). For details, see [enableReverseBypass](#enablereversebypass).
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -263,5 +223,5 @@ Returns if reverse bypass rules.
 
 | Type | Description |
 | --- | --- |
-| boolean | If reverse bypass enabled. |
+| boolean | Value of [enableReverseBypass]{ |
 

@@ -4,10 +4,6 @@ Defines the options for selecting audio clips.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-picker-class AudioSelectOptions--><!--Device-picker-class AudioSelectOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -29,10 +25,6 @@ Maximum number of audio clips that can be selected. Default value: 1. Value rang
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

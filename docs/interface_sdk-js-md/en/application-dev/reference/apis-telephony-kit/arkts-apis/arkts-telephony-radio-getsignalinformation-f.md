@@ -16,10 +16,6 @@ Obtains the list of signal strength information of the registered network corres
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-function getSignalInformation(slotId: int, callback: AsyncCallback<Array<SignalInformation>>): void--><!--Device-radio-function getSignalInformation(slotId: int, callback: AsyncCallback<Array<SignalInformation>>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -29,7 +25,7 @@ Obtains the list of signal strength information of the registered network corres
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting the instance list of the child classes derived from [SignalInformation](arkts-telephony-radio-signalinformation-i.md#SignalInformation). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting the instance list of the child classes derived from [SignalInformation](arkts-telephony-radio-signalinformation-i.md#signalinformation). |
 
 **Error codes:**
 
@@ -41,7 +37,7 @@ Obtains the list of signal strength information of the registered network corres
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -66,10 +62,6 @@ function getSignalInformation(slotId: int): Promise<Array<SignalInformation>>
 Obtains the list of signal strength information of the registered network corresponding to a specified SIM card.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-radio-function getSignalInformation(slotId: int): Promise<Array<SignalInformation>>--><!--Device-radio-function getSignalInformation(slotId: int): Promise<Array<SignalInformation>>-End-->
 
@@ -97,7 +89,7 @@ Obtains the list of signal strength information of the registered network corres
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

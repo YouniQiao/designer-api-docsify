@@ -4,10 +4,6 @@ Preferences实例配置选项。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-preferences-interface Options--><!--Device-preferences-interface Options-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -23,10 +19,6 @@ dataGroupId?: string | null | undefined
 **类型：** string \| null \| undefined
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,10 +40,6 @@ Preferences实例的名称。名称长度需大于零且小于等于255字节，
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Options-name: string--><!--Device-Options-name: string-End-->
@@ -69,10 +57,6 @@ storageType?: StorageType | null | undefined
 **类型：** [StorageType](arkts-arkdata-preferences-storagetype-e.md) \| null \| undefined
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

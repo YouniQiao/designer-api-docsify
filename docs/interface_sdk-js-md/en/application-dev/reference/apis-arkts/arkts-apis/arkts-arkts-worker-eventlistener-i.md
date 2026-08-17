@@ -4,11 +4,9 @@ Implements event listening.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md#WorkerEventListener)
+**Substitutes:** [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md#workereventlistener)
 
 <!--Device-unnamed-export interface EventListener--><!--Device-unnamed-export interface EventListener-End-->
 
@@ -43,8 +41,6 @@ Specifies the callback to invoke.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** ohos.worker.WorkerEventListener.(event: Event)
@@ -59,7 +55,7 @@ Specifies the callback to invoke.
 | --- | --- | --- | --- |
 | evt | [Event](arkts-arkts-worker-event-i.md) | Yes | evt evt Event class for the callback to invoke. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Index.ets

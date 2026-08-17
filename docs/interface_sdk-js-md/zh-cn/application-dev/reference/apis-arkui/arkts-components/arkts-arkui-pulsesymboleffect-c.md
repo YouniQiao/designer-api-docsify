@@ -2,13 +2,9 @@
 
 PulseSymbolEffect继承自父类SymbolEffect，脉冲动效。
 
-**继承/实现关系：** PulseSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
+**继承/实现关系：** PulseSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#symboleffect)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

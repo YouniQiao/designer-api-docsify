@@ -10,11 +10,9 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent)
+**替代接口：** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -27,9 +25,9 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | 是 | WantAgent信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | 是 | 创建WantAgent的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | 是 | 创建WantAgent的回调方法。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -83,11 +81,9 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent)
+**替代接口：** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -107,7 +103,7 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 | --- | --- |
 | Promise&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Promise对象，返回用于触发指定操作的WantAgent实例。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

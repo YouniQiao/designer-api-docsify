@@ -10,9 +10,7 @@ Creates an IndexUtil object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -30,5 +28,5 @@ Creates an IndexUtil object.
 
 | Type | Description |
 | --- | --- |
-| [IndexUtil](arkts-na-i18n-indexutil-c.md) | IndexUtil object created based on the specified locale ID. |
+| [IndexUtil](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-indexutil-c.md) | IndexUtil object created based on the specified locale ID. |
 

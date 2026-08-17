@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-unnamed-export interface FileResponse--><!--Device-unnamed-export interface FileResponse-End-->
@@ -23,8 +21,6 @@ lastModifiedTime: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 
@@ -44,8 +40,6 @@ length: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-FileResponse-length: number--><!--Device-FileResponse-length: number-End-->
@@ -63,8 +57,6 @@ subFiles?: Array<FileResponse>
 **类型：** Array&lt;[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)&gt;
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 
@@ -84,8 +76,6 @@ type: 'dir' | 'file'
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-FileResponse-type: 'dir' | 'file'--><!--Device-FileResponse-type: 'dir' | 'file'-End-->
@@ -103,8 +93,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 

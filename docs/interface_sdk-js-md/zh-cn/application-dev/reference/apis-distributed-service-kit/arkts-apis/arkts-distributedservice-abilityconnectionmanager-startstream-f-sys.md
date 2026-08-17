@@ -10,10 +10,6 @@ Start Streaming
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-abilityConnectionManager-function startStream(streamId: int): void--><!--Device-abilityConnectionManager-function startStream(streamId: int): void-End-->
@@ -36,7 +32,7 @@ Start Streaming
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [32300002](../../apis-distributedservice-kit/errorcode-device-manager.md#32300002-流接收端未启动) | The stream at the receive end is not started. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

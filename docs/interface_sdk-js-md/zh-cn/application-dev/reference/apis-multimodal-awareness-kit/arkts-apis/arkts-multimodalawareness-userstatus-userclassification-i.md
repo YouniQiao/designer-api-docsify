@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
 **废弃版本：** 24
 
 <!--Device-userStatus-export interface UserClassification--><!--Device-userStatus-export interface UserClassification-End-->
@@ -24,8 +22,6 @@ ageGroup?: UserAgeGroup
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
 **废弃版本：** 24
 
 <!--Device-UserClassification-ageGroup?: UserAgeGroup--><!--Device-UserClassification-ageGroup?: UserAgeGroup-End-->
@@ -43,8 +39,6 @@ confidence?: float
 **类型：** float
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
 **废弃版本：** 24
 

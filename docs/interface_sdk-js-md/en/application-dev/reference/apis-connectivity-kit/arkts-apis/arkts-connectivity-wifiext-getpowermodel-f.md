@@ -16,11 +16,9 @@ Obtains the current Wi-Fi power mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md#getPowerMode)
+**Substitutes:** [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md#getpowermode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -45,11 +43,9 @@ Obtains the current Wi-Fi power mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md#getPowerMode)
+**Substitutes:** [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md#getpowermode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

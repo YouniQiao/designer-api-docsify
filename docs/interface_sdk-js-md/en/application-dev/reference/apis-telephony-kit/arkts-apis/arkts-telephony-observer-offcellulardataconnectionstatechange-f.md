@@ -16,10 +16,6 @@ Cancel callback when the cellular data link connection state is updated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function offCellularDataConnectionStateChange(callback?: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function offCellularDataConnectionStateChange(callback?: Callback<DataConnectionStateInfo>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry

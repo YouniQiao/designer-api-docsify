@@ -10,8 +10,6 @@ Computes a new string in which hexadecimal escape sequences are replaced with th
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
 **Deprecated since:** legacy feature for browser compatibility
 
 <!--Device-unnamed-declare function unescape(string: string): string--><!--Device-unnamed-declare function unescape(string: string): string-End-->

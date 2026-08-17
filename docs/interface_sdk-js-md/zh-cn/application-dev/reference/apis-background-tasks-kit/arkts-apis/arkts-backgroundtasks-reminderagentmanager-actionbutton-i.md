@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-reminderAgentManager-interface ActionButton--><!--Device-reminderAgentManager-interface ActionButton-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -23,10 +19,6 @@ title: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ActionButton-title: string--><!--Device-ActionButton-title: string-End-->
 
@@ -44,10 +36,6 @@ titleResource?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ActionButton-titleResource?: string--><!--Device-ActionButton-titleResource?: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -63,10 +51,6 @@ type: ActionButtonType
 **类型：** ActionButtonType
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ActionButton-type: ActionButtonType--><!--Device-ActionButton-type: ActionButtonType-End-->
 

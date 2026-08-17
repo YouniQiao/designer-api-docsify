@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace cloudDiskManager--><!--Device-unnamed-declare namespace cloudDiskManager-End-->
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager

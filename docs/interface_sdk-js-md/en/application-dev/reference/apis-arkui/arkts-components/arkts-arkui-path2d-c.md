@@ -1,14 +1,10 @@
 # Path2D
 
-**Path2D** allows you to describe a path through an existing path. This path can be drawn through the **stroke** or **fill** API of **Canvas**. > **NOTE：**> > The Path2D object does not support the resetting of an existing path. If a new path > is required, you can create an empty Path2D object. > > The methods of the Path2D object do not take effect for the paths set in the > [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D) > and > [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#OffscreenCanvasRenderingContext2D) > objects.
+**Path2D** allows you to describe a path through an existing path. This path can be drawn through the **stroke** or **fill** API of **Canvas**. > **NOTE：**> > The Path2D object does not support the resetting of an existing path. If a new path > is required, you can create an empty Path2D object. > > The methods of the Path2D object do not take effect for the paths set in the > [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d) > and > [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#offscreencanvasrenderingcontext2d) > objects.
 
-**Inheritance/Implementation:** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
+**Inheritance/Implementation:** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md#canvaspath)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class Path2D--><!--Device-unnamed-declare class Path2D-End-->
 
@@ -23,10 +19,6 @@ addPath(path: Path2D, transform?: Matrix2D): void
 Adds a path to this path.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -53,10 +45,6 @@ Constructs an empty **Path2D** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -75,10 +63,6 @@ Constructs an empty Path2D object. The unit mode of the Path2D object can be con
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -93,7 +77,7 @@ Constructs an empty Path2D object. The unit mode of the Path2D object can be con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT |
+| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT |
 
 ## constructor
 
@@ -104,10 +88,6 @@ constructor(path: Path2D)
 Constructs a Path2D object using a path object.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -133,10 +113,6 @@ When a path object is used to construct a Path2D object, the unit mode of the Pa
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -152,7 +128,7 @@ When a path object is used to construct a Path2D object, the unit mode of the Pa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path** object. |
-| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT |
+| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT |
 
 ## constructor
 
@@ -163,10 +139,6 @@ constructor(d: string)
 Constructs a Path2D object using a path string that complies with the SVG path description specifications.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -180,7 +152,7 @@ Constructs a Path2D object using a path string that complies with the SVG path d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | string | Yes | Path that complies with the [SVG path syntax](#Path2D). Invalid values are treated as invalid inputs. |
+| d | string | Yes | Path that complies with the [SVG path syntax](#path2d). Invalid values are treated as invalid inputs. |
 
 ## constructor
 
@@ -191,10 +163,6 @@ constructor(description: string, unit: LengthMetricsUnit)
 Constructs a Path2D object using a path string that complies with the SVG path specifications. The unit mode of the Path2D object can be configured.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,6 +178,6 @@ Constructs a Path2D object using a path string that complies with the SVG path s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string | Yes | Path that complies with the [SVG path syntax](#Path2D). Invalid values are treated as invalid inputs. |
-| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT |
+| description | string | Yes | Path that complies with the [SVG path syntax](#path2d). Invalid values are treated as invalid inputs. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT |
 

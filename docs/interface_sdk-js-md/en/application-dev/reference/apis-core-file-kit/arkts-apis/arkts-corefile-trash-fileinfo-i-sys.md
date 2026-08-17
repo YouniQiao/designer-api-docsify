@@ -4,8 +4,6 @@ Represents information about a file or directory in the **Recently deleted** lis
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 <!--Device-trash-interface FileInfo--><!--Device-trash-interface FileInfo-End-->
@@ -32,8 +30,6 @@ Time when the file or directory was created. It is the number of seconds elapsed
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -55,8 +51,6 @@ Name of the file or directory.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 
@@ -80,8 +74,6 @@ Permission on the file or directory.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -103,8 +95,6 @@ Time when the file or directory was last modified. It is the number of milliseco
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 
@@ -128,8 +118,6 @@ Size of a file or directory, in bytes.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -152,8 +140,6 @@ Path of the file or directory before being deleted.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -175,8 +161,6 @@ URI of the file or directory.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 

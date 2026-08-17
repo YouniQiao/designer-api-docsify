@@ -16,10 +16,6 @@ Obtains the installation path of a specified plugin in the current [application 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string--><!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -42,7 +38,7 @@ Obtains the installation path of a specified plugin in the current [application 
 | --- | --- |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

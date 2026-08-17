@@ -8,10 +8,6 @@ Deposit certificate
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-socket-export type X509CertRawData = cert.EncodingBlob--><!--Device-socket-export type X509CertRawData = cert.EncodingBlob-End-->
 
 **System capability:** SystemCapability.Communication.NetStack

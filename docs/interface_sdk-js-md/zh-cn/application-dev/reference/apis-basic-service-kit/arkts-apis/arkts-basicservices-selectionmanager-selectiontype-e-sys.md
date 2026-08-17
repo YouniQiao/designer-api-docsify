@@ -4,10 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 <!--Device-selectionManager-enum SelectionType--><!--Device-selectionManager-enum SelectionType-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
@@ -23,10 +19,6 @@ MOUSE_MOVE = 1
 鼠标或触控板滑动划词。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,10 +38,6 @@ DOUBLE_CLICK = 2
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SelectionType-DOUBLE_CLICK = 2--><!--Device-SelectionType-DOUBLE_CLICK = 2-End-->
@@ -67,10 +55,6 @@ TRIPLE_CLICK = 3
 鼠标或触控板三击划词。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

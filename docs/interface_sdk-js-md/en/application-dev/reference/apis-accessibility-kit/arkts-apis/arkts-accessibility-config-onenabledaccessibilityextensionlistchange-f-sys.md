@@ -16,10 +16,6 @@ Register the listener that watches for changes in the enabled status of accessib
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
 <!--Device-config-function onEnabledAccessibilityExtensionListChange(callback: Callback<void>): void--><!--Device-config-function onEnabledAccessibilityExtensionListChange(callback: Callback<void>): void-End-->

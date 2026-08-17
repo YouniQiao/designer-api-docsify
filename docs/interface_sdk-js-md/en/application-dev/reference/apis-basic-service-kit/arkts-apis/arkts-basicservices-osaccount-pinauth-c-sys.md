@@ -4,10 +4,6 @@ Provides APIs for PIN authentication.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-class PINAuth--><!--Device-osAccount-class PINAuth-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -30,10 +26,6 @@ Creates a PIN authentication instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PINAuth-constructor()--><!--Device-PINAuth-constructor()-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -46,7 +38,7 @@ Creates a PIN authentication instance.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
@@ -61,10 +53,6 @@ registerInputer(inputer: IInputer): void
 Registers a PIN inputer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_PIN_AUTH
 
@@ -91,7 +79,7 @@ Registers a PIN inputer.
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300103](../../apis-basic-services-kit/errorcode-account.md#12300103-credential-inputer-already-exists) | The credential inputer already exists. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -121,10 +109,6 @@ Unregisters this PIN inputer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_PIN_AUTH
 
 <!--Device-PINAuth-unregisterInputer(): void--><!--Device-PINAuth-unregisterInputer(): void-End-->
@@ -140,7 +124,7 @@ Unregisters this PIN inputer.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();

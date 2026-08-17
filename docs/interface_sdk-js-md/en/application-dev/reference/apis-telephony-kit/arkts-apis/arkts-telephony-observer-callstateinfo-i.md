@@ -4,10 +4,6 @@ Defines information about the call status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-export interface CallStateInfo--><!--Device-observer-export interface CallStateInfo-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -30,10 +26,6 @@ Phone number.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-CallStateInfo-number: string--><!--Device-CallStateInfo-number: string-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -50,10 +42,6 @@ Call type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallStateInfo-state: CallState--><!--Device-CallStateInfo-state: CallState-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -69,10 +57,6 @@ Indicates call number.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallStateInfo-teleNumber: string--><!--Device-CallStateInfo-teleNumber: string-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-certificateManager-export interface CertAbstract--><!--Device-certificateManager-export interface CertAbstract-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
@@ -23,10 +19,6 @@ certAlias: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CertAbstract-certAlias: string--><!--Device-CertAbstract-certAlias: string-End-->
 
@@ -44,10 +36,6 @@ state: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CertAbstract-state: boolean--><!--Device-CertAbstract-state: boolean-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
@@ -64,10 +52,6 @@ subjectName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CertAbstract-subjectName: string--><!--Device-CertAbstract-subjectName: string-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
@@ -83,10 +67,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CertAbstract-uri: string--><!--Device-CertAbstract-uri: string-End-->
 

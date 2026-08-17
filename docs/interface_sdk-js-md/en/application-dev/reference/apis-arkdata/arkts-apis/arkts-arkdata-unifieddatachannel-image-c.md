@@ -1,14 +1,10 @@
 # Image
 
-Represents the image data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md#File) and is used to describe images.
+Represents the image data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md#file) and is used to describe images.
 
-**Inheritance/Implementation:** Image extends [File](arkts-arkdata-unifieddatachannel-file-c.md#File)
+**Inheritance/Implementation:** Image extends [File](arkts-arkdata-unifieddatachannel-file-c.md#file)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Adds one or more check rules. HiChecker detects unexpected operations or gives f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hichecker-function addCheckRule(rule: bigint) : void--><!--Device-hichecker-function addCheckRule(rule: bigint) : void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
@@ -36,7 +32,7 @@ Adds one or more check rules. HiChecker detects unexpected operations or gives f
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | the parameter check failed, only one bigint type parameter is needed |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

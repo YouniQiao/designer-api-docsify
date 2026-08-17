@@ -16,10 +16,6 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource--><!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource-End-->
@@ -38,7 +34,7 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 | --- | --- |
 | [MediaSource](arkts-media-media-mediasource-i.md) | MediaSource instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let streams : Array<media.MediaStream> = [];
@@ -58,10 +54,6 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 Creates a multi-bitrate media source for streaming media. Currently, only the HTTP-FLV multi-bitrate media source is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource | undefined--><!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource | undefined-End-->
 

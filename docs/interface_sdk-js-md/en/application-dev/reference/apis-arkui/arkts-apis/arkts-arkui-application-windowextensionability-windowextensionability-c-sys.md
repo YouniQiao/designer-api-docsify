@@ -4,8 +4,6 @@ class of window extension ability.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 21
 
 <!--Device-unnamed-declare class WindowExtensionAbility--><!--Device-unnamed-declare class WindowExtensionAbility-End-->
@@ -30,8 +28,6 @@ Called back when a window extension is first connected to an ability.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
@@ -48,7 +44,7 @@ Called back when a window extension is first connected to an ability.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates connection information about the Window ability. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WindowExtensionAbility } from '@kit.ArkUI';
@@ -71,8 +67,6 @@ Called back when all abilities connected to a window extension are disconnected.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
@@ -89,7 +83,7 @@ Called back when all abilities connected to a window extension are disconnected.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates disconnection information about the window extension. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WindowExtensionAbility } from '@kit.ArkUI';
@@ -112,8 +106,6 @@ Called back when window is created.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
@@ -130,7 +122,7 @@ Called back when window is created.
 | --- | --- | --- | --- |
 | window | window.Window | Yes | Current Window instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { WindowExtensionAbility, window } from '@kit.ArkUI';
@@ -158,8 +150,6 @@ Indicates window extension ability context.
 **Type:** [WindowExtensionContext](arkts-arkui-windowextensioncontext-t-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 21
 

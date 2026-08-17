@@ -1,12 +1,8 @@
 # WebKeyboardController
 
-Define the controller to interact with a custom keyboard, related to the onInterceptKeyboardAttach event.
+WebKeyboardController是ArkWeb提供的用于控制Web组件自定义键盘行为的控制器类。当Web页面中的输入框需要弹出键盘时，开发者可通过 [onInterceptKeyboardAttach](arkts-arkweb-web-attribute.md#oninterceptkeyboardattach)事件拦截系统默认键盘的挂载，并使用WebKeyboardController向当前聚焦的 Web输入框执行插入字符、前向/后向删除、发送Enter等功能键以及关闭自定义键盘等操作。该类适用于需要为Web场景实现自定义安全键盘、表情键盘、手写键盘或业务专属输入面板的应用，使开发者能够完全接管Web输入框的键盘输入逻辑。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class WebKeyboardController--><!--Device-unnamed-declare class WebKeyboardController-End-->
 
@@ -18,13 +14,9 @@ Define the controller to interact with a custom keyboard, related to the onInter
 close(): void
 ```
 
-Close the custom keyboard.
+关闭自定义键盘。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WebKeyboardController-close(): void--><!--Device-WebKeyboardController-close(): void-End-->
 
@@ -36,13 +28,9 @@ Close the custom keyboard.
 constructor()
 ```
 
-Constructor.
+WebKeyboardController的构造函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,13 +44,9 @@ Constructor.
 deleteBackward(length: number): void
 ```
 
-Delete text from front to back.
+删除光标后面的指定长度字符。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WebKeyboardController-deleteBackward(length: number): void--><!--Device-WebKeyboardController-deleteBackward(length: number): void-End-->
 
@@ -72,7 +56,7 @@ Delete text from front to back.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | number | 是 | length of text, which will be deleted from front to back. |
+| length | number | 是 | 删除光标后面的指定长度字符。 <br>取值范围：[-2147483648 , 2147483647]，当参数值大于字符长度时，默认删除光标后面所有字符；参数值为负数时，不执行删除操作。 |
 
 ## deleteForward
 
@@ -80,13 +64,9 @@ Delete text from front to back.
 deleteForward(length: number): void
 ```
 
-Delete text from back to front.
+删除光标前面的指定长度字符。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WebKeyboardController-deleteForward(length: number): void--><!--Device-WebKeyboardController-deleteForward(length: number): void-End-->
 
@@ -96,7 +76,7 @@ Delete text from back to front.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | number | 是 | length of text, which will be deleted from back to front. |
+| length | number | 是 | 删除光标前面的指定长度字符。 <br>取值范围：[-2147483648 , 2147483647]，当参数值大于字符长度时，默认删除光标前面所有字符；参数值为负数时，不执行删除操作。 |
 
 ## insertText
 
@@ -104,13 +84,9 @@ Delete text from back to front.
 insertText(text: string): void
 ```
 
-Insert text into Editor.
+Web输入框中插入字符。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WebKeyboardController-insertText(text: string): void--><!--Device-WebKeyboardController-insertText(text: string): void-End-->
 
@@ -120,7 +96,7 @@ Insert text into Editor.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | text which will be inserted. |
+| text | string | 是 | 在当前光标位置插入Web输入框的文本。若存在选中文本则替换为该文本；触发输入事件；光标移动到插入文本末尾。 |
 
 ## sendFunctionKey
 
@@ -128,13 +104,9 @@ Insert text into Editor.
 sendFunctionKey(key: number): void
 ```
 
-Send the function of the key.
+插入功能按键，目前仅支持Enter键类型，取值见[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#enterkeytype)。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WebKeyboardController-sendFunctionKey(key: number): void--><!--Device-WebKeyboardController-sendFunctionKey(key: number): void-End-->
 
@@ -144,5 +116,5 @@ Send the function of the key.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | number | 是 | action indicates the "enter" key related to the [inputMethodEngine](../../apis-ime-kit/arkts-apis/arkts-inputmethodengine.md#@ohos.inputMethodEngine) |
+| key | number | 是 | 功能键类型，仅支持Enter键。 |
 

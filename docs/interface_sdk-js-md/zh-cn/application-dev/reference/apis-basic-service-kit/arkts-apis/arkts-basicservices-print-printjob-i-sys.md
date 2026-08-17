@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-interface PrintJob--><!--Device-print-interface PrintJob-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -25,10 +21,6 @@ colorMode: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJob-colorMode: int--><!--Device-PrintJob-colorMode: int-End-->
 
@@ -48,10 +40,6 @@ copyNumber: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJob-copyNumber: int--><!--Device-PrintJob-copyNumber: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -69,10 +57,6 @@ duplexMode: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJob-duplexMode: int--><!--Device-PrintJob-duplexMode: int-End-->
 
@@ -92,10 +76,6 @@ fdList: Array<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJob-fdList: Array<int>--><!--Device-PrintJob-fdList: Array<int>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -113,10 +93,6 @@ isLandscape: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJob-isLandscape: boolean--><!--Device-PrintJob-isLandscape: boolean-End-->
 
@@ -136,10 +112,6 @@ isSequential: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJob-isSequential: boolean--><!--Device-PrintJob-isSequential: boolean-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -157,10 +129,6 @@ jobId: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJob-jobId: string--><!--Device-PrintJob-jobId: string-End-->
 
@@ -180,10 +148,6 @@ jobState: PrintJobState
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJob-jobState: PrintJobState--><!--Device-PrintJob-jobState: PrintJobState-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -201,10 +165,6 @@ jobSubstate: PrintJobSubState
 **类型：** [PrintJobSubState](arkts-basicservices-print-printjobsubstate-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJob-jobSubstate: PrintJobSubState--><!--Device-PrintJob-jobSubstate: PrintJobSubState-End-->
 
@@ -224,10 +184,6 @@ margin?: PrintMargin
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJob-margin?: PrintMargin--><!--Device-PrintJob-margin?: PrintMargin-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -245,10 +201,6 @@ options?: Object
 **类型：** Object
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJob-options?: Object--><!--Device-PrintJob-options?: Object-End-->
 
@@ -268,10 +220,6 @@ pageRange: PrinterRange
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJob-pageRange: PrinterRange--><!--Device-PrintJob-pageRange: PrinterRange-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -289,10 +237,6 @@ pageSize: PrintPageSize
 **类型：** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJob-pageSize: PrintPageSize--><!--Device-PrintJob-pageSize: PrintPageSize-End-->
 
@@ -312,10 +256,6 @@ preview?: PreviewAttribute
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintJob-preview?: PreviewAttribute--><!--Device-PrintJob-preview?: PreviewAttribute-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -333,10 +273,6 @@ printerId: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintJob-printerId: string--><!--Device-PrintJob-printerId: string-End-->
 

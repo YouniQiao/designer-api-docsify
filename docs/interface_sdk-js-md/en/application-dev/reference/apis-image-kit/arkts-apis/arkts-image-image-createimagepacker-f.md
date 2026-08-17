@@ -16,10 +16,6 @@ Creates an ImagePacker instance. Images occupy a large amount of memory. When yo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-image-function createImagePacker(): ImagePacker--><!--Device-image-function createImagePacker(): ImagePacker-End-->
@@ -32,7 +28,7 @@ Creates an ImagePacker instance. Images occupy a large amount of memory. When yo
 | --- | --- |
 | [ImagePacker](arkts-image-image-imagepacker-i.md) | ImagePacker instance created. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function CreateImagePacker() {

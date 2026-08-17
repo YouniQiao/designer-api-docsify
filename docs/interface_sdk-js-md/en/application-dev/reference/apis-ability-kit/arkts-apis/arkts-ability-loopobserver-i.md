@@ -1,12 +1,8 @@
 # LoopObserver
 
-The module defines an observer to listen for event processing timeout. It can be used as an input parameter in [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#on_error) to listen for the event processing timeout of the current application's main thread.
+The module defines an observer to listen for event processing timeout. It can be used as an input parameter in [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#onerror) to listen for the event processing timeout of the current application's main thread.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface LoopObserver--><!--Device-unnamed-export interface LoopObserver-End-->
 
@@ -22,10 +18,6 @@ Called when a timeout occurs for the main thread to process an event in the JS r
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LoopObserver-onLoopTimeOut?(timeout: int): void--><!--Device-LoopObserver-onLoopTimeOut?(timeout: int): void-End-->
@@ -38,7 +30,7 @@ Called when a timeout occurs for the main thread to process an event in the JS r
 | --- | --- | --- | --- |
 | timeout | int | Yes | Actual execution time of the main thread. The value must be greater than **0**. The unit is milliseconds (ms). The value should be an integer. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';

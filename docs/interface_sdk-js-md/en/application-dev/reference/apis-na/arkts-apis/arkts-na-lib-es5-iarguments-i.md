@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface IArguments--><!--Device-unnamed-interface IArguments-End-->
 
 ## callee
@@ -18,10 +14,6 @@ callee: Function
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-IArguments-callee: Function--><!--Device-IArguments-callee: Function-End-->
 
 ## length
@@ -33,10 +25,6 @@ length: number
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-IArguments-length: number--><!--Device-IArguments-length: number-End-->
 

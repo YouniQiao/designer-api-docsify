@@ -16,10 +16,6 @@ Updates the service scope supported by the specified companion device template. 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -34,7 +30,7 @@ Updates the service scope supported by the specified companion device template. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateId | Uint8Array | Yes | ID of the target template. Unique ID of the template whose service scope is to be updated, which can be obtained through [getTemplateStatus](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#getTemplateStatus). |
+| templateId | Uint8Array | Yes | ID of the target template. Unique ID of the template whose service scope is to be updated, which can be obtained through [getTemplateStatus](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#gettemplatestatus). |
 | enabledBusinessIds | int[] | Yes | ID set of services supported by the template. It indicates the list of service scenarios to be enabled, such as [DEFAULT] and [Service ID for unlocking the screen]. Different service IDs correspond to different authentication scenarios. You can configure the service IDs based on service requirements. |
 
 **Return value:**
@@ -53,7 +49,7 @@ Updates the service scope supported by the specified companion device template. 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

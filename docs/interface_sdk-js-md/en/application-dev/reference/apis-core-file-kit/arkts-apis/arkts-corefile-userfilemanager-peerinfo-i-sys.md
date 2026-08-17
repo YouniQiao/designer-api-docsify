@@ -4,8 +4,6 @@ Defines information about a registered device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-userFileManager-interface PeerInfo--><!--Device-userFileManager-interface PeerInfo-End-->
@@ -32,8 +30,6 @@ Name of the registered device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-PeerInfo-readonly deviceName: string--><!--Device-PeerInfo-readonly deviceName: string-End-->
@@ -54,8 +50,6 @@ Whether the registered device is online. The value **true** means the registered
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
 <!--Device-PeerInfo-readonly isOnline: boolean--><!--Device-PeerInfo-readonly isOnline: boolean-End-->
@@ -75,8 +69,6 @@ Network ID of the registered device.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 26.0.0
 

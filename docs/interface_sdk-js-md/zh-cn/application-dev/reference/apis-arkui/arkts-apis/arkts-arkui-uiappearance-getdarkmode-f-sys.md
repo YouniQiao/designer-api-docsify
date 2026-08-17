@@ -10,10 +10,6 @@ function getDarkMode(): DarkMode
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本10 - 19：ohos.permission.UPDATE_CONFIGURATION
 
@@ -36,7 +32,7 @@ function getDarkMode(): DarkMode
 | [500001](../errorcode-uiappearance.md#500001-内部错误) | Internal error. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10 - 19 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { uiAppearance } from '@kit.ArkUI';

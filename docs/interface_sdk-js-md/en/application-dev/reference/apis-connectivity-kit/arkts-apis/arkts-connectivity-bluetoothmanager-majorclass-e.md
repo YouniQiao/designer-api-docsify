@@ -4,11 +4,9 @@ The enum of major class of a bluetooth device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MajorClass](arkts-connectivity-constant-majorclass-e.md#MajorClass)
+**Substitutes:** [MajorClass](arkts-connectivity-constant-majorclass-e.md#majorclass)
 
 <!--Device-bluetoothManager-enum MajorClass--><!--Device-bluetoothManager-enum MajorClass-End-->
 
@@ -24,11 +22,9 @@ Miscellaneous device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_MISC](arkts-connectivity-constant-majorclass-e.md#MAJOR_MISC)
+**Substitutes:** [MAJOR_MISC](arkts-connectivity-constant-majorclass-e.md#majormisc)
 
 <!--Device-MajorClass-MAJOR_MISC = 0x0000--><!--Device-MajorClass-MAJOR_MISC = 0x0000-End-->
 
@@ -44,11 +40,9 @@ Computer.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_COMPUTER](arkts-connectivity-constant-majorclass-e.md#MAJOR_COMPUTER)
+**Substitutes:** [MAJOR_COMPUTER](arkts-connectivity-constant-majorclass-e.md#majorcomputer)
 
 <!--Device-MajorClass-MAJOR_COMPUTER = 0x0100--><!--Device-MajorClass-MAJOR_COMPUTER = 0x0100-End-->
 
@@ -64,11 +58,9 @@ Mobile phone.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_PHONE](arkts-connectivity-constant-majorclass-e.md#MAJOR_PHONE)
+**Substitutes:** [MAJOR_PHONE](arkts-connectivity-constant-majorclass-e.md#majorphone)
 
 <!--Device-MajorClass-MAJOR_PHONE = 0x0200--><!--Device-MajorClass-MAJOR_PHONE = 0x0200-End-->
 
@@ -84,11 +76,9 @@ Network device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_NETWORKING](arkts-connectivity-constant-majorclass-e.md#MAJOR_NETWORKING)
+**Substitutes:** [MAJOR_NETWORKING](arkts-connectivity-constant-majorclass-e.md#majornetworking)
 
 <!--Device-MajorClass-MAJOR_NETWORKING = 0x0300--><!--Device-MajorClass-MAJOR_NETWORKING = 0x0300-End-->
 
@@ -104,11 +94,9 @@ Audio or video device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_AUDIO_VIDEO](arkts-connectivity-constant-majorclass-e.md#MAJOR_AUDIO_VIDEO)
+**Substitutes:** [MAJOR_AUDIO_VIDEO](arkts-connectivity-constant-majorclass-e.md#majoraudiovideo)
 
 <!--Device-MajorClass-MAJOR_AUDIO_VIDEO = 0x0400--><!--Device-MajorClass-MAJOR_AUDIO_VIDEO = 0x0400-End-->
 
@@ -124,11 +112,9 @@ Peripheral device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_PERIPHERAL](arkts-connectivity-constant-majorclass-e.md#MAJOR_PERIPHERAL)
+**Substitutes:** [MAJOR_PERIPHERAL](arkts-connectivity-constant-majorclass-e.md#majorperipheral)
 
 <!--Device-MajorClass-MAJOR_PERIPHERAL = 0x0500--><!--Device-MajorClass-MAJOR_PERIPHERAL = 0x0500-End-->
 
@@ -144,11 +130,9 @@ Imaging device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_IMAGING](arkts-connectivity-constant-majorclass-e.md#MAJOR_IMAGING)
+**Substitutes:** [MAJOR_IMAGING](arkts-connectivity-constant-majorclass-e.md#majorimaging)
 
 <!--Device-MajorClass-MAJOR_IMAGING = 0x0600--><!--Device-MajorClass-MAJOR_IMAGING = 0x0600-End-->
 
@@ -164,11 +148,9 @@ Wearable device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_WEARABLE](arkts-connectivity-constant-majorclass-e.md#MAJOR_WEARABLE)
+**Substitutes:** [MAJOR_WEARABLE](arkts-connectivity-constant-majorclass-e.md#majorwearable)
 
 <!--Device-MajorClass-MAJOR_WEARABLE = 0x0700--><!--Device-MajorClass-MAJOR_WEARABLE = 0x0700-End-->
 
@@ -184,11 +166,9 @@ Toy.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_TOY](arkts-connectivity-constant-majorclass-e.md#MAJOR_TOY)
+**Substitutes:** [MAJOR_TOY](arkts-connectivity-constant-majorclass-e.md#majortoy)
 
 <!--Device-MajorClass-MAJOR_TOY = 0x0800--><!--Device-MajorClass-MAJOR_TOY = 0x0800-End-->
 
@@ -204,11 +184,9 @@ Health device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_HEALTH](arkts-connectivity-constant-majorclass-e.md#MAJOR_HEALTH)
+**Substitutes:** [MAJOR_HEALTH](arkts-connectivity-constant-majorclass-e.md#majorhealth)
 
 <!--Device-MajorClass-MAJOR_HEALTH = 0x0900--><!--Device-MajorClass-MAJOR_HEALTH = 0x0900-End-->
 
@@ -224,11 +202,9 @@ Unclassified device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [MAJOR_UNCATEGORIZED](arkts-connectivity-constant-majorclass-e.md#MAJOR_UNCATEGORIZED)
+**Substitutes:** [MAJOR_UNCATEGORIZED](arkts-connectivity-constant-majorclass-e.md#majoruncategorized)
 
 <!--Device-MajorClass-MAJOR_UNCATEGORIZED = 0x1F00--><!--Device-MajorClass-MAJOR_UNCATEGORIZED = 0x1F00-End-->
 

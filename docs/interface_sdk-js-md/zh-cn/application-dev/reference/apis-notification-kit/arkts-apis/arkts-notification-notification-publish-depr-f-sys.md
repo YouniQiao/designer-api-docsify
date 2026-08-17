@@ -10,8 +10,6 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [publish](arkts-notification-notificationmanager-publish-f.md#publish)
@@ -30,7 +28,7 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 | --- | --- | --- | --- |
 | request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
 | userId | number | 是 | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 被指定的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 被指定的回调方法。 |
 
 
 ## publish
@@ -42,8 +40,6 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 发布通知给指定的用户。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
 **废弃版本：** 9
 

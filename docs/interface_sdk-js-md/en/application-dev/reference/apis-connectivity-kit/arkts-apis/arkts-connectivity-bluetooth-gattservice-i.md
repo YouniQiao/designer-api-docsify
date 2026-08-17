@@ -4,11 +4,9 @@ Describes the Gatt service.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#GattService)
+**Substitutes:** [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#gattservice)
 
 <!--Device-bluetooth-interface GattService--><!--Device-bluetooth-interface GattService-End-->
 
@@ -26,13 +24,11 @@ import { bluetooth } from 'bluetooth';
 characteristics: Array<BLECharacteristic>
 ```
 
-The [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md#BLECharacteristic) list belongs to this GattService instance
+The [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md#blecharacteristic) list belongs to this GattService instance
 
 **Type:** Array&lt;BLECharacteristic&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -54,11 +50,9 @@ The list of GATT services contained in the service
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [includeServices](arkts-connectivity-bluetoothmanager-gattservice-i.md#includeServices)
+**Substitutes:** [includeServices](arkts-connectivity-bluetoothmanager-gattservice-i.md#includeservices)
 
 <!--Device-GattService-includeServices?: Array<GattService>--><!--Device-GattService-includeServices?: Array<GattService>-End-->
 
@@ -76,11 +70,9 @@ Indicates whether the GattService instance is primary or secondary.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isPrimary](arkts-connectivity-bluetoothmanager-gattservice-i.md#isPrimary)
+**Substitutes:** [isPrimary](arkts-connectivity-bluetoothmanager-gattservice-i.md#isprimary)
 
 <!--Device-GattService-isPrimary: boolean--><!--Device-GattService-isPrimary: boolean-End-->
 
@@ -98,11 +90,9 @@ The UUID of a GattService instance
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-gattservice-i.md#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-gattservice-i.md#serviceuuid)
 
 <!--Device-GattService-serviceUuid: string--><!--Device-GattService-serviceUuid: string-End-->
 

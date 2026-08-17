@@ -16,10 +16,6 @@ Open the network settings interface of the application, which is presented in a 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-policy-function showAppNetPolicySettings(context: Context): Promise<void>--><!--Device-policy-function showAppNetPolicySettings(context: Context): Promise<void>-End-->
@@ -38,7 +34,7 @@ Open the network settings interface of the application, which is presented in a 
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 

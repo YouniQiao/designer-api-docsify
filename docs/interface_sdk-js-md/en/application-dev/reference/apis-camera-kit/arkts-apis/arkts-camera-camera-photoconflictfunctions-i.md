@@ -2,13 +2,9 @@
 
 Photo Conflict Functions object.
 
-**Inheritance/Implementation:** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#MacroQuery-(System-API))
+**Inheritance/Implementation:** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery-system-api)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface PhotoConflictFunctions--><!--Device-camera-interface PhotoConflictFunctions-End-->
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sharing-interface Participant--><!--Device-sharing-interface Participant-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -25,10 +21,6 @@ attachInfo?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Participant-attachInfo?: string--><!--Device-Participant-attachInfo?: string-End-->
 
@@ -48,10 +40,6 @@ identity: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Participant-identity: string--><!--Device-Participant-identity: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -69,10 +57,6 @@ privilege?: Privilege
 **类型：** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Participant-privilege?: Privilege--><!--Device-Participant-privilege?: Privilege-End-->
 
@@ -92,10 +76,6 @@ role?: Role
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Participant-role?: Role--><!--Device-Participant-role?: Role-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
@@ -113,10 +93,6 @@ state?: State
 **类型：** State
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Participant-state?: State--><!--Device-Participant-state?: State-End-->
 

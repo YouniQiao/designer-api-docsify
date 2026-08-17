@@ -4,10 +4,6 @@ Describes evaluation result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-interface EvaluationResult--><!--Device-intelligentVoice-interface EvaluationResult-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -32,10 +28,6 @@ Describes evaluation result code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EvaluationResult-resultCode: EvaluationResultCode--><!--Device-EvaluationResult-resultCode: EvaluationResultCode-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -53,10 +45,6 @@ Evaluation score.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EvaluationResult-score: int--><!--Device-EvaluationResult-score: int-End-->
 

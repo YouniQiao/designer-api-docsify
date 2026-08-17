@@ -4,10 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 <!--Device-util-class TextDecoder--><!--Device-util-class TextDecoder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -22,17 +18,13 @@ constructor()
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TextDecoder-constructor()--><!--Device-TextDecoder-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 示例
+**示例**
 
 ```TypeScript
 let textDecoder = new util.TextDecoder();
@@ -51,8 +43,6 @@ constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean 
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [create](#create)
@@ -68,7 +58,7 @@ constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean 
 | encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。 |
 | options | { fatal?: boolean; ignoreBOM?: boolean } | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
@@ -83,10 +73,6 @@ static create(encoding?: string, options?: TextDecoderOptions): TextDecoder
 创建一个 **TextDecoder** 对象。提供与已弃用的带参构造函数相同的功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -107,7 +93,7 @@ static create(encoding?: string, options?: TextDecoderOptions): TextDecoder
 | --- | --- |
 | [TextDecoder](arkts-arkts-util-textdecoder-c.md) | 创建的 **TextDecoder** 对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let textDecoderOptions: util.TextDecoderOptions = {
@@ -130,11 +116,9 @@ decode(input: Uint8Array, options?: { stream?: false }): string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [decodeToString](#decodeToString)
+**替代接口：** [decodeToString](#decodetostring)
 
 <!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
 
@@ -153,7 +137,7 @@ decode(input: Uint8Array, options?: { stream?: false }): string
 | --- | --- |
 | string | 获取到的字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
@@ -180,10 +164,6 @@ decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string--><!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string-End-->
@@ -203,7 +183,7 @@ decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
 | --- | --- |
 | string | 获取到的字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 当解析不含有\0的字节的示例代码
@@ -250,11 +230,9 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 12
 
-**替代接口：** [decodeToString](#decodeToString)
+**替代接口：** [decodeToString](#decodetostring)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -275,7 +253,7 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 | --- | --- |
 | string | 获取到的字符串。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let textDecoderOptions: util.TextDecoderOptions = {
@@ -311,10 +289,6 @@ readonly encoding: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TextDecoder-readonly encoding: string--><!--Device-TextDecoder-readonly encoding: string-End-->
@@ -333,10 +307,6 @@ readonly fatal: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TextDecoder-readonly fatal: boolean--><!--Device-TextDecoder-readonly fatal: boolean-End-->
@@ -354,10 +324,6 @@ readonly ignoreBOM = false
 **类型：** false
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

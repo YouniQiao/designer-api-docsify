@@ -16,10 +16,6 @@ Sets the enabled state of the magnification effect. The magnification effect dep
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
 <!--Device-config-function setMagnificationState(state: boolean): void--><!--Device-config-function setMagnificationState(state: boolean): void-End-->

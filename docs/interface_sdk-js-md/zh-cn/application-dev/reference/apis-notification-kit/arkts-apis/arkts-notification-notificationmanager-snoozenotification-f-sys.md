@@ -16,10 +16,6 @@ function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -54,7 +50,7 @@ function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

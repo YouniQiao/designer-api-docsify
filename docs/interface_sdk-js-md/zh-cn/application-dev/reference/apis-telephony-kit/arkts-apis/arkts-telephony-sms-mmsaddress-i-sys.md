@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sms-export interface MmsAddress--><!--Device-sms-export interface MmsAddress-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -26,10 +22,6 @@ address: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-MmsAddress-address: string--><!--Device-MmsAddress-address: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -47,10 +39,6 @@ charset: MmsCharSets
 **类型：** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-MmsAddress-charset: MmsCharSets--><!--Device-MmsAddress-charset: MmsCharSets-End-->
 

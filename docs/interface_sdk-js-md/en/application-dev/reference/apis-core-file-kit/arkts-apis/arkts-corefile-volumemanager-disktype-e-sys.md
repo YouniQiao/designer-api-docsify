@@ -4,10 +4,6 @@ Disk type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-volumeManager-export enum DiskType--><!--Device-volumeManager-export enum DiskType-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -23,10 +19,6 @@ SD_CARD = 1
 The type of sd card.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ The type of usb flash.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DiskType-USB_FLASH = 2--><!--Device-DiskType-USB_FLASH = 2-End-->
@@ -67,10 +55,6 @@ CD_DVD_BD = 3
 The type of CD_DVD_BD.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ The type of ssd data disk.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DiskType-DATA_DISK_SSD = 4--><!--Device-DiskType-DATA_DISK_SSD = 4-End-->
@@ -111,10 +91,6 @@ DATA_DISK_HDD = 5
 The type of hdd data disk.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,10 +110,6 @@ The type of DVR USB.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DiskType-DVR_USB =  6--><!--Device-DiskType-DVR_USB =  6-End-->
@@ -155,10 +127,6 @@ UNKNOWN_DISK_TYPE = 255
 Unknown disk type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

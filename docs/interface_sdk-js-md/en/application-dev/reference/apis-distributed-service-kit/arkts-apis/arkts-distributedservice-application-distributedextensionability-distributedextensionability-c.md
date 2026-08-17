@@ -4,10 +4,6 @@ The **DistributedExtensionAbility** module provides distributed extension capabi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class DistributedExtensionAbility--><!--Device-unnamed-declare class DistributedExtensionAbility-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -28,10 +24,6 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistributedExtensionAbility-onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult--><!--Device-DistributedExtensionAbility-onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult-End-->
@@ -50,7 +42,7 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 | --- | --- |
 | AbilityConstant.CollaborateResult | Collaboration result, that is, whether the target application accepts the collaboration request. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityConnectionManager, DistributedExtensionAbility } from '@kit.DistributedServiceKit';
@@ -80,10 +72,6 @@ Callback invoked to initialize the service logic when a **DistributedExtensionAb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistributedExtensionAbility-onCreate(want: Want): void--><!--Device-DistributedExtensionAbility-onCreate(want: Want): void-End-->
@@ -96,7 +84,7 @@ Callback invoked to initialize the service logic when a **DistributedExtensionAb
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to the **DistributedExtensionAbility** instance, including the ability name and bundle name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
@@ -121,17 +109,13 @@ Callback invoked to clear resources when a **ServiceExtensionAbility** instance 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DistributedExtensionAbility-onDestroy(): void--><!--Device-DistributedExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
@@ -154,10 +138,6 @@ Context of the **DistributedExtension**. This context inherits from **ExtensionC
 **Type:** [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

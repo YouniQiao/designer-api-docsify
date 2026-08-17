@@ -10,11 +10,9 @@ Copies a file. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyFile)
+**Substitutes:** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile)
 
 <!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>--><!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>-End-->
 
@@ -45,11 +43,9 @@ Copies a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyFile)
+**Substitutes:** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile)
 
 <!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void-End-->
 
@@ -79,11 +75,9 @@ Copies a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyFile)
+**Substitutes:** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile)
 
 <!--Device-unnamed-declare function copyFile(  src: string | number,  dest: string | number,  mode: number,  callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyFile(  src: string | number,  dest: string | number,  mode: number,  callback: AsyncCallback<void>): void-End-->
 

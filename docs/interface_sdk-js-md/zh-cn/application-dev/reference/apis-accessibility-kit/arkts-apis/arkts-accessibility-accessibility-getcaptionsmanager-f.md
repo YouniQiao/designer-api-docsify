@@ -10,8 +10,6 @@ function getCaptionsManager(): CaptionsManager
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 12
 
 <!--Device-accessibility-function getCaptionsManager(): CaptionsManager--><!--Device-accessibility-function getCaptionsManager(): CaptionsManager-End-->
@@ -24,7 +22,7 @@ function getCaptionsManager(): CaptionsManager
 | --- | --- |
 | [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | 无障碍字幕配置管理。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

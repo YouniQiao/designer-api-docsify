@@ -18,11 +18,9 @@ declare function readSync(
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
-**替代接口：** [readSync](arkts-corefile-file-fs-readsync-f.md#readSync)
+**替代接口：** [readSync](arkts-corefile-file-fs-readsync-f.md#readsync)
 
 <!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number--><!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number-End-->
 

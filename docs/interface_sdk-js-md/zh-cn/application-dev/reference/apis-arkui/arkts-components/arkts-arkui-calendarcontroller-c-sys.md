@@ -4,8 +4,6 @@ Calendar controller.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 20
 
 <!--Device-unnamed-declare class CalendarController--><!--Device-unnamed-declare class CalendarController-End-->
@@ -23,8 +21,6 @@ backToToday()
 Back to day.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 20
 
@@ -46,8 +42,6 @@ Constructor.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -67,8 +61,6 @@ goTo(value: { year: number; month: number; day: number })
 To the specified element.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 20
 

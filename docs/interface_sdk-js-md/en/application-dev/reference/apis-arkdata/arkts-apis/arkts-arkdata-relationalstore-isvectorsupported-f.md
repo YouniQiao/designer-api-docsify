@@ -16,10 +16,6 @@ Checks whether the system supports vector stores.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-function isVectorSupported(): boolean--><!--Device-relationalStore-function isVectorSupported(): boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -30,7 +26,7 @@ Checks whether the system supports vector stores.
 | --- | --- |
 | boolean | Returns **true** if the system supports vector stores; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { contextConstant, UIAbility } from '@kit.AbilityKit';

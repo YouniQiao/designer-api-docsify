@@ -6,13 +6,9 @@
 function isFlashReminderEnabledSync(): boolean
 ```
 
-查询闪烁提醒模式是否开启。 本接口为同步版本，与[accessibility.isFlashReminderEnabled](arkts-accessibility-accessibility-isflashreminderenabled-f.md#isFlashReminderEnabled)（异步版本）功能相同，如需立即获取结果可使用本 接口，如需在非阻塞场景下查询建议使用异步版本。
+查询闪烁提醒模式是否开启。 本接口为同步版本，与[accessibility.isFlashReminderEnabled](arkts-accessibility-accessibility-isflashreminderenabled-f.md#isflashreminderenabled)（异步版本）功能相同，如需立即获取结果可使用本 接口，如需在非阻塞场景下查询建议使用异步版本。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -26,7 +22,7 @@ function isFlashReminderEnabledSync(): boolean
 | --- | --- |
 | boolean | 表示是否开启闪烁提醒模式。true表示开启闪烁提醒模式，false表示未开启闪烁提醒模式。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

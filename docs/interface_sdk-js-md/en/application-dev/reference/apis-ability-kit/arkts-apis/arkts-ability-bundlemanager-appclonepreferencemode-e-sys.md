@@ -4,10 +4,6 @@ Enumerates the application clone preference modes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export enum AppClonePreferenceMode--><!--Device-bundleManager-export enum AppClonePreferenceMode-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -23,10 +19,6 @@ ALWAYS_ASK = 0
 Always prompts the user to select an application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Uses the main application by default.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AppClonePreferenceMode-MAIN_APP = 1--><!--Device-AppClonePreferenceMode-MAIN_APP = 1-End-->
@@ -67,10 +55,6 @@ CLONE_APP = 2
 Uses the application clone by default.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

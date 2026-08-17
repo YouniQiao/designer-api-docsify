@@ -4,11 +4,9 @@ Describes the parameters of a response send by the server to a specified read or
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md#ServerResponse)
+**Substitutes:** [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md#serverresponse)
 
 <!--Device-bluetooth-interface ServerResponse--><!--Device-bluetooth-interface ServerResponse-End-->
 
@@ -32,11 +30,9 @@ Indicates the address of the client to which to send the response
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-serverresponse-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-serverresponse-i.md#deviceid)
 
 <!--Device-ServerResponse-deviceId: string--><!--Device-ServerResponse-deviceId: string-End-->
 
@@ -53,8 +49,6 @@ Indicates the byte offset of the start position for reading or writing operation
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,8 +70,6 @@ Indicates the status of the read or write request, set this parameter to '0' in 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [status](arkts-connectivity-bluetoothmanager-serverresponse-i.md#status)
@@ -98,11 +90,9 @@ The Id of the write request
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [transId](arkts-connectivity-bluetoothmanager-serverresponse-i.md#transId)
+**Substitutes:** [transId](arkts-connectivity-bluetoothmanager-serverresponse-i.md#transid)
 
 <!--Device-ServerResponse-transId: number--><!--Device-ServerResponse-transId: number-End-->
 
@@ -119,8 +109,6 @@ Indicates the value to be sent
 **Type:** ArrayBuffer
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

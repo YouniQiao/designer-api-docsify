@@ -16,10 +16,6 @@ Obtains the paths of all font files of a specified font type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-text-function getFontPathsByType(fontType: SystemFontType): Array<string>--><!--Device-text-function getFontPathsByType(fontType: SystemFontType): Array<string>-End-->
@@ -38,7 +34,7 @@ Obtains the paths of all font files of a specified font type.
 | --- | --- |
 | Array&lt;string&gt; | List of font file paths. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'

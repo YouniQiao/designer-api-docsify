@@ -4,10 +4,6 @@ Enumerates the default application types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-defaultAppManager-export enum ApplicationType--><!--Device-defaultAppManager-export enum ApplicationType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
@@ -21,10 +17,6 @@ BROWSER = "Web Browser"
 Default browser.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApplicationType-BROWSER = "Web Browser"--><!--Device-ApplicationType-BROWSER = "Web Browser"-End-->
 
@@ -40,10 +32,6 @@ Default image viewer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ApplicationType-IMAGE = "Image Gallery"--><!--Device-ApplicationType-IMAGE = "Image Gallery"-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
@@ -57,10 +45,6 @@ AUDIO = "Audio Player"
 Default audio player.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApplicationType-AUDIO = "Audio Player"--><!--Device-ApplicationType-AUDIO = "Audio Player"-End-->
 
@@ -76,10 +60,6 @@ Default video player.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ApplicationType-VIDEO = "Video Player"--><!--Device-ApplicationType-VIDEO = "Video Player"-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
@@ -93,10 +73,6 @@ PDF = "PDF Viewer"
 Default PDF reader.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApplicationType-PDF = "PDF Viewer"--><!--Device-ApplicationType-PDF = "PDF Viewer"-End-->
 
@@ -112,10 +88,6 @@ Default Word viewer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ApplicationType-WORD = "Word Viewer"--><!--Device-ApplicationType-WORD = "Word Viewer"-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
@@ -129,10 +101,6 @@ EXCEL = "Excel Viewer"
 Default Excel viewer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApplicationType-EXCEL = "Excel Viewer"--><!--Device-ApplicationType-EXCEL = "Excel Viewer"-End-->
 
@@ -148,10 +116,6 @@ Default PowerPoint viewer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ApplicationType-PPT = "PPT Viewer"--><!--Device-ApplicationType-PPT = "PPT Viewer"-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
@@ -165,10 +129,6 @@ EMAIL = 'Email'
 Default email.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ApplicationType-EMAIL = 'Email'--><!--Device-ApplicationType-EMAIL = 'Email'-End-->
 

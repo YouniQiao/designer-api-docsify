@@ -4,10 +4,6 @@ Represents the point on the device screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface Point--><!--Device-unnamed-declare interface Point-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -58,10 +54,6 @@ ID of the display to which the coordinate point belongs. The value is an integer
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Point-displayId?: int--><!--Device-Point-displayId?: int-End-->
@@ -80,10 +72,6 @@ Horizontal coordinate of a coordinate point, in pixels. The value is an integer 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Point-x: int--><!--Device-Point-x: int-End-->
@@ -101,10 +89,6 @@ Vertical coordinate of a coordinate point, in pixels. The value is an integer gr
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,10 +4,6 @@ Enumerates the keyboard status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-export enum KeyboardStatus--><!--Device-inputMethod-export enum KeyboardStatus-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -21,10 +17,6 @@ NONE = 0
 The keyboard status is none.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardStatus-NONE = 0--><!--Device-KeyboardStatus-NONE = 0-End-->
 
@@ -40,10 +32,6 @@ The keyboard status is hide.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-KeyboardStatus-HIDE = 1--><!--Device-KeyboardStatus-HIDE = 1-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -57,10 +45,6 @@ SHOW = 2
 The keyboard status is show.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-KeyboardStatus-SHOW = 2--><!--Device-KeyboardStatus-SHOW = 2-End-->
 

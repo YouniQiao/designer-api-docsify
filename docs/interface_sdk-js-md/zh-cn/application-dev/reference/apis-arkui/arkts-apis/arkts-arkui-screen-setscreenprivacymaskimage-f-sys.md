@@ -10,10 +10,6 @@ function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Prom
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-screen-function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Promise<void>--><!--Device-screen-function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -43,7 +39,7 @@ function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Prom
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -16,10 +16,6 @@ Disconnects the connection of a specified web native message extension.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.WEB_NATIVE_MESSAGING
 
 **Model restriction:** This API can be used only in the stage model.
@@ -32,7 +28,7 @@ Disconnects the connection of a specified web native message extension.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connectionId | number | Yes | Connection identifier, used to identify a Web native message extension connection, returned by the [connectNative](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-connectnative-f.md#connectNative) method. After establishing the connection, it must be released through disconnectNative. A valid connection ID returned by connectNative must be used. |
+| connectionId | number | Yes | Connection identifier, used to identify a Web native message extension connection, returned by the [connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md#connectnative) method. After establishing the connection, it must be released through disconnectNative. A valid connection ID returned by connectNative must be used. |
 
 **Return value:**
 
@@ -49,7 +45,7 @@ Disconnects the connection of a specified web native message extension.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';

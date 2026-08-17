@@ -16,10 +16,6 @@ Restrict Bluetooth BR/EDR ability on a device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 <!--Device-access-function restrictBluetooth(): Promise<void>--><!--Device-access-function restrictBluetooth(): Promise<void>-End-->
@@ -44,7 +40,7 @@ Restrict Bluetooth BR/EDR ability on a device.
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

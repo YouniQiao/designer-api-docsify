@@ -10,9 +10,7 @@ function chargingStatus(): BatteryChargeState
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-batteryInfo-function chargingStatus(): BatteryChargeState--><!--Device-batteryInfo-function chargingStatus(): BatteryChargeState-End-->
 
@@ -24,7 +22,7 @@ function chargingStatus(): BatteryChargeState
 | --- | --- |
 | [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) | 返回当前设备电池的充电状态。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 // ArkTS-Sta示例

@@ -4,10 +4,6 @@ Describes the cellular data flow type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-data-export enum DataFlowType--><!--Device-data-export enum DataFlowType-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -21,10 +17,6 @@ DATA_FLOW_TYPE_NONE = 0
 Indicates that there is no uplink or downlink data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataFlowType-DATA_FLOW_TYPE_NONE = 0--><!--Device-DataFlowType-DATA_FLOW_TYPE_NONE = 0-End-->
 
@@ -40,10 +32,6 @@ Indicates that there is only downlink data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataFlowType-DATA_FLOW_TYPE_DOWN = 1--><!--Device-DataFlowType-DATA_FLOW_TYPE_DOWN = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -57,10 +45,6 @@ DATA_FLOW_TYPE_UP = 2
 Indicates that there is only uplink data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataFlowType-DATA_FLOW_TYPE_UP = 2--><!--Device-DataFlowType-DATA_FLOW_TYPE_UP = 2-End-->
 
@@ -76,10 +60,6 @@ Indicates that there is uplink and downlink data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DataFlowType-DATA_FLOW_TYPE_UP_DOWN = 3--><!--Device-DataFlowType-DATA_FLOW_TYPE_UP_DOWN = 3-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
@@ -93,10 +73,6 @@ DATA_FLOW_TYPE_DORMANT = 4
 Indicates that there is no uplink or downlink data, and the bottom-layer link is in the dormant state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DataFlowType-DATA_FLOW_TYPE_DORMANT = 4--><!--Device-DataFlowType-DATA_FLOW_TYPE_DORMANT = 4-End-->
 

@@ -4,8 +4,6 @@ Device connection state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 <!--Device-continuationManager-export enum DeviceConnectState--><!--Device-continuationManager-export enum DeviceConnectState-End-->
@@ -21,8 +19,6 @@ IDLE = 0
 The device is in the initial state.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 
@@ -44,8 +40,6 @@ The device is being connected.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -66,8 +60,6 @@ The device is connected.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -87,8 +79,6 @@ DISCONNECTING = 3
 The device is being disconnected.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 22
 

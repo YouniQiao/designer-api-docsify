@@ -10,10 +10,6 @@ function recordInputEventTime(type: ActionType, sourceType: SourceType, time: nu
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void--><!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void-End-->
@@ -36,7 +32,7 @@ function recordInputEventTime(type: ActionType, sourceType: SourceType, time: nu
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { systemDateTime, BusinessError } from '@kit.BasicServicesKit';

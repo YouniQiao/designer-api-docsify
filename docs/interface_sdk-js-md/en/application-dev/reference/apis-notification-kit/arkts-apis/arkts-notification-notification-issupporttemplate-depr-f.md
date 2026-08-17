@@ -6,15 +6,13 @@
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate) to publish a notification. This API uses an asynchronous callback to return the result.
+Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#notificationtemplate) to publish a notification. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#isSupportTemplate)
+**Substitutes:** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#issupporttemplate)
 
 <!--Device-notification-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void--><!--Device-notification-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -34,15 +32,13 @@ Checks whether a specified template is supported before using [NotificationTempl
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate) to publish a notification. This API uses a promise to return the result.
+Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#notificationtemplate) to publish a notification. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#isSupportTemplate)
+**Substitutes:** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#issupporttemplate)
 
 <!--Device-notification-function isSupportTemplate(templateName: string): Promise<boolean>--><!--Device-notification-function isSupportTemplate(templateName: string): Promise<boolean>-End-->
 

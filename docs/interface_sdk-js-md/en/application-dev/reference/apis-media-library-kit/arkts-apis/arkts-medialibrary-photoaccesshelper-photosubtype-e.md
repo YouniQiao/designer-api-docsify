@@ -1,12 +1,8 @@
 # PhotoSubtype (System API)
 
-Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset) types.
+Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) types.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export enum PhotoSubtype--><!--Device-photoAccessHelper-export enum PhotoSubtype-End-->
 
@@ -24,10 +20,6 @@ Moving photo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PhotoSubtype-MOVING_PHOTO = 3--><!--Device-PhotoSubtype-MOVING_PHOTO = 3-End-->
@@ -43,10 +35,6 @@ BURST = 4
 Burst photo.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

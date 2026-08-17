@@ -16,10 +16,6 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 18+: ohos.permission.ACCESS_BLUETOOTH
 - API version 12 - 17: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC
@@ -47,7 +43,7 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -10,11 +10,9 @@ Deletes the ID from the end of a given URI.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteId)
+**Substitutes:** [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteid)
 
 <!--Device-dataUriUtils-function deleteId(uri: string): string--><!--Device-dataUriUtils-function deleteId(uri: string): string-End-->
 
@@ -32,7 +30,7 @@ Deletes the ID from the end of a given URI.
 | --- | --- |
 | string | URI object with the ID deleted. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import dataUriUtils from '@ohos.ability.dataUriUtils';

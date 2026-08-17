@@ -2,13 +2,11 @@
 
 Defines an ellipse drawing class.
 
-**Inheritance/Implementation:** EllipseShape extends [BaseShape](arkts-na-arkui-shape-baseshape-c.md#BaseShape)
+**Inheritance/Implementation:** EllipseShape extends [BaseShape](arkts-na-arkui-shape-baseshape-c.md#baseshape)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class EllipseShape--><!--Device-unnamed-export declare class EllipseShape-End-->
 
@@ -24,9 +22,7 @@ Constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

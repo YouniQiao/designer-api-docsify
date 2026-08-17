@@ -4,10 +4,6 @@ Defines a struct for shared configurations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface ProxyData--><!--Device-dataShare-interface ProxyData-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -30,10 +26,6 @@ List of applications that can subscribe to and read shared configurations. If th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProxyData-allowList?: string[]--><!--Device-ProxyData-allowList?: string[]-End-->
@@ -51,10 +43,6 @@ Indicates whether the shared configuration is multi-value type. The default valu
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ List of applications that can add values to the shared configuration of multi-va
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProxyData-trustProviders?: string[]--><!--Device-ProxyData-trustProviders?: string[]-End-->
@@ -96,10 +80,6 @@ Unique ID of a shared configuration, fixed at the format of **"datashareproxy://
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProxyData-uri: string--><!--Device-ProxyData-uri: string-End-->
@@ -112,15 +92,11 @@ Unique ID of a shared configuration, fixed at the format of **"datashareproxy://
 value?: ValueType
 ```
 
-Value of a shared configuration. If not specified, the value is an empty string. The value is a string with a maximum of 4,096 bytes. If this parameter is not set when the shared configuration is published for the first time, the value will be an empty string by default. If this parameter is not set when a shared configuration is updated, the value of the shared configuration will not be updated. In versions earlier than API version 26.0.0, the maximum length of a string is 4096 bytes. In API version 26.0.0 and later versions, the maximum length of a string is 4096 bytes by default, and can be extended to 102,400 bytes by setting the maxValueLength parameter in [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md#DataProxyConfig).
+Value of a shared configuration. If not specified, the value is an empty string. The value is a string with a maximum of 4,096 bytes. If this parameter is not set when the shared configuration is published for the first time, the value will be an empty string by default. If this parameter is not set when a shared configuration is updated, the value of the shared configuration will not be updated. In versions earlier than API version 26.0.0, the maximum length of a string is 4096 bytes. In API version 26.0.0 and later versions, the maximum length of a string is 4096 bytes by default, and can be extended to 102,400 bytes by setting the maxValueLength parameter in [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md#dataproxyconfig).
 
 **Type:** [ValueType](arkts-arkdata-valuetype-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,15 +110,11 @@ Value of a shared configuration. If not specified, the value is an empty string.
 values?: Record<int, ValueType>
 ```
 
-Values of the multi-value type. The first parameter in the **Record** is the key specified by the user, which must be unique. The second parameter is the value corresponding to the key. A maximum of 10 values can be added to a single URI for an application. Each value can contain a maximum of 4096 bytes. At the same time, the total length of all values is limited by the [maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxValueLength) parameter value. This parameter is valid only when [isMultiValues](#isMultiValues) is set to true.
+Values of the multi-value type. The first parameter in the **Record** is the key specified by the user, which must be unique. The second parameter is the value corresponding to the key. A maximum of 10 values can be added to a single URI for an application. Each value can contain a maximum of 4096 bytes. At the same time, the total length of all values is limited by the [maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxvaluelength) parameter value. This parameter is valid only when [isMultiValues](#ismultivalues) is set to true.
 
 **Type:** Record&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

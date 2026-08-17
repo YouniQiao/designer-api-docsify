@@ -4,11 +4,9 @@ Profile state change parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md#StateChangeParam)
+**Substitutes:** [StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md#statechangeparam)
 
 <!--Device-bluetoothManager-interface StateChangeParam--><!--Device-bluetoothManager-interface StateChangeParam-End-->
 
@@ -32,11 +30,9 @@ The address of device
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](arkts-connectivity-baseprofile-statechangeparam-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-baseprofile-statechangeparam-i.md#deviceid)
 
 <!--Device-StateChangeParam-deviceId: string--><!--Device-StateChangeParam-deviceId: string-End-->
 
@@ -53,8 +49,6 @@ Profile state value
 **Type:** ProfileConnectionState
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 

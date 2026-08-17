@@ -4,10 +4,6 @@ Defines the struct of the template used in a subscription.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface Template--><!--Device-dataShare-interface Template-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -26,15 +22,11 @@ import { dataShare } from 'dataShare';
 predicates: Record<string, string>
 ```
 
-Predicates to use. When [**on**](arkts-arkdata-datashare-datasharehelper-i-sys.md#on_dataChange) is called, the predicates are used to generate data. This parameter applies only to RDB data storage.
+Predicates to use. When [**on**](arkts-arkdata-datashare-datasharehelper-i-sys.md#ondatachange) is called, the predicates are used to generate data. This parameter applies only to RDB data storage.
 
 **Type:** Record&lt;string, string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,10 +48,6 @@ Template scheduler SQL, which is embedded with a custom function. Currently, the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Template-scheduler: string--><!--Device-Template-scheduler: string-End-->
@@ -74,15 +62,11 @@ Template scheduler SQL, which is embedded with a custom function. Currently, the
 update?: string
 ```
 
-Update SQL statement of a specified template. The default value is an empty string. When [on](arkts-arkdata-datashare-datasharehelper-i-sys.md#on_dataChange) is called, the **update** parameter is used to update data. This parameter applies only to RDB data storage.
+Update SQL statement of a specified template. The default value is an empty string. When [on](arkts-arkdata-datashare-datasharehelper-i-sys.md#ondatachange) is called, the **update** parameter is used to update data. This parameter applies only to RDB data storage.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

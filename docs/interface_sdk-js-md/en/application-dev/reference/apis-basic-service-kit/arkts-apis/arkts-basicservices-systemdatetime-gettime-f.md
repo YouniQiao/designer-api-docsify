@@ -16,10 +16,6 @@ Obtains the time elapsed since the Unix epoch. This API returns the result synch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
@@ -36,7 +32,7 @@ Obtains the time elapsed since the Unix epoch. This API returns the result synch
 | --- | --- |
 | long | Time elapsed since the Unix epoch. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

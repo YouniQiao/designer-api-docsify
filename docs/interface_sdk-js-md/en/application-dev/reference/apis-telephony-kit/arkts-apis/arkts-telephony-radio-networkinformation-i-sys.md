@@ -4,10 +4,6 @@ Obtains the network information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export interface NetworkInformation--><!--Device-radio-export interface NetworkInformation-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -32,10 +28,6 @@ Indicates the name of the operator.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetworkInformation-operatorName: string--><!--Device-NetworkInformation-operatorName: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -53,10 +45,6 @@ Indicates the number of the operator.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkInformation-operatorNumeric: string--><!--Device-NetworkInformation-operatorNumeric: string-End-->
 
@@ -76,10 +64,6 @@ Indicates the radio Technology.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetworkInformation-radioTech: string--><!--Device-NetworkInformation-radioTech: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -97,10 +81,6 @@ Indicates the status of network information.
 **Type:** [NetworkInformationState](arkts-telephony-radio-networkinformationstate-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetworkInformation-state: NetworkInformationState--><!--Device-NetworkInformation-state: NetworkInformationState-End-->
 

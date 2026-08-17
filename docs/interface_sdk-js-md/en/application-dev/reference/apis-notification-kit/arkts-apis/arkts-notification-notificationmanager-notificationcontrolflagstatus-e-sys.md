@@ -4,10 +4,6 @@ Each bit can control the notification mode. When the bitwise OR operation is per
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export enum NotificationControlFlagStatus--><!--Device-notificationManager-export enum NotificationControlFlagStatus-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -23,10 +19,6 @@ NOTIFICATION_STATUS_CLOSE_SOUND = 1 << 0
 Disables the sound notification function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_SOUND = 1 << 0--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_SOUND = 1 << 0-End-->
 
@@ -44,10 +36,6 @@ Disables the screen lock notification function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_LOCKSCREEN = 1 << 1--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_LOCKSCREEN = 1 << 1-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -63,10 +51,6 @@ NOTIFICATION_STATUS_CLOSE_BANNER = 1 << 2
 Disables the banner notification function.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_BANNER = 1 << 2--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_BANNER = 1 << 2-End-->
 
@@ -84,10 +68,6 @@ Disables the screen-on notification function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_LIGHT_SCREEN = 1 << 3--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_LIGHT_SCREEN = 1 << 3-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -104,10 +84,6 @@ Disables the vibration notification function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_VIBRATION = 1 << 4--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_VIBRATION = 1 << 4-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -123,10 +99,6 @@ NOTIFICATION_STATUS_CLOSE_STATUSBAR_ICON = 1 << 5
 Disables the icon notification function in the status bar.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_STATUSBAR_ICON = 1 << 5--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_STATUSBAR_ICON = 1 << 5-End-->
 

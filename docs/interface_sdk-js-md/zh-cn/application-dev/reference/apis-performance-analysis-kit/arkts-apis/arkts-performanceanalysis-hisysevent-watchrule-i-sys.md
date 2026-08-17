@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hiSysEvent-interface WatchRule--><!--Device-hiSysEvent-interface WatchRule-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
@@ -25,10 +21,6 @@ domain: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WatchRule-domain: string--><!--Device-WatchRule-domain: string-End-->
 
@@ -48,10 +40,6 @@ name: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WatchRule-name: string--><!--Device-WatchRule-name: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
@@ -70,10 +58,6 @@ ruleType: RuleType
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-WatchRule-ruleType: RuleType--><!--Device-WatchRule-ruleType: RuleType-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
@@ -91,10 +75,6 @@ tag?: string | null | undefined
 **类型：** string \| null \| undefined
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-WatchRule-tag?: string | null | undefined--><!--Device-WatchRule-tag?: string | null | undefined-End-->
 

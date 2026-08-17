@@ -4,10 +4,6 @@ Provides the NNRT device info
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-interface NNRTDevice--><!--Device-mindSporeLite-interface NNRTDevice-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -30,10 +26,6 @@ NNRT device id.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NNRTDevice-deviceID?: bigint--><!--Device-NNRTDevice-deviceID?: bigint-End-->
@@ -51,10 +43,6 @@ NNRT device extension array.
 **Type:** [Extension](arkts-mindsporelite-mindsporelite-extension-i.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ NNRT device performance mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NNRTDevice-performanceMode?: PerformanceMode--><!--Device-NNRTDevice-performanceMode?: PerformanceMode-End-->
@@ -95,10 +79,6 @@ NNRT device priority.
 **Type:** Priority
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

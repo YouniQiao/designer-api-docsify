@@ -4,10 +4,6 @@ Represents a full drawing result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-webview-interface SnapshotResult--><!--Device-webview-interface SnapshotResult-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -30,10 +26,6 @@ Snapshot ID.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SnapshotResult-id?: string--><!--Device-SnapshotResult-id?: string-End-->
@@ -46,15 +38,11 @@ Snapshot ID.
 imagePixelMap?: image.PixelMap
 ```
 
-The image in PixelMap format.
+The **image.PixelMap** format.
 
 **Type:** image.PixelMap
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -68,15 +56,11 @@ The image in PixelMap format.
 size?: SizeOptions
 ```
 
-Size for web rendering. The maximum size is 16000 px × 16000 px. The length unit can be px, vp, or %. The length unit must be the consistent across parameters. The default unit is vp. If the size exceeds the specifications, the maximum size is returned. Example: **width: '100px', height: '200px'** or **width: '20%', height'30%'**. If only digits are written, the unit is vp.
+Actual size rendered by Web. The SizeOptions object contains the width and height attributes, both of which are of the number type, in vp.
 
 **Type:** SizeOptions
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,15 +74,11 @@ Size for web rendering. The maximum size is 16000 px × 16000 px. The length uni
 status?: boolean
 ```
 
-The status of the snapshot.
+Status of the snapshot. The value **true** indicates normal, and **false** indicates failure. If obtaining the full rendering result fails, the width and height of the returned size are both 0, and imagePixelMap is empty.
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

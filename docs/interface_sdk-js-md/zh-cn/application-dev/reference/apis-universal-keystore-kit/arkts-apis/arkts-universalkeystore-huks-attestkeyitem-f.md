@@ -10,10 +10,6 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ATTEST_KEY
 
 <!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void--><!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void-End-->
@@ -26,7 +22,7 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，存放待获取证书密钥的别名。 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于获取证书时指定所需参数与数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | 回调函数。当获取密钥证书成功时，err为undefined，data为获取到的HuksReturnResult；否则为错误 对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | 回调函数。当获取密钥证书成功时，err为undefined，data为获取到的HuksReturnResult；否则为错误 对象。 |
 
 **错误码：**
 
@@ -44,7 +40,7 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 
-## 示例
+**示例**
 
 ```TypeScript
 /* 以获取RSA密钥证书为例 */
@@ -152,10 +148,6 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ATTEST_KEY
 
 <!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>-End-->
@@ -191,7 +183,7 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 
-## 示例
+**示例**
 
 ```TypeScript
 /* 以获取RSA密钥证书为例 */

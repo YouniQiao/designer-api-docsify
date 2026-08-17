@@ -16,10 +16,6 @@ Obtains the free size of the specified file system, in bytes. This API returns t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-statfs-function getFreeSizeSync(path: string): long--><!--Device-statfs-function getFreeSizeSync(path: string): long-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -54,7 +50,7 @@ Obtains the free size of the specified file system, in bytes. This API returns t
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

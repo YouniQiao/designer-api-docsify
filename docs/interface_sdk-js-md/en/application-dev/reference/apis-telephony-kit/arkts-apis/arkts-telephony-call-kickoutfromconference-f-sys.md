@@ -16,10 +16,6 @@ Removes a specified call from a conference call. This API uses an asynchronous c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PLACE_CALL
 
 <!--Device-call-function kickOutFromConference(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function kickOutFromConference(callId: int, callback: AsyncCallback<void>): void-End-->
@@ -47,7 +43,7 @@ Removes a specified call from a conference call. This API uses an asynchronous c
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,10 +67,6 @@ function kickOutFromConference(callId: int): Promise<void>
 Removes a specified call from a conference call. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -108,7 +100,7 @@ Removes a specified call from a conference call. This API uses a promise to retu
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

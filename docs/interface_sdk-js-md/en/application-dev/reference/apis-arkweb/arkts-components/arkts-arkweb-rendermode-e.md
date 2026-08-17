@@ -1,12 +1,8 @@
 # RenderMode
 
-Enumerates the rendering modes of the **Web** component. By default, the asynchronous rendering mode is used.
+Enumerates the rendering modes of the **Web** component. By default, the asynchronous rendering mode is used. The asynchronous rendering mode is recommended because it has better performance and lower power consumption.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum RenderMode--><!--Device-unnamed-declare enum RenderMode-End-->
 
@@ -18,13 +14,9 @@ Enumerates the rendering modes of the **Web** component. By default, the asynchr
 ASYNC_RENDER = 0
 ```
 
-The **Web** component as a graphic surface node is rendered asynchronously and displayed independently. The maximum width of the **Web** component is 7,680 px (physical pixel)
+Asynchronous rendering mode of the Web component. The ArkWeb component acts as a graphics surface node and independently outputs display. The maximum height of the Web component does not exceed 7,680 px (physical pixels).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,13 +30,9 @@ The **Web** component as a graphic surface node is rendered asynchronously and d
 SYNC_RENDER = 1
 ```
 
-The **Web** component as a graphic canvas node is rendered synchronously and displayed together with the system component. The maximum width of the **Web** component is 500,000 px (physical pixel).
+Synchronous rendering mode of the Web component. The ArkWeb component acts as a graphics canvas node and outputs display together with system components, allowing longer Web component content to be rendered. The maximum height of the Web component does not exceed 500,000 px (physical pixels).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,12 +1,8 @@
-# SubscribaleAbstract (System API)
+# SubscribaleAbstract(System API) (System API)
 
 Defines the Subscribale base class.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare abstract class SubscribaleAbstract--><!--Device-unnamed-declare abstract class SubscribaleAbstract-End-->
 
@@ -23,10 +19,6 @@ public addOwningProperty(subscriber: IPropertySubscriber): void
 Adds a subscriber to the list of owned properties.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-SubscribaleAbstract-public addOwningProperty(subscriber: IPropertySubscriber): void--><!--Device-SubscribaleAbstract-public addOwningProperty(subscriber: IPropertySubscriber): void-End-->
 
@@ -50,10 +42,6 @@ Constructor.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-SubscribaleAbstract-constructor()--><!--Device-SubscribaleAbstract-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -69,10 +57,6 @@ protected notifyPropertyHasChanged(propName: string, newValue: any): void
 Notify subscribers that a property value has changed.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-SubscribaleAbstract-protected notifyPropertyHasChanged(propName: string, newValue: any): void--><!--Device-SubscribaleAbstract-protected notifyPropertyHasChanged(propName: string, newValue: any): void-End-->
 
@@ -97,10 +81,6 @@ Removes a subscriber from the list of owned properties.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-SubscribaleAbstract-public removeOwningProperty(property: IPropertySubscriber): void--><!--Device-SubscribaleAbstract-public removeOwningProperty(property: IPropertySubscriber): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -122,10 +102,6 @@ public removeOwningPropertyById(subscriberId: number): void
 Removes a subscriber from the list of owned properties by ID.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-SubscribaleAbstract-public removeOwningPropertyById(subscriberId: number): void--><!--Device-SubscribaleAbstract-public removeOwningPropertyById(subscriberId: number): void-End-->
 
@@ -150,10 +126,6 @@ A set of property IDs that this instance owns.
 **Type:** Set&lt;number&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-SubscribaleAbstract-private owningProperties_: Set<number>--><!--Device-SubscribaleAbstract-private owningProperties_: Set<number>-End-->
 

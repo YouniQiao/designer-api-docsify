@@ -4,10 +4,6 @@ Describes the immersive effect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-interface ImmersiveEffect--><!--Device-inputMethodEngine-interface ImmersiveEffect-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -29,10 +25,6 @@ Fluid light mode. If this attribute is not specified or is set to an invalid val
 **Type:** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImmersiveEffect-fluidLightMode?: FluidLightMode--><!--Device-ImmersiveEffect-fluidLightMode?: FluidLightMode-End-->
 

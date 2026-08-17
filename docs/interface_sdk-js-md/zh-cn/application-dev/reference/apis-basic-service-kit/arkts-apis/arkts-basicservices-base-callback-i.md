@@ -1,12 +1,8 @@
-# Callback
+# Callback(公共回调信息)
 
 通用回调函数，用于在异步操作成功完成时回传处理结果。类型由开发者自定义。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export interface Callback--><!--Device-unnamed-export interface Callback-End-->
 
@@ -19,10 +15,6 @@
 ```
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-cloudDiskManager-interface SyncFolder--><!--Device-cloudDiskManager-interface SyncFolder-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
@@ -25,10 +21,6 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SyncFolder-bundleName: string--><!--Device-SyncFolder-bundleName: string-End-->
 
@@ -48,10 +40,6 @@ customAlias?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SyncFolder-customAlias?: string--><!--Device-SyncFolder-customAlias?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
@@ -69,10 +57,6 @@ displayNameResId?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SyncFolder-displayNameResId?: int--><!--Device-SyncFolder-displayNameResId?: int-End-->
 
@@ -92,10 +76,6 @@ path: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SyncFolder-path: string--><!--Device-SyncFolder-path: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
@@ -113,10 +93,6 @@ state: SyncFolderState
 **类型：** [SyncFolderState](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SyncFolder-state: SyncFolderState--><!--Device-SyncFolder-state: SyncFolderState-End-->
 

@@ -10,10 +10,6 @@ export function getCalendar(locale: string, type?: string): Calendar
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-i18n-export function getCalendar(locale: string, type?: string): Calendar--><!--Device-i18n-export function getCalendar(locale: string, type?: string): Calendar-End-->
@@ -33,7 +29,7 @@ export function getCalendar(locale: string, type?: string): Calendar
 | --- | --- |
 | Calendar | 日历对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans', 'chinese'); // 获取中国农历日历对象

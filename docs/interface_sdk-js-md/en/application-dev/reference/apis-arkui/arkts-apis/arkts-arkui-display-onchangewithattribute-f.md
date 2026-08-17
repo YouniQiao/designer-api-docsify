@@ -16,10 +16,6 @@ Subscribes to changes of specified attributes of a display.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-display-function onChangeWithAttribute(displayAttributeOption: Array<string>, callback: Callback<long>): void--><!--Device-display-function onChangeWithAttribute(displayAttributeOption: Array<string>, callback: Callback<long>): void-End-->
@@ -30,7 +26,7 @@ Subscribes to changes of specified attributes of a display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayAttributeOption | Array&lt;string&gt; | Yes | Attribute names. Only attributes contained in [Display](arkts-arkui-display-display-i.md#Display) are supported. |
+| displayAttributeOption | Array&lt;string&gt; | Yes | Attribute names. Only attributes contained in [Display](arkts-arkui-display-display-i.md#display) are supported. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
 
 **Error codes:**
@@ -40,7 +36,7 @@ Subscribes to changes of specified attributes of a display.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function onChangeWithAttribute can not work correctly due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. Possible causes: Internal IPC error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

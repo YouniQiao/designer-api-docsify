@@ -8,10 +8,6 @@ Get the handle of the data network.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sharing-type NetHandle = connection.NetHandle--><!--Device-sharing-type NetHandle = connection.NetHandle-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core

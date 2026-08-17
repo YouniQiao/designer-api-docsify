@@ -4,10 +4,6 @@ Defines the **value** object in a KV store.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedKVStore-interface Value--><!--Device-distributedKVStore-interface Value-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -30,10 +26,6 @@ Type of the value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Value-type: ValueType--><!--Device-Value-type: ValueType-End-->
@@ -51,10 +43,6 @@ Value of the KV pair.
 **Type:** Uint8Array \| string \| long \| double \| boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

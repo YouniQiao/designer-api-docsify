@@ -4,10 +4,6 @@ Enumerates matching rule types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiSysEvent-enum RuleType--><!--Device-hiSysEvent-enum RuleType-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -23,10 +19,6 @@ WHOLE_WORD = 1
 Whole word matching.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RuleType-WHOLE_WORD = 1--><!--Device-RuleType-WHOLE_WORD = 1-End-->
 
@@ -44,10 +36,6 @@ Prefix matching.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RuleType-PREFIX = 2--><!--Device-RuleType-PREFIX = 2-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
@@ -63,10 +51,6 @@ REGULAR = 3
 Regular expression matching.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RuleType-REGULAR = 3--><!--Device-RuleType-REGULAR = 3-End-->
 

@@ -4,10 +4,6 @@ The **UserStatus** module, designed for user state awareness, empowers the syste
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace userStatus--><!--Device-unnamed-declare namespace userStatus-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
@@ -24,10 +20,10 @@ import { userStatus } from 'userStatus';
 
 | Name | Description |
 | --- | --- |
-| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offUserAgeGroupDetected) | Unsubscribe to age group detection feature. |
-| off_userAgeGroupDetected | Disables the age group detection function. > **NOTE：**> > This API is supported only on some phones. Error code **33900003** is returned if it is called on unsupported > phones. |
-| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onUserAgeGroupDetected) | Subscribe to age group detection feature. |
-| on_userAgeGroupDetected | Enables the age group detection function. When the function is enabled, the application can recommend content based on the age group detection result. > **NOTE：**> > This API is supported only on some phones. Error code **801** is returned if it is called on unsupported phones. |
+| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offuseragegroupdetected) | Unsubscribe to age group detection feature. |
+| [off_userAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offuseragegroupdetected) | Disables the age group detection function. > **NOTE：**> > This API is supported only on some phones. Error code **33900003** is returned if it is called on unsupported > phones. |
+| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onuseragegroupdetected) | Subscribe to age group detection feature. |
+| [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onuseragegroupdetected) | Enables the age group detection function. When the function is enabled, the application can recommend content based on the age group detection result. > **NOTE：**> > This API is supported only on some phones. Error code **801** is returned if it is called on unsupported phones. |
 
 <!--Del-->
 ### Functions（系统接口）
@@ -35,7 +31,7 @@ import { userStatus } from 'userStatus';
 | Name | Description |
 | --- | --- |
 | [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure) | Configures feature parameters. |
-| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#queryCapabilities) | Queries device-supported atomic capabilities. |
+| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#querycapabilities) | Queries device-supported atomic capabilities. |
 | [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe) | Subscribes to user status monitoring. |
 | [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe) | Unsubscribes from user status monitoring. |
 <!--DelEnd-->

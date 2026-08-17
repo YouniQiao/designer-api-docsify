@@ -4,10 +4,6 @@ Sets the text style.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface Font--><!--Device-unnamed-declare interface Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Font family. <br>To specify multiple fonts, separate them with commas (,), and f
 **Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,10 +38,6 @@ Font size. If the value is of the number type, the unit fp is used. Percentage s
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Font-size?: Length--><!--Device-Font-size?: Length-End-->
@@ -68,10 +56,6 @@ Font style. Default value: FontStyle.Normal.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Font-style?: FontStyle--><!--Device-Font-style?: FontStyle-End-->
@@ -89,10 +73,6 @@ Font weight. For the number type, the value ranges from 100 to 900, at an interv
 **Type:** FontWeight \| number \| string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

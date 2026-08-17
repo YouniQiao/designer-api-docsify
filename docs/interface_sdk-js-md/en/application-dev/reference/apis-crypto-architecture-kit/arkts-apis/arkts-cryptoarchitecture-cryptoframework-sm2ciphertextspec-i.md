@@ -4,10 +4,6 @@ Represents the SM2 ciphertext parameters. You can use this object to generate SM
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cryptoFramework-interface SM2CipherTextSpec--><!--Device-cryptoFramework-interface SM2CipherTextSpec-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
@@ -30,10 +26,6 @@ Indicates the ciphertext data, also known as C2.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SM2CipherTextSpec-cipherTextData: Uint8Array--><!--Device-SM2CipherTextSpec-cipherTextData: Uint8Array-End-->
@@ -51,10 +43,6 @@ Indicates the hash data, also known as C3.
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -74,10 +62,6 @@ Indicates the x coordinate, also known as C1x.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SM2CipherTextSpec-xCoordinate: bigint--><!--Device-SM2CipherTextSpec-xCoordinate: bigint-End-->
@@ -95,10 +79,6 @@ Indicates the y coordinate, also known as C1y.
 **Type:** bigint
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -4,10 +4,6 @@ Describes the contents of the battery information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-interface BatteryInfo--><!--Device-connection-interface BatteryInfo-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -29,10 +25,6 @@ Identify of the discovery device.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

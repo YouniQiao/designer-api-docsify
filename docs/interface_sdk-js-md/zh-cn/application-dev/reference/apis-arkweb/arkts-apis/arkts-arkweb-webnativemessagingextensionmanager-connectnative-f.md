@@ -10,10 +10,6 @@ function connectNative(context: UIAbilityContext, want: Want, callback: WebExten
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.WEB_NATIVE_MESSAGING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -28,7 +24,7 @@ function connectNative(context: UIAbilityContext, want: Want, callback: WebExten
 | --- | --- | --- | --- |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | 是 | 调用方UIAbility的上下文。 |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息，其parameters中需包含'ohos.arkweb.messageReadPipe'（读管道FD）、' ohos.arkweb.messageWritePipe'（写管道FD）和'ohos.arkweb.extensionOrigin'（插件URI）。 |
-| callback | [WebExtensionConnectionCallback](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | 是 | WebExtensionConnection状态的回调对象。 |
+| callback | [WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | 是 | WebExtensionConnection状态的回调对象。 |
 
 **返回值：**
 
@@ -42,7 +38,7 @@ function connectNative(context: UIAbilityContext, want: Want, callback: WebExten
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

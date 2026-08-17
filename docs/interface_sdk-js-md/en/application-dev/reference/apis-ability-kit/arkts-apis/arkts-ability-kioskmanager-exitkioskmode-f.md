@@ -16,10 +16,6 @@ Exits kiosk mode. This API uses a promise to return the result. This API takes e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-kioskManager-function exitKioskMode(context: UIAbilityContext): Promise<void>--><!--Device-kioskManager-function exitKioskMode(context: UIAbilityContext): Promise<void>-End-->
@@ -47,7 +43,7 @@ Exits kiosk mode. This API uses a promise to return the result. This API takes e
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
 | [16000110](../errorcode-ability.md#16000110-application-is-not-in-the-kiosk-mode-list) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common, kioskManager } from '@kit.AbilityKit';

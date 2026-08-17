@@ -1,12 +1,8 @@
 # FrameCallback
 
-用于定义帧回调任务，可在下一帧渲染阶段或帧渲染任务结束后的空闲阶段执行。 > **说明：** > > - 以下API需要配合[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的[postFrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#postFrameCallback)和 > [postDelayedFrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#postDelayedFrameCallback)使用。开发者需要继承该类并重写 > [onFrame](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-framecallback-c.md#onFrame)或[onIdle](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-framecallback-c.md#onIdle)方法，实现具体的业务逻辑。
+用于定义帧回调任务，可在下一帧渲染阶段或帧渲染任务结束后的空闲阶段执行。 > **说明：** > > - 以下API需要配合[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext)中的[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)和 > [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback)使用。开发者需要继承该类并重写 > [onFrame](#onframe)或[onIdle](#onidle)方法，实现具体的业务逻辑。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export abstract class FrameCallback--><!--Device-unnamed-export abstract class FrameCallback-End-->
 
@@ -21,10 +17,6 @@ onFrame(frameTimeInNano: number): void
 在下一帧进行渲染时，该方法将被执行。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,10 +41,6 @@ onIdle(timeLeftInNano: number): void
 在下一帧渲染结束时，如果距离下一个Vsync信号到来还有1ms以上的剩余时间，该方法将被执行，否则将顺延至后面的帧。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

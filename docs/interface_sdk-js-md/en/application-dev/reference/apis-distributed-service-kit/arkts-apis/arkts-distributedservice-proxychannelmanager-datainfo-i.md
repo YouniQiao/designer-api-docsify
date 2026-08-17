@@ -1,12 +1,8 @@
 # DataInfo
 
-Represents the received data, including the channel ID and data.
+Represents the received data information, including the channel ID and data.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-proxyChannelManager-interface DataInfo--><!--Device-proxyChannelManager-interface DataInfo-End-->
 
@@ -24,15 +20,11 @@ import { proxyChannelManager } from 'proxyChannelManager';
 channelId: int
 ```
 
-Proxy channel ID.
+Channel ID of the proxy channel. The value range is 1 to 2147483647.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,15 +38,11 @@ Proxy channel ID.
 data: ArrayBuffer
 ```
 
-Received byte array.
+Received byte data. The maximum length is 4096 bytes.
 
 **Type:** ArrayBuffer
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

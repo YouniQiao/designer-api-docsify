@@ -4,10 +4,6 @@ Enumerates the trigger modes for user scenes (typically scenes involving animati
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-performanceMonitor-export enum ActionType--><!--Device-performanceMonitor-export enum ActionType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ LAST_DOWN = 0
 Pressing against the screen.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Lifting a finger off the screen.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ActionType-LAST_UP = 1--><!--Device-ActionType-LAST_UP = 1-End-->
@@ -67,10 +55,6 @@ FIRST_MOVE = 2
 First swiping on the screen.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Defines image source initialization options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface SourceOptions--><!--Device-image-interface SourceOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -24,15 +20,11 @@ import { image } from 'image';
 sourceDensity: int
 ```
 
-Pixel density of the image resource, in ppi. If **desiredSize** is not set in [DecodingOptions](arkts-image-image-decodingoptions-i.md#DecodingOptions) and **SourceOptions.sourceDensity** and **DecodingOptions.fitDensity** are not 0, the PixelMap output after decoding will be scaled. The formula for calculating the width after scaling is as follows (the same applies to the height): (width * fitDensity + (sourceDensity >> 1)) / sourceDensity.
+Pixel density of the image resource, in ppi. If **desiredSize** is not set in [DecodingOptions](arkts-image-image-decodingoptions-i.md#decodingoptions) and **SourceOptions.sourceDensity** and **DecodingOptions.fitDensity** are not 0, the PixelMap output after decoding will be scaled. The formula for calculating the width after scaling is as follows (the same applies to the height): (width * fitDensity + (sourceDensity >> 1)) / sourceDensity.
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,10 +46,6 @@ Image pixel format. The default value is **UNKNOWN**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -77,10 +65,6 @@ Image pixel size. The default value is null.
 **Type:** Size
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

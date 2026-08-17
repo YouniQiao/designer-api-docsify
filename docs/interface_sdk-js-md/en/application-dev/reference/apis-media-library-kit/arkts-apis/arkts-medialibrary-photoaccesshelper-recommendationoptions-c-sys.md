@@ -4,10 +4,6 @@ Defines the image recommendation options. The image recommendation feature depen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-class RecommendationOptions--><!--Device-photoAccessHelper-class RecommendationOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -30,10 +26,6 @@ Recommended tag displayed when the picker is opened. This configuration takes ef
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RecommendationOptions-defaultRecommendationType?: RecommendationType--><!--Device-RecommendationOptions-defaultRecommendationType?: RecommendationType-End-->
@@ -53,10 +45,6 @@ List of recommendation types. If images of multiple categories need to be recomm
 **Type:** Array&lt;[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

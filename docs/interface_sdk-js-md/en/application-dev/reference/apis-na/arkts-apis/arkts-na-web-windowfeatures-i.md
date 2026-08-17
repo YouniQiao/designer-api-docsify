@@ -4,9 +4,7 @@ Defines the window features info for window.open.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface WindowFeatures--><!--Device-unnamed-export declare interface WindowFeatures-End-->
 
@@ -24,9 +22,7 @@ The requested height of the containing window. Unit:pixels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WindowFeatures-height: double--><!--Device-WindowFeatures-height: double-End-->
 
@@ -44,9 +40,7 @@ The requested width of the containing window. Unit:pixels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WindowFeatures-width: double--><!--Device-WindowFeatures-width: double-End-->
 
@@ -64,9 +58,7 @@ The requested x-coordinate of the containing window. Unit:pixels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WindowFeatures-x: double--><!--Device-WindowFeatures-x: double-End-->
 
@@ -84,9 +76,7 @@ The requested y-coordinate of the containing window. Unit:pixels.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-WindowFeatures-y: double--><!--Device-WindowFeatures-y: double-End-->
 

@@ -10,9 +10,7 @@ Generate a random RFC 4122 version 4 binary UUID using a cryptographically secur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array | undefined--><!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array | undefined-End-->
 

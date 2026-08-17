@@ -4,10 +4,6 @@ Enumerates the pixel formats of images.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-enum PixelMapFormat--><!--Device-image-enum PixelMapFormat-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -21,10 +17,6 @@ UNKNOWN = 0
 Unknown format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,10 +36,6 @@ Indicates that each pixel is stored on 32 bits. Each pixel contains 4 components
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PixelMapFormat-ARGB_8888 = 1--><!--Device-PixelMapFormat-ARGB_8888 = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -61,10 +49,6 @@ RGB_565 = 2
 The color information consists of three components: R (Red), G (Green), and B (Blue), which occupies five bits, six bits, and five bits, respectively. The total length is 16 bits.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,13 +64,9 @@ The color information consists of three components: R (Red), G (Green), and B (B
 RGBA_8888 = 3
 ```
 
-The color information consists of four components: R (Red), G (Green), B (Blue), and alpha. Each component occupies 8 bits, and the total length is 32 bits. It corresponds to [CAMERA_FORMAT_RGBA_8888 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameraformat-e.md#CameraFormat).
+The color information consists of four components: R (Red), G (Green), B (Blue), and alpha. Each component occupies 8 bits, and the total length is 32 bits. It corresponds to [CAMERA_FORMAT_RGBA_8888 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameraformat-e.md#cameraformat).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -106,10 +86,6 @@ The color information consists of four components: B (Blue), G (Green), R (Red),
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -127,10 +103,6 @@ RGB_888 = 5
 The color information consists of three components: R (Red), G (Green), and B (Blue). Each component occupies 8 bits, and the total length is 24 bits.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -150,10 +122,6 @@ The color information consists of only the alpha component, which occupies eight
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -172,10 +140,6 @@ The color information consists of four components: R (Red), G (Green), B (Blue),
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -190,13 +154,9 @@ The color information consists of four components: R (Red), G (Green), B (Blue),
 NV21 = 8
 ```
 
-YVU pixel arrangement, where the V component precedes the U component. The color information consists of the luminance component Y and the interleaved chrominance components V and U. The Y component occupies 8 bits, and the UV components occupy 4 bits on average due to 4:2:0 sampling. The total length is 12 bits on average. It corresponds to [CAMERA_FORMAT_YUV_420_SP in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameraformat-e.md#CameraFormat).
+YVU pixel arrangement, where the V component precedes the U component. The color information consists of the luminance component Y and the interleaved chrominance components V and U. The Y component occupies 8 bits, and the UV components occupy 4 bits on average due to 4:2:0 sampling. The total length is 12 bits on average. It corresponds to [CAMERA_FORMAT_YUV_420_SP in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameraformat-e.md#cameraformat).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -216,10 +176,6 @@ YUV pixel arrangement, where the U component precedes the V component. The color
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -238,10 +194,6 @@ The color information consists of four components: R (Red), G (Green), B (Blue),
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PixelMapFormat-RGBA_1010102 = 10--><!--Device-PixelMapFormat-RGBA_1010102 = 10-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -252,13 +204,9 @@ The color information consists of four components: R (Red), G (Green), B (Blue),
 YCBCR_P010 = 11
 ```
 
-The color information consists of the luminance component Y and the chrominance components Cb and Cr. Each component has effective 10 bits. In storage, the Y plane uses 16 bits per pixel (10 of which are effective). The UV plane is interleaved, with every four pixels taking up 32 bits of data (each chrominance component having 10 effective bits), resulting in an average of 15 effective bits overall. It corresponds to [CAMERA_FORMAT_YCBCR_P010 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameraformat-e.md#CameraFormat).
+The color information consists of the luminance component Y and the chrominance components Cb and Cr. Each component has effective 10 bits. In storage, the Y plane uses 16 bits per pixel (10 of which are effective). The UV plane is interleaved, with every four pixels taking up 32 bits of data (each chrominance component having 10 effective bits), resulting in an average of 15 effective bits overall. It corresponds to [CAMERA_FORMAT_YCBCR_P010 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameraformat-e.md#cameraformat).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PixelMapFormat-YCBCR_P010 = 11--><!--Device-PixelMapFormat-YCBCR_P010 = 11-End-->
 
@@ -270,13 +218,9 @@ The color information consists of the luminance component Y and the chrominance 
 YCRCB_P010 = 12
 ```
 
-The color information consists of the luminance component Y and the chrominance components Cr and Cb. Each component has effective 10 bits. In storage, the Y plane uses 16 bits per pixel (10 of which are effective). The UV plane is interleaved, with every four pixels taking up 32 bits of data (each chrominance component having 10 effective bits), resulting in an average of 15 effective bits overall. It corresponds to [CAMERA_FORMAT_YCRCB_P010 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameraformat-e.md#CameraFormat).
+The color information consists of the luminance component Y and the chrominance components Cr and Cb. Each component has effective 10 bits. In storage, the Y plane uses 16 bits per pixel (10 of which are effective). The UV plane is interleaved, with every four pixels taking up 32 bits of data (each chrominance component having 10 effective bits), resulting in an average of 15 effective bits overall. It corresponds to [CAMERA_FORMAT_YCRCB_P010 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameraformat-e.md#cameraformat).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PixelMapFormat-YCRCB_P010 = 12--><!--Device-PixelMapFormat-YCRCB_P010 = 12-End-->
 
@@ -291,10 +235,6 @@ Y8 = 14
 Indicates that each pixel is stored on 8 bits, a YUV planar format comprised of Y plane only.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -311,10 +251,6 @@ ALPHA_U8 = 15
 Indicates that each pixel is stored on 8 bits, without 4-byte stride alignment. Each pixel contains 1 component: ALPHA(8bits) and is stored from the higher-order to the lower-order bits.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,10 +270,6 @@ Indicates that each pixel is stored on 16 bits. Each pixel contains 1 component:
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -355,10 +287,6 @@ ASTC_4x4 = 102
 The storage format is ASTC 4x4 format, and the memory usage is only 1/4 of RGBA_8888. This format is only used for direct display scenes and does not support pixel access or post- processing editing.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PixelMapFormat-ASTC_4x4 = 102--><!--Device-PixelMapFormat-ASTC_4x4 = 102-End-->
 

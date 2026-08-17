@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface NumberConstructor--><!--Device-unnamed-interface NumberConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new(value?: any): Number
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NumberConstructor-new(value?: any): Number--><!--Device-NumberConstructor-new(value?: any): Number-End-->
 
@@ -41,10 +33,6 @@ new(value?: any): Number
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NumberConstructor-(value?: any): number--><!--Device-NumberConstructor-(value?: any): number-End-->
 
@@ -72,10 +60,6 @@ The largest number that can be represented in JavaScript. Equal to approximately
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-NumberConstructor-readonly MAX_VALUE: number--><!--Device-NumberConstructor-readonly MAX_VALUE: number-End-->
 
 ## MIN_VALUE
@@ -89,10 +73,6 @@ The closest number to zero that can be represented in JavaScript. Equal to appro
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NumberConstructor-readonly MIN_VALUE: number--><!--Device-NumberConstructor-readonly MIN_VALUE: number-End-->
 
@@ -108,10 +88,6 @@ A value that is less than the largest negative number that can be represented in
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-NumberConstructor-readonly NEGATIVE_INFINITY: number--><!--Device-NumberConstructor-readonly NEGATIVE_INFINITY: number-End-->
 
 ## NaN
@@ -125,10 +101,6 @@ A value that is not a number. In equality comparisons, NaN does not equal any va
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NumberConstructor-readonly NaN: number--><!--Device-NumberConstructor-readonly NaN: number-End-->
 
@@ -144,10 +116,6 @@ A value greater than the largest number that can be represented in JavaScript. J
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-NumberConstructor-readonly POSITIVE_INFINITY: number--><!--Device-NumberConstructor-readonly POSITIVE_INFINITY: number-End-->
 
 ## prototype
@@ -159,10 +127,6 @@ readonly prototype: Number
 **Type:** Number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-NumberConstructor-readonly prototype: Number--><!--Device-NumberConstructor-readonly prototype: Number-End-->
 

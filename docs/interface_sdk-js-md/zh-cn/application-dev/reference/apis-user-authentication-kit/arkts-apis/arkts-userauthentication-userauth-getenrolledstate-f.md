@@ -10,10 +10,6 @@ function getEnrolledState(authType: UserAuthType): EnrolledState
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -44,7 +40,7 @@ function getEnrolledState(authType: UserAuthType): EnrolledState
 | [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';

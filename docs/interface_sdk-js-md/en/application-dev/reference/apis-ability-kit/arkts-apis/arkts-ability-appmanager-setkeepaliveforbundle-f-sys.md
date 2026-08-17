@@ -16,10 +16,6 @@ Sets or cancels the keep-alive status for an application that belongs to a speci
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
 <!--Device-appManager-function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean): Promise<void>--><!--Device-appManager-function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean): Promise<void>-End-->
@@ -56,7 +52,7 @@ Sets or cancels the keep-alive status for an application that belongs to a speci
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [16300005](../errorcode-ability.md#16300005-bundle-information-does-not-exist) | The target bundle does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

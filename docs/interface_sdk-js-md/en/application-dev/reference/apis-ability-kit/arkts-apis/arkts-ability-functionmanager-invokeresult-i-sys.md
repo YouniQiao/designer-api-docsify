@@ -4,10 +4,6 @@ Encapsulates the success or failure status of function invocation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-functionManager-interface InvokeResult--><!--Device-functionManager-interface InvokeResult-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -32,10 +28,6 @@ The returned data on success. The type can be any JSON value. Only present when 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InvokeResult-data?: any--><!--Device-InvokeResult-data?: any-End-->
@@ -55,10 +47,6 @@ The error code on failure (numeric). Only present when [success](#success) is fa
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ The error description on failure. Only present when [success](#success) is false
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InvokeResult-errorMsg?: string--><!--Device-InvokeResult-errorMsg?: string-End-->
@@ -98,15 +82,11 @@ The error description on failure. Only present when [success](#success) is false
 success: boolean
 ```
 
-Indicates whether the invocation was successful (at business logic level). true: Invocation succeeded, [data](#data) contains the returned data. false: Invocation failed, [errorCode](#errorCode) and [errorMsg](#errorMsg) contain error information.
+Indicates whether the invocation was successful (at business logic level). true: Invocation succeeded, [data](#data) contains the returned data. false: Invocation failed, [errorCode](#errorcode) and [errorMsg](#errormsg) contain error information.
 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

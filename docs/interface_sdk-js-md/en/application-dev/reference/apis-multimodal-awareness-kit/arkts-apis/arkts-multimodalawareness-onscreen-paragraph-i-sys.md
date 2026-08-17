@@ -4,10 +4,6 @@ Defines the paragraph information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-onScreen-export interface Paragraph--><!--Device-onScreen-export interface Paragraph-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -32,10 +28,6 @@ Chapter ID of the paragraph, which is the identifier of each subchapter.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Paragraph-chapterId?: int--><!--Device-Paragraph-chapterId?: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -53,10 +45,6 @@ Hook ID of the paragraph, which is the identifier of each main paragraph.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Paragraph-hookId?: long--><!--Device-Paragraph-hookId?: long-End-->
 
@@ -76,10 +64,6 @@ Content of the paragraph.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Paragraph-text?: string--><!--Device-Paragraph-text?: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -97,10 +81,6 @@ Title of the paragraph.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Paragraph-title?: string--><!--Device-Paragraph-title?: string-End-->
 

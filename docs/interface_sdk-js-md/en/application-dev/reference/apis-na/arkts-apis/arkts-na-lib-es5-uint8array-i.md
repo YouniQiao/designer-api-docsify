@@ -4,10 +4,6 @@ A typed array of 8-bit unsigned integer values. The contents are initialized to 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Uint8Array--><!--Device-unnamed-interface Uint8Array-End-->
 
 ## copyWithin
@@ -19,10 +15,6 @@ copyWithin(target: number, start: number, end?: number): this
 Returns the this object after copying a section of the array identified by start and end to the same array starting at position target
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-copyWithin(target: number, start: number, end?: number): this--><!--Device-Uint8Array-copyWithin(target: number, start: number, end?: number): this-End-->
 
@@ -50,10 +42,6 @@ Determines whether all the members of an array satisfy the specified test.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-every(predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any): boolean--><!--Device-Uint8Array-every(predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any): boolean-End-->
 
 **Parameters:**
@@ -78,10 +66,6 @@ fill(value: number, start?: number, end?: number): this
 Changes all array elements from `start` to `end` index to a static `value` and returns the modified array
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-fill(value: number, start?: number, end?: number): this--><!--Device-Uint8Array-fill(value: number, start?: number, end?: number): this-End-->
 
@@ -109,10 +93,6 @@ Returns the elements of an array that meet the condition specified in a callback
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-filter(predicate: (value: number, index: number, array: Uint8Array) => any, thisArg?: any): Uint8Array--><!--Device-Uint8Array-filter(predicate: (value: number, index: number, array: Uint8Array) => any, thisArg?: any): Uint8Array-End-->
 
 **Parameters:**
@@ -137,10 +117,6 @@ find(predicate: (value: number, index: number, obj: Uint8Array) => boolean, this
 Returns the value of the first element in the array where predicate is true, and undefined otherwise.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-find(predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any): number | undefined--><!--Device-Uint8Array-find(predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any): number | undefined-End-->
 
@@ -167,10 +143,6 @@ Returns the index of the first element in the array where predicate is true, and
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-findIndex(predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any): number--><!--Device-Uint8Array-findIndex(predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any): number-End-->
 
 **Parameters:**
@@ -196,10 +168,6 @@ Performs the specified action for each element in an array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-forEach(callbackfn: (value: number, index: number, array: Uint8Array) => void, thisArg?: any): void--><!--Device-Uint8Array-forEach(callbackfn: (value: number, index: number, array: Uint8Array) => void, thisArg?: any): void-End-->
 
 **Parameters:**
@@ -218,10 +186,6 @@ indexOf(searchElement: number, fromIndex?: number): number
 Returns the index of the first occurrence of a value in an array.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-indexOf(searchElement: number, fromIndex?: number): number--><!--Device-Uint8Array-indexOf(searchElement: number, fromIndex?: number): number-End-->
 
@@ -248,10 +212,6 @@ Adds all the elements of an array separated by the specified separator string.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-join(separator?: string): string--><!--Device-Uint8Array-join(separator?: string): string-End-->
 
 **Parameters:**
@@ -275,10 +235,6 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 Returns the index of the last occurrence of a value in an array.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-lastIndexOf(searchElement: number, fromIndex?: number): number--><!--Device-Uint8Array-lastIndexOf(searchElement: number, fromIndex?: number): number-End-->
 
@@ -305,10 +261,6 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-map(callbackfn: (value: number, index: number, array: Uint8Array) => number, thisArg?: any): Uint8Array--><!--Device-Uint8Array-map(callbackfn: (value: number, index: number, array: Uint8Array) => number, thisArg?: any): Uint8Array-End-->
 
 **Parameters:**
@@ -334,10 +286,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number--><!--Device-Uint8Array-reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number-End-->
 
 **Parameters:**
@@ -359,10 +307,6 @@ reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: n
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number--><!--Device-Uint8Array-reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number-End-->
 
@@ -389,10 +333,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U--><!--Device-Uint8Array-reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U-End-->
 
 **Parameters:**
@@ -418,10 +358,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number--><!--Device-Uint8Array-reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number-End-->
 
 **Parameters:**
@@ -443,10 +379,6 @@ reduceRight(callbackfn: (previousValue: number, currentValue: number, currentInd
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number--><!--Device-Uint8Array-reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number-End-->
 
@@ -473,10 +405,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U--><!--Device-Uint8Array-reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U-End-->
 
 **Parameters:**
@@ -502,10 +430,6 @@ Reverses the elements in an Array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-reverse(): Uint8Array--><!--Device-Uint8Array-reverse(): Uint8Array-End-->
 
 **Return value:**
@@ -523,10 +447,6 @@ set(array: ArrayLike<number>, offset?: number): void
 Sets a value or an array of values.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-set(array: ArrayLike<number>, offset?: number): void--><!--Device-Uint8Array-set(array: ArrayLike<number>, offset?: number): void-End-->
 
@@ -546,10 +466,6 @@ slice(start?: number, end?: number): Uint8Array
 Returns a section of an array.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-slice(start?: number, end?: number): Uint8Array--><!--Device-Uint8Array-slice(start?: number, end?: number): Uint8Array-End-->
 
@@ -576,10 +492,6 @@ Determines whether the specified callback function returns true for any element 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-some(predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any): boolean--><!--Device-Uint8Array-some(predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any): boolean-End-->
 
 **Parameters:**
@@ -605,10 +517,6 @@ Sorts an array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-sort(compareFn?: (a: number, b: number) => number): this--><!--Device-Uint8Array-sort(compareFn?: (a: number, b: number) => number): this-End-->
 
 **Parameters:**
@@ -632,10 +540,6 @@ subarray(begin?: number, end?: number): Uint8Array
 Gets a new Uint8Array view of the ArrayBuffer store for this array, referencing the elements at begin, inclusive, up to end, exclusive.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-subarray(begin?: number, end?: number): Uint8Array--><!--Device-Uint8Array-subarray(begin?: number, end?: number): Uint8Array-End-->
 
@@ -662,10 +566,6 @@ Converts a number to a string by using the current locale.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-toLocaleString(): string--><!--Device-Uint8Array-toLocaleString(): string-End-->
 
 **Return value:**
@@ -684,10 +584,6 @@ Returns a string representation of an array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-toString(): string--><!--Device-Uint8Array-toString(): string-End-->
 
 **Return value:**
@@ -705,10 +601,6 @@ valueOf(): Uint8Array
 Returns the primitive value of the specified object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-valueOf(): Uint8Array--><!--Device-Uint8Array-valueOf(): Uint8Array-End-->
 
@@ -730,10 +622,6 @@ The size in bytes of each element in the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8Array-readonly BYTES_PER_ELEMENT: number-End-->
 
 ## buffer
@@ -747,10 +635,6 @@ The ArrayBuffer instance referenced by the array.
 **Type:** [ArrayBufferLike](arkts-na-arraybufferlike-t.md)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-readonly buffer: ArrayBufferLike--><!--Device-Uint8Array-readonly buffer: ArrayBufferLike-End-->
 
@@ -766,10 +650,6 @@ The length in bytes of the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-readonly byteLength: number--><!--Device-Uint8Array-readonly byteLength: number-End-->
 
 ## byteOffset
@@ -784,10 +664,6 @@ The offset in bytes of the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8Array-readonly byteOffset: number--><!--Device-Uint8Array-readonly byteOffset: number-End-->
 
 ## length
@@ -801,10 +677,6 @@ The length of the array.
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8Array-readonly length: number--><!--Device-Uint8Array-readonly length: number-End-->
 

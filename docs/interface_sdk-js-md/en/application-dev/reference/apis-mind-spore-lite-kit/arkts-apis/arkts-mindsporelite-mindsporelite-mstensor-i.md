@@ -4,10 +4,6 @@ Provides MSTensor definition
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-interface MSTensor--><!--Device-mindSporeLite-interface MSTensor-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -28,10 +24,6 @@ Get MSTensor data
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MSTensor-getData(): ArrayBuffer--><!--Device-MSTensor-getData(): ArrayBuffer-End-->
@@ -44,7 +36,7 @@ Get MSTensor data
 | --- | --- |
 | ArrayBuffer | the data of tensor |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -84,10 +76,6 @@ Set MSTensor data
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MSTensor-setData(inputArray: ArrayBuffer): void--><!--Device-MSTensor-setData(inputArray: ArrayBuffer): void-End-->
@@ -104,9 +92,9 @@ Set MSTensor data
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000013 | Failed to set MSTensor data. Possible causes: 1. The input array buffer size is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000013 | Failed to set MSTensor data. Possible causes: 1. The input array buffer size is incorrect. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -142,10 +130,6 @@ The data size of the tensor, the unit is byte.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MSTensor-dataSize: int--><!--Device-MSTensor-dataSize: int-End-->
@@ -163,10 +147,6 @@ The data type of the tensor.
 **Type:** DataType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,10 +166,6 @@ The number of elements in the tensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MSTensor-elementNum: int--><!--Device-MSTensor-elementNum: int-End-->
@@ -207,10 +183,6 @@ The format of the tensor.
 **Type:** [Format](arkts-mindsporelite-mindsporelite-format-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,10 +202,6 @@ The name of the tensor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MSTensor-name: string--><!--Device-MSTensor-name: string-End-->
@@ -251,10 +219,6 @@ The shape of the tensor.
 **Type:** int[]
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

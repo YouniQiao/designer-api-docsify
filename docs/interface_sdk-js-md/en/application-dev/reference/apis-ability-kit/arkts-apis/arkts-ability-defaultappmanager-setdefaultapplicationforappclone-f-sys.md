@@ -16,10 +16,6 @@ Sets an application clone as the default application of the specified type. This
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_DEFAULT_APPLICATION or (ohos.permission.SET_DEFAULT_APPLICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
 <!--Device-defaultAppManager-function setDefaultApplicationForAppClone(type: string, elementName: ElementName, appIndex: int, userId?: int): void--><!--Device-defaultAppManager-function setDefaultApplicationForAppClone(type: string, elementName: ElementName, appIndex: int, userId?: int): void-End-->
@@ -32,10 +28,10 @@ Sets an application clone as the default application of the specified type. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the application. The value can be a value of [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md#ApplicationType), [MIMEType](../../../database/uniform-data-type-list.md#generic-utds), or [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType). |
+| type | string | Yes | Type of the application. The value can be a value of [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md#applicationtype), [MIMEType](../../../database/uniform-data-type-list.md#generic-utds), or [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | Element information of the application. Only **bundleName**, **abilityName**, and **moduleName** are used, and the three properties must be set. |
 | appIndex | int | Yes | Index of the application clone.<br>The options include 1, 2, 3, 4, and 5. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) .<br>The default value is the user ID of the caller. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) .<br>The default value is the user ID of the caller. |
 
 **Error codes:**
 
@@ -49,7 +45,7 @@ Sets an application clone as the default application of the specified type. This
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user id is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { defaultAppManager } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ PublishFormCrossBundleInfo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-interface PublishFormCrossBundleInfo--><!--Device-formInfo-interface PublishFormCrossBundleInfo-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -32,10 +28,6 @@ Obtains the caller bundle name of the form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PublishFormCrossBundleInfo-callerBundleName: string--><!--Device-PublishFormCrossBundleInfo-callerBundleName: string-End-->
@@ -56,10 +48,6 @@ Obtains the target bundle name of the form.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PublishFormCrossBundleInfo-targetBundleName: string--><!--Device-PublishFormCrossBundleInfo-targetBundleName: string-End-->
@@ -79,10 +67,6 @@ Obtains the target template form detail id of the form.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

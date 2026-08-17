@@ -10,11 +10,9 @@ Creates a stream based on the file path. This API returns the result synchronous
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md#createStreamSync)
+**Substitutes:** [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md#createstreamsync)
 
 <!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream--><!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream-End-->
 

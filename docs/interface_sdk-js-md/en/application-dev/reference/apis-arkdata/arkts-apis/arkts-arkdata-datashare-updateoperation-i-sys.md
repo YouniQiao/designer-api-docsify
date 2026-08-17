@@ -4,10 +4,6 @@ Represents the batch update operation information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-dataShare-interface UpdateOperation--><!--Device-dataShare-interface UpdateOperation-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -32,10 +28,6 @@ Conditions for updating data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UpdateOperation-predicates: dataSharePredicates.DataSharePredicates--><!--Device-UpdateOperation-predicates: dataSharePredicates.DataSharePredicates-End-->
@@ -55,10 +47,6 @@ Data to be updated.
 **Type:** [ValuesBucket](arkts-arkdata-valuesbucket-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

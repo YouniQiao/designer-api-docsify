@@ -4,11 +4,9 @@ Defines the callback invoked when the acceleration sensor data changes.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md#AccelerometerResponse)
+**Substitutes:** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md#accelerometerresponse)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -54,8 +52,6 @@ Acceleration on the x-axis.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** [x](arkts-sensorservice-sensor-accelerometerresponse-i.md#x)
@@ -80,8 +76,6 @@ Acceleration on the y-axis.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** [y](arkts-sensorservice-sensor-accelerometerresponse-i.md#y)
@@ -105,8 +99,6 @@ Acceleration on the z-axis.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 

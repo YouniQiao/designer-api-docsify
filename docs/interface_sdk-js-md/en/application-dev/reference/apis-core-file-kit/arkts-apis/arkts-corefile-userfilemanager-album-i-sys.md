@@ -2,15 +2,13 @@
 
 Provides APIs to manage albums.
 
-**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md#AbsAlbum-(System-API))
+**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md#absalbum-system-api)
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#Album)
+**Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#album)
 
 <!--Device-userFileManager-interface Album--><!--Device-userFileManager-interface Album-End-->
 
@@ -34,11 +32,9 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [addAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addAssets)
+**Substitutes:** [addAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -61,7 +57,7 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -103,11 +99,9 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [addAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addAssets)
+**Substitutes:** [addAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -135,7 +129,7 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -176,11 +170,9 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#commitModify)
+**Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#commitmodify)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -196,7 +188,7 @@ Commits the modification on the album attributes to the database. This API uses 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -232,11 +224,9 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#commitModify)
+**Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#commitmodify)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -252,7 +242,7 @@ Commits the modification on the album attributes to the database. This API uses 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -291,11 +281,9 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteAssets)
+**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -318,7 +306,7 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -360,11 +348,9 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteAssets)
+**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -392,7 +378,7 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -433,11 +419,9 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [recoverAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i-sys.md#recoverAssets)
+**Substitutes:** [recoverAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i-sys.md#recoverassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -460,7 +444,7 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -502,11 +486,9 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [recoverAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i-sys.md#recoverAssets)
+**Substitutes:** [recoverAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i-sys.md#recoverassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -534,7 +516,7 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -575,11 +557,9 @@ Removes image and video assets from an album. The album and file resources must 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeAssets)
+**Substitutes:** [removeAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -602,7 +582,7 @@ Removes image and video assets from an album. The album and file resources must 
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -644,11 +624,9 @@ Removes image and video assets from an album. The album and file resources must 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeAssets)
+**Substitutes:** [removeAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -676,7 +654,7 @@ Removes image and video assets from an album. The album and file resources must 
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
-## Examples
+**Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 

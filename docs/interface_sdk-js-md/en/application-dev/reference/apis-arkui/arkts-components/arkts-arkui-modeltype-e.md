@@ -1,12 +1,8 @@
-# ModelType
+# ModelType(Defines 3D component)
 
 The enum of model type
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum ModelType--><!--Device-unnamed-declare enum ModelType-End-->
 
@@ -21,10 +17,6 @@ TEXTURE = 0
 Render to texture, gpu would compose this texture to screen.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,10 +33,6 @@ SURFACE = 1
 Render to surface, special hardware would compose this surface to screen.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

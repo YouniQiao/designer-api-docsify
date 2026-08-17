@@ -4,10 +4,6 @@ Enumerates the camera connection types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum ConnectionType--><!--Device-camera-enum ConnectionType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -21,10 +17,6 @@ CAMERA_CONNECTION_BUILT_IN = 0
 Built-in camera.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,10 +34,6 @@ Camera connected using USB.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-ConnectionType-CAMERA_CONNECTION_USB_PLUGIN = 1--><!--Device-ConnectionType-CAMERA_CONNECTION_USB_PLUGIN = 1-End-->
@@ -61,10 +49,6 @@ CAMERA_CONNECTION_REMOTE = 2
 Remote camera.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

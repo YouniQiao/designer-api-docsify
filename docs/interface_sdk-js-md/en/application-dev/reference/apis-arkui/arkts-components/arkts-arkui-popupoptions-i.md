@@ -4,10 +4,6 @@ Provides the configuration options for the popup.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface PopupOptions--><!--Device-unnamed-declare interface PopupOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Arrow height. Default value: **8** Unit: vp **NOTE：**Percentage values are not
 **Default:** 8.0_vp.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Offset of the popup arrow relative to the popup. When the arrow is at the top or
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PopupOptions-arrowOffset?: Length--><!--Device-PopupOptions-arrowOffset?: Length-End-->
@@ -71,10 +59,6 @@ Position of the tooltip arrow relative to its parent component. Available positi
 **Type:** ArrowPointPosition
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ Arrow thickness. If the arrow thickness exceeds the length of the edge minus twi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -123,10 +103,6 @@ Whether the popup is automatically closed when an operation is performed on the 
 **Default:** true
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,10 +126,6 @@ Whether the popup covers the pointing component during avoidance. Default value:
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -176,10 +148,6 @@ Background blur style of the popup. Default value: **BlurStyle.COMPONENT_ULTRA_T
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -199,10 +167,6 @@ Defines the popup's background blur style with options
 **Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,10 +188,6 @@ Defines the popup's background effect with options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -248,10 +208,6 @@ Linear gradient color of the inner outline of the popup. **NOTE：**1. If **bord
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -271,10 +227,6 @@ Width of the inner outline of the popup. Default value: **1** Unit: vp **NOTE：
 **Type:** Dimension
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -298,10 +250,6 @@ Define the popup theme color mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -323,10 +271,6 @@ Whether to display the arrow. **true**: The arrow is displayed; **false**: The a
 **Default:** true
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -350,10 +294,6 @@ Whether the popup responds when the device is in hover mode (semi-folded state),
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -375,10 +315,6 @@ Whether the popup aligns with the transformed position of the target when the ta
 **Default:** false
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -402,10 +338,6 @@ Whether to avoid the soft keyboard. By default, the popup does not avoid the sof
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -425,10 +357,6 @@ Defines the display level of the popup.
 **Type:** LevelMode
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -450,10 +378,6 @@ Whether to apply a mask with the specified color to the popup. **true**: A trans
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -474,10 +398,6 @@ Content of the popup.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PopupOptions-message: string--><!--Device-PopupOptions-message: string-End-->
@@ -495,10 +415,6 @@ Configuration options of the popup message.
 **Type:** [PopupMessageOptions](arkts-arkui-popupmessageoptions-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -521,10 +437,6 @@ Offset of the popup relative to the display position specified by **placement**.
 **Default:** { x: 0, y: 0 } [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -567,10 +479,6 @@ Callback for popup visibility state changes. The parameter **isVisible** indicat
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PopupOptions-onStateChange?: (event: {    /**     * is Visible.     *     * @type { boolean }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @stagemodelonly     * @crossplatform     * @since 10     */    /**     * is Visible.     *     * @type { boolean }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @stagemodelonly     * @crossplatform     * @atomicservice     * @since 11     */    isVisible: boolean  }) => void--><!--Device-PopupOptions-onStateChange?: (event: {    /**     * is Visible.     *     * @type { boolean }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @stagemodelonly     * @crossplatform     * @since 10     */    /**     * is Visible.     *     * @type { boolean }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @stagemodelonly     * @crossplatform     * @atomicservice     * @since 11     */    isVisible: boolean  }) => void-End-->
@@ -588,10 +496,6 @@ Interactive dismissal behavior. The default value is **true**, meaning that the 
 **Type:** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -613,10 +517,6 @@ Linear gradient color of the outer outline of the popup. **NOTE：**1. If **outl
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -636,10 +536,6 @@ Width of the outer outline of the popup. Default value: **1** Unit: vp **NOTE：
 **Type:** Dimension
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -663,10 +559,6 @@ Display position of the popup relative to the host node. The default value is **
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -687,8 +579,6 @@ Whether to display the popup above the component. The default value is **false**
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [placement](#placement)
@@ -703,15 +593,11 @@ Whether to display the popup above the component. The default value is **false**
 popupColor?: Color | string | Resource | number
 ```
 
-Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#BlurStyle)
+Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#blurstyle)
 
 **Type:** Color \| string \| Resource \| number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -785,10 +671,6 @@ Primary button. **value**: text of the primary button in the popup. **action**: 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PopupOptions-primaryButton?: {    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }--><!--Device-PopupOptions-primaryButton?: {    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }-End-->
@@ -808,10 +690,6 @@ Rounded corner radius of the popup. Default value: **20** Unit: vp
 **Default:** 20.0_vp.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -885,10 +763,6 @@ Secondary button. **value**: text of the secondary button in the popup. **action
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PopupOptions-secondaryButton?: {    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }--><!--Device-PopupOptions-secondaryButton?: {    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * Button text value     *     * @type { string }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    value: string;    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @since 7     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @since 10     */    /**     * action     *     * @type { function }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @crossplatform     * @atomicservice     * @since 11     */    action: () => void;  }-End-->
@@ -908,10 +782,6 @@ Popup shadow. Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 **Default:** ShadowStyle.OUTER_DEFAULT_MD.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -935,10 +805,6 @@ Whether the popup is displayed in the created subwindow. **true**: The popup is 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PopupOptions-showInSubWindow?: boolean--><!--Device-PopupOptions-showInSubWindow?: boolean-End-->
@@ -956,10 +822,6 @@ Set system-styled materials for popup. Different materials have different effect
 **Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -981,10 +843,6 @@ Spacing between the popup and the host node. Percentage values are not supported
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1005,10 +863,6 @@ Transition animations for the entrance and exit of the popup. **NOTE：**1. If t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1028,10 +882,6 @@ Width of the popup. If this parameter is not set or the value is invalid, the po
 **Type:** Dimension
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

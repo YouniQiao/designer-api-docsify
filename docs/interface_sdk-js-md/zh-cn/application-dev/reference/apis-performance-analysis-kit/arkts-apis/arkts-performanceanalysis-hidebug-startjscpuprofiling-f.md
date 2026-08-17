@@ -10,10 +10,6 @@ function startJsCpuProfiling(filename : string) : void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hidebug-function startJsCpuProfiling(filename : string) : void--><!--Device-hidebug-function startJsCpuProfiling(filename : string) : void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ function startJsCpuProfiling(filename : string) : void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | the parameter check failed, Parameter type error |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

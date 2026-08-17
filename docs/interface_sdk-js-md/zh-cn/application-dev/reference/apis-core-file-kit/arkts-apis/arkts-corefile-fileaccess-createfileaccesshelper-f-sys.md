@@ -10,8 +10,6 @@ function createFileAccessHelper(context: Context): FileAccessHelper
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
@@ -71,7 +69,7 @@ function createFileAccessHelper(context: Context): FileAccessHelper
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -104,8 +102,6 @@ function createFileAccessHelper(context: Context, wants: Array<Want>): FileAcces
 以同步方法创建连接指定wants的helper对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
 **废弃版本：** 23
 
@@ -167,7 +163,7 @@ function createFileAccessHelper(context: Context, wants: Array<Want>): FileAcces
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

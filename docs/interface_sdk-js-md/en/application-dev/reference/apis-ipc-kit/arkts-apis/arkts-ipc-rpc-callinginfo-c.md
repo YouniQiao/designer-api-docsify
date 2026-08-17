@@ -4,10 +4,6 @@ Defines the IPC context, including the PID and UID, local and remote device IDs,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-rpc-class CallingInfo--><!--Device-rpc-class CallingInfo-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -32,10 +28,6 @@ PID of the caller. callerPid is valid only when the isLocalCalling is true. Othe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallingInfo-readonly callerPid: number--><!--Device-CallingInfo-readonly callerPid: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -53,10 +45,6 @@ Token ID of the caller. callerTokenId is valid only when the isLocalCalling is t
 **Default:** -1
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallingInfo-readonly callerTokenId: number--><!--Device-CallingInfo-readonly callerTokenId: number-End-->
 
@@ -76,10 +64,6 @@ UID of the caller. callerUid is valid only when the isLocalCalling is true. Othe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallingInfo-readonly callerUid: number--><!--Device-CallingInfo-readonly callerUid: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -97,10 +81,6 @@ Whether the peer end of the current communication is a process on the local devi
 **Default:** true
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallingInfo-readonly isLocalCalling: boolean--><!--Device-CallingInfo-readonly isLocalCalling: boolean-End-->
 
@@ -120,10 +100,6 @@ Local device ID. This parameter is valid only in RPC scenarios. localDeviceId is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CallingInfo-readonly localDeviceId: string--><!--Device-CallingInfo-readonly localDeviceId: string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -141,10 +117,6 @@ Remote device ID. This parameter is valid only in RPC scenarios. remoteDeviceId 
 **Default:** @syscap SystemCapability.Communication.IPC.Core @FaAndStageModel
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CallingInfo-readonly remoteDeviceId: string--><!--Device-CallingInfo-readonly remoteDeviceId: string-End-->
 

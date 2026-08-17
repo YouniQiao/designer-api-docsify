@@ -16,10 +16,6 @@ Add surface for the virtual screen.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-display-function addVirtualScreenSurface(screenId: long, surfaceId: string, surfaceRegion?: Rect): Promise<void>--><!--Device-display-function addVirtualScreenSurface(screenId: long, surfaceId: string, surfaceRegion?: Rect): Promise<void>-End-->
@@ -34,7 +30,7 @@ Add surface for the virtual screen.
 | --- | --- | --- | --- |
 | screenId | long | Yes | Indicates the screen id of the virtual screen. |
 | surfaceId | string | Yes | ID of the surface bound to the virtual screen. You can use the getXComponentSurfaceId method to obtain the ID of the surface corresponding to an existing surface. The maximum length for this parameter is 4096 bytes. If it goes beyond that, only the first 4096 bytes are used. |
-| surfaceRegion | Rect | No | Rectangular area of the virtual screen displayed by the surface. If the virtual screen has not bound any surface via [setVirtualScreenSurface()](arkts-arkui-display-setvirtualscreensurface-f.md#setVirtualScreenSurface) or [addVirtualScreenSurface()](#addVirtualScreenSurface-(System-API)), the surfaceRegion is invalid and defaults to full screen. In mirror mode, the surfaceRegion is invalid and defaults to full screen. In independent display mode, the surfaceRegion is valid. |
+| surfaceRegion | Rect | No | Rectangular area of the virtual screen displayed by the surface. If the virtual screen has not bound any surface via [setVirtualScreenSurface()](arkts-arkui-display-setvirtualscreensurface-f.md#setvirtualscreensurface) or [addVirtualScreenSurface()](#addvirtualscreensurface-system-api), the surfaceRegion is invalid and defaults to full screen. In mirror mode, the surfaceRegion is invalid and defaults to full screen. In independent display mode, the surfaceRegion is valid. |
 
 **Return value:**
 

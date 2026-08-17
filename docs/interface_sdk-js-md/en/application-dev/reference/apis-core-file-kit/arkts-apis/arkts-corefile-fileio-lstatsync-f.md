@@ -10,11 +10,9 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [lstatSync](arkts-corefile-file-fs-lstatsync-f.md#lstatSync)
+**Substitutes:** [lstatSync](arkts-corefile-file-fs-lstatsync-f.md#lstatsync)
 
 <!--Device-unnamed-declare function lstatSync(path: string): Stat--><!--Device-unnamed-declare function lstatSync(path: string): Stat-End-->
 

@@ -16,10 +16,6 @@ Sends an MMS message. This API uses an asynchronous callback to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
 <!--Device-sms-function sendMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void--><!--Device-sms-function sendMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void-End-->
@@ -32,8 +28,8 @@ Sends an MMS message. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#UIAbilityContext). |
-| mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Yes | Parameters (including the callback) for sending MMS messages. For details, see [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md#MmsParams-(System-API)). |
+| context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#uiabilitycontext). |
+| mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Yes | Parameters (including the callback) for sending MMS messages. For details, see [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md#mmsparams-system-api). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -48,7 +44,7 @@ Sends an MMS message. This API uses an asynchronous callback to return the resul
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 FA model:
 
@@ -135,10 +131,6 @@ Sends an MMS message. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
 <!--Device-sms-function sendMms(context: Context, mmsParams: MmsParams): Promise<void>--><!--Device-sms-function sendMms(context: Context, mmsParams: MmsParams): Promise<void>-End-->
@@ -151,8 +143,8 @@ Sends an MMS message. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#UIAbilityContext). |
-| mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Yes | Parameters (including the callback) for sending MMS messages. For details, see [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md#MmsParams-(System-API)). |
+| context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#uiabilitycontext). |
+| mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Yes | Parameters (including the callback) for sending MMS messages. For details, see [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md#mmsparams-system-api). |
 
 **Return value:**
 
@@ -172,7 +164,7 @@ Sends an MMS message. This API uses a promise to return the result.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
-## Examples
+**Examples**
 
 FA model:
 

@@ -16,8 +16,6 @@ Unsubscribe P2P local device change events.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** p2pDeviceChange
@@ -35,7 +33,7 @@ Unsubscribe P2P local device change events.
 | type | 'p2pDeviceChange' | Yes | event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | No | the callback of on |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

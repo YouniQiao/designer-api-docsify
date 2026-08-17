@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 23
 
 <!--Device-unnamed-declare namespace fileExtensionInfo--><!--Device-unnamed-declare namespace fileExtensionInfo-End-->

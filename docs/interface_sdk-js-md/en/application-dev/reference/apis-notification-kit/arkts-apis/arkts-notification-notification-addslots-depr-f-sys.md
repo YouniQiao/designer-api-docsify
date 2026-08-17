@@ -10,11 +10,9 @@ Adds an array of notification slots. This API uses an asynchronous callback to r
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md#addSlots-(System-API))
+**Substitutes:** [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md#addslots-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,11 +40,9 @@ Adds an array of notification slots. This API uses a promise to return the resul
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md#addSlots-(System-API))
+**Substitutes:** [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md#addslots-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

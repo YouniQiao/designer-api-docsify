@@ -4,10 +4,6 @@ Implements the callbacks and events for the ListItem in the expanded state.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface CloseSwipeActionOptions--><!--Device-unnamed-declare interface CloseSwipeActionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Triggered after the collapse animation is complete.
 **Type:** ()=&gt;void
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

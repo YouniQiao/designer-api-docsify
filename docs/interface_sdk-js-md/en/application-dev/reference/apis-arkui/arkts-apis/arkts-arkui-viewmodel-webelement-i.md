@@ -2,13 +2,9 @@
 
 The &lt;web&gt; component is a container for displaying web page content.
 
-**Inheritance/Implementation:** WebElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
+**Inheritance/Implementation:** WebElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface WebElement--><!--Device-unnamed-export interface WebElement-End-->
 
@@ -23,10 +19,6 @@ reload(): void
 Reload the web page content
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

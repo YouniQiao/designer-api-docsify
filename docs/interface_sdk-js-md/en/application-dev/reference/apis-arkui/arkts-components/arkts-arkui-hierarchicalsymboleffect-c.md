@@ -2,13 +2,9 @@
 
 Defines HierarchicalSymbolEffect class, which inherits from **SymbolEffect**.
 
-**Inheritance/Implementation:** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
+**Inheritance/Implementation:** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#symboleffect)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class HierarchicalSymbolEffect--><!--Device-unnamed-declare class HierarchicalSymbolEffect-End-->
 
@@ -23,10 +19,6 @@ constructor(fillStyle?: EffectFillStyle)
 A constructor used to create a **HierarchicalSymbolEffect** instance, which comes with a hierarchical animation effect.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,10 +47,6 @@ Effect fill style. Default value: **EffectFillStyle.CUMULATIVE**
 **Type:** [EffectFillStyle](arkts-arkui-effectfillstyle-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

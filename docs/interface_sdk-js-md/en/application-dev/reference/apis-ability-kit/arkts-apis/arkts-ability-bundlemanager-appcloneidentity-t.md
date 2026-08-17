@@ -8,10 +8,6 @@ Describes the identity information of an application clone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export type AppCloneIdentity = _AppCloneIdentity--><!--Device-bundleManager-export type AppCloneIdentity = _AppCloneIdentity-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

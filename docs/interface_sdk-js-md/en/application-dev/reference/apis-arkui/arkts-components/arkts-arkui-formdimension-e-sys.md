@@ -4,10 +4,6 @@ Enumerates widget sizes.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum FormDimension--><!--Device-unnamed-declare enum FormDimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Dimension_1_2 = 0
 1 x 2 widget.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-FormDimension-Dimension_1_2 = 0--><!--Device-FormDimension-Dimension_1_2 = 0-End-->
 
@@ -44,10 +36,6 @@ Dimension_2_2 = 1
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-FormDimension-Dimension_2_2 = 1--><!--Device-FormDimension-Dimension_2_2 = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -63,10 +51,6 @@ Dimension_2_4 = 2
 2 x 4 widget.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 <!--Device-FormDimension-Dimension_2_4 = 2--><!--Device-FormDimension-Dimension_2_4 = 2-End-->
 
@@ -84,10 +68,6 @@ Dimension_4_4 = 3
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-FormDimension-Dimension_4_4 = 3--><!--Device-FormDimension-Dimension_4_4 = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -103,8 +83,6 @@ Dimension_2_1 = 4
 2 x 1 widget.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 20
 
@@ -124,10 +102,6 @@ DIMENSION_1_1 = 6
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-FormDimension-DIMENSION_1_1 = 6--><!--Device-FormDimension-DIMENSION_1_1 = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -143,10 +117,6 @@ DIMENSION_6_4 = 7
 6 x 4 widget.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-FormDimension-DIMENSION_6_4 = 7--><!--Device-FormDimension-DIMENSION_6_4 = 7-End-->
 
@@ -164,10 +134,6 @@ DIMENSION_2_3 = 8
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-FormDimension-DIMENSION_2_3 = 8--><!--Device-FormDimension-DIMENSION_2_3 = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -183,10 +149,6 @@ DIMENSION_3_3 = 9
 3 x 3 widget. Available for wearable devices.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-FormDimension-DIMENSION_3_3 = 9--><!--Device-FormDimension-DIMENSION_3_3 = 9-End-->
 

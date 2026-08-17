@@ -1,14 +1,10 @@
 # ReactiveComponentContent
 
-ReactiveComponentContent is inherited from Content and is a container component used to dynamically bear and reuse UI content. It uses the @Builder function to build the UI and uses [ReactiveBuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-reactivebuildernode-c.md#ReactiveBuilderNode) to generate and manage the component tree. The core value of this component is to provide complete lifecycle management for dynamic content so that it can be integrated into the ArkUI component reuse system. This component is especially suitable for scenarios that require high- performance rendering, such as long lists.
+ReactiveComponentContent is inherited from Content and is a container component used to dynamically bear and reuse UI content. It uses the @Builder function to build the UI and uses [ReactiveBuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-reactivebuildernode-c.md#reactivebuildernode) to generate and manage the component tree. The core value of this component is to provide complete lifecycle management for dynamic content so that it can be integrated into the ArkUI component reuse system. This component is especially suitable for scenarios that require high- performance rendering, such as long lists.
 
 **Inheritance/Implementation:** ReactiveComponentContent extends Content
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class ReactiveComponentContent--><!--Device-unnamed-export class ReactiveComponentContent-End-->
 
@@ -23,10 +19,6 @@ constructor(uiContext: UIContext, builder: WrappedBuilder<T>, config: BuildOptio
 Constructor of ReactiveComponentContent.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,7 +37,7 @@ Constructor of ReactiveComponentContent.
 | config | [BuildOptions](../../apis-na/arkts-apis/arkts-na-buildernode-buildoptions-i.md) | Yes | Configures the build behavior of the builder. All attributes in BuildOptions are optional. The default value is the corresponding default value in BuildOptions. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. Transfers external data to the WrappedBuilder&lt;T&gt and build functions specified in the constructor. Multiple input parameters are supported. The default value is **undefined**. |
 
-## Examples
+**Examples**
 
 This example demonstrates how to use the ReactiveComponentContent constructor to dynamically create UI components that contain reactive content, implementing nested calls to the Builder function and flexible transfer of function parameters.
 
@@ -117,10 +109,6 @@ Immediately releases the reference relationship between this **ReactiveComponent
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -129,7 +117,7 @@ Immediately releases the reference relationship between this **ReactiveComponent
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 The following example shows how to use the dispose API to correctly release the ReactiveComponentContent object and manage the node lifecycle.
 
@@ -243,10 +231,6 @@ Updates **ReactiveComponentContent**. If the bound parameters used in the **buil
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -255,7 +239,7 @@ Updates **ReactiveComponentContent**. If the bound parameters used in the **buil
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 This example demonstrates the usage of the flushState API in ReactiveComponentContent. By comparing the data update mechanisms of the V1 and V2 decorators, it illustrates the state update strategies under different reactive solutions.
 
@@ -373,13 +357,9 @@ struct Index {
 inheritFreezeOptions(enabled: boolean): void
 ```
 
-Sets whether the current **ReactiveComponentContent** object inherits the freeze policy configured by [ComponentOptions](../arkts-components/arkts-arkui-componentoptions-i.md#ComponentOptions) from its parent component's custom components. When inheritance is disabled (set to **false**), the **ReactiveComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state. > **NOTE：**> > When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent > component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or > **ReactiveComponentContent**, it will inherit the parent component's freeze policy. If the child component is a > custom component, its freeze policy is not transferred to the child component.
+Sets whether the current **ReactiveComponentContent** object inherits the freeze policy configured by [ComponentOptions](../arkts-components/arkts-arkui-componentoptions-i.md#componentoptions) from its parent component's custom components. When inheritance is disabled (set to **false**), the **ReactiveComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state. > **NOTE：**> > When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent > component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or > **ReactiveComponentContent**, it will inherit the parent component's freeze policy. If the child component is a > custom component, its freeze policy is not transferred to the child component.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -395,7 +375,7 @@ Sets whether the current **ReactiveComponentContent** object inherits the freeze
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | Whether the **ReactiveComponentContent** object inherits the freeze policy from its parent component's custom components. <br>The value **true** means to inherit the freeze policy from the parent component's custom components, and **false** means the opposite. |
 
-## Examples
+**Examples**
 
 In this example, the inheritance status of ReactiveComponentContent is set to true, the freezing policy of the parent custom component is inherited, the component is frozen when it is inactive, and the component is unfrozen when it is active. The cached data is updated.
 
@@ -589,10 +569,6 @@ Checks whether this **ReactiveComponentContent** object has released its referen
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -607,7 +583,7 @@ Checks whether this **ReactiveComponentContent** object has released its referen
 | --- | --- |
 | boolean | Whether the reference to the backend node is released. <br>The value **true** means that the reference to backend node is released, and **false** means the opposite. |
 
-## Examples
+**Examples**
 
 This example demonstrates how to use the isDisposed API to check whether the ReactiveComponentContent object's reference to the backend node is released, providing a complete implementation solution for node status security detection.
 
@@ -741,10 +717,6 @@ Returns a flag indicating whether the current ReactiveComponentContent was obtai
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -769,10 +741,6 @@ Recycles the custom component in ReactiveComponentContent. Component recycling i
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -781,7 +749,7 @@ Recycles the custom component in ReactiveComponentContent. Component recycling i
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 A high-performance long list that contains multi-layer component reuse is implemented. ReactiveComponentContent dynamically manages Builder content and automatically reclaims and reuses components when the list scrolls.
 
@@ -963,10 +931,6 @@ Triggers component reuse for custom components under this **ReactiveComponentCon
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -979,9 +943,9 @@ Triggers component reuse for custom components under this **ReactiveComponentCon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | Object | No | Parameter used to reuse [ReactiveComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-reactivecomponentcontent-c.md#ReactiveComponentContent). This parameter is directly used for reusing all top-level custom components in **ReactiveComponentContent**. It should contain the content required by the constructor parameters of each custom component. Otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10) lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ReactiveComponentContent directly uses the data source during construction. |
+| param | Object | No | Parameter used to reuse [ReactiveComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-reactivecomponentcontent-c.md#reactivecomponentcontent). This parameter is directly used for reusing all top-level custom components in **ReactiveComponentContent**. It should contain the content required by the constructor parameters of each custom component. Otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10) lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ReactiveComponentContent directly uses the data source during construction. |
 
-## Examples
+**Examples**
 
 For details, see the example in [recycle](#recycle).
 
@@ -991,13 +955,9 @@ For details, see the example in [recycle](#recycle).
 updateConfiguration(): void
 ```
 
-Transfers a system environment change event and triggers full update of a node. This event can be used to notify the object of the update. Whether the system environment used by the object is updated depends on the current system environment change of the application. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md#Configuration).
+Transfers a system environment change event and triggers full update of a node. This event can be used to notify the object of the update. Whether the system environment used by the object is updated depends on the current system environment change of the application. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md#configuration).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1007,7 +967,7 @@ Transfers a system environment change event and triggers full update of a node. 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Examples
+**Examples**
 
 The following example shows how to use the updateConfiguration API to respond to system environment configuration changes and dynamically update the UI node constructed by ReactiveComponentContent.
 

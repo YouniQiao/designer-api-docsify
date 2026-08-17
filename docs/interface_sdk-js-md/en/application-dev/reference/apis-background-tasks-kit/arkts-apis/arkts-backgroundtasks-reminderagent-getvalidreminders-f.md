@@ -16,8 +16,6 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** getValidReminders
@@ -32,7 +30,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ReminderRequest&gt;&gt; | Yes | Callback used to return an array of all valid reminders set by the current application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -73,8 +71,6 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** getValidReminders
@@ -89,7 +85,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 | --- | --- |
 | Promise&lt;Array&lt;ReminderRequest&gt;&gt; | Promise used to return an array of all valid reminders set by the current application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 reminderAgent.getValidReminders().then((reminders: Array<reminderAgent.ReminderRequest>) => {

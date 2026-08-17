@@ -4,10 +4,6 @@ Enumerates the camera error codes, which are returned when an API call is incorr
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum CameraErrorCode--><!--Device-camera-enum CameraErrorCode-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -21,10 +17,6 @@ INVALID_ARGUMENT = 7400101
 A parameter is missing or the parameter type is incorrect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,10 +34,6 @@ The operation is not allowed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-OPERATION_NOT_ALLOWED = 7400102--><!--Device-CameraErrorCode-OPERATION_NOT_ALLOWED = 7400102-End-->
@@ -61,10 +49,6 @@ SESSION_NOT_CONFIG = 7400103
 The session is not configured.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -82,10 +66,6 @@ The session is not running.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-SESSION_NOT_RUNNING = 7400104--><!--Device-CameraErrorCode-SESSION_NOT_RUNNING = 7400104-End-->
@@ -101,10 +81,6 @@ SESSION_CONFIG_LOCKED = 7400105
 The session configuration is locked.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -122,10 +98,6 @@ The device setting is locked.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-DEVICE_SETTING_LOCKED = 7400106--><!--Device-CameraErrorCode-DEVICE_SETTING_LOCKED = 7400106-End-->
@@ -141,10 +113,6 @@ CONFLICT_CAMERA = 7400107
 The device is already started.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -162,10 +130,6 @@ The camera is disabled for security reasons.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-DEVICE_DISABLED = 7400108--><!--Device-CameraErrorCode-DEVICE_DISABLED = 7400108-End-->
@@ -181,10 +145,6 @@ DEVICE_PREEMPTED = 7400109
 The camera is preempted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -202,10 +162,6 @@ The configuration conflicts with the current configuration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110--><!--Device-CameraErrorCode-UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110-End-->
@@ -221,10 +177,6 @@ SERVICE_FATAL_ERROR = 7400201
 The camera service is abnormal.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

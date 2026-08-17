@@ -12,15 +12,13 @@ import { usb } from 'usb';
 function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-Releases a USB interface. Before you do this, ensure that you have claimed the interface by calling [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface).
+Releases a USB interface. Before you do this, ensure that you have claimed the interface by calling [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseInterface)
+**Substitutes:** [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseinterface)
 
 <!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number--><!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number-End-->
 
@@ -39,7 +37,7 @@ Releases a USB interface. Before you do this, ensure that you have claimed the i
 | --- | --- |
 | number | Returns **0** if the USB interface is successfully released; returns an error code otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ret = usb.releaseInterface(devicepipe, interfaces);

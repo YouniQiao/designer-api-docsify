@@ -12,13 +12,9 @@ import { dlpPermission } from 'dlpPermission';
 function getControlledAppLists(): Promise<Array<string>>
 ```
 
-Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result. > **NOTE：**> This API can only be used to query the list of applications controlled by enterprise DLP, which is set using > [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setControlledAppLists).
+Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result. > **NOTE：**> This API can only be used to query the list of applications controlled by enterprise DLP, which is set using > [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setcontrolledapplists).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DLP_POLICY_MANAGER
 

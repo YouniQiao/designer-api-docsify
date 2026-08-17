@@ -1,12 +1,8 @@
-# ToolBarItemOptions
+# ToolBarItemOptions(定义toolbar属性。)
 
 用于配置ToolBarItem的可选参数，主要通过placement设置工具栏项在标题栏的放置位置。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-interface ToolBarItemOptions--><!--Device-unnamed-interface ToolBarItemOptions-End-->
 
@@ -23,10 +19,6 @@ placement?: ToolBarItemPlacement
 **类型：** [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

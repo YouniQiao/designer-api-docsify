@@ -16,11 +16,9 @@ Remove a paired remote device. On API 10 and above, the permission required by t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [cancelPairedDevice](arkts-connectivity-connection-cancelpaireddevice-f-sys.md#cancelPairedDevice-(System-API))
+**Substitutes:** [cancelPairedDevice](arkts-connectivity-connection-cancelpaireddevice-f-sys.md#cancelpaireddevice-system-api)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -50,7 +48,7 @@ Remove a paired remote device. On API 10 and above, the permission required by t
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

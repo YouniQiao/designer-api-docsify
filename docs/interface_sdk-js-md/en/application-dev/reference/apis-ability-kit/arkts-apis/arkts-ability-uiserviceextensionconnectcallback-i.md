@@ -4,10 +4,6 @@ UIServiceExtensionConnectCallback provides callbacks for the connection to a UIS
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default interface UIServiceExtensionConnectCallback--><!--Device-unnamed-export default interface UIServiceExtensionConnectCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -21,10 +17,6 @@ onData(data: Record<string, Object>): void
 Called to receive data when a connection to the UIServiceExtensionAbility is established. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +32,7 @@ Called to receive data when a connection to the UIServiceExtensionAbility is est
 | --- | --- | --- | --- |
 | data | Record&lt;string, Object&gt; | Yes | Data about the UIServiceExtensionAbility connection. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common, Want } from '@kit.AbilityKit';
@@ -136,10 +128,6 @@ Called back when data is sent.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIServiceExtensionConnectCallback-onData(data: Record<string, RecordData>): void--><!--Device-UIServiceExtensionConnectCallback-onData(data: Record<string, RecordData>): void-End-->
@@ -162,10 +150,6 @@ Called when the connection to the UIServiceExtensionAbility is interrupted. > **
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -174,7 +158,7 @@ Called when the connection to the UIServiceExtensionAbility is interrupted. > **
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

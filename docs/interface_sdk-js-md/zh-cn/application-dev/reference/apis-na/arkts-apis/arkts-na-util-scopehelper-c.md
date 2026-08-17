@@ -4,9 +4,7 @@ Provides APIs to define the valid range of a field. The constructor of this clas
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-util-class ScopeHelper--><!--Device-util-class ScopeHelper-End-->
 
@@ -22,9 +20,7 @@ Clamps a given value to the current range.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-clamp(value: T): T--><!--Device-ScopeHelper-clamp(value: T): T-End-->
 
@@ -52,9 +48,7 @@ A constructor used to create a Scope instance with the lower and upper bounds sp
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-constructor(lowerObj: T, upperObj: T)--><!--Device-ScopeHelper-constructor(lowerObj: T, upperObj: T)-End-->
 
@@ -77,9 +71,7 @@ Checks whether a given value is within the current range.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-contains(value: T): boolean--><!--Device-ScopeHelper-contains(value: T): boolean-End-->
 
@@ -107,9 +99,7 @@ Checks whether a given range is within the current range.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-contains(range: ScopeHelper<T>): boolean--><!--Device-ScopeHelper-contains(range: ScopeHelper<T>): boolean-End-->
 
@@ -137,9 +127,7 @@ Creates the smallest range that includes the current range and the given lower a
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-expand(lowerObj: T, upperObj: T): ScopeHelper<T>--><!--Device-ScopeHelper-expand(lowerObj: T, upperObj: T): ScopeHelper<T>-End-->
 
@@ -168,9 +156,7 @@ Creates the smallest range that includes the current range and a given range.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-expand(range: ScopeHelper<T>): ScopeHelper<T>--><!--Device-ScopeHelper-expand(range: ScopeHelper<T>): ScopeHelper<T>-End-->
 
@@ -198,9 +184,7 @@ Creates the smallest range that includes the current range and a given value.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-expand(value: T): ScopeHelper<T>--><!--Device-ScopeHelper-expand(value: T): ScopeHelper<T>-End-->
 
@@ -228,9 +212,7 @@ Obtains the lower bound of the current range.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-getLower(): T--><!--Device-ScopeHelper-getLower(): T-End-->
 
@@ -252,9 +234,7 @@ Obtains the upper bound of the current range.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-getUpper(): T--><!--Device-ScopeHelper-getUpper(): T-End-->
 
@@ -276,9 +256,7 @@ Returns the intersection of a given range and the current range.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-intersect(range: ScopeHelper<T>): ScopeHelper<T>--><!--Device-ScopeHelper-intersect(range: ScopeHelper<T>): ScopeHelper<T>-End-->
 
@@ -306,9 +284,7 @@ Returns the intersection of the current range and the range specified by the giv
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-intersect(lowerObj: T, upperObj: T): ScopeHelper<T>--><!--Device-ScopeHelper-intersect(lowerObj: T, upperObj: T): ScopeHelper<T>-End-->
 
@@ -337,9 +313,7 @@ Obtains a string representation of the current range.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-ScopeHelper-toString(): string--><!--Device-ScopeHelper-toString(): string-End-->
 

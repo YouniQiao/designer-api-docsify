@@ -4,10 +4,6 @@ Describes the options of system tones.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface SystemToneOptions--><!--Device-unnamed-export interface SystemToneOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -26,10 +22,6 @@ Whether to mute the audio. **true** to mute, **false** otherwise.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemToneOptions-muteAudio?: boolean--><!--Device-SystemToneOptions-muteAudio?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -47,10 +39,6 @@ Whether to turn off haptics feedback when a system tone is played. **true** to t
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SystemToneOptions-muteHaptics?: boolean--><!--Device-SystemToneOptions-muteHaptics?: boolean-End-->
 

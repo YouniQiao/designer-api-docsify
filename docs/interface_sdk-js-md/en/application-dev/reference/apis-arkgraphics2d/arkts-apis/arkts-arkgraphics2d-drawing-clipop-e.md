@@ -4,10 +4,6 @@ Enumerates the canvas clipping modes. > **NOTE：**> > The diagrams show the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-enum ClipOp--><!--Device-drawing-enum ClipOp-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -22,10 +18,6 @@ Clips a specified area. That is, the difference set is obtained.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ClipOp-DIFFERENCE = 0--><!--Device-ClipOp-DIFFERENCE = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -39,10 +31,6 @@ INTERSECT = 1
 Retains a specified area. That is, the intersection is obtained.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ClipOp-INTERSECT = 1--><!--Device-ClipOp-INTERSECT = 1-End-->
 

@@ -12,13 +12,9 @@ import { launcherBundleManager } from 'launcherBundleManager';
 function getAllLauncherAbilityInfo(userId: int, callback: AsyncCallback<Array<LauncherAbilityInfo>>) : void
 ```
 
-Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo) of all applications based on the given user ID. This API uses an asynchronous callback to return the result.
+Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#launcherabilityinfo) of all applications based on the given user ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -32,8 +28,8 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo) objects obtained. Otherwise, **err** is an error object. |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md#launcherabilityinfo) objects obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -45,7 +41,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';
@@ -74,13 +70,9 @@ try {
 function getAllLauncherAbilityInfo(userId: int) : Promise<Array<LauncherAbilityInfo>>
 ```
 
-Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo) of all applications based on the given user ID. This API uses a promise to return the result.
+Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#launcherabilityinfo) of all applications based on the given user ID. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -94,7 +86,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
 
 **Return value:**
 
@@ -112,7 +104,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';

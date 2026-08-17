@@ -16,10 +16,6 @@ Starts a [native child process](../../../application-models/ability-terminology.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-childProcessManager-function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>--><!--Device-childProcessManager-function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>-End-->
@@ -50,7 +46,7 @@ Starts a [native child process](../../../application-models/ability-terminology.
 | [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
 | [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
 
-## Examples
+**Examples**
 
 Sample code for the child process is provided below. For details, see Native Child Process Development (C/C++) - Creating a Native Child Process That Supports Pass-by-Parameter.
 

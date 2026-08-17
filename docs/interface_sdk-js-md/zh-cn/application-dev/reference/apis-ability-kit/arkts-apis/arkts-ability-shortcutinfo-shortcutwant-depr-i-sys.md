@@ -1,14 +1,12 @@
 # ShortcutWant（系统接口）
 
-> **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutWant](#ShortcutWant（系统接口）)替代。
+> **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutWant](#shortcutwant系统接口)替代。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [ShortcutWant](#ShortcutWant（系统接口）)
+**替代接口：** [ShortcutWant](#shortcutwant系统接口)
 
 <!--Device-unnamed-export interface ShortcutWant--><!--Device-unnamed-export interface ShortcutWant-End-->
 
@@ -27,8 +25,6 @@ readonly targetBundle: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -51,8 +47,6 @@ readonly targetClass: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 

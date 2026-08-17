@@ -4,10 +4,6 @@ Provides key-value pairs stored in the distributedKVStore.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedKVStore-interface Entry--><!--Device-distributedKVStore-interface Entry-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -30,10 +26,6 @@ Indicates the key
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Entry-key: string--><!--Device-Entry-key: string-End-->
@@ -51,10 +43,6 @@ Indicates the value
 **Type:** Value
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

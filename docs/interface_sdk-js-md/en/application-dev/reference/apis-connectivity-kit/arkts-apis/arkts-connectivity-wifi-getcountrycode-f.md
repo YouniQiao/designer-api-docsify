@@ -16,11 +16,9 @@ Obtains the country code of this device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getCountryCode](arkts-connectivity-wifimanager-getcountrycode-f.md#getCountryCode)
+**Substitutes:** [getCountryCode](arkts-connectivity-wifimanager-getcountrycode-f.md#getcountrycode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -34,7 +32,7 @@ Obtains the country code of this device.
 | --- | --- |
 | string | Returns the country code of this device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

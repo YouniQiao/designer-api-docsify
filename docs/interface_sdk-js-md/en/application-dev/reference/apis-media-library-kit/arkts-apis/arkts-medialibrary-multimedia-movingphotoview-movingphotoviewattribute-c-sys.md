@@ -6,10 +6,6 @@ Defines the moving photo view attribute functions.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class MovingPhotoViewAttribute--><!--Device-unnamed-declare class MovingPhotoViewAttribute-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -33,10 +29,6 @@ setPlaybackStrategy(strategy: media.PlaybackStrategy): MovingPhotoViewAttribute
 Sets playback strategy.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -64,7 +56,7 @@ Sets playback strategy.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
-## Examples
+**Examples**
 
 The system application can set the decoding format, HDR effect format, and strategy for processing a moving photo while playing it.
 

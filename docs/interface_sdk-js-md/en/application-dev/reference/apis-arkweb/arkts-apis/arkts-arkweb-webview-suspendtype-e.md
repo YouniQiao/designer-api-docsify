@@ -4,10 +4,6 @@ Enumerates the suspension types of the player.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-webview-enum SuspendType--><!--Device-webview-enum SuspendType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -22,10 +18,6 @@ The page enters the BFCache.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-SuspendType-ENTER_BACK_FORWARD_CACHE = 0--><!--Device-SuspendType-ENTER_BACK_FORWARD_CACHE = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -36,13 +28,9 @@ The page enters the BFCache.
 ENTER_BACKGROUND
 ```
 
-The page is displayed in the background.
+The page enters the background.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-SuspendType-ENTER_BACKGROUND--><!--Device-SuspendType-ENTER_BACKGROUND-End-->
 
@@ -57,10 +45,6 @@ AUTO_CLEANUP
 The page is automatically cleaned up by the system.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-SuspendType-AUTO_CLEANUP--><!--Device-SuspendType-AUTO_CLEANUP-End-->
 

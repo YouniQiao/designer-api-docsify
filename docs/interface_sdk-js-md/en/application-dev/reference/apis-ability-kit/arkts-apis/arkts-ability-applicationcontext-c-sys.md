@@ -6,10 +6,6 @@ ApplicationContext inherits from Context and provides application-level manageme
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ApplicationContext--><!--Device-unnamed-declare class ApplicationContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -24,11 +20,9 @@ Obtains information about the running processes. This API uses a promise to retu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getRunningProcessInformation)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,11 +55,9 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getRunningProcessInformation)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,13 +86,9 @@ Obtains information about the running processes. This API uses an asynchronous c
 preloadUIExtensionAbility(want: Want): Promise<void>
 ```
 
-Preloads a UIExtensionAbility instance. This API uses a promise to return the result. The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application. A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility. | Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-app-ability-want-want-c.md#Want) | Yes| Want information of the UIExtensionAbility.|
+Preloads a UIExtensionAbility instance. This API uses a promise to return the result. The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application. A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility. | Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-app-ability-want-want-c.md#want) | Yes| Want information of the UIExtensionAbility.|
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -137,7 +125,7 @@ Preloads a UIExtensionAbility instance. This API uses a promise to return the re
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';
@@ -185,11 +173,9 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [on](arkts-ability-applicationcontext-c.md#on_abilityLifecycle)(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)
+**Substitutes:** [on](arkts-ability-applicationcontext-c.md#onabilitylifecycle)(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -221,11 +207,9 @@ Register environment callback.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [on](arkts-ability-applicationcontext-c.md#on_abilityLifecycle)(type: 'environment', callback: EnvironmentCallback)
+**Substitutes:** [on](arkts-ability-applicationcontext-c.md#onabilitylifecycle)(type: 'environment', callback: EnvironmentCallback)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -257,11 +241,9 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [off](arkts-ability-applicationcontext-c.md#off_abilityLifecycle)(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -275,7 +257,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.registerAbilityLifecycleCallback](#registerAbilityLifecycleCallback) |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback) |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterAbilityLifecycleCallback
@@ -287,8 +269,6 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -306,7 +286,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.registerAbilityLifecycleCallback](#registerAbilityLifecycleCallback) |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback) |
 
 **Return value:**
 
@@ -330,11 +310,9 @@ Unregisters the listener for system environment changes. This API uses an asynch
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [off](arkts-ability-applicationcontext-c.md#off_abilityLifecycle)(type: 'environment', callbackId: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'environment', callbackId: number, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -348,7 +326,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.registerEnvironmentCallback](#registerEnvironmentCallback) |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback) |
 | envcallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterEnvironmentCallback
@@ -360,8 +338,6 @@ unregisterEnvironmentCallback(callbackId: number): Promise<void>
 Unregisters the listener for system environment changes. This API uses a promise to return the result. It can be called only on the main thread.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -379,7 +355,7 @@ Unregisters the listener for system environment changes. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.registerEnvironmentCallback](#registerEnvironmentCallback) |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback) |
 
 **Return value:**
 

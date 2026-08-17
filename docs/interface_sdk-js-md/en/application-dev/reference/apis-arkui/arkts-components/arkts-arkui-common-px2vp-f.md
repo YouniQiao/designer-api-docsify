@@ -10,8 +10,6 @@ Converts a number in units of px to a number in units of vp. By default, the vir
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 18
 
 **Substitutes:** px2vp

@@ -8,10 +8,6 @@ Defines a callback to intercept the soft keyboard initiated from editable elemen
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-type WebKeyboardCallback = (keyboardCallbackInfo: WebKeyboardCallbackInfo) => WebKeyboardOptions--><!--Device-unnamed-type WebKeyboardCallback = (keyboardCallbackInfo: WebKeyboardCallbackInfo) => WebKeyboardOptions-End-->
@@ -28,5 +24,5 @@ Defines a callback to intercept the soft keyboard initiated from editable elemen
 
 | Type | Description |
 | --- | --- |
-| [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) | R[WebKeyboardOptions]{ |
+| [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) | [WebKeyboardOptions]{ |
 

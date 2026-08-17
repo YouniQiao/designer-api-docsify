@@ -4,8 +4,6 @@ Notification key.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-notification-export interface NotificationKey--><!--Device-notification-export interface NotificationKey-End-->
@@ -23,8 +21,6 @@ Notification ID.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -45,8 +41,6 @@ Notification label.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

@@ -4,10 +4,6 @@ Enum for auxiliary type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum AuxiliaryType--><!--Device-camera-enum AuxiliaryType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,10 +19,6 @@ CONTRACT_LENS = 0
 Contract lens.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AuxiliaryType-CONTRACT_LENS = 0--><!--Device-AuxiliaryType-CONTRACT_LENS = 0-End-->
 

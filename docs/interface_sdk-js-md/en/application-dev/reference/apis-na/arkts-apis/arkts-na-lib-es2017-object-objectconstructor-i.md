@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ObjectConstructor--><!--Device-unnamed-interface ObjectConstructor-End-->
 
 ## entries
@@ -17,10 +13,6 @@ entries<T>(o: { [s: string]: T } | ArrayLike<T>): [string, T][]
 Returns an array of key/values of the enumerable properties of an object
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-entries<T>(o: { [s: string]: T } | ArrayLike<T>): [string, T][]--><!--Device-ObjectConstructor-entries<T>(o: { [s: string]: T } | ArrayLike<T>): [string, T][]-End-->
 
@@ -46,10 +38,6 @@ Returns an array of key/values of the enumerable properties of an object
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-entries(o: {}): [string, any][]--><!--Device-ObjectConstructor-entries(o: {}): [string, any][]-End-->
 
 **Parameters:**
@@ -73,10 +61,6 @@ getOwnPropertyDescriptors<T>(o: T): {[P in keyof T]: TypedPropertyDescriptor<T[P
 Returns an object containing all own property descriptors of an object
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-getOwnPropertyDescriptors<T>(o: T): {[P in keyof T]: TypedPropertyDescriptor<T[P]>} & { [x: string]: PropertyDescriptor }--><!--Device-ObjectConstructor-getOwnPropertyDescriptors<T>(o: T): {[P in keyof T]: TypedPropertyDescriptor<T[P]>} & { [x: string]: PropertyDescriptor }-End-->
 
@@ -102,10 +86,6 @@ Returns an array of values of the enumerable properties of an object
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-values<T>(o: { [s: string]: T } | ArrayLike<T>): T[]--><!--Device-ObjectConstructor-values<T>(o: { [s: string]: T } | ArrayLike<T>): T[]-End-->
 
 **Parameters:**
@@ -129,10 +109,6 @@ values(o: {}): any[]
 Returns an array of values of the enumerable properties of an object
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-values(o: {}): any[]--><!--Device-ObjectConstructor-values(o: {}): any[]-End-->
 

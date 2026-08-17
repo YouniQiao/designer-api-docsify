@@ -16,8 +16,6 @@
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -41,8 +39,8 @@ import { trash } from 'trash';
 
 | Name | Description |
 | --- | --- |
-| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md#completelyDelete) | Permanently deletes a file or directory from the **Recently deleted** list. |
-| [listFile](arkts-corefile-trash-listfile-f-sys.md#listFile) | Lists the files and directories in the **Recently deleted** list. |
+| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md#completelydelete) | Permanently deletes a file or directory from the **Recently deleted** list. |
+| [listFile](arkts-corefile-trash-listfile-f-sys.md#listfile) | Lists the files and directories in the **Recently deleted** list. |
 | [recover](arkts-corefile-trash-recover-f-sys.md#recover) | Recovers a file or directory from the trash. |
 <!--DelEnd-->
 

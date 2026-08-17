@@ -54,6 +54,8 @@
   <!--Del-->
   - [ShieldMode(系统接口)](arkts-input-inputconsumer-shieldmode-e-sys.md)<!--DelEnd-->
 - [@ohos.multimodalInput.inputDevice](arkts-multimodalinput-inputdevice.md)
+  <!--Del-->
+  - [bindToDisplay(系统接口)](arkts-input-inputdevice-bindtodisplay-f-sys.md)<!--DelEnd-->
   - [getDevice](arkts-input-inputdevice-getdevice-f.md)
   - [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md)
   - [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md)

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-installer-export interface PluginParam--><!--Device-installer-export interface PluginParam-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -26,10 +22,6 @@ parameters?: Array<Parameters>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PluginParam-parameters?: Array<Parameters>--><!--Device-PluginParam-parameters?: Array<Parameters>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -42,15 +34,11 @@ parameters?: Array<Parameters>
 userId?: int
 ```
 
-指定安装、卸载插件程序所在的用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取。默认值：调用方所在用户。
+指定安装、卸载插件程序所在的用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。默认值：调用方所在用户。
 
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PluginParam-userId?: int--><!--Device-PluginParam-userId?: int-End-->
 

@@ -19,10 +19,6 @@ Returns a child process object and spawns a new ChildProcess to run the command.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-process-function runCmd(    command: string,    options?: ConditionType  ): ChildProcess--><!--Device-process-function runCmd(    command: string,    options?: ConditionType  ): ChildProcess-End-->
 
 **System capability:** SystemCapability.Utils.Lang

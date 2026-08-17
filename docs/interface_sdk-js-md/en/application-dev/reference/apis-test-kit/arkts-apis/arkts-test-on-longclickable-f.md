@@ -44,10 +44,6 @@ Specifies the longClickable status of the target Component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ON-export function longClickable(b?: boolean): On--><!--Device-ON-export function longClickable(b?: boolean): On-End-->
 
 **System capability:** SystemCapability.Test.UiTest

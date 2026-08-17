@@ -1,14 +1,12 @@
 # RectShape
 
-用于clipShape和maskShape接口的矩形形状。 继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
+用于clipShape和maskShape接口的矩形形状。 继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#baseshape)。
 
-**继承/实现关系：** RectShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)
+**继承/实现关系：** RectShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#baseshape)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-export declare class RectShape--><!--Device-unnamed-export declare class RectShape-End-->
 
@@ -24,9 +22,7 @@ constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,9 +46,7 @@ radius(radius: double | string | Array<double | string>): this
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,9 +76,7 @@ radiusHeight(rHeight: double | string): this
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,9 +106,7 @@ radiusWidth(rWidth: double | string): this
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

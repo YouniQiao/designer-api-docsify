@@ -68,6 +68,6 @@ import { DynamicRangeMode } from 'DynamicRangeMode';
 
 | Name | Description |
 | --- | --- |
-| [MovingPhotoView](arkts-medialibrary-multimedia-movingphotoview-con.md#MovingPhotoView) | Defines MovingPhotoView Component. |
-| [MovingPhotoViewInstance](arkts-medialibrary-multimedia-movingphotoview-con.md#MovingPhotoViewInstance) | Defines MovingPhotoView Component instance. |
+| [MovingPhotoView](arkts-medialibrary-multimedia-movingphotoview-con.md#movingphotoview) | Defines MovingPhotoView Component. |
+| [MovingPhotoViewInstance](arkts-medialibrary-multimedia-movingphotoview-con.md#movingphotoviewinstance) | Defines MovingPhotoView Component instance. |
 

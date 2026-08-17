@@ -10,10 +10,6 @@ function exitKioskMode(context: UIAbilityContext): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-kioskManager-function exitKioskMode(context: UIAbilityContext): Promise<void>--><!--Device-kioskManager-function exitKioskMode(context: UIAbilityContext): Promise<void>-End-->
@@ -41,7 +37,7 @@ function exitKioskMode(context: UIAbilityContext): Promise<void>
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
 | [16000110](../errorcode-ability.md#16000110-当前应用不在kiosk模式的列表内) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

@@ -4,10 +4,6 @@ Used to do observer layout and draw event for component.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace inspector--><!--Device-unnamed-declare namespace inspector-End-->
@@ -26,7 +22,7 @@ import { inspector } from 'inspector';
 
 | Name | Description |
 | --- | --- |
-| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createComponentObserver) | Sets the component after layout or draw criteria and returns the corresponding listening handle |
+| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver) | Sets the component after layout or draw criteria and returns the corresponding listening handle |
 
 ### Interfaces
 

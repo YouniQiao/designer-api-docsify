@@ -4,10 +4,6 @@ Enumerates the reasons why the rendering process exits.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare enum RenderExitReason--><!--Device-unnamed-declare enum RenderExitReason-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -18,13 +14,9 @@ Enumerates the reasons why the rendering process exits.
 ProcessAbnormalTermination = 0
 ```
 
-The rendering process terminates abnormally. Possible causes include: rendering process startup timeout, system reclaiming older rendering processes upon reaching the process limit, or simultaneous closure of multiple tabs.
+The rendering process exited abnormally. Possible causes include rendering process startup timeout, system reclaiming old rendering processes due to reaching the process quantity limit, and simultaneous closing of multiple tabs.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ The rendering process receives a SIGKILL message or is manually terminated.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RenderExitReason-ProcessWasKilled = 1--><!--Device-RenderExitReason-ProcessWasKilled = 1-End-->
@@ -61,10 +49,6 @@ ProcessCrashed = 2
 The rendering process crashes due to segmentation or other errors.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,10 +66,6 @@ The program memory is insufficient.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RenderExitReason-ProcessOom = 3--><!--Device-RenderExitReason-ProcessOom = 3-End-->
@@ -98,13 +78,9 @@ The program memory is insufficient.
 ProcessExitUnknown = 4
 ```
 
-Other reasons, such as failure to spawn the rendering process.
+Other reasons, such as rendering process spawning failure.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

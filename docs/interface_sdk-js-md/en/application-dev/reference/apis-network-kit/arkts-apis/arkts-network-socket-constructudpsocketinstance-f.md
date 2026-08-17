@@ -16,10 +16,6 @@ Creates a UDPSocket object.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-socket-function constructUDPSocketInstance(): UDPSocket--><!--Device-socket-function constructUDPSocketInstance(): UDPSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,7 +26,7 @@ Creates a UDPSocket object.
 | --- | --- |
 | UDPSocket | the UDPSocket of the constructUDPSocketInstance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

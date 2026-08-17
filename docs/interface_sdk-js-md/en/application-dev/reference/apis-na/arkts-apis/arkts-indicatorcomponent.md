@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [IndicatorComponent](arkts-na-indicatorcomponent-indicatorcomponent-f.md#IndicatorComponent) | Defines IndicatorComponent Component |
+| [IndicatorComponent](arkts-na-indicatorcomponent-indicatorcomponent-f.md#indicatorcomponent) | Defines IndicatorComponent Component |
 
 ### Classes
 

@@ -16,10 +16,6 @@ Subscribe to uncalibrated magnetic field sensor data, {@code SensorId.MAGNETIC_F
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-function onMagneticFieldUncalibratedChange(callback: Callback<MagneticFieldUncalibratedResponse>, options?: Options): void--><!--Device-sensor-function onMagneticFieldUncalibratedChange(callback: Callback<MagneticFieldUncalibratedResponse>, options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

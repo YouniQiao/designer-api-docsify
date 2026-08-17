@@ -16,10 +16,6 @@ Sets the printer preferences. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function setPrinterPreferences(printerId: string, printerPreferences: PrinterPreferences): Promise<void>--><!--Device-print-function setPrinterPreferences(printerId: string, printerPreferences: PrinterPreferences): Promise<void>-End-->
@@ -49,7 +45,7 @@ Sets the printer preferences. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

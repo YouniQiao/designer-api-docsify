@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Uint32ArrayConstructor--><!--Device-unnamed-interface Uint32ArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new (): Uint32Array
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint32ArrayConstructor-new (): Uint32Array--><!--Device-Uint32ArrayConstructor-new (): Uint32Array-End-->
 

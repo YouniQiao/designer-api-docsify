@@ -10,10 +10,6 @@ Defines IsolatedComponent Component.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare const IsolatedComponent: IsolatedComponentInterface--><!--Device-unnamed-declare const IsolatedComponent: IsolatedComponentInterface-End-->
@@ -31,10 +27,6 @@ declare const IsolatedComponentInstance: IsolatedComponentAttribute
 Defines IsolatedComponent Component instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

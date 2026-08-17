@@ -4,10 +4,6 @@ Enumerates the key purposes. A key can be used only for a single purpose. You ca
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-huks-export enum HuksKeyPurpose--><!--Device-huks-export enum HuksKeyPurpose-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -21,10 +17,6 @@ HUKS_KEY_PURPOSE_ENCRYPT = 1
 Used to encrypt the plaintext.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Used to decrypt the cipher text.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_DECRYPT = 2--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_DECRYPT = 2-End-->
@@ -61,10 +49,6 @@ HUKS_KEY_PURPOSE_SIGN = 4
 Used for signing.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,10 +68,6 @@ Used to verify the signature.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_VERIFY = 8--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_VERIFY = 8-End-->
@@ -105,10 +85,6 @@ HUKS_KEY_PURPOSE_DERIVE = 16
 Used to derive a key.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -128,10 +104,6 @@ Used for an encrypted export.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_WRAP = 32--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_WRAP = 32-End-->
@@ -149,10 +121,6 @@ HUKS_KEY_PURPOSE_UNWRAP = 64
 Used for a secure import.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -172,10 +140,6 @@ Used to generate a message authentication code.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_MAC = 128--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_MAC = 128-End-->
@@ -193,10 +157,6 @@ HUKS_KEY_PURPOSE_AGREE = 256
 Used for key agreement.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

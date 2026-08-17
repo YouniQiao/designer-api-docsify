@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-hiSysEvent-interface QueryRule--><!--Device-hiSysEvent-interface QueryRule-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
@@ -25,10 +21,6 @@ condition?: string | null | undefined
 **类型：** string \| null \| undefined
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-QueryRule-condition?: string | null | undefined--><!--Device-QueryRule-condition?: string | null | undefined-End-->
 
@@ -48,10 +40,6 @@ domain: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-QueryRule-domain: string--><!--Device-QueryRule-domain: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
@@ -69,10 +57,6 @@ names: string[]
 **类型：** string[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-QueryRule-names: string[]--><!--Device-QueryRule-names: string[]-End-->
 

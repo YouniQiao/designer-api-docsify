@@ -4,10 +4,6 @@ Defines the application crash event configuration policy.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-hiAppEvent-interface AppCrashPolicy--><!--Device-hiAppEvent-interface AppCrashPolicy-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -30,10 +26,6 @@ Policy for the APP_CRASH event the value true means to the minidump capture capa
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AppCrashPolicy-collectMinidump?: boolean--><!--Device-AppCrashPolicy-collectMinidump?: boolean-End-->
@@ -51,10 +43,6 @@ The policy for APP_CRASH event. Whether to print the memory values before and af
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -74,10 +62,6 @@ The policy for APP_CRASH event. Truncation size for crash logs. The value ranges
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AppCrashPolicy-logFileCutoffSzBytes?: int--><!--Device-AppCrashPolicy-logFileCutoffSzBytes?: int-End-->
@@ -96,10 +80,6 @@ Whether to enable the page switching log for APP_CRASH event. **true**: yes. **f
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-AppCrashPolicy-pageSwitchLogEnable?: boolean--><!--Device-AppCrashPolicy-pageSwitchLogEnable?: boolean-End-->
@@ -117,10 +97,6 @@ The policy for APP_CRASH event. Whether to print the mapping information of all 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

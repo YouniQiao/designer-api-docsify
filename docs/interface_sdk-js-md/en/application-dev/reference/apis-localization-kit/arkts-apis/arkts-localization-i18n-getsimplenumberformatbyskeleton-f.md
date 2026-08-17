@@ -16,10 +16,6 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat--><!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat-End-->
@@ -37,7 +33,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 | Type | Description |
 | --- | --- |
-| [SimpleNumberFormat](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) | SimpleNumberFormat** object. |
+| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat** object. |
 
 **Error codes:**
 
@@ -45,7 +41,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 | --- | --- |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,11 +67,9 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
 **Deprecated since:** 20
 
-**Substitutes:** [getSimpleNumberFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimplenumberformatbyskeleton-f.md#getSimpleNumberFormatBySkeleton)(skeleton: string, locale?: Intl.Locale)
+**Substitutes:** [getSimpleNumberFormatBySkeleton](#getsimplenumberformatbyskeleton)(skeleton: string, locale?: Intl.Locale)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -94,7 +88,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 | Type | Description |
 | --- | --- |
-| [SimpleNumberFormat](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) | SimpleNumberFormat** object. |
+| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat** object. |
 
 **Error codes:**
 
@@ -102,7 +96,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 | --- | --- |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

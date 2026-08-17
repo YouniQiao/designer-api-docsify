@@ -10,10 +10,6 @@ function getUpdateSqlInfo(predicates: RdbPredicates, values: ValuesBucket, confl
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-relationalStore-function getUpdateSqlInfo(predicates: RdbPredicates, values: ValuesBucket, conflict?: ConflictResolution):SqlInfo--><!--Device-relationalStore-function getUpdateSqlInfo(predicates: RdbPredicates, values: ValuesBucket, conflict?: ConflictResolution):SqlInfo-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -38,7 +34,7 @@ function getUpdateSqlInfo(predicates: RdbPredicates, values: ValuesBucket, confl
 | --- | --- |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

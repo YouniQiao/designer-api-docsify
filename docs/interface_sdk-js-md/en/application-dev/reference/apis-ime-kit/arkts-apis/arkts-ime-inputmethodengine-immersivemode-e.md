@@ -4,10 +4,6 @@ Enumerates the immersive modes of the input method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethodEngine-export enum ImmersiveMode--><!--Device-inputMethodEngine-export enum ImmersiveMode-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -21,10 +17,6 @@ NONE_IMMERSIVE = 0
 Default immersive mode, the panel is not in immersive mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImmersiveMode-NONE_IMMERSIVE = 0--><!--Device-ImmersiveMode-NONE_IMMERSIVE = 0-End-->
 
@@ -40,10 +32,6 @@ Immersive mode of the input method.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImmersiveMode-IMMERSIVE--><!--Device-ImmersiveMode-IMMERSIVE-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -58,10 +46,6 @@ Light immersive mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ImmersiveMode-LIGHT_IMMERSIVE--><!--Device-ImmersiveMode-LIGHT_IMMERSIVE-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -75,10 +59,6 @@ DARK_IMMERSIVE
 Dark immersive mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ImmersiveMode-DARK_IMMERSIVE--><!--Device-ImmersiveMode-DARK_IMMERSIVE-End-->
 

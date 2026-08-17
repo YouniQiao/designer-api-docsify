@@ -16,10 +16,6 @@ Callback when the signal strength corresponding to the default sim card is updat
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function onSignalInfoChange(callback: Callback<Array<SignalInformation>>): void--><!--Device-observer-function onSignalInfoChange(callback: Callback<Array<SignalInformation>>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -28,7 +24,7 @@ Callback when the signal strength corresponding to the default sim card is updat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [SignalInformation](arkts-telephony-observer-signalinformation-t.md#SignalInformation). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [SignalInformation](arkts-telephony-observer-signalinformation-t.md#signalinformation). |
 
 **Error codes:**
 
@@ -51,10 +47,6 @@ Callback when the signal strength corresponding to a monitored {@code slotId} is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function onSignalInfoChange(options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void--><!--Device-observer-function onSignalInfoChange(options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -64,7 +56,7 @@ Callback when the signal strength corresponding to a monitored {@code slotId} is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [SignalInformation](arkts-telephony-observer-signalinformation-t.md#SignalInformation). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [SignalInformation](arkts-telephony-observer-signalinformation-t.md#signalinformation). |
 
 **Error codes:**
 

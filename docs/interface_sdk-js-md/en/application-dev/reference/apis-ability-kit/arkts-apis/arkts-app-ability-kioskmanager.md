@@ -4,10 +4,6 @@ The KioskManager module provides APIs to manage kiosk mode, including entering/e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace kioskManager--><!--Device-unnamed-declare namespace kioskManager-End-->
@@ -26,15 +22,15 @@ import { kioskManager } from 'kioskManager';
 
 | Name | Description |
 | --- | --- |
-| [enterKioskMode](arkts-ability-kioskmanager-enterkioskmode-f.md#enterKioskMode) | Enters kiosk mode. This API uses a promise to return the result. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801. |
-| [exitKioskMode](arkts-ability-kioskmanager-exitkioskmode-f.md#exitKioskMode) | Exits kiosk mode. This API uses a promise to return the result. This API takes effect only for applications that have entered kiosk mode. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801. |
+| [enterKioskMode](arkts-ability-kioskmanager-enterkioskmode-f.md#enterkioskmode) | Enters kiosk mode. This API uses a promise to return the result. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801. |
+| [exitKioskMode](arkts-ability-kioskmanager-exitkioskmode-f.md#exitkioskmode) | Exits kiosk mode. This API uses a promise to return the result. This API takes effect only for applications that have entered kiosk mode. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getKioskStatus](arkts-ability-kioskmanager-getkioskstatus-f-sys.md#getKioskStatus) | Obtains the Kiosk mode status information, including whether the system is in kiosk mode, and the name and UID of the application that has entered Kiosk mode. This API uses a promise to return the result. |
+| [getKioskStatus](arkts-ability-kioskmanager-getkioskstatus-f-sys.md#getkioskstatus) | Obtains the Kiosk mode status information, including whether the system is in kiosk mode, and the name and UID of the application that has entered Kiosk mode. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Types

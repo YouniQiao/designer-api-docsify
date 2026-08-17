@@ -4,9 +4,7 @@ Defines the options used in **listFile()**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export interface ListFileOptions--><!--Device-unnamed-export interface ListFileOptions-End-->
 
@@ -20,13 +18,11 @@ filter?: Filter
 
 File filtering configuration. This parameter is optional. It specifies the file filtering conditions.
 
-**Type:** [Filter](arkts-na-file-fs-filter-i.md)
+**Type:** [Filter](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-filter-i.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ListFileOptions-filter?: Filter--><!--Device-ListFileOptions-filter?: Filter-End-->
 
@@ -44,9 +40,7 @@ Number of file names to list. This parameter is optional. The default value is *
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ListFileOptions-listNum?: long--><!--Device-ListFileOptions-listNum?: long-End-->
 
@@ -64,9 +58,7 @@ Whether to list all files in the subdirectories recursively. This parameter is o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-ListFileOptions-recursion?: boolean--><!--Device-ListFileOptions-recursion?: boolean-End-->
 

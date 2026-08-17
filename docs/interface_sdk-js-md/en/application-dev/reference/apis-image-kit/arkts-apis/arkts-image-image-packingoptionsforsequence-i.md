@@ -4,10 +4,6 @@ Defines the options for encoding animated images.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface PackingOptionsForSequence--><!--Device-image-interface PackingOptionsForSequence-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -30,10 +26,6 @@ Delay time of each frame in GIF encoding. The value must be greater than 0. The 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PackingOptionsForSequence-delayTimeList: Array<int>--><!--Device-PackingOptionsForSequence-delayTimeList: Array<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -49,10 +41,6 @@ Array that defines how each image frame transitions. If the array length is less
 **Type:** Array&lt;int&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PackingOptionsForSequence-disposalTypes?: Array<int>--><!--Device-PackingOptionsForSequence-disposalTypes?: Array<int>-End-->
 
@@ -70,10 +58,6 @@ Number of frames specified in GIF encoding.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PackingOptionsForSequence-frameCount: int--><!--Device-PackingOptionsForSequence-frameCount: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -89,10 +73,6 @@ Number of times that the output image in GIF encoding loops. The value range is 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PackingOptionsForSequence-loopCount?: int--><!--Device-PackingOptionsForSequence-loopCount?: int-End-->
 

@@ -1,14 +1,10 @@
 # Focus
 
-**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery). It provides APIs related to focus operations.
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md#focusquery). It provides APIs related to focus operations.
 
-**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery)
+**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md#focusquery)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-camera-interface Focus--><!--Device-camera-interface Focus-End-->
 
@@ -30,10 +26,6 @@ Checks whether the focus assist is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Focus-getFocusAssist(): boolean--><!--Device-Focus-getFocusAssist(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -53,7 +45,7 @@ Checks whether the focus assist is enabled.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 function getFocusAssist(professionalPhotoSession: camera.ProfessionalPhotoSession): boolean {
@@ -79,10 +71,6 @@ Obtains the focus drive type in use.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Focus-getFocusDriven(): FocusDrivenType--><!--Device-Focus-getFocusDriven(): FocusDrivenType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -102,7 +90,7 @@ Obtains the focus drive type in use.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -130,10 +118,6 @@ Obtains the focus range type in use.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Focus-getFocusRange(): FocusRangeType--><!--Device-Focus-getFocusRange(): FocusRangeType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -153,7 +137,7 @@ Obtains the focus range type in use.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -177,13 +161,9 @@ function getFocusRange(session: camera.VideoSessionForSys): camera.FocusRangeTyp
 setFocusAssist(enabled: boolean): void
 ```
 
-Sets the focus assist. Before the setting, call [isFocusAssistSupported](arkts-camera-camera-focusquery-i-sys.md#isFocusAssistSupported) to check whether the device supports the focus assist.
+Sets the focus assist. Before the setting, call [isFocusAssistSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusassistsupported) to check whether the device supports the focus assist.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Focus-setFocusAssist(enabled: boolean): void--><!--Device-Focus-setFocusAssist(enabled: boolean): void-End-->
 
@@ -205,7 +185,7 @@ Sets the focus assist. Before the setting, call [isFocusAssistSupported](arkts-c
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -227,13 +207,9 @@ function setFocusAssist(professionalPhotoSession: camera.ProfessionalPhotoSessio
 setFocusDriven(type: FocusDrivenType): void
 ```
 
-Sets a focus drive type. Before the setting, call [isFocusDrivenTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isFocusDrivenTypeSupported) to check whether the focus drive type is supported.
+Sets a focus drive type. Before the setting, call [isFocusDrivenTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusdriventypesupported) to check whether the focus drive type is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Focus-setFocusDriven(type: FocusDrivenType): void--><!--Device-Focus-setFocusDriven(type: FocusDrivenType): void-End-->
 
@@ -257,7 +233,7 @@ Sets a focus drive type. Before the setting, call [isFocusDrivenTypeSupported](a
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -279,13 +255,9 @@ function setFocusDriven(session: camera.VideoSessionForSys, type: camera.FocusDr
 setFocusRange(type: FocusRangeType): void
 ```
 
-Sets a focus range type. Before the setting, call [isFocusRangeTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isFocusRangeTypeSupported) to check whether the focus range type is supported.
+Sets a focus range type. Before the setting, call [isFocusRangeTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusrangetypesupported) to check whether the focus range type is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Focus-setFocusRange(type: FocusRangeType): void--><!--Device-Focus-setFocusRange(type: FocusRangeType): void-End-->
 
@@ -309,7 +281,7 @@ Sets a focus range type. Before the setting, call [isFocusRangeTypeSupported](ar
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

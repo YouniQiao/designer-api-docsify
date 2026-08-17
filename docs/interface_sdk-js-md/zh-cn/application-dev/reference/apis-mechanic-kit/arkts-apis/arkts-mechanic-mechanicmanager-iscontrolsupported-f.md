@@ -10,10 +10,6 @@ function isControlSupported(mechDeviceType?: MechDeviceType): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 <!--Device-mechanicManager-function isControlSupported(mechDeviceType?: MechDeviceType): boolean--><!--Device-mechanicManager-function isControlSupported(mechDeviceType?: MechDeviceType): boolean-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -30,7 +26,7 @@ function isControlSupported(mechDeviceType?: MechDeviceType): boolean
 | --- | --- |
 | boolean | Returns whether control is supported. |
 
-## 示例
+**示例**
 
 ```TypeScript
 console.info('Check whether control is supported');

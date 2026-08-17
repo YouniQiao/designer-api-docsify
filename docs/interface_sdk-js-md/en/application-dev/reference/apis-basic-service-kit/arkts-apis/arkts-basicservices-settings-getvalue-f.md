@@ -16,8 +16,6 @@ Obtains the value of a specified character string in the database.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** getValue
@@ -36,7 +34,7 @@ Obtains the value of a specified character string in the database.
 | name | string | Yes | Indicates the name of the character string. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes | The callback of getValue result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import featureAbility from '@ohos.ability.featureAbility';
@@ -63,8 +61,6 @@ Obtains the value of a specified character string in the database.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** getValue
@@ -88,7 +84,7 @@ Obtains the value of a specified character string in the database.
 | --- | --- |
 | Promise&lt;object&gt; | Returns the value of the character string in the domain if any is found; returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import featureAbility from '@ohos.ability.featureAbility';
@@ -111,10 +107,6 @@ Get value from settingsdata
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function getValue(context: Context, name: string, callback: AsyncCallback<string>): void--><!--Device-settings-function getValue(context: Context, name: string, callback: AsyncCallback<string>): void-End-->
@@ -129,7 +121,7 @@ Get value from settingsdata
 | name | string | Yes | Indicates the name of the character string. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback of getValue result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
@@ -157,10 +149,6 @@ Get value from settingsdata
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function getValue(context: Context, name: string): Promise<string>--><!--Device-settings-function getValue(context: Context, name: string): Promise<string>-End-->
@@ -180,7 +168,7 @@ Get value from settingsdata
 | --- | --- |
 | Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';
@@ -204,10 +192,6 @@ Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SEC
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function getValue(context: Context, name: string, domainName: string): Promise<string>--><!--Device-settings-function getValue(context: Context, name: string, domainName: string): Promise<string>-End-->
@@ -228,7 +212,7 @@ Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SEC
 | --- | --- |
 | Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { settings } from '@kit.BasicServicesKit';

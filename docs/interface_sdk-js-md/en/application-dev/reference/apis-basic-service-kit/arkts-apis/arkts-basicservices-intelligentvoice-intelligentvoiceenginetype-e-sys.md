@@ -4,10 +4,6 @@ Enumerates intelligent voice engine type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-intelligentVoice-enum IntelligentVoiceEngineType--><!--Device-intelligentVoice-enum IntelligentVoiceEngineType-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -23,10 +19,6 @@ ENROLL_ENGINE_TYPE = 0
 Enroll engine.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IntelligentVoiceEngineType-ENROLL_ENGINE_TYPE = 0--><!--Device-IntelligentVoiceEngineType-ENROLL_ENGINE_TYPE = 0-End-->
 
@@ -44,10 +36,6 @@ Wakeup engine.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-IntelligentVoiceEngineType-WAKEUP_ENGINE_TYPE = 1--><!--Device-IntelligentVoiceEngineType-WAKEUP_ENGINE_TYPE = 1-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
@@ -63,10 +51,6 @@ UPDATE_ENGINE_TYPE = 2
 Update engine.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-IntelligentVoiceEngineType-UPDATE_ENGINE_TYPE = 2--><!--Device-IntelligentVoiceEngineType-UPDATE_ENGINE_TYPE = 2-End-->
 

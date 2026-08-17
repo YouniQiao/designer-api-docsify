@@ -16,10 +16,6 @@ Obtains the global cache size. This API uses a promise to return the result. It 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function getAllBundleCacheSize(): Promise<long>--><!--Device-bundleManager-function getAllBundleCacheSize(): Promise<long>-End-->
@@ -41,7 +37,7 @@ Obtains the global cache size. This API uses a promise to return the result. It 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

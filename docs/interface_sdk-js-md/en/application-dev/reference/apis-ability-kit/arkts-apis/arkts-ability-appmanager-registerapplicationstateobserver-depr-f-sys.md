@@ -10,11 +10,9 @@ Register application state observer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState)
+**Substitutes:** [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -28,7 +26,7 @@ Register application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
+| observer | [ApplicationStateObserver](../../apis-na/arkts-apis/arkts-na-applicationstateobserver-i.md) | Yes | The application state observer. |
 
 **Return value:**
 
@@ -36,7 +34,7 @@ Register application state observer.
 | --- | --- |
 | number | Returns the number code of the observer. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

@@ -1,14 +1,10 @@
 # ExtensionAbility
 
-ExtensionAbility是特定场景扩展能力的基类，继承自[Ability](arkts-ability-app-ability-ability-ability-c.md#Ability)，未新增属性和方法。不支持开发者直接继承 ExtensionAbility。各类Ability的继承关系详见 继承关系说明。
+ExtensionAbility是特定场景扩展能力的基类，继承自[Ability](arkts-ability-app-ability-ability-ability-c.md#ability)，未新增属性和方法。不支持开发者直接继承 ExtensionAbility。各类Ability的继承关系详见 继承关系说明。
 
-**继承/实现关系：** ExtensionAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md#Ability)
+**继承/实现关系：** ExtensionAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md#ability)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

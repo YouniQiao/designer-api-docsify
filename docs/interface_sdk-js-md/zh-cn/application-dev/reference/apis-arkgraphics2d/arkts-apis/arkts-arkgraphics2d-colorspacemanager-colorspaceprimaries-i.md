@@ -1,12 +1,8 @@
-# ColorSpacePrimaries
+# ColorSpacePrimaries(色彩管理)
 
 色域标准三原色（红、绿、蓝）和白色，基于现实世界的色度，使用(x, y)表示其在色彩空间中的位置。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-colorSpaceManager-interface ColorSpacePrimaries--><!--Device-colorSpaceManager-interface ColorSpacePrimaries-End-->
 
@@ -24,10 +20,6 @@ blueX: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ColorSpacePrimaries-blueX: double--><!--Device-ColorSpacePrimaries-blueX: double-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -43,10 +35,6 @@ blueY: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-blueY: double--><!--Device-ColorSpacePrimaries-blueY: double-End-->
 
@@ -64,10 +52,6 @@ greenX: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ColorSpacePrimaries-greenX: double--><!--Device-ColorSpacePrimaries-greenX: double-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -83,10 +67,6 @@ greenY: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-greenY: double--><!--Device-ColorSpacePrimaries-greenY: double-End-->
 
@@ -104,10 +84,6 @@ redX: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ColorSpacePrimaries-redX: double--><!--Device-ColorSpacePrimaries-redX: double-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -123,10 +99,6 @@ redY: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-redY: double--><!--Device-ColorSpacePrimaries-redY: double-End-->
 
@@ -144,10 +116,6 @@ whitePointX: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-ColorSpacePrimaries-whitePointX: double--><!--Device-ColorSpacePrimaries-whitePointX: double-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -163,10 +131,6 @@ whitePointY: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-ColorSpacePrimaries-whitePointY: double--><!--Device-ColorSpacePrimaries-whitePointY: double-End-->
 

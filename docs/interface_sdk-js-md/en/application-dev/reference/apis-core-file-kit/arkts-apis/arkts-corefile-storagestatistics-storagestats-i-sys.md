@@ -4,10 +4,6 @@ Get the user storage statistics.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-storageStatistics-export interface StorageStats--><!--Device-storageStatistics-export interface StorageStats-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
@@ -32,10 +28,6 @@ The size of application. <br>Unit: Byte.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StorageStats-app: long--><!--Device-StorageStats-app: long-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
@@ -53,10 +45,6 @@ The size of audio file. <br>Unit: Byte.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StorageStats-audio: long--><!--Device-StorageStats-audio: long-End-->
 
@@ -76,10 +64,6 @@ The size of other file. <br>Unit: Byte.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StorageStats-file: long--><!--Device-StorageStats-file: long-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
@@ -97,10 +81,6 @@ The size of image file. <br>Unit: Byte.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StorageStats-image: long--><!--Device-StorageStats-image: long-End-->
 
@@ -120,10 +100,6 @@ The total size of device. <br>Unit: Byte.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-StorageStats-total: long--><!--Device-StorageStats-total: long-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
@@ -141,10 +117,6 @@ The size of video file. <br>Unit: Byte.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-StorageStats-video: long--><!--Device-StorageStats-video: long-End-->
 

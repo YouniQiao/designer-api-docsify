@@ -16,11 +16,9 @@ Stops BLE scanning. On API 10 and above, the permission required by this interfa
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [stopBLEScan](#stopBLEScan)
+**Substitutes:** [stopBLEScan](#stopblescan)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -40,7 +38,7 @@ Stops BLE scanning. On API 10 and above, the permission required by this interfa
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

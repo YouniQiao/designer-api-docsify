@@ -16,10 +16,6 @@ Revoke all persistence permissions for the application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.REVOKE_FILE_ACCESS_PERSIST
 
 **Model restriction:** This API can be used only in the stage model.
@@ -62,10 +58,6 @@ function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<vo
 Revoke persistence permissions for the URI.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.REVOKE_FILE_ACCESS_PERSIST
 

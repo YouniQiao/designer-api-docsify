@@ -16,10 +16,6 @@ Creates a **PasteDataRecord** object of the specified type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-pasteboard-function createRecord(mimeType: string, value: ValueType): PasteDataRecord--><!--Device-pasteboard-function createRecord(mimeType: string, value: ValueType): PasteDataRecord-End-->
@@ -30,7 +26,7 @@ Creates a **PasteDataRecord** object of the specified type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | The type of custom data. The value can be a predefined MIME type listed in [Constants](arkts-pasteboard.md#Constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
+| mimeType | string | Yes | The type of custom data. The value can be a predefined MIME type listed in [Constants](arkts-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
 | value | ValueType | Yes | Data content of the specified type. |
 
 **Return value:**

@@ -1,12 +1,8 @@
 # Window
 
-当前窗口实例，窗口管理器管理的基本单元。 下列API示例中都需先使用 [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getLastWindow)、 [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)、 [findWindow()](arkts-arkui-window-findwindow-f.md#findWindow)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
+当前窗口实例，窗口管理器管理的基本单元。 下列API示例中都需先使用 [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow)、 [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)、 [findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-window-interface Window--><!--Device-window-interface Window-End-->
 
@@ -18,13 +14,9 @@
 attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWindowAttachOptions): Promise<void>
 ```
 
-设置一级子窗与主窗保持相对位置不变。使用Promise异步回调。 该相对位置通过子窗与主窗之间的锚点偏移量表示，子窗和主窗使用的窗口锚点相同。 > **说明：** > > - 只支持一级子窗调用该接口，子窗需处于自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）。 > > - 当子窗调用该接口后，立即使其显示位置跟随主窗并保持相对位置不变，并且可以监听主窗大小及模式切换。除非调用 > [detachLayoutToParentWindow()](#detachLayoutToParentWindow)接口解绑，否则效果将持续。 > > - 当子窗调用该接口后，再调用 > [moveWindowTo()](arkts-arkui-window-window-i.md#moveWindowTo)、 > [maximize()](arkts-arkui-window-window-i.md#maximize)、 > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setFollowParentWindowLayoutEnabled)等修改窗 > 口位置的接口，或通过鼠标/触摸操作对子窗进行拖拽移动、拖拽缩放时将不生效。
+设置一级子窗与主窗保持相对位置不变。使用Promise异步回调。 该相对位置通过子窗与主窗之间的锚点偏移量表示，子窗和主窗使用的窗口锚点相同。 > **说明：** > > - 只支持一级子窗调用该接口，子窗需处于自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）。 > > - 当子窗调用该接口后，立即使其显示位置跟随主窗并保持相对位置不变，并且可以监听主窗大小及模式切换。除非调用 > [detachLayoutToParentWindow()](#detachlayouttoparentwindow)接口解绑，否则效果将持续。 > > - 当子窗调用该接口后，再调用 > [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)、 > [maximize()](arkts-arkui-window-window-i.md#maximize)、 > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)等修改窗 > 口位置的接口，或通过鼠标/触摸操作对子窗进行拖拽移动、拖拽缩放时将不生效。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +30,8 @@ attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| anchorInfo | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) | 否 | 一级子窗与主窗保持相对位置不变时的锚点参数。若不传，默认逻辑参考 [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md#WindowAnchorInfo（系统接口）)。 |
-| attachOptions | [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md) | 否 | 设置子窗布局的附加参数。若不传，默认逻辑参考 [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md#SubWindowAttachOptions（系统接口）)。 |
+| anchorInfo | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) | 否 | 一级子窗与主窗保持相对位置不变时的锚点参数。若不传，默认逻辑参考 [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md#windowanchorinfo系统接口)。 |
+| attachOptions | [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md) | 否 | 设置子窗布局的附加参数。若不传，默认逻辑参考 [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md#subwindowattachoptions系统接口)。 |
 
 **返回值：**
 
@@ -58,7 +50,7 @@ attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWin
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) | The operation in the current window status is invalid. Possible cause: 1. The subwindow is following its parent window's layout. 2. The subwindow is not in the floating mode. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -116,10 +108,6 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promis
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promise<void>--><!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -148,7 +136,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promis
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -210,10 +198,6 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callbac
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callback: AsyncCallback<void>): void--><!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -226,7 +210,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callbac
 | --- | --- | --- | --- |
 | token | rpc.RemoteObject | 是 | 目标窗口token值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -237,7 +221,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callbac
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -301,10 +285,6 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>): Promise<void>--><!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -333,7 +313,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dialogRequest, Want, ServiceExtensionAbility } from '@kit.AbilityKit';
@@ -383,10 +363,6 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>, callback: AsyncCallback<void>): void--><!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -399,7 +375,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 | --- | --- | --- | --- |
 | requestInfo | dialogRequest.RequestInfo | 是 | 目标窗口RequestInfo值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -410,7 +386,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dialogRequest, Want, ServiceExtensionAbility } from '@kit.AbilityKit';
@@ -458,13 +434,9 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 detachLayoutToParentWindow(): Promise<void>
 ```
 
-解除一级子窗与主窗保持相对位置不变的协同关系。使用Promise异步回调。 > **说明：** > > - 子窗调用接口时需保持子窗处于协同状态。 > > - 调用接口解除协同后，子窗将保持协同时的位置，可对子窗进行拖拽以修改子窗大小和位置。 > > - 解除协同后，调用 > [moveWindowTo()](arkts-arkui-window-window-i.md#moveWindowTo)、 > [maximize()](arkts-arkui-window-window-i.md#maximize)、 > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setFollowParentWindowLayoutEnabled)修改窗口 > 位置的接口，或通过鼠标/触摸操作对子窗进行拖拽移动、拖拽缩放时将生效。
+解除一级子窗与主窗保持相对位置不变的协同关系。使用Promise异步回调。 > **说明：** > > - 子窗调用接口时需保持子窗处于协同状态。 > > - 调用接口解除协同后，子窗将保持协同时的位置，可对子窗进行拖拽以修改子窗大小和位置。 > > - 解除协同后，调用 > [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)、 > [maximize()](arkts-arkui-window-window-i.md#maximize)、 > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)修改窗口 > 位置的接口，或通过鼠标/触摸操作对子窗进行拖拽移动、拖拽缩放时将生效。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -491,7 +463,7 @@ detachLayoutToParentWindow(): Promise<void>
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) | The operation in the current window status is invalid. Possible cause: The subwindow is not attached to the main window. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -534,10 +506,6 @@ enableDrag(enable: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-enableDrag(enable: boolean): Promise<void>--><!--Device-Window-enableDrag(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -576,10 +544,6 @@ getRotationLocked(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-getRotationLocked(): boolean--><!--Device-Window-getRotationLocked(): boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -602,7 +566,7 @@ getRotationLocked(): boolean
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | 1300029 | This window type is invalid. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -622,10 +586,6 @@ getTransitionController(): TransitionController
 获取窗口属性转换控制器。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-getTransitionController(): TransitionController--><!--Device-Window-getTransitionController(): TransitionController-End-->
 
@@ -647,7 +607,7 @@ getTransitionController(): TransitionController
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let controller = windowClass.getTransitionController(); // 获取属性转换控制器
@@ -663,10 +623,6 @@ hide (callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-hide (callback: AsyncCallback<void>): void--><!--Device-Window-hide (callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -677,7 +633,7 @@ hide (callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -686,7 +642,7 @@ hide (callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -711,10 +667,6 @@ hide(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-hide(): Promise<void>--><!--Device-Window-hide(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -734,7 +686,7 @@ hide(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -753,13 +705,9 @@ promise.then(() => {
 hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-window-windowtype-e.md#WindowType)类型为TYPE_FLOAT），使用callback异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
+设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-window-windowtype-e.md#windowtype)类型为TYPE_FLOAT），使用callback异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -772,7 +720,7 @@ hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | shouldHide | boolean | 是 | 指示是否隐藏非系统级的悬浮窗口，true表示隐藏，false表示不隐藏。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -785,7 +733,7 @@ hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>)
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -888,13 +836,9 @@ export default class EntryAbility extends UIAbility {
 hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 ```
 
-设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-window-windowtype-e.md#WindowType)类型为TYPE_FLOAT），使用Promise异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
+设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-window-windowtype-e.md#windowtype)类型为TYPE_FLOAT），使用Promise异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>--><!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>-End-->
 
@@ -925,7 +869,7 @@ hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // EntryAbility.ets
@@ -980,10 +924,6 @@ hideWithAnimation(callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-hideWithAnimation(callback: AsyncCallback<void>): void--><!--Device-Window-hideWithAnimation(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -994,7 +934,7 @@ hideWithAnimation(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -1005,7 +945,7 @@ hideWithAnimation(callback: AsyncCallback<void>): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1047,10 +987,6 @@ hideWithAnimation(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-hideWithAnimation(): Promise<void>--><!--Device-Window-hideWithAnimation(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -1072,7 +1008,7 @@ hideWithAnimation(): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1108,10 +1044,6 @@ isMainWindowFullScreenAcrossDisplays(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-isMainWindowFullScreenAcrossDisplays(): Promise<boolean>--><!--Device-Window-isMainWindowFullScreenAcrossDisplays(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -1134,7 +1066,7 @@ isMainWindowFullScreenAcrossDisplays(): Promise<boolean>
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1160,10 +1092,6 @@ offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void
 取消监听本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化事件。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void--><!--Device-Window-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void-End-->
 
@@ -1197,10 +1125,6 @@ off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boole
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-Window-off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boolean>): void--><!--Device-Window-off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -1224,7 +1148,7 @@ off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boole
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const callback = (mainWindowFullScreenAcrossDisplaysChanged: boolean) => {
@@ -1251,10 +1175,6 @@ onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void
 监听本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化事件。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void--><!--Device-Window-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void-End-->
 
@@ -1288,10 +1208,6 @@ on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 <!--Device-Window-on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean>): void--><!--Device-Window-on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -1315,7 +1231,7 @@ on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 const callback = (mainWindowFullScreenAcrossDisplaysChanged: boolean) => {
@@ -1338,10 +1254,6 @@ opacity(opacity: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-opacity(opacity: double): void--><!--Device-Window-opacity(opacity: double): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -1363,7 +1275,7 @@ opacity(opacity: double): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -1379,13 +1291,9 @@ try {
 raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void
 ```
 
-将同一个主窗口下的子窗口抬升到目标子窗口之上。使用callback异步回调。 使用该接口需要确保要抬升的子窗口和目标子窗口都已创建完成，分别调用 [showWindow()](arkts-arkui-window-window-i.md#showWindow)并执行完毕。
+将同一个主窗口下的子窗口抬升到目标子窗口之上。使用callback异步回调。 使用该接口需要确保要抬升的子窗口和目标子窗口都已创建完成，分别调用 [showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void--><!--Device-Window-raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void-End-->
 
@@ -1397,8 +1305,8 @@ raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | int | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md#WindowProperties)后，再通过properties.id获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| windowId | int | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md#windowproperties)后，再通过properties.id获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -1412,7 +1320,7 @@ raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1501,13 +1409,9 @@ export default class EntryAbility extends UIAbility {
 raiseAboveTarget(windowId: int): Promise<void>
 ```
 
-将同一个主窗下的子窗口提升到目标子窗口之上。使用Promise异步回调。 使用该接口需要确保要抬升的子窗口和目标子窗口都已创建完成，分别调用 [showWindow()](arkts-arkui-window-window-i.md#showWindow)并执行完毕。
+将同一个主窗下的子窗口提升到目标子窗口之上。使用Promise异步回调。 使用该接口需要确保要抬升的子窗口和目标子窗口都已创建完成，分别调用 [showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-raiseAboveTarget(windowId: int): Promise<void>--><!--Device-Window-raiseAboveTarget(windowId: int): Promise<void>-End-->
 
@@ -1519,7 +1423,7 @@ raiseAboveTarget(windowId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | int | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md#WindowProperties)后，再通过properties.id获取。 |
+| windowId | int | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md#windowproperties)后，再通过properties.id获取。 |
 
 **返回值：**
 
@@ -1539,7 +1443,7 @@ raiseAboveTarget(windowId: int): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1628,10 +1532,6 @@ raiseMainWindowAboveTarget(windowId: int): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-raiseMainWindowAboveTarget(windowId: int): Promise<void>--><!--Device-Window-raiseMainWindowAboveTarget(windowId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -1642,7 +1542,7 @@ raiseMainWindowAboveTarget(windowId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | int | 是 | 目标主窗口的id，该参数为整数，通过 [getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties)接口获取到 [properties](arkts-arkui-window-windowproperties-i.md#WindowProperties)后，再通过properties.id获取。 |
+| windowId | int | 是 | 目标主窗口的id，该参数为整数，通过 [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接口获取到 [properties](arkts-arkui-window-windowproperties-i.md#windowproperties)后，再通过properties.id获取。 |
 
 **返回值：**
 
@@ -1661,7 +1561,7 @@ raiseMainWindowAboveTarget(windowId: int): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -1920,13 +1820,9 @@ export default class RaiseMainWindowAbility extends UIAbility {
 raiseToAppTop(callback: AsyncCallback<void>): void
 ```
 
-提升应用子窗口到应用顶层。使用callback异步回调。 使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](arkts-arkui-window-window-i.md#showWindow) 并执行完毕。
+提升应用子窗口到应用顶层。使用callback异步回调。 使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow) 并执行完毕。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-raiseToAppTop(callback: AsyncCallback<void>): void--><!--Device-Window-raiseToAppTop(callback: AsyncCallback<void>): void-End-->
 
@@ -1938,7 +1834,7 @@ raiseToAppTop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -1950,7 +1846,7 @@ raiseToAppTop(callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2020,13 +1916,9 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-支持当前窗口主动请求获焦/失焦，使用Promise异步回调。调用成功即返回，该接口返回值不代表最终获焦/失焦生效结果。可使用 [on('windowEvent')](arkts-arkui-window-window-i.md#on_rotationChange) 监听窗口获焦/失焦状态。 获焦请求发送后，窗口获焦结果受到窗口可获焦属性及窗口可见状态的限制。获焦成功的窗口需满足以下约束：1.窗口支持获焦；2.窗口可见（窗口已显示，未销毁且未退至后台）。 失焦请求发送后，窗口无条件失焦。
+支持当前窗口主动请求获焦/失焦，使用Promise异步回调。调用成功即返回，该接口返回值不代表最终获焦/失焦生效结果。可使用 [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) 监听窗口获焦/失焦状态。 获焦请求发送后，窗口获焦结果受到窗口可获焦属性及窗口可见状态的限制。获焦成功的窗口需满足以下约束：1.窗口支持获焦；2.窗口可见（窗口已显示，未销毁且未退至后台）。 失焦请求发送后，窗口无条件失焦。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-requestFocus(isFocused: boolean): Promise<void>--><!--Device-Window-requestFocus(isFocused: boolean): Promise<void>-End-->
 
@@ -2056,7 +1948,7 @@ requestFocus(isFocused: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2096,10 +1988,6 @@ rotate(rotateOptions: RotateOptions): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-rotate(rotateOptions: RotateOptions): void--><!--Device-Window-rotate(rotateOptions: RotateOptions): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -2121,7 +2009,7 @@ rotate(rotateOptions: RotateOptions): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let obj: window.RotateOptions = {
@@ -2148,10 +2036,6 @@ scale(scaleOptions: ScaleOptions): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-scale(scaleOptions: ScaleOptions): void--><!--Device-Window-scale(scaleOptions: ScaleOptions): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -2173,7 +2057,7 @@ scale(scaleOptions: ScaleOptions): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let obj: window.ScaleOptions = {
@@ -2195,13 +2079,9 @@ try {
 setBackdropBlur(radius: double): void
 ```
 
-设置窗口背景模糊。 窗口背景是指窗口覆盖的下层区域，与窗口大小相同。 需要通过[setWindowBackgroundColor](arkts-arkui-window-window-i.md#setWindowBackgroundColor)将窗口内容背景设置成透明，否则无法看到模糊效果。
+设置窗口背景模糊。 窗口背景是指窗口覆盖的下层区域，与窗口大小相同。 需要通过[setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)将窗口内容背景设置成透明，否则无法看到模糊效果。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setBackdropBlur(radius: double): void--><!--Device-Window-setBackdropBlur(radius: double): void-End-->
 
@@ -2224,7 +2104,7 @@ setBackdropBlur(radius: double): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -2244,10 +2124,6 @@ setBackdropBlurStyle(blurStyle: BlurStyle): void
 设置窗口背景模糊类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setBackdropBlurStyle(blurStyle: BlurStyle): void--><!--Device-Window-setBackdropBlurStyle(blurStyle: BlurStyle): void-End-->
 
@@ -2270,7 +2146,7 @@ setBackdropBlurStyle(blurStyle: BlurStyle): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -2289,10 +2165,6 @@ setBlur(radius: double): void
 设置窗口模糊。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setBlur(radius: double): void--><!--Device-Window-setBlur(radius: double): void-End-->
 
@@ -2315,7 +2187,7 @@ setBlur(radius: double): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -2334,10 +2206,6 @@ setCornerRadius(cornerRadius: double): void
 设置窗口圆角半径。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setCornerRadius(cornerRadius: double): void--><!--Device-Window-setCornerRadius(cornerRadius: double): void-End-->
 
@@ -2360,7 +2228,7 @@ setCornerRadius(cornerRadius: double): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Invalid window type. Only subwindows and float windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -2376,13 +2244,9 @@ try {
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-设置窗口是否使用所在屏幕的系统默认Density。Stage模型下，该接口需要在 [loadContent()](arkts-arkui-window-window-i.md#loadContent) 或[setUIContent()](arkts-arkui-window-window-i.md#setUIContent)调用生效 后使用。 不调用此接口进行设置，则表示不使用系统默认Density。 当存在同时使用该接口、 [setDefaultDensityEnabled(true)](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12) 和[setCustomDensity](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setCustomDensity)时，以最后调用的设置 效果为准。
+设置窗口是否使用所在屏幕的系统默认Density。Stage模型下，该接口需要在 [loadContent()](arkts-arkui-window-window-i.md#loadcontent) 或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效 后使用。 不调用此接口进行设置，则表示不使用系统默认Density。 当存在同时使用该接口、 [setDefaultDensityEnabled(true)](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12) 和[setCustomDensity](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setcustomdensity)时，以最后调用的设置 效果为准。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setDefaultDensityEnabled(enabled: boolean): void--><!--Device-Window-setDefaultDensityEnabled(enabled: boolean): void-End-->
 
@@ -2404,7 +2268,7 @@ setDefaultDensityEnabled(enabled: boolean): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -2425,8 +2289,6 @@ setForbidSplitMove(isForbidSplitMove: boolean, callback: AsyncCallback<void>): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
 **废弃版本：** 26.0.0
 
 <!--Device-Window-setForbidSplitMove(isForbidSplitMove: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setForbidSplitMove(isForbidSplitMove: boolean, callback: AsyncCallback<void>): void-End-->
@@ -2440,7 +2302,7 @@ setForbidSplitMove(isForbidSplitMove: boolean, callback: AsyncCallback<void>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isForbidSplitMove | boolean | 是 | 窗口在分屏模式下是否被禁止移动。true表示禁止；false表示不禁止。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -2451,7 +2313,7 @@ setForbidSplitMove(isForbidSplitMove: boolean, callback: AsyncCallback<void>): v
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2536,8 +2398,6 @@ setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
 **废弃版本：** 26.0.0
 
 <!--Device-Window-setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>--><!--Device-Window-setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>-End-->
@@ -2567,7 +2427,7 @@ setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2649,10 +2509,6 @@ setHandwritingFlag(enable: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-setHandwritingFlag(enable: boolean): Promise<void>--><!--Device-Window-setHandwritingFlag(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -2681,7 +2537,7 @@ setHandwritingFlag(enable: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例
 
@@ -2730,10 +2586,6 @@ setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>--><!--Device-Window-setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -2762,7 +2614,7 @@ setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2838,13 +2690,9 @@ export default class EntryAbility extends UIAbility {
 setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-禁止/使能子窗口点击抬升功能。使用callback异步回调。 通常来说，点击一个子窗口，会将该子窗口显示到最上方，如果设置为false，那么点击子窗口的时候，不会将该子窗口显示到最上方，而是保持不变。 使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](arkts-arkui-window-window-i.md#showWindow) 并执行完毕。
+禁止/使能子窗口点击抬升功能。使用callback异步回调。 通常来说，点击一个子窗口，会将该子窗口显示到最上方，如果设置为false，那么点击子窗口的时候，不会将该子窗口显示到最上方，而是保持不变。 使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow) 并执行完毕。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -2857,7 +2705,7 @@ setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 设置子窗口点击抬升功能是否使能，true表示使能，false表示禁止。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -2871,7 +2719,7 @@ setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -2950,13 +2798,9 @@ export default class EntryAbility extends UIAbility {
 setRotationLocked(locked: boolean): Promise<void>
 ```
 
-仅支持[系统窗口](../../../windowmanager/window-terminology.md#系统窗口)设置旋转锁定，锁定后系统窗口显示方向不变，未锁定时系统窗口显示方向受主窗口显示方向、旋转锁定按钮、 sensor旋转影响。非系统窗口调用返回1300029错误码。使用Promise异步回调。 > **说明：** > > - 如果在锁定期间主窗口通过 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > 设置显示方向属性，则解除旋转锁定后该窗口在前台还原最后一次的方向请求。 > > - 如果在锁定期间系统窗口通过 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > 设置显示方向属性，则解除旋转锁定后该窗口在前台且层级最高时还原最后一次的方向请求。低层级窗口通过setRotationLocked设置旋转锁定不会影响高层级系统窗口调用 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > 设置显示方向。 > > - 如果在锁定期间sensor方向发生了变化，则解除旋转锁定后还原到最后一次的sensor方向。 > > - 如果在锁定期间应用调用 > [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setOrientation) > 设置屏幕方向，忽略该次屏幕方向设置。 > > - 解除锁定时，根据主窗口的显示方向属性 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > 、sensor方向等决定应用显示方向，具体见[窗口旋转简介](../../../windowmanager/window-rotation.md#窗口旋转简介)。 > > - 不影响应用[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签) > orientation属性设置的启动方向。
+仅支持[系统窗口](../../../windowmanager/window-terminology.md#系统窗口)设置旋转锁定，锁定后系统窗口显示方向不变，未锁定时系统窗口显示方向受主窗口显示方向、旋转锁定按钮、 sensor旋转影响。非系统窗口调用返回1300029错误码。使用Promise异步回调。 > **说明：** > > - 如果在锁定期间主窗口通过 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) > 设置显示方向属性，则解除旋转锁定后该窗口在前台还原最后一次的方向请求。 > > - 如果在锁定期间系统窗口通过 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) > 设置显示方向属性，则解除旋转锁定后该窗口在前台且层级最高时还原最后一次的方向请求。低层级窗口通过setRotationLocked设置旋转锁定不会影响高层级系统窗口调用 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) > 设置显示方向。 > > - 如果在锁定期间sensor方向发生了变化，则解除旋转锁定后还原到最后一次的sensor方向。 > > - 如果在锁定期间应用调用 > [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation) > 设置屏幕方向，忽略该次屏幕方向设置。 > > - 解除锁定时，根据主窗口的显示方向属性 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation) > 、sensor方向等决定应用显示方向，具体见[窗口旋转简介](../../../windowmanager/window-rotation.md#窗口旋转简介)。 > > - 不影响应用[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签) > orientation属性设置的启动方向。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setRotationLocked(locked: boolean): Promise<void>--><!--Device-Window-setRotationLocked(locked: boolean): Promise<void>-End-->
 
@@ -2986,7 +2830,7 @@ setRotationLocked(locked: boolean): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | 1300029 | This window type is invalid. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3009,10 +2853,6 @@ setShadow(radius: double, color?: string, offsetX?: double, offsetY?: double): v
 设置窗口边缘阴影。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setShadow(radius: double, color?: string, offsetX?: double, offsetY?: double): void--><!--Device-Window-setShadow(radius: double, color?: string, offsetX?: double, offsetY?: double): void-End-->
 
@@ -3038,7 +2878,7 @@ setShadow(radius: double, color?: string, offsetX?: double, offsetY?: double): v
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, modal windows and subwindows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {
@@ -3057,10 +2897,6 @@ setSingleFrameComposerEnabled(enable: boolean): Promise<void>
 禁止/使能单帧合成渲染节点的功能。使用Promise异步回调。 单帧合成渲染节点的功能主要用于跟手性要求较高的场景，使能该功能之后可以降低渲染节点的上屏延时。通过setSingleFrameComposerEnabled接口，如果enable设置为true，则使能单帧合成渲染节点的功能，否 则禁止单帧合成渲染节点的功能。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setSingleFrameComposerEnabled(enable: boolean): Promise<void>--><!--Device-Window-setSingleFrameComposerEnabled(enable: boolean): Promise<void>-End-->
 
@@ -3089,7 +2925,7 @@ setSingleFrameComposerEnabled(enable: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3134,13 +2970,9 @@ try {
 setSnapshotSkip(isSkip: boolean): void
 ```
 
-截屏、录屏或投屏是否忽略当前窗口。此接口一般用于禁止截屏、录屏或投屏的场景。 若要实现窗口始终在前台忽略截屏、录屏或投屏，在窗口从后台回到前台时，需要通过 [on('windowEvent')](arkts-arkui-window-window-i.md#on_rotationChange) 监听窗口生命周期变化，在后台状态时设置为false，而在前台状态时设置为true。
+截屏、录屏或投屏是否忽略当前窗口。此接口一般用于禁止截屏、录屏或投屏的场景。 若要实现窗口始终在前台忽略截屏、录屏或投屏，在窗口从后台回到前台时，需要通过 [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) 监听窗口生命周期变化，在后台状态时设置为false，而在前台状态时设置为true。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setSnapshotSkip(isSkip: boolean): void--><!--Device-Window-setSnapshotSkip(isSkip: boolean): void-End-->
 
@@ -3162,7 +2994,7 @@ setSnapshotSkip(isSkip: boolean): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let isSkip: boolean = true;
@@ -3182,10 +3014,6 @@ setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, is
 设置主窗标题栏上的最大化、最小化、分屏按钮是否可见。 仅对在当前场景下可见的标题栏按钮（最大化、最小化、分屏）生效。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-Window-setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, isSplitVisible: boolean): void--><!--Device-Window-setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, isSplitVisible: boolean): void-End-->
 
@@ -3211,7 +3039,7 @@ setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, is
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3298,10 +3126,6 @@ setTopmost(isTopmost: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-setTopmost(isTopmost: boolean): Promise<void>--><!--Device-Window-setTopmost(isTopmost: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -3331,7 +3155,7 @@ setTopmost(isTopmost: boolean): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3388,10 +3212,6 @@ setTouchableAreas(rects: Array<Rect>): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.SET_WINDOW_TOUCH_AREAS
 
@@ -3435,10 +3255,6 @@ setWakeUpScreen(wakeUp: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-setWakeUpScreen(wakeUp: boolean): void--><!--Device-Window-setWakeUpScreen(wakeUp: boolean): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -3460,7 +3276,7 @@ setWakeUpScreen(wakeUp: boolean): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3495,10 +3311,6 @@ setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -3510,7 +3322,7 @@ setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 是否对窗口添加标志位。true表示添加，false表示删除。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -3522,7 +3334,7 @@ setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3575,10 +3387,6 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-setWaterMarkFlag(enable: boolean): Promise<void>--><!--Device-Window-setWaterMarkFlag(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -3607,7 +3415,7 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3652,13 +3460,9 @@ try {
 setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 ```
 
-设置主窗口容器在焦点态和非焦点态时的背景色。该接口需在调用 [loadContent()](arkts-arkui-window-window-i.md#loadContent) 或[setUIContent()](arkts-arkui-window-window-i.md#setUIContent)后使用。 窗口容器背景色覆盖整个窗口区域，包括标题栏和内容区域。内容区域背景色默认跟随系统深浅色，当同时使用该接口和 [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setWindowBackgroundColor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
+设置主窗口容器在焦点态和非焦点态时的背景色。该接口需在调用 [loadContent()](arkts-arkui-window-window-i.md#loadcontent) 或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)后使用。 窗口容器背景色覆盖整个窗口区域，包括标题栏和内容区域。内容区域背景色默认跟随系统深浅色，当同时使用该接口和 [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.SET_WINDOW_ALPHA
@@ -3696,10 +3500,6 @@ setWindowMode(mode: WindowMode): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-setWindowMode(mode: WindowMode): Promise<void>--><!--Device-Window-setWindowMode(mode: WindowMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -3727,7 +3527,7 @@ setWindowMode(mode: WindowMode): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3809,10 +3609,6 @@ setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -3824,7 +3620,7 @@ setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | WindowMode | 是 | 窗口模式。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -3835,7 +3631,7 @@ setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -3920,8 +3716,6 @@ setWindowType(type: WindowType): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-Window-setWindowType(type: WindowType): Promise<void>--><!--Device-Window-setWindowType(type: WindowType): Promise<void>-End-->
@@ -3942,7 +3736,7 @@ setWindowType(type: WindowType): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3966,8 +3760,6 @@ setWindowType(type: WindowType, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-Window-setWindowType(type: WindowType, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowType(type: WindowType, callback: AsyncCallback<void>): void-End-->
@@ -3981,9 +3773,9 @@ setWindowType(type: WindowType, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | WindowType | 是 | 窗口类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -4009,10 +3801,6 @@ showWithAnimation(callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-showWithAnimation(callback: AsyncCallback<void>): void--><!--Device-Window-showWithAnimation(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -4023,7 +3811,7 @@ showWithAnimation(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -4034,7 +3822,7 @@ showWithAnimation(callback: AsyncCallback<void>): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4076,10 +3864,6 @@ showWithAnimation(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-showWithAnimation(): Promise<void>--><!--Device-Window-showWithAnimation(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -4101,7 +3885,7 @@ showWithAnimation(): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -4137,10 +3921,6 @@ translate(translateOptions: TranslateOptions): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-Window-translate(translateOptions: TranslateOptions): void--><!--Device-Window-translate(translateOptions: TranslateOptions): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -4162,7 +3942,7 @@ translate(translateOptions: TranslateOptions): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only system windows, global floating windows, and modal windows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 let obj: window.TranslateOptions = {

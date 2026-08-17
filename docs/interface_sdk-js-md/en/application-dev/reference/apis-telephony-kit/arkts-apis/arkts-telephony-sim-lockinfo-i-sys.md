@@ -4,10 +4,6 @@ Defines the personalized lock information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sim-export interface LockInfo--><!--Device-sim-export interface LockInfo-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -32,10 +28,6 @@ Indicates the lock type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LockInfo-lockType: LockType--><!--Device-LockInfo-lockType: LockType-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -54,10 +46,6 @@ Indicates the password.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LockInfo-password: string--><!--Device-LockInfo-password: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -75,10 +63,6 @@ Indicates the lock state.
 **Type:** [LockState](arkts-telephony-sim-lockstate-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LockInfo-state: LockState--><!--Device-LockInfo-state: LockState-End-->
 

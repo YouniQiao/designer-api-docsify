@@ -16,10 +16,6 @@ function addSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function addSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function addSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
@@ -33,7 +29,7 @@ function addSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slot | NotificationSlot | 是 | 要创建的通知渠道对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定通道的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 表示被指定通道的回调方法。 |
 
 **错误码：**
 
@@ -47,7 +43,7 @@ function addSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -100,10 +96,6 @@ function addSlot(slot: NotificationSlot): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function addSlot(slot: NotificationSlot): Promise<void>--><!--Device-notificationManager-function addSlot(slot: NotificationSlot): Promise<void>-End-->
@@ -136,7 +128,7 @@ function addSlot(slot: NotificationSlot): Promise<void>
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

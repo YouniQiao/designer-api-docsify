@@ -4,10 +4,6 @@ Enumerates the touch event types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare enum Action--><!--Device-unnamed-export declare enum Action-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -21,10 +17,6 @@ CANCEL = 0
 Touch canceled. The **DOWN** event of the touchscreen is interrupted unexpectedly and does not close normally. For example, the **CANCEL** event is triggered when the finger is pressed but not lifted, the screen is rotated or folded, or a new hover occurs.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Action-CANCEL = 0--><!--Device-Action-CANCEL = 0-End-->
 
@@ -40,10 +32,6 @@ Touch down.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Action-DOWN = 1--><!--Device-Action-DOWN = 1-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -57,10 +45,6 @@ MOVE = 2
 Touch moved.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Action-MOVE = 2--><!--Device-Action-MOVE = 2-End-->
 
@@ -76,10 +60,6 @@ Touch up.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Action-UP = 3--><!--Device-Action-UP = 3-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -93,10 +73,6 @@ PULL_DOWN = 4
 Drag started. **Since**: 26.0.0
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,10 +90,6 @@ Dragging. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Action-PULL_MOVE = 5--><!--Device-Action-PULL_MOVE = 5-End-->
@@ -133,10 +105,6 @@ PULL_UP = 6
 Drag ended. **Since**: 26.0.0
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

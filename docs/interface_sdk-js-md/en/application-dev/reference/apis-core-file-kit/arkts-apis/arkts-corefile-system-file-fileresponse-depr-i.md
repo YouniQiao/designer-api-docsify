@@ -4,8 +4,6 @@ Returns a file, including the file information.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileResponse--><!--Device-unnamed-export interface FileResponse-End-->
@@ -23,8 +21,6 @@ Timestamp when the file is stored the last time, which is the number of millisec
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -44,8 +40,6 @@ File length, in bytes.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileResponse-length: number--><!--Device-FileResponse-length: number-End-->
@@ -63,8 +57,6 @@ List of files. When the recursive value is true and the type is dir, the file in
 **Type:** Array&lt;[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)&gt;
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 
@@ -84,8 +76,6 @@ File type. Available values are as follows: **dir**: directory **file**: file
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-FileResponse-type: 'dir' | 'file'--><!--Device-FileResponse-type: 'dir' | 'file'-End-->
@@ -103,8 +93,6 @@ URI of the file.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

@@ -1,14 +1,12 @@
-# USBDevice
+# USBDevice(USB Manager)
 
 Represents the USB device information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md#USBDevice)
+**Substitutes:** [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md#usbdevice)
 
 <!--Device-usb-interface USBDevice--><!--Device-usb-interface USBDevice-End-->
 
@@ -32,11 +30,9 @@ Bus address.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [busNum](arkts-basicservices-usbmanager-usbdevice-i.md#busNum)
+**Substitutes:** [busNum](arkts-basicservices-usbmanager-usbdevice-i.md#busnum)
 
 <!--Device-USBDevice-busNum: number--><!--Device-USBDevice-busNum: number-End-->
 
@@ -53,8 +49,6 @@ Device class.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,8 +70,6 @@ Device configuration descriptor information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [configs](arkts-basicservices-usbmanager-usbdevice-i.md#configs)
@@ -98,11 +90,9 @@ Device address.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [devAddress](arkts-basicservices-usbmanager-usbdevice-i.md#devAddress)
+**Substitutes:** [devAddress](arkts-basicservices-usbmanager-usbdevice-i.md#devaddress)
 
 <!--Device-USBDevice-devAddress: number--><!--Device-USBDevice-devAddress: number-End-->
 
@@ -120,11 +110,9 @@ Device manufacturer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [manufacturerName](arkts-basicservices-usbmanager-usbdevice-i.md#manufacturerName)
+**Substitutes:** [manufacturerName](arkts-basicservices-usbmanager-usbdevice-i.md#manufacturername)
 
 <!--Device-USBDevice-manufacturerName: string--><!--Device-USBDevice-manufacturerName: string-End-->
 
@@ -141,8 +129,6 @@ Device name.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -164,11 +150,9 @@ Product ID.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [productId](arkts-basicservices-usbmanager-usbdevice-i.md#productId)
+**Substitutes:** [productId](arkts-basicservices-usbmanager-usbdevice-i.md#productid)
 
 <!--Device-USBDevice-productId: number--><!--Device-USBDevice-productId: number-End-->
 
@@ -186,11 +170,9 @@ Product name.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [productName](arkts-basicservices-usbmanager-usbdevice-i.md#productName)
+**Substitutes:** [productName](arkts-basicservices-usbmanager-usbdevice-i.md#productname)
 
 <!--Device-USBDevice-productName: string--><!--Device-USBDevice-productName: string-End-->
 
@@ -207,8 +189,6 @@ Device protocol code.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -230,8 +210,6 @@ Sequence number.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [serial](arkts-basicservices-usbmanager-usbdevice-i.md#serial)
@@ -252,11 +230,9 @@ Device subclass.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [subClass](arkts-basicservices-usbmanager-usbdevice-i.md#subClass)
+**Substitutes:** [subClass](arkts-basicservices-usbmanager-usbdevice-i.md#subclass)
 
 <!--Device-USBDevice-subClass: number--><!--Device-USBDevice-subClass: number-End-->
 
@@ -274,11 +250,9 @@ Vendor ID.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [vendorId](arkts-basicservices-usbmanager-usbdevice-i.md#vendorId)
+**Substitutes:** [vendorId](arkts-basicservices-usbmanager-usbdevice-i.md#vendorid)
 
 <!--Device-USBDevice-vendorId: number--><!--Device-USBDevice-vendorId: number-End-->
 
@@ -295,8 +269,6 @@ Version.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

@@ -1,12 +1,8 @@
-# TabBarOptions
+# TabBarOptions(Provides an advanced struct of tabs for atomic services)
 
 Array of tab bar container configurations.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class TabBarOptions--><!--Device-unnamed-export declare class TabBarOptions-End-->
 
@@ -32,10 +28,6 @@ constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr,
 A constructor used to create a **TabBarOptions** instance.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,10 +4,6 @@ Defines the transition effect by using the provided APIs, as listed below.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class TransitionEffect--><!--Device-unnamed-declare class TransitionEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ animation(value: AnimateParam): TransitionEffect
 Animation settings.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,10 +53,6 @@ Sets the asymmetric transition effect.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -98,10 +86,6 @@ Combination of transition effects.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -134,10 +118,6 @@ Constructs a **TransitionEffect** object.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -152,7 +132,7 @@ Constructs a **TransitionEffect** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Yes | Transition type. |
+| type | [Type](../../apis-na/arkts-apis/arkts-na-util-type-e.md) | Yes | Transition type. |
 | effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | Yes | Transition parameter. |
 
 ## move
@@ -164,10 +144,6 @@ static move(edge: TransitionEdge): TransitionEffect<"move">
 Sets the slide-in and slide-out effects for component transitions from the screen edges.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -201,10 +177,6 @@ Sets the opacity for component transition.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -236,10 +208,6 @@ static rotate(options: RotateOptions): TransitionEffect<"rotate">
 Sets the rotation effect for component transitions.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -273,10 +241,6 @@ Sets the scaling effect for component transitions.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -308,10 +272,6 @@ static translate(options: TranslateOptions): TransitionEffect<"translate">
 Sets the translation effect for component transitions.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -347,10 +307,6 @@ Disables the transition effect.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -372,10 +328,6 @@ Applies a transition effect with the opacity changing from 0 to 1 when the compo
 **Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"opacity"&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -405,10 +357,6 @@ Applies a transition effect of sliding in from the start edge when the component
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -430,10 +378,6 @@ Applies a transition effect of sliding in from the right with first scaling down
 **Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"slideSwitch"&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

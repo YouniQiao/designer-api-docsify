@@ -16,10 +16,6 @@ Identifies sensitive content in a specified file based on the configured policy 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ENTERPRISE_DATA_IDENTIFY_FILE
 
 <!--Device-identifySensitiveContent-function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>--><!--Device-identifySensitiveContent-function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>-End-->
@@ -50,7 +46,7 @@ Identifies sensitive content in a specified file based on the configured policy 
 | [19110004](../errorcode-dlp.md#19110004-system-function-abnormal) | A system error has occurred. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { identifySensitiveContent } from '@kit.DataProtectionKit';

@@ -4,10 +4,6 @@ Enum for performance mode
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-export enum PerformanceMode--><!--Device-mindSporeLite-export enum PerformanceMode-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -21,10 +17,6 @@ PERFORMANCE_NONE = 0
 No performance mode preference
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Low power consumption mode
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PerformanceMode-PERFORMANCE_LOW = 1--><!--Device-PerformanceMode-PERFORMANCE_LOW = 1-End-->
@@ -61,10 +49,6 @@ PERFORMANCE_MEDIUM = 2
 Medium performance mode
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ High performance mode
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PerformanceMode-PERFORMANCE_HIGH = 3--><!--Device-PerformanceMode-PERFORMANCE_HIGH = 3-End-->
@@ -101,10 +81,6 @@ PERFORMANCE_EXTREME = 4
 Ultimate performance mode
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

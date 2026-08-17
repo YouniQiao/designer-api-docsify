@@ -1,12 +1,8 @@
 # NestedScrollOptionsExt
 
-通过NestedScrollOptionsExt可以设置上下左右四个方向的嵌套滚动规则。
+用于设置Web组件嵌套滚动规则，支持上下左右四个方向的滚动选项。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface NestedScrollOptionsExt--><!--Device-unnamed-declare interface NestedScrollOptionsExt-End-->
 
@@ -24,10 +20,6 @@ scrollDown?: NestedScrollMode
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -43,10 +35,6 @@ scrollLeft?: NestedScrollMode
 **类型：** NestedScrollMode
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode-End-->
 
@@ -64,10 +52,6 @@ scrollRight?: NestedScrollMode
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
-
 <!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -83,10 +67,6 @@ scrollUp?: NestedScrollMode
 **类型：** NestedScrollMode
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
-
-**废弃版本：** -1
 
 <!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode-End-->
 

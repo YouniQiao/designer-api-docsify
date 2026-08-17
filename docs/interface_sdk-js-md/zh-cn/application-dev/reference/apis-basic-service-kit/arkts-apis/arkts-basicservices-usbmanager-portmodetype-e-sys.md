@@ -4,10 +4,6 @@ Enumerates USB port mode types.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-usbManager-export enum PortModeType--><!--Device-usbManager-export enum PortModeType-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -23,10 +19,6 @@ NONE = 0
 没有功能。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PortModeType-NONE = 0--><!--Device-PortModeType-NONE = 0-End-->
 
@@ -44,10 +36,6 @@ Upstream facing port, which functions as the sink of power supply
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PortModeType-UFP = 1--><!--Device-PortModeType-UFP = 1-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -63,10 +51,6 @@ DFP = 2
 Downstream facing port, which functions as the source of power supply
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PortModeType-DFP = 2--><!--Device-PortModeType-DFP = 2-End-->
 
@@ -84,10 +68,6 @@ Dynamic reconfiguration port (DRP), which can function as the DFP (host) or UFP 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PortModeType-DRP = 3--><!--Device-PortModeType-DRP = 3-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -103,10 +83,6 @@ NUM_MODES = 4
 Not supported currently
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PortModeType-NUM_MODES = 4--><!--Device-PortModeType-NUM_MODES = 4-End-->
 

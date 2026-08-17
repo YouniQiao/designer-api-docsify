@@ -10,11 +10,9 @@ function getUidForName(v: string): number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getUidForName](arkts-arkts-process-processmanager-c.md#getUidForName)
+**替代接口：** [getUidForName](arkts-arkts-process-processmanager-c.md#getuidforname)
 
 <!--Device-process-function getUidForName(v: string): number--><!--Device-process-function getUidForName(v: string): number-End-->
 
@@ -32,7 +30,7 @@ function getUidForName(v: string): number
 | --- | --- |
 | number | 返回用户 uid。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let pres = process.getUidForName("tool");

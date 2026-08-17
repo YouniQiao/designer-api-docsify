@@ -4,10 +4,6 @@ Enumerates the culling modes of PBR materials. You can improve rendering perform
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export enum CullMode--><!--Device-unnamed-export enum CullMode-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -21,10 +17,6 @@ NONE = 0
 Culling is disabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CullMode-NONE = 0--><!--Device-CullMode-NONE = 0-End-->
 
@@ -40,10 +32,6 @@ Culls the front faces of geometric objects.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CullMode-FRONT = 1--><!--Device-CullMode-FRONT = 1-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -57,10 +45,6 @@ BACK = 2
 Culls the back faces of geometric objects.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CullMode-BACK = 2--><!--Device-CullMode-BACK = 2-End-->
 

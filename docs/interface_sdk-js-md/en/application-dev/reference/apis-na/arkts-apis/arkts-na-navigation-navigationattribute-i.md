@@ -6,9 +6,7 @@ Declare Navigation view properties.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface NavigationAttribute--><!--Device-unnamed-export declare interface NavigationAttribute-End-->
 
@@ -22,9 +20,7 @@ attributeModifier(modifier: AttributeModifier<NavigationAttribute> | AttributeMo
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-attributeModifier(modifier: AttributeModifier<NavigationAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-NavigationAttribute-attributeModifier(modifier: AttributeModifier<NavigationAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,9 +44,7 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier | undefi
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier | undefined, accessibilityText?: ResourceStr | undefined): this--><!--Device-NavigationAttribute-backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier | undefined, accessibilityText?: ResourceStr | undefined): this-End-->
 
@@ -58,7 +52,7 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier | undefi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | string \| [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| [SymbolGlyphModifier](../../apis-arkui/arkts-components/arkts-arkui-symbolglyphmodifier-t.md) \| undefined | Yes |  |
+| icon | string \| [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| SymbolGlyphModifier \| undefined | Yes |  |
 | accessibilityText | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| undefined | No |  |
 
 **Return value:**
@@ -75,9 +69,7 @@ configuration(config: NavigationConfiguration | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-configuration(config: NavigationConfiguration | undefined): this--><!--Device-NavigationAttribute-configuration(config: NavigationConfiguration | undefined): this-End-->
 
@@ -101,9 +93,7 @@ customNavContentTransition(delegate: ((from: NavContentInfo, to: NavContentInfo,
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-customNavContentTransition(delegate: ((from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation) => NavigationAnimatedTransition | undefined) | undefined): this--><!--Device-NavigationAttribute-customNavContentTransition(delegate: ((from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation) => NavigationAnimatedTransition | undefined) | undefined): this-End-->
 
@@ -127,9 +117,7 @@ divider(style: NavigationDividerStyle | null | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-divider(style: NavigationDividerStyle | null | undefined): this--><!--Device-NavigationAttribute-divider(style: NavigationDividerStyle | null | undefined): this-End-->
 
@@ -153,9 +141,7 @@ enableDragBar(isEnabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-enableDragBar(isEnabled: boolean | undefined): this--><!--Device-NavigationAttribute-enableDragBar(isEnabled: boolean | undefined): this-End-->
 
@@ -179,9 +165,7 @@ enableModeChangeAnimation(isEnabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-enableModeChangeAnimation(isEnabled: boolean | undefined): this--><!--Device-NavigationAttribute-enableModeChangeAnimation(isEnabled: boolean | undefined): this-End-->
 
@@ -205,9 +189,7 @@ enableToolBarAdaptation(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-enableToolBarAdaptation(enable: boolean | undefined): this--><!--Device-NavigationAttribute-enableToolBarAdaptation(enable: boolean | undefined): this-End-->
 
@@ -231,9 +213,7 @@ enableVisibilityLifecycleWithContentCover(isEnabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-enableVisibilityLifecycleWithContentCover(isEnabled: boolean | undefined): this--><!--Device-NavigationAttribute-enableVisibilityLifecycleWithContentCover(isEnabled: boolean | undefined): this-End-->
 
@@ -257,9 +237,7 @@ hideBackButton(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-hideBackButton(value: boolean | undefined): this--><!--Device-NavigationAttribute-hideBackButton(value: boolean | undefined): this-End-->
 
@@ -283,9 +261,7 @@ hideNavBar(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-hideNavBar(value: boolean | undefined): this--><!--Device-NavigationAttribute-hideNavBar(value: boolean | undefined): this-End-->
 
@@ -309,9 +285,7 @@ hideTitleBar(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-hideTitleBar(value: boolean | undefined): this--><!--Device-NavigationAttribute-hideTitleBar(value: boolean | undefined): this-End-->
 
@@ -335,9 +309,7 @@ hideTitleBar(hide: boolean | undefined, animated: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-hideTitleBar(hide: boolean | undefined, animated: boolean | undefined): this--><!--Device-NavigationAttribute-hideTitleBar(hide: boolean | undefined, animated: boolean | undefined): this-End-->
 
@@ -362,9 +334,7 @@ hideToolBar(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-hideToolBar(value: boolean | undefined): this--><!--Device-NavigationAttribute-hideToolBar(value: boolean | undefined): this-End-->
 
@@ -388,9 +358,7 @@ hideToolBar(hide: boolean | undefined, animated: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-hideToolBar(hide: boolean | undefined, animated: boolean | undefined): this--><!--Device-NavigationAttribute-hideToolBar(hide: boolean | undefined, animated: boolean | undefined): this-End-->
 
@@ -415,9 +383,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Arra
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Array<LayoutSafeAreaEdge> | undefined): this--><!--Device-NavigationAttribute-ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Array<LayoutSafeAreaEdge> | undefined): this-End-->
 
@@ -442,9 +408,7 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder | undefined, options?: Na
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-menus(items: Array<NavigationMenuItem> | CustomBuilder | undefined, options?: NavigationMenuOptions | undefined): this--><!--Device-NavigationAttribute-menus(items: Array<NavigationMenuItem> | CustomBuilder | undefined, options?: NavigationMenuOptions | undefined): this-End-->
 
@@ -469,9 +433,7 @@ minContentWidth(value: Dimension | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-minContentWidth(value: Dimension | undefined): this--><!--Device-NavigationAttribute-minContentWidth(value: Dimension | undefined): this-End-->
 
@@ -495,9 +457,7 @@ mode(value: NavigationMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-mode(value: NavigationMode | undefined): this--><!--Device-NavigationAttribute-mode(value: NavigationMode | undefined): this-End-->
 
@@ -521,9 +481,7 @@ navBarPosition(value: NavBarPosition | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-navBarPosition(value: NavBarPosition | undefined): this--><!--Device-NavigationAttribute-navBarPosition(value: NavBarPosition | undefined): this-End-->
 
@@ -547,9 +505,7 @@ navBarWidth(value: Length | Bindable<Length> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-navBarWidth(value: Length | Bindable<Length> | undefined): this--><!--Device-NavigationAttribute-navBarWidth(value: Length | Bindable<Length> | undefined): this-End-->
 
@@ -576,9 +532,7 @@ navBarWidthRange(value: [
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-navBarWidthRange(value: [        Dimension,        Dimension    ] | undefined): this--><!--Device-NavigationAttribute-navBarWidthRange(value: [        Dimension,        Dimension    ] | undefined): this-End-->
 
@@ -602,9 +556,7 @@ navDestination(builder: PageMapBuilder | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-navDestination(builder: PageMapBuilder | undefined): this--><!--Device-NavigationAttribute-navDestination(builder: PageMapBuilder | undefined): this-End-->
 
@@ -628,9 +580,7 @@ onNavBarStateChange(callback: ((isVisible: boolean) => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-onNavBarStateChange(callback: ((isVisible: boolean) => void) | undefined): this--><!--Device-NavigationAttribute-onNavBarStateChange(callback: ((isVisible: boolean) => void) | undefined): this-End-->
 
@@ -654,9 +604,7 @@ onNavigationModeChange(callback: ((mode: NavigationMode) => void) | undefined): 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-onNavigationModeChange(callback: ((mode: NavigationMode) => void) | undefined): this--><!--Device-NavigationAttribute-onNavigationModeChange(callback: ((mode: NavigationMode) => void) | undefined): this-End-->
 
@@ -680,9 +628,7 @@ onTitleModeChange(callback: ((titleMode: NavigationTitleMode) => void) | undefin
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-onTitleModeChange(callback: ((titleMode: NavigationTitleMode) => void) | undefined): this--><!--Device-NavigationAttribute-onTitleModeChange(callback: ((titleMode: NavigationTitleMode) => void) | undefined): this-End-->
 
@@ -706,9 +652,7 @@ recoverable(recoverable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-recoverable(recoverable: boolean | undefined): this--><!--Device-NavigationAttribute-recoverable(recoverable: boolean | undefined): this-End-->
 
@@ -732,9 +676,7 @@ setNavigationOptions(pathInfos?: NavPathStack, homeDestination?: HomePathInfo, m
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-setNavigationOptions(pathInfos?: NavPathStack, homeDestination?: HomePathInfo, moduleInfo?: NavigationModuleInfo): this--><!--Device-NavigationAttribute-setNavigationOptions(pathInfos?: NavPathStack, homeDestination?: HomePathInfo, moduleInfo?: NavigationModuleInfo): this-End-->
 
@@ -760,9 +702,7 @@ setNavigationOptions(pathInfos?: NavPathStack,  moduleInfo?: NavigationModuleInf
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-setNavigationOptions(pathInfos?: NavPathStack,  moduleInfo?: NavigationModuleInfo): this--><!--Device-NavigationAttribute-setNavigationOptions(pathInfos?: NavPathStack,  moduleInfo?: NavigationModuleInfo): this-End-->
 
@@ -787,9 +727,7 @@ splitPlaceholder(placeholder: ComponentContent<Object> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-splitPlaceholder(placeholder: ComponentContent<Object> | undefined): this--><!--Device-NavigationAttribute-splitPlaceholder(placeholder: ComponentContent<Object> | undefined): this-End-->
 
@@ -813,9 +751,7 @@ systemBarStyle(style: SystemBarStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-systemBarStyle(style: SystemBarStyle | undefined): this--><!--Device-NavigationAttribute-systemBarStyle(style: SystemBarStyle | undefined): this-End-->
 
@@ -839,9 +775,7 @@ title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCus
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCustomTitle | undefined, options?: NavigationTitleOptions | undefined): this--><!--Device-NavigationAttribute-title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCustomTitle | undefined, options?: NavigationTitleOptions | undefined): this-End-->
 
@@ -866,9 +800,7 @@ titleMode(value: NavigationTitleMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-titleMode(value: NavigationTitleMode | undefined): this--><!--Device-NavigationAttribute-titleMode(value: NavigationTitleMode | undefined): this-End-->
 
@@ -892,9 +824,7 @@ toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder | undefined, opti
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-NavigationAttribute-toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder | undefined, options?: NavigationToolbarOptions | undefined): this--><!--Device-NavigationAttribute-toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder | undefined, options?: NavigationToolbarOptions | undefined): this-End-->
 
@@ -921,9 +851,7 @@ Set placeholder in split mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

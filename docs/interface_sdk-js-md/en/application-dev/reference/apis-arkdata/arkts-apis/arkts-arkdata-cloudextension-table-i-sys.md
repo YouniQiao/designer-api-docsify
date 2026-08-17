@@ -4,10 +4,6 @@ Represents the table information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface Table--><!--Device-cloudExtension-export interface Table-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -32,10 +28,6 @@ Alias of the table in the database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Table-alias: string--><!--Device-Table-alias: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -54,10 +46,6 @@ Field information in the table.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Table-fields: Array<Field>--><!--Device-Table-fields: Array<Field>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -75,10 +63,6 @@ Table name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Table-name: string--><!--Device-Table-name: string-End-->
 

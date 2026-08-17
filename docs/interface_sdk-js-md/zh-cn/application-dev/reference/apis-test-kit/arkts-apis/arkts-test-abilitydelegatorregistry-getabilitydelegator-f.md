@@ -6,13 +6,9 @@
 function getAbilityDelegator(): AbilityDelegator
 ```
 
-获取应用程序的[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#AbilityDelegator)对象，该对象能够使用调度测试框架的相关功能。
+获取应用程序的[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#abilitydelegator)对象，该对象能够使用调度测试框架的相关功能。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -26,7 +22,7 @@ function getAbilityDelegator(): AbilityDelegator
 | --- | --- |
 | AbilityDelegator | [AbilityDelegator]{ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';

@@ -10,10 +10,6 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callba
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RUN_DYN_CODE
 
 <!--Device-bundleManager-function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callback: AsyncCallback<void>): void-End-->
@@ -28,7 +24,7 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callba
 | --- | --- | --- | --- |
 | abcPaths | Array&lt;string&gt; | 是 | .abc文件路径。 |
 | deleteOriginalFiles | boolean | 是 | 是否删除.abc文件，true删除，false不删除。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，当获取成功时，err为undefined；否则为错 误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当获取成功时，err为undefined；否则为错 误对象。 |
 
 **错误码：**
 
@@ -39,7 +35,7 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callba
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -73,10 +69,6 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.RUN_DYN_CODE
 
 <!--Device-bundleManager-function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promise<void>--><!--Device-bundleManager-function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promise<void>-End-->
@@ -107,7 +99,7 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promi
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

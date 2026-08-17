@@ -6,10 +6,6 @@ The class of agent extension ability. This class cannot be used in Harmony Archi
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class AgentExtensionAbility--><!--Device-unnamed-declare class AgentExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -29,10 +25,6 @@ onAgentInvoked(agentId: string): void
 Called back when a LOW_CODE agent is invoked.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

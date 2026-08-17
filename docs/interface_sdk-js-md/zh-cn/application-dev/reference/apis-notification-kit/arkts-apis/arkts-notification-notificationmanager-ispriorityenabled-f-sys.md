@@ -16,10 +16,6 @@ function isPriorityEnabled(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function isPriorityEnabled(): Promise<boolean>--><!--Device-notificationManager-function isPriorityEnabled(): Promise<boolean>-End-->
@@ -43,7 +39,7 @@ function isPriorityEnabled(): Promise<boolean>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

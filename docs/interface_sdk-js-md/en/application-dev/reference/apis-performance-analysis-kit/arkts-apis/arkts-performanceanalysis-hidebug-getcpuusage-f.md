@@ -16,10 +16,6 @@ Obtains the CPU usage of a process. > **NOTE：**> > This API involves cross-pro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hidebug-function getCpuUsage() : double--><!--Device-hidebug-function getCpuUsage() : double-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -30,7 +26,7 @@ Obtains the CPU usage of a process. > **NOTE：**> > This API involves cross-pro
 | --- | --- |
 | double | CPU usage of a process. For example, if the CPU usage is **50%**, **0.5** is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

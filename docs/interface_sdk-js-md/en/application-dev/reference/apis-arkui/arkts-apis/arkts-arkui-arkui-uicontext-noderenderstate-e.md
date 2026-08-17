@@ -4,10 +4,6 @@ An enumeration type that identifies the current node's rendering state. The UI c
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export const enum NodeRenderState--><!--Device-unnamed-export const enum NodeRenderState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ ABOUT_TO_RENDER_IN = 0
 The node has been mount on to the render tree and will soon be rendered. Generally, after the next frame, the user will be able to see this node. However, this is not always the case, as in reality, the node may be occluded by other nodes, meaning it is rendered but not be visible. When registering a listener for the render state using the UIObserver interface, the system will immediately trigger the callback once, and the state notified at this time typically represents the current state.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,10 +35,6 @@ ABOUT_TO_RENDER_OUT = 1
 The node has been removed from the render tree and will no longer be rendered shortly. Generally speaking, after the next frame, the user will no longer be able to see this node. When registering a listener for the render state using the UIObserver interface, the system will immediately trigger the callback once, and the state notified at this time typically represents the current state.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

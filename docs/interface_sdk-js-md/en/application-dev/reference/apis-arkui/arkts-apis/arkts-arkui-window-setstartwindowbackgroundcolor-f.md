@@ -16,10 +16,6 @@ Sets the background color of the splash screen of the UIAbility based on the spe
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-window-function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>--><!--Device-window-function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>-End-->
@@ -48,7 +44,7 @@ Sets the background color of the splash screen of the UIAbility based on the spe
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.function setStartWindowBackgroundColor can not work correctly due to limited device capabilities. |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Parameter exceeds the allowed length. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

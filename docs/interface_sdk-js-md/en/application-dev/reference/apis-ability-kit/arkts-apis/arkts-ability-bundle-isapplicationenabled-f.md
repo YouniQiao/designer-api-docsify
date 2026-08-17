@@ -16,8 +16,6 @@ Checks whether an application is enabled based on a given bundle name. This API 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-bundle-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundle-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
@@ -41,8 +39,6 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 Checks whether an application is enabled based on a given bundle name. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

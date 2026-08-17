@@ -6,10 +6,6 @@ class of static subscriber extension context.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default class FenceExtensionContext--><!--Device-unnamed-export default class FenceExtensionContext-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -29,10 +25,6 @@ startAbility(want: Want): Promise<void>
 Starts a new service extension ability. If the target service extension ability is visible, you can start the target service extension ability; If the target service extension ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible service extension ability. If the target service extension ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,7 +65,7 @@ Starts a new service extension ability. If the target service extension ability 
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { FenceExtensionAbility, geoLocationManager } from '@kit.LocationKit';

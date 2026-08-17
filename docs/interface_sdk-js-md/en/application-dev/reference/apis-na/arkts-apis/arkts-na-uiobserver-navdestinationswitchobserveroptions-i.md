@@ -4,9 +4,7 @@ Indicates the options of NavDestination switch.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-uiObserver-export interface NavDestinationSwitchObserverOptions--><!--Device-uiObserver-export interface NavDestinationSwitchObserverOptions-End-->
 
@@ -24,9 +22,7 @@ The navigationId that need observation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

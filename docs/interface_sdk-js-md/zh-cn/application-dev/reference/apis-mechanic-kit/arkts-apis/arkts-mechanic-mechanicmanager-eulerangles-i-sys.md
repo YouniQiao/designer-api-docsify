@@ -4,10 +4,6 @@ Absolute euler angles relative to the home position.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-mechanicManager-export interface EulerAngles--><!--Device-mechanicManager-export interface EulerAngles-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -25,10 +21,6 @@ pitch?: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EulerAngles-pitch?: double--><!--Device-EulerAngles-pitch?: double-End-->
 
@@ -48,10 +40,6 @@ roll?: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-EulerAngles-roll?: double--><!--Device-EulerAngles-roll?: double-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -69,10 +57,6 @@ yaw?: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-EulerAngles-yaw?: double--><!--Device-EulerAngles-yaw?: double-End-->
 

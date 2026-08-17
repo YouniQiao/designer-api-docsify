@@ -4,10 +4,6 @@ Describes the parameters for creating a system window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-interface SystemWindowOptions--><!--Device-window-interface SystemWindowOptions-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -31,10 +27,6 @@ Window type. There is no default value. If null is passed in, the window fails t
 **Type:** WindowType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ The URLParams interface defines some practical methods to process URL query stri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-url-class URLParams--><!--Device-url-class URLParams-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,10 +23,6 @@ $_iterator(): IterableIterator<[string, string]>
 Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields ofeach array are the key and value respectively.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,10 +46,6 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-[Symbol.iterator](): IterableIterator<[string, string]>--><!--Device-URLParams-[Symbol.iterator](): IterableIterator<[string, string]>-End-->
@@ -70,7 +58,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 | --- | --- |
 | IterableIterator&lt;[string, string]&gt; | Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The first item of Array is name, and the second item of Array is value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const paramsObject = new url.URLParams('fod=bay&edg=bap');
@@ -92,10 +80,6 @@ Appends a key-value pair into the query string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-append(name: string, value: string): void--><!--Device-URLParams-append(name: string, value: string): void-End-->
@@ -109,7 +93,7 @@ Appends a key-value pair into the query string.
 | name | string | Yes | Key of the key-value pair to append. |
 | value | string | Yes | Value of the key-value pair to append. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -127,10 +111,6 @@ A constructor used to create a URLParams instance.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-constructor(init?: string[][] | Record<string, string> | string | URLParams)--><!--Device-URLParams-constructor(init?: string[][] | Record<string, string> | string | URLParams)-End-->
@@ -143,7 +123,7 @@ A constructor used to create a URLParams instance.
 | --- | --- | --- | --- |
 | init | string[][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No | Input parameter objects, which include the following: - string[][]: two-dimensional string array. - Record&lt;string, string&gt;: list of objects. - string: string. - URLParams: object. The default value is null. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Construct a URLParams object in string[][] mode.
@@ -170,10 +150,6 @@ A parameterized constructor used to create an URLParams instance. As the input p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-URLParams-constructor(init?: [string, string][] | Record<string, string> | string | URLParams)--><!--Device-URLParams-constructor(init?: [string, string][] | Record<string, string> | string | URLParams)-End-->
@@ -196,10 +172,6 @@ Deletes key-value pairs of the specified key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-delete(name: string): void--><!--Device-URLParams-delete(name: string): void-End-->
@@ -212,7 +184,7 @@ Deletes key-value pairs of the specified key.
 | --- | --- | --- | --- |
 | name | string | Yes | Key of the key-value pairs to delete. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -230,10 +202,6 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-entries(): IterableIterator<[string, string]>--><!--Device-URLParams-entries(): IterableIterator<[string, string]>-End-->
@@ -246,7 +214,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 | --- | --- |
 | IterableIterator&lt;[string, string]&gt; | Returns an iterator for ES6. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let paramsObject = new url.URLParams("keyName1=valueName1&keyName2=valueName2");
@@ -268,10 +236,6 @@ Callback functions are used to traverse key-value pairs on the URLParams instanc
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void--><!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void-End-->
@@ -285,7 +249,7 @@ Callback functions are used to traverse key-value pairs on the URLParams instanc
 | callbackFn | (value: string, key: string, searchParams: URLParams) =&gt; void | Yes | callbackFn value Current traversal key value, key Indicates the name of the key that is traversed. |
 | thisArg | Object | No | thisArg to be used as this value for when callbackFn is called |
 
-## Examples
+**Examples**
 
 ```TypeScript
 const myURLObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -303,10 +267,6 @@ forEach(callbackFn: UrlCbFn): void
 Iterates over a collection (e.g., URLs) and executes a callback function for each element.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -330,10 +290,6 @@ Obtains the value of the first key-value pair based on the specified key.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-get(name: string): string | null--><!--Device-URLParams-get(name: string): string | null-End-->
@@ -352,7 +308,7 @@ Obtains the value of the first key-value pair based on the specified key.
 | --- | --- |
 | string | Returns the first value found by name. If no value is found, null is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let paramsObject = new url.URLParams('name=Jonathan&age=18');
@@ -370,10 +326,6 @@ get(name: string): string | undefined
 Obtains the value of the first key-value pair based on the specified key.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -403,10 +355,6 @@ Obtains all the values based on the specified key.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-getAll(name: string): string[]--><!--Device-URLParams-getAll(name: string): string[]-End-->
@@ -425,7 +373,7 @@ Obtains all the values based on the specified key.
 | --- | --- |
 | string[] | string[] Returns all key-value pairs with the specified name. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -443,10 +391,6 @@ has(name: string): boolean
 Checks whether a key has a value.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -466,7 +410,7 @@ Checks whether a key has a value.
 | --- | --- |
 | boolean | Returns a Boolean value that indicates whether a found |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -484,10 +428,6 @@ Obtains an ES6 iterator that contains the keys of all the key-value pairs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-keys(): IterableIterator<string>--><!--Device-URLParams-keys(): IterableIterator<string>-End-->
@@ -500,7 +440,7 @@ Obtains an ES6 iterator that contains the keys of all the key-value pairs.
 | --- | --- |
 | IterableIterator&lt;string&gt; | Returns an ES6 Iterator over the names of each name-value pair. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let paramsObject = new url.URLParams("key1=value1&key2=value2");
@@ -522,10 +462,6 @@ Sets the value for a key. If key-value pairs matching the specified key exist, t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-set(name: string, value: string): void--><!--Device-URLParams-set(name: string, value: string): void-End-->
@@ -539,7 +475,7 @@ Sets the value for a key. If key-value pairs matching the specified key exist, t
 | name | string | Yes | Key of the value to set. |
 | value | string | Yes | Value to set. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -557,17 +493,13 @@ Sorts all key-value pairs contained in this object based on the Unicode code poi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-sort(): void--><!--Device-URLParams-sort(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
-## Examples
+**Examples**
 
 ```TypeScript
 let paramsObject = new url.URLParams("c=3&a=9&b=4&d=2"); // Create a test URLParams object
@@ -585,10 +517,6 @@ Obtains search parameters that are serialized as a string and, if necessary, per
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-toString(): string--><!--Device-URLParams-toString(): string-End-->
@@ -601,7 +529,7 @@ Obtains search parameters that are serialized as a string and, if necessary, per
 | --- | --- |
 | string | Returns a search parameter serialized as a string, percent-encoded if necessary. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -620,10 +548,6 @@ Obtains an ES6 iterator that contains the values of all the key-value pairs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URLParams-values(): IterableIterator<string>--><!--Device-URLParams-values(): IterableIterator<string>-End-->
@@ -636,7 +560,7 @@ Obtains an ES6 iterator that contains the values of all the key-value pairs.
 | --- | --- |
 | IterableIterator&lt;string&gt; | Returns an ES6 Iterator over the values of each name-value pair. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let paramsObject = new url.URLParams("key1=value1&key2=value2");

@@ -12,10 +12,6 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -39,10 +35,6 @@ Column(options?: ColumnOptions | ColumnOptionsV2)
 Creates a vertical linear layout container. You can set the spacing between child components.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

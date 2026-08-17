@@ -16,10 +16,6 @@ Subscribe to heart rate sensor data once, {@code SensorId.HEART_RATE}.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
 <!--Device-sensor-function onceHeartRateChange(callback: Callback<HeartRateResponse>): void--><!--Device-sensor-function onceHeartRateChange(callback: Callback<HeartRateResponse>): void-End-->

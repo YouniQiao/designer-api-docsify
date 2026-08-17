@@ -4,10 +4,6 @@ Enum for scheduling priority
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mindSporeLite-export enum Priority--><!--Device-mindSporeLite-export enum Priority-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -21,10 +17,6 @@ PRIORITY_NONE = 0
 No priority preference
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ Low priority
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Priority-PRIORITY_LOW = 1--><!--Device-Priority-PRIORITY_LOW = 1-End-->
@@ -62,10 +50,6 @@ Medium priority
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Priority-PRIORITY_MEDIUM = 2--><!--Device-Priority-PRIORITY_MEDIUM = 2-End-->
@@ -81,10 +65,6 @@ PRIORITY_HIGH = 3
 High priority
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

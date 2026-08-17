@@ -10,10 +10,6 @@ Register event callback for scanner device add (system API).
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-scan-function onScanDeviceAdd(callback: Callback<ScannerDevice>): void--><!--Device-scan-function onScanDeviceAdd(callback: Callback<ScannerDevice>): void-End-->
@@ -26,7 +22,7 @@ Register event callback for scanner device add (system API).
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 是 | Callback for device add event. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 是 | Callback for device add event. |
 
 **错误码：**
 

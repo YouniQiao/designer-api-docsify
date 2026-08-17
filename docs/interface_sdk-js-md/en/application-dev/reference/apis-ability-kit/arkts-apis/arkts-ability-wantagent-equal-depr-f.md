@@ -10,8 +10,6 @@ Checks whether two WantAgent objects are equal.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [equal](arkts-ability-wantagent-equal-f.md#equal)
@@ -30,7 +28,7 @@ Checks whether two WantAgent objects are equal.
 | otherAgent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | WantAgent Object. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback method for determining whether two WantAgent instances are equal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -97,8 +95,6 @@ Checks whether two WantAgent objects are equal.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [equal](arkts-ability-wantagent-equal-f.md#equal)
@@ -122,7 +118,7 @@ Checks whether two WantAgent objects are equal.
 | --- | --- |
 | Promise&lt;boolean&gt; | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

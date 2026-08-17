@@ -4,10 +4,6 @@ Provides the media AVScreenCaptureStrategy definition.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface AVScreenCaptureStrategy--><!--Device-media-interface AVScreenCaptureStrategy-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -30,10 +26,6 @@ Indicates whether to enable B-frame encoding, which is used to reduce the size o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVScreenCaptureStrategy-enableBFrame?: boolean--><!--Device-AVScreenCaptureStrategy-enableBFrame?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -49,10 +41,6 @@ Enable pausing the screen capture. The default value is false.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Allows starting or maintaining screen capture during a call
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AVScreenCaptureStrategy-keepCaptureDuringCall?: boolean--><!--Device-AVScreenCaptureStrategy-keepCaptureDuringCall?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -93,10 +77,6 @@ Set the fill mode for screen capture when a privacy window exists.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

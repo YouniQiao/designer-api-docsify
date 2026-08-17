@@ -1,12 +1,8 @@
 # BackForwardCacheSupportedFeatures
 
-This class is used to enable back forward cache supported features.
+BackForwardCacheSupportedFeatures is a configuration class in the ArkWeb framework used to selectively allow pages that use specific web features to enter the Back/Forward Cache (BFCache). By default, pages using features such as native embed or media takeover are blocked from entering BFCache, because the browser cannot safely save and restore these complex states bound to system controls. By setting the properties in this class, developers can explicitly allow pages with these features to enter BFCache, but they must manage the lifecycle of the related system controls themselves to avoid resource leaks. For the complete sample code, see [enableBackForwardCache](arkts-arkweb-webview-webviewcontroller-c.md#enablebackforwardcache).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-webview-class BackForwardCacheSupportedFeatures--><!--Device-webview-class BackForwardCacheSupportedFeatures-End-->
 
@@ -24,11 +20,9 @@ import { webview } from 'webview';
 constructor()
 ```
 
+Constructs a **BackForwardCacheSupportedFeatures** object.
+
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-BackForwardCacheSupportedFeatures-constructor()--><!--Device-BackForwardCacheSupportedFeatures-constructor()-End-->
 
@@ -40,15 +34,11 @@ constructor()
 mediaTakeOver: boolean
 ```
 
-Whether cache the pages that use media take over. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> When the value is set to **true**, you need to maintain the lifecycle of system components created for video elements to avoid resource leak. &lt;/p&gt; Default is false;
+Whether to allow pages using media takeover to enter the back-forward cache. If allowed, you need to maintain the lifecycle of system controls created for video elements to avoid resource leaks. true: allowed; false: not allowed. Default value: false.
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-BackForwardCacheSupportedFeatures-mediaTakeOver: boolean--><!--Device-BackForwardCacheSupportedFeatures-mediaTakeOver: boolean-End-->
 
@@ -60,15 +50,11 @@ Whether cache the pages that use media take over. &lt;p&gt;&lt;strong&gt;API Not
 nativeEmbed: boolean
 ```
 
-Whether cache the pages that use native embed. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> When the value is set to **true**, you need to maintain the lifecycle of system components created for the same-layer rendering elements to avoid resource leak. &lt;/p&gt; Default is false;
+Whether to allow pages using native embed to enter the back-forward cache. If allowed, you need to maintain the lifecycle of system controls created for native embed elements to avoid resource leaks. true: allowed; false: not allowed. Default value: false.
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-BackForwardCacheSupportedFeatures-nativeEmbed: boolean--><!--Device-BackForwardCacheSupportedFeatures-nativeEmbed: boolean-End-->
 

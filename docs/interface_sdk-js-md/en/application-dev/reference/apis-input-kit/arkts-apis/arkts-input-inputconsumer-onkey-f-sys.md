@@ -16,10 +16,6 @@ Subscribe system keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputConsumer-function onKey(keyOptions: KeyOptions, callback: Callback<KeyOptions>): void--><!--Device-inputConsumer-function onKey(keyOptions: KeyOptions, callback: Callback<KeyOptions>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -50,10 +46,6 @@ function onKey(keyOptions: KeyOptions, callback:KeyCommandCallback): void
 Subscribe system keys.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

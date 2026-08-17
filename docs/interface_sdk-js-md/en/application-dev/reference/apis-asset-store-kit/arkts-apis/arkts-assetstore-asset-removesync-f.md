@@ -16,10 +16,6 @@ Removes one or more assets. This API returns the result synchronously.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-asset-function removeSync(query: AssetMap): void--><!--Device-asset-function removeSync(query: AssetMap): void-End-->
@@ -48,7 +44,7 @@ Removes one or more assets. This API returns the result synchronously.
 | [24000002](../errorcode-asset.md#24000002-asset-not-found) | The asset is not found. |
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { asset } from '@kit.AssetStoreKit';

@@ -16,11 +16,9 @@ Get the local device connection state to any profile of any remote device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getBtConnectionState](arkts-connectivity-bluetoothmanager-getbtconnectionstate-f.md#getBtConnectionState)
+**Substitutes:** [getBtConnectionState](arkts-connectivity-bluetoothmanager-getbtconnectionstate-f.md#getbtconnectionstate)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -34,7 +32,7 @@ Get the local device connection state to any profile of any remote device.
 | --- | --- |
 | ProfileConnectionState | One of { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let connectionState : bluetooth.ProfileConnectionState = bluetooth.getBtConnectionState();

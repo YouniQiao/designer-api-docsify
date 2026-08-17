@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 6
 
 <!--Device-unnamed-export default class Battery--><!--Device-unnamed-export default class Battery-End-->
@@ -22,8 +20,6 @@ static getStatus(options?: GetStatusOptions): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 6
 
 <!--Device-Battery-static getStatus(options?: GetStatusOptions): void--><!--Device-Battery-static getStatus(options?: GetStatusOptions): void-End-->
@@ -36,7 +32,7 @@ static getStatus(options?: GetStatusOptions): void
 | --- | --- | --- | --- |
 | options | [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md) | 否 | 包含接口调用结果的对象。可选，默认为空。 |
 
-## 示例
+**示例**
 
 ArkTS示例：
 

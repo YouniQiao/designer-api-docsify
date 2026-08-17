@@ -4,10 +4,6 @@ Enumerates the types of abilities during uninstallation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appControl-export enum UninstallComponentType--><!--Device-appControl-export enum UninstallComponentType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -24,10 +20,6 @@ ExtensionAbility component. Only [ExtensionAbility](../../../quick-start/module-
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-UninstallComponentType-EXTENSION = 1--><!--Device-UninstallComponentType-EXTENSION = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -43,10 +35,6 @@ UI_EXTENSION = 2
 UIExtensionAbility component. The UIExtensionAbility is determined by bundleName, moduleName, and abilityName in want, and the **ability.want.params.uiExtensionType** field in **want.parameters** is set to [UIExtensionAbility](../../../application-models/uiextensionability-sys.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-UninstallComponentType-UI_EXTENSION = 2--><!--Device-UninstallComponentType-UI_EXTENSION = 2-End-->
 

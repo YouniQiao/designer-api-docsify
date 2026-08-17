@@ -4,10 +4,6 @@ Enumerates the camera output formats.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-camera-enum CameraFormat--><!--Device-camera-enum CameraFormat-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -21,10 +17,6 @@ CAMERA_FORMAT_RGBA_8888 = 3
 RGBA_8888 image.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,10 +34,6 @@ YUV_420_SP image, which corresponds to the NV21 image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraFormat-CAMERA_FORMAT_YUV_420_SP = 1003--><!--Device-CameraFormat-CAMERA_FORMAT_YUV_420_SP = 1003-End-->
@@ -61,10 +49,6 @@ CAMERA_FORMAT_JPEG = 2000
 JPEG image.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -82,10 +66,6 @@ YCBCR_P010 image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraFormat-CAMERA_FORMAT_YCBCR_P010--><!--Device-CameraFormat-CAMERA_FORMAT_YCBCR_P010-End-->
@@ -102,10 +82,6 @@ YCRCB_P010 image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraFormat-CAMERA_FORMAT_YCRCB_P010 = 2002--><!--Device-CameraFormat-CAMERA_FORMAT_YCRCB_P010 = 2002-End-->
@@ -121,10 +97,6 @@ CAMERA_FORMAT_HEIC = 2003
 HEIF image.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

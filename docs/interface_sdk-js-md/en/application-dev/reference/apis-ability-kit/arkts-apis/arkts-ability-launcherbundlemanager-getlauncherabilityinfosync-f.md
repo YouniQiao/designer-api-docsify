@@ -12,13 +12,9 @@ import { launcherBundleManager } from 'launcherBundleManager';
 function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<LauncherAbilityInfo>
 ```
 
-Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo) based on the given bundle name and user ID.
+Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#launcherabilityinfo) based on the given bundle name and user ID.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -31,7 +27,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
 
 **Return value:**
 

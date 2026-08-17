@@ -16,10 +16,6 @@ Obtains the trace ID. This API returns the result synchronously. Obtains the HiT
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiTraceChain-function getId(): HiTraceId--><!--Device-hiTraceChain-function getId(): HiTraceId-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -30,7 +26,7 @@ Obtains the trace ID. This API returns the result synchronously. Obtains the HiT
 | --- | --- |
 | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId** instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Start tracing. The tracing flag is DEFAULT.

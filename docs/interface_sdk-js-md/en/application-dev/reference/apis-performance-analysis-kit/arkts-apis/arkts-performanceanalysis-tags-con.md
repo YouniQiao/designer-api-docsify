@@ -10,10 +10,6 @@ Capability management. The corresponding HiTrace command is **tagName:ability**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const ABILITY_MANAGER: long--><!--Device-tags-const ABILITY_MANAGER: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -27,10 +23,6 @@ const ARK: long
 JSVM VM. The corresponding HiTrace command is **tagName:ark**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const ARK: long--><!--Device-tags-const ARK: long-End-->
 
@@ -46,10 +38,6 @@ ArkUI development framework. The corresponding HiTrace command is **tagName:ace*
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const ARKUI: long--><!--Device-tags-const ARKUI: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -63,10 +51,6 @@ const AUDIO: long
 Audio module. The corresponding HiTrace command is **tagName:zaudio**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const AUDIO: long--><!--Device-tags-const AUDIO: long-End-->
 
@@ -82,10 +66,6 @@ Bluetooth. The corresponding HiTrace command is **tagName:bluetooth**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const BLUETOOTH: long--><!--Device-tags-const BLUETOOTH: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -99,10 +79,6 @@ const CAMERA: long
 Camera module. The corresponding HiTrace command is **tagName:zcamera**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const CAMERA: long--><!--Device-tags-const CAMERA: long-End-->
 
@@ -118,10 +94,6 @@ Common library subsystem. The corresponding HiTrace command is **tagName:commonl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const COMMON_LIBRARY: long--><!--Device-tags-const COMMON_LIBRARY: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -135,10 +107,6 @@ const DISTRIBUTED_AUDIO: long
 Distributed audio. The corresponding HiTrace command is **tagName:daudio**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const DISTRIBUTED_AUDIO: long--><!--Device-tags-const DISTRIBUTED_AUDIO: long-End-->
 
@@ -154,10 +122,6 @@ Distributed camera. The corresponding HiTrace command is **tagName:dcamera**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const DISTRIBUTED_CAMERA: long--><!--Device-tags-const DISTRIBUTED_CAMERA: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -171,10 +135,6 @@ const DISTRIBUTED_DATA: long
 Distributed data management. The corresponding HiTrace command is **tagName:distributeddatamgr**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const DISTRIBUTED_DATA: long--><!--Device-tags-const DISTRIBUTED_DATA: long-End-->
 
@@ -190,10 +150,6 @@ Distributed hardware device management. The corresponding HiTrace command is **t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: long--><!--Device-tags-const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -207,10 +163,6 @@ const DISTRIBUTED_HARDWARE_FRAMEWORK: long
 Distributed hardware framework. The corresponding HiTrace command is **tagName:dhfwk**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const DISTRIBUTED_HARDWARE_FRAMEWORK: long--><!--Device-tags-const DISTRIBUTED_HARDWARE_FRAMEWORK: long-End-->
 
@@ -226,10 +178,6 @@ Distributed input. The corresponding HiTrace command is **tagName:dinput**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const DISTRIBUTED_INPUT: long--><!--Device-tags-const DISTRIBUTED_INPUT: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -243,10 +191,6 @@ const DISTRIBUTED_SCHEDULER: long
 Distributed scheduler. The corresponding HiTrace command is **tagName:dsched**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const DISTRIBUTED_SCHEDULER: long--><!--Device-tags-const DISTRIBUTED_SCHEDULER: long-End-->
 
@@ -262,10 +206,6 @@ Distributed screen. The corresponding HiTrace command is **tagName:dscreen**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const DISTRIBUTED_SCREEN: long--><!--Device-tags-const DISTRIBUTED_SCREEN: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -279,10 +219,6 @@ const FFRT: long
 FFRT task. The corresponding HiTrace command is **tagName:ffrt**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const FFRT: long--><!--Device-tags-const FFRT: long-End-->
 
@@ -298,10 +234,6 @@ File management system. The corresponding HiTrace command is **tagName:filemanag
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const FILE_MANAGEMENT: long--><!--Device-tags-const FILE_MANAGEMENT: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -315,10 +247,6 @@ const GLOBAL_RESOURCE_MANAGER: long
 Global resource management. The corresponding HiTrace command is **tagName:gresource**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const GLOBAL_RESOURCE_MANAGER: long--><!--Device-tags-const GLOBAL_RESOURCE_MANAGER: long-End-->
 
@@ -334,10 +262,6 @@ Graphics module. The corresponding HiTrace command is **tagName:graphic**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const GRAPHICS: long--><!--Device-tags-const GRAPHICS: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -351,10 +275,6 @@ const HDF: long
 HDF subsystem. The corresponding HiTrace command is **tagName:hdf**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const HDF: long--><!--Device-tags-const HDF: long-End-->
 
@@ -370,10 +290,6 @@ Image module. The corresponding HiTrace command is **tagName:zimage**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const IMAGE: long--><!--Device-tags-const IMAGE: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -387,10 +303,6 @@ const MEDIA: long
 Media module. The corresponding HiTrace command is **tagName:zmedia**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const MEDIA: long--><!--Device-tags-const MEDIA: long-End-->
 
@@ -406,10 +318,6 @@ MISC module. The corresponding HiTrace command is **tagName:misc**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const MISC: long--><!--Device-tags-const MISC: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -423,10 +331,6 @@ const MULTIMODAL_INPUT: long
 Multi-modal input module. The corresponding HiTrace command is **tagName:multimodalinput**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const MULTIMODAL_INPUT: long--><!--Device-tags-const MULTIMODAL_INPUT: long-End-->
 
@@ -442,10 +346,6 @@ Network. The corresponding HiTrace command is **tagName:net**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const NET: long--><!--Device-tags-const NET: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -459,10 +359,6 @@ const NOTIFICATION: long
 Notification module. The corresponding HiTrace command is **tagName:notification**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const NOTIFICATION: long--><!--Device-tags-const NOTIFICATION: long-End-->
 
@@ -478,10 +374,6 @@ Nweb. The corresponding HiTrace command is **tagName:nweb**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const NWEB: long--><!--Device-tags-const NWEB: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -495,10 +387,6 @@ const OHOS: long
 OHOS. The corresponding HiTrace command is **tagName:ohos**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const OHOS: long--><!--Device-tags-const OHOS: long-End-->
 
@@ -514,10 +402,6 @@ Power management. The corresponding HiTrace command is **tagName:power**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const POWER_MANAGER: long--><!--Device-tags-const POWER_MANAGER: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -531,10 +415,6 @@ const RPC: long
 RPC. The corresponding HiTrace command is **tagName:rpc**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const RPC: long--><!--Device-tags-const RPC: long-End-->
 
@@ -550,10 +430,6 @@ System capability management. The corresponding HiTrace command is **tagName:sam
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tags-const SAMGR: long--><!--Device-tags-const SAMGR: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -567,10 +443,6 @@ const WINDOW_MANAGER: long
 Window management. The corresponding HiTrace command is **tagName:window**.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-tags-const WINDOW_MANAGER: long--><!--Device-tags-const WINDOW_MANAGER: long-End-->
 

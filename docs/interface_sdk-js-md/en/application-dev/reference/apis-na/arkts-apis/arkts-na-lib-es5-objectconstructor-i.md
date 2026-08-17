@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ObjectConstructor--><!--Device-unnamed-interface ObjectConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new(value?: any): Object
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-new(value?: any): Object--><!--Device-ObjectConstructor-new(value?: any): Object-End-->
 
@@ -42,10 +34,6 @@ new(value?: any): Object
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-(): any--><!--Device-ObjectConstructor-(): any-End-->
 
 **Return value:**
@@ -61,10 +49,6 @@ new(value?: any): Object
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-(value: any): any--><!--Device-ObjectConstructor-(value: any): any-End-->
 
@@ -90,10 +74,6 @@ Creates an object that has the specified prototype or that has null prototype.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-create(o: object | null): any--><!--Device-ObjectConstructor-create(o: object | null): any-End-->
 
 **Parameters:**
@@ -117,10 +97,6 @@ create(o: object | null, properties: PropertyDescriptorMap & ThisType<any>): any
 Creates an object that has the specified prototype, and that optionally contains specified properties.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-create(o: object | null, properties: PropertyDescriptorMap & ThisType<any>): any--><!--Device-ObjectConstructor-create(o: object | null, properties: PropertyDescriptorMap & ThisType<any>): any-End-->
 
@@ -147,10 +123,6 @@ Adds one or more properties to an object, and/or modifies attributes of existing
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-defineProperties<T>(o: T, properties: PropertyDescriptorMap & ThisType<any>): T--><!--Device-ObjectConstructor-defineProperties<T>(o: T, properties: PropertyDescriptorMap & ThisType<any>): T-End-->
 
 **Parameters:**
@@ -175,10 +147,6 @@ defineProperty<T>(o: T, p: PropertyKey, attributes: PropertyDescriptor & ThisTyp
 Adds a property to an object, or modifies attributes of an existing property.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-defineProperty<T>(o: T, p: PropertyKey, attributes: PropertyDescriptor & ThisType<any>): T--><!--Device-ObjectConstructor-defineProperty<T>(o: T, p: PropertyKey, attributes: PropertyDescriptor & ThisType<any>): T-End-->
 
@@ -206,10 +174,6 @@ Prevents the modification of existing property attributes and values, and preven
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-freeze<T extends Function>(f: T): T--><!--Device-ObjectConstructor-freeze<T extends Function>(f: T): T-End-->
 
 **Parameters:**
@@ -233,10 +197,6 @@ freeze<T extends {[idx: string]: U | null | undefined | object}, U extends strin
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-freeze<T extends {[idx: string]: U | null | undefined | object}, U extends string | bigint | number | boolean | symbol>(o: T): Readonly<T>--><!--Device-ObjectConstructor-freeze<T extends {[idx: string]: U | null | undefined | object}, U extends string | bigint | number | boolean | symbol>(o: T): Readonly<T>-End-->
 
@@ -262,10 +222,6 @@ Prevents the modification of existing property attributes and values, and preven
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-freeze<T>(o: T): Readonly<T>--><!--Device-ObjectConstructor-freeze<T>(o: T): Readonly<T>-End-->
 
 **Parameters:**
@@ -289,10 +245,6 @@ getOwnPropertyDescriptor(o: any, p: PropertyKey): PropertyDescriptor | undefined
 Gets the own property descriptor of the specified object. An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-getOwnPropertyDescriptor(o: any, p: PropertyKey): PropertyDescriptor | undefined--><!--Device-ObjectConstructor-getOwnPropertyDescriptor(o: any, p: PropertyKey): PropertyDescriptor | undefined-End-->
 
@@ -319,10 +271,6 @@ Returns the names of the own properties of an object. The own properties of an o
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-getOwnPropertyNames(o: any): string[]--><!--Device-ObjectConstructor-getOwnPropertyNames(o: any): string[]-End-->
 
 **Parameters:**
@@ -346,10 +294,6 @@ getPrototypeOf(o: any): any
 Returns the prototype of an object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-getPrototypeOf(o: any): any--><!--Device-ObjectConstructor-getPrototypeOf(o: any): any-End-->
 
@@ -375,10 +319,6 @@ Returns a value that indicates whether new properties can be added to an object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-isExtensible(o: any): boolean--><!--Device-ObjectConstructor-isExtensible(o: any): boolean-End-->
 
 **Parameters:**
@@ -402,10 +342,6 @@ isFrozen(o: any): boolean
 Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-isFrozen(o: any): boolean--><!--Device-ObjectConstructor-isFrozen(o: any): boolean-End-->
 
@@ -431,10 +367,6 @@ Returns true if existing property attributes cannot be modified in an object and
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-isSealed(o: any): boolean--><!--Device-ObjectConstructor-isSealed(o: any): boolean-End-->
 
 **Parameters:**
@@ -458,10 +390,6 @@ keys(o: object): string[]
 Returns the names of the enumerable string properties and methods of an object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-keys(o: object): string[]--><!--Device-ObjectConstructor-keys(o: object): string[]-End-->
 
@@ -487,10 +415,6 @@ Prevents the addition of new properties to an object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ObjectConstructor-preventExtensions<T>(o: T): T--><!--Device-ObjectConstructor-preventExtensions<T>(o: T): T-End-->
 
 **Parameters:**
@@ -514,10 +438,6 @@ seal<T>(o: T): T
 Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-seal<T>(o: T): T--><!--Device-ObjectConstructor-seal<T>(o: T): T-End-->
 
@@ -544,10 +464,6 @@ A reference to the prototype for a class of objects.
 **Type:** Object
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ObjectConstructor-readonly prototype: Object--><!--Device-ObjectConstructor-readonly prototype: Object-End-->
 

@@ -10,11 +10,9 @@ declare function createStreamSync(path: string, mode: string): Stream
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md#createStreamSync)
+**替代接口：** [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md#createstreamsync)
 
 <!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream--><!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream-End-->
 

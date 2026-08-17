@@ -4,10 +4,6 @@ The enum of major minor class of a bluetooth device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-constant-export enum MajorMinorClass--><!--Device-constant-export enum MajorMinorClass-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ COMPUTER_UNCATEGORIZED = 0x0100
 The Minor Device Class field Computer Major Class
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_UNCATEGORIZED = 0x0100--><!--Device-MajorMinorClass-COMPUTER_UNCATEGORIZED = 0x0100-End-->
 
@@ -40,10 +32,6 @@ Desktop computer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-COMPUTER_DESKTOP = 0x0104--><!--Device-MajorMinorClass-COMPUTER_DESKTOP = 0x0104-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -57,10 +45,6 @@ COMPUTER_SERVER = 0x0108
 Server.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_SERVER = 0x0108--><!--Device-MajorMinorClass-COMPUTER_SERVER = 0x0108-End-->
 
@@ -76,10 +60,6 @@ Laptop.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-COMPUTER_LAPTOP = 0x010C--><!--Device-MajorMinorClass-COMPUTER_LAPTOP = 0x010C-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -93,10 +73,6 @@ COMPUTER_HANDHELD_PC_PDA = 0x0110
 Hand-held computer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_HANDHELD_PC_PDA = 0x0110--><!--Device-MajorMinorClass-COMPUTER_HANDHELD_PC_PDA = 0x0110-End-->
 
@@ -112,10 +88,6 @@ Palmtop computer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-COMPUTER_PALM_SIZE_PC_PDA = 0x0114--><!--Device-MajorMinorClass-COMPUTER_PALM_SIZE_PC_PDA = 0x0114-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -129,10 +101,6 @@ COMPUTER_WEARABLE = 0x0118
 Wearable computer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-COMPUTER_WEARABLE = 0x0118--><!--Device-MajorMinorClass-COMPUTER_WEARABLE = 0x0118-End-->
 
@@ -148,10 +116,6 @@ Tablet.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-COMPUTER_TABLET = 0x011C--><!--Device-MajorMinorClass-COMPUTER_TABLET = 0x011C-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -165,10 +129,6 @@ PHONE_UNCATEGORIZED = 0x0200
 Phone Major Class
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PHONE_UNCATEGORIZED = 0x0200--><!--Device-MajorMinorClass-PHONE_UNCATEGORIZED = 0x0200-End-->
 
@@ -184,10 +144,6 @@ Portable phone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-PHONE_CELLULAR = 0x0204--><!--Device-MajorMinorClass-PHONE_CELLULAR = 0x0204-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -201,10 +157,6 @@ PHONE_CORDLESS = 0x0208
 Cordless phone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PHONE_CORDLESS = 0x0208--><!--Device-MajorMinorClass-PHONE_CORDLESS = 0x0208-End-->
 
@@ -220,10 +172,6 @@ Smartphone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-PHONE_SMART = 0x020C--><!--Device-MajorMinorClass-PHONE_SMART = 0x020C-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -237,10 +185,6 @@ PHONE_MODEM_OR_GATEWAY = 0x0210
 Modem or gateway phone.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PHONE_MODEM_OR_GATEWAY = 0x0210--><!--Device-MajorMinorClass-PHONE_MODEM_OR_GATEWAY = 0x0210-End-->
 
@@ -256,10 +200,6 @@ ISDN phone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-PHONE_ISDN = 0x0214--><!--Device-MajorMinorClass-PHONE_ISDN = 0x0214-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -273,10 +213,6 @@ NETWORK_FULLY_AVAILABLE = 0x0300
 LAN/Network Access Point Major Class
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_FULLY_AVAILABLE = 0x0300--><!--Device-MajorMinorClass-NETWORK_FULLY_AVAILABLE = 0x0300-End-->
 
@@ -292,10 +228,6 @@ Device used on network 1 to 17.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-NETWORK_1_TO_17_UTILIZED = 0x0320--><!--Device-MajorMinorClass-NETWORK_1_TO_17_UTILIZED = 0x0320-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -309,10 +241,6 @@ NETWORK_17_TO_33_UTILIZED = 0x0340
 Device used on network 17 to 33.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_17_TO_33_UTILIZED = 0x0340--><!--Device-MajorMinorClass-NETWORK_17_TO_33_UTILIZED = 0x0340-End-->
 
@@ -328,10 +256,6 @@ Device used on network 33 to 50.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-NETWORK_33_TO_50_UTILIZED = 0x0360--><!--Device-MajorMinorClass-NETWORK_33_TO_50_UTILIZED = 0x0360-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -345,10 +269,6 @@ NETWORK_60_TO_67_UTILIZED = 0x0380
 Device used on network 60 to 67.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_60_TO_67_UTILIZED = 0x0380--><!--Device-MajorMinorClass-NETWORK_60_TO_67_UTILIZED = 0x0380-End-->
 
@@ -364,10 +284,6 @@ Device used on network 67 to 83.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-NETWORK_67_TO_83_UTILIZED = 0x03A0--><!--Device-MajorMinorClass-NETWORK_67_TO_83_UTILIZED = 0x03A0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -381,10 +297,6 @@ NETWORK_83_TO_99_UTILIZED = 0x03C0
 Device used on network 83 to 99.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-NETWORK_83_TO_99_UTILIZED = 0x03C0--><!--Device-MajorMinorClass-NETWORK_83_TO_99_UTILIZED = 0x03C0-End-->
 
@@ -400,10 +312,6 @@ Device without network service.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-NETWORK_NO_SERVICE = 0x03E0--><!--Device-MajorMinorClass-NETWORK_NO_SERVICE = 0x03E0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -417,10 +325,6 @@ AUDIO_VIDEO_UNCATEGORIZED = 0x0400
 Unclassified audio or video device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_UNCATEGORIZED = 0x0400--><!--Device-MajorMinorClass-AUDIO_VIDEO_UNCATEGORIZED = 0x0400-End-->
 
@@ -436,10 +340,6 @@ Wearable audio or video headset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404--><!--Device-MajorMinorClass-AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -453,10 +353,6 @@ AUDIO_VIDEO_HANDSFREE = 0x0408
 Hands-free audio or video device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HANDSFREE = 0x0408--><!--Device-MajorMinorClass-AUDIO_VIDEO_HANDSFREE = 0x0408-End-->
 
@@ -472,10 +368,6 @@ Audio or video microphone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-AUDIO_VIDEO_MICROPHONE = 0x0410--><!--Device-MajorMinorClass-AUDIO_VIDEO_MICROPHONE = 0x0410-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -489,10 +381,6 @@ AUDIO_VIDEO_LOUDSPEAKER = 0x0414
 Audio or video loudspeaker.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_LOUDSPEAKER = 0x0414--><!--Device-MajorMinorClass-AUDIO_VIDEO_LOUDSPEAKER = 0x0414-End-->
 
@@ -508,10 +396,6 @@ Audio or video headphones.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HEADPHONES = 0x0418--><!--Device-MajorMinorClass-AUDIO_VIDEO_HEADPHONES = 0x0418-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -525,10 +409,6 @@ AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C
 Portable audio or video device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C--><!--Device-MajorMinorClass-AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C-End-->
 
@@ -544,10 +424,6 @@ In-vehicle audio or video device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-AUDIO_VIDEO_CAR_AUDIO = 0x0420--><!--Device-MajorMinorClass-AUDIO_VIDEO_CAR_AUDIO = 0x0420-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -561,10 +437,6 @@ AUDIO_VIDEO_SET_TOP_BOX = 0x0424
 Audio or video STB device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_SET_TOP_BOX = 0x0424--><!--Device-MajorMinorClass-AUDIO_VIDEO_SET_TOP_BOX = 0x0424-End-->
 
@@ -580,10 +452,6 @@ High-fidelity speaker device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HIFI_AUDIO = 0x0428--><!--Device-MajorMinorClass-AUDIO_VIDEO_HIFI_AUDIO = 0x0428-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -597,10 +465,6 @@ AUDIO_VIDEO_VCR = 0x042C
 Video cassette recording (VCR) device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VCR = 0x042C--><!--Device-MajorMinorClass-AUDIO_VIDEO_VCR = 0x042C-End-->
 
@@ -616,10 +480,6 @@ Camera.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CAMERA = 0x0430--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CAMERA = 0x0430-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -633,10 +493,6 @@ AUDIO_VIDEO_CAMCORDER = 0x0434
 Camcorder.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_CAMCORDER = 0x0434--><!--Device-MajorMinorClass-AUDIO_VIDEO_CAMCORDER = 0x0434-End-->
 
@@ -652,10 +508,6 @@ Audio or video monitor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_MONITOR = 0x0438--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_MONITOR = 0x0438-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -669,10 +521,6 @@ AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C
 Video display or loudspeaker.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C-End-->
 
@@ -688,10 +536,6 @@ Video conferencing device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -705,10 +549,6 @@ AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448
 Audio or video gaming toy.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448-End-->
 
@@ -724,10 +564,6 @@ Peripheral Major Class
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500--><!--Device-MajorMinorClass-PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -741,10 +577,6 @@ PERIPHERAL_KEYBOARD = 0x0540
 Keyboard device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD = 0x0540--><!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD = 0x0540-End-->
 
@@ -760,10 +592,6 @@ Pointing peripheral device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-PERIPHERAL_POINTING_DEVICE = 0x0580--><!--Device-MajorMinorClass-PERIPHERAL_POINTING_DEVICE = 0x0580-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -777,10 +605,6 @@ PERIPHERAL_KEYBOARD_POINTING = 0x05C0
 Keyboard pointing device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD_POINTING = 0x05C0--><!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD_POINTING = 0x05C0-End-->
 
@@ -796,10 +620,6 @@ Unclassified peripheral device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-PERIPHERAL_UNCATEGORIZED = 0x0500--><!--Device-MajorMinorClass-PERIPHERAL_UNCATEGORIZED = 0x0500-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -813,10 +633,6 @@ PERIPHERAL_JOYSTICK = 0x0504
 Peripheral joystick.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_JOYSTICK = 0x0504--><!--Device-MajorMinorClass-PERIPHERAL_JOYSTICK = 0x0504-End-->
 
@@ -832,10 +648,6 @@ Peripheral game pad.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-PERIPHERAL_GAMEPAD = 0x0508--><!--Device-MajorMinorClass-PERIPHERAL_GAMEPAD = 0x0508-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -849,10 +661,6 @@ PERIPHERAL_REMOTE_CONTROL = 0x05C0
 Peripheral remote control device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_REMOTE_CONTROL = 0x05C0--><!--Device-MajorMinorClass-PERIPHERAL_REMOTE_CONTROL = 0x05C0-End-->
 
@@ -868,10 +676,6 @@ Peripheral sensing device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-PERIPHERAL_SENSING_DEVICE = 0x0510--><!--Device-MajorMinorClass-PERIPHERAL_SENSING_DEVICE = 0x0510-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -885,10 +689,6 @@ PERIPHERAL_DIGITIZER_TABLET = 0x0514
 Peripheral digitizer tablet.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_DIGITIZER_TABLET = 0x0514--><!--Device-MajorMinorClass-PERIPHERAL_DIGITIZER_TABLET = 0x0514-End-->
 
@@ -904,10 +704,6 @@ Peripheral card reader.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-PERIPHERAL_CARD_READER = 0x0518--><!--Device-MajorMinorClass-PERIPHERAL_CARD_READER = 0x0518-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -921,10 +717,6 @@ PERIPHERAL_DIGITAL_PEN = 0x051C
 Peripheral digital pen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_DIGITAL_PEN = 0x051C--><!--Device-MajorMinorClass-PERIPHERAL_DIGITAL_PEN = 0x051C-End-->
 
@@ -940,10 +732,6 @@ Peripheral RFID scanner.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-PERIPHERAL_SCANNER_RFID = 0x0520--><!--Device-MajorMinorClass-PERIPHERAL_SCANNER_RFID = 0x0520-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -957,10 +745,6 @@ PERIPHERAL_GESTURAL_INPUT = 0x0522
 Gesture input device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-PERIPHERAL_GESTURAL_INPUT = 0x0522--><!--Device-MajorMinorClass-PERIPHERAL_GESTURAL_INPUT = 0x0522-End-->
 
@@ -976,10 +760,6 @@ Imaging Major Class
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-IMAGING_UNCATEGORIZED = 0x0600--><!--Device-MajorMinorClass-IMAGING_UNCATEGORIZED = 0x0600-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -993,10 +773,6 @@ IMAGING_DISPLAY = 0x0610
 Imaging display device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-IMAGING_DISPLAY = 0x0610--><!--Device-MajorMinorClass-IMAGING_DISPLAY = 0x0610-End-->
 
@@ -1012,10 +788,6 @@ Imaging camera device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-IMAGING_CAMERA = 0x0620--><!--Device-MajorMinorClass-IMAGING_CAMERA = 0x0620-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1029,10 +801,6 @@ IMAGING_SCANNER = 0x0640
 Imaging scanner.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-IMAGING_SCANNER = 0x0640--><!--Device-MajorMinorClass-IMAGING_SCANNER = 0x0640-End-->
 
@@ -1048,10 +816,6 @@ Imaging printer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-IMAGING_PRINTER = 0x0680--><!--Device-MajorMinorClass-IMAGING_PRINTER = 0x0680-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1065,10 +829,6 @@ WEARABLE_UNCATEGORIZED = 0x0700
 Wearable Major Class
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-WEARABLE_UNCATEGORIZED = 0x0700--><!--Device-MajorMinorClass-WEARABLE_UNCATEGORIZED = 0x0700-End-->
 
@@ -1084,10 +844,6 @@ Smart watch.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-WEARABLE_WRIST_WATCH = 0x0704--><!--Device-MajorMinorClass-WEARABLE_WRIST_WATCH = 0x0704-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1101,10 +857,6 @@ WEARABLE_PAGER = 0x0708
 Wearable pager.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-WEARABLE_PAGER = 0x0708--><!--Device-MajorMinorClass-WEARABLE_PAGER = 0x0708-End-->
 
@@ -1120,10 +872,6 @@ Smart jacket.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-WEARABLE_JACKET = 0x070C--><!--Device-MajorMinorClass-WEARABLE_JACKET = 0x070C-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1137,10 +885,6 @@ WEARABLE_HELMET = 0x0710
 Wearable helmet.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-WEARABLE_HELMET = 0x0710--><!--Device-MajorMinorClass-WEARABLE_HELMET = 0x0710-End-->
 
@@ -1156,10 +900,6 @@ Wearable glasses.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-WEARABLE_GLASSES = 0x0714--><!--Device-MajorMinorClass-WEARABLE_GLASSES = 0x0714-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1173,10 +913,6 @@ TOY_UNCATEGORIZED = 0x0800
 Minor Device Class field - Toy Major Class
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-TOY_UNCATEGORIZED = 0x0800--><!--Device-MajorMinorClass-TOY_UNCATEGORIZED = 0x0800-End-->
 
@@ -1192,10 +928,6 @@ Toy robot.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-TOY_ROBOT = 0x0804--><!--Device-MajorMinorClass-TOY_ROBOT = 0x0804-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1209,10 +941,6 @@ TOY_VEHICLE = 0x0808
 Toy vehicle.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-TOY_VEHICLE = 0x0808--><!--Device-MajorMinorClass-TOY_VEHICLE = 0x0808-End-->
 
@@ -1228,10 +956,6 @@ Humanoid toy doll.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-TOY_DOLL_ACTION_FIGURE = 0x080C--><!--Device-MajorMinorClass-TOY_DOLL_ACTION_FIGURE = 0x080C-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1245,10 +969,6 @@ TOY_CONTROLLER = 0x0810
 Toy controller.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-TOY_CONTROLLER = 0x0810--><!--Device-MajorMinorClass-TOY_CONTROLLER = 0x0810-End-->
 
@@ -1264,10 +984,6 @@ Toy gaming device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-TOY_GAME = 0x0814--><!--Device-MajorMinorClass-TOY_GAME = 0x0814-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1281,10 +997,6 @@ HEALTH_UNCATEGORIZED = 0x0900
 Minor Device Class field - Health
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_UNCATEGORIZED = 0x0900--><!--Device-MajorMinorClass-HEALTH_UNCATEGORIZED = 0x0900-End-->
 
@@ -1300,10 +1012,6 @@ Blood pressure device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-HEALTH_BLOOD_PRESSURE = 0x0904--><!--Device-MajorMinorClass-HEALTH_BLOOD_PRESSURE = 0x0904-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1317,10 +1025,6 @@ HEALTH_THERMOMETER = 0x0908
 Thermometer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_THERMOMETER = 0x0908--><!--Device-MajorMinorClass-HEALTH_THERMOMETER = 0x0908-End-->
 
@@ -1336,10 +1040,6 @@ Body scale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-HEALTH_WEIGHING = 0x090C--><!--Device-MajorMinorClass-HEALTH_WEIGHING = 0x090C-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1353,10 +1053,6 @@ HEALTH_GLUCOSE = 0x0910
 Blood glucose monitor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_GLUCOSE = 0x0910--><!--Device-MajorMinorClass-HEALTH_GLUCOSE = 0x0910-End-->
 
@@ -1372,10 +1068,6 @@ Pulse oximeter.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-HEALTH_PULSE_OXIMETER = 0x0914--><!--Device-MajorMinorClass-HEALTH_PULSE_OXIMETER = 0x0914-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1389,10 +1081,6 @@ HEALTH_PULSE_RATE = 0x0918
 Heart rate monitor.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_PULSE_RATE = 0x0918--><!--Device-MajorMinorClass-HEALTH_PULSE_RATE = 0x0918-End-->
 
@@ -1408,10 +1096,6 @@ Health data display.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-HEALTH_DATA_DISPLAY = 0x091C--><!--Device-MajorMinorClass-HEALTH_DATA_DISPLAY = 0x091C-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1425,10 +1109,6 @@ HEALTH_STEP_COUNTER = 0x0920
 Step counter.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_STEP_COUNTER = 0x0920--><!--Device-MajorMinorClass-HEALTH_STEP_COUNTER = 0x0920-End-->
 
@@ -1444,10 +1124,6 @@ Body composition analyzer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924--><!--Device-MajorMinorClass-HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1461,10 +1137,6 @@ HEALTH_PEAK_FLOW_MONITOR = 0x0928
 Hygrometer.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_PEAK_FLOW_MONITOR = 0x0928--><!--Device-MajorMinorClass-HEALTH_PEAK_FLOW_MONITOR = 0x0928-End-->
 
@@ -1480,10 +1152,6 @@ Medication monitor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-HEALTH_MEDICATION_MONITOR = 0x092C--><!--Device-MajorMinorClass-HEALTH_MEDICATION_MONITOR = 0x092C-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1497,10 +1165,6 @@ HEALTH_KNEE_PROSTHESIS = 0x0930
 Prosthetic knee.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_KNEE_PROSTHESIS = 0x0930--><!--Device-MajorMinorClass-HEALTH_KNEE_PROSTHESIS = 0x0930-End-->
 
@@ -1516,10 +1180,6 @@ Prosthetic ankle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-HEALTH_ANKLE_PROSTHESIS = 0x0934--><!--Device-MajorMinorClass-HEALTH_ANKLE_PROSTHESIS = 0x0934-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1534,10 +1194,6 @@ Generic health management device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-MajorMinorClass-HEALTH_GENERIC_HEALTH_MANAGER = 0x0938--><!--Device-MajorMinorClass-HEALTH_GENERIC_HEALTH_MANAGER = 0x0938-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1551,10 +1207,6 @@ HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C
 Personal mobility device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-MajorMinorClass-HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C--><!--Device-MajorMinorClass-HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C-End-->
 

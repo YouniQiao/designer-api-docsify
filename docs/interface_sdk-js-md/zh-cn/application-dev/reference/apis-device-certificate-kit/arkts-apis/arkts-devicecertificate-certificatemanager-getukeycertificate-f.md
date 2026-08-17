@@ -10,10 +10,6 @@ function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResul
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResult>--><!--Device-certificateManager-function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResult>-End-->
@@ -44,7 +40,7 @@ function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResul
 | [17500002](../errorcode-certManager.md#17500002-证书不存在) | Indicates that the certificate does not exist. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';
@@ -56,8 +52,12 @@ let ukeyInfo: certificateManager.UkeyInfo = { /* USB凭据的属性信息，此�
 };
 try {
   certificateManager.getUkeyCertificate(keyUri, ukeyInfo).then((cmResult) => {
-    let list = cmResult.credentialDetailList;
-    console.info('Succeeded in getting detail of USB Key certificate.');
+    if (cmResult?.credentialDetailList === undefined) {
+       console.info('The result of getting detail of USB Key certificate is undefined.');
+     } else {
+       let list = cmResult.credentialDetailList;
+       console.info('Succeeded in getting detail of USB Key certificate.');
+     }
   }).catch((error: Error) => {
     let err = error as BusinessError;
     console.error(`Failed to get detail of USB Key certificate. Code: ${err.code}, message: ${err.message}`);

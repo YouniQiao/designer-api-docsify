@@ -16,11 +16,9 @@ Disables a Wi-Fi hotspot. &lt;p&gt;This method is asynchronous. If Wi-Fi is enab
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [disableHotspot](arkts-connectivity-wifimanager-disablehotspot-f-sys.md#disableHotspot-(System-API))
+**Substitutes:** [disableHotspot](arkts-connectivity-wifimanager-disablehotspot-f-sys.md#disablehotspot-system-api)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -36,7 +34,7 @@ Disables a Wi-Fi hotspot. &lt;p&gt;This method is asynchronous. If Wi-Fi is enab
 | --- | --- |
 | boolean | Returns { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

@@ -16,10 +16,6 @@ Starts the camera picker and enters the corresponding mode based on the media ty
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cameraPicker-function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfile: PickerProfile): Promise<PickerResult>--><!--Device-cameraPicker-function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfile: PickerProfile): Promise<PickerResult>-End-->
@@ -40,7 +36,7 @@ Starts the camera picker and enters the corresponding mode based on the media ty
 | --- | --- |
 | Promise&lt;[PickerResult](arkts-camera-camerapicker-pickerresult-c.md)&gt; | Promise used to return the processing result ( [PickerResult]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cameraPicker } from '@kit.CameraKit';

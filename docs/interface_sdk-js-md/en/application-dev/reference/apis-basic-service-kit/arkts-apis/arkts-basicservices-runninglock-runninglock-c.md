@@ -4,10 +4,6 @@ Defines a **RunningLock** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
@@ -28,10 +24,6 @@ Holds a running lock.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
 <!--Device-RunningLock-hold(timeout: int): void--><!--Device-RunningLock-hold(timeout: int): void-End-->
@@ -51,7 +43,7 @@ Holds a running lock.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 | [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // RunningLockTest.ets
@@ -92,10 +84,6 @@ Checks whether this running lock is being held.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RunningLock-isHolding(): boolean--><!--Device-RunningLock-isHolding(): boolean-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
@@ -106,7 +94,7 @@ Checks whether this running lock is being held.
 | --- | --- |
 | boolean | The value **true** indicates that the **RunningLock** object is held; and the value **false** indicates that the **RunningLock** object is released. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // RunningLockTest.ets
@@ -143,11 +131,9 @@ Checks whether this running lock is used.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isHolding](#isHolding)
+**Substitutes:** [isHolding](#isholding)
 
 <!--Device-RunningLock-isUsed(): boolean--><!--Device-RunningLock-isUsed(): boolean-End-->
 
@@ -159,7 +145,7 @@ Checks whether this running lock is used.
 | --- | --- |
 | boolean | Returns true if the lock is held or in use; returns false if the lock has been released. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
@@ -182,8 +168,6 @@ Locks and holds a **RunningLock** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [hold](#hold)
@@ -200,7 +184,7 @@ Locks and holds a **RunningLock** object.
 | --- | --- | --- | --- |
 | timeout | number | Yes | Duration for locking and holding the **RunningLock** object, in ms. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
@@ -223,10 +207,6 @@ Releases this running lock.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
 <!--Device-RunningLock-unhold(): void--><!--Device-RunningLock-unhold(): void-End-->
@@ -239,7 +219,7 @@ Releases this running lock.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // RunningLockTest.ets
@@ -280,8 +260,6 @@ Releases this running lock.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [unhold](#unhold)
@@ -292,7 +270,7 @@ Releases this running lock.
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)

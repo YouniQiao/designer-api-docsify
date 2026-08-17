@@ -4,9 +4,7 @@ Defines function Triggered when the scroll bar slides to the specified position.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnScrollEvent--><!--Device-unnamed-export declare interface OnScrollEvent-End-->
 
@@ -24,9 +22,7 @@ The X offset of the scroll. The unit is vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnScrollEvent-xOffset: double--><!--Device-OnScrollEvent-xOffset: double-End-->
 
@@ -44,9 +40,7 @@ The Y offset of the scroll. The unit is vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnScrollEvent-yOffset: double--><!--Device-OnScrollEvent-yOffset: double-End-->
 

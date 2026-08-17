@@ -4,10 +4,6 @@ Defining the reusable configuration parameters.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface ReuseOptions--><!--Device-unnamed-declare interface ReuseOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Defining reuseId function. The default reuseId is the custom component name.
 **Type:** [ReuseIdCallback](arkts-arkui-reuseidcallback-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

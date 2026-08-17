@@ -10,8 +10,6 @@ Truncates a file based on the file descriptor. This API uses a promise to return
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
@@ -44,8 +42,6 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
@@ -71,8 +67,6 @@ declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void
 Truncates a file based on the file descriptor. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

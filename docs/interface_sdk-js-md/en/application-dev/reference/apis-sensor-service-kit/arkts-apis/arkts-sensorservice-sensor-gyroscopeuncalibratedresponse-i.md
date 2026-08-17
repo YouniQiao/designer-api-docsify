@@ -1,14 +1,10 @@
 # GyroscopeUncalibratedResponse
 
-Describes the uncalibrated gyroscope sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
+Describes the uncalibrated gyroscope sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
 
-**Inheritance/Implementation:** GyroscopeUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
+**Inheritance/Implementation:** GyroscopeUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-sensor-interface GyroscopeUncalibratedResponse--><!--Device-sensor-interface GyroscopeUncalibratedResponse-End-->
 
@@ -32,10 +28,6 @@ Uncalibrated angular velocity bias of rotation around the x-axis of the device, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GyroscopeUncalibratedResponse-biasX: double--><!--Device-GyroscopeUncalibratedResponse-biasX: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -51,10 +43,6 @@ Uncalibrated angular velocity bias of rotation around the y-axis of the device, 
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GyroscopeUncalibratedResponse-biasY: double--><!--Device-GyroscopeUncalibratedResponse-biasY: double-End-->
 
@@ -72,10 +60,6 @@ Uncalibrated angular velocity bias of rotation around the z-axis of the device, 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GyroscopeUncalibratedResponse-biasZ: double--><!--Device-GyroscopeUncalibratedResponse-biasZ: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -91,10 +75,6 @@ Uncalibrated angular velocity of rotation around the x-axis of the device, in ra
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GyroscopeUncalibratedResponse-x: double--><!--Device-GyroscopeUncalibratedResponse-x: double-End-->
 
@@ -112,10 +92,6 @@ Uncalibrated angular velocity of rotation around the y-axis of the device, in ra
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GyroscopeUncalibratedResponse-y: double--><!--Device-GyroscopeUncalibratedResponse-y: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -131,10 +107,6 @@ Uncalibrated angular velocity of rotation around the z-axis of the device, in ra
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GyroscopeUncalibratedResponse-z: double--><!--Device-GyroscopeUncalibratedResponse-z: double-End-->
 

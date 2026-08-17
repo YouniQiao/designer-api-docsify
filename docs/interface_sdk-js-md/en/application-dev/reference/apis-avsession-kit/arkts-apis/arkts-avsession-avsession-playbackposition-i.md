@@ -4,10 +4,6 @@ Playback position definition
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface PlaybackPosition--><!--Device-avSession-interface PlaybackPosition-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -30,10 +26,6 @@ Elapsed time(position) of this media set by the app, described by milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackPosition-elapsedTime: long--><!--Device-PlaybackPosition-elapsedTime: long-End-->
@@ -51,10 +43,6 @@ Record the system time when elapsedTime is set, described by milliseconds.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,10 +4,6 @@ Enumerates the operation types of a DataAbility. The DataAbility can use an enum
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-featureAbility-export enum DataAbilityOperationType--><!--Device-featureAbility-export enum DataAbilityOperationType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -21,10 +17,6 @@ TYPE_INSERT = 1
 Insert operation.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,10 +34,6 @@ Update operation.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityOperationType-TYPE_UPDATE = 2--><!--Device-DataAbilityOperationType-TYPE_UPDATE = 2-End-->
@@ -62,10 +50,6 @@ Deletion operation.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityOperationType-TYPE_DELETE = 3--><!--Device-DataAbilityOperationType-TYPE_DELETE = 3-End-->
@@ -81,10 +65,6 @@ TYPE_ASSERT = 4
 Assert operation.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

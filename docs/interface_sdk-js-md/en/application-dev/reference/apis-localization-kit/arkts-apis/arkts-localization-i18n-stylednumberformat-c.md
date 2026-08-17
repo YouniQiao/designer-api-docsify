@@ -4,10 +4,6 @@ Provide a number formatting interface which could format number to StyleString.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class StyledNumberFormat--><!--Device-i18n-export class StyledNumberFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Creates a **NumberFormat** object for rich text display.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)--><!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)-End-->
@@ -42,10 +34,10 @@ Creates a **NumberFormat** object for rich text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
-| options | [StyledNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-stylednumberformatoptions-i.md) | No |  |
+| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
+| options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | No |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -91,11 +83,9 @@ Creates a **NumberFormat** object for rich text display.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
 **Deprecated since:** 20
 
-**Substitutes:** [constructor](../../apis-na/arkts-apis/arkts-na-i18n-stylednumberformat-c.md#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
+**Substitutes:** [constructor](#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -107,10 +97,10 @@ Creates a **NumberFormat** object for rich text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | intl.NumberFormat \| [SimpleNumberFormat](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
-| options | [StyledNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-stylednumberformatoptions-i.md) | No |  |
+| numberFormat | intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
+| options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | No |  |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -156,10 +146,6 @@ Formats a number as a rich text object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledNumberFormat-format(value: double): StyledString--><!--Device-StyledNumberFormat-format(value: double): StyledString-End-->
@@ -178,7 +164,7 @@ Formats a number as a rich text object.
 | --- | --- |
 | [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-styledstring-c.md) | Rich text object after formatting. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

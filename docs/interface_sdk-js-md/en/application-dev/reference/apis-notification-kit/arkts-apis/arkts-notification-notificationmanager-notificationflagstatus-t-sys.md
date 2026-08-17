@@ -8,10 +8,6 @@ Enumerates the notification flag states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export type NotificationFlagStatus = _NotificationFlagStatus--><!--Device-notificationManager-export type NotificationFlagStatus = _NotificationFlagStatus-End-->
 
 **System capability:** SystemCapability.Notification.Notification

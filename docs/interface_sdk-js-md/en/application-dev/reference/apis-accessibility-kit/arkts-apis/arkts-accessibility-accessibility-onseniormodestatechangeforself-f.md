@@ -12,13 +12,9 @@ import { accessibility } from 'accessibility';
 function onSeniorModeStateChangeForSelf(callback: Callback<boolean>): void
 ```
 
-Subscribes to the "senior mode" change event of the app itself. This API uses an asynchronous callback to return the result. Unlike [accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md#onSeniorModeStateChange), which listens for system-level senior mode state changes, this API only monitors the state of the app itself. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [accessibility.offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md#offSeniorModeStateChangeForSelf) is used to > unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle > callback). Otherwise, a crash may occur.
+Subscribes to the "senior mode" change event of the app itself. This API uses an asynchronous callback to return the result. Unlike [accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md#onseniormodestatechange), which listens for system-level senior mode state changes, this API only monitors the state of the app itself. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [accessibility.offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md#offseniormodestatechangeforself) is used to > unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle > callback). Otherwise, a crash may occur.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

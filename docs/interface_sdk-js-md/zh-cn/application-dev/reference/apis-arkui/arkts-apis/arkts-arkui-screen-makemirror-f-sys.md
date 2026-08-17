@@ -10,10 +10,6 @@ function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCa
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCallback<long>): void--><!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -26,7 +22,7 @@ function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCa
 | --- | --- | --- | --- |
 | mainScreen | long | 是 | 主屏幕ID，该参数仅支持整数输入。 |
 | mirrorScreen | Array&lt;long&gt; | 是 | 镜像屏幕ID集合，其中ID应为整数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。返回镜像屏幕的群组id，其中id为整数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。返回镜像屏幕的群组id，其中id为整数。 |
 
 **错误码：**
 
@@ -36,7 +32,7 @@ function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCa
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -85,10 +81,6 @@ function makeMirror(mainScreen:long, mirrorScreen:Array<long>): Promise<long>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>): Promise<long>--><!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>): Promise<long>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -116,7 +108,7 @@ function makeMirror(mainScreen:long, mirrorScreen:Array<long>): Promise<long>
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

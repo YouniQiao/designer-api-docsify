@@ -16,10 +16,6 @@ Asynchronous interface for enables Bluetooth on a device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -45,7 +41,7 @@ Asynchronous interface for enables Bluetooth on a device.
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

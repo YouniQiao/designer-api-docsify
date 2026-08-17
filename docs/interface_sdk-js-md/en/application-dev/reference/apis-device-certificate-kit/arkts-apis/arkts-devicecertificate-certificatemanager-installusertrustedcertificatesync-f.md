@@ -16,10 +16,6 @@ Installs a user CA certificate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_ENTERPRISE_USER_TRUSTED_CERT or ohos.permission.ACCESS_USER_TRUSTED_CERT
 
 <!--Device-certificateManager-function installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScope): CMResult--><!--Device-certificateManager-function installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScope): CMResult-End-->
@@ -50,7 +46,7 @@ Installs a user CA certificate.
 | [17500007](../errorcode-certManager.md#17500007-device-in-advanced-security-mode) | Indicates that the device enters advanced security mode. In this mode, the user CA certificate cannot be installed. |
 | [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | Indicates that the number of certificates reaches the maximum allowed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import {certificateManager} from '@kit.DeviceCertificateKit';

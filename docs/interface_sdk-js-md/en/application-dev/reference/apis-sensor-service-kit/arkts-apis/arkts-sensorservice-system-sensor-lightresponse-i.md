@@ -4,11 +4,9 @@ Defines a **LightResponse** object.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 8
 
-**Substitutes:** [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md#LightResponse)
+**Substitutes:** [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md#lightresponse)
 
 <!--Device-unnamed-export interface LightResponse--><!--Device-unnamed-export interface LightResponse-End-->
 
@@ -51,8 +49,6 @@ Light intensity, in lux.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 

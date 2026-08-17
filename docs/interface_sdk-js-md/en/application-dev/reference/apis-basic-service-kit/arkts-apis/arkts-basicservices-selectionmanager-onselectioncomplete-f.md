@@ -16,10 +16,6 @@ Registers a callback to listen for the word selection completion event. This API
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-selectionManager-function onSelectionComplete(callback: Callback<SelectionInfo>): void--><!--Device-selectionManager-function onSelectionComplete(callback: Callback<SelectionInfo>): void-End-->
@@ -38,7 +34,7 @@ Registers a callback to listen for the word selection completion event. This API
 | --- | --- |
 | [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) | The application calling the API does not match the application selected in the system settings. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import selectionManager from '@ohos.selectionInput.selectionManager';

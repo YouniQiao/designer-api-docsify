@@ -4,8 +4,6 @@ ErrorCode
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-zlib-export enum ErrorCode--><!--Device-zlib-export enum ErrorCode-End-->
@@ -20,8 +18,6 @@ ERROR_CODE_OK = 0
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-ErrorCode-ERROR_CODE_OK = 0--><!--Device-ErrorCode-ERROR_CODE_OK = 0-End-->
@@ -35,8 +31,6 @@ ERROR_CODE_ERRNO = -1
 ```
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

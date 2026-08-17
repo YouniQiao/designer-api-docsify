@@ -1,12 +1,8 @@
 # OnResourceLoadEvent
 
-Defines the triggered when the url loading.
+Defines the callback information triggered when a URL is loaded, including the resource URL. It is suitable for scenarios where monitoring resource loading behavior is required, improving resource management visibility and performance optimization.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnResourceLoadEvent--><!--Device-unnamed-declare interface OnResourceLoadEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered when the url loading.
 url: string
 ```
 
-The URL of the loaded resource file.
+URL of the loaded resource file.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

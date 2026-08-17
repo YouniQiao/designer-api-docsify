@@ -4,9 +4,7 @@ Defines the function triggered when the PDF page is scrolled to the bottom.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface OnPdfScrollEvent--><!--Device-unnamed-export declare interface OnPdfScrollEvent-End-->
 
@@ -24,9 +22,7 @@ URL of the page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-OnPdfScrollEvent-url:string--><!--Device-OnPdfScrollEvent-url:string-End-->
 

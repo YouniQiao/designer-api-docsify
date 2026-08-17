@@ -1,12 +1,8 @@
-# CommonEventSubscribeInfo
+# CommonEventSubscribeInfo(The CommonEventSubscribeInfo module provides APIs for providing subscriber information.)
 
 用于表示公共事件订阅者的信息，支持配置订阅的公共事件类型、发布者权限、 发布者设备ID、用户ID、订阅优先级等参数，适用于应用需要订阅系统公共事件 或自定义公共事件并精细化控制事件来源的场景。 > **说明：** > > 订阅自定义公共事件后，任意应用都可以向订阅者发送潜在的恶意公共事件。通过本模块的publisherPermission和publisherBundleName参数，可以限制公共事件发布者的范围。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export interface CommonEventSubscribeInfo--><!--Device-unnamed-export interface CommonEventSubscribeInfo-End-->
 
@@ -23,10 +19,6 @@ events: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ priority?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonEventSubscribeInfo-priority?: int--><!--Device-CommonEventSubscribeInfo-priority?: int-End-->
@@ -68,10 +56,6 @@ publisherBundleName?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonEventSubscribeInfo-publisherBundleName?: string--><!--Device-CommonEventSubscribeInfo-publisherBundleName?: string-End-->
@@ -84,15 +68,11 @@ publisherBundleName?: string
 publisherDeviceId?: string
 ```
 
-表示设备ID，用于限制订阅者只接收来自指定设备发布的公共事件。 通过[@ohos.deviceInfo](arkts-deviceinfo.md#@ohos.deviceInfo)获取udid，作为 发布者的设备ID。预留能力，暂不支持。
+表示设备ID，用于限制订阅者只接收来自指定设备发布的公共事件。 通过[@ohos.deviceInfo](../../apis-na/arkts-apis/arkts-deviceinfo.md#ohosdeviceinfo)获取udid，作为 发布者的设备ID。预留能力，暂不支持。
 
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -112,10 +92,6 @@ publisherPermission?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonEventSubscribeInfo-publisherPermission?: string--><!--Device-CommonEventSubscribeInfo-publisherPermission?: string-End-->
@@ -128,15 +104,11 @@ publisherPermission?: string
 userId?: int
 ```
 
-表示用户ID，用于限制订阅者只接收指定用户ID相关的公共事件。此参数是可选的， 默认值为当前用户的ID。如果指定了此参数，则该值必须是系统中现有的用户ID。通过 [getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取系统用户ID，作为发布者的用户ID。
+表示用户ID，用于限制订阅者只接收指定用户ID相关的公共事件。此参数是可选的， 默认值为当前用户的ID。如果指定了此参数，则该值必须是系统中现有的用户ID。通过 [getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取系统用户ID，作为发布者的用户ID。
 
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

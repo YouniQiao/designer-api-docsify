@@ -16,10 +16,6 @@ Executes a task periodically. In this execution mode, you can set the task prior
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-taskpool-function executePeriodically(period: number, task: Task, priority?: Priority): void--><!--Device-taskpool-function executePeriodically(period: number, task: Task, priority?: Priority): void-End-->
@@ -44,7 +40,7 @@ Executes a task periodically. In this execution mode, you can set the task prior
 | [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) | The concurrent task has been executed and cannot be executed periodically. |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent
@@ -96,10 +92,6 @@ Executes a generic task periodically, without verifying the parameter type and r
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-taskpool-function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void--><!--Device-taskpool-function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void-End-->
@@ -124,7 +116,7 @@ Executes a generic task periodically, without verifying the parameter type and r
 | [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) | The concurrent task has been executed and cannot be executed periodically. |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 @Concurrent

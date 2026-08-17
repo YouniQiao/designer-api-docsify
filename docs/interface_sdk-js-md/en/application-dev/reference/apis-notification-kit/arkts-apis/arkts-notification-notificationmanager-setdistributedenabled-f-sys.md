@@ -16,10 +16,6 @@ Sets whether the device of a specified type enables cross-device notification. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 <!--Device-notificationManager-function setDistributedEnabled(enable: boolean, deviceType: string): Promise<void>--><!--Device-notificationManager-function setDistributedEnabled(enable: boolean, deviceType: string): Promise<void>-End-->
@@ -48,7 +44,7 @@ Sets whether the device of a specified type enables cross-device notification. T
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

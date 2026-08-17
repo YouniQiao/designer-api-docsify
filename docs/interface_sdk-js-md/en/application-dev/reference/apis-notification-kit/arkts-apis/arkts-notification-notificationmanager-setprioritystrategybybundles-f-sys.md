@@ -16,10 +16,6 @@ Sets the application priority notification strategies in batches. This API uses 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -34,7 +30,7 @@ Sets the application priority notification strategies in batches. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategies | Map&lt;BundleOption, long&gt; | Yes | Key-value pair set of the application notification priority strategies. This parameter is obtained by performing the bitwise OR operation with the enumeration of [PriorityStrategyStatus](arkts-notification-notificationmanager-prioritystrategystatus-e-sys.md#PriorityStrategyStatus-(System-API)). |
+| strategies | Map&lt;BundleOption, long&gt; | Yes | Key-value pair set of the application notification priority strategies. This parameter is obtained by performing the bitwise OR operation with the enumeration of [PriorityStrategyStatus](arkts-notification-notificationmanager-prioritystrategystatus-e-sys.md#prioritystrategystatus-system-api). |
 
 **Return value:**
 
@@ -53,7 +49,7 @@ Sets the application priority notification strategies in batches. This API uses 
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

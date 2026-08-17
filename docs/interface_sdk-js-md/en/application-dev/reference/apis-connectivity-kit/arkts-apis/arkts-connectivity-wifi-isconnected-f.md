@@ -16,11 +16,9 @@ Checks whether a Wi-Fi connection has been set up.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isConnected](arkts-connectivity-wifimanager-isconnected-f.md#isConnected)
+**Substitutes:** [isConnected](arkts-connectivity-wifimanager-isconnected-f.md#isconnected)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

@@ -10,10 +10,6 @@ function disconnectPrinter(printerId: string, callback: AsyncCallback<void>): vo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function disconnectPrinter(printerId: string, callback: AsyncCallback<void>): void--><!--Device-print-function disconnectPrinter(printerId: string, callback: AsyncCallback<void>): void-End-->
@@ -27,7 +23,7 @@ function disconnectPrinter(printerId: string, callback: AsyncCallback<void>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printerId | string | 是 | 打印机ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步断开特定打印机的连接之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步断开特定打印机的连接之后的回调。 |
 
 **错误码：**
 
@@ -37,7 +33,7 @@ function disconnectPrinter(printerId: string, callback: AsyncCallback<void>): vo
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -63,10 +59,6 @@ function disconnectPrinter(printerId: string): Promise<void>
 断开特定打印机的连接，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -96,7 +88,7 @@ function disconnectPrinter(printerId: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

@@ -6,10 +6,6 @@ The width and height of the component must be explicitly set to non-zero valid v
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class PluginComponentAttribute--><!--Device-unnamed-declare class PluginComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

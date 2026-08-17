@@ -4,10 +4,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-eap-enum EapMethod--><!--Device-eap-enum EapMethod-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -21,10 +17,6 @@ EAP_NONE
 Not specified
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_NONE--><!--Device-EapMethod-EAP_NONE-End-->
 
@@ -40,10 +32,6 @@ Protected extensible authentication protocol
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EapMethod-EAP_PEAP--><!--Device-EapMethod-EAP_PEAP-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -57,10 +45,6 @@ EAP_TLS
 Transport layer security
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_TLS--><!--Device-EapMethod-EAP_TLS-End-->
 
@@ -76,10 +60,6 @@ Tunneled transport layer security
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EapMethod-EAP_TTLS--><!--Device-EapMethod-EAP_TTLS-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -93,10 +73,6 @@ EAP_PWD
 Password
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_PWD--><!--Device-EapMethod-EAP_PWD-End-->
 
@@ -112,10 +88,6 @@ Subscriber identity module
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EapMethod-EAP_SIM--><!--Device-EapMethod-EAP_SIM-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -129,10 +101,6 @@ EAP_AKA
 Authentication and key agreement
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_AKA--><!--Device-EapMethod-EAP_AKA-End-->
 
@@ -148,10 +116,6 @@ AKA prime
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EapMethod-EAP_AKA_PRIME--><!--Device-EapMethod-EAP_AKA_PRIME-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -165,10 +129,6 @@ EAP_UNAUTH_TLS
 Unauth TLS
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EapMethod-EAP_UNAUTH_TLS--><!--Device-EapMethod-EAP_UNAUTH_TLS-End-->
 

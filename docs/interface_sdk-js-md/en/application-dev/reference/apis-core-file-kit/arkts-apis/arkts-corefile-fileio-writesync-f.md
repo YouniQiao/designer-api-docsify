@@ -19,11 +19,9 @@ Writes data to a file. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [writeSync](arkts-corefile-file-fs-writesync-f.md#writeSync)
+**Substitutes:** [writeSync](arkts-corefile-file-fs-writesync-f.md#writesync)
 
 <!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): number--><!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): number-End-->
 

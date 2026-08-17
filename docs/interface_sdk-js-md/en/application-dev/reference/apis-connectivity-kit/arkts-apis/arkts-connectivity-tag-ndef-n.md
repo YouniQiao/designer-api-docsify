@@ -4,10 +4,6 @@ Provides methods for accessing NDEF tag.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-tag-namespace ndef--><!--Device-tag-namespace ndef-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -24,14 +20,14 @@ import { tag } from 'tag';
 
 | Name | Description |
 | --- | --- |
-| [makeUriRecord](arkts-connectivity-ndef-makeurirecord-f.md#makeUriRecord) | Creates an NDEF record with uri data. |
-| [makeTextRecord](arkts-connectivity-ndef-maketextrecord-f.md#makeTextRecord) | Creates an NDEF record with text data. |
-| [makeApplicationRecord](arkts-connectivity-ndef-makeapplicationrecord-f.md#makeApplicationRecord) | Creates an NDEF Record with OpenHarmony application bundle name. |
-| [makeMimeRecord](arkts-connectivity-ndef-makemimerecord-f.md#makeMimeRecord) | Creates an NDEF record with mime data. |
-| [makeExternalRecord](arkts-connectivity-ndef-makeexternalrecord-f.md#makeExternalRecord) | Creates an NDEF record with external data. |
-| [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md#createNdefMessage) | Creates an NDEF message with raw bytes. |
-| [createNdefMessageByData](arkts-connectivity-ndef-createndefmessagebydata-f.md#createNdefMessageByData) | Creates an NDEF message with raw bytes. |
-| [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md#createNdefMessage) | Creates an NDEF message with record list. |
-| [createNdefMessageByRecords](arkts-connectivity-ndef-createndefmessagebyrecords-f.md#createNdefMessageByRecords) | Creates an NDEF message with record list. |
-| [messageToBytes](arkts-connectivity-ndef-messagetobytes-f.md#messageToBytes) | Parses an NDEF message into raw bytes. |
+| [makeUriRecord](arkts-connectivity-ndef-makeurirecord-f.md#makeurirecord) | Creates an NDEF record with uri data. |
+| [makeTextRecord](arkts-connectivity-ndef-maketextrecord-f.md#maketextrecord) | Creates an NDEF record with text data. |
+| [makeApplicationRecord](arkts-connectivity-ndef-makeapplicationrecord-f.md#makeapplicationrecord) | Creates an NDEF Record with OpenHarmony application bundle name. |
+| [makeMimeRecord](arkts-connectivity-ndef-makemimerecord-f.md#makemimerecord) | Creates an NDEF record with mime data. |
+| [makeExternalRecord](arkts-connectivity-ndef-makeexternalrecord-f.md#makeexternalrecord) | Creates an NDEF record with external data. |
+| [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md#createndefmessage) | Creates an NDEF message with raw bytes. |
+| [createNdefMessageByData](arkts-connectivity-ndef-createndefmessagebydata-f.md#createndefmessagebydata) | Creates an NDEF message with raw bytes. |
+| [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md#createndefmessage) | Creates an NDEF message with record list. |
+| [createNdefMessageByRecords](arkts-connectivity-ndef-createndefmessagebyrecords-f.md#createndefmessagebyrecords) | Creates an NDEF message with record list. |
+| [messageToBytes](arkts-connectivity-ndef-messagetobytes-f.md#messagetobytes) | Parses an NDEF message into raw bytes. |
 

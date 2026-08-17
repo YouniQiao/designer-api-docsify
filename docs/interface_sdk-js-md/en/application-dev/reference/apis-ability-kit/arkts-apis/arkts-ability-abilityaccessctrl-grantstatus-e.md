@@ -4,10 +4,6 @@ Enumerates the permission grant states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityAccessCtrl-export enum GrantStatus--><!--Device-abilityAccessCtrl-export enum GrantStatus-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -21,10 +17,6 @@ PERMISSION_DENIED = -1
 The permission is not granted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -41,10 +33,6 @@ PERMISSION_GRANTED = 0
 The permission is granted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

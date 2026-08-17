@@ -16,10 +16,6 @@ Creating a Stream.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>--><!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>-End-->
@@ -51,7 +47,7 @@ Creating a Stream.
 | [32300001](../../apis-distributedservice-kit/errorcode-device-manager.md#32300001-transport-stream-repeatedly-created) | Only one stream can be created for the current session. |
 | [32300003](../../apis-distributedservice-kit/errorcode-device-manager.md#32300003-bit-rate-not-supported) | Bitrate not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';

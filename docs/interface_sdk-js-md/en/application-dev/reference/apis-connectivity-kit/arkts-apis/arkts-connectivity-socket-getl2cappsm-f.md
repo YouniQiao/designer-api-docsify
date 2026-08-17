@@ -16,10 +16,6 @@ Get l2cap socket psm.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-socket-function getL2capPsm(serverSocket: int): int--><!--Device-socket-function getL2capPsm(serverSocket: int): int-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -28,7 +24,7 @@ Get l2cap socket psm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverSocket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md#sppListen). |
+| serverSocket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md#spplisten). |
 
 **Return value:**
 
@@ -36,7 +32,7 @@ Get l2cap socket psm.
 | --- | --- |
 | int | Returns the l2cap socket psm |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

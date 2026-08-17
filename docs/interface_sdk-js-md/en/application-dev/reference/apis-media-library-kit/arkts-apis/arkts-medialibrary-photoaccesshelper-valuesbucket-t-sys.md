@@ -8,10 +8,6 @@ Defines the type of key and value in a KV pair.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-type ValuesBucket = Record<string, ValueType>--><!--Device-photoAccessHelper-type ValuesBucket = Record<string, ValueType>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

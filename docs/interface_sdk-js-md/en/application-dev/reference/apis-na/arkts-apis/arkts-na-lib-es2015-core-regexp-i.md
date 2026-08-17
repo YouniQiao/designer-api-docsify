@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface RegExp--><!--Device-unnamed-interface RegExp-End-->
 
 ## flags
@@ -19,10 +15,6 @@ Returns a string indicating the flags of the regular expression in question. Thi
 **Type:** string
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExp-readonly flags: string--><!--Device-RegExp-readonly flags: string-End-->
 
@@ -38,10 +30,6 @@ Returns a Boolean value indicating the state of the sticky flag (y) used with a 
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-RegExp-readonly sticky: boolean--><!--Device-RegExp-readonly sticky: boolean-End-->
 
 ## unicode
@@ -55,10 +43,6 @@ Returns a Boolean value indicating the state of the Unicode flag (u) used with a
 **Type:** boolean
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExp-readonly unicode: boolean--><!--Device-RegExp-readonly unicode: boolean-End-->
 

@@ -4,10 +4,6 @@ Represents task data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface TaskBody--><!--Device-update-export interface TaskBody-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Error message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TaskBody-errorMessages: Array<ErrorMessage>--><!--Device-TaskBody-errorMessages: Array<ErrorMessage>-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ Install mode. The value range is [0, 2]. The value **0** indicates the regular u
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TaskBody-installMode: int--><!--Device-TaskBody-installMode: int-End-->
 
@@ -76,10 +64,6 @@ Progress, in percentage. The value range is [0, 100]. If the value is out of the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TaskBody-progress: int--><!--Device-TaskBody-progress: int-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -98,10 +82,6 @@ Upgrade status, which indicates the current execution phase of the upgrade task.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TaskBody-status: UpgradeStatus--><!--Device-TaskBody-status: UpgradeStatus-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -114,15 +94,11 @@ Upgrade status, which indicates the current execution phase of the upgrade task.
 subStatus: int
 ```
 
-Sub-status. For details about the value range, see [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md#UpgradeStatus-(System-API)).
+Sub-status. For details about the value range, see [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md#upgradestatus-system-api).
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TaskBody-subStatus: int--><!--Device-TaskBody-subStatus: int-End-->
 
@@ -142,10 +118,6 @@ Version components.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TaskBody-versionComponents: Array<VersionComponent>--><!--Device-TaskBody-versionComponents: Array<VersionComponent>-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -163,10 +135,6 @@ Version digest information.
 **Type:** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TaskBody-versionDigestInfo: VersionDigestInfo--><!--Device-TaskBody-versionDigestInfo: VersionDigestInfo-End-->
 

@@ -1,12 +1,8 @@
 # DataShareHelperOptions (System API)
 
-Represents the optional parameters of [DataShareHelper](#DataShareHelperOptions-(System-API)).
+Represents the optional parameters of [DataShareHelper](#datasharehelperoptions-system-api).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-dataShare-interface DataShareHelperOptions--><!--Device-dataShare-interface DataShareHelperOptions-End-->
 
@@ -26,17 +22,13 @@ import { dataShare } from 'dataShare';
 isProxy?: boolean
 ```
 
-Whether the [DataShareHelper](#DataShareHelperOptions-(System-API)) is in proxy mode. The default value is **false**. If the value is **true**, the [DataShareHelper](#DataShareHelperOptions-(System-API)) to be created is in proxy mode, and all operations will not open the data provider application unless the database does not exist. If the database does not exist, [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createDataShareHelper-(System-API)) will start the data provider to create a database.
+Whether the [DataShareHelper](#datasharehelperoptions-system-api) is in proxy mode. The default value is **false**. If the value is **true**, the [DataShareHelper](#datasharehelperoptions-system-api) to be created is in proxy mode, and all operations will not open the data provider application unless the database does not exist. If the database does not exist, [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper-system-api) will start the data provider to create a database.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,10 +51,6 @@ Waiting time for starting the data provider process, in seconds. The default val
 **Default:** 2
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

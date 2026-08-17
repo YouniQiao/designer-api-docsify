@@ -16,8 +16,6 @@ Sets a value for the specified key. This API uses an asynchronous callback to re
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** set
@@ -46,8 +44,6 @@ function set(key: string, value: string): Promise<void>
 Sets a value for the specified key. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

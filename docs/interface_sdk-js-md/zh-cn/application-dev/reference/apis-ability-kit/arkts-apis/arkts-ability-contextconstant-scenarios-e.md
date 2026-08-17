@@ -1,12 +1,8 @@
 # Scenarios
 
-表示不触发[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant)生命周期回调场景的枚举，用于 [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setOnNewWantSkipScenarios)接口。
+表示不触发[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)生命周期回调场景的枚举，用于 [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-contextConstant-export enum Scenarios--><!--Device-contextConstant-export enum Scenarios-End-->
 
@@ -22,10 +18,6 @@ SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -40,13 +32,9 @@ SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 SCENARIO_SHOW_ABILITY = 0x00000002
 ```
 
-[showAbility](arkts-ability-uiabilitycontext-c.md#showAbility)接口触发的UIAbility到前台场景。
+[showAbility](arkts-ability-uiabilitycontext-c.md#showability)接口触发的UIAbility到前台场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,13 +50,9 @@ SCENARIO_SHOW_ABILITY = 0x00000002
 SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004
 ```
 
-[backToCallerAbilityWithResult](arkts-ability-uiabilitycontext-c.md#backToCallerAbilityWithResult) 接口触发的UIAbility到前台场景。
+[backToCallerAbilityWithResult](arkts-ability-uiabilitycontext-c.md#backtocallerabilitywithresult) 接口触发的UIAbility到前台场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,12 +1,8 @@
 # AudioHapticPlayer
 
-Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createPlayer) to create an AudioHapticPlayer instance.
+Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer) to create an AudioHapticPlayer instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
 
@@ -27,10 +23,6 @@ isMuted(type: AudioHapticType): boolean
 Checks whether an audio-haptic type is muted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean--><!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean-End-->
 
@@ -54,7 +46,7 @@ Checks whether an audio-haptic type is muted.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let audioHapticType: audioHaptic.AudioHapticType = audioHaptic.AudioHapticType.AUDIO_HAPTIC_TYPE_AUDIO;
@@ -71,10 +63,6 @@ offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void
 Unsubscribes audio interrupt event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void-End-->
 
@@ -96,10 +84,6 @@ Unsubscribes end of stream event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticPlayer-offEndOfStream(callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-offEndOfStream(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -120,10 +104,6 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -135,7 +115,7 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 | type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | Callback used to return the event information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -207,10 +187,6 @@ Unsubscribes from the EOS event. This API uses an asynchronous callback to retur
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -222,7 +198,7 @@ Unsubscribes from the EOS event. This API uses an asynchronous callback to retur
 | type | 'endOfStream' | Yes | Event type. The event **'endOfStream'** is triggered when the audio stream playback ends. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Cancel all subscriptions to the event.
@@ -248,10 +224,6 @@ Subscribes audio interrupt event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -271,10 +243,6 @@ onEndOfStream(callback: Callback<void>): void
 Subscribes end of stream event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-onEndOfStream(callback: Callback<void>): void--><!--Device-AudioHapticPlayer-onEndOfStream(callback: Callback<void>): void-End-->
 
@@ -296,10 +264,6 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -311,7 +275,7 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 | type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to return the event information. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -376,10 +340,6 @@ Subscribes to end of stream (EOS) event, which is triggered when the audio strea
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -391,7 +351,7 @@ Subscribes to end of stream (EOS) event, which is triggered when the audio strea
 | type | 'endOfStream' | Yes | Event type. The event **'endOfStream'** is triggered when the audio stream playback ends. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 audioHapticPlayerInstance.on('endOfStream', () => {
@@ -409,10 +369,6 @@ Releases this audio-haptic player. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticPlayer-release(): Promise<void>--><!--Device-AudioHapticPlayer-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -429,7 +385,7 @@ Releases this audio-haptic player. This API uses a promise to return the result.
 | --- | --- |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -450,10 +406,6 @@ setLoop(loop: boolean): Promise<void>
 Sets this audio-haptic player to play in a loop. This API uses a promise to return the result. > **NOTE：**> > This API must be called before the audio-haptic player is released.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>--><!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>-End-->
 
@@ -477,7 +429,7 @@ Sets this audio-haptic player to play in a loop. This API uses a promise to retu
 | --- | --- |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -498,10 +450,6 @@ setVolume(volume: double): Promise<void>
 Sets the volume for this audio-haptic player. This API uses a promise to return the result. > **NOTE：**> > This API must be called before the audio-haptic player is released.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>--><!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>-End-->
 
@@ -527,7 +475,7 @@ Sets the volume for this audio-haptic player. This API uses a promise to return 
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter out of range. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -549,10 +497,6 @@ Starts playback. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticPlayer-start(): Promise<void>--><!--Device-AudioHapticPlayer-start(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -571,7 +515,7 @@ Starts playback. This API uses a promise to return the result.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | IO error. |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -593,10 +537,6 @@ Stops playback. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioHapticPlayer-stop(): Promise<void>--><!--Device-AudioHapticPlayer-stop(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
@@ -614,7 +554,7 @@ Stops playback. This API uses a promise to return the result.
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit. |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

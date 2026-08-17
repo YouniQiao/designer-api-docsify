@@ -1,12 +1,8 @@
-# VideoProcessor
+# VideoProcessor(Provides the capability of video quality processing.)
 
 Provides the VideoProcessor type, including AIHDR related functions.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-videoProcessing-interface VideoProcessor--><!--Device-videoProcessing-interface VideoProcessor-End-->
 
@@ -27,10 +23,6 @@ getStatus(): Promise<VideoProcessorStatus | undefined>
 Gets the current status of video processor features.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,10 +51,6 @@ offStatusChange(callback?: VideoProcessorStatusCallback): void
 Unregisters a listener for video processor status changes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,10 +81,6 @@ onStatusChange(callback: VideoProcessorStatusCallback): void
 Registers a listener for video processor status changes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

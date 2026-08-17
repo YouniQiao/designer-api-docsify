@@ -16,8 +16,6 @@ Recovers a file or directory from the trash.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -44,7 +42,7 @@ Recovers a file or directory from the trash.
 | 13900002 | No such file or directory |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let fileinfos = trash.listFile();

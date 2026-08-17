@@ -10,8 +10,6 @@ Changes the file owner based on a file path and changes the owner of the symboli
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-declare function lchownSync(path: string, uid: number, gid: number): void--><!--Device-unnamed-declare function lchownSync(path: string, uid: number, gid: number): void-End-->

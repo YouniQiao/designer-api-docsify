@@ -10,10 +10,6 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 <!--Device-dlpPermission-function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>--><!--Device-dlpPermission-function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>-End-->
@@ -52,7 +48,7 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
 | [19100014](../errorcode-dlp.md#19100014-账号未登录) | Account not logged in. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -60,7 +56,7 @@ import { fileIo } from '@kit.CoreFileKit';
 
 let plaintextFd: number | undefined = undefined;
 let dlpFd: number | undefined = undefined;
-let plainFilePath: string = "file://docs/storage/Users/currentUser/Documents/test.txt";
+let plainFilePath: string = 'file://docs/storage/Users/currentUser/Documents/test.txt';
 let dlpFilePath: string = "file://docs/storage/Users/currentUser/Documents/test.txt.dlp";
 plaintextFd = fileIo.openSync(plainFilePath, fileIo.OpenMode.READ_ONLY).fd; // 打开明文文件。
 dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE).fd; // 打开DLP文件。

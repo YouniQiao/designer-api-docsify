@@ -4,10 +4,6 @@ Enumerates dialup scenarios.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export enum DialScene--><!--Device-call-export enum DialScene-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -23,10 +19,6 @@ CALL_NORMAL = 0
 Common call.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DialScene-CALL_NORMAL = 0--><!--Device-DialScene-CALL_NORMAL = 0-End-->
 
@@ -44,10 +36,6 @@ Privileged call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DialScene-CALL_PRIVILEGED = 1--><!--Device-DialScene-CALL_PRIVILEGED = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -63,10 +51,6 @@ CALL_EMERGENCY = 2
 Emergency call.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DialScene-CALL_EMERGENCY = 2--><!--Device-DialScene-CALL_EMERGENCY = 2-End-->
 

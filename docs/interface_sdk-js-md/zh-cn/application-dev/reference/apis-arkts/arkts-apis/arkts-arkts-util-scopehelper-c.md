@@ -4,10 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 <!--Device-util-class ScopeHelper--><!--Device-util-class ScopeHelper-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -21,10 +17,6 @@ clamp(value: ScopeType): ScopeType
 将一个值限制在此 **Scope** 范围内。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,7 +36,7 @@ clamp(value: ScopeType): ScopeType
 | --- | --- |
 | [ScopeType](arkts-arkts-util-scopetype-t.md) | 如果指定值小于下限，则返回 **lowerObj**；如果指定值大于上限，则返回 **upperObj**；如果 在此 **Scope** 范围内，则返回指定值。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -86,10 +78,6 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
@@ -103,7 +91,7 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 | lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | Scope** 对象的下限。 |
 | upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | Scope** 对象的上限。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -142,10 +130,6 @@ contains(value: ScopeType): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-contains(value: ScopeType): boolean--><!--Device-ScopeHelper-contains(value: ScopeType): boolean-End-->
@@ -164,7 +148,7 @@ contains(value: ScopeType): boolean
 | --- | --- |
 | boolean | 检查结果。如果值在此 **Scope** 范围内，则返回 **true**；否则返回 **false**。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -206,10 +190,6 @@ contains(range: ScopeHelper): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-contains(range: ScopeHelper): boolean--><!--Device-ScopeHelper-contains(range: ScopeHelper): boolean-End-->
@@ -228,7 +208,7 @@ contains(range: ScopeHelper): boolean
 | --- | --- |
 | boolean | 检查结果。如果范围在此 **Scope** 范围内，则返回 **true**；否则返回 **false**。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -272,10 +252,6 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
@@ -295,7 +271,7 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 | --- | --- |
 | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 此 **Scope** 与给定上下限的并集。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -338,10 +314,6 @@ expand(range: ScopeHelper): ScopeHelper
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper-End-->
@@ -360,7 +332,7 @@ expand(range: ScopeHelper): ScopeHelper
 | --- | --- |
 | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 此 **Scope** 与给定 **Scope** 的并集。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -404,10 +376,6 @@ expand(value: ScopeType): ScopeHelper
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper-End-->
@@ -426,7 +394,7 @@ expand(value: ScopeType): ScopeHelper
 | --- | --- |
 | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 此 **Scope** 与给定值的并集。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -468,10 +436,6 @@ getLower(): ScopeType
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-getLower(): ScopeType--><!--Device-ScopeHelper-getLower(): ScopeType-End-->
@@ -484,7 +448,7 @@ getLower(): ScopeType
 | --- | --- |
 | [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的下限。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -525,10 +489,6 @@ getUpper(): ScopeType
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-getUpper(): ScopeType--><!--Device-ScopeHelper-getUpper(): ScopeType-End-->
@@ -541,7 +501,7 @@ getUpper(): ScopeType
 | --- | --- |
 | [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的上限。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -582,10 +542,6 @@ intersect(range: ScopeHelper): ScopeHelper
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper-End-->
@@ -604,7 +560,7 @@ intersect(range: ScopeHelper): ScopeHelper
 | --- | --- |
 | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 此 **Scope** 与给定 **Scope** 的交集。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -648,10 +604,6 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
@@ -671,7 +623,7 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 | --- | --- |
 | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 此 **Scope** 与给定上下限的交集。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -714,10 +666,6 @@ toString(): string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-toString(): string--><!--Device-ScopeHelper-toString(): string-End-->
@@ -730,7 +678,7 @@ toString(): string
 | --- | --- |
 | string | 包含此 **Scope** 的字符串表示形式。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {

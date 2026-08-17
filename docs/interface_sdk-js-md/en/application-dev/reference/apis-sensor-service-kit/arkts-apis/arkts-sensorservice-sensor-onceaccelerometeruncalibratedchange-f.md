@@ -16,10 +16,6 @@ Subscribe to uncalibrated accelerometer sensor data once, {@code SensorId.ACCELE
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 <!--Device-sensor-function onceAccelerometerUncalibratedChange(callback: Callback<AccelerometerUncalibratedResponse>): void--><!--Device-sensor-function onceAccelerometerUncalibratedChange(callback: Callback<AccelerometerUncalibratedResponse>): void-End-->

@@ -1,12 +1,8 @@
 # WebOptions
 
-Defines web options through the APIs.
+Defines Web options through the [API](../../../reference/apis-arkweb/arkts-basic-components-web.md#api), including the web page resource URL, controller, rendering mode, and more.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface WebOptions--><!--Device-unnamed-declare interface WebOptions-End-->
 
@@ -18,15 +14,11 @@ Defines web options through the APIs.
 controller: WebController | WebviewController
 ```
 
-Controller that controls various behaviors of **Web** components, including page navigation, declaration period status, and JavaScript interaction. **WebController** is deprecated since API version 9. You are advised to use [WebviewController](arkts-arkweb-webviewcontroller-t.md#WebviewController) instead.
+Controller used to control various behaviors of the Web component, including page navigation, lifecycle state, JavaScript interaction, etc. Since API version 9, WebController is no longer maintained. It is recommended to use [WebviewController](arkts-arkweb-webviewcontroller-t.md#webviewcontroller) instead.
 
 **Type:** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,15 +32,11 @@ Controller that controls various behaviors of **Web** components, including page
 emulateTouchFromMouseEvent? : boolean
 ```
 
-Whether to convert mouse events into touch events. Default value: **false**.
+Whether to convert mouse events to touch events. The value **true** indicates that mouse events are converted to touch events, which is suitable for scenarios where touch and mouse interaction behaviors need to be unified; **false** indicates that mouse events are not converted to touch events. Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean--><!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean-End-->
 
@@ -60,15 +48,11 @@ Whether to convert mouse events into touch events. Default value: **false**.
 incognitoMode? : boolean
 ```
 
-Whether to enable incognito mode. The value **true** means to enable incognito mode, and **false** means the opposite. Default value: **false**. If **undefined** or **null** is passed, the value is **false**.
+Whether the current Webview is created in incognito mode. The value **true** indicates incognito mode, and **false** indicates normal mode. Default value: **false**. The value is **false** when undefined or null is passed in.&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,15 +66,11 @@ Whether to enable incognito mode. The value **true** means to enable incognito m
 renderMode? : RenderMode
 ```
 
-Rendering mode.
+Rendering mode of the current Web component. `RenderMode.ASYNC_RENDER` indicates asynchronous rendering, and `RenderMode.SYNC_RENDER` indicates synchronous rendering. Default value: `RenderMode.ASYNC_RENDER`. This mode does not support dynamic adjustment.
 
 **Type:** [RenderMode](arkts-arkweb-rendermode-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,15 +84,11 @@ Rendering mode.
 sharedRenderProcessToken? : string
 ```
 
-Token of the shared rendering process specified by the **Web** component. In multi-rendering process mode, the **Web** component with the same token preferentially attempts to reuse the rendering process bound to the token. The token is bound to the rendering process when the rendering process is initialized. When the rendering process is not associated with a **Web** component, its binding to the token is removed. Default value: **""**.
+Token that specifies the shared render process for the current Web component. In multi-render-process mode, Web components with the same token preferentially attempt to reuse the bound render process. The binding occurs during the initialization phase of the render process. When a render process has no associated Web component, its binding relationship is removed. Default value: **""**.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-WebOptions-sharedRenderProcessToken? : string--><!--Device-WebOptions-sharedRenderProcessToken? : string-End-->
 
@@ -124,15 +100,11 @@ Token of the shared rendering process specified by the **Web** component. In mul
 src: string | Resource
 ```
 
-Address of a web page resource. To access local resource files, use the \$rawfile or resource protocol. To load a local resource file (in HTML or TXT format) in the sandbox outside of the application package, use **file://** to specify the path of the sandbox.
+Web page resource address. If a local resource file is accessed, use the resource protocol or \$rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path. src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).
 
 **Type:** string \| Resource
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,10 +4,6 @@ The **TreeView** component represents a tree view used to display a hierarchical
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct TreeView--><!--Device-unnamed-export declare struct TreeView-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,10 +31,6 @@ Node information of the tree view.
 **Type:** [TreeController](arkts-arkui-arkui-advanced-treeview-treecontroller-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

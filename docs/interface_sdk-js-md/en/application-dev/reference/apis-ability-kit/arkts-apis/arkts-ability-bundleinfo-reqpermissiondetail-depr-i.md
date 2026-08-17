@@ -4,8 +4,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** bundleInfo
@@ -27,8 +25,6 @@ Name of the permission to request.
 **Default:** Indicates the name of this required permissions
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Reason for requesting the permission.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** reason
@@ -75,8 +69,6 @@ Application scenario and timing for using the permission.
 **Default:** Indicates the used scene of this required permissions
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

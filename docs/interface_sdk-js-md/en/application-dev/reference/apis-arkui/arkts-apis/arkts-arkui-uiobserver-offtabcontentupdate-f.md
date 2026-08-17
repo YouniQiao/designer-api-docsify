@@ -16,10 +16,6 @@ Unsubscribes from **TabContent** page switching events for the specified **Tabs*
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -34,7 +30,7 @@ Unsubscribes from **TabContent** page switching events for the specified **Tabs*
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
 | options | ObserverOptions | Yes | ID of the target **Tabs** component. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
 
 
 ## off_tabContentUpdate
@@ -46,10 +42,6 @@ export function off(type: 'tabContentUpdate', callback?: Callback<TabContentInfo
 Unsubscribes from the **TabContent** switching event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,5 +56,5 @@ Unsubscribes from the **TabContent** switching event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
 

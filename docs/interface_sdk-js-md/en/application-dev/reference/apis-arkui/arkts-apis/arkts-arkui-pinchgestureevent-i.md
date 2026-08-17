@@ -1,14 +1,10 @@
 # PinchGestureEvent
 
-Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of onGestureJudgeBegin.
+Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent). This object can be passed as the **event** parameter of onGestureJudgeBegin.
 
-**Inheritance/Implementation:** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent)
+**Inheritance/Implementation:** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface PinchGestureEvent--><!--Device-unnamed-interface PinchGestureEvent-End-->
 
@@ -25,10 +21,6 @@ X-coordinate of the center of the pinch gesture, in vp, relative to the original
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Y-coordinate of the center of the pinch gesture, in vp, relative to the original
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -73,10 +61,6 @@ Scale factor.
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

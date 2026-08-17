@@ -1,12 +1,8 @@
 # VibratorStopMode
 
-Enumerates vibration stop modes. This parameter is required for [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration). The stop mode must match that delivered in [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect).
+Enumerates vibration stop modes. This parameter is required for [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration) or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration). The stop mode must match that delivered in [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#vibrateeffect).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-vibrator-enum VibratorStopMode--><!--Device-vibrator-enum VibratorStopMode-End-->
 
@@ -22,10 +18,6 @@ The vibration to stop is in **duration** mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'--><!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
@@ -39,10 +31,6 @@ VIBRATOR_STOP_MODE_PRESET = 'preset'
 The vibration to stop is in **EffectId** mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_PRESET = 'preset'--><!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_PRESET = 'preset'-End-->
 

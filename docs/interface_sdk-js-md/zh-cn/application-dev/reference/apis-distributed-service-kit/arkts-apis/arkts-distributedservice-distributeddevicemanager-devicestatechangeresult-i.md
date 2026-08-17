@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-distributedDeviceManager-interface DeviceStateChangeResult--><!--Device-distributedDeviceManager-interface DeviceStateChangeResult-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -24,10 +20,6 @@ action: DeviceStateChange
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-DeviceStateChangeResult-action: DeviceStateChange--><!--Device-DeviceStateChangeResult-action: DeviceStateChange-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -43,10 +35,6 @@ device: DeviceBasicInfo
 **类型：** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-DeviceStateChangeResult-device: DeviceBasicInfo--><!--Device-DeviceStateChangeResult-device: DeviceBasicInfo-End-->
 

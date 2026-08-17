@@ -4,10 +4,6 @@ Provides an option for determining whether a call is a video call.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-call-export interface DialOptions--><!--Device-call-export interface DialOptions-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -29,10 +25,6 @@ Whether the call is a video call. - **true**: video call - **false** (default): 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DialOptions-extras?: boolean--><!--Device-DialOptions-extras?: boolean-End-->
 

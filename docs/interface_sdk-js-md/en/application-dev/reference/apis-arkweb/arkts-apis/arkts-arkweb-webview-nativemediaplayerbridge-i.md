@@ -1,12 +1,8 @@
 # NativeMediaPlayerBridge
 
-Instance of the API class between the web media player and the ArkWeb kernel. The ArkWeb kernel uses an object of this interface class to control the player created by the application to take over web page media. > **NOTE：**> > - The sample effect is subject to the actual device.
+NativeMediaPlayerBridge is the return value type of the [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#createnativemediaplayercallback) callback function. It is an interface class between the player that takes over web page media and the ArkWeb kernel. The ArkWeb kernel uses an object of this interface class to control the player created by the app to take over web page media. This interface allows the app to use a custom media player to take over media content playback in web pages. It also supports player suspension and resumption mechanisms.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-webview-interface NativeMediaPlayerBridge--><!--Device-webview-interface NativeMediaPlayerBridge-End-->
 
@@ -28,10 +24,6 @@ Enables the player to enter full screen mode.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-enterFullscreen(): void--><!--Device-NativeMediaPlayerBridge-enterFullscreen(): void-End-->
@@ -47,10 +39,6 @@ exitFullscreen(): void
 Enables the player to exit full screen mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -68,10 +56,6 @@ Pauses playback.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-pause(): void--><!--Device-NativeMediaPlayerBridge-pause(): void-End-->
@@ -84,13 +68,9 @@ Pauses playback.
 play(): void
 ```
 
-Plays this video.
+Plays the media.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -108,10 +88,6 @@ Releases this player.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-release(): void--><!--Device-NativeMediaPlayerBridge-release(): void-End-->
@@ -124,13 +100,9 @@ Releases this player.
 resumePlayer?(): void
 ```
 
-Resumes the player and its status information.
+Notifies the app to rebuild the player and restore its status information. This method is used only in pair with suspendPlayer.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-NativeMediaPlayerBridge-resumePlayer?(): void--><!--Device-NativeMediaPlayerBridge-resumePlayer?(): void-End-->
 
@@ -146,10 +118,6 @@ Seeks to a specific time point in the media.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-seek(targetTime: number): void--><!--Device-NativeMediaPlayerBridge-seek(targetTime: number): void-End-->
@@ -160,7 +128,7 @@ Seeks to a specific time point in the media.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetTime | number | Yes | Target time point, Unit: seconds. |
+| targetTime | number | Yes | Target time for seek, calculated from the start of media playback. <br>Unit: seconds. |
 
 ## setMuted
 
@@ -172,10 +140,6 @@ Sets the muted status.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-setMuted(muted: boolean): void--><!--Device-NativeMediaPlayerBridge-setMuted(muted: boolean): void-End-->
@@ -186,7 +150,7 @@ Sets the muted status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| muted | boolean | Yes | Whether to mute the player. The value **true** means to mute the player, and **false** means the opposite. |
+| muted | boolean | Yes | Whether to mute the player. <br>The value **true** means to mute the player, and **false** means the opposite. |
 
 ## setPlaybackRate
 
@@ -198,10 +162,6 @@ Sets the playback rate.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-setPlaybackRate(playbackRate: number): void--><!--Device-NativeMediaPlayerBridge-setPlaybackRate(playbackRate: number): void-End-->
@@ -212,7 +172,7 @@ Sets the playback rate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| playbackRate | number | Yes | Playback rate. Value range: [0, 10.0]. The value **1** indicates the original speed of playback. |
+| playbackRate | number | Yes | Playback rate. <br>Value range: [0, 10.0], where 1 indicates the original speed. If the value is out of range, it is automatically corrected to the boundary value. |
 
 ## setVolume
 
@@ -224,10 +184,6 @@ Sets the playback volume.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerBridge-setVolume(volume: number): void--><!--Device-NativeMediaPlayerBridge-setVolume(volume: number): void-End-->
@@ -238,7 +194,7 @@ Sets the playback volume.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volume | number | Yes | Playback volume.Value range: [0, 1.0]. The value **0** indicates mute, and the value **1.0** indicates the maximum volume. |
+| volume | number | Yes | Volume of the player. <br>Value range: [0, 1.0], where 0 indicates mute and 1.0 indicates the maximum volume. If the value is out of range, it is automatically corrected to the boundary value. |
 
 ## suspendPlayer
 
@@ -246,13 +202,9 @@ Sets the playback volume.
 suspendPlayer?(type: SuspendType): void
 ```
 
-Suspends the player and save its status information.
+Notifies the app to destroy the player and save its status information. This method is used only in pair with resumePlayer.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-NativeMediaPlayerBridge-suspendPlayer?(type: SuspendType): void--><!--Device-NativeMediaPlayerBridge-suspendPlayer?(type: SuspendType): void-End-->
 
@@ -262,7 +214,7 @@ Suspends the player and save its status information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SuspendType](arkts-arkweb-webview-suspendtype-e.md) | Yes | Suspension type of the player. |
+| type | [SuspendType](arkts-arkweb-webview-suspendtype-e.md) | Yes | Player suspension type, which specifies how the player is suspended. Different SuspendType values correspond to different suspension scenarios. |
 
 ## updateRect
 
@@ -270,13 +222,9 @@ Suspends the player and save its status information.
 updateRect(x: number, y: number, width: number, height: number): void
 ```
 
-Updates the surface position information.
+Notifies the app of the surface position information. This method is called back by the ArkWeb kernel when the web page layout changes, the page scrolls, or the playback area changes. The app must update the position and size of the native player's rendering surface accordingly.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -288,8 +236,8 @@ Updates the surface position information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate of the surface relative to the **Web** component, Unit: px. |
-| y | number | Yes |  |
-| width | number | Yes | Width of the surface, Unit: px. |
-| height | number | Yes | Height of the surface, Unit: px. |
+| x | number | Yes | x coordinate of the surface relative to the Web component. <br>Unit: px. |
+| y | number | Yes | y coordinate of the surface relative to the Web component. <br>Unit: px. |
+| width | number | Yes | Width of the surface. <br>Unit: px. |
+| height | number | Yes | Height of the surface. <br>Unit: px. |
 

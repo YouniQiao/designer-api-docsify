@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface PropertyDescriptor--><!--Device-unnamed-interface PropertyDescriptor-End-->
 
 ## get
@@ -15,10 +11,6 @@ get?(): any
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-PropertyDescriptor-get?(): any--><!--Device-PropertyDescriptor-get?(): any-End-->
 
@@ -35,10 +27,6 @@ set?(v: any): void
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-PropertyDescriptor-set?(v: any): void--><!--Device-PropertyDescriptor-set?(v: any): void-End-->
 
@@ -58,10 +46,6 @@ configurable?: boolean
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-PropertyDescriptor-configurable?: boolean--><!--Device-PropertyDescriptor-configurable?: boolean-End-->
 
 ## enumerable
@@ -73,10 +57,6 @@ enumerable?: boolean
 **Type:** boolean
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-PropertyDescriptor-enumerable?: boolean--><!--Device-PropertyDescriptor-enumerable?: boolean-End-->
 
@@ -90,10 +70,6 @@ value?: any
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-PropertyDescriptor-value?: any--><!--Device-PropertyDescriptor-value?: any-End-->
 
 ## writable
@@ -105,10 +81,6 @@ writable?: boolean
 **Type:** boolean
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-PropertyDescriptor-writable?: boolean--><!--Device-PropertyDescriptor-writable?: boolean-End-->
 

@@ -1,12 +1,8 @@
 # FilterBundleType (System API)
 
-Enumerates the types of applications to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md#AppStateFilter-(System-API)) to filter the application types you want to listen for.
+Enumerates the types of applications to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md#appstatefilter-system-api) to filter the application types you want to listen for.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-appManager-export enum FilterBundleType--><!--Device-appManager-export enum FilterBundleType-End-->
 
@@ -24,10 +20,6 @@ Application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FilterBundleType-APP = 1 << 0--><!--Device-FilterBundleType-APP = 1 << 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -43,10 +35,6 @@ ATOMIC_SERVICE = 1 << 1
 Atomic service.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FilterBundleType-ATOMIC_SERVICE = 1 << 1--><!--Device-FilterBundleType-ATOMIC_SERVICE = 1 << 1-End-->
 

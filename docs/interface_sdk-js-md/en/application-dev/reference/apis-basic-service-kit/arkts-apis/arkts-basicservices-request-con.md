@@ -10,10 +10,6 @@ const ERROR_CANNOT_RESUME: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const ERROR_CANNOT_RESUME: int--><!--Device-request-const ERROR_CANNOT_RESUME: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -27,10 +23,6 @@ const ERROR_DEVICE_NOT_FOUND: int
 (Download error codes) Failure to find a storage device such as a memory card.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const ERROR_DEVICE_NOT_FOUND: int--><!--Device-request-const ERROR_DEVICE_NOT_FOUND: int-End-->
 
@@ -46,10 +38,6 @@ const ERROR_FILE_ALREADY_EXISTS: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const ERROR_FILE_ALREADY_EXISTS: int--><!--Device-request-const ERROR_FILE_ALREADY_EXISTS: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -63,10 +51,6 @@ const ERROR_FILE_ERROR: int
 (Download error codes) File operation failed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const ERROR_FILE_ERROR: int--><!--Device-request-const ERROR_FILE_ERROR: int-End-->
 
@@ -82,10 +66,6 @@ const ERROR_HTTP_DATA_ERROR: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const ERROR_HTTP_DATA_ERROR: int--><!--Device-request-const ERROR_HTTP_DATA_ERROR: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -99,10 +79,6 @@ const ERROR_INSUFFICIENT_SPACE: int
 (Download error codes) Insufficient storage space.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const ERROR_INSUFFICIENT_SPACE: int--><!--Device-request-const ERROR_INSUFFICIENT_SPACE: int-End-->
 
@@ -118,10 +94,6 @@ const ERROR_OFFLINE: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const ERROR_OFFLINE: int--><!--Device-request-const ERROR_OFFLINE: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -135,10 +107,6 @@ const ERROR_TOO_MANY_REDIRECTS: int
 (Download error codes) Error caused by too many network redirections.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const ERROR_TOO_MANY_REDIRECTS: int--><!--Device-request-const ERROR_TOO_MANY_REDIRECTS: int-End-->
 
@@ -154,10 +122,6 @@ const ERROR_UNHANDLED_HTTP_CODE: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const ERROR_UNHANDLED_HTTP_CODE: int--><!--Device-request-const ERROR_UNHANDLED_HTTP_CODE: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -171,10 +135,6 @@ const ERROR_UNKNOWN: int
 (Download error codes) Unknown error. In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returned by the DNS is blocked, a handshake timeout may occur, leading to an ERROR_UNKNOWN error.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const ERROR_UNKNOWN: int--><!--Device-request-const ERROR_UNKNOWN: int-End-->
 
@@ -190,10 +150,6 @@ const ERROR_UNSUPPORTED_NETWORK_TYPE: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const ERROR_UNSUPPORTED_NETWORK_TYPE: int--><!--Device-request-const ERROR_UNSUPPORTED_NETWORK_TYPE: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -207,10 +163,6 @@ const EXCEPTION_FILEIO: int
 (Specific error codes) Abnormal file operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_FILEIO: int--><!--Device-request-const EXCEPTION_FILEIO: int-End-->
 
@@ -226,10 +178,6 @@ const EXCEPTION_FILEPATH: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const EXCEPTION_FILEPATH: int--><!--Device-request-const EXCEPTION_FILEPATH: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -243,10 +191,6 @@ const EXCEPTION_OTHERS: int
 (Specific error codes) Other errors.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_OTHERS: int--><!--Device-request-const EXCEPTION_OTHERS: int-End-->
 
@@ -262,10 +206,6 @@ const EXCEPTION_PARAMCHECK: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const EXCEPTION_PARAMCHECK: int--><!--Device-request-const EXCEPTION_PARAMCHECK: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -279,10 +219,6 @@ const EXCEPTION_PERMISSION: int
 (Universal error codes) Permission verification failed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_PERMISSION: int--><!--Device-request-const EXCEPTION_PERMISSION: int-End-->
 
@@ -298,10 +234,6 @@ const EXCEPTION_SERVICE: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const EXCEPTION_SERVICE: int--><!--Device-request-const EXCEPTION_SERVICE: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -315,10 +247,6 @@ const EXCEPTION_UNSUPPORTED: int
 (Universal error codes) The device does not support this API.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const EXCEPTION_UNSUPPORTED: int--><!--Device-request-const EXCEPTION_UNSUPPORTED: int-End-->
 
@@ -334,10 +262,6 @@ const NETWORK_MOBILE: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const NETWORK_MOBILE: int--><!--Device-request-const NETWORK_MOBILE: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -351,10 +275,6 @@ const NETWORK_WIFI: int
 (Network type) Bit flag download allowed on a WLAN.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const NETWORK_WIFI: int--><!--Device-request-const NETWORK_WIFI: int-End-->
 
@@ -370,10 +290,6 @@ const PAUSED_BY_USER: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const PAUSED_BY_USER: int--><!--Device-request-const PAUSED_BY_USER: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -387,10 +303,6 @@ const PAUSED_QUEUED_FOR_WIFI: int
 (Causes of download pause) Download paused and queuing for a WLAN connection because the file size exceeds the maximum value allowed for a mobile network session.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const PAUSED_QUEUED_FOR_WIFI: int--><!--Device-request-const PAUSED_QUEUED_FOR_WIFI: int-End-->
 
@@ -406,10 +318,6 @@ const PAUSED_UNKNOWN: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const PAUSED_UNKNOWN: int--><!--Device-request-const PAUSED_UNKNOWN: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -423,10 +331,6 @@ const PAUSED_WAITING_FOR_NETWORK: int
 (Causes of download pause) Download paused due to a network connection problem. Example: network disconnection
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const PAUSED_WAITING_FOR_NETWORK: int--><!--Device-request-const PAUSED_WAITING_FOR_NETWORK: int-End-->
 
@@ -442,10 +346,6 @@ const PAUSED_WAITING_TO_RETRY: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const PAUSED_WAITING_TO_RETRY: int--><!--Device-request-const PAUSED_WAITING_TO_RETRY: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -459,10 +359,6 @@ const SESSION_FAILED: int
 (Download task status codes) Download failure without retry.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const SESSION_FAILED: int--><!--Device-request-const SESSION_FAILED: int-End-->
 
@@ -478,10 +374,6 @@ const SESSION_PAUSED: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const SESSION_PAUSED: int--><!--Device-request-const SESSION_PAUSED: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -495,10 +387,6 @@ const SESSION_PENDING: int
 (Download task status codes) Download pending.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const SESSION_PENDING: int--><!--Device-request-const SESSION_PENDING: int-End-->
 
@@ -514,10 +402,6 @@ const SESSION_RUNNING: int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-request-const SESSION_RUNNING: int--><!--Device-request-const SESSION_RUNNING: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -531,10 +415,6 @@ const SESSION_SUCCESSFUL: int
 (Download task status codes) Successful download.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-const SESSION_SUCCESSFUL: int--><!--Device-request-const SESSION_SUCCESSFUL: int-End-->
 

@@ -10,10 +10,6 @@ function enableSilentProxy(context: Context, uri?: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-dataShare-function enableSilentProxy(context: Context, uri?: string): Promise<void>--><!--Device-dataShare-function enableSilentProxy(context: Context, uri?: string): Promise<void>-End-->
@@ -43,7 +39,7 @@ function enableSilentProxy(context: Context, uri?: string): Promise<void>
 | [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

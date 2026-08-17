@@ -4,10 +4,6 @@ Defines the touch event data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputEventClient-interface TouchEventData--><!--Device-inputEventClient-interface TouchEventData-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -32,10 +28,6 @@ Touch event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TouchEventData-touchEvent: TouchEvent--><!--Device-TouchEventData-touchEvent: TouchEvent-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -53,10 +45,6 @@ Whether to use global coordinates to calculate the injected touch event. The def
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TouchEventData-useGlobalCoordinate?: boolean--><!--Device-TouchEventData-useGlobalCoordinate?: boolean-End-->
 

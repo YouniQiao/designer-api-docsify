@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-update-export interface CurrentVersionInfo--><!--Device-update-export interface CurrentVersionInfo-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -25,10 +21,6 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CurrentVersionInfo-deviceName: string--><!--Device-CurrentVersionInfo-deviceName: string-End-->
 
@@ -48,10 +40,6 @@ osVersion: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CurrentVersionInfo-osVersion: string--><!--Device-CurrentVersionInfo-osVersion: string-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
@@ -69,10 +57,6 @@ versionComponents: Array<VersionComponent>
 **类型：** Array&lt;[VersionComponent](arkts-basicservices-update-versioncomponent-i-sys.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CurrentVersionInfo-versionComponents: Array<VersionComponent>--><!--Device-CurrentVersionInfo-versionComponents: Array<VersionComponent>-End-->
 

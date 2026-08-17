@@ -16,11 +16,9 @@ Obtains the device IP address based on the network interface. This API uses an a
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md#getIpAddressSync)
+**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md#getipaddresssync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -50,7 +48,7 @@ Obtains the device IP address based on the network interface. This API uses an a
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { networkManager } from '@kit.MDMKit';
@@ -83,11 +81,9 @@ Obtains the device IP address based on the network interface. This API uses a pr
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md#getIpAddressSync)
+**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md#getipaddresssync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -122,7 +118,7 @@ Obtains the device IP address based on the network interface. This API uses a pr
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { networkManager } from '@kit.MDMKit';

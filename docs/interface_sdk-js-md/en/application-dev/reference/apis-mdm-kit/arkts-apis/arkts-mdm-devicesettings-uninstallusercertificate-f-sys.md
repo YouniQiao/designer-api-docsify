@@ -16,11 +16,9 @@ Uninstalls a user certificate. This API uses a callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstallUserCertificate](arkts-mdm-securitymanager-uninstallusercertificate-f.md#uninstallUserCertificate)
+**Substitutes:** [uninstallUserCertificate](arkts-mdm-securitymanager-uninstallusercertificate-f.md#uninstallusercertificate)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_CERTIFICATE
 
@@ -37,7 +35,7 @@ Uninstalls a user certificate. This API uses a callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| certUri | string | Yes | Certificate URI, which is set and returned by the user certification installation API [installUserCertificate](arkts-mdm-devicesettings-installusercertificate-f-sys.md#installUserCertificate-(System-API)). |
+| certUri | string | Yes | Certificate URI, which is set and returned by the user certification installation API [installUserCertificate](arkts-mdm-devicesettings-installusercertificate-f-sys.md#installusercertificate-system-api). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -51,7 +49,7 @@ Uninstalls a user certificate. This API uses a callback to return the result.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceSettings } from '@kit.MDMKit';
@@ -84,11 +82,9 @@ Uninstalls a user certificate. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstallUserCertificate](arkts-mdm-securitymanager-uninstallusercertificate-f.md#uninstallUserCertificate)
+**Substitutes:** [uninstallUserCertificate](arkts-mdm-securitymanager-uninstallusercertificate-f.md#uninstallusercertificate)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_CERTIFICATE
 
@@ -105,7 +101,7 @@ Uninstalls a user certificate. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| certUri | string | Yes | Certificate URI, which is set and returned by the user certification installation API [installUserCertificate](arkts-mdm-devicesettings-installusercertificate-f-sys.md#installUserCertificate-(System-API)). |
+| certUri | string | Yes | Certificate URI, which is set and returned by the user certification installation API [installUserCertificate](arkts-mdm-devicesettings-installusercertificate-f-sys.md#installusercertificate-system-api). |
 
 **Return value:**
 
@@ -124,7 +120,7 @@ Uninstalls a user certificate. This API uses a promise to return the result.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceSettings } from '@kit.MDMKit';

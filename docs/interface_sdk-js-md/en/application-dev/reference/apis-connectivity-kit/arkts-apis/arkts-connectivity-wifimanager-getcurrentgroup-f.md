@@ -16,10 +16,6 @@ Obtain information about the current p2p group.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function getCurrentGroup(): Promise<WifiP2pGroupInfo>--><!--Device-wifiManager-function getCurrentGroup(): Promise<WifiP2pGroupInfo>-End-->
@@ -51,10 +47,6 @@ Obtain information about the current p2p group.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void--><!--Device-wifiManager-function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void-End-->
@@ -75,7 +67,7 @@ Obtain information about the current p2p group.
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

@@ -1,4 +1,4 @@
-# TemplateTypedFunc
+# TemplateTypedFunc(Defines Repeat component.)
 
 ```TypeScript
 declare type TemplateTypedFunc<T> = (item: T, index: number) => string
@@ -7,10 +7,6 @@ declare type TemplateTypedFunc<T> = (item: T, index: number) => string
 Function that returns typed string to render one template.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

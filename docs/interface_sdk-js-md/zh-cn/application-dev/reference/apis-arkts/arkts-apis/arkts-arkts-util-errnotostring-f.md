@@ -10,10 +10,6 @@ function errnoToString(errno: number): string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-util-function errnoToString(errno: number): string--><!--Device-util-function errnoToString(errno: number): string-End-->
@@ -32,7 +28,7 @@ function errnoToString(errno: number): string
 | --- | --- |
 | string | 错误码对应的详细信息，包含可读的错误描述文本，便于开发者定位问题。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let errnum = -1; // -1 : a system error number

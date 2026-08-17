@@ -4,10 +4,6 @@ FunctionKey of Input.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-export interface FunctionKey--><!--Device-inputMethod-export interface FunctionKey-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -29,10 +25,6 @@ Indicates the enter key type of the input method.
 **Type:** EnterKeyType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FunctionKey-enterKeyType: EnterKeyType--><!--Device-FunctionKey-enterKeyType: EnterKeyType-End-->
 

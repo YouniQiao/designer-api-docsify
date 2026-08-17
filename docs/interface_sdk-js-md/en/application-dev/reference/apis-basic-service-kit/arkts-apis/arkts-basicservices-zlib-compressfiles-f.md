@@ -16,10 +16,6 @@ Compresses multiple specified files. This API uses a promise to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-zlib-function compressFiles(inFiles: Array<string>, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function compressFiles(inFiles: Array<string>, outFile: string, options: Options): Promise<void>-End-->
@@ -30,7 +26,7 @@ Compresses multiple specified files. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFiles | Array&lt;string&gt; | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) is used to decompress the folder. |
+| inFiles | Array&lt;string&gt; | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile) is used to decompress the folder. |
 | outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
 | options | Options | Yes | Compression parameters. |
 
@@ -48,7 +44,7 @@ Compresses multiple specified files. This API uses a promise to return the resul
 | [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
 | [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.

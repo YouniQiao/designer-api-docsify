@@ -6,10 +6,6 @@ DatePickerComponent component is used to select date (year, month, day) and time
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct DatePickerComponent--><!--Device-unnamed-export declare struct DatePickerComponent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -34,13 +30,9 @@ import { DatePickerComponentResult } from 'DatePickerComponentResult';
 
 Defines options for the date time picker component.
 
-**Type:** [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
+**Type:** [DatePickerComponentOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

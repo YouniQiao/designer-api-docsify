@@ -1,14 +1,10 @@
 # ClickEvent
 
-继承于[BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md#baseevent)。
 
-**继承/实现关系：** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
+**继承/实现关系：** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface ClickEvent--><!--Device-unnamed-declare interface ClickEvent-End-->
 
@@ -23,10 +19,6 @@ getCurrentLocalPosition?(): Coordinate2D
 获取点击位置相对于当前组件实时位置的左上角坐标。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,10 +46,6 @@ displayX: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -77,10 +65,6 @@ displayY: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,10 +86,6 @@ globalDisplayX?: number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -125,10 +105,6 @@ globalDisplayY?: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -150,10 +126,6 @@ hand?: InteractionHand
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -173,10 +145,6 @@ preventDefault: () => void
 **类型：** () =&gt; void
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -198,11 +166,9 @@ screenX: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
-**替代接口：** [windowX](#windowX)
+**替代接口：** [windowX](#windowx)
 
 <!--Device-ClickEvent-screenX: number--><!--Device-ClickEvent-screenX: number-End-->
 
@@ -220,11 +186,9 @@ screenY: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 10
 
-**替代接口：** [windowY](#windowY)
+**替代接口：** [windowY](#windowy)
 
 <!--Device-ClickEvent-screenY: number--><!--Device-ClickEvent-screenY: number-End-->
 
@@ -241,10 +205,6 @@ windowX: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,10 +226,6 @@ windowY: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -284,15 +240,11 @@ windowY: number
 x: number
 ```
 
-点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的 [distanceThreshold](arkts-arkui-commonmethod-c.md#onClick)设置后，点击位置为抬手 点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。 单位：vp
+点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的 [distanceThreshold](arkts-arkui-commonmethod-c.md#onclick)设置后，点击位置为抬手 点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。 单位：vp
 
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -313,10 +265,6 @@ y: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

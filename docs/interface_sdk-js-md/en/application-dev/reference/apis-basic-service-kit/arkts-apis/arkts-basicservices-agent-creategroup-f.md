@@ -12,13 +12,9 @@ import { request } from 'request';
 function createGroup(config: GroupConfig): Promise<string>
 ```
 
-Creates a group based on [GroupConfig](arkts-basicservices-agent-groupconfig-i.md#GroupConfig). This API uses a promise to return the result.
+Creates a group based on [GroupConfig](arkts-basicservices-agent-groupconfig-i.md#groupconfig). This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-agent-function createGroup(config: GroupConfig): Promise<string>--><!--Device-agent-function createGroup(config: GroupConfig): Promise<string>-End-->
 

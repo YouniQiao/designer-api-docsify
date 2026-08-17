@@ -4,10 +4,6 @@ Defines the options used in **listFile()**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface ListFileOptions--><!--Device-unnamed-export interface ListFileOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -40,13 +36,9 @@ filter?: Filter
 
 File filtering configuration. This parameter is optional. It specifies the file filtering conditions.
 
-**Type:** [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md)
+**Type:** [Filter](arkts-corefile-file-fs-filter-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,10 +58,6 @@ Number of file names to list. This parameter is optional. The default value is *
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ListFileOptions-listNum?: number--><!--Device-ListFileOptions-listNum?: number-End-->
@@ -87,10 +75,6 @@ Whether to list all files in the subdirectories recursively. This parameter is o
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

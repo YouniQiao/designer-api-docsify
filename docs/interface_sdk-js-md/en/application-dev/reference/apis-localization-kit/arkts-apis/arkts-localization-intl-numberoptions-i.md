@@ -4,10 +4,6 @@ Options for creating the **NumberFormat** object. Since API version 9, the **Num
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 <!--Device-intl-export interface NumberOptions--><!--Device-intl-export interface NumberOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -30,10 +26,6 @@ Compact display format. The value can be **long** or **short**. The default valu
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-compactDisplay?: string--><!--Device-NumberOptions-compactDisplay?: string-End-->
@@ -51,10 +43,6 @@ Currency unit. The value must comply with the [ISO-4217 standard](https://www.is
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,10 +62,6 @@ Currency display mode. The value can be **symbol**, **narrowSymbol**, **code**, 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-currencyDisplay?: string--><!--Device-NumberOptions-currencyDisplay?: string-End-->
@@ -95,10 +79,6 @@ Currency unit symbol. The value can be **standard** or **accounting**. The defau
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,10 +98,6 @@ Valid locale ID, for example, **zh-Hans-CN**. The default value is the current s
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-locale?: string--><!--Device-NumberOptions-locale?: string-End-->
@@ -139,10 +115,6 @@ Locale matching algorithm. The value can be **lookup** or **best fit**. The defa
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,10 +134,6 @@ Maximum number of digits in the fraction part of a number. The value ranges from
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-maximumFractionDigits?: int--><!--Device-NumberOptions-maximumFractionDigits?: int-End-->
@@ -183,10 +151,6 @@ Maximum number of the least significant digits. The value ranges from **1** to *
 **Type:** int
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -206,10 +170,6 @@ Minimum number of digits in the fraction part of a number. The value ranges from
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-minimumFractionDigits?: int--><!--Device-NumberOptions-minimumFractionDigits?: int-End-->
@@ -227,10 +187,6 @@ Minimum number of digits allowed in the integer part of a number. The value rang
 **Type:** int
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -250,10 +206,6 @@ Minimum number of the least significant digits. The value ranges from **1** to *
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-minimumSignificantDigits?: int--><!--Device-NumberOptions-minimumSignificantDigits?: int-End-->
@@ -271,10 +223,6 @@ Number notation. The value can be **standard**, **scientific**, **engineering**,
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -294,10 +242,6 @@ Numbering system. The value can be: **adlm**, **ahom**, **arab**, **arabext**, *
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-numberingSystem?: string--><!--Device-NumberOptions-numberingSystem?: string-End-->
@@ -315,10 +259,6 @@ Rounding increment. The value can be **1**, **2**, **5**, **10**, **20**, **25**
 **Type:** int
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -338,10 +278,6 @@ Rounding mode. The value can be: - **ceil**: rounding up. - **floor**: rounding 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-NumberOptions-roundingMode?: string--><!--Device-NumberOptions-roundingMode?: string-End-->
@@ -359,10 +295,6 @@ Rounding priority used when both the maximum number of fraction digits and the m
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -382,10 +314,6 @@ Number sign display format. The value can be: - "auto": automatically determines
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-signDisplay?: string--><!--Device-NumberOptions-signDisplay?: string-End-->
@@ -403,10 +331,6 @@ Number display format. The value can be **decimal**, **currency**, **percent**, 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -426,10 +350,6 @@ Unit name, for example, **meter**, **inch**, or **hectare**. The combination uni
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-unit?: string--><!--Device-NumberOptions-unit?: string-End-->
@@ -447,10 +367,6 @@ Display format of units. The value can be **long**, **short**, or **narrow**. Th
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -470,10 +386,6 @@ Application scenario of units. The value can be any of the following: **default*
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NumberOptions-unitUsage?: string--><!--Device-NumberOptions-unitUsage?: string-End-->
@@ -491,10 +403,6 @@ Whether to enable grouping for display. The value **true** means to enable group
 **Type:** boolean
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

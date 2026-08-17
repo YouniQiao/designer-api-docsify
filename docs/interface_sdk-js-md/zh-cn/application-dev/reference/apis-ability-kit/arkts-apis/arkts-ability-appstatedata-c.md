@@ -1,12 +1,8 @@
 # AppStateData
 
-定义应用状态信息，使用接口 [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState)注 册应用状态变化监听后，当应用、进程或组件的状态变化时，系统通过ApplicationStateObserver的 onForegroundApplicationChanged 等方法回调给开发者。
+定义应用状态信息，使用接口 [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate)注 册应用状态变化监听后，当应用、进程或组件的状态变化时，系统通过ApplicationStateObserver的 onForegroundApplicationChanged 等方法回调给开发者。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class AppStateData--><!--Device-unnamed-declare class AppStateData-End-->
 
@@ -24,10 +20,6 @@ Bundle名称。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AppStateData-bundleName: string--><!--Device-AppStateData-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -43,10 +35,6 @@ isFloatingWindowMode: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AppStateData-isFloatingWindowMode: boolean--><!--Device-AppStateData-isFloatingWindowMode: boolean-End-->
 
@@ -64,10 +52,6 @@ isSplitScreenMode: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AppStateData-isSplitScreenMode: boolean--><!--Device-AppStateData-isSplitScreenMode: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -84,10 +68,6 @@ state: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AppStateData-state: int--><!--Device-AppStateData-state: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -103,10 +83,6 @@ uid: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-AppStateData-uid: int--><!--Device-AppStateData-uid: int-End-->
 

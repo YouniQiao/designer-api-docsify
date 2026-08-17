@@ -4,11 +4,9 @@ Describes the criteria for filtering scanning results can be set.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [ScanFilter](arkts-connectivity-ble-scanfilter-i.md#ScanFilter)
+**Substitutes:** [ScanFilter](arkts-connectivity-ble-scanfilter-i.md#scanfilter)
 
 <!--Device-bluetoothManager-interface ScanFilter--><!--Device-bluetoothManager-interface ScanFilter-End-->
 
@@ -32,11 +30,9 @@ The address of a BLE peripheral device
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](arkts-connectivity-ble-scanfilter-i.md#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-ble-scanfilter-i.md#deviceid)
 
 <!--Device-ScanFilter-deviceId?: string--><!--Device-ScanFilter-deviceId?: string-End-->
 
@@ -54,11 +50,9 @@ Manufacture data.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [manufactureData](arkts-connectivity-ble-scanfilter-i.md#manufactureData)
+**Substitutes:** [manufactureData](arkts-connectivity-ble-scanfilter-i.md#manufacturedata)
 
 <!--Device-ScanFilter-manufactureData?: ArrayBuffer--><!--Device-ScanFilter-manufactureData?: ArrayBuffer-End-->
 
@@ -76,11 +70,9 @@ Manufacture data mask.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [manufactureDataMask](arkts-connectivity-ble-scanfilter-i.md#manufactureDataMask)
+**Substitutes:** [manufactureDataMask](arkts-connectivity-ble-scanfilter-i.md#manufacturedatamask)
 
 <!--Device-ScanFilter-manufactureDataMask?: ArrayBuffer--><!--Device-ScanFilter-manufactureDataMask?: ArrayBuffer-End-->
 
@@ -98,11 +90,9 @@ Manufacture id.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [manufactureId](arkts-connectivity-ble-scanfilter-i.md#manufactureId)
+**Substitutes:** [manufactureId](arkts-connectivity-ble-scanfilter-i.md#manufactureid)
 
 <!--Device-ScanFilter-manufactureId?: number--><!--Device-ScanFilter-manufactureId?: number-End-->
 
@@ -119,8 +109,6 @@ The name of a BLE peripheral device
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
 
@@ -142,11 +130,9 @@ Service data.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [serviceData](arkts-connectivity-ble-scanfilter-i.md#serviceData)
+**Substitutes:** [serviceData](arkts-connectivity-ble-scanfilter-i.md#servicedata)
 
 <!--Device-ScanFilter-serviceData?: ArrayBuffer--><!--Device-ScanFilter-serviceData?: ArrayBuffer-End-->
 
@@ -164,11 +150,9 @@ Service data mask.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [serviceDataMask](arkts-connectivity-ble-scanfilter-i.md#serviceDataMask)
+**Substitutes:** [serviceDataMask](arkts-connectivity-ble-scanfilter-i.md#servicedatamask)
 
 <!--Device-ScanFilter-serviceDataMask?: ArrayBuffer--><!--Device-ScanFilter-serviceDataMask?: ArrayBuffer-End-->
 
@@ -186,11 +170,9 @@ Service solicitation UUID.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [serviceSolicitationUuid](arkts-connectivity-ble-scanfilter-i.md#serviceSolicitationUuid)
+**Substitutes:** [serviceSolicitationUuid](arkts-connectivity-ble-scanfilter-i.md#servicesolicitationuuid)
 
 <!--Device-ScanFilter-serviceSolicitationUuid?: string--><!--Device-ScanFilter-serviceSolicitationUuid?: string-End-->
 
@@ -208,11 +190,9 @@ Service solicitation UUID mask.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [serviceSolicitationUuidMask](arkts-connectivity-ble-scanfilter-i.md#serviceSolicitationUuidMask)
+**Substitutes:** [serviceSolicitationUuidMask](arkts-connectivity-ble-scanfilter-i.md#servicesolicitationuuidmask)
 
 <!--Device-ScanFilter-serviceSolicitationUuidMask?: string--><!--Device-ScanFilter-serviceSolicitationUuidMask?: string-End-->
 
@@ -230,11 +210,9 @@ The service UUID of a BLE peripheral device
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuid](arkts-connectivity-ble-scanfilter-i.md#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-scanfilter-i.md#serviceuuid)
 
 <!--Device-ScanFilter-serviceUuid?: string--><!--Device-ScanFilter-serviceUuid?: string-End-->
 
@@ -252,11 +230,9 @@ Service UUID mask.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuidMask](arkts-connectivity-ble-scanfilter-i.md#serviceUuidMask)
+**Substitutes:** [serviceUuidMask](arkts-connectivity-ble-scanfilter-i.md#serviceuuidmask)
 
 <!--Device-ScanFilter-serviceUuidMask?: string--><!--Device-ScanFilter-serviceUuidMask?: string-End-->
 

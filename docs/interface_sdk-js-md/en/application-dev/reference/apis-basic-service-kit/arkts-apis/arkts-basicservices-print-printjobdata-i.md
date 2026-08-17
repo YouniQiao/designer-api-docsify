@@ -4,10 +4,6 @@ Defines a print job.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-interface PrintJobData--><!--Device-print-interface PrintJobData-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -30,10 +26,6 @@ Binary data to print.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-binaryData?: Uint8Array--><!--Device-PrintJobData-binaryData?: Uint8Array-End-->
@@ -51,10 +43,6 @@ Color mode.
 **Type:** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Number of file list copies.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-copyNumber: int--><!--Device-PrintJobData-copyNumber: int-End-->
@@ -95,10 +79,6 @@ Data source type.
 **Type:** [DocFlavor](arkts-basicservices-print-docflavor-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ Format of the print data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-documentFormat: PrintDocumentFormat--><!--Device-PrintJobData-documentFormat: PrintDocumentFormat-End-->
@@ -139,10 +115,6 @@ Simplex or duplex mode.
 **Type:** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +134,6 @@ FD list of files to print.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-fdList?: int[]--><!--Device-PrintJobData-fdList?: int[]-End-->
@@ -183,10 +151,6 @@ Whether to automatically rotate the page. The value **true** means to automatica
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,10 +170,6 @@ Whether to print without margins. The value **true** means to print without marg
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-isBorderless?: boolean--><!--Device-PrintJobData-isBorderless?: boolean-End-->
@@ -227,10 +187,6 @@ Whether pages are printed uncollated. The value **true** means that pages are pr
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,10 +206,6 @@ Whether pages are printed in landscape mode. The value **true** indicates that p
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-isLandscape: boolean--><!--Device-PrintJobData-isLandscape: boolean-End-->
@@ -271,10 +223,6 @@ Whether pages are printed in reverse order. The value **true** means that pages 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -294,10 +242,6 @@ Whether pages are printed in sequential order.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-isSequential?: boolean--><!--Device-PrintJobData-isSequential?: boolean-End-->
@@ -315,10 +259,6 @@ Unique identifier of the print job.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,10 +278,6 @@ Name of the print job.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-jobName: string--><!--Device-PrintJobData-jobName: string-End-->
@@ -359,10 +295,6 @@ Type of the paper to print.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -382,10 +314,6 @@ Object stringified in JSON format.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-options?: string--><!--Device-PrintJobData-options?: string-End-->
@@ -403,10 +331,6 @@ Selected page size.
 **Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -426,10 +350,6 @@ Print quality.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-printQuality?: PrintQuality--><!--Device-PrintJobData-printQuality?: PrintQuality-End-->
@@ -448,10 +368,6 @@ Printer ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-printerId: string--><!--Device-PrintJobData-printerId: string-End-->
@@ -469,10 +385,6 @@ Vendor-specific job options in JSON format.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

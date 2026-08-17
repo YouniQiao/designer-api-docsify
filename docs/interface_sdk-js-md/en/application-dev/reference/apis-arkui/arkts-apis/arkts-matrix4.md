@@ -16,10 +16,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace matrix4--><!--Device-unnamed-declare namespace matrix4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -43,7 +39,7 @@ import { matrix4 } from 'matrix4';
 | [invert](arkts-arkui-matrix4-invert-f.md#invert) | Inverts this matrix object. |
 | [rotate](arkts-arkui-matrix4-rotate-f.md#rotate) | Rotates this matrix object along the x, y, and z axes. |
 | [scale](arkts-arkui-matrix4-scale-f.md#scale) | Scales this matrix object along the x, y, and z axes. |
-| [transformPoint](arkts-arkui-matrix4-transformpoint-f.md#transformPoint) | Applies the current transformation effect to a coordinate point. |
+| [transformPoint](arkts-arkui-matrix4-transformpoint-f.md#transformpoint) | Applies the current transformation effect to a coordinate point. |
 | [translate](arkts-arkui-matrix4-translate-f.md#translate) | Translates this matrix object along the x, y, and z axes. |
 
 ### Interfaces

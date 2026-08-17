@@ -1,12 +1,10 @@
 # PlaybackStatus
 
-Enumerates the playback statuses of the player, which is an input parameter of the [handleStatusChanged](../../../reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerHandler.md#handleStatusChanged) API.
+Enumerates the playback statuses of the player, which is an input parameter of the [handleStatusChanged](../../../reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerHandler.md#handlestatuschanged) API.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-webview-enum PlaybackStatus--><!--Device-webview-enum PlaybackStatus-End-->
 
@@ -22,9 +20,7 @@ Paused.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-PlaybackStatus-PAUSED = 0--><!--Device-PlaybackStatus-PAUSED = 0-End-->
 
@@ -40,9 +36,7 @@ Playing.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-PlaybackStatus-PLAYING = 1--><!--Device-PlaybackStatus-PLAYING = 1-End-->
 

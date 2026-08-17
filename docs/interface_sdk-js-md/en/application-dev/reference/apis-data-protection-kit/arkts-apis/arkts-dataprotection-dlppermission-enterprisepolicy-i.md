@@ -4,10 +4,6 @@ Represents an enterprise custom policy.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
-
 <!--Device-dlpPermission-export interface EnterprisePolicy--><!--Device-dlpPermission-export interface EnterprisePolicy-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -29,10 +25,6 @@ JSON string of an enterprise custom policy. The value contains a maximum of 4,19
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn only, since version 21.
-
-**Deprecated since:** -1
 
 <!--Device-EnterprisePolicy-policyString: string--><!--Device-EnterprisePolicy-policyString: string-End-->
 

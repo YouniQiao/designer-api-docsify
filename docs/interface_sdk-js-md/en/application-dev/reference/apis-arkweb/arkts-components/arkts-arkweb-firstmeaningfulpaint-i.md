@@ -1,12 +1,8 @@
 # FirstMeaningfulPaint
 
-Provides detailed information about the first meaningful paint.
+Provides detailed information about the first meaningful paint on the web page, including the navigation time and paint time. It is suitable for scenarios where monitoring page rendering performance is required, improving performance optimization accuracy and user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface FirstMeaningfulPaint--><!--Device-unnamed-declare interface FirstMeaningfulPaint-End-->
 
@@ -18,15 +14,11 @@ Provides detailed information about the first meaningful paint.
 firstMeaningfulPaintTime?: number
 ```
 
-Paint time of first meaningful content. <br>Unit:milliseconds.
+Time taken for the first meaningful paint of the page, in milliseconds.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,15 +32,11 @@ Paint time of first meaningful content. <br>Unit:milliseconds.
 navigationStartTime?: number
 ```
 
-Start time of navigation. <br>Unit:microseconds.
+Start time of the navigation, in microseconds.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

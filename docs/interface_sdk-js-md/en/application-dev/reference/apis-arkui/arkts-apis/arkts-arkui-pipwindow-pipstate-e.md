@@ -4,10 +4,6 @@ Enumerates the PiP states.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-PiPWindow-enum PiPState--><!--Device-PiPWindow-enum PiPState-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ ABOUT_TO_START = 1
 PiP is about to start.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,10 +34,6 @@ PiP is started.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPState-STARTED = 2--><!--Device-PiPState-STARTED = 2-End-->
@@ -61,10 +49,6 @@ ABOUT_TO_STOP = 3
 PiP is about to stop.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +66,6 @@ PiP is stopped.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPState-STOPPED = 4--><!--Device-PiPState-STOPPED = 4-End-->
@@ -102,10 +82,6 @@ The original page is about to restore.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPState-ABOUT_TO_RESTORE = 5--><!--Device-PiPState-ABOUT_TO_RESTORE = 5-End-->
@@ -121,10 +97,6 @@ ERROR = 6
 An error occurs during the execution of the PiP lifecycle.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

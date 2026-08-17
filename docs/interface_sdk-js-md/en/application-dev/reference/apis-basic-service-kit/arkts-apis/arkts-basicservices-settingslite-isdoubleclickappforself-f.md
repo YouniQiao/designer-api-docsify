@@ -16,10 +16,6 @@ function isDoubleClickAppForSelf(callback: ClickCallback): void
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-settingsLite-function isDoubleClickAppForSelf(callback: ClickCallback): void--><!--Device-settingsLite-function isDoubleClickAppForSelf(callback: ClickCallback): void-End-->

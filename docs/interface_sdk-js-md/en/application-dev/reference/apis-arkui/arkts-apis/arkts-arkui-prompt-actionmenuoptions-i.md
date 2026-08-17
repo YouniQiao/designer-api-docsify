@@ -4,11 +4,9 @@ Defines the option of ShowActionMenu.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md#ActionMenuOptions)
+**Substitutes:** [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md#actionmenuoptions)
 
 <!--Device-prompt-interface ActionMenuOptions--><!--Device-prompt-interface ActionMenuOptions-End-->
 
@@ -32,8 +30,6 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [buttons](arkts-arkui-promptaction-actionmenuoptions-i.md#buttons)
@@ -53,8 +49,6 @@ Title of the text to display.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

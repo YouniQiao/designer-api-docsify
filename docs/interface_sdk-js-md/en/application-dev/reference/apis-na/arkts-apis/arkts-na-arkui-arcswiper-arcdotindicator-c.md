@@ -4,9 +4,7 @@ Define ArcDotIndicator, the indicator type is arc dot.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export declare class ArcDotIndicator--><!--Device-unnamed-export declare class ArcDotIndicator-End-->
 
@@ -22,9 +20,7 @@ Set the direction of arc indicator.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +32,7 @@ Set the direction of arc indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [ArcDirection](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcdirection-e.md) \| undefined | Yes | the direction of arc indicator, default value is { ArcDirection.SIX_CLOCK_DIRECTION }, undefined means setting to default value. |
+| direction | [ArcDirection](arkts-na-arkui-arcswiper-arcdirection-e.md) \| undefined | Yes | the direction of arc indicator, default value is { ArcDirection.SIX_CLOCK_DIRECTION }, undefined means setting to default value. |
 
 **Return value:**
 
@@ -54,9 +50,7 @@ Set the background color.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,9 +80,7 @@ A constructor used to create a ArcDotIndicator object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,9 +98,7 @@ Set the navigation point color.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,9 +128,7 @@ Set the gradient color for the mask.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,9 +158,7 @@ Set the selected navigation point color.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

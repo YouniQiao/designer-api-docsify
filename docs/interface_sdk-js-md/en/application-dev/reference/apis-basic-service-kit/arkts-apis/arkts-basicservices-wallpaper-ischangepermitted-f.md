@@ -16,8 +16,6 @@ Checks whether to allow the application to change the wallpaper for the current 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-wallpaper-function isChangePermitted(callback: AsyncCallback<boolean>): void--><!--Device-wallpaper-function isChangePermitted(callback: AsyncCallback<boolean>): void-End-->
@@ -30,7 +28,7 @@ Checks whether to allow the application to change the wallpaper for the current 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isChangePermitted. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -55,8 +53,6 @@ Checks whether to allow the application to change the wallpaper for the current 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-wallpaper-function isChangePermitted(): Promise<boolean>--><!--Device-wallpaper-function isChangePermitted(): Promise<boolean>-End-->
@@ -69,7 +65,7 @@ Checks whether to allow the application to change the wallpaper for the current 
 | --- | --- |
 | Promise&lt;boolean&gt; | the promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-inputConsumer-interface KeyOptions--><!--Device-inputConsumer-interface KeyOptions-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -25,10 +21,6 @@ finalKey: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-KeyOptions-finalKey: int--><!--Device-KeyOptions-finalKey: int-End-->
 
@@ -48,10 +40,6 @@ finalKeyDownDuration: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-KeyOptions-finalKeyDownDuration: int--><!--Device-KeyOptions-finalKeyDownDuration: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -69,10 +57,6 @@ isFinalKeyDown: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-KeyOptions-isFinalKeyDown: boolean--><!--Device-KeyOptions-isFinalKeyDown: boolean-End-->
 
@@ -92,10 +76,6 @@ isRepeat?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-KeyOptions-isRepeat?: boolean--><!--Device-KeyOptions-isRepeat?: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -114,10 +94,6 @@ preKeys: Array<int>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-KeyOptions-preKeys: Array<int>--><!--Device-KeyOptions-preKeys: Array<int>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
@@ -130,15 +106,11 @@ preKeys: Array<int>
 triggerType?: KeyCommandTriggerType
 ```
 
-触发模式。取值为PRESSED(1)、REPEAT_PRESSED(2)或ALL_RELEASED(3)。启用命令触发模式。一旦设置此值，isFinalKeyDown和isRepeat将被忽略。对于 inputConsumer.on('key') 接口该参数是可选参数，对于 [inputConsumer.onKey](arkts-input-inputconsumer-onkey-f-sys.md#onKey（系统接口）)接口该参数是必填参数。
+触发模式。取值为PRESSED(1)、REPEAT_PRESSED(2)或ALL_RELEASED(3)。启用命令触发模式。一旦设置此值，isFinalKeyDown和isRepeat将被忽略。对于 [inputConsumer.on('key')](arkts-input-inputconsumer-onkey-f-sys.md#onkey) 接口该参数是可选参数，对于 [inputConsumer.onKey](arkts-input-inputconsumer-onkey-f-sys.md#onkey系统接口)接口该参数是必填参数。
 
 **类型：** [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -17,8 +17,6 @@ Obtains the ability information of the specified user based on given Want. This 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
@@ -32,7 +30,7 @@ Obtains the ability information of the specified user based on given Want. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name. |
-| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
+| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
 | userId | number | Yes | User ID. The value must be greater than or equal to 0. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the ability information. |
 
@@ -47,8 +45,6 @@ Obtains the ability information based on given Want. This API uses an asynchrono
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
@@ -62,7 +58,7 @@ Obtains the ability information based on given Want. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name. |
-| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
+| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the ability information. |
 
 
@@ -75,8 +71,6 @@ function queryAbilityByWant(want: Want, bundleFlags: number, userId?: number): P
 Obtains the ability information based on given Want. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -91,7 +85,7 @@ Obtains the ability information based on given Want. This API uses a promise to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name. |
-| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
+| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
 | userId | number | No | User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**

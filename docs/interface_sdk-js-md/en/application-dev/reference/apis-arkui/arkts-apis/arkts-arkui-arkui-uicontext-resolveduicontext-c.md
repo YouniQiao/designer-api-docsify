@@ -1,14 +1,10 @@
 # ResolvedUIContext
 
-**ResolvedUIContext** instance object. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - **ResolvedUIContext** is inherited from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext). Objects of this class contain > the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) instance and its parsing policy.
+**ResolvedUIContext** instance object. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - **ResolvedUIContext** is inherited from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext). Objects of this class contain > the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) instance and its parsing policy.
 
-**Inheritance/Implementation:** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)
+**Inheritance/Implementation:** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export class ResolvedUIContext--><!--Device-unnamed-export class ResolvedUIContext-End-->
 
@@ -49,6 +45,8 @@ import { Magnifier } from 'Magnifier';
 import { ResolvedUIContext } from 'ResolvedUIContext';
 import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
 import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
+import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
+import { LuminanceSampler } from 'LuminanceSampler';
 ```
 
 ## strategy
@@ -62,10 +60,6 @@ Resolving strategy of the UIContext.
 **Type:** [ResolveStrategy](arkts-arkui-arkui-uicontext-resolvestrategy-e.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

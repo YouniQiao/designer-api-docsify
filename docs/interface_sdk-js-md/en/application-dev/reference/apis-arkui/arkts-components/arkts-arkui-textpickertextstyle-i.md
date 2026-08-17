@@ -6,10 +6,6 @@ Defines the text style options for the text picker. Inherits from PickerTextStyl
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface TextPickerTextStyle--><!--Device-unnamed-declare interface TextPickerTextStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Maximum font size for the text. For details, see maxFontSize.
 **Type:** number \| string \| Resource
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,10 +42,6 @@ Minimum font size for the text. Used with **maxFontSize** to enable font scaling
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -73,10 +61,6 @@ Text overflow behavior. This property has no effect when set to **MARQUEE**. For
 **Type:** TextOverflow
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

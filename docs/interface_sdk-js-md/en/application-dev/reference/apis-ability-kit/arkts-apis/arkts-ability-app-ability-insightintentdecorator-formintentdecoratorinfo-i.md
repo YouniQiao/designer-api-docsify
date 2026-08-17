@@ -1,14 +1,10 @@
 # FormIntentDecoratorInfo
 
-Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo) and is used to describe the parameters supported by the @InsightIntentForm decorator.
+Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo) and is used to describe the parameters supported by the @InsightIntentForm decorator.
 
-**Inheritance/Implementation:** FormIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#IntentDecoratorInfo)
+**Inheritance/Implementation:** FormIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface FormIntentDecoratorInfo--><!--Device-unnamed-declare interface FormIntentDecoratorInfo-End-->
 
@@ -38,10 +34,6 @@ Name of the widget bound to the FormExtensionAbility.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

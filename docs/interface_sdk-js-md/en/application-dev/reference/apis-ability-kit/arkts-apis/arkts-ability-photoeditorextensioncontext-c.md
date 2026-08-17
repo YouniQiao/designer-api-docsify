@@ -6,10 +6,6 @@ The context of Photo Editor extension. It allows access to PhotoEditorExtension-
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class PhotoEditorExtensionContext--><!--Device-unnamed-declare class PhotoEditorExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
@@ -23,10 +19,6 @@ saveEditedContentWithImage(pixeMap: image.PixelMap, option: image.PackingOption)
 Save image data by image pixmap.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PhotoEditorExtensionContext-saveEditedContentWithImage(pixeMap: image.PixelMap, option: image.PackingOption): Promise<AbilityResult>--><!--Device-PhotoEditorExtensionContext-saveEditedContentWithImage(pixeMap: image.PixelMap, option: image.PackingOption): Promise<AbilityResult>-End-->
 
@@ -54,7 +46,7 @@ Save image data by image pixmap.
 | [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
 | [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common, UIExtensionContentSession, Want } from '@kit.AbilityKit';
@@ -106,10 +98,6 @@ Save image data by uri.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PhotoEditorExtensionContext-saveEditedContentWithUri(uri: string): Promise<AbilityResult>--><!--Device-PhotoEditorExtensionContext-saveEditedContentWithUri(uri: string): Promise<AbilityResult>-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
@@ -135,7 +123,7 @@ Save image data by uri.
 | [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
 | [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common, UIExtensionContentSession, Want } from '@kit.AbilityKit';

@@ -4,10 +4,6 @@ The type of an AgentCard.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-agentConstant-export enum AgentCardType--><!--Device-agentConstant-export enum AgentCardType-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -21,10 +17,6 @@ LOW_CODE = 2
 LOW_CODE agent card.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Returns a file list, including the file list information.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileListResponse--><!--Device-unnamed-export interface FileListResponse-End-->
@@ -23,8 +21,6 @@ File list. The format of each file is as follows: { uri:'file1', lastModifiedTim
 **Type:** Array&lt;[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)&gt;
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

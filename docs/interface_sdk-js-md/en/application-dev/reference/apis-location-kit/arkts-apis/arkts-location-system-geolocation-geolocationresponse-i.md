@@ -2,11 +2,9 @@
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md#Location)
+**Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md#location)
 
 <!--Device-unnamed-export interface GeolocationResponse--><!--Device-unnamed-export interface GeolocationResponse-End-->
 
@@ -34,8 +32,6 @@ Location accuracy.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** [accuracy](arkts-location-geolocationmanager-location-i.md#accuracy)
@@ -57,8 +53,6 @@ Altitude.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -82,8 +76,6 @@ Latitude.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** [latitude](arkts-location-geolocationmanager-location-i.md#latitude)
@@ -105,8 +97,6 @@ Longitude.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
@@ -130,11 +120,9 @@ Time when the location is obtained.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 9
 
-**Substitutes:** [timeStamp](arkts-location-geolocationmanager-location-i.md#timeStamp)
+**Substitutes:** [timeStamp](arkts-location-geolocationmanager-location-i.md#timestamp)
 
 **Model restriction:** This API can be used only in the FA model.
 

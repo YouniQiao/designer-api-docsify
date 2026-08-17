@@ -4,10 +4,6 @@ Enumerates the types of components displayed on the PiP controller.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-PiPWindow-enum PiPControlType--><!--Device-PiPWindow-enum PiPControlType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ VIDEO_PLAY_PAUSE = 0
 Play/Pause component group for live video.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -42,10 +34,6 @@ Previous component in video scenarios.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-VIDEO_PREVIOUS = 1--><!--Device-PiPControlType-VIDEO_PREVIOUS = 1-End-->
@@ -61,10 +49,6 @@ VIDEO_NEXT = 2
 Next component in video scenarios.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -82,10 +66,6 @@ Fast-forward component in video scenarios.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-FAST_FORWARD = 3--><!--Device-PiPControlType-FAST_FORWARD = 3-End-->
@@ -101,10 +81,6 @@ FAST_BACKWARD = 4
 Rewind component in video scenarios.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -122,10 +98,6 @@ Hang-up component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-HANG_UP_BUTTON = 5--><!--Device-PiPControlType-HANG_UP_BUTTON = 5-End-->
@@ -141,10 +113,6 @@ MICROPHONE_SWITCH = 6
 Microphone on/off component.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -162,10 +130,6 @@ Camera on/off component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-CAMERA_SWITCH = 7--><!--Device-PiPControlType-CAMERA_SWITCH = 7-End-->
@@ -181,10 +145,6 @@ MUTE_SWITCH = 8
 Mute/Unmute component.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

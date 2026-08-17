@@ -4,10 +4,6 @@ The module defines the operation on DataAbilities. It can be used as an input pa
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface DataAbilityOperation--><!--Device-unnamed-export interface DataAbilityOperation-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -23,10 +19,6 @@ Indicates the expected number of rows to update or delete.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,10 +38,6 @@ Specifies whether a batch operation can be interrupted.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityOperation-interrupted?: boolean--><!--Device-DataAbilityOperation-interrupted?: boolean-End-->
@@ -67,10 +55,6 @@ Indicates the filter criteria to set. If this parameter is null, all data record
 **Type:** dataAbility.DataAbilityPredicates
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -90,10 +74,6 @@ Indicates the back reference to be used as a filter criterion in predicates.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityOperation-predicatesBackReferences?: Map<number, number>--><!--Device-DataAbilityOperation-predicatesBackReferences?: Map<number, number>-End-->
@@ -111,10 +91,6 @@ Indicates a operation type.
 **Type:** featureAbility.DataAbilityOperationType
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -134,10 +110,6 @@ Indicates the path of data to operate.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityOperation-uri: string--><!--Device-DataAbilityOperation-uri: string-End-->
@@ -156,10 +128,6 @@ Indicates the valuesBucket object containing a set of key-value pairs.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-DataAbilityOperation-valueBackReferences?: rdb.ValuesBucket--><!--Device-DataAbilityOperation-valueBackReferences?: rdb.ValuesBucket-End-->
@@ -177,10 +145,6 @@ Indicates the data values to be set.
 **Type:** rdb.ValuesBucket
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

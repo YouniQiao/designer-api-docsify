@@ -1,12 +1,8 @@
 # File
 
-Describes the list of files in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig).
+Describes the list of files in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#uploadconfig).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-request-interface File--><!--Device-request-interface File-End-->
 
@@ -30,10 +26,6 @@ File name in the header when **multipart** is used.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-File-filename: string--><!--Device-File-filename: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -49,10 +41,6 @@ Name of a form item when **multipart** is used. The default value is **file**.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-File-name: string--><!--Device-File-name: string-End-->
 
@@ -70,10 +58,6 @@ Type of the file content. By default, the type is obtained based on the extensio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-File-type: string--><!--Device-File-type: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
@@ -89,10 +73,6 @@ Local path for storing files. Only **internal://cache/** is supported, that is, 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-File-uri: string--><!--Device-File-uri: string-End-->
 

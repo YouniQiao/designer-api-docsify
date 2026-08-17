@@ -4,10 +4,6 @@ Defines **Params** (specifying the action that can be performed) in the Want.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-wantConstant-export enum Params--><!--Device-wantConstant-export enum Params-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -21,10 +17,6 @@ ABILITY_BACK_TO_OTHER_MISSION_STACK = 'ability.params.backToOtherMissionStack'
 Whether redirection back across mission stacks is supported. This parameter controls the redirection-back logic across applications, altering the application transition behavior when the user presses the back button. For example, if UIAbility A is currently displayed and UIAbility B is launched with this parameter set to **true**, exiting UIAbility B will return to UIAbility A. If this parameter is not set, the system defaults to returning to the home screen. Note that this parameter is only supported for system applications and does not take effect for third-party applications.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Whether the ability has been restarted due to a fault.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Params-ABILITY_RECOVERY_RESTART = 'ohos.ability.params.abilityRecoveryRestart'--><!--Device-Params-ABILITY_RECOVERY_RESTART = 'ohos.ability.params.abilityRecoveryRestart'-End-->
@@ -58,13 +46,9 @@ Whether the ability has been restarted due to a fault.
 CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 ```
 
-Title for sharing in an atomic service. You can set the sharing title using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare) callback.
+Title for sharing in an atomic service. You can set the sharing title using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +62,9 @@ Title for sharing in an atomic service. You can set the sharing title using this
 SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 ```
 
-Content abstract for sharing in an atomic service. You can set the sharing abstract using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare) callback.
+Content abstract for sharing in an atomic service. You can set the sharing abstract using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,13 +78,9 @@ Content abstract for sharing in an atomic service. You can set the sharing abstr
 SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 ```
 
-URL link for sharing in an atomic service. You can set the URL link using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare) callback.
+URL link for sharing in an atomic service. You can set the URL link using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,10 +98,6 @@ Whether to migrate the page stack information during cross-device migration. The
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Params-SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'--><!--Device-Params-SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'-End-->
@@ -142,10 +114,6 @@ Whether the source application exits during cross-device migration. The default 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Params-SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'--><!--Device-Params-SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'-End-->
@@ -158,13 +126,9 @@ Whether the source application exits during cross-device migration. The default 
 SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 ```
 
-Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). The value is an enumerated value of [ShowMode](arkts-ability-wantconstant-showmode-e.md#ShowMode).
+Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#embeddableuiability). The value is an enumerated value of [ShowMode](arkts-ability-wantconstant-showmode-e.md#showmode).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -178,13 +142,9 @@ Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableui
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath). This field must be used in conjunction with file URI [read/write flag](arkts-ability-wantconstant-flags-e.md#Flags).
+List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath). This field must be used in conjunction with file URI [read/write flag](arkts-ability-wantconstant-flags-e.md#flags).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -202,10 +162,6 @@ Index of an application clone.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Params-APP_CLONE_INDEX_KEY = 'ohos.extra.param.key.appCloneIndex'--><!--Device-Params-APP_CLONE_INDEX_KEY = 'ohos.extra.param.key.appCloneIndex'-End-->
@@ -218,13 +174,9 @@ Index of an application clone.
 CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
 ```
 
-Request code that uniquely identifies the caller of startAbilityForResult or [openLink](arkts-ability-uiabilitycontext-c.md#openLink). When either of the APIs is called to start an ability, the target ability returns the result to the caller based on the request code.
+Request code that uniquely identifies the caller of startAbilityForResult or [openLink](arkts-ability-uiabilitycontext-c.md#openlink). When either of the APIs is called to start an ability, the target ability returns the result to the caller based on the request code.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -242,10 +194,6 @@ Page path for an atomic service. If page redirection in an atomic service is imp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Params-PAGE_PATH = 'ohos.param.atomicservice.pagePath'--><!--Device-Params-PAGE_PATH = 'ohos.param.atomicservice.pagePath'-End-->
@@ -261,10 +209,6 @@ ROUTER_NAME = 'ohos.param.atomicservice.routerName'
 Router name for page redirection in an atomic service. If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -282,10 +226,6 @@ Source file for the page in an atomic service. If page redirection in an atomic 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Params-PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'--><!--Device-Params-PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'-End-->
@@ -301,10 +241,6 @@ BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'
 Build function for the page in an atomic service. If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -322,10 +258,6 @@ Sub-package name for an atomic service. Application packages can be developed wi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Params-SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'--><!--Device-Params-SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'-End-->
@@ -342,10 +274,6 @@ Specific application instance. When you create [multiple instances](../../../qui
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Params-APP_INSTANCE_KEY = 'ohos.extra.param.key.appInstance'--><!--Device-Params-APP_INSTANCE_KEY = 'ohos.extra.param.key.appInstance'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -359,10 +287,6 @@ CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'
 Whether to create an application instance. The default value is **false**, indicating that no new application instance is created. You can set this parameter to **true** to launch a new application instance. Note that the application to be launched must support multiple instances. For details, see [Creating an Application Multi-Instance](../../../quick-start/multiInstance.md).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Params-CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'--><!--Device-Params-CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'-End-->
 
@@ -378,10 +302,6 @@ Clone index of the caller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Params-CALLER_APP_CLONE_INDEX = 'ohos.param.callerAppCloneIndex'--><!--Device-Params-CALLER_APP_CLONE_INDEX = 'ohos.param.callerAppCloneIndex'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -396,10 +316,6 @@ The target ability is a plugin ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Params-DESTINATION_PLUGIN_ABILITY = 'ohos.params.pluginAbility'--><!--Device-Params-DESTINATION_PLUGIN_ABILITY = 'ohos.params.pluginAbility'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -413,10 +329,6 @@ APP_LAUNCH_TRUSTLIST = 'ohos.params.appLaunchTrustList'
 Filter list of applications for implicit launch. Only applications in the list are matched during implicit launch. The value is an array of AppIdentifier of the string type. The filter list supports a maximum of 50 applications. Passing an empty array will have no effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -434,10 +346,6 @@ Page stack information of the atomic service being launched. This parameter take
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Params-ATOMIC_SERVICE_SHARE_ROUTER = 'ohos.params.atomicservice.shareRouter'--><!--Device-Params-ATOMIC_SERVICE_SHARE_ROUTER = 'ohos.params.atomicservice.shareRouter'-End-->
@@ -454,10 +362,6 @@ Reason for launching the application. The caller must be a system application an
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Params-LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'--><!--Device-Params-LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'-End-->
@@ -470,13 +374,9 @@ Reason for launching the application. The caller must be a system application an
 ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md#@ohos.data.unifiedDataChannel). This field can only be set by system applications, but third-party applications can read it. If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#Flags) or [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#Flags)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
+Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md#ohosdataunifieddatachannel). This field can only be set by system applications, but third-party applications can read it. If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#flags) or [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#flags)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

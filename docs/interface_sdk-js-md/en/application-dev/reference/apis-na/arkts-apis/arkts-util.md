@@ -4,9 +4,7 @@ The util module provides common utility functions, such as TextEncoder and TextD
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-declare namespace util--><!--Device-unnamed-declare namespace util-End-->
 
@@ -18,14 +16,14 @@ The util module provides common utility functions, such as TextEncoder and TextD
 
 | Name | Description |
 | --- | --- |
-| [callbackWrapper](arkts-na-util-callbackwrapper-f.md#callbackWrapper) | Takes an async function (or a function that returns a Promise) and returns a function following the error-first callback style. |
-| [errnoToString](arkts-na-util-errnotostring-f.md#errnoToString) | Get the string name of the system errno. |
+| [callbackWrapper](arkts-na-util-callbackwrapper-f.md#callbackwrapper) | Takes an async function (or a function that returns a Promise) and returns a function following the error-first callback style. |
+| [errnoToString](arkts-na-util-errnotostring-f.md#errnotostring) | Get the string name of the system errno. |
 | [format](arkts-na-util-format-f.md#format) | %s: String will be used to convert all values except BigInt, Object and -0. BigInt values will be represented with an n and Objects that have no user defined toString function are inspected using util.inspect() with options { depth: 0, colors: false, compact: 3 }. %d: Number will be used to convert all values except BigInt and Symbol. %i: parseInt(value, 10) is used for all values except BigInt and Symbol. %f: parseFloat(value) is used for all values except Bigint and Symbol. %j: JSON. Replaced with the string '[Circular]' if the argument contains circular references. %o: Object. A string representation of an object with generic JavaScript object formatting.Similar to util.inspect() with options { showHidden: true, showProxy: true}. This will show the full object including non-enumerable properties and proxies. %O: Object. A string representation of an object with generic JavaScript object formatting. %O: Object. A string representation of an object with generic JavaScript object formatting.Similar to util.inspect() without options. This will show the full object not including non-enumerable properties and proxies. %c: CSS. This specifier is ignored and will skip any CSS passed in. %%: single percent sign ('%'). This does not consume an argument.Returns: &lt;string&gt; The formatted string. |
-| [generateRandomBinaryUUID](arkts-na-util-generaterandombinaryuuid-f.md#generateRandomBinaryUUID) | Generate a random RFC 4122 version 4 binary UUID using a cryptographically secure random number generator. |
-| [generateRandomUUID](arkts-na-util-generaterandomuuid-f.md#generateRandomUUID) | Generate a random RFC 4122 version 4 UUID using a cryptographically secure random number generator. |
-| [getHash](arkts-na-util-gethash-f.md#getHash) | Get the hash code of an object. |
-| [getMainThreadStackTrace](arkts-na-util-getmainthreadstacktrace-f.md#getMainThreadStackTrace) | Get stack trace of main thread. |
-| [parseUUID](arkts-na-util-parseuuid-f.md#parseUUID) | Parse a UUID from the string standard representation as described in the RFC 4122 version 4. |
+| [generateRandomBinaryUUID](arkts-na-util-generaterandombinaryuuid-f.md#generaterandombinaryuuid) | Generate a random RFC 4122 version 4 binary UUID using a cryptographically secure random number generator. |
+| [generateRandomUUID](arkts-na-util-generaterandomuuid-f.md#generaterandomuuid) | Generate a random RFC 4122 version 4 UUID using a cryptographically secure random number generator. |
+| [getHash](arkts-na-util-gethash-f.md#gethash) | Get the hash code of an object. |
+| [getMainThreadStackTrace](arkts-na-util-getmainthreadstacktrace-f.md#getmainthreadstacktrace) | Get stack trace of main thread. |
+| [parseUUID](arkts-na-util-parseuuid-f.md#parseuuid) | Parse a UUID from the string standard representation as described in the RFC 4122 version 4. |
 | [promisify](arkts-na-util-promisify-f.md#promisify) | Takes a function following the common error-first callback style, i.e taking an (err, value) => callback as the last argument, and return a function that returns promises. |
 
 ### Classes

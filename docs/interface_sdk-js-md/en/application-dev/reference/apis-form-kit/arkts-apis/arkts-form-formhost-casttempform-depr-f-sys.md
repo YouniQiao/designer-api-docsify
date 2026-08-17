@@ -10,8 +10,6 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** castTempForm
@@ -41,8 +39,6 @@ function castTempForm(formId: string): Promise<void>
 Converts a temporary widget to a normal one. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

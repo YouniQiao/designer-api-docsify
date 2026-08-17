@@ -4,9 +4,7 @@ PasswordIcon object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export interface PasswordIcon--><!--Device-unnamed-export interface PasswordIcon-End-->
 
@@ -24,9 +22,7 @@ Define the off icon source of PasswordIcon. &lt;p&gt;&lt;strong&gt;NOTE&lt;/stro
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,9 +42,7 @@ Define the on icon source of PasswordIcon. &lt;p&gt;&lt;strong&gt;NOTE&lt;/stron
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

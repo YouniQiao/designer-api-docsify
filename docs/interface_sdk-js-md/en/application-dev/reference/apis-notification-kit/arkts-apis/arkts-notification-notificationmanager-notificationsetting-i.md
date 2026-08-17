@@ -4,10 +4,6 @@ Describes the setting status of the notification mode switch.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export interface NotificationSetting--><!--Device-notificationManager-export interface NotificationSetting-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -30,10 +26,6 @@ Whether to enable the display of notification badges. - **true**: enable. - **fa
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NotificationSetting-badgeNumberEnabled?: boolean--><!--Device-NotificationSetting-badgeNumberEnabled?: boolean-End-->
@@ -51,10 +43,6 @@ Whether to enable banner notification. - **true**: enable. - **false**: disable.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Whether to enable lock screen notification. - **true**: enable. - **false**: dis
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NotificationSetting-lockScreenEnabled?: boolean--><!--Device-NotificationSetting-lockScreenEnabled?: boolean-End-->
@@ -95,10 +79,6 @@ Whether to enable the application notification. - **true**: enable. - **false**:
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ Whether to enable ringtone. - **true**: enable. - **false**: disable.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotificationSetting-soundEnabled: boolean--><!--Device-NotificationSetting-soundEnabled: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -137,10 +113,6 @@ Whether to enable vibration. - **true**: enable. - **false**: disable.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotificationSetting-vibrationEnabled: boolean--><!--Device-NotificationSetting-vibrationEnabled: boolean-End-->
 

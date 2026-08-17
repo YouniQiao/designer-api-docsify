@@ -16,10 +16,6 @@ Checks whether the trace flag is enabled for **HiTraceId**. This API returns the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiTraceChain-function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean--><!--Device-hiTraceChain-function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -37,7 +33,7 @@ Checks whether the trace flag is enabled for **HiTraceId**. This API returns the
 | --- | --- |
 | boolean | The value **true** indicates that the flag for **HiTraceId** is enabled, and **false** indicates the opposite. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Start tracing. The tracing flag is INCLUDE_ASYNC.

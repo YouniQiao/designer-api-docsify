@@ -1,12 +1,8 @@
 # AudioManager
 
-This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager) to obtain an AudioManager instance.
+This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager) to obtain an AudioManager instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
 
@@ -27,10 +23,6 @@ disableSafeMediaVolume(): Promise<void>
 user disable the safe media volume state.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -53,7 +45,7 @@ user disable the safe media volume state.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -74,10 +66,6 @@ getCollaborativeManager(): AudioCollaborativeManager
 Obtains a collaborative playback management instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager--><!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager-End-->
 
@@ -103,13 +91,9 @@ Obtains a collaborative playback management instance.
 getEffectManager(): AudioEffectManager
 ```
 
-Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#AudioEffectManager-(System-API)) instance.
+Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#audioeffectmanager-system-api) instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioManager-getEffectManager(): AudioEffectManager--><!--Device-AudioManager-getEffectManager(): AudioEffectManager-End-->
 
@@ -129,7 +113,7 @@ Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#Au
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -146,10 +130,6 @@ getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<str
 Obtains the values of a certain key. This method uses a promise to return the query result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>--><!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>-End-->
 
@@ -178,7 +158,7 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -201,8 +181,6 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** ringerModeChange
@@ -220,7 +198,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 | type | 'ringerModeChange' | Yes | Type of the event to listen for. Only the ringerModeChange event is supported. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to get the updated ringer mode. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
@@ -237,8 +215,6 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 Listens for system volume change events. This method uses a callback to get volume change events.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -257,7 +233,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | type | 'volumeChange' | Yes | Type of the event to listen for. Only the volumeChange event is supported. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
@@ -277,10 +253,6 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -294,7 +266,7 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 | scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | Yes | Audio scene mode. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -318,10 +290,6 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>--><!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -340,7 +308,7 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -361,10 +329,6 @@ setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<vo
 Sets extra audio parameters. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -396,7 +360,7 @@ Sets extra audio parameters. This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -7,7 +7,7 @@
 
 | Name | Description |
 | --- | --- |
-| [WindowScene](arkts-na-windowscene-windowscene-f-sys.md#WindowScene-(System-API)) | Defines the WindowScene Component. |
+| [WindowScene](arkts-na-windowscene-windowscene-f-sys.md#windowscene-system-api) | Defines the WindowScene Component. |
 <!--DelEnd-->
 
 ### Interfaces

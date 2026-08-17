@@ -4,9 +4,7 @@ Define AbstractProperty&lt;T&gt; interface. AbstractProperty can be understood a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface AbstractProperty--><!--Device-unnamed-export declare interface AbstractProperty-End-->
 
@@ -22,9 +20,7 @@ Reads value of the referenced AppStorage/LocalStorage property.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,9 +42,7 @@ info(): string
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-AbstractProperty-info(): string--><!--Device-AbstractProperty-info(): string-End-->
 
@@ -66,9 +60,7 @@ onChange(onChangeFunc: OnChangeType<T> | undefined): void
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-AbstractProperty-onChange(onChangeFunc: OnChangeType<T> | undefined): void--><!--Device-AbstractProperty-onChange(onChangeFunc: OnChangeType<T> | undefined): void-End-->
 
@@ -86,9 +78,7 @@ set(newValue: T): void
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-AbstractProperty-set(newValue: T): void--><!--Device-AbstractProperty-set(newValue: T): void-End-->
 
@@ -108,9 +98,7 @@ Register callback function to be called on value change of the referenced proper
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

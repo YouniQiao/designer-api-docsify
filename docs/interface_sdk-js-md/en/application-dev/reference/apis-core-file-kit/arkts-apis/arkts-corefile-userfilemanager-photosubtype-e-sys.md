@@ -1,10 +1,8 @@
 # PhotoSubType (System API)
 
-Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md#FileAsset-(System-API)) types.
+Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md#fileasset-system-api) types.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -26,8 +24,6 @@ Default (photo) type.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** DEFAULT
@@ -48,8 +44,6 @@ Screenshots and screen recording files.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** SCREENSHOT
@@ -69,8 +63,6 @@ CAMERA
 Photos and videos taken by a camera.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 26.0.0
 

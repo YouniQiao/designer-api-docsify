@@ -16,10 +16,6 @@ Obtains the list of widget IDs at a specified location on the device. This API u
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
@@ -51,7 +47,7 @@ Obtains the list of widget IDs at a specified location on the device. This API u
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { formHost, formInfo } from '@kit.FormKit';

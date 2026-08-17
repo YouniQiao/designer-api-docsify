@@ -16,10 +16,6 @@ Removes the current process from the candidate master process list. This API use
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-application-export function demoteCurrentFromCandidateMasterProcess(): Promise<void>--><!--Device-application-export function demoteCurrentFromCandidateMasterProcess(): Promise<void>-End-->
@@ -40,7 +36,7 @@ Removes the current process from the candidate master process list. This API use
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000117](../errorcode-ability.md#16000117-process-is-not-a-candidate-master-process) | The current process is not a candidate master process and does not support cancellation. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';

@@ -16,8 +16,6 @@ Translates this matrix object along the x, y, and z axes.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)

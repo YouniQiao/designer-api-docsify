@@ -4,8 +4,6 @@ Defines the content of data change notifications, including inserted data, updat
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** ChangeNotification
@@ -25,8 +23,6 @@ Data deleted.
 **Type:** Entry[]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ UUID of the device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** deviceId
@@ -70,8 +64,6 @@ Data inserted.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** insertEntries
@@ -91,8 +83,6 @@ Data updated.
 **Type:** Entry[]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-appAccount-interface SetPropertiesOptions--><!--Device-appAccount-interface SetPropertiesOptions-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -24,10 +20,6 @@ parameters?: Record<string, RecordData>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-SetPropertiesOptions-parameters?: Record<string, RecordData>--><!--Device-SetPropertiesOptions-parameters?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -43,10 +35,6 @@ properties?: Record<string, RecordData>
 **类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-SetPropertiesOptions-properties?: Record<string, RecordData>--><!--Device-SetPropertiesOptions-properties?: Record<string, RecordData>-End-->
 

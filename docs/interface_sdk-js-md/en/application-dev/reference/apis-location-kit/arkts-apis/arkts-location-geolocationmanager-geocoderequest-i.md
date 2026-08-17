@@ -4,10 +4,6 @@ Configuring parameters in geocode requests.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-geoLocationManager-export interface GeoCodeRequest--><!--Device-geoLocationManager-export interface GeoCodeRequest-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -30,10 +26,6 @@ Indicates the country information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeoCodeRequest-country?: string--><!--Device-GeoCodeRequest-country?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -49,10 +41,6 @@ Address information.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-description: string--><!--Device-GeoCodeRequest-description: string-End-->
 
@@ -70,10 +58,6 @@ Indicates the language area information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeoCodeRequest-locale?: string--><!--Device-GeoCodeRequest-locale?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -89,10 +73,6 @@ Indicates the maximum number of geocode query results.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-maxItems?: int--><!--Device-GeoCodeRequest-maxItems?: int-End-->
 
@@ -110,10 +90,6 @@ Indicates the maximum latitude for geocoding query results.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeoCodeRequest-maxLatitude?: double--><!--Device-GeoCodeRequest-maxLatitude?: double-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -129,10 +105,6 @@ Indicates the maximum longitude for geocoding query results.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-maxLongitude?: double--><!--Device-GeoCodeRequest-maxLongitude?: double-End-->
 
@@ -150,10 +122,6 @@ Indicates the minimum latitude for geocoding query results.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GeoCodeRequest-minLatitude?: double--><!--Device-GeoCodeRequest-minLatitude?: double-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
@@ -169,10 +137,6 @@ Indicates the minimum longitude for geocoding query results.
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-minLongitude?: double--><!--Device-GeoCodeRequest-minLongitude?: double-End-->
 

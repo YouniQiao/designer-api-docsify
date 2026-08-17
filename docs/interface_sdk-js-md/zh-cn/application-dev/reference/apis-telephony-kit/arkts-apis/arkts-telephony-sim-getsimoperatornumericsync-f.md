@@ -10,10 +10,6 @@ Obtains the home PLMN number of the SIM card in a specified slot. &lt;p&gt;The v
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sim-function getSimOperatorNumericSync(slotId: int): string--><!--Device-sim-function getSimOperatorNumericSync(slotId: int): string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
@@ -30,7 +26,7 @@ Obtains the home PLMN number of the SIM card in a specified slot. &lt;p&gt;The v
 | --- | --- |
 | string | Returns the PLMN number; returns an empty string if no SIM card is inserted. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

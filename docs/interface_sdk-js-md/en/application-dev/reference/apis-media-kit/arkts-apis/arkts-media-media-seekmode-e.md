@@ -4,10 +4,6 @@ Enumerates the video playback seek modes, which can be passed in the **seek** AP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum SeekMode--><!--Device-media-enum SeekMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -21,10 +17,6 @@ SEEK_NEXT_SYNC = 0
 Seeks to the next key frame at the specified position. You are advised to use this value for the rewind operation.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ Seeks to the previous key frame at the specified position. You are advised to us
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SeekMode-SEEK_PREV_SYNC = 1--><!--Device-SeekMode-SEEK_PREV_SYNC = 1-End-->
@@ -62,10 +50,6 @@ Seeks to the frame closest to the specified position. You are advised to use thi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SeekMode-SEEK_CLOSEST = 2--><!--Device-SeekMode-SEEK_CLOSEST = 2-End-->
@@ -78,13 +62,9 @@ Seeks to the frame closest to the specified position. You are advised to use thi
 SEEK_CONTINUOUS = 3
 ```
 
-Offers a smooth and fluid visual experience for seeking. Applications can use a progress bar component to continuously invoke the **seek** method, and the AVPlayer will update the video frames smoothly in response to these calls. Applications can call [isSeekContinuousSupported](arkts-media-media-avplayer-i.md#isSeekContinuousSupported) to check whether the video source supports this seeking mode. If the video source does not support this mode, calling **seek** will result in an **AVERR_SEEK_CONTINUOUS_UNSUPPORTED** error (see [AVErrorCode](arkts-media-media-averrorcode-e.md#AVErrorCode)), and the smoothness of frame updates will be compromised. This seek mode does not trigger the [on('seekDone')](arkts-media-media-avplayer-i.md#on_mediaKeySystemInfoUpdate) event. To exit this seeking mode, applications must call **seek(-1, SeekMode.SEEK_CONTINUOUS)** to end the seeking process.
+Offers a smooth and fluid visual experience for seeking. Applications can use a progress bar component to continuously invoke the **seek** method, and the AVPlayer will update the video frames smoothly in response to these calls. Applications can call [isSeekContinuousSupported](arkts-media-media-avplayer-i.md#isseekcontinuoussupported) to check whether the video source supports this seeking mode. If the video source does not support this mode, calling **seek** will result in an **AVERR_SEEK_CONTINUOUS_UNSUPPORTED** error (see [AVErrorCode](arkts-media-media-averrorcode-e.md#averrorcode)), and the smoothness of frame updates will be compromised. This seek mode does not trigger the [on('seekDone')](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate) event. To exit this seeking mode, applications must call **seek(-1, SeekMode.SEEK_CONTINUOUS)** to end the seeking process.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

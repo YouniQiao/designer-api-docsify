@@ -1,14 +1,12 @@
-# USBInterface
+# USBInterface(USB Manager)
 
-Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.md#USBConfig) can contain multiple **USBInterface** instances, each providing a specific function.
+Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.md#usbconfig) can contain multiple **USBInterface** instances, each providing a specific function.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md#USBInterface)
+**Substitutes:** [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md#usbinterface)
 
 <!--Device-usb-interface USBInterface--><!--Device-usb-interface USBInterface-End-->
 
@@ -32,11 +30,9 @@ Settings for alternating between descriptors of the same USB interface.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [alternateSetting](arkts-basicservices-usbmanager-usbinterface-i.md#alternateSetting)
+**Substitutes:** [alternateSetting](arkts-basicservices-usbmanager-usbinterface-i.md#alternatesetting)
 
 <!--Device-USBInterface-alternateSetting: number--><!--Device-USBInterface-alternateSetting: number-End-->
 
@@ -53,8 +49,6 @@ Device type.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,8 +70,6 @@ Endpoints that belong to the USB interface.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [endpoints](arkts-basicservices-usbmanager-usbinterface-i.md#endpoints)
@@ -97,8 +89,6 @@ Unique ID of the USB interface.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -120,8 +110,6 @@ Interface name.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [name](arkts-basicservices-usbmanager-usbinterface-i.md#name)
@@ -141,8 +129,6 @@ Interface protocol.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -164,11 +150,9 @@ Device subclass.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [subClass](arkts-basicservices-usbmanager-usbinterface-i.md#subClass)
+**Substitutes:** [subClass](arkts-basicservices-usbmanager-usbinterface-i.md#subclass)
 
 <!--Device-USBInterface-subClass: number--><!--Device-USBInterface-subClass: number-End-->
 

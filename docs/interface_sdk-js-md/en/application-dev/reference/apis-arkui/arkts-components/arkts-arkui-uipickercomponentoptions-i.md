@@ -4,10 +4,6 @@ Describes the parameters of the **UIPickerComponent** container.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare interface UIPickerComponentOptions--><!--Device-unnamed-declare interface UIPickerComponentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Index of the selected item. Value range: an integer in the range of [0, Number o
 **Default:** 0
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

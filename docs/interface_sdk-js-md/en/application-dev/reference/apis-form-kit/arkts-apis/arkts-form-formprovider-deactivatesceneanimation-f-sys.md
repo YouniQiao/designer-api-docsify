@@ -16,10 +16,6 @@ Requests to deactivate a widget. This API takes effect only for [scene-based wid
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formProvider-function deactivateSceneAnimation(formId: string): Promise<void>--><!--Device-formProvider-function deactivateSceneAnimation(formId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form

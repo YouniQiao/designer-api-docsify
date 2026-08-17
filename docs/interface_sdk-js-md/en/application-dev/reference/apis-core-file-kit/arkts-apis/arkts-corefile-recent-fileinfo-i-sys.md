@@ -4,8 +4,6 @@ Represents information about the recent file list.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 <!--Device-recent-interface FileInfo--><!--Device-recent-interface FileInfo-End-->
@@ -32,8 +30,6 @@ Time when the file was created. <br>Unit: second.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -56,8 +52,6 @@ File name.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -74,13 +68,11 @@ File name.
 readonly mode: number
 ```
 
-[Permissions on the file](arkts-corefile-file-fs-stat-i.md#Stat).
+[Permissions on the file](arkts-corefile-file-fs-stat-i.md#stat).
 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 
@@ -104,8 +96,6 @@ Time when the file was last modified. <br>Unit: ms.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -127,8 +117,6 @@ File size, in bytes.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 
@@ -152,8 +140,6 @@ File path.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -175,8 +161,6 @@ File URI.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 

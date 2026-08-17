@@ -4,10 +4,6 @@ Enumerates the scenarios of the onscreen content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-onScreen-export enum Scenario--><!--Device-onScreen-export enum Scenario-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -21,10 +17,6 @@ UNKNOWN = 0
 Unknown scenario.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Scenario-UNKNOWN = 0--><!--Device-Scenario-UNKNOWN = 0-End-->
 
@@ -41,10 +33,6 @@ ARTICLE = 1
 Article scenario.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-Scenario-ARTICLE = 1--><!--Device-Scenario-ARTICLE = 1-End-->
 

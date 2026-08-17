@@ -4,9 +4,7 @@ Define file selection type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface AcceptableFileType--><!--Device-unnamed-export declare interface AcceptableFileType-End-->
 
@@ -24,9 +22,7 @@ Array of file types accepted by web pages.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AcceptableFileType-acceptableType: Array<string>--><!--Device-AcceptableFileType-acceptableType: Array<string>-End-->
 
@@ -44,9 +40,7 @@ A annotated file type identifier used to describe the format and content type of
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-AcceptableFileType-mimeType: string--><!--Device-AcceptableFileType-mimeType: string-End-->
 

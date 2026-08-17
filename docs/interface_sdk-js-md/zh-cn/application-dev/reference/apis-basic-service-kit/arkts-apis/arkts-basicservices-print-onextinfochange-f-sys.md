@@ -10,10 +10,6 @@ Register event callback for the information change of print extension.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 <!--Device-print-function onExtInfoChange(callback: ExtInfoChangeCallback): void--><!--Device-print-function onExtInfoChange(callback: ExtInfoChangeCallback): void-End-->

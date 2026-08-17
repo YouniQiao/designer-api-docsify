@@ -16,10 +16,6 @@
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace backgroundLoader--><!--Device-unnamed-declare namespace backgroundLoader-End-->
@@ -38,10 +34,10 @@ import { backgroundLoader } from 'backgroundLoader';
 
 | Name | Description |
 | --- | --- |
-| [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md#finishTask) | Finish background load task. |
-| [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md#getTaskInfo) | Obtains the information of a background load task. This API returns the result via a promise. |
-| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md#registerTask) | Register background load task. |
-| [unregisterTask](arkts-backgroundtasks-backgroundloader-unregistertask-f.md#unregisterTask) | Unregister background load task. |
+| [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md#finishtask) | Finish background load task. |
+| [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md#gettaskinfo) | Obtains the information of a background load task. This API returns the result via a promise. |
+| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md#registertask) | Register background load task. |
+| [unregisterTask](arkts-backgroundtasks-backgroundloader-unregistertask-f.md#unregistertask) | Unregister background load task. |
 
 ### Interfaces
 
@@ -60,6 +56,6 @@ import { backgroundLoader } from 'backgroundLoader';
 
 | Name | Description |
 | --- | --- |
-| [ON_START](arkts-backgroundtasks-backgroundloader-con.md#ON_START) | Start task method. |
-| [ON_STOP](arkts-backgroundtasks-backgroundloader-con.md#ON_STOP) | Stop task method. |
+| [ON_START](arkts-backgroundtasks-backgroundloader-con.md#onstart) | Start task method. |
+| [ON_STOP](arkts-backgroundtasks-backgroundloader-con.md#onstop) | Stop task method. |
 

@@ -4,9 +4,7 @@ Defines the first screen paint info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface FirstScreenPaint--><!--Device-unnamed-export declare interface FirstScreenPaint-End-->
 
@@ -24,9 +22,7 @@ The first screen paint time of the url.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-FirstScreenPaint-firstScreenPaintTime: long--><!--Device-FirstScreenPaint-firstScreenPaintTime: long-End-->
 
@@ -44,9 +40,7 @@ The navigation start time of the url. <br>Unit:milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-FirstScreenPaint-navigationStartTime: long--><!--Device-FirstScreenPaint-navigationStartTime: long-End-->
 
@@ -64,9 +58,7 @@ The url of first screen paint info. <br>Unit:milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-FirstScreenPaint-url: string--><!--Device-FirstScreenPaint-url: string-End-->
 

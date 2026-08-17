@@ -16,10 +16,6 @@ Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-metadataBinding-function submitMetadata(metadata: string): void--><!--Device-metadataBinding-function submitMetadata(metadata: string): void-End-->
@@ -38,7 +34,7 @@ Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to
 | --- | --- |
 | [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';

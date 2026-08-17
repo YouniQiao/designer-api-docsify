@@ -16,10 +16,6 @@ Relinquishes the [master-process](../../../application-models/ability-terminolog
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-application-export function exitMasterProcessRole(): Promise<void>--><!--Device-application-export function exitMasterProcessRole(): Promise<void>-End-->
@@ -40,7 +36,7 @@ Relinquishes the [master-process](../../../application-models/ability-terminolog
 | [16000118](../errorcode-ability.md#16000118-process-is-not-the-master-process) | Not a master process. |
 | [16000119](../errorcode-ability.md#16000119-pending-request-exists) | Cannot exit because there is an unfinished request. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';

@@ -10,11 +10,9 @@ Removes all notifications for a specified application. This API uses an asynchro
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll-(System-API))
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,11 +40,9 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll-(System-API))
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -73,11 +69,9 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll-(System-API))
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -105,11 +99,9 @@ Removes all notifications for a specified user. This API uses a promise to retur
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll-(System-API))
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -142,11 +134,9 @@ Removes all notifications for a specified application. This API uses a promise t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll-(System-API))
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

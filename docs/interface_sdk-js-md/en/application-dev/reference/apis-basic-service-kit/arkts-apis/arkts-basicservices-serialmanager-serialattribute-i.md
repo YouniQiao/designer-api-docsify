@@ -4,10 +4,6 @@ Represents the configuration parameters of a serial port.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-serialManager-interface SerialAttribute--><!--Device-serialManager-interface SerialAttribute-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -30,10 +26,6 @@ Baud rate.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SerialAttribute-baudRate: BaudRates--><!--Device-SerialAttribute-baudRate: BaudRates-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -51,10 +43,6 @@ Data bits. The default value is **8**.
 **Default:** DATABIT_8
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SerialAttribute-dataBits?: DataBits--><!--Device-SerialAttribute-dataBits?: DataBits-End-->
 
@@ -74,10 +62,6 @@ Parity check. The default value is **None**, indicating that no parity check is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SerialAttribute-parity?: Parity--><!--Device-SerialAttribute-parity?: Parity-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -95,10 +79,6 @@ Stop bits. The default value is **1**.
 **Default:** STOPBIT_1
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SerialAttribute-stopBits?: StopBits--><!--Device-SerialAttribute-stopBits?: StopBits-End-->
 

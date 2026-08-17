@@ -4,10 +4,6 @@ Represents the parameters of a serial port.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-serialManager-interface SerialPort--><!--Device-serialManager-interface SerialPort-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -30,10 +26,6 @@ Serial port device name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SerialPort-deviceName: string--><!--Device-SerialPort-deviceName: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
@@ -49,10 +41,6 @@ Port number.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SerialPort-portId: int--><!--Device-SerialPort-portId: int-End-->
 

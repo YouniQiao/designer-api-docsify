@@ -8,10 +8,6 @@ Defines an observer for obtaining the transfer progress.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedDataObject-type ProgressObserver = (sessionId: string, progress: int) => void--><!--Device-distributedDataObject-type ProgressObserver = (sessionId: string, progress: int) => void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject

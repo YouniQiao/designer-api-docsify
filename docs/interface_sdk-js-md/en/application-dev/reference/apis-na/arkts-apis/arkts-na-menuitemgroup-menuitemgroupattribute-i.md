@@ -6,9 +6,7 @@ Defines the MenuItemGroup component attribute functions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface MenuItemGroupAttribute--><!--Device-unnamed-export declare interface MenuItemGroupAttribute-End-->
 
@@ -25,9 +23,7 @@ Set the attribute modifier
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,9 +51,7 @@ setMenuItemGroupOptions(value?: MenuItemGroupOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Sta only, since version -1.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
 
 <!--Device-MenuItemGroupAttribute-setMenuItemGroupOptions(value?: MenuItemGroupOptions): this--><!--Device-MenuItemGroupAttribute-setMenuItemGroupOptions(value?: MenuItemGroupOptions): this-End-->
 
@@ -83,9 +77,7 @@ Set menuitemgroup options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

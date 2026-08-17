@@ -10,10 +10,6 @@ Unregister the callback for brightness info changes.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-display-function offBrightnessInfoChange(callback?: BrightnessCallback<long, BrightnessInfo>): void--><!--Device-display-function offBrightnessInfoChange(callback?: BrightnessCallback<long, BrightnessInfo>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -32,7 +28,7 @@ Unregister the callback for brightness info changes.
 | [1400004](../errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1. Invalid parameter range. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
-## 示例
+**示例**
 
 ```TypeScript
 let callback: display.BrightnessCallback<long, display.BrightnessInfo> = (id: long, data: display.BrightnessInfo) => {

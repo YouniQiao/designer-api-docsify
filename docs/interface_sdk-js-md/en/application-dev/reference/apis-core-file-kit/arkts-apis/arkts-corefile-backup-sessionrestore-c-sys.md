@@ -4,10 +4,6 @@ Control class for restore procedure.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-backup-class SessionRestore--><!--Device-backup-class SessionRestore-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -29,10 +25,6 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: stri
 Append new bundles and restoreInfos to be restore up during the restore.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -68,7 +60,7 @@ Append new bundles and restoreInfos to be restore up during the restore.
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -171,10 +163,6 @@ Append new bundles to be restore up during the restore.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: AsyncCallback<void>): void--><!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: AsyncCallback<void>): void-End-->
@@ -203,7 +191,7 @@ Append new bundles to be restore up during the restore.
 | 13900042 | Unknown error |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -286,10 +274,6 @@ cancel the application being restore.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-cancel(bundleName: string): int--><!--Device-SessionRestore-cancel(bundleName: string): int-End-->
@@ -318,7 +302,7 @@ cancel the application being restore.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs, backup} from '@kit.CoreFileKit';
@@ -388,10 +372,6 @@ Provides an interface for the tool to clear temporary directories
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-cleanBundleTempDir(bundleName: string): Promise<boolean>--><!--Device-SessionRestore-cleanBundleTempDir(bundleName: string): Promise<boolean>-End-->
@@ -419,7 +399,7 @@ Provides an interface for the tool to clear temporary directories
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';
@@ -495,10 +475,6 @@ Constructor for obtaining the instance of the SessionBackup class.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-constructor(callbacks: GeneralCallbacks)--><!--Device-SessionRestore-constructor(callbacks: GeneralCallbacks)-End-->
@@ -513,7 +489,7 @@ Constructor for obtaining the instance of the SessionBackup class.
 | --- | --- | --- | --- |
 | callbacks | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | Yes | Callbacks to be registered for the restore. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs, backup} from '@kit.CoreFileKit';
@@ -572,10 +548,6 @@ Get the file handle of an APK file.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 **Model restriction:** This API can be used only in the stage model.
@@ -619,10 +591,6 @@ Provides an interface for the tool to get compatibility info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>--><!--Device-SessionRestore-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>-End-->
@@ -651,7 +619,7 @@ Provides an interface for the tool to get compatibility info.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo, backup } from '@kit.CoreFileKit';
@@ -726,10 +694,6 @@ Request to get a shared file from the service. This interface is part of the zer
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta): Promise<void>-End-->
@@ -759,7 +723,7 @@ Request to get a shared file from the service. This interface is part of the zer
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs, backup} from '@kit.CoreFileKit';
@@ -831,10 +795,6 @@ Request to get a shared file from the service. This interface is part of the zer
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void--><!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void-End-->
@@ -859,7 +819,7 @@ Request to get a shared file from the service. This interface is part of the zer
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs, backup} from '@kit.CoreFileKit';
@@ -928,10 +888,6 @@ Request to get shared files from the service. This interface is part of the zero
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 **Model restriction:** This API can be used only in the stage model.
@@ -974,10 +930,6 @@ Obtain a Json file that describes local capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-getLocalCapabilities(): Promise<FileData>--><!--Device-SessionRestore-getLocalCapabilities(): Promise<FileData>-End-->
@@ -1003,7 +955,7 @@ Obtain a Json file that describes local capabilities.
 | 13600001 | IPC error |
 | 13900042 | Internal error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1140,10 +1092,6 @@ Migrate file from source path to destination path.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1187,10 +1135,6 @@ Publish the file handle to the backup service to make the service aware that the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-publishFile(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-publishFile(fileMeta: FileMeta): Promise<void>-End-->
@@ -1220,7 +1164,7 @@ Publish the file handle to the backup service to make the service aware that the
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs, backup} from '@kit.CoreFileKit';
@@ -1304,10 +1248,6 @@ Publish the file handle to the backup service to make the service aware that the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void--><!--Device-SessionRestore-publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void-End-->
@@ -1332,7 +1272,7 @@ Publish the file handle to the backup service to make the service aware that the
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs, backup} from '@kit.CoreFileKit';
@@ -1418,10 +1358,6 @@ End restore process
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.BACKUP
 
 <!--Device-SessionRestore-release(): Promise<void>--><!--Device-SessionRestore-release(): Promise<void>-End-->
@@ -1448,7 +1384,7 @@ End restore process
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { fileIo as fs, backup} from '@kit.CoreFileKit';

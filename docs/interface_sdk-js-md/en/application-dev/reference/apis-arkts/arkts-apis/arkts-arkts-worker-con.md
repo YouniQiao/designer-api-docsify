@@ -10,11 +10,9 @@ The object used by the worker thread to communicate with the host thread.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [workerPort](#workerPort)
+**Substitutes:** [workerPort](#workerport)
 
 <!--Device-worker-const parentPort: DedicatedWorkerGlobalScope--><!--Device-worker-const parentPort: DedicatedWorkerGlobalScope-End-->
 
@@ -29,10 +27,6 @@ const workerPort: ThreadWorkerGlobalScope
 The object used by the worker thread to communicate with the host thread.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -10,10 +10,6 @@ function getManagedBrowserPolicy(admin: Want, bundleName: string): ArrayBuffer
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-browser-function getManagedBrowserPolicy(admin: Want, bundleName: string): ArrayBuffer--><!--Device-browser-function getManagedBrowserPolicy(admin: Want, bundleName: string): ArrayBuffer-End-->
@@ -40,7 +36,7 @@ function getManagedBrowserPolicy(admin: Want, bundleName: string): ArrayBuffer
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';
@@ -61,7 +57,7 @@ try {
   let decoder: util.TextDecoder = util.TextDecoder.create('utf-8');
   let stringData: string = decoder.decodeToString(intBuffer);
   console.info(`Succeeded in getting managed browser policy, result : ${stringData}`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to get managed browser policy. Code is ${err.code}, message is ${err.message}`);
 }
 ```

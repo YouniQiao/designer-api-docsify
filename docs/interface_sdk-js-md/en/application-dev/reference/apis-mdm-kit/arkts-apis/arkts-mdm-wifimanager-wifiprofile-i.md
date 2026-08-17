@@ -4,10 +4,6 @@ Represents the Wi-Fi configuration information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-wifiManager-interface WifiProfile--><!--Device-wifiManager-interface WifiProfile-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,10 +26,6 @@ MAC address of the Wi-Fi hotspot, with a length of 6 bytes. For example, **00:11
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiProfile-bssid?: string--><!--Device-WifiProfile-bssid?: string-End-->
@@ -51,10 +43,6 @@ ID of the user who creates the network. The default value is **-1**.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Disabling reason. The default value is **0**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiProfile-disableReason?: number--><!--Device-WifiProfile-disableReason?: number-End-->
@@ -95,10 +79,6 @@ Extensible Authentication Protocol (EAP) configuration. This field is mandatory 
 **Type:** [WifiEapProfile](arkts-mdm-wifimanager-wifieapprofile-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,10 +98,6 @@ IP address type. The default value is **DHCP**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiProfile-ipType?: IpType--><!--Device-WifiProfile-ipType?: IpType-End-->
@@ -139,10 +115,6 @@ Whether the network is hidden. The value **true** indicates yes, and the value *
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,10 +134,6 @@ Allocated network ID. The default value is **-1**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiProfile-netId?: number--><!--Device-WifiProfile-netId?: number-End-->
@@ -183,10 +151,6 @@ Key of the hotspot, which is used for Wi-Fi connection authentication. The maxim
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,10 +170,6 @@ MAC address. This field is mandatory when **randomMacType** is set to device MAC
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiProfile-randomMacAddr?: string--><!--Device-WifiProfile-randomMacAddr?: string-End-->
@@ -227,10 +187,6 @@ Random MAC. The value **0** indicates random MAC address, and the value **1** in
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,10 +206,6 @@ Security type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiProfile-securityType: WifiSecurityType--><!--Device-WifiProfile-securityType: WifiSecurityType-End-->
@@ -272,10 +224,6 @@ Wi-Fi hotspot name. The maximum length is 32 bytes, and the encoding format is U
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiProfile-ssid: string--><!--Device-WifiProfile-ssid: string-End-->
@@ -293,10 +241,6 @@ Static IP address information. This field is mandatory when **ipType** is set to
 **Type:** [IpProfile](arkts-mdm-wifimanager-ipprofile-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

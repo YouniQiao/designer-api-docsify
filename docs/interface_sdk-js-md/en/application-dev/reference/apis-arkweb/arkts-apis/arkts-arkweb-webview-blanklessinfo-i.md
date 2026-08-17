@@ -1,12 +1,8 @@
 # BlanklessInfo
 
-Describes the prediction information about blankless loading, including the first screen similarity, first screen loading duration, and error code. The application determines whether to enable the blankless loading solution based on the prediction information.
+Prediction information about the first screen loading of the page, mainly including the predicted first screen similarity, predicted first screen loading duration, and predicted error code. The app determines whether to enable the White-Screen-Free Loading frame interpolation scheme based on this information.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-webview-interface BlanklessInfo--><!--Device-webview-interface BlanklessInfo-End-->
 
@@ -24,15 +20,11 @@ import { webview } from 'webview';
 errCode: WebBlanklessErrorCode
 ```
 
-Error code of blankless loading. For details, see [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md#WebBlanklessErrorCode).
+Error code of blankless loading. For details, see [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md#webblanklesserrorcode).
 
 **Type:** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-BlanklessInfo-errCode: WebBlanklessErrorCode--><!--Device-BlanklessInfo-errCode: WebBlanklessErrorCode-End-->
 
@@ -44,15 +36,11 @@ Error code of blankless loading. For details, see [WebBlanklessErrorCode](arkts-
 loadingTime: number
 ```
 
-Loading duration estimated based on the historical first screen loading durations, in milliseconds. The value must be greater than 0.
+Predicts the loading time of the current load based on the first screen loading time of historical loads. Unit: ms. Value range: greater than 0.
 
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-BlanklessInfo-loadingTime: number--><!--Device-BlanklessInfo-loadingTime: number-End-->
 
@@ -64,15 +52,11 @@ Loading duration estimated based on the historical first screen loading duration
 similarity: number
 ```
 
-First screen similarity, which is calculated based on the historical first screen content. The value ranges from 0 to 1.0. 1.0 indicates that the content is the same. A value closer to 1 indicates a higher similarity. This value is lagging, and the similarity of local loading is displayed in the next loading. You are advised not to enable the blankless loading solution when the similarity is low.
+Similarity of the first screen. The similarity is calculated based on the first screen content of historical loads. The value ranges from [0, 1.0], where **1.0** indicates a complete match. The closer the value is to 1, the higher the similarity. This value has a lagging nature, meaning the similarity of a local load will only be reflected in the next load. It is recommended that the app does not enable the white-screen-free loading frame insertion solution when the similarity is below a specific threshold (for example, 0.33).
 
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-BlanklessInfo-similarity: number--><!--Device-BlanklessInfo-similarity: number-End-->
 

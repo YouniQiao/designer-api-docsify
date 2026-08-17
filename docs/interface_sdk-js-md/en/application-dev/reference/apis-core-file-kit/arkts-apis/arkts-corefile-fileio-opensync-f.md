@@ -10,11 +10,9 @@ Opens a file. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [openSync](arkts-corefile-file-fs-opensync-f.md#openSync)
+**Substitutes:** [openSync](arkts-corefile-file-fs-opensync-f.md#opensync)
 
 <!--Device-unnamed-declare function openSync(path: string, flags?: number, mode?: number): number--><!--Device-unnamed-declare function openSync(path: string, flags?: number, mode?: number): number-End-->
 

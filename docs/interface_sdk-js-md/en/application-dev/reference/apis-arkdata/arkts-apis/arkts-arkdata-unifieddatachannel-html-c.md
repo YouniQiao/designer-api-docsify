@@ -1,14 +1,10 @@
 # HTML
 
-Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text).
+Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md#text).
 
-**Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text)
+**Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#text)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unifiedDataChannel-class HTML--><!--Device-unifiedDataChannel-class HTML-End-->
 
@@ -31,10 +27,6 @@ Plaintext without HTML tags. This parameter is optional. The default value is an
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-interface PrinterCapability--><!--Device-print-interface PrinterCapability-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -25,10 +21,6 @@ colorMode: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterCapability-colorMode: int--><!--Device-PrinterCapability-colorMode: int-End-->
 
@@ -48,10 +40,6 @@ duplexMode: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterCapability-duplexMode: int--><!--Device-PrinterCapability-duplexMode: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -69,10 +57,6 @@ minMargin?: PrintMargin
 **类型：** [PrintMargin](arkts-basicservices-print-printmargin-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterCapability-minMargin?: PrintMargin--><!--Device-PrinterCapability-minMargin?: PrintMargin-End-->
 
@@ -92,10 +76,6 @@ options?: Object
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterCapability-options?: Object--><!--Device-PrinterCapability-options?: Object-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -114,10 +94,6 @@ pageSize: Array<PrintPageSize>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrinterCapability-pageSize: Array<PrintPageSize>--><!--Device-PrinterCapability-pageSize: Array<PrintPageSize>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -135,10 +111,6 @@ resolution?: Array<PrintResolution>
 **类型：** Array&lt;[PrintResolution](arkts-basicservices-print-printresolution-i-sys.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrinterCapability-resolution?: Array<PrintResolution>--><!--Device-PrinterCapability-resolution?: Array<PrintResolution>-End-->
 

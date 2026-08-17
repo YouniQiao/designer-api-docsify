@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Int16ArrayConstructor--><!--Device-unnamed-interface Int16ArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new(length: number): Int16Array
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Int16ArrayConstructor-new(length: number): Int16Array--><!--Device-Int16ArrayConstructor-new(length: number): Int16Array-End-->
 
@@ -42,10 +34,6 @@ new(array: ArrayLike<number> | ArrayBufferLike): Int16Array
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Int16ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Int16Array--><!--Device-Int16ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Int16Array-End-->
 
 **Parameters:**
@@ -67,10 +55,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Int16Array
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Int16ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Int16Array--><!--Device-Int16ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Int16Array-End-->
 
@@ -98,10 +82,6 @@ Creates an array from an array-like or iterable object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Int16ArrayConstructor-from(arrayLike: ArrayLike<number>): Int16Array--><!--Device-Int16ArrayConstructor-from(arrayLike: ArrayLike<number>): Int16Array-End-->
 
 **Parameters:**
@@ -125,10 +105,6 @@ from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: a
 Creates an array from an array-like or iterable object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Int16ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Int16Array--><!--Device-Int16ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Int16Array-End-->
 
@@ -156,10 +132,6 @@ Returns a new array from a set of elements.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Int16ArrayConstructor-of(...items: number[]): Int16Array--><!--Device-Int16ArrayConstructor-of(...items: number[]): Int16Array-End-->
 
 **Parameters:**
@@ -186,10 +158,6 @@ The size in bytes of each element in the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Int16ArrayConstructor-readonly BYTES_PER_ELEMENT: number--><!--Device-Int16ArrayConstructor-readonly BYTES_PER_ELEMENT: number-End-->
 
 ## prototype
@@ -201,10 +169,6 @@ readonly prototype: Int16Array
 **Type:** Int16Array
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Int16ArrayConstructor-readonly prototype: Int16Array--><!--Device-Int16ArrayConstructor-readonly prototype: Int16Array-End-->
 

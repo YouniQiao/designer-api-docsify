@@ -16,10 +16,6 @@ Start rtt.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.PLACE_CALL
 
 <!--Device-call-function startRtt(callId: int, type: ImsRttMode): Promise<void>--><!--Device-call-function startRtt(callId: int, type: ImsRttMode): Promise<void>-End-->

@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace dataUriUtils--><!--Device-unnamed-declare namespace dataUriUtils-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -36,8 +32,8 @@ import { dataUriUtils } from 'dataUriUtils';
 
 | Name | Description |
 | --- | --- |
-| [attachId](arkts-ability-datauriutils-attachid-f.md#attachId) | Attaches an ID to the end of a given URI. |
-| [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteId) | Deletes the ID from the end of a given URI. |
-| [getId](arkts-ability-datauriutils-getid-f.md#getId) | Obtains the ID attached to the end of a given URI. |
-| [updateId](arkts-ability-datauriutils-updateid-f.md#updateId) | Updates the ID in a given URI. |
+| [attachId](arkts-ability-datauriutils-attachid-f.md#attachid) | Attaches an ID to the end of a given URI. |
+| [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteid) | Deletes the ID from the end of a given URI. |
+| [getId](arkts-ability-datauriutils-getid-f.md#getid) | Obtains the ID attached to the end of a given URI. |
+| [updateId](arkts-ability-datauriutils-updateid-f.md#updateid) | Updates the ID in a given URI. |
 

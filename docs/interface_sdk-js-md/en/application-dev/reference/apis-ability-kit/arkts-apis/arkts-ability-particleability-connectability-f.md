@@ -16,10 +16,6 @@ Connects this ability to a ServiceAbility. > **NOTE：**> > For details about th
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-particleAbility-function connectAbility(request: Want, options: ConnectOptions): number--><!--Device-particleAbility-function connectAbility(request: Want, options: ConnectOptions): number-End-->
@@ -39,7 +35,7 @@ Connects this ability to a ServiceAbility. > **NOTE：**> > For details about th
 | --- | --- |
 | number | ID of the connected ServiceAbility. The ID starts from 0 and is incremented by 1 each time a connection is set up. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { particleAbility } from '@kit.AbilityKit';

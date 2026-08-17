@@ -16,10 +16,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace infraredEmitter--><!--Device-unnamed-declare namespace infraredEmitter-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InfraredEmitter
@@ -36,15 +32,15 @@ import { infraredEmitter } from 'infraredEmitter';
 
 | Name | Description |
 | --- | --- |
-| [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md#hasIrEmitter) | Checks whether the device has an infrared transmitter. This API uses a promise to return the result. |
+| [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md#hasiremitter) | Checks whether the device has an infrared transmitter. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f-sys.md#getInfraredFrequencies) | Queries the frequency range of IR signals supported by the device. |
-| [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f-sys.md#transmitInfrared) | Generates IR signals at the specified frequency and level. |
+| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f-sys.md#getinfraredfrequencies) | Queries the frequency range of IR signals supported by the device. |
+| [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f-sys.md#transmitinfrared) | Generates IR signals at the specified frequency and level. |
 <!--DelEnd-->
 
 <!--Del-->

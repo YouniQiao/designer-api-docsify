@@ -4,10 +4,6 @@ Represents a component description file.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-export interface ComponentDescription--><!--Device-update-export interface ComponentDescription-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -32,10 +28,6 @@ Component ID, which uniquely identifies a component in the upgrade package. Use 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ComponentDescription-componentId: string--><!--Device-ComponentDescription-componentId: string-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -53,10 +45,6 @@ Information about the description file.
 **Type:** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ComponentDescription-descriptionInfo: DescriptionInfo--><!--Device-ComponentDescription-descriptionInfo: DescriptionInfo-End-->
 

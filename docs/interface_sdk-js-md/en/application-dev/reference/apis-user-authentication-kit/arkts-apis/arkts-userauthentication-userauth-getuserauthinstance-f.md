@@ -12,13 +12,9 @@ import { userAuth } from 'userAuth';
 function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): UserAuthInstance
 ```
 
-Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md#UserAuthInstance) instance for user authentication. The user authentication widget is also supported. This API is used to create a user authentication instance. After authentication parameters and UI parameters are configured, you can use the returned instance object to start authentication and subscribe to the authentication result. > **NOTE：**> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must > obtain a new **UserAuthInstance**. After the authentication is complete (regardless of whether it is successful > or fails), the instance cannot be used again.
+Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md#userauthinstance) instance for user authentication. The user authentication widget is also supported. This API is used to create a user authentication instance. After authentication parameters and UI parameters are configured, you can use the returned instance object to start authentication and subscribe to the authentication result. > **NOTE：**> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must > obtain a new **UserAuthInstance**. After the authentication is complete (regardless of whether it is successful > or fails), the instance cannot be used again.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,7 +44,7 @@ Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-
 | [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

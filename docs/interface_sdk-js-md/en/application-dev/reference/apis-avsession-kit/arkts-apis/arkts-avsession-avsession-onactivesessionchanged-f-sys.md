@@ -16,10 +16,6 @@ Register active session changed callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 <!--Device-avSession-function onActiveSessionChanged(callback: Callback<Array<AVSessionDescriptor>>): void--><!--Device-avSession-function onActiveSessionChanged(callback: Callback<Array<AVSessionDescriptor>>): void-End-->

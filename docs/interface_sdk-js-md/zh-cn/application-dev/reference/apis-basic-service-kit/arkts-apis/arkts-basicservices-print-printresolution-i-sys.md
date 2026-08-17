@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-print-interface PrintResolution--><!--Device-print-interface PrintResolution-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -25,10 +21,6 @@ horizontalDpi: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintResolution-horizontalDpi: int--><!--Device-PrintResolution-horizontalDpi: int-End-->
 
@@ -48,10 +40,6 @@ id: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-PrintResolution-id: string--><!--Device-PrintResolution-id: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -69,10 +57,6 @@ verticalDpi: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-PrintResolution-verticalDpi: int--><!--Device-PrintResolution-verticalDpi: int-End-->
 

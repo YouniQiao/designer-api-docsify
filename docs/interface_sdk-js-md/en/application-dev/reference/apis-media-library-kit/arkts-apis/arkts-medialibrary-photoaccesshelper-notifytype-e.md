@@ -4,10 +4,6 @@ Enumerates the notification event types.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-photoAccessHelper-enum NotifyType--><!--Device-photoAccessHelper-enum NotifyType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,10 +17,6 @@ NOTIFY_ADD
 A file asset or album is added.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotifyType-NOTIFY_ADD--><!--Device-NotifyType-NOTIFY_ADD-End-->
 
@@ -40,10 +32,6 @@ A file asset or album is updated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotifyType-NOTIFY_UPDATE--><!--Device-NotifyType-NOTIFY_UPDATE-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -57,10 +45,6 @@ NOTIFY_REMOVE
 A file asset or album is removed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotifyType-NOTIFY_REMOVE--><!--Device-NotifyType-NOTIFY_REMOVE-End-->
 
@@ -76,10 +60,6 @@ A file asset is added to the album.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET--><!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -93,10 +73,6 @@ NOTIFY_ALBUM_REMOVE_ASSET
 A file asset is removed from the album.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET--><!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET-End-->
 

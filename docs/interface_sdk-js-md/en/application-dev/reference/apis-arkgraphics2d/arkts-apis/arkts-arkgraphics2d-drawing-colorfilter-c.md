@@ -4,10 +4,6 @@ Defines a color filter. > **NOTE：**> > - This module uses the physical pixel u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-drawing-class ColorFilter--><!--Device-drawing-class ColorFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -27,10 +23,6 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 Creates a **ColorFilter** object with a given color and blend mode.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter-End-->
 
@@ -65,10 +57,6 @@ Creates a ColorFilter object with a given color and blend mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter | undefined--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -101,10 +89,6 @@ static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMod
 Creates a **ColorFilter** object with a given color and blend mode.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMode): ColorFilter--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMode): ColorFilter-End-->
 
@@ -139,10 +123,6 @@ Creates a ColorFilter object with a given color and blend mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | int, mode: BlendMode): ColorFilter | undefined--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | int, mode: BlendMode): ColorFilter | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -175,10 +155,6 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 Creates a **ColorFilter** object by combining another two color filters.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter--><!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter-End-->
 
@@ -213,10 +189,6 @@ Creates a ColorFilter object by combining another two color filters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter | undefined--><!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -250,10 +222,6 @@ Creates a lighting color filter. It multiplies the RGB channel values by one col
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 <!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | number): ColorFilter--><!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | number): ColorFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -280,10 +248,6 @@ static createLightingColorFilter(mutColor: common2D.Color | int, addColor: commo
 Makes a color filter with the given mutColor and addColor.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | int, addColor: common2D.Color | int): ColorFilter | undefined--><!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | int, addColor: common2D.Color | int): ColorFilter | undefined-End-->
 
@@ -312,10 +276,6 @@ Creates a **ColorFilter** object that applies the sRGB gamma curve to the RGB ch
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter--><!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -335,10 +295,6 @@ static createLinearToSRGBGamma(): ColorFilter | undefined
 Creates a ColorFilter object that applies the sRGB gamma curve to the RGB channels.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter | undefined--><!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter | undefined-End-->
 
@@ -360,10 +316,6 @@ Creates a **ColorFilter** object that multiplies the luma into the alpha channel
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter--><!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -384,10 +336,6 @@ Creates a ColorFilter object that multiplies the luma into the alpha channel and
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter | undefined--><!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -407,10 +355,6 @@ static createMatrixColorFilter(matrix: Array<double>): ColorFilter
 Creates a color filter object with a 4*5 color matrix.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter--><!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter-End-->
 
@@ -444,10 +388,6 @@ Creates a color filter object with a 4*5 color matrix.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter | undefined--><!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -480,10 +420,6 @@ Creates a **ColorFilter** object that applies the RGB channels to the sRGB gamma
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter--><!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -503,10 +439,6 @@ static createSRGBGammaToLinear(): ColorFilter | undefined
 Creates a ColorFilter object that applies the RGB channels to the sRGB gamma curve.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter | undefined--><!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter | undefined-End-->
 

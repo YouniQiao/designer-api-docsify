@@ -4,10 +4,6 @@ A picker view to show available streaming device list.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -31,10 +27,6 @@ Assigns the color of picker component at active state.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastPicker-@Prop  activeColor?: Color | number | string--><!--Device-AVCastPicker-@Prop  activeColor?: Color | number | string-End-->
@@ -53,10 +45,6 @@ Set the picker color mode.
 **Type:** [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -77,10 +65,6 @@ Set the custom builder for the picker appearance. If not set, system will show t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastPicker-@Prop  customPicker?: CustomBuilder--><!--Device-AVCastPicker-@Prop  customPicker?: CustomBuilder-End-->
@@ -100,10 +84,6 @@ Assigns the color of picker component at normal state .
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastPicker-@Prop  normalColor?: Color | number | string--><!--Device-AVCastPicker-@Prop  normalColor?: Color | number | string-End-->
@@ -121,10 +101,6 @@ Picker state change callback.
 **Type:** (state: AVCastPickerState) =&gt; void
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -145,10 +121,6 @@ Set the picker style.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVCastPicker-@Prop  pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPicker-@Prop  pickerStyle?: AVCastPickerStyle-End-->
@@ -167,10 +139,6 @@ Set the session type used by current picker component which can refer to AVSessi
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

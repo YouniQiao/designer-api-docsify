@@ -16,10 +16,6 @@ Locks a given mission. This API uses an asynchronous callback to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function lockMission(missionId: int, callback: AsyncCallback<void>): void--><!--Device-missionManager-function lockMission(missionId: int, callback: AsyncCallback<void>): void-End-->
@@ -44,7 +40,7 @@ Locks a given mission. This API uses an asynchronous callback to return the resu
 | [16300001](../errorcode-ability.md#16300001-nonexistent-mission) | Mission not found. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
@@ -77,10 +73,6 @@ Locks a given mission. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 <!--Device-missionManager-function lockMission(missionId: int): Promise<void>--><!--Device-missionManager-function lockMission(missionId: int): Promise<void>-End-->
@@ -110,7 +102,7 @@ Locks a given mission. This API uses a promise to return the result.
 | [16300001](../errorcode-ability.md#16300001-nonexistent-mission) | Mission not found. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';

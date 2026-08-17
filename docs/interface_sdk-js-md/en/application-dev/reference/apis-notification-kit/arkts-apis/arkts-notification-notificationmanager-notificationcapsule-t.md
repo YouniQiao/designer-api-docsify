@@ -8,10 +8,6 @@ Describes the notification capsule.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export type NotificationCapsule = _NotificationCapsule--><!--Device-notificationManager-export type NotificationCapsule = _NotificationCapsule-End-->
 
 **System capability:** SystemCapability.Notification.Notification

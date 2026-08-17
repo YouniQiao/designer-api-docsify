@@ -4,10 +4,6 @@ Enumerates the [launch types](../../../application-models/uiability-launch-type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-bundleManager-export enum LaunchType--><!--Device-bundleManager-export enum LaunchType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -21,10 +17,6 @@ SINGLETON = 0
 The UIAbility can have only one instance.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,10 +34,6 @@ The UIAbility can have multiple instances.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LaunchType-MULTITON = 1--><!--Device-LaunchType-MULTITON = 1-End-->
@@ -61,10 +49,6 @@ SPECIFIED = 2
 The UIAbility can have one or multiple instances, depending on the internal service of the ability.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

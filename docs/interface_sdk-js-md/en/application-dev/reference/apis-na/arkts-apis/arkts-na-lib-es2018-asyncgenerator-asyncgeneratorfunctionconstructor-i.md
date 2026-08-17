@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface AsyncGeneratorFunctionConstructor--><!--Device-unnamed-interface AsyncGeneratorFunctionConstructor-End-->
 
 ## constructor
@@ -17,10 +13,6 @@ new (...args: string[]): AsyncGeneratorFunction
 Creates a new AsyncGenerator function.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-AsyncGeneratorFunctionConstructor-new (...args: string[]): AsyncGeneratorFunction--><!--Device-AsyncGeneratorFunctionConstructor-new (...args: string[]): AsyncGeneratorFunction-End-->
 
@@ -45,10 +37,6 @@ Creates a new AsyncGenerator function.
 Creates a new AsyncGenerator function.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-AsyncGeneratorFunctionConstructor-(...args: string[]): AsyncGeneratorFunction--><!--Device-AsyncGeneratorFunctionConstructor-(...args: string[]): AsyncGeneratorFunction-End-->
 
@@ -76,10 +64,6 @@ The length of the arguments.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-AsyncGeneratorFunctionConstructor-readonly length: number--><!--Device-AsyncGeneratorFunctionConstructor-readonly length: number-End-->
 
 ## name
@@ -94,10 +78,6 @@ Returns the name of the function.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-AsyncGeneratorFunctionConstructor-readonly name: string--><!--Device-AsyncGeneratorFunctionConstructor-readonly name: string-End-->
 
 ## prototype
@@ -111,10 +91,6 @@ A reference to the prototype.
 **Type:** [AsyncGeneratorFunction](arkts-na-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md)
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-AsyncGeneratorFunctionConstructor-readonly prototype: AsyncGeneratorFunction--><!--Device-AsyncGeneratorFunctionConstructor-readonly prototype: AsyncGeneratorFunction-End-->
 

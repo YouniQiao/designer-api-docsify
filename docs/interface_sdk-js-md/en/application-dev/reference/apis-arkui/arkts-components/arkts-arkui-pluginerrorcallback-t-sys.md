@@ -1,4 +1,4 @@
-# PluginErrorCallback (System API)
+# PluginErrorCallback(System API) (System API)
 
 ```TypeScript
 declare type PluginErrorCallback = (info: PluginErrorData) => void
@@ -7,10 +7,6 @@ declare type PluginErrorCallback = (info: PluginErrorData) => void
 Callback invoked when an error occurs.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

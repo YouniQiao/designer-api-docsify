@@ -4,10 +4,6 @@ Eth EAP profile.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-eap-interface EthEapProfile--><!--Device-eap-interface EthEapProfile-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -30,10 +26,6 @@ Alternate subject match
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EthEapProfile-altSubjectMatch: string--><!--Device-EthEapProfile-altSubjectMatch: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -49,10 +41,6 @@ Anonymous identity
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EthEapProfile-anonymousIdentity: string--><!--Device-EthEapProfile-anonymousIdentity: string-End-->
 
@@ -70,10 +58,6 @@ CA certificate alias
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EthEapProfile-caCertAliases: string--><!--Device-EthEapProfile-caCertAliases: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -89,10 +73,6 @@ CA certificate path
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EthEapProfile-caPath: string--><!--Device-EthEapProfile-caPath: string-End-->
 
@@ -110,10 +90,6 @@ content of user's certificate
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EthEapProfile-certEntry: Uint8Array--><!--Device-EthEapProfile-certEntry: Uint8Array-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -129,10 +105,6 @@ Password of user's certificate
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EthEapProfile-certPassword: string--><!--Device-EthEapProfile-certPassword: string-End-->
 
@@ -150,10 +122,6 @@ Client certificate alias
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EthEapProfile-clientCertAliases: string--><!--Device-EthEapProfile-clientCertAliases: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -169,10 +137,6 @@ Domain suffix match
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EthEapProfile-domainSuffixMatch: string--><!--Device-EthEapProfile-domainSuffixMatch: string-End-->
 
@@ -190,10 +154,6 @@ EAP authentication method
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EthEapProfile-eapMethod: EapMethod--><!--Device-EthEapProfile-eapMethod: EapMethod-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -209,10 +169,6 @@ Sub ID of the SIM card
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EthEapProfile-eapSubId: number--><!--Device-EthEapProfile-eapSubId: number-End-->
 
@@ -230,10 +186,6 @@ The identity
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EthEapProfile-identity: string--><!--Device-EthEapProfile-identity: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -249,10 +201,6 @@ Password
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EthEapProfile-password: string--><!--Device-EthEapProfile-password: string-End-->
 
@@ -270,10 +218,6 @@ Phase 2 authentication method
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EthEapProfile-phase2Method: Phase2Method--><!--Device-EthEapProfile-phase2Method: Phase2Method-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -290,10 +234,6 @@ Public Land Mobile Network of the provider of Passpoint credential
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-EthEapProfile-plmn: string--><!--Device-EthEapProfile-plmn: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
@@ -309,10 +249,6 @@ Realm for Passpoint credential
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-EthEapProfile-realm: string--><!--Device-EthEapProfile-realm: string-End-->
 

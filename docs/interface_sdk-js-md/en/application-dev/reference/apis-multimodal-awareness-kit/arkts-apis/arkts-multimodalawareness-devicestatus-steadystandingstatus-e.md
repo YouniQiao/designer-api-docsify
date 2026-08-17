@@ -4,10 +4,6 @@ Defines the steady standing state (that is, stand mode). A device enters stand m
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-deviceStatus-export enum SteadyStandingStatus--><!--Device-deviceStatus-export enum SteadyStandingStatus-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
@@ -22,10 +18,6 @@ Exit of the stand mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SteadyStandingStatus-STATUS_EXIT = 0--><!--Device-SteadyStandingStatus-STATUS_EXIT = 0-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
@@ -39,10 +31,6 @@ STATUS_ENTER = 1
 Entry to the stand mode.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-SteadyStandingStatus-STATUS_ENTER = 1--><!--Device-SteadyStandingStatus-STATUS_ENTER = 1-End-->
 

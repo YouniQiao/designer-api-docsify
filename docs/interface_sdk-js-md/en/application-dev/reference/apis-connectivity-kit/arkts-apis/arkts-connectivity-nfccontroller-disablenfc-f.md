@@ -16,10 +16,6 @@ Disables NFC. This API can be called only by system applications
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS
 
 <!--Device-nfcController-function disableNfc(): void--><!--Device-nfcController-function disableNfc(): void-End-->

@@ -16,10 +16,6 @@ Queries the data traffic (including all TCP and UDP data packets) received by a 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
 <!--Device-statistics-function getUidRxBytes(uid: int, callback: AsyncCallback<long>): void--><!--Device-statistics-function getUidRxBytes(uid: int, callback: AsyncCallback<long>): void-End-->
@@ -44,7 +40,7 @@ Queries the data traffic (including all TCP and UDP data packets) received by a 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -66,10 +62,6 @@ function getUidRxBytes(uid: int): Promise<long>
 Queries the data traffic (including all TCP and UDP data packets) received by a specified application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
@@ -100,7 +92,7 @@ Queries the data traffic (including all TCP and UDP data packets) received by a 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { statistics } from '@kit.NetworkKit';

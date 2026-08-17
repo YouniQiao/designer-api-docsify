@@ -8,9 +8,7 @@ Defines a watch event listener. When the monitored file or directory changes, a 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export type WatchEventListener = (event: WatchEvent) => void--><!--Device-unnamed-export type WatchEventListener = (event: WatchEvent) => void-End-->
 
@@ -20,5 +18,5 @@ Defines a watch event listener. When the monitored file or directory changes, a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [WatchEvent](arkts-na-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
+| event | [WatchEvent](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
 

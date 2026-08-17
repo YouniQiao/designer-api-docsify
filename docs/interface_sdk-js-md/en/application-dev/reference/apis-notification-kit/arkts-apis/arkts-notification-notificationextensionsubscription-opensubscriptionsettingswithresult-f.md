@@ -16,10 +16,6 @@ Opens the settings screen of notification extension subscription in a semi-modal
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
 
 **Model restriction:** This API can be used only in the stage model.
@@ -49,7 +45,7 @@ Opens the settings screen of notification extension subscription in a semi-modal
 | [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) | The notification settings window is already displayed. |
 | [1600023](../errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) | The application does not implement the NotificationSubscriberExtensionAbility. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

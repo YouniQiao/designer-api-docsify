@@ -4,10 +4,6 @@ Provides the capability of decoding binary streams into strings. The following e
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-util-class StringDecoder--><!--Device-util-class StringDecoder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -28,10 +24,6 @@ Constructor used to create a **StringDecoder** instance.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-StringDecoder-constructor(encoding?: string)--><!--Device-StringDecoder-constructor(encoding?: string)-End-->
@@ -44,7 +36,7 @@ Constructor used to create a **StringDecoder** instance.
 | --- | --- | --- | --- |
 | encoding | string | No | Encoding type of the input data. The default value is **utf-8**. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let decoder = new util.StringDecoder();
@@ -59,10 +51,6 @@ end(chunk?: string | Uint8Array): string
 Ends the decoding process and returns any remaining input stored in the internal buffer as a string.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,7 +70,7 @@ Ends the decoding process and returns any remaining input stored in the internal
 | --- | --- |
 | string | String decoded. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let decoder = new util.StringDecoder('utf-8');
@@ -105,10 +93,6 @@ Decodes a string. Any incomplete multi-byte characters at the end of Uint8Array 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-StringDecoder-write(chunk: string | Uint8Array): string--><!--Device-StringDecoder-write(chunk: string | Uint8Array): string-End-->
@@ -127,7 +111,7 @@ Decodes a string. Any incomplete multi-byte characters at the end of Uint8Array 
 | --- | --- |
 | string | String decoded. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let decoder = new util.StringDecoder('utf-8');

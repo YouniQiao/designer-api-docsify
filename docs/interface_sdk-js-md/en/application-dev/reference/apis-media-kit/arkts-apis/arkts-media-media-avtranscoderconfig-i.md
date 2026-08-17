@@ -4,10 +4,6 @@ Describes the video transcoding parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-interface AVTranscoderConfig--><!--Device-media-interface AVTranscoderConfig-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
@@ -30,10 +26,6 @@ Bitrate of the output audio, in bit/s. The value range is [1-500000]. The defaul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-AVTranscoderConfig-audioBitrate?: int--><!--Device-AVTranscoderConfig-audioBitrate?: int-End-->
@@ -52,10 +44,6 @@ Encoding format of the output audio. Currently, only AAC is supported. The defau
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-AVTranscoderConfig-audioCodec?: CodecMimeType--><!--Device-AVTranscoderConfig-audioCodec?: CodecMimeType-End-->
@@ -73,10 +61,6 @@ Encoding format of the output audio. If the specified format is not supported, p
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,10 +82,6 @@ Indicates whether to enable B Frame Encoding for reduce file size.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-AVTranscoderConfig-enableBFrame?: boolean--><!--Device-AVTranscoderConfig-enableBFrame?: boolean-End-->
@@ -119,10 +99,6 @@ Container format of the output video file. Currently, only MP4 is supported.
 **Type:** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -142,10 +118,6 @@ Bitrate of the output video, in bit/s. The default bitrate depends on the resolu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-AVTranscoderConfig-videoBitrate?: int--><!--Device-AVTranscoderConfig-videoBitrate?: int-End-->
@@ -163,10 +135,6 @@ Encoding format of the output video. Currently, only AVC and HEVC are supported.
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -186,10 +154,6 @@ Height of the output video frame, in px. The value range is [240 - 2160]. The de
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-AVTranscoderConfig-videoFrameHeight?: int--><!--Device-AVTranscoderConfig-videoFrameHeight?: int-End-->
@@ -207,10 +171,6 @@ Width of the output video frame, in px. The value range is [240 - 3840]. The def
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

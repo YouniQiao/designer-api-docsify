@@ -4,10 +4,6 @@ Enumerates the actions that can be performed to apply the power policy.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-deviceSettings-enum PowerPolicyAction--><!--Device-deviceSettings-enum PowerPolicyAction-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -23,10 +19,6 @@ NONE = 0
 No action is performed.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +38,6 @@ Automatically enter the sleep mode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PowerPolicyAction-AUTO_SUSPEND = 1--><!--Device-PowerPolicyAction-AUTO_SUSPEND = 1-End-->
@@ -67,10 +55,6 @@ FORCE_SUSPEND = 2
 Forcibly enter the sleep mode.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,10 +74,6 @@ Enter the sleep mode. This policy does not take effect currently.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PowerPolicyAction-HIBERNATE = 3--><!--Device-PowerPolicyAction-HIBERNATE = 3-End-->
@@ -111,10 +91,6 @@ SHUTDOWN = 4
 Shut down the system.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,10 +16,6 @@ Open the sound settings page.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-settings-function openSoundSettingsPage(context: Context): void--><!--Device-settings-function openSoundSettingsPage(context: Context): void-End-->

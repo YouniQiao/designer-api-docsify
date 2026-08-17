@@ -8,10 +8,6 @@ Defines the data structure reported when the first frame rendering of the UIAbil
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-appManager-export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData--><!--Device-appManager-export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

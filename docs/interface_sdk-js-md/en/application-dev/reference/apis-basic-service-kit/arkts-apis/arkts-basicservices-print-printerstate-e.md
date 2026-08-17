@@ -4,10 +4,6 @@ Enumerates the printer states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-enum PrinterState--><!--Device-print-enum PrinterState-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -21,10 +17,6 @@ PRINTER_ADDED = 0
 A new printer is added.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterState-PRINTER_ADDED = 0--><!--Device-PrinterState-PRINTER_ADDED = 0-End-->
 
@@ -40,10 +32,6 @@ The printer is removed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterState-PRINTER_REMOVED = 1--><!--Device-PrinterState-PRINTER_REMOVED = 1-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -57,10 +45,6 @@ PRINTER_CAPABILITY_UPDATED = 2
 The printer is updated.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterState-PRINTER_CAPABILITY_UPDATED = 2--><!--Device-PrinterState-PRINTER_CAPABILITY_UPDATED = 2-End-->
 
@@ -76,10 +60,6 @@ The printer is connected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterState-PRINTER_CONNECTED = 3--><!--Device-PrinterState-PRINTER_CONNECTED = 3-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -94,10 +74,6 @@ The printer is disconnected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PrinterState-PRINTER_DISCONNECTED = 4--><!--Device-PrinterState-PRINTER_DISCONNECTED = 4-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -111,10 +87,6 @@ PRINTER_RUNNING = 5
 The printer is running.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PrinterState-PRINTER_RUNNING = 5--><!--Device-PrinterState-PRINTER_RUNNING = 5-End-->
 

@@ -4,10 +4,6 @@ Remote user authorization item.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-abilityToolAccessCtrl-interface RemoteUserAuthItem--><!--Device-abilityToolAccessCtrl-interface RemoteUserAuthItem-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -26,10 +22,6 @@ Authorization result.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 <!--Device-RemoteUserAuthItem-authResult: string--><!--Device-RemoteUserAuthItem-authResult: string-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -47,10 +39,6 @@ Permission name.
 **Type:** string
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 <!--Device-RemoteUserAuthItem-permission: string--><!--Device-RemoteUserAuthItem-permission: string-End-->
 

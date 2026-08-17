@@ -6,10 +6,6 @@ Implements the scroll controller of the **List** component. A **List** component
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ListScroller--><!--Device-unnamed-declare class ListScroller-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 Collapses the list items in the EXPANDED state and sets callback events.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,10 +50,6 @@ getItemRectInGroup(index: number, indexInGroup: number): RectResult
 Obtains the size of a list item in a list item group and its position relative to the list. > **NOTE：**> > - The value of **index** must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. > - The child component for which **index** is set must be a list item group. Otherwise, the **index** value is considered invalid. > - The value of **indexInGroup** must be the index of a list item in the list item group visible in the display area. Otherwise, the value is considered invalid. > - When **index** or **indexInGroup** is set to an invalid value, the returned size and position are both **0**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,10 +89,6 @@ Obtains the index information of the child component at the specified coordinate
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -142,10 +126,6 @@ scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?
 Scrolls to the specified list item in the specified list item group.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,10 +4,6 @@ Represents the configuration of a transaction object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-relationalStore-interface TransactionOptions--><!--Device-relationalStore-interface TransactionOptions-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -29,10 +25,6 @@ Transaction object type. Default value: **DEFERRED**.
 **Type:** [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TransactionOptions-transactionType?: TransactionType--><!--Device-TransactionOptions-transactionType?: TransactionType-End-->
 

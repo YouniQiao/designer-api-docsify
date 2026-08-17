@@ -16,11 +16,9 @@ Checks whether the application has the permission to access the device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [hasRight](arkts-basicservices-usbmanager-hasright-f.md#hasRight)
+**Substitutes:** [hasRight](arkts-basicservices-usbmanager-hasright-f.md#hasright)
 
 <!--Device-usb-function hasRight(deviceName: string): boolean--><!--Device-usb-function hasRight(deviceName: string): boolean-End-->
 
@@ -38,7 +36,7 @@ Checks whether the application has the permission to access the device.
 | --- | --- |
 | boolean | Returns **true** if the application has the permission to access the device; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let devicesName= "1-1";

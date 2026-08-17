@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-call-export interface CallRestrictionInfo--><!--Device-call-export interface CallRestrictionInfo-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -25,10 +21,6 @@ mode: CallRestrictionMode
 **类型：** [CallRestrictionMode](arkts-telephony-call-callrestrictionmode-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CallRestrictionInfo-mode: CallRestrictionMode--><!--Device-CallRestrictionInfo-mode: CallRestrictionMode-End-->
 
@@ -48,10 +40,6 @@ password: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-CallRestrictionInfo-password: string--><!--Device-CallRestrictionInfo-password: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -69,10 +57,6 @@ type: CallRestrictionType
 **类型：** [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-CallRestrictionInfo-type: CallRestrictionType--><!--Device-CallRestrictionInfo-type: CallRestrictionType-End-->
 

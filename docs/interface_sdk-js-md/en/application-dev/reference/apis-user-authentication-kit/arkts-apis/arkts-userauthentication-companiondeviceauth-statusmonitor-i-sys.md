@@ -1,12 +1,8 @@
 # StatusMonitor (System API)
 
-Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling [getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getStatusMonitor-(System-API)).
+Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling [getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getstatusmonitor-system-api).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-companionDeviceAuth-interface StatusMonitor--><!--Device-companionDeviceAuth-interface StatusMonitor-End-->
 
@@ -30,10 +26,6 @@ Obtains the status of the companion device template. This API is used to query t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -56,7 +48,7 @@ Obtains the status of the companion device template. This API is used to query t
 | --- | --- |
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -82,10 +74,6 @@ Unsubscribes from the events for status changes of companion devices that can be
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -108,7 +96,7 @@ Unsubscribes from the events for status changes of companion devices that can be
 | --- | --- |
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -137,10 +125,6 @@ Unsubscribes from the continuous authentication status change event of the compa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -163,7 +147,7 @@ Unsubscribes from the continuous authentication status change event of the compa
 | --- | --- |
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { osAccount, BusinessError } from '@kit.BasicServicesKit';
@@ -200,10 +184,6 @@ Unsubscribes from template status change events. This API uses an asynchronous c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -226,7 +206,7 @@ Unsubscribes from template status change events. This API uses an asynchronous c
 | --- | --- |
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -255,10 +235,6 @@ Subscribes to the events for status changes of companion devices that can be add
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -281,7 +257,7 @@ Subscribes to the events for status changes of companion devices that can be add
 | --- | --- |
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -309,10 +285,6 @@ Subscribes to the events for continuous authentication status of companion devic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -337,7 +309,7 @@ Subscribes to the events for continuous authentication status of companion devic
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 | [32600002](../errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { osAccount, BusinessError } from '@kit.BasicServicesKit';
@@ -373,10 +345,6 @@ Subscribes to template status change events. This API uses an asynchronous callb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -399,7 +367,7 @@ Subscribes to template status change events. This API uses an asynchronous callb
 | --- | --- |
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

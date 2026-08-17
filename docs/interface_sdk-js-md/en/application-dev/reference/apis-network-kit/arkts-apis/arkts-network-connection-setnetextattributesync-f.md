@@ -12,13 +12,9 @@ import { connection } from 'connection';
 function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): void
 ```
 
-Set the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission.
+Set the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_NET_EXT_ATTRIBUTE
 
@@ -30,7 +26,7 @@ Set the network extended attribute for a [NetHandle](arkts-network-connection-ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be set. See [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle). |
+| netHandle | NetHandle | Yes | Indicates the network to be set. See [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
 | netExtAttribute | string | Yes | Indicates the extended attribute of the network. |
 
 **Error codes:**
@@ -42,7 +38,7 @@ Set the network extended attribute for a [NetHandle](arkts-network-connection-ne
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

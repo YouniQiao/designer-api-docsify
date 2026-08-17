@@ -4,10 +4,6 @@ DeflatePending return value information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-zlib-interface DeflatePendingOutputInfo--><!--Device-zlib-interface DeflatePendingOutputInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -30,10 +26,6 @@ Number of output bits that have been generated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeflatePendingOutputInfo-bits: int--><!--Device-DeflatePendingOutputInfo-bits: int-End-->
@@ -52,10 +44,6 @@ Number of output bytes that have been generated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeflatePendingOutputInfo-pending: int--><!--Device-DeflatePendingOutputInfo-pending: int-End-->
@@ -68,15 +56,11 @@ Number of output bytes that have been generated.
 status: ReturnStatus
 ```
 
-For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md#ReturnStatus).
+For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md#returnstatus).
 
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

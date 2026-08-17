@@ -1,12 +1,8 @@
 # OnBeforeUnloadEvent
 
-Defines the triggered function when the web page wants to confirm navigation from JavaScript onbeforeunload.
+Defines the callback triggered when the user is about to leave the current page in refresh or close scenarios. It is suitable for scenarios such as form editing, allowing developers to intercept the leave action and display a confirmation dialog, thereby preventing accidental loss of unsubmitted user data.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnBeforeUnloadEvent--><!--Device-unnamed-declare interface OnBeforeUnloadEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered function when the web page wants to confirm navigation fro
 isReload?: boolean
 ```
 
-The isReload parameter is set to true when the page is refreshed; otherwise, it remains false. Default is false.
+The isReload parameter is set to true when the page is refreshed; otherwise, it remains false. Defult is false.
 
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-OnBeforeUnloadEvent-isReload?: boolean--><!--Device-OnBeforeUnloadEvent-isReload?: boolean-End-->
 
@@ -43,10 +35,6 @@ The message of confirm dialog.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,10 +54,6 @@ Handle the user's JavaScript result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnBeforeUnloadEvent-result: JsResult--><!--Device-OnBeforeUnloadEvent-result: JsResult-End-->
@@ -87,10 +71,6 @@ The url of the page.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

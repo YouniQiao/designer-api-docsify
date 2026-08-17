@@ -1,12 +1,8 @@
 # NetStatsInfoSequenceItem (System API)
 
-Parameters for an [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#NetStatsInfo) with start time and end time.
+Parameters for an [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#netstatsinfo) with start time and end time.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-statistics-export interface NetStatsInfoSequenceItem--><!--Device-statistics-export interface NetStatsInfoSequenceItem-End-->
 
@@ -32,10 +28,6 @@ End time for querying traffic.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetStatsInfoSequenceItem-endTime: int--><!--Device-NetStatsInfoSequenceItem-endTime: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -54,10 +46,6 @@ Detailed information of statistics.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-NetStatsInfoSequenceItem-info: NetStatsInfo--><!--Device-NetStatsInfoSequenceItem-info: NetStatsInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -75,10 +63,6 @@ Start time for querying traffic.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-NetStatsInfoSequenceItem-startTime: int--><!--Device-NetStatsInfoSequenceItem-startTime: int-End-->
 

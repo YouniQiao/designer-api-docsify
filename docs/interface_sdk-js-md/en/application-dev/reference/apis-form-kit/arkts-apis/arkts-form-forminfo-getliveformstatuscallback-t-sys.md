@@ -8,10 +8,6 @@ Get live form status info callback
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-type GetLiveFormStatusCallback = () => Record<string, string>--><!--Device-formInfo-type GetLiveFormStatusCallback = () => Record<string, string>-End-->
 
 **System capability:** SystemCapability.Ability.Form

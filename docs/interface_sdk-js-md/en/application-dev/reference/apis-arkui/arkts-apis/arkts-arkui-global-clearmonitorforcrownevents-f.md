@@ -10,10 +10,6 @@ Removes the digital crown events monitor function.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-export declare function clearMonitorForCrownEvents(): void--><!--Device-unnamed-export declare function clearMonitorForCrownEvents(): void-End-->

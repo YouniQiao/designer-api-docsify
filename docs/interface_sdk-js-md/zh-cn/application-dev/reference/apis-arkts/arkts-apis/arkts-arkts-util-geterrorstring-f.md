@@ -10,11 +10,9 @@ function getErrorString(errno: number): string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [errnoToString](arkts-arkts-util-errnotostring-f.md#errnoToString)
+**替代接口：** [errnoToString](arkts-arkts-util-errnotostring-f.md#errnotostring)
 
 <!--Device-util-function getErrorString(errno: number): string--><!--Device-util-function getErrorString(errno: number): string-End-->
 
@@ -32,7 +30,7 @@ function getErrorString(errno: number): string
 | --- | --- |
 | string | 错误码的详细信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let errnum = -1; // -1 : a system error number

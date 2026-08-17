@@ -4,10 +4,6 @@ Describes the playback parameters of the sound pool. These parameters are used t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface PlayParameters--><!--Device-unnamed-export interface PlayParameters-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -23,10 +19,6 @@ Volume of the left channel. The value range is [0.0, 1.0], and the default value
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PlayParameters-leftVolume?: double--><!--Device-PlayParameters-leftVolume?: double-End-->
 
@@ -44,10 +36,6 @@ Number of loops. If this parameter is set to a value greater than or equal to 0,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlayParameters-loop?: int--><!--Device-PlayParameters-loop?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -63,10 +51,6 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 **Type:** double
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,10 +70,6 @@ Priority for playing an audio stream. The value **0** indicates the lowest prior
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlayParameters-priority?: int--><!--Device-PlayParameters-priority?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -106,10 +86,6 @@ Playback rate. For details, see [AudioRendererRate](../../../reference/apis-audi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PlayParameters-rate?: int--><!--Device-PlayParameters-rate?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -125,10 +101,6 @@ Volume of the right channel. (Currently, the volume cannot be set separately for
 **Type:** double
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PlayParameters-rightVolume?: double--><!--Device-PlayParameters-rightVolume?: double-End-->
 

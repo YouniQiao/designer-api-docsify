@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface WeakSet--><!--Device-unnamed-interface WeakSet-End-->
 
 ## add
@@ -17,10 +13,6 @@ add(value: T): this
 Appends a new object to the end of the WeakSet.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-WeakSet-add(value: T): this--><!--Device-WeakSet-add(value: T): this-End-->
 
@@ -46,10 +38,6 @@ Removes the specified element from the WeakSet.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-WeakSet-delete(value: T): boolean--><!--Device-WeakSet-delete(value: T): boolean-End-->
 
 **Parameters:**
@@ -71,10 +59,6 @@ has(value: T): boolean
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-WeakSet-has(value: T): boolean--><!--Device-WeakSet-has(value: T): boolean-End-->
 

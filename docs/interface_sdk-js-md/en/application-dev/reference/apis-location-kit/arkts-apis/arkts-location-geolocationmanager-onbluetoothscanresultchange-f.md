@@ -16,10 +16,6 @@ Registers and listens to bluetooth scanning results for location services.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 <!--Device-geoLocationManager-function onBluetoothScanResultChange(callback: Callback<BluetoothScanResult>): void--><!--Device-geoLocationManager-function onBluetoothScanResultChange(callback: Callback<BluetoothScanResult>): void-End-->

@@ -10,10 +10,6 @@ function onMouse(receiver: Callback<MouseEvent>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function onMouse(receiver: Callback<MouseEvent>): void--><!--Device-inputMonitor-function onMouse(receiver: Callback<MouseEvent>): void-End-->
@@ -26,7 +22,7 @@ function onMouse(receiver: Callback<MouseEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | 是 | 回调函数，异步上报鼠标输入事件。 |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | 是 | 回调函数，异步上报鼠标输入事件。 |
 
 **错误码：**
 
@@ -36,7 +32,7 @@ function onMouse(receiver: Callback<MouseEvent>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
@@ -76,10 +72,6 @@ function onMouse(rect: display.Rect[], receiver: Callback<MouseEvent>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.INPUT_MONITORING
 
 <!--Device-inputMonitor-function onMouse(rect: display.Rect[], receiver: Callback<MouseEvent>): void--><!--Device-inputMonitor-function onMouse(rect: display.Rect[], receiver: Callback<MouseEvent>): void-End-->
@@ -93,7 +85,7 @@ function onMouse(rect: display.Rect[], receiver: Callback<MouseEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | display.Rect[] | 是 | 可以触发回调任务的矩形区域，可传入1至2个。 |
-| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | 是 | 回调函数，异步上报鼠标输入事件。 |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | 是 | 回调函数，异步上报鼠标输入事件。 |
 
 **错误码：**
 
@@ -103,7 +95,7 @@ function onMouse(rect: display.Rect[], receiver: Callback<MouseEvent>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permit error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';

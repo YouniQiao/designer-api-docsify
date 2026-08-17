@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ReadonlySet--><!--Device-unnamed-interface ReadonlySet-End-->
 
 ## forEach
@@ -15,10 +11,6 @@ forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReadonlySet-forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?: any): void--><!--Device-ReadonlySet-forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?: any): void-End-->
 
@@ -36,10 +28,6 @@ has(value: T): boolean
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReadonlySet-has(value: T): boolean--><!--Device-ReadonlySet-has(value: T): boolean-End-->
 
@@ -64,10 +52,6 @@ readonly size: number
 **Type:** number
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ReadonlySet-readonly size: number--><!--Device-ReadonlySet-readonly size: number-End-->
 

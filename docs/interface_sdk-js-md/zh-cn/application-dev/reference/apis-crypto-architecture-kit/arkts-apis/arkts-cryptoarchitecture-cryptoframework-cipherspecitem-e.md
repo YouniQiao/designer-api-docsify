@@ -1,12 +1,8 @@
 # CipherSpecItem
 
-表示加解密参数的枚举。这些参数支持通过[setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setCipherSpec)接口设置，通过 [getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getCipherSpec)接口获取。 <br>当前只支持RSA算法和SM2算法。详细规格请参考 [加解密规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
+表示加解密参数的枚举。这些参数支持通过[setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setcipherspec)接口设置，通过 [getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getcipherspec)接口获取。 <br>当前只支持RSA算法和SM2算法。详细规格请参考 [加解密规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-cryptoFramework-enum CipherSpecItem--><!--Device-cryptoFramework-enum CipherSpecItem-End-->
 
@@ -23,10 +19,6 @@ OAEP_MD_NAME_STR = 100
 表示RSA算法中，使用PKCS1_OAEP模式时，消息摘要功能的算法名。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ OAEP_MGF_NAME_STR = 101
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101--><!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101-End-->
@@ -67,10 +55,6 @@ OAEP_MGF1_MD_STR = 102
 表示RSA算法中，使用PKCS1_OAEP模式时，MGF1掩码生成功能的消息摘要算法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -90,10 +74,6 @@ OAEP_MGF1_PSRC_UINT8ARR = 103
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CipherSpecItem-OAEP_MGF1_PSRC_UINT8ARR = 103--><!--Device-CipherSpecItem-OAEP_MGF1_PSRC_UINT8ARR = 103-End-->
@@ -111,10 +91,6 @@ SM2_MD_NAME_STR = 104
 表示SM2算法中，使用的摘要算法名。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

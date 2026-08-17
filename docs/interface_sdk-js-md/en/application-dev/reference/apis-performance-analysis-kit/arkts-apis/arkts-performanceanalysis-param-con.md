@@ -10,10 +10,6 @@ Distributed service instance ID.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-param-const DISTRIBUTED_SERVICE_INSTANCE_ID: string--><!--Device-param-const DISTRIBUTED_SERVICE_INSTANCE_ID: string-End-->
@@ -30,10 +26,6 @@ Distributed service name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-param-const DISTRIBUTED_SERVICE_NAME: string--><!--Device-param-const DISTRIBUTED_SERVICE_NAME: string-End-->
@@ -49,10 +41,6 @@ const USER_ID: string
 Custom user ID.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

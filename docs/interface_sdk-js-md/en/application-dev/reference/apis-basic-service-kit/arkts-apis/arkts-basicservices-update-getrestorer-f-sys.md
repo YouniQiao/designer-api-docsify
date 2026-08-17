@@ -16,10 +16,6 @@ Obtains a **Restorer** object for restoring factory settings. After this API is 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-update-function getRestorer(): Restorer--><!--Device-update-function getRestorer(): Restorer-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -38,7 +34,7 @@ Obtains a **Restorer** object for restoring factory settings. After this API is 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

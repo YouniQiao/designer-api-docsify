@@ -10,11 +10,9 @@ Obtains the maximum memory (RAM allocation) available to the current application
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getAppMemorySize)
+**Substitutes:** [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getappmemorysize)
 
 <!--Device-appManager-function getAppMemorySize(): Promise<number>--><!--Device-appManager-function getAppMemorySize(): Promise<number>-End-->
 
@@ -26,7 +24,7 @@ Obtains the maximum memory (RAM allocation) available to the current application
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the maximum memory (RAM allocation) size, in MB. You can perform error processing or other custom processing based on the size. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -50,11 +48,9 @@ Obtains the maximum memory (RAM allocation) available to the current application
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getAppMemorySize)
+**Substitutes:** [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getappmemorysize)
 
 <!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<number>): void--><!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<number>): void-End-->
 
@@ -66,7 +62,7 @@ Obtains the maximum memory (RAM allocation) available to the current application
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the maximum memory (RAM allocation) size, in MB. You can perform error processing or other custom processing based on the size. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

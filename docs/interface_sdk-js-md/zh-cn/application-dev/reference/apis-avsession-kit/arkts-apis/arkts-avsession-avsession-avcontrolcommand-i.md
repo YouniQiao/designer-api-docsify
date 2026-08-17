@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-avSession-interface AVControlCommand--><!--Device-avSession-interface AVControlCommand-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -23,10 +19,6 @@ command: AVControlCommandType
 **类型：** [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -46,10 +38,6 @@ commandInfo?: CommandInfo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-AVControlCommand-commandInfo?: CommandInfo--><!--Device-AVControlCommand-commandInfo?: CommandInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -65,10 +53,6 @@ parameter?: LoopMode | string | double
 **类型：** [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

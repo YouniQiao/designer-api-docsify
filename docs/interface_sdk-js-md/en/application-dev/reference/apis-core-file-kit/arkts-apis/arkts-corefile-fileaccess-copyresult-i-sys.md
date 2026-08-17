@@ -4,8 +4,6 @@ Defines the information returned when the file copy operation fails. If the copy
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 <!--Device-fileAccess-interface CopyResult--><!--Device-fileAccess-interface CopyResult-End-->
@@ -32,8 +30,6 @@ URI of the conflicting file. If the error is not caused by a file conflict, **de
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -57,8 +53,6 @@ Error code.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 
@@ -84,8 +78,6 @@ Error message.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -109,8 +101,6 @@ URI of the source file or directory.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 

@@ -1,4 +1,4 @@
-# URIError
+# URIError(Defines the commonly used Errors for ArkTS)
 
 Represents an error that occurs when a global URI handling function was used in a wrong way
 
@@ -6,9 +6,7 @@ Represents an error that occurs when a global URI handling function was used in 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-unnamed-export class URIError--><!--Device-unnamed-export class URIError-End-->
 
@@ -24,9 +22,7 @@ Constructs a new URIError instance with provided message and error specific info
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,9 +53,7 @@ Constructs a new URIError instance with provided message and error specific info
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

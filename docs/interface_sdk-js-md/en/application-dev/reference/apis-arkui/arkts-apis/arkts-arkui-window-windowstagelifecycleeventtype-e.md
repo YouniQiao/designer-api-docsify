@@ -4,10 +4,6 @@ Enumerates the lifecycle state types of a WindowStage.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-enum WindowStageLifecycleEventType--><!--Device-window-enum WindowStageLifecycleEventType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -21,10 +17,6 @@ SHOWN = 1
 The WindowStage is shown in the foreground, for example, when launching from the application icon, triggered whether it is the first launch or resuming from the background.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ The WindowStage is in the foreground and interactive, for example, when the appl
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowStageLifecycleEventType-RESUMED = 2--><!--Device-WindowStageLifecycleEventType-RESUMED = 2-End-->
@@ -62,10 +50,6 @@ The WindowStage is in the foreground but not interactive, for example, when the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowStageLifecycleEventType-PAUSED = 3--><!--Device-WindowStageLifecycleEventType-PAUSED = 3-End-->
@@ -81,10 +65,6 @@ HIDDEN = 4
 The WindowStage is running in the background, for example, when the application exists after swiping up or the application window is closed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

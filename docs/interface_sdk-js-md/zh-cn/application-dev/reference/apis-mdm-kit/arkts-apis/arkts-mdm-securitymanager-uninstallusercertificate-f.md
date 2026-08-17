@@ -10,10 +10,6 @@ function uninstallUserCertificate(admin: Want, certUri: string): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_CERTIFICATE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -27,7 +23,7 @@ function uninstallUserCertificate(admin: Want, certUri: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| certUri | string | 是 | 证书uri，由安装用户证书接口[installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md#installUserCertificate)设置 返回。 |
+| certUri | string | 是 | 证书uri，由安装用户证书接口[installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md#installusercertificate)设置 返回。 |
 
 **返回值：**
 
@@ -45,7 +41,7 @@ function uninstallUserCertificate(admin: Want, certUri: string): Promise<void>
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { securityManager } from '@kit.MDMKit';

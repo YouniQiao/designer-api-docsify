@@ -4,10 +4,6 @@ Defines the options for saving documents.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-picker-class DocumentSaveOptions--><!--Device-picker-class DocumentSaveOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -32,10 +28,6 @@ Whether to create empty files, The default value is true, indicating that empty 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSaveOptions-autoCreateEmptyFile?: boolean--><!--Device-DocumentSaveOptions-autoCreateEmptyFile?: boolean-End-->
@@ -53,10 +45,6 @@ Path of the document or directory to save.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,10 +64,6 @@ Document suffix of the document to save. The value is a string array. Each eleme
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSaveOptions-fileSuffixChoices?: Array<string>--><!--Device-DocumentSaveOptions-fileSuffixChoices?: Array<string>-End-->
@@ -98,10 +82,6 @@ Name of the document to save. If this parameter is not specified, the user needs
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DocumentSaveOptions-newFileNames?: Array<string>--><!--Device-DocumentSaveOptions-newFileNames?: Array<string>-End-->
@@ -119,10 +99,6 @@ Mode for starting Picker. Default value: DEFAULT. If pickerMode is DOWNLOAD, the
 **Type:** [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

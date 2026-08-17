@@ -16,11 +16,9 @@ Starts pairing with a remote Bluetooth device. On API 10 and above, the permissi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [pairDevice](arkts-connectivity-connection-pairdevice-f.md#pairDevice)
+**Substitutes:** [pairDevice](arkts-connectivity-connection-pairdevice-f.md#pairdevice)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -47,7 +45,7 @@ Starts pairing with a remote Bluetooth device. On API 10 and above, the permissi
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

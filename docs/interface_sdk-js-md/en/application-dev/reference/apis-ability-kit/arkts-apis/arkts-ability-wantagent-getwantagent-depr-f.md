@@ -10,11 +10,9 @@ Obtains a WantAgent object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent)
+**Substitutes:** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -29,7 +27,7 @@ Obtains a WantAgent object.
 | info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | Yes | about the WantAgent object to obtain. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Yes | Callback method for obtaining the user ID of WantAgent instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -83,11 +81,9 @@ Obtains a WantAgent object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent)
+**Substitutes:** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -107,7 +103,7 @@ Obtains a WantAgent object.
 | --- | --- |
 | Promise&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Returns the created { |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

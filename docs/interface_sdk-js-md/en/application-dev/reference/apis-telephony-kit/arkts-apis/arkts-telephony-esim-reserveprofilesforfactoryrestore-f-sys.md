@@ -16,10 +16,6 @@ Ensure that profiles will be retained on the next factory reset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
 <!--Device-eSIM-function reserveProfilesForFactoryRestore(slotId: int): Promise<ResultCode>--><!--Device-eSIM-function reserveProfilesForFactoryRestore(slotId: int): Promise<ResultCode>-End-->
@@ -51,7 +47,7 @@ Ensure that profiles will be retained on the next factory reset.
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

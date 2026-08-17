@@ -10,8 +10,6 @@ Marks the end of a timeslice trace task. > **NOTE：**> > To stop a trace task, 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** finishTrace
@@ -27,7 +25,7 @@ Marks the end of a timeslice trace task. > **NOTE：**> > To stop a trace task, 
 | name | string | Yes | Name of a timeslice trace task. |
 | taskId | number | Yes | ID of a timeslice trace task. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 bytrace.finishTrace("myTestFunc", 1);

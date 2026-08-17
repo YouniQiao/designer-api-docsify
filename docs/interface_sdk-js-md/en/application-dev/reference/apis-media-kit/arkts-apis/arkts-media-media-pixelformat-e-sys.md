@@ -4,10 +4,6 @@ Enumerates the color formats supported by the video thumbnail.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-media-enum PixelFormat--><!--Device-media-enum PixelFormat-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
@@ -23,10 +19,6 @@ RGB_565 = 2
 RGB_565.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PixelFormat-RGB_565 = 2--><!--Device-PixelFormat-RGB_565 = 2-End-->
 
@@ -44,10 +36,6 @@ RGBA_8888.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-PixelFormat-RGBA_8888 = 3--><!--Device-PixelFormat-RGBA_8888 = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
@@ -63,10 +51,6 @@ RGB_888 = 5
 RGB_888.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-PixelFormat-RGB_888 = 5--><!--Device-PixelFormat-RGB_888 = 5-End-->
 

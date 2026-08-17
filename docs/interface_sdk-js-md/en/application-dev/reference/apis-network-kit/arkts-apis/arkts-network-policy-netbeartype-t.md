@@ -8,10 +8,6 @@ Get network bear type.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-policy-type NetBearType = connection.NetBearType--><!--Device-policy-type NetBearType = connection.NetBearType-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core

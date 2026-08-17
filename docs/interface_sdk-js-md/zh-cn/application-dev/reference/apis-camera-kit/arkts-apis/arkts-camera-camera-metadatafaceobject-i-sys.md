@@ -1,14 +1,10 @@
 # MetadataFaceObject（系统接口）
 
-相机检测到的人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md#MetadataObject)。[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)相机信息中的数据来源，通过 metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataObjectsAvailable) 接口获取。
+相机检测到的人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md#metadataobject)。[CameraInput](arkts-camera-camera-camerainput-i.md#camerainput)相机信息中的数据来源，通过 metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。
 
-**继承/实现关系：** MetadataFaceObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md#MetadataObject)
+**继承/实现关系：** MetadataFaceObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md#metadataobject)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-camera-interface MetadataFaceObject--><!--Device-camera-interface MetadataFaceObject-End-->
 
@@ -27,10 +23,6 @@ readonly emotion: Emotion
 **类型：** [Emotion](arkts-camera-camera-emotion-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -52,10 +44,6 @@ readonly emotionConfidence: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MetadataFaceObject-readonly emotionConfidence: double--><!--Device-MetadataFaceObject-readonly emotionConfidence: double-End-->
@@ -75,10 +63,6 @@ readonly leftEyeBoundingBox: Rect
 **类型：** Rect
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -100,10 +84,6 @@ readonly pitchAngle: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MetadataFaceObject-readonly pitchAngle: int--><!--Device-MetadataFaceObject-readonly pitchAngle: int-End-->
@@ -123,10 +103,6 @@ readonly rightEyeBoundingBox: Rect
 **类型：** Rect
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -148,10 +124,6 @@ readonly rollAngle: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MetadataFaceObject-readonly rollAngle: int--><!--Device-MetadataFaceObject-readonly rollAngle: int-End-->
@@ -171,10 +143,6 @@ readonly yawAngle: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

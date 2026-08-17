@@ -4,10 +4,6 @@ Enumeration of SearchPlayInfoType.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avMusicTemplate-enum SearchPlayInfoType--><!--Device-avMusicTemplate-enum SearchPlayInfoType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -21,10 +17,6 @@ PLAY_MUSIC = 'playMusic'
 playMusic.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ playVideo.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchPlayInfoType-PLAY_VIDEO = 'playVideo'--><!--Device-SearchPlayInfoType-PLAY_VIDEO = 'playVideo'-End-->
@@ -62,10 +50,6 @@ play music list.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchPlayInfoType-PLAY_MUSIC_LIST = 'playMusicList'--><!--Device-SearchPlayInfoType-PLAY_MUSIC_LIST = 'playMusicList'-End-->
@@ -81,10 +65,6 @@ PLAY_VIDEO_LIST = 'playVideoList'
 play video list.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

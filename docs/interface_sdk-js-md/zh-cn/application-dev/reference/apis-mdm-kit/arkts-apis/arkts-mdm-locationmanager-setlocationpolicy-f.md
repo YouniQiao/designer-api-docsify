@@ -10,10 +10,6 @@ function setLocationPolicy(admin: Want, policy: LocationPolicy): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -38,7 +34,7 @@ function setLocationPolicy(admin: Want, policy: LocationPolicy): void
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { locationManager } from '@kit.MDMKit';
@@ -53,7 +49,7 @@ let wantTemp: Want = {
 try {
   locationManager.setLocationPolicy(wantTemp, locationManager.LocationPolicy.DISALLOW_LOCATION_SERVICE);
   console.info(`Succeeded in setting location policy.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set location policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```

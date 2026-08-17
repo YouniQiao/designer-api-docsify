@@ -1,14 +1,12 @@
-# URLSearchParams
+# URLSearchParams(URL字符串解析)
 
-URLSearchParams接口定义了一些处理URL查询字符串的实用方法，从API version 9开始废弃，建议使用[URLParams](arkts-arkts-url-urlparams-c.md#URLParams)。
+URLSearchParams接口定义了一些处理URL查询字符串的实用方法，从API version 9开始废弃，建议使用[URLParams](arkts-arkts-url-urlparams-c.md#urlparams)。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [URLParams](arkts-arkts-url-urlparams-c.md#URLParams)
+**替代接口：** [URLParams](arkts-arkts-url-urlparams-c.md#urlparams)
 
 <!--Device-url-class URLSearchParams--><!--Device-url-class URLSearchParams-End-->
 
@@ -24,8 +22,6 @@ URLSearchParams接口定义了一些处理URL查询字符串的实用方法，�
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** iterator]
@@ -40,7 +36,7 @@ URLSearchParams接口定义了一些处理URL查询字符串的实用方法，�
 | --- | --- |
 | IterableIterator&lt;[string, string]&gt; | 返回一个迭代器，迭代器的每一项为包含name和value的[string, string]数组。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 const paramsObject = new url.URLSearchParams('fod=bay&edg=bap');
@@ -62,8 +58,6 @@ append(name: string, value: string): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** append
@@ -79,7 +73,7 @@ append(name: string, value: string): void
 | name | string | 是 | 需要插入搜索参数的键名。 |
 | value | string | 是 | 需要插入搜索参数的值。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -97,8 +91,6 @@ URLSearchParams的构造函数。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** constructor
@@ -113,7 +105,7 @@ URLSearchParams的构造函数。
 | --- | --- | --- | --- |
 | init | string[][] \| Record&lt;string, string&gt; \| string \| [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) | 否 | 入参对象。 <br/>- string[][]：字符串二维数组，每个内部数组包含两个元素，分别为键名和键值。 <br/>- Record&lt;string, string&gt;：对象列表。 <br/>- string：字符串，需遵循URL查询参数格式，如'key=value&key2=value2'。 <br/>- URLSearchParams：对象。 <br/>- 默认值：undefined。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let objectParams = new url.URLSearchParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
@@ -133,8 +125,6 @@ delete(name: string): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** delete
@@ -149,7 +139,7 @@ delete(name: string): void
 | --- | --- | --- | --- |
 | name | string | 是 | 需要删除的键值名称。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -167,8 +157,6 @@ entries(): IterableIterator<[string, string]>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** entries
@@ -183,7 +171,7 @@ entries(): IterableIterator<[string, string]>
 | --- | --- |
 | IterableIterator&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let searchParamsObject = new url.URLSearchParams("keyName1=valueName1&keyName2=valueName2");
@@ -205,8 +193,6 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) 
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** forEach
@@ -222,7 +208,7 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) 
 | callbackFn | (value: string, key: string, searchParams: URLSearchParams) =&gt; void | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值是本对象。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 const myURLObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -240,8 +226,6 @@ get(name: string): string | null
 获取指定名称对应的第一个值。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -263,7 +247,7 @@ get(name: string): string | null
 | --- | --- |
 | string | 返回第一个值，如果没找到，返回 null。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let paramsObject = new url.URLSearchParams('name=Jonathan&age=18');
@@ -281,8 +265,6 @@ getAll(name: string): string[]
 获取指定名称的所有键对应值的集合。若查找一个不存在的键值对名称时返回值为空数组。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -304,7 +286,7 @@ getAll(name: string): string[]
 | --- | --- |
 | string[] | 返回指定名称的所有键对应值的集合。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -322,8 +304,6 @@ has(name: string): boolean
 判断一个指定的键名对应的值是否存在。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 9
 
@@ -345,7 +325,7 @@ has(name: string): boolean
 | --- | --- |
 | boolean | 是否存在相对应的key值，存在返回true，否则返回false。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -363,8 +343,6 @@ keys(): IterableIterator<string>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** keys
@@ -379,7 +357,7 @@ keys(): IterableIterator<string>
 | --- | --- |
 | IterableIterator&lt;string&gt; | 返回一个所有键值对的name的迭代器。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let searchParamsObject = new url.URLSearchParams("key1=value1&key2=value2");
@@ -401,8 +379,6 @@ set(name: string, value: string): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** set
@@ -418,7 +394,7 @@ set(name: string, value: string): void
 | name | string | 是 | 将要设置的参数的键值名。 |
 | value | string | 是 | 所要设置的参数值。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -436,8 +412,6 @@ sort(): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** sort
@@ -446,7 +420,7 @@ sort(): void
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 示例
+**示例**
 
 ```TypeScript
 let searchParamsObject = new url.URLSearchParams("c=3&a=9&b=4&d=2"); // Create a test URLSearchParams object
@@ -464,8 +438,6 @@ toString(): string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** toString
@@ -480,7 +452,7 @@ toString(): string
 | --- | --- |
 | string | 返回序列化为字符串的搜索参数，必要时对字符进行百分比编码。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
@@ -499,8 +471,6 @@ values(): IterableIterator<string>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** values
@@ -515,7 +485,7 @@ values(): IterableIterator<string>
 | --- | --- |
 | IterableIterator&lt;string&gt; | 返回一个所有键值对的value的迭代器。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let searchParams = new url.URLSearchParams("key1=value1&key2=value2");

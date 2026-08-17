@@ -12,13 +12,9 @@ import { linkEnhance } from 'linkEnhance';
 function createServer(name: string): Server
 ```
 
-Creates a **Server** object. After **start()** is called, the device can be connected to other devices as a server.
+Creates a **Server** object. After **start()** is called, the device can be connected to other devices as a server. After using the object, call **close()** to destroy the **Server** object to release resources. To use the object again, you need to create another **Server** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -32,7 +28,7 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Server** object name. The value is a string of up to 255 bytes. It cannot be empty. |
+| name | string | Yes | Server** object name. The value is a string of up to 255 bytes. It cannot be empty. If the length exceeds the upper limit or an empty string is passed, error code 32390206 is returned. |
 
 **Return value:**
 
@@ -49,7 +45,7 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 | [32390203](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390203-duplicate-service-name) | Duplicate server name. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';

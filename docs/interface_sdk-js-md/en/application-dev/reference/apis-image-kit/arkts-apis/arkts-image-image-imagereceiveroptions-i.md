@@ -4,10 +4,6 @@ Describes the initialization options for ImageReceiver.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface ImageReceiverOptions--><!--Device-image-interface ImageReceiverOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
@@ -30,10 +26,6 @@ Maximum number of images that can be accessed simultaneously. The value range is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageReceiverOptions-capacity?: int--><!--Device-ImageReceiverOptions-capacity?: int-End-->
@@ -51,10 +43,6 @@ Image size, with both the width and height greater than 0.
 **Type:** Size
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

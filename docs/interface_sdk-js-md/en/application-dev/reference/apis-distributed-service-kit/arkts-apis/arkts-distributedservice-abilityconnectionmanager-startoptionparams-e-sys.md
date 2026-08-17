@@ -4,10 +4,6 @@ Enumerates application start options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityConnectionManager-export enum StartOptionParams--><!--Device-abilityConnectionManager-export enum StartOptionParams-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -21,10 +17,6 @@ START_IN_BACKGROUND = 1
 Launching the peer application to the background.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

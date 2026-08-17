@@ -4,10 +4,6 @@ Describes the image decoding options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-image-interface DecodingOptions--><!--Device-image-interface DecodingOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -30,10 +26,6 @@ If **desiredRegion** and **desiredSize** are both specified, the order of croppi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DecodingOptions-cropAndScaleStrategy?: CropAndScaleStrategy--><!--Device-DecodingOptions-cropAndScaleStrategy?: CropAndScaleStrategy-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -50,10 +42,6 @@ Target color space. The default value is **UNKNOWN**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-DecodingOptions-desiredColorSpace?: colorSpaceManager.ColorSpaceManager--><!--Device-DecodingOptions-desiredColorSpace?: colorSpaceManager.ColorSpaceManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
@@ -64,15 +52,11 @@ Target color space. The default value is **UNKNOWN**.
 desiredDynamicRange?: DecodingDynamicRange
 ```
 
-Desired dynamic range. The default value is **SDR**. This property cannot be set for an image source created using [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createIncrementalSource). By default, the image source is decoded as SDR content. If the platform does not support HDR, the setting is invalid and the content is decoded as SDR content by default.
+Desired dynamic range. The default value is **SDR**. This property cannot be set for an image source created using [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createincrementalsource). By default, the image source is decoded as SDR content. If the platform does not support HDR, the setting is invalid and the content is decoded as SDR content by default.
 
 **Type:** [DecodingDynamicRange](arkts-image-image-decodingdynamicrange-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-DecodingOptions-desiredDynamicRange?: DecodingDynamicRange--><!--Device-DecodingOptions-desiredDynamicRange?: DecodingDynamicRange-End-->
 
@@ -89,10 +73,6 @@ Pixel format for decoding. The default value is **RGBA_8888**. Only RGBA_8888, B
 **Type:** PixelMapFormat
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -114,10 +94,6 @@ Rectangle specified by **Region** in the decoded image. When the original image 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -137,10 +113,6 @@ Expected output size. The value must be a positive integer and defaults to the o
 **Type:** Size
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,10 +134,6 @@ Whether the image is editable. **true** if editable, **false** otherwise. The de
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -185,10 +153,6 @@ Pixel density, in ppi. The default value is **0**.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -210,10 +174,6 @@ Index of the image to decode. The default value is **0**, indicating the first i
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -234,10 +194,6 @@ Rotation angle. The default value is **0**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -257,10 +213,6 @@ Sampling size of the thumbnail. The default value is **1**. Currently, the value
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

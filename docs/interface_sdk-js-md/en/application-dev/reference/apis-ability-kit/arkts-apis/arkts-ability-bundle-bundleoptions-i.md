@@ -4,8 +4,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-bundle-export interface BundleOptions--><!--Device-bundle-export interface BundleOptions-End-->
@@ -29,8 +27,6 @@ User ID. The default value is the user ID of the caller. The value must be great
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

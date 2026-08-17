@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface SymbolConstructor--><!--Device-unnamed-interface SymbolConstructor-End-->
 
 ## iterator
@@ -19,10 +15,6 @@ A method that returns the default iterator for an object. Called by the semantic
 **Type:** unique symbol
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-SymbolConstructor-readonly iterator: unique symbol--><!--Device-SymbolConstructor-readonly iterator: unique symbol-End-->
 

@@ -4,9 +4,7 @@ Defines the JavaScript object to be injected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface JavaScriptProxy--><!--Device-unnamed-export declare interface JavaScriptProxy-End-->
 
@@ -24,9 +22,7 @@ The async method of the application side JavaScript object participating in the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JavaScriptProxy-asyncMethodList?: Array<string>--><!--Device-JavaScriptProxy-asyncMethodList?: Array<string>-End-->
 
@@ -44,9 +40,7 @@ Controller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JavaScriptProxy-controller: WebviewController--><!--Device-JavaScriptProxy-controller: WebviewController-End-->
 
@@ -64,9 +58,7 @@ Objects participating in registration.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JavaScriptProxy-jsObject: object--><!--Device-JavaScriptProxy-jsObject: object-End-->
 
@@ -84,9 +76,7 @@ The method of the application side JavaScript object participating in the regist
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JavaScriptProxy-methodList: Array<string>--><!--Device-JavaScriptProxy-methodList: Array<string>-End-->
 
@@ -104,9 +94,7 @@ The name of the registered object, which is consistent with the object name call
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JavaScriptProxy-name: string--><!--Device-JavaScriptProxy-name: string-End-->
 
@@ -124,9 +112,7 @@ permission configuration defining web page URLs that can access JavaScriptProxy 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-JavaScriptProxy-permission?: string--><!--Device-JavaScriptProxy-permission?: string-End-->
 

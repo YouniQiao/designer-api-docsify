@@ -4,10 +4,6 @@ An **ImageBitmap** object stores pixel data rendered on a canvas. Since API vers
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class ImageBitmap--><!--Device-unnamed-declare class ImageBitmap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,10 +17,6 @@ close(): void
 Releases all graphics resources associated with this **ImageBitmap** object and sets its width and height to **0**.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,10 +35,6 @@ constructor(src: string)
 Creates an **ImageBitmap** object using an **ImageSrc** object.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,10 +60,6 @@ Creates an **ImageBitmap** object using an **ImageSrc** object. The unit mode of
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -91,7 +75,7 @@ Creates an **ImageBitmap** object using an **ImageSrc** object. The unit mode of
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | string | Yes | Image source. Local images are supported.<br> 1. The string format is used to load local images, for example, **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.<br> For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.<br> 2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.<br> **NOTE：**<br> - ArkTS widgets do not support the strings with the **http://**, **datashare://**, or **file://data/storage**. |
-| unit | LengthMetricsUnit | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).<br> If the value is **undefined**, **NaN**, or **Infinity**, the default value will be used. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d).<br> If the value is **undefined**, **NaN**, or **Infinity**, the default value will be used. |
 
 ## constructor
 
@@ -102,10 +86,6 @@ constructor(data: PixelMap)
 Creates an **ImageBitmap** object using a **PixelMap** object.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -129,10 +109,6 @@ Creates an **ImageBitmap** object using a **PixelMap** object. The unit mode of 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -146,7 +122,7 @@ Creates an **ImageBitmap** object using a **PixelMap** object. The unit mode of 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | PixelMap | Yes | Image data source, which supports **PixelMap** objects. |
-| unit | LengthMetricsUnit | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D). |
+| unit | LengthMetricsUnit | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d). |
 
 ## constructor
 
@@ -157,10 +133,6 @@ constructor(data: Resource, unit?: LengthMetricsUnit)
 Transfer a Resource object to construct an ImageBitmap object.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -189,10 +161,6 @@ Pixel height of the **ImageBitmap** object. Default unit: vp
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -212,10 +180,6 @@ Pixel width of the **ImageBitmap** object. Default unit: vp
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

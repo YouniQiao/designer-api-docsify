@@ -4,13 +4,9 @@
 export type EmbeddableUIAbilityContext = _EmbeddableUIAbilityContext.default
 ```
 
-Defines the context environment for the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). It inherits from Context.
+Defines the context environment for the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#embeddableuiability). It inherits from Context.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

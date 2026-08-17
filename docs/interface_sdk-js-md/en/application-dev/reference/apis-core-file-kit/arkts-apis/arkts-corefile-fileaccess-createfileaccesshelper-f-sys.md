@@ -16,8 +16,6 @@ Creates a **Helper** object to bind with all file management services in the sys
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
@@ -77,7 +75,7 @@ Creates a **Helper** object to bind with all file management services in the sys
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -110,8 +108,6 @@ function createFileAccessHelper(context: Context, wants: Array<Want>): FileAcces
 Creates a **Helper** object to bind with the specified Wants. This API returns the result synchronously. The **Helper** object provides file access and management capabilities.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -173,7 +169,7 @@ Creates a **Helper** object to bind with the specified Wants. This API returns t
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

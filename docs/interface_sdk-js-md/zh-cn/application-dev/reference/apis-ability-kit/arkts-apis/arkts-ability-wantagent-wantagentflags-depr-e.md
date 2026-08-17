@@ -4,11 +4,9 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md#WantAgentFlags)
+**替代接口：** [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md#wantagentflags)
 
 <!--Device-wantAgent-export enum WantAgentFlags--><!--Device-wantAgent-export enum WantAgentFlags-End-->
 
@@ -24,11 +22,9 @@ WantAgent仅能使用一次。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [ONE_TIME_FLAG](arkts-ability-wantagent-wantagentflags-e.md#ONE_TIME_FLAG)
+**替代接口：** [ONE_TIME_FLAG](arkts-ability-wantagent-wantagentflags-e.md#onetimeflag)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -46,11 +42,9 @@ NO_BUILD_FLAG
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [NO_BUILD_FLAG](arkts-ability-wantagent-wantagentflags-e.md#NO_BUILD_FLAG)
+**替代接口：** [NO_BUILD_FLAG](arkts-ability-wantagent-wantagentflags-e.md#nobuildflag)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -68,11 +62,9 @@ CANCEL_PRESENT_FLAG
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [CANCEL_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#CANCEL_PRESENT_FLAG)
+**替代接口：** [CANCEL_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#cancelpresentflag)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -90,11 +82,9 @@ UPDATE_PRESENT_FLAG
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [UPDATE_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#UPDATE_PRESENT_FLAG)
+**替代接口：** [UPDATE_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#updatepresentflag)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -112,11 +102,9 @@ WantAgent是不可变的。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [CONSTANT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#CONSTANT_FLAG)
+**替代接口：** [CONSTANT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#constantflag)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -134,11 +122,9 @@ REPLACE_ELEMENT
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [REPLACE_ELEMENT](arkts-ability-wantagent-wantagentflags-e.md#REPLACE_ELEMENT)
+**替代接口：** [REPLACE_ELEMENT](arkts-ability-wantagent-wantagentflags-e.md#replaceelement)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -156,11 +142,9 @@ REPLACE_ACTION
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [REPLACE_ACTION](arkts-ability-wantagent-wantagentflags-e.md#REPLACE_ACTION)
+**替代接口：** [REPLACE_ACTION](arkts-ability-wantagent-wantagentflags-e.md#replaceaction)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -178,11 +162,9 @@ REPLACE_URI
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [REPLACE_URI](arkts-ability-wantagent-wantagentflags-e.md#REPLACE_URI)
+**替代接口：** [REPLACE_URI](arkts-ability-wantagent-wantagentflags-e.md#replaceuri)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -200,11 +182,9 @@ REPLACE_ENTITIES
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [REPLACE_ENTITIES](arkts-ability-wantagent-wantagentflags-e.md#REPLACE_ENTITIES)
+**替代接口：** [REPLACE_ENTITIES](arkts-ability-wantagent-wantagentflags-e.md#replaceentities)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -222,11 +202,9 @@ REPLACE_BUNDLE
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
-**替代接口：** [REPLACE_BUNDLE](arkts-ability-wantagent-wantagentflags-e.md#REPLACE_BUNDLE)
+**替代接口：** [REPLACE_BUNDLE](arkts-ability-wantagent-wantagentflags-e.md#replacebundle)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

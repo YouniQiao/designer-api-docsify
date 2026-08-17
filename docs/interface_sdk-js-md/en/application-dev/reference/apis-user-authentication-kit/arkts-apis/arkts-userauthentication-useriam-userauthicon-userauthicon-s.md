@@ -4,10 +4,6 @@ The **userAuthIcon** module is a UI component module of the OpenHarmony user ide
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default struct UserAuthIcon--><!--Device-unnamed-export default struct UserAuthIcon-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -30,10 +26,6 @@ User authentication parameters. The parameters include the **challenge** value, 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthIcon-authParam: userAuth.AuthParam--><!--Device-UserAuthIcon-authParam: userAuth.AuthParam-End-->
@@ -53,10 +45,6 @@ Icon color. Multiple formats are supported, such as color values and resource re
 **Default:** $r('sys.color.ohos_id_color_activated')
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,10 +66,6 @@ Icon height, with an aspect ratio of 1:1. Percentage strings are not supported. 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthIcon-iconHeight?: Dimension--><!--Device-UserAuthIcon-iconHeight?: Dimension-End-->
@@ -99,10 +83,6 @@ Result callback. This callback is triggered after a user completes authenticatio
 **Type:** (result: userAuth.UserAuthResult) =&gt; void
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,10 +102,6 @@ Icon click callback. This callback is triggered when a user taps the authenticat
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthIcon-onIconClick?: () => void--><!--Device-UserAuthIcon-onIconClick?: () => void-End-->
@@ -143,10 +119,6 @@ Parameters on the user authentication page. The parameters include the authentic
 **Type:** userAuth.WidgetParam
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

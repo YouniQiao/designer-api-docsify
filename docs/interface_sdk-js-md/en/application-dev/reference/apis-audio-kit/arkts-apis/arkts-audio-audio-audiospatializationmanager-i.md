@@ -4,10 +4,6 @@ Implements audio spatialization management.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioSpatializationManager--><!--Device-audio-interface AudioSpatializationManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -28,10 +24,6 @@ Checks whether spatial audio rendering is enabled for the current device. This A
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSpatializationManager-isSpatializationEnabledForCurrentDevice(): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabledForCurrentDevice(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -51,10 +43,6 @@ offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): vo
 Unsubscribes to the spatialization enable state change events by the current device.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void-End-->
 
@@ -81,10 +69,6 @@ off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boo
 Unsubscribes from the spatial audio rendering status change event of the current device. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void-End-->
 
@@ -113,10 +97,6 @@ Subscribes to the spatialization enable state change events by the current devic
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -142,10 +122,6 @@ on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boole
 Subscribes to the spatial audio rendering status change event of the current device. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void-End-->
 

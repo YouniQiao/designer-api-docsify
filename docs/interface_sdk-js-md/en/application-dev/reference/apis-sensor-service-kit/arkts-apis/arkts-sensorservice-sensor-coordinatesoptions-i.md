@@ -4,10 +4,6 @@ Describes the coordinate options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-sensor-interface CoordinatesOptions--><!--Device-sensor-interface CoordinatesOptions-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -30,10 +26,6 @@ X coordinate direction.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CoordinatesOptions-x: int--><!--Device-CoordinatesOptions-x: int-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -49,10 +41,6 @@ Y coordinate direction.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CoordinatesOptions-y: int--><!--Device-CoordinatesOptions-y: int-End-->
 

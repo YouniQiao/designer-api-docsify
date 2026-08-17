@@ -28,6 +28,6 @@ import { BreakpointOptions } from 'BreakpointOptions';
 
 | Name | Description |
 | --- | --- |
-| [ContainerReader](arkts-arkui-arkui-components-containerreader-con.md#ContainerReader) | Defines ContainerReader Component. A component that analyzes container dimensions and provides breakpoint information for responsive layouts. |
-| [ContainerReaderInstance](arkts-arkui-arkui-components-containerreader-con.md#ContainerReaderInstance) | Defines ContainerReader Component instance. Provides access to ContainerReader component methods for container dimension analysis and breakpoint detection. |
+| [ContainerReader](arkts-arkui-arkui-components-containerreader-con.md#containerreader) | Defines ContainerReader Component. A component that analyzes container dimensions and provides breakpoint information for responsive layouts. |
+| [ContainerReaderInstance](arkts-arkui-arkui-components-containerreader-con.md#containerreaderinstance) | Defines ContainerReader Component instance. Provides access to ContainerReader component methods for container dimension analysis and breakpoint detection. |
 

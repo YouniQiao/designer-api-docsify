@@ -1,12 +1,8 @@
 # @ohos.arkui.uiExtension
 
-The **uiExtension** module provides APIs for the [EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md) (or [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)) to obtain the host application window information or the information about the corresponding EmbeddedComponent&lt;!--Del--&gt; (or UIExtensionComponent)&lt;!--DelEnd--&gt; component.
+The **uiExtension** module provides APIs for the [EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md) (or [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)) to obtain the host application window information or the information about the corresponding EmbeddedComponent&lt;!--Del--&gt; (or UIExtensionComponent)&lt;!--DelEnd--&gt; component.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

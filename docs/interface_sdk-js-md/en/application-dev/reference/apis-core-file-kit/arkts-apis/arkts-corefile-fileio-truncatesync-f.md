@@ -10,11 +10,9 @@ Truncates a file based on the file path. This API returns the result synchronous
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [truncateSync](arkts-corefile-file-fs-truncatesync-f.md#truncateSync)
+**Substitutes:** [truncateSync](arkts-corefile-file-fs-truncatesync-f.md#truncatesync)
 
 <!--Device-unnamed-declare function truncateSync(path: string, len?: number): void--><!--Device-unnamed-declare function truncateSync(path: string, len?: number): void-End-->
 

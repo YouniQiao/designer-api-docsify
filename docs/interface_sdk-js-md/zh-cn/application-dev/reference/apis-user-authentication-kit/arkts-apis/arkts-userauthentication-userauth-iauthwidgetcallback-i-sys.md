@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-userAuth-interface IAuthWidgetCallback--><!--Device-userAuth-interface IAuthWidgetCallback-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -24,10 +20,6 @@ sendCommand(cmdData: string): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**废弃版本：** -1
-
 <!--Device-IAuthWidgetCallback-sendCommand(cmdData: string): void--><!--Device-IAuthWidgetCallback-sendCommand(cmdData: string): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -40,7 +32,7 @@ sendCommand(cmdData: string): void
 | --- | --- | --- | --- |
 | cmdData | string | 是 | 命令数据。JSON格式的字符串，包含用户认证框架向身份认证控件发送的具体命令内容。JSON结构根据不同的命令类型包含相应字段，常见字段包括：commandType（ string，命令类型）、authType（array，认证类型列表）、result（number，认证结果码）等。控件需解析此数据并根据命令类型执行相应操作。 |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 
@@ -97,10 +89,6 @@ sendCommand: AuthWidgetCallbackSendCommandFunc
 **类型：** [AuthWidgetCallbackSendCommandFunc](arkts-userauthentication-userauth-authwidgetcallbacksendcommandfunc-t-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-IAuthWidgetCallback-sendCommand: AuthWidgetCallbackSendCommandFunc--><!--Device-IAuthWidgetCallback-sendCommand: AuthWidgetCallbackSendCommandFunc-End-->
 

@@ -4,10 +4,6 @@ Provides recording strategy management, including collaborative recording and re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface AudioRecordingManager--><!--Device-audio-interface AudioRecordingManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -27,10 +23,6 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 Unsubscribes from the system recording controller panel enabled state change event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,10 +55,6 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 Subscribes to the system recording controller panel enabled state change event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

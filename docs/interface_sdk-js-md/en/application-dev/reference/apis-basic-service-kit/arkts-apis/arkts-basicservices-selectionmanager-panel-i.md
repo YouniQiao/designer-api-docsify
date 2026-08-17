@@ -1,12 +1,8 @@
 # Panel (System API)
 
-Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete.
+Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 <!--Device-selectionManager-interface Panel--><!--Device-selectionManager-interface Panel-End-->
 
@@ -26,13 +22,9 @@ import { selectionManager } from 'selectionManager';
 moveToGlobalDisplay(x: int, y: int): Promise<void>
 ```
 
-Moves the word selection panel to the specified coordinates in the global coordinates system of the screen. The panel can be moved to an extended screen. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createPanel-(System-API)). This API uses a promise to return the result.
+Moves the word selection panel to the specified coordinates in the global coordinates system of the screen. The panel can be moved to an extended screen. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md#createpanel-system-api). This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +52,7 @@ Moves the word selection panel to the specified coordinates in the global coordi
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
 | [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) | This selection window has been destroyed. |
 
-## Examples
+**Examples**
 
 ArkTS-Dyn example:
 
@@ -105,10 +97,6 @@ Unregisters the callback used to listen for the destroy event of the word select
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Panel-offDestroy(callback?: Callback<void>): void--><!--Device-Panel-offDestroy(callback?: Callback<void>): void-End-->
@@ -121,7 +109,7 @@ Unregisters the callback used to listen for the destroy event of the word select
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback function that returns no value. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -144,10 +132,6 @@ Unregisters the callback used to listen for the hide event of the word selection
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Panel-offHide(callback?: Callback<void>): void--><!--Device-Panel-offHide(callback?: Callback<void>): void-End-->
@@ -160,7 +144,7 @@ Unregisters the callback used to listen for the hide event of the word selection
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback function that returns no value. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -183,10 +167,6 @@ Registers a callback to listen for the destroy event of the word selection panel
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Panel-onDestroy(callback: Callback<void>): void--><!--Device-Panel-onDestroy(callback: Callback<void>): void-End-->
@@ -199,7 +179,7 @@ Registers a callback to listen for the destroy event of the word selection panel
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -224,10 +204,6 @@ Registers a callback to listen for the hide event of the word selection panel. T
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Panel-onHide(callback: Callback<void>): void--><!--Device-Panel-onHide(callback: Callback<void>): void-End-->
@@ -240,7 +216,7 @@ Registers a callback to listen for the hide event of the word selection panel. T
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback function that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

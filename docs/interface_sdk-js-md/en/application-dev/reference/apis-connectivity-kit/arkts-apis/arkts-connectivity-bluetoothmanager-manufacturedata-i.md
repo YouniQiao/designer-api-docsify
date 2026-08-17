@@ -4,11 +4,9 @@ Describes the manufacturer data.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [ManufactureData](arkts-connectivity-ble-manufacturedata-i.md#ManufactureData)
+**Substitutes:** [ManufactureData](arkts-connectivity-ble-manufacturedata-i.md#manufacturedata)
 
 <!--Device-bluetoothManager-interface ManufactureData--><!--Device-bluetoothManager-interface ManufactureData-End-->
 
@@ -32,11 +30,9 @@ Indicates the manufacturer ID assigned by Bluetooth SIG
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [manufactureId](arkts-connectivity-ble-manufacturedata-i.md#manufactureId)
+**Substitutes:** [manufactureId](arkts-connectivity-ble-manufacturedata-i.md#manufactureid)
 
 <!--Device-ManufactureData-manufactureId: number--><!--Device-ManufactureData-manufactureId: number-End-->
 
@@ -54,11 +50,9 @@ Indicates the manufacturer data to add
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** [manufactureValue](arkts-connectivity-ble-manufacturedata-i.md#manufactureValue)
+**Substitutes:** [manufactureValue](arkts-connectivity-ble-manufacturedata-i.md#manufacturevalue)
 
 <!--Device-ManufactureData-manufactureValue: ArrayBuffer--><!--Device-ManufactureData-manufactureValue: ArrayBuffer-End-->
 

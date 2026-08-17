@@ -1,12 +1,8 @@
 # ContextMenuOptions
 
-Configures menu item information. **Table 1: Menu offset when both offset and placement are set** | Value of placement | Menu Offset | | ------------------------------------------------------------ | ------------------------------------------------------------ | | Placement.TopLeft, Placement.Top, or Placement.TopRight | If the value of **x** is a positive number for **offset**, the menu shifts to the right relative to the component. If the value of **y** is a positive number, the menu shifts upward relative to the component.| | Placement.BottomLeft, Placement.Bottom, or Placement.BottomRight| If the value of **x** is a positive number for **offset**, the menu shifts to the left relative to the component. If the value of **y** is a positive number, the menu shifts downward relative to the component.| | Placement.RightTop, Placement.Right, or Placement.RightBottom | If the value of **x** is a positive number for **offset**, the menu shifts to the right relative to the component. If the value of **y** is a positive number, the menu shifts downward relative to the component.| **Table 2: Default position of the menu arrow when both arrowOffset and placement are set** | Value of placement | Menu Arrow Position | | ------------------------------------------- | ------------------------------------------------------------ | | Placement.Top or Placement.Bottom | The arrow is displayed horizontally and centered by default, with a distance from the left edge of the menu equal to the arrow's safe distance.| | Placement.Left or Placement.Right | The arrow is displayed vertically and centered by default, with a distance from the top edge of the menu equal to the arrow's safe distance.| | Placement.TopLeft or Placement.BottomLeft | The arrow is displayed horizontally by default, with a distance from the left edge of the menu equal to the arrow's safe distance.| | Placement.TopRight or Placement.BottomRight | The arrow is displayed horizontally by default, with a distance from the right edge of the menu equal to the arrow's safe distance. | | Placement.LeftTop or Placement.RightTop | The arrow is displayed vertically by default, with a distance from the top edge of the menu equal to the arrow's safe distance. | | Placement.LeftBottom or Placement.RightBottom| The arrow is displayed vertically by default, with a distance from the bottom edge of the menu equal to the arrow's safe distance. | **Table 3 Default menu position when enableArrow is set to true and placement is not set or set to an invalid value** | API| Default Menu Position| |------|-------------| | [bindMenu](arkts-arkui-commonmethod-c.md#bindMenu) | Placement.BottomLeft | | [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindMenu) | Placement.BottomLeft | | [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu) | Placement.Top | | [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu) | Placement.BottomLeft | | [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenuWithResponse) | Placement.Top |
+Configures menu item information. **Table 1: Menu offset when both offset and placement are set** | Value of placement | Menu Offset | | ------------------------------------------------------------ | ------------------------------------------------------------ | | Placement.TopLeft, Placement.Top, or Placement.TopRight | If the value of **x** is a positive number for **offset**, the menu shifts to the right relative to the component. If the value of **y** is a positive number, the menu shifts upward relative to the component.| | Placement.BottomLeft, Placement.Bottom, or Placement.BottomRight| If the value of **x** is a positive number for **offset**, the menu shifts to the left relative to the component. If the value of **y** is a positive number, the menu shifts downward relative to the component.| | Placement.RightTop, Placement.Right, or Placement.RightBottom | If the value of **x** is a positive number for **offset**, the menu shifts to the right relative to the component. If the value of **y** is a positive number, the menu shifts downward relative to the component.| **Table 2: Default position of the menu arrow when both arrowOffset and placement are set** | Value of placement | Menu Arrow Position | | ------------------------------------------- | ------------------------------------------------------------ | | Placement.Top or Placement.Bottom | The arrow is displayed horizontally and centered by default, with a distance from the left edge of the menu equal to the arrow's safe distance.| | Placement.Left or Placement.Right | The arrow is displayed vertically and centered by default, with a distance from the top edge of the menu equal to the arrow's safe distance.| | Placement.TopLeft or Placement.BottomLeft | The arrow is displayed horizontally by default, with a distance from the left edge of the menu equal to the arrow's safe distance.| | Placement.TopRight or Placement.BottomRight | The arrow is displayed horizontally by default, with a distance from the right edge of the menu equal to the arrow's safe distance. | | Placement.LeftTop or Placement.RightTop | The arrow is displayed vertically by default, with a distance from the top edge of the menu equal to the arrow's safe distance. | | Placement.LeftBottom or Placement.RightBottom| The arrow is displayed vertically by default, with a distance from the bottom edge of the menu equal to the arrow's safe distance. | **Table 3 Default menu position when enableArrow is set to true and placement is not set or set to an invalid value** | API| Default Menu Position| |------|-------------| | [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft | | [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft | | [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.Top | | [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.BottomLeft | | [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) | Placement.Top |
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ContextMenuOptions--><!--Device-unnamed-declare interface ContextMenuOptions-End-->
 
@@ -23,10 +19,6 @@ Callback triggered when the menu is about to appear.
 **Type:** () =&gt; void
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +39,6 @@ Callback triggered when the menu is about to disappear.
 **Type:** () =&gt; void
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,10 +62,6 @@ Display position of the menu relative to the upper left corner of the bound comp
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -100,10 +84,6 @@ Offset of the arrow relative to the context menu. The offset settings take effec
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -123,10 +103,6 @@ Available layout area of the preview image. The percentage of the preview image 
 **Type:** [AvailableLayoutArea](arkts-arkui-availablelayoutarea-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,10 +126,6 @@ Background blur style of the menu. Default value: **BlurStyle.COMPONENT_ULTRA_TH
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -173,10 +145,6 @@ Background blur style.
 **Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,10 +168,6 @@ Background color of the menu. Default value: **Color.Transparent**
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -223,10 +187,6 @@ Background effect.
 **Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,10 +210,6 @@ Default value: **8vp** for 2-in-1 devices and **20vp** for other devices **NOTE�
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -275,10 +231,6 @@ Define the menu theme color mode.
 **Default:** AnchoredColorMode.FOLLOW_TARGET
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -302,10 +254,6 @@ Whether to display an arrow. If the size and position of the context menu are in
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -328,10 +276,6 @@ Whether to respond when the device is in hover mode (semi-folded state), that is
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -351,10 +295,6 @@ Define the grid style of menu. Only fixed-style menus are effective. For example
 **Type:** [MenuGridStyleOptions](arkts-arkui-menugridstyleoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -378,10 +318,6 @@ Haptic feedback mode when the menu is displayed. Default value: **HapticFeedback
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -403,10 +339,6 @@ Whether the menu avoids the soft keyboard. **NOTE：**If this parameter is not s
 **Default:** MenuKeyboardAvoidMode.NONE
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -430,10 +362,6 @@ Minimum margin between the preview and menu layout for top, bottom, left, and ri
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -456,10 +384,6 @@ Sets whether a menu has a mask and the mask style. **true**: yes; **false**: no;
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -480,10 +404,6 @@ Defines the max height of menu.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -503,10 +423,6 @@ Minimum distance for the menu to avoid the soft keyboard. **NOTE：**If this par
 **Type:** LengthMetrics
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -530,10 +446,6 @@ Modal mode of a menu. **NOTE：**Default value: **ModalMode.AUTO**
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -556,10 +468,6 @@ Offset for showing the context menu, which should not cause the menu to extend b
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -579,10 +487,6 @@ Callback invoked after the menu appears.
 **Type:** () =&gt; void
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -604,10 +508,6 @@ Callback invoked after the menu appears. **NOTE：**1. The normal sequence is **
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -627,10 +527,6 @@ Callback invoked after the menu disappears. **NOTE：**1. The normal sequence is
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -652,10 +548,6 @@ Callback invoked after the menu disappears.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -676,10 +568,6 @@ Callback triggered when the menu is about to appear. **NOTE：**1. The normal se
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -699,10 +587,6 @@ Callback triggered when the menu is about to disappear. **NOTE：**1. The normal
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -726,10 +610,6 @@ Outline color of the menu border. **NOTE：**Default value: **'#19ffffff'**
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -752,10 +632,6 @@ Outline width of the menu border. Default value: **0vp** **NOTE：**Percentage v
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -770,17 +646,13 @@ Outline width of the menu border. Default value: **0vp** **NOTE：**Percentage v
 placement?: Placement
 ```
 
-Preferred position of the context menu. If the set position is insufficient for holding the component, it will be automatically adjusted. **NOTE：**1. When this parameter is used as the input parameter of [bindMenu](arkts-arkui-commonmethod-c.md#bindMenu), its default value is **Placement.BottomLeft**. 2. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu) or [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenuWithResponse), the menu is displayed at the click position. 3. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu), its default value is **Placement.BottomLeft**. 4. If the value of **placement** is **undefined**, **null**, or empty, the default value is used.
+Preferred position of the context menu. If the set position is insufficient for holding the component, it will be automatically adjusted. **NOTE：**1. When this parameter is used as the input parameter of [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu), its default value is **Placement.BottomLeft**. 2. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) or [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse), the menu is displayed at the click position. 3. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu), its default value is **Placement.BottomLeft**. 4. If the value of **placement** is **undefined**, **null**, or empty, the default value is used.
 
 **Type:** Placement
 
 **Default:** - [since 10 - 10] @default Placement.BottomLeft [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -796,17 +668,13 @@ Preferred position of the context menu. If the set position is insufficient for 
 preview?: MenuPreviewMode | CustomBuilder
 ```
 
-Preview displayed when the context menu is triggered by a long-press or by calling [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu). It can be a screenshot of the target component or custom content. Default value: **MenuPreviewMode.NONE**, indicating no preview. **NOTE：**- This parameter has no effect when **responseType** is set to **ResponseType.RightClick**. - If **preview** is set to **MenuPreviewMode.NONE** or is not set, the **enableArrow** parameter is effective. - If **preview** is set to **MenuPreviewMode.IMAGE** or **CustomBuilder**, no arrow will be displayed even when **enableArrow** is **true**.
+Preview displayed when the context menu is triggered by a long-press or by calling [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu). It can be a screenshot of the target component or custom content. Default value: **MenuPreviewMode.NONE**, indicating no preview. **NOTE：**- This parameter has no effect when **responseType** is set to **ResponseType.RightClick**. - If **preview** is set to **MenuPreviewMode.NONE** or is not set, the **enableArrow** parameter is effective. - If **preview** is set to **MenuPreviewMode.IMAGE** or **CustomBuilder**, no arrow will be displayed even when **enableArrow** is **true**.
 
 **Type:** [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Default:** MenuPreviewMode.NONE
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -830,10 +698,6 @@ Display effect of the long-press preview. Default value: **{ scale: [0.95, 1.1],
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -855,10 +719,6 @@ Border corner radius for the preview image. Default value: **16vp** **NOTE：**I
 **Default:** 16vp
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -882,10 +742,6 @@ Preview image scaling mode. Default value: **PreviewScaleMode.AUTO** **NOTE：**
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -908,10 +764,6 @@ Defines the scroll bar state of menu.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -932,10 +784,6 @@ Sets the space between the menu and target. When both targetSpace and offset are
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -950,15 +798,11 @@ Sets the space between the menu and target. When both targetSpace and offset are
 transition?: TransitionEffect
 ```
 
-Transition effect for the entrance and exit of the menu. **NOTE：**During the exit animation of the menu, if there is a switch between landscape and portrait modes, the menu will make way. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the pop-up process, but not during the execution of the exit animation. For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect). The menu animation uses a spring curve. Due to the rebound and oscillation of the spring curve during the exit of the animation, there is a prolonged tail effect, which prevents the menu from responding to other events after it disappears.
+Transition effect for the entrance and exit of the menu. **NOTE：**During the exit animation of the menu, if there is a switch between landscape and portrait modes, the menu will make way. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the pop-up process, but not during the execution of the exit animation. For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect). The menu animation uses a spring curve. Due to the rebound and oscillation of the spring curve during the exit of the animation, there is a prolonged tail effect, which prevents the menu from responding to other events after it disappears.
 
 **Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

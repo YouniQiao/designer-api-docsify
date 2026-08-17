@@ -8,10 +8,6 @@ Defines the remote ability information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-distributedBundleManager-export type RemoteAbilityInfo = _RemoteAbilityInfo--><!--Device-distributedBundleManager-export type RemoteAbilityInfo = _RemoteAbilityInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework

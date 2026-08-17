@@ -4,10 +4,6 @@ Provides the conditions of on/off.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-securityGuard-interface SecurityEventInfo--><!--Device-securityGuard-interface SecurityEventInfo-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -31,10 +27,6 @@ The security event id.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-SecurityEventInfo-eventId: number--><!--Device-SecurityEventInfo-eventId: number-End-->
 

@@ -4,10 +4,6 @@ Represents the parameters for obtaining a widget ID (**formId**) when querying o
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface FormCallbackInfo--><!--Device-unnamed-interface FormCallbackInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,10 +21,6 @@ Widget ID of the number type. **NOTE：**If the obtained ID is **-1**, the ID is
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-FormCallbackInfo-id: number--><!--Device-FormCallbackInfo-id: number-End-->
 
@@ -48,10 +40,6 @@ Widget ID of the string type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-FormCallbackInfo-idString: string--><!--Device-FormCallbackInfo-idString: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -69,10 +57,6 @@ Indicates whether the form is locked.
 **Type:** boolean
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
-
-**Deprecated since:** -1
 
 <!--Device-FormCallbackInfo-isLocked: boolean--><!--Device-FormCallbackInfo-isLocked: boolean-End-->
 

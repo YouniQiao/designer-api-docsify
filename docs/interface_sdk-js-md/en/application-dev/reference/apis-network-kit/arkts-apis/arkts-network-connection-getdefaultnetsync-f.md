@@ -16,10 +16,6 @@ Obtains the data network that is activated by default. To call this method, you 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -42,7 +38,7 @@ Obtains the data network that is activated by default. To call this method, you 
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

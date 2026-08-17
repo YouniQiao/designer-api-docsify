@@ -10,10 +10,6 @@ function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfil
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-cameraPicker-function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfile: PickerProfile): Promise<PickerResult>--><!--Device-cameraPicker-function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfile: PickerProfile): Promise<PickerResult>-End-->
@@ -34,7 +30,7 @@ function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfil
 | --- | --- |
 | Promise&lt;[PickerResult](arkts-camera-camerapicker-pickerresult-c.md)&gt; | Promise对象，返回相机选择器的处理结果[PickerResult]{ |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { cameraPicker } from '@kit.CameraKit';

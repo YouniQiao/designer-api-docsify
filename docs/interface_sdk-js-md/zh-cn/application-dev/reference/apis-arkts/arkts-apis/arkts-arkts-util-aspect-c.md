@@ -4,10 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 <!--Device-util-class Aspect--><!--Device-util-class Aspect-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -21,10 +17,6 @@ static addAfter(targetClass: Object, methodName: string, isStatic: boolean, afte
 在类对象的方法后插入一个函数。最终的返回值为被插入函数的返回值。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -41,7 +33,7 @@ static addAfter(targetClass: Object, methodName: string, isStatic: boolean, afte
 | isStatic | boolean | 是 | 该方法是否为静态方法。值为 **true** 表示静态方法，值为 **false** 表示实例方法。 |
 | after | Function | 是 | 要插入的函数。如果该函数携带参数，则第一个参数为 **this** 对象：当 **isStatic** 为 **true** 时为目标类对象（由 **targetClass** 指定），当 **isStatic** 为 **false** 时为该方法的实例对象； 第二个参数为原方法的返回值（如果原方法没有返回值则为 **undefined**）；其余参数为原方法携带的参数。如果该函数 不携带任何参数，则不执行任何处理。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class MyClass {
@@ -107,10 +99,6 @@ static addBefore(targetClass: Object, methodName: string, isStatic: boolean, bef
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Aspect-static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void--><!--Device-Aspect-static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void-End-->
@@ -126,7 +114,7 @@ static addBefore(targetClass: Object, methodName: string, isStatic: boolean, bef
 | isStatic | boolean | 是 | 该方法是否为静态方法。值为 **true** 表示静态方法，值为 **false** 表示实例方法。 |
 | before | Function | 是 | 要插入的函数。如果该函数携带参数，则第一个参数为 **this** 对象：当 **isStatic** 为 **true** 时为目标类对象（由 **targetClass** 指定），当 **isStatic** 为 **false** 时为该方法的实例对象； 其余参数为原方法携带的参数。如果该函数不携带任何参数，则不执行任何处理。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class MyClass {
@@ -201,10 +189,6 @@ static replace(targetClass: Object, methodName: string, isStatic: boolean, inste
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Aspect-static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void--><!--Device-Aspect-static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void-End-->
@@ -220,7 +204,7 @@ static replace(targetClass: Object, methodName: string, isStatic: boolean, inste
 | isStatic | boolean | 是 | 该方法是否为静态方法。值为 **true** 表示静态方法，值为 **false** 表示实例方法。 |
 | instead | Function | 是 | 用于替换的函数。如果该函数携带参数，则第一个参数为 **this** 对象：当 **isStatic** 为 **true** 时为目标类对象（由 **targetClass** 指定），当 **isStatic** 为 **false** 时为该方法的实例对象； 其余参数为原方法携带的参数。如果该函数不携带任何参数，则不执行任何处理。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 class MyClass {

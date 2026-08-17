@@ -10,11 +10,9 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
-
 **废弃版本：** 9
 
-**替代接口：** [getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getDevices)
+**替代接口：** [getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)
 
 <!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>-End-->
 
@@ -26,7 +24,7 @@ function getDevices(): Array<Readonly<USBDevice>>
 | --- | --- |
 | Array&lt;Readonly&lt;USBDevice&gt;&gt; | 设备信息列表。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let devicesList = usb.getDevices();

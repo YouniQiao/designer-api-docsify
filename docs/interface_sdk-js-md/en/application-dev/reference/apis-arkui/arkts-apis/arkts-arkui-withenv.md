@@ -39,6 +39,6 @@ import { WithEnvAttribute } from 'WithEnvAttribute';
 
 | Name | Description |
 | --- | --- |
-| [WithEnv](arkts-arkui-arkui-withenv-con.md#WithEnv) | Define the WithEnv component that allows setting environment properties for child components. |
-| [WithEnvInstance](arkts-arkui-arkui-withenv-con.md#WithEnvInstance) | Define WithEnv Logic Component Instance. |
+| [WithEnv](arkts-arkui-arkui-withenv-con.md#withenv) | Define the WithEnv component that allows setting environment properties for child components. |
+| [WithEnvInstance](arkts-arkui-arkui-withenv-con.md#withenvinstance) | Define WithEnv Logic Component Instance. |
 

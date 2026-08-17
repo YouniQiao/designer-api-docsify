@@ -1,12 +1,8 @@
-# SceneOptions
+# SceneOptions(Defines 3D component)
 
 3D场景控制使用的场景选项
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare interface SceneOptions--><!--Device-unnamed-declare interface SceneOptions-End-->
 
@@ -26,10 +22,6 @@ modelType?: ModelType
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SceneOptions-modelType?: ModelType--><!--Device-SceneOptions-modelType?: ModelType-End-->
@@ -47,10 +39,6 @@ scene?: ResourceStr | Scene
 **类型：** ResourceStr \| [Scene](arkts-arkui-scene-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

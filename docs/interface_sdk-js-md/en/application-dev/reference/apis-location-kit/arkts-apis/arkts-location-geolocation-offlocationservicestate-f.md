@@ -16,8 +16,6 @@ Unsubscribe location switch changed
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** locationEnabledChange
@@ -35,7 +33,7 @@ Unsubscribe location switch changed
 | type | 'locationServiceState' | Yes | Indicates the location service event to be subscribed to. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Indicates the callback for reporting the location result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

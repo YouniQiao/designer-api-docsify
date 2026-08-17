@@ -16,10 +16,6 @@ Sets the system color mode. This API uses an asynchronous callback to return the
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
 <!--Device-uiAppearance-function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void--><!--Device-uiAppearance-function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void-End-->
@@ -43,7 +39,7 @@ Sets the system color mode. This API uses an asynchronous callback to return the
 | [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiAppearance } from '@kit.ArkUI';
@@ -74,10 +70,6 @@ Sets the system color mode. This API uses a promise to return the result. **Perm
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
 <!--Device-uiAppearance-function setDarkMode(mode: DarkMode): Promise<void>--><!--Device-uiAppearance-function setDarkMode(mode: DarkMode): Promise<void>-End-->
@@ -106,7 +98,7 @@ Sets the system color mode. This API uses a promise to return the result. **Perm
 | [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uiAppearance } from '@kit.ArkUI';

@@ -16,10 +16,6 @@ Get the total inodes.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-storageStatistics-function getTotalInodes(): Promise<long>--><!--Device-storageStatistics-function getTotalInodes(): Promise<long>-End-->
@@ -39,7 +35,7 @@ Get the total inodes.
 | 13600001 | IPC error. |
 | 13600016 | Failed to query the inode information of the data partition. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

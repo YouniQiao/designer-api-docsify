@@ -10,10 +10,6 @@ function isVectorSupported(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-relationalStore-function isVectorSupported(): boolean--><!--Device-relationalStore-function isVectorSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -24,7 +20,7 @@ function isVectorSupported(): boolean
 | --- | --- |
 | boolean | 系统具备向量数据库能力时返回true，否则返回false。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { contextConstant, UIAbility } from '@kit.AbilityKit';

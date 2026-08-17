@@ -16,10 +16,6 @@ Unregisters a global error observer. Once unregistered, global listening cannot 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-errorManager-function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void--><!--Device-errorManager-function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void-End-->
@@ -41,7 +37,7 @@ Unregisters a global error observer. Once unregistered, global listening cannot 
 | [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
 | [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';

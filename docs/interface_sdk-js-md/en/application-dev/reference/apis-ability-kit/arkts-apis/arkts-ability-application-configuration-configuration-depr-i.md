@@ -4,11 +4,9 @@ The module defines environment change information. Configuration is an interface
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration)
+**Substitutes:** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md#configuration)
 
 <!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
 
@@ -26,11 +24,9 @@ Color mode, which can be **COLOR_MODE_LIGHT** or **COLOR_MODE_DARK**. The defaul
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [colorMode](arkts-ability-app-ability-configuration-configuration-i.md#colorMode)
+**Substitutes:** [colorMode](arkts-ability-app-ability-configuration-configuration-i.md#colormode)
 
 <!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
 
@@ -47,8 +43,6 @@ Language of the application, for example, **zh**.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

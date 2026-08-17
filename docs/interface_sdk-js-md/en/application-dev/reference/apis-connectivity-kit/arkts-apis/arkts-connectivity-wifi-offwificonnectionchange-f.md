@@ -16,8 +16,6 @@ Unsubscribe Wi-Fi connection change events. &lt;p&gt;All callback functions will
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** wifiConnectionChange
@@ -35,7 +33,7 @@ Unsubscribe Wi-Fi connection change events. &lt;p&gt;All callback functions will
 | type | 'wifiConnectionChange' | Yes | event name. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: disconnected, 1: connected |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

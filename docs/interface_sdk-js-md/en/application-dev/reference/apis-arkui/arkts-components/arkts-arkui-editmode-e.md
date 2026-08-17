@@ -4,8 +4,6 @@ Enumerates the edit modes of list items.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-unnamed-declare enum EditMode--><!--Device-unnamed-declare enum EditMode-End-->
@@ -21,8 +19,6 @@ None
 Unrestricted operations.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ The list item can be deleted.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-EditMode-Deletable--><!--Device-EditMode-Deletable-End-->
@@ -57,8 +51,6 @@ Movable
 The list item can be moved.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

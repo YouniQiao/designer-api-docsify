@@ -10,10 +10,6 @@ function setCameraTrackingEnabled(isEnabled: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void--><!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -32,7 +28,7 @@ function setCameraTrackingEnabled(isEnabled: boolean): void
 | [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
 | [33300003](../errorcode-mechanic.md#33300003-功能不支持) | Feature not supported. |
 
-## 示例
+**示例**
 
 ```TypeScript
 console.info('Enable tracing');

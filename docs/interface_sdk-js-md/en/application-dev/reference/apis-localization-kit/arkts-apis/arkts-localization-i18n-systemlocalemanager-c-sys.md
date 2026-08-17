@@ -4,10 +4,6 @@ Provide some functions for settings and startup guide to select language or regi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class SystemLocaleManager--><!--Device-i18n-export class SystemLocaleManager-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -30,10 +26,6 @@ Creates a SystemLocaleManager object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemLocaleManager-constructor()--><!--Device-SystemLocaleManager-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -46,7 +38,7 @@ Creates a SystemLocaleManager object.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -64,10 +56,6 @@ Obtains the list of languages after sorting.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemLocaleManager-getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>--><!--Device-SystemLocaleManager-getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -79,13 +67,13 @@ Obtains the list of languages after sorting.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | languages | Array&lt;string&gt; | Yes | Valid IDs of the languages to be sorted. |
-| options | [SortOptions](../../apis-na/arkts-apis/arkts-na-i18n-sortoptions-i-sys.md) | No | Language sorting option. |
+| options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | No | Language sorting option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[LocaleItem](../../apis-na/arkts-apis/arkts-na-i18n-localeitem-i-sys.md)&gt; | Language list after sorting. |
+| Array&lt;[LocaleItem](arkts-localization-i18n-localeitem-i-sys.md)&gt; | Language list after sorting. |
 
 **Error codes:**
 
@@ -95,7 +83,7 @@ Obtains the list of languages after sorting.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -124,10 +112,6 @@ Obtains the IDs of the countries or regions after sorting.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemLocaleManager-getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>--><!--Device-SystemLocaleManager-getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -139,13 +123,13 @@ Obtains the IDs of the countries or regions after sorting.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | regions | Array&lt;string&gt; | Yes | Valid IDs of the countries or regions to be sorted. |
-| options | [SortOptions](../../apis-na/arkts-apis/arkts-na-i18n-sortoptions-i-sys.md) | No | Country/region sorting option. By default, locale is the current system locale, isUseLocalName is false, and isSuggestedFirst is true. |
+| options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | No | Country/region sorting option. By default, locale is the current system locale, isUseLocalName is false, and isSuggestedFirst is true. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[LocaleItem](../../apis-na/arkts-apis/arkts-na-i18n-localeitem-i-sys.md)&gt; | IDs of the countries or regions after sorting. |
+| Array&lt;[LocaleItem](arkts-localization-i18n-localeitem-i-sys.md)&gt; | IDs of the countries or regions after sorting. |
 
 **Error codes:**
 
@@ -155,7 +139,7 @@ Obtains the IDs of the countries or regions after sorting.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -184,10 +168,6 @@ Obtains list of time zone city items after sorting.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-SystemLocaleManager-static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>--><!--Device-SystemLocaleManager-static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -198,7 +178,7 @@ Obtains list of time zone city items after sorting.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TimeZoneCityItem](../../apis-na/arkts-apis/arkts-na-i18n-timezonecityitem-i-sys.md)&gt; | List of time zone city items after sorting. |
+| Array&lt;[TimeZoneCityItem](arkts-localization-i18n-timezonecityitem-i-sys.md)&gt; | List of time zone city items after sorting. |
 
 **Error codes:**
 
@@ -206,7 +186,7 @@ Obtains list of time zone city items after sorting.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

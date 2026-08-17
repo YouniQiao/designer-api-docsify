@@ -12,13 +12,9 @@ import { connection } from 'connection';
 function setGlobalHttpProxy(httpProxy: HttpProxy, callback: AsyncCallback<void>): void
 ```
 
-Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings.
+Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -32,7 +28,7 @@ Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | HttpProxy | Yes | Indicates the global proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy). |
+| httpProxy | HttpProxy | Yes | Indicates the global proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setGlobalHttpProxy. |
 
 **Error codes:**
@@ -46,7 +42,7 @@ Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -75,13 +71,9 @@ connection.setGlobalHttpProxy(httpProxy, (err: BusinessError) => {
 function setGlobalHttpProxy(httpProxy: HttpProxy): Promise<void>
 ```
 
-Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy) proxy settings.
+Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -95,7 +87,7 @@ Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | HttpProxy | Yes | Indicates the global proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy). |
+| httpProxy | HttpProxy | Yes | Indicates the global proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy). |
 
 **Return value:**
 
@@ -114,7 +106,7 @@ Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

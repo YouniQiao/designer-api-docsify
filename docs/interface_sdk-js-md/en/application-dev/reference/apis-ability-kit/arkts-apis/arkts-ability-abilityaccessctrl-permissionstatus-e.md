@@ -4,10 +4,6 @@ Enumerates the permission states.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-abilityAccessCtrl-export enum PermissionStatus--><!--Device-abilityAccessCtrl-export enum PermissionStatus-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -21,10 +17,6 @@ DENIED = -1
 The permission is not granted.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,10 +34,6 @@ The permission is granted.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PermissionStatus-GRANTED = 0--><!--Device-PermissionStatus-GRANTED = 0-End-->
@@ -58,13 +46,9 @@ The permission is granted.
 NOT_DETERMINED = 1
 ```
 
-Indicates not operated. The app declares a [user authorization permission](arkts-ability-permissions-t.md#Permissions) but has not yet called the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionsFromUser) API to request authorization, or the user has changed the permission status to asking eve this value is returned when querying the permission status.
+Indicates not operated. The app declares a [user authorization permission](arkts-ability-permissions-t.md#permissions) but has not yet called the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) API to request authorization, or the user has changed the permission status to asking eve this value is returned when querying the permission status.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -82,10 +66,6 @@ The permission is invalid. The application does not [declare permissions](../../
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PermissionStatus-INVALID = 2--><!--Device-PermissionStatus-INVALID = 2-End-->
@@ -98,13 +78,9 @@ The permission is invalid. The application does not [declare permissions](../../
 RESTRICTED = 3
 ```
 
-Indicates restricted. &lt;!--RP2--&gt;The app is prohibited from requesting user authorization through the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionsFromUser) API. &lt;!--RP2End--&gt;
+Indicates restricted. &lt;!--RP2--&gt;The app is prohibited from requesting user authorization through the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) API. &lt;!--RP2End--&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

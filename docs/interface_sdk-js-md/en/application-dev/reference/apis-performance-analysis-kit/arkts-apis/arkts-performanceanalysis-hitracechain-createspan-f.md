@@ -16,10 +16,6 @@ Creates a trace span. This API works in synchronous manner. Specifically, create
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-hiTraceChain-function createSpan(): HiTraceId--><!--Device-hiTraceChain-function createSpan(): HiTraceId-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -30,7 +26,7 @@ Creates a trace span. This API works in synchronous manner. Specifically, create
 | --- | --- |
 | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId** instance. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Start tracing. The tracing flag is DEFAULT.

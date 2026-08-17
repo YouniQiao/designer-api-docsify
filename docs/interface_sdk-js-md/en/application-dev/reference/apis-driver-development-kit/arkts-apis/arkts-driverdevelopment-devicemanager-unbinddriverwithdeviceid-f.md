@@ -16,10 +16,6 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_DDK_DRIVERS
 
 <!--Device-deviceManager-function unbindDriverWithDeviceId(deviceId: long): Promise<int>--><!--Device-deviceManager-function unbindDriverWithDeviceId(deviceId: long): Promise<int>-End-->
@@ -30,7 +26,7 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | long | Yes | Device ID, which can be obtained via [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices). |
+| deviceId | long | Yes | Device ID, which can be obtained via [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices). |
 
 **Return value:**
 
@@ -46,7 +42,7 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 | [26300003](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300003-driver-client-not-bound-to-any-driver-server) | There is no binding relationship. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

@@ -10,10 +10,6 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>--><!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -37,7 +33,7 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 | --- | --- |
 | [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) | The specified shortcut id is not exist. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

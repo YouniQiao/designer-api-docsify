@@ -2,13 +2,9 @@
 
 The &lt;div&gt; component provides a div container.
 
-**Inheritance/Implementation:** DivElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
+**Inheritance/Implementation:** DivElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DivElement--><!--Device-unnamed-export interface DivElement-End-->
 
@@ -23,10 +19,6 @@ getScrollOffset(): ScrollOffset
 Returns the offset of the current scrolling. The return value type is Object.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -49,10 +41,6 @@ scrollBy(data: ScrollParam): void
 Scrolls the div for a certain distance.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

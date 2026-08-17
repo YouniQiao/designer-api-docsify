@@ -12,13 +12,9 @@ import { window } from 'window';
 function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 ```
 
-Obtains the topmost layer child window of the current application. This API uses an asynchronous callback to return the result. If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showWindow), the main window of the application is returned.
+Obtains the topmost layer child window of the current application. This API uses an asynchronous callback to return the result. If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow), the main window of the application is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,7 +37,7 @@ Obtains the topmost layer child window of the current application. This API uses
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. Top window or main window is not created or destroyed; 2. Stage mode without context. |
 | [1300006](../errorcode-window.md#1300006-abnormal-window-context) | This window context is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -93,13 +89,9 @@ export default class EntryAbility extends UIAbility {
 function getLastWindow(ctx: BaseContext): Promise<Window>
 ```
 
-Obtains the topmost layer child window of the current application. This API uses a promise to return the result. If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showWindow), the main window of the application is returned.
+Obtains the topmost layer child window of the current application. This API uses a promise to return the result. If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow), the main window of the application is returned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -127,7 +119,7 @@ Obtains the topmost layer child window of the current application. This API uses
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. Top window or main window is not created or destroyed; 2. Stage mode without context. |
 | [1300006](../errorcode-window.md#1300006-abnormal-window-context) | This window context is abnormal. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // EntryAbility.ets

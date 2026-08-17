@@ -10,8 +10,6 @@ function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<R
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-wallpaper-function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void--><!--Device-wallpaper-function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void-End-->
@@ -23,9 +21,9 @@ function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<R
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-na-wallpaper-wallpapertype-e.md) | 是 |  |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RgbaColor](arkts-na-wallpaper-rgbacolor-i.md)&gt;&gt; | 是 | 回调函数，返回壁纸的主要颜色信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[RgbaColor](arkts-na-wallpaper-rgbacolor-i.md)&gt;&gt; | 是 | 回调函数，返回壁纸的主要颜色信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -50,8 +48,6 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 9
 
 <!--Device-wallpaper-function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>--><!--Device-wallpaper-function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>-End-->
@@ -70,7 +66,7 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 | --- | --- |
 | Promise&lt;Array&lt;[RgbaColor](arkts-na-wallpaper-rgbacolor-i.md)&gt;&gt; | 返回壁纸的主要颜色信息。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -17,10 +17,6 @@ An object representing the relative time format in parts that can be used for cu
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Intl-type RelativeTimeFormatPart =        | {              type: "literal";              value: string;          }        | {              type: Exclude<NumberFormatPartTypes, "literal">;              value: string;              unit: RelativeTimeFormatUnitSingular;          }--><!--Device-Intl-type RelativeTimeFormatPart =        | {              type: "literal";              value: string;          }        | {              type: Exclude<NumberFormatPartTypes, "literal">;              value: string;              unit: RelativeTimeFormatUnitSingular;          }-End-->
 
 | Type | Description |

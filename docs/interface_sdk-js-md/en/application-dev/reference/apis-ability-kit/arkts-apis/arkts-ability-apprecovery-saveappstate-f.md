@@ -12,13 +12,9 @@ import { appRecovery } from 'appRecovery';
 function saveAppState(): boolean
 ```
 
-Saves the application state. This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md#@ohos.app.ability.errorManager).
+Saves the application state. This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md#ohosappabilityerrormanager).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,7 +30,7 @@ Saves the application state. This API can be used together with the APIs of [err
 | --- | --- |
 | boolean | Whether the application state is saved. **true** if saved, **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appRecovery, errorManager } from '@kit.AbilityKit';
@@ -61,13 +57,9 @@ try {
 function saveAppState(context?: UIAbilityContext): boolean
 ```
 
-Saves the ability state, which will be used for recovery. This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md#@ohos.app.ability.errorManager).
+Saves the ability state, which will be used for recovery. This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md#ohosappabilityerrormanager).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,7 +81,7 @@ Saves the ability state, which will be used for recovery. This API can be used t
 | --- | --- |
 | boolean | Whether the application state is saved. **true** if saved, **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appRecovery, errorManager } from '@kit.AbilityKit';

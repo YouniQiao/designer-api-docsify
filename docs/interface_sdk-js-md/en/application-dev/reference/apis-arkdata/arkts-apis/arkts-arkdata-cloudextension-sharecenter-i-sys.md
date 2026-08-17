@@ -4,10 +4,6 @@ Provides APIs for interacting with the sharedCenter service. You need to inherit
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudExtension-export interface ShareCenter--><!--Device-cloudExtension-export interface ShareCenter-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -35,10 +31,6 @@ Changes the confirmation state of a share invitation. This API uses a promise to
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShareCenter-changeConfirmation(      userId: int,      bundleName: string,      sharingResource: string,      state: cloudData.sharing.State    ): Promise<Result<void>>--><!--Device-ShareCenter-changeConfirmation(      userId: int,      bundleName: string,      sharingResource: string,      state: cloudData.sharing.State    ): Promise<Result<void>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -60,7 +52,7 @@ Changes the confirmation state of a share invitation. This API uses a promise to
 | --- | --- |
 | Promise&lt;Result&lt;void&gt;&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -97,10 +89,6 @@ Changes the privilege (operation permissions) on the shared data. This API uses 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShareCenter-changePrivilege(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>--><!--Device-ShareCenter-changePrivilege(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -122,7 +110,7 @@ Changes the privilege (operation permissions) on the shared data. This API uses 
 | --- | --- |
 | Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -169,10 +157,6 @@ Confirms the invitation for a share. This API uses a promise to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShareCenter-confirmInvitation(      userId: int,      bundleName: string,      invitationCode: string,      state: cloudData.sharing.State    ): Promise<Result<string>>--><!--Device-ShareCenter-confirmInvitation(      userId: int,      bundleName: string,      invitationCode: string,      state: cloudData.sharing.State    ): Promise<Result<string>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -194,7 +178,7 @@ Confirms the invitation for a share. This API uses a promise to return the resul
 | --- | --- |
 | Promise&lt;Result&lt;string&gt;&gt; | Promise used to return the shared resource ID. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -227,10 +211,6 @@ Exits a device-cloud share. This API uses a promise to return the result. The ap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShareCenter-exit(userId: int, bundleName: string, sharingResource: string): Promise<Result<void>>--><!--Device-ShareCenter-exit(userId: int, bundleName: string, sharingResource: string): Promise<Result<void>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -251,7 +231,7 @@ Exits a device-cloud share. This API uses a promise to return the result. The ap
 | --- | --- |
 | Promise&lt;Result&lt;void&gt;&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -287,10 +267,6 @@ Queries the participants of a share. This API uses a promise to return the resul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShareCenter-queryParticipants(      userId: int,      bundleName: string,      sharingResource: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>--><!--Device-ShareCenter-queryParticipants(      userId: int,      bundleName: string,      sharingResource: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -311,7 +287,7 @@ Queries the participants of a share. This API uses a promise to return the resul
 | --- | --- |
 | Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise used to return the participants obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -377,10 +353,6 @@ Queries the participants of a share based on the invitation code. This API uses 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShareCenter-queryParticipantsByInvitation(      userId: int,      bundleName: string,      invitationCode: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>--><!--Device-ShareCenter-queryParticipantsByInvitation(      userId: int,      bundleName: string,      invitationCode: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -401,7 +373,7 @@ Queries the participants of a share based on the invitation code. This API uses 
 | --- | --- |
 | Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise used to return the participants obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -468,10 +440,6 @@ Shares data. This API uses a promise to return the result. The application that 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShareCenter-share(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>--><!--Device-ShareCenter-share(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -493,7 +461,7 @@ Shares data. This API uses a promise to return the result. The application that 
 | --- | --- |
 | Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
@@ -540,10 +508,6 @@ Unshares data. This API uses a promise to return the result. The application, sh
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-ShareCenter-unshare(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>--><!--Device-ShareCenter-unshare(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
@@ -565,7 +529,7 @@ Unshares data. This API uses a promise to return the result. The application, sh
 | --- | --- |
 | Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';

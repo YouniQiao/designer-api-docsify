@@ -4,6 +4,8 @@
 
 Defines the symmetric key interfaces.
 
+**Include**: <CryptoArchitectureKit/crypto_sym_key.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

@@ -4,8 +4,6 @@ Returns the text read, including the text content.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 10
 
 <!--Device-unnamed-export interface FileReadTextResponse--><!--Device-unnamed-export interface FileReadTextResponse-End-->
@@ -23,8 +21,6 @@ Text read from the specified file.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 10
 

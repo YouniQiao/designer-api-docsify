@@ -4,10 +4,6 @@ Defines an object that stores the response to an HTTP request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-http-export interface HttpResponseCache--><!--Device-http-export interface HttpResponseCache-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -28,10 +24,6 @@ Disables a cache and deletes the data in it.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponseCache-delete(callback: AsyncCallback<void>): void--><!--Device-HttpResponseCache-delete(callback: AsyncCallback<void>): void-End-->
@@ -44,7 +36,7 @@ Disables a cache and deletes the data in it.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of delete. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -104,10 +96,6 @@ Disables a cache and deletes the data in it.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponseCache-delete(): Promise<void>--><!--Device-HttpResponseCache-delete(): Promise<void>-End-->
@@ -120,7 +108,7 @@ Disables a cache and deletes the data in it.
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the delete. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -168,10 +156,6 @@ Writes data in the cache to the file system so that all the cached data can be a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponseCache-flush(callback: AsyncCallback<void>): void--><!--Device-HttpResponseCache-flush(callback: AsyncCallback<void>): void-End-->
@@ -184,7 +168,7 @@ Writes data in the cache to the file system so that all the cached data can be a
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of flush. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -242,10 +226,6 @@ Writes data in the cache to the file system so that all the cached data can be a
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpResponseCache-flush(): Promise<void>--><!--Device-HttpResponseCache-flush(): Promise<void>-End-->
@@ -258,7 +238,7 @@ Writes data in the cache to the file system so that all the cached data can be a
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the flush. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

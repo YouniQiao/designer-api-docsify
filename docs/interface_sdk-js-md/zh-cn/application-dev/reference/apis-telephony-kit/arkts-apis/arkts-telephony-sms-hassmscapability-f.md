@@ -10,10 +10,6 @@ function hasSmsCapability(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-sms-function hasSmsCapability(): boolean--><!--Device-sms-function hasSmsCapability(): boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
@@ -24,7 +20,7 @@ function hasSmsCapability(): boolean
 | --- | --- |
 | boolean | true：设备具备短信发送和接收能力。<br/>- false：设备不具备短信发送和接收能力。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { sms } from '@kit.TelephonyKit';

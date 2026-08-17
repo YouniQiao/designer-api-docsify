@@ -1,14 +1,10 @@
 # WriteOptions
 
-可选项类型，支持write接口使用，WriteOptions继承至[Options](arkts-corefile-file-fs-options-i.md#Options)。
+可选项类型，支持write接口使用，WriteOptions继承至[Options](arkts-corefile-file-fs-options-i.md#options)。
 
-**继承/实现关系：** WriteOptions extends [Options](arkts-corefile-file-fs-options-i.md#Options)
+**继承/实现关系：** WriteOptions extends [Options](arkts-corefile-file-fs-options-i.md#options)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-export interface WriteOptions--><!--Device-unnamed-export interface WriteOptions-End-->
 
@@ -25,10 +21,6 @@ length?: number
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -47,10 +39,6 @@ offset?: number
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

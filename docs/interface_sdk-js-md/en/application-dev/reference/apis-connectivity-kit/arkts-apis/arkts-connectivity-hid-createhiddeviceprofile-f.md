@@ -16,10 +16,6 @@ Creates the instance of HID device profile.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-hid-function createHidDeviceProfile(): HidDeviceProfile--><!--Device-hid-function createHidDeviceProfile(): HidDeviceProfile-End-->
@@ -38,7 +34,7 @@ Creates the instance of HID device profile.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 try {

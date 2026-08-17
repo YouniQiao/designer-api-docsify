@@ -6,13 +6,9 @@
 function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 ```
 
-创建划词面板，用于向用户展示业务相关的操作界面或文本处理结果，使用完毕后需调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md#destroyPanel（系统接口）)销毁面板释放资源。使用Promise异步回调。 单个划词应用仅允许创建一个[MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md#PanelType（系统接口）)和一个 [MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md#PanelType（系统接口）)。
+创建划词面板，用于向用户展示业务相关的操作界面或文本处理结果，使用完毕后需调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md#destroypanel系统接口)销毁面板释放资源。使用Promise异步回调。 单个划词应用仅允许创建一个MENU_PANEL和一个 MAIN_PANEL。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,7 +38,7 @@ function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
 | [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-调用接口的应用与系统设置中选择的应用不匹配) | The application calling the API does not match the application selected in the system settings. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

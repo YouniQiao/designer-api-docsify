@@ -6,15 +6,13 @@
 function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
+Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent).
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getWant](arkts-ability-wantagent-getwant-f-sys.md#getWant-(System-API))
+**Substitutes:** [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant-system-api)
 
 <!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
 
@@ -26,7 +24,7 @@ Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | Indicates the [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent) whose UID is to be obtained. |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | Indicates the [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent) whose UID is to be obtained. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Obtain the callback method for Want in WantAgent. |
 
 
@@ -36,15 +34,13 @@ Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
 function getWant(agent: WantAgent): Promise<Want>
 ```
 
-Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
+Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent).
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getWant](arkts-ability-wantagent-getwant-f-sys.md#getWant-(System-API))
+**Substitutes:** [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant-system-api)
 
 <!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
 
@@ -56,7 +52,7 @@ Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | Indicates the [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent) whose UID is to be obtained. |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | Indicates the [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent) whose UID is to be obtained. |
 
 **Return value:**
 

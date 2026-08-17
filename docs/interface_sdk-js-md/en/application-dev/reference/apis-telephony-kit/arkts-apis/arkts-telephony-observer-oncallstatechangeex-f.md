@@ -16,10 +16,6 @@ Callback when the telCall state corresponding to the monitored {@code slotId} is
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-observer-function onCallStateChangeEx(callback: Callback<TelCallState>, options?: ObserverOptions): void--><!--Device-observer-function onCallStateChangeEx(callback: Callback<TelCallState>, options?: ObserverOptions): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry

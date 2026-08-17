@@ -4,8 +4,6 @@ Defines the input parameters of **cipher.rsa()**.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -34,8 +32,6 @@ Action to perform. The options are as follows: 1. **encrypt**: Encrypts data. 2.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -55,8 +51,6 @@ Called when the execution is complete.
 **Type:** () =&gt; void
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 11
 
@@ -78,8 +72,6 @@ Called when data fails to be encrypted or decrypted.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -99,8 +91,6 @@ RSA key. It is a public key in encryption and a private key in decryption.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 11
 
@@ -122,8 +112,6 @@ Called when data is encrypted or decrypted successfully.
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -144,8 +132,6 @@ Text to be encrypted or decrypted. The text to be encrypted must be a common tex
 
 **Since:** 3
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -165,8 +151,6 @@ RSA padding. The default value is **RSA/None/OAEPWithSHA256AndMGF1Padding**.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 11
 

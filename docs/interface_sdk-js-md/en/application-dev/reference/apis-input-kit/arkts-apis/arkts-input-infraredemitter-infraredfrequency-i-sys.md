@@ -1,12 +1,8 @@
-# InfraredFrequency (System API)
+# InfraredFrequency(IR Management) (System API)
 
 Defines the frequency range of IR signals.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-infraredEmitter-interface InfraredFrequency--><!--Device-infraredEmitter-interface InfraredFrequency-End-->
 
@@ -32,10 +28,6 @@ Maximum frequency, in Hz.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-InfraredFrequency-max: long--><!--Device-InfraredFrequency-max: long-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InfraredEmitter
@@ -53,10 +45,6 @@ Minimum frequency, in Hz.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-InfraredFrequency-min: long--><!--Device-InfraredFrequency-min: long-End-->
 

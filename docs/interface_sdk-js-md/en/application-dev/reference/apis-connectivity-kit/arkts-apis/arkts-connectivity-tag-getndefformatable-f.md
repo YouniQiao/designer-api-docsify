@@ -12,13 +12,9 @@ import { tag } from 'tag';
 function getNdefFormatable(tagInfo: TagInfo): NdefFormatableTag
 ```
 
-Obtains an [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md#NdefFormatableTag) object based on the tag information. During tag reading, if the tag supports the NDEF Formatable technology, an [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md#NdefFormatableTag) object will be created based on the tag information.
+Obtains an [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md#ndefformatabletag) object based on the tag information. During tag reading, if the tag supports the NDEF Formatable technology, an [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md#ndefformatabletag) object will be created based on the tag information.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

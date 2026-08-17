@@ -10,10 +10,6 @@ function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
 <!--Device-appManager-function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>--><!--Device-appManager-function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>-End-->
@@ -42,7 +38,7 @@ function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';

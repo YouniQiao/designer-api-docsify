@@ -10,9 +10,7 @@ Copies a file or directory. This API uses a promise to return the result. File c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>--><!--Device-fileIo-function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>-End-->
 
@@ -74,9 +72,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void-End-->
 
@@ -131,9 +127,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void-End-->
 

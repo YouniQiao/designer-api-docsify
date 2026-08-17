@@ -16,10 +16,6 @@ Calls back an asynchronous function. In the callback, the first parameter indica
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-util-function callbackWrapper(original: Function): (err: Object, value: Object) => void--><!--Device-util-function callbackWrapper(original: Function): (err: Object, value: Object) => void-End-->
@@ -38,7 +34,7 @@ Calls back an asynchronous function. In the callback, the first parameter indica
 | --- | --- |
 | (err: Object, value: Object) =&gt; void | Callback function, in which the first parameter **err** indicates the cause of the rejection (the value is **null** if the promise has been resolved) and the second parameter **value** indicates the resolved value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function fn(input: string) {

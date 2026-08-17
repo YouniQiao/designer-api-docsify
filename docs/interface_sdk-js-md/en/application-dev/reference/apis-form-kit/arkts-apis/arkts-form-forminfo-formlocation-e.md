@@ -4,10 +4,6 @@ Enumerates the widget locations.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-formInfo-enum FormLocation--><!--Device-formInfo-enum FormLocation-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -23,10 +19,6 @@ STANDBY = 8
 The widget is located on landscape standby screen.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

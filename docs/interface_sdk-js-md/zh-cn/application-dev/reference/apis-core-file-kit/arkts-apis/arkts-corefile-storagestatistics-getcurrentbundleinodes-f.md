@@ -10,10 +10,6 @@ function getCurrentBundleInodes(): Promise<long>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
-
-**废弃版本：** -1
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-storageStatistics-function getCurrentBundleInodes(): Promise<long>--><!--Device-storageStatistics-function getCurrentBundleInodes(): Promise<long>-End-->
@@ -34,7 +30,7 @@ function getCurrentBundleInodes(): Promise<long>
 | 13600001 | IPC error. |
 | 13600017 | Failed to query the inode information of the application. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例：
 

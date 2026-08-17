@@ -12,13 +12,9 @@ import { proxyChannelManager } from 'proxyChannelManager';
 function openProxyChannel(channelInfo: ChannelInfo): Promise<int>
 ```
 
-Opens a proxy channel. This API uses a promise to return the result.
+Opens a proxy channel. This API uses a promise to return the result. Based on the link type and peer device information configured in **ChannelInfo**, it negotiates with the peer device via the Bluetooth BR protocol to establish a bidirectional data channel and returns a channel ID that uniquely identifies the channel. This is applicable to scenarios where a phone-side app needs to establish a bidirectional data channel with a wearable device-side app, such as message notification forwarding. After calling this method, you must call [closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md#closeproxychannel) to close the channel and release resources when the proxy channel is no longer needed.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -32,13 +28,13 @@ Opens a proxy channel. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| channelInfo | [ChannelInfo](arkts-distributedservice-proxychannelmanager-channelinfo-i.md) | Yes | Channel information, including the MAC address and service UUID of the peer device. |
+| channelInfo | [ChannelInfo](arkts-distributedservice-proxychannelmanager-channelinfo-i.md) | Yes | Link type of the proxy channel, MAC address of the peer device, and UUID of the listening service on the peer device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Proxy channel ID. The value range is [1, 2147483647]. The lifecycle of **channelId** is the same as that of the proxy channel. If the proxy is not closed, the returned **channelId** is the same as that passed in the API. |
+| Promise&lt;int&gt; | Promise used to return the result. When the proxy channel is opened successfully, the promise is resolved, and the channelId of the proxy channel is returned. The value ranges from 1 to 2147483647. The lifecycle of the channelId is the same as that of the proxy channel. If the proxy is not closed, passing the same input parameters returns the same channelId. If the operation fails, the promise is rejected with error information. For details about the error codes, see the error code table. |
 
 **Error codes:**
 
@@ -53,7 +49,7 @@ Opens a proxy channel. This API uses a promise to return the result.
 | [32390002](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) | Device not paired. |
 | [32390001](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) | BR is disabled. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { proxyChannelManager } from '@kit.DistributedServiceKit';

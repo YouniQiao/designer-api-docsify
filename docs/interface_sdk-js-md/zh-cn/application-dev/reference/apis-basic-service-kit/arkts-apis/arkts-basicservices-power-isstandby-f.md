@@ -10,10 +10,6 @@ function isStandby(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-power-function isStandby(): boolean--><!--Device-power-function isStandby(): boolean-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
@@ -30,7 +26,7 @@ function isStandby(): boolean
 | --- | --- |
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
 
-## 示例
+**示例**
 
 ```TypeScript
 try {

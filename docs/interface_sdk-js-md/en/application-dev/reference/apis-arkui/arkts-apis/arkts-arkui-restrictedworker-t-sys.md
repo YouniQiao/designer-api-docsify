@@ -1,4 +1,4 @@
-# RestrictedWorker (System API)
+# RestrictedWorker(System API) (System API)
 
 ```TypeScript
 declare type RestrictedWorker = import('../api/@ohos.worker').default.RestrictedWorker
@@ -7,10 +7,6 @@ declare type RestrictedWorker = import('../api/@ohos.worker').default.Restricted
 Indicates restricted worker for run abc.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

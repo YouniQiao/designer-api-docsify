@@ -2,13 +2,11 @@
 
 Defines the dialog param with options.
 
-**Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md#AlertDialogParam)
+**Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md#alertdialogparam)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare interface AlertDialogParamWithOptions--><!--Device-unnamed-export declare interface AlertDialogParamWithOptions-End-->
 
@@ -28,9 +26,7 @@ The arrangement of buttons.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +46,7 @@ The array of buttons.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

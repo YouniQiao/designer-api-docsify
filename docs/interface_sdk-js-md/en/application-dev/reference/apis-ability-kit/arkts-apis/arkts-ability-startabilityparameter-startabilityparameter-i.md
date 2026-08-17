@@ -1,12 +1,8 @@
 # StartAbilityParameter
 
-The module defines the parameters for starting an ability. The parameters can be used as input parameters in [startAbility](arkts-ability-featureability-startability-f.md#startAbility) to start the specified ability.
+The module defines the parameters for starting an ability. The parameters can be used as input parameters in [startAbility](arkts-ability-featureability-startability-f.md#startability) to start the specified ability.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface StartAbilityParameter--><!--Device-unnamed-export interface StartAbilityParameter-End-->
 
@@ -23,10 +19,6 @@ Indicates the special start setting used in starting ability.
 **Type:** { [key: string]: any }
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,10 +38,6 @@ Indicates the special start setting used in starting ability. The ability of thi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-StartAbilityParameter-abilityStartSettings?: Record<string, Object>--><!--Device-StartAbilityParameter-abilityStartSettings?: Record<string, Object>-End-->
@@ -67,10 +55,6 @@ Indicates the Want containing information about the target ability to start.
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

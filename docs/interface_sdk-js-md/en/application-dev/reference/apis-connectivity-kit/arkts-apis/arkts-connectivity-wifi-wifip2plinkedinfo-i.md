@@ -4,11 +4,9 @@ P2P linked information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [WifiP2pLinkedInfo](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md#WifiP2pLinkedInfo)
+**Substitutes:** [WifiP2pLinkedInfo](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md#wifip2plinkedinfo)
 
 <!--Device-wifi-interface WifiP2pLinkedInfo--><!--Device-wifi-interface WifiP2pLinkedInfo-End-->
 
@@ -32,11 +30,9 @@ Connection status
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [connectState](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md#connectState)
+**Substitutes:** [connectState](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md#connectstate)
 
 <!--Device-WifiP2pLinkedInfo-connectState: P2pConnectState--><!--Device-WifiP2pLinkedInfo-connectState: P2pConnectState-End-->
 
@@ -54,11 +50,9 @@ Group owner address
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [groupOwnerAddr](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md#groupOwnerAddr)
+**Substitutes:** [groupOwnerAddr](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md#groupowneraddr)
 
 <!--Device-WifiP2pLinkedInfo-groupOwnerAddr: string--><!--Device-WifiP2pLinkedInfo-groupOwnerAddr: string-End-->
 
@@ -76,11 +70,9 @@ Indicates whether it is group owner
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isGroupOwner](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md#isGroupOwner)
+**Substitutes:** [isGroupOwner](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md#isgroupowner)
 
 <!--Device-WifiP2pLinkedInfo-isGroupOwner: boolean--><!--Device-WifiP2pLinkedInfo-isGroupOwner: boolean-End-->
 

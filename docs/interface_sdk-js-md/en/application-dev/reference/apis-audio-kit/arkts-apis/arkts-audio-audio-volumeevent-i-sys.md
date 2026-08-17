@@ -4,10 +4,6 @@ Describes the event received by the application when the volume is changed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-audio-interface VolumeEvent--><!--Device-audio-interface VolumeEvent-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -30,10 +26,6 @@ Device network id
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VolumeEvent-networkId: string--><!--Device-VolumeEvent-networkId: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -52,10 +44,6 @@ Volume percentage, which is an integer ranging from [0, 100].
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-VolumeEvent-percentage?: int--><!--Device-VolumeEvent-percentage?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
@@ -73,10 +61,6 @@ volumeGroup id
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-VolumeEvent-volumeGroupId: int--><!--Device-VolumeEvent-volumeGroupId: int-End-->
 

@@ -1,14 +1,12 @@
-# FunctionType (System API)
+# FunctionType(USB Manager) (System API)
 
 Enumerates USB device function types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md#FunctionType-(System-API))
+**Substitutes:** [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md#functiontype-system-api)
 
 <!--Device-usb-export enum FunctionType--><!--Device-usb-export enum FunctionType-End-->
 
@@ -26,11 +24,9 @@ No function.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NONE](arkts-basicservices-usbmanager-functiontype-e-sys.md#NONE)
+**Substitutes:** [NONE](arkts-basicservices-usbmanager-functiontype-e-sys.md#none)
 
 <!--Device-FunctionType-NONE = 0--><!--Device-FunctionType-NONE = 0-End-->
 
@@ -48,11 +44,9 @@ ACM function.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ACM](arkts-basicservices-usbmanager-functiontype-e-sys.md#ACM)
+**Substitutes:** [ACM](arkts-basicservices-usbmanager-functiontype-e-sys.md#acm)
 
 <!--Device-FunctionType-ACM = 1--><!--Device-FunctionType-ACM = 1-End-->
 
@@ -70,11 +64,9 @@ ECM function.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ECM](arkts-basicservices-usbmanager-functiontype-e-sys.md#ECM)
+**Substitutes:** [ECM](arkts-basicservices-usbmanager-functiontype-e-sys.md#ecm)
 
 <!--Device-FunctionType-ECM = 2--><!--Device-FunctionType-ECM = 2-End-->
 
@@ -92,11 +84,9 @@ HDC function.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [HDC](arkts-basicservices-usbmanager-functiontype-e-sys.md#HDC)
+**Substitutes:** [HDC](arkts-basicservices-usbmanager-functiontype-e-sys.md#hdc)
 
 <!--Device-FunctionType-HDC = 4--><!--Device-FunctionType-HDC = 4-End-->
 
@@ -114,11 +104,9 @@ Media transmission.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MTP](arkts-basicservices-usbmanager-functiontype-e-sys.md#MTP)
+**Substitutes:** [MTP](arkts-basicservices-usbmanager-functiontype-e-sys.md#mtp)
 
 <!--Device-FunctionType-MTP = 8--><!--Device-FunctionType-MTP = 8-End-->
 
@@ -136,11 +124,9 @@ Image transmission.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [PTP](arkts-basicservices-usbmanager-functiontype-e-sys.md#PTP)
+**Substitutes:** [PTP](arkts-basicservices-usbmanager-functiontype-e-sys.md#ptp)
 
 <!--Device-FunctionType-PTP = 16--><!--Device-FunctionType-PTP = 16-End-->
 
@@ -158,11 +144,9 @@ Network sharing.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [RNDIS](arkts-basicservices-usbmanager-functiontype-e-sys.md#RNDIS)
+**Substitutes:** [RNDIS](arkts-basicservices-usbmanager-functiontype-e-sys.md#rndis)
 
 <!--Device-FunctionType-RNDIS = 32--><!--Device-FunctionType-RNDIS = 32-End-->
 
@@ -180,11 +164,9 @@ MIDI function.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [MIDI](arkts-basicservices-usbmanager-functiontype-e-sys.md#MIDI)
+**Substitutes:** [MIDI](arkts-basicservices-usbmanager-functiontype-e-sys.md#midi)
 
 <!--Device-FunctionType-MIDI = 64--><!--Device-FunctionType-MIDI = 64-End-->
 
@@ -202,11 +184,9 @@ Audio function.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_SOURCE](arkts-basicservices-usbmanager-functiontype-e-sys.md#AUDIO_SOURCE)
+**Substitutes:** [AUDIO_SOURCE](arkts-basicservices-usbmanager-functiontype-e-sys.md#audiosource)
 
 <!--Device-FunctionType-AUDIO_SOURCE = 128--><!--Device-FunctionType-AUDIO_SOURCE = 128-End-->
 
@@ -224,11 +204,9 @@ NCM transmission.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 9
 
-**Substitutes:** [NCM](arkts-basicservices-usbmanager-functiontype-e-sys.md#NCM)
+**Substitutes:** [NCM](arkts-basicservices-usbmanager-functiontype-e-sys.md#ncm)
 
 <!--Device-FunctionType-NCM = 256--><!--Device-FunctionType-NCM = 256-End-->
 

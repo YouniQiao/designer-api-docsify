@@ -4,10 +4,6 @@ WebGL 1.0
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface WebGLContextAttributes--><!--Device-unnamed-export interface WebGLContextAttributes-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -23,10 +19,6 @@ If true, the drawing buffer has an alpha channel for the purposes of storing bot
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,10 +38,6 @@ If true, request antialiasing.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLContextAttributes-antialias?: boolean--><!--Device-WebGLContextAttributes-antialias?: boolean-End-->
@@ -67,10 +55,6 @@ If true, the drawing buffer has a depth buffer of at least 16 bits.
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -90,10 +74,6 @@ If true, the drawing buffer is not synchronized with the display's refresh.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLContextAttributes-desynchronized?: boolean--><!--Device-WebGLContextAttributes-desynchronized?: boolean-End-->
@@ -111,10 +91,6 @@ If true, a context creation fails if the implementation determines that the perf
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -134,10 +110,6 @@ Hint for power preference.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLContextAttributes-powerPreference?: WebGLPowerPreference--><!--Device-WebGLContextAttributes-powerPreference?: WebGLPowerPreference-End-->
@@ -155,10 +127,6 @@ If true, the alpha values in the drawing buffer are premultiplied.
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -178,10 +146,6 @@ If true, the drawing buffer is preserved after rendering.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLContextAttributes-preserveDrawingBuffer?: boolean--><!--Device-WebGLContextAttributes-preserveDrawingBuffer?: boolean-End-->
@@ -199,10 +163,6 @@ If true, the drawing buffer has a stencil buffer of at least 8 bits.
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

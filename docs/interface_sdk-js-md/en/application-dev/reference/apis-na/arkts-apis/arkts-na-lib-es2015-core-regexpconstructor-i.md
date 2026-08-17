@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface RegExpConstructor--><!--Device-unnamed-interface RegExpConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new (pattern: RegExp | string, flags?: string): RegExp
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExpConstructor-new (pattern: RegExp | string, flags?: string): RegExp--><!--Device-RegExpConstructor-new (pattern: RegExp | string, flags?: string): RegExp-End-->
 
@@ -42,10 +34,6 @@ new (pattern: RegExp | string, flags?: string): RegExp
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-RegExpConstructor-(pattern: RegExp | string, flags?: string): RegExp--><!--Device-RegExpConstructor-(pattern: RegExp | string, flags?: string): RegExp-End-->
 

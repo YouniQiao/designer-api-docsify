@@ -16,10 +16,6 @@ Enables or disables the specified static shortcuts. This API uses a promise to r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_SHORTCUTS
 
 <!--Device-shortcutManager-function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: boolean): Promise<void>--><!--Device-shortcutManager-function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: boolean): Promise<void>-End-->
@@ -51,7 +47,7 @@ Enables or disables the specified static shortcuts. This API uses a promise to r
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';

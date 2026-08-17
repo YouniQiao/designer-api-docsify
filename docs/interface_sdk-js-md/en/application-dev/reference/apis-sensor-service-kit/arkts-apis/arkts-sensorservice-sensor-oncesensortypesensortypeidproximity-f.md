@@ -16,8 +16,6 @@ Subscribes to only one data change of the proximity sensor.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** once(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;)

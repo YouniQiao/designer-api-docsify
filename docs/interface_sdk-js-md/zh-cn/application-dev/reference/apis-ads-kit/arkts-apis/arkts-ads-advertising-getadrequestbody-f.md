@@ -10,10 +10,6 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>--><!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -39,7 +35,7 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
 | [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

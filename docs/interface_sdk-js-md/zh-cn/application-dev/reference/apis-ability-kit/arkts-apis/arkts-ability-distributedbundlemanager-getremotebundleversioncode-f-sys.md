@@ -10,10 +10,6 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
-
-**废弃版本：** -1
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -28,7 +24,7 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | string | 是 | 远程设备ID。可以通过 [getAvailableDeviceList](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) 获取所有可信设备列表，取值为可信设备信息下networkId字段。 |
+| deviceId | string | 是 | 远程设备ID。可以通过 [getAvailableDeviceList](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) 获取所有可信设备列表，取值为可信设备信息下networkId字段。 |
 | bundleName | string | 是 | 应用的包名。 |
 
 **返回值：**
@@ -48,7 +44,7 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
-## 示例
+**示例**
 
 ArkTS-Dyn示例:
 

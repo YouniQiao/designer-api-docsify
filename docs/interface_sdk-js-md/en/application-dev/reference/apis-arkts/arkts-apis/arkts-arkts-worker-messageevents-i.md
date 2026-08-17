@@ -2,13 +2,9 @@
 
 Holds the data transferred between Worker threads.
 
-**Inheritance/Implementation:** MessageEvents extends [Event](arkts-arkts-worker-event-i.md#Event)
+**Inheritance/Implementation:** MessageEvents extends [Event](arkts-arkts-worker-event-i.md#event)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MessageEvents--><!--Device-unnamed-export interface MessageEvents-End-->
 
@@ -44,10 +40,6 @@ Data transferred when an exception occurs.
 **Type:** any
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

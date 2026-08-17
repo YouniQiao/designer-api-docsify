@@ -8,10 +8,6 @@ The **NotificationSorting** module provides APIs for defining the sorting inform
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationManager-export type NotificationSorting = _NotificationSorting--><!--Device-notificationManager-export type NotificationSorting = _NotificationSorting-End-->
 
 **System capability:** SystemCapability.Notification.Notification

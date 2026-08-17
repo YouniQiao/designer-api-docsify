@@ -4,10 +4,6 @@ Provides APIs for downloading image files to **Gallery**. Before using the APIs 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cloudSync-class Download--><!--Device-cloudSync-class Download-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -30,17 +26,13 @@ A constructor used to create a **Download** instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-Download-constructor()--><!--Device-Download-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
 
-## Examples
+**Examples**
 
 ```TypeScript
 let download = new cloudSync.Download()
@@ -55,10 +47,6 @@ offProgress(callback: Callback<DownloadProgress>): void
 Unsubscribes from download progress event.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -93,10 +81,6 @@ Unsubscribes all callbacks objects from download progress event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-Download-offProgress(): void--><!--Device-Download-offProgress(): void-End-->
@@ -123,10 +107,6 @@ Removes the specified callback from the device-cloud download progress.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-Download-off(evt: 'progress', callback: (pg: DownloadProgress) => void): void--><!--Device-Download-off(evt: 'progress', callback: (pg: DownloadProgress) => void): void-End-->
@@ -140,7 +120,7 @@ Removes the specified callback from the device-cloud download progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | (pg: DownloadProgress) =&gt; void | Yes | Callback used to return the file download progress. The input parameter is [DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md#DownloadProgress), and the return value is **void**. |
+| callback | (pg: DownloadProgress) =&gt; void | Yes | Callback used to return the file download progress. The input parameter is [DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md#downloadprogress), and the return value is **void**. |
 
 **Error codes:**
 
@@ -151,7 +131,7 @@ Removes the specified callback from the device-cloud download progress.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let download = new cloudSync.Download();
@@ -174,10 +154,6 @@ off(evt: 'progress'): void
 Removes all callbacks from the device-cloud download progress.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -202,7 +178,7 @@ Removes all callbacks from the device-cloud download progress.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let download = new cloudSync.Download();
@@ -223,10 +199,6 @@ onProgress(callback: Callback<DownloadProgress>): void
 Subscribes to download progress change event. This method uses a callback to get download progress changes.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -261,10 +233,6 @@ Registers a listener for the download progress of a cloud file.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-Download-on(evt: 'progress', callback: (pg: DownloadProgress) => void): void--><!--Device-Download-on(evt: 'progress', callback: (pg: DownloadProgress) => void): void-End-->
@@ -278,7 +246,7 @@ Registers a listener for the download progress of a cloud file.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event. The value is **progress**, which indicates the download progress event of a cloud file. |
-| callback | (pg: DownloadProgress) =&gt; void | Yes | Callback used to return the file download progress. The input parameter is [DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md#DownloadProgress), and the return value is **void**. |
+| callback | (pg: DownloadProgress) =&gt; void | Yes | Callback used to return the file download progress. The input parameter is [DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md#downloadprogress), and the return value is **void**. |
 
 **Error codes:**
 
@@ -289,7 +257,7 @@ Registers a listener for the download progress of a cloud file.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let download = new cloudSync.Download();
@@ -308,10 +276,6 @@ start(uri: string): Promise<void>
 Starts downloading a cloud file. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -343,7 +307,7 @@ Starts downloading a cloud file. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900025 | No space left on device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -372,10 +336,6 @@ Starts downloading a cloud file. This API uses an asynchronous callback to retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-Download-start(uri: string, callback: AsyncCallback<void>): void--><!--Device-Download-start(uri: string, callback: AsyncCallback<void>): void-End-->
@@ -401,7 +361,7 @@ Starts downloading a cloud file. This API uses an asynchronous callback to retur
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900025 | No space left on device. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -427,10 +387,6 @@ stop(uri: string): Promise<void>
 Stops downloading a cloud file. This API uses a promise to return the result. > **NOTE：**> > Calling **stop** will terminate the download of the current file and clear the cache file. You can use > **start** to start the download again.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -460,7 +416,7 @@ Stops downloading a cloud file. This API uses a promise to return the result. > 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -485,10 +441,6 @@ Stops downloading a cloud file. This API uses an asynchronous callback to return
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 <!--Device-Download-stop(uri: string, callback: AsyncCallback<void>): void--><!--Device-Download-stop(uri: string, callback: AsyncCallback<void>): void-End-->
@@ -512,7 +464,7 @@ Stops downloading a cloud file. This API uses an asynchronous callback to return
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

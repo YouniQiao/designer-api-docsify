@@ -16,8 +16,6 @@ Checks whether the ability that matches a given AbilityInfo object is enabled. T
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 <!--Device-bundle-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void--><!--Device-bundle-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void-End-->
@@ -41,8 +39,6 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 Checks whether the ability that matches a given AbilityInfo object is enabled. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 

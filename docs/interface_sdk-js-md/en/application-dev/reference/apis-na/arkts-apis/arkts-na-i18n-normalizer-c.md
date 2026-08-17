@@ -4,9 +4,7 @@ Provides the API for text encoding normalization.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-i18n-export class Normalizer--><!--Device-i18n-export class Normalizer-End-->
 
@@ -22,9 +20,7 @@ Obtains a Normalizer object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -36,13 +32,13 @@ Obtains a Normalizer object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NormalizerMode](arkts-na-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
+| mode | [NormalizerMode](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Normalizer](arkts-na-i18n-normalizer-c.md) | Normalizer object for text normalization. |
+| [Normalizer](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-normalizer-c.md) | Normalizer object for text normalization. |
 
 **Error codes:**
 
@@ -60,9 +56,7 @@ Normalizes input strings.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

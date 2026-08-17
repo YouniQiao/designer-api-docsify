@@ -6,10 +6,6 @@ The **InputMethodExtensionContext** module, inherited from **ExtensionContext**,
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class InputMethodExtensionContext--><!--Device-unnamed-declare class InputMethodExtensionContext-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -30,10 +26,6 @@ Destroys this input method. This API uses an asynchronous callback to return the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputMethodExtensionContext-destroy(callback: AsyncCallback<void>): void--><!--Device-InputMethodExtensionContext-destroy(callback: AsyncCallback<void>): void-End-->
@@ -46,7 +38,7 @@ Destroys this input method. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
@@ -80,10 +72,6 @@ Destroys this input method. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputMethodExtensionContext-destroy(): Promise<void>--><!--Device-InputMethodExtensionContext-destroy(): Promise<void>-End-->
@@ -96,7 +84,7 @@ Destroys this input method. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
@@ -127,10 +115,6 @@ startAbility(want: Want): Promise<void>
 Starts an ability. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -175,7 +159,7 @@ Starts an ability. This API uses a promise to return the result.
 | [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';

@@ -17,10 +17,6 @@ Starts pairing with a remote Bluetooth device using the Out Of Band mechanism. T
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -55,7 +51,7 @@ Starts pairing with a remote Bluetooth device using the Out Of Band mechanism. T
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { common } from '@kit.ConnectivityKit';

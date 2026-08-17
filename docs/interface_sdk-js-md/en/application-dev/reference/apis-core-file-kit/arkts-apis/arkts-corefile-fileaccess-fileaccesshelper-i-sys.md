@@ -4,8 +4,6 @@ Provides a **FileAccessHelper** object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
 <!--Device-fileAccess-interface FileAccessHelper--><!--Device-fileAccess-interface FileAccessHelper-End-->
@@ -29,8 +27,6 @@ access(sourceFileUri: string) : Promise<boolean>
 Checks whether a file or directory exists. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -95,7 +91,7 @@ Checks whether a file or directory exists. This API uses a promise to return the
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -131,8 +127,6 @@ access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 Checks whether a file or directory exists. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -192,7 +186,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -231,8 +225,6 @@ Copies a file or directory. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md#copy)(srcUri: string, destUri: string, options?: CopyOptions)
@@ -269,8 +261,6 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md#copy)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
@@ -291,7 +281,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -336,8 +326,6 @@ Copies a file or directory. If a file with the same name already exists, you can
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md#copy)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
@@ -359,7 +347,7 @@ Copies a file or directory. If a file with the same name already exists, you can
 | force | boolean | Yes | Whether to forcibly overwrite the original file with the same name. If **force** is set to **true**, the original file is forcibly overwritten. If **force** is left empty or set to **false**, the original file is not overwritten. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -404,11 +392,9 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 23
 
-**Substitutes:** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md#copyFile)(src: string | number, dest: string | number, mode?: number)
+**Substitutes:** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md#copyfile)(src: string | number, dest: string | number, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -463,7 +449,7 @@ Copies a file with an alternative file name. This API uses a promise to return t
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -498,11 +484,9 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 23
 
-**Substitutes:** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md#copyFile)(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md#copyfile)(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -552,7 +536,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -586,11 +570,9 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md#createRandomAccessFile)(file: string | File, mode?: number, options?: RandomAccessFileOptions)
+**Substitutes:** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md#createrandomaccessfile)(file: string | File, mode?: number, options?: RandomAccessFileOptions)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -652,7 +634,7 @@ Creates a file in a directory. This API uses a promise to return the result.
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -691,11 +673,9 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md#createRandomAccessFile)(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
+**Substitutes:** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md#createrandomaccessfile)(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -752,7 +732,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -787,8 +767,6 @@ delete(uri: string) : Promise<number>
 Deletes a file or directory. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -853,7 +831,7 @@ Deletes a file or directory. This API uses a promise to return the result.
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -886,8 +864,6 @@ delete(uri: string, callback: AsyncCallback<number>): void
 Deletes a file or directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -947,7 +923,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -982,8 +958,6 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number)
@@ -1008,7 +982,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 | --- | --- |
 | Promise&lt;FileInfo&gt; | Returns a FileInfo. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1039,8 +1013,6 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
@@ -1060,7 +1032,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 | relativePath | string | Yes | Indicates the selected file or directory. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1095,8 +1067,6 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number)
@@ -1121,7 +1091,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;FileInfo&gt; | Returns a FileInfo. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1153,8 +1123,6 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
@@ -1174,7 +1142,7 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 | uri | string | Yes | Indicates the selected file or directory. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1206,11 +1174,9 @@ try {
 getRoots(): Promise<RootIterator>
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses a promise to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#RootInfo-(System-API)).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses a promise to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#rootinfo-system-api).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -1267,7 +1233,7 @@ Obtains information about the device root nodes of the file management services 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 async function getRoots() {
@@ -1304,11 +1270,9 @@ async function getRoots() {
 getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses an asynchronous callback to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#RootInfo-(System-API)).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses an asynchronous callback to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#rootinfo-system-api).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -1365,7 +1329,7 @@ Obtains information about the device root nodes of the file management services 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1406,8 +1370,6 @@ mkDir(parentUri: string, displayName: string) : Promise<string>
 Creates a directory in a specified directory. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -1473,7 +1435,7 @@ Creates a directory in a specified directory. This API uses a promise to return 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1511,8 +1473,6 @@ mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): 
 Creates a directory in a specified directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -1573,7 +1533,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1609,11 +1569,9 @@ Moves a file or directory. This API uses a promise to return the result. Current
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#moveFile)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1675,7 +1633,7 @@ Moves a file or directory. This API uses a promise to return the result. Current
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1709,11 +1667,9 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#moveFile)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1770,7 +1726,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1806,11 +1762,9 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#moveFile)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1865,7 +1819,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1900,11 +1854,9 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#moveFile)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1954,7 +1906,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1991,11 +1943,9 @@ Moves a file or directory. This API uses a promise to return the result. You can
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#moveFile)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2060,11 +2010,9 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#moveFile)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2113,7 +2061,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2158,11 +2106,9 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#moveFile)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2212,7 +2158,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2256,8 +2202,6 @@ openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 Opens a file. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -2323,7 +2267,7 @@ Opens a file. This API uses a promise to return the result.
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2354,8 +2298,6 @@ openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 Opens a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -2416,7 +2358,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2451,8 +2393,6 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number)
@@ -2469,8 +2409,8 @@ Queries the attribute information about a file or directory based on a URI. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md#FileInfo-(System-API)). |
-| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md#FileKey-(System-API)) to query. |
+| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md#fileinfo-system-api). |
+| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md#filekey-system-api) to query. |
 
 **Return value:**
 
@@ -2478,7 +2418,7 @@ Queries the attribute information about a file or directory based on a URI. This
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return a JSON string that contains the file attribute and the value obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2510,8 +2450,6 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
 **Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
@@ -2528,11 +2466,11 @@ Queries the attribute information about a file or directory based on a URI. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md#FileInfo-(System-API)). |
-| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md#FileKey-(System-API)) to query. |
+| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md#fileinfo-system-api). |
+| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md#filekey-system-api) to query. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a JSON string that contains the file attribute and the value obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2569,11 +2507,9 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 23
 
-**Substitutes:** [createWatcher](../../apis-na/arkts-apis/arkts-na-fileio-createwatcher-f.md#createWatcher)
+**Substitutes:** [createWatcher](../../apis-na/arkts-apis/arkts-na-fileio-createwatcher-f.md#createwatcher)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2606,8 +2542,6 @@ rename(uri: string, displayName: string) : Promise<string>
 Renames a file or directory. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -2673,7 +2607,7 @@ Renames a file or directory. This API uses a promise to return the result.
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2705,8 +2639,6 @@ rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 Renames a file or directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 23
 
@@ -2767,7 +2699,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | 14300004 | Get wrong result |
 | 13900011 | Out of memory |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2801,8 +2733,6 @@ unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void
 Unregisters a callback that is used to listen for the specified URI.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Deprecated since:** 23
 

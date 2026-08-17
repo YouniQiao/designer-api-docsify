@@ -4,11 +4,9 @@ Defines the options for fetching file attributes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions)
+**Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#fetchoptions)
 
 <!--Device-userFileManager-interface AlbumFetchOptions--><!--Device-userFileManager-interface AlbumFetchOptions-End-->
 
@@ -33,8 +31,6 @@ Predicates that specify the fetch criteria.
 **Type:** dataSharePredicates.DataSharePredicates
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 26.0.0
 

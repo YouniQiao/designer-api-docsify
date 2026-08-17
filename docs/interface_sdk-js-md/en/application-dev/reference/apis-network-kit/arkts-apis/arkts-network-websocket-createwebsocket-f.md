@@ -16,10 +16,6 @@ Creates a web socket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-webSocket-function createWebSocket(): WebSocket--><!--Device-webSocket-function createWebSocket(): WebSocket-End-->
@@ -32,7 +28,7 @@ Creates a web socket connection.
 | --- | --- |
 | [WebSocket](arkts-network-websocket-websocket-i.md) | the WebSocket of the createWebSocket. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ws: webSocket.WebSocket = webSocket.createWebSocket();

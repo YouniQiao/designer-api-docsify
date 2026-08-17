@@ -8,10 +8,6 @@ System tone options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-systemSoundManager-type SystemToneOptions = _SystemToneOptions--><!--Device-systemSoundManager-type SystemToneOptions = _SystemToneOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core

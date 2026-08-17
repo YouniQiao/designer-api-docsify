@@ -4,10 +4,6 @@ Enumerates the tile modes of the shader effect. > **NOTE：**> > Under CPU rende
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-effectKit-enum TileMode--><!--Device-effectKit-enum TileMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -21,10 +17,6 @@ CLAMP = 0
 Replicates the edge color if the shader effect draws outside of its original boundary.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TileMode-CLAMP = 0--><!--Device-TileMode-CLAMP = 0-End-->
 
@@ -40,10 +32,6 @@ Repeats the shader effect in both horizontal and vertical directions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TileMode-REPEAT = 1--><!--Device-TileMode-REPEAT = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -58,10 +46,6 @@ Repeats the shader effect in both horizontal and vertical directions, alternatin
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TileMode-MIRROR = 2--><!--Device-TileMode-MIRROR = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -75,10 +59,6 @@ DECAL = 3
 Renders the shader effect only within the original boundary.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TileMode-DECAL = 3--><!--Device-TileMode-DECAL = 3-End-->
 

@@ -4,11 +4,9 @@ Enumerates the notification event types.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NotifyType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#NotifyType)
+**Substitutes:** [NotifyType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifytype)
 
 <!--Device-userFileManager-enum NotifyType--><!--Device-userFileManager-enum NotifyType-End-->
 
@@ -26,11 +24,9 @@ A file asset or album is added.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NOTIFY_ADD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#NOTIFY_ADD)
+**Substitutes:** [NOTIFY_ADD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifyadd)
 
 <!--Device-NotifyType-NOTIFY_ADD--><!--Device-NotifyType-NOTIFY_ADD-End-->
 
@@ -48,11 +44,9 @@ A file asset or album is updated.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NOTIFY_UPDATE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#NOTIFY_UPDATE)
+**Substitutes:** [NOTIFY_UPDATE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifyupdate)
 
 <!--Device-NotifyType-NOTIFY_UPDATE--><!--Device-NotifyType-NOTIFY_UPDATE-End-->
 
@@ -70,11 +64,9 @@ A file asset or album is removed.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NOTIFY_REMOVE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#NOTIFY_REMOVE)
+**Substitutes:** [NOTIFY_REMOVE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifyremove)
 
 <!--Device-NotifyType-NOTIFY_REMOVE--><!--Device-NotifyType-NOTIFY_REMOVE-End-->
 
@@ -92,11 +84,9 @@ A file asset is added to the album.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NOTIFY_ALBUM_ADD_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#NOTIFY_ALBUM_ADD_ASSET)
+**Substitutes:** [NOTIFY_ALBUM_ADD_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifyalbumaddasset)
 
 <!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET--><!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET-End-->
 
@@ -114,11 +104,9 @@ A file asset is removed from the album.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NOTIFY_ALBUM_REMOVE_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#NOTIFY_ALBUM_REMOVE_ASSET)
+**Substitutes:** [NOTIFY_ALBUM_REMOVE_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifyalbumremoveasset)
 
 <!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET--><!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET-End-->
 

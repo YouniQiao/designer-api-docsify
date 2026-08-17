@@ -1,12 +1,8 @@
 # OnTitleReceiveEvent
 
-Defines the triggered function when the title of the main application document changes.
+Defines the callback information triggered when the document title of the web page is changed, including the title content and source. It is suitable for scenarios where monitoring page title changes is required, improving page information real-time performance and user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnTitleReceiveEvent--><!--Device-unnamed-declare interface OnTitleReceiveEvent-End-->
 
@@ -18,15 +14,11 @@ Defines the triggered function when the title of the main application document c
 isRealTitle?: boolean
 ```
 
-Mark the source of the title. If it is true, the title is derived from the H5 title element; If it is false, it is calculated from the URL. By default, it is calculated from the URL.
+Whether the document title is a real title. The value true indicates that the title is from the **title** tag of the web page, and **false** indicates that the title is automatically generated based on the URL. Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-OnTitleReceiveEvent-isRealTitle?: boolean--><!--Device-OnTitleReceiveEvent-isRealTitle?: boolean-End-->
 
@@ -38,15 +30,11 @@ Mark the source of the title. If it is true, the title is derived from the H5 ti
 title: string
 ```
 
-The title of the page.
+Document title.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,4 +1,4 @@
-# DataCallback (System API)
+# DataCallback(Cross-Device Wakeup and Message Transfer) (System API)
 
 ```TypeScript
 type DataCallback = (deviceId: string, msg: ArrayBuffer) => void
@@ -7,10 +7,6 @@ type DataCallback = (deviceId: string, msg: ArrayBuffer) => void
 Defines a callback for receiving data.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

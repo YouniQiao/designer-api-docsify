@@ -4,10 +4,6 @@ Enumerates the types of properties to obtain.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-enum GetPropertyType--><!--Device-osAccount-enum GetPropertyType-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -23,10 +19,6 @@ AUTH_SUB_TYPE = 1
 Authentication credential subtype.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GetPropertyType-AUTH_SUB_TYPE = 1--><!--Device-GetPropertyType-AUTH_SUB_TYPE = 1-End-->
 
@@ -44,10 +36,6 @@ Number of remaining times.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GetPropertyType-REMAIN_TIMES = 2--><!--Device-GetPropertyType-REMAIN_TIMES = 2-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -63,10 +51,6 @@ FREEZING_TIME = 3
 Freezing time.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GetPropertyType-FREEZING_TIME = 3--><!--Device-GetPropertyType-FREEZING_TIME = 3-End-->
 
@@ -84,10 +68,6 @@ Enrollment progress, which is left blank by default.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GetPropertyType-ENROLLMENT_PROGRESS = 4--><!--Device-GetPropertyType-ENROLLMENT_PROGRESS = 4-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -103,10 +83,6 @@ SENSOR_INFO = 5
 Sensor information, which is left blank by default.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GetPropertyType-SENSOR_INFO = 5--><!--Device-GetPropertyType-SENSOR_INFO = 5-End-->
 
@@ -124,10 +100,6 @@ Next freezing time.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-GetPropertyType-NEXT_PHASE_FREEZING_TIME = 6--><!--Device-GetPropertyType-NEXT_PHASE_FREEZING_TIME = 6-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -143,10 +115,6 @@ CREDENTIAL_LENGTH = 7
 Credential length.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-GetPropertyType-CREDENTIAL_LENGTH = 7--><!--Device-GetPropertyType-CREDENTIAL_LENGTH = 7-End-->
 

@@ -10,9 +10,7 @@ Deletes a directory and all its subdirectories and files. This API uses a promis
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function rmdir(path: string): Promise<void>--><!--Device-fileIo-function rmdir(path: string): Promise<void>-End-->
 
@@ -58,9 +56,7 @@ Deletes a directory and all its subdirectories and files. This API uses an async
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-fileIo-function rmdir(path: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function rmdir(path: string, callback: AsyncCallback<void>): void-End-->
 

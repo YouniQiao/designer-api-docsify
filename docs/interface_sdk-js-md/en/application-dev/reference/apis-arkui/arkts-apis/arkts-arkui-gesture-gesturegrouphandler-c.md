@@ -2,13 +2,11 @@
 
 Defines the GestureGroup handler.
 
-**Inheritance/Implementation:** GestureGroupHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#GestureHandler)
+**Inheritance/Implementation:** GestureGroupHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#gesturehandler)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-unnamed-export declare class GestureGroupHandler--><!--Device-unnamed-export declare class GestureGroupHandler-End-->
 
@@ -24,9 +22,7 @@ Constructor parameters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +46,7 @@ The GestureGroup gesture is successfully recognized and a callback is triggered 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

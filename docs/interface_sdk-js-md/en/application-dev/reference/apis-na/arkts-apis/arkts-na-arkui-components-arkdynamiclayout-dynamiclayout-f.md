@@ -14,9 +14,7 @@ Defines DynamicLayout Component.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +26,7 @@ Defines DynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md) | Yes |  |
+| algorithm | [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md) | Yes |  |
 | content_ | CustomBuilder | Yes |  |
 
 **Return value:**

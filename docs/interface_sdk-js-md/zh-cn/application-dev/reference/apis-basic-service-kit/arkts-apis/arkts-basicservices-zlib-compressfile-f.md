@@ -10,10 +10,6 @@ function compressFile(inFile: string, outFile: string, options: Options, callbac
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-zlib-function compressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void--><!--Device-zlib-function compressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void-End-->
@@ -24,10 +20,10 @@ function compressFile(inFile: string, outFile: string, options: Options, callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型， Stage模型。待压缩的文件夹不可为空，否则使用 [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile)对压缩后的文件解压时会报错。 |
+| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型， Stage模型。待压缩的文件夹不可为空，否则使用 [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile)对压缩后的文件解压时会报错。 |
 | outFile | string | 是 | 指定的压缩结果的文件路径。多个线程同时压缩文件时，outFile不能相同。 |
 | options | Options | 是 | 压缩的配置参数。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步获取压缩结果之后的回调。成功返回null，失败返回错误码。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步获取压缩结果之后的回调。成功返回null，失败返回错误码。 |
 
 **错误码：**
 
@@ -37,7 +33,7 @@ function compressFile(inFile: string, outFile: string, options: Options, callbac
 | [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
 | [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) | The input destination file is invalid. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 代码中使用的路径需为应用的沙箱路径，如/data/storage/el2/base/temp,也可以通过context获取。
@@ -77,10 +73,6 @@ function compressFile(inFile: string, outFile: string, options: Options): Promis
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-zlib-function compressFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function compressFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
@@ -91,7 +83,7 @@ function compressFile(inFile: string, outFile: string, options: Options): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型， Stage模型。待压缩的文件夹不可为空，否则使用 [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile)对压缩后的文件解压时会报错。 |
+| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型， Stage模型。待压缩的文件夹不可为空，否则使用 [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile)对压缩后的文件解压时会报错。 |
 | outFile | string | 是 | 指定的压缩结果的文件路径。多个线程同时压缩文件时，outFile不能相同。 |
 | options | Options | 是 | 压缩的配置参数。 |
 
@@ -109,7 +101,7 @@ function compressFile(inFile: string, outFile: string, options: Options): Promis
 | [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
 | [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) | The input destination file is invalid. |
 
-## 示例
+**示例**
 
 ```TypeScript
 // 代码中使用的路径需为应用的沙箱路径，如/data/storage/el2/base/temp,也可以通过context获取。

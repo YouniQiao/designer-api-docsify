@@ -1,12 +1,8 @@
 # WebResourceResponse
 
-Defines the Web resource response.
+WebResourceResponse is a class in the Web component that represents HTTP responses and allows custom web page resource responses. In events such as onHttpErrorReceive, it provides the app with information including the status code, status code description, response header, response data, encoding, and MIME type of the server response. In resource request interception scenarios, it allows the app to customize the status code, status code description, response header, response data, encoding, MIME type, and data readiness state of the response, so that the app takes over the return content of specific resources. For sample code, see [onHttpErrorReceive event](arkts-arkweb-web-attribute.md#onhttperrorreceive).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WebResourceResponse--><!--Device-unnamed-declare class WebResourceResponse-End-->
 
@@ -18,13 +14,9 @@ Defines the Web resource response.
 constructor()
 ```
 
-Constructor.
+Constructor of WebResourceResponse. It is used to create an HTTP response object, commonly used for customizing response content in resource request interception scenarios.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ Constructor.
 getReasonMessage(): string
 ```
 
-Gets the reason message.
+Obtains the status code description of the resource response.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,7 +44,7 @@ Gets the reason message.
 
 | Type | Description |
 | --- | --- |
-| string | Return the reason message. |
+| string | Status code description of the resource response, for example, 'OK' and 'Not Found'. |
 
 ## getResponseCode
 
@@ -64,13 +52,9 @@ Gets the reason message.
 getResponseCode(): number
 ```
 
-Gets the response code.
+Obtains the status code of the resource response.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,7 +66,7 @@ Gets the response code.
 
 | Type | Description |
 | --- | --- |
-| number | Return the response code. |
+| number | Status code of the resource response. For example, 200 indicates success and 404 indicates not found. |
 
 ## getResponseData
 
@@ -90,13 +74,9 @@ Gets the response code.
 getResponseData(): string
 ```
 
-Gets the response data.
+Obtains the data in the resource response.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,7 +88,7 @@ Gets the response data.
 
 | Type | Description |
 | --- | --- |
-| string | Return the response data. |
+| string | Resource response data in HTML string format. |
 
 ## getResponseDataEx
 
@@ -116,13 +96,9 @@ Gets the response data.
 getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 ```
 
-Gets the response data.
+Obtains resource response data, supporting multiple data types. Compared with getResponseData, this method supports returning various types such as number (file handle), ArrayBuffer (binary data), and Resource (\$rawfile resource). It is recommended to use this method when flexible data type support is needed.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 <!--Device-WebResourceResponse-getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined--><!--Device-WebResourceResponse-getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined-End-->
 
@@ -132,7 +108,7 @@ Gets the response data.
 
 | Type | Description |
 | --- | --- |
-| string | Return the response data. string type indicate string in HTML format. number type indicate file handle. Resource type indicate \\$rawfile resource. ArrayBuffer type indicate binary data. |
+| string | An HTML string when the type is string; a file descriptor when the type is number; binary data when the type is ArrayBuffer; a **\\$rawfile** resource when the type is resource; or **undefined** if no data is available. |
 
 ## getResponseEncoding
 
@@ -140,13 +116,9 @@ Gets the response data.
 getResponseEncoding(): string
 ```
 
-Gets the response encoding.
+Obtains the encoding string of the resource response.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -158,7 +130,7 @@ Gets the response encoding.
 
 | Type | Description |
 | --- | --- |
-| string | Return the response encoding. |
+| string | Encoding of the resource response, for example, 'utf-8', 'gbk', and other character set encodings. |
 
 ## getResponseHeader
 
@@ -166,13 +138,9 @@ Gets the response encoding.
 getResponseHeader(): Array<Header>
 ```
 
-Gets the response headers.
+Obtains the resource response header.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -184,7 +152,7 @@ Gets the response headers.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Return the response headers. |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Resource response header. |
 
 ## getResponseIsReady
 
@@ -192,13 +160,9 @@ Gets the response headers.
 getResponseIsReady(): boolean
 ```
 
-Gets whether the response is ready.
+Obtains whether the response data is ready.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
-
-**Deprecated since:** -1
 
 <!--Device-WebResourceResponse-getResponseIsReady(): boolean--><!--Device-WebResourceResponse-getResponseIsReady(): boolean-End-->
 
@@ -208,7 +172,7 @@ Gets whether the response is ready.
 
 | Type | Description |
 | --- | --- |
-| boolean | True indicates the response data is ready and false is not ready. |
+| boolean | true** indicates that the response data is ready, and **false** indicates the opposite. |
 
 ## getResponseMimeType
 
@@ -216,13 +180,9 @@ Gets whether the response is ready.
 getResponseMimeType(): string
 ```
 
-Gets the response MIME type.
+Obtains the MIME type of the resource response.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -234,7 +194,7 @@ Gets the response MIME type.
 
 | Type | Description |
 | --- | --- |
-| string | Return the response MIME type. |
+| string | Media (MIME) type of the resource response, for example, 'text/html', 'application/json', etc. |
 
 ## setReasonMessage
 
@@ -242,13 +202,9 @@ Gets the response MIME type.
 setReasonMessage(reason: string): void
 ```
 
-Sets the reason message.
+Sets the status code description of the resource response.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -260,7 +216,7 @@ Sets the reason message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | string | Yes | the reason message. |
+| reason | string | Yes | Status code description of the resource response to set. The status code description is a textual explanation of the status code, usually used in correspondence with the status code. For example, when the status code is 200, the description can be set to "OK", and when the status code is 404, the description can be set to "Not Found". This description is included in the HTTP response, making it easier for the client or developer to understand the response result. |
 
 ## setResponseCode
 
@@ -268,13 +224,9 @@ Sets the reason message.
 setResponseCode(code: number): void
 ```
 
-Sets the response code.
+Sets the status code of the resource response.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -286,7 +238,7 @@ Sets the response code.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | the response code. |
+| code | number | Yes | Status code of the resource response to set. If the resource request fails or the response status is an error status, refer to [@ohos.web.netErrorList](../../apis-na/arkts-apis/arkts-na-web-neterrorlist-webneterrorlist-e.md#webneterrorlist) to set the corresponding error code. Common error code scenarios: 404 indicates that the resource does not exist. Check the resource path. 500 indicates an internal server error. Check the server status. 403 indicates no access permission. Apply for the corresponding access permission. 401 indicates unauthorized access. Check the authentication information. Check the network configuration, server status, or resource access permission based on the error code. Avoid setting the error code to ERR_IO_PENDING, which may cause XMLHttpRequest synchronous requests to be blocked. |
 
 ## setResponseData
 
@@ -294,13 +246,9 @@ Sets the response code.
 setResponseData(data: string | number | Resource | ArrayBuffer): void
 ```
 
-Sets the response data.
+Sets the data in the resource response.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -312,7 +260,7 @@ Sets the response data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| number \| Resource \| ArrayBuffer | Yes | the response data. string type indicate strings in HTML format. number type indicate file handle. Resource type indicate \\$rawfile resource. ArrayBuffer type indicate binary data.<br>**Since:** 11 |
+| data | string \| number \| Resource \| ArrayBuffer | Yes | Resource response data to set. When set to a string, the value indicates a string in HTML format. When set to a number, the value indicates a file handle, which is closed by the system **Web** component. When set to a **Resource** object, the value indicates the file resources in the **rawfile** directory of the application. When set to an **ArrayBuffer** object, the value indicates the original binary data of a resource.<br>**Since:** 11 |
 
 ## setResponseEncoding
 
@@ -320,13 +268,9 @@ Sets the response data.
 setResponseEncoding(encoding: string): void
 ```
 
-Sets the response encoding.
+Sets the encoding string of the resource response.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -338,7 +282,7 @@ Sets the response encoding.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | Yes | the response encoding. |
+| encoding | string | Yes | Encoding of the resource response to set. The encoding format must be consistent with the actual encoding of the response data. The encoding format affects how the browser or client parses and displays the response content. |
 
 ## setResponseHeader
 
@@ -346,13 +290,9 @@ Sets the response encoding.
 setResponseHeader(header: Array<Header>): void
 ```
 
-Sets the response headers.
+Sets the resource response header.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -364,7 +304,7 @@ Sets the response headers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| header | Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Yes | the response headers. |
+| header | Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Yes | Resource response header to set. The response header is used to pass HTTP protocol header information, for example, setting "Cache-Control" to control the caching policy, setting " Access-Control-Allow-Origin" to implement cross-origin access, and setting "Content-Type" to specify the content type. Setting the response header affects how the browser or client processes the resource. |
 
 ## setResponseIsReady
 
@@ -372,13 +312,9 @@ Sets the response headers.
 setResponseIsReady(IsReady: boolean): void
 ```
 
-Sets the response is ready or not.
+Sets whether the resource response data is ready. > **NOTE：**> > - In resource request interception scenarios, call setResponseData(), setResponseEncoding(), setResponseMimeType( > ), setResponseHeader(), setResponseCode(), setReasonMessage(), and other methods first to set the response > attributes. Finally, call setResponseIsReady(true) to trigger resource return. > > - Asynchronous data scenario: Call setResponseIsReady(false) first. After the data is ready, call setResponseData > () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return. > > - If the calling sequence is incorrect, XMLHttpRequest synchronous requests may be blocked.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -390,7 +326,7 @@ Sets the response is ready or not.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| IsReady | boolean | Yes | whether the response is ready. |
+| IsReady | boolean | Yes | Whether the resource response data is ready. <br>The value **true** indicates that the resource response data is ready, and **false** indicates the opposite. <br>If the data is provided asynchronously, this parameter must be explicitly set to **false**. If this parameter is set to an invalid value, for example, **null** or **undefined**, or is not set, the data is considered ready. |
 
 ## setResponseMimeType
 
@@ -398,13 +334,9 @@ Sets the response is ready or not.
 setResponseMimeType(mimeType: string): void
 ```
 
-Sets the response MIME type.
+Sets the MIME type of the resource response.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -416,5 +348,5 @@ Sets the response MIME type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | the response MIME type. |
+| mimeType | string | Yes | Media (MIME) type of the resource response to set. Common MIME types include text/html (HTML document), application/json (JSON data), image/png (PNG image), etc. |
 

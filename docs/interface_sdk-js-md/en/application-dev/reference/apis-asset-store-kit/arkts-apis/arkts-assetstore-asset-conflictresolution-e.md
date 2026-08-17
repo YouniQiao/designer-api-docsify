@@ -4,10 +4,6 @@ Enumerates the policies for resolving conflicts (for example, a duplicate alias)
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
-
 <!--Device-asset-enum ConflictResolution--><!--Device-asset-enum ConflictResolution-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -21,10 +17,6 @@ OVERWRITE = 0
 Overwrites the original asset.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -41,10 +33,6 @@ THROW_ERROR = 1
 Throws an exception for the service to perform subsequent processing.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

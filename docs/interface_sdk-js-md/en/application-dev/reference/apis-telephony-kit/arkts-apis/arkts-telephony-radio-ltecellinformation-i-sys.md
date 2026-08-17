@@ -4,10 +4,6 @@ Obtains LTE cell information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-radio-export interface LteCellInformation--><!--Device-radio-export interface LteCellInformation-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -32,10 +28,6 @@ Indicates the bandwidth.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LteCellInformation-bandwidth: int--><!--Device-LteCellInformation-bandwidth: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -53,10 +45,6 @@ Indicates the cell global identification.
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LteCellInformation-cgi: long--><!--Device-LteCellInformation-cgi: long-End-->
 
@@ -76,10 +64,6 @@ Indicates the E-UTRA Absolute Radio Frequency Channel Number.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LteCellInformation-earfcn: int--><!--Device-LteCellInformation-earfcn: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -97,10 +81,6 @@ Support for New Radio_Dual Connectivity.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LteCellInformation-isSupportEndc: boolean--><!--Device-LteCellInformation-isSupportEndc: boolean-End-->
 
@@ -120,10 +100,6 @@ Indicates the mobile country code.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LteCellInformation-mcc: string--><!--Device-LteCellInformation-mcc: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -141,10 +117,6 @@ Indicates the mobile network code.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LteCellInformation-mnc: string--><!--Device-LteCellInformation-mnc: string-End-->
 
@@ -164,10 +136,6 @@ Indicates the physical cell identification.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-LteCellInformation-pci: int--><!--Device-LteCellInformation-pci: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -185,10 +153,6 @@ Indicates the tracking area code.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-LteCellInformation-tac: int--><!--Device-LteCellInformation-tac: int-End-->
 

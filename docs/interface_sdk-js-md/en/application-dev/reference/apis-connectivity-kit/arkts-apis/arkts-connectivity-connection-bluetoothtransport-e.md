@@ -4,10 +4,6 @@ Enum for the transport of a remote device
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-connection-enum BluetoothTransport--><!--Device-connection-enum BluetoothTransport-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -21,10 +17,6 @@ TRANSPORT_BR_EDR = 0
 The value of bluetooth transport BR/EDR.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ The value of bluetooth transport LE.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BluetoothTransport-TRANSPORT_LE = 1--><!--Device-BluetoothTransport-TRANSPORT_LE = 1-End-->
@@ -62,10 +50,6 @@ The value of bluetooth transport DUAL.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BluetoothTransport-TRANSPORT_DUAL = 2--><!--Device-BluetoothTransport-TRANSPORT_DUAL = 2-End-->
@@ -81,10 +65,6 @@ TRANSPORT_UNKNOWN = 3
 The unknown bluetooth transport.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

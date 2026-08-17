@@ -4,10 +4,6 @@ Config of editor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-inputMethod-export interface TextConfig--><!--Device-inputMethod-export interface TextConfig-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -32,10 +28,6 @@ Indicates the capitalize mode of the edit box.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextConfig-capitalizeMode?: CapitalizeMode--><!--Device-TextConfig-capitalizeMode?: CapitalizeMode-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -51,10 +43,6 @@ Cursor information.
 **Type:** [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextConfig-cursorInfo?: CursorInfo--><!--Device-TextConfig-cursorInfo?: CursorInfo-End-->
 
@@ -72,10 +60,6 @@ Attribute of Input.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextConfig-inputAttribute: InputAttribute--><!--Device-TextConfig-inputAttribute: InputAttribute-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -91,10 +75,6 @@ Indicates that this is a new edit box.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextConfig-newEditBox?: boolean--><!--Device-TextConfig-newEditBox?: boolean-End-->
 
@@ -112,10 +92,6 @@ Selection information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-TextConfig-selection?: Range--><!--Device-TextConfig-selection?: Range-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -131,10 +107,6 @@ The window ID of the application currently bound to the input method.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-TextConfig-windowId?: int--><!--Device-TextConfig-windowId?: int-End-->
 

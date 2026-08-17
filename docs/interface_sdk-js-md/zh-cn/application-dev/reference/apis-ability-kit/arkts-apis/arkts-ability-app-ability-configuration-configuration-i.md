@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -24,10 +20,6 @@ colorMode?: ConfigurationConstant.ColorMode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
@@ -40,15 +32,11 @@ colorMode?: ConfigurationConstant.ColorMode
 direction?: ConfigurationConstant.Direction
 ```
 
-表示应用屏幕方向。 取值范围： - DIRECTION_NOT_SET：未设置 - DIRECTION_HORIZONTAL：水平方向 - DIRECTION_VERTICAL：垂直方向 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)组件和 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)组件中订阅，不支持在 [ApplicationContext](arkts-ability-applicationcontext-c.md#ApplicationContext)和 [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage)组件容器中订阅。
+表示应用屏幕方向。 取值范围： - DIRECTION_NOT_SET：未设置 - DIRECTION_HORIZONTAL：水平方向 - DIRECTION_VERTICAL：垂直方向 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability)组件和 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)组件中订阅，不支持在 [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext)和 [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage)组件容器中订阅。
 
 **类型：** ConfigurationConstant.Direction
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -62,15 +50,11 @@ direction?: ConfigurationConstant.Direction
 displayId?: long
 ```
 
-表示应用所在的物理屏幕ID。 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)组件和 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)组件中订阅，不支持在 [ApplicationContext](arkts-ability-applicationcontext-c.md#ApplicationContext)和 [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage)组件容器中订阅。
+表示应用所在的物理屏幕ID。 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability)组件和 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)组件中订阅，不支持在 [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext)和 [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage)组件容器中订阅。
 
 **类型：** long
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,10 +74,6 @@ fontId?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Configuration-fontId?: string--><!--Device-Configuration-fontId?: string-End-->
@@ -111,10 +91,6 @@ fontSizeScale?: double
 **类型：** double
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -134,10 +110,6 @@ fontWeightScale?: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Configuration-fontWeightScale?: double--><!--Device-Configuration-fontWeightScale?: double-End-->
@@ -155,10 +127,6 @@ hasPointerDevice?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -178,10 +146,6 @@ language?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Configuration-language?: string--><!--Device-Configuration-language?: string-End-->
@@ -199,10 +163,6 @@ locale?: Intl.Locale
 **类型：** Intl.Locale
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -222,10 +182,6 @@ mcc?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Configuration-mcc?: string--><!--Device-Configuration-mcc?: string-End-->
@@ -244,10 +200,6 @@ mnc?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Configuration-mnc?: string--><!--Device-Configuration-mnc?: string-End-->
@@ -260,15 +212,11 @@ mnc?: string
 screenDensity?: ConfigurationConstant.ScreenDensity
 ```
 
-表示屏幕显示密度。 取值范围： - SCREEN_DENSITY_NOT_SET：未设置 - SCREEN_DENSITY_SDPI：120 - SCREEN_DENSITY_MDPI：160 - SCREEN_DENSITY_LDPI：240 - SCREEN_DENSITY_XLDPI：320 - SCREEN_DENSITY_XXLDPI：480 - SCREEN_DENSITY_XXXLDPI：640 字体显示大小与屏幕像素密度呈正相关关系。通过监听屏幕像素密度变化，可以感知字体显示大小的调整。通常情况下，对于相同的物理尺寸，屏幕像素密度越高，字体显示效果越大。 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)组件和 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)组件中订阅，不支持在 [ApplicationContext](arkts-ability-applicationcontext-c.md#ApplicationContext)和 [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage)组件容器中订阅。
+表示屏幕显示密度。 取值范围： - SCREEN_DENSITY_NOT_SET：未设置 - SCREEN_DENSITY_SDPI：120 - SCREEN_DENSITY_MDPI：160 - SCREEN_DENSITY_LDPI：240 - SCREEN_DENSITY_XLDPI：320 - SCREEN_DENSITY_XXLDPI：480 - SCREEN_DENSITY_XXXLDPI：640 字体显示大小与屏幕像素密度呈正相关关系。通过监听屏幕像素密度变化，可以感知字体显示大小的调整。通常情况下，对于相同的物理尺寸，屏幕像素密度越高，字体显示效果越大。 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability)组件和 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)组件中订阅，不支持在 [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext)和 [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage)组件容器中订阅。
 
 **类型：** ConfigurationConstant.ScreenDensity
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

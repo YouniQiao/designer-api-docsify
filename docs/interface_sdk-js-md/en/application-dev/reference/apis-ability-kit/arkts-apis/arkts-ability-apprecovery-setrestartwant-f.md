@@ -16,10 +16,6 @@ Sets an ability that will be recovered. The ability must be a UIAbility in the c
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -34,7 +30,7 @@ Sets an ability that will be recovered. The ability must be a UIAbility in the c
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want of the target ability. You can set the **bundleName** and **abilityName** fields in **Want** to specify the ability. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { appRecovery, Want } from '@kit.AbilityKit';

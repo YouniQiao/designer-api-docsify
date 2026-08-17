@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-unnamed-export interface FileReadTextOption--><!--Device-unnamed-export interface FileReadTextOption-End-->
@@ -23,8 +21,6 @@ complete?: () => void
 **类型：** () =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 
@@ -44,8 +40,6 @@ encoding?: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-FileReadTextOption-encoding?: string--><!--Device-FileReadTextOption-encoding?: string-End-->
@@ -63,8 +57,6 @@ fail?: (data: string, code: number) => void
 **类型：** (data: string, code: number) =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 
@@ -84,8 +76,6 @@ length?: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-FileReadTextOption-length?: number--><!--Device-FileReadTextOption-length?: number-End-->
@@ -104,8 +94,6 @@ position?: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
-
 **废弃版本：** 10
 
 <!--Device-FileReadTextOption-position?: number--><!--Device-FileReadTextOption-position?: number-End-->
@@ -118,13 +106,11 @@ position?: number
 success?: (data: FileReadTextResponse) => void
 ```
 
-接口调用成功的回调函数。返回[FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md#FileReadTextResponse)。
+接口调用成功的回调函数。返回[FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md#filereadtextresponse)。
 
 **类型：** (data: FileReadTextResponse) =&gt; void
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 
@@ -143,8 +129,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
 **废弃版本：** 10
 

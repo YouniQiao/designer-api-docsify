@@ -16,10 +16,6 @@ Checks whether there are call records that meet the specified conditions. By def
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.CHECK_CALL_LOG
 
 **Model restriction:** This API can be used only in the stage model.
@@ -62,10 +58,6 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 Checks whether there are call records that meet the specified conditions. This API applies only to carrier calls. This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CHECK_CALL_LOG
 

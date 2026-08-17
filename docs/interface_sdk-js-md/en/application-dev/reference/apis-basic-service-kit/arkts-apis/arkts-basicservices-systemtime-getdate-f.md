@@ -16,11 +16,9 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setDate-(System-API))
+**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate-system-api)
 
 <!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void-End-->
 
@@ -38,7 +36,7 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -68,11 +66,9 @@ Obtains the current system date. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getDate)
+**Substitutes:** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getdate)
 
 <!--Device-systemTime-function getDate(): Promise<Date>--><!--Device-systemTime-function getDate(): Promise<Date>-End-->
 
@@ -90,7 +86,7 @@ Obtains the current system date. This API uses a promise to return the result.
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

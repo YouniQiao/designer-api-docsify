@@ -19,11 +19,9 @@ declare function writeSync(
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
 **废弃版本：** 9
 
-**替代接口：** [writeSync](arkts-corefile-file-fs-writesync-f.md#writeSync)
+**替代接口：** [writeSync](arkts-corefile-file-fs-writesync-f.md#writesync)
 
 <!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): number--><!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): number-End-->
 

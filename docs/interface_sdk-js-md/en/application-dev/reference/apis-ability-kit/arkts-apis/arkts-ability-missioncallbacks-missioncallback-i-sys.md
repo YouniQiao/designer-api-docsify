@@ -4,10 +4,6 @@ MissionCallback registered by app.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface MissionCallback--><!--Device-unnamed-export interface MissionCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
@@ -25,10 +21,6 @@ Called by system when mission changed.
 **Type:** [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -52,10 +44,6 @@ Called by system when network disconnect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -77,10 +65,6 @@ Called by system when snapshot changed.
 **Type:** [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

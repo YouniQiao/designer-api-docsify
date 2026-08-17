@@ -4,10 +4,6 @@ Defines a four-finger swipe gesture event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare interface FourFingersSwipe--><!--Device-unnamed-export declare interface FourFingersSwipe-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -37,10 +33,6 @@ Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FourFingersSwipe-type: ActionType--><!--Device-FourFingersSwipe-type: ActionType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -57,10 +49,6 @@ X coordinate, in px.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-FourFingersSwipe-x: int--><!--Device-FourFingersSwipe-x: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -76,10 +64,6 @@ Y coordinate, in px.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-FourFingersSwipe-y: int--><!--Device-FourFingersSwipe-y: int-End-->
 

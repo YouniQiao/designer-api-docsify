@@ -4,10 +4,6 @@ Provides the parameters of the basic gesture handler.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface BaseHandlerOptions--><!--Device-unnamed-interface BaseHandlerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,10 +19,6 @@ Whether to enforce the exact number of fingers touching the screen. **true**: En
 **Type:** boolean
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn only, since version 15.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

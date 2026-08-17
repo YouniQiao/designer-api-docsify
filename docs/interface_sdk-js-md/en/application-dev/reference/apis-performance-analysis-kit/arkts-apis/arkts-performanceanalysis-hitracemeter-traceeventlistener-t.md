@@ -1,4 +1,4 @@
-# TraceEventListener
+# TraceEventListener(Performance Tracing)
 
 ```TypeScript
 type TraceEventListener = (traceStatus: boolean) => void
@@ -7,10 +7,6 @@ type TraceEventListener = (traceStatus: boolean) => void
 Defines a callback to listen for whether the trace capture is enabled.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

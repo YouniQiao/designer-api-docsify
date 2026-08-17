@@ -4,10 +4,6 @@ Rotation axes state change information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-mechanicManager-export interface RotationAxesStateChangeInfo--><!--Device-mechanicManager-export interface RotationAxesStateChangeInfo-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -32,10 +28,6 @@ ID of the mechanical device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-RotationAxesStateChangeInfo-mechId: int--><!--Device-RotationAxesStateChangeInfo-mechId: int-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -53,10 +45,6 @@ Rotate axis status.
 **Type:** [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RotationAxesStateChangeInfo-status: RotationAxesStatus--><!--Device-RotationAxesStateChangeInfo-status: RotationAxesStatus-End-->
 

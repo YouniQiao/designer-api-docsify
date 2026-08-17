@@ -16,11 +16,9 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig, callback: AsyncCallback&lt;DownloadTask&gt;)
+**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)(context: BaseContext, config: DownloadConfig, callback: AsyncCallback&lt;DownloadTask&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -43,7 +41,7 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let downloadTask: request.DownloadTask;
@@ -69,11 +67,9 @@ Downloads a file. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig)
+**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)(context: BaseContext, config: DownloadConfig)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -101,7 +97,7 @@ Downloads a file. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let downloadTask: request.DownloadTask;

@@ -4,10 +4,6 @@ Enumerates the data formats.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-print-enum PrintDocumentFormat--><!--Device-print-enum PrintDocumentFormat-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -21,10 +17,6 @@ DOCUMENT_FORMAT_AUTO = 0
 Auto-detected format.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,10 +34,6 @@ JPEG.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_JPEG = 1--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_JPEG = 1-End-->
@@ -61,10 +49,6 @@ DOCUMENT_FORMAT_PDF = 2
 PDF.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,10 +66,6 @@ PostScript.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_POSTSCRIPT = 3--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_POSTSCRIPT = 3-End-->
@@ -102,10 +82,6 @@ Text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_TEXT = 4--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_TEXT = 4-End-->
@@ -121,10 +97,6 @@ DOCUMENT_FORMAT_RAW = 5
 RAW.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

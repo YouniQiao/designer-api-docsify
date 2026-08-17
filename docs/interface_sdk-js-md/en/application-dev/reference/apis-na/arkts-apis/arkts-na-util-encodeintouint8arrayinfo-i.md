@@ -4,9 +4,7 @@ Return encoded text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-util-interface EncodeIntoUint8ArrayInfo--><!--Device-util-interface EncodeIntoUint8ArrayInfo-End-->
 
@@ -24,9 +22,7 @@ The read represents the number of characters that have been encoded.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-EncodeIntoUint8ArrayInfo-read: int--><!--Device-EncodeIntoUint8ArrayInfo-read: int-End-->
 
@@ -44,9 +40,7 @@ The written represents the number of bytes occupied by the encoded characters.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Deprecated since:** -1
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 <!--Device-EncodeIntoUint8ArrayInfo-written: int--><!--Device-EncodeIntoUint8ArrayInfo-written: int-End-->
 

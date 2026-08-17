@@ -4,10 +4,6 @@ Enumerates the text alignment modes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-text-enum TextAlign--><!--Device-text-enum TextAlign-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -21,10 +17,6 @@ LEFT = 0
 Left-aligned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,10 +34,6 @@ Right-aligned.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextAlign-RIGHT = 1--><!--Device-TextAlign-RIGHT = 1-End-->
@@ -61,10 +49,6 @@ CENTER = 2
 Center-aligned.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -82,10 +66,6 @@ Justified, which means that each line (except the last line) is stretched so tha
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextAlign-JUSTIFY = 3--><!--Device-TextAlign-JUSTIFY = 3-End-->
@@ -98,13 +78,9 @@ Justified, which means that each line (except the last line) is stretched so tha
 START = 4
 ```
 
-Aligned with the start position, which depends on [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md#TextDirection).
+Aligned with the start position, which depends on [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md#textdirection).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -118,13 +94,9 @@ Aligned with the start position, which depends on [TextDirection](arkts-arkgraph
 END = 5
 ```
 
-Aligned with the end position, which depends on [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md#TextDirection).
+Aligned with the end position, which depends on [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md#textdirection).
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

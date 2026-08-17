@@ -1,12 +1,8 @@
 # WebDownloadState
 
-Defines the state for download.
+下载任务的状态。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 <!--Device-webview-enum WebDownloadState--><!--Device-webview-enum WebDownloadState-End-->
 
@@ -18,13 +14,9 @@ Defines the state for download.
 IN_PROGRESS = 0
 ```
 
-The web download is in progress.
+下载任务正在进行中。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,13 +30,9 @@ The web download is in progress.
 COMPLETED = 1
 ```
 
-The web download has been completed.
+下载任务已经完成。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -58,13 +46,9 @@ The web download has been completed.
 CANCELED = 2
 ```
 
-The web download was canceled.
+下载任务已经被取消。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -78,13 +62,9 @@ The web download was canceled.
 INTERRUPTED = 3
 ```
 
-The web download was interrupted.
+下载任务被中断。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,13 +78,9 @@ The web download was interrupted.
 PENDING = 4
 ```
 
-The web download is pending.
+下载任务等待开始。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -118,13 +94,9 @@ The web download is pending.
 PAUSED = 5
 ```
 
-The web download has been paused.
+下载任务已经被暂停。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -138,13 +110,9 @@ The web download has been paused.
 UNKNOWN = 6
 ```
 
-Unknown state.
+下载任务未知状态。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

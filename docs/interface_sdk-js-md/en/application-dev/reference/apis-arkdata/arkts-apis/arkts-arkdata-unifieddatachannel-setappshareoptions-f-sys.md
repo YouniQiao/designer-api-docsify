@@ -12,13 +12,9 @@ import { unifiedDataChannel } from 'unifiedDataChannel';
 function setAppShareOptions(intention: Intention, shareOptions: ShareOptions): void
 ```
 
-Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md#ShareOptions) for the application data. Currently, only the drag- and-drop data channel is supported.
+Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md#shareoptions) for the application data. Currently, only the drag- and-drop data channel is supported.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 14+: ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION
@@ -36,7 +32,7 @@ Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md#Share
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | intention | [Intention](arkts-arkdata-unifieddatachannel-intention-e.md) | Yes | Type of the data channel. Currently, only the data channel of the **DRAG** type is supported. |
-| shareOptions | [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) | Yes | Usage scope of the [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md#UnifiedDataProperties). |
+| shareOptions | [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) | Yes | Usage scope of the [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md#unifieddataproperties). |
 
 **Error codes:**
 
@@ -47,7 +43,7 @@ Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md#Share
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission " ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION".<br>**Applicable version:** 14 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API.<br>**Applicable version:** 12 - 13 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,12 +1,8 @@
 # SslErrorHandler
 
-Defines the ssl error request result, related to onSslErrorEventReceive method.
+SslErrorHandler is a class in the Web component for handling SSL certificate verification errors. When an SSL certificate error (such as certificate expiration, hostname mismatch, or untrusted CA) is encountered while loading a secure page, the app can obtain an SslErrorHandler instance through the onSslErrorEvent callback and decide whether to continue loading or cancel navigation. For sample code, see the [onSslErrorEvent](arkts-arkweb-web-attribute.md#onsslerrorevent) event.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class SslErrorHandler--><!--Device-unnamed-declare class SslErrorHandler-End-->
 
@@ -18,13 +14,9 @@ Defines the ssl error request result, related to onSslErrorEventReceive method.
 constructor()
 ```
 
-Constructor.
+Constructs a **SslErrorHandler** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +30,9 @@ Constructor.
 handleCancel(): void
 ```
 
-Cancel this request.
+Notifies the Web component to cancel this request and stops the current SSL certificate verification process.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,13 +46,9 @@ Cancel this request.
 handleCancel(abortLoading: boolean): void
 ```
 
-ArkWeb has encountered an SSL certificate error, and this interface indicates whether to terminate or continue displaying the error to users.
+Cancels this request and determines whether to stop loading based on the **abortLoading** parameter.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
-
-**Deprecated since:** -1
 
 <!--Device-SslErrorHandler-handleCancel(abortLoading: boolean): void--><!--Device-SslErrorHandler-handleCancel(abortLoading: boolean): void-End-->
 
@@ -74,7 +58,7 @@ ArkWeb has encountered an SSL certificate error, and this interface indicates wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abortLoading | boolean | Yes | If abortLoading is true, the current request will be canceled and the user will remain on the current page. If it is false, the SSL error will not be ignored, and a blank page will be displayed. If a default error page is enabled, the default error page will be shown instead. The default value is false. |
+| abortLoading | boolean | Yes | Whether to stop loading the page after canceling the request. <br>The value **true** indicates that the page stops loading, and **false** indicates that the page continues loading. |
 
 ## handleConfirm
 
@@ -82,13 +66,9 @@ ArkWeb has encountered an SSL certificate error, and this interface indicates wh
 handleConfirm(): void
 ```
 
-Confirm to use the SSL certificate.
+Ignores the SSL certificate verification error and continues loading the page.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

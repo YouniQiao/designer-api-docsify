@@ -4,6 +4,8 @@
 
 Provides a unified entry point for crypto header files for developer convenience.
 
+**Include**: <CryptoArchitectureKit/crypto_architecture_kit.h>
+
 **Library**: libohcrypto.so
 
 **System capability**: SystemCapability.Security.CryptoFramework

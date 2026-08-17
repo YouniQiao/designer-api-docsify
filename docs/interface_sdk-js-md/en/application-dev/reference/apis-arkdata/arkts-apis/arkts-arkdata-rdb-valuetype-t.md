@@ -8,11 +8,9 @@ Defines the data types allowed.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType)
+**Substitutes:** [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype)
 
 <!--Device-rdb-type ValueType = number | string | boolean--><!--Device-rdb-type ValueType = number | string | boolean-End-->
 

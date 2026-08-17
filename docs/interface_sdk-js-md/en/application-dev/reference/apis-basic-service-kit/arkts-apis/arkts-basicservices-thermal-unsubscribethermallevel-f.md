@@ -16,11 +16,9 @@ Unsubscribes from the thermal level changes. This API uses an asynchronous callb
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md#unregisterThermalLevelCallback)
+**Substitutes:** [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md#unregisterthermallevelcallback)
 
 <!--Device-thermal-function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void--><!--Device-thermal-function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void-End-->
 
@@ -32,7 +30,7 @@ Unsubscribes from the thermal level changes. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback that returns no value. If this parameter is not set, all callbacks will be unregistered. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 thermal.unsubscribeThermalLevel(() => {

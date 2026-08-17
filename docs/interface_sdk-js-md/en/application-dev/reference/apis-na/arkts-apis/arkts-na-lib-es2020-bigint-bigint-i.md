@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface BigInt--><!--Device-unnamed-interface BigInt-End-->
 
 ## toLocaleString
@@ -17,10 +13,6 @@ toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOpt
 Returns a string representation appropriate to the host environment's current locale.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-BigInt-toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOptions): string--><!--Device-BigInt-toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOptions): string-End-->
 
@@ -47,10 +39,6 @@ Returns a string representation of an object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-BigInt-toString(radix?: number): string--><!--Device-BigInt-toString(radix?: number): string-End-->
 
 **Parameters:**
@@ -75,10 +63,6 @@ Returns the primitive value of the specified object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-BigInt-valueOf(): bigint--><!--Device-BigInt-valueOf(): bigint-End-->
 
 **Return value:**
@@ -96,10 +80,6 @@ readonly [Symbol.toStringTag]: "BigInt"
 **Type:** "BigInt"
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-BigInt-readonly [Symbol.toStringTag]: "BigInt"--><!--Device-BigInt-readonly [Symbol.toStringTag]: "BigInt"-End-->
 

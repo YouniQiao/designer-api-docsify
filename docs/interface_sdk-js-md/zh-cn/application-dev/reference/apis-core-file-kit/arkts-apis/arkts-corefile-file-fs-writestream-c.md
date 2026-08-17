@@ -1,14 +1,10 @@
 # WriteStream
 
-文件可写流，需要先通过 fileIo.createWriteStream方法来构建一 个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)。
+文件可写流，需要先通过 fileIo.createWriteStream方法来构建一 个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#writable)。
 
-**继承/实现关系：** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)
+**继承/实现关系：** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#writable)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-unnamed-declare class WriteStream--><!--Device-unnamed-declare class WriteStream-End-->
 
@@ -23,10 +19,6 @@ close(): void
 关闭可写流。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WriteStream-close(): void--><!--Device-WriteStream-close(): void-End-->
 
@@ -43,7 +35,7 @@ close(): void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
@@ -61,10 +53,6 @@ The WriteStream constructor.
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-WriteStream-constructor()--><!--Device-WriteStream-constructor()-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -78,10 +66,6 @@ seek(offset: number, whence?: WhenceType): number
 调整可写流的偏移指针位置。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number--><!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number-End-->
 
@@ -109,7 +93,7 @@ seek(offset: number, whence?: WhenceType): number
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
-## 示例
+**示例**
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
@@ -131,10 +115,6 @@ readonly bytesWritten: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
-
 <!--Device-WriteStream-readonly bytesWritten: number--><!--Device-WriteStream-readonly bytesWritten: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -150,10 +130,6 @@ readonly path: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**废弃版本：** -1
 
 <!--Device-WriteStream-readonly path: string--><!--Device-WriteStream-readonly path: string-End-->
 

@@ -4,10 +4,6 @@ The definition of command information to be sent to the session
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-avSession-interface CommandInfo--><!--Device-avSession-interface CommandInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -30,10 +26,6 @@ Caller bundle name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommandInfo-callerBundleName?: string--><!--Device-CommandInfo-callerBundleName?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -49,10 +41,6 @@ Caller device id.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CommandInfo-callerDeviceId?: string--><!--Device-CommandInfo-callerDeviceId?: string-End-->
 
@@ -70,10 +58,6 @@ Caller module name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-CommandInfo-callerModuleName?: string--><!--Device-CommandInfo-callerModuleName?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -89,10 +73,6 @@ Caller type.
 **Type:** [CallerType](arkts-avsession-avsession-callertype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-CommandInfo-callerType?: CallerType--><!--Device-CommandInfo-callerType?: CallerType-End-->
 

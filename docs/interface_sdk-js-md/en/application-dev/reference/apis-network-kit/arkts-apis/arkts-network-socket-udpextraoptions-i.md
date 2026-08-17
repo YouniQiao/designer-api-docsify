@@ -2,13 +2,9 @@
 
 Defines other properties of the UDPSocket connection.
 
-**Inheritance/Implementation:** UDPExtraOptions extends [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md#ExtraOptionsBase)
+**Inheritance/Implementation:** UDPExtraOptions extends [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md#extraoptionsbase)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-socket-export interface UDPExtraOptions--><!--Device-socket-export interface UDPExtraOptions-End-->
 
@@ -31,10 +27,6 @@ Whether to send broadcast messages. The default value is false.
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
 
 <!--Device-UDPExtraOptions-broadcast?: boolean--><!--Device-UDPExtraOptions-broadcast?: boolean-End-->
 

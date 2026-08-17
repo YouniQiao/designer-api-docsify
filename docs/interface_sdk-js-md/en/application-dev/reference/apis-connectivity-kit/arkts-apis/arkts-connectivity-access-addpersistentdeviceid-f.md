@@ -16,10 +16,6 @@ Add a persistent random device address. Once the randomized address is successfu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.PERSISTENT_BLUETOOTH_PEERS_MAC
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -51,7 +47,7 @@ Add a persistent random device address. Once the randomized address is successfu
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Add persistent device address failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

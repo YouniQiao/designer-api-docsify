@@ -8,10 +8,6 @@ Provides callback methods for subscribers to receive and cancel notifications.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-notificationSubscribe-export type NotificationSubscriber = _NotificationSubscriber--><!--Device-notificationSubscribe-export type NotificationSubscriber = _NotificationSubscriber-End-->
 
 **System capability:** SystemCapability.Notification.Notification

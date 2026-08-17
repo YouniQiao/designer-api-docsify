@@ -4,10 +4,6 @@ Represents the event data of an OS account sub-profile.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface OsAccountSubProfileEventData--><!--Device-osAccount-interface OsAccountSubProfileEventData-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -32,10 +28,6 @@ Event that occurred.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfileEventData-event: OsAccountSubProfileEvent--><!--Device-OsAccountSubProfileEventData-event: OsAccountSubProfileEvent-End-->
@@ -55,10 +47,6 @@ OS account local ID.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Previous OS account sub-profile identifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfileEventData-previousSubProfileId?: int--><!--Device-OsAccountSubProfileEventData-previousSubProfileId?: int-End-->
@@ -103,10 +87,6 @@ OS account sub-profile identifier.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

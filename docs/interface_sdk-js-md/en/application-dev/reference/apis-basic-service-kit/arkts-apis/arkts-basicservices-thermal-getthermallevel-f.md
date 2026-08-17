@@ -16,11 +16,9 @@ Obtains the current thermal level.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getLevel](arkts-basicservices-thermal-getlevel-f.md#getLevel)
+**Substitutes:** [getLevel](arkts-basicservices-thermal-getlevel-f.md#getlevel)
 
 <!--Device-thermal-function getThermalLevel(): ThermalLevel--><!--Device-thermal-function getThermalLevel(): ThermalLevel-End-->
 
@@ -32,7 +30,7 @@ Obtains the current thermal level.
 | --- | --- |
 | [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | Thermal level. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let level = thermal.getThermalLevel();

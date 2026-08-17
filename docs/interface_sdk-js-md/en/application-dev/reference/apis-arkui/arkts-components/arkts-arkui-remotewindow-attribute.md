@@ -6,10 +6,6 @@ Inheritance CommonMethod Set Styles
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare class RemoteWindowAttribute--><!--Device-unnamed-declare class RemoteWindowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

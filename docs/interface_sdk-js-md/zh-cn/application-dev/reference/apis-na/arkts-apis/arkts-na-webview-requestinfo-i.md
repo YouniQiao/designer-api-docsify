@@ -4,9 +4,7 @@ Defines the Web's request info.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-webview-interface RequestInfo--><!--Device-webview-interface RequestInfo-End-->
 
@@ -24,9 +22,7 @@ Gets the form data of the request.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-RequestInfo-formData: string--><!--Device-RequestInfo-formData: string-End-->
 
@@ -44,9 +40,7 @@ Gets the method of the request.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-RequestInfo-method: string--><!--Device-RequestInfo-method: string-End-->
 
@@ -64,9 +58,7 @@ Gets the url of the request.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-RequestInfo-url: string--><!--Device-RequestInfo-url: string-End-->
 

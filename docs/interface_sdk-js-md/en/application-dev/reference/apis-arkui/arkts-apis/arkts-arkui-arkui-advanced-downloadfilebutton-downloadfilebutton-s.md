@@ -4,10 +4,6 @@ Declare Component DownloadFileButton
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export declare struct DownloadFileButton--><!--Device-unnamed-export declare struct DownloadFileButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,10 +31,6 @@ Set DownloadFileButton Content.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadFileButton-@State contentOptions: DownloadContentOptions--><!--Device-DownloadFileButton-@State contentOptions: DownloadContentOptions-End-->
@@ -56,10 +48,6 @@ Set DownloadFileButton Style.
 **Type:** [DownloadStyleOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,14 +1,12 @@
 # ShortcutInfo
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-ShortcutInfo](#ShortcutInfo) instead.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-ShortcutInfo](#shortcutinfo) instead.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** [ShortcutInfo](#ShortcutInfo)
+**Substitutes:** [ShortcutInfo](#shortcutinfo)
 
 <!--Device-unnamed-export interface ShortcutInfo--><!--Device-unnamed-export interface ShortcutInfo-End-->
 
@@ -25,8 +23,6 @@ Name of the bundle that contains the shortcut.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ Message displayed when the shortcut is disabled.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 <!--Device-ShortcutInfo-readonly disableMessage: string--><!--Device-ShortcutInfo-readonly disableMessage: string-End-->
@@ -67,8 +61,6 @@ Local ability information of the shortcut.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Icon of the shortcut.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** icon
@@ -112,8 +102,6 @@ Icon ID of the shortcut.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** iconId
@@ -133,8 +121,6 @@ ID of the application to which the shortcut belongs.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -158,8 +144,6 @@ Whether the shortcut is enabled. **true** if enabled, **false** otherwise.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** visible
@@ -181,8 +165,6 @@ Whether the shortcut is static. **true** if static, **false** otherwise.
 **Default:** false
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -206,8 +188,6 @@ Whether the shortcut is static. **true** if static, **false** otherwise.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** sourceType
@@ -227,8 +207,6 @@ Name of the shortcut.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 
@@ -250,8 +228,6 @@ Name ID of the shortcut.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -271,8 +247,6 @@ Want list for the shortcut.
 **Type:** Array&lt;[ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md)&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Deprecated since:** 9
 

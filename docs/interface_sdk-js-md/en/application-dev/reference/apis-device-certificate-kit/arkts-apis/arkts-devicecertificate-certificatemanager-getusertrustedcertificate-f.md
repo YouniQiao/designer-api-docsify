@@ -16,10 +16,6 @@ Obtains the detailed information about a user root CA certificate. This API uses
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 <!--Device-certificateManager-function getUserTrustedCertificate(certUri: string): Promise<CMResult>--><!--Device-certificateManager-function getUserTrustedCertificate(certUri: string): Promise<CMResult>-End-->
@@ -47,7 +43,7 @@ Obtains the detailed information about a user root CA certificate. This API uses
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { certificateManager } from '@kit.DeviceCertificateKit';

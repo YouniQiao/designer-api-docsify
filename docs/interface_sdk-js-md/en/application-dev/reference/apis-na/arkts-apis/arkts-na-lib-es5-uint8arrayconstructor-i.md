@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface Uint8ArrayConstructor--><!--Device-unnamed-interface Uint8ArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new(length: number): Uint8Array
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ArrayConstructor-new(length: number): Uint8Array--><!--Device-Uint8ArrayConstructor-new(length: number): Uint8Array-End-->
 
@@ -42,10 +34,6 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint8Array
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Uint8Array--><!--Device-Uint8ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Uint8Array-End-->
 
 **Parameters:**
@@ -67,10 +55,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Array
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Array--><!--Device-Uint8ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Array-End-->
 
@@ -98,10 +82,6 @@ Creates an array from an array-like or iterable object.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8ArrayConstructor-from(arrayLike: ArrayLike<number>): Uint8Array--><!--Device-Uint8ArrayConstructor-from(arrayLike: ArrayLike<number>): Uint8Array-End-->
 
 **Parameters:**
@@ -125,10 +105,6 @@ from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: a
 Creates an array from an array-like or iterable object.
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint8Array--><!--Device-Uint8ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint8Array-End-->
 
@@ -156,10 +132,6 @@ Returns a new array from a set of elements.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8ArrayConstructor-of(...items: number[]): Uint8Array--><!--Device-Uint8ArrayConstructor-of(...items: number[]): Uint8Array-End-->
 
 **Parameters:**
@@ -186,10 +158,6 @@ The size in bytes of each element in the array.
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-Uint8ArrayConstructor-readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8ArrayConstructor-readonly BYTES_PER_ELEMENT: number-End-->
 
 ## prototype
@@ -201,10 +169,6 @@ readonly prototype: Uint8Array
 **Type:** Uint8Array
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-Uint8ArrayConstructor-readonly prototype: Uint8Array--><!--Device-Uint8ArrayConstructor-readonly prototype: Uint8Array-End-->
 

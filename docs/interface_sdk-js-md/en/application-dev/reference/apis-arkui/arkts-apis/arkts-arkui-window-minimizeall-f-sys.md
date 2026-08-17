@@ -16,10 +16,6 @@ Minimizes all main windows on a display.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-function minimizeAll(id: long, callback: AsyncCallback<void>): void--><!--Device-window-function minimizeAll(id: long, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -30,7 +26,7 @@ Minimizes all main windows on a display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | long | Yes | ID of the [display](arkts-arkui-display-displaystate-e.md#DisplayState). The value must be an integer. |
+| id | long | Yes | ID of the [display](arkts-arkui-display-displaystate-e.md#displaystate). The value must be an integer. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -41,7 +37,7 @@ Minimizes all main windows on a display.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { display } from '@kit.ArkUI';
@@ -79,10 +75,6 @@ Minimizes all main windows on a display. This API uses a promise to return the r
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-window-function minimizeAll(id: long): Promise<void>--><!--Device-window-function minimizeAll(id: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -93,7 +85,7 @@ Minimizes all main windows on a display. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | long | Yes | ID of the [display](arkts-arkui-display-displaystate-e.md#DisplayState). The value must be an integer. |
+| id | long | Yes | ID of the [display](arkts-arkui-display-displaystate-e.md#displaystate). The value must be an integer. |
 
 **Return value:**
 
@@ -109,7 +101,7 @@ Minimizes all main windows on a display. This API uses a promise to return the r
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { display } from '@kit.ArkUI';

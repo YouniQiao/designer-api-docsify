@@ -4,10 +4,6 @@ Queries the time zone transition rule.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-i18n-export class ZoneRules--><!--Device-i18n-export class ZoneRules-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -28,10 +24,6 @@ Obtains the **nextTransition** object for the specified time.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition--><!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition-End-->
@@ -48,5 +40,5 @@ Obtains the **nextTransition** object for the specified time.
 
 | Type | Description |
 | --- | --- |
-| [ZoneOffsetTransition](../../apis-na/arkts-apis/arkts-na-i18n-zoneoffsettransition-c.md) | ZoneOffsetTransition** object for next transition. |
+| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | ZoneOffsetTransition** object for next transition. |
 

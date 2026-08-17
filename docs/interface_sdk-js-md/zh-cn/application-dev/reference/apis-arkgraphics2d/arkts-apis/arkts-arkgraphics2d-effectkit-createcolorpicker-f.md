@@ -10,10 +10,6 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -40,7 +36,7 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 输入参数错误。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -77,10 +73,6 @@ function createColorPicker(source: image.PixelMap, region: Array<double>): Promi
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -108,7 +100,7 @@ function createColorPicker(source: image.PixelMap, region: Array<double>): Promi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 输入参数错误。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -145,10 +137,6 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -162,7 +150,7 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
@@ -170,7 +158,7 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 输入参数错误。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";
@@ -207,10 +195,6 @@ function createColorPicker(source: image.PixelMap, region: Array<double>, callba
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -225,7 +209,7 @@ function createColorPicker(source: image.PixelMap, region: Array<double>, callba
 | --- | --- | --- | --- |
 | source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
 | region | Array&lt;double&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
@@ -233,7 +217,7 @@ function createColorPicker(source: image.PixelMap, region: Array<double>, callba
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | 输入参数错误。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 import { image } from "@kit.ImageKit";

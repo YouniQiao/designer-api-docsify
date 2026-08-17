@@ -4,10 +4,6 @@ Describes the order in which materials are rendered, controlling the sequence of
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface RenderSort--><!--Device-unnamed-export interface RenderSort-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -22,13 +18,9 @@ Rendering layer ID. A smaller value indicates an earlier rendering order. The va
 
 **Type:** int
 
-**Default:** 32 Default render sort layer id.
+**Default:** 32
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RenderSort-renderSortLayer?: int--><!--Device-RenderSort-renderSortLayer?: int-End-->
 
@@ -44,13 +36,9 @@ Rendering order of different objects within the same rendering layer. A smaller 
 
 **Type:** int
 
-**Default:** 0 Default render sort layer order.
+**Default:** 0
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-RenderSort-renderSortLayerOrder?: int--><!--Device-RenderSort-renderSortLayerOrder?: int-End-->
 

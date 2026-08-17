@@ -4,10 +4,6 @@ Provides APIs for encapsulating a set of data records.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unifiedDataChannel-class UnifiedData--><!--Device-unifiedDataChannel-class UnifiedData-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -27,10 +23,6 @@ addRecord(record: UnifiedRecord): void
 Adds a data record to this **UnifiedRecord** object.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,7 +44,7 @@ Adds a data record to this **UnifiedRecord** object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -83,10 +75,6 @@ Defines a constructor used to create a **UnifiedData** object with a data record
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -107,7 +95,7 @@ Defines a constructor used to create a **UnifiedData** object with a data record
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -130,10 +118,6 @@ Defines a constructor used to create a **UnifiedData** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -142,7 +126,7 @@ Defines a constructor used to create a **UnifiedData** object.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
-## Examples
+**Examples**
 
 ```TypeScript
 let unifiedData = new unifiedDataChannel.UnifiedData();
@@ -154,13 +138,9 @@ let unifiedData = new unifiedDataChannel.UnifiedData();
 getRecords(): Array<UnifiedRecord>
 ```
 
-Obtains all data records from this **UnifiedData** object. The data obtained is of the **UnifiedRecord** type. Before using the data, you need to use [getType](#getTypes) to obtain the data type and convert the data type to a child class.
+Obtains all data records from this **UnifiedData** object. The data obtained is of the **UnifiedRecord** type. Before using the data, you need to use [getType](#gettypes) to obtain the data type and convert the data type to a child class.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,7 +156,7 @@ Obtains all data records from this **UnifiedData** object. The data obtained is 
 | --- | --- |
 | Array&lt;[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)&gt; | Records in the **UnifiedData** object obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -221,10 +201,6 @@ Obtains the types of all data records in this **UnifiedData** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -239,7 +215,7 @@ Obtains the types of all data records in this **UnifiedData** object.
 | --- | --- |
 | Array&lt;string&gt; | Array of the [UniformDataType]{ |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -269,13 +245,9 @@ let types = unifiedData.getTypes();
 hasType(type: string): boolean
 ```
 
-Checks whether this **UnifiedData** object contains the specified data type, including the data types added by using the [addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addEntry) function. For file types, if the type set of **UnifiedData** includes **general.jpeg**, calling the **hasType** API to check for the **general.image** type will return **true**. This is because the **general.jpeg** type belongs to the **general.image** type.
+Checks whether this **UnifiedData** object contains the specified data type, including the data types added by using the [addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addentry) function. For file types, if the type set of **UnifiedData** includes **general.jpeg**, calling the **hasType** API to check for the **general.image** type will return **true**. This is because the **general.jpeg** type belongs to the **general.image** type.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -289,7 +261,7 @@ Checks whether this **UnifiedData** object contains the specified data type, inc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Data type to check. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType). |
+| type | string | Yes | Data type to check. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
 
 **Return value:**
 
@@ -303,7 +275,7 @@ Checks whether this **UnifiedData** object contains the specified data type, inc
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';

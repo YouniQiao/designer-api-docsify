@@ -10,11 +10,9 @@ function getSupportedModes(portId: number): PortModeType
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
 **废弃版本：** 9
 
-**替代接口：** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getSupportedModes（系统接口）)
+**替代接口：** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getsupportedmodes系统接口)
 
 <!--Device-usb-function getSupportedModes(portId: number): PortModeType--><!--Device-usb-function getSupportedModes(portId: number): PortModeType-End-->
 
@@ -34,7 +32,7 @@ function getSupportedModes(portId: number): PortModeType
 | --- | --- |
 | PortModeType | 支持的模式列表的组合掩码。 |
 
-## 示例
+**示例**
 
 ```TypeScript
 let ret = usb.getSupportedModes(0);

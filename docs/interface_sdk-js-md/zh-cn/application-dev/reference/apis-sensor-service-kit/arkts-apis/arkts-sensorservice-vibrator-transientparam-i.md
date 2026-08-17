@@ -1,12 +1,8 @@
 # TransientParam
 
-瞬态振动参数。用于[VibratorPatternBuilder.addTransientEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addTransientEvent)的 options参数，指定短振事件的振动强度、频率和通道编号。
+瞬态振动参数。用于[VibratorPatternBuilder.addTransientEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addtransientevent)的 options参数，指定短振事件的振动强度、频率和通道编号。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-vibrator-interface TransientParam--><!--Device-vibrator-interface TransientParam-End-->
 
@@ -24,10 +20,6 @@ frequency?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TransientParam-frequency?: int--><!--Device-TransientParam-frequency?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
@@ -44,10 +36,6 @@ index?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-TransientParam-index?: int--><!--Device-TransientParam-index?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
@@ -63,10 +51,6 @@ intensity?: int
 **类型：** int
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 <!--Device-TransientParam-intensity?: int--><!--Device-TransientParam-intensity?: int-End-->
 

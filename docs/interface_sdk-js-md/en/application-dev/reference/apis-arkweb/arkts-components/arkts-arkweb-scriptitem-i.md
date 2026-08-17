@@ -1,12 +1,8 @@
 # ScriptItem
 
-Defines the contents of the JavaScript to be injected.
+Describes the **ScriptItem** object registered with the **Web** component through the [javaScriptOnDocumentStart](arkts-arkweb-web-attribute.md#javascriptondocumentstart) attribute.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ScriptItem--><!--Device-unnamed-declare interface ScriptItem-End-->
 
@@ -18,15 +14,11 @@ Defines the contents of the JavaScript to be injected.
 script: string
 ```
 
-Sets the JavaScript to be injected.
+JavaScript script to be registered and executed.
 
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,15 +32,11 @@ Sets the JavaScript to be injected.
 scriptRules: Array<string>
 ```
 
-Sets the rules of the JavaScript. 1. To allow URLs from all sources, use the wildcard (*). 2. If exact match is required, specify the exact URL, for example, **https://www.example.com**. 3. For fuzzy match, you can use a wildcard (*) in the website URL, for example, **https://*.example.com**. Websites such as "x,*.y.com" and "* foobar.com" are not allowed. 4. If the source is an IP address, follow rule 2. 5. For protocols other than HTTP/HTTPS (custom protocols), exact match and fuzzy match are not supported, and the protocol must end with **://**, for example, **resource://**. 6. If one of the preceding rules is not met in **scriptRules**, the **scriptRules** does not take effect.
+A set of matching rules for allowed sources. 1. To allow URLs from all sources, use the wildcard "*". 2. To perform exact matching, specify the website address, for example, "https://www.example.com". 3. To perform fuzzy matching, use the "*" wildcard, for example, "https://*.example.com". Patterns such as "x.*.y.com" and "*foobar.com" are not allowed. 4. If the source is an IP address, use rule 2. 5. For protocols other than HTTP/HTTPS (custom protocols), exact matching and fuzzy matching are not supported, and the rule must end with `://`, for example, "resource://". 6. In a set of scriptRules, if any rule does not meet the above requirements, the entire set of scriptRules does not take effect.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -59,22 +47,18 @@ Sets the rules of the JavaScript. 1. To allow URLs from all sources, use the wil
 ## urlRegexRules
 
 ```TypeScript
-urlRegexRules?: Array<UrlRegexRule>
+urlRegexRules? : Array<UrlRegexRule>
 ```
 
-Set the regular expression rule that allows execution of this JavaScript.
+Regular expression matching rules for allowed sources. **urlRegexRules** is used for matching only when **scriptRules** is set to **[]**.
 
 **Type:** Array&lt;[UrlRegexRule](arkts-arkweb-urlregexrule-i.md)&gt;
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ScriptItem-urlRegexRules?: Array<UrlRegexRule>--><!--Device-ScriptItem-urlRegexRules?: Array<UrlRegexRule>-End-->
+<!--Device-ScriptItem-urlRegexRules? : Array<UrlRegexRule>--><!--Device-ScriptItem-urlRegexRules? : Array<UrlRegexRule>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

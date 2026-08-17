@@ -4,10 +4,6 @@ Provides the ImageProcessor type, including the processing function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-videoProcessingEngine-interface ImageProcessor--><!--Device-videoProcessingEngine-interface ImageProcessor-End-->
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
@@ -27,10 +23,6 @@ enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: Qual
 The function generate the destinationImage from sourceImage with necessary scaling operation <br>according to width and height. Different levels of scaling methods are provided to <br>balance performance and image quality. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
@@ -61,7 +53,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image, videoProcessingEngine } from '@kit.ImageKit';
@@ -84,10 +76,6 @@ enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel):
 The function generate the destinationImage from sourceImage with necessary scaling operation <br>according to the zoom ratio. Different levels of scaling methods are provided to <br>balance performance and image quality. This method uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
@@ -117,7 +105,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image, videoProcessingEngine } from '@kit.ImageKit';
@@ -140,10 +128,6 @@ enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: 
 The function generate the destinationImage from sourceImage with necessary scaling operation <br>according to width and height. Different levels of scaling methods are provided to <br>balance performance and image quality.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
@@ -175,7 +159,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image, videoProcessingEngine } from '@kit.ImageKit';
@@ -198,10 +182,6 @@ enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLev
 The function generate the destinationImage from sourceImage with necessary scaling operation <br>according to the zoom ratio. Different levels of scaling methods are provided to <br>balance performance and image quality.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
@@ -232,7 +212,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { image, videoProcessingEngine } from '@kit.ImageKit';

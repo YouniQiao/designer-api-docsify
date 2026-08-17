@@ -1,14 +1,12 @@
 # By
 
-The UiTest framework provides a wide range of UI component feature description APIs in the **By** class to filter and match components. The APIs provided by the **By** class exhibit the following features: 1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component. 2. Provide multiple match patterns for component attributes. 3. Support absolute positioning and relative positioning for components. APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isBefore) and [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isAfter) can be used to specify the features of adjacent components to assist positioning. All APIs provided in the **By** class are synchronous. You are advised to use the static constructor **BY** to create a **By** object in chain mode.
+The UiTest framework provides a wide range of UI component feature description APIs in the **By** class to filter and match components. The APIs provided by the **By** class exhibit the following features: 1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component. 2. Provide multiple match patterns for component attributes. 3. Support absolute positioning and relative positioning for components. APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isbefore) and [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isafter) can be used to specify the features of adjacent components to assist positioning. All APIs provided in the **By** class are synchronous. You are advised to use the static constructor **BY** to create a **By** object in chain mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [On](arkts-test-uitest-on-c.md#On)
+**Substitutes:** [On](arkts-test-uitest-on-c.md#on)
 
 <!--Device-unnamed-declare class By--><!--Device-unnamed-declare class By-End-->
 
@@ -58,8 +56,6 @@ Specifies the clickable attribute of the target component.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [clickable](arkts-test-uitest-on-c.md#clickable)
@@ -80,7 +76,7 @@ Specifies the clickable attribute of the target component.
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object that matches the clickable attribute of the target component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -98,8 +94,6 @@ enabled(b?: boolean): By
 Specifies the enabled attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -121,7 +115,7 @@ Specifies the enabled attribute of the target component.
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object that matches the enabled attribute of the target component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -139,8 +133,6 @@ focused(b?: boolean): By
 Specifies the focused attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -162,7 +154,7 @@ Specifies the focused attribute of the target component.
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object that matches the focused attribute of the target component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -180,8 +172,6 @@ id(id: number): By
 Specifies the ID attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -203,7 +193,7 @@ Specifies the ID attribute of the target component.
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object that matches the ID attribute of the target component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -222,11 +212,9 @@ Specifies that the target component is located after the given attribute compone
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isAfter](arkts-test-uitest-on-c.md#isAfter)(on: On)
+**Substitutes:** [isAfter](arkts-test-uitest-on-c.md#isafter)(on: On)
 
 <!--Device-By-isAfter(by: By): By--><!--Device-By-isAfter(by: By): By-End-->
 
@@ -244,7 +232,7 @@ Specifies that the target component is located after the given attribute compone
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -264,11 +252,9 @@ Specifies that the target component is located before the given attribute compon
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [isBefore](arkts-test-uitest-on-c.md#isBefore)(on: On)
+**Substitutes:** [isBefore](arkts-test-uitest-on-c.md#isbefore)(on: On)
 
 <!--Device-By-isBefore(by: By): By--><!--Device-By-isBefore(by: By): By-End-->
 
@@ -286,7 +272,7 @@ Specifies that the target component is located before the given attribute compon
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -305,8 +291,6 @@ key(key: string): By
 Specifies the key attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -328,7 +312,7 @@ Specifies the key attribute of the target component.
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object that matches the key attribute of the target component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -346,8 +330,6 @@ scrollable(b?: boolean): By
 Specifies the scrollable attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -369,7 +351,7 @@ Specifies the scrollable attribute of the target component.
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object that matches the scrollable attribute of the target component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -387,8 +369,6 @@ selected(b?: boolean): By
 Specifies the selected status of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -410,7 +390,7 @@ Specifies the selected status of the target component.
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object that matches the selected attribute of the target component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -429,8 +409,6 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [text](arkts-test-uitest-on-c.md#text)
@@ -444,7 +422,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | Component text, used to match the target component. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
@@ -452,7 +430,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object that matches the text attribute of the target component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets
@@ -470,8 +448,6 @@ type(tp: string): By
 Specifies the type attribute of the target component.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
 
@@ -493,7 +469,7 @@ Specifies the type attribute of the target component.
 | --- | --- |
 | [By](arkts-test-uitest-by-c.md) | By** object that matches the type attribute of the target component. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // xxx.test.ets

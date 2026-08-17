@@ -1,12 +1,8 @@
 # StartOptions
 
-StartOptions can be used as an input parameter for APIs used to launch a UIAbility (for example, [startAbility()](arkts-ability-uiabilitycontext-c.md#startAbility) ). It specifies the options for starting the target UIAbility, including but not limited to the window mode and the display where the target UIAbility is started.
+StartOptions can be used as an input parameter for APIs used to launch a UIAbility (for example, [startAbility()](arkts-ability-uiabilitycontext-c.md#startability) ). It specifies the options for starting the target UIAbility, including but not limited to the window mode and the display where the target UIAbility is started.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare class StartOptions--><!--Device-unnamed-declare class StartOptions-End-->
 
@@ -30,10 +26,6 @@ Operation class used to handle the result of an application launch request.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -53,10 +45,6 @@ Display ID, which is an integer greater than or equal to -1. - The value **-1** 
 **Type:** long
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,10 +66,6 @@ Whether to hide the starting window for the UIAbility of the current application
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartOptions-hideStartWindow?: boolean--><!--Device-StartOptions-hideStartWindow?: boolean-End-->
@@ -99,10 +83,6 @@ Maximum height of the window, in vp. You can call getWindowLimitsVP to obtain th
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,10 +102,6 @@ Maximum width of the window, in vp. You can call getWindowLimitsVP to obtain the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartOptions-maxWindowWidth?: int--><!--Device-StartOptions-maxWindowWidth?: int-End-->
@@ -143,10 +119,6 @@ Minimum height of the window, in vp. You can call getWindowLimitsVP to obtain th
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,10 +138,6 @@ Minimum width of the window, in vp. You can call getWindowLimitsVP to obtain the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartOptions-minWindowWidth?: int--><!--Device-StartOptions-minWindowWidth?: int-End-->
@@ -182,15 +150,11 @@ Minimum width of the window, in vp. You can call getWindowLimitsVP to obtain the
 processMode?: contextConstant.ProcessMode
 ```
 
-Process mode of the UIAbility after it is started. **Constraints**: 1. This property takes effect only on 2-in-1 devices and tablets. 2. This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility). 3. **processMode** and **startupVisibility** must be set in pair.
+Process mode of the UIAbility after it is started. **Constraints**: 1. This property takes effect only on 2-in-1 devices and tablets. 2. This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability). 3. **processMode** and **startupVisibility** must be set in pair.
 
 **Type:** contextConstant.ProcessMode
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,10 +174,6 @@ The type of split ratio preference.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartOptions-splitRatio?: window.SplitRatioPreference--><!--Device-StartOptions-splitRatio?: window.SplitRatioPreference-End-->
@@ -226,15 +186,11 @@ The type of split ratio preference.
 startWindowBackgroundColor?: string
 ```
 
-Background color of the window for the UIAbility of the current application upon startup. The value is in ARGB format, for example, **#E5FFFFFF**. If this property is not set, the value of **startWindowBackground** in the **module.json5** file is used by default. **Constraints**: - This property does not take effect for the UIAbility of another application. - This property takes effect only on 2-in-1 devices and tablets. - This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility).
+Background color of the window for the UIAbility of the current application upon startup. The value is in ARGB format, for example, **#E5FFFFFF**. If this property is not set, the value of **startWindowBackground** in the **module.json5** file is used by default. **Constraints**: - This property does not take effect for the UIAbility of another application. - This property takes effect only on 2-in-1 devices and tablets. - This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,15 +204,11 @@ Background color of the window for the UIAbility of the current application upon
 startWindowIcon?: image.PixelMap
 ```
 
-Icon displayed on the starting window for the UIAbility of the current application upon startup. If this property is not set, the value of **startWindowIcon** in the **module.json5** file is used by default. **Constraints**: - This property does not take effect for the UIAbility of another application. - This property takes effect only on 2-in-1 devices and tablets. - This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility). - The maximum size of an image used as the startup icon is 600 MB.
+Icon displayed on the starting window for the UIAbility of the current application upon startup. If this property is not set, the value of **startWindowIcon** in the **module.json5** file is used by default. **Constraints**: - This property does not take effect for the UIAbility of another application. - This property takes effect only on 2-in-1 devices and tablets. - This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability). - The maximum size of an image used as the startup icon is 600 MB.
 
 **Type:** image.PixelMap
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -270,15 +222,11 @@ Icon displayed on the starting window for the UIAbility of the current applicati
 startupVisibility?: contextConstant.StartupVisibility
 ```
 
-Visibility status of the UIAbility after it is started. If the target UIAbility is set to invisible, the window of the target UIAbility is not displayed in the foreground, there is no icon in the dock, and the **onForeground** lifecycle of the target UIAbility is not triggered. **Constraints**: 1. This property takes effect only on 2-in-1 devices and tablets. 2. This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility). 3. **processMode** and **startupVisibility** must be set in pair.
+Visibility status of the UIAbility after it is started. If the target UIAbility is set to invisible, the window of the target UIAbility is not displayed in the foreground, there is no icon in the dock, and the **onForeground** lifecycle of the target UIAbility is not triggered. **Constraints**: 1. This property takes effect only on 2-in-1 devices and tablets. 2. This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability). 3. **processMode** and **startupVisibility** must be set in pair.
 
 **Type:** contextConstant.StartupVisibility
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -298,10 +246,6 @@ Window mode supported by the UIAbility when it is started. The supported window 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartOptions-supportWindowModes?: Array<bundleManager.SupportWindowMode>--><!--Device-StartOptions-supportWindowModes?: Array<bundleManager.SupportWindowMode>-End-->
@@ -319,10 +263,6 @@ Parameters for the window for the UIAbility upon startup.
 **Type:** window.WindowCreateParams
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -342,10 +282,6 @@ Window height, in px. The value range is [**minWindowHeight**, **maxWindowHeight
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartOptions-windowHeight?: int--><!--Device-StartOptions-windowHeight?: int-End-->
@@ -364,10 +300,6 @@ Distance the window moves along the x-axis, with the top-left vertex of the scre
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartOptions-windowLeft?: int--><!--Device-StartOptions-windowLeft?: int-End-->
@@ -380,15 +312,11 @@ Distance the window moves along the x-axis, with the top-left vertex of the scre
 windowMode?: int
 ```
 
-Window mode for the UIAbility upon startup. For details, see [WindowMode](arkts-ability-abilityconstant-windowmode-e.md#WindowMode).
+Window mode for the UIAbility upon startup. For details, see [WindowMode](arkts-ability-abilityconstant-windowmode-e.md#windowmode).
 
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -408,10 +336,6 @@ Distance the window moves along the y-axis, with the top-left vertex of the scre
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartOptions-windowTop?: int--><!--Device-StartOptions-windowTop?: int-End-->
@@ -430,10 +354,6 @@ Window width, in px. The value range is [**minWindowWidth**, **maxWindowWidth**]
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartOptions-windowWidth?: int--><!--Device-StartOptions-windowWidth?: int-End-->
@@ -451,10 +371,6 @@ Whether animation effects are used for the UIAbility upon startup. **true** if u
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

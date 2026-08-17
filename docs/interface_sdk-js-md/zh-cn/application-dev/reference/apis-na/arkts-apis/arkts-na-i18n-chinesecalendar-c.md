@@ -1,14 +1,12 @@
 # ChineseCalendar
 
-提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md#Calendar)，支持[Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md#Calendar)的方法。
+提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md#calendar)，支持[Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md#calendar)的方法。
 
-**继承/实现关系：** ChineseCalendar extends [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md#Calendar)
+**继承/实现关系：** ChineseCalendar extends [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md#calendar)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 <!--Device-i18n-export class ChineseCalendar--><!--Device-i18n-export class ChineseCalendar-End-->
 
@@ -24,9 +22,7 @@ public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int):
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,9 +62,7 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
-
-**废弃版本：** -1
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

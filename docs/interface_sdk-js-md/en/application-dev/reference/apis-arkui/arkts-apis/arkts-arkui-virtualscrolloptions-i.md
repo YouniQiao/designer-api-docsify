@@ -1,12 +1,8 @@
-# VirtualScrollOptions
+# VirtualScrollOptions(Defines Repeat component.)
 
 Configures the expected total number of data items to be loaded in lazy loading mode, the reuse capability, and the precise data lazy loading capability.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-interface VirtualScrollOptions--><!--Device-unnamed-interface VirtualScrollOptions-End-->
 
@@ -22,10 +18,6 @@ onLazyLoading?(index: number): void
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -40,7 +32,7 @@ onLazyLoading?(index: number): void
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the data item to be loaded. <br>Value range: natural numbers |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Assume that the total number of items is 100, and 3 items are needed for the initial screen rendering.
@@ -61,13 +53,9 @@ List() {
 onTotalCount?(): number
 ```
 
-(Optional) Calculates the expected total number of data items to be loaded. You need to provide a calculation method, and its return value may not be equal to the data source length (length of the array passed to **Repeat**). Both the return values of [totalCount](#VirtualScrollOptions) and **onTotalCount()** indicate the expected total number of data items to be loaded. You can directly set the **totalCount** attribute to specify the expected total number of data items to be loaded, or use **onTotalCount()** to set a custom method to calculate the expected total number of data items to be loaded. Use either **totalCount** or **onTotalCount**. If neither is set, the default value is used. If both are set, **totalCount** is ignored. The data loading rules for different return values of **onTotalCount()** are the same as those for **totalCount**. The details are as follows: - If the return value of **onTotalCount()** is **0**, no data is loaded. - If the return value of **onTotalCount()** is in the range (0, Data source length], only data in the index range [0, Return value – 1] is loaded. - If the return value of **onTotalCount()** is greater than the data source length, the **Repeat** component expects to load data in the index range [0, Return value – 1]. The scrollbar style of the container component changes according to the value of **totalCount**. During the scrolling of the container component, the application must ensure that subsequent data is requested before the list is about to reach the end of the data source. You need to handle error scenarios (such as network delays) for data requests until all data sources are loaded; otherwise, scrolling exceptions may occur during list scrolling. You are advised to use [onLazyLoading](#onLazyLoading) to implement lazy loading. - If the return value of **onTotalCount()** is not a natural number, the data source length will be used as the return value.
+(Optional) Calculates the expected total number of data items to be loaded. You need to provide a calculation method, and its return value may not be equal to the data source length (length of the array passed to **Repeat**). Both the return values of totalCount and **onTotalCount()** indicate the expected total number of data items to be loaded. You can directly set the **totalCount** attribute to specify the expected total number of data items to be loaded, or use **onTotalCount()** to set a custom method to calculate the expected total number of data items to be loaded. Use either **totalCount** or **onTotalCount**. If neither is set, the default value is used. If both are set, **totalCount** is ignored. The data loading rules for different return values of **onTotalCount()** are the same as those for **totalCount**. The details are as follows: - If the return value of **onTotalCount()** is **0**, no data is loaded. - If the return value of **onTotalCount()** is in the range (0, Data source length], only data in the index range [0, Return value – 1] is loaded. - If the return value of **onTotalCount()** is greater than the data source length, the **Repeat** component expects to load data in the index range [0, Return value – 1]. The scrollbar style of the container component changes according to the value of **totalCount**. During the scrolling of the container component, the application must ensure that subsequent data is requested before the list is about to reach the end of the data source. You need to handle error scenarios (such as network delays) for data requests until all data sources are loaded; otherwise, scrolling exceptions may occur during list scrolling. You are advised to use [onLazyLoading](#onlazyloading) to implement lazy loading. - If the return value of **onTotalCount()** is not a natural number, the data source length will be used as the return value.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn only, since version 19.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,10 +83,6 @@ Memory optimization strategy for Repeat VirtualScroll.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -119,10 +103,6 @@ Whether to enable the reuse feature. **true**: Enable the reuse feature. **false
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -137,15 +117,11 @@ Whether to enable the reuse feature. **true**: Enable the reuse feature. **false
 totalCount?: number
 ```
 
-Expected total number of data items to be loaded, which may not be equal to the data source length (length of the array passed to **Repeat**). Value range: natural numbers If **totalCount** is not specified or exceeds the value range, **totalCount** takes the value of the data source length, and the list scrolls normally. If **totalCount** is set to **0**, no data is loaded. If the value of **totalCount** is in the range (0, Data source length], only data in the range [0, **totalCount** – 1] is rendered on the GUI. If the value of **totalCount** is greater than the data source length, the **Repeat** component renders data in the range [0, **totalCount** – 1], and the scrollbar style of the container component changes according to the value of **totalCount**. During the scrolling of the container component, the application must ensure that subsequent data is requested before the list is about to reach the end of the data source. You need to handle error scenarios (such as network delays) for data requests until all data sources are loaded; otherwise, scrolling exceptions may occur during list scrolling. You are advised to use [onLazyLoading](#onLazyLoading) to implement lazy loading. In addition to the **totalCount** attribute, you can also use the [onTotalCount](#onTotalCount) method to set a custom method to calculate the expected total number of data items to be loaded.
+Expected total number of data items to be loaded, which may not be equal to the data source length (length of the array passed to **Repeat**). Value range: natural numbers If **totalCount** is not specified or exceeds the value range, **totalCount** takes the value of the data source length, and the list scrolls normally. If **totalCount** is set to **0**, no data is loaded. If the value of **totalCount** is in the range (0, Data source length], only data in the range [0, **totalCount** – 1] is rendered on the GUI. If the value of **totalCount** is greater than the data source length, the **Repeat** component renders data in the range [0, **totalCount** – 1], and the scrollbar style of the container component changes according to the value of **totalCount**. During the scrolling of the container component, the application must ensure that subsequent data is requested before the list is about to reach the end of the data source. You need to handle error scenarios (such as network delays) for data requests until all data sources are loaded; otherwise, scrolling exceptions may occur during list scrolling. You are advised to use [onLazyLoading](#onlazyloading) to implement lazy loading. In addition to the **totalCount** attribute, you can also use the [onTotalCount](#ontotalcount) method to set a custom method to calculate the expected total number of data items to be loaded.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

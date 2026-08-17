@@ -16,8 +16,6 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
 **Deprecated since:** 18
 
 **Substitutes:** createComponentObserver
@@ -40,9 +38,9 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 | Type | Description |
 | --- | --- |
-| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | create listener for observer component event. |
+| [ComponentObserver](../../apis-na/arkts-apis/arkts-na-inspector-componentobserver-i.md) | create listener for observer component event. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let listener:inspector.ComponentObserver = inspector.createComponentObserver('COMPONENT_ID'); // Listen for callback events for the component whose ID is COMPONENT_ID.

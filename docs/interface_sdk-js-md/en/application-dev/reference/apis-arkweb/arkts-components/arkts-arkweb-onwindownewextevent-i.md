@@ -1,12 +1,8 @@
 # OnWindowNewExtEvent
 
-Callback invoked when the web page requests the user to create a window.
+Defines the callback information triggered when the web page requests to create a window, including the window feature information and window opening method. It is suitable for scenarios where fine-grained control of new window behavior is required, improving window management customization and user experience.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OnWindowNewExtEvent--><!--Device-unnamed-declare interface OnWindowNewExtEvent-End-->
 
@@ -23,10 +19,6 @@ handler: ControllerHandler
 **Type:** [ControllerHandler](arkts-arkweb-controllerhandler-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -46,10 +38,6 @@ The value **true** indicates that a dialog box is requested to be created, and t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-OnWindowNewExtEvent-isAlert: boolean--><!--Device-OnWindowNewExtEvent-isAlert: boolean-End-->
@@ -67,10 +55,6 @@ Whether the creation is triggered by the user. The value **true** means that the
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -90,10 +74,6 @@ Window opening mode when the web page requests a user to create a new window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-OnWindowNewExtEvent-navigationPolicy: NavigationPolicy--><!--Device-OnWindowNewExtEvent-navigationPolicy: NavigationPolicy-End-->
@@ -112,10 +92,6 @@ URL to be opened in the new window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-OnWindowNewExtEvent-targetUrl: string--><!--Device-OnWindowNewExtEvent-targetUrl: string-End-->
@@ -133,10 +109,6 @@ Feature information of the new window requested to be created by the web page.
 **Type:** [WindowFeatures](arkts-arkweb-windowfeatures-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

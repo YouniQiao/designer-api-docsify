@@ -16,10 +16,6 @@ Check whether Wi-Fi hotspot is active on a device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManager-function isHotspotActive(): boolean--><!--Device-wifiManager-function isHotspotActive(): boolean-End-->
@@ -40,7 +36,7 @@ Check whether Wi-Fi hotspot is active on a device.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';

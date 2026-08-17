@@ -4,10 +4,6 @@ Provides VPN related interfaces.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare namespace vpn--><!--Device-unnamed-declare namespace vpn-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -25,17 +21,17 @@ import { vpn } from 'vpn';
 
 | Name | Description |
 | --- | --- |
-| [addSysVpnConfig](arkts-network-vpn-addsysvpnconfig-f-sys.md#addSysVpnConfig) | Add a system VPN network configuration. |
-| [createVpnConnection](arkts-network-vpn-createvpnconnection-f-sys.md#createVpnConnection) | Create a VPN connection using the AbilityContext. |
-| [deleteSysVpnConfig](arkts-network-vpn-deletesysvpnconfig-f-sys.md#deleteSysVpnConfig) | Delete the configuration of system VPN network by the specified vpnId. |
-| [getConnectedSysVpnConfig](arkts-network-vpn-getconnectedsysvpnconfig-f-sys.md#getConnectedSysVpnConfig) | Get the connected VPN network configuration. |
-| [getConnectedVpnAppInfo](arkts-network-vpn-getconnectedvpnappinfo-f-sys.md#getConnectedVpnAppInfo) | Get the connected VPN App Info. |
-| [getSysVpnConfig](arkts-network-vpn-getsysvpnconfig-f-sys.md#getSysVpnConfig) | Get the configuration of system VPN network by the specified vpnId. |
-| [getSysVpnConfigList](arkts-network-vpn-getsysvpnconfiglist-f-sys.md#getSysVpnConfigList) | Get all system VPN network configuration. |
-| [off_connect](arkts-network-vpn-offconnect-f-sys.md#off_connect) | Unsubscribes from vpn connect state changes. |
-| [off_connectMulti](arkts-network-vpn-offconnectmulti-f-sys.md#off_connectMulti) | Unsubscribes from vpn connect state changes. |
-| [on_connect](arkts-network-vpn-onconnect-f-sys.md#on_connect) | Subscribes to vpn connect state changes. |
-| [on_connectMulti](arkts-network-vpn-onconnectmulti-f-sys.md#on_connectMulti) | Subscribes to vpn connect state changes. |
+| [addSysVpnConfig](arkts-network-vpn-addsysvpnconfig-f-sys.md#addsysvpnconfig) | Add a system VPN network configuration. |
+| [createVpnConnection](arkts-network-vpn-createvpnconnection-f-sys.md#createvpnconnection) | Create a VPN connection using the AbilityContext. |
+| [deleteSysVpnConfig](arkts-network-vpn-deletesysvpnconfig-f-sys.md#deletesysvpnconfig) | Delete the configuration of system VPN network by the specified vpnId. |
+| [getConnectedSysVpnConfig](arkts-network-vpn-getconnectedsysvpnconfig-f-sys.md#getconnectedsysvpnconfig) | Get the connected VPN network configuration. |
+| [getConnectedVpnAppInfo](arkts-network-vpn-getconnectedvpnappinfo-f-sys.md#getconnectedvpnappinfo) | Get the connected VPN App Info. |
+| [getSysVpnConfig](arkts-network-vpn-getsysvpnconfig-f-sys.md#getsysvpnconfig) | Get the configuration of system VPN network by the specified vpnId. |
+| [getSysVpnConfigList](arkts-network-vpn-getsysvpnconfiglist-f-sys.md#getsysvpnconfiglist) | Get all system VPN network configuration. |
+| [off_connect](arkts-network-vpn-offconnect-f-sys.md#offconnect) | Unsubscribes from vpn connect state changes. |
+| [off_connectMulti](arkts-network-vpn-offconnectmulti-f-sys.md#offconnectmulti) | Unsubscribes from vpn connect state changes. |
+| [on_connect](arkts-network-vpn-onconnect-f-sys.md#onconnect) | Subscribes to vpn connect state changes. |
+| [on_connectMulti](arkts-network-vpn-onconnectmulti-f-sys.md#onconnectmulti) | Subscribes to vpn connect state changes. |
 <!--DelEnd-->
 
 <!--Del-->

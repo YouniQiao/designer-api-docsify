@@ -1,14 +1,10 @@
 # CubeGeometry
 
-Define a rectangular cuboid.
+A cube geometry type that inherits from GeometryDefinition.
 
-**Inheritance/Implementation:** CubeGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition)
+**Inheritance/Implementation:** CubeGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#geometrydefinition)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class CubeGeometry--><!--Device-unnamed-export declare class CubeGeometry-End-->
 

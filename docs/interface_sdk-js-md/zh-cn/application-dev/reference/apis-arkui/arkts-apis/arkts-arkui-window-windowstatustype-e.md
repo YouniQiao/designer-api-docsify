@@ -4,10 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 <!--Device-window-enum WindowStatusType--><!--Device-window-enum WindowStatusType-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -22,10 +18,6 @@ UNDEFINED = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowStatusType-UNDEFINED = 0--><!--Device-WindowStatusType-UNDEFINED = 0-End-->
@@ -38,13 +30,9 @@ UNDEFINED = 0
 FULL_SCREEN = 1
 ```
 
-表示APP全屏模式。 [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口铺满整个屏幕，默认无dock栏、标题栏和状态栏显示。 可通过[maximize()](arkts-arkui-window-window-i.md#maximize)和 [setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#setTitleAndDockHoverShown)配置，当hover到热区时是否显示标题栏和 dock栏。 当maximize()和setTitleAndDockHoverShown()接口都调用时，以最后调用设置的效果为准。 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口铺满整个屏幕，无标题栏和dock栏显示。可通过 [setSpecificSystemBarEnabled()](arkts-arkui-window-window-i.md#setSpecificSystemBarEnabled)配置是否显示状态栏。
+表示APP全屏模式。 [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口铺满整个屏幕，默认无dock栏、标题栏和状态栏显示。 可通过[maximize()](arkts-arkui-window-window-i.md#maximize)和 [setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown)配置，当hover到热区时是否显示标题栏和 dock栏。 当maximize()和setTitleAndDockHoverShown()接口都调用时，以最后调用设置的效果为准。 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口铺满整个屏幕，无标题栏和dock栏显示。可通过 [setSpecificSystemBarEnabled()](arkts-arkui-window-window-i.md#setspecificsystembarenabled)配置是否显示状态栏。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -62,10 +50,6 @@ MAXIMIZE = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowStatusType-MAXIMIZE = 2--><!--Device-WindowStatusType-MAXIMIZE = 2-End-->
@@ -81,10 +65,6 @@ MINIMIZE = 3
 表示APP窗口最小化模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -102,10 +82,6 @@ FLOATING = 4
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowStatusType-FLOATING = 4--><!--Device-WindowStatusType-FLOATING = 4-End-->
@@ -121,10 +97,6 @@ SPLIT_SCREEN = 5
 表示APP分屏模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
-
-**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

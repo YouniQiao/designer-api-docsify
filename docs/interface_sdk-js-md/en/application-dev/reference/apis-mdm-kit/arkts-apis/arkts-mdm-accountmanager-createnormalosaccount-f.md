@@ -12,13 +12,9 @@ import { accountManager } from 'accountManager';
 function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>
 ```
 
-Creates a normal system account. A maximum of two normal system accounts ( [osAccount.OsAccountType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md#OsAccountType)) can be created. > **NOTE：**> > The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application > main thread must wait for the asynchronous return of this API. > > Creating a system account has a significant impact on device performance. This API is supported only on phones > and tablets with 12 GB or more of RAM.
+Creates a normal system account. A maximum of two normal system accounts ( [osAccount.OsAccountType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md#osaccounttype)) can be created. > **NOTE：**> > The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application > main thread must wait for the asynchronous return of this API. > > Creating a system account has a significant impact on device performance. This API is supported only on phones > and tablets with 12 GB or more of RAM.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_LOCAL_ACCOUNTS
 

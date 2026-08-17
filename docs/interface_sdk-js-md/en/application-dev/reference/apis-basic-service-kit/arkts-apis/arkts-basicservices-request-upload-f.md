@@ -16,11 +16,9 @@ Uploads a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile)(context: BaseContext, config: UploadConfig)
+**Substitutes:** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)(context: BaseContext, config: UploadConfig)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -43,7 +41,7 @@ Uploads a file. This API uses an asynchronous callback to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let uploadTask: request.UploadTask;
@@ -74,11 +72,9 @@ Uploads a file. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile)(context: BaseContext, config: UploadConfig)
+**Substitutes:** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)(context: BaseContext, config: UploadConfig)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -106,7 +102,7 @@ Uploads a file. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let uploadTask: request.UploadTask;

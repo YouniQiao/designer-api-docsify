@@ -4,10 +4,6 @@ Definition of an OS account sub-profile.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-osAccount-interface OsAccountSubProfile--><!--Device-osAccount-interface OsAccountSubProfile-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -32,10 +28,6 @@ Time when the sub-profile was created. Unit: milliseconds.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfile-createTime: long--><!--Device-OsAccountSubProfile-createTime: long-End-->
@@ -55,10 +47,6 @@ Distributed account information bound to the OS account sub-profile.
 **Type:** distributedAccount.DistributedInfo
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +68,6 @@ Identifier of the OS account sub-profile.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfile-id: int--><!--Device-OsAccountSubProfile-id: int-End-->
@@ -104,10 +88,6 @@ Position index of the OS account sub-profile, ranging from 0 to the number of su
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfile-index: int--><!--Device-OsAccountSubProfile-index: int-End-->
@@ -127,10 +107,6 @@ Local ID of the OS account to which the sub-profile belongs.
 **Type:** int
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

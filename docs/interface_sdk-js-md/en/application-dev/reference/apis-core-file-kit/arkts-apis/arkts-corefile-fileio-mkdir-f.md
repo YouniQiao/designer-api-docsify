@@ -10,8 +10,6 @@ Creates a directory. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
@@ -44,8 +42,6 @@ Creates a directory. This API uses an asynchronous callback to return the result
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
@@ -71,8 +67,6 @@ declare function mkdir(path: string, mode: number, callback: AsyncCallback<void>
 Creates a directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Deprecated since:** 9
 

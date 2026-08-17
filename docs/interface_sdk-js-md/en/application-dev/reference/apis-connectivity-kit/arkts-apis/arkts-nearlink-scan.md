@@ -4,10 +4,6 @@ Provides methods for scanning and discovering nearby devices.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace scan--><!--Device-unnamed-declare namespace scan-End-->
@@ -26,10 +22,10 @@ import { scan } from 'scan';
 
 | Name | Description |
 | --- | --- |
-| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md#offDeviceFound) | Unsubscribes from NearLink scan results. |
-| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md#onDeviceFound) | Subscribes to NearLink scan results. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned. |
-| [startScan](arkts-connectivity-scan-startscan-f.md#startScan) | Starts scanning for specified NearLink devices with filters. It is allowed to set filter parameter to {@code null} if you do not want to use filter. |
-| [stopScan](arkts-connectivity-scan-stopscan-f.md#stopScan) | Stops scanning. |
+| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md#offdevicefound) | Unsubscribes from NearLink scan results. |
+| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md#ondevicefound) | Subscribes to NearLink scan results. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned. |
+| [startScan](arkts-connectivity-scan-startscan-f.md#startscan) | Starts scanning for specified NearLink devices with filters. It is allowed to set filter parameter to {@code null} if you do not want to use filter. |
+| [stopScan](arkts-connectivity-scan-stopscan-f.md#stopscan) | Stops scanning. |
 
 ### Interfaces
 

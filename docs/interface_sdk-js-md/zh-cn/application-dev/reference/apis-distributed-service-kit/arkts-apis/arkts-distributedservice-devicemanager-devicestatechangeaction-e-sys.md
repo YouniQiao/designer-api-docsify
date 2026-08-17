@@ -4,11 +4,9 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 11
 
-**替代接口：** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#DeviceStateChange)
+**替代接口：** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#devicestatechange)
 
 <!--Device-deviceManager-enum DeviceStateChangeAction--><!--Device-deviceManager-enum DeviceStateChangeAction-End-->
 
@@ -26,11 +24,9 @@ ONLINE = 0
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 11
 
-**替代接口：** [UNKNOWN](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#UNKNOWN)
+**替代接口：** [UNKNOWN](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#unknown)
 
 <!--Device-DeviceStateChangeAction-ONLINE = 0--><!--Device-DeviceStateChangeAction-ONLINE = 0-End-->
 
@@ -48,11 +44,9 @@ READY = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 11
 
-**替代接口：** [AVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#AVAILABLE)
+**替代接口：** [AVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#available)
 
 <!--Device-DeviceStateChangeAction-READY = 1--><!--Device-DeviceStateChangeAction-READY = 1-End-->
 
@@ -70,11 +64,9 @@ OFFLINE = 2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
-
 **废弃版本：** 11
 
-**替代接口：** [UNAVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#UNAVAILABLE)
+**替代接口：** [UNAVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#unavailable)
 
 <!--Device-DeviceStateChangeAction-OFFLINE = 2--><!--Device-DeviceStateChangeAction-OFFLINE = 2-End-->
 
@@ -91,8 +83,6 @@ CHANGE = 3
 设备信息更改。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
 **废弃版本：** 11
 

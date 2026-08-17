@@ -16,10 +16,6 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
@@ -34,7 +30,7 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md#PrintExtensionAbility-(System-API)) to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
+| extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md#printextensionability-system-api) to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback to be invoked when a printer is discovered. |
 
 **Error codes:**
@@ -44,7 +40,7 @@ Discovers printers by specifying the extension list. The discovered printers con
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 19 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -74,10 +70,6 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
@@ -92,7 +84,7 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md#PrintExtensionAbility-(System-API)) to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
+| extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md#printextensionability-system-api) to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
 
 **Return value:**
 
@@ -107,7 +99,7 @@ Discovers printers by specifying the extension list. The discovered printers con
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 19 |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

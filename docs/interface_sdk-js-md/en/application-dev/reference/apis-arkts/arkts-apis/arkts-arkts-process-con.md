@@ -10,10 +10,6 @@ Process ID (PID) of the process.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-process-const pid: number--><!--Device-process-const pid: number-End-->
@@ -30,10 +26,6 @@ Thread ID (TID) of the thread.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-process-const tid: number--><!--Device-process-const tid: number-End-->
@@ -49,10 +41,6 @@ const uid: number
 User identifier (UID) of the process.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

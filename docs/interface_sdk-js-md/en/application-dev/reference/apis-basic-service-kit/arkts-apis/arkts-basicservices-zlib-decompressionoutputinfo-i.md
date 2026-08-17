@@ -4,10 +4,6 @@ Uncompress2 return value information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-zlib-interface DecompressionOutputInfo--><!--Device-zlib-interface DecompressionOutputInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -30,10 +26,6 @@ Total length of the destination buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecompressionOutputInfo-destLength: long--><!--Device-DecompressionOutputInfo-destLength: long-End-->
@@ -52,10 +44,6 @@ Length of the source buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecompressionOutputInfo-sourceLength: long--><!--Device-DecompressionOutputInfo-sourceLength: long-End-->
@@ -68,15 +56,11 @@ Length of the source buffer.
 status: ReturnStatus
 ```
 
-For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md#ReturnStatus).
+For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md#returnstatus).
 
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

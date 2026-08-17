@@ -16,11 +16,9 @@ Obtain the number of cached GNSS locations reported at a time
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize)
+**Substitutes:** [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getcachedgnsslocationssize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -34,7 +32,7 @@ Obtain the number of cached GNSS locations reported at a time
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Indicates the callback for reporting the cached GNSS locations size. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';
@@ -59,11 +57,9 @@ Obtain the number of cached GNSS locations reported at a time
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize)
+**Substitutes:** [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getcachedgnsslocationssize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -77,7 +73,7 @@ Obtain the number of cached GNSS locations reported at a time
 | --- | --- |
 | Promise&lt;number&gt; | The promise returned by the function. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import geolocation from '@ohos.geolocation';

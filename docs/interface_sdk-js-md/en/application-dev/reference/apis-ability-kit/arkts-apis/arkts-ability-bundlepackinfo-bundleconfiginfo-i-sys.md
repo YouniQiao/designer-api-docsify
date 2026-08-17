@@ -4,10 +4,6 @@ BundleConfigInfo: the bundle summary class.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export interface BundleConfigInfo--><!--Device-unnamed-export interface BundleConfigInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -26,10 +22,6 @@ Bundle name. It uniquely identifies an application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-BundleConfigInfo-readonly bundleName: string--><!--Device-BundleConfigInfo-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
@@ -47,10 +39,6 @@ Bundle version.
 **Type:** [Version](arkts-ability-bundlepackinfo-version-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 <!--Device-BundleConfigInfo-readonly version: Version--><!--Device-BundleConfigInfo-readonly version: Version-End-->
 

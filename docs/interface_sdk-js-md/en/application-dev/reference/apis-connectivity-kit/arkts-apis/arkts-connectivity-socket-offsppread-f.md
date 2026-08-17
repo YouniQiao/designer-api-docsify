@@ -16,10 +16,6 @@ Unsubscribe the event reported when data is read from the socket.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-socket-function offSppRead(clientSocket: int, callback?: Callback<ArrayBuffer>): void--><!--Device-socket-function offSppRead(clientSocket: int, callback?: Callback<ArrayBuffer>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

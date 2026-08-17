@@ -4,10 +4,6 @@ Defines Counter Component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-declare struct CounterV2Component--><!--Device-unnamed-declare struct CounterV2Component-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -33,10 +29,6 @@ The options of a counter component.
 **Type:** [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

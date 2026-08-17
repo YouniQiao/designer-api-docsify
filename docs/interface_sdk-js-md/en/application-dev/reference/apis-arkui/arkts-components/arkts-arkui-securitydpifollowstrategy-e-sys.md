@@ -1,12 +1,8 @@
-# SecurityDpiFollowStrategy (System API)
+# SecurityDpiFollowStrategy(System API) (System API)
 
 Defines the enum of the resolution following strategy for **SecurityUIExtensionComponent**.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum SecurityDpiFollowStrategy--><!--Device-unnamed-declare enum SecurityDpiFollowStrategy-End-->
 
@@ -23,10 +19,6 @@ FOLLOW_HOST_DPI = 0
 The resolution follows the host application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +37,6 @@ FOLLOW_UI_EXTENSION_ABILITY_DPI = 1
 The resolution follows the **UIExtensionAbility**.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

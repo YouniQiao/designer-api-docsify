@@ -16,11 +16,9 @@ Calculates the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
 **Deprecated since:** 9
 
-**Substitutes:** [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md#getSignalLevel)
+**Substitutes:** [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md#getsignallevel)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -41,7 +39,7 @@ Calculates the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 | --- | --- |
 | number | Returns Wi-Fi signal level ranging from 0 to 4. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import wifi from '@ohos.wifi';

@@ -2,10 +2,6 @@
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-interface ArrayConstructor--><!--Device-unnamed-interface ArrayConstructor-End-->
 
 ## constructor
@@ -15,10 +11,6 @@ new(arrayLength?: number): any[]
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ArrayConstructor-new(arrayLength?: number): any[]--><!--Device-ArrayConstructor-new(arrayLength?: number): any[]-End-->
 
@@ -42,10 +34,6 @@ new <T>(arrayLength: number): T[]
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ArrayConstructor-new <T>(arrayLength: number): T[]--><!--Device-ArrayConstructor-new <T>(arrayLength: number): T[]-End-->
 
 **Parameters:**
@@ -67,10 +55,6 @@ new <T>(...items: T[]): T[]
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ArrayConstructor-new <T>(...items: T[]): T[]--><!--Device-ArrayConstructor-new <T>(...items: T[]): T[]-End-->
 
@@ -94,10 +78,6 @@ new <T>(...items: T[]): T[]
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ArrayConstructor-(arrayLength?: number): any[]--><!--Device-ArrayConstructor-(arrayLength?: number): any[]-End-->
 
 **Parameters:**
@@ -119,10 +99,6 @@ new <T>(...items: T[]): T[]
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ArrayConstructor-<T>(arrayLength: number): T[]--><!--Device-ArrayConstructor-<T>(arrayLength: number): T[]-End-->
 
@@ -146,10 +122,6 @@ new <T>(...items: T[]): T[]
 
 **Since:** -1
 
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
-
 <!--Device-ArrayConstructor-<T>(...items: T[]): T[]--><!--Device-ArrayConstructor-<T>(...items: T[]): T[]-End-->
 
 **Parameters:**
@@ -171,10 +143,6 @@ isArray(arg: any): arg is any[]
 ```
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ArrayConstructor-isArray(arg: any): arg is any[]--><!--Device-ArrayConstructor-isArray(arg: any): arg is any[]-End-->
 
@@ -199,10 +167,6 @@ readonly prototype: any[]
 **Type:** any[]
 
 **Since:** -1
-
-**ArkTS mode:** ArkTS-Dyn only, since version -1.
-
-**Deprecated since:** -1
 
 <!--Device-ArrayConstructor-readonly prototype: any[]--><!--Device-ArrayConstructor-readonly prototype: any[]-End-->
 

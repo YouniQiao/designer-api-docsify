@@ -4,10 +4,6 @@ Provides APIs for accessing the result sets returned. The column or key names ar
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-unnamed-export default interface DataShareResultSet--><!--Device-unnamed-export default interface DataShareResultSet-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -24,10 +20,6 @@ Closes this result set. Calling this API will invalidate the result set and rele
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareResultSet-close(): void--><!--Device-DataShareResultSet-close(): void-End-->
@@ -36,7 +28,7 @@ Closes this result set. Calling this API will invalidate the result set and rele
 
 **System API:** This is a system API.
 
-## Examples
+**Examples**
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -53,10 +45,6 @@ getBlob(columnIndex: int): Uint8Array
 Obtains the value in the form of a byte array based on the specified column and the current row. If the specified column or key is empty or the value is not of the Blob type, you need to determine whether to throw an exception.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +66,7 @@ Obtains the value in the form of a byte array based on the specified column and 
 | --- | --- |
 | Uint8Array | Value obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let columnIndex = 1;
@@ -103,10 +91,6 @@ Obtains the column index based on a column name. The column name is passed in as
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareResultSet-getColumnIndex(columnName: string): int--><!--Device-DataShareResultSet-getColumnIndex(columnName: string): int-End-->
@@ -127,7 +111,7 @@ Obtains the column index based on a column name. The column name is passed in as
 | --- | --- |
 | int | Column index obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let ColumnName = "name";
@@ -146,10 +130,6 @@ getColumnName(columnIndex: int): string
 Obtains the column name based on a column index. The column index is passed in as an input parameter.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -171,7 +151,7 @@ Obtains the column name based on a column index. The column index is passed in a
 | --- | --- |
 | string | Column name obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let columnIndex = 1;
@@ -190,10 +170,6 @@ getDataType(columnIndex: int): DataType
 Obtains the data type based on the specified column index. If the specified column or key is empty or the value is not of the DataType type, you need to determine whether to throw an exception.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -215,7 +191,7 @@ Obtains the data type based on the specified column index. If the specified colu
 | --- | --- |
 | [DataType](arkts-na-data-datashareresultset-datatype-e-sys.md) | Data type obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let columnIndex = 1;
@@ -234,10 +210,6 @@ getDouble(columnIndex: int): double
 Obtains the value in the form of a double-precision floating-point number based on the specified column and the current row. If the specified column or key is empty or the value is not of the double type, you need to determine whether to throw an exception.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -259,7 +231,7 @@ Obtains the value in the form of a double-precision floating-point number based 
 | --- | --- |
 | double | Value obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let columnIndex = 1;
@@ -279,10 +251,6 @@ getLong(columnIndex: int): long
 Obtains the value in the form of a long integer based on the specified column and the current row. If the specified column or key is empty or the value is not of the long type, you need to determine whether to throw an exception.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -304,7 +272,7 @@ Obtains the value in the form of a long integer based on the specified column an
 | --- | --- |
 | long | Value obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let columnIndex = 1;
@@ -324,10 +292,6 @@ getString(columnIndex: int): string
 Obtains the value in the form of a string based on the specified column and the current row. If the specified column or key is empty or the value is not of the string type, you need to determine whether to throw an exception.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -349,7 +313,7 @@ Obtains the value in the form of a string based on the specified column and the 
 | --- | --- |
 | string | Value obtained. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let columnIndex = 1;
@@ -369,10 +333,6 @@ goTo(offset: int): boolean
 Moves based on the specified offset.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -394,7 +354,7 @@ Moves based on the specified offset.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let goToNum = 1;
@@ -414,10 +374,6 @@ Moves to the first row of the result set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareResultSet-goToFirstRow(): boolean--><!--Device-DataShareResultSet-goToFirstRow(): boolean-End-->
@@ -432,7 +388,7 @@ Moves to the first row of the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 // Create a resultSet object. For details, see Usage in this topic.
@@ -452,10 +408,6 @@ Moves to the last row of the result set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareResultSet-goToLastRow(): boolean--><!--Device-DataShareResultSet-goToLastRow(): boolean-End-->
@@ -470,7 +422,7 @@ Moves to the last row of the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -489,10 +441,6 @@ Moves to the next row in the result set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareResultSet-goToNextRow(): boolean--><!--Device-DataShareResultSet-goToNextRow(): boolean-End-->
@@ -507,7 +455,7 @@ Moves to the next row in the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -526,10 +474,6 @@ Moves to the previous row in the result set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareResultSet-goToPreviousRow(): boolean--><!--Device-DataShareResultSet-goToPreviousRow(): boolean-End-->
@@ -544,7 +488,7 @@ Moves to the previous row in the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 if (resultSet != undefined) {
@@ -562,10 +506,6 @@ goToRow(position: int): boolean
 Moves to the specified row in the result set.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -587,7 +527,7 @@ Moves to the specified row in the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 let goToRowNum = 2;
@@ -609,10 +549,6 @@ Number of columns in the result set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareResultSet-columnCount: int--><!--Device-DataShareResultSet-columnCount: int-End-->
@@ -632,10 +568,6 @@ Names of all columns in the result set.
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -657,10 +589,6 @@ Whether the result set is closed. The value **true** means the result set is clo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareResultSet-isClosed: boolean--><!--Device-DataShareResultSet-isClosed: boolean-End-->
@@ -680,10 +608,6 @@ Number of rows in the result set.
 **Type:** int
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

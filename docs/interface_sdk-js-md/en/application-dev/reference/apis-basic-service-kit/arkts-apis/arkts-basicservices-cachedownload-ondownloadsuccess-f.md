@@ -16,10 +16,6 @@ Subscribes to the pre-download completion events. This API uses an asynchronous 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
-
-**Deprecated since:** -1
-
 <!--Device-cacheDownload-function onDownloadSuccess(url: string, callback: Callback<void>): void--><!--Device-cacheDownload-function onDownloadSuccess(url: string, callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -31,7 +27,7 @@ Subscribes to the pre-download completion events. This API uses an asynchronous 
 | url | string | Yes | Callback URL to be registered, with a maximum of 8,192 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-## Examples
+**Examples**
 
 ```TypeScript
 import { cacheDownload } from '@kit.BasicServicesKit';

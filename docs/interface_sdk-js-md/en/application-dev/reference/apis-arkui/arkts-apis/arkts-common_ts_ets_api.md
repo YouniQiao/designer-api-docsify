@@ -35,8 +35,8 @@
 | [PersistentStorage](arkts-arkui-persistentstorage-c-sys.md) | For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md). > **NOTE：**> Since API version 12, PersistentStorage supports **null** and **undefined**. |
 | [SubscribaleAbstract](arkts-arkui-subscribaleabstract-c-sys.md) | Defines the Subscribale base class. |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c-sys.md) | Represents a synchronized property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). |
-| [SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md) | Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md#SubscribedAbstractProperty-(System-API)). Represents a property with one-way synchronization. |
-| [SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md) | Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md#SubscribedAbstractProperty-(System-API)). Represents a property with two-way synchronization. |
+| [SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md) | Inherits from SubscribedAbstractProperty&lt;T&gt;. Represents a property with one-way synchronization. |
+| [SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md) | Inherits from SubscribedAbstractProperty&lt;T&gt;. Represents a property with two-way synchronization. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -44,8 +44,8 @@
 | Name | Description |
 | --- | --- |
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md) | Provides a reference to properties stored in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). |
-| [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md) | Defines a key-value pair object used to specify environment variable names and their default values, passed as a parameter to [envProps](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-eccsignaturespec-i.md#s). |
-| [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md) | Defines a key-value pair object used to specify persistent properties and their default values, passed as a parameter to [persistProps](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-eccsignaturespec-i.md#s). |
+| [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md) | Defines a key-value pair object used to specify environment variable names and their default values, passed as a parameter to [envProps](arkts-arkui-environment-c.md#envprops). |
+| [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md) | Defines a key-value pair object used to specify persistent properties and their default values, passed as a parameter to [persistProps](arkts-arkui-persistentstorage-c.md#persistprops). |
 
 <!--Del-->
 ### Interfaces（系统接口）
@@ -53,6 +53,6 @@
 | Name | Description |
 | --- | --- |
 | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Provides an interface for attribute subscribers. |
-| [ISinglePropertyChangeSubscriber](arkts-arkui-isinglepropertychangesubscriber-i-sys.md) | Inherits from [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md#IPropertySubscriber-(System-API)). Represents a subscriber that subscribes to changes in a property value. |
+| [ISinglePropertyChangeSubscriber](arkts-arkui-isinglepropertychangesubscriber-i-sys.md) | Inherits from IPropertySubscriber. Represents a subscriber that subscribes to changes in a property value. |
 <!--DelEnd-->
 
